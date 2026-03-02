@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
+import { useSession } from "@/hooks/useSession";
 
 // ── Hardcoded test accounts (replace with Supabase auth later) ────────────────
 const TEST_ACCOUNTS: { email: string; password: string; premium: boolean; name: string }[] = [
@@ -33,10 +34,16 @@ export function clearSession() {
 export default function Login() {
   const { tr } = useLang();
   const router = useRouter();
+  const { session, loaded } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  // UJ-3: redirect if already logged in
+  useEffect(() => {
+    if (loaded && session) router.replace("/dashboard");
+  }, [loaded, session, router]);
 
   const handleLogin = () => {
     if (!email || !password) { setError("Bitte E-Mail und Passwort eingeben."); return; }

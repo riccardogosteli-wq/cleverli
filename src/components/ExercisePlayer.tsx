@@ -19,7 +19,7 @@ import { useSound } from "@/hooks/useSound";
 import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
 
-interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; }
+interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
 function calcStars(score: number, total: number) {
   const pct = score / total;
@@ -28,23 +28,27 @@ function calcStars(score: number, total: number) {
   return 1;
 }
 
-export default function ExercisePlayer({ topic, grade, subject, isPremium = false }: Props) {
+export default function ExercisePlayer({ topic, grade, subject, isPremium = false, allTopics = [], topicIndex = 0 }: Props) {
   const router = useRouter();
   const { speak, stop, isSupported } = useVoice();
   const { play } = useSound();
   const { tr, lang } = useLang();
   const { recordAnswer } = useProfileContext();
   const FREE_LIMIT = 3;
-  const exercises = topic.exercises;
+  const [exercises, setExercises] = useState(topic.exercises);
+  const [isReviewMode, setIsReviewMode] = useState(false);
+  const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [idx, setIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [done, setDone] = useState(false);
+  const [showReview, setShowReview] = useState(false); // show "review mistakes?" screen
   const [cardKey, setCardKey] = useState(0);
-  const [voiceOn, setVoiceOn] = useState(false); // off by default, user opts in
+  const [voiceOn, setVoiceOn] = useState(false);
   const [hintsUsed, setHintsUsed] = useState(0);
   const topicStartRef = useRef<number>(Date.now());
+  const nextTopic = allTopics[topicIndex + 1] ?? null;
   const rewardRef = useRef<HTMLDivElement>(null);
 
   const current: Exercise = exercises[idx];
@@ -99,11 +103,16 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   }, [answered]);
 
   const handleAnswer = (correct: boolean) => {
-    stop(); // stop any reading
+    stop();
     const newStreak = correct ? streak + 1 : 0;
     const newScore = correct ? score + 1 : score;
     if (correct) { setScore(s => s + 1); setStreak(newStreak); }
-    else setStreak(0);
+    else {
+      setStreak(0);
+      // UJ-7: track wrong exercise IDs for review
+      const exId = exercises[idx]?.id ?? String(idx);
+      setWrongIds(ids => ids.includes(exId) ? ids : [...ids, exId]);
+    }
     setAnswered(correct);
 
     // Record XP — isTopicComplete will be true when this was the last exercise
@@ -138,6 +147,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     if (idx + 1 >= exercises.length) {
       play("complete");
       setTimeout(() => { if (voiceOn) speak(getPhrase("complete")); }, 600);
+      // UJ-7: if review mode done, just show done
+      if (isReviewMode) { setDone(true); return; }
+      // UJ-7: if mistakes exist and not already reviewing, show review prompt
+      if (wrongIds.length > 0) { setShowReview(true); return; }
       setDone(true);
       return;
     }
@@ -146,17 +159,57 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     setCardKey(k => k + 1);
   };
 
+  // UJ-7: start review round
+  const startReview = () => {
+    const reviewExercises = topic.exercises.filter(e => wrongIds.includes(e.id ?? ""));
+    setExercises(reviewExercises.length > 0 ? reviewExercises : topic.exercises.slice(0, 3));
+    setIdx(0); setScore(0); setStreak(0); setAnswered(null);
+    setCardKey(k => k + 1); setWrongIds([]); setIsReviewMode(true); setShowReview(false);
+  };
+
+  // ── UJ-7: Review prompt ─────────────────────────────────────────
+  if (showReview) {
+    return (
+      <div className="space-y-4 max-w-md mx-auto text-center py-4">
+        <div className="text-5xl">🔄</div>
+        <h2 className="text-xl font-bold text-gray-800">Fast perfekt!</h2>
+        <p className="text-gray-500 text-sm">
+          {wrongIds.length === 1
+            ? "Eine Aufgabe war noch nicht richtig. Üben wir sie nochmal?"
+            : `${wrongIds.length} Aufgaben waren noch nicht richtig. Üben wir sie nochmal?`}
+        </p>
+        <button
+          onClick={startReview}
+          className="w-full bg-amber-500 text-white py-4 rounded-2xl font-bold text-base hover:bg-amber-600 active:scale-95 transition-all shadow-md"
+        >
+          🔄 Nochmal üben ({wrongIds.length})
+        </button>
+        <button
+          onClick={() => setDone(true)}
+          className="w-full border-2 border-gray-200 text-gray-500 py-3 rounded-2xl font-medium text-sm hover:bg-gray-50 active:scale-95 transition-all"
+        >
+          Weiter ohne Üben →
+        </button>
+      </div>
+    );
+  }
+
   // ── Topic Complete ──────────────────────────────────────────────
   if (done) {
-    const s = calcStars(score, exercises.length);
-    const perfect = score === exercises.length;
+    const totalEx = isReviewMode ? exercises.length : topic.exercises.length;
+    const s = calcStars(score, totalEx);
+    const perfect = score === totalEx;
     return (
       <div className="space-y-4 max-w-md mx-auto">
         <RewardAnimation correct={true} isTopicComplete={true} onContinue={() => router.push(`/learn/${grade}/${subject}`)} />
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center space-y-3">
-          <p className="text-gray-600 font-medium">
-            {score} / {exercises.length} richtig{perfect && " — Perfekt! 🌟"}
-          </p>
+          {isReviewMode ? (
+            <p className="text-green-700 font-bold">🎉 Alle Fehler korrigiert!</p>
+          ) : (
+            <p className="text-gray-600 font-medium">
+              {score} / {totalEx} richtig{perfect && " — Perfekt! 🌟"}
+            </p>
+          )}
           <div className="text-4xl flex justify-center gap-2">
             {Array.from({length: 3}).map((_, i) => (
               <span key={i} style={{
@@ -169,12 +222,21 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           </div>
           <div className="flex gap-3 justify-center flex-wrap pt-1">
             <button onClick={() => {
-              setIdx(0); setScore(0); setStreak(0); setAnswered(null); setDone(false); setCardKey(k=>k+1);
+              setExercises(topic.exercises);
+              setIdx(0); setScore(0); setStreak(0); setAnswered(null);
+              setDone(false); setWrongIds([]); setIsReviewMode(false); setCardKey(k=>k+1);
             }} className="text-sm border-2 border-gray-200 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
               {tr("playAgainShort")}
             </button>
+            {/* UJ-5: Next topic button */}
+            {nextTopic && (
+              <Link href={`/learn/${grade}/${subject}/${nextTopic.id}`}
+                className="text-sm bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all flex items-center gap-1">
+                Nächstes Thema →
+              </Link>
+            )}
             <Link href={`/learn/${grade}/${subject}`}
-              className="text-sm bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all">
+              className="text-sm border-2 border-gray-200 text-gray-500 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
               {tr("otherTopics")}
             </Link>
           </div>
@@ -216,9 +278,26 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // ── Exercise ─────────────────────────────────────────────────────
   return (
     <div className="space-y-3 max-w-xl mx-auto">
+      {/* UJ-15: Thin top progress bar — always visible */}
+      <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+        <div
+          className="h-full rounded-full transition-all duration-500"
+          style={{
+            width: `${((idx + (answered !== null ? 1 : 0)) / exercises.length) * 100}%`,
+            background: isReviewMode
+              ? "linear-gradient(to right, #f59e0b, #d97706)"
+              : "linear-gradient(to right, #86efac, #16a34a)",
+          }}
+        />
+      </div>
+
       {/* Progress bar + voice toggle — hide while reward animation is showing */}
       {answered === null && (
         <div className="flex items-center gap-2">
+          {/* UJ-15: Exercise counter */}
+          <span className="text-xs font-bold text-gray-400 shrink-0 tabular-nums">
+            {isReviewMode ? "🔄 " : ""}{idx + 1}/{exercises.length}
+          </span>
           <div className="flex-1">
             <ProgressBar current={idx + 1} total={exercises.length} streak={streak} />
           </div>
@@ -306,10 +385,31 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         </div>
       )}
 
-      {/* Reward replaces the card — no overlap */}
-      {answered !== null && (
+      {/* UJ-6: Wrong answer — full red feedback panel */}
+      {answered === false && (
+        <div ref={rewardRef} className="rounded-2xl border-2 border-red-300 bg-red-50 p-5 text-center space-y-3 animate-fadeIn">
+          <div className="text-4xl">❌</div>
+          <p className="text-lg font-bold text-red-700">Nicht ganz richtig</p>
+          <div className="bg-white border border-red-200 rounded-xl px-4 py-3 text-sm text-gray-700 text-left space-y-1">
+            <p className="font-semibold text-gray-500 text-xs uppercase tracking-wide mb-1">Richtige Antwort:</p>
+            <p className="font-bold text-gray-900 text-base">{current.answer}</p>
+            {current.explanation && (
+              <p className="text-gray-500 text-xs mt-1">{current.explanation}</p>
+            )}
+          </div>
+          <button
+            onClick={handleContinue}
+            className="w-full bg-red-500 text-white py-3 rounded-xl font-bold hover:bg-red-600 active:scale-95 transition-all"
+          >
+            Verstanden — Weiter →
+          </button>
+        </div>
+      )}
+
+      {/* Correct answer — keep the celebration animation */}
+      {answered === true && (
         <div ref={rewardRef}>
-          <RewardAnimation correct={answered} onContinue={handleContinue} />
+          <RewardAnimation correct={true} onContinue={handleContinue} />
         </div>
       )}
 

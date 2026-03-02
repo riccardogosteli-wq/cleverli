@@ -2,13 +2,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
+import { useSession } from "@/hooks/useSession";
 import { useState } from "react";
-
-
 
 export default function Home() {
   const { tr, lang } = useLang();
+  const { session, loaded, isPremium } = useSession();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // Logged-in CTA targets
+  const primaryHref  = session ? "/dashboard" : "/dashboard";
+  const primaryLabel = session ? (isPremium ? "Zum Dashboard →" : "Weiterlernen →") : `${tr("startFree")} →`;
+  const showSignupCta = !session;
 
   return (
     <main className="min-h-screen bg-white">
@@ -33,14 +38,16 @@ export default function Home() {
             </h1>
             <p className="mt-3 text-base sm:text-lg text-gray-500 max-w-lg">{tr("subtitle").split("\n")[0]}</p>
             <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center sm:justify-start">
-              <Link href="/dashboard" className="bg-green-600 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-center">
-                {tr("startFree")} →
+              <Link href={primaryHref} className="bg-green-600 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-center">
+                {loaded ? primaryLabel : `${tr("startFree")} →`}
               </Link>
-              <Link href="/signup" className="border-2 border-green-600 text-green-700 px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-50 active:scale-95 transition-all text-center">
-                {tr("createAccount")}
-              </Link>
+              {showSignupCta && (
+                <Link href="/signup" className="border-2 border-green-600 text-green-700 px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-50 active:scale-95 transition-all text-center">
+                  {tr("createAccount")}
+                </Link>
+              )}
             </div>
-            <p className="mt-3 text-xs text-gray-400 px-4 sm:px-0">{tr("freeNote")}</p>
+            {!session && <p className="mt-3 text-xs text-gray-400 px-4 sm:px-0">{tr("freeNote")}</p>}
           </div>
         </div>
       </section>
@@ -263,7 +270,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-2">{tr("ctaTitle")}</h2>
             <p className="text-green-100 mb-4">{tr("ctaSubtitle")}</p>
             <Link href="/dashboard" className="inline-block bg-white text-green-700 px-8 py-3 rounded-full font-bold hover:bg-green-50 transition-colors shadow-md">
-              {tr("startFree")} →
+              {loaded && session ? "Weiterlernen →" : `${tr("startFree")} →`}
             </Link>
           </div>
         </div>

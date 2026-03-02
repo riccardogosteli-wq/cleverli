@@ -1,15 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
+import { useSession } from "@/hooks/useSession";
 
 const STEP_LABELS = ["Wer bist du?", "Dein Konto", "Deine Klasse"];
 
 export default function Signup() {
   const { tr } = useLang();
   const router = useRouter();
+  const { session, loaded } = useSession();
   const [step, setStep] = useState(1);
   const [role, setRole] = useState<"parent" | "child" | null>(null);
   const [name, setName] = useState("");
@@ -26,9 +28,21 @@ export default function Signup() {
     return true;
   };
 
+  // UJ-3: redirect if already logged in
+  useEffect(() => {
+    if (loaded && session) router.replace("/dashboard");
+  }, [loaded, session, router]);
+
   const handleStart = () => {
     setLoading(true);
-    setTimeout(() => router.push("/dashboard"), 700);
+    // UJ-2: actually persist the session in localStorage
+    const sessionData = { email, name, premium: false };
+    localStorage.setItem("cleverli_session", JSON.stringify(sessionData));
+    // Also store grade for dashboard
+    localStorage.setItem("cleverli_last_grade", String(grade));
+    // Mark as new user for onboarding
+    localStorage.setItem("cleverli_new_user", "true");
+    setTimeout(() => router.push("/dashboard"), 400);
   };
 
   const inputCls = "w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white transition-colors";

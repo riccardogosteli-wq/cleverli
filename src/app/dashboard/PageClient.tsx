@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import OnboardingModal from "@/components/OnboardingModal";
 import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
@@ -273,6 +274,8 @@ function DashboardInner() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-5">
+      {/* UJ-11: Onboarding modal for first-time users */}
+      <OnboardingModal />
       <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
       <div className="hidden md:block"><Sidebar /></div>
       <div className="space-y-4">

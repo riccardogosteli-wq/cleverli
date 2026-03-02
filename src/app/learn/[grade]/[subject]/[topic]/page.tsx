@@ -57,8 +57,13 @@ export default async function TopicPage({ params }: Props) {
         <span className="text-3xl">{topic.emoji}</span>
         <h1 className="text-xl sm:text-2xl font-bold text-gray-800">{topic.title}</h1>
       </div>
-      {/* TopicClient reads session from localStorage to determine isPremium */}
-      <TopicClient topic={topic} grade={parseInt(grade)} subject={subject} />
+      <TopicClient
+        topic={topic}
+        grade={parseInt(grade)}
+        subject={subject}
+        allTopics={topics}
+        topicIndex={topics.findIndex(t => t.id === topicId)}
+      />
     </div>
   );
 }

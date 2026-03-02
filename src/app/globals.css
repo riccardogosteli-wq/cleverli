@@ -45,6 +45,13 @@ button { min-height: 44px; }
 /* Prevent double-tap zoom on buttons */
 button, a { user-select: none; }
 
+/* Wrong answer panel fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.2s ease both; }
+
 /* Mascot bounce animation (used in hero section) */
 @keyframes cleverli-jump {
   0%, 100% { transform: translateY(0); }
