@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Topic, Exercise } from "@/types/exercise";
 import MultipleChoice from "./exercises/MultipleChoice";
 import FillInBlank from "./exercises/FillInBlank";
@@ -9,10 +9,11 @@ import ProgressBar from "./ProgressBar";
 import RewardAnimation from "./RewardAnimation";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; }
 
-function stars(score: number, total: number) {
+function calcStars(score: number, total: number) {
   const pct = score / total;
   if (pct >= 0.9) return 3;
   if (pct >= 0.7) return 2;
@@ -20,6 +21,7 @@ function stars(score: number, total: number) {
 }
 
 export default function ExercisePlayer({ topic, grade, subject, isPremium = false }: Props) {
+  const router = useRouter();
   const FREE_LIMIT = 3;
   const exercises = topic.exercises;
   const [idx, setIdx] = useState(0);
@@ -27,21 +29,23 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [streak, setStreak] = useState(0);
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [done, setDone] = useState(false);
-  const [key, setKey] = useState(0);
+  const [cardKey, setCardKey] = useState(0);
+  const rewardRef = useRef<HTMLDivElement>(null);
 
   const current: Exercise = exercises[idx];
   const isLocked = !isPremium && idx >= FREE_LIMIT;
 
+  // Save progress when done
   useEffect(() => {
     if (done) {
-      const s = stars(score, exercises.length);
+      const s = calcStars(score, exercises.length);
       localStorage.setItem(`cleverli_${grade}_${subject}_${topic.id}`, JSON.stringify({
         completed: exercises.length, score, stars: s, lastPlayed: new Date().toISOString()
       }));
     }
   }, [done, score, grade, subject, topic.id, exercises.length]);
 
-  // Enter key to continue after answering
+  // Enter key to continue after answering (desktop)
   useEffect(() => {
     if (answered === null) return;
     const handler = (e: KeyboardEvent) => {
@@ -50,6 +54,15 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   });
+
+  // Scroll reward into view on mobile
+  useEffect(() => {
+    if (answered !== null && rewardRef.current) {
+      setTimeout(() => {
+        rewardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 100);
+    }
+  }, [answered]);
 
   const handleAnswer = (correct: boolean) => {
     if (correct) { setScore(s => s + 1); setStreak(s => s + 1); }
@@ -61,116 +74,114 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     if (idx + 1 >= exercises.length) { setDone(true); return; }
     setIdx(i => i + 1);
     setAnswered(null);
-    setKey(k => k + 1);
+    setCardKey(k => k + 1);
   };
 
-  // Topic complete screen
+  // ── Topic Complete ──────────────────────────────────────────────
   if (done) {
-    const s = stars(score, exercises.length);
+    const s = calcStars(score, exercises.length);
     const perfect = score === exercises.length;
     return (
-      <div className="text-center space-y-5 py-4 max-w-md mx-auto">
-        {/* Big confetti reward */}
-        <RewardAnimation correct={true} isTopicComplete={true} onContinue={() => {
-          setIdx(0); setScore(0); setStreak(0); setAnswered(null); setDone(false); setKey(k=>k+1);
-        }} />
-
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 space-y-3">
-          <p className="text-gray-600">
-            {score} von {exercises.length} richtig
-            {perfect && " — Perfekt! 🌟"}
+      <div className="space-y-4 max-w-md mx-auto">
+        <RewardAnimation correct={true} isTopicComplete={true} onContinue={() => router.push(`/learn/${grade}/${subject}`)} />
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center space-y-3">
+          <p className="text-gray-600 font-medium">
+            {score} / {exercises.length} richtig{perfect && " — Perfekt! 🌟"}
           </p>
-          <div className="text-4xl flex justify-center gap-1">
-            {Array.from({length:3}).map((_,i) => (
+          <div className="text-4xl flex justify-center gap-2">
+            {Array.from({length: 3}).map((_, i) => (
               <span key={i} style={{
-                animation: i < s ? `popIn 0.4s ${0.2 + i * 0.15}s cubic-bezier(.34,1.56,.64,1) both` : "none",
                 display: "inline-block",
+                animation: i < s ? `popIn 0.4s ${0.15 + i * 0.15}s cubic-bezier(.34,1.56,.64,1) both` : "none",
               }}>
                 {i < s ? "⭐" : "☆"}
               </span>
             ))}
           </div>
-          <Link href={`/learn/${grade}/${subject}`}
-            className="block border-2 border-green-600 text-green-700 px-6 py-2 rounded-full font-semibold hover:bg-green-50 text-sm">
-            ← Andere Themen
-          </Link>
+          <div className="flex gap-3 justify-center flex-wrap pt-1">
+            <button onClick={() => {
+              setIdx(0); setScore(0); setStreak(0); setAnswered(null); setDone(false); setCardKey(k=>k+1);
+            }} className="text-sm border-2 border-gray-200 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
+              🔄 Nochmal
+            </button>
+            <Link href={`/learn/${grade}/${subject}`}
+              className="text-sm bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all">
+              Andere Themen →
+            </Link>
+          </div>
         </div>
         <style>{`@keyframes popIn{from{transform:scale(0.3);opacity:0}to{transform:scale(1);opacity:1}}`}</style>
       </div>
     );
   }
 
+  // ── Locked (free limit reached) ──────────────────────────────────
   if (isLocked) {
     return (
       <div className="text-center space-y-4 py-8 max-w-sm mx-auto">
         <Image src="/cleverli-think.png" alt="" width={100} height={100} className="mx-auto drop-shadow-md" />
-        <h2 className="text-2xl font-bold text-gray-800">Premium-Inhalt 🔒</h2>
-        <p className="text-gray-500 text-sm">Die ersten 3 Aufgaben sind kostenlos.<br/>Für alle Aufgaben brauchst du ein Abo.</p>
-        <Link href="/signup" className="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700 shadow-md">
+        <h2 className="text-xl font-bold text-gray-800">Weiter mit Premium 🔒</h2>
+        <p className="text-gray-500 text-sm">
+          Du hast alle 3 kostenlosen Aufgaben gemacht!<br/>
+          Schalte alle <strong>{exercises.length}</strong> Aufgaben frei.
+        </p>
+        <Link href="/signup"
+          className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
           Jetzt upgraden — CHF 9.90/Mt.
         </Link>
-        <br/>
-        <Link href={`/learn/${grade}/${subject}`} className="text-sm text-gray-400 hover:text-gray-600 underline">
-          Anderes Thema wählen
-        </Link>
+        <div>
+          <Link href={`/learn/${grade}/${subject}`} className="text-sm text-gray-400 hover:text-gray-600 underline">
+            Anderes Thema wählen
+          </Link>
+        </div>
       </div>
     );
   }
 
+  // ── Exercise ─────────────────────────────────────────────────────
   return (
-    <div className="space-y-4 max-w-xl mx-auto">
-      <ProgressBar current={idx} total={exercises.length} streak={streak} />
+    <div className="space-y-3 max-w-xl mx-auto">
+      {/* Progress bar shows next exercise number (human-friendly: 1 of 8, not 0 of 8) */}
+      <ProgressBar current={idx + 1} total={exercises.length} streak={streak} />
 
-      <div
-        className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 min-h-[300px] flex flex-col justify-center space-y-4"
-        key={key}
-        style={{ animation: "slideIn 0.25s cubic-bezier(.34,1.56,.64,1)" }}
-      >
-        {current.type === "multiple-choice" && (
-          <MultipleChoice
-            question={current.question}
-            options={current.options ?? []}
-            answer={current.answer}
-            onAnswer={handleAnswer}
-          />
-        )}
-        {current.type === "fill-in-blank" && (
-          <FillInBlank
-            question={current.question}
-            answer={current.answer}
-            onAnswer={handleAnswer}
-          />
-        )}
-        {current.type === "counting" && (
-          <CountingGame
-            question={current.question}
-            answer={current.answer}
-            emoji={current.emoji}
-            options={current.options ?? []}
-            onAnswer={handleAnswer}
-          />
-        )}
-
-        {answered !== null && (
-          <RewardAnimation correct={answered} onContinue={handleContinue} />
-        )}
-        {answered === null && current.hints.length > 0 && (
+      {/* Exercise card — hidden when answered, replaced by reward */}
+      {answered === null && (
+        <div
+          className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 space-y-4"
+          key={cardKey}
+          style={{ animation: "slideIn 0.25s cubic-bezier(.34,1.56,.64,1)" }}
+        >
+          {current.type === "multiple-choice" && (
+            <MultipleChoice question={current.question} options={current.options ?? []} answer={current.answer} onAnswer={handleAnswer} />
+          )}
+          {current.type === "fill-in-blank" && (
+            <FillInBlank question={current.question} answer={current.answer} onAnswer={handleAnswer} />
+          )}
+          {current.type === "counting" && (
+            <CountingGame question={current.question} answer={current.answer} emoji={current.emoji} options={current.options ?? []} onAnswer={handleAnswer} />
+          )}
           <HintSystem hints={current.hints} />
-        )}
-      </div>
+        </div>
+      )}
 
+      {/* Reward replaces the card — no overlap */}
+      {answered !== null && (
+        <div ref={rewardRef}>
+          <RewardAnimation correct={answered} onContinue={handleContinue} />
+        </div>
+      )}
+
+      {/* Free limit notice */}
       {!isPremium && idx < FREE_LIMIT && (
         <p className="text-center text-xs text-gray-400">
-          Aufgabe {idx+1} von 3 kostenlos —{" "}
-          <Link href="/signup" className="text-green-600 underline">
-            alle {exercises.length} freischalten
-          </Link>
+          Aufgabe {idx + 1} von {FREE_LIMIT} kostenlos —{" "}
+          <Link href="/signup" className="text-green-600 underline">alle {exercises.length} freischalten</Link>
         </p>
       )}
 
       <style>{`
         @keyframes slideIn {
-          from { transform: translateY(12px) scale(0.97); opacity: 0; }
+          from { transform: translateY(10px) scale(0.98); opacity: 0; }
           to   { transform: translateY(0) scale(1); opacity: 1; }
         }
       `}</style>

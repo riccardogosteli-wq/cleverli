@@ -26,7 +26,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       {/* Banner */}
       <div className="bg-green-600 text-white text-center py-2 text-sm font-medium tracking-wide">
-        🇨🇭 Lehrplan 21 &nbsp;·&nbsp; 🏅 Von Lehrern empfohlen &nbsp;·&nbsp; 🎮 Über 150 Übungen
+        🇨🇭 Lehrplan 21 &nbsp;·&nbsp; 🏅 Von Lehrern empfohlen &nbsp;·&nbsp; 🎮 Über 200 Übungen
       </div>
 
       {/* Hero */}
@@ -67,12 +67,14 @@ export default function Home() {
             {[
               { emoji: "🔢", key: "math", color: "bg-blue-50 border-blue-200 text-blue-800 hover:bg-blue-100" },
               { emoji: "📖", key: "german", color: "bg-yellow-50 border-yellow-200 text-yellow-800 hover:bg-yellow-100" },
-              { emoji: "🌍", key: "science", color: "bg-green-50 border-green-200 text-green-800 hover:bg-green-100" },
-              { emoji: "🎨", key: "moreSoon", color: "bg-purple-50 border-purple-200 text-purple-800" },
+              { emoji: "🌍", key: "science", color: "bg-green-50 border-green-200 text-green-800" },
+              { emoji: "🎨", key: "moreSoon", color: "bg-gray-50 border-gray-200 text-gray-400", locked: true },
             ].map((s) => (
-              <div key={s.key} className={`border-2 rounded-2xl p-5 text-center transition-colors cursor-default ${s.color}`}>
-                <div className="text-4xl mb-2">{s.emoji}</div>
+              <div key={s.key}
+                className={`border-2 rounded-2xl p-5 text-center ${s.color} ${s.locked ? "opacity-50 cursor-not-allowed" : "cursor-default"}`}>
+                <div className={`text-4xl mb-2 ${s.locked ? "grayscale" : ""}`}>{s.emoji}</div>
                 <div className="font-semibold text-sm">{tr(s.key)}</div>
+                {s.locked && <div className="text-xs text-gray-400 mt-1">🔜 Bald</div>}
               </div>
             ))}
           </div>
@@ -148,8 +150,8 @@ export default function Home() {
       {/* Testimonials */}
       <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col sm:flex-row items-center gap-6 mb-10">
-            <Image src="/cleverli-wave.png" alt="" width={100} height={100} className="drop-shadow-md shrink-0" />
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+            <Image src="/cleverli-wave.png" alt="" width={70} height={70} className="drop-shadow-md shrink-0 sm:w-[100px] sm:h-[100px]" />
             <h2 className="text-2xl font-bold text-gray-800">Was Eltern sagen 💬</h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">

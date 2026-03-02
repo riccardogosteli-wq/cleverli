@@ -20,7 +20,10 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const W = canvas.offsetWidth, H = canvas.offsetHeight;
+    // Use getBoundingClientRect for reliable sizing after layout
+    const rect = canvas.getBoundingClientRect();
+    const W = rect.width || canvas.parentElement?.offsetWidth || 300;
+    const H = rect.height || canvas.parentElement?.offsetHeight || 200;
     canvas.width = W; canvas.height = H;
 
     const count = isTopicComplete ? 120 : 50;
