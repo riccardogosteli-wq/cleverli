@@ -16,8 +16,9 @@ const COSTUME_IMAGES = [
 ];
 
 function RarityBadge({ rarity }: { rarity: Achievement["rarity"] }) {
+  const { tr } = useLang();
   const labels: Record<Achievement["rarity"], string> = {
-    common: "Gewöhnlich", rare: "Selten", epic: "Episch", legendary: "Legendär"
+    common: tr("rarityCommon"), rare: tr("rarityRare"), epic: tr("rarityEpic"), legendary: tr("rarityLegendary")
   };
   const colors: Record<Achievement["rarity"], string> = {
     common: "bg-gray-100 text-gray-500",
@@ -34,7 +35,7 @@ function RarityBadge({ rarity }: { rarity: Achievement["rarity"] }) {
 
 export default function TrophiesPage() {
   const { profile, level, loaded } = useProfileContext();
-  const { lang } = useLang();
+  const { lang, tr } = useLang();
 
   const nextLevel = getNextLevel(profile.xp);
   const pct = getLevelProgress(profile.xp);
@@ -120,9 +121,9 @@ export default function TrophiesPage() {
       {/* ── Stats strip ── */}
       <div className="grid grid-cols-3 gap-3">
         {[
-          { label: "Aufgaben", value: profile.totalExercises, emoji: "✏️" },
-          { label: "Streak", value: `${profile.dailyStreak}🔥`, emoji: "" },
-          { label: "Trophäen", value: `${profile.achievements.length}/${ACHIEVEMENTS.length}`, emoji: "🏆" },
+          { label: tr("statExercises"), value: profile.totalExercises, emoji: "✏️" },
+          { label: tr("statStreak"), value: `${profile.dailyStreak}🔥`, emoji: "" },
+          { label: tr("statTrophies"), value: `${profile.achievements.length}/${ACHIEVEMENTS.length}`, emoji: "🏆" },
         ].map(s => (
           <div key={s.label} className="bg-white rounded-2xl p-3 text-center shadow-sm border border-gray-100">
             <div className="text-xl font-black text-gray-800">{s.emoji}{s.value}</div>

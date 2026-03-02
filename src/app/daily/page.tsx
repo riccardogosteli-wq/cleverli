@@ -84,12 +84,12 @@ export default function DailyPage() {
       <main className="max-w-md mx-auto px-4 py-8 text-center space-y-5">
         <Image src="/cleverli-jump-star.png" alt="Cleverli" width={120} height={120} className="mx-auto drop-shadow-lg" style={{ animation: "float 3s ease-in-out infinite" }} />
         <h1 className="text-2xl font-black text-green-700">
-          {lang === "fr" ? "Défi du jour terminé !" : lang === "it" ? "Sfida del giorno completata!" : lang === "en" ? "Daily challenge done!" : "Tagesaufgabe erledigt! 🎉"}
+          {tr("dailyDone")}
         </h1>
         <p className="text-gray-500 text-sm">
           {state?.correct
-            ? (lang === "fr" ? "Tu as répondu correctement. Reviens demain !" : lang === "it" ? "Risposta corretta. Torna domani!" : lang === "en" ? "You answered correctly. Come back tomorrow!" : "Du hast richtig geantwortet. Komm morgen wieder!")
-            : (lang === "fr" ? "Tu pourras réessayer demain." : lang === "it" ? "Riprova domani." : lang === "en" ? "Try again tomorrow." : "Morgen kommt eine neue Aufgabe.")
+            ? (tr("dailyCorrect"))
+            : (tr("dailyWrong"))
           }
         </p>
         <div className="flex flex-col gap-3 items-center">
@@ -124,7 +124,7 @@ export default function DailyPage() {
             </div>
           )}
           <p className="text-xs text-gray-400">
-            {lang === "fr" ? "Reviens demain pour un nouveau défi !" : lang === "it" ? "Torna domani per una nuova sfida!" : lang === "en" ? "Come back tomorrow for a new challenge!" : "Morgen wartet die nächste Aufgabe!"}
+            {tr("dailyTomorrow")}
           </p>
         </div>
         <div className="flex flex-col gap-3 items-center">
@@ -145,7 +145,7 @@ export default function DailyPage() {
         <span className="text-3xl">⚡</span>
         <div>
           <div className="font-black text-amber-800 text-base">
-            {lang === "fr" ? "Défi du jour" : lang === "it" ? "Sfida del giorno" : lang === "en" ? "Daily Challenge" : "Tagesaufgabe"}
+            {tr("dailyTitle")}
           </div>
           <div className="text-xs text-amber-600">
             {subjectLabel} · {topic.emoji} {topic.title} · +{DAILY_XP_BONUS} Bonus-XP
@@ -187,7 +187,7 @@ export default function DailyPage() {
       </div>
 
       <p className="text-center text-xs text-gray-400">
-        {lang === "fr" ? "Un seul essai par jour — fais de ton mieux !" : lang === "it" ? "Un solo tentativo al giorno — dai il meglio!" : lang === "en" ? "One shot per day — give it your best!" : "Einmal pro Tag — gib dein Bestes! 🌟"}
+        {tr("dailyMotivation")}
       </p>
     </main>
   );

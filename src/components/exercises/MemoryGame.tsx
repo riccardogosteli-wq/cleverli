@@ -7,6 +7,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useSound } from "@/hooks/useSound";
+import { useLang } from "@/lib/LangContext";
 
 export interface MemoryPair {
   id: string;
@@ -39,6 +40,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 export default function MemoryGame({ pairs, onAnswer }: Props) {
   const { play } = useSound();
+  const { tr } = useLang();
   const [cards, setCards] = useState<Card[]>([]);
   const [flipped, setFlipped] = useState<string[]>([]);
   const [matched, setMatched] = useState<string[]>([]);
@@ -90,7 +92,7 @@ export default function MemoryGame({ pairs, onAnswer }: Props) {
       <div className="flex justify-between items-center px-1">
         <p className="text-sm font-semibold text-gray-600">
           🃏 {pairs.length === matched.length
-            ? "Alle Paare gefunden! 🎉"
+            ? tr("allPairsFound")
             : `${matched.length} / ${pairs.length} Paare gefunden`}
         </p>
         <p className="text-xs text-gray-400">{moves} Versuche</p>

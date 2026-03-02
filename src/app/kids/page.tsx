@@ -60,7 +60,7 @@ function SubjectIsland({ grade, subject, emoji, label, colorIdx }: {
 }
 
 function GradeSection({ grade, idx }: { grade: number; idx: number }) {
-  const { lang } = useLang();
+  const { lang, tr } = useLang();
   const label = lang === "fr" ? `${grade}re année` : lang === "it" ? `${grade}a classe` : lang === "en" ? `Grade ${grade}` : `${grade}. Klasse`;
   const c = GRADE_COLORS[idx];
 
@@ -78,7 +78,7 @@ function GradeSection({ grade, idx }: { grade: number; idx: number }) {
 
 export default function KidsDashboard() {
   const { profile, level, loaded } = useProfileContext();
-  const { lang } = useLang();
+  const { lang, tr } = useLang();
   const [activeGrade, setActiveGrade] = useState(1);
   const pct = getLevelProgress(profile.xp);
   const dailyDone = isDailyDoneToday();
@@ -140,7 +140,7 @@ export default function KidsDashboard() {
           {/* Streak */}
           {profile.dailyStreak >= 1 && (
             <div className="inline-flex items-center gap-1 bg-orange-100 text-orange-600 px-2.5 py-1 rounded-full text-xs font-bold">
-              🔥 {profile.dailyStreak} {lang === "de" ? "Tage Streak" : lang === "fr" ? "jours" : lang === "it" ? "giorni" : "day streak"}
+              🔥 {profile.dailyStreak} {tr("streakDays")}
             </div>
           )}
         </div>
@@ -152,11 +152,11 @@ export default function KidsDashboard() {
         <span className="text-3xl">{dailyDone ? "✅" : "⚡"}</span>
         <div className="flex-1">
           <div className="font-bold text-amber-800 text-sm">
-            {lang === "fr" ? "Défi du jour" : lang === "it" ? "Sfida del giorno" : lang === "en" ? "Daily Challenge" : "Tagesaufgabe"}
+            {tr("dailyTitle")}
           </div>
           <div className="text-xs text-amber-600">
             {dailyDone
-              ? (lang === "de" ? "Erledigt! Morgen wieder." : lang === "fr" ? "Terminé !" : lang === "it" ? "Fatto!" : "Done!")
+              ? tr("dailyDoneShort")
               : "+30 Bonus-XP"}
           </div>
         </div>
@@ -195,10 +195,10 @@ export default function KidsDashboard() {
           <div className="flex-1">
             <div className="text-xs font-bold text-gray-600">
               {profile.costume === 0
-                ? `${lang === "de" ? "Hut freischalten:" : "Unlock hat:"} ${Math.max(0, 10 - profile.totalExercises)} ${lang === "de" ? "Aufgaben" : "exercises"}`
+                ? `${tr("unlockHat")}: ${Math.max(0, 10 - profile.totalExercises)} ${tr("statExercises")}`
                 : profile.costume === 1
-                ? `${lang === "de" ? "Cape freischalten:" : "Unlock cape:"} ${Math.max(0, 50 - profile.totalExercises)} ${lang === "de" ? "Aufgaben" : "exercises"}`
-                : `${lang === "de" ? "Krone freischalten:" : "Unlock crown:"} ${Math.max(0, 100 - profile.totalExercises)} ${lang === "de" ? "Aufgaben" : "exercises"}`}
+                ? `${tr("unlockCape")}: ${Math.max(0, 50 - profile.totalExercises)} ${tr("statExercises")}`
+                : `${tr("unlockCrown")}: ${Math.max(0, 100 - profile.totalExercises)} ${tr("statExercises")}`}
             </div>
             <div className="w-full h-1.5 bg-gray-100 rounded-full mt-1 overflow-hidden">
               <div className="h-full bg-green-400 rounded-full transition-all" style={{
@@ -233,10 +233,10 @@ export default function KidsDashboard() {
       <div className="flex flex-col gap-3 items-center pt-2">
         <Link href="/dashboard"
           className="w-full text-center bg-green-600 text-white py-4 rounded-full font-black text-lg hover:bg-green-700 active:scale-95 transition-all shadow-md">
-          🎒 {lang === "de" ? "Weiterlernen" : lang === "fr" ? "Continuer" : lang === "it" ? "Continua" : "Keep learning"}
+          🎒 {tr("keepLearning")}
         </Link>
         <Link href="/trophies" className="text-sm text-gray-400 underline">
-          🏆 {lang === "de" ? "Trophäen-Zimmer" : lang === "fr" ? "Salle des trophées" : lang === "it" ? "Sala trofei" : "Trophy room"}
+          🏆 {tr("trophyRoom")}
         </Link>
       </div>
 

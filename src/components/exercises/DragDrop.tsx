@@ -193,7 +193,7 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
 
       {!allPlaced && !checked && (
         <p className="text-center text-xs text-gray-400">
-          {remaining} {remaining === 1 ? "Feld fehlt noch" : "Felder fehlen noch"}
+          {remaining} {remaining === 1 ? tr("fieldMissing") : tr("fieldsMissing")}
         </p>
       )}
 

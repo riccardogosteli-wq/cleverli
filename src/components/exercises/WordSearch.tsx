@@ -6,6 +6,7 @@
  */
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { useSound } from "@/hooks/useSound";
+import { useLang } from "@/lib/LangContext";
 
 interface Props {
   question: string;
@@ -61,6 +62,7 @@ function buildGrid(words: string[], size: number): { grid: string[][]; placement
 
 export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: Props) {
   const { play } = useSound();
+  const { tr } = useLang();
   const { grid, placements } = useMemo(() => buildGrid(words, gridSize), [words, gridSize]);
 
   const [selecting, setSelecting] = useState<{row: number; col: number}[]>([]);
@@ -157,7 +159,7 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
       </div>
 
       <p className="text-center text-xs text-gray-400">
-        {found.size}/{words.length} {found.size === words.length ? "🎉" : "Wörter gefunden"}
+        {found.size}/{words.length} {found.size === words.length ? "🎉" : tr("wordsFound")}
       </p>
     </div>
   );
