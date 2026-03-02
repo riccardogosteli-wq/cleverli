@@ -34,7 +34,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [done, setDone] = useState(false);
   const [cardKey, setCardKey] = useState(0);
-  const [voiceOn, setVoiceOn] = useState(true);
+  const [voiceOn, setVoiceOn] = useState(false); // off by default, user opts in
   const rewardRef = useRef<HTMLDivElement>(null);
 
   const current: Exercise = exercises[idx];
@@ -202,13 +202,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
                 const next = !voiceOn;
                 setVoiceOn(next);
                 if (!next) stop();
-                else speak(current.question);
               }}
-              title={voiceOn ? "Stimme ausschalten" : "Stimme einschalten"}
+              title={voiceOn ? "Cleverli-Stimme aus" : "Cleverli-Stimme an"}
               className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center border-2 transition-all active:scale-95"
               style={{ borderColor: voiceOn ? "#16a34a" : "#d1d5db", background: voiceOn ? "#f0fdf4" : "#f9fafb" }}
             >
-              <span className="text-lg">{voiceOn ? "🔊" : "🔇"}</span>
+              <span className="text-lg">{voiceOn ? "🐿️" : "🔇"}</span>
             </button>
           )}
         </div>
@@ -221,14 +220,14 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           key={cardKey}
           style={{ animation: "slideIn 0.25s cubic-bezier(.34,1.56,.64,1)" }}
         >
-          {/* Tap question to replay voice */}
-          {isSupported && voiceOn && (
+          {/* Read question aloud — always visible when speech is supported */}
+          {isSupported && (
             <button
               onClick={() => speak(current.question)}
-              className="w-full text-center text-xs text-green-600 opacity-60 hover:opacity-100 transition-opacity pb-1"
-              title="Aufgabe nochmal vorlesen"
+              className="w-full text-center text-xs text-green-600 opacity-60 hover:opacity-100 active:scale-95 transition-all pb-1"
+              title="Aufgabe vorlesen"
             >
-              🔊 Nochmal hören
+              🔊 Vorlesen
             </button>
           )}
           {current.type === "multiple-choice" && (
