@@ -100,12 +100,12 @@ const grade3German: Topic[] = [
     emoji: "↔️",
     exercises: [
       { id: "sa1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist ein Synonym für «froh»? 😊", answer: "glücklich", options: ["traurig", "glücklich", "müde", "wütend"], hints: ["Synonym = gleichbedeutend.", "Froh und ___ bedeuten das Gleiche."], mascot: "wave" },
-      { id: "sa2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist das Antonym (Gegenteil) von «warm»? 🔥❄️", answer: "kalt", options: ["heiß", "mild", "kalt", "warm"], hints: ["Antonym = Gegenteil."] },
+      { id: "sa2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist das Antonym (Gegenteil) von «warm»? 🔥❄️", answer: "kalt", options: ["heiss", "mild", "kalt", "warm"], hints: ["Antonym = Gegenteil."] },
       { id: "sa3", type: "drag-drop", free: true, difficulty: 1, question: "Verbinde Wörter mit ihrem Gegenteil! ↔️", answer: "all", hints: ["Gegenteil = Antonym"], dragItems: [{ id: "gross", label: "gross" }, { id: "hell", label: "hell" }, { id: "schnell", label: "schnell" }, { id: "alt", label: "alt" }], dropZones: [{ id: "klein", label: "klein" }, { id: "dunkel", label: "dunkel" }, { id: "langsam", label: "langsam" }, { id: "jung", label: "jung" }], dropAnswers: { gross: "klein", hell: "dunkel", schnell: "langsam", alt: "jung" } },
       { id: "sa4", type: "fill-in-blank", difficulty: 2, question: "Ein anderes Wort für «beginnen» ist ___.", answer: "anfangen", hints: ["Syn. = gleichbedeutend", "an-fangen, starten, loslegen, beginnen..."] },
       { id: "sa5", type: "multiple-choice", difficulty: 2, question: "Welches ist KEIN Synonym für «sprechen»? 💬", answer: "schlafen", options: ["reden", "sagen", "flüstern", "schlafen"], hints: ["Sprechen = mit dem Mund Wörter machen.", "Schlafen hat nichts damit zu tun!"] },
       { id: "sa6", type: "fill-in-blank", difficulty: 2, question: "Das Gegenteil von «Freude» ist ___.", answer: "Trauer", hints: ["Wenn man nicht froh ist, ist man...", "Tränen = Trauer"] },
-      { id: "sa7", type: "multiple-choice", difficulty: 3, question: "Welches Wort passt am besten als Synonym für «riesig»? 🏔️", answer: "gigantisch", options: ["winzig", "mittel", "gigantisch", "etwas"], hints: ["Riesig = sehr groß.", "Noch größer als groß!"], mascot: "celebrate" },
+      { id: "sa7", type: "multiple-choice", difficulty: 3, question: "Welches Wort passt am besten als Synonym für «riesig»? 🏔️", answer: "gigantisch", options: ["winzig", "mittel", "gigantisch", "etwas"], hints: ["Riesig = sehr gross.", "Noch grösser als gross!"], mascot: "celebrate" },
     ],
   },
   {

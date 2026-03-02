@@ -30,7 +30,7 @@ const grade2Science: Topic[] = [
         id: "l2", type: "multiple-choice", free: true, difficulty: 1,
         question: "Was brauchen alle Lebewesen? 💧",
         answer: "Wasser", options: ["Spielzeug", "Wasser", "Autos", "Fernseher"],
-        hints: ["Ohne das können wir nicht überleben.", "Es fließt aus dem Wasserhahn."],
+        hints: ["Ohne das können wir nicht überleben.", "Es fliesst aus dem Wasserhahn."],
       },
       {
         id: "l3", type: "multiple-choice", free: true, difficulty: 2,
@@ -43,7 +43,7 @@ const grade2Science: Topic[] = [
         id: "l4", type: "memory", difficulty: 2,
         question: "Finde die Paare: Tier und sein Junges! 👶🐾",
         answer: "all",
-        hints: ["Wie heißt das Jungtier?"],
+        hints: ["Wie heisst das Jungtier?"],
         pairs: [
           { id: "katze2", label: "🐱 Katze", emoji: "🐱" },
           { id: "kaetzchen", label: "😺 Kätzchen", emoji: "😺" },
@@ -76,7 +76,7 @@ const grade2Science: Topic[] = [
       },
       {
         id: "l8", type: "multiple-choice", difficulty: 2,
-        question: "Was passiert, wenn man eine Pflanze nicht gießt? 🥀",
+        question: "Was passiert, wenn man eine Pflanze nicht giesst? 🥀",
         answer: "Sie welkt und stirbt", options: ["Sie wächst schneller", "Nichts", "Sie blüht mehr", "Sie welkt und stirbt"],
         hints: ["Ohne Wasser kann die Pflanze nicht leben."],
       },
@@ -142,7 +142,7 @@ const grade2Science: Topic[] = [
         id: "w6", type: "fill-in-blank", difficulty: 2,
         question: "Wasser siedet (kocht) bei ___ Grad Celsius. ♨️",
         answer: "100",
-        hints: ["Sehr, sehr heiß!", "Dann sprudelt es im Topf."],
+        hints: ["Sehr, sehr heiss!", "Dann sprudelt es im Topf."],
       },
       {
         id: "w7", type: "multiple-choice", difficulty: 1,
@@ -153,7 +153,7 @@ const grade2Science: Topic[] = [
       {
         id: "w8", type: "multiple-choice", difficulty: 2,
         question: "Was passiert mit einer nassen Jacke in der Sonne? ☀️🧥",
-        answer: "Sie trocknet — das Wasser verdunstet", options: ["Sie wird nasser", "Sie trocknet — das Wasser verdunstet", "Das Wasser bleibt in der Jacke", "Sie wird größer"],
+        answer: "Sie trocknet — das Wasser verdunstet", options: ["Sie wird nasser", "Sie trocknet — das Wasser verdunstet", "Das Wasser bleibt in der Jacke", "Sie wird grösser"],
         hints: ["Das Wasser geht in die Luft über.", "Sonnenwärme hilft dabei."],
         mascot: "think",
       },
@@ -168,7 +168,7 @@ const grade2Science: Topic[] = [
         id: "g1", type: "drag-drop", free: true, difficulty: 1,
         question: "Was ist gesund, was ist ungesund? 🥦🍬",
         answer: "all",
-        hints: ["Gemüse und Früchte sind meistens gesund!", "Zu viel Süßes ist nicht gut."],
+        hints: ["Gemüse und Früchte sind meistens gesund!", "Zu viel Süsses ist nicht gut."],
         mascot: "wave",
         dragItems: [
           { id: "gemuese", label: "🥦 Brokkoli", emoji: "🥦" },
@@ -188,7 +188,7 @@ const grade2Science: Topic[] = [
         id: "g2", type: "multiple-choice", free: true, difficulty: 1,
         question: "Wie viele Portionen Früchte und Gemüse pro Tag? 🍎🥦",
         answer: "5", options: ["1", "3", "5", "10"],
-        hints: ["Die Empfehlung heißt «Five a Day».", "Zähle: Frühstück, Pause, Mittag, Znacht..."],
+        hints: ["Die Empfehlung heisst «Five a Day».", "Zähle: Frühstück, Pause, Mittag, Znacht..."],
       },
       {
         id: "g3", type: "multiple-choice", free: true, difficulty: 1,
@@ -228,7 +228,7 @@ const grade2Science: Topic[] = [
       {
         id: "g7", type: "multiple-choice", difficulty: 2,
         question: "Welche Nahrungsmittel geben uns am meisten Energie? ⚡",
-        answer: "Kohlenhydrate (Brot, Nudeln, Reis)", options: ["Süßigkeiten", "Kohlenhydrate (Brot, Nudeln, Reis)", "Wasser", "Salat"],
+        answer: "Kohlenhydrate (Brot, Nudeln, Reis)", options: ["Süssigkeiten", "Kohlenhydrate (Brot, Nudeln, Reis)", "Wasser", "Salat"],
         hints: ["Diese Gruppe gibt uns Ausdauer.", "Das Schulbrot enthält viel davon!"],
         mascot: "think",
       },

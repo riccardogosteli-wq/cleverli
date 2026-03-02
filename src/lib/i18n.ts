@@ -106,7 +106,7 @@ export const t: Record<Lang, Record<string, string>> = {
     faqQ3: "Wie kündige ich das Abo?",
     faqA3: "Jederzeit — kein Mindestabo, keine Kündigungsfrist. Einfach in den Einstellungen kündigen.",
     faqQ4: "Brauche ich eine App herunterladen?",
-    faqA4: "Nein! Cleverli läuft direkt im Browser — auf Handy, Tablet und Computer. Nichts installieren nötig.",
+    faqA4: "Nein! Cleverli läuft direkt im Browser — auf Handy, Tablet und Computer. Keine Installation nötig.",
     faqQ5: "In welchen Sprachen ist Cleverli verfügbar?",
     faqA5: "Deutsch, Français, Italiano und English. Einfach oben rechts die Flagge wählen.",
     login: "Anmelden",

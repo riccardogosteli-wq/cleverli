@@ -123,7 +123,7 @@ const grade3Math: Topic[] = [
       { id: "f4", type: "fill-in-blank", difficulty: 2, question: "Rechteck: Länge 8 cm, Breite 3 cm. Fläche = ___ cm².", answer: "24", hints: ["Fläche = Länge × Breite", "8 × 3 = ?"] },
       { id: "f5", type: "multiple-choice", difficulty: 2, question: "Ein Zimmer ist 4 m × 5 m. Wie viele m² Teppich brauchst du? 🏠", answer: "20 m²", options: ["9 m²", "18 m²", "20 m²", "25 m²"], hints: ["Fläche = 4 × 5 = 20"] },
       { id: "f6", type: "fill-in-blank", difficulty: 3, question: "Ein Quadrat hat eine Fläche von 36 cm². Wie lang ist eine Seite? ___ cm", answer: "6", hints: ["Welche Zahl × sich selbst = 36?", "6 × 6 = 36"] },
-      { id: "f7", type: "multiple-choice", difficulty: 2, question: "Was hat einen größeren Umfang: Quadrat 5 cm oder Rechteck 8 × 2 cm?", answer: "Rechteck 8 × 2 (Umfang 20 cm)", options: ["Quadrat (Umfang 20 cm)", "Rechteck 8 × 2 (Umfang 20 cm)", "Beide gleich (20 cm)", "Quadrat (Umfang 25 cm)"], hints: ["Quadrat: 4×5=20. Rechteck: 2×8+2×2=16+4=20. Gleich!"], mascot: "think" },
+      { id: "f7", type: "multiple-choice", difficulty: 2, question: "Was hat einen grösseren Umfang: Quadrat 5 cm oder Rechteck 8 × 2 cm?", answer: "Rechteck 8 × 2 (Umfang 20 cm)", options: ["Quadrat (Umfang 20 cm)", "Rechteck 8 × 2 (Umfang 20 cm)", "Beide gleich (20 cm)", "Quadrat (Umfang 25 cm)"], hints: ["Quadrat: 4×5=20. Rechteck: 2×8+2×2=16+4=20. Gleich!"], mascot: "think" },
     ],
   },
   {
@@ -132,11 +132,11 @@ const grade3Math: Topic[] = [
     emoji: "📊",
     exercises: [
       { id: "d1", type: "multiple-choice", free: true, difficulty: 1, question: "Was zeigt ein Balkendiagramm? 📊", answer: "Mengen als unterschiedlich hohe Balken", options: ["Nur Zahlen", "Mengen als unterschiedlich hohe Balken", "Nur Farben", "Wörter"], hints: ["Je höher der Balken, desto mehr!"], mascot: "wave" },
-      { id: "d2", type: "multiple-choice", free: true, difficulty: 1, question: "In der Klasse haben 8 Kinder einen Hund, 5 eine Katze, 3 einen Fisch. Welches Haustier ist am beliebtesten? 🐾", answer: "Hund (8)", options: ["Katze (5)", "Hund (8)", "Fisch (3)", "Alle gleich"], hints: ["Welche Zahl ist am größten?"] },
+      { id: "d2", type: "multiple-choice", free: true, difficulty: 1, question: "In der Klasse haben 8 Kinder einen Hund, 5 eine Katze, 3 einen Fisch. Welches Haustier ist am beliebtesten? 🐾", answer: "Hund (8)", options: ["Katze (5)", "Hund (8)", "Fisch (3)", "Alle gleich"], hints: ["Welche Zahl ist am grössten?"] },
       { id: "d3", type: "fill-in-blank", free: true, difficulty: 1, question: "Im Diagramm: Montag=5 Eis, Dienstag=8 Eis, Mittwoch=3 Eis. Insgesamt ___ Eis.", answer: "16", hints: ["5 + 8 + 3 = ?"] },
-      { id: "d4", type: "multiple-choice", difficulty: 2, question: "Was bedeutet der Median in einer Datenreihe? 📈", answer: "Der mittlere Wert", options: ["Der größte Wert", "Der mittlere Wert", "Der häufigste Wert", "Der kleinste Wert"], hints: ["Median = Mitte. Alle Werte sortieren → mittlerer."], mascot: "think" },
+      { id: "d4", type: "multiple-choice", difficulty: 2, question: "Was bedeutet der Median in einer Datenreihe? 📈", answer: "Der mittlere Wert", options: ["Der grösste Wert", "Der mittlere Wert", "Der häufigste Wert", "Der kleinste Wert"], hints: ["Median = Mitte. Alle Werte sortieren → mittlerer."], mascot: "think" },
       { id: "d5", type: "fill-in-blank", difficulty: 2, question: "Daten: 4, 7, 2, 7, 5. Der häufigste Wert (Modus) ist ___.", answer: "7", hints: ["Welche Zahl kommt am öftesten vor?", "7 kommt zweimal vor."] },
-      { id: "d6", type: "multiple-choice", difficulty: 2, question: "5 Kinder messen ihre Körpergröße: 120, 125, 118, 130, 122 cm. Wie groß ist das kleinste Kind? 📏", answer: "118 cm", options: ["120 cm", "122 cm", "118 cm", "125 cm"], hints: ["Suche die kleinste Zahl."] },
+      { id: "d6", type: "multiple-choice", difficulty: 2, question: "5 Kinder messen ihre Körpergrösse: 120, 125, 118, 130, 122 cm. Wie gross ist das kleinste Kind? 📏", answer: "118 cm", options: ["120 cm", "122 cm", "118 cm", "125 cm"], hints: ["Suche die kleinste Zahl."] },
       { id: "d7", type: "fill-in-blank", difficulty: 3, question: "Durchschnitt von 10, 20, 30 = ___", answer: "20", hints: ["Alle addieren: 10+20+30=60", "Durch die Anzahl teilen: 60÷3=20"] },
     ],
   },

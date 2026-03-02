@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
@@ -13,6 +14,12 @@ const GRADE_COLORS = [
   "bg-orange-50 border-orange-300 text-orange-800 hover:bg-orange-100 active:bg-orange-200",
 ];
 
+const SUBJECT_META: Record<string, { emoji: string; label: { de: string; fr: string; it: string; en: string } }> = {
+  math:    { emoji: "🔢", label: { de: "Mathematik", fr: "Mathématiques", it: "Matematica", en: "Maths" } },
+  german:  { emoji: "📖", label: { de: "Deutsch", fr: "Allemand", it: "Tedesco", en: "German" } },
+  science: { emoji: "🌍", label: { de: "Natur, Mensch, Gesellschaft", fr: "Nature, Humain et Société", it: "Natura, Uomo e Società", en: "Nature & Society" } },
+};
+
 function getProgress(grade: number, subject: string, topicId: string) {
   if (typeof window === "undefined") return null;
   try {
@@ -21,16 +28,32 @@ function getProgress(grade: number, subject: string, topicId: string) {
   } catch { return null; }
 }
 
-export default function Dashboard() {
+function DashboardInner() {
   const { tr, lang } = useLang();
+  const searchParams = useSearchParams();
+  const preselectedSubject = searchParams.get("subject");
+
   const [grade, setGrade] = useState<number | null>(null);
-  const [subject, setSubject] = useState<string | null>(null);
+  const [subject, setSubject] = useState<string | null>(preselectedSubject);
   const [dailyDone, setDailyDone] = useState(false);
 
   useEffect(() => {
     setDailyDone(isDailyDoneToday());
   }, []);
 
+  // When ?subject= changes (e.g. back navigation), sync state
+  useEffect(() => {
+    setSubject(preselectedSubject);
+    setGrade(null);
+  }, [preselectedSubject]);
+
+  const subjectLabel = (id: string) => {
+    const meta = SUBJECT_META[id];
+    if (!meta) return id;
+    return meta.label[lang as keyof typeof meta.label] ?? meta.label.de;
+  };
+
+  // ── STEP 1: Choose grade ──────────────────────────────────────────────────
   if (!grade) {
     return (
       <div className="max-w-xl mx-auto px-4 py-8 space-y-6">
@@ -53,10 +76,16 @@ export default function Dashboard() {
 
         <div className="text-center space-y-2">
           <Image src="/cleverli-wave.png" alt="Cleverli" width={100} height={100} className="mx-auto drop-shadow-md" />
+          {/* If subject pre-selected, show what we're about to learn */}
+          {subject && SUBJECT_META[subject] && (
+            <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-800 text-sm font-medium px-3 py-1.5 rounded-full">
+              <span>{SUBJECT_META[subject].emoji}</span>
+              <span>{subjectLabel(subject)}</span>
+            </div>
+          )}
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">{tr("selectGrade")}</h1>
         </div>
 
-        {/* Grade grid — full-width touch-friendly cards */}
         <div className="grid grid-cols-3 gap-3">
           {[1, 2, 3].map((g, i) => (
             <button key={g} onClick={() => setGrade(g)}
@@ -68,7 +97,6 @@ export default function Dashboard() {
           ))}
         </div>
 
-        {/* Coming soon */}
         <div className="grid grid-cols-3 gap-3 opacity-50">
           {[4, 5, 6].map(g => (
             <div key={g} style={{ minHeight: "90px" }}
@@ -85,6 +113,7 @@ export default function Dashboard() {
     );
   }
 
+  // ── STEP 2: Choose subject (only if NOT pre-selected from URL) ────────────
   if (!subject) {
     return (
       <div className="max-w-xl mx-auto px-4 py-8 space-y-6">
@@ -106,31 +135,60 @@ export default function Dashboard() {
           ))}
         </div>
 
-        <button onClick={() => setGrade(null)}
-          className="w-full text-sm text-gray-400 hover:text-gray-600 py-2">
+        <button onClick={() => setGrade(null)} className="w-full text-sm text-gray-400 hover:text-gray-600 py-2">
           {tr("back")}
         </button>
       </div>
     );
   }
 
+  // ── STEP 3: Topic list ────────────────────────────────────────────────────
   const topics = getTopics(grade, subject);
-  const currentSubject = SUBJECTS.find(s => s.id === subject)!;
+  const currentSubject = SUBJECTS.find(s => s.id === subject) ?? SUBJECTS[0];
+
+  // Back: if subject came from URL → back to grade selection (clear grade)
+  // if subject was chosen manually → back to subject selection (clear subject)
+  const handleBack = () => {
+    if (preselectedSubject) {
+      setGrade(null); // stay on same subject, pick another grade
+    } else {
+      setSubject(null);
+    }
+  };
 
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4">
       <div className="flex items-center gap-3">
-        <button onClick={() => setSubject(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2">{tr("back")}</button>
+        <button onClick={handleBack} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2">
+          ← {tr("back")}
+        </button>
         <div className="flex items-center gap-2">
           <span className="text-2xl">{currentSubject.emoji}</span>
           <h1 className="text-lg sm:text-xl font-bold text-gray-800">
-            {tr(currentSubject.id)} — {grade}. {tr("gradeLabel")}
+            {subjectLabel(subject)} — {grade}. {tr("gradeLabel")}
           </h1>
         </div>
       </div>
 
+      {/* Quick subject switcher (only when pre-selected from URL) */}
+      {preselectedSubject && (
+        <div className="flex gap-2 overflow-x-auto pb-1">
+          {SUBJECTS.map(s => (
+            <button key={s.id}
+              onClick={() => setSubject(s.id)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap border transition-colors ${
+                s.id === subject
+                  ? "bg-green-600 text-white border-green-600"
+                  : "bg-white text-gray-600 border-gray-200 hover:border-green-300"
+              }`}>
+              {s.emoji} {subjectLabel(s.id)}
+            </button>
+          ))}
+        </div>
+      )}
+
       <div className="grid gap-3">
-        {topics.map((topic, i) => {
+        {topics.map((topic) => {
           const prog = getProgress(grade, subject, topic.id);
           const stars = prog?.stars ?? 0;
           const done = !!prog;
@@ -160,5 +218,13 @@ export default function Dashboard() {
         })}
       </div>
     </div>
+  );
+}
+
+export default function Dashboard() {
+  return (
+    <Suspense fallback={<div className="flex justify-center py-20 text-gray-400">Laden…</div>}>
+      <DashboardInner />
+    </Suspense>
   );
 }

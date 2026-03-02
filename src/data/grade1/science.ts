@@ -268,7 +268,7 @@ const grade1Science: Topic[] = [
       {
         id: "k8", type: "multiple-choice", difficulty: 2,
         question: "Warum ist Schlafen wichtig? 😴",
-        answer: "Damit der Körper sich erholt", options: ["Um Hunger zu bekommen", "Damit der Körper sich erholt", "Damit man groß wird", "Weil man müde ist"],
+        answer: "Damit der Körper sich erholt", options: ["Um Hunger zu bekommen", "Damit der Körper sich erholt", "Damit man gross wird", "Weil man müde ist"],
         hints: ["Dein Körper wächst und repariert sich im Schlaf."],
         mascot: "think",
       },
@@ -295,7 +295,7 @@ const grade1Science: Topic[] = [
         id: "p1", type: "multiple-choice", free: true, difficulty: 1,
         question: "Was braucht eine Pflanze zum Wachsen? 🌱",
         answer: "Wasser und Sonne", options: ["Zucker und Saft", "Wasser und Sonne", "Milch und Dunkelheit", "Sand und Regen"],
-        hints: ["Gieße deine Pflanze und stelle sie ans Fenster!"],
+        hints: ["Giesse deine Pflanze und stelle sie ans Fenster!"],
         mascot: "wave",
       },
       {
@@ -341,7 +341,7 @@ const grade1Science: Topic[] = [
         id: "p5", type: "fill-in-blank", difficulty: 2,
         question: "Aus einem Samenkorn wächst eine ___. 🌱",
         answer: "Pflanze",
-        hints: ["Leg einen Samen in die Erde, gieße ihn — was wächst?"],
+        hints: ["Leg einen Samen in die Erde, giesse ihn — was wächst?"],
       },
     ],
   },
@@ -406,7 +406,7 @@ const grade1Science: Topic[] = [
         id: "u3", type: "multiple-choice", free: true, difficulty: 1,
         question: "Die Uhr zeigt genau 3 Uhr. Wo steht der kurze Zeiger? 🕒",
         answer: "Auf der 3", options: ["Auf der 12", "Auf der 6", "Auf der 3", "Auf der 9"],
-        hints: ["3 Uhr heißt: kurzer Zeiger auf die 3."],
+        hints: ["3 Uhr heisst: kurzer Zeiger auf die 3."],
       },
       {
         id: "u4", type: "multiple-choice", difficulty: 1,

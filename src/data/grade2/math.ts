@@ -151,7 +151,7 @@ const grade2Math: Topic[] = [
     title: "Symmetrie & Formen",
     emoji: "🔷",
     exercises: [
-      { id: "sy1", type: "multiple-choice", free: true, difficulty: 1, question: "Welche Form hat eine Spiegelachse? 🪞", answer: "Herz ❤️", options: ["Unregelmäßiges Dreieck", "Herz ❤️", "Zickzack-Linie", "Alle haben keine"], hints: ["Falte das Herz — beide Hälften sind gleich!", "Links = Rechts bei Symmetrie."], mascot: "wave" },
+      { id: "sy1", type: "multiple-choice", free: true, difficulty: 1, question: "Welche Form hat eine Spiegelachse? 🪞", answer: "Herz ❤️", options: ["Unregelmässiges Dreieck", "Herz ❤️", "Zickzack-Linie", "Alle haben keine"], hints: ["Falte das Herz — beide Hälften sind gleich!", "Links = Rechts bei Symmetrie."], mascot: "wave" },
       { id: "sy2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist ein Quadrat? ⬛", answer: "4 gleich lange Seiten, 4 rechte Winkel", options: ["3 Seiten", "4 gleich lange Seiten, 4 rechte Winkel", "Keine Ecken", "2 lange, 2 kurze Seiten"], hints: ["Alle vier Seiten gleich lang!", "Wie ein Schachfeld-Kästchen."] },
       { id: "sy3", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Ecken hat ein Dreieck? 📐", answer: "3", options: ["2", "3", "4", "5"], hints: ["Tri = drei (griechisch)."] },
       { id: "sy4", type: "drag-drop", difficulty: 1, question: "Sortiere die Formen! 🔷🔺⭕", answer: "all", hints: ["Wie viele Ecken hat jede Form?"], dragItems: [{ id: "kreis", label: "⭕ Kreis", emoji: "⭕" }, { id: "dreieck", label: "🔺 Dreieck", emoji: "🔺" }, { id: "viereck", label: "⬛ Viereck", emoji: "⬛" }, { id: "fuenfeck", label: "⬠ Fünfeck", emoji: "⬠" }], dropZones: [{ id: "k0", label: "0 Ecken" }, { id: "k3", label: "3 Ecken" }, { id: "k4", label: "4 Ecken" }, { id: "k5", label: "5 Ecken" }], dropAnswers: { kreis: "k0", dreieck: "k3", viereck: "k4", fuenfeck: "k5" } },
@@ -165,7 +165,7 @@ const grade2Math: Topic[] = [
     title: "Schätzen & Runden",
     emoji: "🎯",
     exercises: [
-      { id: "sc1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Murmeln sind ungefähr in dem Glas? 🔮🔮🔮…", answer: "Ca. 20", options: ["Ca. 3", "Ca. 20", "Ca. 200", "Ca. 1000"], hints: ["Schätzen heißt: eine gute Vermutung machen.", "Nicht zu wenig, nicht zu viel."], mascot: "wave" },
+      { id: "sc1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Murmeln sind ungefähr in dem Glas? 🔮🔮🔮…", answer: "Ca. 20", options: ["Ca. 3", "Ca. 20", "Ca. 200", "Ca. 1000"], hints: ["Schätzen heisst: eine gute Vermutung machen.", "Nicht zu wenig, nicht zu viel."], mascot: "wave" },
       { id: "sc2", type: "multiple-choice", free: true, difficulty: 1, question: "Runde 47 auf die nächste Zehnerzahl! 🎯", answer: "50", options: ["40", "45", "50", "47"], hints: ["47 liegt zwischen 40 und 50.", "Ist 47 näher bei 40 oder 50?", "Die Einerzahl ist 7 — ab 5 wird aufgerundet!"] },
       { id: "sc3", type: "multiple-choice", free: true, difficulty: 1, question: "Runde 23 auf die nächste Zehnerzahl!", answer: "20", options: ["20", "25", "30", "23"], hints: ["23 liegt zwischen 20 und 30.", "Einerzahl = 3 → abrunden."] },
       { id: "sc4", type: "fill-in-blank", difficulty: 2, question: "74 gerundet auf Zehner = ___", answer: "70", hints: ["4 < 5 → abrunden."] },

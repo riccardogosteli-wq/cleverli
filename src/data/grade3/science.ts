@@ -44,7 +44,7 @@ const grade3Science: Topic[] = [
       },
       {
         id: "e4", type: "multiple-choice", difficulty: 2,
-        question: "Was bedeckt den größten Teil der Erdoberfläche? 🌊",
+        question: "Was bedeckt den grössten Teil der Erdoberfläche? 🌊",
         answer: "Wasser (Ozeane)", options: ["Land", "Eis", "Wasser (Ozeane)", "Wüsten"],
         hints: ["Etwa 71% der Erde.", "Deshalb sieht die Erde von oben blau aus!"],
         mascot: "think",
@@ -115,7 +115,7 @@ const grade3Science: Topic[] = [
       },
       {
         id: "m2", type: "multiple-choice", free: true, difficulty: 1,
-        question: "Was passiert mit Metall, wenn es sehr heiß wird? 🔥",
+        question: "Was passiert mit Metall, wenn es sehr heiss wird? 🔥",
         answer: "Es schmilzt", options: ["Es brennt", "Es schmilzt", "Es explodiert", "Es friert"],
         hints: ["Metall wird bei sehr hohen Temperaturen flüssig.", "So werden Pfannen hergestellt!"],
       },
@@ -316,13 +316,13 @@ const grade3Science: Topic[] = [
       {
         id: "u7", type: "multiple-choice", difficulty: 1,
         question: "Warum soll man kurz duschen? 🚿",
-        answer: "Um Wasser und Energie zu sparen", options: ["Weil es Spaß macht", "Um Wasser und Energie zu sparen", "Weil Duschen langweilig ist", "Weil das Wasser kalt wird"],
+        answer: "Um Wasser und Energie zu sparen", options: ["Weil es Spass macht", "Um Wasser und Energie zu sparen", "Weil Duschen langweilig ist", "Weil das Wasser kalt wird"],
         hints: ["Warmes Wasser braucht Energie.", "Kurz duschen = weniger Ressourcen verbrauchen."],
       },
       {
         id: "u8", type: "multiple-choice", difficulty: 2,
         question: "Was ist der CO₂-Fussabdruck? 👣",
-        answer: "Wie viel CO₂ jemand durch seinen Lebensstil verursacht", options: ["Der Abdruck deines Fußes", "Wie viel CO₂ jemand durch seinen Lebensstil verursacht", "Eine Art Fußabdruck aus Kohle", "Die Größe deines Schuhs"],
+        answer: "Wie viel CO₂ jemand durch seinen Lebensstil verursacht", options: ["Der Abdruck deines Fusses", "Wie viel CO₂ jemand durch seinen Lebensstil verursacht", "Eine Art Fussabdruck aus Kohle", "Die Grösse deines Schuhs"],
         hints: ["Fliegen, Fleisch essen und heizen erzeugen viel CO₂.", "Wer wenig CO₂ verursacht, hat einen kleinen Fussabdruck."],
         mascot: "think",
       },
