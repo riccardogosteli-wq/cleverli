@@ -253,13 +253,20 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             </button>
           )}
           {current.type === "multiple-choice" && (
-            <MultipleChoice question={current.question} options={current.options ?? []} answer={current.answer} onAnswer={handleAnswer} />
+            <MultipleChoice
+              question={current.question}
+              options={current.options ?? []}
+              answer={current.answer}
+              onAnswer={handleAnswer}
+              optionImages={current.optionImages}
+              questionImage={current.image}
+            />
           )}
           {current.type === "fill-in-blank" && (
-            <FillInBlank question={current.question} answer={current.answer} onAnswer={handleAnswer} />
+            <FillInBlank question={current.question} answer={current.answer} onAnswer={handleAnswer} questionImage={current.image} />
           )}
           {current.type === "counting" && (
-            <CountingGame question={current.question} answer={current.answer} emoji={current.emoji} options={current.options ?? []} onAnswer={handleAnswer} />
+            <CountingGame question={current.question} answer={current.answer} emoji={current.emoji} options={current.options ?? []} onAnswer={handleAnswer} questionImage={current.image} />
           )}
           <HintSystem hints={current.hints} onHintUsed={() => setHintsUsed(h => h + 1)} />
         </div>

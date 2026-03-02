@@ -10,7 +10,10 @@ export interface Exercise {
   explanation?: string;
   difficulty: 1 | 2 | 3;
   emoji?: string;
-  free?: boolean; // first 3 per topic are free
+  image?: string;           // main question illustration (path under /images/)
+  optionImages?: string[];  // per-option images for visual multiple-choice
+  mascot?: "wave" | "think" | "celebrate" | "run" | "sit-read" | "jump-star"; // override mascot mood
+  free?: boolean;
 }
 
 export interface Topic {

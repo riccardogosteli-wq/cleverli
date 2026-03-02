@@ -23,10 +23,10 @@ const grade1German: Topic[] = [
     title: "Einfache Wörter",
     emoji: "✏️",
     exercises: [
-      { id: "ew1", type: "multiple-choice", question: "Welches Wort passt zum Bild? 🐱", answer: "Katze", options: ["Hund","Katze","Maus","Vogel"], hints: ["Es ist ein Haustier mit Schnurrhaaren."], difficulty: 1, free: true },
-      { id: "ew2", type: "multiple-choice", question: "Was ist rund und rot? 🍎", answer: "Apfel", options: ["Apfel","Banane","Birne","Pflaume"], hints: ["Es wächst am Baum und beginnt mit A."], difficulty: 1, free: true },
+      { id: "ew1", type: "multiple-choice", question: "Welches Tier siehst du auf dem Bild?", answer: "Katze", options: ["Hund","Katze","Maus","Vogel"], optionImages: ["/images/animals/dog.svg","/images/animals/cat.svg","/images/animals/mouse.svg","/images/animals/bird.svg"], image: "/images/animals/cat.svg", hints: ["Es ist ein Haustier mit Schnurrhaaren."], difficulty: 1, free: true },
+      { id: "ew2", type: "multiple-choice", question: "Was siehst du auf dem Bild?", answer: "Apfel", options: ["Apfel","Banane","Birne","Pflaume"], image: "/images/objects/apple.svg", hints: ["Es wächst am Baum und beginnt mit A."], difficulty: 1, free: true },
       { id: "ew3", type: "multiple-choice", question: "Was trinken Kinder gern? 🥛", answer: "Milch", options: ["Brot","Milch","Stuhl","Haus"], hints: ["Es kommt von der Kuh und ist weiss."], difficulty: 1, free: true },
-      { id: "ew4", type: "multiple-choice", question: "Wo schläft man? 🛏️", answer: "Bett", options: ["Tisch","Bett","Schule","Auto"], hints: ["Man schläft dort in der Nacht."], difficulty: 1 },
+      { id: "ew4", type: "multiple-choice", question: "Welches Tier siehst du auf dem Bild?", answer: "Hund", options: ["Katze","Hund","Pferd","Ente"], optionImages: ["/images/animals/cat.svg","/images/animals/dog.svg","/images/animals/horse.svg","/images/animals/duck.svg"], image: "/images/animals/dog.svg", hints: ["Es bellt."], difficulty: 1 },
       { id: "ew5", type: "multiple-choice", question: "Was ist das Gegenteil von «gross»?", answer: "klein", options: ["klein","laut","schnell","schwer"], hints: ["Eine Maus ist ... , ein Elefant ist gross."], difficulty: 1 },
       { id: "ew6", type: "multiple-choice", question: "Womit schreibt man? ✏️", answer: "Bleistift", options: ["Schere","Lineal","Bleistift","Kleber"], hints: ["Man schreibt damit auf Papier."], difficulty: 1 },
       { id: "ew7", type: "multiple-choice", question: "Was ist blau und nass? 💧", answer: "Wasser", options: ["Feuer","Wasser","Wind","Erde"], hints: ["Man trinkt es täglich."], difficulty: 1 },

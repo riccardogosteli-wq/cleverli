@@ -8,9 +8,10 @@ interface Props {
   emoji?: string;
   options: string[];
   onAnswer: (correct: boolean) => void;
+  questionImage?: string;
 }
 
-export default function CountingGame({ question, answer, emoji = "🍎", options, onAnswer }: Props) {
+export default function CountingGame({ question, answer, emoji = "🍎", options, onAnswer, questionImage }: Props) {
   const { tr } = useLang();
   const [selected, setSelected] = useState<string | null>(null);
   const [popped, setPopped] = useState<boolean[]>([]);
