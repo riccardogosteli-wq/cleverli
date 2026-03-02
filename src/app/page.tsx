@@ -67,13 +67,13 @@ export default function Home() {
             {[
               { emoji: "🔢", key: "math", color: "bg-blue-50 border-blue-200 text-blue-800 hover:bg-blue-100" },
               { emoji: "📖", key: "german", color: "bg-yellow-50 border-yellow-200 text-yellow-800 hover:bg-yellow-100" },
-              { emoji: "🌍", key: "science", color: "bg-green-50 border-green-200 text-green-800" },
+              { emoji: "🌍", key: "science", label: "Natur, Mensch, Gesellschaft", color: "bg-green-50 border-green-200 text-green-800" },
               { emoji: "🎨", key: "moreSoon", color: "bg-gray-50 border-gray-200 text-gray-400", locked: true },
             ].map((s) => (
               <div key={s.key}
                 className={`border-2 rounded-2xl p-5 text-center ${s.color} ${s.locked ? "opacity-50 cursor-not-allowed" : "cursor-default"}`}>
                 <div className={`text-4xl mb-2 ${s.locked ? "grayscale" : ""}`}>{s.emoji}</div>
-                <div className="font-semibold text-sm">{tr(s.key)}</div>
+                <div className="font-semibold text-sm">{(s as {label?: string}).label ?? tr(s.key)}</div>
                 {s.locked && <div className="text-xs text-gray-400 mt-1">🔜 Bald</div>}
               </div>
             ))}
