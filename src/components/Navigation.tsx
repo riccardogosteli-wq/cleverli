@@ -7,6 +7,7 @@ import XpBar from "./XpBar";
 
 export default function Navigation() {
   const { lang, setLang, tr } = useLang();
+  // lang already available for mobile menu labels
   const [open, setOpen] = useState(false);
 
   return (
@@ -73,6 +74,16 @@ export default function Navigation() {
             className="text-base border-2 border-green-600 text-green-700 px-4 py-3 rounded-full text-center font-semibold active:bg-green-50"
             onClick={() => setOpen(false)}>
             {tr("goLearn")}
+          </Link>
+          <Link href="/daily"
+            className="text-base border-2 border-amber-400 text-amber-700 px-4 py-3 rounded-full text-center font-semibold active:bg-amber-50"
+            onClick={() => setOpen(false)}>
+            ⚡ {lang === "de" ? "Tagesaufgabe" : lang === "fr" ? "Défi du jour" : lang === "it" ? "Sfida del giorno" : "Daily Challenge"}
+          </Link>
+          <Link href="/trophies"
+            className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
+            onClick={() => setOpen(false)}>
+            🏆 {lang === "de" ? "Trophäen" : lang === "fr" ? "Trophées" : lang === "it" ? "Trofei" : "Trophies"}
           </Link>
         </div>
       )}

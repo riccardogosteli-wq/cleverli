@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
 import { getTopics, SUBJECTS } from "@/data/index";
+import { isDailyDoneToday } from "@/lib/daily";
 
 const GRADE_COLORS = [
   "bg-blue-50 border-blue-300 text-blue-800 hover:bg-blue-100 active:bg-blue-200",
@@ -20,13 +21,35 @@ function getProgress(grade: number, subject: string, topicId: string) {
 }
 
 export default function Dashboard() {
-  const { tr } = useLang();
+  const { tr, lang } = useLang();
   const [grade, setGrade] = useState<number | null>(null);
   const [subject, setSubject] = useState<string | null>(null);
+  const [dailyDone, setDailyDone] = useState(false);
+
+  useEffect(() => {
+    setDailyDone(isDailyDoneToday());
+  }, []);
 
   if (!grade) {
     return (
       <div className="max-w-xl mx-auto px-4 py-8 space-y-6">
+        {/* Daily Challenge banner */}
+        <Link href="/daily"
+          className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 ${dailyDone ? "bg-green-50 border-green-300 opacity-70" : "bg-amber-50 border-amber-300 hover:bg-amber-100"}`}>
+          <span className="text-3xl">{dailyDone ? "✅" : "⚡"}</span>
+          <div className="flex-1">
+            <div className="font-bold text-amber-800 text-sm">
+              {lang === "fr" ? "Défi du jour" : lang === "it" ? "Sfida del giorno" : lang === "en" ? "Daily Challenge" : "Tagesaufgabe"}
+            </div>
+            <div className="text-xs text-amber-600">
+              {dailyDone
+                ? (lang === "fr" ? "Terminé ! Reviens demain." : lang === "it" ? "Fatto! Torna domani." : lang === "en" ? "Done! Come back tomorrow." : "Erledigt! Morgen gibt es eine neue.")
+                : (lang === "fr" ? "+30 XP bonus · Un essai par jour" : lang === "it" ? "+30 XP bonus · Un tentativo al giorno" : lang === "en" ? "+30 Bonus XP · One try per day" : "+30 Bonus-XP · Einmal pro Tag")}
+            </div>
+          </div>
+          <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"} alt="" width={44} height={44} className="drop-shadow-sm shrink-0" />
+        </Link>
+
         <div className="text-center space-y-2">
           <Image src="/cleverli-wave.png" alt="Cleverli" width={100} height={100} className="mx-auto drop-shadow-md" />
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">{tr("selectGrade")}</h1>
