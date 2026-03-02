@@ -93,6 +93,47 @@ const grade2German: Topic[] = [
       { id: "tl6", type: "multiple-choice", question: "«Lena liest gern Bücher.» – Was macht Lena gern?", answer: "Bücher lesen", options: ["Bücher lesen","Fussball spielen","Singen","Schlafen"], hints: ["«liest gern» → sie liest gern Bücher"], difficulty: 1 },
     ],
   },
+  {
+    id: "singular-plural",
+    title: "Einzahl & Mehrzahl",
+    emoji: "1️⃣➡️2️⃣",
+    exercises: [
+      { id: "sp1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Mehrzahl von «Hund»? 🐕", answer: "Hunde", options: ["Hunds", "Hunden", "Hunde", "Hundе"], hints: ["Bei vielen Wörtern hängt man -e oder -en an.", "1 Hund → viele Hunde"], mascot: "wave" },
+      { id: "sp2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Mehrzahl von «Kind»? 👧", answer: "Kinder", options: ["Kinds", "Kinder", "Kinde", "Kindes"], hints: ["1 Kind → viele Kinder (Umlaut + er!)"] },
+      { id: "sp3", type: "fill-in-blank", free: true, difficulty: 1, question: "1 Blume → 3 ___", answer: "Blumen", hints: ["Blume → Blumen (+ n)"] },
+      { id: "sp4", type: "drag-drop", difficulty: 1, question: "Verbinde Einzahl mit Mehrzahl! 🔗", answer: "all", hints: ["Jedes Wort hat eine passende Mehrzahl."], dragItems: [{ id: "apfel", label: "🍎 Apfel" }, { id: "haus", label: "🏠 Haus" }, { id: "buch", label: "📚 Buch" }, { id: "auto", label: "🚗 Auto" }], dropZones: [{ id: "aepfel", label: "Äpfel" }, { id: "haeuser", label: "Häuser" }, { id: "buecher", label: "Bücher" }, { id: "autos", label: "Autos" }], dropAnswers: { apfel: "aepfel", haus: "haeuser", buch: "buecher", auto: "autos" } },
+      { id: "sp5", type: "fill-in-blank", difficulty: 2, question: "Das ___ (Maus → Mehrzahl) knabberte den Käse.", answer: "Mäuse", hints: ["Maus → Mäuse (Umlaut!)"] },
+      { id: "sp6", type: "multiple-choice", difficulty: 2, question: "Welche Mehrzahl ist FALSCH? ❌", answer: "Kindes", options: ["Kinder", "Bücher", "Kindes", "Häuser"], hints: ["Kindes ist Genitiv, nicht Mehrzahl.", "Mehrzahl von Kind = Kinder"], mascot: "think" },
+      { id: "sp7", type: "fill-in-blank", difficulty: 2, question: "1 Mann → viele ___", answer: "Männer", hints: ["Umlaut! a → ä", "M-ä-n-n-e-r"] },
+    ],
+  },
+  {
+    id: "wortfamilien",
+    title: "Wortfamilien & Wortstamm",
+    emoji: "🌳",
+    exercises: [
+      { id: "wf1", type: "multiple-choice", free: true, difficulty: 1, question: "Welche Wörter gehören zur Familie «Spiel»? 🎮", answer: "spielen, Spielplatz, Mitspieler", options: ["spielen, Spielplatz, Mitspieler", "kochen, Küche, backen", "laufen, Lauf, Läufer", "schreiben, Schrift, Stift"], hints: ["Der Wortstamm ist SPIEL-", "Alle Wörter der Familie enthalten 'spiel'"], mascot: "wave" },
+      { id: "wf2", type: "drag-drop", free: true, difficulty: 1, question: "Sortiere die Wörter in ihre Familien! 🌳", answer: "all", hints: ["Was ist der gemeinsame Stamm?"], dragItems: [{ id: "laufen", label: "laufen" }, { id: "laeufer", label: "Läufer" }, { id: "wasser", label: "Wasser" }, { id: "wasserfall", label: "Wasserfall" }, { id: "ablauf", label: "Ablauf" }, { id: "waessern", label: "wässern" }], dropZones: [{ id: "lauf", label: "🏃 LAUF-Familie" }, { id: "wass", label: "💧 WASSER-Familie" }], dropAnswers: { laufen: "lauf", laeufer: "lauf", ablauf: "lauf", wasser: "wass", wasserfall: "wass", waessern: "wass" } },
+      { id: "wf3", type: "fill-in-blank", free: true, difficulty: 1, question: "Der Wortstamm von «Bäckerei» und «backen» ist ___.", answer: "back", hints: ["Bäck- / back- ist in beiden Wörtern.", "Das ä kommt vom Umlaut des a."] },
+      { id: "wf4", type: "multiple-choice", difficulty: 2, question: "Welches Wort gehört NICHT zur Familie «fahren»? 🚗", answer: "Wanderung", options: ["Fahrer", "Fahrzeug", "Wanderung", "Abfahrt"], hints: ["Suche den Stamm FAHR- in jedem Wort.", "Wanderung kommt von 'wandern', nicht 'fahren'!"] },
+      { id: "wf5", type: "fill-in-blank", difficulty: 2, question: "«Schreib__», «__schrift», «Schreib__» — der Stamm ist «___».", answer: "schreib", hints: ["Was ist in allen diesen Wörtern versteckt?"] },
+      { id: "wf6", type: "multiple-choice", difficulty: 2, question: "Was ist der Wortstamm von «freundlich»? 😊", answer: "Freund", options: ["frei", "Freund", "lich", "unfreundlich"], hints: ["Freundlich = Freund + -lich (Endung)", "Der Stamm trägt die Bedeutung."], mascot: "think" },
+    ],
+  },
+  {
+    id: "pronomen",
+    title: "Personalpronomen",
+    emoji: "👤",
+    exercises: [
+      { id: "pr1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie ersetze ich «Max» mit einem Pronomen? 👦", answer: "er", options: ["sie", "er", "ich", "wir"], hints: ["Max ist ein Junge → er"], mascot: "wave" },
+      { id: "pr2", type: "multiple-choice", free: true, difficulty: 1, question: "Wie ersetze ich «Lena und ich» mit einem Pronomen? 👫", answer: "wir", options: ["ihr", "sie", "wir", "man"], hints: ["Wenn ich und jemand anderes gemeint sind: wir"] },
+      { id: "pr3", type: "drag-drop", free: true, difficulty: 1, question: "Ersetze die Personen durch Pronomen! 🔄", answer: "all", hints: ["ich, du, er, sie, es, wir, ihr, sie (Plural)"], dragItems: [{ id: "ich", label: "Ich" }, { id: "du", label: "Du" }, { id: "er", label: "Er" }, { id: "sie", label: "Sie" }, { id: "wir", label: "Wir" }], dropZones: [{ id: "selbst", label: "Ich selbst" }, { id: "person-angeredet", label: "Person, die ich anrede" }, { id: "mann", label: "Ein Mann / Junge" }, { id: "frau", label: "Eine Frau / Mädchen" }, { id: "gruppe", label: "Eine Gruppe mit mir" }], dropAnswers: { ich: "selbst", du: "person-angeredet", er: "mann", sie: "frau", wir: "gruppe" } },
+      { id: "pr4", type: "fill-in-blank", difficulty: 1, question: "Die Katze schläft. ___ ist müde.", answer: "Sie", hints: ["Die Katze = weiblich → sie"] },
+      { id: "pr5", type: "fill-in-blank", difficulty: 2, question: "Max und Mia spielen. ___ spielen Ball.", answer: "Sie", hints: ["Mehrzahl, nicht ich dabei → sie (Plural)"] },
+      { id: "pr6", type: "multiple-choice", difficulty: 2, question: "Welches Pronomen passt? «Das Baby schläft. ___ ist müde.»", answer: "Es", options: ["Er", "Sie", "Es", "Ihr"], hints: ["Baby ist sächlich → es!", "Der/die/das Baby = das Baby → es"], mascot: "think" },
+      { id: "pr7", type: "fill-in-blank", difficulty: 2, question: "«Max und Lisa, habt ___ die Hausaufgaben?»", answer: "ihr", hints: ["Ich spreche beide an → ihr"] },
+    ],
+  },
 ];
 
 export default grade2German;

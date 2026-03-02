@@ -112,6 +112,48 @@ const grade3Math: Topic[] = [
       { id: "t6", type: "fill-in-blank", question: "42 Kinder werden in Gruppen zu 7 aufgeteilt. Wie viele Gruppen gibt es?", answer: "6", hints: ["42 ÷ 7 = ?"], difficulty: 2 },
     ],
   },
+  {
+    id: "flaeche-umfang",
+    title: "Fläche & Umfang",
+    emoji: "📐",
+    exercises: [
+      { id: "f1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist der Umfang eines Quadrats mit Seite 4 cm? 📐", answer: "16 cm", options: ["8 cm", "12 cm", "16 cm", "20 cm"], hints: ["Umfang = alle 4 Seiten zusammen.", "4 × 4 = ?"], mascot: "wave" },
+      { id: "f2", type: "fill-in-blank", free: true, difficulty: 1, question: "Ein Rechteck ist 5 cm lang und 3 cm breit. Umfang = ___ cm.", answer: "16", hints: ["Umfang = 2 × Länge + 2 × Breite", "2×5 + 2×3 = 10+6 = 16"] },
+      { id: "f3", type: "multiple-choice", free: true, difficulty: 2, question: "Was ist die Fläche eines Quadrats mit Seite 5 cm? 📏", answer: "25 cm²", options: ["10 cm²", "20 cm²", "25 cm²", "50 cm²"], hints: ["Fläche = Seite × Seite", "5 × 5 = 25"] },
+      { id: "f4", type: "fill-in-blank", difficulty: 2, question: "Rechteck: Länge 8 cm, Breite 3 cm. Fläche = ___ cm².", answer: "24", hints: ["Fläche = Länge × Breite", "8 × 3 = ?"] },
+      { id: "f5", type: "multiple-choice", difficulty: 2, question: "Ein Zimmer ist 4 m × 5 m. Wie viele m² Teppich brauchst du? 🏠", answer: "20 m²", options: ["9 m²", "18 m²", "20 m²", "25 m²"], hints: ["Fläche = 4 × 5 = 20"] },
+      { id: "f6", type: "fill-in-blank", difficulty: 3, question: "Ein Quadrat hat eine Fläche von 36 cm². Wie lang ist eine Seite? ___ cm", answer: "6", hints: ["Welche Zahl × sich selbst = 36?", "6 × 6 = 36"] },
+      { id: "f7", type: "multiple-choice", difficulty: 2, question: "Was hat einen größeren Umfang: Quadrat 5 cm oder Rechteck 8 × 2 cm?", answer: "Rechteck 8 × 2 (Umfang 20 cm)", options: ["Quadrat (Umfang 20 cm)", "Rechteck 8 × 2 (Umfang 20 cm)", "Beide gleich (20 cm)", "Quadrat (Umfang 25 cm)"], hints: ["Quadrat: 4×5=20. Rechteck: 2×8+2×2=16+4=20. Gleich!"], mascot: "think" },
+    ],
+  },
+  {
+    id: "diagramme-daten",
+    title: "Daten & Diagramme",
+    emoji: "📊",
+    exercises: [
+      { id: "d1", type: "multiple-choice", free: true, difficulty: 1, question: "Was zeigt ein Balkendiagramm? 📊", answer: "Mengen als unterschiedlich hohe Balken", options: ["Nur Zahlen", "Mengen als unterschiedlich hohe Balken", "Nur Farben", "Wörter"], hints: ["Je höher der Balken, desto mehr!"], mascot: "wave" },
+      { id: "d2", type: "multiple-choice", free: true, difficulty: 1, question: "In der Klasse haben 8 Kinder einen Hund, 5 eine Katze, 3 einen Fisch. Welches Haustier ist am beliebtesten? 🐾", answer: "Hund (8)", options: ["Katze (5)", "Hund (8)", "Fisch (3)", "Alle gleich"], hints: ["Welche Zahl ist am größten?"] },
+      { id: "d3", type: "fill-in-blank", free: true, difficulty: 1, question: "Im Diagramm: Montag=5 Eis, Dienstag=8 Eis, Mittwoch=3 Eis. Insgesamt ___ Eis.", answer: "16", hints: ["5 + 8 + 3 = ?"] },
+      { id: "d4", type: "multiple-choice", difficulty: 2, question: "Was bedeutet der Median in einer Datenreihe? 📈", answer: "Der mittlere Wert", options: ["Der größte Wert", "Der mittlere Wert", "Der häufigste Wert", "Der kleinste Wert"], hints: ["Median = Mitte. Alle Werte sortieren → mittlerer."], mascot: "think" },
+      { id: "d5", type: "fill-in-blank", difficulty: 2, question: "Daten: 4, 7, 2, 7, 5. Der häufigste Wert (Modus) ist ___.", answer: "7", hints: ["Welche Zahl kommt am öftesten vor?", "7 kommt zweimal vor."] },
+      { id: "d6", type: "multiple-choice", difficulty: 2, question: "5 Kinder messen ihre Körpergröße: 120, 125, 118, 130, 122 cm. Wie groß ist das kleinste Kind? 📏", answer: "118 cm", options: ["120 cm", "122 cm", "118 cm", "125 cm"], hints: ["Suche die kleinste Zahl."] },
+      { id: "d7", type: "fill-in-blank", difficulty: 3, question: "Durchschnitt von 10, 20, 30 = ___", answer: "20", hints: ["Alle addieren: 10+20+30=60", "Durch die Anzahl teilen: 60÷3=20"] },
+    ],
+  },
+  {
+    id: "schriftlich-rechnen",
+    title: "Schriftlich Rechnen",
+    emoji: "✏️",
+    exercises: [
+      { id: "sr1", type: "fill-in-blank", free: true, difficulty: 2, question: "Schriftlich: 347 + 256 = ___", answer: "603", hints: ["Einer: 7+6=13 → 3 aufschreiben, 1 merken", "Zehner: 4+5+1=10 → 0 aufschreiben, 1 merken", "Hunderter: 3+2+1=6"], mascot: "wave" },
+      { id: "sr2", type: "fill-in-blank", free: true, difficulty: 2, question: "Schriftlich: 531 − 278 = ___", answer: "253", hints: ["Einer: 1−8 geht nicht → 11−8=3, 1 borgen", "Zehner: 2−1−7 → borgen...", "Ergebnis: 253"] },
+      { id: "sr3", type: "multiple-choice", free: true, difficulty: 2, question: "468 + 235 = ?", answer: "703", options: ["693", "703", "683", "713"], hints: ["Einer: 8+5=13 → merke 1", "Zehner: 6+3+1=10 → merke 1", "Hunderter: 4+2+1=7"] },
+      { id: "sr4", type: "fill-in-blank", difficulty: 2, question: "782 − 364 = ___", answer: "418", hints: ["Ziffer für Ziffer, Einer zuerst.", "2−4 → borge: 12−4=8..."] },
+      { id: "sr5", type: "multiple-choice", difficulty: 3, question: "123 × 4 = ?", answer: "492", options: ["482", "492", "502", "412"], hints: ["3×4=12, 2×4=8+1=9, 1×4=4 → 492"] },
+      { id: "sr6", type: "fill-in-blank", difficulty: 3, question: "252 ÷ 4 = ___", answer: "63", hints: ["252 ÷ 4: 4×60=240, 252−240=12, 12÷4=3 → 63"] },
+      { id: "sr7", type: "fill-in-blank", difficulty: 3, question: "1000 − 387 = ___", answer: "613", hints: ["999 − 387 = 612, + 1 = 613", "Oder: Ergänze 387 auf 1000"] },
+    ],
+  },
 ];
 
 export default grade3Math;

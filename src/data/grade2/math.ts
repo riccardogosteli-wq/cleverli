@@ -116,6 +116,63 @@ const grade2Math: Topic[] = [
       { id: "g8", type: "fill-in-blank", question: "CHF 1.50 + CHF 2.00 = CHF ___", answer: "3.50", hints: ["1 Fr. 50 Rp + 2 Fr. = 3 Fr. 50 Rp"], difficulty: 2 },
     ],
   },
+  {
+    id: "add-sub-100",
+    title: "Addition & Subtraktion bis 100",
+    emoji: "🔢",
+    exercises: [
+      { id: "as1", type: "fill-in-blank", free: true, difficulty: 1, question: "34 + 25 = ___", answer: "59", hints: ["Addiere Zehner: 30+20=50", "Addiere Einer: 4+5=9", "50+9=59"], mascot: "wave" },
+      { id: "as2", type: "fill-in-blank", free: true, difficulty: 1, question: "67 − 34 = ___", answer: "33", hints: ["Zehner: 60−30=30", "Einer: 7−4=3", "30+3=33"] },
+      { id: "as3", type: "multiple-choice", free: true, difficulty: 1, question: "48 + 37 = ?", answer: "85", options: ["75", "85", "95", "80"], hints: ["Zehner: 40+30=70", "Einer: 8+7=15 → 1 Zehner merken", "70+15=85"] },
+      { id: "as4", type: "fill-in-blank", difficulty: 2, question: "80 − 45 = ___", answer: "35", hints: ["80 − 40 = 40", "40 − 5 = 35"] },
+      { id: "as5", type: "multiple-choice", difficulty: 2, question: "Welche Aufgabe ergibt 100? 🎯", answer: "63 + 37", options: ["50 + 48", "63 + 37", "72 + 29", "45 + 56"], hints: ["Probiere jede aus.", "63 + 37: 3+7=10, 60+30+10=100 ✓"] },
+      { id: "as6", type: "fill-in-blank", difficulty: 2, question: "Im Kino sind 100 Plätze. 62 sind belegt. Wie viele sind frei? 🎬", answer: "38", hints: ["100 − 62 = ?"] },
+      { id: "as7", type: "fill-in-blank", difficulty: 2, question: "___ + 28 = 71", answer: "43", hints: ["71 − 28 = ?"] },
+      { id: "as8", type: "multiple-choice", difficulty: 2, question: "Lara hat 55 Aufkleber. Sie schenkt 17 davon. Wie viele hat sie noch? 🌟", answer: "38", options: ["38", "42", "28", "72"], hints: ["55 − 17 = ?", "55 − 10 = 45, 45 − 7 = 38"] },
+    ],
+  },
+  {
+    id: "einmaleins-3-4",
+    title: "Einmaleins 3er & 4er",
+    emoji: "✖️",
+    exercises: [
+      { id: "e31", type: "multiple-choice", free: true, difficulty: 1, question: "3 × 4 = ?", answer: "12", options: ["9", "12", "15", "7"], hints: ["3 + 3 + 3 + 3 = ?"], mascot: "wave" },
+      { id: "e32", type: "fill-in-blank", free: true, difficulty: 1, question: "3 × 6 = ___", answer: "18", hints: ["3er-Reihe: 3, 6, 9, 12, 15, 18..."] },
+      { id: "e33", type: "multiple-choice", free: true, difficulty: 1, question: "4 × 5 = ?", answer: "20", options: ["16", "20", "24", "15"], hints: ["4er-Reihe: 4, 8, 12, 16, 20..."] },
+      { id: "e34", type: "fill-in-blank", difficulty: 1, question: "3 × ___ = 21", answer: "7", hints: ["3er-Reihe: 3,6,9,12,15,18,21 → der 7. Schritt"] },
+      { id: "e35", type: "multiple-choice", difficulty: 2, question: "4 × 7 = ?", answer: "28", options: ["24", "28", "32", "21"], hints: ["4,8,12,16,20,24,28..."] },
+      { id: "e36", type: "fill-in-blank", difficulty: 2, question: "4 × ___ = 36", answer: "9", hints: ["4×9=36 — Denke an 4×10=40, minus 4"] },
+      { id: "e37", type: "multiple-choice", difficulty: 2, question: "3 Pakete mit je 9 Keksen — wie viele insgesamt? 🍪", answer: "27", options: ["18", "21", "27", "30"], hints: ["3 × 9 = ?", "3×9: 9,18,27"] },
+      { id: "e38", type: "memory", difficulty: 2, question: "Finde die Rechenpaare! ✖️", answer: "all", hints: ["3×4=12, 4×3=12 — Tauschaufgaben!"], pairs: [{ id: "3x5", label: "3 × 5", emoji: "✖️" }, { id: "15a", label: "15", emoji: "🔢" }, { id: "4x6", label: "4 × 6", emoji: "✖️" }, { id: "24a", label: "24", emoji: "🔢" }, { id: "3x8", label: "3 × 8", emoji: "✖️" }, { id: "24b", label: "24", emoji: "🔢" }, { id: "4x9", label: "4 × 9", emoji: "✖️" }, { id: "36a", label: "36", emoji: "🔢" }] },
+    ],
+  },
+  {
+    id: "symmetrie",
+    title: "Symmetrie & Formen",
+    emoji: "🔷",
+    exercises: [
+      { id: "sy1", type: "multiple-choice", free: true, difficulty: 1, question: "Welche Form hat eine Spiegelachse? 🪞", answer: "Herz ❤️", options: ["Unregelmäßiges Dreieck", "Herz ❤️", "Zickzack-Linie", "Alle haben keine"], hints: ["Falte das Herz — beide Hälften sind gleich!", "Links = Rechts bei Symmetrie."], mascot: "wave" },
+      { id: "sy2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist ein Quadrat? ⬛", answer: "4 gleich lange Seiten, 4 rechte Winkel", options: ["3 Seiten", "4 gleich lange Seiten, 4 rechte Winkel", "Keine Ecken", "2 lange, 2 kurze Seiten"], hints: ["Alle vier Seiten gleich lang!", "Wie ein Schachfeld-Kästchen."] },
+      { id: "sy3", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Ecken hat ein Dreieck? 📐", answer: "3", options: ["2", "3", "4", "5"], hints: ["Tri = drei (griechisch)."] },
+      { id: "sy4", type: "drag-drop", difficulty: 1, question: "Sortiere die Formen! 🔷🔺⭕", answer: "all", hints: ["Wie viele Ecken hat jede Form?"], dragItems: [{ id: "kreis", label: "⭕ Kreis", emoji: "⭕" }, { id: "dreieck", label: "🔺 Dreieck", emoji: "🔺" }, { id: "viereck", label: "⬛ Viereck", emoji: "⬛" }, { id: "fuenfeck", label: "⬠ Fünfeck", emoji: "⬠" }], dropZones: [{ id: "k0", label: "0 Ecken" }, { id: "k3", label: "3 Ecken" }, { id: "k4", label: "4 Ecken" }, { id: "k5", label: "5 Ecken" }], dropAnswers: { kreis: "k0", dreieck: "k3", viereck: "k4", fuenfeck: "k5" } },
+      { id: "sy5", type: "fill-in-blank", difficulty: 2, question: "Ein Rechteck hat ___ Seiten.", answer: "4", hints: ["Wie ein Buch von vorne."] },
+      { id: "sy6", type: "multiple-choice", difficulty: 2, question: "Was ist ein Würfel? 🎲", answer: "Ein 3D-Körper mit 6 gleichen Quadrat-Flächen", options: ["Eine flache Form", "Ein 3D-Körper mit 6 gleichen Quadrat-Flächen", "Ein Körper mit 4 Ecken", "Eine runde Form"], hints: ["Denke an einen Spielwürfel!", "6 Seiten, alle gleich."] },
+      { id: "sy7", type: "multiple-choice", difficulty: 2, question: "Welcher Buchstabe ist symmetrisch? 🔤", answer: "A", options: ["R", "G", "F", "A"], hints: ["Falte ihn der Mitte — sind beide Hälften gleich?", "A hat eine vertikale Spiegelachse."] },
+    ],
+  },
+  {
+    id: "schaetzen",
+    title: "Schätzen & Runden",
+    emoji: "🎯",
+    exercises: [
+      { id: "sc1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Murmeln sind ungefähr in dem Glas? 🔮🔮🔮…", answer: "Ca. 20", options: ["Ca. 3", "Ca. 20", "Ca. 200", "Ca. 1000"], hints: ["Schätzen heißt: eine gute Vermutung machen.", "Nicht zu wenig, nicht zu viel."], mascot: "wave" },
+      { id: "sc2", type: "multiple-choice", free: true, difficulty: 1, question: "Runde 47 auf die nächste Zehnerzahl! 🎯", answer: "50", options: ["40", "45", "50", "47"], hints: ["47 liegt zwischen 40 und 50.", "Ist 47 näher bei 40 oder 50?", "Die Einerzahl ist 7 — ab 5 wird aufgerundet!"] },
+      { id: "sc3", type: "multiple-choice", free: true, difficulty: 1, question: "Runde 23 auf die nächste Zehnerzahl!", answer: "20", options: ["20", "25", "30", "23"], hints: ["23 liegt zwischen 20 und 30.", "Einerzahl = 3 → abrunden."] },
+      { id: "sc4", type: "fill-in-blank", difficulty: 2, question: "74 gerundet auf Zehner = ___", answer: "70", hints: ["4 < 5 → abrunden."] },
+      { id: "sc5", type: "multiple-choice", difficulty: 2, question: "Welches ist die beste Schätzung für 39 + 42? 🧮", answer: "Ca. 80", options: ["Ca. 60", "Ca. 80", "Ca. 100", "Ca. 120"], hints: ["39 ≈ 40, 42 ≈ 40", "40 + 40 = 80"] },
+      { id: "sc6", type: "fill-in-blank", difficulty: 2, question: "95 gerundet auf Zehner = ___", answer: "100", hints: ["5 oder mehr → aufrunden.", "95 → 100"] },
+    ],
+  },
 ];
 
 export default grade2Math;

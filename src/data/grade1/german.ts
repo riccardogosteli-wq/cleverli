@@ -116,6 +116,45 @@ const grade1German: Topic[] = [
       { id: "sl8", type: "fill-in-blank", question: "«Der Vogel fliegt hoch in der ___.» (Luft / Erde)", answer: "Luft", hints: ["Vögel fliegen in der Luft."], difficulty: 1 },
     ],
   },
+  {
+    id: "vokale-konsonanten",
+    title: "Vokale & Konsonanten",
+    emoji: "🔤",
+    exercises: [
+      { id: "vk1", type: "multiple-choice", free: true, difficulty: 1, question: "Welcher Buchstabe ist ein Vokal? 🔤", answer: "E", options: ["B", "K", "E", "T"], hints: ["Vokale: A, E, I, O, U — man spricht sie offen aus.", "Du singst sie!"], mascot: "wave" },
+      { id: "vk2", type: "drag-drop", free: true, difficulty: 1, question: "Sortiere: Vokal oder Konsonant? 🔤", answer: "all", hints: ["Vokale: A, E, I, O, U"], dragItems: [{ id: "a", label: "A", emoji: "🔵" }, { id: "b", label: "B", emoji: "🔴" }, { id: "i", label: "I", emoji: "🔵" }, { id: "m", label: "M", emoji: "🔴" }, { id: "u", label: "U", emoji: "🔵" }, { id: "s", label: "S", emoji: "🔴" }], dropZones: [{ id: "vokal", label: "🔵 Vokal" }, { id: "konsonant", label: "🔴 Konsonant" }], dropAnswers: { a: "vokal", b: "konsonant", i: "vokal", m: "konsonant", u: "vokal", s: "konsonant" } },
+      { id: "vk3", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Vokale hat das Wort «SONNE»? ☀️", answer: "2", options: ["1", "2", "3", "5"], hints: ["S-O-N-N-E: welche sind Vokale?", "O und E sind Vokale → 2"] },
+      { id: "vk4", type: "fill-in-blank", difficulty: 1, question: "Im Alphabet gibt es ___ Vokale.", answer: "5", hints: ["A, E, I, O, U — zähle!"] },
+      { id: "vk5", type: "word-search", difficulty: 2, question: "Finde alle Wörter, die mit einem Vokal beginnen! 🔍", answer: "all", hints: ["Vokale: A, E, I, O, U", "Schau, welche Wörter damit beginnen."], wordList: ["APF", "ENT", "IGE", "OME"], gridSize: 8 },
+      { id: "vk6", type: "multiple-choice", difficulty: 2, question: "Welches Wort hat KEINEN Vokal? 🤔", answer: "Unmöglich — jedes deutsche Wort hat Vokale!", options: ["«Hund»", "«Baum»", "«Unmöglich — jedes deutsche Wort hat Vokale!»", "«Stern»"], hints: ["Versuche, ein Wort ohne A, E, I, O, U zu sagen.", "Geht nicht!"], mascot: "think" },
+    ],
+  },
+  {
+    id: "silben-klatschen",
+    title: "Silben klatschen 👏",
+    emoji: "👏",
+    exercises: [
+      { id: "sk1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Silben hat «HUND»? 🐕", answer: "1", options: ["1", "2", "3", "4"], hints: ["Klatsche beim Sprechen: HUND — ein Klatscher!"], mascot: "wave" },
+      { id: "sk2", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Silben hat «KA-TZE»? 🐱", answer: "2", options: ["1", "2", "3", "4"], hints: ["KA — TZEE: zwei Klatscher!"] },
+      { id: "sk3", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Silben hat «SCH-MET-TER-LING»? 🦋", answer: "4", options: ["2", "3", "4", "5"], hints: ["SCHMET-TER-LING... klatsche mit!", "4 Silben."] },
+      { id: "sk4", type: "drag-drop", difficulty: 1, question: "Sortiere die Wörter nach Silbenanzahl! 👏", answer: "all", hints: ["Klatsche jeden Wort-Teil."], dragItems: [{ id: "hut", label: "HUT" }, { id: "blume", label: "BLU-ME" }, { id: "elefant", label: "E-LE-FANT" }, { id: "schule", label: "SCH-LE" }, { id: "apfel", label: "AP-FEL" }, { id: "mond", label: "MOND" }], dropZones: [{ id: "s1", label: "1 Silbe" }, { id: "s2", label: "2 Silben" }, { id: "s3", label: "3 Silben" }], dropAnswers: { hut: "s1", mond: "s1", blume: "s2", schule: "s2", apfel: "s2", elefant: "s3" } },
+      { id: "sk5", type: "fill-in-blank", difficulty: 2, question: "«So-nen-bli-me» hat ___ Silben.", answer: "4", hints: ["Klatsche: Son-nen-blu-me — 4!"] },
+      { id: "sk6", type: "multiple-choice", difficulty: 2, question: "Welches Wort hat 3 Silben? 🔤", answer: "Computer", options: ["Stuhl", "Tisch", "Computer", "Hand"], hints: ["Com-pu-ter — klatsche mit!"] },
+    ],
+  },
+  {
+    id: "ie-ei",
+    title: "ie und ei richtig schreiben ✏️",
+    emoji: "🖊️",
+    exercises: [
+      { id: "ie1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie heisst der Vogel? 🐦 «T_er» — ie oder ei?", answer: "Tier (ie)", options: ["Tier (ie)", "Teir (ei)", "Teer (ee)", "Tir (i)"], hints: ["Sprich es langsam: T-ie-r. Langes i = ie!"], mascot: "wave" },
+      { id: "ie2", type: "fill-in-blank", free: true, difficulty: 1, question: "Das Gegenteil von «nein» ist «ja». Wie buchstabiert man «n_n»? (ie/ei)", answer: "nein", hints: ["Nein beginnt wie «Ei»."] },
+      { id: "ie3", type: "multiple-choice", free: true, difficulty: 1, question: "Schreib das Tier richtig: «B_ne» (die Biene) 🐝", answer: "Biene (ie)", options: ["Biene (ie)", "Beine (ei)", "Beene", "Bine"], hints: ["Lange-i Klang → oft 'ie'.", "B-ie-ne!"] },
+      { id: "ie4", type: "drag-drop", difficulty: 2, question: "ie oder ei? Ziehe in die richtige Spalte! ✏️", answer: "all", hints: ["Sprich die Wörter laut aus."], dragItems: [{ id: "liebe", label: "L_ebe (Liebe)" }, { id: "stein", label: "St_n (Stein)" }, { id: "sieben", label: "S_ben (Sieben)" }, { id: "klein", label: "kl_n (klein)" }, { id: "knie", label: "Kn_ (Knie)" }, { id: "weit", label: "w_t (weit)" }], dropZones: [{ id: "ie", label: "ie" }, { id: "ei", label: "ei" }], dropAnswers: { liebe: "ie", stein: "ei", sieben: "ie", klein: "ei", knie: "ie", weit: "ei" } },
+      { id: "ie5", type: "fill-in-blank", difficulty: 2, question: "Die Zahl nach 6 ist S_ben. (ie/ei)", answer: "sieben", hints: ["S-ie-ben!", "Sprich: sii-ben"] },
+      { id: "ie6", type: "multiple-choice", difficulty: 2, question: "Welches Wort ist FALSCH geschrieben? 🚨", answer: "Breif", options: ["Brief", "Breif", "Tier", "Klein"], hints: ["Einer davon hat ie/ei vertauscht.", "Brief = B-R-I-E-F!"], mascot: "think" },
+    ],
+  },
 ];
 
 export default grade1German;

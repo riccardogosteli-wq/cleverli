@@ -131,6 +131,62 @@ const grade1Math: Topic[] = [
       { id: "z20j", type: "multiple-choice", question: "Wie schreibt man sechzehn?", answer: "16", options: ["15","16","17","60"], hints: ["Sechs-zehn = 16"], difficulty: 1 },
     ],
   },
+  {
+    id: "ordinalzahlen",
+    title: "Ordinalzahlen (1., 2., 3.…)",
+    emoji: "🥇",
+    exercises: [
+      { id: "o1", type: "multiple-choice", free: true, difficulty: 1, emoji: "🏆", question: "Wer ist beim Rennen auf dem ersten Platz? 🥇🥈🥉", answer: "Die Schnellste", options: ["Die Langsamste", "Die Schnellste", "Die Zweite", "Die Letzte"], hints: ["1. Platz = der/die Schnellste!"], mascot: "wave" },
+      { id: "o2", type: "multiple-choice", free: true, difficulty: 1, question: "Was kommt nach dem 2. Platz? 🥈", answer: "3. Platz", options: ["1. Platz", "4. Platz", "3. Platz", "2. Platz nochmal"], hints: ["1., 2., ...?"] },
+      { id: "o3", type: "multiple-choice", free: true, difficulty: 1, question: "Der dritte Buchstabe im Alphabet ist...? 🔤", answer: "C", options: ["A", "B", "C", "D"], hints: ["A, B, C... — zähle mit!"] },
+      { id: "o4", type: "drag-drop", difficulty: 1, question: "Bringe die Tiere ins Ziel — welcher ist 1., 2., 3.? 🐢🐇🐌", answer: "all", hints: ["Wer ist am schnellsten?"], dragItems: [{ id: "hase", label: "🐇 Hase (schnell)", emoji: "🐇" }, { id: "hund", label: "🐕 Hund (mittel)", emoji: "🐕" }, { id: "schildkroete", label: "🐢 Schildkröte (langsam)", emoji: "🐢" }], dropZones: [{ id: "erst", label: "🥇 1. Platz" }, { id: "zweit", label: "🥈 2. Platz" }, { id: "dritt", label: "🥉 3. Platz" }], dropAnswers: { hase: "erst", hund: "zweit", schildkroete: "dritt" } },
+      { id: "o5", type: "fill-in-blank", difficulty: 2, question: "Januar ist der 1. Monat. Februar ist der ___ Monat.", answer: "2.", hints: ["Einer, zwei..."] },
+      { id: "o6", type: "multiple-choice", difficulty: 1, question: "In einer Reihe von 5 Kindern steht Mia an 4. Stelle. Wer steht hinter ihr? 👫", answer: "Das 5. Kind", options: ["Das 3. Kind", "Das 1. Kind", "Das 5. Kind", "Niemand"], hints: ["4., dann kommt...?"] },
+      { id: "o7", type: "fill-in-blank", difficulty: 2, question: "Der ___ Tag der Woche ist Mittwoch.", answer: "3.", hints: ["Mo=1., Di=2., Mi=?"] },
+    ],
+  },
+  {
+    id: "mengen-zaehlen",
+    title: "Mengen & Zählen",
+    emoji: "🍎",
+    exercises: [
+      { id: "m1", type: "counting", free: true, difficulty: 1, emoji: "🍎", question: "Wie viele Äpfel sind in der Gruppe? 🍎🍎🍎🍎🍎", answer: "5", options: ["4", "5", "6", "7"], hints: ["Zähle jeden Apfel einzeln.", "1, 2, 3, 4, 5…"], mascot: "wave" },
+      { id: "m2", type: "counting", free: true, difficulty: 1, emoji: "⭐", question: "Zähle die Sterne! ⭐⭐⭐⭐⭐⭐⭐⭐", answer: "8", options: ["6", "7", "8", "9"], hints: ["Mach einen Strich nach jedem Stern."] },
+      { id: "m3", type: "multiple-choice", free: true, difficulty: 1, question: "Welche Gruppe hat MEHR? 🍕🍕🍕 oder 🍕🍕🍕🍕🍕", answer: "5 Pizzen", options: ["3 Pizzen", "5 Pizzen", "Beide gleich", "Keine davon"], hints: ["Zähle beide Gruppen.", "Welche Zahl ist größer?"] },
+      { id: "m4", type: "multiple-choice", difficulty: 1, question: "3 Vögel fliegen weg von 7 Vögeln. Wie viele bleiben? 🐦", answer: "4", options: ["3", "4", "5", "10"], hints: ["7 minus 3 = ?", "Zähle rückwärts von 7."] },
+      { id: "m5", type: "drag-drop", difficulty: 2, question: "Verteile 8 Erdbeeren gleichmäßig auf 2 Teller! 🍓", answer: "all", hints: ["8 geteilt durch 2 = ?", "Jeder Teller bekommt gleich viele."], dragItems: [{ id: "e1", label: "🍓", emoji: "🍓" }, { id: "e2", label: "🍓", emoji: "🍓" }, { id: "e3", label: "🍓", emoji: "🍓" }, { id: "e4", label: "🍓", emoji: "🍓" }, { id: "e5", label: "🍓", emoji: "🍓" }, { id: "e6", label: "🍓", emoji: "🍓" }, { id: "e7", label: "🍓", emoji: "🍓" }, { id: "e8", label: "🍓", emoji: "🍓" }], dropZones: [{ id: "t1", label: "🍽️ Teller 1 (4 Plätze)" }, { id: "t2", label: "🍽️ Teller 2 (4 Plätze)" }], dropAnswers: { e1: "t1", e2: "t1", e3: "t1", e4: "t1", e5: "t2", e6: "t2", e7: "t2", e8: "t2" } },
+      { id: "m6", type: "fill-in-blank", difficulty: 2, question: "In einer Schachtel sind 10 Pralinen. Du isst 4. Es bleiben ___ übrig. 🍫", answer: "6", hints: ["10 − 4 = ?"] },
+    ],
+  },
+  {
+    id: "verdoppeln-halbieren",
+    title: "Verdoppeln & Halbieren",
+    emoji: "✌️",
+    exercises: [
+      { id: "v1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist das Doppelte von 3? 🐰🐰", answer: "6", options: ["3", "5", "6", "9"], hints: ["Doppelt = zweimal.", "3 + 3 = ?"], mascot: "wave" },
+      { id: "v2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Hälfte von 8? ✂️", answer: "4", options: ["2", "4", "6", "8"], hints: ["8 in zwei gleiche Teile teilen.", "4 + 4 = 8"] },
+      { id: "v3", type: "fill-in-blank", free: true, difficulty: 1, question: "Das Doppelte von 5 ist ___. 🖐🖐", answer: "10", hints: ["5 + 5 = ?"] },
+      { id: "v4", type: "multiple-choice", difficulty: 1, question: "Was ist das Doppelte von 7? 🎲", answer: "14", options: ["7", "12", "14", "17"], hints: ["7 + 7 = ?"] },
+      { id: "v5", type: "fill-in-blank", difficulty: 1, question: "Die Hälfte von 10 ist ___.", answer: "5", hints: ["10 ÷ 2 = ?", "5 + 5 = 10"] },
+      { id: "v6", type: "multiple-choice", difficulty: 2, question: "Max hat 6 Murmeln. Er verdoppelt sie. Wie viele hat er jetzt? 🔮", answer: "12", options: ["8", "10", "12", "16"], hints: ["Doppelt = 2 ×", "6 × 2 = ?"] },
+      { id: "v7", type: "fill-in-blank", difficulty: 2, question: "Die Hälfte von 16 ist ___.", answer: "8", hints: ["8 + 8 = 16"] },
+      { id: "v8", type: "multiple-choice", difficulty: 2, question: "Welche Zahl ist das Doppelte von 9? 🔢", answer: "18", options: ["16", "17", "18", "19"], hints: ["9 + 9 = ?"] },
+    ],
+  },
+  {
+    id: "geld-muenzen",
+    title: "Geld & Münzen 🪙",
+    emoji: "💰",
+    exercises: [
+      { id: "g1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die größte Schweizer Münze? 🇨🇭", answer: "5 Franken", options: ["10 Rappen", "1 Franken", "5 Franken", "2 Franken"], hints: ["CHF 5 ist mehr als CHF 2.", "Gold-silberne große Münze."], mascot: "wave" },
+      { id: "g2", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Rappen hat 1 Franken? 🪙", answer: "100", options: ["10", "50", "100", "1000"], hints: ["So wie 100 Cent = 1 Euro."] },
+      { id: "g3", type: "multiple-choice", free: true, difficulty: 1, question: "Du hast 2 Münzen à 50 Rappen. Wie viel ist das? 💰", answer: "1 Franken", options: ["50 Rappen", "1 Franken", "2 Franken", "1.50 Franken"], hints: ["50 + 50 = 100 Rappen = 1 Franken"] },
+      { id: "g4", type: "fill-in-blank", difficulty: 1, question: "Ein Kaugummi kostet 20 Rappen. Du zahlst mit 50 Rappen. Rückgeld: ___ Rappen.", answer: "30", hints: ["50 − 20 = ?"] },
+      { id: "g5", type: "multiple-choice", difficulty: 2, question: "Was kannst du mit CHF 2 kaufen? 🛒", answer: "Einen Apfel für CHF 1.80", options: ["Ein Buch für CHF 15", "Einen Apfel für CHF 1.80", "Eine Tafel Schokolade für CHF 3.50", "Ein Spielzeug für CHF 20"], hints: ["CHF 2 ist wenig — was kostet weniger?"] },
+      { id: "g6", type: "fill-in-blank", difficulty: 2, question: "Luca kauft ein Eis für CHF 2.50. Er zahlt mit CHF 5. Er bekommt ___ Franken zurück.", answer: "2.50", hints: ["5 − 2.50 = ?", "2 Franken 50 Rappen"] },
+      { id: "g7", type: "drag-drop", difficulty: 2, question: "Welche Münzen ergeben CHF 1? 🪙", answer: "all", hints: ["100 Rappen = 1 Franken", "Es gibt viele Möglichkeiten!"], dragItems: [{ id: "c50a", label: "50 Rp", emoji: "🪙" }, { id: "c50b", label: "50 Rp", emoji: "🪙" }], dropZones: [{ id: "franken", label: "💰 CHF 1" }], dropAnswers: { c50a: "franken", c50b: "franken" } },
+    ],
+  },
 ];
 
 export default grade1Math;

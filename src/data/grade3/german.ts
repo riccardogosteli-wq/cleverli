@@ -80,6 +80,47 @@ const grade3German: Topic[] = [
       { id: "rs8", type: "fill-in-blank", question: "Der Hund ___ laut. (bellen)", answer: "bellt", hints: ["er / sie / es → bellt (3. Person Einzahl)"], difficulty: 2 },
     ],
   },
+  {
+    id: "verben-konjugieren",
+    title: "Verben konjugieren",
+    emoji: "🏃",
+    exercises: [
+      { id: "vk1", type: "multiple-choice", free: true, difficulty: 1, question: "Konjugiere «gehen»: Ich ___", answer: "gehe", options: ["geht", "gehen", "gehe", "gehst"], hints: ["ich gehe, du gehst, er geht..."], mascot: "wave" },
+      { id: "vk2", type: "fill-in-blank", free: true, difficulty: 1, question: "Du ___ (spielen) gerne Fussball.", answer: "spielst", hints: ["du + Verb: meist -st am Ende", "spiel + st = spielst"] },
+      { id: "vk3", type: "drag-drop", free: true, difficulty: 1, question: "Ordne die Formen von «laufen» zu! 🏃", answer: "all", hints: ["ich→e, du→st, er/sie/es→t, wir→en"], dragItems: [{ id: "laufe", label: "laufe" }, { id: "laeuft", label: "läuft" }, { id: "laeufst", label: "läufst" }, { id: "laufen", label: "laufen" }], dropZones: [{ id: "ich", label: "ich ___" }, { id: "du", label: "du ___" }, { id: "er", label: "er/sie ___" }, { id: "wir", label: "wir ___" }], dropAnswers: { laufe: "ich", laeufst: "du", laeuft: "er", laufen: "wir" } },
+      { id: "vk4", type: "fill-in-blank", difficulty: 2, question: "Er ___ (haben) drei Katzen.", answer: "hat", hints: ["haben: ich habe, du hast, er hat"] },
+      { id: "vk5", type: "fill-in-blank", difficulty: 2, question: "Wir ___ (sein) heute in Bern.", answer: "sind", hints: ["sein: ich bin, du bist, er ist, wir sind"] },
+      { id: "vk6", type: "multiple-choice", difficulty: 2, question: "Vergangenheit: Gestern ___ (spielen, wir) Basketball.", answer: "spielten", options: ["spielen", "spielten", "spielte", "gespielt"], hints: ["Vergangenheit mit -ten für wir.", "spielen → spielten (Imperfekt)"], mascot: "think" },
+      { id: "vk7", type: "fill-in-blank", difficulty: 2, question: "Perfekt: Sie ___ das Buch ___ (lesen).", answer: "hat, gelesen", hints: ["Perfekt = haben/sein + Partizip II", "lesen → gelesen"] },
+    ],
+  },
+  {
+    id: "synonyme-antonyme",
+    title: "Synonyme & Antonyme",
+    emoji: "↔️",
+    exercises: [
+      { id: "sa1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist ein Synonym für «froh»? 😊", answer: "glücklich", options: ["traurig", "glücklich", "müde", "wütend"], hints: ["Synonym = gleichbedeutend.", "Froh und ___ bedeuten das Gleiche."], mascot: "wave" },
+      { id: "sa2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist das Antonym (Gegenteil) von «warm»? 🔥❄️", answer: "kalt", options: ["heiß", "mild", "kalt", "warm"], hints: ["Antonym = Gegenteil."] },
+      { id: "sa3", type: "drag-drop", free: true, difficulty: 1, question: "Verbinde Wörter mit ihrem Gegenteil! ↔️", answer: "all", hints: ["Gegenteil = Antonym"], dragItems: [{ id: "gross", label: "gross" }, { id: "hell", label: "hell" }, { id: "schnell", label: "schnell" }, { id: "alt", label: "alt" }], dropZones: [{ id: "klein", label: "klein" }, { id: "dunkel", label: "dunkel" }, { id: "langsam", label: "langsam" }, { id: "jung", label: "jung" }], dropAnswers: { gross: "klein", hell: "dunkel", schnell: "langsam", alt: "jung" } },
+      { id: "sa4", type: "fill-in-blank", difficulty: 2, question: "Ein anderes Wort für «beginnen» ist ___.", answer: "anfangen", hints: ["Syn. = gleichbedeutend", "an-fangen, starten, loslegen, beginnen..."] },
+      { id: "sa5", type: "multiple-choice", difficulty: 2, question: "Welches ist KEIN Synonym für «sprechen»? 💬", answer: "schlafen", options: ["reden", "sagen", "flüstern", "schlafen"], hints: ["Sprechen = mit dem Mund Wörter machen.", "Schlafen hat nichts damit zu tun!"] },
+      { id: "sa6", type: "fill-in-blank", difficulty: 2, question: "Das Gegenteil von «Freude» ist ___.", answer: "Trauer", hints: ["Wenn man nicht froh ist, ist man...", "Tränen = Trauer"] },
+      { id: "sa7", type: "multiple-choice", difficulty: 3, question: "Welches Wort passt am besten als Synonym für «riesig»? 🏔️", answer: "gigantisch", options: ["winzig", "mittel", "gigantisch", "etwas"], hints: ["Riesig = sehr groß.", "Noch größer als groß!"], mascot: "celebrate" },
+    ],
+  },
+  {
+    id: "textsorten",
+    title: "Textsorten: Brief & Bericht",
+    emoji: "✉️",
+    exercises: [
+      { id: "ts1", type: "multiple-choice", free: true, difficulty: 1, question: "Was gehört in einen Brief? ✉️", answer: "Datum, Anrede, Text, Gruss", options: ["Nur Text", "Datum, Anrede, Text, Gruss", "Nur Bilder", "Nur Unterschrift"], hints: ["Briefe haben eine bestimmte Struktur.", "Anrede z.B.: «Liebe Oma,»"], mascot: "wave" },
+      { id: "ts2", type: "drag-drop", free: true, difficulty: 1, question: "Bringe die Teile eines Briefes in die richtige Reihenfolge! ✉️", answer: "all", hints: ["Datum oben rechts, Anrede, Text, Gruss."], dragItems: [{ id: "datum", label: "📅 Datum" }, { id: "anrede", label: "👋 Anrede" }, { id: "text", label: "📝 Text" }, { id: "gruss", label: "🤝 Gruss + Unterschrift" }], dropZones: [{ id: "p1", label: "1. Oben rechts" }, { id: "p2", label: "2. Links darunter" }, { id: "p3", label: "3. Hauptteil" }, { id: "p4", label: "4. Am Ende" }], dropAnswers: { datum: "p1", anrede: "p2", text: "p3", gruss: "p4" } },
+      { id: "ts3", type: "multiple-choice", free: true, difficulty: 2, question: "Was ist ein Bericht? 📰", answer: "Eine sachliche Beschreibung eines Ereignisses", options: ["Ein Gedicht", "Eine sachliche Beschreibung eines Ereignisses", "Ein Brief an einen Freund", "Eine Fantasiegeschichte"], hints: ["Im Bericht erzählt man, was WIRKLICH passiert ist.", "Wer? Was? Wann? Wo? Wie?"] },
+      { id: "ts4", type: "fill-in-blank", difficulty: 2, question: "Ein Brief beginnt mit «Liebes Tagebuch,» — das ist die ___.", answer: "Anrede", hints: ["Der Beginn eines Briefes, in dem man die Person anspricht."] },
+      { id: "ts5", type: "multiple-choice", difficulty: 2, question: "Was sind die «W-Fragen» eines Berichts? 🗞️", answer: "Wer? Was? Wann? Wo? Wie?", options: ["Warum? Wegen? Wobei?", "Wer? Was? Wann? Wo? Wie?", "Wieviel? Welche? Wohin?", "Alle Fragen mit W"], hints: ["Diese 5 Fragen beantwortet ein guter Bericht."], mascot: "think" },
+      { id: "ts6", type: "fill-in-blank", difficulty: 2, question: "Am Ende eines Briefes schreibt man einen ___.", answer: "Gruss", hints: ["«Liebe Grüsse», «Bis bald», «Dein Max» — das alles ist der Gruss."] },
+    ],
+  },
 ];
 
 export default grade3German;
