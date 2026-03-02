@@ -12,6 +12,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
+import { useLang } from "@/lib/LangContext";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; }
 
@@ -26,6 +27,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const router = useRouter();
   const { speak, stop, isSupported } = useVoice();
   const { play } = useSound();
+  const { tr } = useLang();
   const FREE_LIMIT = 3;
   const exercises = topic.exercises;
   const [idx, setIdx] = useState(0);
@@ -145,11 +147,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             <button onClick={() => {
               setIdx(0); setScore(0); setStreak(0); setAnswered(null); setDone(false); setCardKey(k=>k+1);
             }} className="text-sm border-2 border-gray-200 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
-              🔄 Nochmal
+              {tr("playAgainShort")}
             </button>
             <Link href={`/learn/${grade}/${subject}`}
               className="text-sm bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all">
-              Andere Themen →
+              {tr("otherTopics")}
             </Link>
           </div>
         </div>
@@ -163,24 +165,24 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     return (
       <div className="text-center space-y-4 py-8 max-w-sm mx-auto">
         <Image src="/cleverli-think.png" alt="" width={100} height={100} className="mx-auto drop-shadow-md" />
-        <h2 className="text-xl font-bold text-gray-800">Weiter mit Premium 🔒</h2>
+        <h2 className="text-xl font-bold text-gray-800">{tr("unlockTitle")}</h2>
         <p className="text-gray-500 text-sm">
-          Du hast alle 3 kostenlosen Aufgaben gemacht! 🎉<br/>
-          Mit Premium erhältst du <strong>unbegrenzten Zugriff</strong> auf alle Aufgaben, alle Fächer und alle Klassen 1–3.
+          {tr("unlockDesc").replace("{n}", String(FREE_LIMIT))}<br/>
+          {tr("unlockDetail")}
         </p>
         <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm text-green-800 text-left space-y-1 w-full max-w-xs">
-          <div>✅ Alle {exercises.length} Aufgaben in diesem Thema</div>
-          <div>✅ Alle Fächer: Mathe, Deutsch & mehr</div>
-          <div>✅ Klassen 1, 2 und 3 komplett</div>
-          <div>✅ Bis zu 3 Kinder pro Konto</div>
+          <div>✅ {exercises.length} {tr("exerciseCount")}</div>
+          <div>✅ {tr("premiumF1")}</div>
+          <div>✅ {tr("premiumF3")}</div>
+          <div>✅ {tr("premiumF4")}</div>
         </div>
         <Link href="/signup"
           className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
-          Jetzt starten — CHF 9.90/Mt.
+          {tr("upgrade")} — CHF 9.90{tr("perMonth")}
         </Link>
         <div>
           <Link href={`/learn/${grade}/${subject}`} className="text-sm text-gray-400 hover:text-gray-600 underline">
-            Anderes Thema wählen
+            {tr("selectTopic")}
           </Link>
         </div>
       </div>
@@ -203,7 +205,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
                 setVoiceOn(next);
                 if (!next) stop();
               }}
-              title={voiceOn ? "Cleverli-Stimme aus" : "Cleverli-Stimme an"}
+              title={voiceOn ? tr("cleverliVoiceOff") : tr("cleverliVoiceOn")}
               className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center border-2 transition-all active:scale-95"
               style={{ borderColor: voiceOn ? "#16a34a" : "#d1d5db", background: voiceOn ? "#f0fdf4" : "#f9fafb" }}
             >
@@ -225,9 +227,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             <button
               onClick={() => speak(current.question)}
               className="w-full text-center text-xs text-green-600 opacity-60 hover:opacity-100 active:scale-95 transition-all pb-1"
-              title="Aufgabe vorlesen"
+              title={tr("readAloudTitle")}
             >
-              🔊 Vorlesen
+              {tr("readAloud")}
             </button>
           )}
           {current.type === "multiple-choice" && (
@@ -253,8 +255,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       {/* Free limit notice */}
       {!isPremium && idx < FREE_LIMIT && (
         <p className="text-center text-xs text-gray-400">
-          💡 {FREE_LIMIT} kostenlose Aufgaben pro Thema —{" "}
-          <Link href="/signup" className="text-green-600 underline">alle Klassen & Aufgaben freischalten</Link>
+          {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
+          <Link href="/signup" className="text-green-600 underline">{tr("unlockAll")}</Link>
         </p>
       )}
 

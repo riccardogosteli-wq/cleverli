@@ -50,12 +50,12 @@ export default function Dashboard() {
             <div key={g} style={{ minHeight: "90px" }}
               className="border-2 border-dashed border-gray-300 rounded-2xl flex flex-col items-center justify-center text-gray-400 cursor-not-allowed">
               <div className="text-xl font-bold">{g}.</div>
-              <div className="text-xs mt-1">🔜 Bald</div>
+              <div className="text-xs mt-1">{tr("comingSoonShort")}</div>
             </div>
           ))}
         </div>
         <p className="text-center text-xs text-gray-400 -mt-2">
-          Klassen 4–6 folgen bald · <a href="mailto:hello@cleverli.ch" className="text-green-600 underline">Informiert werden</a>
+          {tr("gradesComingSoon")} · <a href="mailto:hello@cleverli.ch" className="text-green-600 underline">{tr("notifyMe")}</a>
         </p>
       </div>
     );
@@ -84,7 +84,7 @@ export default function Dashboard() {
 
         <button onClick={() => setGrade(null)}
           className="w-full text-sm text-gray-400 hover:text-gray-600 py-2">
-          ← Zurück
+          {tr("back")}
         </button>
       </div>
     );
@@ -96,7 +96,7 @@ export default function Dashboard() {
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4">
       <div className="flex items-center gap-3">
-        <button onClick={() => setSubject(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2">← Zurück</button>
+        <button onClick={() => setSubject(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2">{tr("back")}</button>
         <div className="flex items-center gap-2">
           <span className="text-2xl">{currentSubject.emoji}</span>
           <h1 className="text-lg sm:text-xl font-bold text-gray-800">
@@ -119,7 +119,7 @@ export default function Dashboard() {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-gray-800 text-sm sm:text-base">{topic.title}</div>
-                <div className="text-xs text-gray-400">{topic.exercises.length} Aufgaben</div>
+                <div className="text-xs text-gray-400">{topic.exercises.length} {tr("exerciseCount")}</div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 {done && (
@@ -128,7 +128,7 @@ export default function Dashboard() {
                   </div>
                 )}
                 <span className={`text-xs px-2 py-1 rounded-full font-medium ${done ? "bg-green-100 text-green-700" : "bg-blue-50 text-blue-600"}`}>
-                  {done ? "✓" : `${topic.exercises.length} Aufg.`}
+                  {done ? "✓" : `${topic.exercises.length} ${tr("exerciseShort")}`}
                 </span>
               </div>
             </Link>

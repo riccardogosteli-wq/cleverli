@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useLang } from "@/lib/LangContext";
 
 interface Props {
   question: string;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function MultipleChoice({ question, options, answer, onAnswer }: Props) {
+  const { tr } = useLang();
   const [selected, setSelected] = useState<string | null>(null);
   const [shake, setShake] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -82,7 +84,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer }: 
       </div>
       {selected && selected !== answer && (
         <div className="text-center text-sm text-gray-500 bg-orange-50 border border-orange-200 rounded-xl px-4 py-2">
-          Die richtige Antwort war: <span className="font-bold text-orange-700">{answer}</span>
+          {tr("correctAnswerWas")} <span className="font-bold text-orange-700">{answer}</span>
         </div>
       )}
       <style>{`

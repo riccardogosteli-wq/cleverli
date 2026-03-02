@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { useLang } from "@/lib/LangContext";
 
 interface Props { correct: boolean; onContinue: () => void; label?: string; isTopicComplete?: boolean; }
 
@@ -10,6 +11,7 @@ interface Particle { x: number; y: number; vx: number; vy: number; color: string
 const COLORS = ["#22c55e","#f59e0b","#3b82f6","#ec4899","#f97316","#8b5cf6","#06b6d4","#fbbf24"];
 
 export default function RewardAnimation({ correct, onContinue, label, isTopicComplete }: Props) {
+  const { tr } = useLang();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const rafRef = useRef<number>(0);
@@ -74,23 +76,23 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
             <div style={{ animation: "popIn 0.4s cubic-bezier(.34,1.56,.64,1)" }}>
               <Image src="/cleverli-jump-star.png" alt="Cleverli feiert!" width={120} height={120} className="drop-shadow-xl" />
             </div>
-            <h2 className="text-2xl font-extrabold text-green-700">Thema geschafft! 🏆</h2>
-            <p className="text-gray-500 text-sm">Du hast alle Aufgaben gelöst!</p>
+            <h2 className="text-2xl font-extrabold text-green-700">{tr("topicComplete")}</h2>
+            <p className="text-gray-500 text-sm">{tr("allExercisesDone")}</p>
           </>
         ) : correct ? (
           <>
             <div style={{ animation: "popIn 0.4s cubic-bezier(.34,1.56,.64,1)" }}>
-              <Image src="/cleverli-celebrate.png" alt="Richtig!" width={90} height={90} className="drop-shadow-lg" />
+              <Image src="/cleverli-celebrate.png" alt="✓" width={90} height={90} className="drop-shadow-lg" />
             </div>
-            <p className="text-xl font-bold text-green-700">Richtig! 🎉</p>
+            <p className="text-xl font-bold text-green-700">{tr("correct")}</p>
             {label && <p className="text-sm text-gray-500">{label}</p>}
           </>
         ) : (
           <>
             <div style={{ animation: "popIn 0.3s ease" }}>
-              <Image src="/cleverli-think.png" alt="Fast!" width={80} height={80} className="drop-shadow-md" />
+              <Image src="/cleverli-think.png" alt="…" width={80} height={80} className="drop-shadow-md" />
             </div>
-            <p className="text-xl font-bold text-orange-600">Fast! Versuch nochmal 💪</p>
+            <p className="text-xl font-bold text-orange-600">{tr("wrong")}</p>
             {label && <p className="text-sm text-gray-500">{label}</p>}
           </>
         )}
@@ -99,7 +101,7 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
           style={{ animation: "popIn 0.4s 0.2s cubic-bezier(.34,1.56,.64,1) both" }}
           className={`mt-2 px-8 py-3 rounded-full font-bold text-white transition-all hover:scale-105 shadow-md
             ${isTopicComplete ? "bg-green-600 hover:bg-green-700 text-lg" : correct ? "bg-green-600 hover:bg-green-700" : "bg-orange-500 hover:bg-orange-600"}`}>
-          {isTopicComplete ? "Andere Themen →" : "Weiter →"}
+          {isTopicComplete ? tr("otherTopics") : tr("next")}
         </button>
       </div>
 

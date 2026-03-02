@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useLang } from "@/lib/LangContext";
 
 interface Props {
   question: string;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export default function CountingGame({ question, answer, emoji = "🍎", options, onAnswer }: Props) {
+  const { tr } = useLang();
   const [selected, setSelected] = useState<string | null>(null);
   const [popped, setPopped] = useState<boolean[]>([]);
   const count = parseInt(answer);
@@ -32,7 +34,7 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
   return (
     <div className="space-y-4">
       <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center px-1">{question}</p>
-      <p className="text-xs text-center text-gray-400">Tippe auf jedes {emoji} um es zu zählen!</p>
+      <p className="text-xs text-center text-gray-400">{tr("tapToCount").replace("{emoji}", emoji)}</p>
 
       {/* Emoji grid — bigger touch targets */}
       <div className="bg-green-50 rounded-2xl p-4 flex flex-wrap gap-3 justify-center min-h-[90px]">
@@ -70,7 +72,7 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
       {/* Correct answer feedback */}
       {selected && selected !== answer && (
         <div className="text-center text-sm text-gray-500 bg-orange-50 border border-orange-200 rounded-xl px-4 py-2">
-          Die richtige Antwort war: <span className="font-bold text-orange-700">{answer}</span>
+          {tr("correctAnswerWas")} <span className="font-bold text-orange-700">{answer}</span>
         </div>
       )}
 
