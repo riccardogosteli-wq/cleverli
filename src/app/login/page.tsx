@@ -68,13 +68,6 @@ export default function Login() {
           <p className="text-sm text-gray-400 mt-1">Willkommen zurück!</p>
         </div>
 
-        {/* Test account hint — only in dev/test */}
-        <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl px-4 py-3 text-xs text-amber-800 space-y-1">
-          <div className="font-bold">🧪 Test-Zugänge:</div>
-          <div><strong>Premium:</strong> test@cleverli.ch · CleverliTest2026!</div>
-          <div><strong>Gratis:</strong> free@cleverli.ch · CleverliTest2026!</div>
-        </div>
-
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-3">
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700">

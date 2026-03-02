@@ -28,7 +28,7 @@ export default function HintSystem({ hints, onHintUsed }: Props) {
 
   return (
     <div className="flex items-start gap-3 bg-amber-50 border-2 border-amber-200 rounded-2xl p-3">
-      <Image src="/images/scenes/cleverli-idea.jpg" alt="Tipp" width={52} height={52} className="shrink-0 rounded-xl drop-shadow-sm" />
+      <Image src="/cleverli-think.png" alt="Cleverli" width={44} height={44} className="shrink-0 drop-shadow-sm" />
       <div className="flex-1 min-w-0">
         <p className="text-sm text-amber-900 font-medium leading-snug">{hints[idx]}</p>
         {idx < hints.length - 1 && (
