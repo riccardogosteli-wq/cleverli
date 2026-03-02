@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useLang } from "@/lib/LangContext";
 import { LANGUAGES, Lang } from "@/lib/i18n";
@@ -17,7 +18,14 @@ export default function Navigation() {
       <div className="flex items-center justify-between px-4 py-0 max-w-6xl mx-auto h-14">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 min-h-[44px]" onClick={() => setOpen(false)}>
-          <span className="text-xl sm:text-2xl font-bold text-green-700">cleverli</span>
+          <Image
+            src="/cleverli-logo.jpg"
+            alt="Cleverli – Lernplattform für Schweizer Kinder"
+            width={110}
+            height={40}
+            className="h-10 w-auto object-contain"
+            priority
+          />
           <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline">beta</span>
         </Link>
 

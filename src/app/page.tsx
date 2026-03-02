@@ -94,7 +94,7 @@ export default function Home() {
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">{tr("pricingTitle")}</h2>
-          <p className="text-center text-gray-400 text-sm mb-10">Die ersten 3 Aufgaben pro Thema kannst du immer kostenlos ausprobieren.</p>
+          <p className="text-center text-gray-400 text-sm mb-10">{tr("pricingSubtitle")}</p>
           <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {/* Trial */}
             <div className="bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-100 shadow-sm flex flex-col">
