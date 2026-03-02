@@ -67,6 +67,23 @@ const grade1Math: Topic[] = [
       { id: "f8", type: "fill-in-blank", question: "Ein Dreieck hat ___ Seiten.", answer: "3", hints: ["Drei Ecken = drei Seiten."], difficulty: 1 },
     ],
   },
+  {
+    id: "zahlen-bis-20",
+    title: "Zahlen 11–20",
+    emoji: "🔟",
+    exercises: [
+      { id: "z20a", type: "counting", question: "Wie viele Sterne siehst du?", answer: "12", emoji: "⭐", options: ["10","11","12","13"], hints: ["Zähle alle Sterne einzeln."], difficulty: 1, free: true },
+      { id: "z20b", type: "fill-in-blank", question: "Was kommt nach der 14? 14, ___", answer: "15", hints: ["14, dann kommt..."], difficulty: 1, free: true },
+      { id: "z20c", type: "multiple-choice", question: "Welche Zahl ist das? Elf", answer: "11", options: ["10","11","12","13"], hints: ["Elf = 11"], difficulty: 1, free: true },
+      { id: "z20d", type: "multiple-choice", question: "Welche Zahl liegt zwischen 15 und 17?", answer: "16", options: ["14","15","16","18"], hints: ["15, ___, 17"], difficulty: 1 },
+      { id: "z20e", type: "fill-in-blank", question: "10 + 7 = ___", answer: "17", hints: ["Zehn plus sieben = siebzehn"], difficulty: 1 },
+      { id: "z20f", type: "multiple-choice", question: "Was ist die grösste Zahl? 13, 19, 11, 15", answer: "19", options: ["13","19","11","15"], hints: ["Suche die Zahl, die am weitesten rechts auf dem Zahlenstrahl ist."], difficulty: 1 },
+      { id: "z20g", type: "fill-in-blank", question: "Ergänze: 11, 13, 15, ___", answer: "17", hints: ["Zähle in Zweierschritten."], difficulty: 2 },
+      { id: "z20h", type: "multiple-choice", question: "Was kommt vor der 20?", answer: "19", options: ["18","19","21","20"], hints: ["19, 20"], difficulty: 1 },
+      { id: "z20i", type: "fill-in-blank", question: "10 + ___ = 18", answer: "8", hints: ["18 - 10 = ?"], difficulty: 2 },
+      { id: "z20j", type: "multiple-choice", question: "Wie schreibt man sechzehn?", answer: "16", options: ["15","16","17","60"], hints: ["Sechs-zehn = 16"], difficulty: 1 },
+    ],
+  },
 ];
 
 export default grade1Math;

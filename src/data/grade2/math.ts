@@ -67,6 +67,21 @@ const grade2Math: Topic[] = [
       { id: "u8", type: "fill-in-blank", question: "Viertel nach 3 ist ___ Uhr.", answer: "3:15", hints: ["Viertel = 15 Minuten", "3 Uhr + 15 Minuten = 3:15"], difficulty: 2 },
     ],
   },
+  {
+    id: "geld-chf",
+    title: "Geld & CHF",
+    emoji: "💰",
+    exercises: [
+      { id: "g1", type: "multiple-choice", question: "Du hast eine 1-Franken-Münze. Wie viele Rappen sind das?", answer: "100", options: ["10","50","100","200"], hints: ["1 Franken = 100 Rappen"], difficulty: 1, free: true },
+      { id: "g2", type: "fill-in-blank", question: "2 × 50 Rappen = ___ Franken", answer: "1", hints: ["50 Rp + 50 Rp = 100 Rp = 1 Fr."], difficulty: 1, free: true },
+      { id: "g3", type: "multiple-choice", question: "Du hast 1 Fr. und kaufst etwas für 80 Rp. Wie viel Rückgeld bekommst du?", answer: "20 Rp", options: ["10 Rp","20 Rp","30 Rp","40 Rp"], hints: ["100 Rp - 80 Rp = ?"], difficulty: 1, free: true },
+      { id: "g4", type: "fill-in-blank", question: "5 × 20 Rappen = ___ Rappen", answer: "100", hints: ["5 × 20 = 100 Rp = 1 Fr."], difficulty: 1 },
+      { id: "g5", type: "multiple-choice", question: "Was ist mehr: 3 × 20 Rp oder 1 × 50 Rp?", answer: "3 × 20 Rp", options: ["3 × 20 Rp","1 × 50 Rp","beide gleich"], hints: ["3 × 20 = 60 Rp vs. 50 Rp"], difficulty: 2 },
+      { id: "g6", type: "fill-in-blank", question: "Ein Brot kostet CHF 2.50. Du gibst CHF 5.00. Rückgeld: CHF ___", answer: "2.50", hints: ["5.00 - 2.50 = ?"], difficulty: 2 },
+      { id: "g7", type: "multiple-choice", question: "Wie viele 20-Rappen-Münzen brauchst du für 1 Franken?", answer: "5", options: ["2","4","5","10"], hints: ["20 × 5 = 100 Rp = 1 Fr."], difficulty: 1 },
+      { id: "g8", type: "fill-in-blank", question: "CHF 1.50 + CHF 2.00 = CHF ___", answer: "3.50", hints: ["1 Fr. 50 Rp + 2 Fr. = 3 Fr. 50 Rp"], difficulty: 2 },
+    ],
+  },
 ];
 
 export default grade2Math;

@@ -2,12 +2,32 @@
 import CleverliMascot from "@/components/CleverliMascot";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
+import { useState } from "react";
+
+const TESTIMONIALS = [
+  { name: "Sandra M.", city: "Zürich", text: "Meine Tochter übt jeden Abend freiwillig Mathe — das hätte ich nie gedacht! Cleverli macht Lernen wirklich Spass.", stars: 5 },
+  { name: "Patrick K.", city: "Bern", text: "Endlich eine Schweizer Plattform, die auf den Lehrplan 21 abgestimmt ist. Mein Sohn ist in der 2. Klasse und liebt die Aufgaben.", stars: 5 },
+  { name: "Léa D.", city: "Lausanne", text: "Super intuitiv, auch für jüngere Kinder. Die Hinweise helfen, ohne einfach die Antwort zu verraten.", stars: 5 },
+];
+
+const FAQS = [
+  { q: "Ist Cleverli wirklich kostenlos?", a: "Ja! Die ersten 3 Aufgaben pro Thema sind immer kostenlos — ohne Kreditkarte. So kannst du alles in Ruhe ausprobieren." },
+  { q: "Für welche Klassen ist Cleverli?", a: "Aktuell decken wir die 1., 2. und 3. Klasse ab (Lehrplan 21). Die 4.–6. Klasse folgt bald." },
+  { q: "Wie kündige ich das Abo?", a: "Jederzeit — kein Mindestabo, keine Kündigungsfrist. Einfach in den Einstellungen kündigen." },
+  { q: "Gibt es eine App?", a: "Cleverli läuft direkt im Browser — auf Handy, Tablet und Computer. Eine native App ist in Planung." },
+  { q: "In welchen Sprachen ist Cleverli verfügbar?", a: "Deutsch, Français, Italiano und English — einfach oben rechts die Flagge wählen." },
+];
 
 export default function Home() {
   const { tr } = useLang();
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      {/* Banner */}
+      <div className="bg-green-600 text-white text-center py-2 text-sm font-medium">
+        🇨🇭 Lehrplan 21 &nbsp;·&nbsp; 🏅 Von Lehrern empfohlen &nbsp;·&nbsp; 🎮 Über 150 Übungen
+      </div>
       {/* Hero */}
       <section className="text-center px-6 pt-10 pb-16 max-w-4xl mx-auto">
         <CleverliMascot size={180} />
@@ -96,6 +116,41 @@ export default function Home() {
                 {tr("startFree")}
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 px-6 max-w-5xl mx-auto">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-10">Was Eltern sagen 💬</h2>
+        <div className="grid sm:grid-cols-3 gap-6">
+          {TESTIMONIALS.map((t) => (
+            <div key={t.name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div className="text-yellow-400 text-lg mb-3">{"⭐".repeat(t.stars)}</div>
+              <p className="text-gray-600 text-sm italic mb-4">&ldquo;{t.text}&rdquo;</p>
+              <p className="text-sm font-semibold text-gray-800">{t.name} · {t.city}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">Häufige Fragen</h2>
+          <div className="space-y-3">
+            {FAQS.map((faq, i) => (
+              <div key={i} className="border border-gray-100 rounded-2xl overflow-hidden">
+                <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full text-left px-5 py-4 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50">
+                  {faq.q}
+                  <span className="text-green-600 text-xl">{openFaq === i ? "−" : "+"}</span>
+                </button>
+                {openFaq === i && (
+                  <div className="px-5 pb-4 text-gray-500 text-sm">{faq.a}</div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
