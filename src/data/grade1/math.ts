@@ -74,12 +74,12 @@ const grade1Math: Topic[] = [
     exercises: [
       { id: "vg1", type: "multiple-choice", question: "Was ist grösser: 7 oder 3?", answer: "7", options: ["7","3","beide gleich"], hints: ["7 liegt weiter rechts auf dem Zahlenstrahl."], difficulty: 1, free: true },
       { id: "vg2", type: "multiple-choice", question: "Was ist kleiner: 9 oder 4?", answer: "4", options: ["9","4","beide gleich"], hints: ["4 liegt weiter links auf dem Zahlenstrahl."], difficulty: 1, free: true },
-      { id: "vg3", type: "fill-in-blank", question: "5 ___ 8 (schreibe < oder >)", answer: "<", hints: ["5 ist kleiner als 8, also 5 < 8"], difficulty: 1, free: true },
-      { id: "vg4", type: "multiple-choice", question: "Welches Zeichen passt? 6 ___ 6", answer: "=", options: ["<",">","="], hints: ["Gleiche Zahlen → gleich"], difficulty: 1 },
-      { id: "vg5", type: "fill-in-blank", question: "9 ___ 5 (schreibe < oder >)", answer: ">", hints: ["9 ist grösser als 5, also 9 > 5"], difficulty: 1 },
+      { id: "vg3", type: "multiple-choice", question: "Welches Zeichen passt? 5 ___ 8", answer: "<", options: ["<",">","="], hints: ["5 ist kleiner als 8. Kleiner = < (der Pfeil zeigt zur kleineren Zahl)"], difficulty: 1, free: true },
+      { id: "vg4", type: "multiple-choice", question: "Welches Zeichen passt? 6 ___ 6", answer: "=", options: ["<",">","="], hints: ["Gleiche Zahlen → gleich (=)"], difficulty: 1 },
+      { id: "vg5", type: "multiple-choice", question: "Welches Zeichen passt? 9 ___ 5", answer: ">", options: ["<",">","="], hints: ["9 ist grösser als 5. Grösser = > (der Pfeil zeigt zur grösseren Zahl)"], difficulty: 1 },
       { id: "vg6", type: "multiple-choice", question: "Was ist die kleinste Zahl? 4, 1, 8, 6", answer: "1", options: ["4","1","8","6"], hints: ["Die kleinste Zahl liegt ganz links auf dem Zahlenstrahl."], difficulty: 1 },
       { id: "vg7", type: "multiple-choice", question: "Ordne von klein nach gross: 5, 2, 8. Was steht zuerst?", answer: "2", options: ["5","2","8"], hints: ["Fang mit der kleinsten Zahl an."], difficulty: 2 },
-      { id: "vg8", type: "fill-in-blank", question: "3 < ___ (irgendeine Zahl von 4–9)", answer: "4", hints: ["Jede Zahl grösser als 3 passt. Z.B. 4."], difficulty: 2 },
+      { id: "vg8", type: "multiple-choice", question: "Welches Zeichen passt? 3 ___ 7", answer: "<", options: ["<",">","="], hints: ["3 ist kleiner als 7 → 3 < 7"], difficulty: 2 },
     ],
   },
   {

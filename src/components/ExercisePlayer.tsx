@@ -53,7 +53,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [answered, idx]);
 
   // Scroll reward into view on mobile
   useEffect(() => {
@@ -147,7 +148,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       {/* Exercise card — hidden when answered, replaced by reward */}
       {answered === null && (
         <div
-          className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 space-y-4"
+          className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 space-y-4 min-h-[260px] flex flex-col justify-center"
           key={cardKey}
           style={{ animation: "slideIn 0.25s cubic-bezier(.34,1.56,.64,1)" }}
         >

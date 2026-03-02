@@ -45,15 +45,18 @@ export default function Dashboard() {
         </div>
 
         {/* Coming soon */}
-        <div className="grid grid-cols-3 gap-3 opacity-40">
+        <div className="grid grid-cols-3 gap-3 opacity-50">
           {[4, 5, 6].map(g => (
             <div key={g} style={{ minHeight: "90px" }}
-              className="border-2 border-gray-200 rounded-2xl flex flex-col items-center justify-center text-gray-400">
+              className="border-2 border-dashed border-gray-300 rounded-2xl flex flex-col items-center justify-center text-gray-400 cursor-not-allowed">
               <div className="text-xl font-bold">{g}.</div>
-              <div className="text-xs mt-1">{tr("comingSoon")}</div>
+              <div className="text-xs mt-1">🔜 Bald</div>
             </div>
           ))}
         </div>
+        <p className="text-center text-xs text-gray-400 -mt-2">
+          Klassen 4–6 folgen bald · <a href="mailto:hello@cleverli.ch" className="text-green-600 underline">Informiert werden</a>
+        </p>
       </div>
     );
   }

@@ -2,15 +2,17 @@
 import Link from "next/link";
 import { Topic } from "@/types/exercise";
 import { useEffect, useState } from "react";
+import { useLang } from "@/lib/LangContext";
 
 interface Props { grade: number; subject: string; topics: Topic[]; }
 
-const SUBJECT_LABELS: Record<string, { name: string; emoji: string; color: string }> = {
-  math: { name: "Mathematik", emoji: "🔢", color: "text-blue-700 bg-blue-50" },
-  german: { name: "Deutsch", emoji: "📖", color: "text-yellow-700 bg-yellow-50" },
+const SUBJECT_META: Record<string, { emoji: string; nameKey: string; color: string }> = {
+  math:   { emoji: "🔢", nameKey: "math",   color: "text-blue-700 bg-blue-50" },
+  german: { emoji: "📖", nameKey: "german", color: "text-yellow-700 bg-yellow-50" },
 };
 
 export default function SubjectPageClient({ grade, subject, topics }: Props) {
+  const { tr } = useLang();
   const [progress, setProgress] = useState<Record<string, { stars: number; completed: number }>>({});
 
   useEffect(() => {
@@ -24,15 +26,23 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
     setProgress(p);
   }, [grade, subject, topics]);
 
-  const meta = SUBJECT_LABELS[subject] ?? { name: subject, emoji: "📚", color: "text-gray-700 bg-gray-50" };
+  const meta = SUBJECT_META[subject] ?? { emoji: "📚", nameKey: subject, color: "text-gray-700 bg-gray-50" };
+  const subjectName = tr(meta.nameKey) || subject;
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
-      <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600">← Übersicht</Link>
+    <div className="max-w-2xl mx-auto px-4 py-6 space-y-5">
+      {/* Breadcrumb */}
+      <nav className="flex items-center gap-1.5 text-xs text-gray-400 flex-wrap">
+        <Link href="/dashboard" className="hover:text-green-600 transition-colors">Dashboard</Link>
+        <span>›</span>
+        <span className="text-gray-600 font-medium">{grade}. Klasse</span>
+        <span>›</span>
+        <span className="text-green-700 font-semibold">{subjectName}</span>
+      </nav>
       <div className="flex items-center gap-3">
         <span className="text-4xl">{meta.emoji}</span>
         <div>
-          <h1 className="text-2xl font-bold text-gray-800">{meta.name} — {grade}. Klasse</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-800">{subjectName} — {grade}. Klasse</h1>
           <p className="text-sm text-gray-400">{topics.length} Themen · Lehrplan 21</p>
         </div>
       </div>

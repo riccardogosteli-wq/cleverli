@@ -40,12 +40,23 @@ export default async function TopicPage({ params }: Props) {
     );
   }
 
+  const subjectName = SUBJECT_NAMES[subject] ?? subject;
+
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4">
-      <Link href={`/learn/${grade}/${subject}`} className="text-sm text-gray-400 hover:text-gray-600">← Zurück</Link>
+      {/* Breadcrumb */}
+      <nav className="flex items-center gap-1.5 text-xs text-gray-400 flex-wrap">
+        <Link href="/dashboard" className="hover:text-green-600 transition-colors">Dashboard</Link>
+        <span>›</span>
+        <Link href={`/learn/${grade}/${subject}`} className="hover:text-green-600 transition-colors">
+          {grade}. Klasse · {subjectName}
+        </Link>
+        <span>›</span>
+        <span className="text-green-700 font-semibold">{topic.title}</span>
+      </nav>
       <div className="flex items-center gap-2">
         <span className="text-3xl">{topic.emoji}</span>
-        <h1 className="text-2xl font-bold text-gray-800">{topic.title}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-800">{topic.title}</h1>
       </div>
       <ExercisePlayer topic={topic} grade={parseInt(grade)} subject={subject} />
     </div>

@@ -35,6 +35,7 @@ export default function Navigation() {
 
         {/* Desktop nav */}
         <div className="hidden sm:flex items-center gap-3">
+          <Link href="/dashboard" className="text-sm text-gray-600 hover:text-green-700 font-medium py-2 px-2">🎒 Lernen</Link>
           <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2">{tr("login")}</Link>
           <Link href="/signup" className="text-sm bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm">
             {tr("signup")}

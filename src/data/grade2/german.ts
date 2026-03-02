@@ -74,10 +74,10 @@ const grade2German: Topic[] = [
       { id: "sz2", type: "multiple-choice", question: "Welches Satzzeichen kommt ans Ende? 'Wie heisst du___'", answer: "?", options: [".","?","!",","], hints: ["'Wie...' = Frage → ?"], difficulty: 1, free: true },
       { id: "sz3", type: "multiple-choice", question: "Welches Satzzeichen kommt ans Ende? 'Schau, ein Regenbogen___'", answer: "!", options: [".","?","!",","], hints: ["Begeisterung/Ausruf → !"], difficulty: 1, free: true },
       { id: "sz4", type: "multiple-choice", question: "Welches Satzzeichen passt? 'Die Katze schläft___'", answer: ".", options: [".","?","!"], hints: ["Aussagesatz → Punkt"], difficulty: 1 },
-      { id: "sz5", type: "fill-in-blank", question: "Fragen enden mit einem ___.", answer: "?", hints: ["Fragesatz → Fragezeichen"], difficulty: 1 },
+      { id: "sz5", type: "multiple-choice", question: "Fragen enden mit einem ___.", answer: "?", options: [".","?","!"], hints: ["Fragesatz → Fragezeichen ?"], difficulty: 1 },
       { id: "sz6", type: "multiple-choice", question: "Was ist ein Fragesatz?", answer: "Wann beginnt die Schule?", options: ["Die Schule beginnt um 8 Uhr.","Hurra, schulfrei!","Wann beginnt die Schule?"], hints: ["Fragesätze beginnen mit Fragewörtern: Wann, Wo, Was, Wer..."], difficulty: 1 },
       { id: "sz7", type: "multiple-choice", question: "Wähle das richtige Satzzeichen: 'Bitte hilf mir___'", answer: "!", options: [".","?","!"], hints: ["Bitte/Aufforderung → oft Ausrufezeichen"], difficulty: 2 },
-      { id: "sz8", type: "fill-in-blank", question: "Am Ende eines Ausrufs steht ein ___.", answer: "!", hints: ["Ausruf → Ausrufezeichen !"], difficulty: 1 },
+      { id: "sz8", type: "multiple-choice", question: "Am Ende eines Ausrufs steht ein ___.", answer: "!", options: [".","?","!"], hints: ["Ausruf → Ausrufezeichen !"], difficulty: 1 },
     ],
   },
   {
