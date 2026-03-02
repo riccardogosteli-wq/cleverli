@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Soil/ground -->
+  <rect x="5" y="85" width="110" height="30" rx="8" fill="#8B5E3C"/>
+  <rect x="5" y="85" width="110" height="10" rx="5" fill="#6B3E1E" opacity="0.4"/>
+  <!-- Seed shape (oval, brown/cream) -->
+  <ellipse cx="60" cy="68" rx="22" ry="16" fill="#A0522D" transform="rotate(-15 60 68)"/>
+  <!-- Seed highlight -->
+  <ellipse cx="54" cy="61" rx="8" ry="5" fill="#CD853F" opacity="0.6" transform="rotate(-15 54 61)"/>
+  <!-- Seed line down the middle -->
+  <path d="M52 58 Q56 68 54 78" stroke="#6B3E1E" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <!-- Tiny sprout just beginning to crack out -->
+  <path d="M63 54 Q66 44 70 36" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <ellipse cx="73" cy="32" rx="9" ry="6" fill="#66BB6A" transform="rotate(-20 73 32)"/>
+</svg>

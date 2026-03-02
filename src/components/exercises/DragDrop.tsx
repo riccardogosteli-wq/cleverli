@@ -125,18 +125,21 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
   const allItemsPlaced = items.every(item => placedIds.has(item.id));
   const remaining = items.length - placedIds.size;
 
-  const renderItemContent = (item: DragItem, size = 36) => (
-    <>
-      {item.image
-        ? <Image src={item.image} alt={item.label} width={size} height={size} className="drop-shadow-sm pointer-events-none" />
-        : item.emoji
-        ? <span style={{ fontSize: size * 0.75 }} className="pointer-events-none select-none">{item.emoji}</span>
-        : null}
-      <span className="text-xs font-semibold text-gray-700 pointer-events-none select-none text-center leading-tight">
-        {item.label}
-      </span>
-    </>
-  );
+  const renderItemContent = (item: DragItem, size = 36) => {
+    const imgSize = item.image ? Math.max(size, 52) : size;
+    return (
+      <>
+        {item.image
+          ? <Image src={item.image} alt={item.label} width={imgSize} height={imgSize} className="drop-shadow-sm pointer-events-none" />
+          : item.emoji
+          ? <span style={{ fontSize: size * 0.75 }} className="pointer-events-none select-none">{item.emoji}</span>
+          : null}
+        <span className="text-xs font-semibold text-gray-700 pointer-events-none select-none text-center leading-tight">
+          {item.label}
+        </span>
+      </>
+    );
+  };
 
   return (
     <div ref={containerRef} className="space-y-4 select-none" style={{ touchAction: "none" }}>

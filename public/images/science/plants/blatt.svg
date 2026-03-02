@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Leaf shape -->
+  <path d="M60 10 C90 15, 110 40, 108 65 C106 88, 85 108, 60 110 C35 108, 14 88, 12 65 C10 40, 30 15, 60 10 Z" fill="#43A047"/>
+  <!-- Highlight -->
+  <path d="M60 18 C82 22, 98 42, 96 62 C94 78, 80 95, 65 102" stroke="#66BB6A" stroke-width="3" fill="none" opacity="0.5"/>
+  <!-- Main vein -->
+  <path d="M60 15 Q60 60 60 105" stroke="#2E7D32" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Left veins -->
+  <path d="M60 35 Q45 42 35 50" stroke="#2E7D32" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M60 50 Q43 56 30 62" stroke="#2E7D32" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M60 65 Q46 70 35 74" stroke="#2E7D32" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <!-- Right veins -->
+  <path d="M60 35 Q75 42 85 50" stroke="#2E7D32" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M60 50 Q77 56 90 62" stroke="#2E7D32" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M60 65 Q74 70 85 74" stroke="#2E7D32" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <!-- Stem base -->
+  <path d="M60 105 Q60 112 60 116" stroke="#2E7D32" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Label removed — used in exercise labels already -->
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Sky / above ground -->
+  <rect x="0" y="0" width="120" height="45" rx="0" fill="#E3F2FD" opacity="0.6"/>
+  <!-- Grass on surface -->
+  <rect x="0" y="42" width="120" height="8" rx="0" fill="#66BB6A"/>
+  <!-- Grass blades -->
+  <path d="M10 42 Q12 30 14 42" stroke="#43A047" stroke-width="2.5" fill="none"/>
+  <path d="M22 42 Q25 28 27 42" stroke="#43A047" stroke-width="2.5" fill="none"/>
+  <path d="M38 42 Q40 32 42 42" stroke="#43A047" stroke-width="2.5" fill="none"/>
+  <path d="M55 42 Q57 27 60 42" stroke="#43A047" stroke-width="2.5" fill="none"/>
+  <path d="M70 42 Q72 31 75 42" stroke="#43A047" stroke-width="2.5" fill="none"/>
+  <path d="M85 42 Q88 29 90 42" stroke="#43A047" stroke-width="2.5" fill="none"/>
+  <path d="M100 42 Q102 33 105 42" stroke="#43A047" stroke-width="2.5" fill="none"/>
+  <!-- Soil layer 1 (top - light brown) -->
+  <rect x="0" y="50" width="120" height="25" fill="#8B5E3C"/>
+  <!-- Soil layer 2 (darker) -->
+  <rect x="0" y="75" width="120" height="20" fill="#6B3E1E"/>
+  <!-- Soil layer 3 (darkest) -->
+  <rect x="0" y="95" width="120" height="25" fill="#4E2A0A"/>
+  <!-- Soil texture dots layer 1 -->
+  <circle cx="25" cy="60" r="3" fill="#6B3E1E" opacity="0.5"/>
+  <circle cx="55" cy="57" r="2" fill="#6B3E1E" opacity="0.5"/>
+  <circle cx="85" cy="63" r="3" fill="#6B3E1E" opacity="0.5"/>
+  <circle cx="40" cy="68" r="2" fill="#6B3E1E" opacity="0.4"/>
+  <circle cx="70" cy="66" r="2.5" fill="#6B3E1E" opacity="0.4"/>
+  <!-- Small stones -->
+  <ellipse cx="30" cy="82" rx="5" ry="3" fill="#9E9E9E" opacity="0.6"/>
+  <ellipse cx="75" cy="84" rx="4" ry="2.5" fill="#9E9E9E" opacity="0.5"/>
+  <ellipse cx="50" cy="100" rx="6" ry="3.5" fill="#757575" opacity="0.5"/>
+</svg>

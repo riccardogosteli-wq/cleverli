@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Main stem - thick vertical green bar -->
+  <rect x="50" y="10" width="20" height="90" rx="10" fill="#4CAF50"/>
+  <!-- Highlight on stem -->
+  <rect x="54" y="14" width="6" height="82" rx="3" fill="#6FCF74" opacity="0.6"/>
+  <!-- Left small leaf bump -->
+  <ellipse cx="38" cy="45" rx="14" ry="9" fill="#66BB6A" transform="rotate(-20 38 45)"/>
+  <!-- Right small leaf bump -->
+  <ellipse cx="82" cy="65" rx="14" ry="9" fill="#66BB6A" transform="rotate(20 82 65)"/>
+  <!-- Bottom base / root connector -->
+  <ellipse cx="60" cy="100" rx="14" ry="5" fill="#388E3C" opacity="0.5"/>
+  <!-- Label -->
+  <text x="60" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2E7D32">Stängel</text>
+</svg>

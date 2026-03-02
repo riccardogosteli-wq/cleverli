@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Brown soil line at top -->
+  <rect x="0" y="28" width="120" height="6" rx="3" fill="#8B5E3C" opacity="0.35"/>
+  <!-- Main tap root going down -->
+  <path d="M60 34 Q60 55 60 75" stroke="#6B3E1E" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <!-- Left root 1 -->
+  <path d="M60 48 Q45 55 32 62" stroke="#7D4A22" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Left root 2 smaller -->
+  <path d="M32 62 Q24 68 20 78" stroke="#8B5630" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Right root 1 -->
+  <path d="M60 50 Q75 58 88 65" stroke="#7D4A22" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Right root 2 smaller -->
+  <path d="M88 65 Q95 70 100 80" stroke="#8B5630" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Center root end -->
+  <path d="M60 75 Q56 84 54 92" stroke="#8B5630" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M60 75 Q64 84 66 92" stroke="#8B5630" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Left sub-roots from left-1 -->
+  <path d="M45 57 Q38 62 35 70" stroke="#9B6840" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Right sub-roots from right-1 -->
+  <path d="M75 61 Q80 67 80 76" stroke="#9B6840" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Label -->
+  <text x="60" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6B3E1E">Wurzel</text>
+</svg>
