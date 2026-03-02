@@ -29,7 +29,7 @@ export default function Navigation() {
                 lang === l.code
                   ? "ring-2 ring-green-500 bg-green-50 scale-110"
                   : "opacity-50 hover:opacity-100 hover:bg-gray-50"}`}>
-              {l.flag}
+              <span aria-hidden="true">{l.flag}</span>
             </button>
           ))}
         </div>
