@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/lib/LangContext";
@@ -8,6 +8,14 @@ import StructuredData from "@/components/StructuredData";
 const geist = Geist({ subsets: ["latin"] });
 
 const BASE_URL = "https://www.cleverli.ch";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5, // allow pinch zoom (accessibility)
+  viewportFit: "cover", // iOS safe area
+  themeColor: "#16a34a",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

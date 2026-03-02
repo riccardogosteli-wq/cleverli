@@ -11,8 +11,14 @@ interface Props {
 export default function MultipleChoice({ question, options, answer, onAnswer }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [shake, setShake] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    setIsMobile("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // no keyboard shortcuts on touch devices
     const handler = (e: KeyboardEvent) => {
       if (selected) return;
       const idx = parseInt(e.key) - 1;
@@ -35,8 +41,10 @@ export default function MultipleChoice({ question, options, answer, onAnswer }: 
 
   return (
     <div className="space-y-4">
-      <p className="text-xl font-semibold text-gray-800 text-center leading-snug">{question}</p>
-      <p className="text-xs text-center text-gray-400">Tastenkürzel: 1 · 2 · 3 · 4</p>
+      <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center leading-snug px-1">{question}</p>
+      {!isMobile && (
+        <p className="text-xs text-center text-gray-400 hidden sm:block">Tastenkürzel: 1 · 2 · 3 · 4</p>
+      )}
       <div className="grid grid-cols-1 gap-3">
         {options.map((opt, i) => {
           const isSelected = selected === opt;
@@ -45,7 +53,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer }: 
             transition: "all 0.2s cubic-bezier(.34,1.56,.64,1)",
           };
 
-          let cls = "relative border-2 rounded-2xl px-5 py-4 font-semibold text-base cursor-pointer text-left flex items-center gap-3 w-full ";
+          let cls = "relative border-2 rounded-2xl px-4 py-4 font-semibold text-base cursor-pointer text-left flex items-center gap-3 w-full active:scale-95 ";
 
           if (isSelected && isCorrect) {
             cls += "bg-green-100 border-green-500 text-green-800 shadow-md";
@@ -58,7 +66,6 @@ export default function MultipleChoice({ question, options, answer, onAnswer }: 
             style.transform = "scale(1.02)";
           } else {
             cls += "bg-white border-gray-200 hover:border-green-400 hover:bg-green-50";
-            style.transform = "scale(1)";
           }
 
           const badge = isSelected && isCorrect ? "✓" : isSelected && !isCorrect ? "✗" : selected && isCorrect ? "✓" : `${i + 1}`;
@@ -66,8 +73,8 @@ export default function MultipleChoice({ question, options, answer, onAnswer }: 
 
           return (
             <button key={opt} onClick={() => pick(opt)} className={cls} style={style}>
-              <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${badgeColor}`}>{badge}</span>
-              {opt}
+              <span className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${badgeColor}`}>{badge}</span>
+              <span className="text-sm sm:text-base">{opt}</span>
             </button>
           );
         })}

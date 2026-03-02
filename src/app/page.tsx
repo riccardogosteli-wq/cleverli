@@ -30,37 +30,37 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-green-50 via-white to-yellow-50 px-6 pt-12 pb-16">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-8">
+      <section className="bg-gradient-to-br from-green-50 via-white to-yellow-50 px-4 sm:px-6 pt-8 sm:pt-12 pb-10 sm:pb-16">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
           {/* Mascot */}
           <div className="flex-shrink-0 relative">
-            <Image src="/cleverli-wave.png" alt="Cleverli" width={220} height={220}
-              className="drop-shadow-xl animate-bounce-slow" style={{animation:"cleverli-jump 2.5s ease-in-out infinite"}} priority />
+            <Image src="/cleverli-wave.png" alt="Cleverli" width={180} height={180}
+              className="drop-shadow-xl sm:w-[220px] sm:h-[220px]"
+              style={{animation:"cleverli-jump 2.5s ease-in-out infinite"}} priority />
             <style>{`@keyframes cleverli-jump{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}`}</style>
           </div>
           {/* Text */}
           <div className="text-center sm:text-left">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
               {tr("heroTitle1")}<br />
               <span className="text-green-600">{tr("heroTitle2")}</span>
             </h1>
-            <p className="mt-4 text-lg text-gray-500 max-w-lg">{tr("subtitle").split("\n")[0]}</p>
-            <p className="mt-1 text-sm text-gray-400">{tr("subtitle").split("\n")[1]}</p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center sm:justify-start">
-              <Link href="/dashboard" className="bg-green-600 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-green-700 transition-colors shadow-md">
+            <p className="mt-3 text-base sm:text-lg text-gray-500 max-w-lg">{tr("subtitle").split("\n")[0]}</p>
+            <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center sm:justify-start">
+              <Link href="/dashboard" className="bg-green-600 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-center">
                 {tr("startFree")} →
               </Link>
-              <Link href="/signup" className="border-2 border-green-600 text-green-700 px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-50 transition-colors">
+              <Link href="/signup" className="border-2 border-green-600 text-green-700 px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-50 active:scale-95 transition-all text-center">
                 Konto erstellen
               </Link>
             </div>
-            <p className="mt-3 text-xs text-gray-400">{tr("freeNote")}</p>
+            <p className="mt-3 text-xs text-gray-400 px-4 sm:px-0">{tr("freeNote")}</p>
           </div>
         </div>
       </section>
 
       {/* Subjects */}
-      <section className="bg-white py-16 px-6">
+      <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-10">{tr("subjectsTitle")}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -80,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* How it works — with mascot poses */}
-      <section className="bg-green-50 py-16 px-6">
+      <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-10">{tr("howTitle")}</h2>
           <div className="grid sm:grid-cols-3 gap-8 text-center">
@@ -101,13 +101,13 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section className="bg-white py-16 px-6">
+      <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">{tr("pricingTitle")}</h2>
           <p className="text-center text-gray-400 text-sm mb-10">Die ersten 3 Aufgaben pro Thema kannst du immer kostenlos ausprobieren.</p>
           <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {/* Trial */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-gray-100 shadow-sm flex flex-col">
+            <div className="bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-100 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-1">
                 <Image src="/cleverli-run.png" alt="" width={50} height={50} />
                 <div className="text-3xl font-bold text-gray-900">{tr("free")}</div>
@@ -124,7 +124,7 @@ export default function Home() {
               </Link>
             </div>
             {/* Premium */}
-            <div className="bg-green-600 rounded-2xl p-8 border-2 border-green-600 shadow-lg text-white flex flex-col relative overflow-hidden">
+            <div className="bg-green-600 rounded-2xl p-5 sm:p-8 border-2 border-green-600 shadow-lg text-white flex flex-col relative overflow-hidden">
               <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">⭐ Beliebt</div>
               <div className="flex items-center gap-3 mb-1">
                 <Image src="/cleverli-jump-star.png" alt="" width={50} height={50} />
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-green-50 py-16 px-6">
+      <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center gap-6 mb-10">
             <Image src="/cleverli-wave.png" alt="" width={100} height={100} className="drop-shadow-md shrink-0" />
@@ -165,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-16 px-6">
+      <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-8 justify-center">
             <Image src="/cleverli-think.png" alt="" width={70} height={70} className="drop-shadow-md" />
@@ -175,7 +175,8 @@ export default function Home() {
             {FAQS.map((faq, i) => (
               <div key={i} className="border-2 border-gray-100 rounded-2xl overflow-hidden">
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full text-left px-5 py-4 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                  style={{minHeight:"56px"}}
+                  className="w-full text-left px-4 sm:px-5 py-4 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 active:bg-gray-100 transition-colors text-sm sm:text-base">
                   <span>{faq.q}</span>
                   <span className="text-green-600 text-xl ml-3 shrink-0">{openFaq === i ? "−" : "+"}</span>
                 </button>
@@ -189,7 +190,8 @@ export default function Home() {
       </section>
 
       {/* CTA banner */}
-      <section className="bg-green-600 py-12 px-6 text-center text-white">
+      <section className="bg-green-600 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>
+
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 justify-center">
           <Image src="/cleverli-jump-star.png" alt="" width={100} height={100} className="drop-shadow-lg" />
           <div>
