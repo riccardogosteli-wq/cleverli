@@ -188,7 +188,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   if (isLocked) {
     return (
       <div className="text-center space-y-4 py-8 max-w-sm mx-auto">
-        <Image src="/cleverli-think.png" alt="" width={100} height={100} className="mx-auto drop-shadow-md" />
+        <Image src="/images/scenes/cleverli-encourage.jpg" alt="" width={180} height={180} className="mx-auto rounded-2xl drop-shadow-md" />
         <h2 className="text-xl font-bold text-gray-800">{tr("unlockTitle")}</h2>
         <p className="text-gray-500 text-sm">
           {tr("unlockDesc").replace("{n}", String(FREE_LIMIT))}<br/>

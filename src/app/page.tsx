@@ -87,12 +87,12 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-10">{tr("howTitle")}</h2>
           <div className="grid sm:grid-cols-3 gap-8 text-center">
             {[
-              { step: "1", titleKey: "step1title", descKey: "step1desc", img: "/cleverli-sit-read.png" },
-              { step: "2", titleKey: "step2title", descKey: "step2desc", img: "/cleverli-celebrate.png" },
-              { step: "3", titleKey: "step3title", descKey: "step3desc", img: "/cleverli-think.png" },
+              { step: "1", titleKey: "step1title", descKey: "step1desc", img: "/images/scenes/cleverli-teach-kids.jpg", rounded: true },
+              { step: "2", titleKey: "step2title", descKey: "step2desc", img: "/images/scenes/cleverli-chalkboard-quest.jpg", rounded: true },
+              { step: "3", titleKey: "step3title", descKey: "step3desc", img: "/images/scenes/cleverli-well-done.jpg", rounded: true },
             ].map((item) => (
               <div key={item.step} className="flex flex-col items-center gap-3 bg-white rounded-2xl p-6 shadow-sm">
-                <Image src={item.img} alt="" width={100} height={100} className="drop-shadow-md" />
+                <Image src={item.img} alt="" width={130} height={130} className={`drop-shadow-md ${item.rounded ? "rounded-xl" : ""}`} />
                 <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center text-sm font-bold">{item.step}</div>
                 <h3 className="font-bold text-gray-800">{tr(item.titleKey)}</h3>
                 <p className="text-gray-500 text-sm">{tr(item.descKey)}</p>
@@ -111,7 +111,7 @@ export default function Home() {
             {/* Trial */}
             <div className="bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-100 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-1">
-                <Image src="/cleverli-run.png" alt="" width={50} height={50} />
+                <Image src="/images/scenes/cleverli-explore.jpg" alt="" width={56} height={56} className="rounded-xl" />
                 <div className="text-3xl font-bold text-gray-900">{tr("free")}</div>
               </div>
               <div className="text-gray-400 text-sm mb-6">{tr("forever")}</div>
@@ -129,7 +129,7 @@ export default function Home() {
             <div className="bg-green-600 rounded-2xl p-5 sm:p-8 border-2 border-green-600 shadow-lg text-white flex flex-col relative overflow-hidden">
               <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">⭐ Beliebt</div>
               <div className="flex items-center gap-3 mb-1">
-                <Image src="/cleverli-jump-star.png" alt="" width={50} height={50} />
+                <Image src="/images/scenes/cleverli-celebrate-magic.jpg" alt="" width={56} height={56} className="rounded-xl" />
                 <div className="text-3xl font-bold">CHF 9.90<span className="text-lg font-normal">{tr("perMonth")}</span></div>
               </div>
               <div className="text-green-200 text-sm mb-6">{tr("yearlyNote")}</div>
@@ -195,7 +195,7 @@ export default function Home() {
       <section className="bg-green-600 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>
 
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 justify-center">
-          <Image src="/cleverli-jump-star.png" alt="" width={100} height={100} className="drop-shadow-lg" />
+          <Image src="/images/scenes/cleverli-encourage.jpg" alt="" width={120} height={120} className="rounded-2xl drop-shadow-lg" />
           <div>
             <h2 className="text-2xl font-bold mb-2">Bereit zum Ausprobieren?</h2>
             <p className="text-green-100 mb-4">Keine Anmeldung nötig — einfach loslegen!</p>

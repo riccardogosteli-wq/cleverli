@@ -74,7 +74,9 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
         {isTopicComplete ? (
           <>
             <div style={{ animation: "popIn 0.4s cubic-bezier(.34,1.56,.64,1)" }}>
-              <Image src="/cleverli-jump-star.png" alt="Cleverli feiert!" width={120} height={120} className="drop-shadow-xl" />
+              {/* Scene: Cleverli celebrating at chalkboard with treasure */}
+              <Image src="/images/scenes/cleverli-solution.jpg" alt="Cleverli feiert!"
+                width={200} height={200} className="rounded-2xl drop-shadow-xl mx-auto" />
             </div>
             <h2 className="text-2xl font-extrabold text-green-700">{tr("topicComplete")}</h2>
             <p className="text-gray-500 text-sm">{tr("allExercisesDone")}</p>
@@ -82,7 +84,9 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
         ) : correct ? (
           <>
             <div style={{ animation: "popIn 0.4s cubic-bezier(.34,1.56,.64,1)" }}>
-              <Image src="/cleverli-celebrate.png" alt="✓" width={90} height={90} className="drop-shadow-lg" />
+              {/* Scene: Cleverli with magic lightbulb */}
+              <Image src="/images/scenes/cleverli-celebrate-magic.jpg" alt="Richtig!"
+                width={160} height={160} className="rounded-2xl drop-shadow-lg mx-auto" />
             </div>
             <p className="text-xl font-bold text-green-700">{tr("correct")}</p>
             {label && <p className="text-sm text-gray-500">{label}</p>}
@@ -90,7 +94,9 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
         ) : (
           <>
             <div style={{ animation: "popIn 0.3s ease" }}>
-              <Image src="/cleverli-think.png" alt="…" width={80} height={80} className="drop-shadow-md" />
+              {/* Scene: Cleverli thinking / math question */}
+              <Image src="/images/scenes/cleverli-math-ask.jpg" alt="Fast!"
+                width={140} height={140} className="rounded-2xl drop-shadow-md mx-auto" />
             </div>
             <p className="text-xl font-bold text-orange-600">{tr("wrong")}</p>
             {label && <p className="text-sm text-gray-500">{label}</p>}
