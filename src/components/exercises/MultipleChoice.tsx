@@ -84,6 +84,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
                   width={72}
                   height={72}
                   className="drop-shadow-sm"
+                  unoptimized={optionImages![i].endsWith(".svg")}
                   style={{ filter: isSelected && !isCorrect ? "saturate(0.4)" : "none" }}
                 />
                 <span className="text-xs font-semibold text-gray-700 text-center leading-tight px-1">{opt}</span>

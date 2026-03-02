@@ -118,7 +118,7 @@ export default function MemoryGame({ pairs, onAnswer }: Props) {
               {isFlipped ? (
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 p-1">
                   {card.image ? (
-                    <Image src={card.image} alt={card.label} width={44} height={44} className="drop-shadow-sm" />
+                    <Image src={card.image} alt={card.label} width={44} height={44} className="drop-shadow-sm" unoptimized={card.image.endsWith(".svg")} />
                   ) : card.emoji ? (
                     <span className="text-3xl">{card.emoji}</span>
                   ) : null}
