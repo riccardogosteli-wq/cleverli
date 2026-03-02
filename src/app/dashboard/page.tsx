@@ -7,6 +7,8 @@ import { useLang } from "@/lib/LangContext";
 import { getTopics, SUBJECTS } from "@/data/index";
 import { getTopicTitle } from "@/data/topicTitles";
 import { isDailyDoneToday } from "@/lib/daily";
+import { useProfile } from "@/hooks/useProfile";
+import RewardWidget from "@/components/RewardWidget";
 
 const GRADE_COLORS = [
   "bg-blue-50 border-blue-300 text-blue-800 hover:bg-blue-100 active:bg-blue-200",
@@ -30,6 +32,7 @@ function getProgress(grade: number, subject: string, topicId: string) {
 
 function DashboardInner() {
   const { tr, lang } = useLang();
+  const { profile } = useProfile();
   const searchParams = useSearchParams();
   const preselectedSubject = searchParams.get("subject");
 
@@ -109,6 +112,15 @@ function DashboardInner() {
         <p className="text-center text-xs text-gray-400 -mt-2">
           {tr("gradesComingSoon")} · <a href="mailto:hello@cleverli.ch" className="text-green-600 underline">{tr("notifyMe")}</a>
         </p>
+
+        {/* Reward widget — shows active goals with progress */}
+        {profile && (
+          <RewardWidget profile={{
+            totalExercises: profile.totalExercises,
+            totalTopicsComplete: profile.totalTopicsComplete,
+            dailyStreak: profile.dailyStreak,
+          }} />
+        )}
       </div>
     );
   }

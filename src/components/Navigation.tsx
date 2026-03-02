@@ -50,6 +50,7 @@ export default function Navigation() {
         <div className="hidden sm:flex items-center gap-3" style={{ flexShrink: 0 }}>
           <XpBar />
           <Link href="/dashboard" className="text-sm text-gray-600 hover:text-green-700 font-medium py-2 px-2 whitespace-nowrap" style={{ minWidth: "80px", textAlign: "center" }}>{tr("learnNav")}</Link>
+          <Link href="/rewards" className="text-sm text-amber-600 hover:text-amber-700 font-medium py-2 px-2 whitespace-nowrap">🎁</Link>
           {session ? (
             <>
               {isPremium && <span className="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded-full border border-amber-200 shrink-0">⭐ Premium</span>}
@@ -105,6 +106,11 @@ export default function Navigation() {
             className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
             onClick={() => setOpen(false)}>
             🏆 {lang === "de" ? "Trophäen" : lang === "fr" ? "Trophées" : lang === "it" ? "Trofei" : "Trophies"}
+          </Link>
+          <Link href="/rewards"
+            className="text-base text-amber-700 font-medium py-3 px-4 rounded-xl hover:bg-amber-50"
+            onClick={() => setOpen(false)}>
+            🎁 {lang === "de" ? "Belohnungen (Eltern)" : lang === "fr" ? "Récompenses (Parents)" : lang === "it" ? "Premi (Genitori)" : "Rewards (Parents)"}
           </Link>
         </div>
       )}
