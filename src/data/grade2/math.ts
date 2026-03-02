@@ -76,7 +76,7 @@ const grade2Math: Topic[] = [
       { id: "sb2", type: "multiple-choice", question: "18 − 9 = ?", answer: "9", options: ["7","8","9","10"], hints: ["18-9: 18-8=10, 10-1=9"], difficulty: 1, free: true },
       { id: "sb3", type: "fill-in-blank", question: "20 − 6 = ___", answer: "14", hints: ["20-6=14"], difficulty: 1, free: true },
       { id: "sb4", type: "multiple-choice", question: "13 − 5 = ?", answer: "8", options: ["6","7","8","9"], hints: ["13-5=8"], difficulty: 1 },
-      { id: "sb5", type: "fill-in-blank", question: "17 − ___ = 9", answer: "8", hints: ["17 - ? = 9 → 17 - 9 = ?... nein, 9 + ? = 17"], difficulty: 2 },
+      { id: "sb5", type: "fill-in-blank", question: "17 − ___ = 9", answer: "8", hints: ["9 + ? = 17 → Was muss man zu 9 addieren, um 17 zu erhalten?"], difficulty: 2 },
       { id: "sb6", type: "multiple-choice", question: "16 − 8 = ?", answer: "8", options: ["6","7","8","9"], hints: ["16-8=8 (doppelte Hälfte)"], difficulty: 1 },
       { id: "sb7", type: "fill-in-blank", question: "19 − 4 = ___", answer: "15", hints: ["19-4=15"], difficulty: 1 },
       { id: "sb8", type: "multiple-choice", question: "___ − 6 = 7", answer: "13", options: ["11","12","13","14"], hints: ["7+6=13"], difficulty: 2 },
