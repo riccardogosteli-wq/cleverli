@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function CleverliMascot({ size = 150, mood = "happy" }: Props) {
-  const src = mood === "celebrate" ? "/cleverli-jump.jpg" : "/cleverli-wave.jpg";
+  const src = mood === "celebrate" ? "/cleverli-jump.png" : "/cleverli-wave.png";
 
   return (
     <div className="inline-block" style={{ width: size, height: size }}>
@@ -25,7 +25,7 @@ export default function CleverliMascot({ size = 150, mood = "happy" }: Props) {
         alt="Cleverli"
         width={size}
         height={size}
-        className="cleverli-bounce object-contain rounded-full"
+        className="cleverli-bounce object-contain drop-shadow-lg"
         priority
       />
     </div>
