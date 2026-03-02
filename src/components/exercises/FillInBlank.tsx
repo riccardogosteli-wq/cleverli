@@ -1,10 +1,14 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 
 interface Props {
   question: string;
   answer: string;
   onAnswer: (correct: boolean) => void;
+}
+
+function isNumericAnswer(answer: string): boolean {
+  return /^-?\d+([.,]\d+)?$/.test(answer.trim());
 }
 
 export default function FillInBlank({ question, answer, onAnswer }: Props) {
@@ -13,10 +17,10 @@ export default function FillInBlank({ question, answer, onAnswer }: Props) {
   const [shake, setShake] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const numeric = useMemo(() => isNumericAnswer(answer), [answer]);
 
   useEffect(() => {
     setIsMobile("ontouchstart" in window || navigator.maxTouchPoints > 0);
-    // Slight delay on mobile so keyboard doesn't immediately push layout
     const t = setTimeout(() => inputRef.current?.focus(), 100);
     return () => clearTimeout(t);
   }, []);
@@ -43,20 +47,22 @@ export default function FillInBlank({ question, answer, onAnswer }: Props) {
         <input
           ref={inputRef}
           type="text"
-          inputMode="text"
-          autoCapitalize="off"
-          autoCorrect="off"
+          // Numeric keyboard on mobile for number answers — huge UX win for kids
+          inputMode={numeric ? "numeric" : "text"}
+          // German text needs autocapitalize for nouns; numbers don't
+          autoCapitalize={numeric ? "off" : "sentences"}
+          autoCorrect={numeric ? "off" : "on"}
           autoComplete="off"
+          spellCheck={false}
           value={value}
           onChange={e => !submitted && setValue(e.target.value)}
           onKeyDown={e => e.key === "Enter" && submit()}
-          placeholder="Deine Antwort..."
+          placeholder={numeric ? "Zahl eingeben..." : "Antwort eingeben..."}
           className={`w-full text-center font-bold border-2 rounded-2xl px-4 py-4 outline-none transition-all
             ${correct ? "border-green-500 bg-green-50 text-green-700" :
               wrong ? "border-red-400 bg-red-50 text-red-700" :
               "border-gray-200 bg-white text-gray-900 focus:border-green-400"}`}
           style={{
-            /* 16px minimum prevents iOS auto-zoom on input focus */
             fontSize: "clamp(16px, 5vw, 24px)",
             fontWeight: 700,
             animation: shake ? "shake 0.4s ease" : undefined,

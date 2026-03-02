@@ -67,6 +67,13 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
         Gezählt: <span className="font-bold text-green-700">{popped.filter(Boolean).length}</span> / {count}
       </div>
 
+      {/* Correct answer feedback */}
+      {selected && selected !== answer && (
+        <div className="text-center text-sm text-gray-500 bg-orange-50 border border-orange-200 rounded-xl px-4 py-2">
+          Die richtige Antwort war: <span className="font-bold text-orange-700">{answer}</span>
+        </div>
+      )}
+
       {/* Answer buttons — 2 cols on mobile, 4 on wider */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {options.map(opt => {

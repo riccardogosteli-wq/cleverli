@@ -18,7 +18,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer }: 
   }, []);
 
   useEffect(() => {
-    if (isMobile) return; // no keyboard shortcuts on touch devices
+    if (isMobile) return;
     const handler = (e: KeyboardEvent) => {
       if (selected) return;
       const idx = parseInt(e.key) - 1;
@@ -26,7 +26,8 @@ export default function MultipleChoice({ question, options, answer, onAnswer }: 
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected, isMobile, options.length]);
 
   const pick = (opt: string) => {
     if (selected) return;

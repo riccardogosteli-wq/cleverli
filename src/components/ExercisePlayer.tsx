@@ -35,6 +35,17 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const current: Exercise = exercises[idx];
   const isLocked = !isPremium && idx >= FREE_LIMIT;
 
+  // Save partial progress when free limit is reached (so stars show on topic list)
+  useEffect(() => {
+    if (isLocked && score > 0) {
+      const s = calcStars(score, FREE_LIMIT); // stars based on free exercises only
+      localStorage.setItem(`cleverli_${grade}_${subject}_${topic.id}`, JSON.stringify({
+        completed: FREE_LIMIT, score, stars: s, partial: true, lastPlayed: new Date().toISOString()
+      }));
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLocked]);
+
   // Save progress when done
   useEffect(() => {
     if (done) {
