@@ -1,19 +1,21 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { useSound } from "@/hooks/useSound";
 
 interface Props { hints: string[]; }
 
 export default function HintSystem({ hints }: Props) {
   const [shown, setShown] = useState(false);
   const [idx, setIdx] = useState(0);
+  const { play } = useSound();
 
   if (!hints.length) return null;
 
   if (!shown) {
     return (
       <button
-        onClick={() => setShown(true)}
+        onClick={() => { play("hint"); setShown(true); }}
         className="w-full text-sm text-green-700 border-2 border-green-200 bg-green-50 rounded-xl px-4 py-3 hover:bg-green-100 active:scale-95 transition-all font-medium"
         style={{ minHeight: "44px" }}
       >
@@ -29,7 +31,7 @@ export default function HintSystem({ hints }: Props) {
         <p className="text-sm text-amber-900 font-medium leading-snug">{hints[idx]}</p>
         {idx < hints.length - 1 && (
           <button
-            onClick={() => setIdx(i => i + 1)}
+            onClick={() => { play("hint"); setIdx(i => i + 1); }}
             className="mt-2 text-xs text-amber-700 font-semibold underline underline-offset-2 hover:text-amber-900"
           >
             Noch ein Tipp →

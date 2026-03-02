@@ -72,3 +72,48 @@ export function useVoice(options: UseVoiceOptions = {}) {
 
   return { speak, stop, isSupported };
 }
+
+// ─── Cleverli personality phrases ───────────────────────────────────────────
+// Varied so kids don't hear the same thing every time
+
+type PhraseKey = "correct" | "wrong" | "streak" | "complete" | "hint";
+
+const PHRASES: Record<PhraseKey, string[]> = {
+  correct: [
+    "Super gemacht!",
+    "Toll! Weiter so!",
+    "Richtig! Du bist klasse!",
+    "Ja! Das stimmt!",
+    "Wunderbar! Du lernst so schnell!",
+    "Perfekt! Ich bin stolz auf dich!",
+  ],
+  wrong: [
+    "Fast! Du schaffst das!",
+    "Nicht ganz, aber probier nochmal.",
+    "Mmh, schau dir den Tipp an!",
+    "Das war knapp! Weiter versuchen.",
+    "Kopf hoch! Beim nächsten klappt's.",
+  ],
+  streak: [
+    "Wow, drei richtig hintereinander!",
+    "Du bist auf Feuer! Fantastisch!",
+    "Unglaublich! Du läufst heute zur Hochform auf!",
+    "Drei in Folge! Du bist ein Mathegenie!",
+  ],
+  complete: [
+    "Fantastisch! Du hast alle Aufgaben gelöst!",
+    "Bravo! Das Thema hast du im Griff!",
+    "Wow, du hast das Thema gemeistert! Ich bin beeindruckt!",
+    "Alle Aufgaben geschafft! Du bist ein Superstar!",
+  ],
+  hint: [
+    "Ich gebe dir einen kleinen Tipp!",
+    "Hier ist ein Hinweis für dich.",
+    "Schau mal hier — das hilft bestimmt!",
+  ],
+};
+
+export function getPhrase(key: PhraseKey): string {
+  const list = PHRASES[key];
+  return list[Math.floor(Math.random() * list.length)];
+}

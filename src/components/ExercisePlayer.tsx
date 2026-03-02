@@ -10,7 +10,8 @@ import RewardAnimation from "./RewardAnimation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useVoice } from "@/hooks/useVoice";
+import { useVoice, getPhrase } from "@/hooks/useVoice";
+import { useSound } from "@/hooks/useSound";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; }
 
@@ -24,6 +25,7 @@ function calcStars(score: number, total: number) {
 export default function ExercisePlayer({ topic, grade, subject, isPremium = false }: Props) {
   const router = useRouter();
   const { speak, stop, isSupported } = useVoice();
+  const { play } = useSound();
   const FREE_LIMIT = 3;
   const exercises = topic.exercises;
   const [idx, setIdx] = useState(0);
@@ -38,14 +40,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const current: Exercise = exercises[idx];
   const isLocked = !isPremium && idx >= FREE_LIMIT;
 
-  // Auto-read question when a new exercise loads
-  useEffect(() => {
-    if (isLocked || done || !voiceOn || !isSupported) return;
-    // Small delay so card animation plays first
-    const t = setTimeout(() => speak(current.question), 400);
-    return () => clearTimeout(t);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [idx, cardKey]);
+  // (voice is on-demand only — no auto-read)
 
   // Save partial progress when free limit is reached (so stars show on topic list)
   useEffect(() => {
@@ -94,14 +89,32 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   }, [answered]);
 
   const handleAnswer = (correct: boolean) => {
-    stop(); // stop reading when kid answers
-    if (correct) { setScore(s => s + 1); setStreak(s => s + 1); }
+    stop(); // stop any reading
+    const newStreak = correct ? streak + 1 : 0;
+    if (correct) { setScore(s => s + 1); setStreak(newStreak); }
     else setStreak(0);
     setAnswered(correct);
+
+    // Sound first, then voice after a short pause
+    if (newStreak >= 3 && correct) {
+      play("streak");
+      setTimeout(() => { if (voiceOn) speak(getPhrase("streak")); }, 400);
+    } else if (correct) {
+      play("correct");
+      setTimeout(() => { if (voiceOn) speak(getPhrase("correct")); }, 300);
+    } else {
+      play("wrong");
+      setTimeout(() => { if (voiceOn) speak(getPhrase("wrong")); }, 300);
+    }
   };
 
   const handleContinue = () => {
-    if (idx + 1 >= exercises.length) { setDone(true); return; }
+    if (idx + 1 >= exercises.length) {
+      play("complete");
+      setTimeout(() => { if (voiceOn) speak(getPhrase("complete")); }, 600);
+      setDone(true);
+      return;
+    }
     setIdx(i => i + 1);
     setAnswered(null);
     setCardKey(k => k + 1);
