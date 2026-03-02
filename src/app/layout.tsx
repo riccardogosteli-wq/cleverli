@@ -2,8 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/lib/LangContext";
+import { ProfileProvider } from "@/lib/ProfileContext";
 import Navigation from "@/components/Navigation";
 import StructuredData from "@/components/StructuredData";
+import GameOverlays from "@/components/GameOverlays";
 
 const geist = Geist({ subsets: ["latin"] });
 
@@ -84,9 +86,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="de">
       <body className={`${geist.className} bg-green-50 min-h-screen`}>
         <LangProvider>
-          <StructuredData />
-          <Navigation />
-          {children}
+          <ProfileProvider>
+            <StructuredData />
+            <Navigation />
+            <GameOverlays />
+            {children}
+          </ProfileProvider>
         </LangProvider>
       </body>
     </html>

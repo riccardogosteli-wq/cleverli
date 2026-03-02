@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
 import { useLang } from "@/lib/LangContext";
+import { useProfileContext } from "@/lib/ProfileContext";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; }
 
@@ -27,7 +28,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const router = useRouter();
   const { speak, stop, isSupported } = useVoice();
   const { play } = useSound();
-  const { tr } = useLang();
+  const { tr, lang } = useLang();
+  const { recordAnswer } = useProfileContext();
   const FREE_LIMIT = 3;
   const exercises = topic.exercises;
   const [idx, setIdx] = useState(0);
@@ -37,6 +39,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [done, setDone] = useState(false);
   const [cardKey, setCardKey] = useState(0);
   const [voiceOn, setVoiceOn] = useState(false); // off by default, user opts in
+  const [hintsUsed, setHintsUsed] = useState(0);
+  const topicStartRef = useRef<number>(Date.now());
   const rewardRef = useRef<HTMLDivElement>(null);
 
   const current: Exercise = exercises[idx];
@@ -93,9 +97,25 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const handleAnswer = (correct: boolean) => {
     stop(); // stop any reading
     const newStreak = correct ? streak + 1 : 0;
+    const newScore = correct ? score + 1 : score;
     if (correct) { setScore(s => s + 1); setStreak(newStreak); }
     else setStreak(0);
     setAnswered(correct);
+
+    // Record XP — isTopicComplete will be true when this was the last exercise
+    const isLast = idx + 1 >= exercises.length;
+    recordAnswer({
+      correct,
+      streak: newStreak,
+      hintsUsed,
+      isTopicComplete: correct && isLast,
+      score: newScore,
+      total: exercises.length,
+      grade,
+      subject,
+      topicDurationMs: correct && isLast ? Date.now() - topicStartRef.current : undefined,
+      lang,
+    });
 
     // Sound first, then voice after a short pause
     if (newStreak >= 3 && correct) {
@@ -241,7 +261,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           {current.type === "counting" && (
             <CountingGame question={current.question} answer={current.answer} emoji={current.emoji} options={current.options ?? []} onAnswer={handleAnswer} />
           )}
-          <HintSystem hints={current.hints} />
+          <HintSystem hints={current.hints} onHintUsed={() => setHintsUsed(h => h + 1)} />
         </div>
       )}
 
