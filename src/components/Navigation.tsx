@@ -13,20 +13,21 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm"
+    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm overflow-visible"
       style={{ paddingLeft: "env(safe-area-inset-left)", paddingRight: "env(safe-area-inset-right)" }}>
-      <div className="flex items-center justify-between px-4 py-0 max-w-6xl mx-auto h-14">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 min-h-[44px]" onClick={() => setOpen(false)}>
+      <div className="flex items-center justify-between px-4 py-0 max-w-6xl mx-auto h-14 overflow-visible">
+        {/* Logo — floats below nav bar for a premium feel */}
+        <Link href="/" className="flex items-center gap-3 min-h-[44px] relative" onClick={() => setOpen(false)} style={{ marginBottom: "-28px", zIndex: 60 }}>
           <Image
             src="/cleverli-logo.jpg"
             alt="Cleverli – Lernplattform für Schweizer Kinder"
-            width={110}
-            height={40}
-            className="h-10 w-auto object-contain"
+            width={180}
+            height={60}
+            className="w-auto object-contain drop-shadow-md"
+            style={{ height: "80px" }}
             priority
           />
-          <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline">beta</span>
+          <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline self-start mt-2">beta</span>
         </Link>
 
         {/* Language switcher — fixed container so switching never shifts layout */}
