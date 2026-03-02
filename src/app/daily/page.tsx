@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { getDailyChallenge, getDailyState, markDailyComplete, isDailyDoneToday, DAILY_XP_BONUS } from "@/lib/daily";
+import { getTopicTitle } from "@/data/topicTitles";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import CountingGame from "@/components/exercises/CountingGame";
@@ -73,9 +74,7 @@ export default function DailyPage() {
     }
   };
 
-  const subjectLabel = subject === "math" ?
-    (lang === "fr" ? "Mathématiques" : lang === "it" ? "Matematica" : lang === "en" ? "Mathematics" : "Mathematik") :
-    (lang === "fr" ? "Allemand" : lang === "it" ? "Tedesco" : lang === "en" ? "German" : "Deutsch");
+  const subjectLabel = tr(subject === "math" ? "math" : "german");
 
   // ── Already completed today ──────────────────────────────────────
   if (alreadyDone) {
@@ -148,7 +147,7 @@ export default function DailyPage() {
             {tr("dailyTitle")}
           </div>
           <div className="text-xs text-amber-600">
-            {subjectLabel} · {topic.emoji} {topic.title} · +{DAILY_XP_BONUS} Bonus-XP
+            {subjectLabel} · {topic.emoji} {getTopicTitle(topic.id, lang, topic.title)} · +{DAILY_XP_BONUS} Bonus-XP
           </div>
         </div>
         <Image src="/cleverli-run.png" alt="" width={52} height={52} className="ml-auto drop-shadow-sm" />

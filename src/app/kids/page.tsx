@@ -69,7 +69,7 @@ function GradeSection({ grade, idx }: { grade: number; idx: number }) {
       <h2 className={`font-black text-base ${c.text}`}>{label}</h2>
       <div className="grid grid-cols-2 gap-2">
         {SUBJECTS.map((s, si) => (
-          <SubjectIsland key={s.id} grade={grade} subject={s.id} emoji={s.emoji} label={s.name} colorIdx={(idx + si) % GRADE_COLORS.length} />
+          <SubjectIsland key={s.id} grade={grade} subject={s.id} emoji={s.emoji} label={tr(s.id)} colorIdx={(idx + si) % GRADE_COLORS.length} />
         ))}
       </div>
     </div>

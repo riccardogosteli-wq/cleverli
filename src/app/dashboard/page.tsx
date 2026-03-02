@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
 import { getTopics, SUBJECTS } from "@/data/index";
+import { getTopicTitle } from "@/data/topicTitles";
 import { isDailyDoneToday } from "@/lib/daily";
 
 const GRADE_COLORS = [
@@ -100,7 +101,7 @@ export default function Dashboard() {
               style={{ minHeight: "110px", transition: "all 0.15s ease" }}
               className={`border-2 rounded-2xl font-bold text-lg active:scale-95 ${s.color}`}>
               <div className="text-4xl mb-2">{s.emoji}</div>
-              {s.name}
+              {tr(s.id)}
             </button>
           ))}
         </div>
@@ -141,7 +142,7 @@ export default function Dashboard() {
                 {topic.emoji}
               </div>
               <div className="flex-1 min-w-0">
-                <div className="font-semibold text-gray-800 text-sm sm:text-base">{topic.title}</div>
+                <div className="font-semibold text-gray-800 text-sm sm:text-base">{getTopicTitle(topic.id, lang, topic.title)}</div>
                 <div className="text-xs text-gray-400">{topic.exercises.length} {tr("exerciseCount")}</div>
               </div>
               <div className="flex items-center gap-2 shrink-0">

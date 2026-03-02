@@ -18,9 +18,10 @@ export function getTopics(grade: number, subject: string): Topic[] {
 }
 
 
+/** SUBJECTS — use tr(s.id) for display name ("math" / "german" keys exist in i18n) */
 export const SUBJECTS = [
-  { id: "math", name: "Mathematik", emoji: "🔢", color: "bg-blue-50 border-blue-300 text-blue-700" },
-  { id: "german", name: "Deutsch", emoji: "📖", color: "bg-yellow-50 border-yellow-300 text-yellow-700" },
+  { id: "math", emoji: "🔢", color: "bg-blue-50 border-blue-300 text-blue-700" },
+  { id: "german", emoji: "📖", color: "bg-yellow-50 border-yellow-300 text-yellow-700" },
 ];
 
 export const GRADES = [1, 2, 3];

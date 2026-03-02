@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Topic } from "@/types/exercise";
 import { useEffect, useState } from "react";
 import { useLang } from "@/lib/LangContext";
+import { getTopicTitle } from "@/data/topicTitles";
 
 interface Props { grade: number; subject: string; topics: Topic[]; }
 
@@ -12,7 +13,7 @@ const SUBJECT_META: Record<string, { emoji: string; nameKey: string; color: stri
 };
 
 export default function SubjectPageClient({ grade, subject, topics }: Props) {
-  const { tr } = useLang();
+  const { tr, lang } = useLang();
   const [progress, setProgress] = useState<Record<string, { stars: number; completed: number }>>({});
 
   useEffect(() => {
@@ -42,7 +43,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
       <div className="flex items-center gap-3">
         <span className="text-4xl">{meta.emoji}</span>
         <div>
-          <h1 className="text-xl sm:text-2xl font-bold text-gray-800">{subjectName} — {grade}. Klasse</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-800">{subjectName} — {grade}. {tr("gradeLabel")}</h1>
           <p className="text-sm text-gray-400">
             {["NMG","NHS","NUS"].includes(subjectName) && <span className="text-gray-500">{tr("scienceFull")} · </span>}
             {topics.length} Themen · Lehrplan 21
@@ -62,7 +63,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
                 {topic.emoji}
               </div>
               <div className="flex-1 min-w-0">
-                <div className="font-semibold text-gray-800 group-hover:text-green-700">{topic.title}</div>
+                <div className="font-semibold text-gray-800 group-hover:text-green-700">{getTopicTitle(topic.id, lang, topic.title)}</div>
                 <div className="text-xs text-gray-400">{topic.exercises.length} Aufgaben</div>
               </div>
               <div className="flex items-center gap-2 shrink-0">

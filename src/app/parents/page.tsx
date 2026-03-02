@@ -75,7 +75,7 @@ function buildHeatmap(lastPlayedDate: string, dailyStreak: number): { date: stri
 
 export default function ParentsDashboard() {
   const { profile, loaded } = useProfileContext();
-  const { lang } = useLang();
+  const { lang, tr } = useLang();
 
   const stats = useMemo(() => loaded ? loadAllStats() : [], [loaded]);
 
@@ -264,7 +264,7 @@ export default function ParentsDashboard() {
                       <span className="text-lg shrink-0">{sub.emoji}</span>
                       <div className="flex-1">
                         <div className="flex justify-between text-[10px] text-gray-500 mb-0.5">
-                          <span>{sub.name}</span>
+                          <span>{tr(sub.id)}</span>
                           <span>{doneCnt}/{topics.length}</span>
                         </div>
                         <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
