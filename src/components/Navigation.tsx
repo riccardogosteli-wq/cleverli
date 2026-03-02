@@ -32,45 +32,6 @@ export default function Navigation() {
           <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline self-start mt-2">beta</span>
         </Link>
 
-        {/* Language switcher — compact dropdown */}
-        <div className="relative" style={{ flexShrink: 0 }}>
-          <button
-            onClick={() => setLangOpen(v => !v)}
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-gray-200 bg-white hover:border-green-300 hover:bg-green-50 transition-colors text-sm font-semibold text-gray-700 min-w-[44px]"
-            aria-label="Sprache wählen"
-          >
-            <span style={{ fontSize: "18px" }}>{currentLang?.flag}</span>
-            <span className="text-xs font-bold tracking-wide text-gray-500 uppercase">{lang}</span>
-            <span className={`text-gray-400 text-xs transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}>▾</span>
-          </button>
-
-          {/* Backdrop */}
-          {langOpen && (
-            <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
-          )}
-
-          {/* Dropdown */}
-          {langOpen && (
-            <div className="absolute right-0 mt-1.5 bg-white border border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden min-w-[140px]">
-              {LANGUAGES.map(l => (
-                <button
-                  key={l.code}
-                  onClick={() => { setLang(l.code as Lang); setLangOpen(false); }}
-                  className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
-                    lang === l.code
-                      ? "bg-green-50 text-green-700 font-bold"
-                      : "text-gray-700 hover:bg-gray-50"
-                  }`}
-                >
-                  <span style={{ fontSize: "20px" }}>{l.flag}</span>
-                  <span className="flex-1">{l.name}</span>
-                  {lang === l.code && <span className="text-green-500 text-xs">✓</span>}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
         {/* Desktop nav — fixed widths prevent layout shift on language change */}
         <div className="hidden sm:flex items-center gap-3" style={{ flexShrink: 0 }}>
           <XpBar />
@@ -91,6 +52,32 @@ export default function Navigation() {
               </Link>
             </>
           )}
+
+          {/* Language switcher — top right of desktop nav */}
+          <div className="relative ml-1" style={{ flexShrink: 0 }}>
+            <button
+              onClick={() => setLangOpen(v => !v)}
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-gray-200 bg-white hover:border-green-300 hover:bg-green-50 transition-colors min-w-[44px]"
+              aria-label="Sprache wählen"
+            >
+              <span style={{ fontSize: "18px" }}>{currentLang?.flag}</span>
+              <span className="text-xs font-bold tracking-wide text-gray-500 uppercase">{lang}</span>
+              <span className={`text-gray-400 text-xs transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}>▾</span>
+            </button>
+            {langOpen && <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />}
+            {langOpen && (
+              <div className="absolute right-0 mt-1.5 bg-white border border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden min-w-[140px]">
+                {LANGUAGES.map(l => (
+                  <button key={l.code} onClick={() => { setLang(l.code as Lang); setLangOpen(false); }}
+                    className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${lang === l.code ? "bg-green-50 text-green-700 font-bold" : "text-gray-700 hover:bg-gray-50"}`}>
+                    <span style={{ fontSize: "20px" }}>{l.flag}</span>
+                    <span className="flex-1">{l.name}</span>
+                    {lang === l.code && <span className="text-green-500 text-xs">✓</span>}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Mobile hamburger */}
@@ -137,6 +124,27 @@ export default function Navigation() {
             onClick={() => setOpen(false)}>
             🎁 {lang === "de" ? "Belohnungen (Eltern)" : lang === "fr" ? "Récompenses (Parents)" : lang === "it" ? "Premi (Genitori)" : "Rewards (Parents)"}
           </Link>
+
+          {/* Language switcher in mobile menu */}
+          <div className="border-t border-gray-100 pt-2 mt-1">
+            <div className="text-xs text-gray-400 uppercase tracking-wider px-4 mb-2">
+              {lang === "de" ? "Sprache" : lang === "fr" ? "Langue" : lang === "it" ? "Lingua" : "Language"}
+            </div>
+            <div className="flex gap-2 px-2">
+              {LANGUAGES.map(l => (
+                <button key={l.code}
+                  onClick={() => { setLang(l.code as Lang); setOpen(false); }}
+                  className={`flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 text-sm font-semibold transition-colors flex-1 justify-center ${
+                    lang === l.code
+                      ? "border-green-400 bg-green-50 text-green-700"
+                      : "border-gray-200 text-gray-500 hover:border-gray-300"
+                  }`}>
+                  <span style={{ fontSize: "18px" }}>{l.flag}</span>
+                  <span className="text-xs uppercase">{l.code}</span>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </nav>
