@@ -120,7 +120,11 @@ export default function Home() {
                 <Image src="/cleverli-jump-star.png" alt="" width={56} height={56} />
                 <div className="text-3xl font-bold">CHF 9.90<span className="text-lg font-normal">{tr("perMonth")}</span></div>
               </div>
-              <div className="text-green-200 text-sm mb-6">{tr("yearlyNote")}</div>
+              <div className="text-green-200 text-sm mb-3">{tr("yearlyNote")}</div>
+              {/* Savings banner */}
+              <div className="inline-flex items-center gap-1.5 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1.5 rounded-full mb-5 self-start shadow-sm">
+                {tr("yearlyBadge")}
+              </div>
               <ul className="text-sm space-y-2 flex-1">
                 <li>✅ {tr("premiumF1")}</li>
                 <li>✅ {tr("premiumF2")}</li>
