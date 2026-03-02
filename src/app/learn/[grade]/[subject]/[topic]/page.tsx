@@ -1,8 +1,30 @@
+import { Metadata } from "next";
 import { getTopics } from "@/data/index";
 import ExercisePlayer from "@/components/ExercisePlayer";
 import Link from "next/link";
 
 interface Props { params: Promise<{ grade: string; subject: string; topic: string }> }
+
+const SUBJECT_NAMES: Record<string, string> = {
+  math: "Mathematik", german: "Deutsch", science: "Sachkunde",
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { grade, subject, topic: topicId } = await params;
+  const topics = getTopics(parseInt(grade), subject);
+  const topic = topics.find(t => t.id === topicId);
+  if (!topic) return { title: "Thema nicht gefunden" };
+
+  const subjectName = SUBJECT_NAMES[subject] ?? subject;
+  const title = `${topic.title} — ${subjectName} ${grade}. Klasse`;
+  const description = `${topic.exercises.length} interaktive Übungen zu „${topic.title}" für die ${grade}. Klasse. Lehrplan 21 · Cleverli.`;
+  return {
+    title,
+    description,
+    openGraph: { title: `${title} | Cleverli`, description },
+    alternates: { canonical: `https://www.cleverli.ch/learn/${grade}/${subject}/${topicId}` },
+  };
+}
 
 export default async function TopicPage({ params }: Props) {
   const { grade, subject, topic: topicId } = await params;

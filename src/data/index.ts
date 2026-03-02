@@ -31,3 +31,7 @@ export const SUBJECTS = [
 ];
 
 export const GRADES = [1, 2, 3];
+
+export function getTopicsForSubject(grade: number, subject: string): Topic[] {
+  return getTopics(grade, subject);
+}
