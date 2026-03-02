@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Props {
   question: string;
@@ -8,44 +8,79 @@ interface Props {
   onAnswer: (correct: boolean) => void;
 }
 
-const COLORS = [
-  "bg-blue-100 border-blue-300 hover:bg-blue-200 text-blue-800",
-  "bg-purple-100 border-purple-300 hover:bg-purple-200 text-purple-800",
-  "bg-orange-100 border-orange-300 hover:bg-orange-200 text-orange-800",
-  "bg-pink-100 border-pink-300 hover:bg-pink-200 text-pink-800",
-];
-const LABELS = ["A", "B", "C", "D"];
-
 export default function MultipleChoice({ question, options, answer, onAnswer }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
+  const [shake, setShake] = useState(false);
 
-  const handleClick = (opt: string) => {
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (selected) return;
+      const idx = parseInt(e.key) - 1;
+      if (idx >= 0 && idx < options.length) pick(options[idx]);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  });
+
+  const pick = (opt: string) => {
     if (selected) return;
     setSelected(opt);
-    setTimeout(() => onAnswer(opt === answer), 800);
+    const correct = opt === answer;
+    if (!correct) {
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
+    }
+    setTimeout(() => onAnswer(correct), 900);
   };
 
   return (
     <div className="space-y-4">
-      <p className="text-xl font-semibold text-gray-800 text-center">{question}</p>
-      <div className="grid grid-cols-2 gap-3">
+      <p className="text-xl font-semibold text-gray-800 text-center leading-snug">{question}</p>
+      <p className="text-xs text-center text-gray-400">Tastenkürzel: 1 · 2 · 3 · 4</p>
+      <div className="grid grid-cols-1 gap-3">
         {options.map((opt, i) => {
-          let cls = COLORS[i] + " border-2 rounded-2xl p-4 font-semibold text-lg cursor-pointer transition-all flex items-center gap-2";
-          if (selected === opt) {
-            cls = opt === answer
-              ? "bg-green-100 border-green-500 text-green-800 border-2 rounded-2xl p-4 font-semibold text-lg scale-105"
-              : "bg-red-100 border-red-400 text-red-800 border-2 rounded-2xl p-4 font-semibold text-lg";
-          } else if (selected && opt === answer) {
-            cls = "bg-green-100 border-green-500 text-green-800 border-2 rounded-2xl p-4 font-semibold text-lg";
+          const isSelected = selected === opt;
+          const isCorrect = opt === answer;
+          let style: React.CSSProperties = {
+            transition: "all 0.2s cubic-bezier(.34,1.56,.64,1)",
+          };
+
+          let cls = "relative border-2 rounded-2xl px-5 py-4 font-semibold text-base cursor-pointer text-left flex items-center gap-3 w-full ";
+
+          if (isSelected && isCorrect) {
+            cls += "bg-green-100 border-green-500 text-green-800 shadow-md";
+            style.transform = "scale(1.03)";
+          } else if (isSelected && !isCorrect) {
+            cls += "bg-red-100 border-red-400 text-red-700";
+            style.animation = shake ? "shake 0.4s ease" : undefined;
+          } else if (selected && isCorrect) {
+            cls += "bg-green-100 border-green-400 text-green-800";
+            style.transform = "scale(1.02)";
+          } else {
+            cls += "bg-white border-gray-200 hover:border-green-400 hover:bg-green-50";
+            style.transform = "scale(1)";
           }
+
+          const badge = isSelected && isCorrect ? "✓" : isSelected && !isCorrect ? "✗" : selected && isCorrect ? "✓" : `${i + 1}`;
+          const badgeColor = isSelected && isCorrect ? "bg-green-500 text-white" : isSelected && !isCorrect ? "bg-red-400 text-white" : selected && isCorrect ? "bg-green-500 text-white" : "bg-gray-100 text-gray-500";
+
           return (
-            <button key={opt} onClick={() => handleClick(opt)} className={cls} disabled={!!selected}>
-              <span className="w-7 h-7 rounded-full bg-white/60 flex items-center justify-center text-sm font-bold shrink-0">{LABELS[i]}</span>
+            <button key={opt} onClick={() => pick(opt)} className={cls} style={style}>
+              <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${badgeColor}`}>{badge}</span>
               {opt}
             </button>
           );
         })}
       </div>
+      <style>{`
+        @keyframes shake {
+          0%,100% { transform: translateX(0); }
+          20% { transform: translateX(-8px); }
+          40% { transform: translateX(8px); }
+          60% { transform: translateX(-5px); }
+          80% { transform: translateX(5px); }
+        }
+      `}</style>
     </div>
   );
 }
