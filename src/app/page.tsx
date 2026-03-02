@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 export default function Home() {
-  const { tr } = useLang();
+  const { tr, lang } = useLang();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
@@ -131,6 +131,75 @@ export default function Home() {
               </ul>
               <Link href="/signup" className="mt-6 block text-center bg-white text-green-700 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors">
                 {tr("premiumCta")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rewards Feature */}
+      <section className="bg-amber-50 py-12 sm:py-20 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="text-5xl mb-4">🎁</div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">{tr("rewardTitle")}</h2>
+            <p className="text-gray-500 text-base max-w-xl mx-auto">{tr("rewardSubtitle")}</p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-10 items-center">
+            {/* Left: reward examples cards */}
+            <div className="flex flex-col gap-3">
+              <p className="text-xs font-bold uppercase tracking-widest text-amber-600 mb-1">{tr("rewardExamplesTitle")}</p>
+              {[
+                { emoji: "🦁", de: "Wir gehen in den Zoo", fr: "Sortie au zoo", it: "Gita allo zoo", en: "Trip to the zoo" },
+                { emoji: "🍦", de: "Ein Glace aussuchen", fr: "Choisir une glace", it: "Scegliere un gelato", en: "Pick an ice cream" },
+                { emoji: "🎬", de: "Kinoabend aussuchen", fr: "Choisir un film", it: "Serata cinema", en: "Pick a movie night" },
+                { emoji: "🧁", de: "Zusammen einen Kuchen backen", fr: "Cuisiner ensemble", it: "Cucinare insieme", en: "Bake a cake together" },
+                { emoji: "🎨", de: "Neuen Malblock aussuchen", fr: "Choisir un carnet à dessin", it: "Nuovo blocco da disegno", en: "Pick a new sketchbook" },
+                { emoji: "🛒", de: "Einen kleinen Wunsch erfüllen", fr: "Un petit souhait", it: "Un piccolo desiderio", en: "One small wish granted" },
+              ].map((r) => (
+                <div key={r.emoji} className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 shadow-sm border border-amber-100">
+                  <span className="text-2xl">{r.emoji}</span>
+                  <span className="text-sm font-medium text-gray-700">
+                    {lang === "fr" ? r.fr : lang === "it" ? r.it : lang === "en" ? r.en : r.de}
+                  </span>
+                  <span className="ml-auto text-xs text-amber-400 font-semibold">🔒</span>
+                </div>
+              ))}
+              <div className="flex items-center gap-3 bg-amber-100 border-2 border-dashed border-amber-300 rounded-xl px-4 py-3 text-amber-700 text-sm font-medium">
+                <span className="text-2xl">✏️</span>
+                {tr("rewardCustom")}
+              </div>
+            </div>
+
+            {/* Right: how it works steps */}
+            <div className="flex flex-col gap-6">
+              <p className="text-xs font-bold uppercase tracking-widest text-amber-600">{tr("rewardHow")}</p>
+              {[
+                { n: "1", emoji: "🎯", title: "rewardStep1" as const, desc: "rewardStep1desc" as const },
+                { n: "2", emoji: "📊", title: "rewardStep2" as const, desc: "rewardStep2desc" as const },
+                { n: "3", emoji: "🎉", title: "rewardStep3" as const, desc: "rewardStep3desc" as const },
+              ].map((s) => (
+                <div key={s.n} className="flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-full bg-amber-400 text-white font-bold text-lg flex items-center justify-center shrink-0 shadow">
+                    {s.n}
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-800 mb-0.5">{s.emoji} {tr(s.title)}</div>
+                    <div className="text-sm text-gray-500">{tr(s.desc)}</div>
+                  </div>
+                </div>
+              ))}
+              <div className="mt-2 bg-white rounded-2xl p-4 border border-amber-200 shadow-sm flex items-center gap-4">
+                <Image src="/cleverli-celebrate.png" alt="Cleverli feiert einen Erfolg" width={64} height={64} className="shrink-0" />
+                <div>
+                  <div className="text-sm font-bold text-gray-800">🎉 {lang === "fr" ? "Lena a atteint son objectif!" : lang === "it" ? "Lena ha raggiunto il suo obiettivo!" : lang === "en" ? "Lena reached her goal!" : "Lena hat ihr Ziel erreicht!"}</div>
+                  <div className="text-xs text-gray-400 mt-0.5">{lang === "fr" ? "Zeit für den Zoo 🦁" : lang === "it" ? "È ora dello zoo 🦁" : lang === "en" ? "Time for the zoo 🦁" : "Zeit für den Zoo 🦁"}</div>
+                </div>
+              </div>
+              <Link href="/signup" className="inline-block text-center bg-amber-400 hover:bg-amber-500 text-white font-bold px-6 py-3 rounded-full shadow transition-colors">
+                {tr("rewardCta")}
               </Link>
             </div>
           </div>
