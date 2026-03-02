@@ -1,7 +1,8 @@
 "use client";
 /**
  * DragDrop — pointer-event drag/drop (works on iOS Safari, Android, desktop).
- * Uses onPointerDown/Move/Up instead of the broken HTML5 drag API.
+ * Supports multiple items per zone.
+ * answers format: { itemId: zoneId } (as stored in data files)
  */
 import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
@@ -15,7 +16,7 @@ interface Props {
   question: string;
   items: DragItem[];
   zones: DropZone[];
-  answers: Record<string, string>; // zoneId → itemId
+  answers: Record<string, string>; // itemId → zoneId
   onAnswer: (correct: boolean) => void;
 }
 
@@ -31,9 +32,10 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
   const { tr } = useLang();
   const { play } = useSound();
 
-  const [placed, setPlaced] = useState<Record<string, string>>({});   // zoneId → itemId
+  // Multiple items per zone: zoneId → itemId[]
+  const [placed, setPlaced] = useState<Record<string, string[]>>({});
   const [checked, setChecked] = useState(false);
-  const [result, setResult] = useState<Record<string, boolean>>({});
+  const [result, setResult] = useState<Record<string, boolean>>({});  // zoneId → correct?
   const [ghost, setGhost] = useState<Ghost | null>(null);
   const [activeItemId, setActiveItemId] = useState<string | null>(null);
 
@@ -41,18 +43,16 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
   const containerRef = useRef<HTMLDivElement>(null);
   const ghostRef = useRef<Ghost | null>(null);
 
-  const placed_ids = new Set(Object.values(placed));
+  // All item IDs currently placed anywhere
+  const placedIds = new Set(Object.values(placed).flat());
 
-  // Sync ghost ref so pointer events can read latest
   useEffect(() => { ghostRef.current = ghost; }, [ghost]);
 
   const getZoneAtPoint = useCallback((x: number, y: number): string | null => {
     for (const [zoneId, el] of Object.entries(zoneRefs.current)) {
       if (!el) continue;
       const r = el.getBoundingClientRect();
-      if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) {
-        return zoneId;
-      }
+      if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return zoneId;
     }
     return null;
   }, []);
@@ -62,8 +62,7 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
     e.preventDefault();
     e.currentTarget.setPointerCapture(e.pointerId);
     const r = e.currentTarget.getBoundingClientRect();
-    const g: Ghost = { itemId, x: e.clientX - r.width / 2, y: e.clientY - r.height / 2, w: r.width, h: r.height };
-    setGhost(g);
+    setGhost({ itemId, x: e.clientX - r.width / 2, y: e.clientY - r.height / 2, w: r.width, h: r.height });
     setActiveItemId(itemId);
   }, [checked]);
 
@@ -77,18 +76,16 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
     const g = ghostRef.current;
     if (!g) return;
     e.preventDefault();
-
     const zoneId = getZoneAtPoint(e.clientX, e.clientY);
-
     if (zoneId) {
       setPlaced(prev => {
-        const next = { ...prev };
-        // Remove item from any previous zone
-        for (const z of Object.keys(next)) {
-          if (next[z] === g.itemId) delete next[z];
+        const next: Record<string, string[]> = {};
+        // Copy all zones, removing itemId from any previous zone
+        for (const z of Object.keys(prev)) {
+          next[z] = (prev[z] ?? []).filter(id => id !== g.itemId);
         }
-        // Place in new zone (evict existing if any)
-        next[zoneId] = g.itemId;
+        // Add to new zone
+        next[zoneId] = [...(next[zoneId] ?? []), g.itemId];
         return next;
       });
     }
@@ -96,37 +93,48 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
     setActiveItemId(null);
   }, [getZoneAtPoint]);
 
-  const removeFromZone = (zoneId: string) => {
+  // Remove a specific item from a zone (tap to unplace)
+  const removeItem = (zoneId: string, itemId: string) => {
     if (checked) return;
-    setPlaced(prev => { const n = { ...prev }; delete n[zoneId]; return n; });
+    setPlaced(prev => ({ ...prev, [zoneId]: (prev[zoneId] ?? []).filter(id => id !== itemId) }));
   };
 
   const handleCheck = () => {
     if (checked) return;
     const res: Record<string, boolean> = {};
     let allCorrect = true;
+
     for (const zone of zones) {
-      const correct = placed[zone.id] === answers[zone.id];
-      res[zone.id] = correct;
-      if (!correct) allCorrect = false;
+      const inZone = placed[zone.id] ?? [];
+      // Items that SHOULD be in this zone
+      const expected = items.filter(item => answers[item.id] === zone.id).map(i => i.id);
+      // Zone correct if: same set of items (order-independent)
+      const zoneCorrect =
+        inZone.length === expected.length &&
+        expected.every(id => inZone.includes(id));
+      res[zone.id] = zoneCorrect;
+      if (!zoneCorrect) allCorrect = false;
     }
+
     setResult(res);
     setChecked(true);
     play(allCorrect ? "correct" : "wrong");
     setTimeout(() => onAnswer(allCorrect), 900);
   };
 
-  const allPlaced = zones.every(z => placed[z.id]);
-  const remaining = zones.length - Object.keys(placed).length;
+  const allItemsPlaced = items.every(item => placedIds.has(item.id));
+  const remaining = items.length - placedIds.size;
 
-  const renderItemContent = (item: DragItem, size = 40) => (
+  const renderItemContent = (item: DragItem, size = 36) => (
     <>
       {item.image
         ? <Image src={item.image} alt={item.label} width={size} height={size} className="drop-shadow-sm pointer-events-none" />
         : item.emoji
-        ? <span className="text-3xl pointer-events-none select-none">{item.emoji}</span>
+        ? <span style={{ fontSize: size * 0.75 }} className="pointer-events-none select-none">{item.emoji}</span>
         : null}
-      <span className="text-xs font-semibold text-gray-700 pointer-events-none select-none text-center leading-tight">{item.label}</span>
+      <span className="text-xs font-semibold text-gray-700 pointer-events-none select-none text-center leading-tight">
+        {item.label}
+      </span>
     </>
   );
 
@@ -135,69 +143,99 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
       <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center leading-snug">{question}</p>
 
       {/* Drop zones */}
-      <div className="grid grid-cols-2 gap-2">
+      <div className={`grid gap-2 ${zones.length === 2 ? "grid-cols-2" : zones.length <= 3 ? "grid-cols-3" : "grid-cols-2 sm:grid-cols-3"}`}>
         {zones.map(zone => {
-          const itemId = placed[zone.id];
-          const item = items.find(i => i.id === itemId);
+          const inZone = placed[zone.id] ?? [];
+          const expectedCount = items.filter(i => answers[i.id] === zone.id).length;
           const correct = checked ? result[zone.id] : undefined;
+          const hasItems = inZone.length > 0;
+
           return (
             <div
               key={zone.id}
               ref={el => { zoneRefs.current[zone.id] = el; }}
-              onClick={() => item && removeFromZone(zone.id)}
-              className="rounded-2xl border-2 border-dashed flex flex-col items-center justify-center gap-1 transition-all"
+              className="rounded-2xl border-2 border-dashed flex flex-col gap-1.5 transition-all p-2"
               style={{
                 minHeight: "90px",
-                borderColor: correct === true ? "#22c55e" : correct === false ? "#ef4444" : item ? "#3b82f6" : "#d1d5db",
-                background: correct === true ? "#f0fdf4" : correct === false ? "#fef2f2" : item ? "#eff6ff" : "#f9fafb",
-                cursor: item && !checked ? "pointer" : "default",
+                borderColor: correct === true ? "#22c55e" : correct === false ? "#ef4444" : hasItems ? "#3b82f6" : "#d1d5db",
+                background: correct === true ? "#f0fdf4" : correct === false ? "#fef2f2" : hasItems ? "#eff6ff" : "#f9fafb",
               }}
             >
-              <div className="text-[10px] uppercase tracking-wider text-gray-400 font-bold px-2 text-center">{zone.label}</div>
-              {item ? (
-                <div className="flex flex-col items-center gap-1">
-                  {renderItemContent(item, 44)}
-                </div>
-              ) : (
-                <span className="text-gray-300 text-2xl">+</span>
-              )}
-              {correct === true  && <span className="text-green-500 text-sm font-bold">✓</span>}
-              {correct === false && <span className="text-red-400 text-sm font-bold">✗</span>}
+              {/* Zone label */}
+              <div className="text-[10px] uppercase tracking-wider text-gray-400 font-bold text-center leading-tight px-1">
+                {zone.label}
+                {!checked && expectedCount > 1 && (
+                  <span className="ml-1 text-gray-300 font-normal normal-case tracking-normal">
+                    ({inZone.length}/{expectedCount})
+                  </span>
+                )}
+              </div>
+
+              {/* Placed items as removable chips */}
+              <div className="flex flex-wrap gap-1 justify-center">
+                {inZone.map(itemId => {
+                  const item = items.find(i => i.id === itemId);
+                  if (!item) return null;
+                  return (
+                    <button
+                      key={itemId}
+                      onClick={() => removeItem(zone.id, itemId)}
+                      disabled={checked}
+                      className={`flex flex-col items-center gap-0.5 bg-white border rounded-xl px-2 py-1 shadow-sm transition-all ${
+                        checked ? "cursor-default" : "hover:border-red-300 hover:bg-red-50 active:scale-95"
+                      }`}
+                      style={{ minWidth: "56px", borderColor: checked ? (correct ? "#86efac" : "#fca5a5") : "#bfdbfe" }}
+                      title={checked ? undefined : "Tippe zum Entfernen"}
+                    >
+                      {renderItemContent(item, 32)}
+                    </button>
+                  );
+                })}
+
+                {/* Empty slot indicator */}
+                {inZone.length === 0 && (
+                  <span className="text-gray-300 text-xl self-center">+</span>
+                )}
+              </div>
+
+              {/* Result indicator */}
+              {correct === true  && <div className="text-green-500 text-xs font-bold text-center">✓</div>}
+              {correct === false && <div className="text-red-400 text-xs font-bold text-center">✗</div>}
             </div>
           );
         })}
       </div>
 
-      {/* Draggable tiles — only show items not placed */}
+      {/* Draggable tiles — only items not yet placed */}
       <div
         className="flex flex-wrap gap-2 justify-center"
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
       >
-        {items.filter(item => !placed_ids.has(item.id)).map(item => (
+        {items.filter(item => !placedIds.has(item.id)).map(item => (
           <div
             key={item.id}
             onPointerDown={e => handlePointerDown(e, item.id)}
             className="flex flex-col items-center gap-1 bg-white border-2 border-gray-200 rounded-2xl px-3 py-2 shadow-sm hover:border-blue-300 hover:bg-blue-50 transition-all"
             style={{
-              minWidth: "72px",
+              minWidth: "70px",
               cursor: "grab",
-              opacity: activeItemId === item.id ? 0.4 : 1,
+              opacity: activeItemId === item.id ? 0.35 : 1,
               touchAction: "none",
             }}
           >
-            {renderItemContent(item, 40)}
+            {renderItemContent(item, 36)}
           </div>
         ))}
       </div>
 
-      {!allPlaced && !checked && (
+      {!allItemsPlaced && !checked && remaining > 0 && (
         <p className="text-center text-xs text-gray-400">
           {remaining} {remaining === 1 ? tr("fieldMissing") : tr("fieldsMissing")}
         </p>
       )}
 
-      {allPlaced && !checked && (
+      {allItemsPlaced && !checked && (
         <button
           onClick={handleCheck}
           className="w-full bg-green-600 text-white py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md"
@@ -217,12 +255,12 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
               left: ghost.x,
               top: ghost.y,
               width: ghost.w,
-              minWidth: "72px",
-              transform: "scale(1.1)",
-              opacity: 0.92,
+              minWidth: "70px",
+              transform: "scale(1.12) rotate(2deg)",
+              opacity: 0.93,
             }}
           >
-            {renderItemContent(item, 40)}
+            {renderItemContent(item, 36)}
           </div>
         );
       })()}
