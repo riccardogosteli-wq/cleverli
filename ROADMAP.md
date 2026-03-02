@@ -129,6 +129,45 @@
 - Multi-child toggle (up to 3 profiles)
 - Account management, subscription management
 
+#### 🎁 Custom Reward System (HIGH VALUE — key differentiator)
+
+Parents define real-world rewards tied to in-app milestones. Child sees a locked reward on their dashboard and works toward it.
+
+**Pre-built reward templates (parents pick & customize):**
+- 🦁 "Wir gehen in den Zoo"
+- 📺 "30 Minuten extra TV"
+- 🍦 "Ein Glace aussuchen"
+- 🎮 "1 Stunde Spielzeit"
+- 🎬 "Kinoabend aussuchen"
+- 🧁 "Einen Kuchen backen"
+- 🛒 "Einen kleinen Wunsch vom Laden"
+- 🎨 "Einen Malblock/Stifte aussuchen"
+- ➕ Parents can add fully custom rewards with custom emoji + text
+
+**Trigger conditions (parent sets one):**
+- After X tasks completed (e.g. 20 exercises done)
+- After X topics fully completed (e.g. 3 topics mastered)
+- After reaching a star milestone (e.g. 10 three-star topics)
+- After a streak milestone (e.g. 7-day streak)
+- After earning a specific badge (e.g. "Mathe-Ninja")
+
+**Child view:**
+- Locked reward card on their dashboard: big icon, reward name, progress bar toward unlock
+- When unlocked: big celebration animation + "Zeig das Mama/Papa! 🎉"
+- Parent gets a notification: "Lena hat ihr Ziel erreicht! Zeit für den Zoo 🦁"
+
+**UX notes:**
+- Max 3 active rewards per child at a time (to avoid overwhelm)
+- Parents can mark reward as "redeemed" which resets it or removes it
+- Reward history visible to both parent and child
+- Translatable reward names (all 4 languages)
+
+**Implementation scope:**
+- Reward data stored in Supabase (per parent account, per child)
+- Simple admin UI for parents: add/edit/remove rewards
+- Child dashboard shows active rewards with progress
+- Push/email notification to parent when child unlocks a reward
+
 ---
 
 ### 4. 📚 CONTENT EXPANSION
