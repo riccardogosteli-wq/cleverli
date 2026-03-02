@@ -39,10 +39,16 @@ export function useVoice(options: UseVoiceOptions = {}) {
     // Cancel any ongoing speech first
     window.speechSynthesis.cancel();
 
-    // Strip markdown-style formatting, emoji at start, and fill-in-blank markers
+    // Strip emoji, fill-in-blank markers, and Swiss quote brackets
     const clean = text
-      .replace(/___/g, "")           // fill-in-blank blanks
-      .replace(/\(schreibe[^)]+\)/g, "") // parenthetical instructions
+      // Remove all emoji (Unicode ranges: emoticons, misc symbols, transport, supplemental, flags, enclosed chars, dingbats, variation selectors)
+      .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}\u{FE00}-\u{FE0F}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA9F}\u{1FAA0}-\u{1FAFF}]/gu, "")
+      // Remove plain emoji symbols in common ranges that the above may miss
+      .replace(/[\u{231A}-\u{231B}\u{23E9}-\u{23F3}\u{23F8}-\u{23FA}\u{25AA}-\u{25AB}\u{25B6}\u{25C0}\u{25FB}-\u{25FE}\u{2614}-\u{2615}\u{2648}-\u{2653}\u{267F}\u{2693}\u{26A1}\u{26AA}-\u{26AB}\u{26BD}-\u{26BE}\u{26C4}-\u{26C5}\u{26CE}\u{26D4}\u{26EA}\u{26F2}-\u{26F3}\u{26F5}\u{26FA}\u{26FD}\u{2702}\u{2705}\u{2708}-\u{270D}\u{270F}\u{2712}\u{2714}\u{2716}\u{271D}\u{2721}\u{2728}\u{2733}-\u{2734}\u{2744}\u{2747}\u{274C}\u{274E}\u{2753}-\u{2755}\u{2757}\u{2763}-\u{2764}\u{2795}-\u{2797}\u{27A1}\u{27B0}\u{27BF}\u{2934}-\u{2935}\u{2B05}-\u{2B07}\u{2B1B}-\u{2B1C}\u{2B50}\u{2B55}\u{3030}\u{303D}\u{3297}\u{3299}]/gu, "")
+      .replace(/___/g, "")                       // fill-in-blank markers
+      .replace(/«([^»]+)»/g, "$1")               // «Bär» → Bär (strip Swiss quotes, keep word)
+      .replace(/\([^)]{0,40}\)/g, "")            // strip short parentheticals like (laufen) or (Nomen/Verb)
+      .replace(/\s{2,}/g, " ")                   // collapse multiple spaces
       .trim();
 
     const utterance = new SpeechSynthesisUtterance(clean);
