@@ -1,99 +1,181 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 
+const STEP_LABELS = ["Wer bist du?", "Dein Konto", "Deine Klasse"];
+
 export default function Signup() {
   const { tr } = useLang();
+  const router = useRouter();
   const [step, setStep] = useState(1);
-  const [role, setRole] = useState<"parent"|"child"|null>(null);
+  const [role, setRole] = useState<"parent" | "child" | null>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [grade, setGrade] = useState<number|null>(null);
+  const [grade, setGrade] = useState<number | null>(null);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const validateStep2 = () => {
+    if (!name.trim()) { setError("Bitte gib deinen Namen ein."); return false; }
+    if (!email.includes("@") || !email.includes(".")) { setError("Bitte gib eine gültige E-Mail-Adresse ein."); return false; }
+    if (password.length < 6) { setError("Das Passwort muss mindestens 6 Zeichen lang sein."); return false; }
+    return true;
+  };
+
+  const handleStart = () => {
+    setLoading(true);
+    setTimeout(() => router.push("/dashboard"), 700);
+  };
+
+  const inputCls = "w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white transition-colors";
 
   return (
-    <div className="min-h-screen bg-green-50 flex flex-col items-center justify-start pt-8 px-4 pb-16">
-      <div className="w-full max-w-sm space-y-6">
+    <div className="min-h-screen bg-green-50 flex flex-col items-center justify-start pt-6 px-4 pb-16">
+      <div className="w-full max-w-sm space-y-5">
+
+        {/* Mascot */}
         <div className="text-center">
-          <CleverliMascot size={100} mood={step === 3 ? "celebrate" : "happy"} />
+          <CleverliMascot size={85} mood={step === 3 ? "celebrate" : step === 2 ? "sit-read" : "happy"} />
         </div>
 
-        {/* Step indicators */}
-        <div className="flex justify-center gap-3">
-          {[1,2,3].map(s => (
-            <div key={s} className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all
-              ${step > s ? "bg-green-600 border-green-600 text-white" :
-                step === s ? "bg-green-600 border-green-600 text-white ring-4 ring-green-100" :
-                "bg-white border-gray-300 text-gray-400"}`}>
-              {step > s ? "✓" : s}
+        {/* Stepper with labels */}
+        <div className="flex justify-center items-start gap-2">
+          {[1, 2, 3].map(s => (
+            <div key={s} className="flex flex-col items-center gap-1 flex-1">
+              <div className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all mx-auto
+                ${step > s ? "bg-green-600 border-green-600 text-white" :
+                  step === s ? "bg-green-600 border-green-600 text-white ring-4 ring-green-100" :
+                  "bg-white border-gray-300 text-gray-400"}`}>
+                {step > s ? "✓" : s}
+              </div>
+              <span className={`text-[10px] text-center leading-tight ${step === s ? "text-green-700 font-semibold" : "text-gray-400"}`}>
+                {STEP_LABELS[s - 1]}
+              </span>
             </div>
           ))}
         </div>
 
+        {/* ── Step 1: Role ── */}
         {step === 1 && (
           <div className="space-y-4">
-            <h1 className="text-2xl font-bold text-gray-900 text-center">Wer bist du?</h1>
+            <h1 className="text-xl font-bold text-gray-900 text-center">Wer bist du?</h1>
             <div className="grid grid-cols-2 gap-3">
-              <button onClick={() => { setRole("parent"); setStep(2); }}
-                className="bg-white border-2 border-gray-200 hover:border-green-500 hover:bg-green-50 rounded-2xl p-6 text-center font-semibold text-gray-800 transition-all">
-                <div className="text-4xl mb-2">👨‍👩‍👧</div>
-                <div className="text-sm">{tr("iAmParent")}</div>
-              </button>
-              <button onClick={() => { setRole("child"); setStep(2); }}
-                className="bg-white border-2 border-gray-200 hover:border-green-500 hover:bg-green-50 rounded-2xl p-6 text-center font-semibold text-gray-800 transition-all">
-                <div className="text-4xl mb-2">🧒</div>
-                <div className="text-sm">{tr("iAmChild")}</div>
-              </button>
-            </div>
-          </div>
-        )}
-
-        {step === 2 && (
-          <div className="space-y-4">
-            <h1 className="text-2xl font-bold text-gray-900 text-center">{tr("createAccount")}</h1>
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-3">
-              <input type="text" value={name} onChange={e => setName(e.target.value)}
-                placeholder={tr("namePlaceholder")}
-                className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white text-sm transition-colors" />
-              <input type="email" value={email} onChange={e => setEmail(e.target.value)}
-                placeholder={tr("emailPlaceholder")}
-                className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white text-sm transition-colors" />
-              <input type="password" value={password} onChange={e => setPassword(e.target.value)}
-                placeholder={tr("passwordPlaceholder")}
-                className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white text-sm transition-colors" />
-              <button onClick={() => setStep(3)} disabled={!name || !email || !password}
-                className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed text-sm">
-                Weiter →
-              </button>
-            </div>
-            <button onClick={() => setStep(1)} className="block mx-auto text-sm text-gray-500 hover:text-gray-700">{tr("back")}</button>
-          </div>
-        )}
-
-        {step === 3 && (
-          <div className="space-y-4">
-            <h1 className="text-2xl font-bold text-gray-900 text-center">{tr("whichClass")}</h1>
-            <div className="grid grid-cols-3 gap-3">
-              {[1,2,3].map(g => (
-                <button key={g} onClick={() => setGrade(g)}
-                  className={`border-2 rounded-xl p-4 font-bold text-lg transition-all ${
-                    grade === g
-                      ? "border-green-600 bg-green-600 text-white shadow-md"
-                      : "border-gray-200 bg-white text-gray-800 hover:border-green-400 hover:bg-green-50"}`}>
-                  {g}. {tr("gradeLabel")}
+              {([
+                { r: "parent", emoji: "👨‍👩‍👧", label: tr("iAmParent") },
+                { r: "child",  emoji: "🧒",     label: tr("iAmChild") },
+              ] as const).map(({ r, emoji, label }) => (
+                <button key={r} onClick={() => { setRole(r); setStep(2); setError(""); }}
+                  style={{ minHeight: "110px" }}
+                  className="bg-white border-2 border-gray-200 hover:border-green-500 hover:bg-green-50 active:scale-95 rounded-2xl p-5 text-center font-semibold text-gray-800 transition-all">
+                  <div className="text-4xl mb-2">{emoji}</div>
+                  <div className="text-sm">{label}</div>
                 </button>
               ))}
             </div>
-            <Link href="/dashboard"
-              className={`block w-full text-center py-3 rounded-xl font-semibold text-sm transition-colors ${
-                grade
-                  ? "bg-green-600 text-white hover:bg-green-700"
-                  : "bg-gray-100 text-gray-400 cursor-not-allowed pointer-events-none"}`}>
-              🎉 Los geht&apos;s!
-            </Link>
-            <button onClick={() => setStep(2)} className="block mx-auto text-sm text-gray-500 hover:text-gray-700">{tr("back")}</button>
+            <p className="text-center text-xs text-gray-400 pt-1">
+              Nur ausprobieren?{" "}
+              <Link href="/dashboard" className="text-green-600 underline">Direkt starten →</Link>
+            </p>
+          </div>
+        )}
+
+        {/* ── Step 2: Account ── */}
+        {step === 2 && (
+          <div className="space-y-4">
+            <h1 className="text-xl font-bold text-gray-900 text-center">
+              {role === "parent" ? "Elternteil-Konto erstellen" : "Dein Konto erstellen"}
+            </h1>
+            {role === "child" && (
+              <p className="text-xs text-center text-gray-400 bg-yellow-50 border border-yellow-200 rounded-xl px-3 py-2">
+                💡 Bitte einen Elternteil um Hilfe beim Erstellen des Kontos.
+              </p>
+            )}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-200 space-y-3">
+              {error && (
+                <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700">{error}</div>
+              )}
+              <input
+                type="text"
+                value={name}
+                onChange={e => { setName(e.target.value); setError(""); }}
+                placeholder={role === "parent" ? "Vorname Elternteil" : "Dein Vorname"}
+                autoComplete="given-name"
+                style={{ fontSize: "16px" }}
+                className={inputCls}
+              />
+              <input
+                type="email"
+                value={email}
+                onChange={e => { setEmail(e.target.value); setError(""); }}
+                placeholder={tr("emailPlaceholder")}
+                autoComplete="email"
+                inputMode="email"
+                style={{ fontSize: "16px" }}
+                className={inputCls}
+              />
+              <input
+                type="password"
+                value={password}
+                onChange={e => { setPassword(e.target.value); setError(""); }}
+                placeholder={tr("passwordPlaceholder") + " (min. 6 Zeichen)"}
+                autoComplete="new-password"
+                style={{ fontSize: "16px" }}
+                className={inputCls}
+              />
+              <button
+                onClick={() => { if (validateStep2()) { setError(""); setStep(3); } }}
+                className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 active:scale-95 transition-all text-base"
+              >
+                Weiter →
+              </button>
+            </div>
+            <button onClick={() => { setStep(1); setError(""); }}
+              className="block mx-auto text-sm text-gray-400 hover:text-gray-600 py-2">
+              ← Zurück
+            </button>
+          </div>
+        )}
+
+        {/* ── Step 3: Grade ── */}
+        {step === 3 && (
+          <div className="space-y-4">
+            <h1 className="text-xl font-bold text-gray-900 text-center">{tr("whichClass")}</h1>
+            <div className="grid grid-cols-3 gap-3">
+              {[1, 2, 3].map(g => (
+                <button key={g} onClick={() => setGrade(g)}
+                  style={{ minHeight: "72px" }}
+                  className={`border-2 rounded-2xl font-bold text-lg active:scale-95 transition-all ${
+                    grade === g
+                      ? "border-green-600 bg-green-600 text-white shadow-md"
+                      : "border-gray-200 bg-white text-gray-800 hover:border-green-400 hover:bg-green-50"}`}>
+                  <div className="text-2xl">{g}.</div>
+                  <div className="text-xs font-medium opacity-80">{tr("gradeLabel")}</div>
+                </button>
+              ))}
+            </div>
+
+            {grade && (
+              <div className="bg-green-50 border-2 border-green-200 rounded-2xl px-4 py-3 text-center text-sm text-green-800 font-medium">
+                🎉 Super! Du startest in der {grade}. Klasse.
+              </div>
+            )}
+
+            <button
+              onClick={handleStart}
+              disabled={!grade || loading}
+              className="w-full bg-green-600 text-white py-4 rounded-xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              {loading ? "Wird geladen..." : "🎉 Los geht's!"}
+            </button>
+
+            <button onClick={() => setStep(2)}
+              className="block mx-auto text-sm text-gray-400 hover:text-gray-600 py-2">
+              ← Zurück
+            </button>
           </div>
         )}
 

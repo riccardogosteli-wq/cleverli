@@ -81,7 +81,7 @@ export default function Dashboard() {
 
         <button onClick={() => setGrade(null)}
           className="w-full text-sm text-gray-400 hover:text-gray-600 py-2">
-          ← {tr("back")}
+          ← Zurück
         </button>
       </div>
     );
@@ -93,7 +93,7 @@ export default function Dashboard() {
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4">
       <div className="flex items-center gap-3">
-        <button onClick={() => setSubject(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2">← {tr("back")}</button>
+        <button onClick={() => setSubject(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2">← Zurück</button>
         <div className="flex items-center gap-2">
           <span className="text-2xl">{currentSubject.emoji}</span>
           <h1 className="text-lg sm:text-xl font-bold text-gray-800">
@@ -124,8 +124,8 @@ export default function Dashboard() {
                     {Array.from({length:3}).map((_,j) => <span key={j}>{j < stars ? "⭐" : "☆"}</span>)}
                   </div>
                 )}
-                <span className={`text-xs px-2 py-1 rounded-full font-medium ${done ? "bg-green-100 text-green-700" : i < 3 ? "bg-gray-100 text-gray-500" : "bg-yellow-50 text-yellow-700"}`}>
-                  {done ? "✓" : i < 3 ? "Gratis" : "Pro"}
+                <span className={`text-xs px-2 py-1 rounded-full font-medium ${done ? "bg-green-100 text-green-700" : "bg-blue-50 text-blue-600"}`}>
+                  {done ? "✓" : `${topic.exercises.length} Aufg.`}
                 </span>
               </div>
             </Link>

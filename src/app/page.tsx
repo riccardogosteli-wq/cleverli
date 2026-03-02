@@ -213,7 +213,7 @@ export default function Home() {
             <span className="font-bold text-green-700">cleverli</span>
             <span>· Schweiz 🇨🇭</span>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/impressum" className="hover:text-gray-600">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-gray-600">Datenschutz</Link>
             <Link href="mailto:hello@cleverli.ch" className="hover:text-gray-600">Kontakt</Link>

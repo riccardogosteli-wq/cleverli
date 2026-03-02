@@ -53,16 +53,20 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
                 <div className="text-xs text-gray-400">{topic.exercises.length} Aufgaben</div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
-                {done && (
-                  <div className="text-sm">
-                    {Array.from({length:3}).map((_,j) => (
-                      <span key={j}>{j < stars ? "⭐" : "☆"}</span>
-                    ))}
+                {done ? (
+                  <div className="flex items-center gap-1">
+                    <div className="text-sm">
+                      {Array.from({length:3}).map((_,j) => (
+                        <span key={j}>{j < stars ? "⭐" : "☆"}</span>
+                      ))}
+                    </div>
+                    <span className="text-xs px-2 py-1 rounded-full font-medium bg-green-100 text-green-700">✓</span>
                   </div>
+                ) : (
+                  <span className="text-xs px-2 py-1 rounded-full font-medium bg-blue-50 text-blue-600">
+                    {topic.exercises.length} Aufg.
+                  </span>
                 )}
-                <span className={`text-xs px-2 py-1 rounded-full font-medium ${done ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-400"}`}>
-                  {done ? "Gemacht" : i < 3 ? "Gratis" : "Premium"}
-                </span>
               </div>
             </Link>
           );
