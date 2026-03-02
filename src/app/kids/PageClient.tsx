@@ -116,11 +116,7 @@ export default function KidsDashboard() {
             className="drop-shadow-lg"
             style={{ animation: "float 3s ease-in-out infinite" }}
           />
-          {profile.costume > 0 && (
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-2xl">
-              {COSTUME_ACCESSORY[profile.costume]}
-            </div>
-          )}
+          {/* Costume accessory removed — mascot images already show the character variation */}
         </div>
         <div className="flex-1 min-w-0 space-y-2">
           <div className="flex items-center gap-2">

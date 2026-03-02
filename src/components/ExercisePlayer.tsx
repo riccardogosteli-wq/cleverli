@@ -195,7 +195,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           {tr("unlockDetail")}
         </p>
         <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm text-green-800 text-left space-y-1 w-full max-w-xs">
-          <div>✅ {exercises.length} {tr("exerciseCount")}</div>
+          <div>✅ {tr("unlockFeature1")}</div>
           <div>✅ {tr("premiumF1")}</div>
           <div>✅ {tr("premiumF3")}</div>
           <div>✅ {tr("premiumF4")}</div>

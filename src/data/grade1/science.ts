@@ -307,9 +307,9 @@ const grade1Science: Topic[] = [
           { id: "apfelbaum", label: "🌳 Baum", emoji: "🌳" },
           { id: "apfel", label: "🍎 Apfel", emoji: "🍎" },
           { id: "sonnenblume", label: "🌻 Sonnenblume", emoji: "🌻" },
-          { id: "samen", label: "🌰 Samen", emoji: "🌰" },
+          { id: "samen", label: "🌱 Samen", emoji: "🌱" },
           { id: "karotte2", label: "🥕 Karotte", emoji: "🥕" },
-          { id: "boden", label: "🪱 Boden", emoji: "🪱" },
+          { id: "boden", label: "🟫 Boden", emoji: "🟫" },
         ],
       },
       {
@@ -318,8 +318,8 @@ const grade1Science: Topic[] = [
         answer: "all",
         hints: ["Jede Pflanze hat Wurzeln, Stängel und Blätter."],
         dragItems: [
-          { id: "wurzel", label: "🪱 Wurzel", emoji: "🪱" },
-          { id: "staengel", label: "🌿 Stängel", emoji: "🌿" },
+          { id: "wurzel", label: "🌾 Wurzel", emoji: "🌾" },
+          { id: "staengel", label: "🪴 Stängel", emoji: "🪴" },
           { id: "blatt", label: "🍃 Blatt", emoji: "🍃" },
           { id: "bluete", label: "🌸 Blüte", emoji: "🌸" },
         ],
