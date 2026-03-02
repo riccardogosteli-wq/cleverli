@@ -96,18 +96,17 @@ function DashboardInner() {
     return lv.title;
   };
 
-  // ── STEP 1: Choose grade ──────────────────────────────────────────────────
-  if (!grade) {
-    const xpToNext = level && nextLevel ? nextLevel.minXp - (profile?.xp ?? 0) : 0;
-    const xpPct = level && nextLevel
-      ? Math.round(((profile?.xp ?? 0) - level.minXp) / (nextLevel.minXp - level.minXp) * 100)
+  // ── Shared sidebar (shows on md+ for all steps) ──────────────────────────
+  const Sidebar = () => {
+    if (!profile || !level) return null;
+    const xpToNext = nextLevel ? nextLevel.minXp - profile.xp : 0;
+    const xpPct = nextLevel
+      ? Math.round((profile.xp - level.minXp) / (nextLevel.minXp - level.minXp) * 100)
       : 100;
-
     return (
-      <div className="max-w-xl mx-auto px-4 py-6 space-y-5">
-
-        {/* XP / Streak strip — motivational, always visible */}
-        {profile && level && (profile.xp > 0 || profile.dailyStreak > 0) && (
+      <aside className="space-y-4">
+        {/* XP strip */}
+        {(profile.xp > 0 || profile.dailyStreak > 0) && (
           <div className="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl px-4 py-3 shadow-sm">
             <span className="text-2xl">{level.emoji}</span>
             <div className="flex-1 min-w-0">
@@ -130,71 +129,88 @@ function DashboardInner() {
             )}
           </div>
         )}
-
-        {/* Reward widget — ABOVE grade picker so kids see their goals */}
-        {profile && (
-          <RewardWidget profile={{
-            totalExercises: profile.totalExercises,
-            totalTopicsComplete: profile.totalTopicsComplete,
-            dailyStreak: profile.dailyStreak,
-          }} />
-        )}
-
-        {/* Daily Challenge banner */}
+        {/* Reward widget */}
+        <RewardWidget profile={{
+          totalExercises: profile.totalExercises,
+          totalTopicsComplete: profile.totalTopicsComplete,
+          dailyStreak: profile.dailyStreak,
+        }} />
+        {/* Daily challenge */}
         <Link href="/daily"
           className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 ${dailyDone ? "bg-green-50 border-green-300 opacity-70" : "bg-amber-50 border-amber-300 hover:bg-amber-100"}`}>
           <span className="text-3xl">{dailyDone ? "✅" : "⚡"}</span>
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <div className="font-bold text-amber-800 text-sm">
               {lang === "fr" ? "Défi du jour" : lang === "it" ? "Sfida del giorno" : lang === "en" ? "Daily Challenge" : "Tagesaufgabe"}
             </div>
             <div className="text-xs text-amber-600">
               {dailyDone
                 ? (lang === "fr" ? "Terminé ! Reviens demain." : lang === "it" ? "Fatto! Torna domani." : lang === "en" ? "Done! Come back tomorrow." : "Erledigt! Morgen gibt es eine neue.")
-                : (lang === "fr" ? "+30 XP bonus · Un essai par jour" : lang === "it" ? "+30 XP bonus · Un tentativo al giorno" : lang === "en" ? "+30 Bonus XP · One try per day" : "+30 Bonus-XP · Einmal pro Tag")}
+                : (lang === "fr" ? "+30 XP bonus · Un essai par jour" : lang === "it" ? "+30 XP bonus" : lang === "en" ? "+30 Bonus XP · One try per day" : "+30 Bonus-XP · Einmal pro Tag")}
             </div>
           </div>
           <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"}
             alt={dailyDone ? "Cleverli feiert" : "Cleverli läuft"}
             width={44} height={44} className="drop-shadow-sm shrink-0" />
         </Link>
+      </aside>
+    );
+  };
 
-        {/* Grade picker */}
-        <div className="text-center space-y-1">
-          {subject && SUBJECT_META[subject] && (
-            <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-800 text-sm font-semibold px-3 py-1.5 rounded-full mb-1">
-              {SUBJECT_META[subject].emoji} {subjectL(subject, "subtitle")}
+  // ── STEP 1: Choose grade ──────────────────────────────────────────────────
+  if (!grade) {
+    return (
+      <div className="max-w-5xl mx-auto px-4 py-6">
+        <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
+          {/* Sidebar — hidden on mobile (shown inline below) */}
+          <div className="hidden md:block">
+            <Sidebar />
+          </div>
+
+          <div className="space-y-5">
+            {/* Mobile-only: sidebar content inline */}
+            <div className="md:hidden space-y-4">
+              <Sidebar />
             </div>
-          )}
-          <h1 className="text-xl font-bold text-gray-800">
-            {lang === "fr" ? "Quelle classe?" : lang === "it" ? "Che classe?" : lang === "en" ? "Which class?" : "In welcher Klasse bist du?"}
-          </h1>
-        </div>
 
-        <div className="grid grid-cols-3 gap-3">
-          {[1, 2, 3].map((g, i) => (
-            <button key={g} onClick={() => chooseGrade(g)}
-              style={{ minHeight: "100px", transition: "all 0.15s ease" }}
-              className={`border-2 rounded-2xl font-bold active:scale-95 flex flex-col items-center justify-center gap-1 ${GRADE_COLORS[i].base}`}>
-              <div className="text-3xl">{GRADE_COLORS[i].emoji}</div>
-              <div className="text-2xl font-black">{g}.</div>
-              <div className="text-xs font-medium opacity-70">{tr("gradeLabel")}</div>
-            </button>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-3 gap-3 opacity-40">
-          {[4, 5, 6].map(g => (
-            <div key={g} style={{ minHeight: "100px" }}
-              className="border-2 border-dashed border-gray-300 rounded-2xl flex flex-col items-center justify-center text-gray-400 cursor-not-allowed gap-1">
-              <div className="text-xl font-bold">{g}.</div>
-              <div className="text-xs">🚀 {tr("comingSoonShort")}</div>
+            {/* Grade picker header */}
+            <div className="text-center space-y-1">
+              {subject && SUBJECT_META[subject] && (
+                <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-800 text-sm font-semibold px-3 py-1.5 rounded-full mb-1">
+                  {SUBJECT_META[subject].emoji} {subjectL(subject, "subtitle")}
+                </div>
+              )}
+              <h1 className="text-xl font-bold text-gray-800">
+                {lang === "fr" ? "Quelle classe?" : lang === "it" ? "Che classe?" : lang === "en" ? "Which class?" : "In welcher Klasse bist du?"}
+              </h1>
             </div>
-          ))}
+
+            <div className="grid grid-cols-3 gap-3">
+              {[1, 2, 3].map((g, i) => (
+                <button key={g} onClick={() => chooseGrade(g)}
+                  style={{ minHeight: "100px", transition: "all 0.15s ease" }}
+                  className={`border-2 rounded-2xl font-bold active:scale-95 flex flex-col items-center justify-center gap-1 ${GRADE_COLORS[i].base}`}>
+                  <div className="text-3xl">{GRADE_COLORS[i].emoji}</div>
+                  <div className="text-2xl font-black">{g}.</div>
+                  <div className="text-xs font-medium opacity-70">{tr("gradeLabel")}</div>
+                </button>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-3 gap-3 opacity-40">
+              {[4, 5, 6].map(g => (
+                <div key={g} style={{ minHeight: "100px" }}
+                  className="border-2 border-dashed border-gray-300 rounded-2xl flex flex-col items-center justify-center text-gray-400 cursor-not-allowed gap-1">
+                  <div className="text-xl font-bold">{g}.</div>
+                  <div className="text-xs">🚀 {tr("comingSoonShort")}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-xs text-gray-400">
+              {tr("gradesComingSoon")} · <a href="mailto:hello@cleverli.ch" className="text-green-600 underline">{tr("notifyMe")}</a>
+            </p>
+          </div>
         </div>
-        <p className="text-center text-xs text-gray-400">
-          {tr("gradesComingSoon")} · <a href="mailto:hello@cleverli.ch" className="text-green-600 underline">{tr("notifyMe")}</a>
-        </p>
       </div>
     );
   }
@@ -202,39 +218,42 @@ function DashboardInner() {
   // ── STEP 2: Choose subject (only if NOT pre-selected from URL) ────────────
   if (!subject) {
     return (
-      <div className="max-w-xl mx-auto px-4 py-6 space-y-5">
-        <div className="flex items-center gap-2">
-          <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3 min-w-[44px]">←</button>
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">{GRADE_COLORS[grade-1].emoji}</span>
-            <h1 className="text-xl font-bold text-gray-800">
-              {grade}. {tr("gradeLabel")} — {lang === "fr" ? "Que veux-tu apprendre?" : lang === "it" ? "Cosa vuoi imparare?" : lang === "en" ? "What do you want to learn?" : "Was möchtest du lernen?"}
-            </h1>
+      <div className="max-w-5xl mx-auto px-4 py-6">
+        <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
+          <div className="hidden md:block"><Sidebar /></div>
+          <div className="space-y-5">
+            <div className="md:hidden mb-4"><Sidebar /></div>
+            <div className="flex items-center gap-2">
+              <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3 min-w-[44px]">←</button>
+              <span className="text-2xl">{GRADE_COLORS[grade-1].emoji}</span>
+              <h1 className="text-lg font-bold text-gray-800">
+                {grade}. {tr("gradeLabel")} — {lang === "fr" ? "Que veux-tu apprendre?" : lang === "it" ? "Cosa vuoi imparare?" : lang === "en" ? "What to learn?" : "Was lernen?"}
+              </h1>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-1">
+              {SUBJECTS.map(s => {
+                const meta = SUBJECT_META[s.id];
+                const topics = getTopics(grade, s.id);
+                const done = topics.filter(t => getProgress(grade, s.id, t.id)).length;
+                return (
+                  <button key={s.id} onClick={() => setSubject(s.id)}
+                    style={{ minHeight: "80px", transition: "all 0.15s ease" }}
+                    className={`border-2 rounded-2xl font-bold active:scale-95 flex items-center gap-4 px-5 text-left ${s.color}`}>
+                    <div className={`w-12 h-12 ${meta?.iconBg ?? "bg-gray-100"} rounded-xl flex items-center justify-center text-2xl shrink-0`}>
+                      {s.emoji}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold text-base">{subjectL(s.id, "label")}</div>
+                      <div className="text-xs font-normal opacity-70">{subjectL(s.id, "subtitle")}</div>
+                    </div>
+                    {done > 0 && (
+                      <div className="text-xs font-semibold opacity-60 shrink-0">{done}/{topics.length} ✓</div>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
-
-        <div className="grid gap-3">
-          {SUBJECTS.map(s => {
-            const meta = SUBJECT_META[s.id];
-            const topics = getTopics(grade, s.id);
-            const done = topics.filter(t => getProgress(grade, s.id, t.id)).length;
-            return (
-              <button key={s.id} onClick={() => setSubject(s.id)}
-                style={{ minHeight: "80px", transition: "all 0.15s ease" }}
-                className={`border-2 rounded-2xl font-bold active:scale-95 flex items-center gap-4 px-5 text-left ${s.color}`}>
-                <div className={`w-12 h-12 ${meta?.iconBg ?? "bg-gray-100"} rounded-xl flex items-center justify-center text-2xl shrink-0`}>
-                  {s.emoji}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="font-bold text-base">{subjectL(s.id, "label")}</div>
-                  <div className="text-xs font-normal opacity-70">{subjectL(s.id, "subtitle")}</div>
-                </div>
-                {done > 0 && (
-                  <div className="text-xs font-semibold opacity-60 shrink-0">{done}/{topics.length} ✓</div>
-                )}
-              </button>
-            );
-          })}
         </div>
       </div>
     );
@@ -253,7 +272,12 @@ function DashboardInner() {
   };
 
   return (
-    <div className="max-w-xl mx-auto px-4 py-5 space-y-4">
+    <div className="max-w-5xl mx-auto px-4 py-5">
+      <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
+      <div className="hidden md:block"><Sidebar /></div>
+      <div className="space-y-4">
+      <div className="md:hidden mb-2"><Sidebar /></div>
+
       {/* Header */}
       <div className="flex items-center gap-2">
         <button onClick={handleBack} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2 min-w-[44px]">←</button>
@@ -306,7 +330,7 @@ function DashboardInner() {
       )}
 
       {/* Topic list */}
-      <div className="grid gap-2.5">
+      <div className="grid gap-2.5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
         {topics.map((topic, idx) => {
           const prog = getProgress(grade, subject, topic.id);
           const stars = prog?.stars ?? 0;
@@ -354,6 +378,8 @@ function DashboardInner() {
           );
         })}
       </div>
+      </div> {/* end space-y-4 */}
+      </div> {/* end md:grid */}
     </div>
   );
 }

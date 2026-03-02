@@ -134,112 +134,121 @@ export default function TrophiesPage() {
 
       {/* ── Level track ── */}
       <div className="bg-white rounded-3xl p-5 shadow-sm border border-gray-100">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-5">
           <h2 className="font-bold text-gray-700 text-sm">Level-Weg 🗺️</h2>
           <span className="text-xs text-gray-400 bg-gray-50 rounded-full px-2 py-0.5">
             {level.id}/{LEVELS.length}
           </span>
         </div>
 
-        {/* Track */}
-        <div className="flex items-end justify-between gap-1 px-1">
-          {LEVELS.map((l, i) => {
-            const isActive = level.id === l.id;
-            const isDone   = level.id > l.id;
-            const isFuture = level.id < l.id;
+        {/* Track — circles + bar using proper absolute positioning */}
+        <div className="relative px-3" style={{ paddingTop: 14 }}>
+          {/* Background rail */}
+          <div className="absolute left-[10%] right-[10%] h-2.5 bg-gray-100 rounded-full"
+            style={{ top: 14 + 22, zIndex: 0 }} />
+          {/* Filled rail */}
+          <div
+            className="absolute left-[10%] h-2.5 rounded-full transition-all duration-1000"
+            style={{
+              top: 14 + 22,
+              zIndex: 1,
+              width: `${Math.min(80, ((level.id - 1 + pct / 100) / (LEVELS.length - 1)) * 80)}%`,
+              background: `linear-gradient(to right, #86efac, ${level.color})`,
+            }}
+          />
 
-            const lTitle = lang === "fr" ? l.titleFr : lang === "it" ? l.titleIt : lang === "en" ? l.titleEn : l.title;
+          {/* Circles row */}
+          <div className="relative flex justify-between" style={{ zIndex: 2 }}>
+            {LEVELS.map((l) => {
+              const isActive = level.id === l.id;
+              const isDone   = level.id > l.id;
+              const lTitle = lang === "fr" ? l.titleFr : lang === "it" ? l.titleIt : lang === "en" ? l.titleEn : l.title;
+              const size = isActive ? 58 : 44;
 
-            return (
-              <div key={l.id} className="flex flex-col items-center gap-1.5 shrink-0" style={{ flex: 1 }}>
-                {/* Connecting bar (LEFT of icon) */}
-                {i > 0 && (
-                  <div className="absolute" style={{ display: "none" }} />
-                )}
-
-                {/* Icon circle */}
-                <div className="relative flex flex-col items-center">
-                  {isActive && (
+              return (
+                <div key={l.id} className="flex flex-col items-center" style={{ width: "20%" }}>
+                  {/* Pulse ring behind circle */}
+                  <div className="relative flex items-center justify-center" style={{ width: size, height: size }}>
+                    {isActive && (
+                      <div
+                        className="absolute rounded-full animate-ping"
+                        style={{
+                          width: size + 16,
+                          height: size + 16,
+                          backgroundColor: l.color + "40",
+                          top: -8,
+                          left: -8,
+                        }}
+                      />
+                    )}
                     <div
-                      className="absolute inset-0 rounded-full animate-ping opacity-30"
-                      style={{ backgroundColor: l.color, transform: "scale(1.4)" }}
-                    />
-                  )}
-                  <div
-                    className={`relative flex items-center justify-center rounded-full font-bold transition-all duration-500 ${
-                      isActive
-                        ? "ring-4 ring-offset-2 shadow-lg"
-                        : isDone
-                          ? "shadow-md"
-                          : "opacity-35 grayscale"
-                    }`}
-                    style={{
-                      width: isActive ? 60 : 46,
-                      height: isActive ? 60 : 46,
-                      fontSize: isActive ? "1.75rem" : "1.3rem",
-                      backgroundColor: isDone || isActive ? l.color + "33" : "#f3f4f6",
-                      borderWidth: 3,
-                      borderStyle: "solid",
-                      borderColor: isDone || isActive ? l.color : "#e5e7eb",
-
-                      boxShadow: isActive ? `0 0 20px ${l.color}88` : isDone ? `0 2px 8px ${l.color}44` : "none",
-                    }}
-                  >
-                    {isDone ? "✓" : isFuture ? "🔒" : l.emoji}
+                      className={`relative flex items-center justify-center rounded-full font-bold select-none transition-all duration-500`}
+                      style={{
+                        width: size,
+                        height: size,
+                        fontSize: isActive ? "1.8rem" : "1.2rem",
+                        backgroundColor: isActive ? l.color + "28" : isDone ? l.color + "22" : "#f3f4f6",
+                        border: `3px solid ${isActive ? l.color : isDone ? l.color + "99" : "#e5e7eb"}`,
+                        boxShadow: isActive
+                          ? `0 0 0 4px ${l.color}40, 0 4px 16px ${l.color}55`
+                          : isDone
+                            ? `0 2px 8px ${l.color}33`
+                            : "none",
+                        opacity: isDone || isActive ? 1 : 0.38,
+                        filter: isDone || isActive ? "none" : "grayscale(0.6)",
+                      }}
+                    >
+                      {isDone
+                        ? <span style={{ color: l.color, fontSize: "1.1rem", fontWeight: 900 }}>✓</span>
+                        : l.emoji}
+                    </div>
                   </div>
 
-                  {/* "JETZT" badge on active */}
+                  {/* "Jetzt" pill — only on active */}
                   {isActive && (
-                    <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                      <span className="text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full text-white"
+                    <div className="mt-1.5">
+                      <span
+                        className="text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full text-white whitespace-nowrap"
                         style={{ backgroundColor: l.color }}>
                         Jetzt
                       </span>
                     </div>
                   )}
-                </div>
 
-                {/* Label */}
-                <div className={`text-center leading-tight transition-all ${isActive ? "font-bold" : "font-medium opacity-50"}`}
-                  style={{ fontSize: "9px", color: isActive ? l.color : "#9ca3af", maxWidth: 56 }}>
-                  {lTitle}
+                  {/* Label — shown for all */}
+                  <div
+                    className={`mt-1 text-center leading-tight ${isActive ? "font-bold" : "font-medium"}`}
+                    style={{
+                      fontSize: "9px",
+                      color: isActive ? l.color : isDone ? "#6b7280" : "#d1d5db",
+                      maxWidth: 64,
+                      wordBreak: "break-word",
+                      hyphens: "auto",
+                    }}>
+                    {lTitle}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Connecting line beneath the icons */}
-        <div className="relative mx-4 -mt-8 mb-5" style={{ zIndex: 0 }}>
-          <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-            <div
-              className="h-full rounded-full transition-all duration-1000"
-              style={{
-                width: `${((level.id - 1) / (LEVELS.length - 1)) * 100 + pct / (LEVELS.length - 1)}%`,
-                background: `linear-gradient(to right, #86efac, ${level.color})`,
-              }}
-            />
+              );
+            })}
           </div>
         </div>
 
-        {/* XP to next level */}
-        {nextLevel && (
-          <div className="flex items-center justify-center gap-2 mt-1">
-            <div className="h-px flex-1 bg-gray-100" />
-            <span className="text-xs text-gray-400">
-              noch <strong className="text-gray-600">{xpToNext} XP</strong> bis{" "}
+        {/* "X XP to next level" footer */}
+        <div className="mt-5 pt-4 border-t border-gray-50 text-center">
+          {nextLevel ? (
+            <p className="text-xs text-gray-500">
+              noch{" "}
+              <strong className="text-gray-700">{xpToNext} XP</strong>
+              {" "}bis{" "}
               <strong style={{ color: nextLevel.color }}>
-                {nextLevel.emoji} {lang === "fr" ? nextLevel.titleFr : lang === "it" ? nextLevel.titleIt : lang === "en" ? nextLevel.titleEn : nextLevel.title}
+                {nextLevel.emoji}{" "}
+                {lang === "fr" ? nextLevel.titleFr : lang === "it" ? nextLevel.titleIt : lang === "en" ? nextLevel.titleEn : nextLevel.title}
               </strong>
-            </span>
-            <div className="h-px flex-1 bg-gray-100" />
-          </div>
-        )}
-        {!nextLevel && (
-          <div className="text-center text-xs font-bold text-amber-600 mt-1">
-            🏆 Max Level erreicht!
-          </div>
-        )}
+            </p>
+          ) : (
+            <p className="text-xs font-bold text-amber-600">🏆 Max Level erreicht!</p>
+          )}
+        </div>
       </div>
 
       {/* ── Trophy room ── */}

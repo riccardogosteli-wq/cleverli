@@ -110,16 +110,23 @@ export default function RewardsPage() {
   };
 
   return (
-    <div className="max-w-xl mx-auto px-4 py-8 space-y-6">
+    <div className="max-w-5xl mx-auto px-4 py-8">
       {/* Header */}
-      <div className="flex items-center gap-3">
-        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600">← {lang === "de" ? "Zurück" : "Back"}</Link>
-        <div className="flex-1" />
+      <div className="flex items-center gap-3 mb-6">
+        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 min-w-[44px]">←</Link>
         <Image src="/cleverli-celebrate.png" alt="" width={44} height={44} className="drop-shadow-md" />
         <h1 className="text-xl font-bold text-gray-800">
           🎁 {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
         </h1>
+        <div className="flex-1" />
+        <Link href="/dashboard" className="hidden md:block text-sm text-gray-400 hover:text-gray-600">
+          ← {lang === "de" ? "Zurück zum Dashboard" : "Back to dashboard"}
+        </Link>
       </div>
+
+      <div className="md:grid md:grid-cols-[1fr_380px] md:gap-8 space-y-6 md:space-y-0">
+      {/* LEFT: active rewards + form */}
+      <div className="space-y-6">
 
       {/* Current progress snapshot */}
       <div className="bg-green-50 border border-green-200 rounded-2xl p-4">
@@ -359,6 +366,11 @@ export default function RewardsPage() {
         })}
       </div>
 
+      </div> {/* end LEFT col */}
+
+      {/* RIGHT col: unlocked + redeemed */}
+      <div className="space-y-6">
+
       {/* Unlocked — waiting to be redeemed */}
       {unlocked.length > 0 && (
         <div className="space-y-3">
@@ -414,7 +426,9 @@ export default function RewardsPage() {
                 <div className="flex-1">
                   <div className="text-sm font-semibold text-gray-700">{r.title}</div>
                   <div className="text-xs text-gray-400">
-                    ✓ {r.redeemedAt ? new Date(r.redeemedAt).toLocaleDateString(lang === "de" ? "de-CH" : "fr-CH") : ""}
+                    ✓ {r.redeemedAt ? new Date(r.redeemedAt).toLocaleDateString(
+                      lang === "de" ? "de-CH" : lang === "fr" ? "fr-CH" : lang === "it" ? "it-CH" : "en-GB"
+                    ) : ""}
                   </div>
                 </div>
                 <span className="text-green-500 text-lg">✓</span>
@@ -426,6 +440,19 @@ export default function RewardsPage() {
           </div>
         </div>
       )}
+
+      {/* Empty right col placeholder when no unlocked/redeemed */}
+      {unlocked.length === 0 && redeemed.length === 0 && (
+        <div className="hidden md:flex flex-col items-center justify-center py-16 text-gray-200 text-center space-y-3">
+          <div className="text-6xl">🎯</div>
+          <div className="text-sm text-gray-300 max-w-xs">
+            {lang === "de" ? "Wenn dein Kind ein Ziel erreicht, erscheint es hier." : "When your child reaches a goal, it'll appear here."}
+          </div>
+        </div>
+      )}
+
+      </div> {/* end RIGHT col */}
+      </div> {/* end md:grid */}
     </div>
   );
 }
