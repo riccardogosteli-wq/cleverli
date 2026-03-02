@@ -31,7 +31,7 @@ export const t: Record<Lang, Record<string, string>> = {
     forever: "Keine Kreditkarte nötig",
     freeF1: "Erste 3 Aufgaben pro Thema",
     freeF2: "Alle Klassen 1–3 zum Ausprobieren",
-    freeF3: "Kein Kreditkarte nötig",
+    freeF3: "Keine Kreditkarte nötig",
     freeF4: "Sofort loslegen",
     premiumF1: "Alle Inhalte 1.–3. Klasse",
     premiumF2: "Eltern-Dashboard",
