@@ -16,6 +16,8 @@ const grade2Math: Topic[] = [
       { id: "z8", type: "fill-in-blank", question: "Wie viele Einer hat die Zahl 63? ___", answer: "3", hints: ["6 Zehner und ___ Einer = 63"], difficulty: 1 },
       { id: "z9", type: "multiple-choice", question: "Was ist 10 weniger als 50?", answer: "40", options: ["30","40","49","60"], hints: ["50 - 10 = ?"], difficulty: 1 },
       { id: "z10", type: "fill-in-blank", question: "Ergänze: 30, 40, 50, ___", answer: "60", hints: ["Zähle in Zehnerschritten."], difficulty: 1 },
+      { id: "z11", type: "number-line", question: "Zeige die Zahl 35 auf dem Zahlenstrahl!", answer: "35", numberMin: 0, numberMax: 100, numberStep: 5, hints: ["35 liegt zwischen 30 und 40."], difficulty: 1 },
+      { id: "z12", type: "number-line", question: "Wo liegt die Zahl 60 auf dem Zahlenstrahl?", answer: "60", numberMin: 0, numberMax: 100, numberStep: 10, hints: ["Zähle die Zehner: 10, 20, 30, 40, 50, 60..."], difficulty: 1 },
     ],
   },
   {

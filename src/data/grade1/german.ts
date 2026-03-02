@@ -39,6 +39,21 @@ const grade1German: Topic[] = [
         { id: "vogel", label: "Vogel", image: "/images/animals/bird.svg" },
         { id: "fisch", label: "Fisch", image: "/images/animals/fish.svg" },
       ]},
+      { id: "ew12", type: "word-search", question: "Finde die Tiernamen im Gitter!", answer: "done", wordList: ["HUND","KATZE","VOGEL"], gridSize: 7, hints: ["Die Wörter stehen waagrecht von links nach rechts."], difficulty: 2 },
+      { id: "ew13", type: "drag-drop", question: "Ordne den Tieren ihre Namen zu!", answer: "done",
+        dragItems: [
+          { id: "hund-tile", label: "Hund", emoji: "🐶" },
+          { id: "katze-tile", label: "Katze", emoji: "🐱" },
+          { id: "vogel-tile", label: "Vogel", emoji: "🐦" },
+        ],
+        dropZones: [
+          { id: "z-hund", label: "Bellt 🔊" },
+          { id: "z-katze", label: "Schnurrt 😺" },
+          { id: "z-vogel", label: "Singt 🎵" },
+        ],
+        dropAnswers: { "z-hund": "hund-tile", "z-katze": "katze-tile", "z-vogel": "vogel-tile" },
+        hints: ["Ein Hund bellt, eine Katze schnurrt, ein Vogel singt."], difficulty: 2,
+      },
     ],
   },
   {

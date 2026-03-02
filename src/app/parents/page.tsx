@@ -291,6 +291,9 @@ export default function ParentsDashboard() {
         <Link href="/dashboard" className="w-full text-center bg-green-600 text-white py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
           🎒 {t("Jetzt üben","Pratiquer","Esercitati","Practice now")}
         </Link>
+        <Link href="/family" className="text-xs text-gray-400 underline">
+          👨‍👩‍👧‍👦 {t("Familien-Rangliste","Classement familial","Classifica famiglia","Family leaderboard")}
+        </Link>
         <Link href="/trophies" className="text-xs text-gray-400 underline">
           🏆 {t("Trophäen ansehen","Voir trophées","Vedi trofei","View trophies")}
         </Link>

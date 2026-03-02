@@ -1,4 +1,4 @@
-export type ExerciseType = "multiple-choice" | "fill-in-blank" | "counting" | "matching" | "memory";
+export type ExerciseType = "multiple-choice" | "fill-in-blank" | "counting" | "matching" | "memory" | "drag-drop" | "number-line" | "word-search";
 
 export interface Exercise {
   id: string;
@@ -13,7 +13,15 @@ export interface Exercise {
   image?: string;           // main question illustration (path under /images/)
   optionImages?: string[];  // per-option images for visual multiple-choice
   mascot?: "wave" | "think" | "celebrate" | "run" | "sit-read" | "jump-star";
-  pairs?: { id: string; label: string; image?: string; emoji?: string }[]; // for memory type
+  pairs?: { id: string; label: string; image?: string; emoji?: string }[];       // memory
+  dragItems?: { id: string; label: string; image?: string; emoji?: string }[];  // drag-drop
+  dropZones?: { id: string; label: string }[];                                  // drag-drop
+  dropAnswers?: Record<string, string>;                                          // drag-drop: zoneId→itemId
+  numberMin?: number;   // number-line
+  numberMax?: number;   // number-line
+  numberStep?: number;  // number-line
+  wordList?: string[];  // word-search
+  gridSize?: number;    // word-search
   free?: boolean;
 }
 

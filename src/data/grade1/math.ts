@@ -16,6 +16,8 @@ const grade1Math: Topic[] = [
       { id: "z8", type: "fill-in-blank", question: "Was kommt vor der 3? ___, 3", answer: "2", hints: ["Zähle rückwärts: 4, 3, ..."], difficulty: 1 },
       { id: "z9", type: "multiple-choice", question: "Welche Zahl ist die kleinste?", answer: "1", options: ["1","5","3","8"], hints: ["Die kleinste Zahl ist am weitesten links auf dem Zahlenstrahl."], difficulty: 2 },
       { id: "z10", type: "fill-in-blank", question: "Ergänze die Reihe: 2, 4, 6, ___", answer: "8", hints: ["Zähle in Zweierschritten.", "2, 4, 6, ..."], difficulty: 2 },
+      { id: "z11", type: "number-line", question: "Zeige die Zahl 7 auf dem Zahlenstrahl!", answer: "7", numberMin: 0, numberMax: 10, numberStep: 1, hints: ["Schiebe den Regler bis zur richtigen Zahl."], difficulty: 1 },
+      { id: "z12", type: "number-line", question: "Wo liegt die Zahl 4 auf dem Zahlenstrahl?", answer: "4", numberMin: 0, numberMax: 10, numberStep: 1, hints: ["Zähle von links: 0, 1, 2, 3, 4..."], difficulty: 1 },
     ],
   },
   {
@@ -65,6 +67,21 @@ const grade1Math: Topic[] = [
       { id: "f6", type: "multiple-choice", question: "Welche Form hat ein Dach oft?", answer: "Dreieck", options: ["Kreis","Quadrat","Dreieck","Rechteck"], optionImages: ["/images/shapes/circle.svg","/images/shapes/square.svg","/images/shapes/triangle.svg","/images/shapes/rectangle.svg"], hints: ["Es hat eine Spitze oben."], difficulty: 1 },
       { id: "f7", type: "multiple-choice", question: "Wie lang sind alle Seiten beim Quadrat?", answer: "gleich lang", options: ["gleich lang","unterschiedlich lang","rund","schief"], hints: ["Beim Quadrat sind alle 4 Seiten identisch."], difficulty: 2 },
       { id: "f8", type: "fill-in-blank", question: "Ein Dreieck hat ___ Seiten.", answer: "3", hints: ["Drei Ecken = drei Seiten."], difficulty: 1 },
+      { id: "f9", type: "drag-drop", question: "Ordne die Formen den richtigen Namen zu!", answer: "done",
+        dragItems: [
+          { id: "kreis", label: "Kreis", image: "/images/shapes/circle.svg" },
+          { id: "dreieck", label: "Dreieck", image: "/images/shapes/triangle.svg" },
+          { id: "quadrat", label: "Quadrat", image: "/images/shapes/square.svg" },
+        ],
+        dropZones: [
+          { id: "zone-rund", label: "Rund, keine Ecken" },
+          { id: "zone-3ecken", label: "3 Ecken" },
+          { id: "zone-4gleich", label: "4 gleiche Seiten" },
+        ],
+        dropAnswers: { "zone-rund": "kreis", "zone-3ecken": "dreieck", "zone-4gleich": "quadrat" },
+        hints: ["Schau dir die Form genau an.", "Dreieck = drei Ecken, Quadrat = vier gleiche Seiten"],
+        difficulty: 2,
+      },
     ],
   },
   {

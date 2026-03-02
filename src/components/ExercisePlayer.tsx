@@ -7,6 +7,9 @@ import CountingGame from "./exercises/CountingGame";
 import HintSystem from "./HintSystem";
 import ProgressBar from "./ProgressBar";
 import MemoryGame from "./exercises/MemoryGame";
+import DragDrop from "./exercises/DragDrop";
+import NumberLine from "./exercises/NumberLine";
+import WordSearch from "./exercises/WordSearch";
 import RewardAnimation from "./RewardAnimation";
 import Image from "next/image";
 import Link from "next/link";
@@ -271,6 +274,33 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           )}
           {current.type === "memory" && (
             <MemoryGame pairs={current.pairs ?? []} onAnswer={handleAnswer} />
+          )}
+          {current.type === "drag-drop" && (
+            <DragDrop
+              question={current.question}
+              items={current.dragItems ?? []}
+              zones={current.dropZones ?? []}
+              answers={current.dropAnswers ?? {}}
+              onAnswer={handleAnswer}
+            />
+          )}
+          {current.type === "number-line" && (
+            <NumberLine
+              question={current.question}
+              min={current.numberMin ?? 0}
+              max={current.numberMax ?? 10}
+              answer={Number(current.answer)}
+              step={current.numberStep ?? 1}
+              onAnswer={handleAnswer}
+            />
+          )}
+          {current.type === "word-search" && (
+            <WordSearch
+              question={current.question}
+              words={current.wordList ?? []}
+              gridSize={current.gridSize}
+              onAnswer={handleAnswer}
+            />
           )}
           <HintSystem hints={current.hints} onHintUsed={() => setHintsUsed(h => h + 1)} />
         </div>
