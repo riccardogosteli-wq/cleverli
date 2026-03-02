@@ -21,7 +21,7 @@ export default function Navigation() {
         {/* Logo — floats below nav bar for a premium feel */}
         <Link href="/" className="flex items-center gap-3 min-h-[44px] relative" onClick={() => setOpen(false)} style={{ marginBottom: "-28px", zIndex: 60 }}>
           <Image
-            src="/cleverli-wave.png"
+            src="/cleverli-logo.png"
             alt="Cleverli – Lernplattform für Schweizer Kinder"
             width={210}
             height={70}
