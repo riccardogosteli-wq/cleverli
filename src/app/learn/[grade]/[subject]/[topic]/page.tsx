@@ -1,0 +1,31 @@
+import { getTopics } from "@/data/index";
+import ExercisePlayer from "@/components/ExercisePlayer";
+import Link from "next/link";
+
+interface Props { params: Promise<{ grade: string; subject: string; topic: string }> }
+
+export default async function TopicPage({ params }: Props) {
+  const { grade, subject, topic: topicId } = await params;
+  const topics = getTopics(parseInt(grade), subject);
+  const topic = topics.find(t => t.id === topicId);
+
+  if (!topic) {
+    return (
+      <div className="max-w-xl mx-auto px-4 py-16 text-center">
+        <p className="text-gray-500">Thema nicht gefunden.</p>
+        <Link href="/dashboard" className="text-green-600 underline mt-4 block">Zurück zur Übersicht</Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-xl mx-auto px-4 py-6 space-y-4">
+      <Link href={`/learn/${grade}/${subject}`} className="text-sm text-gray-400 hover:text-gray-600">← Zurück</Link>
+      <div className="flex items-center gap-2">
+        <span className="text-3xl">{topic.emoji}</span>
+        <h1 className="text-2xl font-bold text-gray-800">{topic.title}</h1>
+      </div>
+      <ExercisePlayer topic={topic} grade={parseInt(grade)} subject={subject} />
+    </div>
+  );
+}

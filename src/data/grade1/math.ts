@@ -1,0 +1,72 @@
+import { Topic } from "@/types/exercise";
+
+const grade1Math: Topic[] = [
+  {
+    id: "zahlen-1-10",
+    title: "Zahlen 1–10",
+    emoji: "🔢",
+    exercises: [
+      { id: "z1", type: "counting", question: "Wie viele Äpfel siehst du?", answer: "4", emoji: "🍎", options: ["3","4","5","6"], hints: ["Zähle jeden Apfel einzeln.", "1, 2, 3, 4..."], difficulty: 1, free: true },
+      { id: "z2", type: "counting", question: "Wie viele Sterne siehst du?", answer: "7", emoji: "⭐", options: ["6","7","8","9"], hints: ["Zähle jeden Stern.", "Fang links an."], difficulty: 1, free: true },
+      { id: "z3", type: "counting", question: "Wie viele Blumen siehst du?", answer: "3", emoji: "🌸", options: ["2","3","4","5"], hints: ["Zähle jede Blume."], difficulty: 1, free: true },
+      { id: "z4", type: "multiple-choice", question: "Welche Zahl kommt nach der 5?", answer: "6", options: ["4","6","7","8"], hints: ["Zähle weiter: 4, 5, ..."], difficulty: 1 },
+      { id: "z5", type: "multiple-choice", question: "Welche Zahl ist die grösste?", answer: "9", options: ["3","7","9","5"], hints: ["Die grösste Zahl ist am weitesten rechts auf dem Zahlenstrahl."], difficulty: 2 },
+      { id: "z6", type: "fill-in-blank", question: "Schreibe die Zahl nach der 7: 7, ___", answer: "8", hints: ["Zähle: 6, 7, 8..."], difficulty: 1 },
+      { id: "z7", type: "multiple-choice", question: "Was ist die Zahl Acht?", answer: "8", options: ["6","7","8","9"], hints: ["Acht = 8"], difficulty: 1 },
+      { id: "z8", type: "fill-in-blank", question: "Was kommt vor der 3? ___, 3", answer: "2", hints: ["Zähle rückwärts: 4, 3, ..."], difficulty: 1 },
+      { id: "z9", type: "multiple-choice", question: "Welche Zahl ist die kleinste?", answer: "1", options: ["1","5","3","8"], hints: ["Die kleinste Zahl ist am weitesten links auf dem Zahlenstrahl."], difficulty: 2 },
+      { id: "z10", type: "fill-in-blank", question: "Ergänze die Reihe: 2, 4, 6, ___", answer: "8", hints: ["Zähle in Zweierschritten.", "2, 4, 6, ..."], difficulty: 2 },
+    ],
+  },
+  {
+    id: "addition-bis-10",
+    title: "Addition bis 10",
+    emoji: "➕",
+    exercises: [
+      { id: "a1", type: "multiple-choice", question: "3 + 4 = ?", answer: "7", options: ["6","7","8","9"], hints: ["Zähle 3 Finger, dann noch 4 dazu."], difficulty: 1, free: true },
+      { id: "a2", type: "fill-in-blank", question: "2 + 5 = ___", answer: "7", hints: ["Zähle von 2 aus: 3, 4, 5, 6, 7 (5 Schritte)."], difficulty: 1, free: true },
+      { id: "a3", type: "multiple-choice", question: "1 + 8 = ?", answer: "9", options: ["7","8","9","10"], hints: ["Von 1 aus 8 weiterzählen."], difficulty: 1, free: true },
+      { id: "a4", type: "fill-in-blank", question: "4 + 4 = ___", answer: "8", hints: ["Gleiche Zahlen addieren: 4+4=8"], difficulty: 1 },
+      { id: "a5", type: "multiple-choice", question: "5 + 5 = ?", answer: "10", options: ["8","9","10","11"], hints: ["Fünf und fünf ergibt zehn!"], difficulty: 1 },
+      { id: "a6", type: "fill-in-blank", question: "0 + 7 = ___", answer: "7", hints: ["Null plus eine Zahl = die Zahl selbst."], difficulty: 1 },
+      { id: "a7", type: "multiple-choice", question: "6 + 3 = ?", answer: "9", options: ["7","8","9","10"], hints: ["Von 6 aus 3 weiterzählen: 7, 8, 9."], difficulty: 1 },
+      { id: "a8", type: "fill-in-blank", question: "2 + ___ = 6", answer: "4", hints: ["Was fehlt? 2 + ? = 6", "6 - 2 = ?"], difficulty: 2 },
+      { id: "a9", type: "multiple-choice", question: "7 + 2 = ?", answer: "9", options: ["8","9","10","11"], hints: ["7, 8, 9"], difficulty: 1 },
+      { id: "a10", type: "fill-in-blank", question: "___ + 3 = 8", answer: "5", hints: ["8 - 3 = ?"], difficulty: 2 },
+    ],
+  },
+  {
+    id: "subtraktion-bis-10",
+    title: "Subtraktion bis 10",
+    emoji: "➖",
+    exercises: [
+      { id: "s1", type: "multiple-choice", question: "8 − 3 = ?", answer: "5", options: ["4","5","6","7"], hints: ["Zähle von 8 rückwärts: 7, 6, 5 (3 Schritte)."], difficulty: 1, free: true },
+      { id: "s2", type: "fill-in-blank", question: "10 − 4 = ___", answer: "6", hints: ["Von 10 aus 4 rückwärts: 9, 8, 7, 6."], difficulty: 1, free: true },
+      { id: "s3", type: "multiple-choice", question: "7 − 7 = ?", answer: "0", options: ["0","1","2","7"], hints: ["Eine Zahl minus sich selbst = 0."], difficulty: 1, free: true },
+      { id: "s4", type: "fill-in-blank", question: "9 − 5 = ___", answer: "4", hints: ["9, 8, 7, 6, 5 (5 Schritte zurück)"], difficulty: 1 },
+      { id: "s5", type: "multiple-choice", question: "6 − 2 = ?", answer: "4", options: ["3","4","5","6"], hints: ["6, 5, 4 (2 Schritte zurück)"], difficulty: 1 },
+      { id: "s6", type: "fill-in-blank", question: "5 − ___ = 2", answer: "3", hints: ["5 minus was ergibt 2?", "5 - 3 = 2"], difficulty: 2 },
+      { id: "s7", type: "multiple-choice", question: "10 − 6 = ?", answer: "4", options: ["3","4","5","6"], hints: ["10 - 6 = 4"], difficulty: 1 },
+      { id: "s8", type: "fill-in-blank", question: "8 − 0 = ___", answer: "8", hints: ["Minus null ändert nichts."], difficulty: 1 },
+      { id: "s9", type: "multiple-choice", question: "3 − 1 = ?", answer: "2", options: ["1","2","3","4"], hints: ["3, 2 (1 Schritt zurück)"], difficulty: 1 },
+      { id: "s10", type: "fill-in-blank", question: "___ − 4 = 3", answer: "7", hints: ["? - 4 = 3", "3 + 4 = ?"], difficulty: 2 },
+    ],
+  },
+  {
+    id: "formen",
+    title: "Formen erkennen",
+    emoji: "🔷",
+    exercises: [
+      { id: "f1", type: "multiple-choice", question: "Ein Rad hat die Form eines...?", answer: "Kreises", options: ["Kreises","Quadrats","Dreiecks","Rechtecks"], hints: ["Es ist rund."], difficulty: 1, free: true },
+      { id: "f2", type: "multiple-choice", question: "Ein Tisch hat (von oben) die Form eines...?", answer: "Rechtecks", options: ["Kreises","Quadrats","Dreiecks","Rechtecks"], hints: ["Es hat 4 Seiten, aber zwei sind länger."], difficulty: 1, free: true },
+      { id: "f3", type: "multiple-choice", question: "Wie viele Ecken hat ein Dreieck?", answer: "3", options: ["2","3","4","5"], hints: ["Tri = drei auf Latein."], difficulty: 1, free: true },
+      { id: "f4", type: "multiple-choice", question: "Wie viele Seiten hat ein Quadrat?", answer: "4", options: ["3","4","5","6"], hints: ["Ein Quadrat sieht aus wie ein Würfel von vorne."], difficulty: 1 },
+      { id: "f5", type: "multiple-choice", question: "Welche Form ist komplett rund?", answer: "Kreis", options: ["Kreis","Quadrat","Dreieck","Rechteck"], hints: ["Kein Anfang, kein Ende."], difficulty: 1 },
+      { id: "f6", type: "multiple-choice", question: "Ein Dach hat oft die Form eines...?", answer: "Dreiecks", options: ["Kreises","Quadrats","Dreiecks","Rechtecks"], hints: ["Es hat eine Spitze oben."], difficulty: 1 },
+      { id: "f7", type: "multiple-choice", question: "Beim Quadrat sind alle Seiten...?", answer: "gleich lang", options: ["gleich lang","unterschiedlich lang","rund","schief"], hints: ["Beim Quadrat sind alle 4 Seiten identisch."], difficulty: 2 },
+      { id: "f8", type: "fill-in-blank", question: "Ein Dreieck hat ___ Seiten.", answer: "3", hints: ["Drei Ecken = drei Seiten."], difficulty: 1 },
+    ],
+  },
+];
+
+export default grade1Math;

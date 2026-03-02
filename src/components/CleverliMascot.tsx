@@ -2,7 +2,7 @@
 
 interface Props {
   size?: number;
-  mood?: "happy" | "thinking" | "celebrate";
+  mood?: "happy" | "thinking" | "celebrate" | "celebrate";
 }
 
 export default function CleverliMascot({ size = 150, mood = "happy" }: Props) {
