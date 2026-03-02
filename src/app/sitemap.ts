@@ -10,11 +10,11 @@ const SUBJECTS: Record<number, string[]> = {
 
 const TOPICS: Record<string, string[]> = {
   "1/math": ["zahlen-1-10","addition-bis-10","subtraktion-bis-10","formen","vergleichen","muster","zahlen-bis-20"],
-  "1/german": ["buchstaben","einfache-woerter","gross-klein","reime","abc-reihenfolge","saetze-lesen"],
+  "1/german": ["buchstaben","einfache-woerter","gross-kleinschreibung","reime","abc-reihenfolge","saetze-lesen"],
   "2/math": ["zahlen-bis-100","addition-bis-20","subtraktion-bis-20","einmaleins","laengen-messen","uhrzeit","geld-chf"],
   "2/german": ["nomen-artikel","verben","silben","adjektive-gr2","satzzeichen","texte-lesen"],
   "3/math": ["zahlen-bis-1000","rechnen-bis-1000","geometrie","einmaleins-komplett","division","brueche","textaufgaben"],
-  "3/german": ["wortarten","adjektive","saetze-bauen","leseverstaendnis","rechtschreibung"],
+  "3/german": ["wortarten","adjektive","saetze","leseverstaendnis","rechtschreibung"],
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {

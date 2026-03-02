@@ -17,13 +17,6 @@ export function getTopics(grade: number, subject: string): Topic[] {
   return map[`${grade}-${subject}`] ?? [];
 }
 
-// Mark first 3 exercises per topic as free
-export function withFreeMarks(topics: Topic[]): Topic[] {
-  return topics.map(topic => ({
-    ...topic,
-    exercises: topic.exercises.map((ex, i) => ({ ...ex, free: i < 3 })),
-  }));
-}
 
 export const SUBJECTS = [
   { id: "math", name: "Mathematik", emoji: "🔢", color: "bg-blue-50 border-blue-300 text-blue-700" },

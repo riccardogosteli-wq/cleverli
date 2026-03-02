@@ -51,7 +51,7 @@ export default function Home() {
                 {tr("startFree")} →
               </Link>
               <Link href="/signup" className="border-2 border-green-600 text-green-700 px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-50 active:scale-95 transition-all text-center">
-                Konto erstellen
+                {tr("createAccount")}
               </Link>
             </div>
             <p className="mt-3 text-xs text-gray-400 px-4 sm:px-0">{tr("freeNote")}</p>

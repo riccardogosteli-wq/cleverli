@@ -46,13 +46,18 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLocked]);
 
-  // Save progress when done
+  // Save progress when done — only overwrite if new score is better or equal
   useEffect(() => {
     if (done) {
-      const s = calcStars(score, exercises.length);
-      localStorage.setItem(`cleverli_${grade}_${subject}_${topic.id}`, JSON.stringify({
-        completed: exercises.length, score, stars: s, lastPlayed: new Date().toISOString()
-      }));
+      const key = `cleverli_${grade}_${subject}_${topic.id}`;
+      const existing = JSON.parse(localStorage.getItem(key) ?? "{}");
+      const prevScore = existing?.score ?? 0;
+      if (score >= prevScore) {
+        const s = calcStars(score, exercises.length);
+        localStorage.setItem(key, JSON.stringify({
+          completed: exercises.length, score, stars: s, lastPlayed: new Date().toISOString()
+        }));
+      }
     }
   }, [done, score, grade, subject, topic.id, exercises.length]);
 

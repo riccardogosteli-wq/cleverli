@@ -100,7 +100,7 @@ export default function Dashboard() {
         <div className="flex items-center gap-2">
           <span className="text-2xl">{currentSubject.emoji}</span>
           <h1 className="text-lg sm:text-xl font-bold text-gray-800">
-            {currentSubject.name} — {grade}. {tr("gradeLabel")}
+            {tr(currentSubject.id)} — {grade}. {tr("gradeLabel")}
           </h1>
         </div>
       </div>
