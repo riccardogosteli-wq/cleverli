@@ -23,6 +23,7 @@ export default function Navigation() {
           {LANGUAGES.map(l => (
             <button key={l.code} onClick={() => setLang(l.code as Lang)}
               title={l.name}
+              aria-label={l.name}
               style={{ minWidth: "36px", minHeight: "36px" }}
               className={`text-lg sm:text-xl rounded-lg flex items-center justify-center transition-all ${
                 lang === l.code

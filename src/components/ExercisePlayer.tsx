@@ -158,8 +158,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // ── Exercise ─────────────────────────────────────────────────────
   return (
     <div className="space-y-3 max-w-xl mx-auto">
-      {/* Progress bar shows next exercise number (human-friendly: 1 of 8, not 0 of 8) */}
-      <ProgressBar current={idx + 1} total={exercises.length} streak={streak} />
+      {/* Progress bar — hide while reward animation is showing */}
+      {answered === null && (
+        <ProgressBar current={idx + 1} total={exercises.length} streak={streak} />
+      )}
 
       {/* Exercise card — hidden when answered, replaced by reward */}
       {answered === null && (
@@ -191,7 +193,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       {/* Free limit notice */}
       {!isPremium && idx < FREE_LIMIT && (
         <p className="text-center text-xs text-gray-400">
-          Aufgabe {idx + 1} von {FREE_LIMIT} kostenlos —{" "}
+          💡 {FREE_LIMIT} kostenlose Aufgaben pro Thema —{" "}
           <Link href="/signup" className="text-green-600 underline">alle {exercises.length} freischalten</Link>
         </p>
       )}

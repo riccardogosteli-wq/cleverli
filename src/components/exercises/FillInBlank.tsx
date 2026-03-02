@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, useMemo } from "react";
+import { useLang } from "@/lib/LangContext";
 
 interface Props {
   question: string;
@@ -12,6 +13,7 @@ function isNumericAnswer(answer: string): boolean {
 }
 
 export default function FillInBlank({ question, answer, onAnswer }: Props) {
+  const { tr } = useLang();
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [shake, setShake] = useState(false);
@@ -57,7 +59,7 @@ export default function FillInBlank({ question, answer, onAnswer }: Props) {
           value={value}
           onChange={e => !submitted && setValue(e.target.value)}
           onKeyDown={e => e.key === "Enter" && submit()}
-          placeholder={numeric ? "Zahl eingeben..." : "Antwort eingeben..."}
+          placeholder={numeric ? tr("numberPlaceholder") : tr("answerPlaceholder")}
           className={`w-full text-center font-bold border-2 rounded-2xl px-4 py-4 outline-none transition-all
             ${correct ? "border-green-500 bg-green-50 text-green-700" :
               wrong ? "border-red-400 bg-red-50 text-red-700" :
@@ -85,11 +87,11 @@ export default function FillInBlank({ question, answer, onAnswer }: Props) {
         disabled={submitted || !value.trim()}
         className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-lg hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        {submitted ? (correct ? "Richtig! 🎉" : "Weiter...") : "Überprüfen ✓"}
+        {submitted ? (correct ? "Richtig! 🎉" : "Weiter →") : tr("checkAnswer")}
       </button>
 
       {!isMobile && (
-        <p className="text-xs text-center text-gray-400 hidden sm:block">Enter-Taste zum Bestätigen</p>
+        <p className="text-xs text-center text-gray-400 hidden sm:block">{tr("enterKeyHint")}</p>
       )}
 
       <style>{`
