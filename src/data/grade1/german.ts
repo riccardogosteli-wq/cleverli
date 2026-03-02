@@ -33,6 +33,12 @@ const grade1German: Topic[] = [
       { id: "ew8", type: "multiple-choice", question: "Was scheint am Tag? ☀️", answer: "Sonne", options: ["Mond","Sonne","Stern","Wolke"], hints: ["Es ist hell und warm."], difficulty: 1 },
       { id: "ew9", type: "multiple-choice", question: "Wo lernen Kinder? 🏫", answer: "Schule", options: ["Markt","Schule","Wald","See"], hints: ["Man geht täglich dorthin, um zu lernen."], difficulty: 1 },
       { id: "ew10", type: "multiple-choice", question: "Was ist das Gegenteil von «Tag»?", answer: "Nacht", options: ["Nacht","Morgen","Abend","Mittag"], hints: ["Wenn die Sonne untergeht, kommt die ..."], difficulty: 1 },
+      { id: "ew11", type: "memory", question: "Finde alle Tier-Paare!", answer: "done", hints: ["Merke dir die Position jedes Tieres."], difficulty: 2, pairs: [
+        { id: "hund", label: "Hund", image: "/images/animals/dog.svg" },
+        { id: "katze", label: "Katze", image: "/images/animals/cat.svg" },
+        { id: "vogel", label: "Vogel", image: "/images/animals/bird.svg" },
+        { id: "fisch", label: "Fisch", image: "/images/animals/fish.svg" },
+      ]},
     ],
   },
   {

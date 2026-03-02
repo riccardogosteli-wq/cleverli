@@ -1,4 +1,4 @@
-export type ExerciseType = "multiple-choice" | "fill-in-blank" | "counting" | "matching";
+export type ExerciseType = "multiple-choice" | "fill-in-blank" | "counting" | "matching" | "memory";
 
 export interface Exercise {
   id: string;
@@ -12,7 +12,8 @@ export interface Exercise {
   emoji?: string;
   image?: string;           // main question illustration (path under /images/)
   optionImages?: string[];  // per-option images for visual multiple-choice
-  mascot?: "wave" | "think" | "celebrate" | "run" | "sit-read" | "jump-star"; // override mascot mood
+  mascot?: "wave" | "think" | "celebrate" | "run" | "sit-read" | "jump-star";
+  pairs?: { id: string; label: string; image?: string; emoji?: string }[]; // for memory type
   free?: boolean;
 }
 

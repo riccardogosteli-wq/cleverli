@@ -6,6 +6,7 @@ import FillInBlank from "./exercises/FillInBlank";
 import CountingGame from "./exercises/CountingGame";
 import HintSystem from "./HintSystem";
 import ProgressBar from "./ProgressBar";
+import MemoryGame from "./exercises/MemoryGame";
 import RewardAnimation from "./RewardAnimation";
 import Image from "next/image";
 import Link from "next/link";
@@ -267,6 +268,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           )}
           {current.type === "counting" && (
             <CountingGame question={current.question} answer={current.answer} emoji={current.emoji} options={current.options ?? []} onAnswer={handleAnswer} questionImage={current.image} />
+          )}
+          {current.type === "memory" && (
+            <MemoryGame pairs={current.pairs ?? []} onAnswer={handleAnswer} />
           )}
           <HintSystem hints={current.hints} onHintUsed={() => setHintsUsed(h => h + 1)} />
         </div>
