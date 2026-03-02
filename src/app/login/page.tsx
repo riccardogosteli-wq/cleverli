@@ -5,22 +5,58 @@ import { useRouter } from "next/navigation";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 
+// ── Hardcoded test accounts (replace with Supabase auth later) ────────────────
+const TEST_ACCOUNTS: { email: string; password: string; premium: boolean; name: string }[] = [
+  { email: "test@cleverli.ch",    password: "CleverliTest2026!", premium: true,  name: "Testnutzer Premium" },
+  { email: "free@cleverli.ch",    password: "CleverliTest2026!", premium: false, name: "Testnutzer Free" },
+];
+
+const SESSION_KEY = "cleverli_session";
+
+export function setSession(user: { email: string; name: string; premium: boolean }) {
+  if (typeof window !== "undefined")
+    localStorage.setItem(SESSION_KEY, JSON.stringify(user));
+}
+
+export function getSession(): { email: string; name: string; premium: boolean } | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(SESSION_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+export function clearSession() {
+  if (typeof window !== "undefined") localStorage.removeItem(SESSION_KEY);
+}
+
 export default function Login() {
   const { tr } = useLang();
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [notice, setNotice] = useState("");
+  const [error, setError] = useState("");
 
   const handleLogin = () => {
-    if (!email || !password) { setNotice("Bitte E-Mail und Passwort eingeben."); return; }
+    if (!email || !password) { setError("Bitte E-Mail und Passwort eingeben."); return; }
     setLoading(true);
-    setNotice("");
-    // Auth coming soon — for now redirect to dashboard after brief delay
+    setError("");
+
+    // Check test accounts
+    const account = TEST_ACCOUNTS.find(
+      a => a.email.toLowerCase() === email.toLowerCase() && a.password === password
+    );
+
     setTimeout(() => {
-      router.push("/dashboard");
-    }, 800);
+      if (account) {
+        setSession({ email: account.email, name: account.name, premium: account.premium });
+        router.push("/dashboard");
+      } else {
+        setLoading(false);
+        setError("E-Mail oder Passwort falsch. (Echtanmeldung folgt bald)");
+      }
+    }, 600);
   };
 
   return (
@@ -32,10 +68,17 @@ export default function Login() {
           <p className="text-sm text-gray-400 mt-1">Willkommen zurück!</p>
         </div>
 
+        {/* Test account hint — only in dev/test */}
+        <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl px-4 py-3 text-xs text-amber-800 space-y-1">
+          <div className="font-bold">🧪 Test-Zugänge:</div>
+          <div><strong>Premium:</strong> test@cleverli.ch · CleverliTest2026!</div>
+          <div><strong>Gratis:</strong> free@cleverli.ch · CleverliTest2026!</div>
+        </div>
+
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-3">
-          {notice && (
-            <div className="bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 text-sm text-orange-700">
-              {notice}
+          {error && (
+            <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700">
+              {error}
             </div>
           )}
           <input

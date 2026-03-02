@@ -4,10 +4,11 @@ import { useState } from "react";
 import { useLang } from "@/lib/LangContext";
 import { LANGUAGES, Lang } from "@/lib/i18n";
 import XpBar from "./XpBar";
+import { useSession } from "@/hooks/useSession";
 
 export default function Navigation() {
   const { lang, setLang, tr } = useLang();
-  // lang already available for mobile menu labels
+  const { session, isPremium, logout } = useSession();
   const [open, setOpen] = useState(false);
 
   return (
@@ -40,10 +41,21 @@ export default function Navigation() {
         <div className="hidden sm:flex items-center gap-3" style={{ flexShrink: 0 }}>
           <XpBar />
           <Link href="/dashboard" className="text-sm text-gray-600 hover:text-green-700 font-medium py-2 px-2 whitespace-nowrap" style={{ minWidth: "80px", textAlign: "center" }}>{tr("learnNav")}</Link>
-          <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap" style={{ minWidth: "56px", textAlign: "center" }}>{tr("login")}</Link>
-          <Link href="/signup" className="text-sm bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center" style={{ width: "196px" }}>
-            {tr("signup")}
-          </Link>
+          {session ? (
+            <>
+              {isPremium && <span className="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded-full border border-amber-200 shrink-0">⭐ Premium</span>}
+              <button onClick={() => { logout(); window.location.href = "/"; }} className="text-sm text-gray-500 hover:text-gray-700 font-medium py-2 px-2 whitespace-nowrap">
+                Abmelden
+              </button>
+            </>
+          ) : (
+            <>
+              <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap" style={{ minWidth: "56px", textAlign: "center" }}>{tr("login")}</Link>
+              <Link href="/signup" className="text-sm bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center" style={{ width: "196px" }}>
+                {tr("signup")}
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Mobile hamburger */}
