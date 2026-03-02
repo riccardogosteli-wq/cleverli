@@ -11,6 +11,7 @@ import { useLang } from "@/lib/LangContext";
 import { getTopics, SUBJECTS } from "@/data/index";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
+import ParentPinGate from "@/components/ParentPinGate";
 
 interface TopicStat {
   grade: number;
@@ -111,6 +112,7 @@ export default function ParentsDashboard() {
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
 
   return (
+    <ParentPinGate>
     <main className="max-w-lg mx-auto px-4 py-6 pb-12 space-y-5">
 
       {/* ── Header ── */}
@@ -299,5 +301,6 @@ export default function ParentsDashboard() {
         </Link>
       </div>
     </main>
+    </ParentPinGate>
   );
 }

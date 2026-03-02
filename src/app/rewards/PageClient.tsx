@@ -9,6 +9,7 @@ import {
   getProgressValue,
 } from "@/lib/rewards";
 import { useLang } from "@/lib/LangContext";
+import { useSession } from "@/hooks/useSession";
 import { getTopics, SUBJECTS } from "@/data/index";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
@@ -20,6 +21,7 @@ const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
 
 export default function RewardsPage() {
   const { lang } = useLang();
+  const { isPremium, loaded } = useSession();
   const [rewards, setRewards] = useState<Reward[]>([]);
   const [snap, setSnap] = useState<ProgressSnapshot>({ totalExercises: 0, totalTopicsComplete: 0, dailyStreak: 0, totalStars: 0 });
   const [adding, setAdding] = useState(false);
@@ -108,6 +110,29 @@ export default function RewardsPage() {
     if (r.status === "redeemed") return "bg-gray-50 border-gray-200 opacity-60";
     return "bg-white border-gray-200";
   };
+
+  // UJ-9: Premium gate
+  if (loaded && !isPremium) {
+    return (
+      <div className="max-w-sm mx-auto px-4 py-16 text-center space-y-5">
+        <Image src="/cleverli-think.png" alt="" width={110} height={110} className="mx-auto drop-shadow-md" />
+        <h1 className="text-2xl font-extrabold text-gray-900">Belohnungen 🎁</h1>
+        <p className="text-gray-500 text-sm leading-relaxed">
+          Mit dem Belohnungs-System kannst du echte Belohnungen für dein Kind einrichten — und es motivieren, dranzubleiben.
+        </p>
+        <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 text-left space-y-2 text-sm text-amber-900">
+          <div>🏆 Belohnungen für Sterne, Streaks und Aufgaben</div>
+          <div>👶 Bis zu 3 Kinderprofile verwalten</div>
+          <div>📊 Lernfortschritt der ganzen Familie sehen</div>
+        </div>
+        <Link href="/signup"
+          className="block w-full bg-amber-500 text-white py-4 rounded-2xl font-bold text-base hover:bg-amber-600 active:scale-95 transition-all shadow-md">
+          Premium freischalten — CHF 9.90/Mt.
+        </Link>
+        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 underline">Zurück zum Lernen</Link>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">

@@ -332,6 +332,14 @@ function DashboardInner() {
         </div>
       )}
 
+      {/* UJ-13: Empty state nudge for new users (no progress yet) */}
+      {profile && profile.xp === 0 && firstNotDoneIdx === 0 && (
+        <div className="flex items-center gap-3 bg-green-50 border-2 border-green-300 rounded-2xl px-4 py-3 text-sm text-green-800 font-medium">
+          <span className="text-2xl">👆</span>
+          <span>Hier starten! Dein erstes Thema wartet auf dich.</span>
+        </div>
+      )}
+
       {/* Topic list */}
       <div className="grid gap-2.5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
         {topics.map((topic, idx) => {
@@ -347,6 +355,8 @@ function DashboardInner() {
               className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
                 done
                   ? "bg-white border-green-200 hover:border-green-400"
+                  : isNext && profile?.xp === 0
+                    ? "bg-green-600 border-green-600 text-white hover:bg-green-700"
                   : isNext
                     ? "bg-green-50 border-green-300 hover:border-green-500"
                     : "bg-white border-gray-100 hover:border-green-300 hover:bg-green-50"

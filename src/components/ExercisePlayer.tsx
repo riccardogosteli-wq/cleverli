@@ -14,6 +14,7 @@ import RewardAnimation from "./RewardAnimation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
 import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
 import { useLang } from "@/lib/LangContext";
@@ -104,6 +105,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   const handleAnswer = (correct: boolean) => {
     stop();
+    setExerciseInProgress(true); // UJ-12: mark exercise as in-progress on first answer
     const newStreak = correct ? streak + 1 : 0;
     const newScore = correct ? score + 1 : score;
     if (correct) { setScore(s => s + 1); setStreak(newStreak); }
@@ -147,6 +149,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     if (idx + 1 >= exercises.length) {
       play("complete");
       setTimeout(() => { if (voiceOn) speak(getPhrase("complete")); }, 600);
+      setExerciseInProgress(false); // UJ-12: clear in-progress flag on completion
       // UJ-7: if review mode done, just show done
       if (isReviewMode) { setDone(true); return; }
       // UJ-7: if mistakes exist and not already reviewing, show review prompt
