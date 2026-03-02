@@ -18,27 +18,27 @@ export default function Navigation() {
           <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline">beta</span>
         </Link>
 
-        {/* Language switcher */}
-        <div className="flex items-center gap-0.5 sm:gap-1">
+        {/* Language switcher — fixed container so switching never shifts layout */}
+        <div className="flex items-center gap-0.5 sm:gap-1" style={{ width: "156px", flexShrink: 0 }}>
           {LANGUAGES.map(l => (
             <button key={l.code} onClick={() => setLang(l.code as Lang)}
               title={l.name}
               aria-label={l.name}
-              style={{ minWidth: "36px", minHeight: "36px" }}
-              className={`text-lg sm:text-xl rounded-lg flex items-center justify-center transition-all ${
+              style={{ width: "36px", height: "36px", fontSize: "20px", flexShrink: 0 }}
+              className={`rounded-lg flex items-center justify-center transition-colors ${
                 lang === l.code
-                  ? "ring-2 ring-green-500 bg-green-50 scale-110"
+                  ? "ring-2 ring-green-500 bg-green-50"
                   : "opacity-50 hover:opacity-100 hover:bg-gray-50"}`}>
               <span aria-hidden="true">{l.flag}</span>
             </button>
           ))}
         </div>
 
-        {/* Desktop nav */}
-        <div className="hidden sm:flex items-center gap-3">
-          <Link href="/dashboard" className="text-sm text-gray-600 hover:text-green-700 font-medium py-2 px-2 whitespace-nowrap">🎒 Lernen</Link>
-          <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap">{tr("login")}</Link>
-          <Link href="/signup" className="text-sm bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center" style={{ minWidth: "130px" }}>
+        {/* Desktop nav — fixed widths prevent layout shift on language change */}
+        <div className="hidden sm:flex items-center gap-3" style={{ flexShrink: 0 }}>
+          <Link href="/dashboard" className="text-sm text-gray-600 hover:text-green-700 font-medium py-2 px-2 whitespace-nowrap" style={{ minWidth: "80px", textAlign: "center" }}>🎒 Lernen</Link>
+          <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap" style={{ minWidth: "56px", textAlign: "center" }}>{tr("login")}</Link>
+          <Link href="/signup" className="text-sm bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center" style={{ width: "196px" }}>
             {tr("signup")}
           </Link>
         </div>

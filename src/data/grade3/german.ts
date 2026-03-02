@@ -70,7 +70,7 @@ const grade3German: Topic[] = [
     title: "Rechtschreibung",
     emoji: "✏️",
     exercises: [
-      { id: "rs1", type: "multiple-choice", question: "Welches Wort ist richtig geschrieben?", answer: "Freund", options: ["Freund","Freund","freund","FREUND"], hints: ["Nomen schreibt man gross."], difficulty: 1, free: true },
+      { id: "rs1", type: "multiple-choice", question: "Welches Wort ist richtig geschrieben?", answer: "Freund", options: ["Freund","freund","FREUND","Freynd"], hints: ["Nomen schreibt man gross."], difficulty: 1, free: true },
       { id: "rs2", type: "multiple-choice", question: "Wie schreibt man das Wort für 'Schule' richtig?", answer: "Schule", options: ["schule","Schule","SCHULE","Schuhle"], hints: ["Nomen = gross, keine doppelten Buchstaben ausser wenn nötig."], difficulty: 1, free: true },
       { id: "rs3", type: "multiple-choice", question: "Welches Wort ist falsch geschrieben?", answer: "hund", options: ["Katze","Vogel","hund","Fisch"], hints: ["Nomen (Tiere, Dinge) schreibt man IMMER gross."], difficulty: 1, free: true },
       { id: "rs4", type: "multiple-choice", question: "Welches Wort hat einen Fehler?", answer: "lauffen", options: ["laufen","springen","lauffen","rennen"], hints: ["'laufen' hat nur ein f, nicht zwei."], difficulty: 2 },
