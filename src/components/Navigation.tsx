@@ -11,6 +11,8 @@ export default function Navigation() {
   const { lang, setLang, tr } = useLang();
   const { session, isPremium, logout } = useSession();
   const [open, setOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const currentLang = LANGUAGES.find(l => l.code === lang);
 
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm overflow-visible"
@@ -30,20 +32,43 @@ export default function Navigation() {
           <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline self-start mt-2">beta</span>
         </Link>
 
-        {/* Language switcher — fixed container so switching never shifts layout */}
-        <div className="flex items-center gap-0.5 sm:gap-1" style={{ width: "156px", flexShrink: 0 }}>
-          {LANGUAGES.map(l => (
-            <button key={l.code} onClick={() => setLang(l.code as Lang)}
-              title={l.name}
-              aria-label={l.name}
-              style={{ width: "36px", height: "36px", fontSize: "20px", flexShrink: 0 }}
-              className={`rounded-lg flex items-center justify-center transition-colors ${
-                lang === l.code
-                  ? "ring-2 ring-green-500 bg-green-50"
-                  : "opacity-50 hover:opacity-100 hover:bg-gray-50"}`}>
-              <span aria-hidden="true">{l.flag}</span>
-            </button>
-          ))}
+        {/* Language switcher — compact dropdown */}
+        <div className="relative" style={{ flexShrink: 0 }}>
+          <button
+            onClick={() => setLangOpen(v => !v)}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-gray-200 bg-white hover:border-green-300 hover:bg-green-50 transition-colors text-sm font-semibold text-gray-700 min-w-[44px]"
+            aria-label="Sprache wählen"
+          >
+            <span style={{ fontSize: "18px" }}>{currentLang?.flag}</span>
+            <span className="text-xs font-bold tracking-wide text-gray-500 uppercase">{lang}</span>
+            <span className={`text-gray-400 text-xs transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}>▾</span>
+          </button>
+
+          {/* Backdrop */}
+          {langOpen && (
+            <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
+          )}
+
+          {/* Dropdown */}
+          {langOpen && (
+            <div className="absolute right-0 mt-1.5 bg-white border border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden min-w-[140px]">
+              {LANGUAGES.map(l => (
+                <button
+                  key={l.code}
+                  onClick={() => { setLang(l.code as Lang); setLangOpen(false); }}
+                  className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
+                    lang === l.code
+                      ? "bg-green-50 text-green-700 font-bold"
+                      : "text-gray-700 hover:bg-gray-50"
+                  }`}
+                >
+                  <span style={{ fontSize: "20px" }}>{l.flag}</span>
+                  <span className="flex-1">{l.name}</span>
+                  {lang === l.code && <span className="text-green-500 text-xs">✓</span>}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Desktop nav — fixed widths prevent layout shift on language change */}
