@@ -133,33 +133,113 @@ export default function TrophiesPage() {
       </div>
 
       {/* ── Level track ── */}
-      <div className="bg-white rounded-3xl p-4 shadow-sm border border-gray-100">
-        <h2 className="font-bold text-gray-700 text-sm mb-3">Level-Weg 🗺️</h2>
-        <div className="flex items-center gap-1 overflow-x-auto pb-1">
+      <div className="bg-white rounded-3xl p-5 shadow-sm border border-gray-100">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="font-bold text-gray-700 text-sm">Level-Weg 🗺️</h2>
+          <span className="text-xs text-gray-400 bg-gray-50 rounded-full px-2 py-0.5">
+            {level.id}/{LEVELS.length}
+          </span>
+        </div>
+
+        {/* Track */}
+        <div className="flex items-end justify-between gap-1 px-1">
           {LEVELS.map((l, i) => {
-            const active = level.id === l.id;
-            const done   = level.id > l.id;
+            const isActive = level.id === l.id;
+            const isDone   = level.id > l.id;
+            const isFuture = level.id < l.id;
+
+            const lTitle = lang === "fr" ? l.titleFr : lang === "it" ? l.titleIt : lang === "en" ? l.titleEn : l.title;
+
             return (
-              <div key={l.id} className="flex items-center gap-1 shrink-0">
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold transition-all
-                    ${active ? "ring-2 ring-green-500 scale-110 bg-green-50" : done ? "bg-gray-100" : "bg-gray-50 opacity-40"}`}
-                  title={l.title}
-                >
-                  {l.emoji}
-                </div>
-                {i < LEVELS.length - 1 && (
-                  <div className={`w-6 h-1 rounded-full ${done ? "bg-green-400" : "bg-gray-200"}`} />
+              <div key={l.id} className="flex flex-col items-center gap-1.5 shrink-0" style={{ flex: 1 }}>
+                {/* Connecting bar (LEFT of icon) */}
+                {i > 0 && (
+                  <div className="absolute" style={{ display: "none" }} />
                 )}
+
+                {/* Icon circle */}
+                <div className="relative flex flex-col items-center">
+                  {isActive && (
+                    <div
+                      className="absolute inset-0 rounded-full animate-ping opacity-30"
+                      style={{ backgroundColor: l.color, transform: "scale(1.4)" }}
+                    />
+                  )}
+                  <div
+                    className={`relative flex items-center justify-center rounded-full font-bold transition-all duration-500 ${
+                      isActive
+                        ? "ring-4 ring-offset-2 shadow-lg"
+                        : isDone
+                          ? "shadow-md"
+                          : "opacity-35 grayscale"
+                    }`}
+                    style={{
+                      width: isActive ? 60 : 46,
+                      height: isActive ? 60 : 46,
+                      fontSize: isActive ? "1.75rem" : "1.3rem",
+                      backgroundColor: isDone || isActive ? l.color + "33" : "#f3f4f6",
+                      borderWidth: 3,
+                      borderStyle: "solid",
+                      borderColor: isDone || isActive ? l.color : "#e5e7eb",
+
+                      boxShadow: isActive ? `0 0 20px ${l.color}88` : isDone ? `0 2px 8px ${l.color}44` : "none",
+                    }}
+                  >
+                    {isDone ? "✓" : isFuture ? "🔒" : l.emoji}
+                  </div>
+
+                  {/* "JETZT" badge on active */}
+                  {isActive && (
+                    <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                      <span className="text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full text-white"
+                        style={{ backgroundColor: l.color }}>
+                        Jetzt
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Label */}
+                <div className={`text-center leading-tight transition-all ${isActive ? "font-bold" : "font-medium opacity-50"}`}
+                  style={{ fontSize: "9px", color: isActive ? l.color : "#9ca3af", maxWidth: 56 }}>
+                  {lTitle}
+                </div>
               </div>
             );
           })}
         </div>
-        <div className="flex gap-1 mt-2 overflow-x-auto">
-          {LEVELS.map(l => (
-            <div key={l.id} className="w-10 shrink-0 text-center text-[9px] text-gray-400 leading-tight">{l.title}</div>
-          ))}
+
+        {/* Connecting line beneath the icons */}
+        <div className="relative mx-4 -mt-8 mb-5" style={{ zIndex: 0 }}>
+          <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+            <div
+              className="h-full rounded-full transition-all duration-1000"
+              style={{
+                width: `${((level.id - 1) / (LEVELS.length - 1)) * 100 + pct / (LEVELS.length - 1)}%`,
+                background: `linear-gradient(to right, #86efac, ${level.color})`,
+              }}
+            />
+          </div>
         </div>
+
+        {/* XP to next level */}
+        {nextLevel && (
+          <div className="flex items-center justify-center gap-2 mt-1">
+            <div className="h-px flex-1 bg-gray-100" />
+            <span className="text-xs text-gray-400">
+              noch <strong className="text-gray-600">{xpToNext} XP</strong> bis{" "}
+              <strong style={{ color: nextLevel.color }}>
+                {nextLevel.emoji} {lang === "fr" ? nextLevel.titleFr : lang === "it" ? nextLevel.titleIt : lang === "en" ? nextLevel.titleEn : nextLevel.title}
+              </strong>
+            </span>
+            <div className="h-px flex-1 bg-gray-100" />
+          </div>
+        )}
+        {!nextLevel && (
+          <div className="text-center text-xs font-bold text-amber-600 mt-1">
+            🏆 Max Level erreicht!
+          </div>
+        )}
       </div>
 
       {/* ── Trophy room ── */}
