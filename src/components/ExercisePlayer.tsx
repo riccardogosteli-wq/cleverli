@@ -10,6 +10,7 @@ import RewardAnimation from "./RewardAnimation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useVoice } from "@/hooks/useVoice";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; }
 
@@ -22,6 +23,7 @@ function calcStars(score: number, total: number) {
 
 export default function ExercisePlayer({ topic, grade, subject, isPremium = false }: Props) {
   const router = useRouter();
+  const { speak, stop, isSupported } = useVoice();
   const FREE_LIMIT = 3;
   const exercises = topic.exercises;
   const [idx, setIdx] = useState(0);
@@ -30,10 +32,20 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [done, setDone] = useState(false);
   const [cardKey, setCardKey] = useState(0);
+  const [voiceOn, setVoiceOn] = useState(true);
   const rewardRef = useRef<HTMLDivElement>(null);
 
   const current: Exercise = exercises[idx];
   const isLocked = !isPremium && idx >= FREE_LIMIT;
+
+  // Auto-read question when a new exercise loads
+  useEffect(() => {
+    if (isLocked || done || !voiceOn || !isSupported) return;
+    // Small delay so card animation plays first
+    const t = setTimeout(() => speak(current.question), 400);
+    return () => clearTimeout(t);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [idx, cardKey]);
 
   // Save partial progress when free limit is reached (so stars show on topic list)
   useEffect(() => {
@@ -82,6 +94,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   }, [answered]);
 
   const handleAnswer = (correct: boolean) => {
+    stop(); // stop reading when kid answers
     if (correct) { setScore(s => s + 1); setStreak(s => s + 1); }
     else setStreak(0);
     setAnswered(correct);
@@ -164,9 +177,28 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // ── Exercise ─────────────────────────────────────────────────────
   return (
     <div className="space-y-3 max-w-xl mx-auto">
-      {/* Progress bar — hide while reward animation is showing */}
+      {/* Progress bar + voice toggle — hide while reward animation is showing */}
       {answered === null && (
-        <ProgressBar current={idx + 1} total={exercises.length} streak={streak} />
+        <div className="flex items-center gap-2">
+          <div className="flex-1">
+            <ProgressBar current={idx + 1} total={exercises.length} streak={streak} />
+          </div>
+          {isSupported && (
+            <button
+              onClick={() => {
+                const next = !voiceOn;
+                setVoiceOn(next);
+                if (!next) stop();
+                else speak(current.question);
+              }}
+              title={voiceOn ? "Stimme ausschalten" : "Stimme einschalten"}
+              className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center border-2 transition-all active:scale-95"
+              style={{ borderColor: voiceOn ? "#16a34a" : "#d1d5db", background: voiceOn ? "#f0fdf4" : "#f9fafb" }}
+            >
+              <span className="text-lg">{voiceOn ? "🔊" : "🔇"}</span>
+            </button>
+          )}
+        </div>
       )}
 
       {/* Exercise card — hidden when answered, replaced by reward */}
@@ -176,6 +208,16 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           key={cardKey}
           style={{ animation: "slideIn 0.25s cubic-bezier(.34,1.56,.64,1)" }}
         >
+          {/* Tap question to replay voice */}
+          {isSupported && voiceOn && (
+            <button
+              onClick={() => speak(current.question)}
+              className="w-full text-center text-xs text-green-600 opacity-60 hover:opacity-100 transition-opacity pb-1"
+              title="Aufgabe nochmal vorlesen"
+            >
+              🔊 Nochmal hören
+            </button>
+          )}
           {current.type === "multiple-choice" && (
             <MultipleChoice question={current.question} options={current.options ?? []} answer={current.answer} onAnswer={handleAnswer} />
           )}
