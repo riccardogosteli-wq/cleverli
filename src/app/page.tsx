@@ -23,9 +23,7 @@ export default function Home() {
           {/* Mascot */}
           <div className="flex-shrink-0 relative">
             <Image src="/cleverli-wave.png" alt="Cleverli" width={180} height={180}
-              className="drop-shadow-xl sm:w-[220px] sm:h-[220px]"
-              style={{animation:"cleverli-jump 2.5s ease-in-out infinite"}} priority />
-            <style>{`@keyframes cleverli-jump{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}`}</style>
+              className="drop-shadow-xl sm:w-[220px] sm:h-[220px] animate-cleverli-jump" priority />
           </div>
           {/* Text */}
           <div className="text-center sm:text-left">
@@ -273,7 +271,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-8 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <div className="flex items-center gap-2">
             <span className="font-bold text-green-700">cleverli</span>
             <span>· {tr("footerCountry")}</span>

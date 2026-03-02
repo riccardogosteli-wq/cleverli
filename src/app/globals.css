@@ -44,3 +44,12 @@ button { min-height: 44px; }
 
 /* Prevent double-tap zoom on buttons */
 button, a { user-select: none; }
+
+/* Mascot bounce animation (used in hero section) */
+@keyframes cleverli-jump {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+.animate-cleverli-jump {
+  animation: cleverli-jump 2.5s ease-in-out infinite;
+}
