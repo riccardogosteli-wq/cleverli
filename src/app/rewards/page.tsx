@@ -9,6 +9,7 @@ import {
   getProgressValue,
 } from "@/lib/rewards";
 import { useLang } from "@/lib/LangContext";
+import { getTopics, SUBJECTS } from "@/data/index";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
   { type: "tasks",  values: [10, 20, 50, 100] },
@@ -52,6 +53,22 @@ export default function RewardsPage() {
 
   useEffect(() => { reload(); }, []);
 
+  // Per-subject topic completion counts (all grades)
+  const subjectProgress = SUBJECTS.map(s => {
+    let done = 0, total = 0;
+    for (const g of [1, 2, 3]) {
+      const topics = getTopics(g, s.id);
+      total += topics.length;
+      for (const t of topics) {
+        try {
+          const raw = typeof window !== "undefined" ? localStorage.getItem(`cleverli_${g}_${s.id}_${t.id}`) : null;
+          if (raw) done++;
+        } catch { /* ignore */ }
+      }
+    }
+    return { id: s.id, emoji: s.emoji, done, total };
+  });
+
   const tl = (key: keyof typeof TRIGGER_LABELS) =>
     TRIGGER_LABELS[key][lang as keyof typeof TRIGGER_LABELS[typeof key]] ?? TRIGGER_LABELS[key].de;
 
@@ -74,11 +91,16 @@ export default function RewardsPage() {
     }
   };
 
-  const TRIGGER_CONTEXT: Record<TriggerType, { de: string; en: string }> = {
-    tasks:  { de: "Das sind ca. 2 Wochen bei 10 Min./Tag", en: "About 2 weeks at 10 min/day" },
-    topics: { de: "Ein Thema = ca. 10–15 Aufgaben", en: "One topic = approx. 10–15 exercises" },
-    streak: { de: "Jeden Tag eine Aufgabe", en: "One exercise every day" },
-    stars:  { de: "Sterne werden beim Thema-Abschluss vergeben", en: "Stars earned on topic completion" },
+  const TRIGGER_CONTEXT: Record<TriggerType, { de: string; en: string; fr: string; it: string }> = {
+    tasks:  { de: "ca. 2 Wochen bei 10 Min./Tag", en: "~2 weeks at 10 min/day", fr: "~2 semaines à 10 min/jour", it: "~2 settimane a 10 min/giorno" },
+    topics: { de: "1 Thema = ca. 10–15 Aufgaben", en: "1 topic = ~10–15 exercises", fr: "1 thème = ~10–15 exercices", it: "1 argomento = ~10–15 esercizi" },
+    streak: { de: "Jeden Tag eine Aufgabe erledigen", en: "Complete one exercise every day", fr: "Un exercice chaque jour", it: "Un esercizio ogni giorno" },
+    stars:  { de: "Sterne beim Thema-Abschluss", en: "Stars earned on topic completion", fr: "Étoiles à la fin d'un thème", it: "Stelle al completamento di un argomento" },
+  };
+
+  const triggerCtx = (type: TriggerType) => {
+    const ctx = TRIGGER_CONTEXT[type];
+    return ctx[lang as keyof typeof ctx] ?? ctx.de;
   };
 
   const statusColor = (r: Reward) => {
@@ -106,10 +128,10 @@ export default function RewardsPage() {
         </div>
         <div className="grid grid-cols-4 gap-2 text-center">
           {[
-            { label: lang === "de" ? "Aufgaben" : "Tasks", value: snap.totalExercises, emoji: "✅" },
-            { label: lang === "de" ? "Themen" : "Topics", value: snap.totalTopicsComplete, emoji: "📚" },
+            { label: lang === "de" ? "Aufgaben" : lang === "fr" ? "Exercices" : lang === "it" ? "Esercizi" : "Tasks", value: snap.totalExercises, emoji: "✅" },
+            { label: lang === "de" ? "Themen" : lang === "fr" ? "Thèmes" : lang === "it" ? "Argomenti" : "Topics", value: snap.totalTopicsComplete, emoji: "📚" },
             { label: lang === "de" ? "Streak" : "Streak", value: snap.dailyStreak, emoji: "🔥" },
-            { label: lang === "de" ? "Sterne" : "Stars", value: snap.totalStars, emoji: "⭐" },
+            { label: lang === "de" ? "Sterne" : lang === "fr" ? "Étoiles" : lang === "it" ? "Stelle" : "Stars", value: snap.totalStars, emoji: "⭐" },
           ].map(item => (
             <div key={item.label} className="bg-white rounded-xl p-2 shadow-sm">
               <div className="text-xl">{item.emoji}</div>
@@ -118,20 +140,46 @@ export default function RewardsPage() {
             </div>
           ))}
         </div>
+
+        {/* Per-subject breakdown */}
+        {subjectProgress.some(s => s.done > 0) && (
+          <div className="mt-3 space-y-2">
+            <div className="text-xs text-green-600 font-semibold">
+              {lang === "de" ? "Nach Fach:" : lang === "fr" ? "Par matière:" : lang === "it" ? "Per materia:" : "By subject:"}
+            </div>
+            {subjectProgress.map(s => {
+              const pct = s.total > 0 ? Math.round((s.done / s.total) * 100) : 0;
+              const barColor = s.id === "math" ? "bg-blue-400" : s.id === "german" ? "bg-yellow-400" : "bg-green-500";
+              return (
+                <div key={s.id} className="flex items-center gap-2">
+                  <span className="text-base w-6 shrink-0">{s.emoji}</span>
+                  <div className="flex-1 h-2 bg-white rounded-full overflow-hidden">
+                    <div className={`h-full ${barColor} rounded-full transition-all`} style={{ width: `${pct}%` }} />
+                  </div>
+                  <span className="text-xs text-green-700 font-semibold w-14 text-right shrink-0">{s.done}/{s.total}</span>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {/* Active rewards */}
       <div className="space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2">
           <h2 className="font-bold text-gray-800">
-            {lang === "de" ? `Aktive Belohnungen (${active.length}/3)` : `Active rewards (${active.length}/3)`}
+            {lang === "de" ? `Aktive Belohnungen (${active.length}/3)` : lang === "fr" ? `Récompenses actives (${active.length}/3)` : lang === "it" ? `Premi attivi (${active.length}/3)` : `Active rewards (${active.length}/3)`}
           </h2>
-          {active.length < 3 && !adding && (
+          {active.length >= 3 && !adding ? (
+            <span className="text-xs text-amber-700 bg-amber-100 px-2 py-1 rounded-full font-semibold">
+              {lang === "fr" ? "Max atteint" : lang === "it" ? "Max raggiunto" : lang === "en" ? "Limit reached" : "Limit erreicht"}
+            </span>
+          ) : (!adding && (
             <button onClick={() => setAdding(true)}
               className="flex items-center gap-1 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-3 py-1.5 rounded-full transition-colors">
-              + {lang === "de" ? "Hinzufügen" : "Add"}
+              + {lang === "de" ? "Hinzufügen" : lang === "fr" ? "Ajouter" : lang === "it" ? "Aggiungi" : "Add"}
             </button>
-          )}
+          ))}
         </div>
 
         {/* Add form — step by step */}
@@ -215,7 +263,7 @@ export default function RewardsPage() {
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-semibold text-gray-700">{tl(tp.type)}</span>
                     <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">
-                      {TRIGGER_CONTEXT[tp.type][lang === "de" ? "de" : "en"]}
+                      {triggerCtx(tp.type)}
                     </span>
                   </div>
                   <div className="flex gap-2 flex-wrap">
@@ -288,9 +336,13 @@ export default function RewardsPage() {
                 {deleteConfirm === r.id ? (
                   <div className="flex gap-1">
                     <button onClick={() => { removeReward(r.id); setDeleteConfirm(null); reload(); }}
-                      className="text-xs bg-red-100 text-red-600 hover:bg-red-200 px-2 py-1 rounded-lg font-bold">✓ Löschen</button>
+                      className="text-xs bg-red-100 text-red-600 hover:bg-red-200 px-2 py-1 rounded-lg font-bold">
+                      {lang === "fr" ? "✓ Supprimer" : lang === "it" ? "✓ Elimina" : lang === "en" ? "✓ Delete" : "✓ Löschen"}
+                    </button>
                     <button onClick={() => setDeleteConfirm(null)}
-                      className="text-xs bg-gray-100 text-gray-500 hover:bg-gray-200 px-2 py-1 rounded-lg">Nein</button>
+                      className="text-xs bg-gray-100 text-gray-500 hover:bg-gray-200 px-2 py-1 rounded-lg">
+                      {lang === "fr" ? "Non" : lang === "it" ? "No" : lang === "en" ? "No" : "Nein"}
+                    </button>
                   </div>
                 ) : (
                   <button onClick={() => setDeleteConfirm(r.id)}
@@ -324,12 +376,18 @@ export default function RewardsPage() {
               </div>
               {redeemConfirm === r.id ? (
                 <div className="flex flex-col gap-1 shrink-0">
-                  <div className="text-xs text-amber-800 font-semibold text-center">Wirklich eingelöst?</div>
+                  <div className="text-xs text-amber-800 font-semibold text-center">
+                    {lang === "fr" ? "Vraiment?" : lang === "it" ? "Davvero?" : lang === "en" ? "Confirm?" : "Wirklich?"}
+                  </div>
                   <div className="flex gap-1">
                     <button onClick={() => { markRedeemed(r.id); setRedeemConfirm(null); reload(); }}
-                      className="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-2 rounded-xl text-sm active:scale-95">✓ Ja!</button>
+                      className="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-2 rounded-xl text-sm active:scale-95">
+                      {lang === "fr" ? "✓ Oui" : lang === "it" ? "✓ Sì" : lang === "en" ? "✓ Yes" : "✓ Ja!"}
+                    </button>
                     <button onClick={() => setRedeemConfirm(null)}
-                      className="bg-gray-100 text-gray-600 px-3 py-2 rounded-xl text-sm">Nein</button>
+                      className="bg-gray-100 text-gray-600 px-3 py-2 rounded-xl text-sm">
+                      {lang === "fr" ? "Non" : lang === "it" ? "No" : lang === "en" ? "No" : "Nein"}
+                    </button>
                   </div>
                 </div>
               ) : (

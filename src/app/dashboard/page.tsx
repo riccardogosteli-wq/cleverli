@@ -86,9 +86,23 @@ function DashboardInner() {
   };
 
   const level = profile ? getLevelForXp(profile.xp) : null;
+  const nextLevel = profile && level ? (level.id < 5 ? getLevelForXp(profile.xp + 1) : null) : null;
+
+  // Localized level title
+  const levelTitle = (lv: ReturnType<typeof getLevelForXp>) => {
+    if (lang === "fr") return lv.titleFr;
+    if (lang === "it") return lv.titleIt;
+    if (lang === "en") return lv.titleEn;
+    return lv.title;
+  };
 
   // ── STEP 1: Choose grade ──────────────────────────────────────────────────
   if (!grade) {
+    const xpToNext = level && nextLevel ? nextLevel.minXp - (profile?.xp ?? 0) : 0;
+    const xpPct = level && nextLevel
+      ? Math.round(((profile?.xp ?? 0) - level.minXp) / (nextLevel.minXp - level.minXp) * 100)
+      : 100;
+
     return (
       <div className="max-w-xl mx-auto px-4 py-6 space-y-5">
 
@@ -97,8 +111,16 @@ function DashboardInner() {
           <div className="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl px-4 py-3 shadow-sm">
             <span className="text-2xl">{level.emoji}</span>
             <div className="flex-1 min-w-0">
-              <div className="font-bold text-gray-800 text-sm">{level.title}</div>
-              <div className="text-xs text-gray-400">{profile.xp} XP</div>
+              <div className="font-bold text-gray-800 text-sm">{levelTitle(level)}</div>
+              <div className="flex items-center gap-2 mt-0.5">
+                <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                  <div className="h-full rounded-full transition-all duration-700"
+                    style={{ width: `${xpPct}%`, backgroundColor: level.color }} />
+                </div>
+                <span className="text-xs text-gray-400 shrink-0">
+                  {nextLevel ? `${xpToNext} XP` : `${profile.xp} XP`}
+                </span>
+              </div>
             </div>
             {profile.dailyStreak >= 2 && (
               <div className="flex items-center gap-1 bg-orange-50 border border-orange-200 rounded-full px-3 py-1">
@@ -182,7 +204,7 @@ function DashboardInner() {
     return (
       <div className="max-w-xl mx-auto px-4 py-6 space-y-5">
         <div className="flex items-center gap-2">
-          <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3">←</button>
+          <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3 min-w-[44px]">←</button>
           <div className="flex items-center gap-2">
             <span className="text-2xl">{GRADE_COLORS[grade-1].emoji}</span>
             <h1 className="text-xl font-bold text-gray-800">
@@ -222,6 +244,8 @@ function DashboardInner() {
   const topics = getTopics(grade, subject);
   const currentSubjectMeta = SUBJECT_META[subject];
   const completedCount = topics.filter(t => getProgress(grade, subject, t.id)).length;
+  // First not-done topic index — that's where we show "Start ✨"
+  const firstNotDoneIdx = topics.findIndex(t => !getProgress(grade, subject, t.id));
 
   const handleBack = () => {
     if (preselectedSubject) setGrade(null);
@@ -242,19 +266,25 @@ function DashboardInner() {
         </div>
       </div>
 
-      {/* Subject switcher — always visible */}
+      {/* Subject switcher — always visible, colored by subject */}
       <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
-        {SUBJECTS.map(s => (
-          <button key={s.id}
-            onClick={() => setSubject(s.id)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap border transition-colors shrink-0 ${
-              s.id === subject
-                ? "bg-green-600 text-white border-green-600 shadow-sm"
-                : "bg-white text-gray-500 border-gray-200 hover:border-green-300"
-            }`}>
-            {SUBJECT_META[s.id]?.emoji} {subjectL(s.id, "label")}
-          </button>
-        ))}
+        {SUBJECTS.map(s => {
+          const isActive = s.id === subject;
+          const activeCls = s.id === "math"
+            ? "bg-blue-500 text-white border-blue-500"
+            : s.id === "german"
+              ? "bg-yellow-500 text-white border-yellow-500"
+              : "bg-green-600 text-white border-green-600";
+          return (
+            <button key={s.id}
+              onClick={() => setSubject(s.id)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap border transition-colors shrink-0 shadow-sm ${
+                isActive ? activeCls : "bg-white text-gray-500 border-gray-200 hover:border-gray-300"
+              }`}>
+              {SUBJECT_META[s.id]?.emoji} {subjectL(s.id, "label")}
+            </button>
+          );
+        })}
       </div>
 
       {/* Progress summary */}
@@ -281,7 +311,7 @@ function DashboardInner() {
           const prog = getProgress(grade, subject, topic.id);
           const stars = prog?.stars ?? 0;
           const done = !!prog;
-          const isFirst = idx === 0 && !done;
+          const isNext = idx === firstNotDoneIdx; // first not-done topic = "start here"
           const iconBg = currentSubjectMeta?.iconBg ?? "bg-green-100";
 
           return (
@@ -290,7 +320,7 @@ function DashboardInner() {
               className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
                 done
                   ? "bg-white border-green-200 hover:border-green-400"
-                  : isFirst
+                  : isNext
                     ? "bg-green-50 border-green-300 hover:border-green-500"
                     : "bg-white border-gray-100 hover:border-green-300 hover:bg-green-50"
               }`}>
@@ -302,7 +332,7 @@ function DashboardInner() {
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-gray-800 text-sm leading-tight">
                   {getTopicTitle(topic.id, lang, topic.title)}
-                  {isFirst && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
+                  {isNext && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
                 </div>
                 <div className="text-xs text-gray-400 mt-0.5">
                   {done
