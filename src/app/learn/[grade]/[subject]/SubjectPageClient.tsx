@@ -43,7 +43,10 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
         <span className="text-4xl">{meta.emoji}</span>
         <div>
           <h1 className="text-xl sm:text-2xl font-bold text-gray-800">{subjectName} — {grade}. Klasse</h1>
-          <p className="text-sm text-gray-400">{topics.length} Themen · Lehrplan 21</p>
+          <p className="text-sm text-gray-400">
+            {subjectName === "NMG" && <span className="text-gray-500">Natur, Mensch, Gesellschaft · </span>}
+            {topics.length} Themen · Lehrplan 21
+          </p>
         </div>
       </div>
 

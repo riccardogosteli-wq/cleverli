@@ -6,7 +6,7 @@ import Link from "next/link";
 interface Props { params: Promise<{ grade: string; subject: string; topic: string }> }
 
 const SUBJECT_NAMES: Record<string, string> = {
-  math: "Mathematik", german: "Deutsch", science: "Sachkunde",
+  math: "Mathematik", german: "Deutsch", science: "NMG",
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

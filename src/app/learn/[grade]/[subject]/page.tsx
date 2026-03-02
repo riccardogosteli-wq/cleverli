@@ -5,7 +5,10 @@ import SubjectPageClient from "./SubjectPageClient";
 interface Props { params: Promise<{ grade: string; subject: string }> }
 
 const SUBJECT_NAMES: Record<string, string> = {
-  math: "Mathematik", german: "Deutsch", science: "Sachkunde",
+  math: "Mathematik", german: "Deutsch", science: "NMG",
+};
+const SUBJECT_SUBTITLES: Record<string, string> = {
+  science: "Natur, Mensch, Gesellschaft",
 };
 const GRADE_NAMES: Record<string, string> = {
   "1": "1. Klasse", "2": "2. Klasse", "3": "3. Klasse",
