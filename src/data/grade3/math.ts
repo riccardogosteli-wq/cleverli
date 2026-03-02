@@ -2,6 +2,53 @@ import { Topic } from "@/types/exercise";
 
 const grade3Math: Topic[] = [
   {
+    id: "zahlen-bis-1000",
+    title: "Zahlen bis 1000",
+    emoji: "🔢",
+    exercises: [
+      { id: "z1k", type: "multiple-choice", question: "Was ist die grösste dreistellige Zahl?", answer: "999", options: ["899","990","998","999"], hints: ["Drei Stellen, alle auf 9: 999"], difficulty: 1, free: true },
+      { id: "z2k", type: "fill-in-blank", question: "Schreibe in Zahlen: Zweihundertfünfzig", answer: "250", hints: ["Zweihundert = 200, fünfzig = 50"], difficulty: 2, free: true },
+      { id: "z3k", type: "multiple-choice", question: "Wie viele Hunderter hat die Zahl 735?", answer: "7", options: ["3","5","7","73"], hints: ["7 Hunderter, 3 Zehner, 5 Einer = 735"], difficulty: 1, free: true },
+      { id: "z4k", type: "fill-in-blank", question: "500 + 60 + 3 = ___", answer: "563", hints: ["5 Hunderter + 6 Zehner + 3 Einer = 563"], difficulty: 1 },
+      { id: "z5k", type: "multiple-choice", question: "Welche Zahl liegt zwischen 398 und 400?", answer: "399", options: ["397","398","399","401"], hints: ["398, ___, 400"], difficulty: 1 },
+      { id: "z6k", type: "fill-in-blank", question: "100 mehr als 450 ist ___.", answer: "550", hints: ["450 + 100 = 550"], difficulty: 1 },
+      { id: "z7k", type: "multiple-choice", question: "Was ist 200 + 300?", answer: "500", options: ["400","500","600","700"], hints: ["2 Hunderter + 3 Hunderter = 5 Hunderter"], difficulty: 1 },
+      { id: "z8k", type: "fill-in-blank", question: "Ergänze: 200, 400, 600, ___", answer: "800", hints: ["Zähle in Zweihunderterschritten."], difficulty: 2 },
+      { id: "z9k", type: "fill-in-blank", question: "Schreibe in Zahlen: Achthundertneunzehn", answer: "819", hints: ["Achthundert = 800, neunzehn = 19"], difficulty: 3 },
+      { id: "z10k", type: "multiple-choice", question: "Wie viele Zehner hat die Zahl 480?", answer: "48", options: ["4","8","48","480"], hints: ["480 ÷ 10 = 48 Zehner"], difficulty: 2 },
+    ],
+  },
+  {
+    id: "rechnen-bis-1000",
+    title: "Rechnen bis 1000",
+    emoji: "➕",
+    exercises: [
+      { id: "r1k", type: "fill-in-blank", question: "345 + 200 = ___", answer: "545", hints: ["Addiere die Hunderter: 3+2=5, Rest bleibt: 545"], difficulty: 1, free: true },
+      { id: "r2k", type: "multiple-choice", question: "700 − 300 = ?", answer: "400", options: ["300","400","500","600"], hints: ["7 Hunderter - 3 Hunderter = 4 Hunderter"], difficulty: 1, free: true },
+      { id: "r3k", type: "fill-in-blank", question: "256 + 143 = ___", answer: "399", hints: ["2+1=3 Hunderter, 5+4=9 Zehner, 6+3=9 Einer → 399"], difficulty: 2, free: true },
+      { id: "r4k", type: "multiple-choice", question: "500 − 150 = ?", answer: "350", options: ["250","300","350","400"], hints: ["500 - 150 = 350"], difficulty: 2 },
+      { id: "r5k", type: "fill-in-blank", question: "123 + 456 = ___", answer: "579", hints: ["1+4=5 H, 2+5=7 Z, 3+6=9 E → 579"], difficulty: 2 },
+      { id: "r6k", type: "fill-in-blank", question: "800 − 250 = ___", answer: "550", hints: ["800-250=550"], difficulty: 2 },
+      { id: "r7k", type: "multiple-choice", question: "367 + 100 = ?", answer: "467", options: ["367","467","567","377"], hints: ["Nur die Hunderter ändern sich: 3+1=4"], difficulty: 1 },
+      { id: "r8k", type: "fill-in-blank", question: "999 − 1 = ___", answer: "998", hints: ["999 minus 1 = 998"], difficulty: 1 },
+    ],
+  },
+  {
+    id: "geometrie",
+    title: "Geometrie",
+    emoji: "📐",
+    exercises: [
+      { id: "geo1", type: "fill-in-blank", question: "Ein Quadrat mit Seitenlänge 4 cm hat einen Umfang von ___ cm.", answer: "16", hints: ["Umfang Quadrat = 4 × Seite = 4 × 4 = 16 cm"], difficulty: 2, free: true },
+      { id: "geo2", type: "multiple-choice", question: "Wie viele Seiten hat ein Sechseck?", answer: "6", options: ["4","5","6","8"], hints: ["Sechs-Eck = 6 Seiten"], difficulty: 1, free: true },
+      { id: "geo3", type: "fill-in-blank", question: "Ein Rechteck ist 5 cm breit und 3 cm hoch. Umfang = ___ cm", answer: "16", hints: ["Umfang = 2×(5+3) = 2×8 = 16 cm"], difficulty: 2, free: true },
+      { id: "geo4", type: "multiple-choice", question: "Was ist die Fläche eines 3×3 cm Quadrats?", answer: "9 cm²", options: ["6 cm²","9 cm²","12 cm²","16 cm²"], hints: ["Fläche = Seite × Seite = 3 × 3 = 9 cm²"], difficulty: 2 },
+      { id: "geo5", type: "fill-in-blank", question: "Ein Dreieck hat ___ Seiten.", answer: "3", hints: ["Tri = drei"], difficulty: 1 },
+      { id: "geo6", type: "multiple-choice", question: "Wie nennt man die Strecke um eine Figur herum?", answer: "Umfang", options: ["Fläche","Umfang","Volumen","Radius"], hints: ["Um = herum, Fang = fassen → Umfang"], difficulty: 1 },
+      { id: "geo7", type: "fill-in-blank", question: "Rechteck: 6 cm × 4 cm. Fläche = ___ cm²", answer: "24", hints: ["Fläche Rechteck = Länge × Breite = 6 × 4 = 24 cm²"], difficulty: 2 },
+      { id: "geo8", type: "multiple-choice", question: "Ein Würfel hat wie viele Flächen?", answer: "6", options: ["4","5","6","8"], hints: ["Oben, unten, vorne, hinten, links, rechts = 6 Flächen"], difficulty: 2 },
+    ],
+  },
+  {
     id: "einmaleins-komplett",
     title: "Einmaleins komplett",
     emoji: "✖️",

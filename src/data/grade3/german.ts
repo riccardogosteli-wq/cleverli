@@ -50,6 +50,36 @@ const grade3German: Topic[] = [
       { id: "sb8", type: "fill-in-blank", question: "Am Ende eines Aussagesatzes steht ein ___.", answer: "Punkt", hints: ["Es ist das runde Satzzeichen."], difficulty: 1 },
     ],
   },
+  {
+    id: "leseverstaendnis",
+    title: "Leseverständnis",
+    emoji: "📰",
+    exercises: [
+      { id: "lv1", type: "multiple-choice", question: "Text: 'Der Bär schläft im Winter in seiner Höhle. Dieser Schlaf heisst Winterschlaf.' Was macht der Bär im Winter?", answer: "Er schläft in seiner Höhle", options: ["Er jagt","Er schläft in seiner Höhle","Er wandert","Er frisst Beeren"], hints: ["Lies den ersten Satz."], difficulty: 1, free: true },
+      { id: "lv2", type: "multiple-choice", question: "Text: 'Emma liest täglich 20 Minuten. In einer Woche liest sie 7 × 20 Minuten.' Wie lange liest Emma pro Woche?", answer: "140 Minuten", options: ["20 Minuten","100 Minuten","140 Minuten","160 Minuten"], hints: ["7 × 20 = ?"], difficulty: 2, free: true },
+      { id: "lv3", type: "multiple-choice", question: "Text: 'Die Biene sammelt Nektar und macht daraus Honig. Ein Bienenvolk hat bis zu 60.000 Bienen.' Wofür sammelt die Biene Nektar?", answer: "Um Honig zu machen", options: ["Zum Trinken","Um Honig zu machen","Zum Spielen","Für den Winter"], hints: ["Lies: 'sammelt Nektar und macht daraus...'"], difficulty: 1, free: true },
+      { id: "lv4", type: "fill-in-blank", question: "Text: 'Lisa geht morgens zur Schule und nachmittags zum Sport.' Was macht Lisa nachmittags?", answer: "Sport", hints: ["'...nachmittags zum...'"], difficulty: 1 },
+      { id: "lv5", type: "multiple-choice", question: "Text: 'Der Zug fährt von Zürich nach Bern. Er braucht 55 Minuten.' Wie lange fährt der Zug?", answer: "55 Minuten", options: ["30 Minuten","45 Minuten","55 Minuten","1 Stunde"], hints: ["'Er braucht 55 Minuten'"], difficulty: 1 },
+      { id: "lv6", type: "multiple-choice", question: "Text: 'Schmetterlinge beginnen als Ei, dann werden sie Raupe, dann Puppe, zuletzt Schmetterling.' Was kommt nach der Raupe?", answer: "Puppe", options: ["Ei","Schmetterling","Puppe","Larve"], hints: ["Ei → Raupe → ___ → Schmetterling"], difficulty: 2 },
+      { id: "lv7", type: "fill-in-blank", question: "Text: 'Im Sommer ist es in der Schweiz warm und sonnig. Viele Leute gehen in die Berge oder an den See.' Was machen viele Leute im Sommer?", answer: "Berge", hints: ["'...gehen in die ___ oder an den See'"], difficulty: 1 },
+      { id: "lv8", type: "multiple-choice", question: "Text: 'Ben hat CHF 10. Er kauft ein Buch für CHF 6.50. Wie viel hat er noch?' Was ist die Frage?", answer: "Wie viel Geld hat Ben noch?", options: ["Was kauft Ben?","Wie teuer ist das Buch?","Wie viel Geld hat Ben noch?","Wann kauft Ben?"], hints: ["Die Frage steht am Ende."], difficulty: 1 },
+    ],
+  },
+  {
+    id: "rechtschreibung",
+    title: "Rechtschreibung",
+    emoji: "✏️",
+    exercises: [
+      { id: "rs1", type: "multiple-choice", question: "Welches Wort ist richtig geschrieben?", answer: "Freund", options: ["Freund","Freund","freund","FREUND"], hints: ["Nomen schreibt man gross."], difficulty: 1, free: true },
+      { id: "rs2", type: "multiple-choice", question: "Wie schreibt man das Wort für 'Schule' richtig?", answer: "Schule", options: ["schule","Schule","SCHULE","Schuhle"], hints: ["Nomen = gross, keine doppelten Buchstaben ausser wenn nötig."], difficulty: 1, free: true },
+      { id: "rs3", type: "multiple-choice", question: "Welches Wort ist falsch geschrieben?", answer: "hund", options: ["Katze","Vogel","hund","Fisch"], hints: ["Nomen (Tiere, Dinge) schreibt man IMMER gross."], difficulty: 1, free: true },
+      { id: "rs4", type: "multiple-choice", question: "Welches Wort hat einen Fehler?", answer: "lauffen", options: ["laufen","springen","lauffen","rennen"], hints: ["'laufen' hat nur ein f, nicht zwei."], difficulty: 2 },
+      { id: "rs5", type: "fill-in-blank", question: "Ergänze: Das ist das Heft von Lena → das ist ___ Heft.", answer: "Lenas", hints: ["Besitz: Name + s = Lenas Heft"], difficulty: 2 },
+      { id: "rs6", type: "multiple-choice", question: "Welches ist richtig: 'das' oder 'dass'? 'Ich weiss, ___ es regnet.'", answer: "dass", options: ["das","dass"], hints: ["'dass' = Konjunktion (verbindet Sätze), 'das' = Artikel/Pronomen"], difficulty: 3 },
+      { id: "rs7", type: "multiple-choice", question: "Welches Wort ist richtig? Die Kinder ___ (spielt/spielen) Fussball.", answer: "spielen", options: ["spielt","spielen","gespielt","spielst"], hints: ["Die Kinder (Mehrzahl) → spielen (Mehrzahl-Form)"], difficulty: 2 },
+      { id: "rs8", type: "fill-in-blank", question: "Der Hund ___ (bellen/bellt) laut.", answer: "bellt", hints: ["Er/sie/es → bellt (3. Person Einzahl)"], difficulty: 2 },
+    ],
+  },
 ];
 
 export default grade3German;

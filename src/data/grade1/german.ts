@@ -50,6 +50,51 @@ const grade1German: Topic[] = [
       { id: "gk8", type: "multiple-choice", question: "Welche Schreibweise ist falsch?", answer: "apfel", options: ["Apfel","apfel"], hints: ["Nomen schreibt man IMMER gross."], difficulty: 1 },
     ],
   },
+  {
+    id: "reime",
+    title: "Reimwörter",
+    emoji: "🎵",
+    exercises: [
+      { id: "r1", type: "multiple-choice", question: "Was reimt sich auf 'Haus'?", answer: "Maus", options: ["Hund","Maus","Baum","Buch"], hints: ["Haus... Maus — hörst du den gleichen Klang?"], difficulty: 1, free: true },
+      { id: "r2", type: "multiple-choice", question: "Was reimt sich auf 'Katze'?", answer: "Matze", options: ["Hund","Vogel","Matze","Fisch"], hints: ["Katze... Matze"], difficulty: 1, free: true },
+      { id: "r3", type: "multiple-choice", question: "Was reimt sich auf 'Sonne'?", answer: "Wonne", options: ["Mond","Wonne","Wind","Regen"], hints: ["Sonne... Wonne"], difficulty: 1, free: true },
+      { id: "r4", type: "multiple-choice", question: "Was reimt sich auf 'Ball'?", answer: "Schall", options: ["Tisch","Schall","Heft","Buch"], hints: ["Ball... Schall — gleicher Endlaut -all"], difficulty: 2 },
+      { id: "r5", type: "multiple-choice", question: "Was reimt sich auf 'Brot'?", answer: "rot", options: ["blau","grün","rot","gelb"], hints: ["Brot... rot — gleicher Endlaut -ot"], difficulty: 1 },
+      { id: "r6", type: "multiple-choice", question: "Welche zwei Wörter reimen sich?", answer: "Hund / rund", options: ["Hund / rund","Katze / Hund","Haus / Ball"], hints: ["Suche den gleichen Endklang."], difficulty: 2 },
+      { id: "r7", type: "fill-in-blank", question: "Die Maus wohnt im ___ (reimt auf Maus)", answer: "Haus", hints: ["Maus... ___? Gleicher Endklang -aus"], difficulty: 1 },
+      { id: "r8", type: "multiple-choice", question: "Was reimt sich auf 'Tag'?", answer: "Sag", options: ["Nacht","Sag","Morgen","früh"], hints: ["Tag... Sag — -ag Endung"], difficulty: 2 },
+    ],
+  },
+  {
+    id: "abc-reihenfolge",
+    title: "ABC & Reihenfolge",
+    emoji: "🔤",
+    exercises: [
+      { id: "abc1", type: "multiple-choice", question: "Welcher Buchstabe kommt nach dem B?", answer: "C", options: ["A","C","D","E"], hints: ["A, B, C..."], difficulty: 1, free: true },
+      { id: "abc2", type: "multiple-choice", question: "Welcher Buchstabe kommt vor dem F?", answer: "E", options: ["D","E","G","H"], hints: ["...D, E, F..."], difficulty: 1, free: true },
+      { id: "abc3", type: "fill-in-blank", question: "A, B, C, D, ___", answer: "E", hints: ["Das Alphabet: A,B,C,D,E..."], difficulty: 1, free: true },
+      { id: "abc4", type: "multiple-choice", question: "Was kommt im Alphabet zuerst: M oder Z?", answer: "M", options: ["M","Z","beide gleich"], hints: ["M ist der 13. Buchstabe, Z ist der 26. (letzte)."], difficulty: 1 },
+      { id: "abc5", type: "fill-in-blank", question: "Der letzte Buchstabe des Alphabets ist: ___", answer: "Z", hints: ["A bis Z — Z ist der allerletzte."], difficulty: 1 },
+      { id: "abc6", type: "multiple-choice", question: "Wie viele Buchstaben hat das Alphabet?", answer: "26", options: ["24","25","26","28"], hints: ["Von A bis Z — 26 Buchstaben."], difficulty: 2 },
+      { id: "abc7", type: "multiple-choice", question: "Was kommt alphabetisch zuerst: Apfel oder Birne?", answer: "Apfel", options: ["Apfel","Birne","beide gleich"], hints: ["A kommt vor B im Alphabet."], difficulty: 1 },
+      { id: "abc8", type: "fill-in-blank", question: "W, X, Y, ___", answer: "Z", hints: ["W, X, Y, Z — Z ist der letzte Buchstabe."], difficulty: 1 },
+    ],
+  },
+  {
+    id: "saetze-lesen",
+    title: "Sätze lesen",
+    emoji: "📖",
+    exercises: [
+      { id: "sl1", type: "multiple-choice", question: "Der Hund ist gross. Was ist der Hund?", answer: "gross", options: ["klein","gross","schnell","laut"], hints: ["Lies den Satz nochmals."], difficulty: 1, free: true },
+      { id: "sl2", type: "multiple-choice", question: "Die Katze schläft auf dem Sofa. Wo schläft die Katze?", answer: "auf dem Sofa", options: ["auf dem Bett","auf dem Sofa","auf dem Boden","im Garten"], hints: ["Lies den Satz und suche 'wo'."], difficulty: 1, free: true },
+      { id: "sl3", type: "multiple-choice", question: "Tom isst einen Apfel. Was isst Tom?", answer: "einen Apfel", options: ["eine Banane","einen Apfel","ein Brot","eine Orange"], hints: ["Was steht nach 'isst'?"], difficulty: 1, free: true },
+      { id: "sl4", type: "multiple-choice", question: "Es regnet. Anna nimmt einen Regenschirm. Warum nimmt Anna den Schirm?", answer: "Weil es regnet", options: ["Weil es schneit","Weil es regnet","Weil sie tanzt","Weil sie müde ist"], hints: ["Lies beide Sätze zusammen."], difficulty: 2 },
+      { id: "sl5", type: "multiple-choice", question: "Der Ball ist rot und rund. Was stimmt?", answer: "Der Ball ist rot und rund", options: ["Der Ball ist blau","Der Ball ist eckig","Der Ball ist rot und rund","Der Ball ist gross"], hints: ["Was steht genau im Satz?"], difficulty: 1 },
+      { id: "sl6", type: "multiple-choice", question: "Lena hat zwei Hunde und eine Katze. Wie viele Tiere hat Lena?", answer: "3", options: ["2","3","4","1"], hints: ["2 Hunde + 1 Katze = ?"], difficulty: 2 },
+      { id: "sl7", type: "multiple-choice", question: "Im Frühling blühen die Blumen. Wann blühen die Blumen?", answer: "Im Frühling", options: ["Im Winter","Im Herbst","Im Frühling","Im Sommer"], hints: ["Lies: 'Im Frühling...'"], difficulty: 1 },
+      { id: "sl8", type: "fill-in-blank", question: "Der Vogel fliegt hoch in der ___. (Luft / Erde)", answer: "Luft", hints: ["Vögel fliegen in der Luft."], difficulty: 1 },
+    ],
+  },
 ];
 
 export default grade1German;

@@ -50,6 +50,49 @@ const grade2German: Topic[] = [
       { id: "s8", type: "fill-in-blank", question: "Wie viele Silben hat 'Schmetterlinge'?", answer: "4", hints: ["Schmet-ter-lin-ge"], difficulty: 3 },
     ],
   },
+  {
+    id: "adjektive-gr2",
+    title: "Adjektive einsetzen",
+    emoji: "🌈",
+    exercises: [
+      { id: "ag1", type: "multiple-choice", question: "Der ___ Hund bellt. (Welches Adjektiv passt?)", answer: "grosse", options: ["grosse","laufen","Hund","schnell"], hints: ["Adjektive beschreiben das Nomen (Hund)."], difficulty: 1, free: true },
+      { id: "ag2", type: "fill-in-blank", question: "Die Sonne ist ___. (warm / rennen)", answer: "warm", hints: ["'warm' ist eine Eigenschaft, 'rennen' ist eine Tätigkeit."], difficulty: 1, free: true },
+      { id: "ag3", type: "multiple-choice", question: "Das Gegenteil von 'warm' ist:", answer: "kalt", options: ["heiss","kalt","kühl","nass"], hints: ["Warm ↔ Kalt"], difficulty: 1, free: true },
+      { id: "ag4", type: "multiple-choice", question: "Das Gegenteil von 'schnell' ist:", answer: "langsam", options: ["laut","langsam","stark","gross"], hints: ["Schnell ↔ Langsam"], difficulty: 1 },
+      { id: "ag5", type: "fill-in-blank", question: "Das Gegenteil von 'hell' ist ___.", answer: "dunkel", hints: ["Hell ↔ Dunkel"], difficulty: 1 },
+      { id: "ag6", type: "multiple-choice", question: "Welches Wort ist ein Adjektiv?", answer: "rund", options: ["Ball","rund","rollen","Kreis"], hints: ["Adjektive beschreiben Eigenschaften."], difficulty: 1 },
+      { id: "ag7", type: "fill-in-blank", question: "Der Elefant ist sehr ___. (gross/klein)", answer: "gross", hints: ["Elefanten sind sehr gross."], difficulty: 1 },
+      { id: "ag8", type: "multiple-choice", question: "Das Gegenteil von 'laut' ist:", answer: "leise", options: ["ruhig","leise","still","sanft"], hints: ["Laut ↔ Leise"], difficulty: 1 },
+    ],
+  },
+  {
+    id: "satzzeichen",
+    title: "Satzzeichen",
+    emoji: "❓",
+    exercises: [
+      { id: "sz1", type: "multiple-choice", question: "Ein Satz endet mit einem Punkt, wenn er eine ___ ist.", answer: "Aussage", options: ["Frage","Aussage","Ausruf"], hints: ["Aussagen enden mit . Fragen mit ? Ausrufe mit !"], difficulty: 1, free: true },
+      { id: "sz2", type: "multiple-choice", question: "Welches Satzzeichen kommt ans Ende? 'Wie heisst du___'", answer: "?", options: [".","?","!",","], hints: ["'Wie...' = Frage → ?"], difficulty: 1, free: true },
+      { id: "sz3", type: "multiple-choice", question: "Welches Satzzeichen kommt ans Ende? 'Schau, ein Regenbogen___'", answer: "!", options: [".","?","!",","], hints: ["Begeisterung/Ausruf → !"], difficulty: 1, free: true },
+      { id: "sz4", type: "multiple-choice", question: "Welches Satzzeichen passt? 'Die Katze schläft___'", answer: ".", options: [".","?","!"], hints: ["Aussagesatz → Punkt"], difficulty: 1 },
+      { id: "sz5", type: "fill-in-blank", question: "Fragen enden mit einem ___.", answer: "?", hints: ["Fragesatz → Fragezeichen"], difficulty: 1 },
+      { id: "sz6", type: "multiple-choice", question: "Was ist ein Fragesatz?", answer: "Wann beginnt die Schule?", options: ["Die Schule beginnt um 8 Uhr.","Hurra, schulfrei!","Wann beginnt die Schule?"], hints: ["Fragesätze beginnen mit Fragewörtern: Wann, Wo, Was, Wer..."], difficulty: 1 },
+      { id: "sz7", type: "multiple-choice", question: "Wähle das richtige Satzzeichen: 'Bitte hilf mir___'", answer: "!", options: [".","?","!"], hints: ["Bitte/Aufforderung → oft Ausrufezeichen"], difficulty: 2 },
+      { id: "sz8", type: "fill-in-blank", question: "Am Ende eines Ausrufs steht ein ___.", answer: "!", hints: ["Ausruf → Ausrufezeichen !"], difficulty: 1 },
+    ],
+  },
+  {
+    id: "texte-lesen",
+    title: "Texte lesen",
+    emoji: "📚",
+    exercises: [
+      { id: "tl1", type: "multiple-choice", question: "Tim hat einen Hund. Der Hund heisst Bello. Wie heisst der Hund?", answer: "Bello", options: ["Tim","Bello","Max","Rex"], hints: ["Lies: 'Der Hund heisst...'"], difficulty: 1, free: true },
+      { id: "tl2", type: "multiple-choice", question: "Es schneit. Die Kinder bauen einen Schneemann. Was machen die Kinder?", answer: "Sie bauen einen Schneemann", options: ["Sie spielen Fussball","Sie bauen einen Schneemann","Sie schwimmen","Sie schlafen"], hints: ["Lies den zweiten Satz."], difficulty: 1, free: true },
+      { id: "tl3", type: "multiple-choice", question: "Anna hat 3 rote und 2 blaue Stifte. Wie viele Stifte hat Anna?", answer: "5", options: ["3","2","5","6"], hints: ["3 + 2 = ?"], difficulty: 1, free: true },
+      { id: "tl4", type: "multiple-choice", question: "Der Zug fährt um 9 Uhr ab. Es ist jetzt 8:45 Uhr. Wie lange muss man noch warten?", answer: "15 Minuten", options: ["5 Minuten","15 Minuten","30 Minuten","1 Stunde"], hints: ["9:00 - 8:45 = 15 Minuten"], difficulty: 2 },
+      { id: "tl5", type: "multiple-choice", question: "Im Sommer ist es warm. Im Winter ist es kalt. Was stimmt?", answer: "Sommer=warm, Winter=kalt", options: ["Sommer=kalt, Winter=warm","Sommer=warm, Winter=kalt","Beide sind gleich warm"], hints: ["Lies beide Sätze."], difficulty: 1 },
+      { id: "tl6", type: "fill-in-blank", question: "Lena liest gern Bücher. Was macht Lena gern? Bücher ___", answer: "lesen", hints: ["'liest gern' → sie liest gern"], difficulty: 1 },
+    ],
+  },
 ];
 
 export default grade2German;
