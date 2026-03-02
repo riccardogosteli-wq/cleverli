@@ -9,6 +9,9 @@ export const LANGUAGES: { code: Lang; flag: string; name: string }[] = [
 
 export const t: Record<Lang, Record<string, string>> = {
   de: {
+    bannerLehrplan: "Lehrplan 21",
+    bannerTeachers: "Von Lehrern empfohlen",
+    bannerExercises: "Über 200 Übungen",
     tagline: "Lernen macht Spass — mit Cleverli!",
     subtitle: "Die Lernplattform für Schweizer Kinder der 1.–3. Klasse.\nInteraktiv · Auf Lehrplan 21 abgestimmt · Auf Deutsch, Français, Italiano & English",
     startFree: "Jetzt kostenlos testen",
@@ -106,6 +109,9 @@ export const t: Record<Lang, Record<string, string>> = {
     otherTopics: "Andere Themen →",
   },
   fr: {
+    bannerLehrplan: "Plan d'études romand",
+    bannerTeachers: "Recommandé par les enseignants",
+    bannerExercises: "Plus de 200 exercices",
     tagline: "Apprendre devient amusant — avec Cleverli!",
     subtitle: "La plateforme d'apprentissage pour les enfants suisses de la 1re à la 3e année.\nInteractif · Aligné sur le PER · En Deutsch, Français, Italiano & English",
     startFree: "Essayer gratuitement",
@@ -203,6 +209,9 @@ export const t: Record<Lang, Record<string, string>> = {
     otherTopics: "Autres thèmes →",
   },
   it: {
+    bannerLehrplan: "Piano di studio",
+    bannerTeachers: "Raccomandato dagli insegnanti",
+    bannerExercises: "Oltre 200 esercizi",
     tagline: "Imparare è divertente — con Cleverli!",
     subtitle: "La piattaforma di apprendimento per i bambini svizzeri dalla 1a alla 3a classe.\nInterattivo · Allineato al PER · In Deutsch, Français, Italiano & English",
     startFree: "Prova gratuitamente",
@@ -300,6 +309,9 @@ export const t: Record<Lang, Record<string, string>> = {
     otherTopics: "Altri argomenti →",
   },
   en: {
+    bannerLehrplan: "Swiss Curriculum LP21",
+    bannerTeachers: "Recommended by teachers",
+    bannerExercises: "Over 200 exercises",
     tagline: "Learning is fun — with Cleverli!",
     subtitle: "The learning platform for Swiss children in grades 1–3.\nInteractive · Aligned with Swiss curriculum · In Deutsch, Français, Italiano & English",
     startFree: "Try for free",

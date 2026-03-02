@@ -26,7 +26,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       {/* Banner */}
       <div className="bg-green-600 text-white text-center py-2 text-sm font-medium tracking-wide">
-        🇨🇭 Lehrplan 21 &nbsp;·&nbsp; 🏅 Von Lehrern empfohlen &nbsp;·&nbsp; 🎮 Über 200 Übungen
+        🇨🇭 {tr("bannerLehrplan")} &nbsp;·&nbsp; 🏅 {tr("bannerTeachers")} &nbsp;·&nbsp; 🎮 {tr("bannerExercises")}
       </div>
 
       {/* Hero */}
