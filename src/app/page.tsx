@@ -4,19 +4,7 @@ import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useState } from "react";
 
-const TESTIMONIALS = [
-  { name: "Sandra M.", city: "Zürich", text: "Meine Tochter übt jeden Abend freiwillig Mathe — das hätte ich nie gedacht! Cleverli macht Lernen wirklich Spass.", stars: 5 },
-  { name: "Patrick K.", city: "Bern", text: "Endlich eine Schweizer Plattform, die auf den Lehrplan 21 abgestimmt ist. Mein Sohn ist in der 2. Klasse und liebt die Aufgaben.", stars: 5 },
-  { name: "Léa D.", city: "Lausanne", text: "Super intuitiv, auch für jüngere Kinder. Die Hinweise helfen, ohne einfach die Antwort zu verraten.", stars: 5 },
-];
 
-const FAQS = [
-  { q: "Kann ich Cleverli kostenlos ausprobieren?", a: "Ja! Die ersten 3 Aufgaben pro Thema kannst du immer kostenlos testen — ganz ohne Anmeldung oder Kreditkarte. Gefällt es dir, kannst du ein Abo abschliessen, um alle Aufgaben freizuschalten." },
-  { q: "Für welche Klassen ist Cleverli?", a: "Aktuell decken wir die 1., 2. und 3. Klasse ab (Schweizer Lehrplan 21, alle Kantone). Weitere Klassen folgen." },
-  { q: "Wie kündige ich das Abo?", a: "Jederzeit — kein Mindestabo, keine Kündigungsfrist. Einfach in den Einstellungen kündigen, du wirst nicht automatisch verlängert ohne dein Einverständnis." },
-  { q: "Brauche ich eine App herunterladen?", a: "Nein! Cleverli läuft direkt im Browser — auf Handy, Tablet und Computer. Einfach die Website öffnen und loslegen, nichts installieren nötig." },
-  { q: "In welchen Sprachen ist Cleverli verfügbar?", a: "Deutsch, Français, Italiano und English. Einfach oben rechts die Flagge wählen — die Benutzeroberfläche wechselt sofort." },
-];
 
 export default function Home() {
   const { tr } = useLang();
@@ -127,7 +115,7 @@ export default function Home() {
             </div>
             {/* Premium */}
             <div className="bg-green-600 rounded-2xl p-5 sm:p-8 border-2 border-green-600 shadow-lg text-white flex flex-col relative overflow-hidden">
-              <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">⭐ Beliebt</div>
+              <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
               <div className="flex items-center gap-3 mb-1">
                 <Image src="/cleverli-jump-star.png" alt="" width={56} height={56} />
                 <div className="text-3xl font-bold">CHF 9.90<span className="text-lg font-normal">{tr("perMonth")}</span></div>
@@ -140,7 +128,7 @@ export default function Home() {
                 <li>✅ {tr("premiumF4")}</li>
               </ul>
               <Link href="/signup" className="mt-6 block text-center bg-white text-green-700 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors">
-                Jetzt starten
+                {tr("premiumCta")}
               </Link>
             </div>
           </div>
@@ -152,14 +140,18 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
             <Image src="/cleverli-wave.png" alt="" width={70} height={70} className="drop-shadow-md shrink-0 sm:w-[100px] sm:h-[100px]" />
-            <h2 className="text-2xl font-bold text-gray-800">Was Eltern sagen 💬</h2>
+            <h2 className="text-2xl font-bold text-gray-800">{tr("testimonialsTitle")}</h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <div className="text-yellow-400 text-lg mb-3">{"⭐".repeat(t.stars)}</div>
-                <p className="text-gray-600 text-sm italic mb-4">&ldquo;{t.text}&rdquo;</p>
-                <p className="text-sm font-semibold text-gray-800">{t.name} · {t.city}</p>
+            {[
+              { nameKey: "Sandra M.", city: "Zürich", textKey: "testimonial1" as const },
+              { nameKey: "Patrick K.", city: "Bern", textKey: "testimonial2" as const },
+              { nameKey: "Léa D.", city: "Lausanne", textKey: "testimonial3" as const },
+            ].map((t) => (
+              <div key={t.nameKey} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div className="text-yellow-400 text-lg mb-3">{"⭐".repeat(5)}</div>
+                <p className="text-gray-600 text-sm italic mb-4">&ldquo;{tr(t.textKey)}&rdquo;</p>
+                <p className="text-sm font-semibold text-gray-800">{t.nameKey} · {t.city}</p>
               </div>
             ))}
           </div>
@@ -171,19 +163,21 @@ export default function Home() {
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-8 justify-center">
             <Image src="/cleverli-think.png" alt="" width={70} height={70} className="drop-shadow-md" />
-            <h2 className="text-2xl font-bold text-gray-800">Häufige Fragen</h2>
+            <h2 className="text-2xl font-bold text-gray-800">{tr("faqTitle")}</h2>
           </div>
           <div className="space-y-3">
-            {FAQS.map((faq, i) => (
+            {([
+              ["faqQ1","faqA1"],["faqQ2","faqA2"],["faqQ3","faqA3"],["faqQ4","faqA4"],["faqQ5","faqA5"],
+            ] as const).map(([qKey, aKey], i) => (
               <div key={i} className="border-2 border-gray-100 rounded-2xl overflow-hidden">
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   style={{minHeight:"56px"}}
                   className="w-full text-left px-4 sm:px-5 py-4 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 active:bg-gray-100 transition-colors text-sm sm:text-base">
-                  <span>{faq.q}</span>
+                  <span>{tr(qKey)}</span>
                   <span className="text-green-600 text-xl ml-3 shrink-0">{openFaq === i ? "−" : "+"}</span>
                 </button>
                 {openFaq === i && (
-                  <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{faq.a}</div>
+                  <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{tr(aKey)}</div>
                 )}
               </div>
             ))}
@@ -197,8 +191,8 @@ export default function Home() {
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 justify-center">
           <Image src="/cleverli-jump-star.png" alt="" width={100} height={100} className="drop-shadow-lg" />
           <div>
-            <h2 className="text-2xl font-bold mb-2">Bereit zum Ausprobieren?</h2>
-            <p className="text-green-100 mb-4">Keine Anmeldung nötig — einfach loslegen!</p>
+            <h2 className="text-2xl font-bold mb-2">{tr("ctaTitle")}</h2>
+            <p className="text-green-100 mb-4">{tr("ctaSubtitle")}</p>
             <Link href="/dashboard" className="inline-block bg-white text-green-700 px-8 py-3 rounded-full font-bold hover:bg-green-50 transition-colors shadow-md">
               {tr("startFree")} →
             </Link>
@@ -211,12 +205,12 @@ export default function Home() {
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <div className="flex items-center gap-2">
             <span className="font-bold text-green-700">cleverli</span>
-            <span>· Schweiz 🇨🇭</span>
+            <span>· {tr("footerCountry")}</span>
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/impressum" className="hover:text-gray-600">Impressum</Link>
-            <Link href="/datenschutz" className="hover:text-gray-600">Datenschutz</Link>
-            <Link href="mailto:hello@cleverli.ch" className="hover:text-gray-600">Kontakt</Link>
+            <Link href="/impressum" className="hover:text-gray-600">{tr("footerImpressum")}</Link>
+            <Link href="/datenschutz" className="hover:text-gray-600">{tr("footerDatenschutz")}</Link>
+            <Link href="mailto:hello@cleverli.ch" className="hover:text-gray-600">{tr("footerKontakt")}</Link>
           </div>
           <p>© 2026 Cleverli</p>
         </div>
