@@ -9,7 +9,7 @@ These are flow-breaking issues found in the user journey audit. They actively da
 
 ---
 
-### UJ-1 · Homepage shows "Kostenlos starten" to logged-in users ⚠️
+### ✅ UJ-1 · Homepage shows "Kostenlos starten" to logged-in users ⚠️
 **Severity:** Critical  
 **Where:** `/` (homepage) — hero, pricing section, rewards section, bottom CTA banner  
 **Problem:** `page.tsx` never reads `useSession`. A logged-in user sees "Kostenlos starten →", "Konto erstellen", "Jetzt starten" — all pointing at `/signup`. Completely breaks the experience for returning users.  
@@ -20,7 +20,7 @@ These are flow-breaking issues found in the user journey audit. They actively da
 
 ---
 
-### UJ-2 · Signup collects data but creates no account ⚠️
+### ✅ UJ-2 · Signup collects data but creates no account ⚠️
 **Severity:** Critical  
 **Where:** `/signup` — Step 3 "Los geht's!"  
 **Problem:** `handleStart()` just calls `router.push("/dashboard")`. Name, email, password entered by user are silently discarded. User believes they have an account.  
@@ -32,7 +32,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-3 · Login page accessible to logged-in users — no redirect ⚠️
+### ✅ UJ-3 · Login page accessible to logged-in users — no redirect ⚠️
 **Severity:** High  
 **Where:** `/login`, `/signup`  
 **Problem:** No `useEffect` redirect. A logged-in user can visit `/login` — confusing.  
@@ -48,7 +48,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-5 · Topic completion screen has no "Next topic" flow ⚠️
+### ✅ UJ-5 · Topic completion screen has no "Next topic" flow ⚠️
 **Severity:** High  
 **Where:** Exercise completion screen in `ExercisePlayer.tsx`  
 **Problem:** After finishing a topic, user gets "Nochmal spielen" and "Andere Themen" — no intelligent "Next →" button that takes them to the logical next topic. Duolingo always pushes you forward. Here you have to navigate back and choose.  
@@ -56,7 +56,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-6 · Wrong answer = immediate next question — no feedback moment ⚠️
+### ✅ UJ-6 · Wrong answer = immediate next question — no feedback moment ⚠️
 **Severity:** High  
 **Where:** `ExercisePlayer.tsx` — `onAnswer` handler  
 **Problem:** After a wrong answer, the exercise shows the correct answer briefly (via `answered` state + 900ms timeout), then moves on. There's no dedicated "that was wrong, here's why" screen. Kids skip over it without processing. Duolingo shows a full red panel with the correct answer + explanation.  
@@ -64,7 +64,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-7 · No "Review mistakes" mode after topic ⚠️
+### ✅ UJ-7 · No "Review mistakes" mode after topic ⚠️
 **Severity:** High  
 **Where:** Topic completion flow  
 **Problem:** Exercises answered incorrectly are not queued for review. User earns stars even with 1/10 correct. Duolingo's core loop is built on this. Kids repeat until mastered.  
@@ -85,7 +85,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-9 · Rewards page has no paywall — anyone sets rewards ⚠️
+### ✅ UJ-9 · Rewards page has no paywall — anyone sets rewards ⚠️
 **Severity:** Medium  
 **Where:** `/rewards`  
 **Problem:** The rewards dashboard (creating family rewards, setting goals) is accessible to all users regardless of premium status. This is a premium feature per the pricing page.  
@@ -101,7 +101,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-11 · No onboarding after signup ⚠️
+### ✅ UJ-11 · No onboarding after signup ⚠️
 **Severity:** High  
 **Where:** Post-signup redirect → `/dashboard`  
 **Problem:** After "signup" (even the broken one), user lands on a dashboard that asks "In welcher Klasse bist du?" — cold, no welcome, no explanation of what XP/stars/streaks mean, no guided first exercise. Duolingo has a full onboarding flow.  
@@ -113,7 +113,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-12 · No "Back" or breadcrumb during exercise ⚠️
+### ✅ UJ-12 · No "Back" or breadcrumb during exercise ⚠️
 **Severity:** Medium  
 **Where:** `/learn/[grade]/[subject]/[topic]`  
 **Problem:** The breadcrumb shows above the exercise but during an active exercise session, accidentally tapping "Dashboard" loses all progress. No confirmation dialog.  
@@ -121,7 +121,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-13 · No empty state on dashboard for new users ⚠️
+### ✅ UJ-13 · No empty state on dashboard for new users ⚠️
 **Severity:** Medium  
 **Where:** `/dashboard`  
 **Problem:** New user → selects grade → sees topic list. No XP bar shows (XP = 0). No encouragement. No "Start here" highlighted. Just a grid of equal-looking topics.  
@@ -137,7 +137,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-15 · Score/progress not visible during exercise ⚠️
+### ✅ UJ-15 · Score/progress not visible during exercise ⚠️
 **Severity:** Medium  
 **Where:** `ExercisePlayer.tsx` — exercise header  
 **Problem:** During a 10-exercise topic, user sees current question but no progress indicator (X/10, progress bar). Duolingo has a prominent progress bar + hearts. Users don't know how far they are.  
@@ -145,7 +145,7 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-16 · Kids and Parents routes freely accessible — no separation ⚠️
+### ✅ UJ-16 · Kids and Parents routes freely accessible — no separation ⚠️
 **Severity:** Medium  
 **Where:** `/kids`, `/parents`  
 **Problem:** A child can navigate to `/parents` and see (or worse, modify) parent-side settings. There's no PIN gate.  
@@ -216,22 +216,22 @@ See UJ-11 above.
 
 ## 🟡 MEDIUM PRIORITY
 
-### PM-7 · Progress Bar During Exercise
+### ✅ PM-7 · Progress Bar During Exercise
 See UJ-15. Thin bar at top, "X/10" counter.
 
-### PM-8 · Wrong Answer Feedback Panel
+### ✅ PM-8 · Wrong Answer Feedback Panel
 See UJ-6. Full red panel, correct answer shown, explanation text, tap to continue.
 
-### PM-9 · Next Topic Auto-Suggest
+### ✅ PM-9 · Next Topic Auto-Suggest
 See UJ-5. After topic completion, suggest next topic with one tap.
 
 ### PM-10 · Browser Language Detection
 See UJ-14. Auto-detect on first visit from `navigator.language`.
 
-### PM-11 · Navigate-Away Confirmation During Exercise
+### ✅ PM-11 · Navigate-Away Confirmation During Exercise
 See UJ-12. Intercept back/breadcrumb if exercise in progress.
 
-### PM-12 · Empty State + "Start Here" Nudge for New Users
+### ✅ PM-12 · Empty State + "Start Here" Nudge for New Users
 See UJ-13. Highlight first topic, welcome nudge.
 
 ### PM-13 · Streak Reminder + Grace Period
@@ -273,6 +273,20 @@ Exercise image alt texts (per exercise data), keyboard navigation, high contrast
 ## ✅ Completed
 
 ### 2026-03-02
+
+### 2026-03-02 (evening — UJ audit batch 1)
+- [x] UJ-1: Homepage session-aware CTAs
+- [x] UJ-2: Signup persists session to localStorage
+- [x] UJ-3: Login + Signup redirect when already logged in
+- [x] UJ-5: "Nächstes Thema →" button after topic completion
+- [x] UJ-6: Wrong-answer red feedback panel (shows correct answer + explanation)
+- [x] UJ-7: Review mode — failed exercises re-queued after topic
+- [x] UJ-9: Rewards page gated behind isPremium (free users see upsell)
+- [x] UJ-11: Onboarding modal (Welcome → Grade → How-it-works → first topic)
+- [x] UJ-12: Leave-exercise confirmation dialog on breadcrumb navigation
+- [x] UJ-13: Empty state nudge + highlighted first topic for 0 XP users
+- [x] UJ-15: Thin progress bar + X/Y counter always visible during exercise
+- [x] UJ-16: Parent dashboard behind 4-digit PIN gate (30 min session)
 - Security headers added (CSP, X-Frame-Options, HSTS, Referrer-Policy, Permissions-Policy)
 - Science/NMG topics added to sitemap (26 new pages)
 - App pages marked `noindex` with server wrappers (dashboard, trophies, rewards, daily, family, kids, parents)
