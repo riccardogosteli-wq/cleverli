@@ -139,12 +139,18 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         <Image src="/cleverli-think.png" alt="" width={100} height={100} className="mx-auto drop-shadow-md" />
         <h2 className="text-xl font-bold text-gray-800">Weiter mit Premium 🔒</h2>
         <p className="text-gray-500 text-sm">
-          Du hast alle 3 kostenlosen Aufgaben gemacht!<br/>
-          Schalte alle <strong>{exercises.length}</strong> Aufgaben frei.
+          Du hast alle 3 kostenlosen Aufgaben gemacht! 🎉<br/>
+          Mit Premium erhältst du <strong>unbegrenzten Zugriff</strong> auf alle Aufgaben, alle Fächer und alle Klassen 1–3.
         </p>
+        <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm text-green-800 text-left space-y-1 w-full max-w-xs">
+          <div>✅ Alle {exercises.length} Aufgaben in diesem Thema</div>
+          <div>✅ Alle Fächer: Mathe, Deutsch & mehr</div>
+          <div>✅ Klassen 1, 2 und 3 komplett</div>
+          <div>✅ Bis zu 3 Kinder pro Konto</div>
+        </div>
         <Link href="/signup"
           className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
-          Jetzt upgraden — CHF 9.90/Mt.
+          Jetzt starten — CHF 9.90/Mt.
         </Link>
         <div>
           <Link href={`/learn/${grade}/${subject}`} className="text-sm text-gray-400 hover:text-gray-600 underline">
@@ -194,7 +200,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       {!isPremium && idx < FREE_LIMIT && (
         <p className="text-center text-xs text-gray-400">
           💡 {FREE_LIMIT} kostenlose Aufgaben pro Thema —{" "}
-          <Link href="/signup" className="text-green-600 underline">alle {exercises.length} freischalten</Link>
+          <Link href="/signup" className="text-green-600 underline">alle Klassen & Aufgaben freischalten</Link>
         </p>
       )}
 
