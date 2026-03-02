@@ -19,12 +19,12 @@ export default function Navigation() {
         {/* Logo — floats below nav bar for a premium feel */}
         <Link href="/" className="flex items-center gap-3 min-h-[44px] relative" onClick={() => setOpen(false)} style={{ marginBottom: "-28px", zIndex: 60 }}>
           <Image
-            src="/cleverli-logo.jpg"
+            src="/cleverli-logo.png"
             alt="Cleverli – Lernplattform für Schweizer Kinder"
-            width={180}
-            height={60}
+            width={210}
+            height={70}
             className="w-auto object-contain drop-shadow-md"
-            style={{ height: "80px" }}
+            style={{ height: "90px" }}
             priority
           />
           <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline self-start mt-2">beta</span>
