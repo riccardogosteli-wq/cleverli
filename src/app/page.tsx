@@ -51,19 +51,17 @@ export default function Home() {
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-10">{tr("subjectsTitle")}</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { emoji: "🔢", key: "math", color: "bg-blue-50 border-blue-200 text-blue-800 hover:bg-blue-100" },
-              { emoji: "📖", key: "german", color: "bg-yellow-50 border-yellow-200 text-yellow-800 hover:bg-yellow-100" },
-              { emoji: "🌍", key: "science", color: "bg-green-50 border-green-200 text-green-800" },
-              { emoji: "🎨", key: "moreSoon", color: "bg-gray-50 border-gray-200 text-gray-400", locked: true },
+              { emoji: "🔢", key: "math", label: "math", color: "bg-blue-50 border-blue-200 text-blue-800 hover:bg-blue-100", href: "/dashboard?subject=math" },
+              { emoji: "📖", key: "german", label: "german", color: "bg-yellow-50 border-yellow-200 text-yellow-800 hover:bg-yellow-100", href: "/dashboard?subject=german" },
+              { emoji: "🌍", key: "science", label: "scienceFull", color: "bg-green-50 border-green-200 text-green-800 hover:bg-green-100", href: "/dashboard?subject=science" },
             ].map((s) => (
-              <div key={s.key}
-                className={`border-2 rounded-2xl p-5 text-center ${s.color} ${s.locked ? "opacity-50 cursor-not-allowed" : "cursor-default"}`}>
-                <div className={`text-4xl mb-2 ${s.locked ? "grayscale" : ""}`}>{s.emoji}</div>
-                <div className="font-semibold text-sm">{s.key === "science" ? tr("scienceFull") : tr(s.key)}</div>
-                {s.locked && <div className="text-xs text-gray-400 mt-1">🔜 Bald</div>}
-              </div>
+              <Link key={s.key} href={s.href}
+                className={`border-2 rounded-2xl p-6 text-center transition-colors ${s.color} cursor-pointer`}>
+                <div className="text-5xl mb-3">{s.emoji}</div>
+                <div className="font-bold text-base">{tr(s.label as Parameters<typeof tr>[0])}</div>
+              </Link>
             ))}
           </div>
         </div>
