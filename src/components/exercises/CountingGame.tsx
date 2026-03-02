@@ -67,7 +67,13 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
       </div>
 
       <div className="text-center text-sm text-gray-500">
-        Gezählt: <span className="font-bold text-green-700">{popped.filter(Boolean).length}</span> / {count}
+        {popped.filter(Boolean).length === 0 ? (
+          <span className="text-gray-400">Tippe auf jedes {emoji}!</span>
+        ) : popped.filter(Boolean).length === count ? (
+          <span className="font-bold text-green-600">Alle gezählt! ✓ — Wähle jetzt deine Antwort 👇</span>
+        ) : (
+          <>Gezählt: <span className="font-bold text-green-700">{popped.filter(Boolean).length}</span></>
+        )}
       </div>
 
       {/* Correct answer feedback */}
