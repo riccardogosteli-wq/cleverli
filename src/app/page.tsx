@@ -288,6 +288,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/impressum" className="hover:text-gray-600">{tr("footerImpressum")}</Link>
             <Link href="/datenschutz" className="hover:text-gray-600">{tr("footerDatenschutz")}</Link>
+            <Link href="/agb" className="hover:text-gray-600">{tr("footerAgb")}</Link>
             <Link href="mailto:hello@cleverli.ch" className="hover:text-gray-600">{tr("footerKontakt")}</Link>
           </div>
           <p>© 2026 Cleverli</p>
