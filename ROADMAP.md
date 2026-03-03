@@ -306,3 +306,24 @@ Exercise image alt texts (per exercise data), keyboard navigation, high contrast
 - Mascot hat overlay removed from kids + trophies dashboards
 - Level progress bar redesigned (cleaner grid, XP progress bar, better labels)
 - DragDrop: image items rendered larger (52px min) than emoji items
+
+---
+
+## 🔧 OPS / MONITORING
+
+### MON-1 · Uptime & Flow Monitoring
+**Priority:** High — do before payment goes live
+**What to monitor:**
+- Homepage loads (cleverli.ch)
+- Signup flow completes (end-to-end)
+- Login flow completes
+- Payment flow completes (once live)
+- API/Supabase reachability
+
+**Options:**
+- **BetterUptime / UptimeRobot** — free tier, pings every 5 min, alerts via email/Telegram
+- **Checkly** — can run real browser flows (signup, login) as monitors
+- **Vercel Analytics** — basic error tracking (already available, just enable)
+
+**Minimum viable:** UptimeRobot free tier for homepage + Vercel error alerts
+**Ideal:** Checkly for full signup/login flow tests + Telegram alerts to Ricci
