@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 
 const INSTANCE  = "cleverli";
 const API_KEY   = process.env.PAYREXX_API_KEY ?? "";
@@ -58,7 +57,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
         "Prefer": "return=minimal",
       },
-      body: JSON.stringify({ premium: false }),
+      body: JSON.stringify({ cancelled: true }),
     }
   );
 
@@ -68,7 +67,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "db_update_failed" }, { status: 500 });
   }
 
-  console.log(`[cancel-subscription] ✅ Cancelled ${cancelledCount} subscriptions for ${userId}. DB updated.`);
+  console.log(`[cancel-subscription] ✅ Cancellation recorded for ${userId}. Payrexx subscriptions cancelled: ${cancelledCount}. Premium access continues until period end.`);
 
   if (cancelError && cancelledCount === 0) {
     // Subscription may already be cancelled on Payrexx side — premium is still set to false

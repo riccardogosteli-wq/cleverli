@@ -160,7 +160,7 @@ export default function AccountPage() {
             {/* Cancel flow */}
             {cancelState === "done" ? (
               <div className="bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-600 text-center">
-                ✅ {t("Gekündigt. Zugang läuft aus.", "Résilié. L'accès expire bientôt.", "Annullato. L'accesso scade.", "Cancelled. Access will expire.")}
+                ✅ {t("Gekündigt. Zugang bis Ablauf der Laufzeit aktiv.", "Résilié. Accès actif jusqu'à la fin de la période.", "Annullato. Accesso attivo fino alla fine del periodo.", "Cancelled. Access remains active until the period ends.")}
               </div>
             ) : cancelState === "error" ? (
               <div className="space-y-2">
@@ -174,10 +174,10 @@ export default function AccountPage() {
             ) : cancelState === "confirm" ? (
               <div className="space-y-2">
                 <p className="text-sm text-gray-600 text-center">
-                  {t("Wirklich kündigen? Dein Zugang endet sofort.",
-                     "Vraiment résilier ? L'accès s'arrête immédiatement.",
-                     "Vuoi davvero annullare? L'accesso termina subito.",
-                     "Really cancel? Your access ends immediately.")}
+                  {t("Abo wirklich kündigen? Dein Zugang läuft bis zum Ende der bezahlten Laufzeit weiter.",
+                     "Vraiment résilier ? L'accès reste actif jusqu'à la fin de la période payée.",
+                     "Vuoi davvero annullare? L'accesso rimane attivo fino alla fine del periodo pagato.",
+                     "Really cancel? Your access remains active until the end of the paid period.")}
                 </p>
                 <button onClick={handleCancel} disabled={false}
                   className="w-full bg-red-500 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-red-600 disabled:opacity-60">
@@ -204,10 +204,10 @@ export default function AccountPage() {
               {t("Abonnement", "Abonnement", "Abbonamento", "Subscription")}
             </div>
             <div className="text-sm text-gray-600">
-              {t("Du nutzt die Gratis-Version mit 3 Aufgaben pro Thema.",
-                 "Tu utilises la version gratuite avec 3 exercices par thème.",
-                 "Stai usando la versione gratuita con 3 esercizi per argomento.",
-                 "You're on the free plan with 3 exercises per topic.")}
+              {t("Du nutzt die Gratis-Version mit 5 Aufgaben pro Thema.",
+                 "Tu utilises la version gratuite avec 5 exercices par thème.",
+                 "Stai usando la versione gratuita con 5 esercizi per argomento.",
+                 "You're on the free plan with 5 exercises per topic.")}
             </div>
             <Link href="/upgrade"
               className="block text-center bg-green-600 text-white font-bold py-3 rounded-xl text-sm hover:bg-green-700 active:scale-95 transition-all">

@@ -3,7 +3,7 @@
  * Family Leaderboard — up to 3 child profiles, ranked by XP this week.
  * Also allows adding/switching profiles (no server auth — local only for now).
  */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
@@ -43,11 +43,7 @@ export default function FamilyPage() {
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
 
-  useEffect(() => {
-    refresh();
-  }, []);
-
-  function refresh() {
+  const refresh = useCallback(() => {
     const { members: m } = loadFamily();
     setMembers(m);
 
@@ -66,7 +62,9 @@ export default function FamilyPage() {
     }).sort((a, b) => b.weeklyXp - a.weeklyXp || b.xp - a.xp);
 
     setStats(s);
-  }
+  }, [lang]);
+
+  useEffect(() => { refresh(); }, [refresh]);
 
   function handleAdd() {
     if (!newName.trim()) { setAddError(t("Bitte einen Namen eingeben.", "Entre un prénom.", "Inserisci un nome.", "Please enter a name.")); return; }

@@ -1,9 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 
-const VOICE_ID = "vmVmHDKBkkCgbLVIOJRb"; // Charlie Chatlin — Real & Casual (German, Conversational)
-const API_KEY  = process.env.ELEVENLABS_API_KEY ?? "";
+const VOICE_ID    = "vmVmHDKBkkCgbLVIOJRb"; // Charlie Chatlin — Real & Casual (German, Conversational)
+const API_KEY     = process.env.ELEVENLABS_API_KEY ?? "";
+const SUPA_URL    = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
+const SUPA_ANON   = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
 
 export async function GET(req: NextRequest) {
+  // Require a valid Supabase session to prevent ElevenLabs API key drain
+  if (SUPA_URL && SUPA_ANON) {
+    const authHeader = req.headers.get("authorization") ?? "";
+    const token = authHeader.replace("Bearer ", "").trim();
+    if (!token) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+    const sb = createClient(SUPA_URL, SUPA_ANON);
+    const { data: { user } } = await sb.auth.getUser(token);
+    if (!user) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
   const text = req.nextUrl.searchParams.get("text")?.trim();
   if (!text) return NextResponse.json({ error: "no text" }, { status: 400 });
   if (!API_KEY) return NextResponse.json({ error: "no key" }, { status: 503 });

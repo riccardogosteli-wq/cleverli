@@ -92,7 +92,7 @@ export default function Signup() {
 
         {/* Stepper with labels */}
         <div className="flex justify-center items-start gap-2">
-          {[1,2,3,4,5,6].map(s => (
+          {[1,2,3].map(s => (
             <div key={s} className="flex flex-col items-center gap-1 flex-1">
               <div className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all mx-auto
                 ${step > s ? "bg-green-600 border-green-600 text-white" :
@@ -101,7 +101,7 @@ export default function Signup() {
                 {step > s ? "✓" : s}
               </div>
               <span className={`text-[10px] text-center leading-tight ${step === s ? "text-green-700 font-semibold" : "text-gray-400"}`}>
-                {s === 1 ? tr("whoAreYou") ?? "Wer bist du?" : s === 2 ? tr("yourAccount") ?? "Dein Konto" : tr("yourClass") ?? "Deine Klasse"}
+                {s === 1 ? (tr("whoAreYou") ?? "Wer bist du?") : s === 2 ? (tr("yourAccount") ?? "Dein Konto") : (tr("yourClass") ?? "Deine Klasse")}
               </span>
             </div>
           ))}

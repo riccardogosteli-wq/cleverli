@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     default: "Cleverli — Lernen macht Spass 🇨🇭",
     template: "%s | Cleverli",
   },
-  description: "Cleverli ist die interaktive Lernplattform für Schweizer Kinder der 1.–3. Klasse. Mathe, Deutsch & mehr — abgestimmt auf den Lehrplan 21. Jetzt kostenlos testen!",
+  description: "Cleverli ist die interaktive Lernplattform für Schweizer Kinder der 1.–6. Klasse. Mathe, Deutsch & mehr — abgestimmt auf den Lehrplan 21. Jetzt kostenlos testen!",
   keywords: [
     "Lernplattform Schweiz", "Kinder Lernen", "Lehrplan 21",
     "Mathe 1. Klasse", "Deutsch 1. Klasse", "Mathe 2. Klasse",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: BASE_URL,
     siteName: "Cleverli",
     title: "Cleverli — Lernen macht Spass 🇨🇭",
-    description: "Die interaktive Lernplattform für Schweizer Kinder der 1.–3. Klasse. Mathe, Deutsch & mehr — Lehrplan 21. Jetzt kostenlos testen!",
+    description: "Die interaktive Lernplattform für Schweizer Kinder der 1.–6. Klasse. Mathe, Deutsch & mehr — Lehrplan 21. Jetzt kostenlos testen!",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Cleverli — Lernen macht Spass" }],
   },
   twitter: {

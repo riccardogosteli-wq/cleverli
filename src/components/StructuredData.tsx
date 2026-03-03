@@ -7,7 +7,7 @@ export default function StructuredData() {
         "@id": "https://www.cleverli.ch/#website",
         url: "https://www.cleverli.ch",
         name: "Cleverli",
-        description: "Interaktive Lernplattform für Schweizer Kinder der 1.–3. Klasse",
+        description: "Interaktive Lernplattform für Schweizer Kinder der 1.–6. Klasse",
         inLanguage: ["de-CH", "fr-CH", "it-CH", "en-GB"],
       },
       {
@@ -36,7 +36,7 @@ export default function StructuredData() {
         applicationCategory: "EducationalApplication",
         operatingSystem: "Web, iOS, Android",
         url: "https://www.cleverli.ch",
-        description: "Cleverli ist die interaktive Schweizer Lernplattform für Kinder der 1.–3. Klasse. Mathe, Deutsch und mehr — abgestimmt auf Lehrplan 21.",
+        description: "Cleverli ist die interaktive Schweizer Lernplattform für Kinder der 1.–6. Klasse. Mathe, Deutsch und mehr — abgestimmt auf Lehrplan 21.",
         inLanguage: ["de-CH", "fr-CH", "it-CH", "en-GB"],
         screenshot: "https://www.cleverli.ch/og-image.png",
         offers: [
@@ -45,7 +45,7 @@ export default function StructuredData() {
             name: "Kostenlos testen",
             price: "0",
             priceCurrency: "CHF",
-            description: "Erste 3 Aufgaben pro Thema gratis",
+            description: "Erste 5 Aufgaben pro Thema gratis",
           },
           {
             "@type": "Offer",
@@ -59,7 +59,7 @@ export default function StructuredData() {
         audience: {
           "@type": "EducationalAudience",
           educationalRole: "student",
-          audienceType: "Kinder 6–10 Jahre, Klasse 1–3 Schweiz",
+          audienceType: "Kinder 6–13 Jahre, Klasse 1–6 Schweiz",
         },
         educationalAlignment: [
           {
@@ -79,7 +79,7 @@ export default function StructuredData() {
             name: "Kann ich Cleverli kostenlos ausprobieren?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Ja! Die ersten 3 Aufgaben pro Thema kannst du immer kostenlos testen — ganz ohne Anmeldung oder Kreditkarte.",
+              text: "Ja! Die ersten 5 Aufgaben pro Thema kannst du immer kostenlos testen — ganz ohne Anmeldung oder Kreditkarte.",
             },
           },
           {

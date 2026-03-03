@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 
 const INSTANCE = "cleverli";
 const API_KEY   = process.env.PAYREXX_API_KEY ?? "";

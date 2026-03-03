@@ -102,7 +102,7 @@ export default function KidsDashboard() {
 
   if (!loaded) return (
     <div className="flex items-center justify-center min-h-screen">
-      <img src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" className="w-16 h-16 object-contain animate-bounce" />
+      <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
     </div>
   );
 

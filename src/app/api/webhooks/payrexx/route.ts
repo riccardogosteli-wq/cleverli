@@ -73,7 +73,12 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
         "Prefer": "return=minimal",
       },
-      body: JSON.stringify({ premium: true }),
+      body: JSON.stringify({
+        premium: true,
+        premium_plan: plan,
+        premium_until: premiumUntil,
+        cancelled: false,
+      }),
     }
   );
 

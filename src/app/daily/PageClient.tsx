@@ -28,7 +28,7 @@ export default function DailyPage() {
   });
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [hintsUsed, setHintsUsed] = useState(0);
-  const [startTime] = useState(Date.now());
+  const [startTime] = useState(() => Date.now());
   const [alreadyDone, setAlreadyDone] = useState(false);
   const [streakMilestone, setStreakMilestone] = useState<number | null>(null);
 

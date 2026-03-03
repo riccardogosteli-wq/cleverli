@@ -6,7 +6,10 @@ export interface Session {
   email: string;
   name: string;
   premium: boolean;
-  userId?: string; // Supabase user ID (present when using real auth)
+  premiumUntil?: string | null;  // ISO date — access valid until this date
+  premiumPlan?: string | null;   // "monthly" | "yearly"
+  cancelled?: boolean;           // true if user cancelled (but still in paid period)
+  userId?: string;               // Supabase user ID (present when using real auth)
 }
 
 const SESSION_KEY = "cleverli_session"; // legacy localStorage fallback
@@ -31,7 +34,7 @@ export function useSession() {
       if (sbSession?.user) {
         const { data: profile } = await supabase!
           .from("parent_profiles")
-          .select("name, premium")
+          .select("name, premium, premium_until, premium_plan, cancelled")
           .eq("id", sbSession.user.id)
           .single();
 
@@ -39,6 +42,9 @@ export function useSession() {
           email: sbSession.user.email ?? "",
           name: profile?.name ?? sbSession.user.user_metadata?.name ?? "",
           premium: profile?.premium ?? false,
+          premiumUntil: profile?.premium_until ?? null,
+          premiumPlan: profile?.premium_plan ?? null,
+          cancelled: profile?.cancelled ?? false,
           userId: sbSession.user.id,
         };
         setSession(sess);
@@ -59,7 +65,7 @@ export function useSession() {
         if (sbSession?.user) {
           const { data: profile } = await supabase!
             .from("parent_profiles")
-            .select("name, premium")
+            .select("name, premium, premium_until, premium_plan, cancelled")
             .eq("id", sbSession.user.id)
             .single();
 
@@ -67,6 +73,9 @@ export function useSession() {
             email: sbSession.user.email ?? "",
             name: profile?.name ?? sbSession.user.user_metadata?.name ?? "",
             premium: profile?.premium ?? false,
+            premiumUntil: profile?.premium_until ?? null,
+            premiumPlan: profile?.premium_plan ?? null,
+            cancelled: profile?.cancelled ?? false,
             userId: sbSession.user.id,
           };
           setSession(sess);
@@ -87,5 +96,12 @@ export function useSession() {
     setSession(null);
   };
 
-  return { session, loaded, isPremium: session?.premium ?? false, logout };
+  // isPremium: true only if premium=true AND not expired (premium_until > now, or no expiry set)
+  const isPremium = (() => {
+    if (!session?.premium) return false;
+    if (!session.premiumUntil) return true; // no expiry date = permanent / not yet set
+    return new Date(session.premiumUntil) > new Date();
+  })();
+
+  return { session, loaded, isPremium, logout };
 }

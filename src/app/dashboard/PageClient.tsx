@@ -8,10 +8,10 @@ import { useLang } from "@/lib/LangContext";
 import { getTopics, SUBJECTS } from "@/data/index";
 import { getTopicTitle } from "@/data/topicTitles";
 import { isDailyDoneToday } from "@/lib/daily";
-import { useProfile } from "@/hooks/useProfile";
+import { useProfile, Profile } from "@/hooks/useProfile";
 import { useSession } from "@/hooks/useSession";
 import { loadFamily, getActiveProfileId } from "@/lib/family";
-import { getLevelForXp } from "@/lib/xp";
+import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
 import RewardWidget from "@/components/RewardWidget";
 
 const GRADE_COLORS = [
@@ -56,6 +56,80 @@ function getProgress(grade: number, subject: string, topicId: string) {
   } catch { return null; }
 }
 
+// ── Sidebar — defined OUTSIDE DashboardInner to avoid "component created during render" error ──
+interface SidebarProps {
+  profile: Profile;
+  level: Level;
+  nextLevel: Level | null;
+  dailyDone: boolean;
+  lang: string;
+}
+
+function Sidebar({ profile, level, nextLevel, dailyDone, lang }: SidebarProps) {
+  const xpToNext = nextLevel ? nextLevel.minXp - profile.xp : 0;
+  const xpPct = nextLevel
+    ? Math.round((profile.xp - level.minXp) / (nextLevel.minXp - level.minXp) * 100)
+    : 100;
+  const levelTitle = (lv: Level) => {
+    if (lang === "fr") return lv.titleFr;
+    if (lang === "it") return lv.titleIt;
+    if (lang === "en") return lv.titleEn;
+    return lv.title;
+  };
+  return (
+    <aside className="space-y-4">
+      {/* XP strip */}
+      {(profile.xp > 0 || profile.dailyStreak > 0) && (
+        <div className="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl px-4 py-3 shadow-sm">
+          <span className="text-2xl">{level.emoji}</span>
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-gray-800 text-sm">{levelTitle(level)}</div>
+            <div className="flex items-center gap-2 mt-0.5">
+              <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-full rounded-full transition-all duration-700"
+                  style={{ width: `${xpPct}%`, backgroundColor: level.color }} />
+              </div>
+              <span className="text-xs text-gray-400 shrink-0">
+                {nextLevel ? `${xpToNext} XP` : `${profile.xp} XP`}
+              </span>
+            </div>
+          </div>
+          {profile.dailyStreak >= 2 && (
+            <div className="flex items-center gap-1 bg-orange-50 border border-orange-200 rounded-full px-3 py-1">
+              <span className="text-base">🔥</span>
+              <span className="text-sm font-bold text-orange-700">{profile.dailyStreak}</span>
+            </div>
+          )}
+        </div>
+      )}
+      {/* Reward widget */}
+      <RewardWidget profile={{
+        totalExercises: profile.totalExercises,
+        totalTopicsComplete: profile.totalTopicsComplete,
+        dailyStreak: profile.dailyStreak,
+      }} />
+      {/* Daily challenge */}
+      <Link href="/daily"
+        className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 ${dailyDone ? "bg-green-50 border-green-300 opacity-70" : "bg-amber-50 border-amber-300 hover:bg-amber-100"}`}>
+        <span className="text-3xl">{dailyDone ? "✅" : "⚡"}</span>
+        <div className="flex-1 min-w-0">
+          <div className="font-bold text-amber-800 text-sm">
+            {lang === "fr" ? "Défi du jour" : lang === "it" ? "Sfida del giorno" : lang === "en" ? "Daily Challenge" : "Tagesaufgabe"}
+          </div>
+          <div className="text-xs text-amber-600">
+            {dailyDone
+              ? (lang === "fr" ? "Terminé ! Reviens demain." : lang === "it" ? "Fatto! Torna domani." : lang === "en" ? "Done! Come back tomorrow." : "Erledigt! Morgen gibt es eine neue.")
+              : (lang === "fr" ? "+30 XP bonus · Un essai par jour" : lang === "it" ? "+30 XP bonus" : lang === "en" ? "+30 Bonus XP · One try per day" : "+30 Bonus-XP · Einmal pro Tag")}
+          </div>
+        </div>
+        <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"}
+          alt={dailyDone ? "Cleverli feiert" : "Cleverli läuft"}
+          width={44} height={44} className="drop-shadow-sm shrink-0" />
+      </Link>
+    </aside>
+  );
+}
+
 function DashboardInner() {
   const { tr, lang } = useLang();
   const { profile } = useProfile();
@@ -69,12 +143,9 @@ function DashboardInner() {
   const [dailyDone, setDailyDone] = useState(false);
   const [activeMember, setActiveMember] = useState<{ name: string; avatar: string } | null>(null);
   const [familySize, setFamilySize] = useState(0);
-  const [showNotify, setShowNotify] = useState(false);
-  const [notifyEmail, setNotifyEmail] = useState("");
-  const [notifyDone, setNotifyDone] = useState(false);
-  const [notifyLoading, setNotifyLoading] = useState(false);
-
+  // (notify signup widget removed — state retained for safety)
   // Restore last-used grade from localStorage + load active child profile
+  // eslint-disable-next-line react-compiler/react-compiler
   useEffect(() => {
     setDailyDone(isDailyDoneToday());
     if (!preselectedSubject) {
@@ -89,8 +160,9 @@ function DashboardInner() {
       const member = family.members.find(m => m.id === activeId) ?? family.members[0];
       if (member) setActiveMember({ name: member.name, avatar: member.avatar });
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // eslint-disable-next-line react-compiler/react-compiler
   useEffect(() => {
     setSubject(preselectedSubject);
     if (preselectedSubject) setGrade(null);
@@ -101,20 +173,7 @@ function DashboardInner() {
     setGrade(g);
   };
 
-  const submitNotify = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!notifyEmail) return;
-    setNotifyLoading(true);
-    try {
-      await fetch("https://formspree.io/f/xlgwyoky", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify({ email: notifyEmail, _subject: "Cleverli: Benachrichtigung Klassen 4–6" }),
-      });
-    } catch { /* fail silently */ }
-    setNotifyDone(true);
-    setNotifyLoading(false);
-  };
+
 
   const subjectL = (id: string, key: "label" | "subtitle") => {
     const meta = SUBJECT_META[id];
@@ -123,76 +182,7 @@ function DashboardInner() {
   };
 
   const level = profile ? getLevelForXp(profile.xp) : null;
-  const nextLevel = profile && level ? (level.id < 5 ? getLevelForXp(profile.xp + 1) : null) : null;
-
-  // Localized level title
-  const levelTitle = (lv: ReturnType<typeof getLevelForXp>) => {
-    if (lang === "fr") return lv.titleFr;
-    if (lang === "it") return lv.titleIt;
-    if (lang === "en") return lv.titleEn;
-    return lv.title;
-  };
-
-  // ── Shared sidebar (shows on md+ for all steps) ──────────────────────────
-  const Sidebar = () => {
-    if (!profile || !level) return null;
-    const xpToNext = nextLevel ? nextLevel.minXp - profile.xp : 0;
-    const xpPct = nextLevel
-      ? Math.round((profile.xp - level.minXp) / (nextLevel.minXp - level.minXp) * 100)
-      : 100;
-    return (
-      <aside className="space-y-4">
-        {/* XP strip */}
-        {(profile.xp > 0 || profile.dailyStreak > 0) && (
-          <div className="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl px-4 py-3 shadow-sm">
-            <span className="text-2xl">{level.emoji}</span>
-            <div className="flex-1 min-w-0">
-              <div className="font-bold text-gray-800 text-sm">{levelTitle(level)}</div>
-              <div className="flex items-center gap-2 mt-0.5">
-                <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                  <div className="h-full rounded-full transition-all duration-700"
-                    style={{ width: `${xpPct}%`, backgroundColor: level.color }} />
-                </div>
-                <span className="text-xs text-gray-400 shrink-0">
-                  {nextLevel ? `${xpToNext} XP` : `${profile.xp} XP`}
-                </span>
-              </div>
-            </div>
-            {profile.dailyStreak >= 2 && (
-              <div className="flex items-center gap-1 bg-orange-50 border border-orange-200 rounded-full px-3 py-1">
-                <span className="text-base">🔥</span>
-                <span className="text-sm font-bold text-orange-700">{profile.dailyStreak}</span>
-              </div>
-            )}
-          </div>
-        )}
-        {/* Reward widget */}
-        <RewardWidget profile={{
-          totalExercises: profile.totalExercises,
-          totalTopicsComplete: profile.totalTopicsComplete,
-          dailyStreak: profile.dailyStreak,
-        }} />
-        {/* Daily challenge */}
-        <Link href="/daily"
-          className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 ${dailyDone ? "bg-green-50 border-green-300 opacity-70" : "bg-amber-50 border-amber-300 hover:bg-amber-100"}`}>
-          <span className="text-3xl">{dailyDone ? "✅" : "⚡"}</span>
-          <div className="flex-1 min-w-0">
-            <div className="font-bold text-amber-800 text-sm">
-              {lang === "fr" ? "Défi du jour" : lang === "it" ? "Sfida del giorno" : lang === "en" ? "Daily Challenge" : "Tagesaufgabe"}
-            </div>
-            <div className="text-xs text-amber-600">
-              {dailyDone
-                ? (lang === "fr" ? "Terminé ! Reviens demain." : lang === "it" ? "Fatto! Torna domani." : lang === "en" ? "Done! Come back tomorrow." : "Erledigt! Morgen gibt es eine neue.")
-                : (lang === "fr" ? "+30 XP bonus · Un essai par jour" : lang === "it" ? "+30 XP bonus" : lang === "en" ? "+30 Bonus XP · One try per day" : "+30 Bonus-XP · Einmal pro Tag")}
-            </div>
-          </div>
-          <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"}
-            alt={dailyDone ? "Cleverli feiert" : "Cleverli läuft"}
-            width={44} height={44} className="drop-shadow-sm shrink-0" />
-        </Link>
-      </aside>
-    );
-  };
+  const nextLevel = profile ? getNextLevel(profile.xp) : null;
 
   // ── STEP 1: Choose grade ──────────────────────────────────────────────────
   if (!grade) {
@@ -201,13 +191,13 @@ function DashboardInner() {
         <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
           {/* Sidebar — hidden on mobile (shown inline below) */}
           <div className="hidden md:block">
-            <Sidebar />
+            {profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}
           </div>
 
           <div className="space-y-5">
             {/* Mobile-only: sidebar content inline */}
             <div className="md:hidden space-y-4">
-              <Sidebar />
+              {profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}
             </div>
 
             {/* Grade picker header */}
@@ -246,9 +236,9 @@ function DashboardInner() {
     return (
       <div className="max-w-5xl mx-auto px-4 py-6">
         <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
-          <div className="hidden md:block"><Sidebar /></div>
+          <div className="hidden md:block">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
           <div className="space-y-5">
-            <div className="md:hidden mb-4"><Sidebar /></div>
+            <div className="md:hidden mb-4">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
             {/* PM-20: Nicer subject picker header with mascot */}
             <div className="flex items-center gap-3">
               <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3 min-w-[44px]">←</button>
@@ -335,9 +325,9 @@ function DashboardInner() {
       )}
 
       <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
-      <div className="hidden md:block"><Sidebar /></div>
+      <div className="hidden md:block">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
       <div className="space-y-4">
-      <div className="md:hidden mb-2"><Sidebar /></div>
+      <div className="md:hidden mb-2">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
 
       {/* Header */}
       <div className="flex items-center gap-2">
@@ -506,7 +496,7 @@ export default function Dashboard() {
   return (
     <Suspense fallback={
       <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-400">
-        <img src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" className="w-16 h-16 object-contain animate-bounce" />
+        <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
         <div className="text-sm">Laden… / Chargement…</div>
       </div>
     }>

@@ -29,8 +29,9 @@ export default function Datenschutz() {
         </section>
 
         <section>
-          <h2 className="font-bold text-gray-900 text-base mb-2">3. Keine Tracking-Cookies</h2>
-          <p className="text-gray-600">Wir verwenden keine Tracking-Cookies oder Analyse-Tools von Drittanbietern. Kein Google Analytics, kein Facebook Pixel.</p>
+          <h2 className="font-bold text-gray-900 text-base mb-2">3. Cookies &amp; Tag-Management</h2>
+          <p className="text-gray-600">Wir verwenden keine Tracking-Cookies für Werbung oder persönliche Profile. Kein Facebook Pixel.</p>
+          <p className="text-gray-600 mt-2">Wir setzen <strong>Google Tag Manager (GTM)</strong> als technische Infrastruktur ein. GTM selbst erhebt keine personenbezogenen Daten — es dient als Container für Analyse-Tags (z. B. Google Analytics 4, Google Ads), die nur nach expliziter Konfiguration aktiviert werden. Sofern solche Tags aktiv sind, wird dies in dieser Erklärung aktualisiert.</p>
         </section>
 
         <section>
