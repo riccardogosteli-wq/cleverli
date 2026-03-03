@@ -9,11 +9,6 @@ export default function StructuredData() {
         name: "Cleverli",
         description: "Interaktive Lernplattform für Schweizer Kinder der 1.–3. Klasse",
         inLanguage: ["de-CH", "fr-CH", "it-CH", "en-GB"],
-        potentialAction: {
-          "@type": "SearchAction",
-          target: { "@type": "EntryPoint", urlTemplate: "https://www.cleverli.ch/dashboard?q={search_term_string}" },
-          "query-input": "required name=search_term_string",
-        },
       },
       {
         "@type": "Organization",
@@ -22,7 +17,7 @@ export default function StructuredData() {
         url: "https://www.cleverli.ch",
         logo: {
           "@type": "ImageObject",
-          url: "https://www.cleverli.ch/cleverli-wave.png",
+          url: "https://www.cleverli.ch/cleverli-logo.png",
           width: 512,
           height: 512,
         },
@@ -74,12 +69,6 @@ export default function StructuredData() {
             targetUrl: "https://www.lehrplan21.ch",
           },
         ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "47",
-          bestRating: "5",
-        },
       },
       {
         "@type": "FAQPage",

@@ -1,9 +1,25 @@
 "use client";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { useState } from "react";
+
+export const metadata: Metadata = {
+  title: "Cleverli — Lernen macht Spass 🇨🇭",
+  description: "Die interaktive Lernplattform für Schweizer Kinder der 1.–3. Klasse. Mathe, Deutsch & NMG nach Lehrplan 21. Kostenlos starten, kein Download nötig.",
+  alternates: {
+    canonical: "https://www.cleverli.ch",
+  },
+  openGraph: {
+    title: "Cleverli — Lernen macht Spass 🇨🇭",
+    description: "Interaktiv Mathe, Deutsch & NMG üben — Klasse 1–3, Lehrplan 21. Erste 3 Aufgaben gratis, kein Download, keine App.",
+    url: "https://www.cleverli.ch",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Cleverli — Lernplattform für Schweizer Kinder" }],
+  },
+};
+
 
 export default function Home() {
   const { tr, lang } = useLang();
@@ -81,12 +97,12 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-10">{tr("howTitle")}</h2>
           <div className="grid sm:grid-cols-3 gap-8 text-center">
             {[
-              { step: "1", titleKey: "step1title", descKey: "step1desc", img: "/cleverli-sit-read.png", rounded: false },
-              { step: "2", titleKey: "step2title", descKey: "step2desc", img: "/cleverli-celebrate.png", rounded: false },
-              { step: "3", titleKey: "step3title", descKey: "step3desc", img: "/cleverli-think.png", rounded: false },
+              { step: "1", titleKey: "step1title", descKey: "step1desc", img: "/cleverli-sit-read.png", imgAlt: "Cleverli liest ein Buch", rounded: false },
+              { step: "2", titleKey: "step2title", descKey: "step2desc", img: "/cleverli-celebrate.png", imgAlt: "Cleverli feiert einen Erfolg", rounded: false },
+              { step: "3", titleKey: "step3title", descKey: "step3desc", img: "/cleverli-think.png", imgAlt: "Cleverli denkt nach", rounded: false },
             ].map((item) => (
               <div key={item.step} className="flex flex-col items-center gap-3 bg-white rounded-2xl p-6 shadow-sm">
-                <Image src={item.img} alt="" width={100} height={100} className="drop-shadow-md" />
+                <Image src={item.img} alt={item.imgAlt ?? ""} width={100} height={100} className="drop-shadow-md" />
                 <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center text-sm font-bold">{item.step}</div>
                 <h3 className="font-bold text-gray-800">{tr(item.titleKey)}</h3>
                 <p className="text-gray-500 text-sm">{tr(item.descKey)}</p>
@@ -105,7 +121,7 @@ export default function Home() {
             {/* Trial */}
             <div className="bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-100 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-1">
-                <Image src="/cleverli-run.png" alt="" width={56} height={56} />
+                <Image src="/cleverli-run.png" alt="Cleverli läuft" width={56} height={56} />
                 <div className="text-3xl font-bold text-gray-900">{tr("free")}</div>
               </div>
               <div className="text-gray-400 text-sm mb-6">{tr("forever")}</div>
@@ -123,7 +139,7 @@ export default function Home() {
             <div className="bg-green-600 rounded-2xl p-5 sm:p-8 border-2 border-green-600 shadow-lg text-white flex flex-col relative overflow-hidden">
               <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
               <div className="flex items-center gap-3 mb-1">
-                <Image src="/cleverli-jump-star.png" alt="" width={56} height={56} />
+                <Image src="/cleverli-jump-star.png" alt="Cleverli springt mit Stern" width={56} height={56} />
                 <div className="text-3xl font-bold">CHF 9.90<span className="text-lg font-normal">{tr("perMonth")}</span></div>
               </div>
               <div className="text-green-200 text-sm mb-3">{tr("yearlyNote")}</div>
@@ -217,7 +233,7 @@ export default function Home() {
       <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-            <Image src="/cleverli-wave.png" alt="" width={70} height={70} className="drop-shadow-md shrink-0 sm:w-[100px] sm:h-[100px]" />
+            <Image src="/cleverli-wave.png" alt="Cleverli Maskottchen" width={70} height={70} className="drop-shadow-md shrink-0 sm:w-[100px] sm:h-[100px]" />
             <h2 className="text-2xl font-bold text-gray-800">{tr("testimonialsTitle")}</h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
@@ -240,7 +256,7 @@ export default function Home() {
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-8 justify-center">
-            <Image src="/cleverli-think.png" alt="" width={70} height={70} className="drop-shadow-md" />
+            <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={70} height={70} className="drop-shadow-md" />
             <h2 className="text-2xl font-bold text-gray-800">{tr("faqTitle")}</h2>
           </div>
           <div className="space-y-3">
@@ -267,7 +283,7 @@ export default function Home() {
       <section className="bg-green-600 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>
 
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 justify-center">
-          <Image src="/cleverli-jump-star.png" alt="" width={100} height={100} className="drop-shadow-lg" />
+          <Image src="/cleverli-jump-star.png" alt="Cleverli springt vor Freude" width={100} height={100} className="drop-shadow-lg" />
           <div>
             <h2 className="text-2xl font-bold mb-2">{tr("ctaTitle")}</h2>
             <p className="text-green-100 mb-4">{tr("ctaSubtitle")}</p>

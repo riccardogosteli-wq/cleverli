@@ -45,7 +45,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const uid = session?.userId ?? "";
   const checkoutUrl = (plan: "monthly" | "yearly") =>
     `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
-  const FREE_LIMIT = 3;
+  const FREE_LIMIT = 5;
   // Select a rotated pool of exercises — different each session if pool > 10
   const [exercises, setExercises] = useState(() => selectExercises(topic.id, topic.exercises));
   const [isReviewMode, setIsReviewMode] = useState(false);
@@ -318,7 +318,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   if (isLocked) {
     return (
       <div className="text-center space-y-4 py-8 max-w-sm mx-auto">
-        <Image src="/cleverli-think.png" alt="" width={110} height={110} className="mx-auto drop-shadow-md" />
+        <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={110} height={110} className="mx-auto drop-shadow-md" />
         <h2 className="text-xl font-bold text-gray-800">{tr("unlockTitle")}</h2>
         <p className="text-gray-500 text-sm">
           {tr("unlockDesc").replace("{n}", String(FREE_LIMIT))}<br/>

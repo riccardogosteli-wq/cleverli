@@ -88,6 +88,46 @@ export default function UpgradePageClient() {
     },
   };
 
+  const rewardFeature = {
+    de: {
+      label: "Nur bei Premium",
+      title: "Eltern setzen Ziele — Kinder arbeiten darauf hin 🎁",
+      desc: "Du bestimmst die Belohnung. Dein Kind sieht das Ziel und bleibt motiviert.",
+      examples: ["🦁 Ausflug in den Zoo", "🍦 Glace essen gehen", "🎮 Extra Spielzeit", "✏️ Eigene Belohnung"],
+      goal: "Ziel: 20 Aufgaben lösen",
+      progress: "12 / 20",
+      notification: "🎉 Lena hat ihr Ziel erreicht!",
+    },
+    fr: {
+      label: "Premium uniquement",
+      title: "Les parents fixent les objectifs — les enfants y travaillent 🎁",
+      desc: "Tu choisis la récompense. Ton enfant voit l'objectif et reste motivé.",
+      examples: ["🦁 Sortie au zoo", "🍦 Manger une glace", "🎮 Temps de jeu en plus", "✏️ Récompense personnelle"],
+      goal: "Objectif : résoudre 20 exercices",
+      progress: "12 / 20",
+      notification: "🎉 Léa a atteint son objectif !",
+    },
+    it: {
+      label: "Solo Premium",
+      title: "I genitori fissano gli obiettivi — i bambini ci lavorano 🎁",
+      desc: "Tu scegli il premio. Il tuo bambino vede l'obiettivo e rimane motivato.",
+      examples: ["🦁 Gita allo zoo", "🍦 Gelato insieme", "🎮 Tempo di gioco extra", "✏️ Premio personalizzato"],
+      goal: "Obiettivo: risolvere 20 esercizi",
+      progress: "12 / 20",
+      notification: "🎉 Lena ha raggiunto il suo obiettivo!",
+    },
+    en: {
+      label: "Premium only",
+      title: "Parents set goals — kids work toward them 🎁",
+      desc: "You pick the reward. Your child sees the goal and stays motivated.",
+      examples: ["🦁 Trip to the zoo", "🍦 Ice cream outing", "🎮 Extra screen time", "✏️ Custom reward"],
+      goal: "Goal: solve 20 exercises",
+      progress: "12 / 20",
+      notification: "🎉 Lena reached her goal!",
+    },
+  };
+  const rx = rewardFeature[lang as keyof typeof rewardFeature] ?? rewardFeature.de;
+
   const tx = t[lang as keyof typeof t] ?? t.de;
 
   if (session?.premium) {
@@ -118,6 +158,45 @@ export default function UpgradePageClient() {
         {tx.features.map((f, i) => (
           <div key={i} className="text-sm text-green-800">{f}</div>
         ))}
+      </div>
+
+      {/* Parent rewards highlight */}
+      <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 space-y-4">
+        <div className="flex items-start gap-3">
+          <div className="text-3xl">🎯</div>
+          <div>
+            <div className="text-xs font-bold uppercase tracking-widest text-amber-600 mb-0.5">{rx.label}</div>
+            <h2 className="text-base font-bold text-gray-800">{rx.title}</h2>
+            <p className="text-sm text-gray-500 mt-1">{rx.desc}</p>
+          </div>
+        </div>
+
+        {/* Mock UI preview */}
+        <div className="bg-white rounded-xl p-4 border border-amber-100 space-y-3">
+          {/* Reward examples row */}
+          <div className="flex flex-wrap gap-2">
+            {rx.examples.map((ex, i) => (
+              <span key={i} className={`text-xs px-2.5 py-1 rounded-full font-medium ${i === 0 ? "bg-amber-400 text-white" : "bg-gray-100 text-gray-600"}`}>
+                {ex}
+              </span>
+            ))}
+          </div>
+          {/* Progress bar */}
+          <div>
+            <div className="flex justify-between text-xs text-gray-500 mb-1">
+              <span>{rx.goal}</span>
+              <span className="font-bold text-amber-600">{rx.progress}</span>
+            </div>
+            <div className="h-2.5 bg-gray-100 rounded-full overflow-hidden">
+              <div className="h-full bg-amber-400 rounded-full" style={{ width: "60%" }} />
+            </div>
+          </div>
+          {/* Notification mock */}
+          <div className="flex items-center gap-2 bg-green-50 border border-green-200 rounded-lg px-3 py-2">
+            <span className="text-lg">🔔</span>
+            <span className="text-xs font-medium text-green-800">{rx.notification}</span>
+          </div>
+        </div>
       </div>
 
       {/* No account nudge */}

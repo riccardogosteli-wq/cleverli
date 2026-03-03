@@ -117,7 +117,7 @@ export default function RewardsPage() {
   if (loaded && !isPremium) {
     return (
       <div className="max-w-sm mx-auto px-4 py-16 text-center space-y-5">
-        <Image src="/cleverli-think.png" alt="" width={110} height={110} className="mx-auto drop-shadow-md" />
+        <Image src="/cleverli-think.png" alt="Cleverli Maskottchen" width={110} height={110} className="mx-auto drop-shadow-md" />
         <h1 className="text-2xl font-extrabold text-gray-900">Belohnungen 🎁</h1>
         <p className="text-gray-500 text-sm leading-relaxed">
           Mit dem Belohnungs-System kannst du echte Belohnungen für dein Kind einrichten — und es motivieren, dranzubleiben.
@@ -151,7 +151,7 @@ export default function RewardsPage() {
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 min-w-[44px]">←</Link>
-        <Image src="/cleverli-celebrate.png" alt="" width={44} height={44} className="drop-shadow-md" />
+        <Image src="/cleverli-celebrate.png" alt="Cleverli feiert" width={44} height={44} className="drop-shadow-md" />
         <h1 className="text-xl font-bold text-gray-800">
           🎁 {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
         </h1>

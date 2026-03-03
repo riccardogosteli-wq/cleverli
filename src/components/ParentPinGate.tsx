@@ -83,7 +83,7 @@ export default function ParentPinGate({ children }: Props) {
 
   return (
     <div className="max-w-xs mx-auto px-4 py-12 text-center space-y-6">
-      <Image src="/cleverli-sit-read.png" alt="" width={100} height={100} className="mx-auto drop-shadow-md" />
+      <Image src="/cleverli-sit-read.png" alt="Cleverli Elternbereich" width={100} height={100} className="mx-auto drop-shadow-md" />
 
       {state === "setup" ? (
         <>

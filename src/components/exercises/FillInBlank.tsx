@@ -47,7 +47,7 @@ export default function FillInBlank({ question, answer, onAnswer, questionImage 
     <div className="space-y-4">
       {questionImage && (
         <div className="flex justify-center">
-          <Image src={questionImage} alt="" width={140} height={140} className="drop-shadow-md rounded-2xl" />
+          <Image src={questionImage} alt="Aufgabe" width={140} height={140} className="drop-shadow-md rounded-2xl" />
         </div>
       )}
       <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center leading-snug px-1">{question}</p>

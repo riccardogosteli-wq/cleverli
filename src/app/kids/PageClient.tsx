@@ -156,7 +156,7 @@ export default function KidsDashboard() {
               : "+30 Bonus-XP"}
           </div>
         </div>
-        <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"} alt="" width={44} height={44} className="shrink-0" />
+        <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"} alt="Cleverli Maskottchen" width={44} height={44} className="shrink-0" />
       </Link>
 
       {/* ── Recent achievements ── */}

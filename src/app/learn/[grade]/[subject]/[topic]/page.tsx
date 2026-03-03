@@ -6,17 +6,20 @@ import Link from "next/link";
 
 interface Props { params: Promise<{ grade: string; subject: string; topic: string }> }
 
-const SUBJECT_NAMES: Record<string, string> = {
-  math: "Mathematik", german: "Deutsch", science: "NMG",
+const SUBJECT_NAMES: Record<string, { de: string; fr: string; it: string; en: string }> = {
+  math:    { de: "Mathematik", fr: "Mathématiques", it: "Matematica",   en: "Maths" },
+  german:  { de: "Deutsch",    fr: "Allemand",       it: "Tedesco",      en: "German" },
+  science: { de: "NMG",        fr: "Sciences",       it: "Scienze",      en: "Science" },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { grade, subject, topic: topicId } = await params;
   const topics = getTopics(parseInt(grade), subject);
   const topic = topics.find(t => t.id === topicId);
-  if (!topic) return { title: "Thema nicht gefunden" };
+  if (!topic) return { title: "Thema nicht gefunden – Cleverli", robots: { index: false } };
 
-  const subjectName = SUBJECT_NAMES[subject] ?? subject;
+  const subjectNames = SUBJECT_NAMES[subject];
+  const subjectName = subjectNames?.de ?? subject; // German for primary SEO (Swiss market)
   const title = `${topic.title} — ${subjectName} ${grade}. Klasse`;
   const description = `${topic.exercises.length} interaktive Übungen zu „${topic.title}" für die ${grade}. Klasse. Lehrplan 21 · Cleverli.`;
   return {
@@ -41,7 +44,8 @@ export default async function TopicPage({ params }: Props) {
     );
   }
 
-  const subjectName = SUBJECT_NAMES[subject] ?? subject;
+  const subjectNames = SUBJECT_NAMES[subject];
+  const subjectName = subjectNames?.de ?? subject; // German for primary SEO (Swiss market)
 
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4">

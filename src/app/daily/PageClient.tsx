@@ -202,7 +202,7 @@ export default function DailyPage() {
             {subjectLabel} · {topic.emoji} {getTopicTitle(topic.id, lang, topic.title)} · +{DAILY_XP_BONUS} Bonus-XP
           </div>
         </div>
-        <Image src="/cleverli-run.png" alt="" width={52} height={52} className="ml-auto drop-shadow-sm" />
+        <Image src="/cleverli-run.png" alt="Cleverli" width={52} height={52} className="ml-auto drop-shadow-sm" />
       </div>
 
       {/* Exercise card */}

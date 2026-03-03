@@ -64,11 +64,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    // Language switching is client-side; all languages share the same URL.
+    // x-default signals the canonical for all language variants.
     languages: {
-      "de-CH": BASE_URL,
-      "fr-CH": BASE_URL,
-      "it-CH": BASE_URL,
-      "en-GB": BASE_URL,
+      "x-default": BASE_URL,
     },
   },
   icons: {
@@ -87,7 +86,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de">
+    <html lang="de-CH">
       <head>
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="beforeInteractive">{`

@@ -7,6 +7,11 @@ interface Props { params: Promise<{ grade: string; subject: string }> }
 const SUBJECT_NAMES: Record<string, string> = {
   math: "Mathematik", german: "Deutsch", science: "NMG",
 };
+const SUBJECT_KEYWORDS: Record<string, string> = {
+  math: "Mathe, Zahlen, Rechnen, Addition, Subtraktion, Geometrie",
+  german: "Deutsch, Lesen, Schreiben, Rechtschreibung, Wörter",
+  science: "NMG, Natur, Mensch, Gesellschaft, Tiere, Pflanzen, Schweiz",
+};
 const SUBJECT_SUBTITLES: Record<string, string> = {
   science: "Natur, Mensch, Gesellschaft",
 };
@@ -19,10 +24,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const subjectName = SUBJECT_NAMES[subject] ?? subject;
   const gradeName = GRADE_NAMES[grade] ?? `${grade}. Klasse`;
   const title = `${subjectName} ${gradeName}`;
-  const description = `Interaktive ${subjectName}-Übungen für die ${gradeName} — abgestimmt auf den Lehrplan 21. Kostenlos testen auf Cleverli.`;
+  const keywords = SUBJECT_KEYWORDS[subject] ?? subjectName;
+  const description = `Kostenlose ${subjectName}-Übungen für die ${gradeName} (Lehrplan 21 Schweiz). ${keywords}. Jetzt gratis auf Cleverli üben!`;
   return {
     title,
     description,
+    keywords: [subjectName, gradeName, "Lehrplan 21", "Schweiz", "Cleverli", "Übungen kostenlos"],
     openGraph: { title: `${title} | Cleverli`, description },
     alternates: { canonical: `https://www.cleverli.ch/learn/${grade}/${subject}` },
   };
