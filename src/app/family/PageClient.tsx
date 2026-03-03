@@ -39,6 +39,8 @@ export default function FamilyPage() {
   const [newGrade, setNewGrade] = useState(1);
   const [addError, setAddError] = useState("");
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
+  const [confirmReset, setConfirmReset] = useState<string | null>(null);
+  const [resetInput, setResetInput] = useState("");
 
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
@@ -77,6 +79,14 @@ export default function FamilyPage() {
   function handleDelete(id: string) {
     removeMember(id);
     setConfirmDelete(null);
+    refresh();
+  }
+
+  function handleReset(id: string) {
+    // Clear profile stats (XP, streak, achievements) — keeps family member entry intact
+    localStorage.removeItem(`cleverli_profile_${id}`);
+    setConfirmReset(null);
+    setResetInput("");
     refresh();
   }
 
@@ -122,8 +132,14 @@ export default function FamilyPage() {
                 <div className="text-sm font-black text-gray-700">{s.xp} XP</div>
                 <div className="text-[10px] text-gray-400">{s.achievements} 🏆</div>
                 <button
+                  onClick={() => { setConfirmReset(s.id); setResetInput(""); }}
+                  className="text-[10px] text-orange-300 hover:text-orange-500 mt-1 block"
+                >
+                  {t("Zurücksetzen","Réinitialiser","Reimposta","Reset")}
+                </button>
+                <button
                   onClick={() => setConfirmDelete(s.id)}
-                  className="text-[10px] text-red-300 hover:text-red-500 mt-1"
+                  className="text-[10px] text-red-300 hover:text-red-500 mt-0.5 block"
                 >
                   {t("Entfernen","Supprimer","Rimuovi","Remove")}
                 </button>
@@ -230,6 +246,61 @@ export default function FamilyPage() {
               <button onClick={() => handleDelete(confirmDelete)}
                 className="flex-1 bg-red-500 text-white py-2 rounded-xl font-bold text-sm">
                 {t("Löschen","Supprimer","Elimina","Delete")}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Confirm reset */}
+      {confirmReset && (
+        <div className="fixed inset-0 bg-black/40 flex items-end justify-center z-50 p-4"
+          onClick={() => { setConfirmReset(null); setResetInput(""); }}>
+          <div className="bg-white rounded-2xl p-5 w-full max-w-sm space-y-4" onClick={e => e.stopPropagation()}>
+            <div className="text-center text-3xl">⚠️</div>
+            <p className="font-bold text-gray-800 text-center">
+              {t("Lernfortschritt wirklich zurücksetzen?",
+                "Réinitialiser la progression ?",
+                "Reimpostare i progressi?",
+                "Really reset progress?")}
+            </p>
+            <p className="text-xs text-gray-500 text-center">
+              {t(
+                "XP, Streak und Auszeichnungen dieses Profils werden gelöscht. Das Profil selbst bleibt erhalten.",
+                "Les XP, la série et les trophées seront effacés. Le profil reste.",
+                "XP, serie e trofei verranno eliminati. Il profilo rimane.",
+                "XP, streak and achievements will be cleared. The profile stays."
+              )}
+            </p>
+            <div>
+              <label className="text-xs font-semibold text-gray-500 block mb-1">
+                {t('Tippe "reset" zum Bestätigen', 'Tape "reset" pour confirmer', 'Scrivi "reset" per confermare', 'Type "reset" to confirm')}
+              </label>
+              <input
+                type="text"
+                value={resetInput}
+                onChange={e => setResetInput(e.target.value)}
+                placeholder="reset"
+                className="w-full border-2 border-gray-200 rounded-xl px-3 py-2 text-base outline-none focus:border-orange-400"
+                style={{ fontSize: 16 }}
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+              />
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={() => { setConfirmReset(null); setResetInput(""); }}
+                className="flex-1 border-2 border-gray-200 text-gray-600 py-2 rounded-xl font-semibold text-sm"
+              >
+                {t("Abbrechen","Annuler","Annulla","Cancel")}
+              </button>
+              <button
+                onClick={() => confirmReset && handleReset(confirmReset)}
+                disabled={resetInput.toLowerCase() !== "reset"}
+                className="flex-1 py-2 rounded-xl font-bold text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed bg-orange-500 text-white hover:bg-orange-600 active:scale-95"
+              >
+                {t("Zurücksetzen","Réinitialiser","Reimposta","Reset")}
               </button>
             </div>
           </div>
