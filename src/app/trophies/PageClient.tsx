@@ -60,7 +60,7 @@ export default function TrophiesPage() {
   const xpToNext = nextLevel ? nextLevel.minXp - profile.xp : 0;
 
   return (
-    <main className="max-w-lg mx-auto px-4 py-6 space-y-6 pb-12">
+    <main className="max-w-lg mx-auto px-4 py-6 space-y-6 pb-24 sm:pb-12">
 
       {/* ── Hero: Cleverli + level ── */}
       <div className="bg-white rounded-3xl p-5 shadow-sm border border-gray-100 text-center space-y-3">

@@ -83,7 +83,7 @@ export default function FamilyPage() {
   }
 
   return (
-    <main className="max-w-lg mx-auto px-4 py-6 pb-12 space-y-5">
+    <main className="max-w-lg mx-auto px-4 py-6 pb-24 sm:pb-12 space-y-5">
       {/* Header */}
       <div className="flex items-center gap-3">
         <Image src="/cleverli-jump-star.png" alt="Cleverli" width={60} height={60} className="drop-shadow-md" />

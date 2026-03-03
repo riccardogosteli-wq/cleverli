@@ -347,7 +347,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               title={tr("readAloudTitle")}
               aria-label={tr("readAloudTitle")}
             >
-              <span style={{ fontSize: "20px" }}>🔊</span>
               <span>{tr("readAloud")}</span>
             </button>
           )}

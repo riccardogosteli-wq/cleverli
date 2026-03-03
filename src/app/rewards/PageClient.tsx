@@ -137,7 +137,7 @@ export default function RewardsPage() {
 
   return (
     <ParentPinGate>
-    <div className="max-w-5xl mx-auto px-4 py-8">
+    <div className="max-w-5xl mx-auto px-4 py-8 pb-24 sm:pb-8">
       {/* Lock button */}
       <div className="flex justify-end mb-2">
         <button

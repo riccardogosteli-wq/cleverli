@@ -321,7 +321,7 @@ function DashboardInner() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-5">
+    <div className="max-w-5xl mx-auto px-4 py-5 pb-24 sm:pb-5">
       {/* UJ-11: Onboarding modal for first-time users */}
       <OnboardingModal />
       <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">

@@ -52,14 +52,13 @@ export default function Navigation() {
       style={{ paddingLeft: "env(safe-area-inset-left)", paddingRight: "env(safe-area-inset-right)" }}>
       <div className="flex items-center justify-between px-4 py-0 max-w-6xl mx-auto h-14 overflow-visible">
         {/* Logo — floats below nav bar for a premium feel */}
-        <Link href="/" className="flex items-center gap-3 min-h-[44px] relative" onClick={() => setOpen(false)} style={{ marginBottom: "-28px", zIndex: 60 }}>
+        <Link href="/" className="flex items-center gap-3 min-h-[44px] relative" onClick={() => setOpen(false)} style={{ marginBottom: "-10px", zIndex: 60 }}>
           <Image
             src="/cleverli-logo.png"
             alt="Cleverli – Lernplattform für Schweizer Kinder"
             width={210}
             height={70}
-            className="w-auto object-contain drop-shadow-md"
-            style={{ height: "90px" }}
+            className="w-auto object-contain drop-shadow-md h-[58px] sm:h-[80px]"
             priority
           />
           <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline self-start mt-2">beta</span>

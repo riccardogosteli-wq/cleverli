@@ -7,6 +7,7 @@ import { ProfileProvider } from "@/lib/ProfileContext";
 import Navigation from "@/components/Navigation";
 import StructuredData from "@/components/StructuredData";
 import GameOverlays from "@/components/GameOverlays";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const GTM_ID = "GTM-K48335JC";
 
@@ -118,9 +119,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <StructuredData />
             <Navigation />
             <GameOverlays />
-            <div id="main-content">
+            <div id="main-content" className="pb-[env(safe-area-inset-bottom)]">
               {children}
             </div>
+            <MobileBottomNav />
           </ProfileProvider>
         </LangProvider>
       </body>

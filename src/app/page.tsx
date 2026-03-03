@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 bg-white border-t border-gray-100">
+      <footer className="py-8 px-6 pb-24 sm:pb-8 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <div className="flex items-center gap-2">
             <span className="font-bold text-green-700">cleverli</span>

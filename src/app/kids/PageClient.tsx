@@ -104,7 +104,7 @@ export default function KidsDashboard() {
   );
 
   return (
-    <main className="max-w-lg mx-auto px-4 py-6 pb-12 space-y-5">
+    <main className="max-w-lg mx-auto px-4 py-6 pb-24 sm:pb-12 space-y-5">
 
       {/* ── Mascot hero ── */}
       <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-200 rounded-3xl p-5 flex items-center gap-4">

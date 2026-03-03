@@ -114,7 +114,7 @@ export default function ParentsDashboard() {
 
   return (
     <ParentPinGate>
-    <main className="max-w-lg mx-auto px-4 py-6 pb-12 space-y-5">
+    <main className="max-w-lg mx-auto px-4 py-6 pb-24 sm:pb-12 space-y-5">
       {/* Lock button */}
       <div className="flex justify-end">
         <button
