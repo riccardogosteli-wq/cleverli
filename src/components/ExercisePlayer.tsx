@@ -22,6 +22,7 @@ import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
 import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
+import Confetti from "./Confetti";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
@@ -52,6 +53,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [cardKey, setCardKey] = useState(0);
   const [voiceOn, setVoiceOn] = useState(false);
   const [hintsUsed, setHintsUsed] = useState(0);
+  const [comboCount, setComboCount] = useState(0);
+  const [comboVisible, setComboVisible] = useState(false);
+  const [wrongCountSession, setWrongCountSession] = useState(0);
+  const [showPerfect, setShowPerfect] = useState(false);
   const topicStartRef = useRef<number>(Date.now());
   const nextTopic = allTopics[topicIndex + 1] ?? null;
   const rewardRef = useRef<HTMLDivElement>(null);
@@ -119,8 +124,23 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     setExerciseInProgress(true); // UJ-12: mark exercise as in-progress on first answer
     const newStreak = correct ? streak + 1 : 0;
     const newScore = correct ? score + 1 : score;
-    if (correct) { setScore(s => s + 1); setStreak(newStreak); }
-    else {
+
+    // Combo tracking
+    if (correct) {
+      setScore(s => s + 1);
+      setStreak(newStreak);
+      const newCombo = comboCount + 1;
+      setComboCount(newCombo);
+
+      // Show combo badges at 3, 5, and 8
+      if (newCombo === 3 || newCombo === 5 || newCombo === 8) {
+        play("combo");
+        setComboVisible(true);
+        setTimeout(() => setComboVisible(false), 1200);
+      }
+    } else {
+      setComboCount(0);
+      setWrongCountSession(w => w + 1);
       setStreak(0);
       // UJ-7: track wrong exercise IDs for review
       const exId = exercises[idx]?.id ?? String(idx);
@@ -132,7 +152,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     const isLast = idx + 1 >= exercises.length;
     recordAnswer({
       correct,
-      streak: newStreak,
+      streak: comboCount, // pass comboCount as streak param
       hintsUsed,
       isTopicComplete: correct && isLast,
       score: newScore,
@@ -158,8 +178,15 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   const handleContinue = () => {
     if (idx + 1 >= exercises.length) {
-      play("complete");
-      setTimeout(() => { if (voiceOn) speak(getPhrase("complete")); }, 600);
+      // Check for perfect run
+      if (wrongCountSession === 0 && topic.exercises.length >= 5) {
+        setShowPerfect(true);
+        play("perfect");
+        setTimeout(() => setShowPerfect(false), 1800);
+      } else {
+        play("complete");
+        setTimeout(() => { if (voiceOn) speak(getPhrase("complete")); }, 600);
+      }
       setExerciseInProgress(false); // UJ-12: clear in-progress flag on completion
       // UJ-7: if review mode done, just show done
       if (isReviewMode) { setDone(true); return; }
@@ -291,7 +318,36 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   // ── Exercise ─────────────────────────────────────────────────────
   return (
-    <div className="space-y-3 max-w-xl mx-auto">
+    <div className="space-y-3 max-w-xl mx-auto relative">
+      {/* Confetti for perfect run */}
+      <Confetti active={showPerfect} />
+
+      {/* Combo badge */}
+      {comboVisible && (
+        <div
+          className={`absolute top-2 left-1/2 -translate-x-1/2 z-10 text-white font-black px-4 py-1.5 rounded-full ${
+            comboCount === 3 ? "bg-orange-500" :
+            comboCount === 5 ? "bg-red-500" :
+            "bg-purple-600"
+          }`}
+        >
+          {comboCount === 3 && "🔥 3x!"}
+          {comboCount === 5 && "🔥 5x!"}
+          {comboCount === 8 && "💥 8x!"}
+        </div>
+      )}
+
+      {/* Perfect overlay */}
+      {showPerfect && (
+        <div className="fixed inset-0 z-40 bg-green-600/90 flex items-center justify-center">
+          <div className="text-center text-white">
+            <div className="text-6xl mb-2">🌟</div>
+            <div className="text-3xl font-black">PERFEKT!</div>
+            <div className="text-lg mt-1">Alle richtig!</div>
+          </div>
+        </div>
+      )}
+
       {/* UJ-15: Thin top progress bar — always visible */}
       <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
         <div

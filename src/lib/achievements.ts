@@ -7,6 +7,7 @@ export type AchievementId =
   | "streak_3"
   | "streak_7"
   | "streak_14"
+  | "streak_30"
   | "no_hints"
   | "speed_run"
   | "polyglot"
@@ -23,6 +24,15 @@ export type AchievementId =
   | "exercises_50"
   | "exercises_100"
   | "exercises_250"
+  | "exercises_500"
+  | "early_bird"
+  | "night_owl"
+  | "comeback"
+  | "science_explorer"
+  | "spring_learner"
+  | "summer_learner"
+  | "autumn_learner"
+  | "winter_learner"
   | "level_2"
   | "level_3"
   | "level_4"
@@ -407,6 +417,146 @@ export const ACHIEVEMENTS: Achievement[] = [
     descEn: "Max level reached!",
     rarity: "legendary",
     xpReward: 0,
+  },
+  {
+    id: "streak_30",
+    emoji: "🌋",
+    title: "Unglaublich!",
+    titleFr: "Incroyable!",
+    titleIt: "Incredibile!",
+    titleEn: "Unbelievable!",
+    desc: "30 Tage in Folge!",
+    descFr: "30 jours consécutifs!",
+    descIt: "30 giorni consecutivi!",
+    descEn: "30 days in a row!",
+    rarity: "legendary",
+    xpReward: 300,
+  },
+  {
+    id: "exercises_500",
+    emoji: "🚀",
+    title: "500 Aufgaben",
+    titleFr: "500 exercices",
+    titleIt: "500 esercizi",
+    titleEn: "500 Exercises",
+    desc: "500 Aufgaben gelöst!",
+    descFr: "500 exercices résolus!",
+    descIt: "500 esercizi completati!",
+    descEn: "500 exercises solved!",
+    rarity: "legendary",
+    xpReward: 250,
+  },
+  {
+    id: "early_bird",
+    emoji: "🌅",
+    title: "Frühaufsteher",
+    titleFr: "Lève-tôt",
+    titleIt: "Mattiniero",
+    titleEn: "Early Bird",
+    desc: "Vor 8 Uhr gelernt!",
+    descFr: "Appris avant 8h!",
+    descIt: "Studiato prima delle 8!",
+    descEn: "Learned before 8am!",
+    rarity: "rare",
+    xpReward: 35,
+  },
+  {
+    id: "night_owl",
+    emoji: "🌙",
+    title: "Nachtlercher",
+    titleFr: "Oiseau de nuit",
+    titleIt: "Gufo notturno",
+    titleEn: "Night Owl",
+    desc: "Nach 21 Uhr gelernt!",
+    descFr: "Appris après 21h!",
+    descIt: "Studiato dopo le 21!",
+    descEn: "Learned after 9pm!",
+    rarity: "rare",
+    xpReward: 35,
+  },
+  {
+    id: "comeback",
+    emoji: "💪",
+    title: "Comeback-Kind",
+    titleFr: "Retour en force",
+    titleIt: "Grande ritorno",
+    titleEn: "Comeback Kid",
+    desc: "Nach 3 Tagen zurück!",
+    descFr: "De retour après 3 jours!",
+    descIt: "Tornato dopo 3 giorni!",
+    descEn: "Back after 3 days!",
+    rarity: "rare",
+    xpReward: 50,
+  },
+  {
+    id: "science_explorer",
+    emoji: "🔭",
+    title: "Natur-Entdecker",
+    titleFr: "Explorateur",
+    titleIt: "Esploratore",
+    titleEn: "Nature Explorer",
+    desc: "Alle Natur-Themen!",
+    descFr: "Tous les thèmes nature!",
+    descIt: "Tutti gli argomenti natura!",
+    descEn: "All nature topics done!",
+    rarity: "epic",
+    xpReward: 90,
+  },
+  {
+    id: "spring_learner",
+    emoji: "🌸",
+    title: "Frühlings-Lerner",
+    titleFr: "Apprenante printems",
+    titleIt: "Studioso primavera",
+    titleEn: "Spring Learner",
+    desc: "3 Themen im Frühling",
+    descFr: "3 thèmes au printemps",
+    descIt: "3 argomenti in primavera",
+    descEn: "3 topics in spring",
+    rarity: "rare",
+    xpReward: 40,
+  },
+  {
+    id: "summer_learner",
+    emoji: "☀️",
+    title: "Sommer-Champion",
+    titleFr: "Champion été",
+    titleIt: "Campione estate",
+    titleEn: "Summer Champion",
+    desc: "3 Themen im Sommer",
+    descFr: "3 thèmes en été",
+    descIt: "3 argomenti in estate",
+    descEn: "3 topics in summer",
+    rarity: "rare",
+    xpReward: 40,
+  },
+  {
+    id: "autumn_learner",
+    emoji: "🍂",
+    title: "Herbst-Held",
+    titleFr: "Héros automne",
+    titleIt: "Eroe autunno",
+    titleEn: "Autumn Hero",
+    desc: "3 Themen im Herbst",
+    descFr: "3 thèmes en automne",
+    descIt: "3 argomenti in autunno",
+    descEn: "3 topics in autumn",
+    rarity: "rare",
+    xpReward: 40,
+  },
+  {
+    id: "winter_learner",
+    emoji: "❄️",
+    title: "Winter-Lernwurm",
+    titleFr: "Bûcheur hiver",
+    titleIt: "Studioso inverno",
+    titleEn: "Winter Scholar",
+    desc: "3 Themen im Winter",
+    descFr: "3 thèmes en hiver",
+    descIt: "3 argomenti in inverno",
+    descEn: "3 topics in winter",
+    rarity: "rare",
+    xpReward: 40,
   },
 ];
 

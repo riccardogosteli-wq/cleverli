@@ -20,6 +20,7 @@ export interface Profile {
   weeklyXp: number;            // resets every Monday
   weeklyXpDate: string;        // "YYYY-WW" for reset detection
   streakGraceUsed: boolean;    // UJ-10: one-time 1-day grace period per streak run
+  weekendDays: string[];       // track weekend warrior (e.g., ["2026-W10-SAT", "2026-W10-SUN"])
 }
 
 const PROFILE_KEY = "cleverli_profile";
@@ -43,6 +44,7 @@ const DEFAULT_PROFILE: Profile = {
   weeklyXp: 0,
   weeklyXpDate: "",
   streakGraceUsed: false,
+  weekendDays: [],
 };
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -148,6 +150,7 @@ function checkAchievements(profile: Profile, opts: {
   if (!has("streak_3")  && profile.dailyStreak >= 3)  earned.push("streak_3");
   if (!has("streak_7")  && profile.dailyStreak >= 7)  earned.push("streak_7");
   if (!has("streak_14") && profile.dailyStreak >= 14) earned.push("streak_14");
+  if (!has("streak_30") && profile.dailyStreak >= 30) earned.push("streak_30");
 
   // Levels
   const levelId = getLevelForXp(profile.xp).id;
@@ -155,6 +158,46 @@ function checkAchievements(profile: Profile, opts: {
   if (levelId >= 3 && !has("level_3")) earned.push("level_3");
   if (levelId >= 4 && !has("level_4")) earned.push("level_4");
   if (levelId >= 5 && !has("level_5")) earned.push("level_5");
+
+  // New achievements
+  if (!has("exercises_500") && profile.totalExercises >= 500) earned.push("exercises_500");
+
+  // Time-based achievements
+  const hour = new Date().getHours();
+  if (opts.exerciseDone && hour < 8 && !has("early_bird")) earned.push("early_bird");
+  if (opts.exerciseDone && hour >= 21 && !has("night_owl")) earned.push("night_owl");
+
+  // Comeback achievement
+  if (opts.exerciseDone) {
+    const today = todayStr();
+    const diff = diffDays(profile.lastPlayedDate, today);
+    if (diff >= 3 && profile.dailyStreak > 0 && !has("comeback")) earned.push("comeback");
+  }
+
+  // Science explorer — all science topics for any grade
+  if (opts.topicComplete && !has("science_explorer")) {
+    const scienceComplete = [1, 2, 3].some(g => {
+      const topics = getTopics(g, "science");
+      if (!topics.length) return false;
+      return topics.every((t: { id: string }) => {
+        try {
+          return !!localStorage.getItem(`cleverli_${g}_science_${t.id}`);
+        } catch {
+          return false;
+        }
+      });
+    });
+    if (scienceComplete) earned.push("science_explorer");
+  }
+
+  // Seasonal achievements
+  if (profile.totalTopicsComplete >= 3) {
+    const month = new Date().getMonth();
+    if ([2, 3, 4].includes(month) && !has("spring_learner")) earned.push("spring_learner");
+    if ([5, 6, 7].includes(month) && !has("summer_learner")) earned.push("summer_learner");
+    if ([8, 9, 10].includes(month) && !has("autumn_learner")) earned.push("autumn_learner");
+    if ([11, 0, 1].includes(month) && !has("winter_learner")) earned.push("winter_learner");
+  }
 
   return earned;
 }
@@ -232,6 +275,20 @@ export function useProfile() {
     setProfile(prev => {
       const today = todayStr();
       const diff = diffDays(prev.lastPlayedDate, today);
+
+      // Weekend warrior tracking
+      const day = new Date().getDay(); // 0=Sun 6=Sat
+      const wk = weekStr();
+      let newWeekendDays = [...(prev.weekendDays ?? [])];
+      if (opts.correct) {
+        if (day === 6 && !newWeekendDays.includes(wk + "-SAT")) {
+          newWeekendDays.push(wk + "-SAT");
+        }
+        if (day === 0 && !newWeekendDays.includes(wk + "-SUN")) {
+          newWeekendDays.push(wk + "-SUN");
+        }
+      }
+
       const xpEarned = calcXpGain({
         correct: opts.correct,
         streak: opts.streak,
@@ -296,6 +353,7 @@ export function useProfile() {
         weeklyXp,
         weeklyXpDate: currentWeek,
         streakGraceUsed: newGraceUsed,
+        weekendDays: newWeekendDays,
       };
 
       // Check achievements

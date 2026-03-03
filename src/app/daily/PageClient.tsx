@@ -11,6 +11,7 @@ import FillInBlank from "@/components/exercises/FillInBlank";
 import CountingGame from "@/components/exercises/CountingGame";
 import HintSystem from "@/components/HintSystem";
 import { useSound } from "@/hooks/useSound";
+import StreakMilestone from "@/components/StreakMilestone";
 
 const GRADE_DEFAULT = 1; // TODO: use profile's grade preference once auth exists
 
@@ -23,6 +24,7 @@ export default function DailyPage() {
   const [hintsUsed, setHintsUsed] = useState(0);
   const [startTime] = useState(Date.now());
   const [alreadyDone, setAlreadyDone] = useState(false);
+  const [streakMilestone, setStreakMilestone] = useState<number | null>(null);
 
   const challenge = getDailyChallenge(grade);
 
@@ -42,6 +44,14 @@ export default function DailyPage() {
     play(correct ? "correct" : "wrong");
     setAnswered(correct);
     markDailyComplete(correct);
+
+    // Check for streak milestone
+    if (correct) {
+      const newStreak = profile.dailyStreak + 1;
+      if ([3, 7, 14, 30].includes(newStreak)) {
+        setStreakMilestone(newStreak);
+      }
+    }
 
     recordAnswer({
       correct,
@@ -75,6 +85,11 @@ export default function DailyPage() {
   };
 
   const subjectLabel = tr(subject === "math" ? "math" : "german");
+
+  // Show streak milestone if set
+  if (streakMilestone) {
+    return <StreakMilestone streak={streakMilestone} lang={lang} onDismiss={() => setStreakMilestone(null)} />;
+  }
 
   // ── Already completed today ──────────────────────────────────────
   if (alreadyDone) {
