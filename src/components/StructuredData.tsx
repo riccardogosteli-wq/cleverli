@@ -114,7 +114,7 @@ export default function StructuredData() {
             name: "Wie kündige ich das Abo?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Jederzeit — kein Mindestabo, keine Kündigungsfrist. Einfach in den Einstellungen kündigen.",
+              text: "Jederzeit kündbar, kein Mindestabo. Die Kündigung wird zum Ende des aktuellen Abrechnungszeitraums wirksam — bis dahin bleibt dein Zugriff vollständig erhalten.",
             },
           },
         ],
