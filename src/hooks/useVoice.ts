@@ -16,17 +16,19 @@ const audioCache = new Map<string, AudioBuffer | "loading">();
 
 function cleanForSpeech(text: string): string {
   return text
-    // ── Currency ──
+    // ── 1. Currency — number+unit first, then standalone ──
     .replace(/CHF\s*([\d.,]+)/g, "$1 Franken")
     .replace(/([\d.,]+)\s*CHF/g, "$1 Franken")
-    .replace(/([\d.,]+)\s*Fr\./g, "$1 Franken")
+    .replace(/([\d.,]+)\s*Fr\.(?!\w)/g, "$1 Franken")  // "3 Fr." not "Franken"
     .replace(/([\d.,]+)\s*Rp\.?/g, "$1 Rappen")
-    .replace(/\bRp\b/g, "Rappen")
-    // ── Area units ──
-    .replace(/cm²/g, " Quadratzentimeter")
-    .replace(/m²/g, " Quadratmeter")
-    .replace(/mm²/g, " Quadratmillimeter")
-    // ── Units with leading digit ──
+    .replace(/\bCHF\b/g, "Franken")    // standalone (e.g. before ___)
+    .replace(/\bFr\.(?!\w)/g, "Franken")  // standalone Fr. at end or before space
+    .replace(/\bRp\.?\b/g, "Rappen")     // standalone Rp
+    // ── 3. Area units (before plain units) ──
+    .replace(/cm²/g, "Quadratzentimeter")
+    .replace(/m²/g, "Quadratmeter")
+    .replace(/mm²/g, "Quadratmillimeter")
+    // ── 4. Units with leading digit ──
     .replace(/(\d)\s*km\b/g, "$1 Kilometer")
     .replace(/(\d)\s*cm\b/g, "$1 Zentimeter")
     .replace(/(\d)\s*mm\b/g, "$1 Millimeter")
@@ -38,7 +40,7 @@ function cleanForSpeech(text: string): string {
     .replace(/(\d)\s*l\b/g, "$1 Liter")
     .replace(/(\d)\s*g\b/g, "$1 Gramm")
     .replace(/(\d)\s*m\b/g, "$1 Meter")
-    // ── Standalone unit abbreviations ──
+    // ── 5. Standalone unit abbreviations ──
     .replace(/\bkm\b/g, "Kilometer")
     .replace(/\bcm\b/g, "Zentimeter")
     .replace(/\bmm\b/g, "Millimeter")
@@ -46,17 +48,39 @@ function cleanForSpeech(text: string): string {
     .replace(/\bml\b/g, "Milliliter")
     .replace(/\bdl\b/g, "Deziliter")
     .replace(/\bg\b/g, "Gramm")
-    // ── Math operators ──
+    // ── 6. Blank patterns — MUST come after unit expansion ──
+    //    "= ___ Zentimeter" → "gleich wie viele Zentimeter?"
+    .replace(/=\s*___\s+([A-ZÄÖÜ][\wäöüÄÖÜß-]+)/g, "gleich wie viele $1?")
+    //    "= Franken ___" → "gleich wie viele Franken?"
+    .replace(/=\s*([A-ZÄÖÜ][\wäöüÄÖÜß-]+)\s+___/g, "gleich wie viele $1?")
+    //    "und ___ Zentimeter" → "und wie viele Zentimeter?"
+    .replace(/und\s+___\s+([A-ZÄÖÜ][\wäöüÄÖÜß-]+)/g, "und wie viele $1?")
+    //    "= ___" (no unit after) → "gleich wie viel?"
+    .replace(/=\s*___/g, "gleich wie viel?")
+    //    ", ___" at sentence end (number sequences) → ", wie weiter?"
+    .replace(/,\s*___\s*([.!?]?)\s*$/g, ", wie weiter?")
+    //    "ist ___" → "ist wie viel?"
+    .replace(/ist\s+___/g, "ist wie viel?")
+    //    Mid-sentence blank (surrounded by words): remove silently — e.g. "Wir ___ Fussball"
+    .replace(/(?<=\w)\s+___\s+(?=\w)/g, " ")
+    //    Remaining "___" at end of expression → "wie viel?"
+    .replace(/___/g, "wie viel?")
+    // ── 7. Math operators ──
     .replace(/(\d)\s*[×x]\s*(\d)/g, "$1 mal $2")
     .replace(/(\d)\s*÷\s*(\d)/g, "$1 durch $2")
     .replace(/(\d)\s*:\s*(\d)/g, "$1 durch $2")
     .replace(/(\d)\s*\+\s*(\d)/g, "$1 plus $2")
     .replace(/(\d)\s*[−\-]\s*(\d)/g, "$1 minus $2")
-    .replace(/=\s*\?/g, "gleich wie viel?")
+    //    Remaining = sign (e.g. "3 Meter gleich wie viele" already handled; standalone = in other contexts)
+    .replace(/\s*=\s*/g, " gleich ")
+    .replace(/=\s*\?/g, " gleich wie viel?")
     .replace(/(?<!\w)<(?!\w)/g, "kleiner als")
     .replace(/(?<!\w)>(?!\w)/g, "grösser als")
     .replace(/\bà\b/g, "zu je")
-    // ── Remove emoji ──
+    .replace(/→/g, "")
+    // ── 8. Parenthetical hints: "(laufen)" → "– laufen" ──
+    .replace(/\(([^)]{1,30})\)/g, "– $1")
+    // ── 9. Remove emoji ──
     .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}]/gu, "")
     .replace(/[\u{FE00}-\u{FE0F}]/gu, "")
     // ── Formatting ──
