@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Cleverli — Lernen macht Spass 🇨🇭",
-    description: "Interaktive Lernplattform für Schweizer Kinder. Mathe & Deutsch, Klasse 1–3, Lehrplan 21.",
+    description: "Interaktive Lernplattform für Schweizer Kinder. Mathe, Deutsch & NMG, Klasse 1–6, Lehrplan 21.",
     images: ["/og-image.png"],
   },
   alternates: {

@@ -30,7 +30,7 @@ export default function UpgradePageClient() {
         "✅ Alle 50 Aufgaben pro Thema",
         "✅ 3 Stufen: Leicht · Mittel · Schwer",
         "✅ Alle Fächer (Mathe, Deutsch, NMG)",
-        "✅ Klassen 1–3",
+        "✅ Alle Klassen 1–6",
         "✅ Fortschritt & Trophäen",
         "✅ Elternbereich mit Statistiken",
         "✅ TWINT, Visa & Mastercard",

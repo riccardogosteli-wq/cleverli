@@ -3,7 +3,7 @@ import DashboardClient from "./PageClient";
 
 export const metadata: Metadata = {
   title: "Lernen",
-  description: "Wähle deine Klasse und dein Fach — interaktive Übungen für Klasse 1–3.",
+  description: "Wähle deine Klasse und dein Fach — interaktive Übungen für Klasse 1–6.",
   robots: { index: false, follow: false },
 };
 
