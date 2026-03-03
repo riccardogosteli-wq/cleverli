@@ -231,41 +231,7 @@ function DashboardInner() {
               ))}
             </div>
 
-            <div className="grid grid-cols-3 gap-3 opacity-40">
-              {[4, 5, 6].map(g => (
-                <div key={g} style={{ minHeight: "100px" }}
-                  className="border-2 border-dashed border-gray-300 rounded-2xl flex flex-col items-center justify-center text-gray-400 cursor-not-allowed gap-1">
-                  <div className="text-xl font-bold">{g}.</div>
-                  <div className="text-xs">🚀 {tr("comingSoonShort")}</div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center">
-              <p className="text-xs text-gray-400">
-                {tr("gradesComingSoon")} ·{" "}
-                {!notifyDone ? (
-                  <button onClick={() => setShowNotify(v => !v)} className="text-green-600 underline">
-                    {tr("notifyMe")}
-                  </button>
-                ) : (
-                  <span className="text-green-600 font-medium">✓ {lang === "fr" ? "Tu seras notifié!" : lang === "it" ? "Ti avviseremo!" : lang === "en" ? "We'll notify you!" : "Du wirst benachrichtigt!"}</span>
-                )}
-              </p>
-              {showNotify && !notifyDone && (
-                <form onSubmit={submitNotify} className="mt-2 flex gap-2 max-w-xs mx-auto">
-                  <input
-                    type="email" required value={notifyEmail}
-                    onChange={e => setNotifyEmail(e.target.value)}
-                    placeholder={lang === "fr" ? "ton@email.ch" : lang === "it" ? "tua@email.ch" : lang === "en" ? "your@email.ch" : "deine@email.ch"}
-                    className="flex-1 text-xs border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-green-400"
-                  />
-                  <button type="submit" disabled={notifyLoading}
-                    className="text-xs bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 disabled:opacity-50 whitespace-nowrap">
-                    {notifyLoading ? "…" : "OK"}
-                  </button>
-                </form>
-              )}
-            </div>
+
           </div>
         </div>
       </div>
