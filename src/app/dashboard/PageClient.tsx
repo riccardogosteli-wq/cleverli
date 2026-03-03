@@ -335,7 +335,7 @@ function DashboardInner() {
       {/* UJ-13: Empty state nudge for new users (no progress yet) */}
       {profile && profile.xp === 0 && firstNotDoneIdx === 0 && (
         <div className="flex items-center gap-3 bg-green-50 border-2 border-green-300 rounded-2xl px-4 py-3 text-sm text-green-800 font-medium">
-          <span className="text-2xl">👆</span>
+          <span className="text-2xl">🚀</span>
           <span>Hier starten! Dein erstes Thema wartet auf dich.</span>
         </div>
       )}
