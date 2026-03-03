@@ -26,12 +26,12 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'", // Next.js requires these
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com", // Next.js + GTM
       "style-src 'self' 'unsafe-inline'",                // Tailwind inline styles
-      "img-src 'self' data: blob: https:",               // Next/Image + external OG
+      "img-src 'self' data: blob: https: https://www.googletagmanager.com", // Next/Image + GTM
       "font-src 'self'",                                 // Geist is self-hosted via next/font
-      "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://formspree.io",
-      "frame-src 'none'",
+      "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://formspree.io https://www.google-analytics.com https://analytics.google.com",
+      "frame-src https://www.googletagmanager.com",
       "frame-ancestors 'none'",
       "object-src 'none'",
       "base-uri 'self'",

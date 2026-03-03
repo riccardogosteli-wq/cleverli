@@ -1,11 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { LangProvider } from "@/lib/LangContext";
 import { ProfileProvider } from "@/lib/ProfileContext";
 import Navigation from "@/components/Navigation";
 import StructuredData from "@/components/StructuredData";
 import GameOverlays from "@/components/GameOverlays";
+
+const GTM_ID = "GTM-K48335JC";
 
 const geist = Geist({ subsets: ["latin"] });
 
@@ -84,7 +87,25 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
+      <head>
+        {/* Google Tag Manager */}
+        <Script id="gtm-script" strategy="beforeInteractive">{`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','${GTM_ID}');
+        `}</Script>
+      </head>
       <body className={`${geist.className} bg-green-50 min-h-screen`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0" width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {/* Skip-to-content link — visible on keyboard focus only (WCAG 2.4.1) */}
         <a
           href="#main-content"
