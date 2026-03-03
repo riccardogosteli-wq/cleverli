@@ -14,6 +14,30 @@ import { useCallback, useRef } from "react";
 // ─── In-memory audio cache (URL → decoded AudioBuffer or "pending") ──────────
 const audioCache = new Map<string, AudioBuffer | "loading">();
 
+// ─── Swiss currency: "1.50" → "ein Franken fünfzig" ─────────────────────────
+function numToWordsDE(n: number): string {
+  const ones = ["", "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben",
+                "acht", "neun", "zehn", "elf", "zwölf", "dreizehn", "vierzehn",
+                "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"];
+  const tens = ["", "", "zwanzig", "dreissig", "vierzig", "fünfzig",
+                "sechzig", "siebzig", "achtzig", "neunzig"];
+  if (n === 0) return "null";
+  if (n < 20) return ones[n];
+  const t = Math.floor(n / 10);
+  const o = n % 10;
+  return o === 0 ? tens[t] : `${ones[o]}und${tens[t]}`;
+}
+
+function chfToSpeech(amountStr: string): string {
+  const num = parseFloat(amountStr.replace(",", "."));
+  if (isNaN(num)) return `${amountStr} Franken`;
+  const franken = Math.floor(num);
+  const rappen = Math.round((num - franken) * 100);
+  if (franken === 0) return `${numToWordsDE(rappen)} Rappen`;
+  if (rappen === 0) return `${numToWordsDE(franken)} Franken`;
+  return `${numToWordsDE(franken)} Franken ${numToWordsDE(rappen)}`;
+}
+
 function cleanForSpeech(text: string): string {
   return text
     // ── 1. Currency — number+unit first, then standalone ──
@@ -24,6 +48,10 @@ function cleanForSpeech(text: string): string {
     .replace(/\bCHF\b/g, "Franken")    // standalone (e.g. before ___)
     .replace(/\bFr\.(?!\w)/g, "Franken")  // standalone Fr. at end or before space
     .replace(/\bRp\.?\b/g, "Rappen")     // standalone Rp
+    // ── 1b. Convert "1.50 Franken" → "ein Franken fünfzig" ──
+    .replace(/([\d.,]+)\s*Franken/g, (_: string, amt: string) => chfToSpeech(amt))
+    .replace(/([\d.,]+)\s*Rappen/g, (_: string, amt: string) =>
+      `${numToWordsDE(Math.round(parseFloat(amt.replace(",","."))))} Rappen`)
     // ── 3. Area units (before plain units) ──
     .replace(/cm²/g, "Quadratzentimeter")
     .replace(/m²/g, "Quadratmeter")
