@@ -175,3 +175,34 @@ Start with most-used topics (entry point for users):
 3. If approved → batch the rest
 4. Never self-merge without TypeScript check (`npx tsc --noEmit`)
 5. Always commit with clear message: `feat: content — Grade X [Subject] [topic-id] (50 exercises)`
+
+---
+
+## Hint Quality Rules (added 2026-03-03)
+
+### ❌ NEVER write these hint patterns
+
+| Bad pattern | Example | Why |
+|-------------|---------|-----|
+| Counting list to answer | `12, 13, 14, 15, 16, 17, 18` | Child just reads last number |
+| Direct computation | `5 - 3 = 2` | That IS the answer |
+| Full worked solution | `150 - 100 = 50 cm Rest` | Removes all thinking |
+| Just the result | `4 × 7 = 28` | No learning happens |
+
+### ✅ ALWAYS write these patterns instead
+
+| Type | Example |
+|------|---------|
+| **Strategy** | `Fange bei der grösseren Zahl an und zähle die kleinere dazu` |
+| **Partial decomposition** | `9 × 6 = 10 × 6 − 6 — fange bei 60 an` |
+| **Inverse operation** | `7 × ? = 35 — welche Zahl aus der 7er-Reihe?` |
+| **Near-fact trick** | `11 + 10 wäre 21. Ziehe davon 2 ab` |
+| **Memory anchor** | `Merkhilfe: 5, 6, 7, 8 — 56 = 7 × 8` |
+| **Decompose the number** | `Teile 7 auf: 4 × 5 = 20, 4 × 2 = 8 — addiere beides` |
+| **Conceptual** | `Die Hälfte bedeutet: in 2 gleiche Teile aufteilen` |
+
+### Rules
+1. A hint must require the child to still **do some thinking**
+2. Max 1 hint per exercise (never multiple hints that together give the answer)
+3. Short: 1 sentence, max 2 short sentences
+4. Grade-appropriate language (Grade 1: very simple, Grade 3: can use more math vocabulary)
