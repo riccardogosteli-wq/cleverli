@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 
 // Payrexx sends transaction status updates here
 // Configure webhook URL in Payrexx dashboard:
 //   https://www.cleverli.ch/api/webhooks/payrexx
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!   // service role key needed for admin writes
-);
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const SERVICE_KEY  = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 
 export async function POST(req: NextRequest) {
   let body: Record<string, unknown>;
@@ -54,14 +51,24 @@ export async function POST(req: NextRequest) {
     ? new Date(now.setFullYear(now.getFullYear() + 1)).toISOString()
     : new Date(now.setMonth(now.getMonth() + 1)).toISOString();
 
-  // Flip premium=true in Supabase
-  const { error } = await supabase
-    .from("parent_profiles")
-    .update({ premium: true, premium_until: premiumUntil, premium_plan: plan })
-    .eq("id", userId);
+  // Flip premium=true in Supabase via REST API (service role bypasses RLS)
+  const updateRes = await fetch(
+    `${SUPABASE_URL}/rest/v1/parent_profiles?id=eq.${userId}`,
+    {
+      method: "PATCH",
+      headers: {
+        "apikey": SERVICE_KEY,
+        "Authorization": `Bearer ${SERVICE_KEY}`,
+        "Content-Type": "application/json",
+        "Prefer": "return=minimal",
+      },
+      body: JSON.stringify({ premium: true }),
+    }
+  );
 
-  if (error) {
-    console.error("[payrexx-webhook] supabase update failed:", error);
+  if (!updateRes.ok) {
+    const err = await updateRes.text();
+    console.error("[payrexx-webhook] supabase update failed:", err);
     return NextResponse.json({ error: "db_update_failed" }, { status: 500 });
   }
 
