@@ -102,7 +102,7 @@ const grade1Math: Topic[] = [
   {
     id: "muster",
     title: "Muster & Reihen",
-    emoji: "🔳",
+    emoji: "🔄",
     exercises: [
       { id: "m1", type: "fill-in-blank", question: "Ergänze: 2, 4, 6, 8, ___", answer: "10", hints: ["Zähle in Zweierschritten."], difficulty: 1, free: true },
       { id: "m2", type: "fill-in-blank", question: "Ergänze: 1, 3, 5, 7, ___", answer: "9", hints: ["Zähle ungerade Zahlen: 1,3,5,7,..."], difficulty: 1, free: true },
@@ -161,7 +161,7 @@ const grade1Math: Topic[] = [
   {
     id: "verdoppeln-halbieren",
     title: "Verdoppeln & Halbieren",
-    emoji: "✂️",
+    emoji: "✌️",
     exercises: [
       { id: "v1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist das Doppelte von 3? 🐰🐰", answer: "6", options: ["3", "5", "6", "9"], hints: ["Doppelt = zweimal.", "3 + 3 = ?"], mascot: "wave" },
       { id: "v2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Hälfte von 8? ✂️", answer: "4", options: ["2", "4", "6", "8"], hints: ["8 in zwei gleiche Teile teilen.", "4 + 4 = 8"] },
@@ -175,7 +175,7 @@ const grade1Math: Topic[] = [
   },
   {
     id: "geld-muenzen",
-    title: "Geld & Münzen 🪙",
+    title: "Geld & Münzen",
     emoji: "🪙",
     exercises: [
       { id: "g1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die grösste Schweizer Münze? 🇨🇭", answer: "5 Franken", options: ["10 Rappen", "1 Franken", "5 Franken", "2 Franken"], hints: ["CHF 5 ist mehr als CHF 2.", "Gold-silberne grosse Münze."], mascot: "wave" },

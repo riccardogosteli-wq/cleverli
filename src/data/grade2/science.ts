@@ -301,7 +301,7 @@ const grade2Science: Topic[] = [
   },
   {
     id: "schweiz-symbole",
-    title: "Die Schweiz 🇨🇭",
+    title: "Die Schweiz",
     emoji: "🇨🇭",
     exercises: [
       { id: "ch1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist das Symbol der Schweiz? 🇨🇭", answer: "Weisses Kreuz auf rotem Hintergrund", options: ["Rotes Kreuz auf weissem Hintergrund", "Weisses Kreuz auf rotem Hintergrund", "Ein Adler", "Ein Bär"], hints: ["Die Schweizer Flagge ist quadratisch!", "Rot mit weissem Kreuz."], mascot: "wave" },

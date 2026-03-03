@@ -89,7 +89,7 @@ const grade1German: Topic[] = [
   {
     id: "abc-reihenfolge",
     title: "ABC & Reihenfolge",
-    emoji: "📋",
+    emoji: "🔤",
     exercises: [
       { id: "abc1", type: "multiple-choice", question: "Welcher Buchstabe kommt nach dem B?", answer: "C", options: ["A","C","D","E"], hints: ["A, B, C ..."], difficulty: 1, free: true },
       { id: "abc2", type: "multiple-choice", question: "Welcher Buchstabe kommt vor dem F?", answer: "E", options: ["D","E","G","H"], hints: ["... D, E, F ..."], difficulty: 1, free: true },
@@ -131,7 +131,7 @@ const grade1German: Topic[] = [
   },
   {
     id: "silben-klatschen",
-    title: "Silben klatschen 👏",
+    title: "Silben klatschen",
     emoji: "👏",
     exercises: [
       { id: "sk1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Silben hat «HUND»? 🐕", answer: "1", options: ["1", "2", "3", "4"], hints: ["Sprich das Wort laut. Wie viele Klatscher brauchst du?"], mascot: "wave" },
@@ -144,7 +144,7 @@ const grade1German: Topic[] = [
   },
   {
     id: "ie-ei",
-    title: "ie und ei richtig schreiben ✏️",
+    title: "ie und ei richtig schreiben",
     emoji: "✍️",
     exercises: [
       { id: "ie1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie heisst der Vogel? 🐦 «T_er» — ie oder ei?", answer: "Tier (ie)", options: ["Tier (ie)", "Teir (ei)", "Teer (ee)", "Tir (i)"], hints: ["Sprich es langsam: T-ie-r. Langes i = ie!"], mascot: "wave" },

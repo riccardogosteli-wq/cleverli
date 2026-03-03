@@ -68,7 +68,7 @@ const grade3German: Topic[] = [
   {
     id: "rechtschreibung",
     title: "Rechtschreibung",
-    emoji: "🔍",
+    emoji: "✅",
     exercises: [
       { id: "rs1", type: "multiple-choice", question: "Welches Wort ist richtig geschrieben?", answer: "Freund", options: ["Freund","freund","FREUND","Freudn"], hints: ["Nomen schreibt man gross."], difficulty: 1, free: true },
       { id: "rs2", type: "multiple-choice", question: "Wie schreibt man das Wort «Schule» richtig?", answer: "Schule", options: ["schule","Schule","SCHULE","Schuhle"], hints: ["Nomen = gross, und keine falschen Doppelbuchstaben."], difficulty: 1, free: true },
@@ -83,7 +83,7 @@ const grade3German: Topic[] = [
   {
     id: "verben-konjugieren",
     title: "Verben konjugieren",
-    emoji: "🔄",
+    emoji: "🏃",
     exercises: [
       { id: "vk1", type: "multiple-choice", free: true, difficulty: 1, question: "Konjugiere «gehen»: Ich ___", answer: "gehe", options: ["geht", "gehen", "gehe", "gehst"], hints: ["Konjugiere gehen: Die Endung für ich ist meist -e."], mascot: "wave" },
       { id: "vk2", type: "fill-in-blank", free: true, difficulty: 1, question: "Du ___ (spielen) gerne Fussball.", answer: "spielst", hints: ["du + Verb: meist -st am Ende", "spiel + st = spielst"] },

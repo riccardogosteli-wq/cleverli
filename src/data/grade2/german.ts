@@ -4,7 +4,7 @@ const grade2German: Topic[] = [
   {
     id: "nomen-artikel",
     title: "Nomen mit Artikel",
-    emoji: "🏠",
+    emoji: "🏷️",
     exercises: [
       { id: "n1", type: "multiple-choice", question: "___ Hund bellt laut.", answer: "Der", options: ["Der","Die","Das","Ein"], hints: ["Hund ist ein maskulines Nomen. Welcher Artikel gehört zu maskulinen Nomen?"], difficulty: 1, free: true },
       { id: "n2", type: "multiple-choice", question: "___ Katze schläft.", answer: "Die", options: ["Der","Die","Das","Eine"], hints: ["Katze ist ein feminines Nomen. Welcher Artikel gehört zu femininen Nomen?"], difficulty: 1, free: true },
@@ -83,7 +83,7 @@ const grade2German: Topic[] = [
   {
     id: "texte-lesen",
     title: "Texte lesen",
-    emoji: "📰",
+    emoji: "📖",
     exercises: [
       { id: "tl1", type: "multiple-choice", question: "«Tim hat einen Hund. Der Hund heisst Bello.» – Wie heisst der Hund?", answer: "Bello", options: ["Tim","Bello","Max","Rex"], hints: ["Lies: «Der Hund heisst ...»"], difficulty: 1, free: true },
       { id: "tl2", type: "multiple-choice", question: "«Es schneit. Die Kinder bauen einen Schneemann.» – Was machen die Kinder?", answer: "Sie bauen einen Schneemann.", options: ["Sie spielen Fussball.","Sie bauen einen Schneemann.","Sie schwimmen.","Sie schlafen."], hints: ["Lies den zweiten Satz."], difficulty: 1, free: true },
@@ -96,7 +96,7 @@ const grade2German: Topic[] = [
   {
     id: "singular-plural",
     title: "Einzahl & Mehrzahl",
-    emoji: "🐑",
+    emoji: "1️⃣",
     exercises: [
       { id: "sp1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Mehrzahl von «Hund»? 🐕", answer: "Hunde", options: ["Hunds", "Hunden", "Hunde", "Hundе"], hints: ["Bei vielen Wörtern hängt man -e oder -en an.", "1 Hund → viele Hunde"], mascot: "wave" },
       { id: "sp2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Mehrzahl von «Kind»? 👧", answer: "Kinder", options: ["Kinds", "Kinder", "Kinde", "Kindes"], hints: ["1 Kind → viele Kinder (Umlaut + er!)"] },
