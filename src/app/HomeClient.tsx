@@ -103,12 +103,12 @@ export default function Home() {
                   ))}
                   <span className={`text-[11px] rounded-full px-2 py-0.5 ${s.textColor} font-medium opacity-50`}>…</span>
                 </div>
-                <div className={`text-xs font-semibold ${s.textColor} mt-auto pt-1`}>
-                  Klasse 1–6 · Lehrplan 21 →
-                </div>
               </Link>
             ))}
           </div>
+          <p className="text-center text-xs text-gray-400 font-medium mt-3">
+            {lang === "fr" ? "Années 1–6 · PER (Plan d'études romand)" : lang === "it" ? "Classi 1–6 · Piano di studio" : lang === "en" ? "Grades 1–6 · Lehrplan 21" : "Klassen 1–6 · Lehrplan 21"}
+          </p>
         </div>
       </section>
 
