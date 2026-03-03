@@ -282,7 +282,7 @@ export function useProfile() {
       // Weekend warrior tracking
       const day = new Date().getDay(); // 0=Sun 6=Sat
       const wk = weekStr();
-      let newWeekendDays = [...(prev.weekendDays ?? [])];
+      const newWeekendDays = [...(prev.weekendDays ?? [])];
       if (opts.correct) {
         if (day === 6 && !newWeekendDays.includes(wk + "-SAT")) {
           newWeekendDays.push(wk + "-SAT");

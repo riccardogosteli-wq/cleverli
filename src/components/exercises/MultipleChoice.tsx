@@ -127,7 +127,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
         {options.map((opt, i) => {
           const isSelected = selected === opt;
           const isCorrect = opt === answer;
-          let style: React.CSSProperties = { transition: "all 0.2s cubic-bezier(.34,1.56,.64,1)" };
+          const style: React.CSSProperties = { transition: "all 0.2s cubic-bezier(.34,1.56,.64,1)" };
           let cls = "relative border-2 rounded-2xl px-4 py-4 font-semibold text-base cursor-pointer text-left flex items-center gap-3 w-full active:scale-95 ";
           if (isSelected && isCorrect) { cls += "bg-green-100 border-green-500 text-green-800 shadow-md"; style.transform = "scale(1.03)"; }
           else if (isSelected && !isCorrect) { cls += "bg-red-100 border-red-400 text-red-700"; style.animation = shake ? "shake 0.4s ease" : undefined; }

@@ -145,7 +145,6 @@ function DashboardInner() {
   const [familySize, setFamilySize] = useState(0);
   // (notify signup widget removed — state retained for safety)
   // Restore last-used grade from localStorage + load active child profile
-  // eslint-disable-next-line react-compiler/react-compiler
   useEffect(() => {
     setDailyDone(isDailyDoneToday());
     if (!preselectedSubject) {
@@ -162,7 +161,6 @@ function DashboardInner() {
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // eslint-disable-next-line react-compiler/react-compiler
   useEffect(() => {
     setSubject(preselectedSubject);
     if (preselectedSubject) setGrade(null);

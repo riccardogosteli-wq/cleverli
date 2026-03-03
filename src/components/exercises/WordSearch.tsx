@@ -79,6 +79,7 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
   const isSelected = (r: number, c: number) => selecting.some(s => s.row === r && s.col === c);
   const isFound    = (r: number, c: number) => foundCells.has(`${r}-${c}`);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const tapCell = useCallback((row: number, col: number) => {
     if (found.size === words.length) return;
 
