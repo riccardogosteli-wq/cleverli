@@ -261,7 +261,7 @@ function DashboardInner() {
               <Image
                 src="/images/mascot/cleverli-thumbsup.png"
                 alt="Cleverli"
-                width={52} height={52}
+                width={80} height={80}
                 className="drop-shadow-md shrink-0"
               />
               <div>
