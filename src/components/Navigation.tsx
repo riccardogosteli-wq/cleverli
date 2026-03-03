@@ -44,11 +44,12 @@ export default function Navigation() {
           </Link>
           <Link
             href="/rewards"
-            className="text-sm text-amber-600 hover:text-amber-700 font-medium py-2 px-2 whitespace-nowrap"
+            className="flex items-center gap-1.5 text-sm text-amber-700 hover:text-amber-800 font-semibold py-2 px-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 transition-colors whitespace-nowrap border border-amber-200"
             aria-label={tr("navRewardsShort")}
             title={tr("navRewardsShort")}
           >
-            🎁
+            <span style={{ fontSize: "20px" }}>🎁</span>
+            <span className="hidden md:inline text-xs">{tr("navRewardsShort").replace("🎁 ", "")}</span>
           </Link>
           {session ? (
             <>

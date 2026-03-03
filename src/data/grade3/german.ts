@@ -38,7 +38,7 @@ const grade3German: Topic[] = [
   {
     id: "saetze",
     title: "Sätze bauen",
-    emoji: "🔨",
+    emoji: "🧩",
     exercises: [
       { id: "sb1", type: "multiple-choice", question: "Was ist ein vollständiger Satz?", answer: "Der Hund schläft.", options: ["Hund schläft","Der Hund","Der Hund schläft.","schläft Hund der"], hints: ["Ein Satz braucht: Subjekt + Verb + Satzzeichen."], difficulty: 1, free: true },
       { id: "sb2", type: "multiple-choice", question: "Welches Satzzeichen kommt ans Ende einer Frage?", answer: "?", options: [".","!","?",","], hints: ["Eine Frage endet mit ..."], difficulty: 1, free: true },
@@ -53,7 +53,7 @@ const grade3German: Topic[] = [
   {
     id: "leseverstaendnis",
     title: "Leseverständnis",
-    emoji: "📰",
+    emoji: "📖",
     exercises: [
       { id: "lv1", type: "multiple-choice", question: "«Der Bär schläft im Winter in seiner Höhle. Dieser Schlaf heisst Winterschlaf.» – Was macht der Bär im Winter?", answer: "Er schläft in seiner Höhle.", options: ["Er jagt.","Er schläft in seiner Höhle.","Er wandert.","Er frisst Beeren."], hints: ["Lies den ersten Satz."], difficulty: 1, free: true },
       { id: "lv2", type: "multiple-choice", question: "«Emma liest täglich 20 Minuten. In einer Woche liest sie 7 × 20 Minuten.» – Wie lange liest Emma pro Woche?", answer: "140 Minuten", options: ["20 Minuten","100 Minuten","140 Minuten","160 Minuten"], hints: ["7 × 20 = ?"], difficulty: 2, free: true },
@@ -68,7 +68,7 @@ const grade3German: Topic[] = [
   {
     id: "rechtschreibung",
     title: "Rechtschreibung",
-    emoji: "✏️",
+    emoji: "🔍",
     exercises: [
       { id: "rs1", type: "multiple-choice", question: "Welches Wort ist richtig geschrieben?", answer: "Freund", options: ["Freund","freund","FREUND","Freudn"], hints: ["Nomen schreibt man gross."], difficulty: 1, free: true },
       { id: "rs2", type: "multiple-choice", question: "Wie schreibt man das Wort «Schule» richtig?", answer: "Schule", options: ["schule","Schule","SCHULE","Schuhle"], hints: ["Nomen = gross, und keine falschen Doppelbuchstaben."], difficulty: 1, free: true },

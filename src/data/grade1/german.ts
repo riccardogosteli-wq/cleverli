@@ -4,7 +4,7 @@ const grade1German: Topic[] = [
   {
     id: "buchstaben",
     title: "Buchstaben",
-    emoji: "🔤",
+    emoji: "🔡",
     exercises: [
       { id: "b1", type: "multiple-choice", question: "🍎 Mit welchem Buchstaben beginnt das Wort «Apfel»?", answer: "A", options: ["A","B","E","O"], hints: ["A wie Apfel."], difficulty: 1, free: true },
       { id: "b2", type: "multiple-choice", question: "🐻 Mit welchem Buchstaben beginnt das Wort «Bär»?", answer: "B", options: ["A","B","D","P"], hints: ["B wie Bär."], difficulty: 1, free: true },
@@ -21,7 +21,7 @@ const grade1German: Topic[] = [
   {
     id: "einfache-woerter",
     title: "Einfache Wörter",
-    emoji: "✏️",
+    emoji: "💬",
     exercises: [
       { id: "ew1", type: "multiple-choice", question: "Welches Tier siehst du auf dem Bild?", answer: "Katze", options: ["Hund","Katze","Maus","Vogel"], optionImages: ["/images/animals/dog.svg","/images/animals/cat.svg","/images/animals/mouse.svg","/images/animals/bird.svg"], image: "/images/animals/cat.svg", hints: ["Es ist ein Haustier mit Schnurrhaaren."], difficulty: 1, free: true },
       { id: "ew2", type: "multiple-choice", question: "Was siehst du auf dem Bild?", answer: "Apfel", options: ["Apfel","Banane","Birne","Pflaume"], image: "/images/objects/apple.svg", hints: ["Es wächst am Baum und beginnt mit A."], difficulty: 1, free: true },
@@ -59,7 +59,7 @@ const grade1German: Topic[] = [
   {
     id: "gross-kleinschreibung",
     title: "Gross- und Kleinschreibung",
-    emoji: "🔡",
+    emoji: "🔠",
     exercises: [
       { id: "gk1", type: "multiple-choice", question: "Wie schreibt man «Hund» richtig?", answer: "Hund", options: ["hund","HUND","Hund","HuNd"], hints: ["Nomen (Tiere, Dinge) schreibt man immer gross."], difficulty: 1, free: true },
       { id: "gk2", type: "multiple-choice", question: "Womit beginnt jeder Satz?", answer: "Mit einem grossen Buchstaben", options: ["Mit einem kleinen Buchstaben","Mit einem grossen Buchstaben","Mit einem Punkt","Mit einem Komma"], hints: ["Jeder neue Satz beginnt mit einem grossen Buchstaben."], difficulty: 1, free: true },
@@ -89,7 +89,7 @@ const grade1German: Topic[] = [
   {
     id: "abc-reihenfolge",
     title: "ABC & Reihenfolge",
-    emoji: "🔤",
+    emoji: "📋",
     exercises: [
       { id: "abc1", type: "multiple-choice", question: "Welcher Buchstabe kommt nach dem B?", answer: "C", options: ["A","C","D","E"], hints: ["A, B, C ..."], difficulty: 1, free: true },
       { id: "abc2", type: "multiple-choice", question: "Welcher Buchstabe kommt vor dem F?", answer: "E", options: ["D","E","G","H"], hints: ["... D, E, F ..."], difficulty: 1, free: true },
@@ -119,7 +119,7 @@ const grade1German: Topic[] = [
   {
     id: "vokale-konsonanten",
     title: "Vokale & Konsonanten",
-    emoji: "🔤",
+    emoji: "🔵",
     exercises: [
       { id: "vk1", type: "multiple-choice", free: true, difficulty: 1, question: "Welcher Buchstabe ist ein Vokal? 🔤", answer: "E", options: ["B", "K", "E", "T"], hints: ["Vokale: A, E, I, O, U — man spricht sie offen aus.", "Du singst sie!"], mascot: "wave" },
       { id: "vk2", type: "drag-drop", free: true, difficulty: 1, question: "Sortiere: Vokal oder Konsonant? 🔤", answer: "all", hints: ["Vokale: A, E, I, O, U"], dragItems: [{ id: "a", label: "A", emoji: "🔵" }, { id: "b", label: "B", emoji: "🔴" }, { id: "i", label: "I", emoji: "🔵" }, { id: "m", label: "M", emoji: "🔴" }, { id: "u", label: "U", emoji: "🔵" }, { id: "s", label: "S", emoji: "🔴" }], dropZones: [{ id: "vokal", label: "🔵 Vokal" }, { id: "konsonant", label: "🔴 Konsonant" }], dropAnswers: { a: "vokal", b: "konsonant", i: "vokal", m: "konsonant", u: "vokal", s: "konsonant" } },
@@ -132,7 +132,7 @@ const grade1German: Topic[] = [
   {
     id: "silben-klatschen",
     title: "Silben klatschen 👏",
-    emoji: "👏",
+    emoji: "🎶",
     exercises: [
       { id: "sk1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Silben hat «HUND»? 🐕", answer: "1", options: ["1", "2", "3", "4"], hints: ["Klatsche beim Sprechen: HUND — ein Klatscher!"], mascot: "wave" },
       { id: "sk2", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Silben hat «KA-TZE»? 🐱", answer: "2", options: ["1", "2", "3", "4"], hints: ["KA — TZEE: zwei Klatscher!"] },
@@ -145,7 +145,7 @@ const grade1German: Topic[] = [
   {
     id: "ie-ei",
     title: "ie und ei richtig schreiben ✏️",
-    emoji: "🖊️",
+    emoji: "✍️",
     exercises: [
       { id: "ie1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie heisst der Vogel? 🐦 «T_er» — ie oder ei?", answer: "Tier (ie)", options: ["Tier (ie)", "Teir (ei)", "Teer (ee)", "Tir (i)"], hints: ["Sprich es langsam: T-ie-r. Langes i = ie!"], mascot: "wave" },
       { id: "ie2", type: "fill-in-blank", free: true, difficulty: 1, question: "Das Gegenteil von «nein» ist «ja». Wie buchstabiert man «n_n»? (ie/ei)", answer: "nein", hints: ["Nein beginnt wie «Ei»."] },

@@ -14,6 +14,7 @@ import RewardAnimation from "./RewardAnimation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { selectExercises } from "@/lib/exercisePool";
 import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
 import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
@@ -36,7 +37,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const { tr, lang } = useLang();
   const { recordAnswer } = useProfileContext();
   const FREE_LIMIT = 3;
-  const [exercises, setExercises] = useState(topic.exercises);
+  // Select a rotated pool of exercises — different each session if pool > 10
+  const [exercises, setExercises] = useState(() => selectExercises(topic.id, topic.exercises));
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [idx, setIdx] = useState(0);
@@ -225,7 +227,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           </div>
           <div className="flex gap-3 justify-center flex-wrap pt-1">
             <button onClick={() => {
-              setExercises(topic.exercises);
+              setExercises(selectExercises(topic.id, topic.exercises));
               setIdx(0); setScore(0); setStreak(0); setAnswered(null);
               setDone(false); setWrongIds([]); setIsReviewMode(false); setCardKey(k=>k+1);
             }} className="text-sm border-2 border-gray-200 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
@@ -328,14 +330,16 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           key={cardKey}
           style={{ animation: "slideIn 0.25s cubic-bezier(.34,1.56,.64,1)" }}
         >
-          {/* Read question aloud — always visible when speech is supported */}
+          {/* Read question aloud — bigger, tappable */}
           {isSupported && (
             <button
               onClick={() => speak(current.question)}
-              className="w-full text-center text-xs text-green-600 opacity-60 hover:opacity-100 active:scale-95 transition-all pb-1"
+              className="flex items-center justify-center gap-2 w-full text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-xl py-2.5 px-3 hover:bg-green-100 active:scale-95 transition-all"
               title={tr("readAloudTitle")}
+              aria-label={tr("readAloudTitle")}
             >
-              {tr("readAloud")}
+              <span style={{ fontSize: "20px" }}>🔊</span>
+              <span>{tr("readAloud")}</span>
             </button>
           )}
           {current.type === "multiple-choice" && (

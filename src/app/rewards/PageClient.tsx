@@ -10,6 +10,7 @@ import {
 } from "@/lib/rewards";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
+import ParentPinGate from "@/components/ParentPinGate";
 import { getTopics, SUBJECTS } from "@/data/index";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
@@ -111,7 +112,7 @@ export default function RewardsPage() {
     return "bg-white border-gray-200";
   };
 
-  // UJ-9: Premium gate
+  // UJ-9 + UJ-16: Premium gate first, then PIN gate
   if (loaded && !isPremium) {
     return (
       <div className="max-w-sm mx-auto px-4 py-16 text-center space-y-5">
@@ -135,6 +136,7 @@ export default function RewardsPage() {
   }
 
   return (
+    <ParentPinGate>
     <div className="max-w-5xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
@@ -479,5 +481,6 @@ export default function RewardsPage() {
       </div> {/* end RIGHT col */}
       </div> {/* end md:grid */}
     </div>
+    </ParentPinGate>
   );
 }

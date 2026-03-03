@@ -4,7 +4,7 @@ const grade2German: Topic[] = [
   {
     id: "nomen-artikel",
     title: "Nomen mit Artikel",
-    emoji: "📝",
+    emoji: "🏠",
     exercises: [
       { id: "n1", type: "multiple-choice", question: "___ Hund bellt laut.", answer: "Der", options: ["Der","Die","Das","Ein"], hints: ["Hund ist männlich (maskulin) → der"], difficulty: 1, free: true },
       { id: "n2", type: "multiple-choice", question: "___ Katze schläft.", answer: "Die", options: ["Der","Die","Das","Eine"], hints: ["Katze ist weiblich (feminin) → die"], difficulty: 1, free: true },
@@ -38,7 +38,7 @@ const grade2German: Topic[] = [
   {
     id: "silben",
     title: "Silben zählen",
-    emoji: "👏",
+    emoji: "🎶",
     exercises: [
       { id: "s1", type: "multiple-choice", question: "Wie viele Silben hat «Apfel»?", answer: "2", options: ["1","2","3","4"], hints: ["Ap-fel – beim Sprechen klatschen hilft!"], difficulty: 1, free: true },
       { id: "s2", type: "multiple-choice", question: "Wie viele Silben hat «Schule»?", answer: "2", options: ["1","2","3","4"], hints: ["Schu-le – zwei Silben."], difficulty: 1, free: true },
@@ -68,7 +68,7 @@ const grade2German: Topic[] = [
   {
     id: "satzzeichen",
     title: "Satzzeichen",
-    emoji: "❓",
+    emoji: "❗",
     exercises: [
       { id: "sz1", type: "multiple-choice", question: "Ein Satz endet mit einem Punkt, wenn er eine ___ ist.", answer: "Aussage", options: ["Frage","Aussage","Ausruf"], hints: ["Aussagen enden mit Punkt. Fragen mit ? Ausrufe mit !"], difficulty: 1, free: true },
       { id: "sz2", type: "multiple-choice", question: "Welches Satzzeichen kommt ans Ende? «Wie heisst du___»", answer: "?", options: [".","?","!",","], hints: ["«Wie ...» = Frage → ?"], difficulty: 1, free: true },
@@ -83,7 +83,7 @@ const grade2German: Topic[] = [
   {
     id: "texte-lesen",
     title: "Texte lesen",
-    emoji: "📚",
+    emoji: "📖",
     exercises: [
       { id: "tl1", type: "multiple-choice", question: "«Tim hat einen Hund. Der Hund heisst Bello.» – Wie heisst der Hund?", answer: "Bello", options: ["Tim","Bello","Max","Rex"], hints: ["Lies: «Der Hund heisst ...»"], difficulty: 1, free: true },
       { id: "tl2", type: "multiple-choice", question: "«Es schneit. Die Kinder bauen einen Schneemann.» – Was machen die Kinder?", answer: "Sie bauen einen Schneemann.", options: ["Sie spielen Fussball.","Sie bauen einen Schneemann.","Sie schwimmen.","Sie schlafen."], hints: ["Lies den zweiten Satz."], difficulty: 1, free: true },
@@ -96,7 +96,7 @@ const grade2German: Topic[] = [
   {
     id: "singular-plural",
     title: "Einzahl & Mehrzahl",
-    emoji: "1️⃣➡️2️⃣",
+    emoji: "🐑",
     exercises: [
       { id: "sp1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Mehrzahl von «Hund»? 🐕", answer: "Hunde", options: ["Hunds", "Hunden", "Hunde", "Hundе"], hints: ["Bei vielen Wörtern hängt man -e oder -en an.", "1 Hund → viele Hunde"], mascot: "wave" },
       { id: "sp2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Mehrzahl von «Kind»? 👧", answer: "Kinder", options: ["Kinds", "Kinder", "Kinde", "Kindes"], hints: ["1 Kind → viele Kinder (Umlaut + er!)"] },
@@ -123,7 +123,7 @@ const grade2German: Topic[] = [
   {
     id: "pronomen",
     title: "Personalpronomen",
-    emoji: "👤",
+    emoji: "👥",
     exercises: [
       { id: "pr1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie ersetze ich «Max» mit einem Pronomen? 👦", answer: "er", options: ["sie", "er", "ich", "wir"], hints: ["Max ist ein Junge → er"], mascot: "wave" },
       { id: "pr2", type: "multiple-choice", free: true, difficulty: 1, question: "Wie ersetze ich «Lena und ich» mit einem Pronomen? 👫", answer: "wir", options: ["ihr", "sie", "wir", "man"], hints: ["Wenn ich und jemand anderes gemeint sind: wir"] },

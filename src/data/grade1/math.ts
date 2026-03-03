@@ -161,7 +161,7 @@ const grade1Math: Topic[] = [
   {
     id: "verdoppeln-halbieren",
     title: "Verdoppeln & Halbieren",
-    emoji: "✌️",
+    emoji: "✂️",
     exercises: [
       { id: "v1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist das Doppelte von 3? 🐰🐰", answer: "6", options: ["3", "5", "6", "9"], hints: ["Doppelt = zweimal.", "3 + 3 = ?"], mascot: "wave" },
       { id: "v2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die Hälfte von 8? ✂️", answer: "4", options: ["2", "4", "6", "8"], hints: ["8 in zwei gleiche Teile teilen.", "4 + 4 = 8"] },
