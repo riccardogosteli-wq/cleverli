@@ -5,8 +5,8 @@ const API_KEY  = process.env.ELEVENLABS_API_KEY ?? "";
 
 export async function GET(req: NextRequest) {
   const text = req.nextUrl.searchParams.get("text")?.trim();
-  if (!text) return NextResponse.json({ error: "no text" }, { status: 400 });
-  if (!API_KEY) return NextResponse.json({ error: "no key" }, { status: 503 });
+  if (!text) return NextResponse.json({ error: "no text" }, { status: 400, headers: { "Cache-Control": "no-store" } });
+  if (!API_KEY) return NextResponse.json({ error: "no key" }, { status: 503, headers: { "Cache-Control": "no-store" } });
 
   try {
     const res = await fetch(
