@@ -377,7 +377,7 @@ const grade3Science: Topic[] = [
         id: "u24h1", type: "multiple-choice", free: true, difficulty: 1,
         question: "Was ist 15:00 Uhr in der 12-Stunden-Darstellung? 🕒",
         answer: "3:00 Uhr nachmittags", options: ["3:00 Uhr morgens", "3:00 Uhr nachmittags", "5:00 Uhr nachmittags", "5:00 Uhr morgens"],
-        hints: ["15 − 12 = 3", "Alles über 12:00 = Nachmittag."],
+        hints: ["Uhrzeiten über 12 Uhr: ziehe 12 ab, um die normale Uhrzeit zu erhalten", "Alles über 12:00 = Nachmittag."],
         mascot: "wave",
       },
       {
@@ -403,7 +403,7 @@ const grade3Science: Topic[] = [
         id: "u24h5", type: "fill-in-blank", difficulty: 2,
         question: "Der Zug fährt um 13:22 Uhr ab und braucht 48 Minuten. Er kommt um 14:___ Uhr an. 🚂",
         answer: "10",
-        hints: ["13:22 + 48 Minuten", "22 + 48 = 70 Minuten = 1h10min → also 14:10 Uhr"],
+        hints: ["13:22 + 48 Minuten", "Addiere die Minuten zuerst. Wenn es über 60 wird, erhöhe die Stunden"],
         mascot: "think",
       },
       {
@@ -422,7 +422,7 @@ const grade3Science: Topic[] = [
         id: "u24h8", type: "fill-in-blank", difficulty: 2,
         question: "Der Film beginnt um 19:00 Uhr und dauert 2 Stunden 15 Minuten. Er endet um ___:15 Uhr. 🎬",
         answer: "21",
-        hints: ["19 + 2 = 21", "Also 21:15 Uhr."],
+        hints: ["Addiere einfach die Stunden — wie viele Stunden nach 19 Uhr sind 2 Stunden?", "Also 21:15 Uhr."],
       },
       {
         id: "u24h9", type: "multiple-choice", difficulty: 2,

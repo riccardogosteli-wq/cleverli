@@ -454,7 +454,7 @@ const grade1Science: Topic[] = [
         id: "u8", type: "fill-in-blank", difficulty: 2,
         question: "Eine halbe Stunde hat ___ Minuten. ⏱️",
         answer: "30",
-        hints: ["Die Hälfte von 60 ist...", "30 + 30 = 60."],
+        hints: ["Die Hälfte von 60 ist...", "Eine halbe Stunde hat 30 Minuten. Zwei davon ergeben eine volle Stunde"],
         mascot: "think",
       },
     ],
