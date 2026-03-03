@@ -37,6 +37,29 @@ function numToWordsDE(n: number): string {
   return String(n); // fallback for very large numbers
 }
 
+// ─── Measurement units word map ──────────────────────────────────────────────
+const UNIT_WORDS: Record<string, string> = {
+  mm: "Millimeter", cm: "Zentimeter", dm: "Dezimeter", km: "Kilometer", m: "Meter",
+  mg: "Milligramm", g: "Gramm", kg: "Kilogramm",
+  ml: "Milliliter", cl: "Zentiliter", dl: "Deziliter", l: "Liter",
+};
+
+// ─── Decimal measurements: "1.5 m" → "eineinhalb Meter" ──────────────────────
+// Natural German: 0.5→"ein halb", 1.5→"eineinhalb", 2.5→"zweieinhalb", etc.
+// Other decimals: expand unit only, let ElevenLabs handle the number.
+function decimalMeasureToSpeech(numStr: string, unit: string): string {
+  const num  = parseFloat(numStr.replace(",", "."));
+  const word = UNIT_WORDS[unit] ?? unit;
+  if (isNaN(num)) return `${numStr} ${word}`;
+  const whole = Math.floor(num);
+  const frac  = Math.round((num - whole) * 100);
+  if (frac === 0)  return `${numToWordsDE(whole)} ${word}`;
+  if (frac === 50) return whole === 0 ? `ein halb ${word}` : `${numToWordsDE(whole)}einhalb ${word}`;
+  if (frac === 25) return whole === 0 ? `ein Viertel ${word}` : `${numToWordsDE(whole)} und ein Viertel ${word}`;
+  if (frac === 75) return whole === 0 ? `drei Viertel ${word}` : `${numToWordsDE(whole)} und drei Viertel ${word}`;
+  return `${numStr} ${word}`; // e.g. "1.2 Meter" — ElevenLabs handles the rest
+}
+
 // ─── Swiss currency: "1.50" → "ein Franken fünfzig" ─────────────────────────
 function chfToSpeech(amountStr: string): string {
   const num = parseFloat(amountStr.replace(",", "."));
@@ -116,6 +139,14 @@ function cleanForSpeech(text: string): string {
     .replace(/([\d.,]+)\s*Franken/g, (_: string, amt: string) => chfToSpeech(amt))
     .replace(/([\d.,]+)\s*Rappen/g, (_: string, amt: string) =>
       `${numToWordsDE(Math.round(parseFloat(amt.replace(",","."))))} Rappen`)
+    // ── 2b. Compound speed units: "50 km/h" → "fünfzig Kilometer pro Stunde" ──
+    .replace(/\bkm\/h\b/g, "Kilometer pro Stunde")
+    .replace(/\bm\/s\b/g, "Meter pro Sekunde")
+    .replace(/\bcm\/s\b/g, "Zentimeter pro Sekunde")
+    // ── 2c. Decimal measures: "1.5 m" → "eineinhalb Meter", "0.5 l" → "ein halb Liter" ──
+    // Order: longest unit abbr first so "mm" wins over "m", "ml" over "l"
+    .replace(/\b(\d+[.,]\d+)\s*(mm|cm|dm|km|mg|kg|dl|ml|cl|m|g|l)\b/g,
+      (_: string, num: string, unit: string) => decimalMeasureToSpeech(num, unit))
     // ── 3. Area units (before plain units) ──
     .replace(/cm²/g, "Quadratzentimeter")
     .replace(/m²/g, "Quadratmeter")
