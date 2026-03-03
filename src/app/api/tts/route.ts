@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const VOICE_ID = "cgSgspJ2msm6clMCkdW9"; // Jessica — Playful, Bright, Warm
+const VOICE_ID = "vmVmHDKBkkCgbLVIOJRb"; // Charlie Chatlin — Real & Casual (German, Conversational)
 const API_KEY  = process.env.ELEVENLABS_API_KEY ?? "";
 
 export async function GET(req: NextRequest) {
