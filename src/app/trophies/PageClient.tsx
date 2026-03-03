@@ -47,7 +47,7 @@ export default function TrophiesPage() {
 
   if (!loaded) return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="text-4xl animate-bounce">🐿️</div>
+      <img src="/images/mascot/cleverli-thumbsup.jpg" alt="Cleverli" className="w-16 h-16 object-contain animate-bounce" />
     </div>
   );
 

@@ -126,8 +126,8 @@ export default function MemoryGame({ pairs, onAnswer }: Props) {
                   {isMatched && <span className="absolute top-1 right-1 text-green-500 text-xs">✓</span>}
                 </div>
               ) : (
-                <div className="absolute inset-0 flex items-center justify-center text-2xl text-gray-300">
-                  🐿️
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <img src="/images/mascot/cleverli-thumbsup.jpg" alt="?" className="w-8 h-8 object-contain opacity-60" />
                 </div>
               )}
             </button>

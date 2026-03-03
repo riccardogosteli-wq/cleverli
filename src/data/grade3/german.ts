@@ -53,7 +53,7 @@ const grade3German: Topic[] = [
   {
     id: "leseverstaendnis",
     title: "Leseverständnis",
-    emoji: "📖",
+    emoji: "🔎",
     exercises: [
       { id: "lv1", type: "multiple-choice", question: "«Der Bär schläft im Winter in seiner Höhle. Dieser Schlaf heisst Winterschlaf.» – Was macht der Bär im Winter?", answer: "Er schläft in seiner Höhle.", options: ["Er jagt.","Er schläft in seiner Höhle.","Er wandert.","Er frisst Beeren."], hints: ["Lies den ersten Satz."], difficulty: 1, free: true },
       { id: "lv2", type: "multiple-choice", question: "«Emma liest täglich 20 Minuten. In einer Woche liest sie 7 × 20 Minuten.» – Wie lange liest Emma pro Woche?", answer: "140 Minuten", options: ["20 Minuten","100 Minuten","140 Minuten","160 Minuten"], hints: ["7 × 20 = ?"], difficulty: 2, free: true },

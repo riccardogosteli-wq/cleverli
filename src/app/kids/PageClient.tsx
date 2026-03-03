@@ -99,7 +99,7 @@ export default function KidsDashboard() {
 
   if (!loaded) return (
     <div className="flex items-center justify-center min-h-screen">
-      <span className="text-5xl animate-bounce">🐿️</span>
+      <img src="/images/mascot/cleverli-thumbsup.jpg" alt="Cleverli" className="w-16 h-16 object-contain animate-bounce" />
     </div>
   );
 

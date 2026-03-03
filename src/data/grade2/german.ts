@@ -53,7 +53,7 @@ const grade2German: Topic[] = [
   {
     id: "adjektive-gr2",
     title: "Adjektive einsetzen",
-    emoji: "🌈",
+    emoji: "🎨",
     exercises: [
       { id: "ag1", type: "multiple-choice", question: "Der ___ Hund bellt. (Welches Adjektiv passt?)", answer: "grosse", options: ["grosse","laufen","Hund","schnell"], hints: ["Adjektive beschreiben das Nomen (wie ist der Hund?)."], difficulty: 1, free: true },
       { id: "ag2", type: "multiple-choice", question: "Die Sonne ist ___. Welches Wort passt?", answer: "warm", options: ["warm","rennen","Hund","laufen"], hints: ["«warm» ist eine Eigenschaft, «rennen» ist eine Tätigkeit."], difficulty: 1, free: true },
@@ -83,7 +83,7 @@ const grade2German: Topic[] = [
   {
     id: "texte-lesen",
     title: "Texte lesen",
-    emoji: "📖",
+    emoji: "📰",
     exercises: [
       { id: "tl1", type: "multiple-choice", question: "«Tim hat einen Hund. Der Hund heisst Bello.» – Wie heisst der Hund?", answer: "Bello", options: ["Tim","Bello","Max","Rex"], hints: ["Lies: «Der Hund heisst ...»"], difficulty: 1, free: true },
       { id: "tl2", type: "multiple-choice", question: "«Es schneit. Die Kinder bauen einen Schneemann.» – Was machen die Kinder?", answer: "Sie bauen einen Schneemann.", options: ["Sie spielen Fussball.","Sie bauen einen Schneemann.","Sie schwimmen.","Sie schlafen."], hints: ["Lies den zweiten Satz."], difficulty: 1, free: true },
