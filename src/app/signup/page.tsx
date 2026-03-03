@@ -22,8 +22,8 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
 
   const validateStep2 = () => {
-    if (!name.trim()) { setError("Bitte gib deinen Namen ein."); return false; }
-    if (!email.includes("@") || !email.includes(".")) { setError("Bitte gib eine gültige E-Mail-Adresse ein."); return false; }
+    if (!name.trim()) { setError(tr("errorNameRequired") ?? "Bitte gib deinen Namen ein."); return false; }
+    if (!email.includes("@") || !email.includes(".")) { setError(tr("errorEmailInvalid") ?? "Bitte gib eine gültige E-Mail-Adresse ein."); return false; }
     if (password.length < 6) { setError(tr("passwordMin6") ?? "Das Passwort muss mindestens 6 Zeichen lang sein."); return false; }
     return true;
   };
@@ -48,7 +48,7 @@ export default function Signup() {
       if (signupError) {
         setLoading(false);
         if (signupError.message.includes("already registered")) {
-          setError("Diese E-Mail ist bereits registriert. Bitte einloggen.");
+          setError(tr("errorEmailExists") ?? "Diese E-Mail ist bereits registriert.");
         } else {
           setError(signupError.message);
         }

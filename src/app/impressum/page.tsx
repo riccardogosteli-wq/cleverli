@@ -15,8 +15,12 @@ export default function Impressum() {
 
       <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm space-y-4 text-gray-700">
         <div>
-          <h2 className="font-bold text-gray-900 mb-1">Betreiber</h2>
-          <p>Cleverli<br />Schweiz 🇨🇭</p>
+          <h2 className="font-bold text-gray-900 mb-1">Betreiber / Verantwortliche</h2>
+          <p>Alexandra Gosteli<br />Langenmooserstrasse 22<br />8467 Truttikon<br />Schweiz 🇨🇭</p>
+        </div>
+        <div>
+          <h2 className="font-bold text-gray-900 mb-1">Kontakt</h2>
+          <p><a href="mailto:hello@cleverli.ch" className="text-green-600 hover:underline">hello@cleverli.ch</a></p>
         </div>
         <div>
           <h2 className="font-bold text-gray-900 mb-1">Kontakt</h2>

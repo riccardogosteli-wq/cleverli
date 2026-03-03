@@ -469,7 +469,7 @@ function DashboardInner() {
       {profile && profile.xp === 0 && firstNotDoneIdx === 0 && (
         <div className="flex items-center gap-3 bg-green-50 border-2 border-green-300 rounded-2xl px-4 py-3 text-sm text-green-800 font-medium">
           <span className="text-2xl">🚀</span>
-          <span>Hier starten! Dein erstes Thema wartet auf dich.</span>
+          <span>{lang === "fr" ? "Commence ici ! Ton premier thème t'attend." : lang === "it" ? "Inizia qui! Il tuo primo argomento ti aspetta." : lang === "en" ? "Start here! Your first topic is waiting." : "Hier starten! Dein erstes Thema wartet auf dich."}</span>
         </div>
       )}
 
@@ -538,7 +538,7 @@ export default function Dashboard() {
     <Suspense fallback={
       <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-400">
         <img src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" className="w-16 h-16 object-contain animate-bounce" />
-        <div className="text-sm">Laden…</div>
+        <div className="text-sm">Laden… / Chargement…</div>
       </div>
     }>
       <DashboardInner />

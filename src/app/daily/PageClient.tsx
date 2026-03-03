@@ -13,13 +13,19 @@ import HintSystem from "@/components/HintSystem";
 import { useSound } from "@/hooks/useSound";
 import StreakMilestone from "@/components/StreakMilestone";
 
-const GRADE_DEFAULT = 1; // TODO: use profile's grade preference once auth exists
+
 
 export default function DailyPage() {
   const { tr, lang } = useLang();
   const { recordAnswer, profile } = useProfileContext();
   const { play } = useSound();
-  const [grade] = useState(GRADE_DEFAULT);
+  // Use the last-selected grade from dashboard, default to grade 1
+  const [grade] = useState(() => {
+    if (typeof window === "undefined") return 1;
+    const saved = localStorage.getItem("cleverli_last_grade");
+    const g = saved ? parseInt(saved) : 1;
+    return [1, 2, 3].includes(g) ? g : 1;
+  });
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [hintsUsed, setHintsUsed] = useState(0);
   const [startTime] = useState(Date.now());
@@ -34,7 +40,7 @@ export default function DailyPage() {
 
   if (!challenge) return (
     <div className="max-w-md mx-auto px-4 py-12 text-center">
-      <p className="text-gray-400">Keine Aufgabe verfügbar.</p>
+      <p className="text-gray-400">{lang === "fr" ? "Pas d'exercice disponible." : lang === "it" ? "Nessun esercizio disponibile." : lang === "en" ? "No exercise available." : "Keine Aufgabe verfügbar."}</p>
     </div>
   );
 
@@ -84,7 +90,7 @@ export default function DailyPage() {
     }
   };
 
-  const subjectLabel = tr(subject === "math" ? "math" : "german");
+  const subjectLabel = subject === "math" ? tr("math") : subject === "german" ? tr("german") : (lang === "fr" ? "Sciences" : lang === "it" ? "Scienze" : lang === "en" ? "Science" : "NMG");
 
   // Show streak milestone if set
   if (streakMilestone) {
@@ -110,7 +116,7 @@ export default function DailyPage() {
           <Link href="/dashboard" className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
             {tr("learnNav")}
           </Link>
-          <Link href="/trophies" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 Trophäen ansehen</Link>
+          <Link href="/trophies" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 {lang === "fr" ? "Voir trophées" : lang === "it" ? "Vedi trofei" : lang === "en" ? "View trophies" : "Trophäen ansehen"}</Link>
         </div>
         <style>{`@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
       </main>
@@ -134,7 +140,7 @@ export default function DailyPage() {
           {answered && (
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-1.5 rounded-full text-sm font-bold">
               <span>⚡</span>
-              <span>+{DAILY_XP_BONUS} Bonus-XP</span>
+              <span>+{DAILY_XP_BONUS} {lang === "fr" ? "XP bonus" : lang === "it" ? "XP bonus" : lang === "en" ? "bonus XP" : "Bonus-XP"}</span>
             </div>
           )}
           <p className="text-xs text-gray-400">
@@ -145,7 +151,7 @@ export default function DailyPage() {
           <Link href="/dashboard" className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
             {tr("learnNav")}
           </Link>
-          <Link href="/trophies" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 Trophäen ansehen</Link>
+          <Link href="/trophies" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 {lang === "fr" ? "Voir trophées" : lang === "it" ? "Vedi trofei" : lang === "en" ? "View trophies" : "Trophäen ansehen"}</Link>
         </div>
       </main>
     );

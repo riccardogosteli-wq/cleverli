@@ -127,7 +127,7 @@ export default function AccountPage() {
               ? "bg-amber-50 text-amber-700 border border-amber-200"
               : "bg-gray-50 text-gray-500 border border-gray-100"
           }`}>
-            {session.premium ? "👑 Premium aktiv" : "🔓 Gratis-Konto"}
+            {session.premium ? t("👑 Premium aktiv", "👑 Premium actif", "👑 Premium attivo", "👑 Premium active") : t("🔓 Gratis-Konto", "🔓 Compte gratuit", "🔓 Account gratuito", "🔓 Free account")}
             {!session.premium && (
               <Link href="/upgrade" className="ml-auto text-xs text-green-600 underline font-normal">
                 {t("Upgrade →", "Passer Premium →", "Upgrade →", "Upgrade →")}

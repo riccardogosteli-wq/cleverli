@@ -12,7 +12,7 @@ export default function Home() {
 
   // Logged-in CTA targets
   const primaryHref  = session ? "/dashboard" : "/dashboard";
-  const primaryLabel = session ? (isPremium ? "Zum Dashboard →" : "Weiterlernen →") : `${tr("startFree")} →`;
+  const primaryLabel = session ? (isPremium ? (tr("toDashboard") ?? "Zum Dashboard →") : (tr("continueLearn") ?? "Weiterlernen →")) : `${tr("startFree")} →`;
   const showSignupCta = !session;
 
   return (
@@ -202,7 +202,7 @@ export default function Home() {
                 <Image src="/cleverli-celebrate.png" alt="Cleverli feiert einen Erfolg" width={64} height={64} className="shrink-0" />
                 <div>
                   <div className="text-sm font-bold text-gray-800">🎉 {lang === "fr" ? "Lena a atteint son objectif!" : lang === "it" ? "Lena ha raggiunto il suo obiettivo!" : lang === "en" ? "Lena reached her goal!" : "Lena hat ihr Ziel erreicht!"}</div>
-                  <div className="text-xs text-gray-400 mt-0.5">{lang === "fr" ? "Zeit für den Zoo 🦁" : lang === "it" ? "È ora dello zoo 🦁" : lang === "en" ? "Time for the zoo 🦁" : "Zeit für den Zoo 🦁"}</div>
+                  <div className="text-xs text-gray-400 mt-0.5">{lang === "fr" ? "Direction le zoo ! 🦁" : lang === "it" ? "È ora dello zoo! 🦁" : lang === "en" ? "Time for the zoo! 🦁" : "Zeit für den Zoo! 🦁"}</div>
                 </div>
               </div>
               <Link href="/signup" className="inline-block text-center bg-amber-400 hover:bg-amber-500 text-white font-bold px-6 py-3 rounded-full shadow transition-colors">
@@ -272,7 +272,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-2">{tr("ctaTitle")}</h2>
             <p className="text-green-100 mb-4">{tr("ctaSubtitle")}</p>
             <Link href="/dashboard" className="inline-block bg-white text-green-700 px-8 py-3 rounded-full font-bold hover:bg-green-50 transition-colors shadow-md">
-              {loaded && session ? "Weiterlernen →" : `${tr("startFree")} →`}
+              {loaded && session ? (tr("continueLearn") ?? "Weiterlernen →") : `${tr("startFree")} →`}
             </Link>
           </div>
         </div>

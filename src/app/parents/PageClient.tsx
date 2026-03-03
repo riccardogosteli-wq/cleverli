@@ -32,7 +32,7 @@ function loadAllStats(): TopicStat[] {
   if (typeof window === "undefined") return [];
   const stats: TopicStat[] = [];
   for (const grade of [1, 2, 3]) {
-    for (const subject of ["math", "german"]) {
+    for (const subject of ["math", "german", "science"]) {
       const topics = getTopics(grade, subject);
       for (const topic of topics) {
         const key = `cleverli_${grade}_${subject}_${topic.id}`;
@@ -196,7 +196,7 @@ export default function ParentsDashboard() {
                 <div className="flex-1 min-w-0">
                   <div className="text-xs font-semibold text-gray-800">{s.topicTitle}</div>
                   <div className="text-[10px] text-gray-400">
-                    {s.grade}. {t("Klasse","Année","Classe","Grade")} · {s.subject === "math" ? "Mathematik" : "Deutsch"}
+                    {s.grade}. {t("Klasse","Année","Classe","Grade")} · {s.subject === "math" ? (lang === "fr" ? "Mathématiques" : lang === "it" ? "Matematica" : lang === "en" ? "Maths" : "Mathematik") : s.subject === "german" ? (lang === "fr" ? "Allemand" : lang === "it" ? "Tedesco" : lang === "en" ? "German" : "Deutsch") : (lang === "fr" ? "Sciences" : lang === "it" ? "Scienze" : lang === "en" ? "Science" : "NMG")}
                   </div>
                 </div>
                 <div className="text-sm shrink-0">

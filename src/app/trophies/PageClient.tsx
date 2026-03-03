@@ -89,7 +89,7 @@ export default function TrophiesPage() {
           <div className="flex justify-between text-xs text-gray-500">
             <span>{profile.xp} XP</span>
             {nextLevel && <span>→ {nextLevel.minXp} XP für {lang === "fr" ? nextLevel.titleFr : lang === "it" ? nextLevel.titleIt : lang === "en" ? nextLevel.titleEn : nextLevel.title}</span>}
-            {!nextLevel && <span>Max Level! 🏆</span>}
+            {!nextLevel && <span>{lang === "fr" ? "Niveau max ! 🏆" : lang === "it" ? "Livello max! 🏆" : lang === "en" ? "Max Level! 🏆" : "Max Level! 🏆"}</span>}
           </div>
           <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
             <div
@@ -132,7 +132,7 @@ export default function TrophiesPage() {
       <div className="bg-white rounded-3xl p-5 shadow-sm border border-gray-100 space-y-4">
         {/* Header */}
         <div className="flex items-center justify-between">
-          <h2 className="font-bold text-gray-800 text-base">🗺️ Dein Level-Weg</h2>
+          <h2 className="font-bold text-gray-800 text-base">🗺️ {lang === "fr" ? "Ta progression" : lang === "it" ? "La tua progressione" : lang === "en" ? "Your level path" : "Dein Level-Weg"}</h2>
           <span className="text-xs font-semibold text-white px-2.5 py-1 rounded-full" style={{ backgroundColor: level.color }}>
             Level {level.id}/{LEVELS.length}
           </span>
@@ -152,7 +152,7 @@ export default function TrophiesPage() {
               />
             </div>
             <p className="text-xs text-center text-gray-400">
-              Noch <strong className="text-gray-600">{xpToNext} XP</strong> bis {nextLevel.emoji} <strong style={{ color: nextLevel.color }}>
+  {lang === "fr" ? "Encore" : lang === "it" ? "Ancora" : lang === "en" ? "Just" : "Noch"} <strong className="text-gray-600">{xpToNext} XP</strong> {lang === "fr" ? "jusqu'à" : lang === "it" ? "fino a" : lang === "en" ? "XP to reach" : "bis"} {nextLevel.emoji} <strong style={{ color: nextLevel.color }}>
                 {lang === "fr" ? nextLevel.titleFr : lang === "it" ? nextLevel.titleIt : lang === "en" ? nextLevel.titleEn : nextLevel.title}
               </strong>
             </p>
@@ -187,7 +187,7 @@ export default function TrophiesPage() {
                       className="absolute -top-1.5 -right-1.5 text-[8px] font-black text-white px-1 py-px rounded-full leading-tight"
                       style={{ backgroundColor: l.color }}
                     >
-                      NOW
+                      {lang === "fr" ? "ICI" : lang === "it" ? "QUI" : lang === "en" ? "NOW" : "JETZT"}
                     </div>
                   )}
                 </div>
@@ -212,14 +212,14 @@ export default function TrophiesPage() {
 
         {/* Max level message */}
         {!nextLevel && (
-          <p className="text-center text-sm font-bold text-amber-600 pt-1">🏆 Max Level erreicht!</p>
+          <p className="text-center text-sm font-bold text-amber-600 pt-1">🏆 {lang === "fr" ? "Niveau max atteint !" : lang === "it" ? "Livello massimo raggiunto!" : lang === "en" ? "Max level reached!" : "Max Level erreicht!"}</p>
         )}
       </div>
 
       {/* ── Trophy room ── */}
       <div className="space-y-4">
         <h2 className="font-bold text-gray-700 text-sm">
-          Trophäen-Zimmer 🏆 ({profile.achievements.length}/{ACHIEVEMENTS.length})
+          {lang === "fr" ? "Salle des trophées" : lang === "it" ? "Sala dei trofei" : lang === "en" ? "Trophy Room" : "Trophäen-Zimmer"} 🏆 ({profile.achievements.length}/{ACHIEVEMENTS.length})
         </h2>
 
         {groups.map(rarity => {
@@ -227,7 +227,10 @@ export default function TrophiesPage() {
           return (
             <div key={rarity}>
               <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
-                {rarity === "legendary" ? "⚡ Legendär" : rarity === "epic" ? "💜 Episch" : rarity === "rare" ? "🔵 Selten" : "⚪ Gewöhnlich"}
+                {rarity === "legendary" ? (lang === "fr" ? "⚡ Légendaire" : lang === "it" ? "⚡ Leggendario" : lang === "en" ? "⚡ Legendary" : "⚡ Legendär")
+              : rarity === "epic" ? (lang === "fr" ? "💜 Épique" : lang === "it" ? "💜 Epico" : lang === "en" ? "💜 Epic" : "💜 Episch")
+              : rarity === "rare" ? (lang === "fr" ? "🔵 Rare" : lang === "it" ? "🔵 Raro" : lang === "en" ? "🔵 Rare" : "🔵 Selten")
+              : (lang === "fr" ? "⚪ Commun" : lang === "it" ? "⚪ Comune" : lang === "en" ? "⚪ Common" : "⚪ Gewöhnlich")}
                 <span className="ml-2 font-normal text-gray-300">
                   {inGroup.filter(a => earned.has(a.id)).length}/{inGroup.length}
                 </span>
@@ -266,7 +269,7 @@ export default function TrophiesPage() {
       <div className="text-center pt-2">
         <Link href="/dashboard"
           className="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
-          🎒 Weiterlernen
+          🎒 {lang === "fr" ? "Continuer" : lang === "it" ? "Continua" : lang === "en" ? "Keep learning" : "Weiterlernen"}
         </Link>
       </div>
 

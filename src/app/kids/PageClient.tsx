@@ -47,7 +47,7 @@ function SubjectIsland({ grade, subject, emoji, label, colorIdx }: {
   const c = GRADE_COLORS[colorIdx];
 
   return (
-    <Link href={`/dashboard`}
+    <Link href={`/dashboard?subject=${subject}`}
       className={`bg-gradient-to-br ${c.bg} border-2 ${c.border} rounded-2xl p-4 flex flex-col items-center gap-2 active:scale-95 transition-all shadow-sm`}>
       <span className="text-4xl">{emoji}</span>
       <span className={`font-bold text-sm ${c.text}`}>{label}</span>
