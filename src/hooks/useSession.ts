@@ -32,11 +32,9 @@ export function useSession() {
     // 1. Try Supabase session first
     supabase.auth.getSession().then(async ({ data: { session: sbSession } }) => {
       if (sbSession?.user) {
-        // NOTE: premium_until / premium_plan / cancelled columns added in migration.
-        // Select only base columns until migration is confirmed.
         const { data: profile } = await supabase!
           .from("parent_profiles")
-          .select("name, premium")
+          .select("name, premium, premium_until, premium_plan, cancelled")
           .eq("id", sbSession.user.id)
           .single();
 
@@ -44,9 +42,9 @@ export function useSession() {
           email: sbSession.user.email ?? "",
           name: profile?.name ?? sbSession.user.user_metadata?.name ?? "",
           premium: profile?.premium ?? false,
-          premiumUntil: null,
-          premiumPlan: null,
-          cancelled: false,
+          premiumUntil: profile?.premium_until ?? null,
+          premiumPlan: profile?.premium_plan ?? null,
+          cancelled: profile?.cancelled ?? false,
           userId: sbSession.user.id,
         };
         setSession(sess);
@@ -67,7 +65,7 @@ export function useSession() {
         if (sbSession?.user) {
           const { data: profile } = await supabase!
             .from("parent_profiles")
-            .select("name, premium")
+            .select("name, premium, premium_until, premium_plan, cancelled")
             .eq("id", sbSession.user.id)
             .single();
 
@@ -75,9 +73,9 @@ export function useSession() {
             email: sbSession.user.email ?? "",
             name: profile?.name ?? sbSession.user.user_metadata?.name ?? "",
             premium: profile?.premium ?? false,
-            premiumUntil: null,
-            premiumPlan: null,
-            cancelled: false,
+            premiumUntil: profile?.premium_until ?? null,
+            premiumPlan: profile?.premium_plan ?? null,
+            cancelled: profile?.cancelled ?? false,
             userId: sbSession.user.id,
           };
           setSession(sess);
