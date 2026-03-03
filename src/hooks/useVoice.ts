@@ -14,7 +14,7 @@ import { useCallback, useRef } from "react";
 // ─── In-memory audio cache (URL → decoded AudioBuffer or "pending") ──────────
 const audioCache = new Map<string, AudioBuffer | "loading">();
 
-// ─── Swiss currency: "1.50" → "ein Franken fünfzig" ─────────────────────────
+// ─── Number words (German) ───────────────────────────────────────────────────
 function numToWordsDE(n: number): string {
   const ones = ["", "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben",
                 "acht", "neun", "zehn", "elf", "zwölf", "dreizehn", "vierzehn",
@@ -22,12 +22,22 @@ function numToWordsDE(n: number): string {
   const tens = ["", "", "zwanzig", "dreissig", "vierzig", "fünfzig",
                 "sechzig", "siebzig", "achtzig", "neunzig"];
   if (n === 0) return "null";
+  if (n < 0) return "minus " + numToWordsDE(-n);
   if (n < 20) return ones[n];
-  const t = Math.floor(n / 10);
-  const o = n % 10;
-  return o === 0 ? tens[t] : `${ones[o]}und${tens[t]}`;
+  if (n < 100) {
+    const t = Math.floor(n / 10), o = n % 10;
+    return o === 0 ? tens[t] : `${ones[o]}und${tens[t]}`;
+  }
+  if (n < 1000) {
+    const h = Math.floor(n / 100), rest = n % 100;
+    const hWord = h === 1 ? "hundert" : `${numToWordsDE(h)}hundert`;
+    return rest === 0 ? hWord : `${hWord}${numToWordsDE(rest)}`;
+  }
+  if (n === 1000) return "tausend";
+  return String(n); // fallback for very large numbers
 }
 
+// ─── Swiss currency: "1.50" → "ein Franken fünfzig" ─────────────────────────
 function chfToSpeech(amountStr: string): string {
   const num = parseFloat(amountStr.replace(",", "."));
   if (isNaN(num)) return `${amountStr} Franken`;
@@ -38,8 +48,62 @@ function chfToSpeech(amountStr: string): string {
   return `${numToWordsDE(franken)} Franken ${numToWordsDE(rappen)}`;
 }
 
+// ─── Fractions: "1/2" → "ein halb", "3/4" → "drei Viertel" ─────────────────
+function fractionToSpeech(num: string, den: string): string {
+  const n = parseInt(num), d = parseInt(den);
+  const denWords: Record<number, string> = {
+    2: "halb", 3: "Drittel", 4: "Viertel", 5: "Fünftel",
+    6: "Sechstel", 7: "Siebtel", 8: "Achtel", 10: "Zehntel",
+  };
+  const denWord = denWords[d] ?? `${numToWordsDE(d)}tel`;
+  if (n === 1 && d === 2) return "ein halb";
+  if (n === 1) return `ein ${denWord}`;
+  return `${numToWordsDE(n)} ${denWord}`;
+}
+
+// ─── Time: "3:15 Uhr" → "drei Uhr fünfzehn" ────────────────────────────────
+// Uses formal digit reading (not colloquial "Viertel nach") so exercises
+// teaching "halb/Viertel" don't have their answers given away by the voice.
+function timeToSpeech(h: string, m: string): string {
+  const hours = parseInt(h), mins = parseInt(m);
+  const hWord = numToWordsDE(hours);
+  if (mins === 0) return `${hWord} Uhr`;
+  return `${hWord} Uhr ${numToWordsDE(mins)}`;
+}
+
+// ─── Ordinals: "2." before a noun → "zweite" ────────────────────────────────
+const ORDINALS: Record<number, string> = {
+  1: "erste", 2: "zweite", 3: "dritte", 4: "vierte", 5: "fünfte",
+  6: "sechste", 7: "siebte", 8: "achte", 9: "neunte", 10: "zehnte",
+  11: "elfte", 12: "zwölfte", 13: "dreizehnte", 14: "vierzehnte",
+  15: "fünfzehnte", 20: "zwanzigste", 21: "einundzwanzigste",
+};
+function ordinalToSpeech(n: number): string {
+  if (ORDINALS[n]) return ORDINALS[n];
+  if (n < 20) return `${numToWordsDE(n)}te`;
+  return `${numToWordsDE(n)}ste`;
+}
+
 function cleanForSpeech(text: string): string {
   return text
+    // ── 0. Special symbols & abbreviations ──
+    .replace(/CO₂/g, "Kohlendioxid")
+    .replace(/O₂/g, "Sauerstoff")
+    .replace(/H₂O/g, "Wasser")
+    .replace(/\bca\.\s*/g, "circa ")
+    // ── 0b. Fractions: "1/2" → "ein halb", "3/4" → "drei Viertel" ──
+    .replace(/\b(\d+)\/(\d+)\b/g, (_: string, n: string, d: string) => fractionToSpeech(n, d))
+    // ── 0c. Time: "3:15 Uhr" → "drei Uhr fünfzehn" (trailing Uhr consumed by match) ──
+    .replace(/\b(\d{1,2}):(\d{2})\s*Uhr\b/g, (_: string, h: string, m: string) => timeToSpeech(h, m))
+    .replace(/\b(\d{1,2}):(\d{2})\b/g, (_: string, h: string, m: string) => timeToSpeech(h, m))
+    // ── 0d. Temperature: "37°C" → "siebenunddreissig Grad Celsius", "0°" → "null Grad" ──
+    .replace(/(\d+)\s*°C\b/g, (_: string, n: string) => `${numToWordsDE(parseInt(n))} Grad Celsius`)
+    .replace(/(\d+)\s*°\b/g, (_: string, n: string) => `${numToWordsDE(parseInt(n))} Grad`)
+    // ── 0e. Percentage: "60%" → "sechzig Prozent" ──
+    .replace(/(\d+)\s*%/g, (_: string, n: string) => `${numToWordsDE(parseInt(n))} Prozent`)
+    // ── 0f. Ordinals before nouns: "2. Platz" → "zweite Platz" ──
+    .replace(/\b(\d+)\.\s+(Platz|Monat|Stelle|Tag|Buchstabe|Woche|Klasse|Mal|Jahr|Runde|Zeile)\b/g,
+      (_: string, n: string, noun: string) => `${ordinalToSpeech(parseInt(n))} ${noun}`)
     // ── 1. Currency — number+unit first, then standalone ──
     .replace(/CHF\s*([\d.,]+)/g, "$1 Franken")
     .replace(/([\d.,]+)\s*CHF/g, "$1 Franken")
