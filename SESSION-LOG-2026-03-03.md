@@ -1,136 +1,154 @@
 # Cleverli Session Log — March 3, 2026
 
-## What We Built
+## Summary of Everything Built
 
-### 1. Billing / Account Page (commit `d817422`)
-**Account page `/account`:**
-- Billing section added between premium badge and password card
-- Premium users: plan status + 2-step cancel confirmation flow (idle → confirm → loading → done/error)
-- Free users: upsell card with "Upgrade to Premium" button
+---
+
+## 1. Billing / Cancel Subscription (commit `b131df6`)
+
+**`/account` page — Billing section:**
+- Premium users: plan status + 2-step cancel confirmation (idle → confirm → loading → done/error)
+- Free users: upsell card with "Upgrade to Premium" CTA
 - 4 languages DE/FR/IT/EN throughout
-- Cancel reloads page after success to update premium badge
+- Reloads page after successful cancel to update badge
 
-**New API route `/api/cancel-subscription`:**
-- Fetches all Payrexx subscriptions for the account
-- Finds subscriptions where `referenceId` ends with `:userId`
+**`/api/cancel-subscription` route:**
+- Looks up Payrexx subscriptions by `referenceId` ending with `:userId`
 - Cancels via Payrexx `DELETE /v1/Subscription/{id}/`
 - Sets `premium=false` in Supabase via REST PATCH
-- No new DB columns needed — uses referenceId lookup at cancel time
+- No new DB columns needed
 
 ---
 
-### 2. Full Site Audit #1 — Bugs, Text, Translations (commit `b131df6`)
-**Bugs fixed:**
-- `/upgrade`: double navigation bar (layout already adds nav, page.tsx had extra `<Navigation />`)
-- `/upgrade`: grayed-out checkout buttons even when logged in (session load timing)
-- ExercisePlayer: double 🎁 emoji in free banner (emoji in both i18n string AND JSX)
+## 2. Full Site Audit #1 — Bugs & Translations (commit `8f56777`)
 
-**Content fixes:**
-- freeNoteBanner: "brauchst du ein Konto" → "Premium freischalten" (user might already have account)
+- `/upgrade`: double nav bar removed (page.tsx had duplicate `<Navigation />`)
+- `/upgrade`: grayed-out checkout buttons fixed (session load timing)
+- ExercisePlayer: double 🎁 emoji in free banner fixed
 - Homepage pricing CTA: `href=/signup` → `/upgrade`
-- Signup step labels: hardcoded German → `tr()` with 4-language i18n
-- Password error message: hardcoded German → i18n
-
-**New i18n keys (×4 langs):** `whoAreYou`, `yourAccount`, `yourClass`, `passwordMin6`
+- Signup step labels: hardcoded German → `tr()` 4 languages
+- Password error: hardcoded German → i18n
+- New i18n keys: `whoAreYou`, `yourAccount`, `yourClass`, `passwordMin6`
 
 ---
 
-### 3. Full Site Audit #2 — UX/Journey (commit `a38678c`)
-**Critical journey bugs fixed:**
+## 3. Full Site Audit #2 — UX/Journey (commit `a38678c`)
 
 | Journey | Bug | Fix |
 |---|---|---|
-| Mobile (all logged-in users) | Hamburger showed Login/Signup, no Account/Logout/Upgrade | Rebuilt — correct items per auth state |
-| Parent: find dashboard | Zero nav links to `/parents` | Added 📊 to desktop nav + mobile menu |
-| Guest → pays | No uid → payment not linked to account | Redirects to signup first, `?next=` preserves plan |
-| User pays → returns | Success page routes immediately, webhook hasn't fired → user sees paywall | Polls Supabase every 2.5s, spinner until `premium=true` confirmed |
+| Mobile (logged-in) | Hamburger showed Login/Signup instead of Account/Logout | Rebuilt auth-aware hamburger |
+| Parent area | Zero nav links to `/parents` | Added 📊 to desktop nav + mobile menu |
+| Guest → pays | No uid → payment not linked | Redirects to signup first, `?next=` preserves plan |
+| Post-payment | Success page routed before webhook fired | Polls Supabase every 2.5s until `premium=true` |
 
-**Journey friction fixed:**
-- Signup step 3: "In welcher Klasse bist du?" → "Welche Klasse besucht dein Kind?" for parents
-- Role saved to localStorage (`cleverli_role`) at signup → used by OnboardingModal
-- OnboardingModal: fully translated 4 languages, parent-aware (parents skip grade step, route to `/parents`)
-- ExercisePlayer completion: "Nächstes Thema →", score text, review buttons all i18n'd
-- ExercisePlayer locked screen: yearly option + "create free account" i18n'd
-
-**New i18n keys (×4 langs):** `nextTopic`, `perfectRun`, `practiceAgain`, `continueWithout`, `yearlyOption`, `createFreeAccountFirst`, `whichClassChild`, `navParents`, `navAccount`, plus all login/signup error messages
+- Signup step 3: grade label role-aware (parent sees "Welche Klasse besucht dein Kind?")
+- Role saved to localStorage (`cleverli_role`) at signup step 1
+- OnboardingModal: fully translated 4 languages, parent-aware routing
+- ExercisePlayer completion/locked screens: all i18n'd
 
 ---
 
-### 4. SEO Audit (staged, NOT pushed — saving Vercel build credits)
+## 4. SEO Audit (committed in batch, pushed with grades 4-6)
 
-**Critical fixes:**
-- Homepage: added `export const metadata` (was using generic layout fallback)
-- Fake `AggregateRating` (47 reviews, 4.9★) removed — Google penalty risk
-- `SearchAction` schema removed — Cleverli has no search
-- All hreflang tags pointed to same URL → replaced with `x-default` only
-- `lang="de"` → `lang="de-CH"` (more precise for Swiss market)
-
-**Important fixes:**
-- Sitemap: missing `/agb`, `/impressum`, `/datenschutz`, `/upgrade` → added; topic list now **dynamic from data files** (auto-updates as content grows)
-- `/impressum` + `/datenschutz`: `noindex` intentionally kept (Ricci's preference)
-- Login, Signup, Account, AGB: split into server `page.tsx` + `*Client.tsx` — proper metadata on each
-- Organization logo: `cleverli-wave.png` (mascot) → `cleverli-logo.png`
-- 8 empty `alt=""` across marketing/exercise images → descriptive alt text added
-- Subject page keywords enhanced; topic fallback "Thema nicht gefunden" → noindex
+- Homepage: server wrapper `page.tsx` + `HomeClient.tsx` (fixed `metadata` + `"use client"` conflict)
+- Fake `AggregateRating` removed (Google penalty risk)
+- `SearchAction` schema removed
+- All hreflang tags → `x-default` only
+- `lang="de"` → `lang="de-CH"`
+- Sitemap: dynamic from data files, includes `/agb`, `/impressum`, `/datenschutz`, `/upgrade`
+- `/impressum` + `/datenschutz`: `noindex` kept (Ricci's preference)
+- 8 empty `alt=""` → descriptive alt text
+- Organization logo: `cleverli-wave.png` → `cleverli-logo.png`
 
 ---
 
-## Architecture / Key Files Reference
+## 5. Competitor Audit (documented in `COMPETITOR-AUDIT.md`)
 
-| File | Purpose |
-|---|---|
-| `src/app/api/cancel-subscription/route.ts` | Cancel Payrexx subscription + set premium=false |
-| `src/app/api/checkout/route.ts` | Create Payrexx Gateway; now redirects guests to signup |
-| `src/app/api/webhooks/payrexx/route.ts` | Receive payment confirmation, flip premium=true |
-| `src/app/payment/success/SuccessClient.tsx` | Premium activation polling (2.5s interval, 30s max) |
-| `src/app/payment/cancel/CancelClient.tsx` | Multilingual cancel page with uid in retry URLs |
-| `src/app/account/AccountClient.tsx` | Account page with billing section |
-| `src/components/Navigation.tsx` | Nav with parent link + correct mobile hamburger |
-| `src/components/OnboardingModal.tsx` | Multilingual, parent-aware welcome flow |
-| `src/app/login/LoginClient.tsx` | Login (was page.tsx — split for metadata) |
-| `src/app/signup/SignupClient.tsx` | Signup (was page.tsx — split for metadata) |
-| `src/app/sitemap.ts` | Dynamic sitemap from data files |
-| `COMPETITOR-AUDIT.md` | Full competitor analysis |
+Key findings:
+- **ANTON** (free, 50k+ exercises, German-only) = biggest threat
+- **Cleverli wins**: only platform with all 4 Swiss languages, TWINT, parent rewards, price
+- **Cleverli loses**: content volume, no native app, grades 1-3 only, no teacher portal
+- **Biggest opportunity**: FR/IT market almost completely uncontested
+
+Full report: `~/projects/cleverli/COMPETITOR-AUDIT.md`
 
 ---
 
-## Decisions Made Today
+## 6. Free Tier 3 → 5 + Parent Rewards Preview (commit `f7af921`)
 
-| Decision | Rationale |
-|---|---|
-| `/impressum` + `/datenschutz` stay noindex | Ricci's explicit preference |
-| Cancel subscription: lookup by referenceId at cancel time | Avoids needing new DB column for subscription_id |
-| Premium activation: poll Supabase (not webhook push) | Simpler than server-sent events; 30s max wait acceptable |
-| Hreflang: x-default only | All language variants share same URL — identical hreflang URLs are pointless/harmful |
-| Free tier stays at 3 for now | Competitor audit recommends raising to 10 — pending Ricci decision |
+- `FREE_LIMIT` in ExercisePlayer: `3` → `5`
+- All i18n strings updated: "Erste 5 Aufgaben…" in DE/FR/IT/EN
+- `/upgrade` page: new visual parent rewards preview block
+  - Shows example rewards (Zoo, Glace, etc.), 60% progress bar, "Lena hat ihr Ziel erreicht!" notification mock
+  - Labeled "Nur bei Premium", fully translated 4 languages
+  - Placed between feature list and pricing cards to hook parents before paywall
 
 ---
 
-## Open Items / Next Steps
+## 7. Grades 4–6 Content + Full Grade Expansion (commits `1254954`, `49803e1`, `adc20ea`, `9dbf8b8`)
 
-### Pending push (SEO fixes staged)
-```bash
-cd ~/projects/cleverli && git push origin main
+**New content files (9 files, 270 exercises total):**
+
+| Grade | Math | German | Science |
+|---|---|---|---|
+| 4 | Zahlen bis 10000, Einmaleins, Brüche kennenlernen | Satzglieder, Zeitformen, Rechtschreibung | Körper & Gesundheit, Lebensräume, Wetter & Klima |
+| 5 | Dezimalzahlen, Fläche & Umfang, Brüche addieren | Direkte Rede, Synonyme & Antonyme, Aufsatz | Ökosysteme, Sonnensystem, Strom & Energie |
+| 6 | Negative Zahlen, Prozent & Brüche, Gleichungen | Kasus, Textsorten, Rechtschreibstrategien | Schweiz Geografie, Mittelalter, Aggregatzustände |
+
+**10 exercises per topic** — difficulty 1/2/3 (3/4/3), first 3 marked `free: true`
+
+**All grade selectors updated to 1–6 in:**
+- `src/data/index.ts` (GRADES, getTopics map)
+- `src/app/dashboard/PageClient.tsx`
+- `src/app/kids/PageClient.tsx`
+- `src/app/signup/SignupClient.tsx`
+- `src/components/OnboardingModal.tsx`
+- `src/components/ChildProfileManager.tsx`
+- `src/app/rewards/PageClient.tsx`
+- `src/app/parents/PageClient.tsx`
+- `src/app/daily/PageClient.tsx`
+- `src/lib/family.ts`
+- `src/app/sitemap.ts`
+- `src/hooks/useProfile.ts`
+
+**Bug fixes related to grade expansion:**
+- Removed "coming soon" placeholder block for grades 4-6 on dashboard
+- `GRADE_COLORS` already had 6 entries (no crash)
+- Homepage `page.tsx` split into server wrapper + `HomeClient.tsx` (build error fix)
+
+---
+
+## Git Log (this session, from a38678c)
+
+```
+9dbf8b8  fix: extend GRADE_COLORS to 6 entries
+adc20ea  fix: remove 'coming soon' placeholder for grades 4-6
+49803e1  fix: split homepage into server page.tsx + HomeClient.tsx
+1254954  feat: add grades 4-6 content + expand all grade selectors to 1-6
+f7af921  feat: free tier 3→5, add parent rewards preview on upgrade page
 ```
 
-### Decisions needed from Ricci
-1. **Free tier**: keep 3 or raise to 10? (competitor audit recommends 10)
-2. **Vercel Pro upgrade**: required before charging real users ($20/mo)
-3. **Supabase SQL**: `ALTER TABLE parent_profiles ADD COLUMN IF NOT EXISTS premium_until timestamptz, ADD COLUMN IF NOT EXISTS premium_plan text;`
-
-### Build queue
-- Content sprint: 50 exercises for Addition bis 10, Subtraktion bis 10, Buchstaben, Einfache Wörter
-- Grades 4–6 (retention fix — parents cancel at grade 4 today)
-- PWA install prompt (close app gap perception vs native competitors)
-- Teacher lite mode ("share topic with class" link)
-- FR/IT marketing landing pages (uncontested market)
-- Homepage: add "why not Anton?" positioning section
+(Earlier session commits: `b131df6`, `8f56777`, `a38678c`)
 
 ---
 
 ## Current State
-- **Live site**: https://www.cleverli.ch
+
+- **Live**: https://www.cleverli.ch
 - **Repo**: `riccardogosteli-wq/cleverli` (branch: main)
-- **HEAD pushed**: `a38678c` (UX/journey audit)
-- **HEAD staged (not pushed)**: SEO audit fixes
-- **Vercel**: deploying on each push to main (Hobby plan — commercial use pending Pro upgrade)
+- **HEAD**: `9dbf8b8`
+- **Vercel**: All deployments green ✅
+
+## Open / Pending
+
+1. **Free tier raise visible on homepage** — pricing section still says "Erste 3 Aufgaben" in FAQ schema (StructuredData.tsx) and FAQ answer text — needs update to "5"
+2. **Homepage copy** — still says "1.–3. Klasse" in hero paragraph and features list → update to "1.–6. Klasse"
+3. **Vercel Pro upgrade** — required before charging real users ($20/mo)
+4. **Supabase schema migration** — `ALTER TABLE parent_profiles ADD COLUMN IF NOT EXISTS premium_until timestamptz, ADD COLUMN IF NOT EXISTS premium_plan text;`
+5. **Google Search Console** — `verification: { google: "" }` still empty in layout.tsx
+6. **Content batch** — 50 exercises for remaining grade 1-3 topics; 20+ for grades 4-6
+7. **Test full payment flow** — end-to-end with real TWINT
+
+---
+
+*Last updated: March 3, 2026*
