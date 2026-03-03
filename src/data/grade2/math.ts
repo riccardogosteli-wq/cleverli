@@ -104,7 +104,7 @@ const grade2Math: Topic[] = [
   {
     id: "geld-chf",
     title: "Geld & CHF",
-    emoji: "💰",
+    emoji: "🪙",
     exercises: [
       { id: "g1", type: "multiple-choice", question: "Du hast eine 1-Franken-Münze. Wie viele Rappen sind das?", answer: "100", options: ["10","50","100","200"], hints: ["1 Franken = 100 Rappen"], difficulty: 1, free: true },
       { id: "g2", type: "fill-in-blank", question: "2 × 50 Rappen = ___ Franken", answer: "1", hints: ["50 Rp + 50 Rp = 100 Rp = 1 Fr."], difficulty: 1, free: true },
@@ -119,7 +119,7 @@ const grade2Math: Topic[] = [
   {
     id: "add-sub-100",
     title: "Addition & Subtraktion bis 100",
-    emoji: "🔢",
+    emoji: "🔄",
     exercises: [
       { id: "as1", type: "fill-in-blank", free: true, difficulty: 1, question: "34 + 25 = ___", answer: "59", hints: ["Rechne Zehner und Einer getrennt, dann addiere zusammen.", "Wie viele Zehner? Wie viele Einer?"], mascot: "wave" },
       { id: "as2", type: "fill-in-blank", free: true, difficulty: 1, question: "67 − 34 = ___", answer: "33", hints: ["Zehner: 60−30=30", "Einer: 7−4=3", "30+3=33"] },
@@ -149,7 +149,7 @@ const grade2Math: Topic[] = [
   {
     id: "symmetrie",
     title: "Symmetrie & Formen",
-    emoji: "🔷",
+    emoji: "🪞",
     exercises: [
       { id: "sy1", type: "multiple-choice", free: true, difficulty: 1, question: "Welche Form hat eine Spiegelachse? 🪞", answer: "Herz ❤️", options: ["Unregelmässiges Dreieck", "Herz ❤️", "Zickzack-Linie", "Alle haben keine"], hints: ["Falte das Herz — beide Hälften sind gleich!", "Links = Rechts bei Symmetrie."], mascot: "wave" },
       { id: "sy2", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist ein Quadrat? ⬛", answer: "4 gleich lange Seiten, 4 rechte Winkel", options: ["3 Seiten", "4 gleich lange Seiten, 4 rechte Winkel", "Keine Ecken", "2 lange, 2 kurze Seiten"], hints: ["Alle vier Seiten gleich lang!", "Wie ein Schachfeld-Kästchen."] },

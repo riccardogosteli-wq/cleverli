@@ -21,7 +21,7 @@ const grade3Math: Topic[] = [
   {
     id: "rechnen-bis-1000",
     title: "Rechnen bis 1000",
-    emoji: "➕",
+    emoji: "🧮",
     exercises: [
       { id: "r1k", type: "fill-in-blank", question: "345 + 200 = ___", answer: "545", hints: ["Addiere Hunderter, Zehner und Einer einzeln."], difficulty: 1, free: true },
       { id: "r2k", type: "multiple-choice", question: "700 − 300 = ?", answer: "400", options: ["300","400","500","600"], hints: ["7 Hunderter - 3 Hunderter = 4 Hunderter"], difficulty: 1, free: true },
@@ -102,7 +102,7 @@ const grade3Math: Topic[] = [
   {
     id: "textaufgaben",
     title: "Textaufgaben",
-    emoji: "📖",
+    emoji: "📝",
     exercises: [
       { id: "t1", type: "fill-in-blank", question: "Lisa hat 8 Äpfel. Sie schenkt 3 davon ihrer Freundin. Wie viele Äpfel hat Lisa noch?", answer: "5", hints: ["8 − 3 = ?"], difficulty: 1, free: true },
       { id: "t2", type: "fill-in-blank", question: "Ein Bus hat 32 Plätze. Es sitzen 24 Personen drin. Wie viele Plätze sind noch frei?", answer: "8", hints: ["32 − 24 = ?"], difficulty: 2, free: true },
@@ -115,7 +115,7 @@ const grade3Math: Topic[] = [
   {
     id: "flaeche-umfang",
     title: "Fläche & Umfang",
-    emoji: "📐",
+    emoji: "🟦",
     exercises: [
       { id: "f1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist der Umfang eines Quadrats mit Seite 4 cm? 📐", answer: "16 cm", options: ["8 cm", "12 cm", "16 cm", "20 cm"], hints: ["Umfang = alle 4 Seiten zusammen.", "4 × 4 = ?"], mascot: "wave" },
       { id: "f2", type: "fill-in-blank", free: true, difficulty: 1, question: "Ein Rechteck ist 5 cm lang und 3 cm breit. Umfang = ___ cm.", answer: "16", hints: ["Umfang = 2 × Länge + 2 × Breite", "2×5 + 2×3 = 10+6 = 16"] },
@@ -143,7 +143,7 @@ const grade3Math: Topic[] = [
   {
     id: "schriftlich-rechnen",
     title: "Schriftlich Rechnen",
-    emoji: "✏️",
+    emoji: "📓",
     exercises: [
       { id: "sr1", type: "fill-in-blank", free: true, difficulty: 2, question: "Schriftlich: 347 + 256 = ___", answer: "603", hints: ["Einer: 7+6=13 → 3 aufschreiben, 1 merken", "Zehner: 4+5+1=10 → 0 aufschreiben, 1 merken", "Hunderter: 3+2+1=6"], mascot: "wave" },
       { id: "sr2", type: "fill-in-blank", free: true, difficulty: 2, question: "Schriftlich: 531 − 278 = ___", answer: "253", hints: ["Einer: 1−8 geht nicht → 11−8=3, 1 borgen", "Zehner: 2−1−7 → borgen...", "Ergebnis: 253"] },

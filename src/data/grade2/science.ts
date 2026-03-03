@@ -237,7 +237,7 @@ const grade2Science: Topic[] = [
   {
     id: "lebensraeume",
     title: "Lebensräume der Tiere",
-    emoji: "🦁",
+    emoji: "🌿",
     exercises: [
       {
         id: "lr1", type: "drag-drop", free: true, difficulty: 1,
@@ -317,7 +317,7 @@ const grade2Science: Topic[] = [
   {
     id: "berufe",
     title: "Berufe & Arbeit",
-    emoji: "👩‍⚕️",
+    emoji: "👷",
     exercises: [
       { id: "b1", type: "multiple-choice", free: true, difficulty: 1, question: "Was macht ein Arzt / eine Ärztin? 🩺", answer: "Menschen behandeln, wenn sie krank sind", options: ["Häuser bauen", "Menschen behandeln, wenn sie krank sind", "Feuer löschen", "Essen kochen"], hints: ["Du gehst zum Arzt, wenn du krank bist."], mascot: "wave" },
       { id: "b2", type: "matching", free: true, difficulty: 1, question: "Verbinde Beruf mit Werkzeug! 🔧", answer: "all", hints: ["Welches Werkzeug braucht wer?"], pairs: [{ id: "arzt", label: "🩺 Arzt", emoji: "🩺" }, { id: "stethoskop", label: "🔊 Stethoskop", emoji: "🔊" }, { id: "koch", label: "👨‍🍳 Koch", emoji: "👨‍🍳" }, { id: "pfanne", label: "🍳 Pfanne", emoji: "🍳" }, { id: "lehrer", label: "👩‍🏫 Lehrerin", emoji: "👩‍🏫" }, { id: "tafel", label: "🖊️ Tafel", emoji: "🖊️" }] },

@@ -21,7 +21,7 @@ const grade3German: Topic[] = [
   {
     id: "adjektive",
     title: "Adjektive",
-    emoji: "🌈",
+    emoji: "🖌️",
     exercises: [
       { id: "aj1", type: "multiple-choice", question: "Was ist das Gegenteil von «alt»?", answer: "jung", options: ["gross","jung","schnell","laut"], hints: ["Alt ↔ Jung"], difficulty: 1, free: true },
       { id: "aj2", type: "multiple-choice", question: "Was ist das Gegenteil von «laut»?", answer: "leise", options: ["schnell","stark","leise","gross"], hints: ["Laut ↔ Leise"], difficulty: 1, free: true },
@@ -83,7 +83,7 @@ const grade3German: Topic[] = [
   {
     id: "verben-konjugieren",
     title: "Verben konjugieren",
-    emoji: "🏃",
+    emoji: "🔄",
     exercises: [
       { id: "vk1", type: "multiple-choice", free: true, difficulty: 1, question: "Konjugiere «gehen»: Ich ___", answer: "gehe", options: ["geht", "gehen", "gehe", "gehst"], hints: ["Konjugiere gehen: Die Endung für ich ist meist -e."], mascot: "wave" },
       { id: "vk2", type: "fill-in-blank", free: true, difficulty: 1, question: "Du ___ (spielen) gerne Fussball.", answer: "spielst", hints: ["du + Verb: meist -st am Ende", "spiel + st = spielst"] },

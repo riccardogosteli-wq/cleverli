@@ -38,7 +38,7 @@ const grade2German: Topic[] = [
   {
     id: "silben",
     title: "Silben zählen",
-    emoji: "🎶",
+    emoji: "👏",
     exercises: [
       { id: "s1", type: "multiple-choice", question: "Wie viele Silben hat «Apfel»?", answer: "2", options: ["1","2","3","4"], hints: ["Ap-fel – beim Sprechen klatschen hilft!"], difficulty: 1, free: true },
       { id: "s2", type: "multiple-choice", question: "Wie viele Silben hat «Schule»?", answer: "2", options: ["1","2","3","4"], hints: ["Schu-le – zwei Silben."], difficulty: 1, free: true },

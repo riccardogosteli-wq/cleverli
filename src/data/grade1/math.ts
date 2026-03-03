@@ -102,7 +102,7 @@ const grade1Math: Topic[] = [
   {
     id: "muster",
     title: "Muster & Reihen",
-    emoji: "🔁",
+    emoji: "🔳",
     exercises: [
       { id: "m1", type: "fill-in-blank", question: "Ergänze: 2, 4, 6, 8, ___", answer: "10", hints: ["Zähle in Zweierschritten."], difficulty: 1, free: true },
       { id: "m2", type: "fill-in-blank", question: "Ergänze: 1, 3, 5, 7, ___", answer: "9", hints: ["Zähle ungerade Zahlen: 1,3,5,7,..."], difficulty: 1, free: true },
@@ -148,7 +148,7 @@ const grade1Math: Topic[] = [
   {
     id: "mengen-zaehlen",
     title: "Mengen & Zählen",
-    emoji: "🍎",
+    emoji: "🧮",
     exercises: [
       { id: "m1", type: "counting", free: true, difficulty: 1, emoji: "🍎", question: "Wie viele Äpfel sind in der Gruppe? 🍎🍎🍎🍎🍎", answer: "5", options: ["4", "5", "6", "7"], hints: ["Zähle jeden Apfel einzeln.", "1, 2, 3, 4, 5…"], mascot: "wave" },
       { id: "m2", type: "counting", free: true, difficulty: 1, emoji: "⭐", question: "Zähle die Sterne! ⭐⭐⭐⭐⭐⭐⭐⭐", answer: "8", options: ["6", "7", "8", "9"], hints: ["Mach einen Strich nach jedem Stern."] },
@@ -176,7 +176,7 @@ const grade1Math: Topic[] = [
   {
     id: "geld-muenzen",
     title: "Geld & Münzen 🪙",
-    emoji: "💰",
+    emoji: "🪙",
     exercises: [
       { id: "g1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist die grösste Schweizer Münze? 🇨🇭", answer: "5 Franken", options: ["10 Rappen", "1 Franken", "5 Franken", "2 Franken"], hints: ["CHF 5 ist mehr als CHF 2.", "Gold-silberne grosse Münze."], mascot: "wave" },
       { id: "g2", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Rappen hat 1 Franken? 🪙", answer: "100", options: ["10", "50", "100", "1000"], hints: ["So wie 100 Cent = 1 Euro."] },

@@ -119,7 +119,7 @@ const grade1German: Topic[] = [
   {
     id: "vokale-konsonanten",
     title: "Vokale & Konsonanten",
-    emoji: "🔵",
+    emoji: "🗣️",
     exercises: [
       { id: "vk1", type: "multiple-choice", free: true, difficulty: 1, question: "Welcher Buchstabe ist ein Vokal? 🔤", answer: "E", options: ["B", "K", "E", "T"], hints: ["Vokale: A, E, I, O, U — man spricht sie offen aus.", "Du singst sie!"], mascot: "wave" },
       { id: "vk2", type: "drag-drop", free: true, difficulty: 1, question: "Sortiere: Vokal oder Konsonant? 🔤", answer: "all", hints: ["Vokale: A, E, I, O, U"], dragItems: [{ id: "a", label: "A", emoji: "🔵" }, { id: "b", label: "B", emoji: "🔴" }, { id: "i", label: "I", emoji: "🔵" }, { id: "m", label: "M", emoji: "🔴" }, { id: "u", label: "U", emoji: "🔵" }, { id: "s", label: "S", emoji: "🔴" }], dropZones: [{ id: "vokal", label: "🔵 Vokal" }, { id: "konsonant", label: "🔴 Konsonant" }], dropAnswers: { a: "vokal", b: "konsonant", i: "vokal", m: "konsonant", u: "vokal", s: "konsonant" } },
@@ -132,7 +132,7 @@ const grade1German: Topic[] = [
   {
     id: "silben-klatschen",
     title: "Silben klatschen 👏",
-    emoji: "🎶",
+    emoji: "👏",
     exercises: [
       { id: "sk1", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Silben hat «HUND»? 🐕", answer: "1", options: ["1", "2", "3", "4"], hints: ["Sprich das Wort laut. Wie viele Klatscher brauchst du?"], mascot: "wave" },
       { id: "sk2", type: "multiple-choice", free: true, difficulty: 1, question: "Wie viele Silben hat «KA-TZE»? 🐱", answer: "2", options: ["1", "2", "3", "4"], hints: ["Sprich das Wort langsam und klapp bei jeder Silbe."] },

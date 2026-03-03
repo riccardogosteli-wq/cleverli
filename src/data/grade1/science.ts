@@ -348,7 +348,7 @@ const grade1Science: Topic[] = [
   {
     id: "fuenf-sinne",
     title: "Meine 5 Sinne",
-    emoji: "👁️",
+    emoji: "🌟",
     exercises: [
       { id: "s1", type: "multiple-choice", free: true, difficulty: 1, question: "Mit welchem Sinn siehst du? 👁️", answer: "Sehen (Augen)", options: ["Hören (Ohren)", "Sehen (Augen)", "Riechen (Nase)", "Tasten (Haut)"], hints: ["Augen = sehen!"], mascot: "wave" },
       { id: "s2", type: "drag-drop", free: true, difficulty: 1, question: "Welcher Sinn gehört zu welchem Organ? 🧠", answer: "all", hints: ["5 Sinne: sehen, hören, riechen, schmecken, tasten"], dragItems: [{ id: "sehen", label: "👁️ Sehen" }, { id: "hoeren", label: "👂 Hören" }, { id: "riechen", label: "👃 Riechen" }, { id: "schmecken", label: "👅 Schmecken" }, { id: "tasten", label: "✋ Tasten" }], dropZones: [{ id: "augen", label: "Augen" }, { id: "ohren", label: "Ohren" }, { id: "nase", label: "Nase" }, { id: "mund", label: "Mund/Zunge" }, { id: "haut", label: "Haut" }], dropAnswers: { sehen: "augen", hoeren: "ohren", riechen: "nase", schmecken: "mund", tasten: "haut" } },
@@ -361,7 +361,7 @@ const grade1Science: Topic[] = [
   {
     id: "familie-gemeinschaft",
     title: "Familie & Gemeinschaft",
-    emoji: "👨‍👩‍👧",
+    emoji: "👪",
     exercises: [
       { id: "fg1", type: "multiple-choice", free: true, difficulty: 1, question: "Wer gehört zu einer typischen Familie? 👨‍👩‍👧‍👦", answer: "Eltern und Kinder", options: ["Nur Kinder", "Eltern und Kinder", "Nur Grosseltern", "Nur Haustiere"], hints: ["Familie = Menschen, die zusammen leben und füreinander da sind."], mascot: "wave" },
       { id: "fg2", type: "memory", free: true, difficulty: 1, question: "Verbinde Familienmitglieder! 👨‍👩‍👧", answer: "all", hints: ["Wie heissen die verschiedenen Familienmitglieder?"], pairs: [{ id: "mutter", label: "👩 Mutter", emoji: "👩" }, { id: "vater", label: "👨 Vater", emoji: "👨" }, { id: "oma", label: "👵 Grossmutter", emoji: "👵" }, { id: "opa", label: "👴 Grossvater", emoji: "👴" }, { id: "schwester", label: "👧 Schwester", emoji: "👧" }, { id: "bruder", label: "👦 Bruder", emoji: "👦" }] },
