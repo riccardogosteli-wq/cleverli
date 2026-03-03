@@ -16,11 +16,20 @@ export function useSession() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    if (!supabase) {
+      // No Supabase client (env vars missing) — fall back to localStorage only
+      try {
+        const raw = localStorage.getItem(SESSION_KEY);
+        setSession(raw ? JSON.parse(raw) : null);
+      } catch { setSession(null); }
+      setLoaded(true);
+      return;
+    }
+
     // 1. Try Supabase session first
     supabase.auth.getSession().then(async ({ data: { session: sbSession } }) => {
       if (sbSession?.user) {
-        // Fetch premium status from parent_profiles
-        const { data: profile } = await supabase
+        const { data: profile } = await supabase!
           .from("parent_profiles")
           .select("name, premium")
           .eq("id", sbSession.user.id)
@@ -33,7 +42,6 @@ export function useSession() {
           userId: sbSession.user.id,
         };
         setSession(sess);
-        // Keep localStorage in sync for backwards compat
         localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
       } else {
         // 2. Fall back to localStorage session (existing users)
@@ -45,11 +53,11 @@ export function useSession() {
       setLoaded(true);
     });
 
-    // Listen for Supabase auth state changes (login/logout/token refresh)
+    // Listen for auth state changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, sbSession) => {
         if (sbSession?.user) {
-          const { data: profile } = await supabase
+          const { data: profile } = await supabase!
             .from("parent_profiles")
             .select("name, premium")
             .eq("id", sbSession.user.id)
@@ -74,7 +82,7 @@ export function useSession() {
   }, []);
 
   const logout = async () => {
-    await supabase.auth.signOut();
+    if (supabase) await supabase.auth.signOut();
     localStorage.removeItem(SESSION_KEY);
     setSession(null);
   };

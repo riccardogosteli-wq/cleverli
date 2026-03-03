@@ -26,6 +26,7 @@ export default function Login() {
     setLoading(true);
     setError("");
 
+    if (!supabase) { setError("Auth nicht verfügbar. Bitte später versuchen."); setLoading(false); return; }
     const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
 
     if (authError) {

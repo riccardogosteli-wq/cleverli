@@ -39,6 +39,7 @@ export default function Signup() {
     setError("");
 
     try {
+      if (!supabase) throw new Error("Supabase not available");
       const { data, error: signupError } = await supabase.auth.signUp({
         email,
         password,
