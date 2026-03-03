@@ -17,6 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { selectExercises } from "@/lib/exercisePool";
+import { getTierProgress, tierAtIndex } from "@/lib/tierProgress";
 import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
 import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
@@ -57,7 +58,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [comboVisible, setComboVisible] = useState(false);
   const [wrongCountSession, setWrongCountSession] = useState(0);
   const [showPerfect, setShowPerfect] = useState(false);
+  const [tierToast, setTierToast] = useState<string | null>(null);
   const topicStartRef = useRef<number>(Date.now());
+  const tierInfo = getTierProgress(topic, idx);
   const nextTopic = allTopics[topicIndex + 1] ?? null;
   const rewardRef = useRef<HTMLDivElement>(null);
 
@@ -150,6 +153,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
     // Record XP — isTopicComplete will be true when this was the last exercise
     const isLast = idx + 1 >= exercises.length;
+    // Tier crossing detection (for achievements)
+    let tierCompleted: "easy" | "medium" | "hard" | undefined;
+    if (correct && tierInfo.isTiered) {
+      if (idx + 1 === tierInfo.easyBoundary)   tierCompleted = "easy";
+      if (idx + 1 === tierInfo.mediumBoundary) tierCompleted = "medium";
+      if (isLast)                               tierCompleted = "hard";
+    }
     recordAnswer({
       correct,
       streak: comboCount, // pass comboCount as streak param
@@ -161,6 +171,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       subject,
       topicDurationMs: correct && isLast ? Date.now() - topicStartRef.current : undefined,
       lang,
+      tierCompleted,
     });
 
     // Sound first, then voice after a short pause
@@ -194,6 +205,17 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       if (wrongIds.length > 0) { setShowReview(true); return; }
       setDone(true);
       return;
+    }
+    // Tier completion toast (fires when we cross a boundary, non-review mode)
+    if (!isReviewMode && tierInfo.isTiered) {
+      const nextIdx = idx + 1;
+      if (nextIdx === tierInfo.easyBoundary) {
+        setTierToast("🌱 Leicht-Level geschafft! +20 XP");
+        setTimeout(() => setTierToast(null), 2500);
+      } else if (nextIdx === tierInfo.mediumBoundary) {
+        setTierToast("⚡ Mittel-Level geschafft! +30 XP");
+        setTimeout(() => setTierToast(null), 2500);
+      }
     }
     setIdx(i => i + 1);
     setAnswered(null);
@@ -348,26 +370,68 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         </div>
       )}
 
+      {/* Tier completion toast */}
+      {tierToast && (
+        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-white border-2 border-green-300 rounded-2xl px-5 py-2.5 shadow-xl text-sm font-bold text-green-700 whitespace-nowrap">
+          {tierToast}
+        </div>
+      )}
+
       {/* UJ-15: Thin top progress bar — always visible */}
-      <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
-        <div
-          className="h-full rounded-full transition-all duration-500"
-          style={{
-            width: `${((idx + (answered !== null ? 1 : 0)) / exercises.length) * 100}%`,
-            background: isReviewMode
-              ? "linear-gradient(to right, #f59e0b, #d97706)"
-              : "linear-gradient(to right, #86efac, #16a34a)",
-          }}
-        />
-      </div>
+      {!isReviewMode && tierInfo.isTiered ? (
+        /* Segmented 3-tier progress bar */
+        <div className="w-full h-2 flex gap-px overflow-hidden rounded-full bg-gray-100">
+          {(["easy","medium","hard"] as const).map(tier => {
+            const t = tierInfo[tier];
+            const pct = t.total > 0 ? (t.done / t.total) * 100 : 0;
+            const bg = tier === "easy" ? "linear-gradient(to right,#86efac,#16a34a)"
+                     : tier === "medium" ? "linear-gradient(to right,#fcd34d,#d97706)"
+                     : "linear-gradient(to right,#fca5a5,#dc2626)";
+            const segW = (t.total / exercises.length) * 100;
+            return (
+              <div key={tier} className="relative h-full bg-gray-100 overflow-hidden"
+                style={{ width: `${segW}%` }}>
+                <div className="h-full transition-all duration-500"
+                  style={{ width: `${pct}%`, background: bg }} />
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+          <div
+            className="h-full rounded-full transition-all duration-500"
+            style={{
+              width: `${((idx + (answered !== null ? 1 : 0)) / exercises.length) * 100}%`,
+              background: isReviewMode
+                ? "linear-gradient(to right, #f59e0b, #d97706)"
+                : "linear-gradient(to right, #86efac, #16a34a)",
+            }}
+          />
+        </div>
+      )}
 
       {/* Progress bar + voice toggle — hide while reward animation is showing */}
       {answered === null && (
         <div className="flex items-center gap-2">
-          {/* UJ-15: Exercise counter */}
+          {/* UJ-15: Exercise counter — tier-aware */}
+          {!isReviewMode && tierInfo.isTiered ? (() => {
+            const tier = tierAtIndex(tierInfo, idx);
+            const tierEmoji = tier === "easy" ? "🟢" : tier === "medium" ? "🟡" : "🔴";
+            const tierDone = tier === "easy" ? idx + 1
+              : tier === "medium" ? idx + 1 - tierInfo.easyBoundary
+              : idx + 1 - tierInfo.mediumBoundary;
+            const tierTotal = tierInfo[tier].total;
+            return (
+              <span className="text-xs font-bold text-gray-400 shrink-0 tabular-nums">
+                {tierEmoji} {tierDone}/{tierTotal} <span className="text-gray-300">({idx + 1}/{exercises.length})</span>
+              </span>
+            );
+          })() : (
           <span className="text-xs font-bold text-gray-400 shrink-0 tabular-nums">
             {isReviewMode ? "🔄 " : ""}{idx + 1}/{exercises.length}
           </span>
+          )}
           <div className="flex-1">
             <ProgressBar current={idx + 1} total={exercises.length} streak={streak} />
           </div>

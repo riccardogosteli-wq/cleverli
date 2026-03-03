@@ -5,6 +5,7 @@ import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
 import { getTopics, SUBJECTS } from "@/data/index";
 import { getActiveProfileId } from "@/lib/family";
 import { syncProfileToSupabase, loadProfileFromSupabase } from "@/lib/progressSync";
+import { getTierProgress } from "@/lib/tierProgress";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -271,6 +272,8 @@ export function useProfile() {
     subject: string;
     topicDurationMs?: number;
     lang?: string;
+    topicId?: string;
+    tierCompleted?: "easy" | "medium" | "hard";
   }) => {
     setProfile(prev => {
       const today = todayStr();
@@ -356,6 +359,12 @@ export function useProfile() {
         weekendDays: newWeekendDays,
       };
 
+      // Tier completion achievements
+      const tierAchievements: AchievementId[] = [];
+      if (opts.tierCompleted === "easy"   && !prev.achievements.includes("tier_easy_complete"))   tierAchievements.push("tier_easy_complete");
+      if (opts.tierCompleted === "medium" && !prev.achievements.includes("tier_medium_complete")) tierAchievements.push("tier_medium_complete");
+      if (opts.tierCompleted === "hard"   && !prev.achievements.includes("tier_hard_complete"))   tierAchievements.push("tier_hard_complete");
+
       // Check achievements
       const earned = [
         ...checkAchievements(updated, {
@@ -368,6 +377,7 @@ export function useProfile() {
           subject: opts.subject,
         }),
         ...polyglotNew,
+        ...tierAchievements,
       ].filter(id => !prev.achievements.includes(id));
 
       // Achievement XP

@@ -36,7 +36,10 @@ export type AchievementId =
   | "level_2"
   | "level_3"
   | "level_4"
-  | "level_5";
+  | "level_5"
+  | "tier_easy_complete"
+  | "tier_medium_complete"
+  | "tier_hard_complete";
 
 export interface Achievement {
   id: AchievementId;
@@ -557,6 +560,49 @@ export const ACHIEVEMENTS: Achievement[] = [
     descEn: "3 topics in winter",
     rarity: "rare",
     xpReward: 40,
+  },
+  // ── Difficulty tier achievements ────────────────────────────────────────────
+  {
+    id: "tier_easy_complete",
+    emoji: "🌱",
+    title: "Leicht-Meister",
+    titleFr: "Maître facile",
+    titleIt: "Maestro facile",
+    titleEn: "Easy Master",
+    desc: "Alle leichten Aufgaben eines Themas gemeistert!",
+    descFr: "Toutes les tâches faciles d'un thème réussies !",
+    descIt: "Tutti gli esercizi facili di un argomento completati!",
+    descEn: "All easy exercises of a topic mastered!",
+    rarity: "common",
+    xpReward: 20,
+  },
+  {
+    id: "tier_medium_complete",
+    emoji: "⚡",
+    title: "Mittel-Meister",
+    titleFr: "Maître moyen",
+    titleIt: "Maestro intermedio",
+    titleEn: "Medium Master",
+    desc: "Alle mittleren Aufgaben eines Themas gemeistert!",
+    descFr: "Toutes les tâches moyennes d'un thème réussies !",
+    descIt: "Tutti gli esercizi medi di un argomento completati!",
+    descEn: "All medium exercises of a topic mastered!",
+    rarity: "rare",
+    xpReward: 30,
+  },
+  {
+    id: "tier_hard_complete",
+    emoji: "🔥",
+    title: "Profi!",
+    titleFr: "Professionnel !",
+    titleIt: "Professionista!",
+    titleEn: "Pro!",
+    desc: "Alle schweren Aufgaben eines Themas gemeistert!",
+    descFr: "Toutes les tâches difficiles d'un thème réussies !",
+    descIt: "Tutti gli esercizi difficili di un argomento completati!",
+    descEn: "All hard exercises of a topic mastered!",
+    rarity: "epic",
+    xpReward: 50,
   },
 ];
 

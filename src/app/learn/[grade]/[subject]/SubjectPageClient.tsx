@@ -4,6 +4,7 @@ import { Topic } from "@/types/exercise";
 import { useEffect, useState } from "react";
 import { useLang } from "@/lib/LangContext";
 import { getTopicTitle } from "@/data/topicTitles";
+import { getTierProgress } from "@/lib/tierProgress";
 
 interface Props { grade: number; subject: string; topics: Topic[]; }
 
@@ -30,6 +31,11 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
   const meta = SUBJECT_META[subject] ?? { emoji: "📚", nameKey: subject, color: "text-gray-700 bg-gray-50" };
   const subjectName = tr(meta.nameKey) || subject;
 
+  const hasAnyTieredTopic = topics.some(t => {
+    const tierInfo = getTierProgress(t, 0);
+    return tierInfo.isTiered;
+  });
+
   return (
     <div className="max-w-2xl mx-auto px-4 py-6 space-y-5">
       {/* Breadcrumb */}
@@ -48,6 +54,9 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
             {["NMG","NHS","NUS"].includes(subjectName) && <span className="text-gray-500">{tr("scienceFull")} · </span>}
             {topics.length} Themen · Lehrplan 21
           </p>
+          {hasAnyTieredTopic && (
+            <p className="text-xs text-gray-400 mt-0.5">3 Stufen: Leicht · Mittel · Schwer</p>
+          )}
         </div>
       </div>
 
@@ -56,6 +65,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
           const prog = progress[topic.id];
           const stars = prog?.stars ?? 0;
           const done = !!prog;
+          const tierInfo = getTierProgress(topic, prog?.completed ?? 0);
           return (
             <Link key={topic.id} href={`/learn/${grade}/${subject}/${topic.id}`}
               className="flex items-center gap-4 bg-white rounded-2xl p-4 border-2 border-gray-100 hover:border-green-300 hover:bg-green-50 transition-all group shadow-sm">
@@ -75,6 +85,12 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
                       ))}
                     </div>
                     <span className="text-xs px-2 py-1 rounded-full font-medium bg-green-100 text-green-700">✓</span>
+                  </div>
+                ) : tierInfo.isTiered ? (
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className="text-green-600">🟢 {tierInfo.easy.done}/{tierInfo.easy.total}{tierInfo.easy.done === tierInfo.easy.total ? ' ✓' : ''}</span>
+                    <span className="text-yellow-600">🟡 {tierInfo.medium.done}/{tierInfo.medium.total}{tierInfo.medium.done === tierInfo.medium.total ? ' ✓' : ''}</span>
+                    <span className="text-red-600">🔴 {tierInfo.hard.done}/{tierInfo.hard.total}{tierInfo.hard.done === tierInfo.hard.total ? ' ✓' : ''}</span>
                   </div>
                 ) : (
                   <span className="text-xs px-2 py-1 rounded-full font-medium bg-blue-50 text-blue-600">
