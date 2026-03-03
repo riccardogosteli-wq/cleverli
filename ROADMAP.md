@@ -1,5 +1,5 @@
 # Cleverli — Product Roadmap
-_Last updated: 2026-03-02_
+_Last updated: 2026-03-03_
 
 ---
 
@@ -129,11 +129,8 @@ setSession({ email, name, premium: false });
 
 ---
 
-### UJ-14 · Language switcher doesn't persist on navigation ⚠️
-**Severity:** Medium  
-**Where:** Nav language picker  
-**Problem:** Language is stored in localStorage and read via `LangContext`. Works correctly on subsequent pages. BUT on first load with no stored preference, always defaults to "de" — even for users in French-speaking Switzerland (no browser language detection).  
-**Fix:** On first visit (no stored lang), detect `navigator.language` and set accordingly: `fr` → fr, `it` → it, `en` → en, default → de.
+### ~~UJ-14 · Language switcher — browser language detection~~
+**Status:** REMOVED — not wanted at this time (2026-03-03)
 
 ---
 
@@ -225,8 +222,8 @@ See UJ-6. Full red panel, correct answer shown, explanation text, tap to continu
 ### ✅ PM-9 · Next Topic Auto-Suggest
 See UJ-5. After topic completion, suggest next topic with one tap.
 
-### PM-10 · Browser Language Detection
-See UJ-14. Auto-detect on first visit from `navigator.language`.
+### ~~PM-10 · Browser Language Detection~~
+**Status:** REMOVED — not wanted at this time (2026-03-03)
 
 ### ✅ PM-11 · Navigate-Away Confirmation During Exercise
 See UJ-12. Intercept back/breadcrumb if exercise in progress.
@@ -240,11 +237,7 @@ See UJ-10. Deadline reminder, 1-day grace period option.
 ### PM-14 · Premium Paywall on Dashboard (locked topics)
 See UJ-4. Lock icon on premium topics, inline upsell for free users.
 
-### PM-15 · Mobile Layout Optimization
-- Reduce mascot hero height on small screens (96px → 64px)
-- Bottom nav bar for mobile (replaces hamburger)
-- Sticky progress compression on scroll
-- Reduce padding on learn pages for mobile
+### ✅ PM-15 · Mobile Layout Optimization — DONE (2026-03-03)
 
 ---
 
@@ -271,6 +264,60 @@ Exercise image alt texts (per exercise data), keyboard navigation, high contrast
 ---
 
 ## ✅ Completed
+
+### 2026-03-03
+
+**Auth & CSP fix**
+- [x] CSP `connect-src` fix — was blocking Supabase auth calls (`connect-src 'self'` → added `*.supabase.co`, `formspree.io`, GA/GTM domains)
+- [x] Signup "Los geht's!" button now works on live site (real Supabase auth confirmed ✅)
+
+**Child profiles UI (PM-3/PM-4)**
+- [x] `ChildProfileManager` component — add/switch/delete up to 3 children behind PIN gate
+  - Avatar picker (18 emoji), name input, grade selector (1–3)
+  - Delete with confirmation step
+  - Active profile highlighted green
+- [x] Navigation profile switcher dropdown — appears when 2+ profiles exist, avatar pill + child name, switch reloads context
+- [x] Child IDs now use `crypto.randomUUID()` — valid UUID, compatible with Supabase FK
+
+**Supabase progress sync (PM-1 extension)**
+- [x] `src/lib/progressSync.ts` — new file, all sync helpers:
+  - `syncProfileToSupabase(childId, profile)` → upserts XP/streak/counters to `child_progress`
+  - `syncTopicProgressToSupabase(...)` → upserts stars/score to `topic_progress`
+  - `loadProfileFromSupabase(childId)` → restore profile on new device (cross-device support)
+  - `loadTopicProgressFromSupabase(childId)` → restore topic progress on child switch
+  - `createChildInSupabase()` / `deleteChildFromSupabase()` — child CRUD in DB
+- [x] `useProfile.ts` — `saveProfile()` fires `syncProfileToSupabase()` after every save; on mount: loads from Supabase if localStorage is empty (new device)
+- [x] `ExercisePlayer.tsx` — `syncTopicProgressToSupabase()` called on topic complete
+- [x] `Navigation.tsx` — `switchProfile()` restores topic progress from Supabase before reload
+- [x] Architecture: localStorage = source of truth, Supabase = cross-device backup, all fire-and-forget
+
+**Reward text polish**
+- [x] 🍦 "Ein Glace aussuchen" → "Ein Glace essen"
+- [x] 🎬 "Kinoabend aussuchen" → "Kinoabend"
+- [x] 🧁 "Zusammen einen Kuchen backen" — removed
+- [x] Fixed in both `page.tsx` (homepage demo) and `src/lib/rewards.ts` (actual reward templates)
+
+**GTM integration**
+- [x] Google Tag Manager GTM-K48335JC added to all pages via root layout
+  - Script in `<head>` via `next/script` (beforeInteractive)
+  - Noscript iframe at top of `<body>`
+  - CSP updated for GTM/GA domains
+  - TODO: dataLayer purchase event after Payrexx payment wired up
+
+**Mobile layout polish (PM-15)**
+- [x] `MobileBottomNav` component — sticky bottom tab bar, `sm:hidden`
+  - 4 tabs: 📚 Lernen / ⚡ Täglich / 🏆 Trophäen / 🎁 Prämien
+  - Active tab: green text + top indicator bar
+  - Disappears during exercise sessions (focus mode)
+  - 4 languages, safe-area padding for iPhone notch
+- [x] Logo reduced: 90px → 58px on mobile (`sm:h-[80px]`)
+- [x] Double speaker icon 🔊🔊 fixed in ExercisePlayer (emoji was in both JSX and i18n string)
+- [x] Bottom padding `pb-24 sm:pb-*` added to all pages: dashboard, trophies, daily, rewards, parents, kids, family, homepage footer
+- [x] UJ-14 / PM-10 (browser language detection) removed from roadmap — not wanted
+
+**HEAD commit:** `b36f3f9`
+
+---
 
 ### 2026-03-02
 
