@@ -9,6 +9,7 @@ import { getTopics, SUBJECTS } from "@/data/index";
 import { getTopicTitle } from "@/data/topicTitles";
 import { isDailyDoneToday } from "@/lib/daily";
 import { useProfile } from "@/hooks/useProfile";
+import { useSession } from "@/hooks/useSession";
 import { getLevelForXp } from "@/lib/xp";
 import RewardWidget from "@/components/RewardWidget";
 
@@ -54,6 +55,7 @@ function getProgress(grade: number, subject: string, topicId: string) {
 function DashboardInner() {
   const { tr, lang } = useLang();
   const { profile } = useProfile();
+  const { isPremium: sessionPremium, loaded: sessionLoaded } = useSession();
   const searchParams = useSearchParams();
   const preselectedSubject = searchParams.get("subject");
 
@@ -267,6 +269,10 @@ function DashboardInner() {
   // First not-done topic index — that's where we show "Start ✨"
   const firstNotDoneIdx = topics.findIndex(t => !getProgress(grade, subject, t.id));
 
+  // UJ-4: premium awareness (from session, only after hydration)
+  const isPremium = sessionLoaded ? sessionPremium : true; // assume premium until loaded (avoids false lock flash)
+  const isGrade3Locked = grade === 3 && sessionLoaded && !sessionPremium;
+
   const handleBack = () => {
     if (preselectedSubject) setGrade(null);
     else setSubject(null);
@@ -332,6 +338,50 @@ function DashboardInner() {
         </div>
       )}
 
+      {/* UJ-10: Streak expiry warning — show when streak > 0 and daily not yet done */}
+      {profile && profile.dailyStreak > 0 && !dailyDone && (
+        <Link href="/daily" className="flex items-center gap-3 bg-amber-50 border-2 border-amber-300 rounded-2xl px-4 py-3 text-sm text-amber-800 font-medium hover:bg-amber-100 transition-colors">
+          <span className="text-2xl">⚠️</span>
+          <div className="flex-1">
+            <div className="font-bold">
+              {lang === "fr" ? `Ta série de ${profile.dailyStreak} jours se termine ce soir!`
+               : lang === "it" ? `La tua serie di ${profile.dailyStreak} giorni finisce stasera!`
+               : lang === "en" ? `Your ${profile.dailyStreak}-day streak ends tonight!`
+               : `Dein ${profile.dailyStreak}-Tage-Streak endet heute!`}
+            </div>
+            <div className="text-xs opacity-75">
+              {lang === "fr" ? "Fais le défi du jour →"
+               : lang === "it" ? "Fai la sfida del giorno →"
+               : lang === "en" ? "Complete today's challenge →"
+               : "Tägliche Aufgabe lösen →"}
+            </div>
+          </div>
+          <span className="text-lg">🔥</span>
+        </Link>
+      )}
+
+      {/* UJ-4: Premium upsell banner for grade 3 free users */}
+      {isGrade3Locked && (
+        <Link href="/rewards" className="flex items-center gap-3 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl px-4 py-3 text-sm text-amber-900 hover:from-amber-100 hover:to-orange-100 transition-colors">
+          <span className="text-2xl">🔓</span>
+          <div className="flex-1">
+            <div className="font-bold">
+              {lang === "fr" ? "Débloque toute la 3e classe"
+               : lang === "it" ? "Sblocca tutta la 3a classe"
+               : lang === "en" ? "Unlock all of Grade 3"
+               : "Klasse 3 komplett freischalten"}
+            </div>
+            <div className="text-xs opacity-75">
+              {lang === "fr" ? "CHF 9.90/mois · Annuler à tout moment"
+               : lang === "it" ? "CHF 9.90/mese · Disdici quando vuoi"
+               : lang === "en" ? "CHF 9.90/month · Cancel anytime"
+               : "CHF 9.90/Monat · Jederzeit kündbar"}
+            </div>
+          </div>
+          <span className="text-base font-bold text-amber-600">→</span>
+        </Link>
+      )}
+
       {/* UJ-13: Empty state nudge for new users (no progress yet) */}
       {profile && profile.xp === 0 && firstNotDoneIdx === 0 && (
         <div className="flex items-center gap-3 bg-green-50 border-2 border-green-300 rounded-2xl px-4 py-3 text-sm text-green-800 font-medium">
@@ -353,8 +403,10 @@ function DashboardInner() {
             <Link key={topic.id} href={`/learn/${grade}/${subject}/${topic.id}`}
               style={{ minHeight: "66px" }}
               className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
-                done
-                  ? "bg-white border-green-200 hover:border-green-400"
+                isGrade3Locked
+                  ? "bg-gray-50 border-gray-200 hover:border-amber-300 opacity-80"
+                  : done
+                    ? "bg-white border-green-200 hover:border-green-400"
                   : isNext && profile?.xp === 0
                     ? "bg-green-600 border-green-600 text-white hover:bg-green-700"
                   : isNext
@@ -362,17 +414,18 @@ function DashboardInner() {
                     : "bg-white border-gray-100 hover:border-green-300 hover:bg-green-50"
               }`}>
 
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0 ${iconBg}`}>
-                {topic.emoji}
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0 ${isGrade3Locked ? "bg-gray-100" : iconBg}`}>
+                {isGrade3Locked ? "🔒" : topic.emoji}
               </div>
 
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-gray-800 text-sm leading-tight">
                   {getTopicTitle(topic.id, lang, topic.title)}
-                  {isNext && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
+                  {isNext && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
+                  {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
                 </div>
                 <div className="text-xs text-gray-400 mt-0.5">
-                  {done
+                  {done && !isGrade3Locked
                     ? Array.from({length: 3}).map((_, j) => (
                         <span key={j} className={j < stars ? "text-yellow-400" : "text-gray-300"}>★</span>
                       ))
@@ -382,7 +435,7 @@ function DashboardInner() {
               </div>
 
               <div className="shrink-0">
-                {done
+                {done && !isGrade3Locked
                   ? <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
                   : <span className="w-8 h-8 bg-gray-50 text-gray-400 rounded-full flex items-center justify-center text-base">›</span>
                 }

@@ -420,8 +420,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         </div>
       )}
 
-      {/* Free limit notice */}
-      {!isPremium && idx < FREE_LIMIT && (
+      {/* Free limit notice — UJ-8: only show after hydration (isPremium prop is stable) */}
+      {isPremium === false && idx < FREE_LIMIT && (
         <p className="text-center text-xs text-gray-400">
           {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
           <Link href="/signup" className="text-green-600 underline">{tr("unlockAll")}</Link>
