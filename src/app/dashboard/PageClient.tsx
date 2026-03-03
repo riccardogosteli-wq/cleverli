@@ -401,7 +401,7 @@ export default function Dashboard() {
   return (
     <Suspense fallback={
       <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-400">
-        <img src="/images/mascot/cleverli-thumbsup.jpg" alt="Cleverli" className="w-16 h-16 object-contain animate-bounce" />
+        <img src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" className="w-16 h-16 object-contain animate-bounce" />
         <div className="text-sm">Laden…</div>
       </div>
     }>

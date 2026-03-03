@@ -127,7 +127,7 @@ export default function MemoryGame({ pairs, onAnswer }: Props) {
                 </div>
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src="/images/mascot/cleverli-thumbsup.jpg" alt="?" className="w-8 h-8 object-contain opacity-60" />
+                  <img src="/images/mascot/cleverli-thumbsup.png" alt="?" className="w-8 h-8 object-contain opacity-60" />
                 </div>
               )}
             </button>
