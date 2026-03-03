@@ -7,6 +7,7 @@ import { LANGUAGES, Lang } from "@/lib/i18n";
 import XpBar from "./XpBar";
 import { useSession } from "@/hooks/useSession";
 import { loadFamily, getActiveProfileId, setActiveProfileId, FamilyMember } from "@/lib/family";
+import { loadTopicProgressFromSupabase } from "@/lib/progressSync";
 
 export default function Navigation() {
   const { lang, setLang, tr } = useLang();
@@ -25,11 +26,24 @@ export default function Navigation() {
 
   const activeMember = members.find(m => m.id === activeId) ?? members[0] ?? null;
 
-  const switchProfile = (id: string) => {
+  const switchProfile = async (id: string) => {
     setActiveProfileId(id);
     setActiveId(id);
     setProfileOpen(false);
-    window.location.reload(); // reload to reset profile context
+    // Restore topic progress from Supabase into localStorage for this child
+    const topicData = await loadTopicProgressFromSupabase(id);
+    if (topicData) {
+      for (const t of topicData) {
+        const key = `cleverli_${t.grade}_${t.subject}_${t.topic_id}`;
+        if (!localStorage.getItem(key)) { // only restore if not already local
+          localStorage.setItem(key, JSON.stringify({
+            stars: t.stars, score: t.score, completed: t.completed,
+            partial: t.partial, lastPlayed: t.last_played,
+          }));
+        }
+      }
+    }
+    window.location.reload();
   };
   const currentLang = LANGUAGES.find(l => l.code === lang);
 

@@ -1,5 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { getActiveProfileId } from "@/lib/family";
+import { syncTopicProgressToSupabase } from "@/lib/progressSync";
 import { Topic, Exercise } from "@/types/exercise";
 import MultipleChoice from "./exercises/MultipleChoice";
 import FillInBlank from "./exercises/FillInBlank";
@@ -78,9 +80,16 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const prevScore = existing?.score ?? 0;
       if (score >= prevScore) {
         const s = calcStars(score, exercises.length);
-        localStorage.setItem(key, JSON.stringify({
-          completed: exercises.length, score, stars: s, lastPlayed: new Date().toISOString()
-        }));
+        const lastPlayed = new Date().toISOString();
+        const progressData = { completed: exercises.length, score, stars: s, lastPlayed };
+        localStorage.setItem(key, JSON.stringify(progressData));
+        // Fire-and-forget sync to Supabase
+        const childId = getActiveProfileId();
+        if (childId) {
+          syncTopicProgressToSupabase(childId, grade, subject, topic.id, {
+            ...progressData, partial: false
+          });
+        }
       }
     }
   }, [done, score, grade, subject, topic.id, exercises.length]);

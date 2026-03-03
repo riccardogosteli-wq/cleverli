@@ -36,11 +36,11 @@ export function saveFamily(store: FamilyStore) {
 export function addMember(name: string, avatar: string, grade: number): FamilyMember {
   const store = loadFamily();
   if (store.members.length >= MAX_PROFILES) throw new Error("Max 3 profiles");
-  const member: FamilyMember = {
-    id: `profile_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
-    name, avatar, grade,
-    createdAt: new Date().toISOString(),
-  };
+  // Use crypto.randomUUID() so the same ID works in Supabase (valid UUID)
+  const id = typeof crypto !== "undefined" && crypto.randomUUID
+    ? crypto.randomUUID()
+    : `${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
+  const member: FamilyMember = { id, name, avatar, grade, createdAt: new Date().toISOString() };
   store.members.push(member);
   saveFamily(store);
   return member;

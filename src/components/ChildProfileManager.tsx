@@ -5,6 +5,7 @@ import {
   FamilyMember, loadFamily, addMember, removeMember,
   getActiveProfileId, setActiveProfileId, AVATARS, MAX_PROFILES,
 } from "@/lib/family";
+import { createChildInSupabase, deleteChildFromSupabase } from "@/lib/progressSync";
 
 const GRADE_LABELS = ["1. Klasse", "2. Klasse", "3. Klasse"];
 
@@ -34,6 +35,8 @@ function AddChildForm({ onSave, onCancel }: { onSave: () => void; onCancel: () =
     try {
       const member = addMember(name.trim(), avatar, grade);
       setActiveProfileId(member.id);
+      // Fire-and-forget sync to Supabase
+      createChildInSupabase(member.id, member.name, member.grade, member.avatar);
       onSave();
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Fehler");
@@ -164,6 +167,7 @@ export default function ChildProfileManager() {
 
   const handleDelete = (id: string) => {
     removeMember(id);
+    deleteChildFromSupabase(id); // fire-and-forget
     if (activeId === id) {
       const remaining = loadFamily().members;
       if (remaining.length > 0) setActiveProfileId(remaining[0].id);

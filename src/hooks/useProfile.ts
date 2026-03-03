@@ -3,6 +3,8 @@ import { useState, useEffect, useCallback } from "react";
 import { getLevelForXp, getNextLevel, calcXpGain } from "@/lib/xp";
 import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
 import { getTopics, SUBJECTS } from "@/data/index";
+import { getActiveProfileId } from "@/lib/family";
+import { syncProfileToSupabase, loadProfileFromSupabase } from "@/lib/progressSync";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -65,6 +67,9 @@ function loadProfile(): Profile {
 function saveProfile(p: Profile) {
   if (typeof window === "undefined") return;
   localStorage.setItem(PROFILE_KEY, JSON.stringify(p));
+  // Fire-and-forget sync to Supabase (only if a child profile is active)
+  const childId = getActiveProfileId();
+  if (childId) syncProfileToSupabase(childId, p);
 }
 
 // ── Subject completion check ─────────────────────────────────────────────────
@@ -161,19 +166,33 @@ export function useProfile() {
 
   useEffect(() => {
     const p = loadProfile();
-    // Update daily streak on load
     const today = todayStr();
     const diff = diffDays(p.lastPlayedDate, today);
     let streak = p.dailyStreak;
     if (diff === 1) {
-      // consecutive day — streak maintained, will increment on next action
+      // consecutive day — streak maintained
     } else if (diff > 1) {
-      // broke streak
       streak = 0;
     }
     const updated = { ...p, dailyStreak: streak };
-    setProfile(updated);
-    setLoaded(true);
+
+    // New device/browser: localStorage is empty — try loading from Supabase
+    const childId = getActiveProfileId();
+    if (childId && p.xp === 0 && p.totalExercises === 0) {
+      loadProfileFromSupabase(childId).then(remote => {
+        if (remote && (remote.xp ?? 0) > 0) {
+          const merged = { ...DEFAULT_PROFILE, ...remote };
+          saveProfile(merged as Profile);
+          setProfile(merged as Profile);
+        } else {
+          setProfile(updated);
+        }
+        setLoaded(true);
+      });
+    } else {
+      setProfile(updated);
+      setLoaded(true);
+    }
   }, []);
 
   /**
