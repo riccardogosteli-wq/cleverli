@@ -315,6 +315,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SEO: Themen-Index — links all /learn pages so Google crawls them with PageRank */}
+      <section className="bg-gray-50 py-10 px-4 sm:px-6 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-lg font-bold text-gray-700 mb-4 text-center">
+            {lang === "fr" ? "Tous les thèmes" : lang === "it" ? "Tutti gli argomenti" : lang === "en" ? "All topics" : "Alle Themen"}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { subject: "math",    emoji: "🔢", label: { de: "Mathematik", fr: "Mathématiques", it: "Matematica", en: "Maths" } },
+              { subject: "german",  emoji: "📖", label: { de: "Deutsch",    fr: "Allemand",       it: "Tedesco",   en: "German" } },
+              { subject: "science", emoji: "🌍", label: { de: "NMG",        fr: "Sciences",       it: "Scienze",   en: "Science" } },
+            ].map(s => (
+              <div key={s.subject}>
+                <div className="font-semibold text-gray-600 text-sm mb-2">{s.emoji} {s.label[lang as keyof typeof s.label] ?? s.label.de}</div>
+                <div className="flex flex-wrap gap-x-3 gap-y-1">
+                  {[1,2,3,4,5,6].map(g => (
+                    <Link key={g} href={`/learn/${g}/${s.subject}`}
+                      className="text-xs text-green-700 hover:underline whitespace-nowrap">
+                      {g}. {lang === "fr" ? "Année" : lang === "it" ? "Classe" : lang === "en" ? "Grade" : "Klasse"}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-8 px-6 pb-24 sm:pb-8 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">

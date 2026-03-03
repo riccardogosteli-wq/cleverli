@@ -4,6 +4,8 @@ import TopicClient from "./TopicClient";
 import TopicBreadcrumb from "./TopicBreadcrumb";
 import Link from "next/link";
 
+const BASE = "https://www.cleverli.ch";
+
 interface Props { params: Promise<{ grade: string; subject: string; topic: string }> }
 
 const SUBJECT_NAMES: Record<string, { de: string; fr: string; it: string; en: string }> = {
@@ -47,8 +49,19 @@ export default async function TopicPage({ params }: Props) {
   const subjectNames = SUBJECT_NAMES[subject];
   const subjectName = subjectNames?.de ?? subject; // German for primary SEO (Swiss market)
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Cleverli", "item": BASE },
+      { "@type": "ListItem", "position": 2, "name": `${subjectName} ${grade}. Klasse`, "item": `${BASE}/learn/${grade}/${subject}` },
+      { "@type": "ListItem", "position": 3, "name": topic.title, "item": `${BASE}/learn/${grade}/${subject}/${topicId}` },
+    ],
+  };
+
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <TopicBreadcrumb
         grade={parseInt(grade)}
         subject={subject}
@@ -59,6 +72,19 @@ export default async function TopicPage({ params }: Props) {
         <span className="text-3xl">{topic.emoji}</span>
         <h1 className="text-xl sm:text-2xl font-bold text-gray-800">{topic.title}</h1>
       </div>
+
+      {/* SSR content for Google — exercise count + sample questions */}
+      <p className="text-sm text-gray-500">
+        {topic.exercises.length} interaktive Übungen · {subjectName} {grade}. Klasse · Lehrplan 21 Schweiz
+      </p>
+      {topic.exercises.slice(0, 3).some(e => e.question) && (
+        <ul className="sr-only" aria-hidden="true">
+          {topic.exercises.slice(0, 3).map((ex, i) => (
+            <li key={i}>{ex.question}</li>
+          ))}
+        </ul>
+      )}
+
       <TopicClient
         topic={topic}
         grade={parseInt(grade)}

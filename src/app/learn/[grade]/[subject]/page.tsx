@@ -17,6 +17,7 @@ const SUBJECT_SUBTITLES: Record<string, string> = {
 };
 const GRADE_NAMES: Record<string, string> = {
   "1": "1. Klasse", "2": "2. Klasse", "3": "3. Klasse",
+  "4": "4. Klasse", "5": "5. Klasse", "6": "6. Klasse",
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

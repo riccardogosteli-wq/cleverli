@@ -64,10 +64,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
-    // Language switching is client-side; all languages share the same URL.
-    // x-default signals the canonical for all language variants.
+    // Language switching is client-side; hreflang signals to Google that all 4 languages are served at same URL
     languages: {
       "x-default": BASE_URL,
+      "de-CH": BASE_URL,
+      "fr-CH": BASE_URL,
+      "it-CH": BASE_URL,
+      "en": BASE_URL,
     },
   },
   icons: {
