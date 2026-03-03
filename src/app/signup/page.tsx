@@ -7,7 +7,6 @@ import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { supabase } from "@/lib/supabase";
 
-const STEP_LABELS = ["Wer bist du?", "Dein Konto", "Deine Klasse"];
 
 export default function Signup() {
   const { tr } = useLang();
@@ -25,7 +24,7 @@ export default function Signup() {
   const validateStep2 = () => {
     if (!name.trim()) { setError("Bitte gib deinen Namen ein."); return false; }
     if (!email.includes("@") || !email.includes(".")) { setError("Bitte gib eine gültige E-Mail-Adresse ein."); return false; }
-    if (password.length < 6) { setError("Das Passwort muss mindestens 6 Zeichen lang sein."); return false; }
+    if (password.length < 6) { setError(tr("passwordMin6") ?? "Das Passwort muss mindestens 6 Zeichen lang sein."); return false; }
     return true;
   };
 
@@ -101,7 +100,7 @@ export default function Signup() {
                 {step > s ? "✓" : s}
               </div>
               <span className={`text-[10px] text-center leading-tight ${step === s ? "text-green-700 font-semibold" : "text-gray-400"}`}>
-                {STEP_LABELS[s - 1]}
+                {s === 1 ? tr("whoAreYou") ?? "Wer bist du?" : s === 2 ? tr("yourAccount") ?? "Dein Konto" : tr("yourClass") ?? "Deine Klasse"}
               </span>
             </div>
           ))}
@@ -169,7 +168,7 @@ export default function Signup() {
                 type="password"
                 value={password}
                 onChange={e => { setPassword(e.target.value); setError(""); }}
-                placeholder={tr("passwordPlaceholder") + " (min. 6 Zeichen)"}
+                placeholder={tr("passwordPlaceholder") + " (min. 6)"}
                 autoComplete="new-password"
                 style={{ fontSize: "16px" }}
                 className={inputCls}

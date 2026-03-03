@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import UpgradePageClient from "./PageClient";
-import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "Premium freischalten – Cleverli",
@@ -8,12 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function UpgradePage() {
-  return (
-    <>
-      <Navigation />
-      <main className="pb-24 sm:pb-8">
-        <UpgradePageClient />
-      </main>
-    </>
-  );
+  return <UpgradePageClient />;
 }

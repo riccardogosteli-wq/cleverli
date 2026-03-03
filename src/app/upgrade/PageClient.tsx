@@ -4,9 +4,11 @@ import { useSession } from "@/hooks/useSession";
 import { useLang } from "@/lib/LangContext";
 
 export default function UpgradePageClient() {
-  const { session } = useSession();
+  const { session, loaded } = useSession();
   const { lang } = useLang();
   const uid = session?.userId ?? "";
+  // Don't disable buttons while session is loading — they go to /upgrade if no uid
+  const buttonsReady = loaded;
 
   const checkoutUrl = (plan: "monthly" | "yearly") =>
     `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
@@ -137,7 +139,7 @@ export default function UpgradePageClient() {
             <div className="text-4xl font-black text-gray-800 mt-1">{tx.monthlyPrice}<span className="text-lg font-medium text-gray-400">{tx.monthlyPer}</span></div>
           </div>
           <Link href={checkoutUrl("monthly")}
-            className={`block text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 ${uid ? "bg-green-600 text-white hover:bg-green-700" : "bg-gray-200 text-gray-400 pointer-events-none"}`}>
+            className="block text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-green-600 text-white hover:bg-green-700">
             {tx.cta} →
           </Link>
           <p className="text-xs text-gray-400 text-center">{tx.cancel}</p>
@@ -153,7 +155,7 @@ export default function UpgradePageClient() {
             <div className="text-4xl font-black text-white mt-1">{tx.yearlyPrice}<span className="text-lg font-medium text-green-300">{tx.yearlyPer}</span></div>
           </div>
           <Link href={checkoutUrl("yearly")}
-            className={`block text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 ${uid ? "bg-white text-green-700 hover:bg-green-50" : "bg-green-500 text-green-300 pointer-events-none"}`}>
+            className="block text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-white text-green-700 hover:bg-green-50">
             {tx.cta} →
           </Link>
           <p className="text-xs text-green-300 text-center">{tx.cancel}</p>

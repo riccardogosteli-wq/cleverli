@@ -137,7 +137,7 @@ export default function Home() {
                 <li>✅ {tr("premiumF3")}</li>
                 <li>✅ {tr("premiumF4")}</li>
               </ul>
-              <Link href="/signup" className="mt-6 block text-center bg-white text-green-700 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors">
+              <Link href="/upgrade" className="mt-6 block text-center bg-white text-green-700 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors">
                 {tr("premiumCta")}
               </Link>
             </div>

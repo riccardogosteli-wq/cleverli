@@ -567,7 +567,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       {/* Free limit notice — UJ-8: only show after hydration (isPremium prop is stable) */}
       {isPremium === false && idx < FREE_LIMIT && (
         <p className="text-center text-xs text-gray-400">
-          🎁 {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
+          {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
           <Link href={uid ? checkoutUrl("monthly") : "/upgrade"} className="text-green-600 underline font-semibold">
             {tr("unlockAll")}
           </Link>
