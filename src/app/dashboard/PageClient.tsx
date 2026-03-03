@@ -62,6 +62,10 @@ function DashboardInner() {
   const [grade, setGrade] = useState<number | null>(null);
   const [subject, setSubject] = useState<string | null>(preselectedSubject);
   const [dailyDone, setDailyDone] = useState(false);
+  const [showNotify, setShowNotify] = useState(false);
+  const [notifyEmail, setNotifyEmail] = useState("");
+  const [notifyDone, setNotifyDone] = useState(false);
+  const [notifyLoading, setNotifyLoading] = useState(false);
 
   // Restore last-used grade from localStorage
   useEffect(() => {
@@ -80,6 +84,21 @@ function DashboardInner() {
   const chooseGrade = (g: number) => {
     localStorage.setItem(GRADE_KEY, String(g));
     setGrade(g);
+  };
+
+  const submitNotify = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!notifyEmail) return;
+    setNotifyLoading(true);
+    try {
+      await fetch("https://formspree.io/f/xyzcleverli", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({ email: notifyEmail, _subject: "Cleverli: Benachrichtigung Klassen 4–6" }),
+      });
+    } catch { /* fail silently */ }
+    setNotifyDone(true);
+    setNotifyLoading(false);
   };
 
   const subjectL = (id: string, key: "label" | "subtitle") => {
@@ -209,9 +228,32 @@ function DashboardInner() {
                 </div>
               ))}
             </div>
-            <p className="text-center text-xs text-gray-400">
-              {tr("gradesComingSoon")} · <a href="mailto:hello@cleverli.ch" className="text-green-600 underline">{tr("notifyMe")}</a>
-            </p>
+            <div className="text-center">
+              <p className="text-xs text-gray-400">
+                {tr("gradesComingSoon")} ·{" "}
+                {!notifyDone ? (
+                  <button onClick={() => setShowNotify(v => !v)} className="text-green-600 underline">
+                    {tr("notifyMe")}
+                  </button>
+                ) : (
+                  <span className="text-green-600 font-medium">✓ {lang === "fr" ? "Tu seras notifié!" : lang === "it" ? "Ti avviseremo!" : lang === "en" ? "We'll notify you!" : "Du wirst benachrichtigt!"}</span>
+                )}
+              </p>
+              {showNotify && !notifyDone && (
+                <form onSubmit={submitNotify} className="mt-2 flex gap-2 max-w-xs mx-auto">
+                  <input
+                    type="email" required value={notifyEmail}
+                    onChange={e => setNotifyEmail(e.target.value)}
+                    placeholder={lang === "fr" ? "ton@email.ch" : lang === "it" ? "tua@email.ch" : lang === "en" ? "your@email.ch" : "deine@email.ch"}
+                    className="flex-1 text-xs border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-green-400"
+                  />
+                  <button type="submit" disabled={notifyLoading}
+                    className="text-xs bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 disabled:opacity-50 whitespace-nowrap">
+                    {notifyLoading ? "…" : "OK"}
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </div>
