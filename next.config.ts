@@ -30,7 +30,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",                // Tailwind inline styles
       "img-src 'self' data: blob: https:",               // Next/Image + external OG
       "font-src 'self'",                                 // Geist is self-hosted via next/font
-      "connect-src 'self'",
+      "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://formspree.io",
       "frame-src 'none'",
       "frame-ancestors 'none'",
       "object-src 'none'",
