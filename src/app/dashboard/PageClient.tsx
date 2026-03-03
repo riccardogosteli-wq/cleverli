@@ -91,7 +91,7 @@ function DashboardInner() {
     if (!notifyEmail) return;
     setNotifyLoading(true);
     try {
-      await fetch("https://formspree.io/f/xyzcleverli", {
+      await fetch("https://formspree.io/f/xlgwyoky", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({ email: notifyEmail, _subject: "Cleverli: Benachrichtigung Klassen 4–6" }),
