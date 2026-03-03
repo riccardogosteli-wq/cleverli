@@ -1,0 +1,98 @@
+import { Topic } from "@/types/exercise";
+
+const grade4German: Topic[] = [
+  {
+    id: "satzglieder",
+    title: "Satzglieder",
+    emoji: "📝",
+    exercises: [
+      { id: "g4d1", type: "multiple-choice", question: "Was ist das Subjekt im Satz: 'Der Hund bellt laut'?", answer: "Der Hund", options: ["Der Hund","bellt","laut","bellt laut"], hints: ["Das Subjekt sagt, WER oder WAS etwas tut.", "Wer bellt? → Der Hund."], difficulty: 1, free: true },
+      { id: "g4d2", type: "fill-in-blank", question: "Im Satz 'Maria liest ein Buch' ist das Prädikat: ___", answer: "liest", hints: ["Das Prädikat ist das Verb — was tut Maria?", "Was macht Maria? → liest."], difficulty: 1, free: true },
+      { id: "g4d3", type: "multiple-choice", question: "Was ist das Objekt in: 'Tim isst einen Apfel'? 🍎", answer: "einen Apfel", options: ["Tim","isst","einen Apfel","Tim isst"], hints: ["Das Objekt sagt, WEN oder WAS.", "Was isst Tim? → einen Apfel."], difficulty: 1, free: true },
+      { id: "g4d4", type: "fill-in-blank", question: "Ergänze das Subjekt: '___ spielt im Garten.'", answer: "Das Kind", hints: ["Wer spielt? → z.B. Das Kind, Der Junge, etc.", "Denk an eine Person oder ein Tier."], difficulty: 2 },
+      { id: "g4d5", type: "multiple-choice", question: "Welches Satzglied fehlt? 'Die Katze ___ auf dem Baum.'", answer: "sitzt", options: ["sitzt","Katze","Baum","auf"], hints: ["Es fehlt das Prädikat (Verb).", "Was macht die Katze?"], difficulty: 2 },
+      { id: "g4d6", type: "drag-drop", question: "Ordne die Satzteile den Satzgliedern zu! 📝", answer: "all",
+        dragItems: [
+          { id: "s1", label: "Der Lehrer", emoji: "👨‍🏫" },
+          { id: "s2", label: "erklärt", emoji: "📖" },
+          { id: "s3", label: "die Aufgabe", emoji: "📝" },
+        ],
+        dropZones: [
+          { id: "subj", label: "Subjekt (Wer?)" },
+          { id: "praed", label: "Prädikat (Was tut?)" },
+          { id: "obj", label: "Objekt (Wen/Was?)" },
+        ],
+        dropAnswers: { s1: "subj", s2: "praed", s3: "obj" },
+        hints: ["Subjekt = Wer? Prädikat = Was tut? Objekt = Wen/Was?", "Der Lehrer (Subjekt) erklärt (Prädikat) die Aufgabe (Objekt)."],
+        difficulty: 2,
+      },
+      { id: "g4d7", type: "fill-in-blank", question: "Frage nach dem Subjekt: 'Die Sonne scheint hell.' → ___ scheint hell?", answer: "Wer", hints: ["Wer oder Was?", "Bei Dingen: 'Was scheint hell?'"], difficulty: 2 },
+      { id: "g4d8", type: "multiple-choice", question: "In welchem Satz ist das Subjekt am Schluss? 🔄", answer: "Heute kommt Papa.", options: ["Papa kommt heute.","Heute kommt Papa.","Kommt Papa heute?","Papa ist hier."], hints: ["Im Deutschen kann das Subjekt auch nach dem Verb stehen.", "Heute kommt Papa. ← Papa ist Subjekt."], difficulty: 3 },
+      { id: "g4d9", type: "fill-in-blank", question: "Ergänze: 'Im Park ___ viele Kinder.'", answer: "spielen", hints: ["Prädikat fehlt — was tun die Kinder?", "Mehrzahl-Verb!"], difficulty: 3 },
+      { id: "g4d10", type: "multiple-choice", question: "Welcher Satz hat Subjekt UND Objekt?", answer: "Lisa malt ein Bild.", options: ["Lisa lacht.","Lisa malt ein Bild.","Lachen ist schön.","Lisa ist gross."], hints: ["Objekt = Wen/Was? → ein Bild.", "Lisa (Subjekt) malt (Prädikat) ein Bild (Objekt)."], difficulty: 3 },
+    ],
+  },
+  {
+    id: "zeitformen-4",
+    title: "Zeitformen",
+    emoji: "⏰",
+    exercises: [
+      { id: "g4d11", type: "multiple-choice", question: "Welche Zeitform? 'Ich gehe zur Schule.'", answer: "Präsens", options: ["Präsens","Präteritum","Perfekt","Futur"], hints: ["Präsens = jetzt, gerade.", "Ich gehe = Gegenwart."], difficulty: 1, free: true },
+      { id: "g4d12", type: "fill-in-blank", question: "Setze ins Präteritum: 'Ich spiele' → 'Ich ___'", answer: "spielte", hints: ["Präteritum = Vergangenheit.", "spielen → spielte"], difficulty: 1, free: true },
+      { id: "g4d13", type: "multiple-choice", question: "Welche Form ist Perfekt? 🕒", answer: "Ich habe gelesen.", options: ["Ich lese.","Ich las.","Ich habe gelesen.","Ich werde lesen."], hints: ["Perfekt = haben/sein + Partizip.", "Ich habe gelesen = Perfekt."], difficulty: 1, free: true },
+      { id: "g4d14", type: "fill-in-blank", question: "Setze ins Perfekt: 'Er kommt' → 'Er ___ ___'", answer: "ist gekommen", hints: ["Perfekt = sein/haben + Partizip.", "kommen → ist gekommen"], difficulty: 2 },
+      { id: "g4d15", type: "multiple-choice", question: "Welche Zeitform drückt Zukunft aus?", answer: "Futur", options: ["Präsens","Präteritum","Perfekt","Futur"], hints: ["Zukunft = Futur (werden + Infinitiv).", "Ich werde gehen = Zukunft."], difficulty: 2 },
+      { id: "g4d16", type: "drag-drop", question: "Ordne die Sätze den Zeitformen zu! ⏰", answer: "all",
+        dragItems: [
+          { id: "t1", label: "Ich esse.", emoji: "🍽️" },
+          { id: "t2", label: "Ich ass.", emoji: "🍽️" },
+          { id: "t3", label: "Ich habe gegessen.", emoji: "🍽️" },
+        ],
+        dropZones: [
+          { id: "praes", label: "Präsens" },
+          { id: "praet", label: "Präteritum" },
+          { id: "perf", label: "Perfekt" },
+        ],
+        dropAnswers: { t1: "praes", t2: "praet", t3: "perf" },
+        hints: ["Präsens = esse, Präteritum = ass, Perfekt = habe gegessen.", "Präsens = jetzt, Präteritum = früher (geschriebene Form), Perfekt = abgeschlossen (gesprochene Form)."],
+        difficulty: 2,
+      },
+      { id: "g4d17", type: "fill-in-blank", question: "Futur: 'Morgen ___ ich ins Kino gehen.'", answer: "werde", hints: ["Futur = werden + Infinitiv.", "Ich werde gehen."], difficulty: 2 },
+      { id: "g4d18", type: "multiple-choice", question: "Welche Form passt? 'Gestern ___ ich Fussball.'", answer: "spielte", options: ["spiele","spielte","habe gespielt","werde spielen"], hints: ["Gestern = Vergangenheit → Präteritum oder Perfekt.", "spielte = Präteritum."], difficulty: 3 },
+      { id: "g4d19", type: "fill-in-blank", question: "Bilde das Partizip Perfekt: machen → ___", answer: "gemacht", hints: ["ge- + Stamm + -t bei regelmässigen Verben.", "machen → gemacht"], difficulty: 3 },
+      { id: "g4d20", type: "multiple-choice", question: "Welcher Satz steht im Futur?", answer: "Ich werde lernen.", options: ["Ich lerne.","Ich lernte.","Ich habe gelernt.","Ich werde lernen."], hints: ["Futur = werden + Infinitiv.", "werde lernen = Zukunft."], difficulty: 3 },
+    ],
+  },
+  {
+    id: "rechtschreibung-4",
+    title: "Rechtschreibung",
+    emoji: "📚",
+    exercises: [
+      { id: "g4d21", type: "multiple-choice", question: "Wie schreibt man das Wort richtig?", answer: "gross", options: ["gross","gros","groß","gros"], hints: ["In der Schweiz schreibt man 'ss', nicht 'ß'.", "gross (Schweiz) = groß (Deutschland)"], difficulty: 1, free: true },
+      { id: "g4d22", type: "fill-in-blank", question: "Ergänze: Das Wasser ist sehr h___.", answer: "heiss", hints: ["In der Schweiz: 'ss' statt 'ß'.", "heiss"], difficulty: 1, free: true },
+      { id: "g4d23", type: "multiple-choice", question: "Welches Wort ist richtig geschrieben? 🚗", answer: "Strasse", options: ["Straße","Strasse","Strase","Strassse"], hints: ["Schweizer Rechtschreibung: 'ss'", "Strasse"], difficulty: 1, free: true },
+      { id: "g4d24", type: "fill-in-blank", question: "Setze ie oder i ein: L___be", answer: "ie", hints: ["Langes i wird oft als 'ie' geschrieben.", "Liebe"], difficulty: 2 },
+      { id: "g4d25", type: "multiple-choice", question: "Welches Wort braucht ein Dehnungs-h?", answer: "Zahn", options: ["Zan","Zahn","Zaahn","Zaan"], hints: ["Nach langem Vokal kommt oft ein h.", "Zahn"], difficulty: 2 },
+      { id: "g4d26", type: "drag-drop", question: "Sortiere: ss oder ß? 🇨🇭", answer: "all",
+        dragItems: [
+          { id: "w1", label: "Fluss", emoji: "🏞️" },
+          { id: "w2", label: "weiss", emoji: "⚪" },
+          { id: "w3", label: "Fuss", emoji: "🦶" },
+        ],
+        dropZones: [
+          { id: "ss", label: "Schweiz (ss)" },
+          { id: "sz", label: "Deutschland (ß)" },
+        ],
+        dropAnswers: { w1: "ss", w2: "ss", w3: "ss" },
+        hints: ["In der Schweiz immer 'ss'!", "Fluss, weiss, Fuss → alle mit 'ss' in der Schweiz."],
+        difficulty: 2,
+      },
+      { id: "g4d27", type: "fill-in-blank", question: "Ergänze: Die K___he gibt Milch. 🐄", answer: "u", hints: ["Kurzer Vokal vor 'h'.", "Kuh"], difficulty: 2 },
+      { id: "g4d28", type: "multiple-choice", question: "Welches Wort hat einen Rechtschreibfehler?", answer: "Ligen", options: ["liegen","Ligen","lügen","Lüge"], hints: ["liegen = mit ie, nicht i.", "Ligen → liegen"], difficulty: 3 },
+      { id: "g4d29", type: "fill-in-blank", question: "Setze ck oder k ein: Bä___er", answer: "ck", hints: ["Nach kurzem Vokal kommt 'ck'.", "Bäcker"], difficulty: 3 },
+      { id: "g4d30", type: "multiple-choice", question: "Welches Wort ist richtig?", answer: "Vogel", options: ["Fogel","Vogel","Wogel","Vohgel"], hints: ["V am Anfang klingt wie F, wird aber mit V geschrieben.", "Vogel"], difficulty: 3 },
+    ],
+  },
+];
+
+export default grade4German;

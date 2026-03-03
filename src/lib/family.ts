@@ -76,4 +76,4 @@ export function loadMemberProfile(id: string): Profile | null {
 }
 
 export const AVATARS = ["🦊","🐻","🐼","🦁","🐯","🐨","🐸","🐧","🦋","🦄","🐶","🐱","🐰","🐹","🦖","🦕","🐬","🦅"];
-export const GRADE_OPTIONS = [1, 2, 3];
+export const GRADE_OPTIONS = [1, 2, 3, 4, 5, 6];

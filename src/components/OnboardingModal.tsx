@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useLang } from "@/lib/LangContext";
 
-const GRADES = [1, 2, 3];
+const GRADES = [1, 2, 3, 4, 5, 6];
 const ONBOARDING_KEY = "cleverli_new_user";
 const GRADE_KEY = "cleverli_last_grade";
 const ROLE_KEY = "cleverli_role";

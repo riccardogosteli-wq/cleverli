@@ -31,7 +31,7 @@ interface TopicStat {
 function loadAllStats(): TopicStat[] {
   if (typeof window === "undefined") return [];
   const stats: TopicStat[] = [];
-  for (const grade of [1, 2, 3]) {
+  for (const grade of [1,2,3,4,5,6]) {
     for (const subject of ["math", "german", "science"]) {
       const topics = getTopics(grade, subject);
       for (const topic of topics) {
@@ -262,7 +262,7 @@ export default function ParentsDashboard() {
         <h2 className="font-bold text-gray-700 text-sm">
           📚 {t("Fach-Übersicht", "Aperçu des matières", "Panoramica materie", "Subject overview")}
         </h2>
-        {[1,2,3].map(grade => {
+        {[1,2,3,4,5,6].map(grade => {
           const gradeStats = stats.filter(s => s.grade === grade && s.completed > 0);
           if (!gradeStats.length) return null;
           return (

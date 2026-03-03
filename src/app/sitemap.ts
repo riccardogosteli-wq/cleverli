@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getTopics, SUBJECTS } from "@/data/index";
 
 const BASE = "https://www.cleverli.ch";
-const GRADES = [1, 2, 3];
+const GRADES = [1, 2, 3, 4, 5, 6];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

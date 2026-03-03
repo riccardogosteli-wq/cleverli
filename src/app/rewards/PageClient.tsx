@@ -60,7 +60,7 @@ export default function RewardsPage() {
   // Per-subject topic completion counts (all grades)
   const subjectProgress = SUBJECTS.map(s => {
     let done = 0, total = 0;
-    for (const g of [1, 2, 3]) {
+    for (const g of [1,2,3,4,5,6]) {
       const topics = getTopics(g, s.id);
       total += topics.length;
       for (const t of topics) {

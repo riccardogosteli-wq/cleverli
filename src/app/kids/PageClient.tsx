@@ -212,7 +212,7 @@ export default function KidsDashboard() {
       {/* ── Grade tabs + progress islands ── */}
       <div className="space-y-3">
         <div className="flex gap-2">
-          {[1, 2, 3].map((g, i) => (
+          {[1,2,3,4,5,6].map((g, i) => (
             <button
               key={g}
               onClick={() => setActiveGrade(g)}

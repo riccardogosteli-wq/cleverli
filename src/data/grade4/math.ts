@@ -1,0 +1,85 @@
+import { Topic } from "@/types/exercise";
+
+const grade4Math: Topic[] = [
+  {
+    id: "zahlen-bis-10000",
+    title: "Zahlen bis 10000",
+    emoji: "🔢",
+    exercises: [
+      { id: "g4m1", type: "multiple-choice", question: "Wie viele Zehner hat die Zahl 1'340?", answer: "4", options: ["1","3","4","0"], hints: ["Schau dir die Zehnerstelle an.", "1'340 → die 4 steht an der Zehnerstelle."], difficulty: 1, free: true },
+      { id: "g4m2", type: "multiple-choice", question: "Welche Zahl ist grösser: 2'456 oder 2'465?", answer: "2'465", options: ["2'456","2'465","beide gleich","2'400"], hints: ["Vergleiche die Zehnerstelle: 5 oder 6?", "6 ist grösser als 5."], difficulty: 1, free: true },
+      { id: "g4m3", type: "fill-in-blank", question: "Schreibe in Worten: 3'720 = ___", answer: "dreitausendsiebenhundertzwanzig", hints: ["Drei-tausend-siebenhundert-zwanzig", "Trenne die Tausender, Hunderter, Zehner und Einer."], difficulty: 1, free: true },
+      { id: "g4m4", type: "multiple-choice", question: "Was ist der Nachfolger von 4'999?", answer: "5'000", options: ["4'998","4'990","5'000","5'001"], hints: ["Nach 999 kommt 1'000, nach 4'999 kommt...?", "Die Einer, Zehner und Hunderter gehen auf 0, der Tausender wird +1."], difficulty: 2 },
+      { id: "g4m5", type: "fill-in-blank", question: "Runde 3'487 auf die nächsten Hunderter: ___", answer: "3'500", hints: ["Schau dir die Zehnerstelle an: 8 → aufrunden.", "87 ist näher an 100 als an 0."], difficulty: 2 },
+      { id: "g4m6", type: "multiple-choice", question: "Welche Zahl liegt zwischen 7'200 und 7'400?", answer: "7'300", options: ["7'100","7'300","7'500","8'000"], hints: ["Zähle in 100er-Schritten: 7'200, 7'300, 7'400.", "Welche Zahl ist genau in der Mitte?"], difficulty: 2 },
+      { id: "g4m7", type: "fill-in-blank", question: "Wie viele Hunderter sind in 5'600? ___", answer: "56", hints: ["5'600 = 56 × 100", "Teile durch 100: 5'600 ÷ 100 = ?"], difficulty: 2 },
+      { id: "g4m8", type: "multiple-choice", question: "Welche Zahl entspricht 8 Tausender + 3 Hunderter + 5 Einer?", answer: "8'305", options: ["8'035","8'305","8'350","835"], hints: ["8'000 + 300 + 5 = ?", "Die Zehnerstelle bleibt leer (0)."], difficulty: 3 },
+      { id: "g4m9", type: "fill-in-blank", question: "6'000 + 400 + 70 + 8 = ___", answer: "6'478", hints: ["Addiere alle Stellenwerte zusammen.", "Tausender, Hunderter, Zehner, Einer."], difficulty: 3 },
+      { id: "g4m10", type: "number-line", question: "Zeige 7'500 auf dem Zahlenstrahl!", answer: "7500", numberMin: 7000, numberMax: 8000, numberStep: 100, hints: ["7'500 liegt genau in der Mitte zwischen 7'000 und 8'000.", "Zähle in 100er-Schritten von 7'000 aus."], difficulty: 3 },
+    ],
+  },
+  {
+    id: "einmaleins",
+    title: "Das Einmaleins",
+    emoji: "✖️",
+    exercises: [
+      { id: "g4m11", type: "multiple-choice", question: "7 × 8 = ?", answer: "56", options: ["48","54","56","64"], hints: ["7 × 8 = 56 — wie beim Schach: 8×8=64, aber hier fehlt 1 Siebener.", "Zähle in 7er-Schritten: 7, 14, 21, 28, 35, 42, 49, 56."], difficulty: 1, free: true },
+      { id: "g4m12", type: "fill-in-blank", question: "9 × 6 = ___", answer: "54", hints: ["9 × 6 = (10 × 6) − 6", "60 − 6 = ?"], difficulty: 1, free: true },
+      { id: "g4m13", type: "multiple-choice", question: "Welche Rechnung ergibt 24?", answer: "6 × 4", options: ["5 × 5","6 × 4","3 × 7","4 × 5"], hints: ["Probiere: 5×5=25, 6×4=24 ✓", "6 × 4 = 24"], difficulty: 1, free: true },
+      { id: "g4m14", type: "fill-in-blank", question: "8 × ___ = 64", answer: "8", hints: ["64 ÷ 8 = ?", "8 × 8 = 64"], difficulty: 2 },
+      { id: "g4m15", type: "multiple-choice", question: "12 × 5 = ?", answer: "60", options: ["50","55","60","65"], hints: ["10 × 5 = 50, dann noch 2 × 5 = 10 → 50 + 10 = 60.", "Zähle in 12er-Schritten 5 Mal."], difficulty: 2 },
+      { id: "g4m16", type: "fill-in-blank", question: "7 × 7 = ___", answer: "49", hints: ["7 × 7 = 49 — fast 50!", "Quadratzahl von 7."], difficulty: 2 },
+      { id: "g4m17", type: "multiple-choice", question: "Was ist das Doppelte von 9 × 4?", answer: "72", options: ["36","54","72","80"], hints: ["Erst 9 × 4 = 36, dann 36 × 2 = ?", "Doppeltes von 36."], difficulty: 2 },
+      { id: "g4m18", type: "fill-in-blank", question: "11 × 11 = ___", answer: "121", hints: ["11 × 10 = 110, dann + 11 = ?", "Elf mal elf."], difficulty: 3 },
+      { id: "g4m19", type: "multiple-choice", question: "Ein Kasten hat 12 Reihen mit je 8 Eiern. Wie viele Eier insgesamt? 🥚", answer: "96", options: ["84","88","92","96"], hints: ["12 × 8 = ?", "(10 × 8) + (2 × 8) = 80 + 16 = 96."], difficulty: 3 },
+      { id: "g4m20", type: "drag-drop", question: "Ordne die Rechnungen den Ergebnissen zu! ✖️", answer: "all",
+        dragItems: [
+          { id: "r1", label: "6 × 7", emoji: "🔢" },
+          { id: "r2", label: "8 × 5", emoji: "🔢" },
+          { id: "r3", label: "9 × 9", emoji: "🔢" },
+        ],
+        dropZones: [
+          { id: "z42", label: "42" },
+          { id: "z40", label: "40" },
+          { id: "z81", label: "81" },
+        ],
+        dropAnswers: { r1: "z42", r2: "z40", r3: "z81" },
+        hints: ["6 × 7 = 42, 8 × 5 = 40, 9 × 9 = 81.", "Rechne jede Aufgabe einzeln."],
+        difficulty: 3,
+      },
+    ],
+  },
+  {
+    id: "brueche-einfuehrung",
+    title: "Brüche kennenlernen",
+    emoji: "🍕",
+    exercises: [
+      { id: "g4m21", type: "multiple-choice", question: "Eine Pizza wird in 4 gleiche Teile geschnitten. Wie viel ist 1 Stück? 🍕", answer: "1/4", options: ["1/2","1/4","1/3","1/8"], hints: ["1 von 4 Teilen = 1/4.", "Zähler = 1, Nenner = 4."], difficulty: 1, free: true },
+      { id: "g4m22", type: "fill-in-blank", question: "Ein Kreis ist in 2 Hälften geteilt. Wie viel ist eine Hälfte? ___", answer: "1/2", hints: ["Die Hälfte = 1 von 2 Teilen.", "1/2"], difficulty: 1, free: true },
+      { id: "g4m23", type: "multiple-choice", question: "Welcher Bruch ist grösser: 1/2 oder 1/4?", answer: "1/2", options: ["1/2","1/4","beide gleich","1/3"], hints: ["Je kleiner der Nenner, desto grösser das Stück.", "1/2 = 2 Stücke, 1/4 = 4 Stücke → mehr Stücke = kleinere Teile."], difficulty: 1, free: true },
+      { id: "g4m24", type: "fill-in-blank", question: "3/4 bedeutet: ___ von 4 Teilen", answer: "3", hints: ["Der Zähler (oben) zeigt, wie viele Teile du hast.", "3/4 = 3 von 4."], difficulty: 2 },
+      { id: "g4m25", type: "multiple-choice", question: "Eine Tafel Schokolade hat 8 Stücke. Du isst 2. Welcher Bruch bleibt übrig? 🍫", answer: "6/8", options: ["2/8","4/8","6/8","8/8"], hints: ["8 − 2 = 6 → 6 von 8 Stücken übrig.", "6/8"], difficulty: 2 },
+      { id: "g4m26", type: "fill-in-blank", question: "Welcher Bruch entspricht einem ganzen Kuchen? ___", answer: "4/4", hints: ["Alle Teile zusammen = ganzes Ganzes.", "Zähler = Nenner → 1 Ganzes."], difficulty: 2 },
+      { id: "g4m27", type: "multiple-choice", question: "Ordne vom kleinsten zum grössten: 1/8, 1/2, 1/4. Was kommt zuerst?", answer: "1/8", options: ["1/8","1/2","1/4","alle gleich"], hints: ["Je grösser der Nenner, desto kleiner das Stück.", "1/8 < 1/4 < 1/2"], difficulty: 2 },
+      { id: "g4m28", type: "drag-drop", question: "Ordne die Brüche den Bildern zu! 🍕", answer: "all",
+        dragItems: [
+          { id: "b1", label: "1/2", emoji: "🍕" },
+          { id: "b2", label: "1/4", emoji: "🍕" },
+          { id: "b3", label: "3/4", emoji: "🍕" },
+        ],
+        dropZones: [
+          { id: "halb", label: "Halbe Pizza" },
+          { id: "viertel", label: "Ein Viertel" },
+          { id: "dreiviertel", label: "Drei Viertel" },
+        ],
+        dropAnswers: { b1: "halb", b2: "viertel", b3: "dreiviertel" },
+        hints: ["1/2 = Hälfte, 1/4 = Viertel, 3/4 = drei Viertel.", "Zähle die Stücke im Bild."],
+        difficulty: 3,
+      },
+      { id: "g4m29", type: "fill-in-blank", question: "2/3 von 12 Äpfeln sind ___ Äpfel. 🍎", answer: "8", hints: ["Erst: 12 ÷ 3 = 4 (ein Drittel), dann: 4 × 2 = 8 (zwei Drittel).", "Ein Drittel von 12 ist 4, also zwei Drittel sind 8."], difficulty: 3 },
+      { id: "g4m30", type: "multiple-choice", question: "Welcher Bruch entspricht 0.5?", answer: "1/2", options: ["1/4","1/2","2/3","3/4"], hints: ["0.5 = 5/10 = 1/2", "Die Hälfte von 1."], difficulty: 3 },
+    ],
+  },
+];
+
+export default grade4Math;

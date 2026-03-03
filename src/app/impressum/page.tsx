@@ -4,6 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impressum",
   description: "Impressum von Cleverli — Lernplattform für Schweizer Kinder.",
+  robots: { index: false },
 };
 
 export default function Impressum() {

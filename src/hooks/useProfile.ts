@@ -177,7 +177,7 @@ function checkAchievements(profile: Profile, opts: {
 
   // Science explorer — all science topics for any grade
   if (opts.topicComplete && !has("science_explorer")) {
-    const scienceComplete = [1, 2, 3].some(g => {
+    const scienceComplete = [1,2,3,4,5,6].some(g => {
       const topics = getTopics(g, "science");
       if (!topics.length) return false;
       return topics.every((t: { id: string }) => {

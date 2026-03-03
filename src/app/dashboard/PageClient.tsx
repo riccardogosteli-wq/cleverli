@@ -220,7 +220,7 @@ function DashboardInner() {
             </div>
 
             <div className="grid grid-cols-3 gap-3">
-              {[1, 2, 3].map((g, i) => (
+              {[1,2,3,4,5,6].map((g, i) => (
                 <button key={g} onClick={() => chooseGrade(g)}
                   style={{ minHeight: "100px", transition: "all 0.15s ease" }}
                   className={`border-2 rounded-2xl font-bold active:scale-95 flex flex-col items-center justify-center gap-1 ${GRADE_COLORS[i].base}`}>

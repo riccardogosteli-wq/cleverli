@@ -24,7 +24,7 @@ export default function DailyPage() {
     if (typeof window === "undefined") return 1;
     const saved = localStorage.getItem("cleverli_last_grade");
     const g = saved ? parseInt(saved) : 1;
-    return [1, 2, 3].includes(g) ? g : 1;
+    return [1,2,3,4,5,6].includes(g) ? g : 1;
   });
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [hintsUsed, setHintsUsed] = useState(0);

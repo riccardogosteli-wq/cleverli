@@ -92,7 +92,7 @@ export default function Signup() {
 
         {/* Stepper with labels */}
         <div className="flex justify-center items-start gap-2">
-          {[1, 2, 3].map(s => (
+          {[1,2,3,4,5,6].map(s => (
             <div key={s} className="flex flex-col items-center gap-1 flex-1">
               <div className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all mx-auto
                 ${step > s ? "bg-green-600 border-green-600 text-white" :
@@ -197,7 +197,7 @@ export default function Signup() {
                 : tr("whichClass")}
             </h1>
             <div className="grid grid-cols-3 gap-3">
-              {[1, 2, 3].map(g => (
+              {[1,2,3,4,5,6].map(g => (
                 <button key={g} onClick={() => setGrade(g)}
                   style={{ minHeight: "72px" }}
                   className={`border-2 rounded-2xl font-bold text-lg active:scale-95 transition-all ${
