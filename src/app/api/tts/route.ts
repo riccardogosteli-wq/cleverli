@@ -26,8 +26,8 @@ export async function GET(req: NextRequest) {
             similarity_boost: 0.80,
             style: 0.15,
             use_speaker_boost: true,
+            speed: 0.8,  // slightly slower for kids (range 0.7–1.2, default 1.0)
           },
-          speed: 0.8,  // slightly slower for kids (range 0.7–1.2, default 1.0)
         }),
       }
     );
