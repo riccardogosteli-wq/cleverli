@@ -65,6 +65,24 @@ interface SidebarProps {
   lang: string;
 }
 
+// Compact mobile-only bar — single row, minimal height
+function MobileDailyBar({ dailyDone, lang }: { dailyDone: boolean; lang: string }) {
+  if (dailyDone) return null;
+  return (
+    <Link href="/daily"
+      className="flex items-center gap-2 bg-amber-50 border border-amber-300 rounded-xl px-3 py-2 transition-all active:scale-95">
+      <span className="text-lg">⚡</span>
+      <div className="flex-1 min-w-0">
+        <span className="text-xs font-bold text-amber-800">
+          {lang === "fr" ? "Défi du jour" : lang === "it" ? "Sfida del giorno" : lang === "en" ? "Daily Challenge" : "Tagesaufgabe"}
+        </span>
+        <span className="text-xs text-amber-600 ml-1">+30 XP</span>
+      </div>
+      <span className="text-xs font-semibold text-amber-600">→</span>
+    </Link>
+  );
+}
+
 function Sidebar({ profile, level, nextLevel, dailyDone, lang }: SidebarProps) {
   const xpToNext = nextLevel ? nextLevel.minXp - profile.xp : 0;
   const xpPct = nextLevel
@@ -193,9 +211,9 @@ function DashboardInner() {
           </div>
 
           <div className="space-y-5">
-            {/* Mobile-only: sidebar content inline */}
-            <div className="md:hidden space-y-4">
-              {profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}
+            {/* Mobile-only: compact daily bar (full sidebar is desktop-only) */}
+            <div className="md:hidden">
+              <MobileDailyBar dailyDone={dailyDone} lang={lang} />
             </div>
 
             {/* Grade picker header */}
@@ -236,7 +254,7 @@ function DashboardInner() {
         <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
           <div className="hidden md:block">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
           <div className="space-y-5">
-            <div className="md:hidden mb-4">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
+            <div className="md:hidden mb-2"><MobileDailyBar dailyDone={dailyDone} lang={lang} /></div>
             {/* PM-20: Nicer subject picker header with mascot */}
             <div className="flex items-center gap-3">
               <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3 min-w-[44px]">←</button>
@@ -325,7 +343,7 @@ function DashboardInner() {
       <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
       <div className="hidden md:block">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
       <div className="space-y-4">
-      <div className="md:hidden mb-2">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
+      <div className="md:hidden mb-2"><MobileDailyBar dailyDone={dailyDone} lang={lang} /></div>
 
       {/* Header */}
       <div className="flex items-center gap-2">
