@@ -58,7 +58,7 @@ export default function Home() {
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center gap-2 mb-10">
-            <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" width={72} height={72} className="drop-shadow-md" />
+            <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" width={110} height={110} className="drop-shadow-md" />
             <h2 className="text-2xl font-bold text-center text-gray-800">{tr("subjectsTitle")}</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -106,7 +106,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <p className="text-center text-xs text-gray-400 font-medium mt-3">
+          <p className="text-center text-sm text-gray-500 font-semibold mt-4">
             {lang === "fr" ? "Années 1–6 · PER (Plan d'études romand)" : lang === "it" ? "Classi 1–6 · Piano di studio" : lang === "en" ? "Grades 1–6 · Lehrplan 21" : "Klassen 1–6 · Lehrplan 21"}
           </p>
         </div>
