@@ -80,9 +80,14 @@ export default function Login() {
             {loading ? "Anmelden…" : tr("login")}
           </button>
 
-          <p className="text-center text-xs text-gray-400">
-            <Link href="/signup" className="text-green-600 underline">Noch kein Konto? Jetzt registrieren →</Link>
-          </p>
+          <div className="flex flex-col gap-1.5 items-center pt-1">
+            <Link href="/reset-password" className="text-xs text-gray-400 hover:text-gray-600 underline">
+              Passwort vergessen?
+            </Link>
+            <Link href="/signup" className="text-xs text-green-600 underline">
+              Noch kein Konto? Jetzt registrieren →
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -119,13 +119,13 @@ export default function Navigation() {
                   ⭐ Premium
                 </span>
               )}
-              <button
-                onClick={() => { logout(); window.location.href = "/"; }}
+              <Link
+                href="/account"
                 className="text-sm text-gray-500 hover:text-gray-700 font-medium py-2 px-2 whitespace-nowrap"
-                aria-label="Abmelden"
+                title={session?.email ?? ""}
               >
-                Abmelden
-              </button>
+                👤 Konto
+              </Link>
             </>
           ) : (
             <>
