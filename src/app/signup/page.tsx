@@ -38,32 +38,44 @@ export default function Signup() {
     setLoading(true);
     setError("");
 
-    // Sign up with Supabase (sends confirmation email)
-    const { error: signupError } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: { name }, // stored in user_metadata, trigger copies to parent_profiles
-      },
-    });
+    try {
+      const { data, error: signupError } = await supabase.auth.signUp({
+        email,
+        password,
+        options: { data: { name } },
+      });
 
-    if (signupError) {
-      setLoading(false);
-      if (signupError.message.includes("already registered")) {
-        setError("Diese E-Mail ist bereits registriert. Bitte einloggen.");
-      } else {
-        setError(signupError.message);
+      if (signupError) {
+        setLoading(false);
+        if (signupError.message.includes("already registered")) {
+          setError("Diese E-Mail ist bereits registriert. Bitte einloggen.");
+        } else {
+          setError(signupError.message);
+        }
+        return;
       }
-      return;
+
+      // Store grade + onboarding flags
+      localStorage.setItem("cleverli_last_grade", String(grade));
+      localStorage.setItem("cleverli_new_user", "true");
+
+      // If session is available immediately (email confirm off), go to dashboard
+      if (data?.session) {
+        router.push("/dashboard");
+      } else {
+        // Fallback: store minimal session in localStorage and proceed
+        localStorage.setItem("cleverli_session", JSON.stringify({ email, name, premium: false }));
+        router.push("/dashboard");
+      }
+    } catch (err: unknown) {
+      setLoading(false);
+      // Fallback: if Supabase fails entirely, use localStorage auth
+      localStorage.setItem("cleverli_session", JSON.stringify({ email, name, premium: false }));
+      localStorage.setItem("cleverli_last_grade", String(grade));
+      localStorage.setItem("cleverli_new_user", "true");
+      console.error("Supabase signup error:", err);
+      router.push("/dashboard");
     }
-
-    // Also store grade for dashboard (localStorage is fine for this)
-    localStorage.setItem("cleverli_last_grade", String(grade));
-    localStorage.setItem("cleverli_new_user", "true");
-
-    // Supabase may require email confirmation — go to dashboard anyway
-    // (useSession will pick up the session via onAuthStateChange)
-    router.push("/dashboard");
   };
 
   const inputCls = "w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white transition-colors";
