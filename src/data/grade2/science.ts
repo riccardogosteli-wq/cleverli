@@ -3,7 +3,7 @@ import { Topic } from "@/types/exercise";
 const grade2Science: Topic[] = [
   {
     id: "lebewesen",
-    title: "Lebewesen & Nichtlebewesen",
+    title: "Was lebt — was nicht?",
     emoji: "🦋",
     exercises: [
       {
