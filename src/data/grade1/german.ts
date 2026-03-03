@@ -51,7 +51,7 @@ const grade1German: Topic[] = [
           { id: "z-katze", label: "Schnurrt 😺" },
           { id: "z-vogel", label: "Singt 🎵" },
         ],
-        dropAnswers: { "z-hund": "hund-tile", "z-katze": "katze-tile", "z-vogel": "vogel-tile" },
+        dropAnswers: { "hund-tile": "z-hund", "katze-tile": "z-katze", "vogel-tile": "z-vogel" },
         hints: ["Ein Hund bellt, eine Katze schnurrt, ein Vogel singt."], difficulty: 2,
       },
     ],

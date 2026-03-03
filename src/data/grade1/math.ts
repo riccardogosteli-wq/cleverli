@@ -206,7 +206,7 @@ const grade1Math: Topic[] = [
           { id: "zone-3ecken", label: "3 Ecken" },
           { id: "zone-4gleich", label: "4 gleiche Seiten" },
         ],
-        dropAnswers: { "zone-rund": "kreis", "zone-3ecken": "dreieck", "zone-4gleich": "quadrat" },
+        dropAnswers: { "kreis": "zone-rund", "dreieck": "zone-3ecken", "quadrat": "zone-4gleich" },
         hints: ["Schau dir die Form genau an.", "Dreieck = drei Ecken, Quadrat = vier gleiche Seiten"],
         difficulty: 2,
       },
