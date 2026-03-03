@@ -16,27 +16,50 @@ const audioCache = new Map<string, AudioBuffer | "loading">();
 
 function cleanForSpeech(text: string): string {
   return text
+    // ── Currency ──
+    .replace(/CHF\s*([\d.,]+)/g, "$1 Franken")
+    .replace(/([\d.,]+)\s*CHF/g, "$1 Franken")
+    .replace(/([\d.,]+)\s*Fr\./g, "$1 Franken")
+    .replace(/([\d.,]+)\s*Rp\.?/g, "$1 Rappen")
+    .replace(/\bRp\b/g, "Rappen")
+    // ── Area units ──
+    .replace(/cm²/g, " Quadratzentimeter")
+    .replace(/m²/g, " Quadratmeter")
+    .replace(/mm²/g, " Quadratmillimeter")
+    // ── Units with leading digit ──
+    .replace(/(\d)\s*km\b/g, "$1 Kilometer")
+    .replace(/(\d)\s*cm\b/g, "$1 Zentimeter")
+    .replace(/(\d)\s*mm\b/g, "$1 Millimeter")
+    .replace(/(\d)\s*kg\b/g, "$1 Kilogramm")
+    .replace(/(\d)\s*mg\b/g, "$1 Milligramm")
+    .replace(/(\d)\s*ml\b/g, "$1 Milliliter")
+    .replace(/(\d)\s*dl\b/g, "$1 Deziliter")
+    .replace(/(\d)\s*cl\b/g, "$1 Zentiliter")
+    .replace(/(\d)\s*l\b/g, "$1 Liter")
+    .replace(/(\d)\s*g\b/g, "$1 Gramm")
+    .replace(/(\d)\s*m\b/g, "$1 Meter")
+    // ── Standalone unit abbreviations ──
+    .replace(/\bkm\b/g, "Kilometer")
+    .replace(/\bcm\b/g, "Zentimeter")
+    .replace(/\bmm\b/g, "Millimeter")
+    .replace(/\bkg\b/g, "Kilogramm")
+    .replace(/\bml\b/g, "Milliliter")
+    .replace(/\bdl\b/g, "Deziliter")
+    .replace(/\bg\b/g, "Gramm")
+    // ── Math operators ──
     .replace(/(\d)\s*[×x]\s*(\d)/g, "$1 mal $2")
     .replace(/(\d)\s*÷\s*(\d)/g, "$1 durch $2")
     .replace(/(\d)\s*:\s*(\d)/g, "$1 durch $2")
     .replace(/(\d)\s*\+\s*(\d)/g, "$1 plus $2")
-    .replace(/(\d)\s*[−-]\s*(\d)/g, "$1 minus $2")
+    .replace(/(\d)\s*[−\-]\s*(\d)/g, "$1 minus $2")
     .replace(/=\s*\?/g, "gleich wie viel?")
-    // ── Units ──
-    .replace(/(\d)\s*km/g, "$1 Kilometer")
-    .replace(/(\d)\s*cm/g, "$1 Zentimeter")
-    .replace(/(\d)\s*mm/g, "$1 Millimeter")
-    .replace(/(\d)\s*kg/g, "$1 Kilogramm")
-    .replace(/(\d)\s*g\b/g, "$1 Gramm")
-    .replace(/(\d)\s*l\b/g, "$1 Liter")
-    .replace(/(\d)\s*ml/g, "$1 Milliliter")
-    .replace(/\b(\d)\s*m\b/g, "$1 Meter")
-    // ── Ordinals ──
-    .replace(/(\d)\./g, "$1.")
     .replace(/(?<!\w)<(?!\w)/g, "kleiner als")
     .replace(/(?<!\w)>(?!\w)/g, "grösser als")
+    .replace(/\bà\b/g, "zu je")
+    // ── Remove emoji ──
     .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}]/gu, "")
     .replace(/[\u{FE00}-\u{FE0F}]/gu, "")
+    // ── Formatting ──
     .replace(/___/g, "")
     .replace(/«([^»]+)»/g, "$1")
     .replace(/[#*_~`→←↑↓✓✗✅❌]/g, "")
