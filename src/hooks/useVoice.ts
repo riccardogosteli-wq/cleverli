@@ -22,6 +22,17 @@ function cleanForSpeech(text: string): string {
     .replace(/(\d)\s*\+\s*(\d)/g, "$1 plus $2")
     .replace(/(\d)\s*[−-]\s*(\d)/g, "$1 minus $2")
     .replace(/=\s*\?/g, "gleich wie viel?")
+    // ── Units ──
+    .replace(/(\d)\s*km/g, "$1 Kilometer")
+    .replace(/(\d)\s*cm/g, "$1 Zentimeter")
+    .replace(/(\d)\s*mm/g, "$1 Millimeter")
+    .replace(/(\d)\s*kg/g, "$1 Kilogramm")
+    .replace(/(\d)\s*g\b/g, "$1 Gramm")
+    .replace(/(\d)\s*l\b/g, "$1 Liter")
+    .replace(/(\d)\s*ml/g, "$1 Milliliter")
+    .replace(/\b(\d)\s*m\b/g, "$1 Meter")
+    // ── Ordinals ──
+    .replace(/(\d)\./g, "$1.")
     .replace(/(?<!\w)<(?!\w)/g, "kleiner als")
     .replace(/(?<!\w)>(?!\w)/g, "grösser als")
     .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}]/gu, "")

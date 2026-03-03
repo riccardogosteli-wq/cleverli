@@ -93,7 +93,7 @@ const grade2Math: Topic[] = [
     exercises: [
       { id: "lm1", type: "multiple-choice", question: "Was ist die richtige Einheit für die Länge eines Bleistifts?", answer: "cm", options: ["mm","cm","m","km"], hints: ["Ein Bleistift ist ca. 17 cm lang."], difficulty: 1, free: true },
       { id: "lm2", type: "multiple-choice", question: "1 Meter = ___ Zentimeter", answer: "100", options: ["10","100","1000","10000"], hints: ["1 m = 100 cm"], difficulty: 1, free: true },
-      { id: "lm3", type: "fill-in-blank", question: "Ein Tisch ist 80 cm = ___ m und ___ cm. Schreibe den cm-Teil: 80 cm", answer: "80", hints: ["80 cm = 0 m und 80 cm"], difficulty: 1, free: true },
+      { id: "lm3", type: "fill-in-blank", question: "80 cm sind weniger als 1 m. Wie viele cm fehlen noch bis zu 1 m (= 100 cm)?", answer: "20", hints: ["1 m = 100 cm", "100 - 80 = ?"], difficulty: 1, free: true },
       { id: "lm4", type: "multiple-choice", question: "Was ist länger: 50 cm oder 1 m?", answer: "1 m", options: ["50 cm","1 m","beide gleich"], hints: ["1 m = 100 cm, 100 > 50"], difficulty: 1 },
       { id: "lm5", type: "fill-in-blank", question: "3 m = ___ cm", answer: "300", hints: ["3 × 100 cm = 300 cm"], difficulty: 2 },
       { id: "lm6", type: "multiple-choice", question: "Was misst man in Kilometern?", answer: "Die Entfernung Zürich–Bern", options: ["Die Länge eines Fingers","Die Breite eines Hefts","Die Entfernung Zürich–Bern"], hints: ["Kilometer = sehr grosse Strecken"], difficulty: 1 },
