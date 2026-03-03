@@ -25,6 +25,12 @@ export interface Profile {
 const PROFILE_KEY = "cleverli_profile";
 const STREAK_KEY  = "cleverli_streak";
 
+/** Returns the localStorage key for the currently active child profile, or the global key. */
+function getActiveProfileKey(): string {
+  const childId = getActiveProfileId();
+  return childId ? `cleverli_profile_${childId}` : PROFILE_KEY;
+}
+
 const DEFAULT_PROFILE: Profile = {
   xp: 0,
   totalExercises: 0,
@@ -60,15 +66,20 @@ function diffDays(a: string, b: string) {
 function loadProfile(): Profile {
   if (typeof window === "undefined") return DEFAULT_PROFILE;
   try {
-    const raw = localStorage.getItem(PROFILE_KEY);
-    if (!raw) return DEFAULT_PROFILE;
-    return { ...DEFAULT_PROFILE, ...JSON.parse(raw) };
+    const key = getActiveProfileKey();
+    const raw = localStorage.getItem(key);
+    // For child profiles: fall back to global key on first switch (migration)
+    const fallback = key !== PROFILE_KEY ? localStorage.getItem(PROFILE_KEY) : null;
+    const source = raw ?? fallback ?? null;
+    if (!source) return DEFAULT_PROFILE;
+    return { ...DEFAULT_PROFILE, ...JSON.parse(source) };
   } catch { return DEFAULT_PROFILE; }
 }
 
 function saveProfile(p: Profile) {
   if (typeof window === "undefined") return;
-  localStorage.setItem(PROFILE_KEY, JSON.stringify(p));
+  const key = getActiveProfileKey();
+  localStorage.setItem(key, JSON.stringify(p));
   // Fire-and-forget sync to Supabase (only if a child profile is active)
   const childId = getActiveProfileId();
   if (childId) syncProfileToSupabase(childId, p);

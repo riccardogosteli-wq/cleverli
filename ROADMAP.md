@@ -171,7 +171,7 @@ Current state: hardcoded test accounts, localStorage session, signup discards da
 
 ---
 
-### PM-3 · Parent PIN Gate (no separate login)
+### ✅ PM-3 · Parent PIN Gate (no separate login) — DONE (2026-03-03)
 **Concept:** Parents tap "🔐 Elternbereich" in nav/settings. Prompted for 4-digit PIN (set on first use). Unlocks for 30 min via `sessionStorage`. Kids never see PIN.
 
 **Parent area includes:**
@@ -184,7 +184,7 @@ Current state: hardcoded test accounts, localStorage session, signup discards da
 
 ---
 
-### PM-4 · Child Profile System (up to 3 kids)
+### ✅ PM-4 · Child Profile System (up to 3 kids) — DONE (2026-03-03)
 Each profile: name, emoji avatar, grade, own XP/progress/achievements/streak.
 - Profile picker on dashboard open ("Wer lernt heute?")
 - Kids create own profile on first use (name → grade → start)

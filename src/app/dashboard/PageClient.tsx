@@ -10,6 +10,7 @@ import { getTopicTitle } from "@/data/topicTitles";
 import { isDailyDoneToday } from "@/lib/daily";
 import { useProfile } from "@/hooks/useProfile";
 import { useSession } from "@/hooks/useSession";
+import { loadFamily, getActiveProfileId } from "@/lib/family";
 import { getLevelForXp } from "@/lib/xp";
 import RewardWidget from "@/components/RewardWidget";
 
@@ -62,17 +63,27 @@ function DashboardInner() {
   const [grade, setGrade] = useState<number | null>(null);
   const [subject, setSubject] = useState<string | null>(preselectedSubject);
   const [dailyDone, setDailyDone] = useState(false);
+  const [activeMember, setActiveMember] = useState<{ name: string; avatar: string } | null>(null);
+  const [familySize, setFamilySize] = useState(0);
   const [showNotify, setShowNotify] = useState(false);
   const [notifyEmail, setNotifyEmail] = useState("");
   const [notifyDone, setNotifyDone] = useState(false);
   const [notifyLoading, setNotifyLoading] = useState(false);
 
-  // Restore last-used grade from localStorage
+  // Restore last-used grade from localStorage + load active child profile
   useEffect(() => {
     setDailyDone(isDailyDoneToday());
     if (!preselectedSubject) {
       const saved = localStorage.getItem(GRADE_KEY);
       if (saved) setGrade(parseInt(saved));
+    }
+    // PM-3/PM-4: show active child banner when family has 2+ profiles
+    const family = loadFamily();
+    setFamilySize(family.members.length);
+    if (family.members.length >= 1) {
+      const activeId = getActiveProfileId();
+      const member = family.members.find(m => m.id === activeId) ?? family.members[0];
+      if (member) setActiveMember({ name: member.name, avatar: member.avatar });
     }
   }, []);
 
@@ -324,6 +335,26 @@ function DashboardInner() {
     <div className="max-w-5xl mx-auto px-4 py-5 pb-24 sm:pb-5">
       {/* UJ-11: Onboarding modal for first-time users */}
       <OnboardingModal />
+
+      {/* PM-3/PM-4: Active child profile banner */}
+      {activeMember && familySize >= 1 && (
+        <div className="flex items-center gap-3 bg-blue-50 border-2 border-blue-200 rounded-2xl px-4 py-2.5 mb-4">
+          <span className="text-2xl">{activeMember.avatar}</span>
+          <div className="flex-1 min-w-0">
+            <span className="font-bold text-blue-800 text-sm">
+              {lang === "fr" ? `${activeMember.name} apprend aujourd'hui`
+               : lang === "it" ? `${activeMember.name} impara oggi`
+               : lang === "en" ? `${activeMember.name} is learning today`
+               : `${activeMember.name} lernt heute`}
+            </span>
+          </div>
+          <a href="/parents"
+            className="text-xs text-blue-600 hover:text-blue-800 font-semibold border border-blue-300 rounded-lg px-2.5 py-1 hover:bg-blue-100 transition-colors shrink-0">
+            {lang === "fr" ? "Changer" : lang === "it" ? "Cambia" : lang === "en" ? "Switch" : "Wechseln"}
+          </a>
+        </div>
+      )}
+
       <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
       <div className="hidden md:block"><Sidebar /></div>
       <div className="space-y-4">
