@@ -4,14 +4,25 @@ import { NextRequest, NextResponse } from "next/server";
 // Configure webhook URL in Payrexx dashboard:
 //   https://www.cleverli.ch/api/webhooks/payrexx
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const SERVICE_KEY  = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+const SUPABASE_URL   = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const SERVICE_KEY    = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+const SIGNING_KEY    = process.env.PAYREXX_SIGNING_KEY ?? "";
 
 export async function POST(req: NextRequest) {
   let body: Record<string, unknown>;
   try {
-    // Payrexx can send JSON or form-encoded body
     const text = await req.text();
+
+    // Verify Payrexx webhook signature
+    if (SIGNING_KEY) {
+      const sig = req.headers.get("payrexx-signature") ?? req.headers.get("x-payrexx-signature") ?? "";
+      const { createHmac } = await import("crypto");
+      const expected = createHmac("sha256", SIGNING_KEY).update(text).digest("hex");
+      if (sig && sig !== expected) {
+        console.warn("[payrexx-webhook] invalid signature");
+        return NextResponse.json({ error: "invalid_signature" }, { status: 401 });
+      }
+    }
     try {
       body = JSON.parse(text);
     } catch {
