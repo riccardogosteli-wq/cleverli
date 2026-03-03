@@ -158,9 +158,8 @@ export default function Home() {
               <p className="text-xs font-bold uppercase tracking-widest text-amber-600 mb-1">{tr("rewardExamplesTitle")}</p>
               {[
                 { emoji: "🦁", de: "Wir gehen in den Zoo", fr: "Sortie au zoo", it: "Gita allo zoo", en: "Trip to the zoo" },
-                { emoji: "🍦", de: "Ein Glace aussuchen", fr: "Choisir une glace", it: "Scegliere un gelato", en: "Pick an ice cream" },
-                { emoji: "🎬", de: "Kinoabend aussuchen", fr: "Choisir un film", it: "Serata cinema", en: "Pick a movie night" },
-                { emoji: "🧁", de: "Zusammen einen Kuchen backen", fr: "Cuisiner ensemble", it: "Cucinare insieme", en: "Bake a cake together" },
+                { emoji: "🍦", de: "Ein Glace essen", fr: "Manger une glace", it: "Mangiare un gelato", en: "Eat an ice cream" },
+                { emoji: "🎬", de: "Kinoabend", fr: "Soirée cinéma", it: "Serata cinema", en: "Movie night" },
                 { emoji: "🎨", de: "Neuen Malblock aussuchen", fr: "Choisir un carnet à dessin", it: "Nuovo blocco da disegno", en: "Pick a new sketchbook" },
                 { emoji: "🛒", de: "Einen kleinen Wunsch erfüllen", fr: "Un petit souhait", it: "Un piccolo desiderio", en: "One small wish granted" },
               ].map((r) => (

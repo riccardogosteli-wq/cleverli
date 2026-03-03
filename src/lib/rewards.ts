@@ -35,9 +35,8 @@ export interface RewardTemplate {
 
 export const REWARD_TEMPLATES: RewardTemplate[] = [
   { emoji: "🦁", title: { de: "Wir gehen in den Zoo!", fr: "On va au zoo!", it: "Andiamo allo zoo!", en: "Trip to the zoo!" } },
-  { emoji: "🍦", title: { de: "Ein Glace aussuchen", fr: "Choisir une glace", it: "Scegliere un gelato", en: "Pick an ice cream" } },
-  { emoji: "🎬", title: { de: "Kinoabend aussuchen", fr: "Choisir un film", it: "Serata cinema", en: "Pick a movie night" } },
-  { emoji: "🧁", title: { de: "Zusammen Kuchen backen", fr: "Cuisiner ensemble", it: "Cucinare insieme", en: "Bake a cake together" } },
+  { emoji: "🍦", title: { de: "Ein Glace essen", fr: "Manger une glace", it: "Mangiare un gelato", en: "Eat an ice cream" } },
+  { emoji: "🎬", title: { de: "Kinoabend", fr: "Soirée cinéma", it: "Serata cinema", en: "Movie night" } },
   { emoji: "🎨", title: { de: "Neuen Malblock aussuchen", fr: "Choisir un cahier", it: "Nuovo album da disegno", en: "Pick a new sketchbook" } },
   { emoji: "🛒", title: { de: "Einen Wunsch erfüllen", fr: "Un petit souhait", it: "Un piccolo desiderio", en: "One small wish granted" } },
   { emoji: "🏊", title: { de: "Ins Schwimmbad gehen", fr: "Aller à la piscine", it: "Andare in piscina", en: "Go to the swimming pool" } },
