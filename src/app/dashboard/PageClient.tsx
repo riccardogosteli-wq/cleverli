@@ -18,6 +18,9 @@ const GRADE_COLORS = [
   { base: "bg-blue-50 border-blue-300 text-blue-800 hover:bg-blue-100 active:bg-blue-200", emoji: "🐣" },
   { base: "bg-purple-50 border-purple-300 text-purple-800 hover:bg-purple-100 active:bg-purple-200", emoji: "🦊" },
   { base: "bg-orange-50 border-orange-300 text-orange-800 hover:bg-orange-100 active:bg-orange-200", emoji: "🦁" },
+  { base: "bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100 active:bg-teal-200", emoji: "🦅" },
+  { base: "bg-pink-50 border-pink-300 text-pink-800 hover:bg-pink-100 active:bg-pink-200", emoji: "🐉" },
+  { base: "bg-indigo-50 border-indigo-300 text-indigo-800 hover:bg-indigo-100 active:bg-indigo-200", emoji: "🦄" },
 ];
 
 const SUBJECT_META: Record<string, {

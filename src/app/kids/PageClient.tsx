@@ -26,6 +26,9 @@ const GRADE_COLORS = [
   { bg: "from-blue-100 to-blue-200", border: "border-blue-300", text: "text-blue-800", btn: "bg-blue-500 hover:bg-blue-600" },
   { bg: "from-purple-100 to-purple-200", border: "border-purple-300", text: "text-purple-800", btn: "bg-purple-500 hover:bg-purple-600" },
   { bg: "from-orange-100 to-orange-200", border: "border-orange-300", text: "text-orange-800", btn: "bg-orange-500 hover:bg-orange-600" },
+  { bg: "from-teal-100 to-teal-200", border: "border-teal-300", text: "text-teal-800", btn: "bg-teal-500 hover:bg-teal-600" },
+  { bg: "from-pink-100 to-pink-200", border: "border-pink-300", text: "text-pink-800", btn: "bg-pink-500 hover:bg-pink-600" },
+  { bg: "from-indigo-100 to-indigo-200", border: "border-indigo-300", text: "text-indigo-800", btn: "bg-indigo-500 hover:bg-indigo-600" },
 ];
 
 function getTopicDone(grade: number, subject: string, topicId: string): boolean {
