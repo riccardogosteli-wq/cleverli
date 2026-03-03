@@ -124,7 +124,7 @@ export default function RewardsPage() {
         </p>
         <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 text-left space-y-2 text-sm text-amber-900">
           <div>🏆 Belohnungen für Sterne, Streaks und Aufgaben</div>
-          <div>👶 Bis zu 3 Kinderprofile verwalten</div>
+          <div>👶 Bis zu 3 Kinderprofile mit Premium</div>
           <div>📊 Lernfortschritt der ganzen Familie sehen</div>
         </div>
         <Link href={uid ? `/api/checkout?plan=monthly&uid=${uid}` : "/upgrade"}

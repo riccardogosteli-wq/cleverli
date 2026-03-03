@@ -240,18 +240,38 @@ export default function TrophiesPage() {
                   const isEarned = earned.has(ach.id);
                   const title = lang === "fr" ? ach.titleFr : lang === "it" ? ach.titleIt : lang === "en" ? ach.titleEn : ach.title;
                   const desc  = lang === "fr" ? ach.descFr  : lang === "it" ? ach.descIt  : lang === "en" ? ach.descEn  : ach.desc;
+
+                  // Category hint for locked trophies — gives kids something to aim for
+                  const categoryHint = (id: string): string => {
+                    if (id.startsWith("streak")) return lang === "fr" ? "🔥 Défi Streak" : lang === "it" ? "🔥 Sfida Streak" : lang === "en" ? "🔥 Streak Challenge" : "🔥 Streak-Trophäe";
+                    if (id.startsWith("math")) return lang === "fr" ? "🔢 Mathématiques" : lang === "it" ? "🔢 Matematica" : lang === "en" ? "🔢 Maths Trophy" : "🔢 Mathe-Trophäe";
+                    if (id.startsWith("german")) return lang === "fr" ? "📖 Allemand" : lang === "it" ? "📖 Tedesco" : lang === "en" ? "📖 German Trophy" : "📖 Deutsch-Trophäe";
+                    if (id.startsWith("science") || id.includes("explorer")) return lang === "fr" ? "🌍 NMG / Sciences" : lang === "it" ? "🌍 NMG / Scienze" : lang === "en" ? "🌍 Science Trophy" : "🌍 NMG-Trophäe";
+                    if (id.startsWith("exercises")) return lang === "fr" ? "✏️ Défi exercices" : lang === "it" ? "✏️ Sfida esercizi" : lang === "en" ? "✏️ Exercise Challenge" : "✏️ Fleiss-Trophäe";
+                    if (id.startsWith("grade")) return lang === "fr" ? "🎓 Fin de classe" : lang === "it" ? "🎓 Fine anno" : lang === "en" ? "🎓 Grade Complete" : "🎓 Klassen-Trophäe";
+                    if (id.startsWith("level")) return lang === "fr" ? "⬆️ Montée de niveau" : lang === "it" ? "⬆️ Avanzamento livello" : lang === "en" ? "⬆️ Level Up" : "⬆️ Level-Trophäe";
+                    if (id.startsWith("tier")) return lang === "fr" ? "⭐ Difficulté" : lang === "it" ? "⭐ Difficoltà" : lang === "en" ? "⭐ Difficulty" : "⭐ Schwierigkeits-Trophäe";
+                    if (id.includes("bird") || id.includes("owl") || id.includes("season")) return lang === "fr" ? "🌟 Trophée spécial" : lang === "it" ? "🌟 Trofeo speciale" : lang === "en" ? "🌟 Special Trophy" : "🌟 Geheimtrophäe";
+                    return lang === "fr" ? "🌟 Trophée secret" : lang === "it" ? "🌟 Trofeo segreto" : lang === "en" ? "🌟 Secret Trophy" : "🌟 Geheimtrophäe";
+                  };
+
                   return (
                     <div
                       key={ach.id}
                       className={`bg-gradient-to-br ${isEarned ? RARITY_COLORS[ach.rarity] : "from-gray-50 to-gray-100 border-gray-100"} border-2 rounded-2xl p-3 flex items-start gap-2.5 shadow-sm ${isEarned && RARITY_GLOW[ach.rarity] ? `shadow-md ${RARITY_GLOW[ach.rarity]}` : ""}`}
-                      style={{ opacity: isEarned ? 1 : 0.4 }}
+                      style={{ opacity: isEarned ? 1 : 0.55 }}
                     >
                       <div className="text-2xl shrink-0" style={{ filter: isEarned ? "none" : "grayscale(1)" }}>
                         {isEarned ? ach.emoji : "🔒"}
                       </div>
                       <div className="min-w-0">
-                        <div className="text-xs font-bold text-gray-800 leading-tight mb-0.5">{isEarned ? title : "???"}</div>
-                        {isEarned && <div className="text-[10px] text-gray-500 leading-tight">{desc}</div>}
+                        <div className="text-xs font-bold text-gray-800 leading-tight mb-0.5">{isEarned ? title : categoryHint(ach.id)}</div>
+                        {isEarned
+                          ? <div className="text-[10px] text-gray-500 leading-tight">{desc}</div>
+                          : <div className="text-[10px] text-gray-400 leading-tight italic">
+                              {lang === "fr" ? "Continue à apprendre pour débloquer !" : lang === "it" ? "Continua a imparare per sbloccare!" : lang === "en" ? "Keep learning to unlock!" : "Weiter lernen zum Freischalten!"}
+                            </div>
+                        }
                         {isEarned && ach.xpReward > 0 && (
                           <div className="text-[10px] text-green-600 font-semibold mt-0.5">+{ach.xpReward} XP</div>
                         )}

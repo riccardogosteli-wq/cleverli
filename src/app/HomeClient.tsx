@@ -61,16 +61,51 @@ export default function Home() {
             <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" width={72} height={72} className="drop-shadow-md" />
             <h2 className="text-2xl font-bold text-center text-gray-800">{tr("subjectsTitle")}</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { emoji: "🔢", key: "math", label: "math", color: "bg-blue-50 border-blue-200 text-blue-800 hover:bg-blue-100", href: "/dashboard?subject=math" },
-              { emoji: "📖", key: "german", label: "german", color: "bg-yellow-50 border-yellow-200 text-yellow-800 hover:bg-yellow-100", href: "/dashboard?subject=german" },
-              { emoji: "🌍", key: "science", label: "scienceFull", color: "bg-green-50 border-green-200 text-green-800 hover:bg-green-100", href: "/dashboard?subject=science" },
+              {
+                emoji: "🔢", key: "math", label: "math",
+                bg: "bg-blue-50", border: "border-blue-200", hover: "hover:shadow-blue-100",
+                textColor: "text-blue-800", descColor: "text-blue-600",
+                desc: tr("mathDesc") ?? "Zahlen, Rechnen, Geometrie",
+                topics: ["Zahlen 1–10", "Addition", "Brüche", "Geometrie"],
+                href: "/dashboard?subject=math",
+              },
+              {
+                emoji: "📖", key: "german", label: "german",
+                bg: "bg-yellow-50", border: "border-yellow-200", hover: "hover:shadow-yellow-100",
+                textColor: "text-yellow-800", descColor: "text-yellow-600",
+                desc: tr("germanDesc") ?? "Lesen, Schreiben, Grammatik",
+                topics: ["Buchstaben", "Wörter", "Grammatik", "Rechtschreibung"],
+                href: "/dashboard?subject=german",
+              },
+              {
+                emoji: "🌍", key: "science", label: "scienceFull",
+                bg: "bg-green-50", border: "border-green-200", hover: "hover:shadow-green-100",
+                textColor: "text-green-800", descColor: "text-green-600",
+                desc: tr("scienceDesc") ?? "Natur, Mensch, Gesellschaft",
+                topics: ["Tiere", "Körper", "Jahreszeiten", "Schweiz"],
+                href: "/dashboard?subject=science",
+              },
             ].map((s) => (
               <Link key={s.key} href={s.href}
-                className={`border-2 rounded-2xl p-6 text-center transition-colors ${s.color} cursor-pointer`}>
-                <div className="text-5xl mb-3">{s.emoji}</div>
-                <div className="font-bold text-base">{tr(s.label as Parameters<typeof tr>[0])}</div>
+                className={`${s.bg} border-2 ${s.border} rounded-2xl p-6 flex flex-col gap-3 transition-all hover:shadow-lg ${s.hover} hover:-translate-y-0.5 cursor-pointer`}>
+                <div className="flex items-center gap-3">
+                  <div className="text-4xl">{s.emoji}</div>
+                  <div>
+                    <div className={`font-extrabold text-base ${s.textColor}`}>{tr(s.label as Parameters<typeof tr>[0])}</div>
+                    <div className={`text-xs ${s.descColor} font-medium`}>{s.desc}</div>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-1">
+                  {s.topics.map(t => (
+                    <span key={t} className={`text-[11px] ${s.bg} ${s.border} border rounded-full px-2 py-0.5 ${s.textColor} font-medium`}>{t}</span>
+                  ))}
+                  <span className={`text-[11px] rounded-full px-2 py-0.5 ${s.textColor} font-medium opacity-50`}>…</span>
+                </div>
+                <div className={`text-xs font-semibold ${s.textColor} mt-auto pt-1`}>
+                  Klasse 1–6 · Lehrplan 21 →
+                </div>
               </Link>
             ))}
           </div>

@@ -61,7 +61,7 @@ export default function Navigation() {
             className="w-auto object-contain drop-shadow-md h-[58px] sm:h-[80px]"
             priority
           />
-          <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium hidden sm:inline self-start mt-2">beta</span>
+
         </Link>
 
         {/* Desktop nav */}
@@ -213,10 +213,10 @@ export default function Navigation() {
         </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile dropdown — animated slide */}
       {open && (
         <div
-          className="sm:hidden bg-white border-t border-gray-100 px-4 py-3 flex flex-col gap-2"
+          className="sm:hidden bg-white border-t border-gray-100 px-4 py-3 flex flex-col gap-2 animate-[slideDown_0.18s_ease-out]"
           style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
         >
           {/* Core nav — always visible */}

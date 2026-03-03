@@ -60,6 +60,13 @@ export default function Signup() {
       localStorage.setItem("cleverli_last_grade", String(grade));
       localStorage.setItem("cleverli_new_user", "true");
 
+      // Send welcome email (fire & forget)
+      fetch("/api/send-welcome", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, name }),
+      }).catch(() => {});
+
       // If session is available immediately (email confirm off), go to dashboard
       if (data?.session) {
         router.push("/dashboard");

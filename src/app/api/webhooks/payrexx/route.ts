@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendPaymentConfirmationEmail } from "@/lib/email";
 
 // Payrexx sends transaction status updates here
 // Configure webhook URL in Payrexx dashboard:
@@ -86,6 +87,14 @@ export async function POST(req: NextRequest) {
     const err = await updateRes.text();
     console.error("[payrexx-webhook] supabase update failed:", err);
     return NextResponse.json({ error: "db_update_failed" }, { status: 500 });
+  }
+
+  // Send payment confirmation email (fire & forget)
+  const userEmail = (body?.transaction as Record<string, unknown>)?.email as string
+    ?? (body?.subscription as Record<string, unknown>)?.email as string
+    ?? "";
+  if (userEmail) {
+    sendPaymentConfirmationEmail(userEmail, "", plan as "monthly" | "yearly").catch(() => {});
   }
 
   console.log(`[payrexx-webhook] ✅ Premium activated for ${userId} (${plan}) until ${premiumUntil}`);
