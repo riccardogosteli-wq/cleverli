@@ -4,7 +4,7 @@ import { getLevelForXp, getNextLevel, calcXpGain } from "@/lib/xp";
 import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
 import { getTopics, SUBJECTS } from "@/data/index";
 import { getActiveProfileId } from "@/lib/family";
-import { syncProfileToSupabase, loadProfileFromSupabase } from "@/lib/progressSync";
+import { syncProfileToSupabase, loadProfileFromSupabase, loadTopicProgressFromSupabase } from "@/lib/progressSync";
 import { getTierProgress } from "@/lib/tierProgress";
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -242,13 +242,29 @@ export function useProfile() {
     // New device/browser: localStorage is empty — try loading from Supabase
     const childId = getActiveProfileId();
     if (childId && p.xp === 0 && p.totalExercises === 0) {
-      loadProfileFromSupabase(childId).then(remote => {
+      Promise.all([
+        loadProfileFromSupabase(childId),
+        loadTopicProgressFromSupabase(childId),
+      ]).then(([remote, topicData]) => {
+        // Restore profile stats
         if (remote && (remote.xp ?? 0) > 0) {
           const merged = { ...DEFAULT_PROFILE, ...remote };
           saveProfile(merged as Profile);
           setProfile(merged as Profile);
         } else {
           setProfile(updated);
+        }
+        // Restore topic progress into localStorage
+        if (topicData) {
+          for (const t of topicData) {
+            const key = `cleverli_${t.grade}_${t.subject}_${t.topic_id}`;
+            if (!localStorage.getItem(key)) {
+              localStorage.setItem(key, JSON.stringify({
+                stars: t.stars, score: t.score, completed: t.completed,
+                partial: t.partial, lastPlayed: t.last_played,
+              }));
+            }
+          }
         }
         setLoaded(true);
       });
