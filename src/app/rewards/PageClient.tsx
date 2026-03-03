@@ -22,7 +22,8 @@ const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
 
 export default function RewardsPage() {
   const { lang } = useLang();
-  const { isPremium, loaded } = useSession();
+  const { isPremium, loaded, session } = useSession();
+  const uid = session?.userId ?? "";
   const [rewards, setRewards] = useState<Reward[]>([]);
   const [snap, setSnap] = useState<ProgressSnapshot>({ totalExercises: 0, totalTopicsComplete: 0, dailyStreak: 0, totalStars: 0 });
   const [adding, setAdding] = useState(false);
@@ -126,7 +127,7 @@ export default function RewardsPage() {
           <div>👶 Bis zu 3 Kinderprofile verwalten</div>
           <div>📊 Lernfortschritt der ganzen Familie sehen</div>
         </div>
-        <Link href="/signup"
+        <Link href={uid ? `/api/checkout?plan=monthly&uid=${uid}` : "/upgrade"}
           className="block w-full bg-amber-500 text-white py-4 rounded-2xl font-bold text-base hover:bg-amber-600 active:scale-95 transition-all shadow-md">
           Premium freischalten — CHF 9.90/Mt.
         </Link>

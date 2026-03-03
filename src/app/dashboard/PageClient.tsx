@@ -56,7 +56,8 @@ function getProgress(grade: number, subject: string, topicId: string) {
 function DashboardInner() {
   const { tr, lang } = useLang();
   const { profile } = useProfile();
-  const { isPremium: sessionPremium, loaded: sessionLoaded } = useSession();
+  const { isPremium: sessionPremium, loaded: sessionLoaded, session } = useSession();
+  const uid = session?.userId ?? "";
   const searchParams = useSearchParams();
   const preselectedSubject = searchParams.get("subject");
 
@@ -444,7 +445,7 @@ function DashboardInner() {
 
       {/* UJ-4: Premium upsell banner for grade 3 free users */}
       {isGrade3Locked && (
-        <Link href="/rewards" className="flex items-center gap-3 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl px-4 py-3 text-sm text-amber-900 hover:from-amber-100 hover:to-orange-100 transition-colors">
+        <Link href={uid ? `/api/checkout?plan=monthly&uid=${uid}` : "/upgrade"} className="flex items-center gap-3 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl px-4 py-3 text-sm text-amber-900 hover:from-amber-100 hover:to-orange-100 transition-colors">
           <span className="text-2xl">🔓</span>
           <div className="flex-1">
             <div className="font-bold">

@@ -23,6 +23,7 @@ import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
 import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
+import { useSession } from "@/hooks/useSession";
 import Confetti from "./Confetti";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
@@ -40,6 +41,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const { play } = useSound();
   const { tr, lang } = useLang();
   const { recordAnswer } = useProfileContext();
+  const { session } = useSession();
+  const uid = session?.userId ?? "";
+  const checkoutUrl = (plan: "monthly" | "yearly") =>
+    `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
   const FREE_LIMIT = 3;
   // Select a rotated pool of exercises — different each session if pool > 10
   const [exercises, setExercises] = useState(() => selectExercises(topic.id, topic.exercises));
@@ -325,10 +330,21 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           <div>✅ {tr("premiumF3")}</div>
           <div>✅ {tr("premiumF4")}</div>
         </div>
-        <Link href="/signup"
-          className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
-          {tr("upgrade")} — CHF 9.90{tr("perMonth")}
-        </Link>
+        <div className="flex flex-col gap-2 w-full max-w-xs">
+          <Link href={checkoutUrl("monthly")}
+            className="block text-center bg-green-600 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
+            TWINT / Karte — CHF 9.90{tr("perMonth")}
+          </Link>
+          <Link href={checkoutUrl("yearly")}
+            className="block text-center border-2 border-green-600 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
+            Jährlich — CHF 99/Jahr (2 Monate gratis)
+          </Link>
+          {!uid && (
+            <Link href="/signup" className="block text-center text-xs text-gray-400 hover:text-gray-600 underline pt-1">
+              Zuerst kostenloses Konto erstellen
+            </Link>
+          )}
+        </div>
         <div>
           <Link href={`/learn/${grade}/${subject}`} className="text-sm text-gray-400 hover:text-gray-600 underline">
             {tr("selectTopic")}
@@ -551,8 +567,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       {/* Free limit notice — UJ-8: only show after hydration (isPremium prop is stable) */}
       {isPremium === false && idx < FREE_LIMIT && (
         <p className="text-center text-xs text-gray-400">
-          {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
-          <Link href="/signup" className="text-green-600 underline">{tr("unlockAll")}</Link>
+          🎁 {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
+          <Link href={uid ? checkoutUrl("monthly") : "/upgrade"} className="text-green-600 underline font-semibold">
+            {tr("unlockAll")}
+          </Link>
         </p>
       )}
 

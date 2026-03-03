@@ -119,6 +119,14 @@ export default function Navigation() {
                   ⭐ Premium
                 </span>
               )}
+              {!session?.premium && (
+                <Link
+                  href="/upgrade"
+                  className="text-sm bg-amber-500 text-white px-3 py-1.5 rounded-full hover:bg-amber-600 transition-colors font-bold shadow-sm whitespace-nowrap"
+                >
+                  ⭐ Upgrade
+                </Link>
+              )}
               <Link
                 href="/account"
                 className="text-sm text-gray-500 hover:text-gray-700 font-medium py-2 px-2 whitespace-nowrap"
