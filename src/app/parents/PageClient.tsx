@@ -11,7 +11,7 @@ import { useLang } from "@/lib/LangContext";
 import { getTopics, SUBJECTS } from "@/data/index";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
-import ParentPinGate from "@/components/ParentPinGate";
+import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 
 interface TopicStat {
   grade: number;
@@ -114,6 +114,15 @@ export default function ParentsDashboard() {
   return (
     <ParentPinGate>
     <main className="max-w-lg mx-auto px-4 py-6 pb-12 space-y-5">
+      {/* Lock button */}
+      <div className="flex justify-end">
+        <button
+          onClick={() => { lockParentSession(); window.location.reload(); }}
+          className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-red-500 transition-colors py-1.5 px-3 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50"
+        >
+          🔒 <span>Elternbereich sperren</span>
+        </button>
+      </div>
 
       {/* ── Header ── */}
       <div className="flex items-center gap-3">

@@ -37,10 +37,10 @@ export default function Navigation() {
           <XpBar />
           <Link
             href="/dashboard"
-            className="text-sm text-gray-600 hover:text-green-700 font-medium py-2 px-2 whitespace-nowrap"
-            style={{ minWidth: "80px", textAlign: "center" }}
+            className="flex items-center gap-1.5 text-sm text-green-700 hover:text-green-800 font-semibold py-2 px-2.5 rounded-xl bg-green-50 hover:bg-green-100 transition-colors whitespace-nowrap border border-green-200"
           >
-            {tr("learnNav")}
+            <span style={{ fontSize: "20px" }}>📚</span>
+            <span className="hidden md:inline text-xs">{tr("learnNav")}</span>
           </Link>
           <Link
             href="/rewards"

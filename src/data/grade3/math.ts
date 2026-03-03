@@ -23,9 +23,9 @@ const grade3Math: Topic[] = [
     title: "Rechnen bis 1000",
     emoji: "➕",
     exercises: [
-      { id: "r1k", type: "fill-in-blank", question: "345 + 200 = ___", answer: "545", hints: ["Addiere die Hunderter: 3+2=5, Rest bleibt: 545"], difficulty: 1, free: true },
+      { id: "r1k", type: "fill-in-blank", question: "345 + 200 = ___", answer: "545", hints: ["Addiere Hunderter, Zehner und Einer einzeln."], difficulty: 1, free: true },
       { id: "r2k", type: "multiple-choice", question: "700 − 300 = ?", answer: "400", options: ["300","400","500","600"], hints: ["7 Hunderter - 3 Hunderter = 4 Hunderter"], difficulty: 1, free: true },
-      { id: "r3k", type: "fill-in-blank", question: "256 + 143 = ___", answer: "399", hints: ["2+1=3 Hunderter, 5+4=9 Zehner, 6+3=9 Einer → 399"], difficulty: 2, free: true },
+      { id: "r3k", type: "fill-in-blank", question: "256 + 143 = ___", answer: "399", hints: ["Addiere Hunderter, Zehner und Einer getrennt."], difficulty: 2, free: true },
       { id: "r4k", type: "multiple-choice", question: "500 − 150 = ?", answer: "350", options: ["250","300","350","400"], hints: ["500 - 150 = 350"], difficulty: 2 },
       { id: "r5k", type: "fill-in-blank", question: "123 + 456 = ___", answer: "579", hints: ["1+4=5 H, 2+5=7 Z, 3+6=9 E → 579"], difficulty: 2 },
       { id: "r6k", type: "fill-in-blank", question: "800 − 250 = ___", answer: "550", hints: ["800-250=550"], difficulty: 2 },
@@ -41,7 +41,7 @@ const grade3Math: Topic[] = [
       { id: "geo1", type: "fill-in-blank", question: "Ein Quadrat mit Seitenlänge 4 cm hat einen Umfang von ___ cm.", answer: "16", hints: ["Umfang Quadrat = 4 × Seite = 4 × 4 = 16 cm"], difficulty: 2, free: true },
       { id: "geo2", type: "multiple-choice", question: "Wie viele Seiten hat ein Sechseck?", answer: "6", options: ["4","5","6","8"], hints: ["Sechs-Eck = 6 Seiten"], difficulty: 1, free: true },
       { id: "geo3", type: "fill-in-blank", question: "Ein Rechteck ist 5 cm breit und 3 cm hoch. Umfang = ___ cm", answer: "16", hints: ["Umfang = 2×(5+3) = 2×8 = 16 cm"], difficulty: 2, free: true },
-      { id: "geo4", type: "multiple-choice", question: "Was ist die Fläche eines 3×3 cm Quadrats?", answer: "9 cm²", options: ["6 cm²","9 cm²","12 cm²","16 cm²"], hints: ["Fläche = Seite × Seite = 3 × 3 = 9 cm²"], difficulty: 2 },
+      { id: "geo4", type: "multiple-choice", question: "Was ist die Fläche eines 3×3 cm Quadrats?", answer: "9 cm²", options: ["6 cm²","9 cm²","12 cm²","16 cm²"], hints: ["Fläche eines Quadrats: Seite mal Seite."], difficulty: 2 },
       { id: "geo5", type: "fill-in-blank", question: "Ein Dreieck hat ___ Seiten.", answer: "3", hints: ["Tri = drei"], difficulty: 1 },
       { id: "geo6", type: "multiple-choice", question: "Wie nennt man die Strecke um eine Figur herum?", answer: "Umfang", options: ["Fläche","Umfang","Volumen","Radius"], hints: ["Um = herum, Fang = fassen → Umfang"], difficulty: 1 },
       { id: "geo7", type: "fill-in-blank", question: "Rechteck: 6 cm × 4 cm. Fläche = ___ cm²", answer: "24", hints: ["Fläche Rechteck = Länge × Breite = 6 × 4 = 24 cm²"], difficulty: 2 },
@@ -54,7 +54,7 @@ const grade3Math: Topic[] = [
     emoji: "✖️",
     exercises: [
       { id: "e1", type: "fill-in-blank", question: "6 × 7 = ___", answer: "42", hints: ["6 × 7: 6×6=36, dann +6=42", "Merke: 6·7=42"], difficulty: 2, free: true },
-      { id: "e2", type: "multiple-choice", question: "8 × 4 = ?", answer: "32", options: ["28","30","32","36"], hints: ["8 × 4: 8×2=16, doppelt=32"], difficulty: 2, free: true },
+      { id: "e2", type: "multiple-choice", question: "8 × 4 = ?", answer: "32", options: ["28","30","32","36"], hints: ["Tipp: 8 × 4 = 8 × 2, und dann nochmals verdoppeln."], difficulty: 2, free: true },
       { id: "e3", type: "fill-in-blank", question: "9 × 9 = ___", answer: "81", hints: ["9×9=81 — Merkhilfe: 9+9=18, also 81"], difficulty: 2, free: true },
       { id: "e4", type: "multiple-choice", question: "7 × 8 = ?", answer: "56", options: ["48","54","56","63"], hints: ["7×8=56 — Merke: 5,6,7,8 → 56=7×8"], difficulty: 2 },
       { id: "e5", type: "fill-in-blank", question: "6 × 6 = ___", answer: "36", hints: ["6×6=36"], difficulty: 1 },
@@ -72,7 +72,7 @@ const grade3Math: Topic[] = [
     title: "Division",
     emoji: "➗",
     exercises: [
-      { id: "d1", type: "fill-in-blank", question: "12 ÷ 3 = ___", answer: "4", hints: ["Wie oft passt 3 in 12? 3, 6, 9, 12 → 4 mal"], difficulty: 1, free: true },
+      { id: "d1", type: "fill-in-blank", question: "12 ÷ 3 = ___", answer: "4", hints: ["Wie oft passt 3 in 12? Zähle in 3er-Schritten."], difficulty: 1, free: true },
       { id: "d2", type: "multiple-choice", question: "20 ÷ 4 = ?", answer: "5", options: ["4","5","6","8"], hints: ["4 × ? = 20"], difficulty: 1, free: true },
       { id: "d3", type: "fill-in-blank", question: "35 ÷ 7 = ___", answer: "5", hints: ["7 × 5 = 35"], difficulty: 2, free: true },
       { id: "d4", type: "multiple-choice", question: "36 ÷ 6 = ?", answer: "6", options: ["5","6","7","8"], hints: ["6 × 6 = 36"], difficulty: 2 },
@@ -119,7 +119,7 @@ const grade3Math: Topic[] = [
     exercises: [
       { id: "f1", type: "multiple-choice", free: true, difficulty: 1, question: "Was ist der Umfang eines Quadrats mit Seite 4 cm? 📐", answer: "16 cm", options: ["8 cm", "12 cm", "16 cm", "20 cm"], hints: ["Umfang = alle 4 Seiten zusammen.", "4 × 4 = ?"], mascot: "wave" },
       { id: "f2", type: "fill-in-blank", free: true, difficulty: 1, question: "Ein Rechteck ist 5 cm lang und 3 cm breit. Umfang = ___ cm.", answer: "16", hints: ["Umfang = 2 × Länge + 2 × Breite", "2×5 + 2×3 = 10+6 = 16"] },
-      { id: "f3", type: "multiple-choice", free: true, difficulty: 2, question: "Was ist die Fläche eines Quadrats mit Seite 5 cm? 📏", answer: "25 cm²", options: ["10 cm²", "20 cm²", "25 cm²", "50 cm²"], hints: ["Fläche = Seite × Seite", "5 × 5 = 25"] },
+      { id: "f3", type: "multiple-choice", free: true, difficulty: 2, question: "Was ist die Fläche eines Quadrats mit Seite 5 cm? 📏", answer: "25 cm²", options: ["10 cm²", "20 cm²", "25 cm²", "50 cm²"], hints: ["Fläche eines Quadrats: Seite mal Seite. Welche Rechnung brauchst du?"] },
       { id: "f4", type: "fill-in-blank", difficulty: 2, question: "Rechteck: Länge 8 cm, Breite 3 cm. Fläche = ___ cm².", answer: "24", hints: ["Fläche = Länge × Breite", "8 × 3 = ?"] },
       { id: "f5", type: "multiple-choice", difficulty: 2, question: "Ein Zimmer ist 4 m × 5 m. Wie viele m² Teppich brauchst du? 🏠", answer: "20 m²", options: ["9 m²", "18 m²", "20 m²", "25 m²"], hints: ["Fläche = 4 × 5 = 20"] },
       { id: "f6", type: "fill-in-blank", difficulty: 3, question: "Ein Quadrat hat eine Fläche von 36 cm². Wie lang ist eine Seite? ___ cm", answer: "6", hints: ["Welche Zahl × sich selbst = 36?", "6 × 6 = 36"] },

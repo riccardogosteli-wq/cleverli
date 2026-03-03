@@ -10,7 +10,7 @@ import {
 } from "@/lib/rewards";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
-import ParentPinGate from "@/components/ParentPinGate";
+import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import { getTopics, SUBJECTS } from "@/data/index";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
@@ -138,6 +138,15 @@ export default function RewardsPage() {
   return (
     <ParentPinGate>
     <div className="max-w-5xl mx-auto px-4 py-8">
+      {/* Lock button */}
+      <div className="flex justify-end mb-2">
+        <button
+          onClick={() => { lockParentSession(); window.location.reload(); }}
+          className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-red-500 transition-colors py-1.5 px-3 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50"
+        >
+          🔒 <span>Elternbereich sperren</span>
+        </button>
+      </div>
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 min-w-[44px]">←</Link>

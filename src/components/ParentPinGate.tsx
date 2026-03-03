@@ -26,6 +26,10 @@ function setUnlocked() {
   sessionStorage.setItem(PIN_SESSION_KEY, JSON.stringify({ until: Date.now() + UNLOCK_DURATION_MS }));
 }
 
+export function lockParentSession() {
+  sessionStorage.removeItem(PIN_SESSION_KEY);
+}
+
 interface Props { children: React.ReactNode; }
 
 export default function ParentPinGate({ children }: Props) {
@@ -85,12 +89,12 @@ export default function ParentPinGate({ children }: Props) {
         <>
           <div>
             <h1 className="text-2xl font-extrabold text-gray-900">Elternbereich einrichten</h1>
-            <p className="text-gray-400 text-sm mt-2">Lege eine 4-stellige PIN fest. Nur du kennst sie.</p>
+            <p className="text-gray-400 text-sm mt-2">Lege einen 4-stelligen PIN fest. Nur du kennst ihn.</p>
           </div>
 
           <div className="space-y-3">
             <div>
-              <label className="text-xs text-gray-500 font-semibold uppercase tracking-wide block mb-1">Neue PIN</label>
+              <label className="text-xs text-gray-500 font-semibold tracking-wide block mb-1">Neuen PIN eingeben</label>
               <input
                 ref={inputRef}
                 type="password"
@@ -103,7 +107,7 @@ export default function ParentPinGate({ children }: Props) {
               />
             </div>
             <div>
-              <label className="text-xs text-gray-500 font-semibold uppercase tracking-wide block mb-1">PIN bestätigen</label>
+              <label className="text-xs text-gray-500 font-semibold tracking-wide block mb-1">PIN bestätigen</label>
               <input
                 type="password"
                 inputMode="numeric"
@@ -123,14 +127,14 @@ export default function ParentPinGate({ children }: Props) {
             disabled={pin.length !== 4 || confirmPin.length !== 4}
             className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40"
           >
-            PIN speichern & öffnen →
+            PIN speichern &amp; Bereich öffnen →
           </button>
         </>
       ) : (
         <>
           <div>
             <h1 className="text-2xl font-extrabold text-gray-900">🔐 Elternbereich</h1>
-            <p className="text-gray-400 text-sm mt-2">Bitte gib deine 4-stellige PIN ein.</p>
+            <p className="text-gray-400 text-sm mt-2">Bitte gib deinen 4-stelligen PIN ein.</p>
           </div>
 
           <input
@@ -159,7 +163,7 @@ export default function ParentPinGate({ children }: Props) {
             onClick={() => { localStorage.removeItem(PIN_HASH_KEY); setState("setup"); setPin(""); setError(""); }}
             className="text-xs text-gray-400 hover:text-gray-600 underline"
           >
-            PIN vergessen?
+            PIN vergessen? PIN zurücksetzen
           </button>
         </>
       )}

@@ -76,7 +76,7 @@ const grade2Math: Topic[] = [
     exercises: [
       { id: "sb1", type: "fill-in-blank", question: "15 − 7 = ___", answer: "8", hints: ["Von 15 aus 7 rückwärts: 15-5=10, 10-2=8"], difficulty: 1, free: true },
       { id: "sb2", type: "multiple-choice", question: "18 − 9 = ?", answer: "9", options: ["7","8","9","10"], hints: ["18-9: 18-8=10, 10-1=9"], difficulty: 1, free: true },
-      { id: "sb3", type: "fill-in-blank", question: "20 − 6 = ___", answer: "14", hints: ["20-6=14"], difficulty: 1, free: true },
+      { id: "sb3", type: "fill-in-blank", question: "20 − 6 = ___", answer: "14", hints: ["Zähle von 6 aufwärts bis 20 oder rechne Schritt für Schritt."], difficulty: 1, free: true },
       { id: "sb4", type: "multiple-choice", question: "13 − 5 = ?", answer: "8", options: ["6","7","8","9"], hints: ["13-5=8"], difficulty: 1 },
       { id: "sb5", type: "fill-in-blank", question: "17 − ___ = 9", answer: "8", hints: ["9 + ? = 17 → Was muss man zu 9 addieren, um 17 zu erhalten?"], difficulty: 2 },
       { id: "sb6", type: "multiple-choice", question: "16 − 8 = ?", answer: "8", options: ["6","7","8","9"], hints: ["16-8=8 (doppelte Hälfte)"], difficulty: 1 },
@@ -121,7 +121,7 @@ const grade2Math: Topic[] = [
     title: "Addition & Subtraktion bis 100",
     emoji: "🔢",
     exercises: [
-      { id: "as1", type: "fill-in-blank", free: true, difficulty: 1, question: "34 + 25 = ___", answer: "59", hints: ["Addiere Zehner: 30+20=50", "Addiere Einer: 4+5=9", "50+9=59"], mascot: "wave" },
+      { id: "as1", type: "fill-in-blank", free: true, difficulty: 1, question: "34 + 25 = ___", answer: "59", hints: ["Rechne Zehner und Einer getrennt, dann addiere zusammen.", "Wie viele Zehner? Wie viele Einer?"], mascot: "wave" },
       { id: "as2", type: "fill-in-blank", free: true, difficulty: 1, question: "67 − 34 = ___", answer: "33", hints: ["Zehner: 60−30=30", "Einer: 7−4=3", "30+3=33"] },
       { id: "as3", type: "multiple-choice", free: true, difficulty: 1, question: "48 + 37 = ?", answer: "85", options: ["75", "85", "95", "80"], hints: ["Zehner: 40+30=70", "Einer: 8+7=15 → 1 Zehner merken", "70+15=85"] },
       { id: "as4", type: "fill-in-blank", difficulty: 2, question: "80 − 45 = ___", answer: "35", hints: ["80 − 40 = 40", "40 − 5 = 35"] },
@@ -137,7 +137,7 @@ const grade2Math: Topic[] = [
     emoji: "✖️",
     exercises: [
       { id: "e31", type: "multiple-choice", free: true, difficulty: 1, question: "3 × 4 = ?", answer: "12", options: ["9", "12", "15", "7"], hints: ["3 + 3 + 3 + 3 = ?"], mascot: "wave" },
-      { id: "e32", type: "fill-in-blank", free: true, difficulty: 1, question: "3 × 6 = ___", answer: "18", hints: ["3er-Reihe: 3, 6, 9, 12, 15, 18..."] },
+      { id: "e32", type: "fill-in-blank", free: true, difficulty: 1, question: "3 × 6 = ___", answer: "18", hints: ["Zähle in 3er-Schritten: 3, 6, 9, ..."] },
       { id: "e33", type: "multiple-choice", free: true, difficulty: 1, question: "4 × 5 = ?", answer: "20", options: ["16", "20", "24", "15"], hints: ["4er-Reihe: 4, 8, 12, 16, 20..."] },
       { id: "e34", type: "fill-in-blank", difficulty: 1, question: "3 × ___ = 21", answer: "7", hints: ["3er-Reihe: 3,6,9,12,15,18,21 → der 7. Schritt"] },
       { id: "e35", type: "multiple-choice", difficulty: 2, question: "4 × 7 = ?", answer: "28", options: ["24", "28", "32", "21"], hints: ["4,8,12,16,20,24,28..."] },
