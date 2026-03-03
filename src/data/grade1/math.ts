@@ -311,7 +311,7 @@ const grade1Math: Topic[] = [
       { id: "g3", type: "multiple-choice", free: true, difficulty: 1, question: "Du hast 2 Münzen à 50 Rappen. Wie viel ist das? 💰", answer: "1 Franken", options: ["50 Rappen", "1 Franken", "2 Franken", "1.50 Franken"], hints: ["50 + 50 = 100 Rappen = 1 Franken"] },
       { id: "g4", type: "fill-in-blank", difficulty: 1, question: "Ein Kaugummi kostet 20 Rappen. Du zahlst mit 50 Rappen. Rückgeld: ___ Rappen.", answer: "30", hints: ["50 − 20 = ?"] },
       { id: "g5", type: "multiple-choice", difficulty: 2, question: "Was kannst du mit CHF 2 kaufen? 🛒", answer: "Einen Apfel für CHF 1.80", options: ["Ein Buch für CHF 15", "Einen Apfel für CHF 1.80", "Eine Tafel Schokolade für CHF 3.50", "Ein Spielzeug für CHF 20"], hints: ["CHF 2 ist wenig — was kostet weniger?"] },
-      { id: "g6", type: "fill-in-blank", difficulty: 2, question: "Luca kauft ein Eis für CHF 2.50. Er zahlt mit CHF 5. Er bekommt ___ Franken zurück.", answer: "2.50", hints: ["5 − 2.50 = ?", "2 Franken 50 Rappen"] },
+      { id: "g6", type: "fill-in-blank", difficulty: 2, question: "Luca kauft ein Eis für CHF 1.80. Er zahlt mit CHF 5. Er bekommt ___ Franken zurück.", answer: "3.20", hints: ["5 − 1.80 = ?", "CHF 5 minus CHF 1.80 = CHF 3.20"] },
       { id: "g7", type: "drag-drop", difficulty: 2, question: "Welche Münzen ergeben CHF 1? 🪙", answer: "all", hints: ["100 Rappen = 1 Franken", "Es gibt viele Möglichkeiten!"], dragItems: [{ id: "c50a", label: "50 Rp", emoji: "🪙" }, { id: "c50b", label: "50 Rp", emoji: "🪙" }], dropZones: [{ id: "franken", label: "💰 CHF 1" }], dropAnswers: { c50a: "franken", c50b: "franken" } },
     ],
   },

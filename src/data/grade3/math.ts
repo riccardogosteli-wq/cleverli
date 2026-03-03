@@ -137,7 +137,7 @@ const grade3Math: Topic[] = [
       { id: "d4", type: "multiple-choice", difficulty: 2, question: "Was bedeutet der Median in einer Datenreihe? 📈", answer: "Der mittlere Wert", options: ["Der grösste Wert", "Der mittlere Wert", "Der häufigste Wert", "Der kleinste Wert"], hints: ["Median = Mitte. Alle Werte sortieren → mittlerer."], mascot: "think" },
       { id: "d5", type: "fill-in-blank", difficulty: 2, question: "Daten: 4, 7, 2, 7, 5. Der häufigste Wert (Modus) ist ___.", answer: "7", hints: ["Welche Zahl kommt am öftesten vor?", "7 kommt zweimal vor."] },
       { id: "d6", type: "multiple-choice", difficulty: 2, question: "5 Kinder messen ihre Körpergrösse: 120, 125, 118, 130, 122 cm. Wie gross ist das kleinste Kind? 📏", answer: "118 cm", options: ["120 cm", "122 cm", "118 cm", "125 cm"], hints: ["Suche die kleinste Zahl."] },
-      { id: "d7", type: "fill-in-blank", difficulty: 3, question: "Durchschnitt von 10, 20, 30 = ___", answer: "20", hints: ["Alle addieren: 10+20+30=60", "Durch die Anzahl teilen: 60÷3=20"] },
+      { id: "d7", type: "fill-in-blank", difficulty: 3, question: "Durchschnitt von 3, 5, 7, 9 = ___", answer: "6", hints: ["Alle addieren: 10+20+30=60", "Durch die Anzahl teilen: 60÷3=20"] },
     ],
   },
   {

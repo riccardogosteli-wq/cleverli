@@ -111,7 +111,7 @@ const grade2Math: Topic[] = [
       { id: "g3", type: "multiple-choice", question: "Du hast 1 Fr. und kaufst etwas für 80 Rp. Wie viel Rückgeld bekommst du?", answer: "20 Rp", options: ["10 Rp","20 Rp","30 Rp","40 Rp"], hints: ["100 Rp - 80 Rp = ?"], difficulty: 1, free: true },
       { id: "g4", type: "fill-in-blank", question: "5 × 20 Rappen = ___ Rappen", answer: "100", hints: ["5 × 20 = 100 Rp = 1 Fr."], difficulty: 1 },
       { id: "g5", type: "multiple-choice", question: "Was ist mehr: 3 × 20 Rp oder 1 × 50 Rp?", answer: "3 × 20 Rp", options: ["3 × 20 Rp","1 × 50 Rp","beide gleich"], hints: ["3 × 20 = 60 Rp vs. 50 Rp"], difficulty: 2 },
-      { id: "g6", type: "fill-in-blank", question: "Ein Brot kostet CHF 2.50. Du gibst CHF 5.00. Rückgeld: CHF ___", answer: "2.50", hints: ["5.00 - 2.50 = ?"], difficulty: 2 },
+      { id: "g6", type: "fill-in-blank", question: "Ein Brot kostet CHF 3.80. Du gibst CHF 5.00. Rückgeld: CHF ___", answer: "1.20", hints: ["5.00 - 3.80 = ?", "CHF 5 minus CHF 3.80 = CHF 1.20"], difficulty: 2 },
       { id: "g7", type: "multiple-choice", question: "Wie viele 20-Rappen-Münzen brauchst du für 1 Franken?", answer: "5", options: ["2","4","5","10"], hints: ["20 × 5 = 100 Rp = 1 Fr."], difficulty: 1 },
       { id: "g8", type: "fill-in-blank", question: "CHF 1.50 + CHF 2.00 = CHF ___", answer: "3.50", hints: ["1 Fr. 50 Rp + 2 Fr. = 3 Fr. 50 Rp"], difficulty: 2 },
     ],
