@@ -43,8 +43,8 @@ Variety = engagement. Each topic should have at least 4 different exercise types
 
 **Difficulty distribution per 50 exercises:**
 - 15 × difficulty 1 (easy, accessible)
-- 25 × difficulty 2 (medium, core learning)
-- 10 × difficulty 3 (hard, challenge)
+- 20 × difficulty 2 (medium, core learning)
+- 15 × difficulty 3 (hard, challenge)
 
 **Free exercises:** ONLY the first 3 per topic (`free: true`). Rest are premium.
 
