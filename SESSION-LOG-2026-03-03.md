@@ -132,23 +132,60 @@ f7af921  feat: free tier 3→5, add parent rewards preview on upgrade page
 
 ---
 
+## Evening Session (18:00–19:10)
+
+### 14. Mobile Dashboard Layout Fix (commit `8b6c05e`)
+
+**Problem:** Full desktop Sidebar was rendering inline on mobile, eating ~260px before the grade picker:
+- XP/level card
+- Reward widget
+- Tagesaufgabe card
+
+**Fix:** Added `MobileDailyBar` component — single compact 40px row showing ⚡ Tagesaufgabe +30 XP →
+- Hides automatically when daily already done
+- Full Sidebar remains desktop-only (`hidden md:block`)
+- Grade picker and topic list now appear immediately below the nav on mobile
+
+**Files changed:** `src/app/dashboard/PageClient.tsx`
+
+---
+
+### 15. Drag-Drop Answer Bug Fix (commit `ea40d88`)
+
+**Problem:** Some drag-drop exercises always returned "wrong" even for correct answers.
+
+**Root cause:** 2 exercises had `dropAnswers` in backwards format.
+- Correct format: `{ itemId: zoneId }` (item → which zone it belongs to)
+- Wrong format they had: `{ zoneId: itemId }` (reversed — keys were zone IDs)
+
+The check logic iterates zones, filters `items.filter(item => answers[item.id] === zone.id)` — with reversed keys this always returns empty, so every answer is marked wrong.
+
+**Fixed:**
+| File | Exercise | Was | Fixed |
+|------|----------|-----|-------|
+| `grade1/german.ts` | ew13 "Tiere zuordnen" | `{ "z-hund": "hund-tile" }` | `{ "hund-tile": "z-hund" }` |
+| `grade1/math.ts` | f7 Formen-Drag | `{ "zone-rund": "kreis" }` | `{ "kreis": "zone-rund" }` |
+
+**Audit:** Programmatically scanned all drag-drop exercises across all grades/subjects — only these 2 were wrong. Language-agnostic fix (works for DE/FR/IT/EN).
+
+---
+
 ## Current State
 
 - **Live**: https://www.cleverli.ch
 - **Repo**: `riccardogosteli-wq/cleverli` (branch: main)
-- **HEAD**: `9dbf8b8`
+- **HEAD**: `ea40d88`
 - **Vercel**: All deployments green ✅
 
 ## Open / Pending
 
-1. **Free tier raise visible on homepage** — pricing section still says "Erste 3 Aufgaben" in FAQ schema (StructuredData.tsx) and FAQ answer text — needs update to "5"
-2. **Homepage copy** — still says "1.–3. Klasse" in hero paragraph and features list → update to "1.–6. Klasse"
-3. **Vercel Pro upgrade** — required before charging real users ($20/mo)
-4. **Supabase schema migration** — `ALTER TABLE parent_profiles ADD COLUMN IF NOT EXISTS premium_until timestamptz, ADD COLUMN IF NOT EXISTS premium_plan text;`
-5. **Google Search Console** — `verification: { google: "" }` still empty in layout.tsx
-6. **Content batch** — 50 exercises for remaining grade 1-3 topics; 20+ for grades 4-6
-7. **Test full payment flow** — end-to-end with real TWINT
+1. **Resend setup** — Ricci needs to create free account at resend.com, get API key, verify `hallo@cleverli.ch` as sender domain, add `RESEND_API_KEY` to Vercel
+2. **TWINT live payment test** — end-to-end real CHF transaction before launch
+3. **Google Search Console** — `verification: { google: "" }` still empty in layout.tsx
+4. **Content batch** — all topics thin (~10 exercises), need 20–30 per topic
+5. **Grades 4–6** — content + unlock flow still sparse
+6. **Vercel Pro upgrade** — deferred until 5 paying customers
 
 ---
 
-*Last updated: March 3, 2026*
+*Last updated: March 3, 2026 — 19:10*
