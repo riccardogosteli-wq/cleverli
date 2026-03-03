@@ -5,31 +5,7 @@ import { useRouter } from "next/navigation";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
-
-// ── Hardcoded test accounts (replace with Supabase auth later) ────────────────
-const TEST_ACCOUNTS: { email: string; password: string; premium: boolean; name: string }[] = [
-  { email: "test@cleverli.ch",    password: "CleverliTest2026!", premium: true,  name: "Testnutzer Premium" },
-  { email: "free@cleverli.ch",    password: "CleverliTest2026!", premium: false, name: "Testnutzer Free" },
-];
-
-const SESSION_KEY = "cleverli_session";
-
-export function setSession(user: { email: string; name: string; premium: boolean }) {
-  if (typeof window !== "undefined")
-    localStorage.setItem(SESSION_KEY, JSON.stringify(user));
-}
-
-export function getSession(): { email: string; name: string; premium: boolean } | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const raw = localStorage.getItem(SESSION_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch { return null; }
-}
-
-export function clearSession() {
-  if (typeof window !== "undefined") localStorage.removeItem(SESSION_KEY);
-}
+import { supabase } from "@/lib/supabase";
 
 export default function Login() {
   const { tr } = useLang();
@@ -45,26 +21,31 @@ export default function Login() {
     if (loaded && session) router.replace("/dashboard");
   }, [loaded, session, router]);
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (!email || !password) { setError("Bitte E-Mail und Passwort eingeben."); return; }
     setLoading(true);
     setError("");
 
-    // Check test accounts
-    const account = TEST_ACCOUNTS.find(
-      a => a.email.toLowerCase() === email.toLowerCase() && a.password === password
-    );
+    const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
 
-    setTimeout(() => {
-      if (account) {
-        setSession({ email: account.email, name: account.name, premium: account.premium });
-        router.push("/dashboard");
+    if (authError) {
+      setLoading(false);
+      if (authError.message.includes("Invalid login")) {
+        setError("E-Mail oder Passwort falsch.");
+      } else if (authError.message.includes("Email not confirmed")) {
+        setError("Bitte bestätige zuerst deine E-Mail-Adresse.");
       } else {
-        setLoading(false);
-        setError("E-Mail oder Passwort falsch. (Echtanmeldung folgt bald)");
+        setError(authError.message);
       }
-    }, 600);
+    }
+    // on success, onAuthStateChange in useSession handles redirect via session update
+    // router.push happens after session is set
   };
+
+  // Redirect once session is set after login
+  useEffect(() => {
+    if (loaded && session) router.push("/dashboard");
+  }, [session]);
 
   return (
     <div className="min-h-screen bg-green-50 flex flex-col items-center justify-start pt-8 px-4 pb-16">
@@ -75,60 +56,33 @@ export default function Login() {
           <p className="text-sm text-gray-400 mt-1">Willkommen zurück!</p>
         </div>
 
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-3">
-          {error && (
-            <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700">
-              {error}
-            </div>
-          )}
-          <input
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder={tr("emailPlaceholder")}
-            autoComplete="email"
-            className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white text-base transition-colors"
-          />
-          <input
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            placeholder={tr("passwordPlaceholder")}
-            autoComplete="current-password"
-            onKeyDown={e => e.key === "Enter" && handleLogin()}
-            className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white text-base transition-colors"
-          />
-          <button
-            onClick={handleLogin}
-            disabled={loading}
-            className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 active:scale-95 transition-all disabled:opacity-60 text-base"
-          >
-            {loading ? "Wird geladen..." : tr("login")}
-          </button>
-
-          <div className="flex items-center gap-3">
-            <div className="flex-1 h-px bg-gray-200" />
-            <span className="text-xs text-gray-400">oder</span>
-            <div className="flex-1 h-px bg-gray-200" />
+        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)}
+              onKeyDown={e => e.key === "Enter" && handleLogin()}
+              placeholder="deine@email.ch"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-400" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Passwort</label>
+            <input type="password" value={password} onChange={e => setPassword(e.target.value)}
+              onKeyDown={e => e.key === "Enter" && handleLogin()}
+              placeholder="••••••••"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-400" />
           </div>
 
-          <button
-            onClick={() => { setLoading(true); setTimeout(() => router.push("/dashboard"), 600); }}
-            className="w-full border-2 border-gray-200 bg-white py-3 rounded-xl font-semibold text-gray-700 hover:bg-gray-50 active:scale-95 text-sm flex items-center justify-center gap-2 transition-all"
-          >
-            <span>🔵</span> Weiter mit Google
+          {error && <p className="text-red-500 text-sm">{error}</p>}
+
+          <button onClick={handleLogin} disabled={loading}
+            className="w-full bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all disabled:opacity-60">
+            {loading ? "Anmelden…" : tr("login")}
           </button>
+
+          <p className="text-center text-xs text-gray-400">
+            <Link href="/signup" className="text-green-600 underline">Noch kein Konto? Jetzt registrieren →</Link>
+          </p>
         </div>
-
-        <p className="text-center text-sm text-gray-600">
-          {tr("noAccount")}{" "}
-          <Link href="/signup" className="text-green-600 font-semibold hover:underline">{tr("signup")}</Link>
-        </p>
-
-        <p className="text-center text-xs text-gray-400">
-          Direkt ausprobieren?{" "}
-          <Link href="/dashboard" className="text-green-600 underline">Ohne Anmeldung starten →</Link>
-        </p>
       </div>
     </div>
   );

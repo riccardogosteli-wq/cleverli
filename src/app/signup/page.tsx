@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
+import { supabase } from "@/lib/supabase";
 
 const STEP_LABELS = ["Wer bist du?", "Dein Konto", "Deine Klasse"];
 
@@ -33,16 +34,36 @@ export default function Signup() {
     if (loaded && session) router.replace("/dashboard");
   }, [loaded, session, router]);
 
-  const handleStart = () => {
+  const handleStart = async () => {
     setLoading(true);
-    // UJ-2: actually persist the session in localStorage
-    const sessionData = { email, name, premium: false };
-    localStorage.setItem("cleverli_session", JSON.stringify(sessionData));
-    // Also store grade for dashboard
+    setError("");
+
+    // Sign up with Supabase (sends confirmation email)
+    const { error: signupError } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { name }, // stored in user_metadata, trigger copies to parent_profiles
+      },
+    });
+
+    if (signupError) {
+      setLoading(false);
+      if (signupError.message.includes("already registered")) {
+        setError("Diese E-Mail ist bereits registriert. Bitte einloggen.");
+      } else {
+        setError(signupError.message);
+      }
+      return;
+    }
+
+    // Also store grade for dashboard (localStorage is fine for this)
     localStorage.setItem("cleverli_last_grade", String(grade));
-    // Mark as new user for onboarding
     localStorage.setItem("cleverli_new_user", "true");
-    setTimeout(() => router.push("/dashboard"), 400);
+
+    // Supabase may require email confirmation — go to dashboard anyway
+    // (useSession will pick up the session via onAuthStateChange)
+    router.push("/dashboard");
   };
 
   const inputCls = "w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white transition-colors";
