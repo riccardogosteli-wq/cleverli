@@ -1,17 +1,36 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLang } from "@/lib/LangContext";
 import { LANGUAGES, Lang } from "@/lib/i18n";
 import XpBar from "./XpBar";
 import { useSession } from "@/hooks/useSession";
+import { loadFamily, getActiveProfileId, setActiveProfileId, FamilyMember } from "@/lib/family";
 
 export default function Navigation() {
   const { lang, setLang, tr } = useLang();
   const { session, isPremium, logout } = useSession();
   const [open, setOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const [members, setMembers] = useState<FamilyMember[]>([]);
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const family = loadFamily();
+    setMembers(family.members);
+    setActiveId(getActiveProfileId());
+  }, []);
+
+  const activeMember = members.find(m => m.id === activeId) ?? members[0] ?? null;
+
+  const switchProfile = (id: string) => {
+    setActiveProfileId(id);
+    setActiveId(id);
+    setProfileOpen(false);
+    window.location.reload(); // reload to reset profile context
+  };
   const currentLang = LANGUAGES.find(l => l.code === lang);
 
   return (
@@ -51,6 +70,35 @@ export default function Navigation() {
             <span style={{ fontSize: "20px" }}>🎁</span>
             <span className="hidden md:inline text-xs">{tr("navRewardsShort").replace("🎁 ", "")}</span>
           </Link>
+          {/* Profile switcher — shown when 2+ child profiles exist */}
+          {session && members.length > 1 && (
+            <div className="relative">
+              <button onClick={() => setProfileOpen(v => !v)}
+                className="flex items-center gap-1.5 text-sm bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-full transition-colors font-medium">
+                <span>{activeMember?.avatar ?? "👤"}</span>
+                <span className="hidden sm:inline text-xs text-gray-700 max-w-[60px] truncate">{activeMember?.name ?? ""}</span>
+                <span className="text-gray-400 text-xs">▾</span>
+              </button>
+              {profileOpen && (
+                <div className="absolute right-0 top-full mt-1 bg-white rounded-2xl shadow-lg border border-gray-100 p-2 min-w-[160px] z-50">
+                  {members.map(m => (
+                    <button key={m.id} onClick={() => switchProfile(m.id)}
+                      className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl text-sm transition-colors ${
+                        m.id === activeId ? "bg-green-50 text-green-700 font-semibold" : "hover:bg-gray-50 text-gray-700"
+                      }`}>
+                      <span className="text-lg">{m.avatar}</span>
+                      <div className="text-left">
+                        <div className="font-medium leading-tight">{m.name}</div>
+                        <div className="text-xs opacity-60">{m.grade}. Klasse</div>
+                      </div>
+                      {m.id === activeId && <span className="ml-auto text-green-500 text-xs">✓</span>}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
           {session ? (
             <>
               {isPremium && (

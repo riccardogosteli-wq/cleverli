@@ -12,6 +12,7 @@ import { getTopics, SUBJECTS } from "@/data/index";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
+import ChildProfileManager from "@/components/ChildProfileManager";
 
 interface TopicStat {
   grade: number;
@@ -122,6 +123,11 @@ export default function ParentsDashboard() {
         >
           🔒 <span>Elternbereich sperren</span>
         </button>
+      </div>
+
+      {/* ── Child Profiles ── */}
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+        <ChildProfileManager />
       </div>
 
       {/* ── Header ── */}
