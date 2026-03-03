@@ -68,6 +68,7 @@ export default function DailyPage() {
       total: 1,
       grade,
       subject,
+      // eslint-disable-next-line react-compiler/react-compiler
       topicDurationMs: Date.now() - startTime,
       lang,
     });
