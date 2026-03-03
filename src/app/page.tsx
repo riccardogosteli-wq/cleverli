@@ -55,7 +55,10 @@ export default function Home() {
       {/* Subjects */}
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-10">{tr("subjectsTitle")}</h2>
+          <div className="flex flex-col items-center gap-2 mb-10">
+            <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" width={72} height={72} className="drop-shadow-md" />
+            <h2 className="text-2xl font-bold text-center text-gray-800">{tr("subjectsTitle")}</h2>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { emoji: "🔢", key: "math", label: "math", color: "bg-blue-50 border-blue-200 text-blue-800 hover:bg-blue-100", href: "/dashboard?subject=math" },

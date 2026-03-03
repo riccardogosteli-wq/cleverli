@@ -279,12 +279,21 @@ function DashboardInner() {
           <div className="hidden md:block"><Sidebar /></div>
           <div className="space-y-5">
             <div className="md:hidden mb-4"><Sidebar /></div>
-            <div className="flex items-center gap-2">
+            {/* PM-20: Nicer subject picker header with mascot */}
+            <div className="flex items-center gap-3">
               <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3 min-w-[44px]">←</button>
-              <span className="text-2xl">{GRADE_COLORS[grade-1].emoji}</span>
-              <h2 className="text-lg font-bold text-gray-800">
-                {grade}. {tr("gradeLabel")} — {lang === "fr" ? "Que veux-tu apprendre?" : lang === "it" ? "Cosa vuoi imparare?" : lang === "en" ? "What to learn?" : "Was lernen?"}
-              </h2>
+              <Image
+                src="/images/mascot/cleverli-thumbsup.png"
+                alt="Cleverli"
+                width={52} height={52}
+                className="drop-shadow-md shrink-0"
+              />
+              <div>
+                <h2 className="text-lg font-black text-gray-800 leading-tight">
+                  {lang === "fr" ? "Que veux-tu apprendre?" : lang === "it" ? "Cosa vuoi imparare?" : lang === "en" ? "What do you want to learn?" : "Was möchtest du lernen?"}
+                </h2>
+                <div className="text-xs text-gray-400">{grade}. {tr("gradeLabel")}</div>
+              </div>
             </div>
             <div className="grid gap-3 sm:grid-cols-1">
               {SUBJECTS.map(s => {
