@@ -11,7 +11,9 @@ export default function ProgressBar({ current, total, streak }: Props) {
   return (
     <div className="space-y-1 px-1">
       <div className="flex justify-between items-center text-xs text-gray-500">
-        <span className="font-medium">Aufgabe {current} von {total}</span>
+        <span className="font-medium">
+          {current}/{total} <span className="text-gray-400 font-normal hidden sm:inline">Aufgaben</span>
+        </span>
         {streak >= 3 && (
           <span className="text-orange-500 font-bold animate-pulse">
             🔥 {streak}er Serie!

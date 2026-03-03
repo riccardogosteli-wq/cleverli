@@ -117,7 +117,7 @@ export default function RewardsPage() {
   if (loaded && !isPremium) {
     return (
       <div className="max-w-sm mx-auto px-4 py-16 text-center space-y-5">
-        <Image src="/cleverli-think.png" alt="Cleverli Maskottchen" width={110} height={110} className="mx-auto drop-shadow-md" />
+        <Image src="/cleverli-think.png" alt="Cleverli Maskottchen" width={110} height={110} className="mx-auto drop-shadow-md hidden sm:block" />
         <h1 className="text-2xl font-extrabold text-gray-900">Belohnungen 🎁</h1>
         <p className="text-gray-500 text-sm leading-relaxed">
           Mit dem Belohnungs-System kannst du echte Belohnungen für dein Kind einrichten — und es motivieren, dranzubleiben.

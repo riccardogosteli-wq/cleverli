@@ -22,10 +22,11 @@ export default function MobileBottomNav() {
     { href: "/rewards",   icon: "🎁", label: TAB_LABELS.rewards[li] },
   ];
 
-  // Don't show during active exercise (clutters the screen)
+  // Don't show during active exercise or on auth/onboarding pages
   const isExercise = pathname.startsWith("/learn/");
+  const isAuthPage = ["/signup", "/login", "/reset-password"].includes(pathname);
 
-  if (isExercise) return null;
+  if (isExercise || isAuthPage) return null;
 
   return (
     <nav

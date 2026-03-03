@@ -235,7 +235,7 @@ export default function TrophiesPage() {
                   {inGroup.filter(a => earned.has(a.id)).length}/{inGroup.length}
                 </span>
               </h3>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {inGroup.map(ach => {
                   const isEarned = earned.has(ach.id);
                   const title = lang === "fr" ? ach.titleFr : lang === "it" ? ach.titleIt : lang === "en" ? ach.titleEn : ach.title;

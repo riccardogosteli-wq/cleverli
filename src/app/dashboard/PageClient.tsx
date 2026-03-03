@@ -203,7 +203,7 @@ function DashboardInner() {
   // ── STEP 1: Choose grade ──────────────────────────────────────────────────
   if (!grade) {
     return (
-      <div className="max-w-5xl mx-auto px-4 py-6">
+      <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col md:block" style={{minHeight: "calc(100dvh - 140px)"}}>
         <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
           {/* Sidebar — hidden on mobile (shown inline below) */}
           <div className="hidden md:block">
@@ -250,7 +250,7 @@ function DashboardInner() {
   // ── STEP 2: Choose subject (only if NOT pre-selected from URL) ────────────
   if (!subject) {
     return (
-      <div className="max-w-5xl mx-auto px-4 py-6">
+      <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col md:block" style={{minHeight: "calc(100dvh - 140px)"}}>
         <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
           <div className="hidden md:block">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
           <div className="space-y-5">
