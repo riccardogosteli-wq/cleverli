@@ -139,6 +139,37 @@ export default function DailyPage() {
   // ── Active challenge ─────────────────────────────────────────────
   return (
     <main className="max-w-lg mx-auto px-4 py-6 space-y-4">
+      {/* UJ-10: Streak reminder — warn if streak > 0 and not yet done */}
+      {profile.dailyStreak > 0 && (
+        <div className={`flex items-center gap-3 rounded-2xl px-4 py-2.5 text-sm font-medium border-2 ${
+          profile.streakGraceUsed
+            ? "bg-red-50 border-red-300 text-red-800"
+            : "bg-orange-50 border-orange-300 text-orange-800"
+        }`}>
+          <span className="text-xl">{profile.streakGraceUsed ? "🚨" : "🔥"}</span>
+          <div>
+            <span className="font-bold">
+              {profile.streakGraceUsed
+                ? (lang === "fr" ? "⚠️ Dernière chance — ta série expire ce soir!"
+                   : lang === "it" ? "⚠️ Ultima possibilità — la tua serie scade stasera!"
+                   : lang === "en" ? "⚠️ Last chance — your streak expires tonight!"
+                   : "⚠️ Letzte Chance — dein Streak endet heute Nacht!")
+                : (lang === "fr" ? `🔥 Série de ${profile.dailyStreak} jours — continue!`
+                   : lang === "it" ? `🔥 Serie di ${profile.dailyStreak} giorni — continua!`
+                   : lang === "en" ? `🔥 ${profile.dailyStreak}-day streak — keep it up!`
+                   : `🔥 ${profile.dailyStreak}-Tage-Streak — halte ihn aufrecht!`)
+              }
+            </span>
+            <span className="ml-2 text-xs opacity-70">
+              {lang === "fr" ? "Termine aujourd'hui avant minuit"
+               : lang === "it" ? "Completa prima di mezzanotte"
+               : lang === "en" ? "Complete before midnight"
+               : "Aufgabe vor Mitternacht lösen"}
+            </span>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex items-center gap-3 bg-amber-50 border-2 border-amber-300 rounded-2xl px-4 py-3">
         <span className="text-3xl">⚡</span>

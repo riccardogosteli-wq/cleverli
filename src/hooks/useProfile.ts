@@ -19,6 +19,7 @@ export interface Profile {
   costume: number;             // 0=none, 1=hat, 2=cape, 3=crown
   weeklyXp: number;            // resets every Monday
   weeklyXpDate: string;        // "YYYY-WW" for reset detection
+  streakGraceUsed: boolean;    // UJ-10: one-time 1-day grace period per streak run
 }
 
 const PROFILE_KEY = "cleverli_profile";
@@ -35,6 +36,7 @@ const DEFAULT_PROFILE: Profile = {
   costume: 0,
   weeklyXp: 0,
   weeklyXpDate: "",
+  streakGraceUsed: false,
 };
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -169,12 +171,18 @@ export function useProfile() {
     const today = todayStr();
     const diff = diffDays(p.lastPlayedDate, today);
     let streak = p.dailyStreak;
+    let graceUsed = p.streakGraceUsed;
     if (diff === 1) {
-      // consecutive day — streak maintained
+      // consecutive day — streak maintained, grace resets for next time
+      graceUsed = false;
+    } else if (diff === 2 && !graceUsed && streak > 0) {
+      // UJ-10: missed exactly 1 day → apply grace period (streak survives, grace now used)
+      graceUsed = true;
     } else if (diff > 1) {
       streak = 0;
+      graceUsed = false;
     }
-    const updated = { ...p, dailyStreak: streak };
+    const updated = { ...p, dailyStreak: streak, streakGraceUsed: graceUsed };
 
     // New device/browser: localStorage is empty — try loading from Supabase
     const childId = getActiveProfileId();
@@ -225,11 +233,22 @@ export function useProfile() {
       // Achievement XP rewards
       const achievementXp = 0; // calculated below after we know new achievements
 
-      // Streak update
+      // Streak update (UJ-10: grace period handled on load; here we just increment/set on correct answer)
       let newStreak = prev.dailyStreak;
+      let newGraceUsed = prev.streakGraceUsed;
       if (opts.correct) {
         if (prev.lastPlayedDate !== today) {
-          newStreak = diff === 1 ? prev.dailyStreak + 1 : 1;
+          if (diff === 1) {
+            newStreak = prev.dailyStreak + 1;
+            newGraceUsed = false; // fresh consecutive day, reset grace
+          } else if (diff === 2 && !prev.streakGraceUsed && prev.dailyStreak > 0) {
+            // Grace day — they missed yesterday but grace was preserved on load
+            newStreak = prev.dailyStreak + 1;
+            newGraceUsed = true;
+          } else {
+            newStreak = 1;
+            newGraceUsed = false;
+          }
         }
       }
 
@@ -265,6 +284,7 @@ export function useProfile() {
         costume,
         weeklyXp,
         weeklyXpDate: currentWeek,
+        streakGraceUsed: newGraceUsed,
       };
 
       // Check achievements
