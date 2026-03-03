@@ -17,9 +17,13 @@ export async function POST(req: NextRequest) {
     // Verify Payrexx webhook signature
     if (SIGNING_KEY) {
       const sig = req.headers.get("payrexx-signature") ?? req.headers.get("x-payrexx-signature") ?? "";
+      if (!sig) {
+        console.warn("[payrexx-webhook] missing signature header");
+        return NextResponse.json({ error: "missing_signature" }, { status: 401 });
+      }
       const { createHmac } = await import("crypto");
       const expected = createHmac("sha256", SIGNING_KEY).update(text).digest("hex");
-      if (sig && sig !== expected) {
+      if (sig !== expected) {
         console.warn("[payrexx-webhook] invalid signature");
         return NextResponse.json({ error: "invalid_signature" }, { status: 401 });
       }

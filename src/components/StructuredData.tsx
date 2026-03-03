@@ -87,7 +87,7 @@ export default function StructuredData() {
             name: "Für welche Klassen ist Cleverli?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Aktuell decken wir die 1., 2. und 3. Klasse ab (Schweizer Lehrplan 21, alle Kantone).",
+              text: "Cleverli deckt die 1.–6. Klasse ab (Schweizer Lehrplan 21, alle Kantone).",
             },
           },
           {
