@@ -14,6 +14,7 @@ export default function Signup() {
   const { session, loaded } = useSession();
   const [step, setStep] = useState(1);
   const [role, setRole] = useState<"parent" | "child" | null>(null);
+  const setRoleAndStore = (r: "parent" | "child") => { setRole(r); localStorage.setItem("cleverli_role", r); };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -190,7 +191,11 @@ export default function Signup() {
         {/* ── Step 3: Grade ── */}
         {step === 3 && (
           <div className="space-y-4">
-            <h1 className="text-xl font-bold text-gray-900 text-center">{tr("whichClass")}</h1>
+            <h1 className="text-xl font-bold text-gray-900 text-center">
+              {role === "parent"
+                ? tr("whichClassChild") ?? "Welche Klasse besucht dein Kind?"
+                : tr("whichClass")}
+            </h1>
             <div className="grid grid-cols-3 gap-3">
               {[1, 2, 3].map(g => (
                 <button key={g} onClick={() => setGrade(g)}

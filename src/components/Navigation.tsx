@@ -83,6 +83,17 @@ export default function Navigation() {
             <span style={{ fontSize: "20px" }}>🎁</span>
             <span className="hidden md:inline text-xs">{tr("navRewardsShort").replace("🎁 ", "")}</span>
           </Link>
+          {/* Parent dashboard link — shown when logged in */}
+          {session && (
+            <Link
+              href="/parents"
+              className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-800 font-semibold py-2 px-2.5 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors whitespace-nowrap border border-gray-200"
+              title={tr("navParents") ?? "Elternbereich"}
+            >
+              <span style={{ fontSize: "20px" }}>📊</span>
+              <span className="hidden md:inline text-xs">{tr("navParents") ?? "Elternbereich"}</span>
+            </Link>
+          )}
           {/* Profile switcher — shown when 2+ child profiles exist */}
           {session && members.length > 1 && (
             <div className="relative">
@@ -102,7 +113,7 @@ export default function Navigation() {
                       <span className="text-lg">{m.avatar}</span>
                       <div className="text-left">
                         <div className="font-medium leading-tight">{m.name}</div>
-                        <div className="text-xs opacity-60">{m.grade}. Klasse</div>
+                        <div className="text-xs opacity-60">{m.grade}. {tr("gradeLabel")}</div>
                       </div>
                       {m.id === activeId && <span className="ml-auto text-green-500 text-xs">✓</span>}
                     </button>
@@ -208,36 +219,75 @@ export default function Navigation() {
           className="sm:hidden bg-white border-t border-gray-100 px-4 py-3 flex flex-col gap-2"
           style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
         >
-          <Link href="/login"
-            className="text-base text-gray-700 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 active:bg-gray-100"
-            onClick={() => setOpen(false)}>
-            {tr("login")}
-          </Link>
-          <Link href="/signup"
-            className="text-base bg-green-600 text-white px-4 py-3 rounded-full text-center font-bold active:bg-green-700"
-            onClick={() => setOpen(false)}>
-            {tr("signup")}
-          </Link>
+          {/* Core nav — always visible */}
           <Link href="/dashboard"
             className="text-base border-2 border-green-600 text-green-700 px-4 py-3 rounded-full text-center font-semibold active:bg-green-50"
             onClick={() => setOpen(false)}>
-            {tr("goLearn")}
+            📚 {tr("goLearn")}
           </Link>
           <Link href="/daily"
             className="text-base border-2 border-amber-400 text-amber-700 px-4 py-3 rounded-full text-center font-semibold active:bg-amber-50"
             onClick={() => setOpen(false)}>
-            {tr("navDaily")}
+            ⚡ {tr("navDaily")}
           </Link>
           <Link href="/trophies"
             className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
             onClick={() => setOpen(false)}>
-            {tr("navTrophies")}
+            🏆 {tr("navTrophies")}
           </Link>
           <Link href="/rewards"
             className="text-base text-amber-700 font-medium py-3 px-4 rounded-xl hover:bg-amber-50"
             onClick={() => setOpen(false)}>
-            {tr("navRewards")}
+            🎁 {tr("navRewards")}
           </Link>
+
+          <div className="border-t border-gray-100 pt-2 mt-1 space-y-2">
+          {session ? (
+            <>
+              {/* Parent & Kids links */}
+              <Link href="/parents"
+                className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 flex items-center gap-2"
+                onClick={() => setOpen(false)}>
+                📊 {tr("navParents") ?? "Elternbereich"}
+              </Link>
+              {/* Premium upsell or badge */}
+              {!isPremium ? (
+                <Link href="/upgrade"
+                  className="text-base bg-amber-500 text-white px-4 py-3 rounded-full text-center font-bold active:bg-amber-600"
+                  onClick={() => setOpen(false)}>
+                  ⭐ Upgrade → Premium
+                </Link>
+              ) : (
+                <div className="text-sm text-amber-600 font-bold bg-amber-50 px-4 py-2 rounded-full text-center border border-amber-200">
+                  ⭐ Premium aktiv
+                </div>
+              )}
+              <Link href="/account"
+                className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
+                onClick={() => setOpen(false)}>
+                👤 {tr("navAccount") ?? "Konto"}
+              </Link>
+              <button
+                onClick={() => { logout(); setOpen(false); }}
+                className="w-full text-base text-red-500 font-medium py-3 px-4 rounded-xl hover:bg-red-50 text-left">
+                {tr("logout") ?? "Abmelden"}
+              </button>
+            </>
+          ) : (
+            <>
+              <Link href="/login"
+                className="text-base text-gray-700 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 active:bg-gray-100"
+                onClick={() => setOpen(false)}>
+                {tr("login")}
+              </Link>
+              <Link href="/signup"
+                className="text-base bg-green-600 text-white px-4 py-3 rounded-full text-center font-bold active:bg-green-700"
+                onClick={() => setOpen(false)}>
+                {tr("signup")}
+              </Link>
+            </>
+          )}
+          </div>
 
           {/* Language switcher in mobile menu */}
           <div className="border-t border-gray-100 pt-2 mt-1">

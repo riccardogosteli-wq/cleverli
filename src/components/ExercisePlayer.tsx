@@ -256,7 +256,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           onClick={() => setDone(true)}
           className="w-full border-2 border-gray-200 text-gray-500 py-3 rounded-2xl font-medium text-sm hover:bg-gray-50 active:scale-95 transition-all"
         >
-          Weiter ohne Üben →
+          {tr("continueWithout") ?? "Weiter ohne Üben"} →
         </button>
       </div>
     );
@@ -275,7 +275,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             <p className="text-green-700 font-bold">🎉 Alle Fehler korrigiert!</p>
           ) : (
             <p className="text-gray-600 font-medium">
-              {score} / {totalEx} richtig{perfect && " — Perfekt! 🌟"}
+              {score} / {totalEx} {tr("correct")}{perfect && (" — " + (tr("perfectRun") ?? "Perfekt! 🌟"))}
             </p>
           )}
           <div className="text-4xl flex justify-center gap-2">
@@ -300,7 +300,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             {nextTopic && (
               <Link href={`/learn/${grade}/${subject}/${nextTopic.id}`}
                 className="text-sm bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all flex items-center gap-1">
-                Nächstes Thema →
+                {tr("nextTopic") ?? "Nächstes Thema"} →
               </Link>
             )}
             <Link href={`/learn/${grade}/${subject}`}
@@ -333,15 +333,15 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         <div className="flex flex-col gap-2 w-full max-w-xs">
           <Link href={checkoutUrl("monthly")}
             className="block text-center bg-green-600 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
-            TWINT / Karte — CHF 9.90{tr("perMonth")}
+TWINT / Karte — CHF 9.90{tr("perMonth")}
           </Link>
           <Link href={checkoutUrl("yearly")}
             className="block text-center border-2 border-green-600 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
-            Jährlich — CHF 99/Jahr (2 Monate gratis)
+{tr("yearlyOption") ?? "Jährlich — CHF 99/Jahr"}
           </Link>
           {!uid && (
             <Link href="/signup" className="block text-center text-xs text-gray-400 hover:text-gray-600 underline pt-1">
-              Zuerst kostenloses Konto erstellen
+              {tr("createFreeAccountFirst") ?? "Zuerst kostenloses Konto erstellen"}
             </Link>
           )}
         </div>

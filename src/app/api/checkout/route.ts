@@ -38,6 +38,12 @@ export async function GET(req: NextRequest) {
 
   if (!API_KEY) return NextResponse.json({ error: "payment_not_configured" }, { status: 503 });
 
+  // Guest checkout: redirect to signup with plan pre-selected so uid is captured
+  if (!userId) {
+    const signupUrl = `${BASE_URL}/signup?next=/api/checkout?plan=${plan}`;
+    return NextResponse.redirect(signupUrl);
+  }
+
   const p = PLANS[plan] ?? PLANS.monthly;
 
   const result = await payrexxPost("Gateway", {
