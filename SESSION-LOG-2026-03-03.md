@@ -188,4 +188,80 @@ The check logic iterates zones, filters `items.filter(item => answers[item.id] =
 
 ---
 
-*Last updated: March 3, 2026 — 19:10*
+---
+
+## Late Evening Session (19:10–20:20)
+
+### 16. SEO Improvements (commit `5988214`)
+- **hreflang tags** for `de-CH`, `fr-CH`, `it-CH`, `en` added to layout — Google now knows it's multilingual
+- **Homepage "Alle Themen" section** — 18 direct `/learn/[grade]/[subject]` links added above footer for PageRank flow to all topic pages
+- **Topic pages: SSR exercise count** — "X interaktive Übungen · Mathematik 1. Klasse · Lehrplan 21 Schweiz" now visible to Google
+- **BreadcrumbList JSON-LD** schema added to all topic pages → sitelinks in search results
+- **Grade 4–6 added** to `GRADE_NAMES` in SubjectPage metadata
+
+### 17. Pre-launch Audit #2 — Fixes (commit `4aa0391`)
+- **Upgrade page FR/IT/EN**: "1–3" → "1–6" in all 3 languages
+- **Upgrade page "50 Aufgaben"** → "Alle Aufgaben" (no false number claim in all 4 languages)
+- **FAQ structured data**: "1., 2. und 3. Klasse" → "1.–6. Klasse" in StructuredData.tsx
+- **Webhook signature**: hardened — now blocks requests with missing signature header (was soft-skip)
+
+### 18. Reset Profile Progress (commit `5b7706b`)
+- **New "Zurücksetzen" button** on each profile card in family management
+- **Confirmation modal**: user must type "reset" to confirm (orange button stays disabled until correct)
+- **What gets reset**: XP, streak, achievements (profile name/grade stays)
+- Translates to all 4 languages
+
+### 19. i18n Fix — mathDesc keys (commit `8e32c56`)
+- `mathDesc`, `germanDesc`, `scienceDesc` were used in HomeClient but missing from i18n.ts
+- Added to all 4 languages (DE/FR/IT/EN) — was showing raw key names on homepage
+
+### 20. Cross-device Progress Sync Fix (commit `9b24b76`)
+- **Bug**: topic progress (`cleverli_1_math_topic`) NOT restored on new device — only XP/streak was
+- **Fix**: `loadTopicProgressFromSupabase()` now called on initial load (not just on profile switch)
+- **How it works**: on new device with empty localStorage + logged-in user → restores both profile stats AND all topic progress from Supabase simultaneously
+
+### 21. SEO — Grade 4–6 + Structured Data (included in #16)
+
+### 22. Kanban Board — 7 Cleverli tasks added
+Tasks added to command-center DB under "cleverli" type:
+- 🔴 Cookie consent banner, Set up Resend email, Live TWINT payment test, GSC verification, Blog content
+- 🟡 Backlinks — Swiss edu directories, Core Web Vitals check
+
+### 23. Mobile Audit + Fixes (commit `2d4bdce`)
+Full 390×844 audit across 7 pages. Fixed:
+- **Dashboard dead space**: grade + subject picker now fill viewport height (`min-h-[100dvh-140px]`)
+- **Trophies**: `grid-cols-2` → `grid-cols-1` on mobile — larger touch targets, readable text
+- **Bottom nav on signup/login/reset-password**: now hidden (was showing greyed nav with no purpose)
+- **Rewards mascot**: hidden on mobile (`hidden sm:block`) — saves 25% vertical height
+- **Progress indicator**: "Aufgabe 1 von 10" → clean "1/10" on mobile
+
+### 24. Mascot Size (commit `35d31e0`)
+- Subject picker mascot: 52px → 80px
+
+### 25. Lehrplan 21 Label Deduplication (commit `6813912`)
+- "Klasse 1–6 · Lehrplan 21 →" was repeating in each of the 3 subject cards on homepage
+- Removed from cards, now shown once as centered caption below grid
+- Translates for FR/IT/EN
+
+---
+
+## Current State
+
+- **Live**: https://www.cleverli.ch
+- **Repo**: `riccardogosteli-wq/cleverli` (branch: main)
+- **HEAD**: `6813912`
+- **Vercel**: All deployments green ✅
+
+## Open / Pending
+
+1. **Resend setup** — create free account at resend.com, get API key, verify `hallo@cleverli.ch`, add `RESEND_API_KEY` to Vercel
+2. **Cookie consent banner** — required before launch (Swiss nFADP + EU GDPR)
+3. **TWINT live payment test** — end-to-end real CHF transaction before launch
+4. **Google Search Console** — verify site → submit sitemap
+5. **Blog content** — 5–10 posts for long-tail SEO
+6. **Content** — all topics need 20–30 exercises (currently ~10–15)
+7. **Vercel Pro upgrade** — deferred until 5 paying customers
+
+---
+
+*Last updated: March 3, 2026 — 20:20*
