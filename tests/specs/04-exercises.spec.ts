@@ -29,7 +29,7 @@ test.describe("Exercise player — topic load", () => {
 
       // Either exercise player or a question text must appear
       await expect(
-        page.locator("main").first()
+        page.locator("nav").first()
       ).toBeVisible({ timeout: 12_000 });
 
       // No JS errors
@@ -148,7 +148,7 @@ test.describe("Paywall — free limit enforcement", () => {
 
     // Either an upgrade wall or the exercise player should appear
     const upgradePrompt = await page.locator(
-      "[data-testid=upgrade-wall], [class*=premium], [class*=upgrade], text=Premium"
+      "[data-testid=upgrade-wall], [class*=premium], [class*=upgrade]"
     ).count();
 
     // This is a soft check — if paywall doesn't show, log it

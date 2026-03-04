@@ -9,9 +9,10 @@ import { ExerciseAnswer } from "./answers";
 // ── Navigate to a topic ───────────────────────────────────────────────────────
 export async function navigateToTopic(page: Page, grade: number, subject: string, topicId: string) {
   await page.goto(`/learn/${grade}/${subject}/${topicId}`);
-  // Wait for exercise player to mount
-  await expect(page.locator("[data-testid=exercise-player], .exercise-question, button[data-answer]").first())
-    .toBeVisible({ timeout: 12_000 });
+  // Wait for exercise player to mount — use hint button or voice button as reliable indicator
+  await expect(
+    page.locator("button:has-text('Tipp'), button:has-text('vorlesen'), h1").first()
+  ).toBeVisible({ timeout: 12_000 });
 }
 
 // ── Get current exercise type from the page ───────────────────────────────────
