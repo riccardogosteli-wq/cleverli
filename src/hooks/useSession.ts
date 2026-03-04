@@ -50,13 +50,15 @@ export function useSession() {
         setSession(sess);
         localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
       } else {
-        // 2. Fall back to localStorage session (existing users)
+        // 2. No Supabase session — fall back to localStorage cache
+        // (handles token refresh delays, spurious sign-outs, legacy users)
         try {
           const raw = localStorage.getItem(SESSION_KEY);
           setSession(raw ? JSON.parse(raw) : null);
         } catch { setSession(null); }
       }
       setLoaded(true);
+
     });
 
     // Listen for auth state changes
@@ -81,8 +83,15 @@ export function useSession() {
           setSession(sess);
           localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
         } else if (event === "SIGNED_OUT") {
-          setSession(null);
-          localStorage.removeItem(SESSION_KEY);
+          // Only clear session on explicit sign-out (via logout()).
+          // Supabase v2 fires spurious SIGNED_OUT on page reload/tab switch —
+          // if we have a cached session in localStorage, keep it to avoid
+          // randomly logging users out mid-session.
+          const cached = localStorage.getItem(SESSION_KEY);
+          if (!cached) {
+            setSession(null);
+          }
+          // Never remove SESSION_KEY here — only logout() should do that.
         }
       }
     );
