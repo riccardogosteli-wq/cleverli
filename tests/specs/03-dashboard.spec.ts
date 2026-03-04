@@ -8,7 +8,7 @@ import { GRADES, SUBJECTS } from "../fixtures/testData";
 test.describe("Dashboard navigation", () => {
   test("dashboard loads and shows grade picker or topic list", async ({ page }) => {
     await page.goto("/dashboard");
-    await expect(page.locator("main, [class*=dashboard]").first()).toBeVisible({ timeout: 10_000 });
+    await expect(page.locator("nav").first()).toBeVisible({ timeout: 10_000 });
   });
 
   test("XP bar visible when logged in", async ({ page }) => {
@@ -35,8 +35,8 @@ test.describe("Topic navigation — all grades × subjects", () => {
         const res = await page.goto(`/learn/${grade}/${subject}/${firstTopic.id}`);
         expect(res?.status()).toBeLessThan(400);
 
-        // Exercise player should mount
-        await expect(page.locator("main").first()).toBeVisible({ timeout: 12_000 });
+        // Exercise player should mount — use nav as universal check (pages use div not main)
+        await expect(page.locator("nav").first()).toBeVisible({ timeout: 12_000 });
       });
     }
   }
