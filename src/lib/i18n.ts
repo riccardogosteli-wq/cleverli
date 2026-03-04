@@ -22,7 +22,7 @@ export const t: Record<Lang, Record<string, string>> = {
     subjectsTitle: "Was möchtest du lernen?",
     math: "Mathematik",
     german: "Deutsch",
-    science: "NMG",
+    science: "Natur & Gesellschaft",
     mathDesc: "Zahlen, Rechnen, Geometrie",
     germanDesc: "Lesen, Schreiben, Grammatik",
     scienceDesc: "Natur, Mensch, Gesellschaft",

@@ -8,6 +8,7 @@ const TAB_LABELS: Record<string, [string, string, string, string]> = {
   daily:    ["Täglich",   "Quotidien", "Quotidiano","Daily"],
   trophies: ["Trophäen",  "Trophées",  "Trofei",   "Trophies"],
   rewards:  ["Prämien",   "Primes",    "Premi",    "Rewards"],
+  family:   ["Familie",   "Famille",   "Famiglia", "Family"],
 };
 
 export default function MobileBottomNav() {
@@ -20,6 +21,7 @@ export default function MobileBottomNav() {
     { href: "/daily",     icon: "⚡", label: TAB_LABELS.daily[li] },
     { href: "/trophies",  icon: "🏆", label: TAB_LABELS.trophies[li] },
     { href: "/rewards",   icon: "🎁", label: TAB_LABELS.rewards[li] },
+    { href: "/parents",   icon: "👨‍👩‍👧", label: TAB_LABELS.family[li] },
   ];
 
   // Don't show during active exercise or on auth/onboarding pages
@@ -35,7 +37,9 @@ export default function MobileBottomNav() {
       aria-label="Mobile Navigation"
     >
       {tabs.map(tab => {
-        const isActive = pathname === tab.href || (tab.href === "/dashboard" && pathname.startsWith("/dashboard"));
+        const isActive = pathname === tab.href
+          || (tab.href === "/dashboard" && pathname.startsWith("/dashboard"))
+          || (tab.href === "/parents" && (pathname === "/parents" || pathname === "/family"));
         return (
           <Link
             key={tab.href}

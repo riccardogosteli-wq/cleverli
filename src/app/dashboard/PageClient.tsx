@@ -42,7 +42,7 @@ const SUBJECT_META: Record<string, {
   science: {
     emoji: "🌍", iconBg: "bg-green-100",
     label:    { de: "NMG",          fr: "NHS",           it: "NUS",          en: "Science" },
-    subtitle: { de: "Natur, Mensch, Gesellschaft", fr: "Nature, Humain et Société", it: "Natura, Uomo e Società", en: "Nature & Society" },
+    subtitle: { de: "Natur & Gesellschaft", fr: "Nature & Société", it: "Natura & Società", en: "Nature & Society" },
   },
 };
 
@@ -217,6 +217,14 @@ function DashboardInner() {
             </div>
 
             {/* Grade picker header */}
+            <div className="text-center">
+              <h2 className="text-xl font-bold text-gray-800">
+                {lang === "fr" ? "Quelle classe ?" : lang === "it" ? "Che classe ?" : lang === "en" ? "Which grade?" : "Welche Klasse?"}
+              </h2>
+              <p className="text-xs text-gray-400 mt-0.5">
+                {lang === "fr" ? "Choisis ta classe" : lang === "it" ? "Scegli la tua classe" : lang === "en" ? "Choose your grade" : "Wähle deine Klasse"}
+              </p>
+            </div>
             <div className="text-center space-y-1">
               {subject && SUBJECT_META[subject] && (
                 <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-800 text-sm font-semibold px-3 py-1.5 rounded-full mb-1">

@@ -97,9 +97,9 @@ export default function FamilyPage() {
         <Image src="/cleverli-jump-star.png" alt="Cleverli" width={60} height={60} className="drop-shadow-md" />
         <div>
           <h1 className="text-xl font-black text-gray-800">
-            {t("Familien-Rangliste 🏆", "Classement familial 🏆", "Classifica famiglia 🏆", "Family Leaderboard 🏆")}
+            {t("Familienprofile 👨‍👩‍👧‍👦", "Profils familiaux 👨‍👩‍👧‍👦", "Profili famiglia 👨‍👩‍👧‍👦", "Family Profiles 👨‍👩‍👧‍👦")}
           </h1>
-          <p className="text-xs text-gray-400">{t("Diese Woche","Cette semaine","Questa settimana","This week")} · {t("Bis zu 3 Kinder","Jusqu'à 3 enfants","Fino a 3 bambini","Up to 3 children")}</p>
+          <p className="text-xs text-gray-400">{t("Bis zu 3 Kinder · Fortschritt diese Woche","Jusqu'à 3 enfants · Progrès cette semaine","Fino a 3 bambini · Progressi settimana","Up to 3 children · Weekly progress")}</p>
         </div>
       </div>
 

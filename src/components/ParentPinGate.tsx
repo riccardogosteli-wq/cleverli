@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const PIN_HASH_KEY = "cleverli_parent_pin";
 const PIN_SESSION_KEY = "cleverli_parent_unlocked";
-const UNLOCK_DURATION_MS = 30 * 60 * 1000; // 30 min
+const UNLOCK_DURATION_MS = 4 * 60 * 60 * 1000; // 4 hours — less annoying on mobile
 
 function hashPin(pin: string): string {
   // Simple deterministic hash (not crypto — localStorage-only, no server)
@@ -15,7 +15,7 @@ function hashPin(pin: string): string {
 
 function isUnlocked(): boolean {
   try {
-    const raw = sessionStorage.getItem(PIN_SESSION_KEY);
+    const raw = localStorage.getItem(PIN_SESSION_KEY);
     if (!raw) return false;
     const { until } = JSON.parse(raw);
     return Date.now() < until;
@@ -23,11 +23,11 @@ function isUnlocked(): boolean {
 }
 
 function setUnlocked() {
-  sessionStorage.setItem(PIN_SESSION_KEY, JSON.stringify({ until: Date.now() + UNLOCK_DURATION_MS }));
+  localStorage.setItem(PIN_SESSION_KEY, JSON.stringify({ until: Date.now() + UNLOCK_DURATION_MS }));
 }
 
 export function lockParentSession() {
-  sessionStorage.removeItem(PIN_SESSION_KEY);
+  localStorage.removeItem(PIN_SESSION_KEY);
 }
 
 interface Props { children: React.ReactNode; }
