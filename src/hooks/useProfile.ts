@@ -289,6 +289,10 @@ export function useProfile() {
           }
         }
         setLoaded(true);
+      }).catch(() => {
+        // Supabase unavailable or auth expired — fall back to local profile gracefully
+        setProfile(updated);
+        setLoaded(true);
       });
     } else {
       setProfile(updated);

@@ -34,7 +34,6 @@ export default defineConfig({
       use: {
         browserName: "chromium",
         viewport: { width: 390, height: 844 },
-        deviceScaleFactor: 3,
         isMobile: true,
         hasTouch: true,
         storageState: "tests/.auth/state.json",
