@@ -24,7 +24,15 @@ export function loadFamily(): FamilyStore {
   if (typeof window === "undefined") return { members: [] };
   try {
     const raw = localStorage.getItem(FAMILY_KEY);
-    return raw ? JSON.parse(raw) : { members: [] };
+    if (!raw) return { members: [] };
+    const parsed = JSON.parse(raw);
+    // Migration: old format used "children" instead of "members"
+    if (Array.isArray(parsed.children) && !parsed.members) {
+      const migrated: FamilyStore = { members: parsed.children };
+      saveFamily(migrated); // write back in new format
+      return migrated;
+    }
+    return parsed;
   } catch { return { members: [] }; }
 }
 
