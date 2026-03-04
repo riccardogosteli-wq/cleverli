@@ -456,60 +456,90 @@ function DashboardInner() {
         </div>
       )}
 
-      {/* Topic list */}
-      <div className="grid gap-2.5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-        {topics.map((topic, idx) => {
-          const prog = getProgress(grade, subject, topic.id);
-          const stars = prog?.stars ?? 0;
-          const done = !!prog;
-          const isNext = idx === firstNotDoneIdx; // first not-done topic = "start here"
-          const iconBg = currentSubjectMeta?.iconBg ?? "bg-green-100";
+      {/* Topic path — linear unlock progression */}
+      {(() => {
+        const firstCurrentIdx = topics.findIndex((t, i) => {
+          const pp = i > 0 ? getProgress(grade, subject, topics[i - 1].id) : null;
+          const unlocked = i === 0 || isGrade3Locked || (pp?.stars ?? 0) >= 1;
+          return unlocked && (getProgress(grade, subject, t.id)?.stars ?? 0) === 0;
+        });
+        return (
+          <div className="flex flex-col">
+            {topics.map((topic, i) => {
+              const prog = getProgress(grade, subject, topic.id);
+              const stars = prog?.stars ?? 0;
+              const done = stars > 0;
+              const prevProg = i > 0 ? getProgress(grade, subject, topics[i - 1].id) : null;
+              const isUnlocked = i === 0 || isGrade3Locked || (prevProg?.stars ?? 0) >= 1;
+              const isLocked = !isUnlocked;
+              const isCurrent = i === firstCurrentIdx;
+              const iconBg = currentSubjectMeta?.iconBg ?? "bg-green-100";
 
-          return (
-            <Link key={topic.id} href={`/learn/${grade}/${subject}/${topic.id}`}
-              style={{ minHeight: "66px" }}
-              className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
-                isGrade3Locked
-                  ? "bg-gray-50 border-gray-200 hover:border-amber-300 opacity-80"
-                  : done
-                    ? "bg-white border-green-200 hover:border-green-400"
-                  : isNext && profile?.xp === 0
-                    ? "bg-green-600 border-green-600 text-white hover:bg-green-700"
-                  : isNext
-                    ? "bg-green-50 border-green-300 hover:border-green-500"
-                    : "bg-white border-gray-100 hover:border-green-300 hover:bg-green-50"
-              }`}>
+              const cardContent = (
+                <>
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0 ${isLocked || isGrade3Locked ? "bg-gray-100" : iconBg}`}>
+                    {isLocked || isGrade3Locked ? "🔒" : topic.emoji}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className={`font-semibold text-sm leading-tight ${isLocked ? "text-gray-400" : "text-gray-800"}`}>
+                      {getTopicTitle(topic.id, lang, topic.title)}
+                      {isCurrent && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
+                      {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
+                    </div>
+                    <div className="text-xs mt-0.5">
+                      {isLocked ? (
+                        <span className="text-gray-400">
+                          {lang === "fr" ? "Encore verrouillé" : lang === "it" ? "Ancora bloccato" : lang === "en" ? "Still locked" : "Noch gesperrt"}
+                        </span>
+                      ) : done ? (
+                        Array.from({length: 3}).map((_, j) => (
+                          <span key={j} className={j < stars ? "text-yellow-400" : "text-gray-300"}>★</span>
+                        ))
+                      ) : (
+                        <span className="text-gray-400">{topic.exercises.length} {tr("exerciseCount")}</span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="shrink-0">
+                    {done && !isGrade3Locked
+                      ? <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                      : isLocked
+                        ? <span className="w-8 h-8 bg-gray-100 text-gray-300 rounded-full flex items-center justify-center text-xs">🔒</span>
+                        : <span className="w-8 h-8 bg-gray-50 text-gray-400 rounded-full flex items-center justify-center text-base">›</span>
+                    }
+                  </div>
+                </>
+              );
 
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0 ${isGrade3Locked ? "bg-gray-100" : iconBg}`}>
-                {isGrade3Locked ? "🔒" : topic.emoji}
-              </div>
-
-              <div className="flex-1 min-w-0">
-                <div className="font-semibold text-gray-800 text-sm leading-tight">
-                  {getTopicTitle(topic.id, lang, topic.title)}
-                  {isNext && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
-                  {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
+              return (
+                <div key={topic.id}>
+                  {i > 0 && <div className="h-3 w-0.5 bg-gray-200 mx-auto" />}
+                  {isLocked ? (
+                    <div style={{ minHeight: "66px" }}
+                      className="flex items-center gap-3 rounded-2xl px-4 py-3 border-2 shadow-sm opacity-45 bg-gray-50 border-gray-200 cursor-not-allowed select-none">
+                      {cardContent}
+                    </div>
+                  ) : (
+                    <Link href={`/learn/${grade}/${subject}/${topic.id}`}
+                      style={{ minHeight: "66px" }}
+                      className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
+                        isGrade3Locked
+                          ? "bg-gray-50 border-gray-200 hover:border-amber-300 opacity-80"
+                          : done
+                            ? "bg-white border-green-200 hover:border-green-400"
+                          : isCurrent
+                            ? "bg-green-50 border-green-400 hover:border-green-500 ring-2 ring-green-200"
+                            : "bg-white border-gray-100 hover:border-green-300 hover:bg-green-50"
+                      }`}>
+                      {cardContent}
+                    </Link>
+                  )}
                 </div>
-                <div className="text-xs text-gray-400 mt-0.5">
-                  {done && !isGrade3Locked
-                    ? Array.from({length: 3}).map((_, j) => (
-                        <span key={j} className={j < stars ? "text-yellow-400" : "text-gray-300"}>★</span>
-                      ))
-                    : `${topic.exercises.length} ${tr("exerciseCount")}`
-                  }
-                </div>
-              </div>
-
-              <div className="shrink-0">
-                {done && !isGrade3Locked
-                  ? <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
-                  : <span className="w-8 h-8 bg-gray-50 text-gray-400 rounded-full flex items-center justify-center text-base">›</span>
-                }
-              </div>
-            </Link>
-          );
-        })}
-      </div>
+              );
+            })}
+          </div>
+        );
+      })()}
       </div> {/* end space-y-4 */}
       </div> {/* end md:grid */}
     </div>

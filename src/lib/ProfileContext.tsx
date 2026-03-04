@@ -14,6 +14,7 @@ interface ProfileContextValue {
   xpGained: number;
   leveledUp: boolean;
   recordAnswer: ReturnType<typeof useProfile>["recordAnswer"];
+  updateProfile: ReturnType<typeof useProfile>["updateProfile"];
   clearNewAchievements: () => void;
   clearXpGained: () => void;
   clearLeveledUp: () => void;

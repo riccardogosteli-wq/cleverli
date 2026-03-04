@@ -240,6 +240,11 @@ export default function Navigation() {
             onClick={() => setOpen(false)}>
             🎁 {tr("navRewards")}
           </Link>
+          <Link href="/shop"
+            className="text-base text-yellow-700 font-medium py-3 px-4 rounded-xl hover:bg-yellow-50"
+            onClick={() => setOpen(false)}>
+            🛍️ {lang === "fr" ? "Boutique" : lang === "it" ? "Negozio" : lang === "en" ? "Shop" : "Shop"}
+          </Link>
 
           <div className="border-t border-gray-100 pt-2 mt-1 space-y-2">
           {session ? (

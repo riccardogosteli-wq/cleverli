@@ -22,6 +22,9 @@ export interface Profile {
   weeklyXpDate: string;        // "YYYY-WW" for reset detection
   streakGraceUsed: boolean;    // UJ-10: one-time 1-day grace period per streak run
   weekendDays: string[];       // track weekend warrior (e.g., ["2026-W10-SAT", "2026-W10-SUN"])
+  coins: number;               // earned currency for avatar shop
+  ownedItems: string[];        // shop item IDs owned
+  equippedItems: { hat?: string; accessory?: string; background?: string };
 }
 
 const PROFILE_KEY = "cleverli_profile";
@@ -46,6 +49,9 @@ const DEFAULT_PROFILE: Profile = {
   weeklyXpDate: "",
   streakGraceUsed: false,
   weekendDays: [],
+  coins: 0,
+  ownedItems: [],
+  equippedItems: {},
 };
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -360,6 +366,11 @@ export function useProfile() {
 
       const newXp = prev.xp + xpEarned;
 
+      // Coins: +1 per correct answer, +5 bonus on topic complete
+      const newCoins = (prev.coins ?? 0)
+        + (opts.correct ? 1 : 0)
+        + (opts.correct && opts.isTopicComplete ? 5 : 0);
+
       const updated: Profile = {
         ...prev,
         xp: newXp,
@@ -373,6 +384,7 @@ export function useProfile() {
         weeklyXpDate: currentWeek,
         streakGraceUsed: newGraceUsed,
         weekendDays: newWeekendDays,
+        coins: newCoins,
       };
 
       // Tier completion achievements
@@ -427,6 +439,14 @@ export function useProfile() {
   const clearXpGained        = useCallback(() => setXpGained(0), []);
   const clearLeveledUp       = useCallback(() => setLeveledUp(false), []);
 
+  const updateProfile = useCallback((updates: Partial<Profile>) => {
+    setProfile(prev => {
+      const updated = { ...prev, ...updates };
+      saveProfile(updated);
+      return updated;
+    });
+  }, []);
+
   const level    = getLevelForXp(profile.xp);
   const nextLevel = getNextLevel(profile.xp);
 
@@ -439,6 +459,7 @@ export function useProfile() {
     xpGained,
     leveledUp,
     recordAnswer,
+    updateProfile,
     clearNewAchievements,
     clearXpGained,
     clearLeveledUp,

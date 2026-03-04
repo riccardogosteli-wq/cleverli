@@ -8,6 +8,16 @@
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-8px); }
 }
+@keyframes mascotShake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-8px) rotate(-4deg); }
+  75%       { transform: translateX(8px) rotate(4deg); }
+}
+@keyframes mascotPop {
+  0%   { transform: scale(0.5) translateX(60px); opacity: 0; }
+  60%  { transform: scale(1.1) translateX(0); opacity: 1; }
+  100% { transform: scale(1) translateX(0); opacity: 1; }
+}
 
 /* Force light mode always — Cleverli is a kids app, dark mode not appropriate */
 :root {

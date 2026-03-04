@@ -24,6 +24,10 @@ export default function XpBar() {
       <span className="hidden sm:block text-xs text-gray-500 font-medium whitespace-nowrap shrink-0">
         {profile.xp} XP
       </span>
+      {/* Coins */}
+      {(profile.coins ?? 0) > 0 && (
+        <span className="text-xs font-bold text-yellow-600 shrink-0">🪙{profile.coins}</span>
+      )}
       {/* Streak */}
       {profile.dailyStreak >= 2 && (
         <span className="text-xs font-bold text-orange-500 shrink-0">🔥{profile.dailyStreak}</span>

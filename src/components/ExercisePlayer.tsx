@@ -21,6 +21,7 @@ import { getTierProgress, tierAtIndex } from "@/lib/tierProgress";
 import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
 import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
+import PushPrompt from "./PushPrompt";
 import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useSession } from "@/hooks/useSession";
@@ -64,6 +65,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [wrongCountSession, setWrongCountSession] = useState(0);
   const [showPerfect, setShowPerfect] = useState(false);
   const [tierToast, setTierToast] = useState<string | null>(null);
+  const [mascotReaction, setMascotReaction] = useState<'correct'|'wrong'|null>(null);
+  const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const topicStartRef = useRef<number>(Date.now());
   const tierInfo = getTierProgress(topic, idx);
   const nextTopic = allTopics[topicIndex + 1] ?? null;
@@ -155,6 +158,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       setWrongIds(ids => ids.includes(exId) ? ids : [...ids, exId]);
     }
     setAnswered(correct);
+
+    // Mascot reaction overlay
+    setMascotReaction(correct ? 'correct' : 'wrong');
+    setTimeout(() => setMascotReaction(null), correct ? 1200 : 1000);
+    if (correct) setCorrectAnswerCount(c => c + 1);
 
     // Record XP — isTopicComplete will be true when this was the last exercise
     const isLast = idx + 1 >= exercises.length;
@@ -393,6 +401,19 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         </div>
       )}
 
+      {/* Mascot reaction overlay */}
+      {mascotReaction && (
+        <div className="fixed bottom-20 right-3 z-[45] pointer-events-none sm:bottom-6">
+          <Image
+            src={mascotReaction === 'correct' ? '/cleverli-celebrate.png' : '/cleverli-think.png'}
+            alt=""
+            width={80}
+            height={80}
+            className={`drop-shadow-lg ${mascotReaction === 'correct' ? 'animate-[mascotPop_0.35s_ease-out]' : 'animate-[mascotShake_0.4s_ease-in-out]'}`}
+          />
+        </div>
+      )}
+
       {/* UJ-15: Thin top progress bar — always visible */}
       {!isReviewMode && tierInfo.isTiered ? (
         /* Segmented 3-tier progress bar */
@@ -573,6 +594,8 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
           </Link>
         </p>
       )}
+
+      <PushPrompt correctCount={correctAnswerCount} />
 
       <style>{`
         @keyframes slideIn {
