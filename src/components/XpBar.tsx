@@ -2,10 +2,13 @@
 import Link from "next/link";
 import { getLevelProgress } from "@/lib/xp";
 import { useProfileContext } from "@/lib/ProfileContext";
+import { useSession } from "@/hooks/useSession";
 
 export default function XpBar() {
   const { profile, level, loaded } = useProfileContext();
-  if (!loaded || profile.xp === 0) return null;
+  const { session } = useSession();
+  // Don't show XP bar if not logged in — avoids stale data from localStorage appearing after logout
+  if (!loaded || !session || profile.xp === 0) return null;
 
   const pct = getLevelProgress(profile.xp);
 

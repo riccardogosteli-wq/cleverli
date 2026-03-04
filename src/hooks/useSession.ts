@@ -17,6 +17,8 @@ const SESSION_KEY = "cleverli_session"; // legacy localStorage fallback
 export function useSession() {
   const [session, setSession] = useState<Session | null>(null);
   const [loaded, setLoaded] = useState(false);
+  // Track when a login is in progress so we don't misinterpret SIGNED_OUT from switching accounts
+  const [loginInProgress, setLoginInProgress] = useState(false);
 
   useEffect(() => {
     if (!supabase) {
@@ -83,15 +85,16 @@ export function useSession() {
           setSession(sess);
           localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
         } else if (event === "SIGNED_OUT") {
-          // Only clear session on explicit sign-out (via logout()).
-          // Supabase v2 fires spurious SIGNED_OUT on page reload/tab switch —
-          // if we have a cached session in localStorage, keep it to avoid
-          // randomly logging users out mid-session.
+          // Supabase v2 fires spurious SIGNED_OUT on reload/tab-switch AND when
+          // switching accounts via signInWithPassword. Be conservative:
+          // Only clear if there is genuinely no cached session AND we're not in
+          // the middle of a new login attempt.
           const cached = localStorage.getItem(SESSION_KEY);
           if (!cached) {
             setSession(null);
           }
-          // Never remove SESSION_KEY here — only logout() should do that.
+          // Note: logout() is the only path that removes SESSION_KEY from localStorage.
+          // loginInProgress flag prevents misreading account-switch SIGNED_OUTs.
         }
       }
     );
@@ -112,5 +115,5 @@ export function useSession() {
     return new Date(session.premiumUntil) > new Date();
   })();
 
-  return { session, loaded, isPremium, logout };
+  return { session, loaded, isPremium, logout, setLoginInProgress };
 }

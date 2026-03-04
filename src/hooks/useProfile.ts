@@ -227,6 +227,22 @@ export function useProfile() {
   const [xpGained, setXpGained] = useState(0);
   const [leveledUp, setLeveledUp] = useState(false);
 
+  // Reload profile when active child changes (after switchProfile triggers reload)
+  const reloadProfile = () => {
+    const p = loadProfile();
+    setProfile({ ...DEFAULT_PROFILE, ...p });
+  };
+
+  useEffect(() => {
+    // Listen for active profile key change from another tab or after reload
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === "cleverli_active_profile") reloadProfile();
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     const p = loadProfile();
     const today = todayStr();
