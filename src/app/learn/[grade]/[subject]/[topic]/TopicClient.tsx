@@ -12,25 +12,39 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
   const { isPremium, loaded } = useSession();
   const [exerciseCounts, setExerciseCounts] = useState<ReturnType<typeof countExercisesByDifficulty> | null>(null);
 
-  // Load completed exercises from localStorage and calculate counts
+  // Load progress from localStorage and calculate counts by difficulty
   useEffect(() => {
     const key = `cleverli_${grade}_${subject}_${topic.id}`;
     const progressData = JSON.parse(localStorage.getItem(key) ?? "{}");
-    const totalCompleted = progressData.completed ?? 0;
+    
+    // Get total exercises from progress data
+    const totalExercises = progressData.completed ?? 0;
+    const score = progressData.score ?? 0;
 
-    // Estimate completed exercises by difficulty (assumes exercises are ordered by difficulty)
-    // This is an estimation based on the order of exercises in topic.exercises
-    const completedIds: string[] = [];
-    let remaining = totalCompleted;
-
-    for (const exercise of topic.exercises) {
-      if (remaining <= 0) break;
-      completedIds.push(exercise.id);
-      remaining--;
+    // Count all exercises by difficulty
+    const allCounts = countExercisesByDifficulty(topic.exercises, []);
+    
+    // If there's progress data, calculate completed per difficulty
+    // For now, proportionally distribute the completed count
+    const completedPerDifficulty: Record<number, number> = { 1: 0, 2: 0, 3: 0 };
+    
+    if (totalExercises > 0) {
+      // Estimate: distribute completed across difficulties proportionally
+      [1, 2, 3].forEach((diff) => {
+        const totalForDiff = allCounts.total[diff] || 0;
+        if (totalForDiff > 0 && totalExercises > 0) {
+          // Calculate proportion and estimate completed for this difficulty
+          const proportion = totalForDiff / Math.max(1, Object.values(allCounts.total).reduce((a, b) => a + b, 0));
+          completedPerDifficulty[diff] = Math.floor(totalExercises * proportion);
+        }
+      });
     }
 
-    // Count exercises by difficulty
-    const counts = countExercisesByDifficulty(topic.exercises, completedIds);
+    const counts = {
+      completed: completedPerDifficulty,
+      total: allCounts.total,
+    };
+    
     setExerciseCounts(counts);
   }, [grade, subject, topic]);
 
