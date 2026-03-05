@@ -159,7 +159,8 @@ test.describe("Daily challenge", () => {
 test.describe("Rewards page", () => {
   test("rewards page loads", async ({ page }) => {
     await page.goto("/rewards");
-    await expect(page.locator("main").first()).toBeVisible({ timeout: 10_000 });
+    // Rewards page uses div.max-w-5xl, not <main>
+    await expect(page.locator("div.max-w-5xl, h1:has-text('Belohnungen'), h1:has-text('Rewards')").first()).toBeVisible({ timeout: 10_000 });
   });
 
   test("shows premium rewards section", async ({ page }) => {

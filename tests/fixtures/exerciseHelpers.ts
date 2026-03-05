@@ -76,9 +76,13 @@ export async function submitAnswer(page: Page, answer: ExerciseAnswer, correct: 
 
 // ── Multiple choice / counting ────────────────────────────────────────────────
 async function answerMultipleChoice(page: Page, answer: string) {
+  // Wait for any animations to settle
+  await page.waitForTimeout(300);
+  
   // Try data-answer attribute first (most reliable)
   const byDataAttr = page.locator(`button[data-answer="${answer}"]`);
   if (await byDataAttr.count() > 0) {
+    await byDataAttr.first().waitFor({ state: "visible", timeout: 5000 });
     await byDataAttr.first().click();
     return;
   }
@@ -101,7 +105,10 @@ async function answerMultipleChoice(page: Page, answer: string) {
 
 // ── Fill in blank ─────────────────────────────────────────────────────────────
 async function answerFillInBlank(page: Page, answer: string) {
-  const input = page.locator("input[type=text], input:not([type=email]):not([type=password])").first();
+  // Wait for input to be visible with longer timeout
+  const input = page.locator("input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])").first();
+  await input.waitFor({ state: "visible", timeout: 15_000 });
+  await page.waitForTimeout(500); // Extra buffer for rendering
   await input.fill(answer);
 
   // Submit via Enter or submit button

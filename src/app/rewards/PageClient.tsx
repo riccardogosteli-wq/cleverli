@@ -118,12 +118,15 @@ export default function RewardsPage() {
     return (
       <div className="max-w-sm mx-auto px-4 py-16 text-center space-y-5">
         <Image src="/cleverli-think.png" alt="Cleverli Maskottchen" width={110} height={110} className="mx-auto drop-shadow-md hidden sm:block" />
-        <h1 className="text-2xl font-extrabold text-gray-900">Belohnungen 🎁</h1>
+        <div className="flex items-center gap-2">
+          <Image src="/images/ui/Belohnungen.svg" alt="Belohnungen" width={28} height={28} className="drop-shadow-sm" />
+          <h1 className="text-2xl font-extrabold text-gray-900">Belohnungen</h1>
+        </div>
         <p className="text-gray-500 text-sm leading-relaxed">
           Mit dem Belohnungs-System kannst du echte Belohnungen für dein Kind einrichten — und es motivieren, dranzubleiben.
         </p>
         <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 text-left space-y-2 text-sm text-amber-900">
-          <div>🏆 Belohnungen für Sterne, Streaks und Aufgaben</div>
+          <div className="flex items-center gap-2"><Image src="/images/ui/Trophaeen.svg" alt="Trophy" width={20} height={20} /> Belohnungen für Sterne, Streaks und Aufgaben</div>
           <div>👶 Bis zu 3 Kinderprofile mit Premium</div>
           <div>📊 Lernfortschritt der ganzen Familie sehen</div>
         </div>
@@ -152,8 +155,9 @@ export default function RewardsPage() {
       <div className="flex items-center gap-3 mb-6">
         <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 min-w-[44px]">←</Link>
         <Image src="/cleverli-celebrate.png" alt="Cleverli feiert" width={44} height={44} className="drop-shadow-md" />
-        <h1 className="text-xl font-bold text-gray-800">
-          🎁 {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
+        <h1 className="text-xl font-bold text-gray-800 flex items-center gap-2">
+          <Image src="/images/ui/Belohnungen.svg" alt="Belohnungen" width={24} height={24} />
+          {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
         </h1>
         <div className="flex-1" />
         <Link href="/dashboard" className="hidden md:block text-sm text-gray-400 hover:text-gray-600">
@@ -350,7 +354,9 @@ export default function RewardsPage() {
         {/* Empty state */}
         {active.length === 0 && !adding && (
           <div className="text-center py-10 space-y-3 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
-            <div className="text-5xl">🎁</div>
+            <div className="flex justify-center">
+              <Image src="/images/ui/Belohnungen.svg" alt="Rewards" width={80} height={80} />
+            </div>
             <div className="font-bold text-gray-700">
               {lang === "de" ? "Noch keine Belohnungen" : "No rewards yet"}
             </div>
@@ -411,7 +417,7 @@ export default function RewardsPage() {
       {/* Unlocked — waiting to be redeemed */}
       {unlocked.length > 0 && (
         <div className="space-y-3">
-          <h2 className="font-bold text-amber-700">
+          <h2 className="font-bold text-amber-700 flex items-center gap-2">
             🔓 {lang === "de" ? "Bereit zum Einlösen!" : lang === "fr" ? "Prêt à réclamer!" : lang === "it" ? "Pronto per il riscatto!" : "Ready to redeem!"}
           </h2>
           {unlocked.map(r => (

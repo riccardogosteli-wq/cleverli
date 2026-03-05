@@ -101,7 +101,8 @@ test.describe("Family management", () => {
 test.describe("Upgrade / Premium wall", () => {
   test("upgrade page loads with pricing", async ({ page }) => {
     await page.goto("/upgrade");
-    await expect(page.locator("main").first()).toBeVisible({ timeout: 10_000 });
+    // Upgrade page uses div, not <main>. Look for the headline or pricing info.
+    await expect(page.locator("h1, h2, :text('CHF 9.90'), :text('Unbegrenzt'), :text('Unlimited')").first()).toBeVisible({ timeout: 10_000 });
 
     // Should show some price
     const priceText = page.locator("text=CHF, text=9.90, text=99").first();
