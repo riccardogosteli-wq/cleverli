@@ -18,6 +18,9 @@ import {
 
 const FREE_LIMIT = 5;
 
+// Increase timeout for exercise interaction tests (some topics are slow in CI)
+test.setTimeout(45_000);
+
 // ── Topic-level tests (all topics) ────────────────────────────────────────────
 test.describe("Exercise player — topic load", () => {
   const topics = getAllTopicPaths();
