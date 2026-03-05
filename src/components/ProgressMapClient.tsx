@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { generateRoadmapSVG, roadmapToDataURI } from "@/lib/roadmapGenerator";
 import { buildProgressMap, getCheckpointProgress, isCheckpointCompleted, MISSION_TITLES, CHECKPOINT_LABELS } from "@/lib/progressMap";
-import { useMediaQuery } from "@/lib/hooks/useMediaQuery";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useLang } from "@/lib/LangContext";
 
 interface ProgressMapClientProps {
@@ -25,7 +25,7 @@ export default function ProgressMapClient({
   totalExercisesByDifficulty,
 }: ProgressMapClientProps) {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const { li } = useLang();
+  const { lang } = useLang();
   const [roadmapSvg, setRoadmapSvg] = useState<string | null>(null);
   const [unlockedMissions, setUnlockedMissions] = useState<number[]>([]);
 
@@ -48,7 +48,7 @@ export default function ProgressMapClient({
 
       return {
         id: cp.id,
-        label: CHECKPOINT_LABELS[li as keyof typeof CHECKPOINT_LABELS][cp.difficulty] || cp.label,
+        label: CHECKPOINT_LABELS[lang as keyof typeof CHECKPOINT_LABELS][(cp.difficulty as 1 | 2 | 3)] || cp.label,
         progress,
         isCompleted,
         exerciseCount: total,
@@ -69,7 +69,7 @@ export default function ProgressMapClient({
     });
 
     setRoadmapSvg(svg);
-  }, [completedExercisesByDifficulty, totalExercisesByDifficulty, topicTitle, isMobile, li, progressMap.checkpoints]);
+  }, [completedExercisesByDifficulty, totalExercisesByDifficulty, topicTitle, isMobile, lang, progressMap.checkpoints]);
 
   if (!roadmapSvg) {
     return <div className="animate-pulse bg-gray-200 rounded-lg h-64" />;
@@ -103,7 +103,7 @@ export default function ProgressMapClient({
                 </span>
                 <div>
                   <p className="font-semibold text-amber-900">
-                    {MISSION_TITLES[li as keyof typeof MISSION_TITLES][missionId] || `Mission ${missionId}`}
+                    {MISSION_TITLES[lang as keyof typeof MISSION_TITLES][(missionId as 1 | 2 | 3)] || `Mission ${missionId}`}
                   </p>
                   <p className="text-sm text-amber-700">
                     {missionId === 1 &&
