@@ -64,8 +64,8 @@ export default function MobileBottomNav() {
             <Image
               src={getIcon(tab.icon).src}
               alt={getIcon(tab.icon).alt}
-              width={24}
-              height={24}
+              width={32}
+              height={32}
               className={`leading-none transition-opacity ${isActive ? "" : "opacity-60"}`}
             />
             <span className={`text-[10px] font-semibold leading-tight ${isActive ? "text-green-700" : "text-gray-400"}`}>
