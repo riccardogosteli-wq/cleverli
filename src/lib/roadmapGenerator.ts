@@ -1,8 +1,8 @@
 /**
- * 🎮 ULTRA-FUN ROADMAP GENERATOR 🎮
+ * 🎮 PROFESSIONAL ROADMAP GENERATOR - V2 🎮
  * 
- * Maximum gamification + visual excitement for kids
- * Inspired by Duolingo, Mario, and Kirby games
+ * Enterprise-grade visual progression system
+ * Clean, modern design that scales beautifully
  */
 
 export interface RoadmapConfig {
@@ -10,9 +10,10 @@ export interface RoadmapConfig {
   checkpoints: {
     id: number;
     label: string;
-    progress: number; // 0-100
+    progress: number;
     isCompleted: boolean;
-    exerciseCount: number;
+    completed: number;
+    total: number;
   }[];
   isMobile: boolean;
 }
@@ -22,133 +23,93 @@ export function generateRoadmapSVG(config: RoadmapConfig): string {
 }
 
 /**
- * DESKTOP - Ultra-colorful horizontal game board 🎮
+ * DESKTOP - Professional horizontal journey
  */
 function generateDesktopRoadmap(config: RoadmapConfig): string {
-  const width = 1000;
-  const height = 420;
+  const width = 900;
+  const height = 280;
   const padding = 50;
   const spacing = (width - padding * 2) / Math.max(config.checkpoints.length - 1, 1);
   const centerY = height / 2;
 
   let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" class="w-full h-auto">`;
 
-  // Epic gradients + filters
+  // Gradients
   svg += `<defs>
-    <linearGradient id="bgMagic" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fffbeb;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#fef3c7;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#dbeafe;stop-opacity:1" />
+    <linearGradient id="grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#faf5ff;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="level1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#fde047;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#facc15;stop-opacity:1" />
+    <linearGradient id="level-1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="level2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    <linearGradient id="level-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="level3" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+    <linearGradient id="level-3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
     </linearGradient>
-    <filter id="epicShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.4" flood-color="#000"/>
-    </filter>
-    <filter id="shine" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
-    </filter>
-    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
     </filter>
   </defs>`;
 
   // Background
-  svg += `<rect width="${width}" height="${height}" fill="url(#bgMagic)" rx="20"/>`;
-  
-  // Decorative stars scattered
-  const stars = [[100, 80], [150, 120], [850, 100], [900, 140], [200, 350], [800, 350]];
-  stars.forEach(([x, y]) => {
-    svg += `<text x="${x}" y="${y}" font-size="24" opacity="0.4">⭐</text>`;
-  });
+  svg += `<rect width="${width}" height="${height}" fill="url(#grad-bg)" rx="8"/>`;
 
-  // Epic title
-  svg += `<text x="${width / 2}" y="40" font-size="32" font-weight="900" text-anchor="middle" fill="#1f2937" letter-spacing="-1px">
-    🗺️ Quest: ${config.title}
-  </text>`;
-
-  // Draw connecting path - EPIC
-  svg += `<path d="M ${padding + 30} ${centerY} Q ${width / 2} ${centerY - 60} ${width - padding - 30} ${centerY}" 
-    stroke="#fef08a" stroke-width="16" fill="none" opacity="0.3" stroke-linecap="round"/>`;
-
-  // Main path
+  // Connecting path
   for (let i = 0; i < config.checkpoints.length - 1; i++) {
     const x1 = padding + i * spacing;
     const x2 = padding + (i + 1) * spacing;
     const y = centerY;
-    const pathColor = config.checkpoints[i].isCompleted ? "#10b981" : "#cbd5e1";
-    const pathWidth = config.checkpoints[i].isCompleted ? "6" : "3";
-    svg += `<line x1="${x1 + 60}" y1="${y}" x2="${x2 - 60}" y2="${y}" stroke="${pathColor}" stroke-width="${pathWidth}" stroke-linecap="round"/>`;
+    const isActive = config.checkpoints[i].isCompleted;
+    const color = isActive ? "#10b981" : "#d1d5db";
+    const width_val = isActive ? "4" : "2";
+    svg += `<line x1="${x1 + 45}" y1="${y}" x2="${x2 - 45}" y2="${y}" stroke="${color}" stroke-width="${width_val}" stroke-linecap="round"/>`;
   }
 
-  // Draw checkpoints
+  // Checkpoints
   config.checkpoints.forEach((cp, i) => {
     const x = padding + i * spacing;
     const y = centerY;
-    const gradId = i === 0 ? "level1" : i === 1 ? "level2" : "level3";
-    const medal = cp.isCompleted ? (i === 0 ? "🥉" : i === 1 ? "🥈" : "🥇") : ["🔒"][0];
+    const gradId = i === 0 ? "level-1" : i === 1 ? "level-2" : "level-3";
+    const isActive = cp.isCompleted;
 
-    // HUGE glow aura
-    svg += `<circle cx="${x}" cy="${y}" r="72" fill="${cp.isCompleted ? "#10b981" : "#e2e8f0"}" opacity="0.15" filter="url(#glow)"/>`;
+    // Circle background
+    svg += `<circle cx="${x}" cy="${y}" r="48" fill="url(#${gradId})" filter="url(#shadow)" stroke="${isActive ? '#ffffff' : 'none'}" stroke-width="3" opacity="0.95"/>`;
 
-    // Main circle - HUGE
-    svg += `<circle cx="${x}" cy="${y}" r="60" fill="url(#${gradId})" filter="url(#epicShadow)" stroke="${cp.isCompleted ? '#ffffff' : 'rgba(255,255,255,0.3)'}" stroke-width="5"/>`;
+    // Inner ring
+    svg += `<circle cx="${x}" cy="${y}" r="42" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/>`;
 
-    // Inner decorative ring
-    svg += `<circle cx="${x}" cy="${y}" r="54" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>`;
+    // Medal emoji
+    const medal = isActive ? (i === 0 ? "🥉" : i === 1 ? "🥈" : "🥇") : "🔒";
+    svg += `<text x="${x}" y="${y + 6}" font-size="32" text-anchor="middle" dominant-baseline="middle">${medal}</text>`;
 
-    // Big shiny spot
-    svg += `<ellipse cx="${x - 20}" cy="${y - 20}" rx="24" ry="24" fill="white" opacity="0.35"/>`;
+    // Level number
+    svg += `<text x="${x}" y="${y - 38}" font-size="12" font-weight="800" text-anchor="middle" fill="#374151">Level ${i + 1}</text>`;
 
-    // MASSIVE medal emoji
-    svg += `<text x="${x}" y="${y + 12}" font-size="56" text-anchor="middle">${medal}</text>`;
+    // Label
+    svg += `<text x="${x}" y="${y + 65}" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2937">${cp.label}</text>`;
 
-    // Level number (small, top)
-    svg += `<text x="${x}" y="${y - 48}" font-size="16" font-weight="900" text-anchor="middle" fill="#1f2937">Level ${i + 1}</text>`;
-
-    // Label - BOLD
-    svg += `<text x="${x}" y="${y + 90}" font-size="18" font-weight="900" text-anchor="middle" fill="#1f2937">${cp.label}</text>`;
-
-    // Epic progress bar
-    const barW = 110;
-    const barH = 14;
+    // Progress bar
+    const barW = 70;
+    const barH = 6;
     const barX = x - barW / 2;
-    const barY = y + 112;
-
-    // Bar background
-    svg += `<rect x="${barX}" y="${barY}" width="${barW}" height="${barH}" fill="#e5e7eb" rx="7" filter="url(#epicShadow)"/>`;
-
-    // Color-coded fill
-    let fillColor = "#ef4444";
-    if (cp.progress > 66) fillColor = "#10b981";
-    else if (cp.progress > 33) fillColor = "#f59e0b";
+    const barY = y + 80;
+    svg += `<rect x="${barX}" y="${barY}" width="${barW}" height="${barH}" fill="#e5e7eb" rx="3"/>`;
 
     const fillW = (barW * cp.progress) / 100;
-    svg += `<rect x="${barX}" y="${barY}" width="${fillW}" height="${barH}" fill="${fillColor}" rx="7" filter="url(#glow)"/>`;
+    let color = "#ef4444";
+    if (cp.progress > 66) color = "#10b981";
+    else if (cp.progress > 33) color = "#f59e0b";
 
-    // Percentage - HUGE & BOLD
-    svg += `<text x="${x}" y="${barY + 38}" font-size="18" font-weight="900" text-anchor="middle" fill="${fillColor}">${Math.round(cp.progress)}%</text>`;
+    svg += `<rect x="${barX}" y="${barY}" width="${fillW}" height="${barH}" fill="${color}" rx="3"/>`;
 
-    // Celebration stars
-    if (cp.isCompleted) {
-      svg += `<text x="${x - 45}" y="${y - 60}" font-size="28" opacity="0.8" transform="rotate(-20 ${x - 45} ${y - 60})">⭐</text>`;
-      svg += `<text x="${x + 45}" y="${y - 60}" font-size="28" opacity="0.8" transform="rotate(20 ${x + 45} ${y - 60})">⭐</text>`;
-      svg += `<text x="${x}" y="${y - 70}" font-size="24">✨</text>`;
-    }
+    // Percentage
+    svg += `<text x="${x}" y="${barY + 22}" font-size="12" font-weight="900" text-anchor="middle" fill="${color}">${Math.round(cp.progress)}%</text>`;
   });
 
   svg += `</svg>`;
@@ -156,101 +117,87 @@ function generateDesktopRoadmap(config: RoadmapConfig): string {
 }
 
 /**
- * MOBILE - Vertical quest adventure 📱✨
+ * MOBILE - Clean vertical journey
  */
 function generateMobileRoadmap(config: RoadmapConfig): string {
-  const width = 360;
-  const height = 200 + config.checkpoints.length * 150;
+  const width = 340;
+  const height = 380;
   const centerX = width / 2;
-  const padding = 45;
+  const padding = 40;
+  const vertSpacing = (height - padding * 2) / Math.max(config.checkpoints.length - 1, 1);
 
   let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" class="w-full h-auto">`;
 
   // Gradients
   svg += `<defs>
-    <linearGradient id="bgMobile" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#fffbeb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#dbeafe;stop-opacity:1" />
+    <linearGradient id="mob-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#faf5ff;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="level1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#fde047;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#facc15;stop-opacity:1" />
+    <linearGradient id="mob-level-1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="level2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    <linearGradient id="mob-level-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="level3" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+    <linearGradient id="mob-level-3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
     </linearGradient>
-    <filter id="mobileShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.35"/>
+    <filter id="mob-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
     </filter>
   </defs>`;
 
-  svg += `<rect width="${width}" height="${height}" fill="url(#bgMobile)" rx="16"/>`;
+  // Background
+  svg += `<rect width="${width}" height="${height}" fill="url(#mob-bg)" rx="8"/>`;
 
-  // Title
-  svg += `<text x="${centerX}" y="36" font-size="26" font-weight="900" text-anchor="middle" fill="#1f2937">🎮 Quest!</text>`;
-
-  // Vertical path
+  // Vertical connector
   for (let i = 0; i < config.checkpoints.length - 1; i++) {
-    const y1 = padding + 60 + i * 150 + 52;
-    const y2 = padding + 60 + (i + 1) * 150 - 52;
-    const pathColor = config.checkpoints[i].isCompleted ? "#10b981" : "#cbd5e1";
-    const pathWidth = config.checkpoints[i].isCompleted ? "5" : "2";
-    svg += `<line x1="${centerX}" y1="${y1}" x2="${centerX}" y2="${y2}" stroke="${pathColor}" stroke-width="${pathWidth}" stroke-linecap="round"/>`;
-    
-    // Decorative dot
-    const midY = (y1 + y2) / 2;
-    svg += `<circle cx="${centerX}" cy="${midY}" r="2.5" fill="${pathColor}" opacity="0.6"/>`;
+    const y1 = padding + i * vertSpacing + 42;
+    const y2 = padding + (i + 1) * vertSpacing - 42;
+    const isActive = config.checkpoints[i].isCompleted;
+    const color = isActive ? "#10b981" : "#d1d5db";
+    const w = isActive ? "4" : "2";
+    svg += `<line x1="${centerX}" y1="${y1}" x2="${centerX}" y2="${y2}" stroke="${color}" stroke-width="${w}" stroke-linecap="round"/>`;
   }
 
-  // Draw checkpoints
+  // Checkpoints
   config.checkpoints.forEach((cp, i) => {
-    const y = padding + 60 + i * 150;
-    const gradId = i === 0 ? "level1" : i === 1 ? "level2" : "level3";
-    const medal = cp.isCompleted ? (i === 0 ? "🥉" : i === 1 ? "🥈" : "🥇") : "🔒";
+    const y = padding + i * vertSpacing;
+    const gradId = i === 0 ? "mob-level-1" : i === 1 ? "mob-level-2" : "mob-level-3";
+    const isActive = cp.isCompleted;
 
-    // Glow
-    svg += `<circle cx="${centerX}" cy="${y}" r="62" fill="${cp.isCompleted ? '#10b981' : '#e2e8f0'}" opacity="0.12"/>`;
+    // Circle
+    svg += `<circle cx="${centerX}" cy="${y}" r="42" fill="url(#${gradId})" filter="url(#mob-shadow)" stroke="${isActive ? '#ffffff' : 'none'}" stroke-width="2.5" opacity="0.95"/>`;
 
-    // Main circle
-    svg += `<circle cx="${centerX}" cy="${y}" r="50" fill="url(#${gradId})" filter="url(#mobileShadow)" stroke="${cp.isCompleted ? '#ffffff' : 'rgba(255,255,255,0.2)'}" stroke-width="4"/>`;
-
-    // Shine
-    svg += `<ellipse cx="${centerX - 16}" cy="${y - 16}" rx="20" ry="20" fill="white" opacity="0.3"/>`;
+    // Inner ring
+    svg += `<circle cx="${centerX}" cy="${y}" r="37" fill="none" stroke="white" stroke-width="1" opacity="0.25"/>`;
 
     // Medal
-    svg += `<text x="${centerX}" y="${y + 10}" font-size="44" text-anchor="middle">${medal}</text>`;
+    const medal = isActive ? (i === 0 ? "🥉" : i === 1 ? "🥈" : "🥇") : "🔒";
+    svg += `<text x="${centerX}" y="${y + 5}" font-size="28" text-anchor="middle" dominant-baseline="middle">${medal}</text>`;
 
     // Side labels
-    const labelX = centerX + 90;
+    const labelX = centerX + 75;
+    svg += `<text x="${labelX}" y="${y - 14}" font-size="12" font-weight="700" fill="#1f2937">${cp.label}</text>`;
 
-    // Label text
-    svg += `<text x="${labelX}" y="${y - 16}" font-size="16" font-weight="800" fill="#1f2937">${cp.label}</text>`;
+    // Progress text
+    svg += `<text x="${labelX}" y="${y + 3}" font-size="11" font-weight="600" fill="#6b7280">${Math.round(cp.progress)}%</text>`;
 
-    // Progress
-    svg += `<text x="${labelX}" y="${y + 4}" font-size="13" font-weight="600" fill="#6b7280">${Math.round(cp.progress)}%</text>`;
+    // Mini progress bar
+    const mbarW = 55;
+    const mbarH = 4;
+    svg += `<rect x="${labelX - mbarW / 2}" y="${y + 10}" width="${mbarW}" height="${mbarH}" fill="#e5e7eb" rx="2"/>`;
 
-    // Progress bar
-    const barW = 80;
-    const barH = 9;
-    svg += `<rect x="${labelX - barW / 2}" y="${y + 12}" width="${barW}" height="${barH}" fill="#e5e7eb" rx="4.5"/>`;
+    let color = "#ef4444";
+    if (cp.progress > 66) color = "#10b981";
+    else if (cp.progress > 33) color = "#f59e0b";
 
-    let fillColor = "#ef4444";
-    if (cp.progress > 66) fillColor = "#10b981";
-    else if (cp.progress > 33) fillColor = "#f59e0b";
-
-    const fillW = (barW * cp.progress) / 100;
-    svg += `<rect x="${labelX - barW / 2}" y="${y + 12}" width="${fillW}" height="${barH}" fill="${fillColor}" rx="4.5"/>`;
-
-    // Stars
-    if (cp.isCompleted) {
-      svg += `<text x="${labelX - 48}" y="${y - 38}" font-size="22">⭐</text>`;
-      svg += `<text x="${labelX + 48}" y="${y - 38}" font-size="22">⭐</text>`;
-    }
+    const mfillW = (mbarW * cp.progress) / 100;
+    svg += `<rect x="${labelX - mbarW / 2}" y="${y + 10}" width="${mfillW}" height="${mbarH}" fill="${color}" rx="2"/>`;
   });
 
   svg += `</svg>`;

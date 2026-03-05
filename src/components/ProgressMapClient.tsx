@@ -12,8 +12,8 @@ interface ProgressMapClientProps {
   topicTitle: string;
   grade: number;
   subject: string;
-  completedExercisesByDifficulty: Record<number, number>; // { 1: 10, 2: 15, 3: 5 }
-  totalExercisesByDifficulty: Record<number, number>;      // { 1: 15, 2: 20, 3: 15 }
+  completedExercisesByDifficulty: Record<number, number>;
+  totalExercisesByDifficulty: Record<number, number>;
 }
 
 export default function ProgressMapClient({
@@ -29,7 +29,6 @@ export default function ProgressMapClient({
   const [roadmapSvg, setRoadmapSvg] = useState<string | null>(null);
   const [unlockedMissions, setUnlockedMissions] = useState<number[]>([]);
 
-  // Build progress map
   const progressMap = buildProgressMap(
     topicId,
     topicTitle,
@@ -38,7 +37,6 @@ export default function ProgressMapClient({
     totalExercisesByDifficulty
   );
 
-  // Calculate progress per checkpoint and generate roadmap
   useEffect(() => {
     const checkpointProgress = progressMap.checkpoints.map((cp) => {
       const completed = completedExercisesByDifficulty[cp.difficulty] || 0;
@@ -51,17 +49,16 @@ export default function ProgressMapClient({
         label: CHECKPOINT_LABELS[lang as keyof typeof CHECKPOINT_LABELS][(cp.difficulty as 1 | 2 | 3)] || cp.label,
         progress,
         isCompleted,
-        exerciseCount: total,
+        completed,
+        total,
       };
     });
 
-    // Track unlocked missions
     const unlocked = checkpointProgress
       .filter((cp) => cp.isCompleted)
       .map((cp) => cp.id);
     setUnlockedMissions(unlocked);
 
-    // Generate SVG
     const svg = generateRoadmapSVG({
       title: topicTitle,
       checkpoints: checkpointProgress,
@@ -75,93 +72,105 @@ export default function ProgressMapClient({
     return <div className="animate-pulse bg-gray-200 rounded-lg h-64" />;
   }
 
+  // Calculate overall stats
+  const totalCompleted = Object.values(completedExercisesByDifficulty).reduce((a, b) => a + b, 0);
+  const totalExercises = Object.values(totalExercisesByDifficulty).reduce((a, b) => a + b, 0);
+  const overallProgress = totalExercises > 0 ? Math.round((totalCompleted / totalExercises) * 100) : 0;
+
   return (
-    <div className="space-y-6 bg-white rounded-lg border border-gray-200 p-6">
-      {/* Roadmap SVG */}
-      <div className="overflow-x-auto">
-        <img
-          src={roadmapToDataURI(roadmapSvg)}
-          alt={`Roadmap für ${topicTitle}`}
-          className="w-full h-auto min-h-[200px]"
+    <div className="space-y-4 bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl border-2 border-blue-100 p-6 shadow-sm">
+      {/* HEADER */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h3 className="text-lg font-bold text-gray-900">🗺️ Learning Path</h3>
+          <p className="text-sm text-gray-600 mt-1">{topicTitle}</p>
+        </div>
+        <div className="text-right">
+          <div className="text-3xl font-black text-blue-600">{overallProgress}%</div>
+          <p className="text-xs text-gray-500 mt-0.5">Complete</p>
+        </div>
+      </div>
+
+      {/* OVERALL PROGRESS BAR */}
+      <div className="bg-gray-200 rounded-full h-3 overflow-hidden shadow-sm">
+        <div
+          className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-500"
+          style={{ width: `${overallProgress}%` }}
         />
       </div>
 
-      {/* Mission Unlocks */}
+      {/* ROADMAP SVG */}
+      <div className="rounded-xl overflow-hidden border border-blue-100 bg-white p-4">
+        <img
+          src={roadmapToDataURI(roadmapSvg)}
+          alt={`Learning roadmap for ${topicTitle}`}
+          className="w-full h-auto"
+        />
+      </div>
+
+      {/* CHECKPOINT DETAILS - GRID */}
+      <div className="grid grid-cols-3 gap-3">
+        {progressMap.checkpoints.map((cp, idx) => {
+          const completed = completedExercisesByDifficulty[cp.difficulty] || 0;
+          const total = totalExercisesByDifficulty[cp.difficulty] || 0;
+          const progress = getCheckpointProgress(completed, total);
+          const isCompleted = progress === 100;
+
+          return (
+            <div
+              key={cp.id}
+              className={`rounded-lg p-3 text-center transition-all ${
+                isCompleted
+                  ? "bg-gradient-to-br from-green-100 to-emerald-100 border-2 border-green-300 shadow-md"
+                  : "bg-gray-100 border border-gray-300"
+              }`}
+            >
+              <div className="text-2xl mb-1">
+                {isCompleted ? (idx === 0 ? "🥉" : idx === 1 ? "🥈" : "🥇") : "🔒"}
+              </div>
+              <p className="text-xs font-bold text-gray-700">{cp.label}</p>
+              <p className="text-lg font-black text-gray-900 mt-1">{progress}%</p>
+              <p className="text-xs text-gray-600 mt-1">
+                {completed}/{total}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* MISSION UNLOCKS */}
       {unlockedMissions.length > 0 && (
-        <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg p-4 border border-amber-200">
-          <h3 className="font-semibold text-amber-900 mb-3">
-            🎯 Missionen freigeschaltet
-          </h3>
-          <div className="grid gap-2">
+        <div className="bg-gradient-to-r from-amber-100 to-orange-100 rounded-xl p-4 border-2 border-amber-300 shadow-sm">
+          <p className="text-sm font-bold text-amber-900 mb-2">🎉 Missions Unlocked!</p>
+          <div className="flex gap-2">
             {unlockedMissions.map((missionId) => (
               <div
                 key={missionId}
-                className="bg-white rounded-lg p-3 border-l-4 border-amber-500 flex items-center gap-3"
+                className="flex-1 bg-white rounded-lg p-2 text-center border border-amber-200"
               >
-                <span className="text-xl">
+                <p className="text-lg">
                   {missionId === 1 ? "🥉" : missionId === 2 ? "🥈" : "🥇"}
-                </span>
-                <div>
-                  <p className="font-semibold text-amber-900">
-                    {MISSION_TITLES[lang as keyof typeof MISSION_TITLES][(missionId as 1 | 2 | 3)] || `Mission ${missionId}`}
-                  </p>
-                  <p className="text-sm text-amber-700">
-                    {missionId === 1 &&
-                      "Du hast alle einfachen Aufgaben abgeschlossen! Großartig! 🎉"}
-                    {missionId === 2 &&
-                      "Du wirst immer besser! Mittlere Aufgaben gemeistert! 🚀"}
-                    {missionId === 3 &&
-                      "Du bist ein Meister! Alle schweren Aufgaben gelöst! 👑"}
-                  </p>
-                </div>
+                </p>
+                <p className="text-xs font-semibold text-amber-900">
+                  {MISSION_TITLES[lang as keyof typeof MISSION_TITLES][(missionId as 1 | 2 | 3)] || `Level ${missionId}`}
+                </p>
               </div>
             ))}
           </div>
         </div>
       )}
 
-      {/* Progress Summary */}
-      <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-        <h3 className="font-semibold text-blue-900 mb-2">📊 Dein Fortschritt</h3>
-        <div className="grid grid-cols-3 gap-3 text-sm">
-          {progressMap.checkpoints.map((cp) => {
-            const completed = completedExercisesByDifficulty[cp.difficulty] || 0;
-            const total = totalExercisesByDifficulty[cp.difficulty] || 0;
-            const progress = getCheckpointProgress(completed, total);
-
-            return (
-              <div key={cp.id} className="bg-white rounded p-2 text-center">
-                <p className="font-semibold text-blue-900">{cp.label}</p>
-                <p className="text-xs text-gray-600">
-                  {completed} / {total}
-                </p>
-                <p className="font-bold text-blue-600">{Math.round(progress)}%</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      {unlockedMissions.length < 3 && (
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-4 border border-green-200">
-          <p className="text-sm text-green-800">
-            ✨ Löse mehr Aufgaben, um weitere Missionen freizuschalten!
-          </p>
-          <p className="text-xs text-green-700 mt-1">
-            Jede schwierigere Aufgabe bringt dich näher zum Meister-Status.
+      {/* CALL TO ACTION */}
+      {overallProgress < 100 ? (
+        <div className="bg-blue-100 border border-blue-300 rounded-lg p-3 text-center">
+          <p className="text-sm font-semibold text-blue-900">
+            ✨ Keep going! {100 - overallProgress}% to complete
           </p>
         </div>
-      )}
-
-      {unlockedMissions.length === 3 && (
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4 border border-purple-200">
-          <p className="text-sm font-semibold text-purple-900">
-            🏆 Alle Missionen abgeschlossen!
-          </p>
-          <p className="text-xs text-purple-700 mt-1">
-            Du bist jetzt ein Meister in {topicTitle}! Glückwunsch! 👑
-          </p>
+      ) : (
+        <div className="bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 rounded-lg p-4 text-center shadow-sm">
+          <p className="text-lg font-black text-purple-900">👑 Topic Mastered!</p>
+          <p className="text-sm text-purple-700 mt-1">You've completed all challenges</p>
         </div>
       )}
     </div>
