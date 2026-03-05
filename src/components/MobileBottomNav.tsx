@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLang } from "@/lib/LangContext";
 
@@ -17,12 +18,23 @@ export default function MobileBottomNav() {
   const li = lang === "fr" ? 1 : lang === "it" ? 2 : lang === "en" ? 3 : 0;
 
   const tabs = [
-    { href: "/dashboard", icon: "📚", label: TAB_LABELS.learn[li] },
-    { href: "/daily",     icon: "⚡", label: TAB_LABELS.daily[li] },
-    { href: "/trophies",  icon: "🏆", label: TAB_LABELS.trophies[li] },
-    { href: "/rewards",   icon: "🎁", label: TAB_LABELS.rewards[li] },
-    { href: "/parents",   icon: "👨‍👩‍👧", label: TAB_LABELS.family[li] },
+    { href: "/dashboard", icon: "learn", label: TAB_LABELS.learn[li] },
+    { href: "/daily",     icon: "daily", label: TAB_LABELS.daily[li] },
+    { href: "/trophies",  icon: "trophies", label: TAB_LABELS.trophies[li] },
+    { href: "/rewards",   icon: "rewards", label: TAB_LABELS.rewards[li] },
+    { href: "/parents",   icon: "family", label: TAB_LABELS.family[li] },
   ];
+
+  const getIcon = (iconKey: string) => {
+    const iconMap: Record<string, { src: string; alt: string }> = {
+      learn: { src: "/images/ui/Lernen-Dashboard.svg", alt: "Lernen" },
+      daily: { src: "/images/ui/Tagesaufgabe.svg", alt: "Täglich" },
+      trophies: { src: "/images/ui/Trophaeen.svg", alt: "Trophäen" },
+      rewards: { src: "/images/ui/Belohnungen.svg", alt: "Belohnungen" },
+      family: { src: "/images/ui/Familie.svg", alt: "Familie" },
+    };
+    return iconMap[iconKey] || { src: "", alt: "" };
+  };
 
   // Don't show during active exercise or on auth/onboarding pages
   const isExercise = pathname.startsWith("/learn/");
@@ -49,7 +61,13 @@ export default function MobileBottomNav() {
             }`}
           >
             {isActive && <span className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-8 bg-green-600 rounded-full" />}
-            <span className={`text-xl leading-none ${isActive ? "" : "opacity-60"}`}>{tab.icon}</span>
+            <Image
+              src={getIcon(tab.icon).src}
+              alt={getIcon(tab.icon).alt}
+              width={24}
+              height={24}
+              className={`leading-none transition-opacity ${isActive ? "" : "opacity-60"}`}
+            />
             <span className={`text-[10px] font-semibold leading-tight ${isActive ? "text-green-700" : "text-gray-400"}`}>
               {tab.label}
             </span>
