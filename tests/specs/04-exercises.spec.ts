@@ -67,8 +67,11 @@ test.describe("Exercise interactions — first exercise per topic", () => {
       "1-german-vokale-konsonanten",
       "2-german-pronomen",
       "2-science-gesunde-ernaehrung",
+      "2-math-subtraktion-bis-20",
+      "2-math-add-sub-100",
       "3-math-rechnen-bis-1000",
       "3-math-division",
+      "3-math-geometrie",
       "3-math-schriftlich-rechnen",
     ];
     if (skipSlowTopics.includes(key)) continue;
