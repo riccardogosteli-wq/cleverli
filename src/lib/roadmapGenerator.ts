@@ -159,9 +159,9 @@ ${celebrating === 3 ? celebrationBurst(px[2], groundY-100) : ''}
     <animate attributeName="opacity" values="0.5;0;0" dur="1.4s" fill="freeze" repeatCount="1"/>
   </circle>
   <!-- Player dot -->
-  <circle cx="0" cy="0" r="11" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2.5" filter="url(#shadow)"/>
-  <!-- Emoji — same (0,0) origin as group, offset only by font baseline -->
-  <text x="0" y="4" font-size="13" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${curPct > 0 ? '⭐' : '🌱'}</text>
+  <circle cx="0" cy="0" r="15" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="3" filter="url(#shadow)"/>
+  <!-- Emoji -->
+  <text x="0" y="5" font-size="17" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${curPct > 0 ? '⭐' : '🌱'}</text>
 </g>
 
 </svg>`;
@@ -237,8 +237,8 @@ ${celebrating === 3 ? celebrationBurst(cx+30, py[2]-90) : ''}
     <animate attributeName="r" values="10;22;10" dur="1.4s" repeatCount="1"/>
     <animate attributeName="opacity" values="0.5;0;0" dur="1.4s" fill="freeze" repeatCount="1"/>
   </circle>
-  <circle cx="0" cy="0" r="11" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2.5" filter="url(#shad-m)"/>
-  <text x="0" y="4" font-size="13" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${curPct > 0 ? '⭐' : '🌱'}</text>
+  <circle cx="0" cy="0" r="15" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="3" filter="url(#shad-m)"/>
+  <text x="0" y="5" font-size="17" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${curPct > 0 ? '⭐' : '🌱'}</text>
 </g>
 
 </svg>`;
@@ -324,73 +324,196 @@ function mobileTreeRow(W: number, H: number): string {
 }
 
 // ─── BUILDINGS ────────────────────────────────────────────────────────────────
+
+/** 🏠 Cozy cottage — warm orange roof, cream walls, flower boxes, chimney smoke */
 function cottage(x: number, y: number, cp: RoadmapConfig['checkpoints'][0], _mobile: boolean): string {
   const done = cp.isCompleted;
-  const fill = done ? '#fffbe6' : '#f0f0f0';
-  const roof = done ? '#e85d04' : '#9ca3af';
   const glow = done ? 'filter="url(#glow)"' : '';
-  return `<g ${glow} transform-origin="${x}px ${y}px">
-    <rect x="${x-28}" y="${y-42}" width="56" height="42" rx="4" fill="${fill}" stroke="${done?'#f59e0b':'#d1d5db'}" stroke-width="${done?2:1.5}"/>
-    <polygon points="${x-34},${y-42} ${x},${y-75} ${x+34},${y-42}" fill="${roof}"/>
-    <rect x="${x+14}" y="${y-80}" width="9" height="18" fill="${done?'#9a3412':'#9ca3af'}"/>
-    ${done?`<ellipse cx="${x+18}" cy="${y-83}" rx="6" ry="4" fill="#f97316" opacity="0.7"/>` : ''}
-    <rect x="${x-8}" y="${y-22}" width="16" height="22" rx="3" fill="${done?'#92400e':'#6b7280'}"/>
-    <rect x="${x-24}" y="${y-36}" width="12" height="10" rx="2" fill="${done?'#fef3c7':'#e5e7eb'}" stroke="#d1d5db" stroke-width="1"/>
-    <rect x="${x+12}" y="${y-36}" width="12" height="10" rx="2" fill="${done?'#fef3c7':'#e5e7eb'}" stroke="#d1d5db" stroke-width="1"/>
-    ${badgeAndBar(x, y, done, cp.label, cp.completed, cp.total)}
+  // Wall colors
+  const wall = done ? '#fef3c7' : '#f1f5f9';
+  const wallStroke = done ? '#f59e0b' : '#cbd5e1';
+  const roofCol = done ? '#dc2626' : '#94a3b8';      // vivid red or gray
+  const roofDark = done ? '#b91c1c' : '#7f8fa6';
+  const doorCol = done ? '#7c3aed' : '#475569';       // purple door when unlocked
+  const winCol  = done ? '#bfdbfe' : '#e2e8f0';       // light blue windows
+  const chimneyCol = done ? '#78350f' : '#94a3b8';
+
+  return `<g ${glow}>
+    <!-- Shadow -->
+    <ellipse cx="${x}" cy="${y+2}" rx="34" ry="5" fill="#00000015"/>
+    <!-- Wall -->
+    <rect x="${x-30}" y="${y-46}" width="60" height="46" rx="5" fill="${wall}" stroke="${wallStroke}" stroke-width="2"/>
+    <!-- Roof (double layer for depth) -->
+    <polygon points="${x-36},${y-46} ${x},${y-84} ${x+36},${y-46}" fill="${roofDark}"/>
+    <polygon points="${x-34},${y-46} ${x},${y-82} ${x+34},${y-46}" fill="${roofCol}"/>
+    <!-- Roof ridge highlight -->
+    <line x1="${x-10}" y1="${y-74}" x2="${x+10}" y2="${y-64}" stroke="white" stroke-width="1.5" opacity="0.4"/>
+    <!-- Chimney -->
+    <rect x="${x+14}" y="${y-86}" width="10" height="22" rx="2" fill="${chimneyCol}"/>
+    ${done ? `
+    <!-- Smoke puffs when done -->
+    <circle cx="${x+19}" cy="${y-90}" r="4" fill="white" opacity="0.7"><animate attributeName="cy" values="${y-90};${y-98};${y-90}" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0.2;0.7" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="${x+22}" cy="${y-96}" r="3" fill="white" opacity="0.5"><animate attributeName="cy" values="${y-96};${y-104};${y-96}" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.5s" repeatCount="indefinite"/></circle>
+    ` : ''}
+    <!-- Door (arched) -->
+    <path d="M ${x-9},${y} L ${x-9},${y-22} Q ${x},${y-30} ${x+9},${y-22} L ${x+9},${y} Z" fill="${doorCol}"/>
+    <!-- Door knob -->
+    <circle cx="${x+6}" cy="${y-12}" r="2" fill="${done?'#fbbf24':'#94a3b8'}"/>
+    <!-- Windows -->
+    <rect x="${x-26}" y="${y-40}" width="14" height="12" rx="3" fill="${winCol}" stroke="${done?'#93c5fd':'#cbd5e1'}" stroke-width="1.5"/>
+    <rect x="${x+12}" y="${y-40}" width="14" height="12" rx="3" fill="${winCol}" stroke="${done?'#93c5fd':'#cbd5e1'}" stroke-width="1.5"/>
+    <!-- Window cross-bars -->
+    <line x1="${x-19}" y1="${y-40}" x2="${x-19}" y2="${y-28}" stroke="${done?'#93c5fd':'#cbd5e1'}" stroke-width="1"/>
+    <line x1="${x-26}" y1="${y-34}" x2="${x-12}" y2="${y-34}" stroke="${done?'#93c5fd':'#cbd5e1'}" stroke-width="1"/>
+    <line x1="${x+19}" y1="${y-40}" x2="${x+19}" y2="${y-28}" stroke="${done?'#93c5fd':'#cbd5e1'}" stroke-width="1"/>
+    <line x1="${x+12}" y1="${y-34}" x2="${x+26}" y2="${y-34}" stroke="${done?'#93c5fd':'#cbd5e1'}" stroke-width="1"/>
+    <!-- Flower boxes -->
+    ${done ? `
+    <rect x="${x-28}" y="${y-29}" width="14" height="5" rx="2" fill="#f97316"/>
+    <circle cx="${x-25}" cy="${y-32}" r="3" fill="#fbbf24"/>
+    <circle cx="${x-21}" cy="${y-33}" r="3" fill="#f472b6"/>
+    <circle cx="${x-17}" cy="${y-32}" r="3" fill="#fbbf24"/>
+    <rect x="${x+14}" y="${y-29}" width="14" height="5" rx="2" fill="#f97316"/>
+    <circle cx="${x+17}" cy="${y-32}" r="3" fill="#f472b6"/>
+    <circle cx="${x+21}" cy="${y-33}" r="3" fill="#fbbf24"/>
+    <circle cx="${x+25}" cy="${y-32}" r="3" fill="#f472b6"/>
+    ` : ''}
+    ${statusBadge(x, y-90, done)}
+    ${buildingLabel(x, y+14, cp.label, done)}
   </g>`;
 }
 
+/** 🏰 Magic tower — blue/teal, pointed roof, colorful banner */
 function schoolTower(x: number, y: number, cp: RoadmapConfig['checkpoints'][0], _mobile: boolean): string {
   const done = cp.isCompleted;
-  const fill = done ? '#ecfdf5' : '#f0f0f0';
-  const wall = done ? '#059669' : '#9ca3af';
   const glow = done ? 'filter="url(#glow)"' : '';
-  return `<g ${glow} transform-origin="${x}px ${y}px">
-    <rect x="${x-20}" y="${y-70}" width="40" height="70" rx="3" fill="${fill}" stroke="${wall}" stroke-width="${done?2:1.5}"/>
-    ${[-16,-6,4,14].map(ox=>`<rect x="${x+ox}" y="${y-82}" width="8" height="14" rx="1" fill="${wall}"/>`).join('')}
-    <line x1="${x+10}" y1="${y-92}" x2="${x+10}" y2="${y-72}" stroke="${done?'#065f46':'#9ca3af'}" stroke-width="2"/>
-    <polygon points="${x+10},${y-92} ${x+26},${y-84} ${x+10},${y-76}" fill="${done?'#10b981':'#d1d5db'}"/>
-    <rect x="${x-14}" y="${y-60}" width="12" height="14" rx="2" fill="${done?'#a7f3d0':'#e5e7eb'}" stroke="#d1d5db" stroke-width="1"/>
-    <rect x="${x+2}" y="${y-60}" width="12" height="14" rx="2" fill="${done?'#a7f3d0':'#e5e7eb'}" stroke="#d1d5db" stroke-width="1"/>
-    <rect x="${x-8}" y="${y-38}" width="16" height="14" rx="2" fill="${done?'#a7f3d0':'#e5e7eb'}" stroke="#d1d5db" stroke-width="1"/>
-    <rect x="${x-8}" y="${y-22}" width="16" height="22" rx="3" fill="${done?'#065f46':'#6b7280'}"/>
-    ${badgeAndBar(x, y, done, cp.label, cp.completed, cp.total)}
+  const wall = done ? '#dbeafe' : '#f1f5f9';
+  const wallStroke = done ? '#3b82f6' : '#cbd5e1';
+  const towerTop = done ? '#1d4ed8' : '#94a3b8';
+  const roofCol  = done ? '#2563eb' : '#94a3b8';
+  const doorCol  = done ? '#1e3a8a' : '#475569';
+  const winCol   = done ? '#bfdbfe' : '#e2e8f0';
+  const flagCol  = done ? '#f59e0b' : '#d1d5db';
+
+  return `<g ${glow}>
+    <ellipse cx="${x}" cy="${y+2}" rx="28" ry="5" fill="#00000015"/>
+    <!-- Tower body -->
+    <rect x="${x-22}" y="${y-75}" width="44" height="75" rx="4" fill="${wall}" stroke="${wallStroke}" stroke-width="2"/>
+    <!-- Battlements -->
+    ${[-18,-8,2,12].map(ox=>`<rect x="${x+ox}" y="${y-87}" width="8" height="14" rx="2" fill="${towerTop}"/>`).join('')}
+    <!-- Conical roof on center turret -->
+    <polygon points="${x-4},${y-87} ${x+4},${y-87} ${x},${y-108}" fill="${roofCol}"/>
+    <!-- Flag -->
+    <line x1="${x}" y1="${y-108}" x2="${x}" y2="${y-92}" stroke="${done?'#1e40af':'#9ca3af'}" stroke-width="2"/>
+    <polygon points="${x},${y-108} ${x+18},${y-100} ${x},${y-92}" fill="${flagCol}"/>
+    <!-- Star on flag -->
+    ${done ? `<text x="${x+9}" y="${y-98}" font-size="8" text-anchor="middle" font-family="sans-serif">⭐</text>` : ''}
+    <!-- Windows row 1 -->
+    <rect x="${x-17}" y="${y-65}" width="13" height="16" rx="3" fill="${winCol}" stroke="${wallStroke}" stroke-width="1.5"/>
+    <rect x="${x+4}" y="${y-65}" width="13" height="16" rx="3" fill="${winCol}" stroke="${wallStroke}" stroke-width="1.5"/>
+    <!-- Windows row 2 -->
+    <rect x="${x-9}" y="${y-42}" width="18" height="16" rx="3" fill="${winCol}" stroke="${wallStroke}" stroke-width="1.5"/>
+    <!-- Window cross bars -->
+    <line x1="${x-10.5}" y1="${y-65}" x2="${x-10.5}" y2="${y-49}" stroke="${wallStroke}" stroke-width="1" opacity="0.6"/>
+    <line x1="${x-17}" y1="${y-57}" x2="${x-4}" y2="${y-57}" stroke="${wallStroke}" stroke-width="1" opacity="0.6"/>
+    <line x1="${x+10.5}" y1="${y-65}" x2="${x+10.5}" y2="${y-49}" stroke="${wallStroke}" stroke-width="1" opacity="0.6"/>
+    <line x1="${x+4}" y1="${y-57}" x2="${x+17}" y2="${y-57}" stroke="${wallStroke}" stroke-width="1" opacity="0.6"/>
+    <!-- Arched door -->
+    <path d="M ${x-9},${y} L ${x-9},${y-22} Q ${x},${y-32} ${x+9},${y-22} L ${x+9},${y} Z" fill="${doorCol}"/>
+    <!-- Door studs -->
+    ${done ? `<circle cx="${x-5}" cy="${y-18}" r="1.5" fill="#fbbf24"/><circle cx="${x+5}" cy="${y-18}" r="1.5" fill="#fbbf24"/>` : ''}
+    <!-- Stone texture lines -->
+    ${[-60,-45,-30,-15].map(dy=>`<line x1="${x-22}" y1="${y+dy}" x2="${x+22}" y2="${y+dy}" stroke="${wallStroke}" stroke-width="0.5" opacity="0.3"/>`).join('')}
+    ${statusBadge(x, y-112, done)}
+    ${buildingLabel(x, y+14, cp.label, done)}
   </g>`;
 }
 
+/** 👑 Grand castle — purple/gold, multiple towers, portcullis gate */
 function castle(x: number, y: number, cp: RoadmapConfig['checkpoints'][0], _mobile: boolean): string {
   const done = cp.isCompleted;
-  const fill = done ? '#fdf4ff' : '#f0f0f0';
-  const wall = done ? '#9333ea' : '#9ca3af';
   const glow = done ? 'filter="url(#glow)"' : '';
-  return `<g ${glow} transform-origin="${x}px ${y}px">
-    <rect x="${x-26}" y="${y-80}" width="52" height="80" rx="3" fill="${fill}" stroke="${wall}" stroke-width="${done?2:1.5}"/>
-    <rect x="${x-38}" y="${y-72}" width="16" height="72" rx="2" fill="${fill}" stroke="${wall}" stroke-width="${done?1.5:1}"/>
-    <rect x="${x+22}" y="${y-72}" width="16" height="72" rx="2" fill="${fill}" stroke="${wall}" stroke-width="${done?1.5:1}"/>
-    ${[x-30,x,x+30].map(tx=>[-4,-2,0,2].map(ox=>`<rect x="${tx+ox*3-4}" y="${y-90}" width="5" height="10" rx="1" fill="${wall}"/>`).join('')).join('')}
-    <line x1="${x}" y1="${y-105}" x2="${x}" y2="${y-88}" stroke="${done?'#7e22ce':'#9ca3af'}" stroke-width="2"/>
-    <polygon points="${x},${y-105} ${x+18},${y-97} ${x},${y-88}" fill="${done?'#d946ef':'#d1d5db'}"/>
-    ${[x-18,x-6,x+6,x+18].map(wx=>`<rect x="${wx-4}" y="${y-58}" width="8" height="10" rx="1" fill="${done?'#e9d5ff':'#e5e7eb'}" stroke="#d1d5db" stroke-width="0.8"/>`).join('')}
-    ${[x-12,x+4].map(wx=>`<rect x="${wx-4}" y="${y-38}" width="8" height="10" rx="1" fill="${done?'#e9d5ff':'#e5e7eb'}" stroke="#d1d5db" stroke-width="0.8"/>`).join('')}
-    <path d="M ${x-10},${y} L ${x-10},${y-20} Q ${x},${y-28} ${x+10},${y-20} L ${x+10},${y} Z" fill="${done?'#7e22ce':'#6b7280'}"/>
-    ${done?`<text x="${x-40}" y="${y-85}" font-size="13" opacity="0.8">⭐</text><text x="${x+28}" y="${y-88}" font-size="11" opacity="0.7">✨</text>` : ''}
-    ${badgeAndBar(x, y, done, cp.label, cp.completed, cp.total)}
+  const wall = done ? '#f3e8ff' : '#f1f5f9';
+  const wallStroke = done ? '#9333ea' : '#cbd5e1';
+  const tower = done ? '#7e22ce' : '#94a3b8';
+  const towerLight = done ? '#a855f7' : '#b0bec5';
+  const roofCol = done ? '#9333ea' : '#9ca3af';
+  const doorCol = done ? '#4a044e' : '#475569';
+  const winCol  = done ? '#e9d5ff' : '#e2e8f0';
+  const goldCol = done ? '#f59e0b' : '#d1d5db';
+
+  return `<g ${glow}>
+    <ellipse cx="${x}" cy="${y+2}" rx="46" ry="6" fill="#00000015"/>
+    <!-- Side towers (behind main body) -->
+    <rect x="${x-44}" y="${y-72}" width="20" height="72" rx="3" fill="${towerLight}" stroke="${wallStroke}" stroke-width="1.5"/>
+    <rect x="${x+24}" y="${y-72}" width="20" height="72" rx="3" fill="${towerLight}" stroke="${wallStroke}" stroke-width="1.5"/>
+    <!-- Side tower battlements -->
+    ${[-42,-36,-30].map(ox=>`<rect x="${x+ox}" y="${y-84}" width="6" height="13" rx="1.5" fill="${tower}"/>`).join('')}
+    ${[24,30,36].map(ox=>`<rect x="${x+ox}" y="${y-84}" width="6" height="13" rx="1.5" fill="${tower}"/>`).join('')}
+    <!-- Side tower conical roofs -->
+    <polygon points="${x-44},${y-84} ${x-24},${y-84} ${x-34},${y-105}" fill="${roofCol}"/>
+    <polygon points="${x+24},${y-84} ${x+44},${y-84} ${x+34},${y-105}" fill="${roofCol}"/>
+    <!-- Main keep (front) -->
+    <rect x="${x-28}" y="${y-85}" width="56" height="85" rx="4" fill="${wall}" stroke="${wallStroke}" stroke-width="2"/>
+    <!-- Keep battlements -->
+    ${[-24,-14,-4,6,16].map(ox=>`<rect x="${x+ox}" y="${y-97}" width="8" height="13" rx="2" fill="${tower}"/>`).join('')}
+    <!-- Center tower -->
+    <rect x="${x-10}" y="${y-110}" width="20" height="25" rx="3" fill="${towerLight}" stroke="${wallStroke}" stroke-width="1.5"/>
+    ${[-8,-2,4].map(ox=>`<rect x="${x+ox}" y="${y-118}" width="5" height="10" rx="1" fill="${tower}"/>`).join('')}
+    <!-- Main flag -->
+    <line x1="${x}" y1="${y-130}" x2="${x}" y2="${y-108}" stroke="${done?'#6b21a8':'#9ca3af'}" stroke-width="2.5"/>
+    <polygon points="${x},${y-130} ${x+22},${y-120} ${x},${y-110}" fill="${goldCol}"/>
+    ${done ? `<text x="${x+11}" y="${y-118}" font-size="9" text-anchor="middle" font-family="sans-serif">⭐</text>` : ''}
+    <!-- Side flags -->
+    ${done ? `
+    <line x1="${x-34}" y1="${y-105}" x2="${x-34}" y2="${y-95}" stroke="${tower}" stroke-width="1.5"/>
+    <polygon points="${x-34},${y-105} ${x-22},${y-100} ${x-34},${y-95}" fill="#f472b6"/>
+    <line x1="${x+34}" y1="${y-105}" x2="${x+34}" y2="${y-95}" stroke="${tower}" stroke-width="1.5"/>
+    <polygon points="${x+34},${y-105} ${x+22},${y-100} ${x+34},${y-95}" fill="#34d399"/>
+    ` : ''}
+    <!-- Windows (two rows) -->
+    ${[-20,-6,8,22].map(wx=>`<rect x="${x+wx-5}" y="${y-75}" width="10" height="13" rx="2" fill="${winCol}" stroke="${wallStroke}" stroke-width="1"/>`).join('')}
+    ${[-14,8].map(wx=>`<rect x="${x+wx-5}" y="${y-52}" width="10" height="13" rx="2" fill="${winCol}" stroke="${wallStroke}" stroke-width="1"/>`).join('')}
+    <!-- Portcullis gate -->
+    <path d="M ${x-12},${y} L ${x-12},${y-24} Q ${x},${y-34} ${x+12},${y-24} L ${x+12},${y} Z" fill="${doorCol}"/>
+    <!-- Gate bars -->
+    ${done ? '' : `
+    <line x1="${x-8}" y1="${y}" x2="${x-8}" y2="${y-22}" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="${x-2}" y1="${y}" x2="${x-2}" y2="${y-24}" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="${x+4}" y1="${y}" x2="${x+4}" y2="${y-22}" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="${x+10}" y1="${y}" x2="${x+10}" y2="${y-22}" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="${x-12}" y1="${y-10}" x2="${x+12}" y2="${y-10}" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="${x-12}" y1="${y-18}" x2="${x+12}" y2="${y-18}" stroke="#64748b" stroke-width="1.5"/>
+    `}
+    <!-- Gold trim when done -->
+    ${done ? `
+    <rect x="${x-28}" y="${y-86}" width="56" height="3" rx="1.5" fill="${goldCol}" opacity="0.8"/>
+    <text x="${x-38}" y="${y-90}" font-size="12" opacity="0.9">✨</text>
+    <text x="${x+28}" y="${y-92}" font-size="12" opacity="0.9">✨</text>
+    ` : ''}
+    <!-- Stone texture -->
+    ${[-72,-56,-40,-24,-8].map(dy=>`<line x1="${x-28}" y1="${y+dy}" x2="${x+28}" y2="${y+dy}" stroke="${wallStroke}" stroke-width="0.5" opacity="0.25"/>`).join('')}
+    ${statusBadge(x, y-134, done)}
+    ${buildingLabel(x, y+14, cp.label, done)}
   </g>`;
 }
 
-function badgeAndBar(x: number, y: number, done: boolean, label: string, completed: number, total: number): string {
-  const barW = 56;
-  const filled = total > 0 ? Math.round((completed/total) * barW) : 0;
-  const color = done ? '#10b981' : '#60a5fa';
-  const badgeY = y - (done ? 95 : 92);
-  return `
-    <circle cx="${x}" cy="${badgeY}" r="9" fill="${done?'#fef9c3':'#f3f4f6'}" stroke="${done?'#fbbf24':'#d1d5db'}" stroke-width="1.5"/>
-    <text x="${x}" y="${badgeY+4}" font-size="${done?10:11}" text-anchor="middle" font-family="sans-serif" fill="${done?'#92400e':'#9ca3af'}">${done?'✓':'🔒'}</text>
-    <text x="${x}" y="${y+22}" font-size="10" font-weight="700" text-anchor="middle" fill="${done?'#374151':'#6b7280'}" font-family="sans-serif">${label}</text>
-    <rect x="${x-barW/2-2}" y="${y+27}" width="${barW+4}" height="9" rx="4.5" fill="#e5e7eb"/>
-    <rect x="${x-barW/2-2}" y="${y+27}" width="${filled+4}" height="9" rx="4.5" fill="${color}" opacity="0.85"/>
-    <text x="${x}" y="${y+35}" font-size="7" text-anchor="middle" fill="white" font-weight="700" font-family="sans-serif">${total>0?`${completed}/${total}`:''}</text>`;
+// ─── BADGE & LABEL (no more tiny progress pill) ───────────────────────────────
+function statusBadge(x: number, y: number, done: boolean): string {
+  if (done) {
+    return `<g>
+      <circle cx="${x}" cy="${y}" r="11" fill="#fef9c3" stroke="#fbbf24" stroke-width="2"/>
+      <text x="${x}" y="${y+5}" font-size="13" text-anchor="middle" font-family="sans-serif">✅</text>
+    </g>`;
+  }
+  return `<g>
+    <circle cx="${x}" cy="${y}" r="11" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="${x}" y="${y+5}" font-size="13" text-anchor="middle" font-family="sans-serif">🔒</text>
+  </g>`;
+}
+
+function buildingLabel(x: number, y: number, label: string, done: boolean): string {
+  return `<text x="${x}" y="${y}" font-size="11" font-weight="800" text-anchor="middle" fill="${done?'#374151':'#94a3b8'}" font-family="sans-serif" letter-spacing="0.3">${label}</text>`;
 }
 
 // ─── EXPORT ───────────────────────────────────────────────────────────────────
