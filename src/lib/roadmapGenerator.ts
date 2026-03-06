@@ -63,8 +63,9 @@ function sharedStyles(): string {
     }
     .player-bob    { animation: playerBob 1.8s ease-in-out infinite; }
     .player-spin   { animation: starSpin 0.7s ease-in-out; }
-    .building-idle { transform-origin: center bottom; }
-    .building-pop  { transform-origin: center bottom; animation: buildingPop 0.65s cubic-bezier(0.36,0.07,0.19,0.97); }
+    /* transform-box: fill-box makes transform-origin relative to the element itself, not the SVG viewport */
+    .building-idle { transform-box: fill-box; transform-origin: center bottom; }
+    .building-pop  { transform-box: fill-box; transform-origin: center bottom; animation: buildingPop 0.65s cubic-bezier(0.36,0.07,0.19,0.97); }
     .path-glow     { animation: pathGlow 2s ease-in-out infinite; }
   </style>`;
 }
@@ -145,22 +146,22 @@ ${celebrating === 1 ? celebrationBurst(px[0], groundY-70) : ''}
 ${celebrating === 2 ? celebrationBurst(px[1], groundY-80) : ''}
 ${celebrating === 3 ? celebrationBurst(px[2], groundY-100) : ''}
 
-<!-- Player character — animates along path when position changes -->
+<!-- Player character — single animateMotion on group, children at (0,0) relative to group -->
 <g id="player" class="${celebrating ? 'player-spin' : 'player-bob'}">
-  ${prevPct !== curPct ? `
-  <!-- Pulse ring -->
-  <circle cx="0" cy="0" r="10" fill="#fef08a" opacity="0.5">
-    <animateMotion dur="1.4s" fill="freeze" keyPoints="${prevPct};${curPct}" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.46 0.45 0.94">
-      <mpath href="#road-path-d"/>
-    </animateMotion>
-    <animate attributeName="r" values="10;20;10" dur="1.4s" repeatCount="1"/>
-    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.4s" repeatCount="1"/>
-  </circle>` : ''}
-  <circle cx="${prevPct === curPct ? sX : 0}" cy="${prevPct === curPct ? sY : 0}" r="11" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2.5" filter="url(#shadow)">
-    ${prevPct !== curPct ? `<animateMotion dur="1.4s" fill="freeze" keyPoints="${prevPct};${curPct}" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.46 0.45 0.94"><mpath href="#road-path-d"/></animateMotion>` : ''}
+  <animateMotion dur="${prevPct !== curPct ? '1.4s' : '0.001s'}" fill="freeze"
+    keyPoints="${prevPct};${curPct}" keyTimes="0;1"
+    calcMode="spline" keySplines="0.25 0.46 0.45 0.94">
+    <mpath href="#road-path-d"/>
+  </animateMotion>
+  <!-- Pulse ring (only visible when moving) -->
+  <circle cx="0" cy="0" r="10" fill="#fef08a" opacity="${prevPct !== curPct ? 0.5 : 0}">
+    <animate attributeName="r" values="10;22;10" dur="1.4s" repeatCount="1"/>
+    <animate attributeName="opacity" values="0.5;0;0" dur="1.4s" fill="freeze" repeatCount="1"/>
   </circle>
-  <text x="${prevPct === curPct ? sX : 0}" y="${prevPct === curPct ? sY+4 : 4}" font-size="13" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${curPct > 0 ? '⭐' : '🌱'}</text>
-  ${prevPct !== curPct ? `<animateMotion dur="1.4s" fill="freeze" keyPoints="${prevPct};${curPct}" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.46 0.45 0.94" additive="sum" accumulate="none"><mpath href="#road-path-d"/></animateMotion>` : ''}
+  <!-- Player dot -->
+  <circle cx="0" cy="0" r="11" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2.5" filter="url(#shadow)"/>
+  <!-- Emoji — same (0,0) origin as group, offset only by font baseline -->
+  <text x="0" y="4" font-size="13" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${curPct > 0 ? '⭐' : '🌱'}</text>
 </g>
 
 </svg>`;
@@ -227,19 +228,17 @@ ${celebrating === 2 ? celebrationBurst(cx-35, py[1]-70) : ''}
 ${celebrating === 3 ? celebrationBurst(cx+30, py[2]-90) : ''}
 
 <g id="player-m" class="${celebrating ? 'player-spin' : 'player-bob'}">
-  ${prevPct !== curPct ? `
-  <circle cx="0" cy="0" r="10" fill="#fef08a" opacity="0.5">
-    <animateMotion dur="1.4s" fill="freeze" keyPoints="${prevPct};${curPct}" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.46 0.45 0.94">
-      <mpath href="#road-path-m"/>
-    </animateMotion>
-    <animate attributeName="r" values="10;20;10" dur="1.4s" repeatCount="1"/>
-    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.4s" repeatCount="1"/>
-  </circle>` : ''}
-  <circle cx="${prevPct === curPct ? sX : 0}" cy="${prevPct === curPct ? sY : 0}" r="11" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2.5" filter="url(#shad-m)">
-    ${prevPct !== curPct ? `<animateMotion dur="1.4s" fill="freeze" keyPoints="${prevPct};${curPct}" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.46 0.45 0.94"><mpath href="#road-path-m"/></animateMotion>` : ''}
+  <animateMotion dur="${prevPct !== curPct ? '1.4s' : '0.001s'}" fill="freeze"
+    keyPoints="${prevPct};${curPct}" keyTimes="0;1"
+    calcMode="spline" keySplines="0.25 0.46 0.45 0.94">
+    <mpath href="#road-path-m"/>
+  </animateMotion>
+  <circle cx="0" cy="0" r="10" fill="#fef08a" opacity="${prevPct !== curPct ? 0.5 : 0}">
+    <animate attributeName="r" values="10;22;10" dur="1.4s" repeatCount="1"/>
+    <animate attributeName="opacity" values="0.5;0;0" dur="1.4s" fill="freeze" repeatCount="1"/>
   </circle>
-  <text x="${prevPct === curPct ? sX : 0}" y="${prevPct === curPct ? sY+4 : 4}" font-size="13" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${curPct > 0 ? '⭐' : '🌱'}</text>
-  ${prevPct !== curPct ? `<animateMotion dur="1.4s" fill="freeze" keyPoints="${prevPct};${curPct}" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.46 0.45 0.94"><mpath href="#road-path-m"/></animateMotion>` : ''}
+  <circle cx="0" cy="0" r="11" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2.5" filter="url(#shad-m)"/>
+  <text x="0" y="4" font-size="13" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${curPct > 0 ? '⭐' : '🌱'}</text>
 </g>
 
 </svg>`;

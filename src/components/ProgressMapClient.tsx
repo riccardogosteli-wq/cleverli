@@ -81,42 +81,21 @@ export default function ProgressMapClient({
 
     setRoadmapSvg(svg);
 
+    // ✅ Always update refs — even when celebrating, so next animation starts from correct position
+    prevPlayerPctRef.current = curPct;
+    prevCompletedRef.current = Object.fromEntries(checkpointProgress.map(c => [c.id, c.isCompleted]));
+
     if (celebrate) {
       setCelebrateCheckpoint(celebrate);
-      // Update anim key so SVG re-mounts and SMIL animations restart
       setAnimKey(String(Date.now()));
-      // Clear after animation completes
       const t = setTimeout(() => setCelebrateCheckpoint(null), 1200);
       return () => clearTimeout(t);
     }
 
-    // Update refs after rendering
-    prevPlayerPctRef.current = curPct;
-    prevCompletedRef.current = Object.fromEntries(checkpointProgress.map(c => [c.id, c.isCompleted]));
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [completedExercisesByDifficulty, totalExercisesByDifficulty, topicTitle, isMobile, lang]);
 
-  // Update refs after celebrate clears
-  useEffect(() => {
-    if (!celebrateCheckpoint) {
-      const checkpointProgress = progressMap.checkpoints.map((cp) => {
-        const completed = completedExercisesByDifficulty[cp.difficulty] || 0;
-        const total = totalExercisesByDifficulty[cp.difficulty] || 0;
-        return {
-          id: cp.id,
-          isCompleted: isCheckpointCompleted(completed, total),
-          completed,
-          total,
-        };
-      });
-      const totalDone = checkpointProgress.reduce((s, c) => s + c.completed, 0);
-      const totalAll  = checkpointProgress.reduce((s, c) => s + c.total, 0);
-      prevPlayerPctRef.current = totalAll > 0 ? totalDone / totalAll : 0;
-      prevCompletedRef.current = Object.fromEntries(checkpointProgress.map(c => [c.id, c.isCompleted]));
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [celebrateCheckpoint]);
+
 
   // Overall progress for footer
   const totalCompleted = Object.values(completedExercisesByDifficulty).reduce((a, b) => a + b, 0);

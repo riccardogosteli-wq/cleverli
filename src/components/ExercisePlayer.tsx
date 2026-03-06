@@ -233,6 +233,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     setIdx(i => i + 1);
     setAnswered(null);
     setCardKey(k => k + 1);
+    // Notify TopicClient so roadmap animates in real-time
+    window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
   };
 
   // UJ-7: start review round
