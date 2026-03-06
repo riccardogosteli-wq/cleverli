@@ -94,12 +94,14 @@ export function getCheckpointProgress(
 }
 
 /**
- * Check if a checkpoint is completed
+ * Check if a checkpoint is completed.
+ * ✅ A checkpoint with 0 total exercises is NOT completed — it's empty/unused.
  */
 export function isCheckpointCompleted(
   completedExercises: number,
   totalExercises: number
 ): boolean {
+  if (totalExercises === 0) return false; // ← root cause of the ✅ bug
   return completedExercises >= totalExercises;
 }
 

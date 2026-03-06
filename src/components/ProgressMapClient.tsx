@@ -38,7 +38,7 @@ export default function ProgressMapClient({
   );
 
   useEffect(() => {
-    const checkpointProgress = progressMap.checkpoints.map((cp) => {
+    const allCheckpointProgress = progressMap.checkpoints.map((cp) => {
       const completed = completedExercisesByDifficulty[cp.difficulty] || 0;
       const total = totalExercisesByDifficulty[cp.difficulty] || 0;
       return {
@@ -50,6 +50,9 @@ export default function ProgressMapClient({
         total,
       };
     });
+    // ✅ Only show checkpoints that have actual exercises — filter out empty tiers
+    // (topics with only difficulty-1 exercises would otherwise show fake ✅ on tier 2+3)
+    const checkpointProgress = allCheckpointProgress.filter(cp => cp.total > 0);
 
     // Total progress 0–1
     const totalDone = checkpointProgress.reduce((s, c) => s + c.completed, 0);
