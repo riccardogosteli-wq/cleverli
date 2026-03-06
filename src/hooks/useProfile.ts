@@ -77,11 +77,11 @@ function loadProfile(): Profile {
   try {
     const key = getActiveProfileKey();
     const raw = localStorage.getItem(key);
-    // For child profiles: fall back to global key on first switch (migration)
-    const fallback = key !== PROFILE_KEY ? localStorage.getItem(PROFILE_KEY) : null;
-    const source = raw ?? fallback ?? null;
-    if (!source) return DEFAULT_PROFILE;
-    return { ...DEFAULT_PROFILE, ...JSON.parse(source) };
+    // ⚠️ Do NOT fall back to the global key for child profiles.
+    // If a child has no local data yet, they're genuinely new (XP=0).
+    // Falling back would bleed the previous child's XP into the new one.
+    if (!raw) return DEFAULT_PROFILE;
+    return { ...DEFAULT_PROFILE, ...JSON.parse(raw) };
   } catch { return DEFAULT_PROFILE; }
 }
 
