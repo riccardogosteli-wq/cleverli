@@ -10,7 +10,7 @@ import { getTopicTitle } from "@/data/topicTitles";
 import { isDailyDoneToday } from "@/lib/daily";
 import { useProfile, Profile } from "@/hooks/useProfile";
 import { useSession } from "@/hooks/useSession";
-import { loadFamily, getActiveProfileId } from "@/lib/family";
+import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
 import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
 import RewardWidget from "@/components/RewardWidget";
 
@@ -162,12 +162,22 @@ function DashboardInner() {
   const [activeMember, setActiveMember] = useState<{ name: string; avatar: string } | null>(null);
   const [familySize, setFamilySize] = useState(0);
   // (notify signup widget removed — state retained for safety)
-  // Restore last-used grade from localStorage + load active child profile
+  // Restore grade from active child profile (or fall back to last-used)
   useEffect(() => {
     setDailyDone(isDailyDoneToday());
     if (!preselectedSubject) {
-      const saved = localStorage.getItem(GRADE_KEY);
-      if (saved) setGrade(parseInt(saved));
+      const family = loadFamily();
+      const activeId = getActiveProfileId();
+      const member = family.members.find(m => m.id === activeId) ?? family.members[0];
+      if (member?.grade) {
+        // ✅ Always use the child's stored grade — not the global last-used key
+        setGrade(member.grade);
+        localStorage.setItem(GRADE_KEY, String(member.grade));
+      } else {
+        // Guest / no profile: fall back to last-used grade
+        const saved = localStorage.getItem(GRADE_KEY);
+        if (saved) setGrade(parseInt(saved));
+      }
     }
     // PM-3/PM-4: show active child banner when family has 2+ profiles
     const family = loadFamily();
@@ -187,6 +197,14 @@ function DashboardInner() {
   const chooseGrade = (g: number) => {
     localStorage.setItem(GRADE_KEY, String(g));
     setGrade(g);
+    // ✅ Also persist grade back to the child's family profile
+    const family = loadFamily();
+    const activeId = getActiveProfileId();
+    const member = family.members.find(m => m.id === activeId);
+    if (member && member.grade !== g) {
+      member.grade = g;
+      saveFamily(family);
+    }
   };
 
 
@@ -218,6 +236,12 @@ function DashboardInner() {
 
             {/* Grade picker header */}
             <div className="text-center">
+              {activeMember && (
+                <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3 py-1.5 rounded-full mb-2">
+                  <span className="text-lg">{activeMember.avatar}</span>
+                  <span className="text-sm font-bold text-blue-800">{activeMember.name}</span>
+                </div>
+              )}
               <h2 className="text-xl font-bold text-gray-800">
                 {lang === "fr" ? "Quelle classe ?" : lang === "it" ? "Che classe ?" : lang === "en" ? "Which grade?" : "Welche Klasse?"}
               </h2>
@@ -225,27 +249,25 @@ function DashboardInner() {
                 {lang === "fr" ? "Choisis ta classe" : lang === "it" ? "Scegli la tua classe" : lang === "en" ? "Choose your grade" : "Wähle deine Klasse"}
               </p>
             </div>
-            <div className="text-center space-y-1">
-              {subject && SUBJECT_META[subject] && (
-                <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-800 text-sm font-semibold px-3 py-1.5 rounded-full mb-1">
-                  {SUBJECT_META[subject].emoji} {subjectL(subject, "subtitle")}
-                </div>
-              )}
-              <h2 className="text-xl font-bold text-gray-800">
-                {lang === "fr" ? "Quelle classe?" : lang === "it" ? "Che classe?" : lang === "en" ? "Which class?" : "In welcher Klasse bist du?"}
-              </h2>
-            </div>
 
             <div className="grid grid-cols-3 gap-3">
-              {[1,2,3,4,5,6].map((g, i) => (
-                <button key={g} onClick={() => chooseGrade(g)}
-                  style={{ minHeight: "100px", transition: "all 0.15s ease" }}
-                  className={`border-2 rounded-2xl font-bold active:scale-95 flex flex-col items-center justify-center gap-1 ${GRADE_COLORS[i].base}`}>
-                  <div className="text-3xl">{GRADE_COLORS[i].emoji}</div>
-                  <div className="text-2xl font-black">{g}.</div>
-                  <div className="text-xs font-medium opacity-70">{tr("gradeLabel")}</div>
-                </button>
-              ))}
+              {[1,2,3,4,5,6].map((g, i) => {
+                // Highlight current child's grade
+                const family = loadFamily();
+                const activeId = getActiveProfileId();
+                const member = family.members.find(m => m.id === activeId);
+                const isCurrent = member?.grade === g;
+                return (
+                  <button key={g} onClick={() => chooseGrade(g)}
+                    style={{ minHeight: "100px", transition: "all 0.15s ease" }}
+                    className={`border-2 rounded-2xl font-bold active:scale-95 flex flex-col items-center justify-center gap-1 relative ${isCurrent ? 'ring-2 ring-blue-400 ring-offset-2' : ''} ${GRADE_COLORS[i].base}`}>
+                    {isCurrent && <span className="absolute top-1.5 right-1.5 text-xs bg-blue-500 text-white px-1.5 py-0.5 rounded-full font-bold">✓</span>}
+                    <div className="text-3xl">{GRADE_COLORS[i].emoji}</div>
+                    <div className="text-2xl font-black">{g}.</div>
+                    <div className="text-xs font-medium opacity-70">{tr("gradeLabel")}</div>
+                  </button>
+                );
+              })}
             </div>
 
 
@@ -360,7 +382,17 @@ function DashboardInner() {
           {currentSubjectMeta?.emoji}
         </div>
         <div className="flex-1 min-w-0">
-          <h2 className="text-base font-bold text-gray-800 leading-tight">{subjectL(subject, "label")} — {grade}. {tr("gradeLabel")}</h2>
+          <div className="flex items-center gap-2 flex-wrap">
+            <h2 className="text-base font-bold text-gray-800 leading-tight">{subjectL(subject, "label")}</h2>
+            {/* Grade badge — tap to change grade directly from dashboard */}
+            <button
+              onClick={() => setGrade(null)}
+              className="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 border border-blue-200 hover:bg-blue-200 transition-colors shrink-0"
+              title={lang === "fr" ? "Changer de classe" : lang === "it" ? "Cambia classe" : lang === "en" ? "Change grade" : "Klasse wechseln"}
+            >
+              {grade}. {tr("gradeLabel")} ✎
+            </button>
+          </div>
           <div className="text-xs text-gray-400">{subjectL(subject, "subtitle")}</div>
         </div>
       </div>
