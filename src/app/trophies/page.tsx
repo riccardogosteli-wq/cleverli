@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import TrophiesClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Trophäen",
-  description: "Deine Trophäen und Erfolge auf Cleverli.",
+  title: "Missionen",
+  description: "Deine Missionen und dein Lernfortschritt auf Cleverli — alle Fächer und Aufgaben im Überblick.",
   robots: { index: false, follow: false },
 };
 

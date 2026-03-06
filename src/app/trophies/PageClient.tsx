@@ -1,304 +1,380 @@
 "use client";
-import { useMemo } from "react";
-import Image from "next/image";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
-import { ACHIEVEMENTS, RARITY_COLORS, RARITY_GLOW, Achievement } from "@/lib/achievements";
-import { LEVELS, getLevelProgress, getNextLevel } from "@/lib/xp";
+import { loadFamily, getActiveProfileId } from "@/lib/family";
+import { getTopics, SUBJECTS } from "@/data/index";
+import { getTierProgress } from "@/lib/tierProgress";
+import { LEVELS, getLevelProgress } from "@/lib/xp";
 
-const COSTUME_LABELS = ["", "🎩 Hut", "🦸 Cape", "👑 Krone"];
-const COSTUME_IMAGES = [
-  "/cleverli-wave.png",
-  "/cleverli-sit-read.png",
-  "/cleverli-run.png",
-  "/cleverli-jump-star.png",
-];
+// ─── TYPES ───────────────────────────────────────────────────────────────────
+interface TopicProgress {
+  topicId: string;
+  title: string;
+  emoji: string;
+  grade: number;
+  subject: string;
+  totalExercises: number;
+  completedExercises: number;
+  stars: number; // 0–3
+  tiers: { easy: { total: number; done: number }; medium: { total: number; done: number }; hard: { total: number; done: number } };
+  status: "locked" | "available" | "started" | "completed";
+}
 
-function RarityBadge({ rarity }: { rarity: Achievement["rarity"] }) {
-  const { tr } = useLang();
-  const labels: Record<Achievement["rarity"], string> = {
-    common: tr("rarityCommon"), rare: tr("rarityRare"), epic: tr("rarityEpic"), legendary: tr("rarityLegendary")
-  };
-  const colors: Record<Achievement["rarity"], string> = {
-    common: "bg-gray-100 text-gray-500",
-    rare: "bg-blue-100 text-blue-600",
-    epic: "bg-purple-100 text-purple-700",
-    legendary: "bg-amber-100 text-amber-700",
-  };
+// ─── READ SAVED PROGRESS FROM LOCALSTORAGE ──────────────────────────────────
+function loadTopicProgress(grade: number, subject: string, topicId: string): { completed: number; stars: number } {
+  if (typeof window === "undefined") return { completed: 0, stars: 0 };
+  try {
+    const raw = localStorage.getItem(`cleverli_${grade}_${subject}_${topicId}`);
+    if (!raw) return { completed: 0, stars: 0 };
+    const d = JSON.parse(raw);
+    return { completed: d.completed ?? 0, stars: d.stars ?? 0 };
+  } catch { return { completed: 0, stars: 0 }; }
+}
+
+// ─── MINI CHECKPOINT DOTS ────────────────────────────────────────────────────
+function CheckpointDots({ tiers, compact = false }: {
+  tiers: TopicProgress["tiers"];
+  compact?: boolean;
+}) {
+  const tierList = [
+    { key: "easy",   color: "#22c55e", label: "1" },
+    { key: "medium", color: "#3b82f6", label: "2" },
+    { key: "hard",   color: "#9333ea", label: "3" },
+  ] as const;
+
   return (
-    <span className={`text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-full ${colors[rarity]}`}>
-      {labels[rarity]}
-    </span>
+    <div className={`flex items-center ${compact ? "gap-1" : "gap-1.5"}`}>
+      {tierList.map(({ key, color, label }) => {
+        const t = tiers[key];
+        if (t.total === 0) return null; // skip empty tiers
+        const done = t.done >= t.total;
+        const partial = t.done > 0 && !done;
+        const pct = t.total > 0 ? (t.done / t.total) * 100 : 0;
+        return (
+          <div key={key} className="flex flex-col items-center gap-0.5">
+            <div
+              className={`${compact ? "w-5 h-5 text-[9px]" : "w-7 h-7 text-xs"} rounded-full flex items-center justify-center font-black relative overflow-hidden border-2`}
+              style={{
+                borderColor: done ? color : partial ? color : "#e2e8f0",
+                background: done ? color : "#f8fafc",
+                color: done ? "white" : partial ? color : "#94a3b8",
+              }}
+            >
+              {done ? "✓" : label}
+              {partial && !done && (
+                <div
+                  className="absolute bottom-0 left-0 right-0 opacity-30"
+                  style={{ height: `${pct}%`, background: color }}
+                />
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
-export default function TrophiesPage() {
-  const { profile, level, loaded } = useProfileContext();
-  const { lang, tr } = useLang();
+// ─── TOPIC CARD ───────────────────────────────────────────────────────────────
+function TopicCard({ tp, grade, subject }: { tp: TopicProgress; grade: number; subject: string }) {
+  const pct = tp.totalExercises > 0 ? Math.round((tp.completedExercises / tp.totalExercises) * 100) : 0;
 
-  const nextLevel = getNextLevel(profile.xp);
-  const pct = getLevelProgress(profile.xp);
+  const statusColors = {
+    locked:    { bg: "bg-gray-50", border: "border-gray-200", text: "text-gray-400" },
+    available: { bg: "bg-white",   border: "border-gray-200", text: "text-gray-700" },
+    started:   { bg: "bg-blue-50", border: "border-blue-200", text: "text-blue-800" },
+    completed: { bg: "bg-green-50",border: "border-green-300",text: "text-green-800" },
+  };
+  const sc = statusColors[tp.status];
 
-  const earned = useMemo(() => new Set(profile.achievements), [profile.achievements]);
-
-  // Group achievements by rarity for display
-  const groups: Achievement["rarity"][] = ["legendary", "epic", "rare", "common"];
-
-  if (!loaded) return (
-    <div className="flex items-center justify-center min-h-screen">
-      <img src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" className="w-16 h-16 object-contain animate-bounce" />
-    </div>
-  );
-
-  const levelTitle =
-    lang === "fr" ? level.titleFr :
-    lang === "it" ? level.titleIt :
-    lang === "en" ? level.titleEn :
-    level.title;
-
-  const xpToNext = nextLevel ? nextLevel.minXp - profile.xp : 0;
+  const tierBarColors = ["#22c55e", "#3b82f6", "#9333ea"];
+  const activeTiers = [tp.tiers.easy, tp.tiers.medium, tp.tiers.hard].filter(t => t.total > 0);
 
   return (
-    <main className="max-w-lg mx-auto px-4 py-6 space-y-6 pb-24 sm:pb-12">
-
-      {/* ── Hero: Cleverli + level ── */}
-      <div className="bg-white rounded-3xl p-5 shadow-sm border border-gray-100 text-center space-y-3">
-        <div className="relative inline-block">
-          <Image
-            src={COSTUME_IMAGES[profile.costume] ?? "/cleverli-wave.png"}
-            alt="Cleverli"
-            width={110}
-            height={110}
-            className="mx-auto drop-shadow-lg"
-            style={{ animation: "float 3s ease-in-out infinite" }}
-          />
-          {/* Costume accessory overlay removed — mascot images carry the visual identity */}
+    <Link
+      href={tp.status === "locked" ? "#" : `/learn/${grade}/${subject}/${tp.topicId}`}
+      className={`block rounded-2xl border-2 p-3.5 transition-all active:scale-98 ${sc.bg} ${sc.border} ${tp.status === "locked" ? "opacity-60 pointer-events-none" : "hover:shadow-md hover:-translate-y-0.5"}`}
+    >
+      <div className="flex items-start gap-3">
+        {/* Emoji */}
+        <div className={`text-2xl w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${tp.status === "completed" ? "bg-green-100" : tp.status === "started" ? "bg-blue-100" : "bg-gray-100"}`}>
+          {tp.status === "locked" ? "🔒" : tp.emoji}
         </div>
 
-        <div>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-2xl">{level.emoji}</span>
-            <h1 className="text-xl font-black text-gray-800">{levelTitle}</h1>
+        <div className="flex-1 min-w-0">
+          {/* Title + status */}
+          <div className="flex items-center justify-between gap-2">
+            <span className={`text-sm font-bold truncate ${sc.text}`}>{tp.title}</span>
+            <span className="shrink-0 text-sm">
+              {tp.stars >= 3 ? "⭐⭐⭐" : tp.stars === 2 ? "⭐⭐" : tp.stars === 1 ? "⭐" : ""}
+            </span>
           </div>
-          <p className="text-xs text-gray-400 mt-0.5">Level {level.id}</p>
-        </div>
 
-        {/* XP bar */}
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-gray-500">
-            <span>{profile.xp} XP</span>
-            {nextLevel && <span>→ {nextLevel.minXp} XP für {lang === "fr" ? nextLevel.titleFr : lang === "it" ? nextLevel.titleIt : lang === "en" ? nextLevel.titleEn : nextLevel.title}</span>}
-            {!nextLevel && <span>{lang === "fr" ? "Niveau max ! 🏆" : lang === "it" ? "Livello max! 🏆" : lang === "en" ? "Max Level! 🏆" : "Max Level! 🏆"}</span>}
+          {/* Checkpoint dots */}
+          <div className="mt-1.5 flex items-center justify-between gap-2">
+            <CheckpointDots tiers={tp.tiers} compact />
+            <span className="text-xs font-semibold tabular-nums shrink-0" style={{ color: tp.status === "completed" ? "#16a34a" : tp.status === "started" ? "#1d4ed8" : "#94a3b8" }}>
+              {tp.completedExercises}/{tp.totalExercises}
+            </span>
           </div>
-          <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
-            <div
-              className="h-full rounded-full transition-all duration-1000"
-              style={{ width: `${pct}%`, background: level.color }}
-            />
-          </div>
-          {nextLevel && (
-            <p className="text-xs text-gray-400 text-center">
-              Noch {xpToNext} XP bis zum nächsten Level
-            </p>
+
+          {/* Progress bar — segmented by tier */}
+          {tp.status !== "locked" && tp.totalExercises > 0 && (
+            <div className="mt-2 flex h-2 rounded-full overflow-hidden gap-px bg-gray-100">
+              {activeTiers.map((t, i) => {
+                const segPct = (t.total / tp.totalExercises) * 100;
+                const fillPct = t.total > 0 ? (t.done / t.total) * 100 : 0;
+                return (
+                  <div key={i} className="relative h-full bg-gray-200 overflow-hidden" style={{ width: `${segPct}%` }}>
+                    <div className="h-full transition-all duration-700 rounded-full"
+                      style={{ width: `${fillPct}%`, background: tierBarColors[i] }} />
+                  </div>
+                );
+              })}
+            </div>
           )}
         </div>
+      </div>
+    </Link>
+  );
+}
 
-        {/* Costume unlock hint */}
-        {profile.costume < 3 && (
-          <div className="text-xs text-gray-400 bg-gray-50 rounded-xl px-3 py-2">
-            {profile.costume === 0 && `🎩 Hut bei 10 Aufgaben (${Math.max(0, 10 - profile.totalExercises)} fehlen)`}
-            {profile.costume === 1 && `🦸 Cape bei 50 Aufgaben (${Math.max(0, 50 - profile.totalExercises)} fehlen)`}
-            {profile.costume === 2 && `👑 Krone bei 100 Aufgaben (${Math.max(0, 100 - profile.totalExercises)} fehlen)`}
+// ─── SUBJECT SECTION ─────────────────────────────────────────────────────────
+function SubjectSection({ subjectId, topics, grade, completedCount, totalCount }: {
+  subjectId: string;
+  topics: TopicProgress[];
+  grade: number;
+  completedCount: number;
+  totalCount: number;
+}) {
+  const { tr } = useLang();
+  const meta = SUBJECTS.find(s => s.id === subjectId)!;
+  const pct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+
+  const subjectColors: Record<string, { bg: string; border: string; bar: string; text: string }> = {
+    math:    { bg: "bg-blue-50",   border: "border-blue-200",  bar: "#3b82f6",  text: "text-blue-900" },
+    german:  { bg: "bg-yellow-50", border: "border-yellow-200",bar: "#f59e0b",  text: "text-yellow-900" },
+    science: { bg: "bg-green-50",  border: "border-green-200", bar: "#22c55e",  text: "text-green-900" },
+  };
+  const sc = subjectColors[subjectId] ?? subjectColors.math;
+
+  return (
+    <div className={`rounded-2xl border-2 ${sc.border} ${sc.bg} overflow-hidden`}>
+      {/* Subject header */}
+      <div className="px-4 py-3 flex items-center gap-3 border-b border-white/50">
+        <span className="text-2xl">{meta.emoji}</span>
+        <div className="flex-1">
+          <div className={`font-black text-base ${sc.text}`}>{tr(subjectId as "math" | "german" | "science")}</div>
+          <div className="text-xs text-gray-500 font-medium">
+            {completedCount}/{totalCount} {tr("gradeLabel") ? "" : "Aufgaben"} · {pct}%
           </div>
-        )}
+        </div>
+        {/* Subject progress bar */}
+        <div className="w-24">
+          <div className="w-full bg-white rounded-full h-2 overflow-hidden border border-gray-200">
+            <div className="h-full rounded-full transition-all duration-700"
+              style={{ width: `${pct}%`, background: sc.bar }} />
+          </div>
+        </div>
       </div>
 
-      {/* ── Stats strip ── */}
-      <div className="grid grid-cols-3 gap-3">
-        {[
-          { label: tr("statExercises"), value: profile.totalExercises, emoji: "✏️" },
-          { label: tr("statStreak"), value: `${profile.dailyStreak}🔥`, emoji: "" },
-          { label: tr("statTrophies"), value: `${profile.achievements.length}/${ACHIEVEMENTS.length}`, emoji: "🏆" },
-        ].map(s => (
-          <div key={s.label} className="bg-white rounded-2xl p-3 text-center shadow-sm border border-gray-100">
-            <div className="text-xl font-black text-gray-800">{s.emoji}{s.value}</div>
-            <div className="text-[10px] text-gray-400 font-medium uppercase tracking-wider mt-0.5">{s.label}</div>
+      {/* Topics grid */}
+      <div className="p-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {topics.map(tp => (
+          <TopicCard key={tp.topicId} tp={tp} grade={grade} subject={subjectId} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── MAIN MISSIONEN PAGE ──────────────────────────────────────────────────────
+export default function MissionenPage() {
+  const { profile, loaded } = useProfileContext();
+  const { lang, tr } = useLang();
+  const [activeTab, setActiveTab] = useState<"all" | "math" | "german" | "science">("all");
+
+  // Get active child's grade from family store
+  const grade = useMemo(() => {
+    if (typeof window === "undefined") return 1;
+    try {
+      const activeId = localStorage.getItem("cleverli_active_profile");
+      const family = loadFamily();
+      const member = family.members.find(m => m.id === activeId);
+      if (member?.grade) return member.grade;
+    } catch { /* */ }
+    const saved = localStorage.getItem("cleverli_last_grade");
+    return saved ? parseInt(saved) : 1;
+  }, []);
+
+  // Get active child name
+  const childName = useMemo(() => {
+    if (typeof window === "undefined") return null;
+    try {
+      const activeId = localStorage.getItem("cleverli_active_profile");
+      const family = loadFamily();
+      const member = family.members.find(m => m.id === activeId);
+      return member ? { name: member.name, avatar: member.avatar } : null;
+    } catch { return null; }
+  }, []);
+
+  // Build full curriculum progress map
+  const curriculumData = useMemo(() => {
+    if (!loaded) return null;
+    return SUBJECTS.map(subject => {
+      const topics = getTopics(grade, subject.id);
+      let completedExercisesTotal = 0;
+      let totalExercisesTotal = 0;
+
+      const topicProgressList: TopicProgress[] = topics.map(topic => {
+        const { completed, stars } = loadTopicProgress(grade, subject.id, topic.id);
+        const tierInfo = getTierProgress(topic, completed);
+        const total = topic.exercises.length;
+
+        completedExercisesTotal += completed;
+        totalExercisesTotal += total;
+
+        let status: TopicProgress["status"] = "available";
+        if (completed === 0 && stars === 0) status = "available";
+        if (completed > 0 && completed < total) status = "started";
+        if (completed >= total) status = "completed";
+
+        return {
+          topicId: topic.id,
+          title: topic.title,
+          emoji: topic.emoji ?? "📚",
+          grade,
+          subject: subject.id,
+          totalExercises: total,
+          completedExercises: completed,
+          stars,
+          tiers: {
+            easy:   tierInfo.easy,
+            medium: tierInfo.medium,
+            hard:   tierInfo.hard,
+          },
+          status,
+        };
+      });
+
+      return {
+        subjectId: subject.id,
+        topics: topicProgressList,
+        completedExercises: completedExercisesTotal,
+        totalExercises: totalExercisesTotal,
+      };
+    });
+  }, [grade, loaded, profile.totalExercises]); // re-run when exercises change
+
+  // Overall stats
+  const overallCompleted = curriculumData?.reduce((s, d) => s + d.completedExercises, 0) ?? 0;
+  const overallTotal     = curriculumData?.reduce((s, d) => s + d.totalExercises, 0) ?? 1;
+  const overallPct = Math.round((overallCompleted / overallTotal) * 100);
+
+  const levelProgress = getLevelProgress(profile.xp);
+  const currentLevelData = LEVELS.slice().reverse().find(l => profile.xp >= l.minXp) ?? LEVELS[0];
+  const levelLabel = currentLevelData.title;
+
+  if (!loaded) return <div className="animate-pulse space-y-4 p-4">{[...Array(3)].map((_, i) => <div key={i} className="h-40 bg-green-50 rounded-2xl"/>)}</div>;
+
+  const tabs = [
+    { id: "all",     label: lang === "fr" ? "Tous" : lang === "it" ? "Tutti" : lang === "en" ? "All" : "Alle", emoji: "🗺️" },
+    { id: "math",    label: tr("math"),    emoji: "🔢" },
+    { id: "german",  label: tr("german"),  emoji: "📖" },
+    { id: "science", label: tr("science"), emoji: "🌍" },
+  ] as const;
+
+  const filteredData = activeTab === "all"
+    ? (curriculumData ?? [])
+    : (curriculumData ?? []).filter(d => d.subjectId === activeTab);
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 pb-28 space-y-5">
+
+      {/* Header */}
+      <div className="pt-4">
+        <div className="flex items-center gap-3 flex-wrap">
+          <div>
+            <h1 className="text-2xl font-black text-gray-900">
+              🗺️ {lang === "fr" ? "Mes Missions" : lang === "it" ? "Le mie Missioni" : lang === "en" ? "My Missions" : "Meine Missionen"}
+            </h1>
+            <div className="text-sm text-gray-500 mt-0.5">
+              {grade}. {tr("gradeLabel")}
+              {childName && <span className="ml-2 font-semibold text-green-700">{childName.avatar} {childName.name}</span>}
+            </div>
           </div>
+        </div>
+
+        {/* Overall progress card */}
+        <div className="mt-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200 p-4">
+          <div className="flex items-center gap-4">
+            {/* XP + Level */}
+            <div className="text-center shrink-0">
+              <div className="text-3xl font-black text-green-700">{profile.xp}</div>
+              <div className="text-xs text-green-600 font-semibold">XP</div>
+            </div>
+            <div className="flex-1">
+              <div className="flex justify-between items-center mb-1">
+                <span className="text-sm font-bold text-gray-700">{levelLabel}</span>
+                <span className="text-xs font-semibold text-gray-500">{overallCompleted}/{overallTotal} · {overallPct}%</span>
+              </div>
+              <div className="w-full bg-white rounded-full h-3 overflow-hidden border border-green-200">
+                <div className="h-full rounded-full transition-all duration-700 bg-gradient-to-r from-green-400 to-emerald-500"
+                  style={{ width: `${overallPct}%` }} />
+              </div>
+              <div className="mt-1 flex gap-2 text-xs text-gray-400">
+                <span>🔥 {profile.dailyStreak} Tage</span>
+                <span>⭐ {profile.xp} XP</span>
+                <span>📝 {profile.totalExercises} Aufgaben</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Subject tabs */}
+      <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+        {tabs.map(tab => (
+          <button key={tab.id} onClick={() => setActiveTab(tab.id)}
+            className={`flex items-center gap-1.5 px-3 py-2 rounded-xl font-bold text-sm whitespace-nowrap transition-all shrink-0 ${
+              activeTab === tab.id
+                ? "bg-green-600 text-white shadow-md"
+                : "bg-white border-2 border-gray-200 text-gray-600 hover:border-green-300"
+            }`}>
+            <span>{tab.emoji}</span>
+            <span>{tab.label}</span>
+            {tab.id !== "all" && curriculumData && (
+              <span className={`text-xs px-1.5 py-0.5 rounded-full font-black ${activeTab === tab.id ? "bg-white/20" : "bg-gray-100"}`}>
+                {curriculumData.find(d => d.subjectId === tab.id)?.topics.filter(t => t.status === "completed").length ?? 0}
+                /{curriculumData.find(d => d.subjectId === tab.id)?.topics.length ?? 0}
+              </span>
+            )}
+          </button>
         ))}
       </div>
 
-      {/* ── Level track ── */}
-      <div className="bg-white rounded-3xl p-5 shadow-sm border border-gray-100 space-y-4">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <h2 className="font-bold text-gray-800 text-base">🗺️ {lang === "fr" ? "Ta progression" : lang === "it" ? "La tua progressione" : lang === "en" ? "Your level path" : "Dein Level-Weg"}</h2>
-          <span className="text-xs font-semibold text-white px-2.5 py-1 rounded-full" style={{ backgroundColor: level.color }}>
-            Level {level.id}/{LEVELS.length}
-          </span>
-        </div>
-
-        {/* Current level XP bar */}
-        {nextLevel && (
-          <div className="space-y-1.5">
-            <div className="flex justify-between text-xs text-gray-500">
-              <span>{profile.xp} XP</span>
-              <span>{nextLevel.minXp} XP</span>
-            </div>
-            <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-              <div
-                className="h-full rounded-full transition-all duration-700"
-                style={{ width: `${pct}%`, background: `linear-gradient(to right, #86efac, ${level.color})` }}
-              />
-            </div>
-            <p className="text-xs text-center text-gray-400">
-  {lang === "fr" ? "Encore" : lang === "it" ? "Ancora" : lang === "en" ? "Just" : "Noch"} <strong className="text-gray-600">{xpToNext} XP</strong> {lang === "fr" ? "jusqu'à" : lang === "it" ? "fino a" : lang === "en" ? "XP to reach" : "bis"} {nextLevel.emoji} <strong style={{ color: nextLevel.color }}>
-                {lang === "fr" ? nextLevel.titleFr : lang === "it" ? nextLevel.titleIt : lang === "en" ? nextLevel.titleEn : nextLevel.title}
-              </strong>
-            </p>
-          </div>
-        )}
-
-        {/* Level steps */}
-        <div className="grid grid-cols-5 gap-1 pt-1">
-          {LEVELS.map((l) => {
-            const isActive = level.id === l.id;
-            const isDone   = level.id > l.id;
-            const lTitle   = lang === "fr" ? l.titleFr : lang === "it" ? l.titleIt : lang === "en" ? l.titleEn : l.title;
-
-            return (
-              <div key={l.id} className="flex flex-col items-center gap-1.5">
-                {/* Circle */}
-                <div
-                  className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 relative"
-                  style={{
-                    backgroundColor: isActive ? l.color + "30" : isDone ? l.color + "18" : "#f3f4f6",
-                    border: `2.5px solid ${isActive ? l.color : isDone ? l.color + "80" : "#e5e7eb"}`,
-                    boxShadow: isActive ? `0 4px 16px ${l.color}50` : "none",
-                    opacity: isDone || isActive ? 1 : 0.35,
-                  }}
-                >
-                  {isDone
-                    ? <span className="text-base font-black" style={{ color: l.color }}>✓</span>
-                    : l.emoji}
-                  {/* "Jetzt" badge on active */}
-                  {isActive && (
-                    <div
-                      className="absolute -top-1.5 -right-1.5 text-[8px] font-black text-white px-1 py-px rounded-full leading-tight"
-                      style={{ backgroundColor: l.color }}
-                    >
-                      {lang === "fr" ? "ICI" : lang === "it" ? "QUI" : lang === "en" ? "NOW" : "JETZT"}
-                    </div>
-                  )}
-                </div>
-                {/* Label */}
-                <span
-                  className="text-center leading-tight font-semibold"
-                  style={{
-                    fontSize: "9px",
-                    color: isActive ? l.color : isDone ? "#6b7280" : "#d1d5db",
-                    maxWidth: 52,
-                    display: "block",
-                    wordBreak: "break-word",
-                    hyphens: "auto",
-                  }}
-                >
-                  {lTitle}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Max level message */}
-        {!nextLevel && (
-          <p className="text-center text-sm font-bold text-amber-600 pt-1">🏆 {lang === "fr" ? "Niveau max atteint !" : lang === "it" ? "Livello massimo raggiunto!" : lang === "en" ? "Max level reached!" : "Max Level erreicht!"}</p>
-        )}
-      </div>
-
-      {/* ── Trophy room ── */}
+      {/* Subject sections */}
       <div className="space-y-4">
-        <h2 className="font-bold text-gray-700 text-sm">
-          {lang === "fr" ? "Salle des trophées" : lang === "it" ? "Sala dei trofei" : lang === "en" ? "Trophy Room" : "Trophäen-Zimmer"} 🏆 ({profile.achievements.length}/{ACHIEVEMENTS.length})
-        </h2>
-
-        {groups.map(rarity => {
-          const inGroup = ACHIEVEMENTS.filter(a => a.rarity === rarity);
-          return (
-            <div key={rarity}>
-              <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
-                {rarity === "legendary" ? (lang === "fr" ? "⚡ Légendaire" : lang === "it" ? "⚡ Leggendario" : lang === "en" ? "⚡ Legendary" : "⚡ Legendär")
-              : rarity === "epic" ? (lang === "fr" ? "💜 Épique" : lang === "it" ? "💜 Epico" : lang === "en" ? "💜 Epic" : "💜 Episch")
-              : rarity === "rare" ? (lang === "fr" ? "🔵 Rare" : lang === "it" ? "🔵 Raro" : lang === "en" ? "🔵 Rare" : "🔵 Selten")
-              : (lang === "fr" ? "⚪ Commun" : lang === "it" ? "⚪ Comune" : lang === "en" ? "⚪ Common" : "⚪ Gewöhnlich")}
-                <span className="ml-2 font-normal text-gray-300">
-                  {inGroup.filter(a => earned.has(a.id)).length}/{inGroup.length}
-                </span>
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {inGroup.map(ach => {
-                  const isEarned = earned.has(ach.id);
-                  const title = lang === "fr" ? ach.titleFr : lang === "it" ? ach.titleIt : lang === "en" ? ach.titleEn : ach.title;
-                  const desc  = lang === "fr" ? ach.descFr  : lang === "it" ? ach.descIt  : lang === "en" ? ach.descEn  : ach.desc;
-
-                  // Category hint for locked trophies — gives kids something to aim for
-                  const categoryHint = (id: string): string => {
-                    if (id.startsWith("streak")) return lang === "fr" ? "🔥 Défi Streak" : lang === "it" ? "🔥 Sfida Streak" : lang === "en" ? "🔥 Streak Challenge" : "🔥 Streak-Trophäe";
-                    if (id.startsWith("math")) return lang === "fr" ? "🔢 Mathématiques" : lang === "it" ? "🔢 Matematica" : lang === "en" ? "🔢 Maths Trophy" : "🔢 Mathe-Trophäe";
-                    if (id.startsWith("german")) return lang === "fr" ? "📖 Allemand" : lang === "it" ? "📖 Tedesco" : lang === "en" ? "📖 German Trophy" : "📖 Deutsch-Trophäe";
-                    if (id.startsWith("science") || id.includes("explorer")) return lang === "fr" ? "🌍 NMG / Sciences" : lang === "it" ? "🌍 NMG / Scienze" : lang === "en" ? "🌍 Science Trophy" : "🌍 NMG-Trophäe";
-                    if (id.startsWith("exercises")) return lang === "fr" ? "✏️ Défi exercices" : lang === "it" ? "✏️ Sfida esercizi" : lang === "en" ? "✏️ Exercise Challenge" : "✏️ Fleiss-Trophäe";
-                    if (id.startsWith("grade")) return lang === "fr" ? "🎓 Fin de classe" : lang === "it" ? "🎓 Fine anno" : lang === "en" ? "🎓 Grade Complete" : "🎓 Klassen-Trophäe";
-                    if (id.startsWith("level")) return lang === "fr" ? "⬆️ Montée de niveau" : lang === "it" ? "⬆️ Avanzamento livello" : lang === "en" ? "⬆️ Level Up" : "⬆️ Level-Trophäe";
-                    if (id.startsWith("tier")) return lang === "fr" ? "⭐ Difficulté" : lang === "it" ? "⭐ Difficoltà" : lang === "en" ? "⭐ Difficulty" : "⭐ Schwierigkeits-Trophäe";
-                    if (id.includes("bird") || id.includes("owl") || id.includes("season")) return lang === "fr" ? "🌟 Trophée spécial" : lang === "it" ? "🌟 Trofeo speciale" : lang === "en" ? "🌟 Special Trophy" : "🌟 Geheimtrophäe";
-                    return lang === "fr" ? "🌟 Trophée secret" : lang === "it" ? "🌟 Trofeo segreto" : lang === "en" ? "🌟 Secret Trophy" : "🌟 Geheimtrophäe";
-                  };
-
-                  return (
-                    <div
-                      key={ach.id}
-                      className={`bg-gradient-to-br ${isEarned ? RARITY_COLORS[ach.rarity] : "from-gray-50 to-gray-100 border-gray-100"} border-2 rounded-2xl p-3 flex items-start gap-2.5 shadow-sm ${isEarned && RARITY_GLOW[ach.rarity] ? `shadow-md ${RARITY_GLOW[ach.rarity]}` : ""}`}
-                      style={{ opacity: isEarned ? 1 : 0.55 }}
-                    >
-                      <div className="text-2xl shrink-0" style={{ filter: isEarned ? "none" : "grayscale(1)" }}>
-                        {isEarned ? ach.emoji : "🔒"}
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-xs font-bold text-gray-800 leading-tight mb-0.5">{isEarned ? title : categoryHint(ach.id)}</div>
-                        {isEarned
-                          ? <div className="text-[10px] text-gray-500 leading-tight">{desc}</div>
-                          : <div className="text-[10px] text-gray-400 leading-tight italic">
-                              {lang === "fr" ? "Continue à apprendre pour débloquer !" : lang === "it" ? "Continua a imparare per sbloccare!" : lang === "en" ? "Keep learning to unlock!" : "Weiter lernen zum Freischalten!"}
-                            </div>
-                        }
-                        {isEarned && ach.xpReward > 0 && (
-                          <div className="text-[10px] text-green-600 font-semibold mt-0.5">+{ach.xpReward} XP</div>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+        {filteredData.map(d => (
+          <SubjectSection
+            key={d.subjectId}
+            subjectId={d.subjectId}
+            topics={d.topics}
+            grade={grade}
+            completedCount={d.completedExercises}
+            totalCount={d.totalExercises}
+          />
+        ))}
       </div>
 
-      {/* CTA */}
+      {/* Back link */}
       <div className="text-center pt-2">
-        <Link href="/dashboard"
-          className="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
-          🎒 {lang === "fr" ? "Continuer" : lang === "it" ? "Continua" : lang === "en" ? "Keep learning" : "Weiterlernen"}
+        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 underline">
+          ← {lang === "fr" ? "Retour au tableau de bord" : lang === "it" ? "Torna alla dashboard" : lang === "en" ? "Back to dashboard" : "Zurück zum Dashboard"}
         </Link>
       </div>
-
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-8px); }
-        }
-      `}</style>
-    </main>
+    </div>
   );
 }

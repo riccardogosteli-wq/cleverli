@@ -453,12 +453,9 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       {/* Progress bar + voice toggle — hide while reward animation is showing */}
       {answered === null && (
         <div className="flex items-center gap-2">
-          {/* Exercise counter — single clean display */}
-          <span className="text-xs font-bold text-gray-500 shrink-0 tabular-nums">
-            {isReviewMode ? "🔄 " : ""}{idx + 1}/{exercises.length}
-          </span>
+          {/* ProgressBar already shows X/Y Aufgaben — no extra counter needed */}
           <div className="flex-1">
-            <ProgressBar current={idx + 1} total={exercises.length} streak={streak} />
+            <ProgressBar current={idx + 1} total={exercises.length} streak={streak} isReviewMode={isReviewMode} />
           </div>
           {isSupported && (
             <button

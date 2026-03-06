@@ -9,7 +9,7 @@ import { useProfileContext } from "@/lib/ProfileContext";
 const TAB_LABELS: Record<string, [string, string, string, string]> = {
   learn:    ["Lernen",    "Apprendre", "Imparare", "Learn"],
   daily:    ["Täglich",   "Quotidien", "Quotidiano","Daily"],
-  trophies: ["Trophäen",  "Trophées",  "Trofei",   "Trophies"],
+  trophies: ["Missionen", "Missions",  "Missioni", "Missions"],
   rewards:  ["Prämien",   "Primes",    "Premi",    "Rewards"],
   // ✅ Changed from /parents (PIN-gated, confusing for kids) to /family (leaderboard)
   family:   ["Familie",   "Famille",   "Famiglia", "Family"],
