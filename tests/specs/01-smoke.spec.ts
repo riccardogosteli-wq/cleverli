@@ -11,7 +11,7 @@ const PAGES = [
   { path: "/dashboard",   name: "Dashboard"   },
   { path: "/parents",     name: "Parents"     },
   { path: "/upgrade",     name: "Upgrade"     },
-  { path: "/trophies",    name: "Trophies"    },
+  { path: "/missionen",   name: "Missionen"   },
   { path: "/rewards",     name: "Rewards"     },
   { path: "/shop",        name: "Shop"        },
   { path: "/family",      name: "Family"      },
