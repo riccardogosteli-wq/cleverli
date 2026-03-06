@@ -18,24 +18,23 @@ const CHILD_1 = { id: "test-multi-child-001", name: "Lena", grade: 1 };
 const CHILD_2 = { id: "test-multi-child-002", name: "Marco", grade: 2 };
 const CHILD_3 = { id: "test-multi-child-003", name: "Sophie", grade: 3 };
 
-/** Seed 3 child profiles into localStorage */
+/** Seed 3 child profiles into localStorage using the correct cleverli_family key */
 async function seedThreeChildren(page: import("@playwright/test").Page) {
   await page.goto("/dashboard");
   await page.evaluate(
     ({ c1, c2, c3 }) => {
-      const makeProfile = (child: { id: string; name: string; grade: number }) => ({
+      // Family store format: { members: FamilyMember[] }
+      // FamilyMember: { id, name, avatar, grade, createdAt }
+      const makeMember = (child: { id: string; name: string; grade: number }) => ({
         id: child.id,
         name: child.name,
+        avatar: "🦊",
         grade: child.grade,
-        xp: 0,
-        coins: 0,
-        level: 1,
-        streak: 0,
-        lastActive: new Date().toISOString(),
+        createdAt: new Date().toISOString(),
       });
 
-      const profiles = [makeProfile(c1), makeProfile(c2), makeProfile(c3)];
-      localStorage.setItem("cleverli_child_profiles", JSON.stringify(profiles));
+      const familyStore = { members: [makeMember(c1), makeMember(c2), makeMember(c3)] };
+      localStorage.setItem("cleverli_family", JSON.stringify(familyStore));
       localStorage.setItem("cleverli_active_profile", c1.id);
     },
     { c1: CHILD_1, c2: CHILD_2, c3: CHILD_3 }
