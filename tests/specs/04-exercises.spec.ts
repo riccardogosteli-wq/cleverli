@@ -69,6 +69,7 @@ test.describe("Exercise interactions — first exercise per topic", () => {
       "2-german-pronomen",
       "2-science-gesunde-ernaehrung",
       "2-science-lebensraeume",
+      "2-science-lebewesen",
       "2-math-subtraktion-bis-20",
       "2-math-add-sub-100",
       "2-math-addition-bis-20",
