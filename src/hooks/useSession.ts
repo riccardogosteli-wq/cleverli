@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { supabase } from "@/lib/supabase";
 
 export interface Session {
@@ -17,8 +17,9 @@ const SESSION_KEY = "cleverli_session"; // legacy localStorage fallback
 export function useSession() {
   const [session, setSession] = useState<Session | null>(null);
   const [loaded, setLoaded] = useState(false);
-  // Track when a login is in progress so we don't misinterpret SIGNED_OUT from switching accounts
-  const [loginInProgress, setLoginInProgress] = useState(false);
+  // useRef so the auth state change callback always reads the current value (not stale closure)
+  const loginInProgressRef = useRef(false);
+  const setLoginInProgress = (v: boolean) => { loginInProgressRef.current = v; };
 
   useEffect(() => {
     if (!supabase) {

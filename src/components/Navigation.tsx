@@ -18,10 +18,23 @@ export default function Navigation() {
   const [members, setMembers] = useState<FamilyMember[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
 
-  useEffect(() => {
+  const reloadFamily = () => {
     const family = loadFamily();
     setMembers(family.members);
     setActiveId(getActiveProfileId());
+  };
+
+  useEffect(() => {
+    reloadFamily();
+    // Re-sync when profiles are added/switched/deleted in another component or tab
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === "cleverli_family" || e.key === "cleverli_active_profile") {
+        reloadFamily();
+      }
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const activeMember = members.find(m => m.id === activeId) ?? members[0] ?? null;

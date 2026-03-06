@@ -7,7 +7,7 @@ import {
 } from "@/lib/family";
 import { createChildInSupabase, deleteChildFromSupabase } from "@/lib/progressSync";
 
-const GRADE_LABELS = ["1. Klasse", "2. Klasse", "3. Klasse"];
+const GRADE_LABELS = ["1. Klasse", "2. Klasse", "3. Klasse", "4. Klasse", "5. Klasse", "6. Klasse"];
 
 function AvatarPicker({ value, onChange }: { value: string; onChange: (a: string) => void }) {
   return (
@@ -162,16 +162,21 @@ export default function ChildProfileManager() {
 
   const handleSwitch = (id: string) => {
     setActiveProfileId(id);
-    setActiveId(id);
+    // Full reload so ProfileContext, XP bar, dashboard all re-initialize
+    // for the new child (same pattern as Navigation.switchProfile)
+    window.location.reload();
   };
 
   const handleDelete = (id: string) => {
     removeMember(id);
     deleteChildFromSupabase(id); // fire-and-forget
+    const remaining = loadFamily().members;
     if (activeId === id) {
-      const remaining = loadFamily().members;
       if (remaining.length > 0) setActiveProfileId(remaining[0].id);
       else localStorage.removeItem("cleverli_active_profile");
+      // Reload so app picks up new active profile
+      window.location.reload();
+      return;
     }
     reload();
   };
