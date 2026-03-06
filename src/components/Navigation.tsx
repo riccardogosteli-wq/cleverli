@@ -229,7 +229,7 @@ export default function Navigation() {
             onClick={() => setOpen(false)}>
             ⚡ {tr("navDaily")}
           </Link>
-          <Link href="/trophies"
+          <Link href="/missionen"
             className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
             onClick={() => setOpen(false)}>
             🏆 {tr("navTrophies")}

@@ -133,7 +133,7 @@ export default function KidsDashboard() {
             </div>
             <div className="flex justify-between text-[10px] text-green-700 font-semibold">
               <span>{profile.xp} XP</span>
-              <span>⭐ {profile.achievements.length} Trophäen</span>
+              <span>⭐ {profile.achievements.length} Missionen</span>
             </div>
           </div>
           {/* Streak */}
@@ -166,8 +166,8 @@ export default function KidsDashboard() {
       {recentAchievements.length > 0 && (
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <h2 className="font-bold text-gray-700 text-sm">Neueste Trophäen 🏆</h2>
-            <Link href="/trophies" className="text-xs text-green-600 underline">Alle ansehen</Link>
+            <h2 className="font-bold text-gray-700 text-sm">Neueste Missionen 🗺️</h2>
+            <Link href="/missionen" className="text-xs text-green-600 underline">Alle ansehen</Link>
           </div>
           <div className="flex gap-2 overflow-x-auto pb-1">
             {recentAchievements.map(ach => ach && (
@@ -234,7 +234,7 @@ export default function KidsDashboard() {
           className="w-full text-center bg-green-600 text-white py-4 rounded-full font-black text-lg hover:bg-green-700 active:scale-95 transition-all shadow-md">
           🎒 {tr("keepLearning")}
         </Link>
-        <Link href="/trophies" className="text-sm text-gray-400 underline">
+        <Link href="/missionen" className="text-sm text-gray-400 underline">
           🏆 {tr("trophyRoom")}
         </Link>
       </div>

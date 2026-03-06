@@ -36,7 +36,7 @@ export default function MobileBottomNav() {
     const iconMap: Record<string, { src: string; alt: string }> = {
       learn: { src: "/images/ui/Lernen-Dashboard.svg", alt: "Lernen" },
       daily: { src: "/images/ui/Tagesaufgabe.svg", alt: "Täglich" },
-      trophies: { src: "/images/ui/Trophaeen.svg", alt: "Trophäen" },
+      trophies: { src: "/images/ui/Trophaeen.svg", alt: "Missionen" },
       rewards: { src: "/images/ui/Belohnungen.svg", alt: "Belohnungen" },
       family: { src: "/images/ui/Familie.svg", alt: "Familie" },
     };

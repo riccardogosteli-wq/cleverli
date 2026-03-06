@@ -233,7 +233,7 @@ export default function ParentsDashboard() {
             <h2 className="font-bold text-gray-700 text-sm">
               🏆 {t("Neue Erfolge", "Nouveaux succès", "Nuovi traguardi", "Recent achievements")}
             </h2>
-            <Link href="/trophies" className="text-xs text-green-600 underline">
+            <Link href="/missionen" className="text-xs text-green-600 underline">
               {t("Alle","Tous","Tutti","All")}
             </Link>
           </div>
@@ -310,8 +310,8 @@ export default function ParentsDashboard() {
           <Image src="/images/ui/Familie.svg" alt="Familie" width={16} height={16} />
           {t("Familien-Rangliste","Classement familial","Classifica famiglia","Family leaderboard")}
         </Link>
-        <Link href="/trophies" className="text-xs text-gray-400 underline">
-          🏆 {t("Trophäen ansehen","Voir trophées","Vedi trofei","View trophies")}
+        <Link href="/missionen" className="text-xs text-gray-400 underline">
+          🏆 {t("Missionen","Missions","Missioni","Missions")}
         </Link>
       </div>
     </main>

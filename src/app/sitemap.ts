@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/agb`,          lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
     { url: `${BASE}/impressum`,    lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
     { url: `${BASE}/datenschutz`,  lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
-    // NOTE: /dashboard, /trophies, /rewards, /daily, /family, /kids
+    // NOTE: /dashboard, /missionen, /rewards, /daily, /family, /kids
     //       are in-app pages (localStorage-dependent) — excluded (noindex in their metadata)
   ];
 

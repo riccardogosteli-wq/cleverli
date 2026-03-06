@@ -1,12 +1,6 @@
-import { Metadata } from "next";
-import TrophiesClient from "./PageClient";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Missionen",
-  description: "Deine Missionen und dein Lernfortschritt auf Cleverli — alle Fächer und Aufgaben im Überblick.",
-  robots: { index: false, follow: false },
-};
-
-export default function TrophiesPage() {
-  return <TrophiesClient />;
+// /trophies is now /missionen — permanent redirect
+export default function TrophiesRedirect() {
+  redirect("/missionen");
 }

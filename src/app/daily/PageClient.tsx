@@ -123,7 +123,7 @@ export default function DailyPage() {
           <Link href="/dashboard" className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
             {tr("learnNav")}
           </Link>
-          <Link href="/trophies" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 {lang === "fr" ? "Voir trophées" : lang === "it" ? "Vedi trofei" : lang === "en" ? "View trophies" : "Trophäen ansehen"}</Link>
+          <Link href="/missionen" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 {lang === "fr" ? "Missions" : lang === "it" ? "Missioni" : lang === "en" ? "Missions" : "Missionen ansehen"}</Link>
         </div>
         <style>{`@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
       </main>
@@ -158,7 +158,7 @@ export default function DailyPage() {
           <Link href="/dashboard" className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
             {tr("learnNav")}
           </Link>
-          <Link href="/trophies" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 {lang === "fr" ? "Voir trophées" : lang === "it" ? "Vedi trofei" : lang === "en" ? "View trophies" : "Trophäen ansehen"}</Link>
+          <Link href="/missionen" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 {lang === "fr" ? "Missions" : lang === "it" ? "Missioni" : lang === "en" ? "Missions" : "Missionen ansehen"}</Link>
         </div>
       </main>
     );
