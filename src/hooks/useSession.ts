@@ -12,27 +12,39 @@ export interface Session {
   userId?: string;               // Supabase user ID (present when using real auth)
 }
 
-const SESSION_KEY = "cleverli_session"; // legacy localStorage fallback
+const SESSION_KEY = "cleverli_session"; // localStorage cache key
+
+// ── Sync read from localStorage — used for instant initial state ─────────────
+function readCachedSession(): Session | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(SESSION_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
 
 export function useSession() {
-  const [session, setSession] = useState<Session | null>(null);
-  const [loaded, setLoaded] = useState(false);
+  // ✅ INSTANT init from localStorage cache — eliminates "Anmelden" flash on reload
+  // Supabase will verify & update in the background; UI shows correct state immediately.
+  const [session, setSession] = useState<Session | null>(readCachedSession);
+
+  // ✅ loaded = true immediately if we have a cached session; false if guest (need Supabase check)
+  const [loaded, setLoaded] = useState<boolean>(() => !!readCachedSession());
+
   // useRef so the auth state change callback always reads the current value (not stale closure)
   const loginInProgressRef = useRef(false);
   const setLoginInProgress = (v: boolean) => { loginInProgressRef.current = v; };
 
   useEffect(() => {
     if (!supabase) {
-      // No Supabase client (env vars missing) — fall back to localStorage only
-      try {
-        const raw = localStorage.getItem(SESSION_KEY);
-        setSession(raw ? JSON.parse(raw) : null);
-      } catch { setSession(null); }
+      // No Supabase client — localStorage-only mode
+      const cached = readCachedSession();
+      setSession(cached);
       setLoaded(true);
       return;
     }
 
-    // 1. Try Supabase session first (wrapped in try-catch — expired/invalid tokens must not crash the app)
+    // Background verification: confirm Supabase token is still valid and refresh profile data
     supabase.auth.getSession().then(async ({ data: { session: sbSession } }) => {
       try {
         if (sbSession?.user) {
@@ -54,66 +66,55 @@ export function useSession() {
           setSession(sess);
           localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
         } else {
-          // 2. No Supabase session — fall back to localStorage cache
-          // (handles token refresh delays, spurious sign-outs, legacy users)
-          try {
-            const raw = localStorage.getItem(SESSION_KEY);
-            setSession(raw ? JSON.parse(raw) : null);
-          } catch { setSession(null); }
+          // No valid Supabase session — use cache or clear
+          const cached = readCachedSession();
+          if (!cached) setSession(null); // genuinely logged out
+          // If cached exists: keep showing it (handles transient Supabase issues)
         }
       } catch {
-        // Auth error (expired token, network issue) — fall back to localStorage cache
-        try {
-          const raw = localStorage.getItem(SESSION_KEY);
-          setSession(raw ? JSON.parse(raw) : null);
-        } catch { setSession(null); }
+        // Auth error — keep current state (cache still valid)
       }
       setLoaded(true);
     }).catch(() => {
-      // Unhandled rejection (e.g., Supabase unavailable) — degrade gracefully
-      try {
-        const raw = localStorage.getItem(SESSION_KEY);
-        setSession(raw ? JSON.parse(raw) : null);
-      } catch { setSession(null); }
+      // Supabase unreachable — fall back to cache
       setLoaded(true);
     });
 
-    // Listen for auth state changes
+    // Listen for auth state changes (login, token refresh, sign-out)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, sbSession) => {
         try {
-        if (sbSession?.user) {
-          const { data: profile } = await supabase!
-            .from("parent_profiles")
-            .select("name, premium, premium_until, premium_plan, cancelled")
-            .eq("id", sbSession.user.id)
-            .single();
+          if (sbSession?.user) {
+            const { data: profile } = await supabase!
+              .from("parent_profiles")
+              .select("name, premium, premium_until, premium_plan, cancelled")
+              .eq("id", sbSession.user.id)
+              .single();
 
-          const sess: Session = {
-            email: sbSession.user.email ?? "",
-            name: profile?.name ?? sbSession.user.user_metadata?.name ?? "",
-            premium: profile?.premium ?? false,
-            premiumUntil: profile?.premium_until ?? null,
-            premiumPlan: profile?.premium_plan ?? null,
-            cancelled: profile?.cancelled ?? false,
-            userId: sbSession.user.id,
-          };
-          setSession(sess);
-          localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
-        } else if (event === "SIGNED_OUT") {
-          // Supabase v2 fires spurious SIGNED_OUT on reload/tab-switch AND when
-          // switching accounts via signInWithPassword. Be conservative:
-          // Only clear if there is genuinely no cached session AND we're not in
-          // the middle of a new login attempt.
-          const cached = localStorage.getItem(SESSION_KEY);
-          if (!cached) {
-            setSession(null);
+            const sess: Session = {
+              email: sbSession.user.email ?? "",
+              name: profile?.name ?? sbSession.user.user_metadata?.name ?? "",
+              premium: profile?.premium ?? false,
+              premiumUntil: profile?.premium_until ?? null,
+              premiumPlan: profile?.premium_plan ?? null,
+              cancelled: profile?.cancelled ?? false,
+              userId: sbSession.user.id,
+            };
+            setSession(sess);
+            localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
+            setLoaded(true);
+          } else if (event === "SIGNED_OUT") {
+            // Only clear if there's no cached session AND logout() removed it.
+            // Supabase v2 fires spurious SIGNED_OUT on reload/tab-switch.
+            // logout() removes SESSION_KEY first, then signOut() fires this event.
+            const cached = localStorage.getItem(SESSION_KEY);
+            if (!cached) {
+              setSession(null);
+              setLoaded(true);
+            }
           }
-          // Note: logout() is the only path that removes SESSION_KEY from localStorage.
-          // loginInProgress flag prevents misreading account-switch SIGNED_OUTs.
-        }
         } catch {
-          // Auth state change error — ignore, keep current session state
+          // Auth state change error — ignore, keep current session
         }
       }
     );
@@ -122,15 +123,16 @@ export function useSession() {
   }, []);
 
   const logout = async () => {
-    if (supabase) await supabase.auth.signOut();
+    // Remove cache BEFORE signOut so the SIGNED_OUT listener sees no cache and clears state
     localStorage.removeItem(SESSION_KEY);
     setSession(null);
+    if (supabase) await supabase.auth.signOut();
   };
 
-  // isPremium: true only if premium=true AND not expired (premium_until > now, or no expiry set)
+  // isPremium: true only if premium=true AND not expired
   const isPremium = (() => {
     if (!session?.premium) return false;
-    if (!session.premiumUntil) return true; // no expiry date = permanent / not yet set
+    if (!session.premiumUntil) return true;
     return new Date(session.premiumUntil) > new Date();
   })();
 

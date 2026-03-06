@@ -221,8 +221,17 @@ function calcCostume(totalExercises: number): number {
 // ── Hook ─────────────────────────────────────────────────────────────────────
 
 export function useProfile() {
-  const [profile, setProfile] = useState<Profile>(DEFAULT_PROFILE);
-  const [loaded, setLoaded] = useState(false);
+  // ✅ Instant init from localStorage — no flash, correct child data immediately
+  const [profile, setProfile] = useState<Profile>(() => {
+    if (typeof window === "undefined") return DEFAULT_PROFILE;
+    return { ...DEFAULT_PROFILE, ...loadProfile() };
+  });
+  // ✅ loaded = true immediately if local data exists (avoids hiding XP bar during Supabase check)
+  const [loaded, setLoaded] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    const key = getActiveProfileKey();
+    return !!localStorage.getItem(key);
+  });
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
   const [xpGained, setXpGained] = useState(0);
   const [leveledUp, setLeveledUp] = useState(false);
