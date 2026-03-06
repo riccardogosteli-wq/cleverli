@@ -59,18 +59,16 @@ function loadAllStats(): TopicStat[] {
   return stats;
 }
 
-// Last 14 days activity heatmap from profile
-function buildHeatmap(lastPlayedDate: string, dailyStreak: number): { date: string; active: boolean }[] {
+// Last 14 days activity heatmap — uses real per-day playDates array from profile
+function buildHeatmap(playDates: string[]): { date: string; active: boolean }[] {
   const days: { date: string; active: boolean }[] = [];
   const today = new Date();
+  const dateSet = new Set(playDates);
   for (let i = 13; i >= 0; i--) {
     const d = new Date(today);
     d.setDate(d.getDate() - i);
     const key = d.toISOString().slice(0, 10);
-    // Approximate: mark active if within streak window
-    const diff = Math.round((new Date(lastPlayedDate).getTime() - d.getTime()) / 86400000);
-    const active = lastPlayedDate >= key && diff >= -(dailyStreak - 1) && diff <= 0;
-    days.push({ date: key, active });
+    days.push({ date: key, active: dateSet.has(key) });
   }
   return days;
 }
@@ -91,7 +89,7 @@ export default function ParentsDashboard() {
   // All played
   const played = stats.filter(s => s.completed > 0);
 
-  const heatmap = buildHeatmap(profile.lastPlayedDate, profile.dailyStreak);
+  const heatmap = buildHeatmap(profile.playDates ?? []);
 
   const totalCorrect = stats.reduce((sum, s) => sum + s.score, 0);
   const avgAccuracy = played.length > 0

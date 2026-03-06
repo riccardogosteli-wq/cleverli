@@ -3,26 +3,33 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLang } from "@/lib/LangContext";
+import { useSession } from "@/hooks/useSession";
+import { useProfileContext } from "@/lib/ProfileContext";
 
 const TAB_LABELS: Record<string, [string, string, string, string]> = {
   learn:    ["Lernen",    "Apprendre", "Imparare", "Learn"],
   daily:    ["Täglich",   "Quotidien", "Quotidiano","Daily"],
   trophies: ["Trophäen",  "Trophées",  "Trofei",   "Trophies"],
   rewards:  ["Prämien",   "Primes",    "Premi",    "Rewards"],
+  // ✅ Changed from /parents (PIN-gated, confusing for kids) to /family (leaderboard)
   family:   ["Familie",   "Famille",   "Famiglia", "Family"],
 };
 
 export default function MobileBottomNav() {
   const pathname = usePathname();
   const { lang } = useLang();
+  const { session } = useSession();
+  const { profile } = useProfileContext();
   const li = lang === "fr" ? 1 : lang === "it" ? 2 : lang === "en" ? 3 : 0;
 
   const tabs = [
-    { href: "/dashboard", icon: "learn", label: TAB_LABELS.learn[li] },
-    { href: "/daily",     icon: "daily", label: TAB_LABELS.daily[li] },
+    { href: "/dashboard", icon: "learn",    label: TAB_LABELS.learn[li] },
+    { href: "/daily",     icon: "daily",    label: TAB_LABELS.daily[li] },
     { href: "/trophies",  icon: "trophies", label: TAB_LABELS.trophies[li] },
-    { href: "/rewards",   icon: "rewards", label: TAB_LABELS.rewards[li] },
-    { href: "/parents",   icon: "family", label: TAB_LABELS.family[li] },
+    { href: "/rewards",   icon: "rewards",  label: TAB_LABELS.rewards[li] },
+    // ✅ Link to /family (child-accessible leaderboard) not /parents (PIN-gated)
+    // Only shown when logged in (family features require auth)
+    ...(session ? [{ href: "/family", icon: "family", label: TAB_LABELS.family[li] }] : []),
   ];
 
   const getIcon = (iconKey: string) => {
@@ -44,14 +51,24 @@ export default function MobileBottomNav() {
 
   return (
     <nav
-      className="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-40 flex"
+      className="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-40 flex flex-col"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       aria-label="Mobile Navigation"
     >
+      {/* ✅ XP strip — shows current XP at a glance on mobile */}
+      {profile.xp > 0 && (
+        <div className="flex items-center gap-2 px-4 py-1 border-b border-gray-100 bg-green-50">
+          <span className="text-xs font-bold text-green-700">⭐ {profile.xp} XP</span>
+          {profile.dailyStreak > 0 && (
+            <span className="text-xs text-orange-500 font-semibold ml-auto">🔥 {profile.dailyStreak}</span>
+          )}
+        </div>
+      )}
+      <div className="flex w-full">
       {tabs.map(tab => {
         const isActive = pathname === tab.href
           || (tab.href === "/dashboard" && pathname.startsWith("/dashboard"))
-          || (tab.href === "/parents" && (pathname === "/parents" || pathname === "/family"));
+          || (tab.href === "/family" && (pathname === "/family" || pathname === "/parents"));
         return (
           <Link
             key={tab.href}
@@ -74,6 +91,7 @@ export default function MobileBottomNav() {
           </Link>
         );
       })}
+      </div>
     </nav>
   );
 }

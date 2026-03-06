@@ -24,7 +24,7 @@ export default function ProgressMapClient({
   totalExercisesByDifficulty,
 }: ProgressMapClientProps) {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const { lang } = useLang();
+  const { lang, tr } = useLang();
   const [roadmapSvg, setRoadmapSvg] = useState<string | null>(null);
 
   // Track previous state for animation
@@ -136,12 +136,12 @@ export default function ProgressMapClient({
         </span>
         {isFullyDone ? (
           <span className="text-xs font-black text-amber-600 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full shrink-0">
-            👑 Abgeschlossen!
+            {tr("mapCompleted")}
           </span>
         ) : overallPct > 0 ? (
           <span className="text-xs font-semibold text-green-700 shrink-0">{overallPct}% ✨</span>
         ) : (
-          <span className="text-xs text-gray-400 shrink-0">Los geht's! 🌱</span>
+          <span className="text-xs text-gray-400 shrink-0">{tr("mapLetsGo")}</span>
         )}
       </div>
     </div>

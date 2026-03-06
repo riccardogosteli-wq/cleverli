@@ -157,3 +157,12 @@ export async function deleteChildFromSupabase(childId: string): Promise<void> {
     console.warn("progressSync: child profile delete failed", e);
   }
 }
+
+export async function updateChildInSupabase(childId: string, updates: { grade?: number; name?: string; avatar?: string }): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.from("child_profiles").update(updates).eq("id", childId);
+  } catch (e) {
+    console.warn("progressSync: child profile update failed", e);
+  }
+}

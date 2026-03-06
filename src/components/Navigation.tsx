@@ -51,17 +51,16 @@ export default function Navigation() {
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm overflow-visible"
       style={{ paddingLeft: "env(safe-area-inset-left)", paddingRight: "env(safe-area-inset-right)" }}>
       <div className="flex items-center justify-between px-4 py-0 max-w-6xl mx-auto h-14 overflow-visible">
-        {/* Logo — floats below nav bar for a premium feel */}
-        <Link href="/" className="flex items-center gap-3 min-h-[44px] relative" onClick={() => setOpen(false)} style={{ marginBottom: "-10px", zIndex: 60 }}>
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3 min-h-[44px]" onClick={() => setOpen(false)}>
           <Image
             src="/cleverli-logo.png"
             alt="Cleverli – Lernplattform für Schweizer Kinder"
-            width={210}
-            height={70}
-            className="w-auto object-contain drop-shadow-md h-[58px] sm:h-[80px]"
+            width={160}
+            height={54}
+            className="w-auto object-contain drop-shadow-sm h-[44px] sm:h-[54px]"
             priority
           />
-
         </Link>
 
         {/* Desktop nav */}

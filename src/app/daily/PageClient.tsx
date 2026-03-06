@@ -22,6 +22,13 @@ export default function DailyPage() {
   // Use the last-selected grade from dashboard, default to grade 1
   const [grade] = useState(() => {
     if (typeof window === "undefined") return 1;
+    // ✅ Prefer active child's grade from family store
+    try {
+      const activeId = localStorage.getItem("cleverli_active_profile");
+      const family = JSON.parse(localStorage.getItem("cleverli_family") ?? "{}");
+      const member = (family.members ?? []).find((m: { id: string; grade: number }) => m.id === activeId);
+      if (member?.grade && [1,2,3,4,5,6].includes(member.grade)) return member.grade;
+    } catch { /* fall through */ }
     const saved = localStorage.getItem("cleverli_last_grade");
     const g = saved ? parseInt(saved) : 1;
     return [1,2,3,4,5,6].includes(g) ? g : 1;

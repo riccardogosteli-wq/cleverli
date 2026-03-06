@@ -22,6 +22,7 @@ export interface Profile {
   weeklyXpDate: string;        // "YYYY-WW" for reset detection
   streakGraceUsed: boolean;    // UJ-10: one-time 1-day grace period per streak run
   weekendDays: string[];       // track weekend warrior (e.g., ["2026-W10-SAT", "2026-W10-SUN"])
+  playDates: string[];         // ISO dates "YYYY-MM-DD" when at least one correct answer was given (max 60)
   coins: number;               // earned currency for avatar shop
   ownedItems: string[];        // shop item IDs owned
   equippedItems: { hat?: string; accessory?: string; background?: string };
@@ -49,6 +50,7 @@ const DEFAULT_PROFILE: Profile = {
   weeklyXpDate: "",
   streakGraceUsed: false,
   weekendDays: [],
+  playDates: [],
   coins: 0,
   ownedItems: [],
   equippedItems: {},
@@ -400,6 +402,13 @@ export function useProfile() {
         + (opts.correct ? 1 : 0)
         + (opts.correct && opts.isTopicComplete ? 5 : 0);
 
+      // ✅ Track real play dates (max 60 days, for accurate heatmap)
+      // (today is already defined above in this callback scope)
+      const existingDates = prev.playDates ?? [];
+      const newPlayDates = opts.correct && !existingDates.includes(today)
+        ? [...existingDates, today].slice(-60) // keep last 60 days
+        : existingDates;
+
       const updated: Profile = {
         ...prev,
         xp: newXp,
@@ -413,6 +422,7 @@ export function useProfile() {
         weeklyXpDate: currentWeek,
         streakGraceUsed: newGraceUsed,
         weekendDays: newWeekendDays,
+        playDates: newPlayDates,
         coins: newCoins,
       };
 

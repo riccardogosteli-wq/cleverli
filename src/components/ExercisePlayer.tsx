@@ -250,23 +250,23 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     return (
       <div className="space-y-4 max-w-md mx-auto text-center py-4">
         <div className="text-5xl">🔄</div>
-        <h2 className="text-xl font-bold text-gray-800">Fast perfekt!</h2>
+        <h2 className="text-xl font-bold text-gray-800">{tr("almostPerfect")}</h2>
         <p className="text-gray-500 text-sm">
           {wrongIds.length === 1
-            ? "Eine Aufgabe war noch nicht richtig. Üben wir sie nochmal?"
-            : `${wrongIds.length} Aufgaben waren noch nicht richtig. Üben wir sie nochmal?`}
+            ? tr("reviewWrongSingle")
+            : (tr("reviewWrongMany") ?? "").replace("{n}", String(wrongIds.length))}
         </p>
         <button
           onClick={startReview}
           className="w-full bg-amber-500 text-white py-4 rounded-2xl font-bold text-base hover:bg-amber-600 active:scale-95 transition-all shadow-md"
         >
-          🔄 Nochmal üben ({wrongIds.length})
+          {(tr("reviewBtnLabel") ?? "🔄 Nochmal üben ({n})").replace("{n}", String(wrongIds.length))}
         </button>
         <button
           onClick={() => setDone(true)}
           className="w-full border-2 border-gray-200 text-gray-500 py-3 rounded-2xl font-medium text-sm hover:bg-gray-50 active:scale-95 transition-all"
         >
-          {tr("continueWithout") ?? "Weiter ohne Üben"} →
+          {tr("continueWithout")} →
         </button>
       </div>
     );
@@ -549,9 +549,9 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       {answered === false && (
         <div ref={rewardRef} className="rounded-2xl border-2 border-red-300 bg-red-50 p-5 text-center space-y-3 animate-fadeIn">
           <div className="text-4xl">❌</div>
-          <p className="text-lg font-bold text-red-700">Nicht ganz richtig</p>
+          <p className="text-lg font-bold text-red-700">{tr("wrongFeedback")}</p>
           <div className="bg-white border border-red-200 rounded-xl px-4 py-3 text-sm text-gray-700 text-left space-y-1">
-            <p className="font-semibold text-gray-500 text-xs uppercase tracking-wide mb-1">Richtige Antwort:</p>
+            <p className="font-semibold text-gray-500 text-xs uppercase tracking-wide mb-1">{tr("correctAnswerLabel")}</p>
             <p className="font-bold text-gray-900 text-base">{current.answer}</p>
             {current.explanation && (
               <p className="text-gray-500 text-xs mt-1">{current.explanation}</p>
@@ -561,7 +561,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
             onClick={handleContinue}
             className="w-full bg-red-500 text-white py-3 rounded-xl font-bold hover:bg-red-600 active:scale-95 transition-all"
           >
-            Verstanden — Weiter →
+            {tr("understoodContinue")}
           </button>
         </div>
       )}

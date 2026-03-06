@@ -250,13 +250,15 @@ function DashboardInner() {
               </p>
             </div>
 
+            {/* ✅ loadFamily once, not 6× per render */}
+            {(() => {
+              const _fam = loadFamily();
+              const _aid = getActiveProfileId();
+              const _cur = _fam.members.find(m => m.id === _aid);
+              return (
             <div className="grid grid-cols-3 gap-3">
               {[1,2,3,4,5,6].map((g, i) => {
-                // Highlight current child's grade
-                const family = loadFamily();
-                const activeId = getActiveProfileId();
-                const member = family.members.find(m => m.id === activeId);
-                const isCurrent = member?.grade === g;
+                const isCurrent = _cur?.grade === g;
                 return (
                   <button key={g} onClick={() => chooseGrade(g)}
                     style={{ minHeight: "100px", transition: "all 0.15s ease" }}
@@ -269,6 +271,8 @@ function DashboardInner() {
                 );
               })}
             </div>
+              ); // end IIFE return
+            })()}
 
 
           </div>
@@ -289,12 +293,19 @@ function DashboardInner() {
             <div className="flex items-center gap-3">
               <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3 min-w-[44px]">←</button>
               <Image
-                src="/images/mascot/cleverli-thumbsup.png"
+                src="/cleverli-thumbsup.png"
                 alt="Cleverli"
                 width={80} height={80}
                 className="drop-shadow-md shrink-0"
               />
-              <div>
+              <div className="flex-1 min-w-0">
+                {/* Show active child chip here too */}
+                {activeMember && (
+                  <div className="inline-flex items-center gap-1.5 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full mb-1">
+                    <span className="text-sm">{activeMember.avatar}</span>
+                    <span className="text-xs font-bold text-blue-800">{activeMember.name}</span>
+                  </div>
+                )}
                 <h2 className="text-lg font-black text-gray-800 leading-tight">
                   {lang === "fr" ? "Que veux-tu apprendre?" : lang === "it" ? "Cosa vuoi imparare?" : lang === "en" ? "What do you want to learn?" : "Was möchtest du lernen?"}
                 </h2>
@@ -339,7 +350,8 @@ function DashboardInner() {
 
   // UJ-4: premium awareness (from session, only after hydration)
   const isPremium = sessionLoaded ? sessionPremium : true; // assume premium until loaded (avoids false lock flash)
-  const isGrade3Locked = grade === 3 && sessionLoaded && !sessionPremium;
+  // ✅ Grades 3–6 require premium (grade 3 was the only locked grade before — gap fixed)
+  const isGrade3Locked = grade !== null && grade >= 3 && sessionLoaded && !sessionPremium;
 
   const handleBack = () => {
     if (preselectedSubject) setGrade(null);
@@ -390,7 +402,7 @@ function DashboardInner() {
               className="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 border border-blue-200 hover:bg-blue-200 transition-colors shrink-0"
               title={lang === "fr" ? "Changer de classe" : lang === "it" ? "Cambia classe" : lang === "en" ? "Change grade" : "Klasse wechseln"}
             >
-              {grade}. {tr("gradeLabel")} ✎
+              {grade}. {tr("gradeLabel")} ✏️
             </button>
           </div>
           <div className="text-xs text-gray-400">{subjectL(subject, "subtitle")}</div>
@@ -459,15 +471,12 @@ function DashboardInner() {
       )}
 
       {/* UJ-4: Premium upsell banner for grade 3 free users */}
-      {isGrade3Locked && (
+      {isGrade3Locked && grade !== null && (
         <Link href={uid ? `/api/checkout?plan=monthly&uid=${uid}` : "/upgrade"} className="flex items-center gap-3 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl px-4 py-3 text-sm text-amber-900 hover:from-amber-100 hover:to-orange-100 transition-colors">
           <span className="text-2xl">🔓</span>
           <div className="flex-1">
             <div className="font-bold">
-              {lang === "fr" ? "Débloque toute la 3e classe"
-               : lang === "it" ? "Sblocca tutta la 3a classe"
-               : lang === "en" ? "Unlock all of Grade 3"
-               : "Klasse 3 komplett freischalten"}
+              {tr("premiumRequiredGrade").replace("{n}", String(grade))}
             </div>
             <div className="text-xs opacity-75">
               {lang === "fr" ? "CHF 9.90/mois · Annuler à tout moment"
@@ -582,7 +591,7 @@ export default function Dashboard() {
   return (
     <Suspense fallback={
       <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-400">
-        <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
+        <Image src="/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
         <div className="text-sm">Laden… / Chargement…</div>
       </div>
     }>

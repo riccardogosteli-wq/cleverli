@@ -45,7 +45,10 @@ export default function RewardsPage() {
     setRewards(loadRewards());
     // Load current progress snapshot
     const totalStars = countTotalStars();
-    const raw = typeof window !== "undefined" ? localStorage.getItem("cleverli_profile") : null;
+    // ✅ Use active child's profile key, not the global fallback
+    const activeId = typeof window !== "undefined" ? localStorage.getItem("cleverli_active_profile") : null;
+    const profileKey = activeId ? `cleverli_profile_${activeId}` : "cleverli_profile";
+    const raw = typeof window !== "undefined" ? localStorage.getItem(profileKey) : null;
     const profile = raw ? JSON.parse(raw) : {};
     setSnap({
       totalExercises: profile.totalExercises ?? 0,
