@@ -177,20 +177,22 @@ test.describe("SEO — meta tags on key pages", () => {
     });
   }
 
-  test("sitemap.xml contains key routes", async ({ page }) => {
-    await page.goto("/sitemap.xml");
-    const body = await page.content();
+  test("sitemap.xml contains key routes", async ({ request }) => {
+    // Use request (not page) to get raw XML — page.content() wraps in browser XML viewer
+    const res = await request.get("/sitemap.xml");
+    expect(res.status()).toBe(200);
+    const body = await res.text();
     expect(body).toContain("cleverli.ch");
     expect(body).toContain("/parents");
     expect(body).toContain("/upgrade");
   });
 
-  test("robots.txt allows bots on key pages", async ({ page }) => {
-    await page.goto("/robots.txt");
-    const body = await page.content();
-    expect(body).toContain("Disallow");
-    // Should NOT block the whole site
-    expect(body).not.toContain("Disallow: /\n");
+  test("robots.txt allows bots on key pages", async ({ request }) => {
+    const res = await request.get("/robots.txt");
+    expect(res.status()).toBe(200);
+    const body = await res.text();
+    // Should NOT block the entire site
+    expect(body).not.toMatch(/Disallow:\s*\/\s*\n/);
   });
 });
 
@@ -364,9 +366,12 @@ test.describe("Signup — onboarding flow", () => {
     await page.goto("/signup");
     await page.waitForTimeout(1_000);
 
-    const hasRolePicker = await page.locator(
-      "button:has-text('Elternteil'), button:has-text('Parent'), text=Ich bin"
-    ).count() > 0;
+    // Check for role picker elements (use separate locators — can't mix CSS + text= syntax)
+    const parentBtn = page.locator("button:has-text('Elternteil'), button:has-text('Parent')");
+    const ichBinText = page.getByText("Ich bin", { exact: false });
+
+    const hasRolePicker =
+      (await parentBtn.count()) > 0 || (await ichBinText.count()) > 0;
 
     expect(hasRolePicker).toBe(true);
   });

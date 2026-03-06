@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
     // Marketing & conversion pages
     { url: BASE,                   lastModified: now, changeFrequency: "weekly",  priority: 1.0 },
+    { url: `${BASE}/parents`,      lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/upgrade`,      lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/signup`,       lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/login`,        lastModified: now, changeFrequency: "monthly", priority: 0.4 },
@@ -17,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/agb`,          lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
     { url: `${BASE}/impressum`,    lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
     { url: `${BASE}/datenschutz`,  lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
-    // NOTE: /dashboard, /trophies, /rewards, /daily, /family, /kids, /parents
+    // NOTE: /dashboard, /trophies, /rewards, /daily, /family, /kids
     //       are in-app pages (localStorage-dependent) — excluded (noindex in their metadata)
   ];
 
