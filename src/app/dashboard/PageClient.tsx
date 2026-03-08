@@ -327,8 +327,8 @@ function DashboardInner() {
                   <button key={s.id} onClick={() => setSubject(s.id)}
                     style={{ minHeight: "80px", transition: "all 0.15s ease" }}
                     className={`border-2 rounded-2xl font-bold active:scale-95 flex items-center gap-4 px-5 text-left ${s.color}`}>
-                    <div className={`w-12 h-12 ${meta?.iconBg ?? "bg-gray-100"} rounded-xl flex items-center justify-center shrink-0 p-1.5`}>
-                      <Image src={SUBJECT_ICONS[s.id] ?? ""} alt={s.id} width={40} height={40} className="w-full h-full object-contain" />
+                    <div className="w-16 h-16 flex items-center justify-center shrink-0">
+                      <Image src={SUBJECT_ICONS[s.id] ?? ""} alt={s.id} width={64} height={64} className="w-full h-full object-contain" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-base">{subjectL(s.id, "label")}</div>
@@ -396,8 +396,8 @@ function DashboardInner() {
       {/* Header */}
       <div className="flex items-center gap-2">
         <button onClick={handleBack} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2 min-w-[44px]">←</button>
-        <div className={`w-9 h-9 ${currentSubjectMeta?.iconBg ?? "bg-gray-100"} rounded-xl flex items-center justify-center text-lg`}>
-          {currentSubjectMeta?.emoji}
+        <div className="w-10 h-10 flex items-center justify-center shrink-0">
+          <Image src={SUBJECT_ICONS[subject] ?? ""} alt={subject} width={40} height={40} className="w-full h-full object-contain" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
@@ -430,7 +430,7 @@ function DashboardInner() {
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap border transition-colors shrink-0 shadow-sm ${
                 isActive ? activeCls : "bg-white text-gray-500 border-gray-200 hover:border-gray-300"
               }`}>
-              <Image src={SUBJECT_ICONS[s.id] ?? ""} alt={s.id} width={16} height={16} className="w-4 h-4 object-contain" /> {subjectL(s.id, "label")}
+              <Image src={SUBJECT_ICONS[s.id] ?? ""} alt={s.id} width={20} height={20} className="w-5 h-5 object-contain" /> {subjectL(s.id, "label")}
             </button>
           );
         })}
