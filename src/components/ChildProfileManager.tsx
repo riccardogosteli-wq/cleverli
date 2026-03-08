@@ -56,7 +56,7 @@ function AddChildForm({ onSave, onCancel }: { onSave: () => void; onCancel: () =
         <div className="text-xs font-medium text-gray-500 mb-1">Name</div>
         <input
           type="text" value={name} onChange={e => setName(e.target.value)}
-          placeholder={tr("namePlaceholder") ?? "z.B. Lena"}
+          placeholder={tr("childNamePlaceholder") ?? "z.B. Lena"}
           className="w-full border-2 border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-green-400"
           maxLength={30}
         />

@@ -91,7 +91,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de-CH">
+    <html lang="de-CH" suppressHydrationWarning>
       <head>
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="beforeInteractive">{`

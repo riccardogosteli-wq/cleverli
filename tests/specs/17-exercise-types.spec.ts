@@ -6,6 +6,9 @@
 import { test, expect } from "@playwright/test";
 import { getTopics } from "../../src/data/index";
 
+// Shared base URL used across test.describe blocks
+const BASE = "/learn/1/math/zahlen-1-10";
+
 // Collect one topic per grade/subject to find all exercise types
 const SAMPLE_TOPICS = [
   { grade: 1, subject: "math",    topicId: "zahlen-1-10" },
@@ -13,7 +16,7 @@ const SAMPLE_TOPICS = [
   { grade: 1, subject: "german",  topicId: "buchstaben" },
   { grade: 2, subject: "math",    topicId: "zahlen-bis-100" },
   { grade: 2, subject: "german",  topicId: "nomen-artikel" },
-  { grade: 3, subject: "math",    topicId: "einmaleins" },
+  { grade: 3, subject: "math",    topicId: "einmaleins-komplett" },
   { grade: 3, subject: "science", topicId: "unsere-erde" },
 ];
 
@@ -88,7 +91,7 @@ test.describe("Exercise type rendering", () => {
 });
 
 test.describe("Exercise player controls", () => {
-  const BASE = "/learn/1/math/zahlen-1-10";
+  // BASE is defined at module level above
 
   test("progress bar advances after answering", async ({ page }) => {
     await page.goto(BASE);
