@@ -46,6 +46,12 @@ const SUBJECT_META: Record<string, {
   },
 };
 
+const SUBJECT_ICONS: Record<string, string> = {
+  math:    "/images/ui/Mathematik.svg",
+  german:  "/images/ui/Deutsch.svg",
+  science: "/images/ui/NMG.svg",
+};
+
 const GRADE_KEY = "cleverli_last_grade";
 
 function getProgress(grade: number, subject: string, topicId: string) {
@@ -321,8 +327,8 @@ function DashboardInner() {
                   <button key={s.id} onClick={() => setSubject(s.id)}
                     style={{ minHeight: "80px", transition: "all 0.15s ease" }}
                     className={`border-2 rounded-2xl font-bold active:scale-95 flex items-center gap-4 px-5 text-left ${s.color}`}>
-                    <div className={`w-12 h-12 ${meta?.iconBg ?? "bg-gray-100"} rounded-xl flex items-center justify-center text-2xl shrink-0`}>
-                      {s.emoji}
+                    <div className={`w-12 h-12 ${meta?.iconBg ?? "bg-gray-100"} rounded-xl flex items-center justify-center shrink-0 p-1.5`}>
+                      <Image src={SUBJECT_ICONS[s.id] ?? ""} alt={s.id} width={40} height={40} className="w-full h-full object-contain" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-base">{subjectL(s.id, "label")}</div>
@@ -424,7 +430,7 @@ function DashboardInner() {
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap border transition-colors shrink-0 shadow-sm ${
                 isActive ? activeCls : "bg-white text-gray-500 border-gray-200 hover:border-gray-300"
               }`}>
-              {SUBJECT_META[s.id]?.emoji} {subjectL(s.id, "label")}
+              <Image src={SUBJECT_ICONS[s.id] ?? ""} alt={s.id} width={16} height={16} className="w-4 h-4 object-contain" /> {subjectL(s.id, "label")}
             </button>
           );
         })}

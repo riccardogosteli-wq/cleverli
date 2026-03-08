@@ -140,131 +140,28 @@ function levelLabel(x: number, y: number, levelNum: number, label: string, done:
   </g>`;
 }
 
-// ─── BUILDING 1: Cozy Cottage (Level 1) ──────────────────────────────────────
-function cottage(x: number, y: number, done: boolean, levelNum: number, scale: number = 1): string {
-  const s = scale;
-  const wall   = done ? '#fef3c7' : '#f1f5f9';
-  const wStroke= done ? '#f59e0b' : '#cbd5e1';
-  const roof   = done ? '#dc2626' : '#94a3b8';
-  const roofD  = done ? '#b91c1c' : '#78828f';
-  const door   = done ? '#7c3aed' : '#475569';
-  const win    = done ? '#bfdbfe' : '#e2e8f0';
-  const wBord  = done ? '#93c5fd' : '#cbd5e1';
-  const chimney= done ? '#78350f' : '#94a3b8';
-  return `<g transform="translate(${x},${y}) scale(${s})">
-    <ellipse cx="0" cy="2" rx="32" ry="5" fill="#00000018"/>
-    <rect x="-28" y="-44" width="56" height="44" rx="5" fill="${wall}" stroke="${wStroke}" stroke-width="2"/>
-    <polygon points="-35,-44 0,-82 35,-44" fill="${roofD}"/>
-    <polygon points="-33,-44 0,-80 33,-44" fill="${roof}"/>
-    <line x1="-8" y1="${-72}" x2="8" y2="${-62}" stroke="white" stroke-width="1.5" opacity="0.35"/>
-    <rect x="13" y="-84" width="9" height="22" rx="2" fill="${chimney}"/>
-    ${done ? `
-    <circle cx="17" cy="-88" r="4" fill="white" opacity="0.7">
-      <animate attributeName="cy" values="-88;-97;-88" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2s" repeatCount="indefinite"/>
-    </circle>` : ''}
-    <path d="M -9,0 L -9,-22 Q 0,-30 9,-22 L 9,0 Z" fill="${door}"/>
-    <circle cx="6" cy="-12" r="2" fill="${done?'#fbbf24':'#94a3b8'}"/>
-    <rect x="-25" y="-38" width="13" height="11" rx="3" fill="${win}" stroke="${wBord}" stroke-width="1.5"/>
-    <rect x="-25" y="-38" width="13" height="11" rx="3" fill="none" stroke="${wBord}" stroke-width="1"/>
-    <line x1="-18.5" y1="-38" x2="-18.5" y2="-27" stroke="${wBord}" stroke-width="1"/>
-    <line x1="-25" y1="-32.5" x2="-12" y2="-32.5" stroke="${wBord}" stroke-width="1"/>
-    <rect x="12" y="-38" width="13" height="11" rx="3" fill="${win}" stroke="${wBord}" stroke-width="1.5"/>
-    <line x1="18.5" y1="-38" x2="18.5" y2="-27" stroke="${wBord}" stroke-width="1"/>
-    <line x1="12" y1="-32.5" x2="25" y2="-32.5" stroke="${wBord}" stroke-width="1"/>
-    ${done ? `
-    <rect x="-27" y="-27" width="13" height="4" rx="2" fill="#f97316"/>
-    <circle cx="-24" cy="-30" r="2.5" fill="#fbbf24"/>
-    <circle cx="-20" cy="-31" r="2.5" fill="#f472b6"/>
-    <circle cx="-16" cy="-30" r="2.5" fill="#fbbf24"/>
-    <rect x="14" y="-27" width="13" height="4" rx="2" fill="#f97316"/>
-    <circle cx="17" cy="-30" r="2.5" fill="#f472b6"/>
-    <circle cx="21" cy="-31" r="2.5" fill="#fbbf24"/>
-    <circle cx="25" cy="-30" r="2.5" fill="#f472b6"/>` : ''}
-  </g>`;
+// ─── BUILDING 1: House Level 1 ───────────────────────────────────────────────
+function cottage(x: number, y: number, done: boolean, _levelNum: number, scale: number = 1): string {
+  const w = Math.round(88 * scale), h = Math.round(108 * scale);
+  const src = done ? '/images/scenes/Haus-level1-open.svg' : '/images/scenes/Haus-level1-closed.svg';
+  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(36 * scale)}" ry="${Math.round(6 * scale)}" fill="#00000018"/>
+  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet"/>`;
 }
 
-// ─── BUILDING 2: Magic Tower (Level 2) ───────────────────────────────────────
-function tower(x: number, y: number, done: boolean, levelNum: number, scale: number = 1): string {
-  const s = scale;
-  const wall  = done ? '#dbeafe' : '#f1f5f9';
-  const wS    = done ? '#3b82f6' : '#cbd5e1';
-  const top   = done ? '#1d4ed8' : '#94a3b8';
-  const roof  = done ? '#2563eb' : '#9ca3af';
-  const door  = done ? '#1e3a8a' : '#475569';
-  const win   = done ? '#bfdbfe' : '#e2e8f0';
-  const flag  = done ? '#f59e0b' : '#d1d5db';
-  return `<g transform="translate(${x},${y}) scale(${s})">
-    <ellipse cx="0" cy="2" rx="26" ry="5" fill="#00000018"/>
-    <rect x="-20" y="-72" width="40" height="72" rx="4" fill="${wall}" stroke="${wS}" stroke-width="2"/>
-    ${[-16,-8,0,8].map(ox=>`<rect x="${ox}" y="-84" width="7" height="14" rx="2" fill="${top}"/>`).join('')}
-    <polygon points="-4,-84 4,-84 0,-106" fill="${roof}"/>
-    <line x1="0" y1="-106" x2="0" y2="-90" stroke="${done?'#1e40af':'#9ca3af'}" stroke-width="2"/>
-    <polygon points="0,-106 17,-98 0,-90" fill="${flag}" class="${done?'flag-wave':''}"/>
-    ${done ? `<text x="8" y="-96" font-size="7" text-anchor="middle" font-family="sans-serif">⭐</text>` : ''}
-    <rect x="-15" y="-60" width="12" height="14" rx="3" fill="${win}" stroke="${wS}" stroke-width="1.5"/>
-    <rect x="3" y="-60" width="12" height="14" rx="3" fill="${win}" stroke="${wS}" stroke-width="1.5"/>
-    <line x1="-9" y1="-60" x2="-9" y2="-46" stroke="${wS}" stroke-width="1" opacity="0.6"/>
-    <line x1="-15" y1="-53" x2="-3" y2="-53" stroke="${wS}" stroke-width="1" opacity="0.6"/>
-    <line x1="9" y1="-60" x2="9" y2="-46" stroke="${wS}" stroke-width="1" opacity="0.6"/>
-    <line x1="3" y1="-53" x2="15" y2="-53" stroke="${wS}" stroke-width="1" opacity="0.6"/>
-    <rect x="-8" y="-38" width="16" height="14" rx="3" fill="${win}" stroke="${wS}" stroke-width="1.5"/>
-    <path d="M -8,0 L -8,-22 Q 0,-30 8,-22 L 8,0 Z" fill="${door}"/>
-    ${done?`<circle cx="-4" cy="-18" r="1.5" fill="#fbbf24"/><circle cx="4" cy="-18" r="1.5" fill="#fbbf24"/>`: ''}
-    ${[-55,-40,-25,-10].map(dy=>`<line x1="-20" y1="${dy}" x2="20" y2="${dy}" stroke="${wS}" stroke-width="0.5" opacity="0.28"/>`).join('')}
-  </g>`;
+// ─── BUILDING 2: House Level 2 ───────────────────────────────────────────────
+function tower(x: number, y: number, done: boolean, _levelNum: number, scale: number = 1): string {
+  const w = Math.round(80 * scale), h = Math.round(130 * scale);
+  const src = done ? '/images/scenes/Haus-level2-open.svg' : '/images/scenes/Haus-level2-closed.svg';
+  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(30 * scale)}" ry="${Math.round(5 * scale)}" fill="#00000018"/>
+  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet"/>`;
 }
 
-// ─── BUILDING 3: Grand Castle (Level 3) ──────────────────────────────────────
-function castle(x: number, y: number, done: boolean, levelNum: number, scale: number = 1): string {
-  const s = scale;
-  const wall = done ? '#f3e8ff' : '#f1f5f9';
-  const wS   = done ? '#9333ea' : '#cbd5e1';
-  const tow  = done ? '#7e22ce' : '#94a3b8';
-  const tL   = done ? '#a855f7' : '#b0bec5';
-  const roof = done ? '#9333ea' : '#9ca3af';
-  const door = done ? '#4a044e' : '#475569';
-  const win  = done ? '#e9d5ff' : '#e2e8f0';
-  const gold = done ? '#f59e0b' : '#d1d5db';
-  return `<g transform="translate(${x},${y}) scale(${s})">
-    <ellipse cx="0" cy="2" rx="44" ry="6" fill="#00000018"/>
-    <rect x="-42" y="-70" width="18" height="70" rx="3" fill="${tL}" stroke="${wS}" stroke-width="1.5"/>
-    <rect x="24" y="-70" width="18" height="70" rx="3" fill="${tL}" stroke="${wS}" stroke-width="1.5"/>
-    ${[-40,-34,-28].map(ox=>`<rect x="${ox}" y="-82" width="5" height="13" rx="1.5" fill="${tow}"/>`).join('')}
-    ${[24,30,36].map(ox=>`<rect x="${ox}" y="-82" width="5" height="13" rx="1.5" fill="${tow}"/>`).join('')}
-    <polygon points="-42,-82 -24,-82 -33,-103" fill="${roof}"/>
-    <polygon points="24,-82 42,-82 33,-103" fill="${roof}"/>
-    <rect x="-26" y="-85" width="52" height="85" rx="4" fill="${wall}" stroke="${wS}" stroke-width="2"/>
-    ${[-22,-13,-4,5,14].map(ox=>`<rect x="${ox}" y="-97" width="7" height="13" rx="2" fill="${tow}"/>`).join('')}
-    <rect x="-9" y="-110" width="18" height="25" rx="3" fill="${tL}" stroke="${wS}" stroke-width="1.5"/>
-    ${[-7,-1,5].map(ox=>`<rect x="${ox}" y="-118" width="4.5" height="9" rx="1" fill="${tow}"/>`).join('')}
-    <line x1="0" y1="-130" x2="0" y2="-108" stroke="${done?'#6b21a8':'#9ca3af'}" stroke-width="2.5"/>
-    <polygon points="0,-130 21,-120 0,-110" fill="${gold}" class="${done?'flag-wave':''}"/>
-    ${done ? `<text x="10" y="-118" font-size="8" text-anchor="middle" font-family="sans-serif">⭐</text>` : ''}
-    ${done ? `
-    <line x1="-33" y1="-103" x2="-33" y2="-93" stroke="${tow}" stroke-width="1.5"/>
-    <polygon points="-33,-103 -21,-98 -33,-93" fill="#f472b6" class="flag-wave"/>
-    <line x1="33" y1="-103" x2="33" y2="-93" stroke="${tow}" stroke-width="1.5"/>
-    <polygon points="33,-103 21,-98 33,-93" fill="#34d399" class="flag-wave"/>
-    ` : ''}
-    ${[-18,-7,6,17].map(wx=>`<rect x="${wx-4}" y="-73" width="9" height="12" rx="2" fill="${win}" stroke="${wS}" stroke-width="1"/>`).join('')}
-    ${[-13,6].map(wx=>`<rect x="${wx-4}" y="-51" width="9" height="12" rx="2" fill="${win}" stroke="${wS}" stroke-width="1"/>`).join('')}
-    <path d="M -11,0 L -11,-24 Q 0,-34 11,-24 L 11,0 Z" fill="${door}"/>
-    ${done ? '' : `
-    <line x1="-7" y1="0" x2="-7" y2="-22" stroke="#64748b" stroke-width="1.5"/>
-    <line x1="-1" y1="0" x2="-1" y2="-24" stroke="#64748b" stroke-width="1.5"/>
-    <line x1="5" y1="0" x2="5" y2="-22" stroke="#64748b" stroke-width="1.5"/>
-    <line x1="9" y1="0" x2="9" y2="-22" stroke="#64748b" stroke-width="1.5"/>
-    <line x1="-11" y1="-9" x2="11" y2="-9" stroke="#64748b" stroke-width="1.5"/>
-    <line x1="-11" y1="-17" x2="11" y2="-17" stroke="#64748b" stroke-width="1.5"/>
-    `}
-    ${done ? `
-    <rect x="-26" y="-86" width="52" height="3" rx="1.5" fill="${gold}" opacity="0.8"/>
-    <text x="-35" y="-90" font-size="11" opacity="0.9">✨</text>
-    <text x="27" y="-92" font-size="11" opacity="0.9">✨</text>
-    ` : ''}
-    ${[-65,-50,-35,-20,-5].map(dy=>`<line x1="-26" y1="${dy}" x2="26" y2="${dy}" stroke="${wS}" stroke-width="0.5" opacity="0.22"/>`).join('')}
-  </g>`;
+// ─── BUILDING 3: Castle Level 3 ──────────────────────────────────────────────
+function castle(x: number, y: number, done: boolean, _levelNum: number, scale: number = 1): string {
+  const w = Math.round(110 * scale), h = Math.round(150 * scale);
+  const src = done ? '/images/scenes/Schloss-level3-open.svg' : '/images/scenes/Schloss-level3-closed.svg';
+  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(46 * scale)}" ry="${Math.round(7 * scale)}" fill="#00000018"/>
+  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet"/>`;
 }
 
 // ─── DESKTOP LAYOUT ───────────────────────────────────────────────────────────

@@ -1,5 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
@@ -32,6 +33,18 @@ function loadTopicProgress(grade: number, subject: string, topicId: string): { c
     return { completed: d.completed ?? 0, stars: d.stars ?? 0 };
   } catch { return { completed: 0, stars: 0 }; }
 }
+
+// ─── SUBJECT & ACHIEVEMENT ICONS ─────────────────────────────────────────────
+const SUBJECT_ICONS: Record<string, string> = {
+  math:    "/images/ui/Mathematik.svg",
+  german:  "/images/ui/Deutsch.svg",
+  science: "/images/ui/NMG.svg",
+};
+const ACHIEVEMENT_ICONS: Record<number, string> = {
+  1: "/images/ui/Cleverli-Bronze.svg",
+  2: "/images/ui/Cleverli-Silber.svg",
+  3: "/images/ui/Cleverli-Gold.svg",
+};
 
 // ─── MINI CHECKPOINT DOTS ────────────────────────────────────────────────────
 function CheckpointDots({ tiers, compact = false }: {
@@ -107,8 +120,10 @@ function TopicCard({ tp, grade, subject }: { tp: TopicProgress; grade: number; s
           {/* Title + status */}
           <div className="flex items-center justify-between gap-2">
             <span className={`text-sm font-bold truncate ${sc.text}`}>{tp.title}</span>
-            <span className="shrink-0 text-sm">
-              {tp.stars >= 3 ? "⭐⭐⭐" : tp.stars === 2 ? "⭐⭐" : tp.stars === 1 ? "⭐" : ""}
+            <span className="shrink-0">
+              {tp.stars >= 1 && ACHIEVEMENT_ICONS[Math.min(tp.stars, 3)] && (
+                <Image src={ACHIEVEMENT_ICONS[Math.min(tp.stars, 3)]} alt={`${tp.stars} Sterne`} width={28} height={28} className="object-contain" />
+              )}
             </span>
           </div>
 
@@ -164,7 +179,7 @@ function SubjectSection({ subjectId, topics, grade, completedCount, totalCount }
     <div className={`rounded-2xl border-2 ${sc.border} ${sc.bg} overflow-hidden`}>
       {/* Subject header */}
       <div className="px-4 py-3 flex items-center gap-3 border-b border-white/50">
-        <span className="text-2xl">{meta.emoji}</span>
+        <Image src={SUBJECT_ICONS[subjectId] ?? ""} alt={subjectId} width={32} height={32} className="w-8 h-8 object-contain shrink-0" />
         <div className="flex-1">
           <div className={`font-black text-base ${sc.text}`}>{tr(subjectId as "math" | "german" | "science")}</div>
           <div className="text-xs text-gray-500 font-medium">
@@ -281,9 +296,9 @@ export default function MissionenPage() {
 
   const tabs = [
     { id: "all",     label: lang === "fr" ? "Tous" : lang === "it" ? "Tutti" : lang === "en" ? "All" : "Alle", emoji: "🗺️" },
-    { id: "math",    label: tr("math"),    emoji: "🔢" },
-    { id: "german",  label: tr("german"),  emoji: "📖" },
-    { id: "science", label: tr("science"), emoji: "🌍" },
+    { id: "math",    label: tr("math"),    emoji: "🔢",  icon: "/images/ui/Mathematik.svg" },
+    { id: "german",  label: tr("german"),  emoji: "📖",  icon: "/images/ui/Deutsch.svg" },
+    { id: "science", label: tr("science"), emoji: "🌍",  icon: "/images/ui/NMG.svg" },
   ] as const;
 
   const filteredData = activeTab === "all"
@@ -343,7 +358,9 @@ export default function MissionenPage() {
                 ? "bg-green-600 text-white shadow-md"
                 : "bg-white border-2 border-gray-200 text-gray-600 hover:border-green-300"
             }`}>
-            <span>{tab.emoji}</span>
+            {'icon' in tab
+              ? <Image src={(tab as {icon: string}).icon} alt={tab.label} width={18} height={18} className="w-4.5 h-4.5 object-contain" />
+              : <span>{tab.emoji}</span>}
             <span>{tab.label}</span>
             {tab.id !== "all" && curriculumData && (
               <span className={`text-xs px-1.5 py-0.5 rounded-full font-black ${activeTab === tab.id ? "bg-white/20" : "bg-gray-100"}`}>
