@@ -74,6 +74,21 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   const current: Exercise = exercises[idx];
   const isLocked = !isPremium && idx >= FREE_LIMIT;
+  
+  // Calculate progress bar display: show position within current tier (not across all exercises)
+  const currentTier = tierAtIndex(tierInfo, idx);
+  const tierProgressBar = (() => {
+    if (currentTier === "easy") {
+      const tierIdx = idx; // easy exercises start at 0
+      return { current: tierIdx + 1, total: tierInfo.easy.total };
+    } else if (currentTier === "medium") {
+      const tierIdx = idx - tierInfo.easyBoundary;
+      return { current: tierIdx + 1, total: tierInfo.medium.total };
+    } else {
+      const tierIdx = idx - tierInfo.mediumBoundary;
+      return { current: tierIdx + 1, total: tierInfo.hard.total };
+    }
+  })();
 
   // (voice is on-demand only — no auto-read)
 
@@ -453,9 +468,9 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       {/* Progress bar + voice toggle — hide while reward animation is showing */}
       {answered === null && (
         <div className="flex items-center gap-2">
-          {/* ProgressBar already shows X/Y Aufgaben — no extra counter needed */}
+          {/* ProgressBar shows position within current tier (not across all exercises) */}
           <div className="flex-1">
-            <ProgressBar current={idx + 1} total={exercises.length} streak={streak} isReviewMode={isReviewMode} />
+            <ProgressBar current={tierProgressBar.current} total={tierProgressBar.total} streak={streak} isReviewMode={isReviewMode} />
           </div>
           {isSupported && (
             <button
