@@ -127,7 +127,7 @@ test.describe("Fix 3 — Child grade edit UI exists in ChildProfileManager", () 
   test("edit pencil button visible on child cards in /parents", async ({ page }) => {
     await seedFamily(page);
     // Set parent PIN (bypass)
-    await page.evaluate(() => localStorage.setItem("cleverli_parent_session", "valid"));
+    await page.evaluate(() => localStorage.setItem("cleverli_parent_unlocked", JSON.stringify({ until: Date.now() + 14400000 })));
     await page.goto("/parents");
     await page.waitForTimeout(2_500);
     // ✏️ edit button should be present on each child card
@@ -141,7 +141,7 @@ test.describe("Fix 3 — Child grade edit UI exists in ChildProfileManager", () 
 
   test("clicking edit grade shows grade picker inline", async ({ page }) => {
     await seedFamily(page);
-    await page.evaluate(() => localStorage.setItem("cleverli_parent_session", "valid"));
+    await page.evaluate(() => localStorage.setItem("cleverli_parent_unlocked", JSON.stringify({ until: Date.now() + 14400000 })));
     await page.goto("/parents");
     await page.waitForTimeout(2_500);
     const editBtn = page.locator("button:has-text('✏️')").first();
@@ -158,7 +158,7 @@ test.describe("Fix 3 — Child grade edit UI exists in ChildProfileManager", () 
 
   test("grade change persists in localStorage family store", async ({ page }) => {
     await seedFamily(page);
-    await page.evaluate(() => localStorage.setItem("cleverli_parent_session", "valid"));
+    await page.evaluate(() => localStorage.setItem("cleverli_parent_unlocked", JSON.stringify({ until: Date.now() + 14400000 })));
     await page.goto("/parents");
     await page.waitForTimeout(2_500);
     const editBtn = page.locator("button:has-text('✏️')").first();
@@ -547,7 +547,7 @@ test.describe("Regression — Child-specific profile key used consistently", () 
 
   test("parents page loads child profiles for family", async ({ page }) => {
     await seedFamily(page);
-    await page.evaluate(() => localStorage.setItem("cleverli_parent_session", "valid"));
+    await page.evaluate(() => localStorage.setItem("cleverli_parent_unlocked", JSON.stringify({ until: Date.now() + 14400000 })));
     await page.goto("/parents");
     await page.waitForTimeout(2_500);
     const body = await page.locator("body").textContent() ?? "";
