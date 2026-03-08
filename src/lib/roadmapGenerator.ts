@@ -22,9 +22,19 @@ export interface RoadmapConfig {
   prevPlayerPct?: number;
   celebrateCheckpoint?: number | null;
   animKey?: string;
+  topicId?: string;
 }
 
+// ─── STATIC BACKGROUND ROADMAP TOPICS ───────────────────────────────────────
+// Topics that use the static background image instead of dynamic SVG generation
+const STATIC_ROADMAP_TOPICS = ["zahlen-1-10"];
+
 export function generateRoadmapSVG(config: RoadmapConfig): string {
+  // Use static background roadmap for specified topics
+  if (config.topicId && STATIC_ROADMAP_TOPICS.includes(config.topicId)) {
+    return generateStaticRoadmap(config);
+  }
+
   return config.isMobile
     ? generateMobileRoadmap(config)
     : generateDesktopRoadmap(config);
@@ -162,6 +172,94 @@ function castle(x: number, y: number, done: boolean, _levelNum: number, scale: n
   const src = done ? '/images/scenes/Schloss-level3-open.svg' : '/images/scenes/Schloss-level3-closed.svg';
   return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(58 * scale)}" ry="${Math.round(8 * scale)}" fill="#00000018"/>
   <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet" filter="url(#rmwh)"/>`;
+}
+
+// ─── STATIC BACKGROUND ROADMAP ─────────────────────────────────────────────
+// Uses a pre-designed background image (progress-background2.svg) with positioned house images
+function generateStaticRoadmap(config: RoadmapConfig): string {
+  const { checkpoints, isMobile, prevPlayerPct = 0, celebrateCheckpoint } = config;
+  
+  // Calculate current progress (0-1)
+  const totalCompleted = checkpoints.reduce((s, cp) => s + cp.completed, 0);
+  const totalAll = checkpoints.reduce((s, cp) => s + cp.total, 0);
+  const curPct = totalAll > 0 ? totalCompleted / totalAll : 0;
+  
+  // Green circle positions for house placement on progress-background2.svg
+  // Background is 1024×1536 (landscape-tall format)
+  // Positions are percentages of the background for responsive scaling
+  const circlePositions = [
+    { x: 50, y: 26 },   // Circle 1 (Haus-level1): 26% down
+    { x: 50, y: 55 },   // Circle 2 (Haus-level2): 55% down
+    { x: 50, y: 84 },   // Circle 3 (Schloss-level3): 84% down
+  ];
+  
+  // House building images for each level (open/closed based on completion)
+  const houseImages = [
+    { open: "/images/scenes/Haus-level1-open.svg", closed: "/images/scenes/Haus-level1-closed.svg" },
+    { open: "/images/scenes/Haus-level2-open.svg", closed: "/images/scenes/Haus-level2-closed.svg" },
+    { open: "/images/scenes/Schloss-level3-open.svg", closed: "/images/scenes/Schloss-level3-closed.svg" },
+  ];
+  
+  // SVG wrapper: use a container with the background image + positioned house overlays
+  const bgWidth = isMobile ? 360 : 800;
+  const bgHeight = isMobile ? 540 : 1100;
+  
+  const houseHTML = checkpoints.map((cp, i) => {
+    const pos = circlePositions[i];
+    if (!pos) return '';
+    
+    const x = (bgWidth * pos.x) / 100;
+    const y = (bgHeight * pos.y) / 100;
+    const houseImg = houseImages[i];
+    const imageSrc = cp.isCompleted ? houseImg.open : houseImg.closed;
+    const houseSize = isMobile ? 60 : 100;
+    
+    return `
+<foreignObject x="${x - houseSize/2}" y="${y - houseSize}" width="${houseSize}" height="${houseSize}">
+  <div xmlns="http://www.w3.org/1999/xhtml" style="width:${houseSize}px;height:${houseSize}px;background:transparent;">
+    <img src="${imageSrc}" alt="Haus ${i+1}" style="width:100%;height:100%;object-fit:contain;"/>
+  </div>
+</foreignObject>
+    `;
+  }).join('');
+  
+  const playerEmoji = curPct > 0 ? '⭐' : '🌱';
+  const celebrating = celebrateCheckpoint !== null;
+  const playerY = bgHeight * (curPct * 0.95 + 0.02); // Map progress to vertical position
+  
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+  viewBox="0 0 ${bgWidth} ${bgHeight}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  ${sharedStyles()}
+  
+  <!-- Background image from progress-background2.svg -->
+  <defs>
+    <filter id="shad-static">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Static background (scaled to fit container) -->
+  <image href="/images/scenes/progress-background2.svg" x="0" y="0" width="${bgWidth}" height="${bgHeight}" preserveAspectRatio="xMidYMid slice"/>
+  
+  <!-- House overlays positioned on green circles -->
+  ${houseHTML}
+  
+  <!-- Player character with progress animation -->
+  <g id="player-static" class="${celebrating ? 'player-spin' : 'player-bob'}">
+    <circle cx="${bgWidth/2}" cy="${playerY}" r="12" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2" filter="url(#shad-static)"/>
+    <text x="${bgWidth/2}" y="${playerY + 4}" font-size="14" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${playerEmoji}</text>
+  </g>
+  
+  ${celebrating ? celebrationBurst(bgWidth/2, playerY - 50) : ''}
+</svg>`;
 }
 
 // ─── DESKTOP LAYOUT ───────────────────────────────────────────────────────────

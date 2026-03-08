@@ -80,6 +80,7 @@ export default function ProgressMapClient({
       prevPlayerPct: prevPct,
       celebrateCheckpoint: celebrate,
       animKey: moving || celebrate ? String(Date.now()) : animKey,
+      topicId,
     });
 
     setRoadmapSvg(svg);
