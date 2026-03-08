@@ -186,17 +186,17 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   const totalAll = checkpoints.reduce((s, cp) => s + cp.total, 0);
   const curPct = totalAll > 0 ? totalCompleted / totalAll : 0;
   
-  // Horizontal landscape dimensions (16:9 aspect ratio)
-  const bgWidth = isMobile ? 360 : 960;
-  const bgHeight = isMobile ? 202 : 540;
+  // Horizontal landscape dimensions (fits background aspect ratio)
+  const bgWidth = isMobile ? 360 : 1200;
+  const bgHeight = isMobile ? 270 : 675;
   
   const playerEmoji = curPct > 0 ? '⭐' : '🌱';
   const celebrating = celebrateCheckpoint !== null;
   
-  // Player moves left-to-right along the journey path
-  // Start at 8% (beginning of path), end at 92% (near end, before castle)
-  const playerX = (bgWidth * 0.08) + (curPct * (bgWidth * 0.84));
-  const playerY = bgHeight * 0.55; // Slightly below vertical center (on path)
+  // Player starts at bottom-right (beginning of street), moves left toward houses
+  // Progress 0: ~90% right (bottom-right of street), Progress 1: ~10% left (near houses)
+  const playerX = bgWidth * (0.90 - curPct * 0.80); // Right to left movement
+  const playerY = bgHeight * 0.70; // Lower on image (street level)
   
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
   viewBox="0 0 ${bgWidth} ${bgHeight}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
@@ -217,15 +217,15 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   </defs>
   
   <!-- Horizontal background image (landscape, contains painted houses) -->
-  <image href="/images/scenes/progress_background-final.svg" x="0" y="0" width="${bgWidth}" height="${bgHeight}" preserveAspectRatio="xMidYMid slice"/>
+  <image href="/images/scenes/progress_background-final.svg" x="0" y="0" width="${bgWidth}" height="${bgHeight}" preserveAspectRatio="xMidYMid meet"/>
   
-  <!-- Player character moving horizontally along the journey -->
+  <!-- Player character moving horizontally along the journey (much larger) -->
   <g id="player-static" class="${celebrating ? 'player-spin' : 'player-bob'}">
-    <circle cx="${playerX}" cy="${playerY}" r="14" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2.5" filter="url(#shad-static)"/>
-    <text x="${playerX}" y="${playerY + 5}" font-size="16" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${playerEmoji}</text>
+    <circle cx="${playerX}" cy="${playerY}" r="32" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="3" filter="url(#shad-static)"/>
+    <text x="${playerX}" y="${playerY + 8}" font-size="40" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${playerEmoji}</text>
   </g>
   
-  ${celebrating ? celebrationBurst(playerX, playerY - 60) : ''}
+  ${celebrating ? celebrationBurst(playerX, playerY - 100) : ''}
 </svg>`;
 }
 
