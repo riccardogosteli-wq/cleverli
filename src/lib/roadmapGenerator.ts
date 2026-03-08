@@ -185,19 +185,20 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   const curPct = totalAll > 0 ? totalCompleted / totalAll : 0;
   
   // Green circle positions for house placement on progress-background2.svg
-  // Measured visually from background image (1024×1536 original)
-  // Percentages account for responsive scaling
+  // Measured from visual inspection: circles at y: 18%, 48%, 78%
+  // Checkpoint order: difficulty 1 → 2 → 3 (top to bottom)
   const circlePositions = [
-    { x: 50, y: 22 },   // Circle 1 (Haus-level1) — top
-    { x: 50, y: 50 },   // Circle 2 (Haus-level2) — middle
-    { x: 50, y: 78 },   // Circle 3 (Schloss-level3) — bottom
+    { x: 50, y: 18 },   // Circle 1 (Haus-level1, difficulty 1) — top
+    { x: 50, y: 48 },   // Circle 2 (Haus-level2, difficulty 2) — middle
+    { x: 50, y: 78 },   // Circle 3 (Schloss-level3, difficulty 3) — bottom
   ];
   
   // House building images for each level (open/closed based on completion)
+  // Maps to checkpoint order: [difficulty 1, difficulty 2, difficulty 3]
   const houseImages = [
-    { open: "/images/scenes/Haus-level1-open.svg", closed: "/images/scenes/Haus-level1-closed.svg" },
-    { open: "/images/scenes/Haus-level2-open.svg", closed: "/images/scenes/Haus-level2-closed.svg" },
-    { open: "/images/scenes/Schloss-level3-open.svg", closed: "/images/scenes/Schloss-level3-closed.svg" },
+    { open: "/images/scenes/Haus-level1-open.svg", closed: "/images/scenes/Haus-level1-closed.svg" },  // Top
+    { open: "/images/scenes/Haus-level2-open.svg", closed: "/images/scenes/Haus-level2-closed.svg" },  // Middle
+    { open: "/images/scenes/Schloss-level3-open.svg", closed: "/images/scenes/Schloss-level3-closed.svg" },  // Bottom
   ];
   
   // SVG wrapper: use a container with the background image + positioned house overlays
@@ -212,8 +213,8 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
     const y = (bgHeight * pos.y) / 100;
     const houseImg = houseImages[i];
     const imageSrc = cp.isCompleted ? houseImg.open : houseImg.closed;
-    // Larger sizes to fit the green circles: 180px desktop, 120px mobile
-    const houseSize = isMobile ? 120 : 180;
+    // Much larger sizes to fill circles: 220px desktop, 150px mobile
+    const houseSize = isMobile ? 150 : 220;
     
     return `<image href="${imageSrc}" x="${x - houseSize/2}" y="${y - houseSize/2}" width="${houseSize}" height="${houseSize}" preserveAspectRatio="xMidYMid meet" style="filter: url(#rmwh)"/>`;
   }).join('');
