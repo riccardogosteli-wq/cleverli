@@ -182,7 +182,25 @@ function cleanForSpeech(text: string): string {
     .replace(/=\s*___/g, "gleich wie viel?")
     //    ", ___" at sentence end (number sequences) → ", wie weiter?"
     .replace(/,\s*___\s*([.!?]?)\s*$/g, ", wie weiter?")
-    //    "ist ___" → "ist wie viel?"
+    // ── 6b. Context-aware blanks: letter / word / verb ──
+    //    Normalize "ist: ___" (colon before blank) → "ist ___" so rules below fire
+    .replace(/ist\s*:\s*___/g, "ist ___")
+    .replace(/sind\s*:\s*___/g, "sind ___")
+    //    "Buchstabe[n] … ist ___" → "welcher Buchstabe?" (answer is a letter)
+    .replace(/\bBuchstabe[n]?\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Buchstabe?"))
+    //    "Laut … ist ___" → "welcher Laut?"
+    .replace(/\bLaut\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Laut?"))
+    //    "ein anderes Wort / Wort … ist ___" → "welches Wort?"
+    .replace(/\bWort\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welches Wort?"))
+    //    "… heisst ___" → "wie heisst es?"
+    .replace(/heisst\s+___/g, "wie heisst es?")
+    //    "… nennt man ___" → "wie nennt man es?"
+    .replace(/nennt man\s+___/g, "wie nennt man es?")
+    //    "Tag … ist ___" → "welcher Tag?"
+    .replace(/\bTag\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Tag?"))
+    //    "Monat … ist ___" → "welcher Monat?"
+    .replace(/\bMonat\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Monat?"))
+    //    Remaining "ist ___" (numeric context) → "ist wie viel?"
     .replace(/ist\s+___/g, "ist wie viel?")
     //    Mid-sentence blank (surrounded by words): remove silently — e.g. "Wir ___ Fussball"
     .replace(/(?<=\w)\s+___\s+(?=\w)/g, " ")
