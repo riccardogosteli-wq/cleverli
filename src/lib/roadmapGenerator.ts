@@ -176,9 +176,9 @@ function castle(x: number, y: number, done: boolean, _levelNum: number, scale: n
 
 // ─── STATIC BACKGROUND ROADMAP ─────────────────────────────────────────────
 // Uses a pre-designed horizontal background image (progress_background-final.svg)
-// Background already contains painted houses; we only animate the player along the journey
+// Animated medal markers (Bronze/Silver/Gold) at checkpoints instead of walking player
 function generateStaticRoadmap(config: RoadmapConfig): string {
-  const { isMobile, prevPlayerPct = 0, celebrateCheckpoint } = config;
+  const { isMobile, celebrateCheckpoint } = config;
   
   // Calculate current progress (0-1)
   const checkpoints = config.checkpoints;
@@ -186,17 +186,48 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   const totalAll = checkpoints.reduce((s, cp) => s + cp.total, 0);
   const curPct = totalAll > 0 ? totalCompleted / totalAll : 0;
   
-  // Horizontal landscape dimensions (fits background aspect ratio)
+  // Horizontal landscape dimensions
   const bgWidth = isMobile ? 360 : 1200;
   const bgHeight = isMobile ? 270 : 675;
   
-  const playerEmoji = curPct > 0 ? '⭐' : '🌱';
-  const celebrating = celebrateCheckpoint !== null;
+  // Medal positions at checkpoint houses (left, center, right)
+  const medalPositions = [
+    { x: 0.20, y: 0.50, label: "Bronze", emoji: "🥉", color: "#CD7F32" },  // Easy (left)
+    { x: 0.50, y: 0.50, label: "Silver", emoji: "🥈", color: "#C0C0C0" },  // Medium (center)
+    { x: 0.80, y: 0.50, label: "Gold",   emoji: "🥇", color: "#FFD700" },  // Hard (right)
+  ];
   
-  // Player starts at bottom-right (beginning of street), moves left toward houses
-  // Progress 0: ~90% right (bottom-right of street), Progress 1: ~10% left (near houses)
-  const playerX = bgWidth * (0.90 - curPct * 0.80); // Right to left movement
-  const playerY = bgHeight * 0.70; // Lower on image (street level)
+  // Determine which medals are unlocked based on progress
+  const medalUnlocked = [
+    curPct > 0,         // Bronze: unlocked if progress > 0
+    curPct > 0.33,      // Silver: unlocked if > 33% through medium
+    curPct > 0.66,      // Gold: unlocked if > 66% through hard
+  ];
+  
+  const isCelebrating = celebrateCheckpoint !== null;
+  
+  const medalHTML = medalPositions.map((medal, i) => {
+    const x = bgWidth * medal.x;
+    const y = bgHeight * medal.y;
+    const isUnlocked = medalUnlocked[i];
+    const isMedalCelebrating = isCelebrating && celebrateCheckpoint === checkpoints[i]?.id;
+    
+    return `
+<g id="medal-${i}" class="${isMedalCelebrating ? 'building-pop' : ''}" opacity="${isUnlocked ? 1 : 0.3}" style="transition: opacity 0.5s ease-out;">
+  <!-- Medal shadow -->
+  <ellipse cx="${x}" cy="${y + 8}" rx="24" ry="6" fill="#00000020"/>
+  
+  <!-- Medal circle (colored ring) -->
+  <circle cx="${x}" cy="${y}" r="28" fill="white" stroke="${medal.color}" stroke-width="4" filter="url(#shad-static)"/>
+  
+  <!-- Medal emoji inside -->
+  <text x="${x}" y="${y + 10}" font-size="32" text-anchor="middle" dominant-baseline="middle">${medal.emoji}</text>
+  
+  <!-- Glow effect when unlocked -->
+  ${isUnlocked ? `<circle cx="${x}" cy="${y}" r="28" fill="none" stroke="${medal.color}" stroke-width="2" opacity="0.5" class="path-glow"/>` : ''}
+</g>
+    `;
+  }).join('');
   
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
   viewBox="0 0 ${bgWidth} ${bgHeight}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
@@ -219,13 +250,8 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   <!-- Horizontal background image (landscape, contains painted houses) -->
   <image href="/images/scenes/progress_background-final.svg" x="0" y="0" width="${bgWidth}" height="${bgHeight}" preserveAspectRatio="xMidYMid meet"/>
   
-  <!-- Player character moving horizontally along the journey (much larger) -->
-  <g id="player-static" class="${celebrating ? 'player-spin' : 'player-bob'}">
-    <circle cx="${playerX}" cy="${playerY}" r="32" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="3" filter="url(#shad-static)"/>
-    <text x="${playerX}" y="${playerY + 8}" font-size="40" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${playerEmoji}</text>
-  </g>
-  
-  ${celebrating ? celebrationBurst(playerX, playerY - 100) : ''}
+  <!-- Medal/coin milestone markers at checkpoints (Bronze/Silver/Gold) -->
+  ${medalHTML}
 </svg>`;
 }
 
