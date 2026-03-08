@@ -241,8 +241,9 @@ ${sharedStyles()}
   </linearGradient>
   <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#00000028"/></filter>
-  <filter id="rmwh" color-interpolation-filters="sRGB" x="-5%" y="-5%" width="110%" height="110%">
-    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 2.8"/>
+  <filter id="rmwh" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
+    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 2.8" result="mask"/>
+    <feComposite in="SourceGraphic" in2="mask" operator="in"/>
   </filter>
   <path id="road-path-d" d="${pathD}"/>
 </defs>
@@ -378,8 +379,9 @@ ${sharedStyles()}
   </linearGradient>
   <filter id="glow-m"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <filter id="shad-m"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#00000028"/></filter>
-  <filter id="rmwh" color-interpolation-filters="sRGB" x="-5%" y="-5%" width="110%" height="110%">
-    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 2.8"/>
+  <filter id="rmwh" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
+    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 2.8" result="mask"/>
+    <feComposite in="SourceGraphic" in2="mask" operator="in"/>
   </filter>
   <path id="road-path-m" d="${pathD}"/>
 </defs>
