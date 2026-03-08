@@ -175,7 +175,7 @@ function castle(x: number, y: number, done: boolean, _levelNum: number, scale: n
 }
 
 // ─── STATIC BACKGROUND ROADMAP ─────────────────────────────────────────────
-// Uses a pre-designed background image (progress-background2.svg) with positioned house images
+// Uses a pre-designed horizontal background image (progress_background-final.svg) with positioned house images
 function generateStaticRoadmap(config: RoadmapConfig): string {
   const { checkpoints, isMobile, prevPlayerPct = 0, celebrateCheckpoint } = config;
   
@@ -184,26 +184,25 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   const totalAll = checkpoints.reduce((s, cp) => s + cp.total, 0);
   const curPct = totalAll > 0 ? totalCompleted / totalAll : 0;
   
-  // Green circle positions for house placement on progress-background2.svg
-  // Measured from visual inspection: circles at y: 18%, 48%, 78%
-  // Checkpoint order: difficulty 1 → 2 → 3 (top to bottom)
+  // Horizontal layout: houses positioned left-to-right
+  // Left = small house (difficulty 1), Center = medium house (difficulty 2), Right = castle (difficulty 3)
   const circlePositions = [
-    { x: 50, y: 18 },   // Circle 1 (Haus-level1, difficulty 1) — top
-    { x: 50, y: 48 },   // Circle 2 (Haus-level2, difficulty 2) — middle
-    { x: 50, y: 78 },   // Circle 3 (Schloss-level3, difficulty 3) — bottom
+    { x: 20, y: 50 },   // Circle 1 (Haus-level1) — left
+    { x: 50, y: 50 },   // Circle 2 (Haus-level2) — center
+    { x: 80, y: 50 },   // Circle 3 (Schloss-level3) — right
   ];
   
   // House building images for each level (open/closed based on completion)
-  // Maps to checkpoint order: [difficulty 1, difficulty 2, difficulty 3]
+  // Maps to checkpoint order: [difficulty 1, difficulty 2, difficulty 3] = [left, center, right]
   const houseImages = [
-    { open: "/images/scenes/Haus-level1-open.svg", closed: "/images/scenes/Haus-level1-closed.svg" },  // Top
-    { open: "/images/scenes/Haus-level2-open.svg", closed: "/images/scenes/Haus-level2-closed.svg" },  // Middle
-    { open: "/images/scenes/Schloss-level3-open.svg", closed: "/images/scenes/Schloss-level3-closed.svg" },  // Bottom
+    { open: "/images/scenes/Haus-level1-open.svg", closed: "/images/scenes/Haus-level1-closed.svg" },  // Left
+    { open: "/images/scenes/Haus-level2-open.svg", closed: "/images/scenes/Haus-level2-closed.svg" },  // Center
+    { open: "/images/scenes/Schloss-level3-open.svg", closed: "/images/scenes/Schloss-level3-closed.svg" },  // Right
   ];
   
-  // SVG wrapper: use a container with the background image + positioned house overlays
-  const bgWidth = isMobile ? 360 : 800;
-  const bgHeight = isMobile ? 540 : 1100;
+  // Horizontal layout dimensions
+  const bgWidth = isMobile ? 360 : 1000;
+  const bgHeight = isMobile ? 300 : 400;
   
   const houseHTML = checkpoints.map((cp, i) => {
     const pos = circlePositions[i];
@@ -213,15 +212,17 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
     const y = (bgHeight * pos.y) / 100;
     const houseImg = houseImages[i];
     const imageSrc = cp.isCompleted ? houseImg.open : houseImg.closed;
-    // Much larger sizes to fill circles: 220px desktop, 150px mobile
-    const houseSize = isMobile ? 150 : 220;
+    // House sizes: 180px desktop, 120px mobile
+    const houseSize = isMobile ? 120 : 180;
     
     return `<image href="${imageSrc}" x="${x - houseSize/2}" y="${y - houseSize/2}" width="${houseSize}" height="${houseSize}" preserveAspectRatio="xMidYMid meet" style="filter: url(#rmwh)"/>`;
   }).join('');
   
   const playerEmoji = curPct > 0 ? '⭐' : '🌱';
   const celebrating = celebrateCheckpoint !== null;
-  const playerY = bgHeight * (curPct * 0.95 + 0.02); // Map progress to vertical position
+  // Player moves left-to-right: map progress to horizontal position
+  const playerX = (bgWidth * 0.1) + (curPct * (bgWidth * 0.8)); // Move from 10% to 90% of width
+  const playerY = bgHeight * 0.5; // Vertical center
   
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
   viewBox="0 0 ${bgWidth} ${bgHeight}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
@@ -246,19 +247,19 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
     </filter>
   </defs>
   
-  <!-- Static background (scaled to fit container) -->
-  <image href="/images/scenes/progress-background2.svg" x="0" y="0" width="${bgWidth}" height="${bgHeight}" preserveAspectRatio="xMidYMid slice"/>
+  <!-- Horizontal background image -->
+  <image href="/images/scenes/progress_background-final.svg" x="0" y="0" width="${bgWidth}" height="${bgHeight}" preserveAspectRatio="xMidYMid slice"/>
   
-  <!-- House overlays positioned on green circles with white background removed -->
+  <!-- House overlays positioned left-to-right with white background removed -->
   ${houseHTML}
   
-  <!-- Player character with progress animation -->
+  <!-- Player character moving horizontally across the scene -->
   <g id="player-static" class="${celebrating ? 'player-spin' : 'player-bob'}">
-    <circle cx="${bgWidth/2}" cy="${playerY}" r="12" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2" filter="url(#shad-static)"/>
-    <text x="${bgWidth/2}" y="${playerY + 4}" font-size="14" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${playerEmoji}</text>
+    <circle cx="${playerX}" cy="${playerY}" r="12" fill="${curPct > 0 ? '#fbbf24' : '#d1d5db'}" stroke="white" stroke-width="2" filter="url(#shad-static)"/>
+    <text x="${playerX}" y="${playerY + 4}" font-size="14" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif">${playerEmoji}</text>
   </g>
   
-  ${celebrating ? celebrationBurst(bgWidth/2, playerY - 50) : ''}
+  ${celebrating ? celebrationBurst(playerX, playerY - 50) : ''}
 </svg>`;
 }
 
