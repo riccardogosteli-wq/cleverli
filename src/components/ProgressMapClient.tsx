@@ -111,13 +111,13 @@ export default function ProgressMapClient({
   }
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-green-100 shadow-sm bg-white">
+    <div className="rounded-2xl border border-green-100 shadow-sm bg-white" style={{ overflow: "visible" }}>
       {/* Inline SVG — enables SMIL animations (animateMotion, animate) */}
       {/* key= forces React to remount the SVG node, restarting SMIL animations */}
       <div
         key={animKey}
         className="w-full"
-        style={{ borderRadius: "12px 12px 0 0", overflow: "hidden" }}
+        style={{ borderRadius: "12px 12px 0 0", overflow: "visible" }}
         dangerouslySetInnerHTML={{ __html: roadmapSvg }}
       />
 

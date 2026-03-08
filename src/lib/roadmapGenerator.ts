@@ -142,26 +142,26 @@ function levelLabel(x: number, y: number, levelNum: number, label: string, done:
 
 // ─── BUILDING 1: House Level 1 ───────────────────────────────────────────────
 function cottage(x: number, y: number, done: boolean, _levelNum: number, scale: number = 1): string {
-  const w = Math.round(88 * scale), h = Math.round(108 * scale);
+  const w = Math.round(130 * scale), h = Math.round(155 * scale);
   const src = done ? '/images/scenes/Haus-level1-open.svg' : '/images/scenes/Haus-level1-closed.svg';
-  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(36 * scale)}" ry="${Math.round(6 * scale)}" fill="#00000018"/>
-  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet"/>`;
+  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(46 * scale)}" ry="${Math.round(7 * scale)}" fill="#00000018"/>
+  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet" filter="url(#rmwh)"/>`;
 }
 
 // ─── BUILDING 2: House Level 2 ───────────────────────────────────────────────
 function tower(x: number, y: number, done: boolean, _levelNum: number, scale: number = 1): string {
-  const w = Math.round(80 * scale), h = Math.round(130 * scale);
+  const w = Math.round(120 * scale), h = Math.round(175 * scale);
   const src = done ? '/images/scenes/Haus-level2-open.svg' : '/images/scenes/Haus-level2-closed.svg';
-  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(30 * scale)}" ry="${Math.round(5 * scale)}" fill="#00000018"/>
-  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet"/>`;
+  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(42 * scale)}" ry="${Math.round(7 * scale)}" fill="#00000018"/>
+  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet" filter="url(#rmwh)"/>`;
 }
 
 // ─── BUILDING 3: Castle Level 3 ──────────────────────────────────────────────
 function castle(x: number, y: number, done: boolean, _levelNum: number, scale: number = 1): string {
-  const w = Math.round(110 * scale), h = Math.round(150 * scale);
+  const w = Math.round(160 * scale), h = Math.round(195 * scale);
   const src = done ? '/images/scenes/Schloss-level3-open.svg' : '/images/scenes/Schloss-level3-closed.svg';
-  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(46 * scale)}" ry="${Math.round(7 * scale)}" fill="#00000018"/>
-  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet"/>`;
+  return `<ellipse cx="${x}" cy="${y + 4}" rx="${Math.round(58 * scale)}" ry="${Math.round(8 * scale)}" fill="#00000018"/>
+  <image href="${src}" x="${Math.round(x - w / 2)}" y="${Math.round(y - h + 6)}" width="${w}" height="${h}" preserveAspectRatio="xMidYMax meet" filter="url(#rmwh)"/>`;
 }
 
 // ─── DESKTOP LAYOUT ───────────────────────────────────────────────────────────
@@ -226,7 +226,8 @@ function generateDesktopRoadmap(config: RoadmapConfig): string {
 
   const badgeOffsets = count === 1 ? [-90] : count === 2 ? [-75,-95] : [-72,-82,-105];
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" id="roadmap-${config.animKey ?? 'main'}">
+  const VTOP = 60; // extra sky above y=0 so tall buildings aren't clipped
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -${VTOP} ${W} ${H+VTOP}" overflow="visible" id="roadmap-${config.animKey ?? 'main'}">
 ${sharedStyles()}
 <defs>
   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
@@ -240,11 +241,14 @@ ${sharedStyles()}
   </linearGradient>
   <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#00000028"/></filter>
+  <filter id="rmwh" color-interpolation-filters="sRGB" x="-5%" y="-5%" width="110%" height="110%">
+    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 2.8"/>
+  </filter>
   <path id="road-path-d" d="${pathD}"/>
 </defs>
 
-<!-- Sky -->
-<rect width="${W}" height="${H}" fill="url(#sky)" rx="14"/>
+<!-- Sky (extended upward to cover VTOP area) -->
+<rect y="-${VTOP}" width="${W}" height="${H+VTOP}" fill="url(#sky)" rx="14"/>
 
 <!-- Sun -->
 <circle cx="840" cy="36" r="28" fill="#ffe066" opacity="0.92" filter="url(#glow)"/>
@@ -363,7 +367,7 @@ function generateMobileRoadmap(config: RoadmapConfig): string {
   const bScale      = count === 1 ? 0.95 : count === 2 ? 0.88 : 0.78;
   const badgeOffsetsY = count === 1 ? [-70] : count === 2 ? [-68,-88] : [-60,-72,-88];
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" id="roadmap-m-${config.animKey ?? 'main'}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" overflow="visible" id="roadmap-m-${config.animKey ?? 'main'}">
 ${sharedStyles()}
 <defs>
   <linearGradient id="sky-m" x1="0" y1="0" x2="0" y2="1">
@@ -374,6 +378,9 @@ ${sharedStyles()}
   </linearGradient>
   <filter id="glow-m"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <filter id="shad-m"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#00000028"/></filter>
+  <filter id="rmwh" color-interpolation-filters="sRGB" x="-5%" y="-5%" width="110%" height="110%">
+    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 2.8"/>
+  </filter>
   <path id="road-path-m" d="${pathD}"/>
 </defs>
 
