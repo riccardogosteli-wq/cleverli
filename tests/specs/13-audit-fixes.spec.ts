@@ -397,6 +397,15 @@ test.describe("Fix 13 — Nav logo does not overflow", () => {
 
 test.describe("Fix 14 — Grade picker renders correctly (6 grade buttons)", () => {
   test("grade picker shows exactly 6 grade options", async ({ page }) => {
+    // Clear grade so picker is forced to show
+    await page.goto("/dashboard");
+    await page.evaluate(() => {
+      // Remove grade from active child profile so picker appears
+      const fam = JSON.parse(localStorage.getItem("cleverli_family") || '{"members":[]}');
+      const aid = localStorage.getItem("cleverli_active_profile");
+      const m = fam.members.find((x: any) => x.id === aid);
+      if (m) { delete m.grade; localStorage.setItem("cleverli_family", JSON.stringify(fam)); }
+    });
     await page.goto("/dashboard");
     await page.waitForTimeout(2_000);
     // Count grade selection buttons (1. through 6.)
