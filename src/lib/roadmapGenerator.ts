@@ -185,12 +185,12 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   const curPct = totalAll > 0 ? totalCompleted / totalAll : 0;
   
   // Green circle positions for house placement on progress-background2.svg
-  // Background is 1024×1536 (landscape-tall format)
-  // Positions are percentages of the background for responsive scaling
+  // Measured visually from background image (1024×1536 original)
+  // Percentages account for responsive scaling
   const circlePositions = [
-    { x: 50, y: 26 },   // Circle 1 (Haus-level1): 26% down
-    { x: 50, y: 55 },   // Circle 2 (Haus-level2): 55% down
-    { x: 50, y: 84 },   // Circle 3 (Schloss-level3): 84% down
+    { x: 50, y: 22 },   // Circle 1 (Haus-level1) — top
+    { x: 50, y: 50 },   // Circle 2 (Haus-level2) — middle
+    { x: 50, y: 78 },   // Circle 3 (Schloss-level3) — bottom
   ];
   
   // House building images for each level (open/closed based on completion)
@@ -212,15 +212,10 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
     const y = (bgHeight * pos.y) / 100;
     const houseImg = houseImages[i];
     const imageSrc = cp.isCompleted ? houseImg.open : houseImg.closed;
-    const houseSize = isMobile ? 60 : 100;
+    // Larger sizes to fit the green circles: 180px desktop, 120px mobile
+    const houseSize = isMobile ? 120 : 180;
     
-    return `
-<foreignObject x="${x - houseSize/2}" y="${y - houseSize}" width="${houseSize}" height="${houseSize}">
-  <div xmlns="http://www.w3.org/1999/xhtml" style="width:${houseSize}px;height:${houseSize}px;background:transparent;">
-    <img src="${imageSrc}" alt="Haus ${i+1}" style="width:100%;height:100%;object-fit:contain;"/>
-  </div>
-</foreignObject>
-    `;
+    return `<image href="${imageSrc}" x="${x - houseSize/2}" y="${y - houseSize/2}" width="${houseSize}" height="${houseSize}" preserveAspectRatio="xMidYMid meet" style="filter: url(#rmwh)"/>`;
   }).join('');
   
   const playerEmoji = curPct > 0 ? '⭐' : '🌱';
@@ -231,8 +226,12 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   viewBox="0 0 ${bgWidth} ${bgHeight}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
   ${sharedStyles()}
   
-  <!-- Background image from progress-background2.svg -->
   <defs>
+    <!-- Remove white backgrounds from house SVG images -->
+    <filter id="rmwh" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 2.8" result="mask"/>
+      <feComposite in="SourceGraphic" in2="mask" operator="in"/>
+    </filter>
     <filter id="shad-static">
       <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
       <feOffset dx="0" dy="2" result="offsetblur"/>
@@ -249,7 +248,7 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   <!-- Static background (scaled to fit container) -->
   <image href="/images/scenes/progress-background2.svg" x="0" y="0" width="${bgWidth}" height="${bgHeight}" preserveAspectRatio="xMidYMid slice"/>
   
-  <!-- House overlays positioned on green circles -->
+  <!-- House overlays positioned on green circles with white background removed -->
   ${houseHTML}
   
   <!-- Player character with progress animation -->
