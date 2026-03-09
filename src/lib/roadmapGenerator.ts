@@ -55,6 +55,14 @@ function sharedStyles(): string {
       85%  { transform: scale(0.97); }
       100% { transform: scale(1); }
     }
+    @keyframes cleverliEmerge {
+      0%   { transform: translateY(60px) scale(0.8); opacity: 0; }
+      50%  { transform: translateY(-10px) scale(1.1); }
+      100% { transform: translateY(0px) scale(1); opacity: 1; }
+    }
+    .cleverliEmerge {
+      animation: cleverliEmerge 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
     @keyframes starSpin {
       0%   { transform: rotate(0deg) scale(1); }
       50%  { transform: rotate(180deg) scale(1.5); }
@@ -221,8 +229,15 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
       ? `/images/scenes/cleverli-level${pos.level}.svg`
       : `/images/scenes/erdloch-transparent.png`;
     
+    // Animation: Cleverli emerges from ground when first unlocked, then bounces if celebrating
+    const animationClass = isCharCelebrating 
+      ? 'building-pop'  // Bounce celebration
+      : isUnlocked 
+        ? 'cleverliEmerge'  // Pop up from ground
+        : '';
+    
     return `
-<g id="char-${i}" class="${isCharCelebrating ? 'building-pop' : ''}" style="transition: opacity 0.6s ease-out;">
+<g id="char-${i}" class="${animationClass}" style="transform-origin: ${x}px ${y}px;">
   <!-- Character image (starts as hole, animates in when unlocked) -->
   <image 
     href="${imageSrc}" 
@@ -231,7 +246,6 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
     width="${charSize}" 
     height="${charSize}" 
     preserveAspectRatio="xMidYMid meet"
-    opacity="${isUnlocked ? 1 : 1}"
   />
 </g>
     `;
