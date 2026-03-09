@@ -5,6 +5,7 @@ import { generateRoadmapSVG } from "@/lib/roadmapGenerator";
 import { buildProgressMap, getCheckpointProgress, isCheckpointCompleted, CHECKPOINT_LABELS } from "@/lib/progressMap";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useLang } from "@/lib/LangContext";
+import { useSound } from "@/hooks/useSound";
 
 interface ProgressMapClientProps {
   topicId: string;
@@ -25,6 +26,7 @@ export default function ProgressMapClient({
 }: ProgressMapClientProps) {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const { lang, tr } = useLang();
+  const { play } = useSound();
   const [roadmapSvg, setRoadmapSvg] = useState<string | null>(null);
 
   // Track previous state for animation
@@ -92,12 +94,24 @@ export default function ProgressMapClient({
     if (celebrate) {
       setCelebrateCheckpoint(celebrate);
       setAnimKey(String(Date.now()));
+      
+      // Play celebration sound when medal is unlocked
+      // checkpointProgress is indexed 0, 1, 2 (Bronze, Silver, Gold)
+      const checkpointIndex = checkpointProgress.findIndex(cp => cp.id === celebrate);
+      if (checkpointIndex === 0) {
+        play("achievement");  // Bronze medal
+      } else if (checkpointIndex === 1) {
+        play("levelup");       // Silver medal  
+      } else if (checkpointIndex === 2) {
+        play("perfect");       // Gold medal
+      }
+      
       const t = setTimeout(() => setCelebrateCheckpoint(null), 1200);
       return () => clearTimeout(t);
     }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [completedExercisesByDifficulty, totalExercisesByDifficulty, topicTitle, isMobile, lang]);
+  }, [completedExercisesByDifficulty, totalExercisesByDifficulty, topicTitle, isMobile, lang, play]);
 
 
 
