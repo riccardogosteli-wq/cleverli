@@ -205,12 +205,11 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
     { x: 0.78, y: 0.46, level: 3 },  // Hard (right) — up + slightly left
   ];
   
-  // Determine which levels are unlocked
-  const levelUnlocked = [
-    curPct > 0,         // Level 1: unlocked if progress > 0
-    curPct > 0.33,      // Level 2: unlocked if > 33% through
-    curPct > 0.66,      // Level 3: unlocked if > 66% through
-  ];
+  // Determine which levels are unlocked based on checkpoint completion
+  // Level 1: show once checkpoint 1 is done (Easy level)
+  // Level 2: show once checkpoint 2 is done (Medium level)
+  // Level 3: show once checkpoint 3 is done (Hard level)
+  const levelUnlocked = checkpoints.map(cp => cp.isCompleted);
   
   const isCelebrating = celebrateCheckpoint !== null;
   
