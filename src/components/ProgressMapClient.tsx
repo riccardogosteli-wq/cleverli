@@ -8,27 +8,27 @@ import { useLang } from "@/lib/LangContext";
 import { useSound } from "@/hooks/useSound";
 import { useVoice } from "@/hooks/useVoice";
 
-// Medal celebration messages by language and level
-const MEDAL_VOICES: Record<string, Record<number, string>> = {
+// Coin celebration messages by language and level
+const COIN_VOICES: Record<string, Record<number, string>> = {
   de: {
-    0: "Wow! Glückwunsch zur Bronze-Medaille! Du bist großartig!",
-    1: "Fantastisch! Die Silber-Medaille ist dein! Du wirst immer besser!",
-    2: "Unglaublich! Die Gold-Medaille! Du bist ein echter Champion!",
+    0: "Wow! Glückwunsch zur Cleverli Bronze-Münze! Du bist großartig!",
+    1: "Fantastisch! Die Cleverli Silber-Münze ist dein! Du wirst immer besser!",
+    2: "Unglaublich! Die Cleverli Gold-Münze! Du bist ein echter Champion!",
   },
   fr: {
-    0: "Wow! Félicitations pour la médaille de bronze! Tu es formidable!",
-    1: "Fantastique! La médaille d'argent est à toi! Tu t'améliores de plus en plus!",
-    2: "Incroyable! La médaille d'or! Tu es un vrai champion!",
+    0: "Wow! Félicitations pour la pièce Cleverli bronze! Tu es formidable!",
+    1: "Fantastique! La pièce Cleverli argent est à toi! Tu t'améliores de plus en plus!",
+    2: "Incroyable! La pièce Cleverli or! Tu es un vrai champion!",
   },
   it: {
-    0: "Wow! Congratulazioni per la medaglia di bronzo! Sei fantastico!",
-    1: "Fantastico! La medaglia d'argento è tua! Stai migliorando sempre di più!",
-    2: "Incredibile! La medaglia d'oro! Sei un vero campione!",
+    0: "Wow! Congratulazioni per la moneta Cleverli bronzo! Sei fantastico!",
+    1: "Fantastico! La moneta Cleverli argento è tua! Stai migliorando sempre di più!",
+    2: "Incredibile! La moneta Cleverli oro! Sei un vero campione!",
   },
   en: {
-    0: "Wow! Congratulations on the bronze medal! You're amazing!",
-    1: "Fantastic! The silver medal is yours! You're getting better and better!",
-    2: "Incredible! The gold medal! You're a true champion!",
+    0: "Wow! Congratulations on the Cleverli bronze coin! You're amazing!",
+    1: "Fantastic! The Cleverli silver coin is yours! You're getting better and better!",
+    2: "Incredible! The Cleverli gold coin! You're a true champion!",
   },
 };
 
@@ -121,21 +121,21 @@ export default function ProgressMapClient({
       setCelebrateCheckpoint(celebrate);
       setAnimKey(String(Date.now()));
       
-      // Play celebration sound + voice when medal is unlocked
-      // checkpointProgress is indexed 0, 1, 2 (Bronze, Silver, Gold)
+      // Play celebration sound + voice when coin is unlocked
+      // checkpointProgress is indexed 0, 1, 2 (Bronze, Silver, Gold coin)
       const checkpointIndex = checkpointProgress.findIndex(cp => cp.id === celebrate);
       if (checkpointIndex === 0) {
-        play("achievement");  // Bronze medal
+        play("achievement");  // Bronze coin
       } else if (checkpointIndex === 1) {
-        play("levelup");       // Silver medal  
+        play("levelup");       // Silver coin
       } else if (checkpointIndex === 2) {
-        play("perfect");       // Gold medal
+        play("perfect");       // Gold coin
       }
       
       // Play voice celebration in the correct language (200ms delay for audio sync)
       setTimeout(() => {
         const langCode = lang === "de" ? "de" : lang === "fr" ? "fr" : lang === "it" ? "it" : "en";
-        const message = MEDAL_VOICES[langCode]?.[checkpointIndex] || MEDAL_VOICES.en[checkpointIndex];
+        const message = COIN_VOICES[langCode]?.[checkpointIndex] || COIN_VOICES.en[checkpointIndex];
         speak(message);
       }, 200);
       

@@ -61,7 +61,7 @@ function sharedStyles(): string {
       100% { transform: translateY(0px) scale(1); opacity: 1; }
     }
     .cleverliEmerge {
-      animation: cleverliEmerge 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      animation: cleverliEmerge 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;  /* Cleverli pops up from ground */
     }
     @keyframes starSpin {
       0%   { transform: rotate(0deg) scale(1); }
@@ -199,17 +199,18 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   const bgHeight = isMobile ? 270 : 675;
   
   // Cleverli character positions at checkpoint holes (left, center, right)
+  // Characters emerge with coins when levels are completed
   const characterPositions = [
-    { x: 0.22, y: 0.65, level: 1 },  // Easy (left) — down + slightly right
-    { x: 0.50, y: 0.50, level: 2 },  // Medium (center) — perfectly placed ✅
-    { x: 0.78, y: 0.46, level: 3 },  // Hard (right) — up + slightly left
+    { x: 0.22, y: 0.65, level: 1 },  // Easy (left) — Bronze coin
+    { x: 0.50, y: 0.50, level: 2 },  // Medium (center) — Silver coin
+    { x: 0.78, y: 0.46, level: 3 },  // Hard (right) — Gold coin
   ];
   
-  // Determine which levels are unlocked based on checkpoint completion
-  // Level 1: show once checkpoint 1 is done (Easy level)
-  // Level 2: show once checkpoint 2 is done (Medium level)
-  // Level 3: show once checkpoint 3 is done (Hard level)
-  const levelUnlocked = checkpoints.map(cp => cp.isCompleted);
+  // Determine which coins/levels are unlocked based on checkpoint completion
+  // Coin 1 (Bronze): show once checkpoint 1 is done (Easy level complete)
+  // Coin 2 (Silver): show once checkpoint 2 is done (Medium level complete)
+  // Coin 3 (Gold): show once checkpoint 3 is done (Hard level complete)
+  const coinUnlocked = checkpoints.map(cp => cp.isCompleted);
   
   const isCelebrating = celebrateCheckpoint !== null;
   
@@ -219,20 +220,20 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   const characterHTML = characterPositions.map((pos, i) => {
     const x = bgWidth * pos.x;
     const y = bgHeight * pos.y;
-    const isUnlocked = levelUnlocked[i];
+    const isCoinUnlocked = coinUnlocked[i];
     const isCharCelebrating = isCelebrating && celebrateCheckpoint === checkpoints[i]?.id;
     
-    // Default: erdloch-transparent (hole)
-    // When unlocked: cleverli-level{1,2,3}.svg (character holding coin)
-    const imageSrc = isUnlocked 
+    // Default: erdloch-transparent (empty hole in ground)
+    // When coin unlocked: cleverli-level{1,2,3}.svg (Cleverli holding coin emerges)
+    const imageSrc = isCoinUnlocked 
       ? `/images/scenes/cleverli-level${pos.level}.svg`
       : `/images/scenes/erdloch-transparent.png`;
     
-    // Animation: Cleverli emerges from ground when first unlocked, then bounces if celebrating
+    // Animation: Cleverli emerges from ground when coin is first unlocked, then bounces if celebrating
     const animationClass = isCharCelebrating 
       ? 'building-pop'  // Bounce celebration
-      : isUnlocked 
-        ? 'cleverliEmerge'  // Pop up from ground
+      : isCoinUnlocked 
+        ? 'cleverliEmerge'  // Pop up from ground with coin
         : '';
     
     return `
@@ -272,7 +273,7 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   <image href="/images/scenes/progress_background-final.svg" x="0" y="0" width="${bgWidth}" height="${bgHeight}" preserveAspectRatio="xMidYMid meet"/>
   
   <!-- Cleverli character animations at checkpoints -->
-  <!-- Default: erdloch-transparent (hole) | Unlocked: cleverli-level{1,2,3} (character + coin) -->
+  <!-- Default: erdloch-transparent (empty hole) | Coin unlocked: cleverli-level{1,2,3} (Cleverli holding coin) -->
   ${characterHTML}
 </svg>`;
 }
