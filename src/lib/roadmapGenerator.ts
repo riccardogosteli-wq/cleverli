@@ -25,13 +25,28 @@ export interface RoadmapConfig {
   topicId?: string;
 }
 
-// ─── STATIC BACKGROUND ROADMAP TOPICS ───────────────────────────────────────
-// Topics that use the static background image instead of dynamic SVG generation
-const STATIC_ROADMAP_TOPICS = ["zahlen-1-10"];
+// ─── STATIC BACKGROUND ROADMAP ───────────────────────────────────────────────
+// ALL TOPICS now use the static background roadmap (progress_background-final.svg)
+// with Cleverli earning coins at three checkpoint levels (Bronze/Silver/Gold)
+// 
+// This is the standard approach for all future content:
+// - Background: pre-designed landscape with three holes (erdloch-transparent.png)
+// - Coins: Bronze (Easy), Silver (Medium), Gold (Hard)
+// - Animation: Cleverli emerges at highest coin position, others show empty holes
+// - Voice: Multilingual celebration when each coin is earned
+// - Sound: Achievement sounds (achievement/levelup/perfect)
+//
+// To customize for a specific topic, modify circle positions in generateStaticRoadmap()
+// Default positions work for all topics: x: 0.22/0.50/0.78, y: 0.65/0.50/0.46
+const STATIC_ROADMAP_TOPICS: string[] | null = null; // null = use for ALL topics
 
 export function generateRoadmapSVG(config: RoadmapConfig): string {
-  // Use static background roadmap for specified topics
-  if (config.topicId && STATIC_ROADMAP_TOPICS.includes(config.topicId)) {
+  // Use static background roadmap for all topics (standard approach as of Mar 9)
+  // STATIC_ROADMAP_TOPICS = null means ALL topics use static roadmap
+  // If you need to limit it: set STATIC_ROADMAP_TOPICS = ["topic-id-1", "topic-id-2"]
+  const useStaticRoadmap = STATIC_ROADMAP_TOPICS === null;
+  
+  if (useStaticRoadmap) {
     return generateStaticRoadmap(config);
   }
 
