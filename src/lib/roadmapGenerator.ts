@@ -212,6 +212,17 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   // Coin 3 (Gold): show once checkpoint 3 is done (Hard level complete)
   const coinUnlocked = checkpoints.map(cp => cp.isCompleted);
   
+  // Find the HIGHEST unlocked coin index (-1 if none unlocked)
+  // Only show Cleverli at the highest unlocked position
+  // When a new coin is reached, old coin disappears and new coin appears
+  let highestUnlockedCoinIndex = -1;
+  for (let i = coinUnlocked.length - 1; i >= 0; i--) {
+    if (coinUnlocked[i]) {
+      highestUnlockedCoinIndex = i;
+      break;
+    }
+  }
+  
   const isCelebrating = celebrateCheckpoint !== null;
   
   // Character sizes: scale based on screen size
@@ -220,19 +231,20 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   const characterHTML = characterPositions.map((pos, i) => {
     const x = bgWidth * pos.x;
     const y = bgHeight * pos.y;
-    const isCoinUnlocked = coinUnlocked[i];
+    // Only show Cleverli at the highest unlocked coin position
+    const shouldShowCharacter = highestUnlockedCoinIndex === i;
     const isCharCelebrating = isCelebrating && celebrateCheckpoint === checkpoints[i]?.id;
     
     // Default: erdloch-transparent (empty hole in ground)
-    // When coin unlocked: cleverli-level{1,2,3}.svg (Cleverli holding coin emerges)
-    const imageSrc = isCoinUnlocked 
+    // When coin unlocked and at highest position: cleverli-level{1,2,3}.svg (Cleverli holding coin)
+    const imageSrc = shouldShowCharacter 
       ? `/images/scenes/cleverli-level${pos.level}.svg`
       : `/images/scenes/erdloch-transparent.png`;
     
     // Animation: Cleverli emerges from ground when coin is first unlocked, then bounces if celebrating
     const animationClass = isCharCelebrating 
       ? 'building-pop'  // Bounce celebration
-      : isCoinUnlocked 
+      : shouldShowCharacter 
         ? 'cleverliEmerge'  // Pop up from ground with coin
         : '';
     
