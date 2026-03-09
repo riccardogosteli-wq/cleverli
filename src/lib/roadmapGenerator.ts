@@ -192,9 +192,9 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   
   // Cleverli character positions at checkpoint holes (left, center, right)
   const characterPositions = [
-    { x: 0.20, y: 0.62, level: 1 },  // Easy (left) — further down to green circle
+    { x: 0.22, y: 0.65, level: 1 },  // Easy (left) — down + slightly right
     { x: 0.50, y: 0.50, level: 2 },  // Medium (center) — perfectly placed ✅
-    { x: 0.80, y: 0.48, level: 3 },  // Hard (right) — slight adjustment down
+    { x: 0.78, y: 0.46, level: 3 },  // Hard (right) — up + slightly left
   ];
   
   // Determine which levels are unlocked
