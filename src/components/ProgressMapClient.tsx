@@ -6,6 +6,31 @@ import { buildProgressMap, getCheckpointProgress, isCheckpointCompleted, CHECKPO
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useLang } from "@/lib/LangContext";
 import { useSound } from "@/hooks/useSound";
+import { useVoice } from "@/hooks/useVoice";
+
+// Medal celebration messages by language and level
+const MEDAL_VOICES: Record<string, Record<number, string>> = {
+  de: {
+    0: "Wow! Glückwunsch zur Bronze-Medaille! Du bist großartig!",
+    1: "Fantastisch! Die Silber-Medaille ist dein! Du wirst immer besser!",
+    2: "Unglaublich! Die Gold-Medaille! Du bist ein echter Champion!",
+  },
+  fr: {
+    0: "Wow! Félicitations pour la médaille de bronze! Tu es formidable!",
+    1: "Fantastique! La médaille d'argent est à toi! Tu t'améliores de plus en plus!",
+    2: "Incroyable! La médaille d'or! Tu es un vrai champion!",
+  },
+  it: {
+    0: "Wow! Congratulazioni per la medaglia di bronzo! Sei fantastico!",
+    1: "Fantastico! La medaglia d'argento è tua! Stai migliorando sempre di più!",
+    2: "Incredibile! La medaglia d'oro! Sei un vero campione!",
+  },
+  en: {
+    0: "Wow! Congratulations on the bronze medal! You're amazing!",
+    1: "Fantastic! The silver medal is yours! You're getting better and better!",
+    2: "Incredible! The gold medal! You're a true champion!",
+  },
+};
 
 interface ProgressMapClientProps {
   topicId: string;
@@ -27,6 +52,7 @@ export default function ProgressMapClient({
   const isMobile = useMediaQuery("(max-width: 768px)");
   const { lang, tr } = useLang();
   const { play } = useSound();
+  const { speak } = useVoice();
   const [roadmapSvg, setRoadmapSvg] = useState<string | null>(null);
 
   // Track previous state for animation
@@ -95,7 +121,7 @@ export default function ProgressMapClient({
       setCelebrateCheckpoint(celebrate);
       setAnimKey(String(Date.now()));
       
-      // Play celebration sound when medal is unlocked
+      // Play celebration sound + voice when medal is unlocked
       // checkpointProgress is indexed 0, 1, 2 (Bronze, Silver, Gold)
       const checkpointIndex = checkpointProgress.findIndex(cp => cp.id === celebrate);
       if (checkpointIndex === 0) {
@@ -106,12 +132,19 @@ export default function ProgressMapClient({
         play("perfect");       // Gold medal
       }
       
+      // Play voice celebration in the correct language (200ms delay for audio sync)
+      setTimeout(() => {
+        const langCode = lang === "de" ? "de" : lang === "fr" ? "fr" : lang === "it" ? "it" : "en";
+        const message = MEDAL_VOICES[langCode]?.[checkpointIndex] || MEDAL_VOICES.en[checkpointIndex];
+        speak(message);
+      }, 200);
+      
       const t = setTimeout(() => setCelebrateCheckpoint(null), 1200);
       return () => clearTimeout(t);
     }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [completedExercisesByDifficulty, totalExercisesByDifficulty, topicTitle, isMobile, lang, play]);
+  }, [completedExercisesByDifficulty, totalExercisesByDifficulty, topicTitle, isMobile, lang, play, speak]);
 
 
 
