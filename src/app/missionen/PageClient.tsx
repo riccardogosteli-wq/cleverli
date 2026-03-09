@@ -305,6 +305,19 @@ export default function MissionenPage() {
     ? (curriculumData ?? [])
     : (curriculumData ?? []).filter(d => d.subjectId === activeTab);
 
+  // Calculate total coins earned
+  const coinsEarned = useMemo(() => {
+    const stats = { bronze: 0, silver: 0, gold: 0 };
+    curriculumData?.forEach(subject => {
+      subject.topics.forEach(topic => {
+        if (topic.tiers.easy.done >= topic.tiers.easy.total) stats.bronze++;
+        if (topic.tiers.medium.done >= topic.tiers.medium.total) stats.silver++;
+        if (topic.tiers.hard.done >= topic.tiers.hard.total) stats.gold++;
+      });
+    });
+    return stats;
+  }, [curriculumData]);
+
   return (
     <div className="max-w-2xl mx-auto px-4 pb-28 space-y-5">
 
@@ -318,6 +331,39 @@ export default function MissionenPage() {
             <div className="text-sm text-gray-500 mt-0.5">
               {grade}. {tr("gradeLabel")}
               {childName && <span className="ml-2 font-semibold text-green-700">{childName.avatar} {childName.name}</span>}
+            </div>
+          </div>
+        </div>
+
+        {/* Cleverli Münzen Collection */}
+        <div className="mt-4 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border-2 border-amber-200 p-4">
+          <div className="text-sm font-bold text-amber-900 mb-3">
+            🪙 {lang === "fr" ? "Tes Pièces" : lang === "it" ? "Le tue Monete" : lang === "en" ? "Your Coins" : "Deine Cleverli Münzen"}
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            {/* Bronze Coins */}
+            <div className="flex items-center gap-2 bg-white/60 rounded-lg p-2 border border-amber-200">
+              <div className="text-2xl">🥉</div>
+              <div className="flex-1">
+                <div className="text-sm font-black text-amber-900">{coinsEarned.bronze}</div>
+                <div className="text-xs text-amber-700 font-semibold">{lang === "fr" ? "Bronze" : lang === "it" ? "Bronzo" : lang === "en" ? "Bronze" : "Bronze"}</div>
+              </div>
+            </div>
+            {/* Silver Coins */}
+            <div className="flex items-center gap-2 bg-white/60 rounded-lg p-2 border border-gray-300">
+              <div className="text-2xl">🥈</div>
+              <div className="flex-1">
+                <div className="text-sm font-black text-gray-800">{coinsEarned.silver}</div>
+                <div className="text-xs text-gray-700 font-semibold">{lang === "fr" ? "Argent" : lang === "it" ? "Argento" : lang === "en" ? "Silver" : "Silber"}</div>
+              </div>
+            </div>
+            {/* Gold Coins */}
+            <div className="flex items-center gap-2 bg-white/60 rounded-lg p-2 border border-yellow-300">
+              <div className="text-2xl">🥇</div>
+              <div className="flex-1">
+                <div className="text-sm font-black text-yellow-800">{coinsEarned.gold}</div>
+                <div className="text-xs text-yellow-700 font-semibold">{lang === "fr" ? "Or" : lang === "it" ? "Oro" : lang === "en" ? "Gold" : "Gold"}</div>
+              </div>
             </div>
           </div>
         </div>
