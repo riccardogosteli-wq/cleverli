@@ -235,22 +235,26 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
     const shouldShowCharacter = highestUnlockedCoinIndex === i;
     const isCharCelebrating = isCelebrating && celebrateCheckpoint === checkpoints[i]?.id;
     
-    // Default: erdloch-transparent (empty hole in ground)
-    // When coin unlocked and at highest position: cleverli-level{1,2,3}.svg (Cleverli holding coin)
+    // Always show something at each position:
+    // - If highest unlocked coin: show Cleverli holding coin (cleverli-level{1,2,3}.svg)
+    // - Otherwise: show empty hole (erdloch-transparent.png) — always visible as placeholder
     const imageSrc = shouldShowCharacter 
       ? `/images/scenes/cleverli-level${pos.level}.svg`
       : `/images/scenes/erdloch-transparent.png`;
     
-    // Animation: Cleverli emerges from ground when coin is first unlocked, then bounces if celebrating
+    // Animation: 
+    // - Celebration: play pop bounce when arriving at coin
+    // - Cleverli arriving: emerge from ground when becoming highest
+    // - Empty hole: no animation
     const animationClass = isCharCelebrating 
-      ? 'building-pop'  // Bounce celebration
+      ? 'building-pop'
       : shouldShowCharacter 
-        ? 'cleverliEmerge'  // Pop up from ground with coin
+        ? 'cleverliEmerge'
         : '';
     
     return `
-<g id="char-${i}" class="${animationClass}" style="transform-origin: ${x}px ${y}px;">
-  <!-- Character image (starts as hole, animates in when unlocked) -->
+<g id="char-${i}" class="${animationClass}" style="transform-origin: ${x}px ${y}px; opacity: 1;">
+  <!-- Always visible: either Cleverli holding coin OR empty hole (erdloch-transparent) -->
   <image 
     href="${imageSrc}" 
     x="${x - charSize/2}" 
@@ -258,6 +262,7 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
     width="${charSize}" 
     height="${charSize}" 
     preserveAspectRatio="xMidYMid meet"
+    opacity="1"
   />
 </g>
     `;
