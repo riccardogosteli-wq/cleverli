@@ -262,7 +262,7 @@ const grade3German: Topic[] = [
       { id: "rs12", type: "fill-in-blank", difficulty: 1, question: "Heisst es «dass» oder «das»? Ich weiss, ___ du recht hast.", answer: "dass", hints: ["Nebensatzeinleiter = dass (mit ss). Artikel/Pronomen = das!"] },
       { id: "rs13", type: "multiple-choice", difficulty: 1, question: "Welches Wort ist ein Nomen?", answer: "Tisch", options: ["laufen","schön","Tisch","schnell"], hints: ["Nomen = grossgeschrieben, ein Ding!"] },
       { id: "rs14", type: "fill-in-blank", difficulty: 1, question: "Schreibe richtig: «der ___ (hund) bellt» ", answer: "Hund", hints: ["Tiere = Nomen = gross!"] },
-      { id: "rs15", type: "multiple-choice", difficulty: 1, question: "Welches Wort ist korrekt?", answer: "Strasse", options: ["Strasse","Strase","Strassse","Strass"], hints: ["Schweizer Deutsch: ss (nicht ß) → Strasse!"] },
+      { id: "rs15", type: "multiple-choice", difficulty: 1, question: "Welches Wort ist korrekt?", answer: "Strasse", options: ["Strasse","Strase","Strassse","Strass"], hints: ["Schweizer Deutsch: ss (nicht ss) → Strasse!"] },
       { id: "rs16", type: "fill-in-blank", difficulty: 1, question: "Richtig geschrieben: «heiss» oder «heiss»? In der Schweiz: ___", answer: "heiss", hints: ["Schweiz: ss statt ss → heiss!"] },
       { id: "rs17", type: "multiple-choice", difficulty: 1, question: "Welches Wort ist richtig?", answer: "spielen", options: ["shpielen","spielen","spilen","speillen"], hints: ["spiel + en = spielen!"] },
       { id: "rs18", type: "fill-in-blank", difficulty: 1, question: "Richtig oder falsch? «Das Buch lieg auf dem Tisch.» Korrektur: ___", answer: "liegt", hints: ["er/sie/es → -t Endung: liegt!"] },
