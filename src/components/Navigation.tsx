@@ -173,8 +173,8 @@ export default function Navigation() {
               aria-haspopup="listbox"
             >
               <span style={{ fontSize: "18px" }}>{currentLang?.flag}</span>
-              <span className="text-xs font-bold tracking-wide text-gray-500 uppercase">{lang}</span>
-              <span className={`text-gray-400 text-xs transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
+              <span className="hidden sm:inline text-xs font-bold tracking-wide text-gray-500 uppercase">{lang}</span>
+              <span className={`hidden sm:inline text-gray-400 text-xs transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
             </button>
             {langOpen && <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} aria-hidden="true" />}
             {langOpen && (
