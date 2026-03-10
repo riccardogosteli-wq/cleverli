@@ -28,6 +28,7 @@ import { useSession } from "@/hooks/useSession";
 import Confetti from "./Confetti";
 import { checkAndUnlockRewards, loadRewards, countTotalStars, Reward } from "@/lib/rewards";
 import RewardUnlockedModal from "./RewardUnlockedModal";
+import { getLevelForXp, getNextLevel } from "@/lib/xp";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
@@ -43,8 +44,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const { speak, stop, isSupported } = useVoice();
   const { play } = useSound();
   const { tr, lang } = useLang();
-  const { recordAnswer } = useProfileContext();
+  const { recordAnswer, profile, leveledUp, clearLeveledUp } = useProfileContext();
   const { session } = useSession();
+  const level = getLevelForXp(profile.xp);
+  const nextLevel = getNextLevel(profile.xp);
   const uid = session?.userId ?? "";
   const checkoutUrl = (plan: "monthly" | "yearly") =>
     `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
@@ -411,6 +414,30 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
   // ── Exercise ─────────────────────────────────────────────────────
   return (
     <div className="space-y-3 max-w-xl mx-auto relative">
+      {/* Level display — shows current level + XP progress */}
+      {profile.xp > 0 && (
+        <div className="bg-gradient-to-r from-green-50 to-yellow-50 border-2 border-green-200 rounded-xl p-3 flex items-center gap-3">
+          <div className="text-3xl">{level.emoji}</div>
+          <div className="flex-1">
+            <div className="font-bold text-gray-800 text-sm">{level.title}</div>
+            <div className="text-xs text-gray-600">
+              {nextLevel ? `${profile.xp - level.minXp} / ${nextLevel.minXp - level.minXp} XP` : `${profile.xp} XP`}
+            </div>
+            {nextLevel && (
+              <div className="w-full bg-gray-200 rounded-full h-1.5 mt-1 overflow-hidden">
+                <div
+                  className="h-full transition-all"
+                  style={{
+                    width: `${Math.round(((profile.xp - level.minXp) / (nextLevel.minXp - level.minXp)) * 100)}%`,
+                    backgroundColor: level.color,
+                  }}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Reward unlock modal — fires after exercise triggers a reward */}
       {unlockedReward && (
         <RewardUnlockedModal reward={unlockedReward} onClose={() => setUnlockedReward(null)} />
