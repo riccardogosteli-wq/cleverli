@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 
 
@@ -11,13 +11,6 @@ export default function Home() {
   const { tr, lang } = useLang();
   const { session, loaded, isPremium } = useSession();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [showBelowFold, setShowBelowFold] = useState(false);
-
-  // Defer below-fold testimonials/FAQ until after hero renders (500ms delay)
-  useEffect(() => {
-    const timer = setTimeout(() => setShowBelowFold(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
 
   // Logged-in CTA targets
   const primaryHref  = session ? "/dashboard" : "/dashboard";
@@ -281,8 +274,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials — Deferred rendering for performance */}
-      {showBelowFold && (
+      {/* Testimonials */}
       <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
@@ -331,7 +323,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      )}
 
       {/* CTA banner */}
       <section className="bg-green-700 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>

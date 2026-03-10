@@ -12,6 +12,7 @@ import { useProfile, Profile } from "@/hooks/useProfile";
 import { useSession } from "@/hooks/useSession";
 import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
 import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
+import { getTierProgress } from "@/lib/tierProgress";
 import RewardWidget from "@/components/RewardWidget";
 import AuthGuard from "@/components/AuthGuard";
 
@@ -561,6 +562,14 @@ function DashboardInner() {
               const isLocked = !isUnlocked;
               const isCurrent = i === firstCurrentIdx;
               const iconBg = currentSubjectMeta?.iconBg ?? "bg-green-100";
+              
+              // Get tier progress to show Level 1/2/3 badges
+              const tierInfo = getTierProgress(topic, prog?.completed ?? 0);
+              const tierLevel = 
+                tierInfo.isTiered && tierInfo.easy.done === tierInfo.easy.total && tierInfo.medium.done === tierInfo.medium.total && tierInfo.hard.done === tierInfo.hard.total ? 3
+                : tierInfo.isTiered && tierInfo.easy.done === tierInfo.easy.total && tierInfo.medium.done === tierInfo.medium.total ? 2
+                : tierInfo.isTiered && tierInfo.easy.done === tierInfo.easy.total ? 1
+                : 0;
 
               const cardContent = (
                 <>
@@ -573,11 +582,18 @@ function DashboardInner() {
                       {isCurrent && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
                       {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
                     </div>
-                    <div className="text-xs mt-0.5">
+                    <div className="text-xs mt-0.5 flex items-center gap-2">
                       {isLocked ? (
                         <span className="text-gray-800 font-semibold">
                           {lang === "fr" ? "Encore verrouillé" : lang === "it" ? "Ancora bloccato" : lang === "en" ? "Still locked" : "Noch gesperrt"}
                         </span>
+                      ) : tierInfo.isTiered && tierLevel > 0 ? (
+                        <>
+                          {/* Show tier level badges */}
+                          {tierLevel >= 1 && <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full font-bold text-xs">Level 1</span>}
+                          {tierLevel >= 2 && <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full font-bold text-xs">Level 2</span>}
+                          {tierLevel >= 3 && <span className="px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full font-bold text-xs">Level 3</span>}
+                        </>
                       ) : done ? (
                         Array.from({length: 3}).map((_, j) => (
                           <span key={j} className={j < stars ? "text-yellow-400" : "text-gray-800"}>★</span>
