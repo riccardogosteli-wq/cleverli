@@ -70,7 +70,7 @@ export default function Navigation() {
             href="/dashboard"
             className="flex items-center gap-1.5 text-sm text-green-700 hover:text-green-800 font-semibold py-2 px-2.5 rounded-xl bg-green-50 hover:bg-green-100 transition-colors whitespace-nowrap border border-green-200"
           >
-            <Image src="/images/ui/Lernen-Dashboard.svg" alt="Lernen" width={28} height={28} />
+            <span className="text-lg">📚</span>
             <span className="hidden md:inline text-xs">{tr("learnNav")}</span>
           </Link>
           <Link
@@ -79,7 +79,7 @@ export default function Navigation() {
             aria-label={tr("navRewardsShort")}
             title={tr("navRewardsShort")}
           >
-            <Image src="/images/ui/Belohnungen.svg" alt="Belohnungen" width={28} height={28} />
+            <span className="text-lg">🎁</span>
             <span className="hidden md:inline text-xs">{tr("navRewardsShort").replace("🎁 ", "")}</span>
           </Link>
           {/* Parent dashboard link — shown when logged in */}
