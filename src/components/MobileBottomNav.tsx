@@ -83,6 +83,7 @@ export default function MobileBottomNav() {
               alt={getIcon(tab.icon).alt}
               width={32}
               height={32}
+              priority={false}
               className={`leading-none transition-opacity ${isActive ? "" : "opacity-60"}`}
             />
             <span className={`text-[10px] font-semibold leading-tight ${isActive ? "text-green-700" : "text-gray-400"}`}>
