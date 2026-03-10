@@ -3,7 +3,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useLang } from "@/lib/LangContext";
 
 // ── Request reset (step 1) ───────────────────────────────────────────────────
@@ -23,6 +23,7 @@ function RequestReset() {
     setLoading(true);
     setError("");
     try {
+      const supabase = getSupabase();
       if (!supabase) throw new Error("Auth unavailable");
       const { error: err } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/reset-password?mode=update`,
@@ -117,6 +118,7 @@ function SetNewPassword() {
     setLoading(true);
     setError("");
     try {
+      const supabase = getSupabase();
       if (!supabase) throw new Error("Auth unavailable");
       const { error: err } = await supabase.auth.updateUser({ password });
       if (err) throw err;

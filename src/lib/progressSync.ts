@@ -3,7 +3,7 @@
  * Fire-and-forget helpers to sync localStorage progress to Supabase.
  * Always writes to localStorage first (offline-safe), then async to Supabase.
  */
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import type { Profile } from "@/hooks/useProfile";
 
 // ── Types matching Supabase schema ───────────────────────────────────────────
@@ -24,6 +24,7 @@ export interface SupabaseTopicProgress {
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
 async function getParentId(): Promise<string | null> {
+  const supabase = getSupabase();
   if (!supabase) return null;
   const { data: { session } } = await supabase.auth.getSession();
   return session?.user?.id ?? null;
@@ -32,6 +33,7 @@ async function getParentId(): Promise<string | null> {
 // ── Sync profile (XP, streak, etc.) ─────────────────────────────────────────
 
 export async function syncProfileToSupabase(childId: string, profile: Profile): Promise<void> {
+  const supabase = getSupabase();
   if (!supabase || !childId) return;
   const parentId = await getParentId();
   if (!parentId) return;
@@ -64,6 +66,7 @@ export async function syncTopicProgressToSupabase(
   topicId: string,
   data: { stars: number; score: number; completed: number; partial: boolean; lastPlayed: string }
 ): Promise<void> {
+  const supabase = getSupabase();
   if (!supabase || !childId) return;
   const parentId = await getParentId();
   if (!parentId) return;
@@ -89,6 +92,7 @@ export async function syncTopicProgressToSupabase(
 // ── Load progress from Supabase (used on new device / first load) ────────────
 
 export async function loadProfileFromSupabase(childId: string): Promise<Partial<Profile> | null> {
+  const supabase = getSupabase();
   if (!supabase || !childId) return null;
   try {
     const { data, error } = await supabase
@@ -114,6 +118,7 @@ export async function loadProfileFromSupabase(childId: string): Promise<Partial<
 export async function loadTopicProgressFromSupabase(
   childId: string
 ): Promise<SupabaseTopicProgress[] | null> {
+  const supabase = getSupabase();
   if (!supabase || !childId) return null;
   try {
     const { data, error } = await supabase
@@ -133,6 +138,7 @@ export async function createChildInSupabase(
   grade: number,
   avatar: string
 ): Promise<void> {
+  const supabase = getSupabase();
   if (!supabase) return;
   const parentId = await getParentId();
   if (!parentId) return;
@@ -150,6 +156,7 @@ export async function createChildInSupabase(
 }
 
 export async function deleteChildFromSupabase(childId: string): Promise<void> {
+  const supabase = getSupabase();
   if (!supabase) return;
   try {
     await supabase.from("child_profiles").delete().eq("id", childId);
@@ -159,6 +166,7 @@ export async function deleteChildFromSupabase(childId: string): Promise<void> {
 }
 
 export async function updateChildInSupabase(childId: string, updates: { grade?: number; name?: string; avatar?: string }): Promise<void> {
+  const supabase = getSupabase();
   if (!supabase) return;
   try {
     await supabase.from("child_profiles").update(updates).eq("id", childId);

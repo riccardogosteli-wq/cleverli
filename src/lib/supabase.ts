@@ -20,7 +20,8 @@ export function getSupabase(): SupabaseClient | null {
   return _client;
 }
 
-// Convenience export — may be null during SSR if env vars missing
-export const supabase = getSupabase();
+// ⚠️ REMOVED module-level export to defer initialization
+// Use getSupabase() or getSupabaseClient() instead
+// This prevents Supabase client from being instantiated at module load time
 
 export type { User, Session } from "@supabase/supabase-js";

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 export interface Session {
   email: string;
@@ -36,6 +36,7 @@ export function useSession() {
   const setLoginInProgress = (v: boolean) => { loginInProgressRef.current = v; };
 
   useEffect(() => {
+    const supabase = getSupabase();
     if (!supabase) {
       // No Supabase client — localStorage-only mode
       const cached = readCachedSession();
@@ -126,6 +127,7 @@ export function useSession() {
     // Remove cache BEFORE signOut so the SIGNED_OUT listener sees no cache and clears state
     localStorage.removeItem(SESSION_KEY);
     setSession(null);
+    const supabase = getSupabase();
     if (supabase) await supabase.auth.signOut();
   };
 

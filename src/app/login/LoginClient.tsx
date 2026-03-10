@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 export default function Login() {
   const { tr } = useLang();
@@ -37,6 +37,7 @@ export default function Login() {
     setError("");
     setLoginInProgress(true); // tell useSession to ignore spurious SIGNED_OUT during login
 
+    const supabase = getSupabase();
     if (!supabase) { setError(tr("errorAuthUnavail") ?? "Auth nicht verfügbar."); setLoading(false); return; }
     const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
 

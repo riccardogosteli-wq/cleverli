@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useSession } from "@/hooks/useSession";
 import { useLang } from "@/lib/LangContext";
 
@@ -26,6 +26,7 @@ export default function AccountPage() {
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
 
   const handleLogout = async () => {
+    const supabase = getSupabase();
     if (supabase) await supabase.auth.signOut();
     localStorage.removeItem("cleverli_session");
     router.push("/");
@@ -37,6 +38,7 @@ export default function AccountPage() {
     setPwLoading(true);
     setPwError("");
     try {
+      const supabase = getSupabase();
       if (!supabase) throw new Error("Auth unavailable");
       const { error } = await supabase.auth.updateUser({ password: newPw });
       if (error) throw error;
@@ -50,6 +52,7 @@ export default function AccountPage() {
   };
 
   const handleSendReset = async () => {
+    const supabase = getSupabase();
     if (!session?.email || !supabase) return;
     await supabase.auth.resetPasswordForEmail(session.email, {
       redirectTo: `${window.location.origin}/reset-password?mode=update`,

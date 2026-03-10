@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 
 export default function Signup() {
@@ -39,6 +39,7 @@ export default function Signup() {
     setError("");
 
     try {
+      const supabase = getSupabase();
       if (!supabase) throw new Error("Supabase not available");
       const { data, error: signupError } = await supabase.auth.signUp({
         email,
