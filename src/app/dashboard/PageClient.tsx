@@ -138,7 +138,7 @@ function Sidebar({ profile, level, nextLevel, dailyDone, lang }: SidebarProps) {
                 <div className="h-full rounded-full transition-all duration-700"
                   style={{ width: `${xpPct}%`, backgroundColor: level.color }} />
               </div>
-              <span className="text-xs text-gray-400 shrink-0">
+              <span className="text-xs text-gray-800 font-semibold shrink-0">
                 {nextLevel ? `${xpToNext} XP` : `${profile.xp} XP`}
               </span>
             </div>
@@ -276,7 +276,7 @@ function DashboardInner() {
               <h2 className="text-xl font-bold text-gray-800">
                 {lang === "fr" ? "Quelle classe ?" : lang === "it" ? "Che classe ?" : lang === "en" ? "Which grade?" : "Welche Klasse?"}
               </h2>
-              <p className="text-xs text-gray-400 mt-0.5">
+              <p className="text-xs text-gray-800 font-semibold mt-0.5">
                 {lang === "fr" ? "Choisis ta classe" : lang === "it" ? "Scegli la tua classe" : lang === "en" ? "Choose your grade" : "Wähle deine Klasse"}
               </p>
             </div>
@@ -322,7 +322,7 @@ function DashboardInner() {
             <div className="md:hidden mb-2"><MobileDailyBar dailyDone={dailyDone} lang={lang} /></div>
             {/* PM-20: Nicer subject picker header with mascot */}
             <div className="flex items-center gap-3">
-              <button onClick={() => setGrade(null)} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-3 min-w-[44px]">←</button>
+              <button onClick={() => setGrade(null)} className="text-sm text-gray-800 font-semibold hover:text-gray-800 py-2 pr-3 min-w-[44px]">←</button>
               <Image
                 src="/cleverli-thumbsup.png"
                 alt="Cleverli"
@@ -340,7 +340,7 @@ function DashboardInner() {
                 <h2 className="text-lg font-black text-gray-800 leading-tight">
                   {lang === "fr" ? "Que veux-tu apprendre?" : lang === "it" ? "Cosa vuoi imparare?" : lang === "en" ? "What do you want to learn?" : "Was möchtest du lernen?"}
                 </h2>
-                <div className="text-xs text-gray-400">{grade}. {tr("gradeLabel")}</div>
+                <div className="text-xs text-gray-800 font-semibold">{grade}. {tr("gradeLabel")}</div>
               </div>
             </div>
             <div className="grid gap-3 sm:grid-cols-1">
@@ -423,7 +423,7 @@ function DashboardInner() {
 
       {/* Header */}
       <div className="flex items-center gap-2">
-        <button onClick={handleBack} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2 min-w-[44px]">←</button>
+        <button onClick={handleBack} className="text-sm text-gray-800 font-semibold hover:text-gray-800 py-2 pr-2 min-w-[44px]">←</button>
         <div className="w-10 h-10 flex items-center justify-center shrink-0">
           {SUBJECT_ICONS[subject]
             ? <Image src={SUBJECT_ICONS[subject]} alt={subject} width={40} height={40} className="w-full h-full object-contain" />
@@ -442,7 +442,7 @@ function DashboardInner() {
               {grade}. {tr("gradeLabel")} ✏️
             </button>
           </div>
-          <div className="text-xs text-gray-400">{subjectL(subject, "subtitle")}</div>
+          <div className="text-xs text-gray-800 font-semibold">{subjectL(subject, "subtitle")}</div>
         </div>
       </div>
 
@@ -464,7 +464,7 @@ function DashboardInner() {
             <button key={s.id}
               onClick={() => setSubject(s.id)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap border transition-colors shrink-0 shadow-sm ${
-                isActive ? activeCls : "bg-white text-gray-500 border-gray-200 hover:border-gray-300"
+                isActive ? activeCls : "bg-white text-gray-800 border-gray-200 hover:border-gray-300"
               }`}>
               {SUBJECT_ICONS[s.id]
                 ? <Image src={SUBJECT_ICONS[s.id]} alt={s.id} width={20} height={20} className="w-5 h-5 object-contain" />
@@ -568,22 +568,22 @@ function DashboardInner() {
                     {isLocked || isGrade3Locked ? "🔒" : topic.emoji}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className={`font-semibold text-sm leading-tight ${isLocked ? "text-gray-400" : "text-gray-800"}`}>
+                    <div className={`font-semibold text-sm leading-tight ${isLocked ? "text-gray-800 font-semibold" : "text-gray-800"}`}>
                       {getTopicTitle(topic.id, lang, topic.title)}
                       {isCurrent && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
                       {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
                     </div>
                     <div className="text-xs mt-0.5">
                       {isLocked ? (
-                        <span className="text-gray-400">
+                        <span className="text-gray-800 font-semibold">
                           {lang === "fr" ? "Encore verrouillé" : lang === "it" ? "Ancora bloccato" : lang === "en" ? "Still locked" : "Noch gesperrt"}
                         </span>
                       ) : done ? (
                         Array.from({length: 3}).map((_, j) => (
-                          <span key={j} className={j < stars ? "text-yellow-400" : "text-gray-300"}>★</span>
+                          <span key={j} className={j < stars ? "text-yellow-400" : "text-gray-800"}>★</span>
                         ))
                       ) : (
-                        <span className="text-gray-400">{topic.exercises.length} {tr("exerciseCount")}</span>
+                        <span className="text-gray-800 font-semibold">{topic.exercises.length} {tr("exerciseCount")}</span>
                       )}
                     </div>
                   </div>
@@ -591,8 +591,8 @@ function DashboardInner() {
                     {done && !isGrade3Locked
                       ? <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
                       : isLocked
-                        ? <span className="w-8 h-8 bg-gray-100 text-gray-300 rounded-full flex items-center justify-center text-xs">🔒</span>
-                        : <span className="w-8 h-8 bg-gray-50 text-gray-400 rounded-full flex items-center justify-center text-base">›</span>
+                        ? <span className="w-8 h-8 bg-gray-100 text-gray-800 rounded-full flex items-center justify-center text-xs">🔒</span>
+                        : <span className="w-8 h-8 bg-gray-50 text-gray-800 font-semibold rounded-full flex items-center justify-center text-base">›</span>
                     }
                   </div>
                 </>
@@ -637,7 +637,7 @@ export default function Dashboard() {
   return (
     <AuthGuard>
       <Suspense fallback={
-        <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-400">
+        <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-800 font-semibold">
           <Image src="/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
           <div className="text-sm">Laden… / Chargement…</div>
         </div>

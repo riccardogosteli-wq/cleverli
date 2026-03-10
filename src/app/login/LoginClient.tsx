@@ -66,7 +66,7 @@ export default function Login() {
   if (redirecting) {
     return (
       <div className="min-h-screen bg-green-50 flex items-center justify-center">
-        <div className="text-center space-y-3 text-gray-400">
+        <div className="text-center space-y-3 text-gray-800 font-semibold">
           <div className="text-4xl animate-spin">⚙️</div>
           <div className="text-sm">Weiterleiten…</div>
         </div>
@@ -80,19 +80,19 @@ export default function Login() {
         <div className="text-center">
           <CleverliMascot size={90} />
           <h1 className="mt-3 text-2xl font-bold text-gray-900">{tr("login")}</h1>
-          <p className="text-sm text-gray-400 mt-1">{tr("welcomeBack")}</p>
+          <p className="text-sm text-gray-800 font-semibold mt-1">{tr("welcomeBack")}</p>
         </div>
 
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">{tr("emailLabel")}</label>
+            <label className="block text-sm font-medium text-gray-800 font-semibold mb-1">{tr("emailLabel")}</label>
             <input type="email" value={email} onChange={e => setEmail(e.target.value)}
               onKeyDown={e => e.key === "Enter" && handleLogin()}
               placeholder="deine@email.ch"
               className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-400" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">{tr("passwordLabel")}</label>
+            <label className="block text-sm font-medium text-gray-800 font-semibold mb-1">{tr("passwordLabel")}</label>
             <input type="password" value={password} onChange={e => setPassword(e.target.value)}
               onKeyDown={e => e.key === "Enter" && handleLogin()}
               placeholder="••••••••"
@@ -107,7 +107,7 @@ export default function Login() {
           </button>
 
           <div className="flex flex-col gap-1.5 items-center pt-1">
-            <Link href="/reset-password" className="text-xs text-gray-400 hover:text-gray-600 underline">
+            <Link href="/reset-password" className="text-xs text-gray-800 font-semibold hover:text-gray-800 underline">
               Passwort vergessen?
             </Link>
             <Link href="/signup" className="text-xs text-green-600 underline">
