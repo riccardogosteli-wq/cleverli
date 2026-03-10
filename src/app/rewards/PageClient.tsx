@@ -12,6 +12,7 @@ import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import { getTopics, SUBJECTS } from "@/data/index";
+import AuthGuard from "@/components/AuthGuard";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
   { type: "tasks",  values: [10, 20, 50, 100] },
@@ -143,6 +144,7 @@ export default function RewardsPage() {
   }
 
   return (
+    <AuthGuard>
     <ParentPinGate>
     <div className="max-w-5xl mx-auto px-4 py-8 pb-24 sm:pb-8">
       {/* Lock button */}
@@ -501,5 +503,6 @@ export default function RewardsPage() {
       </div> {/* end md:grid */}
     </div>
     </ParentPinGate>
+    </AuthGuard>
   );
 }

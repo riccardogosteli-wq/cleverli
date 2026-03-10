@@ -13,6 +13,7 @@ import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import ChildProfileManager from "@/components/ChildProfileManager";
+import AuthGuard from "@/components/AuthGuard";
 
 interface TopicStat {
   grade: number;
@@ -111,6 +112,7 @@ export default function ParentsDashboard() {
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
 
   return (
+    <AuthGuard>
     <ParentPinGate>
     <main className="max-w-lg mx-auto px-4 py-6 pb-24 sm:pb-12 space-y-5">
       {/* Lock button */}
@@ -316,5 +318,6 @@ export default function ParentsDashboard() {
       </div>
     </main>
     </ParentPinGate>
+    </AuthGuard>
   );
 }

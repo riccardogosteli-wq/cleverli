@@ -26,6 +26,8 @@ import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useSession } from "@/hooks/useSession";
 import Confetti from "./Confetti";
+import { checkAndUnlockRewards, loadRewards, countTotalStars, Reward } from "@/lib/rewards";
+import RewardUnlockedModal from "./RewardUnlockedModal";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
@@ -58,6 +60,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [done, setDone] = useState(false);
   const [showReview, setShowReview] = useState(false); // show "review mistakes?" screen
   const [cardKey, setCardKey] = useState(0);
+  const [unlockedReward, setUnlockedReward] = useState<Reward | null>(null);
   const [voiceOn, setVoiceOn] = useState(false);
   const [hintsUsed, setHintsUsed] = useState(0);
   const [comboCount, setComboCount] = useState(0);
@@ -201,6 +204,32 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       lang,
       tierCompleted,
     });
+
+    // Check reward unlocks after every correct answer
+    if (correct) {
+      setTimeout(() => {
+        try {
+          const totalStars = countTotalStars();
+          // Build snapshot from localStorage profile (rewards.ts reads it internally)
+          const profileRaw = typeof window !== "undefined" ? localStorage.getItem("cleverli_profile") : null;
+          const prof = profileRaw ? JSON.parse(profileRaw) : null;
+          if (prof) {
+            const snap = {
+              totalExercises: prof.totalExercises ?? 0,
+              totalTopicsComplete: prof.totalTopicsComplete ?? 0,
+              dailyStreak: prof.dailyStreak ?? 0,
+              totalStars,
+            };
+            const newIds = checkAndUnlockRewards(snap);
+            if (newIds.length > 0) {
+              const all = loadRewards();
+              const first = all.find(r => r.id === newIds[0]);
+              if (first) setUnlockedReward(first);
+            }
+          }
+        } catch { /* ignore */ }
+      }, 400); // slight delay so profile state has settled
+    }
 
     // Sound first, then voice after a short pause
     if (newStreak >= 3 && correct) {
@@ -382,6 +411,11 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
   // ── Exercise ─────────────────────────────────────────────────────
   return (
     <div className="space-y-3 max-w-xl mx-auto relative">
+      {/* Reward unlock modal — fires after exercise triggers a reward */}
+      {unlockedReward && (
+        <RewardUnlockedModal reward={unlockedReward} onClose={() => setUnlockedReward(null)} />
+      )}
+
       {/* Confetti for perfect run */}
       <Confetti active={showPerfect} />
 
@@ -585,8 +619,8 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         </div>
       )}
 
-      {/* Free limit notice — UJ-8: only show after hydration (isPremium prop is stable) */}
-      {isPremium === false && idx < FREE_LIMIT && (
+      {/* Free limit notice — UJ-8: only show on last free exercise (idx === FREE_LIMIT-1), not from ex.1 */}
+      {isPremium === false && idx === FREE_LIMIT - 1 && (
         <p className="text-center text-xs text-gray-400">
           {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
           <Link href={uid ? checkoutUrl("monthly") : "/upgrade"} className="text-green-600 underline font-semibold">

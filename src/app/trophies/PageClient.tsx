@@ -7,6 +7,7 @@ import { loadFamily, getActiveProfileId } from "@/lib/family";
 import { getTopics, SUBJECTS } from "@/data/index";
 import { getTierProgress } from "@/lib/tierProgress";
 import { LEVELS, getLevelProgress } from "@/lib/xp";
+import AuthGuard from "@/components/AuthGuard";
 
 // ─── TYPES ───────────────────────────────────────────────────────────────────
 interface TopicProgress {
@@ -291,6 +292,7 @@ export default function MissionenPage() {
     : (curriculumData ?? []).filter(d => d.subjectId === activeTab);
 
   return (
+    <AuthGuard>
     <div className="max-w-2xl mx-auto px-4 pb-28 space-y-5">
 
       {/* Header */}
@@ -376,5 +378,6 @@ export default function MissionenPage() {
         </Link>
       </div>
     </div>
+    </AuthGuard>
   );
 }
