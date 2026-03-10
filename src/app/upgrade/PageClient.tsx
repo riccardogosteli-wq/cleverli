@@ -136,7 +136,7 @@ export default function UpgradePageClient() {
         <div className="text-center space-y-4">
           <div className="text-6xl">⭐</div>
           <h2 className="text-2xl font-bold text-gray-800">{tx.alreadyPremium}</h2>
-          <Link href="/dashboard" className="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition-all">
+          <Link href="/dashboard" className="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition-all">
             {tx.dashboard}
           </Link>
         </div>
@@ -218,14 +218,14 @@ export default function UpgradePageClient() {
             <div className="text-4xl font-black text-gray-800 mt-1">{tx.monthlyPrice}<span className="text-lg font-medium text-gray-400">{tx.monthlyPer}</span></div>
           </div>
           <Link href={checkoutUrl("monthly")}
-            className="block text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-green-600 text-white hover:bg-green-700">
+            className="block text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-green-700 text-white hover:bg-green-700">
             {tx.cta} →
           </Link>
           <p className="text-xs text-gray-400 text-center">{tx.cancel}</p>
         </div>
 
         {/* Yearly — highlighted */}
-        <div className="bg-green-600 rounded-2xl p-6 space-y-4 relative shadow-lg shadow-green-200">
+        <div className="bg-green-700 rounded-2xl p-6 space-y-4 relative shadow-lg shadow-green-200">
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-white text-xs font-black px-3 py-1 rounded-full">
             {tx.yearlySave}
           </div>

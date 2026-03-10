@@ -29,7 +29,7 @@ export default function XpBar() {
       </span>
       {/* Coins */}
       {(profile.coins ?? 0) > 0 && (
-        <span className="text-xs font-bold text-yellow-600 shrink-0">🪙{profile.coins}</span>
+        <span className="text-xs font-bold text-yellow-700 shrink-0">🪙{profile.coins}</span>
       )}
       {/* Streak */}
       {profile.dailyStreak >= 2 && (

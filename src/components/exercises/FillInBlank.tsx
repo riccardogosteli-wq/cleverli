@@ -92,7 +92,7 @@ export default function FillInBlank({ question, answer, onAnswer, questionImage 
       <button
         onClick={submit}
         disabled={submitted || !value.trim()}
-        className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-lg hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+        className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-lg hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
       >
         {submitted ? (correct ? "Richtig! 🎉" : "Weiter →") : tr("checkAnswer")}
       </button>

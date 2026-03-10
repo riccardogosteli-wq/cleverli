@@ -92,7 +92,7 @@ export default function AccountPage() {
       <div className="min-h-screen bg-green-50 flex items-center justify-center px-4">
         <div className="text-center space-y-4">
           <p className="text-gray-600">{t("Bitte zuerst einloggen.", "Connecte-toi d'abord.", "Accedi prima.", "Please log in first.")}</p>
-          <Link href="/login" className="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-bold">
+          <Link href="/login" className="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-bold">
             {t("Einloggen", "Se connecter", "Accedi", "Log in")}
           </Link>
         </div>
@@ -132,7 +132,7 @@ export default function AccountPage() {
           }`}>
             {session.premium ? t("👑 Premium aktiv", "👑 Premium actif", "👑 Premium attivo", "👑 Premium active") : t("🔓 Gratis-Konto", "🔓 Compte gratuit", "🔓 Account gratuito", "🔓 Free account")}
             {!session.premium && (
-              <Link href="/upgrade" className="ml-auto text-xs text-green-600 underline font-normal">
+              <Link href="/upgrade" className="ml-auto text-xs text-green-700 underline font-normal">
                 {t("Upgrade →", "Passer Premium →", "Upgrade →", "Upgrade →")}
               </Link>
             )}
@@ -213,7 +213,7 @@ export default function AccountPage() {
                  "You're on the free plan with 5 exercises per topic.")}
             </div>
             <Link href="/upgrade"
-              className="block text-center bg-green-600 text-white font-bold py-3 rounded-xl text-sm hover:bg-green-700 active:scale-95 transition-all">
+              className="block text-center bg-green-700 text-white font-bold py-3 rounded-xl text-sm hover:bg-green-700 active:scale-95 transition-all">
               ⭐ {t("Jetzt auf Premium upgraden →", "Passer à Premium →", "Passa a Premium →", "Upgrade to Premium →")}
             </Link>
           </div>
@@ -229,7 +229,7 @@ export default function AccountPage() {
               <div className="text-xs text-gray-400">••••••••</div>
             </div>
             <button onClick={() => { setPwMode(m => !m); setPwError(""); }}
-              className="text-xs text-green-600 underline font-semibold">
+              className="text-xs text-green-700 underline font-semibold">
               {pwMode ? t("Abbrechen", "Annuler", "Annulla", "Cancel") : t("Ändern", "Modifier", "Modifica", "Change")}
             </button>
           </div>
@@ -248,9 +248,9 @@ export default function AccountPage() {
                 onKeyDown={e => e.key === "Enter" && handleChangePassword()}
               />
               {pwError && <p className="text-red-500 text-xs">{pwError}</p>}
-              {pwDone && <p className="text-green-600 text-xs font-semibold">✅ {t("Passwort geändert!", "Mot de passe changé !", "Password cambiata!", "Password updated!")}</p>}
+              {pwDone && <p className="text-green-700 text-xs font-semibold">✅ {t("Passwort geändert!", "Mot de passe changé !", "Password cambiata!", "Password updated!")}</p>}
               <button onClick={handleChangePassword} disabled={pwLoading}
-                className="w-full bg-green-600 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-green-700 disabled:opacity-60">
+                className="w-full bg-green-700 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-green-700 disabled:opacity-60">
                 {pwLoading ? "…" : t("Speichern", "Enregistrer", "Salva", "Save")}
               </button>
 
@@ -281,7 +281,7 @@ export default function AccountPage() {
           <Link href="/parents" className="flex-1 text-center border border-gray-200 text-gray-500 py-2.5 rounded-full text-sm font-medium">
             📊 {t("Eltern-Übersicht", "Vue parents", "Vista genitori", "Parent view")}
           </Link>
-          <Link href="/dashboard" className="flex-1 text-center bg-green-600 text-white py-2.5 rounded-full text-sm font-bold">
+          <Link href="/dashboard" className="flex-1 text-center bg-green-700 text-white py-2.5 rounded-full text-sm font-bold">
             🎒 {t("Üben", "Pratiquer", "Esercitati", "Practice")}
           </Link>
         </div>

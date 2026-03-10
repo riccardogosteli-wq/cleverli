@@ -72,7 +72,7 @@ export default function OnboardingModal() {
             </p>
             <button
               onClick={() => isParent ? handleFinish() : setStep("grade")}
-              className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all shadow-md"
+              className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all shadow-md"
             >
               {isParent
                 ? t("Zum Elternbereich →", "Vers l'espace parents →", "All'area genitori →", "To parent area →")
@@ -154,7 +154,7 @@ export default function OnboardingModal() {
             </div>
             <button
               onClick={handleFinish}
-              className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all shadow-md"
+              className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all shadow-md"
             >
               {t("Erste Aufgabe starten 🚀", "Commencer le premier exercice 🚀", "Inizia il primo esercizio 🚀", "Start first exercise 🚀")}
             </button>

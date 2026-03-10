@@ -124,7 +124,7 @@ export default function FamilyPage() {
                   {s.levelEmoji} {s.level} · {s.grade}. {t("Klasse","Année","Classe","Grade")}
                 </div>
                 <div className="flex items-center gap-2 mt-0.5">
-                  <div className="text-xs font-bold text-green-600">⚡ {s.weeklyXp} {t("XP diese Woche","XP cette semaine","XP questa settimana","XP this week")}</div>
+                  <div className="text-xs font-bold text-green-700">⚡ {s.weeklyXp} {t("XP diese Woche","XP cette semaine","XP questa settimana","XP this week")}</div>
                   {s.streak >= 2 && <div className="text-xs text-orange-500 font-bold">🔥{s.streak}</div>}
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function FamilyPage() {
       {members.length < MAX_PROFILES && !showAdd && (
         <button
           onClick={() => setShowAdd(true)}
-          className="w-full border-2 border-dashed border-green-300 text-green-600 rounded-2xl py-4 font-bold text-sm hover:bg-green-50 active:scale-95 transition-all"
+          className="w-full border-2 border-dashed border-green-300 text-green-700 rounded-2xl py-4 font-bold text-sm hover:bg-green-50 active:scale-95 transition-all"
         >
           + {t("Kind hinzufügen","Ajouter un enfant","Aggiungi un bambino","Add a child")} ({members.length}/{MAX_PROFILES})
         </button>
@@ -201,7 +201,7 @@ export default function FamilyPage() {
                 <button
                   key={g}
                   onClick={() => setNewGrade(g)}
-                  className={`flex-1 py-2 rounded-xl font-bold text-sm transition-all ${newGrade === g ? "bg-green-600 text-white" : "bg-gray-100 text-gray-600"}`}
+                  className={`flex-1 py-2 rounded-xl font-bold text-sm transition-all ${newGrade === g ? "bg-green-700 text-white" : "bg-gray-100 text-gray-600"}`}
                 >
                   {g}. {t("Kl.","Année","Cl.","Gr.")}
                 </button>
@@ -217,7 +217,7 @@ export default function FamilyPage() {
               {t("Abbrechen","Annuler","Annulla","Cancel")}
             </button>
             <button onClick={handleAdd}
-              className="flex-1 bg-green-600 text-white py-2 rounded-xl font-bold text-sm hover:bg-green-700 active:scale-95">
+              className="flex-1 bg-green-700 text-white py-2 rounded-xl font-bold text-sm hover:bg-green-700 active:scale-95">
               {t("Hinzufügen","Ajouter","Aggiungi","Add")}
             </button>
           </div>
@@ -321,7 +321,7 @@ export default function FamilyPage() {
         <Link href="/parents" className="flex-1 text-center border-2 border-gray-200 text-gray-600 py-3 rounded-full font-semibold text-sm active:scale-95">
           📊 {t("Eltern-Übersicht","Vue parents","Vista genitori","Parent view")}
         </Link>
-        <Link href="/dashboard" className="flex-1 text-center bg-green-600 text-white py-3 rounded-full font-bold text-sm hover:bg-green-700 active:scale-95">
+        <Link href="/dashboard" className="flex-1 text-center bg-green-700 text-white py-3 rounded-full font-bold text-sm hover:bg-green-700 active:scale-95">
           🎒 {t("Üben","Pratiquer","Esercitati","Practice")}
         </Link>
       </div>

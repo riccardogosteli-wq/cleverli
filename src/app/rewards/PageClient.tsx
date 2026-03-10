@@ -197,7 +197,7 @@ export default function RewardsPage() {
         {/* Per-subject breakdown */}
         {subjectProgress.some(s => s.done > 0) && (
           <div className="mt-3 space-y-2">
-            <div className="text-xs text-green-600 font-semibold">
+            <div className="text-xs text-green-700 font-semibold">
               {lang === "de" ? "Nach Fach:" : lang === "fr" ? "Par matière:" : lang === "it" ? "Per materia:" : "By subject:"}
             </div>
             {subjectProgress.map(s => {
@@ -229,7 +229,7 @@ export default function RewardsPage() {
             </span>
           ) : (!adding && (
             <button onClick={() => setAdding(true)}
-              className="flex items-center gap-1 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-3 py-1.5 rounded-full transition-colors">
+              className="flex items-center gap-1 bg-green-700 hover:bg-green-700 text-white text-sm font-semibold px-3 py-1.5 rounded-full transition-colors">
               + {lang === "de" ? "Hinzufügen" : lang === "fr" ? "Ajouter" : lang === "it" ? "Aggiungi" : "Add"}
             </button>
           ))}
@@ -343,7 +343,7 @@ export default function RewardsPage() {
               {error && <div className="text-red-500 text-sm">{error}</div>}
               <div className="flex gap-2">
                 <button onClick={() => setFormStep(1)} className="px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-xl text-sm">←</button>
-                <button onClick={handleAdd} className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-colors">
+                <button onClick={handleAdd} className="flex-1 bg-green-700 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-colors">
                   🎁 {lang === "de" ? "Belohnung erstellen" : "Create reward"}
                 </button>
               </div>
@@ -441,7 +441,7 @@ export default function RewardsPage() {
                   </div>
                   <div className="flex gap-1">
                     <button onClick={() => { markRedeemed(r.id); setRedeemConfirm(null); reload(); }}
-                      className="bg-green-500 hover:bg-green-600 text-white font-bold px-3 py-2 rounded-xl text-sm active:scale-95">
+                      className="bg-green-500 hover:bg-green-700 text-white font-bold px-3 py-2 rounded-xl text-sm active:scale-95">
                       {lang === "fr" ? "✓ Oui" : lang === "it" ? "✓ Sì" : lang === "en" ? "✓ Yes" : "✓ Ja!"}
                     </button>
                     <button onClick={() => setRedeemConfirm(null)}

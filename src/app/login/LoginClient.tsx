@@ -102,7 +102,7 @@ export default function Login() {
           {error && <p className="text-red-500 text-sm">{error}</p>}
 
           <button onClick={handleLogin} disabled={loading}
-            className="w-full bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all disabled:opacity-60">
+            className="w-full bg-green-700 text-white font-bold py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all disabled:opacity-60">
             {loading ? (tr("loggingIn") ?? "Anmelden…") : tr("login")}
           </button>
 
@@ -110,7 +110,7 @@ export default function Login() {
             <Link href="/reset-password" className="text-xs text-gray-800 font-semibold hover:text-gray-800 underline">
               Passwort vergessen?
             </Link>
-            <Link href="/signup" className="text-xs text-green-600 underline">
+            <Link href="/signup" className="text-xs text-green-700 underline">
               Noch kein Konto? Jetzt registrieren →
             </Link>
           </div>

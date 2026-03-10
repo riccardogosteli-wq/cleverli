@@ -63,7 +63,7 @@ export default function PushPrompt({ correctCount }: Props) {
         <div className="flex-1 text-sm font-semibold text-gray-800 leading-snug">{text.title}</div>
         <div className="flex gap-2 shrink-0">
           <button onClick={subscribe}
-            className="bg-green-600 text-white text-sm font-bold px-3 py-1.5 rounded-full hover:bg-green-700 active:scale-95 transition-all">
+            className="bg-green-700 text-white text-sm font-bold px-3 py-1.5 rounded-full hover:bg-green-700 active:scale-95 transition-all">
             {text.yes}
           </button>
           <button onClick={dismiss}

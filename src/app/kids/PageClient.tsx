@@ -167,7 +167,7 @@ export default function KidsDashboard() {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <h2 className="font-bold text-gray-700 text-sm">Neueste Missionen 🗺️</h2>
-            <Link href="/missionen" className="text-xs text-green-600 underline">Alle ansehen</Link>
+            <Link href="/missionen" className="text-xs text-green-700 underline">Alle ansehen</Link>
           </div>
           <div className="flex gap-2 overflow-x-auto pb-1">
             {recentAchievements.map(ach => ach && (
@@ -231,7 +231,7 @@ export default function KidsDashboard() {
       {/* ── CTA ── */}
       <div className="flex flex-col gap-3 items-center pt-2">
         <Link href="/dashboard"
-          className="w-full text-center bg-green-600 text-white py-4 rounded-full font-black text-lg hover:bg-green-700 active:scale-95 transition-all shadow-md">
+          className="w-full text-center bg-green-700 text-white py-4 rounded-full font-black text-lg hover:bg-green-700 active:scale-95 transition-all shadow-md">
           🎒 {tr("keepLearning")}
         </Link>
         <Link href="/missionen" className="text-sm text-gray-400 underline">

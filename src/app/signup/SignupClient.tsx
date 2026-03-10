@@ -103,8 +103,8 @@ export default function Signup() {
           {[1,2,3].map(s => (
             <div key={s} className="flex flex-col items-center gap-1 flex-1">
               <div className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all mx-auto
-                ${step > s ? "bg-green-600 border-green-600 text-white" :
-                  step === s ? "bg-green-600 border-green-600 text-white ring-4 ring-green-100" :
+                ${step > s ? "bg-green-700 border-green-700 text-white" :
+                  step === s ? "bg-green-700 border-green-700 text-white ring-4 ring-green-100" :
                   "bg-white border-gray-300 text-gray-400"}`}>
                 {step > s ? "✓" : s}
               </div>
@@ -134,7 +134,7 @@ export default function Signup() {
             </div>
             <p className="text-center text-xs text-gray-400 pt-1">
               Nur ausprobieren?{" "}
-              <Link href="/dashboard" className="text-green-600 underline">Direkt starten →</Link>
+              <Link href="/dashboard" className="text-green-700 underline">Direkt starten →</Link>
             </p>
           </div>
         )}
@@ -184,7 +184,7 @@ export default function Signup() {
               />
               <button
                 onClick={() => { if (validateStep2()) { setError(""); setStep(3); } }}
-                className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 active:scale-95 transition-all text-base"
+                className="w-full bg-green-700 text-white py-3 rounded-xl font-semibold hover:bg-green-700 active:scale-95 transition-all text-base"
               >
                 Weiter →
               </button>
@@ -210,7 +210,7 @@ export default function Signup() {
                   style={{ minHeight: "72px" }}
                   className={`border-2 rounded-2xl font-bold text-lg active:scale-95 transition-all ${
                     grade === g
-                      ? "border-green-600 bg-green-600 text-white shadow-md"
+                      ? "border-green-700 bg-green-700 text-white shadow-md"
                       : "border-gray-200 bg-white text-gray-800 hover:border-green-400 hover:bg-green-50"}`}>
                   <div className="text-2xl">{g}.</div>
                   <div className="text-xs font-medium opacity-80">{tr("gradeLabel")}</div>
@@ -227,7 +227,7 @@ export default function Signup() {
             <button
               onClick={handleStart}
               disabled={!grade || loading}
-              className="w-full bg-green-600 text-white py-4 rounded-xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+              className="w-full bg-green-700 text-white py-4 rounded-xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {loading ? "Wird geladen..." : "🎉 Los geht's!"}
             </button>
@@ -241,7 +241,7 @@ export default function Signup() {
 
         <p className="text-center text-sm text-gray-600">
           {tr("alreadyHave")}{" "}
-          <Link href="/login" className="text-green-600 font-semibold hover:underline">{tr("login")}</Link>
+          <Link href="/login" className="text-green-700 font-semibold hover:underline">{tr("login")}</Link>
         </p>
       </div>
     </div>

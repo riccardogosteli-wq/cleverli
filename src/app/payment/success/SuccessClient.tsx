@@ -97,7 +97,7 @@ export default function SuccessClient() {
         <Link href="/dashboard"
           className={`inline-block px-8 py-4 rounded-full font-bold text-lg active:scale-95 transition-all shadow-md ${
             activated
-              ? "bg-green-600 text-white hover:bg-green-700"
+              ? "bg-green-700 text-white hover:bg-green-700"
               : "bg-gray-200 text-gray-400"
           }`}
         >

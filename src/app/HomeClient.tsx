@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Banner */}
-      <div className="bg-green-600 text-white text-center py-2 text-sm font-medium tracking-wide">
+      <div className="bg-green-700 text-white text-center py-2 text-sm font-medium tracking-wide">
         🇨🇭 {tr("bannerLehrplan")} &nbsp;·&nbsp; 🏅 {tr("bannerTeachers")} &nbsp;·&nbsp; 🎮 {tr("bannerExercises")}
       </div>
 
@@ -36,15 +36,15 @@ export default function Home() {
           <div className="text-center sm:text-left">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
               {tr("heroTitle1")}<br />
-              <span className="text-green-600">{tr("heroTitle2")}</span>
+              <span className="text-green-700">{tr("heroTitle2")}</span>
             </h1>
             <p className="mt-3 text-base sm:text-lg text-gray-500 max-w-lg">{tr("subtitle").split("\n")[0]}</p>
             <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center sm:justify-start">
-              <Link href={primaryHref} className="bg-green-600 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-center">
+              <Link href={primaryHref} className="bg-green-700 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-center">
                 {loaded ? primaryLabel : `${tr("startFree")} →`}
               </Link>
               {showSignupCta && (
-                <Link href="/signup" className="border-2 border-green-600 text-green-700 px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-50 active:scale-95 transition-all text-center">
+                <Link href="/signup" className="border-2 border-green-700 text-green-700 px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-50 active:scale-95 transition-all text-center">
                   {tr("createAccount")}
                 </Link>
               )}
@@ -74,7 +74,7 @@ export default function Home() {
               {
                 emoji: "📖", key: "german", label: "german",
                 bg: "bg-yellow-50", border: "border-yellow-200", hover: "hover:shadow-yellow-100",
-                textColor: "text-yellow-800", descColor: "text-yellow-600",
+                textColor: "text-yellow-800", descColor: "text-yellow-700",
                 desc: tr("germanDesc") ?? "Lesen, Schreiben, Grammatik",
                 topics: ["Buchstaben", "Wörter", "Grammatik", "Rechtschreibung"],
                 href: "/dashboard?subject=german",
@@ -82,7 +82,7 @@ export default function Home() {
               {
                 emoji: "🌍", key: "science", label: "scienceFull",
                 bg: "bg-green-50", border: "border-green-200", hover: "hover:shadow-green-100",
-                textColor: "text-green-800", descColor: "text-green-600",
+                textColor: "text-green-800", descColor: "text-green-700",
                 desc: tr("scienceDesc") ?? "Natur, Mensch, Gesellschaft",
                 topics: ["Tiere", "Körper", "Jahreszeiten", "Schweiz"],
                 href: "/dashboard?subject=science",
@@ -124,7 +124,7 @@ export default function Home() {
             ].map((item) => (
               <div key={item.step} className="flex flex-col items-center gap-3 bg-white rounded-2xl p-6 shadow-sm">
                 <Image src={item.img} alt={item.imgAlt ?? ""} width={100} height={100} className="drop-shadow-md" />
-                <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center text-sm font-bold">{item.step}</div>
+                <div className="w-8 h-8 rounded-full bg-green-700 text-white flex items-center justify-center text-sm font-bold">{item.step}</div>
                 <h3 className="font-bold text-gray-800">{tr(item.titleKey)}</h3>
                 <p className="text-gray-500 text-sm">{tr(item.descKey)}</p>
               </div>
@@ -157,7 +157,7 @@ export default function Home() {
               </Link>
             </div>
             {/* Premium */}
-            <div className="bg-green-600 rounded-2xl p-5 sm:p-8 border-2 border-green-600 shadow-lg text-white flex flex-col relative overflow-hidden">
+            <div className="bg-green-700 rounded-2xl p-5 sm:p-8 border-2 border-green-700 shadow-lg text-white flex flex-col relative overflow-hidden">
               <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
               <div className="flex items-center gap-3 mb-1">
                 <Image src="/cleverli-jump-star.png" alt="Cleverli springt mit Stern" width={56} height={56} />
@@ -289,7 +289,7 @@ export default function Home() {
                   style={{minHeight:"56px"}}
                   className="w-full text-left px-4 sm:px-5 py-4 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 active:bg-gray-100 transition-colors text-sm sm:text-base">
                   <span>{tr(qKey)}</span>
-                  <span className="text-green-600 text-xl ml-3 shrink-0">{openFaq === i ? "−" : "+"}</span>
+                  <span className="text-green-700 text-xl ml-3 shrink-0">{openFaq === i ? "−" : "+"}</span>
                 </button>
                 {openFaq === i && (
                   <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{tr(aKey)}</div>
@@ -301,7 +301,7 @@ export default function Home() {
       </section>
 
       {/* CTA banner */}
-      <section className="bg-green-600 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>
+      <section className="bg-green-700 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>
 
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 justify-center">
           <Image src="/cleverli-jump-star.png" alt="Cleverli springt vor Freude" width={100} height={100} className="drop-shadow-lg" />

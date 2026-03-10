@@ -85,7 +85,7 @@ export default function RewardUnlockedModal({ reward, onClose }: Props) {
 
         <button
           onClick={onClose}
-          className="w-full bg-green-600 hover:bg-green-700 active:scale-95 text-white font-bold py-4 rounded-2xl text-lg transition-all shadow-lg">
+          className="w-full bg-green-700 hover:bg-green-700 active:scale-95 text-white font-bold py-4 rounded-2xl text-lg transition-all shadow-lg">
           Weiter lernen! 🚀
         </button>
       </div>

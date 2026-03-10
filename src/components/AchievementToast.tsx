@@ -61,7 +61,7 @@ export default function AchievementToast({ achievement, onDone }: Props) {
           <div className="font-bold text-gray-800 text-sm leading-tight">{title}</div>
           <div className="text-xs text-gray-500 leading-snug">{desc}</div>
           {achievement.xpReward > 0 && (
-            <div className="text-xs text-green-600 font-semibold mt-0.5">+{achievement.xpReward} XP</div>
+            <div className="text-xs text-green-700 font-semibold mt-0.5">+{achievement.xpReward} XP</div>
           )}
         </div>
         <div className="text-[10px] text-gray-400 uppercase font-bold shrink-0">

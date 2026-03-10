@@ -20,7 +20,7 @@ export default function Impressum() {
         </div>
         <div>
           <h2 className="font-bold text-gray-900 mb-1">Kontakt</h2>
-          <p>E-Mail: <a href="mailto:hello@cleverli.ch" className="text-green-600 hover:underline">hello@cleverli.ch</a></p>
+          <p>E-Mail: <a href="mailto:hello@cleverli.ch" className="text-green-700 hover:underline">hello@cleverli.ch</a></p>
         </div>
         <div>
           <h2 className="font-bold text-gray-900 mb-1">Haftungsausschluss</h2>

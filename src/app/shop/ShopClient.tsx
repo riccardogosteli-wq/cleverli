@@ -83,11 +83,11 @@ export default function ShopClient() {
                   }`}>
                   <div className="text-4xl leading-none">{item.emoji}</div>
                   <div className="text-sm font-semibold text-gray-800 text-center leading-tight">{n(item)}</div>
-                  <div className="text-xs text-yellow-600 font-bold">🪙 {item.cost}</div>
+                  <div className="text-xs text-yellow-700 font-bold">🪙 {item.cost}</div>
 
                   {isEquipped ? (
                     <button onClick={() => toggleEquip(item)}
-                      className="w-full text-xs bg-green-500 text-white rounded-full py-1.5 font-bold hover:bg-green-600 active:scale-95 transition-all">
+                      className="w-full text-xs bg-green-500 text-white rounded-full py-1.5 font-bold hover:bg-green-800 active:scale-95 transition-all">
                       ✓ {lang === "fr" ? "Équipé" : lang === "it" ? "Indossato" : lang === "en" ? "Equipped" : "Ausgewählt"}
                     </button>
                   ) : isOwned ? (

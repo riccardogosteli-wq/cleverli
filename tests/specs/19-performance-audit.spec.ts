@@ -132,8 +132,19 @@ test.describe("Accessibility (Axe) Audit", () => {
           `\n⚠️  ${page.name} has ${criticalViolations.length} critical accessibility violations:`
         );
         for (const violation of criticalViolations) {
-          console.error(`  - ${violation.id}: ${violation.description}`);
-          console.error(`    Affected elements: ${violation.nodes.length}`);
+          console.error(`\n  ❌ ${violation.id}: ${violation.description}`);
+          console.error(`     Impact: ${violation.impact} | Elements: ${violation.nodes.length}`);
+          
+          // Log detailed info about each affected element
+          for (const node of violation.nodes.slice(0, 3)) {  // First 3 elements
+            console.error(`     → HTML: ${node.html}`);
+            if (node.failureSummary) {
+              console.error(`        Reason: ${node.failureSummary}`);
+            }
+          }
+          if (violation.nodes.length > 3) {
+            console.error(`     ... and ${violation.nodes.length - 3} more elements`);
+          }
         }
       }
 

@@ -353,7 +353,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             {/* UJ-5: Next topic button */}
             {nextTopic && (
               <Link href={`/learn/${grade}/${subject}/${nextTopic.id}`}
-                className="text-sm bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all flex items-center gap-1">
+                className="text-sm bg-green-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all flex items-center gap-1">
                 {tr("nextTopic") ?? "Nächstes Thema"} →
               </Link>
             )}
@@ -386,11 +386,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         </div>
         <div className="flex flex-col gap-2 w-full max-w-xs">
           <Link href={checkoutUrl("monthly")}
-            className="block text-center bg-green-600 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
+            className="block text-center bg-green-700 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
 TWINT / Karte — CHF 9.90{tr("perMonth")}
           </Link>
           <Link href={checkoutUrl("yearly")}
-            className="block text-center border-2 border-green-600 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
+            className="block text-center border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
 {tr("yearlyOption") ?? "Jährlich — CHF 99/Jahr"}
           </Link>
           {!uid && (
@@ -436,7 +436,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
 
       {/* Perfect overlay */}
       {showPerfect && (
-        <div className="fixed inset-0 z-40 bg-green-600/90 flex items-center justify-center">
+        <div className="fixed inset-0 z-40 bg-green-700/90 flex items-center justify-center">
           <div className="text-center text-white">
             <div className="text-6xl mb-2">🌟</div>
             <div className="text-3xl font-black">PERFEKT!</div>
@@ -623,7 +623,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       {isPremium === false && idx === FREE_LIMIT - 1 && (
         <p className="text-center text-xs text-gray-400">
           {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
-          <Link href={uid ? checkoutUrl("monthly") : "/upgrade"} className="text-green-600 underline font-semibold">
+          <Link href={uid ? checkoutUrl("monthly") : "/upgrade"} className="text-green-700 underline font-semibold">
             {tr("unlockAll")}
           </Link>
         </p>

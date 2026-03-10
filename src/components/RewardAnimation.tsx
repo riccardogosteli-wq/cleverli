@@ -106,7 +106,7 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
         <button onClick={onContinue}
           style={{ animation: "popIn 0.4s 0.2s cubic-bezier(.34,1.56,.64,1) both" }}
           className={`mt-2 px-8 py-3 rounded-full font-bold text-white transition-all hover:scale-105 shadow-md
-            ${isTopicComplete ? "bg-green-600 hover:bg-green-700 text-lg" : correct ? "bg-green-600 hover:bg-green-700" : "bg-orange-500 hover:bg-orange-600"}`}>
+            ${isTopicComplete ? "bg-green-700 hover:bg-green-700 text-lg" : correct ? "bg-green-700 hover:bg-green-700" : "bg-orange-500 hover:bg-orange-600"}`}>
           {isTopicComplete ? tr("otherTopics") : tr("next")}
         </button>
       </div>

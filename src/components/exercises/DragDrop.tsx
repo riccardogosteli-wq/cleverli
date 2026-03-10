@@ -242,7 +242,7 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
       {allItemsPlaced && !checked && (
         <button
           onClick={handleCheck}
-          className="w-full bg-green-600 text-white py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md"
+          className="w-full bg-green-700 text-white py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md"
         >
           {tr("checkAnswer")}
         </button>

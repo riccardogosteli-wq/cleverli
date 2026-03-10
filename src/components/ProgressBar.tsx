@@ -19,7 +19,7 @@ export default function ProgressBar({ current, total, streak, isReviewMode }: Pr
             🔥 {streak}er Serie!
           </span>
         )}
-        <span className="font-medium text-green-600">{pct}%</span>
+        <span className="font-medium text-green-700">{pct}%</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
         <div

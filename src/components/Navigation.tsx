@@ -156,7 +156,7 @@ export default function Navigation() {
               </Link>
               <Link
                 href="/signup"
-                className="text-sm bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center min-w-[160px]"
+                className="text-sm bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center min-w-[160px]"
               >
                 {tr("signup")}
               </Link>
@@ -220,7 +220,7 @@ export default function Navigation() {
         >
           {/* Core nav — always visible */}
           <Link href="/dashboard"
-            className="text-base border-2 border-green-600 text-green-700 px-4 py-3 rounded-full text-center font-semibold active:bg-green-50"
+            className="text-base border-2 border-green-700 text-green-700 px-4 py-3 rounded-full text-center font-semibold active:bg-green-50"
             onClick={() => setOpen(false)}>
             📚 {tr("goLearn")}
           </Link>
@@ -285,7 +285,7 @@ export default function Navigation() {
                 {tr("login")}
               </Link>
               <Link href="/signup"
-                className="text-base bg-green-600 text-white px-4 py-3 rounded-full text-center font-bold active:bg-green-700"
+                className="text-base bg-green-700 text-white px-4 py-3 rounded-full text-center font-bold active:bg-green-700"
                 onClick={() => setOpen(false)}>
                 {tr("signup")}
               </Link>

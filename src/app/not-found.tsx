@@ -21,7 +21,7 @@ export default function NotFound() {
         )}
       </p>
       <Link href="/"
-        className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
+        className="bg-green-700 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
         {t("Zurück zur Startseite →", "Retour à l'accueil →", "Torna alla home →", "Back to home →")}
       </Link>
       <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 underline">

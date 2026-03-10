@@ -19,16 +19,16 @@ export default function BlogPost() {
 
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-400 mb-6">
-        <Link href="/" className="hover:text-green-600">Startseite</Link>
+        <Link href="/" className="hover:text-green-700">Startseite</Link>
         <span className="mx-2">›</span>
-        <Link href="/blog" className="hover:text-green-600">Blog</Link>
+        <Link href="/blog" className="hover:text-green-700">Blog</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-600">Kinder motivieren</span>
       </nav>
 
       {/* Header */}
       <header className="mb-8">
-        <div className="text-xs font-semibold uppercase tracking-widest text-green-600 mb-3">
+        <div className="text-xs font-semibold uppercase tracking-widest text-green-700 mb-3">
           Eltern-Erfahrungsbericht
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -167,7 +167,7 @@ export default function BlogPost() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href="/signup"
-            className="bg-green-600 text-white px-7 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md"
+            className="bg-green-700 text-white px-7 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md"
           >
             Kostenlos starten 🚀
           </Link>

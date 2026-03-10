@@ -102,7 +102,7 @@ export default function NumberLine({ question, min, max, answer, step = 1, onAns
       {!submitted && (
         <button
           onClick={handleSubmit}
-          className="w-full bg-green-600 text-white py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md"
+          className="w-full bg-green-700 text-white py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md"
         >
           {tr("checkAnswer")}
         </button>

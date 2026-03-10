@@ -29,9 +29,9 @@ export default function TopicBreadcrumb({ grade, subject, subjectName, topicTitl
   return (
     <>
       <nav className="flex items-center gap-1.5 text-xs text-gray-400 flex-wrap">
-        <Link href="/dashboard" onClick={handleNav("/dashboard")} className="hover:text-green-600 transition-colors">Dashboard</Link>
+        <Link href="/dashboard" onClick={handleNav("/dashboard")} className="hover:text-green-700 transition-colors">Dashboard</Link>
         <span>›</span>
-        <Link href={`/learn/${grade}/${subject}`} onClick={handleNav(`/learn/${grade}/${subject}`)} className="hover:text-green-600 transition-colors">
+        <Link href={`/learn/${grade}/${subject}`} onClick={handleNav(`/learn/${grade}/${subject}`)} className="hover:text-green-700 transition-colors">
           {grade}. Klasse · {subjectName}
         </Link>
         <span>›</span>

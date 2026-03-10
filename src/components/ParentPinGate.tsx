@@ -125,7 +125,7 @@ export default function ParentPinGate({ children }: Props) {
           <button
             onClick={handleSetup}
             disabled={pin.length !== 4 || confirmPin.length !== 4}
-            className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40"
+            className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40"
           >
             PIN speichern &amp; Bereich öffnen →
           </button>
@@ -154,7 +154,7 @@ export default function ParentPinGate({ children }: Props) {
           <button
             onClick={handleEnter}
             disabled={pin.length !== 4}
-            className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40"
+            className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40"
           >
             Entsperren →
           </button>

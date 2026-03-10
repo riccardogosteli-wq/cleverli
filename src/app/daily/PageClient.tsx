@@ -120,7 +120,7 @@ export default function DailyPage() {
           }
         </p>
         <div className="flex flex-col gap-3 items-center">
-          <Link href="/dashboard" className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
+          <Link href="/dashboard" className="bg-green-700 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
             {tr("learnNav")}
           </Link>
           <Link href="/missionen" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 {lang === "fr" ? "Missions" : lang === "it" ? "Missioni" : lang === "en" ? "Missions" : "Missionen ansehen"}</Link>
@@ -155,7 +155,7 @@ export default function DailyPage() {
           </p>
         </div>
         <div className="flex flex-col gap-3 items-center">
-          <Link href="/dashboard" className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
+          <Link href="/dashboard" className="bg-green-700 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
             {tr("learnNav")}
           </Link>
           <Link href="/missionen" className="text-sm text-gray-400 hover:text-gray-600 underline">🏆 {lang === "fr" ? "Missions" : lang === "it" ? "Missioni" : lang === "en" ? "Missions" : "Missionen ansehen"}</Link>

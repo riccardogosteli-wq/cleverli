@@ -77,7 +77,7 @@ export default function MobileBottomNav() {
               isActive ? "text-green-700" : "text-gray-400"
             }`}
           >
-            {isActive && <span className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-8 bg-green-600 rounded-full" />}
+            {isActive && <span className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-8 bg-green-700 rounded-full" />}
             <Image
               src={getIcon(tab.icon).src}
               alt={getIcon(tab.icon).alt}

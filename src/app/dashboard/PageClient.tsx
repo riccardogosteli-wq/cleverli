@@ -453,7 +453,7 @@ function DashboardInner() {
           const activeClsMap: Record<string, string> = {
             math:    "bg-blue-500 text-white border-blue-500",
             german:  "bg-yellow-500 text-white border-yellow-500",
-            science: "bg-green-600 text-white border-green-600",
+            science: "bg-green-700 text-white border-green-700",
             nt:      "bg-emerald-600 text-white border-emerald-600",
             rzg:     "bg-orange-500 text-white border-orange-500",
             french:  "bg-purple-600 text-white border-purple-600",
@@ -589,7 +589,7 @@ function DashboardInner() {
                   </div>
                   <div className="shrink-0">
                     {done && !isGrade3Locked
-                      ? <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                      ? <span className="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
                       : isLocked
                         ? <span className="w-8 h-8 bg-gray-100 text-gray-800 rounded-full flex items-center justify-center text-xs">🔒</span>
                         : <span className="w-8 h-8 bg-gray-50 text-gray-800 font-semibold rounded-full flex items-center justify-center text-base">›</span>

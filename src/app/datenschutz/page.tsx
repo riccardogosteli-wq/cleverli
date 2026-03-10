@@ -16,7 +16,7 @@ export default function Datenschutz() {
       <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm space-y-5 text-gray-700 text-sm leading-relaxed">
         <section>
           <h2 className="font-bold text-gray-900 text-base mb-2">1. Verantwortliche Stelle</h2>
-          <p>Cleverli, Schweiz. Kontakt: <a href="mailto:hello@cleverli.ch" className="text-green-600 hover:underline">hello@cleverli.ch</a></p>
+          <p>Cleverli, Schweiz. Kontakt: <a href="mailto:hello@cleverli.ch" className="text-green-700 hover:underline">hello@cleverli.ch</a></p>
         </section>
 
         <section>
@@ -41,7 +41,7 @@ export default function Datenschutz() {
 
         <section>
           <h2 className="font-bold text-gray-900 text-base mb-2">5. Deine Rechte</h2>
-          <p className="text-gray-600">Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten. Kontaktiere uns unter <a href="mailto:hello@cleverli.ch" className="text-green-600 hover:underline">hello@cleverli.ch</a>.</p>
+          <p className="text-gray-600">Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten. Kontaktiere uns unter <a href="mailto:hello@cleverli.ch" className="text-green-700 hover:underline">hello@cleverli.ch</a>.</p>
         </section>
 
         <section>

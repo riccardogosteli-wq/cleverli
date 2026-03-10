@@ -235,7 +235,7 @@ export default function ParentsDashboard() {
             <h2 className="font-bold text-gray-700 text-sm">
               🏆 {t("Neue Erfolge", "Nouveaux succès", "Nuovi traguardi", "Recent achievements")}
             </h2>
-            <Link href="/missionen" className="text-xs text-green-600 underline">
+            <Link href="/missionen" className="text-xs text-green-700 underline">
               {t("Alle","Tous","Tutti","All")}
             </Link>
           </div>
@@ -305,7 +305,7 @@ export default function ParentsDashboard() {
 
       {/* ── CTA ── */}
       <div className="flex flex-col gap-2 items-center pt-1">
-        <Link href="/dashboard" className="w-full text-center bg-green-600 text-white py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
+        <Link href="/dashboard" className="w-full text-center bg-green-700 text-white py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md">
           🎒 {t("Jetzt üben","Pratiquer","Esercitati","Practice now")}
         </Link>
         <Link href="/family" className="text-xs text-gray-400 underline flex items-center gap-1">

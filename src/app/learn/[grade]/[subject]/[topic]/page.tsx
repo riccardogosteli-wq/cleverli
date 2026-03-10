@@ -41,7 +41,7 @@ export default async function TopicPage({ params }: Props) {
     return (
       <div className="max-w-xl mx-auto px-4 py-16 text-center">
         <p className="text-gray-500">Thema nicht gefunden.</p>
-        <Link href="/dashboard" className="text-green-600 underline mt-4 block">Zurück zur Übersicht</Link>
+        <Link href="/dashboard" className="text-green-700 underline mt-4 block">Zurück zur Übersicht</Link>
       </div>
     );
   }

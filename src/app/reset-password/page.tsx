@@ -51,7 +51,7 @@ function RequestReset() {
           `We sent a reset link to ${email}. Check your spam folder too.`,
         )}
       </p>
-      <Link href="/login" className="inline-block text-sm text-green-600 underline">
+      <Link href="/login" className="inline-block text-sm text-green-700 underline">
         {t("Zurück zum Login", "Retour à la connexion", "Torna al login", "Back to login")}
       </Link>
     </div>
@@ -84,12 +84,12 @@ function RequestReset() {
         {error && <p className="text-red-500 text-sm">{error}</p>}
 
         <button onClick={handleRequest} disabled={loading || !email}
-          className="w-full bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all disabled:opacity-60">
+          className="w-full bg-green-700 text-white font-bold py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all disabled:opacity-60">
           {loading ? "…" : t("Reset-Link senden →", "Envoyer le lien →", "Invia link →", "Send reset link →")}
         </button>
 
         <p className="text-center text-xs text-gray-400">
-          <Link href="/login" className="text-green-600 underline">
+          <Link href="/login" className="text-green-700 underline">
             {t("Zurück zum Login", "Retour", "Torna", "Back to login")}
           </Link>
         </p>
@@ -181,7 +181,7 @@ function SetNewPassword() {
         {error && <p className="text-red-500 text-sm">{error}</p>}
 
         <button onClick={handleUpdate} disabled={loading || !password || !confirm}
-          className="w-full bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all disabled:opacity-60">
+          className="w-full bg-green-700 text-white font-bold py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all disabled:opacity-60">
           {loading ? "…" : t("Passwort speichern →", "Enregistrer →", "Salva →", "Save password →")}
         </button>
       </div>

@@ -48,7 +48,7 @@ export default function RoadmapTestPage() {
                 onClick={() => setProgressLevel(idx)}
                 className={`p-4 rounded-xl font-bold transition-all ${
                   progressLevel === idx
-                    ? "bg-green-600 text-white shadow-lg scale-105"
+                    ? "bg-green-700 text-white shadow-lg scale-105"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
