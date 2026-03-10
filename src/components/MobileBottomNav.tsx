@@ -7,12 +7,12 @@ import { useSession } from "@/hooks/useSession";
 import { useProfileContext } from "@/lib/ProfileContext";
 
 const TAB_LABELS: Record<string, [string, string, string, string]> = {
-  learn:    ["Lernen",    "Apprendre", "Imparare", "Learn"],
-  daily:    ["Täglich",   "Quotidien", "Quotidiano","Daily"],
-  trophies: ["Missionen", "Missions",  "Missioni", "Missions"],
-  rewards:  ["Prämien",   "Primes",    "Premi",    "Rewards"],
+  learn:    ["Lernen",       "Apprendre",    "Imparare",     "Learn"],
+  daily:    ["Täglich",      "Quotidien",    "Quotidiano",   "Daily"],
+  trophies: ["Missionen",    "Missions",     "Missioni",     "Missions"],
+  rewards:  ["Belohnungen",  "Récompenses",  "Premi",        "Rewards"],
   // ✅ Changed from /parents (PIN-gated, confusing for kids) to /family (leaderboard)
-  family:   ["Familie",   "Famille",   "Famiglia", "Family"],
+  family:   ["Familie",      "Famille",      "Famiglia",     "Family"],
 };
 
 export default function MobileBottomNav() {
@@ -37,7 +37,7 @@ export default function MobileBottomNav() {
       learn: { src: "/images/ui/Lernen-Dashboard-icon.svg", alt: "Lernen" },
       daily: { src: "/images/ui/Tagesaufgabe-icon.svg", alt: "Täglich" },
       trophies: { src: "/images/ui/Trophaeen-icon.svg", alt: "Missionen" },
-      rewards: { src: "/images/ui/Belohnungen.svg", alt: "Belohnungen" },
+      rewards: { src: "/images/ui/Belohnungen-icon.svg", alt: "Belohnungen" },
       family: { src: "/images/ui/Familie.svg", alt: "Familie" },
     };
     return iconMap[iconKey] || { src: "", alt: "" };
