@@ -5,7 +5,7 @@ import OnboardingModal from "@/components/OnboardingModal";
 import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
-import { getTopics, SUBJECTS } from "@/data/index";
+import { getTopics, getSubjects } from "@/data/index";
 import { getTopicTitle } from "@/data/topicTitles";
 import { isDailyDoneToday } from "@/lib/daily";
 import { useProfile, Profile } from "@/hooks/useProfile";
@@ -44,12 +44,36 @@ const SUBJECT_META: Record<string, {
     label:    { de: "NMG",          fr: "NHS",           it: "NUS",          en: "Science" },
     subtitle: { de: "Natur & Gesellschaft", fr: "Nature & Société", it: "Natura & Società", en: "Nature & Society" },
   },
+  nt: {
+    emoji: "🔬", iconBg: "bg-emerald-100",
+    label:    { de: "Natur & Technik", fr: "Nature & Technique", it: "Natura & Tecnica", en: "Nature & Tech" },
+    subtitle: { de: "Biologie, Physik, Chemie", fr: "Biologie, physique, chimie", it: "Biologia, fisica, chimica", en: "Biology, Physics, Chemistry" },
+  },
+  rzg: {
+    emoji: "🗺️", iconBg: "bg-orange-100",
+    label:    { de: "RZG",             fr: "ESS",               it: "RSS",              en: "Geography & History" },
+    subtitle: { de: "Geografie, Geschichte, Gesellschaft", fr: "Géographie, histoire, société", it: "Geografia, storia, società", en: "Geography, History & Society" },
+  },
+  french: {
+    emoji: "🇫🇷", iconBg: "bg-purple-100",
+    label:    { de: "Französisch",  fr: "Français",      it: "Francese",     en: "French" },
+    subtitle: { de: "Sprechen & Schreiben", fr: "Parler & écrire", it: "Parlare & scrivere", en: "Speaking & Writing" },
+  },
+  english: {
+    emoji: "🇬🇧", iconBg: "bg-red-100",
+    label:    { de: "Englisch",     fr: "Anglais",       it: "Inglese",      en: "English" },
+    subtitle: { de: "Sprechen & Verstehen", fr: "Parler & comprendre", it: "Parlare & capire", en: "Speaking & Understanding" },
+  },
 };
 
 const SUBJECT_ICONS: Record<string, string> = {
   math:    "/images/ui/Mathematik.svg",
   german:  "/images/ui/Deutsch.svg",
   science: "/images/ui/NMG.svg",
+  nt:      "/images/ui/NMG.svg",      // reuse NMG icon until custom one made
+  rzg:     "/images/ui/Zeit.svg",
+  french:  "/images/ui/Woerter-Sprache.svg",
+  english: "/images/ui/Woerter-Sprache.svg",
 };
 
 const GRADE_KEY = "cleverli_last_grade";
@@ -319,16 +343,19 @@ function DashboardInner() {
               </div>
             </div>
             <div className="grid gap-3 sm:grid-cols-1">
-              {SUBJECTS.map(s => {
+              {getSubjects(grade!).map(s => {
                 const meta = SUBJECT_META[s.id];
-                const topics = getTopics(grade, s.id);
-                const done = topics.filter(t => getProgress(grade, s.id, t.id)).length;
+                const topics = getTopics(grade!, s.id);
+                const done = topics.filter(t => getProgress(grade!, s.id, t.id)).length;
                 return (
                   <button key={s.id} onClick={() => setSubject(s.id)}
                     style={{ minHeight: "80px", transition: "all 0.15s ease" }}
                     className={`border-2 rounded-2xl font-bold active:scale-95 flex items-center gap-4 px-5 text-left ${s.color}`}>
                     <div className="w-16 h-16 flex items-center justify-center shrink-0">
-                      <Image src={SUBJECT_ICONS[s.id] ?? ""} alt={s.id} width={64} height={64} className="w-full h-full object-contain" />
+                      {SUBJECT_ICONS[s.id]
+                        ? <Image src={SUBJECT_ICONS[s.id]} alt={s.id} width={64} height={64} className="w-full h-full object-contain" />
+                        : <span className="text-4xl">{s.emoji}</span>
+                      }
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-base">{subjectL(s.id, "label")}</div>
@@ -397,7 +424,10 @@ function DashboardInner() {
       <div className="flex items-center gap-2">
         <button onClick={handleBack} className="text-sm text-gray-400 hover:text-gray-600 py-2 pr-2 min-w-[44px]">←</button>
         <div className="w-10 h-10 flex items-center justify-center shrink-0">
-          <Image src={SUBJECT_ICONS[subject] ?? ""} alt={subject} width={40} height={40} className="w-full h-full object-contain" />
+          {SUBJECT_ICONS[subject]
+            ? <Image src={SUBJECT_ICONS[subject]} alt={subject} width={40} height={40} className="w-full h-full object-contain" />
+            : <span className="text-3xl">{getSubjects(grade!).find(s => s.id === subject)?.emoji ?? "📚"}</span>
+          }
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
@@ -417,20 +447,29 @@ function DashboardInner() {
 
       {/* Subject switcher — always visible, colored by subject */}
       <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
-        {SUBJECTS.map(s => {
+        {getSubjects(grade!).map(s => {
           const isActive = s.id === subject;
-          const activeCls = s.id === "math"
-            ? "bg-blue-500 text-white border-blue-500"
-            : s.id === "german"
-              ? "bg-yellow-500 text-white border-yellow-500"
-              : "bg-green-600 text-white border-green-600";
+          const activeClsMap: Record<string, string> = {
+            math:    "bg-blue-500 text-white border-blue-500",
+            german:  "bg-yellow-500 text-white border-yellow-500",
+            science: "bg-green-600 text-white border-green-600",
+            nt:      "bg-emerald-600 text-white border-emerald-600",
+            rzg:     "bg-orange-500 text-white border-orange-500",
+            french:  "bg-purple-600 text-white border-purple-600",
+            english: "bg-red-500 text-white border-red-500",
+          };
+          const activeCls = activeClsMap[s.id] ?? "bg-gray-600 text-white border-gray-600";
           return (
             <button key={s.id}
               onClick={() => setSubject(s.id)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap border transition-colors shrink-0 shadow-sm ${
                 isActive ? activeCls : "bg-white text-gray-500 border-gray-200 hover:border-gray-300"
               }`}>
-              <Image src={SUBJECT_ICONS[s.id] ?? ""} alt={s.id} width={20} height={20} className="w-5 h-5 object-contain" /> {subjectL(s.id, "label")}
+              {SUBJECT_ICONS[s.id]
+                ? <Image src={SUBJECT_ICONS[s.id]} alt={s.id} width={20} height={20} className="w-5 h-5 object-contain" />
+                : <span className="text-base">{s.emoji}</span>
+              }
+              {" "}{subjectL(s.id, "label")}
             </button>
           );
         })}

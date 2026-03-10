@@ -6,10 +6,10 @@ import { Exercise, Topic } from "../../src/types/exercise";
 import {
   grade1Math, grade1German, grade1Science,
   grade2Math, grade2German, grade2Science,
-  grade3Math, grade3German, grade3Science,
-  grade4Math, grade4German, grade4Science,
-  grade5Math, grade5German, grade5Science,
-  grade6Math, grade6German, grade6Science,
+  grade3Math, grade3German, grade3Science, grade3English,
+  grade4Math, grade4German, grade4NT, grade4RZG, grade4English,
+  grade5Math, grade5German, grade5NT, grade5RZG, grade5French, grade5English,
+  grade6Math, grade6German, grade6NT, grade6RZG, grade6French, grade6English,
 } from "../../src/data/index";
 
 export interface ExerciseAnswer {
@@ -36,15 +36,24 @@ const ALL_DATA: { grade: number; subject: string; topics: Topic[] }[] = [
   { grade: 3, subject: "math",    topics: grade3Math },
   { grade: 3, subject: "german",  topics: grade3German },
   { grade: 3, subject: "science", topics: grade3Science },
+  { grade: 3, subject: "english", topics: grade3English },
   { grade: 4, subject: "math",    topics: grade4Math },
   { grade: 4, subject: "german",  topics: grade4German },
-  { grade: 4, subject: "science", topics: grade4Science },
+  { grade: 4, subject: "nt",      topics: grade4NT },
+  { grade: 4, subject: "rzg",     topics: grade4RZG },
+  { grade: 4, subject: "english", topics: grade4English },
   { grade: 5, subject: "math",    topics: grade5Math },
   { grade: 5, subject: "german",  topics: grade5German },
-  { grade: 5, subject: "science", topics: grade5Science },
+  { grade: 5, subject: "nt",      topics: grade5NT },
+  { grade: 5, subject: "rzg",     topics: grade5RZG },
+  { grade: 5, subject: "french",  topics: grade5French },
+  { grade: 5, subject: "english", topics: grade5English },
   { grade: 6, subject: "math",    topics: grade6Math },
   { grade: 6, subject: "german",  topics: grade6German },
-  { grade: 6, subject: "science", topics: grade6Science },
+  { grade: 6, subject: "nt",      topics: grade6NT },
+  { grade: 6, subject: "rzg",     topics: grade6RZG },
+  { grade: 6, subject: "french",  topics: grade6French },
+  { grade: 6, subject: "english", topics: grade6English },
 ];
 
 /** Pick a wrong answer from options (any option that isn't the correct one) */
