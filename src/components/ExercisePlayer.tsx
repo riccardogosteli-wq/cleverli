@@ -208,6 +208,17 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       tierCompleted,
     });
 
+    // Update localStorage topic progress with current completed count (for tier display)
+    if (correct) {
+      const topicKey = `cleverli_${grade}_${subject}_${topic.id}`;
+      const existing = JSON.parse(localStorage.getItem(topicKey) ?? "{}");
+      localStorage.setItem(topicKey, JSON.stringify({
+        ...existing,
+        completed: idx + 1, // idx is 0-based, so idx+1 is the count of completed exercises
+        lastPlayed: new Date().toISOString(),
+      }));
+    }
+
     // Check reward unlocks after every correct answer
     if (correct) {
       setTimeout(() => {
