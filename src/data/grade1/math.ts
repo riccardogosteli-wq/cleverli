@@ -484,11 +484,11 @@ const grade1Math: Topic[] = [
       { id: "m35", type: "multiple-choice", difficulty: 2, question: "Welche Zahl fehlt in der Reihe 1, 2, 4, 8, ___?", answer: "16", options: ["10","12","16","32"], hints: ["Jede Zahl wird verdoppelt: 1, 2, 4, 8, ..."] },
 
       // DIFFICULTY 3 (15 new → total 15)
-      { id: "m36", type: "fill-in-blank", difficulty: 3, question: "Ergänze: 1, 1, 2, 3, 5, ___ (Fibonacci)", answer: "8", hints: ["Jede Zahl ist die Summe der zwei vorherigen.", "1+1=2, 1+2=3, 2+3=5, 3+5=?"], mascot: "think" },
+      { id: "m36", type: "fill-in-blank", difficulty: 3, question: "Was kommt als nächstes? 🔴 🟢 🔴 🟢 🔴 ___", answer: "🟢", hints: ["Das Muster wechselt zwischen rot und grün."], free: false },
       { id: "m37", type: "multiple-choice", difficulty: 3, question: "Welche Zahl fehlt? ___, 7, 10, 13, 16", answer: "4", options: ["1","3","4","6"], hints: ["Dreierschritte. Was kommt vor 7?"] },
-      { id: "m38", type: "fill-in-blank", difficulty: 3, question: "Schreibe die nächsten 2 Zahlen: 2, 4, 8, 16, ___, ___", answer: "32, 64", hints: ["Verdopplungsmuster: 2×2=4, 4×2=8..."] },
-      { id: "m39", type: "multiple-choice", difficulty: 3, question: "Welche Regel hat die Reihe 1, 4, 9, 16?", answer: "Quadratzahlen", options: ["+ 3","+ 5","Quadratzahlen","× 3"], hints: ["1=1², 4=2², 9=3², 16=4²..."], mascot: "think" },
-      { id: "m40", type: "fill-in-blank", difficulty: 3, question: "Was fehlt? 100, 90, 81, ___, 64", answer: "72", hints: ["−10, −9, −8... die Abstände werden um 1 kleiner."], mascot: "think" },
+      { id: "m38", type: "multiple-choice", difficulty: 3, question: "Was ist das nächste in der Reihe? 1, 2, 1, 2, 1, ___?", answer: "2", options: ["1","2","3","4"], hints: ["Das Muster wechselt zwischen 1 und 2"], free: false },
+      { id: "m39", type: "multiple-choice", difficulty: 3, question: "Was kommt als nächstes? 2, 4, 6, 8, ___?", answer: "10", options: ["8","10","12","14"], hints: ["Jedes Mal +2"], free: false },
+      { id: "m40", type: "fill-in-blank", difficulty: 3, question: "Was kommt als nächstes? 5, 10, 15, ___", answer: "20", hints: ["Sprünge von 5"], free: false },
       { id: "m41", type: "multiple-choice", difficulty: 3, question: "Welches Muster passt zur Reihe 3, 5, 7, 9, 11?", answer: "+ 2 (ungerade Zahlen)", options: ["+ 1","+ 2 (ungerade Zahlen)","× 2","+ 3"], hints: ["Von Zahl zu Zahl +2, und alle sind ungerade."] },
       { id: "m42", type: "fill-in-blank", difficulty: 3, question: "Wie lautet die 6. Zahl in der Reihe 2, 4, 6, 8, 10, ___?", answer: "12", hints: ["Gerade Zahlen: 2, 4, 6, 8, 10, 12."] },
       { id: "m43", type: "multiple-choice", difficulty: 3, question: "Welche Aussage über die Reihe 5, 10, 15, 20, 25 stimmt?", answer: "Jede Zahl endet auf 0 oder 5", options: ["Alle Zahlen sind gerade","Jede Zahl endet auf 0 oder 5","Jede Zahl ist kleiner als 20","Alle Zahlen sind ungerade"], hints: ["Schaue dir die Einerstellen an: 5, 0, 5, 0, 5..."] },
@@ -498,7 +498,7 @@ const grade1Math: Topic[] = [
       { id: "m47", type: "multiple-choice", difficulty: 3, question: "Welche Reihe hat die Regel × 2?", answer: "1, 2, 4, 8, 16", options: ["1, 3, 5, 7, 9","2, 4, 6, 8, 10","1, 2, 4, 8, 16","5, 10, 15, 20, 25"], hints: ["× 2 = jedes Mal verdoppeln."] },
       { id: "m48", type: "fill-in-blank", difficulty: 3, question: "Ergänze: 9, 6, 3, ___", answer: "0", hints: ["Dreierschritte rückwärts. Was kommt nach 3?"] },
       { id: "m49", type: "multiple-choice", difficulty: 3, question: "Was ist die Summe der ersten 4 geraden Zahlen (2, 4, 6, 8)?", answer: "20", options: ["16","18","20","24"], hints: ["2 + 4 + 6 + 8 = ?"], mascot: "think" },
-      { id: "m50", type: "fill-in-blank", difficulty: 3, question: "Welche Zahl kommt nach 64 in der Reihe 4, 8, 16, 32, 64, ___?", answer: "128", hints: ["Verdopplungsmuster: × 2.", "64 × 2 = ?"], mascot: "think" },
+      { id: "m50", type: "fill-in-blank", difficulty: 3, question: "Das Muster: ⭐⭐ 🌙 ⭐⭐ 🌙 ⭐⭐ ___", answer: "🌙", hints: ["Zwei Sterne, dann ein Mond. Immer wieder."], free: false },
     ],
   },
   {
@@ -624,7 +624,7 @@ const grade1Math: Topic[] = [
       { id: "o42", type: "fill-in-blank", difficulty: 3, question: "Der 4. Monat heisst April. Was heisst der 10. Monat? ___", answer: "Oktober", hints: ["Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt..."] },
       { id: "o43", type: "multiple-choice", difficulty: 3, question: "In einer Bibliothek hat jeder Buchstabe ein Regal. Das O-Regal ist das ___ Regal.", answer: "15.", options: ["13.","14.","15.","16."], hints: ["A=1, B=2, ..., O=15. Zähle das Alphabet durch."] },
       { id: "o44", type: "fill-in-blank", difficulty: 3, question: "In einem Wettbewerb gibt es 5 Runden. Nach der 3. Runde — wie viele Runden bleiben noch? ___", answer: "2", hints: ["5 − 3 = ?"] },
-      { id: "o45", type: "multiple-choice", difficulty: 3, question: "Welche ist die 7. Primzahl? (2, 3, 5, 7, 11, 13, ...)", answer: "17", options: ["13","15","17","19"], hints: ["2, 3, 5, 7, 11, 13, 17 — zähle die Primzahlen."], mascot: "think" },
+      { id: "o45", type: "multiple-choice", difficulty: 3, question: "Der 3. Tag der Woche ist ein ___", answer: "Mittwoch", options: ["Dienstag","Mittwoch","Donnerstag","Freitag"], hints: ["Montag (1), Dienstag (2), Mittwoch (3)"], free: false },
       { id: "o46", type: "fill-in-blank", difficulty: 3, question: "Wenn heute der 3. Mittwoch des Monats ist — wie viele Mittwoche gab es schon (inklusive heute)? ___", answer: "3", hints: ["3. Mittwoch = 3 Mittwoche insgesamt."] },
       { id: "o47", type: "multiple-choice", difficulty: 3, question: "Was ist das 26. (letzte) Zeichen im Alphabet?", answer: "Z", options: ["X","Y","Z","Ä"], hints: ["Das Alphabet endet mit Z."] },
       { id: "o48", type: "fill-in-blank", difficulty: 3, question: "Der 12. Monat ist Dezember. Was ist der 6. Monat? ___", answer: "Juni", hints: ["Jan=1, Feb=2, Mär=3, Apr=4, Mai=5, Jun=6..."] },
