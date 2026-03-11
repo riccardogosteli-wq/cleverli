@@ -62,6 +62,10 @@ export default function Signup() {
       localStorage.setItem("cleverli_profile_created", "false"); // Will prompt to create profile
       localStorage.setItem("cleverli_session", JSON.stringify({ email, premium: false }));
       
+      // Clear anonymous tracking (they're now signed up)
+      localStorage.removeItem("cleverli_anon_exercises");
+      localStorage.removeItem("cleverli_signup_dismissed");
+      
       // Send welcome email (fire & forget)
       fetch("/api/send-welcome", {
         method: "POST",
@@ -80,6 +84,8 @@ export default function Signup() {
       // Fallback: if Supabase fails, use localStorage auth
       localStorage.setItem("cleverli_session", JSON.stringify({ email, premium: false }));
       localStorage.setItem("cleverli_new_user", "true");
+      localStorage.removeItem("cleverli_anon_exercises");
+      localStorage.removeItem("cleverli_signup_dismissed");
       console.error("Signup error:", err);
       
       // Still redirect to exercise even if signup fails

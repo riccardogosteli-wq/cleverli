@@ -29,6 +29,7 @@ import Confetti from "./Confetti";
 import { checkAndUnlockRewards, loadRewards, countTotalStars, Reward } from "@/lib/rewards";
 import RewardUnlockedModal from "./RewardUnlockedModal";
 import { getLevelForXp, getNextLevel } from "@/lib/xp";
+import SignupPromptModal from "./SignupPromptModal";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
@@ -48,6 +49,18 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const { session } = useSession();
   const level = getLevelForXp(profile.xp);
   const nextLevel = getNextLevel(profile.xp);
+  
+  // Track anonymous user exercises (show signup after 5)
+  const [anonExerciseCount, setAnonExerciseCount] = useState(0);
+  const [showSignupPrompt, setShowSignupPrompt] = useState(false);
+  const isAnonymous = !session;
+  
+  useEffect(() => {
+    if (isAnonymous) {
+      const count = parseInt(localStorage.getItem("cleverli_anon_exercises") ?? "0");
+      setAnonExerciseCount(count);
+    }
+  }, [isAnonymous]);
   const uid = session?.userId ?? "";
   const checkoutUrl = (plan: "monthly" | "yearly") =>
     `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
@@ -207,6 +220,17 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       lang,
       tierCompleted,
     });
+
+    // Track anonymous user exercises & show signup prompt after 5
+    if (isAnonymous) {
+      const newCount = anonExerciseCount + 1;
+      setAnonExerciseCount(newCount);
+      localStorage.setItem("cleverli_anon_exercises", String(newCount));
+      
+      if (newCount >= 5 && !localStorage.getItem("cleverli_signup_dismissed")) {
+        setTimeout(() => setShowSignupPrompt(true), 1000);
+      }
+    }
 
     // Update localStorage topic progress with current completed count (for tier display)
     if (correct) {
@@ -669,6 +693,14 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       )}
 
       <PushPrompt correctCount={correctAnswerCount} />
+
+      {/* Anonymous user signup prompt after 5 exercises */}
+      {isAnonymous && (
+        <SignupPromptModal 
+          isOpen={showSignupPrompt} 
+          exerciseCount={anonExerciseCount}
+        />
+      )}
 
       <style>{`
         @keyframes slideIn {
