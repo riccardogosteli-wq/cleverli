@@ -147,7 +147,7 @@ export default function Home() {
               { step: "3", titleKey: "step3title", descKey: "step3desc", img: "/cleverli-think.png", imgAlt: "Cleverli denkt nach", rounded: false },
             ].map((item) => (
               <div key={item.step} className="flex flex-col items-center gap-3 bg-white rounded-2xl p-6 shadow-sm">
-                <Image src={item.img} alt={item.imgAlt ?? ""} width={100} height={100} className="drop-shadow-md" />
+                <Image src={item.img} alt={item.imgAlt ?? ""} width={100} height={100} className="drop-shadow-md" loading="lazy" />
                 <div className="w-8 h-8 rounded-full bg-green-700 text-white flex items-center justify-center text-sm font-bold">{item.step}</div>
                 <h3 className="font-bold text-gray-800">{tr(item.titleKey)}</h3>
                 <p className="text-gray-500 text-sm">{tr(item.descKey)}</p>
@@ -166,7 +166,7 @@ export default function Home() {
             {/* Trial */}
             <div className="bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-100 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-1">
-                <Image src="/cleverli-run.png" alt="Cleverli läuft" width={56} height={56} />
+                <Image src="/cleverli-run.png" alt="Cleverli läuft" width={56} height={56}  loading="lazy"/>
                 <div className="text-3xl font-bold text-gray-900">{tr("free")}</div>
               </div>
               <div className="text-gray-400 text-sm mb-6">{tr("forever")}</div>
@@ -184,7 +184,7 @@ export default function Home() {
             <div className="bg-green-700 rounded-2xl p-5 sm:p-8 border-2 border-green-700 shadow-lg text-white flex flex-col relative overflow-hidden">
               <div className="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
               <div className="flex items-center gap-3 mb-1">
-                <Image src="/cleverli-jump-star.png" alt="Cleverli springt mit Stern" width={56} height={56} />
+                <Image src="/cleverli-jump-star.png" alt="Cleverli springt mit Stern" width={56} height={56}  loading="lazy"/>
                 <div className="text-3xl font-bold">CHF 9.90<span className="text-lg font-normal">{tr("perMonth")}</span></div>
               </div>
               <div className="text-green-50 text-sm mb-3">{tr("yearlyNote")}</div>
@@ -260,7 +260,7 @@ export default function Home() {
                 </div>
               ))}
               <div className="mt-2 bg-white rounded-2xl p-4 border border-amber-200 shadow-sm flex items-center gap-4">
-                <Image src="/cleverli-celebrate.png" alt="Cleverli feiert einen Erfolg" width={64} height={64} className="shrink-0" />
+                <Image src="/cleverli-celebrate.png" alt="Cleverli feiert einen Erfolg" width={64} height={64} className="shrink-0"  loading="lazy"/>
                 <div>
                   <div className="text-sm font-bold text-gray-800">🎉 {lang === "fr" ? "Lena a atteint son objectif!" : lang === "it" ? "Lena ha raggiunto il suo obiettivo!" : lang === "en" ? "Lena reached her goal!" : "Lena hat ihr Ziel erreicht!"}</div>
                   <div className="text-xs text-gray-400 mt-0.5">{lang === "fr" ? "Direction le zoo ! 🦁" : lang === "it" ? "È ora dello zoo! 🦁" : lang === "en" ? "Time for the zoo! 🦁" : "Zeit für den Zoo! 🦁"}</div>
@@ -301,7 +301,7 @@ export default function Home() {
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-8 justify-center">
-            <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={70} height={70} className="drop-shadow-md" />
+            <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={70} height={70} className="drop-shadow-md"  loading="lazy"/>
             <h2 className="text-2xl font-bold text-gray-800">{tr("faqTitle")}</h2>
           </div>
           <div className="space-y-3">
@@ -328,7 +328,7 @@ export default function Home() {
       <section className="bg-green-700 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>
 
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 justify-center">
-          <Image src="/cleverli-jump-star.png" alt="Cleverli springt vor Freude" width={100} height={100} className="drop-shadow-lg" />
+          <Image src="/cleverli-jump-star.png" alt="Cleverli springt vor Freude" width={100} height={100} className="drop-shadow-lg"  loading="lazy"/>
           <div>
             <h2 className="text-2xl font-bold mb-2">{tr("ctaTitle")}</h2>
             <p className="text-white mb-4">{tr("ctaSubtitle")}</p>
