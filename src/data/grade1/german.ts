@@ -463,12 +463,12 @@ const grade1German: Topic[] = [
       { id: "vk35", type: "multiple-choice", difficulty: 2, question: "EULE: Beginnt mit Vokal, endet mit Vokal. Stimmt das?", answer: "Ja — E und E", options: ["Nein","Ja — E und E","Ja — U und E"], hints: ["E-U-L-E: erster Buchstabe E (Vokal), letzter E (Vokal). Ja!"] },
 
       // DIFFICULTY 3 (15)
-      { id: "vk36", type: "fill-in-blank", difficulty: 3, question: "Wie viele Vokale hat «SONNENSCHEIN»?", answer: "4", hints: ["S-O-N-N-E-N-S-C-H-E-I-N: O, E, E, I = 4 Vokale!"], mascot: "think" },
-      { id: "vk37", type: "multiple-choice", difficulty: 3, question: "Welches dieser Wörter hat die MEISTEN Vokale?", answer: "EICHHÖRNCHEN", options: ["HUND","KATZE","EICHHÖRNCHEN","BAUM"], hints: ["Zähle die Vokale in jedem Wort: EICHHÖRNCHEN hat E,I,Ö,E = 4!"] },
-      { id: "vk38", type: "fill-in-blank", difficulty: 3, question: "Wie viele Buchstaben in «SCHMETTERLING» sind Vokale? ___ und wie viele sind Konsonanten? ___", answer: "3 Vokale und 10 Konsonanten", hints: ["Gesamtbuchstaben: 13. Vokale: E, E, I = 3. Konsonanten: 13-3=10!"] },
+      { id: "vk36", type: "fill-in-blank", difficulty: 3, question: "Wie viele Vokale hat «SONNE»?", answer: "2", hints: ["S-O-N-N-E: O und E = 2 Vokale!"], mascot: "think" },
+      { id: "vk37", type: "multiple-choice", difficulty: 3, question: "Welches Wort hat die meisten Vokale?", answer: "ADLER", options: ["HUND","KATZE","ADLER","BAUM"], hints: ["Zähle die Vokale: ADLER hat A, E = 2; KATZE hat A, E = 2 auch. Beide gleich!"] },
+      { id: "vk38", type: "fill-in-blank", difficulty: 3, question: "Wie viele Vokale und Konsonanten hat «BLUME»? ___ Vokale, ___ Konsonanten", answer: "2 Vokale, 3 Konsonanten", hints: ["B-L-U-M-E: Vokale = U, E (2). Konsonanten = B, L, M (3)."] },
       { id: "vk39", type: "multiple-choice", difficulty: 3, question: "Welches Wort hat mehr Vokale als Konsonanten?", answer: "EULE", options: ["HUND","EULE","BLUME","SCHULE"], hints: ["EULE: E, U, E = 3 Vokale, L = 1 Konsonant. 3 > 1!"] },
       { id: "vk40", type: "fill-in-blank", difficulty: 3, question: "Schreibe nur die Konsonanten aus «BLUME»: ___", answer: "BLM", hints: ["B-L-U-M-E: U und E sind Vokale. Was bleibt?"] },
-      { id: "vk41", type: "multiple-choice", difficulty: 3, question: "Wie viele Vokale hat «ÖSTERREICH»?", answer: "4", options: ["3","4","5","6"], hints: ["Ö-S-T-E-R-R-E-I-C-H: Ö, E, E, I = 4 Vokale!"] },
+      { id: "vk41", type: "multiple-choice", difficulty: 3, question: "Wie viele Vokale hat «SCHULE»?", answer: "2", options: ["1","2","3","4"], hints: ["S-C-H-U-L-E: U und E = 2 Vokale!"] },
       { id: "vk42", type: "fill-in-blank", difficulty: 3, question: "Wie viele Vokale hat dein Name «RICCI»? ___", answer: "2", hints: ["R-I-C-C-I: I und I = 2 Vokale."] },
       { id: "vk43", type: "multiple-choice", difficulty: 3, question: "Welche Aussage ist RICHTIG?", answer: "Jedes deutsche Wort hat mindestens einen Vokal.", options: ["Es gibt deutsche Wörter ohne Vokale.","Jedes deutsche Wort hat mindestens einen Vokal.","Vokale sind Buchstaben, die nicht gesprochen werden."], hints: ["Ohne Vokal kann man kein Wort korrekt aussprechen!"] },
       { id: "vk44", type: "fill-in-blank", difficulty: 3, question: "Zähle Vokale in «SCHWEIZ»: ___", answer: "2", hints: ["S-C-H-W-E-I-Z: E und I = 2 Vokale!"] },
