@@ -100,7 +100,7 @@ export default function ShopClient() {
                       disabled={!canAfford}
                       className={`w-full text-xs rounded-full py-1.5 font-bold transition-all active:scale-95 ${
                         canAfford
-                          ? "bg-yellow-400 text-yellow-900 hover:bg-yellow-500"
+                          ? "bg-yellow-500 text-white hover:bg-yellow-600"
                           : "bg-gray-100 text-gray-400 cursor-not-allowed"
                       }`}>
                       {canAfford

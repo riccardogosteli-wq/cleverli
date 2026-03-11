@@ -202,7 +202,7 @@ export default function RewardsPage() {
             </div>
             {subjectProgress.map(s => {
               const pct = s.total > 0 ? Math.round((s.done / s.total) * 100) : 0;
-              const barColor = s.id === "math" ? "bg-blue-400" : s.id === "german" ? "bg-yellow-400" : "bg-green-500";
+              const barColor = s.id === "math" ? "bg-blue-400" : s.id === "german" ? "bg-yellow-500" : "bg-green-500";
               return (
                 <div key={s.id} className="flex items-center gap-2">
                   <span className="text-base w-6 shrink-0">{s.emoji}</span>

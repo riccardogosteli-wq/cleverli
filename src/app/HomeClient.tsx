@@ -182,14 +182,14 @@ export default function Home() {
             </div>
             {/* Premium */}
             <div className="bg-green-700 rounded-2xl p-5 sm:p-8 border-2 border-green-700 shadow-lg text-white flex flex-col relative overflow-hidden">
-              <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
+              <div className="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
               <div className="flex items-center gap-3 mb-1">
                 <Image src="/cleverli-jump-star.png" alt="Cleverli springt mit Stern" width={56} height={56} />
                 <div className="text-3xl font-bold">CHF 9.90<span className="text-lg font-normal">{tr("perMonth")}</span></div>
               </div>
-              <div className="text-green-200 text-sm mb-3">{tr("yearlyNote")}</div>
+              <div className="text-green-50 text-sm mb-3">{tr("yearlyNote")}</div>
               {/* Savings banner */}
-              <div className="inline-flex items-center gap-1.5 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1.5 rounded-full mb-5 self-start shadow-sm">
+              <div className="inline-flex items-center gap-1.5 bg-yellow-500 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-5 self-start shadow-sm">
                 {tr("yearlyBadge")}
               </div>
               <ul className="text-sm space-y-2 flex-1">
@@ -288,7 +288,7 @@ export default function Home() {
               { nameKey: "Léa D.", city: "Lausanne", textKey: "testimonial3" as const },
             ].map((t) => (
               <div key={t.nameKey} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <div className="text-yellow-400 text-lg mb-3">{"⭐".repeat(5)}</div>
+                <div className="text-yellow-500 text-lg mb-3">{"⭐".repeat(5)}</div>
                 <p className="text-gray-600 text-sm italic mb-4">&ldquo;{tr(t.textKey)}&rdquo;</p>
                 <p className="text-sm font-semibold text-gray-800">{t.nameKey} · {t.city}</p>
               </div>
@@ -331,7 +331,7 @@ export default function Home() {
           <Image src="/cleverli-jump-star.png" alt="Cleverli springt vor Freude" width={100} height={100} className="drop-shadow-lg" />
           <div>
             <h2 className="text-2xl font-bold mb-2">{tr("ctaTitle")}</h2>
-            <p className="text-green-100 mb-4">{tr("ctaSubtitle")}</p>
+            <p className="text-white mb-4">{tr("ctaSubtitle")}</p>
             <Link href="/dashboard" className="inline-block bg-white text-green-700 px-8 py-3 rounded-full font-bold hover:bg-green-50 transition-colors shadow-md">
               {loaded && session ? (tr("continueLearn") ?? "Weiterlernen →") : `${tr("startFree")} →`}
             </Link>

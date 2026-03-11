@@ -596,7 +596,7 @@ function DashboardInner() {
                         </>
                       ) : done ? (
                         Array.from({length: 3}).map((_, j) => (
-                          <span key={j} className={j < stars ? "text-yellow-400" : "text-gray-800"}>★</span>
+                          <span key={j} className={j < stars ? "text-yellow-500" : "text-gray-800"}>★</span>
                         ))
                       ) : (
                         <span className="text-gray-800 font-semibold">{topic.exercises.length} {tr("exerciseCount")}</span>

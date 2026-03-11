@@ -230,7 +230,7 @@ export default function UpgradePageClient() {
             {tx.yearlySave}
           </div>
           <div>
-            <div className="text-sm font-semibold text-green-200 uppercase tracking-wide">{tx.yearly}</div>
+            <div className="text-sm font-semibold text-green-50 uppercase tracking-wide">{tx.yearly}</div>
             <div className="text-4xl font-black text-white mt-1">{tx.yearlyPrice}<span className="text-lg font-medium text-green-300">{tx.yearlyPer}</span></div>
           </div>
           <Link href={checkoutUrl("yearly")}
