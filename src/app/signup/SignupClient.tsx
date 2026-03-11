@@ -12,237 +12,154 @@ export default function Signup() {
   const { tr } = useLang();
   const router = useRouter();
   const { session, loaded } = useSession();
-  const [step, setStep] = useState(1);
-  const [role, setRole] = useState<"parent" | "child" | null>(null);
-  const setRoleAndStore = (r: "parent" | "child") => { setRole(r); localStorage.setItem("cleverli_role", r); };
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [grade, setGrade] = useState<number | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const validateStep2 = () => {
-    if (!name.trim()) { setError(tr("errorNameRequired") ?? "Bitte gib deinen Namen ein."); return false; }
-    if (!email.includes("@") || !email.includes(".")) { setError(tr("errorEmailInvalid") ?? "Bitte gib eine gültige E-Mail-Adresse ein."); return false; }
-    if (password.length < 6) { setError(tr("passwordMin6") ?? "Das Passwort muss mindestens 6 Zeichen lang sein."); return false; }
-    return true;
-  };
+  const [success, setSuccess] = useState(false);
 
   // UJ-3: redirect if already logged in
   useEffect(() => {
     if (loaded && session) router.replace("/dashboard");
   }, [loaded, session, router]);
 
-  const handleStart = async () => {
+  const handleSignup = async (e: React.FormEvent) => {
+    e.preventDefault();
     setLoading(true);
     setError("");
+
+    // Validate email
+    if (!email.includes("@")) {
+      setError(tr("errorEmailInvalid") ?? "Bitte gib eine gültige E-Mail-Adresse ein.");
+      setLoading(false);
+      return;
+    }
 
     try {
       const supabase = getSupabase();
       if (!supabase) throw new Error("Supabase not available");
+      
+      // Auto-generate password from email (user doesn't need to enter it)
+      const autoPassword = email.split("@")[0] + Math.random().toString(36).slice(2, 10);
+      
       const { data, error: signupError } = await supabase.auth.signUp({
         email,
-        password,
-        options: { data: { name } },
+        password: autoPassword,
+        options: { data: { name: email.split("@")[0] } },
       });
 
       if (signupError) {
-        setLoading(false);
         if (signupError.message.includes("already registered")) {
-          setError(tr("errorEmailExists") ?? "Diese E-Mail ist bereits registriert.");
+          setError(tr("errorEmailExists") ?? "Diese E-Mail ist bereits registriert. Melde dich an.");
         } else {
           setError(signupError.message);
         }
+        setLoading(false);
         return;
       }
 
-      // Store grade + onboarding flags
-      localStorage.setItem("cleverli_last_grade", String(grade));
+      // Store onboarding flags
       localStorage.setItem("cleverli_new_user", "true");
-
+      localStorage.setItem("cleverli_profile_created", "false"); // Will prompt to create profile
+      localStorage.setItem("cleverli_session", JSON.stringify({ email, premium: false }));
+      
       // Send welcome email (fire & forget)
       fetch("/api/send-welcome", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, name }),
+        body: JSON.stringify({ email, name: email.split("@")[0] }),
       }).catch(() => {});
 
-      // If session is available immediately (email confirm off), go to dashboard
-      if (data?.session) {
-        router.push("/dashboard");
-      } else {
-        // Fallback: store minimal session in localStorage and proceed
-        localStorage.setItem("cleverli_session", JSON.stringify({ email, name, premium: false }));
-        router.push("/dashboard");
-      }
+      setSuccess(true);
+
+      // Redirect directly to first exercise (Grade 1 Math - Zahlen bis 10)
+      setTimeout(() => {
+        router.push("/learn/1/math/zahlen-bis-10");
+      }, 1000);
     } catch (err: unknown) {
       setLoading(false);
-      // Fallback: if Supabase fails entirely, use localStorage auth
-      localStorage.setItem("cleverli_session", JSON.stringify({ email, name, premium: false }));
-      localStorage.setItem("cleverli_last_grade", String(grade));
+      // Fallback: if Supabase fails, use localStorage auth
+      localStorage.setItem("cleverli_session", JSON.stringify({ email, premium: false }));
       localStorage.setItem("cleverli_new_user", "true");
-      console.error("Supabase signup error:", err);
-      router.push("/dashboard");
+      console.error("Signup error:", err);
+      
+      // Still redirect to exercise even if signup fails
+      setTimeout(() => {
+        router.push("/learn/1/math/zahlen-bis-10");
+      }, 1000);
     }
   };
 
-  const inputCls = "w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white transition-colors";
-
   return (
-    <div className="min-h-screen bg-green-50 flex flex-col items-center justify-start pt-6 px-4 pb-16">
-      <div className="w-full max-w-sm space-y-5">
+    <div className="min-h-screen bg-green-50 flex flex-col items-center justify-center px-4 pb-16">
+      <div className="w-full max-w-sm space-y-6">
 
         {/* Mascot */}
         <div className="text-center">
-          <CleverliMascot size={85} mood={step === 3 ? "celebrate" : step === 2 ? "sit-read" : "happy"} />
+          <CleverliMascot size={100} mood={success ? "celebrate" : "happy"} />
         </div>
 
-        {/* Stepper with labels */}
-        <div className="flex justify-center items-start gap-2">
-          {[1,2,3].map(s => (
-            <div key={s} className="flex flex-col items-center gap-1 flex-1">
-              <div className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all mx-auto
-                ${step > s ? "bg-green-700 border-green-700 text-white" :
-                  step === s ? "bg-green-700 border-green-700 text-white ring-4 ring-green-100" :
-                  "bg-white border-gray-300 text-gray-400"}`}>
-                {step > s ? "✓" : s}
-              </div>
-              <span className={`text-[10px] text-center leading-tight ${step === s ? "text-green-700 font-semibold" : "text-gray-400"}`}>
-                {s === 1 ? (tr("whoAreYou") ?? "Wer bist du?") : s === 2 ? (tr("yourAccount") ?? "Dein Konto") : (tr("yourClass") ?? "Deine Klasse")}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* ── Step 1: Role ── */}
-        {step === 1 && (
+        {/* Form */}
+        {!success ? (
           <div className="space-y-4">
-            <h1 className="text-xl font-bold text-gray-900 text-center">Wer bist du?</h1>
-            <div className="grid grid-cols-2 gap-3">
-              {([
-                { r: "parent", emoji: "👨‍👩‍👧", label: tr("iAmParent") },
-                { r: "child",  emoji: "🧒",     label: tr("iAmChild") },
-              ] as const).map(({ r, emoji, label }) => (
-                <button key={r} onClick={() => { setRole(r); setStep(2); setError(""); }}
-                  style={{ minHeight: "110px" }}
-                  className="bg-white border-2 border-gray-200 hover:border-green-500 hover:bg-green-50 active:scale-95 rounded-2xl p-5 text-center font-semibold text-gray-800 transition-all">
-                  <div className="text-4xl mb-2">{emoji}</div>
-                  <div className="text-sm">{label}</div>
-                </button>
-              ))}
+            <div className="text-center space-y-2">
+              <h1 className="text-2xl font-bold text-gray-900">Jetzt starten</h1>
+              <p className="text-sm text-gray-500">Kostenlos - keine Kreditkarte nötig</p>
             </div>
-            <p className="text-center text-xs text-gray-400 pt-1">
-              Nur ausprobieren?{" "}
-              <Link href="/dashboard" className="text-green-700 underline">Direkt starten →</Link>
+
+            <form onSubmit={handleSignup} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-4">
+              {error && (
+                <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700">
+                  ⚠️ {error}
+                </div>
+              )}
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-gray-700">Deine E-Mail</label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={e => { setEmail(e.target.value); setError(""); }}
+                  placeholder="deine@email.ch"
+                  autoComplete="email"
+                  inputMode="email"
+                  required
+                  disabled={loading}
+                  style={{ fontSize: "16px" }}
+                  className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-green-500 bg-white transition-colors disabled:opacity-50"
+                />
+                <p className="text-xs text-gray-400">Wir schicken dir einen Bestätigungslink</p>
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading || !email.trim()}
+                style={{ minHeight: "48px" }}
+                className="w-full bg-green-700 text-white py-3 px-4 rounded-xl font-bold text-base hover:bg-green-600 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {loading ? "⏳ Account wird erstellt..." : "🎉 Kostenlos testen"}
+              </button>
+
+              <p className="text-center text-xs text-gray-400">
+                Mit Signup stimmst du unseren{" "}
+                <Link href="/datenschutz" className="text-green-700 underline">Datenschutzbestimmungen</Link> zu
+              </p>
+            </form>
+
+            <p className="text-center text-sm text-gray-600">
+              Hast du bereits ein Konto?{" "}
+              <Link href="/login" className="text-green-700 font-semibold hover:underline">Melde dich an</Link>
             </p>
           </div>
-        )}
-
-        {/* ── Step 2: Account ── */}
-        {step === 2 && (
-          <div className="space-y-4">
-            <h1 className="text-xl font-bold text-gray-900 text-center">
-              {role === "parent" ? "Elternteil-Konto erstellen" : "Dein Konto erstellen"}
-            </h1>
-            {role === "child" && (
-              <p className="text-xs text-center text-gray-400 bg-yellow-50 border border-yellow-200 rounded-xl px-3 py-2">
-                💡 Bitte einen Elternteil um Hilfe beim Erstellen des Kontos.
-              </p>
-            )}
-            <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-200 space-y-3">
-              {error && (
-                <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700">{error}</div>
-              )}
-              <input
-                type="text"
-                value={name}
-                onChange={e => { setName(e.target.value); setError(""); }}
-                placeholder={role === "parent" ? "Vorname Elternteil" : "Dein Vorname"}
-                autoComplete="given-name"
-                style={{ fontSize: "16px" }}
-                className={inputCls}
-              />
-              <input
-                type="email"
-                value={email}
-                onChange={e => { setEmail(e.target.value); setError(""); }}
-                placeholder={tr("emailPlaceholder")}
-                autoComplete="email"
-                inputMode="email"
-                style={{ fontSize: "16px" }}
-                className={inputCls}
-              />
-              <input
-                type="password"
-                value={password}
-                onChange={e => { setPassword(e.target.value); setError(""); }}
-                placeholder={tr("passwordPlaceholder") + " (min. 6)"}
-                autoComplete="new-password"
-                style={{ fontSize: "16px" }}
-                className={inputCls}
-              />
-              <button
-                onClick={() => { if (validateStep2()) { setError(""); setStep(3); } }}
-                className="w-full bg-green-700 text-white py-3 rounded-xl font-semibold hover:bg-green-700 active:scale-95 transition-all text-base"
-              >
-                Weiter →
-              </button>
-            </div>
-            <button onClick={() => { setStep(1); setError(""); }}
-              className="block mx-auto text-sm text-gray-400 hover:text-gray-600 py-2">
-              ← Zurück
-            </button>
+        ) : (
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-green-200 space-y-4 text-center">
+            <div className="text-4xl">✨</div>
+            <h2 className="text-xl font-bold text-gray-900">Geschafft!</h2>
+            <p className="text-sm text-gray-600">
+              Dein Konto ist bereit. Wir leiten dich zum ersten Kurs weiter...
+            </p>
+            <p className="text-xs text-gray-400">Einen Moment bitte ⏳</p>
           </div>
         )}
-
-        {/* ── Step 3: Grade ── */}
-        {step === 3 && (
-          <div className="space-y-4">
-            <h1 className="text-xl font-bold text-gray-900 text-center">
-              {role === "parent"
-                ? tr("whichClassChild") ?? "Welche Klasse besucht dein Kind?"
-                : tr("whichClass")}
-            </h1>
-            <div className="grid grid-cols-3 gap-3">
-              {[1,2,3,4,5,6].map(g => (
-                <button key={g} onClick={() => setGrade(g)}
-                  style={{ minHeight: "72px" }}
-                  className={`border-2 rounded-2xl font-bold text-lg active:scale-95 transition-all ${
-                    grade === g
-                      ? "border-green-700 bg-green-700 text-white shadow-md"
-                      : "border-gray-200 bg-white text-gray-800 hover:border-green-400 hover:bg-green-50"}`}>
-                  <div className="text-2xl">{g}.</div>
-                  <div className="text-xs font-medium opacity-80">{tr("gradeLabel")}</div>
-                </button>
-              ))}
-            </div>
-
-            {grade && (
-              <div className="bg-green-50 border-2 border-green-200 rounded-2xl px-4 py-3 text-center text-sm text-green-800 font-medium">
-                🎉 Super! Du startest in der {grade}. Klasse.
-              </div>
-            )}
-
-            <button
-              onClick={handleStart}
-              disabled={!grade || loading}
-              className="w-full bg-green-700 text-white py-4 rounded-xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
-            >
-              {loading ? "Wird geladen..." : "🎉 Los geht's!"}
-            </button>
-
-            <button onClick={() => setStep(2)}
-              className="block mx-auto text-sm text-gray-400 hover:text-gray-600 py-2">
-              ← Zurück
-            </button>
-          </div>
-        )}
-
-        <p className="text-center text-sm text-gray-600">
-          {tr("alreadyHave")}{" "}
-          <Link href="/login" className="text-green-700 font-semibold hover:underline">{tr("login")}</Link>
-        </p>
       </div>
     </div>
   );
