@@ -5,20 +5,24 @@ import { useLang } from "@/lib/LangContext";
 
 // ── Shared CTA buttons ────────────────────────────────────────────────────────
 function GuestCTAs() {
-  const { tr } = useLang();
+  const { lang } = useLang();
+  const startLabel = lang === "fr" ? "Essayer gratuitement" : lang === "it" ? "Prova gratis" : lang === "en" ? "Try for free" : "Jetzt kostenlos testen";
+  const loginLabel = lang === "fr" ? "Se connecter" : lang === "it" ? "Accedi" : lang === "en" ? "Log in" : "Anmelden";
   return (
     <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
       <Link
         href="/learn/1/math/zahlen-1-10"
+        style={{ minHeight: "52px" }}
         className="bg-green-700 text-white px-8 py-4 rounded-full font-bold text-base hover:bg-green-600 active:scale-95 transition-all shadow-md text-center"
       >
-        🎉 {tr("startFree") ?? "Jetzt kostenlos testen"}
+        🎉 {startLabel}
       </Link>
       <Link
         href="/login"
+        style={{ minHeight: "52px" }}
         className="border-2 border-green-700 text-green-700 px-8 py-4 rounded-full font-semibold text-base hover:bg-green-50 active:scale-95 transition-all text-center"
       >
-        {tr("login") ?? "Anmelden"}
+        {loginLabel}
       </Link>
     </div>
   );
@@ -28,7 +32,7 @@ function GuestCTAs() {
 export function DashboardGuestPreview() {
   const { tr } = useLang();
   return (
-    <div className="max-w-2xl mx-auto px-4 py-10 space-y-8">
+    <div className="max-w-2xl mx-auto px-4 py-10 pb-36 space-y-8">
       {/* Hero */}
       <div className="text-center space-y-3">
         <Image src="/cleverli-wave.png" alt="Cleverli" width={100} height={100}
@@ -92,14 +96,14 @@ export function DashboardGuestPreview() {
 
 // ── Missionen preview ─────────────────────────────────────────────────────────
 export function MissionenGuestPreview() {
-  const { tr } = useLang();
+  const { lang } = useLang();
   return (
-    <div className="max-w-2xl mx-auto px-4 py-10 space-y-8">
+    <div className="max-w-2xl mx-auto px-4 py-10 pb-36 space-y-8">
       {/* Hero */}
       <div className="text-center space-y-3">
         <div className="text-5xl">🗺️</div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-          {tr("missions") ?? "Missionen"}
+          {lang === "fr" ? "Mes Missions" : lang === "it" ? "Le mie Missioni" : lang === "en" ? "My Missions" : "Meine Missionen"}
         </h1>
         <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto">
           Verfolge deinen Lernfortschritt auf der Missions-Karte — Bronzemedaille, Silber, Gold!
@@ -157,15 +161,15 @@ export function MissionenGuestPreview() {
 
 // ── Belohnungen preview ───────────────────────────────────────────────────────
 export function BelohnungenGuestPreview() {
-  const { tr } = useLang();
+  const { lang } = useLang();
   return (
-    <div className="max-w-2xl mx-auto px-4 py-10 space-y-8">
+    <div className="max-w-2xl mx-auto px-4 py-10 pb-36 space-y-8">
       {/* Hero */}
       <div className="text-center space-y-3">
         <Image src="/images/ui/Belohnungen.svg" alt="Belohnungen" width={120} height={120}
           className="mx-auto" unoptimized />
         <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-          {tr("rewards") ?? "Belohnungen"} 🎁
+          {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"} 🎁
         </h1>
         <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto">
           Als Elternteil kannst du echte Belohnungen für dein Kind einrichten —
