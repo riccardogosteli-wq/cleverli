@@ -3,6 +3,67 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
 
+// ── Parents preview ───────────────────────────────────────────────────────────
+export function ParentsGuestPreview() {
+  const { lang } = useLang();
+  const title = lang === "fr" ? "Espace Parents" : lang === "it" ? "Area Genitori" : lang === "en" ? "Parent Dashboard" : "Elternbereich";
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 pb-36 space-y-8">
+      <div className="text-center space-y-3">
+        <div className="text-5xl">👨‍👩‍👧</div>
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">{title}</h1>
+        <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto">
+          Verfolge den Lernfortschritt deines Kindes, verwalte Profile und sieh Schwachstellen auf einen Blick.
+        </p>
+      </div>
+
+      {/* Mock stats */}
+      <div className="grid grid-cols-3 gap-3">
+        {[
+          { label: "Aufgaben gelöst", value: "142", icon: "✅" },
+          { label: "Tage Streak", value: "7", icon: "🔥" },
+          { label: "Trophäen", value: "12", icon: "🏆" },
+        ].map(s => (
+          <div key={s.label} className="bg-white border-2 border-gray-200 rounded-2xl p-4 text-center">
+            <div className="text-2xl">{s.icon}</div>
+            <div className="text-xl font-black text-gray-900">{s.value}</div>
+            <div className="text-xs text-gray-500 mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Weak spots teaser */}
+      <div className="bg-white border-2 border-gray-200 rounded-2xl p-5 space-y-3">
+        <p className="font-bold text-gray-800 text-sm">🎯 Schwachstellen deines Kindes</p>
+        {["Subtraktion bis 20", "Silbentrennung", "Körpersysteme"].map(t => (
+          <div key={t} className="flex items-center gap-3">
+            <div className="w-2 h-2 rounded-full bg-red-400 shrink-0" />
+            <div className="flex-1 bg-gray-100 rounded-full h-2">
+              <div className="bg-red-300 h-2 rounded-full" style={{ width: "35%" }} />
+            </div>
+            <span className="text-xs text-gray-500 w-28 shrink-0">{t}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Feature list */}
+      <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 space-y-2">
+        <p className="font-bold text-amber-900 text-sm">👨‍👩‍👧 Elternbereich-Funktionen:</p>
+        <ul className="space-y-1 text-sm text-amber-800">
+          <li>✅ Bis zu 3 Kinderprofile verwalten</li>
+          <li>✅ Fortschrittsübersicht pro Thema</li>
+          <li>✅ Schwachstellen-Analyse</li>
+          <li>✅ 14-Tage Aktivitäts-Heatmap</li>
+          <li>✅ Belohnungssystem einrichten</li>
+          <li>✅ PIN-geschützter Bereich</li>
+        </ul>
+      </div>
+
+      <GuestCTAs />
+    </div>
+  );
+}
+
 // ── Shared CTA buttons ────────────────────────────────────────────────────────
 function GuestCTAs() {
   const { lang } = useLang();

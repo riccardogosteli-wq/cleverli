@@ -682,8 +682,12 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       )}
 
       {/* Free limit notice — UJ-8: only show on last free exercise (idx === FREE_LIMIT-1), not from ex.1 */}
-      {/* Hide on day 1 to avoid scaring away new users */}
-      {isPremium === false && idx === FREE_LIMIT - 1 && localStorage.getItem("cleverli_new_user") !== "true" && (
+      {/* Hide in first 24h for new users to avoid scaring them away */}
+      {isPremium === false && idx === FREE_LIMIT - 1 && (() => {
+        const since = parseInt(localStorage.getItem("cleverli_new_user_since") ?? "0");
+        const isNew = Date.now() - since < 24 * 60 * 60 * 1000;
+        return !isNew;
+      })() && (
         <p className="text-center text-xs text-gray-400">
           {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
           <Link href={uid ? checkoutUrl("monthly") : "/upgrade"} className="text-green-700 underline font-semibold">

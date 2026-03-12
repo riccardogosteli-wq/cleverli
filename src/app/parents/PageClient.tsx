@@ -13,7 +13,8 @@ import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import ChildProfileManager from "@/components/ChildProfileManager";
-import AuthGuard from "@/components/AuthGuard";
+import { useSession } from "@/hooks/useSession";
+import { ParentsGuestPreview } from "@/components/GuestPreview";
 
 interface TopicStat {
   grade: number;
@@ -75,8 +76,16 @@ function buildHeatmap(playDates: string[]): { date: string; active: boolean }[] 
 }
 
 export default function ParentsDashboard() {
+  const { session, loaded: sessionLoaded } = useSession();
   const { profile, loaded } = useProfileContext();
   const { lang, tr } = useLang();
+
+  if (!sessionLoaded) return (
+    <div className="flex items-center justify-center py-20">
+      <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
+  if (!session) return <ParentsGuestPreview />;
 
   const stats = useMemo(() => loaded ? loadAllStats() : [], [loaded]);
 
@@ -112,7 +121,6 @@ export default function ParentsDashboard() {
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
 
   return (
-    <AuthGuard>
     <ParentPinGate>
     <main className="max-w-lg mx-auto px-4 py-6 pb-24 sm:pb-12 space-y-5">
       {/* Lock button */}
@@ -318,6 +326,5 @@ export default function ParentsDashboard() {
       </div>
     </main>
     </ParentPinGate>
-    </AuthGuard>
   );
 }
