@@ -106,7 +106,7 @@ const grade2German: Topic[] = [
       { id: "v36", type: "fill-in-blank", difficulty: 3, question: "Gestern ___ ich ins Kino. (gehen - Vergangenheit)", answer: "ging", hints: ["Präteritum: gehen → ging."] },
       { id: "v37", type: "multiple-choice", difficulty: 3, question: "Das Buch wird ___. (Passiv)", answer: "gelesen", options: ["liest","lesend","gelesen","zu lesen"], hints: ["Passiv Präsens: wird gelesen."] },
       { id: "v38", type: "fill-in-blank", difficulty: 3, question: "Das Kind ___ sich die Hände. (waschen)", answer: "wäscht", hints: ["Reflexiv: sich waschen → wäscht sich."] },
-      { id: "v39", type: "multiple-choice", difficulty: 3, question: "Welcher Satz ist Vergangenheit?", answer: "Er ass das Brot.", options: ["Er isst das Brot.","Er ass das Brot.","Er essen das Brot.","Er ist das Brot."], hints: ["Präteritum: essen → aß."] },
+      { id: "v39", type: "multiple-choice", difficulty: 3, question: "Welcher Satz ist Vergangenheit?", answer: "Er ass das Brot.", options: ["Er isst das Brot.","Er ass das Brot.","Er essen das Brot.","Er ist das Brot."], hints: ["Präteritum: essen → ass."] },
       { id: "v40", type: "fill-in-blank", difficulty: 3, question: "Die Kinder ___ schon nach Hause. (gehen - Perfekt)", answer: "sind gegangen", hints: ["Perfekt mit sein: sind gegangen."] },
       { id: "v41", type: "multiple-choice", difficulty: 3, question: "Welches Verb ist trennbar?", answer: "aufstehen", options: ["aufstehen","verstehen","erreichen","sprechen"], hints: ["auf-stehen ist trennbar."] },
       { id: "v42", type: "fill-in-blank", difficulty: 3, question: "Er ___ jeden Morgen um 7 Uhr ___. (aufstehen)", answer: "steht / auf", hints: ["Trennbar: er steht auf."] },

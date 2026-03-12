@@ -173,11 +173,11 @@ const grade2Math: Topic[] = [
       { id: "e33x", type: "multiple-choice", difficulty: 2, question: "5 × 4 + 10 = ?", answer: "30", options: ["20","25","30","35"], hints: ["5×4=20, 20+10=?"] },
 
       // DIFFICULTY 3 (15 new)
-      { id: "e40", type: "fill-in-blank", difficulty: 3, question: "2 × 8 + 5 × 4 = ___", answer: "36", hints: ["2×8=16, 5×4=20. 16+20=?"] },
-      { id: "e41", type: "multiple-choice", difficulty: 3, question: "Welches Produkt ist NICHT mit dem 2er-Einmaleins erreichbar?", answer: "15", options: ["16","14","12","15"], hints: ["2er-Einmaleins: immer geradzahlig. Ist 15 gerade?"] },
-      { id: "e42", type: "fill-in-blank", difficulty: 3, question: "a = 5, b = 10. a × b ÷ a = ___", answer: "10", hints: ["5×10=50. 50÷5=?"] },
-      { id: "e43", type: "multiple-choice", difficulty: 3, question: "Wie viele Finger haben 8 Kinder zusammen? 🖐️", answer: "80", options: ["18","40","80","100"], hints: ["Jedes Kind hat 10 Finger. 8 × 10 = ?"] },
-      { id: "e44", type: "fill-in-blank", difficulty: 3, question: "5 × 6 − 2 × 5 = ___", answer: "20", hints: ["5×6=30, 2×5=10. 30−10=?"] },
+      { id: "e40b", type: "fill-in-blank", difficulty: 3, question: "2 × 8 + 5 × 4 = ___", answer: "36", hints: ["2×8=16, 5×4=20. 16+20=?"] },
+      { id: "e41b", type: "multiple-choice", difficulty: 3, question: "Welches Produkt ist NICHT mit dem 2er-Einmaleins erreichbar?", answer: "15", options: ["16","14","12","15"], hints: ["2er-Einmaleins: immer geradzahlig. Ist 15 gerade?"] },
+      { id: "e42b", type: "fill-in-blank", difficulty: 3, question: "a = 5, b = 10. a × b ÷ a = ___", answer: "10", hints: ["5×10=50. 50÷5=?"] },
+      { id: "e43b", type: "multiple-choice", difficulty: 3, question: "Wie viele Finger haben 8 Kinder zusammen? 🖐️", answer: "80", options: ["18","40","80","100"], hints: ["Jedes Kind hat 10 Finger. 8 × 10 = ?"] },
+      { id: "e44b", type: "fill-in-blank", difficulty: 3, question: "5 × 6 − 2 × 5 = ___", answer: "20", hints: ["5×6=30, 2×5=10. 30−10=?"] },
       { id: "e45", type: "multiple-choice", difficulty: 3, question: "3 Kisten à 10 Orangen — 2 Orangen werden genommen. Wie viele bleiben?", answer: "28", options: ["27","28","29","30"], hints: ["3×10=30. 30−2=?"] },
       { id: "e46", type: "fill-in-blank", difficulty: 3, question: "Wenn 2 × x = 5 × 4, dann x = ___", answer: "10", hints: ["5×4=20. 2×x=20 → x=20÷2=?"] },
       { id: "e47", type: "multiple-choice", difficulty: 3, question: "Wie viele 2er-Sprünge brauche ich von 0 bis 50?", answer: "25", options: ["20","25","30","50"], hints: ["50 ÷ 2 = ?"] },
