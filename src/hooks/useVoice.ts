@@ -2,10 +2,11 @@
 import { useCallback, useRef } from "react";
 
 /**
- * useVoice — ElevenLabs TTS (Jessica voice) with Web Speech fallback.
+ * useVoice — ElevenLabs TTS (Charlie Chatlin — conversational German) with Web Speech fallback.
  *
- * Primary: calls /api/tts?text=... → ElevenLabs eleven_multilingual_v2
- *   - Same warm character voice in DE/FR/IT/EN
+ * Primary: calls /api/tts?text=... → ElevenLabs eleven_multilingual_v2 + Charlie Chatlin voice
+ *   - Real, casual, conversational German voice (vmVmHDKBkkCgbLVIOJRb)
+ *   - Same voice used for reading questions in exercises
  *   - 7-day CDN cache (no repeated API calls for same text)
  *
  * Fallback: Web Speech API (device voice, used if API fails or key missing)
