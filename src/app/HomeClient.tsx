@@ -13,7 +13,7 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   // Logged-in CTA targets
-  const primaryHref  = session ? "/dashboard" : "/dashboard";
+  const primaryHref  = session ? "/dashboard" : "/learn/1/math/zahlen-1-10";
   const primaryLabel = session ? (isPremium ? (tr("toDashboard") ?? "Zum Dashboard →") : (tr("continueLearn") ?? "Weiterlernen →")) : `${tr("startFree")} →`;
   const showSignupCta = !session;
 
@@ -54,29 +54,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick Access Menu (Mobile Optimization) */}
-      <section className="bg-white py-6 sm:py-8 px-4 sm:px-6 border-b border-gray-100 sm:hidden">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-4 gap-2">
-            <Link href="/dashboard" className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-gray-50 transition">
-              <Image src="/images/ui/Lernen-Dashboard-icon.svg" alt="Lernen" width={32} height={32} />
-              <span className="text-xs font-semibold text-center text-gray-700">{tr("learnNav")}</span>
-            </Link>
-            <Link href="/daily" className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-gray-50 transition">
-              <Image src="/images/ui/Tagesaufgabe-icon.svg" alt="Täglich" width={32} height={32} />
-              <span className="text-xs font-semibold text-center text-gray-700">{tr("daily")}</span>
-            </Link>
-            <Link href="/missionen" className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-gray-50 transition">
-              <Image src="/images/ui/Trophaeen-icon.svg" alt="Missionen" width={32} height={32} />
-              <span className="text-xs font-semibold text-center text-gray-700">{tr("missions")}</span>
-            </Link>
-            <Link href="/rewards" className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-gray-50 transition">
-              <Image src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen" width={32} height={32} />
-              <span className="text-xs font-semibold text-center text-gray-700">{tr("rewards")}</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+
 
       {/* Subjects */}
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
