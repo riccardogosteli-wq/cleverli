@@ -8,7 +8,8 @@ import { loadFamily, getActiveProfileId } from "@/lib/family";
 import { getTopics, SUBJECTS } from "@/data/index";
 import { getTierProgress } from "@/lib/tierProgress";
 import { LEVELS, getLevelProgress } from "@/lib/xp";
-import AuthGuard from "@/components/AuthGuard";
+import { useSession } from "@/hooks/useSession";
+import { MissionenGuestPreview } from "@/components/GuestPreview";
 
 // ─── TYPES ───────────────────────────────────────────────────────────────────
 interface TopicProgress {
@@ -208,8 +209,16 @@ function SubjectSection({ subjectId, topics, grade, completedCount, totalCount }
 
 // ─── MAIN MISSIONEN PAGE ──────────────────────────────────────────────────────
 export default function MissionenPage() {
+  const { session, loaded: sessionLoaded } = useSession();
   const { profile, loaded } = useProfileContext();
   const { lang, tr } = useLang();
+
+  if (!sessionLoaded) return (
+    <div className="flex items-center justify-center py-20">
+      <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
+  if (!session) return <MissionenGuestPreview />;
   const [activeTab, setActiveTab] = useState<"all" | "math" | "german" | "science">("all");
 
   // Get active child's grade from family store
@@ -320,7 +329,6 @@ export default function MissionenPage() {
   }, [curriculumData]);
 
   return (
-    <AuthGuard>
     <div className="max-w-2xl mx-auto px-4 pb-28 space-y-5">
 
       {/* Header */}
@@ -441,6 +449,5 @@ export default function MissionenPage() {
         </Link>
       </div>
     </div>
-    </AuthGuard>
   );
 }

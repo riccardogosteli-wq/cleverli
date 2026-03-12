@@ -12,7 +12,7 @@ import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import { getTopics, SUBJECTS } from "@/data/index";
-import AuthGuard from "@/components/AuthGuard";
+import { BelohnungenGuestPreview } from "@/components/GuestPreview";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
   { type: "tasks",  values: [10, 20, 50, 100] },
@@ -117,6 +117,9 @@ export default function RewardsPage() {
     return "bg-white border-gray-200";
   };
 
+  // Guest gate — show preview for unauthenticated users
+  if (loaded && !session) return <BelohnungenGuestPreview />;
+
   // UJ-9 + UJ-16: Premium gate first, then PIN gate
   if (loaded && !isPremium) {
     return (
@@ -144,7 +147,6 @@ export default function RewardsPage() {
   }
 
   return (
-    <AuthGuard>
     <ParentPinGate>
     <div className="max-w-5xl mx-auto px-4 py-8 pb-24 sm:pb-8">
       {/* Lock button */}
@@ -503,6 +505,5 @@ export default function RewardsPage() {
       </div> {/* end md:grid */}
     </div>
     </ParentPinGate>
-    </AuthGuard>
   );
 }

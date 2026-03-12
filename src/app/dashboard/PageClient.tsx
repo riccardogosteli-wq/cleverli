@@ -14,7 +14,7 @@ import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
 import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
 import { getTierProgress } from "@/lib/tierProgress";
 import RewardWidget from "@/components/RewardWidget";
-import AuthGuard from "@/components/AuthGuard";
+import { DashboardGuestPreview } from "@/components/GuestPreview";
 
 const GRADE_COLORS = [
   { base: "bg-blue-50 border-blue-300 text-blue-800 hover:bg-blue-100 active:bg-blue-200", emoji: "🐣" },
@@ -650,16 +650,27 @@ function DashboardInner() {
 }
 
 export default function Dashboard() {
+  const { session, loaded } = useSession();
+
+  if (!loaded) {
+    return (
+      <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-800 font-semibold">
+        <Image src="/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
+        <div className="text-sm">Laden…</div>
+      </div>
+    );
+  }
+
+  if (!session) return <DashboardGuestPreview />;
+
   return (
-    <AuthGuard>
-      <Suspense fallback={
-        <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-800 font-semibold">
-          <Image src="/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
-          <div className="text-sm">Laden… / Chargement…</div>
-        </div>
-      }>
-        <DashboardInner />
-      </Suspense>
-    </AuthGuard>
+    <Suspense fallback={
+      <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-800 font-semibold">
+        <Image src="/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
+        <div className="text-sm">Laden… / Chargement…</div>
+      </div>
+    }>
+      <DashboardInner />
+    </Suspense>
   );
 }
