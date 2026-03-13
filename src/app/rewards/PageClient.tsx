@@ -85,8 +85,8 @@ export default function RewardsPage() {
   const redeemed = rewards.filter(r => r.status === "redeemed");
 
   const handleAdd = () => {
-    if (!form.title.trim()) { setError(lang === "de" ? "Bitte einen Titel eingeben." : "Please enter a title."); return; }
-    if (active.length >= 3) { setError(lang === "de" ? "Max. 3 aktive Belohnungen." : "Max 3 active rewards."); return; }
+    if (!form.title.trim()) { setError(lang === "fr" ? "Veuillez entrer un titre." : lang === "it" ? "Inserisci un titolo." : lang === "en" ? "Please enter a title." : "Bitte einen Titel eingeben."); return; }
+    if (active.length >= 3) { setError(lang === "fr" ? "Max. 3 récompenses actives." : lang === "it" ? "Max. 3 premi attivi." : lang === "en" ? "Max 3 active rewards." : "Max. 3 aktive Belohnungen."); return; }
     try {
       addReward({ emoji: form.emoji, title: form.title, triggerType: form.triggerType, triggerValue: form.triggerValue });
       setAdding(false);
@@ -127,21 +127,34 @@ export default function RewardsPage() {
         <Image src="/cleverli-think.png" alt="Cleverli Maskottchen" width={110} height={110} className="mx-auto drop-shadow-md hidden sm:block" />
         <div className="flex items-center gap-2">
           <Image src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen" width={28} height={28} className="drop-shadow-sm" />
-          <h1 className="text-2xl font-extrabold text-gray-900">Belohnungen</h1>
+          <h1 className="text-2xl font-extrabold text-gray-900">
+            {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
+          </h1>
         </div>
         <p className="text-gray-500 text-sm leading-relaxed">
-          Mit dem Belohnungs-System kannst du echte Belohnungen für dein Kind einrichten — und es motivieren, dranzubleiben.
+          {lang === "fr"
+            ? "Avec le système de récompenses, tu peux créer de vraies récompenses pour ton enfant et le motiver à persévérer."
+            : lang === "it"
+            ? "Con il sistema premi puoi creare premi reali per tuo figlio e motivarlo a continuare."
+            : lang === "en"
+            ? "With the reward system you can set up real rewards for your child — and keep them motivated."
+            : "Mit dem Belohnungs-System kannst du echte Belohnungen für dein Kind einrichten — und es motivieren, dranzubleiben."}
         </p>
         <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 text-left space-y-2 text-sm text-amber-900">
-          <div className="flex items-center gap-2"><Image src="/images/ui/Trophaeen-icon.svg" alt="Trophy" width={20} height={20} /> Belohnungen für Sterne, Streaks und Aufgaben</div>
-          <div>👶 Bis zu 3 Kinderprofile mit Premium</div>
-          <div>📊 Lernfortschritt der ganzen Familie sehen</div>
+          <div className="flex items-center gap-2">
+            <Image src="/images/ui/Trophaeen-icon.svg" alt="Trophy" width={20} height={20} />
+            {lang === "fr" ? "Récompenses pour étoiles, séries et exercices" : lang === "it" ? "Premi per stelle, serie e esercizi" : lang === "en" ? "Rewards for stars, streaks and exercises" : "Belohnungen für Sterne, Streaks und Aufgaben"}
+          </div>
+          <div>👶 {lang === "fr" ? "Jusqu'à 3 profils enfants avec Premium" : lang === "it" ? "Fino a 3 profili bambino con Premium" : lang === "en" ? "Up to 3 child profiles with Premium" : "Bis zu 3 Kinderprofile mit Premium"}</div>
+          <div>📊 {lang === "fr" ? "Voir les progrès de toute la famille" : lang === "it" ? "Vedi i progressi di tutta la famiglia" : lang === "en" ? "See the whole family's learning progress" : "Lernfortschritt der ganzen Familie sehen"}</div>
         </div>
         <Link href={uid ? `/api/checkout?plan=monthly&uid=${uid}` : "/upgrade"}
           className="block w-full bg-amber-500 text-white py-4 rounded-2xl font-bold text-base hover:bg-amber-600 active:scale-95 transition-all shadow-md">
-          Premium freischalten — CHF 9.90/Mt.
+          {lang === "fr" ? "Débloquer Premium — CHF 9.90/mois" : lang === "it" ? "Sblocca Premium — CHF 9.90/mese" : lang === "en" ? "Unlock Premium — CHF 9.90/month" : "Premium freischalten — CHF 9.90/Mt."}
         </Link>
-        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 underline">Zurück zum Lernen</Link>
+        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 underline">
+          {lang === "fr" ? "Retour à l'apprentissage" : lang === "it" ? "Torna all'apprendimento" : lang === "en" ? "Back to learning" : "Zurück zum Lernen"}
+        </Link>
       </div>
     );
   }
@@ -155,7 +168,7 @@ export default function RewardsPage() {
           onClick={() => { lockParentSession(); window.location.reload(); }}
           className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-red-500 transition-colors py-1.5 px-3 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50"
         >
-          🔒 <span>Elternbereich sperren</span>
+          🔒 <span>{lang === "fr" ? "Verrouiller espace parents" : lang === "it" ? "Blocca area genitori" : lang === "en" ? "Lock parent area" : "Elternbereich sperren"}</span>
         </button>
       </div>
       {/* Header */}
@@ -168,7 +181,7 @@ export default function RewardsPage() {
         </h1>
         <div className="flex-1" />
         <Link href="/dashboard" className="hidden md:block text-sm text-gray-400 hover:text-gray-600">
-          ← {lang === "de" ? "Zurück zum Dashboard" : "Back to dashboard"}
+          ← {lang === "fr" ? "Retour au tableau de bord" : lang === "it" ? "Torna alla dashboard" : lang === "en" ? "Back to dashboard" : "Zurück zum Dashboard"}
         </Link>
       </div>
 
@@ -249,7 +262,7 @@ export default function RewardsPage() {
 
             {formStep === 1 && (<>
               <div className="font-bold text-amber-800">
-                {lang === "de" ? "Was ist die Belohnung?" : "What is the reward?"}
+                {lang === "fr" ? "Quelle est la récompense ?" : lang === "it" ? "Qual è il premio?" : lang === "en" ? "What is the reward?" : "Was ist die Belohnung?"}
               </div>
 
               {/* Template grid */}
@@ -269,7 +282,7 @@ export default function RewardsPage() {
               </div>
 
               <div className="relative">
-                <div className="text-xs text-gray-400 text-center mb-2">— {lang === "de" ? "oder eigene eingeben" : "or type your own"} —</div>
+                <div className="text-xs text-gray-400 text-center mb-2">— {lang === "fr" ? "ou saisir le tien" : lang === "it" ? "o inserisci il tuo" : lang === "en" ? "or type your own" : "oder eigene eingeben"} —</div>
                 <div className="flex gap-2">
                   <button onClick={() => setCustomEmoji(e => !e)}
                     className="w-12 h-12 text-2xl border-2 border-gray-200 rounded-xl bg-white hover:border-amber-400 transition-colors shrink-0">
@@ -278,7 +291,7 @@ export default function RewardsPage() {
                   <input
                     value={form.title}
                     onChange={e => setForm(f => ({ ...f, title: e.target.value }))}
-                    placeholder={lang === "de" ? "z.B. Schlittschuh laufen gehen…" : "e.g. Go ice skating…"}
+                    placeholder={lang === "fr" ? "ex. Aller au cinéma…" : lang === "it" ? "es. Andare al cinema…" : lang === "en" ? "e.g. Go ice skating…" : "z.B. Schlittschuh laufen gehen…"}
                     className="flex-1 border-2 border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-amber-400 bg-white"
                   />
                 </div>
@@ -296,16 +309,16 @@ export default function RewardsPage() {
 
               {error && <div className="text-red-500 text-sm">{error}</div>}
               <button
-                onClick={() => { if (!form.title.trim()) { setError(lang === "de" ? "Bitte eine Belohnung wählen oder eingeben." : "Please choose or enter a reward."); return; } setError(""); setFormStep(2); }}
+                onClick={() => { if (!form.title.trim()) { setError(lang === "fr" ? "Veuillez choisir ou entrer une récompense." : lang === "it" ? "Scegli o inserisci un premio." : lang === "en" ? "Please choose or enter a reward." : "Bitte eine Belohnung wählen oder eingeben."); return; } setError(""); setFormStep(2); }}
                 className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition-colors">
-                {lang === "de" ? "Weiter: Ziel festlegen →" : "Next: Set the goal →"}
+                {lang === "fr" ? "Suivant : Définir l'objectif →" : lang === "it" ? "Avanti: Imposta obiettivo →" : lang === "en" ? "Next: Set the goal →" : "Weiter: Ziel festlegen →"}
               </button>
             </>)}
 
             {formStep === 2 && (<>
               <div>
                 <div className="font-bold text-amber-800 mb-1">
-                  {lang === "de" ? "Wann soll die Belohnung kommen?" : "When should the reward unlock?"}
+                  {lang === "fr" ? "Quand la récompense doit-elle être débloquée ?" : lang === "it" ? "Quando si sblocca il premio?" : lang === "en" ? "When should the reward unlock?" : "Wann soll die Belohnung kommen?"}
                 </div>
                 <div className="flex items-center gap-2 bg-white rounded-xl px-3 py-2 border border-amber-200 mb-4">
                   <span className="text-2xl">{form.emoji}</span>
@@ -338,7 +351,7 @@ export default function RewardsPage() {
               ))}
 
               <div className="bg-white border-2 border-amber-300 rounded-xl px-4 py-3 text-sm text-amber-800 font-medium">
-                🎯 {lang === "de" ? "Freischalten wenn:" : "Unlocks when:"}{" "}
+                🎯 {lang === "fr" ? "Se débloque quand :" : lang === "it" ? "Si sblocca quando:" : lang === "en" ? "Unlocks when:" : "Freischalten wenn:"}{" "}
                 <strong>{form.triggerValue} {tl(form.triggerType)}</strong>
               </div>
 
@@ -346,14 +359,14 @@ export default function RewardsPage() {
               <div className="flex gap-2">
                 <button onClick={() => setFormStep(1)} className="px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-xl text-sm">←</button>
                 <button onClick={handleAdd} className="flex-1 bg-green-700 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-colors">
-                  🎁 {lang === "de" ? "Belohnung erstellen" : "Create reward"}
+                  🎁 {lang === "fr" ? "Créer la récompense" : lang === "it" ? "Crea il premio" : lang === "en" ? "Create reward" : "Belohnung erstellen"}
                 </button>
               </div>
             </>)}
 
             <button onClick={() => { setAdding(false); setError(""); setFormStep(1); }}
               className="w-full text-xs text-gray-400 hover:text-gray-600 py-1">
-              {lang === "de" ? "Abbrechen" : "Cancel"}
+              {lang === "fr" ? "Annuler" : lang === "it" ? "Annulla" : lang === "en" ? "Cancel" : "Abbrechen"}
             </button>
           </div>
         )}
@@ -365,16 +378,20 @@ export default function RewardsPage() {
               <Image src="/images/ui/Belohnungen-icon.svg" alt="Rewards" width={80} height={80} />
             </div>
             <div className="font-bold text-gray-700">
-              {lang === "de" ? "Noch keine Belohnungen" : "No rewards yet"}
+              {lang === "fr" ? "Aucune récompense encore" : lang === "it" ? "Nessun premio ancora" : lang === "en" ? "No rewards yet" : "Noch keine Belohnungen"}
             </div>
             <div className="text-sm text-gray-400 max-w-xs mx-auto px-4">
-              {lang === "de"
-                ? "Erstelle eine Belohnung für dein Kind — es sieht den Fortschritt direkt in der App!"
-                : "Create a reward for your child — they'll see their progress right in the app!"}
+              {lang === "fr"
+                ? "Crée une récompense pour ton enfant — il verra sa progression directement dans l'app !"
+                : lang === "it"
+                ? "Crea un premio per tuo figlio — vedrà i progressi direttamente nell'app!"
+                : lang === "en"
+                ? "Create a reward for your child — they'll see their progress right in the app!"
+                : "Erstelle eine Belohnung für dein Kind — es sieht den Fortschritt direkt in der App!"}
             </div>
             <button onClick={() => setAdding(true)}
               className="bg-amber-400 hover:bg-amber-500 text-white font-bold px-6 py-3 rounded-full transition-colors shadow-sm">
-              + {lang === "de" ? "Erste Belohnung erstellen" : "Create first reward"}
+              + {lang === "fr" ? "Créer le premier prix" : lang === "it" ? "Crea il primo premio" : lang === "en" ? "Create first reward" : "Erste Belohnung erstellen"}
             </button>
           </div>
         )}
