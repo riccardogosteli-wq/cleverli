@@ -1,0 +1,1403 @@
+
+Running 812 tests using 1 worker
+
+[1A[2K[1/812] [setup] › tests/auth.setup.ts:12:6 › authenticate and seed child profile
+[1A[2K[setup] › tests/auth.setup.ts:12:6 › authenticate and seed child profile
+✅ Auth setup complete — state saved to /Users/riccardogosteli/projects/cleverli/tests/.auth/state.json
+
+[1A[2K[2/812] [mobile] › tests/specs/00-debug.spec.ts:13:5 › capture real crash error with injected localStorage
+[1A[2K[mobile] › tests/specs/00-debug.spec.ts:13:5 › capture real crash error with injected localStorage
+=== CRASH: NO ===
+
+[1A[2K=== pageerrors: [33m1[39m ===
+
+[1A[2K[pageerror] Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at rK (https://www.cleverli.ch/_next/static/chunks/69be39811437728d.js:1:45805)
+    at io (https://www.cleverli.ch/_next/static/chunks/69be39811437728d.js:1:96526)
+    at sc (https://www.cleverli.ch/_next/static/chunks/69be39811437728d.js:1:136997)
+    at https://www.cleverli.ch/_next/static/chun
+
+[1A[2K=== console errors: [33m2[39m ===
+
+[1A[2K[console.error] Failed to load resource: the server responded with a status of 400 ()
+
+[1A[2K[console.error] Failed to load resource: the server responded with a status of 400 ()
+
+[1A[2K=== localStorage injected: cleverli_active_profile, cleverli_profile_test-child-001, cleverli_family, cleverli_session
+
+[1A[2K[3/812] [mobile] › tests/specs/00-debug.spec.ts:54:5 › no crash WITHOUT localStorage
+[1A[2K[mobile] › tests/specs/00-debug.spec.ts:54:5 › no crash WITHOUT localStorage
+=== CRASH without state: NO ===
+
+[1A[2K=== errors: []
+
+[1A[2K[4/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Home page loads without crash
+[1A[2K[5/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Home page loads without crash (retry #1)
+[1A[2K  1) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Home page loads without crash ──────────────────
+
+    Error: JS errors on Home: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Home-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Home-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Home-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Home-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Home-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Home: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Home-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Home-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Home-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Home-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Home-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[6/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Dashboard page loads without crash
+[1A[2K[7/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Dashboard page loads without crash (retry #1)
+[1A[2K  2) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Dashboard page loads without crash ─────────────
+
+    Error: JS errors on Dashboard: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Dashboard: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Dashboard-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[8/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Parents page loads without crash
+[1A[2K[9/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Parents page loads without crash (retry #1)
+[1A[2K  3) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Parents page loads without crash ───────────────
+
+    Error: JS errors on Parents: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Parents: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Parents-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[10/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Upgrade page loads without crash
+[1A[2K[11/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Upgrade page loads without crash (retry #1)
+[1A[2K  4) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Upgrade page loads without crash ───────────────
+
+    Error: JS errors on Upgrade: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Upgrade: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Upgrade-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[12/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Missionen page loads without crash
+[1A[2K[13/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Missionen page loads without crash (retry #1)
+[1A[2K  5) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Missionen page loads without crash ─────────────
+
+    Error: JS errors on Missionen: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Missionen: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Missionen-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[14/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Rewards page loads without crash
+[1A[2K[15/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Rewards page loads without crash (retry #1)
+[1A[2K  6) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Rewards page loads without crash ───────────────
+
+    Error: JS errors on Rewards: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Rewards-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Rewards-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Rewards-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Rewards-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Rewards-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[16/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Shop page loads without crash
+[1A[2K[17/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Shop page loads without crash (retry #1)
+[1A[2K  7) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Shop page loads without crash ──────────────────
+
+    Error: JS errors on Shop: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Shop: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Shop-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[18/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Family page loads without crash
+[1A[2K[19/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Family page loads without crash (retry #1)
+[1A[2K  8) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Family page loads without crash ────────────────
+
+    Error: JS errors on Family: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Family-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Family-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Family-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Family-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Family-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Family: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Family-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Family-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Family-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Family-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Family-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[20/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Daily page loads without crash
+[1A[2K[21/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Daily page loads without crash (retry #1)
+[1A[2K  9) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Daily page loads without crash ─────────────────
+
+    Error: JS errors on Daily: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Daily: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Daily-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[22/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Account page loads without crash
+[1A[2K[23/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Account page loads without crash (retry #1)
+[1A[2K  10) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Account page loads without crash ──────────────
+
+    Error: JS errors on Account: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Account-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Account-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Account-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Account-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Account-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Account: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Account-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Account-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Account-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Account-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Account-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[24/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › AGB page loads without crash
+[1A[2K[25/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › AGB page loads without crash (retry #1)
+[1A[2K  11) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › AGB page loads without crash ──────────────────
+
+    Error: JS errors on AGB: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on AGB: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-AGB-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[26/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Datenschutz page loads without crash
+[1A[2K[27/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Datenschutz page loads without crash (retry #1)
+[1A[2K  12) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Datenschutz page loads without crash ──────────
+
+    Error: JS errors on Datenschutz: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Datenschutz: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Datenschutz-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[28/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Impressum page loads without crash
+[1A[2K[29/812] [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Impressum page loads without crash (retry #1)
+[1A[2K  13) [mobile] › tests/specs/01-smoke.spec.ts:26:7 › Impressum page loads without crash ────────────
+
+    Error: JS errors on Impressum: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: JS errors on Impressum: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m["Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."][39m
+
+      45 |       !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      46 |     );
+    > 47 |     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
+         |                                                                           ^
+      48 |   });
+      49 | }
+      50 |
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/01-smoke.spec.ts:47:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-smoke-Impressum-page-loads-without-crash-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[30/812] [mobile] › tests/specs/01-smoke.spec.ts:51:5 › 404 page shows custom not-found
+[1A[2K[31/812] [mobile] › tests/specs/01-smoke.spec.ts:57:5 › sitemap.xml is accessible
+[1A[2K[32/812] [mobile] › tests/specs/01-smoke.spec.ts:64:5 › robots.txt is accessible
+[1A[2K[33/812] [mobile] › tests/specs/02-auth.spec.ts:13:7 › Login flow › login page renders email + password fields
+[1A[2K[34/812] [mobile] › tests/specs/02-auth.spec.ts:20:7 › Login flow › shows error on wrong password
+[1A[2K[35/812] [mobile] › tests/specs/02-auth.spec.ts:32:7 › Login flow › successful login redirects away from /login
+[1A[2K[36/812] [mobile] › tests/specs/02-auth.spec.ts:43:7 › Session persistence › dashboard accessible when logged in
+[1A[2K[37/812] [mobile] › tests/specs/02-auth.spec.ts:50:7 › Session persistence › account page shows user info when logged in
+[1A[2K[38/812] [mobile] › tests/specs/02-auth.spec.ts:61:7 › Auth guards › logout clears session and redirects
+[1A[2K[39/812] [mobile] › tests/specs/02-auth.spec.ts:86:7 › Signup page › signup page renders role picker on step 1
+[1A[2K[40/812] [mobile] › tests/specs/02-auth.spec.ts:94:7 › Signup page › signup shows email input after selecting parent role
+[1A[2K[41/812] [mobile] › tests/specs/03-dashboard.spec.ts:9:7 › Dashboard navigation › dashboard loads and shows grade picker or topic list
+[1A[2K[42/812] [mobile] › tests/specs/03-dashboard.spec.ts:14:7 › Dashboard navigation › XP bar visible when logged in
+[1A[2K[43/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 1 / math — topic list loads (11 topics)
+[1A[2K[44/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 1 / german — topic list loads (9 topics)
+[1A[2K[45/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 1 / science — topic list loads (9 topics)
+[1A[2K[46/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 2 / math — topic list loads (11 topics)
+[1A[2K[47/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 2 / german — topic list loads (9 topics)
+[1A[2K[48/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 2 / science — topic list loads (8 topics)
+[1A[2K[49/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 3 / math — topic list loads (10 topics)
+[1A[2K[50/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 3 / german — topic list loads (8 topics)
+[1A[2K[51/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 3 / science — topic list loads (9 topics)
+[1A[2K[52/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 4 / math — topic list loads (9 topics)
+[1A[2K[53/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 4 / german — topic list loads (9 topics)
+[1A[2K[54/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 5 / math — topic list loads (9 topics)
+[1A[2K[55/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 5 / german — topic list loads (9 topics)
+[1A[2K[56/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 6 / math — topic list loads (9 topics)
+[1A[2K[57/812] [mobile] › tests/specs/03-dashboard.spec.ts:32:11 › Topic navigation — all grades × subjects › Grade 6 / german — topic list loads (9 topics)
+[1A[2K[58/812] [mobile] › tests/specs/03-dashboard.spec.ts:46:7 › Dashboard topic path locks › first topic is always unlocked (grade 1 math)
+[1A[2K[59/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/zahlen-1-10 — "Zahlen 1–10" loads
+[1A[2K[60/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/addition-bis-10 — "Addition bis 10" loads
+[1A[2K[61/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/subtraktion-bis-10 — "Subtraktion bis 10" loads
+[1A[2K[62/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/formen — "Formen erkennen" loads
+[1A[2K[63/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/vergleichen — "Grösser & Kleiner" loads
+[1A[2K[64/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/muster — "Muster & Reihen" loads
+[1A[2K[65/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/zahlen-bis-20 — "Zahlen 11–20" loads
+[1A[2K[66/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/ordinalzahlen — "Ordinalzahlen (1., 2., 3.…)" loads
+[1A[2K[67/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/mengen-zaehlen — "Mengen & Zählen" loads
+[1A[2K[68/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/verdoppeln-halbieren — "Verdoppeln & Halbieren" loads
+[1A[2K[69/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/math/geld-muenzen — "Geld & Münzen" loads
+[1A[2K[70/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/buchstaben — "Buchstaben" loads
+[1A[2K[71/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/einfache-woerter — "Einfache Wörter" loads
+[1A[2K[72/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/gross-kleinschreibung — "Gross- und Kleinschreibung" loads
+[1A[2K[73/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/reime — "Reimwörter" loads
+[1A[2K[74/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/abc-reihenfolge — "ABC & Reihenfolge" loads
+[1A[2K[75/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/saetze-lesen — "Sätze lesen" loads
+[1A[2K[76/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/vokale-konsonanten — "Vokale & Konsonanten" loads
+[1A[2K[77/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/silben-klatschen — "Silben klatschen" loads
+[1A[2K[78/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/german/ie-ei — "ie und ei richtig schreiben" loads
+[1A[2K[79/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/tiere — "Tiere in der Natur" loads
+[1A[2K[80/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/jahreszeiten — "Jahreszeiten & Wetter" loads
+[1A[2K[81/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/mein-koerper — "Mein Körper" loads
+[1A[2K[82/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/pflanzen-gr1 — "Pflanzen & Blumen" loads
+[1A[2K[83/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/fuenf-sinne — "Meine 5 Sinne" loads
+[1A[2K[84/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/familie-gemeinschaft — "Familie & Gemeinschaft" loads
+[1A[2K[85/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/verkehr-sicherheit — "Verkehr & Sicherheit" loads
+[1A[2K[86/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/zeit-uhr-gr1 — "Zeit & die Uhr" loads
+[1A[2K[87/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G1/science/wochentage-monate-gr1 — "Wochentage & Monate" loads
+[1A[2K[88/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/zahlen-bis-100 — "Zahlen bis 100" loads
+[1A[2K[89/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/addition-bis-20 — "Addition bis 20" loads
+[1A[2K[90/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/einmaleins — "Einmaleins 2er/5er/10er" loads
+[1A[2K[91/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/uhrzeit — "Uhrzeit lesen" loads
+[1A[2K[92/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/subtraktion-bis-20 — "Subtraktion bis 20" loads
+[1A[2K[93/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/laengen-messen — "Längen messen" loads
+[1A[2K[94/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/geld-chf — "Geld & CHF" loads
+[1A[2K[95/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/add-sub-100 — "Addition & Subtraktion bis 100" loads
+[1A[2K[96/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/einmaleins-3-4 — "Einmaleins 3er & 4er" loads
+[1A[2K[97/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/symmetrie — "Symmetrie & Formen" loads
+[1A[2K[98/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/math/schaetzen — "Schätzen & Runden" loads
+[1A[2K[99/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/nomen-artikel — "Nomen mit Artikel" loads
+[1A[2K[100/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/verben — "Verben" loads
+[1A[2K[101/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/silben — "Silben zählen" loads
+[1A[2K[102/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/adjektive-gr2 — "Adjektive einsetzen" loads
+[1A[2K[103/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/satzzeichen — "Satzzeichen" loads
+[1A[2K[104/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/texte-lesen — "Texte lesen" loads
+[1A[2K[105/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/singular-plural — "Einzahl & Mehrzahl" loads
+[1A[2K[106/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/wortfamilien — "Wortfamilien & Wortstamm" loads
+[1A[2K[107/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/german/pronomen — "Personalpronomen" loads
+[1A[2K[108/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/science/lebewesen — "Was lebt — was nicht?" loads
+[1A[2K[109/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/science/wasser — "Wasser & Aggregatzustände" loads
+[1A[2K[110/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/science/gesunde-ernaehrung — "Gesunde Ernährung" loads
+[1A[2K[111/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/science/lebensraeume — "Lebensräume der Tiere" loads
+[1A[2K[112/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/science/schweiz-symbole — "Die Schweiz" loads
+[1A[2K[113/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/science/berufe — "Berufe & Arbeit" loads
+[1A[2K[114/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/science/uhr-viertel-gr2 — "Uhrzeit: Viertel & Halb" loads
+[1A[2K[115/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G2/science/kalender-gr2 — "Kalender & Datum" loads
+[1A[2K[116/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/zahlen-bis-1000 — "Zahlen bis 1000" loads
+[1A[2K[117/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/rechnen-bis-1000 — "Rechnen bis 1000" loads
+[1A[2K[118/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/geometrie — "Geometrie" loads
+[1A[2K[119/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/einmaleins-komplett — "Einmaleins komplett" loads
+[1A[2K[120/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/division — "Division" loads
+[1A[2K[121/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/brueche — "Brüche" loads
+[1A[2K[122/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/textaufgaben — "Textaufgaben" loads
+[1A[2K[123/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/flaeche-umfang — "Fläche & Umfang" loads
+[1A[2K[124/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/diagramme-daten — "Daten & Diagramme" loads
+[1A[2K[125/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/math/schriftlich-rechnen — "Schriftlich Rechnen" loads
+[1A[2K[126/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/german/wortarten — "Wortarten" loads
+[1A[2K[127/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/german/adjektive — "Adjektive" loads
+[1A[2K[128/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/german/saetze — "Sätze bauen" loads
+[1A[2K[129/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/german/leseverstaendnis — "Leseverständnis" loads
+[1A[2K[130/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/german/rechtschreibung — "Rechtschreibung" loads
+[1A[2K[131/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/german/verben-konjugieren — "Verben konjugieren" loads
+[1A[2K[132/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/german/synonyme-antonyme — "Synonyme & Antonyme" loads
+[1A[2K[133/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/german/textsorten — "Textsorten: Brief & Bericht" loads
+[1A[2K[134/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/unsere-erde — "Unsere Erde & Kontinente" loads
+[1A[2K[135/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/materialien — "Materialien & ihre Eigenschaften" loads
+[1A[2K[136/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/licht-schatten — "Licht, Schatten & Magnete" loads
+[1A[2K[137/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/umwelt-nachhaltigkeit — "Umwelt & Nachhaltigkeit" loads
+[1A[2K[138/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/schweizer-geschichte — "Schweizer Geschichte" loads
+[1A[2K[139/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/demokratie — "Demokratie & Gesellschaft" loads
+[1A[2K[140/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/energie — "Energie & Strom" loads
+[1A[2K[141/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/uhr-24h-gr3 — "Uhrzeit: 24-Stunden & Zeitrechnung" loads
+[1A[2K[142/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/science/kalender-gr3 — "Kalender, Daten & Zeitspannen" loads
+[1A[2K[143/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/greetings-3 — "Greetings & Introductions" loads
+[1A[2K[144/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/numbers-3 — "Numbers 1–100" loads
+[1A[2K[145/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/colours-shapes-3 — "Colours & Shapes" loads
+[1A[2K[146/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/school-objects-3 — "School & Objects" loads
+[1A[2K[147/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/family-friends-3 — "Family & Friends" loads
+[1A[2K[148/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/animals-3 — "Animals" loads
+[1A[2K[149/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/food-drink-3 — "Food & Drink" loads
+[1A[2K[150/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/days-months-3 — "Days, Months & Seasons" loads
+[1A[2K[151/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G3/english/simple-sentences-3 — "Simple Sentences" loads
+[1A[2K[152/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/zahlen-bis-10000 — "Zahlen bis 10000" loads
+[1A[2K[153/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/einmaleins — "Das Einmaleins" loads
+[1A[2K[154/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/brueche-einfuehrung — "Brüche kennenlernen" loads
+[1A[2K[155/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/schriftl-addieren — "Schriftlich Addieren" loads
+[1A[2K[156/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/schriftl-subtrahieren — "Schriftlich Subtrahieren" loads
+[1A[2K[157/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/schriftl-multiplizieren — "Schriftlich Multiplizieren" loads
+[1A[2K[158/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/geometrie-4 — "Geometrie" loads
+[1A[2K[159/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/groessen-messen-4 — "Grössen und Messen" loads
+[1A[2K[160/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/math/textaufgaben-4 — "Textaufgaben" loads
+[1A[2K[161/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/satzglieder — "Satzglieder" loads
+[1A[2K[162/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/zeitformen-4 — "Zeitformen" loads
+[1A[2K[163/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/rechtschreibung-4 — "Rechtschreibung" loads
+[1A[2K[164/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/wortarten-4 — "Wortarten" loads
+[1A[2K[165/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/pronomen-4 — "Pronomen" loads
+[1A[2K[166/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/leseverstaendnis-4 — "Leseverständnis" loads
+[1A[2K[167/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/interpunktion-4 — "Interpunktion" loads
+[1A[2K[168/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/praepositionen-4 — "Präpositionen" loads
+[1A[2K[169/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/german/wortstamm-4 — "Wortstamm & Wortfamilien" loads
+[1A[2K[170/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/nt/koerper-gesundheit — "Körper und Gesundheit" loads
+[1A[2K[171/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/nt/lebensraeume-tiere — "Lebensräume der Tiere" loads
+[1A[2K[172/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/nt/wetter-klima — "Wetter und Klima" loads
+[1A[2K[173/812] [mobile] › tests/specs/04-exercises.spec.ts:29:9 › Exercise player — topic load › G4/nt/pflanzen-4 — "Pflanzen & Wachstum" loads
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [1A[2K[352/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-math-brueche — correct answer → positive feedback
+[1A[2K[353/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-math-textaufgaben — correct answer → positive feedback
+[1A[2K[354/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-math-flaeche-umfang — correct answer → positive feedback
+[1A[2K[355/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-math-diagramme-daten — correct answer → positive feedback
+[1A[2K[356/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-german-wortarten — correct answer → positive feedback
+[1A[2K[357/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-german-adjektive — correct answer → positive feedback
+[1A[2K[358/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-german-saetze — correct answer → positive feedback
+[1A[2K[359/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-german-leseverstaendnis — correct answer → positive feedback
+[1A[2K[360/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-german-rechtschreibung — correct answer → positive feedback
+[1A[2K[361/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-german-verben-konjugieren — correct answer → positive feedback
+[1A[2K[362/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-german-synonyme-antonyme — correct answer → positive feedback
+[1A[2K[363/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-german-textsorten — correct answer → positive feedback
+[1A[2K[364/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-unsere-erde — correct answer → positive feedback
+[1A[2K[365/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-materialien — correct answer → positive feedback
+[1A[2K[366/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-materialien — correct answer → positive feedback (retry #1)
+[1A[2K  13) [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-materialien — correct answer → positive feedback 
+
+    [31mTest timeout of 45000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 45000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button:has-text(\'Prüfen\'), button:has-text(\'Überprüfen\'), button:has-text(\'Check\')').first()[22m
+    [2m    - locator resolved to <button disabled class="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-lg hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed">Überprüfen ✓</button>[22m
+    [2m  - attempting click action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not enabled[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not enabled[22m
+    [2m    - retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m    69 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is not enabled[22m
+    [2m     - retrying click action[22m
+    [2m       - waiting 500ms[22m
+
+
+       at fixtures/exerciseHelpers.ts:151
+
+      149 |   // Click check button
+      150 |   const checkBtn = page.locator("button:has-text('Prüfen'), button:has-text('Überprüfen'), button:has-text('Check')").first();
+    > 151 |   if (await checkBtn.count() > 0) await checkBtn.click();
+          |                                                  ^
+      152 | }
+      153 |
+      154 | function reverseDropAnswers(dropAnswers: Record<string, string>): Record<string, string> {
+        at answerDragDrop (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:151:50)
+        at submitAnswer (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:44:9)
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/04-exercises.spec.ts:91:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-85354--answer-→-positive-feedback-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-85354--answer-→-positive-feedback-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-exercises-Exercis-85354--answer-→-positive-feedback-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-85354--answer-→-positive-feedback-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-exercises-Exercis-85354--answer-→-positive-feedback-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[367/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-licht-schatten — correct answer → positive feedback
+[1A[2K[368/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-umwelt-nachhaltigkeit — correct answer → positive feedback
+[1A[2K[369/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-schweizer-geschichte — correct answer → positive feedback
+[1A[2K[370/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-demokratie — correct answer → positive feedback
+[1A[2K[371/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-energie — correct answer → positive feedback
+[1A[2K[372/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-uhr-24h-gr3 — correct answer → positive feedback
+[1A[2K[373/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-science-kalender-gr3 — correct answer → positive feedback
+[1A[2K[374/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-greetings-3 — correct answer → positive feedback
+[1A[2K[375/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-numbers-3 — correct answer → positive feedback
+[1A[2K[376/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-colours-shapes-3 — correct answer → positive feedback
+[1A[2K[377/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-school-objects-3 — correct answer → positive feedback
+[1A[2K[378/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-family-friends-3 — correct answer → positive feedback
+[1A[2K[379/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-animals-3 — correct answer → positive feedback
+[1A[2K[380/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-food-drink-3 — correct answer → positive feedback
+[1A[2K[381/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-days-months-3 — correct answer → positive feedback
+[1A[2K[382/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 3-english-simple-sentences-3 — correct answer → positive feedback
+[1A[2K[383/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-zahlen-bis-10000 — correct answer → positive feedback
+[1A[2K[384/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-einmaleins — correct answer → positive feedback
+[1A[2K[385/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-brueche-einfuehrung — correct answer → positive feedback
+[1A[2K[386/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-schriftl-addieren — correct answer → positive feedback
+[1A[2K[387/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-schriftl-addieren — correct answer → positive feedback (retry #1)
+[1A[2K  14) [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-schriftl-addieren — correct answer → positive feedback 
+
+    TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])').first() to be visible[22m
+
+
+       at fixtures/exerciseHelpers.ts:110
+
+      108 |   // Wait for input to be visible with longer timeout
+      109 |   const input = page.locator("input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])").first();
+    > 110 |   await input.waitFor({ state: "visible", timeout: 15_000 });
+          |               ^
+      111 |   await page.waitForTimeout(500); // Extra buffer for rendering
+      112 |   await input.fill(answer);
+      113 |
+        at answerFillInBlank (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:110:15)
+        at submitAnswer (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:39:13)
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/04-exercises.spec.ts:91:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])').first() to be visible[22m
+
+
+       at fixtures/exerciseHelpers.ts:110
+
+      108 |   // Wait for input to be visible with longer timeout
+      109 |   const input = page.locator("input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])").first();
+    > 110 |   await input.waitFor({ state: "visible", timeout: 15_000 });
+          |               ^
+      111 |   await page.waitForTimeout(500); // Extra buffer for rendering
+      112 |   await input.fill(answer);
+      113 |
+        at answerFillInBlank (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:110:15)
+        at submitAnswer (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:39:13)
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/04-exercises.spec.ts:91:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-exercises-Exercis-fd4bb--answer-→-positive-feedback-mobile-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[388/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-schriftl-subtrahieren — correct answer → positive feedback
+[1A[2K[389/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-schriftl-subtrahieren — correct answer → positive feedback (retry #1)
+[1A[2K  15) [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-schriftl-subtrahieren — correct answer → positive feedback 
+
+    TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])').first() to be visible[22m
+
+
+       at fixtures/exerciseHelpers.ts:110
+
+      108 |   // Wait for input to be visible with longer timeout
+      109 |   const input = page.locator("input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])").first();
+    > 110 |   await input.waitFor({ state: "visible", timeout: 15_000 });
+          |               ^
+      111 |   await page.waitForTimeout(500); // Extra buffer for rendering
+      112 |   await input.fill(answer);
+      113 |
+        at answerFillInBlank (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:110:15)
+        at submitAnswer (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:39:13)
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/04-exercises.spec.ts:91:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-ce1fc--answer-→-positive-feedback-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-ce1fc--answer-→-positive-feedback-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-exercises-Exercis-ce1fc--answer-→-positive-feedback-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-ce1fc--answer-→-positive-feedback-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-exercises-Exercis-ce1fc--answer-→-positive-feedback-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[390/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-schriftl-multiplizieren — correct answer → positive feedback
+[1A[2K[391/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-geometrie-4 — correct answer → positive feedback
+[1A[2K[392/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-groessen-messen-4 — correct answer → positive feedback
+[1A[2K[393/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-textaufgaben-4 — correct answer → positive feedback
+[1A[2K[394/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-textaufgaben-4 — correct answer → positive feedback (retry #1)
+[1A[2K  16) [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-math-textaufgaben-4 — correct answer → positive feedback 
+
+    TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])').first() to be visible[22m
+
+
+       at fixtures/exerciseHelpers.ts:110
+
+      108 |   // Wait for input to be visible with longer timeout
+      109 |   const input = page.locator("input[type=text], input:not([type=email]):not([type=password]):not([type=hidden])").first();
+    > 110 |   await input.waitFor({ state: "visible", timeout: 15_000 });
+          |               ^
+      111 |   await page.waitForTimeout(500); // Extra buffer for rendering
+      112 |   await input.fill(answer);
+      113 |
+        at answerFillInBlank (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:110:15)
+        at submitAnswer (/Users/riccardogosteli/projects/cleverli/tests/fixtures/exerciseHelpers.ts:39:13)
+        at /Users/riccardogosteli/projects/cleverli/tests/specs/04-exercises.spec.ts:91:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-eca29--answer-→-positive-feedback-mobile/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-eca29--answer-→-positive-feedback-mobile/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-exercises-Exercis-eca29--answer-→-positive-feedback-mobile/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-exercises-Exercis-eca29--answer-→-positive-feedback-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-exercises-Exercis-eca29--answer-→-positive-feedback-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[395/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-german-satzglieder — correct answer → positive feedback
+[1A[2K[396/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-german-zeitformen-4 — correct answer → positive feedback
+[1A[2K[397/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-german-rechtschreibung-4 — correct answer → positive feedback
+[1A[2K[398/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-german-wortarten-4 — correct answer → positive feedback
+[1A[2K[399/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-german-pronomen-4 — correct answer → positive feedback
+[1A[2K[400/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-german-leseverstaendnis-4 — correct answer → positive feedback
+[1A[2K[401/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-german-interpunktion-4 — correct answer → positive feedback
+[1A[2K[402/812] [mobile] › tests/specs/04-exercises.spec.ts:85:9 › Exercise interactions — first exercise per topic › 4-german-praepositionen-4 — correct answer → positive feedback

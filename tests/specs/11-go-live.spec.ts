@@ -362,32 +362,17 @@ test.describe("Error handling — graceful degradation", () => {
 test.describe("Signup — onboarding flow", () => {
   test.use({ storageState: { cookies: [], origins: [] } }); // no session
 
-  test("signup page shows role selection as step 1", async ({ page }) => {
+  test("signup page shows email + password fields directly", async ({ page }) => {
     await page.goto("/signup");
     await page.waitForTimeout(1_000);
-
-    // Check for role picker elements (use separate locators — can't mix CSS + text= syntax)
-    const parentBtn = page.locator("button:has-text('Elternteil'), button:has-text('Parent')");
-    const ichBinText = page.getByText("Ich bin", { exact: false });
-
-    const hasRolePicker =
-      (await parentBtn.count()) > 0 || (await ichBinText.count()) > 0;
-
-    expect(hasRolePicker).toBe(true);
+    await expect(page.locator("input[type=email]")).toBeVisible({ timeout: 5_000 });
+    await expect(page.locator("input[type=password]")).toBeVisible({ timeout: 5_000 });
   });
 
-  test("selecting parent shows email/password form", async ({ page }) => {
+  test("signup has Anmelden link for existing users", async ({ page }) => {
     await page.goto("/signup");
     await page.waitForTimeout(1_000);
-
-    const parentBtn = page.locator(
-      "button:has-text('Elternteil'), button:has-text('Parent')"
-    ).first();
-
-    if (await parentBtn.count() > 0) {
-      await parentBtn.click();
-      await page.waitForTimeout(500);
-      await expect(page.locator("input[type=email]")).toBeVisible({ timeout: 5_000 });
-    }
+    const loginLink = page.locator("a[href='/login']");
+    await expect(loginLink.first()).toBeVisible({ timeout: 5_000 });
   });
 });

@@ -83,24 +83,26 @@ test.describe("Auth guards", () => {
 test.describe("Signup page", () => {
   test.use(LOGGED_OUT);
 
-  test("signup page renders role picker on step 1", async ({ page }) => {
+  test("signup page shows email + password fields directly", async ({ page }) => {
     await page.goto("/signup");
-    // Step 1 is a role picker — email comes after selecting "parent"
-    await expect(
-      page.locator("button:has-text('Elternteil'), button:has-text('Parent'), h1").first()
-    ).toBeVisible({ timeout: 8_000 });
+    await expect(page.locator("input[type=email]").first()).toBeVisible({ timeout: 8_000 });
+    await expect(page.locator("input[type=password]").first()).toBeVisible({ timeout: 8_000 });
   });
 
-  test("signup shows email input after selecting parent role", async ({ page }) => {
+  test("signup button disabled until email + password filled", async ({ page }) => {
     await page.goto("/signup");
-    // Click parent option to advance to registration form
-    const parentBtn = page.locator("button:has-text('Elternteil'), button:has-text('Parent')").first();
-    if (await parentBtn.count() > 0) {
-      await parentBtn.click();
-      await expect(page.locator("input[type=email]").first()).toBeVisible({ timeout: 8_000 });
-    } else {
-      // Signup might show email directly — accept either
-      await expect(page.locator("input[type=email]").first()).toBeVisible({ timeout: 8_000 });
-    }
+    const btn = page.locator("button[type=submit]").first();
+    await expect(btn).toBeDisabled({ timeout: 5_000 });
+    await page.fill("input[type=email]", "test@example.com");
+    await page.fill("input[type=password]", "test123");
+    await expect(btn).toBeEnabled({ timeout: 5_000 });
+  });
+
+  test("signup shows error on short password", async ({ page }) => {
+    await page.goto("/signup");
+    await page.fill("input[type=email]", "test@example.com");
+    await page.fill("input[type=password]", "abc");
+    const btn = page.locator("button[type=submit]").first();
+    await expect(btn).toBeDisabled({ timeout: 5_000 });
   });
 });

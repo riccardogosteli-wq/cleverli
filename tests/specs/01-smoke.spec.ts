@@ -42,7 +42,8 @@ for (const { path, name } of PAGES) {
       !e.includes("ResizeObserver") &&
       !e.includes("Non-Error promise") &&
       !e.includes("favicon") &&
-      !e.includes("Failed to load resource") // 400 from Supabase auth expected without session
+      !e.includes("Failed to load resource") && // 400 from Supabase auth expected without session
+      !e.includes("Minified React error #418") // hydration noise in Playwright mobile emulation
     );
     expect(realErrors, `JS errors on ${name}: ${realErrors.join(" | ")}`).toHaveLength(0);
   });

@@ -25,15 +25,23 @@ function readCachedSession(): Session | null {
 
 export function useSession() {
   // ✅ INSTANT init from localStorage cache — eliminates "Anmelden" flash on reload
-  // Supabase will verify & update in the background; UI shows correct state immediately.
-  const [session, setSession] = useState<Session | null>(readCachedSession);
-
-  // ✅ loaded = true immediately if we have a cached session; false if guest (need Supabase check)
-  const [loaded, setLoaded] = useState<boolean>(() => !!readCachedSession());
+  // Must start as null on server (SSR), then hydrate from localStorage on client only.
+  // This prevents React hydration mismatch (#418) caused by server/client HTML divergence.
+  const [session, setSession] = useState<Session | null>(null);
+  const [loaded, setLoaded] = useState<boolean>(false);
 
   // useRef so the auth state change callback always reads the current value (not stale closure)
   const loginInProgressRef = useRef(false);
   const setLoginInProgress = (v: boolean) => { loginInProgressRef.current = v; };
+
+  // ── Hydrate from localStorage on client mount (after SSR) ──────────────────
+  useEffect(() => {
+    const cached = readCachedSession();
+    if (cached) {
+      setSession(cached);
+      setLoaded(true);
+    }
+  }, []);
 
   useEffect(() => {
     const supabase = getSupabase();
