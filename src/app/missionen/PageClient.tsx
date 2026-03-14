@@ -239,12 +239,7 @@ export default function MissionenPage() {
     } catch { return null; }
   }, []);
 
-  if (!sessionLoaded) return (
-    <div className="flex items-center justify-center py-20">
-      <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
-    </div>
-  );
-  // Build full curriculum progress map
+  // Build full curriculum progress map — must be before any early returns
   const curriculumData = useMemo(() => {
     if (!loaded) return null;
     return SUBJECTS.map(subject => {
@@ -325,7 +320,12 @@ export default function MissionenPage() {
     return stats;
   }, [curriculumData]);
 
-  // ── Early returns AFTER all hooks ──────────────────────────────────────────
+  // ── All early returns AFTER all hooks ────────────────────────────────────
+  if (!sessionLoaded) return (
+    <div className="flex items-center justify-center py-20">
+      <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
   if (!session) return <MissionenGuestPreview />;
   if (!loaded) return <div className="animate-pulse space-y-4 p-4">{[...Array(3)].map((_, i) => <div key={i} className="h-40 bg-green-50 rounded-2xl"/>)}</div>;
 
