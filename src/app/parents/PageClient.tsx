@@ -80,14 +80,15 @@ export default function ParentsDashboard() {
   const { profile, loaded } = useProfileContext();
   const { lang, tr } = useLang();
 
+  // ⚠️ All hooks must be called unconditionally before any early returns (React rules)
+  const stats = useMemo(() => loaded ? loadAllStats() : [], [loaded]);
+
   if (!sessionLoaded) return (
     <div className="flex items-center justify-center py-20">
       <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
     </div>
   );
   if (!session) return <ParentsGuestPreview />;
-
-  const stats = useMemo(() => loaded ? loadAllStats() : [], [loaded]);
 
   const level = getLevelForXp(profile.xp);
   const levelTitle = lang === "fr" ? level.titleFr : lang === "it" ? level.titleIt : lang === "en" ? level.titleEn : level.title;

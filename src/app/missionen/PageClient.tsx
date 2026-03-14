@@ -212,13 +212,7 @@ export default function MissionenPage() {
   const { session, loaded: sessionLoaded } = useSession();
   const { profile, loaded } = useProfileContext();
   const { lang, tr } = useLang();
-
-  if (!sessionLoaded) return (
-    <div className="flex items-center justify-center py-20">
-      <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
-    </div>
-  );
-  if (!session) return <MissionenGuestPreview />;
+  // ⚠️ All hooks must be called unconditionally before any early returns (React rules)
   const [activeTab, setActiveTab] = useState<"all" | "math" | "german" | "science">("all");
 
   // Get active child's grade from family store
@@ -245,6 +239,11 @@ export default function MissionenPage() {
     } catch { return null; }
   }, []);
 
+  if (!sessionLoaded) return (
+    <div className="flex items-center justify-center py-20">
+      <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
   // Build full curriculum progress map
   const curriculumData = useMemo(() => {
     if (!loaded) return null;
@@ -302,8 +301,6 @@ export default function MissionenPage() {
   const currentLevelData = LEVELS.slice().reverse().find(l => profile.xp >= l.minXp) ?? LEVELS[0];
   const levelLabel = currentLevelData.title;
 
-  if (!loaded) return <div className="animate-pulse space-y-4 p-4">{[...Array(3)].map((_, i) => <div key={i} className="h-40 bg-green-50 rounded-2xl"/>)}</div>;
-
   const tabs = [
     { id: "all",     label: lang === "fr" ? "Tous" : lang === "it" ? "Tutti" : lang === "en" ? "All" : "Alle", emoji: "🗺️" },
     { id: "math",    label: tr("math"),    emoji: "🔢",  icon: "/images/ui/Mathematik.svg" },
@@ -327,6 +324,10 @@ export default function MissionenPage() {
     });
     return stats;
   }, [curriculumData]);
+
+  // ── Early returns AFTER all hooks ──────────────────────────────────────────
+  if (!session) return <MissionenGuestPreview />;
+  if (!loaded) return <div className="animate-pulse space-y-4 p-4">{[...Array(3)].map((_, i) => <div key={i} className="h-40 bg-green-50 rounded-2xl"/>)}</div>;
 
   return (
     <div className="max-w-2xl mx-auto px-4 pb-28 space-y-5">
