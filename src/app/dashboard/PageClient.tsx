@@ -387,6 +387,8 @@ function DashboardInner() {
   const isPremium = sessionLoaded ? sessionPremium : true; // assume premium until loaded (avoids false lock flash)
   // ✅ Grades 3–6 require premium (grade 3 was the only locked grade before — gap fixed)
   const isGrade3Locked = grade !== null && grade >= 3 && sessionLoaded && !sessionPremium;
+  // Anonymous users (not logged in) get all grade 1–2 topics unlocked so they can trial freely
+  const isAnonymousUser = sessionLoaded && !session;
 
   const handleBack = () => {
     if (preselectedSubject) setGrade(null);
@@ -558,7 +560,8 @@ function DashboardInner() {
               const stars = prog?.stars ?? 0;
               const done = stars > 0;
               const prevProg = i > 0 ? getProgress(grade, subject, topics[i - 1].id) : null;
-              const isUnlocked = i === 0 || isGrade3Locked || (prevProg?.stars ?? 0) >= 1;
+              // Anonymous users get all topics unlocked (grades 1–2 only) so they can trial freely
+              const isUnlocked = i === 0 || isAnonymousUser || isGrade3Locked || (prevProg?.stars ?? 0) >= 1;
               const isLocked = !isUnlocked;
               const isCurrent = i === firstCurrentIdx;
               const iconBg = currentSubjectMeta?.iconBg ?? "bg-green-100";
