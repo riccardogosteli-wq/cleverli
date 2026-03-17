@@ -15,16 +15,25 @@ export async function POST(req: NextRequest) {
     const text = await req.text();
 
     // Verify Payrexx webhook signature
+    // Note: all sites share the same Payrexx instance (cleverli) — other sites' webhooks
+    // also fire here. If signature doesn't match, check if it's a non-Cleverli transaction
+    // and silently acknowledge it rather than returning 401.
     if (SIGNING_KEY) {
       const sig = req.headers.get("payrexx-signature") ?? req.headers.get("x-payrexx-signature") ?? "";
-      if (!sig) {
-        console.warn("[payrexx-webhook] missing signature header");
-        return NextResponse.json({ error: "missing_signature" }, { status: 401 });
-      }
       const { createHmac } = await import("crypto");
       const expected = createHmac("sha256", SIGNING_KEY).update(text).digest("hex");
-      if (sig !== expected) {
-        console.warn("[payrexx-webhook] invalid signature");
+      if (!sig || sig !== expected) {
+        // Check if this is a non-Cleverli transaction (different referenceId format)
+        try {
+          const preview = JSON.parse(text);
+          const txnRef = String((preview?.transaction ?? preview)?.referenceId ?? "");
+          const isCleverli = txnRef.startsWith("monthly:") || txnRef.startsWith("yearly:");
+          if (!isCleverli) {
+            // Not our transaction — acknowledge silently
+            return NextResponse.json({ ok: true, ignored: true });
+          }
+        } catch { /* fall through to 401 */ }
+        console.warn("[payrexx-webhook] invalid/missing signature for cleverli transaction");
         return NextResponse.json({ error: "invalid_signature" }, { status: 401 });
       }
     }

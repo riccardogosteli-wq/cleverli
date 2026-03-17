@@ -64,7 +64,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const uid = session?.userId ?? "";
   const checkoutUrl = (plan: "monthly" | "yearly") =>
     `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
-  const FREE_LIMIT = 5;
+  const FREE_LIMIT = 10; // raised from 5 → 10 to reduce signup friction for new users
   // Select a rotated pool of exercises — different each session if pool > 10
   const [exercises, setExercises] = useState(() => selectExercises(topic.id, topic.exercises));
   const [isReviewMode, setIsReviewMode] = useState(false);
@@ -227,7 +227,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       setAnonExerciseCount(newCount);
       localStorage.setItem("cleverli_anon_exercises", String(newCount));
       
-      if (newCount >= 5 && !localStorage.getItem("cleverli_signup_dismissed")) {
+      if (newCount >= FREE_LIMIT && !localStorage.getItem("cleverli_signup_dismissed")) {
         setTimeout(() => setShowSignupPrompt(true), 1000);
       }
     }
@@ -408,6 +408,34 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   // ── Locked (free limit reached) ──────────────────────────────────
   if (isLocked) {
+    // Anonymous users: show signup CTA, not the premium paywall
+    if (isAnonymous) {
+      return (
+        <div className="text-center space-y-5 py-8 max-w-sm mx-auto">
+          <Image src="/cleverli-wave.png" alt="Cleverli" width={110} height={110} className="mx-auto drop-shadow-md animate-cleverli-jump" />
+          <h2 className="text-xl font-bold text-gray-800">
+            {lang === "fr" ? "Tu as terminé les exercices gratuits 🎉" : lang === "it" ? "Hai completato gli esercizi gratuiti 🎉" : lang === "en" ? "You've completed the free exercises 🎉" : "Du hast die kostenlosen Übungen abgeschlossen 🎉"}
+          </h2>
+          <p className="text-gray-500 text-sm">
+            {lang === "fr" ? "Crée un compte gratuit pour continuer — garde ta progression et débloque plus d'exercices." : lang === "it" ? "Crea un account gratuito per continuare — salva i tuoi progressi e sblocca altri esercizi." : lang === "en" ? "Create a free account to continue — save your progress and unlock more exercises." : "Erstelle ein kostenloses Konto zum Weitermachen — dein Fortschritt wird gespeichert und du schaltest mehr Übungen frei."}
+          </p>
+          <div className="flex flex-col gap-3 w-full max-w-xs mx-auto">
+            <Link href="/signup"
+              className="block text-center bg-green-700 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 active:scale-95 transition-all shadow-md text-base">
+              🎉 {lang === "fr" ? "Compte gratuit créer" : lang === "it" ? "Crea account gratuito" : lang === "en" ? "Create free account" : "Kostenloses Konto erstellen"}
+            </Link>
+            <Link href="/login"
+              className="block text-center border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
+              {lang === "fr" ? "J'ai déjà un compte" : lang === "it" ? "Ho già un account" : lang === "en" ? "I already have an account" : "Ich habe bereits ein Konto"}
+            </Link>
+          </div>
+          <p className="text-xs text-gray-400">
+            {lang === "fr" ? "Gratuit pour toujours · pas de carte de crédit" : lang === "it" ? "Sempre gratuito · nessuna carta di credito" : lang === "en" ? "Free forever · no credit card" : "Für immer gratis · keine Kreditkarte"}
+          </p>
+        </div>
+      );
+    }
+
     return (
       <div className="text-center space-y-4 py-8 max-w-sm mx-auto">
         <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={110} height={110} className="mx-auto drop-shadow-md" />
