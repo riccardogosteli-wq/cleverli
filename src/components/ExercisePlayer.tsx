@@ -40,6 +40,32 @@ function calcStars(score: number, total: number) {
   return 1;
 }
 
+// ── Translation helper ────────────────────────────────────────────────────────
+function localiseExercise(ex: import("@/types/exercise").Exercise, lang: string) {
+  if (lang === "en") return {
+    ...ex,
+    question: ex.questionEN ?? ex.question,
+    hints:    ex.hintsEN   ?? ex.hints,
+    options:  ex.optionsEN ?? ex.options,
+    answer:   ex.answerEN  ?? ex.answer,
+  };
+  if (lang === "fr") return {
+    ...ex,
+    question: ex.questionFR ?? ex.question,
+    hints:    ex.hintsFR   ?? ex.hints,
+    options:  ex.optionsFR ?? ex.options,
+    answer:   ex.answerFR  ?? ex.answer,
+  };
+  if (lang === "it") return {
+    ...ex,
+    question: ex.questionIT ?? ex.question,
+    hints:    ex.hintsIT   ?? ex.hints,
+    options:  ex.optionsIT ?? ex.options,
+    answer:   ex.answerIT  ?? ex.answer,
+  };
+  return ex; // default: German
+}
+
 export default function ExercisePlayer({ topic, grade, subject, isPremium = false, allTopics = [], topicIndex = 0 }: Props) {
   const router = useRouter();
   const { speak, stop, isSupported } = useVoice();
@@ -91,7 +117,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const nextTopic = allTopics[topicIndex + 1] ?? null;
   const rewardRef = useRef<HTMLDivElement>(null);
 
-  const current: Exercise = exercises[idx];
+  const current: Exercise = localiseExercise(exercises[idx], lang);
   const isLocked = !isPremium && idx >= FREE_LIMIT;
   
   // Calculate progress bar display: show position within current tier (not across all exercises)
