@@ -1,0 +1,2210 @@
+[
+  {
+    "grade": 2,
+    "subject": "german",
+    "cycleLabel": "Zyklus 1",
+    "cycleParentLabel": "Kindergarten & 1.–2. Klasse",
+    "lp21Kompetenzen": [
+      {
+        "uid": "D-1-A-1",
+        "code": "D.1.A.1",
+        "bezeichnung": "Buchstaben und Laute kennen",
+        "zyklus": 1,
+        "stufe": "1a",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-1-B-1",
+        "code": "D.1.B.1",
+        "bezeichnung": "Einfache Texte lesen und verstehen",
+        "zyklus": 1,
+        "stufe": "1b",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-1-C-1",
+        "code": "D.1.C.1",
+        "bezeichnung": "Wörter korrekt schreiben (Rechtschreibung)",
+        "zyklus": 1,
+        "stufe": "1c",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-A-1",
+        "code": "D.2.A.1",
+        "bezeichnung": "Grammatik: Wortarten bestimmen",
+        "zyklus": 1,
+        "stufe": "2a",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-B-1",
+        "code": "D.2.B.1",
+        "bezeichnung": "Texte verfassen und überarbeiten",
+        "zyklus": 1,
+        "stufe": "2b",
+        "fachbereich": "D"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "nomen-artikel",
+        "title": "Nomen mit Artikel",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      },
+      {
+        "id": "n2",
+        "title": "Verben",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      },
+      {
+        "id": "v2",
+        "title": "Silben zählen",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      },
+      {
+        "id": "s2",
+        "title": "Adjektive einsetzen",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      },
+      {
+        "id": "ag2",
+        "title": "Satzzeichen",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      },
+      {
+        "id": "sz2",
+        "title": "Texte lesen",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      },
+      {
+        "id": "tl2",
+        "title": "Einzahl & Mehrzahl",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      },
+      {
+        "id": "sp2",
+        "title": "Wortfamilien & Wortstamm",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      },
+      {
+        "id": "wf2",
+        "title": "Personalpronomen",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "german"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "D.1.A.1: Buchstaben und Laute kennen...",
+      "D.1.B.1: Einfache Texte lesen und verstehen...",
+      "D.1.C.1: Wörter korrekt schreiben (Rechtschreibung)...",
+      "D.2.A.1: Grammatik: Wortarten bestimmen...",
+      "D.2.B.1: Texte verfassen und überarbeiten..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 D.1.A.1",
+      "Add topic for LP21 D.1.B.1",
+      "Add topic for LP21 D.1.C.1",
+      "Add topic for LP21 D.2.A.1",
+      "Add topic for LP21 D.2.B.1"
+    ]
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "cycleLabel": "Zyklus 1",
+    "cycleParentLabel": "Kindergarten & 1.–2. Klasse",
+    "lp21Kompetenzen": [
+      {
+        "uid": "NMG-1-1",
+        "code": "NMG.1.1",
+        "bezeichnung": "Tiere und Pflanzen in der Umgebung beobachten",
+        "zyklus": 1,
+        "stufe": "1a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-2-1",
+        "code": "NMG.2.1",
+        "bezeichnung": "Den eigenen Körper kennen und beschreiben",
+        "zyklus": 1,
+        "stufe": "1b",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-3-1",
+        "code": "NMG.3.1",
+        "bezeichnung": "Jahreszeiten und Wetter erleben",
+        "zyklus": 1,
+        "stufe": "1c",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-4-1",
+        "code": "NMG.4.1",
+        "bezeichnung": "Familie, Gemeinschaft und soziales Umfeld",
+        "zyklus": 1,
+        "stufe": "2a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-5-1",
+        "code": "NMG.5.1",
+        "bezeichnung": "Räume und Orte erkunden (Schweiz, Welt)",
+        "zyklus": 1,
+        "stufe": "2b",
+        "fachbereich": "NMG"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "lebewesen",
+        "title": "Was lebt — was nicht?",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "science"
+      },
+      {
+        "id": "hund",
+        "title": "Wasser & Aggregatzustände",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "science"
+      },
+      {
+        "id": "w2",
+        "title": "Gesunde Ernährung",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "science"
+      },
+      {
+        "id": "gemuese",
+        "title": "Lebensräume der Tiere",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "science"
+      },
+      {
+        "id": "loewe",
+        "title": "Die Schweiz",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "science"
+      },
+      {
+        "id": "ch2",
+        "title": "Berufe & Arbeit",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "science"
+      },
+      {
+        "id": "b2",
+        "title": "Uhrzeit: Viertel & Halb",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "science"
+      },
+      {
+        "id": "uv2",
+        "title": "Kalender & Datum",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "science"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "NMG.1.1: Tiere und Pflanzen in der Umgebung beobachten...",
+      "NMG.2.1: Den eigenen Körper kennen und beschreiben...",
+      "NMG.3.1: Jahreszeiten und Wetter erleben...",
+      "NMG.4.1: Familie, Gemeinschaft und soziales Umfeld...",
+      "NMG.5.1: Räume und Orte erkunden (Schweiz, Welt)..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 NMG.1.1",
+      "Add topic for LP21 NMG.2.1",
+      "Add topic for LP21 NMG.3.1",
+      "Add topic for LP21 NMG.4.1",
+      "Add topic for LP21 NMG.5.1"
+    ]
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "NMG-4-1",
+        "code": "NMG.4.1",
+        "bezeichnung": "Familie, Gemeinschaft und soziales Umfeld",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-5-1",
+        "code": "NMG.5.1",
+        "bezeichnung": "Räume und Orte erkunden (Schweiz, Welt)",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-6-1",
+        "code": "NMG.6.1",
+        "bezeichnung": "Zeit und Geschichte verstehen",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-7-1",
+        "code": "NMG.7.1",
+        "bezeichnung": "Wirtschaft und Konsum verstehen",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-8-1",
+        "code": "NMG.8.1",
+        "bezeichnung": "Phänomene der Natur untersuchen",
+        "zyklus": 2,
+        "stufe": "3b",
+        "fachbereich": "NMG"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "unsere-erde",
+        "title": "Unsere Erde & Kontinente",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      },
+      {
+        "id": "e2",
+        "title": "Materialien & ihre Eigenschaften",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      },
+      {
+        "id": "tisch",
+        "title": "Licht, Schatten & Magnete",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      },
+      {
+        "id": "ls2",
+        "title": "Umwelt & Nachhaltigkeit",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      },
+      {
+        "id": "zeitung",
+        "title": "Schweizer Geschichte",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      },
+      {
+        "id": "sg2",
+        "title": "Demokratie & Gesellschaft",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      },
+      {
+        "id": "d2",
+        "title": "Energie & Strom",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      },
+      {
+        "id": "en2",
+        "title": "Uhrzeit: 24-Stunden & Zeitrechnung",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      },
+      {
+        "id": "u24h2",
+        "title": "Kalender, Daten & Zeitspannen",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "science"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "NMG.4.1: Familie, Gemeinschaft und soziales Umfeld...",
+      "NMG.5.1: Räume und Orte erkunden (Schweiz, Welt)...",
+      "NMG.6.1: Zeit und Geschichte verstehen...",
+      "NMG.7.1: Wirtschaft und Konsum verstehen...",
+      "NMG.8.1: Phänomene der Natur untersuchen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 NMG.4.1",
+      "Add topic for LP21 NMG.5.1",
+      "Add topic for LP21 NMG.6.1",
+      "Add topic for LP21 NMG.7.1",
+      "Add topic for LP21 NMG.8.1"
+    ]
+  },
+  {
+    "grade": 4,
+    "subject": "german",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "D-2-A-1",
+        "code": "D.2.A.1",
+        "bezeichnung": "Grammatik: Wortarten bestimmen",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-B-1",
+        "code": "D.2.B.1",
+        "bezeichnung": "Texte verfassen und überarbeiten",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-C-1",
+        "code": "D.2.C.1",
+        "bezeichnung": "Satzstrukturen verstehen",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-3-A-1",
+        "code": "D.3.A.1",
+        "bezeichnung": "Literarische Texte lesen und interpretieren",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "D"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "satzglieder",
+        "title": "Satzglieder",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      },
+      {
+        "id": "g4d2",
+        "title": "Zeitformen",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      },
+      {
+        "id": "g4d12",
+        "title": "Rechtschreibung",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      },
+      {
+        "id": "g4d22",
+        "title": "Wortarten",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      },
+      {
+        "id": "wa4_2",
+        "title": "Pronomen",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      },
+      {
+        "id": "pr4_2",
+        "title": "Leseverständnis",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      },
+      {
+        "id": "lv4_2",
+        "title": "Interpunktion",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      },
+      {
+        "id": "ip4_2",
+        "title": "Präpositionen",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      },
+      {
+        "id": "pp4_2",
+        "title": "Wortstamm & Wortfamilien",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "german"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "D.2.A.1: Grammatik: Wortarten bestimmen...",
+      "D.2.B.1: Texte verfassen und überarbeiten...",
+      "D.2.C.1: Satzstrukturen verstehen...",
+      "D.3.A.1: Literarische Texte lesen und interpretieren..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 D.2.A.1",
+      "Add topic for LP21 D.2.B.1",
+      "Add topic for LP21 D.2.C.1",
+      "Add topic for LP21 D.3.A.1"
+    ]
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "NMG-4-1",
+        "code": "NMG.4.1",
+        "bezeichnung": "Familie, Gemeinschaft und soziales Umfeld",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-5-1",
+        "code": "NMG.5.1",
+        "bezeichnung": "Räume und Orte erkunden (Schweiz, Welt)",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-6-1",
+        "code": "NMG.6.1",
+        "bezeichnung": "Zeit und Geschichte verstehen",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-7-1",
+        "code": "NMG.7.1",
+        "bezeichnung": "Wirtschaft und Konsum verstehen",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-8-1",
+        "code": "NMG.8.1",
+        "bezeichnung": "Phänomene der Natur untersuchen",
+        "zyklus": 2,
+        "stufe": "3b",
+        "fachbereich": "NMG"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "koerper-gesundheit",
+        "title": "Körper und Gesundheit",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "science"
+      },
+      {
+        "id": "g4s2",
+        "title": "Lebensräume der Tiere",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "science"
+      },
+      {
+        "id": "g4s12",
+        "title": "Wetter und Klima",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "science"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "NMG.4.1: Familie, Gemeinschaft und soziales Umfeld...",
+      "NMG.5.1: Räume und Orte erkunden (Schweiz, Welt)...",
+      "NMG.6.1: Zeit und Geschichte verstehen...",
+      "NMG.7.1: Wirtschaft und Konsum verstehen...",
+      "NMG.8.1: Phänomene der Natur untersuchen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 NMG.4.1",
+      "Add topic for LP21 NMG.5.1",
+      "Add topic for LP21 NMG.6.1",
+      "Add topic for LP21 NMG.7.1",
+      "Add topic for LP21 NMG.8.1"
+    ]
+  },
+  {
+    "grade": 5,
+    "subject": "german",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "D-2-A-1",
+        "code": "D.2.A.1",
+        "bezeichnung": "Grammatik: Wortarten bestimmen",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-B-1",
+        "code": "D.2.B.1",
+        "bezeichnung": "Texte verfassen und überarbeiten",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-C-1",
+        "code": "D.2.C.1",
+        "bezeichnung": "Satzstrukturen verstehen",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-3-A-1",
+        "code": "D.3.A.1",
+        "bezeichnung": "Literarische Texte lesen und interpretieren",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "D"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "direkte-rede",
+        "title": "Direkte Rede",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      },
+      {
+        "id": "g5d2",
+        "title": "Synonyme und Antonyme",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      },
+      {
+        "id": "g5d12",
+        "title": "Aufsatz schreiben",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      },
+      {
+        "id": "g5d22",
+        "title": "Wortarten vertiefen",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      },
+      {
+        "id": "wa5-2",
+        "title": "Zeitformen",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      },
+      {
+        "id": "zf5-2",
+        "title": "Satzarten & Satzglieder",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      },
+      {
+        "id": "sa5-2",
+        "title": "Rechtschreibung",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      },
+      {
+        "id": "rs5-2",
+        "title": "Leseverständnis",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      },
+      {
+        "id": "lv5-2",
+        "title": "Textsorten",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "german"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "D.2.A.1: Grammatik: Wortarten bestimmen...",
+      "D.2.B.1: Texte verfassen und überarbeiten...",
+      "D.2.C.1: Satzstrukturen verstehen...",
+      "D.3.A.1: Literarische Texte lesen und interpretieren..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 D.2.A.1",
+      "Add topic for LP21 D.2.B.1",
+      "Add topic for LP21 D.2.C.1",
+      "Add topic for LP21 D.3.A.1"
+    ]
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "NMG-4-1",
+        "code": "NMG.4.1",
+        "bezeichnung": "Familie, Gemeinschaft und soziales Umfeld",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-5-1",
+        "code": "NMG.5.1",
+        "bezeichnung": "Räume und Orte erkunden (Schweiz, Welt)",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-6-1",
+        "code": "NMG.6.1",
+        "bezeichnung": "Zeit und Geschichte verstehen",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-7-1",
+        "code": "NMG.7.1",
+        "bezeichnung": "Wirtschaft und Konsum verstehen",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-8-1",
+        "code": "NMG.8.1",
+        "bezeichnung": "Phänomene der Natur untersuchen",
+        "zyklus": 2,
+        "stufe": "3b",
+        "fachbereich": "NMG"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "oekosysteme",
+        "title": "Ökosysteme",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "science"
+      },
+      {
+        "id": "g5s2",
+        "title": "Unser Sonnensystem",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "science"
+      },
+      {
+        "id": "g5s12",
+        "title": "Strom und Energie",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "science"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "NMG.4.1: Familie, Gemeinschaft und soziales Umfeld...",
+      "NMG.5.1: Räume und Orte erkunden (Schweiz, Welt)...",
+      "NMG.6.1: Zeit und Geschichte verstehen...",
+      "NMG.7.1: Wirtschaft und Konsum verstehen...",
+      "NMG.8.1: Phänomene der Natur untersuchen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 NMG.4.1",
+      "Add topic for LP21 NMG.5.1",
+      "Add topic for LP21 NMG.6.1",
+      "Add topic for LP21 NMG.7.1",
+      "Add topic for LP21 NMG.8.1"
+    ]
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "D-2-A-1",
+        "code": "D.2.A.1",
+        "bezeichnung": "Grammatik: Wortarten bestimmen",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-B-1",
+        "code": "D.2.B.1",
+        "bezeichnung": "Texte verfassen und überarbeiten",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-C-1",
+        "code": "D.2.C.1",
+        "bezeichnung": "Satzstrukturen verstehen",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-3-A-1",
+        "code": "D.3.A.1",
+        "bezeichnung": "Literarische Texte lesen und interpretieren",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "D"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "kasus",
+        "title": "Kasus: Nominativ, Akkusativ, Dativ",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      },
+      {
+        "id": "g6d2",
+        "title": "Textsorten",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      },
+      {
+        "id": "g6d12",
+        "title": "Rechtschreibstrategien",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      },
+      {
+        "id": "g6d22",
+        "title": "Wortarten — Überblick",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      },
+      {
+        "id": "g6wa2",
+        "title": "Grammatik vertieft",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      },
+      {
+        "id": "g6gr2",
+        "title": "Argumentation & Erörterung",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      },
+      {
+        "id": "g6ar2",
+        "title": "Leseverständnis",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      },
+      {
+        "id": "g6lv2",
+        "title": "Sprache im Wandel",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      },
+      {
+        "id": "g6spw2",
+        "title": "Literatur & Stilmittel",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "german"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "D.2.A.1: Grammatik: Wortarten bestimmen...",
+      "D.2.B.1: Texte verfassen und überarbeiten...",
+      "D.2.C.1: Satzstrukturen verstehen...",
+      "D.3.A.1: Literarische Texte lesen und interpretieren..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 D.2.A.1",
+      "Add topic for LP21 D.2.B.1",
+      "Add topic for LP21 D.2.C.1",
+      "Add topic for LP21 D.3.A.1"
+    ]
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "NMG-4-1",
+        "code": "NMG.4.1",
+        "bezeichnung": "Familie, Gemeinschaft und soziales Umfeld",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-5-1",
+        "code": "NMG.5.1",
+        "bezeichnung": "Räume und Orte erkunden (Schweiz, Welt)",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-6-1",
+        "code": "NMG.6.1",
+        "bezeichnung": "Zeit und Geschichte verstehen",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-7-1",
+        "code": "NMG.7.1",
+        "bezeichnung": "Wirtschaft und Konsum verstehen",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-8-1",
+        "code": "NMG.8.1",
+        "bezeichnung": "Phänomene der Natur untersuchen",
+        "zyklus": 2,
+        "stufe": "3b",
+        "fachbereich": "NMG"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "schweiz-geografie",
+        "title": "Schweiz: Geografie",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "science"
+      },
+      {
+        "id": "g6s2",
+        "title": "Das Mittelalter",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "science"
+      },
+      {
+        "id": "g6s12",
+        "title": "Aggregatzustände",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "science"
+      }
+    ],
+    "coverage": 0,
+    "gaps": [
+      "NMG.4.1: Familie, Gemeinschaft und soziales Umfeld...",
+      "NMG.5.1: Räume und Orte erkunden (Schweiz, Welt)...",
+      "NMG.6.1: Zeit und Geschichte verstehen...",
+      "NMG.7.1: Wirtschaft und Konsum verstehen...",
+      "NMG.8.1: Phänomene der Natur untersuchen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 NMG.4.1",
+      "Add topic for LP21 NMG.5.1",
+      "Add topic for LP21 NMG.6.1",
+      "Add topic for LP21 NMG.7.1",
+      "Add topic for LP21 NMG.8.1"
+    ]
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "MA-1-B-2",
+        "code": "MA.1.B.2",
+        "bezeichnung": "Multiplikation und Division einführen",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-C-1",
+        "code": "MA.1.C.1",
+        "bezeichnung": "Geometrische Formen erkennen und benennen",
+        "zyklus": 2,
+        "stufe": "1a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-D-1",
+        "code": "MA.1.D.1",
+        "bezeichnung": "Messen und Schätzen (Länge, Gewicht, Zeit)",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-A-1",
+        "code": "MA.2.A.1",
+        "bezeichnung": "Natürliche Zahlen bis 1 Million",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-B-1",
+        "code": "MA.2.B.1",
+        "bezeichnung": "Schriftliche Rechenverfahren anwenden",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-C-1",
+        "code": "MA.2.C.1",
+        "bezeichnung": "Brüche und Dezimalzahlen verstehen",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-3-A-1",
+        "code": "MA.3.A.1",
+        "bezeichnung": "Proportionale Zusammenhänge erkennen",
+        "zyklus": 2,
+        "stufe": "3b",
+        "fachbereich": "MA"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "zahlen-bis-1000",
+        "title": "Zahlen bis 1000",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "z2k",
+        "title": "Rechnen bis 1000",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "r2k",
+        "title": "Geometrie",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "geo2",
+        "title": "Einmaleins komplett",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "e2",
+        "title": "Division",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "d2b",
+        "title": "Brüche",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "br2",
+        "title": "Textaufgaben",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "t2",
+        "title": "Fläche & Umfang",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "f2",
+        "title": "Daten & Diagramme",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      },
+      {
+        "id": "d2",
+        "title": "Schriftlich Rechnen",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "math"
+      }
+    ],
+    "coverage": 14,
+    "gaps": [
+      "MA.1.B.2: Multiplikation und Division einführen...",
+      "MA.1.C.1: Geometrische Formen erkennen und benennen...",
+      "MA.1.D.1: Messen und Schätzen (Länge, Gewicht, Zeit)...",
+      "MA.2.B.1: Schriftliche Rechenverfahren anwenden...",
+      "MA.2.C.1: Brüche und Dezimalzahlen verstehen...",
+      "MA.3.A.1: Proportionale Zusammenhänge erkennen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 MA.1.B.2",
+      "Add topic for LP21 MA.1.C.1",
+      "Add topic for LP21 MA.1.D.1",
+      "Add topic for LP21 MA.2.B.1",
+      "Add topic for LP21 MA.2.C.1"
+    ]
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "MA-1-B-2",
+        "code": "MA.1.B.2",
+        "bezeichnung": "Multiplikation und Division einführen",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-C-1",
+        "code": "MA.1.C.1",
+        "bezeichnung": "Geometrische Formen erkennen und benennen",
+        "zyklus": 2,
+        "stufe": "1a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-D-1",
+        "code": "MA.1.D.1",
+        "bezeichnung": "Messen und Schätzen (Länge, Gewicht, Zeit)",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-A-1",
+        "code": "MA.2.A.1",
+        "bezeichnung": "Natürliche Zahlen bis 1 Million",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-B-1",
+        "code": "MA.2.B.1",
+        "bezeichnung": "Schriftliche Rechenverfahren anwenden",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-C-1",
+        "code": "MA.2.C.1",
+        "bezeichnung": "Brüche und Dezimalzahlen verstehen",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-3-A-1",
+        "code": "MA.3.A.1",
+        "bezeichnung": "Proportionale Zusammenhänge erkennen",
+        "zyklus": 2,
+        "stufe": "3b",
+        "fachbereich": "MA"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "zahlen-bis-10000",
+        "title": "Zahlen bis 10000",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      },
+      {
+        "id": "g4m2",
+        "title": "Das Einmaleins",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      },
+      {
+        "id": "g4m12",
+        "title": "Brüche kennenlernen",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      },
+      {
+        "id": "g4m22",
+        "title": "Schriftlich Addieren",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      },
+      {
+        "id": "sa2",
+        "title": "Schriftlich Subtrahieren",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      },
+      {
+        "id": "ss2",
+        "title": "Schriftlich Multiplizieren",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      },
+      {
+        "id": "sm2",
+        "title": "Geometrie",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      },
+      {
+        "id": "ge4_2",
+        "title": "Grössen und Messen",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      },
+      {
+        "id": "gm4_2",
+        "title": "Textaufgaben",
+        "exerciseCount": 1,
+        "grade": 4,
+        "subject": "math"
+      }
+    ],
+    "coverage": 14,
+    "gaps": [
+      "MA.1.B.2: Multiplikation und Division einführen...",
+      "MA.1.C.1: Geometrische Formen erkennen und benennen...",
+      "MA.1.D.1: Messen und Schätzen (Länge, Gewicht, Zeit)...",
+      "MA.2.B.1: Schriftliche Rechenverfahren anwenden...",
+      "MA.2.C.1: Brüche und Dezimalzahlen verstehen...",
+      "MA.3.A.1: Proportionale Zusammenhänge erkennen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 MA.1.B.2",
+      "Add topic for LP21 MA.1.C.1",
+      "Add topic for LP21 MA.1.D.1",
+      "Add topic for LP21 MA.2.B.1",
+      "Add topic for LP21 MA.2.C.1"
+    ]
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "MA-1-B-2",
+        "code": "MA.1.B.2",
+        "bezeichnung": "Multiplikation und Division einführen",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-C-1",
+        "code": "MA.1.C.1",
+        "bezeichnung": "Geometrische Formen erkennen und benennen",
+        "zyklus": 2,
+        "stufe": "1a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-D-1",
+        "code": "MA.1.D.1",
+        "bezeichnung": "Messen und Schätzen (Länge, Gewicht, Zeit)",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-A-1",
+        "code": "MA.2.A.1",
+        "bezeichnung": "Natürliche Zahlen bis 1 Million",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-B-1",
+        "code": "MA.2.B.1",
+        "bezeichnung": "Schriftliche Rechenverfahren anwenden",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-C-1",
+        "code": "MA.2.C.1",
+        "bezeichnung": "Brüche und Dezimalzahlen verstehen",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-3-A-1",
+        "code": "MA.3.A.1",
+        "bezeichnung": "Proportionale Zusammenhänge erkennen",
+        "zyklus": 2,
+        "stufe": "3b",
+        "fachbereich": "MA"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "negative-zahlen",
+        "title": "Negative Zahlen",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      },
+      {
+        "id": "g6m2",
+        "title": "Prozent und Brüche",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      },
+      {
+        "id": "g6m12",
+        "title": "Einfache Gleichungen",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      },
+      {
+        "id": "g6m22",
+        "title": "Verhältnisse & Proportionen",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      },
+      {
+        "id": "g6vh2",
+        "title": "Geometrie",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      },
+      {
+        "id": "g6geo2",
+        "title": "Statistik",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      },
+      {
+        "id": "g6stat2",
+        "title": "Wahrscheinlichkeit",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      },
+      {
+        "id": "g6wk2",
+        "title": "Flächen & Körper",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      },
+      {
+        "id": "g6fk2",
+        "title": "Textaufgaben",
+        "exerciseCount": 1,
+        "grade": 6,
+        "subject": "math"
+      }
+    ],
+    "coverage": 14,
+    "gaps": [
+      "MA.1.B.2: Multiplikation und Division einführen...",
+      "MA.1.C.1: Geometrische Formen erkennen und benennen...",
+      "MA.1.D.1: Messen und Schätzen (Länge, Gewicht, Zeit)...",
+      "MA.2.B.1: Schriftliche Rechenverfahren anwenden...",
+      "MA.2.C.1: Brüche und Dezimalzahlen verstehen...",
+      "MA.3.A.1: Proportionale Zusammenhänge erkennen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 MA.1.B.2",
+      "Add topic for LP21 MA.1.C.1",
+      "Add topic for LP21 MA.1.D.1",
+      "Add topic for LP21 MA.2.B.1",
+      "Add topic for LP21 MA.2.C.1"
+    ]
+  },
+  {
+    "grade": 1,
+    "subject": "german",
+    "cycleLabel": "Zyklus 1",
+    "cycleParentLabel": "Kindergarten & 1.–2. Klasse",
+    "lp21Kompetenzen": [
+      {
+        "uid": "D-1-A-1",
+        "code": "D.1.A.1",
+        "bezeichnung": "Buchstaben und Laute kennen",
+        "zyklus": 1,
+        "stufe": "1a",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-1-B-1",
+        "code": "D.1.B.1",
+        "bezeichnung": "Einfache Texte lesen und verstehen",
+        "zyklus": 1,
+        "stufe": "1b",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-1-C-1",
+        "code": "D.1.C.1",
+        "bezeichnung": "Wörter korrekt schreiben (Rechtschreibung)",
+        "zyklus": 1,
+        "stufe": "1c",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-A-1",
+        "code": "D.2.A.1",
+        "bezeichnung": "Grammatik: Wortarten bestimmen",
+        "zyklus": 1,
+        "stufe": "2a",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-B-1",
+        "code": "D.2.B.1",
+        "bezeichnung": "Texte verfassen und überarbeiten",
+        "zyklus": 1,
+        "stufe": "2b",
+        "fachbereich": "D"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "buchstaben",
+        "title": "Buchstaben",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      },
+      {
+        "id": "b2",
+        "title": "Einfache Wörter",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      },
+      {
+        "id": "ew2",
+        "title": "Gross- und Kleinschreibung",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      },
+      {
+        "id": "gk2",
+        "title": "Reimwörter",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      },
+      {
+        "id": "r2",
+        "title": "ABC & Reihenfolge",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      },
+      {
+        "id": "abc2",
+        "title": "Sätze lesen",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      },
+      {
+        "id": "sl2",
+        "title": "Vokale & Konsonanten",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      },
+      {
+        "id": "vk2",
+        "title": "Silben klatschen",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      },
+      {
+        "id": "sk2",
+        "title": "ie und ei richtig schreiben",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "german"
+      }
+    ],
+    "coverage": 20,
+    "gaps": [
+      "D.1.B.1: Einfache Texte lesen und verstehen...",
+      "D.1.C.1: Wörter korrekt schreiben (Rechtschreibung)...",
+      "D.2.A.1: Grammatik: Wortarten bestimmen...",
+      "D.2.B.1: Texte verfassen und überarbeiten..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 D.1.B.1",
+      "Add topic for LP21 D.1.C.1",
+      "Add topic for LP21 D.2.A.1",
+      "Add topic for LP21 D.2.B.1"
+    ]
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "cycleLabel": "Zyklus 1",
+    "cycleParentLabel": "Kindergarten & 1.–2. Klasse",
+    "lp21Kompetenzen": [
+      {
+        "uid": "NMG-1-1",
+        "code": "NMG.1.1",
+        "bezeichnung": "Tiere und Pflanzen in der Umgebung beobachten",
+        "zyklus": 1,
+        "stufe": "1a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-2-1",
+        "code": "NMG.2.1",
+        "bezeichnung": "Den eigenen Körper kennen und beschreiben",
+        "zyklus": 1,
+        "stufe": "1b",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-3-1",
+        "code": "NMG.3.1",
+        "bezeichnung": "Jahreszeiten und Wetter erleben",
+        "zyklus": 1,
+        "stufe": "1c",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-4-1",
+        "code": "NMG.4.1",
+        "bezeichnung": "Familie, Gemeinschaft und soziales Umfeld",
+        "zyklus": 1,
+        "stufe": "2a",
+        "fachbereich": "NMG"
+      },
+      {
+        "uid": "NMG-5-1",
+        "code": "NMG.5.1",
+        "bezeichnung": "Räume und Orte erkunden (Schweiz, Welt)",
+        "zyklus": 1,
+        "stufe": "2b",
+        "fachbereich": "NMG"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "tiere",
+        "title": "Tiere in der Natur",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      },
+      {
+        "id": "t2",
+        "title": "Jahreszeiten & Wetter",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      },
+      {
+        "id": "j2",
+        "title": "Mein Körper",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      },
+      {
+        "id": "k2",
+        "title": "Pflanzen & Blumen",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      },
+      {
+        "id": "p2",
+        "title": "Meine 5 Sinne",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      },
+      {
+        "id": "s2",
+        "title": "Familie & Gemeinschaft",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      },
+      {
+        "id": "fg2",
+        "title": "Verkehr & Sicherheit",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      },
+      {
+        "id": "vs2",
+        "title": "Zeit & die Uhr",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      },
+      {
+        "id": "u2",
+        "title": "Wochentage & Monate",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "science"
+      }
+    ],
+    "coverage": 20,
+    "gaps": [
+      "NMG.2.1: Den eigenen Körper kennen und beschreiben...",
+      "NMG.3.1: Jahreszeiten und Wetter erleben...",
+      "NMG.4.1: Familie, Gemeinschaft und soziales Umfeld...",
+      "NMG.5.1: Räume und Orte erkunden (Schweiz, Welt)..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 NMG.2.1",
+      "Add topic for LP21 NMG.3.1",
+      "Add topic for LP21 NMG.4.1",
+      "Add topic for LP21 NMG.5.1"
+    ]
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "D-2-A-1",
+        "code": "D.2.A.1",
+        "bezeichnung": "Grammatik: Wortarten bestimmen",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-B-1",
+        "code": "D.2.B.1",
+        "bezeichnung": "Texte verfassen und überarbeiten",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-2-C-1",
+        "code": "D.2.C.1",
+        "bezeichnung": "Satzstrukturen verstehen",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "D"
+      },
+      {
+        "uid": "D-3-A-1",
+        "code": "D.3.A.1",
+        "bezeichnung": "Literarische Texte lesen und interpretieren",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "D"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "wortarten",
+        "title": "Wortarten",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "german"
+      },
+      {
+        "id": "w2",
+        "title": "Adjektive",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "german"
+      },
+      {
+        "id": "aj2",
+        "title": "Sätze bauen",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "german"
+      },
+      {
+        "id": "sb2",
+        "title": "Leseverständnis",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "german"
+      },
+      {
+        "id": "lv2",
+        "title": "Rechtschreibung",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "german"
+      },
+      {
+        "id": "rs2",
+        "title": "Verben konjugieren",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "german"
+      },
+      {
+        "id": "vk2",
+        "title": "Synonyme & Antonyme",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "german"
+      },
+      {
+        "id": "sa2",
+        "title": "Textsorten: Brief & Bericht",
+        "exerciseCount": 1,
+        "grade": 3,
+        "subject": "german"
+      }
+    ],
+    "coverage": 25,
+    "gaps": [
+      "D.2.B.1: Texte verfassen und überarbeiten...",
+      "D.2.C.1: Satzstrukturen verstehen...",
+      "D.3.A.1: Literarische Texte lesen und interpretieren..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 D.2.B.1",
+      "Add topic for LP21 D.2.C.1",
+      "Add topic for LP21 D.3.A.1"
+    ]
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "cycleLabel": "Zyklus 2",
+    "cycleParentLabel": "3.–6. Klasse (Mittelstufe)",
+    "lp21Kompetenzen": [
+      {
+        "uid": "MA-1-B-2",
+        "code": "MA.1.B.2",
+        "bezeichnung": "Multiplikation und Division einführen",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-C-1",
+        "code": "MA.1.C.1",
+        "bezeichnung": "Geometrische Formen erkennen und benennen",
+        "zyklus": 2,
+        "stufe": "1a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-D-1",
+        "code": "MA.1.D.1",
+        "bezeichnung": "Messen und Schätzen (Länge, Gewicht, Zeit)",
+        "zyklus": 2,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-A-1",
+        "code": "MA.2.A.1",
+        "bezeichnung": "Natürliche Zahlen bis 1 Million",
+        "zyklus": 2,
+        "stufe": "2b",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-B-1",
+        "code": "MA.2.B.1",
+        "bezeichnung": "Schriftliche Rechenverfahren anwenden",
+        "zyklus": 2,
+        "stufe": "2c",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-2-C-1",
+        "code": "MA.2.C.1",
+        "bezeichnung": "Brüche und Dezimalzahlen verstehen",
+        "zyklus": 2,
+        "stufe": "3a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-3-A-1",
+        "code": "MA.3.A.1",
+        "bezeichnung": "Proportionale Zusammenhänge erkennen",
+        "zyklus": 2,
+        "stufe": "3b",
+        "fachbereich": "MA"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "dezimalzahlen",
+        "title": "Dezimalzahlen",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      },
+      {
+        "id": "g5m2",
+        "title": "Fläche und Umfang",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      },
+      {
+        "id": "g5m12",
+        "title": "Brüche addieren",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      },
+      {
+        "id": "g5m22",
+        "title": "Prozent",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      },
+      {
+        "id": "p5-2",
+        "title": "Koordinatensystem",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      },
+      {
+        "id": "ks5-2",
+        "title": "Grössen & Einheiten",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      },
+      {
+        "id": "gr5-2",
+        "title": "Volumen",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      },
+      {
+        "id": "vol5-2",
+        "title": "Wahrscheinlichkeit",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      },
+      {
+        "id": "wk5-2",
+        "title": "Statistik & Diagramme",
+        "exerciseCount": 1,
+        "grade": 5,
+        "subject": "math"
+      }
+    ],
+    "coverage": 29,
+    "gaps": [
+      "MA.1.B.2: Multiplikation und Division einführen...",
+      "MA.1.C.1: Geometrische Formen erkennen und benennen...",
+      "MA.1.D.1: Messen und Schätzen (Länge, Gewicht, Zeit)...",
+      "MA.2.B.1: Schriftliche Rechenverfahren anwenden...",
+      "MA.3.A.1: Proportionale Zusammenhänge erkennen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 MA.1.B.2",
+      "Add topic for LP21 MA.1.C.1",
+      "Add topic for LP21 MA.1.D.1",
+      "Add topic for LP21 MA.2.B.1",
+      "Add topic for LP21 MA.3.A.1"
+    ]
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "cycleLabel": "Zyklus 1",
+    "cycleParentLabel": "Kindergarten & 1.–2. Klasse",
+    "lp21Kompetenzen": [
+      {
+        "uid": "MA-1-A-1",
+        "code": "MA.1.A.1",
+        "bezeichnung": "Zahlen und Zählen verstehen",
+        "zyklus": 1,
+        "stufe": "1a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-A-2",
+        "code": "MA.1.A.2",
+        "bezeichnung": "Zahlen bis 100 lesen und schreiben",
+        "zyklus": 1,
+        "stufe": "1b",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-B-1",
+        "code": "MA.1.B.1",
+        "bezeichnung": "Addition und Subtraktion im Zahlenraum bis 20",
+        "zyklus": 1,
+        "stufe": "1c",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-B-2",
+        "code": "MA.1.B.2",
+        "bezeichnung": "Multiplikation und Division einführen",
+        "zyklus": 1,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-C-1",
+        "code": "MA.1.C.1",
+        "bezeichnung": "Geometrische Formen erkennen und benennen",
+        "zyklus": 1,
+        "stufe": "1a",
+        "fachbereich": "MA"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "zahlen-1-10",
+        "title": "Zahlen 1–10",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "z2",
+        "title": "Addition bis 10",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "a2",
+        "title": "Subtraktion bis 10",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "s2",
+        "title": "Formen erkennen",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "f2",
+        "title": "Grösser & Kleiner",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "vg2",
+        "title": "Muster & Reihen",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "m2b",
+        "title": "Zahlen 11–20",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "z20b",
+        "title": "Ordinalzahlen (1., 2., 3.…)",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "o2",
+        "title": "Mengen & Zählen",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "m2",
+        "title": "Verdoppeln & Halbieren",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      },
+      {
+        "id": "v2",
+        "title": "Geld & Münzen",
+        "exerciseCount": 1,
+        "grade": 1,
+        "subject": "math"
+      }
+    ],
+    "coverage": 60,
+    "gaps": [
+      "MA.1.B.2: Multiplikation und Division einführen...",
+      "MA.1.C.1: Geometrische Formen erkennen und benennen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 MA.1.B.2",
+      "Add topic for LP21 MA.1.C.1"
+    ]
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "cycleLabel": "Zyklus 1",
+    "cycleParentLabel": "Kindergarten & 1.–2. Klasse",
+    "lp21Kompetenzen": [
+      {
+        "uid": "MA-1-A-1",
+        "code": "MA.1.A.1",
+        "bezeichnung": "Zahlen und Zählen verstehen",
+        "zyklus": 1,
+        "stufe": "1a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-A-2",
+        "code": "MA.1.A.2",
+        "bezeichnung": "Zahlen bis 100 lesen und schreiben",
+        "zyklus": 1,
+        "stufe": "1b",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-B-1",
+        "code": "MA.1.B.1",
+        "bezeichnung": "Addition und Subtraktion im Zahlenraum bis 20",
+        "zyklus": 1,
+        "stufe": "1c",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-B-2",
+        "code": "MA.1.B.2",
+        "bezeichnung": "Multiplikation und Division einführen",
+        "zyklus": 1,
+        "stufe": "2a",
+        "fachbereich": "MA"
+      },
+      {
+        "uid": "MA-1-C-1",
+        "code": "MA.1.C.1",
+        "bezeichnung": "Geometrische Formen erkennen und benennen",
+        "zyklus": 1,
+        "stufe": "1a",
+        "fachbereich": "MA"
+      }
+    ],
+    "cleverliTopics": [
+      {
+        "id": "zahlen-bis-100",
+        "title": "Zahlen bis 100",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "z2",
+        "title": "Addition bis 20",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "a2",
+        "title": "Einmaleins 2er/5er/10er",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "e2",
+        "title": "Uhrzeit lesen",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "u2",
+        "title": "Subtraktion bis 20",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "sb2",
+        "title": "Längen messen",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "lm2",
+        "title": "Geld & CHF",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "g2",
+        "title": "Addition & Subtraktion bis 100",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "as2",
+        "title": "Einmaleins 3er & 4er",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "e32",
+        "title": "Symmetrie & Formen",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      },
+      {
+        "id": "sy2",
+        "title": "Schätzen & Runden",
+        "exerciseCount": 1,
+        "grade": 2,
+        "subject": "math"
+      }
+    ],
+    "coverage": 60,
+    "gaps": [
+      "MA.1.B.2: Multiplikation und Division einführen...",
+      "MA.1.C.1: Geometrische Formen erkennen und benennen..."
+    ],
+    "suggestions": [
+      "Add topic for LP21 MA.1.B.2",
+      "Add topic for LP21 MA.1.C.1"
+    ]
+  }
+]
