@@ -674,7 +674,7 @@ const grade3Science: Topic[] = [
       { id: "en35", type: "fill-in-blank", difficulty: 2, question: "Was ist ein Kurzschluss?", answer: "Wenn Strom unkontrolliert fliesst (falscher Weg) → gefährlich", hints: ["Kurzschluss: Strom sucht kürzesten Weg → Hitze, Feuer!"] },
       // DIFFICULTY 3 (15)
       { id: "en36", type: "fill-in-blank", difficulty: 3, question: "Was ist die Formel für elektrische Leistung?", answer: "P = U × I (Leistung = Spannung × Stromstärke)", hints: ["P in Watt, U in Volt, I in Ampere!"] },
-      { id: "en37", type: "multiple-choice", difficulty: 3, question: "Woher kommt der Strom für die Lampe?", answer: "Aus der Batterie / dem Stromnetz", options: ["Aus der Batterie","Aus der Sonne","Aus der Luft"], hints: ["Batterie oder Stromnetz liefern Energie."], free: false },
+      { id: "en37", type: "multiple-choice", difficulty: 3, question: "Woher kommt der Strom für die Lampe?", answer: "Aus der Batterie", options: ["Aus der Batterie","Aus der Sonne","Aus der Luft"], hints: ["Batterie oder Stromnetz liefern Energie."], free: false },
       { id: "en38", type: "fill-in-blank", difficulty: 3, question: "Was ist das Ohmsche Gesetz?", answer: "U = R × I (Spannung = Widerstand × Stromstärke)", hints: ["Ohm = Widerstand. U=R×I!"] },
       { id: "en39", type: "fill-in-blank", difficulty: 3, question: "Um einen Stromkreis zu schliessen, brauchst du: eine Energiequelle, Drähte und eine ___", answer: "Lampe / einen Verbraucher", hints: ["Etwas, das Strom verbraucht, wie eine Lampe."], free: false },
       { id: "en40", type: "fill-in-blank", difficulty: 3, question: "Was ist Photovoltaik?", answer: "Umwandlung von Licht in elektrischen Strom durch Solarzellen", hints: ["Photo = Licht. Voltaik = Strom. = Solarstrom!"] },
