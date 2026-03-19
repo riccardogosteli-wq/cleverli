@@ -207,10 +207,10 @@ export default function AccountPage() {
               {t("Abonnement", "Abonnement", "Abbonamento", "Subscription")}
             </div>
             <div className="text-sm text-gray-600">
-              {t("Du nutzt die Gratis-Version mit 5 Aufgaben pro Thema.",
-                 "Tu utilises la version gratuite avec 5 exercices par thème.",
-                 "Stai usando la versione gratuita con 5 esercizi per argomento.",
-                 "You're on the free plan with 5 exercises per topic.")}
+              {t("Du nutzt die Gratis-Version mit 10 Aufgaben pro Thema.",
+                 "Tu utilises la version gratuite avec 10 exercices par thème.",
+                 "Stai usando la versione gratuita con 10 esercizi per argomento.",
+                 "You're on the free plan with 10 exercises per topic.")}
             </div>
             <Link href="/upgrade"
               className="block text-center bg-green-700 text-white font-bold py-3 rounded-xl text-sm hover:bg-green-700 active:scale-95 transition-all">
