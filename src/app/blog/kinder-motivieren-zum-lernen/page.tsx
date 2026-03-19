@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     images: [{ url: "https://www.cleverli.ch/og-image.png" }],
   },
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://www.cleverli.ch/blog/kinder-motivieren-zum-lernen",
+  },
 };
 
 export default function BlogPost() {

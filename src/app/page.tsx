@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Cleverli — Lernen macht Spass 🇨🇭",
   description: "Die interaktive Lernplattform für Schweizer Kinder der 1.–6. Klasse. Mathe, Deutsch & NMG nach Lehrplan 21. Kostenlos starten, kein Download nötig.",
   alternates: {
-    canonical: "https://www.cleverli.ch",
+    canonical: "https://www.cleverli.ch/",
   },
   openGraph: {
     title: "Cleverli — Lernen macht Spass 🇨🇭",

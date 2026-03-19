@@ -19,7 +19,12 @@ export function ParentsGuestPreview() {
       <div className="text-center space-y-3">
         <div className="text-5xl">👨‍👩‍👧</div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-          {t4(lang, "Elternbereich", "Espace Parents", "Area Genitori", "Parent Dashboard")}
+          {t4(lang,
+            "Lernfortschritt deines Kindes auf einen Blick",
+            "Les progrès d'apprentissage de votre enfant en un coup d'œil",
+            "I progressi di apprendimento di tuo figlio a colpo d'occhio",
+            "Your child's learning progress at a glance"
+          )}
         </h1>
         <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto">
           {t4(lang,
