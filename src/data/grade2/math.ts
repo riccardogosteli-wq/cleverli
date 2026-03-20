@@ -926,7 +926,7 @@ const grade2Math: Topic[] = [
       },
       {
         id: "dd8c", type: "multiple-choice", difficulty: 2,
-        question: "Im Pictogramm 🍕 = 2 Pizzen. Klasse 1 hat 3 Bilder, Klasse 2 hat 4 Bilder. Welche Klasse aß mehr? 🍕",
+        question: "Im Pictogramm 🍕 = 2 Pizzen. Klasse 1 hat 3 Bilder, Klasse 2 hat 4 Bilder. Welche Klasse ass mehr? 🍕",
         questionEN: "In the pictogram 🍕 = 2 pizzas. Class 1 has 3 pictures, Class 2 has 4 pictures. Which class ate more? 🍕",
         questionFR: "Dans le pictogramme 🍕 = 2 pizzas. Classe 1 a 3 images, Classe 2 en a 4. Quelle classe a mangé le plus ? 🍕",
         questionIT: "Nel pittogramma 🍕 = 2 pizze. Classe 1 ha 3 immagini, Classe 2 ne ha 4. Quale classe ha mangiato di più? 🍕",
