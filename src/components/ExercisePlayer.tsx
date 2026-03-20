@@ -356,7 +356,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // ── UJ-7: Review prompt ─────────────────────────────────────────
   if (showReview) {
     return (
-      <div className="space-y-4 max-w-md mx-auto text-center py-4">
+      <div className="space-y-4 max-w-md mx-auto text-center py-4 pb-28">
         <div className="text-5xl">🔄</div>
         <h2 className="text-xl font-bold text-gray-800">{tr("almostPerfect")}</h2>
         <p className="text-gray-500 text-sm">
