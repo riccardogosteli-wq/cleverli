@@ -248,8 +248,8 @@ function cleanForSpeech(text: string): string {
     .replace(/(\d)\s*:\s*(\d)/g, "$1 durch $2")
     .replace(/(\d)\s*\+\s*(\d)/g, "$1 plus $2")
     .replace(/(\d)\s*[−\-]\s*(\d)/g, "$1 minus $2")
-    //    Remaining = sign (e.g. "3 Meter gleich wie viele" already handled; standalone = in other contexts)
-    .replace(/\s*=\s*/g, " gleich ")
+    //    = in math equations → "ist gleich": "Wie viel mal sieben ist gleich dreiundsechzig"
+    .replace(/\s*=\s*/g, " ist gleich ")
     .replace(/=\s*\?/g, " gleich wie viel?")
     .replace(/(?<!\w)<(?!\w)/g, "kleiner als")
     .replace(/(?<!\w)>(?!\w)/g, "grösser als")
