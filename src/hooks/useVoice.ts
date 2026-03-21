@@ -111,11 +111,11 @@ function ordinalToSpeech(n: number): string {
 function cleanForSpeech(text: string): string {
   return text
     // ── 0a. Leading blank patterns ──────────────────────────────────────────
-    // Math: "___ + 3 = 8" → "Wie viel plus 3 ist gleich 8" (operator converted inline)
-    .replace(/^___\s*\+\s*/g, "Wie viel plus ")
-    .replace(/^___\s*[\-\u2212]\s*/g, "Wie viel minus ")
-    .replace(/^___\s*[\u00d7x\*]\s*/g, "Wie viel mal ")
-    .replace(/^___\s*[\u00f7:]\s*/g, "Wie viel durch ")
+    // Math: "___ + 3 = 8" → "Welche Zahl plus 3 ist gleich 8" (Swiss teacher convention)
+    .replace(/^___\s*\+\s*/g, "Welche Zahl plus ")
+    .replace(/^___\s*[\-\u2212]\s*/g, "Welche Zahl minus ")
+    .replace(/^___\s*[\u00d7x\*]\s*/g, "Welche Zahl mal ")
+    .replace(/^___\s*[\u00f7:]\s*/g, "Welche Zahl durch ")
     // Article fill-in: "___ Hund bellt" → "Welcher Artikel? Hund bellt"
     .replace(/^___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, "Welcher Artikel? $1")
     // Genitiv/inflected noun: "___ Kindes..." → "Welches Wort fehlt? Kindes..."
@@ -191,6 +191,12 @@ function cleanForSpeech(text: string): string {
     .replace(/→\s*Richtig\s*:\s*___/gi, "– was ist richtig?")
     .replace(/→\s*___/g, "– was kommt raus?")
     .replace(/→/g, ",")
+    // ── 6a2. Mid-sentence math blank: "5 + ___ = 10" → "5 plus welche Zahl ist gleich 10"
+    //    Must run BEFORE general blank rules
+    .replace(/(\d+)\s*\+\s*___/g, "$1 plus welche Zahl")
+    .replace(/(\d+)\s*[\-\u2212]\s*___/g, "$1 minus welche Zahl")
+    .replace(/(\d+)\s*[\u00d7x\*]\s*___/g, "$1 mal welche Zahl")
+    .replace(/(\d+)\s*[\u00f7:]\s*___/g, "$1 durch welche Zahl")
     // ── 6b. Colon + blank: "ist: ___" → "ist was?" ──
     .replace(/:\s*___/g, ": was?")
     // ── 6c. Blank + unit: "___ Zentimeter" / "___ kg" → "wie viele Zentimeter?" ──
@@ -209,9 +215,9 @@ function cleanForSpeech(text: string): string {
     .replace(/hat\s+___\s+Buchstaben/g, "hat wie viele Buchstaben?")
     //    "der ___ Buchstabe" → "der wievielte Buchstabe"
     .replace(/\bder\s+___\s+(Buchstabe|Tag|Monat|Wochentag)/gi, "der wievielte $1")
-    //    "heisst ___" → "wie heisst es?"
-    .replace(/heisst\s*:\s*___/g, "wie heisst es?")
-    .replace(/heisst\s+___/g, "wie heisst es?")
+    //    "heisst ___" → "— wie heisst es?" (dash prevents awkward word order)
+    .replace(/heisst\s*:\s*___/g, "heisst — wie?")
+    .replace(/heisst\s+___/g, "heisst — wie?")
     //    "nennt man ___" → "wie nennt man es?"
     .replace(/nennt man\s+___/g, "wie nennt man es?")
     //    "ist ___ mehr/weniger als" → "ist wie viel mehr/weniger als"
@@ -225,10 +231,11 @@ function cleanForSpeech(text: string): string {
     //    "Tier/Ort/Land/Stadt … ist ___" → "welches ...?"
     .replace(/\b(Tier|Ort|Land|Stadt|Pflanze|Farbe)\b[^_]*?ist\s+___/g,
       (m, noun) => m.replace(/ist\s+___/, `ist welches ${noun}?`))
-    //    "ist: ___" / "ist ___" → "ist was?"
-    .replace(/ist\s+___/g, "ist was?")
-    //    "sind ___" → "sind was?"
-    .replace(/sind\s+___/g, "sind was?")
+    //    "ist ___" after a number context → "ist gleich wie viel?", else "— was?"
+    .replace(/(\d)\s+ist\s+___/g, "$1 ist gleich wie viel?")
+    .replace(/ist\s+___/g, "ist — was?")
+    //    "sind ___" → "— was?"
+    .replace(/sind\s+___/g, "sind — was?")
     //    "= ___ Unit" → "gleich wie viele Unit?"
     .replace(/=\s*___\s+([A-ZÄÖÜ][\wäöüÄÖÜß-]+)/g, "gleich wie viele $1?")
     //    "Unit ___" (unit before blank, e.g. "Franken ___") → "wie viele Franken?"
