@@ -111,15 +111,14 @@ function ordinalToSpeech(n: number): string {
 function cleanForSpeech(text: string): string {
   return text
     // ── 0a. Leading blank patterns ──────────────────────────────────────────
-    //    Math equation: "___ + 3 = 8" → "Wie viel plus drei gleich acht?"  (handled later by math rules, just strip ___)
-    //    Article fill-in: "___ Hund bellt" → "Welcher Artikel? Hund bellt"
-    //    Pronoun/genitiv: "___ Kindes Spielzeug" → "Welches Wort fehlt? Kindes Spielzeug"
-    //    English: "___ you tired?" → strip blank, let ElevenLabs handle
-    .replace(/^___\s*([+\-−×÷x*\/=<>])/g, "Wie viel ist $1")   // math: "___ + 3 = 8" → "Wie viel ist + 3 = 8" → "Wie viel ist plus drei gleich acht?"
+    // Math: "___ + 3 = 8" → strip blank, math ops handled later → "Wie viel plus drei gleich acht?"
+    .replace(/^___\s*([+\-\u2212\u00d7\u00f7x])\s*/g, "Wie viel $1 ")
+    // Article fill-in: "___ Hund bellt" → "Welcher Artikel? Hund bellt"
     .replace(/^___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, "Welcher Artikel? $1")
-    .replace(/^___\s+([A-ZÄÖÜ][a-zäöüß]+(?:es|en|em|er|e|s)\b)/,
+    // Genitiv/inflected noun: "___ Kindes..." → "Welches Wort fehlt? Kindes..."
+    .replace(/^___\s+([A-ZÄÖÜ][a-zäöüß]+(?:es|en|em|er)\b)/,
       (_: string, next: string) => `Welches Wort fehlt? ${next}`)
-    // Leading blank before any noun → "Welcher Artikel?" (most common case in German grammar exercises)
+    // Any other leading blank before a noun
     .replace(/^___\s+([A-ZÄÖÜ][a-zäöüß]+)/g, "Welcher Artikel? $1")
     // ── 0. Special symbols & abbreviations ──
     .replace(/CO₂/g, "Kohlendioxid")
@@ -184,44 +183,65 @@ function cleanForSpeech(text: string): string {
     .replace(/\bdl\b/g, "Deziliter")
     .replace(/\bg\b/g, "Gramm")
     // ── 6. Blank patterns — MUST come after unit expansion ──
-    //    "= ___ Zentimeter" → "gleich wie viele Zentimeter?"
-    .replace(/=\s*___\s+([A-ZÄÖÜ][\wäöüÄÖÜß-]+)/g, "gleich wie viele $1?")
-    //    "= Franken ___" → "gleich wie viele Franken?"
-    .replace(/=\s*([A-ZÄÖÜ][\wäöüÄÖÜß-]+)\s+___/g, "gleich wie viele $1?")
-    //    "und ___ Zentimeter" → "und wie viele Zentimeter?"
-    .replace(/und\s+___\s+([A-ZÄÖÜ][\wäöüÄÖÜß-]+)/g, "und wie viele $1?")
-    //    "= ___" (no unit after) → "gleich wie viel?"
-    .replace(/=\s*___/g, "gleich wie viel?")
-    //    ", ___" at sentence end (number sequences) → ", wie weiter?"
-    .replace(/,\s*___\s*([.!?]?)\s*$/g, ", wie weiter?")
-    // ── 6b. Context-aware blanks: letter / word / verb ──
-    //    Normalize "ist: ___" (colon before blank) → "ist ___" so rules below fire
-    .replace(/ist\s*:\s*___/g, "ist ___")
-    .replace(/sind\s*:\s*___/g, "sind ___")
-    //    "Buchstabe[n] … ist ___" → "welcher Buchstabe?" (answer is a letter)
-    .replace(/\bBuchstabe[n]?\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Buchstabe?"))
-    //    "Laut … ist ___" → "welcher Laut?"
-    .replace(/\bLaut\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Laut?"))
-    //    "ein anderes Wort / Wort … ist ___" → "welches Wort?"
-    .replace(/\bWort\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welches Wort?"))
-    //    "… heisst ___" → "wie heisst es?"
+    // ── 6a. Arrow → (common in fill-in exercises) ──
+    //    "Sortiere: A, B, C → ___" → "Sortiere: A, B, C, was kommt raus?"
+    .replace(/→\s*Richtig\s*:\s*___/gi, "– was ist richtig?")
+    .replace(/→\s*___/g, "– was kommt raus?")
+    .replace(/→/g, ",")
+    // ── 6b. Colon + blank: "ist: ___" → "ist was?" ──
+    .replace(/:\s*___/g, ": was?")
+    // ── 6c. Blank + unit: "___ Zentimeter" / "___ kg" → "wie viele Zentimeter?" ──
+    .replace(/___\s+(Zentimeter|Kilometer|Millimeter|Meter|Kilogramm|Gramm|Milligramm|Liter|Deziliter|Milliliter|Zentiliter|Franken|Rappen|Grad|Stunden?|Minuten?|Sekunden?|Tage?|Wochen?|Monate?|Jahre?|Prozent)/g, "wie viele $1?")
+    // ── 6d. Multiple blanks: "___ und ___" → "was und was?" ──
+    .replace(/___\s+und\s+___/g, "was und was?")
+    .replace(/___,\s*___,\s*___/g, "was, was, was?")
+    .replace(/___\s+und\s+noch\s+___/g, "was und noch was?")
+    // ── 6e. Context-aware blanks ──
+    //    Normalize colon-blank "ist: ___" → already handled above
+    //    "beginnt mit ___" → "beginnt mit welchem Buchstaben?"
+    .replace(/beginnt\s+mit\s+___/g, "beginnt mit welchem Buchstaben?")
+    //    "endet mit ___" → "endet mit welchem Buchstaben?"
+    .replace(/endet\s+mit\s+___/g, "endet mit welchem Buchstaben?")
+    //    "hat ___ Buchstaben" → "hat wie viele Buchstaben?"
+    .replace(/hat\s+___\s+Buchstaben/g, "hat wie viele Buchstaben?")
+    //    "der ___ Buchstabe" → "der wievielte Buchstabe"
+    .replace(/\bder\s+___\s+(Buchstabe|Tag|Monat|Wochentag)/gi, "der wievielte $1")
+    //    "heisst ___" → "wie heisst es?"
+    .replace(/heisst\s*:\s*___/g, "wie heisst es?")
     .replace(/heisst\s+___/g, "wie heisst es?")
-    //    "… nennt man ___" → "wie nennt man es?"
+    //    "nennt man ___" → "wie nennt man es?"
     .replace(/nennt man\s+___/g, "wie nennt man es?")
-    //    "Tag … ist ___" → "welcher Tag?"
-    .replace(/\bTag\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Tag?"))
-    //    "Monat … ist ___" → "welcher Monat?"
-    .replace(/\bMonat\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Monat?"))
-    //    Remaining "ist ___" (numeric context) → "ist wie viel?"
-    .replace(/ist\s+___/g, "ist wie viel?")
-    //    Mid-sentence blank before article/determiner: "Das ___ des Kindes" → "Das ... des Kindes"
-    .replace(/\s+___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, " welcher Artikel? $1")
-    //    Mid-sentence blank before uppercase noun: "Das ___ Kindes" → "Das welches Wort Kindes"
-    .replace(/\s+___\s+([A-ZÄÖÜ][a-zäöüß]+(?:es|en|em|er|s)\b)/g, " welches Wort $1")
-    //    Mid-sentence blank (surrounded by words): remove silently — e.g. "Wir ___ Fussball"
+    //    "ist ___ mehr/weniger als" → "ist wie viel mehr/weniger als"
+    .replace(/ist\s+___\s+(mehr|weniger|grösser|kleiner|länger|kürzer)/g, "ist wie viel $1")
+    //    "Buchstabe[n] … ist ___" → "welcher Buchstabe?"
+    .replace(/\bBuchstabe[n]?\b[^_]*?ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Buchstabe?"))
+    //    "Laut … ist ___" → "welcher Laut?"
+    .replace(/\bLaut\b[^_]*?ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Laut?"))
+    //    "Wort … ist ___" → "welches Wort?"
+    .replace(/\bWort\b[^_]*?ist\s+___/g, m => m.replace(/ist\s+___/, "ist welches Wort?"))
+    //    "Tier/Ort/Land/Stadt … ist ___" → "welches ...?"
+    .replace(/\b(Tier|Ort|Land|Stadt|Pflanze|Farbe)\b[^_]*?ist\s+___/g,
+      (m, noun) => m.replace(/ist\s+___/, `ist welches ${noun}?`))
+    //    "ist: ___" / "ist ___" → "ist was?"
+    .replace(/ist\s+___/g, "ist was?")
+    //    "sind ___" → "sind was?"
+    .replace(/sind\s+___/g, "sind was?")
+    //    "= ___ Unit" → "gleich wie viele Unit?"
+    .replace(/=\s*___\s+([A-ZÄÖÜ][\wäöüÄÖÜß-]+)/g, "gleich wie viele $1?")
+    //    "Unit ___" (unit before blank, e.g. "Franken ___") → "wie viele Franken?"
+    .replace(/([A-ZÄÖÜ][\wäöüÄÖÜß-]+)\s+___/g, "wie viele $1?")
+    //    "= ___" → "gleich wie viel?"
+    .replace(/=\s*___/g, "gleich wie viel?")
+    //    ", ___" at end of sequence → ", wie weiter?"
+    .replace(/,\s*___\s*[.!?]?\s*$/g, ", wie weiter?")
+    //    Mid-sentence blank before determiner
+    .replace(/\s+___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, " welcher Artikel $1")
+    //    Mid-sentence blank before inflected noun (genitiv etc.)
+    .replace(/\s+___\s+([A-ZÄÖÜ][a-zäöüß]+(?:es|en|em|er)\b)/g, " welches Wort $1")
+    //    Mid-sentence verb blank: "___ between lowercase words" → remove silently
     .replace(/(?<=\w)\s+___\s+(?=\w)/g, " ")
-    //    Remaining "___" at end of expression → "wie viel?"
-    .replace(/___/g, "wie viel?")
+    //    Any remaining ___ → "was?"
+    .replace(/___/g, "was?")
     // ── 7. Math operators ──
     .replace(/(\d)\s*[×x]\s*(\d)/g, "$1 mal $2")
     .replace(/(\d)\s*÷\s*(\d)/g, "$1 durch $2")
@@ -234,7 +254,6 @@ function cleanForSpeech(text: string): string {
     .replace(/(?<!\w)<(?!\w)/g, "kleiner als")
     .replace(/(?<!\w)>(?!\w)/g, "grösser als")
     .replace(/\bà\b/g, "zu je")
-    .replace(/→/g, "")
     // ── 8. Parenthetical hints ──
     //    Grammar explanations: "(Genitiv von das Kind)" → skip entirely (too jargon-heavy for TTS)
     .replace(/\((Genitiv|Dativ|Akkusativ|Nominativ|Plural|Singular|Infinitiv|Partizip|Konjunktiv|Komparativ|Superlativ|Adjektiv|Nomen|Verb|Pronomen|Artikel)[^)]*\)/gi, "")
