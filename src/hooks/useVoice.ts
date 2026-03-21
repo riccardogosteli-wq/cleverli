@@ -123,6 +123,20 @@ function cleanForSpeech(text: string): string {
       (_: string, next: string) => `Welches Wort fehlt? ${next}`)
     // Any other leading blank before a noun
     .replace(/^___\s+([A-ZÄÖÜ][a-zäöüß]+)/g, "Welcher Artikel? $1")
+    // ── 0b. Pre-processing: strip visual cues that don't belong in TTS ──
+    //    "(hund / Hund)" lowercase/uppercase hint options → strip
+    .replace(/\([a-zäöü]+\s*\/\s*[a-zäöü]+\)/g, "")
+    //    "(K gross oder k klein?)" type hints → strip
+    .replace(/\([A-Z] (gross|klein|gross oder [a-z] klein)[^)]*\)/gi, "")
+    //    Partial-word blank like «___atze» → "wie heisst das Wort?" 
+    .replace(/«___([a-zäöüA-ZÄÖÜ]{1,8})»/g, "Ergänze: wie heisst das Wort?")
+    //    Full quoted sentence «Eine ___ schwimmt.» → strip guillemets, keep content
+    .replace(/«([^»]*)»/g, "$1")
+    // ── 0c. Trailing colon at end of sentence → "was?" ──
+    .replace(/([a-zäöüA-ZÄÖÜß])\s*:\s*$/g, "$1 — was?")
+    // ── 0d. Negative numbers: (−6), −10 → negate word
+    .replace(/\([\u2212\-](\d+)\)/g, "minus $1")
+    .replace(/[\u2212\-](\d+)(?=\s*[×÷+])/g, "minus $1")
     // ── 0. Special symbols & abbreviations ──
     .replace(/CO₂/g, "Kohlendioxid")
     .replace(/O₂/g, "Sauerstoff")
@@ -238,8 +252,8 @@ function cleanForSpeech(text: string): string {
     .replace(/sind\s+___/g, "sind — was?")
     //    "= ___ Unit" → "gleich wie viele Unit?"
     .replace(/=\s*___\s+([A-ZÄÖÜ][\wäöüÄÖÜß-]+)/g, "gleich wie viele $1?")
-    //    "Unit ___" (unit before blank, e.g. "Franken ___") → "wie viele Franken?"
-    .replace(/([A-ZÄÖÜ][\wäöüÄÖÜß-]+)\s+___/g, "wie viele $1?")
+    //    "Unit ___" — only match actual measurement/count nouns, NOT articles/determiners
+    .replace(/\b(Franken|Rappen|Meter|Kilometer|Zentimeter|Millimeter|Kilogramm|Gramm|Liter|Deziliter|Milliliter|Grad|Stunden?|Minuten?|Sekunden?|Tage?|Wochen?|Monate?|Jahre?|Prozent|Ecken?|Seiten?|Punkte?|Kinder?|Schüler)\s+___/g, "wie viele $1?")
     //    "= ___" → "gleich wie viel?"
     .replace(/=\s*___/g, "gleich wie viel?")
     //    ", ___" at end of sequence → ", wie weiter?"
@@ -252,12 +266,17 @@ function cleanForSpeech(text: string): string {
     .replace(/(?<=\w)\s+___\s+(?=\w)/g, " ")
     //    Any remaining ___ → "was?"
     .replace(/___/g, "was?")
-    // ── 7. Math operators ──
-    .replace(/(\d)\s*[×x]\s*(\d)/g, "$1 mal $2")
-    .replace(/(\d)\s*÷\s*(\d)/g, "$1 durch $2")
+    // ── 7. Math operators — digit+op+digit first, then standalone symbols ──
+    .replace(/(\d)\s*[×x\u00d7]\s*(\d)/g, "$1 mal $2")
+    .replace(/(\d)\s*[\u00f7÷]\s*(\d)/g, "$1 durch $2")
     .replace(/(\d)\s*:\s*(\d)/g, "$1 durch $2")
     .replace(/(\d)\s*\+\s*(\d)/g, "$1 plus $2")
-    .replace(/(\d)\s*[−\-]\s*(\d)/g, "$1 minus $2")
+    .replace(/(\d)\s*[\u2212\-]\s*(\d)/g, "$1 minus $2")
+    // Standalone × ÷ not between digits (e.g. "Regel × 2", "2 × (")
+    .replace(/[×x\u00d7]/g, " mal ")
+    .replace(/[÷\u00f7]/g, " durch ")
+    // Standalone + between words/letters (not digits): "S + CHULE" → "S und CHULE"
+    .replace(/([A-Za-zÄÖÜäöü])\s*\+\s*([A-Za-zÄÖÜäöü])/g, "$1 und $2")
     //    = in math equations → "ist gleich": "Wie viel mal sieben ist gleich dreiundsechzig"
     .replace(/\s*=\s*/g, " ist gleich ")
     .replace(/=\s*\?/g, " gleich wie viel?")
@@ -265,12 +284,18 @@ function cleanForSpeech(text: string): string {
     .replace(/(?<!\w)>(?!\w)/g, "grösser als")
     .replace(/\bà\b/g, "zu je")
     // ── 8. Parenthetical hints ──
-    //    Grammar explanations: "(Genitiv von das Kind)" → skip entirely (too jargon-heavy for TTS)
-    .replace(/\((Genitiv|Dativ|Akkusativ|Nominativ|Plural|Singular|Infinitiv|Partizip|Konjunktiv|Komparativ|Superlativ|Adjektiv|Nomen|Verb|Pronomen|Artikel)[^)]*\)/gi, "")
-    //    "von + Nomen" explanatory notes → skip
+    //    Grammar explanations → strip entirely
+    .replace(/\((Genitiv|Dativ|Akkusativ|Nominativ|Plural|Singular|Infinitiv|Partizip|Konjunktiv|Komparativ|Superlativ|Adjektiv|Nomen|Verb|Pronomen|Artikel|Maskulin|Feminin|Neutral)[^)]*\)/gi, "")
+    //    "von + Nomen" notes → strip
     .replace(/\(von [^)]{1,40}\)/gi, "")
-    //    Short parenthetical verb/word hints: "(laufen)" → ", also laufen,"
-    .replace(/\(([a-zäöüA-ZÄÖÜ][^)]{1,20})\)/g, ", $1,")
+    //    "reimt sich auf..." → strip (visual hint, doesn't help in audio)
+    .replace(/\(reimt sich auf[^)]*\)/gi, "")
+    //    "K gross oder k klein" type orthography hints → strip
+    .replace(/\([A-Za-z] (gross|klein|Gross|Klein)[^)]*\)/gi, "")
+    //    Single word in parens like "(laufen)" → spoken as ", laufen"
+    .replace(/\(([a-zäöüA-ZÄÖÜß]{2,20})\)/g, ", $1,")
+    //    Any remaining parens with content → strip silently
+    .replace(/\([^)]{1,60}\)/g, "")
     // ── 9. Remove emoji ──
     .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}]/gu, "")
     .replace(/[\u{FE00}-\u{FE0F}]/gu, "")
