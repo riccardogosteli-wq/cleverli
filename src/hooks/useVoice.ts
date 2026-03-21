@@ -115,7 +115,7 @@ function cleanForSpeech(text: string): string {
     //    Article fill-in: "___ Hund bellt" → "Welcher Artikel? Hund bellt"
     //    Pronoun/genitiv: "___ Kindes Spielzeug" → "Welches Wort fehlt? Kindes Spielzeug"
     //    English: "___ you tired?" → strip blank, let ElevenLabs handle
-    .replace(/^___\s*([+\-−×÷x*\/=<>])/g, "Wie viel $1")   // math: "___ + 3" → "Wie viel + 3"
+    .replace(/^___\s*([+\-−×÷x*\/=<>])/g, "Wie viel ist $1")   // math: "___ + 3 = 8" → "Wie viel ist + 3 = 8" → "Wie viel ist plus drei gleich acht?"
     .replace(/^___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, "Welcher Artikel? $1")
     .replace(/^___\s+([A-ZÄÖÜ][a-zäöüß]+(?:es|en|em|er|e|s)\b)/,
       (_: string, next: string) => `Welches Wort fehlt? ${next}`)
