@@ -110,6 +110,17 @@ function ordinalToSpeech(n: number): string {
 
 function cleanForSpeech(text: string): string {
   return text
+    // ── 0a. Leading blank patterns ──────────────────────────────────────────
+    //    Math equation: "___ + 3 = 8" → "Wie viel plus drei gleich acht?"  (handled later by math rules, just strip ___)
+    //    Article fill-in: "___ Hund bellt" → "Welcher Artikel? Hund bellt"
+    //    Pronoun/genitiv: "___ Kindes Spielzeug" → "Welches Wort fehlt? Kindes Spielzeug"
+    //    English: "___ you tired?" → strip blank, let ElevenLabs handle
+    .replace(/^___\s*([+\-−×÷x*\/=<>])/g, "Wie viel $1")   // math: "___ + 3" → "Wie viel + 3"
+    .replace(/^___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, "Welcher Artikel? $1")
+    .replace(/^___\s+([A-ZÄÖÜ][a-zäöüß]+(?:es|en|em|er|e|s)\b)/,
+      (_: string, next: string) => `Welches Wort fehlt? ${next}`)
+    // Leading blank before any noun → "Welcher Artikel?" (most common case in German grammar exercises)
+    .replace(/^___\s+([A-ZÄÖÜ][a-zäöüß]+)/g, "Welcher Artikel? $1")
     // ── 0. Special symbols & abbreviations ──
     .replace(/CO₂/g, "Kohlendioxid")
     .replace(/O₂/g, "Sauerstoff")
@@ -203,6 +214,10 @@ function cleanForSpeech(text: string): string {
     .replace(/\bMonat\b[^_]*ist\s+___/g, m => m.replace(/ist\s+___/, "ist welcher Monat?"))
     //    Remaining "ist ___" (numeric context) → "ist wie viel?"
     .replace(/ist\s+___/g, "ist wie viel?")
+    //    Mid-sentence blank before article/determiner: "Das ___ des Kindes" → "Das ... des Kindes"
+    .replace(/\s+___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, " welcher Artikel? $1")
+    //    Mid-sentence blank before uppercase noun: "Das ___ Kindes" → "Das welches Wort Kindes"
+    .replace(/\s+___\s+([A-ZÄÖÜ][a-zäöüß]+(?:es|en|em|er|s)\b)/g, " welches Wort $1")
     //    Mid-sentence blank (surrounded by words): remove silently — e.g. "Wir ___ Fussball"
     .replace(/(?<=\w)\s+___\s+(?=\w)/g, " ")
     //    Remaining "___" at end of expression → "wie viel?"
@@ -220,8 +235,13 @@ function cleanForSpeech(text: string): string {
     .replace(/(?<!\w)>(?!\w)/g, "grösser als")
     .replace(/\bà\b/g, "zu je")
     .replace(/→/g, "")
-    // ── 8. Parenthetical hints: "(laufen)" → "– laufen" ──
-    .replace(/\(([^)]{1,30})\)/g, "– $1")
+    // ── 8. Parenthetical hints ──
+    //    Grammar explanations: "(Genitiv von das Kind)" → skip entirely (too jargon-heavy for TTS)
+    .replace(/\((Genitiv|Dativ|Akkusativ|Nominativ|Plural|Singular|Infinitiv|Partizip|Konjunktiv|Komparativ|Superlativ|Adjektiv|Nomen|Verb|Pronomen|Artikel)[^)]*\)/gi, "")
+    //    "von + Nomen" explanatory notes → skip
+    .replace(/\(von [^)]{1,40}\)/gi, "")
+    //    Short parenthetical verb/word hints: "(laufen)" → ", also laufen,"
+    .replace(/\(([a-zäöüA-ZÄÖÜ][^)]{1,20})\)/g, ", $1,")
     // ── 9. Remove emoji ──
     .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}]/gu, "")
     .replace(/[\u{FE00}-\u{FE0F}]/gu, "")
