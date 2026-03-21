@@ -111,8 +111,11 @@ function ordinalToSpeech(n: number): string {
 function cleanForSpeech(text: string): string {
   return text
     // ── 0a. Leading blank patterns ──────────────────────────────────────────
-    // Math: "___ + 3 = 8" → strip blank, math ops handled later → "Wie viel plus drei gleich acht?"
-    .replace(/^___\s*([+\-\u2212\u00d7\u00f7x])\s*/g, "Wie viel $1 ")
+    // Math: "___ + 3 = 8" → "Wie viel plus 3 ist gleich 8" (operator converted inline)
+    .replace(/^___\s*\+\s*/g, "Wie viel plus ")
+    .replace(/^___\s*[\-\u2212]\s*/g, "Wie viel minus ")
+    .replace(/^___\s*[\u00d7x\*]\s*/g, "Wie viel mal ")
+    .replace(/^___\s*[\u00f7:]\s*/g, "Wie viel durch ")
     // Article fill-in: "___ Hund bellt" → "Welcher Artikel? Hund bellt"
     .replace(/^___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, "Welcher Artikel? $1")
     // Genitiv/inflected noun: "___ Kindes..." → "Welches Wort fehlt? Kindes..."
