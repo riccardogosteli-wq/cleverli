@@ -59,7 +59,7 @@ export async function sendWelcomeEmail(to: string, name: string) {
     <!-- Footer -->
     <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
       <p style="font-size:11px;color:#9ca3af;margin:0;">
-        Cleverli · Alexandra Gosteli · Langenmooserstrasse 22, 8467 Truttikon<br>
+        Cleverli · A. Gosteli Digital Solutions · 8467 Truttikon<br>
         <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a> · 
         <a href="https://www.cleverli.ch/impressum" style="color:#9ca3af;">Impressum</a>
       </p>
@@ -133,7 +133,7 @@ export async function sendPaymentConfirmationEmail(
     <!-- Footer -->
     <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
       <p style="font-size:11px;color:#9ca3af;margin:0;">
-        Cleverli · Alexandra Gosteli · Langenmooserstrasse 22, 8467 Truttikon<br>
+        Cleverli · A. Gosteli Digital Solutions · 8467 Truttikon<br>
         <a href="https://www.cleverli.ch/agb" style="color:#9ca3af;">AGB</a> · 
         <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a>
       </p>

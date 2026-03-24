@@ -2,8 +2,8 @@
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 
-const PROVIDER = "Alexandra Gosteli";
-const ADDRESS = "Langenmooserstrasse 22, 8467 Truttikon, Schweiz";
+const PROVIDER = "A. Gosteli Digital Solutions";
+const ADDRESS = "8467 Truttikon, Schweiz";
 const EMAIL = "hello@cleverli.ch";
 const WEBSITE = "www.cleverli.ch";
 
