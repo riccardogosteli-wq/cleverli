@@ -57,7 +57,7 @@ export default function ImpressumClient() {
       <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm space-y-4 text-gray-700">
         <div>
           <h2 className="font-bold text-gray-900 mb-1">{t.operatorLabel}</h2>
-          <p>A. Gosteli Digital Solutions<br />8467 Truttikon<br />Schweiz</p>
+          <p>Alexandra Gosteli Digital Solutions<br />Langenmooserstrasse 22<br />8467 Truttikon<br />Schweiz</p>
         </div>
         <div>
           <h2 className="font-bold text-gray-900 mb-1">{t.contactLabel}</h2>
