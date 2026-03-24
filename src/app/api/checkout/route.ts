@@ -44,6 +44,7 @@ export async function GET(req: NextRequest) {
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
       payment_method_types: ["card"],
+      locale: "de",
       success_url: `${BASE_URL}/payment/success?plan=${plan}&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${BASE_URL}/payment/cancel`,
       ...(customerEmail ? { customer_email: customerEmail } : {}),
