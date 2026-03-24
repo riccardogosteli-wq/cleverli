@@ -96,36 +96,108 @@ interface GapReport {
 }
 
 // ── API Client ────────────────────────────────────────────────────────────────
-async function fetchLP21(endpoint: string): Promise<unknown> {
+// Auth: GET params user= + password= (Basic Auth does NOT work on this API)
+const API_BASE_URL = "https://api.lehrplan.ch";
+const KANTON = "AG"; // Use Aargau as reference canton
+
+async function fetchLP21UID(uid: string): Promise<Record<string, unknown> | null> {
   if (DRY_RUN) {
-    console.log(`[DRY_RUN] Would fetch: ${API_BASE}${endpoint}`);
+    console.log(`[DRY_RUN] Would fetch UID: ${uid}`);
     return null;
   }
-  
-  const credentials = Buffer.from(`${API_USER}:${API_PASS}`).toString("base64");
-  const res = await fetch(`${API_BASE}${endpoint}`, {
-    headers: {
-      "Authorization": `Basic ${credentials}`,
-      "Accept": "application/json",
-    },
-  });
-  
+  const url = `${API_BASE_URL}/getData.php?kanton=${KANTON}&uid=${uid}&user=${encodeURIComponent(API_USER)}&password=${encodeURIComponent(API_PASS)}&sprache=${LANG}`;
+  const res = await fetch(url);
   if (!res.ok) throw new Error(`LP21 API error: ${res.status} ${res.statusText}`);
-  return res.json();
+  const json = await res.json() as { lp21?: unknown[] };
+  return (json.lp21?.[0] ?? null) as Record<string, unknown> | null;
 }
 
-// Fetch all Fachbereiche (subjects)
+// Recursively fetch all Kompetenzstufen under a UID
+async function fetchAllChildren(uid: string, depth = 0): Promise<Record<string, unknown>[]> {
+  if (depth > 8) return []; // safety limit
+  const node = await fetchLP21UID(uid);
+  if (!node) return [];
+  const results: Record<string, unknown>[] = [node];
+  const children = (node.hierarchie_unten as string[] | undefined) ?? [];
+  for (const childUrl of children) {
+    const childUid = childUrl.split("uid=")[1]?.split("&")[0];
+    if (childUid) {
+      const childNodes = await fetchAllChildren(childUid, depth + 1);
+      results.push(...childNodes);
+    }
+  }
+  return results;
+}
+
+// Fetch root and find Fachbereich UIDs
 async function fetchFachbereiche(): Promise<unknown[]> {
-  const data = await fetchLP21(`/fachbereiche?sprache=${LANG}`) as { fachbereiche?: unknown[] } | null;
-  return data?.fachbereiche ?? MOCK_FACHBEREICHE;
+  const root = await fetchLP21UID("00000000000000000000000000000000");
+  if (!root) return MOCK_FACHBEREICHE;
+  const children = (root.hierarchie_unten as string[] | undefined) ?? [];
+  const fachbereiche = [];
+  for (const url of children) {
+    const uid = url.split("uid=")[1]?.split("&")[0];
+    if (uid) {
+      const fb = await fetchLP21UID(uid);
+      if (fb) fachbereiche.push(fb);
+    }
+  }
+  return fachbereiche;
 }
 
 // Fetch Kompetenzen for a specific Fachbereich and Zyklus
+// Uses real LP21 tree traversal: root → Fachbereich → Fach → Kompetenzbereich → Kompetenz → Stufen
 async function fetchKompetenzen(fachCode: string, zyklus: number): Promise<LP21Kompetenz[]> {
-  const data = await fetchLP21(
-    `/kompetenzstufen?fach=${fachCode}&zyklus=${zyklus}&sprache=${LANG}`
-  ) as { kompetenzstufen?: LP21Kompetenz[] } | null;
-  return data?.kompetenzstufen ?? getMockKompetenzen(fachCode, zyklus);
+  if (DRY_RUN) return getMockKompetenzen(fachCode, zyklus);
+
+  try {
+    // Get root, then find matching Fachbereich by code
+    const root = await fetchLP21UID("00000000000000000000000000000000");
+    if (!root) return getMockKompetenzen(fachCode, zyklus);
+
+    const fbUrls = (root.hierarchie_unten as string[] | undefined) ?? [];
+    let targetFbUid: string | null = null;
+
+    for (const url of fbUrls) {
+      const uid = url.split("uid=")[1]?.split("&")[0];
+      if (!uid) continue;
+      const fb = await fetchLP21UID(uid);
+      if (fb && (fb.code as string) === fachCode) {
+        targetFbUid = uid;
+        break;
+      }
+    }
+
+    if (!targetFbUid) return getMockKompetenzen(fachCode, zyklus);
+
+    // Recursively fetch all descendants — these are Kompetenzstufen
+    const allNodes = await fetchAllChildren(targetFbUid);
+
+    // Filter for Kompetenzstufen (strukturtyp == "Kompetenzstufe")
+    // and map zyklus_von/zyklus_bis to filter by requested Zyklus
+    const kompetenzen: LP21Kompetenz[] = [];
+    for (const node of allNodes) {
+      if (node.strukturtyp !== "Kompetenzstufe") continue;
+
+      // zyklus filtering: node may have zyklus_von / zyklus_bis fields
+      const zyklusBez = String(node.zyklus_bezeichnung ?? node.zyklus ?? "");
+      const nodeZyklus = zyklusBez.includes("1") ? 1 : zyklusBez.includes("2") ? 2 : 0;
+      if (nodeZyklus !== 0 && nodeZyklus !== zyklus) continue;
+
+      kompetenzen.push({
+        uid: String(node.uid ?? ""),
+        code: String(node.code ?? node.uid ?? ""),
+        bezeichnung: String(node.bezeichnung ?? node.title ?? ""),
+        zyklus,
+        stufe: String(node.stufe ?? node.folge ?? ""),
+        fachbereich: fachCode,
+      });
+    }
+
+    return kompetenzen.length > 0 ? kompetenzen : getMockKompetenzen(fachCode, zyklus);
+  } catch {
+    return getMockKompetenzen(fachCode, zyklus);
+  }
 }
 
 // ── Load Cleverli exercises ───────────────────────────────────────────────────
