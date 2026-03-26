@@ -581,6 +581,12 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         </div>
       )}
 
+      {/* Screen reader live region for answer feedback */}
+      <div aria-live="polite" aria-atomic="true" className="sr-only">
+        {answered === true && tr("correct")}
+        {answered === false && tr("wrongFeedback")}
+      </div>
+
       {/* UJ-15: Thin top progress bar — always visible */}
       {!isReviewMode && tierInfo.isTiered ? (
         /* Segmented 3-tier progress bar */
@@ -620,6 +626,15 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         <div className="flex items-center gap-2">
           {/* ProgressBar shows position within current tier (not across all exercises) */}
           <div className="flex-1">
+            {/* Exercise count label for children (explicit X of Y text) */}
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs font-semibold text-gray-500">
+                {isReviewMode ? "🔄 " : ""}{lang === "fr" ? `Exercice ${idx + 1} / ${exercises.length}` : lang === "it" ? `Esercizio ${idx + 1} / ${exercises.length}` : lang === "en" ? `Exercise ${idx + 1} of ${exercises.length}` : `Aufgabe ${idx + 1} von ${exercises.length}`}
+              </span>
+              {streak >= 2 && (
+                <span className="text-xs font-bold text-orange-500">🔥 {streak}×</span>
+              )}
+            </div>
             <ProgressBar current={tierProgressBar.current} total={tierProgressBar.total} streak={streak} isReviewMode={isReviewMode} />
           </div>
           {isSupported && (
@@ -707,12 +722,12 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         </div>
       )}
 
-      {/* UJ-6: Wrong answer — full red feedback panel */}
+      {/* UJ-6: Wrong answer — encouraging amber feedback panel (not punishing) */}
       {answered === false && (
-        <div ref={rewardRef} className="rounded-2xl border-2 border-red-300 bg-red-50 p-5 text-center space-y-3 animate-fadeIn">
-          <div className="text-4xl">❌</div>
-          <p className="text-lg font-bold text-red-700">{tr("wrongFeedback")}</p>
-          <div className="bg-white border border-red-200 rounded-xl px-4 py-3 text-sm text-gray-700 text-left space-y-1">
+        <div ref={rewardRef} className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-5 text-center space-y-3 animate-fadeIn" role="alert" aria-live="assertive">
+          <div className="text-4xl">💪</div>
+          <p className="text-lg font-bold text-amber-800">{tr("wrongFeedback")}</p>
+          <div className="bg-white border border-amber-200 rounded-xl px-4 py-3 text-sm text-gray-700 text-left space-y-1">
             <p className="font-semibold text-gray-500 text-xs uppercase tracking-wide mb-1">{tr("correctAnswerLabel")}</p>
             <p className="font-bold text-gray-900 text-base">{current.answer}</p>
             {current.explanation && (
@@ -721,7 +736,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
           </div>
           <button
             onClick={handleContinue}
-            className="w-full bg-red-500 text-white py-3 rounded-xl font-bold hover:bg-red-600 active:scale-95 transition-all"
+            className="w-full bg-amber-500 text-white py-3 rounded-xl font-bold hover:bg-amber-600 active:scale-95 transition-all"
           >
             {tr("understoodContinue")}
           </button>

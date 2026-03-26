@@ -25,7 +25,7 @@ export default function MobileBottomNav() {
   const tabs = [
     { href: "/dashboard", icon: "learn",    label: TAB_LABELS.learn[li] },
     { href: "/daily",     icon: "daily",    label: TAB_LABELS.daily[li] },
-    { href: "/trophies",  icon: "trophies", label: TAB_LABELS.trophies[li] },
+    { href: "/missionen", icon: "trophies", label: TAB_LABELS.trophies[li] },
     { href: "/rewards",   icon: "rewards",  label: TAB_LABELS.rewards[li] },
     // ✅ Link to /family (child-accessible leaderboard) not /parents (PIN-gated)
     // Only shown when logged in (family features require auth)
@@ -68,6 +68,7 @@ export default function MobileBottomNav() {
       {tabs.map(tab => {
         const isActive = pathname === tab.href
           || (tab.href === "/dashboard" && pathname.startsWith("/dashboard"))
+          || (tab.href === "/missionen" && (pathname === "/missionen" || pathname === "/trophies"))
           || (tab.href === "/family" && (pathname === "/family" || pathname === "/parents"));
         return (
           <Link

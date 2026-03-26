@@ -27,7 +27,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    openGraph: { title: `${title} | Cleverli`, description },
+    openGraph: {
+      title: `${title} | Cleverli`,
+      description,
+      images: [{ url: `${BASE}/og-image.png`, width: 1200, height: 630, alt: "Cleverli — Lernplattform für Schweizer Kinder" }],
+    },
     alternates: { canonical: `https://www.cleverli.ch/learn/${grade}/${subject}/${topicId}` },
   };
 }

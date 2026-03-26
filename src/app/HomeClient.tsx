@@ -40,7 +40,7 @@ export default function Home() {
             </h1>
             <p className="mt-3 text-base sm:text-lg text-gray-500 max-w-lg">{tr("subtitle").split("\n")[0]}</p>
             <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center sm:justify-start">
-              <Link href={primaryHref} className="bg-green-700 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-center">
+              <Link href={primaryHref} className="bg-green-700 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-800 active:scale-95 transition-all shadow-md text-center">
                 {loaded ? primaryLabel : `${tr("startFree")} →`}
               </Link>
               {showSignupCta && (
@@ -289,12 +289,14 @@ export default function Home() {
               <div key={i} className="border-2 border-gray-100 rounded-2xl overflow-hidden">
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   style={{minHeight:"56px"}}
+                  aria-expanded={openFaq === i}
+                  aria-controls={`faq-answer-${i}`}
                   className="w-full text-left px-4 sm:px-5 py-4 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 active:bg-gray-100 transition-colors text-sm sm:text-base">
                   <span>{tr(qKey)}</span>
-                  <span className="text-green-700 text-xl ml-3 shrink-0">{openFaq === i ? "−" : "+"}</span>
+                  <span className="text-green-700 text-xl ml-3 shrink-0" aria-hidden="true">{openFaq === i ? "−" : "+"}</span>
                 </button>
                 {openFaq === i && (
-                  <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{tr(aKey)}</div>
+                  <div id={`faq-answer-${i}`} className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{tr(aKey)}</div>
                 )}
               </div>
             ))}

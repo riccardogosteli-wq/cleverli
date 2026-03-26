@@ -75,7 +75,7 @@ export default function RewardWidget({ profile }: Props) {
                   <div className="font-bold text-gray-800 text-sm truncate">{r.title}</div>
                   {isUnlocked ? (
                     <div className="text-xs text-amber-700 font-semibold mt-0.5">
-                      🎉 Zeig das Mama oder Papa!
+                      🎉 {lang === "fr" ? "Montre à maman ou papa !" : lang === "it" ? "Mostralo a mamma o papà!" : lang === "en" ? "Show mum or dad!" : "Zeig das Mama oder Papa!"}
                     </div>
                   ) : (
                     <div className="text-xs text-gray-400 mt-0.5">

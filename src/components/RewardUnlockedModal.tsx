@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { Reward } from "@/lib/rewards";
+import { useLang } from "@/lib/LangContext";
 
 interface Props {
   reward: Reward;
@@ -9,6 +10,14 @@ interface Props {
 
 export default function RewardUnlockedModal({ reward, onClose }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+  const { lang } = useLang();
+
+  const i18n = {
+    title: lang === "fr" ? "Bravo !" : lang === "it" ? "Ottimo!" : lang === "en" ? "You did it!" : "Geschafft!",
+    showParentTitle: lang === "fr" ? "Montre à maman ou papa !" : lang === "it" ? "Mostralo a mamma o papà!" : lang === "en" ? "Show mum or dad!" : "Zeig das Mama oder Papa!",
+    showParentDesc: lang === "fr" ? "Tu as atteint ton objectif — ils vont être si fiers ! 🥰" : lang === "it" ? "Hai raggiunto il tuo obiettivo — saranno così orgogliosi! 🥰" : lang === "en" ? "You reached your goal — they'll be so proud! 🥰" : "Du hast dein Ziel erreicht — sie werden so stolz sein! 🥰",
+    continueLearning: lang === "fr" ? "Continuer à apprendre ! 🚀" : lang === "it" ? "Continua a imparare! 🚀" : lang === "en" ? "Keep learning! 🚀" : "Weiter lernen! 🚀",
+  };
 
   // Simple confetti burst using canvas
   useEffect(() => {
@@ -71,22 +80,22 @@ export default function RewardUnlockedModal({ reward, onClose }: Props) {
 
         {/* Celebration text */}
         <div className="text-2xl font-black text-gray-800 mb-2">
-          🎉 Geschafft!
+          🎉 {i18n.title}
         </div>
         <div className="text-xl font-bold text-green-700 mb-4">{reward.title}</div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-6">
           <div className="text-3xl mb-2">📱</div>
-          <div className="font-bold text-amber-800 text-sm">Zeig das Mama oder Papa!</div>
+          <div className="font-bold text-amber-800 text-sm">{i18n.showParentTitle}</div>
           <div className="text-amber-600 text-xs mt-1">
-            Du hast dein Ziel erreicht — sie werden so stolz sein! 🥰
+            {i18n.showParentDesc}
           </div>
         </div>
 
         <button
           onClick={onClose}
-          className="w-full bg-green-700 hover:bg-green-700 active:scale-95 text-white font-bold py-4 rounded-2xl text-lg transition-all shadow-lg">
-          Weiter lernen! 🚀
+          className="w-full bg-green-700 hover:bg-green-800 active:scale-95 text-white font-bold py-4 rounded-2xl text-lg transition-all shadow-lg">
+          {i18n.continueLearning}
         </button>
       </div>
 

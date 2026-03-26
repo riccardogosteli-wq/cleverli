@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lernfortschritt & Missionen | Cleverli",
     description: "Dein persönlicher Lernweg — alle Themen, alle Fächer, alle Klassen. Kostenlos ausprobieren.",
+    images: [{ url: "https://www.cleverli.ch/og-image.png", width: 1200, height: 630, alt: "Cleverli — Lernplattform für Schweizer Kinder" }],
   },
   alternates: { canonical: "https://www.cleverli.ch/missionen" },
 };

@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wie ich meinen Sohn wieder fürs Lernen begeistert habe",
     description: "Als Elternteil kenne ich die Frustration: Das Kind sitzt am Tisch, will aber einfach nicht lernen. Hier teile ich, was bei uns wirklich geholfen hat.",
-    images: [{ url: "https://www.cleverli.ch/og-image.png" }],
+    images: [{ url: "https://www.cleverli.ch/og-image.png", width: 1200, height: 630, alt: "Kinder fürs Lernen begeistern — Cleverli Blog" }],
+    type: "article",
   },
   robots: { index: true, follow: true },
   alternates: {
@@ -16,9 +17,43 @@ export const metadata: Metadata = {
   },
 };
 
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "«Ich will nicht lernen!» — Wie ich meinen Sohn wieder fürs Lernen begeistert habe",
+  "description": "Als Elternteil kenne ich die Frustration: Das Kind sitzt am Tisch, will aber einfach nicht lernen. Hier teile ich, was bei uns wirklich geholfen hat.",
+  "image": "https://www.cleverli.ch/og-image.png",
+  "datePublished": "2025-11-01T08:00:00+01:00",
+  "dateModified": "2026-01-15T08:00:00+01:00",
+  "author": {
+    "@type": "Person",
+    "name": "Alexandra Gosteli",
+    "url": "https://www.cleverli.ch",
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cleverli",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.cleverli.ch/cleverli-logo.png",
+    },
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.cleverli.ch/blog/kinder-motivieren-zum-lernen",
+  },
+  "inLanguage": "de-CH",
+  "about": [
+    { "@type": "Thing", "name": "Lernmotivation Kinder" },
+    { "@type": "Thing", "name": "Volksschule Schweiz" },
+    { "@type": "Thing", "name": "Lehrplan 21" },
+  ],
+};
+
 export default function BlogPost() {
   return (
     <main className="max-w-2xl mx-auto px-4 py-10 pb-24 sm:pb-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
 
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-400 mb-6">

@@ -6,7 +6,16 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/_next/"],
+        disallow: [
+        "/api/",
+        "/_next/",
+        "/account",
+        "/payment/",
+        "/kids",
+        "/family",
+        "/shop",
+        "/test/",
+      ],
       },
     ],
     sitemap: "https://www.cleverli.ch/sitemap.xml",
