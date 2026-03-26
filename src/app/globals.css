@@ -79,3 +79,19 @@ button, a { user-select: none; }
 .animate-cleverli-jump {
   animation: cleverli-jump 2.5s ease-in-out infinite;
 }
+
+/* Reduced motion — respect OS accessibility preference (vestibular disorders / WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dynamic viewport height utility — fixes iOS Safari 100vh toolbar issue */
+.min-h-dvh {
+  min-height: 100vh;
+  min-height: 100dvh;
+}

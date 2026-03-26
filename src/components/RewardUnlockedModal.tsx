@@ -59,13 +59,13 @@ export default function RewardUnlockedModal({ reward, onClose }: Props) {
     return () => cancelAnimationFrame(raf);
   }, []);
 
-  // Close on backdrop click
+  // Close on backdrop click/tap — use pointerdown to work on iOS Safari too
   useEffect(() => {
-    const handle = (e: MouseEvent) => {
+    const handle = (e: PointerEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) onClose();
     };
-    document.addEventListener("mousedown", handle);
-    return () => document.removeEventListener("mousedown", handle);
+    document.addEventListener("pointerdown", handle);
+    return () => document.removeEventListener("pointerdown", handle);
   }, [onClose]);
 
   return (

@@ -15,6 +15,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   // UJ-3: redirect if already logged in (also check localStorage synchronously to avoid flash)
   const [redirecting, setRedirecting] = useState(() => {
@@ -86,17 +87,41 @@ export default function Login() {
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-800 font-semibold mb-1">{tr("emailLabel")}</label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)}
+            <input
+              type="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
               onKeyDown={e => e.key === "Enter" && handleLogin()}
               placeholder="deine@email.ch"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-400" />
+              autoComplete="email"
+              inputMode="email"
+              style={{ fontSize: "16px" }}
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-green-400"
+            />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-800 font-semibold mb-1">{tr("passwordLabel")}</label>
-            <input type="password" value={password} onChange={e => setPassword(e.target.value)}
-              onKeyDown={e => e.key === "Enter" && handleLogin()}
-              placeholder="••••••••"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-400" />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                onKeyDown={e => e.key === "Enter" && handleLogin()}
+                placeholder="••••••••"
+                autoComplete="current-password"
+                style={{ fontSize: "16px" }}
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 focus:outline-none focus:border-green-400"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(v => !v)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1"
+                aria-label={showPassword ? "Passwort verbergen" : "Passwort anzeigen"}
+                style={{ minHeight: "44px", minWidth: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}
+              >
+                {showPassword ? "🙈" : "👁️"}
+              </button>
+            </div>
           </div>
 
           {error && <p className="text-red-500 text-sm">{error}</p>}

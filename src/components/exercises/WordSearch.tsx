@@ -113,8 +113,6 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
     });
   }, [found, grid, placements, play]);
 
-  const cellSize = gridSize <= 8 ? 34 : 28;
-
   return (
     <div className="space-y-4">
       <p className="text-base font-semibold text-gray-800 text-center">{question}</p>
@@ -133,9 +131,17 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
         })}
       </div>
 
-      {/* Grid */}
-      <div className="overflow-x-auto flex justify-center">
-        <div style={{ display: "grid", gridTemplateColumns: `repeat(${gridSize}, ${cellSize}px)`, gap: "2px" }}>
+      {/* Grid — cell size calculated to fill available width, minimum 36px for touch */}
+      <div className="overflow-x-auto flex justify-center -mx-1">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: `repeat(${gridSize}, minmax(0, 1fr))`,
+            gap: "3px",
+            width: "100%",
+            maxWidth: `${gridSize * 44}px`,
+          }}
+        >
           {grid.flatMap((row, r) => row.map((letter, c) => {
             const sel  = isSelected(r, c);
             const fnd  = isFound(r, c);
@@ -143,10 +149,10 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
               <button
                 key={`${r}-${c}`}
                 onClick={() => tapCell(r, c)}
-                className="rounded-md font-bold transition-all active:scale-90 select-none"
+                className="rounded-md font-bold transition-all active:scale-90 select-none aspect-square flex items-center justify-center text-sm"
                 style={{
-                  width: cellSize, height: cellSize,
-                  fontSize: cellSize <= 28 ? 11 : 13,
+                  minWidth: "36px",
+                  minHeight: "36px",
                   background: fnd ? "#bbf7d0" : sel ? "#bfdbfe" : "#f1f5f9",
                   color:      fnd ? "#15803d" : sel ? "#1d4ed8" : "#374151",
                   border:     fnd ? "2px solid #22c55e" : sel ? "2px solid #3b82f6" : "2px solid transparent",

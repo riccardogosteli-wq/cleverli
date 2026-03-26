@@ -24,9 +24,13 @@ export default function FillInBlank({ question, answer, onAnswer, questionImage 
   const numeric = useMemo(() => isNumericAnswer(answer), [answer]);
 
   useEffect(() => {
-    setIsMobile("ontouchstart" in window || navigator.maxTouchPoints > 0);
-    const t = setTimeout(() => inputRef.current?.focus(), 100);
-    return () => clearTimeout(t);
+    const mobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    setIsMobile(mobile);
+    // Don't auto-focus on mobile — the keyboard would pop up before the child reads the question
+    if (!mobile) {
+      const t = setTimeout(() => inputRef.current?.focus(), 100);
+      return () => clearTimeout(t);
+    }
   }, []);
 
   const submit = () => {

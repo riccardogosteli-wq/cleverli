@@ -77,7 +77,7 @@ export default function NumberLine({ question, min, max, answer, step = 1, onAns
           value={value}
           onChange={handleSlider}
           disabled={submitted}
-          className="w-full h-3 rounded-full appearance-none cursor-pointer"
+          className="w-full h-5 rounded-full appearance-none cursor-pointer"
           style={{
             background: `linear-gradient(to right, #3b82f6 ${pct(value)}%, #e5e7eb ${pct(value)}%)`,
             WebkitAppearance: "none",
@@ -111,7 +111,15 @@ export default function NumberLine({ question, min, max, answer, step = 1, onAns
       <style>{`
         input[type=range]::-webkit-slider-thumb {
           -webkit-appearance: none;
-          width: 28px; height: 28px;
+          width: 44px; height: 44px;
+          border-radius: 50%;
+          background: #3b82f6;
+          border: 3px solid white;
+          box-shadow: 0 2px 8px rgba(59,130,246,0.4);
+          cursor: grab;
+        }
+        input[type=range]::-moz-range-thumb {
+          width: 44px; height: 44px;
           border-radius: 50%;
           background: #3b82f6;
           border: 3px solid white;
@@ -119,6 +127,10 @@ export default function NumberLine({ question, min, max, answer, step = 1, onAns
           cursor: grab;
         }
         input[type=range]:disabled::-webkit-slider-thumb {
+          background: #9ca3af;
+          cursor: default;
+        }
+        input[type=range]:disabled::-moz-range-thumb {
           background: #9ca3af;
           cursor: default;
         }

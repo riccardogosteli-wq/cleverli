@@ -12,7 +12,7 @@ function AvatarPicker({ value, onChange }: { value: string; onChange: (a: string
     <div className="grid grid-cols-6 gap-2">
       {AVATARS.map(a => (
         <button key={a} type="button" onClick={() => onChange(a)}
-          className={`text-2xl w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
+          className={`text-2xl w-11 h-11 rounded-xl flex items-center justify-center transition-all ${
             value === a ? "bg-green-100 ring-2 ring-green-500 scale-110" : "bg-gray-50 hover:bg-green-50"
           }`}>
           {a}
@@ -122,7 +122,7 @@ function ChildCard({ member, isActive, onSwitch, onDelete, onGradeChange }: {
         <div className="flex gap-2 shrink-0">
           {!isActive && (
             <button onClick={onSwitch}
-              className="text-xs bg-green-700 text-white px-3 py-1.5 rounded-lg font-semibold hover:bg-green-700 active:scale-95 transition-all">
+              className="text-xs bg-green-700 text-white px-3 py-2 rounded-lg font-semibold hover:bg-green-700 active:scale-95 transition-all min-h-[44px]">
               Wechseln
             </button>
           )}

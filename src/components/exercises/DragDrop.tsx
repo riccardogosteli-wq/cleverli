@@ -220,9 +220,10 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
           <div
             key={item.id}
             onPointerDown={e => handlePointerDown(e, item.id)}
-            className="flex flex-col items-center gap-1 bg-white border-2 border-gray-200 rounded-2xl px-3 py-2 shadow-sm hover:border-blue-300 hover:bg-blue-50 transition-all"
+            className="flex flex-col items-center gap-1 bg-white border-2 border-gray-200 rounded-2xl px-3 py-3 shadow-sm hover:border-blue-300 hover:bg-blue-50 transition-all"
             style={{
-              minWidth: "70px",
+              minWidth: "76px",
+              minHeight: "44px",
               cursor: "grab",
               opacity: activeItemId === item.id ? 0.35 : 1,
               touchAction: "none",

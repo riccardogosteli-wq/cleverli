@@ -85,7 +85,8 @@ export default function MemoryGame({ pairs, onAnswer }: Props) {
     }
   }, [locked, flipped, matched, cards, play]);
 
-  const cols = pairs.length <= 3 ? "grid-cols-3" : pairs.length <= 4 ? "grid-cols-4" : "grid-cols-3";
+  // Max 3 columns on mobile to keep cards large enough to tap (≥72px each)
+  const cols = pairs.length <= 3 ? "grid-cols-3" : "grid-cols-3 sm:grid-cols-4";
 
   return (
     <div className="space-y-3">
@@ -127,7 +128,7 @@ export default function MemoryGame({ pairs, onAnswer }: Props) {
                 </div>
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src="/images/mascot/cleverli-thumbsup.png" alt="?" className="w-8 h-8 object-contain opacity-60" />
+                  <Image src="/images/mascot/cleverli-thumbsup.png" alt="" width={32} height={32} className="object-contain opacity-60" />
                 </div>
               )}
             </button>

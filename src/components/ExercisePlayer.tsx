@@ -563,7 +563,10 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
 
       {/* Tier completion toast */}
       {tierToast && (
-        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-white border-2 border-green-300 rounded-2xl px-5 py-2.5 shadow-xl text-sm font-bold text-green-700 whitespace-nowrap">
+        <div
+          className="fixed left-1/2 -translate-x-1/2 z-50 bg-white border-2 border-green-300 rounded-2xl px-5 py-2.5 shadow-xl text-sm font-bold text-green-700 whitespace-nowrap"
+          style={{ top: "max(4rem, calc(env(safe-area-inset-top) + 3.5rem))" }}
+        >
           {tierToast}
         </div>
       )}

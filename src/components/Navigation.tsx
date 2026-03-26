@@ -215,8 +215,8 @@ export default function Navigation() {
       {/* Mobile dropdown — animated slide */}
       {open && (
         <div
-          className="sm:hidden bg-white border-t border-gray-100 px-4 py-3 flex flex-col gap-2 animate-[slideDown_0.18s_ease-out]"
-          style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
+          className="sm:hidden bg-white border-t border-gray-100 px-4 py-3 flex flex-col gap-2 animate-[slideDown_0.18s_ease-out] overflow-y-auto"
+          style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))", maxHeight: "80dvh" }}
         >
           {/* Core nav — always visible */}
           <Link href="/dashboard"
