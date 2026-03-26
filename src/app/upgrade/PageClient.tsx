@@ -252,7 +252,7 @@ export default function UpgradePageClient() {
           <span className="text-gray-300">·</span>
           <span className="text-sm font-bold text-gray-600">Mastercard</span>
         </div>
-        <p className="text-xs text-gray-400">Powered by Payrexx · SSL verschlüsselt</p>
+        <p className="text-xs text-gray-400">Powered by Stripe · SSL verschlüsselt</p>
       </div>
     </div>
   );

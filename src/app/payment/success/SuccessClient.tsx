@@ -104,10 +104,10 @@ export default function SuccessClient() {
           {t("Jetzt lernen! 🚀", "Commencer à apprendre ! 🚀", "Inizia a imparare! 🚀", "Start learning! 🚀")}
         </Link>
         <p className="text-xs text-gray-400">
-          {t("Du erhältst eine Bestätigungs-E-Mail von Payrexx.",
-             "Tu recevras un e-mail de confirmation de Payrexx.",
-             "Riceverai un'e-mail di conferma da Payrexx.",
-             "You will receive a confirmation email from Payrexx.")}
+          {t("Du erhältst eine Bestätigungs-E-Mail von Stripe.",
+             "Tu recevras un e-mail de confirmation de Stripe.",
+             "Riceverai una e-mail di conferma da Stripe.",
+             "You will receive a confirmation email from Stripe.")}
         </p>
       </div>
     </main>

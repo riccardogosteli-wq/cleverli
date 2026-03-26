@@ -151,10 +151,10 @@ export default function AccountPage() {
               <div>
                 <div className="font-bold text-gray-800 text-sm">👑 {t("Premium aktiv", "Premium actif", "Premium attivo", "Premium active")}</div>
                 <div className="text-xs text-gray-400 mt-0.5">
-                  {t("Verwaltet über Payrexx · Jederzeit kündbar",
-                     "Géré via Payrexx · Résiliable à tout moment",
-                     "Gestito via Payrexx · Annullabile in qualsiasi momento",
-                     "Managed via Payrexx · Cancel anytime")}
+                  {t("Verwaltet über Stripe · Jederzeit kündbar",
+                     "Géré via Stripe · Résiliable à tout moment",
+                     "Gestito via Stripe · Annullabile in qualsiasi momento",
+                     "Managed via Stripe · Cancel anytime")}
                 </div>
               </div>
               <span className="text-xl">✅</span>

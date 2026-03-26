@@ -1,17 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import Stripe from "stripe";
 
-const INSTANCE  = "cleverli";
-const API_KEY   = process.env.PAYREXX_API_KEY ?? "";
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SERVICE_KEY  = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 
-async function payrexx(method: string, path: string, body?: Record<string, unknown>) {
-  const res = await fetch(`https://api.payrexx.com/v1/${path}/?instance=${INSTANCE}`, {
-    method,
-    headers: { "Content-Type": "application/json", "x-api-key": API_KEY },
-    body: body ? JSON.stringify(body) : undefined,
-  });
-  return res.json();
+function getStripe() {
+  return new Stripe(process.env.STRIPE_SECRET_KEY!);
 }
 
 export async function POST(req: NextRequest) {
@@ -24,29 +18,31 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "bad_request" }, { status: 400 });
   }
 
-  // ── Find subscription(s) for this user via referenceId lookup ──────────────
-  // referenceId format we used when creating gateways: "{plan}:{userId}"
-  const subs = await payrexx("GET", "Subscription");
-
+  const stripe = getStripe();
   let cancelledCount = 0;
   let cancelError = "";
 
-  if (subs?.data?.length) {
-    for (const sub of subs.data) {
-      const ref: string = sub.referenceId ?? "";
-      // Match any subscription whose referenceId ends with ":userId"
-      if (ref.endsWith(`:${userId}`) || ref === userId) {
-        const delResult = await payrexx("DELETE", `Subscription/${sub.id}`);
-        if (delResult?.status === "success") {
-          cancelledCount++;
-        } else {
-          cancelError = delResult?.message ?? "cancel_failed";
-        }
+  // ── Find active Stripe subscriptions for this user via metadata ────────────
+  try {
+    const subscriptions = await stripe.subscriptions.list({
+      limit: 10,
+      status: "active",
+    });
+
+    for (const sub of subscriptions.data) {
+      const meta = sub.metadata ?? {};
+      if (meta.userId === userId) {
+        // Cancel at period end (user keeps access until billing cycle ends)
+        await stripe.subscriptions.update(sub.id, { cancel_at_period_end: true });
+        cancelledCount++;
       }
     }
+  } catch (err) {
+    cancelError = String(err);
+    console.error("[cancel-subscription] Stripe error:", err);
   }
 
-  // ── Flip premium=false in Supabase regardless (user requested cancel) ──────
+  // ── Mark as cancelled in Supabase (premium stays true until period ends) ───
   const updateRes = await fetch(
     `${SUPABASE_URL}/rest/v1/parent_profiles?id=eq.${userId}`,
     {
@@ -63,14 +59,13 @@ export async function POST(req: NextRequest) {
 
   if (!updateRes.ok) {
     const err = await updateRes.text();
-    console.error("[cancel-subscription] supabase update failed:", err);
+    console.error("[cancel-subscription] Supabase update failed:", err);
     return NextResponse.json({ error: "db_update_failed" }, { status: 500 });
   }
 
-  console.log(`[cancel-subscription] ✅ Cancellation recorded for ${userId}. Payrexx subscriptions cancelled: ${cancelledCount}. Premium access continues until period end.`);
+  console.log(`[cancel-subscription] ✅ Cancellation recorded for ${userId}. Stripe subscriptions cancelled: ${cancelledCount}. Premium access continues until period end.`);
 
   if (cancelError && cancelledCount === 0) {
-    // Subscription may already be cancelled on Payrexx side — premium is still set to false
     return NextResponse.json({ ok: true, warning: cancelError });
   }
 
