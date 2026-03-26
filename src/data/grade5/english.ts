@@ -125,7 +125,7 @@ const grade5English: Topic[] = [
       { id: "fp5-47", type: "multiple-choice", difficulty: 3, question: "Correct the sentence: 'Will you going to be here tomorrow?'", answer: "Are you going to be here tomorrow?", options: ["Will you going to be here tomorrow?", "Are you going to be here tomorrow?", "Do you going to be here tomorrow?", "Is you going to be here tomorrow?"], hints: ["Going to questions start with Am/Is/Are + subject + going to."] },
       { id: "fp5-48", type: "fill-in-blank", difficulty: 3, question: "Complete: 'I think technology ___ change the world in the next 20 years.'", answer: "will", hints: ["Opinion/prediction → will."] },
       { id: "fp5-49", type: "multiple-choice", difficulty: 3, question: "Which sentence could use BOTH 'going to' and 'will'?", answer: "I think she is going to / will pass the exam.", options: ["I decided last week to pass the exam.", "I think she is going to / will pass the exam.", "Look, he is going to fall!", "Quick! I will catch you!"], hints: ["Predictions can use both forms; the meaning is very similar."] },
-      { id: "fp5-50", type: "fill-in-blank", difficulty: 3, question: "Write a full sentence using 'will' for a prediction about the year 2050.", answer: "In 2050, people will travel in flying cars. (any valid prediction)", hints: ["In [year], + subject + will + base verb + ..."] },
+      { id: "fp5-50", type: "fill-in-blank", difficulty: 3, question: "Write a full sentence using 'will' for a prediction about the year 2050.", answer: "In 2050, people will travel in flying cars. (any valid prediction)", hints: ["In [year], + subject + will + base verb + ...", "Example: 'In 2050, people will live on Mars.'"] },
     ],
   },
 

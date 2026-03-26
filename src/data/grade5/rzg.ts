@@ -63,7 +63,7 @@ const grade5RZG: Topic[] = [
     title: "Schweiz — Politik & Demokratie",
     emoji: "🏛️",
     exercises: [
-      { id: "sp5-1", type: "multiple-choice", question: "Wie viele Mitglieder hat der Schweizer Bundesrat?", answer: "7 Mitglieder", options: ["5","7","9","11"], hints: ["Bundesrat: 7 Mitglieder = Kollegialregierung. Alle gleich.","7 Departemente, 7 Bundesräte."], difficulty: 1, free: true },
+      { id: "sp5-1", type: "multiple-choice", question: "Wie viele Mitglieder hat der Schweizer Bundesrat?", answer: "7", options: ["5","7","9","11"], hints: ["Bundesrat: 7 Mitglieder = Kollegialregierung. Alle gleich.","7 Departemente, 7 Bundesräte."], difficulty: 1, free: true },
       { id: "sp5-2", type: "fill-in-blank", question: "Wie viele Landessprachen hat die Schweiz?", answer: "4", hints: ["4 Sprachen: Deutsch, Französisch, Italienisch, Rätoromanisch."], difficulty: 1, free: true },
       { id: "sp5-3", type: "multiple-choice", question: "Was ist direkte Demokratie?", answer: "Bürger entscheiden direkt über Gesetze und Sachfragen (Volksabstimmung)", options: ["Nur Parlament entscheidet","Bürger entscheiden direkt über Gesetze und Sachfragen (Volksabstimmung)","Monarchie","Diktatur"], hints: ["Schweiz: Volk kann Gesetze annehmen oder ablehnen. Volksinitiative, Referendum."], difficulty: 1, free: true },
       { id: "sp5-4", type: "fill-in-blank", question: "Das Schweizer Parlament heisst ___", answer: "Bundesversammlung", hints: ["Bundesversammlung: Nationalrat + Ständerat."], difficulty: 1 },
