@@ -1,0 +1,3418 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleverli — Image Inventory</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fa; color: #333; }
+  
+  /* Password overlay */
+  #pw-overlay { position: fixed; inset: 0; background: #f8f9fa; z-index: 9999; display: flex; align-items: center; justify-content: center; }
+  #pw-box { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); text-align: center; max-width: 360px; }
+  #pw-box h2 { margin-bottom: 16px; font-size: 22px; }
+  #pw-box input { width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; text-align: center; outline: none; }
+  #pw-box input:focus { border-color: #4CAF50; }
+  #pw-box button { margin-top: 12px; padding: 10px 32px; background: #4CAF50; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
+  #pw-box button:hover { background: #388E3C; }
+  #pw-error { color: #c62828; font-size: 13px; margin-top: 8px; display: none; }
+  
+  /* Main content (hidden until auth) */
+  #content { display: none; padding: 24px; }
+  
+  h1 { font-size: 28px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 24px; font-size: 14px; }
+  h2 { font-size: 20px; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
+  .count { font-size: 14px; color: #888; font-weight: normal; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .card { background: white; border-radius: 10px; padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; transition: transform 0.15s; }
+  .card:hover { transform: scale(1.02); box-shadow: 0 3px 12px rgba(0,0,0,0.12); }
+  .card .preview { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; background: #fafafa; border-radius: 8px; margin-bottom: 8px; overflow: hidden; }
+  .card .preview img { max-width: 110px; max-height: 110px; object-fit: contain; }
+  .card .filename { font-weight: 600; font-size: 13px; text-align: center; margin-bottom: 4px; word-break: break-all; }
+  .card .path { font-family: 'SF Mono', Menlo, monospace; font-size: 10px; color: #999; word-break: break-all; text-align: center; margin-bottom: 4px; }
+  .card .usage { font-size: 11px; color: #555; text-align: center; line-height: 1.4; }
+  .unused { opacity: 0.5; border: 2px dashed #e0e0e0; }
+  .toc { background: white; padding: 16px 24px; border-radius: 10px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; flex-wrap: wrap; gap: 8px 16px; }
+  .toc a { color: #1565c0; text-decoration: none; font-size: 13px; white-space: nowrap; }
+  .toc a:hover { text-decoration: underline; }
+  .badge { display: inline-block; font-size: 9px; padding: 2px 6px; border-radius: 8px; margin-top: 4px; }
+  .badge-used { background: #e8f5e9; color: #2e7d32; }
+  .badge-unused { background: #ffebee; color: #c62828; }
+  .instructions { background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px; padding: 16px 20px; margin-bottom: 24px; font-size: 14px; line-height: 1.6; }
+  .instructions strong { color: #e65100; }
+</style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="pw-overlay">
+  <div id="pw-box">
+    <h2>🎓 Cleverli Inventory</h2>
+    <p style="color:#666; margin-bottom:16px; font-size:14px;">Password required</p>
+    <input type="password" id="pw-input" placeholder="Enter password" autofocus>
+    <button onclick="checkPw()">Open</button>
+    <div id="pw-error">Wrong password</div>
+  </div>
+</div>
+
+<script>
+function checkPw() {
+  if (document.getElementById('pw-input').value === 'testing') {
+    document.getElementById('pw-overlay').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    sessionStorage.setItem('inv-auth', '1');
+  } else {
+    document.getElementById('pw-error').style.display = 'block';
+    document.getElementById('pw-input').value = '';
+    document.getElementById('pw-input').focus();
+  }
+}
+document.getElementById('pw-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') checkPw();
+});
+if (sessionStorage.getItem('inv-auth') === '1') {
+  document.getElementById('pw-overlay').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+}
+</script>
+
+<div id="content">
+<h1>🎓 Cleverli — Full Image & Icon Inventory</h1>
+<p class="subtitle">175 image files + 293 emoji icons. Everything visual on the site.</p>
+
+<div class="instructions">
+  <strong>How to replace:</strong><br>
+  1. Note the filename of what you want to replace<br>
+  2. Upload the new version to our <a href="https://drive.google.com/drive/folders/1GV2V6-TVpEuBbAK5WDMHT_mT3Ppd2kiX" target="_blank">Google Drive → replacements/</a><br>
+  3. Tell Ricci: "Replace <em>old-name.svg</em> → <em>new-name.svg</em>"<br>
+  4. Cleverli (the bot) swaps it in and deploys ✅
+</div>
+
+<div class="toc"><strong>Jump to:&nbsp;</strong><a href="#root-(logo,-mascot,-meta)">Root (Logo, Mascot, Meta) (14)</a><a href="#mascot">🐿️ Mascot (3)</a><a href="#ui-icons">🎨 UI Icons (24)</a><a href="#scenes-&-backgrounds">🖼️ Scenes & Backgrounds (24)</a><a href="#animals">🐾 Animals (36)</a><a href="#letters">🔤 Letters (26)</a><a href="#numbers">🔢 Numbers (11)</a><a href="#objects">🎒 Objects (24)</a><a href="#shapes">🔷 Shapes (7)</a><a href="#science">🔬 Science (6)</a><a href="#emoji">😀 Emoji Icons (293)</a></div>
+<h2 id="root-(logo,-mascot,-meta)">Root (Logo, Mascot, Meta) <span class="count">(14 files)</span></h2>
+<div class="grid">
+<div class="card">
+  <div class="preview"><img src="/apple-touch-icon.png" alt="apple-touch-icon.png" loading="lazy"></div>
+  <div class="filename">apple-touch-icon.png</div>
+  <div class="path">/apple-touch-icon.png</div>
+  <div class="usage">app/layout</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/cleverli-celebrate.png" alt="cleverli-celebrate.png" loading="lazy"></div>
+  <div class="filename">cleverli-celebrate.png</div>
+  <div class="path">/cleverli-celebrate.png</div>
+  <div class="usage">app/HomeClient, app/rewards/PageClient, app/dashboard/PageClient, app/kids/PageClient +2 more</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/cleverli-jump-star.png" alt="cleverli-jump-star.png" loading="lazy"></div>
+  <div class="filename">cleverli-jump-star.png</div>
+  <div class="path">/cleverli-jump-star.png</div>
+  <div class="usage">app/HomeClient, app/family/PageClient, app/daily/PageClient, app/kids/PageClient +1 more</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/cleverli-logo.png" alt="cleverli-logo.png" loading="lazy"></div>
+  <div class="filename">cleverli-logo.png</div>
+  <div class="path">/cleverli-logo.png</div>
+  <div class="usage">app/blog/kinder-motivieren-zum-lernen/page, components/StructuredData, components/Navigation, lib/email</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/cleverli-run.png" alt="cleverli-run.png" loading="lazy"></div>
+  <div class="filename">cleverli-run.png</div>
+  <div class="path">/cleverli-run.png</div>
+  <div class="usage">app/HomeClient, app/daily/PageClient, app/dashboard/PageClient, app/kids/PageClient +1 more</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/cleverli-sit-read.png" alt="cleverli-sit-read.png" loading="lazy"></div>
+  <div class="filename">cleverli-sit-read.png</div>
+  <div class="path">/cleverli-sit-read.png</div>
+  <div class="usage">app/HomeClient, app/parents/PageClient, app/blog/kinder-motivieren-zum-lernen/page, app/kids/PageClient +3 more</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/cleverli-think.png" alt="cleverli-think.png" loading="lazy"></div>
+  <div class="filename">cleverli-think.png</div>
+  <div class="path">/cleverli-think.png</div>
+  <div class="usage">app/HomeClient, app/not-found, app/rewards/PageClient, app/daily/PageClient +3 more</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/cleverli-thumbsup.png" alt="cleverli-thumbsup.png" loading="lazy"></div>
+  <div class="filename">cleverli-thumbsup.png</div>
+  <div class="path">/cleverli-thumbsup.png</div>
+  <div class="usage">app/HomeClient, app/dashboard/PageClient, app/reset-password/page, app/kids/PageClient +1 more</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/cleverli-wave.png" alt="cleverli-wave.png" loading="lazy"></div>
+  <div class="filename">cleverli-wave.png</div>
+  <div class="path">/cleverli-wave.png</div>
+  <div class="usage">app/HomeClient, app/blog/kinder-motivieren-zum-lernen/page, app/kids/PageClient, components/ExercisePlayer +3 more</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/favicon.ico" alt="favicon.ico" loading="lazy"></div>
+  <div class="filename">favicon.ico</div>
+  <div class="path">/favicon.ico</div>
+  <div class="usage">app/layout</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/favicon.svg" alt="favicon.svg" loading="lazy"></div>
+  <div class="filename">favicon.svg</div>
+  <div class="path">/favicon.svg</div>
+  <div class="usage">app/layout</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/icon-192.png" alt="icon-192.png" loading="lazy"></div>
+  <div class="filename">icon-192.png</div>
+  <div class="path">/icon-192.png</div>
+  <div class="usage">app/layout</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/icon-512.png" alt="icon-512.png" loading="lazy"></div>
+  <div class="filename">icon-512.png</div>
+  <div class="path">/icon-512.png</div>
+  <div class="usage">app/layout</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/og-image.png" alt="og-image.png" loading="lazy"></div>
+  <div class="filename">og-image.png</div>
+  <div class="path">/og-image.png</div>
+  <div class="usage">app/layout, app/page, app/parents/page, app/missionen/page +7 more</div>
+  <span class="badge badge-used">used</span>
+</div>
+</div>
+
+<h2 id="mascot">🐿️ Mascot <span class="count">(3 files)</span></h2>
+<div class="grid">
+<div class="card unused">
+  <div class="preview"><img src="/images/mascot/cleverli-poses.jpg" alt="cleverli-poses.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-poses.jpg</div>
+  <div class="path">/images/mascot/cleverli-poses.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/mascot/cleverli-thumbsup.jpg" alt="cleverli-thumbsup.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-thumbsup.jpg</div>
+  <div class="path">/images/mascot/cleverli-thumbsup.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/mascot/cleverli-thumbsup.png" alt="cleverli-thumbsup.png" loading="lazy"></div>
+  <div class="filename">cleverli-thumbsup.png</div>
+  <div class="path">/images/mascot/cleverli-thumbsup.png</div>
+  <div class="usage">app/HomeClient, app/reset-password/page, app/kids/PageClient, components/exercises/MemoryGame</div>
+  <span class="badge badge-used">used</span>
+</div>
+</div>
+
+<h2 id="ui-icons">🎨 UI Icons <span class="count">(24 files)</span></h2>
+<div class="grid">
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Alphabet.svg" alt="Alphabet.svg" loading="lazy"></div>
+  <div class="filename">Alphabet.svg</div>
+  <div class="path">/images/ui/Alphabet.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen-icon.svg" loading="lazy"></div>
+  <div class="filename">Belohnungen-icon.svg</div>
+  <div class="path">/images/ui/Belohnungen-icon.svg</div>
+  <div class="usage">app/rewards/PageClient, components/MobileBottomNav, components/Navigation</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Belohnungen.svg" alt="Belohnungen.svg" loading="lazy"></div>
+  <div class="filename">Belohnungen.svg</div>
+  <div class="path">/images/ui/Belohnungen.svg</div>
+  <div class="usage">components/GuestPreview</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Cleverli-Bronze.png" alt="Cleverli-Bronze.png" loading="lazy"></div>
+  <div class="filename">Cleverli-Bronze.png</div>
+  <div class="path">/images/ui/Cleverli-Bronze.png</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Cleverli-Bronze.svg" alt="Cleverli-Bronze.svg" loading="lazy"></div>
+  <div class="filename">Cleverli-Bronze.svg</div>
+  <div class="path">/images/ui/Cleverli-Bronze.svg</div>
+  <div class="usage">app/missionen/PageClient</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Cleverli-Gold.png" alt="Cleverli-Gold.png" loading="lazy"></div>
+  <div class="filename">Cleverli-Gold.png</div>
+  <div class="path">/images/ui/Cleverli-Gold.png</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Cleverli-Gold.svg" alt="Cleverli-Gold.svg" loading="lazy"></div>
+  <div class="filename">Cleverli-Gold.svg</div>
+  <div class="path">/images/ui/Cleverli-Gold.svg</div>
+  <div class="usage">app/missionen/PageClient</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Cleverli-Silber.png" alt="Cleverli-Silber.png" loading="lazy"></div>
+  <div class="filename">Cleverli-Silber.png</div>
+  <div class="path">/images/ui/Cleverli-Silber.png</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Cleverli-Silber.svg" alt="Cleverli-Silber.svg" loading="lazy"></div>
+  <div class="filename">Cleverli-Silber.svg</div>
+  <div class="path">/images/ui/Cleverli-Silber.svg</div>
+  <div class="usage">app/missionen/PageClient</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Deutsch.svg" alt="Deutsch.svg" loading="lazy"></div>
+  <div class="filename">Deutsch.svg</div>
+  <div class="path">/images/ui/Deutsch.svg</div>
+  <div class="usage">app/missionen/PageClient, app/dashboard/PageClient</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Familie.svg" alt="Familie.svg" loading="lazy"></div>
+  <div class="filename">Familie.svg</div>
+  <div class="path">/images/ui/Familie.svg</div>
+  <div class="usage">app/parents/PageClient, components/MobileBottomNav</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Lernen-Dashboard-icon.svg" alt="Lernen-Dashboard-icon.svg" loading="lazy"></div>
+  <div class="filename">Lernen-Dashboard-icon.svg</div>
+  <div class="path">/images/ui/Lernen-Dashboard-icon.svg</div>
+  <div class="usage">components/MobileBottomNav, components/Navigation</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Lernen-Dashboard.svg" alt="Lernen-Dashboard.svg" loading="lazy"></div>
+  <div class="filename">Lernen-Dashboard.svg</div>
+  <div class="path">/images/ui/Lernen-Dashboard.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Mathematik.svg" alt="Mathematik.svg" loading="lazy"></div>
+  <div class="filename">Mathematik.svg</div>
+  <div class="path">/images/ui/Mathematik.svg</div>
+  <div class="usage">app/missionen/PageClient, app/dashboard/PageClient</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Missionen.svg" alt="Missionen.svg" loading="lazy"></div>
+  <div class="filename">Missionen.svg</div>
+  <div class="path">/images/ui/Missionen.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Muster.svg" alt="Muster.svg" loading="lazy"></div>
+  <div class="filename">Muster.svg</div>
+  <div class="path">/images/ui/Muster.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/NMG.svg" alt="NMG.svg" loading="lazy"></div>
+  <div class="filename">NMG.svg</div>
+  <div class="path">/images/ui/NMG.svg</div>
+  <div class="usage">app/missionen/PageClient, app/dashboard/PageClient</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Premium-Gesperrt.svg" alt="Premium-Gesperrt.svg" loading="lazy"></div>
+  <div class="filename">Premium-Gesperrt.svg</div>
+  <div class="path">/images/ui/Premium-Gesperrt.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Tagesaufgabe-icon.svg" alt="Tagesaufgabe-icon.svg" loading="lazy"></div>
+  <div class="filename">Tagesaufgabe-icon.svg</div>
+  <div class="path">/images/ui/Tagesaufgabe-icon.svg</div>
+  <div class="usage">components/MobileBottomNav</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Tagesaufgabe.svg" alt="Tagesaufgabe.svg" loading="lazy"></div>
+  <div class="filename">Tagesaufgabe.svg</div>
+  <div class="path">/images/ui/Tagesaufgabe.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Trophaeen-icon.svg" alt="Trophaeen-icon.svg" loading="lazy"></div>
+  <div class="filename">Trophaeen-icon.svg</div>
+  <div class="path">/images/ui/Trophaeen-icon.svg</div>
+  <div class="usage">app/rewards/PageClient, components/MobileBottomNav</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/ui/Trophaeen.svg" alt="Trophaeen.svg" loading="lazy"></div>
+  <div class="filename">Trophaeen.svg</div>
+  <div class="path">/images/ui/Trophaeen.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Woerter-Sprache.svg" alt="Woerter-Sprache.svg" loading="lazy"></div>
+  <div class="filename">Woerter-Sprache.svg</div>
+  <div class="path">/images/ui/Woerter-Sprache.svg</div>
+  <div class="usage">app/dashboard/PageClient</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/ui/Zeit.svg" alt="Zeit.svg" loading="lazy"></div>
+  <div class="filename">Zeit.svg</div>
+  <div class="path">/images/ui/Zeit.svg</div>
+  <div class="usage">app/dashboard/PageClient</div>
+  <span class="badge badge-used">used</span>
+</div>
+</div>
+
+<h2 id="scenes-&-backgrounds">🖼️ Scenes & Backgrounds <span class="count">(24 files)</span></h2>
+<div class="grid">
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-book-abc.jpg" alt="cleverli-book-abc.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-book-abc.jpg</div>
+  <div class="path">/images/scenes/cleverli-book-abc.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/cleverli-celebrate-magic.jpg" alt="cleverli-celebrate-magic.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-celebrate-magic.jpg</div>
+  <div class="path">/images/scenes/cleverli-celebrate-magic.jpg</div>
+  <div class="usage">components/RewardAnimation</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-chalkboard-quest.jpg" alt="cleverli-chalkboard-quest.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-chalkboard-quest.jpg</div>
+  <div class="path">/images/scenes/cleverli-chalkboard-quest.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-encourage.jpg" alt="cleverli-encourage.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-encourage.jpg</div>
+  <div class="path">/images/scenes/cleverli-encourage.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-explore.jpg" alt="cleverli-explore.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-explore.jpg</div>
+  <div class="path">/images/scenes/cleverli-explore.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-idea.jpg" alt="cleverli-idea.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-idea.jpg</div>
+  <div class="path">/images/scenes/cleverli-idea.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-level1.svg" alt="cleverli-level1.svg" loading="lazy"></div>
+  <div class="filename">cleverli-level1.svg</div>
+  <div class="path">/images/scenes/cleverli-level1.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-level2.svg" alt="cleverli-level2.svg" loading="lazy"></div>
+  <div class="filename">cleverli-level2.svg</div>
+  <div class="path">/images/scenes/cleverli-level2.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-level3.svg" alt="cleverli-level3.svg" loading="lazy"></div>
+  <div class="filename">cleverli-level3.svg</div>
+  <div class="path">/images/scenes/cleverli-level3.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-map.jpg" alt="cleverli-map.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-map.jpg</div>
+  <div class="path">/images/scenes/cleverli-map.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/cleverli-math-ask.jpg" alt="cleverli-math-ask.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-math-ask.jpg</div>
+  <div class="path">/images/scenes/cleverli-math-ask.jpg</div>
+  <div class="usage">components/RewardAnimation</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-reading-abc.jpg" alt="cleverli-reading-abc.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-reading-abc.jpg</div>
+  <div class="path">/images/scenes/cleverli-reading-abc.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/cleverli-solution.jpg" alt="cleverli-solution.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-solution.jpg</div>
+  <div class="path">/images/scenes/cleverli-solution.jpg</div>
+  <div class="usage">components/RewardAnimation</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-teach-kids.jpg" alt="cleverli-teach-kids.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-teach-kids.jpg</div>
+  <div class="path">/images/scenes/cleverli-teach-kids.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/cleverli-well-done.jpg" alt="cleverli-well-done.jpg" loading="lazy"></div>
+  <div class="filename">cleverli-well-done.jpg</div>
+  <div class="path">/images/scenes/cleverli-well-done.jpg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/erdloch-transparent.png" alt="erdloch-transparent.png" loading="lazy"></div>
+  <div class="filename">erdloch-transparent.png</div>
+  <div class="path">/images/scenes/erdloch-transparent.png</div>
+  <div class="usage">lib/roadmapGenerator</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/Haus-level1-closed.svg" alt="Haus-level1-closed.svg" loading="lazy"></div>
+  <div class="filename">Haus-level1-closed.svg</div>
+  <div class="path">/images/scenes/Haus-level1-closed.svg</div>
+  <div class="usage">lib/roadmapGenerator</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/Haus-level1-open.svg" alt="Haus-level1-open.svg" loading="lazy"></div>
+  <div class="filename">Haus-level1-open.svg</div>
+  <div class="path">/images/scenes/Haus-level1-open.svg</div>
+  <div class="usage">lib/roadmapGenerator</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/Haus-level2-closed.svg" alt="Haus-level2-closed.svg" loading="lazy"></div>
+  <div class="filename">Haus-level2-closed.svg</div>
+  <div class="path">/images/scenes/Haus-level2-closed.svg</div>
+  <div class="usage">lib/roadmapGenerator</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/Haus-level2-open.svg" alt="Haus-level2-open.svg" loading="lazy"></div>
+  <div class="filename">Haus-level2-open.svg</div>
+  <div class="path">/images/scenes/Haus-level2-open.svg</div>
+  <div class="usage">lib/roadmapGenerator</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/scenes/progress-background2.svg" alt="progress-background2.svg" loading="lazy"></div>
+  <div class="filename">progress-background2.svg</div>
+  <div class="path">/images/scenes/progress-background2.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/progress_background-final.svg" alt="progress_background-final.svg" loading="lazy"></div>
+  <div class="filename">progress_background-final.svg</div>
+  <div class="path">/images/scenes/progress_background-final.svg</div>
+  <div class="usage">lib/roadmapGenerator</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/Schloss-level3-closed.svg" alt="Schloss-level3-closed.svg" loading="lazy"></div>
+  <div class="filename">Schloss-level3-closed.svg</div>
+  <div class="path">/images/scenes/Schloss-level3-closed.svg</div>
+  <div class="usage">lib/roadmapGenerator</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/scenes/Schloss-level3-open.svg" alt="Schloss-level3-open.svg" loading="lazy"></div>
+  <div class="filename">Schloss-level3-open.svg</div>
+  <div class="path">/images/scenes/Schloss-level3-open.svg</div>
+  <div class="usage">lib/roadmapGenerator</div>
+  <span class="badge badge-used">used</span>
+</div>
+</div>
+
+<h2 id="animals">🐾 Animals <span class="count">(36 files)</span></h2>
+<div class="grid">
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Baer.svg" alt="Baer.svg" loading="lazy"></div>
+  <div class="filename">Baer.svg</div>
+  <div class="path">/images/animals/Baer.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/bear.svg" alt="bear.svg" loading="lazy"></div>
+  <div class="filename">bear.svg</div>
+  <div class="path">/images/animals/bear.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/bee.svg" alt="bee.svg" loading="lazy"></div>
+  <div class="filename">bee.svg</div>
+  <div class="path">/images/animals/bee.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Biene.svg" alt="Biene.svg" loading="lazy"></div>
+  <div class="filename">Biene.svg</div>
+  <div class="path">/images/animals/Biene.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/bird.svg" alt="bird.svg" loading="lazy"></div>
+  <div class="filename">bird.svg</div>
+  <div class="path">/images/animals/bird.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/butterfly.svg" alt="butterfly.svg" loading="lazy"></div>
+  <div class="filename">butterfly.svg</div>
+  <div class="path">/images/animals/butterfly.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/cat.svg" alt="cat.svg" loading="lazy"></div>
+  <div class="filename">cat.svg</div>
+  <div class="path">/images/animals/cat.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/cow.svg" alt="cow.svg" loading="lazy"></div>
+  <div class="filename">cow.svg</div>
+  <div class="path">/images/animals/cow.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/dog.svg" alt="dog.svg" loading="lazy"></div>
+  <div class="filename">dog.svg</div>
+  <div class="path">/images/animals/dog.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/duck.svg" alt="duck.svg" loading="lazy"></div>
+  <div class="filename">duck.svg</div>
+  <div class="path">/images/animals/duck.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/elephant.svg" alt="elephant.svg" loading="lazy"></div>
+  <div class="filename">elephant.svg</div>
+  <div class="path">/images/animals/elephant.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Ente.svg" alt="Ente.svg" loading="lazy"></div>
+  <div class="filename">Ente.svg</div>
+  <div class="path">/images/animals/Ente.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Fisch.svg" alt="Fisch.svg" loading="lazy"></div>
+  <div class="filename">Fisch.svg</div>
+  <div class="path">/images/animals/Fisch.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/fish.svg" alt="fish.svg" loading="lazy"></div>
+  <div class="filename">fish.svg</div>
+  <div class="path">/images/animals/fish.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/fox.svg" alt="fox.svg" loading="lazy"></div>
+  <div class="filename">fox.svg</div>
+  <div class="path">/images/animals/fox.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/frog.svg" alt="frog.svg" loading="lazy"></div>
+  <div class="filename">frog.svg</div>
+  <div class="path">/images/animals/frog.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Frosch.svg" alt="Frosch.svg" loading="lazy"></div>
+  <div class="filename">Frosch.svg</div>
+  <div class="path">/images/animals/Frosch.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Hase.svg" alt="Hase.svg" loading="lazy"></div>
+  <div class="filename">Hase.svg</div>
+  <div class="path">/images/animals/Hase.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/horse.svg" alt="horse.svg" loading="lazy"></div>
+  <div class="filename">horse.svg</div>
+  <div class="path">/images/animals/horse.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Hund.svg" alt="Hund.svg" loading="lazy"></div>
+  <div class="filename">Hund.svg</div>
+  <div class="path">/images/animals/Hund.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Katze.svg" alt="Katze.svg" loading="lazy"></div>
+  <div class="filename">Katze.svg</div>
+  <div class="path">/images/animals/Katze.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Kuh.svg" alt="Kuh.svg" loading="lazy"></div>
+  <div class="filename">Kuh.svg</div>
+  <div class="path">/images/animals/Kuh.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/lion.svg" alt="lion.svg" loading="lazy"></div>
+  <div class="filename">lion.svg</div>
+  <div class="path">/images/animals/lion.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Loewe.svg" alt="Loewe.svg" loading="lazy"></div>
+  <div class="filename">Loewe.svg</div>
+  <div class="path">/images/animals/Loewe.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Maus.svg" alt="Maus.svg" loading="lazy"></div>
+  <div class="filename">Maus.svg</div>
+  <div class="path">/images/animals/Maus.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/monkey.svg" alt="monkey.svg" loading="lazy"></div>
+  <div class="filename">monkey.svg</div>
+  <div class="path">/images/animals/monkey.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/mouse.svg" alt="mouse.svg" loading="lazy"></div>
+  <div class="filename">mouse.svg</div>
+  <div class="path">/images/animals/mouse.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/owl.svg" alt="owl.svg" loading="lazy"></div>
+  <div class="filename">owl.svg</div>
+  <div class="path">/images/animals/owl.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Pferd.svg" alt="Pferd.svg" loading="lazy"></div>
+  <div class="filename">Pferd.svg</div>
+  <div class="path">/images/animals/Pferd.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/pig.svg" alt="pig.svg" loading="lazy"></div>
+  <div class="filename">pig.svg</div>
+  <div class="path">/images/animals/pig.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/rabbit.svg" alt="rabbit.svg" loading="lazy"></div>
+  <div class="filename">rabbit.svg</div>
+  <div class="path">/images/animals/rabbit.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Schildkroete.svg" alt="Schildkroete.svg" loading="lazy"></div>
+  <div class="filename">Schildkroete.svg</div>
+  <div class="path">/images/animals/Schildkroete.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Schmetterling.svg" alt="Schmetterling.svg" loading="lazy"></div>
+  <div class="filename">Schmetterling.svg</div>
+  <div class="path">/images/animals/Schmetterling.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/sheep.svg" alt="sheep.svg" loading="lazy"></div>
+  <div class="filename">sheep.svg</div>
+  <div class="path">/images/animals/sheep.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/turtle.svg" alt="turtle.svg" loading="lazy"></div>
+  <div class="filename">turtle.svg</div>
+  <div class="path">/images/animals/turtle.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/animals/Vogel.svg" alt="Vogel.svg" loading="lazy"></div>
+  <div class="filename">Vogel.svg</div>
+  <div class="path">/images/animals/Vogel.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+</div>
+
+<h2 id="letters">🔤 Letters <span class="count">(26 files)</span></h2>
+<div class="grid">
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/A.svg" alt="A.svg" loading="lazy"></div>
+  <div class="filename">A.svg</div>
+  <div class="path">/images/letters/A.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/B.svg" alt="B.svg" loading="lazy"></div>
+  <div class="filename">B.svg</div>
+  <div class="path">/images/letters/B.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/C.svg" alt="C.svg" loading="lazy"></div>
+  <div class="filename">C.svg</div>
+  <div class="path">/images/letters/C.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/D.svg" alt="D.svg" loading="lazy"></div>
+  <div class="filename">D.svg</div>
+  <div class="path">/images/letters/D.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/E.svg" alt="E.svg" loading="lazy"></div>
+  <div class="filename">E.svg</div>
+  <div class="path">/images/letters/E.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/F.svg" alt="F.svg" loading="lazy"></div>
+  <div class="filename">F.svg</div>
+  <div class="path">/images/letters/F.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/G.svg" alt="G.svg" loading="lazy"></div>
+  <div class="filename">G.svg</div>
+  <div class="path">/images/letters/G.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/H.svg" alt="H.svg" loading="lazy"></div>
+  <div class="filename">H.svg</div>
+  <div class="path">/images/letters/H.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/I.svg" alt="I.svg" loading="lazy"></div>
+  <div class="filename">I.svg</div>
+  <div class="path">/images/letters/I.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/J.svg" alt="J.svg" loading="lazy"></div>
+  <div class="filename">J.svg</div>
+  <div class="path">/images/letters/J.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/K.svg" alt="K.svg" loading="lazy"></div>
+  <div class="filename">K.svg</div>
+  <div class="path">/images/letters/K.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/L.svg" alt="L.svg" loading="lazy"></div>
+  <div class="filename">L.svg</div>
+  <div class="path">/images/letters/L.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/M.svg" alt="M.svg" loading="lazy"></div>
+  <div class="filename">M.svg</div>
+  <div class="path">/images/letters/M.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/N.svg" alt="N.svg" loading="lazy"></div>
+  <div class="filename">N.svg</div>
+  <div class="path">/images/letters/N.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/O.svg" alt="O.svg" loading="lazy"></div>
+  <div class="filename">O.svg</div>
+  <div class="path">/images/letters/O.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/P.svg" alt="P.svg" loading="lazy"></div>
+  <div class="filename">P.svg</div>
+  <div class="path">/images/letters/P.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/Q.svg" alt="Q.svg" loading="lazy"></div>
+  <div class="filename">Q.svg</div>
+  <div class="path">/images/letters/Q.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/R.svg" alt="R.svg" loading="lazy"></div>
+  <div class="filename">R.svg</div>
+  <div class="path">/images/letters/R.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/S.svg" alt="S.svg" loading="lazy"></div>
+  <div class="filename">S.svg</div>
+  <div class="path">/images/letters/S.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/T.svg" alt="T.svg" loading="lazy"></div>
+  <div class="filename">T.svg</div>
+  <div class="path">/images/letters/T.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/U.svg" alt="U.svg" loading="lazy"></div>
+  <div class="filename">U.svg</div>
+  <div class="path">/images/letters/U.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/V.svg" alt="V.svg" loading="lazy"></div>
+  <div class="filename">V.svg</div>
+  <div class="path">/images/letters/V.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/W.svg" alt="W.svg" loading="lazy"></div>
+  <div class="filename">W.svg</div>
+  <div class="path">/images/letters/W.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/X.svg" alt="X.svg" loading="lazy"></div>
+  <div class="filename">X.svg</div>
+  <div class="path">/images/letters/X.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/Y.svg" alt="Y.svg" loading="lazy"></div>
+  <div class="filename">Y.svg</div>
+  <div class="path">/images/letters/Y.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/letters/Z.svg" alt="Z.svg" loading="lazy"></div>
+  <div class="filename">Z.svg</div>
+  <div class="path">/images/letters/Z.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+</div>
+
+<h2 id="numbers">🔢 Numbers <span class="count">(11 files)</span></h2>
+<div class="grid">
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/0.svg" alt="0.svg" loading="lazy"></div>
+  <div class="filename">0.svg</div>
+  <div class="path">/images/numbers/0.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/1.svg" alt="1.svg" loading="lazy"></div>
+  <div class="filename">1.svg</div>
+  <div class="path">/images/numbers/1.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/10.svg" alt="10.svg" loading="lazy"></div>
+  <div class="filename">10.svg</div>
+  <div class="path">/images/numbers/10.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/2.svg" alt="2.svg" loading="lazy"></div>
+  <div class="filename">2.svg</div>
+  <div class="path">/images/numbers/2.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/3.svg" alt="3.svg" loading="lazy"></div>
+  <div class="filename">3.svg</div>
+  <div class="path">/images/numbers/3.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/4.svg" alt="4.svg" loading="lazy"></div>
+  <div class="filename">4.svg</div>
+  <div class="path">/images/numbers/4.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/5.svg" alt="5.svg" loading="lazy"></div>
+  <div class="filename">5.svg</div>
+  <div class="path">/images/numbers/5.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/6.svg" alt="6.svg" loading="lazy"></div>
+  <div class="filename">6.svg</div>
+  <div class="path">/images/numbers/6.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/7.svg" alt="7.svg" loading="lazy"></div>
+  <div class="filename">7.svg</div>
+  <div class="path">/images/numbers/7.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/8.svg" alt="8.svg" loading="lazy"></div>
+  <div class="filename">8.svg</div>
+  <div class="path">/images/numbers/8.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/numbers/9.svg" alt="9.svg" loading="lazy"></div>
+  <div class="filename">9.svg</div>
+  <div class="path">/images/numbers/9.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+</div>
+
+<h2 id="objects">🎒 Objects <span class="count">(24 files)</span></h2>
+<div class="grid">
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/apple.svg" alt="apple.svg" loading="lazy"></div>
+  <div class="filename">apple.svg</div>
+  <div class="path">/images/objects/apple.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/backpack.svg" alt="backpack.svg" loading="lazy"></div>
+  <div class="filename">backpack.svg</div>
+  <div class="path">/images/objects/backpack.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/ball.svg" alt="ball.svg" loading="lazy"></div>
+  <div class="filename">ball.svg</div>
+  <div class="path">/images/objects/ball.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/balloon.svg" alt="balloon.svg" loading="lazy"></div>
+  <div class="filename">balloon.svg</div>
+  <div class="path">/images/objects/balloon.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/banana.svg" alt="banana.svg" loading="lazy"></div>
+  <div class="filename">banana.svg</div>
+  <div class="path">/images/objects/banana.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/bike.svg" alt="bike.svg" loading="lazy"></div>
+  <div class="filename">bike.svg</div>
+  <div class="path">/images/objects/bike.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/boat.svg" alt="boat.svg" loading="lazy"></div>
+  <div class="filename">boat.svg</div>
+  <div class="path">/images/objects/boat.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/book.svg" alt="book.svg" loading="lazy"></div>
+  <div class="filename">book.svg</div>
+  <div class="path">/images/objects/book.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/bus.svg" alt="bus.svg" loading="lazy"></div>
+  <div class="filename">bus.svg</div>
+  <div class="path">/images/objects/bus.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/cake.svg" alt="cake.svg" loading="lazy"></div>
+  <div class="filename">cake.svg</div>
+  <div class="path">/images/objects/cake.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/car.svg" alt="car.svg" loading="lazy"></div>
+  <div class="filename">car.svg</div>
+  <div class="path">/images/objects/car.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/clock.svg" alt="clock.svg" loading="lazy"></div>
+  <div class="filename">clock.svg</div>
+  <div class="path">/images/objects/clock.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/cloud.svg" alt="cloud.svg" loading="lazy"></div>
+  <div class="filename">cloud.svg</div>
+  <div class="path">/images/objects/cloud.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/flower.svg" alt="flower.svg" loading="lazy"></div>
+  <div class="filename">flower.svg</div>
+  <div class="path">/images/objects/flower.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/house.svg" alt="house.svg" loading="lazy"></div>
+  <div class="filename">house.svg</div>
+  <div class="path">/images/objects/house.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/pencil.svg" alt="pencil.svg" loading="lazy"></div>
+  <div class="filename">pencil.svg</div>
+  <div class="path">/images/objects/pencil.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/plane.svg" alt="plane.svg" loading="lazy"></div>
+  <div class="filename">plane.svg</div>
+  <div class="path">/images/objects/plane.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/ruler.svg" alt="ruler.svg" loading="lazy"></div>
+  <div class="filename">ruler.svg</div>
+  <div class="path">/images/objects/ruler.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/school.svg" alt="school.svg" loading="lazy"></div>
+  <div class="filename">school.svg</div>
+  <div class="path">/images/objects/school.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/scissors.svg" alt="scissors.svg" loading="lazy"></div>
+  <div class="filename">scissors.svg</div>
+  <div class="path">/images/objects/scissors.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/star_obj.svg" alt="star_obj.svg" loading="lazy"></div>
+  <div class="filename">star_obj.svg</div>
+  <div class="path">/images/objects/star_obj.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/sun.svg" alt="sun.svg" loading="lazy"></div>
+  <div class="filename">sun.svg</div>
+  <div class="path">/images/objects/sun.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/train.svg" alt="train.svg" loading="lazy"></div>
+  <div class="filename">train.svg</div>
+  <div class="path">/images/objects/train.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/objects/tree.svg" alt="tree.svg" loading="lazy"></div>
+  <div class="filename">tree.svg</div>
+  <div class="path">/images/objects/tree.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+</div>
+
+<h2 id="shapes">🔷 Shapes <span class="count">(7 files)</span></h2>
+<div class="grid">
+<div class="card">
+  <div class="preview"><img src="/images/shapes/circle.svg" alt="circle.svg" loading="lazy"></div>
+  <div class="filename">circle.svg</div>
+  <div class="path">/images/shapes/circle.svg</div>
+  <div class="usage">components/exercises/MultipleChoice, data/grade1/math</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/shapes/diamond.svg" alt="diamond.svg" loading="lazy"></div>
+  <div class="filename">diamond.svg</div>
+  <div class="path">/images/shapes/diamond.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/shapes/heart.svg" alt="heart.svg" loading="lazy"></div>
+  <div class="filename">heart.svg</div>
+  <div class="path">/images/shapes/heart.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/shapes/rectangle.svg" alt="rectangle.svg" loading="lazy"></div>
+  <div class="filename">rectangle.svg</div>
+  <div class="path">/images/shapes/rectangle.svg</div>
+  <div class="usage">data/grade1/math</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/shapes/square.svg" alt="square.svg" loading="lazy"></div>
+  <div class="filename">square.svg</div>
+  <div class="path">/images/shapes/square.svg</div>
+  <div class="usage">data/grade1/math</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card unused">
+  <div class="preview"><img src="/images/shapes/star.svg" alt="star.svg" loading="lazy"></div>
+  <div class="filename">star.svg</div>
+  <div class="path">/images/shapes/star.svg</div>
+  <div class="usage">not referenced in code</div>
+  <span class="badge badge-unused">unused</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/shapes/triangle.svg" alt="triangle.svg" loading="lazy"></div>
+  <div class="filename">triangle.svg</div>
+  <div class="path">/images/shapes/triangle.svg</div>
+  <div class="usage">data/grade1/math</div>
+  <span class="badge badge-used">used</span>
+</div>
+</div>
+
+<h2 id="science">🔬 Science <span class="count">(6 files)</span></h2>
+<div class="grid">
+<div class="card">
+  <div class="preview"><img src="/images/science/plants/blatt.svg" alt="blatt.svg" loading="lazy"></div>
+  <div class="filename">blatt.svg</div>
+  <div class="path">/images/science/plants/blatt.svg</div>
+  <div class="usage">data/grade1/science</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/science/plants/bluete.svg" alt="bluete.svg" loading="lazy"></div>
+  <div class="filename">bluete.svg</div>
+  <div class="path">/images/science/plants/bluete.svg</div>
+  <div class="usage">data/grade1/science</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/science/plants/boden.svg" alt="boden.svg" loading="lazy"></div>
+  <div class="filename">boden.svg</div>
+  <div class="path">/images/science/plants/boden.svg</div>
+  <div class="usage">data/grade1/science</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/science/plants/samen.svg" alt="samen.svg" loading="lazy"></div>
+  <div class="filename">samen.svg</div>
+  <div class="path">/images/science/plants/samen.svg</div>
+  <div class="usage">data/grade1/science</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/science/plants/staengel.svg" alt="staengel.svg" loading="lazy"></div>
+  <div class="filename">staengel.svg</div>
+  <div class="path">/images/science/plants/staengel.svg</div>
+  <div class="usage">data/grade1/science</div>
+  <span class="badge badge-used">used</span>
+</div>
+<div class="card">
+  <div class="preview"><img src="/images/science/plants/wurzel.svg" alt="wurzel.svg" loading="lazy"></div>
+  <div class="filename">wurzel.svg</div>
+  <div class="path">/images/science/plants/wurzel.svg</div>
+  <div class="usage">data/grade1/science</div>
+  <span class="badge badge-used">used</span>
+</div>
+</div>
+
+<h2 id="emoji">😀 Emoji Icons <span class="count">(293 emoji used as icons in exercises & UI)</span></h2>
+<p style="color:#888; font-size:13px; margin-bottom:16px;">These are Unicode emoji characters, not image files. They render natively on each device. Replacing them means changing text in the code.</p>
+<div class="grid">
+<div class="card">
+  <div class="preview" style="font-size:48px;">%</div>
+  <div class="filename">%</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">1️⃣</div>
+  <div class="filename">1️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">2️⃣</div>
+  <div class="filename">2️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">3️⃣</div>
+  <div class="filename">3️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">4️⃣</div>
+  <div class="filename">4️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">5️⃣</div>
+  <div class="filename">5️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">6️⃣</div>
+  <div class="filename">6️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">7️⃣</div>
+  <div class="filename">7️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">8️⃣</div>
+  <div class="filename">8️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">9️⃣</div>
+  <div class="filename">9️⃣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">↔️</div>
+  <div class="filename">↔️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade3/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">↩️</div>
+  <div class="filename">↩️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⏰</div>
+  <div class="filename">⏰</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/english.ts, grade4/german.ts, grade5/german.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⏳</div>
+  <div class="filename">⏳</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/english.ts, grade4/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">▬</div>
+  <div class="filename">▬</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">☀️</div>
+  <div class="filename">☀️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts, grade3/science.ts +3 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">☁️</div>
+  <div class="filename">☁️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">☂️</div>
+  <div class="filename">☂️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">☮️</div>
+  <div class="filename">☮️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">♨️</div>
+  <div class="filename">♨️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">♻️</div>
+  <div class="filename">♻️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade4/nt.ts, grade5/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⚂</div>
+  <div class="filename">⚂</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⚖️</div>
+  <div class="filename">⚖️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade6/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⚗️</div>
+  <div class="filename">⚗️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/nt.ts, grade5/nt.ts, grade6/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⚙️</div>
+  <div class="filename">⚙️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade4/nt.ts, grade6/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⚡</div>
+  <div class="filename">⚡</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">src/components/GuestPreview.tsx, src/components/OnboardingModal.tsx, grade2/science.ts +5 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⚪</div>
+  <div class="filename">⚪</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⚽</div>
+  <div class="filename">⚽</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⛄</div>
+  <div class="filename">⛄</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⛅</div>
+  <div class="filename">⛅</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⛑️</div>
+  <div class="filename">⛑️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⛵</div>
+  <div class="filename">⛵</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">✅</div>
+  <div class="filename">✅</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">src/components/GuestPreview.tsx, grade3/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">✉️</div>
+  <div class="filename">✉️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">✋</div>
+  <div class="filename">✋</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">✌️</div>
+  <div class="filename">✌️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">✍️</div>
+  <div class="filename">✍️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade5/german.ts, grade6/english.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">✏️</div>
+  <div class="filename">✏️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/french.ts, grade5/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">✖️</div>
+  <div class="filename">✖️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/math.ts, grade3/math.ts, grade4/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">✝️</div>
+  <div class="filename">✝️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">❄️</div>
+  <div class="filename">❄️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">❗</div>
+  <div class="filename">❗</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/german.ts, grade4/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">❤️</div>
+  <div class="filename">❤️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">➕</div>
+  <div class="filename">➕</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts, grade4/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">➖</div>
+  <div class="filename">➖</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts, grade4/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">➗</div>
+  <div class="filename">➗</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⬆️</div>
+  <div class="filename">⬆️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⬛</div>
+  <div class="filename">⬛</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⬠</div>
+  <div class="filename">⬠</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⭐</div>
+  <div class="filename">⭐</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">src/components/OnboardingModal.tsx, grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">⭕</div>
+  <div class="filename">⭕</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🆓</div>
+  <div class="filename">🆓</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">src/components/GuestPreview.tsx</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🇨🇭</div>
+  <div class="filename">🇨🇭</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade4/rzg.ts, grade6/nt.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🇪🇺</div>
+  <div class="filename">🇪🇺</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🇫🇷</div>
+  <div class="filename">🇫🇷</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/french.ts, index.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🇬🇧</div>
+  <div class="filename">🇬🇧</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">index.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌅</div>
+  <div class="filename">🌅</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌈</div>
+  <div class="filename">🌈</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌉</div>
+  <div class="filename">🌉</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌊</div>
+  <div class="filename">🌊</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌌</div>
+  <div class="filename">🌌</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌍</div>
+  <div class="filename">🌍</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade4/rzg.ts, grade5/english.ts +4 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌎</div>
+  <div class="filename">🌎</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌏</div>
+  <div class="filename">🌏</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌐</div>
+  <div class="filename">🌐</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/rzg.ts, grade6/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌕</div>
+  <div class="filename">🌕</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌙</div>
+  <div class="filename">🌙</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌡️</div>
+  <div class="filename">🌡️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade5/rzg.ts, grade6/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌤️</div>
+  <div class="filename">🌤️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌦️</div>
+  <div class="filename">🌦️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌧️</div>
+  <div class="filename">🌧️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts, grade4/nt.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌨️</div>
+  <div class="filename">🌨️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌰</div>
+  <div class="filename">🌰</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌱</div>
+  <div class="filename">🌱</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade4/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌲</div>
+  <div class="filename">🌲</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/nt.ts, grade5/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌳</div>
+  <div class="filename">🌳</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/german.ts, grade2/science.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌸</div>
+  <div class="filename">🌸</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade1/science.ts, grade5/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌹</div>
+  <div class="filename">🌹</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌺</div>
+  <div class="filename">🌺</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌻</div>
+  <div class="filename">🌻</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌼</div>
+  <div class="filename">🌼</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🌿</div>
+  <div class="filename">🌿</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade3/science.ts, grade5/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍁</div>
+  <div class="filename">🍁</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍂</div>
+  <div class="filename">🍂</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍊</div>
+  <div class="filename">🍊</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍌</div>
+  <div class="filename">🍌</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍎</div>
+  <div class="filename">🍎</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade1/math.ts, grade1/science.ts +3 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍓</div>
+  <div class="filename">🍓</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍕</div>
+  <div class="filename">🍕</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/math.ts, grade4/math.ts, grade5/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍝</div>
+  <div class="filename">🍝</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍞</div>
+  <div class="filename">🍞</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍟</div>
+  <div class="filename">🍟</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍦</div>
+  <div class="filename">🍦</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍬</div>
+  <div class="filename">🍬</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍯</div>
+  <div class="filename">🍯</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍳</div>
+  <div class="filename">🍳</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍽️</div>
+  <div class="filename">🍽️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade4/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🍾</div>
+  <div class="filename">🍾</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎄</div>
+  <div class="filename">🎄</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎒</div>
+  <div class="filename">🎒</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎨</div>
+  <div class="filename">🎨</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/german.ts, grade3/english.ts, grade5/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎬</div>
+  <div class="filename">🎬</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎭</div>
+  <div class="filename">🎭</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎮</div>
+  <div class="filename">🎮</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">src/components/GuestPreview.tsx, grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎯</div>
+  <div class="filename">🎯</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts, grade5/english.ts +2 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎲</div>
+  <div class="filename">🎲</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/math.ts, grade6/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🎵</div>
+  <div class="filename">🎵</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏃</div>
+  <div class="filename">🏃</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/german.ts, grade2/science.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏆</div>
+  <div class="filename">🏆</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">src/components/GuestPreview.tsx, src/components/OnboardingModal.tsx, grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏖️</div>
+  <div class="filename">🏖️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏘️</div>
+  <div class="filename">🏘️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏙️</div>
+  <div class="filename">🏙️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade5/rzg.ts, grade6/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏛️</div>
+  <div class="filename">🏛️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade4/rzg.ts, grade5/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏞️</div>
+  <div class="filename">🏞️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏠</div>
+  <div class="filename">🏠</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏥</div>
+  <div class="filename">🏥</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/english.ts, grade6/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏫</div>
+  <div class="filename">🏫</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade5/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏭</div>
+  <div class="filename">🏭</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏰</div>
+  <div class="filename">🏰</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/rzg.ts, grade6/nt.ts, grade6/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🏷️</div>
+  <div class="filename">🏷️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/german.ts, grade3/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐄</div>
+  <div class="filename">🐄</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐇</div>
+  <div class="filename">🐇</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐎</div>
+  <div class="filename">🐎</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐔</div>
+  <div class="filename">🐔</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐕</div>
+  <div class="filename">🐕</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐙</div>
+  <div class="filename">🐙</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐝</div>
+  <div class="filename">🐝</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐟</div>
+  <div class="filename">🐟</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐢</div>
+  <div class="filename">🐢</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐦</div>
+  <div class="filename">🐦</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade1/math.ts, grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐧</div>
+  <div class="filename">🐧</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐬</div>
+  <div class="filename">🐬</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐭</div>
+  <div class="filename">🐭</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐮</div>
+  <div class="filename">🐮</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐱</div>
+  <div class="filename">🐱</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade1/math.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐴</div>
+  <div class="filename">🐴</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐶</div>
+  <div class="filename">🐶</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐷</div>
+  <div class="filename">🐷</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐸</div>
+  <div class="filename">🐸</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/science.ts, grade4/nt.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐻</div>
+  <div class="filename">🐻</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐼</div>
+  <div class="filename">🐼</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐾</div>
+  <div class="filename">🐾</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade1/science.ts, grade3/english.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🐿️</div>
+  <div class="filename">🐿️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👁️</div>
+  <div class="filename">👁️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts, grade3/science.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👂</div>
+  <div class="filename">👂</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👃</div>
+  <div class="filename">👃</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👅</div>
+  <div class="filename">👅</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👋</div>
+  <div class="filename">👋</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👏</div>
+  <div class="filename">👏</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade2/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👐</div>
+  <div class="filename">👐</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👕</div>
+  <div class="filename">👕</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👜</div>
+  <div class="filename">👜</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👤</div>
+  <div class="filename">👤</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/english.ts, grade4/german.ts, grade6/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👥</div>
+  <div class="filename">👥</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👦</div>
+  <div class="filename">👦</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👧</div>
+  <div class="filename">👧</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👨</div>
+  <div class="filename">👨</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👨‍🍳</div>
+  <div class="filename">👨‍🍳</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👨‍🏫</div>
+  <div class="filename">👨‍🏫</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👨‍👩‍👧</div>
+  <div class="filename">👨‍👩‍👧</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/english.ts, grade5/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👩</div>
+  <div class="filename">👩</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👩‍🏫</div>
+  <div class="filename">👩‍🏫</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👪</div>
+  <div class="filename">👪</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👴</div>
+  <div class="filename">👴</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade5/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👵</div>
+  <div class="filename">👵</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">👷</div>
+  <div class="filename">👷</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💡</div>
+  <div class="filename">💡</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade4/nt.ts, grade5/nt.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💧</div>
+  <div class="filename">💧</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade4/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💪</div>
+  <div class="filename">💪</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💬</div>
+  <div class="filename">💬</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade3/english.ts, grade5/german.ts +2 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💯</div>
+  <div class="filename">💯</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/math.ts, grade6/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💰</div>
+  <div class="filename">💰</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💱</div>
+  <div class="filename">💱</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💶</div>
+  <div class="filename">💶</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💻</div>
+  <div class="filename">💻</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/english.ts, grade6/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">💼</div>
+  <div class="filename">💼</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📄</div>
+  <div class="filename">📄</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📅</div>
+  <div class="filename">📅</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade3/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📆</div>
+  <div class="filename">📆</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📈</div>
+  <div class="filename">📈</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📊</div>
+  <div class="filename">📊</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts, grade3/math.ts +2 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📌</div>
+  <div class="filename">📌</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📎</div>
+  <div class="filename">📎</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📏</div>
+  <div class="filename">📏</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/math.ts, grade4/math.ts, grade5/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📐</div>
+  <div class="filename">📐</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/math.ts, grade4/math.ts, grade5/math.ts +1 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📓</div>
+  <div class="filename">📓</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📖</div>
+  <div class="filename">📖</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade2/german.ts, grade4/german.ts +5 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📚</div>
+  <div class="filename">📚</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade4/german.ts, grade5/english.ts +2 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📜</div>
+  <div class="filename">📜</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade4/rzg.ts, grade5/rzg.ts +2 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📝</div>
+  <div class="filename">📝</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts, grade3/math.ts +4 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📦</div>
+  <div class="filename">📦</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/math.ts, grade6/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📰</div>
+  <div class="filename">📰</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade5/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">📸</div>
+  <div class="filename">📸</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔀</div>
+  <div class="filename">🔀</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/german.ts, grade6/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔄</div>
+  <div class="filename">🔄</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts, grade5/english.ts +3 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔊</div>
+  <div class="filename">🔊</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔋</div>
+  <div class="filename">🔋</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade4/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔌</div>
+  <div class="filename">🔌</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔎</div>
+  <div class="filename">🔎</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔑</div>
+  <div class="filename">🔑</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔟</div>
+  <div class="filename">🔟</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔠</div>
+  <div class="filename">🔠</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔡</div>
+  <div class="filename">🔡</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔢</div>
+  <div class="filename">🔢</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts, grade3/english.ts +5 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔤</div>
+  <div class="filename">🔤</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade1/math.ts, grade4/german.ts +2 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔥</div>
+  <div class="filename">🔥</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">src/components/GuestPreview.tsx, src/components/OnboardingModal.tsx, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔦</div>
+  <div class="filename">🔦</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade4/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔨</div>
+  <div class="filename">🔨</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔩</div>
+  <div class="filename">🔩</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔬</div>
+  <div class="filename">🔬</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/nt.ts, index.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔭</div>
+  <div class="filename">🔭</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade6/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔮</div>
+  <div class="filename">🔮</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/english.ts, grade6/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔴</div>
+  <div class="filename">🔴</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔵</div>
+  <div class="filename">🔵</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔷</div>
+  <div class="filename">🔷</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🔺</div>
+  <div class="filename">🔺</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🕐</div>
+  <div class="filename">🕐</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🕑</div>
+  <div class="filename">🕑</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🕯️</div>
+  <div class="filename">🕯️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🕰️</div>
+  <div class="filename">🕰️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🕶️</div>
+  <div class="filename">🕶️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🖊️</div>
+  <div class="filename">🖊️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🖌️</div>
+  <div class="filename">🖌️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🖤</div>
+  <div class="filename">🖤</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🗓️</div>
+  <div class="filename">🗓️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🗣️</div>
+  <div class="filename">🗣️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🗳️</div>
+  <div class="filename">🗳️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade6/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🗺️</div>
+  <div class="filename">🗺️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts, grade4/english.ts, grade4/rzg.ts +3 more</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">😊</div>
+  <div class="filename">😊</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">😎</div>
+  <div class="filename">😎</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">😺</div>
+  <div class="filename">😺</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🚀</div>
+  <div class="filename">🚀</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🚗</div>
+  <div class="filename">🚗</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🚦</div>
+  <div class="filename">🚦</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🚲</div>
+  <div class="filename">🚲</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🛁</div>
+  <div class="filename">🛁</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🛏️</div>
+  <div class="filename">🛏️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🛒</div>
+  <div class="filename">🛒</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/english.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🛡️</div>
+  <div class="filename">🛡️</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🛷</div>
+  <div class="filename">🛷</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🟥</div>
+  <div class="filename">🟥</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🟦</div>
+  <div class="filename">🟦</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🤝</div>
+  <div class="filename">🤝</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥇</div>
+  <div class="filename">🥇</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥈</div>
+  <div class="filename">🥈</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥉</div>
+  <div class="filename">🥉</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥐</div>
+  <div class="filename">🥐</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/french.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥕</div>
+  <div class="filename">🥕</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥗</div>
+  <div class="filename">🥗</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥚</div>
+  <div class="filename">🥚</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥛</div>
+  <div class="filename">🥛</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥤</div>
+  <div class="filename">🥤</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥦</div>
+  <div class="filename">🥦</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥫</div>
+  <div class="filename">🥫</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🥾</div>
+  <div class="filename">🥾</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦁</div>
+  <div class="filename">🦁</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦅</div>
+  <div class="filename">🦅</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦉</div>
+  <div class="filename">🦉</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦊</div>
+  <div class="filename">🦊</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦋</div>
+  <div class="filename">🦋</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/science.ts, grade5/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦌</div>
+  <div class="filename">🦌</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦎</div>
+  <div class="filename">🦎</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦔</div>
+  <div class="filename">🦔</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦘</div>
+  <div class="filename">🦘</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🦶</div>
+  <div class="filename">🦶</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧀</div>
+  <div class="filename">🧀</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧊</div>
+  <div class="filename">🧊</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧍</div>
+  <div class="filename">🧍</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧠</div>
+  <div class="filename">🧠</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧤</div>
+  <div class="filename">🧤</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧥</div>
+  <div class="filename">🧥</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧩</div>
+  <div class="filename">🧩</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/german.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧪</div>
+  <div class="filename">🧪</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/nt.ts, grade6/nt.ts, grade6/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧮</div>
+  <div class="filename">🧮</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade3/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧱</div>
+  <div class="filename">🧱</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧲</div>
+  <div class="filename">🧲</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧳</div>
+  <div class="filename">🧳</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade6/rzg.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🧴</div>
+  <div class="filename">🧴</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🩹</div>
+  <div class="filename">🩹</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🩺</div>
+  <div class="filename">🩺</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪐</div>
+  <div class="filename">🪐</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/nt.ts, grade5/science.ts, grade6/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪑</div>
+  <div class="filename">🪑</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/german.ts, grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪙</div>
+  <div class="filename">🪙</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/math.ts, grade2/math.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪞</div>
+  <div class="filename">🪞</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade2/math.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪟</div>
+  <div class="filename">🪟</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪣</div>
+  <div class="filename">🪣</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪨</div>
+  <div class="filename">🪨</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪵</div>
+  <div class="filename">🪵</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade2/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪶</div>
+  <div class="filename">🪶</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts, grade3/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🪺</div>
+  <div class="filename">🪺</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade1/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🫀</div>
+  <div class="filename">🫀</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade5/nt.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🫁</div>
+  <div class="filename">🫁</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+<div class="card">
+  <div class="preview" style="font-size:48px;">🫃</div>
+  <div class="filename">🫃</div>
+  <div class="path">Unicode emoji (not a file)</div>
+  <div class="usage">grade4/nt.ts, grade4/science.ts</div>
+  <span class="badge badge-used">emoji icon</span>
+</div>
+</div>
+
+</div>
+</body>
+</html>
