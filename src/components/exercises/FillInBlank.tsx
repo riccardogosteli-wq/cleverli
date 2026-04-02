@@ -33,10 +33,29 @@ export default function FillInBlank({ question, answer, onAnswer, questionImage 
     }
   }, []);
 
+  // Flexible answer matching: normalize spaces, punctuation, "und"/"and" variants
+  const normalize = (s: string) => s.trim().toLowerCase()
+    .replace(/\s+/g, " ")           // collapse whitespace
+    .replace(/[.,;:!?'"»«]/g, "")   // strip punctuation
+    .replace(/\bund\b/g, " ")       // "S und E" → "S E"
+    .replace(/\band\b/g, " ")
+    .replace(/\bet\b/g, " ")        // French
+    .replace(/\be\b/g, " ")         // Italian
+    .replace(/\s+/g, " ")           // re-collapse
+    .trim();
+
+  const isCorrect = (input: string, expected: string) => {
+    if (normalize(input) === normalize(expected)) return true;
+    // Also accept if individual characters/words match regardless of separator
+    const inputParts = normalize(input).split(" ").filter(Boolean).sort();
+    const expectedParts = normalize(expected).split(" ").filter(Boolean).sort();
+    return inputParts.join(" ") === expectedParts.join(" ");
+  };
+
   const submit = () => {
     if (submitted || !value.trim()) return;
     setSubmitted(true);
-    const correct = value.trim().toLowerCase() === answer.toLowerCase();
+    const correct = isCorrect(value, answer);
     if (!correct) {
       setShake(true);
       setTimeout(() => setShake(false), 500);
@@ -44,7 +63,7 @@ export default function FillInBlank({ question, answer, onAnswer, questionImage 
     setTimeout(() => onAnswer(correct), 1500);
   };
 
-  const correct = submitted && value.trim().toLowerCase() === answer.toLowerCase();
+  const correct = submitted && isCorrect(value, answer);
   const wrong = submitted && !correct;
 
   return (

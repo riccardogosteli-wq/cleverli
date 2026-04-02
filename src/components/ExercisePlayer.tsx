@@ -730,12 +730,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         <div ref={rewardRef} className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-5 text-center space-y-3 animate-fadeIn" role="alert" aria-live="assertive">
           <div className="text-4xl">💪</div>
           <p className="text-lg font-bold text-amber-800">{tr("wrongFeedback")}</p>
-          {current.answer !== "all" && current.answer !== "done" && (
-            <div className="bg-white border border-amber-200 rounded-xl px-4 py-3 text-sm text-gray-700 text-left space-y-1">
-              <p className="font-semibold text-gray-500 text-xs uppercase tracking-wide mb-1">{tr("correctAnswerLabel")}</p>
-              <p className="font-bold text-green-700 text-base">{current.answer}</p>
-            </div>
-          )}
+          {/* Answer shown inline in the exercise component above — no duplicate needed */}
           {current.explanation && (
             <p className="text-gray-500 text-xs">{current.explanation}</p>
           )}
