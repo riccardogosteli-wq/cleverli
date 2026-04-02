@@ -81,6 +81,7 @@ export default function NumberLine({ question, min, max, answer, step = 1, onAns
           style={{
             background: `linear-gradient(to right, #3b82f6 ${pct(value)}%, #e5e7eb ${pct(value)}%)`,
             WebkitAppearance: "none",
+            touchAction: "pan-y",
           }}
         />
         {/* Tick labels */}
