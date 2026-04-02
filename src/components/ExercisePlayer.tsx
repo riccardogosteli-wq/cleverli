@@ -732,7 +732,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
           <p className="text-lg font-bold text-amber-800">{tr("wrongFeedback")}</p>
           <div className="bg-white border border-amber-200 rounded-xl px-4 py-3 text-sm text-gray-700 text-left space-y-1">
             <p className="font-semibold text-gray-500 text-xs uppercase tracking-wide mb-1">{tr("correctAnswerLabel")}</p>
-            <p className="font-bold text-gray-900 text-base">{current.answer}</p>
+            <p className="font-bold text-gray-900 text-base">{current.answer === "all" || current.answer === "done" ? tr("allCorrectPlacement") : current.answer}</p>
             {current.explanation && (
               <p className="text-gray-500 text-xs mt-1">{current.explanation}</p>
             )}
