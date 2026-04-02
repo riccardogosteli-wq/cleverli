@@ -657,8 +657,8 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         </div>
       )}
 
-      {/* Exercise card — hidden when answered, replaced by reward */}
-      {answered === null && (
+      {/* Exercise card — stays visible on wrong answer so child can see what they picked */}
+      {(answered === null || answered === false) && (
         <div
           className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 space-y-4 min-h-[260px] flex flex-col justify-center"
           key={cardKey}
@@ -725,18 +725,20 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         </div>
       )}
 
-      {/* UJ-6: Wrong answer — encouraging amber feedback panel (not punishing) */}
+      {/* UJ-6: Wrong answer — encouraging amber feedback below the exercise */}
       {answered === false && (
         <div ref={rewardRef} className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-5 text-center space-y-3 animate-fadeIn" role="alert" aria-live="assertive">
           <div className="text-4xl">💪</div>
           <p className="text-lg font-bold text-amber-800">{tr("wrongFeedback")}</p>
-          <div className="bg-white border border-amber-200 rounded-xl px-4 py-3 text-sm text-gray-700 text-left space-y-1">
-            <p className="font-semibold text-gray-500 text-xs uppercase tracking-wide mb-1">{tr("correctAnswerLabel")}</p>
-            <p className="font-bold text-gray-900 text-base">{current.answer === "all" || current.answer === "done" ? tr("allCorrectPlacement") : current.answer}</p>
-            {current.explanation && (
-              <p className="text-gray-500 text-xs mt-1">{current.explanation}</p>
-            )}
-          </div>
+          {current.answer !== "all" && current.answer !== "done" && (
+            <div className="bg-white border border-amber-200 rounded-xl px-4 py-3 text-sm text-gray-700 text-left space-y-1">
+              <p className="font-semibold text-gray-500 text-xs uppercase tracking-wide mb-1">{tr("correctAnswerLabel")}</p>
+              <p className="font-bold text-green-700 text-base">{current.answer}</p>
+            </div>
+          )}
+          {current.explanation && (
+            <p className="text-gray-500 text-xs">{current.explanation}</p>
+          )}
           <button
             onClick={handleContinue}
             className="w-full bg-amber-500 text-white py-3 rounded-xl font-bold hover:bg-amber-600 active:scale-95 transition-all"
