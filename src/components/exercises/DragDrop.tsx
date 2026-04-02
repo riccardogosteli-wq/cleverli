@@ -119,7 +119,7 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
     setResult(res);
     setChecked(true);
     play(allCorrect ? "correct" : "wrong");
-    setTimeout(() => onAnswer(allCorrect), 900);
+    setTimeout(() => onAnswer(allCorrect), 1500);
   };
 
   const allItemsPlaced = items.every(item => placedIds.has(item.id));

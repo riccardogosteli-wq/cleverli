@@ -43,7 +43,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
       setShake(true);
       setTimeout(() => setShake(false), 500);
     }
-    setTimeout(() => onAnswer(correct), 900);
+    setTimeout(() => onAnswer(correct), 1500);
   };
 
   // ── Image tiles layout ───────────────────────────────────────────

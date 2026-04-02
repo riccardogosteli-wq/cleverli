@@ -21,7 +21,7 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
   const handleClick = (opt: string) => {
     if (selected) return;
     setSelected(opt);
-    setTimeout(() => onAnswer(opt === answer), 900);
+    setTimeout(() => onAnswer(opt === answer), 1500);
   };
 
   const handleEmojiClick = (i: number) => {

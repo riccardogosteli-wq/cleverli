@@ -40,7 +40,7 @@ export default function NumberLine({ question, min, max, answer, step = 1, onAns
     setCorrect(ok);
     setSubmitted(true);
     play(ok ? "correct" : "wrong");
-    setTimeout(() => onAnswer(ok), 900);
+    setTimeout(() => onAnswer(ok), 1500);
   };
 
   // Tick marks

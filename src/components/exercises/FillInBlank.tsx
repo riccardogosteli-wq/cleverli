@@ -41,7 +41,7 @@ export default function FillInBlank({ question, answer, onAnswer, questionImage 
       setShake(true);
       setTimeout(() => setShake(false), 500);
     }
-    setTimeout(() => onAnswer(correct), 900);
+    setTimeout(() => onAnswer(correct), 1500);
   };
 
   const correct = submitted && value.trim().toLowerCase() === answer.toLowerCase();
