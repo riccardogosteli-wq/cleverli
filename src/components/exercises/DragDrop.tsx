@@ -143,7 +143,7 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
   };
 
   return (
-    <div ref={containerRef} className="space-y-4 select-none" style={{ touchAction: "none" }}>
+    <div ref={containerRef} className="space-y-4 select-none">
       <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center leading-snug">{question}</p>
 
       {/* Drop zones */}
