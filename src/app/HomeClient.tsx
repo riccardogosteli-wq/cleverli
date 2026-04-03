@@ -238,7 +238,7 @@ export default function Home() {
                 </div>
               ))}
               <div className="mt-2 bg-white rounded-2xl p-4 border border-amber-200 shadow-sm flex items-center gap-4">
-                <Image src="/cleverli-celebrate.png" alt="Cleverli feiert einen Erfolg" width={64} height={64} className="shrink-0"  loading="lazy"/>
+                <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={64} height={64} className="shrink-0"  loading="lazy"/>
                 <div>
                   <div className="text-sm font-bold text-gray-800">🎉 {lang === "fr" ? "Lena a atteint son objectif!" : lang === "it" ? "Lena ha raggiunto il suo obiettivo!" : lang === "en" ? "Lena reached her goal!" : "Lena hat ihr Ziel erreicht!"}</div>
                   <div className="text-xs text-gray-400 mt-0.5">{lang === "fr" ? "Direction le zoo ! 🦁" : lang === "it" ? "È ora dello zoo! 🦁" : lang === "en" ? "Time for the zoo! 🦁" : "Zeit für den Zoo! 🦁"}</div>
