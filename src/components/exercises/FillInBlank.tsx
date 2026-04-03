@@ -6,6 +6,7 @@ import { useLang } from "@/lib/LangContext";
 interface Props {
   question: string;
   answer: string;
+  altAnswers?: string[];
   onAnswer: (correct: boolean) => void;
   questionImage?: string;
 }
@@ -14,7 +15,7 @@ function isNumericAnswer(answer: string): boolean {
   return /^-?\d+([.,]\d+)?$/.test(answer.trim());
 }
 
-export default function FillInBlank({ question, answer, onAnswer, questionImage }: Props) {
+export default function FillInBlank({ question, answer, altAnswers, onAnswer, questionImage }: Props) {
   const { tr } = useLang();
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -44,12 +45,18 @@ export default function FillInBlank({ question, answer, onAnswer, questionImage 
     .replace(/\s+/g, " ")           // re-collapse
     .trim();
 
-  const isCorrect = (input: string, expected: string) => {
+  const matchesSingle = (input: string, expected: string) => {
     if (normalize(input) === normalize(expected)) return true;
-    // Also accept if individual characters/words match regardless of separator
     const inputParts = normalize(input).split(" ").filter(Boolean).sort();
     const expectedParts = normalize(expected).split(" ").filter(Boolean).sort();
     return inputParts.join(" ") === expectedParts.join(" ");
+  };
+
+  const isCorrect = (input: string, expected: string) => {
+    if (matchesSingle(input, expected)) return true;
+    // Check alternative answers
+    if (altAnswers?.some(alt => matchesSingle(input, alt))) return true;
+    return false;
   };
 
   const submit = () => {

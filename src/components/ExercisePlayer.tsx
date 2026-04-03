@@ -296,7 +296,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     }
 
     // Sound first, then voice after a short pause
-    if (newStreak >= 3 && correct) {
+    if (correct && (newStreak === 3 || newStreak === 5 || newStreak === 8)) {
       play("streak");
       setTimeout(() => { if (voiceOn) speak(getPhrase("streak")); }, 400);
     } else if (correct) {
@@ -689,7 +689,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
             />
           )}
           {current.type === "fill-in-blank" && (
-            <FillInBlank question={current.question} answer={current.answer} onAnswer={handleAnswer} questionImage={current.image} />
+            <FillInBlank question={current.question} answer={current.answer} altAnswers={current.altAnswers} onAnswer={handleAnswer} questionImage={current.image} />
           )}
           {current.type === "counting" && (
             <CountingGame question={current.question} answer={current.answer} emoji={current.emoji} options={current.options ?? []} onAnswer={handleAnswer} questionImage={current.image} />

@@ -12,6 +12,7 @@ export interface Exercise {
   optionsFR?: string[];
   optionsIT?: string[];
   answer: string;
+  altAnswers?: string[];
   answerEN?: string;
   answerFR?: string;
   answerIT?: string;
