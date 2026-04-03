@@ -256,7 +256,7 @@ export default function Home() {
       <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-            <Image src="/cleverli-wave.png" alt="Cleverli Maskottchen" width={70} height={70} className="drop-shadow-md shrink-0 sm:w-[100px] sm:h-[100px]" />
+            <Image src="/cleverli-feedback.png" alt="Cleverli Feedback" width={70} height={70} className="drop-shadow-md shrink-0 sm:w-[100px] sm:h-[100px]" />
             <h2 className="text-2xl font-bold text-gray-800">{tr("testimonialsTitle")}</h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
