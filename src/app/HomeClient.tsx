@@ -279,7 +279,7 @@ export default function Home() {
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-8 justify-center">
-            <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={70} height={70} className="drop-shadow-md"  loading="lazy"/>
+            <Image src="/cleverli-faq.png" alt="Cleverli FAQ" width={70} height={70} className="drop-shadow-md"  loading="lazy"/>
             <h2 className="text-2xl font-bold text-gray-800">{tr("faqTitle")}</h2>
           </div>
           <div className="space-y-3">
