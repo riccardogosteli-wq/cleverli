@@ -327,12 +327,15 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { subject: "math",    emoji: "🔢", label: { de: "Mathematik", fr: "Mathématiques", it: "Matematica", en: "Maths" } },
-              { subject: "german",  emoji: "📖", label: { de: "Deutsch",    fr: "Allemand",       it: "Tedesco",   en: "German" } },
-              { subject: "science", emoji: "🌍", label: { de: "NMG",        fr: "Sciences",       it: "Scienze",   en: "Science" } },
+              { subject: "math",    emoji: "🔢", icon: "/images/ui/Mathematik.png", label: { de: "Mathematik", fr: "Mathématiques", it: "Matematica", en: "Maths" } },
+              { subject: "german",  emoji: "📖", icon: "/images/ui/Deutsch.png", label: { de: "Deutsch",    fr: "Allemand",       it: "Tedesco",   en: "German" } },
+              { subject: "science", emoji: "🌍", icon: "/images/ui/NMG.png", label: { de: "NMG",        fr: "Sciences",       it: "Scienze",   en: "Science" } },
             ].map(s => (
               <div key={s.subject}>
-                <div className="font-semibold text-gray-600 text-sm mb-2">{s.emoji} {s.label[lang as keyof typeof s.label] ?? s.label.de}</div>
+                <div className="font-semibold text-gray-600 text-sm mb-2 flex items-center gap-2">
+                  <Image src={s.icon} alt={s.subject} width={28} height={28} className="w-7 h-7 object-contain" />
+                  {s.label[lang as keyof typeof s.label] ?? s.label.de}
+                </div>
                 <div className="flex flex-wrap gap-x-3 gap-y-1">
                   {[1,2,3,4,5,6].map(g => (
                     <Link key={g} href={`/learn/${g}/${s.subject}`}
