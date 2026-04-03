@@ -320,8 +320,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         setTimeout(() => { if (voiceOn) speak(getPhrase("complete")); }, 600);
       }
       setExerciseInProgress(false); // UJ-12: clear in-progress flag on completion
-      // UJ-7: if review mode done, just show done
-      if (isReviewMode) { setDone(true); return; }
+      // UJ-7: if review mode done, check if still wrong answers → repeat, else done
+      if (isReviewMode) {
+        if (wrongIds.length > 0) { setShowReview(true); setIsReviewMode(false); return; }
+        setDone(true); return;
+      }
       // UJ-7: if mistakes exist and not already reviewing, show review prompt
       if (wrongIds.length > 0) { setShowReview(true); return; }
       setDone(true);
@@ -390,7 +393,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         <RewardAnimation correct={true} isTopicComplete={true} onContinue={() => router.push(`/learn/${grade}/${subject}`)} />
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center space-y-3">
           {isReviewMode ? (
-            <p className="text-green-700 font-bold">🎉 Alle Fehler korrigiert!</p>
+            <p className="text-green-700 font-bold">🎉 {tr("allErrorsCorrected") ?? "Alle Fehler korrigiert!"}</p>
           ) : (
             <p className="text-gray-600 font-medium">
               {score} / {totalEx} {tr("correct")}{perfect && (" — " + (tr("perfectRun") ?? "Perfekt! 🌟"))}
