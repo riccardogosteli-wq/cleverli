@@ -66,7 +66,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
               {
-                emoji: "🔢", key: "math", label: "math",
+                emoji: "🔢", icon: "/images/ui/Mathematik.png", key: "math", label: "math",
                 bg: "bg-blue-50", border: "border-blue-200", hover: "hover:shadow-blue-100",
                 textColor: "text-blue-800", descColor: "text-blue-600",
                 desc: tr("mathDesc") ?? "Zahlen, Rechnen, Geometrie",
@@ -74,7 +74,7 @@ export default function Home() {
                 href: "/dashboard?subject=math",
               },
               {
-                emoji: "📖", key: "german", label: "german",
+                emoji: "📖", icon: "/images/ui/Deutsch.png", key: "german", label: "german",
                 bg: "bg-yellow-50", border: "border-yellow-200", hover: "hover:shadow-yellow-100",
                 textColor: "text-yellow-800", descColor: "text-yellow-700",
                 desc: tr("germanDesc") ?? "Lesen, Schreiben, Grammatik",
@@ -82,7 +82,7 @@ export default function Home() {
                 href: "/dashboard?subject=german",
               },
               {
-                emoji: "🌍", key: "science", label: "scienceFull",
+                emoji: "🌍", icon: "/images/ui/NMG.png", key: "science", label: "scienceFull",
                 bg: "bg-green-50", border: "border-green-200", hover: "hover:shadow-green-100",
                 textColor: "text-green-800", descColor: "text-green-700",
                 desc: tr("scienceDesc") ?? "Natur, Mensch, Gesellschaft",
@@ -93,7 +93,7 @@ export default function Home() {
               <Link key={s.key} href={s.href}
                 className={`${s.bg} border-2 ${s.border} rounded-2xl p-6 flex flex-col gap-3 transition-all hover:shadow-lg ${s.hover} hover:-translate-y-0.5 cursor-pointer`}>
                 <div className="flex items-center gap-3">
-                  <div className="text-4xl">{s.emoji}</div>
+                  <div className="w-14 h-14 flex items-center justify-center">{s.icon ? <Image src={s.icon} alt={s.key} width={56} height={56} className="w-full h-full object-contain" /> : <span className="text-4xl">{s.emoji}</span>}</div>
                   <div>
                     <div className={`font-extrabold text-base ${s.textColor}`}>{tr(s.label as Parameters<typeof tr>[0])}</div>
                     <div className={`text-xs ${s.descColor} font-medium`}>{s.desc}</div>
