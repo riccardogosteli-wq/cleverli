@@ -38,9 +38,9 @@ function loadTopicProgress(grade: number, subject: string, topicId: string): { c
 
 // ─── SUBJECT & ACHIEVEMENT ICONS ─────────────────────────────────────────────
 const SUBJECT_ICONS: Record<string, string> = {
-  math:    "/images/ui/Mathematik.svg",
-  german:  "/images/ui/Deutsch.svg",
-  science: "/images/ui/NMG.svg",
+  math:    "/images/ui/Mathematik.png",
+  german:  "/images/ui/Deutsch.png",
+  science: "/images/ui/NMG.png",
 };
 const ACHIEVEMENT_ICONS: Record<number, string> = {
   1: "/images/ui/Cleverli-Bronze.svg",
@@ -298,9 +298,9 @@ export default function MissionenPage() {
 
   const tabs = [
     { id: "all",     label: lang === "fr" ? "Tous" : lang === "it" ? "Tutti" : lang === "en" ? "All" : "Alle", emoji: "🗺️" },
-    { id: "math",    label: tr("math"),    emoji: "🔢",  icon: "/images/ui/Mathematik.svg" },
-    { id: "german",  label: tr("german"),  emoji: "📖",  icon: "/images/ui/Deutsch.svg" },
-    { id: "science", label: tr("science"), emoji: "🌍",  icon: "/images/ui/NMG.svg" },
+    { id: "math",    label: tr("math"),    emoji: "🔢",  icon: "/images/ui/Mathematik.png" },
+    { id: "german",  label: tr("german"),  emoji: "📖",  icon: "/images/ui/Deutsch.png" },
+    { id: "science", label: tr("science"), emoji: "🌍",  icon: "/images/ui/NMG.png" },
   ] as const;
 
   const filteredData = activeTab === "all"
