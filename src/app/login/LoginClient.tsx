@@ -53,10 +53,10 @@ export default function Login() {
         setError(authError.message);
       }
     } else {
-      // Success: fallback redirect in case onAuthStateChange doesn't fire (e.g. mobile Safari)
-      setTimeout(() => {
-        router.replace("/dashboard");
-      }, 800);
+      // Success: reset loading state and force redirect
+      setLoading(false);
+      setLoginInProgress(false);
+      router.replace("/dashboard");
     }
     // on success, onAuthStateChange in useSession handles redirect via session update
     // router.push happens after session is set
