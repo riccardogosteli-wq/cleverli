@@ -75,7 +75,7 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
           <>
             <div style={{ animation: "popIn 0.4s cubic-bezier(.34,1.56,.64,1)" }}>
               {/* Scene: Cleverli celebrating at chalkboard with treasure */}
-              <Image src="/images/scenes/cleverli-solution.jpg" alt="Cleverli feiert!"
+              <Image src="/cleverli-topic-complete.png" alt="Cleverli feiert!"
                 width={200} height={200} className="rounded-2xl drop-shadow-xl mx-auto" />
             </div>
             <h2 className="text-2xl font-extrabold text-green-700">{tr("topicComplete")}</h2>
