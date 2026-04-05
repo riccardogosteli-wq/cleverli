@@ -54,8 +54,9 @@ export default function AccountPage() {
   const handleSendReset = async () => {
     const supabase = getSupabase();
     if (!session?.email || !supabase) return;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin || "https://www.cleverli.ch";
     await supabase.auth.resetPasswordForEmail(session.email, {
-      redirectTo: `${window.location.origin}/reset-password?mode=update`,
+      redirectTo: `${baseUrl}/reset-password?mode=update`,
     });
     setResetSent(true);
   };

@@ -25,8 +25,9 @@ function RequestReset() {
     try {
       const supabase = getSupabase();
       if (!supabase) throw new Error("Auth unavailable");
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin || "https://www.cleverli.ch";
       const { error: err } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/reset-password?mode=update`,
+        redirectTo: `${baseUrl}/reset-password?mode=update`,
       });
       if (err) throw err;
       setDone(true);
