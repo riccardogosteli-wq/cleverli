@@ -71,7 +71,7 @@ const SUBJECT_META: Record<string, {
 const SUBJECT_ICONS: Record<string, string> = {
   math:    "/images/ui/Mathematik.png",
   german:  "/images/ui/Deutsch.png",
-  science: "/images/ui/NMG.png",
+  science: "/images/ui/NMG.svg",
   nt:      "/images/ui/NMG.png",      // reuse NMG icon until custom one made
   rzg:     "/images/ui/Zeit.svg",
   french:  "/images/ui/Woerter-Sprache.svg",
