@@ -15,6 +15,10 @@ function isNumericAnswer(answer: string): boolean {
   return /^-?\d+([.,]\d+)?$/.test(answer.trim());
 }
 
+function isDecimalAnswer(answer: string): boolean {
+  return /^-?\d+[.,]\d+$/.test(answer.trim());
+}
+
 export default function FillInBlank({ question, answer, altAnswers, onAnswer, questionImage }: Props) {
   const { tr } = useLang();
   const [value, setValue] = useState("");
@@ -23,6 +27,7 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
   const [isMobile, setIsMobile] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const numeric = useMemo(() => isNumericAnswer(answer), [answer]);
+  const decimal = useMemo(() => isDecimalAnswer(answer), [answer]);
 
   useEffect(() => {
     const mobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
@@ -86,8 +91,9 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
         <input
           ref={inputRef}
           type="text"
-          // Numeric keyboard on mobile for number answers — huge UX win for kids
-          inputMode={numeric ? "numeric" : "text"}
+          // Use decimal keypad when the expected answer includes cents/comma,
+          // otherwise keep the plain numeric keypad for whole numbers.
+          inputMode={numeric ? (decimal ? "decimal" : "numeric") : "text"}
           // German text needs autocapitalize for nouns; numbers don't
           autoCapitalize={numeric ? "off" : "sentences"}
           autoCorrect={numeric ? "off" : "on"}
