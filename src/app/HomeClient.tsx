@@ -308,7 +308,7 @@ export default function Home() {
       <section className="bg-green-700 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>
 
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 justify-center">
-          <Image src="/cleverli-jump-star.png" alt="Cleverli springt vor Freude" width={100} height={100} className="drop-shadow-lg"  loading="lazy"/>
+          <Image src="/cleverli-try-now.png" alt="Cleverli ist bereit zum Ausprobieren" width={140} height={140} className="drop-shadow-lg" loading="lazy"/>
           <div>
             <h2 className="text-2xl font-bold mb-2">{tr("ctaTitle")}</h2>
             <p className="text-white mb-4">{tr("ctaSubtitle")}</p>
