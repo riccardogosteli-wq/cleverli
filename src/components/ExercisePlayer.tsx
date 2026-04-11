@@ -411,7 +411,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           </div>
           <div className="flex gap-3 justify-center flex-wrap pt-1">
             <button onClick={() => {
-              setExercises(selectExercises(topic.id, topic.exercises));
+              setExercises(prev => [...prev]);
               setIdx(0); setScore(0); setStreak(0); setAnswered(null);
               setDone(false); setWrongIds([]); setIsReviewMode(false); setCardKey(k=>k+1);
             }} className="text-sm border-2 border-gray-200 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
