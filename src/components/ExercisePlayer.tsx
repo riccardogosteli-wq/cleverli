@@ -6,6 +6,7 @@ import { Topic, Exercise } from "@/types/exercise";
 import MultipleChoice from "./exercises/MultipleChoice";
 import FillInBlank from "./exercises/FillInBlank";
 import CountingGame from "./exercises/CountingGame";
+import Matching from "./exercises/Matching";
 import HintSystem from "./HintSystem";
 import ProgressBar from "./ProgressBar";
 import MemoryGame from "./exercises/MemoryGame";
@@ -683,6 +684,9 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
           )}
           {current.type === "counting" && (
             <CountingGame question={current.question} answer={current.answer} emoji={current.emoji} options={current.options ?? []} onAnswer={handleAnswer} questionImage={current.image} />
+          )}
+          {current.type === "matching" && (
+            <Matching question={current.question} pairs={current.pairs ?? []} onAnswer={handleAnswer} />
           )}
           {current.type === "memory" && (
             <MemoryGame pairs={current.pairs ?? []} onAnswer={handleAnswer} />
