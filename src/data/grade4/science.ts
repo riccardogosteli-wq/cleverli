@@ -87,9 +87,9 @@ const grade4Science: Topic[] = [
       { id: "g4s15", type: "multiple-choice", question: "Welches Tier lebt im Wald in der Schweiz? 🇨🇭", questionEN: "Which animal lives in Wald in the Schweiz? 🇨🇭", questionIT: "Quale animale vive nel Wald in il Svizzera? 🇨🇭", questionFR: "Quel animal vit dans le Wald dans le Suisse ? 🇨🇭", answer: "Reh", options: ["Löwe","Reh","Krokodil","Papagei"], hints: ["Einheimische Tiere: Reh, Fuchs, Wildschwein...", "Rehe sind Pflanzenfresser."], hintsEN: ["Einheimische animale: Reh, Fuchs, Wildschwein...", "Rehe are plantnfresser."], difficulty: 2 },
       { id: "g4s16", type: "drag-drop", question: "Ordne die Tiere ihren Lebensräumen zu! 🌍", questionEN: "Sort the animals ihren habitatsn to! 🌍", questionIT: "Ordina la animali ihren Lebensräumen a! 🌍", questionFR: "Trie la animaux ihren Lebensräumen à! 🌍", answer: "all",
         dragItems: [
-          { id: "t1", label: "Frosch", emoji: "🐸" },
+          { id: "t1", label: "Frosch", image: "/images/animals/Frosch.svg" },
           { id: "t2", label: "Adler", emoji: "🦅" },
-          { id: "t3", label: "Fisch", emoji: "🐟" },
+          { id: "t3", label: "Fisch", image: "/images/animals/Fisch.svg" },
         ],
         dropZones: [
           { id: "wasser", label: "Wasser" },

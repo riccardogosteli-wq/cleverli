@@ -87,9 +87,9 @@ const grade4NT: Topic[] = [
       { id: "g4s15", type: "multiple-choice", question: "Welches Tier lebt im Wald in der Schweiz? 🇨🇭", answer: "Reh", options: ["Löwe","Reh","Krokodil","Papagei"], hints: ["Einheimische Tiere: Reh, Fuchs, Wildschwein...", "Rehe sind Pflanzenfresser."], difficulty: 2 },
       { id: "g4s16", type: "drag-drop", question: "Ordne die Tiere ihren Lebensräumen zu! 🌍", answer: "all",
         dragItems: [
-          { id: "t1", label: "Frosch", emoji: "🐸" },
+          { id: "t1", label: "Frosch", image: "/images/animals/Frosch.svg" },
           { id: "t2", label: "Adler", emoji: "🦅" },
-          { id: "t3", label: "Fisch", emoji: "🐟" },
+          { id: "t3", label: "Fisch", image: "/images/animals/Fisch.svg" },
         ],
         dropZones: [
           { id: "wasser", label: "Wasser" },

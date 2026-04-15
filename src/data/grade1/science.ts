@@ -43,7 +43,7 @@ const grade1Science: Topic[] = [
         answer: "all",
         hints: ["Welche Tiere siehst du auf einem Bauernhof?", "Welche Tiere leben im Wald?"],
         dragItems: [
-          { id: "kuh2", label: "🐄 Kuh", emoji: "🐄" },
+          { id: "kuh2", label: "Kuh", image: "/images/animals/Kuh.svg" },
           { id: "fuchs", label: "🦊 Fuchs", emoji: "🦊" },
           { id: "huhn", label: "🐔 Huhn", emoji: "🐔" },
           { id: "reh", label: "🦌 Reh", emoji: "🦌" },
