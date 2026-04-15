@@ -80,7 +80,7 @@ export default function Navigation() {
             title={tr("navRewardsShort")}
           >
             <Image src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen" width={28} height={28} />
-            <span className="hidden md:inline text-xs">{tr("navRewardsShort").replace("🎁 ", "")}</span>
+            <span className="hidden md:inline text-xs">{tr("navRewardsShort")}</span>
           </Link>
           {/* Parent dashboard link — shown when logged in */}
           {session && (
