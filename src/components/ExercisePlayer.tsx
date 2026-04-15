@@ -92,7 +92,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
   const FREE_LIMIT = 10; // raised from 5 → 10 to reduce signup friction for new users
   // Select a rotated pool of exercises — different each session if pool > 10
-  const [exercises, setExercises] = useState(() => selectExercises(topic.id, topic.exercises));
+  const [fullSetExercises] = useState(() => selectExercises(topic.id, topic.exercises));
+  const [exercises, setExercises] = useState(fullSetExercises);
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [idx, setIdx] = useState(0);
@@ -411,9 +412,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           </div>
           <div className="flex gap-3 justify-center flex-wrap pt-1">
             <button onClick={() => {
-              setExercises(prev => [...prev]);
+              topicStartRef.current = Date.now();
+              setExercises(fullSetExercises);
               setIdx(0); setScore(0); setStreak(0); setAnswered(null);
-              setDone(false); setWrongIds([]); setIsReviewMode(false); setCardKey(k=>k+1);
+              setDone(false); setWrongIds([]); setIsReviewMode(false); setShowReview(false);
+              setHintsUsed(0); setComboCount(0); setWrongCountSession(0); setCorrectAnswerCount(0);
+              setTierToast(null); setMascotReaction(null); setCardKey(k=>k+1);
             }} className="text-sm border-2 border-gray-200 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
               {tr("playAgainShort")}
             </button>
