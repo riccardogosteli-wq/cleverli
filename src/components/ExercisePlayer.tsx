@@ -17,7 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { selectExercises } from "@/lib/exercisePool";
-import { getTierProgress, tierAtIndex } from "@/lib/tierProgress";
+import { getTierProgress } from "@/lib/tierProgress";
 import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
 import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
@@ -121,20 +121,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const current: Exercise = localiseExercise(exercises[idx], lang);
   const isLocked = !isPremium && idx >= FREE_LIMIT;
   
-  // Calculate progress bar display: show position within current tier (not across all exercises)
-  const currentTier = tierAtIndex(tierInfo, idx);
-  const tierProgressBar = (() => {
-    if (currentTier === "easy") {
-      const tierIdx = idx; // easy exercises start at 0
-      return { current: tierIdx + 1, total: tierInfo.easy.total };
-    } else if (currentTier === "medium") {
-      const tierIdx = idx - tierInfo.easyBoundary;
-      return { current: tierIdx + 1, total: tierInfo.medium.total };
-    } else {
-      const tierIdx = idx - tierInfo.mediumBoundary;
-      return { current: tierIdx + 1, total: tierInfo.hard.total };
-    }
-  })();
 
   // (voice is on-demand only — no auto-read)
 
@@ -634,7 +620,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       {/* Progress bar + voice toggle — hide while reward animation is showing */}
       {answered === null && (
         <div className="flex items-center gap-2">
-          {/* ProgressBar shows position within current tier (not across all exercises) */}
+          {/* ProgressBar shows session progress, matching the visible exercise count */}
           <div className="flex-1">
             {/* Exercise count label for children (explicit X of Y text) */}
             <div className="flex justify-between items-center mb-1">
@@ -645,7 +631,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
                 <span className="text-xs font-bold text-orange-500">🔥 {streak}×</span>
               )}
             </div>
-            <ProgressBar current={tierProgressBar.current} total={tierProgressBar.total} streak={streak} isReviewMode={isReviewMode} />
+            <ProgressBar current={idx + 1} total={exercises.length} streak={streak} isReviewMode={isReviewMode} />
           </div>
           {isSupported && (
             <button
