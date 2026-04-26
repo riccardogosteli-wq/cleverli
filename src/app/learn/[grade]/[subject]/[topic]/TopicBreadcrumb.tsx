@@ -28,14 +28,24 @@ export default function TopicBreadcrumb({ grade, subject, subjectName, topicTitl
 
   return (
     <>
-      <nav className="flex items-center gap-1.5 text-xs text-gray-400 flex-wrap">
-        <Link href="/dashboard" onClick={handleNav("/dashboard")} className="hover:text-green-700 transition-colors">Dashboard</Link>
-        <span>›</span>
-        <Link href={`/learn/${grade}/${subject}`} onClick={handleNav(`/learn/${grade}/${subject}`)} className="hover:text-green-700 transition-colors">
+      <nav className="relative z-10 flex flex-wrap items-center gap-2 text-sm">
+        <Link
+          href="/dashboard"
+          onClick={handleNav("/dashboard")}
+          className="inline-flex min-h-[44px] items-center rounded-full border border-green-200 bg-white px-3 py-2 font-semibold text-green-700 shadow-sm transition-colors hover:bg-green-50"
+        >
+          ← Dashboard
+        </Link>
+        <Link
+          href={`/learn/${grade}/${subject}`}
+          onClick={handleNav(`/learn/${grade}/${subject}`)}
+          className="inline-flex min-h-[44px] items-center rounded-full border border-gray-200 bg-white px-3 py-2 font-semibold text-gray-700 shadow-sm transition-colors hover:bg-gray-50"
+        >
           {grade}. Klasse · {subjectName}
         </Link>
-        <span>›</span>
-        <span className="text-green-700 font-semibold">{topicTitle}</span>
+        <span className="w-full pl-1 text-xs font-semibold text-green-700 sm:w-auto sm:text-sm">
+          {topicTitle}
+        </span>
       </nav>
 
       {/* Confirm dialog */}
