@@ -611,7 +611,7 @@ function DashboardInner() {
                     </div>
                   </div>
 
-                  {!isGrade3Locked && tierInfo.isTiered && (
+                  {!isGrade3Locked && (tierInfo.easy.total + tierInfo.medium.total + tierInfo.hard.total > 0) && (
                     <div className="grid grid-cols-3 gap-2 text-[11px] font-semibold mt-2">
                       <div className="rounded-xl border border-green-200 bg-green-50 px-2 py-1.5 text-green-700">
                         <div>🟢 Grün</div>

@@ -33,7 +33,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
 
   const hasAnyTieredTopic = topics.some(t => {
     const tierInfo = getTierProgress(t, 0);
-    return tierInfo.isTiered;
+    return tierInfo.easy.total + tierInfo.medium.total + tierInfo.hard.total > 0;
   });
 
   return (
@@ -101,7 +101,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
                 </div>
               </div>
 
-              {tierInfo.isTiered && (
+              {(tierInfo.easy.total + tierInfo.medium.total + tierInfo.hard.total > 0) && (
                 <div className="grid grid-cols-3 gap-2 text-[11px] font-semibold">
                   <div className="rounded-xl border border-green-200 bg-green-50 px-2 py-1.5 text-green-700">
                     <div>🟢 Grün</div>
