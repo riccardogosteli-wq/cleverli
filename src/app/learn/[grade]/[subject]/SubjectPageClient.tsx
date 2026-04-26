@@ -64,8 +64,10 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
         {topics.map((topic, i) => {
           const prog = progress[topic.id];
           const stars = prog?.stars ?? 0;
-          const done = !!prog;
-          const tierInfo = getTierProgress(topic, prog?.completed ?? 0);
+          const completedExercises = prog?.completed ?? 0;
+          const done = completedExercises >= topic.exercises.length;
+          const started = completedExercises > 0;
+          const tierInfo = getTierProgress(topic, completedExercises);
           return (
             <Link key={topic.id} href={`/learn/${grade}/${subject}/${topic.id}`}
               className="flex items-center gap-4 bg-white rounded-2xl p-4 border-2 border-gray-100 hover:border-green-300 hover:bg-green-50 transition-all group shadow-sm">
@@ -74,7 +76,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-gray-800 group-hover:text-green-700">{getTopicTitle(topic.id, lang, topic.title)}</div>
-                <div className="text-xs text-gray-400">{topic.exercises.length} Aufgaben</div>
+                <div className="text-xs text-gray-400">{started ? `${Math.min(completedExercises, topic.exercises.length)}/${topic.exercises.length} Aufgaben` : `${topic.exercises.length} Aufgaben`}</div>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 {done ? (
@@ -86,6 +88,10 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
                     </div>
                     <span className="text-xs px-2 py-1 rounded-full font-medium bg-green-100 text-green-700">✓</span>
                   </div>
+                ) : started ? (
+                  <span className="text-xs px-2 py-1 rounded-full font-medium bg-blue-50 text-blue-600">
+                    {Math.min(completedExercises, topic.exercises.length)}/{topic.exercises.length}
+                  </span>
                 ) : tierInfo.isTiered ? (
                   <div className="flex items-center gap-2 text-xs">
                     <span className="text-green-700">🟢 {tierInfo.easy.done}/{tierInfo.easy.total}{tierInfo.easy.done === tierInfo.easy.total ? ' ✓' : ''}</span>

@@ -379,9 +379,15 @@ function DashboardInner() {
   // ── STEP 3: Topic list ────────────────────────────────────────────────────
   const topics = getTopics(grade, subject);
   const currentSubjectMeta = SUBJECT_META[subject];
-  const completedCount = topics.filter(t => getProgress(grade, subject, t.id)).length;
+  const isTopicFullyDone = (topicId: string) => {
+    const prog = getProgress(grade, subject, topicId);
+    const topic = topics.find(t => t.id === topicId);
+    if (!prog || !topic) return false;
+    return (prog.completed ?? 0) >= topic.exercises.length;
+  };
+  const completedCount = topics.filter(t => isTopicFullyDone(t.id)).length;
   // First not-done topic index — that's where we show "Start ✨"
-  const firstNotDoneIdx = topics.findIndex(t => !getProgress(grade, subject, t.id));
+  const firstNotDoneIdx = topics.findIndex(t => !isTopicFullyDone(t.id));
 
   // UJ-4: premium awareness (from session, only after hydration)
   const isPremium = sessionLoaded ? sessionPremium : true; // assume premium until loaded (avoids false lock flash)
@@ -548,14 +554,14 @@ function DashboardInner() {
 
       {/* Topic list — all topics open, progress visible */}
       {(() => {
-        const firstCurrentIdx = topics.findIndex((t) => (getProgress(grade, subject, t.id)?.stars ?? 0) === 0);
+        const firstCurrentIdx = topics.findIndex((t) => !isTopicFullyDone(t.id));
         return (
           <div className="flex flex-col">
             {topics.map((topic, i) => {
               const prog = getProgress(grade, subject, topic.id);
               const stars = prog?.stars ?? 0;
               const completedExercises = prog?.completed ?? 0;
-              const done = stars > 0;
+              const done = completedExercises >= topic.exercises.length;
               const isCurrent = i === firstCurrentIdx || (firstCurrentIdx === -1 && i === topics.length - 1);
               const iconBg = currentSubjectMeta?.iconBg ?? "bg-green-100";
 
@@ -582,7 +588,7 @@ function DashboardInner() {
                       {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
                     </div>
                     <div className="text-xs mt-0.5 flex flex-wrap items-center gap-2 text-gray-700">
-                      {!isGrade3Locked && tierInfo.isTiered && tierLevel > 0 ? (
+                      {!isGrade3Locked && done && tierInfo.isTiered && tierLevel > 0 ? (
                         <>
                           {tierLevel >= 1 && <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full font-bold text-xs">Level 1</span>}
                           {tierLevel >= 2 && <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full font-bold text-xs">Level 2</span>}
