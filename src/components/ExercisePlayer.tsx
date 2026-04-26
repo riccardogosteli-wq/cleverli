@@ -17,7 +17,6 @@ import RewardAnimation from "./RewardAnimation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { selectExercises } from "@/lib/exercisePool";
 import { getTierProgress } from "@/lib/tierProgress";
 import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
 import { useVoice, getPhrase } from "@/hooks/useVoice";
@@ -39,6 +38,34 @@ function calcStars(score: number, total: number) {
   if (pct >= 0.9) return 3;
   if (pct >= 0.7) return 2;
   return 1;
+}
+
+function sortByDifficulty(exercises: Exercise[]) {
+  return [...exercises].sort((a, b) => (a.difficulty ?? 2) - (b.difficulty ?? 2));
+}
+
+function getStoredCompleted(grade: number, subject: string, topicId: string) {
+  if (typeof window === "undefined") return 0;
+  try {
+    const raw = localStorage.getItem(`cleverli_${grade}_${subject}_${topicId}`);
+    const parsed = raw ? JSON.parse(raw) : null;
+    return Math.max(0, Number(parsed?.completed ?? 0));
+  } catch {
+    return 0;
+  }
+}
+
+function selectCurrentTierExercises(topic: Topic, completed: number) {
+  const sorted = sortByDifficulty(topic.exercises);
+  const tierInfo = getTierProgress(topic, completed);
+
+  if (completed < tierInfo.easyBoundary) {
+    return sorted.slice(completed, tierInfo.easyBoundary);
+  }
+  if (completed < tierInfo.mediumBoundary) {
+    return sorted.slice(completed, tierInfo.mediumBoundary);
+  }
+  return sorted.slice(completed, topic.exercises.length);
 }
 
 // ── Translation helper ────────────────────────────────────────────────────────
@@ -91,9 +118,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const uid = session?.userId ?? "";
   const checkoutUrl = (plan: "monthly" | "yearly") =>
     `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
-  const FREE_LIMIT = 10; // raised from 5 → 10 to reduce signup friction for new users
-  // Select a rotated pool of exercises — different each session if pool > 10
-  const [fullSetExercises] = useState(() => selectExercises(topic.id, topic.exercises));
+  const FREE_LIMIT = 15; // first full light/green section is free
+  // Select the current difficulty section, so Grün/Gelb/Rot progress matches the actual session.
+  const [sessionStartCompleted, setSessionStartCompleted] = useState(() => getStoredCompleted(grade, subject, topic.id));
+  const [fullSetExercises, setFullSetExercises] = useState(() => selectCurrentTierExercises(topic, sessionStartCompleted));
   const [exercises, setExercises] = useState(fullSetExercises);
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
@@ -115,12 +143,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [mascotReaction, setMascotReaction] = useState<'correct'|'wrong'|null>(null);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const topicStartRef = useRef<number>(Date.now());
-  const tierInfo = getTierProgress(topic, idx);
+  const currentCompleted = sessionStartCompleted + idx;
+  const tierInfo = getTierProgress(topic, currentCompleted);
   const nextTopic = allTopics[topicIndex + 1] ?? null;
   const rewardRef = useRef<HTMLDivElement>(null);
 
-  const current: Exercise = localiseExercise(exercises[idx], lang);
-  const isLocked = !isPremium && idx >= FREE_LIMIT;
+  const current: Exercise = localiseExercise(exercises[idx] ?? sortByDifficulty(topic.exercises)[0], lang);
+  const isLocked = !isPremium && sessionStartCompleted + idx >= FREE_LIMIT;
   
 
   // (voice is on-demand only — no auto-read)
@@ -142,21 +171,27 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const key = `cleverli_${grade}_${subject}_${topic.id}`;
       const existing = JSON.parse(localStorage.getItem(key) ?? "{}");
       const prevScore = existing?.score ?? 0;
-      if (score >= prevScore) {
-        const s = calcStars(score, exercises.length);
-        const lastPlayed = new Date().toISOString();
-        const progressData = { completed: exercises.length, score, stars: s, lastPlayed };
-        localStorage.setItem(key, JSON.stringify(progressData));
-        // Fire-and-forget sync to Supabase
-        const childId = getActiveProfileId();
-        if (childId) {
-          syncTopicProgressToSupabase(childId, grade, subject, topic.id, {
-            ...progressData, partial: false
-          });
-        }
+      const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
+      const s = calcStars(score, exercises.length);
+      const lastPlayed = new Date().toISOString();
+      const progressData = {
+        ...existing,
+        completed: Math.max(existing?.completed ?? 0, completedCount),
+        score: Math.max(prevScore, score),
+        stars: completedCount >= topic.exercises.length ? s : (existing?.stars ?? 0),
+        partial: completedCount < topic.exercises.length,
+        lastPlayed,
+      };
+      localStorage.setItem(key, JSON.stringify(progressData));
+      // Fire-and-forget sync to Supabase
+      const childId = getActiveProfileId();
+      if (childId) {
+        syncTopicProgressToSupabase(childId, grade, subject, topic.id, {
+          ...progressData, partial: false
+        });
       }
     }
-  }, [done, score, grade, subject, topic.id, exercises.length]);
+  }, [done, score, grade, subject, topic.id, topic.exercises.length, exercises.length, sessionStartCompleted]);
 
   // Enter key to continue after answering (desktop)
   useEffect(() => {
@@ -252,7 +287,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const existing = JSON.parse(localStorage.getItem(topicKey) ?? "{}");
       localStorage.setItem(topicKey, JSON.stringify({
         ...existing,
-        completed: idx + 1, // idx is 0-based, so idx+1 is the count of completed exercises
+        completed: Math.max(existing?.completed ?? 0, sessionStartCompleted + idx + 1),
         lastPlayed: new Date().toISOString(),
       }));
     }
@@ -320,7 +355,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     }
     // Tier completion toast (fires when we cross a boundary, non-review mode)
     if (!isReviewMode && tierInfo.isTiered) {
-      const nextIdx = idx + 1;
+      const nextIdx = sessionStartCompleted + idx + 1;
       if (nextIdx === tierInfo.easyBoundary) {
         setTierToast("🌱 Leicht-Level geschafft! +20 XP");
         setTimeout(() => setTierToast(null), 2500);
@@ -400,7 +435,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           <div className="flex gap-3 justify-center flex-wrap pt-1">
             <button onClick={() => {
               topicStartRef.current = Date.now();
-              setExercises(fullSetExercises);
+              const nextStart = getStoredCompleted(grade, subject, topic.id);
+              const nextExercises = selectCurrentTierExercises(topic, nextStart);
+              setSessionStartCompleted(nextStart);
+              setFullSetExercises(nextExercises);
+              setExercises(nextExercises);
               setIdx(0); setScore(0); setStreak(0); setAnswered(null);
               setDone(false); setWrongIds([]); setIsReviewMode(false); setShowReview(false);
               setHintsUsed(0); setComboCount(0); setWrongCountSession(0); setCorrectAnswerCount(0);
@@ -594,7 +633,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
             const bg = tier === "easy" ? "linear-gradient(to right,#86efac,#16a34a)"
                      : tier === "medium" ? "linear-gradient(to right,#fcd34d,#d97706)"
                      : "linear-gradient(to right,#fca5a5,#dc2626)";
-            const segW = (t.total / exercises.length) * 100;
+            const segW = (t.total / topic.exercises.length) * 100;
             return (
               <div key={tier} className="relative h-full bg-gray-100 overflow-hidden"
                 style={{ width: `${segW}%` }}>

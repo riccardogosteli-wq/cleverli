@@ -4,13 +4,13 @@
  * Ensures kids get different exercises each session.
  * - Tracks recently shown exercise IDs per topic
  * - Fresh exercises shown first, then cycles back through stale ones
- * - Respects EXERCISES_PER_SESSION cap (default 10)
+ * - Respects EXERCISES_PER_SESSION cap (default 15)
  */
 
 import { Exercise } from "@/types/exercise";
 
 const POOL_KEY_PREFIX = "cleverli_pool_";
-const EXERCISES_PER_SESSION = 10;
+const EXERCISES_PER_SESSION = 15;
 const RECENT_MEMORY = 20; // how many IDs to remember (avoids repeats for ~2 sessions)
 
 function shuffle<T>(arr: T[]): T[] {
