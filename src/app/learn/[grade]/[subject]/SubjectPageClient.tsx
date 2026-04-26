@@ -104,15 +104,15 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
               {(tierInfo.easy.total + tierInfo.medium.total + tierInfo.hard.total > 0) && (
                 <div className="grid grid-cols-3 gap-2 text-[11px] font-semibold">
                   <div className="rounded-xl border border-green-200 bg-green-50 px-2 py-1.5 text-green-700">
-                    <div>🟢 Grün</div>
+                    <div>🟢 Leicht</div>
                     <div>{tierInfo.easy.done}/{tierInfo.easy.total}{tierInfo.easy.done === tierInfo.easy.total ? " ✓" : ""}</div>
                   </div>
                   <div className="rounded-xl border border-yellow-200 bg-yellow-50 px-2 py-1.5 text-yellow-700">
-                    <div>🟡 Gelb</div>
+                    <div>🟡 Mittel</div>
                     <div>{tierInfo.medium.done}/{tierInfo.medium.total}{tierInfo.medium.done === tierInfo.medium.total ? " ✓" : ""}</div>
                   </div>
                   <div className="rounded-xl border border-red-200 bg-red-50 px-2 py-1.5 text-red-600">
-                    <div>🔴 Rot</div>
+                    <div>🔴 Schwer</div>
                     <div>{tierInfo.hard.done}/{tierInfo.hard.total}{tierInfo.hard.done === tierInfo.hard.total ? " ✓" : ""}</div>
                   </div>
                 </div>
