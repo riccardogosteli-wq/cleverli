@@ -546,72 +546,60 @@ function DashboardInner() {
         </div>
       )}
 
-      {/* Topic path — linear unlock progression */}
+      {/* Topic list — all topics open, progress visible */}
       {(() => {
-        const firstCurrentIdx = topics.findIndex((t, i) => {
-          const pp = i > 0 ? getProgress(grade, subject, topics[i - 1].id) : null;
-          const unlocked = i === 0 || isGrade3Locked || (pp?.stars ?? 0) >= 1;
-          return unlocked && (getProgress(grade, subject, t.id)?.stars ?? 0) === 0;
-        });
+        const firstCurrentIdx = topics.findIndex((t) => (getProgress(grade, subject, t.id)?.stars ?? 0) === 0);
         return (
           <div className="flex flex-col">
             {topics.map((topic, i) => {
               const prog = getProgress(grade, subject, topic.id);
               const stars = prog?.stars ?? 0;
+              const completedExercises = prog?.completed ?? 0;
               const done = stars > 0;
-              const prevProg = i > 0 ? getProgress(grade, subject, topics[i - 1].id) : null;
-              // Anonymous users get all topics unlocked (grades 1–2 only) so they can trial freely
-              const isUnlocked = i === 0 || isAnonymousUser || isGrade3Locked || (prevProg?.stars ?? 0) >= 1;
-              const isLocked = !isUnlocked;
-              const isCurrent = i === firstCurrentIdx;
+              const isCurrent = i === firstCurrentIdx || (firstCurrentIdx === -1 && i === topics.length - 1);
               const iconBg = currentSubjectMeta?.iconBg ?? "bg-green-100";
-              
-              // Get tier progress to show Level 1/2/3 badges
-              const tierInfo = getTierProgress(topic, prog?.completed ?? 0);
-              const tierLevel = 
+
+              const tierInfo = getTierProgress(topic, completedExercises);
+              const tierLevel =
                 tierInfo.isTiered && tierInfo.easy.done === tierInfo.easy.total && tierInfo.medium.done === tierInfo.medium.total && tierInfo.hard.done === tierInfo.hard.total ? 3
                 : tierInfo.isTiered && tierInfo.easy.done === tierInfo.easy.total && tierInfo.medium.done === tierInfo.medium.total ? 2
                 : tierInfo.isTiered && tierInfo.easy.done === tierInfo.easy.total ? 1
                 : 0;
 
+              const progressLabel = completedExercises > 0
+                ? `${Math.min(completedExercises, topic.exercises.length)}/${topic.exercises.length} ${tr("exerciseCount")}`
+                : `${topic.exercises.length} ${tr("exerciseCount")}`;
+
               const cardContent = (
                 <>
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0 ${isLocked || isGrade3Locked ? "bg-gray-100" : iconBg}`}>
-                    {isLocked || isGrade3Locked ? "🔒" : topic.emoji}
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0 ${isGrade3Locked ? "bg-gray-100" : iconBg}`}>
+                    {isGrade3Locked ? "🔒" : topic.emoji}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className={`font-semibold text-sm leading-tight ${isLocked ? "text-gray-800 font-semibold" : "text-gray-800"}`}>
+                    <div className="font-semibold text-sm leading-tight text-gray-800">
                       {getTopicTitle(topic.id, lang, topic.title)}
-                      {isCurrent && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
+                      {isCurrent && !done && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
                       {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
                     </div>
-                    <div className="text-xs mt-0.5 flex items-center gap-2">
-                      {isLocked ? (
-                        <span className="text-gray-800 font-semibold">
-                          {lang === "fr" ? "Encore verrouillé" : lang === "it" ? "Ancora bloccato" : lang === "en" ? "Still locked" : "Noch gesperrt"}
-                        </span>
-                      ) : tierInfo.isTiered && tierLevel > 0 ? (
+                    <div className="text-xs mt-0.5 flex flex-wrap items-center gap-2 text-gray-700">
+                      {!isGrade3Locked && tierInfo.isTiered && tierLevel > 0 ? (
                         <>
-                          {/* Show tier level badges */}
                           {tierLevel >= 1 && <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full font-bold text-xs">Level 1</span>}
                           {tierLevel >= 2 && <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full font-bold text-xs">Level 2</span>}
                           {tierLevel >= 3 && <span className="px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full font-bold text-xs">Level 3</span>}
                         </>
                       ) : done ? (
-                        Array.from({length: 3}).map((_, j) => (
-                          <span key={j} className={j < stars ? "text-yellow-500" : "text-gray-800"}>★</span>
+                        Array.from({ length: 3 }).map((_, j) => (
+                          <span key={j} className={j < stars ? "text-yellow-500" : "text-gray-300"}>★</span>
                         ))
-                      ) : (
-                        <span className="text-gray-800 font-semibold">{topic.exercises.length} {tr("exerciseCount")}</span>
-                      )}
+                      ) : null}
+                      <span className="font-semibold">{progressLabel}</span>
                     </div>
                   </div>
                   <div className="shrink-0">
                     {done && !isGrade3Locked
                       ? <span className="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
-                      : isLocked
-                        ? <span className="w-8 h-8 bg-gray-100 text-gray-800 rounded-full flex items-center justify-center text-xs">🔒</span>
-                        : <span className="w-8 h-8 bg-gray-50 text-gray-800 font-semibold rounded-full flex items-center justify-center text-base">›</span>
+                      : <span className={`w-8 h-8 rounded-full flex items-center justify-center text-base font-semibold ${isGrade3Locked ? "bg-gray-100 text-gray-400" : "bg-gray-50 text-gray-500"}`}>{isGrade3Locked ? "🔒" : "›"}</span>
                     }
                   </div>
                 </>
@@ -620,26 +608,21 @@ function DashboardInner() {
               return (
                 <div key={topic.id}>
                   {i > 0 && <div className="h-3 w-0.5 bg-gray-200 mx-auto" />}
-                  {isLocked ? (
-                    <div style={{ minHeight: "66px" }}
-                      className="flex items-center gap-3 rounded-2xl px-4 py-3 border-2 shadow-sm opacity-45 bg-gray-50 border-gray-200 cursor-not-allowed select-none">
-                      {cardContent}
-                    </div>
-                  ) : (
-                    <Link href={`/learn/${grade}/${subject}/${topic.id}`}
-                      style={{ minHeight: "66px" }}
-                      className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
-                        isGrade3Locked
-                          ? "bg-gray-50 border-gray-200 hover:border-amber-300 opacity-80"
-                          : done
-                            ? "bg-white border-green-200 hover:border-green-400"
+                  <Link href={`/learn/${grade}/${subject}/${topic.id}`}
+                    style={{ minHeight: "66px" }}
+                    className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
+                      isGrade3Locked
+                        ? "bg-gray-50 border-gray-200 hover:border-amber-300 opacity-80"
+                        : done
+                          ? "bg-white border-green-200 hover:border-green-400"
                           : isCurrent
                             ? "bg-green-50 border-green-400 hover:border-green-500 ring-2 ring-green-200"
-                            : "bg-white border-gray-100 hover:border-green-300 hover:bg-green-50"
-                      }`}>
-                      {cardContent}
-                    </Link>
-                  )}
+                            : completedExercises > 0
+                              ? "bg-white border-blue-200 hover:border-blue-400"
+                              : "bg-white border-gray-100 hover:border-green-300 hover:bg-green-50"
+                    }`}>
+                    {cardContent}
+                  </Link>
                 </div>
               );
             })}
