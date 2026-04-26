@@ -578,36 +578,55 @@ function DashboardInner() {
 
               const cardContent = (
                 <>
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0 ${isGrade3Locked ? "bg-gray-100" : iconBg}`}>
-                    {isGrade3Locked ? "🔒" : topic.emoji}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-sm leading-tight text-gray-800">
-                      {getTopicTitle(topic.id, lang, topic.title)}
-                      {isCurrent && !done && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
-                      {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0 ${isGrade3Locked ? "bg-gray-100" : iconBg}`}>
+                      {isGrade3Locked ? "🔒" : topic.emoji}
                     </div>
-                    <div className="text-xs mt-0.5 flex flex-wrap items-center gap-2 text-gray-700">
-                      {!isGrade3Locked && done && tierInfo.isTiered && tierLevel > 0 ? (
-                        <>
-                          {tierLevel >= 1 && <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full font-bold text-xs">Level 1</span>}
-                          {tierLevel >= 2 && <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full font-bold text-xs">Level 2</span>}
-                          {tierLevel >= 3 && <span className="px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full font-bold text-xs">Level 3</span>}
-                        </>
-                      ) : done ? (
-                        Array.from({ length: 3 }).map((_, j) => (
-                          <span key={j} className={j < stars ? "text-yellow-500" : "text-gray-300"}>★</span>
-                        ))
-                      ) : null}
-                      <span className="font-semibold">{progressLabel}</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-semibold text-sm leading-tight text-gray-800">
+                        {getTopicTitle(topic.id, lang, topic.title)}
+                        {isCurrent && !done && !isGrade3Locked && <span className="ml-2 text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-full font-bold">Start ✨</span>}
+                        {isGrade3Locked && <span className="ml-2 text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-bold">Premium</span>}
+                      </div>
+                      <div className="text-xs mt-0.5 flex flex-wrap items-center gap-2 text-gray-700">
+                        {!isGrade3Locked && done && tierInfo.isTiered && tierLevel > 0 ? (
+                          <>
+                            {tierLevel >= 1 && <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full font-bold text-xs">Level 1</span>}
+                            {tierLevel >= 2 && <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full font-bold text-xs">Level 2</span>}
+                            {tierLevel >= 3 && <span className="px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full font-bold text-xs">Level 3</span>}
+                          </>
+                        ) : done ? (
+                          Array.from({ length: 3 }).map((_, j) => (
+                            <span key={j} className={j < stars ? "text-yellow-500" : "text-gray-300"}>★</span>
+                          ))
+                        ) : null}
+                        <span className="font-semibold">{progressLabel}</span>
+                      </div>
+                    </div>
+                    <div className="shrink-0">
+                      {done && !isGrade3Locked
+                        ? <span className="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                        : <span className={`w-8 h-8 rounded-full flex items-center justify-center text-base font-semibold ${isGrade3Locked ? "bg-gray-100 text-gray-400" : "bg-gray-50 text-gray-500"}`}>{isGrade3Locked ? "🔒" : "›"}</span>
+                      }
                     </div>
                   </div>
-                  <div className="shrink-0">
-                    {done && !isGrade3Locked
-                      ? <span className="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
-                      : <span className={`w-8 h-8 rounded-full flex items-center justify-center text-base font-semibold ${isGrade3Locked ? "bg-gray-100 text-gray-400" : "bg-gray-50 text-gray-500"}`}>{isGrade3Locked ? "🔒" : "›"}</span>
-                    }
-                  </div>
+
+                  {!isGrade3Locked && tierInfo.isTiered && (
+                    <div className="grid grid-cols-3 gap-2 text-[11px] font-semibold mt-2">
+                      <div className="rounded-xl border border-green-200 bg-green-50 px-2 py-1.5 text-green-700">
+                        <div>🟢 Grün</div>
+                        <div>{tierInfo.easy.done}/{tierInfo.easy.total}{tierInfo.easy.done === tierInfo.easy.total ? " ✓" : ""}</div>
+                      </div>
+                      <div className="rounded-xl border border-yellow-200 bg-yellow-50 px-2 py-1.5 text-yellow-700">
+                        <div>🟡 Gelb</div>
+                        <div>{tierInfo.medium.done}/{tierInfo.medium.total}{tierInfo.medium.done === tierInfo.medium.total ? " ✓" : ""}</div>
+                      </div>
+                      <div className="rounded-xl border border-red-200 bg-red-50 px-2 py-1.5 text-red-600">
+                        <div>🔴 Rot</div>
+                        <div>{tierInfo.hard.done}/{tierInfo.hard.total}{tierInfo.hard.done === tierInfo.hard.total ? " ✓" : ""}</div>
+                      </div>
+                    </div>
+                  )}
                 </>
               );
 
@@ -616,7 +635,7 @@ function DashboardInner() {
                   {i > 0 && <div className="h-3 w-0.5 bg-gray-200 mx-auto" />}
                   <Link href={`/learn/${grade}/${subject}/${topic.id}`}
                     style={{ minHeight: "66px" }}
-                    className={`flex items-center gap-3 rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
+                    className={`block rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
                       isGrade3Locked
                         ? "bg-gray-50 border-gray-200 hover:border-amber-300 opacity-80"
                         : done
