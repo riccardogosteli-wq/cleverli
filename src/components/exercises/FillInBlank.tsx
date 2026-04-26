@@ -57,7 +57,20 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
     return inputParts.join(" ") === expectedParts.join(" ");
   };
 
+  const matchesOpenEndedNumberList = (input: string, prompt: string) => {
+    const smallerThanMatch = prompt.match(/schreibe\s+drei\s+zahlen\s+kleiner\s+als\s+(\d+)/i);
+    if (!smallerThanMatch) return false;
+
+    const limit = parseInt(smallerThanMatch[1], 10);
+    const numbers = (input.match(/-?\d+/g) ?? []).map(Number);
+    if (numbers.length !== 3) return false;
+
+    const unique = new Set(numbers);
+    return unique.size === 3 && numbers.every(n => Number.isInteger(n) && n >= 0 && n < limit);
+  };
+
   const isCorrect = (input: string, expected: string) => {
+    if (matchesOpenEndedNumberList(input, question)) return true;
     if (matchesSingle(input, expected)) return true;
     // Check alternative answers
     if (altAnswers?.some(alt => matchesSingle(input, alt))) return true;
