@@ -54,7 +54,7 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 min-h-[44px]" onClick={() => setOpen(false)}>
           <Image
-            src="/cleverli-logo.png"
+            src="/cleverli-logo.svg"
             alt="Cleverli – Lernplattform für Schweizer Kinder"
             width={160}
             height={54}

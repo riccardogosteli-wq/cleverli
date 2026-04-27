@@ -17,9 +17,9 @@ export default function StructuredData() {
         url: "https://www.cleverli.ch",
         logo: {
           "@type": "ImageObject",
-          url: "https://www.cleverli.ch/cleverli-logo.png",
-          width: 512,
-          height: 512,
+          url: "https://www.cleverli.ch/cleverli-logo.svg",
+          width: 1718,
+          height: 871,
         },
         contactPoint: {
           "@type": "ContactPoint",

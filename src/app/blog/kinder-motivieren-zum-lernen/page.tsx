@@ -35,7 +35,7 @@ const articleJsonLd = {
     "name": "Cleverli",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.cleverli.ch/cleverli-logo.png",
+      "url": "https://www.cleverli.ch/cleverli-logo.svg",
     },
   },
   "mainEntityOfPage": {
