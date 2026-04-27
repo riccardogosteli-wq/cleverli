@@ -51,6 +51,8 @@ export default function Navigation() {
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm overflow-visible"
       style={{ paddingLeft: "env(safe-area-inset-left)", paddingRight: "env(safe-area-inset-right)" }}>
       <div className="relative flex items-center justify-between px-4 py-0 max-w-6xl mx-auto h-16 overflow-visible">
+        <div className="h-[44px] w-[44px] shrink-0 sm:hidden" aria-hidden="true" />
+
         {/* Logo */}
         <Link
           href="/"
