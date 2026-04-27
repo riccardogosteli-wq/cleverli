@@ -96,6 +96,36 @@ function localiseExercise(ex: import("@/types/exercise").Exercise, lang: string)
 
 export default function ExercisePlayer({ topic, grade, subject, isPremium = false, allTopics = [], topicIndex = 0 }: Props) {
   const router = useRouter();
+
+  const getCompletedCoin = (completedCount: number) => {
+    const boundaries = getTierProgress(topic, topic.exercises.length);
+
+    if (completedCount >= topic.exercises.length && boundaries.hard.total > 0) {
+      return {
+        emoji: "🥇",
+        label: lang === "fr" ? "Pièce Cleverli or" : lang === "it" ? "Moneta Cleverli oro" : lang === "en" ? "Cleverli gold coin" : "Cleverli Gold-Münze",
+        tone: "from-yellow-50 to-amber-100 border-yellow-300 text-yellow-900",
+      };
+    }
+
+    if (completedCount >= boundaries.mediumBoundary && boundaries.medium.total > 0) {
+      return {
+        emoji: "🥈",
+        label: lang === "fr" ? "Pièce Cleverli argent" : lang === "it" ? "Moneta Cleverli argento" : lang === "en" ? "Cleverli silver coin" : "Cleverli Silber-Münze",
+        tone: "from-slate-50 to-gray-100 border-gray-300 text-gray-800",
+      };
+    }
+
+    if (completedCount >= boundaries.easyBoundary && boundaries.easy.total > 0) {
+      return {
+        emoji: "🥉",
+        label: lang === "fr" ? "Pièce Cleverli bronze" : lang === "it" ? "Moneta Cleverli bronzo" : lang === "en" ? "Cleverli bronze coin" : "Cleverli Bronze-Münze",
+        tone: "from-amber-50 to-orange-100 border-orange-300 text-orange-900",
+      };
+    }
+
+    return null;
+  };
   const { speak, stop, isSupported } = useVoice();
   const { play } = useSound();
   const { tr, lang } = useLang();
@@ -290,6 +320,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         completed: Math.max(existing?.completed ?? 0, sessionStartCompleted + idx + 1),
         lastPlayed: new Date().toISOString(),
       }));
+      window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
     }
 
     // Check reward unlocks after every correct answer
@@ -411,6 +442,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     const totalEx = isReviewMode ? exercises.length : topic.exercises.length;
     const s = calcStars(score, totalEx);
     const perfect = score === totalEx;
+    const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
+    const completedCoin = isReviewMode ? null : getCompletedCoin(completedCount);
     return (
       <div className="space-y-4 max-w-md mx-auto">
         <RewardAnimation correct={true} isTopicComplete={true} onContinue={() => router.push(`/learn/${grade}/${subject}`)} />
@@ -432,6 +465,21 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               </span>
             ))}
           </div>
+          {completedCoin && (
+            <div className={`rounded-2xl border bg-gradient-to-r px-4 py-3 ${completedCoin.tone}`}>
+              <div className="text-4xl mb-1">{completedCoin.emoji}</div>
+              <div className="font-black">{completedCoin.label}</div>
+              <div className="text-sm opacity-80">
+                {lang === "fr"
+                  ? "Directement débloquée à la fin du thème."
+                  : lang === "it"
+                    ? "Sbloccata subito alla fine del tema."
+                    : lang === "en"
+                      ? "Unlocked immediately at the end of the topic."
+                      : "Direkt am Schluss vom Thema freigeschaltet."}
+              </div>
+            </div>
+          )}
           <div className="flex gap-3 justify-center flex-wrap pt-1">
             <button onClick={() => {
               topicStartRef.current = Date.now();
