@@ -50,15 +50,19 @@ export default function Navigation() {
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm overflow-visible"
       style={{ paddingLeft: "env(safe-area-inset-left)", paddingRight: "env(safe-area-inset-right)" }}>
-      <div className="flex items-center justify-between px-4 py-0 max-w-6xl mx-auto h-16 overflow-visible">
+      <div className="relative flex items-center justify-between px-4 py-0 max-w-6xl mx-auto h-16 overflow-visible">
         {/* Logo */}
-        <Link href="/" className="flex min-h-[44px] shrink-0 items-center justify-center" onClick={() => setOpen(false)}>
-          <div className="flex h-[48px] items-center justify-center sm:h-[56px]">
+        <Link
+          href="/"
+          className="absolute left-1/2 flex min-h-[44px] -translate-x-1/2 items-center justify-center sm:static sm:left-auto sm:translate-x-0"
+          onClick={() => setOpen(false)}
+        >
+          <div className="flex h-[42px] items-center justify-center sm:h-[50px]">
             <Image
-              src="/cleverli-logo-transparent.png"
+              src="/cleverli-logo-tight.png"
               alt="Cleverli – Lernplattform für Schweizer Kinder"
-              width={1024}
-              height={1024}
+              width={1222}
+              height={496}
               className="h-full w-auto object-contain drop-shadow-sm"
               priority
             />
