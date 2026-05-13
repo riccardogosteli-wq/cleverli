@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
     await supabase
       .from("push_subscriptions")
-      .upsert({ user_id: userId || null, subscription }, { onConflict: "subscription->endpoint" })
+      .upsert({ user_id: userId || null, subscription }, { onConflict: "endpoint" })
       .throwOnError();
 
     return NextResponse.json({ ok: true });

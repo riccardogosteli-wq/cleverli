@@ -9,8 +9,21 @@ create table if not exists public.parent_profiles (
   email       text not null,
   name        text,
   premium     boolean not null default false,
+  premium_until timestamptz,
+  premium_plan text,
+  cancelled   boolean not null default false,
+  stripe_customer_id text,
+  stripe_subscription_id text,
   created_at  timestamptz not null default now()
 );
+
+create index if not exists idx_parent_profiles_premium_until
+  on public.parent_profiles (premium_until)
+  where premium = true;
+
+create index if not exists idx_parent_profiles_stripe_customer_id
+  on public.parent_profiles (stripe_customer_id)
+  where stripe_customer_id is not null;
 
 alter table public.parent_profiles enable row level security;
 
@@ -142,3 +155,46 @@ alter table public.notify_signups enable row level security;
 create policy "Anyone can join waitlist"
   on public.notify_signups for insert
   with check (true);
+
+
+-- ─────────────────────────────────────────────
+-- 6. PUSH SUBSCRIPTIONS (daily reminder service)
+-- ─────────────────────────────────────────────
+create table if not exists public.push_subscriptions (
+  id           uuid primary key default gen_random_uuid(),
+  user_id      uuid references auth.users(id) on delete cascade,
+  subscription jsonb not null,
+  endpoint     text generated always as (subscription->>'endpoint') stored,
+  created_at   timestamptz not null default now()
+);
+
+create unique index if not exists idx_push_subscriptions_endpoint_unique
+  on public.push_subscriptions (endpoint);
+
+alter table public.push_subscriptions enable row level security;
+
+
+-- ─────────────────────────────────────────────
+-- 7. DATA API GRANTS
+-- ─────────────────────────────────────────────
+-- Supabase will stop exposing new public tables to the Data API automatically
+-- for existing projects on 2026-10-30. Keep access explicit and narrow.
+grant usage on schema public to anon, authenticated, service_role;
+
+grant select on table public.parent_profiles to anon;
+grant select, insert, update on table public.parent_profiles to authenticated;
+grant all on table public.parent_profiles to service_role;
+
+grant select, insert, update, delete on table public.child_profiles to authenticated;
+grant all on table public.child_profiles to service_role;
+
+grant select, insert, update, delete on table public.child_progress to authenticated;
+grant all on table public.child_progress to service_role;
+
+grant select, insert, update, delete on table public.topic_progress to authenticated;
+grant all on table public.topic_progress to service_role;
+
+grant insert on table public.notify_signups to anon;
+grant all on table public.notify_signups to service_role;
+
+grant all on table public.push_subscriptions to service_role;
