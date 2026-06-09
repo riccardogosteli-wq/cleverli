@@ -33,7 +33,7 @@ export default function UpgradePageClient() {
         "✅ Alle Klassen 1–6",
         "✅ Fortschritt & Trophäen",
         "✅ Elternbereich mit Statistiken",
-        "✅ TWINT, Visa & Mastercard",
+        "✅ Visa & Mastercard",
       ],
       alreadyPremium: "Du hast bereits Premium! 🎉",
       dashboard: "Zum Dashboard",
@@ -49,7 +49,7 @@ export default function UpgradePageClient() {
       monthlyPer: "/mois", yearlyPer: "/an",
       yearlySave: "2 mois gratuits", cta: "Commencer",
       cancel: "Résiliable à tout moment",
-      features: ["✅ Tous les exercices par thème","✅ 3 niveaux","✅ Toutes les matières","✅ Années 1–6","✅ Trophées & progrès","✅ Espace parents","✅ TWINT, Visa & Mastercard"],
+      features: ["✅ Tous les exercices par thème","✅ 3 niveaux","✅ Toutes les matières","✅ Années 1–6","✅ Trophées & progrès","✅ Espace parents","✅ Visa & Mastercard"],
       alreadyPremium: "Vous avez déjà Premium ! 🎉",
       dashboard: "Tableau de bord",
       note: "Paiement sécurisé avec",
@@ -64,7 +64,7 @@ export default function UpgradePageClient() {
       monthlyPer: "/mese", yearlyPer: "/anno",
       yearlySave: "2 mesi gratis", cta: "Inizia ora",
       cancel: "Annullabile in qualsiasi momento",
-      features: ["✅ Tutti gli esercizi per argomento","✅ 3 livelli","✅ Tutte le materie","✅ Classi 1–6","✅ Trofei e progressi","✅ Area genitori","✅ TWINT, Visa & Mastercard"],
+      features: ["✅ Tutti gli esercizi per argomento","✅ 3 livelli","✅ Tutte le materie","✅ Classi 1–6","✅ Trofei e progressi","✅ Area genitori","✅ Visa & Mastercard"],
       alreadyPremium: "Hai già Premium! 🎉",
       dashboard: "Dashboard",
       note: "Pagamento sicuro con",
@@ -79,7 +79,7 @@ export default function UpgradePageClient() {
       monthlyPer: "/month", yearlyPer: "/year",
       yearlySave: "2 months free", cta: "Get started",
       cancel: "Cancel anytime",
-      features: ["✅ All exercises per topic","✅ 3 difficulty levels","✅ All subjects","✅ Grades 1–6","✅ Trophies & progress","✅ Parent dashboard","✅ TWINT, Visa & Mastercard"],
+      features: ["✅ All exercises per topic","✅ 3 difficulty levels","✅ All subjects","✅ Grades 1–6","✅ Trophies & progress","✅ Parent dashboard","✅ Visa & Mastercard"],
       alreadyPremium: "You already have Premium! 🎉",
       dashboard: "Go to Dashboard",
       note: "Pay securely with",
@@ -245,9 +245,6 @@ export default function UpgradePageClient() {
       <div className="text-center space-y-2">
         <p className="text-xs text-gray-400">{tx.note}</p>
         <div className="flex items-center justify-center gap-3 text-2xl">
-          <span title="TWINT">🇨🇭</span>
-          <span className="text-sm font-bold text-gray-600">TWINT</span>
-          <span className="text-gray-300">·</span>
           <span className="text-sm font-bold text-gray-600">Visa</span>
           <span className="text-gray-300">·</span>
           <span className="text-sm font-bold text-gray-600">Mastercard</span>

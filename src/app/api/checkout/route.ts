@@ -5,8 +5,8 @@ import { createClient } from "@supabase/supabase-js";
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.cleverli.ch";
 
 const PRICE_IDS: Record<string, string> = {
-  monthly: "price_1TEQiwDGUBi3vyUQcMa6mD3P",
-  yearly: "price_1TEQiwDGUBi3vyUQVIRKNl42",
+  monthly: process.env.STRIPE_PRICE_MONTHLY ?? "price_1TEQiwDGUBi3vyUQcMa6mD3P",
+  yearly: process.env.STRIPE_PRICE_YEARLY ?? "price_1TEQiwDGUBi3vyUQVIRKNl42",
 };
 
 function getStripe() {
@@ -25,8 +25,9 @@ export async function GET(req: NextRequest) {
 
   const priceId = PRICE_IDS[plan] ?? PRICE_IDS.monthly;
 
-  // Get user email from Supabase
+  // Get user email and existing Stripe customer from Supabase.
   let customerEmail: string | undefined;
+  let stripeCustomerId: string | undefined;
   try {
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -34,6 +35,13 @@ export async function GET(req: NextRequest) {
     );
     const { data } = await supabase.auth.admin.getUserById(userId);
     customerEmail = data.user?.email ?? undefined;
+
+    const { data: profile } = await supabase
+      .from("parent_profiles")
+      .select("stripe_customer_id")
+      .eq("id", userId)
+      .single();
+    stripeCustomerId = profile?.stripe_customer_id ?? undefined;
   } catch (e) {
     console.error("[checkout] Supabase user lookup failed:", e);
   }
@@ -43,11 +51,14 @@ export async function GET(req: NextRequest) {
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
-      payment_method_types: ["card"],
       locale: "de",
       success_url: `${BASE_URL}/payment/success?plan=${plan}&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${BASE_URL}/payment/cancel`,
-      ...(customerEmail ? { customer_email: customerEmail } : {}),
+      ...(stripeCustomerId
+        ? { customer: stripeCustomerId }
+        : customerEmail
+          ? { customer_email: customerEmail }
+          : {}),
       metadata: {
         userId,
         plan,

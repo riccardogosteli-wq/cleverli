@@ -9,14 +9,7 @@ function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!);
 }
 
-async function updateSupabasePremium(userId: string, plan: string, premium: boolean) {
-  const now = new Date();
-  const premiumUntil = premium
-    ? plan === "yearly"
-      ? new Date(now.setFullYear(now.getFullYear() + 1)).toISOString()
-      : new Date(now.setMonth(now.getMonth() + 1)).toISOString()
-    : null;
-
+async function patchParentProfile(userId: string, body: Record<string, unknown>) {
   const res = await fetch(
     `${SUPABASE_URL}/rest/v1/parent_profiles?id=eq.${userId}`,
     {
@@ -27,12 +20,7 @@ async function updateSupabasePremium(userId: string, plan: string, premium: bool
         "Content-Type": "application/json",
         Prefer: "return=minimal",
       },
-      body: JSON.stringify({
-        premium,
-        premium_plan: premium ? plan : null,
-        premium_until: premiumUntil,
-        cancelled: !premium,
-      }),
+      body: JSON.stringify(body),
     }
   );
 
@@ -43,9 +31,29 @@ async function updateSupabasePremium(userId: string, plan: string, premium: bool
   }
 }
 
+function subscriptionPeriodEnd(subscription: Stripe.Subscription): string | null {
+  const currentPeriodEnd = (subscription as unknown as { current_period_end?: number }).current_period_end;
+  return currentPeriodEnd ? new Date(currentPeriodEnd * 1000).toISOString() : null;
+}
+
+async function updateSupabasePremium(
+  userId: string,
+  plan: string,
+  premium: boolean,
+  premiumUntil: string | null,
+  cancelled = false
+) {
+  await patchParentProfile(userId, {
+    premium,
+    premium_plan: premium ? plan : null,
+    premium_until: premium ? premiumUntil : null,
+    cancelled,
+  });
+}
+
 async function getUserByStripeCustomer(stripeCustomerId: string): Promise<{ userId: string; email: string } | null> {
   const res = await fetch(
-    `${SUPABASE_URL}/rest/v1/parent_profiles?stripe_customer_id=eq.${stripeCustomerId}&select=id`,
+    `${SUPABASE_URL}/rest/v1/parent_profiles?stripe_customer_id=eq.${stripeCustomerId}&select=id,email`,
     {
       headers: {
         apikey: SERVICE_KEY,
@@ -92,26 +100,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "no_user" }, { status: 400 });
     }
 
-    // Update Supabase
-    await updateSupabasePremium(userId, plan, true);
+    const stripe = getStripe();
+    const subscription = await stripe.subscriptions.retrieve(stripeSubscriptionId);
+    const premiumUntil = subscriptionPeriodEnd(subscription);
 
-    // Store Stripe IDs for cancellation lookup
-    await fetch(
-      `${SUPABASE_URL}/rest/v1/parent_profiles?id=eq.${userId}`,
-      {
-        method: "PATCH",
-        headers: {
-          apikey: SERVICE_KEY,
-          Authorization: `Bearer ${SERVICE_KEY}`,
-          "Content-Type": "application/json",
-          Prefer: "return=minimal",
-        },
-        body: JSON.stringify({
-          stripe_customer_id: stripeCustomerId,
-          stripe_subscription_id: stripeSubscriptionId,
-        }),
-      }
-    );
+    // Activate premium and store Stripe IDs for cancellation lookup.
+    await patchParentProfile(userId, {
+      premium: true,
+      premium_plan: plan,
+      premium_until: premiumUntil,
+      cancelled: false,
+      stripe_customer_id: stripeCustomerId,
+      stripe_subscription_id: stripeSubscriptionId,
+    });
 
     // Send confirmation email
     if (customerEmail) {
@@ -121,21 +122,25 @@ export async function POST(req: NextRequest) {
     console.log(`[stripe-webhook] ✅ Premium activated for ${userId} (${plan})`);
   }
 
-  // ── Subscription cancelled ───────────────────────────────────────────────
-  if (event.type === "customer.subscription.deleted") {
+  // ── Subscription status changed/cancelled ────────────────────────────────
+  if (event.type === "customer.subscription.updated" || event.type === "customer.subscription.deleted") {
     const subscription = event.data.object as Stripe.Subscription;
     const userId = subscription.metadata?.userId;
     const plan = subscription.metadata?.plan ?? "monthly";
+    const status = subscription.status;
+    const cancelAtPeriodEnd = subscription.cancel_at_period_end;
+    const premiumUntil = subscriptionPeriodEnd(subscription);
+    const premium = ["active", "trialing", "past_due"].includes(status);
 
     if (userId) {
-      await updateSupabasePremium(userId, plan, false);
-      console.log(`[stripe-webhook] ❌ Premium cancelled for ${userId}`);
+      await updateSupabasePremium(userId, plan, premium, premiumUntil, cancelAtPeriodEnd || !premium);
+      console.log(`[stripe-webhook] Subscription ${status} for ${userId}`);
     } else {
       // Fallback: look up by stripe_customer_id
       const user = await getUserByStripeCustomer(subscription.customer as string);
       if (user) {
-        await updateSupabasePremium(user.userId, plan, false);
-        console.log(`[stripe-webhook] ❌ Premium cancelled for ${user.userId} (by customer ID)`);
+        await updateSupabasePremium(user.userId, plan, premium, premiumUntil, cancelAtPeriodEnd || !premium);
+        console.log(`[stripe-webhook] Subscription ${status} for ${user.userId} (by customer ID)`);
       }
     }
   }

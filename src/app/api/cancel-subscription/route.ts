@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
+import { createClient } from "@supabase/supabase-js";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SERVICE_KEY  = process.env.SUPABASE_SERVICE_ROLE_KEY!;
@@ -22,19 +23,30 @@ export async function POST(req: NextRequest) {
   let cancelledCount = 0;
   let cancelError = "";
 
-  // ── Find active Stripe subscriptions for this user via metadata ────────────
+  // ── Prefer the stored subscription ID; fall back to metadata search ────────
   try {
-    const subscriptions = await stripe.subscriptions.list({
-      limit: 10,
-      status: "active",
-    });
+    const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
+    const { data: profile } = await supabase
+      .from("parent_profiles")
+      .select("stripe_subscription_id")
+      .eq("id", userId)
+      .single();
 
-    for (const sub of subscriptions.data) {
-      const meta = sub.metadata ?? {};
-      if (meta.userId === userId) {
-        // Cancel at period end (user keeps access until billing cycle ends)
-        await stripe.subscriptions.update(sub.id, { cancel_at_period_end: true });
-        cancelledCount++;
+    if (profile?.stripe_subscription_id) {
+      await stripe.subscriptions.update(profile.stripe_subscription_id, { cancel_at_period_end: true });
+      cancelledCount++;
+    } else {
+      const subscriptions = await stripe.subscriptions.list({
+        limit: 10,
+        status: "active",
+      });
+
+      for (const sub of subscriptions.data) {
+        const meta = sub.metadata ?? {};
+        if (meta.userId === userId) {
+          await stripe.subscriptions.update(sub.id, { cancel_at_period_end: true });
+          cancelledCount++;
+        }
       }
     }
   } catch (err) {

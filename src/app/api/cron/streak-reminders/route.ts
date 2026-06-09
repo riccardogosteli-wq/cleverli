@@ -2,18 +2,24 @@ import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import webpush from "web-push";
 
-webpush.setVapidDetails(
-  "mailto:hallo@cleverli.ch",
-  process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
-  process.env.VAPID_PRIVATE_KEY!
-);
+function configureServices() {
+  const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
+  const privateKey = process.env.VAPID_PRIVATE_KEY;
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+  if (!publicKey || !privateKey || !supabaseUrl || !serviceKey) return null;
+
+  webpush.setVapidDetails("mailto:hallo@cleverli.ch", publicKey, privateKey);
+  return createClient(supabaseUrl, serviceKey);
+}
 
 export async function GET() {
+  const supabase = configureServices();
+  if (!supabase) {
+    return NextResponse.json({ error: "push_not_configured" }, { status: 503 });
+  }
+
   try {
     const { data: subs } = await supabase
       .from("push_subscriptions")
