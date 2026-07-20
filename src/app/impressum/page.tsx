@@ -4,7 +4,7 @@ import ImpressumClient from "./ImpressumClient";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von Cleverli — Lernplattform für Schweizer Kinder.",
+  description: "Impressum von Cleverli — Lernplattform für Kinder.",
   robots: { index: false },
 };
 

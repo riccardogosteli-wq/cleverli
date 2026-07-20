@@ -130,10 +130,10 @@ export function DashboardGuestPreview() {
         </h1>
         <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto">
           {tr("subtitle")?.split("\n")[0] ?? t4(lang,
-            "Die interaktive Lernplattform für Schweizer Kinder der 1.–6. Klasse.",
-            "La plateforme d'apprentissage interactive pour les enfants suisses de la 1re à la 6e.",
-            "La piattaforma interattiva per i bambini svizzeri dalla 1ª alla 6ª classe.",
-            "The interactive learning platform for Swiss children in grades 1–6."
+            "Die interaktive Lernplattform für Kinder der 1.-6. Klasse.",
+            "La plateforme d'apprentissage interactive pour les enfants de la 1re à la 6e.",
+            "La piattaforma interattiva per bambini dalla 1ª alla 6ª classe.",
+            "The interactive learning platform for children in grades 1–6."
           )}
         </p>
       </div>

@@ -62,7 +62,7 @@ export default function Navigation() {
           <div className="flex h-[42px] items-center justify-center sm:h-[50px]">
             <Image
               src="/cleverli-logo-tight.png"
-              alt="Cleverli – Lernplattform für Schweizer Kinder"
+              alt="Cleverli – Lernplattform für Kinder"
               width={1222}
               height={496}
               className="h-full w-auto object-contain drop-shadow-sm"

@@ -7,7 +7,7 @@ export default function StructuredData() {
         "@id": "https://www.cleverli.ch/#website",
         url: "https://www.cleverli.ch",
         name: "Cleverli",
-        description: "Interaktive Lernplattform für Schweizer Kinder der 1.–6. Klasse",
+        description: "Interaktive Lernplattform für Kinder der 1.-6. Klasse",
         inLanguage: ["de-CH", "fr-CH", "it-CH", "en-GB"],
       },
       {
@@ -36,7 +36,7 @@ export default function StructuredData() {
         applicationCategory: "EducationalApplication",
         operatingSystem: "Web, iOS, Android",
         url: "https://www.cleverli.ch",
-        description: "Cleverli ist die interaktive Schweizer Lernplattform für Kinder der 1.–6. Klasse. Mathe, Deutsch und mehr — abgestimmt auf Lehrplan 21.",
+        description: "Cleverli ist die interaktive Lernplattform für Kinder der 1.-6. Klasse. Mathe, Deutsch und mehr — abgestimmt auf Lehrplan 21.",
         inLanguage: ["de-CH", "fr-CH", "it-CH", "en-GB"],
         screenshot: "https://www.cleverli.ch/og-image.png",
         offers: [

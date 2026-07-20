@@ -31,7 +31,7 @@ export async function sendWelcomeEmail(to: string, name: string) {
     <div style="padding:32px 28px;color:#1f2937;">
       <p style="font-size:16px;margin:0 0 16px;">Dein Konto ist bereit — Lernen kann sofort losgehen!</p>
       <p style="font-size:14px;color:#6b7280;margin:0 0 24px;">
-        Mit Cleverli lernen Schweizer Kinder Mathe, Deutsch und NMG spielerisch —
+        Mit Cleverli lernen Kinder Mathe, Deutsch und NMG spielerisch —
         mit Aufgaben nach Lehrplan 21, lustigen Trophäen und täglichen Challenges.
       </p>
       <!-- CTA -->
