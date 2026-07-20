@@ -84,6 +84,7 @@ async function answerMultipleChoice(page: Page, answer: string) {
   if (await byDataAttr.count() > 0) {
     await byDataAttr.first().waitFor({ state: "visible", timeout: 5000 });
     await byDataAttr.first().click();
+    await clickCheckAnswer(page);
     return;
   }
 
@@ -96,11 +97,20 @@ async function answerMultipleChoice(page: Page, answer: string) {
       const text = (await buttons.nth(i).textContent())?.trim();
       if (text === answer || text?.includes(answer)) {
         await buttons.nth(i).click();
+        await clickCheckAnswer(page);
         return;
       }
     }
     await buttons.first().click();
+    await clickCheckAnswer(page);
   }
+}
+
+async function clickCheckAnswer(page: Page) {
+  const checkBtn = page.locator("button:has-text('Überprüfen'), button:has-text('Prüfen'), button:has-text('Check')").first();
+  await expect(checkBtn).toBeVisible({ timeout: 5_000 });
+  await expect(checkBtn).toBeEnabled({ timeout: 5_000 });
+  await checkBtn.click();
 }
 
 // ── Fill in blank ─────────────────────────────────────────────────────────────

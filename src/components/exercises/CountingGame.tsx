@@ -14,14 +14,20 @@ interface Props {
 export default function CountingGame({ question, answer, emoji = "🍎", options, onAnswer, questionImage }: Props) {
   const { tr } = useLang();
   const [selected, setSelected] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
   const [popped, setPopped] = useState<boolean[]>([]);
   const count = parseInt(answer);
   const items = Array.from({ length: count });
 
   const handleClick = (opt: string) => {
-    if (selected) return;
+    if (submitted) return;
     setSelected(opt);
-    setTimeout(() => onAnswer(opt === answer), 1500);
+  };
+
+  const submit = () => {
+    if (!selected || submitted) return;
+    setSubmitted(true);
+    setTimeout(() => onAnswer(selected === answer), 1500);
   };
 
   const handleEmojiClick = (i: number) => {
@@ -77,7 +83,7 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
       </div>
 
       {/* Correct answer feedback */}
-      {selected && selected !== answer && (
+      {submitted && selected && selected !== answer && (
         <div className="text-center text-sm text-gray-500 bg-orange-50 border border-orange-200 rounded-xl px-4 py-2">
           {tr("correctAnswerWas")} <span className="font-bold text-orange-700">{answer}</span>
         </div>
@@ -89,12 +95,16 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
           const isSelected = selected === opt;
           const isCorrect = opt === answer;
           let bg = "bg-white border-gray-200 hover:border-green-400 hover:bg-green-50 active:scale-95";
-          if (isSelected && isCorrect) bg = "bg-green-100 border-green-500 text-green-800 scale-110 shadow-md";
-          else if (isSelected && !isCorrect) bg = "bg-red-100 border-red-400 text-red-800";
-          else if (selected && isCorrect) bg = "bg-green-100 border-green-500 text-green-800";
+          if (submitted && isSelected && isCorrect) bg = "bg-green-100 border-green-500 text-green-800 scale-110 shadow-md";
+          else if (submitted && isSelected && !isCorrect) bg = "bg-red-100 border-red-400 text-red-800";
+          else if (submitted && selected && isCorrect) bg = "bg-green-100 border-green-500 text-green-800";
+          else if (isSelected) bg = "bg-green-50 border-green-500 text-green-800 shadow-sm";
 
           return (
             <button key={opt} onClick={() => handleClick(opt)}
+              disabled={submitted}
+              aria-pressed={isSelected}
+              data-answer={opt}
               style={{ transition: "all 0.2s cubic-bezier(.34,1.56,.64,1)", minHeight: "56px" }}
               className={`border-2 rounded-2xl font-bold text-xl cursor-pointer text-center ${bg}`}>
               {opt}
@@ -102,6 +112,13 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
           );
         })}
       </div>
+      <button
+        onClick={submit}
+        disabled={!selected || submitted}
+        className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-lg hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+      >
+        {submitted ? (selected === answer ? "Richtig! 🎉" : "Weiter →") : tr("checkAnswer")}
+      </button>
     </div>
   );
 }
