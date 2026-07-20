@@ -11,12 +11,22 @@ interface Props {
   questionImage?: string;
 }
 
+const MINUS_SIGN_VARIANTS = /[−–—‒﹣－]/g;
+
+function normalizeMinusSigns(value: string): string {
+  return value.normalize("NFKC").replace(MINUS_SIGN_VARIANTS, "-");
+}
+
 function isNumericAnswer(answer: string): boolean {
-  return /^-?\d+([.,]\d+)?$/.test(answer.trim());
+  return /^-?\d+([.,]\d+)?$/.test(normalizeMinusSigns(answer).trim());
 }
 
 function isDecimalAnswer(answer: string): boolean {
-  return /^-?\d+[.,]\d+$/.test(answer.trim());
+  return /^-?\d+[.,]\d+$/.test(normalizeMinusSigns(answer).trim());
+}
+
+function isNegativeNumericAnswer(answer: string): boolean {
+  return /^-\d+([.,]\d+)?$/.test(normalizeMinusSigns(answer).trim());
 }
 
 export default function FillInBlank({ question, answer, altAnswers, onAnswer, questionImage }: Props) {
@@ -28,6 +38,7 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
   const inputRef = useRef<HTMLInputElement>(null);
   const numeric = useMemo(() => isNumericAnswer(answer), [answer]);
   const decimal = useMemo(() => isDecimalAnswer(answer), [answer]);
+  const negativeNumeric = useMemo(() => isNegativeNumericAnswer(answer), [answer]);
 
   useEffect(() => {
     const mobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
@@ -40,7 +51,7 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
   }, []);
 
   // Flexible answer matching: normalize spaces, punctuation, "und"/"and" variants
-  const normalize = (s: string) => s.trim().toLowerCase()
+  const normalize = (s: string) => normalizeMinusSigns(s).trim().toLowerCase()
     .replace(/\s+/g, " ")           // collapse whitespace
     .replace(/[.,;:!?'"»«]/g, "")   // strip punctuation
     .replace(/\bund\b/g, " ")       // "S und E" → "S E"
@@ -104,16 +115,16 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
         <input
           ref={inputRef}
           type="text"
-          // Use decimal keypad when the expected answer includes cents/comma,
-          // otherwise keep the plain numeric keypad for whole numbers.
-          inputMode={numeric ? (decimal ? "decimal" : "numeric") : "text"}
+          // Negative numbers need a normal keyboard because several mobile/Swiss
+          // numeric keypads hide the minus key.
+          inputMode={numeric ? (negativeNumeric ? "text" : decimal ? "decimal" : "numeric") : "text"}
           // German text needs autocapitalize for nouns; numbers don't
           autoCapitalize={numeric ? "off" : "sentences"}
           autoCorrect={numeric ? "off" : "on"}
           autoComplete="off"
           spellCheck={false}
           value={value}
-          onChange={e => !submitted && setValue(e.target.value)}
+          onChange={e => !submitted && setValue(normalizeMinusSigns(e.target.value))}
           onKeyDown={e => e.key === "Enter" && submit()}
           placeholder={numeric ? tr("numberPlaceholder") : tr("answerPlaceholder")}
           className={`w-full text-center font-bold border-2 rounded-2xl px-4 py-4 outline-none transition-all
