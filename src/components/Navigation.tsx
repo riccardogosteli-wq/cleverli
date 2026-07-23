@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useLang } from "@/lib/LangContext";
 import { LANGUAGES, Lang } from "@/lib/i18n";
 import XpBar from "./XpBar";
@@ -9,6 +10,7 @@ import { useSession } from "@/hooks/useSession";
 import { loadFamily, getActiveProfileId, setActiveProfileId, FamilyMember } from "@/lib/family";
 
 export default function Navigation() {
+  const pathname = usePathname();
   const { lang, setLang, tr } = useLang();
   const { session, isPremium, logout } = useSession();
   const [open, setOpen] = useState(false);
@@ -33,10 +35,10 @@ export default function Navigation() {
     };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const activeMember = members.find(m => m.id === activeId) ?? members[0] ?? null;
+  if (pathname.startsWith("/ads/")) return null;
 
   const switchProfile = (id: string) => {
     setActiveProfileId(id);

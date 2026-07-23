@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { useState } from "react";
+import { trackBeginCheckout } from "@/lib/analytics";
 
 
 
@@ -16,6 +17,9 @@ export default function Home() {
   const primaryHref  = session ? "/dashboard" : "/learn/1/math/zahlen-1-10";
   const primaryLabel = session ? (isPremium ? (tr("toDashboard") ?? "Zum Dashboard →") : (tr("continueLearn") ?? "Weiterlernen →")) : `${tr("startFree")} →`;
   const showSignupCta = !session;
+  const uid = session?.userId ?? "";
+  const checkoutUrl = (plan: "monthly" | "yearly") =>
+    `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
 
   return (
     <main className="min-h-screen bg-white">
@@ -140,9 +144,9 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">{tr("pricingTitle")}</h2>
           <p className="text-center text-gray-400 text-sm mb-10">{tr("pricingSubtitle")}</p>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <div className="grid gap-5 sm:grid-cols-3 max-w-5xl mx-auto">
             {/* Trial */}
-            <div className="bg-white rounded-2xl p-5 sm:p-8 border-2 border-gray-100 shadow-sm flex flex-col">
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border-2 border-gray-100 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-1">
                 <Image src="/cleverli-run.png" alt="Cleverli läuft" width={56} height={56}  loading="lazy"/>
                 <div className="text-3xl font-bold text-gray-900">{tr("free")}</div>
@@ -158,15 +162,40 @@ export default function Home() {
                 {tr("startFree")}
               </Link>
             </div>
-            {/* Premium */}
-            <div className="bg-green-700 rounded-2xl p-5 sm:p-8 border-2 border-green-700 shadow-lg text-white flex flex-col relative overflow-hidden">
-              <div className="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
+
+            {/* Monthly */}
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border-2 border-green-100 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-1">
                 <Image src="/cleverli-jump-star.png" alt="Cleverli springt mit Stern" width={56} height={56}  loading="lazy"/>
-                <div className="text-3xl font-bold">CHF 9.90<span className="text-lg font-normal">{tr("perMonth")}</span></div>
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-wide text-green-700">{tr("monthlyPlan")}</div>
+                  <div className="text-3xl font-bold text-gray-900">CHF 9.90<span className="text-lg font-normal text-gray-500">{tr("perMonth")}</span></div>
+                </div>
               </div>
-              <div className="text-green-50 text-sm mb-3">{tr("yearlyNote")}</div>
-              {/* Savings banner */}
+              <div className="text-gray-400 text-sm mb-6">{tr("monthlyNote")}</div>
+              <ul className="text-sm text-gray-600 space-y-2 flex-1">
+                <li>✅ {tr("premiumF1")}</li>
+                <li>✅ {tr("premiumF2")}</li>
+                <li>✅ {tr("premiumF3")}</li>
+                <li>✅ {tr("premiumF4")}</li>
+              </ul>
+              <Link href={checkoutUrl("monthly")} prefetch={false} onClick={() => trackBeginCheckout("monthly", "homepage_pricing")}
+                className="mt-6 block text-center bg-green-700 text-white px-6 py-3 rounded-full font-bold hover:bg-green-800 transition-colors">
+                {tr("premiumCta")}
+              </Link>
+            </div>
+
+            {/* Yearly */}
+            <div className="bg-green-700 rounded-2xl p-5 sm:p-6 border-2 border-green-700 shadow-lg text-white flex flex-col relative overflow-hidden">
+              <div className="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
+              <div className="flex items-center gap-3 mb-1 pr-20">
+                <Image src="/cleverli-celebrate.png" alt="Cleverli feiert" width={56} height={56} loading="lazy"/>
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-wide text-green-100">{tr("yearlyPlan")}</div>
+                  <div className="text-3xl font-bold">CHF 99<span className="text-lg font-normal text-green-200">{tr("perYear")}</span></div>
+                </div>
+              </div>
+              <div className="text-green-50 text-sm mb-3">{tr("yearlyFamilyNote")}</div>
               <div className="inline-flex items-center gap-1.5 bg-yellow-500 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-5 self-start shadow-sm">
                 {tr("yearlyBadge")}
               </div>
@@ -176,8 +205,9 @@ export default function Home() {
                 <li>✅ {tr("premiumF3")}</li>
                 <li>✅ {tr("premiumF4")}</li>
               </ul>
-              <Link href="/upgrade" className="mt-6 block text-center bg-white text-green-700 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors">
-                {tr("premiumCta")}
+              <Link href={checkoutUrl("yearly")} prefetch={false} onClick={() => trackBeginCheckout("yearly", "homepage_pricing")}
+                className="mt-6 block text-center bg-white text-green-700 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors">
+                {tr("yearlyCta")}
               </Link>
             </div>
           </div>
