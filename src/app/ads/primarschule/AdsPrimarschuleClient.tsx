@@ -6,15 +6,15 @@ import { trackBeginCheckout } from "@/lib/analytics";
 import { useSession } from "@/hooks/useSession";
 
 const subjects = [
-  { icon: "/images/ui/Mathematik.png", title: "Mathematik", body: "Zahlen, Rechnen, Geometrie und Textaufgaben für die 1.–6. Klasse." },
-  { icon: "/images/ui/Deutsch.png", title: "Deutsch", body: "Lesen, Grammatik, Wortschatz und Rechtschreibung in kurzen Übungen." },
-  { icon: "/images/ui/NMG.png", title: "NMG", body: "Natur, Mensch und Gesellschaft nach der Primarschul-Logik von Lehrplan 21." },
+  { icon: "/images/ui/Mathematik.png", title: "Mathematik", body: "Rechnen, Geometrie und Textaufgaben für die 1.–6. Klasse." },
+  { icon: "/images/ui/Deutsch.png", title: "Deutsch", body: "Lesen, Grammatik, Wortschatz und Rechtschreibung in kurzen Einheiten." },
+  { icon: "/images/ui/NMG.png", title: "NMG", body: "Natur, Mensch und Gesellschaft passend zur Primarschule nach Lehrplan 21." },
 ];
 
 const steps = [
-  { n: "1", title: "Klasse wählen", body: "Dein Kind startet sofort mit passenden Aufgaben." },
-  { n: "2", title: "Kurz üben", body: "Kleine Einheiten statt langer Diskussion am Küchentisch." },
-  { n: "3", title: "Fortschritt sehen", body: "Du siehst, was gemacht wurde und wo dein Kind dranbleibt." },
+  { n: "1", title: "Klasse wählen", body: "Dein Kind findet sofort Aufgaben, die zur Primarschule passen." },
+  { n: "2", title: "Kurz üben", body: "10 Minuten reichen für eine sinnvolle Runde ohne Drama am Küchentisch." },
+  { n: "3", title: "Fortschritt sehen", body: "Du siehst, was erledigt wurde und wo dein Kind noch Übung braucht." },
 ];
 
 const rewards = [
@@ -32,24 +32,24 @@ export default function AdsPrimarschuleClient() {
 
   return (
     <main className="bg-white text-gray-900">
-      <section className="bg-gradient-to-br from-green-50 via-white to-amber-50 px-4 py-10 sm:px-6 sm:py-16">
+      <section className="bg-gradient-to-br from-green-50 via-white to-amber-50 px-4 py-8 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
             <p className="mb-3 text-sm font-bold uppercase tracking-widest text-green-700">Schweizer Primarschule · Lehrplan 21</p>
             <h1 className="text-4xl font-black leading-tight text-gray-950 sm:text-5xl">
-              Mathe und Deutsch üben, ohne tägliche Lern-Diskussion.
+              Kurze Online-Übungen für die Primarschule.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-              Cleverli gibt Kindern kurze interaktive Übungen für die 1.–6. Klasse. Eltern sehen den Fortschritt und können echte Familien-Belohnungen festlegen.
+              Mathe, Deutsch und NMG für die 1.–6. Klasse. Dein Kind übt selbstständig, du siehst den Fortschritt und legst echte Familien-Belohnungen fest.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
                 href={checkoutUrl("yearly")}
                 prefetch={false}
-                onClick={() => trackBeginCheckout("yearly", "ads_primarschule_hero")}
+                onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_hero")}
                 className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
               >
-                Für CHF 8.25/Mt. starten
+                Für CHF 8.25/Mt. freischalten
               </Link>
               <Link
                 href="/learn/1/math/zahlen-1-10"
@@ -61,7 +61,7 @@ export default function AdsPrimarschuleClient() {
             <p className="mt-3 text-sm text-gray-500">20 Aufgaben gratis · keine App · TWINT & Kreditkarte · bis zu 3 Kinder</p>
           </div>
 
-          <div className="relative min-h-[360px] overflow-hidden rounded-[32px] bg-white shadow-xl shadow-green-100 ring-1 ring-green-100">
+          <div className="relative min-h-[320px] overflow-hidden rounded-3xl bg-white shadow-xl shadow-green-100 ring-1 ring-green-100 sm:min-h-[380px]">
             <div className="absolute inset-x-0 top-0 h-28 bg-green-700" />
             <Image
               src="/images/scenes/cleverli-teach-kids.jpg"
@@ -113,7 +113,7 @@ export default function AdsPrimarschuleClient() {
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl">
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Für den Alltag gebaut</p>
-            <h2 className="mt-2 text-3xl font-black text-gray-950">10 Minuten üben. Fortschritt sehen. Gemeinsam belohnen.</h2>
+            <h2 className="mt-2 text-3xl font-black text-gray-950">10 Minuten üben. Fortschritt sehen. Weniger diskutieren.</h2>
           </div>
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {steps.map((step) => (
@@ -134,7 +134,7 @@ export default function AdsPrimarschuleClient() {
               <p className="text-sm font-bold uppercase tracking-widest text-blue-700">Fächer</p>
               <h2 className="mt-2 text-3xl font-black text-gray-950">Die wichtigsten Primarschul-Fächer an einem Ort.</h2>
               <p className="mt-4 text-base leading-7 text-gray-600">
-                Deutschsprachige Schweiz zuerst: Mathe, Deutsch und NMG stehen im Zentrum. Französisch und Englisch sind für die höheren Primarklassen ebenfalls drin.
+                Für die deutschsprachige Schweiz: Mathe, Deutsch und NMG stehen im Zentrum. Französisch und Englisch sind für die höheren Primarklassen ebenfalls drin.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
@@ -156,7 +156,7 @@ export default function AdsPrimarschuleClient() {
             <p className="text-sm font-bold uppercase tracking-widest text-amber-700">Motivation für daheim</p>
             <h2 className="mt-2 text-3xl font-black text-gray-950">Nicht nur Punkte sammeln. Echte Ziele setzen.</h2>
             <p className="mt-4 text-base leading-7 text-gray-700">
-              Eltern legen fest, wofür geübt wird. Das macht aus “du musst lernen” ein konkretes Ziel, das Kinder verstehen.
+              Eltern legen fest, wofür geübt wird. So wird aus “du musst lernen” ein konkretes Ziel, das Kinder verstehen.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -179,7 +179,7 @@ export default function AdsPrimarschuleClient() {
             <div className="rounded-2xl border-2 border-gray-100 bg-white p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900">Kostenlos</h3>
               <p className="mt-2 text-3xl font-black text-gray-950">CHF 0</p>
-              <p className="mt-2 text-sm text-gray-500">20 Aufgaben ausprobieren, ohne Kreditkarte.</p>
+              <p className="mt-2 text-sm text-gray-500">20 Aufgaben gratis testen, ohne Kreditkarte.</p>
               <Link href="/learn/1/math/zahlen-1-10" className="mt-6 block rounded-full bg-gray-100 px-5 py-3 text-center text-sm font-bold text-gray-800 hover:bg-gray-200">
                 Jetzt testen
               </Link>
@@ -192,7 +192,7 @@ export default function AdsPrimarschuleClient() {
               <Link
                 href={checkoutUrl("monthly")}
                 prefetch={false}
-                onClick={() => trackBeginCheckout("monthly", "ads_primarschule_pricing")}
+                onClick={() => trackBeginCheckout("monthly", "primarschule_uebungen_pricing")}
                 className="mt-6 block rounded-full bg-green-700 px-5 py-3 text-center text-sm font-bold text-white hover:bg-green-800"
               >
                 Monatlich starten
@@ -207,10 +207,10 @@ export default function AdsPrimarschuleClient() {
               <Link
                 href={checkoutUrl("yearly")}
                 prefetch={false}
-                onClick={() => trackBeginCheckout("yearly", "ads_primarschule_pricing")}
+                onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_pricing")}
                 className="mt-6 block rounded-full bg-white px-5 py-3 text-center text-sm font-black text-green-800 hover:bg-green-50"
               >
-                Jährlich starten
+                Jährlich freischalten
               </Link>
             </div>
           </div>
@@ -240,12 +240,12 @@ export default function AdsPrimarschuleClient() {
       <section className="bg-green-700 px-4 py-12 text-center text-white sm:px-6 sm:py-16">
         <Image src="/cleverli-try-now.png" alt="" width={120} height={120} className="mx-auto mb-4 drop-shadow-lg" />
         <h2 className="mx-auto max-w-2xl text-3xl font-black">Bereit für weniger Lern-Stress daheim?</h2>
-        <p className="mx-auto mt-3 max-w-xl text-green-50">Starte kostenlos oder nimm direkt das Jahresabo für die ganze Familie.</p>
+        <p className="mx-auto mt-3 max-w-xl text-green-50">Teste 20 Aufgaben gratis oder schalte alle Übungen für die ganze Familie frei.</p>
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
             href={checkoutUrl("yearly")}
             prefetch={false}
-            onClick={() => trackBeginCheckout("yearly", "ads_primarschule_bottom")}
+            onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_bottom")}
             className="rounded-full bg-white px-7 py-4 text-base font-black text-green-800 hover:bg-green-50"
           >
             Jährlich für CHF 99 starten

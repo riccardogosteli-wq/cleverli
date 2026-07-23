@@ -1,5 +1,10 @@
 # Errors
 
+## 2026-07-23 — Google Ads API customer not enabled
+- Command: Maton Google Ads `googleAds:search` against Cleverli account `343-558-9468`.
+- Failure: Google Ads returned `CUSTOMER_NOT_ENABLED`, so campaign draft inspection/mutation is blocked until the account is fully enabled.
+- Fix: finish Google Ads account enablement/billing, then retry draft QA and final URL update.
+
 ## 2026-07-23 — Playwright bundled Chromium missing
 - Command: inline Node Playwright screenshot QA using `chromium.launch()`.
 - Failure: Playwright expected bundled `chromium_headless_shell-1208`, but it was not installed in the local cache.

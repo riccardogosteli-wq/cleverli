@@ -46,7 +46,7 @@ export default function MobileBottomNav() {
   // Don't show during active exercise or on auth/onboarding pages
   const isExercise = pathname.startsWith("/learn/");
   const isAuthPage = ["/signup", "/login", "/reset-password"].includes(pathname);
-  const isAdsPage = pathname.startsWith("/ads/");
+  const isAdsPage = pathname.startsWith("/ads/") || pathname === "/primarschule-uebungen";
 
   if (isExercise || isAuthPage || isAdsPage) return null;
 
