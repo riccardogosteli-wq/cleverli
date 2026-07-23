@@ -75,10 +75,11 @@ export function useSession() {
           setSession(sess);
           localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
         } else {
-          // No valid Supabase session — use cache or clear
-          const cached = readCachedSession();
-          if (!cached) setSession(null); // genuinely logged out
-          // If cached exists: keep showing it (handles transient Supabase issues)
+          // Supabase is configured and reachable, but there is no valid auth
+          // session. Clear stale cached sessions so old premium=false data does
+          // not keep showing a half-logged-in account forever.
+          localStorage.removeItem(SESSION_KEY);
+          setSession(null);
         }
       } catch {
         // Auth error — keep current state (cache still valid)
