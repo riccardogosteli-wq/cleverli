@@ -35,6 +35,8 @@ import { trackBeginCheckout } from "@/lib/analytics";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
+const FREE_EXERCISE_LIMIT = 20;
+
 function calcStars(score: number, total: number) {
   const pct = score / total;
   if (pct >= 0.9) return 3;
@@ -157,7 +159,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const uid = session?.userId ?? "";
   const checkoutUrl = (plan: "monthly" | "yearly") =>
     `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
-  const FREE_LIMIT = 15; // first full light/green section is free
   // Select the current difficulty section, so Grün/Gelb/Rot progress matches the actual session.
   const [sessionStartCompleted, setSessionStartCompleted] = useState(() => getStoredCompleted(grade, subject, topic.id));
   const [fullSetExercises, setFullSetExercises] = useState(() => selectCurrentTierExercises(topic, sessionStartCompleted));
@@ -188,7 +189,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const rewardRef = useRef<HTMLDivElement>(null);
 
   const current: Exercise = localiseExercise(exercises[idx] ?? sortByDifficulty(topic.exercises)[0], lang);
-  const isLocked = !isPremium && sessionStartCompleted + idx >= FREE_LIMIT;
+  const freeExercisesRemaining = Math.max(0, FREE_EXERCISE_LIMIT - profile.totalExercises);
+  const isLocked = !isPremium && profile.totalExercises >= FREE_EXERCISE_LIMIT;
   
 
   // (voice is on-demand only — no auto-read)
@@ -196,11 +198,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // Save partial progress when free limit is reached (so stars show on topic list)
   useEffect(() => {
     if (isLocked && score > 0) {
-      const s = calcStars(score, FREE_LIMIT); // stars based on free exercises only
+      const completed = Math.max(sessionStartCompleted, sessionStartCompleted + idx);
+      const s = calcStars(score, Math.max(1, idx)); // stars based on the current free session
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       localStorage.setItem(`cleverli_${grade}_${subject}_${topic.id}`, JSON.stringify({
         ...existing,
-        completed: FREE_LIMIT, score, stars: s, partial: true, lastPlayed: new Date().toISOString()
+        completed, score, stars: s, partial: true, lastPlayed: new Date().toISOString()
       }));
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -317,7 +320,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       setAnonExerciseCount(newCount);
       localStorage.setItem("cleverli_anon_exercises", String(newCount));
       
-      if (newCount >= FREE_LIMIT && !localStorage.getItem("cleverli_signup_dismissed")) {
+      if (newCount >= FREE_EXERCISE_LIMIT && !localStorage.getItem("cleverli_signup_dismissed")) {
         setTimeout(() => setShowSignupPrompt(true), 1000);
       }
     }
@@ -532,15 +535,15 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         <div className="text-center space-y-5 py-8 max-w-sm mx-auto">
           <Image src="/cleverli-wave.png" alt="Cleverli" width={110} height={110} className="mx-auto drop-shadow-md animate-cleverli-jump" />
           <h2 className="text-xl font-bold text-gray-800">
-            {lang === "fr" ? "Tu as terminé les exercices gratuits 🎉" : lang === "it" ? "Hai completato gli esercizi gratuiti 🎉" : lang === "en" ? "You've completed the free exercises 🎉" : "Du hast die kostenlosen Übungen abgeschlossen 🎉"}
+            {lang === "fr" ? "Tu as terminé les 20 exercices gratuits 🎉" : lang === "it" ? "Hai completato i 20 esercizi gratuiti 🎉" : lang === "en" ? "You've completed the 20 free exercises 🎉" : "Du hast die 20 kostenlosen Aufgaben abgeschlossen 🎉"}
           </h2>
           <p className="text-gray-500 text-sm">
-            {lang === "fr" ? "Crée un compte gratuit pour continuer — garde ta progression et débloque plus d'exercices." : lang === "it" ? "Crea un account gratuito per continuare — salva i tuoi progressi e sblocca altri esercizi." : lang === "en" ? "Create a free account to continue — save your progress and unlock more exercises." : "Erstelle ein kostenloses Konto zum Weitermachen — dein Fortschritt wird gespeichert und du schaltest mehr Übungen frei."}
+            {lang === "fr" ? "Crée un compte pour enregistrer tes progrès et débloquer Premium." : lang === "it" ? "Crea un account per salvare i tuoi progressi e sbloccare Premium." : lang === "en" ? "Create an account to save progress and unlock Premium." : "Erstelle ein Konto, um deinen Fortschritt zu speichern und Premium freizuschalten."}
           </p>
           <div className="flex flex-col gap-3 w-full max-w-xs mx-auto">
             <Link href="/signup"
               className="block text-center bg-green-700 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 active:scale-95 transition-all shadow-md text-base">
-              🎉 {lang === "fr" ? "Compte gratuit créer" : lang === "it" ? "Crea account gratuito" : lang === "en" ? "Create free account" : "Kostenloses Konto erstellen"}
+              🎉 {lang === "fr" ? "Créer un compte" : lang === "it" ? "Crea account" : lang === "en" ? "Create account" : "Konto erstellen"}
             </Link>
             <Link href="/login"
               className="block text-center border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
@@ -548,7 +551,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             </Link>
           </div>
           <p className="text-xs text-gray-400">
-            {lang === "fr" ? "Gratuit pour toujours · pas de carte de crédit" : lang === "it" ? "Sempre gratuito · nessuna carta di credito" : lang === "en" ? "Free forever · no credit card" : "Für immer gratis · keine Kreditkarte"}
+            {lang === "fr" ? "Premium débloque tous les exercices" : lang === "it" ? "Premium sblocca tutti gli esercizi" : lang === "en" ? "Premium unlocks all exercises" : "Premium schaltet alle Aufgaben frei"}
           </p>
         </div>
       );
@@ -559,7 +562,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={110} height={110} className="mx-auto drop-shadow-md" />
         <h2 className="text-xl font-bold text-gray-800">{tr("unlockTitle")}</h2>
         <p className="text-gray-500 text-sm">
-          {tr("unlockDesc").replace("{n}", String(FREE_LIMIT))}<br/>
+          {tr("unlockDesc").replace("{n}", String(FREE_EXERCISE_LIMIT))}<br/>
           {tr("unlockDetail")}
         </p>
         <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm text-green-800 text-left space-y-1 w-full max-w-xs">
@@ -847,15 +850,15 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
         </div>
       )}
 
-      {/* Free limit notice — UJ-8: only show on last free exercise (idx === FREE_LIMIT-1), not from ex.1 */}
+      {/* Free limit notice — UJ-8: only show on the last free exercise, not from ex.1 */}
       {/* Hide in first 24h for new users to avoid scaring them away */}
-      {isPremium === false && idx === FREE_LIMIT - 1 && (() => {
+      {isPremium === false && freeExercisesRemaining === 1 && (() => {
         const since = parseInt(localStorage.getItem("cleverli_new_user_since") ?? "0");
         const isNew = Date.now() - since < 24 * 60 * 60 * 1000;
         return !isNew;
       })() && (
         <p className="text-center text-xs text-gray-400">
-          {tr("freeNoteBanner").replace("{n}", String(FREE_LIMIT))}{" "}
+          {tr("freeNoteBanner").replace("{n}", String(freeExercisesRemaining))}{" "}
           <Link href={uid ? checkoutUrl("monthly") : "/upgrade"} onClick={() => { if (uid) trackBeginCheckout("monthly", "free_limit_notice"); }} className="text-green-700 underline font-semibold">
             {tr("unlockAll")}
           </Link>

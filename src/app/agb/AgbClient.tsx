@@ -35,7 +35,7 @@ Website: ${WEBSITE}
         heading: "3. Leistungsbeschreibung",
         body: `Cleverli ist eine digitale Lernplattform für Kinder der Primarschule (1.–6. Klasse) mit interaktiven Übungen in den Fächern Mathematik, Deutsch und Natur & Mensch (NMG). Die Plattform wird in den Sprachen Deutsch, Französisch, Italienisch und Englisch angeboten.
 
-Kostenlose Inhalte (die ersten drei Übungen je Thema) stehen ohne Registrierung zur Verfügung. Der vollständige Zugang erfordert ein aktives Premium-Abonnement.
+Kostenlose Inhalte (die ersten 20 Aufgaben) stehen ohne Registrierung zur Verfügung. Der vollständige Zugang erfordert ein aktives Premium-Abonnement.
 
 Der Anbieter behält sich vor, den Funktionsumfang des Dienstes jederzeit zu erweitern, anzupassen oder einzelne Funktionen einzustellen, sofern dies zumutbar ist.`,
       },
@@ -131,7 +131,7 @@ Site web : ${WEBSITE}
         heading: "3. Description du service",
         body: `Cleverli est une plateforme d'apprentissage numérique pour les enfants du primaire (1re–6e année) proposant des exercices interactifs en mathématiques, allemand et connaissance de l'environnement. La plateforme est disponible en allemand, français, italien et anglais.
 
-Le contenu gratuit (les trois premiers exercices par thème) est accessible sans inscription. L'accès complet nécessite un abonnement Premium actif.
+Le contenu gratuit (les 20 premiers exercices) est accessible sans inscription. L'accès complet nécessite un abonnement Premium actif.
 
 Le Fournisseur se réserve le droit de modifier ou d'adapter le Service à tout moment dans la mesure du raisonnable.`,
       },
@@ -227,7 +227,7 @@ Sito web: ${WEBSITE}
         heading: "3. Descrizione del servizio",
         body: `Cleverli è una piattaforma di apprendimento digitale per bambini della scuola elementare (1a–6a classe) con esercizi interattivi in matematica, tedesco e conoscenza dell'ambiente. La piattaforma è disponibile in tedesco, francese, italiano e inglese.
 
-I contenuti gratuiti (i primi tre esercizi per argomento) sono accessibili senza registrazione. L'accesso completo richiede un abbonamento Premium attivo.
+I contenuti gratuiti (i primi 20 esercizi) sono accessibili senza registrazione. L'accesso completo richiede un abbonamento Premium attivo.
 
 Il Fornitore si riserva il diritto di modificare o adattare il Servizio in qualsiasi momento nella misura del ragionevole.`,
       },
@@ -323,7 +323,7 @@ Website: ${WEBSITE}
         heading: "3. Service Description",
         body: `Cleverli is a digital learning platform for primary school children (grades 1–6) offering interactive exercises in mathematics, German, and general studies (nature & society). The platform is available in German, French, Italian, and English.
 
-Free content (the first three exercises per topic) is available without registration. Full access requires an active Premium subscription.
+Free content (the first 20 exercises) is available without registration. Full access requires an active Premium subscription.
 
 The Provider reserves the right to expand, modify, or discontinue features of the Service at any time, to the extent reasonable.`,
       },
