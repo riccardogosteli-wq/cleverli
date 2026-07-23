@@ -175,40 +175,40 @@ export default function AdsPrimarschuleClient() {
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Preis</p>
             <h2 className="mt-2 text-3xl font-black text-gray-950">Für Familien gemacht, nicht pro Kind verrechnet.</h2>
           </div>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            <div className="rounded-2xl border-2 border-gray-100 bg-white p-6 shadow-sm">
+          <div className="mt-8 grid items-stretch gap-5 md:grid-cols-3">
+            <div className="flex min-h-[220px] flex-col rounded-2xl border-2 border-gray-100 bg-white p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900">Kostenlos</h3>
               <p className="mt-2 text-3xl font-black text-gray-950">CHF 0</p>
-              <p className="mt-2 text-sm text-gray-500">20 Aufgaben gratis testen, ohne Kreditkarte.</p>
-              <Link href="/learn/1/math/zahlen-1-10" className="mt-6 block rounded-full bg-gray-100 px-5 py-3 text-center text-sm font-bold text-gray-800 hover:bg-gray-200">
+              <p className="mt-2 text-sm leading-6 text-gray-500">20 Aufgaben gratis testen, ohne Kreditkarte.</p>
+              <Link href="/learn/1/math/zahlen-1-10" className="mt-auto block rounded-full bg-gray-100 px-5 py-3 text-center text-sm font-bold text-gray-800 hover:bg-gray-200">
                 Jetzt testen
               </Link>
             </div>
 
-            <div className="rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm">
+            <div className="flex min-h-[220px] flex-col rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900">Monatlich</h3>
               <p className="mt-2 text-3xl font-black text-gray-950">CHF 9.90<span className="text-base font-medium text-gray-500">/Mt.</span></p>
-              <p className="mt-2 text-sm text-gray-500">Flexibel starten und jederzeit kündigen.</p>
+              <p className="mt-2 text-sm leading-6 text-gray-500">Flexibel starten und jederzeit kündigen.</p>
               <Link
                 href={checkoutUrl("monthly")}
                 prefetch={false}
                 onClick={() => trackBeginCheckout("monthly", "primarschule_uebungen_pricing")}
-                className="mt-6 block rounded-full bg-green-700 px-5 py-3 text-center text-sm font-bold text-white hover:bg-green-800"
+                className="mt-auto block rounded-full bg-green-700 px-5 py-3 text-center text-sm font-bold text-white hover:bg-green-800"
               >
                 Monatlich starten
               </Link>
             </div>
 
-            <div className="relative rounded-2xl border-2 border-green-700 bg-green-700 p-6 text-white shadow-xl shadow-green-100">
+            <div className="relative flex min-h-[220px] flex-col rounded-2xl border-2 border-green-700 bg-green-700 p-6 text-white shadow-xl shadow-green-100">
               <div className="absolute -top-3 left-6 rounded-full bg-amber-400 px-3 py-1 text-xs font-black text-white">Empfohlen</div>
               <h3 className="text-lg font-bold">Jährlich</h3>
               <p className="mt-2 text-3xl font-black">CHF 99<span className="text-base font-medium text-green-200">/Jahr</span></p>
-              <p className="mt-2 text-sm text-green-50">CHF 8.25/Mt. für die ganze Familie · bis zu 3 Kinder.</p>
+              <p className="mt-2 text-sm leading-6 text-green-50">CHF 8.25/Mt. für die ganze Familie · bis zu 3 Kinder.</p>
               <Link
                 href={checkoutUrl("yearly")}
                 prefetch={false}
                 onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_pricing")}
-                className="mt-6 block rounded-full bg-white px-5 py-3 text-center text-sm font-black text-green-800 hover:bg-green-50"
+                className="mt-auto block rounded-full bg-white px-5 py-3 text-center text-sm font-black text-green-800 hover:bg-green-50"
               >
                 Jährlich freischalten
               </Link>
