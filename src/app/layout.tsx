@@ -9,7 +9,6 @@ import StructuredData from "@/components/StructuredData";
 import GameOverlays from "@/components/GameOverlays";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import ClientInit from "@/components/ClientInit";
-import CookieConsent from "@/components/CookieConsent";
 
 const GTM_ID = "GTM-K48335JC";
 
@@ -98,23 +97,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('consent', 'default', {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
+            analytics_storage: 'granted',
+            ad_storage: 'granted',
+            ad_user_data: 'granted',
             ad_personalization: 'denied',
             wait_for_update: 500
           });
-          try {
-            var consent = localStorage.getItem('cleverli_cookie_consent');
-            if (consent === 'accepted') {
-              gtag('consent', 'update', {
-                analytics_storage: 'granted',
-                ad_storage: 'granted',
-                ad_user_data: 'granted',
-                ad_personalization: 'denied'
-              });
-            }
-          } catch (e) {}
         `}</Script>
         {/* Google Tag Manager — deferred to afterInteractive to avoid blocking LCP */}
         <Script id="gtm-script" strategy="afterInteractive">{`
@@ -151,7 +139,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
             </div>
             <MobileBottomNav />
-            <CookieConsent />
           </ProfileProvider>
         </LangProvider>
       </body>
