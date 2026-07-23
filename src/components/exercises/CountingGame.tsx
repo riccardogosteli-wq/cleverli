@@ -11,13 +11,33 @@ interface Props {
   questionImage?: string;
 }
 
+const germanTapLabels: Record<string, string> = {
+  "🍎": "jeden Apfel",
+  "🍏": "jeden Apfel",
+  "⭐": "jeden Stern",
+  "🐸": "jeden Frosch",
+  "🌻": "jede Sonnenblume",
+  "🐝": "jede Biene",
+  "🐱": "jede Katze",
+  "🍬": "jedes Bonbon",
+  "🐾": "jedes Tier",
+  "🦋": "jeden Schmetterling",
+  "⚂": "jeden Punkt",
+};
+
 export default function CountingGame({ question, answer, emoji = "🍎", options, onAnswer, questionImage }: Props) {
-  const { tr } = useLang();
+  const { lang, tr } = useLang();
   const [selected, setSelected] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [popped, setPopped] = useState<boolean[]>([]);
   const count = parseInt(answer);
   const items = Array.from({ length: count });
+  const tapInstruction = (() => {
+    if (lang === "de") return `Tippe ${germanTapLabels[emoji] ?? "jedes Symbol"} an.`;
+    if (lang === "fr") return `Touche chaque ${emoji} pour compter.`;
+    if (lang === "it") return `Tocca ogni ${emoji} per contare.`;
+    return `Tap each ${emoji} to count.`;
+  })();
 
   const handleClick = (opt: string) => {
     if (submitted) return;
@@ -41,7 +61,6 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
   return (
     <div className="space-y-4">
       <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center px-1">{question}</p>
-      <p className="text-xs text-center text-gray-400">{tr("tapToCount").replace("{emoji}", emoji)}</p>
 
       {/* Emoji grid — bigger touch targets */}
       <div className="bg-green-50 rounded-2xl p-4 flex flex-wrap gap-3 justify-center min-h-[90px]">
@@ -74,7 +93,7 @@ export default function CountingGame({ question, answer, emoji = "🍎", options
 
       <div className="text-center text-sm text-gray-500">
         {popped.filter(Boolean).length === 0 ? (
-          <span className="text-gray-400">Tippe auf jedes {emoji}!</span>
+          <span className="text-gray-400">{tapInstruction}</span>
         ) : popped.filter(Boolean).length === count ? (
           <span className="font-bold text-green-700">Alle gezählt! ✓ — Wähle jetzt deine Antwort 👇</span>
         ) : (

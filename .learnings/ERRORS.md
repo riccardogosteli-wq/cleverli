@@ -1,5 +1,10 @@
 # Errors
 
+## 2026-07-23 — Local QA hit stopped dev server
+- Command: Playwright smoke against `http://127.0.0.1:3027/learn/1/math/zahlen-1-10`.
+- Failure: `ERR_CONNECTION_REFUSED` because the local Next dev server was no longer running.
+- Fix: restart `npm run dev -- --hostname 127.0.0.1 --port 3027` before browser smoke tests.
+
 ## 2026-07-23 — Google Ads API customer not enabled
 - Command: Maton Google Ads `googleAds:search` against Cleverli account `343-558-9468`.
 - Failure: Google Ads returned `CUSTOMER_NOT_ENABLED`, so campaign draft inspection/mutation is blocked until the account is fully enabled.

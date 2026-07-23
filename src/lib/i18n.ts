@@ -204,7 +204,7 @@ export const t: Record<Lang, Record<string, string>> = {
     hintCounter: "Tipp",
     correctAnswer: "Die richtige Antwort ist:",
     correctAnswerWas: "Die richtige Antwort war:",
-    tapToCount: "Tippe auf jedes {emoji} zum Zählen!",
+    tapToCount: "Tippe jedes Symbol zum Zählen an!",
     topicComplete: "Thema geschafft! 🏆",
     allExercisesDone: "Du hast alle Aufgaben gelöst!",
     unlockTitle: "Weiter mit Premium 🔒",
