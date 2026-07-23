@@ -30,6 +30,7 @@ import { checkAndUnlockRewards, loadRewards, countTotalStars, Reward } from "@/l
 import RewardUnlockedModal from "./RewardUnlockedModal";
 import { getLevelForXp, getNextLevel } from "@/lib/xp";
 import SignupPromptModal from "./SignupPromptModal";
+import { getProgressSubjects } from "@/data";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
@@ -47,12 +48,19 @@ function sortByDifficulty(exercises: Exercise[]) {
 function getStoredCompleted(grade: number, subject: string, topicId: string) {
   if (typeof window === "undefined") return 0;
   try {
-    const raw = localStorage.getItem(`cleverli_${grade}_${subject}_${topicId}`);
-    const parsed = raw ? JSON.parse(raw) : null;
-    return Math.max(0, Number(parsed?.completed ?? 0));
+    return Math.max(0, Number(getStoredProgress(grade, subject, topicId)?.completed ?? 0));
   } catch {
     return 0;
   }
+}
+
+function getStoredProgress(grade: number, subject: string, topicId: string) {
+  if (typeof window === "undefined") return null;
+  for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+    if (raw) return JSON.parse(raw);
+  }
+  return null;
 }
 
 function selectCurrentTierExercises(topic: Topic, completed: number) {
@@ -188,7 +196,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   useEffect(() => {
     if (isLocked && score > 0) {
       const s = calcStars(score, FREE_LIMIT); // stars based on free exercises only
+      const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       localStorage.setItem(`cleverli_${grade}_${subject}_${topic.id}`, JSON.stringify({
+        ...existing,
         completed: FREE_LIMIT, score, stars: s, partial: true, lastPlayed: new Date().toISOString()
       }));
     }
@@ -199,7 +209,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   useEffect(() => {
     if (done) {
       const key = `cleverli_${grade}_${subject}_${topic.id}`;
-      const existing = JSON.parse(localStorage.getItem(key) ?? "{}");
+      const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       const prevScore = existing?.score ?? 0;
       const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
       const s = calcStars(score, exercises.length);
@@ -314,7 +324,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     // Update localStorage topic progress with current completed count (for tier display)
     if (correct) {
       const topicKey = `cleverli_${grade}_${subject}_${topic.id}`;
-      const existing = JSON.parse(localStorage.getItem(topicKey) ?? "{}");
+      const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       localStorage.setItem(topicKey, JSON.stringify({
         ...existing,
         completed: Math.max(existing?.completed ?? 0, sessionStartCompleted + idx + 1),

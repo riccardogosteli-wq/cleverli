@@ -6,16 +6,24 @@ import { useSession } from "@/hooks/useSession";
 import { countExercisesByDifficulty } from "@/lib/exerciseHelpers";
 import { getTierProgress } from "@/lib/tierProgress";
 import { useEffect, useState } from "react";
+import { getProgressSubjects } from "@/data";
 
 interface Props { topic: Topic; grade: number; subject: string; allTopics: Topic[]; topicIndex: number; }
+
+function loadProgress(grade: number, subject: string, topicId: string) {
+  for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+    if (raw) return JSON.parse(raw);
+  }
+  return {};
+}
 
 export default function TopicClient({ topic, grade, subject, allTopics, topicIndex }: Props) {
   const { isPremium, loaded } = useSession();
   const [exerciseCounts, setExerciseCounts] = useState<ReturnType<typeof countExercisesByDifficulty> | null>(null);
 
   useEffect(() => {
-    const key = `cleverli_${grade}_${subject}_${topic.id}`;
-    const progressData = JSON.parse(localStorage.getItem(key) ?? "{}");
+    const progressData = loadProgress(grade, subject, topic.id);
     const totalCompleted = progressData.completed ?? 0;
 
     // ✅ Use getTierProgress directly — same logic ExercisePlayer uses.
@@ -41,9 +49,8 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
   // Re-read from localStorage whenever ExercisePlayer saves (after each answer)
   // By subscribing to the storage event we refresh the roadmap live.
   useEffect(() => {
-    const key = `cleverli_${grade}_${subject}_${topic.id}`;
     const refresh = () => {
-      const progressData = JSON.parse(localStorage.getItem(key) ?? "{}");
+      const progressData = loadProgress(grade, subject, topic.id);
       const totalCompleted = progressData.completed ?? 0;
       const tierProgress = getTierProgress(topic, totalCompleted);
       setExerciseCounts({

@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import { getTopicsForSubject } from "@/data";
 import SubjectPageClient from "./SubjectPageClient";
+import { permanentRedirect } from "next/navigation";
 
 interface Props { params: Promise<{ grade: string; subject: string }> }
 
 const SUBJECT_NAMES: Record<string, string> = {
-  math: "Mathematik", german: "Deutsch", science: "NMG",
+  math: "Mathematik", german: "Deutsch", science: "NMG", nt: "NMG", rzg: "NMG",
 };
 const SUBJECT_KEYWORDS: Record<string, string> = {
   math: "Mathe, Zahlen, Rechnen, Addition, Subtraktion, Geometrie",
@@ -44,6 +45,9 @@ const BASE = "https://www.cleverli.ch";
 
 export default async function SubjectPage({ params }: Props) {
   const { grade, subject } = await params;
+  if (parseInt(grade) <= 6 && (subject === "nt" || subject === "rzg")) {
+    permanentRedirect(`/learn/${grade}/science`);
+  }
   const topics = getTopicsForSubject(parseInt(grade), subject);
   const subjectName = SUBJECT_NAMES[subject] ?? subject;
   const gradeName = GRADE_NAMES[grade] ?? `${grade}. Klasse`;

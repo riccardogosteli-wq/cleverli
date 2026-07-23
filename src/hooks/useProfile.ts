@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { getLevelForXp, getNextLevel, calcXpGain } from "@/lib/xp";
 import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
-import { getTopics, SUBJECTS } from "@/data/index";
+import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
 import { getActiveProfileId } from "@/lib/family";
 import { syncProfileToSupabase, loadProfileFromSupabase, loadTopicProgressFromSupabase } from "@/lib/progressSync";
 import { getTierProgress } from "@/lib/tierProgress";
@@ -101,7 +101,11 @@ function saveProfile(p: Profile) {
 function isSubjectComplete(grade: number, subject: string): boolean {
   const topics = getTopics(grade, subject);
   return topics.every(t => {
-    const raw = localStorage.getItem(`cleverli_${grade}_${subject}_${t.id}`);
+    let raw: string | null = null;
+    for (const progressSubject of getProgressSubjects(grade, subject, t.id)) {
+      raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${t.id}`);
+      if (raw) break;
+    }
     if (!raw) return false;
     const prog = JSON.parse(raw);
     return prog?.completed >= t.exercises.length;
@@ -190,7 +194,9 @@ function checkAchievements(profile: Profile, opts: {
       if (!topics.length) return false;
       return topics.every((t: { id: string }) => {
         try {
-          return !!localStorage.getItem(`cleverli_${g}_science_${t.id}`);
+          return getProgressSubjects(g, "science", t.id).some(progressSubject =>
+            !!localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`)
+          );
         } catch {
           return false;
         }

@@ -27,6 +27,10 @@ import grade6French from "./grade6/french";
 import grade6English from "./grade6/english";
 import { Topic } from "@/types/exercise";
 
+const grade4Science = [...grade4NT, ...grade4RZG];
+const grade5Science = [...grade5NT, ...grade5RZG];
+const grade6Science = [...grade6NT, ...grade6RZG];
+
 export {
   grade1Math, grade1German, grade1Science,
   grade2Math, grade2German, grade2Science,
@@ -43,16 +47,26 @@ export function getTopics(grade: number, subject: string): Topic[] {
     "3-math": grade3Math, "3-german": grade3German, "3-science": grade3Science,
     "3-english": grade3English,
     "4-math": grade4Math, "4-german": grade4German, "4-nt": grade4NT,
-    "4-rzg": grade4RZG, "4-english": grade4English,
+    "4-rzg": grade4RZG, "4-science": grade4Science, "4-english": grade4English,
     "5-math": grade5Math, "5-german": grade5German, "5-nt": grade5NT,
-    "5-rzg": grade5RZG, "5-french": grade5French, "5-english": grade5English,
+    "5-rzg": grade5RZG, "5-science": grade5Science, "5-french": grade5French, "5-english": grade5English,
     "6-math": grade6Math, "6-german": grade6German, "6-nt": grade6NT,
-    "6-rzg": grade6RZG, "6-french": grade6French, "6-english": grade6English,
+    "6-rzg": grade6RZG, "6-science": grade6Science, "6-french": grade6French, "6-english": grade6English,
   };
   return map[`${grade}-${subject}`] ?? [];
 }
 
-/** Grade-aware subject list — LP21 correct structure */
+export function getProgressSubjects(grade: number, subject: string, topicId: string): string[] {
+  if (subject !== "science" || grade < 4) return [subject];
+
+  const legacySubjects: string[] = [];
+  if (getTopics(grade, "nt").some(topic => topic.id === topicId)) legacySubjects.push("nt");
+  if (getTopics(grade, "rzg").some(topic => topic.id === topicId)) legacySubjects.push("rzg");
+
+  return [...new Set([subject, ...legacySubjects])];
+}
+
+/** Grade-aware subject list — LP21 primary school structure */
 export function getSubjects(grade: number) {
   if (grade <= 2) {
     return [
@@ -73,8 +87,7 @@ export function getSubjects(grade: number) {
     return [
       { id: "math",    emoji: "🔢", color: "bg-blue-50 border-blue-300 text-blue-700" },
       { id: "german",  emoji: "📖", color: "bg-yellow-50 border-yellow-300 text-yellow-700" },
-      { id: "nt",      emoji: "🔬", color: "bg-green-50 border-green-300 text-green-800" },
-      { id: "rzg",     emoji: "🗺️", color: "bg-orange-50 border-orange-300 text-orange-700" },
+      { id: "science", emoji: "🌍", color: "bg-green-50 border-green-300 text-green-800" },
       { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
     ];
   }
@@ -82,8 +95,7 @@ export function getSubjects(grade: number) {
   return [
     { id: "math",    emoji: "🔢", color: "bg-blue-50 border-blue-300 text-blue-700" },
     { id: "german",  emoji: "📖", color: "bg-yellow-50 border-yellow-300 text-yellow-700" },
-    { id: "nt",      emoji: "🔬", color: "bg-green-50 border-green-300 text-green-800" },
-    { id: "rzg",     emoji: "🗺️", color: "bg-orange-50 border-orange-300 text-orange-700" },
+    { id: "science", emoji: "🌍", color: "bg-green-50 border-green-300 text-green-800" },
     { id: "french",  emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
     { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
   ];

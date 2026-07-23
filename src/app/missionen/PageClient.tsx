@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import { loadFamily, getActiveProfileId } from "@/lib/family";
-import { getTopics, SUBJECTS } from "@/data/index";
+import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
 import { getTierProgress } from "@/lib/tierProgress";
 import { LEVELS, getLevelProgress } from "@/lib/xp";
 import { useSession } from "@/hooks/useSession";
@@ -29,10 +29,13 @@ interface TopicProgress {
 function loadTopicProgress(grade: number, subject: string, topicId: string): { completed: number; stars: number } {
   if (typeof window === "undefined") return { completed: 0, stars: 0 };
   try {
-    const raw = localStorage.getItem(`cleverli_${grade}_${subject}_${topicId}`);
-    if (!raw) return { completed: 0, stars: 0 };
-    const d = JSON.parse(raw);
-    return { completed: d.completed ?? 0, stars: d.stars ?? 0 };
+    for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+      if (!raw) continue;
+      const d = JSON.parse(raw);
+      return { completed: d.completed ?? 0, stars: d.stars ?? 0 };
+    }
+    return { completed: 0, stars: 0 };
   } catch { return { completed: 0, stars: 0 }; }
 }
 

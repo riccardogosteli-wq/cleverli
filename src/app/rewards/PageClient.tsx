@@ -11,7 +11,7 @@ import {
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
-import { getTopics, SUBJECTS } from "@/data/index";
+import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
 import { BelohnungenGuestPreview } from "@/components/GuestPreview";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
@@ -69,7 +69,13 @@ export default function RewardsPage() {
       total += topics.length;
       for (const t of topics) {
         try {
-          const raw = typeof window !== "undefined" ? localStorage.getItem(`cleverli_${g}_${s.id}_${t.id}`) : null;
+          let raw: string | null = null;
+          if (typeof window !== "undefined") {
+            for (const progressSubject of getProgressSubjects(g, s.id, t.id)) {
+              raw = localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`);
+              if (raw) break;
+            }
+          }
           if (raw) done++;
         } catch { /* ignore */ }
       }

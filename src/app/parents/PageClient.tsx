@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
-import { getTopics, SUBJECTS } from "@/data/index";
+import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
@@ -37,9 +37,12 @@ function loadAllStats(): TopicStat[] {
     for (const subject of ["math", "german", "science"]) {
       const topics = getTopics(grade, subject);
       for (const topic of topics) {
-        const key = `cleverli_${grade}_${subject}_${topic.id}`;
         try {
-          const raw = localStorage.getItem(key);
+          let raw: string | null = null;
+          for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
+            raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+            if (raw) break;
+          }
           if (!raw) continue;
           const p = JSON.parse(raw);
           stats.push({

@@ -3,6 +3,7 @@ import { getTopics } from "@/data/index";
 import TopicClient from "./TopicClient";
 import TopicBreadcrumb from "./TopicBreadcrumb";
 import Link from "next/link";
+import { permanentRedirect } from "next/navigation";
 
 const BASE = "https://www.cleverli.ch";
 
@@ -12,6 +13,8 @@ const SUBJECT_NAMES: Record<string, { de: string; fr: string; it: string; en: st
   math:    { de: "Mathematik", fr: "Mathématiques", it: "Matematica",   en: "Maths" },
   german:  { de: "Deutsch",    fr: "Allemand",       it: "Tedesco",      en: "German" },
   science: { de: "NMG",        fr: "Sciences",       it: "Scienze",      en: "Science" },
+  nt:      { de: "NMG",        fr: "Sciences",       it: "Scienze",      en: "Science" },
+  rzg:     { de: "NMG",        fr: "Sciences",       it: "Scienze",      en: "Science" },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -38,6 +41,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function TopicPage({ params }: Props) {
   const { grade, subject, topic: topicId } = await params;
+  if (parseInt(grade) <= 6 && (subject === "nt" || subject === "rzg")) {
+    permanentRedirect(`/learn/${grade}/science/${topicId}`);
+  }
   const topics = getTopics(parseInt(grade), subject);
   const topic = topics.find(t => t.id === topicId);
 

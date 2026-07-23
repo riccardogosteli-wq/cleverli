@@ -5,7 +5,7 @@ import OnboardingModal from "@/components/OnboardingModal";
 import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
-import { getTopics, getSubjects } from "@/data/index";
+import { getTopics, getSubjects, getProgressSubjects } from "@/data/index";
 import { getTopicTitle } from "@/data/topicTitles";
 import { isDailyDoneToday } from "@/lib/daily";
 import { useProfile, Profile } from "@/hooks/useProfile";
@@ -83,8 +83,11 @@ const GRADE_KEY = "cleverli_last_grade";
 function getProgress(grade: number, subject: string, topicId: string) {
   if (typeof window === "undefined") return null;
   try {
-    const raw = localStorage.getItem(`cleverli_${grade}_${subject}_${topicId}`);
-    return raw ? JSON.parse(raw) : null;
+    for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+      if (raw) return JSON.parse(raw);
+    }
+    return null;
   } catch { return null; }
 }
 

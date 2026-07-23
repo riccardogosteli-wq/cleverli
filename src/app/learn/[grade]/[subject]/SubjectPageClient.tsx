@@ -5,12 +5,14 @@ import { useEffect, useState } from "react";
 import { useLang } from "@/lib/LangContext";
 import { getTopicTitle } from "@/data/topicTitles";
 import { getTierProgress } from "@/lib/tierProgress";
+import { getProgressSubjects } from "@/data";
 
 interface Props { grade: number; subject: string; topics: Topic[]; }
 
 const SUBJECT_META: Record<string, { emoji: string; nameKey: string; color: string }> = {
   math:   { emoji: "🔢", nameKey: "math",   color: "text-blue-700 bg-blue-50" },
   german: { emoji: "📖", nameKey: "german", color: "text-yellow-700 bg-yellow-50" },
+  science:{ emoji: "🌍", nameKey: "science", color: "text-green-700 bg-green-50" },
 };
 
 export default function SubjectPageClient({ grade, subject, topics }: Props) {
@@ -20,9 +22,12 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
   useEffect(() => {
     const p: typeof progress = {};
     for (const t of topics) {
-      const raw = localStorage.getItem(`cleverli_${grade}_${subject}_${t.id}`);
-      if (raw) {
-        try { p[t.id] = JSON.parse(raw); } catch { /* ignore */ }
+      for (const progressSubject of getProgressSubjects(grade, subject, t.id)) {
+        const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${t.id}`);
+        if (raw) {
+          try { p[t.id] = JSON.parse(raw); } catch { /* ignore */ }
+          break;
+        }
       }
     }
     setProgress(p);
