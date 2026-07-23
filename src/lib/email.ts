@@ -53,7 +53,7 @@ export async function sendWelcomeEmail(to: string, name: string) {
         </ul>
       </div>
       <p style="font-size:13px;color:#9ca3af;text-align:center;margin:0;">
-        Die ersten 10 Aufgaben pro Thema sind kostenlos. <a href="https://www.cleverli.ch/upgrade" style="color:#16a34a;">Premium freischalten →</a>
+        Die ersten 15 Aufgaben pro Thema sind kostenlos. <a href="https://www.cleverli.ch/upgrade" style="color:#16a34a;">Premium freischalten →</a>
       </p>
     </div>
     <!-- Footer -->

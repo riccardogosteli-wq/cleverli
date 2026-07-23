@@ -201,7 +201,7 @@ export default function BlogPost() {
       <div className="mt-12 bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-7 text-center space-y-4">
         <Image src="/cleverli-wave.png" alt="Cleverli" width={80} height={80} className="mx-auto drop-shadow" />
         <h3 className="text-xl font-bold text-gray-800">Probier das Belohnungs-System aus</h3>
-        <p className="text-sm text-gray-600 max-w-sm mx-auto">Kostenlos starten — die ersten 10 Aufgaben pro Thema sind immer gratis.</p>
+        <p className="text-sm text-gray-600 max-w-sm mx-auto">Kostenlos starten — die ersten 15 Aufgaben pro Thema sind immer gratis.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href="/signup"

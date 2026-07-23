@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Cleverli — Lernen macht Spass 🇨🇭",
-    description: "Interaktiv Mathe, Deutsch & NMG üben — Klasse 1–6, Lehrplan 21. Erste 10 Aufgaben gratis, kein Download, keine App.",
+    description: "Interaktiv Mathe, Deutsch & NMG üben — Klasse 1–6, Lehrplan 21. Erste 15 Aufgaben pro Thema gratis, kein Download, keine App.",
     url: "https://www.cleverli.ch",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Cleverli — Lernplattform für Kinder" }],
   },

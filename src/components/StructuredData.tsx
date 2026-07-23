@@ -45,7 +45,7 @@ export default function StructuredData() {
             name: "Kostenlos testen",
             price: "0",
             priceCurrency: "CHF",
-            description: "Erste 10 Aufgaben pro Thema gratis",
+            description: "Erste 15 Aufgaben pro Thema gratis",
           },
           {
             "@type": "Offer",
@@ -79,7 +79,7 @@ export default function StructuredData() {
             name: "Kann ich Cleverli kostenlos ausprobieren?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Ja! Die ersten 10 Aufgaben pro Thema kannst du immer kostenlos testen — ganz ohne Anmeldung oder Kreditkarte.",
+              text: "Ja! Die ersten 15 Aufgaben pro Thema kannst du immer kostenlos testen — ganz ohne Anmeldung oder Kreditkarte.",
             },
           },
           {
