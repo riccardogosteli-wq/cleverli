@@ -14,3 +14,8 @@
 - Command: `npm run lint:hooks`.
 - Failure: `scripts/check-hooks-order.ts` could not import `glob` under the current Node/ts-node ESM path.
 - Fix: use build plus targeted ESLint for this session; revisit the hook-check script dependency/resolution separately.
+
+## 2026-07-23 — Vercel inspect has no yes flag
+- Command: `npx vercel inspect <deployment-url> --yes`.
+- Failure: Vercel CLI reported `unknown or unexpected option: --yes`.
+- Fix: run `npx vercel inspect <deployment-url>` without `--yes`.
