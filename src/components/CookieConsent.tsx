@@ -64,7 +64,7 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-3 bottom-3 z-[10000] mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-4 shadow-xl sm:flex sm:items-center sm:gap-4">
+    <div className="fixed inset-x-3 bottom-24 z-[10000] mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-4 shadow-xl sm:bottom-3 sm:flex sm:items-center sm:gap-4">
       <p className="text-sm leading-relaxed text-gray-700 sm:flex-1">
         {t.text}{" "}
         <Link href="/datenschutz" className="font-semibold text-green-700 underline">
@@ -90,4 +90,3 @@ export default function CookieConsent() {
     </div>
   );
 }
-

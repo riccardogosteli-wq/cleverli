@@ -30,7 +30,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",                // Tailwind inline styles
       "img-src 'self' data: blob: https: https://www.googletagmanager.com", // Next/Image + GTM
       "font-src 'self'",                                 // Geist is self-hosted via next/font
-      "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://formspree.io https://www.google-analytics.com https://analytics.google.com",
+      "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://formspree.io https://*.google-analytics.com https://analytics.google.com",
       "frame-src https://www.googletagmanager.com",
       "frame-ancestors 'none'",
       "object-src 'none'",
