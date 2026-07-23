@@ -40,7 +40,7 @@ export default function AdsPrimarschuleClient() {
               Kurze Online-Übungen für die Primarschule.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-              Mathe, Deutsch und NMG für die 1.–6. Klasse. Dein Kind übt selbstständig, du siehst den Fortschritt und legst echte Familien-Belohnungen fest.
+              Mathe, Deutsch und NMG für die 1.–6. Klasse. Dein Kind übt selbstständig, du siehst den Fortschritt und motivierst mit Belohnungen, die zuhause wirklich zählen.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
