@@ -6,6 +6,7 @@ import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { getSupabase } from "@/lib/supabase";
+import { trackSignUp } from "@/lib/analytics";
 
 export default function Signup() {
   const { tr } = useLang();
@@ -75,6 +76,7 @@ export default function Signup() {
         body: JSON.stringify({ email, name: email.split("@")[0], lang }),
       }).catch(() => {});
 
+      trackSignUp("email");
       setSuccess(true);
 
       // If session is immediately available (email confirm disabled), redirect to first exercise

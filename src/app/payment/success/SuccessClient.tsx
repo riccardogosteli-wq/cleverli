@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
+import { trackPurchase } from "@/lib/analytics";
 
 const MAX_POLLS = 12;  // 12 × 2.5s = 30s max wait
 const POLL_INTERVAL = 2500;
@@ -15,6 +16,17 @@ export default function SuccessClient() {
 
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const sessionId = searchParams.get("session_id");
+    const plan = searchParams.get("plan");
+    const dedupeKey = `cleverli_purchase_tracked_${sessionId || plan || "unknown"}`;
+
+    if (sessionId && localStorage.getItem(dedupeKey)) return;
+    trackPurchase(plan, sessionId);
+    if (sessionId) localStorage.setItem(dedupeKey, "true");
+  }, []);
 
   // Poll Supabase until premium is set (webhook fires within ~2-5s usually)
   useEffect(() => {

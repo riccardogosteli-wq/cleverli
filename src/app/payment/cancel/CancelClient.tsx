@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useSession } from "@/hooks/useSession";
 import { useLang } from "@/lib/LangContext";
+import { trackBeginCheckout } from "@/lib/analytics";
 
 export default function PaymentCancelPage() {
   const { session, loaded } = useSession();
@@ -32,10 +33,12 @@ export default function PaymentCancelPage() {
         {loaded && (
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href={checkoutUrl("monthly")}
+              onClick={() => trackBeginCheckout("monthly", "payment_cancel")}
               className="bg-green-700 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all">
               CHF 9.90{t("/Monat", "/mois", "/mese", "/month")}
             </Link>
             <Link href={checkoutUrl("yearly")}
+              onClick={() => trackBeginCheckout("yearly", "payment_cancel")}
               className="bg-green-700 text-white px-6 py-3 rounded-full font-bold hover:bg-green-800 active:scale-95 transition-all">
               CHF 99{t("/Jahr", "/an", "/anno", "/year")}
             </Link>

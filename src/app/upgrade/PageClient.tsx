@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useSession } from "@/hooks/useSession";
 import { useLang } from "@/lib/LangContext";
+import { trackBeginCheckout } from "@/lib/analytics";
 
 export default function UpgradePageClient() {
   const { session, loaded } = useSession();
@@ -218,6 +219,7 @@ export default function UpgradePageClient() {
             <div className="text-4xl font-black text-gray-800 mt-1">{tx.monthlyPrice}<span className="text-lg font-medium text-gray-400">{tx.monthlyPer}</span></div>
           </div>
           <Link href={checkoutUrl("monthly")}
+            onClick={() => trackBeginCheckout("monthly", "upgrade_page")}
             className="block text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-green-700 text-white hover:bg-green-700">
             {tx.cta} →
           </Link>
@@ -234,6 +236,7 @@ export default function UpgradePageClient() {
             <div className="text-4xl font-black text-white mt-1">{tx.yearlyPrice}<span className="text-lg font-medium text-green-300">{tx.yearlyPer}</span></div>
           </div>
           <Link href={checkoutUrl("yearly")}
+            onClick={() => trackBeginCheckout("yearly", "upgrade_page")}
             className="block text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-white text-green-700 hover:bg-green-50">
             {tx.cta} →
           </Link>
