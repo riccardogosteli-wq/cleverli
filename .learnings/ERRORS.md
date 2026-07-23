@@ -1,5 +1,15 @@
 # Errors
 
+## 2026-07-23 — Google Ads campaign create 400 during Search draft setup
+- Command: Maton Google Ads `campaigns:mutate` after creating budget `customers/5143806397/campaignBudgets/15744711985`.
+- Failure: Initial create returned HTTP 400; first script did not print the response body.
+- Fix: rerun mutation with explicit error-body logging and reuse the created budget instead of creating another one.
+
+## 2026-07-23 — Google Ads RSA description too long
+- Command: Maton Google Ads `adGroupAds:mutate` while creating the paused Cleverli Search draft.
+- Failure: One responsive search ad description exceeded Google Ads length limits.
+- Fix: shorten descriptions and continue filling the existing paused campaign/ad groups instead of recreating the campaign.
+
 ## 2026-07-23 — Local QA hit stopped dev server
 - Command: Playwright smoke against `http://127.0.0.1:3027/learn/1/math/zahlen-1-10`.
 - Failure: `ERR_CONNECTION_REFUSED` because the local Next dev server was no longer running.
