@@ -39,3 +39,8 @@
 - Command: `npx vercel inspect <deployment-url> --yes`.
 - Failure: Vercel CLI reported `unknown or unexpected option: --yes`.
 - Fix: run `npx vercel inspect <deployment-url>` without `--yes`.
+
+## 2026-07-23 — Vercel CLI wrong scope alias
+- Command: `npx vercel inspect https://www.cleverli.ch --scope riccardogostelis-projects`.
+- Failure: Vercel CLI reported `The specified scope does not exist`.
+- Fix: omit `--scope`; the repo is linked to `riccardogosteli-3284s-projects` and `npx vercel inspect https://www.cleverli.ch` works.
