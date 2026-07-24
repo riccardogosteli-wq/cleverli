@@ -49,7 +49,7 @@ export default function AdsPrimarschuleClient() {
                 onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_hero")}
                 className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
               >
-                Für CHF 8.25/Mt. freischalten
+                CHF 8.25/Mt. · bis zu 3 Kinder
               </Link>
               <Link
                 href="/learn/1/math/zahlen-1-10"
@@ -58,7 +58,7 @@ export default function AdsPrimarschuleClient() {
                 Kostenlos ausprobieren
               </Link>
             </div>
-            <p className="mt-3 text-sm text-gray-500">20 Aufgaben gratis · keine App · TWINT & Kreditkarte · bis zu 3 Kinder</p>
+            <p className="mt-3 text-sm text-gray-500">Jahresabo CHF 99 · bis zu 3 Kinderprofile · TWINT & Kreditkarte</p>
           </div>
 
           <div className="relative min-h-[320px] overflow-hidden rounded-3xl bg-white shadow-xl shadow-green-100 ring-1 ring-green-100 sm:min-h-[380px]">
@@ -203,14 +203,14 @@ export default function AdsPrimarschuleClient() {
               <div className="absolute -top-3 left-6 rounded-full bg-amber-400 px-3 py-1 text-xs font-black text-white">Empfohlen</div>
               <h3 className="text-lg font-bold">Jährlich</h3>
               <p className="mt-2 text-3xl font-black">CHF 99<span className="text-base font-medium text-green-200">/Jahr</span></p>
-              <p className="mt-2 text-sm leading-6 text-green-50">CHF 8.25/Mt. für die ganze Familie · bis zu 3 Kinder.</p>
+              <p className="mt-2 text-sm leading-6 text-green-50">CHF 8.25/Mt. für bis zu 3 Kinderprofile.</p>
               <Link
                 href={checkoutUrl("yearly")}
                 prefetch={false}
                 onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_pricing")}
                 className="mt-auto block rounded-full bg-white px-5 py-3 text-center text-sm font-black text-green-800 hover:bg-green-50"
               >
-                Jährlich freischalten
+                Jährlich für bis zu 3 Kinder
               </Link>
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function AdsPrimarschuleClient() {
             onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_bottom")}
             className="rounded-full bg-white px-7 py-4 text-base font-black text-green-800 hover:bg-green-50"
           >
-            Jährlich für CHF 99 starten
+            CHF 99/Jahr · bis zu 3 Kinder
           </Link>
           <Link href="/learn/1/math/zahlen-1-10" className="rounded-full border-2 border-white px-7 py-4 text-base font-bold text-white hover:bg-green-800">
             Erst kostenlos testen
