@@ -32,6 +32,7 @@ import { getLevelForXp, getNextLevel } from "@/lib/xp";
 import SignupPromptModal from "./SignupPromptModal";
 import { getProgressSubjects } from "@/data";
 import { trackBeginCheckout } from "@/lib/analytics";
+import { trackExerciseEvent, ExerciseTelemetryPayload } from "@/lib/exerciseTelemetry";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
@@ -191,9 +192,40 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const current: Exercise = localiseExercise(exercises[idx] ?? sortByDifficulty(topic.exercises)[0], lang);
   const freeExercisesRemaining = Math.max(0, FREE_EXERCISE_LIMIT - profile.totalExercises);
   const isLocked = !isPremium && profile.totalExercises >= FREE_EXERCISE_LIMIT;
+  const exerciseStartRef = useRef<number>(Date.now());
+
+  const exerciseTelemetryPayload = (extra: ExerciseTelemetryPayload = {}): ExerciseTelemetryPayload => ({
+    exerciseId: current?.id ?? String(idx),
+    grade,
+    subject,
+    topicId: topic.id,
+    exerciseType: current?.type,
+    attemptIndex: idx + 1,
+    wrongCountSession,
+    hintsUsed,
+    topicIndex: idx + 1,
+    topicTotal: exercises.length,
+    lang,
+    ...extra,
+  });
   
 
   // (voice is on-demand only — no auto-read)
+
+  useEffect(() => {
+    if (done || isLocked || !current) return;
+
+    exerciseStartRef.current = Date.now();
+    trackExerciseEvent("exercise_started", exerciseTelemetryPayload());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [current?.id, idx, done, isLocked]);
+
+  useEffect(() => {
+    if (!isLocked) return;
+
+    trackExerciseEvent("paywall_shown", exerciseTelemetryPayload());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLocked]);
 
   // Save partial progress when free limit is reached (so stars show on topic list)
   useEffect(() => {
@@ -262,6 +294,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     setExerciseInProgress(true); // UJ-12: mark exercise as in-progress on first answer
     const newStreak = correct ? streak + 1 : 0;
     const newScore = correct ? score + 1 : score;
+    const newWrongCount = correct ? wrongCountSession : wrongCountSession + 1;
+
+    trackExerciseEvent(correct ? "exercise_completed" : "exercise_wrong_answer", exerciseTelemetryPayload({
+      isCorrect: correct,
+      wrongCountSession: newWrongCount,
+      durationMs: Date.now() - exerciseStartRef.current,
+    }));
 
     // Combo tracking
     if (correct) {
@@ -821,7 +860,11 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
               onAnswer={handleAnswer}
             />
           )}
-          <HintSystem hints={current.hints} onHintUsed={() => setHintsUsed(h => h + 1)} />
+          <HintSystem hints={current.hints} onHintUsed={() => {
+            const nextHintsUsed = hintsUsed + 1;
+            setHintsUsed(nextHintsUsed);
+            trackExerciseEvent("hint_used", exerciseTelemetryPayload({ hintsUsed: nextHintsUsed }));
+          }} />
         </div>
       )}
 

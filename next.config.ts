@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withSentryConfig } from "@sentry/nextjs";
 
 const securityHeaders = [
   {
@@ -30,7 +31,15 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",                // Tailwind inline styles
       "img-src 'self' data: blob: https: https://www.googletagmanager.com", // Next/Image + GTM
       "font-src 'self'",                                 // Geist is self-hosted via next/font
-      "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://formspree.io https://*.google-analytics.com https://analytics.google.com",
+      [
+        "connect-src 'self'",
+        "https://*.supabase.co wss://*.supabase.co",
+        "https://formspree.io",
+        "https://*.google-analytics.com https://analytics.google.com",
+        "https://*.ingest.sentry.io https://*.ingest.us.sentry.io",
+        "https://*.posthog.com https://*.i.posthog.com https://eu.i.posthog.com https://us.i.posthog.com",
+      ].join(" "),
+      "worker-src 'self' blob:",
       "frame-src https://www.googletagmanager.com",
       "frame-ancestors 'none'",
       "object-src 'none'",
@@ -56,4 +65,21 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const sentryEnabled = Boolean(
+  process.env.SENTRY_AUTH_TOKEN ||
+  process.env.SENTRY_DSN ||
+  process.env.NEXT_PUBLIC_SENTRY_DSN
+);
+
+export default sentryEnabled
+  ? withSentryConfig(nextConfig, {
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      silent: true,
+      telemetry: false,
+      sourcemaps: {
+        deleteSourcemapsAfterUpload: true,
+      },
+    })
+  : nextConfig;

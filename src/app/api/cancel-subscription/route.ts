@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
 
@@ -51,6 +52,7 @@ export async function POST(req: NextRequest) {
     }
   } catch (err) {
     cancelError = String(err);
+    Sentry.captureException(err);
     console.error("[cancel-subscription] Stripe error:", err);
   }
 
@@ -71,6 +73,7 @@ export async function POST(req: NextRequest) {
 
   if (!updateRes.ok) {
     const err = await updateRes.text();
+    Sentry.captureMessage(`[cancel-subscription] Supabase update failed: ${err}`, "error");
     console.error("[cancel-subscription] Supabase update failed:", err);
     return NextResponse.json({ error: "db_update_failed" }, { status: 500 });
   }

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
 
@@ -43,6 +44,7 @@ export async function GET(req: NextRequest) {
       .single();
     stripeCustomerId = profile?.stripe_customer_id ?? undefined;
   } catch (e) {
+    Sentry.captureException(e);
     console.error("[checkout] Supabase user lookup failed:", e);
   }
 
@@ -74,11 +76,13 @@ export async function GET(req: NextRequest) {
     });
 
     if (!session.url) {
+      Sentry.captureMessage("[checkout] Stripe session missing URL", "error");
       return NextResponse.json({ error: "gateway_failed" }, { status: 500 });
     }
 
     return NextResponse.redirect(session.url, 302);
   } catch (err) {
+    Sentry.captureException(err);
     console.error("[checkout] Stripe error:", err);
     return NextResponse.json({ error: "gateway_failed" }, { status: 500 });
   }

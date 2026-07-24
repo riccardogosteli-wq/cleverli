@@ -175,7 +175,54 @@ alter table public.push_subscriptions enable row level security;
 
 
 -- ─────────────────────────────────────────────
--- 7. DATA API GRANTS
+-- 7. EXERCISE EVENTS (private product telemetry)
+-- ─────────────────────────────────────────────
+create table if not exists public.exercise_events (
+  id uuid primary key default gen_random_uuid(),
+  event_name text not null check (
+    event_name in (
+      'exercise_started',
+      'exercise_completed',
+      'exercise_wrong_answer',
+      'hint_used',
+      'exercise_error',
+      'paywall_shown',
+      'checkout_error'
+    )
+  ),
+  exercise_id text,
+  grade int check (grade between 1 and 6),
+  subject text,
+  topic_id text,
+  exercise_type text,
+  is_correct boolean,
+  attempt_index int,
+  wrong_count_session int,
+  hints_used int,
+  duration_ms int,
+  topic_index int,
+  topic_total int,
+  lang text,
+  path text,
+  anonymous_session_id text,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists idx_exercise_events_created_at
+  on public.exercise_events (created_at desc);
+
+create index if not exists idx_exercise_events_exercise_name
+  on public.exercise_events (exercise_id, event_name, created_at desc);
+
+create index if not exists idx_exercise_events_topic
+  on public.exercise_events (grade, subject, topic_id, created_at desc);
+
+alter table public.exercise_events enable row level security;
+
+
+-- ─────────────────────────────────────────────
+-- 8. DATA API GRANTS
 -- ─────────────────────────────────────────────
 -- Supabase will stop exposing new public tables to the Data API automatically
 -- for existing projects on 2026-10-30. Keep access explicit and narrow.
@@ -198,3 +245,6 @@ grant insert on table public.notify_signups to anon;
 grant all on table public.notify_signups to service_role;
 
 grant all on table public.push_subscriptions to service_role;
+
+revoke all on table public.exercise_events from anon, authenticated;
+grant all on table public.exercise_events to service_role;

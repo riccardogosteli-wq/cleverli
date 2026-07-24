@@ -7,6 +7,7 @@ import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { getSupabase } from "@/lib/supabase";
 import { trackSignUp } from "@/lib/analytics";
+import { captureAppError } from "@/lib/monitoring";
 
 export default function Signup() {
   const { tr } = useLang();
@@ -53,6 +54,7 @@ export default function Signup() {
         if (signupError.message.includes("already registered")) {
           setError(tr("errorEmailExists") ?? "Diese E-Mail ist bereits registriert. Bitte melde dich an.");
         } else {
+          captureAppError(signupError, { area: "signup" });
           setError(signupError.message);
         }
         setLoading(false);
@@ -87,6 +89,7 @@ export default function Signup() {
       }
     } catch (err: unknown) {
       setLoading(false);
+      captureAppError(err, { area: "signup" });
       console.error("Signup error:", err);
       setError("Ein Fehler ist aufgetreten. Bitte versuche es nochmal.");
     }

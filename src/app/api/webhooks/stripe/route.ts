@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import { sendPaymentConfirmationEmail } from "@/lib/email";
 
@@ -26,6 +27,7 @@ async function patchParentProfile(userId: string, body: Record<string, unknown>)
 
   if (!res.ok) {
     const err = await res.text();
+    Sentry.captureMessage(`[stripe-webhook] Supabase update failed: ${err}`, "error");
     console.error("[stripe-webhook] supabase update failed:", err);
     throw new Error("db_update_failed");
   }
@@ -80,6 +82,7 @@ export async function POST(req: NextRequest) {
     const stripe = getStripe();
     event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
   } catch (err) {
+    Sentry.captureException(err);
     console.error("[stripe-webhook] signature verification failed:", err);
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
@@ -96,6 +99,7 @@ export async function POST(req: NextRequest) {
     const stripeSubscriptionId = session.subscription as string;
 
     if (!userId) {
+      Sentry.captureMessage("[stripe-webhook] no userId in checkout metadata", "error");
       console.error("[stripe-webhook] no userId in metadata");
       return NextResponse.json({ error: "no_user" }, { status: 400 });
     }
