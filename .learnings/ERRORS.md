@@ -1,5 +1,20 @@
 # Errors
 
+## 2026-07-24 — Vercel ls has no limit flag
+- Command: `npx vercel ls cleverli --limit 5`.
+- Failure: Vercel CLI 54.6.1 reported `unknown or unexpected option: --limit`.
+- Fix: run `npx vercel ls cleverli` without `--limit` and read the first rows.
+
+## 2026-07-24 — Correct Cleverli Google Ads account inaccessible with recovered Maton key
+- Command: Maton Google Ads `googleAds:search` against active Cleverli account `5143806397`, with and without tested `login-customer-id` headers.
+- Failure: Google Ads returned `USER_PERMISSION_DENIED`. The recovered old Maton key only listed Shirtstar `4402426445`, Casa Poli `5295595101`, and disabled old Cleverli `3435589468`, not active Cleverli `5143806397`.
+- Fix: search local Codex session logs for the 2026-07-23 successful Google Ads setup. The correct Maton key was in that local transcript and lists active Cleverli `5143806397`.
+
+## 2026-07-24 — Google Ads UI attach blocked by non-debug Chrome
+- Command: OpenClaw browser attach/start with `profile=user` on Ricci's MacBook Pro.
+- Failure: Chrome MCP could not find `DevToolsActivePort`; existing user Chrome is not remote-debug attachable.
+- Fix: open Chrome with remote debugging / approve the browser attach prompt, or use a valid Google Ads API connection instead.
+
 ## 2026-07-23 — Google Ads campaign create 400 during Search draft setup
 - Command: Maton Google Ads `campaigns:mutate` after creating budget `customers/5143806397/campaignBudgets/15744711985`.
 - Failure: Initial create returned HTTP 400; first script did not print the response body.
