@@ -17,11 +17,18 @@ const steps = [
   { n: "3", title: "Fortschritt sehen", body: "Du siehst, was erledigt wurde und wo dein Kind noch Übung braucht." },
 ];
 
-const rewards = [
-  "Zoo-Ausflug",
-  "Glace nach der Schule",
-  "Kinoabend",
-  "Neuer Malblock",
+const rewardExamples = [
+  { emoji: "🦁", title: "Wir gehen in den Zoo" },
+  { emoji: "🍦", title: "Ein Glace essen" },
+  { emoji: "🎬", title: "Kinoabend" },
+  { emoji: "🎨", title: "Neuen Malblock aussuchen" },
+  { emoji: "🛒", title: "Einen kleinen Wunsch erfüllen" },
+];
+
+const rewardSteps = [
+  { n: "1", emoji: "🎯", title: "Belohnung festlegen", body: "Wähle aus Vorschlägen oder erstelle eine eigene Belohnung." },
+  { n: "2", emoji: "📊", title: "Ziel setzen", body: "Du entscheidest: nach Aufgaben, Themen oder einer 7-Tage-Serie." },
+  { n: "3", emoji: "🎉", title: "Kind erreicht das Ziel", body: "Dein Kind sieht den Fortschritt und bleibt motiviert dran." },
 ];
 
 const freeTrialUrl = "/learn/1/math/zahlen-1-10";
@@ -157,20 +164,54 @@ export default function AdsPrimarschuleClient() {
       </section>
 
       <section className="bg-amber-50 px-4 py-12 sm:px-6 sm:py-16">
-        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2 lg:items-center">
-          <div>
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="mb-3 text-5xl">🎁</div>
             <p className="text-sm font-bold uppercase tracking-widest text-amber-700">Motivation für daheim</p>
-            <h2 className="mt-2 text-3xl font-black text-gray-950">Nicht nur Punkte sammeln. Echte Ziele setzen.</h2>
+            <h2 className="mt-2 text-3xl font-black text-gray-950">Echte Belohnungen für echte Leistungen.</h2>
             <p className="mt-4 text-base leading-7 text-gray-700">
-              Eltern legen fest, wofür geübt wird. So wird aus “du musst lernen” ein konkretes Ziel, das Kinder verstehen.
+              Eltern definieren persönliche Belohnungen. Kinder sehen ihr Ziel und arbeiten motiviert darauf hin.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {rewards.map((reward) => (
-              <div key={reward} className="rounded-2xl border border-amber-200 bg-white px-5 py-4 text-sm font-bold text-gray-800 shadow-sm">
-                {reward}
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+            <div className="space-y-3">
+              <p className="text-xs font-black uppercase tracking-widest text-amber-700">Beispiel-Belohnungen</p>
+              {rewardExamples.map((reward) => (
+                <div key={reward.title} className="flex items-center gap-3 rounded-xl border border-amber-100 bg-white px-4 py-3 shadow-sm">
+                  <span className="text-2xl">{reward.emoji}</span>
+                  <span className="text-sm font-semibold text-gray-800">{reward.title}</span>
+                  <span className="ml-auto text-xs font-bold text-amber-400">🔒</span>
+                </div>
+              ))}
+              <div className="flex items-center gap-3 rounded-xl border-2 border-dashed border-amber-300 bg-amber-100 px-4 py-3 text-sm font-bold text-amber-800">
+                <span className="text-2xl">✏️</span>
+                Oder eigene Belohnung erstellen
               </div>
-            ))}
+            </div>
+
+            <div className="space-y-6">
+              <p className="text-xs font-black uppercase tracking-widest text-amber-700">So funktioniert's</p>
+              {rewardSteps.map((step) => (
+                <div key={step.n} className="flex gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-400 text-lg font-black text-white shadow">
+                    {step.n}
+                  </div>
+                  <div>
+                    <h3 className="font-black text-gray-900">{step.emoji} {step.title}</h3>
+                    <p className="mt-1 text-sm leading-6 text-gray-600">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+
+              <div className="flex items-center gap-4 rounded-2xl border border-amber-200 bg-white p-4 shadow-sm">
+                <Image src="/cleverli-think.png" alt="" width={64} height={64} className="shrink-0" loading="lazy" />
+                <div>
+                  <p className="text-sm font-black text-gray-900">🎉 Lena hat ihr Ziel erreicht!</p>
+                  <p className="mt-1 text-xs text-gray-500">Zeit für den Zoo! 🦁</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
