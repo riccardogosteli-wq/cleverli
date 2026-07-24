@@ -125,7 +125,7 @@ export default function AdsPrimarschuleClient() {
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl">
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Für den Alltag gebaut</p>
-            <h2 className="mt-2 text-3xl font-black text-gray-950">10 Minuten üben. Fortschritt sehen. Weniger diskutieren.</h2>
+            <h2 className="mt-2 text-3xl font-black text-gray-950">10 Minuten üben. Fortschritt sehen. Ohne Lernstress.</h2>
           </div>
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {steps.map((step) => (
