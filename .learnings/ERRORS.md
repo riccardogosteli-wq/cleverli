@@ -15,6 +15,21 @@
 - Failure: directory is the OpenClaw workspace, not the Cleverli git repository.
 - Fix: run repo git checks in `/Users/riccardogosteli/projects/cleverli`.
 
+## 2026-07-24 — Playwright smoke hit stopped dev server
+- Command: inline Playwright smoke against `http://127.0.0.1:3010/learn/1/math/addition-bis-10`.
+- Failure: `ERR_CONNECTION_REFUSED` because the local Next dev server was not running.
+- Fix: start `npm run dev -- --hostname 127.0.0.1 --port 3010` before local browser smoke tests.
+
+## 2026-07-24 — Playwright selector matched disabled and active Weiter buttons
+- Command: inline Playwright review-flow smoke using `getByRole('button', { name: /Verstanden|Weiter/ })`.
+- Failure: strict mode violation because it matched both the disabled MultipleChoice `Weiter →` button and the active `Verstanden — Weiter →` feedback button.
+- Fix: target the feedback button specifically with `getByRole('button', { name: /Verstanden/ })`.
+
+## 2026-07-24 — MultipleChoice accessible name includes option index
+- Command: inline Playwright smoke using `getByRole('button', { name: /^\\s*7\\s*$/ })`.
+- Failure: timeout because text-option buttons include the numbered badge in their accessible name, e.g. `2 7`, not just `7`.
+- Fix: match the visible answer more loosely or use the full accessible name pattern.
+
 ## 2026-07-24 — Vercel ls has no limit flag
 - Command: `npx vercel ls cleverli --limit 5`.
 - Failure: Vercel CLI 54.6.1 reported `unknown or unexpected option: --limit`.

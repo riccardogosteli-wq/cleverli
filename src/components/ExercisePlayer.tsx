@@ -81,6 +81,18 @@ function selectCurrentTierExercises(topic: Topic, completed: number) {
   return sorted.slice(completed, topic.exercises.length);
 }
 
+function getInitialSessionStart(topic: Topic, grade: number, subject: string) {
+  const completed = getStoredCompleted(grade, subject, topic.id);
+  return completed >= topic.exercises.length ? 0 : completed;
+}
+
+function getInitialSessionExercises(topic: Topic, grade: number, subject: string) {
+  const completed = getStoredCompleted(grade, subject, topic.id);
+  return completed >= topic.exercises.length
+    ? sortByDifficulty(topic.exercises)
+    : selectCurrentTierExercises(topic, completed);
+}
+
 // ── Translation helper ────────────────────────────────────────────────────────
 function localiseExercise(ex: import("@/types/exercise").Exercise, lang: string) {
   if (lang === "en") return {
@@ -160,9 +172,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   }, [isAnonymous]);
   const uid = session?.userId ?? "";
   // Select the current difficulty section, so Grün/Gelb/Rot progress matches the actual session.
-  const [sessionStartCompleted, setSessionStartCompleted] = useState(() => getStoredCompleted(grade, subject, topic.id));
-  const [fullSetExercises, setFullSetExercises] = useState(() => selectCurrentTierExercises(topic, sessionStartCompleted));
+  const [sessionStartCompleted, setSessionStartCompleted] = useState(() => getInitialSessionStart(topic, grade, subject));
+  const [fullSetExercises, setFullSetExercises] = useState(() => getInitialSessionExercises(topic, grade, subject));
   const [exercises, setExercises] = useState(fullSetExercises);
+  const [isReplayMode, setIsReplayMode] = useState(() => getStoredCompleted(grade, subject, topic.id) >= topic.exercises.length);
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [idx, setIdx] = useState(0);
@@ -188,6 +201,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const nextTopic = allTopics[topicIndex + 1] ?? null;
   const rewardRef = useRef<HTMLDivElement>(null);
 
+  const sessionTotal = Math.max(1, exercises.length);
   const current: Exercise = localiseExercise(exercises[idx] ?? sortByDifficulty(topic.exercises)[0], lang);
   const freeExercisesRemaining = Math.max(0, FREE_EXERCISE_LIMIT - profile.totalExercises);
   const isLocked = !isPremium && profile.totalExercises >= FREE_EXERCISE_LIMIT;
@@ -203,7 +217,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     wrongCountSession,
     hintsUsed,
     topicIndex: idx + 1,
-    topicTotal: exercises.length,
+    topicTotal: sessionTotal,
     lang,
     ...extra,
   });
@@ -243,9 +257,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // Save progress when done — only overwrite if new score is better or equal
   useEffect(() => {
     if (done) {
+      if (isReplayMode || isReviewMode) return;
       const key = `cleverli_${grade}_${subject}_${topic.id}`;
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       const prevScore = existing?.score ?? 0;
+      const prevStars = existing?.stars ?? 0;
       const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
       const s = calcStars(score, exercises.length);
       const lastPlayed = new Date().toISOString();
@@ -253,7 +269,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         ...existing,
         completed: Math.max(existing?.completed ?? 0, completedCount),
         score: Math.max(prevScore, score),
-        stars: completedCount >= topic.exercises.length ? s : (existing?.stars ?? 0),
+        stars: completedCount >= topic.exercises.length ? Math.max(prevStars, s) : prevStars,
         partial: completedCount < topic.exercises.length,
         lastPlayed,
       };
@@ -262,11 +278,43 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const childId = getActiveProfileId();
       if (childId) {
         syncTopicProgressToSupabase(childId, grade, subject, topic.id, {
-          ...progressData, partial: false
+          ...progressData,
         });
       }
     }
-  }, [done, score, grade, subject, topic.id, topic.exercises.length, exercises.length, sessionStartCompleted]);
+  }, [done, score, grade, subject, topic.id, topic.exercises.length, exercises.length, sessionStartCompleted, isReplayMode, isReviewMode]);
+
+  const startTopicSession = (mode: "next" | "replay") => {
+    topicStartRef.current = Date.now();
+    const storedCompleted = getStoredCompleted(grade, subject, topic.id);
+    const hasRemaining = storedCompleted < topic.exercises.length;
+    const replay = mode === "replay" || !hasRemaining;
+    const nextStart = replay ? 0 : storedCompleted;
+    const nextExercises = replay
+      ? sortByDifficulty(topic.exercises)
+      : selectCurrentTierExercises(topic, nextStart);
+
+    setSessionStartCompleted(nextStart);
+    setFullSetExercises(nextExercises);
+    setExercises(nextExercises.length > 0 ? nextExercises : sortByDifficulty(topic.exercises));
+    setIsReplayMode(replay);
+    setIdx(0);
+    setScore(0);
+    setStreak(0);
+    setAnswered(null);
+    setDone(false);
+    setWrongIds([]);
+    setIsReviewMode(false);
+    setShowReview(false);
+    setHintsUsed(0);
+    setComboCount(0);
+    setWrongCountSession(0);
+    setCorrectAnswerCount(0);
+    setTierToast(null);
+    setMascotReaction(null);
+    setCardKey(k => k + 1);
+    window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
+  };
 
   // Enter key to continue after answering (desktop)
   useEffect(() => {
@@ -329,28 +377,32 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     setTimeout(() => setMascotReaction(null), correct ? 1200 : 1000);
     if (correct) setCorrectAnswerCount(c => c + 1);
 
-    // Record XP — isTopicComplete will be true when this was the last exercise
+    // Record XP — topic completion only counts when the full topic is really done.
     const isLast = idx + 1 >= exercises.length;
+    const absoluteCompleted = sessionStartCompleted + idx + 1;
+    const isFullTopicComplete = correct && isLast && !isReplayMode && !isReviewMode && absoluteCompleted >= topic.exercises.length;
     // Tier crossing detection (for achievements)
     let tierCompleted: "easy" | "medium" | "hard" | undefined;
     if (correct && tierInfo.isTiered) {
-      if (idx + 1 === tierInfo.easyBoundary)   tierCompleted = "easy";
-      if (idx + 1 === tierInfo.mediumBoundary) tierCompleted = "medium";
-      if (isLast)                               tierCompleted = "hard";
+      if (absoluteCompleted === tierInfo.easyBoundary)   tierCompleted = "easy";
+      if (absoluteCompleted === tierInfo.mediumBoundary) tierCompleted = "medium";
+      if (isFullTopicComplete)                           tierCompleted = "hard";
     }
-    recordAnswer({
-      correct,
-      streak: comboCount, // pass comboCount as streak param
-      hintsUsed,
-      isTopicComplete: correct && isLast,
-      score: newScore,
-      total: exercises.length,
-      grade,
-      subject,
-      topicDurationMs: correct && isLast ? Date.now() - topicStartRef.current : undefined,
-      lang,
-      tierCompleted,
-    });
+    if (!isReplayMode && !isReviewMode) {
+      recordAnswer({
+        correct,
+        streak: comboCount, // pass comboCount as streak param
+        hintsUsed,
+        isTopicComplete: isFullTopicComplete,
+        score: newScore,
+        total: sessionTotal,
+        grade,
+        subject,
+        topicDurationMs: isFullTopicComplete ? Date.now() - topicStartRef.current : undefined,
+        lang,
+        tierCompleted,
+      });
+    }
 
     // Track anonymous user exercises & show signup prompt after 5
     if (isAnonymous) {
@@ -364,7 +416,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     }
 
     // Update localStorage topic progress with current completed count (for tier display)
-    if (correct) {
+    if (correct && !isReplayMode && !isReviewMode) {
       const topicKey = `cleverli_${grade}_${subject}_${topic.id}`;
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       localStorage.setItem(topicKey, JSON.stringify({
@@ -376,7 +428,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     }
 
     // Check reward unlocks after every correct answer
-    if (correct) {
+    if (correct && !isReplayMode && !isReviewMode) {
       setTimeout(() => {
         try {
           const totalStars = countTotalStars();
@@ -430,7 +482,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       setExerciseInProgress(false); // UJ-12: clear in-progress flag on completion
       // UJ-7: if review mode done, check if still wrong answers → repeat, else done
       if (isReviewMode) {
-        if (wrongIds.length > 0) { setShowReview(true); setIsReviewMode(false); return; }
+        if (wrongIds.length > 0) { setShowReview(true); return; }
         setDone(true); return;
       }
       // UJ-7: if mistakes exist and not already reviewing, show review prompt
@@ -458,6 +510,29 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   // UJ-7: start review round
   const startReview = () => {
+    if (!isReplayMode && !isReviewMode) {
+      const key = `cleverli_${grade}_${subject}_${topic.id}`;
+      const existing = getStoredProgress(grade, subject, topic.id) ?? {};
+      const prevScore = existing?.score ?? 0;
+      const prevStars = existing?.stars ?? 0;
+      const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
+      const s = calcStars(score, sessionTotal);
+      const progressData = {
+        ...existing,
+        completed: Math.max(existing?.completed ?? 0, completedCount),
+        score: Math.max(prevScore, score),
+        stars: completedCount >= topic.exercises.length ? Math.max(prevStars, s) : prevStars,
+        partial: completedCount < topic.exercises.length,
+        lastPlayed: new Date().toISOString(),
+      };
+      localStorage.setItem(key, JSON.stringify(progressData));
+      const childId = getActiveProfileId();
+      if (childId) {
+        syncTopicProgressToSupabase(childId, grade, subject, topic.id, progressData);
+      }
+      window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
+    }
+
     const reviewExercises = topic.exercises.filter(e => wrongIds.includes(e.id ?? ""));
     setExercises(reviewExercises.length > 0 ? reviewExercises : topic.exercises.slice(0, 3));
     setIdx(0); setScore(0); setStreak(0); setAnswered(null);
@@ -482,7 +557,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           {(tr("reviewBtnLabel") ?? "🔄 Nochmal üben ({n})").replace("{n}", String(wrongIds.length))}
         </button>
         <button
-          onClick={() => setDone(true)}
+          onClick={() => {
+            setShowReview(false);
+            setDone(true);
+          }}
           className="w-full border-2 border-gray-200 text-gray-500 py-3 rounded-2xl font-medium text-sm hover:bg-gray-50 active:scale-95 transition-all"
         >
           {tr("continueWithout")} →
@@ -493,14 +571,21 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   // ── Topic Complete ──────────────────────────────────────────────
   if (done) {
-    const totalEx = isReviewMode ? exercises.length : topic.exercises.length;
+    const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
+    const hasRemaining = !isReplayMode && completedCount < topic.exercises.length;
+    const showTopicCompleteCelebration = !isReviewMode && !isReplayMode && completedCount >= topic.exercises.length;
+    const totalEx = isReviewMode || hasRemaining || isReplayMode ? sessionTotal : topic.exercises.length;
     const s = calcStars(score, totalEx);
     const perfect = score === totalEx;
-    const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
-    const completedCoin = isReviewMode ? null : getCompletedCoin(completedCount);
+    const completedCoin = showTopicCompleteCelebration ? getCompletedCoin(completedCount) : null;
     return (
       <div className="space-y-4 max-w-md mx-auto">
-        <RewardAnimation correct={true} isTopicComplete={true} onContinue={() => router.push(`/learn/${grade}/${subject}`)} />
+        <RewardAnimation
+          correct={true}
+          isTopicComplete={showTopicCompleteCelebration}
+          label={hasRemaining ? (lang === "fr" ? "Continue ce thème" : lang === "it" ? "Continua questo argomento" : lang === "en" ? "Continue this topic" : "Weiter in diesem Thema") : undefined}
+          onContinue={() => hasRemaining ? startTopicSession("next") : router.push(`/learn/${grade}/${subject}`)}
+        />
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center space-y-3">
           {isReviewMode ? (
             <p className="text-green-700 font-bold">🎉 {tr("allErrorsCorrected") ?? "Alle Fehler korrigiert!"}</p>
@@ -536,18 +621,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           )}
           <div className="flex gap-3 justify-center flex-wrap pt-1">
             <button onClick={() => {
-              topicStartRef.current = Date.now();
-              const nextStart = getStoredCompleted(grade, subject, topic.id);
-              const nextExercises = selectCurrentTierExercises(topic, nextStart);
-              setSessionStartCompleted(nextStart);
-              setFullSetExercises(nextExercises);
-              setExercises(nextExercises);
-              setIdx(0); setScore(0); setStreak(0); setAnswered(null);
-              setDone(false); setWrongIds([]); setIsReviewMode(false); setShowReview(false);
-              setHintsUsed(0); setComboCount(0); setWrongCountSession(0); setCorrectAnswerCount(0);
-              setTierToast(null); setMascotReaction(null); setCardKey(k=>k+1);
+              startTopicSession(hasRemaining ? "next" : "replay");
             }} className="text-sm border-2 border-gray-200 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
-              {tr("playAgainShort")}
+              {hasRemaining
+                ? (lang === "fr" ? "Continuer" : lang === "it" ? "Continua" : lang === "en" ? "Continue topic" : "Weiterlernen")
+                : tr("playAgainShort")}
             </button>
             {/* UJ-5: Next topic button */}
             {nextTopic && (
@@ -752,7 +830,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
           <div
             className="h-full rounded-full transition-all duration-500"
             style={{
-              width: `${((idx + (answered !== null ? 1 : 0)) / exercises.length) * 100}%`,
+              width: `${((idx + (answered !== null ? 1 : 0)) / sessionTotal) * 100}%`,
               background: isReviewMode
                 ? "linear-gradient(to right, #f59e0b, #d97706)"
                 : "linear-gradient(to right, #86efac, #16a34a)",
@@ -769,13 +847,13 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
             {/* Exercise count label for children (explicit X of Y text) */}
             <div className="flex justify-between items-center mb-1">
               <span className="text-xs font-semibold text-gray-500">
-                {isReviewMode ? "🔄 " : ""}{lang === "fr" ? `Exercice ${idx + 1} / ${exercises.length}` : lang === "it" ? `Esercizio ${idx + 1} / ${exercises.length}` : lang === "en" ? `Exercise ${idx + 1} of ${exercises.length}` : `Aufgabe ${idx + 1} von ${exercises.length}`}
+                {isReviewMode ? "🔄 " : ""}{lang === "fr" ? `Exercice ${idx + 1} / ${sessionTotal}` : lang === "it" ? `Esercizio ${idx + 1} / ${sessionTotal}` : lang === "en" ? `Exercise ${idx + 1} of ${sessionTotal}` : `Aufgabe ${idx + 1} von ${sessionTotal}`}
               </span>
               {streak >= 2 && (
                 <span className="text-xs font-bold text-orange-500">🔥 {streak}×</span>
               )}
             </div>
-            <ProgressBar current={idx + 1} total={exercises.length} streak={streak} isReviewMode={isReviewMode} />
+            <ProgressBar current={idx + 1} total={sessionTotal} streak={streak} isReviewMode={isReviewMode} />
           </div>
           {isSupported && (
             <button
