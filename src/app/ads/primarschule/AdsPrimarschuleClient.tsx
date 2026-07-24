@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { trackBeginCheckout } from "@/lib/analytics";
+import { trackAdsLpCtaClick, trackBeginCheckout } from "@/lib/analytics";
 import { useSession } from "@/hooks/useSession";
 
 const subjects = [
@@ -23,6 +23,8 @@ const rewards = [
   "Kinoabend",
   "Neuer Malblock",
 ];
+
+const freeTrialUrl = "/learn/1/math/zahlen-1-10";
 
 export default function AdsPrimarschuleClient() {
   const { session } = useSession();
@@ -46,13 +48,17 @@ export default function AdsPrimarschuleClient() {
               <Link
                 href={checkoutUrl("yearly")}
                 prefetch={false}
-                onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_hero")}
+                onClick={() => {
+                  trackAdsLpCtaClick("paid", "hero", checkoutUrl("yearly"), "yearly");
+                  trackBeginCheckout("yearly", "primarschule_uebungen_hero");
+                }}
                 className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
               >
                 CHF 8.25/Mt. · bis zu 3 Kinder
               </Link>
               <Link
-                href="/learn/1/math/zahlen-1-10"
+                href={freeTrialUrl}
+                onClick={() => trackAdsLpCtaClick("free", "hero", freeTrialUrl)}
                 className="rounded-full border-2 border-green-700 px-7 py-4 text-center text-base font-bold text-green-800 transition-colors hover:bg-green-50"
               >
                 Kostenlos ausprobieren
@@ -180,7 +186,11 @@ export default function AdsPrimarschuleClient() {
               <h3 className="text-lg font-bold text-gray-900">Kostenlos</h3>
               <p className="mt-2 text-3xl font-black text-gray-950">CHF 0</p>
               <p className="mt-2 text-sm leading-6 text-gray-500">20 Aufgaben gratis testen, ohne Kreditkarte.</p>
-              <Link href="/learn/1/math/zahlen-1-10" className="mt-auto block rounded-full bg-gray-100 px-5 py-3 text-center text-sm font-bold text-gray-800 hover:bg-gray-200">
+              <Link
+                href={freeTrialUrl}
+                onClick={() => trackAdsLpCtaClick("free", "pricing", freeTrialUrl)}
+                className="mt-auto block rounded-full bg-gray-100 px-5 py-3 text-center text-sm font-bold text-gray-800 hover:bg-gray-200"
+              >
                 Jetzt testen
               </Link>
             </div>
@@ -192,7 +202,10 @@ export default function AdsPrimarschuleClient() {
               <Link
                 href={checkoutUrl("monthly")}
                 prefetch={false}
-                onClick={() => trackBeginCheckout("monthly", "primarschule_uebungen_pricing")}
+                onClick={() => {
+                  trackAdsLpCtaClick("paid", "pricing", checkoutUrl("monthly"), "monthly");
+                  trackBeginCheckout("monthly", "primarschule_uebungen_pricing");
+                }}
                 className="mt-auto block rounded-full bg-green-700 px-5 py-3 text-center text-sm font-bold text-white hover:bg-green-800"
               >
                 Monatlich starten
@@ -207,7 +220,10 @@ export default function AdsPrimarschuleClient() {
               <Link
                 href={checkoutUrl("yearly")}
                 prefetch={false}
-                onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_pricing")}
+                onClick={() => {
+                  trackAdsLpCtaClick("paid", "pricing", checkoutUrl("yearly"), "yearly");
+                  trackBeginCheckout("yearly", "primarschule_uebungen_pricing");
+                }}
                 className="mt-auto block rounded-full bg-white px-5 py-3 text-center text-sm font-black text-green-800 hover:bg-green-50"
               >
                 Jährlich für bis zu 3 Kinder
@@ -245,12 +261,19 @@ export default function AdsPrimarschuleClient() {
           <Link
             href={checkoutUrl("yearly")}
             prefetch={false}
-            onClick={() => trackBeginCheckout("yearly", "primarschule_uebungen_bottom")}
+            onClick={() => {
+              trackAdsLpCtaClick("paid", "bottom", checkoutUrl("yearly"), "yearly");
+              trackBeginCheckout("yearly", "primarschule_uebungen_bottom");
+            }}
             className="rounded-full bg-white px-7 py-4 text-base font-black text-green-800 hover:bg-green-50"
           >
             CHF 99/Jahr · bis zu 3 Kinder
           </Link>
-          <Link href="/learn/1/math/zahlen-1-10" className="rounded-full border-2 border-white px-7 py-4 text-base font-bold text-white hover:bg-green-800">
+          <Link
+            href={freeTrialUrl}
+            onClick={() => trackAdsLpCtaClick("free", "bottom", freeTrialUrl)}
+            className="rounded-full border-2 border-white px-7 py-4 text-base font-bold text-white hover:bg-green-800"
+          >
             Erst kostenlos testen
           </Link>
         </div>

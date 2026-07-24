@@ -1,4 +1,6 @@
 type CheckoutPlan = "monthly" | "yearly";
+type AdsLpCtaType = "paid" | "free";
+type AdsLpCtaLocation = "hero" | "pricing" | "bottom";
 
 declare global {
   interface Window {
@@ -47,6 +49,23 @@ export function trackBeginCheckout(plan: CheckoutPlan, source: string) {
   });
 }
 
+export function trackAdsLpCtaClick(type: AdsLpCtaType, location: AdsLpCtaLocation, destination: string, plan?: CheckoutPlan) {
+  pushDataLayerEvent(type === "paid" ? "ads_lp_paid_cta_click" : "ads_lp_free_cta_click", {
+    page: "primarschule_uebungen",
+    page_path: "/primarschule-uebungen",
+    cta_type: type,
+    cta_location: location,
+    destination,
+    ...(plan
+      ? {
+          currency: "CHF",
+          value: PLAN_VALUE[plan],
+          plan,
+        }
+      : {}),
+  });
+}
+
 export function trackPurchase(planParam: string | null, transactionIdParam: string | null) {
   const plan = isCheckoutPlan(planParam) ? planParam : "monthly";
   const transactionId = transactionIdParam || `cleverli_${plan}_${Date.now()}`;
@@ -66,4 +85,3 @@ export function trackPurchase(planParam: string | null, transactionIdParam: stri
     ],
   });
 }
-
