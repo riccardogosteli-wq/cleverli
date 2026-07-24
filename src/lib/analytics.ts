@@ -62,7 +62,11 @@ export function trackAdsLpCtaClick(type: AdsLpCtaType, location: AdsLpCtaLocatio
           value: PLAN_VALUE[plan],
           plan,
         }
-      : {}),
+      : {
+          currency: null,
+          value: null,
+          plan: null,
+        }),
   });
 }
 
