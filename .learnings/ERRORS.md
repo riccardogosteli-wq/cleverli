@@ -1,5 +1,15 @@
 # Errors
 
+## 2026-07-24 — Next dev uses hostname flag
+- Command: `npm run dev -- --host 127.0.0.1 --port 3010`.
+- Failure: Next CLI reported `unknown option '--host'`.
+- Fix: use `npm run dev -- --hostname 127.0.0.1 --port 3010`.
+
+## 2026-07-24 — Zsh globbed Next route segment paths
+- Command: `sed -n '1,140p' src/app/learn/[grade]/[subject]/[topic]/page.tsx`.
+- Failure: zsh reported `no matches found` because bracketed route segments were interpreted as globs.
+- Fix: quote paths that contain Next dynamic route brackets, e.g. `sed -n '1,140p' 'src/app/learn/[grade]/[subject]/[topic]/page.tsx'`.
+
 ## 2026-07-24 — Vercel ls has no limit flag
 - Command: `npx vercel ls cleverli --limit 5`.
 - Failure: Vercel CLI 54.6.1 reported `unknown or unexpected option: --limit`.
