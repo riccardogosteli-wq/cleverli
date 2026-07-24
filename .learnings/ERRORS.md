@@ -10,6 +10,11 @@
 - Failure: zsh reported `no matches found` because bracketed route segments were interpreted as globs.
 - Fix: quote paths that contain Next dynamic route brackets, e.g. `sed -n '1,140p' 'src/app/learn/[grade]/[subject]/[topic]/page.tsx'`.
 
+## 2026-07-24 — Git status run outside repo
+- Command: `git status --short` in `/Users/riccardogosteli/.openclaw/workspace-cleverli`.
+- Failure: directory is the OpenClaw workspace, not the Cleverli git repository.
+- Fix: run repo git checks in `/Users/riccardogosteli/projects/cleverli`.
+
 ## 2026-07-24 — Vercel ls has no limit flag
 - Command: `npx vercel ls cleverli --limit 5`.
 - Failure: Vercel CLI 54.6.1 reported `unknown or unexpected option: --limit`.
