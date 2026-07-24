@@ -75,6 +75,11 @@
 - Failure: TypeScript rejected assigning `{ ...payload }` to an `Omit<typeof payload, "correct_ids">` type before deleting `correct_ids`.
 - Fix: build the legacy Supabase payload explicitly without the `correct_ids` property.
 
+## 2026-07-24 — Vercel manual deploy timed out
+- Command: `npx vercel --prod --yes`.
+- Failure: Vercel API request to create the deployment timed out with `read ETIMEDOUT` after upload.
+- Fix: check `npx vercel ls cleverli` to see whether a deployment was created; retry only if no new deploy appears.
+
 ## 2026-07-23 — Project-wide lint includes generated reports
 - Command: `npm run lint`.
 - Failure: ESLint scanned `tests/results/html/trace/assets/*` generated Playwright report bundles and old test files, producing thousands of warnings/errors unrelated to the current UI change.
