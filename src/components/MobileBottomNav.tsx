@@ -47,8 +47,9 @@ export default function MobileBottomNav() {
   const isExercise = pathname.startsWith("/learn/");
   const isAuthPage = ["/signup", "/login", "/reset-password"].includes(pathname);
   const isAdsPage = pathname.startsWith("/ads/") || pathname === "/primarschule-uebungen";
+  const isInternalPage = pathname === "/internal-log-dashboard";
 
-  if (isExercise || isAuthPage || isAdsPage) return null;
+  if (isExercise || isAuthPage || isAdsPage || isInternalPage) return null;
 
   return (
     <nav
