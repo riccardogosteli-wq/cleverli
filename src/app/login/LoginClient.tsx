@@ -6,6 +6,7 @@ import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { getSupabase } from "@/lib/supabase";
+import { getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
 
 export default function Login() {
   const { tr } = useLang();
@@ -16,21 +17,32 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [pendingCheckout, setPendingCheckout] = useState<ReturnType<typeof getPendingCheckoutIntent>>(null);
+  const [intentLoaded, setIntentLoaded] = useState(false);
+
+  useEffect(() => {
+    setPendingCheckout(getPendingCheckoutIntent());
+    setIntentLoaded(true);
+  }, []);
 
   // UJ-3: redirect if already logged in (also check localStorage synchronously to avoid flash)
   const [redirecting, setRedirecting] = useState(() => {
     if (typeof window !== "undefined") {
-      try { return !!localStorage.getItem("cleverli_session"); } catch { return false; }
+      try { return !getPendingCheckoutIntent() && !!localStorage.getItem("cleverli_session"); } catch { return false; }
     }
     return false;
   });
 
   useEffect(() => {
-    if (loaded && session) {
+    if (loaded && intentLoaded && session) {
+      if (pendingCheckout) {
+        startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId);
+        return;
+      }
       setRedirecting(true);
       router.replace("/dashboard");
     }
-  }, [loaded, session, router]);
+  }, [loaded, intentLoaded, session, pendingCheckout, router]);
 
   const handleLogin = async () => {
     if (!email || !password) { setError(tr("errorEmailPw") ?? "Bitte E-Mail und Passwort eingeben."); return; }
@@ -56,6 +68,10 @@ export default function Login() {
       // Success: reset loading state and force redirect
       setLoading(false);
       setLoginInProgress(false);
+      if (pendingCheckout) {
+        startCheckout(pendingCheckout.plan, pendingCheckout.source);
+        return;
+      }
       router.replace("/dashboard");
     }
     // on success, onAuthStateChange in useSession handles redirect via session update
@@ -64,9 +80,14 @@ export default function Login() {
 
   // Redirect once session is set after login
   useEffect(() => {
-    if (loaded && session) router.push("/dashboard");
+    if (!loaded || !intentLoaded || !session) return;
+    if (pendingCheckout) {
+      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId);
+      return;
+    }
+    router.push("/dashboard");
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [session]);
+  }, [session, pendingCheckout]);
 
   // Show loading spinner immediately if we know user is already logged in
   if (redirecting) {
@@ -140,7 +161,10 @@ export default function Login() {
             <Link href="/reset-password" className="text-xs text-gray-800 font-semibold hover:text-gray-800 underline">
               Passwort vergessen?
             </Link>
-            <Link href="/signup" className="text-xs text-green-700 underline">
+            <Link
+              href={pendingCheckout ? `/signup?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}` : "/signup"}
+              className="text-xs text-green-700 underline"
+            >
               Noch kein Konto? Jetzt registrieren →
             </Link>
           </div>

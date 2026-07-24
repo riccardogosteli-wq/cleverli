@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
 
   // Guest: redirect to signup
   if (!userId) {
-    const signupUrl = `${BASE_URL}/signup?next=/api/checkout?plan=${plan}`;
+    const signupUrl = `${BASE_URL}/signup?checkout=${encodeURIComponent(plan)}&source=checkout_api`;
     return wantsJson(req)
       ? NextResponse.json({ error: "login_required", url: signupUrl }, { status: 401 })
       : NextResponse.redirect(signupUrl);
@@ -47,7 +47,7 @@ export async function GET(req: NextRequest) {
     Sentry.captureMessage("[checkout] unauthorized uid checkout attempt", "warning");
     return wantsJson(req)
       ? NextResponse.json({ error: "unauthorized" }, { status: 401 })
-      : NextResponse.redirect(`${BASE_URL}/login`);
+      : NextResponse.redirect(`${BASE_URL}/login?checkout=${encodeURIComponent(plan)}&source=checkout_api`);
   }
 
   const priceId = PRICE_IDS[plan] ?? PRICE_IDS.monthly;

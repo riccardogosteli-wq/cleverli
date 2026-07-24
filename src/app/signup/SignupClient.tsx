@@ -8,6 +8,7 @@ import { useSession } from "@/hooks/useSession";
 import { getSupabase } from "@/lib/supabase";
 import { trackSignUp } from "@/lib/analytics";
 import { captureAppError } from "@/lib/monitoring";
+import { getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
 
 export default function Signup() {
   const { tr } = useLang();
@@ -18,11 +19,23 @@ export default function Signup() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [pendingCheckout, setPendingCheckout] = useState<ReturnType<typeof getPendingCheckoutIntent>>(null);
+  const [intentLoaded, setIntentLoaded] = useState(false);
+
+  useEffect(() => {
+    setPendingCheckout(getPendingCheckoutIntent());
+    setIntentLoaded(true);
+  }, []);
 
   // Redirect if already logged in
   useEffect(() => {
-    if (loaded && session) router.replace("/dashboard");
-  }, [loaded, session, router]);
+    if (!loaded || !intentLoaded || !session) return;
+    if (pendingCheckout) {
+      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId);
+      return;
+    }
+    router.replace("/dashboard");
+  }, [loaded, intentLoaded, session, pendingCheckout, router]);
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -83,6 +96,10 @@ export default function Signup() {
 
       // If session is immediately available (email confirm disabled), redirect to first exercise
       if (data?.session) {
+        if (pendingCheckout) {
+          setTimeout(() => startCheckout(pendingCheckout.plan, pendingCheckout.source, data.session?.user.id), 800);
+          return;
+        }
         setTimeout(() => router.push("/learn/1/math/zahlen-1-10"), 800);
       } else {
         // Email confirmation required — stay on success screen
@@ -108,7 +125,9 @@ export default function Signup() {
           <div className="space-y-4">
             <div className="text-center space-y-1">
               <h1 className="text-2xl font-bold text-gray-900">Konto erstellen</h1>
-              <p className="text-sm text-gray-500">Kostenlos · keine Kreditkarte nötig</p>
+              <p className="text-sm text-gray-500">
+                {pendingCheckout ? "Konto erstellen, dann sicher bezahlen" : "Kostenlos · keine Kreditkarte nötig"}
+              </p>
             </div>
 
             <form onSubmit={handleSignup} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-4">
@@ -156,7 +175,7 @@ export default function Signup() {
                 style={{ minHeight: "48px" }}
                 className="w-full bg-green-700 text-white py-3 px-4 rounded-xl font-bold text-base hover:bg-green-600 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
               >
-                {loading ? "⏳ Konto wird erstellt..." : "🎉 Kostenlos starten"}
+                {loading ? "⏳ Konto wird erstellt..." : pendingCheckout ? "Weiter zur sicheren Zahlung" : "🎉 Kostenlos starten"}
               </button>
 
               <p className="text-center text-xs text-gray-400">
@@ -167,7 +186,12 @@ export default function Signup() {
 
             <p className="text-center text-sm text-gray-600">
               Bereits ein Konto?{" "}
-              <Link href="/login" className="text-green-700 font-semibold hover:underline">Anmelden</Link>
+              <Link
+                href={pendingCheckout ? `/login?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}` : "/login"}
+                className="text-green-700 font-semibold hover:underline"
+              >
+                Anmelden
+              </Link>
             </p>
           </div>
         ) : (
@@ -175,7 +199,7 @@ export default function Signup() {
             <div className="text-4xl">✨</div>
             <h2 className="text-xl font-bold text-gray-900">Konto erstellt!</h2>
             <p className="text-sm text-gray-600">
-              Dein Konto ist bereit. Du wirst zum ersten Kurs weitergeleitet...
+              {pendingCheckout ? "Dein Konto ist bereit. Du wirst zur sicheren Zahlung weitergeleitet..." : "Dein Konto ist bereit. Du wirst zum ersten Kurs weitergeleitet..."}
             </p>
             <p className="text-xs text-gray-400">Einen Moment bitte ⏳</p>
           </div>
