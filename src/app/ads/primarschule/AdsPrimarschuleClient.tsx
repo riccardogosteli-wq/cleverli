@@ -105,7 +105,7 @@ export default function AdsPrimarschuleClient() {
             ["13’000+", "interaktive Übungen"],
             ["1.–6.", "Klasse Primarschule"],
             ["20", "Aufgaben gratis"],
-            ["3", "Kinder pro Familie"],
+            ["LP21", "nach Lehrplan 21"],
           ].map(([value, label]) => (
             <div key={label} className="text-center">
               <div className="text-3xl font-black text-gray-950">{value}</div>
