@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { loadRewards, getProgressValue, countTotalStars, checkAndUnlockRewards, TRIGGER_LABELS, Reward, ProgressSnapshot } from "@/lib/rewards";
+import { loadRewards, getProgressValue, countCompletedTopics, countTotalStars, checkAndUnlockRewards, TRIGGER_LABELS, Reward, ProgressSnapshot } from "@/lib/rewards";
 import { useLang } from "@/lib/LangContext";
 import RewardUnlockedModal from "./RewardUnlockedModal";
 
@@ -16,7 +16,12 @@ export default function RewardWidget({ profile }: Props) {
 
   useEffect(() => {
     const totalStars = countTotalStars();
-    const snapshot: ProgressSnapshot = { ...profile, totalStars };
+    const snapshot: ProgressSnapshot = {
+      totalExercises: profile.totalExercises,
+      totalTopicsComplete: countCompletedTopics(),
+      dailyStreak: profile.dailyStreak,
+      totalStars,
+    };
     setSnap(snapshot);
 
     // Check for newly unlocked rewards

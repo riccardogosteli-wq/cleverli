@@ -13,6 +13,7 @@ import { useSession } from "@/hooks/useSession";
 import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
 import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
 import { getTierProgress } from "@/lib/tierProgress";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { startCheckout } from "@/lib/checkoutClient";
 import RewardWidget from "@/components/RewardWidget";
 import { DashboardGuestPreview } from "@/components/GuestPreview";
@@ -81,12 +82,18 @@ const SUBJECT_ICONS: Record<string, string> = {
 
 const GRADE_KEY = "cleverli_last_grade";
 
-function getProgress(grade: number, subject: string, topicId: string) {
+function getProgress(grade: number, subject: string, topic: { id: string; exercises: unknown[] }) {
   if (typeof window === "undefined") return null;
   try {
-    for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
-      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
-      if (raw) return JSON.parse(raw);
+    for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
+      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+      if (raw) {
+        const progress = JSON.parse(raw);
+        return {
+          ...progress,
+          completed: getEffectiveCompleted(progress, topic.exercises.length),
+        };
+      }
     }
     return null;
   } catch { return null; }
@@ -352,7 +359,7 @@ function DashboardInner() {
               {getSubjects(grade!).map(s => {
                 const meta = SUBJECT_META[s.id];
                 const topics = getTopics(grade!, s.id);
-                const done = topics.filter(t => getProgress(grade!, s.id, t.id)).length;
+                const done = topics.filter(t => (getProgress(grade!, s.id, t)?.completed ?? 0) >= t.exercises.length).length;
                 return (
                   <button key={s.id} onClick={() => setSubject(s.id)}
                     style={{ minHeight: "80px", transition: "all 0.15s ease" }}
@@ -384,8 +391,8 @@ function DashboardInner() {
   const topics = getTopics(grade, subject);
   const currentSubjectMeta = SUBJECT_META[subject];
   const isTopicFullyDone = (topicId: string) => {
-    const prog = getProgress(grade, subject, topicId);
     const topic = topics.find(t => t.id === topicId);
+    const prog = topic ? getProgress(grade, subject, topic) : null;
     if (!prog || !topic) return false;
     return (prog.completed ?? 0) >= topic.exercises.length;
   };
@@ -562,7 +569,7 @@ function DashboardInner() {
         return (
           <div className="flex flex-col">
             {topics.map((topic, i) => {
-              const prog = getProgress(grade, subject, topic.id);
+              const prog = getProgress(grade, subject, topic);
               const stars = prog?.stars ?? 0;
               const completedExercises = prog?.completed ?? 0;
               const done = completedExercises >= topic.exercises.length;

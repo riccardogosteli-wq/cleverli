@@ -6,6 +6,7 @@ import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
 import { getActiveProfileId } from "@/lib/family";
 import { syncProfileToSupabase, loadProfileFromSupabase, loadTopicProgressFromSupabase } from "@/lib/progressSync";
 import { getTierProgress } from "@/lib/tierProgress";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -108,7 +109,7 @@ function isSubjectComplete(grade: number, subject: string): boolean {
     }
     if (!raw) return false;
     const prog = JSON.parse(raw);
-    return prog?.completed >= t.exercises.length;
+    return getEffectiveCompleted(prog, t.exercises.length) >= t.exercises.length;
   });
 }
 
@@ -192,11 +193,13 @@ function checkAchievements(profile: Profile, opts: {
     const scienceComplete = [1,2,3,4,5,6].some(g => {
       const topics = getTopics(g, "science");
       if (!topics.length) return false;
-      return topics.every((t: { id: string }) => {
+      return topics.every((t: { id: string; exercises: unknown[] }) => {
         try {
-          return getProgressSubjects(g, "science", t.id).some(progressSubject =>
-            !!localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`)
-          );
+          return getProgressSubjects(g, "science", t.id).some(progressSubject => {
+            const raw = localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`);
+            if (!raw) return false;
+            return getEffectiveCompleted(JSON.parse(raw), t.exercises.length) >= t.exercises.length;
+          });
         } catch {
           return false;
         }
@@ -300,6 +303,7 @@ export function useProfile() {
             if (!localStorage.getItem(key)) {
               localStorage.setItem(key, JSON.stringify({
                 stars: t.stars, score: t.score, completed: t.completed,
+                correctIds: t.correct_ids ?? [],
                 partial: t.partial, lastPlayed: t.last_played,
               }));
             }

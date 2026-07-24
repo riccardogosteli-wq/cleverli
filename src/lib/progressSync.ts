@@ -17,6 +17,7 @@ export interface SupabaseTopicProgress {
   stars: number;
   score: number;
   completed: number;
+  correct_ids: string[] | null;
   partial: boolean;
   last_played: string | null;
 }
@@ -64,7 +65,7 @@ export async function syncTopicProgressToSupabase(
   grade: number,
   subject: string,
   topicId: string,
-  data: { stars: number; score: number; completed: number; partial: boolean; lastPlayed: string }
+  data: { stars: number; score: number; completed: number; correctIds?: string[]; partial: boolean; lastPlayed: string }
 ): Promise<void> {
   const supabase = getSupabase();
   if (!supabase || !childId) return;
@@ -72,7 +73,7 @@ export async function syncTopicProgressToSupabase(
   if (!parentId) return;
 
   try {
-    await supabase.from("topic_progress").upsert({
+    const payload = {
       child_id: childId,
       parent_id: parentId,
       grade,
@@ -81,9 +82,28 @@ export async function syncTopicProgressToSupabase(
       stars: data.stars,
       score: data.score,
       completed: data.completed,
+      correct_ids: data.correctIds ?? [],
       partial: data.partial,
       last_played: data.lastPlayed,
-    }, { onConflict: "child_id, grade, subject, topic_id" });
+    };
+    const { error } = await supabase.from("topic_progress").upsert(payload, { onConflict: "child_id, grade, subject, topic_id" });
+    if (error && /correct_ids/i.test(error.message)) {
+      const legacyPayload = {
+        child_id: payload.child_id,
+        parent_id: payload.parent_id,
+        grade: payload.grade,
+        subject: payload.subject,
+        topic_id: payload.topic_id,
+        stars: payload.stars,
+        score: payload.score,
+        completed: payload.completed,
+        partial: payload.partial,
+        last_played: payload.last_played,
+      };
+      await supabase.from("topic_progress").upsert(legacyPayload, { onConflict: "child_id, grade, subject, topic_id" });
+    } else if (error) {
+      throw error;
+    }
   } catch (e) {
     console.warn("progressSync: topic sync failed", e);
   }

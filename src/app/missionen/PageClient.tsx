@@ -7,6 +7,7 @@ import { useLang } from "@/lib/LangContext";
 import { loadFamily, getActiveProfileId } from "@/lib/family";
 import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
 import { getTierProgress } from "@/lib/tierProgress";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { LEVELS, getLevelProgress } from "@/lib/xp";
 import { useSession } from "@/hooks/useSession";
 import { MissionenGuestPreview } from "@/components/GuestPreview";
@@ -26,14 +27,14 @@ interface TopicProgress {
 }
 
 // ─── READ SAVED PROGRESS FROM LOCALSTORAGE ──────────────────────────────────
-function loadTopicProgress(grade: number, subject: string, topicId: string): { completed: number; stars: number } {
+function loadTopicProgress(grade: number, subject: string, topicId: string, total: number): { completed: number; stars: number } {
   if (typeof window === "undefined") return { completed: 0, stars: 0 };
   try {
     for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
       const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
       if (!raw) continue;
       const d = JSON.parse(raw);
-      return { completed: d.completed ?? 0, stars: d.stars ?? 0 };
+      return { completed: getEffectiveCompleted(d, total), stars: d.stars ?? 0 };
     }
     return { completed: 0, stars: 0 };
   } catch { return { completed: 0, stars: 0 }; }
@@ -126,7 +127,7 @@ function TopicCard({ tp, grade, subject }: { tp: TopicProgress; grade: number; s
           <div className="flex items-center justify-between gap-2">
             <span className={`text-sm font-bold truncate ${sc.text}`}>{tp.title}</span>
             <span className="shrink-0">
-              {tp.stars >= 1 && ACHIEVEMENT_ICONS[Math.min(tp.stars, 3)] && (
+              {tp.status === "completed" && tp.stars >= 1 && ACHIEVEMENT_ICONS[Math.min(tp.stars, 3)] && (
                 <Image src={ACHIEVEMENT_ICONS[Math.min(tp.stars, 3)]} alt={`${tp.stars} Sterne`} width={28} height={28} className="object-contain" />
               )}
             </span>
@@ -251,9 +252,9 @@ export default function MissionenPage() {
       let totalExercisesTotal = 0;
 
       const topicProgressList: TopicProgress[] = topics.map(topic => {
-        const { completed, stars } = loadTopicProgress(grade, subject.id, topic.id);
-        const tierInfo = getTierProgress(topic, completed);
         const total = topic.exercises.length;
+        const { completed, stars } = loadTopicProgress(grade, subject.id, topic.id, total);
+        const tierInfo = getTierProgress(topic, completed);
 
         completedExercisesTotal += completed;
         totalExercisesTotal += total;

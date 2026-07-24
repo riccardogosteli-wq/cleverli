@@ -26,7 +26,7 @@ import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useSession } from "@/hooks/useSession";
 import Confetti from "./Confetti";
-import { checkAndUnlockRewards, loadRewards, countTotalStars, Reward } from "@/lib/rewards";
+import { checkAndUnlockRewards, loadRewards, countCompletedTopics, countTotalStars, Reward } from "@/lib/rewards";
 import RewardUnlockedModal from "./RewardUnlockedModal";
 import { getLevelForXp, getNextLevel } from "@/lib/xp";
 import SignupPromptModal from "./SignupPromptModal";
@@ -34,6 +34,7 @@ import { getProgressSubjects } from "@/data";
 import { trackExerciseEvent, ExerciseTelemetryPayload } from "@/lib/exerciseTelemetry";
 import { startCheckout } from "@/lib/checkoutClient";
 import { captureAppError } from "@/lib/monitoring";
+import { getEffectiveCompleted, mergeCompletedProgress } from "@/lib/topicProgress";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
@@ -50,10 +51,25 @@ function sortByDifficulty(exercises: Exercise[]) {
   return [...exercises].sort((a, b) => (a.difficulty ?? 2) - (b.difficulty ?? 2));
 }
 
-function getStoredCompleted(grade: number, subject: string, topicId: string) {
+function getExerciseId(exercise: Exercise, index: number) {
+  return exercise.id ?? `exercise-${index}`;
+}
+
+function getCorrectIdSet(topic: Topic, progress: { correctIds?: string[]; completed?: number; score?: number; stars?: number } | null | undefined) {
+  const sorted = sortByDifficulty(topic.exercises);
+  if (Array.isArray(progress?.correctIds) && progress.correctIds.length > 0) {
+    const validIds = new Set(sorted.map(getExerciseId));
+    return new Set(progress.correctIds.filter(id => validIds.has(id)));
+  }
+
+  const completed = getEffectiveCompleted(progress, topic.exercises.length);
+  return new Set(sorted.slice(0, completed).map(getExerciseId));
+}
+
+function getStoredCompleted(topic: Topic, grade: number, subject: string) {
   if (typeof window === "undefined") return 0;
   try {
-    return Math.max(0, Number(getStoredProgress(grade, subject, topicId)?.completed ?? 0));
+    return getEffectiveCompleted(getStoredProgress(grade, subject, topic.id), topic.exercises.length);
   } catch {
     return 0;
   }
@@ -68,29 +84,32 @@ function getStoredProgress(grade: number, subject: string, topicId: string) {
   return null;
 }
 
-function selectCurrentTierExercises(topic: Topic, completed: number) {
+function selectCurrentTierExercises(topic: Topic, correctIds: Set<string>) {
   const sorted = sortByDifficulty(topic.exercises);
-  const tierInfo = getTierProgress(topic, completed);
+  const entries = sorted.map((exercise, index) => ({ exercise, index }));
+  const easy = entries.filter(({ exercise }) => exercise.difficulty === 1);
+  const medium = entries.filter(({ exercise }) => exercise.difficulty === 2);
+  const hard = entries.filter(({ exercise }) => (exercise.difficulty ?? 2) === 3);
+  const isDone = ({ exercise, index }: { exercise: Exercise; index: number }) => correctIds.has(getExerciseId(exercise, index));
+  const remainingEasy = easy.filter(entry => !isDone(entry)).map(({ exercise }) => exercise);
+  const remainingMedium = medium.filter(entry => !isDone(entry)).map(({ exercise }) => exercise);
+  const remainingHard = hard.filter(entry => !isDone(entry)).map(({ exercise }) => exercise);
 
-  if (completed < tierInfo.easyBoundary) {
-    return sorted.slice(completed, tierInfo.easyBoundary);
-  }
-  if (completed < tierInfo.mediumBoundary) {
-    return sorted.slice(completed, tierInfo.mediumBoundary);
-  }
-  return sorted.slice(completed, topic.exercises.length);
+  if (remainingEasy.length > 0) return remainingEasy;
+  if (remainingMedium.length > 0) return remainingMedium;
+  return remainingHard;
 }
 
 function getInitialSessionStart(topic: Topic, grade: number, subject: string) {
-  const completed = getStoredCompleted(grade, subject, topic.id);
+  const completed = getCorrectIdSet(topic, getStoredProgress(grade, subject, topic.id)).size;
   return completed >= topic.exercises.length ? 0 : completed;
 }
 
 function getInitialSessionExercises(topic: Topic, grade: number, subject: string) {
-  const completed = getStoredCompleted(grade, subject, topic.id);
-  return completed >= topic.exercises.length
+  const correctIds = getCorrectIdSet(topic, getStoredProgress(grade, subject, topic.id));
+  return correctIds.size >= topic.exercises.length
     ? sortByDifficulty(topic.exercises)
-    : selectCurrentTierExercises(topic, completed);
+    : selectCurrentTierExercises(topic, correctIds);
 }
 
 // ── Translation helper ────────────────────────────────────────────────────────
@@ -175,7 +194,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [sessionStartCompleted, setSessionStartCompleted] = useState(() => getInitialSessionStart(topic, grade, subject));
   const [fullSetExercises, setFullSetExercises] = useState(() => getInitialSessionExercises(topic, grade, subject));
   const [exercises, setExercises] = useState(fullSetExercises);
-  const [isReplayMode, setIsReplayMode] = useState(() => getStoredCompleted(grade, subject, topic.id) >= topic.exercises.length);
+  const [isReplayMode, setIsReplayMode] = useState(() => getStoredCompleted(topic, grade, subject) >= topic.exercises.length);
+  const [correctIds, setCorrectIds] = useState<Set<string>>(() => getCorrectIdSet(topic, getStoredProgress(grade, subject, topic.id)));
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [idx, setIdx] = useState(0);
@@ -196,7 +216,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [mascotReaction, setMascotReaction] = useState<'correct'|'wrong'|null>(null);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const topicStartRef = useRef<number>(Date.now());
-  const currentCompleted = sessionStartCompleted + idx;
+  const currentCompleted = correctIds.size;
   const tierInfo = getTierProgress(topic, currentCompleted);
   const nextTopic = allTopics[topicIndex + 1] ?? null;
   const rewardRef = useRef<HTMLDivElement>(null);
@@ -243,12 +263,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // Save partial progress when free limit is reached (so stars show on topic list)
   useEffect(() => {
     if (isLocked && score > 0) {
-      const completed = Math.max(sessionStartCompleted, sessionStartCompleted + idx);
+      const completed = Math.min(topic.exercises.length, correctIds.size);
       const s = calcStars(score, Math.max(1, idx)); // stars based on the current free session
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       localStorage.setItem(`cleverli_${grade}_${subject}_${topic.id}`, JSON.stringify({
         ...existing,
-        completed, score, stars: s, partial: true, lastPlayed: new Date().toISOString()
+        completed, score, stars: s, correctIds: Array.from(correctIds), partial: true, lastPlayed: new Date().toISOString()
       }));
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -262,14 +282,15 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       const prevScore = existing?.score ?? 0;
       const prevStars = existing?.stars ?? 0;
-      const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
+      const completedCount = Math.min(topic.exercises.length, correctIds.size);
       const s = calcStars(score, exercises.length);
       const lastPlayed = new Date().toISOString();
       const progressData = {
         ...existing,
-        completed: Math.max(existing?.completed ?? 0, completedCount),
+        completed: mergeCompletedProgress(existing, completedCount, topic.exercises.length),
         score: Math.max(prevScore, score),
         stars: completedCount >= topic.exercises.length ? Math.max(prevStars, s) : prevStars,
+        correctIds: Array.from(correctIds),
         partial: completedCount < topic.exercises.length,
         lastPlayed,
       };
@@ -282,19 +303,21 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         });
       }
     }
-  }, [done, score, grade, subject, topic.id, topic.exercises.length, exercises.length, sessionStartCompleted, isReplayMode, isReviewMode]);
+  }, [done, score, grade, subject, topic.id, topic.exercises.length, exercises.length, correctIds, isReplayMode, isReviewMode]);
 
   const startTopicSession = (mode: "next" | "replay") => {
     topicStartRef.current = Date.now();
-    const storedCompleted = getStoredCompleted(grade, subject, topic.id);
+    const storedCorrectIds = getCorrectIdSet(topic, getStoredProgress(grade, subject, topic.id));
+    const storedCompleted = storedCorrectIds.size;
     const hasRemaining = storedCompleted < topic.exercises.length;
     const replay = mode === "replay" || !hasRemaining;
     const nextStart = replay ? 0 : storedCompleted;
     const nextExercises = replay
       ? sortByDifficulty(topic.exercises)
-      : selectCurrentTierExercises(topic, nextStart);
+      : selectCurrentTierExercises(topic, storedCorrectIds);
 
     setSessionStartCompleted(nextStart);
+    setCorrectIds(replay ? new Set() : storedCorrectIds);
     setFullSetExercises(nextExercises);
     setExercises(nextExercises.length > 0 ? nextExercises : sortByDifficulty(topic.exercises));
     setIsReplayMode(replay);
@@ -342,6 +365,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     const newStreak = correct ? streak + 1 : 0;
     const newScore = correct ? score + 1 : score;
     const newWrongCount = correct ? wrongCountSession : wrongCountSession + 1;
+    const currentId = getExerciseId(exercises[idx] ?? current, sessionStartCompleted + idx);
+    const nextCorrectIds = new Set(correctIds);
+    if (correct && !isReplayMode) nextCorrectIds.add(currentId);
 
     trackExerciseEvent(correct ? "exercise_completed" : "exercise_wrong_answer", exerciseTelemetryPayload({
       isCorrect: correct,
@@ -352,6 +378,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     // Combo tracking
     if (correct) {
       setScore(s => s + 1);
+      if (!isReplayMode) setCorrectIds(nextCorrectIds);
       setStreak(newStreak);
       const newCombo = comboCount + 1;
       setComboCount(newCombo);
@@ -379,7 +406,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
     // Record XP — topic completion only counts when the full topic is really done.
     const isLast = idx + 1 >= exercises.length;
-    const absoluteCompleted = sessionStartCompleted + idx + 1;
+    const absoluteCompleted = Math.min(topic.exercises.length, nextCorrectIds.size);
     const isFullTopicComplete = correct && isLast && !isReplayMode && !isReviewMode && absoluteCompleted >= topic.exercises.length;
     // Tier crossing detection (for achievements)
     let tierCompleted: "easy" | "medium" | "hard" | undefined;
@@ -416,12 +443,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     }
 
     // Update localStorage topic progress with current completed count (for tier display)
-    if (correct && !isReplayMode && !isReviewMode) {
+    if (correct && !isReplayMode) {
       const topicKey = `cleverli_${grade}_${subject}_${topic.id}`;
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       localStorage.setItem(topicKey, JSON.stringify({
         ...existing,
-        completed: Math.max(existing?.completed ?? 0, sessionStartCompleted + idx + 1),
+        completed: mergeCompletedProgress(existing, absoluteCompleted, topic.exercises.length),
+        correctIds: Array.from(nextCorrectIds),
         lastPlayed: new Date().toISOString(),
       }));
       window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
@@ -432,13 +460,14 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       setTimeout(() => {
         try {
           const totalStars = countTotalStars();
+          const totalTopicsComplete = countCompletedTopics();
           // Build snapshot from localStorage profile (rewards.ts reads it internally)
           const profileRaw = typeof window !== "undefined" ? localStorage.getItem("cleverli_profile") : null;
           const prof = profileRaw ? JSON.parse(profileRaw) : null;
           if (prof) {
             const snap = {
               totalExercises: prof.totalExercises ?? 0,
-              totalTopicsComplete: prof.totalTopicsComplete ?? 0,
+              totalTopicsComplete,
               dailyStreak: prof.dailyStreak ?? 0,
               totalStars,
             };
@@ -491,12 +520,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       return;
     }
     // Tier completion toast (fires when we cross a boundary, non-review mode)
-    if (!isReviewMode && tierInfo.isTiered) {
-      const nextIdx = sessionStartCompleted + idx + 1;
-      if (nextIdx === tierInfo.easyBoundary) {
+    if (!isReviewMode && answered === true && tierInfo.isTiered) {
+      const nextCompleted = Math.min(topic.exercises.length, correctIds.size);
+      if (nextCompleted === tierInfo.easyBoundary) {
         setTierToast("🌱 Leicht-Level geschafft! +20 XP");
         setTimeout(() => setTierToast(null), 2500);
-      } else if (nextIdx === tierInfo.mediumBoundary) {
+      } else if (nextCompleted === tierInfo.mediumBoundary) {
         setTierToast("⚡ Mittel-Level geschafft! +30 XP");
         setTimeout(() => setTierToast(null), 2500);
       }
@@ -515,13 +544,14 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       const prevScore = existing?.score ?? 0;
       const prevStars = existing?.stars ?? 0;
-      const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
+      const completedCount = Math.min(topic.exercises.length, correctIds.size);
       const s = calcStars(score, sessionTotal);
       const progressData = {
         ...existing,
-        completed: Math.max(existing?.completed ?? 0, completedCount),
+        completed: mergeCompletedProgress(existing, completedCount, topic.exercises.length),
         score: Math.max(prevScore, score),
         stars: completedCount >= topic.exercises.length ? Math.max(prevStars, s) : prevStars,
+        correctIds: Array.from(correctIds),
         partial: completedCount < topic.exercises.length,
         lastPlayed: new Date().toISOString(),
       };
@@ -571,7 +601,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   // ── Topic Complete ──────────────────────────────────────────────
   if (done) {
-    const completedCount = Math.min(topic.exercises.length, sessionStartCompleted + exercises.length);
+    const completedCount = Math.min(topic.exercises.length, correctIds.size);
     const hasRemaining = !isReplayMode && completedCount < topic.exercises.length;
     const showTopicCompleteCelebration = !isReviewMode && !isReplayMode && completedCount >= topic.exercises.length;
     const totalEx = isReviewMode || hasRemaining || isReplayMode ? sessionTotal : topic.exercises.length;

@@ -15,6 +15,7 @@ import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import ChildProfileManager from "@/components/ChildProfileManager";
 import { useSession } from "@/hooks/useSession";
 import { ParentsGuestPreview } from "@/components/GuestPreview";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 interface TopicStat {
   grade: number;
@@ -45,6 +46,7 @@ function loadAllStats(): TopicStat[] {
           }
           if (!raw) continue;
           const p = JSON.parse(raw);
+          const completed = getEffectiveCompleted(p, topic.exercises.length);
           stats.push({
             grade, subject,
             topicId: topic.id,
@@ -52,7 +54,7 @@ function loadAllStats(): TopicStat[] {
             topicEmoji: topic.emoji,
             stars: p.stars ?? 0,
             score: p.score ?? 0,
-            completed: p.completed ?? 0,
+            completed,
             total: topic.exercises.length,
             lastPlayed: p.lastPlayed ?? "",
             partial: p.partial ?? false,
@@ -286,7 +288,7 @@ export default function ParentsDashboard() {
                 {SUBJECTS.map(sub => {
                   const subStats = gradeStats.filter(s => s.subject === sub.id);
                   const topics = getTopics(grade, sub.id);
-                  const doneCnt = subStats.filter(s => s.stars >= 1).length;
+                  const doneCnt = subStats.filter(s => s.completed >= s.total).length;
                   const pct = topics.length > 0 ? Math.round((doneCnt / topics.length) * 100) : 0;
                   return (
                     <div key={sub.id} className="flex items-center gap-2">

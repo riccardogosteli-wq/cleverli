@@ -70,6 +70,11 @@
 - Failure: Playwright expected bundled `chromium_headless_shell-1208`, but it was not installed in the local cache.
 - Fix: rerun QA with the system Chrome executable path instead of bundled Chromium.
 
+## 2026-07-24 — TypeScript rejected over-clever omitted payload
+- Command: `npm run build` after adding the Supabase `correct_ids` fallback payload.
+- Failure: TypeScript rejected assigning `{ ...payload }` to an `Omit<typeof payload, "correct_ids">` type before deleting `correct_ids`.
+- Fix: build the legacy Supabase payload explicitly without the `correct_ids` property.
+
 ## 2026-07-23 — Project-wide lint includes generated reports
 - Command: `npm run lint`.
 - Failure: ESLint scanned `tests/results/html/trace/assets/*` generated Playwright report bundles and old test files, producing thousands of warnings/errors unrelated to the current UI change.

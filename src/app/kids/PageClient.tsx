@@ -11,8 +11,9 @@ import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import { getLevelProgress } from "@/lib/xp";
 import { ACHIEVEMENTS } from "@/lib/achievements";
-import { getTopics, SUBJECTS } from "@/data/index";
+import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
 import { isDailyDoneToday } from "@/lib/daily";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 const COSTUME_IMAGES = [
   "/cleverli-wave.png",
@@ -31,13 +32,16 @@ const GRADE_COLORS = [
   { bg: "from-indigo-100 to-indigo-200", border: "border-indigo-300", text: "text-indigo-800", btn: "bg-indigo-500 hover:bg-indigo-600" },
 ];
 
-function getTopicDone(grade: number, subject: string, topicId: string): boolean {
+function getTopicDone(grade: number, subject: string, topicId: string, total: number): boolean {
   if (typeof window === "undefined") return false;
   try {
-    const raw = localStorage.getItem(`cleverli_${grade}_${subject}_${topicId}`);
-    if (!raw) return false;
-    const p = JSON.parse(raw);
-    return p?.stars >= 1;
+    for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+      if (!raw) continue;
+      const p = JSON.parse(raw);
+      return getEffectiveCompleted(p, total) >= total;
+    }
+    return false;
   } catch { return false; }
 }
 
@@ -45,7 +49,7 @@ function SubjectIsland({ grade, subject, emoji, label, colorIdx }: {
   grade: number; subject: string; emoji: string; label: string; colorIdx: number;
 }) {
   const topics = getTopics(grade, subject);
-  const done = topics.filter(t => getTopicDone(grade, subject, t.id)).length;
+  const done = topics.filter(t => getTopicDone(grade, subject, t.id, t.exercises.length)).length;
   const pct = topics.length > 0 ? Math.round((done / topics.length) * 100) : 0;
   const c = GRADE_COLORS[colorIdx];
 

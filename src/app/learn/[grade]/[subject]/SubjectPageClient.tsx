@@ -6,6 +6,7 @@ import { useLang } from "@/lib/LangContext";
 import { getTopicTitle } from "@/data/topicTitles";
 import { getTierProgress } from "@/lib/tierProgress";
 import { getProgressSubjects } from "@/data";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 interface Props { grade: number; subject: string; topics: Topic[]; }
 
@@ -17,7 +18,7 @@ const SUBJECT_META: Record<string, { emoji: string; nameKey: string; color: stri
 
 export default function SubjectPageClient({ grade, subject, topics }: Props) {
   const { tr, lang } = useLang();
-  const [progress, setProgress] = useState<Record<string, { stars: number; completed: number }>>({});
+  const [progress, setProgress] = useState<Record<string, { stars: number; completed: number; score?: number }>>({});
 
   useEffect(() => {
     const p: typeof progress = {};
@@ -25,7 +26,13 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
       for (const progressSubject of getProgressSubjects(grade, subject, t.id)) {
         const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${t.id}`);
         if (raw) {
-          try { p[t.id] = JSON.parse(raw); } catch { /* ignore */ }
+          try {
+            const progressData = JSON.parse(raw);
+            p[t.id] = {
+              ...progressData,
+              completed: getEffectiveCompleted(progressData, t.exercises.length),
+            };
+          } catch { /* ignore */ }
           break;
         }
       }

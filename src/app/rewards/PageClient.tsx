@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   loadRewards, addReward, markRedeemed, removeReward,
-  countTotalStars, REWARD_TEMPLATES, TRIGGER_LABELS,
+  countCompletedTopics, countTotalStars, REWARD_TEMPLATES, TRIGGER_LABELS,
   Reward, TriggerType, ProgressSnapshot,
   getProgressValue,
 } from "@/lib/rewards";
@@ -14,6 +14,7 @@ import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
 import { startCheckout } from "@/lib/checkoutClient";
 import { BelohnungenGuestPreview } from "@/components/GuestPreview";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
   { type: "tasks",  values: [10, 20, 50, 100] },
@@ -46,6 +47,7 @@ export default function RewardsPage() {
   const reload = () => {
     setRewards(loadRewards());
     // Load current progress snapshot
+    const totalTopicsComplete = countCompletedTopics();
     const totalStars = countTotalStars();
     // ✅ Use active child's profile key, not the global fallback
     const activeId = typeof window !== "undefined" ? localStorage.getItem("cleverli_active_profile") : null;
@@ -54,7 +56,7 @@ export default function RewardsPage() {
     const profile = raw ? JSON.parse(raw) : {};
     setSnap({
       totalExercises: profile.totalExercises ?? 0,
-      totalTopicsComplete: profile.totalTopicsComplete ?? 0,
+      totalTopicsComplete,
       dailyStreak: profile.dailyStreak ?? 0,
       totalStars,
     });
@@ -77,7 +79,10 @@ export default function RewardsPage() {
               if (raw) break;
             }
           }
-          if (raw) done++;
+          if (raw) {
+            const progress = JSON.parse(raw);
+            if (getEffectiveCompleted(progress, t.exercises.length) >= t.exercises.length) done++;
+          }
         } catch { /* ignore */ }
       }
     }

@@ -1,6 +1,8 @@
 // ── Reward System ────────────────────────────────────────────────────────────
 // Rewards are defined by parents and tracked per-device in localStorage.
 // When a child reaches a trigger, the reward unlocks and shows a celebration.
+import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 export type TriggerType = "tasks" | "topics" | "streak" | "stars";
 export type RewardStatus = "active" | "unlocked" | "redeemed";
@@ -109,18 +111,51 @@ export function getProgressValue(snap: ProgressSnapshot, type: TriggerType): num
   }
 }
 
-/** Count total stars from all topic progress entries. */
+function loadNormalisedTopicProgress(grade: number, subject: string, topicId: string, total: number) {
+  if (typeof window === "undefined") return null;
+  for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+    if (!raw) continue;
+    const progress = JSON.parse(raw);
+    return {
+      completed: getEffectiveCompleted(progress, total),
+      stars: Number(progress?.stars ?? 0),
+    };
+  }
+  return null;
+}
+
+export function countCompletedTopics(): number {
+  if (typeof window === "undefined") return 0;
+  let total = 0;
+  for (const grade of [1,2,3,4,5,6]) {
+    for (const subject of SUBJECTS) {
+      for (const topic of getTopics(grade, subject.id)) {
+        try {
+          const progress = loadNormalisedTopicProgress(grade, subject.id, topic.id, topic.exercises.length);
+          if (progress && progress.completed >= topic.exercises.length) total++;
+        } catch { /* skip */ }
+      }
+    }
+  }
+  return total;
+}
+
+/** Count total stars from completed topic progress entries. */
 export function countTotalStars(): number {
   if (typeof window === "undefined") return 0;
   let total = 0;
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (!key?.startsWith("cleverli_") || key.split("_").length < 4) continue;
-    // key format: cleverli_{grade}_{subject}_{topicId}
-    try {
-      const val = JSON.parse(localStorage.getItem(key) ?? "null");
-      if (val?.stars) total += val.stars;
-    } catch { /* skip */ }
+  for (const grade of [1,2,3,4,5,6]) {
+    for (const subject of SUBJECTS) {
+      for (const topic of getTopics(grade, subject.id)) {
+        try {
+          const progress = loadNormalisedTopicProgress(grade, subject.id, topic.id, topic.exercises.length);
+          if (progress && progress.completed >= topic.exercises.length && progress.stars > 0) {
+            total += progress.stars;
+          }
+        } catch { /* skip */ }
+      }
+    }
   }
   return total;
 }

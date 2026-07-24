@@ -7,13 +7,20 @@ import { countExercisesByDifficulty } from "@/lib/exerciseHelpers";
 import { getTierProgress } from "@/lib/tierProgress";
 import { useEffect, useState } from "react";
 import { getProgressSubjects } from "@/data";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 interface Props { topic: Topic; grade: number; subject: string; allTopics: Topic[]; topicIndex: number; }
 
-function loadProgress(grade: number, subject: string, topicId: string) {
-  for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
-    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
-    if (raw) return JSON.parse(raw);
+function loadProgress(grade: number, subject: string, topic: Topic) {
+  for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
+    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+    if (raw) {
+      const progress = JSON.parse(raw);
+      return {
+        ...progress,
+        completed: getEffectiveCompleted(progress, topic.exercises.length),
+      };
+    }
   }
   return {};
 }
@@ -23,7 +30,7 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
   const [exerciseCounts, setExerciseCounts] = useState<ReturnType<typeof countExercisesByDifficulty> | null>(null);
 
   useEffect(() => {
-    const progressData = loadProgress(grade, subject, topic.id);
+    const progressData = loadProgress(grade, subject, topic);
     const totalCompleted = progressData.completed ?? 0;
 
     // ✅ Use getTierProgress directly — same logic ExercisePlayer uses.
@@ -50,7 +57,7 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
   // By subscribing to the storage event we refresh the roadmap live.
   useEffect(() => {
     const refresh = () => {
-      const progressData = loadProgress(grade, subject, topic.id);
+      const progressData = loadProgress(grade, subject, topic);
       const totalCompleted = progressData.completed ?? 0;
       const tierProgress = getTierProgress(topic, totalCompleted);
       setExerciseCounts({

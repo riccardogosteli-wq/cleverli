@@ -127,6 +127,7 @@ create table if not exists public.topic_progress (
   stars       int not null default 0,
   score       int not null default 0,
   completed   int not null default 0,
+  correct_ids jsonb not null default '[]'::jsonb,
   partial     boolean not null default false,
   last_played timestamptz,
 
