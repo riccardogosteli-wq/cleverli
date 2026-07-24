@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wie ich meinen Sohn wieder fürs Lernen begeistert habe",
     description: "Als Elternteil kenne ich die Frustration: Das Kind sitzt am Tisch, will aber einfach nicht lernen. Hier teile ich, was bei uns wirklich geholfen hat.",
-    images: [{ url: "https://www.cleverli.ch/og-image.png", width: 1200, height: 630, alt: "Kinder fürs Lernen begeistern — Cleverli Blog" }],
+    images: [{ url: "https://www.cleverli.ch/og-image-v2.png", width: 1200, height: 630, alt: "Kinder fürs Lernen begeistern — Cleverli Blog" }],
     type: "article",
   },
   robots: { index: true, follow: true },
@@ -22,7 +22,7 @@ const articleJsonLd = {
   "@type": "Article",
   "headline": "«Ich will nicht lernen!» — Wie ich meinen Sohn wieder fürs Lernen begeistert habe",
   "description": "Als Elternteil kenne ich die Frustration: Das Kind sitzt am Tisch, will aber einfach nicht lernen. Hier teile ich, was bei uns wirklich geholfen hat.",
-  "image": "https://www.cleverli.ch/og-image.png",
+  "image": "https://www.cleverli.ch/og-image-v2.png",
   "datePublished": "2025-11-01T08:00:00+01:00",
   "dateModified": "2026-01-15T08:00:00+01:00",
   "author": {
