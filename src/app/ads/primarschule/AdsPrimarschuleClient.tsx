@@ -46,7 +46,7 @@ export default function AdsPrimarschuleClient() {
           <div>
             <p className="mb-3 text-sm font-bold uppercase tracking-widest text-green-700">Schweizer Primarschule · Lehrplan 21</p>
             <h1 className="text-4xl font-black leading-tight text-gray-950 sm:text-5xl">
-              Kurze Online-Übungen für die Primarschule.
+              Online-Übungen für die Primarschule.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
               Mathe, Deutsch und NMG für die 1.–6. Klasse. Dein Kind übt selbstständig, du siehst den Fortschritt und motivierst mit Belohnungen, die zuhause wirklich zählen.
