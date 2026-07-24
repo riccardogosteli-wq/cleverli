@@ -1,4 +1,4 @@
-type CheckoutPlan = "monthly" | "yearly";
+export type CheckoutPlan = "monthly" | "yearly";
 type AdsLpCtaType = "paid" | "free";
 type AdsLpCtaLocation = "hero" | "pricing" | "bottom";
 

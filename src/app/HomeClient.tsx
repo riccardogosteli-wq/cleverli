@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { useState } from "react";
-import { trackBeginCheckout } from "@/lib/analytics";
+import { startCheckout } from "@/lib/checkoutClient";
 
 
 
@@ -18,8 +18,6 @@ export default function Home() {
   const primaryLabel = session ? (isPremium ? (tr("toDashboard") ?? "Zum Dashboard →") : (tr("continueLearn") ?? "Weiterlernen →")) : `${tr("startFree")} →`;
   const showSignupCta = !session;
   const uid = session?.userId ?? "";
-  const checkoutUrl = (plan: "monthly" | "yearly") =>
-    `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
 
   return (
     <main className="min-h-screen bg-white">
@@ -179,10 +177,10 @@ export default function Home() {
                 <li>✅ {tr("premiumF3")}</li>
                 <li>✅ {tr("premiumF4")}</li>
               </ul>
-              <Link href={checkoutUrl("monthly")} prefetch={false} onClick={() => trackBeginCheckout("monthly", "homepage_pricing")}
-                className="mt-6 block text-center bg-green-700 text-white px-6 py-3 rounded-full font-bold hover:bg-green-800 transition-colors">
+              <button type="button" onClick={() => startCheckout("monthly", "homepage_pricing", uid)}
+                className="mt-6 block w-full text-center bg-green-700 text-white px-6 py-3 rounded-full font-bold hover:bg-green-800 transition-colors">
                 {tr("premiumCta")}
-              </Link>
+              </button>
             </div>
 
             {/* Yearly */}
@@ -205,10 +203,10 @@ export default function Home() {
                 <li>✅ {tr("premiumF3")}</li>
                 <li>✅ {tr("premiumF4")}</li>
               </ul>
-              <Link href={checkoutUrl("yearly")} prefetch={false} onClick={() => trackBeginCheckout("yearly", "homepage_pricing")}
-                className="mt-6 block text-center bg-white text-green-700 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors">
+              <button type="button" onClick={() => startCheckout("yearly", "homepage_pricing", uid)}
+                className="mt-6 block w-full text-center bg-white text-green-700 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors">
                 {tr("yearlyCta")}
-              </Link>
+              </button>
             </div>
           </div>
         </div>

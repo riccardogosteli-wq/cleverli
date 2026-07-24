@@ -10,6 +10,15 @@ function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!);
 }
 
+async function verifyUserToken(userId: string, req: NextRequest) {
+  const token = req.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
+  if (!token) return false;
+
+  const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
+  const { data, error } = await supabase.auth.getUser(token);
+  return !error && data.user?.id === userId;
+}
+
 export async function POST(req: NextRequest) {
   let userId: string;
   try {
@@ -18,6 +27,12 @@ export async function POST(req: NextRequest) {
     if (!userId) throw new Error("no userId");
   } catch {
     return NextResponse.json({ error: "bad_request" }, { status: 400 });
+  }
+
+  const verified = await verifyUserToken(userId, req);
+  if (!verified) {
+    Sentry.captureMessage("[cancel-subscription] unauthorized cancellation attempt", "warning");
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
   const stripe = getStripe();

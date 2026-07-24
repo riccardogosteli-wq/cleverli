@@ -12,6 +12,11 @@ const ALLOWED_EVENTS = new Set([
   "checkout_error",
 ]);
 
+const MAX_BODY_BYTES = 4096;
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX = 120;
+const buckets = new Map<string, { count: number; resetAt: number }>();
+
 function cleanText(value: unknown, max = 120) {
   return typeof value === "string" ? value.slice(0, max) : null;
 }
@@ -24,7 +29,55 @@ function cleanBool(value: unknown) {
   return typeof value === "boolean" ? value : null;
 }
 
+function requestIp(req: NextRequest) {
+  return req.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+    ?? req.headers.get("x-real-ip")
+    ?? "unknown";
+}
+
+function sameOrigin(req: NextRequest) {
+  const origin = req.headers.get("origin");
+  if (!origin) return false;
+
+  const host = req.headers.get("host");
+  if (!host) return false;
+
+  try {
+    const originUrl = new URL(origin);
+    return originUrl.host === host || originUrl.hostname.endsWith(".cleverli.ch");
+  } catch {
+    return false;
+  }
+}
+
+function rateLimited(ip: string) {
+  const now = Date.now();
+  const bucket = buckets.get(ip);
+
+  if (!bucket || bucket.resetAt <= now) {
+    buckets.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  bucket.count += 1;
+  return bucket.count > RATE_LIMIT_MAX;
+}
+
 export async function POST(req: NextRequest) {
+  const contentLength = Number(req.headers.get("content-length") ?? "0");
+  if (contentLength > MAX_BODY_BYTES) {
+    return new NextResponse(null, { status: 204 });
+  }
+
+  if (!sameOrigin(req)) {
+    return new NextResponse(null, { status: 204 });
+  }
+
+  if (rateLimited(requestIp(req))) {
+    Sentry.captureMessage("[telemetry] rate limited exercise events", "warning");
+    return new NextResponse(null, { status: 204 });
+  }
+
   let body: Record<string, unknown>;
 
   try {

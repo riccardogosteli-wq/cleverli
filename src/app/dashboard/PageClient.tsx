@@ -13,7 +13,7 @@ import { useSession } from "@/hooks/useSession";
 import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
 import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
 import { getTierProgress } from "@/lib/tierProgress";
-import { trackBeginCheckout } from "@/lib/analytics";
+import { startCheckout } from "@/lib/checkoutClient";
 import RewardWidget from "@/components/RewardWidget";
 import { DashboardGuestPreview } from "@/components/GuestPreview";
 
@@ -531,7 +531,7 @@ function DashboardInner() {
 
       {/* UJ-4: Premium upsell banner for grade 3 free users */}
       {isGrade3Locked && grade !== null && (
-        <Link href={uid ? `/api/checkout?plan=monthly&uid=${uid}` : "/upgrade"} onClick={() => { if (uid) trackBeginCheckout("monthly", "dashboard_upsell"); }} className="flex items-center gap-3 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl px-4 py-3 text-sm text-amber-900 hover:from-amber-100 hover:to-orange-100 transition-colors">
+        <button type="button" onClick={() => startCheckout("monthly", "dashboard_upsell", uid)} className="flex w-full items-center gap-3 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl px-4 py-3 text-sm text-amber-900 hover:from-amber-100 hover:to-orange-100 transition-colors text-left">
           <span className="text-2xl">🔓</span>
           <div className="flex-1">
             <div className="font-bold">
@@ -545,7 +545,7 @@ function DashboardInner() {
             </div>
           </div>
           <span className="text-base font-bold text-amber-600">→</span>
-        </Link>
+        </button>
       )}
 
       {/* UJ-13: Empty state nudge for new users (no progress yet) */}

@@ -12,7 +12,7 @@ import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
-import { trackBeginCheckout } from "@/lib/analytics";
+import { startCheckout } from "@/lib/checkoutClient";
 import { BelohnungenGuestPreview } from "@/components/GuestPreview";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
@@ -155,11 +155,11 @@ export default function RewardsPage() {
           <div>👶 {lang === "fr" ? "Jusqu'à 3 profils enfants avec Premium" : lang === "it" ? "Fino a 3 profili bambino con Premium" : lang === "en" ? "Up to 3 child profiles with Premium" : "Bis zu 3 Kinderprofile mit Premium"}</div>
           <div>📊 {lang === "fr" ? "Voir les progrès de toute la famille" : lang === "it" ? "Vedi i progressi di tutta la famiglia" : lang === "en" ? "See the whole family's learning progress" : "Lernfortschritt der ganzen Familie sehen"}</div>
         </div>
-        <Link href={uid ? `/api/checkout?plan=monthly&uid=${uid}` : "/upgrade"}
-          onClick={() => { if (uid) trackBeginCheckout("monthly", "rewards_upsell"); }}
+        <button type="button"
+          onClick={() => startCheckout("monthly", "rewards_upsell", uid)}
           className="block w-full bg-amber-500 text-white py-4 rounded-2xl font-bold text-base hover:bg-amber-600 active:scale-95 transition-all shadow-md">
           {lang === "fr" ? "Débloquer Premium — CHF 9.90/mois" : lang === "it" ? "Sblocca Premium — CHF 9.90/mese" : lang === "en" ? "Unlock Premium — CHF 9.90/month" : "Premium freischalten — CHF 9.90/Mt."}
-        </Link>
+        </button>
         <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 underline">
           {lang === "fr" ? "Retour à l'apprentissage" : lang === "it" ? "Torna all'apprendimento" : lang === "en" ? "Back to learning" : "Zurück zum Lernen"}
         </Link>

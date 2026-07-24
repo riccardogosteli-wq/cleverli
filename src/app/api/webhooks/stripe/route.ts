@@ -120,7 +120,9 @@ export async function POST(req: NextRequest) {
 
     // Send confirmation email
     if (customerEmail) {
-      sendPaymentConfirmationEmail(customerEmail, "", plan as "monthly" | "yearly").catch(() => {});
+      sendPaymentConfirmationEmail(customerEmail, "", plan as "monthly" | "yearly").catch(error => {
+        Sentry.captureException(error);
+      });
     }
 
     console.log(`[stripe-webhook] ✅ Premium activated for ${userId} (${plan})`);

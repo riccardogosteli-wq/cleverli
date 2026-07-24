@@ -14,6 +14,22 @@ function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!);
 }
 
+function wantsJson(req: NextRequest) {
+  return req.headers.get("accept")?.includes("application/json");
+}
+
+async function verifyUserToken(userId: string, req: NextRequest) {
+  const token = req.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
+  if (!token) return false;
+
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  );
+  const { data, error } = await supabase.auth.getUser(token);
+  return !error && data.user?.id === userId;
+}
+
 export async function GET(req: NextRequest) {
   const plan = req.nextUrl.searchParams.get("plan") ?? "monthly";
   const userId = req.nextUrl.searchParams.get("uid") ?? "";
@@ -21,7 +37,17 @@ export async function GET(req: NextRequest) {
   // Guest: redirect to signup
   if (!userId) {
     const signupUrl = `${BASE_URL}/signup?next=/api/checkout?plan=${plan}`;
-    return NextResponse.redirect(signupUrl);
+    return wantsJson(req)
+      ? NextResponse.json({ error: "login_required", url: signupUrl }, { status: 401 })
+      : NextResponse.redirect(signupUrl);
+  }
+
+  const verified = await verifyUserToken(userId, req);
+  if (!verified) {
+    Sentry.captureMessage("[checkout] unauthorized uid checkout attempt", "warning");
+    return wantsJson(req)
+      ? NextResponse.json({ error: "unauthorized" }, { status: 401 })
+      : NextResponse.redirect(`${BASE_URL}/login`);
   }
 
   const priceId = PRICE_IDS[plan] ?? PRICE_IDS.monthly;
@@ -80,7 +106,9 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "gateway_failed" }, { status: 500 });
     }
 
-    return NextResponse.redirect(session.url, 302);
+    return wantsJson(req)
+      ? NextResponse.json({ url: session.url })
+      : NextResponse.redirect(session.url, 302);
   } catch (err) {
     Sentry.captureException(err);
     console.error("[checkout] Stripe error:", err);

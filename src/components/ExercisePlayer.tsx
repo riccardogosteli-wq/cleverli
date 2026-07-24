@@ -31,8 +31,9 @@ import RewardUnlockedModal from "./RewardUnlockedModal";
 import { getLevelForXp, getNextLevel } from "@/lib/xp";
 import SignupPromptModal from "./SignupPromptModal";
 import { getProgressSubjects } from "@/data";
-import { trackBeginCheckout } from "@/lib/analytics";
 import { trackExerciseEvent, ExerciseTelemetryPayload } from "@/lib/exerciseTelemetry";
+import { startCheckout } from "@/lib/checkoutClient";
+import { captureAppError } from "@/lib/monitoring";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
@@ -158,8 +159,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     }
   }, [isAnonymous]);
   const uid = session?.userId ?? "";
-  const checkoutUrl = (plan: "monthly" | "yearly") =>
-    `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
   // Select the current difficulty section, so Grün/Gelb/Rot progress matches the actual session.
   const [sessionStartCompleted, setSessionStartCompleted] = useState(() => getStoredCompleted(grade, subject, topic.id));
   const [fullSetExercises, setFullSetExercises] = useState(() => selectCurrentTierExercises(topic, sessionStartCompleted));
@@ -398,7 +397,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               if (first) setUnlockedReward(first);
             }
           }
-        } catch { /* ignore */ }
+        } catch (error) {
+          captureAppError(error, { area: "reward_unlock", exerciseId: current?.id ?? String(idx), topicId: topic.id });
+        }
       }, 400); // slight delay so profile state has settled
     }
 
@@ -611,16 +612,16 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           <div>✅ {tr("premiumF4")}</div>
         </div>
         <div className="flex flex-col gap-2 w-full max-w-xs">
-          <Link href={checkoutUrl("monthly")}
-            onClick={() => trackBeginCheckout("monthly", "exercise_paywall")}
+          <button type="button"
+            onClick={() => startCheckout("monthly", "exercise_paywall", uid)}
             className="block text-center bg-green-700 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
 TWINT / Karte — CHF 9.90{tr("perMonth")}
-          </Link>
-          <Link href={checkoutUrl("yearly")}
-            onClick={() => trackBeginCheckout("yearly", "exercise_paywall")}
+          </button>
+          <button type="button"
+            onClick={() => startCheckout("yearly", "exercise_paywall", uid)}
             className="block text-center border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
 {tr("yearlyOption") ?? "Jährlich — CHF 99/Jahr"}
-          </Link>
+          </button>
           {!uid && (
             <Link href="/signup" className="block text-center text-xs text-gray-400 hover:text-gray-600 underline pt-1">
               {tr("createFreeAccountFirst") ?? "Zuerst kostenloses Konto erstellen"}
@@ -902,9 +903,9 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       })() && (
         <p className="text-center text-xs text-gray-400">
           {tr("freeNoteBanner").replace("{n}", String(freeExercisesRemaining))}{" "}
-          <Link href={uid ? checkoutUrl("monthly") : "/upgrade"} onClick={() => { if (uid) trackBeginCheckout("monthly", "free_limit_notice"); }} className="text-green-700 underline font-semibold">
+          <button type="button" onClick={() => startCheckout("monthly", "free_limit_notice", uid)} className="text-green-700 underline font-semibold">
             {tr("unlockAll")}
-          </Link>
+          </button>
         </p>
       )}
 

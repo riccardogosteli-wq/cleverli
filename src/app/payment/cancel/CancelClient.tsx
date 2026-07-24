@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useSession } from "@/hooks/useSession";
 import { useLang } from "@/lib/LangContext";
-import { trackBeginCheckout } from "@/lib/analytics";
+import { startCheckout } from "@/lib/checkoutClient";
 
 export default function PaymentCancelPage() {
   const { session, loaded } = useSession();
@@ -11,9 +11,6 @@ export default function PaymentCancelPage() {
 
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
-
-  const checkoutUrl = (plan: "monthly" | "yearly") =>
-    `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
 
   return (
     <main className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -32,16 +29,16 @@ export default function PaymentCancelPage() {
         </p>
         {loaded && (
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href={checkoutUrl("monthly")}
-              onClick={() => trackBeginCheckout("monthly", "payment_cancel")}
+            <button type="button"
+              onClick={() => startCheckout("monthly", "payment_cancel", uid)}
               className="bg-green-700 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all">
               CHF 9.90{t("/Monat", "/mois", "/mese", "/month")}
-            </Link>
-            <Link href={checkoutUrl("yearly")}
-              onClick={() => trackBeginCheckout("yearly", "payment_cancel")}
+            </button>
+            <button type="button"
+              onClick={() => startCheckout("yearly", "payment_cancel", uid)}
               className="bg-green-700 text-white px-6 py-3 rounded-full font-bold hover:bg-green-800 active:scale-95 transition-all">
               CHF 99{t("/Jahr", "/an", "/anno", "/year")}
-            </Link>
+            </button>
           </div>
         )}
         <Link href="/dashboard" className="block text-sm text-gray-400 hover:text-gray-600 underline">

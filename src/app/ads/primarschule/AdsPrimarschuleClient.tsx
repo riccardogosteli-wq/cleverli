@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { trackAdsLpCtaClick, trackBeginCheckout } from "@/lib/analytics";
+import { trackAdsLpCtaClick } from "@/lib/analytics";
+import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
 
 const subjects = [
@@ -36,8 +37,7 @@ const freeTrialUrl = "/learn/1/math/zahlen-1-10";
 export default function AdsPrimarschuleClient() {
   const { session } = useSession();
   const uid = session?.userId ?? "";
-  const checkoutUrl = (plan: "monthly" | "yearly") =>
-    `/api/checkout?plan=${plan}${uid ? `&uid=${uid}` : ""}`;
+  const checkoutDestination = (plan: "monthly" | "yearly") => `/api/checkout?plan=${plan}`;
 
   return (
     <main className="bg-white text-gray-900">
@@ -52,17 +52,16 @@ export default function AdsPrimarschuleClient() {
               Mathe, Deutsch und NMG für die 1.–6. Klasse. Dein Kind übt selbstständig, du siehst den Fortschritt und motivierst mit Belohnungen, die zuhause wirklich zählen.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href={checkoutUrl("yearly")}
-                prefetch={false}
+              <button
+                type="button"
                 onClick={() => {
-                  trackAdsLpCtaClick("paid", "hero", checkoutUrl("yearly"), "yearly");
-                  trackBeginCheckout("yearly", "primarschule_uebungen_hero");
+                  trackAdsLpCtaClick("paid", "hero", checkoutDestination("yearly"), "yearly");
+                  startCheckout("yearly", "primarschule_uebungen_hero", uid);
                 }}
                 className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
               >
                 CHF 8.25/Mt. · bis zu 3 Kinder
-              </Link>
+              </button>
               <Link
                 href={freeTrialUrl}
                 onClick={() => trackAdsLpCtaClick("free", "hero", freeTrialUrl)}
@@ -191,7 +190,7 @@ export default function AdsPrimarschuleClient() {
             </div>
 
             <div className="space-y-6">
-              <p className="text-xs font-black uppercase tracking-widest text-amber-700">So funktioniert's</p>
+              <p className="text-xs font-black uppercase tracking-widest text-amber-700">So funktioniert es</p>
               {rewardSteps.map((step) => (
                 <div key={step.n} className="flex gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-400 text-lg font-black text-white shadow">
@@ -240,17 +239,16 @@ export default function AdsPrimarschuleClient() {
               <h3 className="text-lg font-bold text-gray-900">Monatlich</h3>
               <p className="mt-2 text-3xl font-black text-gray-950">CHF 9.90<span className="text-base font-medium text-gray-500">/Mt.</span></p>
               <p className="mt-2 text-sm leading-6 text-gray-500">Flexibel starten und jederzeit kündigen.</p>
-              <Link
-                href={checkoutUrl("monthly")}
-                prefetch={false}
+              <button
+                type="button"
                 onClick={() => {
-                  trackAdsLpCtaClick("paid", "pricing", checkoutUrl("monthly"), "monthly");
-                  trackBeginCheckout("monthly", "primarschule_uebungen_pricing");
+                  trackAdsLpCtaClick("paid", "pricing", checkoutDestination("monthly"), "monthly");
+                  startCheckout("monthly", "primarschule_uebungen_pricing", uid);
                 }}
                 className="mt-auto block rounded-full bg-green-700 px-5 py-3 text-center text-sm font-bold text-white hover:bg-green-800"
               >
                 Monatlich starten
-              </Link>
+              </button>
             </div>
 
             <div className="relative flex min-h-[220px] flex-col rounded-2xl border-2 border-green-700 bg-green-700 p-6 text-white shadow-xl shadow-green-100">
@@ -258,17 +256,16 @@ export default function AdsPrimarschuleClient() {
               <h3 className="text-lg font-bold">Jährlich</h3>
               <p className="mt-2 text-3xl font-black">CHF 99<span className="text-base font-medium text-green-200">/Jahr</span></p>
               <p className="mt-2 text-sm leading-6 text-green-50">CHF 8.25/Mt. für bis zu 3 Kinderprofile.</p>
-              <Link
-                href={checkoutUrl("yearly")}
-                prefetch={false}
+              <button
+                type="button"
                 onClick={() => {
-                  trackAdsLpCtaClick("paid", "pricing", checkoutUrl("yearly"), "yearly");
-                  trackBeginCheckout("yearly", "primarschule_uebungen_pricing");
+                  trackAdsLpCtaClick("paid", "pricing", checkoutDestination("yearly"), "yearly");
+                  startCheckout("yearly", "primarschule_uebungen_pricing", uid);
                 }}
                 className="mt-auto block rounded-full bg-white px-5 py-3 text-center text-sm font-black text-green-800 hover:bg-green-50"
               >
                 Jährlich für bis zu 3 Kinder
-              </Link>
+              </button>
             </div>
           </div>
           <p className="mt-5 text-center text-sm text-gray-500">Sicher bezahlen mit TWINT oder Kreditkarte. Premium schaltet alle Aufgaben, Fächer und Klassen frei.</p>
@@ -299,17 +296,16 @@ export default function AdsPrimarschuleClient() {
         <h2 className="mx-auto max-w-2xl text-3xl font-black">Bereit für weniger Lern-Stress daheim?</h2>
         <p className="mx-auto mt-3 max-w-xl text-green-50">Teste 20 Aufgaben gratis oder schalte alle Übungen für die ganze Familie frei.</p>
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-          <Link
-            href={checkoutUrl("yearly")}
-            prefetch={false}
+          <button
+            type="button"
             onClick={() => {
-              trackAdsLpCtaClick("paid", "bottom", checkoutUrl("yearly"), "yearly");
-              trackBeginCheckout("yearly", "primarschule_uebungen_bottom");
+              trackAdsLpCtaClick("paid", "bottom", checkoutDestination("yearly"), "yearly");
+              startCheckout("yearly", "primarschule_uebungen_bottom", uid);
             }}
             className="rounded-full bg-white px-7 py-4 text-base font-black text-green-800 hover:bg-green-50"
           >
             CHF 99/Jahr · bis zu 3 Kinder
-          </Link>
+          </button>
           <Link
             href={freeTrialUrl}
             onClick={() => trackAdsLpCtaClick("free", "bottom", freeTrialUrl)}

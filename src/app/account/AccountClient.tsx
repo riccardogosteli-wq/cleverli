@@ -66,9 +66,17 @@ export default function AccountPage() {
     if (cancelState !== "confirm") return;
     setCancelState("loading");
     try {
+      const supabase = getSupabase();
+      const { data: authData } = supabase ? await supabase.auth.getSession() : { data: { session: null } };
+      const token = authData.session?.access_token;
+      if (!token) throw new Error("unauthorized");
+
       const res = await fetch("/api/cancel-subscription", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
         body: JSON.stringify({ userId: session?.userId }),
       });
       const data = await res.json();
