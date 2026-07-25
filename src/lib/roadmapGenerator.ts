@@ -284,7 +284,7 @@ function generateStaticRoadmap(config: RoadmapConfig): string {
   }).join('');
   
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-  viewBox="0 0 ${bgWidth} ${bgHeight}" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  viewBox="0 0 ${bgWidth} ${bgHeight}" width="100%" style="height: auto; display: block;" preserveAspectRatio="xMidYMid meet">
   ${sharedStyles()}
   
   <defs>
