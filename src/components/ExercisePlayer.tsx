@@ -113,27 +113,35 @@ function getInitialSessionExercises(topic: Topic, grade: number, subject: string
 }
 
 // ── Translation helper ────────────────────────────────────────────────────────
-function localiseExercise(ex: import("@/types/exercise").Exercise, lang: string) {
+function resolveLocalisedAnswer(ex: Exercise, localisedOptions?: string[], localisedAnswer?: string) {
+  if (localisedAnswer) return localisedAnswer;
+  if (!ex.options || !localisedOptions || ex.options === localisedOptions) return ex.answer;
+
+  const answerIndex = ex.options.findIndex(option => option === ex.answer);
+  return answerIndex >= 0 ? (localisedOptions[answerIndex] ?? ex.answer) : ex.answer;
+}
+
+function localiseExercise(ex: Exercise, lang: string) {
   if (lang === "en") return {
     ...ex,
     question: ex.questionEN ?? ex.question,
     hints:    ex.hintsEN   ?? ex.hints,
     options:  ex.optionsEN ?? ex.options,
-    answer:   ex.answerEN  ?? ex.answer,
+    answer:   resolveLocalisedAnswer(ex, ex.optionsEN, ex.answerEN),
   };
   if (lang === "fr") return {
     ...ex,
     question: ex.questionFR ?? ex.question,
     hints:    ex.hintsFR   ?? ex.hints,
     options:  ex.optionsFR ?? ex.options,
-    answer:   ex.answerFR  ?? ex.answer,
+    answer:   resolveLocalisedAnswer(ex, ex.optionsFR, ex.answerFR),
   };
   if (lang === "it") return {
     ...ex,
     question: ex.questionIT ?? ex.question,
     hints:    ex.hintsIT   ?? ex.hints,
     options:  ex.optionsIT ?? ex.options,
-    answer:   ex.answerIT  ?? ex.answer,
+    answer:   resolveLocalisedAnswer(ex, ex.optionsIT, ex.answerIT),
   };
   return ex; // default: German
 }
