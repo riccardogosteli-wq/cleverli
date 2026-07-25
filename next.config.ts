@@ -36,6 +36,7 @@ const securityHeaders = [
         "https://*.supabase.co wss://*.supabase.co",
         "https://formspree.io",
         "https://*.google-analytics.com https://analytics.google.com",
+        "https://ad.doubleclick.net https://www.google.com",
         "https://*.ingest.sentry.io https://*.ingest.us.sentry.io",
         "https://*.posthog.com https://*.i.posthog.com https://eu.i.posthog.com https://us.i.posthog.com",
       ].join(" "),
