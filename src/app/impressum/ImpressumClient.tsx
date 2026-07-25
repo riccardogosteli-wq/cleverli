@@ -10,6 +10,9 @@ const CONTENT = {
     contactLabel: "Kontakt",
     disclaimerLabel: "Haftungsausschluss",
     disclaimerText: "Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir keine Gewähr.",
+    sourcesLabel: "Quellenhinweis",
+    sourcesText: "Cleverli orientiert sich an der Schweizer Primarschule und am Lehrplan 21. Zitate und fachliche Bezüge zum Lehrplan 21 erfolgen mit Quellenangabe; das Logo «Lehrplan 21» wird nicht verwendet.",
+    lp21Source: "Quelle: Lehrplan 21",
     copyrightLabel: "Urheberrecht",
     copyrightText: "© 2026 Cleverli. Alle Rechte vorbehalten. Die Inhalte dieser Website sind urheberrechtlich geschützt.",
   },
@@ -20,6 +23,9 @@ const CONTENT = {
     contactLabel: "Contact",
     disclaimerLabel: "Clause de non-responsabilité",
     disclaimerText: "Le contenu de ce site a été créé avec le plus grand soin. Nous ne garantissons pas l'exactitude, l'exhaustivité et l'actualité du contenu.",
+    sourcesLabel: "Source",
+    sourcesText: "Cleverli s'oriente sur l'école primaire suisse et le Lehrplan 21. Les citations et références au Lehrplan 21 sont indiquées avec mention de la source; le logo «Lehrplan 21» n'est pas utilisé.",
+    lp21Source: "Source: Lehrplan 21",
     copyrightLabel: "Droits d'auteur",
     copyrightText: "© 2026 Cleverli. Tous droits réservés. Le contenu de ce site est protégé par le droit d'auteur.",
   },
@@ -30,6 +36,9 @@ const CONTENT = {
     contactLabel: "Contatto",
     disclaimerLabel: "Esclusione di responsabilità",
     disclaimerText: "I contenuti di questo sito sono stati creati con la massima cura. Non garantiamo l'accuratezza, la completezza e l'attualità dei contenuti.",
+    sourcesLabel: "Fonte",
+    sourcesText: "Cleverli si orienta alla scuola primaria svizzera e al Lehrplan 21. Citazioni e riferimenti al Lehrplan 21 sono indicati con fonte; il logo «Lehrplan 21» non viene utilizzato.",
+    lp21Source: "Fonte: Lehrplan 21",
     copyrightLabel: "Diritto d'autore",
     copyrightText: "© 2026 Cleverli. Tutti i diritti riservati. I contenuti di questo sito sono protetti dal diritto d'autore.",
   },
@@ -40,6 +49,9 @@ const CONTENT = {
     contactLabel: "Contact",
     disclaimerLabel: "Disclaimer",
     disclaimerText: "The content of this website has been created with the greatest care. We do not guarantee the accuracy, completeness or timeliness of the content.",
+    sourcesLabel: "Source note",
+    sourcesText: "Cleverli is oriented around Swiss primary school and Lehrplan 21. Quotes and curriculum references to Lehrplan 21 are provided with source attribution; the “Lehrplan 21” logo is not used.",
+    lp21Source: "Source: Lehrplan 21",
     copyrightLabel: "Copyright",
     copyrightText: "© 2026 Cleverli. All rights reserved. The content of this website is protected by copyright.",
   },
@@ -66,6 +78,15 @@ export default function ImpressumClient() {
         <div>
           <h2 className="font-bold text-gray-900 mb-1">{t.disclaimerLabel}</h2>
           <p className="text-sm text-gray-500">{t.disclaimerText}</p>
+        </div>
+        <div>
+          <h2 className="font-bold text-gray-900 mb-1">{t.sourcesLabel}</h2>
+          <p className="text-sm text-gray-500">
+            {t.sourcesText}{" "}
+            <a href="https://www.lehrplan21.ch/" className="text-green-700 hover:underline" rel="noopener noreferrer">
+              {t.lp21Source}
+            </a>
+          </p>
         </div>
         <div>
           <h2 className="font-bold text-gray-900 mb-1">{t.copyrightLabel}</h2>

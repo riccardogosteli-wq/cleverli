@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   verification: {
-    google: "", // add GSC verification code later
+    google: "DAA4J7rw9Q_bGqRa9otSbjXW6grvpE4DLnnKAintXas",
   },
 };
 

@@ -4,6 +4,7 @@ import LoginClient from "./LoginClient";
 export const metadata: Metadata = {
   title: "Anmelden – Cleverli",
   description: "Bei Cleverli anmelden und weiterlernen. Die Lernplattform für Kinder der 1.-6. Klasse.",
+  robots: { index: false },
   alternates: { canonical: "https://www.cleverli.ch/login" },
   openGraph: {
     title: "Anmelden | Cleverli",

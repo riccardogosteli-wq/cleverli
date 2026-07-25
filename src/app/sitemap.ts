@@ -13,16 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/parents`,      lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/missionen`,    lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE}/upgrade`,      lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/signup`,       lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/login`,        lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     // Blog (SEO content)
     { url: `${BASE}/blog/kinder-motivieren-zum-lernen`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
-    // Legal pages (indexed — required by Swiss law)
-    { url: `${BASE}/agb`,          lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
-    { url: `${BASE}/impressum`,    lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
-    { url: `${BASE}/datenschutz`,  lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
-    // NOTE: /dashboard, /missionen, /rewards, /daily, /family, /kids
-    //       are in-app pages (localStorage-dependent) — excluded (noindex in their metadata)
+    // NOTE: app-only pages, legal pages, auth pages, and ads landing pages
+    //       are excluded because they are noindex or not intended for organic search.
   ];
 
   // Grade/subject pages — dynamically generated from data
