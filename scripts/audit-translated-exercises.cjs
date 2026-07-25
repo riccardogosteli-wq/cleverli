@@ -8,6 +8,19 @@ const ts = require("typescript");
 const repoRoot = path.resolve(__dirname, "..");
 const dataRoot = path.join(repoRoot, "src", "data");
 const optionTypes = new Set(["multiple-choice", "counting"]);
+const languages = {
+  en: { label: "English", suffix: "EN" },
+  fr: { label: "French", suffix: "FR" },
+  it: { label: "Italian", suffix: "IT" },
+};
+
+const lang = process.argv[2] ?? "en";
+const config = languages[lang];
+
+if (!config) {
+  console.error(`Unsupported language "${lang}". Use one of: ${Object.keys(languages).join(", ")}`);
+  process.exit(1);
+}
 
 function findDataFiles(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
@@ -66,13 +79,17 @@ const stats = {
   files: 0,
   topics: 0,
   exercises: 0,
-  englishQuestions: 0,
-  englishOptionExercises: 0,
+  language: lang,
+  label: config.label,
+  localisedQuestions: 0,
+  optionExercisesWithLocalisedQuestion: 0,
+  localisedOptionExercises: 0,
+  optionExercisesMissingLocalisedOptions: 0,
   optionFailuresBeforeFallback: 0,
   optionFailuresAfterFallback: 0,
-  fillEnglishQuestions: 0,
+  fillLocalisedQuestions: 0,
   fillNumericAnswers: 0,
-  fillTextAnswersWithoutAnswerEN: 0,
+  fillTextAnswersWithoutLocalisedAnswer: 0,
 };
 
 const optionFailures = [];
@@ -86,15 +103,24 @@ for (const filePath of findDataFiles(dataRoot)) {
 
   for (const topic of topics) {
     for (const exercise of topic.exercises) {
+      const question = exercise[`question${config.suffix}`];
+      const options = exercise[`options${config.suffix}`];
+      const answer = exercise[`answer${config.suffix}`];
+
       stats.exercises += 1;
-      if (exercise.questionEN) stats.englishQuestions += 1;
+      if (question) stats.localisedQuestions += 1;
 
-      if (optionTypes.has(exercise.type) && exercise.optionsEN) {
-        stats.englishOptionExercises += 1;
-        if (!exercise.optionsEN.includes(exercise.answer)) stats.optionFailuresBeforeFallback += 1;
+      if (optionTypes.has(exercise.type) && question) {
+        stats.optionExercisesWithLocalisedQuestion += 1;
+        if (!options) stats.optionExercisesMissingLocalisedOptions += 1;
+      }
 
-        const resolvedAnswer = resolveLocalisedAnswer(exercise, exercise.optionsEN, exercise.answerEN);
-        if (!exercise.optionsEN.includes(resolvedAnswer)) {
+      if (optionTypes.has(exercise.type) && options) {
+        stats.localisedOptionExercises += 1;
+        if (!options.includes(exercise.answer)) stats.optionFailuresBeforeFallback += 1;
+
+        const resolvedAnswer = resolveLocalisedAnswer(exercise, options, answer);
+        if (!options.includes(resolvedAnswer)) {
           stats.optionFailuresAfterFallback += 1;
           optionFailures.push({
             file: relPath,
@@ -102,23 +128,23 @@ for (const filePath of findDataFiles(dataRoot)) {
             id: exercise.id,
             answer: exercise.answer,
             resolvedAnswer,
-            optionsEN: exercise.optionsEN,
+            [`options${config.suffix}`]: options,
           });
         }
       }
 
-      if (exercise.type === "fill-in-blank" && exercise.questionEN) {
-        stats.fillEnglishQuestions += 1;
+      if (exercise.type === "fill-in-blank" && question) {
+        stats.fillLocalisedQuestions += 1;
         if (isNumericish(exercise.answer)) {
           stats.fillNumericAnswers += 1;
-        } else if (!exercise.answerEN) {
-          stats.fillTextAnswersWithoutAnswerEN += 1;
+        } else if (!answer) {
+          stats.fillTextAnswersWithoutLocalisedAnswer += 1;
           if (fillTextSamples.length < 20) {
             fillTextSamples.push({
               file: relPath,
               topic: topic.id,
               id: exercise.id,
-              questionEN: exercise.questionEN,
+              [`question${config.suffix}`]: question,
               answer: exercise.answer,
             });
           }
@@ -131,12 +157,12 @@ for (const filePath of findDataFiles(dataRoot)) {
 console.log(JSON.stringify(stats, null, 2));
 
 if (optionFailures.length > 0) {
-  console.error("\nEnglish option-answer failures after fallback:");
+  console.error(`\n${config.label} option-answer failures after fallback:`);
   console.error(JSON.stringify(optionFailures.slice(0, 20), null, 2));
 }
 
 if (fillTextSamples.length > 0) {
-  console.log("\nText fill-in-blank English samples still needing content review:");
+  console.log(`\nText fill-in-blank ${config.label} samples still needing content review:`);
   console.log(JSON.stringify(fillTextSamples, null, 2));
 }
 

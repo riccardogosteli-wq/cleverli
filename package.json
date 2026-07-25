@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "qa:english-exercises": "node scripts/audit-english-exercises.cjs",
+    "qa:english-exercises": "node scripts/audit-translated-exercises.cjs en",
+    "qa:french-exercises": "node scripts/audit-translated-exercises.cjs fr",
+    "qa:italian-exercises": "node scripts/audit-translated-exercises.cjs it",
+    "qa:translated-exercises": "npm run qa:english-exercises && npm run qa:french-exercises && npm run qa:italian-exercises",
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",
     "lp21:gap": "DRY_RUN=1 npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",
     "lp21:gap:live": "npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts"
