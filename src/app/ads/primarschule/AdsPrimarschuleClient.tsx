@@ -32,6 +32,8 @@ const rewardSteps = [
   { n: "3", emoji: "🎉", title: "Kind erreicht das Ziel", body: "Dein Kind sieht den Fortschritt und bleibt motiviert dran." },
 ];
 
+const previewAnswers = ["18", "24", "32"];
+
 const freeTrialUrl = "/learn/1/math/zahlen-1-10";
 
 export default function AdsPrimarschuleClient() {
@@ -44,33 +46,38 @@ export default function AdsPrimarschuleClient() {
       <section className="bg-gradient-to-br from-green-50 via-white to-amber-50 px-4 py-8 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-green-700">Schweizer Primarschule · Lehrplan 21</p>
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-green-700">20 Aufgaben gratis · Schweizer Primarschule</p>
             <h1 className="text-4xl font-black leading-tight text-gray-950 sm:text-5xl">
-              Online-Übungen für die Primarschule.
+              Mathe und Deutsch kostenlos ausprobieren.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-              Mathe, Deutsch und NMG für die 1.–6. Klasse. Dein Kind übt selbstständig, du siehst den Fortschritt und motivierst mit Belohnungen, die zuhause wirklich zählen.
+              Starte direkt mit 20 Aufgaben gratis. Danach entscheidest du in Ruhe, ob Cleverli als Familienabo zu euch passt.
             </p>
+            <div className="mt-5 grid gap-3 text-sm font-semibold text-gray-700 sm:grid-cols-3">
+              <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Ohne Kreditkarte</div>
+              <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Direkt im Browser</div>
+              <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">1.–6. Klasse</div>
+            </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href={freeTrialUrl}
+                onClick={() => trackAdsLpCtaClick("free", "hero", freeTrialUrl)}
+                className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
+              >
+                20 Aufgaben gratis starten
+              </Link>
               <button
                 type="button"
                 onClick={() => {
                   trackAdsLpCtaClick("paid", "hero", checkoutDestination("yearly"), "yearly");
                   startCheckout("yearly", "primarschule_uebungen_hero", uid);
                 }}
-                className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
-              >
-                CHF 8.25/Mt. · bis zu 3 Kinder
-              </button>
-              <Link
-                href={freeTrialUrl}
-                onClick={() => trackAdsLpCtaClick("free", "hero", freeTrialUrl)}
                 className="rounded-full border-2 border-green-700 px-7 py-4 text-center text-base font-bold text-green-800 transition-colors hover:bg-green-50"
               >
-                Kostenlos ausprobieren
-              </Link>
+                Jahresabo ansehen
+              </button>
             </div>
-            <p className="mt-3 text-sm text-gray-500">Jahresabo CHF 99 · bis zu 3 Kinderprofile · TWINT & Kreditkarte</p>
+            <p className="mt-3 text-sm text-gray-500">Premium danach: CHF 99/Jahr · bis zu 3 Kinderprofile · TWINT & Kreditkarte</p>
           </div>
 
           <div className="relative min-h-[320px] overflow-hidden rounded-3xl bg-white shadow-xl shadow-green-100 ring-1 ring-green-100 sm:min-h-[380px]">
@@ -85,21 +92,29 @@ export default function AdsPrimarschuleClient() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-gray-950/10 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur">
-              <p className="text-sm font-bold text-gray-900">Heute geschafft</p>
-              <div className="mt-3 grid grid-cols-3 gap-3 text-center">
+              <div className="flex items-start gap-3">
+                <Image src="/cleverli-thumbsup.png" alt="" width={48} height={48} className="h-12 w-12 shrink-0 object-contain" />
                 <div>
-                  <div className="text-2xl font-black text-green-700">18</div>
-                  <div className="text-xs text-gray-500">Aufgaben</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-black text-amber-500">3</div>
-                  <div className="text-xs text-gray-500">Themen</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-black text-blue-600">7</div>
-                  <div className="text-xs text-gray-500">Tage</div>
+                  <p className="text-xs font-black uppercase tracking-widest text-green-700">Beispielaufgabe</p>
+                  <p className="mt-1 text-sm font-bold text-gray-900">2. Klasse Mathe</p>
+                  <p className="mt-1 text-lg font-black text-gray-950">Wie viel ist 8 + 7 + 9?</p>
                 </div>
               </div>
+              <div className="mt-4 grid grid-cols-3 gap-2">
+                {previewAnswers.map((answer, index) => (
+                  <div
+                    key={answer}
+                    className={`rounded-xl border px-3 py-3 text-center text-sm font-black ${
+                      index === 1
+                        ? "border-green-600 bg-green-50 text-green-800"
+                        : "border-gray-200 bg-white text-gray-700"
+                    }`}
+                  >
+                    {answer}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-xs font-semibold text-gray-500">Kurze Runden, sofortiges Feedback, Fortschritt für Eltern sichtbar.</p>
             </div>
           </div>
         </div>
