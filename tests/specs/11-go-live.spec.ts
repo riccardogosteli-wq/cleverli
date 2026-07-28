@@ -59,9 +59,9 @@ test.describe("Paywall — free exercise limit", () => {
     await page.goto("/learn/1/math/zahlen-1-10");
     await page.waitForTimeout(2_000);
 
-    // Simulate reaching free limit (set completed count high)
+    // Simulate reaching the free limit.
     await page.evaluate(() => {
-      localStorage.setItem("cleverli_free_used", "10");
+      localStorage.setItem("cleverli_anon_exercises", "20");
     });
 
     await page.reload();

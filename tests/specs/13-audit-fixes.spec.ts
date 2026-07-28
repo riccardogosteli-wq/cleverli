@@ -69,30 +69,38 @@ test.describe("Fix 1 — Rewards page uses correct child profile key", () => {
   });
 });
 
-// ─── FIX 2: PAYWALL GRADES 3–6 ───────────────────────────────────────────────
+// ─── FIX 2: PAYWALL FREE LIMIT ───────────────────────────────────────────────
 
-test.describe("Fix 2 — Paywall applies to grades 3–6 for free users", () => {
-  for (const grade of [3, 4, 5, 6]) {
-    test(`Grade ${grade} shows premium lock or upsell for free user`, async ({ page }) => {
-      await page.goto("/dashboard");
-      // Clear any premium session
-      await page.evaluate(() => {
-        localStorage.removeItem("cleverli_session");
-      });
-      await page.goto(`/dashboard?grade=${grade}&subject=math`);
-      await page.waitForTimeout(2_500);
-      const body = await page.locator("body").textContent() ?? "";
-      // Should show lock icon, "Premium" badge, or upsell link
-      const hasPremiumGating = body.includes("🔒") || body.includes("Premium")
-        || body.includes("Upgrade") || body.includes("freischalten")
-        || body.includes("Débloquer") || body.includes("Sblocca");
-      if (!hasPremiumGating) {
-        console.warn(`⚠️  Grade ${grade} may not be properly gated for free users`);
-      }
-      // Page should load without crashing
-      await expect(page.locator("nav").first()).toBeVisible({ timeout: 5_000 });
+test.describe("Fix 2 — free users can try any grade up to 20 exercises", () => {
+  test("Grade 6 direct topic is available before the free limit", async ({ page }) => {
+    await page.goto("/dashboard");
+    await page.evaluate(() => {
+      localStorage.removeItem("cleverli_session");
+      localStorage.setItem("cleverli_anon_exercises", "19");
     });
-  }
+
+    await page.goto("/learn/6/science/energie-nachh-6");
+    await page.waitForTimeout(2_500);
+
+    const body = await page.locator("body").textContent() ?? "";
+    expect(body).not.toContain("Premium für diese Klasse");
+    expect(body).not.toContain("Premium for this grade");
+    expect(body).not.toContain("Du hast die 20 kostenlosen Aufgaben abgeschlossen");
+  });
+
+  test("Grade 6 direct topic locks at the 20-exercise free limit", async ({ page }) => {
+    await page.goto("/dashboard");
+    await page.evaluate(() => {
+      localStorage.removeItem("cleverli_session");
+      localStorage.setItem("cleverli_anon_exercises", "20");
+    });
+
+    await page.goto("/learn/6/science/energie-nachh-6");
+    await page.waitForTimeout(2_500);
+
+    const body = await page.locator("body").textContent() ?? "";
+    expect(body).toContain("Du hast die 20 kostenlosen Aufgaben abgeschlossen");
+  });
 
   test("Grade 1 shows NO premium lock for free users", async ({ page }) => {
     await page.goto("/dashboard");
@@ -111,10 +119,6 @@ test.describe("Fix 2 — Paywall applies to grades 3–6 for free users", () => 
     await page.evaluate(() => localStorage.removeItem("cleverli_session"));
     await page.goto("/dashboard?grade=2&subject=math");
     await page.waitForTimeout(2_500);
-    const isGrade2Locked = await page.evaluate(() => {
-      // isGrade3Locked logic: grade >= 3, so grade 2 should not be locked
-      return false; // can't easily check without the component state
-    });
     // Page should load without upsell for grade 2
     const body = await page.locator("body").textContent() ?? "";
     expect(body).not.toContain("Klasse 2 komplett freischalten");
@@ -401,9 +405,9 @@ test.describe("Fix 14 — Grade picker renders correctly (6 grade buttons)", () 
     await page.goto("/dashboard");
     await page.evaluate(() => {
       // Remove grade from active child profile so picker appears
-      const fam = JSON.parse(localStorage.getItem("cleverli_family") || '{"members":[]}');
+      const fam = JSON.parse(localStorage.getItem("cleverli_family") || '{"members":[]}') as { members: Array<{ id?: string; grade?: number }> };
       const aid = localStorage.getItem("cleverli_active_profile");
-      const m = fam.members.find((x: any) => x.id === aid);
+      const m = fam.members.find((x) => x.id === aid);
       if (m) { delete m.grade; localStorage.setItem("cleverli_family", JSON.stringify(fam)); }
     });
     await page.goto("/dashboard");
@@ -465,14 +469,6 @@ test.describe("Fix 16 — Mobile XP strip visible when XP > 0", () => {
 // ─── FIX 17: I18N KEYS EXIST IN ALL LANGUAGES ────────────────────────────────
 
 test.describe("Fix 17 — New i18n keys present across all 4 languages", () => {
-  const newKeys = [
-    "wrongFeedback", "correctAnswerLabel", "understoodContinue",
-    "almostPerfect", "mapCompleted", "mapLetsGo",
-    "addChildTitle", "addChildBtn", "chooseAvatar",
-    "saveBtn", "cancelBtn", "childProfilesTitle",
-    "editGradeBtn", "premiumRequiredGrade",
-  ];
-
   for (const lang of ["de", "fr", "it", "en"]) {
     test(`All new i18n keys exist in lang="${lang}"`, async ({ page }) => {
       await page.goto("/dashboard");

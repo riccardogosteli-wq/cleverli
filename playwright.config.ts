@@ -1,5 +1,4 @@
-import { defineConfig, devices } from "@playwright/test";
-import path from "path";
+import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./tests",
@@ -17,7 +16,7 @@ export default defineConfig({
     ["html", { outputFolder: "tests/results/html", open: "never" }],
   ],
   use: {
-    baseURL: "https://www.cleverli.ch",
+    baseURL: process.env.PLAYWRIGHT_BASE_URL ?? "https://www.cleverli.ch",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
     video: "retain-on-failure",
