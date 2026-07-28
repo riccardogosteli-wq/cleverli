@@ -37,6 +37,14 @@ type ActivityEventRow = {
   topic_id: string | null;
   metadata: Record<string, unknown> | null;
   created_at: string;
+  synthetic?: boolean;
+};
+
+type AuthUserRow = {
+  id: string;
+  email: string | null;
+  created_at: string;
+  last_sign_in_at: string | null;
 };
 
 type ExerciseStats = {
@@ -217,6 +225,118 @@ async function loadActivity(filters: ActivityFilters) {
   return (data ?? []) as ActivityEventRow[];
 }
 
+async function loadAuthUsers(filters: ActivityFilters) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) return [] as AuthUserRow[];
+
+  const supabase = createClient(supabaseUrl, serviceKey, {
+    auth: { persistSession: false },
+  });
+
+  const users: AuthUserRow[] = [];
+  const perPage = 1000;
+  let page = 1;
+
+  while (page <= 10) {
+    const { data, error } = await supabase.auth.admin.listUsers({ page, perPage });
+    if (error) {
+      console.error("[internal-log-dashboard/auth-users]", error);
+      return users;
+    }
+
+    users.push(...data.users.map(user => ({
+      id: user.id,
+      email: user.email ?? null,
+      created_at: user.created_at,
+      last_sign_in_at: user.last_sign_in_at ?? null,
+    })));
+
+    if (data.users.length < perPage) break;
+    page += 1;
+  }
+
+  const userFilter = filters.user?.trim().toLowerCase();
+  if (!userFilter) return users;
+
+  return users.filter(user => {
+    return user.id.toLowerCase() === userFilter || user.email?.toLowerCase().includes(userFilter);
+  });
+}
+
+function minuteKey(date: string) {
+  return date.slice(0, 16);
+}
+
+function matchesActivityFilter(activityType: string, filters: ActivityFilters) {
+  return !filters.activity || filters.activity === "all" || filters.activity === activityType;
+}
+
+function matchesDateFilter(date: string, filters: ActivityFilters) {
+  const timestamp = new Date(date).getTime();
+  if (!Number.isFinite(timestamp)) return false;
+
+  if (filters.from) {
+    const from = new Date(`${filters.from}T00:00:00`).getTime();
+    if (timestamp < from) return false;
+  } else {
+    const defaultFrom = Date.now() - 30 * 24 * 60 * 60 * 1000;
+    if (timestamp < defaultFrom) return false;
+  }
+
+  if (filters.to) {
+    const to = new Date(`${filters.to}T23:59:59`).getTime();
+    if (timestamp > to) return false;
+  }
+
+  return true;
+}
+
+function authActivityRows(authUsers: AuthUserRow[], events: ActivityEventRow[], filters: ActivityFilters) {
+  const existing = new Set(
+    events
+      .filter(event => event.user_id && ["login", "signup"].includes(event.activity_type))
+      .map(event => `${event.user_id}:${event.activity_type}:${minuteKey(event.created_at)}`),
+  );
+
+  const rows: ActivityEventRow[] = [];
+
+  for (const user of authUsers) {
+    const candidates: Array<{ activityType: "login" | "signup"; createdAt: string }> = [
+      { activityType: "signup", createdAt: user.created_at },
+    ];
+
+    if (user.last_sign_in_at) {
+      candidates.push({ activityType: "login", createdAt: user.last_sign_in_at });
+    }
+
+    for (const candidate of candidates) {
+      if (!matchesActivityFilter(candidate.activityType, filters)) continue;
+      if (!matchesDateFilter(candidate.createdAt, filters)) continue;
+
+      const key = `${user.id}:${candidate.activityType}:${minuteKey(candidate.createdAt)}`;
+      if (existing.has(key)) continue;
+
+      rows.push({
+        user_id: user.id,
+        email: user.email,
+        activity_type: candidate.activityType,
+        path: null,
+        source: "supabase_auth",
+        exercise_id: null,
+        grade: null,
+        subject: null,
+        topic_id: null,
+        metadata: { source: "Supabase Auth" },
+        created_at: candidate.createdAt,
+        synthetic: true,
+      });
+    }
+  }
+
+  return rows;
+}
+
 function buildStats(events: ExerciseEventRow[]) {
   const last24 = events.filter(e => Date.now() - new Date(e.created_at).getTime() <= 24 * 60 * 60 * 1000);
   const byEvent = events.reduce<Record<string, number>>((acc, event) => {
@@ -283,9 +403,22 @@ function buildStats(events: ExerciseEventRow[]) {
   };
 }
 
-function buildActivitySummaries(events: ActivityEventRow[]) {
+function buildActivitySummaries(events: ActivityEventRow[], authUsers: AuthUserRow[] = []) {
   const since7d = Date.now() - 7 * 24 * 60 * 60 * 1000;
   const summaries = new Map<string, UserActivitySummary>();
+
+  for (const user of authUsers) {
+    const lastActivity = user.last_sign_in_at ?? user.created_at;
+    summaries.set(user.id, {
+      key: user.id,
+      label: user.email ?? user.id,
+      lastActivity,
+      lastActivityType: user.last_sign_in_at ? "login" : "signup",
+      exercises7d: 0,
+      authEvents: 0,
+      subscriptionEvents: 0,
+    });
+  }
 
   for (const event of events) {
     const key = event.user_id ?? event.email ?? "unknown";
@@ -387,9 +520,17 @@ export default async function InternalLogDashboard({
     to: params.to || "",
   };
   const events = await loadEvents();
-  const activityEvents = await loadActivity(activityFilters);
+  const [activityEventsRaw, authUsers] = await Promise.all([
+    loadActivity(activityFilters),
+    loadAuthUsers(activityFilters),
+  ]);
+  const activityEvents = [
+    ...activityEventsRaw,
+    ...authActivityRows(authUsers, activityEventsRaw, activityFilters),
+  ].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()).slice(0, 1000);
   const stats = buildStats(events);
-  const activitySummaries = buildActivitySummaries(activityEvents);
+  const seedAuthSummaries = activityFilters.activity === "all" && !activityFilters.from && !activityFilters.to;
+  const activitySummaries = buildActivitySummaries(activityEvents, seedAuthSummaries ? authUsers : []);
   const maxEvent = Math.max(1, ...Object.values(stats.byEvent));
 
   return (
@@ -464,7 +605,7 @@ export default async function InternalLogDashboard({
                     <th className="py-2">User</th>
                     <th>Letzte Aktivität</th>
                     <th>Zeit</th>
-                    <th>Übungen 7d</th>
+                    <th>Übungen</th>
                     <th>Auth</th>
                     <th>Abo</th>
                   </tr>
