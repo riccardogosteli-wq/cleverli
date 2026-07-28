@@ -401,11 +401,8 @@ function DashboardInner() {
   const firstNotDoneIdx = topics.findIndex(t => !isTopicFullyDone(t.id));
 
   // UJ-4: premium awareness (from session, only after hydration)
-  const isPremium = sessionLoaded ? sessionPremium : true; // assume premium until loaded (avoids false lock flash)
   // ✅ Grades 3–6 require premium (grade 3 was the only locked grade before — gap fixed)
   const isGrade3Locked = grade !== null && grade >= 3 && sessionLoaded && !sessionPremium;
-  // Anonymous users (not logged in) get all grade 1–2 topics unlocked so they can trial freely
-  const isAnonymousUser = sessionLoaded && !session;
 
   const handleBack = () => {
     if (preselectedSubject) setGrade(null);

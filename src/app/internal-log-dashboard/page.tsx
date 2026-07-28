@@ -45,6 +45,10 @@ type AuthUserRow = {
   email: string | null;
   created_at: string;
   last_sign_in_at: string | null;
+  premium: boolean;
+  premium_until: string | null;
+  premium_plan: string | null;
+  cancelled: boolean;
 };
 
 type ExerciseStats = {
@@ -72,6 +76,8 @@ type ActivityFilters = {
 type UserActivitySummary = {
   key: string;
   label: string;
+  accessLabel: string;
+  accessTone: "premium" | "free" | "expired" | "cancelled" | "unknown";
   lastActivity: string;
   lastActivityType: string;
   exercises7d: number;
@@ -155,6 +161,34 @@ function metadataLabel(metadata: Record<string, unknown> | null) {
     .slice(0, 4)
     .map(([key, value]) => `${key}: ${String(value)}`);
   return entries.length ? entries.join(" · ") : "-";
+}
+
+function accessInfo(user?: Pick<AuthUserRow, "premium" | "premium_until" | "premium_plan" | "cancelled"> | null) {
+  if (!user) return { label: "Unbekannt", tone: "unknown" as const };
+
+  const active = user.premium && (!user.premium_until || new Date(user.premium_until) > new Date());
+  if (!active && user.premium_until) return { label: "Free · abgelaufen", tone: "expired" as const };
+  if (!active) return { label: "Free", tone: "free" as const };
+
+  const plan = user.premium_plan ? ` · ${user.premium_plan}` : "";
+  if (user.cancelled) return { label: `Premium gekündigt${plan}`, tone: "cancelled" as const };
+  return { label: `Premium${plan}`, tone: "premium" as const };
+}
+
+function AccessBadge({ label, tone }: { label: string; tone: UserActivitySummary["accessTone"] }) {
+  const classes: Record<UserActivitySummary["accessTone"], string> = {
+    premium: "border-green-200 bg-green-50 text-green-800",
+    cancelled: "border-amber-200 bg-amber-50 text-amber-800",
+    expired: "border-gray-200 bg-gray-100 text-gray-600",
+    free: "border-gray-200 bg-white text-gray-700",
+    unknown: "border-gray-200 bg-gray-50 text-gray-500",
+  };
+
+  return (
+    <span className={`inline-flex whitespace-nowrap rounded-full border px-2 py-1 text-xs font-bold ${classes[tone]}`}>
+      {label}
+    </span>
+  );
 }
 
 async function loadEvents() {
@@ -250,16 +284,49 @@ async function loadAuthUsers(filters: ActivityFilters) {
       email: user.email ?? null,
       created_at: user.created_at,
       last_sign_in_at: user.last_sign_in_at ?? null,
+      premium: false,
+      premium_until: null,
+      premium_plan: null,
+      cancelled: false,
     })));
 
     if (data.users.length < perPage) break;
     page += 1;
   }
 
-  const userFilter = filters.user?.trim().toLowerCase();
-  if (!userFilter) return users;
+  const profileMap = new Map<string, Pick<AuthUserRow, "premium" | "premium_until" | "premium_plan" | "cancelled">>();
+  for (let i = 0; i < users.length; i += 1000) {
+    const ids = users.slice(i, i + 1000).map(user => user.id);
+    if (ids.length === 0) continue;
 
-  return users.filter(user => {
+    const { data, error } = await supabase
+      .from("parent_profiles")
+      .select("id, premium, premium_until, premium_plan, cancelled")
+      .in("id", ids);
+
+    if (error) {
+      console.error("[internal-log-dashboard/account-status]", error);
+    } else {
+      for (const profile of data ?? []) {
+        profileMap.set(profile.id, {
+          premium: profile.premium ?? false,
+          premium_until: profile.premium_until ?? null,
+          premium_plan: profile.premium_plan ?? null,
+          cancelled: profile.cancelled ?? false,
+        });
+      }
+    }
+  }
+
+  const enrichedUsers = users.map(user => ({
+    ...user,
+    ...(profileMap.get(user.id) ?? {}),
+  }));
+
+  const userFilter = filters.user?.trim().toLowerCase();
+  if (!userFilter) return enrichedUsers;
+
+  return enrichedUsers.filter(user => {
     return user.id.toLowerCase() === userFilter || user.email?.toLowerCase().includes(userFilter);
   });
 }
@@ -406,12 +473,17 @@ function buildStats(events: ExerciseEventRow[]) {
 function buildActivitySummaries(events: ActivityEventRow[], authUsers: AuthUserRow[] = []) {
   const since7d = Date.now() - 7 * 24 * 60 * 60 * 1000;
   const summaries = new Map<string, UserActivitySummary>();
+  const authById = new Map(authUsers.map(user => [user.id, user]));
+  const authByEmail = new Map(authUsers.filter(user => user.email).map(user => [user.email!.toLowerCase(), user]));
 
   for (const user of authUsers) {
     const lastActivity = user.last_sign_in_at ?? user.created_at;
+    const access = accessInfo(user);
     summaries.set(user.id, {
       key: user.id,
       label: user.email ?? user.id,
+      accessLabel: access.label,
+      accessTone: access.tone,
       lastActivity,
       lastActivityType: user.last_sign_in_at ? "login" : "signup",
       exercises7d: 0,
@@ -423,9 +495,13 @@ function buildActivitySummaries(events: ActivityEventRow[], authUsers: AuthUserR
   for (const event of events) {
     const key = event.user_id ?? event.email ?? "unknown";
     const current = summaries.get(key);
+    const authUser = event.user_id ? authById.get(event.user_id) : event.email ? authByEmail.get(event.email.toLowerCase()) : null;
+    const access = accessInfo(authUser);
     const summary = current ?? {
       key,
       label: event.email ?? event.user_id ?? "Unbekannt",
+      accessLabel: access.label,
+      accessTone: access.tone,
       lastActivity: event.created_at,
       lastActivityType: event.activity_type,
       exercises7d: 0,
@@ -531,6 +607,11 @@ export default async function InternalLogDashboard({
   const stats = buildStats(events);
   const seedAuthSummaries = activityFilters.activity === "all" && !activityFilters.from && !activityFilters.to;
   const activitySummaries = buildActivitySummaries(activityEvents, seedAuthSummaries ? authUsers : []);
+  const authById = new Map(authUsers.map(user => [user.id, user]));
+  const authByEmail = new Map(authUsers.filter(user => user.email).map(user => [user.email!.toLowerCase(), user]));
+  const eventAccess = (event: ActivityEventRow) => accessInfo(
+    event.user_id ? authById.get(event.user_id) : event.email ? authByEmail.get(event.email.toLowerCase()) : null,
+  );
   const maxEvent = Math.max(1, ...Object.values(stats.byEvent));
 
   return (
@@ -599,10 +680,11 @@ export default async function InternalLogDashboard({
           <div className="mt-5 grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
             <div className="overflow-x-auto">
               <h3 className="mb-2 text-xs font-black uppercase tracking-wide text-gray-500">Letzte Aktivität pro User</h3>
-              <table className="w-full min-w-[640px] text-left text-sm">
+              <table className="w-full min-w-[820px] text-left text-sm">
                 <thead className="text-xs uppercase text-gray-500">
                   <tr>
                     <th className="py-2">User</th>
+                    <th>Status</th>
                     <th>Letzte Aktivität</th>
                     <th>Zeit</th>
                     <th>Übungen</th>
@@ -614,6 +696,7 @@ export default async function InternalLogDashboard({
                   {activitySummaries.map(user => (
                     <tr key={user.key} className="border-t border-gray-100">
                       <td className="max-w-[220px] truncate py-2 font-semibold">{user.label}</td>
+                      <td><AccessBadge label={user.accessLabel} tone={user.accessTone} /></td>
                       <td>{activityLabel(user.lastActivityType)}</td>
                       <td className="whitespace-nowrap">{dateTimeLabel(user.lastActivity)}</td>
                       <td>{user.exercises7d}</td>
@@ -623,7 +706,7 @@ export default async function InternalLogDashboard({
                   ))}
                   {activitySummaries.length === 0 && (
                     <tr>
-                      <td colSpan={6} className="py-4 text-gray-500">Keine User-Aktivität für diese Filter.</td>
+                      <td colSpan={7} className="py-4 text-gray-500">Keine User-Aktivität für diese Filter.</td>
                     </tr>
                   )}
                 </tbody>
@@ -632,31 +715,36 @@ export default async function InternalLogDashboard({
 
             <div className="max-h-[520px] overflow-auto">
               <h3 className="sticky top-0 mb-2 bg-white pb-2 text-xs font-black uppercase tracking-wide text-gray-500">Timeline</h3>
-              <table className="w-full min-w-[780px] text-left text-sm">
+              <table className="w-full min-w-[980px] text-left text-sm">
                 <thead className="sticky top-7 bg-white text-xs uppercase text-gray-500">
                   <tr>
                     <th className="py-2">Zeit</th>
                     <th>User</th>
+                    <th>Status</th>
                     <th>Aktivität</th>
                     <th>Übung</th>
                     <th>Kontext</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {activityEvents.map((event, index) => (
-                    <tr key={`${event.created_at}-${index}`} className="border-t border-gray-100">
-                      <td className="whitespace-nowrap py-2">{dateTimeLabel(event.created_at)}</td>
-                      <td className="max-w-[190px] truncate font-semibold">{event.email ?? event.user_id ?? "-"}</td>
-                      <td>{activityLabel(event.activity_type)}</td>
-                      <td className="max-w-[150px] truncate">{event.exercise_id ?? "-"}</td>
-                      <td className="max-w-[260px] truncate text-gray-500">
-                        {[event.path, event.topic_id, metadataLabel(event.metadata)].filter(value => value && value !== "-").join(" · ") || "-"}
-                      </td>
-                    </tr>
-                  ))}
+                  {activityEvents.map((event, index) => {
+                    const access = eventAccess(event);
+                    return (
+                      <tr key={`${event.created_at}-${index}`} className="border-t border-gray-100">
+                        <td className="whitespace-nowrap py-2">{dateTimeLabel(event.created_at)}</td>
+                        <td className="max-w-[190px] truncate font-semibold">{event.email ?? event.user_id ?? "-"}</td>
+                        <td><AccessBadge label={access.label} tone={access.tone} /></td>
+                        <td>{activityLabel(event.activity_type)}</td>
+                        <td className="max-w-[150px] truncate">{event.exercise_id ?? "-"}</td>
+                        <td className="max-w-[260px] truncate text-gray-500">
+                          {[event.path, event.topic_id, metadataLabel(event.metadata)].filter(value => value && value !== "-").join(" · ") || "-"}
+                        </td>
+                      </tr>
+                    );
+                  })}
                   {activityEvents.length === 0 && (
                     <tr>
-                      <td colSpan={5} className="py-4 text-gray-500">Keine Timeline-Events.</td>
+                      <td colSpan={6} className="py-4 text-gray-500">Keine Timeline-Events.</td>
                     </tr>
                   )}
                 </tbody>

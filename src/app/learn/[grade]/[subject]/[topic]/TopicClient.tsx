@@ -87,7 +87,7 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
         topic={topic}
         grade={grade}
         subject={subject}
-        isPremium={loaded ? isPremium : true}
+        isPremium={loaded ? isPremium : false}
         allTopics={allTopics}
         topicIndex={topicIndex}
       />

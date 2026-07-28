@@ -29,6 +29,7 @@ export function useSession() {
   // This prevents React hydration mismatch (#418) caused by server/client HTML divergence.
   const [session, setSession] = useState<Session | null>(null);
   const [loaded, setLoaded] = useState<boolean>(false);
+  const [premiumVerified, setPremiumVerified] = useState<boolean>(false);
 
   // useRef so the auth state change callback always reads the current value (not stale closure)
   const loginInProgressRef = useRef(false);
@@ -46,9 +47,10 @@ export function useSession() {
   useEffect(() => {
     const supabase = getSupabase();
     if (!supabase) {
-      // No Supabase client — localStorage-only mode
+      // No Supabase client — keep cached identity, but do not grant Premium from cache.
       const cached = readCachedSession();
       setSession(cached);
+      setPremiumVerified(false);
       setLoaded(true);
       return;
     }
@@ -74,19 +76,23 @@ export function useSession() {
           };
           setSession(sess);
           localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
+          setPremiumVerified(true);
         } else {
           // Supabase is configured and reachable, but there is no valid auth
           // session. Clear stale cached sessions so old premium=false data does
           // not keep showing a half-logged-in account forever.
           localStorage.removeItem(SESSION_KEY);
           setSession(null);
+          setPremiumVerified(false);
         }
       } catch {
-        // Auth error — keep current state (cache still valid)
+        // Auth error — keep current identity state, but do not grant cached Premium.
+        setPremiumVerified(false);
       }
       setLoaded(true);
     }).catch(() => {
-      // Supabase unreachable — fall back to cache
+      // Supabase unreachable — fall back to cache for identity only, not Premium.
+      setPremiumVerified(false);
       setLoaded(true);
     });
 
@@ -112,6 +118,7 @@ export function useSession() {
             };
             setSession(sess);
             localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
+            setPremiumVerified(true);
             setLoaded(true);
           } else if (event === "SIGNED_OUT") {
             // Only clear if there's no cached session AND logout() removed it.
@@ -120,11 +127,13 @@ export function useSession() {
             const cached = localStorage.getItem(SESSION_KEY);
             if (!cached) {
               setSession(null);
+              setPremiumVerified(false);
               setLoaded(true);
             }
           }
         } catch {
-          // Auth state change error — ignore, keep current session
+          // Auth state change error — ignore identity, but do not grant cached Premium.
+          setPremiumVerified(false);
         }
       }
     );
@@ -136,12 +145,14 @@ export function useSession() {
     // Remove cache BEFORE signOut so the SIGNED_OUT listener sees no cache and clears state
     localStorage.removeItem(SESSION_KEY);
     setSession(null);
+    setPremiumVerified(false);
     const supabase = getSupabase();
     if (supabase) await supabase.auth.signOut();
   };
 
   // isPremium: true only if premium=true AND not expired
   const isPremium = (() => {
+    if (!premiumVerified) return false;
     if (!session?.premium) return false;
     if (!session.premiumUntil) return true;
     return new Date(session.premiumUntil) > new Date();

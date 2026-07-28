@@ -198,6 +198,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     }
   }, [isAnonymous]);
   const uid = session?.userId ?? "";
+  const freeUsageKey = uid ? `cleverli_free_exercises_${uid}` : "cleverli_anon_exercises";
+  const [freeExercisesUsed, setFreeExercisesUsed] = useState(() => profile.totalExercises);
   // Select the current difficulty section, so Grün/Gelb/Rot progress matches the actual session.
   const [sessionStartCompleted, setSessionStartCompleted] = useState(() => getInitialSessionStart(topic, grade, subject));
   const [fullSetExercises, setFullSetExercises] = useState(() => getInitialSessionExercises(topic, grade, subject));
@@ -231,8 +233,21 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   const sessionTotal = Math.max(1, exercises.length);
   const current: Exercise = localiseExercise(exercises[idx] ?? sortByDifficulty(topic.exercises)[0], lang);
-  const freeExercisesRemaining = Math.max(0, FREE_EXERCISE_LIMIT - profile.totalExercises);
-  const isLocked = !isPremium && profile.totalExercises >= FREE_EXERCISE_LIMIT;
+  useEffect(() => {
+    try {
+      const stored = parseInt(localStorage.getItem(freeUsageKey) ?? "0", 10) || 0;
+      const legacyAnon = isAnonymous ? (parseInt(localStorage.getItem("cleverli_anon_exercises") ?? "0", 10) || 0) : 0;
+      const used = Math.max(stored, legacyAnon, profile.totalExercises);
+      setFreeExercisesUsed(used);
+      localStorage.setItem(freeUsageKey, String(used));
+      if (isAnonymous) setAnonExerciseCount(used);
+    } catch {
+      setFreeExercisesUsed(profile.totalExercises);
+    }
+  }, [freeUsageKey, isAnonymous, profile.totalExercises]);
+
+  const freeExercisesRemaining = Math.max(0, FREE_EXERCISE_LIMIT - freeExercisesUsed);
+  const isLocked = !isPremium && freeExercisesUsed >= FREE_EXERCISE_LIMIT;
   const exerciseStartRef = useRef<number>(Date.now());
 
   const exerciseTelemetryPayload = (extra: ExerciseTelemetryPayload = {}): ExerciseTelemetryPayload => ({
@@ -439,13 +454,17 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       });
     }
 
-    // Track anonymous user exercises & show signup prompt after 5
-    if (isAnonymous) {
-      const newCount = anonExerciseCount + 1;
-      setAnonExerciseCount(newCount);
-      localStorage.setItem("cleverli_anon_exercises", String(newCount));
-      
-      if (newCount >= FREE_EXERCISE_LIMIT && !localStorage.getItem("cleverli_signup_dismissed")) {
+    // Count every answered free task, not only correct answers.
+    if (!isPremium) {
+      const newCount = Math.max(freeExercisesUsed + 1, profile.totalExercises + (correct ? 1 : 0));
+      setFreeExercisesUsed(newCount);
+      try {
+        localStorage.setItem(freeUsageKey, String(newCount));
+        if (isAnonymous) localStorage.setItem("cleverli_anon_exercises", String(newCount));
+      } catch {}
+      if (isAnonymous) setAnonExerciseCount(newCount);
+
+      if (isAnonymous && newCount >= FREE_EXERCISE_LIMIT && !localStorage.getItem("cleverli_signup_dismissed")) {
         setTimeout(() => setShowSignupPrompt(true), 1000);
       }
     }
