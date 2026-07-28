@@ -7,6 +7,7 @@ import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { getSupabase } from "@/lib/supabase";
 import { getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
+import { trackUserActivity } from "@/lib/userActivityClient";
 
 export default function Login() {
   const { tr } = useLang();
@@ -52,7 +53,7 @@ export default function Login() {
 
     const supabase = getSupabase();
     if (!supabase) { setError(tr("errorAuthUnavail") ?? "Auth nicht verfügbar."); setLoading(false); return; }
-    const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error: authError } = await supabase.auth.signInWithPassword({ email, password });
 
     if (authError) {
       setLoading(false);
@@ -65,6 +66,11 @@ export default function Login() {
         setError(authError.message);
       }
     } else {
+      trackUserActivity("login", {
+        email,
+        accessToken: data.session?.access_token,
+        metadata: { pendingCheckout: pendingCheckout?.plan ?? null },
+      });
       // Success: reset loading state and force redirect
       setLoading(false);
       setLoginInProgress(false);

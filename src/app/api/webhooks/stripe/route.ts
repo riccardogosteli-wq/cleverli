@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import { sendPaymentConfirmationEmail } from "@/lib/email";
+import { logUserActivity } from "@/lib/userActivityServer";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!;
@@ -118,6 +119,14 @@ export async function POST(req: NextRequest) {
       stripe_subscription_id: stripeSubscriptionId,
     });
 
+    logUserActivity({
+      userId,
+      email: customerEmail,
+      activityType: "subscription_started",
+      source: "stripe_webhook",
+      metadata: { plan, premiumUntil, stripeCustomerId, stripeSubscriptionId },
+    }).catch(() => {});
+
     // Send confirmation email
     if (customerEmail) {
       sendPaymentConfirmationEmail(customerEmail, "", plan as "monthly" | "yearly").catch(error => {
@@ -140,12 +149,25 @@ export async function POST(req: NextRequest) {
 
     if (userId) {
       await updateSupabasePremium(userId, plan, premium, premiumUntil, cancelAtPeriodEnd || !premium);
+      logUserActivity({
+        userId,
+        activityType: cancelAtPeriodEnd || !premium ? "subscription_cancelled" : "subscription_updated",
+        source: "stripe_webhook",
+        metadata: { plan, status, premium, premiumUntil, cancelAtPeriodEnd },
+      }).catch(() => {});
       console.log(`[stripe-webhook] Subscription ${status} for ${userId}`);
     } else {
       // Fallback: look up by stripe_customer_id
       const user = await getUserByStripeCustomer(subscription.customer as string);
       if (user) {
         await updateSupabasePremium(user.userId, plan, premium, premiumUntil, cancelAtPeriodEnd || !premium);
+        logUserActivity({
+          userId: user.userId,
+          email: user.email,
+          activityType: cancelAtPeriodEnd || !premium ? "subscription_cancelled" : "subscription_updated",
+          source: "stripe_webhook",
+          metadata: { plan, status, premium, premiumUntil, cancelAtPeriodEnd },
+        }).catch(() => {});
         console.log(`[stripe-webhook] Subscription ${status} for ${user.userId} (by customer ID)`);
       }
     }

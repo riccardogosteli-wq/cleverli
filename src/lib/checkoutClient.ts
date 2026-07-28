@@ -39,7 +39,8 @@ export async function startCheckout(plan: CheckoutPlan, source: string, userId?:
     return;
   }
 
-  const res = await fetch(`/api/checkout?plan=${plan}&uid=${verifiedUserId}`, {
+  const params = new URLSearchParams({ plan, uid: verifiedUserId, source });
+  const res = await fetch(`/api/checkout?${params.toString()}`, {
     headers: {
       Accept: "application/json",
       Authorization: `Bearer ${token}`,

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
+import { logUserActivity } from "@/lib/userActivityServer";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.cleverli.ch";
 
@@ -105,6 +106,15 @@ export async function GET(req: NextRequest) {
       Sentry.captureMessage("[checkout] Stripe session missing URL", "error");
       return NextResponse.json({ error: "gateway_failed" }, { status: 500 });
     }
+
+    logUserActivity({
+      userId,
+      email: customerEmail ?? null,
+      activityType: "checkout_started",
+      source: req.nextUrl.searchParams.get("source") ?? "checkout_api",
+      path: req.nextUrl.pathname,
+      metadata: { plan, stripeSessionId: session.id },
+    }).catch(() => {});
 
     return wantsJson(req)
       ? NextResponse.json({ url: session.url })

@@ -1,6 +1,7 @@
 "use client";
 
 import { captureProductEvent } from "@/lib/monitoring";
+import { trackUserActivity } from "@/lib/userActivityClient";
 
 export type ExerciseTelemetryEvent =
   | "exercise_started"
@@ -93,4 +94,31 @@ export function trackExerciseEvent(eventName: ExerciseTelemetryEvent, payload: E
   }).catch(() => {
     // Product telemetry must never break the exercise flow.
   });
+
+  if (
+    eventName === "exercise_started"
+    || eventName === "exercise_completed"
+    || eventName === "exercise_wrong_answer"
+    || eventName === "hint_used"
+    || eventName === "paywall_shown"
+  ) {
+    trackUserActivity(eventName, {
+      path: safePayload.path,
+      exerciseId: safePayload.exerciseId,
+      grade: safePayload.grade,
+      subject: safePayload.subject,
+      topicId: safePayload.topicId,
+      metadata: {
+        exerciseType: safePayload.exerciseType,
+        isCorrect: safePayload.isCorrect,
+        attemptIndex: safePayload.attemptIndex,
+        wrongCountSession: safePayload.wrongCountSession,
+        hintsUsed: safePayload.hintsUsed,
+        durationMs: safePayload.durationMs,
+        topicIndex: safePayload.topicIndex,
+        topicTotal: safePayload.topicTotal,
+        lang: safePayload.lang,
+      },
+    });
+  }
 }

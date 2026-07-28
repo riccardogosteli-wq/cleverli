@@ -9,6 +9,7 @@ import { getSupabase } from "@/lib/supabase";
 import { trackSignUp } from "@/lib/analytics";
 import { captureAppError } from "@/lib/monitoring";
 import { getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
+import { trackUserActivity } from "@/lib/userActivityClient";
 
 export default function Signup() {
   const { tr } = useLang();
@@ -92,6 +93,11 @@ export default function Signup() {
       }).catch(() => {});
 
       trackSignUp("email");
+      trackUserActivity("signup", {
+        email,
+        accessToken: data.session?.access_token,
+        metadata: { pendingCheckout: pendingCheckout?.plan ?? null },
+      });
       setSuccess(true);
 
       // If session is immediately available (email confirm disabled), redirect to first exercise

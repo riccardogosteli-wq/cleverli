@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getSupabase } from "@/lib/supabase";
 import { useLang } from "@/lib/LangContext";
+import { trackUserActivity } from "@/lib/userActivityClient";
 
 // ── Request reset (step 1) ───────────────────────────────────────────────────
 
@@ -30,6 +31,7 @@ function RequestReset() {
         redirectTo: `${baseUrl}/reset-password?mode=update`,
       });
       if (err) throw err;
+      trackUserActivity("password_reset_requested", { email });
       setDone(true);
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Fehler");
@@ -123,6 +125,7 @@ function SetNewPassword() {
       if (!supabase) throw new Error("Auth unavailable");
       const { error: err } = await supabase.auth.updateUser({ password });
       if (err) throw err;
+      trackUserActivity("password_updated");
       setDone(true);
       setTimeout(() => router.push("/dashboard"), 2000);
     } catch (e: unknown) {

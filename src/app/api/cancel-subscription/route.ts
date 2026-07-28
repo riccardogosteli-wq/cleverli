@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
+import { logUserActivity } from "@/lib/userActivityServer";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SERVICE_KEY  = process.env.SUPABASE_SERVICE_ROLE_KEY!;
@@ -94,6 +95,13 @@ export async function POST(req: NextRequest) {
   }
 
   console.log(`[cancel-subscription] ✅ Cancellation recorded for ${userId}. Stripe subscriptions cancelled: ${cancelledCount}. Premium access continues until period end.`);
+
+  logUserActivity({
+    userId,
+    activityType: "subscription_cancel_requested",
+    path: req.nextUrl.pathname,
+    metadata: { cancelledCount, warning: cancelError || null },
+  }).catch(() => {});
 
   if (cancelError && cancelledCount === 0) {
     return NextResponse.json({ ok: true, warning: cancelError });

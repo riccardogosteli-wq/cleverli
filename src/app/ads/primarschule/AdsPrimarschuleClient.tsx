@@ -77,7 +77,7 @@ export default function AdsPrimarschuleClient() {
                 Jahresabo ansehen
               </button>
             </div>
-            <p className="mt-3 text-sm text-gray-500">Premium danach: CHF 99/Jahr · bis zu 3 Kinderprofile · TWINT & Kreditkarte</p>
+            <p className="mt-3 text-sm text-gray-500">Premium danach ab CHF 8.25 / Monat · bis zu 3 Kinderprofile · TWINT & Kreditkarte</p>
           </div>
 
           <div className="relative min-h-[320px] overflow-hidden rounded-3xl bg-white shadow-xl shadow-green-100 ring-1 ring-green-100 sm:min-h-[380px]">

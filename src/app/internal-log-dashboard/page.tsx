@@ -25,6 +25,20 @@ type ExerciseEventRow = {
   created_at: string;
 };
 
+type ActivityEventRow = {
+  user_id: string | null;
+  email: string | null;
+  activity_type: string;
+  path: string | null;
+  source: string | null;
+  exercise_id: string | null;
+  grade: number | null;
+  subject: string | null;
+  topic_id: string | null;
+  metadata: Record<string, unknown> | null;
+  created_at: string;
+};
+
 type ExerciseStats = {
   key: string;
   exerciseId: string;
@@ -40,12 +54,66 @@ type ExerciseStats = {
   lastSeen: string;
 };
 
+type ActivityFilters = {
+  user?: string;
+  activity?: string;
+  from?: string;
+  to?: string;
+};
+
+type UserActivitySummary = {
+  key: string;
+  label: string;
+  lastActivity: string;
+  lastActivityType: string;
+  exercises7d: number;
+  authEvents: number;
+  subscriptionEvents: number;
+};
+
+const ACTIVITY_TYPES = [
+  "login",
+  "signup",
+  "password_reset_requested",
+  "password_updated",
+  "checkout_started",
+  "subscription_started",
+  "subscription_updated",
+  "subscription_cancel_requested",
+  "subscription_cancelled",
+  "exercise_started",
+  "exercise_completed",
+  "exercise_wrong_answer",
+  "hint_used",
+  "paywall_shown",
+];
+
 function subjectLabel(subject: string | null) {
   if (!subject) return "-";
   if (subject === "math") return "Mathe";
   if (subject === "german") return "Deutsch";
   if (subject === "nmg") return "NMG";
   return subject;
+}
+
+function activityLabel(activityType: string) {
+  const labels: Record<string, string> = {
+    login: "Login",
+    signup: "Signup",
+    password_reset_requested: "PW Reset angefordert",
+    password_updated: "PW geändert",
+    checkout_started: "Checkout gestartet",
+    subscription_started: "Abo gestartet",
+    subscription_updated: "Abo aktualisiert",
+    subscription_cancel_requested: "Kündigung angefordert",
+    subscription_cancelled: "Abo gekündigt",
+    exercise_started: "Übung gestartet",
+    exercise_completed: "Übung gelöst",
+    exercise_wrong_answer: "Falschantwort",
+    hint_used: "Hint genutzt",
+    paywall_shown: "Paywall gezeigt",
+  };
+  return labels[activityType] ?? activityType;
 }
 
 function pct(value: number, total: number) {
@@ -60,6 +128,25 @@ function timeLabel(date: string) {
     hour: "2-digit",
     minute: "2-digit",
   }).format(new Date(date));
+}
+
+function dateTimeLabel(date: string) {
+  return new Intl.DateTimeFormat("de-CH", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date(date));
+}
+
+function metadataLabel(metadata: Record<string, unknown> | null) {
+  if (!metadata) return "-";
+  const entries = Object.entries(metadata)
+    .filter(([, value]) => value !== null && value !== undefined && value !== "")
+    .slice(0, 4)
+    .map(([key, value]) => `${key}: ${String(value)}`);
+  return entries.length ? entries.join(" · ") : "-";
 }
 
 async function loadEvents() {
@@ -85,6 +172,49 @@ async function loadEvents() {
   }
 
   return (data ?? []) as ExerciseEventRow[];
+}
+
+async function loadActivity(filters: ActivityFilters) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) return [] as ActivityEventRow[];
+
+  const supabase = createClient(supabaseUrl, serviceKey, {
+    auth: { persistSession: false },
+  });
+
+  const from = filters.from
+    ? new Date(`${filters.from}T00:00:00`).toISOString()
+    : new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+  const to = filters.to
+    ? new Date(`${filters.to}T23:59:59`).toISOString()
+    : undefined;
+
+  let query = supabase
+    .from("user_activity_events")
+    .select("user_id, email, activity_type, path, source, exercise_id, grade, subject, topic_id, metadata, created_at")
+    .gte("created_at", from)
+    .order("created_at", { ascending: false })
+    .limit(1000);
+
+  if (to) query = query.lte("created_at", to);
+  if (filters.activity && filters.activity !== "all") {
+    query = query.eq("activity_type", filters.activity);
+  }
+  if (filters.user) {
+    const value = filters.user.trim();
+    const uuidLike = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value);
+    query = uuidLike ? query.eq("user_id", value) : query.ilike("email", `%${value}%`);
+  }
+
+  const { data, error } = await query;
+
+  if (error) {
+    console.error("[internal-log-dashboard/activity]", error);
+    return [];
+  }
+
+  return (data ?? []) as ActivityEventRow[];
 }
 
 function buildStats(events: ExerciseEventRow[]) {
@@ -153,6 +283,45 @@ function buildStats(events: ExerciseEventRow[]) {
   };
 }
 
+function buildActivitySummaries(events: ActivityEventRow[]) {
+  const since7d = Date.now() - 7 * 24 * 60 * 60 * 1000;
+  const summaries = new Map<string, UserActivitySummary>();
+
+  for (const event of events) {
+    const key = event.user_id ?? event.email ?? "unknown";
+    const current = summaries.get(key);
+    const summary = current ?? {
+      key,
+      label: event.email ?? event.user_id ?? "Unbekannt",
+      lastActivity: event.created_at,
+      lastActivityType: event.activity_type,
+      exercises7d: 0,
+      authEvents: 0,
+      subscriptionEvents: 0,
+    };
+
+    if (new Date(event.created_at) > new Date(summary.lastActivity)) {
+      summary.lastActivity = event.created_at;
+      summary.lastActivityType = event.activity_type;
+    }
+    if (event.activity_type.startsWith("exercise_") && new Date(event.created_at).getTime() >= since7d) {
+      summary.exercises7d += 1;
+    }
+    if (["login", "signup", "password_reset_requested", "password_updated"].includes(event.activity_type)) {
+      summary.authEvents += 1;
+    }
+    if (event.activity_type.startsWith("subscription_") || event.activity_type === "checkout_started") {
+      summary.subscriptionEvents += 1;
+    }
+
+    summaries.set(key, summary);
+  }
+
+  return [...summaries.values()]
+    .sort((a, b) => new Date(b.lastActivity).getTime() - new Date(a.lastActivity).getTime())
+    .slice(0, 40);
+}
+
 function LoginForm({ hasError }: { hasError: boolean }) {
   return (
     <main className="min-h-screen bg-gray-950 text-white flex items-center justify-center px-4">
@@ -201,7 +370,7 @@ function Bar({ label, value, max }: { label: string; value: number; max: number 
 export default async function InternalLogDashboard({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; user?: string; activity?: string; from?: string; to?: string }>;
 }) {
   const cookieStore = await cookies();
   const authed = verifyInternalSession(cookieStore.get(INTERNAL_LOG_COOKIE)?.value);
@@ -211,8 +380,16 @@ export default async function InternalLogDashboard({
     return <LoginForm hasError={params.error === "1"} />;
   }
 
+  const activityFilters = {
+    user: params.user?.trim() || "",
+    activity: params.activity || "all",
+    from: params.from || "",
+    to: params.to || "",
+  };
   const events = await loadEvents();
+  const activityEvents = await loadActivity(activityFilters);
   const stats = buildStats(events);
+  const activitySummaries = buildActivitySummaries(activityEvents);
   const maxEvent = Math.max(1, ...Object.values(stats.byEvent));
 
   return (
@@ -222,7 +399,7 @@ export default async function InternalLogDashboard({
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-green-700">Cleverli intern</p>
             <h1 className="text-3xl font-black">Log Dashboard</h1>
-            <p className="mt-1 text-sm text-gray-500">Private Übungs- und Fehlerindikatoren der letzten 7 Tage.</p>
+            <p className="mt-1 text-sm text-gray-500">Private Übungs-, User- und Zahlungsaktivitäten.</p>
           </div>
           <form action="/api/internal/log-dashboard/logout" method="post">
             <button className="rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100">
@@ -236,6 +413,115 @@ export default async function InternalLogDashboard({
           <Stat label="Events 7 Tage" value={stats.total7d} />
           <Stat label="Sessions 7 Tage" value={stats.uniqueSessions} />
           <Stat label="Flags" value={stats.flagged.length} />
+        </section>
+
+        <section className="rounded-lg border border-gray-200 bg-white p-4">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-sm font-black uppercase tracking-wide">User Activity</h2>
+            <p className="text-sm text-gray-500">Login, Passwort, Abo und eingeloggte Übungsaktivität. Standard: letzte 30 Tage.</p>
+          </div>
+
+          <form className="mt-4 grid gap-3 md:grid-cols-[1fr_220px_170px_170px_auto]" action="/internal-log-dashboard">
+            <input
+              name="user"
+              defaultValue={activityFilters.user}
+              placeholder="User / E-Mail"
+              className="rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-green-600"
+            />
+            <select
+              name="activity"
+              defaultValue={activityFilters.activity}
+              className="rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-green-600"
+            >
+              <option value="all">Alle Aktivitäten</option>
+              {ACTIVITY_TYPES.map(type => (
+                <option key={type} value={type}>{activityLabel(type)}</option>
+              ))}
+            </select>
+            <input
+              name="from"
+              type="date"
+              defaultValue={activityFilters.from}
+              className="rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-green-600"
+            />
+            <input
+              name="to"
+              type="date"
+              defaultValue={activityFilters.to}
+              className="rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-green-600"
+            />
+            <button className="rounded-md bg-gray-950 px-4 py-2 text-sm font-bold text-white hover:bg-gray-800">
+              Filtern
+            </button>
+          </form>
+
+          <div className="mt-5 grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
+            <div className="overflow-x-auto">
+              <h3 className="mb-2 text-xs font-black uppercase tracking-wide text-gray-500">Letzte Aktivität pro User</h3>
+              <table className="w-full min-w-[640px] text-left text-sm">
+                <thead className="text-xs uppercase text-gray-500">
+                  <tr>
+                    <th className="py-2">User</th>
+                    <th>Letzte Aktivität</th>
+                    <th>Zeit</th>
+                    <th>Übungen 7d</th>
+                    <th>Auth</th>
+                    <th>Abo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {activitySummaries.map(user => (
+                    <tr key={user.key} className="border-t border-gray-100">
+                      <td className="max-w-[220px] truncate py-2 font-semibold">{user.label}</td>
+                      <td>{activityLabel(user.lastActivityType)}</td>
+                      <td className="whitespace-nowrap">{dateTimeLabel(user.lastActivity)}</td>
+                      <td>{user.exercises7d}</td>
+                      <td>{user.authEvents}</td>
+                      <td>{user.subscriptionEvents}</td>
+                    </tr>
+                  ))}
+                  {activitySummaries.length === 0 && (
+                    <tr>
+                      <td colSpan={6} className="py-4 text-gray-500">Keine User-Aktivität für diese Filter.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="max-h-[520px] overflow-auto">
+              <h3 className="sticky top-0 mb-2 bg-white pb-2 text-xs font-black uppercase tracking-wide text-gray-500">Timeline</h3>
+              <table className="w-full min-w-[780px] text-left text-sm">
+                <thead className="sticky top-7 bg-white text-xs uppercase text-gray-500">
+                  <tr>
+                    <th className="py-2">Zeit</th>
+                    <th>User</th>
+                    <th>Aktivität</th>
+                    <th>Übung</th>
+                    <th>Kontext</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {activityEvents.map((event, index) => (
+                    <tr key={`${event.created_at}-${index}`} className="border-t border-gray-100">
+                      <td className="whitespace-nowrap py-2">{dateTimeLabel(event.created_at)}</td>
+                      <td className="max-w-[190px] truncate font-semibold">{event.email ?? event.user_id ?? "-"}</td>
+                      <td>{activityLabel(event.activity_type)}</td>
+                      <td className="max-w-[150px] truncate">{event.exercise_id ?? "-"}</td>
+                      <td className="max-w-[260px] truncate text-gray-500">
+                        {[event.path, event.topic_id, metadataLabel(event.metadata)].filter(value => value && value !== "-").join(" · ") || "-"}
+                      </td>
+                    </tr>
+                  ))}
+                  {activityEvents.length === 0 && (
+                    <tr>
+                      <td colSpan={5} className="py-4 text-gray-500">Keine Timeline-Events.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
 
         <section className="grid gap-4 lg:grid-cols-[0.85fr_1.15fr]">
