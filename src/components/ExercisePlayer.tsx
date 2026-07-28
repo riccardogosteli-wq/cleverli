@@ -247,7 +247,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   }, [freeUsageKey, isAnonymous, profile.totalExercises]);
 
   const freeExercisesRemaining = Math.max(0, FREE_EXERCISE_LIMIT - freeExercisesUsed);
-  const isLocked = !isPremium && freeExercisesUsed >= FREE_EXERCISE_LIMIT;
+  const isPremiumGradeLocked = !isPremium && grade >= 3;
+  const isFreeLimitLocked = !isPremium && freeExercisesUsed >= FREE_EXERCISE_LIMIT;
+  const isLocked = isPremiumGradeLocked || isFreeLimitLocked;
   const exerciseStartRef = useRef<number>(Date.now());
 
   const exerciseTelemetryPayload = (extra: ExerciseTelemetryPayload = {}): ExerciseTelemetryPayload => ({
@@ -704,8 +706,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
   // ── Locked (free limit reached) ──────────────────────────────────
   if (isLocked) {
-    // Anonymous users: show signup CTA, not the premium paywall
-    if (isAnonymous) {
+    // Anonymous users who used their 20 free grade 1-2 tasks: show signup CTA.
+    if (isAnonymous && isFreeLimitLocked && !isPremiumGradeLocked) {
       return (
         <div className="text-center space-y-5 py-8 max-w-sm mx-auto">
           <Image src="/cleverli-wave.png" alt="Cleverli" width={110} height={110} className="mx-auto drop-shadow-md animate-cleverli-jump" />
@@ -735,10 +737,31 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     return (
       <div className="text-center space-y-4 py-8 max-w-sm mx-auto">
         <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={110} height={110} className="mx-auto drop-shadow-md" />
-        <h2 className="text-xl font-bold text-gray-800">{tr("unlockTitle")}</h2>
+        <h2 className="text-xl font-bold text-gray-800">
+          {isPremiumGradeLocked
+            ? (lang === "fr" ? "Premium pour cette classe" : lang === "it" ? "Premium per questa classe" : lang === "en" ? "Premium for this grade" : "Premium für diese Klasse")
+            : tr("unlockTitle")}
+        </h2>
         <p className="text-gray-500 text-sm">
-          {tr("unlockDesc").replace("{n}", String(FREE_EXERCISE_LIMIT))}<br/>
-          {tr("unlockDetail")}
+          {isPremiumGradeLocked
+            ? (lang === "fr"
+                ? "Les classes 3 à 6 sont incluses dans Premium."
+                : lang === "it"
+                  ? "Le classi dalla 3 alla 6 sono incluse in Premium."
+                  : lang === "en"
+                    ? "Grades 3 to 6 are included in Premium."
+                    : "Die 3. bis 6. Klasse sind in Premium enthalten.")
+            : tr("unlockDesc").replace("{n}", String(FREE_EXERCISE_LIMIT))}
+          <br/>
+          {isPremiumGradeLocked
+            ? (lang === "fr"
+                ? "Les 20 exercices gratuits restent disponibles en 1re et 2e classe."
+                : lang === "it"
+                  ? "I 20 esercizi gratuiti restano disponibili in 1a e 2a classe."
+                  : lang === "en"
+                    ? "The 20 free exercises remain available in grades 1 and 2."
+                    : "Die 20 Gratis-Aufgaben bleiben in der 1. und 2. Klasse verfügbar.")
+            : tr("unlockDetail")}
         </p>
         <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm text-green-800 text-left space-y-1 w-full max-w-xs">
           <div>✅ {tr("unlockFeature1")}</div>

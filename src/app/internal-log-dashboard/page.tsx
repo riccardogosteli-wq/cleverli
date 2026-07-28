@@ -631,9 +631,9 @@ export default async function InternalLogDashboard({
         </header>
 
         <section className="grid gap-3 sm:grid-cols-4">
-          <Stat label="Events 24h" value={stats.total24h} />
-          <Stat label="Events 7 Tage" value={stats.total7d} />
-          <Stat label="Sessions 7 Tage" value={stats.uniqueSessions} />
+          <Stat label="Übungs-Events 24h" value={stats.total24h} />
+          <Stat label="Übungs-Events 7 Tage" value={stats.total7d} />
+          <Stat label="Anonyme Sessions 7 Tage" value={stats.uniqueSessions} />
           <Stat label="Flags" value={stats.flagged.length} />
         </section>
 
@@ -755,7 +755,7 @@ export default async function InternalLogDashboard({
 
         <section className="grid gap-4 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="rounded-lg border border-gray-200 bg-white p-4">
-            <h2 className="text-sm font-black uppercase tracking-wide">Event Mix</h2>
+            <h2 className="text-sm font-black uppercase tracking-wide">Anonymer Übungs-Mix</h2>
             <div className="mt-4 space-y-3">
               {Object.entries(stats.byEvent).sort((a, b) => b[1] - a[1]).map(([event, count]) => (
                 <Bar key={event} label={event} value={count} max={maxEvent} />
@@ -816,7 +816,8 @@ export default async function InternalLogDashboard({
           </div>
 
           <div className="rounded-lg border border-gray-200 bg-white p-4">
-            <h2 className="text-sm font-black uppercase tracking-wide">Letzte Events</h2>
+            <h2 className="text-sm font-black uppercase tracking-wide">Anonyme Übungs-Events</h2>
+            <p className="mt-1 text-xs text-gray-500">Diese Rohdaten kommen aus Browser-Telemetrie und sind nicht zwingend einem Account zugeordnet.</p>
             <div className="mt-4 max-h-[420px] overflow-auto">
               <table className="w-full text-left text-sm">
                 <thead className="sticky top-0 bg-white text-xs uppercase text-gray-500">
