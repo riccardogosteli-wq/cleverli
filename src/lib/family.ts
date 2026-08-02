@@ -2,7 +2,7 @@
 // Stores up to 3 child profiles in localStorage.
 // Each profile is keyed by a local UUID so we can switch without auth.
 
-import { Profile } from "@/hooks/useProfile";
+import type { Profile } from "@/hooks/useProfile";
 
 export const MAX_PROFILES = 3;
 export const FAMILY_KEY = "cleverli_family";

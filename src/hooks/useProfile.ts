@@ -258,9 +258,13 @@ export function useProfile() {
     const onStorage = (e: StorageEvent) => {
       if (e.key === "cleverli_active_profile") reloadProfile();
     };
+    const onFamilyRestored = () => reloadProfile();
     window.addEventListener("storage", onStorage);
-    return () => window.removeEventListener("storage", onStorage);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    window.addEventListener("cleverli-family-restored", onFamilyRestored);
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener("cleverli-family-restored", onFamilyRestored);
+    };
   }, []);
 
   useEffect(() => {

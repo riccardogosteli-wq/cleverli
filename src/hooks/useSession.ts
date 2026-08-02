@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { getSupabase } from "@/lib/supabase";
+import { restoreFamilyFromSupabase } from "@/lib/progressSync";
 
 export interface Session {
   email: string;
@@ -23,6 +24,14 @@ function readCachedSession(): Session | null {
   } catch { return null; }
 }
 
+async function refreshLocalFamily() {
+  try {
+    await restoreFamilyFromSupabase();
+  } catch {
+    // Progress sync is best-effort; auth must still complete if restore fails.
+  }
+}
+
 export function useSession() {
   // ✅ INSTANT init from localStorage cache — eliminates "Anmelden" flash on reload
   // Must start as null on server (SSR), then hydrate from localStorage on client only.
@@ -41,6 +50,7 @@ export function useSession() {
     if (cached) {
       setSession(cached);
       setLoaded(true);
+      refreshLocalFamily();
     }
   }, []);
 
@@ -76,6 +86,7 @@ export function useSession() {
           };
           setSession(sess);
           localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
+          await refreshLocalFamily();
           setPremiumVerified(true);
         } else {
           // Supabase is configured and reachable, but there is no valid auth
@@ -118,6 +129,7 @@ export function useSession() {
             };
             setSession(sess);
             localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
+            await refreshLocalFamily();
             setPremiumVerified(true);
             setLoaded(true);
           } else if (event === "SIGNED_OUT") {
