@@ -38,7 +38,14 @@ export default function Navigation() {
   }, []);
 
   const activeMember = members.find(m => m.id === activeId) ?? members[0] ?? null;
-  if (pathname.startsWith("/ads/") || pathname === "/primarschule-uebungen" || pathname === "/internal-log-dashboard") return null;
+  if (
+    pathname.startsWith("/ads/") ||
+    pathname === "/primarschule-uebungen" ||
+    pathname === "/einmaleins-ueben" ||
+    pathname === "/1x1-spiele" ||
+    pathname === "/mathe-uebungen-kinder" ||
+    pathname === "/internal-log-dashboard"
+  ) return null;
 
   const switchProfile = (id: string) => {
     setActiveProfileId(id);

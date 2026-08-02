@@ -1,6 +1,10 @@
 export type CheckoutPlan = "monthly" | "yearly";
 type AdsLpCtaType = "paid" | "free";
 type AdsLpCtaLocation = "hero" | "pricing" | "bottom";
+type AdsLpPageContext = {
+  page?: string;
+  page_path?: string;
+};
 
 declare global {
   interface Window {
@@ -49,10 +53,16 @@ export function trackBeginCheckout(plan: CheckoutPlan, source: string) {
   });
 }
 
-export function trackAdsLpCtaClick(type: AdsLpCtaType, location: AdsLpCtaLocation, destination: string, plan?: CheckoutPlan) {
+export function trackAdsLpCtaClick(
+  type: AdsLpCtaType,
+  location: AdsLpCtaLocation,
+  destination: string,
+  plan?: CheckoutPlan,
+  pageContext: AdsLpPageContext = {},
+) {
   pushDataLayerEvent(type === "paid" ? "ads_lp_paid_cta_click" : "ads_lp_free_cta_click", {
-    page: "primarschule_uebungen",
-    page_path: "/primarschule-uebungen",
+    page: pageContext.page ?? "primarschule_uebungen",
+    page_path: pageContext.page_path ?? "/primarschule-uebungen",
     cta_type: type,
     cta_location: location,
     destination,
