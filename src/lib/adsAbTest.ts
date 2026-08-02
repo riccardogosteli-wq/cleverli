@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { pushDataLayerEvent } from "@/lib/analytics";
+import { trackUserActivity } from "@/lib/userActivityClient";
 
 export type AdsLpVariant = "control" | "trial";
 
@@ -76,5 +77,15 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
     page_path: pagePath,
     experiment: "ads_lp_7_day_trial",
     variant,
+  });
+  trackUserActivity("ads_lp_ab_assignment", {
+    path: pagePath,
+    source: "ads_lp_ab_test",
+    metadata: {
+      page,
+      page_path: pagePath,
+      experiment: "ads_lp_7_day_trial",
+      variant,
+    },
   });
 }

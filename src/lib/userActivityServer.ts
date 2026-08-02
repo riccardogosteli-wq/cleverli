@@ -12,6 +12,8 @@ export type UserActivityType =
   | "subscription_updated"
   | "subscription_cancel_requested"
   | "subscription_cancelled"
+  | "ads_lp_ab_assignment"
+  | "ads_lp_cta_click"
   | "exercise_started"
   | "exercise_completed"
   | "exercise_wrong_answer"

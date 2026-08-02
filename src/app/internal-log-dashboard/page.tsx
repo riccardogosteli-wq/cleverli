@@ -85,12 +85,40 @@ type UserActivitySummary = {
   subscriptionEvents: number;
 };
 
+type AdsVariant = "control" | "trial";
+
+type AdsAbStats = {
+  variant: AdsVariant;
+  label: string;
+  assignments: number;
+  ctaClicks: number;
+  freeClicks: number;
+  paidClicks: number;
+  checkouts: number;
+  trialStarts: number;
+  subscriptions: number;
+  pages: Map<string, AdsAbPageStats>;
+};
+
+type AdsAbPageStats = {
+  pageKey: string;
+  label: string;
+  assignments: number;
+  ctaClicks: number;
+  freeClicks: number;
+  paidClicks: number;
+  checkouts: number;
+};
+
 const ACTIVITY_TYPES = [
   "login",
   "signup",
   "password_reset_requested",
   "password_updated",
+  "ads_lp_ab_assignment",
+  "ads_lp_cta_click",
   "checkout_started",
+  "subscription_trial_started",
   "subscription_started",
   "subscription_updated",
   "subscription_cancel_requested",
@@ -116,7 +144,10 @@ function activityLabel(activityType: string) {
     signup: "Signup",
     password_reset_requested: "PW Reset angefordert",
     password_updated: "PW geändert",
+    ads_lp_ab_assignment: "Ads A/B Zuweisung",
+    ads_lp_cta_click: "Ads LP CTA Klick",
     checkout_started: "Checkout gestartet",
+    subscription_trial_started: "Trial gestartet",
     subscription_started: "Abo gestartet",
     subscription_updated: "Abo aktualisiert",
     subscription_cancel_requested: "Kündigung angefordert",
@@ -531,6 +562,130 @@ function buildActivitySummaries(events: ActivityEventRow[], authUsers: AuthUserR
     .slice(0, 40);
 }
 
+const ADS_AB_PAGES: Record<string, string> = {
+  primarschule_uebungen: "Primarschule Übungen",
+  einmaleins_ueben: "Einmaleins üben",
+  eins_mal_eins_spiele: "1x1 Spiele",
+  mathe_uebungen_kinder: "Mathe Übungen Kinder",
+};
+
+function cleanString(value: unknown) {
+  return typeof value === "string" ? value : "";
+}
+
+function normaliseAdsPage(value: unknown, source?: string | null, path?: string | null) {
+  const direct = cleanString(value);
+  if (direct && ADS_AB_PAGES[direct]) return direct;
+
+  const haystack = [source ?? "", path ?? ""].join(" ");
+  if (haystack.includes("einmaleins_ueben") || haystack.includes("/einmaleins-ueben")) return "einmaleins_ueben";
+  if (haystack.includes("eins_mal_eins_spiele") || haystack.includes("/1x1-spiele")) return "eins_mal_eins_spiele";
+  if (haystack.includes("mathe_uebungen_kinder") || haystack.includes("/mathe-uebungen-kinder")) return "mathe_uebungen_kinder";
+  if (haystack.includes("primarschule_uebungen") || haystack.includes("/primarschule-uebungen")) return "primarschule_uebungen";
+
+  return "unknown";
+}
+
+function inferAdsVariant(event: ActivityEventRow): AdsVariant | null {
+  const variant = cleanString(event.metadata?.variant);
+  if (variant === "trial" || variant === "control") return variant;
+
+  const trialDays = event.metadata?.trialDays ?? event.metadata?.trial_days;
+  if (trialDays === 7 || trialDays === "7") return "trial";
+  if (event.activity_type === "subscription_trial_started") return "trial";
+
+  const source = event.source ?? "";
+  if (source.includes("_trial_")) return "trial";
+  if (event.activity_type === "ads_lp_cta_click" || event.activity_type === "checkout_started") return "control";
+  return null;
+}
+
+function createAdsVariantStats(variant: AdsVariant): AdsAbStats {
+  return {
+    variant,
+    label: variant === "trial" ? "Trial" : "Control",
+    assignments: 0,
+    ctaClicks: 0,
+    freeClicks: 0,
+    paidClicks: 0,
+    checkouts: 0,
+    trialStarts: 0,
+    subscriptions: 0,
+    pages: new Map(),
+  };
+}
+
+function adsPageStats(stats: AdsAbStats, pageKey: string) {
+  const key = pageKey || "unknown";
+  const current = stats.pages.get(key);
+  if (current) return current;
+
+  const item: AdsAbPageStats = {
+    pageKey: key,
+    label: ADS_AB_PAGES[key] ?? key,
+    assignments: 0,
+    ctaClicks: 0,
+    freeClicks: 0,
+    paidClicks: 0,
+    checkouts: 0,
+  };
+  stats.pages.set(key, item);
+  return item;
+}
+
+function buildAdsAbStats(events: ActivityEventRow[]) {
+  const variants: Record<AdsVariant, AdsAbStats> = {
+    control: createAdsVariantStats("control"),
+    trial: createAdsVariantStats("trial"),
+  };
+
+  const relevant = events.filter(event => [
+    "ads_lp_ab_assignment",
+    "ads_lp_cta_click",
+    "checkout_started",
+    "subscription_trial_started",
+    "subscription_started",
+  ].includes(event.activity_type));
+
+  for (const event of relevant) {
+    const variant = inferAdsVariant(event);
+    if (!variant) continue;
+
+    const pageKey = normaliseAdsPage(event.metadata?.page, event.source, event.path);
+    const stats = variants[variant];
+    const page = adsPageStats(stats, pageKey);
+    const ctaType = cleanString(event.metadata?.cta_type);
+
+    if (event.activity_type === "ads_lp_ab_assignment") {
+      stats.assignments += 1;
+      page.assignments += 1;
+    }
+    if (event.activity_type === "ads_lp_cta_click") {
+      stats.ctaClicks += 1;
+      page.ctaClicks += 1;
+      if (ctaType === "free") {
+        stats.freeClicks += 1;
+        page.freeClicks += 1;
+      }
+      if (ctaType === "paid") {
+        stats.paidClicks += 1;
+        page.paidClicks += 1;
+      }
+    }
+    if (event.activity_type === "checkout_started") {
+      stats.checkouts += 1;
+      page.checkouts += 1;
+    }
+    if (event.activity_type === "subscription_trial_started") stats.trialStarts += 1;
+    if (event.activity_type === "subscription_started") stats.subscriptions += 1;
+  }
+
+  return {
+    variants,
+    recent: relevant.slice(0, 25),
+  };
+}
+
 function LoginForm({ hasError }: { hasError: boolean }) {
   return (
     <main className="min-h-screen bg-gray-950 text-white flex items-center justify-center px-4">
@@ -596,8 +751,9 @@ export default async function InternalLogDashboard({
     to: params.to || "",
   };
   const events = await loadEvents();
-  const [activityEventsRaw, authUsers] = await Promise.all([
+  const [activityEventsRaw, adsAbEventsRaw, authUsers] = await Promise.all([
     loadActivity(activityFilters),
+    loadActivity({ user: "", activity: "all", from: activityFilters.from, to: activityFilters.to }),
     loadAuthUsers(activityFilters),
   ]);
   const activityEvents = [
@@ -605,6 +761,7 @@ export default async function InternalLogDashboard({
     ...authActivityRows(authUsers, activityEventsRaw, activityFilters),
   ].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()).slice(0, 1000);
   const stats = buildStats(events);
+  const adsAbStats = buildAdsAbStats(adsAbEventsRaw);
   const seedAuthSummaries = activityFilters.activity === "all" && !activityFilters.from && !activityFilters.to;
   const activitySummaries = buildActivitySummaries(activityEvents, seedAuthSummaries ? authUsers : []);
   const authById = new Map(authUsers.map(user => [user.id, user]));
@@ -635,6 +792,122 @@ export default async function InternalLogDashboard({
           <Stat label="Übungs-Events 7 Tage" value={stats.total7d} />
           <Stat label="Anonyme Sessions 7 Tage" value={stats.uniqueSessions} />
           <Stat label="Flags" value={stats.flagged.length} />
+        </section>
+
+        <section className="rounded-lg border border-gray-200 bg-white p-4">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-sm font-black uppercase tracking-wide">Ads A/B Test</h2>
+            <p className="text-sm text-gray-500">
+              Control gegen 7-Tage-Trial auf den Ads-LPs. Nutzt den Datumsfilter, aber ignoriert User-/Aktivitätsfilter.
+            </p>
+          </div>
+
+          <div className="mt-4 grid gap-3 lg:grid-cols-2">
+            {(["control", "trial"] as AdsVariant[]).map(variant => {
+              const item = adsAbStats.variants[variant];
+              const conversionBase = item.assignments || item.ctaClicks;
+              return (
+                <div key={variant} className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="text-lg font-black text-gray-950">{item.label}</h3>
+                    <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-gray-600">
+                      {variant === "trial" ? "7 Tage Premium" : "20 Aufgaben gratis"}
+                    </span>
+                  </div>
+                  <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                    <Stat label="Zuweisungen" value={item.assignments} />
+                    <Stat label="CTA Klicks" value={item.ctaClicks} />
+                    <Stat label="Checkout" value={item.checkouts} />
+                    <Stat label="Checkout-Rate" value={`${pct(item.checkouts, conversionBase)}%`} />
+                  </div>
+                  <div className="mt-3 grid gap-2 text-sm text-gray-600 sm:grid-cols-3">
+                    <div><span className="font-bold text-gray-950">{item.freeClicks}</span> Free-Klicks</div>
+                    <div><span className="font-bold text-gray-950">{item.paidClicks}</span> Paid-Klicks</div>
+                    <div><span className="font-bold text-gray-950">{item.trialStarts + item.subscriptions}</span> Stripe Starts</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-5 overflow-x-auto">
+            <h3 className="mb-2 text-xs font-black uppercase tracking-wide text-gray-500">Nach Landingpage</h3>
+            <table className="w-full min-w-[860px] text-left text-sm">
+              <thead className="text-xs uppercase text-gray-500">
+                <tr>
+                  <th className="py-2">Variante</th>
+                  <th>Landingpage</th>
+                  <th>Zuweisungen</th>
+                  <th>CTA</th>
+                  <th>Free</th>
+                  <th>Paid</th>
+                  <th>Checkout</th>
+                  <th>Checkout-Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                {(["control", "trial"] as AdsVariant[]).flatMap(variant => {
+                  const item = adsAbStats.variants[variant];
+                  return [...item.pages.values()]
+                    .sort((a, b) => a.label.localeCompare(b.label))
+                    .map(page => (
+                      <tr key={`${variant}-${page.pageKey}`} className="border-t border-gray-100">
+                        <td className="py-2 font-bold">{item.label}</td>
+                        <td>{page.label}</td>
+                        <td>{page.assignments}</td>
+                        <td>{page.ctaClicks}</td>
+                        <td>{page.freeClicks}</td>
+                        <td>{page.paidClicks}</td>
+                        <td>{page.checkouts}</td>
+                        <td>{pct(page.checkouts, page.assignments || page.ctaClicks)}%</td>
+                      </tr>
+                    ));
+                })}
+                {adsAbStats.variants.control.pages.size + adsAbStats.variants.trial.pages.size === 0 && (
+                  <tr>
+                    <td colSpan={8} className="py-4 text-gray-500">Noch keine A/B-Test-Events im Zeitraum.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-5 max-h-[360px] overflow-auto">
+            <h3 className="sticky top-0 mb-2 bg-white pb-2 text-xs font-black uppercase tracking-wide text-gray-500">Aktuelle A/B Events</h3>
+            <table className="w-full min-w-[980px] text-left text-sm">
+              <thead className="sticky top-7 bg-white text-xs uppercase text-gray-500">
+                <tr>
+                  <th className="py-2">Zeit</th>
+                  <th>Variante</th>
+                  <th>Event</th>
+                  <th>Landingpage</th>
+                  <th>User</th>
+                  <th>Kontext</th>
+                </tr>
+              </thead>
+              <tbody>
+                {adsAbStats.recent.map((event, index) => {
+                  const variant = inferAdsVariant(event);
+                  const pageKey = normaliseAdsPage(event.metadata?.page, event.source, event.path);
+                  return (
+                    <tr key={`${event.created_at}-${index}`} className="border-t border-gray-100">
+                      <td className="whitespace-nowrap py-2">{dateTimeLabel(event.created_at)}</td>
+                      <td className="font-bold">{variant ? (variant === "trial" ? "Trial" : "Control") : "-"}</td>
+                      <td>{activityLabel(event.activity_type)}</td>
+                      <td>{ADS_AB_PAGES[pageKey] ?? pageKey}</td>
+                      <td className="max-w-[190px] truncate">{event.email ?? event.user_id ?? "-"}</td>
+                      <td className="max-w-[280px] truncate text-gray-500">{[event.source, metadataLabel(event.metadata)].filter(Boolean).join(" · ")}</td>
+                    </tr>
+                  );
+                })}
+                {adsAbStats.recent.length === 0 && (
+                  <tr>
+                    <td colSpan={6} className="py-4 text-gray-500">Noch keine A/B-Test-Events im Zeitraum.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="rounded-lg border border-gray-200 bg-white p-4">

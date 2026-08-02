@@ -1,3 +1,5 @@
+import { trackUserActivity } from "@/lib/userActivityClient";
+
 export type CheckoutPlan = "monthly" | "yearly";
 type AdsLpCtaType = "paid" | "free";
 type AdsLpCtaLocation = "hero" | "pricing" | "bottom";
@@ -82,9 +84,11 @@ export function trackAdsLpCtaClick(
   plan?: CheckoutPlan,
   pageContext: AdsLpPageContext = {},
 ) {
-  pushDataLayerEvent(type === "paid" ? "ads_lp_paid_cta_click" : "ads_lp_free_cta_click", {
-    page: pageContext.page ?? "primarschule_uebungen",
-    page_path: pageContext.page_path ?? "/primarschule-uebungen",
+  const page = pageContext.page ?? "primarschule_uebungen";
+  const pagePath = pageContext.page_path ?? "/primarschule-uebungen";
+  const metadata = {
+    page,
+    page_path: pagePath,
     cta_type: type,
     cta_location: location,
     destination,
@@ -102,6 +106,15 @@ export function trackAdsLpCtaClick(
     ...(pageContext.experiment ? { experiment: pageContext.experiment } : {}),
     ...(pageContext.variant ? { variant: pageContext.variant } : {}),
     ...(pageContext.trial_days ? { trial_days: pageContext.trial_days } : {}),
+  };
+
+  pushDataLayerEvent(type === "paid" ? "ads_lp_paid_cta_click" : "ads_lp_free_cta_click", {
+    ...metadata,
+  });
+  trackUserActivity("ads_lp_cta_click", {
+    path: pagePath,
+    source: "ads_lp",
+    metadata,
   });
 }
 

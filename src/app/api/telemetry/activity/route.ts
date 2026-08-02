@@ -8,11 +8,18 @@ const ALLOWED_EVENTS = new Set<UserActivityType>([
   "signup",
   "password_reset_requested",
   "password_updated",
+  "ads_lp_ab_assignment",
+  "ads_lp_cta_click",
   "exercise_started",
   "exercise_completed",
   "exercise_wrong_answer",
   "hint_used",
   "paywall_shown",
+]);
+const ANONYMOUS_EVENTS = new Set<UserActivityType>([
+  "password_reset_requested",
+  "ads_lp_ab_assignment",
+  "ads_lp_cta_click",
 ]);
 
 const MAX_BODY_BYTES = 4096;
@@ -113,7 +120,7 @@ export async function POST(req: NextRequest) {
   const user = await getTokenUser(req);
   const email = user?.email ?? cleanText(body.email, 180);
 
-  if (!user && activityType !== "password_reset_requested") {
+  if (!user && !ANONYMOUS_EVENTS.has(activityType)) {
     return new NextResponse(null, { status: 204 });
   }
 
