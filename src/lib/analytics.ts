@@ -31,6 +31,15 @@ function isCheckoutPlan(plan: string | null): plan is CheckoutPlan {
   return plan === "monthly" || plan === "yearly";
 }
 
+function adsLpRequestContext() {
+  if (typeof window === "undefined") return { forced_variant: false, internal_qa: false };
+  const params = new URLSearchParams(window.location.search);
+  return {
+    forced_variant: params.has("ab"),
+    internal_qa: params.get("utm_source")?.toLowerCase().startsWith("qa") ?? false,
+  };
+}
+
 export function pushDataLayerEvent(event: string, data: Record<string, unknown> = {}) {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer ?? [];
@@ -86,6 +95,7 @@ export function trackAdsLpCtaClick(
 ) {
   const page = pageContext.page ?? "primarschule_uebungen";
   const pagePath = pageContext.page_path ?? "/primarschule-uebungen";
+  const requestContext = adsLpRequestContext();
   const metadata = {
     page,
     page_path: pagePath,
@@ -106,6 +116,7 @@ export function trackAdsLpCtaClick(
     ...(pageContext.experiment ? { experiment: pageContext.experiment } : {}),
     ...(pageContext.variant ? { variant: pageContext.variant } : {}),
     ...(pageContext.trial_days ? { trial_days: pageContext.trial_days } : {}),
+    ...requestContext,
   };
 
   pushDataLayerEvent(type === "paid" ? "ads_lp_paid_cta_click" : "ads_lp_free_cta_click", {

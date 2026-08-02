@@ -568,6 +568,7 @@ const ADS_AB_PAGES: Record<string, string> = {
   eins_mal_eins_spiele: "1x1 Spiele",
   mathe_uebungen_kinder: "Mathe Übungen Kinder",
 };
+const INTERNAL_TEST_EMAILS = new Set(["test@cleverli.ch"]);
 
 function cleanString(value: unknown) {
   return typeof value === "string" ? value : "";
@@ -598,6 +599,13 @@ function inferAdsVariant(event: ActivityEventRow): AdsVariant | null {
   if (source.includes("_trial_")) return "trial";
   if (event.activity_type === "ads_lp_cta_click" || event.activity_type === "checkout_started") return "control";
   return null;
+}
+
+function isInternalAdsAbEvent(event: ActivityEventRow) {
+  const email = event.email?.toLowerCase() ?? "";
+  return INTERNAL_TEST_EMAILS.has(email)
+    || event.metadata?.internal_qa === true
+    || event.metadata?.forced_variant === true;
 }
 
 function createAdsVariantStats(variant: AdsVariant): AdsAbStats {
@@ -645,7 +653,7 @@ function buildAdsAbStats(events: ActivityEventRow[]) {
     "checkout_started",
     "subscription_trial_started",
     "subscription_started",
-  ].includes(event.activity_type));
+  ].includes(event.activity_type) && !isInternalAdsAbEvent(event));
 
   for (const event of relevant) {
     const variant = inferAdsVariant(event);

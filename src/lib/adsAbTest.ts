@@ -33,6 +33,12 @@ function storeVariant(variant: AdsLpVariant) {
   }
 }
 
+function isInternalQaRequest() {
+  if (typeof window === "undefined") return false;
+  const params = new URLSearchParams(window.location.search);
+  return params.get("utm_source")?.toLowerCase().startsWith("qa") ?? false;
+}
+
 export function getAdsLpVariant(): AdsLpVariant {
   if (typeof window === "undefined") return "control";
 
@@ -77,6 +83,8 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
     page_path: pagePath,
     experiment: "ads_lp_7_day_trial",
     variant,
+    forced_variant: Boolean(readForcedVariant()),
+    internal_qa: isInternalQaRequest(),
   });
   trackUserActivity("ads_lp_ab_assignment", {
     path: pagePath,
@@ -87,6 +95,8 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
       page_path: pagePath,
       experiment: "ads_lp_7_day_trial",
       variant,
+      forced_variant: Boolean(readForcedVariant()),
+      internal_qa: isInternalQaRequest(),
     },
   });
 }
