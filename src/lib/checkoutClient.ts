@@ -14,6 +14,43 @@ function cleanTrialDays(value: string | number | null | undefined) {
   return parsed === 7 ? 7 : undefined;
 }
 
+function getCachedSupabaseAuth(): { accessToken: string; userId: string } | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem("cleverli_supabase_session");
+    const cached = raw ? JSON.parse(raw) : null;
+    if (!cached?.access_token || !cached?.user?.id) return null;
+    return {
+      accessToken: cached.access_token,
+      userId: cached.user.id,
+    };
+  } catch {
+    return null;
+  }
+}
+
+async function getCheckoutAuth(userId?: string): Promise<{ token?: string; userId?: string }> {
+  const cached = getCachedSupabaseAuth();
+  if (cached) return { token: cached.accessToken, userId: cached.userId };
+
+  const supabase = getSupabase();
+  if (!supabase) return { userId };
+
+  try {
+    const sessionResult = await Promise.race([
+      supabase.auth.getSession(),
+      new Promise<null>(resolve => setTimeout(() => resolve(null), 1500)),
+    ]);
+    const session = sessionResult?.data.session;
+    return {
+      token: session?.access_token,
+      userId: session?.user?.id ?? userId,
+    };
+  } catch {
+    return { userId };
+  }
+}
+
 function getCheckoutAuthUrl(path: "/signup" | "/login", plan: CheckoutPlan, source: string, options: CheckoutOptions = {}) {
   const params = new URLSearchParams({ checkout: plan, source });
   if (options.trialDays) params.set("trial", String(options.trialDays));
@@ -35,10 +72,9 @@ export function getPendingCheckoutIntent(): { plan: CheckoutPlan; source: string
 export async function startCheckout(plan: CheckoutPlan, source: string, userId?: string, options: CheckoutOptions = {}) {
   trackBeginCheckout(plan, source);
 
-  const supabase = getSupabase();
-  const { data } = supabase ? await supabase.auth.getSession() : { data: { session: null } };
-  const token = data.session?.access_token;
-  const verifiedUserId = data.session?.user?.id ?? userId;
+  const auth = await getCheckoutAuth(userId);
+  const token = auth.token;
+  const verifiedUserId = auth.userId;
 
   if (!verifiedUserId) {
     window.location.assign(getCheckoutAuthUrl("/signup", plan, source, options));
