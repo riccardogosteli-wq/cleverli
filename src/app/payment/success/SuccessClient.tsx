@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
-import { trackPurchase } from "@/lib/analytics";
+import { trackPurchase, trackTrialStarted } from "@/lib/analytics";
 
 const MAX_POLLS = 12;  // 12 × 2.5s = 30s max wait
 const POLL_INTERVAL = 2500;
@@ -21,10 +21,15 @@ export default function SuccessClient() {
     const searchParams = new URLSearchParams(window.location.search);
     const sessionId = searchParams.get("session_id");
     const plan = searchParams.get("plan");
-    const dedupeKey = `cleverli_purchase_tracked_${sessionId || plan || "unknown"}`;
+    const trialDays = searchParams.get("trial") === "7" ? 7 : null;
+    const dedupeKey = `cleverli_${trialDays ? "trial" : "purchase"}_tracked_${sessionId || plan || "unknown"}`;
 
     if (sessionId && localStorage.getItem(dedupeKey)) return;
-    trackPurchase(plan, sessionId);
+    if (trialDays && (plan === "monthly" || plan === "yearly")) {
+      trackTrialStarted(plan, "stripe_checkout_success", trialDays, sessionId);
+    } else {
+      trackPurchase(plan, sessionId);
+    }
     if (sessionId) localStorage.setItem(dedupeKey, "true");
   }, []);
 

@@ -95,6 +95,7 @@ export async function POST(req: NextRequest) {
 
     const userId = session.metadata?.userId;
     const plan = session.metadata?.plan ?? "monthly";
+    const trialDays = Number(session.metadata?.trial_days ?? 0) || null;
     const customerEmail = session.customer_details?.email ?? "";
     const stripeCustomerId = session.customer as string;
     const stripeSubscriptionId = session.subscription as string;
@@ -122,13 +123,13 @@ export async function POST(req: NextRequest) {
     logUserActivity({
       userId,
       email: customerEmail,
-      activityType: "subscription_started",
+      activityType: trialDays ? "subscription_trial_started" : "subscription_started",
       source: "stripe_webhook",
-      metadata: { plan, premiumUntil, stripeCustomerId, stripeSubscriptionId },
+      metadata: { plan, trialDays, premiumUntil, stripeCustomerId, stripeSubscriptionId },
     }).catch(() => {});
 
-    // Send confirmation email
-    if (customerEmail) {
+    // Trial checkouts have no charge today, so avoid a payment-confirmation email.
+    if (customerEmail && !trialDays) {
       sendPaymentConfirmationEmail(customerEmail, "", plan as "monthly" | "yearly").catch(error => {
         Sentry.captureException(error);
       });

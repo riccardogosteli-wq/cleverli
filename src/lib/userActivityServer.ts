@@ -7,6 +7,7 @@ export type UserActivityType =
   | "password_reset_requested"
   | "password_updated"
   | "checkout_started"
+  | "subscription_trial_started"
   | "subscription_started"
   | "subscription_updated"
   | "subscription_cancel_requested"

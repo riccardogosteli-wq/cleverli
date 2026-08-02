@@ -19,6 +19,10 @@ function wantsJson(req: NextRequest) {
   return req.headers.get("accept")?.includes("application/json");
 }
 
+function trialDaysFromRequest(req: NextRequest) {
+  return req.nextUrl.searchParams.get("trial") === "7" ? 7 : undefined;
+}
+
 async function verifyUserToken(userId: string, req: NextRequest) {
   const token = req.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
   if (!token) return false;
@@ -34,10 +38,11 @@ async function verifyUserToken(userId: string, req: NextRequest) {
 export async function GET(req: NextRequest) {
   const plan = req.nextUrl.searchParams.get("plan") ?? "monthly";
   const userId = req.nextUrl.searchParams.get("uid") ?? "";
+  const trialDays = trialDaysFromRequest(req);
 
   // Guest: redirect to signup
   if (!userId) {
-    const signupUrl = `${BASE_URL}/signup?checkout=${encodeURIComponent(plan)}&source=checkout_api`;
+    const signupUrl = `${BASE_URL}/signup?checkout=${encodeURIComponent(plan)}&source=checkout_api${trialDays ? `&trial=${trialDays}` : ""}`;
     return wantsJson(req)
       ? NextResponse.json({ error: "login_required", url: signupUrl }, { status: 401 })
       : NextResponse.redirect(signupUrl);
@@ -48,7 +53,7 @@ export async function GET(req: NextRequest) {
     Sentry.captureMessage("[checkout] unauthorized uid checkout attempt", "warning");
     return wantsJson(req)
       ? NextResponse.json({ error: "unauthorized" }, { status: 401 })
-      : NextResponse.redirect(`${BASE_URL}/login?checkout=${encodeURIComponent(plan)}&source=checkout_api`);
+      : NextResponse.redirect(`${BASE_URL}/login?checkout=${encodeURIComponent(plan)}&source=checkout_api${trialDays ? `&trial=${trialDays}` : ""}`);
   }
 
   const priceId = PRICE_IDS[plan] ?? PRICE_IDS.monthly;
@@ -81,8 +86,9 @@ export async function GET(req: NextRequest) {
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
       locale: "de",
-      success_url: `${BASE_URL}/payment/success?plan=${plan}&session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${BASE_URL}/payment/success?plan=${plan}&session_id={CHECKOUT_SESSION_ID}${trialDays ? `&trial=${trialDays}` : ""}`,
       cancel_url: `${BASE_URL}/payment/cancel`,
+      ...(trialDays ? { payment_method_collection: "always" as const } : {}),
       ...(stripeCustomerId
         ? { customer: stripeCustomerId }
         : customerEmail
@@ -92,12 +98,15 @@ export async function GET(req: NextRequest) {
         userId,
         plan,
         site: "cleverli.ch",
+        ...(trialDays ? { trial_days: String(trialDays) } : {}),
       },
       subscription_data: {
+        ...(trialDays ? { trial_period_days: trialDays } : {}),
         metadata: {
           userId,
           plan,
           site: "cleverli.ch",
+          ...(trialDays ? { trial_days: String(trialDays) } : {}),
         },
       },
     });
@@ -113,7 +122,7 @@ export async function GET(req: NextRequest) {
       activityType: "checkout_started",
       source: req.nextUrl.searchParams.get("source") ?? "checkout_api",
       path: req.nextUrl.pathname,
-      metadata: { plan, stripeSessionId: session.id },
+      metadata: { plan, trialDays: trialDays ?? null, stripeSessionId: session.id },
     }).catch(() => {});
 
     return wantsJson(req)

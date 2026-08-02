@@ -4,6 +4,9 @@ type AdsLpCtaLocation = "hero" | "pricing" | "bottom";
 type AdsLpPageContext = {
   page?: string;
   page_path?: string;
+  experiment?: string;
+  variant?: string;
+  trial_days?: number;
 };
 
 declare global {
@@ -53,6 +56,25 @@ export function trackBeginCheckout(plan: CheckoutPlan, source: string) {
   });
 }
 
+export function trackTrialStarted(plan: CheckoutPlan, source: string, trialDays: number, transactionId?: string | null) {
+  pushDataLayerEvent("trial_started", {
+    transaction_id: transactionId ?? undefined,
+    currency: "CHF",
+    value: PLAN_VALUE[plan],
+    plan,
+    source,
+    trial_days: trialDays,
+    items: [
+      {
+        item_id: `cleverli_premium_${plan}`,
+        item_name: PLAN_NAME[plan],
+        price: PLAN_VALUE[plan],
+        quantity: 1,
+      },
+    ],
+  });
+}
+
 export function trackAdsLpCtaClick(
   type: AdsLpCtaType,
   location: AdsLpCtaLocation,
@@ -77,6 +99,9 @@ export function trackAdsLpCtaClick(
           value: null,
           plan: null,
         }),
+    ...(pageContext.experiment ? { experiment: pageContext.experiment } : {}),
+    ...(pageContext.variant ? { variant: pageContext.variant } : {}),
+    ...(pageContext.trial_days ? { trial_days: pageContext.trial_days } : {}),
   });
 }
 

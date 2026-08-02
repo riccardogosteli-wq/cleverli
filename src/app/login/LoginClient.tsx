@@ -37,7 +37,7 @@ export default function Login() {
   useEffect(() => {
     if (loaded && intentLoaded && session) {
       if (pendingCheckout) {
-        startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId);
+        startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, { trialDays: pendingCheckout.trialDays });
         return;
       }
       setRedirecting(true);
@@ -75,7 +75,7 @@ export default function Login() {
       setLoading(false);
       setLoginInProgress(false);
       if (pendingCheckout) {
-        startCheckout(pendingCheckout.plan, pendingCheckout.source);
+        startCheckout(pendingCheckout.plan, pendingCheckout.source, undefined, { trialDays: pendingCheckout.trialDays });
         return;
       }
       router.replace("/dashboard");
@@ -88,7 +88,7 @@ export default function Login() {
   useEffect(() => {
     if (!loaded || !intentLoaded || !session) return;
     if (pendingCheckout) {
-      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId);
+      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, { trialDays: pendingCheckout.trialDays });
       return;
     }
     router.push("/dashboard");
@@ -168,7 +168,7 @@ export default function Login() {
               Passwort vergessen?
             </Link>
             <Link
-              href={pendingCheckout ? `/signup?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}` : "/signup"}
+              href={pendingCheckout ? `/signup?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}${pendingCheckout.trialDays ? `&trial=${pendingCheckout.trialDays}` : ""}` : "/signup"}
               className="text-xs text-green-700 underline"
             >
               Noch kein Konto? Jetzt registrieren →

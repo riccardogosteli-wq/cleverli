@@ -32,7 +32,7 @@ export default function Signup() {
   useEffect(() => {
     if (!loaded || !intentLoaded || !session) return;
     if (pendingCheckout) {
-      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId);
+      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, { trialDays: pendingCheckout.trialDays });
       return;
     }
     router.replace("/dashboard");
@@ -103,7 +103,7 @@ export default function Signup() {
       // If session is immediately available (email confirm disabled), redirect to first exercise
       if (data?.session) {
         if (pendingCheckout) {
-          setTimeout(() => startCheckout(pendingCheckout.plan, pendingCheckout.source, data.session?.user.id), 800);
+          setTimeout(() => startCheckout(pendingCheckout.plan, pendingCheckout.source, data.session?.user.id, { trialDays: pendingCheckout.trialDays }), 800);
           return;
         }
         setTimeout(() => router.push("/learn/1/math/zahlen-1-10"), 800);
@@ -193,7 +193,7 @@ export default function Signup() {
             <p className="text-center text-sm text-gray-600">
               Bereits ein Konto?{" "}
               <Link
-                href={pendingCheckout ? `/login?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}` : "/login"}
+                href={pendingCheckout ? `/login?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}${pendingCheckout.trialDays ? `&trial=${pendingCheckout.trialDays}` : ""}` : "/login"}
                 className="text-green-700 font-semibold hover:underline"
               >
                 Anmelden

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { trackAdsLpCtaClick } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
+import { useAdsLpVariant } from "@/lib/adsAbTest";
+import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
 
 const subjects = [
   { icon: "/images/ui/Mathematik.png", title: "Mathematik", body: "Rechnen, Geometrie und Textaufgaben für die 1.–6. Klasse." },
@@ -40,6 +42,19 @@ export default function AdsPrimarschuleClient() {
   const { session } = useSession();
   const uid = session?.userId ?? "";
   const checkoutDestination = (plan: "monthly" | "yearly") => `/api/checkout?plan=${plan}`;
+  const variant = useAdsLpVariant("primarschule_uebungen", "/primarschule-uebungen");
+
+  if (variant === "trial") {
+    return (
+      <AdsTrialLandingPage
+        pageKey="primarschule_uebungen"
+        pagePath="/primarschule-uebungen"
+        checkoutSource="primarschule_uebungen"
+        title="Mathe, Deutsch und NMG 7 Tage gratis freischalten."
+        lead="Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang mit allen Aufgaben und Klassen. Erst danach wird bezahlt, wenn du nicht kündigst."
+      />
+    );
+  }
 
   return (
     <main className="bg-white text-gray-900">

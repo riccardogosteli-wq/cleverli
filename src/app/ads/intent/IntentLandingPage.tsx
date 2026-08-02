@@ -5,6 +5,8 @@ import Link from "next/link";
 import { trackAdsLpCtaClick } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
+import { useAdsLpVariant } from "@/lib/adsAbTest";
+import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
 
 type Plan = "monthly" | "yearly";
 
@@ -65,6 +67,21 @@ function checkoutDestination(plan: Plan) {
 export default function IntentLandingPage({ config }: { config: IntentLandingPageConfig }) {
   const { session } = useSession();
   const uid = session?.userId ?? "";
+  const variant = useAdsLpVariant(config.pageKey, config.path);
+
+  if (variant === "trial") {
+    return (
+      <AdsTrialLandingPage
+        pageKey={config.pageKey}
+        pagePath={config.path}
+        checkoutSource={config.checkoutSource}
+        heroImage={config.heroImage}
+        imageAlt={config.imageAlt}
+        title={`${config.title.replace(/\.$/, "")} - 7 Tage Premium gratis.`}
+        lead="Erstelle ein Konto, wähle dein Abo und teste alle Übungen und Klassen eine Woche lang ohne Belastung. Erst danach wird bezahlt, wenn du nicht kündigst."
+      />
+    );
+  }
 
   const startPaidCheckout = (plan: Plan, location: "hero" | "pricing" | "bottom") => {
     const destination = checkoutDestination(plan);
