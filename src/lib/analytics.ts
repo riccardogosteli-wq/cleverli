@@ -114,6 +114,7 @@ export function trackAdsLpCtaClick(
   trackUserActivity("ads_lp_cta_click", {
     path: pagePath,
     source: "ads_lp",
+    accessToken: null,
     metadata,
   });
 }

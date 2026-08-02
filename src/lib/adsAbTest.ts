@@ -81,6 +81,7 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
   trackUserActivity("ads_lp_ab_assignment", {
     path: pagePath,
     source: "ads_lp_ab_test",
+    accessToken: null,
     metadata: {
       page,
       page_path: pagePath,
