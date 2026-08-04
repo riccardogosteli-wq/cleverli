@@ -73,20 +73,13 @@ export default function AdsTrialLandingPage({
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Jederzeit kündbar</div>
             </div>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7">
               <button
                 type="button"
                 onClick={() => startTrial("yearly", "hero")}
-                className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
+                className="w-full rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800 sm:w-auto"
               >
                 7 Tage gratis testen
-              </button>
-              <button
-                type="button"
-                onClick={() => startTrial("monthly", "hero")}
-                className="rounded-full border-2 border-green-700 px-7 py-4 text-center text-base font-bold text-green-800 transition-colors hover:bg-green-50"
-              >
-                Monatlich testen
               </button>
             </div>
             <p className="mt-3 text-sm text-gray-500">
