@@ -152,7 +152,7 @@ export default function AdsTrialLandingPage({
                 onClick={() => startTrial("monthly", "pricing")}
                 className="mt-auto block rounded-full bg-gray-100 px-5 py-3 text-center text-sm font-bold text-gray-800 hover:bg-gray-200"
               >
-                Monatlich gratis testen
+                Jetzt 7 Tage gratis testen
               </button>
             </div>
 
@@ -170,7 +170,7 @@ export default function AdsTrialLandingPage({
                 onClick={() => startTrial("yearly", "pricing")}
                 className="mt-auto block rounded-full bg-white px-5 py-3 text-center text-sm font-black text-green-800 hover:bg-green-50"
               >
-                Jährlich gratis testen
+                Jetzt 7 Tage gratis testen
               </button>
             </div>
           </div>
