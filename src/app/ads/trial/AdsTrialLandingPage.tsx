@@ -4,6 +4,7 @@ import Image from "next/image";
 import { trackAdsLpCtaClick } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
+import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
 
 type Plan = "monthly" | "yearly";
 
@@ -136,6 +137,11 @@ export default function AdsTrialLandingPage({
           ))}
         </div>
       </section>
+
+      <GameExercisePreview
+        title="Premium zeigt mehr als normale Quizfragen."
+        body="Im Test sind auch spielerische Übungsformen dabei: Karten merken, Paare finden, Fortschritt sammeln. So sieht dein Kind schneller, dass eine kurze Runde geschafft ist."
+      />
 
       <section className="bg-white px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-5xl">

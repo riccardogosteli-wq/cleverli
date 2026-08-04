@@ -7,6 +7,7 @@ import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
 import { useAdsLpVariant } from "@/lib/adsAbTest";
 import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
+import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
 
 const subjects = [
   { icon: "/images/ui/Mathematik.png", title: "Mathematik", body: "Rechnen, Geometrie und Textaufgaben für die 1.–6. Klasse." },
@@ -150,6 +151,17 @@ export default function AdsPrimarschuleClient() {
           ))}
         </div>
       </section>
+
+      <GameExercisePreview
+        title="Noch ein Beispiel: spielerisch Paare finden."
+        body="Cleverli zeigt nicht nur einfache Antwortbuttons. In Memory-Runden merkt sich dein Kind Karten, findet passende Paare und übt dabei Mathe, Deutsch oder NMG."
+        exerciseTitle="Finde, was zusammenpasst."
+        pairs={[
+          ["Auge", "sehen"],
+          ["Ohr", "hören"],
+          ["8 + 7", "15"],
+        ]}
+      />
 
       <section className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-6xl">

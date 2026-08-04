@@ -7,6 +7,7 @@ import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
 import { useAdsLpVariant } from "@/lib/adsAbTest";
 import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
+import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
 
 type Plan = "monthly" | "yearly";
 
@@ -196,6 +197,8 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
           ))}
         </div>
       </section>
+
+      <GameExercisePreview />
 
       <section className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-6xl">
