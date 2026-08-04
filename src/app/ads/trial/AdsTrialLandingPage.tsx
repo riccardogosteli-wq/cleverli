@@ -116,12 +116,11 @@ export default function AdsTrialLandingPage({
       </section>
 
       <section className="border-y border-gray-100 bg-white px-4 py-8 sm:px-6">
-        <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-4">
+        <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-3">
           {[
             ["7 Tage", "Premium gratis"],
             ["13’000+", "interaktive Übungen"],
             ["1.–6.", "Klasse Primarschule"],
-            ["CHF 0", "heute belastet"],
           ].map(([value, label]) => (
             <div key={label} className="text-center">
               <div className="text-3xl font-black text-gray-950">{value}</div>
