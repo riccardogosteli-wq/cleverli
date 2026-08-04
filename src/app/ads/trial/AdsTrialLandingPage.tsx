@@ -83,7 +83,7 @@ export default function AdsTrialLandingPage({
               </button>
             </div>
             <p className="mt-3 text-sm text-gray-500">
-              Jahresabo ist vorausgewählt: CHF 99/Jahr, spart CHF 19.80 gegenüber monatlich. Belastung erst nach der Testphase.
+              CHF 99/Jahr, spart CHF 19.80 gegenüber monatlich. Belastung erst nach der Testphase.
             </p>
           </div>
 
