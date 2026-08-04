@@ -153,8 +153,6 @@ export default function AdsPrimarschuleClient() {
       </section>
 
       <GameExercisePreview
-        title="Noch ein Beispiel: spielerisch Paare finden."
-        body="Cleverli zeigt nicht nur einfache Antwortbuttons. In Memory-Runden merkt sich dein Kind Karten, findet passende Paare und übt dabei Mathe, Deutsch oder NMG."
         exerciseTitle="Finde, was zusammenpasst."
         pairs={[
           ["Auge", "sehen"],

@@ -130,10 +130,7 @@ export default function AdsTrialLandingPage({
         </div>
       </section>
 
-      <GameExercisePreview
-        title="Premium zeigt mehr als normale Quizfragen."
-        body="Im Test sind auch spielerische Übungsformen dabei: Karten merken, Paare finden, Fortschritt sammeln. So sieht dein Kind schneller, dass eine kurze Runde geschafft ist."
-      />
+      <GameExercisePreview />
 
       <section className="bg-white px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-5xl">

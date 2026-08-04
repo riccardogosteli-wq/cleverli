@@ -1,8 +1,6 @@
 "use client";
 
 type GameExercisePreviewProps = {
-  title?: string;
-  body?: string;
   exerciseTitle?: string;
   pairs?: [string, string][];
 };
@@ -14,8 +12,6 @@ const defaultPairs: [string, string][] = [
 ];
 
 export default function GameExercisePreview({
-  title = "Noch spielerischer: Memory-Runde.",
-  body = "Neben klassischen Aufgaben sieht dein Kind auch spielerische Formate: Karten merken, Paare finden und dabei Rechnungen festigen.",
   exerciseTitle = "Finde Rechnung und Ergebnis.",
   pairs = defaultPairs,
 }: GameExercisePreviewProps) {
@@ -27,28 +23,68 @@ export default function GameExercisePreview({
 
   return (
     <section className="bg-white px-4 py-12 sm:px-6 sm:py-16">
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <div>
-          <p className="text-sm font-bold uppercase tracking-widest text-emerald-700">Beispielaufgabe</p>
-          <h2 className="mt-2 text-3xl font-black text-gray-950">{title}</h2>
-          <p className="mt-4 text-base leading-7 text-gray-600">{body}</p>
-          <div className="mt-5 grid gap-3 text-sm font-bold text-gray-700 sm:grid-cols-3">
-            <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3">Merken</div>
-            <div className="rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3">Paar finden</div>
-            <div className="rounded-2xl border border-amber-100 bg-amber-50 px-4 py-3">Feedback sehen</div>
+      <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-2 lg:items-start">
+        <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+          <div className="flex items-start gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-green-50 text-lg font-black text-green-800">
+              1
+            </div>
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-green-700">Klassische Aufgabe</p>
+              <h3 className="mt-1 text-lg font-black text-gray-950">Wie viel ist 8 + 7 + 9?</h3>
+              <p className="mt-1 text-sm font-bold text-gray-500">2. Klasse Mathe</p>
+            </div>
+          </div>
+
+          <div className="mt-5 grid grid-cols-3 gap-2">
+            {["22", "24", "26"].map((answer, index) => (
+              <div
+                key={answer}
+                className={`rounded-xl border px-3 py-3 text-center text-sm font-black ${
+                  index === 1
+                    ? "border-green-600 bg-green-50 text-green-800"
+                    : "border-gray-200 bg-white text-gray-700"
+                }`}
+              >
+                {answer}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+            <div className="rounded-xl border border-green-200 bg-green-50 px-3 py-2 text-center text-sm font-bold text-green-800">
+              Vorlesen
+            </div>
+            <div className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-center text-sm font-bold text-amber-800">
+              Tipp anzeigen
+            </div>
+          </div>
+
+          <p className="mt-3 rounded-xl bg-gray-50 px-3 py-2 text-xs font-semibold leading-5 text-gray-600">
+            Tipp: Rechne zuerst 8 + 7. Danach zählst du 9 dazu.
+          </p>
+
+          <div className="mt-4 flex items-center justify-between rounded-2xl bg-green-700 px-4 py-3 text-white">
+            <span className="text-sm font-black">Antwort prüfen</span>
+            <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-black">+10 XP</span>
           </div>
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-xs font-black uppercase tracking-widest text-emerald-700">Memory</p>
               <h3 className="mt-1 text-lg font-black text-gray-950">{exerciseTitle}</h3>
+              <p className="mt-1 text-sm font-bold text-gray-500">Paare finden</p>
             </div>
             <div className="rounded-full bg-amber-100 px-3 py-1 text-xs font-black text-amber-800">+20 XP</div>
           </div>
 
-          <div className="mt-4 grid grid-cols-3 gap-2">
+          <div className="mt-4 h-2 overflow-hidden rounded-full bg-gray-100">
+            <div className="h-full w-1/3 rounded-full bg-emerald-600" />
+          </div>
+
+          <div className="mt-5 grid grid-cols-3 gap-2">
             {orderedCards.map((card, index) => {
               const isMatched = card.pair === 0;
               const isOpen = isMatched || index === 4;
