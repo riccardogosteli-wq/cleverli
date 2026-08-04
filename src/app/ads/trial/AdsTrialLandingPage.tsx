@@ -67,9 +67,8 @@ export default function AdsTrialLandingPage({
             <h1 className="text-4xl font-black leading-tight text-gray-950 sm:text-5xl">{title}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">{lead}</p>
 
-            <div className="mt-5 grid gap-3 text-sm font-semibold text-gray-700 sm:grid-cols-3">
+            <div className="mt-5 grid gap-3 text-sm font-semibold text-gray-700 sm:grid-cols-2">
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Heute CHF 0</div>
-              <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Nach 7 Tagen belastet</div>
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Jederzeit kündbar</div>
             </div>
 
