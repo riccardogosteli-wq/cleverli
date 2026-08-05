@@ -35,6 +35,17 @@ export type IntentLandingPageConfig = {
     body: string;
     icon: string;
   }[];
+  preview?: {
+    classic: {
+      grade: string;
+      question: string;
+      answers: string[];
+      correctIndex: number;
+      tip: string;
+    };
+    exerciseTitle: string;
+    pairs: [string, string][];
+  };
   trustTitle: string;
   trustBody: string;
   faq: [string, string][];
@@ -198,7 +209,11 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
         </div>
       </section>
 
-      <GameExercisePreview />
+      <GameExercisePreview
+        classic={config.preview?.classic}
+        exerciseTitle={config.preview?.exerciseTitle}
+        pairs={config.preview?.pairs}
+      />
 
       <section className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-6xl">

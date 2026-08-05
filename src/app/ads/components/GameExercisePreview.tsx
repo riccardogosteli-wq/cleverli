@@ -1,8 +1,23 @@
 "use client";
 
 type GameExercisePreviewProps = {
+  classic?: {
+    grade: string;
+    question: string;
+    answers: string[];
+    correctIndex: number;
+    tip: string;
+  };
   exerciseTitle?: string;
   pairs?: [string, string][];
+};
+
+const defaultClassic = {
+  grade: "2. Klasse Mathe",
+  question: "Wie viel ist 8 + 7 + 9?",
+  answers: ["22", "24", "26"],
+  correctIndex: 1,
+  tip: "Tipp: Rechne zuerst 8 + 7. Danach zählst du 9 dazu.",
 };
 
 const defaultPairs: [string, string][] = [
@@ -12,6 +27,7 @@ const defaultPairs: [string, string][] = [
 ];
 
 export default function GameExercisePreview({
+  classic = defaultClassic,
   exerciseTitle = "Finde Rechnung und Ergebnis.",
   pairs = defaultPairs,
 }: GameExercisePreviewProps) {
@@ -31,17 +47,17 @@ export default function GameExercisePreview({
             </div>
             <div>
               <p className="text-xs font-black uppercase tracking-widest text-green-700">Klassische Aufgabe</p>
-              <h3 className="mt-1 text-lg font-black text-gray-950">Wie viel ist 8 + 7 + 9?</h3>
-              <p className="mt-1 text-sm font-bold text-gray-500">2. Klasse Mathe</p>
+              <h3 className="mt-1 text-lg font-black text-gray-950">{classic.question}</h3>
+              <p className="mt-1 text-sm font-bold text-gray-500">{classic.grade}</p>
             </div>
           </div>
 
           <div className="mt-5 grid grid-cols-3 gap-2">
-            {["22", "24", "26"].map((answer, index) => (
+            {classic.answers.map((answer, index) => (
               <div
                 key={answer}
                 className={`rounded-xl border px-3 py-3 text-center text-sm font-black ${
-                  index === 1
+                  index === classic.correctIndex
                     ? "border-green-600 bg-green-50 text-green-800"
                     : "border-gray-200 bg-white text-gray-700"
                 }`}
@@ -61,7 +77,7 @@ export default function GameExercisePreview({
           </div>
 
           <p className="mt-3 rounded-xl bg-gray-50 px-3 py-2 text-xs font-semibold leading-5 text-gray-600">
-            Tipp: Rechne zuerst 8 + 7. Danach zählst du 9 dazu.
+            {classic.tip}
           </p>
 
           <div className="mt-4 flex items-center justify-between rounded-2xl bg-green-700 px-4 py-3 text-white">

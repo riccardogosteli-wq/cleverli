@@ -152,3 +152,69 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
     ["Kann ich zuerst testen?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
   ],
 };
+
+export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
+  pageKey: "deutsch_uebungen_kinder",
+  path: "/deutsch-uebungen-kinder",
+  eyebrow: "Deutsch Übungen für Kinder · Primarschule",
+  title: "Deutsch üben, ohne lange Vorbereitung daheim.",
+  lead: "Cleverli gibt Kindern kurze Deutsch-Aufgaben mit direktem Feedback. Lesen, Rechtschreibung, Grammatik und Satzbau werden in ruhigen Übungsrunden gefestigt.",
+  badges: ["1.–6. Klasse", "Lesen, Wörter, Grammatik", "20 Aufgaben gratis"],
+  freeTrialUrl: "/learn/1/german/saetze-lesen",
+  checkoutSource: "deutsch_uebungen_kinder",
+  heroImage: "/images/scenes/cleverli-reading-abc.jpg",
+  imageAlt: "Cleverli begleitet ein Kind beim Deutsch üben",
+  sample: {
+    grade: "2. Klasse Deutsch",
+    question: "Welches Wort passt? Der Hund ___ schnell.",
+    answers: ["läuft", "laufen", "gelaufen"],
+    correctIndex: 0,
+    tip: "Tipp: Achte darauf, welches Wort zum Satz passt.",
+  },
+  stats: [
+    ["13'000+", "interaktive Übungen"],
+    ["1.–6.", "Klasse Primarschule"],
+    ["20", "Aufgaben gratis"],
+    ["LP21", "Schweizer Lehrplan"],
+  ],
+  sections: [
+    {
+      icon: "📖",
+      title: "Lesen sicherer machen",
+      body: "Kurze Aufgaben helfen beim genauen Lesen, Verstehen und Wiederholen ohne lange Vorbereitung.",
+    },
+    {
+      icon: "✍️",
+      title: "Rechtschreibung üben",
+      body: "Wörter, Laute und Schreibmuster werden Schritt für Schritt gefestigt, mit direkter Rückmeldung.",
+    },
+    {
+      icon: "💬",
+      title: "Grammatik und Satzbau",
+      body: "Sätze, Wortarten und passende Formen werden in kleinen Einheiten geübt, statt trocken erklärt.",
+    },
+  ],
+  preview: {
+    classic: {
+      grade: "2. Klasse Deutsch",
+      question: "Welcher Satz ist richtig?",
+      answers: ["Der Kind spielt.", "Das Kind spielt.", "Die Kind spielt."],
+      correctIndex: 1,
+      tip: "Tipp: Achte auf den Artikel vor dem Nomen.",
+    },
+    exerciseTitle: "Finde Wort und Bedeutung.",
+    pairs: [
+      ["laufen", "Verb"],
+      ["Hund", "Nomen"],
+      ["gross", "Adjektiv"],
+    ],
+  },
+  trustTitle: "Deutsch daheim braucht kurze Aufgaben, die Kinder wirklich starten.",
+  trustBody: "Cleverli bündelt Deutsch-Übungen für die Schweizer Primarschule in einem klaren Ablauf. Kinder bekommen Hinweise und Vorlesen, Eltern sehen Fortschritt und müssen nicht jedes Übungsblatt selbst suchen.",
+  faq: [
+    ["Welche Deutsch-Themen sind drin?", "Lesen, Rechtschreibung, Grammatik, Satzbau, Wortschatz und weitere Primarschul-Themen."],
+    ["Ist Cleverli nach Lehrplan 21 aufgebaut?", "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet."],
+    ["Kann mein Kind selbstständig üben?", "Ja. Vorlesen, Tipps und sofortige Rückmeldung helfen beim selbstständigen Üben."],
+    ["Kann ich zuerst testen?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
+  ],
+};
