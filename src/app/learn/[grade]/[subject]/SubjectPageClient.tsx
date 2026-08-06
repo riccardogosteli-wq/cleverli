@@ -14,6 +14,8 @@ const SUBJECT_META: Record<string, { emoji: string; nameKey: string; color: stri
   math:   { emoji: "🔢", nameKey: "math",   color: "text-blue-700 bg-blue-50" },
   german: { emoji: "📖", nameKey: "german", color: "text-yellow-700 bg-yellow-50" },
   science:{ emoji: "🌍", nameKey: "science", color: "text-green-700 bg-green-50" },
+  english:{ emoji: "🇬🇧", nameKey: "english", color: "text-red-700 bg-red-50" },
+  french: { emoji: "🇫🇷", nameKey: "french", color: "text-purple-700 bg-purple-50" },
 };
 
 export default function SubjectPageClient({ grade, subject, topics }: Props) {

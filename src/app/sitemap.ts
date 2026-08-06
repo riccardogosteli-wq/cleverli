@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
-import { getTopics, SUBJECTS } from "@/data/index";
+import { getSubjects, getTopics } from "@/data/index";
+import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
 
 const BASE = "https://www.cleverli.ch";
 const GRADES = [1, 2, 3, 4, 5, 6];
@@ -15,13 +16,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/upgrade`,      lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     // Blog (SEO content)
     { url: `${BASE}/blog/kinder-motivieren-zum-lernen`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
-    // NOTE: app-only pages, legal pages, auth pages, and ads landing pages
+    // NOTE: app-only pages, legal pages, auth pages, and /ads test routes
     //       are excluded because they are noindex or not intended for organic search.
   ];
 
+  for (const page of ORGANIC_LANDING_PAGES) {
+    routes.push({
+      url: `${BASE}${page.href}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    });
+  }
+
   // Grade/subject pages — dynamically generated from data
   for (const grade of GRADES) {
-    for (const subject of SUBJECTS.map(s => s.id)) {
+    for (const subject of getSubjects(grade).map(s => s.id)) {
       routes.push({
         url: `${BASE}/learn/${grade}/${subject}`,
         lastModified: now,

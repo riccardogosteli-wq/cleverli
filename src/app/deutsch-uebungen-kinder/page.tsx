@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Deutsch Übungen für Kinder",
   description: "Deutsch-Übungen für Kinder in der Schweizer Primarschule. Lesen, Rechtschreibung, Grammatik und Satzbau. 20 Aufgaben gratis testen.",
   robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   alternates: {
     canonical: "https://www.cleverli.ch/deutsch-uebungen-kinder",

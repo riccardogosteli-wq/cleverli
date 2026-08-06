@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Einmaleins online üben",
   description: "Einmaleins-Aufgaben für die Schweizer Primarschule. 20 Aufgaben gratis testen, mit Vorlesen, Tipps und direktem Feedback.",
   robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   alternates: {
     canonical: "https://www.cleverli.ch/einmaleins-ueben",

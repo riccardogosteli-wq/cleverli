@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "Mathe Übungen für Kinder",
   description: "Mathe-Übungen für Kinder in der Schweizer Primarschule. Rechnen, Einmaleins, Geometrie und mehr. 20 Aufgaben gratis testen.",
   robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   alternates: {
     canonical: "https://www.cleverli.ch/mathe-uebungen-kinder",

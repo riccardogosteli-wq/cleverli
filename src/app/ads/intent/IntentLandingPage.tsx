@@ -8,6 +8,7 @@ import { useSession } from "@/hooks/useSession";
 import { useAdsLpVariant } from "@/lib/adsAbTest";
 import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
 import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
+import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
 
 type Plan = "monthly" | "yearly";
 
@@ -251,6 +252,41 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
                 <h3 className="font-bold text-gray-900">{title}</h3>
                 <p className="mt-2 text-sm leading-6 text-gray-600">{body}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 pb-12 sm:px-6 sm:pb-16">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-green-100 bg-green-50 p-5 sm:p-6">
+          <p className="text-xs font-bold uppercase tracking-widest text-green-700">Weitere Übungen</p>
+          <h2 className="mt-2 text-2xl font-black text-gray-950">Mehr Themen für die Primarschule</h2>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {ORGANIC_LANDING_PAGES.filter((page) => page.href !== config.path).slice(0, 4).map((page) => (
+              <Link
+                key={page.href}
+                href={page.href}
+                className="rounded-xl border border-green-100 bg-white p-4 shadow-sm transition-colors hover:border-green-300 hover:bg-green-50"
+              >
+                <h3 className="text-sm font-black text-gray-900">{page.title}</h3>
+                <p className="mt-2 text-xs leading-5 text-gray-600">{page.description}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {[
+              ["/learn/1/german/saetze-lesen", "Sätze lesen 1. Klasse"],
+              ["/learn/2/math/einmaleins", "Einmaleins 2. Klasse"],
+              ["/learn/3/german/rechtschreibung", "Rechtschreibung 3. Klasse"],
+              ["/learn/3/math/geometrie", "Geometrie 3. Klasse"],
+            ].map(([href, label]) => (
+              <Link
+                key={href}
+                href={href}
+                className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
+              >
+                {label}
+              </Link>
             ))}
           </div>
         </div>
