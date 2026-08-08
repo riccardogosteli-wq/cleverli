@@ -1,10 +1,11 @@
 import { Metadata } from "next";
-import { getTopics } from "@/data/index";
+import { getTopics, getTopicsForSubject } from "@/data/index";
 import TopicClient from "./TopicClient";
 import TopicBreadcrumb from "./TopicBreadcrumb";
 import Link from "next/link";
 import { permanentRedirect } from "next/navigation";
-import { buildTopicDescription, buildTopicLearningAnswer, getRelatedTopics, getSampleExercises, getSubjectSeo, getTopicExerciseTypes } from "@/lib/seoContent";
+import { buildTopicDescription, buildTopicLearningAnswer, getExerciseTypeLabel, getRelatedTopics, getSampleExercises, getSubjectSeo, getTopicExerciseTypes } from "@/lib/seoContent";
+import type { Exercise } from "@/types/exercise";
 
 const BASE = "https://www.cleverli.ch";
 
@@ -65,6 +66,44 @@ export default async function TopicPage({ params }: Props) {
   const topicDescription = buildTopicDescription(topic, grade, subject);
   const topicLearningAnswer = buildTopicLearningAnswer(topic, grade, subject);
   const sampleExercises = getSampleExercises(topic, 4);
+  const sampleExerciseCards: { exercise: Exercise; topicTitle: string }[] = [];
+  const usedSampleTypes = new Set(sampleExerciseCards.map(({ exercise }) => exercise.type));
+  const usedSampleIds = new Set(sampleExerciseCards.map(({ exercise, topicTitle }) => `${topicTitle}:${exercise.id}`));
+  for (const exercise of sampleExercises) {
+    const sampleKey = `${topic.title}:${exercise.id}`;
+    if (usedSampleTypes.has(exercise.type) || usedSampleIds.has(sampleKey)) continue;
+    sampleExerciseCards.push({ exercise, topicTitle: topic.title });
+    usedSampleTypes.add(exercise.type);
+    usedSampleIds.add(sampleKey);
+  }
+  const currentGrade = parseInt(grade);
+  const subjectGradeOrder = [currentGrade, ...[1, 2, 3, 4, 5, 6].filter((subjectGrade) => subjectGrade !== currentGrade)];
+  const subjectTopics = subjectGradeOrder
+    .flatMap((subjectGrade) => getTopicsForSubject(subjectGrade, subject))
+    .filter((subjectTopic) => subjectTopic.id !== topic.id);
+
+  for (const subjectTopic of subjectTopics) {
+    for (const exercise of getSampleExercises(subjectTopic, 4)) {
+      if (sampleExerciseCards.length >= 4) break;
+      const sampleKey = `${subjectTopic.title}:${exercise.id}`;
+      if (usedSampleIds.has(sampleKey) || usedSampleTypes.has(exercise.type)) continue;
+      sampleExerciseCards.push({ exercise, topicTitle: subjectTopic.title });
+      usedSampleIds.add(sampleKey);
+      usedSampleTypes.add(exercise.type);
+    }
+    if (sampleExerciseCards.length >= 4) break;
+  }
+
+  for (const subjectTopic of subjectTopics) {
+    for (const exercise of getSampleExercises(subjectTopic, 4)) {
+      if (sampleExerciseCards.length >= 4) break;
+      const sampleKey = `${subjectTopic.title}:${exercise.id}`;
+      if (usedSampleIds.has(sampleKey)) continue;
+      sampleExerciseCards.push({ exercise, topicTitle: subjectTopic.title });
+      usedSampleIds.add(sampleKey);
+    }
+    if (sampleExerciseCards.length >= 4) break;
+  }
   const exerciseTypes = getTopicExerciseTypes(topic);
   const relatedTopics = getRelatedTopics(topics, topicId, 4);
   const gradeSeoHref = subject === "math" || subject === "german"
@@ -157,12 +196,15 @@ export default async function TopicPage({ params }: Props) {
             ))}
           </div>
         )}
-        {sampleExercises.length > 0 && (
+        {sampleExerciseCards.length > 0 && (
           <div className="mt-5">
             <h3 className="text-sm font-black text-gray-900">Beispielaufgaben</h3>
             <ul className="mt-3 space-y-2">
-              {sampleExercises.map((exercise) => (
-                <li key={exercise.id} className="rounded-xl border border-gray-100 bg-gray-50 px-3 py-2 text-sm leading-6 text-gray-700">
+              {sampleExerciseCards.map(({ exercise, topicTitle }) => (
+                <li key={`${topicTitle}-${exercise.id}`} className="rounded-xl border border-gray-100 bg-gray-50 px-3 py-2 text-sm leading-6 text-gray-700">
+                  <span className="mb-1 block text-[11px] font-black uppercase tracking-widest text-green-700">
+                    {topicTitle} · {getExerciseTypeLabel(exercise.type)}
+                  </span>
                   {exercise.question}
                 </li>
               ))}

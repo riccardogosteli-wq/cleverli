@@ -8,7 +8,7 @@ import {
   getGradeSubjectSeoLinks,
   getGradeSubjectSeoPage,
 } from "@/lib/gradeSubjectSeo";
-import { getSampleExercises } from "@/lib/seoContent";
+import { getExerciseTypeLabel, getSampleExercises } from "@/lib/seoContent";
 
 const BASE = "https://www.cleverli.ch";
 
@@ -146,7 +146,8 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
             />
             {heroExercise && (
               <div className="border-t border-green-100 p-5">
-                <p className="text-xs font-black uppercase tracking-widest text-green-700">Beispielaufgabe · {heroExercise.topicTitle}</p>
+                <p className="text-xs font-black uppercase tracking-widest text-green-700">Beispielaufgabe · {getExerciseTypeLabel(heroExercise.type)}</p>
+                <p className="mt-1 text-xs font-bold text-gray-500">{heroExercise.topicTitle}</p>
                 <p className="mt-2 text-base font-bold leading-7 text-gray-950">{heroExercise.question}</p>
                 <p className="mt-3 text-sm leading-6 text-gray-600">Mit Vorlesen, Tipps und direkter Rückmeldung.</p>
               </div>
@@ -207,7 +208,9 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
             <div className="mt-6 grid gap-3 md:grid-cols-2">
               {sampleExercises.map((exercise) => (
                 <div key={exercise.id} className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-                  <p className="text-xs font-bold uppercase tracking-widest text-gray-500">{exercise.topicTitle}</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-gray-500">
+                    {exercise.topicTitle} · {getExerciseTypeLabel(exercise.type)}
+                  </p>
                   <p className="mt-2 text-sm leading-6 text-gray-800">{exercise.question}</p>
                 </div>
               ))}

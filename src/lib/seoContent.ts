@@ -92,6 +92,10 @@ const exerciseTypeLabels: Record<string, string> = {
   "word-search": "Wortsuche",
 };
 
+export function getExerciseTypeLabel(type: string) {
+  return exerciseTypeLabels[type] ?? type;
+}
+
 export function getSubjectSeo(subject: string) {
   return SUBJECT_SEO[subject] ?? {
     name: subject,
@@ -107,12 +111,36 @@ export function getGradeName(grade: string | number) {
 }
 
 export function getTopicExerciseTypes(topic: Topic) {
-  const labels = Array.from(new Set(topic.exercises.map((exercise) => exerciseTypeLabels[exercise.type] ?? exercise.type)));
+  const labels = Array.from(new Set(topic.exercises.map((exercise) => getExerciseTypeLabel(exercise.type))));
   return labels.slice(0, 4);
 }
 
 export function getSampleExercises(topic: Topic, limit = 4): Exercise[] {
-  return topic.exercises.filter((exercise) => Boolean(exercise.question)).slice(0, limit);
+  const candidates = topic.exercises.filter((exercise) => Boolean(exercise.question));
+  const selected: Exercise[] = [];
+  const usedTypes = new Set<string>();
+  const usedQuestions = new Set<string>();
+
+  const add = (exercise: Exercise) => {
+    const normalizedQuestion = exercise.question.toLowerCase().replace(/\s+/g, " ").trim();
+    if (selected.length >= limit || usedQuestions.has(normalizedQuestion)) return;
+
+    selected.push(exercise);
+    usedTypes.add(exercise.type);
+    usedQuestions.add(normalizedQuestion);
+  };
+
+  for (const exercise of candidates) {
+    if (!usedTypes.has(exercise.type)) add(exercise);
+    if (selected.length >= limit) return selected;
+  }
+
+  for (const exercise of candidates) {
+    add(exercise);
+    if (selected.length >= limit) return selected;
+  }
+
+  return selected;
 }
 
 export function buildTopicDescription(topic: Topic, grade: string | number, subject: string) {
