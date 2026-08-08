@@ -9,6 +9,7 @@ import { useAdsLpVariant } from "@/lib/adsAbTest";
 import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
 import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
 import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
+import { getGradeSubjectSeoLinks } from "@/lib/gradeSubjectSeo";
 
 const subjects = [
   { icon: "/images/ui/Mathematik.png", title: "Mathematik", body: "Rechnen, Geometrie und Textaufgaben für die 1.–6. Klasse." },
@@ -18,7 +19,7 @@ const subjects = [
 
 const steps = [
   { n: "1", title: "Klasse wählen", body: "Dein Kind findet sofort Aufgaben, die zur Primarschule passen." },
-  { n: "2", title: "Kurz üben", body: "10 Minuten reichen für eine sinnvolle Runde ohne Drama am Küchentisch." },
+  { n: "2", title: "Kurz üben", body: "10 Minuten reichen oft für eine sinnvolle Runde nach der Schule." },
   { n: "3", title: "Fortschritt sehen", body: "Du siehst, was erledigt wurde und wo dein Kind noch Übung braucht." },
 ];
 
@@ -45,6 +46,7 @@ export default function AdsPrimarschuleClient() {
   const uid = session?.userId ?? "";
   const checkoutDestination = (plan: "monthly" | "yearly") => `/api/checkout?plan=${plan}`;
   const variant = useAdsLpVariant("primarschule_uebungen", "/primarschule-uebungen");
+  const gradeLinks = getGradeSubjectSeoLinks(6);
   const seoCluster = (
     <section className="bg-white px-4 pb-12 sm:px-6 sm:pb-16">
       <div className="mx-auto max-w-6xl rounded-2xl border border-green-100 bg-green-50 p-5 sm:p-6">
@@ -62,19 +64,15 @@ export default function AdsPrimarschuleClient() {
             </Link>
           ))}
         </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {[
-            ["/learn/1/math/zahlen-1-10", "Mathe 1. Klasse"],
-            ["/learn/1/german/saetze-lesen", "Deutsch 1. Klasse"],
-            ["/learn/2/math/einmaleins", "Einmaleins üben"],
-            ["/learn/1/science/tiere", "NMG 1. Klasse"],
-          ].map(([href, label]) => (
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {gradeLinks.map((page) => (
             <Link
-              key={href}
-              href={href}
-              className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
+              key={page.href}
+              href={page.href}
+              className="rounded-xl border border-green-100 bg-white p-4 shadow-sm transition-colors hover:border-green-300 hover:bg-green-50"
             >
-              {label}
+              <h3 className="text-sm font-black text-gray-900">{page.h1}</h3>
+              <p className="mt-2 text-xs leading-5 text-gray-600">{page.focusItems.slice(0, 2).join(" · ")}</p>
             </Link>
           ))}
         </div>
@@ -104,10 +102,10 @@ export default function AdsPrimarschuleClient() {
           <div>
             <p className="mb-3 text-sm font-bold uppercase tracking-widest text-green-700">20 Aufgaben gratis · Schweizer Primarschule</p>
             <h1 className="text-4xl font-black leading-tight text-gray-950 sm:text-5xl">
-              Mathe und Deutsch kostenlos ausprobieren.
+              Online-Übungen für die Schweizer Primarschule.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-              Starte direkt mit 20 Aufgaben gratis. Danach entscheidest du in Ruhe, ob Cleverli als Familienabo zu euch passt.
+              Mathe, Deutsch und NMG in kurzen Aufgaben mit direktem Feedback. Starte mit 20 Aufgaben gratis, direkt im Browser.
             </p>
             <div className="mt-5 grid gap-3 text-sm font-semibold text-gray-700 sm:grid-cols-3">
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Ohne Kreditkarte</div>
@@ -205,7 +203,7 @@ export default function AdsPrimarschuleClient() {
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl">
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Für den Alltag gebaut</p>
-            <h2 className="mt-2 text-3xl font-black text-gray-950">10 Minuten üben. Fortschritt sehen. Ohne Lernstress.</h2>
+            <h2 className="mt-2 text-3xl font-black text-gray-950">10 Minuten üben. Fortschritt sehen. Ruhig dranbleiben.</h2>
           </div>
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {steps.map((step) => (
@@ -375,7 +373,7 @@ export default function AdsPrimarschuleClient() {
 
       <section className="bg-green-700 px-4 py-12 text-center text-white sm:px-6 sm:py-16">
         <Image src="/cleverli-try-now.png" alt="" width={120} height={120} className="mx-auto mb-4 drop-shadow-lg" />
-        <h2 className="mx-auto max-w-2xl text-3xl font-black">Bereit für weniger Lern-Stress daheim?</h2>
+        <h2 className="mx-auto max-w-2xl text-3xl font-black">Bereit für eine kurze Übungsrunde daheim?</h2>
         <p className="mx-auto mt-3 max-w-xl text-green-50">Teste 20 Aufgaben gratis oder schalte alle Übungen für die ganze Familie frei.</p>
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
           <button

@@ -9,6 +9,7 @@ import { useAdsLpVariant } from "@/lib/adsAbTest";
 import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
 import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
 import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
+import { getGradeSubjectSeoLinks } from "@/lib/gradeSubjectSeo";
 
 type Plan = "monthly" | "yearly";
 
@@ -81,6 +82,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
   const { session } = useSession();
   const uid = session?.userId ?? "";
   const variant = useAdsLpVariant(config.pageKey, config.path);
+  const gradeLinks = getGradeSubjectSeoLinks(6);
   const seoCluster = (
     <section className="bg-white px-4 pb-12 sm:px-6 sm:pb-16">
       <div className="mx-auto max-w-6xl rounded-2xl border border-green-100 bg-green-50 p-5 sm:p-6">
@@ -98,19 +100,15 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
             </Link>
           ))}
         </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {[
-            ["/learn/1/german/saetze-lesen", "Sätze lesen 1. Klasse"],
-            ["/learn/2/math/einmaleins", "Einmaleins 2. Klasse"],
-            ["/learn/3/german/rechtschreibung", "Rechtschreibung 3. Klasse"],
-            ["/learn/3/math/geometrie", "Geometrie 3. Klasse"],
-          ].map(([href, label]) => (
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {gradeLinks.map((page) => (
             <Link
-              key={href}
-              href={href}
-              className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
+              key={page.href}
+              href={page.href}
+              className="rounded-xl border border-green-100 bg-white p-4 shadow-sm transition-colors hover:border-green-300 hover:bg-green-50"
             >
-              {label}
+              <h3 className="text-sm font-black text-gray-900">{page.h1}</h3>
+              <p className="mt-2 text-xs leading-5 text-gray-600">{page.focusItems.slice(0, 2).join(" · ")}</p>
             </Link>
           ))}
         </div>

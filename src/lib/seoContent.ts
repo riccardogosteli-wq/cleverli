@@ -123,6 +123,14 @@ export function buildTopicDescription(topic: Topic, grade: string | number, subj
   return `${topic.exercises.length} interaktive Übungen zu ${topic.title} für die ${gradeName}. ${subjectSeo.shortName} nach Lehrplan 21 Schweiz.${typeText}`;
 }
 
+export function buildTopicLearningAnswer(topic: Topic, grade: string | number, subject: string) {
+  const subjectSeo = getSubjectSeo(subject);
+  const gradeName = getGradeName(grade);
+  const types = getTopicExerciseTypes(topic);
+  const typeText = types.length ? ` Die Aufgaben nutzen ${types.join(", ")} und geben direkt Rückmeldung.` : " Die Aufgaben geben direkt Rückmeldung.";
+  return `${topic.title} gehört zu ${subjectSeo.shortName} in der ${gradeName}. Dein Kind übt kurze, klare Aufgaben, die zum Schulstoff der Schweizer Primarschule passen.${typeText} So wird sichtbar, was schon klappt und wo noch Übung hilft.`;
+}
+
 export function getRelatedTopics(topics: Topic[], topicId: string, limit = 4) {
   const currentIndex = topics.findIndex((topic) => topic.id === topicId);
   if (currentIndex < 0) return topics.slice(0, limit);

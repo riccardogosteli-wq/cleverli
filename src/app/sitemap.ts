@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { getSubjects, getTopics } from "@/data/index";
 import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
+import { GRADE_SUBJECT_SEO_PAGES } from "@/lib/gradeSubjectSeo";
 
 const BASE = "https://www.cleverli.ch";
 const GRADES = [1, 2, 3, 4, 5, 6];
@@ -26,6 +27,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.9,
+    });
+  }
+
+  for (const page of GRADE_SUBJECT_SEO_PAGES) {
+    routes.push({
+      url: `${BASE}${page.href}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
     });
   }
 

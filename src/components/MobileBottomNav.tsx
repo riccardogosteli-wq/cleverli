@@ -46,11 +46,14 @@ export default function MobileBottomNav() {
   // Don't show during active exercise or on auth/onboarding pages
   const isExercise = pathname.startsWith("/learn/");
   const isAuthPage = ["/signup", "/login", "/reset-password"].includes(pathname);
+  const isGradeSeoPage = /^\/(?:mathe|deutsch)-uebungen-[1-6]-klasse$/.test(pathname);
   const isAdsPage = pathname.startsWith("/ads/") ||
     pathname === "/primarschule-uebungen" ||
     pathname === "/einmaleins-ueben" ||
     pathname === "/1x1-spiele" ||
-    pathname === "/mathe-uebungen-kinder";
+    pathname === "/mathe-uebungen-kinder" ||
+    pathname === "/deutsch-uebungen-kinder" ||
+    isGradeSeoPage;
   const isInternalPage = pathname === "/internal-log-dashboard";
 
   if (isExercise || isAuthPage || isAdsPage || isInternalPage) return null;

@@ -4,7 +4,7 @@ import TopicClient from "./TopicClient";
 import TopicBreadcrumb from "./TopicBreadcrumb";
 import Link from "next/link";
 import { permanentRedirect } from "next/navigation";
-import { buildTopicDescription, getRelatedTopics, getSampleExercises, getSubjectSeo, getTopicExerciseTypes } from "@/lib/seoContent";
+import { buildTopicDescription, buildTopicLearningAnswer, getRelatedTopics, getSampleExercises, getSubjectSeo, getTopicExerciseTypes } from "@/lib/seoContent";
 
 const BASE = "https://www.cleverli.ch";
 
@@ -63,9 +63,13 @@ export default async function TopicPage({ params }: Props) {
   const subjectName = subjectNames?.de ?? subject; // German for primary SEO (Swiss market)
   const subjectSeo = getSubjectSeo(subject);
   const topicDescription = buildTopicDescription(topic, grade, subject);
+  const topicLearningAnswer = buildTopicLearningAnswer(topic, grade, subject);
   const sampleExercises = getSampleExercises(topic, 4);
   const exerciseTypes = getTopicExerciseTypes(topic);
   const relatedTopics = getRelatedTopics(topics, topicId, 4);
+  const gradeSeoHref = subject === "math" || subject === "german"
+    ? `/${subject === "math" ? "mathe" : "deutsch"}-uebungen-${grade}-klasse`
+    : `/learn/${grade}/${subject}`;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -111,6 +115,26 @@ export default async function TopicPage({ params }: Props) {
       <p className="text-sm text-gray-500">
         {topic.exercises.length} interaktive Übungen · {subjectName} {grade}. Klasse · Lehrplan 21 Schweiz
       </p>
+
+      <section className="rounded-2xl border border-green-100 bg-green-50 p-5 shadow-sm">
+        <p className="text-xs font-bold uppercase tracking-widest text-green-700">Kurz erklärt</p>
+        <h2 className="mt-2 text-lg font-black text-gray-900">Was lernt mein Kind bei {topic.title}?</h2>
+        <p className="mt-2 text-sm leading-6 text-gray-700">{topicLearningAnswer}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link
+            href={gradeSeoHref}
+            className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
+          >
+            {subjectName} {grade}. Klasse
+          </Link>
+          <Link
+            href={`/learn/${grade}/${subject}`}
+            className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
+          >
+            Alle Themen dieser Klasse
+          </Link>
+        </div>
+      </section>
 
       <TopicClient
         topic={topic}
