@@ -39,6 +39,7 @@ export function useSession() {
   const [session, setSession] = useState<Session | null>(null);
   const [loaded, setLoaded] = useState<boolean>(false);
   const [premiumVerified, setPremiumVerified] = useState<boolean>(false);
+  const [premiumChecked, setPremiumChecked] = useState<boolean>(false);
 
   // useRef so the auth state change callback always reads the current value (not stale closure)
   const loginInProgressRef = useRef(false);
@@ -51,6 +52,8 @@ export function useSession() {
       setSession(cached);
       setLoaded(true);
       refreshLocalFamily();
+    } else {
+      setLoaded(true);
     }
   }, []);
 
@@ -61,6 +64,7 @@ export function useSession() {
       const cached = readCachedSession();
       setSession(cached);
       setPremiumVerified(false);
+      setPremiumChecked(true);
       setLoaded(true);
       return;
     }
@@ -86,8 +90,9 @@ export function useSession() {
           };
           setSession(sess);
           localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
-          await refreshLocalFamily();
           setPremiumVerified(true);
+          setPremiumChecked(true);
+          refreshLocalFamily();
         } else {
           // Supabase is configured and reachable, but there is no valid auth
           // session. Clear stale cached sessions so old premium=false data does
@@ -95,15 +100,18 @@ export function useSession() {
           localStorage.removeItem(SESSION_KEY);
           setSession(null);
           setPremiumVerified(false);
+          setPremiumChecked(true);
         }
       } catch {
         // Auth error — keep current identity state, but do not grant cached Premium.
         setPremiumVerified(false);
+        setPremiumChecked(true);
       }
       setLoaded(true);
     }).catch(() => {
       // Supabase unreachable — fall back to cache for identity only, not Premium.
       setPremiumVerified(false);
+      setPremiumChecked(true);
       setLoaded(true);
     });
 
@@ -129,8 +137,9 @@ export function useSession() {
             };
             setSession(sess);
             localStorage.setItem(SESSION_KEY, JSON.stringify(sess));
-            await refreshLocalFamily();
             setPremiumVerified(true);
+            setPremiumChecked(true);
+            refreshLocalFamily();
             setLoaded(true);
           } else if (event === "SIGNED_OUT") {
             // Only clear if there's no cached session AND logout() removed it.
@@ -140,12 +149,14 @@ export function useSession() {
             if (!cached) {
               setSession(null);
               setPremiumVerified(false);
+              setPremiumChecked(true);
               setLoaded(true);
             }
           }
         } catch {
           // Auth state change error — ignore identity, but do not grant cached Premium.
           setPremiumVerified(false);
+          setPremiumChecked(true);
         }
       }
     );
@@ -158,6 +169,7 @@ export function useSession() {
     localStorage.removeItem(SESSION_KEY);
     setSession(null);
     setPremiumVerified(false);
+    setPremiumChecked(true);
     const supabase = getSupabase();
     if (supabase) await supabase.auth.signOut();
   };
@@ -170,5 +182,5 @@ export function useSession() {
     return new Date(session.premiumUntil) > new Date();
   })();
 
-  return { session, loaded, isPremium, logout, setLoginInProgress };
+  return { session, loaded, isPremium, premiumChecked, logout, setLoginInProgress };
 }

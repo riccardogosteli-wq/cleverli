@@ -26,7 +26,7 @@ function loadProgress(grade: number, subject: string, topic: Topic) {
 }
 
 export default function TopicClient({ topic, grade, subject, allTopics, topicIndex }: Props) {
-  const { isPremium, loaded } = useSession();
+  const { session, isPremium, loaded, premiumChecked } = useSession();
   const [exerciseCounts, setExerciseCounts] = useState<ReturnType<typeof countExercisesByDifficulty> | null>(null);
 
   useEffect(() => {
@@ -73,6 +73,15 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
 
   if (!exerciseCounts) return null;
 
+  const waitingForPremium = loaded && !!session && !premiumChecked;
+  if (waitingForPremium) {
+    return (
+      <div className="rounded-2xl border border-green-100 bg-green-50 px-5 py-6 text-center text-sm font-semibold text-green-800">
+        Premium-Zugang wird geprüft...
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       <ProgressMapClient
@@ -87,7 +96,7 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
         topic={topic}
         grade={grade}
         subject={subject}
-        isPremium={loaded ? isPremium : false}
+        isPremium={loaded && premiumChecked ? isPremium : false}
         allTopics={allTopics}
         topicIndex={topicIndex}
       />

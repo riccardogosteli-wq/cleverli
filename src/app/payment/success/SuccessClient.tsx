@@ -13,6 +13,7 @@ export default function SuccessClient() {
   const { session, loaded, isPremium } = useSession();
   const [pollCount, setPollCount] = useState(0);
   const [activated, setActivated] = useState(false);
+  const [activationFailed, setActivationFailed] = useState(false);
 
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
@@ -37,7 +38,7 @@ export default function SuccessClient() {
   useEffect(() => {
     if (isPremium) { setActivated(true); return; }
     if (!loaded) return;
-    if (pollCount >= MAX_POLLS) { setActivated(true); return; } // give up, show CTA anyway
+    if (pollCount >= MAX_POLLS) { setActivationFailed(true); return; }
 
     const timer = setTimeout(async () => {
       // Force refresh the session from Supabase
@@ -50,11 +51,13 @@ export default function SuccessClient() {
         if (session?.userId) {
           const { data } = await supabase
             .from("parent_profiles")
-            .select("premium")
+            .select("premium, premium_until")
             .eq("id", session.userId)
             .single();
-          if (data?.premium) {
+          const active = data?.premium && (!data.premium_until || new Date(data.premium_until) > new Date());
+          if (active) {
             setActivated(true);
+            setActivationFailed(false);
             return;
           }
         }
@@ -90,7 +93,19 @@ export default function SuccessClient() {
         </div>
 
         {/* Activation status */}
-        {!activated ? (
+        {activationFailed ? (
+          <div className="bg-red-50 border border-red-200 rounded-2xl px-5 py-4 space-y-2">
+            <span className="text-sm font-bold text-red-700">
+              {t("Premium konnte noch nicht bestätigt werden.", "Premium n'a pas encore pu être confirmé.", "Premium non è ancora stato confermato.", "Premium could not be confirmed yet.")}
+            </span>
+            <p className="text-xs text-red-500">
+              {t("Bitte melde dich kurz neu an. Falls es danach noch blockiert, schreiben wir dir den Zugang manuell frei.",
+                 "Reconnecte-toi brièvement. Si cela reste bloqué, nous activerons ton accès manuellement.",
+                 "Accedi di nuovo. Se rimane bloccato, attiveremo l'accesso manualmente.",
+                 "Please sign in again. If it is still blocked, we will unlock access manually.")}
+            </p>
+          </div>
+        ) : !activated ? (
           <div className="bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4 space-y-2">
             <div className="flex items-center gap-3 justify-center">
               <div className="w-4 h-4 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
