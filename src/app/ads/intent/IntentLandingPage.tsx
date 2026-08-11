@@ -7,6 +7,7 @@ import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
 import { useAdsLpVariant } from "@/lib/adsAbTest";
 import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
+import AdsExerciseImages from "@/app/ads/components/AdsExerciseImages";
 import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
 import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
 import { getGradeSubjectSeoLinks } from "@/lib/gradeSubjectSeo";
@@ -252,6 +253,8 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
         exerciseTitle={config.preview?.exerciseTitle}
         pairs={config.preview?.pairs}
       />
+
+      <AdsExerciseImages />
 
       <section className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-6xl">

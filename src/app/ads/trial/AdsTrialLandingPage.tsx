@@ -4,6 +4,7 @@ import Image from "next/image";
 import { trackAdsLpCtaClick } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
+import AdsExerciseImages from "@/app/ads/components/AdsExerciseImages";
 import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
 
 type Plan = "monthly" | "yearly";
@@ -130,6 +131,8 @@ export default function AdsTrialLandingPage({
       </section>
 
       <GameExercisePreview />
+
+      <AdsExerciseImages />
 
       <section className="bg-white px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-5xl">
