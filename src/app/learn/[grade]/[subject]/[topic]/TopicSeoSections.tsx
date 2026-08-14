@@ -1,8 +1,12 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Exercise, Topic } from "@/types/exercise";
+import { getProgressSubjects } from "@/data";
+import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
+import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { getTopicTitle } from "@/data/topicTitles";
 import {
   buildTopicDescription,
@@ -53,13 +57,40 @@ const labels = {
   },
 };
 
+function getStoredTopicCompleted(topic: Topic, grade: number, subject: string) {
+  for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
+    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+    if (!raw) continue;
+    try {
+      return getEffectiveCompleted(JSON.parse(raw), topic.exercises.length);
+    } catch {
+      return 0;
+    }
+  }
+  return 0;
+}
+
 export default function TopicSeoSections({ topic, grade, subject, sampleExerciseCards, relatedTopics }: Props) {
   const { lang } = useLang();
+  const { profile, loaded } = useProfileContext();
+  const [showSeoSections, setShowSeoSections] = useState(false);
   const copy = labels[lang];
   const topicTitle = getTopicTitle(topic.id, lang, topic.title);
   const subjectName = getLocalizedSubjectName(subject, lang);
   const topicDescription = buildTopicDescription(topic, grade, subject, lang, topicTitle);
   const exerciseTypes = getTopicExerciseTypes(topic, lang);
+
+  useEffect(() => {
+    if (!loaded) return;
+
+    const topicCompleted = getStoredTopicCompleted(topic, grade, subject);
+    const anonymousCompleted = parseInt(localStorage.getItem("cleverli_anon_exercises") ?? "0", 10) || 0;
+    const totalCompleted = Math.max(profile.totalExercises, anonymousCompleted, topicCompleted);
+
+    setShowSeoSections(totalCompleted < 3);
+  }, [grade, loaded, profile.totalExercises, subject, topic]);
+
+  if (!showSeoSections) return null;
 
   return (
     <>

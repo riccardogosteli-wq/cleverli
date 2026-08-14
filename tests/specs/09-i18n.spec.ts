@@ -120,6 +120,24 @@ test.describe("i18n completeness", () => {
     }
   });
 
+  test("topic seo sections hide after the first few exercises", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("cleverli_lang", "it");
+      localStorage.setItem("cleverli_anon_exercises", "3");
+      localStorage.setItem("cleverli_1_math_addition-bis-10", JSON.stringify({
+        completed: 3,
+        correctIds: ["a1", "a2", "a3"],
+      }));
+    });
+
+    await page.goto("/learn/1/math/addition-bis-10");
+
+    await expect(page.getByRole("heading", { name: "Addizione fino a 10", exact: true })).toBeVisible({ timeout: 8_000 });
+    await expect(page.getByText("Esercizi sull'argomento")).toHaveCount(0);
+    await expect(page.getByText("Esempi di esercizi")).toHaveCount(0);
+    await expect(page.getByText("Altri argomenti di Matematica")).toHaveCount(0);
+  });
+
   test("daily challenge exercise text follows French and Italian language settings", async ({ page }) => {
     await page.addInitScript(() => {
       const fixedNow = new Date("2026-08-14T12:00:00.000Z").getTime();
