@@ -6,6 +6,8 @@ import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { getDailyChallenge, getDailyState, markDailyComplete, isDailyDoneToday, DAILY_XP_BONUS } from "@/lib/daily";
 import { getTopicTitle } from "@/data/topicTitles";
+import { localizeExercise } from "@/lib/exerciseLocalization";
+import { getLocalizedSubjectName } from "@/lib/seoContent";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import CountingGame from "@/components/exercises/CountingGame";
@@ -52,6 +54,7 @@ export default function DailyPage() {
   );
 
   const { exercise, topic, subject } = challenge;
+  const localizedExercise = localizeExercise(exercise, lang);
 
   const handleAnswer = (correct: boolean) => {
     play(correct ? "correct" : "wrong");
@@ -97,7 +100,7 @@ export default function DailyPage() {
     }
   };
 
-  const subjectLabel = subject === "math" ? tr("math") : subject === "german" ? tr("german") : (lang === "fr" ? "Sciences" : lang === "it" ? "Scienze" : lang === "en" ? "Science" : "NMG");
+  const subjectLabel = getLocalizedSubjectName(subject, lang);
 
   // Show streak milestone if set
   if (streakMilestone) {
@@ -216,32 +219,33 @@ export default function DailyPage() {
       <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 space-y-4 min-h-[260px] flex flex-col justify-center">
         {exercise.type === "multiple-choice" && (
           <MultipleChoice
-            question={exercise.question}
-            options={exercise.options ?? []}
-            answer={exercise.answer}
+            question={localizedExercise.question}
+            options={localizedExercise.options ?? []}
+            answer={localizedExercise.answer}
             onAnswer={handleAnswer}
-            optionImages={exercise.optionImages}
-            questionImage={exercise.image}
+            optionImages={localizedExercise.optionImages}
+            questionImage={localizedExercise.image}
           />
         )}
         {exercise.type === "fill-in-blank" && (
           <FillInBlank
-            question={exercise.question}
-            answer={exercise.answer}
+            question={localizedExercise.question}
+            answer={localizedExercise.answer}
+            altAnswers={localizedExercise.altAnswers}
             onAnswer={handleAnswer}
-            questionImage={exercise.image}
+            questionImage={localizedExercise.image}
           />
         )}
         {exercise.type === "counting" && (
           <CountingGame
-            question={exercise.question}
-            answer={exercise.answer}
-            emoji={exercise.emoji}
-            options={exercise.options ?? []}
+            question={localizedExercise.question}
+            answer={localizedExercise.answer}
+            emoji={localizedExercise.emoji}
+            options={localizedExercise.options ?? []}
             onAnswer={handleAnswer}
           />
         )}
-        <HintSystem hints={exercise.hints} onHintUsed={() => setHintsUsed(h => h + 1)} />
+        <HintSystem hints={localizedExercise.hints} onHintUsed={() => setHintsUsed(h => h + 1)} />
       </div>
 
       <p className="text-center text-xs text-gray-400">

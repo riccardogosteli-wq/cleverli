@@ -223,7 +223,7 @@ test.describe("Fix 5 — Exercise wrong-answer feedback is translated", () => {
     });
 
     await page.goto("/learn/1/math/zahlen-1-10");
-    await expect(page.getByText("How many apples do you see?")).toBeVisible({ timeout: 8_000 });
+    await expect(page.getByText("How many apples do you see?", { exact: true })).toBeVisible({ timeout: 8_000 });
     await page.getByRole("button", { name: "4", exact: true }).click();
     await page.getByRole("button", { name: /Check/ }).click();
 

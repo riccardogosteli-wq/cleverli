@@ -81,10 +81,83 @@ test.describe("i18n completeness", () => {
     await expect(page.getByText("Sample exercises")).toBeVisible();
     await expect(page.getByText("More Maths topics")).toBeVisible();
 
-    const visibleText = await page.locator("body").textContent() ?? "";
+    const visibleText = await page.locator("body").innerText();
     expect(visibleText).not.toContain("Kurz erklärt");
     expect(visibleText).not.toContain("Was lernt mein Kind");
     expect(visibleText).not.toContain("Übungen zum Thema");
     expect(visibleText).not.toContain("Beispielaufgaben");
+  });
+
+  test("topic info sections follow French and Italian language settings", async ({ page }) => {
+    const cases = [
+      {
+        lang: "fr",
+        title: "Nombres 1–10",
+        expected: ["En bref", "Qu'apprend mon enfant avec Nombres 1–10?", "Exercices sur le thème", "Exemples d'exercices"],
+      },
+      {
+        lang: "it",
+        title: "Numeri 1–10",
+        expected: ["In breve", "Cosa impara mio figlio con Numeri 1–10?", "Esercizi sull'argomento", "Esempi di esercizi"],
+      },
+    ];
+
+    for (const entry of cases) {
+      await page.goto("/login");
+      await page.evaluate((lang) => localStorage.setItem("cleverli_lang", lang), entry.lang);
+      await page.goto("/learn/1/math/zahlen-1-10");
+
+      await expect(page.getByRole("heading", { name: entry.title, exact: true })).toBeVisible({ timeout: 8_000 });
+      for (const text of entry.expected) {
+        await expect(page.getByText(text)).toBeVisible();
+      }
+
+      const visibleText = await page.locator("body").innerText();
+      expect(visibleText).not.toContain("Kurz erklärt");
+      expect(visibleText).not.toContain("Was lernt mein Kind");
+      expect(visibleText).not.toContain("Übungen zum Thema");
+      expect(visibleText).not.toContain("Beispielaufgaben");
+    }
+  });
+
+  test("daily challenge exercise text follows French and Italian language settings", async ({ page }) => {
+    await page.addInitScript(() => {
+      const fixedNow = new Date("2026-08-14T12:00:00.000Z").getTime();
+      const RealDate = Date;
+
+      class FixedDate extends RealDate {
+        constructor(...args: ConstructorParameters<typeof Date>) {
+          super(...(args.length ? args : [fixedNow]));
+        }
+
+        static now() {
+          return fixedNow;
+        }
+      }
+
+      FixedDate.UTC = RealDate.UTC;
+      FixedDate.parse = RealDate.parse;
+      FixedDate.prototype = RealDate.prototype;
+      window.Date = FixedDate;
+    });
+
+    const cases = [
+      { lang: "fr", expected: "Combien de syllabes", forbidden: "Wie viele Silben" },
+      { lang: "it", expected: "Quanti sillabe", forbidden: "Wie viele Silben" },
+    ];
+
+    for (const entry of cases) {
+      await page.goto("/login");
+      await page.evaluate((lang) => {
+        localStorage.setItem("cleverli_lang", lang);
+        localStorage.removeItem("cleverli_daily");
+      }, entry.lang);
+      await page.goto("/daily");
+
+      await expect(page.getByText(entry.expected)).toBeVisible({ timeout: 8_000 });
+      const visibleText = await page.locator("body").innerText();
+      expect(visibleText).not.toContain(entry.forbidden);
+      expect(visibleText).not.toContain("Tagesaufgabe");
+    }
   });
 });
