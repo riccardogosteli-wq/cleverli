@@ -61,9 +61,12 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
   }, [correct, isTopicComplete]);
 
   return (
-    <div className={`relative rounded-2xl p-6 text-center overflow-hidden
+    <div
+      className={`relative rounded-2xl p-6 text-center overflow-hidden flex items-center justify-center
       ${isTopicComplete ? "bg-gradient-to-br from-green-50 to-yellow-50 border-2 border-green-300" :
-        correct ? "bg-green-50 border-2 border-green-200" : "bg-orange-50 border-2 border-orange-200"}`}>
+        correct ? "bg-green-50 border-2 border-green-200" : "bg-orange-50 border-2 border-orange-200"}`}
+      style={{ minHeight: !isTopicComplete && correct ? "max(520px, calc(100svh - 96px))" : undefined }}
+    >
 
       {/* Confetti canvas */}
       {(correct || isTopicComplete) && (

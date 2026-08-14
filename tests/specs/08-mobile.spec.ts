@@ -108,3 +108,29 @@ test("Mobile — text not truncated on exercise question", async ({ page }) => {
     }
   }
 });
+
+test("Mobile exercise player — answering does not auto-scroll down", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.addInitScript(() => {
+    localStorage.removeItem("cleverli_1_math_zahlen-1-10");
+    localStorage.setItem(
+      "cleverli_pool_zahlen-1-10",
+      JSON.stringify(Array.from({ length: 49 }, (_, i) => `z${i + 2}`))
+    );
+  });
+
+  await page.goto("/learn/1/math/zahlen-1-10");
+  await expect(page.getByText("Wie viele Äpfel siehst du?", { exact: true })).toBeVisible({ timeout: 8_000 });
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.getByRole("button", { name: "4", exact: true }).click();
+  const scrollBeforeFeedback = await page.evaluate(() => window.scrollY);
+  await page.getByRole("button", { name: /Überprüfen/ }).click();
+
+  await expect(page.locator("button").filter({ hasText: "Weiter" })).toBeVisible({ timeout: 5_000 });
+  await page.waitForTimeout(300);
+  const scrollAfterFeedback = await page.evaluate(() => window.scrollY);
+  const topicInfoTop = await page.getByRole("heading", { name: "Zahlen 1–10 üben" }).evaluate(el => el.getBoundingClientRect().top);
+
+  expect(scrollAfterFeedback).toBeLessThanOrEqual(scrollBeforeFeedback + 10);
+  expect(topicInfoTop).toBeGreaterThan(800);
+});

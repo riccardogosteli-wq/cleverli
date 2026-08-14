@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { getActiveProfileId } from "@/lib/family";
 import { syncTopicProgressToSupabase } from "@/lib/progressSync";
 import { Topic, Exercise } from "@/types/exercise";
@@ -193,10 +193,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [mascotReaction, setMascotReaction] = useState<'correct'|'wrong'|null>(null);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const topicStartRef = useRef<number>(Date.now());
+  const answerScrollRef = useRef<{ x: number; y: number } | null>(null);
   const currentCompleted = correctIds.size;
   const tierInfo = getTierProgress(topic, currentCompleted);
   const nextTopic = allTopics[topicIndex + 1] ?? null;
-  const rewardRef = useRef<HTMLDivElement>(null);
 
   const sessionTotal = Math.max(1, exercises.length);
   const current: Exercise = localizeExercise(exercises[idx] ?? sortByDifficulty(topic.exercises)[0], lang);
@@ -232,6 +232,26 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     lang,
     ...extra,
   });
+
+  useLayoutEffect(() => {
+    if (answered === null || !answerScrollRef.current || typeof window === "undefined") return;
+    const target = answerScrollRef.current;
+    const restore = () => window.scrollTo(target.x, target.y);
+    const rafIds: number[] = [];
+    const timeoutIds: ReturnType<typeof setTimeout>[] = [];
+
+    restore();
+    rafIds.push(requestAnimationFrame(() => {
+      restore();
+      rafIds.push(requestAnimationFrame(restore));
+    }));
+    [50, 150, 350].forEach(delay => timeoutIds.push(setTimeout(restore, delay)));
+
+    return () => {
+      rafIds.forEach(cancelAnimationFrame);
+      timeoutIds.forEach(clearTimeout);
+    };
+  }, [answered]);
   
 
   // (voice is on-demand only — no auto-read)
@@ -341,15 +361,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [answered, idx]);
 
-  // Scroll reward into view on mobile
-  useEffect(() => {
-    if (answered !== null && rewardRef.current) {
-      setTimeout(() => {
-        rewardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }, 100);
-    }
-  }, [answered]);
-
   const handleAnswer = (correct: boolean) => {
     stop();
     setExerciseInProgress(true); // UJ-12: mark exercise as in-progress on first answer
@@ -388,6 +399,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const exId = exercises[idx]?.id ?? String(idx);
       setWrongIds(ids => ids.includes(exId) ? ids : [...ids, exId]);
     }
+    answerScrollRef.current = typeof window === "undefined" ? null : { x: window.scrollX, y: window.scrollY };
     setAnswered(correct);
 
     // Mascot reaction overlay
@@ -745,7 +757,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
 
   // ── Exercise ─────────────────────────────────────────────────────
   return (
-    <div className="space-y-3 max-w-xl mx-auto relative">
+    <div className="space-y-3 max-w-xl mx-auto relative" style={{ overflowAnchor: "none" }}>
       {/* Level display — shows current level + XP progress */}
       {profile.xp > 0 && (
         <div className="bg-gradient-to-r from-green-50 to-yellow-50 border-2 border-green-200 rounded-xl p-3 flex items-center gap-3">
@@ -977,7 +989,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
 
       {/* UJ-6: Wrong answer — encouraging amber feedback below the exercise */}
       {answered === false && (
-        <div ref={rewardRef} className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-5 text-center space-y-3 animate-fadeIn" role="alert" aria-live="assertive">
+        <div className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-5 text-center space-y-3 animate-fadeIn" role="alert" aria-live="assertive">
           <div className="text-4xl">💪</div>
           <p className="text-lg font-bold text-amber-800">{tr("wrongFeedback")}</p>
           {/* Answer shown inline in the exercise component above — no duplicate needed */}
@@ -995,7 +1007,7 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
 
       {/* Correct answer — keep the celebration animation */}
       {answered === true && (
-        <div ref={rewardRef}>
+        <div>
           <RewardAnimation correct={true} onContinue={handleContinue} />
         </div>
       )}
