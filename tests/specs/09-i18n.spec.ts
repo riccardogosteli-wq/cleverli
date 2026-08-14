@@ -4,15 +4,13 @@
 import { test, expect } from "@playwright/test";
 
 const LANG_PARAMS = [
-  { lang: "de", label: "Deutsch",   homeWord: "Klasse",   upgradeWord: "Klasse" },
-  { lang: "fr", label: "Français",  homeWord: "classe",   upgradeWord: "classe" },
-  { lang: "it", label: "Italiano",  homeWord: "classe",   upgradeWord: "classe" },
-  { lang: "en", label: "English",   homeWord: "grade",    upgradeWord: "grade" },
+  { lang: "de", label: "Deutsch" },
+  { lang: "fr", label: "Français" },
+  { lang: "it", label: "Italiano" },
+  { lang: "en", label: "English" },
 ];
 
-const KEY_PAGES = ["/", "/upgrade", "/parents", "/dashboard"];
-
-for (const { lang, label, homeWord } of LANG_PARAMS) {
+for (const { lang, label } of LANG_PARAMS) {
   test.describe(`Language: ${label} (${lang})`, () => {
     test(`Homepage renders in ${label}`, async ({ page }) => {
       await page.goto(`/?lang=${lang}`);
@@ -70,5 +68,23 @@ test.describe("i18n completeness", () => {
     const body = await page.locator("body").textContent() ?? "";
     // German exercise questions should contain German words
     expect(body).toMatch(/Wie viele|Welche|Was ist|Zahl/i);
+  });
+
+  test("topic info sections follow English language setting", async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem("cleverli_lang", "en"));
+    await page.goto("/learn/1/math/zahlen-1-10");
+
+    await expect(page.getByRole("heading", { name: "Numbers 1–10", exact: true })).toBeVisible({ timeout: 8_000 });
+    await expect(page.getByText("Quick overview")).toBeVisible();
+    await expect(page.getByText("What will my child learn in Numbers 1–10?")).toBeVisible();
+    await expect(page.getByText("Exercises for this topic")).toBeVisible();
+    await expect(page.getByText("Sample exercises")).toBeVisible();
+    await expect(page.getByText("More Maths topics")).toBeVisible();
+
+    const visibleText = await page.locator("body").textContent() ?? "";
+    expect(visibleText).not.toContain("Kurz erklärt");
+    expect(visibleText).not.toContain("Was lernt mein Kind");
+    expect(visibleText).not.toContain("Übungen zum Thema");
+    expect(visibleText).not.toContain("Beispielaufgaben");
   });
 });

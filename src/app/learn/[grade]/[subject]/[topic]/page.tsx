@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { getTopics, getTopicsForSubject } from "@/data/index";
 import TopicClient from "./TopicClient";
-import TopicBreadcrumb from "./TopicBreadcrumb";
+import TopicHeaderClient from "./TopicHeaderClient";
+import TopicSeoSections from "./TopicSeoSections";
 import Link from "next/link";
 import { permanentRedirect } from "next/navigation";
-import { buildTopicDescription, buildTopicLearningAnswer, getExerciseTypeLabel, getRelatedTopics, getSampleExercises, getSubjectSeo, getTopicExerciseTypes } from "@/lib/seoContent";
+import { buildTopicDescription, getRelatedTopics, getSampleExercises, getSubjectSeo } from "@/lib/seoContent";
 import type { Exercise } from "@/types/exercise";
 
 const BASE = "https://www.cleverli.ch";
@@ -64,15 +65,14 @@ export default async function TopicPage({ params }: Props) {
   const subjectName = subjectNames?.de ?? subject; // German for primary SEO (Swiss market)
   const subjectSeo = getSubjectSeo(subject);
   const topicDescription = buildTopicDescription(topic, grade, subject);
-  const topicLearningAnswer = buildTopicLearningAnswer(topic, grade, subject);
   const sampleExercises = getSampleExercises(topic, 4);
-  const sampleExerciseCards: { exercise: Exercise; topicTitle: string }[] = [];
+  const sampleExerciseCards: { exercise: Exercise; topicId: string; topicTitle: string }[] = [];
   const usedSampleTypes = new Set(sampleExerciseCards.map(({ exercise }) => exercise.type));
-  const usedSampleIds = new Set(sampleExerciseCards.map(({ exercise, topicTitle }) => `${topicTitle}:${exercise.id}`));
+  const usedSampleIds = new Set(sampleExerciseCards.map(({ exercise, topicId }) => `${topicId}:${exercise.id}`));
   for (const exercise of sampleExercises) {
-    const sampleKey = `${topic.title}:${exercise.id}`;
+    const sampleKey = `${topic.id}:${exercise.id}`;
     if (usedSampleTypes.has(exercise.type) || usedSampleIds.has(sampleKey)) continue;
-    sampleExerciseCards.push({ exercise, topicTitle: topic.title });
+    sampleExerciseCards.push({ exercise, topicId: topic.id, topicTitle: topic.title });
     usedSampleTypes.add(exercise.type);
     usedSampleIds.add(sampleKey);
   }
@@ -85,9 +85,9 @@ export default async function TopicPage({ params }: Props) {
   for (const subjectTopic of subjectTopics) {
     for (const exercise of getSampleExercises(subjectTopic, 4)) {
       if (sampleExerciseCards.length >= 4) break;
-      const sampleKey = `${subjectTopic.title}:${exercise.id}`;
+      const sampleKey = `${subjectTopic.id}:${exercise.id}`;
       if (usedSampleIds.has(sampleKey) || usedSampleTypes.has(exercise.type)) continue;
-      sampleExerciseCards.push({ exercise, topicTitle: subjectTopic.title });
+      sampleExerciseCards.push({ exercise, topicId: subjectTopic.id, topicTitle: subjectTopic.title });
       usedSampleIds.add(sampleKey);
       usedSampleTypes.add(exercise.type);
     }
@@ -97,14 +97,13 @@ export default async function TopicPage({ params }: Props) {
   for (const subjectTopic of subjectTopics) {
     for (const exercise of getSampleExercises(subjectTopic, 4)) {
       if (sampleExerciseCards.length >= 4) break;
-      const sampleKey = `${subjectTopic.title}:${exercise.id}`;
+      const sampleKey = `${subjectTopic.id}:${exercise.id}`;
       if (usedSampleIds.has(sampleKey)) continue;
-      sampleExerciseCards.push({ exercise, topicTitle: subjectTopic.title });
+      sampleExerciseCards.push({ exercise, topicId: subjectTopic.id, topicTitle: subjectTopic.title });
       usedSampleIds.add(sampleKey);
     }
     if (sampleExerciseCards.length >= 4) break;
   }
-  const exerciseTypes = getTopicExerciseTypes(topic);
   const relatedTopics = getRelatedTopics(topics, topicId, 4);
   const gradeSeoHref = subject === "math" || subject === "german"
     ? `/${subject === "math" ? "mathe" : "deutsch"}-uebungen-${grade}-klasse`
@@ -139,41 +138,12 @@ export default async function TopicPage({ params }: Props) {
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }} />
-      <TopicBreadcrumb
+      <TopicHeaderClient
+        topic={topic}
         grade={parseInt(grade)}
         subject={subject}
-        subjectName={subjectName}
-        topicTitle={topic.title}
+        gradeSeoHref={gradeSeoHref}
       />
-      <div className="flex items-center gap-2">
-        <span className="text-3xl">{topic.emoji}</span>
-        <h1 className="text-xl sm:text-2xl font-bold text-gray-800">{topic.title}</h1>
-      </div>
-
-      {/* SSR content for Google — exercise count + sample questions */}
-      <p className="text-sm text-gray-500">
-        {topic.exercises.length} interaktive Übungen · {subjectName} {grade}. Klasse · Lehrplan 21 Schweiz
-      </p>
-
-      <section className="rounded-2xl border border-green-100 bg-green-50 p-5 shadow-sm">
-        <p className="text-xs font-bold uppercase tracking-widest text-green-700">Kurz erklärt</p>
-        <h2 className="mt-2 text-lg font-black text-gray-900">Was lernt mein Kind bei {topic.title}?</h2>
-        <p className="mt-2 text-sm leading-6 text-gray-700">{topicLearningAnswer}</p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <Link
-            href={gradeSeoHref}
-            className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
-          >
-            {subjectName} {grade}. Klasse
-          </Link>
-          <Link
-            href={`/learn/${grade}/${subject}`}
-            className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
-          >
-            Alle Themen dieser Klasse
-          </Link>
-        </div>
-      </section>
 
       <TopicClient
         topic={topic}
@@ -183,52 +153,13 @@ export default async function TopicPage({ params }: Props) {
         topicIndex={topics.findIndex(t => t.id === topicId)}
       />
 
-      <section className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
-        <p className="text-xs font-bold uppercase tracking-widest text-green-700">Übungen zum Thema</p>
-        <h2 className="mt-2 text-lg font-black text-gray-900">{topic.title} üben</h2>
-        <p className="mt-2 text-sm leading-6 text-gray-600">{topicDescription}</p>
-        {exerciseTypes.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-2">
-            {exerciseTypes.map((type) => (
-              <span key={type} className="rounded-full bg-gray-50 px-3 py-1.5 text-xs font-bold text-gray-600">
-                {type}
-              </span>
-            ))}
-          </div>
-        )}
-        {sampleExerciseCards.length > 0 && (
-          <div className="mt-5">
-            <h3 className="text-sm font-black text-gray-900">Beispielaufgaben</h3>
-            <ul className="mt-3 space-y-2">
-              {sampleExerciseCards.map(({ exercise, topicTitle }) => (
-                <li key={`${topicTitle}-${exercise.id}`} className="rounded-xl border border-gray-100 bg-gray-50 px-3 py-2 text-sm leading-6 text-gray-700">
-                  <span className="mb-1 block text-[11px] font-black uppercase tracking-widest text-green-700">
-                    {topicTitle} · {getExerciseTypeLabel(exercise.type)}
-                  </span>
-                  {exercise.question}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </section>
-
-      {relatedTopics.length > 0 && (
-        <section className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
-          <h2 className="text-sm font-black text-gray-900">Weitere {subjectName}-Themen</h2>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {relatedTopics.map((related) => (
-              <Link
-                key={related.id}
-                href={`/learn/${grade}/${subject}/${related.id}`}
-                className="rounded-full border border-green-100 bg-green-50 px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
-              >
-                {related.title}
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      <TopicSeoSections
+        topic={topic}
+        grade={parseInt(grade)}
+        subject={subject}
+        sampleExerciseCards={sampleExerciseCards}
+        relatedTopics={relatedTopics}
+      />
     </div>
   );
 }

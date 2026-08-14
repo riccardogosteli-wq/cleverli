@@ -1,4 +1,5 @@
 import type { Exercise, Topic } from "@/types/exercise";
+import type { Lang } from "@/lib/i18n";
 
 export const SUBJECT_SEO: Record<string, {
   name: string;
@@ -92,8 +93,98 @@ const exerciseTypeLabels: Record<string, string> = {
   "word-search": "Wortsuche",
 };
 
-export function getExerciseTypeLabel(type: string) {
-  return exerciseTypeLabels[type] ?? type;
+const localizedExerciseTypeLabels: Record<Lang, Record<string, string>> = {
+  de: exerciseTypeLabels,
+  fr: {
+    "multiple-choice": "Choix",
+    "fill-in-blank": "Textes à trous",
+    counting: "Comptage",
+    matching: "Associations",
+    memory: "Memory",
+    "drag-drop": "Glisser-déposer",
+    "number-line": "Ligne numérique",
+    "word-search": "Mots cachés",
+  },
+  it: {
+    "multiple-choice": "Scelta multipla",
+    "fill-in-blank": "Testi con lacune",
+    counting: "Conteggio",
+    matching: "Abbinamenti",
+    memory: "Memory",
+    "drag-drop": "Drag & Drop",
+    "number-line": "Retta numerica",
+    "word-search": "Cerca parole",
+  },
+  en: {
+    "multiple-choice": "Multiple choice",
+    "fill-in-blank": "Fill-in blanks",
+    counting: "Counting tasks",
+    matching: "Matching",
+    memory: "Memory",
+    "drag-drop": "Drag & drop",
+    "number-line": "Number line",
+    "word-search": "Word search",
+  },
+};
+
+const localizedSubjectNames: Record<string, Record<Lang, { name: string; shortName: string }>> = {
+  math: {
+    de: { name: "Mathematik", shortName: "Mathe" },
+    fr: { name: "Mathématiques", shortName: "Maths" },
+    it: { name: "Matematica", shortName: "Matematica" },
+    en: { name: "Maths", shortName: "Maths" },
+  },
+  german: {
+    de: { name: "Deutsch", shortName: "Deutsch" },
+    fr: { name: "Allemand", shortName: "Allemand" },
+    it: { name: "Tedesco", shortName: "Tedesco" },
+    en: { name: "German", shortName: "German" },
+  },
+  science: {
+    de: { name: "NMG", shortName: "NMG" },
+    fr: { name: "Sciences", shortName: "Sciences" },
+    it: { name: "Scienze", shortName: "Scienze" },
+    en: { name: "Science", shortName: "Science" },
+  },
+  english: {
+    de: { name: "Englisch", shortName: "Englisch" },
+    fr: { name: "Anglais", shortName: "Anglais" },
+    it: { name: "Inglese", shortName: "Inglese" },
+    en: { name: "English", shortName: "English" },
+  },
+  french: {
+    de: { name: "Französisch", shortName: "Französisch" },
+    fr: { name: "Français", shortName: "Français" },
+    it: { name: "Francese", shortName: "Francese" },
+    en: { name: "French", shortName: "French" },
+  },
+};
+
+export function getExerciseTypeLabel(type: string, lang: Lang = "de") {
+  return localizedExerciseTypeLabels[lang]?.[type] ?? exerciseTypeLabels[type] ?? type;
+}
+
+export function getLocalizedSubjectName(subject: string, lang: Lang = "de") {
+  return localizedSubjectNames[subject]?.[lang]?.name ?? getSubjectSeo(subject).name;
+}
+
+export function getLocalizedSubjectShortName(subject: string, lang: Lang = "de") {
+  return localizedSubjectNames[subject]?.[lang]?.shortName ?? getSubjectSeo(subject).shortName;
+}
+
+export function getLocalizedGradeName(grade: string | number, lang: Lang = "de") {
+  const n = String(grade);
+  if (lang === "en") return `Grade ${n}`;
+  if (lang === "fr") return n === "1" ? "1re année" : `${n}e année`;
+  if (lang === "it") return `${n}a classe`;
+  return getGradeName(grade);
+}
+
+export function getLocalizedExerciseQuestion(exercise: Exercise, lang: Lang = "de") {
+  if (lang === "en") return exercise.questionEN ?? exercise.question;
+  if (lang === "fr") return exercise.questionFR ?? exercise.question;
+  if (lang === "it") return exercise.questionIT ?? exercise.question;
+  return exercise.question;
 }
 
 export function getSubjectSeo(subject: string) {
@@ -110,8 +201,8 @@ export function getGradeName(grade: string | number) {
   return GRADE_NAMES[String(grade)] ?? `${grade}. Klasse`;
 }
 
-export function getTopicExerciseTypes(topic: Topic) {
-  const labels = Array.from(new Set(topic.exercises.map((exercise) => getExerciseTypeLabel(exercise.type))));
+export function getTopicExerciseTypes(topic: Topic, lang: Lang = "de") {
+  const labels = Array.from(new Set(topic.exercises.map((exercise) => getExerciseTypeLabel(exercise.type, lang))));
   return labels.slice(0, 4);
 }
 
@@ -143,20 +234,44 @@ export function getSampleExercises(topic: Topic, limit = 4): Exercise[] {
   return selected;
 }
 
-export function buildTopicDescription(topic: Topic, grade: string | number, subject: string) {
-  const subjectSeo = getSubjectSeo(subject);
-  const gradeName = getGradeName(grade);
-  const types = getTopicExerciseTypes(topic);
+export function buildTopicDescription(topic: Topic, grade: string | number, subject: string, lang: Lang = "de", topicTitle = topic.title) {
+  const subjectName = getLocalizedSubjectShortName(subject, lang);
+  const gradeName = getLocalizedGradeName(grade, lang);
+  const types = getTopicExerciseTypes(topic, lang);
+  if (lang === "en") {
+    const typeText = types.length ? ` With ${types.join(", ")}.` : "";
+    return `${topic.exercises.length} interactive exercises for ${topicTitle} in ${gradeName}. ${subjectName} aligned with the Swiss LP21 curriculum.${typeText}`;
+  }
+  if (lang === "fr") {
+    const typeText = types.length ? ` Avec ${types.join(", ")}.` : "";
+    return `${topic.exercises.length} exercices interactifs sur ${topicTitle} pour la ${gradeName}. ${subjectName} selon le programme suisse.${typeText}`;
+  }
+  if (lang === "it") {
+    const typeText = types.length ? ` Con ${types.join(", ")}.` : "";
+    return `${topic.exercises.length} esercizi interattivi su ${topicTitle} per la ${gradeName}. ${subjectName} secondo il programma svizzero.${typeText}`;
+  }
   const typeText = types.length ? ` Mit ${types.join(", ")}.` : "";
-  return `${topic.exercises.length} interaktive Übungen zu ${topic.title} für die ${gradeName}. ${subjectSeo.shortName} nach Lehrplan 21 Schweiz.${typeText}`;
+  return `${topic.exercises.length} interaktive Übungen zu ${topicTitle} für die ${gradeName}. ${subjectName} nach Lehrplan 21 Schweiz.${typeText}`;
 }
 
-export function buildTopicLearningAnswer(topic: Topic, grade: string | number, subject: string) {
-  const subjectSeo = getSubjectSeo(subject);
-  const gradeName = getGradeName(grade);
-  const types = getTopicExerciseTypes(topic);
+export function buildTopicLearningAnswer(topic: Topic, grade: string | number, subject: string, lang: Lang = "de", topicTitle = topic.title) {
+  const subjectName = getLocalizedSubjectShortName(subject, lang);
+  const gradeName = getLocalizedGradeName(grade, lang);
+  const types = getTopicExerciseTypes(topic, lang);
+  if (lang === "en") {
+    const typeText = types.length ? ` The exercises use ${types.join(", ")} and give instant feedback.` : " The exercises give instant feedback.";
+    return `${topicTitle} belongs to ${subjectName} in ${gradeName}. Your child practises short, clear tasks that fit Swiss primary school lessons.${typeText} This makes it clear what already works and where more practice helps.`;
+  }
+  if (lang === "fr") {
+    const typeText = types.length ? ` Les exercices utilisent ${types.join(", ")} et donnent un feedback direct.` : " Les exercices donnent un feedback direct.";
+    return `${topicTitle} fait partie des ${subjectName} en ${gradeName}. Ton enfant s'entraîne avec des tâches courtes et claires adaptées à l'école primaire suisse.${typeText} On voit ainsi ce qui fonctionne déjà et où il faut encore s'exercer.`;
+  }
+  if (lang === "it") {
+    const typeText = types.length ? ` Gli esercizi usano ${types.join(", ")} e danno un feedback immediato.` : " Gli esercizi danno un feedback immediato.";
+    return `${topicTitle} fa parte di ${subjectName} nella ${gradeName}. Il tuo bambino si esercita con compiti brevi e chiari, adatti alla scuola primaria svizzera.${typeText} Così si vede cosa funziona già e dove serve ancora esercizio.`;
+  }
   const typeText = types.length ? ` Die Aufgaben nutzen ${types.join(", ")} und geben direkt Rückmeldung.` : " Die Aufgaben geben direkt Rückmeldung.";
-  return `${topic.title} gehört zu ${subjectSeo.shortName} in der ${gradeName}. Dein Kind übt kurze, klare Aufgaben, die zum Schulstoff der Schweizer Primarschule passen.${typeText} So wird sichtbar, was schon klappt und wo noch Übung hilft.`;
+  return `${topicTitle} gehört zu ${subjectName} in der ${gradeName}. Dein Kind übt kurze, klare Aufgaben, die zum Schulstoff der Schweizer Primarschule passen.${typeText} So wird sichtbar, was schon klappt und wo noch Übung hilft.`;
 }
 
 export function getRelatedTopics(topics: Topic[], topicId: string, limit = 4) {

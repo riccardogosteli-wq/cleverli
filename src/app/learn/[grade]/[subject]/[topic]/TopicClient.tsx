@@ -8,6 +8,8 @@ import { getTierProgress } from "@/lib/tierProgress";
 import { useEffect, useState } from "react";
 import { getProgressSubjects } from "@/data";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
+import { getTopicTitle } from "@/data/topicTitles";
+import { useLang } from "@/lib/LangContext";
 
 interface Props { topic: Topic; grade: number; subject: string; allTopics: Topic[]; topicIndex: number; }
 
@@ -27,6 +29,8 @@ function loadProgress(grade: number, subject: string, topic: Topic) {
 
 export default function TopicClient({ topic, grade, subject, allTopics, topicIndex }: Props) {
   const { session, isPremium, loaded, premiumChecked } = useSession();
+  const { lang } = useLang();
+  const topicTitle = getTopicTitle(topic.id, lang, topic.title);
   const [exerciseCounts, setExerciseCounts] = useState<ReturnType<typeof countExercisesByDifficulty> | null>(null);
 
   useEffect(() => {
@@ -86,7 +90,7 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
     <div className="space-y-6">
       <ProgressMapClient
         topicId={topic.id}
-        topicTitle={topic.title}
+        topicTitle={topicTitle}
         grade={grade}
         subject={subject}
         completedExercisesByDifficulty={exerciseCounts.completed}
