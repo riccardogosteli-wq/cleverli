@@ -212,6 +212,25 @@ test.describe("Fix 4 — Daily challenge reads active child's grade", () => {
 // ─── FIX 5: EXERCISE FEEDBACK I18N ───────────────────────────────────────────
 
 test.describe("Fix 5 — Exercise wrong-answer feedback is translated", () => {
+  test("correct answer button does NOT contain hardcoded German when lang=en", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("cleverli_lang", "en");
+      localStorage.removeItem("cleverli_1_math_zahlen-1-10");
+      localStorage.setItem(
+        "cleverli_pool_zahlen-1-10",
+        JSON.stringify(Array.from({ length: 49 }, (_, i) => `z${i + 2}`))
+      );
+    });
+
+    await page.goto("/learn/1/math/zahlen-1-10");
+    await expect(page.getByText("How many apples do you see?")).toBeVisible({ timeout: 8_000 });
+    await page.getByRole("button", { name: "4", exact: true }).click();
+    await page.getByRole("button", { name: /Check/ }).click();
+
+    await expect(page.getByRole("button", { name: /Correct!/ })).toBeVisible({ timeout: 1_000 });
+    await expect(page.getByText("Richtig!")).toHaveCount(0);
+  });
+
   test("wrong answer panel does NOT contain hardcoded German when lang=en", async ({ page }) => {
     // Set English lang
     await page.goto("/dashboard");

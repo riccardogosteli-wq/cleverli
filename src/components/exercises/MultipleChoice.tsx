@@ -122,7 +122,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
           disabled={!selected || submitted}
           className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-lg hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          {submitted ? (selected === answer ? "Richtig! 🎉" : "Weiter →") : tr("checkAnswer")}
+          {submitted ? (selected === answer ? tr("correct") : tr("next")) : tr("checkAnswer")}
         </button>
         <style>{`@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}`}</style>
       </div>
@@ -173,7 +173,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
         disabled={!selected || submitted}
         className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-lg hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        {submitted ? (selected === answer ? "Richtig! 🎉" : "Weiter →") : tr("checkAnswer")}
+        {submitted ? (selected === answer ? tr("correct") : tr("next")) : tr("checkAnswer")}
       </button>
       <style>{`@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}`}</style>
     </div>

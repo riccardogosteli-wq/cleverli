@@ -154,7 +154,7 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
         disabled={submitted || !value.trim()}
         className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-lg hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        {submitted ? (correct ? "Richtig! 🎉" : "Weiter →") : tr("checkAnswer")}
+        {submitted ? (correct ? tr("correct") : tr("next")) : tr("checkAnswer")}
       </button>
 
       {!isMobile && (

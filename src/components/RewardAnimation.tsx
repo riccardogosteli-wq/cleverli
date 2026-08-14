@@ -85,7 +85,7 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
           <>
             <div style={{ animation: "popIn 0.4s cubic-bezier(.34,1.56,.64,1)" }}>
               {/* Scene: Cleverli with magic lightbulb */}
-              <Image src="/images/scenes/cleverli-celebrate-magic.jpg" alt="Richtig!"
+              <Image src="/images/scenes/cleverli-celebrate-magic.jpg" alt={tr("correct")}
                 width={160} height={160} className="rounded-2xl drop-shadow-lg mx-auto" />
             </div>
             <p className="text-xl font-bold text-green-700">{tr("correct")}</p>
