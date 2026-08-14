@@ -198,4 +198,21 @@ test.describe("i18n completeness", () => {
     expect(visibleText).not.toContain("ergibt");
     expect(visibleText).not.toContain("Quale calcolo ergibt");
   });
+
+  test("Italian cleanup does not rewrite expected fill-in answers", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("cleverli_lang", "it");
+      localStorage.setItem("cleverli_2_german_satzzeichen", JSON.stringify({
+        completed: 14,
+        correctIds: ["sz1", "sz2", "sz3", "sz4", "sz5", "sz6", "sz7", "sz8", "sz9", "sz10", "sz11", "sz12", "sz13", "sz14"],
+      }));
+    });
+
+    await page.goto("/learn/2/german/satzzeichen");
+
+    await expect(page.getByText("«Hunde, Katzen___ uccelli sono animali.»")).toBeVisible({ timeout: 8_000 });
+    await page.getByPlaceholder(/Antwort|Risposta|Answer|Réponse/i).fill("und");
+    await page.getByRole("button", { name: /Prüfen|Verifica|Check|Vérifier/i }).click();
+    await expect(page.getByRole("button", { name: /Corretto/i })).toBeVisible();
+  });
 });

@@ -100,8 +100,6 @@ function cleanItalianExercise(exercise: Exercise): Exercise {
     question: cleanItalianText(exercise.question),
     hints: exercise.hints.map(cleanItalianText),
     options: exercise.options?.map(cleanItalianText),
-    answer: cleanItalianText(exercise.answer),
-    altAnswers: exercise.altAnswers?.map(cleanItalianText),
   };
 }
 
