@@ -92,6 +92,52 @@ test.describe("Anonymous exercise access", () => {
   });
 });
 
+test.describe("Learning access while Premium check is slow", () => {
+  test.use(LOGGED_OUT);
+
+  test("cached users are not stuck on the Premium check loader", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("cleverli_session", JSON.stringify({
+        userId: "test-user",
+        email: "alexandra@example.com",
+        name: "Alexandra",
+        premium: false,
+      }));
+      localStorage.setItem("cleverli_supabase_session", JSON.stringify({
+        access_token: "test-token",
+        refresh_token: "test-refresh",
+        token_type: "bearer",
+        expires_at: Math.floor(Date.now() / 1000) + 3600,
+        expires_in: 3600,
+        user: {
+          id: "test-user",
+          aud: "authenticated",
+          role: "authenticated",
+          email: "alexandra@example.com",
+          user_metadata: { name: "Alexandra" },
+          app_metadata: {},
+        },
+      }));
+
+      const originalFetch = window.fetch.bind(window);
+      window.fetch = (input, init) => {
+        const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
+        if (url.includes("supabase.co")) {
+          return new Promise(() => undefined);
+        }
+        return originalFetch(input, init);
+      };
+    });
+
+    await page.goto("/learn/1/math/zahlen-1-10");
+    await expect(page.getByText("Premium-Zugang wird geprüft...")).toBeVisible({ timeout: 2_000 });
+    await expect(page.getByText("Premium-Zugang wird geprüft...")).toHaveCount(0, { timeout: 8_000 });
+
+    const hasQuestion = await page.locator("p, h2, h3").filter({ hasText: /\?|Wie viele|Welche|Schreibe|Wähle/i }).count();
+    expect(hasQuestion).toBeGreaterThan(0);
+  });
+});
+
 test.describe("Homepage CTA flow", () => {
   test.use(LOGGED_OUT);
 

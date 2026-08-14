@@ -14,6 +14,16 @@ export interface Session {
 }
 
 const SESSION_KEY = "cleverli_session"; // localStorage cache key
+const PREMIUM_CHECK_TIMEOUT_MS = 5_000;
+
+function withTimeout<T>(promise: PromiseLike<T>, timeoutMs = PREMIUM_CHECK_TIMEOUT_MS): Promise<T> {
+  return new Promise((resolve, reject) => {
+    const timer = window.setTimeout(() => reject(new Error("Premium check timed out")), timeoutMs);
+    Promise.resolve(promise)
+      .then(resolve, reject)
+      .finally(() => window.clearTimeout(timer));
+  });
+}
 
 // ── Sync read from localStorage — used for instant initial state ─────────────
 function readCachedSession(): Session | null {
@@ -70,14 +80,14 @@ export function useSession() {
     }
 
     // Background verification: confirm Supabase token is still valid and refresh profile data
-    supabase.auth.getSession().then(async ({ data: { session: sbSession } }) => {
+    withTimeout(supabase.auth.getSession()).then(async ({ data: { session: sbSession } }) => {
       try {
         if (sbSession?.user) {
-          const { data: profile } = await supabase!
+          const { data: profile } = await withTimeout(supabase!
             .from("parent_profiles")
             .select("name, premium, premium_until, premium_plan, cancelled")
             .eq("id", sbSession.user.id)
-            .single();
+            .single());
 
           const sess: Session = {
             email: sbSession.user.email ?? "",
@@ -120,11 +130,11 @@ export function useSession() {
       async (event, sbSession) => {
         try {
           if (sbSession?.user) {
-            const { data: profile } = await supabase!
+            const { data: profile } = await withTimeout(supabase!
               .from("parent_profiles")
               .select("name, premium, premium_until, premium_plan, cancelled")
               .eq("id", sbSession.user.id)
-              .single();
+              .single());
 
             const sess: Session = {
               email: sbSession.user.email ?? "",
