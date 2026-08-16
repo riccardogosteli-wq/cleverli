@@ -31,7 +31,7 @@ function formatCurrency(amount: number | null | undefined, currency: string | nu
 }
 
 // ── Welcome email after signup ───────────────────────────────────────────────
-export async function sendWelcomeEmail(to: string, name: string) {
+export async function sendWelcomeEmail(to: string) {
   const resend = getResend();
   if (!resend) return;
   await resend.emails.send({
@@ -47,7 +47,7 @@ export async function sendWelcomeEmail(to: string, name: string) {
     <!-- Header -->
     <div style="background:linear-gradient(135deg,#16a34a,#22c55e);padding:32px 24px;text-align:center;">
       <img src="https://www.cleverli.ch/cleverli-logo.png" alt="Cleverli" width="160" style="margin:0 auto 8px;display:block;" />
-      <h1 style="color:#fff;margin:0;font-size:22px;font-weight:800;">Willkommen, ${name}! 🎉</h1>
+      <h1 style="color:#fff;margin:0;font-size:22px;font-weight:800;">Willkommen bei Cleverli! 🎉</h1>
     </div>
     <!-- Body -->
     <div style="padding:32px 28px;color:#1f2937;">
@@ -75,7 +75,7 @@ export async function sendWelcomeEmail(to: string, name: string) {
         </ul>
       </div>
       <p style="font-size:13px;color:#9ca3af;text-align:center;margin:0;">
-        Die ersten 20 Aufgaben sind kostenlos. <a href="https://www.cleverli.ch/upgrade" style="color:#16a34a;">Premium freischalten →</a>
+        Kostenlos starten, in Ruhe ausprobieren und später entscheiden.
       </p>
     </div>
     <!-- Footer -->
@@ -100,6 +100,9 @@ export async function sendPaymentConfirmationEmail(
 ) {
   const resend = getResend();
   if (!resend) return;
+  const greeting = name?.trim()
+    ? `Hallo ${escapeHtml(name.trim())}, danke für dein Vertrauen in Cleverli!`
+    : "Danke für dein Vertrauen in Cleverli!";
   const planLabel = plan === "yearly" ? "Jahres-Abo (CHF 99/Jahr)" : "Monats-Abo (CHF 9.90/Monat)";
   const planDetails = plan === "yearly"
     ? "Du sparst 2 Monate gegenüber dem Monatsabo."
@@ -122,7 +125,7 @@ export async function sendPaymentConfirmationEmail(
     </div>
     <!-- Body -->
     <div style="padding:32px 28px;color:#1f2937;">
-      <p style="font-size:16px;margin:0 0 16px;">Hallo ${name}, danke für dein Vertrauen in Cleverli!</p>
+      <p style="font-size:16px;margin:0 0 16px;">${greeting}</p>
       <p style="font-size:15px;line-height:1.7;color:#4b5563;margin:0 0 20px;">
         Mit Premium ist die ganze Cleverli-Welt für euch freigeschaltet: mehr als 13’000 interaktive Übungen für die Schweizer Primarschule, abgestimmt auf den Lehrplan 21.
       </p>

@@ -3,9 +3,9 @@ import { sendWelcomeEmail } from "@/lib/email";
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, name } = await req.json();
+    const { email } = await req.json();
     if (!email) return NextResponse.json({ error: "missing email" }, { status: 400 });
-    await sendWelcomeEmail(email, name ?? "");
+    await sendWelcomeEmail(email);
     return NextResponse.json({ ok: true });
   } catch (e) {
     console.error("[send-welcome]", e);
