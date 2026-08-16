@@ -236,4 +236,52 @@ test.describe("i18n completeness", () => {
     await page.getByRole("button", { name: /Prüfen|Verifica|Check|Vérifier/i }).click();
     await expect(page.getByRole("button", { name: /Corretto/i })).toBeVisible();
   });
+
+  test("Italian URL language persists for German rhyming exercise feedback", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.removeItem("cleverli_lang");
+      localStorage.setItem("cleverli_1_german_reime", JSON.stringify({
+        completed: 8,
+        correctIds: ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8"],
+      }));
+    });
+
+    await page.goto("/learn/1/german/reime?lang=it");
+
+    await expect(page.getByText("Regen fa rima con: ___. (-egen)")).toBeVisible({ timeout: 8_000 });
+    await expect(page.getByLabel("Apri menu")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Verifica" })).toBeVisible();
+
+    await page.getByPlaceholder("Inserisci la risposta...").fill("foo");
+    await page.getByRole("button", { name: "Verifica" }).click();
+
+    const visibleText = await page.locator("body").innerText();
+    expect(visibleText).toContain("La risposta corretta è:");
+    expect(visibleText).toContain("Wegen (o Segen)");
+    expect(visibleText).toContain("Esercizio 1 / 7");
+    expect(visibleText).not.toContain("Regen reimt sich auf");
+    expect(visibleText).not.toContain("Die richtige Antwort ist:");
+    expect(visibleText).not.toContain("Tipp anzeigen");
+    expect(visibleText).not.toContain("Zum Inhalt springen");
+    expect(visibleText).not.toContain("1/7 Aufgaben");
+  });
+
+  test("Italian desktop progress suffix is localized", async ({ page }) => {
+    await page.setViewportSize({ width: 1024, height: 768 });
+    await page.addInitScript(() => {
+      localStorage.removeItem("cleverli_lang");
+      localStorage.setItem("cleverli_1_german_reime", JSON.stringify({
+        completed: 8,
+        correctIds: ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8"],
+      }));
+    });
+
+    await page.goto("/learn/1/german/reime?lang=it");
+
+    const visibleText = await page.locator("body").innerText();
+    expect(visibleText).toContain("1/7 Esercizi");
+    expect(visibleText).not.toContain("1/7 Aufgaben");
+    expect(visibleText).not.toContain("Tastenkürzel");
+    expect(visibleText).not.toContain("Zum Inhalt springen");
+  });
 });

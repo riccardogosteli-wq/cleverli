@@ -139,7 +139,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
       )}
       <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center leading-snug px-1">{question}</p>
       {!isMobile && !hasImages && (
-        <p className="text-xs text-center text-gray-400 hidden sm:block">Tastenkürzel: 1 · 2 · 3 · 4</p>
+        <p className="text-xs text-center text-gray-400 hidden sm:block">{tr("keyboardShortcutHint")}</p>
       )}
       <div className="grid grid-cols-1 gap-3">
         {options.map((opt, i) => {

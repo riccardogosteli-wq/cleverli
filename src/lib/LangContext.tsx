@@ -9,6 +9,14 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("de");
 
   useEffect(() => {
+    const queryLang = new URLSearchParams(window.location.search).get("lang") as Lang | null;
+    if (queryLang && ["de","fr","it","en"].includes(queryLang)) {
+      setLangState(queryLang);
+      localStorage.setItem("cleverli_lang", queryLang);
+      document.documentElement.lang = queryLang;
+      return;
+    }
+
     const stored = localStorage.getItem("cleverli_lang") as Lang;
     if (stored && ["de","fr","it","en"].includes(stored)) {
       setLangState(stored);

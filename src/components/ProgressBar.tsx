@@ -1,8 +1,11 @@
 "use client";
 
+import { useLang } from "@/lib/LangContext";
+
 interface Props { current: number; total: number; streak: number; isReviewMode?: boolean; }
 
 export default function ProgressBar({ current, total, streak, isReviewMode }: Props) {
+  const { tr } = useLang();
   // current = exercise number being shown (1-based)
   // Fill based on exercises COMPLETED (current - 1), not the exercise currently shown
   const done = current - 1;
@@ -12,7 +15,7 @@ export default function ProgressBar({ current, total, streak, isReviewMode }: Pr
     <div className="space-y-1 px-1">
       <div className="flex justify-between items-center text-xs text-gray-500">
         <span className="font-medium">
-          {isReviewMode ? "🔄 " : ""}{current}/{total} <span className="text-gray-400 font-normal hidden sm:inline">Aufgaben</span>
+          {isReviewMode ? "🔄 " : ""}{current}/{total} <span className="text-gray-400 font-normal hidden sm:inline">{tr("exerciseCount")}</span>
         </span>
         {streak >= 3 && (
           <span className="text-orange-500 font-bold animate-pulse">

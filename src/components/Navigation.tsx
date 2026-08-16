@@ -222,7 +222,7 @@ export default function Navigation() {
           className="sm:hidden text-gray-700 flex items-center justify-center rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors"
           style={{ width: "44px", height: "44px", fontSize: "22px" }}
           onClick={() => setOpen(o => !o)}
-          aria-label={open ? "Menü schliessen" : "Menü öffnen"}
+          aria-label={open ? tr("closeMenu") : tr("openMenu")}
           aria-expanded={open}
         >
           <span aria-hidden="true">{open ? "✕" : "☰"}</span>
