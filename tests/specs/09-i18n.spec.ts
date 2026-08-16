@@ -314,6 +314,29 @@ test.describe("i18n completeness", () => {
     await expect(page.locator("body")).not.toContainText("Kuh... reimt");
   });
 
+  test("Fill-in accepts the right noun without a leading article", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.removeItem("cleverli_lang");
+      localStorage.setItem("cleverli_1_german_reime", JSON.stringify({
+        completed: 30,
+        correctIds: [
+          "r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9", "r10",
+          "r11", "r12", "r13", "r14", "r15", "r16", "r17", "r18", "r19", "r20",
+          "r21", "r22", "r23", "r24", "r25", "r26", "r27", "r28", "r29", "r30",
+        ],
+      }));
+    });
+
+    await page.goto("/learn/1/german/reime");
+
+    await expect(page.getByText(/Auf der Wiese steht ein Tier/)).toBeVisible({ timeout: 8_000 });
+    await page.getByPlaceholder(/Antwort|Risposta|Answer|Réponse/i).fill("Stier");
+    await page.getByRole("button", { name: /Prüfen|Verifica|Check|Vérifier/i }).click();
+
+    await expect(page.getByRole("button", { name: /Richtig/i })).toBeVisible({ timeout: 2_000 });
+    await expect(page.getByText("Die richtige Antwort ist:")).toHaveCount(0);
+  });
+
   test("Italian desktop progress suffix is localized", async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 768 });
     await page.addInitScript(() => {

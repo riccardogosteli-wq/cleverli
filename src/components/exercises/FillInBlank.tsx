@@ -61,10 +61,30 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
     .replace(/\s+/g, " ")           // re-collapse
     .trim();
 
+  const stripLeadingArticle = (s: string) => {
+    const words = s.split(" ").filter(Boolean);
+    if (words.length < 2) return s;
+
+    const articles = new Set([
+      "der", "die", "das", "den", "dem", "des", "ein", "eine", "einen", "einem", "einer",
+      "a", "an", "the",
+      "le", "la", "les", "un", "une", "des", "du",
+      "il", "lo", "l", "gli", "i", "uno", "una",
+    ]);
+
+    return articles.has(words[0]) ? words.slice(1).join(" ") : s;
+  };
+
   const matchesSingle = (input: string, expected: string) => {
-    if (normalize(input) === normalize(expected)) return true;
-    const inputParts = normalize(input).split(" ").filter(Boolean).sort();
-    const expectedParts = normalize(expected).split(" ").filter(Boolean).sort();
+    const normalizedInput = normalize(input);
+    const normalizedExpected = normalize(expected);
+    if (normalizedInput === normalizedExpected) return true;
+    if (stripLeadingArticle(normalizedInput) === stripLeadingArticle(normalizedExpected)) return true;
+    if (stripLeadingArticle(normalizedInput) === normalizedExpected) return true;
+    if (normalizedInput === stripLeadingArticle(normalizedExpected)) return true;
+
+    const inputParts = normalizedInput.split(" ").filter(Boolean).sort();
+    const expectedParts = normalizedExpected.split(" ").filter(Boolean).sort();
     return inputParts.join(" ") === expectedParts.join(" ");
   };
 
