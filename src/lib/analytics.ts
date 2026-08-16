@@ -1,4 +1,5 @@
 import { trackUserActivity } from "@/lib/userActivityClient";
+import { checkoutAttributionEventParams } from "@/lib/attribution";
 
 export type CheckoutPlan = "monthly" | "yearly";
 type AdsLpCtaType = "paid" | "free";
@@ -56,6 +57,7 @@ export function trackBeginCheckout(plan: CheckoutPlan, source: string) {
     value: PLAN_VALUE[plan],
     plan,
     source,
+    ...checkoutAttributionEventParams(),
     items: [
       {
         item_id: `cleverli_premium_${plan}`,
@@ -75,6 +77,7 @@ export function trackTrialStarted(plan: CheckoutPlan, source: string, trialDays:
     plan,
     source,
     trial_days: trialDays,
+    ...checkoutAttributionEventParams(),
     items: [
       {
         item_id: `cleverli_premium_${plan}`,
@@ -139,6 +142,7 @@ export function trackPurchase(planParam: string | null, transactionIdParam: stri
     currency: "CHF",
     value: PLAN_VALUE[plan],
     plan,
+    ...checkoutAttributionEventParams(),
     items: [
       {
         item_id: `cleverli_premium_${plan}`,

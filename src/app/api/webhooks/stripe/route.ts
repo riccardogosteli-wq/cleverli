@@ -42,6 +42,28 @@ function subscriptionPeriodEnd(subscription: Stripe.Subscription): string | null
   return currentPeriodEnd ? new Date(currentPeriodEnd * 1000).toISOString() : null;
 }
 
+function attributionFromMetadata(metadata: Stripe.Metadata | null | undefined) {
+  if (!metadata) return null;
+  return {
+    first: {
+      channel: metadata.first_channel || null,
+      landingPage: metadata.first_landing_page || null,
+      utmSource: metadata.first_utm_source || null,
+      utmMedium: metadata.first_utm_medium || null,
+      utmCampaign: metadata.first_utm_campaign || null,
+      hasGoogleClickId: metadata.first_google_click_id === "true",
+    },
+    last: {
+      channel: metadata.last_channel || null,
+      landingPage: metadata.last_landing_page || null,
+      utmSource: metadata.last_utm_source || null,
+      utmMedium: metadata.last_utm_medium || null,
+      utmCampaign: metadata.last_utm_campaign || null,
+      hasGoogleClickId: metadata.last_google_click_id === "true",
+    },
+  };
+}
+
 async function updateSupabasePremium(
   userId: string,
   plan: string,
@@ -128,7 +150,14 @@ export async function POST(req: NextRequest) {
       email: customerEmail,
       activityType: trialDays ? "subscription_trial_started" : "subscription_started",
       source: "stripe_webhook",
-      metadata: { plan, trialDays, premiumUntil, stripeCustomerId, stripeSubscriptionId },
+      metadata: {
+        plan,
+        trialDays,
+        premiumUntil,
+        stripeCustomerId,
+        stripeSubscriptionId,
+        attribution: attributionFromMetadata(session.metadata),
+      },
     }).catch(() => {});
 
     // Trial checkouts have no charge today, so avoid a payment-confirmation email.

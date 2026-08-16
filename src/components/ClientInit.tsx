@@ -1,8 +1,16 @@
 "use client";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { captureAttribution } from "@/lib/attribution";
 import { restoreFamilyFromSupabase } from "@/lib/progressSync";
 
 export default function ClientInit() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    captureAttribution();
+  }, [pathname]);
+
   useEffect(() => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/sw.js").catch(() => {});

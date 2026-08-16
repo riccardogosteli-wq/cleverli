@@ -1,6 +1,7 @@
 "use client";
 
 import { trackBeginCheckout, type CheckoutPlan } from "@/lib/analytics";
+import { encodeAttributionForCheckout } from "@/lib/attribution";
 import { getSupabase } from "@/lib/supabase";
 
 const CHECKOUT_PLANS = new Set<CheckoutPlan>(["monthly", "yearly"]);
@@ -88,6 +89,8 @@ export async function startCheckout(plan: CheckoutPlan, source: string, userId?:
 
   const params = new URLSearchParams({ plan, uid: verifiedUserId, source });
   if (options.trialDays) params.set("trial", String(options.trialDays));
+  const attribution = encodeAttributionForCheckout();
+  if (attribution) params.set("attr", attribution);
   const res = await fetch(`/api/checkout?${params.toString()}`, {
     headers: {
       Accept: "application/json",

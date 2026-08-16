@@ -23,6 +23,65 @@ function trialDaysFromRequest(req: NextRequest) {
   return req.nextUrl.searchParams.get("trial") === "7" ? 7 : undefined;
 }
 
+function cleanText(value: unknown, max = 220) {
+  return typeof value === "string" && value.trim() ? value.trim().slice(0, max) : null;
+}
+
+function parseAttribution(req: NextRequest) {
+  const raw = req.nextUrl.searchParams.get("attr");
+  if (!raw || raw.length > 4096) return null;
+
+  try {
+    const parsed = JSON.parse(raw) as {
+      first?: Record<string, unknown> | null;
+      last?: Record<string, unknown> | null;
+    };
+    const cleanTouch = (touch: Record<string, unknown> | null | undefined) => {
+      if (!touch) return null;
+      return {
+        channel: cleanText(touch.channel, 80),
+        landingPage: cleanText(touch.landingPage),
+        path: cleanText(touch.path),
+        referrer: cleanText(touch.referrer, 300),
+        utmSource: cleanText(touch.utm_source, 120),
+        utmMedium: cleanText(touch.utm_medium, 120),
+        utmCampaign: cleanText(touch.utm_campaign),
+        utmTerm: cleanText(touch.utm_term),
+        utmContent: cleanText(touch.utm_content),
+        hasGoogleClickId: Boolean(touch.gclid || touch.gbraid || touch.wbraid),
+        hasMicrosoftClickId: Boolean(touch.msclkid),
+        hasFacebookClickId: Boolean(touch.fbclid),
+        capturedAt: cleanText(touch.capturedAt, 40),
+      };
+    };
+
+    return {
+      first: cleanTouch(parsed.first),
+      last: cleanTouch(parsed.last),
+    };
+  } catch {
+    return null;
+  }
+}
+
+function stripeAttributionMetadata(attribution: ReturnType<typeof parseAttribution>): Record<string, string> {
+  if (!attribution) return {};
+  return {
+    first_channel: attribution.first?.channel ?? "",
+    first_landing_page: attribution.first?.landingPage ?? "",
+    first_utm_source: attribution.first?.utmSource ?? "",
+    first_utm_medium: attribution.first?.utmMedium ?? "",
+    first_utm_campaign: attribution.first?.utmCampaign ?? "",
+    first_google_click_id: attribution.first?.hasGoogleClickId ? "true" : "false",
+    last_channel: attribution.last?.channel ?? "",
+    last_landing_page: attribution.last?.landingPage ?? "",
+    last_utm_source: attribution.last?.utmSource ?? "",
+    last_utm_medium: attribution.last?.utmMedium ?? "",
+    last_utm_campaign: attribution.last?.utmCampaign ?? "",
+    last_google_click_id: attribution.last?.hasGoogleClickId ? "true" : "false",
+  };
+}
+
 async function verifyUserToken(userId: string, req: NextRequest) {
   const token = req.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
   if (!token) return false;
@@ -39,6 +98,8 @@ export async function GET(req: NextRequest) {
   const plan = req.nextUrl.searchParams.get("plan") ?? "monthly";
   const userId = req.nextUrl.searchParams.get("uid") ?? "";
   const trialDays = trialDaysFromRequest(req);
+  const attribution = parseAttribution(req);
+  const attributionMetadata = stripeAttributionMetadata(attribution);
 
   // Guest: redirect to signup
   if (!userId) {
@@ -82,7 +143,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const stripe = getStripe();
-    const session = await stripe.checkout.sessions.create({
+    const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
       locale: "de",
@@ -98,6 +159,7 @@ export async function GET(req: NextRequest) {
         userId,
         plan,
         site: "cleverli.ch",
+        ...attributionMetadata,
         ...(trialDays ? { trial_days: String(trialDays) } : {}),
       },
       subscription_data: {
@@ -106,10 +168,12 @@ export async function GET(req: NextRequest) {
           userId,
           plan,
           site: "cleverli.ch",
+          ...attributionMetadata,
           ...(trialDays ? { trial_days: String(trialDays) } : {}),
         },
       },
-    });
+    };
+    const session = await stripe.checkout.sessions.create(sessionParams);
 
     if (!session.url) {
       Sentry.captureMessage("[checkout] Stripe session missing URL", "error");
@@ -122,7 +186,7 @@ export async function GET(req: NextRequest) {
       activityType: "checkout_started",
       source: req.nextUrl.searchParams.get("source") ?? "checkout_api",
       path: req.nextUrl.pathname,
-      metadata: { plan, trialDays: trialDays ?? null, stripeSessionId: session.id },
+      metadata: { plan, trialDays: trialDays ?? null, stripeSessionId: session.id, attribution },
     }).catch(() => {});
 
     return wantsJson(req)
