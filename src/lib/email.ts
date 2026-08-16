@@ -1,11 +1,33 @@
 import { Resend } from "resend";
 
 const FROM = "Cleverli <hallo@cleverli.ch>";
+const ADMIN_PAYMENT_NOTIFY_EMAIL =
+  process.env.ADMIN_PAYMENT_NOTIFY_EMAIL || "hello@cleverli.ch";
 
 function getResend(): Resend | null {
   const key = process.env.RESEND_API_KEY;
-  if (!key) return null;
+  if (!key) {
+    console.warn("[email] RESEND_API_KEY is not configured; email not sent");
+    return null;
+  }
   return new Resend(key);
+}
+
+function escapeHtml(value: string | null | undefined) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function formatCurrency(amount: number | null | undefined, currency: string | null | undefined) {
+  if (typeof amount !== "number") return "Unbekannter Betrag";
+  return new Intl.NumberFormat("de-CH", {
+    style: "currency",
+    currency: (currency || "CHF").toUpperCase(),
+  }).format(amount / 100);
 }
 
 // ── Welcome email after signup ───────────────────────────────────────────────
@@ -137,6 +159,80 @@ export async function sendPaymentConfirmationEmail(
         <a href="https://www.cleverli.ch/agb" style="color:#9ca3af;">AGB</a> · 
         <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a>
       </p>
+    </div>
+  </div>
+</body>
+</html>`,
+  });
+}
+
+export async function sendAdminPaymentNotificationEmail({
+  customerEmail,
+  plan,
+  amountTotal,
+  currency,
+  stripeCustomerId,
+  stripeSubscriptionId,
+}: {
+  customerEmail: string;
+  plan: "monthly" | "yearly";
+  amountTotal?: number | null;
+  currency?: string | null;
+  stripeCustomerId: string;
+  stripeSubscriptionId: string;
+}) {
+  const resend = getResend();
+  if (!resend) return;
+
+  const planLabel = plan === "yearly" ? "Jahres-Abo" : "Monats-Abo";
+  const amountLabel = formatCurrency(amountTotal, currency);
+  const safeCustomerEmail = escapeHtml(customerEmail || "Unbekannt");
+  const safeStripeCustomerId = escapeHtml(stripeCustomerId);
+  const safeStripeSubscriptionId = escapeHtml(stripeSubscriptionId);
+
+  await resend.emails.send({
+    from: FROM,
+    to: ADMIN_PAYMENT_NOTIFY_EMAIL,
+    subject: `Neue Cleverli Zahlung: ${amountLabel} (${planLabel})`,
+    html: `
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f8fafc;font-family:Arial,Helvetica,sans-serif;color:#1f2937;">
+  <div style="max-width:560px;margin:32px auto;background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;">
+    <div style="background:#16a34a;padding:24px 28px;">
+      <h1 style="color:#ffffff;margin:0;font-size:20px;font-weight:800;">Neue Cleverli Zahlung</h1>
+    </div>
+    <div style="padding:28px;">
+      <p style="font-size:15px;margin:0 0 20px;">Ein Cleverli Premium-Abo wurde bezahlt.</p>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <tr>
+          <td style="padding:10px 0;color:#64748b;border-bottom:1px solid #e5e7eb;">Kunde</td>
+          <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;text-align:right;font-weight:700;">${safeCustomerEmail}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0;color:#64748b;border-bottom:1px solid #e5e7eb;">Plan</td>
+          <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;text-align:right;font-weight:700;">${planLabel}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0;color:#64748b;border-bottom:1px solid #e5e7eb;">Betrag</td>
+          <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;text-align:right;font-weight:700;">${amountLabel}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0;color:#64748b;border-bottom:1px solid #e5e7eb;">Stripe Customer</td>
+          <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;text-align:right;font-family:monospace;font-size:12px;">${safeStripeCustomerId}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0;color:#64748b;">Stripe Abo</td>
+          <td style="padding:10px 0;text-align:right;font-family:monospace;font-size:12px;">${safeStripeSubscriptionId}</td>
+        </tr>
+      </table>
+      <div style="text-align:center;margin:28px 0 0;">
+        <a href="https://dashboard.stripe.com/customers/${safeStripeCustomerId}"
+           style="background:#111827;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:700;display:inline-block;">
+          In Stripe öffnen
+        </a>
+      </div>
     </div>
   </div>
 </body>

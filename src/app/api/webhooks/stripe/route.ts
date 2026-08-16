@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
-import { sendPaymentConfirmationEmail } from "@/lib/email";
+import {
+  sendAdminPaymentNotificationEmail,
+  sendPaymentConfirmationEmail,
+} from "@/lib/email";
 import { logUserActivity } from "@/lib/userActivityServer";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -131,6 +134,16 @@ export async function POST(req: NextRequest) {
     // Trial checkouts have no charge today, so avoid a payment-confirmation email.
     if (customerEmail && !trialDays) {
       sendPaymentConfirmationEmail(customerEmail, "", plan as "monthly" | "yearly").catch(error => {
+        Sentry.captureException(error);
+      });
+      sendAdminPaymentNotificationEmail({
+        customerEmail,
+        plan: plan as "monthly" | "yearly",
+        amountTotal: session.amount_total,
+        currency: session.currency,
+        stripeCustomerId,
+        stripeSubscriptionId,
+      }).catch(error => {
         Sentry.captureException(error);
       });
     }
