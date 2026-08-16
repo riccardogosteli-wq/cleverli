@@ -2,6 +2,7 @@
  * i18n / language switching tests — DE, FR, IT, EN.
  */
 import { test, expect } from "@playwright/test";
+import grade1German from "@/data/grade1/german";
 
 const LANG_PARAMS = [
   { lang: "de", label: "Deutsch" },
@@ -9,6 +10,56 @@ const LANG_PARAMS = [
   { lang: "it", label: "Italiano" },
   { lang: "en", label: "English" },
 ];
+
+const germanRhymingTopic = grade1German.find(topic => topic.id === "reime");
+
+test.describe("German rhyming content QA", () => {
+  test("fill-in prompts accept one clear rhyming word instead of demanding whole answer lists", () => {
+    expect(germanRhymingTopic).toBeTruthy();
+
+    const fillInExercises = germanRhymingTopic!.exercises.filter(exercise => exercise.type === "fill-in-blank");
+    const blockedFragments = [
+      /2-Zeilen-Reim/i,
+      /Schreibe 3 Reimwörter/i,
+      /Finde 2 Reimwörter/i,
+      /\(2 Wörter\)/i,
+      /Mond, der ___ ist/i,
+      /das Kind sich ___/i,
+      /reimt sich auf «Vogel» und «Flügel»/i,
+    ];
+
+    for (const exercise of fillInExercises) {
+      const text = `${exercise.id} ${exercise.question} ${exercise.answer} ${exercise.hints.join(" ")}`;
+      for (const fragment of blockedFragments) {
+        expect(text).not.toMatch(fragment);
+      }
+    }
+  });
+
+  test("known open rhyming prompts expose their alternatives as separate slash variants", () => {
+    expect(germanRhymingTopic).toBeTruthy();
+
+    const expectedVariants: Record<string, string[]> = {
+      r21: ["Zahn", "Kahn", "Jahn"],
+      r26: ["acht", "gemacht", "lacht"],
+      r29: ["Schmerz", "März"],
+      r33: ["Schuh", "Ruh"],
+      r35: ["Tuch", "Fluch", "Besuch"],
+      r36: ["weint", "meint"],
+      r38: ["kaufen", "raufen"],
+      r42: ["rund", "bunt", "gesund"],
+      r44: ["gemacht", "gelacht", "gewacht"],
+      r46: ["klein", "nein", "fein"],
+      r48: ["Schule"],
+    };
+
+    for (const [id, variants] of Object.entries(expectedVariants)) {
+      const exercise = germanRhymingTopic!.exercises.find(item => item.id === id);
+      expect(exercise).toBeTruthy();
+      expect(exercise!.answer.split(/\s*\/\s*/)).toEqual(variants);
+    }
+  });
+});
 
 for (const { lang, label } of LANG_PARAMS) {
   test.describe(`Language: ${label} (${lang})`, () => {
