@@ -106,7 +106,7 @@ export async function sendPaymentConfirmationEmail(
   const planLabel = plan === "yearly" ? "Jahres-Abo (CHF 99/Jahr)" : "Monats-Abo (CHF 9.90/Monat)";
   const planDetails = plan === "yearly"
     ? "Du sparst 2 Monate gegenüber dem Monatsabo."
-    : "Jederzeit kündbar, nächste Abbuchung in 30 Tagen.";
+    : "Dein Monatsabo ist aktiv. Die nächste Abbuchung erfolgt in 30 Tagen.";
 
   await resend.emails.send({
     from: FROM,
@@ -154,10 +154,6 @@ export async function sendPaymentConfirmationEmail(
           Jetzt lernen 🎒
         </a>
       </div>
-      <p style="font-size:12px;color:#9ca3af;text-align:center;margin:0;">
-        Kündigung jederzeit über <a href="https://www.cleverli.ch/account" style="color:#16a34a;">Mein Konto</a>.
-        Dein Zugang läuft bis zum Ende der bezahlten Laufzeit.
-      </p>
     </div>
     <!-- Footer -->
     <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
