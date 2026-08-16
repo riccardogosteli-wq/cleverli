@@ -7,7 +7,7 @@ function configureWebPush() {
 
   if (!publicKey || !privateKey) return false;
 
-  webpush.setVapidDetails("mailto:hallo@cleverli.ch", publicKey, privateKey);
+  webpush.setVapidDetails("mailto:hello@cleverli.ch", publicKey, privateKey);
   return true;
 }
 

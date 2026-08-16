@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const FROM = "Cleverli <hallo@cleverli.ch>";
+const FROM = "Cleverli <hello@cleverli.ch>";
 const ADMIN_PAYMENT_NOTIFY_EMAIL =
   process.env.ADMIN_PAYMENT_NOTIFY_EMAIL || "hello@cleverli.ch";
 

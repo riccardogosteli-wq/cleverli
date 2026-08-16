@@ -10,7 +10,7 @@ function configureServices() {
 
   if (!publicKey || !privateKey || !supabaseUrl || !serviceKey) return null;
 
-  webpush.setVapidDetails("mailto:hallo@cleverli.ch", publicKey, privateKey);
+  webpush.setVapidDetails("mailto:hello@cleverli.ch", publicKey, privateKey);
   return createClient(supabaseUrl, serviceKey);
 }
 
