@@ -40,6 +40,7 @@ test.describe("German rhyming content QA", () => {
     expect(germanRhymingTopic).toBeTruthy();
 
     const expectedVariants: Record<string, string[]> = {
+      r9: ["Wegen", "Segen"],
       r21: ["Zahn", "Kahn", "Jahn"],
       r26: ["acht", "gemacht", "lacht"],
       r29: ["Schmerz", "März"],
@@ -47,6 +48,7 @@ test.describe("German rhyming content QA", () => {
       r35: ["Tuch", "Fluch", "Besuch"],
       r36: ["weint", "meint"],
       r38: ["kaufen", "raufen"],
+      r40: ["Segen", "Wegen"],
       r42: ["rund", "bunt", "gesund"],
       r44: ["gemacht", "gelacht", "gewacht"],
       r46: ["klein", "nein", "fein"],
@@ -57,6 +59,19 @@ test.describe("German rhyming content QA", () => {
       const exercise = germanRhymingTopic!.exercises.find(item => item.id === id);
       expect(exercise).toBeTruthy();
       expect(exercise!.answer.split(/\s*\/\s*/)).toEqual(variants);
+    }
+  });
+
+  test("multi-answer fill-in rhyming prompts ask for one word, not a whole sentence answer", () => {
+    expect(germanRhymingTopic).toBeTruthy();
+
+    const multiAnswerFillIns = germanRhymingTopic!.exercises.filter(exercise =>
+      exercise.type === "fill-in-blank" && /\s\/\s|\((?:oder|or|o|ou)\s+/i.test(exercise.answer)
+    );
+
+    for (const exercise of multiAnswerFillIns) {
+      expect(exercise.question, exercise.id).toMatch(/Schreibe ein Reimwort|Was reimt sich|Regen reimt sich auf/i);
+      expect(exercise.question, exercise.id).not.toMatch(/steht auf dem|frisst Gras|Tätigkeit|2-Zeilen|3 Reimwörter/i);
     }
   });
 });

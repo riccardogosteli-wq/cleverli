@@ -106,6 +106,21 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
     return [...variants];
   };
 
+  const displayAnswerVariants = (expected: string) => {
+    const variants = answerVariants(expected);
+    const hasCompositeAnswer = expected.includes("/") || /\((?:oder|or|o|ou)\s+/i.test(expected);
+
+    const visible = variants
+      .filter(variant => !hasCompositeAnswer || normalize(variant) !== normalize(expected))
+      .map(variant => variant.trim())
+      .filter(Boolean);
+
+    return [...new Set(visible)];
+  };
+
+  const visibleAnswerVariants = displayAnswerVariants(answer);
+  const hasMultipleVisibleAnswers = visibleAnswerVariants.length > 1;
+
   const matchesOpenEndedNumberList = (input: string, prompt: string) => {
     const smallerThanMatch = prompt.match(/schreibe\s+drei\s+zahlen\s+kleiner\s+als\s+(\d+)/i);
     if (!smallerThanMatch) return false;
@@ -184,7 +199,10 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
 
       {wrong && (
         <div className="text-center text-sm text-gray-500 bg-orange-50 border border-orange-200 rounded-xl px-4 py-2">
-          {tr("correctAnswer")} <span className="font-bold text-orange-700">{answer}</span>
+          {hasMultipleVisibleAnswers ? tr("correctAnswers") : tr("correctAnswer")}{" "}
+          <span className="font-bold text-orange-700">
+            {hasMultipleVisibleAnswers ? visibleAnswerVariants.join(" · ") : answer}
+          </span>
         </div>
       )}
 
