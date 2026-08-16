@@ -289,6 +289,31 @@ test.describe("i18n completeness", () => {
     await expect(page.getByText("reimt sich su")).toHaveCount(0);
   });
 
+  test("Italian grass sentence requires the semantic fill-in answer, not any rhyme", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.removeItem("cleverli_lang");
+      localStorage.setItem("cleverli_1_german_reime", JSON.stringify({
+        completed: 23,
+        correctIds: [
+          "r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9", "r10",
+          "r11", "r12", "r13", "r14", "r15", "r16", "r17", "r18", "r19", "r20",
+          "r21", "r22", "r23",
+        ],
+      }));
+    });
+
+    await page.goto("/learn/1/german/reime?lang=it");
+
+    await expect(page.getByText("«Una ___ mangia erba» — la parola fa rima con «Kuh».")).toBeVisible({ timeout: 8_000 });
+    await page.getByPlaceholder("Inserisci la risposta...").fill("Schuh");
+    await page.getByRole("button", { name: "Verifica" }).click();
+
+    await expect(page.getByText("La risposta corretta è:")).toBeVisible({ timeout: 2_000 });
+    await expect(page.getByText("Kuh", { exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: /Avanti/i })).toBeVisible();
+    await expect(page.locator("body")).not.toContainText("Kuh... reimt");
+  });
+
   test("Italian desktop progress suffix is localized", async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 768 });
     await page.addInitScript(() => {
