@@ -108,7 +108,7 @@ export const t: Record<Lang, Record<string, string>> = {
     footerAgb: "AGB",
     footerKontakt: "Kontakt",
     footerCopy: "© 2026 Cleverli",
-    testimonial1: "Meine Tochter übt jeden Abend freiwillig Mathe — das hätte ich nie gedacht! Cleverli macht Lernen wirklich Spass.",
+    testimonial1: "Meine Tochter übt jeden Abend freiwillig Mathe — das hätte ich nie gedacht! Mit Cleverli macht Lernen wirklich Spass.",
     testimonial2: "Endlich eine Schweizer Plattform, die auf den Lehrplan 21 abgestimmt ist. Mein Sohn ist in der 2. Klasse und liebt die Aufgaben.",
     testimonial3: "Super intuitiv, auch für jüngere Kinder. Die Hinweise helfen, ohne einfach die Antwort zu verraten.",
     faqQ1: "Kann ich Cleverli kostenlos ausprobieren?",
