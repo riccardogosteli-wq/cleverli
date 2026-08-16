@@ -123,6 +123,9 @@ export async function sendPaymentConfirmationEmail(
     <!-- Body -->
     <div style="padding:32px 28px;color:#1f2937;">
       <p style="font-size:16px;margin:0 0 16px;">Hallo ${name}, danke für dein Vertrauen in Cleverli!</p>
+      <p style="font-size:15px;line-height:1.7;color:#4b5563;margin:0 0 20px;">
+        Mit Premium ist die ganze Cleverli-Welt für euch freigeschaltet: mehr als 13’000 interaktive Übungen für die Schweizer Primarschule, abgestimmt auf den Lehrplan 21.
+      </p>
       <!-- Plan info -->
       <div style="background:#fffbeb;border:2px solid #fbbf24;border-radius:12px;padding:16px 20px;margin:0 0 24px;">
         <p style="font-size:13px;font-weight:700;color:#92400e;margin:0 0 4px;">📋 Dein Abo:</p>
@@ -133,8 +136,9 @@ export async function sendPaymentConfirmationEmail(
       <div style="background:#f0fdf4;border-radius:12px;padding:16px 20px;margin:0 0 24px;">
         <p style="font-size:13px;margin:0 0 8px;font-weight:700;color:#15803d;">✅ Jetzt freigeschaltet:</p>
         <ul style="font-size:13px;color:#374151;margin:0;padding-left:18px;line-height:1.8;">
-          <li>🚀 Alle 50 Aufgaben pro Thema</li>
-          <li>📚 Alle Klassen 1–6 (Mathe, Deutsch, NMG)</li>
+          <li>🚀 Mehr als 13’000 interaktive Übungen</li>
+          <li>📚 Mathe, Deutsch und NMG für Klasse 1–6</li>
+          <li>🇨🇭 Inhalte passend zur Schweizer Primarschule und zum Lehrplan 21</li>
           <li>🎁 Belohnungs-System für Kinder</li>
           <li>👨‍👩‍👧‍👦 Bis zu 3 Kinderprofile</li>
           <li>📊 Elternbereich mit Statistiken</li>

@@ -69,7 +69,8 @@ export default function SuccessClient() {
   }, [isPremium, pollCount, loaded, session]);
 
   const features = [
-    t("Alle 50 Aufgaben pro Thema freigeschaltet", "Tous les 50 exercices par thème débloqués", "Tutti i 50 esercizi per argomento sbloccati", "All 50 exercises per topic unlocked"),
+    t("Mehr als 13’000 interaktive Übungen nach Lehrplan 21", "Plus de 13 000 exercices interactifs pour l'école primaire suisse", "Oltre 13.000 esercizi interattivi per la scuola primaria svizzera", "Over 13,000 interactive exercises for Swiss primary school"),
+    t("Mathe, Deutsch und NMG für Klasse 1–6", "Maths, français et environnement pour les années 1–6", "Matematica, tedesco e scienze per le classi 1–6", "Maths, German and science for grades 1–6"),
     t("Alle Stufen: Leicht · Mittel · Schwer", "Tous les niveaux : Facile · Moyen · Difficile", "Tutti i livelli: Facile · Medio · Difficile", "All difficulty tiers: Easy · Medium · Hard"),
     t("Detaillierte Lernfortschritte", "Suivi détaillé des progrès", "Progressi di apprendimento dettagliati", "Detailed learning progress"),
     t("Elternbereich mit Statistiken", "Espace parents avec statistiques", "Area genitori con statistiche", "Parent area with statistics"),
