@@ -110,6 +110,18 @@ type AdsAbPageStats = {
   checkouts: number;
 };
 
+type CancellationFeedbackStats = {
+  total: number;
+  withComment: number;
+  byReason: Array<{
+    reason: string;
+    label: string;
+    count: number;
+    comments: number;
+  }>;
+  recent: ActivityEventRow[];
+};
+
 const ACTIVITY_TYPES = [
   "login",
   "signup",
@@ -694,6 +706,54 @@ function buildAdsAbStats(events: ActivityEventRow[]) {
   };
 }
 
+const CANCELLATION_REASON_LABELS: Record<string, string> = {
+  too_expensive: "Zu teuer",
+  child_not_using: "Kind nutzt es zu wenig",
+  missing_content: "Passende Aufgaben fehlen",
+  level_mismatch: "Niveau passt nicht",
+  technical_issue: "Technisches Problem",
+  pause_or_alternative: "Pause oder andere Lösung",
+  found_alternative: "Nutzt Alternative",
+  temporary_break: "Pause",
+  other: "Anderer Grund",
+  not_provided: "Kein Grund angegeben",
+};
+
+function cancellationReasonFromEvent(event: ActivityEventRow) {
+  const reason = cleanString(event.metadata?.cancellationReason) || "not_provided";
+  return CANCELLATION_REASON_LABELS[reason] ? reason : "other";
+}
+
+function cancellationCommentFromEvent(event: ActivityEventRow) {
+  return cleanString(event.metadata?.cancellationComment);
+}
+
+function buildCancellationFeedbackStats(events: ActivityEventRow[]): CancellationFeedbackStats {
+  const cancellations = events.filter(event => event.activity_type === "subscription_cancel_requested");
+  const byReasonMap = new Map<string, { reason: string; label: string; count: number; comments: number }>();
+
+  for (const event of cancellations) {
+    const reason = cancellationReasonFromEvent(event);
+    const comment = cancellationCommentFromEvent(event);
+    const current = byReasonMap.get(reason) ?? {
+      reason,
+      label: CANCELLATION_REASON_LABELS[reason],
+      count: 0,
+      comments: 0,
+    };
+    current.count += 1;
+    if (comment) current.comments += 1;
+    byReasonMap.set(reason, current);
+  }
+
+  return {
+    total: cancellations.length,
+    withComment: cancellations.filter(event => Boolean(cancellationCommentFromEvent(event))).length,
+    byReason: [...byReasonMap.values()].sort((a, b) => b.count - a.count),
+    recent: cancellations.slice(0, 20),
+  };
+}
+
 function LoginForm({ hasError }: { hasError: boolean }) {
   return (
     <main className="min-h-screen bg-gray-950 text-white flex items-center justify-center px-4">
@@ -770,6 +830,7 @@ export default async function InternalLogDashboard({
   ].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()).slice(0, 1000);
   const stats = buildStats(events);
   const adsAbStats = buildAdsAbStats(adsAbEventsRaw);
+  const cancellationStats = buildCancellationFeedbackStats(adsAbEventsRaw);
   const seedAuthSummaries = activityFilters.activity === "all" && !activityFilters.from && !activityFilters.to;
   const activitySummaries = buildActivitySummaries(activityEvents, seedAuthSummaries ? authUsers : []);
   const authById = new Map(authUsers.map(user => [user.id, user]));
@@ -800,6 +861,73 @@ export default async function InternalLogDashboard({
           <Stat label="Übungs-Events 7 Tage" value={stats.total7d} />
           <Stat label="Anonyme Sessions 7 Tage" value={stats.uniqueSessions} />
           <Stat label="Flags" value={stats.flagged.length} />
+        </section>
+
+        <section className="rounded-lg border border-gray-200 bg-white p-4">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-sm font-black uppercase tracking-wide">Kündigungsfeedback</h2>
+            <p className="text-sm text-gray-500">
+              Gründe und Kommentare aus dem Kündigungsdialog. Nutzt den Datumsfilter, aber ignoriert User-/Aktivitätsfilter.
+            </p>
+          </div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <Stat label="Kündigungen" value={cancellationStats.total} />
+            <Stat label="Mit Kommentar" value={cancellationStats.withComment} />
+            <Stat label="Kommentarquote" value={`${pct(cancellationStats.withComment, cancellationStats.total)}%`} />
+          </div>
+
+          <div className="mt-5 grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
+            <div className="space-y-3">
+              <h3 className="text-xs font-black uppercase tracking-wide text-gray-500">Gründe</h3>
+              {cancellationStats.byReason.map(reason => (
+                <div key={reason.reason} className="rounded-lg border border-gray-100 bg-gray-50 p-3">
+                  <div className="flex items-center justify-between gap-3 text-sm">
+                    <span className="font-bold text-gray-800">{reason.label}</span>
+                    <span className="text-xs font-bold text-gray-500">{reason.count} · {pct(reason.count, cancellationStats.total)}%</span>
+                  </div>
+                  <div className="mt-2 h-2 overflow-hidden rounded-full bg-white">
+                    <div className="h-full rounded-full bg-amber-500" style={{ width: `${pct(reason.count, cancellationStats.total)}%` }} />
+                  </div>
+                  {reason.comments > 0 && (
+                    <p className="mt-2 text-xs text-gray-500">{reason.comments} mit Kommentar</p>
+                  )}
+                </div>
+              ))}
+              {cancellationStats.byReason.length === 0 && (
+                <p className="text-sm text-gray-500">Noch kein Kündigungsfeedback im Zeitraum.</p>
+              )}
+            </div>
+
+            <div className="max-h-[360px] overflow-auto">
+              <h3 className="sticky top-0 mb-2 bg-white pb-2 text-xs font-black uppercase tracking-wide text-gray-500">Aktuelle Kündigungen</h3>
+              <table className="w-full min-w-[760px] text-left text-sm">
+                <thead className="sticky top-7 bg-white text-xs uppercase text-gray-500">
+                  <tr>
+                    <th className="py-2">Zeit</th>
+                    <th>User</th>
+                    <th>Grund</th>
+                    <th>Kommentar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cancellationStats.recent.map((event, index) => (
+                    <tr key={`${event.created_at}-${index}`} className="border-t border-gray-100">
+                      <td className="whitespace-nowrap py-2">{dateTimeLabel(event.created_at)}</td>
+                      <td className="max-w-[190px] truncate font-semibold">{event.email ?? event.user_id ?? "-"}</td>
+                      <td>{CANCELLATION_REASON_LABELS[cancellationReasonFromEvent(event)]}</td>
+                      <td className="max-w-[300px] truncate text-gray-500">{cancellationCommentFromEvent(event) || "-"}</td>
+                    </tr>
+                  ))}
+                  {cancellationStats.recent.length === 0 && (
+                    <tr>
+                      <td colSpan={4} className="py-4 text-gray-500">Keine Kündigungen im Zeitraum.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
 
         <section className="rounded-lg border border-gray-200 bg-white p-4">

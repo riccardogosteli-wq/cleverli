@@ -11,6 +11,28 @@ function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!);
 }
 
+const CANCELLATION_REASONS: Record<string, string> = {
+  too_expensive: "Zu teuer",
+  child_not_using: "Kind nutzt es zu wenig",
+  missing_content: "Passende Aufgaben fehlen",
+  level_mismatch: "Niveau passt nicht",
+  technical_issue: "Technisches Problem",
+  pause_or_alternative: "Pause oder andere Lösung",
+  found_alternative: "Nutzt Alternative",
+  temporary_break: "Pause",
+  other: "Anderer Grund",
+  not_provided: "Kein Grund angegeben",
+};
+
+function cleanCancellationReason(value: unknown) {
+  const reason = typeof value === "string" ? value : "not_provided";
+  return CANCELLATION_REASONS[reason] ? reason : "other";
+}
+
+function cleanCancellationComment(value: unknown) {
+  return typeof value === "string" ? value.trim().slice(0, 500) : "";
+}
+
 async function verifyUserToken(userId: string, req: NextRequest) {
   const token = req.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
   if (!token) return false;
@@ -22,9 +44,13 @@ async function verifyUserToken(userId: string, req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   let userId: string;
+  let cancellationReason = "not_provided";
+  let cancellationComment = "";
   try {
     const body = await req.json();
     userId = body.userId;
+    cancellationReason = cleanCancellationReason(body.cancellationReason);
+    cancellationComment = cleanCancellationComment(body.cancellationComment);
     if (!userId) throw new Error("no userId");
   } catch {
     return NextResponse.json({ error: "bad_request" }, { status: 400 });
@@ -39,15 +65,17 @@ export async function POST(req: NextRequest) {
   const stripe = getStripe();
   let cancelledCount = 0;
   let cancelError = "";
+  let customerEmail: string | null = null;
 
   // ── Prefer the stored subscription ID; fall back to metadata search ────────
   try {
     const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
     const { data: profile } = await supabase
       .from("parent_profiles")
-      .select("stripe_subscription_id")
+      .select("stripe_subscription_id, email")
       .eq("id", userId)
       .single();
+    customerEmail = profile?.email ?? null;
 
     if (profile?.stripe_subscription_id) {
       await stripe.subscriptions.update(profile.stripe_subscription_id, { cancel_at_period_end: true });
@@ -98,9 +126,17 @@ export async function POST(req: NextRequest) {
 
   logUserActivity({
     userId,
+    email: customerEmail,
     activityType: "subscription_cancel_requested",
     path: req.nextUrl.pathname,
-    metadata: { cancelledCount, warning: cancelError || null },
+    metadata: {
+      cancelledCount,
+      warning: cancelError || null,
+      cancellationReason,
+      cancellationReasonLabel: CANCELLATION_REASONS[cancellationReason],
+      cancellationComment: cancellationComment || null,
+      hasCancellationComment: Boolean(cancellationComment),
+    },
   }).catch(() => {});
 
   if (cancelError && cancelledCount === 0) {

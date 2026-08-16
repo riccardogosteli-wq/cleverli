@@ -21,9 +21,42 @@ export default function AccountPage() {
   // Billing
   const [cancelState, setCancelState] = useState<"idle" | "confirm" | "loading" | "done" | "error">("idle");
   const [cancelError, setCancelError] = useState("");
+  const [cancelReason, setCancelReason] = useState("");
+  const [cancelComment, setCancelComment] = useState("");
 
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
+
+  const cancellationReasons = [
+    {
+      value: "too_expensive",
+      label: t("Zu teuer", "Trop cher", "Troppo caro", "Too expensive"),
+    },
+    {
+      value: "child_not_using",
+      label: t("Mein Kind nutzt es zu wenig", "Mon enfant ne l'utilise pas assez", "Mio figlio lo usa troppo poco", "My child is not using it enough"),
+    },
+    {
+      value: "missing_content",
+      label: t("Ich finde nicht die passenden Aufgaben", "Je ne trouve pas les bons exercices", "Non trovo gli esercizi adatti", "I cannot find the right exercises"),
+    },
+    {
+      value: "level_mismatch",
+      label: t("Die Aufgaben passen nicht zum Niveau", "Les exercices ne correspondent pas au niveau", "Gli esercizi non sono del livello giusto", "The exercises do not fit the level"),
+    },
+    {
+      value: "technical_issue",
+      label: t("Technisches Problem", "Problème technique", "Problema tecnico", "Technical issue"),
+    },
+    {
+      value: "pause_or_alternative",
+      label: t("Pause oder andere Lösung", "Pause ou autre solution", "Pausa o altra soluzione", "Break or another solution"),
+    },
+    {
+      value: "other",
+      label: t("Anderer Grund", "Autre raison", "Altro motivo", "Other reason"),
+    },
+  ];
 
   const handleLogout = async () => {
     const supabase = getSupabase();
@@ -77,7 +110,11 @@ export default function AccountPage() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ userId: session?.userId }),
+        body: JSON.stringify({
+          userId: session?.userId,
+          cancellationReason: cancelReason || "not_provided",
+          cancellationComment: cancelComment,
+        }),
       });
       const data = await res.json();
       if (!res.ok || data.error) throw new Error(data.error ?? "unknown");
@@ -174,6 +211,10 @@ export default function AccountPage() {
               <div className="bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-600 text-center">
                 ✅ {t("Gekündigt. Zugang bis Ablauf der Laufzeit aktiv.", "Résilié. Accès actif jusqu'à la fin de la période.", "Annullato. Accesso attivo fino alla fine del periodo.", "Cancelled. Access remains active until the period ends.")}
               </div>
+            ) : cancelState === "loading" ? (
+              <div className="bg-gray-50 rounded-xl px-4 py-3 text-sm font-semibold text-gray-600 text-center">
+                {t("Kündigung wird verarbeitet …", "Résiliation en cours …", "Annullamento in corso …", "Cancelling …")}
+              </div>
             ) : cancelState === "error" ? (
               <div className="space-y-2">
                 <div className="bg-red-50 text-red-600 text-xs rounded-xl px-3 py-2">
@@ -184,20 +225,56 @@ export default function AccountPage() {
                 </button>
               </div>
             ) : cancelState === "confirm" ? (
-              <div className="space-y-2">
-                <p className="text-sm text-gray-600 text-center">
-                  {t("Abo wirklich kündigen? Dein Zugang läuft bis zum Ende der bezahlten Laufzeit weiter.",
-                     "Vraiment résilier ? L'accès reste actif jusqu'à la fin de la période payée.",
-                     "Vuoi davvero annullare? L'accesso rimane attivo fino alla fine del periodo pagato.",
-                     "Really cancel? Your access remains active until the end of the paid period.")}
-                </p>
+              <div className="space-y-4 rounded-2xl border border-amber-100 bg-amber-50/60 p-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-black text-gray-800">
+                    {t("Kurz bevor du kündigst:", "Juste avant de résilier :", "Prima di annullare:", "Before you cancel:")}
+                  </p>
+                  <p className="text-xs leading-5 text-gray-600">
+                    {t("Was ist der wichtigste Grund? Dein Zugang läuft bis zum Ende der bezahlten Laufzeit weiter.",
+                       "Quelle est la raison principale ? L'accès reste actif jusqu'à la fin de la période payée.",
+                       "Qual è il motivo principale? L'accesso rimane attivo fino alla fine del periodo pagato.",
+                       "What is the main reason? Your access remains active until the end of the paid period.")}
+                  </p>
+                </div>
+
+                <div className="grid gap-1.5">
+                  {cancellationReasons.map(reason => (
+                    <button
+                      key={reason.value}
+                      type="button"
+                      onClick={() => setCancelReason(reason.value)}
+                      className={`w-full rounded-xl border px-3 py-1.5 text-left text-sm font-semibold transition-colors ${
+                        cancelReason === reason.value
+                          ? "border-green-500 bg-white text-green-800 shadow-sm"
+                          : "border-gray-200 bg-white/80 text-gray-600 hover:border-green-200 hover:text-gray-800"
+                      }`}
+                    >
+                      {reason.label}
+                    </button>
+                  ))}
+                </div>
+
+                {cancelReason && (
+                  <textarea
+                    value={cancelComment}
+                    onChange={event => setCancelComment(event.target.value.slice(0, 500))}
+                    rows={2}
+                    placeholder={t("Optional: Was hätten wir besser machen können?",
+                                    "Optionnel : qu'aurions-nous pu améliorer ?",
+                                    "Opzionale: cosa avremmo potuto fare meglio?",
+                                    "Optional: what could we have done better?")}
+                    className="w-full resize-none rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 outline-none focus:border-green-400"
+                  />
+                )}
+
                 <button onClick={handleCancel} disabled={false}
                   className="w-full bg-red-500 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-red-600 disabled:opacity-60">
-                  {t("Ja, kündigen", "Oui, résilier", "Sì, annulla", "Yes, cancel")}
+                  {t("Kündigung abschliessen", "Confirmer la résiliation", "Conferma annullamento", "Confirm cancellation")}
                 </button>
                 <button onClick={() => setCancelState("idle")}
                   className="w-full border-2 border-gray-200 text-gray-500 py-2 rounded-xl text-sm">
-                  {t("Abbrechen", "Annuler", "Annulla", "Keep subscription")}
+                  {t("Doch behalten", "Garder l'abonnement", "Mantieni abbonamento", "Keep subscription")}
                 </button>
               </div>
             ) : (
