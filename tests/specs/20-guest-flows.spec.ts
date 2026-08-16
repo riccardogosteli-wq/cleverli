@@ -136,6 +136,50 @@ test.describe("Learning access while Premium check is slow", () => {
     const hasQuestion = await page.locator("p, h2, h3").filter({ hasText: /\?|Wie viele|Welche|Schreibe|Wähle/i }).count();
     expect(hasQuestion).toBeGreaterThan(0);
   });
+
+  test("cached active Premium users keep learning when Supabase times out", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("cleverli_session", JSON.stringify({
+        userId: "premium-user",
+        email: "premium@example.com",
+        name: "Premium Parent",
+        premium: true,
+        premiumUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
+        premiumPlan: "monthly",
+      }));
+      localStorage.setItem("cleverli_supabase_session", JSON.stringify({
+        access_token: "test-token",
+        refresh_token: "test-refresh",
+        token_type: "bearer",
+        expires_at: Math.floor(Date.now() / 1000) + 3600,
+        expires_in: 3600,
+        user: {
+          id: "premium-user",
+          aud: "authenticated",
+          role: "authenticated",
+          email: "premium@example.com",
+          user_metadata: { name: "Premium Parent" },
+          app_metadata: {},
+        },
+      }));
+      localStorage.setItem("cleverli_free_exercises_premium-user", "20");
+
+      const originalFetch = window.fetch.bind(window);
+      window.fetch = (input, init) => {
+        const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
+        if (url.includes("supabase.co")) {
+          return new Promise(() => undefined);
+        }
+        return originalFetch(input, init);
+      };
+    });
+
+    await page.goto("/learn/1/math/zahlen-1-10");
+    await expect(page.getByText("Weiter mit Premium")).toHaveCount(0, { timeout: 8_000 });
+
+    const hasQuestion = await page.locator("p, h2, h3").filter({ hasText: /\?|Wie viele|Welche|Schreibe|Wähle/i }).count();
+    expect(hasQuestion).toBeGreaterThan(0);
+  });
 });
 
 test.describe("Homepage CTA flow", () => {

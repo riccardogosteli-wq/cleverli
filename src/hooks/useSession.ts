@@ -34,6 +34,13 @@ function readCachedSession(): Session | null {
   } catch { return null; }
 }
 
+function isSessionPremiumActive(session: Session | null) {
+  if (!session?.premium) return false;
+  if (!session.premiumUntil) return true;
+  const premiumUntil = new Date(session.premiumUntil);
+  return !Number.isNaN(premiumUntil.getTime()) && premiumUntil > new Date();
+}
+
 async function refreshLocalFamily() {
   try {
     await restoreFamilyFromSupabase();
@@ -60,6 +67,10 @@ export function useSession() {
     const cached = readCachedSession();
     if (cached) {
       setSession(cached);
+      if (isSessionPremiumActive(cached)) {
+        setPremiumVerified(true);
+        setPremiumChecked(true);
+      }
       setLoaded(true);
       refreshLocalFamily();
     } else {
@@ -69,13 +80,22 @@ export function useSession() {
 
   useEffect(() => {
     const supabase = getSupabase();
-    if (!supabase) {
-      // No Supabase client — keep cached identity, but do not grant Premium from cache.
+    const applyCachedFallback = () => {
       const cached = readCachedSession();
-      setSession(cached);
-      setPremiumVerified(false);
+      if (cached) {
+        setSession(cached);
+        setPremiumVerified(isSessionPremiumActive(cached));
+      } else {
+        setPremiumVerified(false);
+      }
       setPremiumChecked(true);
       setLoaded(true);
+    };
+
+    if (!supabase) {
+      // No Supabase client — keep cached identity and active Premium during
+      // transient client/env failures, but never extend expired Premium.
+      applyCachedFallback();
       return;
     }
 
@@ -113,16 +133,15 @@ export function useSession() {
           setPremiumChecked(true);
         }
       } catch {
-        // Auth error — keep current identity state, but do not grant cached Premium.
-        setPremiumVerified(false);
-        setPremiumChecked(true);
+        // Profile read failed/timeouts can happen after mobile app switches.
+        // Keep already cached active Premium instead of interrupting learning.
+        applyCachedFallback();
       }
       setLoaded(true);
     }).catch(() => {
-      // Supabase unreachable — fall back to cache for identity only, not Premium.
-      setPremiumVerified(false);
-      setPremiumChecked(true);
-      setLoaded(true);
+      // Supabase unreachable — keep cached active Premium, then verify again on
+      // the next auth/focus cycle. Free/expired users stay locked.
+      applyCachedFallback();
     });
 
     // Listen for auth state changes (login, token refresh, sign-out)
@@ -164,9 +183,9 @@ export function useSession() {
             }
           }
         } catch {
-          // Auth state change error — ignore identity, but do not grant cached Premium.
-          setPremiumVerified(false);
-          setPremiumChecked(true);
+          // Auth state change/profile read failed — keep cached active Premium
+          // so a mobile app switch does not show the paywall mid-exercise.
+          applyCachedFallback();
         }
       }
     );
