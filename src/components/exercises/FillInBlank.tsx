@@ -68,6 +68,24 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
     return inputParts.join(" ") === expectedParts.join(" ");
   };
 
+  const answerVariants = (expected: string) => {
+    const variants = new Set([expected]);
+
+    expected
+      .split(/\s*\/\s*/g)
+      .map(part => part.trim())
+      .filter(Boolean)
+      .forEach(part => variants.add(part));
+
+    const parentheticalAlternative = expected.match(/^(.+?)\s*\((?:oder|or|o|ou)\s+(.+?)\)$/i);
+    if (parentheticalAlternative) {
+      variants.add(parentheticalAlternative[1].trim());
+      variants.add(parentheticalAlternative[2].trim());
+    }
+
+    return [...variants];
+  };
+
   const matchesOpenEndedNumberList = (input: string, prompt: string) => {
     const smallerThanMatch = prompt.match(/schreibe\s+drei\s+zahlen\s+kleiner\s+als\s+(\d+)/i);
     if (!smallerThanMatch) return false;
@@ -83,8 +101,9 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
   const isCorrect = (input: string, expected: string) => {
     if (matchesOpenEndedNumberList(input, question)) return true;
     if (matchesSingle(input, expected)) return true;
+    if (answerVariants(expected).some(variant => matchesSingle(input, variant))) return true;
     // Check alternative answers
-    if (altAnswers?.some(alt => matchesSingle(input, alt))) return true;
+    if (altAnswers?.some(alt => answerVariants(alt).some(variant => matchesSingle(input, variant)))) return true;
     return false;
   };
 

@@ -266,6 +266,29 @@ test.describe("i18n completeness", () => {
     expect(visibleText).not.toContain("1/7 Aufgaben");
   });
 
+  test("Italian fill-in accepts each slash-separated answer variant", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.removeItem("cleverli_lang");
+      localStorage.setItem("cleverli_1_german_reime", JSON.stringify({
+        completed: 20,
+        correctIds: [
+          "r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9", "r10",
+          "r11", "r12", "r13", "r14", "r15", "r16", "r17", "r18", "r19", "r20",
+        ],
+      }));
+    });
+
+    await page.goto("/learn/1/german/reime?lang=it");
+
+    await expect(page.getByText(/fa rima con.*Hahn/)).toBeVisible({ timeout: 8_000 });
+    await page.getByPlaceholder("Inserisci la risposta...").fill("Kahn");
+    await page.getByRole("button", { name: "Verifica" }).click();
+
+    await expect(page.getByRole("button", { name: /Corretto/i })).toBeVisible({ timeout: 2_000 });
+    await expect(page.getByText("La risposta corretta è:")).toHaveCount(0);
+    await expect(page.getByText("reimt sich su")).toHaveCount(0);
+  });
+
   test("Italian desktop progress suffix is localized", async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 768 });
     await page.addInitScript(() => {
