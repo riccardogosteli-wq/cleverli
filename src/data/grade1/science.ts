@@ -1449,4 +1449,125 @@ const grade1Science: Topic[] = [
   },
 ];
 
+const grade1ScienceOverrides: Record<string, Partial<Topic["exercises"][number]>> = {
+  ph27: { question: "Ein Ball bewegt sich schneller, wenn man ihn stärker ___.", answer: "stösst", hints: ["Mehr Kraft bewegt den Ball stärker.", "Was machst du mit dem Ball?"] },
+  ph28: { type: "multiple-choice", question: "Was ist schwerer?", answer: "ein Stein", options: ["eine Feder", "ein Stein", "ein Blatt", "ein Luftballon"], hints: ["Denke daran, was im Wasser eher sinkt.", "Steine sind schwer."] },
+  ph29: { question: "Wenn zwei Kinder gleich stark an einem Seil ziehen, bleibt das Seil in der ___.", answer: "Mitte", hints: ["Beide ziehen gleich stark.", "Kein Kind gewinnt."] },
+  ph30: { type: "multiple-choice", question: "Was passiert, wenn du einen ruhenden Ball nicht berührst?", answer: "Er bleibt liegen", options: ["Er bleibt liegen", "Er fliegt weg", "Er wird grösser", "Er leuchtet"], hints: ["Ohne Stoss passiert nichts.", "Ein Ball braucht eine Kraft."] },
+  ph31: { question: "Eine Batterie gibt einer Taschenlampe ___.", answer: "Energie", hints: ["Damit die Lampe leuchtet.", "E... macht Licht möglich."] },
+  ph32: { type: "multiple-choice", question: "Womit kannst du etwas ziehen?", answer: "mit einer Schnur", options: ["mit einer Schnur", "mit Wasser", "mit Licht", "mit Papier"], hints: ["Eine Schnur kann ziehen.", "Denke an einen Schlitten."] },
+  ph33: { question: "Auf einer Rutschbahn zieht die Erde dich nach ___.", answer: "unten", hints: ["Alles fällt nach unten.", "Die Erde zieht Dinge an."] },
+  ph34: { type: "multiple-choice", question: "Was zeigt ein Kompass?", answer: "die Richtung", options: ["die Richtung", "die Uhrzeit", "das Wetter", "die Farbe"], hints: ["Ein Kompass hilft beim Orientieren.", "Er zeigt zum Beispiel Norden."] },
+  ph35: { question: "Auf rauem Boden rollt ein Ball eher ___.", answer: "langsamer", hints: ["Rauer Boden bremst.", "Das Gegenteil von schneller."] },
+  ph36: { type: "multiple-choice", question: "Was passiert mit einer Feder, wenn du sie loslässt?", answer: "Sie geht zurück", options: ["Sie geht zurück", "Sie wird zu Wasser", "Sie verschwindet", "Sie wird heiss"], hints: ["Eine Feder federt zurück.", "Sie will wieder in ihre Form."] },
+  ph37: { question: "Kraft spürst du beim Drücken und ___.", answer: "Ziehen", hints: ["Drücken und Ziehen sind Kräfte.", "Das Gegenteil von drücken."] },
+  ph38: { type: "multiple-choice", question: "Was ist Ziehen?", answer: "Etwas zu dir bewegen", options: ["Etwas zu dir bewegen", "Etwas wegschieben", "Etwas anschauen", "Etwas hören"], hints: ["Beim Ziehen kommt etwas näher.", "Denke an eine Schublade."] },
+  ph39: { question: "Energie brauchst du zum Rennen, Springen und ___.", answer: "Spielen", hints: ["Alles braucht Kraft und Energie.", "Kinder tun es gerne draussen."] },
+  ph40: { type: "multiple-choice", question: "Warum ist eine Rampe praktisch?", answer: "Man kann Dinge leichter hochschieben", options: ["Man kann Dinge leichter hochschieben", "Sie macht Wasser kalt", "Sie zählt Zahlen", "Sie macht Licht"], hints: ["Eine Rampe hilft beim Schieben.", "Kinderwagen nutzen Rampen."] },
+
+  sn26: { type: "multiple-choice", question: "Welche zwei Sinne nutzt du beim Essen oft zusammen?", answer: "Schmecken und Riechen", options: ["Schmecken und Riechen", "Sehen und Rennen", "Hören und Springen", "Tasten und Schlafen"], hints: ["Essen hat Geschmack und Geruch.", "Nase und Zunge helfen."] },
+  sn27: { question: "Das Ohr hilft uns beim ___.", answer: "Hören", hints: ["Mit den Ohren hört man.", "Musik hört man mit dem Ohr."] },
+  sn28: { type: "multiple-choice", question: "Was schmeckt meistens salzig?", answer: "Chips", options: ["Chips", "Honig", "Zitrone", "Wasser"], hints: ["Chips haben oft Salz.", "Salzig ist nicht süss."] },
+  sn29: { question: "Ein schlechter Geruch kann vor schlechtem Essen ___.", answer: "warnen", hints: ["Die Nase hilft uns.", "Man merkt: Das esse ich lieber nicht."] },
+  sn30: { type: "multiple-choice", question: "Welcher Sinn kann dich nachts wecken?", answer: "Hören", options: ["Hören", "Schmecken", "Sehen", "Riechen"], hints: ["Ein lautes Geräusch kann wecken.", "Die Ohren hören auch im Dunkeln."] },
+  sn31: { question: "Mit den Augen sehen wir Licht und ___.", answer: "Farben", hints: ["Rot, Blau, Grün.", "Was hat ein Regenbogen?"] },
+  sn32: { type: "multiple-choice", question: "Was schützt deine Augen?", answer: "Augenlider", options: ["Augenlider", "Schuhe", "Handschuhe", "Socken"], hints: ["Du schliesst sie beim Blinzeln.", "Sie liegen direkt am Auge."] },
+  sn33: { question: "Laute Geräusche können den Ohren ___.", answer: "wehtun", hints: ["Zu laut ist unangenehm.", "Dann hält man sich die Ohren zu."] },
+  sn34: { type: "multiple-choice", question: "Wozu braucht das Gehirn die Sinne?", answer: "Es versteht, was um uns passiert", options: ["Es versteht, was um uns passiert", "Es macht die Schuhe zu", "Es kocht Suppe", "Es malt die Wand"], hints: ["Augen, Ohren und Nase schicken Infos.", "Das Gehirn hilft beim Verstehen."] },
+  sn35: { question: "Manche Menschen können Rot und Grün schwer unterscheiden. Das betrifft die ___.", answer: "Farben", hints: ["Rot und Grün sind Farben.", "Es geht ums Sehen."] },
+  sn36: { type: "multiple-choice", question: "Was nimmt die Haut wahr?", answer: "warm und kalt", options: ["warm und kalt", "Buchstaben", "Musiknoten", "Wochentage"], hints: ["Die Haut fühlt Temperatur.", "Du spürst warmes Wasser."] },
+  sn37: { question: "Beim Balancieren helfen Augen, Körper und das ___.", answer: "Ohr", hints: ["Im Ohr liegt auch der Gleichgewichtssinn.", "Es ist am Kopf."] },
+  sn38: { type: "multiple-choice", question: "Warum schmeckt Essen anders, wenn die Nase verstopft ist?", answer: "Riechen hilft beim Schmecken", options: ["Riechen hilft beim Schmecken", "Die Zunge schläft", "Die Augen essen mit", "Das Essen wird kalt"], hints: ["Nase und Zunge arbeiten zusammen.", "Geruch macht Geschmack stärker."] },
+  sn39: { question: "Eine Brille hilft beim ___.", answer: "Sehen", hints: ["Brillen sitzen vor den Augen.", "Sie machen Bilder schärfer."] },
+  sn40: { type: "multiple-choice", question: "Was hilft dir zu spüren, wo deine Hand ist?", answer: "dein Körpergefühl", options: ["dein Körpergefühl", "ein Regenmesser", "ein Lineal", "ein Magnet"], hints: ["Du merkst deinen Körper.", "Auch mit geschlossenen Augen."] },
+
+  wk23: { question: "Bei starkem Regen kann es grosse ___ geben.", answer: "Pfützen", hints: ["Wasser sammelt sich am Boden.", "Kinder springen manchmal hinein."] },
+  wk24: { type: "multiple-choice", question: "Womit kann man Wind sehen?", answer: "mit einer Fahne", options: ["mit einer Fahne", "mit einer Uhr", "mit einem Buch", "mit einem Teller"], hints: ["Die Fahne bewegt sich im Wind.", "Wind selbst ist unsichtbar."] },
+  wk25: { question: "Wetter kann jeden Tag anders ___.", answer: "sein", hints: ["Heute Sonne, morgen Regen.", "Wetter wechselt."] },
+  wk26: { type: "multiple-choice", question: "Was misst ein Thermometer?", answer: "Temperatur", options: ["Temperatur", "Schuhgrösse", "Buchstaben", "Stimmen"], hints: ["Es zeigt warm oder kalt.", "Grad Celsius."] },
+  wk27: { question: "Schnee ist gefrorenes ___.", answer: "Wasser", hints: ["Schnee schmilzt zu Wasser.", "Regen und Schnee bestehen daraus."] },
+  wk28: { type: "multiple-choice", question: "Was hilft der Erde und den Pflanzen?", answer: "saubere Luft und Wasser", options: ["saubere Luft und Wasser", "viel Abfall", "kaputte Bäume", "schmutzige Flüsse"], hints: ["Pflanzen brauchen gute Bedingungen.", "Sauber ist besser für die Natur."] },
+  wk29: { question: "Auf hohen Bergen liegt oft ___.", answer: "Schnee", hints: ["Dort ist es kälter.", "Weiss und kalt."] },
+  wk30: { type: "multiple-choice", question: "Was ist Wind?", answer: "bewegte Luft", options: ["bewegte Luft", "gefrorenes Wasser", "ein warmer Stein", "ein Tier"], hints: ["Man spürt ihn im Gesicht.", "Luft bewegt sich."] },
+  wk31: { question: "Wenn Wasser warm wird, kann es als Dampf nach oben ___.", answer: "steigen", hints: ["Dampf geht nach oben.", "Das passiert beim Kochen."] },
+  wk32: { type: "multiple-choice", question: "Was gehört zu einem Gewitter?", answer: "Blitz und Donner", options: ["Blitz und Donner", "Sand und Schnee", "Sonne und Eis", "Nebel und Mond"], hints: ["Erst sieht man Licht, dann hört man es.", "Blitz kommt mit Donner."] },
+  wk33: { question: "Aus vielen kleinen Wassertröpfchen entstehen ___.", answer: "Wolken", hints: ["Sie sind am Himmel.", "Aus Wolken kommt Regen."] },
+  wk34: { type: "multiple-choice", question: "Was machst du bei Gewitter draussen?", answer: "Schutz suchen", options: ["Schutz suchen", "unter einen einzelnen Baum stehen", "barfuss rennen", "im Wasser bleiben"], hints: ["Bei Gewitter geht man hinein.", "Sicherheit zuerst."] },
+  wk35: { question: "Wenn dunkle Wolken kommen, kann es bald ___.", answer: "regnen", hints: ["Dunkle Wolken bringen oft Regen.", "Nimm vielleicht einen Schirm."] },
+  wk36: { type: "multiple-choice", question: "Was passiert im Frühling oft?", answer: "Blumen wachsen", options: ["Blumen wachsen", "Seen frieren immer zu", "Blätter fallen immer", "es ist immer Nacht"], hints: ["Im Frühling wird es wärmer.", "Viele Pflanzen wachsen."] },
+  wk37: { question: "Luft brauchen wir zum ___.", answer: "Atmen", hints: ["Wir atmen Luft ein.", "Ohne Luft geht es nicht."] },
+  wk38: { type: "multiple-choice", question: "Was ist Wetter?", answer: "Sonne, Regen, Wind oder Schnee heute", options: ["Sonne, Regen, Wind oder Schnee heute", "ein Schulfach", "eine Zahl", "ein Spielzeug"], hints: ["Wetter beschreibt, wie es draussen ist.", "Heute kann es regnen."] },
+  wk39: { question: "Bei starker Sonne schützt uns Sonnencreme vor ___.", answer: "Sonnenbrand", hints: ["Die Haut wird sonst rot.", "Sonnencreme schützt."] },
+  wk40: { type: "multiple-choice", question: "Was ist ein Wirbelwind?", answer: "Wind, der sich dreht", options: ["Wind, der sich dreht", "ein gefrorener See", "ein Regenmesser", "eine Schneeflocke"], hints: ["Wirbel bedeutet drehen.", "Man sieht manchmal Blätter kreisen."] },
+};
+
+const grade1ScienceAdditions: Record<string, Topic["exercises"]> = {
+  "physik-bewegung": [
+    { id: "ph41", type: "multiple-choice", difficulty: 1, question: "Was kannst du leichter schieben?", answer: "einen leeren Karton", options: ["einen leeren Karton", "einen grossen Stein", "ein volles Regal", "ein Auto"], hints: ["Leicht ist einfacher.", "Ein leerer Karton wiegt wenig."] },
+    { id: "ph42", type: "fill-in-blank", difficulty: 1, question: "Ein Ball bewegt sich, wenn du ihn ___.", answer: "stösst", hints: ["Du gibst dem Ball Kraft.", "Mit dem Fuss oder der Hand."] },
+    { id: "ph43", type: "multiple-choice", difficulty: 1, question: "Was bleibt eher im Wasser oben?", answer: "ein Korken", options: ["ein Korken", "ein Stein", "eine Münze", "ein Schlüssel"], hints: ["Kork ist leicht.", "Er schwimmt oft."] },
+    { id: "ph44", type: "fill-in-blank", difficulty: 1, question: "Ein Magnet hält gut an einem ___.", answer: "Kühlschrank", hints: ["Viele Magnete hängen dort.", "In der Küche."] },
+    { id: "ph45", type: "multiple-choice", difficulty: 1, question: "Was ist Ziehen?", answer: "etwas näher holen", options: ["etwas näher holen", "etwas wegblasen", "etwas zählen", "etwas hören"], hints: ["Beim Ziehen kommt es zu dir.", "Denke an eine Tür."] },
+    { id: "ph46", type: "fill-in-blank", difficulty: 1, question: "Wenn etwas sehr glatt ist, rutscht es eher ___.", answer: "leicht", hints: ["Glatt bremst wenig.", "Eis ist glatt."] },
+    { id: "ph47", type: "multiple-choice", difficulty: 2, question: "Warum fährt ein Schlitten auf Schnee gut?", answer: "Schnee ist glatt", options: ["Schnee ist glatt", "Schnee ist laut", "Schnee ist schwarz", "Schnee zählt Zahlen"], hints: ["Glatt rutscht besser.", "Schlitten gleiten."] },
+    { id: "ph48", type: "fill-in-blank", difficulty: 2, question: "Ein schwerer Rucksack braucht mehr ___ zum Heben.", answer: "Kraft", hints: ["Schwer braucht mehr Anstrengung.", "K... wie Körperkraft."] },
+    { id: "ph49", type: "multiple-choice", difficulty: 2, question: "Was passiert, wenn du einen Ball fester wirfst?", answer: "Er fliegt weiter", options: ["Er fliegt weiter", "Er wird kleiner", "Er bleibt stehen", "Er wird nass"], hints: ["Mehr Kraft, mehr Bewegung.", "Der Ball bekommt mehr Schwung."] },
+    { id: "ph50", type: "fill-in-blank", difficulty: 2, question: "Ein Rad hilft, Dinge leichter zu ___.", answer: "bewegen", hints: ["Räder rollen.", "Ein Wagen hat Räder."] },
+  ],
+  sinne: [
+    { id: "sn41", type: "multiple-choice", difficulty: 2, question: "Warum hältst du dir bei lautem Lärm die Ohren zu?", answer: "Weil Lärm unangenehm sein kann", options: ["Weil Lärm unangenehm sein kann", "Weil es dunkel ist", "Weil es süss schmeckt", "Weil die Augen müde sind"], hints: ["Ohren hören Lärm.", "Zu laut tut weh."] },
+    { id: "sn42", type: "fill-in-blank", difficulty: 2, question: "Mit der Haut spürst du, ob ein Stoff rau oder ___ ist.", answer: "glatt", hints: ["Das Gegenteil von rau.", "Fensterglas fühlt sich so an."] },
+    { id: "sn43", type: "multiple-choice", difficulty: 2, question: "Was hilft dir, eine Zitrone zu erkennen?", answer: "sehen, riechen und schmecken", options: ["sehen, riechen und schmecken", "nur schlafen", "nur springen", "nur zählen"], hints: ["Mehrere Sinne helfen zusammen.", "Zitrone ist gelb, sauer und riecht."] },
+    { id: "sn44", type: "fill-in-blank", difficulty: 2, question: "Wenn etwas verbrannt riecht, sagt die Nase: ___.", answer: "Achtung", hints: ["Geruch kann warnen.", "A... bedeutet aufpassen."] },
+    { id: "sn45", type: "multiple-choice", difficulty: 2, question: "Welcher Sinn hilft beim Lesen?", answer: "Sehen", options: ["Sehen", "Riechen", "Schmecken", "Hören"], hints: ["Du schaust auf Buchstaben.", "Augen helfen beim Lesen."] },
+    { id: "sn46", type: "fill-in-blank", difficulty: 2, question: "Die Zunge hilft beim Schmecken von süss, sauer und ___.", answer: "salzig", hints: ["Chips schmecken oft so.", "S... ist ein Geschmack."] },
+    { id: "sn47", type: "multiple-choice", difficulty: 3, question: "Warum nutzt du beim Überqueren der Strasse Augen und Ohren?", answer: "Damit du Fahrzeuge sehen und hören kannst", options: ["Damit du Fahrzeuge sehen und hören kannst", "Damit du schneller schläfst", "Damit es regnet", "Damit du Hunger bekommst"], hints: ["Sicherheit braucht mehrere Sinne.", "Autos sieht und hört man."] },
+    { id: "sn48", type: "fill-in-blank", difficulty: 3, question: "Wenn ein Auge geschlossen ist, ist Abschätzen von Entfernungen oft ___.", answer: "schwieriger", hints: ["Zwei Augen helfen beim Abstand.", "Ein Auge sieht weniger räumlich."] },
+    { id: "sn49", type: "multiple-choice", difficulty: 3, question: "Was passiert, wenn zwei Sinne unterschiedliche Informationen geben?", answer: "Das Gehirn muss vergleichen", options: ["Das Gehirn muss vergleichen", "Die Hände verschwinden", "Die Nase zählt", "Die Ohren schlafen"], hints: ["Das Gehirn ordnet Sinneseindrücke.", "Es entscheidet, was passt."] },
+    { id: "sn50", type: "fill-in-blank", difficulty: 3, question: "Beim Essen arbeiten Nase und Zunge eng ___.", answer: "zusammen", hints: ["Riechen und schmecken helfen einander.", "Z... bedeutet miteinander."] },
+  ],
+  "wetter-klima": [
+    { id: "wk41", type: "multiple-choice", difficulty: 1, question: "Was nimmst du bei Regen mit?", answer: "einen Regenschirm", options: ["einen Regenschirm", "eine Sonnenbrille", "Schlittschuhe", "Badesachen"], hints: ["Er schützt vor Regen.", "Man hält ihn über den Kopf."] },
+    { id: "wk42", type: "fill-in-blank", difficulty: 2, question: "Nach Regen kann die Strasse ___ sein.", answer: "nass", hints: ["Wasser macht Dinge nass.", "Pass auf beim Laufen."] },
+    { id: "wk43", type: "multiple-choice", difficulty: 2, question: "Welche Kleidung passt zu kaltem Wetter?", answer: "Jacke", options: ["Jacke", "Badehose", "Sandalen", "Sonnenhut"], hints: ["Kälte braucht warme Kleidung.", "Eine Jacke wärmt."] },
+    { id: "wk44", type: "fill-in-blank", difficulty: 2, question: "Im Herbst fallen oft die ___ von den Bäumen.", answer: "Blätter", hints: ["Sie werden bunt.", "Sie liegen dann am Boden."] },
+    { id: "wk45", type: "multiple-choice", difficulty: 2, question: "Was zeigt, aus welcher Richtung der Wind kommt?", answer: "eine Wetterfahne", options: ["eine Wetterfahne", "ein Lineal", "ein Apfel", "ein Heft"], hints: ["Sie dreht sich im Wind.", "Man sieht sie auf manchen Dächern."] },
+    { id: "wk46", type: "fill-in-blank", difficulty: 2, question: "Wenn es friert, wird Wasser zu ___.", answer: "Eis", hints: ["Es wird hart und kalt.", "E... entsteht bei Kälte."] },
+    { id: "wk47", type: "multiple-choice", difficulty: 3, question: "Warum ist Nebel im Verkehr gefährlich?", answer: "Man sieht schlechter", options: ["Man sieht schlechter", "Man hört besser", "Die Sonne ist lauter", "Die Strasse wird grün"], hints: ["Nebel macht die Sicht schlecht.", "Autos sehen weniger weit."] },
+    { id: "wk48", type: "fill-in-blank", difficulty: 3, question: "Wenn Schnee schmilzt, wird er zu ___.", answer: "Wasser", hints: ["Wärme lässt Schnee schmelzen.", "Dann ist er flüssig."] },
+    { id: "wk49", type: "multiple-choice", difficulty: 3, question: "Warum trinken Pflanzen nach trockenen Tagen gerne Regen?", answer: "Sie brauchen Wasser zum Wachsen", options: ["Sie brauchen Wasser zum Wachsen", "Sie wollen schlafen", "Sie mögen Lärm", "Sie essen Steine"], hints: ["Pflanzen brauchen Wasser.", "Regen hilft der Natur."] },
+    { id: "wk50", type: "fill-in-blank", difficulty: 3, question: "Vor einem Ausflug schaust du aufs Wetter, damit du passende ___ anziehst.", answer: "Kleider", hints: ["Bei Regen anders als bei Sonne.", "Jacke, Schuhe, Mütze."] },
+  ],
+};
+
+for (const topic of grade1Science) {
+  topic.exercises = topic.exercises.map((exercise) => {
+    const override = grade1ScienceOverrides[exercise.id];
+
+    return {
+      ...exercise,
+      ...(override ? {
+        questionEN: undefined,
+        questionFR: undefined,
+        questionIT: undefined,
+        optionsEN: undefined,
+        optionsFR: undefined,
+        optionsIT: undefined,
+        answerEN: undefined,
+        answerFR: undefined,
+        answerIT: undefined,
+        hintsEN: undefined,
+        hintsFR: undefined,
+        hintsIT: undefined,
+      } : {}),
+      ...(override ?? {}),
+    };
+  });
+
+  const additions = grade1ScienceAdditions[topic.id];
+  if (additions) {
+    topic.exercises = [...topic.exercises, ...additions];
+  }
+}
+
 export default grade1Science;

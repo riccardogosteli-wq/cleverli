@@ -1186,4 +1186,92 @@ const grade1Math: Topic[] = [
   },
 ];
 
+const grade1MathOverrides: Record<string, Partial<Topic["exercises"][number]>> = {
+  sa1_21: { difficulty: 2, question: "Auf dem Tisch liegen 6 rote und 4 blaue Stifte. Wie viele Stifte sind es zusammen? ___", answer: "10", hints: ["Addiere 6 + 4.", "Zähle alle Stifte zusammen."] },
+  sa1_22: { difficulty: 2, question: "Emma hat 12 Aufkleber. Sie gibt 5 einer Freundin. Wie viele bleiben? ___", answer: "7", hints: ["12 minus 5 = ?", "Zähle von 12 fünf zurück."] },
+  sa1_23: { difficulty: 2, question: "Im Garten stehen 7 Blumen. 3 neue Blumen wachsen dazu. Wie viele Blumen sind es jetzt?", answer: "10", options: ["8", "9", "10", "11"], hints: ["7 + 3 = ?", "Zähle 3 weiter."] },
+  sa1_24: { difficulty: 2, question: "Tim hat 15 Franken. Er kauft ein Heft für 4 Fr. Wie viel hat er noch? ___", answer: "11", hints: ["15 minus 4 = ?", "Zähle von 15 vier zurück."] },
+  sa1_25: { difficulty: 2, question: "Ein Bauer hat 9 Eier. Er findet noch 6 Eier. Wie viele Eier hat er nun?", answer: "15", options: ["13", "14", "15", "16"], hints: ["9 + 6 = ?", "Zähle von 9 sechs weiter."] },
+  sa1_26: { difficulty: 2, question: "In einer Schachtel sind 14 Pralinen. 5 werden gegessen. Wie viele bleiben? ___", answer: "9", hints: ["14 minus 5 = ?", "Zähle rückwärts."] },
+  sa1_27: { difficulty: 2, question: "Sophie spart 5 Fr. und bekommt noch 4 Fr. dazu. Wie viel hat sie? ___", answer: "9", hints: ["5 + 4 = ?", "Addiere beide Beträge."] },
+  sa1_28: { difficulty: 2, question: "In der Bibliothek liegen 8 Bücher auf dem Tisch. 7 kommen dazu. Wie viele Bücher sind es? ___", answer: "15", hints: ["8 + 7 = ?", "Zähle von 8 weiter."] },
+  sa1_29: { difficulty: 2, question: "3 Kinder haben zusammen 12 Bonbons. 2 Bonbons fallen herunter. Wie viele bleiben? ___", answer: "10", hints: ["12 minus 2 = ?", "Nimm 2 weg."] },
+  sa1_30: { difficulty: 2, question: "Ein Rechteck aus Bauklötzen hat 6 rote und 5 blaue Klötze. Wie viele Klötze sind es? ___", answer: "11", hints: ["6 + 5 = ?", "Zähle beide Farben zusammen."] },
+
+  dd22: { difficulty: 2, type: "multiple-choice", question: "Vier Kinder teilen eine Pizza in 4 gleich grosse Stücke. Wie viele Stücke bekommt jedes Kind? 🍕", answer: "1 Stück", options: ["1 Stück", "2 Stücke", "3 Stücke", "4 Stücke"], hints: ["4 Stücke für 4 Kinder.", "Jedes Kind bekommt gleich viel."] },
+  dd30: { difficulty: 3, type: "fill-in-blank", question: "Diagramm: Blau 4, Rot 3, Grün 2, Gelb 1. Wie viele Stimmen sind es zusammen? ___", answer: "10", hints: ["4 + 3 + 2 + 1 = ?", "Addiere alle Farben."] },
+  dd1_13: { difficulty: 1, question: "Ein Balkendiagramm zeigt Mengen mit ___.", answer: "Balken", options: ["Balken", "Uhren", "Buchstaben", "Münzen"], hints: ["Der Name verrät es.", "B... wie Balken."] },
+  dd1_14: { difficulty: 1, question: "Eine Strichliste benutzt kurze ___.", answer: "Striche", hints: ["Man zählt mit Strichen.", "Ein Strich steht für eins."] },
+  dd1_15: { difficulty: 1, type: "multiple-choice", question: "Im Diagramm: Äpfel 4, Birnen 2. Was gibt es mehr?", answer: "Äpfel", options: ["Äpfel", "Birnen", "gleich viel"], hints: ["4 ist grösser als 2.", "Vergleiche die Zahlen."] },
+  dd1_16: { difficulty: 1, question: "Strichliste: ||| bedeutet ___.", answer: "3", hints: ["Zähle die Striche.", "Ein Strich ist eins."] },
+  dd1_17: { difficulty: 1, type: "multiple-choice", question: "Im Balkendiagramm ist Rot am höchsten. Was bedeutet das?", answer: "Rot hat am meisten", options: ["Rot hat am meisten", "Rot hat am wenigsten", "Rot fehlt"], hints: ["Der höchste Balken zeigt die grösste Menge.", "Hoch bedeutet viel."] },
+  dd1_18: { difficulty: 1, question: "Umfrage: 5 mögen Sommer, 3 mögen Winter. Welche Jahreszeit hat mehr Stimmen? ___", answer: "Sommer", hints: ["5 ist mehr als 3.", "Vergleiche Sommer und Winter."] },
+  dd1_19: { difficulty: 1, type: "multiple-choice", question: "Strichliste: Hund ||||, Katze ||. Welches Tier wurde öfter gezählt?", answer: "Hund", options: ["Hund", "Katze", "beide gleich"], hints: ["Hund hat 4 Striche.", "Katze hat 2 Striche."] },
+  dd1_20: { difficulty: 2, question: "Im Diagramm: Montag 5, Dienstag 3. Welcher Tag hat den höheren Wert? ___", answer: "Montag", hints: ["5 ist grösser als 3.", "Der höhere Wert gewinnt."] },
+  dd1_21: { difficulty: 2, type: "multiple-choice", question: "Ein Bilddiagramm zeigt 4 Sonnen und 2 Wolken. Was kommt häufiger vor?", answer: "Sonnen", options: ["Sonnen", "Wolken", "gleich viel"], hints: ["4 ist mehr als 2.", "Vergleiche die Bilder."] },
+  dd1_22: { difficulty: 2, question: "Strichliste: |||| | sind ___ Einträge.", answer: "5", hints: ["Vier Striche und ein weiterer Strich.", "4 + 1 = 5."] },
+  dd1_23: { difficulty: 2, type: "multiple-choice", question: "Diagramm: Blau 6, Rot 4. Wie viele mehr hat Blau?", answer: "2", options: ["1", "2", "4", "6"], hints: ["6 minus 4 = ?", "Blau hat 2 mehr."] },
+  dd1_24: { difficulty: 2, question: "Tabelle: Montag 4 Punkte, Dienstag 6 Punkte. Wie viele Punkte zusammen? ___", answer: "10", hints: ["4 + 6 = ?", "Addiere beide Tage."] },
+  dd1_25: { difficulty: 2, type: "multiple-choice", question: "Diagramm: Hund 3, Katze 7, Fisch 2. Welches Tier hat am meisten Stimmen?", answer: "Katze", options: ["Hund", "Katze", "Fisch"], hints: ["7 ist die grösste Zahl.", "Suche den höchsten Wert."] },
+  dd1_26: { difficulty: 2, question: "Strichliste: Äpfel ||||, Birnen |||. Wie viele Früchte zusammen? ___", answer: "7", hints: ["4 + 3 = ?", "Zähle alle Striche."] },
+  dd1_27: { difficulty: 2, type: "multiple-choice", question: "Diagramm: Sonne 8, Regen 5. Was wurde öfter genannt?", answer: "Sonne", options: ["Sonne", "Regen", "gleich viel"], hints: ["8 ist mehr als 5.", "Der grössere Wert gewinnt."] },
+  dd1_28: { difficulty: 2, question: "Im Diagramm steigt die Zahl von 3 auf 5. Die Zahl wird ___.", answer: "grösser", hints: ["5 ist mehr als 3.", "Wenn etwas steigt, wird es grösser."] },
+  dd1_29: { difficulty: 2, type: "multiple-choice", question: "Welche Darstellung passt gut, um Lieblingsfarben zu zählen?", answer: "Strichliste", options: ["Strichliste", "Wörterbuch", "Uhr"], hints: ["Beim Zählen helfen Striche.", "Eine Strichliste ist einfach."] },
+  dd1_30: { difficulty: 2, question: "Eine Klasse zählt 6 Velos und 4 Trottis. Zusammen sind es ___ Fahrzeuge.", answer: "10", hints: ["6 + 4 = ?", "Zähle beide Gruppen."] },
+  dd1_31: { difficulty: 2, type: "multiple-choice", question: "Ein Balken ist kurz, ein anderer lang. Welcher zeigt meistens mehr?", answer: "der lange Balken", options: ["der lange Balken", "der kurze Balken", "keiner"], hints: ["Länger bedeutet mehr.", "Vergleiche die Länge."] },
+  dd1_33: { difficulty: 2, type: "multiple-choice", question: "Warum schreibt man Namen unter Balken?", answer: "Damit man weiss, was gezählt wurde", options: ["Damit man weiss, was gezählt wurde", "Damit es bunt ist", "Damit es schwieriger wird"], hints: ["Namen helfen beim Lesen.", "Man sieht, welcher Balken wofür steht."] },
+  dd1_34: { difficulty: 2, question: "Strichliste: Gruppe 1 = ||||, Gruppe 2 = ||. Gruppe 1 hat ___ mehr.", answer: "2", hints: ["4 minus 2 = ?", "Vergleiche die Striche."] },
+  dd1_35: { difficulty: 2, question: "Diagramm: Im Juli gibt es 8 Glaces, im Januar 2. In welchem Monat gab es mehr Glaces? ___", answer: "Juli", hints: ["8 ist mehr als 2.", "Suche den grösseren Wert."] },
+  dd1_36: { difficulty: 2, question: "Diagramm: A=6, B=4, C=3. Welche Gruppe hat am wenigsten? ___", answer: "C", hints: ["3 ist die kleinste Zahl.", "Suche den niedrigsten Wert."] },
+  dd1_37: { difficulty: 2, type: "multiple-choice", question: "Welche Aussage passt zu einer Strichliste?", answer: "Man zählt Dinge mit Strichen", options: ["Man zählt Dinge mit Strichen", "Man misst die Uhrzeit", "Man schreibt eine Geschichte"], hints: ["Striche helfen beim Zählen.", "Jeder Strich steht für eins."] },
+  dd1_38: { difficulty: 2, question: "Diagramm: Fussball 7, Basketball 3. Wie viele Kinder spielen zusammen? ___", answer: "10", hints: ["7 + 3 = ?", "Addiere beide Sportarten."] },
+  dd1_49: { difficulty: 3, type: "multiple-choice", question: "Ein Balkendiagramm zeigt A=3, B=6, C=9. Was passiert von A bis C?", answer: "Die Werte werden grösser", options: ["Die Werte werden grösser", "Die Werte werden kleiner", "Alles bleibt gleich"], hints: ["3, 6, 9 wird immer mehr.", "Vergleiche von links nach rechts."] },
+};
+
+const grade1MathDifficultyOverrides: Record<string, 1 | 2 | 3> = {
+  sa1: 1, sa2: 1, sa3: 1, sa4: 1, sa5: 1, sa11: 1, sa12: 1, sa13: 1, sa14: 1, sa15: 1,
+  sa1_11: 1, sa1_12: 1, sa1_13: 1, sa1_14: 1, sa1_15: 1, sa23: 1, sa24: 1, sa25: 1, sa26: 1, sa27: 1, sa28: 1, sa29: 1, sa30: 1, sa1_23: 1,
+  sa6: 2, sa7: 2, sa8: 2, sa9: 2, sa16: 2, sa17: 2, sa18: 2, sa19: 2, sa20: 2, sa21: 2, sa22: 2,
+  sa1_16: 2, sa1_17: 2, sa1_18: 2, sa1_19: 2, sa1_20: 2, sa1_21: 2, sa1_22: 2, sa1_24: 2, sa1_25: 2, sa1_26: 2, sa1_27: 2, sa1_28: 2, sa1_29: 2, sa1_30: 2,
+  sa31: 2, sa32: 2, sa34: 2, sa35: 2, sa36: 2, sa37: 2, sa38: 2,
+  sa10: 3, sa39: 3, sa40: 3, sa1_31: 3, sa1_32: 3, sa1_33: 3, sa1_34: 3, sa1_35: 3, sa1_36: 3, sa1_37: 3, sa1_38: 3, sa1_39: 3,
+  sa1_40: 3, sa1_41: 3, sa1_42: 3, sa1_43: 3, sa1_44: 3, sa1_45: 3, sa1_46: 3, sa1_47: 3, sa1_48: 3, sa1_49: 3, sa1_50: 3,
+
+  dd1: 1, dd2: 1, dd3: 1, dd4: 1, dd5: 1, dd11: 1, dd12: 1, dd13: 1, dd14: 1, dd15: 1,
+  dd1_11: 1, dd1_12: 1, dd1_13: 1, dd1_14: 1, dd1_15: 1, dd1_16: 1, dd1_17: 1, dd1_18: 1, dd1_19: 1,
+  dd6: 2, dd7: 2, dd8: 2, dd9: 2, dd16: 2, dd17: 2, dd18: 2, dd19: 2, dd20: 2, dd21: 2, dd22: 2, dd23: 2, dd24: 2, dd25: 2, dd26: 2,
+  dd1_20: 2, dd1_21: 2, dd1_22: 2, dd1_23: 2, dd1_24: 2, dd1_25: 2, dd1_26: 2, dd1_27: 2, dd1_28: 2, dd1_29: 2, dd1_30: 2, dd1_31: 2, dd1_32: 2, dd1_33: 2, dd1_34: 2, dd1_35: 2, dd1_36: 2,
+  dd31: 1, dd32: 1, dd34: 1, dd37: 1, dd38: 1,
+  dd10: 3, dd27: 3, dd28: 3, dd29: 3, dd30: 3, dd33: 3, dd35: 3, dd36: 3, dd39: 3, dd40: 3,
+  dd1_37: 3, dd1_38: 3, dd1_39: 3, dd1_40: 3, dd1_41: 3, dd1_42: 3, dd1_43: 3, dd1_44: 3, dd1_45: 3, dd1_46: 3, dd1_47: 3, dd1_48: 3, dd1_49: 3, dd1_50: 3,
+};
+
+for (const topic of grade1Math) {
+  if (topic.id !== "sachaufgaben" && topic.id !== "daten-diagramme") continue;
+
+  topic.exercises = topic.exercises.map((exercise) => {
+    const override = grade1MathOverrides[exercise.id];
+
+    return {
+      ...exercise,
+      ...(override ? {
+        questionEN: undefined,
+        questionFR: undefined,
+        questionIT: undefined,
+        optionsEN: undefined,
+        optionsFR: undefined,
+        optionsIT: undefined,
+        answerEN: undefined,
+        answerFR: undefined,
+        answerIT: undefined,
+        hintsEN: undefined,
+        hintsFR: undefined,
+        hintsIT: undefined,
+      } : {}),
+      ...(override ?? {}),
+      difficulty: grade1MathDifficultyOverrides[exercise.id] ?? exercise.difficulty,
+    };
+  });
+}
+
 export default grade1Math;
