@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 interface Props {
   isOpen: boolean;
@@ -9,7 +8,6 @@ interface Props {
 }
 
 export default function SignupPromptModal({ isOpen, exerciseCount }: Props) {
-  const router = useRouter();
   const [dismissed, setDismissed] = useState(false);
 
   if (!isOpen || dismissed) return null;
@@ -31,7 +29,7 @@ export default function SignupPromptModal({ isOpen, exerciseCount }: Props) {
         <div className="bg-green-50 border-2 border-green-200 rounded-xl p-3 space-y-1 text-sm text-green-800">
           <p className="font-semibold">Mit Premium bekommst du:</p>
           <ul className="text-xs space-y-1 text-left">
-            <li>✅ Alle 1000+ Übungen pro Thema</li>
+            <li>✅ Alle Übungen freischalten</li>
             <li>✅ Deine Fortschritte speichern</li>
             <li>✅ Trophäen & Belohnungen</li>
             <li>✅ Familie einladen & vergleichen</li>
