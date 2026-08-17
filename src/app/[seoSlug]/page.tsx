@@ -69,6 +69,8 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
   const relatedPages = getGradeSubjectSeoLinks()
     .filter((related) => related.href !== page.href && (related.grade === page.grade || related.subject === page.subject))
     .slice(0, 5);
+  const usedRelatedHrefs = new Set([...relatedPages.map((related) => related.href), "/primarschule-uebungen"]);
+  const extraLinks = (page.extraLinks ?? []).filter((link) => !usedRelatedHrefs.has(link.href));
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
@@ -104,6 +106,14 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
           text: "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet.",
         },
       },
+      ...(page.faqItems ?? []).map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
     ],
   };
 
@@ -173,6 +183,28 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
         </div>
       </section>
 
+      {page.detailItems && page.detailItems.length > 0 && (
+        <section className="border-y border-green-100 bg-green-50/60 px-4 py-10 sm:px-6 sm:py-14">
+          <div className="mx-auto max-w-5xl">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold uppercase tracking-widest text-green-700">Vertiefung</p>
+              <h2 className="mt-2 text-2xl font-black text-gray-950">{page.shortSubjectName} {page.grade}. Klasse gezielt festigen</h2>
+              {page.detailIntro && (
+                <p className="mt-4 text-base leading-7 text-gray-700">{page.detailIntro}</p>
+              )}
+            </div>
+            <div className="mt-7 grid gap-4 md:grid-cols-3">
+              {page.detailItems.map((item) => (
+                <div key={item.title} className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
+                  <h3 className="text-base font-black text-gray-950">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-gray-700">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="bg-gray-50 px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto max-w-5xl">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -219,6 +251,23 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
         </section>
       )}
 
+      {page.faqItems && page.faqItems.length > 0 && (
+        <section className="bg-white px-4 py-10 sm:px-6 sm:py-14">
+          <div className="mx-auto max-w-5xl">
+            <p className="text-sm font-bold uppercase tracking-widest text-green-700">Fragen</p>
+            <h2 className="mt-2 text-2xl font-black text-gray-950">Häufige Fragen zu {page.h1}</h2>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {page.faqItems.map((item) => (
+                <article key={item.question} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                  <h3 className="text-sm font-black leading-6 text-gray-950">{item.question}</h3>
+                  <p className="mt-3 text-sm leading-6 text-gray-700">{item.answer}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="bg-green-700 px-4 py-10 text-white sm:px-6 sm:py-14">
         <div className="mx-auto max-w-5xl">
           <p className="text-sm font-bold uppercase tracking-widest text-green-100">Weiterüben</p>
@@ -236,6 +285,15 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
             <Link href="/primarschule-uebungen" className="rounded-full border border-white px-4 py-3 text-sm font-bold text-white hover:bg-green-800">
               Primarschule Übungen
             </Link>
+            {extraLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-full border border-white/70 px-4 py-3 text-sm font-bold text-white hover:bg-green-800"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

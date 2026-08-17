@@ -17,6 +17,19 @@ export type GradeSubjectSeoPage = {
   parentAnswer: string;
   ctaHref: string;
   ctaLabel: string;
+  detailIntro?: string;
+  detailItems?: {
+    title: string;
+    body: string;
+  }[];
+  faqItems?: {
+    question: string;
+    answer: string;
+  }[];
+  extraLinks?: {
+    href: string;
+    label: string;
+  }[];
 };
 
 const mathFocus: Record<number, string[]> = {
@@ -55,6 +68,61 @@ const germanCtaTopic: Record<number, string> = {
   6: "kasus",
 };
 
+const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
+  "deutsch-uebungen-6-klasse": {
+    title: "Deutsch Übungen 6. Klasse - Lehrplan 21 Schweiz",
+    description:
+      "Deutsch Übungen 6. Klasse für die Schweizer Primarschule: Grammatik, Rechtschreibung, Textverständnis, Argumentation und Übertritt sicher üben.",
+    lead:
+      "Deutsch Übungen für die 6. Klasse, passend zur Schweizer Primarschule: Grammatik, Rechtschreibung, Textverständnis und Schreiben in kurzen Lernrunden festigen.",
+    focusItems: [
+      "Kasus, Wortarten und Satzbau sicher anwenden",
+      "Rechtschreibstrategien und Grammatik wiederholen",
+      "Texte verstehen, argumentieren und überarbeiten",
+    ],
+    parentAnswer:
+      "In der 6. Klasse geht es nicht mehr nur um einzelne Regeln. Kinder müssen Texte genauer lesen, Grammatik bewusst anwenden und eigene Gedanken klar formulieren. Cleverli macht daraus kurze, überschaubare Übungen mit direkter Rückmeldung.",
+    detailIntro:
+      "Die Übungen passen zu typischen Deutsch-Themen der oberen Primarschule in der Schweiz. Dein Kind kann gezielt einzelne Bereiche üben oder einfach mit einer kurzen Runde starten, wenn Hausaufgaben, Prüfungsvorbereitung oder Übertrittsstress anstehen.",
+    detailItems: [
+      {
+        title: "Grammatik verstehen",
+        body: "Kasus, Wortarten, Relativsätze, Satzglieder und Zeitformen werden in kleinen Schritten geübt, statt als lange Theorieblöcke.",
+      },
+      {
+        title: "Rechtschreibung festigen",
+        body: "Strategien, typische Stolperstellen und sichere Wortformen helfen Kindern, beim Schreiben genauer zu werden.",
+      },
+      {
+        title: "Texte besser meistern",
+        body: "Leseverständnis, Textsorten, Argumentation und Überarbeitung bereiten auf anspruchsvollere Aufgaben in der Sekundarstufe vor.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Welche Deutsch-Themen sind in der 6. Klasse wichtig?",
+        answer:
+          "Wichtig sind Grammatik, Kasus, Wortarten, Rechtschreibung, Textverständnis, Textsorten, Argumentation und das Überarbeiten eigener Texte.",
+      },
+      {
+        question: "Hilft Cleverli bei Prüfungsvorbereitung und Übertritt?",
+        answer:
+          "Ja. Die Übungen sind kurz genug für regelmässiges Wiederholen und decken zentrale Grundlagen ab, die Kinder vor dem Übertritt sicherer beherrschen sollten.",
+      },
+      {
+        question: "Muss ich als Elternteil die Aufgaben vorbereiten?",
+        answer:
+          "Nein. Dein Kind kann direkt starten, erhält Hinweise und sieht sofort, ob eine Antwort stimmt. Du kannst später den Fortschritt anschauen.",
+      },
+    ],
+    extraLinks: [
+      { href: "/deutsch-uebungen-kinder", label: "Deutsch Übungen für Kinder" },
+      { href: "/deutsch-uebungen-5-klasse", label: "Deutsch Übungen 5. Klasse" },
+      { href: "/deutsch-uebungen-2-klasse", label: "Deutsch Übungen 2. Klasse" },
+    ],
+  },
+};
+
 function buildPage(grade: number, subject: GradeSeoSubject): GradeSubjectSeoPage {
   const isMath = subject === "math";
   const subjectName = isMath ? "Mathematik" : "Deutsch";
@@ -67,7 +135,7 @@ function buildPage(grade: number, subject: GradeSeoSubject): GradeSubjectSeoPage
   const h1 = `${titleSubject} ${grade}. Klasse`;
   const description = `${h1} für die Schweizer Primarschule: kurze Online-Aufgaben nach Lehrplan 21, direkt im Browser und 20 Aufgaben gratis testen.`;
 
-  return {
+  const basePage: GradeSubjectSeoPage = {
     slug,
     href: `/${slug}`,
     grade,
@@ -84,6 +152,11 @@ function buildPage(grade: number, subject: GradeSeoSubject): GradeSubjectSeoPage
     parentAnswer: `Cleverli bündelt passende Übungen für die ${grade}. Klasse in ruhigen, klaren Lernrunden. Dein Kind kann selbst starten, bekommt sofort Rückmeldung und du siehst, was schon gut klappt.`,
     ctaHref: `/learn/${grade}/${subject}/${ctaTopic}`,
     ctaLabel: `${shortSubjectName} ${grade}. Klasse gratis starten`,
+  };
+
+  return {
+    ...basePage,
+    ...pageOverrides[slug],
   };
 }
 
