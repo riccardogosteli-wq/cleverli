@@ -1187,13 +1187,13 @@ const grade1Math: Topic[] = [
 ];
 
 const grade1MathOverrides: Record<string, Partial<Topic["exercises"][number]>> = {
-  sa1_21: { difficulty: 2, question: "Auf dem Tisch liegen 6 rote und 4 blaue Stifte. Wie viele Stifte sind es zusammen? ___", answer: "10", hints: ["Addiere 6 + 4.", "Zähle alle Stifte zusammen."] },
+  sa1_21: { type: "fill-in-blank", difficulty: 2, question: "Auf dem Tisch liegen 6 rote und 4 blaue Stifte. Wie viele Stifte sind es zusammen? ___", answer: "10", options: undefined, hints: ["Addiere 6 + 4.", "Zähle alle Stifte zusammen."] },
   sa1_22: { difficulty: 2, question: "Emma hat 12 Aufkleber. Sie gibt 5 einer Freundin. Wie viele bleiben? ___", answer: "7", hints: ["12 minus 5 = ?", "Zähle von 12 fünf zurück."] },
   sa1_23: { difficulty: 2, question: "Im Garten stehen 7 Blumen. 3 neue Blumen wachsen dazu. Wie viele Blumen sind es jetzt?", answer: "10", options: ["8", "9", "10", "11"], hints: ["7 + 3 = ?", "Zähle 3 weiter."] },
   sa1_24: { difficulty: 2, question: "Tim hat 15 Franken. Er kauft ein Heft für 4 Fr. Wie viel hat er noch? ___", answer: "11", hints: ["15 minus 4 = ?", "Zähle von 15 vier zurück."] },
   sa1_25: { difficulty: 2, question: "Ein Bauer hat 9 Eier. Er findet noch 6 Eier. Wie viele Eier hat er nun?", answer: "15", options: ["13", "14", "15", "16"], hints: ["9 + 6 = ?", "Zähle von 9 sechs weiter."] },
   sa1_26: { difficulty: 2, question: "In einer Schachtel sind 14 Pralinen. 5 werden gegessen. Wie viele bleiben? ___", answer: "9", hints: ["14 minus 5 = ?", "Zähle rückwärts."] },
-  sa1_27: { difficulty: 2, question: "Sophie spart 5 Fr. und bekommt noch 4 Fr. dazu. Wie viel hat sie? ___", answer: "9", hints: ["5 + 4 = ?", "Addiere beide Beträge."] },
+  sa1_27: { type: "fill-in-blank", difficulty: 2, question: "Sophie spart 5 Fr. und bekommt noch 4 Fr. dazu. Wie viel hat sie? ___", answer: "9", options: undefined, hints: ["5 + 4 = ?", "Addiere beide Beträge."] },
   sa1_28: { difficulty: 2, question: "In der Bibliothek liegen 8 Bücher auf dem Tisch. 7 kommen dazu. Wie viele Bücher sind es? ___", answer: "15", hints: ["8 + 7 = ?", "Zähle von 8 weiter."] },
   sa1_29: { difficulty: 2, question: "3 Kinder haben zusammen 12 Bonbons. 2 Bonbons fallen herunter. Wie viele bleiben? ___", answer: "10", hints: ["12 minus 2 = ?", "Nimm 2 weg."] },
   sa1_30: { difficulty: 2, question: "Ein Rechteck aus Bauklötzen hat 6 rote und 5 blaue Klötze. Wie viele Klötze sind es? ___", answer: "11", hints: ["6 + 5 = ?", "Zähle beide Farben zusammen."] },
@@ -1221,7 +1221,7 @@ const grade1MathOverrides: Record<string, Partial<Topic["exercises"][number]>> =
   dd1_31: { difficulty: 2, type: "multiple-choice", question: "Ein Balken ist kurz, ein anderer lang. Welcher zeigt meistens mehr?", answer: "der lange Balken", options: ["der lange Balken", "der kurze Balken", "keiner"], hints: ["Länger bedeutet mehr.", "Vergleiche die Länge."] },
   dd1_33: { difficulty: 2, type: "multiple-choice", question: "Warum schreibt man Namen unter Balken?", answer: "Damit man weiss, was gezählt wurde", options: ["Damit man weiss, was gezählt wurde", "Damit es bunt ist", "Damit es schwieriger wird"], hints: ["Namen helfen beim Lesen.", "Man sieht, welcher Balken wofür steht."] },
   dd1_34: { difficulty: 2, question: "Strichliste: Gruppe 1 = ||||, Gruppe 2 = ||. Gruppe 1 hat ___ mehr.", answer: "2", hints: ["4 minus 2 = ?", "Vergleiche die Striche."] },
-  dd1_35: { difficulty: 2, question: "Diagramm: Im Juli gibt es 8 Glaces, im Januar 2. In welchem Monat gab es mehr Glaces? ___", answer: "Juli", hints: ["8 ist mehr als 2.", "Suche den grösseren Wert."] },
+  dd1_35: { type: "fill-in-blank", difficulty: 2, question: "Diagramm: Im Juli gibt es 8 Glaces, im Januar 2. In welchem Monat gab es mehr Glaces? ___", answer: "Juli", options: undefined, hints: ["8 ist mehr als 2.", "Suche den grösseren Wert."] },
   dd1_36: { difficulty: 2, question: "Diagramm: A=6, B=4, C=3. Welche Gruppe hat am wenigsten? ___", answer: "C", hints: ["3 ist die kleinste Zahl.", "Suche den niedrigsten Wert."] },
   dd1_37: { difficulty: 2, type: "multiple-choice", question: "Welche Aussage passt zu einer Strichliste?", answer: "Man zählt Dinge mit Strichen", options: ["Man zählt Dinge mit Strichen", "Man misst die Uhrzeit", "Man schreibt eine Geschichte"], hints: ["Striche helfen beim Zählen.", "Jeder Strich steht für eins."] },
   dd1_38: { difficulty: 2, question: "Diagramm: Fussball 7, Basketball 3. Wie viele Kinder spielen zusammen? ___", answer: "10", hints: ["7 + 3 = ?", "Addiere beide Sportarten."] },

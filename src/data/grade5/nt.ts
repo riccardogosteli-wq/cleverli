@@ -1,4 +1,6 @@
 import { Topic } from "@/types/exercise";
+import { grade5NTReplacements } from "../levelAppropriateTopicSets";
+import { replaceTopicExercises } from "../normalizedTopicExercises";
 
 const grade5NT: Topic[] = [
   {
@@ -830,4 +832,4 @@ const grade5NT: Topic[] = [
   },
 ];
 
-export default grade5NT;
+export default replaceTopicExercises(grade5NT, grade5NTReplacements);

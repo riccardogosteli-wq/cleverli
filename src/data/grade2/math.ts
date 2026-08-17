@@ -1030,4 +1030,45 @@ const grade2Math: Topic[] = [
   },
 ];
 
+const grade2MathOverrides: Record<string, Partial<Topic["exercises"][number]>> = {
+  sa29c: { type: "fill-in-blank", question: "Eine Familie fährt 40 km. Nach 20 km macht sie Pause. Wie viele km fehlen noch? ___", answer: "20", options: undefined, hints: ["40 minus 20 = ?", "Die Hälfte von 40 ist 20."] },
+  sa40c: { type: "fill-in-blank", question: "Im Garten stehen 12 Blumen. 8 neue Blumen kommen dazu. Wie viele Blumen sind es jetzt? ___", answer: "20", options: undefined, hints: ["12 + 8 = ?", "Zähle beide Gruppen zusammen."] },
+
+  dd19c: { type: "fill-in-blank", question: "Im Diagramm: Sommer 5, Frühling 3, Herbst 2. Wie viele Stimmen sind das zusammen? ___", answer: "10", options: undefined, hints: ["5 + 3 + 2 = ?", "Addiere alle Stimmen."] },
+  dd29c: { type: "fill-in-blank", question: "Tabelle: Anna 6 Punkte, Ben 4 Punkte. Wie viele Punkte haben beide zusammen? ___", answer: "10", options: undefined, hints: ["6 + 4 = ?", "Addiere beide Kinder."] },
+  dd30c: { type: "fill-in-blank", question: "Diagramm: Deutsch 6, Französisch 3, Italienisch 1. Wie viele Kinder sind es zusammen? ___", answer: "10", options: undefined, hints: ["6 + 3 + 1 = ?", "Zähle alle Gruppen."] },
+  dd32c: { type: "fill-in-blank", question: "Tabelle: 4, 6, 8. Welche Zahl ist am grössten? ___", answer: "8", options: undefined, hints: ["Vergleiche die Zahlen.", "8 ist grösser als 4 und 6."] },
+  dd40c: { type: "fill-in-blank", question: "Tabelle Lesepunkte: Anna 15, Ben 20, Clara 10. Wer hat am meisten Punkte? ___", answer: "Ben", options: undefined, hints: ["20 ist die grösste Zahl.", "Ben hat 20 Punkte."] },
+  dd2_13: { type: "multiple-choice", question: "Was zeigt ein Balkendiagramm?", answer: "Mengen mit Balken", options: ["Mengen mit Balken", "eine Uhrzeit", "ein Rezept", "eine Geschichte"], hints: ["Balken zeigen, wie viel gezählt wurde.", "Lange Balken bedeuten mehr."] },
+  dd2_17: { type: "fill-in-blank", question: "Tabelle: 4 Kinder mögen Äpfel, 6 mögen Birnen. Wie viele Kinder sind es zusammen? ___", answer: "10", options: undefined, hints: ["4 + 6 = ?", "Addiere beide Gruppen."] },
+};
+
+for (const topic of grade2Math) {
+  if (topic.id !== "sachaufgaben" && topic.id !== "daten-diagramme") continue;
+
+  topic.exercises = topic.exercises.slice(0, 50).map((exercise, index) => {
+    const override = grade2MathOverrides[exercise.id];
+
+    return {
+      ...exercise,
+      ...(override ? {
+        questionEN: undefined,
+        questionFR: undefined,
+        questionIT: undefined,
+        optionsEN: undefined,
+        optionsFR: undefined,
+        optionsIT: undefined,
+        answerEN: undefined,
+        answerFR: undefined,
+        answerIT: undefined,
+        hintsEN: undefined,
+        hintsFR: undefined,
+        hintsIT: undefined,
+      } : {}),
+      ...(override ?? {}),
+      difficulty: index < 15 ? 1 : index < 35 ? 2 : 3,
+    };
+  });
+}
+
 export default grade2Math;

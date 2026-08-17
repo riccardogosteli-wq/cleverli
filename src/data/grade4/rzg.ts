@@ -1,4 +1,6 @@
 import { Topic } from "@/types/exercise";
+import { grade4RZGReplacements } from "../levelAppropriateTopicSets";
+import { replaceTopicExercises } from "../normalizedTopicExercises";
 
 const grade4RZG: Topic[] = [
   {
@@ -511,7 +513,7 @@ const grade4RZG: Topic[] = [
       { id: "mk4_47", type: "multiple-choice", difficulty: 3, question: "Was ist Klimamigration?", answer: "Wanderung von Menschen, die durch Klimaveränderungen (Dürre, Überschwemmung) vertrieben werden", options: ["Wirtschaftsmigration","Wanderung von Menschen, die durch Klimaveränderungen (Dürre, Überschwemmung) vertrieben werden","Flüchtlingswelle","Landflucht"], hints: ["Pazifische Inseln versinken → Einwohner müssen weg.", "Klima als Migrationsursache."] },
       { id: "mk4_48", type: "fill-in-blank", difficulty: 3, question: "Was ist der Unterschied zwischen Staatsbürgerschaft und Aufenthaltsrecht?", answer: "Staatsbürgerschaft: volle Rechte (Wählen). Aufenthaltsrecht: darf bleiben, aber keine vollen Bürgerrechte.", hints: ["Ausländer hat Aufenthaltsrecht, kein Stimmrecht.", "Staatsbürger = voll. Aufenthalt = Erlaubnis."] },
       { id: "mk4_49", type: "multiple-choice", difficulty: 3, question: "Was ist das Integrationsparadigma der Schweiz?", answer: "Fördern und Fordern: Migranten erhalten Unterstützung, müssen aber aktiv integrieren", options: ["Nur Unterstützung","Fördern und Fordern: Migranten erhalten Unterstützung, müssen aber aktiv integrieren","Nur Fordern","Keine Integrationserwartung"], hints: ["Sprache lernen, Werte respektieren, Arbeit suchen.", "Fördern = Hilfe. Fordern = Pflichten."] },
-      { id: "mk4_50", type: "fill-in-blank", difficulty: 3, question: "Was ist Intersektionalität?", answer: "Das Zusammenwirken verschiedener Diskriminierungsformen (Geschlecht, Herkunft, Klasse)", hints: ["Kimberlé Crenshaw: mehrere Unterdrückungen gleichzeitig.", "Intersektional = überschneidend."] },
+      { id: "mk4_50", type: "fill-in-blank", difficulty: 3, question: "Wenn Menschen aus verschiedenen Kulturen zusammenleben, sind Respekt und ___ wichtig.", answer: "Verständnis", hints: ["Man hört einander zu und fragt nach.", "V… hilft, Missverständnisse zu klären."] },
     ],
   },
   {
@@ -667,4 +669,4 @@ const grade4RZG: Topic[] = [
   },
 ];
 
-export default grade4RZG;
+export default replaceTopicExercises(grade4RZG, grade4RZGReplacements);

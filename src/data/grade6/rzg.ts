@@ -1,4 +1,6 @@
 import { Topic } from "@/types/exercise";
+import { grade6RZGReplacements } from "../levelAppropriateTopicSets";
+import { replaceTopicExercises } from "../normalizedTopicExercises";
 
 const grade6RZG: Topic[] = [
   {
@@ -668,4 +670,4 @@ const grade6RZG: Topic[] = [
   },
 ];
 
-export default grade6RZG;
+export default replaceTopicExercises(grade6RZG, grade6RZGReplacements);

@@ -1,4 +1,6 @@
 import { Topic } from "@/types/exercise";
+import { grade2ScienceReplacements } from "../levelAppropriateTopicSets";
+import { replaceTopicExercises } from "../normalizedTopicExercises";
 
 const grade2Science: Topic[] = [
   {
@@ -1291,4 +1293,4 @@ const grade2Science: Topic[] = [
   },
 ];
 
-export default grade2Science;
+export default replaceTopicExercises(grade2Science, grade2ScienceReplacements);
