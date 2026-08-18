@@ -40,6 +40,9 @@ import { localizeExercise } from "@/lib/exerciseLocalization";
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
 
 const FREE_EXERCISE_LIMIT = 20;
+const FREE_TRIAL_CHECKOUT_OPTIONS = { trialDays: 7 };
+const FREE_TRIAL_SIGNUP_URL = "/signup?checkout=yearly&source=free_exercise_trial_bridge&trial=7";
+const FREE_TRIAL_LOGIN_URL = "/login?checkout=yearly&source=free_exercise_trial_bridge&trial=7";
 
 function calcStars(score: number, total: number) {
   const pct = score / total;
@@ -153,7 +156,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const level = getLevelForXp(profile.xp);
   const nextLevel = getNextLevel(profile.xp);
   
-  // Track anonymous user exercises (show signup after 5)
+  // Track anonymous free usage and offer the trial bridge at the free limit.
   const [anonExerciseCount, setAnonExerciseCount] = useState(0);
   const [showSignupPrompt, setShowSignupPrompt] = useState(false);
   const isAnonymous = !session;
@@ -690,23 +693,28 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         <div className="text-center space-y-5 py-8 max-w-sm mx-auto">
           <Image src="/cleverli-wave.png" alt="Cleverli" width={110} height={110} className="mx-auto drop-shadow-md animate-cleverli-jump" />
           <h2 className="text-xl font-bold text-gray-800">
-            {lang === "fr" ? "Tu as terminé les 20 exercices gratuits 🎉" : lang === "it" ? "Hai completato i 20 esercizi gratuiti 🎉" : lang === "en" ? "You've completed the 20 free exercises 🎉" : "Du hast die 20 kostenlosen Aufgaben abgeschlossen 🎉"}
+            {lang === "fr" ? "Tu as terminé les 20 exercices gratuits 🎉" : lang === "it" ? "Hai completato i 20 esercizi gratuiti 🎉" : lang === "en" ? "You've completed the 20 free exercises 🎉" : "Du hast 20 Aufgaben geschafft 🎉"}
           </h2>
           <p className="text-gray-500 text-sm">
-            {lang === "fr" ? "Crée un compte pour enregistrer tes progrès et débloquer Premium." : lang === "it" ? "Crea un account per salvare i tuoi progressi e sbloccare Premium." : lang === "en" ? "Create an account to save progress and unlock Premium." : "Erstelle ein Konto, um deinen Fortschritt zu speichern und Premium freizuschalten."}
+            {lang === "fr" ? "Teste Premium pendant 7 jours: tous les exercices, toutes les classes, aucun débit aujourd'hui." : lang === "it" ? "Prova Premium per 7 giorni: tutti gli esercizi, tutte le classi, nessun addebito oggi." : lang === "en" ? "Try Premium for 7 days: all exercises, all grades, no charge today." : "Teste jetzt 7 Tage Premium: alle Übungen, alle Klassen, heute CHF 0."}
           </p>
+          <div className="mx-auto w-full max-w-xs rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-left text-sm text-green-800 space-y-1">
+            <div>✅ {lang === "en" ? "Progress saved" : "Fortschritt speichern"}</div>
+            <div>✅ {lang === "en" ? "Up to 3 child profiles" : "Bis zu 3 Kinderprofile"}</div>
+            <div>✅ {lang === "en" ? "Charge only after 7 days" : "Zahlung erst nach 7 Tagen"}</div>
+          </div>
           <div className="flex flex-col gap-3 w-full max-w-xs mx-auto">
-            <Link href="/signup"
+            <Link href={FREE_TRIAL_SIGNUP_URL}
               className="block text-center bg-green-700 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 active:scale-95 transition-all shadow-md text-base">
-              🎉 {lang === "fr" ? "Créer un compte" : lang === "it" ? "Crea account" : lang === "en" ? "Create account" : "Konto erstellen"}
+              🎉 {lang === "fr" ? "Tester 7 jours gratuitement" : lang === "it" ? "Prova gratis per 7 giorni" : lang === "en" ? "Start 7-day free trial" : "7 Tage gratis testen"}
             </Link>
-            <Link href="/login"
+            <Link href={FREE_TRIAL_LOGIN_URL}
               className="block text-center border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
               {lang === "fr" ? "J'ai déjà un compte" : lang === "it" ? "Ho già un account" : lang === "en" ? "I already have an account" : "Ich habe bereits ein Konto"}
             </Link>
           </div>
           <p className="text-xs text-gray-400">
-            {lang === "fr" ? "Premium débloque tous les exercices" : lang === "it" ? "Premium sblocca tutti gli esercizi" : lang === "en" ? "Premium unlocks all exercises" : "Premium schaltet alle Aufgaben frei"}
+            {lang === "fr" ? "Annulable avant la fin des 7 jours." : lang === "it" ? "Puoi annullare prima della fine dei 7 giorni." : lang === "en" ? "Cancel before the 7 days end." : "Vor Ablauf der 7 Tage kündbar. Danach CHF 99/Jahr."}
           </p>
         </div>
       );
@@ -716,36 +724,37 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       <div className="text-center space-y-4 py-8 max-w-sm mx-auto">
         <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={110} height={110} className="mx-auto drop-shadow-md" />
         <h2 className="text-xl font-bold text-gray-800">
-          {tr("unlockTitle")}
+          {lang === "fr" ? "Prêt pour Premium ?" : lang === "it" ? "Pronto per Premium?" : lang === "en" ? "Ready for Premium?" : "Bereit für Premium?"}
         </h2>
         <p className="text-gray-500 text-sm">
-          {tr("unlockDesc").replace("{n}", String(FREE_EXERCISE_LIMIT))}
-          <br/>
-          {tr("unlockDetail")}
+          {lang === "fr" ? "Teste 7 jours gratuitement: tous les exercices, toutes les classes, aucun débit aujourd'hui." : lang === "it" ? "Prova gratis per 7 giorni: tutti gli esercizi, tutte le classi, nessun addebito oggi." : lang === "en" ? "Try 7 days free: all exercises, all grades, no charge today." : "Teste 7 Tage gratis: alle Übungen, alle Klassen, heute CHF 0."}
         </p>
         <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm text-green-800 text-left space-y-1 w-full max-w-xs">
-          <div>✅ {tr("unlockFeature1")}</div>
-          <div>✅ {tr("premiumF1")}</div>
-          <div>✅ {tr("premiumF3")}</div>
-          <div>✅ {tr("premiumF4")}</div>
+          <div>✅ {lang === "en" ? "Progress saved" : "Fortschritt speichern"}</div>
+          <div>✅ {lang === "en" ? "All subjects and grades" : "Alle Fächer und Klassen"}</div>
+          <div>✅ {lang === "en" ? "Up to 3 child profiles" : "Bis zu 3 Kinderprofile"}</div>
+          <div>✅ {lang === "en" ? "Charge only after 7 days" : "Zahlung erst nach 7 Tagen"}</div>
         </div>
         <div className="flex flex-col gap-2 w-full max-w-xs">
           <button type="button"
-            onClick={() => startCheckout("monthly", "exercise_paywall", uid)}
+            onClick={() => startCheckout("yearly", "exercise_paywall_trial_bridge", uid, FREE_TRIAL_CHECKOUT_OPTIONS)}
             className="block text-center bg-green-700 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 active:scale-95 transition-all shadow-md text-base">
-TWINT / Karte — CHF 9.90{tr("perMonth")}
+            {lang === "fr" ? "Tester Premium 7 jours" : lang === "it" ? "Prova Premium 7 giorni" : lang === "en" ? "Start 7-day Premium trial" : "7 Tage Premium gratis testen"}
           </button>
           <button type="button"
-            onClick={() => startCheckout("yearly", "exercise_paywall", uid)}
+            onClick={() => startCheckout("monthly", "exercise_paywall_trial_bridge", uid, FREE_TRIAL_CHECKOUT_OPTIONS)}
             className="block text-center border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-50 active:scale-95 transition-all text-sm">
-{tr("yearlyOption") ?? "Jährlich — CHF 99/Jahr"}
+            {lang === "fr" ? "Mensuel après le test" : lang === "it" ? "Mensile dopo il test" : lang === "en" ? "Monthly after trial" : "Monatlich nach dem Test"}
           </button>
           {!uid && (
-            <Link href="/signup" className="block text-center text-xs text-gray-400 hover:text-gray-600 underline pt-1">
-              {tr("createFreeAccountFirst") ?? "Zuerst kostenloses Konto erstellen"}
+            <Link href={FREE_TRIAL_LOGIN_URL} className="block text-center text-xs text-gray-400 hover:text-gray-600 underline pt-1">
+              {lang === "fr" ? "J'ai déjà un compte" : lang === "it" ? "Ho già un account" : lang === "en" ? "I already have an account" : "Ich habe bereits ein Konto"}
             </Link>
           )}
         </div>
+        <p className="text-xs text-gray-400">
+          {lang === "fr" ? "Annulable avant la fin des 7 jours." : lang === "it" ? "Puoi annullare prima della fine dei 7 giorni." : lang === "en" ? "Cancel before the 7 days end." : "Vor Ablauf der 7 Tage kündbar. Danach CHF 99/Jahr."}
+        </p>
         <div>
           <Link href={`/learn/${grade}/${subject}`} className="text-sm text-gray-400 hover:text-gray-600 underline">
             {tr("selectTopic")}
@@ -1021,15 +1030,15 @@ TWINT / Karte — CHF 9.90{tr("perMonth")}
       })() && (
         <p className="text-center text-xs text-gray-400">
           {tr("freeNoteBanner").replace("{n}", String(freeExercisesRemaining))}{" "}
-          <button type="button" onClick={() => startCheckout("monthly", "free_limit_notice", uid)} className="text-green-700 underline font-semibold">
-            {tr("unlockAll")}
+          <button type="button" onClick={() => startCheckout("yearly", "free_limit_trial_notice", uid, FREE_TRIAL_CHECKOUT_OPTIONS)} className="text-green-700 underline font-semibold">
+            7 Tage Premium testen
           </button>
         </p>
       )}
 
       <PushPrompt correctCount={correctAnswerCount} />
 
-      {/* Anonymous user signup prompt after 5 exercises */}
+      {/* Anonymous user trial bridge at the free limit */}
       {isAnonymous && (
         <SignupPromptModal 
           isOpen={showSignupPrompt} 

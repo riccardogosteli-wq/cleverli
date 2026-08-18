@@ -44,7 +44,14 @@ const freeTrialUrl = "/learn/1/math/zahlen-1-10";
 export default function AdsPrimarschuleClient() {
   const { session } = useSession();
   const uid = session?.userId ?? "";
-  const checkoutDestination = (plan: "monthly" | "yearly") => `/api/checkout?plan=${plan}`;
+  const checkoutDestination = (plan: "monthly" | "yearly", trial = false) => `/api/checkout?plan=${plan}${trial ? "&trial=7" : ""}`;
+  const trackTrialCta = (location: "hero" | "pricing" | "bottom", plan: "monthly" | "yearly") => {
+    trackAdsLpCtaClick("paid", location, checkoutDestination(plan, true), plan, {
+      experiment: "ads_lp_7_day_trial",
+      variant: "control",
+      trial_days: 7,
+    });
+  };
   const variant = useAdsLpVariant("primarschule_uebungen", "/primarschule-uebungen");
   const gradeLinks = getGradeSubjectSeoLinks(6);
   const seoCluster = (
@@ -123,15 +130,15 @@ export default function AdsPrimarschuleClient() {
               <button
                 type="button"
                 onClick={() => {
-                  trackAdsLpCtaClick("paid", "hero", checkoutDestination("yearly"), "yearly");
-                  startCheckout("yearly", "primarschule_uebungen_hero", uid);
+                  trackTrialCta("hero", "yearly");
+                  startCheckout("yearly", "primarschule_uebungen_hero_trial_bridge", uid, { trialDays: 7 });
                 }}
                 className="rounded-full border-2 border-green-700 px-7 py-4 text-center text-base font-bold text-green-800 transition-colors hover:bg-green-50"
               >
-                Jahresabo ansehen
+                7 Tage Premium testen
               </button>
             </div>
-            <p className="mt-3 text-sm text-gray-500">Premium danach ab CHF 8.25 / Monat · bis zu 3 Kinderprofile · TWINT & Kreditkarte</p>
+            <p className="mt-3 text-sm text-gray-500">Heute CHF 0 · danach ab CHF 8.25 / Monat · bis zu 3 Kinderprofile</p>
           </div>
 
           <div className="relative min-h-[320px] overflow-hidden rounded-3xl bg-white shadow-xl shadow-green-100 ring-1 ring-green-100 sm:min-h-[380px]">
@@ -299,7 +306,7 @@ export default function AdsPrimarschuleClient() {
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Preis</p>
-            <h2 className="mt-2 text-3xl font-black text-gray-950">Für Familien gemacht, nicht pro Kind verrechnet.</h2>
+            <h2 className="mt-2 text-3xl font-black text-gray-950">20 Aufgaben gratis, danach 7 Tage Premium testen.</h2>
           </div>
           <div className="mt-8 grid items-stretch gap-5 md:grid-cols-3">
             <div className="flex min-h-[220px] flex-col rounded-2xl border-2 border-gray-100 bg-white p-6 shadow-sm">
@@ -322,12 +329,12 @@ export default function AdsPrimarschuleClient() {
               <button
                 type="button"
                 onClick={() => {
-                  trackAdsLpCtaClick("paid", "pricing", checkoutDestination("monthly"), "monthly");
-                  startCheckout("monthly", "primarschule_uebungen_pricing", uid);
+                  trackTrialCta("pricing", "monthly");
+                  startCheckout("monthly", "primarschule_uebungen_pricing_trial_bridge", uid, { trialDays: 7 });
                 }}
                 className="mt-auto block rounded-full bg-green-700 px-5 py-3 text-center text-sm font-bold text-white hover:bg-green-800"
               >
-                Monatlich starten
+                7 Tage gratis testen
               </button>
             </div>
 
@@ -339,16 +346,16 @@ export default function AdsPrimarschuleClient() {
               <button
                 type="button"
                 onClick={() => {
-                  trackAdsLpCtaClick("paid", "pricing", checkoutDestination("yearly"), "yearly");
-                  startCheckout("yearly", "primarschule_uebungen_pricing", uid);
+                  trackTrialCta("pricing", "yearly");
+                  startCheckout("yearly", "primarschule_uebungen_pricing_trial_bridge", uid, { trialDays: 7 });
                 }}
                 className="mt-auto block rounded-full bg-white px-5 py-3 text-center text-sm font-black text-green-800 hover:bg-green-50"
               >
-                Jährlich für bis zu 3 Kinder
+                7 Tage gratis testen
               </button>
             </div>
           </div>
-          <p className="mt-5 text-center text-sm text-gray-500">Sicher bezahlen mit TWINT oder Kreditkarte. Premium schaltet alle Aufgaben, Fächer und Klassen frei.</p>
+          <p className="mt-5 text-center text-sm text-gray-500">Heute CHF 0. Zahlung erst nach 7 Tagen, wenn du nicht vorher kündigst.</p>
         </div>
       </section>
 
@@ -379,12 +386,12 @@ export default function AdsPrimarschuleClient() {
           <button
             type="button"
             onClick={() => {
-              trackAdsLpCtaClick("paid", "bottom", checkoutDestination("yearly"), "yearly");
-              startCheckout("yearly", "primarschule_uebungen_bottom", uid);
+              trackTrialCta("bottom", "yearly");
+              startCheckout("yearly", "primarschule_uebungen_bottom_trial_bridge", uid, { trialDays: 7 });
             }}
             className="rounded-full bg-white px-7 py-4 text-base font-black text-green-800 hover:bg-green-50"
           >
-            CHF 99/Jahr · bis zu 3 Kinder
+            7 Tage Premium gratis testen
           </button>
           <Link
             href={freeTrialUrl}
