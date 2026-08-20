@@ -69,6 +69,155 @@ const germanCtaTopic: Record<number, string> = {
 };
 
 const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
+  "mathe-uebungen-1-klasse": {
+    title: "Mathe Übungen 1. Klasse - Primarschule Schweiz",
+    description:
+      "Mathe Übungen 1. Klasse für die Schweizer Primarschule: Zahlen bis 20, Plus, Minus, Mengen und Formen online üben.",
+    lead:
+      "Mathe Übungen für die 1. Klasse: Zahlen verstehen, Mengen vergleichen, Plus und Minus üben und erste Aufgaben mit direkter Rückmeldung lösen.",
+    focusItems: [
+      "Zahlen, Mengen und Reihenfolgen sicherer erkennen",
+      "Plus und Minus im Zahlenraum bis 20 üben",
+      "Formen, Muster und einfache Sachaufgaben verstehen",
+    ],
+    parentAnswer:
+      "In der 1. Klasse zählt vor allem Sicherheit mit Zahlen, Mengen und einfachen Rechenwegen. Cleverli macht daraus kurze Übungen, die Kinder ohne lange Vorbereitung starten können.",
+    detailIntro:
+      "Die Seite ist auf den Einstieg in die Primarschul-Mathe ausgerichtet. Sie vermeidet lange Theorie und gibt Kindern direkt Rückmeldung, wenn eine Antwort stimmt oder ein Tipp hilft.",
+    detailItems: [
+      {
+        title: "Zahlen bis 20",
+        body: "Kinder üben Zahlen lesen, zählen, vergleichen und ordnen, damit die Grundlagen für späteres Rechnen sitzen.",
+      },
+      {
+        title: "Plus und Minus",
+        body: "Einfache Rechnungen werden in kleinen Schritten trainiert, passend für kurze Übungsrunden daheim.",
+      },
+      {
+        title: "Muster und Formen",
+        body: "Mengen, Formen und Muster helfen, mathematische Zusammenhänge früh sichtbar zu machen.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Welche Mathe-Themen sind in der 1. Klasse wichtig?",
+        answer:
+          "Wichtig sind Zahlen bis 20, Mengen, Plus, Minus, Muster, Formen und erste Sachaufgaben.",
+      },
+      {
+        question: "Kann mein Kind selbstständig üben?",
+        answer:
+          "Ja. Die Aufgaben sind kurz, geben direkt Rückmeldung und bieten Tipps, wenn dein Kind nicht weiterkommt.",
+      },
+      {
+        question: "Ist das für die Schweiz passend?",
+        answer:
+          "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet.",
+      },
+    ],
+  },
+  "mathe-uebungen-2-klasse": {
+    title: "Mathe Übungen 2. Klasse - Rechnen & Einmaleins",
+    description:
+      "Mathe Übungen 2. Klasse für die Schweizer Primarschule: Rechnen bis 100, Einmaleins, Uhrzeit, Geld und Textaufgaben.",
+    lead:
+      "Mathe Übungen für die 2. Klasse: Rechnen bis 100 festigen, erste Einmaleins-Reihen aufbauen und Aufgaben im Alltag besser verstehen.",
+    focusItems: [
+      "Addition und Subtraktion bis 100 festigen",
+      "Einmaleins-Reihen Schritt für Schritt aufbauen",
+      "Uhrzeit, Geld und einfache Textaufgaben üben",
+    ],
+    parentAnswer:
+      "In der 2. Klasse wird Mathe spürbar breiter. Cleverli hilft mit kurzen Runden für Rechnen bis 100, Einmaleins und Alltagsthemen wie Geld oder Uhrzeit.",
+    detailIntro:
+      "Die Übungen sind so aufgebaut, dass Kinder einzelne Grundlagen wiederholen können, ohne gleich eine ganze Arbeitsmappe durcharbeiten zu müssen.",
+    detailItems: [
+      {
+        title: "Rechnen bis 100",
+        body: "Plus und Minus werden mit passenden Aufgaben gefestigt, damit Rechenwege sicherer werden.",
+      },
+      {
+        title: "Einmaleins vorbereiten",
+        body: "Kinder üben Reihen, Muster und Malaufgaben, bevor gemischte 1x1-Aufgaben schwieriger werden.",
+      },
+      {
+        title: "Alltagsmathe",
+        body: "Uhrzeit, Geld, Längen und kleine Textaufgaben bringen Mathe näher an Situationen aus Schule und Alltag.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Ist Einmaleins in der 2. Klasse schon dabei?",
+        answer:
+          "Ja. Viele Kinder bauen das Einmaleins in der 2. Klasse auf und festigen es danach weiter.",
+      },
+      {
+        question: "Kann ich gezielt nur Rechnen bis 100 üben lassen?",
+        answer:
+          "Ja. Du kannst direkt passende Themen auswählen und dein Kind mit kurzen Aufgaben starten lassen.",
+      },
+      {
+        question: "Gibt es auch Textaufgaben?",
+        answer:
+          "Ja. Cleverli enthält auch einfache Sach- und Textaufgaben, damit Kinder Rechnen im Kontext üben.",
+      },
+    ],
+    extraLinks: [
+      { href: "/einmaleins-ueben", label: "Einmaleins üben" },
+      { href: "/1x1-spiele", label: "1x1 Spiele" },
+    ],
+  },
+  "deutsch-uebungen-1-klasse": {
+    title: "Deutsch Übungen 1. Klasse - Lesen & Schreiben",
+    description:
+      "Deutsch Übungen 1. Klasse für die Schweizer Primarschule: Buchstaben, Laute, Wörter, erste Sätze und Lesen lernen.",
+    lead:
+      "Deutsch Übungen für die 1. Klasse: Buchstaben, Laute, erste Wörter und kurze Sätze üben, damit Lesen und Schreiben sicherer werden.",
+    focusItems: [
+      "Buchstaben und Laute erkennen",
+      "Wörter und erste Sätze lesen",
+      "Grossschreibung und einfache Schreibmuster üben",
+    ],
+    parentAnswer:
+      "In der 1. Klasse geht es um den Einstieg ins Lesen und Schreiben. Cleverli gibt Kindern kleine, klare Aufgaben, die sofort Rückmeldung geben und nicht überfordern.",
+    detailIntro:
+      "Die Übungen passen besonders für Kinder, die Buchstaben, Wörter und einfache Sätze häufiger wiederholen sollen.",
+    detailItems: [
+      {
+        title: "Lesen lernen",
+        body: "Kinder üben Buchstaben, Laute, Wörter und erste Sätze mit kurzen Aufgaben und Vorlesen.",
+      },
+      {
+        title: "Schreiben vorbereiten",
+        body: "Einfache Wörter, Grossschreibung und passende Satzanfänge helfen beim Aufbau sicherer Schreibgrundlagen.",
+      },
+      {
+        title: "Selbstständiger üben",
+        body: "Tipps und direkte Rückmeldung helfen, ohne dass Eltern jede Aufgabe vorbereiten müssen.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Hilft Cleverli beim Lesen lernen?",
+        answer:
+          "Ja. Es gibt Übungen zu Buchstaben, Wörtern, Sätzen und erstem Leseverständnis.",
+      },
+      {
+        question: "Ist das für Kinder am Anfang der 1. Klasse geeignet?",
+        answer:
+          "Ja. Dein Kind kann mit einfachen Themen starten und später zu Sätzen und kleinen Texten wechseln.",
+      },
+      {
+        question: "Kann mein Kind Aufgaben vorlesen lassen?",
+        answer:
+          "Ja. Die Vorlesen-Funktion unterstützt Kinder, die noch nicht alles flüssig lesen.",
+      },
+    ],
+    extraLinks: [
+      { href: "/lesen-lernen", label: "Lesen lernen" },
+      { href: "/deutsch-uebungen-kinder", label: "Deutsch Übungen für Kinder" },
+    ],
+  },
   "deutsch-uebungen-6-klasse": {
     title: "Deutsch Übungen 6. Klasse - Lehrplan 21 Schweiz",
     description:

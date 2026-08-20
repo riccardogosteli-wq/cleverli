@@ -5,8 +5,8 @@ export const einmaleinsUebenConfig: IntentLandingPageConfig = {
   path: "/einmaleins-ueben",
   eyebrow: "Einmaleins üben · 20 Aufgaben gratis",
   title: "Einmaleins online üben",
-  lead: "Kurze 1x1-Aufgaben für die Schweizer Primarschule. Dein Kind übt im Browser, bekommt direkt Feedback und kann sich Tipps vorlesen lassen.",
-  badges: ["2er, 5er, 10er & mehr", "Mit Vorlesen und Tipps", "Nach Lehrplan 21"],
+  lead: "Kurze 1x1-Aufgaben für die Schweizer Primarschule. Dein Kind übt einzelne Reihen, gemischte Aufgaben und kleine Textaufgaben direkt im Browser.",
+  badges: ["2er bis 10er-Reihen", "Gemischt üben", "Nach Lehrplan 21"],
   freeTrialUrl: "/learn/2/math/einmaleins",
   checkoutSource: "einmaleins_ueben",
   heroImage: "/images/scenes/cleverli-math-ask.jpg",
@@ -28,12 +28,12 @@ export const einmaleinsUebenConfig: IntentLandingPageConfig = {
     {
       icon: "✕",
       title: "Malreihen Schritt für Schritt",
-      body: "Von einfachen Reihen bis zu gemischten Aufgaben. Dein Kind baut Sicherheit auf, statt nur auswendig zu raten.",
+      body: "Erst vertraute Reihen wie 2er, 5er und 10er, danach gemischte Aufgaben. So entsteht Sicherheit statt reines Raten.",
     },
     {
-      icon: "🔊",
-      title: "Aufgaben vorlesen lassen",
-      body: "Praktisch, wenn ein Kind die Aufgabe hören möchte oder noch nicht alles flüssig liest.",
+      icon: "↔",
+      title: "Mal und geteilt verbinden",
+      body: "Einmaleins wird stärker, wenn Kinder auch Umkehraufgaben verstehen: 6 mal 4 und 24 geteilt durch 6 gehören zusammen.",
     },
     {
       icon: "💡",
@@ -41,12 +41,32 @@ export const einmaleinsUebenConfig: IntentLandingPageConfig = {
       body: "Wenn es hakt, hilft Cleverli mit einem Hinweis weiter, ohne die Aufgabe sofort komplett zu lösen.",
     },
   ],
-  trustTitle: "Einmaleins wird sicherer, wenn Kinder regelmässig kurze Runden schaffen.",
-  trustBody: "Cleverli macht aus 1x1-Training kleine Runden mit sofortigem Feedback. Eltern sehen, was erledigt wurde, und Kinder merken schneller: Ich komme vorwärts.",
+  trustTitle: "Einmaleins wird sicherer, wenn Kinder Reihen wirklich festigen.",
+  trustBody: "Cleverli verbindet kurze 1x1-Runden mit direkter Rückmeldung, Vorlesen und Tipps. Eltern sehen Fortschritt, Kinder merken schneller, welche Reihen schon sitzen und welche noch Übung brauchen.",
+  seoDetail: {
+    eyebrow: "1x1 gezielt festigen",
+    title: "Einmaleins üben ohne lange Vorbereitung",
+    body: "Viele Kinder können einzelne Reihen schnell aufsagen, stolpern aber bei gemischten Aufgaben oder Divisionen. Cleverli hilft, diese Lücke mit kurzen, wiederholbaren Übungsrunden zu schliessen.",
+    items: [
+      {
+        title: "Reihen einzeln trainieren",
+        body: "2er-, 5er- und 10er-Reihen geben Sicherheit. Danach können schwierigere Reihen wie 6er, 7er oder 8er dazukommen.",
+      },
+      {
+        title: "Gemischte Aufgaben üben",
+        body: "Wenn Reihen durcheinander erscheinen, zeigt sich, ob das 1x1 wirklich sitzt. Genau dafür sind kurze Browser-Runden ideal.",
+      },
+      {
+        title: "Division mitdenken",
+        body: "Zu jeder Malaufgabe gehört auch eine Umkehraufgabe. So wird aus Auswendiglernen echtes Zahlenverständnis.",
+      },
+    ],
+  },
   faq: [
     ["Ist die Seite fürs 1x1 gedacht?", "Ja. Der Einstieg führt direkt zu Einmaleins-Aufgaben für die Primarschule."],
+    ["Welche Malreihen kann mein Kind üben?", "Cleverli deckt einfache Reihen, gemischte 1x1-Aufgaben und passende Divisionen ab."],
+    ["Passt das für die 2. Klasse?", "Ja. Das Einmaleins wird typischerweise ab der 2. Klasse aufgebaut und später regelmässig gefestigt."],
     ["Kann mein Kind die Aufgaben hören?", "Ja. In den Übungen gibt es eine Vorlesen-Funktion und zusätzliche Tipps."],
-    ["Brauche ich eine App?", "Nein. Cleverli läuft direkt im Browser auf Handy, Tablet und Computer."],
     ["Kann ich zuerst testen?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
   ],
 };
@@ -158,8 +178,8 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
   path: "/deutsch-uebungen-kinder",
   eyebrow: "Deutsch Übungen für Kinder · Primarschule",
   title: "Deutsch Übungen für Kinder in der Primarschule",
-  lead: "Cleverli gibt Kindern kurze Deutsch-Aufgaben mit direktem Feedback. Lesen, Rechtschreibung, Grammatik und Satzbau werden in ruhigen, klaren Übungsrunden gefestigt.",
-  badges: ["1.–6. Klasse", "Lesen, Wörter, Grammatik", "20 Aufgaben gratis"],
+  lead: "Kurze Deutsch-Übungen für Lesen, Rechtschreibung, Grammatik und Satzbau. Dein Kind übt in klaren Runden und bekommt sofort Rückmeldung.",
+  badges: ["1.–6. Klasse", "Lesen & Grammatik", "20 Aufgaben gratis"],
   freeTrialUrl: "/learn/1/german/saetze-lesen",
   checkoutSource: "deutsch_uebungen_kinder",
   heroImage: "/images/scenes/cleverli-reading-abc.jpg",
@@ -181,17 +201,17 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
     {
       icon: "📖",
       title: "Lesen sicherer machen",
-      body: "Kurze Aufgaben helfen beim genauen Lesen, Verstehen und Wiederholen ohne lange Vorbereitung.",
+      body: "Von ersten Sätzen bis zu Textverständnis: kurze Aufgaben helfen beim genauen Lesen, Verstehen und Wiederholen.",
     },
     {
       icon: "✍️",
       title: "Rechtschreibung üben",
-      body: "Wörter, Laute und Schreibmuster werden Schritt für Schritt gefestigt, mit direkter Rückmeldung.",
+      body: "Wörter, Laute, Gross- und Kleinschreibung sowie typische Schreibmuster werden Schritt für Schritt gefestigt.",
     },
     {
       icon: "💬",
       title: "Grammatik und Satzbau",
-      body: "Sätze, Wortarten und passende Formen werden in kleinen Einheiten geübt, statt trocken erklärt.",
+      body: "Wortarten, Satzzeichen, Zeitformen und Satzbau werden in kleinen Einheiten geübt, statt trocken erklärt.",
     },
   ],
   preview: {
@@ -209,12 +229,117 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
       ["gross", "Adjektiv"],
     ],
   },
-  trustTitle: "Deutsch üben klappt besser mit kurzen, klaren Aufgaben.",
-  trustBody: "Cleverli bündelt Deutsch-Übungen für die Schweizer Primarschule in einem klaren Ablauf. Kinder bekommen Hinweise und Vorlesen, Eltern sehen Fortschritt und finden schnell passende Aufgaben.",
+  trustTitle: "Deutsch üben klappt besser, wenn Kinder sofort merken, was stimmt.",
+  trustBody: "Cleverli bündelt Deutsch-Übungen für die Schweizer Primarschule in einem ruhigen Ablauf. Kinder bekommen Hinweise und Vorlesen, Eltern sehen Fortschritt und finden schnell passende Themen.",
+  seoDetail: {
+    eyebrow: "Deutsch gezielt üben",
+    title: "Von Lesen bis Grammatik: kurze Deutsch-Runden für daheim",
+    body: "Deutsch ist in der Primarschule kein einzelnes Thema. Kinder brauchen Übung beim Lesen, Verstehen, Schreiben, Wortschatz und bei Grammatik. Cleverli bündelt diese Bereiche so, dass Eltern schnell passende Aufgaben finden.",
+    items: [
+      {
+        title: "Lesen und verstehen",
+        body: "Kurze Aufgaben helfen Kindern, Wörter, Sätze und Texte genauer zu lesen und Antworten im Text zu finden.",
+      },
+      {
+        title: "Rechtschreibung festigen",
+        body: "Grossschreibung, Wortmuster und typische Stolperstellen werden in kleinen Einheiten wiederholt.",
+      },
+      {
+        title: "Grammatik anwenden",
+        body: "Wortarten, Zeitformen und Satzbau werden direkt in Aufgaben geübt, damit Regeln nicht nur Theorie bleiben.",
+      },
+    ],
+  },
   faq: [
     ["Welche Deutsch-Themen sind drin?", "Lesen, Rechtschreibung, Grammatik, Satzbau, Wortschatz und weitere Primarschul-Themen."],
+    ["Für welche Klasse passen die Übungen?", "Cleverli deckt die 1. bis 6. Klasse ab. Kinder können nach Klasse und Thema starten."],
+    ["Gibt es auch Leseverständnis?", "Ja. Neben Buchstaben, Wörtern und Sätzen gibt es auch Textverständnis und Lesestrategien."],
     ["Ist Cleverli nach Lehrplan 21 aufgebaut?", "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet."],
     ["Kann mein Kind selbstständig üben?", "Ja. Vorlesen, Tipps und sofortige Rückmeldung helfen beim selbstständigen Üben."],
-    ["Kann ich zuerst testen?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
+  ],
+};
+
+export const lesenLernenConfig: IntentLandingPageConfig = {
+  pageKey: "lesen_lernen",
+  path: "/lesen-lernen",
+  eyebrow: "Lesen lernen · 1. und 2. Klasse",
+  title: "Lesen lernen online üben",
+  lead: "Kurze Leseübungen für Kinder in der Primarschule: Buchstaben erkennen, Wörter verstehen und erste Sätze sicher lesen.",
+  badges: ["Buchstaben & Laute", "Wörter und Sätze", "20 Aufgaben gratis"],
+  freeTrialUrl: "/learn/1/german/saetze-lesen",
+  checkoutSource: "lesen_lernen",
+  heroImage: "/images/scenes/cleverli-reading-abc.jpg",
+  imageAlt: "Cleverli begleitet ein Kind beim Lesen lernen",
+  sample: {
+    grade: "1. Klasse Deutsch",
+    question: "Welcher Satz passt zum Bild?",
+    answers: ["Mia malt.", "Mia rennt.", "Mia schläft."],
+    correctIndex: 0,
+    tip: "Tipp: Lies zuerst das Verb. Was macht Mia?",
+  },
+  stats: [
+    ["1.–2.", "Klasse Einstieg"],
+    ["Lesen", "Wörter und Sätze"],
+    ["20", "Aufgaben gratis"],
+    ["LP21", "Schweizer Primarschule"],
+  ],
+  sections: [
+    {
+      icon: "🔤",
+      title: "Buchstaben und Laute festigen",
+      body: "Kinder üben Buchstaben, Anlaute und einfache Wörter in kurzen Runden, die nicht überfordern.",
+    },
+    {
+      icon: "📖",
+      title: "Sätze genau lesen",
+      body: "Erste Sätze werden Schritt für Schritt verstanden: Wer macht was, welches Wort passt, was steht wirklich da?",
+    },
+    {
+      icon: "💡",
+      title: "Hilfe ohne Druck",
+      body: "Vorlesen, Tipps und direkte Rückmeldung helfen, wenn ein Kind stockt oder ein Wort noch unsicher ist.",
+    },
+  ],
+  preview: {
+    classic: {
+      grade: "1. Klasse Deutsch",
+      question: "Welches Wort beginnt mit M?",
+      answers: ["Mond", "Sonne", "Ball"],
+      correctIndex: 0,
+      tip: "Tipp: Sprich die Wörter langsam aus.",
+    },
+    exerciseTitle: "Ordne Wort und Bedeutung.",
+    pairs: [
+      ["lesen", "mit den Augen Wörter verstehen"],
+      ["Satz", "mehrere Wörter zusammen"],
+      ["Buchstabe", "Zeichen wie A, M oder S"],
+    ],
+  },
+  trustTitle: "Lesen lernen braucht viele kleine Erfolgsmomente.",
+  trustBody: "Cleverli macht Leseübungen überschaubar: kurze Aufgaben, klare Rückmeldung und Unterstützung genau dann, wenn dein Kind sie braucht.",
+  seoDetail: {
+    eyebrow: "Leseeinstieg",
+    title: "Buchstaben, Wörter und Sätze Schritt für Schritt üben",
+    body: "Lesen lernen braucht Wiederholung ohne Druck. Cleverli startet bei einfachen Bausteinen und führt Kinder langsam zu ganzen Sätzen und erstem Textverständnis.",
+    items: [
+      {
+        title: "Buchstaben hören und erkennen",
+        body: "Anlaute und Buchstaben werden in kurzen Aufgaben wiederholt, damit Kinder Wörter sicherer entschlüsseln.",
+      },
+      {
+        title: "Wörter verstehen",
+        body: "Kinder üben, Wörter Bildern, Bedeutungen oder passenden Sätzen zuzuordnen.",
+      },
+      {
+        title: "Erste Sätze lesen",
+        body: "Kurze Sätze helfen beim genauen Lesen: Wer macht was, welches Wort passt, was steht wirklich da?",
+      },
+    ],
+  },
+  faq: [
+    ["Für wen ist diese Seite gedacht?", "Für Kinder, die Buchstaben, Wörter und erste Sätze lesen lernen oder in der 1. und 2. Klasse mehr Übung brauchen."],
+    ["Ist das dasselbe wie Deutsch Übungen?", "Nein. Diese Seite fokussiert gezielt auf den Leseeinstieg: Buchstaben, Wörter, Sätze und erstes Textverständnis."],
+    ["Kann mein Kind die Aufgaben hören?", "Ja. Cleverli kann Aufgaben vorlesen und gibt Tipps, wenn ein Kind nicht weiterkommt."],
+    ["Kann ich gratis starten?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
   ],
 };

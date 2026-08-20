@@ -71,6 +71,11 @@ export const ORGANIC_LANDING_PAGES = [
     description: "Lesen, Rechtschreibung, Grammatik und Satzbau festigen.",
   },
   {
+    href: "/lesen-lernen",
+    title: "Lesen lernen",
+    description: "Buchstaben, Wörter und erste Sätze online üben.",
+  },
+  {
     href: "/einmaleins-ueben",
     title: "Einmaleins üben",
     description: "1x1-Aufgaben mit Tipps und direktem Feedback.",

@@ -3,8 +3,8 @@ import IntentLandingPage from "../ads/intent/IntentLandingPage";
 import { einmaleinsUebenConfig } from "../ads/intent/configs";
 
 export const metadata: Metadata = {
-  title: "Einmaleins online üben",
-  description: "Einmaleins-Aufgaben für die Schweizer Primarschule. 20 Aufgaben gratis testen, mit Vorlesen, Tipps und direktem Feedback.",
+  title: "Einmaleins üben online - 1x1 Aufgaben Schweiz",
+  description: "Einmaleins online üben: 1x1-Reihen, gemischte Aufgaben und Divisionen für die Schweizer Primarschule. 20 Aufgaben gratis testen.",
   robots: {
     index: true,
     follow: true,

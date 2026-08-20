@@ -3,8 +3,8 @@ import IntentLandingPage from "../ads/intent/IntentLandingPage";
 import { deutschUebungenKinderConfig } from "../ads/intent/configs";
 
 export const metadata: Metadata = {
-  title: "Deutsch Übungen für Kinder",
-  description: "Deutsch-Übungen für Kinder in der Schweizer Primarschule. Lesen, Rechtschreibung, Grammatik und Satzbau. 20 Aufgaben gratis testen.",
+  title: "Deutsch Übungen für Kinder - Primarschule Schweiz",
+  description: "Deutsch Übungen für Kinder: Lesen, Rechtschreibung, Grammatik, Satzbau und Wortschatz für die Schweizer Primarschule.",
   robots: {
     index: true,
     follow: true,

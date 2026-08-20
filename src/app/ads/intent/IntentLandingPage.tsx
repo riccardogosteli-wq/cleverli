@@ -50,6 +50,15 @@ export type IntentLandingPageConfig = {
   };
   trustTitle: string;
   trustBody: string;
+  seoDetail?: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    items: {
+      title: string;
+      body: string;
+    }[];
+  };
   faq: [string, string][];
 };
 
@@ -83,6 +92,25 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
   const uid = session?.userId ?? "";
   const variant = useAdsLpVariant(config.pageKey, config.path);
   const gradeLinks = getGradeSubjectSeoLinks(6);
+  const seoDetailSection = config.seoDetail ? (
+    <section className="border-y border-green-100 bg-green-50/60 px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-6xl">
+        <div className="max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-700">{config.seoDetail.eyebrow}</p>
+          <h2 className="mt-2 text-3xl font-black text-gray-950">{config.seoDetail.title}</h2>
+          <p className="mt-4 text-base leading-7 text-gray-700">{config.seoDetail.body}</p>
+        </div>
+        <div className="mt-7 grid gap-4 md:grid-cols-3">
+          {config.seoDetail.items.map((item) => (
+            <article key={item.title} className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
+              <h3 className="text-base font-black text-gray-950">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-gray-700">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : null;
   const seoCluster = (
     <section className="bg-white px-4 pb-12 sm:px-6 sm:pb-16">
       <div className="mx-auto max-w-6xl rounded-2xl border border-green-100 bg-green-50 p-5 sm:p-6">
@@ -128,6 +156,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
           title={`${config.title.replace(/\.$/, "")} - 7 Tage Premium gratis.`}
           lead="Erstelle ein Konto, wähle dein Abo und teste alle Übungen und Klassen eine Woche lang ohne Belastung. Erst danach wird bezahlt, wenn du nicht kündigst."
         />
+        {seoDetailSection}
         {seoCluster}
       </>
     );
@@ -293,6 +322,8 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
           </div>
         </div>
       </section>
+
+      {seoDetailSection}
 
       {seoCluster}
 
