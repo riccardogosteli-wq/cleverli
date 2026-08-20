@@ -3,6 +3,7 @@
  */
 import { test, expect } from "@playwright/test";
 import grade1German from "@/data/grade1/german";
+import grade1Science from "@/data/grade1/science";
 
 const LANG_PARAMS = [
   { lang: "de", label: "Deutsch" },
@@ -12,6 +13,7 @@ const LANG_PARAMS = [
 ];
 
 const germanRhymingTopic = grade1German.find(topic => topic.id === "reime");
+const grade1SeasonsTopic = grade1Science.find(topic => topic.id === "jahreszeiten");
 
 test.describe("German rhyming content QA", () => {
   test("fill-in prompts accept one clear rhyming word instead of demanding whole answer lists", () => {
@@ -73,6 +75,22 @@ test.describe("German rhyming content QA", () => {
       expect(exercise.question, exercise.id).toMatch(/Schreibe ein Reimwort|Was reimt sich|Regen reimt sich auf/i);
       expect(exercise.question, exercise.id).not.toMatch(/steht auf dem|frisst Gras|Tätigkeit|2-Zeilen|3 Reimwörter/i);
     }
+  });
+});
+
+test.describe("Grade 1 science content QA", () => {
+  test("snowman fill-in accepts the object being built, not the material", () => {
+    expect(grade1SeasonsTopic).toBeTruthy();
+
+    const exercise = grade1SeasonsTopic!.exercises.find(item => item.id === "j12");
+    expect(exercise).toBeTruthy();
+    expect(exercise!.question).toBe("Im Winter kann man einen ___ bauen.");
+    expect(exercise!.answer).toBe("Schneemann");
+    expect(exercise!.answerEN).toBe("snowman");
+    expect(exercise!.answerFR).toBe("bonhomme de neige");
+    expect(exercise!.answerIT).toBe("pupazzo di neve");
+    expect(exercise!.answer).not.toBe("Schnee");
+    expect(exercise!.hints.join(" ")).not.toMatch(/endet mit|Schneemann/i);
   });
 });
 
