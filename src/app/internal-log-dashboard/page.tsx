@@ -579,6 +579,8 @@ const ADS_AB_PAGES: Record<string, string> = {
   einmaleins_ueben: "Einmaleins üben",
   eins_mal_eins_spiele: "1x1 Spiele",
   mathe_uebungen_kinder: "Mathe Übungen Kinder",
+  deutsch_uebungen_kinder: "Deutsch Übungen Kinder",
+  lesen_lernen: "Lesen lernen",
 };
 const INTERNAL_TEST_EMAILS = new Set(["test@cleverli.ch"]);
 
@@ -594,6 +596,8 @@ function normaliseAdsPage(value: unknown, source?: string | null, path?: string 
   if (haystack.includes("einmaleins_ueben") || haystack.includes("/einmaleins-ueben")) return "einmaleins_ueben";
   if (haystack.includes("eins_mal_eins_spiele") || haystack.includes("/1x1-spiele")) return "eins_mal_eins_spiele";
   if (haystack.includes("mathe_uebungen_kinder") || haystack.includes("/mathe-uebungen-kinder")) return "mathe_uebungen_kinder";
+  if (haystack.includes("deutsch_uebungen_kinder") || haystack.includes("/deutsch-uebungen-kinder")) return "deutsch_uebungen_kinder";
+  if (haystack.includes("lesen_lernen") || haystack.includes("/lesen-lernen")) return "lesen_lernen";
   if (haystack.includes("primarschule_uebungen") || haystack.includes("/primarschule-uebungen")) return "primarschule_uebungen";
 
   return "unknown";

@@ -89,7 +89,7 @@ export function trackTrialStarted(plan: CheckoutPlan, source: string, trialDays:
   });
 }
 
-export function trackAdsLpCtaClick(
+export async function trackAdsLpCtaClick(
   type: AdsLpCtaType,
   location: AdsLpCtaLocation,
   destination: string,
@@ -125,7 +125,7 @@ export function trackAdsLpCtaClick(
   pushDataLayerEvent(type === "paid" ? "ads_lp_paid_cta_click" : "ads_lp_free_cta_click", {
     ...metadata,
   });
-  trackUserActivity("ads_lp_cta_click", {
+  await trackUserActivity("ads_lp_cta_click", {
     path: pagePath,
     source: "ads_lp",
     accessToken: null,

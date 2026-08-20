@@ -15,11 +15,11 @@ type ClientActivityPayload = {
   accessToken?: string | null;
 };
 
-export function trackUserActivity(activityType: UserActivityType, payload: ClientActivityPayload = {}) {
-  if (typeof window === "undefined") return;
+export function trackUserActivity(activityType: UserActivityType, payload: ClientActivityPayload = {}): Promise<void> {
+  if (typeof window === "undefined") return Promise.resolve();
 
   const send = (accessToken?: string | null) => {
-    fetch("/api/telemetry/activity", {
+    return fetch("/api/telemetry/activity", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,17 +37,20 @@ export function trackUserActivity(activityType: UserActivityType, payload: Clien
         metadata: payload.metadata,
       }),
       keepalive: true,
-    }).catch(() => {
+    }).then(() => undefined).catch(() => {
       // Product telemetry must never break the user flow.
     });
   };
 
   if (payload.accessToken !== undefined) {
-    send(payload.accessToken);
-    return;
+    return send(payload.accessToken);
   }
 
-  getSupabase()?.auth.getSession()
+  const supabase = getSupabase();
+  if (!supabase) return send();
+
+  return supabase.auth.getSession()
     .then(({ data }) => send(data.session?.access_token))
-    .catch(() => send());
+    .catch(() => send())
+    .then(() => undefined);
 }

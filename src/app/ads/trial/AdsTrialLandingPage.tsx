@@ -12,6 +12,7 @@ type TrialLandingPageProps = {
   pageKey: string;
   pagePath: string;
   checkoutSource: string;
+  freeTrialUrl?: string;
   eyebrow?: string;
   title?: string;
   lead?: string;
@@ -37,6 +38,7 @@ export default function AdsTrialLandingPage({
   pageKey,
   pagePath,
   checkoutSource,
+  freeTrialUrl = "/learn/2/math/addition-bis-20",
   eyebrow = "7 Tage Premium gratis testen",
   title = "Alle Übungen und Klassen 7 Tage gratis freischalten.",
   lead = "Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang ohne Belastung. Erst danach wird bezahlt, wenn du nicht kündigst.",
@@ -46,9 +48,9 @@ export default function AdsTrialLandingPage({
   const { session } = useSession();
   const uid = session?.userId ?? "";
 
-  const startTrial = (plan: Plan, location: "hero" | "pricing" | "bottom") => {
+  const startTrial = async (plan: Plan, location: "hero" | "pricing" | "bottom") => {
     const destination = `/api/checkout?plan=${plan}&trial=7`;
-    trackAdsLpCtaClick("paid", location, destination, plan, {
+    await trackAdsLpCtaClick("paid", location, destination, plan, {
       page: pageKey,
       page_path: pagePath,
       experiment: "ads_lp_7_day_trial",
@@ -56,6 +58,17 @@ export default function AdsTrialLandingPage({
       trial_days: 7,
     });
     startCheckout(plan, `${checkoutSource}_trial_${location}`, uid, { trialDays: 7 });
+  };
+
+  const startFreePractice = async (location: "hero" | "bottom") => {
+    await trackAdsLpCtaClick("free", location, freeTrialUrl, undefined, {
+      page: pageKey,
+      page_path: pagePath,
+      experiment: "ads_lp_7_day_trial",
+      variant: "trial",
+      trial_days: 7,
+    });
+    window.location.assign(freeTrialUrl);
   };
 
   return (
@@ -72,13 +85,20 @@ export default function AdsTrialLandingPage({
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Jederzeit kündbar</div>
             </div>
 
-            <div className="mt-7">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <button
                 type="button"
                 onClick={() => startTrial("yearly", "hero")}
                 className="w-full rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800 sm:w-auto"
               >
                 7 Tage gratis testen
+              </button>
+              <button
+                type="button"
+                onClick={() => startFreePractice("hero")}
+                className="w-full rounded-full border-2 border-green-700 px-7 py-4 text-center text-base font-bold text-green-800 transition-colors hover:bg-green-50 sm:w-auto"
+              >
+                Erst 20 Aufgaben gratis
               </button>
             </div>
             <p className="mt-3 text-sm text-gray-500">
@@ -198,6 +218,13 @@ export default function AdsTrialLandingPage({
           className="mt-7 rounded-full bg-white px-7 py-4 text-base font-black text-green-800 hover:bg-green-50"
         >
           7 Tage gratis starten
+        </button>
+        <button
+          type="button"
+          onClick={() => startFreePractice("bottom")}
+          className="mt-3 rounded-full border-2 border-white px-7 py-4 text-base font-bold text-white hover:bg-green-800"
+        >
+          Zuerst 20 Aufgaben testen
         </button>
       </section>
     </main>

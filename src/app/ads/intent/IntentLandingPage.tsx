@@ -151,6 +151,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
           pageKey={config.pageKey}
           pagePath={config.path}
           checkoutSource={config.checkoutSource}
+          freeTrialUrl={config.freeTrialUrl}
           heroImage={config.heroImage}
           imageAlt={config.imageAlt}
           title={`${config.title.replace(/\.$/, "")} - 7 Tage Premium gratis.`}
