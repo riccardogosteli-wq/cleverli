@@ -38,7 +38,9 @@ async function patchParentProfile(userId: string, body: Record<string, unknown>)
 }
 
 function subscriptionPeriodEnd(subscription: Stripe.Subscription): string | null {
-  const currentPeriodEnd = (subscription as unknown as { current_period_end?: number }).current_period_end;
+  const currentPeriodEnd =
+    (subscription as unknown as { current_period_end?: number }).current_period_end ??
+    subscription.items.data[0]?.current_period_end;
   return currentPeriodEnd ? new Date(currentPeriodEnd * 1000).toISOString() : null;
 }
 
