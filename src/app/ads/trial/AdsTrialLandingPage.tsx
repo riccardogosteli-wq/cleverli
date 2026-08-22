@@ -18,6 +18,8 @@ type TrialLandingPageProps = {
   lead?: string;
   heroImage?: string;
   imageAlt?: string;
+  trialCtaLabel?: string;
+  freeCtaLabel?: string;
 };
 
 const features = [
@@ -44,6 +46,8 @@ export default function AdsTrialLandingPage({
   lead = "Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang ohne Belastung. Erst danach wird bezahlt, wenn du nicht kündigst.",
   heroImage = "/images/scenes/cleverli-teach-kids.jpg",
   imageAlt = "Cleverli Premium Vorschau",
+  trialCtaLabel = "7 Tage gratis testen",
+  freeCtaLabel = "Erst 20 Aufgaben gratis",
 }: TrialLandingPageProps) {
   const { session } = useSession();
   const uid = session?.userId ?? "";
@@ -91,14 +95,14 @@ export default function AdsTrialLandingPage({
                 onClick={() => startTrial("yearly", "hero")}
                 className="w-full rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800 sm:w-auto"
               >
-                7 Tage gratis testen
+                {trialCtaLabel}
               </button>
               <button
                 type="button"
                 onClick={() => startFreePractice("hero")}
                 className="w-full rounded-full border-2 border-green-700 px-7 py-4 text-center text-base font-bold text-green-800 transition-colors hover:bg-green-50 sm:w-auto"
               >
-                Erst 20 Aufgaben gratis
+                {freeCtaLabel}
               </button>
             </div>
             <p className="mt-3 text-sm text-gray-500">
