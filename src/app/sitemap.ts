@@ -61,5 +61,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return routes;
+  const seen = new Set<string>();
+  return routes.filter((route) => {
+    if (seen.has(route.url)) return false;
+    seen.add(route.url);
+    return true;
+  });
 }
