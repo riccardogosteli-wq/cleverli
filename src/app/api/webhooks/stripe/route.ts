@@ -164,18 +164,23 @@ export async function POST(req: NextRequest) {
 
     // Trial checkouts have no charge today, so avoid a payment-confirmation email.
     if (customerEmail && !trialDays) {
-      sendPaymentConfirmationEmail(customerEmail, "", plan as "monthly" | "yearly").catch(error => {
-        Sentry.captureException(error);
-      });
-      sendAdminPaymentNotificationEmail({
-        customerEmail,
-        plan: plan as "monthly" | "yearly",
-        amountTotal: session.amount_total,
-        currency: session.currency,
-        stripeCustomerId,
-        stripeSubscriptionId,
-      }).catch(error => {
-        Sentry.captureException(error);
+      const emailResults = await Promise.allSettled([
+        sendPaymentConfirmationEmail(customerEmail, "", plan as "monthly" | "yearly"),
+        sendAdminPaymentNotificationEmail({
+          customerEmail,
+          plan: plan as "monthly" | "yearly",
+          amountTotal: session.amount_total,
+          currency: session.currency,
+          stripeCustomerId,
+          stripeSubscriptionId,
+        }),
+      ]);
+
+      emailResults.forEach((result, index) => {
+        if (result.status === "rejected") {
+          Sentry.captureException(result.reason);
+          console.error(`[stripe-webhook] payment email ${index} failed:`, result.reason);
+        }
       });
     }
 
