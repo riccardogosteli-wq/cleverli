@@ -66,21 +66,6 @@ function attributionFromMetadata(metadata: Stripe.Metadata | null | undefined) {
   };
 }
 
-async function updateSupabasePremium(
-  userId: string,
-  plan: string,
-  premium: boolean,
-  premiumUntil: string | null,
-  cancelled = false
-) {
-  await patchParentProfile(userId, {
-    premium,
-    premium_plan: premium ? plan : null,
-    premium_until: premium ? premiumUntil : null,
-    cancelled,
-  });
-}
-
 async function getUserByStripeCustomer(stripeCustomerId: string): Promise<{ userId: string; email: string } | null> {
   const res = await fetch(
     `${SUPABASE_URL}/rest/v1/parent_profiles?stripe_customer_id=eq.${stripeCustomerId}&select=id,email`,
@@ -94,6 +79,52 @@ async function getUserByStripeCustomer(stripeCustomerId: string): Promise<{ user
   const rows = await res.json();
   if (!rows?.[0]?.id) return null;
   return { userId: rows[0].id, email: rows[0].email ?? "" };
+}
+
+function invoiceSubscriptionId(invoice: Stripe.Invoice): string | null {
+  const subscription = (invoice as unknown as { subscription?: string | { id?: string } }).subscription;
+  if (typeof subscription === "string") return subscription;
+  if (subscription?.id) return subscription.id;
+
+  return (
+    (invoice as unknown as { parent?: { subscription_details?: { subscription?: string } } })
+      .parent?.subscription_details?.subscription ?? null
+  );
+}
+
+async function syncSubscription(subscription: Stripe.Subscription) {
+  const userId = subscription.metadata?.userId;
+  const plan = subscription.metadata?.plan ?? "monthly";
+  const status = subscription.status;
+  const cancelAtPeriodEnd = subscription.cancel_at_period_end;
+  const premiumUntil = subscriptionPeriodEnd(subscription);
+  const premium = ["active", "trialing", "past_due"].includes(status);
+  const stripeCustomerId = subscription.customer as string;
+
+  if (userId) {
+    await patchParentProfile(userId, {
+      premium,
+      premium_plan: premium ? plan : null,
+      premium_until: premium ? premiumUntil : null,
+      cancelled: cancelAtPeriodEnd || !premium,
+      stripe_customer_id: stripeCustomerId,
+      stripe_subscription_id: subscription.id,
+    });
+    return { userId, email: undefined, plan, status, premium, premiumUntil, cancelAtPeriodEnd };
+  }
+
+  const user = await getUserByStripeCustomer(stripeCustomerId);
+  if (!user) return null;
+
+  await patchParentProfile(user.userId, {
+    premium,
+    premium_plan: premium ? plan : null,
+    premium_until: premium ? premiumUntil : null,
+    cancelled: cancelAtPeriodEnd || !premium,
+    stripe_customer_id: stripeCustomerId,
+    stripe_subscription_id: subscription.id,
+  });
+  return { userId: user.userId, email: user.email, plan, status, premium, premiumUntil, cancelAtPeriodEnd };
 }
 
 export async function POST(req: NextRequest) {
@@ -190,35 +221,52 @@ export async function POST(req: NextRequest) {
   // ── Subscription status changed/cancelled ────────────────────────────────
   if (event.type === "customer.subscription.updated" || event.type === "customer.subscription.deleted") {
     const subscription = event.data.object as Stripe.Subscription;
-    const userId = subscription.metadata?.userId;
-    const plan = subscription.metadata?.plan ?? "monthly";
-    const status = subscription.status;
-    const cancelAtPeriodEnd = subscription.cancel_at_period_end;
-    const premiumUntil = subscriptionPeriodEnd(subscription);
-    const premium = ["active", "trialing", "past_due"].includes(status);
+    const synced = await syncSubscription(subscription);
 
-    if (userId) {
-      await updateSupabasePremium(userId, plan, premium, premiumUntil, cancelAtPeriodEnd || !premium);
+    if (synced) {
       logUserActivity({
-        userId,
-        activityType: cancelAtPeriodEnd || !premium ? "subscription_cancelled" : "subscription_updated",
+        userId: synced.userId,
+        email: synced.email,
+        activityType: synced.cancelAtPeriodEnd || !synced.premium ? "subscription_cancelled" : "subscription_updated",
         source: "stripe_webhook",
-        metadata: { plan, status, premium, premiumUntil, cancelAtPeriodEnd },
+        metadata: {
+          plan: synced.plan,
+          status: synced.status,
+          premium: synced.premium,
+          premiumUntil: synced.premiumUntil,
+          cancelAtPeriodEnd: synced.cancelAtPeriodEnd,
+        },
       }).catch(() => {});
-      console.log(`[stripe-webhook] Subscription ${status} for ${userId}`);
-    } else {
-      // Fallback: look up by stripe_customer_id
-      const user = await getUserByStripeCustomer(subscription.customer as string);
-      if (user) {
-        await updateSupabasePremium(user.userId, plan, premium, premiumUntil, cancelAtPeriodEnd || !premium);
+      console.log(`[stripe-webhook] Subscription ${synced.status} for ${synced.userId}`);
+    }
+  }
+
+  // ── Subscription renewal paid ─────────────────────────────────────────────
+  if (event.type === "invoice.paid" || event.type === "invoice.payment_succeeded") {
+    const invoice = event.data.object as Stripe.Invoice;
+    const subscriptionId = invoiceSubscriptionId(invoice);
+
+    if (subscriptionId) {
+      const stripe = getStripe();
+      const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+      const synced = await syncSubscription(subscription);
+
+      if (synced) {
         logUserActivity({
-          userId: user.userId,
-          email: user.email,
-          activityType: cancelAtPeriodEnd || !premium ? "subscription_cancelled" : "subscription_updated",
+          userId: synced.userId,
+          email: synced.email,
+          activityType: "subscription_updated",
           source: "stripe_webhook",
-          metadata: { plan, status, premium, premiumUntil, cancelAtPeriodEnd },
+          metadata: {
+            plan: synced.plan,
+            status: synced.status,
+            premium: synced.premium,
+            premiumUntil: synced.premiumUntil,
+            stripeInvoiceId: invoice.id,
+            billingReason: invoice.billing_reason,
+          },
         }).catch(() => {});
-        console.log(`[stripe-webhook] Subscription ${status} for ${user.userId} (by customer ID)`);
+        console.log(`[stripe-webhook] Invoice paid synced subscription ${subscriptionId}`);
       }
     }
   }
