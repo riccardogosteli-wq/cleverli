@@ -5,6 +5,7 @@ import { encodeAttributionForCheckout } from "@/lib/attribution";
 import { getSupabase } from "@/lib/supabase";
 
 const CHECKOUT_PLANS = new Set<CheckoutPlan>(["monthly", "yearly"]);
+let checkoutInFlightKey: string | null = null;
 
 type CheckoutOptions = {
   trialDays?: number;
@@ -71,38 +72,48 @@ export function getPendingCheckoutIntent(): { plan: CheckoutPlan; source: string
 }
 
 export async function startCheckout(plan: CheckoutPlan, source: string, userId?: string, options: CheckoutOptions = {}) {
-  trackBeginCheckout(plan, source);
+  const trialDays = cleanTrialDays(options.trialDays);
+  const checkoutKey = [plan, source, userId ?? "guest", trialDays ?? "no_trial"].join(":");
+  if (checkoutInFlightKey) return;
+  checkoutInFlightKey = checkoutKey;
 
-  const auth = await getCheckoutAuth(userId);
-  const token = auth.token;
-  const verifiedUserId = auth.userId;
+  try {
+    trackBeginCheckout(plan, source);
 
-  if (!verifiedUserId) {
-    window.location.assign(getCheckoutAuthUrl("/signup", plan, source, options));
-    return;
+    const auth = await getCheckoutAuth(userId);
+    const token = auth.token;
+    const verifiedUserId = auth.userId;
+
+    if (!verifiedUserId) {
+      window.location.assign(getCheckoutAuthUrl("/signup", plan, source, { trialDays }));
+      return;
+    }
+
+    if (!token) {
+      window.location.assign(getCheckoutAuthUrl("/login", plan, source, { trialDays }));
+      return;
+    }
+
+    const params = new URLSearchParams({ plan, uid: verifiedUserId, source });
+    if (trialDays) params.set("trial", String(trialDays));
+    const attribution = encodeAttributionForCheckout();
+    if (attribution) params.set("attr", attribution);
+    const res = await fetch(`/api/checkout?${params.toString()}`, {
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok || !body.url) {
+      window.location.assign("/upgrade?checkout=error");
+      return;
+    }
+
+    window.location.assign(body.url);
+  } catch (error) {
+    checkoutInFlightKey = null;
+    throw error;
   }
-
-  if (!token) {
-    window.location.assign(getCheckoutAuthUrl("/login", plan, source, options));
-    return;
-  }
-
-  const params = new URLSearchParams({ plan, uid: verifiedUserId, source });
-  if (options.trialDays) params.set("trial", String(options.trialDays));
-  const attribution = encodeAttributionForCheckout();
-  if (attribution) params.set("attr", attribution);
-  const res = await fetch(`/api/checkout?${params.toString()}`, {
-    headers: {
-      Accept: "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-  });
-
-  const body = await res.json().catch(() => ({}));
-  if (!res.ok || !body.url) {
-    window.location.assign("/upgrade?checkout=error");
-    return;
-  }
-
-  window.location.assign(body.url);
 }

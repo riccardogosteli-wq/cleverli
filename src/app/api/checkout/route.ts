@@ -82,6 +82,18 @@ function stripeAttributionMetadata(attribution: ReturnType<typeof parseAttributi
   };
 }
 
+function getCheckoutIdempotencyKey(userId: string, plan: string, source: string, trialDays?: number) {
+  const minuteBucket = Math.floor(Date.now() / 60_000);
+  return [
+    "checkout",
+    userId,
+    plan,
+    source.replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 80),
+    trialDays ? `trial_${trialDays}` : "paid",
+    minuteBucket,
+  ].join(":").slice(0, 240);
+}
+
 async function verifyUserToken(userId: string, req: NextRequest) {
   const token = req.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
   if (!token) return false;
@@ -98,6 +110,7 @@ export async function GET(req: NextRequest) {
   const plan = req.nextUrl.searchParams.get("plan") ?? "monthly";
   const userId = req.nextUrl.searchParams.get("uid") ?? "";
   const trialDays = trialDaysFromRequest(req);
+  const checkoutSource = req.nextUrl.searchParams.get("source") ?? "checkout_api";
   const attribution = parseAttribution(req);
   const attributionMetadata = stripeAttributionMetadata(attribution);
 
@@ -122,11 +135,11 @@ export async function GET(req: NextRequest) {
   // Get user email and existing Stripe customer from Supabase.
   let customerEmail: string | undefined;
   let stripeCustomerId: string | undefined;
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  );
   try {
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!
-    );
     const { data } = await supabase.auth.admin.getUserById(userId);
     customerEmail = data.user?.email ?? undefined;
 
@@ -143,6 +156,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const stripe = getStripe();
+    const checkoutIdempotencyKey = getCheckoutIdempotencyKey(userId, plan, checkoutSource, trialDays);
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
@@ -173,21 +187,33 @@ export async function GET(req: NextRequest) {
         },
       },
     };
-    const session = await stripe.checkout.sessions.create(sessionParams);
+    const session = await stripe.checkout.sessions.create(sessionParams, {
+      idempotencyKey: checkoutIdempotencyKey,
+    });
 
     if (!session.url) {
       Sentry.captureMessage("[checkout] Stripe session missing URL", "error");
       return NextResponse.json({ error: "gateway_failed" }, { status: 500 });
     }
 
-    logUserActivity({
-      userId,
-      email: customerEmail ?? null,
-      activityType: "checkout_started",
-      source: req.nextUrl.searchParams.get("source") ?? "checkout_api",
-      path: req.nextUrl.pathname,
-      metadata: { plan, trialDays: trialDays ?? null, stripeSessionId: session.id, attribution },
-    }).catch(() => {});
+    const { data: existingLog } = await supabase
+      .from("user_activity_events")
+      .select("id")
+      .eq("activity_type", "checkout_started")
+      .contains("metadata", { stripeSessionId: session.id })
+      .limit(1)
+      .maybeSingle();
+
+    if (!existingLog) {
+      logUserActivity({
+        userId,
+        email: customerEmail ?? null,
+        activityType: "checkout_started",
+        source: checkoutSource,
+        path: req.nextUrl.pathname,
+        metadata: { plan, trialDays: trialDays ?? null, stripeSessionId: session.id, attribution },
+      }).catch(() => {});
+    }
 
     return wantsJson(req)
       ? NextResponse.json({ url: session.url })
