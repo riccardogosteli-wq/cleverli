@@ -18,6 +18,7 @@ export type GradeSubjectSeoPage = {
   ctaHref: string;
   ctaLabel: string;
   detailIntro?: string;
+  detailHeading?: string;
   detailItems?: {
     title: string;
     body: string;
@@ -167,6 +168,60 @@ const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
       { href: "/1x1-spiele", label: "1x1 Spiele" },
     ],
   },
+  "deutsch-uebungen-2-klasse": {
+    title: "Deutsch Übungen 2. Klasse - Lesen & Rechtschreibung",
+    description:
+      "Deutsch Übungen 2. Klasse für die Schweizer Primarschule: Lesen, Sätze, Nomen, Verben und erste Rechtschreibung online üben.",
+    lead:
+      "Deutsch Übungen für die 2. Klasse: kurze Leserunden, einfache Sätze, Nomen, Verben und erste Rechtschreibung in ruhigen Schritten festigen.",
+    focusItems: [
+      "kurze Texte lesen und sicherer verstehen",
+      "Nomen, Artikel und Verben erkennen",
+      "erste Rechtschreibregeln in einfachen Sätzen üben",
+    ],
+    parentAnswer:
+      "In der 2. Klasse wird Deutsch oft lebendiger, aber auch anspruchsvoller. Cleverli hilft mit kurzen Übungen, die dein Kind ohne Druck starten kann und die sofort zeigen, was schon gut klappt.",
+    ctaHref: "/learn/2/german/nomen-artikel",
+    ctaLabel: "Deutsch gratis üben",
+    detailIntro:
+      "Die Übungen verbinden Lesen, Wortarten und Schreiben in kleinen Runden. So kann dein Kind regelmässig üben, ohne dass daheim zuerst Arbeitsblätter gesucht werden müssen.",
+    detailItems: [
+      {
+        title: "Lesen verstehen",
+        body: "Kurze Texte und einfache Fragen helfen, genauer zu lesen und wichtige Informationen wiederzufinden.",
+      },
+      {
+        title: "Wörter erkennen",
+        body: "Nomen, Artikel und Verben werden mit klaren Aufgaben gefestigt, damit Sätze besser verstanden werden.",
+      },
+      {
+        title: "Richtig schreiben",
+        body: "Grossschreibung, Satzzeichen und häufige Schreibmuster werden Schritt für Schritt sicherer.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Welche Deutsch-Themen passen für die 2. Klasse?",
+        answer:
+          "Typisch sind kurze Texte, Sätze, Nomen, Artikel, Verben, Grossschreibung und erste Rechtschreibung.",
+      },
+      {
+        question: "Kann mein Kind selbstständig üben?",
+        answer:
+          "Ja. Die Aufgaben sind kurz, geben direkte Rückmeldung und bieten Tipps, wenn dein Kind nicht weiterkommt.",
+      },
+      {
+        question: "Ist das für die Schweizer Primarschule gedacht?",
+        answer:
+          "Ja. Cleverli ist auf Schweizer Primarschulkinder und den Lehrplan 21 ausgerichtet.",
+      },
+    ],
+    extraLinks: [
+      { href: "/deutsch-uebungen-kinder", label: "Deutsch Übungen für Kinder" },
+      { href: "/leseverstaendnis-uebungen-2-klasse", label: "Leseverständnis 2. Klasse" },
+      { href: "/rechtschreibung-uebungen-primarschule", label: "Rechtschreibung Primarschule" },
+    ],
+  },
   "deutsch-uebungen-1-klasse": {
     title: "Deutsch Übungen 1. Klasse - Lesen & Schreiben",
     description:
@@ -309,10 +364,274 @@ function buildPage(grade: number, subject: GradeSeoSubject): GradeSubjectSeoPage
   };
 }
 
-export const GRADE_SUBJECT_SEO_PAGES: GradeSubjectSeoPage[] = [1, 2, 3, 4, 5, 6].flatMap((grade) => [
+const GENERATED_GRADE_SUBJECT_SEO_PAGES: GradeSubjectSeoPage[] = [1, 2, 3, 4, 5, 6].flatMap((grade) => [
   buildPage(grade, "math"),
   buildPage(grade, "german"),
 ]);
+
+const SPECIAL_SEO_PAGES: GradeSubjectSeoPage[] = [
+  {
+    slug: "einmaleins-uebungen-2-klasse",
+    href: "/einmaleins-uebungen-2-klasse",
+    grade: 2,
+    subject: "math",
+    subjectName: "Mathematik",
+    shortSubjectName: "Mathe",
+    title: "Einmaleins Übungen 2. Klasse - 1x1 online üben",
+    description:
+      "Einmaleins Übungen 2. Klasse für die Schweizer Primarschule: 2er-, 5er- und 10er-Reihen, gemischte Aufgaben und 1x1 online üben.",
+    h1: "Einmaleins Übungen 2. Klasse",
+    eyebrow: "Einmaleins · 2. Klasse · Schweizer Primarschule",
+    lead:
+      "Wenn das 1x1 neu dazukommt, helfen kurze, klare Runden. Dein Kind übt die 2er-, 5er- und 10er-Reihen und bekommt direkt Rückmeldung.",
+    focusTitle: "Was dein Kind beim Einmaleins in der 2. Klasse übt",
+    focusItems: [
+      "2er-, 5er- und 10er-Reihen sicher aufbauen",
+      "Malaufgaben mit Mustern und Wiederholung festigen",
+      "gemischte 1x1-Aufgaben Schritt für Schritt lösen",
+    ],
+    parentAnswer:
+      "Das Einmaleins braucht Wiederholung, aber keine langen Übungsblöcke. Cleverli macht daraus kurze Runden, die dein Kind auch zwischendurch starten kann.",
+    ctaHref: "/learn/2/math/einmaleins",
+    ctaLabel: "1x1 gratis üben",
+    detailHeading: "Einmaleins in der 2. Klasse gezielt festigen",
+    detailIntro:
+      "Die Seite passt für Kinder, die mit dem Einmaleins starten oder die ersten Reihen sicherer abrufen sollen.",
+    detailItems: [
+      {
+        title: "Reihen verstehen",
+        body: "2er-, 5er- und 10er-Reihen werden mit einfachen Aufgaben aufgebaut, bevor gemischte Aufgaben dazukommen.",
+      },
+      {
+        title: "Sicherer abrufen",
+        body: "Kurze Wiederholungen helfen, Antworten schneller zu finden, ohne dass Üben nach Stress klingt.",
+      },
+      {
+        title: "Direkte Rückmeldung",
+        body: "Dein Kind sieht sofort, ob es richtig liegt, und bekommt Tipps, wenn ein Rechenweg noch wackelt.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Welche Reihen sind in der 2. Klasse wichtig?",
+        answer:
+          "Häufig starten Kinder mit 2er-, 5er- und 10er-Reihen und erweitern danach Schritt für Schritt.",
+      },
+      {
+        question: "Ist das auch für 1x1-Wiederholung geeignet?",
+        answer:
+          "Ja. Die kurzen Runden passen gut, wenn dein Kind die Reihen regelmässig festigen soll.",
+      },
+      {
+        question: "Kann mein Kind direkt loslegen?",
+        answer:
+          "Ja. Die ersten Aufgaben sind ohne Vorbereitung im Browser startklar.",
+      },
+    ],
+    extraLinks: [
+      { href: "/einmaleins-ueben", label: "Einmaleins üben" },
+      { href: "/1x1-spiele", label: "1x1 Spiele" },
+      { href: "/mathe-uebungen-2-klasse", label: "Mathe Übungen 2. Klasse" },
+    ],
+  },
+  {
+    slug: "rechtschreibung-uebungen-primarschule",
+    href: "/rechtschreibung-uebungen-primarschule",
+    grade: 3,
+    subject: "german",
+    subjectName: "Deutsch",
+    shortSubjectName: "Deutsch",
+    title: "Rechtschreibung Übungen für die Primarschule",
+    description:
+      "Rechtschreibung Übungen für die Schweizer Primarschule: Gross- und Kleinschreibung, Wortbilder, häufige Fehler und kurze Online-Aufgaben.",
+    h1: "Rechtschreibung Übungen für die Primarschule",
+    eyebrow: "Rechtschreibung · Deutsch · Schweizer Primarschule",
+    lead:
+      "Rechtschreibung wird sicherer, wenn Kinder Regeln in kleinen Portionen wiederholen. Cleverli übt Gross- und Kleinschreibung, Wortbilder und typische Stolperstellen.",
+    focusTitle: "Was dein Kind in der Rechtschreibung übt",
+    focusItems: [
+      "Gross- und Kleinschreibung bewusster anwenden",
+      "häufige Fehlerwörter und Wortbilder festigen",
+      "Sätze genauer lesen und richtig schreiben",
+    ],
+    parentAnswer:
+      "Viele Rechtschreibfehler verschwinden nicht durch einmal Erklären. Cleverli gibt deinem Kind kurze, klare Übungsrunden mit direkter Rückmeldung und ohne roten-Stift-Gefühl.",
+    ctaHref: "/learn/3/german/rechtschreibung",
+    ctaLabel: "Rechtschreibung gratis üben",
+    detailHeading: "Rechtschreibung in der Primarschule gezielt festigen",
+    detailIntro:
+      "Die Übungen passen für Kinder, die beim Schreiben sicherer werden sollen, ob als kurze Wiederholung oder als ruhige Vorbereitung vor einer Lernkontrolle.",
+    detailItems: [
+      {
+        title: "Regeln anwenden",
+        body: "Kinder üben Grossschreibung, Wortarten und Satzzeichen in Aufgaben, die direkt verstanden werden.",
+      },
+      {
+        title: "Wortbilder stärken",
+        body: "Typische Wörter und Muster tauchen wiederholt auf, damit dein Kind sie beim Schreiben leichter erkennt.",
+      },
+      {
+        title: "In kurzen Runden üben",
+        body: "Statt langer Listen gibt es kleine Aufgaben mit Feedback, Tipps und einem klaren nächsten Schritt.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Für welche Klasse passt diese Rechtschreibung-Seite?",
+        answer:
+          "Sie passt besonders für Kinder ab der 2. und 3. Klasse, viele Grundlagen bleiben aber in der ganzen Primarschule wichtig.",
+      },
+      {
+        question: "Geht es nur um Gross- und Kleinschreibung?",
+        answer:
+          "Nein. Cleverli übt auch Wortbilder, Satzzeichen, Wortarten und typische Fehlerstellen.",
+      },
+      {
+        question: "Kann ich nur Deutsch üben lassen?",
+        answer:
+          "Ja. Dein Kind kann direkt mit Deutsch-Themen starten und später weitere Fächer freischalten.",
+      },
+    ],
+    extraLinks: [
+      { href: "/deutsch-uebungen-kinder", label: "Deutsch Übungen für Kinder" },
+      { href: "/deutsch-uebungen-2-klasse", label: "Deutsch Übungen 2. Klasse" },
+      { href: "/leseverstaendnis-uebungen-2-klasse", label: "Leseverständnis 2. Klasse" },
+    ],
+  },
+  {
+    slug: "leseverstaendnis-uebungen-2-klasse",
+    href: "/leseverstaendnis-uebungen-2-klasse",
+    grade: 2,
+    subject: "german",
+    subjectName: "Deutsch",
+    shortSubjectName: "Deutsch",
+    title: "Leseverständnis Übungen 2. Klasse",
+    description:
+      "Leseverständnis Übungen 2. Klasse für die Schweizer Primarschule: kurze Texte lesen, Fragen beantworten und genaues Lesen online üben.",
+    h1: "Leseverständnis Übungen 2. Klasse",
+    eyebrow: "Leseverständnis · 2. Klasse · Schweizer Primarschule",
+    lead:
+      "Kurze Texte helfen Kindern, genauer zu lesen und Antworten im Text zu finden. Cleverli macht Leseverständnis überschaubar, ruhig und direkt im Browser.",
+    focusTitle: "Was dein Kind beim Leseverständnis übt",
+    focusItems: [
+      "kurze Texte aufmerksam lesen",
+      "wichtige Informationen im Text finden",
+      "Fragen in eigenen Schritten beantworten",
+    ],
+    parentAnswer:
+      "In der 2. Klasse geht es nicht nur ums Lesen können, sondern ums Verstehen. Cleverli unterstützt dein Kind mit kleinen Texten, klaren Fragen und direkter Rückmeldung.",
+    ctaHref: "/learn/2/german/texte-lesen",
+    ctaLabel: "Lesen gratis üben",
+    detailHeading: "Leseverständnis in der 2. Klasse gezielt festigen",
+    detailIntro:
+      "Die Übungen passen für Kinder, die noch langsam lesen oder beim Beantworten von Fragen unsicher sind.",
+    detailItems: [
+      {
+        title: "Texte überblicken",
+        body: "Dein Kind liest kurze Abschnitte und lernt, worauf es bei Fragen achten soll.",
+      },
+      {
+        title: "Antworten finden",
+        body: "Die Aufgaben trainieren, Informationen im Text wiederzufinden statt nur zu raten.",
+      },
+      {
+        title: "Mit Unterstützung üben",
+        body: "Vorlesen, Tipps und direkte Rückmeldung helfen, wenn dein Kind noch nicht alles flüssig liest.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Was ist Leseverständnis in der 2. Klasse?",
+        answer:
+          "Kinder lesen kurze Texte und beantworten Fragen dazu. Wichtig ist, Informationen zu erkennen und Zusammenhänge zu verstehen.",
+      },
+      {
+        question: "Hilft Cleverli auch langsam lesenden Kindern?",
+        answer:
+          "Ja. Die Texte und Aufgaben sind kurz, und die Vorlesen-Funktion kann beim Einstieg unterstützen.",
+      },
+      {
+        question: "Sind die Übungen online nutzbar?",
+        answer:
+          "Ja. Dein Kind kann direkt im Browser starten, ohne App-Installation.",
+      },
+    ],
+    extraLinks: [
+      { href: "/lesen-lernen", label: "Lesen lernen" },
+      { href: "/deutsch-uebungen-2-klasse", label: "Deutsch Übungen 2. Klasse" },
+      { href: "/deutsch-uebungen-kinder", label: "Deutsch Übungen für Kinder" },
+    ],
+  },
+  {
+    slug: "textaufgaben-3-klasse",
+    href: "/textaufgaben-3-klasse",
+    grade: 3,
+    subject: "math",
+    subjectName: "Mathematik",
+    shortSubjectName: "Mathe",
+    title: "Textaufgaben 3. Klasse üben",
+    description:
+      "Textaufgaben 3. Klasse für die Schweizer Primarschule: Rechnen aus Alltagssituationen verstehen, wichtige Informationen finden und online üben.",
+    h1: "Textaufgaben 3. Klasse üben",
+    eyebrow: "Textaufgaben · 3. Klasse · Schweizer Primarschule",
+    lead:
+      "Textaufgaben werden leichter, wenn Kinder zuerst verstehen, was gefragt ist. Cleverli übt Alltagssituationen, Rechenwege und genaue Antworten in kurzen Runden.",
+    focusTitle: "Was dein Kind bei Textaufgaben übt",
+    focusItems: [
+      "wichtige Zahlen und Hinweise im Text erkennen",
+      "den passenden Rechenweg auswählen",
+      "Antworten prüfen und verständlich lösen",
+    ],
+    parentAnswer:
+      "Textaufgaben sind oft kein Rechenproblem, sondern ein Verstehensproblem. Cleverli hilft deinem Kind, den Text zu ordnen und Schritt für Schritt zum passenden Rechenweg zu kommen.",
+    ctaHref: "/learn/3/math/textaufgaben",
+    ctaLabel: "Textaufgaben gratis üben",
+    detailHeading: "Textaufgaben in der 3. Klasse gezielt festigen",
+    detailIntro:
+      "Die Übungen passen für Kinder, die Sachaufgaben in Mathe sicherer verstehen und lösen sollen.",
+    detailItems: [
+      {
+        title: "Aufgabe verstehen",
+        body: "Kinder lernen, die Frage zuerst sauber zu lesen und wichtige Informationen zu markieren.",
+      },
+      {
+        title: "Rechenweg finden",
+        body: "Plus, Minus, Mal und Geteilt werden im Kontext geübt, damit Mathe näher am Alltag bleibt.",
+      },
+      {
+        title: "Sicherer lösen",
+        body: "Direkte Rückmeldung und Tipps helfen, wenn dein Kind bei einer Textaufgabe hängen bleibt.",
+      },
+    ],
+    faqItems: [
+      {
+        question: "Warum sind Textaufgaben oft schwierig?",
+        answer:
+          "Kinder müssen den Text verstehen, die richtigen Zahlen finden und dann erst rechnen. Cleverli übt genau diese Schritte.",
+      },
+      {
+        question: "Welche Rechenarten kommen vor?",
+        answer:
+          "Typisch sind Plus, Minus, Mal, Geteilt und einfache Alltagsaufgaben mit Geld, Mengen oder Wegen.",
+      },
+      {
+        question: "Passt das zur 3. Klasse in der Schweiz?",
+        answer:
+          "Ja. Die Übungen sind auf Primarschul-Themen und kurze Lernrunden daheim ausgerichtet.",
+      },
+    ],
+    extraLinks: [
+      { href: "/mathe-uebungen-3-klasse", label: "Mathe Übungen 3. Klasse" },
+      { href: "/mathe-uebungen-2-klasse", label: "Mathe Übungen 2. Klasse" },
+      { href: "/einmaleins-uebungen-2-klasse", label: "Einmaleins Übungen 2. Klasse" },
+    ],
+  },
+];
+
+export const GRADE_SUBJECT_SEO_PAGES: GradeSubjectSeoPage[] = [
+  ...GENERATED_GRADE_SUBJECT_SEO_PAGES,
+  ...SPECIAL_SEO_PAGES,
+];
 
 export function getGradeSubjectSeoPage(slug: string) {
   return GRADE_SUBJECT_SEO_PAGES.find((page) => page.slug === slug);

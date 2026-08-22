@@ -125,7 +125,7 @@ export default function AdsPrimarschuleClient() {
                 onClick={() => trackAdsLpCtaClick("free", "hero", freeTrialUrl)}
                 className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
               >
-                20 Aufgaben gratis starten
+                Gratis mit Übungen starten
               </Link>
               <button
                 type="button"
@@ -135,7 +135,7 @@ export default function AdsPrimarschuleClient() {
                 }}
                 className="rounded-full border-2 border-green-700 px-7 py-4 text-center text-base font-bold text-green-800 transition-colors hover:bg-green-50"
               >
-                7 Tage Premium testen
+                Alle Themen freischalten
               </button>
             </div>
             <p className="mt-3 text-sm text-gray-500">Heute CHF 0 · danach ab CHF 8.25 / Monat · bis zu 3 Kinderprofile</p>

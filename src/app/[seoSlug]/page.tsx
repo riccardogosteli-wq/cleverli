@@ -188,7 +188,9 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
           <div className="mx-auto max-w-5xl">
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-widest text-green-700">Vertiefung</p>
-              <h2 className="mt-2 text-2xl font-black text-gray-950">{page.shortSubjectName} {page.grade}. Klasse gezielt festigen</h2>
+              <h2 className="mt-2 text-2xl font-black text-gray-950">
+                {page.detailHeading ?? `${page.shortSubjectName} ${page.grade}. Klasse gezielt festigen`}
+              </h2>
               {page.detailIntro && (
                 <p className="mt-4 text-base leading-7 text-gray-700">{page.detailIntro}</p>
               )}

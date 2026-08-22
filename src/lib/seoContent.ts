@@ -85,6 +85,31 @@ export const ORGANIC_LANDING_PAGES = [
     title: "1x1 Spiele",
     description: "Spielerische Einmaleins-Runden direkt im Browser.",
   },
+  {
+    href: "/einmaleins-uebungen-2-klasse",
+    title: "Einmaleins Übungen 2. Klasse",
+    description: "2er-, 5er- und 10er-Reihen online üben.",
+  },
+  {
+    href: "/deutsch-uebungen-2-klasse",
+    title: "Deutsch Übungen 2. Klasse",
+    description: "Lesen, Sätze, Nomen und erste Rechtschreibung üben.",
+  },
+  {
+    href: "/rechtschreibung-uebungen-primarschule",
+    title: "Rechtschreibung Übungen",
+    description: "Grossschreibung, Wortbilder und häufige Fehler festigen.",
+  },
+  {
+    href: "/leseverstaendnis-uebungen-2-klasse",
+    title: "Leseverständnis Übungen 2. Klasse",
+    description: "Kurze Texte lesen und Fragen dazu beantworten.",
+  },
+  {
+    href: "/textaufgaben-3-klasse",
+    title: "Textaufgaben 3. Klasse",
+    description: "Sachaufgaben verstehen und Schritt für Schritt lösen.",
+  },
 ];
 
 const exerciseTypeLabels: Record<string, string> = {
