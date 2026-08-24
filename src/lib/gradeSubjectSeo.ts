@@ -118,11 +118,11 @@ const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
     ],
   },
   "mathe-uebungen-2-klasse": {
-    title: "Mathe Übungen 2. Klasse - Rechnen & Einmaleins",
+    title: "Mathe Übungen 2. Klasse - Rechnen bis 100",
     description:
-      "Mathe Übungen 2. Klasse für die Schweizer Primarschule: Rechnen bis 100, Einmaleins, Uhrzeit, Geld und Textaufgaben.",
+      "Mathe Übungen 2. Klasse für die Schweizer Primarschule: Rechenaufgaben bis 100, Plus, Minus, Einmaleins, Uhrzeit und Geld online üben.",
     lead:
-      "Mathe Übungen für die 2. Klasse: Rechnen bis 100 festigen, erste Einmaleins-Reihen aufbauen und Aufgaben im Alltag besser verstehen.",
+      "Mathe Übungen für die 2. Klasse: Plus und Minus bis 100 festigen, erste Einmaleins-Reihen aufbauen und Rechenaufgaben aus dem Alltag besser verstehen.",
     focusItems: [
       "Addition und Subtraktion bis 100 festigen",
       "Einmaleins-Reihen Schritt für Schritt aufbauen",
@@ -131,11 +131,11 @@ const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
     parentAnswer:
       "In der 2. Klasse wird Mathe spürbar breiter. Cleverli hilft mit kurzen Runden für Rechnen bis 100, Einmaleins und Alltagsthemen wie Geld oder Uhrzeit.",
     detailIntro:
-      "Die Übungen sind so aufgebaut, dass Kinder einzelne Grundlagen wiederholen können, ohne gleich eine ganze Arbeitsmappe durcharbeiten zu müssen.",
+      "Die Übungen sind so aufgebaut, dass Kinder Plus, Minus und weitere Grundlagen in kurzen Runden wiederholen können, ohne gleich eine ganze Arbeitsmappe durcharbeiten zu müssen.",
     detailItems: [
       {
         title: "Rechnen bis 100",
-        body: "Plus und Minus werden mit passenden Aufgaben gefestigt, damit Rechenwege sicherer werden.",
+        body: "Addition und Subtraktion werden mit passenden Rechenaufgaben gefestigt. Zahlen zerlegen, Zehnerübergänge und Zahlenmauern machen Rechenwege verständlicher.",
       },
       {
         title: "Einmaleins vorbereiten",
@@ -166,6 +166,9 @@ const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
     extraLinks: [
       { href: "/einmaleins-ueben", label: "Einmaleins üben" },
       { href: "/1x1-spiele", label: "1x1 Spiele" },
+      { href: "/learn/2/math/zahlen-bis-100", label: "Zahlen bis 100 üben" },
+      { href: "/learn/2/math/add-sub-100", label: "Plus und Minus bis 100" },
+      { href: "/learn/2/math/uhrzeit", label: "Uhrzeit üben" },
     ],
   },
   "deutsch-uebungen-2-klasse": {
@@ -505,9 +508,9 @@ const SPECIAL_SEO_PAGES: GradeSubjectSeoPage[] = [
     subject: "german",
     subjectName: "Deutsch",
     shortSubjectName: "Deutsch",
-    title: "Leseverständnis Übungen 2. Klasse",
+    title: "Leseverständnis Übungen 2. Klasse - online lesen",
     description:
-      "Leseverständnis Übungen 2. Klasse für die Schweizer Primarschule: kurze Texte lesen, Fragen beantworten und genaues Lesen online üben.",
+      "Leseverständnis Übungen 2. Klasse: kurze Texte online lesen, Informationen finden und Fragen beantworten. Für die Schweizer Primarschule.",
     h1: "Leseverständnis Übungen 2. Klasse",
     eyebrow: "Leseverständnis · 2. Klasse · Schweizer Primarschule",
     lead:
@@ -524,11 +527,11 @@ const SPECIAL_SEO_PAGES: GradeSubjectSeoPage[] = [
     ctaLabel: "Lesen gratis üben",
     detailHeading: "Leseverständnis in der 2. Klasse gezielt festigen",
     detailIntro:
-      "Die Übungen passen für Kinder, die noch langsam lesen oder beim Beantworten von Fragen unsicher sind.",
+      "Die Übungen passen für Kinder, die noch langsam lesen, wichtige Informationen übersehen oder beim Beantworten von Fragen unsicher sind.",
     detailItems: [
       {
         title: "Texte überblicken",
-        body: "Dein Kind liest kurze Abschnitte und lernt, worauf es bei Fragen achten soll.",
+        body: "Dein Kind liest kurze Abschnitte und lernt, Überschrift, Schlüsselwörter und die Frage bewusst anzuschauen.",
       },
       {
         title: "Antworten finden",
@@ -560,6 +563,7 @@ const SPECIAL_SEO_PAGES: GradeSubjectSeoPage[] = [
       { href: "/lesen-lernen", label: "Lesen lernen" },
       { href: "/deutsch-uebungen-2-klasse", label: "Deutsch Übungen 2. Klasse" },
       { href: "/deutsch-uebungen-kinder", label: "Deutsch Übungen für Kinder" },
+      { href: "/learn/2/german/texte-lesen", label: "Kurze Texte lesen" },
     ],
   },
   {

@@ -124,9 +124,9 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
 
       <section className="border-b border-green-100 bg-green-50 px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-widest text-green-700">{page.eyebrow}</p>
-            <h1 className="mt-3 max-w-3xl text-4xl font-black leading-tight text-gray-950 sm:text-5xl">{page.h1}</h1>
+          <div className="min-w-0">
+            <p className="break-words text-sm font-bold uppercase tracking-widest text-green-700">{page.eyebrow}</p>
+            <h1 className="mt-3 max-w-3xl break-words text-4xl font-black leading-tight text-gray-950 sm:text-5xl">{page.h1}</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-700">{page.lead}</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -144,7 +144,7 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-green-100 bg-white shadow-xl shadow-green-100/70">
+          <div className="min-w-0 overflow-hidden rounded-2xl border border-green-100 bg-white shadow-xl shadow-green-100/70">
             <Image
               src={heroImage.src}
               alt={heroImage.alt}

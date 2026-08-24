@@ -59,6 +59,18 @@ export type IntentLandingPageConfig = {
       body: string;
     }[];
   };
+  relatedLinks?: {
+    href: string;
+    title: string;
+    description: string;
+  }[];
+  referenceTable?: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    headers: string[];
+    rows: string[][];
+  };
   faq: [string, string][];
 };
 
@@ -91,7 +103,20 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
   const { session } = useSession();
   const uid = session?.userId ?? "";
   const variant = useAdsLpVariant(config.pageKey, config.path);
-  const gradeLinks = getGradeSubjectSeoLinks(6);
+  const preferredSubject = /mathe|einmaleins|1x1/.test(config.path)
+    ? "math"
+    : /deutsch|lesen|rechtschreibung/.test(config.path)
+      ? "german"
+      : null;
+  const gradeLinks = getGradeSubjectSeoLinks()
+    .filter((page) => !preferredSubject || page.subject === preferredSubject)
+    .slice(0, 4);
+  const relatedLinks = [
+    ...(config.relatedLinks ?? []),
+    ...ORGANIC_LANDING_PAGES.filter(
+      (page) => page.href !== config.path && !(config.relatedLinks ?? []).some((related) => related.href === page.href),
+    ),
+  ].slice(0, 4);
   const seoDetailSection = config.seoDetail ? (
     <section className="border-y border-green-100 bg-green-50/60 px-4 py-12 sm:px-6 sm:py-16">
       <div className="mx-auto max-w-6xl">
@@ -111,13 +136,60 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
       </div>
     </section>
   ) : null;
+  const referenceTableSection = config.referenceTable ? (
+    <section className="bg-white px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-6xl">
+        <div className="max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-700">{config.referenceTable.eyebrow}</p>
+          <h2 className="mt-2 text-3xl font-black text-gray-950">{config.referenceTable.title}</h2>
+          <p className="mt-4 text-base leading-7 text-gray-700">{config.referenceTable.body}</p>
+        </div>
+        <div
+          className="mt-7 overflow-x-auto rounded-2xl border border-green-100 shadow-sm"
+          role="region"
+          aria-label={config.referenceTable.title}
+          tabIndex={0}
+        >
+          <table className="min-w-[720px] w-full border-collapse bg-white text-center text-sm">
+            <thead className="bg-green-700 text-white">
+              <tr>
+                {config.referenceTable.headers.map((header) => (
+                  <th key={header} scope="col" className="border-r border-green-600 px-3 py-3 font-black last:border-r-0">
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {config.referenceTable.rows.map((row, rowIndex) => (
+                <tr key={row[0]} className={rowIndex % 2 === 0 ? "bg-green-50/60" : "bg-white"}>
+                  {row.map((cell, cellIndex) =>
+                    cellIndex === 0 ? (
+                      <th key={cell} scope="row" className="border-r border-t border-green-100 px-3 py-3 font-black text-green-900">
+                        {cell}
+                      </th>
+                    ) : (
+                      <td key={`${row[0]}-${cellIndex}`} className="border-r border-t border-green-100 px-3 py-3 font-semibold text-gray-700 last:border-r-0">
+                        {cell}
+                      </td>
+                    ),
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-sm text-gray-500 sm:hidden">Auf kleinen Bildschirmen kannst du die Tabelle seitwärts bewegen.</p>
+      </div>
+    </section>
+  ) : null;
   const seoCluster = (
     <section className="bg-white px-4 pb-12 sm:px-6 sm:pb-16">
       <div className="mx-auto max-w-6xl rounded-2xl border border-green-100 bg-green-50 p-5 sm:p-6">
         <p className="text-xs font-bold uppercase tracking-widest text-green-700">Weitere Übungen</p>
         <h2 className="mt-2 text-2xl font-black text-gray-950">Mehr Themen für die Primarschule</h2>
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {ORGANIC_LANDING_PAGES.filter((page) => page.href !== config.path).slice(0, 4).map((page) => (
+          {relatedLinks.map((page) => (
             <Link
               key={page.href}
               href={page.href}
@@ -158,6 +230,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
           lead="Erstelle ein Konto, wähle dein Abo und teste alle Übungen und Klassen eine Woche lang ohne Belastung. Erst danach wird bezahlt, wenn du nicht kündigst."
         />
         {seoDetailSection}
+        {referenceTableSection}
         {seoCluster}
       </>
     );
@@ -213,7 +286,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
               </button>
             </div>
             <p className="mt-3 text-sm text-gray-500">
-              Premium danach ab CHF 8.25 / Monat · bis zu 3 Kinderprofile · TWINT & Kreditkarte
+              Premium danach ab CHF 8.25 / Monat · bis zu 3 Kinderprofile · sichere Kartenzahlung
             </p>
           </div>
 
@@ -326,6 +399,8 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
 
       {seoDetailSection}
 
+      {referenceTableSection}
+
       {seoCluster}
 
       <section className="bg-amber-50 px-4 py-12 sm:px-6 sm:py-16">
@@ -390,7 +465,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
             })}
           </div>
           <p className="mt-5 text-center text-sm text-gray-500">
-            Sicher bezahlen mit TWINT oder Kreditkarte. Premium schaltet alle Aufgaben, Fächer und Klassen frei.
+            Sicher mit Kreditkarte bezahlen. Premium schaltet alle Aufgaben, Fächer und Klassen frei.
           </p>
         </div>
       </section>

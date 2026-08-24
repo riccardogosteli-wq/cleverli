@@ -62,6 +62,38 @@ export const einmaleinsUebenConfig: IntentLandingPageConfig = {
       },
     ],
   },
+  relatedLinks: [
+    {
+      href: "/einmaleins-uebungen-2-klasse",
+      title: "Einmaleins Übungen 2. Klasse",
+      description: "Mit 2er-, 5er- und 10er-Reihen ruhig ins 1x1 einsteigen.",
+    },
+    {
+      href: "/1x1-spiele",
+      title: "1x1 Spiele",
+      description: "Einmaleins mit Memory, kurzen Runden und sichtbarem Fortschritt üben.",
+    },
+    {
+      href: "/mathe-uebungen-2-klasse",
+      title: "Mathe Übungen 2. Klasse",
+      description: "Rechnen bis 100, Einmaleins, Uhrzeit, Geld und Textaufgaben festigen.",
+    },
+    {
+      href: "/learn/2/math/einmaleins",
+      title: "Direkt Einmaleins üben",
+      description: "Ohne Vorbereitung mit einer kurzen kostenlosen Übungsrunde starten.",
+    },
+  ],
+  referenceTable: {
+    eyebrow: "Einmaleins Tabelle",
+    title: "Die 1x1-Reihen von 1 bis 10 im Überblick",
+    body: "Die Tabelle hilft beim Nachschauen und Wiederholen. Für nachhaltige Sicherheit lohnt es sich, danach einzelne Reihen und gemischte Aufgaben aktiv zu üben.",
+    headers: ["Reihe", "× 1", "× 2", "× 3", "× 4", "× 5", "× 6", "× 7", "× 8", "× 9", "× 10"],
+    rows: Array.from({ length: 10 }, (_, rowIndex) => {
+      const factor = rowIndex + 1;
+      return [`${factor}er`, ...Array.from({ length: 10 }, (_, columnIndex) => String(factor * (columnIndex + 1)))];
+    }),
+  },
   faq: [
     ["Ist die Seite fürs 1x1 gedacht?", "Ja. Der Einstieg führt direkt zu Einmaleins-Aufgaben für die Primarschule."],
     ["Welche Malreihen kann mein Kind üben?", "Cleverli deckt einfache Reihen, gemischte 1x1-Aufgaben und passende Divisionen ab."],
@@ -112,8 +144,64 @@ export const einsMalEinsSpieleConfig: IntentLandingPageConfig = {
       body: "Tipps und Vorlesen unterstützen direkt in der Aufgabe, damit Kinder selbstständiger üben können.",
     },
   ],
+  preview: {
+    classic: {
+      grade: "1x1 Spielrunde",
+      question: "Welche Zahl fehlt? 7 × __ = 42",
+      answers: ["5", "6", "7"],
+      correctIndex: 1,
+      tip: "Tipp: Suche in der 7er-Reihe nach 42.",
+    },
+    exerciseTitle: "Finde Einmaleins-Aufgabe und Ergebnis.",
+    pairs: [
+      ["6 × 7", "42"],
+      ["8 × 4", "32"],
+      ["9 × 3", "27"],
+    ],
+  },
   trustTitle: "Spielerisch heisst hier nicht beliebig.",
   trustBody: "Die Aufgaben bleiben echte Primarschul-Mathe. Cleverli macht den Einstieg leicht: kurze Runden, klares Feedback und Fortschritt für Eltern.",
+  seoDetail: {
+    eyebrow: "1x1 spielerisch festigen",
+    title: "Einmaleins-Spiele mit einem klaren Lernziel",
+    body: "Kinder üben dieselben wichtigen Reihen in unterschiedlichen Formaten. Das bringt Abwechslung, ohne dass das eigentliche Lernziel aus dem Blick gerät.",
+    items: [
+      {
+        title: "Rechnung und Ergebnis verbinden",
+        body: "Beim Memory gehören Malaufgabe und Ergebnis zusammen. So prägen sich Zusammenhänge leichter ein.",
+      },
+      {
+        title: "Lücken in Reihen finden",
+        body: "Lückenaufgaben helfen Kindern, eine Reihe nicht nur aufzusagen, sondern flexibel anzuwenden.",
+      },
+      {
+        title: "Gemischt wiederholen",
+        body: "Wenn mehrere Reihen durcheinander vorkommen, zeigt sich in einer kurzen Runde, was schon sicher sitzt.",
+      },
+    ],
+  },
+  relatedLinks: [
+    {
+      href: "/einmaleins-ueben",
+      title: "Einmaleins üben",
+      description: "Reihen gezielt lernen, gemischt festigen und mit Division verbinden.",
+    },
+    {
+      href: "/einmaleins-uebungen-2-klasse",
+      title: "Einmaleins Übungen 2. Klasse",
+      description: "Mit 2er-, 5er- und 10er-Reihen passend zur 2. Klasse starten.",
+    },
+    {
+      href: "/mathe-uebungen-2-klasse",
+      title: "Mathe Übungen 2. Klasse",
+      description: "Weitere Aufgaben zu Rechnen bis 100, Uhrzeit, Geld und Textaufgaben.",
+    },
+    {
+      href: "/learn/2/math/einmaleins",
+      title: "Kostenlose 1x1-Runde",
+      description: "Direkt im Browser mit einer kurzen Einmaleins-Runde starten.",
+    },
+  ],
   faq: [
     ["Sind das echte Mathe-Übungen oder nur Spiele?", "Es sind echte Einmaleins-Aufgaben mit spielerischer Oberfläche, Feedback und Fortschritt."],
     ["Für welche Klasse passt das?", "Vor allem für Kinder, die das 1x1 in der Primarschule aufbauen oder festigen."],

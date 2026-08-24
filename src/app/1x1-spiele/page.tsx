@@ -3,8 +3,8 @@ import IntentLandingPage from "../ads/intent/IntentLandingPage";
 import { einsMalEinsSpieleConfig } from "../ads/intent/configs";
 
 export const metadata: Metadata = {
-  title: "1x1 Spiele online üben",
-  description: "1x1 Spiele und Einmaleins-Aufgaben für Kinder. 20 Aufgaben gratis testen, direkt im Browser, mit Tipps und Vorlesen.",
+  title: "1x1 Spiele online - Einmaleins spielerisch üben",
+  description: "1x1 Spiele für Kinder: Einmaleins mit Memory, Lückenaufgaben und kurzen Runden spielerisch üben. 20 Aufgaben gratis im Browser testen.",
   robots: {
     index: true,
     follow: true,
@@ -13,8 +13,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.cleverli.ch/1x1-spiele",
   },
+  openGraph: {
+    title: "1x1 Spiele online - Einmaleins spielerisch üben",
+    description: "Einmaleins mit Memory, Lückenaufgaben und kurzen Runden spielerisch üben.",
+    url: "https://www.cleverli.ch/1x1-spiele",
+    images: [{ url: "https://www.cleverli.ch/og-image-v2.png", width: 1200, height: 630, alt: "Cleverli - 1x1 Spiele" }],
+  },
 };
 
 export default function EinsMalEinsSpielePage() {
-  return <IntentLandingPage config={einsMalEinsSpieleConfig} />;
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: einsMalEinsSpieleConfig.faq.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <IntentLandingPage config={einsMalEinsSpieleConfig} />
+    </>
+  );
 }

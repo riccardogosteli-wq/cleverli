@@ -33,7 +33,7 @@ const trustItems = [
   ["Keine Belastung heute", "Die Zahlung wird erst nach 7 Tagen ausgelöst."],
   ["Jederzeit kündbar", "Du kannst vor Ablauf der Testphase kündigen."],
   ["Jährlich spart 17 %", "CHF 99/Jahr statt CHF 118.80 bei monatlicher Zahlung."],
-  ["Sicher über Stripe", "TWINT oder Kreditkarte, verschlüsselt und klar ausgewiesen."],
+  ["Sicher über Stripe", "Kartenzahlung, verschlüsselt und klar ausgewiesen."],
 ];
 
 export default function AdsTrialLandingPage({
