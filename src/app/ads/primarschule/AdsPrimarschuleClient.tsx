@@ -41,6 +41,18 @@ const previewAnswers = ["18", "24", "32"];
 
 const freeTrialUrl = "/learn/1/math/zahlen-1-10";
 
+const organicPriorityPages = [
+  "/mathe-uebungen-kinder",
+  "/deutsch-uebungen-kinder",
+  "/1x1-spiele",
+  "/deutsch-uebungen-2-klasse",
+  "/einmaleins-ueben",
+  "/lesen-lernen",
+].flatMap((href) => {
+  const page = ORGANIC_LANDING_PAGES.find((candidate) => candidate.href === href);
+  return page ? [page] : [];
+});
+
 export default function AdsPrimarschuleClient() {
   const { session } = useSession();
   const uid = session?.userId ?? "";
@@ -59,8 +71,8 @@ export default function AdsPrimarschuleClient() {
       <div className="mx-auto max-w-6xl rounded-2xl border border-green-100 bg-green-50 p-5 sm:p-6">
         <p className="text-xs font-bold uppercase tracking-widest text-green-700">Übungen nach Fach</p>
         <h2 className="mt-2 text-2xl font-black text-gray-950">Direkt zu passenden Primarschul-Übungen</h2>
-        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {ORGANIC_LANDING_PAGES.filter((page) => page.href !== "/primarschule-uebungen").slice(0, 4).map((page) => (
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {organicPriorityPages.map((page) => (
             <Link
               key={page.href}
               href={page.href}

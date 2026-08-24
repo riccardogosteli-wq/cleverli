@@ -253,6 +253,28 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
   ],
   trustTitle: "Mathe daheim braucht klare Übungen und sichtbaren Fortschritt.",
   trustBody: "Cleverli bündelt Mathe-Übungen für die Primarschule in einem ruhigen, kindgerechten Ablauf. Kurze Runden, sichtbarer Fortschritt und Hilfe genau dann, wenn sie gebraucht wird.",
+  relatedLinks: [
+    {
+      href: "/mathe-uebungen-2-klasse",
+      title: "Mathe Übungen 2. Klasse",
+      description: "Rechnen bis 100, Plus und Minus, Uhrzeit und Geld passend zur 2. Klasse üben.",
+    },
+    {
+      href: "/einmaleins-ueben",
+      title: "Einmaleins üben",
+      description: "Reihen aufbauen, gemischte Aufgaben lösen und Fortschritt direkt sehen.",
+    },
+    {
+      href: "/1x1-spiele",
+      title: "1x1 Spiele",
+      description: "Das Einmaleins mit Memory und kurzen Spielrunden festigen.",
+    },
+    {
+      href: "/einmaleins-uebungen-2-klasse",
+      title: "Einmaleins 2. Klasse",
+      description: "Mit 2er-, 5er- und 10er-Reihen ruhig ins Einmaleins einsteigen.",
+    },
+  ],
   faq: [
     ["Welche Mathe-Themen sind drin?", "Zahlen, Addition, Subtraktion, Einmaleins, Division, Geometrie, Uhrzeit, Daten und weitere Primarschul-Themen."],
     ["Ist Cleverli nach Lehrplan 21 aufgebaut?", "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet."],
@@ -338,6 +360,28 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
       },
     ],
   },
+  relatedLinks: [
+    {
+      href: "/deutsch-uebungen-2-klasse",
+      title: "Deutsch Übungen 2. Klasse",
+      description: "Lesen, Sätze, Nomen, Verben und erste Rechtschreibung gezielt festigen.",
+    },
+    {
+      href: "/leseverstaendnis-uebungen-2-klasse",
+      title: "Leseverständnis 2. Klasse",
+      description: "Kurze Texte lesen, Informationen finden und Fragen beantworten.",
+    },
+    {
+      href: "/rechtschreibung-uebungen-primarschule",
+      title: "Rechtschreibung üben",
+      description: "Grossschreibung, Wortbilder und typische Stolperstellen wiederholen.",
+    },
+    {
+      href: "/lesen-lernen",
+      title: "Lesen lernen",
+      description: "Buchstaben, Wörter und erste Sätze Schritt für Schritt üben.",
+    },
+  ],
   faq: [
     ["Welche Deutsch-Themen sind drin?", "Lesen, Rechtschreibung, Grammatik, Satzbau, Wortschatz und weitere Primarschul-Themen."],
     ["Für welche Klasse passen die Übungen?", "Cleverli deckt die 1. bis 6. Klasse ab. Kinder können nach Klasse und Thema starten."],

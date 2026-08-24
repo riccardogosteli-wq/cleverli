@@ -79,9 +79,9 @@ export default function AdsTrialLandingPage({
     <main className="bg-white text-gray-900">
       <section className="bg-gradient-to-br from-green-50 via-white to-amber-50 px-4 py-8 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
-          <div>
+          <div className="min-w-0">
             <p className="mb-3 text-sm font-bold uppercase tracking-widest text-green-700">{eyebrow}</p>
-            <h1 className="text-4xl font-black leading-tight text-gray-950 sm:text-5xl">{title}</h1>
+            <h1 className="break-words text-4xl font-black leading-tight text-gray-950 sm:text-5xl">{title}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">{lead}</p>
 
             <div className="mt-5 grid gap-3 text-sm font-semibold text-gray-700 sm:grid-cols-2">
