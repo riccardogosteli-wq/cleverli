@@ -17,29 +17,27 @@ The audit iterated every source exercise in every subject for grades 2–6.
 
 Each workbook was reconciled against its source count. Every exercise row has exactly one green answer or solution marker. No exercise content was changed during this audit.
 
-## Clearly wrong or malformed
+## Confirmed wrong or malformed
+
+These are the strict, objectively incorrect or unusable items approved for correction. Ambiguous wording and level judgements are intentionally excluded from this section.
 
 ### Grade 2
 
 - `science/lebewesen/l14`: groups bacteria and viruses together as living organisms. Bacteria are living organisms; viruses are generally not classified as living.
-- `science/lebewesen/l40`: “Der Mond gibt ___ Licht.” with answer `nachts` is nonsensical. The Moon reflects sunlight.
 - `science/kalender-gr2/k47`: says we taste with our teeth; taste is primarily sensed by the tongue.
 - `science/wasser/w45`: `Das Ozean` must be `Der Ozean`.
-- `science/gesunde-ernaehrung/g6` and `ge27`: the daily water amounts of 1–1.5 and 1.5–2 litres are misleading for young children and conflict with the Swiss guidance already applied to grade 1.
-- Normalised fill-in blocks in `physik-bewegung`, `sinne` and `wetter-klima` often cannot fit grammatically into their blanks because the stored answer repeats an article or an entire clause. Examples include “Beim Velo macht die ___ langsamer.” → `Die Bremse` and “Wir hören mit den ___.” → `Mit den Ohren`.
+- Normalised fill-in blocks in `physik-bewegung` and `sinne` often cannot fit grammatically into their blanks because the stored answer repeats an article or an entire clause. Examples include “Beim Velo macht die ___ langsamer.” → `Die Bremse` and “Wir hören mit den ___.” → `Mit den Ohren`.
 
 ### Grade 3
 
 - `german/rechtschreibung/rs16`: asks `heiss oder heiss?`; both forms shown are identical.
 - `german/rechtschreibung/rs38`: asks what Swiss German uses “instead of ss”, then answers `ss`. The prompt should refer to `ß`.
-- `math/geometrie/geo45`: both `Grosskreis` and `Geodäte` can describe the shortest path on a sphere, producing more than one defensible answer.
 
 ### Grade 4
 
 - `german/rechtschreibung-4/g4d26`: “Sortiere: ss oder ss?” is broken; both categories are identical.
 - `science/orientierung-karte-4/ok4_27`: conflates `Isoglosse` with `Isohypse`. A language boundary is an isogloss; a contour line is an isohypse.
 - `science/roemisches-reich-4/rr4_27`: calls Aventicum the capital of a Roman province named Helvetia. It was the principal town of the `civitas Helvetiorum`; there was no Roman province called Helvetia.
-- `science/pflanzen-4/pfl4_17`: says conifers have evergreen needles as an absolute rule. Larches are conifers and shed their needles.
 
 ### Grade 5
 
@@ -76,11 +74,15 @@ The official Lehrplan 21 Cycle 1 mathematics overview centres on foundational nu
 
 ## Items that are questionable but not automatically wrong
 
+- Grade 2 `lebewesen/l40`: “Der Mond gibt nachts Licht” is understandable at this age, but scientifically imprecise because the Moon reflects sunlight rather than producing its own light.
+- Grade 2 `gesunde-ernaehrung/g6` and `ge27`: daily water recommendations are likely too high for many young children, but depend on age, activity, heat and whether food-derived water is included.
 - Grade 2 `schweiz-symbole/ch20`: “grösster See der Schweiz (anteilig)” is unclear when referring to Lake Geneva.
 - Grade 2 `kalender/k32`: fixes the start of autumn to 21 September, although the astronomical date varies.
 - Grade 2 `kalender/k33`: the number of days from 1 January to 31 March depends on inclusive/exclusive interpretation.
 - Grade 3 `science/unsere-erde/ue32`: “world’s longest river” is disputed between the Nile and Amazon depending on measurement.
+- Grade 3 `math/geometrie/geo45`: `Grosskreis`, `Geodäte` and `Orthodrome` overlap in the context of the shortest route on a sphere, so the choices are ambiguous.
 - Grade 4 `science/europa-4/eu4_18`: answer text `Rhein (mit Loire, Ebro als Alternativen)` is unclear and unsuitable as one definitive solution.
+- Grade 4 `science/pflanzen-4/pfl4_17`: “conifers have evergreen needles” is a common simplification but has exceptions such as the larch.
 - Grade 5 `science/europa-geografie-5/eg5-35`: Lisbon is the westernmost among the listed choices, but not the westernmost European capital if all capitals are considered.
 
 ## Recommended correction order

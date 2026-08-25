@@ -7,6 +7,7 @@ type ExerciseFact = {
   answer: string;
   options: string[];
   fill: string;
+  fillAnswer?: string;
   hint: string;
 };
 
@@ -52,8 +53,8 @@ export function buildNormalizedTopicExercises(prefix: string, facts: FactSet): E
       type: "fill-in-blank",
       difficulty,
       question: fact.fill,
-      answer: fact.answer,
-      hints: [fact.hint, `Gesucht ist: ${fact.answer}.`],
+      answer: fact.fillAnswer ?? fact.answer,
+      hints: [fact.hint, `Gesucht ist: ${fact.fillAnswer ?? fact.answer}.`],
       free: index < 3,
     };
   });
@@ -65,4 +66,3 @@ export function replaceTopicExercises(topics: Topic[], replacements: Record<stri
     return exercises ? { ...topic, exercises } : topic;
   });
 }
-
