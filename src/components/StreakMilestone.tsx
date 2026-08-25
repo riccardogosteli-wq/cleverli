@@ -31,7 +31,7 @@ export default function StreakMilestone({ streak, onDismiss, lang = "de" }: Stre
     if (streak === 7) return "Eine ganze Woche! Fantastisch!";
     if (streak === 14) return "Zwei Wochen – unaufhaltbar!";
     if (streak === 30) return "Ein ganzer Monat! Du bist eine Legende!";
-    return "Großartig!";
+    return "Grossartig!";
   };
 
   const getButtonText = () => {
