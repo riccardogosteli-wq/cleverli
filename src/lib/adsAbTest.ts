@@ -3,57 +3,18 @@
 import { useEffect, useState } from "react";
 import { pushDataLayerEvent } from "@/lib/analytics";
 import { trackUserActivity } from "@/lib/userActivityClient";
+import {
+  getAdsLpVariant,
+  readForcedAdsLpVariant,
+  type AdsLpVariant,
+} from "@/lib/adsAbVariant";
 
-export type AdsLpVariant = "control" | "trial";
-
-const STORAGE_KEY = "cleverli_ads_lp_ab_variant";
-const VALID_VARIANTS = new Set<AdsLpVariant>(["control", "trial"]);
-
-function readForcedVariant(): AdsLpVariant | null {
-  if (typeof window === "undefined") return null;
-  const value = new URLSearchParams(window.location.search).get("ab");
-  return VALID_VARIANTS.has(value as AdsLpVariant) ? (value as AdsLpVariant) : null;
-}
-
-function readStoredVariant(): AdsLpVariant | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const value = window.localStorage.getItem(STORAGE_KEY);
-    return VALID_VARIANTS.has(value as AdsLpVariant) ? (value as AdsLpVariant) : null;
-  } catch {
-    return null;
-  }
-}
-
-function storeVariant(variant: AdsLpVariant) {
-  try {
-    window.localStorage.setItem(STORAGE_KEY, variant);
-  } catch {
-    // The page still works if storage is blocked.
-  }
-}
+export { getAdsLpVariant, type AdsLpVariant } from "@/lib/adsAbVariant";
 
 function isInternalQaRequest() {
   if (typeof window === "undefined") return false;
   const params = new URLSearchParams(window.location.search);
   return params.get("utm_source")?.toLowerCase().startsWith("qa") ?? false;
-}
-
-export function getAdsLpVariant(): AdsLpVariant {
-  if (typeof window === "undefined") return "control";
-
-  const forced = readForcedVariant();
-  if (forced) {
-    storeVariant(forced);
-    return forced;
-  }
-
-  const stored = readStoredVariant();
-  if (stored) return stored;
-
-  const variant: AdsLpVariant = Math.random() < 0.5 ? "control" : "trial";
-  storeVariant(variant);
-  return variant;
 }
 
 export function useAdsLpVariant(page: string, pagePath: string): AdsLpVariant {
@@ -83,7 +44,7 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
     page_path: pagePath,
     experiment: "ads_lp_7_day_trial",
     variant,
-    forced_variant: Boolean(readForcedVariant()),
+    forced_variant: Boolean(readForcedAdsLpVariant()),
     internal_qa: isInternalQaRequest(),
   });
   trackUserActivity("ads_lp_ab_assignment", {
@@ -95,7 +56,7 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
       page_path: pagePath,
       experiment: "ads_lp_7_day_trial",
       variant,
-      forced_variant: Boolean(readForcedVariant()),
+      forced_variant: Boolean(readForcedAdsLpVariant()),
       internal_qa: isInternalQaRequest(),
     },
   });

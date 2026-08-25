@@ -1,5 +1,6 @@
 import { trackUserActivity } from "@/lib/userActivityClient";
 import { checkoutAttributionEventParams } from "@/lib/attribution";
+import { resolveAdsLpTrackingVariant, type AdsLpVariant } from "@/lib/adsAbVariant";
 
 export type CheckoutPlan = "monthly" | "yearly";
 type AdsLpCtaType = "paid" | "free";
@@ -8,7 +9,7 @@ type AdsLpPageContext = {
   page?: string;
   page_path?: string;
   experiment?: string;
-  variant?: string;
+  variant?: AdsLpVariant;
   trial_days?: number;
 };
 
@@ -131,6 +132,7 @@ export async function trackAdsLpCtaClick(
 ) {
   const page = pageContext.page ?? "primarschule_uebungen";
   const pagePath = pageContext.page_path ?? "/primarschule-uebungen";
+  const variant = resolveAdsLpTrackingVariant(pageContext.variant);
   const requestContext = adsLpRequestContext();
   const metadata = {
     page,
@@ -150,7 +152,7 @@ export async function trackAdsLpCtaClick(
           plan: null,
         }),
     ...(pageContext.experiment ? { experiment: pageContext.experiment } : {}),
-    ...(pageContext.variant ? { variant: pageContext.variant } : {}),
+    variant,
     ...(pageContext.trial_days ? { trial_days: pageContext.trial_days } : {}),
     ...requestContext,
   };
