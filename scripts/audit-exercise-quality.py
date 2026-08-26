@@ -160,10 +160,18 @@ for row in all_rows:
     answer_token = norm(answer)
     if answer_token in {"all", "done"} and any(answer_token in norm(hint) for hint in hints):
         issues["sentinel_hint"].append({**loc, "hints": hints})
-    elif len(answer_token) >= 2 and any(answer_token in norm(hint) for hint in hints):
+    elif answer_token not in {"die", "der", "das", "den", "dem", "ein", "eine", "und", "was", "wer", "er", "es", "in", "an", "zu"} and len(answer_token) >= 3 and any(re.search(rf"(?<![\w]){re.escape(answer_token)}(?![\w])", norm(hint)) for hint in hints):
         issues["answer_revealed_in_hint"].append({**loc, "hints": hints})
 
-    if re.fullmatch(r"-?\d+(?:[.,]\d+)?", answer.strip()) and any(re.search(r"wort|buchstab", hint, re.I) for hint in hints):
+    if re.fullmatch(r"-?\d+(?:[.,]\d+)?", answer.strip()) and any(
+        re.search(rf"(?<!\d){re.escape(answer.strip())}(?!\d)", hint) for hint in hints
+    ):
+        issues["numeric_answer_revealed_in_hint"].append({**loc, "hints": hints})
+
+    if any(re.search(r"\b(?:(?:das wort|die antwort|die lösung)\s+beginnt mit|erst(?:e|en|er) (?:silbe|buchstabe)|schlüsselbegriff|(?:word|answer|solution)\s+starts with|first (?:letter|syllable)|(?:mot|réponse|solution)\s+commence par|première (?:lettre|syllabe)|(?:parola|risposta|soluzione)\s+inizia con|prima (?:lettera|sillaba))\b", hint, re.I) or re.search(r"^(?:beginnt mit|starts with|commence par [«'\"]|inizia con)\b", hint.strip(), re.I) for hint in hints):
+        issues["partial_answer_revealed_in_hint"].append({**loc, "hints": hints})
+
+    if re.fullmatch(r"-?\d+(?:[.,]\d+)?", answer.strip()) and any(re.search(r"\b(?:wort|buchstabe|word|letter|mot|lettre|parola)\b", hint, re.I) for hint in hints):
         issues["numeric_answer_word_hint"].append({**loc, "hints": hints})
     if answer in {">", "<", "="} and any(re.search(r"buchstab", hint, re.I) for hint in hints):
         issues["symbol_answer_letter_hint"].append({**loc, "hints": hints})
