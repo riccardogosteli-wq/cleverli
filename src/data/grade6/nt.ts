@@ -1,6 +1,7 @@
 import { Topic } from "@/types/exercise";
 import { grade6NTReplacements } from "../levelAppropriateTopicSets";
 import { replaceTopicExercises } from "../normalizedTopicExercises";
+import { applyGrade6ScienceDuplicateReplacements } from "../grade6ScienceDuplicateReplacements";
 
 const grade6NT: Topic[] = [
   {
@@ -831,4 +832,4 @@ const grade6NT: Topic[] = [
   },
 ];
 
-export default replaceTopicExercises(grade6NT, grade6NTReplacements);
+export default applyGrade6ScienceDuplicateReplacements(replaceTopicExercises(grade6NT, grade6NTReplacements));
