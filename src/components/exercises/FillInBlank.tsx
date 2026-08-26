@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
+import { matchPunctuationOnlyAnswer } from "@/lib/fillInBlankMatching";
 
 interface Props {
   question: string;
@@ -76,6 +77,9 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
   };
 
   const matchesSingle = (input: string, expected: string) => {
+    const punctuationMatch = matchPunctuationOnlyAnswer(input, expected);
+    if (punctuationMatch !== null) return punctuationMatch;
+
     const normalizedInput = normalize(input);
     const normalizedExpected = normalize(expected);
     if (normalizedInput === normalizedExpected) return true;

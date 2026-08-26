@@ -57,7 +57,9 @@ const SELF_REVIEW_KEYS = new Set([
   // Grade 5 English: simple connected sentences on familiar Cycle-2 topics.
   "5/english/future-plans-5/fp5-50",
   "5/english/environment-5/env5-40",
+  "5/english/environment-5/env5-42",
   "5/english/environment-5/env5-48",
+  "5/english/technology-5/tech5-36",
   "5/english/technology-5/tech5-40",
   "5/english/technology-5/tech5-48",
   "5/english/technology-5/tech5-50",
@@ -99,6 +101,7 @@ const SELF_REVIEW_KEYS = new Set([
   "6/english/writing-skills-6/ws6-34",
   "6/english/writing-skills-6/ws6-36",
   "6/english/writing-skills-6/ws6-40",
+  "6/english/writing-skills-6/ws6-44",
   "6/english/writing-skills-6/ws6-46",
   "6/english/writing-skills-6/ws6-50",
   "6/english/vocabulary-6/vb6-50",
@@ -152,6 +155,14 @@ const REWRITES: Record<string, ExercisePatch> = {
   "5/english/environment-5/env5-40": {
     question: "Write one health recommendation with 'shouldn't': 'People shouldn't ___ because ___.'",
     answer: "People shouldn't waste water because it is precious.",
+  },
+  "5/english/environment-5/env5-42": {
+    question: "Write two simple actions that reduce a person's carbon footprint.",
+    answer: "Use public transport. Save electricity at home.",
+  },
+  "5/english/technology-5/tech5-36": {
+    question: "Write two simple sentences about social media: one advantage and one disadvantage.",
+    answer: "Social media connects people. Too much social media can waste time.",
   },
   "5/english/technology-5/tech5-40": { answer: "One advantage of smartphones is quick communication, but one disadvantage is too much screen time." },
   "5/english/technology-5/tech5-50": {
@@ -231,6 +242,10 @@ const REWRITES: Record<string, ExercisePatch> = {
   "6/english/writing-skills-6/ws6-40": {
     question: "Write two simple sentences about protecting the environment: problem and action.",
     answer: "Plastic waste harms animals. We should use less plastic.",
+  },
+  "6/english/writing-skills-6/ws6-44": {
+    question: "Write one simple opinion about homework and give one reason.",
+    answer: "I think homework can be useful because it helps me practise.",
   },
   "6/english/writing-skills-6/ws6-46": {
     question: "Write three short sentences about exercise using 'first', 'also' and 'finally'.",

@@ -10,6 +10,7 @@ import {
 } from "../src/data";
 import { localizeExercise } from "../src/lib/exerciseLocalization";
 import { isApprovedSafeHint } from "../src/lib/exerciseHints";
+import { OPEN_WRITING_CHANGED_KEYS } from "../src/data/openWritingExercises";
 import type { Exercise, Topic } from "../src/types/exercise";
 import type { Lang } from "../src/lib/i18n";
 
@@ -81,7 +82,11 @@ for (let grade = 1; grade <= 6; grade += 1) {
         exercises += 1;
         const original = source.get(`${topic.id}/${exercise.id}`);
         if (!original) throw new Error(`Missing raw source for ${grade}/${subject.id}/${topic.id}/${exercise.id}`);
-        if (JSON.stringify(withoutHints(original)) !== JSON.stringify(withoutHints(exercise))) {
+        const exerciseKey = `${grade}/${subject.id}/${topic.id}/${exercise.id}`;
+        if (
+          !OPEN_WRITING_CHANGED_KEYS.has(exerciseKey)
+          && JSON.stringify(withoutHints(original)) !== JSON.stringify(withoutHints(exercise))
+        ) {
           failures.push({ grade, subject: subject.id, topic: topic.id, id: exercise.id, issues: ["non-hint exercise data changed"] });
         }
         if (JSON.stringify(original.hints) !== JSON.stringify(exercise.hints)) changedGerman += 1;
