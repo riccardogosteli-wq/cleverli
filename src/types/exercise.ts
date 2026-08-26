@@ -1,4 +1,4 @@
-export type ExerciseType = "multiple-choice" | "fill-in-blank" | "counting" | "matching" | "memory" | "drag-drop" | "number-line" | "word-search";
+export type ExerciseType = "multiple-choice" | "fill-in-blank" | "self-review" | "counting" | "matching" | "memory" | "drag-drop" | "number-line" | "word-search";
 
 export interface Exercise {
   id: string;
@@ -20,6 +20,10 @@ export interface Exercise {
   hintsEN?: string[];
   hintsFR?: string[];
   hintsIT?: string[];
+  reviewCriteria?: string[];
+  reviewCriteriaEN?: string[];
+  reviewCriteriaFR?: string[];
+  reviewCriteriaIT?: string[];
   explanation?: string;
   difficulty: 1 | 2 | 3;
   emoji?: string;

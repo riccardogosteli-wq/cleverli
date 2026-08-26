@@ -121,6 +121,7 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     hints: exercise.hintsEN ?? exercise.hints,
     options: exercise.optionsEN ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsEN, exercise.answerEN),
+    reviewCriteria: exercise.reviewCriteriaEN ?? exercise.reviewCriteria,
   };
   if (lang === "fr") return {
     ...exercise,
@@ -128,6 +129,7 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     hints: exercise.hintsFR ?? exercise.hints,
     options: exercise.optionsFR ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsFR, exercise.answerFR),
+    reviewCriteria: exercise.reviewCriteriaFR ?? exercise.reviewCriteria,
   };
   if (lang === "it") return cleanItalianExercise({
     ...exercise,
@@ -135,6 +137,7 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     hints: exercise.hintsIT ?? exercise.hints,
     options: exercise.optionsIT ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsIT, exercise.answerIT),
+    reviewCriteria: exercise.reviewCriteriaIT ?? exercise.reviewCriteria,
   });
   return exercise;
 }

@@ -5,6 +5,7 @@ import { syncTopicProgressToSupabase } from "@/lib/progressSync";
 import { Topic, Exercise } from "@/types/exercise";
 import MultipleChoice from "./exercises/MultipleChoice";
 import FillInBlank from "./exercises/FillInBlank";
+import SelfReview from "./exercises/SelfReview";
 import CountingGame from "./exercises/CountingGame";
 import Matching from "./exercises/Matching";
 import HintSystem from "./HintSystem";
@@ -951,6 +952,14 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           )}
           {current.type === "fill-in-blank" && (
             <FillInBlank question={current.question} answer={current.answer} altAnswers={current.altAnswers} onAnswer={handleAnswer} questionImage={current.image} />
+          )}
+          {current.type === "self-review" && (
+            <SelfReview
+              question={current.question}
+              exampleAnswer={current.answer}
+              criteria={current.reviewCriteria ?? []}
+              onAnswer={handleAnswer}
+            />
           )}
           {current.type === "counting" && (
             <CountingGame question={current.question} answer={current.answer} emoji={current.emoji} options={current.options ?? []} onAnswer={handleAnswer} questionImage={current.image} />

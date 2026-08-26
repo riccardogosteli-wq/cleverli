@@ -10,6 +10,7 @@ import { localizeExercise } from "@/lib/exerciseLocalization";
 import { getLocalizedSubjectName } from "@/lib/seoContent";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
+import SelfReview from "@/components/exercises/SelfReview";
 import CountingGame from "@/components/exercises/CountingGame";
 import HintSystem from "@/components/HintSystem";
 import { useSound } from "@/hooks/useSound";
@@ -234,6 +235,14 @@ export default function DailyPage() {
             altAnswers={localizedExercise.altAnswers}
             onAnswer={handleAnswer}
             questionImage={localizedExercise.image}
+          />
+        )}
+        {exercise.type === "self-review" && (
+          <SelfReview
+            question={localizedExercise.question}
+            exampleAnswer={localizedExercise.answer}
+            criteria={localizedExercise.reviewCriteria ?? []}
+            onAnswer={handleAnswer}
           />
         )}
         {exercise.type === "counting" && (

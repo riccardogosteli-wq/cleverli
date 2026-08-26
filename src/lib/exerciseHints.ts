@@ -12,6 +12,10 @@ const SAFE_HINTS: Record<HintLanguage, Record<ExerciseType, [string, string]>> =
       "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
       "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt.",
     ],
+    "self-review": [
+      "Nutze den Satzanfang und Wörter aus diesem Thema.",
+      "Lies deine Antwort nochmals und prüfe jeden Teil der Aufgabe.",
+    ],
     counting: [
       "Zähle die Dinge der Reihe nach und zeige dabei auf jedes genau einmal.",
       "Zähle zur Kontrolle noch einmal langsam nach.",
@@ -45,6 +49,10 @@ const SAFE_HINTS: Record<HintLanguage, Record<ExerciseType, [string, string]>> =
     "fill-in-blank": [
       "Read the whole sentence and think about what fits in the blank.",
       "Check that your solution fits the meaning and grammar of the sentence.",
+    ],
+    "self-review": [
+      "Use the sentence starter and words from this topic.",
+      "Read your answer again and check every part of the task.",
     ],
     counting: [
       "Count in order and point to each item exactly once.",
@@ -80,6 +88,10 @@ const SAFE_HINTS: Record<HintLanguage, Record<ExerciseType, [string, string]>> =
       "Lis toute la phrase et réfléchis à ce qui convient dans le blanc.",
       "Vérifie que ta solution convient au sens et à la grammaire de la phrase.",
     ],
+    "self-review": [
+      "Utilise le début de phrase et les mots de ce thème.",
+      "Relis ta réponse et vérifie chaque partie de l'exercice.",
+    ],
     counting: [
       "Compte dans l’ordre en montrant chaque élément une seule fois.",
       "Recompte lentement pour vérifier ton résultat.",
@@ -113,6 +125,10 @@ const SAFE_HINTS: Record<HintLanguage, Record<ExerciseType, [string, string]>> =
     "fill-in-blank": [
       "Leggi tutta la frase e pensa a cosa può stare nello spazio.",
       "Controlla che il tuo inserimento sia corretto per senso e grammatica.",
+    ],
+    "self-review": [
+      "Usa l'inizio della frase e le parole di questo argomento.",
+      "Rileggi la risposta e controlla ogni parte dell'esercizio.",
     ],
     counting: [
       "Conta in ordine indicando ogni elemento una sola volta.",
