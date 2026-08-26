@@ -1,9 +1,10 @@
 import { buildNormalizedTopicExercises } from "./normalizedTopicExercises";
+import { applyGrade2ScienceDuplicateReplacements } from "./grade2ScienceDuplicateReplacements";
 
 const opts = (answer: string, a: string, b: string, c: string) => [answer, a, b, c];
 
 export const grade2ScienceReplacements = {
-  "uhr-viertel-gr2": buildNormalizedTopicExercises("g2uhr_norm_", {
+  "uhr-viertel-gr2": applyGrade2ScienceDuplicateReplacements(buildNormalizedTopicExercises("g2uhr_norm_", {
     1: [
       { question: "Wie sagt man 7:15?", answer: "Viertel nach 7", options: opts("Viertel nach 7", "Halb 7", "Viertel vor 7", "7 Uhr"), fill: "7:15 heisst Viertel nach ___.", hint: "15 Minuten nach der vollen Stunde." },
       { question: "Wie sagt man 8:30?", answer: "Halb 9", options: opts("Halb 9", "Halb 8", "Viertel vor 9", "8 Uhr"), fill: "8:30 heisst Halb ___.", hint: "Bei halb schaut man zur nächsten Stunde." },
@@ -25,8 +26,8 @@ export const grade2ScienceReplacements = {
       { question: "Was ist eine Stunde nach 6:15?", answer: "7:15", options: opts("7:15", "6:45", "7:45", "5:15"), fill: "Eine Stunde nach 6:15 ist ___.", hint: "Die Minuten bleiben gleich." },
       { question: "Welche Zeit liegt zwischen 3:15 und 3:45?", answer: "3:30", options: opts("3:30", "3:00", "4:00", "2:30"), fill: "Zwischen 3:15 und 3:45 liegt ___.", hint: "Halb vier." },
     ],
-  }),
-  "physik-bewegung": buildNormalizedTopicExercises("g2bew_norm_", {
+  })),
+  "physik-bewegung": applyGrade2ScienceDuplicateReplacements(buildNormalizedTopicExercises("g2bew_norm_", {
     1: [
       { question: "Was braucht ein Ball, damit er rollt?", answer: "Einen Schubs", options: opts("Einen Schubs", "Dunkelheit", "Papier", "Regen"), fill: "Ein Ball rollt, wenn er einen ___ bekommt.", fillAnswer: "Schubs", hint: "Man kann ihn anstossen." },
       { question: "Was passiert, wenn du stärker schiebst?", answer: "Der Gegenstand bewegt sich schneller", options: opts("Der Gegenstand bewegt sich schneller", "Er wird unsichtbar", "Er wird kleiner", "Er friert ein"), fill: "Stärker schieben macht die Bewegung oft ___.", fillAnswer: "schneller", hint: "Mehr Kraft, mehr Bewegung." },
@@ -48,8 +49,8 @@ export const grade2ScienceReplacements = {
       { question: "Was macht eine Feder, wenn du sie zusammendrückst?", answer: "Sie kann zurückspringen", options: opts("Sie kann zurückspringen", "Sie wird zu Wasser", "Sie verschwindet", "Sie wird schwerelos"), fill: "Eine gedrückte Feder kann zurück___.", fillAnswer: "springen", hint: "Sie speichert kurz Kraft." },
       { question: "Welche Bahn beschreibt ein geworfener Ball meistens?", answer: "Einen Bogen", options: opts("Einen Bogen", "Ein Quadrat", "Eine gerade Linie nach oben für immer", "Eine Schnecke"), fill: "Ein geworfener Ball fliegt oft in einem ___.", fillAnswer: "Bogen", hint: "Er steigt und fällt." },
     ],
-  }),
-  sinne: buildNormalizedTopicExercises("g2sinne_norm_", {
+  })),
+  sinne: applyGrade2ScienceDuplicateReplacements(buildNormalizedTopicExercises("g2sinne_norm_", {
     1: [
       { question: "Womit sehen wir?", answer: "Mit den Augen", options: opts("Mit den Augen", "Mit den Füssen", "Mit den Knien", "Mit den Haaren"), fill: "Wir sehen mit den ___.", fillAnswer: "Augen", hint: "Sie sind im Gesicht." },
       { question: "Womit hören wir?", answer: "Mit den Ohren", options: opts("Mit den Ohren", "Mit den Händen", "Mit dem Bauch", "Mit der Nase"), fill: "Wir hören mit den ___.", fillAnswer: "Ohren", hint: "Links und rechts am Kopf." },
@@ -71,8 +72,8 @@ export const grade2ScienceReplacements = {
       { question: "Was macht das Gehirn mit Sinneseindrücken?", answer: "Es verarbeitet sie", options: opts("Es verarbeitet sie", "Es wirft sie weg", "Es macht sie nass", "Es klebt sie an die Wand"), fill: "Das Gehirn ___ Sinneseindrücke.", fillAnswer: "verarbeitet", hint: "Es macht daraus Informationen." },
       { question: "Was ist ein Warnsignal deines Körpers?", answer: "Schmerz", options: opts("Schmerz", "Eine Farbe", "Ein Schatten", "Ein Geräusch im Radio"), fill: "___ warnt dich, wenn etwas dem Körper schadet.", fillAnswer: "Schmerz", hint: "Heisse Herdplatte: aua." },
     ],
-  }),
-  "wetter-klima": buildNormalizedTopicExercises("g2wetter_norm_", {
+  })),
+  "wetter-klima": applyGrade2ScienceDuplicateReplacements(buildNormalizedTopicExercises("g2wetter_norm_", {
     1: [
       { question: "Welche Jahreszeit kommt nach dem Winter?", answer: "Frühling", options: opts("Frühling", "Herbst", "Sommer", "Winter"), fill: "Nach dem Winter kommt der ___.", hint: "Blumen beginnen zu wachsen." },
       { question: "Was misst ein Thermometer?", answer: "Temperatur", options: opts("Temperatur", "Zeit", "Gewicht", "Länge"), fill: "Ein Thermometer misst die ___.", hint: "Warm oder kalt." },
@@ -94,7 +95,7 @@ export const grade2ScienceReplacements = {
       { question: "Warum zieht man im Winter wärmere Kleidung an?", answer: "Weil es kälter ist", options: opts("Weil es kälter ist", "Weil es heller ist", "Weil es lauter ist", "Weil es trockener schmeckt"), fill: "Im Winter zieht man warme Kleidung an, weil es ___ ist.", hint: "Kälte braucht Schutz." },
       { question: "Was beobachtet man bei Wetterbeobachtung?", answer: "Temperatur, Wind, Wolken und Regen", options: opts("Temperatur, Wind, Wolken und Regen", "Nur Hausnummern", "Nur Bücher", "Nur Spielzeug"), fill: "Beim Wetter beobachtet man Temperatur, Wind, Wolken und ___.", hint: "Alles, was draussen passiert." },
     ],
-  }),
+  })),
 } as const;
 
 const energy3 = buildNormalizedTopicExercises("energie_norm_", {
