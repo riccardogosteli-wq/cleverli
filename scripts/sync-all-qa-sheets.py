@@ -5,8 +5,10 @@ import argparse
 import json
 import os
 import subprocess
+import time
 import urllib.parse
 import urllib.request
+import urllib.error
 from pathlib import Path
 
 
@@ -41,10 +43,37 @@ GRADE1_SPECIAL_HEADERS = [
 # including teacher-review and structural migration items, remain untouched.
 AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
     1: {
+        5: [
+            "Medium", "Duplicates", "All", "8 exact groups; generic-pattern review pending",
+            "The fresh all-grade scan found 8 exact Grade 1 duplicate pairs: 4 within one topic and 4 across topics. Grades 2–6 now have no exact within-grade content duplicates.",
+            "Review the 8 Grade 1 pairs, keep deliberate reinforcement and replace accidental repetition.",
+        ],
         8: [
             "Structural", "IDs", "All", "50 cross-subject ID collisions",
             "50 exercise IDs collide across Mathematics and NMG. Content remains distinguishable by subject/topic, but IDs are not globally unique.",
             "Make IDs globally unique when the schema is next migrated.",
+        ],
+        9: [
+            "High", "Localisation / scoring", "Mathematics / NMG", "At least 118 mixed-language exercises; 84 Italian option mismatches; 283 answer-localisation gaps",
+            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 84 Italian multiple-choice exercises the stored answer is not among the displayed options; 283 unique fill-ins have 839 language instances without a localised text answer.",
+            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+        ],
+    },
+    2: {
+        14: [
+            "High", "Localisation / scoring", "Mathematics / NMG", "At least 134 mixed-language exercises; 57 Italian option mismatches; 162 answer-localisation gaps",
+            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 57 Italian multiple-choice exercises the stored answer is not among the displayed options; 162 unique fill-ins have 478 language instances without a localised text answer.",
+            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+        ],
+        15: [
+            "High", "Punctuation scoring", "German", "satzzeichen: 17 fill-in exercises",
+            "The fill-in checker removes punctuation before comparison. These exercises therefore accept any punctuation-only input as correct, for example ! instead of ?.",
+            "Use punctuation-aware matching for punctuation-only expected answers and add regression tests for every supported mark.",
+        ],
+        16: [
+            "High", "Malformed source content", "Mathematics / German", "laengen-messen/lm47; wortfamilien/wf48",
+            "lm47 contains an abandoned m³ prompt followed by “Nein:”; wf48 teaches and expects the invalid form “Gegehe”.",
+            "Rewrite both exercises with one clear, age-appropriate question and a linguistically valid answer; verify all four languages.",
         ],
     },
     3: {
@@ -58,6 +87,26 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "The prompt previously asked what replaces ss and answered ss.",
             "Replaced with a clear double-consonant fill-in: “Der Boden ist na___.” → “ss”.",
         ],
+        10: [
+            "High", "Localisation / scoring", "Mathematics / NMG", "At least 119 mixed-language exercises; 129 Italian option mismatches; 117 answer-localisation gaps",
+            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 129 Italian multiple-choice exercises the stored answer is not among the displayed options; 117 unique fill-ins have 341 language instances without a localised text answer.",
+            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+        ],
+        11: [
+            "High", "Punctuation scoring", "German", "saetze/sb24",
+            "The fill-in checker removes punctuation before comparison, so this comma exercise accepts any punctuation-only input as correct.",
+            "Use punctuation-aware matching for punctuation-only expected answers and cover the case with a regression test.",
+        ],
+        12: [
+            "High", "Multi-gap scoring", "German", "adjektive/aj30, aj32; verben-konjugieren/vk46",
+            "Each prompt visibly asks for two different gaps, but the interface offers one input and the stored answer covers only one required part.",
+            "Rewrite as one gradable gap or accept the complete two-part response; verify prompt and answer together.",
+        ],
+        13: [
+            "Medium", "Malformed hint", "Mathematics", "rechnen-bis-1000/r25k",
+            "The first subtraction hint contains an abandoned, contradictory borrowing calculation ending in “Nein”. The exercise answer itself is correct.",
+            "Replace the hint with one correct, child-readable subtraction strategy.",
+        ],
     },
     4: {
         2: [
@@ -69,6 +118,16 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "Repeated filler", "Mathematics/German", "Multiple topics",
             "The original audit found repeated filler across unrelated topics.",
             "Resolved by the verified 321-row Grade 4 repetition replacement; all affected content is now topic-specific.",
+        ],
+        11: [
+            "High", "Localisation / scoring", "Mathematics / NMG", "At least 842 mixed-language exercises; 156 Italian option mismatches; 29 answer-localisation gaps",
+            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 156 Italian multiple-choice exercises the stored answer is not among the displayed options; 29 unique fill-ins have 87 language instances without a localised text answer.",
+            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+        ],
+        12: [
+            "High", "Punctuation scoring", "German", "rechtschreibung-4/g4rs2m; interpunktion-4: 22 exercises",
+            "The fill-in checker removes punctuation before comparison. These 23 exercises therefore accept any punctuation-only input as correct.",
+            "Use punctuation-aware matching for punctuation-only expected answers and add regression tests for every supported mark.",
         ],
     },
     5: {
@@ -87,12 +146,42 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "The original audit found repeated filler across unrelated topics.",
             "Resolved by the verified 304-row Grade 5 repetition replacement; all affected content is now topic-specific.",
         ],
+        11: [
+            "High", "Localisation / scoring", "Mathematics / NMG", "At least 894 mixed-language exercises; 159 Italian option mismatches; 14 answer-localisation gaps",
+            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 159 Italian multiple-choice exercises the stored answer is not among the displayed options; 14 unique fill-ins have 42 language instances without a localised text answer.",
+            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+        ],
+        12: [
+            "High", "Punctuation scoring", "German", "direkte-rede: 7 fill-in exercises",
+            "The fill-in checker removes punctuation before comparison. These exercises accept any punctuation-only input; three also show two quote gaps while storing only an opening guillemet.",
+            "Use punctuation-aware matching and rewrite the two-guillemet prompts as one objectively gradable response.",
+        ],
+        13: [
+            "High", "Multi-gap / open-response scoring", "German / English", "rechtschreibung-5/rs5-16; environment-5/env5-42; technology-5/tech5-36, tech5-38",
+            "These prompts require multiple distinct or creative entries, but one input is compared with one partial stored answer. Correct child responses can be rejected.",
+            "Rewrite as separate constrained tasks or use guided self-review for genuinely open responses.",
+        ],
+        14: [
+            "High", "Malformed source content", "NMG", "mittelalter-5/ma5-30",
+            "The question begins with an unrelated Prager Frühling prompt, then self-corrects with “nein” to ask about the Goldene Bulle.",
+            "Replace it with one clear Goldene-Bulle question and verify all four languages.",
+        ],
     },
     6: {
         5: [
             "Fixed", "Repeated filler", "Mathematics/German", "Multiple topics",
             "The original audit found repeated filler across unrelated topics.",
             "Resolved by the verified 321-row Grade 6 repetition/duplicate replacement; all affected content is now topic-specific.",
+        ],
+        10: [
+            "High", "Localisation / scoring", "Mathematics / NMG", "At least 932 mixed-language exercises; 210 Italian option mismatches; 21 answer-localisation gaps",
+            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 210 Italian multiple-choice exercises the stored answer is not among the displayed options; 21 unique fill-ins have 63 language instances without a localised text answer.",
+            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+        ],
+        11: [
+            "High", "Multi-gap / open-response scoring", "English", "writing-skills-6/ws6-44; vocabulary-6/vb6-36; culture-media-6/cm6-40, cm6-48",
+            "Each prompt asks for two or three distinct or creative entries, but the single input is checked against one partial stored answer. Correct responses can be rejected.",
+            "Rewrite as separate constrained tasks or use guided self-review, aligned to short supported Cycle-2 writing.",
         ],
     },
 }
@@ -121,8 +210,17 @@ def request(method: str, url: str, payload: dict | None = None) -> dict:
     req.add_header("Authorization", f"Bearer {KEY}")
     if data is not None:
         req.add_header("Content-Type", "application/json")
-    with urllib.request.urlopen(req, timeout=120) as response:
-        return json.load(response)
+    for attempt in range(6):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as error:
+            if error.code != 429 or attempt == 5:
+                raise
+            retry_after = error.headers.get("Retry-After")
+            delay = float(retry_after) if retry_after else min(2 ** attempt, 16)
+            time.sleep(delay)
+    raise RuntimeError("unreachable")
 
 
 def values_get(spreadsheet_id: str, range_: str) -> list[list]:
