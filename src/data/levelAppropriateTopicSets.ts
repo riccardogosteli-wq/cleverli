@@ -1,5 +1,6 @@
 import { buildNormalizedTopicExercises } from "./normalizedTopicExercises";
 import { applyGrade2ScienceDuplicateReplacements } from "./grade2ScienceDuplicateReplacements";
+import { applyGrade3ScienceDuplicateReplacements } from "./grade3ScienceDuplicateReplacements";
 
 const opts = (answer: string, a: string, b: string, c: string) => [answer, a, b, c];
 
@@ -171,9 +172,9 @@ const map3 = buildNormalizedTopicExercises("karte_norm_", {
 });
 
 export const grade3ScienceReplacements = {
-  "energie-stoffe": energy3,
-  "licht-optik": light3,
-  "raeume-karte": map3,
+  "energie-stoffe": applyGrade3ScienceDuplicateReplacements(energy3),
+  "licht-optik": applyGrade3ScienceDuplicateReplacements(light3),
+  "raeume-karte": applyGrade3ScienceDuplicateReplacements(map3),
 } as const;
 
 export const grade4NTReplacements = {
