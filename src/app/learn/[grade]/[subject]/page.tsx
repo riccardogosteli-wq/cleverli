@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${title} | Cleverli`,
       description,
-      images: [{ url: `https://www.cleverli.ch/og-image-v2.png`, width: 1200, height: 630, alt: `${title} — Cleverli` }],
+      images: [{ url: `https://www.cleverli.ch/og-cleverli-logo-2026.png`, width: 1200, height: 630, alt: `${title} — Cleverli` }],
     },
     alternates: { canonical: `https://www.cleverli.ch/learn/${grade}/${subject}` },
   };

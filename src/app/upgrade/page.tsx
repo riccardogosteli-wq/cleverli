@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cleverli Premium — Alle Aufgaben freischalten",
     description: "CHF 9.90/Monat · Alle Klassen 1–6 · Alle Fächer · TWINT & Karte · Jederzeit kündbar.",
-    images: [{ url: "https://www.cleverli.ch/og-image-v2.png", width: 1200, height: 630, alt: "Cleverli Premium" }],
+    images: [{ url: "https://www.cleverli.ch/og-cleverli-logo-2026.png", width: 1200, height: 630, alt: "Cleverli Logo mit Maskottchen" }],
   },
   alternates: { canonical: "https://www.cleverli.ch/upgrade" },
 };

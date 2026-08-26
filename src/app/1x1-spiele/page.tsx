@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "1x1 Spiele online - Einmaleins spielerisch üben",
     description: "Einmaleins mit Memory, Lückenaufgaben und kurzen Runden spielerisch üben.",
     url: "https://www.cleverli.ch/1x1-spiele",
-    images: [{ url: "https://www.cleverli.ch/og-image-v2.png", width: 1200, height: 630, alt: "Cleverli - 1x1 Spiele" }],
+    images: [{ url: "https://www.cleverli.ch/og-cleverli-logo-2026.png", width: 1200, height: 630, alt: "Cleverli Logo mit Maskottchen" }],
   },
 };
 
