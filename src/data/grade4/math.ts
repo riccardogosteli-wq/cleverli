@@ -1,4 +1,5 @@
 import { Topic } from "@/types/exercise";
+import { applyGrade4MathDuplicateReplacements } from "../grade4MathDuplicateReplacements";
 
 const grade4Math: Topic[] = [
   {
@@ -554,4 +555,4 @@ const grade4Math: Topic[] = [
   },
 ];
 
-export default grade4Math;
+export default applyGrade4MathDuplicateReplacements(grade4Math);

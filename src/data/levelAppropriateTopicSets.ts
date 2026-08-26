@@ -178,12 +178,12 @@ export const grade3ScienceReplacements = {
 } as const;
 
 export const grade4NTReplacements = {
-  "energie-stoffe": energy3,
-  "licht-optik": light3,
+  "energie-stoffe": applyGrade3ScienceDuplicateReplacements(energy3),
+  "licht-optik": applyGrade3ScienceDuplicateReplacements(light3),
 } as const;
 
 export const grade4RZGReplacements = {
-  "raeume-karte": map3,
+  "raeume-karte": applyGrade3ScienceDuplicateReplacements(map3),
 } as const;
 
 export const grade5NTReplacements = {
