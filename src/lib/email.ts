@@ -96,7 +96,8 @@ export async function sendWelcomeEmail(to: string) {
 export async function sendPaymentConfirmationEmail(
   to: string,
   name: string,
-  plan: "monthly" | "yearly"
+  plan: "monthly" | "yearly",
+  options?: { idempotencyKey?: string }
 ) {
   const resend = getResend();
   if (!resend) return;
@@ -108,7 +109,7 @@ export async function sendPaymentConfirmationEmail(
     ? "Du sparst 2 Monate gegenüber dem Monatsabo."
     : "Dein Monatsabo ist aktiv. Die nächste Abbuchung erfolgt in 30 Tagen.";
 
-  await resend.emails.send({
+  const { error } = await resend.emails.send({
     from: FROM,
     to,
     subject: "Dein Cleverli Premium ist aktiv! ⭐",
@@ -166,7 +167,9 @@ export async function sendPaymentConfirmationEmail(
   </div>
 </body>
 </html>`,
-  });
+  }, options?.idempotencyKey ? { idempotencyKey: options.idempotencyKey } : undefined);
+
+  if (error) throw error;
 }
 
 export async function sendAdminPaymentNotificationEmail({
@@ -176,6 +179,7 @@ export async function sendAdminPaymentNotificationEmail({
   currency,
   stripeCustomerId,
   stripeSubscriptionId,
+  idempotencyKey,
 }: {
   customerEmail: string;
   plan: "monthly" | "yearly";
@@ -183,6 +187,7 @@ export async function sendAdminPaymentNotificationEmail({
   currency?: string | null;
   stripeCustomerId: string;
   stripeSubscriptionId: string;
+  idempotencyKey?: string;
 }) {
   const resend = getResend();
   if (!resend) return;
@@ -193,7 +198,7 @@ export async function sendAdminPaymentNotificationEmail({
   const safeStripeCustomerId = escapeHtml(stripeCustomerId);
   const safeStripeSubscriptionId = escapeHtml(stripeSubscriptionId);
 
-  await resend.emails.send({
+  const { error } = await resend.emails.send({
     from: FROM,
     to: ADMIN_PAYMENT_NOTIFY_EMAIL,
     subject: `Neue Cleverli Zahlung: ${amountLabel} (${planLabel})`,
@@ -240,5 +245,7 @@ export async function sendAdminPaymentNotificationEmail({
   </div>
 </body>
 </html>`,
-  });
+  }, idempotencyKey ? { idempotencyKey } : undefined);
+
+  if (error) throw error;
 }

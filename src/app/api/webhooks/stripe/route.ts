@@ -193,28 +193,6 @@ export async function POST(req: NextRequest) {
       },
     }).catch(() => {});
 
-    // Trial checkouts have no charge today, so avoid a payment-confirmation email.
-    if (customerEmail && !trialDays) {
-      const emailResults = await Promise.allSettled([
-        sendPaymentConfirmationEmail(customerEmail, "", plan as "monthly" | "yearly"),
-        sendAdminPaymentNotificationEmail({
-          customerEmail,
-          plan: plan as "monthly" | "yearly",
-          amountTotal: session.amount_total,
-          currency: session.currency,
-          stripeCustomerId,
-          stripeSubscriptionId,
-        }),
-      ]);
-
-      emailResults.forEach((result, index) => {
-        if (result.status === "rejected") {
-          Sentry.captureException(result.reason);
-          console.error(`[stripe-webhook] payment email ${index} failed:`, result.reason);
-        }
-      });
-    }
-
     console.log(`[stripe-webhook] ✅ Premium activated for ${userId} (${plan})`);
   }
 
@@ -266,6 +244,53 @@ export async function POST(req: NextRequest) {
             billingReason: invoice.billing_reason,
           },
         }).catch(() => {});
+
+        // Send payment emails from the paid invoice event so immediate checkouts,
+        // trial conversions and renewals all use the same path. Resend keys make
+        // duplicate Stripe deliveries safe; zero-value trial invoices stay silent.
+        if (event.type === "invoice.paid" && invoice.amount_paid > 0) {
+          const stripeCustomerId = subscription.customer as string;
+          let customerEmail = invoice.customer_email ?? synced.email ?? "";
+          let customerName = invoice.customer_name ?? "";
+
+          if (!customerEmail && stripeCustomerId) {
+            const customer = await stripe.customers.retrieve(stripeCustomerId);
+            if (!customer.deleted) {
+              customerEmail = customer.email ?? "";
+              customerName = customer.name ?? customerName;
+            }
+          }
+
+          const emailTasks: Promise<unknown>[] = [
+            sendAdminPaymentNotificationEmail({
+              customerEmail,
+              plan: synced.plan as "monthly" | "yearly",
+              amountTotal: invoice.amount_paid,
+              currency: invoice.currency,
+              stripeCustomerId,
+              stripeSubscriptionId: subscriptionId,
+              idempotencyKey: `cleverli-${invoice.id}-admin`,
+            }),
+          ];
+
+          if (customerEmail) {
+            emailTasks.push(sendPaymentConfirmationEmail(
+              customerEmail,
+              customerName,
+              synced.plan as "monthly" | "yearly",
+              { idempotencyKey: `cleverli-${invoice.id}-customer` },
+            ));
+          }
+
+          const emailResults = await Promise.allSettled(emailTasks);
+          emailResults.forEach((result, index) => {
+            if (result.status === "rejected") {
+              Sentry.captureException(result.reason);
+              console.error(`[stripe-webhook] invoice payment email ${index} failed:`, result.reason);
+            }
+          });
+        }
+
         console.log(`[stripe-webhook] Invoice paid synced subscription ${subscriptionId}`);
       }
     }
