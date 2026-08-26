@@ -1,6 +1,7 @@
 import { buildNormalizedTopicExercises } from "./normalizedTopicExercises";
 import { applyGrade2ScienceDuplicateReplacements } from "./grade2ScienceDuplicateReplacements";
 import { applyGrade3ScienceDuplicateReplacements } from "./grade3ScienceDuplicateReplacements";
+import { applyGrade5ScienceDuplicateReplacements } from "./grade5ScienceDuplicateReplacements";
 
 const opts = (answer: string, a: string, b: string, c: string) => [answer, a, b, c];
 
@@ -186,8 +187,7 @@ export const grade4RZGReplacements = {
   "raeume-karte": applyGrade3ScienceDuplicateReplacements(map3),
 } as const;
 
-export const grade5NTReplacements = {
-  weltall: buildNormalizedTopicExercises("g5weltall_norm_", {
+const grade5WeltallBase = buildNormalizedTopicExercises("g5weltall_norm_", {
     1: [
       { question: "Welcher Stern ist uns am nächsten?", answer: "Sonne", options: opts("Sonne", "Sirius", "Polarstern", "Mond"), fill: "Der nächste Stern für die Erde ist die ___.", hint: "Sie gibt uns Licht und Wärme." },
       { question: "Was kreist um die Erde?", answer: "Mond", options: opts("Mond", "Mars", "Jupiter", "Sonne"), fill: "Der ___ kreist um die Erde.", hint: "Man sieht ihn oft nachts." },
@@ -209,8 +209,9 @@ export const grade5NTReplacements = {
       { question: "Warum wirken Sterne klein?", answer: "Sie sind sehr weit entfernt", options: opts("Sie sind sehr weit entfernt", "Sie sind alle winzig", "Sie sind gemalt", "Sie leuchten nur am Rand"), fill: "Sterne wirken klein, weil sie sehr weit ___ sind.", hint: "Viele Sterne sind riesig." },
       { question: "Was ist das Sonnensystem?", answer: "Sonne, Planeten und weitere Himmelskörper", options: opts("Sonne, Planeten und weitere Himmelskörper", "Nur die Erde", "Nur der Mond", "Alle Wolken"), fill: "Zum Sonnensystem gehören Sonne, Planeten und weitere ___.", hint: "Auch Monde, Asteroiden und Kometen." },
     ],
-  }),
-  "strom-elektrizitaet": buildNormalizedTopicExercises("g5strom_norm_", {
+  });
+
+const grade5StromBase = buildNormalizedTopicExercises("g5strom_norm_", {
     1: [
       { question: "Was braucht eine Lampe zum Leuchten?", answer: "Strom", options: opts("Strom", "Sand", "Papier", "Wasser im Kabel"), fill: "Eine Lampe braucht ___ zum Leuchten.", hint: "Er fliesst im Stromkreis." },
       { question: "Was liefert eine Batterie?", answer: "Elektrische Energie", options: opts("Elektrische Energie", "Wind", "Holz", "Salz"), fill: "Eine Batterie liefert elektrische ___.", hint: "Damit leuchten Taschenlampen." },
@@ -232,11 +233,14 @@ export const grade5NTReplacements = {
       { question: "Was ist Stromstärke?", answer: "Wie viel Strom fliesst", options: opts("Wie viel Strom fliesst", "Wie hell Papier ist", "Wie lang ein Kabel aussieht", "Wie kalt Licht ist"), fill: "Die Stromstärke beschreibt, wie viel Strom ___.", hint: "Einheit: Ampere." },
       { question: "Warum soll man nicht an Steckdosen spielen?", answer: "Strom kann gefährlich sein", options: opts("Strom kann gefährlich sein", "Steckdosen sind weich", "Strom ist essbar", "Kabel sind Spielzeug"), fill: "Steckdosen sind kein Spielzeug, weil Strom ___ sein kann.", hint: "Sicherheit zuerst." },
     ],
-  }),
+  });
+
+export const grade5NTReplacements = {
+  weltall: applyGrade5ScienceDuplicateReplacements("weltall", grade5WeltallBase),
+  "strom-elektrizitaet": applyGrade5ScienceDuplicateReplacements("strom-elektrizitaet", grade5StromBase),
 } as const;
 
-export const grade5RZGReplacements = {
-  "geschichte-zeit": buildNormalizedTopicExercises("g5zeit_norm_", {
+const grade5HistoryBase = buildNormalizedTopicExercises("g5zeit_norm_", {
     1: [
       { question: "Was ist eine Zeitlinie?", answer: "Eine geordnete Darstellung von Ereignissen", options: opts("Eine geordnete Darstellung von Ereignissen", "Ein Wetterbericht", "Eine Landkarte ohne Orte", "Ein Rechenweg"), fill: "Eine Zeitlinie ordnet Ereignisse nach der ___.", hint: "Was war zuerst, was danach?" },
       { question: "Was bedeutet Vergangenheit?", answer: "Etwas ist schon passiert", options: opts("Etwas ist schon passiert", "Etwas passiert morgen", "Etwas ist nie passiert", "Etwas ist ein Ort"), fill: "Vergangenheit bedeutet: Es ist schon ___.", hint: "Gestern ist Vergangenheit." },
@@ -258,8 +262,17 @@ export const grade5RZGReplacements = {
       { question: "Was ist ein historischer Wandel?", answer: "Eine Veränderung über längere Zeit", options: opts("Eine Veränderung über längere Zeit", "Ein kurzer Spaziergang", "Eine Wetterwolke", "Ein Rechenzeichen"), fill: "Historischer Wandel ist Veränderung über längere ___.", hint: "Zum Beispiel Schule früher und heute." },
       { question: "Was macht eine gute historische Frage?", answer: "Sie fragt nach Gründen, Folgen oder Unterschieden", options: opts("Sie fragt nach Gründen, Folgen oder Unterschieden", "Sie hat keine Antwort", "Sie fragt nur nach Farbe", "Sie ist eine Rechnung"), fill: "Gute historische Fragen fragen nach Gründen, Folgen oder ___.", hint: "Mehr als nur ein Datum." },
     ],
-  }),
+  });
+
+export const grade5RZGReplacements = {
+  "geschichte-zeit": applyGrade5ScienceDuplicateReplacements("geschichte-zeit", grade5HistoryBase),
 } as const;
 
-export const grade6NTReplacements = grade5NTReplacements;
-export const grade6RZGReplacements = grade5RZGReplacements;
+export const grade6NTReplacements = {
+  weltall: grade5WeltallBase,
+  "strom-elektrizitaet": grade5StromBase,
+} as const;
+
+export const grade6RZGReplacements = {
+  "geschichte-zeit": grade5HistoryBase,
+} as const;

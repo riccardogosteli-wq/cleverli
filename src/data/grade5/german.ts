@@ -1,4 +1,5 @@
 import { Topic } from "@/types/exercise";
+import { applyGrade5GermanDuplicateReplacements } from "../grade5GermanDuplicateReplacements";
 
 const grade5German: Topic[] = [
   {
@@ -583,4 +584,4 @@ const grade5German: Topic[] = [
 
 ];
 
-export default grade5German;
+export default applyGrade5GermanDuplicateReplacements(grade5German);
