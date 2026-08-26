@@ -95,7 +95,7 @@ export function applyGrade6ScienceDuplicateReplacements(topics: Topic[]): Topic[
         questionEN: "The right to submit a written request to an authority is called the right of ___.",
         questionFR: "Le droit d'adresser une demande écrite à une autorité s'appelle le droit de ___.",
         questionIT: "Il diritto di presentare una richiesta scritta a un'autorità si chiama diritto di ___.",
-        answer: "Petition", answerEN: "petition", answerFR: "pétition", answerIT: "petizione",
+        answer: "Petitionsrecht", answerEN: "petition", answerFR: "pétition", answerIT: "petizione",
         hints: safeHints.de, hintsEN: safeHints.en, hintsFR: safeHints.fr, hintsIT: safeHints.it,
       }) };
     }
