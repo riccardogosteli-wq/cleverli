@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { getSubjects, getTopics } from "../src/data";
 import type { Exercise } from "../src/types/exercise";
 import { isLp21ApiFitTarget } from "../src/data/lp21ApiFitReplacements";
+import { getBalancedNmgCompetency } from "../src/data/nmgConsolidation";
 
 const API_SNAPSHOT = process.env.LP21_API_SNAPSHOT ?? "/tmp/cleverli-lp21-live.json";
 const OUTPUT = process.env.LP21_FIT_OUTPUT ?? "/tmp/cleverli-lp21-fit-all.json";
@@ -136,11 +137,11 @@ function mapNmg(topic: string, text: string): Mapping {
   return { code: "NMG.7.4", area: "Lebensweisen und Lebensräume" };
 }
 
-function mapping(subject: string, topic: string, text = ""): Mapping {
+function mapping(subject: string, topic: string, text = "", grade = 0): Mapping {
   if (subject === "math") return mapMath(topic);
   if (subject === "german") return mapGerman(topic);
   if (subject === "english" || subject === "french") return mapForeign(subject, topic);
-  if (subject === "science") return mapNmg(topic, text);
+  if (subject === "science") return getBalancedNmgCompetency(grade, topic) ?? mapNmg(topic, text);
   return { code: "", area: "Kein LP21-Fachmapping" };
 }
 
@@ -214,7 +215,7 @@ function scoreExercise(grade: number, subjectId: string, topicId: string, exerci
   const coreText = exerciseCoreText(exercise);
   const targetKey = `${grade}/${subjectId}/${topicId}/${exercise.id}`;
   const isReplacement = isLp21ApiFitTarget(targetKey);
-  let target = mapping(subjectId, topicId, coreText);
+  let target = mapping(subjectId, topicId, coreText, grade);
   if (isReplacement && (subjectId === "english" || subjectId === "french")) {
     const prefix = subjectId === "english" ? "FS1E" : "FS2F";
     target = { code: `${prefix}.5.B.1`, area: "Altersgerechten Wortschatz und einfache Satzmuster anwenden" };
@@ -287,7 +288,7 @@ for (const grade of GRADES) {
   for (const subject of getSubjects(grade)) {
     bySubject[subject.id] ??= { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0 };
     for (const topic of getTopics(grade, subject.id)) {
-      const target = mapping(subject.id, topic.id);
+      const target = mapping(subject.id, topic.id, "", grade);
       if (!target.code || !apiCodes.has(target.code)) missingMappings.push(`${grade}/${subject.id}/${topic.id}:${target.code}`);
       for (const exercise of topic.exercises) {
         const fit = scoreExercise(grade, subject.id, topic.id, exercise);

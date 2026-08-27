@@ -8,6 +8,7 @@ import {
 import targets from "../src/data/lp21ApiFitTargets.json";
 import { TOPIC_TITLES, getTopicTitle } from "../src/data/topicTitles";
 import type { Exercise } from "../src/types/exercise";
+import { CONSOLIDATED_NMG_TOPIC_KEYS } from "../src/data/nmgConsolidation";
 
 const EXPECTED_TYPES = { "multiple-choice": 582, "fill-in-blank": 544, "self-review": 10 } as const;
 const EXPECTED_DIFFICULTIES = { 1: 335, 2: 452, 3: 349 } as const;
@@ -21,6 +22,7 @@ const targetDuplicates: Array<[string, string]> = [];
 const typeCounts: Record<string, number> = {};
 const difficultyCounts: Record<string, number> = {};
 const originalTargetKeys = new Set(targets.map((target) => `${target.grade}/${target.subject}/${target.topic}/${target.id}`));
+const consolidatedTopics = new Set(CONSOLIDATED_NMG_TOPIC_KEYS);
 
 function normalized(text: string): string {
   return text.toLocaleLowerCase("de-CH").replace(/[^a-z0-9äöüàâçéèêëîïôùûüÿœæ]+/giu, " ").trim();
@@ -37,9 +39,10 @@ function validateLocalizedChoice(key: string, exercise: Exercise, suffix: "" | "
 for (let grade = 1; grade <= 6; grade += 1) {
   for (const subject of getSubjects(grade)) {
     for (const topic of getTopics(grade, subject.id)) {
+      const isConsolidatedTopic = subject.id === "science" && consolidatedTopics.has(`${grade}/${topic.id}`);
       const expectedTitle = LP21_API_FIT_TOPIC_TITLES[`${grade}/${subject.id}/${topic.id}`];
-      if (expectedTitle && topic.title !== expectedTitle) failures.push({ key: `${grade}/${subject.id}/${topic.id}`, reason: "replacement topic title mismatch" });
-      if (expectedTitle) {
+      if (expectedTitle && !isConsolidatedTopic && topic.title !== expectedTitle) failures.push({ key: `${grade}/${subject.id}/${topic.id}`, reason: "replacement topic title mismatch" });
+      if (expectedTitle && !isConsolidatedTopic) {
         const expectedPublicTitle = topic.id === "weltall" ? "Weltall entdecken" : expectedTitle;
         if (getTopicTitle(topic.id, "de", topic.title) !== expectedPublicTitle) {
           failures.push({ key: `${grade}/${subject.id}/${topic.id}`, reason: "public German topic title mismatch" });
@@ -67,13 +70,16 @@ for (let grade = 1; grade <= 6; grade += 1) {
 
         if (exercise.type === "multiple-choice") {
           validateLocalizedChoice(key, exercise, "");
-          validateLocalizedChoice(key, exercise, "EN");
-          validateLocalizedChoice(key, exercise, "FR");
-          validateLocalizedChoice(key, exercise, "IT");
+          if (!isConsolidatedTopic) {
+            validateLocalizedChoice(key, exercise, "EN");
+            validateLocalizedChoice(key, exercise, "FR");
+            validateLocalizedChoice(key, exercise, "IT");
+          }
         } else if (exercise.type === "fill-in-blank") {
-          for (const [language, question] of [
-            ["DE", exercise.question], ["EN", exercise.questionEN], ["FR", exercise.questionFR], ["IT", exercise.questionIT],
-          ] as const) {
+          const questions = isConsolidatedTopic
+            ? [["DE", exercise.question]] as const
+            : [["DE", exercise.question], ["EN", exercise.questionEN], ["FR", exercise.questionFR], ["IT", exercise.questionIT]] as const;
+          for (const [language, question] of questions) {
             if (!question || (question.match(/___/g) ?? []).length !== 1) failures.push({ key, reason: `${language} fill-in must contain exactly one blank` });
           }
         } else if (exercise.type === "self-review") {
@@ -83,7 +89,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
           failures.push({ key, reason: `unexpected replacement type ${exercise.type}` });
         }
 
-        if (subject.id === "science" || subject.id === "german") {
+        if ((subject.id === "science" || subject.id === "german") && !isConsolidatedTopic) {
           for (const suffix of ["EN", "FR", "IT"] as const) {
             if (!exercise[`question${suffix}`] || !exercise[`answer${suffix}`] || (exercise[`hints${suffix}`] ?? []).length !== 2) {
               failures.push({ key, reason: `missing ${suffix} localisation` });

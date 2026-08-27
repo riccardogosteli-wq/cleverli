@@ -447,5 +447,20 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
 };
 
 export function getTopicTitle(topicId: string, lang: string, fallback: string): string {
+  const consolidated: Record<string, Record<string, string>> = {
+    "Bedürfnisse & Wünsche": { de: "Bedürfnisse & Wünsche", fr: "Besoins et souhaits", it: "Bisogni e desideri", en: "Needs & Wishes" },
+    "Unser Quartier": { de: "Unser Quartier", fr: "Notre quartier", it: "Il nostro quartiere", en: "Our Neighbourhood" },
+    "Arbeit & Berufe": { de: "Arbeit & Berufe", fr: "Travail et métiers", it: "Lavoro e professioni", en: "Work & Careers" },
+    "Konsum & Geld": { de: "Konsum & Geld", fr: "Consommation et argent", it: "Consumo e denaro", en: "Consumption & Money" },
+    "Werte & Zusammenleben": { de: "Werte & Zusammenleben", fr: "Valeurs et vivre ensemble", it: "Valori e convivenza", en: "Values & Living Together" },
+    "Produktion & Konsum": { de: "Produktion & Konsum", fr: "Production et consommation", it: "Produzione e consumo", en: "Production & Consumption" },
+    "Religionen & Feste": { de: "Religionen & Feste", fr: "Religions et fêtes", it: "Religioni e feste", en: "Religions & Festivals" },
+    "Medien & Information": { de: "Medien & Information", fr: "Médias et information", it: "Media e informazione", en: "Media & Information" },
+    "Arbeit, Handel & Transport": { de: "Arbeit, Handel & Transport", fr: "Travail, commerce et transport", it: "Lavoro, commercio e trasporti", en: "Work, Trade & Transport" },
+    "Werte, Regeln & Konflikte": { de: "Werte, Regeln & Konflikte", fr: "Valeurs, règles et conflits", it: "Valori, regole e conflitti", en: "Values, Rules & Conflicts" },
+    "Berufswelt & Zukunft": { de: "Berufswelt & Zukunft", fr: "Métiers et avenir", it: "Professioni e futuro", en: "Careers & Future" },
+    "Religionen & Weltanschauungen": { de: "Religionen & Weltanschauungen", fr: "Religions et visions du monde", it: "Religioni e visioni del mondo", en: "Religions & Worldviews" },
+  };
+  if (consolidated[fallback]) return consolidated[fallback][lang] ?? consolidated[fallback].de;
   return TOPIC_TITLES[topicId]?.[lang] ?? TOPIC_TITLES[topicId]?.["de"] ?? fallback;
 }

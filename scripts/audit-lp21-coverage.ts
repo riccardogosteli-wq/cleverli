@@ -1,4 +1,5 @@
 import { getTopics } from "../src/data";
+import { CONSOLIDATED_NMG_TOPIC_KEYS } from "../src/data/nmgConsolidation";
 
 const OFFICIAL_COMPETENCE_AREAS = {
   german: ["Hören", "Lesen", "Sprechen", "Schreiben", "Sprache(n) im Fokus", "Literatur im Fokus"],
@@ -17,11 +18,6 @@ const EXPECTED_TOPIC_COUNTS: Record<number, Record<string, number>> = {
 
 const OPEN_COVERAGE_FINDINGS = [
   { grades: [1, 2, 3, 4, 5, 6], area: "Deutsch", finding: "Dedicated listening added; speaking strand remains absent" },
-  { grades: [1], area: "NMG", finding: "Parallel senses and weather strands create overrepresentation" },
-  { grades: [3], area: "NMG", finding: "Parallel energy, light, time and map strands create overrepresentation" },
-  { grades: [4], area: "NMG", finding: "Parallel body, energy, light and map strands create overrepresentation" },
-  { grades: [5], area: "NMG", finding: "Parallel space, electricity and history/time strands create overrepresentation" },
-  { grades: [6], area: "NMG", finding: "Parallel space, electricity and history/time strands create overrepresentation" },
 ] as const;
 
 const failures: string[] = [];
@@ -35,6 +31,12 @@ for (const grade of [1, 2, 3, 4, 5, 6]) {
       failures.push(`Grade ${grade} ${subject}: expected ${EXPECTED_TOPIC_COUNTS[grade][subject]} topics, found ${count}`);
     }
   }
+}
+
+for (const key of CONSOLIDATED_NMG_TOPIC_KEYS) {
+  const [gradeText, topicId] = key.split("/");
+  const topic = getTopics(Number(gradeText), "science").find(candidate => candidate.id === topicId);
+  if (!topic || topic.exercises.length !== 50) failures.push(`Consolidated NMG topic ${key} is incomplete`);
 }
 
 const grade4DataTopic = getTopics(4, "math").find(topic => topic.id === "daten-diagramme-zufall-4");

@@ -74,9 +74,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
         ],
         10: [
-            "Review", "LP21 competency coverage", "German / NMG", "Composition and listening added; speaking and parallel NMG strands remain",
-            "The 50-exercise ‘Sätze & kleine Texte’ topic covers guided composition. ‘Hören & verstehen’ now uses 45 picture-first choices and 5 visual sequences; the audio speaks the story, question and numbered choices so reading is not required. A dedicated speaking strand remains absent; senses and weather topic families still overrepresent those NMG areas.",
-            "Keep the permanent composition, listening-modality and LP21 API gates. Plan speaking separately; consolidate NMG overlap without changing learner progress IDs.",
+            "Review", "LP21 competency coverage", "German / NMG", "Composition, listening and NMG balance improved; speaking remains",
+            "The Grade-1 listening and composition gaps remain resolved. The duplicated senses/weather slots now cover needs and wishes plus the local neighbourhood, preserving every exercise ID while expanding NMG.6 and NMG.8.",
+            "Resolved for NMG balance. Keep the permanent consolidation, composition, listening-modality and LP21 API gates; plan speaking separately.",
         ],
         11: [
             "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 100 new composition/listening exercises score 1–2; 0 score-4/5 remain",
@@ -173,9 +173,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved and covered by the normalized-fill correctness regression.",
         ],
         15: [
-            "Review", "LP21 competency coverage", "German / NMG", "Listening added; speaking and parallel NMG strands remain",
-            "The 50-exercise ‘Hörgeschichten verstehen’ topic covers Cycle-2 listening comprehension. Story, question and numbered choices are spoken; Grade-3 reading-support limits are permanent. Speaking and parallel NMG strands remain.",
-            "Keep the permanent listening-modality, Grade-3 reading-support and LP21 API gates. Plan speaking separately and consolidate NMG overlap without changing learner progress IDs.",
+            "Review", "LP21 competency coverage", "German / NMG", "Listening and NMG balance improved; speaking remains",
+            "Listening remains complete. The duplicated energy/light slots now cover work and careers plus consumption and money, preserving IDs while strengthening NMG.6 coverage.",
+            "Resolved for NMG balance. Keep the permanent consolidation, listening-modality, Grade-3 reading-support and LP21 API gates; plan speaking separately.",
         ],
         16: [
             "Fixed", "LP21 API exercise fit", "All", "3 score-4/5 exercises replaced; 0 remain",
@@ -220,9 +220,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved against official Swiss and EU sources and covered by the factual regression.",
         ],
         15: [
-            "Review", "LP21 competency coverage", "German / NMG", "Listening added; speaking and parallel NMG strands remain",
-            "The Grade 4 mathematics and listening gaps are resolved. All 50 listening tasks speak the text, question and numbered choices and pass permanent Grade-4 reading-support limits; speaking and parallel NMG strands remain.",
-            "Keep the listening-modality and Grade-4 reading-support gates; treat speaking as separate product work and leave NMG consolidation for the saved-progress migration plan.",
+            "Review", "LP21 competency coverage", "German / NMG", "Listening and NMG balance improved; speaking remains",
+            "The Grade 4 mathematics and listening gaps remain resolved. Redundant body, energy and map slots now cover values and community, production and consumption, plus religions and festivals, preserving all IDs.",
+            "Resolved for NMG balance. Keep the permanent consolidation, listening-modality, Grade-4 reading-support and LP21 API gates; plan speaking separately.",
         ],
         16: [
             "Fixed", "LP21 mathematics coverage", "Mathematics", "daten-diagramme-zufall-4: 50 exercises",
@@ -297,9 +297,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved against authoritative sources and covered by the factual regression.",
         ],
         17: [
-            "Review", "LP21 competency coverage", "German / NMG", "Listening added; speaking and parallel NMG strands remain",
-            "The 50-exercise ‘Zuhören & einordnen’ topic covers Cycle-2 listening comprehension. Text, question and numbered choices are spoken and all labels pass Grade-5 reading-support limits. Speaking and parallel NMG strands remain.",
-            "Keep the permanent listening-modality and Grade-5 reading-support gates. Plan speaking separately and consolidate overlapping NMG families while preserving progress IDs.",
+            "Review", "LP21 competency coverage", "German / NMG", "Listening and NMG balance improved; speaking remains",
+            "Listening remains complete. Duplicate space, electricity and generic history/time slots now cover media literacy, work/trade/transport and values/conflicts, preserving all exercise IDs.",
+            "Resolved for NMG balance. Keep the permanent consolidation, listening-modality, Grade-5 reading-support and LP21 API gates; plan speaking separately.",
         ],
         18: [
             "Fixed", "LP21 API exercise fit", "All", "208 API/red-flag exercises replaced; 0 score-4/5 remain",
@@ -344,9 +344,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved against authoritative sources and covered by the factual regression.",
         ],
         14: [
-            "Review", "LP21 competency coverage", "German / NMG", "Listening added; speaking and parallel NMG strands remain",
-            "The 50-exercise ‘Hörtexte analysieren’ topic covers end-of-Cycle-2 listening comprehension. Text, question and numbered choices are spoken and all labels pass Grade-6 reading-support limits. Speaking and parallel NMG strands remain.",
-            "Keep the permanent listening-modality and Grade-6 reading-support gates. Plan speaking separately and consolidate overlapping NMG families while preserving progress IDs.",
+            "Review", "LP21 competency coverage", "German / NMG", "Listening and NMG balance improved; speaking remains",
+            "Listening remains complete. Duplicate space and generic history/time slots now cover career orientation and religions/worldviews, preserving all exercise IDs and learner progress.",
+            "Resolved for NMG balance. Keep the permanent consolidation, listening-modality, Grade-6 reading-support and LP21 API gates; plan speaking separately.",
         ],
         15: [
             "Fixed", "LP21 API exercise fit", "All", "917 API/red-flag exercises replaced; 0 score-4/5 remain",

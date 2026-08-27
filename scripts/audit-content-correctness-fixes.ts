@@ -4,10 +4,12 @@ import { NORMALIZED_FILL_ANSWERS } from "../src/data/normalizedTopicExercises";
 const expectedFillRepairsByGrade: Record<number, number> = {
   1: 0,
   2: 16,
-  3: 40,
-  4: 40,
-  5: 28,
-  6: 28,
+  // Consolidated NMG slots no longer use the legacy energy/light/map/space
+  // normalizer. Keep this count tied to the normalized topics that remain.
+  3: 14,
+  4: 14,
+  5: 0,
+  6: 13,
 };
 
 const expectedFacts: Record<string, { answer: string; questionIncludes: string }> = {
