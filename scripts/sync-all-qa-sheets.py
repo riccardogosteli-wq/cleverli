@@ -146,6 +146,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "The original audit found repeated filler across unrelated topics.",
             "Resolved by the verified 304-row Grade 5 repetition replacement; all affected content is now topic-specific.",
         ],
+        6: [
+            "Fixed", "Typography", "German", "direkte-rede-5",
+            "Swiss guillemets previously used French spacing, for example « Komm mit! »; one exercise also taught an incorrect comma rule after question and exclamation marks.",
+            "All German Grade 5 content now uses Swiss/German guillemets without inner spaces; direct-speech comma rules are corrected and regression-tested.",
+        ],
         11: [
             "High", "Localisation / scoring", "Mathematics / NMG", "At least 894 mixed-language exercises; 159 Italian option mismatches; 14 answer-localisation gaps",
             "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 159 Italian multiple-choice exercises the stored answer is not among the displayed options; 14 unique fill-ins have 42 language instances without a localised text answer.",
