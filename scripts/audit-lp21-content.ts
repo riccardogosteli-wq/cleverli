@@ -3,6 +3,7 @@ import {
   LP21_REPLACEMENT_COUNT,
   LP21_REPLACEMENT_GROUP_IDS,
 } from "../src/data/lp21ExerciseReplacements";
+import { LP21_API_FIT_EXPANDED_TARGET_COUNT } from "../src/data/lp21ApiFitReplacements";
 
 const OFFICIAL_REFERENCES = [
   "https://v-fe.lehrplan.ch/posterMA_printout.php?ekalias=0&fb_id=5&k=1&z=1",
@@ -16,8 +17,8 @@ const FORBIDDEN_BY_GRADE: Record<number, RegExp> = {
   2: /\b(?:Sublimation|Osmose|Aquifer|Oberflächenspannung|pH-Wert|Saurer Regen|Destillation|Kapillarwirkung|Biolumineszenz|Streudiagramm|Scatterplot|Korrelation)\b|3⁴|π \(Pi\)/i,
   3: /\b(?:Standardabweichung|Streudiagramm|Korrelation|Boxplot|Quartile?|Pythagoras|Hypotenuse|Goldenes Verhältnis|fraktale Geometrie|Euler-Formel|Konjunktiv|episches Theater|Exposé|Leitmotiv|Oxymoron|Exkurs|Snellius|Interferenz|Diffraktion|Polarisation|photoelektrisch|Brechungsindex|Diamagnetismus|elektromagnetische Induktion|Lichtquant|Wellenoptik|Synchrotron|elektromagnetische Strahlung|konvexe Linse|konkave Linse|Lichtgeschwindigkeit|Hologramm|Phosphoreszenz|Geoengineering|Eutrophierung|planetare Grenze|CO₂-Äquivalent|Living Lab|Parlamentarismus|Proporzwahlrecht|Majorzwahlrecht|Checks and Balances|Oligarchie|Verfassungsgerichtsbarkeit|Legitimität eines Staates|politischer Pluralismus)\b|π|√/i,
   4: /\b(?:kgV|Konjunktiv|Keystone-Art|Sublimation|Xylem|Stomata|Rhizom|Calvin-Zyklus|Kambium|Abscisinsäure|Quantenmechanik|ökologische Sukzession|Geoengineering|Weber-Fechner|kortikale Karte|Aquifer|Aquifuge|Eutrophierung|Kapillarwirkung|Kreisumfang|Kreisfläche)\b|π|√/i,
-  5: /\b(?:Parataxe|Hypotaxe|Newtons Gravitationsgesetz|Mitose|Meiose|Ruhemembranpotenzial|Homöostase|Apoptose|Quantenmechanik|Relativitätstheorie|Geoengineering|Genomduplizierung|CRISPR|Quantencomputing|Moore's Law|Kohäsionsfonds|Max Weber)\b/i,
-  6: /\b(?:Gleichungssystem|rechtsschief|Varianz|Pythagoras|Hypotenuse|Gerundivum|Diathese|Metonymie|Clausius-Clapeyron|Leidenfrost|Massenwirkungsgesetz|dekadischer Logarithmus|photoelektrisch|Quantenoptik|Mitose|Osmose|Eukaryoten|Ribosomen|Meiose|Mutation|Phagozytose|zentrale Dogma|Transkription|Translation|CRISPR|Epigenetik|Apoptose|Perowskit|Quantencomputing|Relativitätstheorie|Hawking-Strahlung|Drake-Gleichung|Zeitdilatation|Geoengineering|Longtermism|superintelligence|existentielles Risiko|Just Transition)\b|π|√/i,
+  5: /\b(?:Parataxe|Hypotaxe|Newtons Gravitationsgesetz|Mitose|Meiose|Ruhemembranpotenzial|Homöostase|Apoptose|Quantenmechanik|Relativitätstheorie|Geoengineering|Genomduplizierung|CRISPR|Quantencomputing|Moore's Law|Kohäsionsfonds|Max Weber|Protektionismus|Oligopol|komparativer Vorteil|WTO|Bruttowertschöpfung|Handelsbilanz|Grenznutzen|Nash-Gleichgewicht|Keynes|Bretton-Woods|Hubbles Gesetz|Spektroskopie|Rotverschiebung)\b/i,
+  6: /\b(?:Gleichungssystem|rechtsschief|Varianz|Pythagoras|Hypotenuse|Gerundivum|Diathese|Metonymie|Clausius-Clapeyron|Leidenfrost|Massenwirkungsgesetz|dekadischer Logarithmus|photoelektrisch|Quantenoptik|Mitose|Osmose|Eukaryoten|Ribosomen|Meiose|Mutation|Phagozytose|zentrale Dogma|Transkription|Translation|CRISPR|Epigenetik|Apoptose|Perowskit|Quantencomputing|Relativitätstheorie|Hawking-Strahlung|Drake-Gleichung|Zeitdilatation|Geoengineering|Longtermism|superintelligence|existentielles Risiko|Just Transition|Gini-Koeffizient|Washingtoner Konsens|Dependency Theory|Hegemonie im Weltsystem|Quasar|Hertzsprung-Russell|kosmische Hintergrundstrahlung|Olbers-Paradoxon|Fermi-Paradoxon|Chandrasekhar|kosmische Inflation|Anthropische Prinzip)\b|π|√/i,
 };
 
 type Failure = { grade: number; subject: string; topic: string; id: string; reason: string };
@@ -76,8 +77,8 @@ for (const grade of [1, 2, 3, 4, 5, 6]) {
 if (totalExercises !== 13_518) {
   failures.push({ grade: 0, subject: "all", topic: "all", id: "count", reason: `expected 13,518 exercises, found ${totalExercises}` });
 }
-if (fillExercises !== 6_742 || fillExercisesWithLiteralBlank !== 4_770 || multiGapFillExercises !== 254) {
-  failures.push({ grade: 0, subject: "all", topic: "all", id: "fill-catalogue", reason: `expected 6,742 fill exercises / 4,770 literal-blank exercises / 254 multi-gap exercises, found ${fillExercises} / ${fillExercisesWithLiteralBlank} / ${multiGapFillExercises}` });
+if (fillExercises !== 6_742 || fillExercisesWithLiteralBlank !== 5_011 || multiGapFillExercises !== 172) {
+  failures.push({ grade: 0, subject: "all", topic: "all", id: "fill-catalogue", reason: `expected 6,742 fill exercises / 5,011 literal-blank exercises / 172 multi-gap exercises, found ${fillExercises} / ${fillExercisesWithLiteralBlank} / ${multiGapFillExercises}` });
 }
 if (validatedFamilies.size !== 690) {
   failures.push({ grade: 0, subject: "all", topic: "all", id: "families", reason: `expected validation coverage for 690 grade/subject/topic/type families, found ${validatedFamilies.size}` });
@@ -91,6 +92,7 @@ console.log(JSON.stringify({
   scope: "content alignment, not Sheet parity or full LP21 competency coverage",
   totalExercises,
   lp21Replacements: resolvedLocations.size,
+  lp21ApiFitReplacements: LP21_API_FIT_EXPANDED_TARGET_COUNT,
   fillExercises,
   fillExercisesWithLiteralBlank,
   multiGapFillExercises,

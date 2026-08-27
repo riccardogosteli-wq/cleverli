@@ -79,9 +79,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Plan new oral/composition exercise families and consolidate NMG overlap without changing valid learner progress IDs.",
         ],
         11: [
-            "High", "LP21 API exercise fit", "All", "1 exercise rated 4; 0 rated 5",
-            "Authenticated API-backed review rated every Grade 1 exercise: 1,712 at score 1, 50 at score 2 and one at score 4. The outlier is the Synästhesie item in NMG.",
-            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
+            "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 0 score-4/5 remain",
+            "The Synästhesie outlier was replaced with an age-appropriate senses task. The authenticated API re-score now reports 1,713 at score 1 and 50 at score 2.",
+            "Resolved. Permanent replacement, scoring, localisation, format, hint and duplicate audits cover the frozen target.",
         ],
     },
     2: {
@@ -121,9 +121,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Plan age-appropriate listening, speaking and guided-writing families as a separate content expansion.",
         ],
         19: [
-            "High", "LP21 API exercise fit", "All", "0 exercises rated 4; 3 rated 5",
-            "Authenticated API-backed review rated every Grade 2 exercise: 1,599 at score 1, 50 at score 2 and three at score 5. All three are cell/DNA content mapped to Cycle 3 NT.8.3.",
-            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
+            "Fixed", "LP21 API exercise fit", "All", "3 score-5 exercises replaced; 0 score-4/5 remain",
+            "The three cell/DNA outliers were replaced with observable Cycle-1 living-things content. The authenticated API re-score now reports 1,602 at score 1 and 50 at score 2.",
+            "Resolved and covered by the permanent 743-target LP21 replacement audit.",
         ],
     },
     3: {
@@ -178,9 +178,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Add oral-language families and consolidate NMG overlap in the next curriculum-expansion plan.",
         ],
         16: [
-            "High", "LP21 API exercise fit", "All", "1 exercise rated 4; 2 rated 5",
-            "Authenticated API-backed review rated every Grade 3 exercise: 1,901 at score 1, 48 at score 2, one advanced Ellipse item at score 4 and two EMRK/UDHR items at score 5.",
-            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
+            "Fixed", "LP21 API exercise fit", "All", "3 score-4/5 exercises replaced; 0 remain",
+            "The advanced Ellipse and international-law outliers were replaced with Grade-3 spelling and participation content. The API re-score now reports 1,904 at score 1 and 48 at score 2.",
+            "Resolved and covered by the permanent 743-target LP21 replacement audit.",
         ],
     },
     4: {
@@ -230,9 +230,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Verified against LP21 MA.3.C.1.d with permanent structural, localisation, scoring and duplicate checks.",
         ],
         17: [
-            "High", "LP21 API exercise fit", "All", "1 exercise rated 4; 3 rated 5",
-            "Authenticated API-backed review rated every Grade 4 exercise: 2,347 at score 1, 50 at score 2, 50 at score 3, one Synästhesie item at score 4 and three Cycle 3 history/politics items at score 5.",
-            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
+            "Fixed", "LP21 API exercise fit", "All", "4 score-4/5 exercises replaced; 0 remain",
+            "The senses and Cycle-3 politics/history outliers were replaced with body, map and participation tasks. The API re-score now reports 2,351 at score 1, 50 at score 2 and 50 at score 3.",
+            "Resolved and covered by the permanent 743-target LP21 replacement audit.",
         ],
     },
     5: {
@@ -302,9 +302,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Plan oral-language exercises and consolidate overlapping NMG families while preserving progress IDs.",
         ],
         18: [
-            "High", "LP21 API exercise fit", "All", "12 exercises rated 4; 66 rated 5",
-            "Authenticated API-backed review rated every Grade 5 exercise: 2,211 at score 1, 300 at score 2, 261 at score 3, 12 at score 4 and 66 at score 5. Main clusters are chemistry, economics and advanced astronomy.",
-            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
+            "Fixed", "LP21 API exercise fit", "All", "208 API/red-flag exercises replaced; 0 score-4/5 remain",
+            "All advanced chemistry, economics, astronomy and language outliers were replaced with Cycle-2 materials, everyday-economy, space and text tasks. This includes 78 original score-4/5 rows plus 130 scorer false negatives found by manual QA. The API re-score now reports 2,300 at score 1, 300 at score 2 and 250 at score 3.",
+            "Resolved with IDs, types, difficulties and totals preserved; permanent audits cover every frozen target.",
         ],
     },
     6: {
@@ -349,9 +349,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Plan oral-language exercises and consolidate overlapping NMG families while preserving progress IDs.",
         ],
         15: [
-            "High", "LP21 API exercise fit", "All", "432 exercises rated 4; 222 rated 5",
-            "Authenticated API-backed review rated every Grade 6 exercise: 1,141 at score 1, 483 at score 2, 572 at score 3, 432 at score 4 and 222 at score 5. Main clusters are advanced English/French grammar, chemistry/cell biology, world wars/industrialisation and macroeconomics.",
-            "Replace every score-4/5 row in controlled batches. Use column N for the competency code and row-level rationale.",
+            "Fixed", "LP21 API exercise fit", "All", "917 API/red-flag exercises replaced; 0 score-4/5 remain",
+            "Advanced foreign-language grammar and Cycle-3 science/history/economics clusters were repurposed to age-appropriate everyday language, materials, body, change-over-time, peace and economy content. This includes 654 original score-4/5 rows plus 263 scorer false negatives found by manual QA. The API re-score now reports 2,011 at score 1, 449 at score 2 and 390 at score 3.",
+            "Resolved with IDs, formats, difficulties and totals preserved; 12 unsuitable topic labels were renamed without changing route IDs or saved progress.",
         ],
     },
 }

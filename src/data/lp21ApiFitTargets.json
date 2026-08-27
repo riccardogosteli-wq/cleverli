@@ -1,0 +1,5946 @@
+[
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "fuenf-sinne",
+    "id": "s28",
+    "previousScore": 4,
+    "previousCode": "NMG.4.1"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "lebewesen",
+    "id": "l17",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "lebewesen",
+    "id": "l20",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "lebewesen",
+    "id": "l29",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "rechtschreibung",
+    "id": "rs45",
+    "previousScore": 4,
+    "previousCode": "D.5.E.1"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "demokratie",
+    "id": "dk44",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "demokratie",
+    "id": "dk49",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "koerper-sinne-4",
+    "id": "ks4_29",
+    "previousScore": 4,
+    "previousCode": "NMG.1.4"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "schweizer-geschichte-4",
+    "id": "sg4_43",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "europa-4",
+    "id": "eu4_15",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "europa-4",
+    "id": "eu4_21",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 5,
+    "subject": "german",
+    "topic": "direkte-rede",
+    "id": "g5dr3f",
+    "previousScore": 4,
+    "previousCode": "D.5.D.1"
+  },
+  {
+    "grade": 5,
+    "subject": "german",
+    "topic": "direkte-rede",
+    "id": "g5dr3g",
+    "previousScore": 4,
+    "previousCode": "D.5.D.1"
+  },
+  {
+    "grade": 5,
+    "subject": "german",
+    "topic": "textsorten-5",
+    "id": "ts5-10",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 5,
+    "subject": "german",
+    "topic": "textsorten-5",
+    "id": "ts5-23",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 5,
+    "subject": "german",
+    "topic": "textsorten-5",
+    "id": "ts5-45",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "sonnensystem",
+    "id": "g5ss2f",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "sonnensystem",
+    "id": "g5ss3d",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "sonnensystem",
+    "id": "g5ss3g",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "sonnensystem",
+    "id": "g5ss3h",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "sonnensystem",
+    "id": "g5ss3i",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "menschlicher-koerper-5",
+    "id": "mk5-37",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-1",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-2",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-3",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-4",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-5",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-6",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-7",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-8",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-9",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-10",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-11",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-12",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-13",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-14",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-16",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-17",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-18",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-19",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-20",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-21",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-22",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-23",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-24",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-25",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-26",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-27",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-28",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-29",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-30",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-32",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-33",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-34",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-35",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-36",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-37",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-38",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-39",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-40",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-41",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-42",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-43",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-44",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-45",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-46",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-47",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-48",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-49",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "chemie-einfuehrung-5",
+    "id": "ch5-50",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "pflanzen-tiere-5",
+    "id": "pt5-37",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "weltall",
+    "id": "g5weltall_norm_47",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "weltall",
+    "id": "g5weltall_norm_50",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-5",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-6",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-16",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-20",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-22",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-27",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-30",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-31",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-35",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-41",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-42",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-44",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-45",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-46",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-48",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "wirtschaft-handel-5",
+    "id": "wh5-49",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "textsorten",
+    "id": "g6d13",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "textsorten",
+    "id": "g6d16",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "textsorten",
+    "id": "g6ts3l",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "rechtschreibstrategien",
+    "id": "g6rs2k",
+    "previousScore": 4,
+    "previousCode": "D.5.E.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar4",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar7",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar9",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar10",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar11",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar12",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar13",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar15",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar16",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar17",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar18",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar19",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar20",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar21",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar24",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar27",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar28",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar29",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar31",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar32",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar34",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar35",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "argumentation-6",
+    "id": "g6ar38",
+    "previousScore": 4,
+    "previousCode": "D.4.B.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw4",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw8",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw13",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw15",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw17",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw18",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw21",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw23",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw25",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw26",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw27",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw28",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw29",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw30",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "sprache-wandel-6",
+    "id": "g6spw35",
+    "previousScore": 4,
+    "previousCode": "D.5.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit8",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit9",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit10",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit12",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit13",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit14",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit16",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit18",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit19",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit21",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit22",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit23",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit24",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit26",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit28",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit29",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit30",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit31",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit32",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit33",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit34",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "german",
+    "topic": "literatur-6",
+    "id": "g6lit35",
+    "previousScore": 4,
+    "previousCode": "D.6.C.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_1",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_2",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_3",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_4",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_5",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_6",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_7",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_8",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_9",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_10",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_11",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_12",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_13",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_14",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_15",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_16",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_17",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_18",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_19",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_20",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_21",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_22",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_23",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_24",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_27",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_28",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_29",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_30",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_31",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_32",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_33",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_35",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_36",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_37",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_38",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_39",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_40",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_41",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_42",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_43",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_44",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_45",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_46",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_47",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_48",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_49",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "chemie-6",
+    "id": "ch6_50",
+    "previousScore": 5,
+    "previousCode": "NT.3.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_1",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_2",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_3",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_4",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_5",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_6",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_7",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_8",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_9",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_10",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_11",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_12",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_13",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_14",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_15",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_16",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_17",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_18",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_19",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_20",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_21",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_22",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_23",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_24",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_25",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_26",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_27",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_28",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_29",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_30",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_31",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_32",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_33",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_34",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_35",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_36",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_37",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_38",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_39",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_40",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_41",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_42",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_43",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_44",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_45",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_46",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_47",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_48",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_49",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "biologie-zelle-6",
+    "id": "bz6_50",
+    "previousScore": 5,
+    "previousCode": "NT.8.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_11",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_19",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_20",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_21",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_23",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_30",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_31",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_34",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "astronomie-6",
+    "id": "as6_45",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltall",
+    "id": "g5weltall_norm_30",
+    "previousScore": 4,
+    "previousCode": "NMG.4.5"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "neuzeit-6",
+    "id": "nz6_40",
+    "previousScore": 4,
+    "previousCode": "NMG.9.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_1",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_2",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_3",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_4",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_5",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_6",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_7",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_8",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_9",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_10",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_11",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_12",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_13",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_14",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_15",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_16",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_17",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_18",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_19",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_20",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_21",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_22",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_23",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_24",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_25",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_26",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_27",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_28",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_29",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_30",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_31",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_32",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_33",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_34",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_35",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_36",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_37",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_38",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_39",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_40",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_41",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_42",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_43",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_44",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_45",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_46",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_47",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_48",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_49",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "industrialisierung-6",
+    "id": "in6_50",
+    "previousScore": 5,
+    "previousCode": "RZG.6.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "demokratie-menschenrechte-6",
+    "id": "dm6_19",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "demokratie-menschenrechte-6",
+    "id": "dm6_29",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "demokratie-menschenrechte-6",
+    "id": "dm6_33",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "demokratie-menschenrechte-6",
+    "id": "dm6_36",
+    "previousScore": 4,
+    "previousCode": "NMG.10.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_1",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_2",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_3",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_4",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_5",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_6",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_7",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_8",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_9",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_10",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_11",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_12",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_13",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_14",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_15",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_16",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_17",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_18",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_19",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_20",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_21",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_22",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_23",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_24",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_25",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_26",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_27",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_28",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_29",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_30",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_31",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_32",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_33",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_34",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_35",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_36",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_37",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_38",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_39",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_40",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_41",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_42",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_43",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_44",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_45",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_46",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_47",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_48",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_49",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "weltkriege-6",
+    "id": "wk6_50",
+    "previousScore": 5,
+    "previousCode": "RZG.6.3"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "globalisierung-6",
+    "id": "gl6_2",
+    "previousScore": 5,
+    "previousCode": "RZG.3.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "globalisierung-6",
+    "id": "gl6_3",
+    "previousScore": 5,
+    "previousCode": "RZG.3.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "globalisierung-6",
+    "id": "gl6_4",
+    "previousScore": 5,
+    "previousCode": "RZG.3.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "globalisierung-6",
+    "id": "gl6_5",
+    "previousScore": 5,
+    "previousCode": "RZG.3.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "globalisierung-6",
+    "id": "gl6_15",
+    "previousScore": 5,
+    "previousCode": "RZG.3.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "globalisierung-6",
+    "id": "gl6_23",
+    "previousScore": 5,
+    "previousCode": "RZG.3.2"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_4",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_13",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_16",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_17",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_18",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_19",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_20",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_23",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_31",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_32",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_38",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_44",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_47",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "wirtschaft-grundlagen-6",
+    "id": "wi6_50",
+    "previousScore": 5,
+    "previousCode": "WAH.2.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "kontinente-6",
+    "id": "ko6_36",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "kontinente-6",
+    "id": "ko6_42",
+    "previousScore": 5,
+    "previousCode": "RZG.8.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "migration-flucht-6",
+    "id": "mf6_41",
+    "previousScore": 4,
+    "previousCode": "NMG.7.1"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "migration-flucht-6",
+    "id": "mf6_45",
+    "previousScore": 4,
+    "previousCode": "NMG.7.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-1",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-2",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-3",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-4",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-5",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-6",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-7",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-8",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-9",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-10",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-11",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-12",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-13",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-14",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-15",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-16",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-17",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-18",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-19",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-20",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-21",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-22",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-23",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-24",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-25",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-26",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-27",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-28",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-29",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-30",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-31",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-32",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-33",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-34",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-35",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-36",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-37",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-38",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-39",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-40",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-41",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-42",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-43",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-44",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-45",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-46",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-47",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-48",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-49",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "passe-compose-6",
+    "id": "pc6-50",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-1",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-2",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-3",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-4",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-5",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-6",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-7",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-8",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-9",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-10",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-11",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-12",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-13",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-14",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-15",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-16",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-17",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-18",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-19",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-20",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-21",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-22",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-23",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-24",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-25",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-26",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-27",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-28",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-29",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-30",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-31",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-32",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-33",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-34",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-35",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-36",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-37",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-38",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-39",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-40",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-41",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-42",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-43",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-44",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-45",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-46",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-47",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-48",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-49",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "imparfait-6",
+    "id": "imp6-50",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-1",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-2",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-3",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-4",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-5",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-6",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-7",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-8",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-9",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-10",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-11",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-12",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-13",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-14",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-15",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-16",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-17",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-18",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-19",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-20",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-21",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-22",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-23",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-24",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-25",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-26",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-27",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-28",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-29",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-30",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-31",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-32",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-33",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-34",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-35",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-36",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-37",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-38",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-39",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-40",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-41",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-42",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-43",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-44",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-45",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-46",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-47",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-48",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-49",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "futur-simple-6",
+    "id": "fs6-50",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-1",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-2",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-3",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-4",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-5",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-6",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-7",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-8",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-9",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-10",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-11",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-12",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-13",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-14",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-15",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-16",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-17",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-18",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-19",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-20",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-21",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-22",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-23",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-24",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-25",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-26",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-27",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-28",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-29",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-30",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-31",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-32",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-33",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-34",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-35",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-36",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-37",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-38",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-39",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-40",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-41",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-42",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-43",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-44",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-45",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-46",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-47",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-48",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-49",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "pronoms-cod-coi-6",
+    "id": "pr6-50",
+    "previousScore": 4,
+    "previousCode": "FS2F.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topic": "france-pays-francophones-6",
+    "id": "ff6-42",
+    "previousScore": 4,
+    "previousCode": "FS2F.6.A.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-1",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-2",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-3",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-4",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-5",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-6",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-7",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-8",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-9",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-10",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-11",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-12",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-13",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-14",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-15",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-16",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-17",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-18",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-19",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-20",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-21",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-22",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-23",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-24",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-25",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-26",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-27",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-28",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-29",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-30",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-31",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-32",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-33",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-34",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-35",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-36",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-37",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-38",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-39",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-40",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-41",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-42",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-43",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-44",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-45",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-46",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-47",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-48",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-49",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "passive-voice-6",
+    "id": "pv6-50",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-1",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-2",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-3",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-4",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-5",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-6",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-7",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-8",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-9",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-10",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-11",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-12",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-13",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-14",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-15",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-16",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-17",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-18",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-19",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-20",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-21",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-22",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-23",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-24",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-25",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-26",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-27",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-28",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-29",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-30",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-31",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-32",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-33",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-34",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-35",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-36",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-37",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-38",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-39",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-40",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-41",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-42",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-43",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-44",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-45",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-46",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-47",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-48",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-49",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "conditionals-6",
+    "id": "cond6-50",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-1",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-2",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-3",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-4",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-5",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-6",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-7",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-8",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-9",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-10",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-11",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-12",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-13",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-14",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-15",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-16",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-17",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-18",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-19",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-20",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-21",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-22",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-23",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-24",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-25",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-26",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-27",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-28",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-29",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-30",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-31",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-32",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-33",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-34",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-35",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-36",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-37",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-38",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-39",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-40",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-41",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-42",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-43",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-44",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-45",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-46",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-47",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-48",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-49",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "reported-speech-6",
+    "id": "rs6-50",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.D.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "exam-skills-6",
+    "id": "ex6-23",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.F.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "exam-skills-6",
+    "id": "ex6-31",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.F.1"
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topic": "exam-skills-6",
+    "id": "ex6-48",
+    "previousScore": 4,
+    "previousCode": "FS1E.5.F.1"
+  }
+]

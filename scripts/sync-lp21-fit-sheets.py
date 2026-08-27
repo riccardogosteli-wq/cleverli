@@ -29,6 +29,7 @@ def normalize(value: object) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--replace-existing", action="store_true", help="Allow refreshing generated LP21 fit values in column N")
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
     parser.add_argument("--grades", nargs="+", type=int, choices=range(1, 7), default=list(range(1, 7)))
     args = parser.parse_args()
@@ -73,7 +74,7 @@ def main() -> None:
 
         if id_mismatches:
             raise RuntimeError(f"Grade {grade}: exercise-ID mismatches at rows {id_mismatches[:20]}")
-        if protected_conflicts:
+        if protected_conflicts and not (args.apply and args.replace_existing):
             raise RuntimeError(f"Grade {grade}: existing LP21 fit values would be overwritten at rows {protected_conflicts[:20]}")
 
         if args.apply:

@@ -6,8 +6,8 @@ const expectedFillRepairsByGrade: Record<number, number> = {
   2: 16,
   3: 40,
   4: 40,
-  5: 39,
-  6: 39,
+  5: 28,
+  6: 28,
 };
 
 const expectedFacts: Record<string, { answer: string; questionIncludes: string }> = {

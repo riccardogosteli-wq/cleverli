@@ -12,6 +12,7 @@ import { localizeExercise } from "../src/lib/exerciseLocalization";
 import { isApprovedSafeHint } from "../src/lib/exerciseHints";
 import { OPEN_WRITING_CHANGED_KEYS } from "../src/data/openWritingExercises";
 import { LP21_REPLACEMENT_GROUP_IDS } from "../src/data/lp21ExerciseReplacements";
+import { isLp21ApiFitTarget } from "../src/data/lp21ApiFitReplacements";
 import type { Exercise, Topic } from "../src/types/exercise";
 import type { Lang } from "../src/lib/i18n";
 
@@ -101,6 +102,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
         const exerciseKey = `${grade}/${subject.id}/${topic.id}/${exercise.id}`;
         if (
           !OPEN_WRITING_CHANGED_KEYS.has(exerciseKey)
+          && !isLp21ApiFitTarget(exerciseKey)
           && !lp21ChangedKeys.has(`${grade}/${subject.id}/${exercise.id}`)
           && JSON.stringify(withoutHints(original)) !== JSON.stringify(withoutHints(exercise))
         ) {
