@@ -1,6 +1,7 @@
 import { getSubjects, getTopics } from "../src/data";
 import { matchPunctuationOnlyAnswer } from "../src/lib/fillInBlankMatching";
 import type { Exercise } from "../src/types/exercise";
+import { getExerciseDuplicateKey } from "./exercise-duplicate-key";
 
 const expectedGradeCounts: Record<number, number> = {
   1: 1763,
@@ -52,11 +53,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
         exercises.set(key, exercise);
         gradeCount += 1;
         total += 1;
-        const contentKey = JSON.stringify([
-          exercise.question.trim().toLowerCase(),
-          (exercise.options ?? []).map((option) => option.trim().toLowerCase()),
-          exercise.answer.trim().toLowerCase(),
-        ]);
+        const contentKey = getExerciseDuplicateKey(exercise);
         duplicateGroups.set(contentKey, [...(duplicateGroups.get(contentKey) ?? []), key]);
 
         if (exercise.type === "multiple-choice" && !(exercise.options ?? []).includes(exercise.answer)) {
@@ -69,7 +66,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
     failures.push(`Grade ${grade}: expected ${expectedGradeCounts[grade]} exercises, found ${gradeCount}`);
   }
   const exactDuplicates = [...duplicateGroups.values()].filter((group) => group.length > 1);
-  const expectedDuplicates = grade === 1 ? 8 : 0;
+  const expectedDuplicates = 0;
   if (exactDuplicates.length !== expectedDuplicates) {
     failures.push(`Grade ${grade}: expected ${expectedDuplicates} exact duplicate groups, found ${exactDuplicates.length}`);
   }

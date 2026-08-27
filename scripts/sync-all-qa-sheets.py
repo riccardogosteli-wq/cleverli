@@ -44,9 +44,9 @@ GRADE1_SPECIAL_HEADERS = [
 AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
     1: {
         5: [
-            "Medium", "Duplicates", "All", "8 exact groups; generic-pattern review pending",
-            "The fresh all-grade scan found 8 exact Grade 1 duplicate pairs: 4 within one topic and 4 across topics. Grades 2–6 now have no exact within-grade content duplicates.",
-            "Review the 8 Grade 1 pairs, keep deliberate reinforcement and replace accidental repetition.",
+            "Fixed", "Duplicates", "All", "7 genuine duplicate pairs replaced; 1 false positive retained",
+            "Full structural review replaced all 7 genuine Grade 1 content duplicates. The eighth flagged pair was valid reinforcement: two memory games share a generic prompt but contain different card pairs. The detector now compares complete exercise structures; a fresh scan finds zero exact duplicates across all 1,763 Grade 1 exercises.",
+            "Resolved. Keep the structure-aware duplicate audit in the QA suite.",
         ],
         8: [
             "Structural", "IDs", "All", "50 cross-subject ID collisions",
