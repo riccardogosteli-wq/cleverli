@@ -80,7 +80,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
 for (const factKey of Object.keys(expectedFacts)) {
   if (!foundFacts.has(factKey)) failures.push(`${factKey}: corrected factual exercise not found`);
 }
-if (exercises !== 13_468) failures.push(`Expected 13,468 exercises, found ${exercises}`);
+if (exercises !== 13_518) failures.push(`Expected 13,518 exercises, found ${exercises}`);
 
 console.log(JSON.stringify({ exercises, normalizedFillRepairs: Object.values(fillRepairsByGrade).reduce((sum, count) => sum + count, 0), fillRepairsByGrade, correctedFactualExercises: foundFacts.size, failures: failures.length }, null, 2));
 if (failures.length) {

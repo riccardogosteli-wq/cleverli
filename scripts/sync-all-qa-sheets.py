@@ -205,9 +205,14 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved against official Swiss and EU sources and covered by the factual regression.",
         ],
         15: [
-            "Review", "LP21 competency coverage", "Mathematics / German / NMG", "Missing data/probability and oral strands; parallel NMG strands",
-            "Grade 4 mathematics has no dedicated data, diagrams or probability topic; German lacks listening/speaking; several NMG strands run in parallel.",
-            "Prioritise a Grade 4 data/probability family, then oral-language content and NMG consolidation.",
+            "Review", "LP21 competency coverage", "German / NMG", "Missing oral-language strand; parallel NMG strands",
+            "The Grade 4 mathematics gap is resolved. German still lacks listening/speaking, and several NMG strands run in parallel.",
+            "Prioritise oral-language content; leave NMG consolidation for the saved-progress migration plan.",
+        ],
+        16: [
+            "Fixed", "LP21 mathematics coverage", "Mathematics", "daten-diagramme-zufall-4: 50 exercises",
+            "Added a dedicated Grade 4 strand for reading tables and diagrams, comparing data, interpreting recorded chance experiments and using age-appropriate probability language.",
+            "Verified against LP21 MA.3.C.1.d with permanent structural, localisation, scoring and duplicate checks.",
         ],
     },
     5: {
@@ -402,6 +407,67 @@ def batch_write(spreadsheet_id: str, updates: list[dict]) -> None:
         )
 
 
+def append_values(spreadsheet_id: str, range_: str, rows: list[list]) -> None:
+    if not rows:
+        return
+    encoded = urllib.parse.quote(range_, safe="")
+    request(
+        "POST",
+        f"{BASE}/{spreadsheet_id}/values/{encoded}:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS",
+        {"majorDimension": "ROWS", "values": rows},
+    )
+
+
+def align_rows_by_id(current_rows: list[list], source_rows: list[dict]) -> tuple[list[list], list[tuple[int, int]]]:
+    """Align a Sheet prefix with source and report missing source-index blocks."""
+    aligned: list[list] = []
+    missing_indexes: list[int] = []
+    current_index = 0
+    for source_index, source_row in enumerate(source_rows):
+        expected_id = str(source_row["exerciseId"])
+        actual_id = normalize(current_rows[current_index], 1)[0] if current_index < len(current_rows) else ""
+        if actual_id == expected_id:
+            aligned.append(current_rows[current_index])
+            current_index += 1
+        else:
+            aligned.append([])
+            missing_indexes.append(source_index)
+    if current_index != len(current_rows):
+        actual_id = normalize(current_rows[current_index], 1)[0]
+        raise RuntimeError(f"Sheet ordering diverges at existing exercise {actual_id}")
+    if len(missing_indexes) != len(source_rows) - len(current_rows):
+        raise RuntimeError("Sheet/source row alignment produced an invalid missing-row count")
+
+    blocks: list[tuple[int, int]] = []
+    for index in missing_indexes:
+        if blocks and index == blocks[-1][0] + blocks[-1][1]:
+            start, count = blocks[-1]
+            blocks[-1] = (start, count + 1)
+        else:
+            blocks.append((index, 1))
+    return aligned, blocks
+
+
+def insert_sheet_rows(spreadsheet_id: str, tab: str, blocks: list[tuple[int, int]]) -> None:
+    if not blocks:
+        return
+    tab_id = sheet_id(spreadsheet_id, tab)
+    requests = []
+    for source_index, count in reversed(blocks):
+        requests.append({
+            "insertDimension": {
+                "range": {
+                    "sheetId": tab_id,
+                    "dimension": "ROWS",
+                    "startIndex": source_index + 1,
+                    "endIndex": source_index + 1 + count,
+                },
+                "inheritFromBefore": False,
+            }
+        })
+    request("POST", f"{BASE}/{spreadsheet_id}:batchUpdate", {"requests": requests})
+
+
 def is_green(cell: dict) -> bool:
     rgb = cell.get("effectiveFormat", {}).get("backgroundColorStyle", {}).get("rgbColor", {})
     return (
@@ -476,6 +542,43 @@ def repair_main_markers(
     request("POST", f"{BASE}/{spreadsheet_id}:batchUpdate", {"requests": requests})
 
 
+def repair_special_markers(
+    spreadsheet_id: str,
+    tab: str,
+    sheet_rows: list[int],
+    solution_column: int,
+) -> None:
+    if not sheet_rows:
+        return
+    tab_id = sheet_id(spreadsheet_id, tab)
+    white = {"red": 1, "green": 1, "blue": 1}
+    green = {"red": 0.7764706, "green": 0.9372549, "blue": 0.80784315}
+    requests = []
+    for sheet_row in sheet_rows:
+        base_range = {
+            "sheetId": tab_id,
+            "startRowIndex": sheet_row - 1,
+            "endRowIndex": sheet_row,
+        }
+        requests.extend([
+            {
+                "repeatCell": {
+                    "range": {**base_range, "startColumnIndex": 6, "endColumnIndex": 8},
+                    "cell": {"userEnteredFormat": {"backgroundColor": white}},
+                    "fields": "userEnteredFormat.backgroundColor",
+                }
+            },
+            {
+                "repeatCell": {
+                    "range": {**base_range, "startColumnIndex": solution_column - 1, "endColumnIndex": solution_column},
+                    "cell": {"userEnteredFormat": {"backgroundColor": green}},
+                    "fields": "userEnteredFormat.backgroundColor",
+                }
+            },
+        ])
+    request("POST", f"{BASE}/{spreadsheet_id}:batchUpdate", {"requests": requests})
+
+
 def verify_markers(
     spreadsheet_id: str,
     tab: str,
@@ -523,30 +626,31 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
     expected_special_header = GRADE1_SPECIAL_HEADERS if grade == 1 else SPECIAL_HEADERS
     if normalize(current_special[0], 6) != expected_special_header[:6]:
         raise RuntimeError(f"Grade {grade}: unexpected special header")
-    if len(current_main) != len(source_rows) + 1:
-        raise RuntimeError(f"Grade {grade}: main row count differs ({len(current_main) - 1} vs {len(source_rows)})")
-    if len(current_special) != len(special_rows) + 1:
-        raise RuntimeError(f"Grade {grade}: special row count differs ({len(current_special) - 1} vs {len(special_rows)})")
+    current_main_count = len(current_main) - 1
+    current_special_count = len(current_special) - 1
+    if current_main_count > len(source_rows):
+        raise RuntimeError(f"Grade {grade}: Sheet has extra main rows ({current_main_count} vs {len(source_rows)})")
+    if current_special_count > len(special_rows):
+        raise RuntimeError(f"Grade {grade}: Sheet has extra special rows ({current_special_count} vs {len(special_rows)})")
+
+    aligned_main, main_insert_blocks = align_rows_by_id(current_main[1:], source_rows)
+    aligned_special, special_insert_blocks = align_rows_by_id(current_special[1:], special_rows)
 
     main_updates = []
-    for sheet_row, (current, expected_source) in enumerate(zip(current_main[1:], source_rows), start=2):
+    for sheet_row, (current, expected_source) in enumerate(zip(aligned_main, source_rows), start=2):
         expected = main_values(expected_source)
-        if normalize(current, 1)[0] != str(expected_source["exerciseId"]):
-            raise RuntimeError(f"Grade {grade}: main ordering mismatch at row {sheet_row}")
         if normalize(current, 13) != normalize(expected, 13):
             main_updates.append({"range": f"'{main_tab}'!A{sheet_row}:M{sheet_row}", "values": [expected]})
 
     special_updates = []
     if normalize(current_special[0], 10) != expected_special_header:
         special_updates.append({"range": "'Special exercises'!A1:J1", "values": [expected_special_header]})
-    for sheet_row, (current, expected_source) in enumerate(zip(current_special[1:], special_rows), start=2):
+    for sheet_row, (current, expected_source) in enumerate(zip(aligned_special, special_rows), start=2):
         expected = (
             grade1_special_values(expected_source, normalize(current, 10)[6])
             if grade == 1
             else special_values(expected_source)
         )
-        if normalize(current, 1)[0] != str(expected_source["exerciseId"]):
-            raise RuntimeError(f"Grade {grade}: special ordering mismatch at row {sheet_row}")
         if normalize(current, 10) != normalize(expected, 10):
             special_updates.append({"range": f"'Special exercises'!A{sheet_row}:J{sheet_row}", "values": [expected]})
 
@@ -558,6 +662,8 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
             audit_updates.append({"range": f"'Audit findings'!A{audit_row}:F{audit_row}", "values": [expected]})
 
     if apply:
+        insert_sheet_rows(spreadsheet_id, main_tab, main_insert_blocks)
+        insert_sheet_rows(spreadsheet_id, "Special exercises", special_insert_blocks)
         batch_write(spreadsheet_id, main_updates + special_updates + audit_updates)
 
     reread_main = values_get(spreadsheet_id, f"'{main_tab}'!A1:T{len(source_rows) + 1}")
@@ -566,10 +672,13 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
         index for index, (actual, source_row) in enumerate(zip(reread_main[1:], source_rows), start=2)
         if normalize(actual, 13) != normalize(main_values(source_row), 13)
     ]
+    if len(reread_main) != len(source_rows) + 1:
+        main_mismatches.extend(range(len(reread_main) + 1, len(source_rows) + 2))
     special_mismatches = []
     if normalize(reread_special[0], 10) != expected_special_header:
         special_mismatches.append(1)
-    for index, (actual, source_row, original) in enumerate(zip(reread_special[1:], special_rows, current_special[1:]), start=2):
+    for index, (actual, source_row) in enumerate(zip(reread_special[1:], special_rows), start=2):
+        original = current_special[index - 1] if index - 1 < len(current_special) else []
         expected = (
             grade1_special_values(source_row, normalize(original, 10)[6])
             if grade == 1
@@ -577,6 +686,8 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
         )
         if normalize(actual, 10) != normalize(expected, 10):
             special_mismatches.append(index)
+    if len(reread_special) != len(special_rows) + 1:
+        special_mismatches.extend(range(len(reread_special) + 1, len(special_rows) + 2))
     audit_mismatches = []
     reread_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F100")
     for audit_row, expected in AUDIT_UPDATES.get(grade, {}).items():
@@ -595,11 +706,27 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
         special=True,
         special_solution_column=8 if grade == 1 else 7,
     )
+    if apply and special_marker_failures:
+        repair_special_markers(
+            spreadsheet_id,
+            "Special exercises",
+            special_marker_failures,
+            solution_column=8 if grade == 1 else 7,
+        )
+        special_marker_failures = verify_markers(
+            spreadsheet_id,
+            "Special exercises",
+            special_rows,
+            special=True,
+            special_solution_column=8 if grade == 1 else 7,
+        )
     return {
         "mainRows": len(source_rows),
         "specialRows": len(special_rows),
         "plannedMainUpdates": len(main_updates),
+        "plannedMainInserts": sum(count for _, count in main_insert_blocks),
         "plannedSpecialUpdates": len(special_updates),
+        "plannedSpecialInserts": sum(count for _, count in special_insert_blocks),
         "plannedAuditUpdates": len(audit_updates),
         "mainMismatches": len(main_mismatches),
         "specialMismatches": len(special_mismatches),
@@ -612,8 +739,9 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Write mismatched production-owned cells and stale audit rows")
+    parser.add_argument("--grades", nargs="+", type=int, choices=range(1, 7), default=list(range(1, 7)))
     args = parser.parse_args()
-    summary = {grade: reconcile_grade(grade, args.apply) for grade in range(1, 7)}
+    summary = {grade: reconcile_grade(grade, args.apply) for grade in args.grades}
     print(json.dumps({"applied": args.apply, "grades": summary}, indent=2))
     if any(
         result[key]

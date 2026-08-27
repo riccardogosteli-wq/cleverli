@@ -1,5 +1,6 @@
 import { Topic } from "@/types/exercise";
 import { applyGrade4MathDuplicateReplacements } from "../grade4MathDuplicateReplacements";
+import grade4DataProbability from "./dataProbability";
 
 const grade4Math: Topic[] = [
   {
@@ -553,6 +554,7 @@ const grade4Math: Topic[] = [
       { id: "ta4_50", type: "fill-in-blank", difficulty: 3, question: "12 × 12 = ___", questionIT: "12 × 12 = ___", questionEN: "12 × 12 = ___", questionFR: "12 × 12 = ___", answer: "144", hints: ["Rechne Schritt für Schritt.", "Das Ergebnis liegt zwischen 72 und 144."] },
     ],
   },
+  grade4DataProbability,
 ];
 
 export default applyGrade4MathDuplicateReplacements(grade4Math);

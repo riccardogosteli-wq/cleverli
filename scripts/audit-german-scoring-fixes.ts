@@ -7,7 +7,7 @@ const expectedGradeCounts: Record<number, number> = {
   1: 1763,
   2: 1652,
   3: 1952,
-  4: 2401,
+  4: 2451,
   5: 2850,
   6: 2850,
 };

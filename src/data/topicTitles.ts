@@ -77,6 +77,12 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
     it: "Divisione",
     en: "Division",
   },
+  "daten-diagramme-zufall-4": {
+    de: "Daten, Diagramme & Zufall",
+    fr: "Données, diagrammes et hasard",
+    it: "Dati, diagrammi e caso",
+    en: "Data, charts and chance",
+  },
   "vergleichen": {
     de: "Grösser & Kleiner",
     fr: "Plus grand & plus petit",
