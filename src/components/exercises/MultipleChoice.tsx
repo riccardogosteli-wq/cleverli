@@ -9,33 +9,23 @@ interface Props {
   answer: string;
   onAnswer: (correct: boolean) => void;
   optionImages?: string[];   // one image per option (same order), e.g. ["/images/shapes/circle.svg", ...]
+  optionEmojis?: string[];   // one large visual symbol per option for early readers
   questionImage?: string;    // illustration above the question
 }
 
-export default function MultipleChoice({ question, options, answer, onAnswer, optionImages, questionImage }: Props) {
+export default function MultipleChoice({ question, options, answer, onAnswer, optionImages, optionEmojis, questionImage }: Props) {
   const { tr } = useLang();
   const [selected, setSelected] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [shake, setShake] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const hasImages = optionImages && optionImages.length === options.length;
+  const hasEmojis = optionEmojis && optionEmojis.length === options.length;
+  const hasVisuals = hasImages || hasEmojis;
 
   useEffect(() => {
     setIsMobile("ontouchstart" in window || navigator.maxTouchPoints > 0);
   }, []);
-
-  useEffect(() => {
-    if (isMobile || hasImages) return; // no kbd shortcuts when images shown
-    const handler = (e: KeyboardEvent) => {
-      if (submitted) return;
-      const idx = parseInt(e.key) - 1;
-      if (idx >= 0 && idx < options.length) setSelected(options[idx]);
-      if (e.key === "Enter" && selected) submit();
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selected, submitted, isMobile, options, hasImages]);
 
   const pick = (opt: string) => {
     if (submitted) return;
@@ -53,8 +43,21 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
     setTimeout(() => onAnswer(correct), 1500);
   };
 
+  useEffect(() => {
+    if (isMobile || hasVisuals) return; // no kbd shortcuts when visual choices are shown
+    const handler = (e: KeyboardEvent) => {
+      if (submitted) return;
+      const idx = parseInt(e.key) - 1;
+      if (idx >= 0 && idx < options.length) setSelected(options[idx]);
+      if (e.key === "Enter" && selected) submit();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected, submitted, isMobile, options, hasVisuals]);
+
   // ── Image tiles layout ───────────────────────────────────────────
-  if (hasImages) {
+  if (hasVisuals) {
     return (
       <div className="space-y-4">
         {questionImage && (
@@ -80,6 +83,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
                 onClick={() => pick(opt)}
                 disabled={submitted}
                 aria-pressed={isSelected}
+                aria-label={`Antwort ${i + 1}: ${opt}`}
                 data-answer={opt}
                 className="relative rounded-2xl border-2 p-2 flex flex-col items-center gap-1.5 active:scale-95 transition-all"
                 style={{
@@ -89,15 +93,28 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
                   minHeight: "110px",
                 }}
               >
-                <Image
-                  src={optionImages![i]}
-                  alt={opt}
-                  width={72}
-                  height={72}
-                  className="drop-shadow-sm"
-                  unoptimized={optionImages![i].endsWith(".svg")}
-                  style={{ filter: submitted && isSelected && !isCorrect ? "saturate(0.4)" : "none" }}
-                />
+                <span className="absolute top-2 left-2 w-6 h-6 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center text-xs font-bold">
+                  {i + 1}
+                </span>
+                {hasImages ? (
+                  <Image
+                    src={optionImages![i]}
+                    alt={opt}
+                    width={72}
+                    height={72}
+                    className="drop-shadow-sm"
+                    unoptimized={optionImages![i].endsWith(".svg")}
+                    style={{ filter: submitted && isSelected && !isCorrect ? "saturate(0.4)" : "none" }}
+                  />
+                ) : (
+                  <span
+                    aria-hidden="true"
+                    className="text-5xl leading-none drop-shadow-sm select-none"
+                    style={{ filter: submitted && isSelected && !isCorrect ? "saturate(0.4)" : "none" }}
+                  >
+                    {optionEmojis![i]}
+                  </span>
+                )}
                 <span className="text-xs font-semibold text-gray-700 text-center leading-tight px-1">{opt}</span>
                 {/* Result icon */}
                 {submitted && isSelected && (
@@ -138,7 +155,7 @@ export default function MultipleChoice({ question, options, answer, onAnswer, op
         </div>
       )}
       <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center leading-snug px-1">{question}</p>
-      {!isMobile && !hasImages && (
+      {!isMobile && !hasVisuals && (
         <p className="text-xs text-center text-gray-400 hidden sm:block">{tr("keyboardShortcutHint")}</p>
       )}
       <div className="grid grid-cols-1 gap-3">

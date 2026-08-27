@@ -30,6 +30,7 @@ export interface Exercise {
   emoji?: string;
   image?: string;           // main question illustration (path under /images/)
   optionImages?: string[];  // per-option images for visual multiple-choice
+  optionEmojis?: string[];  // per-option visual symbols for early-reader multiple-choice
   mascot?: "wave" | "think" | "celebrate" | "run" | "sit-read" | "jump-star";
   pairs?: { id: string; label: string; image?: string; emoji?: string }[];       // memory
   dragItems?: { id: string; label: string; image?: string; emoji?: string }[];  // drag-drop

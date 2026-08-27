@@ -46,13 +46,23 @@ function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: 
     const options = exercise.options ?? [];
     if (options.length !== 4 || new Set(options).size !== 4) failures.push(`${key}: expected four unique choices`);
     if (!options.includes(exercise.answer)) failures.push(`${key}: answer is absent from choices`);
+    if (grade === 1) {
+      const visuals = exercise.optionEmojis ?? [];
+      if (visuals.length !== options.length || new Set(visuals).size !== options.length) failures.push(`${key}: Grade 1 requires four unique visual choices`);
+      if (!containsNormalizedPhrase(exercise.listeningText ?? "", exercise.question)) failures.push(`${key}: Grade 1 spoken prompt omits the question`);
+      options.forEach(option => {
+        if (!containsNormalizedPhrase(exercise.listeningText ?? "", option)) failures.push(`${key}: Grade 1 spoken prompt omits choice «${option}»`);
+      });
+    }
   } else if (exercise.type === "drag-drop") {
     const items = exercise.dragItems ?? [];
     const zones = exercise.dropZones ?? [];
     if (items.length !== 3 || zones.length !== 3) failures.push(`${key}: ordering task must have three items and zones`);
     items.forEach((item, itemIndex) => {
       if (exercise.dropAnswers?.[item.id] !== zones[itemIndex]?.id) failures.push(`${key}: wrong ordered mapping for ${item.id}`);
+      if (grade === 1 && !item.emoji) failures.push(`${key}: Grade 1 ordering item ${item.id} has no visual symbol`);
     });
+    if (grade === 1 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Bringe die drei Bilder in die gehörte Reihenfolge")) failures.push(`${key}: Grade 1 ordering instruction is not spoken`);
   } else {
     failures.push(`${key}: unsupported listening interaction ${exercise.type}`);
   }

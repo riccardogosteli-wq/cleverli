@@ -75,13 +75,13 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
         10: [
             "Review", "LP21 competency coverage", "German / NMG", "Composition and listening added; speaking and parallel NMG strands remain",
-            "The 50-exercise ‘Sätze & kleine Texte’ and 50-exercise ‘Hören & verstehen’ topics now cover guided composition and Cycle-1 listening comprehension. A dedicated speaking strand remains absent; senses and weather topic families still overrepresent those NMG areas.",
-            "Keep the permanent composition/listening and LP21 API gates. Plan speaking separately; consolidate NMG overlap without changing learner progress IDs.",
+            "The 50-exercise ‘Sätze & kleine Texte’ topic covers guided composition. ‘Hören & verstehen’ now uses 45 picture-first choices and 5 visual sequences; the audio speaks the story, question and numbered choices so reading is not required. A dedicated speaking strand remains absent; senses and weather topic families still overrepresent those NMG areas.",
+            "Keep the permanent composition, listening-modality and LP21 API gates. Plan speaking separately; consolidate NMG overlap without changing learner progress IDs.",
         ],
         11: [
             "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 100 new composition/listening exercises score 1–2; 0 score-4/5 remain",
-            "The Synästhesie outlier remains resolved. The authenticated API re-score now reports 1,813 at score 1 and 50 at score 2. All 50 new listening exercises score 1 / D.1.B.1; all 50 composition exercises remain within the accepted score-1/2 target.",
-            "Resolved. Permanent replacement, composition, listening, scoring, localisation, audio, format, hint and duplicate audits cover the catalogue.",
+            "The Synästhesie outlier remains resolved. The authenticated API re-score reports 1,813 at score 1 and 50 at score 2. All 50 listening exercises score 1 / D.1.B.1 and now pass the reading-independence gate; all 50 composition exercises remain within the accepted score-1/2 target.",
+            "Resolved. Permanent replacement, composition, listening-modality, scoring, localisation, audio, format, hint and duplicate audits cover the catalogue.",
         ],
     },
     2: {

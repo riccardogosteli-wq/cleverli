@@ -947,6 +947,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               answer={current.answer}
               onAnswer={handleAnswer}
               optionImages={current.optionImages}
+              optionEmojis={current.optionEmojis}
               questionImage={current.image}
             />
           )}

@@ -6,6 +6,7 @@ type ListeningCase = {
   question: L;
   answer: string;
   wrong: [string, string, string];
+  visuals?: [answer: string, wrong1: string, wrong2: string, wrong3: string];
 };
 
 const taskHints: Record<1 | 2 | 3, [L, L]> = {
@@ -28,6 +29,10 @@ function mc(id: string, difficulty: 1 | 2 | 3, item: ListeningCase, free = false
   const choices = [item.answer, ...item.wrong];
   const offset = Number(id.match(/\d+$/)?.[0] ?? 0) % choices.length;
   const options = [...choices.slice(offset), ...choices.slice(0, offset)];
+  const optionEmojis = item.visuals ? [...item.visuals.slice(offset), ...item.visuals.slice(0, offset)] : undefined;
+  const listeningText = optionEmojis
+    ? `${item.audio} ${item.question[0]} ${options.map((option, index) => `Antwort ${index + 1}: ${option}`).join(". ")}.`
+    : item.audio;
   return {
     id,
     type: "multiple-choice",
@@ -37,9 +42,10 @@ function mc(id: string, difficulty: 1 | 2 | 3, item: ListeningCase, free = false
     questionEN: item.question[1],
     questionFR: item.question[2],
     questionIT: item.question[3],
-    listeningText: item.audio,
+    listeningText,
     answer: item.answer,
     options,
+    optionEmojis,
     hints: [hint1[0], hint2[0]],
     hintsEN: [hint1[1], hint2[1]],
     hintsFR: [hint1[2], hint2[2]],
@@ -48,9 +54,9 @@ function mc(id: string, difficulty: 1 | 2 | 3, item: ListeningCase, free = false
   };
 }
 
-function order(id: string, difficulty: 2 | 3, audio: string, steps: [string, string, string]): Exercise {
+function order(id: string, difficulty: 2 | 3, audio: string, steps: [string, string, string], emojis?: [string, string, string]): Exercise {
   const [hint1, hint2] = taskHints[difficulty];
-  const items = steps.map((label, index) => ({ id: `${id}-i${index + 1}`, label }));
+  const items = steps.map((label, index) => ({ id: `${id}-i${index + 1}`, label, emoji: emojis?.[index] }));
   const zones = steps.map((_, index) => ({ id: `${id}-z${index + 1}`, label: `${index + 1}.` }));
   return {
     id,
@@ -60,7 +66,7 @@ function order(id: string, difficulty: 2 | 3, audio: string, steps: [string, str
     questionEN: "Put the steps you heard in the correct order.",
     questionFR: "Mets les étapes entendues dans le bon ordre.",
     questionIT: "Metti i passaggi ascoltati nell'ordine corretto.",
-    listeningText: audio,
+    listeningText: emojis ? `${audio} Bringe die drei Bilder in die gehörte Reihenfolge.` : audio,
     answer: "all",
     hints: [hint1[0], hint2[0]],
     hintsEN: [hint1[1], hint2[1]],
@@ -76,57 +82,57 @@ function order(id: string, difficulty: 2 | 3, audio: string, steps: [string, str
 const q = (de: string, en: string, fr: string, it: string): L => [de, en, fr, it];
 
 const grade1Easy: ListeningCase[] = [
-  { audio: "Ich sehe einen roten Ball.", question: q("Was sieht das Kind?", "What does the child see?", "Que voit l'enfant ?", "Cosa vede il bambino?"), answer: "einen roten Ball", wrong: ["eine blaue Tasche", "einen grünen Frosch", "ein gelbes Buch"] },
-  { audio: "Mia trägt eine gelbe Mütze.", question: q("Welche Farbe hat Mias Mütze?", "What colour is Mia's hat?", "De quelle couleur est le bonnet de Mia ?", "Di che colore è il berretto di Mia?"), answer: "gelb", wrong: ["rot", "blau", "grün"] },
-  { audio: "Der Hund schläft im Korb.", question: q("Wo schläft der Hund?", "Where is the dog sleeping?", "Où dort le chien ?", "Dove dorme il cane?"), answer: "im Korb", wrong: ["unter dem Tisch", "auf dem Sofa", "im Garten"] },
-  { audio: "Noah isst einen Apfel.", question: q("Was isst Noah?", "What is Noah eating?", "Que mange Noah ?", "Cosa mangia Noah?"), answer: "einen Apfel", wrong: ["eine Birne", "ein Brot", "eine Banane"] },
-  { audio: "Im Garten sitzt eine Katze.", question: q("Welches Tier sitzt im Garten?", "Which animal is in the garden?", "Quel animal est dans le jardin ?", "Quale animale è in giardino?"), answer: "eine Katze", wrong: ["ein Hase", "ein Vogel", "ein Hund"] },
-  { audio: "Lina malt ein grosses Haus.", question: q("Was malt Lina?", "What is Lina drawing?", "Que dessine Lina ?", "Cosa disegna Lina?"), answer: "ein grosses Haus", wrong: ["einen kleinen Baum", "eine rote Blume", "ein schnelles Auto"] },
-  { audio: "Der Vogel singt auf dem Ast.", question: q("Was macht der Vogel?", "What is the bird doing?", "Que fait l'oiseau ?", "Cosa fa l'uccello?"), answer: "Er singt.", wrong: ["Er schläft.", "Er frisst.", "Er fliegt weg."] },
-  { audio: "Ben hat drei blaue Stifte.", question: q("Wie viele Stifte hat Ben?", "How many pencils does Ben have?", "Combien de crayons Ben a-t-il ?", "Quante matite ha Ben?"), answer: "drei", wrong: ["zwei", "vier", "fünf"] },
-  { audio: "Heute regnet es. Nimm den Schirm mit.", question: q("Was soll das Kind mitnehmen?", "What should the child take?", "Que doit prendre l'enfant ?", "Cosa deve portare il bambino?"), answer: "den Schirm", wrong: ["die Sonnenbrille", "den Fussball", "die Badehose"] },
-  { audio: "Sara fährt mit dem Velo zur Schule.", question: q("Wie fährt Sara zur Schule?", "How does Sara get to school?", "Comment Sara va-t-elle à l'école ?", "Come va Sara a scuola?"), answer: "mit dem Velo", wrong: ["mit dem Bus", "mit dem Zug", "mit dem Schiff"] },
-  { audio: "Auf dem Tisch liegen zwei Bücher.", question: q("Was liegt auf dem Tisch?", "What is on the table?", "Qu'y a-t-il sur la table ?", "Cosa c'è sul tavolo?"), answer: "zwei Bücher", wrong: ["drei Hefte", "ein Ball", "vier Äpfel"] },
-  { audio: "Oma backt einen Kuchen.", question: q("Wer backt einen Kuchen?", "Who is baking a cake?", "Qui prépare un gâteau ?", "Chi prepara una torta?"), answer: "Oma", wrong: ["Mia", "der Lehrer", "Noah"] },
-  { audio: "Der kleine Frosch springt ins Wasser.", question: q("Wohin springt der Frosch?", "Where does the frog jump?", "Où saute la grenouille ?", "Dove salta la rana?"), answer: "ins Wasser", wrong: ["auf den Baum", "in den Korb", "unter das Bett"] },
-  { audio: "Am Morgen trinke ich Milch.", question: q("Wann trinkt das Kind Milch?", "When does the child drink milk?", "Quand l'enfant boit-il du lait ?", "Quando beve il latte il bambino?"), answer: "am Morgen", wrong: ["am Mittag", "am Abend", "in der Nacht"] },
-  { audio: "Lea öffnet langsam die Tür.", question: q("Was öffnet Lea?", "What does Lea open?", "Qu'est-ce que Lea ouvre ?", "Cosa apre Lea?"), answer: "die Tür", wrong: ["das Fenster", "die Schachtel", "den Schirm"] },
+  { audio: "Ich sehe einen roten Ball.", question: q("Was sieht das Kind?", "What does the child see?", "Que voit l'enfant ?", "Cosa vede il bambino?"), answer: "einen roten Ball", wrong: ["eine blaue Tasche", "einen grünen Frosch", "ein gelbes Buch"], visuals: ["🔴⚽", "🔵🎒", "🟢🐸", "🟡📕"] },
+  { audio: "Mia trägt eine gelbe Mütze.", question: q("Welche Farbe hat Mias Mütze?", "What colour is Mia's hat?", "De quelle couleur est le bonnet de Mia ?", "Di che colore è il berretto di Mia?"), answer: "gelb", wrong: ["rot", "blau", "grün"], visuals: ["🟡", "🔴", "🔵", "🟢"] },
+  { audio: "Der Hund schläft im Korb.", question: q("Wo schläft der Hund?", "Where is the dog sleeping?", "Où dort le chien ?", "Dove dorme il cane?"), answer: "im Korb", wrong: ["unter dem Tisch", "auf dem Sofa", "im Garten"], visuals: ["🐶💤🧺", "🐶⬇️🪑", "🐶🛋️", "🐶🌳"] },
+  { audio: "Noah isst einen Apfel.", question: q("Was isst Noah?", "What is Noah eating?", "Que mange Noah ?", "Cosa mangia Noah?"), answer: "einen Apfel", wrong: ["eine Birne", "ein Brot", "eine Banane"], visuals: ["🍎", "🍐", "🍞", "🍌"] },
+  { audio: "Im Garten sitzt eine Katze.", question: q("Welches Tier sitzt im Garten?", "Which animal is in the garden?", "Quel animal est dans le jardin ?", "Quale animale è in giardino?"), answer: "eine Katze", wrong: ["ein Hase", "ein Vogel", "ein Hund"], visuals: ["🐱", "🐰", "🐦", "🐶"] },
+  { audio: "Lina malt ein grosses Haus.", question: q("Was malt Lina?", "What is Lina drawing?", "Que dessine Lina ?", "Cosa disegna Lina?"), answer: "ein grosses Haus", wrong: ["einen kleinen Baum", "eine rote Blume", "ein schnelles Auto"], visuals: ["🏠", "🌳", "🌹", "🏎️"] },
+  { audio: "Der Vogel singt auf dem Ast.", question: q("Was macht der Vogel?", "What is the bird doing?", "Que fait l'oiseau ?", "Cosa fa l'uccello?"), answer: "Er singt.", wrong: ["Er schläft.", "Er frisst.", "Er fliegt weg."], visuals: ["🐦🎵", "🐦💤", "🐦🍽️", "🐦🪽"] },
+  { audio: "Ben hat drei blaue Stifte.", question: q("Wie viele Stifte hat Ben?", "How many pencils does Ben have?", "Combien de crayons Ben a-t-il ?", "Quante matite ha Ben?"), answer: "drei", wrong: ["zwei", "vier", "fünf"], visuals: ["3️⃣✏️", "2️⃣✏️", "4️⃣✏️", "5️⃣✏️"] },
+  { audio: "Heute regnet es. Nimm den Schirm mit.", question: q("Was soll das Kind mitnehmen?", "What should the child take?", "Que doit prendre l'enfant ?", "Cosa deve portare il bambino?"), answer: "den Schirm", wrong: ["die Sonnenbrille", "den Fussball", "die Badehose"], visuals: ["☂️", "😎", "⚽", "🩱"] },
+  { audio: "Sara fährt mit dem Velo zur Schule.", question: q("Wie fährt Sara zur Schule?", "How does Sara get to school?", "Comment Sara va-t-elle à l'école ?", "Come va Sara a scuola?"), answer: "mit dem Velo", wrong: ["mit dem Bus", "mit dem Zug", "mit dem Schiff"], visuals: ["🚲", "🚌", "🚆", "⛵"] },
+  { audio: "Auf dem Tisch liegen zwei Bücher.", question: q("Was liegt auf dem Tisch?", "What is on the table?", "Qu'y a-t-il sur la table ?", "Cosa c'è sul tavolo?"), answer: "zwei Bücher", wrong: ["drei Hefte", "ein Ball", "vier Äpfel"], visuals: ["📚📚", "📒📒📒", "⚽", "🍎🍎🍎🍎"] },
+  { audio: "Oma backt einen Kuchen.", question: q("Wer backt einen Kuchen?", "Who is baking a cake?", "Qui prépare un gâteau ?", "Chi prepara una torta?"), answer: "Oma", wrong: ["Mia", "der Lehrer", "Noah"], visuals: ["👵🧁", "👧🧁", "👨‍🏫🧁", "👦🧁"] },
+  { audio: "Der kleine Frosch springt ins Wasser.", question: q("Wohin springt der Frosch?", "Where does the frog jump?", "Où saute la grenouille ?", "Dove salta la rana?"), answer: "ins Wasser", wrong: ["auf den Baum", "in den Korb", "unter das Bett"], visuals: ["🐸💦", "🐸🌳", "🐸🧺", "🐸🛏️"] },
+  { audio: "Am Morgen trinke ich Milch.", question: q("Wann trinkt das Kind Milch?", "When does the child drink milk?", "Quand l'enfant boit-il du lait ?", "Quando beve il latte il bambino?"), answer: "am Morgen", wrong: ["am Mittag", "am Abend", "in der Nacht"], visuals: ["🌅🥛", "☀️🥛", "🌆🥛", "🌙🥛"] },
+  { audio: "Lea öffnet langsam die Tür.", question: q("Was öffnet Lea?", "What does Lea open?", "Qu'est-ce que Lea ouvre ?", "Cosa apre Lea?"), answer: "die Tür", wrong: ["das Fenster", "die Schachtel", "den Schirm"], visuals: ["🚪", "🪟", "📦", "☂️"] },
 ];
 
 const grade1Medium: ListeningCase[] = [
-  { audio: "Zieh zuerst die Jacke an. Nimm dann deine Tasche.", question: q("Was soll das Kind zuerst tun?", "What should the child do first?", "Que doit faire l'enfant d'abord ?", "Cosa deve fare prima il bambino?"), answer: "die Jacke anziehen", wrong: ["die Tasche nehmen", "die Schuhe ausziehen", "das Fenster öffnen"] },
-  { audio: "Stell den Becher neben den Teller.", question: q("Wohin gehört der Becher?", "Where should the cup go?", "Où faut-il mettre le gobelet ?", "Dove va messo il bicchiere?"), answer: "neben den Teller", wrong: ["unter den Tisch", "in die Tasche", "hinter die Tür"] },
-  { audio: "Male die Sonne gelb und die Wolke blau.", question: q("Welche Farbe bekommt die Wolke?", "What colour should the cloud be?", "De quelle couleur doit être le nuage ?", "Di che colore deve essere la nuvola?"), answer: "blau", wrong: ["gelb", "rot", "grün"] },
-  { audio: "Klopfe zweimal auf den Tisch und klatsche einmal.", question: q("Wie oft soll das Kind klopfen?", "How many times should the child knock?", "Combien de fois l'enfant doit-il frapper ?", "Quante volte deve bussare il bambino?"), answer: "zweimal", wrong: ["einmal", "dreimal", "viermal"] },
-  { audio: "Mia sucht ihren Ball. Er liegt hinter dem Vorhang.", question: q("Wo findet Mia den Ball?", "Where does Mia find the ball?", "Où Mia trouve-t-elle le ballon ?", "Dove trova Mia la palla?"), answer: "hinter dem Vorhang", wrong: ["unter dem Bett", "im Schrank", "vor der Haustür"] },
-  { audio: "Leo hat Hunger. Er macht sich ein Käsebrot.", question: q("Warum macht Leo ein Brot?", "Why does Leo make a sandwich?", "Pourquoi Leo prépare-t-il une tartine ?", "Perché Leo prepara un panino?"), answer: "weil er Hunger hat", wrong: ["weil er müde ist", "weil es regnet", "weil er zur Schule muss"] },
-  { audio: "Es ist kalt. Nina zieht Handschuhe und eine Mütze an.", question: q("Wie ist das Wetter?", "What is the weather like?", "Quel temps fait-il ?", "Com'è il tempo?"), answer: "kalt", wrong: ["heiss", "windstill", "schwül"] },
-  { audio: "Der Bus kommt um acht Uhr. Amir wartet an der Haltestelle.", question: q("Wo wartet Amir?", "Where is Amir waiting?", "Où Amir attend-il ?", "Dove aspetta Amir?"), answer: "an der Haltestelle", wrong: ["im Klassenzimmer", "auf dem Spielplatz", "im Laden"] },
-  { audio: "Lina legt das Heft in den Rucksack und den Stift ins Etui.", question: q("Was legt Lina ins Etui?", "What does Lina put in the pencil case?", "Que met Lina dans la trousse ?", "Cosa mette Lina nell'astuccio?"), answer: "den Stift", wrong: ["das Heft", "den Rucksack", "das Buch"] },
-  { audio: "Papa liest vor. Danach putzt Ben die Zähne.", question: q("Was macht Ben nach dem Vorlesen?", "What does Ben do after the story?", "Que fait Ben après l'histoire ?", "Cosa fa Ben dopo la lettura?"), answer: "Er putzt die Zähne.", wrong: ["Er zieht die Schuhe an.", "Er frühstückt.", "Er geht einkaufen."] },
-  { audio: "Auf dem Pausenplatz spielt Sara mit Mia und Tom.", question: q("Mit wem spielt Sara?", "Who is Sara playing with?", "Avec qui Sara joue-t-elle ?", "Con chi gioca Sara?"), answer: "mit Mia und Tom", wrong: ["mit Noah und Ben", "mit Oma und Opa", "mit ihrer Lehrerin"] },
-  { audio: "Im roten Haus wohnt eine Familie mit zwei Kindern.", question: q("Wie viele Kinder wohnen im Haus?", "How many children live in the house?", "Combien d'enfants habitent dans la maison ?", "Quanti bambini vivono nella casa?"), answer: "zwei", wrong: ["eins", "drei", "vier"] },
-  { audio: "Noah möchte lesen, aber sein Buch liegt in der Schule.", question: q("Warum kann Noah nicht lesen?", "Why can Noah not read?", "Pourquoi Noah ne peut-il pas lire ?", "Perché Noah non può leggere?"), answer: "Sein Buch liegt in der Schule.", wrong: ["Er ist zu müde.", "Das Licht ist aus.", "Er kann das Buch nicht öffnen."] },
-  { audio: "Der Hase rennt über die Wiese. Dann versteckt er sich im Gebüsch.", question: q("Was macht der Hase zuletzt?", "What does the rabbit do last?", "Que fait le lapin à la fin ?", "Cosa fa infine il coniglio?"), answer: "Er versteckt sich.", wrong: ["Er schläft ein.", "Er frisst eine Karotte.", "Er springt ins Wasser."] },
-  { audio: "Lea hört Musik. Ihr Bruder baut daneben einen Turm.", question: q("Was baut Leas Bruder?", "What is Lea's brother building?", "Que construit le frère de Lea ?", "Cosa costruisce il fratello di Lea?"), answer: "einen Turm", wrong: ["ein Schiff", "eine Höhle", "eine Brücke"] },
+  { audio: "Zieh zuerst die Jacke an. Nimm dann deine Tasche.", question: q("Was soll das Kind zuerst tun?", "What should the child do first?", "Que doit faire l'enfant d'abord ?", "Cosa deve fare prima il bambino?"), answer: "die Jacke anziehen", wrong: ["die Tasche nehmen", "die Schuhe ausziehen", "das Fenster öffnen"], visuals: ["🧥✅", "🎒", "👟⬅️", "🪟"] },
+  { audio: "Stell den Becher neben den Teller.", question: q("Wohin gehört der Becher?", "Where should the cup go?", "Où faut-il mettre le gobelet ?", "Dove va messo il bicchiere?"), answer: "neben den Teller", wrong: ["unter den Tisch", "in die Tasche", "hinter die Tür"], visuals: ["🥤➡️🍽️", "🥤⬇️🪑", "🥤🎒", "🥤🚪"] },
+  { audio: "Male die Sonne gelb und die Wolke blau.", question: q("Welche Farbe bekommt die Wolke?", "What colour should the cloud be?", "De quelle couleur doit être le nuage ?", "Di che colore deve essere la nuvola?"), answer: "blau", wrong: ["gelb", "rot", "grün"], visuals: ["🔵☁️", "🟡☁️", "🔴☁️", "🟢☁️"] },
+  { audio: "Klopfe zweimal auf den Tisch und klatsche einmal.", question: q("Wie oft soll das Kind klopfen?", "How many times should the child knock?", "Combien de fois l'enfant doit-il frapper ?", "Quante volte deve bussare il bambino?"), answer: "zweimal", wrong: ["einmal", "dreimal", "viermal"], visuals: ["2️⃣👊", "1️⃣👊", "3️⃣👊", "4️⃣👊"] },
+  { audio: "Mia sucht ihren Ball. Er liegt hinter dem Vorhang.", question: q("Wo findet Mia den Ball?", "Where does Mia find the ball?", "Où Mia trouve-t-elle le ballon ?", "Dove trova Mia la palla?"), answer: "hinter dem Vorhang", wrong: ["unter dem Bett", "im Schrank", "vor der Haustür"], visuals: ["⚽🪟", "⚽🛏️", "⚽🚪", "⚽🏠"] },
+  { audio: "Leo hat Hunger. Er macht sich ein Käsebrot.", question: q("Warum macht Leo ein Brot?", "Why does Leo make a sandwich?", "Pourquoi Leo prépare-t-il une tartine ?", "Perché Leo prepara un panino?"), answer: "weil er Hunger hat", wrong: ["weil er müde ist", "weil es regnet", "weil er zur Schule muss"], visuals: ["🍞😋", "🍞😴", "🍞🌧️", "🍞🏫"] },
+  { audio: "Es ist kalt. Nina zieht Handschuhe und eine Mütze an.", question: q("Wie ist das Wetter?", "What is the weather like?", "Quel temps fait-il ?", "Com'è il tempo?"), answer: "kalt", wrong: ["heiss", "windstill", "schwül"], visuals: ["🥶", "🥵", "🍃🚫", "💧😓"] },
+  { audio: "Der Bus kommt um acht Uhr. Amir wartet an der Haltestelle.", question: q("Wo wartet Amir?", "Where is Amir waiting?", "Où Amir attend-il ?", "Dove aspetta Amir?"), answer: "an der Haltestelle", wrong: ["im Klassenzimmer", "auf dem Spielplatz", "im Laden"], visuals: ["🚏", "🏫", "🛝", "🛒"] },
+  { audio: "Lina legt das Heft in den Rucksack und den Stift ins Etui.", question: q("Was legt Lina ins Etui?", "What does Lina put in the pencil case?", "Que met Lina dans la trousse ?", "Cosa mette Lina nell'astuccio?"), answer: "den Stift", wrong: ["das Heft", "den Rucksack", "das Buch"], visuals: ["✏️", "📒", "🎒", "📕"] },
+  { audio: "Papa liest vor. Danach putzt Ben die Zähne.", question: q("Was macht Ben nach dem Vorlesen?", "What does Ben do after the story?", "Que fait Ben après l'histoire ?", "Cosa fa Ben dopo la lettura?"), answer: "Er putzt die Zähne.", wrong: ["Er zieht die Schuhe an.", "Er frühstückt.", "Er geht einkaufen."], visuals: ["🪥", "👟", "🍳", "🛒"] },
+  { audio: "Auf dem Pausenplatz spielt Sara mit Mia und Tom.", question: q("Mit wem spielt Sara?", "Who is Sara playing with?", "Avec qui Sara joue-t-elle ?", "Con chi gioca Sara?"), answer: "mit Mia und Tom", wrong: ["mit Noah und Ben", "mit Oma und Opa", "mit ihrer Lehrerin"], visuals: ["👧👦", "👦👦", "👵👴", "👩‍🏫"] },
+  { audio: "Im roten Haus wohnt eine Familie mit zwei Kindern.", question: q("Wie viele Kinder wohnen im Haus?", "How many children live in the house?", "Combien d'enfants habitent dans la maison ?", "Quanti bambini vivono nella casa?"), answer: "zwei", wrong: ["eins", "drei", "vier"], visuals: ["2️⃣👧", "1️⃣👧", "3️⃣👧", "4️⃣👧"] },
+  { audio: "Noah möchte lesen, aber sein Buch liegt in der Schule.", question: q("Warum kann Noah nicht lesen?", "Why can Noah not read?", "Pourquoi Noah ne peut-il pas lire ?", "Perché Noah non può leggere?"), answer: "Sein Buch liegt in der Schule.", wrong: ["Er ist zu müde.", "Das Licht ist aus.", "Er kann das Buch nicht öffnen."], visuals: ["📕🏫", "😴", "💡❌", "📕🔒"] },
+  { audio: "Der Hase rennt über die Wiese. Dann versteckt er sich im Gebüsch.", question: q("Was macht der Hase zuletzt?", "What does the rabbit do last?", "Que fait le lapin à la fin ?", "Cosa fa infine il coniglio?"), answer: "Er versteckt sich.", wrong: ["Er schläft ein.", "Er frisst eine Karotte.", "Er springt ins Wasser."], visuals: ["🐰🙈", "🐰💤", "🐰🥕", "🐰💦"] },
+  { audio: "Lea hört Musik. Ihr Bruder baut daneben einen Turm.", question: q("Was baut Leas Bruder?", "What is Lea's brother building?", "Que construit le frère de Lea ?", "Cosa costruisce il fratello di Lea?"), answer: "einen Turm", wrong: ["ein Schiff", "eine Höhle", "eine Brücke"], visuals: ["🧱🏰", "⛵", "🕳️", "🌉"] },
 ];
 
 const grade1Hard: ListeningCase[] = [
-  { audio: "Am Morgen findet Tim eine Spur im Schnee. Er folgt ihr bis zum Baum. Dort sitzt ein kleiner Vogel.", question: q("Was findet Tim am Ende?", "What does Tim find at the end?", "Que trouve Tim à la fin ?", "Cosa trova Tim alla fine?"), answer: "einen kleinen Vogel", wrong: ["seinen Ball", "eine Katze", "einen Handschuh"] },
-  { audio: "Nora packt Brot und Wasser ein. Dann zieht sie Wanderschuhe an. Sie möchte in den Wald gehen.", question: q("Was plant Nora?", "What is Nora planning?", "Que prévoit Nora ?", "Cosa ha in programma Nora?"), answer: "eine Wanderung", wrong: ["einen Schwimmbadbesuch", "eine Zugfahrt", "einen Schultag"] },
-  { audio: "Mia stellt einen Teller auf den Tisch. Sie zündet keine Kerze an, sondern holt Löffel. Heute gibt es Suppe.", question: q("Welches Besteck braucht Mia?", "Which cutlery does Mia need?", "Quel couvert Mia doit-elle prendre ?", "Quale posata serve a Mia?"), answer: "einen Löffel", wrong: ["eine Gabel", "ein Messer", "eine Schere"] },
-  { audio: "Ben hört Donner und sieht dunkle Wolken. Schnell schliesst er das Fenster.", question: q("Was kommt wahrscheinlich?", "What will probably happen?", "Que va-t-il probablement se passer ?", "Cosa succederà probabilmente?"), answer: "ein Gewitter", wrong: ["starker Sonnenschein", "Schneefall", "Nebel am Morgen"] },
-  { audio: "Lina wollte den roten Pullover tragen. Er ist aber noch nass. Darum nimmt sie den blauen.", question: q("Welchen Pullover trägt Lina?", "Which jumper does Lina wear?", "Quel pull Lina porte-t-elle ?", "Quale maglione indossa Lina?"), answer: "den blauen", wrong: ["den roten", "den grünen", "keinen Pullover"] },
-  { audio: "Noah legt ein Buch, ein Heft und sein Etui bereit. Danach wartet er vor der Klassenzimmertür.", question: q("Wohin geht Noah?", "Where is Noah going?", "Où va Noah ?", "Dove va Noah?"), answer: "in den Unterricht", wrong: ["zum Fussballtraining", "ins Bett", "zum Einkaufen"] },
-  { audio: "Sara giesst die Erde jeden Tag. Nach einer Woche schaut ein grüner Stängel aus dem Topf.", question: q("Was wächst im Topf?", "What is growing in the pot?", "Qu'est-ce qui pousse dans le pot ?", "Cosa cresce nel vaso?"), answer: "eine Pflanze", wrong: ["ein Stein", "ein Pilz aus Papier", "ein Spielzeug"] },
-  { audio: "Der Wecker klingelt. Amir zieht sich an und isst ein Brot. Dann verlässt er das Haus.", question: q("Was macht Amir vor dem Verlassen des Hauses?", "What does Amir do before leaving the house?", "Que fait Amir avant de quitter la maison ?", "Cosa fa Amir prima di uscire di casa?"), answer: "Er isst ein Brot.", wrong: ["Er geht schlafen.", "Er nimmt ein Bad.", "Er liest ein Buch."] },
-  { audio: "Lea flüstert, weil das Baby schläft. Ihr Bruder schliesst leise die Tür.", question: q("Warum sind die Kinder leise?", "Why are the children quiet?", "Pourquoi les enfants sont-ils silencieux ?", "Perché i bambini fanno piano?"), answer: "Das Baby schläft.", wrong: ["Sie haben Angst.", "Sie schreiben einen Test.", "Es ist schon Mittag."] },
-  { audio: "Tom hat seinen Schlüssel vergessen. Er klingelt, und seine Schwester öffnet ihm.", question: q("Wer öffnet die Tür?", "Who opens the door?", "Qui ouvre la porte ?", "Chi apre la porta?"), answer: "Toms Schwester", wrong: ["Tom selbst", "sein Lehrer", "der Nachbarshund"] },
-  { audio: "Nina legt die Badehose bereit. Am Morgen sieht sie jedoch Schnee vor dem Fenster und zieht stattdessen die Winterjacke an.", question: q("Welcher Plan passt nicht mehr zum Wetter?", "Which plan no longer suits the weather?", "Quel projet ne convient plus au temps ?", "Quale piano non è più adatto al tempo?"), answer: "schwimmen gehen", wrong: ["einen Schneemann bauen", "die Winterjacke tragen", "warme Schuhe anziehen"] },
-  { audio: "Ben möchte den hohen Ast erreichen. Er stellt sich nicht auf den wackligen Stuhl, sondern bittet einen Erwachsenen um Hilfe.", question: q("Warum handelt Ben sicher?", "Why is Ben acting safely?", "Pourquoi Ben agit-il prudemment ?", "Perché Ben agisce in modo sicuro?"), answer: "Er bittet einen Erwachsenen um Hilfe.", wrong: ["Er klettert schnell auf den Stuhl.", "Er springt nach dem Ast.", "Er zieht am Baum."] },
-  { audio: "Mia hört an der Tür ein Kratzen. Als sie öffnet, sitzt der nasse Hund davor und wedelt mit dem Schwanz.", question: q("Wie fühlt sich der Hund wahrscheinlich?", "How does the dog probably feel?", "Comment le chien se sent-il probablement ?", "Come si sente probabilmente il cane?"), answer: "Er freut sich, Mia zu sehen.", wrong: ["Er möchte schlafen.", "Er hat Mia nicht bemerkt.", "Er ist über den Regen froh."] },
-  { audio: "Amir teilt seine vier Farbstifte mit Lio. Nun können beide gleichzeitig malen.", question: q("Was bewirkt Amirs Entscheidung?", "What is the result of Amir's decision?", "Quel est le résultat de la décision d'Amir ?", "Qual è il risultato della decisione di Amir?"), answer: "Beide Kinder können malen.", wrong: ["Kein Kind hat mehr Stifte.", "Nur Amir kann malen.", "Lio geht nach Hause."] },
-  { audio: "Lea hört die Schulglocke, steckt das Springseil ein und läuft mit den anderen Kindern zur Tür.", question: q("Was ist wahrscheinlich vorbei?", "What is probably over?", "Qu'est-ce qui est probablement terminé ?", "Cosa è probabilmente finito?"), answer: "die Pause", wrong: ["der Unterricht", "das Abendessen", "der Schulweg"] },
+  { audio: "Am Morgen findet Tim eine Spur im Schnee. Er folgt ihr bis zum Baum. Dort sitzt ein kleiner Vogel.", question: q("Was findet Tim am Ende?", "What does Tim find at the end?", "Que trouve Tim à la fin ?", "Cosa trova Tim alla fine?"), answer: "einen kleinen Vogel", wrong: ["seinen Ball", "eine Katze", "einen Handschuh"], visuals: ["🐦", "⚽", "🐱", "🧤"] },
+  { audio: "Nora packt Brot und Wasser ein. Dann zieht sie Wanderschuhe an. Sie möchte in den Wald gehen.", question: q("Was plant Nora?", "What is Nora planning?", "Que prévoit Nora ?", "Cosa ha in programma Nora?"), answer: "eine Wanderung", wrong: ["einen Schwimmbadbesuch", "eine Zugfahrt", "einen Schultag"], visuals: ["🥾🌲", "🏊", "🚆", "🏫"] },
+  { audio: "Mia stellt einen Teller auf den Tisch. Sie zündet keine Kerze an, sondern holt Löffel. Heute gibt es Suppe.", question: q("Welches Besteck braucht Mia?", "Which cutlery does Mia need?", "Quel couvert Mia doit-elle prendre ?", "Quale posata serve a Mia?"), answer: "einen Löffel", wrong: ["eine Gabel", "ein Messer", "eine Schere"], visuals: ["🥄", "🍴", "🔪", "✂️"] },
+  { audio: "Ben hört Donner und sieht dunkle Wolken. Schnell schliesst er das Fenster.", question: q("Was kommt wahrscheinlich?", "What will probably happen?", "Que va-t-il probablement se passer ?", "Cosa succederà probabilmente?"), answer: "ein Gewitter", wrong: ["starker Sonnenschein", "Schneefall", "Nebel am Morgen"], visuals: ["⛈️", "☀️", "🌨️", "🌫️"] },
+  { audio: "Lina wollte den roten Pullover tragen. Er ist aber noch nass. Darum nimmt sie den blauen.", question: q("Welchen Pullover trägt Lina?", "Which jumper does Lina wear?", "Quel pull Lina porte-t-elle ?", "Quale maglione indossa Lina?"), answer: "den blauen", wrong: ["den roten", "den grünen", "keinen Pullover"], visuals: ["🔵👕", "🔴👕", "🟢👕", "🚫👕"] },
+  { audio: "Noah legt ein Buch, ein Heft und sein Etui bereit. Danach wartet er vor der Klassenzimmertür.", question: q("Wohin geht Noah?", "Where is Noah going?", "Où va Noah ?", "Dove va Noah?"), answer: "in den Unterricht", wrong: ["zum Fussballtraining", "ins Bett", "zum Einkaufen"], visuals: ["🏫", "⚽", "🛏️", "🛒"] },
+  { audio: "Sara giesst die Erde jeden Tag. Nach einer Woche schaut ein grüner Stängel aus dem Topf.", question: q("Was wächst im Topf?", "What is growing in the pot?", "Qu'est-ce qui pousse dans le pot ?", "Cosa cresce nel vaso?"), answer: "eine Pflanze", wrong: ["ein Stein", "ein Pilz aus Papier", "ein Spielzeug"], visuals: ["🌱", "🪨", "🍄📄", "🧸"] },
+  { audio: "Der Wecker klingelt. Amir zieht sich an und isst ein Brot. Dann verlässt er das Haus.", question: q("Was macht Amir vor dem Verlassen des Hauses?", "What does Amir do before leaving the house?", "Que fait Amir avant de quitter la maison ?", "Cosa fa Amir prima di uscire di casa?"), answer: "Er isst ein Brot.", wrong: ["Er geht schlafen.", "Er nimmt ein Bad.", "Er liest ein Buch."], visuals: ["🍞", "🛏️", "🛁", "📕"] },
+  { audio: "Lea flüstert, weil das Baby schläft. Ihr Bruder schliesst leise die Tür.", question: q("Warum sind die Kinder leise?", "Why are the children quiet?", "Pourquoi les enfants sont-ils silencieux ?", "Perché i bambini fanno piano?"), answer: "Das Baby schläft.", wrong: ["Sie haben Angst.", "Sie schreiben einen Test.", "Es ist schon Mittag."], visuals: ["👶💤", "😨", "📝", "🕛"] },
+  { audio: "Tom hat seinen Schlüssel vergessen. Er klingelt, und seine Schwester öffnet ihm.", question: q("Wer öffnet die Tür?", "Who opens the door?", "Qui ouvre la porte ?", "Chi apre la porta?"), answer: "Toms Schwester", wrong: ["Tom selbst", "sein Lehrer", "der Nachbarshund"], visuals: ["👧🚪", "👦🚪", "👨‍🏫🚪", "🐶🚪"] },
+  { audio: "Nina legt die Badehose bereit. Am Morgen sieht sie jedoch Schnee vor dem Fenster und zieht stattdessen die Winterjacke an.", question: q("Welcher Plan passt nicht mehr zum Wetter?", "Which plan no longer suits the weather?", "Quel projet ne convient plus au temps ?", "Quale piano non è più adatto al tempo?"), answer: "schwimmen gehen", wrong: ["einen Schneemann bauen", "die Winterjacke tragen", "warme Schuhe anziehen"], visuals: ["🏊❌", "⛄", "🧥", "🥾"] },
+  { audio: "Ben möchte den hohen Ast erreichen. Er stellt sich nicht auf den wackligen Stuhl, sondern bittet einen Erwachsenen um Hilfe.", question: q("Warum handelt Ben sicher?", "Why is Ben acting safely?", "Pourquoi Ben agit-il prudemment ?", "Perché Ben agisce in modo sicuro?"), answer: "Er bittet einen Erwachsenen um Hilfe.", wrong: ["Er klettert schnell auf den Stuhl.", "Er springt nach dem Ast.", "Er zieht am Baum."], visuals: ["🧒🙋🧑", "🧒🪑", "🧒🤸🌳", "🧒💪🌳"] },
+  { audio: "Mia hört an der Tür ein Kratzen. Als sie öffnet, sitzt der nasse Hund davor und wedelt mit dem Schwanz.", question: q("Wie fühlt sich der Hund wahrscheinlich?", "How does the dog probably feel?", "Comment le chien se sent-il probablement ?", "Come si sente probabilmente il cane?"), answer: "Er freut sich, Mia zu sehen.", wrong: ["Er möchte schlafen.", "Er hat Mia nicht bemerkt.", "Er ist über den Regen froh."], visuals: ["🐶😊👧", "🐶💤", "🐶🙈", "🐶🌧️😊"] },
+  { audio: "Amir teilt seine vier Farbstifte mit Lio. Nun können beide gleichzeitig malen.", question: q("Was bewirkt Amirs Entscheidung?", "What is the result of Amir's decision?", "Quel est le résultat de la décision d'Amir ?", "Qual è il risultato della decisione di Amir?"), answer: "Beide Kinder können malen.", wrong: ["Kein Kind hat mehr Stifte.", "Nur Amir kann malen.", "Lio geht nach Hause."], visuals: ["👧👦🎨", "🚫✏️", "👦🎨", "👦🏠"] },
+  { audio: "Lea hört die Schulglocke, steckt das Springseil ein und läuft mit den anderen Kindern zur Tür.", question: q("Was ist wahrscheinlich vorbei?", "What is probably over?", "Qu'est-ce qui est probablement terminé ?", "Cosa è probabilmente finito?"), answer: "die Pause", wrong: ["der Unterricht", "das Abendessen", "der Schulweg"], visuals: ["🛝⏰", "📚🏫", "🍽️", "🎒🚶"] },
 ];
 
 const grade2Easy: ListeningCase[] = [
@@ -183,12 +189,12 @@ const grade2Hard: ListeningCase[] = [
   { audio: "Sara erzählt von einem Tier mit Federn, einem roten Schnabel und Schwimmhäuten. Es lebt am Teich und kann gut schwimmen.", question: q("Welches Tier beschreibt Sara?", "Which animal is Sara describing?", "Quel animal Sara décrit-elle ?", "Quale animale descrive Sara?"), answer: "eine Ente", wrong: ["eine Katze", "ein Eichhörnchen", "ein Frosch"] },
 ];
 
-const grade1Orders: Array<[string, [string, string, string]]> = [
-  ["Zuerst zieht Ben die Schuhe an. Dann nimmt er die Jacke. Zum Schluss geht er hinaus.", ["Ben zieht die Schuhe an.", "Ben nimmt die Jacke.", "Ben geht hinaus."]],
-  ["Mia öffnet das Buch. Danach liest sie eine Seite. Am Ende schliesst sie das Buch.", ["Mia öffnet das Buch.", "Mia liest eine Seite.", "Mia schliesst das Buch."]],
-  ["Noah nimmt den Becher. Dann füllt er Wasser ein. Zuletzt trinkt er.", ["Noah nimmt den Becher.", "Noah füllt Wasser ein.", "Noah trinkt."]],
-  ["Sara baut einen Turm. Der Turm fällt um. Sara baut ihn nochmals.", ["Sara baut einen Turm.", "Der Turm fällt um.", "Sara baut nochmals."]],
-  ["Lea gräbt ein Loch. Sie setzt die Blume hinein. Danach giesst sie die Erde.", ["Lea gräbt ein Loch.", "Lea setzt die Blume hinein.", "Lea giesst die Erde."]],
+const grade1Orders: Array<[string, [string, string, string], [string, string, string]]> = [
+  ["Zuerst zieht Ben die Schuhe an. Dann nimmt er die Jacke. Zum Schluss geht er hinaus.", ["Ben zieht die Schuhe an.", "Ben nimmt die Jacke.", "Ben geht hinaus."], ["👟", "🧥", "🚪➡️"]],
+  ["Mia öffnet das Buch. Danach liest sie eine Seite. Am Ende schliesst sie das Buch.", ["Mia öffnet das Buch.", "Mia liest eine Seite.", "Mia schliesst das Buch."], ["📖✨", "👧📖", "📕"]],
+  ["Noah nimmt den Becher. Dann füllt er Wasser ein. Zuletzt trinkt er.", ["Noah nimmt den Becher.", "Noah füllt Wasser ein.", "Noah trinkt."], ["🥤", "🚰🥤", "🧒🥤"]],
+  ["Sara baut einen Turm. Der Turm fällt um. Sara baut ihn nochmals.", ["Sara baut einen Turm.", "Der Turm fällt um.", "Sara baut nochmals."], ["🧱🏰", "🧱💥", "🧱🏰✨"]],
+  ["Lea gräbt ein Loch. Sie setzt die Blume hinein. Danach giesst sie die Erde.", ["Lea gräbt ein Loch.", "Lea setzt die Blume hinein.", "Lea giesst die Erde."], ["🕳️", "🌱🕳️", "💧🌱"]],
 ];
 
 const grade2Orders: Array<[string, [string, string, string]]> = [
@@ -202,7 +208,7 @@ const grade2Orders: Array<[string, [string, string, string]]> = [
 const grade1Exercises: Exercise[] = [
   ...grade1Easy.map((item, index) => mc(`g1hoer${index + 1}`, 1, item, index < 3)),
   ...grade1Medium.map((item, index) => mc(`g1hoer${index + 16}`, 2, item)),
-  ...grade1Orders.map(([audio, steps], index) => order(`g1hoer${index + 31}`, 2, audio, steps)),
+  ...grade1Orders.map(([audio, steps, emojis], index) => order(`g1hoer${index + 31}`, 2, audio, steps, emojis)),
   ...grade1Hard.map((item, index) => mc(`g1hoer${index + 36}`, 3, item)),
 ];
 
