@@ -78,6 +78,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "There is no dedicated listening, speaking or composition strand. Separate senses and weather topic families also overrepresent those NMG areas.",
             "Plan new oral/composition exercise families and consolidate NMG overlap without changing valid learner progress IDs.",
         ],
+        11: [
+            "High", "LP21 API exercise fit", "All", "1 exercise rated 4; 0 rated 5",
+            "Authenticated API-backed review rated every Grade 1 exercise: 1,712 at score 1, 50 at score 2 and one at score 4. The outlier is the Synästhesie item in NMG.",
+            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
+        ],
     },
     2: {
         10: [
@@ -114,6 +119,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Review", "LP21 competency coverage", "German", "Missing oral/composition strands",
             "There is no dedicated listening, speaking or composition topic despite these being explicit LP21 German competence areas.",
             "Plan age-appropriate listening, speaking and guided-writing families as a separate content expansion.",
+        ],
+        19: [
+            "High", "LP21 API exercise fit", "All", "0 exercises rated 4; 3 rated 5",
+            "Authenticated API-backed review rated every Grade 2 exercise: 1,599 at score 1, 50 at score 2 and three at score 5. All three are cell/DNA content mapped to Cycle 3 NT.8.3.",
+            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
         ],
     },
     3: {
@@ -167,6 +177,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "German has no dedicated listening/speaking topic. Energy, light, time and map content also appears in parallel NMG topic families.",
             "Add oral-language families and consolidate NMG overlap in the next curriculum-expansion plan.",
         ],
+        16: [
+            "High", "LP21 API exercise fit", "All", "1 exercise rated 4; 2 rated 5",
+            "Authenticated API-backed review rated every Grade 3 exercise: 1,901 at score 1, 48 at score 2, one advanced Ellipse item at score 4 and two EMRK/UDHR items at score 5.",
+            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
+        ],
     },
     4: {
         8: [
@@ -213,6 +228,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "LP21 mathematics coverage", "Mathematics", "daten-diagramme-zufall-4: 50 exercises",
             "Added a dedicated Grade 4 strand for reading tables and diagrams, comparing data, interpreting recorded chance experiments and using age-appropriate probability language.",
             "Verified against LP21 MA.3.C.1.d with permanent structural, localisation, scoring and duplicate checks.",
+        ],
+        17: [
+            "High", "LP21 API exercise fit", "All", "1 exercise rated 4; 3 rated 5",
+            "Authenticated API-backed review rated every Grade 4 exercise: 2,347 at score 1, 50 at score 2, 50 at score 3, one Synästhesie item at score 4 and three Cycle 3 history/politics items at score 5.",
+            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
         ],
     },
     5: {
@@ -281,6 +301,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "German has no dedicated listening/speaking topic. Space, electricity and history/time each appear in parallel NMG topic families.",
             "Plan oral-language exercises and consolidate overlapping NMG families while preserving progress IDs.",
         ],
+        18: [
+            "High", "LP21 API exercise fit", "All", "12 exercises rated 4; 66 rated 5",
+            "Authenticated API-backed review rated every Grade 5 exercise: 2,211 at score 1, 300 at score 2, 261 at score 3, 12 at score 4 and 66 at score 5. Main clusters are chemistry, economics and advanced astronomy.",
+            "Replace every score-4/5 row. Use column N for the competency code and row-level rationale.",
+        ],
     },
     6: {
         8: [
@@ -322,6 +347,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Review", "LP21 competency coverage", "German / NMG", "Missing oral strand; parallel NMG strands",
             "German has no dedicated listening/speaking topic. Space, electricity and history/time each appear in parallel NMG topic families.",
             "Plan oral-language exercises and consolidate overlapping NMG families while preserving progress IDs.",
+        ],
+        15: [
+            "High", "LP21 API exercise fit", "All", "432 exercises rated 4; 222 rated 5",
+            "Authenticated API-backed review rated every Grade 6 exercise: 1,141 at score 1, 483 at score 2, 572 at score 3, 432 at score 4 and 222 at score 5. Main clusters are advanced English/French grammar, chemistry/cell biology, world wars/industrialisation and macroeconomics.",
+            "Replace every score-4/5 row in controlled batches. Use column N for the competency code and row-level rationale.",
         ],
     },
 }

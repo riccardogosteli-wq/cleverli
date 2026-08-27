@@ -106,7 +106,12 @@ async function fetchLP21UID(uid: string): Promise<Record<string, unknown> | null
     return null;
   }
   const url = `${API_BASE_URL}/getData.php?kanton=${KANTON}&uid=${uid}&user=${encodeURIComponent(API_USER)}&password=${encodeURIComponent(API_PASS)}&sprache=${LANG}`;
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    headers: {
+      Accept: "application/json",
+      "User-Agent": "Mozilla/5.0 Cleverli LP21 client",
+    },
+  });
   if (!res.ok) throw new Error(`LP21 API error: ${res.status} ${res.statusText}`);
   const json = await res.json() as { lp21?: unknown[] };
   return (json.lp21?.[0] ?? null) as Record<string, unknown> | null;
