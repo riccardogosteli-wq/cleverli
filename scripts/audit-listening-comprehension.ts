@@ -16,6 +16,10 @@ function containsNormalizedPhrase(text: string, phrase: string) {
   return ` ${normalize(text)} `.includes(` ${normalize(phrase)} `);
 }
 
+function wordCount(value: string) {
+  return normalize(value).split(/\s+/u).filter(Boolean).length;
+}
+
 function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: number) {
   const key = `Grade ${grade}/${exercise.id}`;
   const expectedId = `g${grade}hoer${index + 1}`;
@@ -54,6 +58,18 @@ function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: 
         if (!containsNormalizedPhrase(exercise.listeningText ?? "", option)) failures.push(`${key}: Grade 1 spoken prompt omits choice «${option}»`);
       });
     }
+    if (grade === 2) {
+      if (!containsNormalizedPhrase(exercise.listeningText ?? "", exercise.question)) failures.push(`${key}: Grade 2 spoken prompt omits the question`);
+      options.forEach(option => {
+        if (!containsNormalizedPhrase(exercise.listeningText ?? "", option)) failures.push(`${key}: Grade 2 spoken prompt omits choice «${option}»`);
+        const limit = exercise.difficulty === 1 ? 7 : exercise.difficulty === 2 ? 8 : 10;
+        if (wordCount(option) > limit) failures.push(`${key}: choice «${option}» exceeds the Grade 2 reading-support limit of ${limit} words`);
+      });
+      if (exercise.difficulty === 1) {
+        const visuals = exercise.optionEmojis ?? [];
+        if (visuals.length !== options.length || new Set(visuals).size !== options.length) failures.push(`${key}: easy Grade 2 task requires four unique visual choices`);
+      }
+    }
   } else if (exercise.type === "drag-drop") {
     const items = exercise.dragItems ?? [];
     const zones = exercise.dropZones ?? [];
@@ -61,8 +77,10 @@ function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: 
     items.forEach((item, itemIndex) => {
       if (exercise.dropAnswers?.[item.id] !== zones[itemIndex]?.id) failures.push(`${key}: wrong ordered mapping for ${item.id}`);
       if (grade === 1 && !item.emoji) failures.push(`${key}: Grade 1 ordering item ${item.id} has no visual symbol`);
+      if (grade === 2 && !item.emoji) failures.push(`${key}: Grade 2 ordering item ${item.id} has no visual symbol`);
     });
     if (grade === 1 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Bringe die drei Bilder in die gehörte Reihenfolge")) failures.push(`${key}: Grade 1 ordering instruction is not spoken`);
+    if (grade === 2 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Bringe die drei Bilder in die gehörte Reihenfolge")) failures.push(`${key}: Grade 2 ordering instruction is not spoken`);
   } else {
     failures.push(`${key}: unsupported listening interaction ${exercise.type}`);
   }

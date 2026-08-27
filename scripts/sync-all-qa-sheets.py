@@ -117,13 +117,13 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
         18: [
             "Review", "LP21 competency coverage", "German", "Guided composition and listening added; speaking remains",
-            "The 50-exercise ‘Texte planen & schreiben’ and 50-exercise ‘Hörtexte verstehen’ topics now cover guided composition and Cycle-1 listening comprehension. A dedicated speaking strand remains absent.",
-            "Keep the permanent composition/listening and LP21 API gates. Treat automatic speaking assessment as separate product work.",
+            "The 50-exercise ‘Texte planen & schreiben’ topic covers guided composition. ‘Hörtexte verstehen’ now uses picture-first easy tasks, visual ordering sequences and spoken questions plus numbered choices throughout, so reading remains optional support. A dedicated speaking strand remains absent.",
+            "Keep the permanent composition, listening-modality, Grade-2 reading-support and LP21 API gates. Treat automatic speaking assessment as separate product work.",
         ],
         19: [
             "Fixed", "LP21 API exercise fit", "All", "3 score-5 exercises replaced; 100 new composition/listening exercises score 1–2; 0 score-4/5 remain",
-            "The three cell/DNA outliers remain resolved. The authenticated API re-score now reports 1,702 at score 1 and 50 at score 2. All 50 new listening exercises score 1 / D.1.B.1; all 50 composition exercises remain within the accepted score-1/2 target.",
-            "Resolved and covered by the permanent replacement, composition and listening audits.",
+            "The three cell/DNA outliers remain resolved. The authenticated API re-score reports 1,702 at score 1 and 50 at score 2. All 50 listening exercises score 1 / D.1.B.1 and pass the spoken-choice and Grade-2 reading-support gates; all 50 composition exercises remain within the accepted score-1/2 target.",
+            "Resolved and covered by the permanent replacement, composition and listening-modality audits.",
         ],
     },
     3: {
