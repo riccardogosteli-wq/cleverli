@@ -287,6 +287,60 @@ def grid_rows(spreadsheet_id: str, range_: str) -> tuple[int, list[dict]]:
     return int(block.get("startRow", 0)) + 1, block.get("rowData", [])
 
 
+def sheet_id(spreadsheet_id: str, title: str) -> int:
+    result = request(
+        "GET",
+        f"{BASE}/{spreadsheet_id}?fields=sheets.properties(sheetId,title)",
+    )
+    for sheet in result.get("sheets", []):
+        properties = sheet.get("properties", {})
+        if properties.get("title") == title:
+            return int(properties["sheetId"])
+    raise RuntimeError(f"Missing sheet tab: {title}")
+
+
+def repair_main_markers(
+    spreadsheet_id: str,
+    tab: str,
+    source_rows: list[dict],
+    sheet_rows: list[int],
+) -> None:
+    tab_id = sheet_id(spreadsheet_id, tab)
+    requests = []
+    white = {"red": 1, "green": 1, "blue": 1}
+    green = {"red": 0.7764706, "green": 0.9372549, "blue": 0.80784315}
+    for sheet_row in sheet_rows:
+        source = source_rows[sheet_row - 2]
+        options = (source.get("options") or [])[:4]
+        solution_offset = options.index(source["storedAnswer"]) if source["storedAnswer"] in options else 4
+        base_range = {
+            "sheetId": tab_id,
+            "startRowIndex": sheet_row - 1,
+            "endRowIndex": sheet_row,
+        }
+        requests.extend([
+            {
+                "repeatCell": {
+                    "range": {**base_range, "startColumnIndex": 6, "endColumnIndex": 11},
+                    "cell": {"userEnteredFormat": {"backgroundColor": white}},
+                    "fields": "userEnteredFormat.backgroundColor",
+                }
+            },
+            {
+                "repeatCell": {
+                    "range": {
+                        **base_range,
+                        "startColumnIndex": 6 + solution_offset,
+                        "endColumnIndex": 7 + solution_offset,
+                    },
+                    "cell": {"userEnteredFormat": {"backgroundColor": green}},
+                    "fields": "userEnteredFormat.backgroundColor",
+                }
+            },
+        ])
+    request("POST", f"{BASE}/{spreadsheet_id}:batchUpdate", {"requests": requests})
+
+
 def verify_markers(
     spreadsheet_id: str,
     tab: str,
@@ -396,6 +450,9 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
             audit_mismatches.append(audit_row)
 
     marker_failures = verify_markers(spreadsheet_id, main_tab, source_rows)
+    if apply and marker_failures:
+        repair_main_markers(spreadsheet_id, main_tab, source_rows, marker_failures)
+        marker_failures = verify_markers(spreadsheet_id, main_tab, source_rows)
     special_marker_failures = verify_markers(
         spreadsheet_id,
         "Special exercises",
