@@ -41,7 +41,7 @@ function containsAnswer(hint: string, answer: string): boolean {
   return candidates.some((candidate) => {
     const escaped = candidate.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     if (/^-?\d+(?:[.,]\d+)?$/.test(candidate)) return new RegExp(`(^|[^\\d])${escaped}([^\\d]|$)`).test(normalisedHint);
-    if (candidate.length < 3 || commonShortAnswers.has(candidate)) return false;
+    if (commonShortAnswers.has(candidate)) return false;
     return new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}([^\\p{L}\\p{N}]|$)`, "u").test(normalisedHint);
   });
 }
@@ -66,6 +66,8 @@ const changedGermanRows: Record<number, number> = {};
 const changedAnyLanguageRows: Record<number, number> = {};
 const failures: Array<Record<string, unknown>> = [];
 let exercises = 0;
+let repairedDirectOneCharacterLeaks = 0;
+const repairedDirectOneCharacterLeaksByGrade: Record<number, number> = {};
 
 for (let grade = 1; grade <= 6; grade += 1) {
   let changedGerman = 0;
@@ -82,6 +84,13 @@ for (let grade = 1; grade <= 6; grade += 1) {
         exercises += 1;
         const original = source.get(`${topic.id}/${exercise.id}`);
         if (!original) throw new Error(`Missing raw source for ${grade}/${subject.id}/${topic.id}/${exercise.id}`);
+        if (
+          normalise(original.answer).length === 1
+          && original.hints.some((hint) => /^Der gesuchte Buchstabe ist\b/i.test(hint.trim()))
+        ) {
+          repairedDirectOneCharacterLeaks += 1;
+          repairedDirectOneCharacterLeaksByGrade[grade] = (repairedDirectOneCharacterLeaksByGrade[grade] ?? 0) + 1;
+        }
         const exerciseKey = `${grade}/${subject.id}/${topic.id}/${exercise.id}`;
         if (
           !OPEN_WRITING_CHANGED_KEYS.has(exerciseKey)
@@ -109,7 +118,15 @@ for (let grade = 1; grade <= 6; grade += 1) {
   changedAnyLanguageRows[grade] = changedAnyLanguage;
 }
 
-console.log(JSON.stringify({ exercises, languageChecks: exercises * languages.length, changedGermanRows, changedAnyLanguageRows, failures: failures.length }, null, 2));
+if (repairedDirectOneCharacterLeaks !== 66) {
+  failures.push({ issue: `expected 66 repaired direct one-character leaks, found ${repairedDirectOneCharacterLeaks}` });
+}
+const expectedDirectLeaksByGrade = { 1: 49, 2: 1, 5: 11, 6: 5 };
+if (JSON.stringify(repairedDirectOneCharacterLeaksByGrade) !== JSON.stringify(expectedDirectLeaksByGrade)) {
+  failures.push({ issue: "direct one-character leak grade distribution changed", expectedDirectLeaksByGrade, repairedDirectOneCharacterLeaksByGrade });
+}
+
+console.log(JSON.stringify({ exercises, languageChecks: exercises * languages.length, changedGermanRows, changedAnyLanguageRows, repairedDirectOneCharacterLeaks, repairedDirectOneCharacterLeaksByGrade, failures: failures.length }, null, 2));
 if (failures.length) {
   console.error(JSON.stringify(failures.slice(0, 100), null, 2));
   process.exitCode = 1;

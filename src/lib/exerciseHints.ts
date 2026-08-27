@@ -179,7 +179,7 @@ function hintContainsAnswer(hint: string, answer: string): boolean {
     if (/^-?\d+(?:[.,]\d+)?$/.test(candidate)) {
       return new RegExp(`(^|[^\\d])${candidate.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^\\d]|$)`).test(normalisedHint);
     }
-    if (candidate.length < 3 || commonShortAnswers.has(candidate)) return false;
+    if (commonShortAnswers.has(candidate)) return false;
     const escaped = candidate.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     return new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}([^\\p{L}\\p{N}]|$)`, "u").test(normalisedHint);
   });
