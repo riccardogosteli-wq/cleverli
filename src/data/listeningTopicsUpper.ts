@@ -27,7 +27,7 @@ function multipleChoice(id: string, difficulty: 1 | 2 | 3, question: L, item: Ca
   const choices = [item[1], ...wrong];
   const offset = Number(id.match(/\d+$/u)?.[0] ?? 0) % 4;
   const options = [...choices.slice(offset), ...choices.slice(0, offset)];
-  const spokenChoices = options.map((option, index) => `Antwort ${index + 1}: ${option}`).join(". ");
+  const spokenChoices = options.map((option, index) => `Antwort ${index + 1}: ${option.replace(/[.!?]+$/u, "")}`).join(". ");
   return {
     id,
     type: "multiple-choice",
@@ -50,7 +50,7 @@ function ordering(id: string, difficulty: 2, item: OrderCase): Exercise {
     questionEN: "Put the steps you heard in the correct order.",
     questionFR: "Mets les étapes entendues dans le bon ordre.",
     questionIT: "Metti i passaggi ascoltati nell'ordine corretto.",
-    listeningText: `${item[0]} Bringe die drei Schritte in die gehörte Reihenfolge.`, answer: "all", dragItems, dropZones,
+    listeningText: `${item[0]} Ordne die drei Schritte so, wie du es gehört hast.`, answer: "all", dragItems, dropZones,
     dropAnswers: Object.fromEntries(dragItems.map((dragItem, index) => [dragItem.id, dropZones[index].id])),
     hints: [hint1[0], hint2[0]], hintsEN: [hint1[1], hint2[1]], hintsFR: [hint1[2], hint2[2]], hintsIT: [hint1[3], hint2[3]],
     preserveGermanContent: true,
@@ -80,7 +80,7 @@ function makeTopic(grade: 3 | 4 | 5 | 6, id: string, title: string, easy: [Group
   };
 }
 
-const where = q("Wo findet die Handlung statt?", "Where does the event take place?", "Où se passe la scène ?", "Dove si svolge la scena?");
+const where = q("Wo spielt die Geschichte?", "Where does the event take place?", "Où se passe la scène ?", "Dove si svolge la scena?");
 const detail = q("Welche Information wird im Hörtext genannt?", "Which information is stated in the audio?", "Quelle information est donnée dans le texte audio ?", "Quale informazione viene detta nel testo audio?");
 const instruction = q("Was soll als Nächstes getan werden?", "What should be done next?", "Que faut-il faire ensuite ?", "Cosa bisogna fare dopo?");
 const reason = q("Welche Begründung passt zum Hörtext?", "Which reason matches the audio?", "Quelle raison correspond au texte audio ?", "Quale motivo corrisponde al testo audio?");

@@ -141,7 +141,7 @@ const BALANCED_TOPICS: Record<string, BalancedTopic> = {
     },
   },
   "5/weltall": {
-    title: "Medien & Information", emoji: "📰", code: "NMG.5.3",
+    title: "Medien & Information", emoji: "📰", code: "MI.1.2",
     facts: {
       1: [
         fact("Was ist eine Informationsquelle?", "Ein Ursprung von Informationen", ["Nur ein Bildschirm", "Eine zufällige Meinung", "Ein leeres Blatt"], "Ein Zeitungsartikel ist eine mögliche ___.", "Informationsquelle", "Informationen kommen aus Texten, Bildern, Gesprächen oder Daten."),
@@ -276,13 +276,17 @@ function replaceExercise(topicKey: string, exercise: Exercise, index: number, co
   const pool = config.facts[exercise.difficulty];
   const selected = pool[index % pool.length];
   const variant = Math.floor(index / pool.length) % questionStarts.length;
-  if (exercise.type === "multiple-choice") return {
-    id: exercise.id, type: exercise.type, difficulty: exercise.difficulty, free: exercise.free,
-    question: `${questionStarts[variant]} ${selected.question}`,
-    options: [selected.answer, ...selected.distractors].sort((a, b) => (a.charCodeAt(0) + index) % 7 - (b.charCodeAt(0) + index) % 7),
-    answer: selected.answer,
-    hints: [selected.hint, `Schliesse Antworten aus, die nicht zur Frage passen.`],
-  };
+  if (exercise.type === "multiple-choice") {
+    const choices = [selected.answer, ...selected.distractors];
+    const offset = Math.floor(index / 2) % choices.length;
+    return {
+      id: exercise.id, type: exercise.type, difficulty: exercise.difficulty, free: exercise.free,
+      question: `${questionStarts[variant]} ${selected.question}`,
+      options: [...choices.slice(offset), ...choices.slice(0, offset)],
+      answer: selected.answer,
+      hints: [selected.hint, `Schliesse Antworten aus, die nicht zur Frage passen.`],
+    };
+  }
   return {
     id: exercise.id, type: "fill-in-blank", difficulty: exercise.difficulty, free: exercise.free,
     question: `${fillStarts[variant]} ${selected.fill}`,

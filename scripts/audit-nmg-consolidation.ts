@@ -16,6 +16,21 @@ const expectedTitles: Record<string, string> = {
   "6/geschichte-zeit": "Religionen & Weltanschauungen",
 };
 
+const expectedCompetencies: Record<string, string> = {
+  "1/sinne": "NMG.6.5",
+  "1/wetter-klima": "NMG.8.1",
+  "3/energie-stoffe": "NMG.6.2",
+  "3/licht-optik": "NMG.6.5",
+  "4/koerper-sinne-4": "NMG.11.1",
+  "4/energie-stoffe": "NMG.6.3",
+  "4/raeume-karte": "NMG.12.1",
+  "5/weltall": "MI.1.2",
+  "5/strom-elektrizitaet": "NMG.6.3",
+  "5/geschichte-zeit": "NMG.11.3",
+  "6/weltall": "NMG.6.2",
+  "6/geschichte-zeit": "NMG.12.5",
+};
+
 const failures: string[] = [];
 let exercises = 0;
 for (const key of CONSOLIDATED_NMG_TOPIC_KEYS) {
@@ -27,10 +42,14 @@ for (const key of CONSOLIDATED_NMG_TOPIC_KEYS) {
     continue;
   }
   if (topic.title !== expectedTitles[key]) failures.push(`${key}: wrong title ${topic.title}`);
-  if (!getBalancedNmgCompetency(grade, topicId)) failures.push(`${key}: LP21 mapping missing`);
+  const competency = getBalancedNmgCompetency(grade, topicId);
+  if (!competency) failures.push(`${key}: LP21 mapping missing`);
+  else if (competency.code !== expectedCompetencies[key]) failures.push(`${key}: expected LP21 ${expectedCompetencies[key]}, found ${competency.code}`);
   if (topic.exercises.length !== 50) failures.push(`${key}: expected 50 exercises, found ${topic.exercises.length}`);
   if (new Set(topic.exercises.map(exercise => exercise.id)).size !== topic.exercises.length) failures.push(`${key}: duplicate exercise IDs`);
   if (new Set(topic.exercises.map(exercise => `${exercise.type}|${exercise.question}|${exercise.answer}`)).size !== topic.exercises.length) failures.push(`${key}: duplicate exercise content`);
+  const answerPositions = [0, 1, 2, 3].map(position => topic.exercises.filter(exercise => exercise.type === "multiple-choice" && exercise.options?.indexOf(exercise.answer) === position).length);
+  if (answerPositions.some(count => count < 5)) failures.push(`${key}: correct-answer positions are visibly biased ${JSON.stringify(answerPositions)}`);
   for (const exercise of topic.exercises) {
     exercises += 1;
     if (!exercise.hints?.length) failures.push(`${key}/${exercise.id}: missing hint`);

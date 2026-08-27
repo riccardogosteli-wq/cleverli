@@ -14,6 +14,7 @@ import { useCallback, useRef } from "react";
 
 // ─── In-memory audio cache (URL → decoded AudioBuffer or "pending") ──────────
 const audioCache = new Map<string, AudioBuffer | "loading">();
+let preferWebSpeechUntil = 0;
 
 // ─── Number words (German) ───────────────────────────────────────────────────
 function numToWordsDE(n: number): string {
@@ -343,7 +344,12 @@ export function useVoice() {
     if (!clean) return;
     stop();
 
-    const key = clean.slice(0, 300); // cache key
+    const key = clean;
+
+    if (Date.now() < preferWebSpeechUntil) {
+      speakWebSpeech(clean);
+      return;
+    }
 
     // ── Try ElevenLabs via /api/tts ──────────────────────────────────────────
     try {
@@ -360,6 +366,12 @@ export function useVoice() {
           const url = `/api/tts?text=${encodeURIComponent(clean)}`;
           const res = await fetch(url);
           if (!res.ok) throw new Error(`TTS HTTP ${res.status}`);
+          if (res.headers.get("X-Cleverli-TTS-Fallback") === "web-speech") {
+            preferWebSpeechUntil = Date.now() + 5 * 60 * 1000;
+            audioCache.delete(key);
+            speakWebSpeech(clean);
+            return;
+          }
           const ab = await res.arrayBuffer();
           buffer = await ctx.decodeAudioData(ab);
           audioCache.set(key, buffer);
@@ -376,6 +388,7 @@ export function useVoice() {
       srcRef.current = src;
       src.start(0);
     } catch (err) {
+      audioCache.delete(key);
       console.warn("[useVoice] ElevenLabs failed, falling back to Web Speech:", err);
       speakWebSpeech(clean);
     }

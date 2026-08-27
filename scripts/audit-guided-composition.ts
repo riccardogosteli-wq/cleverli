@@ -44,6 +44,7 @@ function validateExercise(grade: number, exercise: Exercise, index: number): voi
   if ((index < 3) !== Boolean(exercise.free)) failures.push(`${exercise.id}: free flag does not match first-three rule`);
   if (!(["multiple-choice", "fill-in-blank", "drag-drop"] as string[]).includes(exercise.type)) failures.push(`${exercise.id}: unsupported composition type ${exercise.type}`);
   if (!exercise.preserveGermanContent) failures.push(`${exercise.id}: German target content is not protected from automatic localisation cleanup`);
+  if (exercise.id === "g2gs15" && !exercise.question.includes("Anrede")) failures.push(`${exercise.id}: «Liebe Oma» must be taught as an Anrede, not as an Überschrift`);
 
   for (const [language, questionField, answerField, optionsField, hintsField] of languageFields) {
     const question = exercise[questionField];

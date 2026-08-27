@@ -3,10 +3,23 @@ import { NextRequest, NextResponse } from "next/server";
 const VOICE_ID = "vmVmHDKBkkCgbLVIOJRb"; // Charlie Chatlin — Real & Casual (German, Conversational)
 const API_KEY  = process.env.ELEVENLABS_API_KEY ?? "";
 
+function browserFallback(reason: string) {
+  return NextResponse.json(
+    { fallback: "web-speech", reason },
+    {
+      status: 200,
+      headers: {
+        "Cache-Control": "no-store",
+        "X-Cleverli-TTS-Fallback": "web-speech",
+      },
+    },
+  );
+}
+
 export async function GET(req: NextRequest) {
   const text = req.nextUrl.searchParams.get("text")?.trim();
   if (!text) return NextResponse.json({ error: "no text" }, { status: 400, headers: { "Cache-Control": "no-store" } });
-  if (!API_KEY) return NextResponse.json({ error: "no key" }, { status: 503, headers: { "Cache-Control": "no-store" } });
+  if (!API_KEY) return browserFallback("provider_not_configured");
 
   try {
     const res = await fetch(
@@ -32,7 +45,11 @@ export async function GET(req: NextRequest) {
       }
     );
 
-    if (!res.ok) throw new Error(`ElevenLabs ${res.status}`);
+    if (!res.ok) {
+      const providerDetail = (await res.text()).slice(0, 500);
+      console.error(`[tts] ElevenLabs ${res.status}: ${providerDetail}`);
+      return browserFallback("provider_unavailable");
+    }
 
     const audio = await res.arrayBuffer();
     return new NextResponse(audio, {
@@ -43,6 +60,6 @@ export async function GET(req: NextRequest) {
     });
   } catch (e) {
     console.error("[tts]", e);
-    return NextResponse.json({ error: "tts_failed" }, { status: 500 });
+    return browserFallback("provider_failed");
   }
 }

@@ -7,6 +7,7 @@ import type { Exercise } from "../src/types/exercise";
 const API_SNAPSHOT = process.env.LP21_API_SNAPSHOT ?? "/tmp/cleverli-lp21-live.json";
 const failures: string[] = [];
 const allAudio = new Map<string, string>();
+const graphemeSegmenter = new Intl.Segmenter("de-CH", { granularity: "grapheme" });
 
 function normalize(value: string) {
   return value.toLocaleLowerCase("de-CH").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
@@ -26,7 +27,7 @@ function listeningStimulusWordCount(exercise: Exercise) {
     const questionStart = listeningText.indexOf(exercise.question);
     return wordCount(questionStart >= 0 ? listeningText.slice(0, questionStart) : listeningText);
   }
-  const instructionStart = listeningText.lastIndexOf("Bringe die drei");
+  const instructionStart = listeningText.lastIndexOf("Ordne die drei");
   return wordCount(instructionStart >= 0 ? listeningText.slice(0, instructionStart) : listeningText);
 }
 
@@ -39,7 +40,7 @@ const upperGradeReadingLimits = {
 
 const upperGradeQuestionsByDifficulty = {
   1: [
-    "Wo findet die Handlung statt?",
+    "Wo spielt die Geschichte?",
     "Welche Information wird im Hörtext genannt?",
     "Was soll als Nächstes getan werden?",
   ],
@@ -79,6 +80,7 @@ function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: 
     allAudio.set(audioKey, key);
     if (exercise.listeningText.length < 20) failures.push(`${key}: listening text is too short to assess comprehension`);
     if (exercise.listeningText.length > 700) failures.push(`${key}: listening text is too long for reliable TTS playback`);
+    if (/\.{2,}/u.test(exercise.listeningText)) failures.push(`${key}: repeated full stops can make the TTS skip or distort later content`);
   }
 
   if (exercise.type === "multiple-choice") {
@@ -89,6 +91,7 @@ function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: 
       const visuals = exercise.optionImages ?? exercise.optionEmojis ?? [];
       if (visuals.length !== options.length || new Set(visuals).size !== options.length) failures.push(`${key}: Grade 1 requires four unique visual choices`);
       if (exercise.optionEmojis?.some(visual => /^[🔴🔵🟡🟢].+/u.test(visual))) failures.push(`${key}: colour-dot plus object emoji is an ambiguous visual; use one correctly coloured illustration`);
+      if (exercise.optionEmojis?.some(visual => [...graphemeSegmenter.segment(visual)].length !== 1)) failures.push(`${key}: Grade 1 emoji choices must be one clear visual, not an emoji rebus`);
       exercise.optionImages?.forEach(image => {
         if (!image.startsWith("/") || !existsSync(`${process.cwd()}/public${image}`)) failures.push(`${key}: missing visual asset ${image}`);
       });
@@ -128,11 +131,12 @@ function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: 
     items.forEach((item, itemIndex) => {
       if (exercise.dropAnswers?.[item.id] !== zones[itemIndex]?.id) failures.push(`${key}: wrong ordered mapping for ${item.id}`);
       if (grade === 1 && !item.emoji) failures.push(`${key}: Grade 1 ordering item ${item.id} has no visual symbol`);
+      if (grade === 1 && item.emoji && [...graphemeSegmenter.segment(item.emoji)].length !== 1) failures.push(`${key}: Grade 1 ordering item ${item.id} uses an ambiguous emoji rebus`);
       if (grade === 2 && !item.emoji) failures.push(`${key}: Grade 2 ordering item ${item.id} has no visual symbol`);
     });
-    if (grade === 1 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Bringe die drei Bilder in die gehörte Reihenfolge")) failures.push(`${key}: Grade 1 ordering instruction is not spoken`);
-    if (grade === 2 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Bringe die drei Bilder in die gehörte Reihenfolge")) failures.push(`${key}: Grade 2 ordering instruction is not spoken`);
-    if (grade >= 3 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Bringe die drei Schritte in die gehörte Reihenfolge")) failures.push(`${key}: Grade ${grade} ordering instruction is not spoken`);
+    if (grade === 1 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Ordne die drei Bilder so, wie du es gehört hast")) failures.push(`${key}: Grade 1 ordering instruction is not spoken`);
+    if (grade === 2 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Ordne die drei Bilder so, wie du es gehört hast")) failures.push(`${key}: Grade 2 ordering instruction is not spoken`);
+    if (grade >= 3 && !containsNormalizedPhrase(exercise.listeningText ?? "", "Ordne die drei Schritte so, wie du es gehört hast")) failures.push(`${key}: Grade ${grade} ordering instruction is not spoken`);
     if (grade >= 3) {
       const limit = upperGradeReadingLimits[grade as 3 | 4 | 5 | 6];
       items.forEach(item => {
