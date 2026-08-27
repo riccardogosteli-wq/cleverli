@@ -20,6 +20,7 @@
     "qa:lp21-fit": "npx tsx scripts/audit-lp21-exercise-fit.ts",
     "qa:lp21-fit-replacements": "npx tsx scripts/audit-lp21-api-fit-replacements.ts",
     "qa:grade4-data-probability": "npx tsx scripts/audit-grade4-data-probability.ts",
+    "qa:guided-composition": "npx tsx scripts/audit-guided-composition.ts",
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",
     "lp21:gap": "DRY_RUN=1 npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",
     "lp21:gap:live": "npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",

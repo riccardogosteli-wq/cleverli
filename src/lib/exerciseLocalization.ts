@@ -131,13 +131,16 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     answer: resolveLocalizedAnswer(exercise, exercise.optionsFR, exercise.answerFR),
     reviewCriteria: exercise.reviewCriteriaFR ?? exercise.reviewCriteria,
   };
-  if (lang === "it") return cleanItalianExercise({
+  if (lang === "it") {
+    const localized = {
     ...exercise,
     question: exercise.questionIT ?? exercise.question,
     hints: exercise.hintsIT ?? exercise.hints,
     options: exercise.optionsIT ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsIT, exercise.answerIT),
     reviewCriteria: exercise.reviewCriteriaIT ?? exercise.reviewCriteria,
-  });
+    };
+    return exercise.preserveGermanContent ? localized : cleanItalianExercise(localized);
+  }
   return exercise;
 }

@@ -83,6 +83,18 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
     it: "Dati, diagrammi e caso",
     en: "Data, charts and chance",
   },
+  "gefuehrtes-schreiben-1": {
+    de: "Sätze & kleine Texte",
+    fr: "Phrases et petits textes",
+    it: "Frasi e piccoli testi",
+    en: "Sentences and short texts",
+  },
+  "gefuehrtes-schreiben-2": {
+    de: "Texte planen & schreiben",
+    fr: "Planifier et écrire des textes",
+    it: "Pianificare e scrivere testi",
+    en: "Planning and writing texts",
+  },
   "vergleichen": {
     de: "Grösser & Kleiner",
     fr: "Plus grand & plus petit",

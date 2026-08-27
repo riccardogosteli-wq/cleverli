@@ -50,7 +50,7 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
         5: [
             "Fixed", "Duplicates", "All", "7 genuine duplicate pairs replaced; 1 false positive retained",
-            "Full structural review replaced all 7 genuine Grade 1 content duplicates. The eighth flagged pair was valid reinforcement: two memory games share a generic prompt but contain different card pairs. The detector now compares complete exercise structures; a fresh scan finds zero exact duplicates across all 1,763 Grade 1 exercises.",
+            "Full structural review replaced all 7 genuine Grade 1 content duplicates. The eighth flagged pair was valid reinforcement: two memory games share a generic prompt but contain different card pairs. The detector now compares complete exercise structures; a fresh scan finds zero exact duplicates across all 1,813 Grade 1 exercises.",
             "Resolved. Keep the structure-aware duplicate audit in the QA suite.",
         ],
         6: [
@@ -74,14 +74,14 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
         ],
         10: [
-            "Review", "LP21 competency coverage", "German / NMG", "Missing oral/composition strands; parallel NMG strands",
-            "There is no dedicated listening, speaking or composition strand. Separate senses and weather topic families also overrepresent those NMG areas.",
-            "Plan new oral/composition exercise families and consolidate NMG overlap without changing valid learner progress IDs.",
+            "Review", "LP21 competency coverage", "German / NMG", "Guided composition added; oral strand and parallel NMG strands remain",
+            "The new 50-exercise ‘Sätze & kleine Texte’ topic closes the Grade 1 guided-composition gap with sentence building, simple text patterns, sequencing and revision. Dedicated listening/speaking remains absent; senses and weather topic families still overrepresent those NMG areas.",
+            "Keep the new composition regression and LP21 API scoring gates. Plan the oral-language strand next; consolidate NMG overlap without changing learner progress IDs.",
         ],
         11: [
-            "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 0 score-4/5 remain",
-            "The Synästhesie outlier was replaced with an age-appropriate senses task. The authenticated API re-score now reports 1,713 at score 1 and 50 at score 2.",
-            "Resolved. Permanent replacement, scoring, localisation, format, hint and duplicate audits cover the frozen target.",
+            "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 50 new composition exercises score 1; 0 score-4/5 remain",
+            "The Synästhesie outlier remains resolved. The authenticated API re-score now reports 1,763 at score 1 and 50 at score 2, including all 50 new guided-composition exercises at score 1 / D.4.B.1.",
+            "Resolved. Permanent replacement, guided-composition, scoring, localisation, format, hint and duplicate audits cover the catalogue.",
         ],
     },
     2: {
@@ -116,14 +116,14 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved and covered by the normalized-fill correctness regression.",
         ],
         18: [
-            "Review", "LP21 competency coverage", "German", "Missing oral/composition strands",
-            "There is no dedicated listening, speaking or composition topic despite these being explicit LP21 German competence areas.",
-            "Plan age-appropriate listening, speaking and guided-writing families as a separate content expansion.",
+            "Review", "LP21 competency coverage", "German", "Guided composition added; listening/speaking strand remains",
+            "The new 50-exercise ‘Texte planen & schreiben’ topic closes the Grade 2 guided-composition gap with connectors, text planning, story order, letters, instructions and revision. Dedicated listening/speaking remains absent.",
+            "Keep the new composition regression and LP21 API scoring gates. Plan age-appropriate listening and speaking families next.",
         ],
         19: [
-            "Fixed", "LP21 API exercise fit", "All", "3 score-5 exercises replaced; 0 score-4/5 remain",
-            "The three cell/DNA outliers were replaced with observable Cycle-1 living-things content. The authenticated API re-score now reports 1,602 at score 1 and 50 at score 2.",
-            "Resolved and covered by the permanent 743-target LP21 replacement audit.",
+            "Fixed", "LP21 API exercise fit", "All", "3 score-5 exercises replaced; 50 new composition exercises score 1; 0 score-4/5 remain",
+            "The three cell/DNA outliers remain resolved. The authenticated API re-score now reports 1,652 at score 1 and 50 at score 2, including all 50 new guided-composition exercises at score 1 / D.4.B.1.",
+            "Resolved and covered by the permanent replacement and guided-composition audits.",
         ],
     },
     3: {

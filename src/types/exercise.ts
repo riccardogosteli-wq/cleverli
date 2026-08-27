@@ -40,6 +40,7 @@ export interface Exercise {
   wordList?: string[];  // word-search
   gridSize?: number;    // word-search
   free?: boolean;
+  preserveGermanContent?: boolean; // keep German learning text intact when the surrounding UI is localised
 }
 
 export interface Topic {

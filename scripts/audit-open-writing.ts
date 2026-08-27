@@ -10,8 +10,8 @@ import {
 import type { Exercise } from "../src/types/exercise";
 
 const expectedGradeCounts: Record<number, number> = {
-  1: 1763,
-  2: 1652,
+  1: 1813,
+  2: 1702,
   3: 1952,
   4: 2451,
   5: 2850,
