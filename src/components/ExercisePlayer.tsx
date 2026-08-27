@@ -38,7 +38,7 @@ import { captureAppError } from "@/lib/monitoring";
 import { getEffectiveCompleted, mergeCompletedProgress } from "@/lib/topicProgress";
 import { localizeExercise } from "@/lib/exerciseLocalization";
 
-interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; allTopics?: Topic[]; topicIndex?: number; }
+interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; nextTopicId?: string | null; }
 
 const FREE_EXERCISE_LIMIT = 20;
 const FREE_TRIAL_CHECKOUT_OPTIONS = { trialDays: 7 };
@@ -117,7 +117,7 @@ function getInitialSessionExercises(topic: Topic, grade: number, subject: string
     : selectCurrentTierExercises(topic, correctIds);
 }
 
-export default function ExercisePlayer({ topic, grade, subject, isPremium = false, allTopics = [], topicIndex = 0 }: Props) {
+export default function ExercisePlayer({ topic, grade, subject, isPremium = false, nextTopicId = null }: Props) {
   const router = useRouter();
 
   const getCompletedCoin = (completedCount: number) => {
@@ -200,8 +200,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const answerScrollRef = useRef<{ x: number; y: number } | null>(null);
   const currentCompleted = correctIds.size;
   const tierInfo = getTierProgress(topic, currentCompleted);
-  const nextTopic = allTopics[topicIndex + 1] ?? null;
-
   const sessionTotal = Math.max(1, exercises.length);
   const current: Exercise = localizeExercise(exercises[idx] ?? sortByDifficulty(topic.exercises)[0], lang);
   useEffect(() => {
@@ -353,17 +351,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     setCardKey(k => k + 1);
     window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
   };
-
-  // Enter key to continue after answering (desktop)
-  useEffect(() => {
-    if (answered === null) return;
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Enter") handleContinue();
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [answered, idx]);
 
   const handleAnswer = (correct: boolean) => {
     stop();
@@ -548,6 +535,17 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
   };
 
+  // Enter key to continue after answering (desktop)
+  useEffect(() => {
+    if (answered === null) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Enter") handleContinue();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [answered, idx]);
+
   // UJ-7: start review round
   const startReview = () => {
     if (!isReplayMode && !isReviewMode) {
@@ -669,8 +667,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
                 : tr("playAgainShort")}
             </button>
             {/* UJ-5: Next topic button */}
-            {nextTopic && (
-              <Link href={`/learn/${grade}/${subject}/${nextTopic.id}`}
+            {nextTopicId && (
+              <Link href={`/learn/${grade}/${subject}/${nextTopicId}`}
                 className="text-sm bg-green-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all flex items-center gap-1">
                 {tr("nextTopic") ?? "Nächstes Thema"} →
               </Link>

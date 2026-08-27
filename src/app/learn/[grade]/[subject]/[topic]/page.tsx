@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getTopics, getTopicsForSubject } from "@/data/index";
+import { GRADES, getSubjects, getTopics, getTopicsForSubject } from "@/data/index";
 import TopicClient from "./TopicClient";
 import TopicHeaderClient from "./TopicHeaderClient";
 import TopicSeoSections from "./TopicSeoSections";
@@ -11,6 +11,18 @@ import type { Exercise } from "@/types/exercise";
 const BASE = "https://www.cleverli.ch";
 
 interface Props { params: Promise<{ grade: string; subject: string; topic: string }> }
+
+export function generateStaticParams() {
+  return GRADES.flatMap((grade) =>
+    getSubjects(grade).flatMap(({ id: subject }) =>
+      getTopics(grade, subject).map(({ id: topic }) => ({
+        grade: String(grade),
+        subject,
+        topic,
+      }))
+    )
+  );
+}
 
 const SUBJECT_NAMES: Record<string, { de: string; fr: string; it: string; en: string }> = {
   math:    { de: "Mathematik", fr: "Mathématiques", it: "Matematica",   en: "Maths" },
@@ -61,6 +73,7 @@ export default async function TopicPage({ params }: Props) {
     );
   }
 
+  const topicIndex = topics.findIndex(t => t.id === topicId);
   const subjectNames = SUBJECT_NAMES[subject];
   const subjectName = subjectNames?.de ?? subject; // German for primary SEO (Swiss market)
   const subjectSeo = getSubjectSeo(subject);
@@ -149,8 +162,7 @@ export default async function TopicPage({ params }: Props) {
         topic={topic}
         grade={parseInt(grade)}
         subject={subject}
-        allTopics={topics}
-        topicIndex={topics.findIndex(t => t.id === topicId)}
+        nextTopicId={topics[topicIndex + 1]?.id ?? null}
       />
 
       <TopicSeoSections

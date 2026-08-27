@@ -11,7 +11,7 @@ import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { getTopicTitle } from "@/data/topicTitles";
 import { useLang } from "@/lib/LangContext";
 
-interface Props { topic: Topic; grade: number; subject: string; allTopics: Topic[]; topicIndex: number; }
+interface Props { topic: Topic; grade: number; subject: string; nextTopicId?: string | null; }
 
 function loadProgress(grade: number, subject: string, topic: Topic) {
   for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
@@ -27,7 +27,7 @@ function loadProgress(grade: number, subject: string, topic: Topic) {
   return {};
 }
 
-export default function TopicClient({ topic, grade, subject, allTopics, topicIndex }: Props) {
+export default function TopicClient({ topic, grade, subject, nextTopicId = null }: Props) {
   const { session, isPremium, loaded, premiumChecked } = useSession();
   const { lang } = useLang();
   const topicTitle = getTopicTitle(topic.id, lang, topic.title);
@@ -101,8 +101,7 @@ export default function TopicClient({ topic, grade, subject, allTopics, topicInd
         grade={grade}
         subject={subject}
         isPremium={loaded && premiumChecked ? isPremium : false}
-        allTopics={allTopics}
-        topicIndex={topicIndex}
+        nextTopicId={nextTopicId}
       />
     </div>
   );
