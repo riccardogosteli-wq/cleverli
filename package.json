@@ -16,6 +16,7 @@
     "qa:grade1-duplicates": "npx tsx scripts/audit-grade1-duplicates.ts",
     "qa:content-correctness": "npx tsx scripts/audit-content-correctness-fixes.ts",
     "qa:lp21-content": "npx tsx scripts/audit-lp21-content.ts",
+    "qa:lp21-coverage": "npx tsx scripts/audit-lp21-coverage.ts",
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",
     "lp21:gap": "DRY_RUN=1 npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",
     "lp21:gap:live": "npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts"

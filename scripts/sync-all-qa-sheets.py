@@ -73,6 +73,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 84 Italian multiple-choice exercises the stored answer is not among the displayed options; 283 unique fill-ins have 839 language instances without a localised text answer.",
             "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
         ],
+        10: [
+            "Review", "LP21 competency coverage", "German / NMG", "Missing oral/composition strands; parallel NMG strands",
+            "There is no dedicated listening, speaking or composition strand. Separate senses and weather topic families also overrepresent those NMG areas.",
+            "Plan new oral/composition exercise families and consolidate NMG overlap without changing valid learner progress IDs.",
+        ],
     },
     2: {
         10: [
@@ -104,6 +109,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "Malformed fill-in scoring", "NMG", "uhr-viertel-gr2: 7; wetter-klima: 9",
             "All 16 generated fill-ins now store exactly the fragment required by the blank; inserting each answer produces a grammatical sentence.",
             "Resolved and covered by the normalized-fill correctness regression.",
+        ],
+        18: [
+            "Review", "LP21 competency coverage", "German", "Missing oral/composition strands",
+            "There is no dedicated listening, speaking or composition topic despite these being explicit LP21 German competence areas.",
+            "Plan age-appropriate listening, speaking and guided-writing families as a separate content expansion.",
         ],
     },
     3: {
@@ -152,6 +162,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "All 40 generated fill-ins now store exactly the missing fragment and accept the grammatically correct response.",
             "Resolved and covered by the normalized-fill correctness regression.",
         ],
+        15: [
+            "Review", "LP21 competency coverage", "German / NMG", "Missing oral strand; parallel NMG strands",
+            "German has no dedicated listening/speaking topic. Energy, light, time and map content also appears in parallel NMG topic families.",
+            "Add oral-language families and consolidate NMG overlap in the next curriculum-expansion plan.",
+        ],
     },
     4: {
         8: [
@@ -188,6 +203,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "Factual / malformed content", "NMG", "kan4_6; eu4_33; gk4_35; mk4_28; ms4_42; rr4_8",
             "All six exercises were rewritten or updated: Graubünden languages, 21-country Eurozone, both Landsgemeinde cantons, timeless migration wording, accurate organic-chemistry wording and a valid Roman-pass prompt.",
             "Resolved against official Swiss and EU sources and covered by the factual regression.",
+        ],
+        15: [
+            "Review", "LP21 competency coverage", "Mathematics / German / NMG", "Missing data/probability and oral strands; parallel NMG strands",
+            "Grade 4 mathematics has no dedicated data, diagrams or probability topic; German lacks listening/speaking; several NMG strands run in parallel.",
+            "Prioritise a Grade 4 data/probability family, then oral-language content and NMG consolidation.",
         ],
     },
     5: {
@@ -251,6 +271,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "All five exercises now teach accurate free-fall, Eurozone, Schengen, Swiss separation-of-powers and Cradle-to-Cradle content.",
             "Resolved against authoritative sources and covered by the factual regression.",
         ],
+        17: [
+            "Review", "LP21 competency coverage", "German / NMG", "Missing oral strand; parallel NMG strands",
+            "German has no dedicated listening/speaking topic. Space, electricity and history/time each appear in parallel NMG topic families.",
+            "Plan oral-language exercises and consolidate overlapping NMG families while preserving progress IDs.",
+        ],
     },
     6: {
         8: [
@@ -287,6 +312,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "Factual content", "NMG", "ko6_9; mf6_42",
             "Australia is now correctly described as the smallest continent rather than the largest island; the UN Migration Compact item now states that it is non-binding and that Switzerland abstained in 2018.",
             "Resolved against authoritative sources and covered by the factual regression.",
+        ],
+        14: [
+            "Review", "LP21 competency coverage", "German / NMG", "Missing oral strand; parallel NMG strands",
+            "German has no dedicated listening/speaking topic. Space, electricity and history/time each appear in parallel NMG topic families.",
+            "Plan oral-language exercises and consolidate overlapping NMG families while preserving progress IDs.",
         ],
     },
 }
