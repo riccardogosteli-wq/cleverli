@@ -28,6 +28,7 @@ import grade6English from "./grade6/english";
 import { Topic } from "@/types/exercise";
 import { sanitiseExerciseHints } from "@/lib/exerciseHints";
 import { repairOpenWritingExercise } from "./openWritingExercises";
+import { applyLp21ExerciseReplacements } from "./lp21ExerciseReplacements";
 
 const grade4Science = [...grade4NT, ...grade4RZG];
 const grade5Science = [...grade5NT, ...grade5RZG];
@@ -55,7 +56,7 @@ export function getTopics(grade: number, subject: string): Topic[] {
     "6-math": grade6Math, "6-german": grade6German, "6-nt": grade6NT,
     "6-rzg": grade6RZG, "6-science": grade6Science, "6-french": grade6French, "6-english": grade6English,
   };
-  return (map[`${grade}-${subject}`] ?? []).map((topic) => ({
+  return applyLp21ExerciseReplacements(grade, subject, map[`${grade}-${subject}`] ?? []).map((topic) => ({
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(
       repairOpenWritingExercise(grade, subject, topic.id, exercise),

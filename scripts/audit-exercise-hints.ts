@@ -11,6 +11,7 @@ import {
 import { localizeExercise } from "../src/lib/exerciseLocalization";
 import { isApprovedSafeHint } from "../src/lib/exerciseHints";
 import { OPEN_WRITING_CHANGED_KEYS } from "../src/data/openWritingExercises";
+import { LP21_REPLACEMENT_GROUP_IDS } from "../src/data/lp21ExerciseReplacements";
 import type { Exercise, Topic } from "../src/types/exercise";
 import type { Lang } from "../src/lib/i18n";
 
@@ -24,6 +25,12 @@ const rawTopics: Record<string, Topic[]> = {
 };
 
 const languages: Lang[] = ["de", "en", "fr", "it"];
+const lp21ChangedKeys = new Set(
+  Object.entries(LP21_REPLACEMENT_GROUP_IDS).flatMap(([group, ids]) => {
+    const [grade, subject] = group.split("-");
+    return ids.map((id) => `${grade}/${subject}/${id}`);
+  }),
+);
 const commonShortAnswers = new Set(["die", "der", "das", "den", "dem", "ein", "eine", "und", "was", "wer", "er", "es", "in", "an", "zu"]);
 const unsafePattern = /\b(?:die antwort|die lösung|gesucht ist|richtig ist|the answer|the solution|correct is|la réponse|la solution|la bonne réponse|la risposta|la soluzione|la risposta corretta|(?:das wort|die antwort|die lösung)\s+beginnt mit|erst(?:e|en|er) (?:silbe|buchstabe)|schlüsselbegriff|(?:word|answer|solution)\s+starts with|first (?:letter|syllable)|(?:mot|réponse|solution)\s+commence par|première (?:lettre|syllabe)|(?:parola|risposta|soluzione)\s+inizia con|prima (?:lettera|sillaba)|sind falsch|ist falsch|are (?:wrong|incorrect)|is (?:wrong|incorrect)|sont (?:fausses|incorrectes)|est (?:fausse|incorrecte)|sono (?:sbagliate|errate)|è (?:sbagliata|errata))\b/i;
 const unsafeLeadingPattern = /^(?:beginnt mit|starts with|commence par [«'\"]|inizia con)\b/i;
@@ -94,6 +101,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
         const exerciseKey = `${grade}/${subject.id}/${topic.id}/${exercise.id}`;
         if (
           !OPEN_WRITING_CHANGED_KEYS.has(exerciseKey)
+          && !lp21ChangedKeys.has(`${grade}/${subject.id}/${exercise.id}`)
           && JSON.stringify(withoutHints(original)) !== JSON.stringify(withoutHints(exercise))
         ) {
           failures.push({ grade, subject: subject.id, topic: topic.id, id: exercise.id, issues: ["non-hint exercise data changed"] });

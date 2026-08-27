@@ -53,6 +53,16 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Full structural review replaced all 7 genuine Grade 1 content duplicates. The eighth flagged pair was valid reinforcement: two memory games share a generic prompt but contain different card pairs. The detector now compares complete exercise structures; a fresh scan finds zero exact duplicates across all 1,763 Grade 1 exercises.",
             "Resolved. Keep the structure-aware duplicate audit in the QA suite.",
         ],
+        6: [
+            "Fixed", "LP21 level", "Mathematics / NMG", "43 exercises across money, time and foundational NMG",
+            "Advanced decimal-money calculations, time conversions and specialist Grade 1 science concepts were replaced with age-appropriate whole-franc, clock and everyday-world tasks.",
+            "Resolved against the official LP21 Cycle 1/2 posters and covered by the permanent LP21 content audit.",
+        ],
+        7: [
+            "Fixed", "LP21 level", "NMG", "Specialist plant, senses, body and movement items",
+            "Parasitic/carnivorous plants, blind-spot anatomy, inertia and comparable specialist wording were replaced with observable Grade 1 concepts.",
+            "Resolved as part of the 43 Grade 1 LP21 replacements; IDs, types, difficulty and totals were preserved.",
+        ],
         8: [
             "Structural", "IDs", "All", "50 cross-subject ID collisions",
             "50 exercise IDs collide across Mathematics and NMG. Content remains distinguishable by subject/topic, but IDs are not globally unique.",
@@ -65,6 +75,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
     },
     2: {
+        10: [
+            "Fixed", "LP21 level", "Mathematics / NMG", "11 exercises",
+            "Advanced water-science terminology and premature formal maths/statistics items were replaced with Cycle 1 water, arithmetic and diagram-reading tasks.",
+            "Resolved against the official LP21 posters and covered by the permanent LP21 content audit.",
+        ],
         12: [
             "Fixed", "Answer-revealing hint", "Mathematics", "symmetrie/sy37",
             "The direct one-letter answer reveal was replaced centrally with a safe hint.",
@@ -92,6 +107,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
     },
     3: {
+        4: [
+            "Fixed", "Ambiguous answer", "Mathematics", "geometrie/geo45",
+            "The ambiguous spherical-geometry item was removed during the LP21 review and replaced with one objectively gradable Cycle 2 geometry task.",
+            "Resolved and covered by the LP21 content and scoring audits.",
+        ],
         2: [
             "Fixed", "Malformed spelling", "German", "rechtschreibung/rs16",
             "The prompt previously showed identical spellings and could not be answered meaningfully.",
@@ -106,6 +126,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "High", "Localisation / scoring", "Mathematics / NMG", "At least 119 mixed-language exercises; 129 Italian option mismatches; 117 answer-localisation gaps",
             "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 129 Italian multiple-choice exercises the stored answer is not among the displayed options; 117 unique fill-ins have 341 language instances without a localised text answer.",
             "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+        ],
+        6: [
+            "Fixed", "LP21 level", "Mathematics / German / NMG", "103 exercises",
+            "Clearly premature statistics, formula geometry, literary theory, optics, environmental-policy and political-theory items were replaced with Grade 3/Cycle 2 tasks.",
+            "Resolved against official LP21 Cycle 2 posters; IDs, types, difficulty and totals were preserved.",
         ],
         11: [
             "Fixed", "Punctuation scoring", "German", "saetze/sb24",
@@ -129,6 +154,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
     },
     4: {
+        8: [
+            "Fixed", "LP21 level", "Mathematics / German / NMG", "32 exercises",
+            "Premature circle formulae, advanced grammar and specialist biology, physics, ecology, body and water concepts were replaced with Cycle 2 content.",
+            "Resolved against official LP21 Cycle 2 posters and covered by the permanent LP21 audit.",
+        ],
         2: [
             "Fixed", "Malformed spelling", "German", "rechtschreibung-4/g4d26",
             "The drag/drop categories were previously identical and unusable.",
@@ -161,6 +191,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
     },
     5: {
+        7: [
+            "Fixed", "LP21 level", "German / NMG", "18 exercises",
+            "Clearly out-of-cycle syntax, molecular biology, modern physics, climate engineering, advanced technology and political-history items were replaced with Cycle 2 tasks.",
+            "Resolved against official LP21 Cycle 2 posters and covered by the permanent LP21 audit.",
+        ],
         2: [
             "Fixed", "Swiss spelling", "German", "rechtschreibung-5/rs5-1",
             "The exercise previously gave incorrect guidance about Swiss spelling.",
@@ -218,6 +253,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
     },
     6: {
+        8: [
+            "Fixed", "LP21 level", "Mathematics / German / NMG", "72 exercises",
+            "Equation systems, variance, formula geometry, advanced grammar, molecular biology, quantum/relativity content and speculative-future theory were replaced with end-of-Cycle-2 tasks.",
+            "Resolved against official LP21 Cycle 2 posters and covered by the permanent LP21 audit.",
+        ],
         6: [
             "Fixed", "Answer-revealing hints", "German / NMG", "5 exercises with one-letter answers",
             "The central sanitizer now detects and replaces all five direct one-letter answer reveals.",
