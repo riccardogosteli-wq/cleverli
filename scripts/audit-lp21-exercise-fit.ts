@@ -63,6 +63,7 @@ function mapMath(topic: string): Mapping {
 }
 
 function mapGerman(topic: string): Mapping {
+  if (/hoerverstehen/.test(topic)) return { code: "D.1.B.1", area: "Wichtige Informationen aus Hörtexten entnehmen" };
   if (/gefuehrtes-schreiben/.test(topic)) return { code: "D.4.B.1", area: "Einfache Textmuster für eigene Texte nutzen" };
   if (/leseverstaendnis|texte-lesen/.test(topic)) return { code: "D.2.B.1", area: "Informationen aus Texten entnehmen" };
   if (/literatur/.test(topic)) return { code: "D.6.C.1", area: "Literarische Gestaltung erkennen" };
@@ -300,7 +301,7 @@ for (const grade of GRADES) {
   }
 }
 
-if (fits.length !== 13_618) throw new Error(`Expected 13,618 reviews, found ${fits.length}`);
+if (fits.length !== 13_718) throw new Error(`Expected 13,718 reviews, found ${fits.length}`);
 if (missingMappings.length) throw new Error(`Invalid live-API mappings: ${missingMappings.join(", ")}`);
 const duplicateRows = fits.filter((fit, index) => index > 0 && fit.grade === fits[index - 1].grade && fit.row === fits[index - 1].row);
 if (duplicateRows.length) throw new Error(`Duplicate Sheet rows in review: ${duplicateRows.length}`);

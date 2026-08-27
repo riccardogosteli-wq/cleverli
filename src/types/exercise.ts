@@ -7,6 +7,7 @@ export interface Exercise {
   questionEN?: string;
   questionFR?: string;
   questionIT?: string;
+  listeningText?: string;  // hidden German audio stimulus for listening-comprehension tasks
   options?: string[];
   optionsEN?: string[];
   optionsFR?: string[];

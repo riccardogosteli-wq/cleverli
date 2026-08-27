@@ -73,12 +73,12 @@ for (const grade of grades) {
           topicId: topic.id,
           type: exercise.type,
           difficulty: exercise.difficulty,
-          question: exercise.question,
+          question: exercise.listeningText ? `${exercise.question}\n[Hörtext: ${exercise.listeningText}]` : exercise.question,
           options: exercise.options ?? [],
           correct: specialSolution(exercise),
           storedAnswer: exercise.answer,
           hints: exercise.hints ?? [],
-          structure: technicalStructure(exercise),
+          structure: exercise.listeningText ? JSON.stringify({ listeningText: exercise.listeningText, interaction: technicalStructure(exercise) }) : technicalStructure(exercise),
           exercise,
         });
       }

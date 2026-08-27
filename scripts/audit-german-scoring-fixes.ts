@@ -4,8 +4,8 @@ import type { Exercise } from "../src/types/exercise";
 import { getExerciseDuplicateKey } from "./exercise-duplicate-key";
 
 const expectedGradeCounts: Record<number, number> = {
-  1: 1813,
-  2: 1702,
+  1: 1863,
+  2: 1752,
   3: 1952,
   4: 2451,
   5: 2850,

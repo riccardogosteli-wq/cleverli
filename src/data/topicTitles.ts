@@ -95,6 +95,18 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
     it: "Pianificare e scrivere testi",
     en: "Planning and writing texts",
   },
+  "hoerverstehen-1": {
+    de: "Hören & verstehen",
+    fr: "Écouter et comprendre",
+    it: "Ascoltare e capire",
+    en: "Listen and understand",
+  },
+  "hoerverstehen-2": {
+    de: "Hörtexte verstehen",
+    fr: "Comprendre des textes audio",
+    it: "Capire testi audio",
+    en: "Understanding audio texts",
+  },
   "vergleichen": {
     de: "Grösser & Kleiner",
     fr: "Plus grand & plus petit",

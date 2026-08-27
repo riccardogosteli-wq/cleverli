@@ -7,8 +7,8 @@ const OFFICIAL_COMPETENCE_AREAS = {
 } as const;
 
 const EXPECTED_TOPIC_COUNTS: Record<number, Record<string, number>> = {
-  1: { math: 13, german: 10, science: 12 },
-  2: { math: 13, german: 10, science: 11 },
+  1: { math: 13, german: 11, science: 12 },
+  2: { math: 13, german: 11, science: 11 },
   3: { math: 10, german: 8, science: 12 },
   4: { math: 10, german: 9, science: 21 },
   5: { math: 9, german: 9, science: 21 },
@@ -16,7 +16,7 @@ const EXPECTED_TOPIC_COUNTS: Record<number, Record<string, number>> = {
 };
 
 const OPEN_COVERAGE_FINDINGS = [
-  { grades: [1, 2], area: "Deutsch", finding: "No dedicated listening or speaking strand" },
+  { grades: [1, 2], area: "Deutsch", finding: "Dedicated listening added; speaking strand remains absent" },
   { grades: [3, 4, 5, 6], area: "Deutsch", finding: "No dedicated listening or speaking strand" },
   { grades: [1], area: "NMG", finding: "Parallel senses and weather strands create overrepresentation" },
   { grades: [3], area: "NMG", finding: "Parallel energy, light, time and map strands create overrepresentation" },
@@ -46,7 +46,12 @@ for (const grade of [1, 2]) {
   if (!topic || topic.exercises.length !== 50) failures.push(`Grade ${grade} guided-composition strand is incomplete`);
 }
 
-for (const grade of [1, 2, 3, 4, 5, 6]) {
+for (const grade of [1, 2]) {
+  const topic = getTopics(grade, "german").find(candidate => candidate.id === `hoerverstehen-${grade}`);
+  if (!topic || topic.exercises.length !== 50 || topic.exercises.some(exercise => !exercise.listeningText)) failures.push(`Grade ${grade} listening-comprehension strand is incomplete`);
+}
+
+for (const grade of [3, 4, 5, 6]) {
   const germanTitles = getTopics(grade, "german").map((topic) => topic.title).join(" ");
   if (/Hören|Sprechen|Mündlich/i.test(germanTitles)) {
     failures.push(`Grade ${grade} German now has an oral-language topic; re-review the documented gap`);

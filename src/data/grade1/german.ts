@@ -1,5 +1,6 @@
 import { Topic } from "@/types/exercise";
 import guidedCompositionGrade1 from "./guidedComposition";
+import { listeningGrade1 } from "../listeningTopics";
 
 const grade1German: Topic[] = [
   {
@@ -619,6 +620,6 @@ const grade1German: Topic[] = [
   },
 ];
 
-const grade1GermanTopics = [...grade1German, guidedCompositionGrade1];
+const grade1GermanTopics = [...grade1German, guidedCompositionGrade1, listeningGrade1];
 
 export default grade1GermanTopics;

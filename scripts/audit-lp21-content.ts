@@ -74,14 +74,14 @@ for (const grade of [1, 2, 3, 4, 5, 6]) {
   }
 }
 
-if (totalExercises !== 13_618) {
-  failures.push({ grade: 0, subject: "all", topic: "all", id: "count", reason: `expected 13,618 exercises, found ${totalExercises}` });
+if (totalExercises !== 13_718) {
+  failures.push({ grade: 0, subject: "all", topic: "all", id: "count", reason: `expected 13,718 exercises, found ${totalExercises}` });
 }
 if (fillExercises !== 6_761 || fillExercisesWithLiteralBlank !== 5_030 || multiGapFillExercises !== 172) {
   failures.push({ grade: 0, subject: "all", topic: "all", id: "fill-catalogue", reason: `expected 6,761 fill exercises / 5,030 literal-blank exercises / 172 multi-gap exercises, found ${fillExercises} / ${fillExercisesWithLiteralBlank} / ${multiGapFillExercises}` });
 }
-if (validatedFamilies.size !== 696) {
-  failures.push({ grade: 0, subject: "all", topic: "all", id: "families", reason: `expected validation coverage for 696 grade/subject/topic/type families, found ${validatedFamilies.size}` });
+if (validatedFamilies.size !== 700) {
+  failures.push({ grade: 0, subject: "all", topic: "all", id: "families", reason: `expected validation coverage for 700 grade/subject/topic/type families, found ${validatedFamilies.size}` });
 }
 if (resolvedLocations.size !== LP21_REPLACEMENT_COUNT) {
   failures.push({ grade: 0, subject: "all", topic: "all", id: "replacements", reason: `expected ${LP21_REPLACEMENT_COUNT} replacements, resolved ${resolvedLocations.size}` });

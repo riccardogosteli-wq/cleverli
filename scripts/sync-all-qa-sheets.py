@@ -74,14 +74,14 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
         ],
         10: [
-            "Review", "LP21 competency coverage", "German / NMG", "Guided composition added; oral strand and parallel NMG strands remain",
-            "The new 50-exercise ‘Sätze & kleine Texte’ topic closes the Grade 1 guided-composition gap with sentence building, simple text patterns, sequencing and revision. Dedicated listening/speaking remains absent; senses and weather topic families still overrepresent those NMG areas.",
-            "Keep the new composition regression and LP21 API scoring gates. Plan the oral-language strand next; consolidate NMG overlap without changing learner progress IDs.",
+            "Review", "LP21 competency coverage", "German / NMG", "Composition and listening added; speaking and parallel NMG strands remain",
+            "The 50-exercise ‘Sätze & kleine Texte’ and 50-exercise ‘Hören & verstehen’ topics now cover guided composition and Cycle-1 listening comprehension. A dedicated speaking strand remains absent; senses and weather topic families still overrepresent those NMG areas.",
+            "Keep the permanent composition/listening and LP21 API gates. Plan speaking separately; consolidate NMG overlap without changing learner progress IDs.",
         ],
         11: [
-            "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 50 new composition exercises score 1; 0 score-4/5 remain",
-            "The Synästhesie outlier remains resolved. The authenticated API re-score now reports 1,763 at score 1 and 50 at score 2, including all 50 new guided-composition exercises at score 1 / D.4.B.1.",
-            "Resolved. Permanent replacement, guided-composition, scoring, localisation, format, hint and duplicate audits cover the catalogue.",
+            "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 100 new composition/listening exercises score 1–2; 0 score-4/5 remain",
+            "The Synästhesie outlier remains resolved. The authenticated API re-score now reports 1,813 at score 1 and 50 at score 2. All 50 new listening exercises score 1 / D.1.B.1; all 50 composition exercises remain within the accepted score-1/2 target.",
+            "Resolved. Permanent replacement, composition, listening, scoring, localisation, audio, format, hint and duplicate audits cover the catalogue.",
         ],
     },
     2: {
@@ -116,14 +116,14 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved and covered by the normalized-fill correctness regression.",
         ],
         18: [
-            "Review", "LP21 competency coverage", "German", "Guided composition added; listening/speaking strand remains",
-            "The new 50-exercise ‘Texte planen & schreiben’ topic closes the Grade 2 guided-composition gap with connectors, text planning, story order, letters, instructions and revision. Dedicated listening/speaking remains absent.",
-            "Keep the new composition regression and LP21 API scoring gates. Plan age-appropriate listening and speaking families next.",
+            "Review", "LP21 competency coverage", "German", "Guided composition and listening added; speaking remains",
+            "The 50-exercise ‘Texte planen & schreiben’ and 50-exercise ‘Hörtexte verstehen’ topics now cover guided composition and Cycle-1 listening comprehension. A dedicated speaking strand remains absent.",
+            "Keep the permanent composition/listening and LP21 API gates. Treat automatic speaking assessment as separate product work.",
         ],
         19: [
-            "Fixed", "LP21 API exercise fit", "All", "3 score-5 exercises replaced; 50 new composition exercises score 1; 0 score-4/5 remain",
-            "The three cell/DNA outliers remain resolved. The authenticated API re-score now reports 1,652 at score 1 and 50 at score 2, including all 50 new guided-composition exercises at score 1 / D.4.B.1.",
-            "Resolved and covered by the permanent replacement and guided-composition audits.",
+            "Fixed", "LP21 API exercise fit", "All", "3 score-5 exercises replaced; 100 new composition/listening exercises score 1–2; 0 score-4/5 remain",
+            "The three cell/DNA outliers remain resolved. The authenticated API re-score now reports 1,702 at score 1 and 50 at score 2. All 50 new listening exercises score 1 / D.1.B.1; all 50 composition exercises remain within the accepted score-1/2 target.",
+            "Resolved and covered by the permanent replacement, composition and listening audits.",
         ],
     },
     3: {
