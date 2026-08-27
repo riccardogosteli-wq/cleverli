@@ -43,6 +43,11 @@ GRADE1_SPECIAL_HEADERS = [
 # including teacher-review and structural migration items, remain untouched.
 AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
     1: {
+        4: [
+            "Fixed", "Answer-revealing hints", "Mathematics / German", "49 exercises with one-letter answers",
+            "The central hint sanitizer now detects one-character answers and replaces all 49 direct letter reveals with safe instructional hints.",
+            "Resolved. The permanent hint audit asserts all 66 one-character repairs across Grades 1, 2, 5 and 6.",
+        ],
         5: [
             "Fixed", "Duplicates", "All", "7 genuine duplicate pairs replaced; 1 false positive retained",
             "Full structural review replaced all 7 genuine Grade 1 content duplicates. The eighth flagged pair was valid reinforcement: two memory games share a generic prompt but contain different card pairs. The detector now compares complete exercise structures; a fresh scan finds zero exact duplicates across all 1,763 Grade 1 exercises.",
@@ -60,6 +65,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
     },
     2: {
+        12: [
+            "Fixed", "Answer-revealing hint", "Mathematics", "symmetrie/sy37",
+            "The direct one-letter answer reveal was replaced centrally with a safe hint.",
+            "Resolved and covered by the one-character hint regression.",
+        ],
         14: [
             "High", "Localisation / scoring", "Mathematics / NMG", "At least 134 mixed-language exercises; 57 Italian option mismatches; 162 answer-localisation gaps",
             "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 57 Italian multiple-choice exercises the stored answer is not among the displayed options; 162 unique fill-ins have 478 language instances without a localised text answer.",
@@ -74,6 +84,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "Malformed source content", "Mathematics / German", "laengen-messen/lm47; wortfamilien/wf48",
             "lm47 contained an abandoned m³ prompt; wf48 taught and expected the invalid form “Gegehe”.",
             "Both were replaced with one clear, age-appropriate and objectively gradable question.",
+        ],
+        17: [
+            "Fixed", "Malformed fill-in scoring", "NMG", "uhr-viertel-gr2: 7; wetter-klima: 9",
+            "All 16 generated fill-ins now store exactly the fragment required by the blank; inserting each answer produces a grammatical sentence.",
+            "Resolved and covered by the normalized-fill correctness regression.",
         ],
     },
     3: {
@@ -107,6 +122,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "The first hint contained an abandoned, contradictory borrowing calculation; the answer itself was correct.",
             "Replaced with one correct, child-readable written-subtraction strategy and verification step.",
         ],
+        14: [
+            "Fixed", "Malformed fill-in scoring", "NMG", "energie-stoffe: 12; licht-optik: 14; raeume-karte: 14",
+            "All 40 generated fill-ins now store exactly the missing fragment and accept the grammatically correct response.",
+            "Resolved and covered by the normalized-fill correctness regression.",
+        ],
     },
     4: {
         2: [
@@ -128,6 +148,16 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "Punctuation scoring", "German", "rechtschreibung-4/g4rs2m; interpunktion-4: 22 exercises",
             "The checker previously removed punctuation before comparison, so these 23 exercises accepted any punctuation-only input.",
             "Resolved centrally with exact punctuation matching; all 23 Grade 4 cases and supported marks pass regression tests.",
+        ],
+        13: [
+            "Fixed", "Malformed fill-in scoring", "NMG", "energie-stoffe: 12; licht-optik: 14; raeume-karte: 14",
+            "All 40 generated fill-ins now store exactly the missing fragment and accept the grammatically correct response.",
+            "Resolved and covered by the normalized-fill correctness regression.",
+        ],
+        14: [
+            "Fixed", "Factual / malformed content", "NMG", "kan4_6; eu4_33; gk4_35; mk4_28; ms4_42; rr4_8",
+            "All six exercises were rewritten or updated: Graubünden languages, 21-country Eurozone, both Landsgemeinde cantons, timeless migration wording, accurate organic-chemistry wording and a valid Roman-pass prompt.",
+            "Resolved against official Swiss and EU sources and covered by the factual regression.",
         ],
     },
     5: {
@@ -171,8 +201,28 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "The question began with an unrelated Prager Frühling prompt before switching to the Goldene Bulle.",
             "Replaced with one clear multiple-choice question about the Goldene Bulle and the election of the Roman-German king.",
         ],
+        10: [
+            "Fixed", "Answer-revealing hints", "Mathematics / German / NMG / French", "11 exercises with one-letter answers",
+            "The central sanitizer now detects and replaces all 11 direct one-letter answer reveals.",
+            "Resolved and covered by the one-character hint regression.",
+        ],
+        15: [
+            "Fixed", "Malformed fill-in scoring", "NMG", "weltall: 11; strom-elektrizitaet: 13; geschichte-zeit: 15",
+            "All 39 generated fill-ins now store exactly the missing fragment and accept the grammatically correct response.",
+            "Resolved and covered by the normalized-fill correctness regression.",
+        ],
+        16: [
+            "Fixed", "Factual / stale content", "NMG", "kb5-39; eg5-21; eg5-25; sp5-43; nh5-37",
+            "All five exercises now teach accurate free-fall, Eurozone, Schengen, Swiss separation-of-powers and Cradle-to-Cradle content.",
+            "Resolved against authoritative sources and covered by the factual regression.",
+        ],
     },
     6: {
+        6: [
+            "Fixed", "Answer-revealing hints", "German / NMG", "5 exercises with one-letter answers",
+            "The central sanitizer now detects and replaces all five direct one-letter answer reveals.",
+            "Resolved and covered by the one-character hint regression.",
+        ],
         5: [
             "Fixed", "Repeated filler", "Mathematics/German", "Multiple topics",
             "The original audit found repeated filler across unrelated topics.",
@@ -187,6 +237,16 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "Multi-gap / open-response scoring", "English", "writing-skills-6/ws6-44; vocabulary-6/vb6-36; culture-media-6/cm6-40, cm6-48",
             "Each prompt previously asked for multiple or creative entries while checking one input against one partial stored answer.",
             "The opinion task now uses Cycle-2 guided self-review; the three language tasks each contain one objectively gradable gap.",
+        ],
+        12: [
+            "Fixed", "Malformed fill-in scoring", "NMG", "weltall: 11; strom-elektrizitaet: 13; geschichte-zeit: 15",
+            "All 39 generated fill-ins now store exactly the missing fragment and accept the grammatically correct response.",
+            "Resolved and covered by the normalized-fill correctness regression.",
+        ],
+        13: [
+            "Fixed", "Factual content", "NMG", "ko6_9; mf6_42",
+            "Australia is now correctly described as the smallest continent rather than the largest island; the UN Migration Compact item now states that it is non-binding and that Switzerland abstained in 2018.",
+            "Resolved against authoritative sources and covered by the factual regression.",
         ],
     },
 }
