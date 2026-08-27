@@ -22,6 +22,10 @@ declare global {
 
 const GOOGLE_ADS_ID = "AW-18344865510";
 const GOOGLE_ADS_PURCHASE_SEND_TO = `${GOOGLE_ADS_ID}/i_-4CK_QtNUcEObdwatE`;
+const ADS_CTA_DEDUP_WINDOW_MS = 3_000;
+const ADS_CTA_DEDUP_PREFIX = "cleverli_ads_cta_click:";
+const ADS_CTA_SESSION_KEY = "cleverli_ads_cta_session_id";
+const recentAdsCtaClicks = new Map<string, number>();
 
 const PLAN_VALUE: Record<CheckoutPlan, number> = {
   monthly: 9.9,
@@ -44,6 +48,45 @@ function adsLpRequestContext() {
     forced_variant: params.has("ab"),
     internal_qa: params.get("utm_source")?.toLowerCase().startsWith("qa") ?? false,
   };
+}
+
+function adsCtaSessionId() {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const existing = window.sessionStorage.getItem(ADS_CTA_SESSION_KEY);
+    if (existing) return existing;
+
+    const created = typeof globalThis.crypto?.randomUUID === "function"
+      ? globalThis.crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    window.sessionStorage.setItem(ADS_CTA_SESSION_KEY, created);
+    return created;
+  } catch {
+    return null;
+  }
+}
+
+function claimAdsCtaClick(key: string, now = Date.now()) {
+  const memoryTimestamp = recentAdsCtaClicks.get(key);
+  if (memoryTimestamp && now - memoryTimestamp < ADS_CTA_DEDUP_WINDOW_MS) return false;
+
+  try {
+    const storedTimestamp = Number(window.sessionStorage.getItem(`${ADS_CTA_DEDUP_PREFIX}${key}`));
+    if (Number.isFinite(storedTimestamp) && now - storedTimestamp < ADS_CTA_DEDUP_WINDOW_MS) return false;
+    window.sessionStorage.setItem(`${ADS_CTA_DEDUP_PREFIX}${key}`, String(now));
+  } catch {
+    // The in-memory guard still protects the current page when storage is blocked.
+  }
+
+  recentAdsCtaClicks.set(key, now);
+  return true;
+}
+
+function adsCtaEventId() {
+  return typeof globalThis.crypto?.randomUUID === "function"
+    ? globalThis.crypto.randomUUID()
+    : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
 }
 
 export function pushDataLayerEvent(event: string, data: Record<string, unknown> = {}) {
@@ -132,8 +175,12 @@ export async function trackAdsLpCtaClick(
 ) {
   const page = pageContext.page ?? "primarschule_uebungen";
   const pagePath = pageContext.page_path ?? "/primarschule-uebungen";
+  const dedupeKey = [pagePath, type, destination].join(":");
+  if (!claimAdsCtaClick(dedupeKey)) return false;
+
   const variant = resolveAdsLpTrackingVariant(pageContext.variant);
   const requestContext = adsLpRequestContext();
+  const eventId = adsCtaEventId();
   const metadata = {
     page,
     page_path: pagePath,
@@ -154,6 +201,8 @@ export async function trackAdsLpCtaClick(
     ...(pageContext.experiment ? { experiment: pageContext.experiment } : {}),
     variant,
     ...(pageContext.trial_days ? { trial_days: pageContext.trial_days } : {}),
+    cta_event_id: eventId,
+    cta_session_id: adsCtaSessionId(),
     ...requestContext,
   };
 
@@ -166,6 +215,7 @@ export async function trackAdsLpCtaClick(
     accessToken: null,
     metadata,
   });
+  return true;
 }
 
 export function trackPurchase(planParam: string | null, transactionIdParam: string | null) {

@@ -663,13 +663,39 @@ function buildAdsAbStats(events: ActivityEventRow[]) {
     trial: createAdsVariantStats("trial"),
   };
 
-  const relevant = events.filter(event => [
+  const relevantRaw = events.filter(event => [
     "ads_lp_ab_assignment",
     "ads_lp_cta_click",
     "checkout_started",
     "subscription_trial_started",
     "subscription_started",
   ].includes(event.activity_type) && !isInternalAdsAbEvent(event));
+
+  const seenCtaEventIds = new Set<string>();
+  const lastCtaBySession = new Map<string, number>();
+  const relevant = relevantRaw.filter(event => {
+    if (event.activity_type !== "ads_lp_cta_click") return true;
+
+    const eventId = cleanString(event.metadata?.cta_event_id);
+    if (eventId) {
+      if (seenCtaEventIds.has(eventId)) return false;
+      seenCtaEventIds.add(eventId);
+    }
+
+    const sessionId = cleanString(event.metadata?.cta_session_id);
+    if (!sessionId) return true;
+
+    const key = [
+      sessionId,
+      normaliseAdsPage(event.metadata?.page, event.source, event.path),
+      cleanString(event.metadata?.cta_type),
+      cleanString(event.metadata?.destination),
+    ].join(":");
+    const timestamp = new Date(event.created_at).getTime();
+    const previous = lastCtaBySession.get(key);
+    lastCtaBySession.set(key, Math.max(previous ?? 0, timestamp));
+    return previous === undefined || Math.abs(previous - timestamp) >= 3_000;
+  });
 
   for (const event of relevant) {
     const variant = inferAdsVariant(event);
