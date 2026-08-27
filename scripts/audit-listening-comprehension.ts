@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { getTopics } from "../src/data";
 import { localizeExercise } from "../src/lib/exerciseLocalization";
@@ -86,8 +86,12 @@ function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: 
     if (options.length !== 4 || new Set(options).size !== 4) failures.push(`${key}: expected four unique choices`);
     if (!options.includes(exercise.answer)) failures.push(`${key}: answer is absent from choices`);
     if (grade === 1) {
-      const visuals = exercise.optionEmojis ?? [];
+      const visuals = exercise.optionImages ?? exercise.optionEmojis ?? [];
       if (visuals.length !== options.length || new Set(visuals).size !== options.length) failures.push(`${key}: Grade 1 requires four unique visual choices`);
+      if (exercise.optionEmojis?.some(visual => /^[🔴🔵🟡🟢].+/u.test(visual))) failures.push(`${key}: colour-dot plus object emoji is an ambiguous visual; use one correctly coloured illustration`);
+      exercise.optionImages?.forEach(image => {
+        if (!image.startsWith("/") || !existsSync(`${process.cwd()}/public${image}`)) failures.push(`${key}: missing visual asset ${image}`);
+      });
       if (!containsNormalizedPhrase(exercise.listeningText ?? "", exercise.question)) failures.push(`${key}: Grade 1 spoken prompt omits the question`);
       options.forEach(option => {
         if (!containsNormalizedPhrase(exercise.listeningText ?? "", option)) failures.push(`${key}: Grade 1 spoken prompt omits choice «${option}»`);
@@ -101,7 +105,7 @@ function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: 
         if (wordCount(option) > limit) failures.push(`${key}: choice «${option}» exceeds the Grade 2 reading-support limit of ${limit} words`);
       });
       if (exercise.difficulty === 1) {
-        const visuals = exercise.optionEmojis ?? [];
+        const visuals = exercise.optionImages ?? exercise.optionEmojis ?? [];
         if (visuals.length !== options.length || new Set(visuals).size !== options.length) failures.push(`${key}: easy Grade 2 task requires four unique visual choices`);
       }
     }
