@@ -360,6 +360,10 @@ def request(method: str, url: str, payload: dict | None = None) -> dict:
             retry_after = error.headers.get("Retry-After")
             delay = float(retry_after) if retry_after else min(2 ** attempt, 16)
             time.sleep(delay)
+        except (TimeoutError, urllib.error.URLError):
+            if attempt == 5:
+                raise
+            time.sleep(min(2 ** attempt, 16))
     raise RuntimeError("unreachable")
 
 
