@@ -294,7 +294,10 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
   "oekologie-4": { de: "Ökologie & Umwelt", fr: "Écologie et environnement", it: "Ecologia e ambiente", en: "Ecology & Environment" },
   "koerper-sinne-4": { de: "Körper & Sinne", fr: "Corps et sens", it: "Corpo e sensi", en: "Body & Senses" },
   "oekosysteme": { de: "Ökosysteme", fr: "Écosystèmes", it: "Ecosistemi", en: "Ecosystems" },
-  "sonnensystem": { de: "Sonnensystem", fr: "Système solaire", it: "Sistema solare", en: "Solar System" },
+  "sonnensystem": { de: "Sonnensystem entdecken", fr: "Découvrir le système solaire", it: "Scoprire il sistema solare", en: "Discovering the Solar System" },
+  "weltall": { de: "Weltall entdecken", fr: "Découvrir l’espace", it: "Scoprire lo spazio", en: "Discovering Space" },
+  "chemie-einfuehrung-5": { de: "Stoffe im Alltag erforschen", fr: "Explorer les matières du quotidien", it: "Esplorare i materiali quotidiani", en: "Exploring Everyday Materials" },
+  "wirtschaft-handel-5": { de: "Wirtschaft im Alltag", fr: "Économie au quotidien", it: "Economia quotidiana", en: "Everyday Economy" },
   "strom-energie": { de: "Strom & Energie", fr: "Électricité et énergie", it: "Elettricità ed energia", en: "Electricity & Energy" },
   "koerper-gesundheit-5": { de: "Körper & Gesundheit", fr: "Corps et santé", it: "Corpo e salute", en: "Body & Health" },
   "evolution-leben": { de: "Evolution & Leben", fr: "Évolution et vie", it: "Evoluzione e vita", en: "Evolution & Life" },
@@ -303,6 +306,9 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
   "technologie-digital": { de: "Technologie & Digital", fr: "Technologie et numérique", it: "Tecnologia e digitale", en: "Technology & Digital" },
   "astronomie": { de: "Astronomie", fr: "Astronomie", it: "Astronomia", en: "Astronomy" },
   "umwelt-nachhaltigkeit": { de: "Umwelt & Nachhaltigkeit", fr: "Environnement et durabilité", it: "Ambiente e sostenibilità", en: "Environment & Sustainability" },
+  "chemie-6": { de: "Stoffe und ihre Eigenschaften", fr: "Matières et propriétés", it: "Materiali e proprietà", en: "Materials & Their Properties" },
+  "biologie-zelle-6": { de: "Körper, Gesundheit & Lebensräume", fr: "Corps, santé et habitats", it: "Corpo, salute e habitat", en: "Body, Health & Habitats" },
+  "astronomie-6": { de: "Erde, Mond & Sonne", fr: "Terre, Lune et Soleil", it: "Terra, Luna e Sole", en: "Earth, Moon & Sun" },
 
   // ── Grade 4–6: RZG (Räume, Zeiten, Gesellschaft) ─────────────────────────
   "kantone-schweiz-4": { de: "Schweizer Kantone", fr: "Cantons suisses", it: "Cantoni svizzeri", en: "Swiss Cantons" },
@@ -326,11 +332,11 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
   "globalisierung-5": { de: "Globalisierung", fr: "Mondialisation", it: "Globalizzazione", en: "Globalisation" },
   "medien-kommunikation-5": { de: "Medien & Kommunikation", fr: "Médias et communication", it: "Media e comunicazione", en: "Media & Communication" },
   "neuzeit-6": { de: "Neuzeit & Frühe Neuzeit", fr: "Époque moderne", it: "Età moderna", en: "Early Modern Period" },
-  "industrialisierung-6": { de: "Industrialisierung", fr: "Industrialisation", it: "Industrializzazione", en: "Industrialisation" },
+  "industrialisierung-6": { de: "Arbeit & Technik im Wandel", fr: "Travail et technique au fil du temps", it: "Lavoro e tecnologia nel tempo", en: "Work & Technology Through Time" },
   "demokratie-menschenrechte-6": { de: "Demokratie & Menschenrechte", fr: "Démocratie et droits humains", it: "Democrazia e diritti umani", en: "Democracy & Human Rights" },
-  "weltkriege-6": { de: "20. Jahrhundert — Kriege & Frieden", fr: "20e siècle — Guerres et paix", it: "XX secolo — Guerre e pace", en: "20th Century — Wars & Peace" },
-  "globalisierung-6": { de: "Globalisierung", fr: "Mondialisation", it: "Globalizzazione", en: "Globalisation" },
-  "wirtschaft-grundlagen-6": { de: "Wirtschaft — Grundlagen", fr: "Économie — Bases", it: "Economia — Basi", en: "Economics — Basics" },
+  "weltkriege-6": { de: "Frieden & Zusammenleben", fr: "Paix et vivre ensemble", it: "Pace e convivenza", en: "Peace & Living Together" },
+  "globalisierung-6": { de: "Weltweit verbunden", fr: "Reliés dans le monde", it: "Connessi nel mondo", en: "Connected Worldwide" },
+  "wirtschaft-grundlagen-6": { de: "Wirtschaft im Alltag", fr: "Économie au quotidien", it: "Economia quotidiana", en: "Everyday Economy" },
   "kontinente-6": { de: "Kontinente & Weltregionen", fr: "Continents et régions du monde", it: "Continenti e regioni del mondo", en: "Continents & World Regions" },
   "migration-flucht-6": { de: "Migration & Flucht", fr: "Migration et exil", it: "Migrazione e fuga", en: "Migration & Refugees" },
   "zukunft-herausforderungen-6": { de: "Zukunft & Herausforderungen", fr: "Avenir et défis", it: "Futuro e sfide", en: "Future & Challenges" },
@@ -363,6 +369,9 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
   "english-advanced-grammar-6": { de: "Advanced Grammar", fr: "Grammaire avancée", it: "Grammatica avanzata", en: "Advanced Grammar" },
   "english-media-6": { de: "Media & Communication", fr: "Médias et communication", it: "Media e comunicazione", en: "Media & Communication" },
   "english-global-issues-6": { de: "Global Issues", fr: "Enjeux mondiaux", it: "Questioni globali", en: "Global Issues" },
+  "passive-voice-6": { de: "Everyday English", fr: "Anglais au quotidien", it: "Inglese quotidiano", en: "Everyday English" },
+  "conditionals-6": { de: "Plans & Reasons", fr: "Projets et raisons", it: "Progetti e motivi", en: "Plans & Reasons" },
+  "reported-speech-6": { de: "Conversations", fr: "Conversations", it: "Conversazioni", en: "Conversations" },
 
   // ── Grade 5–6: French ─────────────────────────────────────────────────────
   "french-greetings-5": { de: "Begrüssung auf Französisch", fr: "Salutations en français", it: "Saluti in francese", en: "French Greetings" },
@@ -383,6 +392,10 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
   "french-culture-6": { de: "Frankophonie & Kultur", fr: "Francophonie et culture", it: "Francofonia e cultura", en: "Francophonie & Culture" },
   "french-switzerland-6": { de: "Romandie & Schweiz", fr: "La Romandie et la Suisse", it: "La Romandia e la Svizzera", en: "Romandy & Switzerland" },
   "french-advanced-6": { de: "Fortgeschrittenes Französisch", fr: "Français avancé", it: "Francese avanzato", en: "Advanced French" },
+  "passe-compose-6": { de: "Ma journée", fr: "Ma journée", it: "La mia giornata", en: "My Day" },
+  "imparfait-6": { de: "À l’école", fr: "À l’école", it: "A scuola", en: "At School" },
+  "futur-simple-6": { de: "Projets & loisirs", fr: "Projets et loisirs", it: "Progetti e tempo libero", en: "Plans & Free Time" },
+  "pronoms-cod-coi-6": { de: "Phrases utiles", fr: "Phrases utiles", it: "Frasi utili", en: "Useful Phrases" },
 };
 
 export function getTopicTitle(topicId: string, lang: string, fallback: string): string {

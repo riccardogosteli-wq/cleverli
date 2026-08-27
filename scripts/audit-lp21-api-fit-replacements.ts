@@ -6,6 +6,7 @@ import {
   isLp21ApiFitTarget,
 } from "../src/data/lp21ApiFitReplacements";
 import targets from "../src/data/lp21ApiFitTargets.json";
+import { TOPIC_TITLES, getTopicTitle } from "../src/data/topicTitles";
 import type { Exercise } from "../src/types/exercise";
 
 const EXPECTED_TYPES = { "multiple-choice": 582, "fill-in-blank": 544, "self-review": 10 } as const;
@@ -38,6 +39,15 @@ for (let grade = 1; grade <= 6; grade += 1) {
     for (const topic of getTopics(grade, subject.id)) {
       const expectedTitle = LP21_API_FIT_TOPIC_TITLES[`${grade}/${subject.id}/${topic.id}`];
       if (expectedTitle && topic.title !== expectedTitle) failures.push({ key: `${grade}/${subject.id}/${topic.id}`, reason: "replacement topic title mismatch" });
+      if (expectedTitle) {
+        const expectedPublicTitle = topic.id === "weltall" ? "Weltall entdecken" : expectedTitle;
+        if (getTopicTitle(topic.id, "de", topic.title) !== expectedPublicTitle) {
+          failures.push({ key: `${grade}/${subject.id}/${topic.id}`, reason: "public German topic title mismatch" });
+        }
+        for (const language of ["de", "en", "fr", "it"] as const) {
+          if (!TOPIC_TITLES[topic.id]?.[language]?.trim()) failures.push({ key: `${grade}/${subject.id}/${topic.id}`, reason: `missing public ${language} topic title` });
+        }
+      }
       for (const exercise of topic.exercises) {
         const key = `${grade}/${subject.id}/${topic.id}/${exercise.id}`;
         const signature = `${grade}|${subject.id}|${normalized(exercise.question)}|${normalized(exercise.answer)}`;
