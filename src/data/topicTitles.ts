@@ -107,6 +107,30 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
     it: "Capire testi audio",
     en: "Understanding audio texts",
   },
+  "hoerverstehen-3": {
+    de: "Hörgeschichten verstehen",
+    fr: "Comprendre des histoires audio",
+    it: "Capire storie audio",
+    en: "Understanding audio stories",
+  },
+  "hoerverstehen-4": {
+    de: "Hörtexte erschliessen",
+    fr: "Comprendre des textes audio",
+    it: "Comprendere testi audio",
+    en: "Exploring audio texts",
+  },
+  "hoerverstehen-5": {
+    de: "Zuhören & einordnen",
+    fr: "Écouter et interpréter",
+    it: "Ascoltare e interpretare",
+    en: "Listening and interpreting",
+  },
+  "hoerverstehen-6": {
+    de: "Hörtexte analysieren",
+    fr: "Analyser des textes audio",
+    it: "Analizzare testi audio",
+    en: "Analysing audio texts",
+  },
   "vergleichen": {
     de: "Grösser & Kleiner",
     fr: "Plus grand & plus petit",

@@ -36,8 +36,8 @@ def main() -> None:
 
     helper = load_sheet_helper()
     report = json.loads(args.report.read_text())
-    if report.get("total") != 13_718:
-        raise RuntimeError(f"Expected 13,718 LP21 reviews, found {report.get('total')}")
+    if report.get("total") != 13_918:
+        raise RuntimeError(f"Expected 13,918 LP21 reviews, found {report.get('total')}")
     fits_by_grade: dict[int, list[dict]] = defaultdict(list)
     for fit in report["fits"]:
         fits_by_grade[int(fit["grade"])].append(fit)

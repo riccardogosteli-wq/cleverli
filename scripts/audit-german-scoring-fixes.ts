@@ -6,10 +6,10 @@ import { getExerciseDuplicateKey } from "./exercise-duplicate-key";
 const expectedGradeCounts: Record<number, number> = {
   1: 1863,
   2: 1752,
-  3: 1952,
-  4: 2451,
-  5: 2850,
-  6: 2850,
+  3: 2002,
+  4: 2501,
+  5: 2900,
+  6: 2900,
 };
 
 const selfReviewKeys = new Set([

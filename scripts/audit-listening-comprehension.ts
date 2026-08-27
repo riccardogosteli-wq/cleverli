@@ -12,7 +12,11 @@ function normalize(value: string) {
   return value.toLocaleLowerCase("de-CH").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 }
 
-function checkExercise(grade: 1 | 2, exercise: Exercise, index: number) {
+function containsNormalizedPhrase(text: string, phrase: string) {
+  return ` ${normalize(text)} `.includes(` ${normalize(phrase)} `);
+}
+
+function checkExercise(grade: 1 | 2 | 3 | 4 | 5 | 6, exercise: Exercise, index: number) {
   const key = `Grade ${grade}/${exercise.id}`;
   const expectedId = `g${grade}hoer${index + 1}`;
   const expectedDifficulty = index < 15 ? 1 : index < 35 ? 2 : 3;
@@ -23,6 +27,7 @@ function checkExercise(grade: 1 | 2, exercise: Exercise, index: number) {
   if (!exercise.listeningText?.trim()) failures.push(`${key}: hidden listening text is missing`);
   if (exercise.listeningText && exercise.question.includes(exercise.listeningText)) failures.push(`${key}: listening transcript is visible in the question`);
   if (!exercise.hints || exercise.hints.length !== 2) failures.push(`${key}: expected two hints`);
+  if (exercise.type === "multiple-choice" && containsNormalizedPhrase(exercise.hints.join(" "), exercise.answer)) failures.push(`${key}: hint reveals the answer`);
   for (const field of ["questionEN", "questionFR", "questionIT", "hintsEN", "hintsFR", "hintsIT"] as const) {
     const value = exercise[field];
     if (!value || (Array.isArray(value) ? value.some(item => !item.trim()) : !value.trim())) failures.push(`${key}: missing ${field}`);
@@ -34,6 +39,7 @@ function checkExercise(grade: 1 | 2, exercise: Exercise, index: number) {
     if (previous) failures.push(`${key}: duplicate listening text also used by ${previous}`);
     allAudio.set(audioKey, key);
     if (exercise.listeningText.length < 20) failures.push(`${key}: listening text is too short to assess comprehension`);
+    if (exercise.listeningText.length > 700) failures.push(`${key}: listening text is too long for reliable TTS playback`);
   }
 
   if (exercise.type === "multiple-choice") {
@@ -60,7 +66,7 @@ function checkExercise(grade: 1 | 2, exercise: Exercise, index: number) {
 }
 
 const summary = [];
-for (const grade of [1, 2] as const) {
+for (const grade of [1, 2, 3, 4, 5, 6] as const) {
   const topic = getTopics(grade, "german").find(candidate => candidate.id === `hoerverstehen-${grade}`);
   if (!topic) {
     failures.push(`Grade ${grade}: listening topic missing`);
@@ -72,6 +78,12 @@ for (const grade of [1, 2] as const) {
   if (difficulties[1] !== 15 || difficulties[2] !== 20 || difficulties[3] !== 15) failures.push(`Grade ${grade}: wrong difficulty distribution ${JSON.stringify(difficulties)}`);
   const positions = Object.fromEntries([0, 1, 2, 3].map(position => [position, topic.exercises.filter(exercise => exercise.type === "multiple-choice" && exercise.options?.indexOf(exercise.answer) === position).length]));
   if (Object.values(positions).some(count => count < 10)) failures.push(`Grade ${grade}: correct-choice positions are not balanced ${JSON.stringify(positions)}`);
+  const rawAverageWordsByDifficulty = Object.fromEntries([1, 2, 3].map(difficulty => {
+    const texts = topic.exercises.filter(exercise => exercise.difficulty === difficulty).map(exercise => exercise.listeningText?.split(/\s+/u).length ?? 0);
+    return [difficulty, texts.reduce((sum, count) => sum + count, 0) / texts.length];
+  }));
+  const averageWordsByDifficulty = Object.fromEntries(Object.entries(rawAverageWordsByDifficulty).map(([difficulty, average]) => [difficulty, Math.round(average * 10) / 10]));
+  if (grade >= 3 && !(rawAverageWordsByDifficulty[1] < rawAverageWordsByDifficulty[2] && rawAverageWordsByDifficulty[2] < rawAverageWordsByDifficulty[3])) failures.push(`Grade ${grade}: audio complexity does not increase by difficulty ${JSON.stringify(averageWordsByDifficulty)}`);
   summary.push({
     grade,
     id: topic.id,
@@ -79,6 +91,7 @@ for (const grade of [1, 2] as const) {
     difficulties,
     types: Object.fromEntries(["multiple-choice", "drag-drop"].map(type => [type, topic.exercises.filter(exercise => exercise.type === type).length])),
     answerPositions: positions,
+    averageWordsByDifficulty,
     digest: createHash("sha256").update(JSON.stringify(topic.exercises)).digest("hex").slice(0, 16),
   });
 }
@@ -90,8 +103,10 @@ if (!snapshot.source.includes("api.lehrplan.ch") || !Number.isFinite(ageMs) || a
 const nodes = Object.values(snapshot.nodes);
 for (const code of ["D.1.A.1", "D.1.B.1", "D.1.C.1", "D.1.D.1"]) {
   if (!nodes.some(node => node.code === code)) failures.push(`LP21 API competency ${code} is missing`);
-  if (!nodes.some(node => node.strukturtyp === "Kompetenzstufe" && node.code?.startsWith(`${code}.`) && String(node.zyklus).includes("1"))) failures.push(`LP21 API competency ${code} has no Cycle 1 stage`);
+  for (const cycle of [1, 2]) {
+    if (!nodes.some(node => node.strukturtyp === "Kompetenzstufe" && node.code?.startsWith(`${code}.`) && String(node.zyklus).includes(String(cycle)))) failures.push(`LP21 API competency ${code} has no Cycle ${cycle} stage`);
+  }
 }
 
-console.log(JSON.stringify({ summary, lp21Competencies: ["D.1.A.1", "D.1.B.1", "D.1.C.1", "D.1.D.1"], failures }, null, 2));
+console.log(JSON.stringify({ summary, lp21Competencies: ["D.1.A.1", "D.1.B.1", "D.1.C.1", "D.1.D.1"], cycles: [1, 2], failures }, null, 2));
 if (failures.length) process.exit(1);

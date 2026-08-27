@@ -301,7 +301,7 @@ for (const grade of GRADES) {
   }
 }
 
-if (fits.length !== 13_718) throw new Error(`Expected 13,718 reviews, found ${fits.length}`);
+if (fits.length !== 13_918) throw new Error(`Expected 13,918 reviews, found ${fits.length}`);
 if (missingMappings.length) throw new Error(`Invalid live-API mappings: ${missingMappings.join(", ")}`);
 const duplicateRows = fits.filter((fit, index) => index > 0 && fit.grade === fits[index - 1].grade && fit.row === fits[index - 1].row);
 if (duplicateRows.length) throw new Error(`Duplicate Sheet rows in review: ${duplicateRows.length}`);
