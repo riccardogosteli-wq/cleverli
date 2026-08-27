@@ -106,7 +106,13 @@ def main() -> None:
         }
 
     print(json.dumps({"applied": args.apply, "summary": summary}, indent=2))
-    if any(item["idMismatches"] or item["protectedConflicts"] or item["readbackMismatches"] for item in summary.values()):
+    protected_conflicts_are_errors = not (args.apply and args.replace_existing)
+    if any(
+        item["idMismatches"]
+        or (protected_conflicts_are_errors and item["protectedConflicts"])
+        or item["readbackMismatches"]
+        for item in summary.values()
+    ):
         raise SystemExit(1)
 
 
