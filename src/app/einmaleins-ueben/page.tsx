@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Einmaleins üben online - 1x1 Aufgaben Schweiz",
     description: "1x1-Reihen, gemischte Aufgaben und Divisionen für die Schweizer Primarschule üben.",
     url: "https://www.cleverli.ch/einmaleins-ueben",
-    images: [{ url: "https://www.cleverli.ch/og-cleverli-logo-2026.png", width: 1200, height: 630, alt: "Cleverli Logo mit Maskottchen" }],
+    images: [{ url: "https://www.cleverli.ch/og-cleverli-primarschule-2026.png", width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
   },
 };
 

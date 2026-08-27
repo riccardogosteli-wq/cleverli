@@ -56,13 +56,13 @@ export const metadata: Metadata = {
     siteName: "Cleverli",
     title: "Cleverli — Lernen macht Spass 🇨🇭",
     description: "Die interaktive Lernplattform für Kinder der 1.-6. Klasse. Mathe, Deutsch & mehr — Lehrplan 21. Jetzt kostenlos testen!",
-    images: [{ url: "/og-cleverli-logo-2026.png", width: 1200, height: 630, alt: "Cleverli Logo mit Maskottchen" }],
+    images: [{ url: "/og-cleverli-primarschule-2026.png", width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cleverli — Lernen macht Spass 🇨🇭",
     description: "Interaktive Lernplattform für Kinder. Mathe, Deutsch & NMG, Klasse 1–6, Lehrplan 21.",
-    images: ["/og-cleverli-logo-2026.png"],
+    images: ["/og-cleverli-primarschule-2026.png"],
   },
   alternates: {
     canonical: BASE_URL,

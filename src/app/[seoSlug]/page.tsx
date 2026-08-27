@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: page.title,
       description: page.description,
       url: `${BASE}${page.href}`,
-      images: [{ url: `${BASE}/og-cleverli-logo-2026.png`, width: 1200, height: 630, alt: "Cleverli Logo mit Maskottchen" }],
+      images: [{ url: `${BASE}/og-cleverli-primarschule-2026.png`, width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
     },
   };
 }

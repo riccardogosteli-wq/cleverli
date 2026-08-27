@@ -38,7 +38,7 @@ export default function StructuredData() {
         url: "https://www.cleverli.ch",
         description: "Cleverli ist die interaktive Lernplattform für Kinder der 1.-6. Klasse. Mathe, Deutsch und mehr — abgestimmt auf Lehrplan 21.",
         inLanguage: ["de-CH", "fr-CH", "it-CH", "en-GB"],
-        screenshot: "https://www.cleverli.ch/og-cleverli-logo-2026.png",
+        screenshot: "https://www.cleverli.ch/og-cleverli-primarschule-2026.png",
         offers: [
           {
             "@type": "Offer",
