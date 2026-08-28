@@ -65,10 +65,10 @@ function AddChildForm({ onSave, onCancel }: { onSave: () => void; onCancel: () =
       {/* Grade */}
       <div>
         <div className="text-xs font-medium text-gray-500 mb-2">{tr("classLabel")}</div>
-        <div className="flex gap-2">
+        <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
           {[1,2,3,4,5,6].map(g => (
             <button key={g} type="button" onClick={() => setGrade(g)}
-              className={`flex-1 py-2 rounded-xl text-sm font-bold border-2 transition-all ${
+              className={`min-h-11 min-w-11 px-1 py-2 rounded-xl text-sm font-bold border-2 transition-all ${
                 grade === g
                   ? "border-green-700 bg-green-700 text-white"
                   : "border-gray-200 bg-white text-gray-700 hover:border-green-300"

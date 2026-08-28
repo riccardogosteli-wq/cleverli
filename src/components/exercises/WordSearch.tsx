@@ -79,7 +79,6 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
   const isSelected = (r: number, c: number) => selecting.some(s => s.row === r && s.col === c);
   const isFound    = (r: number, c: number) => foundCells.has(`${r}-${c}`);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const tapCell = useCallback((row: number, col: number) => {
     if (found.size === words.length) return;
 
@@ -111,7 +110,7 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
       }
       return next;
     });
-  }, [found, grid, placements, play]);
+  }, [found, grid, placements, play, words.length]);
 
   return (
     <div className="space-y-4">
@@ -131,15 +130,15 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
         })}
       </div>
 
-      {/* Grid — cell size calculated to fill available width, minimum 36px for touch */}
-      <div className="overflow-x-auto flex justify-center -mx-1">
+      {/* Keep every letter at a reliable touch size; narrow phones can scroll the grid. */}
+      <div className="overflow-x-auto -mx-1 pb-1">
         <div
+          className="mx-auto"
           style={{
             display: "grid",
-            gridTemplateColumns: `repeat(${gridSize}, minmax(0, 1fr))`,
+            gridTemplateColumns: `repeat(${gridSize}, 44px)`,
             gap: "3px",
-            width: "100%",
-            maxWidth: `${gridSize * 44}px`,
+            width: `${gridSize * 44 + (gridSize - 1) * 3}px`,
           }}
         >
           {grid.flatMap((row, r) => row.map((letter, c) => {
@@ -151,8 +150,8 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
                 onClick={() => tapCell(r, c)}
                 className="rounded-md font-bold transition-all active:scale-90 select-none aspect-square flex items-center justify-center text-sm"
                 style={{
-                  minWidth: "36px",
-                  minHeight: "36px",
+                  width: "44px",
+                  height: "44px",
                   background: fnd ? "#bbf7d0" : sel ? "#bfdbfe" : "#f1f5f9",
                   color:      fnd ? "#15803d" : sel ? "#1d4ed8" : "#374151",
                   border:     fnd ? "2px solid #22c55e" : sel ? "2px solid #3b82f6" : "2px solid transparent",

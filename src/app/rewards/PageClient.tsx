@@ -169,7 +169,7 @@ export default function RewardsPage() {
           className="block w-full bg-amber-500 text-white py-4 rounded-2xl font-bold text-base hover:bg-amber-600 active:scale-95 transition-all shadow-md">
           {lang === "fr" ? "Débloquer Premium — CHF 9.90/mois" : lang === "it" ? "Sblocca Premium — CHF 9.90/mese" : lang === "en" ? "Unlock Premium — CHF 9.90/month" : "Premium freischalten — CHF 9.90/Mt."}
         </button>
-        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 underline">
+        <Link href="/dashboard" className="inline-flex min-h-11 items-center justify-center px-2 text-sm text-gray-400 hover:text-gray-600 underline">
           {lang === "fr" ? "Retour à l'apprentissage" : lang === "it" ? "Torna all'apprendimento" : lang === "en" ? "Back to learning" : "Zurück zum Lernen"}
         </Link>
       </div>
@@ -197,7 +197,7 @@ export default function RewardsPage() {
           {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
         </h1>
         <div className="flex-1" />
-        <Link href="/dashboard" className="hidden md:block text-sm text-gray-400 hover:text-gray-600">
+        <Link href="/dashboard" className="hidden min-h-11 items-center px-2 text-sm text-gray-400 hover:text-gray-600 md:flex">
           ← {lang === "fr" ? "Retour au tableau de bord" : lang === "it" ? "Torna alla dashboard" : lang === "en" ? "Back to dashboard" : "Zurück zum Dashboard"}
         </Link>
       </div>

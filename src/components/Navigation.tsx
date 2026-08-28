@@ -172,7 +172,7 @@ export default function Navigation() {
               <a
                 href="/login"
 
-                className="text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap"
+                className="flex min-h-11 items-center justify-center text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap"
                 style={{ minWidth: "56px", textAlign: "center" }}
               >
                 {tr("login")}
@@ -180,7 +180,7 @@ export default function Navigation() {
               <a
                 href="/signup"
 
-                className="text-sm bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center min-w-[160px]"
+                className="inline-flex min-h-11 min-w-[160px] items-center justify-center text-sm bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap text-center"
               >
                 {tr("signup")}
               </a>

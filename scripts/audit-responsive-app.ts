@@ -54,6 +54,7 @@ const CORE_ROUTES: AuditRoute[] = [
   { path: "/primarschule-uebungen", name: "primary-seo", group: "seo", guest: true },
   { path: "/1x1-spiele", name: "times-table-games", group: "seo", guest: true },
   { path: "/blog/kinder-motivieren-zum-lernen", name: "blog", group: "seo", guest: true },
+  { path: "/blog", name: "blog-index", group: "seo", guest: true },
   { path: "/mathe-uebungen-1-klasse", name: "grade-subject-seo", group: "seo", guest: true },
   { path: "/ads/primarschule", name: "ads-landing", group: "ads", guest: true },
   { path: "/agb", name: "terms", group: "legal", guest: true },
@@ -141,13 +142,26 @@ async function inspectLayout(page: Page, viewport: Viewport) {
       const style = getComputedStyle(el);
       return rect.width > 0 && rect.height > 0 && style.display !== 'none' && style.visibility !== 'hidden';
     };
+    const insideHorizontalScroller = function (el) {
+      let parent = el.parentElement;
+      while (parent && parent !== document.body) {
+        const style = getComputedStyle(parent);
+        if (
+          ['auto', 'scroll'].includes(style.overflowX) &&
+          parent.scrollWidth > parent.clientWidth + 1
+        ) return true;
+        parent = parent.parentElement;
+      }
+      return false;
+    };
 
     for (const el of Array.from(document.body.querySelectorAll('*'))) {
       if (['SCRIPT', 'STYLE', 'META', 'LINK', 'PATH'].includes(el.tagName)) continue;
+      if (el.classList.contains('sr-only')) continue;
       const rect = el.getBoundingClientRect();
       if (!visible(el, rect)) continue;
       const style = getComputedStyle(el);
-      if (rect.left < -1 || rect.right > vw + 1) {
+      if ((rect.left < -1 || rect.right > vw + 1) && !insideHorizontalScroller(el)) {
         if (outside.length < 12) outside.push(describe(el) + ' [' + Math.round(rect.left) + '..' + Math.round(rect.right) + ' / ' + vw + ']');
       }
       const text = (el.textContent || '').trim();
@@ -161,6 +175,7 @@ async function inspectLayout(page: Page, viewport: Viewport) {
 
     const targets = document.querySelectorAll("button, input, select, textarea, a, [role='button'], [role='link']");
     for (const el of Array.from(targets)) {
+      if (el.classList.contains('sr-only')) continue;
       const rect = el.getBoundingClientRect();
       if (!visible(el, rect) || rect.bottom < 0 || rect.top > vh) continue;
       const style = getComputedStyle(el);
@@ -201,7 +216,15 @@ async function auditRoute(page: Page, route: AuditRoute, viewports: Viewport[]) 
   };
   const onRequestFailed = (request: { url(): string; failure(): { errorText?: string } | null }) => {
     const url = request.url();
-    if (!url.includes("google-analytics") && !url.includes("posthog")) {
+    const expectedAbort = request.failure()?.errorText === "net::ERR_ABORTED";
+    const thirdPartyTelemetry =
+      url.includes("google-analytics") ||
+      url.includes("analytics.google") ||
+      url.includes("googletagmanager") ||
+      url.includes("google.com/ccm") ||
+      url.includes("doubleclick.net") ||
+      url.includes("posthog");
+    if (!thirdPartyTelemetry && !expectedAbort) {
       failedRequests.push(`${url} :: ${request.failure()?.errorText ?? "failed"}`.slice(0, 400));
     }
   };

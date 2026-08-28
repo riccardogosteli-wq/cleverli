@@ -164,12 +164,12 @@ export default function Login() {
           </button>
 
           <div className="flex flex-col gap-1.5 items-center pt-1">
-            <Link href="/reset-password" className="text-xs text-gray-800 font-semibold hover:text-gray-800 underline">
+            <Link href="/reset-password" className="inline-flex min-h-11 items-center justify-center px-2 text-xs text-gray-800 font-semibold hover:text-gray-800 underline">
               Passwort vergessen?
             </Link>
             <Link
               href={pendingCheckout ? `/signup?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}${pendingCheckout.trialDays ? `&trial=${pendingCheckout.trialDays}` : ""}` : "/signup"}
-              className="text-xs text-green-700 underline"
+              className="inline-flex min-h-11 items-center justify-center px-2 text-xs text-green-700 underline"
             >
               Noch kein Konto? Jetzt registrieren →
             </Link>

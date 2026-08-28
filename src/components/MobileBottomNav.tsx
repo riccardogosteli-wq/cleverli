@@ -58,6 +58,12 @@ export default function MobileBottomNav() {
   if (isExercise || isAuthPage || isAdsPage || isInternalPage) return null;
 
   return (
+    <>
+    <div
+      className="sm:hidden"
+      style={{ height: `calc(${profile.xp > 0 ? "5.5rem" : "4rem"} + env(safe-area-inset-bottom))` }}
+      aria-hidden="true"
+    />
     <nav
       className="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-40 flex flex-col"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
@@ -103,5 +109,6 @@ export default function MobileBottomNav() {
       })}
       </div>
     </nav>
+    </>
   );
 }

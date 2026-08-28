@@ -77,9 +77,12 @@ export default function NumberLine({ question, min, max, answer, step = 1, onAns
           value={value}
           onChange={handleSlider}
           disabled={submitted}
-          className="w-full h-5 rounded-full appearance-none cursor-pointer"
+          className="w-full h-11 rounded-full appearance-none cursor-pointer"
           style={{
             background: `linear-gradient(to right, #3b82f6 ${pct(value)}%, #e5e7eb ${pct(value)}%)`,
+            backgroundSize: "100% 20px",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
             WebkitAppearance: "none",
             touchAction: "pan-y",
           }}

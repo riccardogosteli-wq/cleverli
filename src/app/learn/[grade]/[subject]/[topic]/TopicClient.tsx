@@ -87,22 +87,26 @@ export default function TopicClient({ topic, grade, subject, nextTopicId = null 
   }
 
   return (
-    <div className="space-y-6">
-      <ProgressMapClient
-        topicId={topic.id}
-        topicTitle={topicTitle}
-        grade={grade}
-        subject={subject}
-        completedExercisesByDifficulty={exerciseCounts.completed}
-        totalExercisesByDifficulty={exerciseCounts.total}
-      />
-      <ExercisePlayer
-        topic={topic}
-        grade={grade}
-        subject={subject}
-        isPremium={loaded && premiumChecked ? isPremium : false}
-        nextTopicId={nextTopicId}
-      />
+    <div className="flex flex-col gap-6">
+      <div className="order-2 sm:order-1">
+        <ProgressMapClient
+          topicId={topic.id}
+          topicTitle={topicTitle}
+          grade={grade}
+          subject={subject}
+          completedExercisesByDifficulty={exerciseCounts.completed}
+          totalExercisesByDifficulty={exerciseCounts.total}
+        />
+      </div>
+      <div className="order-1 sm:order-2">
+        <ExercisePlayer
+          topic={topic}
+          grade={grade}
+          subject={subject}
+          isPremium={loaded && premiumChecked ? isPremium : false}
+          nextTopicId={nextTopicId}
+        />
+      </div>
     </div>
   );
 }

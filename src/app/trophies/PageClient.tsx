@@ -381,7 +381,7 @@ export default function MissionenPage() {
 
       {/* Back link */}
       <div className="text-center pt-2">
-        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 underline">
+        <Link href="/dashboard" className="inline-flex min-h-11 items-center justify-center px-2 text-sm text-gray-400 hover:text-gray-600 underline">
           ← {lang === "fr" ? "Retour au tableau de bord" : lang === "it" ? "Torna alla dashboard" : lang === "en" ? "Back to dashboard" : "Zurück zum Dashboard"}
         </Link>
       </div>

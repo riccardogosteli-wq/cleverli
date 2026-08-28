@@ -79,7 +79,7 @@ export default function ImpressumClient() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12 space-y-6">
-      <Link href="/" className="text-sm text-gray-400 hover:text-gray-600">{t.back}</Link>
+      <Link href="/" className="inline-flex min-h-11 items-center px-2 text-sm text-gray-400 hover:text-gray-600">{t.back}</Link>
       <h1 className="text-3xl font-bold text-gray-900">{t.title}</h1>
 
       <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm space-y-4 text-gray-700">

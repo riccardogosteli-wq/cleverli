@@ -913,7 +913,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
                 if (!next) stop();
               }}
               title={voiceOn ? tr("cleverliVoiceOff") : tr("cleverliVoiceOn")}
-              className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center border-2 transition-all active:scale-95"
+              className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center border-2 transition-all active:scale-95"
               style={{ borderColor: voiceOn ? "#16a34a" : "#d1d5db", background: voiceOn ? "#f0fdf4" : "#f9fafb" }}
             >
               <span className="text-lg">{voiceOn ? "🔊" : "🔇"}</span>

@@ -50,14 +50,43 @@ const labels = {
   },
 };
 
+export function TopicExplainerClient({ topic, grade, subject, gradeSeoHref }: Props) {
+  const { lang } = useLang();
+  const copy = labels[lang];
+  const topicTitle = getTopicTitle(topic.id, lang, topic.title);
+  const subjectShortName = getLocalizedSubjectShortName(subject, lang);
+  const gradeName = getLocalizedGradeName(grade, lang);
+  const topicLearningAnswer = buildTopicLearningAnswer(topic, grade, subject, lang, topicTitle);
+
+  return (
+    <section className="rounded-2xl border border-green-100 bg-green-50 p-5 shadow-sm">
+      <p className="text-xs font-bold uppercase tracking-widest text-green-700">{copy.explained}</p>
+      <h2 className="mt-2 text-lg font-black text-gray-900">{copy.question(topicTitle)}</h2>
+      <p className="mt-2 text-sm leading-6 text-gray-700">{topicLearningAnswer}</p>
+      <div className="mt-4 flex flex-wrap gap-2">
+        <Link
+          href={gradeSeoHref}
+          className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
+        >
+          {subjectShortName} {gradeName}
+        </Link>
+        <Link
+          href={`/learn/${grade}/${subject}`}
+          className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
+        >
+          {copy.allTopics}
+        </Link>
+      </div>
+    </section>
+  );
+}
+
 export default function TopicHeaderClient({ topic, grade, subject, gradeSeoHref }: Props) {
   const { lang } = useLang();
   const copy = labels[lang];
   const topicTitle = getTopicTitle(topic.id, lang, topic.title);
   const subjectName = getLocalizedSubjectName(subject, lang);
-  const subjectShortName = getLocalizedSubjectShortName(subject, lang);
   const gradeName = getLocalizedGradeName(grade, lang);
-  const topicLearningAnswer = buildTopicLearningAnswer(topic, grade, subject, lang, topicTitle);
 
   return (
     <>
@@ -76,25 +105,9 @@ export default function TopicHeaderClient({ topic, grade, subject, gradeSeoHref 
         {topic.exercises.length} {copy.exerciseCount} · {subjectName} {gradeName} · {copy.curriculum}
       </p>
 
-      <section className="rounded-2xl border border-green-100 bg-green-50 p-5 shadow-sm">
-        <p className="text-xs font-bold uppercase tracking-widest text-green-700">{copy.explained}</p>
-        <h2 className="mt-2 text-lg font-black text-gray-900">{copy.question(topicTitle)}</h2>
-        <p className="mt-2 text-sm leading-6 text-gray-700">{topicLearningAnswer}</p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <Link
-            href={gradeSeoHref}
-            className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
-          >
-            {subjectShortName} {gradeName}
-          </Link>
-          <Link
-            href={`/learn/${grade}/${subject}`}
-            className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
-          >
-            {copy.allTopics}
-          </Link>
-        </div>
-      </section>
+      <div className="hidden sm:block">
+        <TopicExplainerClient topic={topic} grade={grade} subject={subject} gradeSeoHref={gradeSeoHref} />
+      </div>
     </>
   );
 }

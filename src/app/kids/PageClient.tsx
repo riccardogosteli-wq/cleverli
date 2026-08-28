@@ -222,12 +222,12 @@ export default function KidsDashboard() {
 
       {/* ── Grade tabs + progress islands ── */}
       <div className="space-y-3">
-        <div className="flex gap-2">
+        <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
           {[1,2,3,4,5,6].map((g, i) => (
             <button
               key={g}
               onClick={() => setActiveGrade(g)}
-              className={`flex-1 py-2 rounded-xl font-bold text-sm transition-all ${activeGrade === g ? `${GRADE_COLORS[i].btn} text-white shadow-sm` : "bg-gray-100 text-gray-500"}`}
+              className={`min-h-11 min-w-11 px-1 py-2 rounded-xl font-bold text-sm transition-all ${activeGrade === g ? `${GRADE_COLORS[i].btn} text-white shadow-sm` : "bg-gray-100 text-gray-500"}`}
             >
               {lang === "fr" ? `${g}re` : lang === "it" ? `${g}a` : lang === "en" ? `Gr. ${g}` : `${g}. Kl.`}
             </button>
@@ -242,7 +242,7 @@ export default function KidsDashboard() {
           className="w-full text-center bg-green-700 text-white py-4 rounded-full font-black text-lg hover:bg-green-700 active:scale-95 transition-all shadow-md">
           🎒 {tr("keepLearning")}
         </Link>
-        <Link href="/missionen" className="text-sm text-gray-400 underline">
+        <Link href="/missionen" className="inline-flex min-h-11 items-center justify-center px-2 text-sm text-gray-400 underline">
           🏆 {tr("trophyRoom")}
         </Link>
       </div>

@@ -220,7 +220,7 @@ export default function BlogPost() {
 
       {/* Back to home */}
       <div className="mt-8 text-center">
-        <Link href="/" className="text-sm text-gray-400 hover:text-gray-600 underline">← Zurück zur Startseite</Link>
+        <Link href="/" className="inline-flex min-h-11 items-center px-2 text-sm text-gray-400 hover:text-gray-600 underline">← Zurück zur Startseite</Link>
       </div>
 
     </main>

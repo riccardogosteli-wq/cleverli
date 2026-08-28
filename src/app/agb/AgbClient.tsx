@@ -410,7 +410,7 @@ export default function AGBPage() {
       <div className="max-w-2xl mx-auto px-5 py-10 pb-20">
 
         {/* Back link */}
-        <Link href="/" className="text-sm text-gray-400 hover:text-gray-600 mb-6 inline-block">
+        <Link href="/" className="mb-6 inline-flex min-h-11 items-center px-2 text-sm text-gray-400 hover:text-gray-600">
           ← {lang === "fr" ? "Accueil" : lang === "it" ? "Home" : lang === "en" ? "Home" : "Startseite"}
         </Link>
 

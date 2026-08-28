@@ -144,13 +144,16 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
           <h2 className="mt-2 text-3xl font-black text-gray-950">{config.referenceTable.title}</h2>
           <p className="mt-4 text-base leading-7 text-gray-700">{config.referenceTable.body}</p>
         </div>
+        <p data-testid="times-table-scroll-cue" className="mt-5 flex items-center justify-center gap-2 text-sm font-bold text-green-800 sm:hidden">
+          <span aria-hidden="true">←</span> Seitwärts wischen für ×1 bis ×10 <span aria-hidden="true">→</span>
+        </p>
         <div
-          className="mt-7 overflow-x-auto rounded-2xl border border-green-100 shadow-sm"
+          className="mt-3 overflow-x-auto rounded-2xl border border-green-100 shadow-sm sm:mt-7"
           role="region"
           aria-label={config.referenceTable.title}
           tabIndex={0}
         >
-          <table className="min-w-[720px] w-full border-collapse bg-white text-center text-sm">
+          <table data-testid="times-table" className="min-w-[720px] w-full border-collapse bg-white text-center text-sm">
             <thead className="bg-green-700 text-white">
               <tr>
                 {config.referenceTable.headers.map((header) => (
@@ -179,7 +182,6 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
             </tbody>
           </table>
         </div>
-        <p className="mt-3 text-sm text-gray-500 sm:hidden">Auf kleinen Bildschirmen kannst du die Tabelle seitwärts bewegen.</p>
       </div>
     </section>
   ) : null;

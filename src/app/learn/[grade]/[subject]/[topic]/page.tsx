@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { GRADES, getSubjects, getTopics, getTopicsForSubject } from "@/data/index";
 import TopicClient from "./TopicClient";
-import TopicHeaderClient from "./TopicHeaderClient";
+import TopicHeaderClient, { TopicExplainerClient } from "./TopicHeaderClient";
 import TopicSeoSections from "./TopicSeoSections";
 import Link from "next/link";
 import { permanentRedirect } from "next/navigation";
@@ -164,6 +164,15 @@ export default async function TopicPage({ params }: Props) {
         subject={subject}
         nextTopicId={topics[topicIndex + 1]?.id ?? null}
       />
+
+      <div className="sm:hidden">
+        <TopicExplainerClient
+          topic={topic}
+          grade={parseInt(grade)}
+          subject={subject}
+          gradeSeoHref={gradeSeoHref}
+        />
+      </div>
 
       <TopicSeoSections
         topic={topic}

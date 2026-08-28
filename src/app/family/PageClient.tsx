@@ -185,7 +185,7 @@ export default function FamilyPage() {
                 <button
                   key={a}
                   onClick={() => setNewAvatar(a)}
-                  className={`text-2xl w-10 h-10 rounded-xl transition-all ${newAvatar === a ? "bg-green-100 ring-2 ring-green-500 scale-110" : "bg-gray-50 hover:bg-gray-100"}`}
+                  className={`text-2xl w-11 h-11 rounded-xl transition-all ${newAvatar === a ? "bg-green-100 ring-2 ring-green-500 scale-110" : "bg-gray-50 hover:bg-gray-100"}`}
                 >
                   {a}
                 </button>
@@ -196,12 +196,12 @@ export default function FamilyPage() {
           {/* Grade */}
           <div>
             <label className="text-xs text-gray-500 font-semibold">{t("Klasse","Année","Classe","Grade")}</label>
-            <div className="flex gap-2 mt-1">
+            <div className="grid grid-cols-3 gap-2 mt-1 sm:grid-cols-6">
               {GRADE_OPTIONS.map(g => (
                 <button
                   key={g}
                   onClick={() => setNewGrade(g)}
-                  className={`flex-1 py-2 rounded-xl font-bold text-sm transition-all ${newGrade === g ? "bg-green-700 text-white" : "bg-gray-100 text-gray-600"}`}
+                  className={`min-h-11 min-w-11 px-1 py-2 rounded-xl font-bold text-sm transition-all ${newGrade === g ? "bg-green-700 text-white" : "bg-gray-100 text-gray-600"}`}
                 >
                   {g}. {t("Kl.","Année","Cl.","Gr.")}
                 </button>

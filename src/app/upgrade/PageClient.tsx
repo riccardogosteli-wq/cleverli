@@ -203,7 +203,7 @@ export default function UpgradePageClient() {
       {!uid && (
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center space-y-2">
           <p className="text-sm text-amber-800">{tx.noLogin}</p>
-          <Link href="/signup" className="inline-block bg-amber-500 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-amber-600 transition-all">
+          <Link href="/signup" className="inline-flex min-h-11 items-center justify-center bg-amber-500 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-amber-600 transition-all">
             {tx.signup}
           </Link>
         </div>

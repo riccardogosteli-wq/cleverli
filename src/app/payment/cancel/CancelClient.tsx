@@ -41,7 +41,7 @@ export default function PaymentCancelPage() {
             </button>
           </div>
         )}
-        <Link href="/dashboard" className="block text-sm text-gray-400 hover:text-gray-600 underline">
+        <Link href="/dashboard" className="flex min-h-11 items-center justify-center px-2 text-sm text-gray-400 hover:text-gray-600 underline">
           {t("Zurück zum Dashboard", "Retour au tableau de bord", "Torna alla dashboard", "Back to dashboard")}
         </Link>
       </div>
