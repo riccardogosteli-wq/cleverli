@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -63,9 +62,9 @@ export default function Navigation() {
         <div className="h-[44px] w-[44px] shrink-0 sm:hidden" aria-hidden="true" />
 
         {/* Logo */}
-        <Link
+        <a
           href="/"
-          prefetch={false}
+
           className="absolute left-1/2 flex min-h-[44px] -translate-x-1/2 items-center justify-center sm:static sm:left-auto sm:translate-x-0"
           onClick={() => setOpen(false)}
         >
@@ -79,40 +78,40 @@ export default function Navigation() {
               priority
             />
           </div>
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <div className="hidden sm:flex items-center gap-3" style={{ flexShrink: 0 }}>
           <XpBar />
-          <Link
+          <a
             href="/dashboard"
-            prefetch={false}
+
             className="flex items-center gap-1.5 text-sm text-green-700 hover:text-green-800 font-semibold py-2 px-2.5 rounded-xl bg-green-50 hover:bg-green-100 transition-colors whitespace-nowrap border border-green-200"
           >
             <Image src="/images/ui/Lernen-Dashboard-icon.svg" alt="Lernen" width={28} height={28} />
             <span className="hidden md:inline text-xs">{tr("learnNav")}</span>
-          </Link>
-          <Link
+          </a>
+          <a
             href="/rewards"
-            prefetch={false}
+
             className="flex items-center gap-1.5 text-sm text-amber-700 hover:text-amber-800 font-semibold py-2 px-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 transition-colors whitespace-nowrap border border-amber-200"
             aria-label={tr("navRewardsShort")}
             title={tr("navRewardsShort")}
           >
             <Image src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen" width={28} height={28} />
             <span className="hidden md:inline text-xs">{tr("navRewardsShort")}</span>
-          </Link>
+          </a>
           {/* Parent dashboard link — shown when logged in */}
           {session && (
-            <Link
+            <a
               href="/parents"
-              prefetch={false}
+
               className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-800 font-semibold py-2 px-2.5 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors whitespace-nowrap border border-gray-200"
               title={tr("navParents") ?? "Elternbereich"}
             >
               <span style={{ fontSize: "20px" }}>📊</span>
               <span className="hidden md:inline text-xs">{tr("navParents") ?? "Elternbereich"}</span>
-            </Link>
+            </a>
           )}
           {/* Profile switcher — shown when 2+ child profiles exist */}
           {session && members.length > 1 && (
@@ -151,40 +150,40 @@ export default function Navigation() {
                 </span>
               )}
               {!session?.premium && (
-                <Link
+                <a
                   href="/upgrade"
-                  prefetch={false}
+
                   className="text-sm bg-amber-500 text-white px-3 py-1.5 rounded-full hover:bg-amber-600 transition-colors font-bold shadow-sm whitespace-nowrap"
                 >
                   ⭐ Upgrade
-                </Link>
+                </a>
               )}
-              <Link
+              <a
                 href="/account"
-                prefetch={false}
+
                 className="text-sm text-gray-500 hover:text-gray-700 font-medium py-2 px-2 whitespace-nowrap"
                 title={session?.email ?? ""}
               >
                 👤 Konto
-              </Link>
+              </a>
             </>
           ) : (
             <>
-              <Link
+              <a
                 href="/login"
-                prefetch={false}
+
                 className="text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap"
                 style={{ minWidth: "56px", textAlign: "center" }}
               >
                 {tr("login")}
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/signup"
-                prefetch={false}
+
                 className="text-sm bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center min-w-[160px]"
               >
                 {tr("signup")}
-              </Link>
+              </a>
             </>
           )}
 
@@ -244,58 +243,58 @@ export default function Navigation() {
           style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))", maxHeight: "80dvh" }}
         >
           {/* Core nav — always visible */}
-          <Link href="/dashboard" prefetch={false}
+          <a href="/dashboard"
             className="text-base border-2 border-green-700 text-green-700 px-4 py-3 rounded-full text-center font-semibold active:bg-green-50"
             onClick={() => setOpen(false)}>
             📚 {tr("goLearn")}
-          </Link>
-          <Link href="/daily" prefetch={false}
+          </a>
+          <a href="/daily"
             className="text-base border-2 border-amber-400 text-amber-700 px-4 py-3 rounded-full text-center font-semibold active:bg-amber-50"
             onClick={() => setOpen(false)}>
             ⚡ {tr("navDaily")}
-          </Link>
-          <Link href="/missionen" prefetch={false}
+          </a>
+          <a href="/missionen"
             className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
             onClick={() => setOpen(false)}>
             🏆 {tr("navTrophies")}
-          </Link>
-          <Link href="/rewards" prefetch={false}
+          </a>
+          <a href="/rewards"
             className="text-base text-amber-700 font-medium py-3 px-4 rounded-xl hover:bg-amber-50"
             onClick={() => setOpen(false)}>
             🎁 {tr("navRewards")}
-          </Link>
-          <Link href="/shop" prefetch={false}
+          </a>
+          <a href="/shop"
             className="text-base text-yellow-700 font-medium py-3 px-4 rounded-xl hover:bg-yellow-50"
             onClick={() => setOpen(false)}>
             🛍️ {lang === "fr" ? "Boutique" : lang === "it" ? "Negozio" : lang === "en" ? "Shop" : "Shop"}
-          </Link>
+          </a>
 
           <div className="border-t border-gray-100 pt-2 mt-1 space-y-2">
           {session ? (
             <>
               {/* Parent & Kids links */}
-              <Link href="/parents" prefetch={false}
+              <a href="/parents"
                 className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 flex items-center gap-2"
                 onClick={() => setOpen(false)}>
                 📊 {tr("navParents") ?? "Elternbereich"}
-              </Link>
+              </a>
               {/* Premium upsell or badge */}
               {!isPremium ? (
-                <Link href="/upgrade" prefetch={false}
+                <a href="/upgrade"
                   className="text-base bg-amber-500 text-white px-4 py-3 rounded-full text-center font-bold active:bg-amber-600"
                   onClick={() => setOpen(false)}>
                   ⭐ Upgrade → Premium
-                </Link>
+                </a>
               ) : (
                 <div className="text-sm text-amber-600 font-bold bg-amber-50 px-4 py-2 rounded-full text-center border border-amber-200">
                   ⭐ Premium aktiv
                 </div>
               )}
-              <Link href="/account" prefetch={false}
+              <a href="/account"
                 className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
                 onClick={() => setOpen(false)}>
                 👤 {tr("navAccount") ?? "Konto"}
-              </Link>
+              </a>
               <button
                 onClick={() => { logout(); setOpen(false); }}
                 className="w-full text-base text-red-500 font-medium py-3 px-4 rounded-xl hover:bg-red-50 text-left">
@@ -304,16 +303,16 @@ export default function Navigation() {
             </>
           ) : (
             <>
-              <Link href="/login" prefetch={false}
+              <a href="/login"
                 className="text-base text-gray-700 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 active:bg-gray-100"
                 onClick={() => setOpen(false)}>
                 {tr("login")}
-              </Link>
-              <Link href="/signup" prefetch={false}
+              </a>
+              <a href="/signup"
                 className="text-base bg-green-700 text-white px-4 py-3 rounded-full text-center font-bold active:bg-green-700"
                 onClick={() => setOpen(false)}>
                 {tr("signup")}
-              </Link>
+              </a>
             </>
           )}
           </div>

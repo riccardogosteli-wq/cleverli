@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { getLevelProgress } from "@/lib/xp";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useSession } from "@/hooks/useSession";
@@ -13,7 +12,7 @@ export default function XpBar() {
   const pct = getLevelProgress(profile.xp);
 
   return (
-    <Link href="/missionen" prefetch={false} className="flex items-center gap-2 group cursor-pointer" aria-label="Meine Missionen">
+    <a href="/missionen" className="flex items-center gap-2 group cursor-pointer" aria-label="Meine Missionen">
       {/* Emoji + level */}
       <span className="text-base shrink-0" title={level.title}>{level.emoji}</span>
       {/* XP bar */}
@@ -35,6 +34,6 @@ export default function XpBar() {
       {profile.dailyStreak >= 2 && (
         <span className="text-xs font-bold text-orange-500 shrink-0">🔥{profile.dailyStreak}</span>
       )}
-    </Link>
+    </a>
   );
 }

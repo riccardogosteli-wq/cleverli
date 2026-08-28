@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLang } from "@/lib/LangContext";
@@ -80,10 +79,10 @@ export default function MobileBottomNav() {
           || (tab.href === "/missionen" && (pathname === "/missionen" || pathname === "/trophies"))
           || (tab.href === "/family" && (pathname === "/family" || pathname === "/parents"));
         return (
-          <Link
+          <a
             key={tab.href}
             href={tab.href}
-            prefetch={false}
+
             className={`flex-1 flex flex-col items-center justify-center py-2 gap-0.5 transition-colors active:bg-gray-50 relative ${
               isActive ? "text-green-700" : "text-gray-400"
             }`}
@@ -99,7 +98,7 @@ export default function MobileBottomNav() {
             <span className={`text-[10px] font-semibold leading-tight ${isActive ? "text-green-700" : "text-gray-400"}`}>
               {tab.label}
             </span>
-          </Link>
+          </a>
         );
       })}
       </div>
