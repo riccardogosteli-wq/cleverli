@@ -31,6 +31,7 @@ import { repairOpenWritingExercise } from "./openWritingExercises";
 import { applyLp21ExerciseReplacements } from "./lp21ExerciseReplacements";
 import { applyLp21ApiFitReplacements } from "./lp21ApiFitReplacements";
 import { consolidateNmgTopics } from "./nmgConsolidation";
+import { applyGrade1GermanLevel } from "./grade1GermanLevel";
 
 const grade4Science = [...grade4NT, ...grade4RZG];
 const grade5Science = [...grade5NT, ...grade5RZG];
@@ -62,7 +63,10 @@ export function getTopics(grade: number, subject: string): Topic[] {
     ...topic,
     exercises: topic.exercises.map((exercise) => repairOpenWritingExercise(grade, subject, topic.id, exercise)),
   }));
-  return consolidateNmgTopics(grade, subject, applyLp21ApiFitReplacements(grade, subject, repairedTopics)).map((topic) => ({
+  const levelledTopics = grade === 1 && subject === "german"
+    ? applyGrade1GermanLevel(repairedTopics)
+    : repairedTopics;
+  return consolidateNmgTopics(grade, subject, applyLp21ApiFitReplacements(grade, subject, levelledTopics)).map((topic) => ({
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
   }));

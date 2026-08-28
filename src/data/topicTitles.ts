@@ -253,10 +253,16 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
     en: "Punctuation",
   },
   "gross-kleinschreibung": {
-    de: "Gross- und Kleinschreibung",
+    de: "Gross- und Kleinbuchstaben",
     fr: "Majuscules et minuscules",
     it: "Maiuscole e minuscole",
-    en: "Capitalisation",
+    en: "Uppercase and lowercase letters",
+  },
+  "ie-ei": {
+    de: "Laute hören: ie und ei",
+    fr: "Écouter les sons : ie et ei",
+    it: "Ascoltare i suoni: ie ed ei",
+    en: "Listen for sounds: ie and ei",
   },
   "rechtschreibung": {
     de: "Rechtschreibung",

@@ -50,7 +50,7 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
         ],
         5: [
             "Fixed", "Duplicates", "All", "7 genuine duplicate pairs replaced; 1 false positive retained",
-            "Full structural review replaced all 7 genuine Grade 1 content duplicates. The eighth flagged pair was valid reinforcement: two memory games share a generic prompt but contain different card pairs. The detector now compares complete exercise structures; a fresh scan finds zero exact duplicates across all 1,813 Grade 1 exercises.",
+            "Full structural review replaced all 7 genuine Grade 1 content duplicates. The eighth flagged pair was valid reinforcement: two memory games share a generic prompt but contain different card pairs. The detector now compares complete exercise structures; a fresh scan finds zero exact duplicates across all 1,863 Grade 1 exercises.",
             "Resolved. Keep the structure-aware duplicate audit in the QA suite.",
         ],
         6: [
@@ -82,6 +82,11 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 100 new composition/listening exercises score 1–2; 0 score-4/5 remain",
             "The Synästhesie outlier remains resolved. The authenticated API re-score reports 1,813 at score 1 and 50 at score 2. All 50 listening exercises score 1 / D.1.B.1 and now pass the reading-independence gate; all 50 composition exercises remain within the accepted score-1/2 target.",
             "Resolved. Permanent replacement, composition, listening-modality, scoring, localisation, audio, format, hint and duplicate audits cover the catalogue.",
+        ],
+        12: [
+            "Fixed", "Developmental level", "German", "224 of 550 exercises across 11 topics",
+            "The full Grade 1 German catalogue was reviewed exercise by exercise. Abstract spelling rules, deliberate misspellings, parts-of-speech classification, dictionary ordering, hidden arithmetic and malformed syllable tasks were replaced with concrete listening, letter, word and direct-comprehension work while preserving every exercise ID and type.",
+            "Resolved. Keep the permanent Grade 1 developmental-level audit, full-catalogue correctness checks, Sheet parity and desktop/mobile interaction QA in the release gate.",
         ],
     },
     2: {
