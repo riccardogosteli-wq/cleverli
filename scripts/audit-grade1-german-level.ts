@@ -35,13 +35,13 @@ for (const exercise of levelledExercises) {
 }
 
 const soundTopic = levelled.find((topic) => topic.id === "ie-ei");
-if (!soundTopic || soundTopic.title !== "Laute hören: ie und ei") failures.push("ie-ei topic was not retitled");
+if (!soundTopic || soundTopic.title !== "Laute hören: Anlaute") failures.push("ie-ei topic was not retitled");
 for (const exercise of soundTopic?.exercises ?? []) {
-  if (exercise.type === "multiple-choice" && JSON.stringify(exercise.options) !== JSON.stringify(["ie", "ei"])) {
-    failures.push(`${exercise.id}: ie/ei choice must offer only ie and ei`);
+  if (exercise.type === "multiple-choice" && exercise.options?.some((option) => !/^[A-Z]$/.test(option))) {
+    failures.push(`${exercise.id}: initial-sound choice must offer letters only`);
   }
-  if (exercise.type !== "drag-drop" && !["ie", "ei"].includes(exercise.answer)) {
-    failures.push(`${exercise.id}: ie/ei answer must be a two-letter choice`);
+  if (exercise.type !== "drag-drop" && !/^[A-Z]$/.test(exercise.answer)) {
+    failures.push(`${exercise.id}: initial-sound answer must be one uppercase letter`);
   }
 }
 

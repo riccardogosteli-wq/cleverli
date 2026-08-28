@@ -1,5 +1,6 @@
 import type { Exercise, Topic } from "@/types/exercise";
 import targets from "./lp21ApiFitTargets.json";
+import gradeSuitabilityTargets from "./gradeSuitabilityTargets.json";
 
 type Lang = "de" | "en" | "fr" | "it";
 type Texts = Record<Lang, string>;
@@ -10,6 +11,7 @@ const tx = (de: string, en: string, fr: string, it: string): Texts => ({ de, en,
 const value = (texts: Texts, lang: Lang) => texts[lang];
 
 const ORIGINAL_TARGET_KEYS = new Set(targets.map((target) => `${target.grade}/${target.subject}/${target.topic}/${target.id}`));
+const GRADE_SUITABILITY_TARGET_KEYS = new Set(gradeSuitabilityTargets.map((target) => `${target.grade}/${target.subject}/${target.topic}/${target.id}`));
 const EXPANDED_TOPIC_KEYS = new Set([
   "5/science/chemie-einfuehrung-5",
   "5/science/wirtschaft-handel-5",
@@ -27,10 +29,15 @@ const EXPANDED_TOPIC_KEYS = new Set([
 const ADDITIONAL_FALSE_NEGATIVE_KEYS = new Set(["5/science/technik-erfinungen-5/te5-38"]);
 export const LP21_API_FIT_ORIGINAL_TARGET_COUNT = targets.length;
 export const LP21_API_FIT_EXPANDED_TARGET_COUNT = 1_136;
+export const GRADE_SUITABILITY_TARGET_COUNT = gradeSuitabilityTargets.length;
 export function isLp21ApiFitTarget(key: string): boolean {
   if (ORIGINAL_TARGET_KEYS.has(key) || ADDITIONAL_FALSE_NEGATIVE_KEYS.has(key)) return true;
   const parts = key.split("/");
   return EXPANDED_TOPIC_KEYS.has(parts.slice(0, 3).join("/"));
+}
+
+export function isGradeSuitabilityTarget(key: string): boolean {
+  return GRADE_SUITABILITY_TARGET_KEYS.has(key);
 }
 
 export const LP21_API_FIT_TOPIC_TITLES: Record<string, string> = {
@@ -56,12 +63,39 @@ export const LP21_API_FIT_TOPIC_TITLES: Record<string, string> = {
 };
 
 const TOPIC_CONTEXTS: Record<string, Texts> = {
+  "add-sub-100": tx("Plus und Minus", "Addition and subtraction", "Addition et soustraction", "Addizione e sottrazione"),
+  "schaetzen": tx("Schätzen", "Estimating", "Estimer", "Stimare"),
+  "singular-plural": tx("Einzahl und Mehrzahl", "Singular and plural", "Singulier et pluriel", "Singolare e plurale"),
+  "hoerverstehen-2": tx("Genau zuhören", "Listening carefully", "Écouter attentivement", "Ascoltare attentamente"),
+  "saetze": tx("Sätze verstehen", "Understanding sentences", "Comprendre des phrases", "Capire le frasi"),
+  "leseverstaendnis": tx("Texte verstehen", "Understanding texts", "Comprendre des textes", "Capire i testi"),
+  "unsere-erde": tx("Unsere Erde", "Our Earth", "Notre Terre", "La nostra Terra"),
+  "umwelt-nachhaltigkeit": tx("Unsere Umwelt", "Our environment", "Notre environnement", "Il nostro ambiente"),
+  "materialien": tx("Materialien", "Materials", "Matériaux", "Materiali"),
+  "licht-schatten": tx("Licht und Schatten", "Light and shadow", "Lumière et ombre", "Luce e ombra"),
+  "energie": tx("Energie im Alltag", "Everyday energy", "Énergie au quotidien", "Energia quotidiana"),
+  "uhr-24h-gr3": tx("Uhrzeiten", "Times", "Heures", "Orari"),
+  "kalender-gr3": tx("Kalender", "Calendar", "Calendrier", "Calendario"),
+  "lebensraeume-tiere": tx("Lebensräume der Tiere", "Animal habitats", "Habitats des animaux", "Habitat degli animali"),
+  "oekologie-4": tx("Lebewesen und Umwelt", "Living things and environment", "Êtres vivants et environnement", "Esseri viventi e ambiente"),
+  "wetter-klima": tx("Wetter", "Weather", "Météo", "Meteo"),
+  "ressourcen-wasser-4": tx("Wasser nutzen", "Using water", "Utiliser l’eau", "Usare l’acqua"),
+  "materie-stoffe-4": tx("Stoffe untersuchen", "Exploring materials", "Explorer les matières", "Esplorare i materiali"),
+  "kraefte-energie-4": tx("Kräfte und Energie", "Forces and energy", "Forces et énergie", "Forze ed energia"),
+  "gemeinde-kanton-4": tx("Gemeinde und Kanton", "Municipality and canton", "Commune et canton", "Comune e cantone"),
+  "migration-kulturen-4": tx("Zusammenleben", "Living together", "Vivre ensemble", "Vivere insieme"),
+  "erde-klima-5": tx("Erde und Klima", "Earth and climate", "Terre et climat", "Terra e clima"),
+  "klima-lebensraeume-5": tx("Klima und Lebensräume", "Climate and habitats", "Climat et habitats", "Clima e habitat"),
+  "nachhaltigkeit-5": tx("Nachhaltig handeln", "Acting sustainably", "Agir durablement", "Agire in modo sostenibile"),
   "fuenf-sinne": tx("Sinne", "Senses", "Les sens", "I sensi"),
   "lebewesen": tx("Lebewesen", "Living things", "Les êtres vivants", "Gli esseri viventi"),
   "rechtschreibung": tx("Rechtschreibung", "Spelling", "Orthographe", "Ortografia"),
   "demokratie": tx("Gemeinsam entscheiden", "Deciding together", "Décider ensemble", "Decidere insieme"),
   "koerper-sinne-4": tx("Körper und Sinne", "Body and senses", "Corps et sens", "Corpo e sensi"),
   "schweizer-geschichte-4": tx("Schweizer Geschichte", "Swiss history", "Histoire suisse", "Storia svizzera"),
+  "mittelalter-5": tx("Leben im Mittelalter", "Life in the Middle Ages", "Vie au Moyen Âge", "Vita nel Medioevo"),
+  "reformation-5": tx("Veränderungen in Europa", "Changes in Europe", "Changements en Europe", "Cambiamenti in Europa"),
+  "technik-erfinungen-5": tx("Technik im Alltag", "Everyday technology", "Technique au quotidien", "Tecnica quotidiana"),
   "europa-4": tx("Europa", "Europe", "Europe", "Europa"),
   "direkte-rede": tx("Direkte Rede", "Direct speech", "Discours direct", "Discorso diretto"),
   "textsorten-5": tx("Texte", "Texts", "Textes", "Testi"),
@@ -415,7 +449,265 @@ function frenchGenerated(profile: "day" | "school" | "plans" | "phrases", ordina
   return { question: tx(`Conjugue « ${FR_INFINITIVES[i]} » : ${context}${subject} ___ ${object}.`, `Conjugue « ${FR_INFINITIVES[i]} » : ${context}${subject} ___ ${object}.`, `Conjugue « ${FR_INFINITIVES[i]} » : ${context}${subject} ___ ${object}.`, `Conjugue « ${FR_INFINITIVES[i]} » : ${context}${subject} ___ ${object}.`), answer: tx(verb, verb, verb, verb), choices: { label: tx(verb, verb, verb, verb), wrong: wrong.map((x) => tx(x, x, x, x)) as [Texts, Texts, Texts] }, hint: tx("Le verbe doit correspondre à la personne dans la phrase.", "Le verbe doit correspondre à la personne dans la phrase.", "Le verbe doit correspondre à la personne dans la phrase.", "Le verbe doit correspondre à la personne dans la phrase.") };
 }
 
-function simpleGenerated(subject: string, topic: string, ordinal: number): Generated {
+function same(text: string): Texts {
+  return tx(text, text, text, text);
+}
+
+function compactGenerated(question: string, answer: string, wrong: [string, string, string], hint: string): Generated {
+  return {
+    question: same(question),
+    answer: same(answer),
+    choices: { label: same(answer), wrong: wrong.map(same) as [Texts, Texts, Texts] },
+    hint: same(hint),
+  };
+}
+
+function mathGenerated(grade: number, topic: string, ordinal: number): Generated {
+  if (grade === 1) {
+    if (topic === "addition-bis-10") {
+      const a = 1 + ordinal % 5;
+      const b = 1 + (ordinal + 2) % 4;
+      const answer = a + b;
+      return compactGenerated(`Addiere: ${a} + ${b} = ___`, `${answer}`, [`${answer - 1}`, `${answer + 1}`, `${answer + 2}`], "Zähle weiter.");
+    }
+    if (topic === "subtraktion-bis-10") {
+      const a = 6 + ordinal % 5;
+      const b = 1 + ordinal % 3;
+      const answer = a - b;
+      return compactGenerated(`Ziehe ab: ${a} − ${b} = ___`, `${answer}`, [`${answer - 1}`, `${answer + 1}`, `${a}`], "Zähle rückwärts.");
+    }
+    if (topic === "formen") {
+      const rows: Array<[string, string, [string, string, string]]> = [
+        ["Welche Form ist rund?", "Kreis", ["Dreieck", "Quadrat", "Rechteck"]],
+        ["Welche Form hat drei Ecken?", "Dreieck", ["Kreis", "Quadrat", "Rechteck"]],
+        ["Welche Form hat vier gleich lange Seiten?", "Quadrat", ["Kreis", "Dreieck", "Oval"]],
+      ];
+      const row = rows[ordinal % rows.length];
+      return compactGenerated(row[0], row[1], row[2], "Achte auf Ecken und Seiten.");
+    }
+    if (topic === "mengen-zaehlen") {
+      const count = 2 + ordinal % 9;
+      return compactGenerated(`Zähle die Punkte: ${"● ".repeat(count).trim()}`, `${count}`, [`${count - 1}`, `${count + 1}`, `${count + 2}`], "Berühre beim Zählen jeden Punkt einmal.");
+    }
+    if (topic === "sachaufgaben") {
+      const a = 2 + ordinal % 5;
+      const b = 1 + (ordinal + 1) % 3;
+      const answer = a + b;
+      return compactGenerated(`Mia hat ${a} Äpfel. Sie bekommt ${b} dazu. Wie viele hat sie jetzt?`, `${answer}`, [`${answer - 1}`, `${answer + 1}`, `${a}`], "Zähle die neuen Äpfel dazu.");
+    }
+    if (topic === "muster") {
+      const start = 1 + (ordinal % 8);
+      return compactGenerated(`${start}, ${start + 1}, ${start + 2}, ___`, `${start + 3}`, [`${start + 2}`, `${start + 4}`, `${start + 5}`], "Die Zahlen werden immer um 1 grösser.");
+    }
+    if (topic === "ordinalzahlen") {
+      const positions = ["erste", "zweite", "dritte", "vierte", "fünfte"];
+      const index = ordinal % positions.length;
+      return compactGenerated(`Mia steht an Position ${index + 1}. Sie ist die ___.`, positions[index], positions.filter((_, i) => i !== index).slice(0, 3) as [string, string, string], "Zähle die Plätze von vorne.");
+    }
+    if (topic === "verdoppeln-halbieren") {
+      const number = 2 + (ordinal % 8);
+      const answer = number * 2;
+      return compactGenerated(`Verdopple ${number}: ___`, `${answer}`, [`${answer - 1}`, `${answer + 1}`, `${number}`], "Verdoppeln heisst: zweimal gleich viel.");
+    }
+    if (topic === "geld-muenzen") {
+      const first = 1 + (ordinal % 5);
+      const second = 1 + ((ordinal + 2) % 5);
+      const answer = first + second;
+      return compactGenerated(`${first} Franken + ${second} Franken = ___ Franken`, `${answer}`, [`${answer - 1}`, `${answer + 1}`, `${answer + 2}`], "Zähle beide Geldbeträge zusammen.");
+    }
+    if (topic === "daten-diagramme") {
+      const count = 3 + (ordinal % 6);
+      return compactGenerated(`Im Bild sind ${count} Sterne. Wie viele Sterne sind es?`, `${count}`, [`${count - 1}`, `${count + 1}`, `${count + 2}`], "Zähle jeden Stern genau einmal.");
+    }
+    const number = 2 + ordinal % 17;
+    return compactGenerated(`Welche Zahl kommt nach ${number}?`, `${number + 1}`, [`${number - 1}`, `${number + 2}`, `${number + 3}`], "Zähle einen Schritt weiter.");
+  }
+
+  if (grade === 2) {
+    if (/einmaleins/.test(topic)) {
+      const a = 2 + (ordinal % 4);
+      const b = 2 + ((ordinal + 1) % 6);
+      const answer = a * b;
+      return compactGenerated(`${a} · ${b} = ___`, `${answer}`, [`${answer - a}`, `${answer + a}`, `${answer + 1}`], "Denke an gleich grosse Gruppen.");
+    }
+    if (topic === "geld-chf") {
+      const a = 10 + ordinal % 20;
+      const b = 5 + ordinal % 10;
+      return compactGenerated(`${a} Franken + ${b} Franken = ___ Franken`, `${a + b}`, [`${a + b - 1}`, `${a + b + 1}`, `${a}`], "Addiere die beiden Beträge.");
+    }
+    if (topic === "daten-diagramme") {
+      const a = 5 + ordinal % 6;
+      const b = 2 + ordinal % 4;
+      return compactGenerated(`Eine Liste zeigt ${a} rote und ${b} blaue Punkte. Wie viele Punkte sind es zusammen?`, `${a + b}`, [`${a}`, `${b}`, `${a + b + 1}`], "Addiere beide Anzahlen.");
+    }
+    const a = 30 + ordinal % 20;
+    const b = 4 + ordinal % 10;
+    const subtraction = /subtraktion/.test(topic);
+    return compactGenerated(`${a} ${subtraction ? "−" : "+"} ${b} = ___`, `${subtraction ? a - b : a + b}`, [`${subtraction ? a - b - 1 : a + b - 1}`, `${subtraction ? a - b + 1 : a + b + 1}`, `${a}`], subtraction ? "Zähle rückwärts." : "Zähle weiter.");
+  }
+
+  if (grade === 4) {
+    if (topic === "geometrie-4") {
+      const rows: Array<[string, string, [string, string, string]]> = [
+        ["Wie gross ist ein rechter Winkel?", "90°", ["45°", "180°", "360°"]],
+        ["Wie viele rechte Winkel hat ein Rechteck?", "4", ["2", "3", "6"]],
+      ];
+      const row = rows[ordinal % rows.length];
+      return compactGenerated(row[0], row[1], row[2], "Achte auf die Eigenschaften der Form.");
+    }
+    if (topic === "groessen-messen-4") {
+      const rows: Array<[string, string, [string, string, string]]> = [
+        ["1 Meter sind wie viele Zentimeter?", "100 cm", ["10 cm", "1000 cm", "50 cm"]],
+        ["1 Kilogramm sind wie viele Gramm?", "1000 g", ["100 g", "10 g", "10 000 g"]],
+        ["2 Liter sind wie viele Deziliter?", "20 dl", ["2 dl", "200 dl", "12 dl"]],
+        ["Eine Stunde sind wie viele Minuten?", "60 min", ["30 min", "100 min", "24 min"]],
+      ];
+      const row = rows[ordinal % rows.length];
+      return compactGenerated(row[0], row[1], row[2], "Nutze die bekannte Umrechnung der Einheit.");
+    }
+    if (topic === "textaufgaben-4") {
+      const packs = 3 + ordinal % 5;
+      const each = 4 + (ordinal + 1) % 6;
+      return compactGenerated(`${packs} Schachteln enthalten je ${each} Stifte. Wie viele Stifte sind es?`, `${packs * each}`, [`${packs + each}`, `${packs * each - each}`, `${packs * each + 1}`], "Addiere gleich grosse Gruppen oder multipliziere.");
+    }
+  }
+
+  if (topic === "brueche") {
+    const denominator = 4 + 2 * (ordinal % 3);
+    const numerator = 1 + (ordinal % (denominator - 1));
+    return compactGenerated(`Von ${denominator} gleich grossen Teilen sind ${numerator} markiert. Welcher Bruch passt?`, `${numerator}/${denominator}`, [`1/${denominator}`, `${denominator}/${numerator}`, `${numerator}/${denominator + 1}`], "Oben stehen die markierten Teile, unten alle Teile.");
+  }
+  if (topic === "flaeche-umfang") {
+    const a = 2 + ordinal % 5;
+    const b = 2 + (ordinal + 2) % 5;
+    return compactGenerated(`Ein Rechteck ist ${a} cm lang und ${b} cm breit. Wie gross ist seine Fläche?`, `${a * b} cm²`, [`${2 * a + 2 * b} cm²`, `${a + b} cm²`, `${a * b + 1} cm²`], "Zähle die Quadrate in den Reihen oder rechne Länge mal Breite.");
+  }
+  if (topic === "geometrie") {
+    const rows: Array<[string, string, [string, string, string]]> = [
+      ["Wie viele Ecken hat ein Rechteck?", "4", ["2", "3", "5"]],
+      ["Wie viele Seiten hat ein Dreieck?", "3", ["2", "4", "6"]],
+      ["Welche Form hat keine Ecken?", "Kreis", ["Dreieck", "Rechteck", "Quadrat"]],
+      ["Welche Form hat vier gleich lange Seiten?", "Quadrat", ["Kreis", "Dreieck", "Oval"]],
+    ];
+    const row = rows[ordinal % rows.length];
+    return compactGenerated(row[0], row[1], row[2], "Achte auf Seiten und Ecken der Form.");
+  }
+  if (topic === "division") {
+    const divisor = 2 + ordinal % 5;
+    const quotient = 2 + (ordinal + 1) % 8;
+    return compactGenerated(`${divisor * quotient} : ${divisor} = ___`, `${quotient}`, [`${quotient - 1}`, `${quotient + 1}`, `${divisor}`], "Teile in gleich grosse Gruppen.");
+  }
+  const a = 120 + ordinal * 7;
+  const b = 20 + ordinal % 30;
+  return compactGenerated(`${a} + ${b} = ___`, `${a + b}`, [`${a + b - 10}`, `${a + b + 10}`, `${a}`], "Addiere zuerst die Zehner.");
+}
+
+function germanGenerated(grade: number, topic: string, ordinal: number): Generated {
+  const choose = (rows: Array<[string, string, [string, string, string], string]>) => {
+    const row = rows[ordinal % rows.length];
+    return compactGenerated(row[0], row[1], row[2], row[3]);
+  };
+  if (grade === 2) {
+    if (topic === "nomen-artikel") return choose([
+      ["Welches Wort ist ein Nomen?", "Hund", ["laufen", "klein", "schnell"], "Nomen bezeichnen Menschen, Tiere oder Dinge."],
+      ["Welcher Begleiter passt: ___ Sonne", "die", ["der", "das", "den"], "Sprich die Wortgruppe laut."],
+      ["Welches Wort schreibt man gross?", "Baum", ["grün", "springt", "leise"], "Nomen schreibt man gross."],
+    ]);
+    if (topic === "pronomen") return choose([
+      ["Lina liest. ___ liest.", "Sie", ["Er", "Es", "Wir"], "Das Ersatzwort muss zu Lina passen."],
+      ["Tom spielt. ___ spielt.", "Er", ["Sie", "Es", "Ihr"], "Das Ersatzwort muss zu Tom passen."],
+      ["Das Kind lacht. ___ lacht.", "Es", ["Er", "Wir", "Ihr"], "Das Ersatzwort muss zu das Kind passen."],
+    ]);
+    if (topic === "verben") return choose([
+      ["Welches Wort zeigt eine Tätigkeit?", "springen", ["Ball", "blau", "Garten"], "Tätigkeitswörter sagen, was jemand tut."],
+      ["Mia ___ ein Buch.", "liest", ["Buch", "rot", "leise"], "Was tut Mia?"],
+      ["Wir ___ im Hof.", "spielen", ["Spiel", "fröhlich", "Hof"], "Setze das passende Tätigkeitswort ein."],
+    ]);
+    if (topic === "adjektive-gr2") return choose([
+      ["Welches Wort beschreibt den Ball? Der Ball ist ___.", "rot", ["rollt", "Ball", "werfen"], "Beschreibende Wörter sagen, wie etwas ist."],
+      ["Welches Wort passt: ein ___ Buch", "spannendes", ["lesen", "Buch", "Seite"], "Wie ist das Buch?"],
+    ]);
+    if (topic === "satzzeichen") return choose([["Welches Satzzeichen gehört ans Ende? Kommst du mit___", "?", [".", "!", ","], "Eine Frage endet mit einem Fragezeichen."]]);
+    if (topic === "silben") return choose([["Wie viele Silben hat Banane?", "3", ["1", "2", "4"], "Klatsche: Ba-na-ne."]]);
+    if (topic === "wortfamilien") return choose([["Welches Wort gehört zu fahren?", "Fahrer", ["Farbe", "Faden", "Fenster"], "Achte auf den gemeinsamen Wortteil fahr."]]);
+    return choose([["Lies: Mia hat einen roten Ball. Welche Farbe hat der Ball?", "rot", ["blau", "grün", "gelb"], "Die Antwort steht im Satz."]]);
+  }
+  if (grade === 1 && topic === "einfache-woerter") {
+    const rows: Array<[string, string, [string, string, string], string]> = [
+      ["Welches Wort passt zu 🐱?", "Katze", ["Hund", "Haus", "Ball"], "Sprich das Wort langsam."],
+      ["Welches Wort passt zu 🌳?", "Baum", ["Buch", "Maus", "Sonne"], "Schau das Bild genau an."],
+      ["Welches Wort passt zu ⚽?", "Ball", ["Bär", "Bett", "Brot"], "Sprich den Anfangslaut."],
+    ];
+    return choose(rows);
+  }
+  if (grade === 1 && topic === "saetze-lesen") return choose([
+    ["Lies: Mia hat einen roten Ball. Welche Farbe hat der Ball?", "rot", ["blau", "grün", "gelb"], "Die Antwort steht im Satz."],
+    ["Lies: Leo sitzt auf dem Stuhl. Wo sitzt Leo?", "auf dem Stuhl", ["auf dem Tisch", "im Bett", "im Auto"], "Die Antwort steht im Satz."],
+  ]);
+  if (topic.includes("verben")) return choose([["Wir ___ heute im Park.", "spielen", ["spielt", "spielst", "spielte"], "Das Verb muss zu wir passen."], ["Gestern ___ Mia ein Bild.", "malte", ["malt", "malen", "malst"], "Gestern zeigt die Vergangenheit."]]);
+  if (topic.includes("adjektive")) return choose([["Welches Wort beschreibt ein Nomen?", "fröhlich", ["lachen", "Freude", "Kind"], "Frage: Wie ist etwas?"]]);
+  if (topic.includes("synonyme")) return choose([["Welches Wort bedeutet ähnlich wie froh?", "fröhlich", ["traurig", "müde", "laut"], "Suche ein Wort mit ähnlicher Bedeutung."], ["Welches Wort ist das Gegenteil von hell?", "dunkel", ["klar", "weiss", "leise"], "Gesucht ist die entgegengesetzte Bedeutung."]]);
+  if (topic.includes("textsorten")) return choose([["Welcher Text erklärt, wie man etwas macht?", "Anleitung", ["Gedicht", "Brief", "Witz"], "Eine Anleitung nennt Schritte in einer Reihenfolge."]]);
+  if (topic.includes("rechtschreibung")) return choose([["Welche Schreibweise ist richtig?", "Fahrrad", ["Farad", "Farrad", "Fahrrat"], "Das Wort besteht aus fahren und Rad."]]);
+  if (topic.includes("pronomen")) return choose([["Lina und Mia lesen. ___ lesen.", "Sie", ["Er", "Es", "Du"], "Ersetze beide Namen durch ein passendes Wort."]]);
+  if (topic.includes("satzglieder")) return choose([["Wer oder was spielt im Garten? Der Hund spielt im Garten.", "Der Hund", ["spielt", "im Garten", "Garten"], "Frage nach dem Teil, der etwas tut."]]);
+  return choose([["Lies: Am Samstag besucht Noah seine Grossmutter. Wann besucht Noah sie?", "am Samstag", ["am Montag", "am Abend", "im Winter"], "Die Antwort steht direkt im Satz."]]);
+}
+
+function gradeScienceGenerated(grade: number, topic: string, ordinal: number): Generated {
+  if (grade === 1 && topic === "familie-gemeinschaft") return compactGenerated("Was hilft in einer Gemeinschaft?", "einander helfen", ["einander auslachen", "nie zuhören", "alles wegnehmen"], "Denke an faires Zusammenleben.");
+  if (grade === 1 && topic === "mein-koerper") {
+    const rows: Generated[] = [
+      compactGenerated("Womit kannst du sehen?", "mit den Augen", ["mit den Füssen", "mit den Haaren", "mit den Knien"], "Denke an dein Gesicht."),
+      compactGenerated("Womit kannst du laufen?", "mit den Beinen", ["mit den Ohren", "mit den Haaren", "mit der Nase"], "Denke an deinen Körper beim Rennen."),
+      compactGenerated("Was schützt deinen Kopf beim Velofahren?", "ein Helm", ["ein Schal", "ein Buch", "ein Becher"], "Sicherheit ist wichtig."),
+    ];
+    return rows[ordinal % rows.length];
+  }
+  if (grade === 1 && topic === "wetter-klima") return compactGenerated("Was fällt bei Regen aus den Wolken?", "Wassertropfen", ["Sand", "Blätter", "Steine"], "Denke an einen Regentag.");
+  if (grade === 1 && topic === "pflanzen-gr1") {
+    const rows: Generated[] = [
+      compactGenerated("Was braucht eine Pflanze zum Wachsen?", "Wasser und Licht", ["Plastik", "nur Dunkelheit", "kein Wasser"], "Denke an eine Pflanze am Fenster."),
+      compactGenerated("Welcher Teil der Pflanze wächst in der Erde?", "die Wurzel", ["die Blüte", "das Blatt", "die Frucht"], "Die Wurzel hält die Pflanze fest."),
+      compactGenerated("Welcher Teil einer Pflanze kann bunt sein?", "die Blüte", ["die Wurzel", "die Erde", "der Topf"], "Denke an Blumen auf einer Wiese."),
+    ];
+    return rows[ordinal % rows.length];
+  }
+  if (grade === 1 && topic === "tiere") {
+    const rows: Generated[] = [
+      compactGenerated("Welches Tier kann fliegen?", "Vogel", ["Fisch", "Schnecke", "Wurm"], "Achte auf Flügel."),
+      compactGenerated("Wo lebt ein Fisch?", "im Wasser", ["im Nest", "im Sandkasten", "auf dem Dach"], "Denke an seinen Lebensraum."),
+      compactGenerated("Welches Tier hat ein Fell?", "Katze", ["Fisch", "Frosch", "Schnecke"], "Denke an ein Haustier."),
+    ];
+    return rows[ordinal % rows.length];
+  }
+  if (grade === 1 && topic === "jahreszeiten") {
+    const rows: Generated[] = [
+      compactGenerated("In welcher Jahreszeit fallen viele Blätter?", "Herbst", ["Frühling", "Sommer", "Winter"], "Denke an bunte Blätter."),
+      compactGenerated("In welcher Jahreszeit ist es oft kalt und schneit?", "Winter", ["Frühling", "Sommer", "Herbst"], "Denke an Schnee."),
+    ];
+    return rows[ordinal % rows.length];
+  }
+  if (grade === 1 && topic === "verkehr-sicherheit") return compactGenerated("Wo gehst du sicher über die Strasse?", "am Fussgängerstreifen", ["zwischen Autos", "in einer Kurve", "mit geschlossenen Augen"], "Halte an und schau nach beiden Seiten.");
+  if (grade === 1 && topic === "physik-bewegung") return compactGenerated("Was rollt leicht?", "ein Ball", ["ein Kissen", "ein Blatt Papier", "ein Schal"], "Runde Dinge können rollen.");
+  if (grade === 1 && topic === "zeit-uhr-gr1") return compactGenerated("Was kommt nach dem Morgen?", "der Mittag", ["die Nacht", "gestern", "der Winter"], "Denke an den Ablauf eines Tages.");
+  if (grade === 1 && topic === "fuenf-sinne") return scienceGenerated("senses", ordinal % 5);
+  if (/wetter|klima|umwelt|nachhalt|ressourcen|erde/.test(topic)) return scienceGenerated(grade <= 3 ? "geo" : "global", ordinal % 5);
+  if (/energie|licht|kraefte|materie|materialien|wasser|technik|physik/.test(topic)) return scienceGenerated("materials", ordinal % 8);
+  if (/kalender|uhr/.test(topic)) return compactGenerated("Ein Tag hat wie viele Stunden?", "24", ["12", "30", "60"], "Zähle einen ganzen Tag und eine ganze Nacht.");
+  if (/pflanzen|tiere|lebewesen|lebensraeume|oekologie/.test(topic)) return scienceGenerated("living", ordinal % (grade <= 2 ? 3 : 6));
+  if (/ernaehrung|koerper/.test(topic)) return scienceGenerated("body", ordinal % 5);
+  if (/orientierung|europa/.test(topic)) return scienceGenerated("geo", ordinal % 5);
+  if (/geschichte|mittelalter|reformation|neuzeit/.test(topic)) return scienceGenerated("work", ordinal % 5);
+  if (/demokratie|gemeinde|politik|migration|bevoelkerung/.test(topic)) return scienceGenerated("peace", ordinal % 5);
+  if (/zukunft/.test(topic)) return scienceGenerated("global", ordinal % 5);
+  return scienceGenerated("materials", ordinal % 5);
+}
+
+function simpleGenerated(subject: string, topic: string, ordinal: number, grade = 6, gradeSuitability = false): Generated {
+  if (gradeSuitability && subject === "math") return mathGenerated(grade, topic, ordinal);
+  if (gradeSuitability && subject === "german" && grade <= 5) return germanGenerated(grade, topic, ordinal);
+  if (gradeSuitability && subject === "science") return gradeScienceGenerated(grade, topic, ordinal);
   if (subject === "english" && topic === "exam-skills-6") {
     const rows: Generated[] = [
       { question: tx("Before answering, what should you do first?", "Before answering, what should you do first?", "Before answering, what should you do first?", "Before answering, what should you do first?"), answer: tx("Read the question carefully", "Read the question carefully", "Read the question carefully", "Read the question carefully"), choices: { label: tx("Read the question carefully", "Read the question carefully", "Read the question carefully", "Read the question carefully"), wrong: [tx("Guess immediately", "Guess immediately", "Guess immediately", "Guess immediately"), tx("Skip every instruction", "Skip every instruction", "Skip every instruction", "Skip every instruction"), tx("Choose the longest answer", "Choose the longest answer", "Choose the longest answer", "Choose the longest answer")] }, hint: tx("Good learning starts with understanding the task.", "Good learning starts with understanding the task.", "Good learning starts with understanding the task.", "Good learning starts with understanding the task.") },
@@ -514,6 +806,18 @@ function replacement(original: Exercise, generated: Generated, subject: string):
       reviewCriteriaIT: ["La frase corrisponde al compito.", "La frase è chiara.", "Maiuscole e punteggiatura sono controllate."],
     };
   }
+  if (original.type === "drag-drop") {
+    const items = [generated.choices.label, ...generated.choices.wrong];
+    return {
+      ...base,
+      type: "drag-drop",
+      question: `Ordne zu: Was passt zu «${generated.answer.de}»?`,
+      answer: "all",
+      dragItems: items.map((item, index) => ({ id: `item-${index + 1}`, label: item.de })),
+      dropZones: [{ id: "passt", label: "Passt" }, { id: "passt-nicht", label: "Passt nicht" }],
+      dropAnswers: Object.fromEntries(items.map((_, index) => [`item-${index + 1}`, index === 0 ? "passt" : "passt-nicht"])),
+    };
+  }
   if (original.type === "fill-in-blank") {
     const ensureBlank = (question: string, answerLabel: string) => question.includes("___") ? question : `${question} ${answerLabel}: ___`;
     const sourceAnswerLabel = subject === "english" ? "Answer" : subject === "french" ? "Réponse" : "Antwort";
@@ -543,8 +847,21 @@ export function applyLp21ApiFitReplacements(grade: number, subject: string, topi
     let ordinal = 0;
     const exercises = topic.exercises.map((exercise) => {
       const key = `${topicKey}/${exercise.id}`;
-      if (!isLp21ApiFitTarget(key)) return exercise;
-      const generated = withTopicContext(simpleGenerated(subject, topic.id, ordinal), topic.id);
+      if (!isLp21ApiFitTarget(key) && !isGradeSuitabilityTarget(key)) return exercise;
+      const gradeTarget = isGradeSuitabilityTarget(key);
+      let generated = withTopicContext(simpleGenerated(subject, topic.id, ordinal, grade, gradeTarget), topic.id);
+      if (gradeTarget) {
+        const number = ordinal + 1;
+        generated = {
+          ...generated,
+          question: {
+            de: `Lernrunde ${number}: ${generated.question.de}`,
+            en: `Practice ${number}: ${generated.question.en}`,
+            fr: `Exercice ${number} : ${generated.question.fr}`,
+            it: `Esercizio ${number}: ${generated.question.it}`,
+          },
+        };
+      }
       ordinal += 1;
       return replacement(exercise, generated, subject);
     });

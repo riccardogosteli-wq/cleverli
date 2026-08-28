@@ -96,40 +96,43 @@ function rewriteSoundExercise(original: Exercise, index: number): Exercise {
     const hard = original.difficulty === 3;
     const words = hard
       ? [
-          { key: "brief", label: "Brief", emoji: "✉️", pair: "ie" },
-          { key: "kreis", label: "Kreis", emoji: "⭕", pair: "ei" },
-          { key: "ziege", label: "Ziege", emoji: "🐐", pair: "ie" },
-          { key: "seife", label: "Seife", emoji: "🧼", pair: "ei" },
+          { key: "ziege", label: "Ziege", emoji: "🐐", initial: "Z" },
+          { key: "kreis", label: "Kreis", emoji: "⭕", initial: "K" },
+          { key: "ziel", label: "Ziel", emoji: "🎯", initial: "Z" },
+          { key: "kleid", label: "Kleid", emoji: "👗", initial: "K" },
         ]
       : [
-          { key: "tier", label: "Tier", emoji: "🐶", pair: "ie" },
-          { key: "stein", label: "Stein", emoji: "🪨", pair: "ei" },
-          { key: "biene", label: "Biene", emoji: "🐝", pair: "ie" },
-          { key: "seil", label: "Seil", emoji: "🪢", pair: "ei" },
+          { key: "biene", label: "Biene", emoji: "🐝", initial: "B" },
+          { key: "stein", label: "Stein", emoji: "🪨", initial: "S" },
+          { key: "brief", label: "Brief", emoji: "✉️", initial: "B" },
+          { key: "seil", label: "Seil", emoji: "🪢", initial: "S" },
         ];
+    const initials = hard ? ["Z", "K"] : ["B", "S"];
     return cleanExercise(original, {
-      question: hard ? "Hör genau und sortiere die Wörter zu «ie» oder «ei»." : "Ziehe die Wörter zu «ie» oder «ei».",
+      question: `Ziehe jedes Wort zu seinem Anfangsbuchstaben ${initials[0]} oder ${initials[1]}.`,
       answer: "all",
       dragItems: words.map((word) => ({ id: `${suffix}-${word.key}`, label: word.label, emoji: word.emoji })),
-      dropZones: [{ id: `${suffix}-ie`, label: "ie" }, { id: `${suffix}-ei`, label: "ei" }],
-      dropAnswers: Object.fromEntries(words.map((word) => [`${suffix}-${word.key}`, `${suffix}-${word.pair}`])),
-      hints: ["Sprich jedes Wort langsam aus.", "Vergleiche den Klang mit «Biene» und «Ei»."],
+      dropZones: initials.map((initial) => ({ id: `${suffix}-${initial}`, label: initial })),
+      dropAnswers: Object.fromEntries(words.map((word) => [`${suffix}-${word.key}`, `${suffix}-${word.initial}`])),
+      hints: ["Sprich jedes Wort langsam aus.", "Achte auf den ersten Laut."],
     });
   }
 
   const item = SOUND_WORDS[index % SOUND_WORDS.length];
+  const initial = item.word[0].toUpperCase();
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   const question = original.difficulty === 1
-    ? `Hör genau: ${item.emoji} «${item.word}». Welche Buchstaben hörst du: ie oder ei?`
+    ? `Hör genau: ${item.emoji} «${item.word}». Welchen Laut hörst du am Anfang?`
     : original.difficulty === 2
-      ? `Sprich ${item.emoji} «${item.word}» langsam. Schreibe nur «ie» oder «ei».`
-      : `${item.sentence} Hör auf das Wort «${item.word}»: ie oder ei?`;
+      ? `Sprich ${item.emoji} «${item.word}» langsam. Schreibe den ersten Buchstaben.`
+      : `${item.sentence} Mit welchem Buchstaben beginnt «${item.word}»?`;
 
   return cleanExercise(original, {
     question,
     listeningText: `${item.word}. ${item.sentence}`,
-    answer: item.pair,
-    ...(original.type === "multiple-choice" ? { options: ["ie", "ei"] } : {}),
-    hints: ["Sprich das Wort langsam aus.", "Vergleiche den Klang mit «Biene» und «Ei»."],
+    answer: initial,
+    ...(original.type === "multiple-choice" ? { options: choiceOptions(initial, alphabet) } : {}),
+    hints: ["Sprich das Wort langsam aus.", "Achte auf den ersten Laut."],
     mascot: original.difficulty === 3 ? "think" : undefined,
   });
 }
@@ -267,7 +270,7 @@ function applyTargetedExercise(exercise: Exercise): Exercise {
 export function applyGrade1GermanLevel(topics: Topic[]): Topic[] {
   return topics.map((topic) => {
     if (topic.id === "ie-ei") {
-      return { ...topic, title: "Laute hören: ie und ei", exercises: topic.exercises.map(rewriteSoundExercise) };
+      return { ...topic, title: "Laute hören: Anlaute", exercises: topic.exercises.map(rewriteSoundExercise) };
     }
     if (topic.id === "gross-kleinschreibung") {
       return { ...topic, title: "Gross- und Kleinbuchstaben", exercises: topic.exercises.map(rewriteCapitalExercise) };

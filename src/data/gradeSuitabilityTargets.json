@@ -1,0 +1,2360 @@
+[
+  {
+    "grade": 1,
+    "subject": "german",
+    "topic": "einfache-woerter",
+    "id": "ew43"
+  },
+  {
+    "grade": 1,
+    "subject": "german",
+    "topic": "saetze-lesen",
+    "id": "sl42"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "addition-bis-10",
+    "id": "a13"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "addition-bis-10",
+    "id": "a33"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "addition-bis-10",
+    "id": "a38"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "addition-bis-10",
+    "id": "a39"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "addition-bis-10",
+    "id": "a44"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "addition-bis-10",
+    "id": "a48"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd14"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd19"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd1_17"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd1_39"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd1_45"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd1_47"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd1_50"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd21"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd30"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd32"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd40"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd5"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd9"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "formen",
+    "id": "f43"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "formen",
+    "id": "f50"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "geld-muenzen",
+    "id": "g22"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "geld-muenzen",
+    "id": "g29"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "geld-muenzen",
+    "id": "g35"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "geld-muenzen",
+    "id": "g41"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "geld-muenzen",
+    "id": "g47"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "mengen-zaehlen",
+    "id": "m21x2"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "mengen-zaehlen",
+    "id": "m38x2"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "mengen-zaehlen",
+    "id": "m42x2"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "mengen-zaehlen",
+    "id": "m43x2"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "mengen-zaehlen",
+    "id": "m48x2"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m16"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m23"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m26"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m27"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m29"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m32"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m35"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m43"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m44"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m45"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m46"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m47"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m49"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "muster",
+    "id": "m4b"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "ordinalzahlen",
+    "id": "o10"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "ordinalzahlen",
+    "id": "o47"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "ordinalzahlen",
+    "id": "o49"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "sachaufgaben",
+    "id": "sa1_17"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "sachaufgaben",
+    "id": "sa1_29"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "sachaufgaben",
+    "id": "sa1_37"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "sachaufgaben",
+    "id": "sa25"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "sachaufgaben",
+    "id": "sa31"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "sachaufgaben",
+    "id": "sa39"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "subtraktion-bis-10",
+    "id": "s14"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "subtraktion-bis-10",
+    "id": "s40"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "subtraktion-bis-10",
+    "id": "s46"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "subtraktion-bis-10",
+    "id": "s49"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "verdoppeln-halbieren",
+    "id": "v24"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "verdoppeln-halbieren",
+    "id": "v45"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "zahlen-bis-20",
+    "id": "z20ae"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "zahlen-bis-20",
+    "id": "z20ai"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "zahlen-bis-20",
+    "id": "z20al"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "zahlen-bis-20",
+    "id": "z20am"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "zahlen-bis-20",
+    "id": "z20h"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "zahlen-bis-20",
+    "id": "z20j"
+  },
+  {
+    "grade": 1,
+    "subject": "math",
+    "topic": "zahlen-bis-20",
+    "id": "z20w"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "familie-gemeinschaft",
+    "id": "fg15"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "familie-gemeinschaft",
+    "id": "fg26"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "familie-gemeinschaft",
+    "id": "fg28"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "familie-gemeinschaft",
+    "id": "fg47"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "familie-gemeinschaft",
+    "id": "fg6"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "fuenf-sinne",
+    "id": "s25"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "fuenf-sinne",
+    "id": "s48"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "fuenf-sinne",
+    "id": "s5"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "fuenf-sinne",
+    "id": "s8"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "jahreszeiten",
+    "id": "j31"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "mein-koerper",
+    "id": "k21"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "mein-koerper",
+    "id": "k49"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "mein-koerper",
+    "id": "k8"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "pflanzen-gr1",
+    "id": "p16"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "pflanzen-gr1",
+    "id": "p18"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "pflanzen-gr1",
+    "id": "p23"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "pflanzen-gr1",
+    "id": "p32"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "pflanzen-gr1",
+    "id": "p33"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "pflanzen-gr1",
+    "id": "p40"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "pflanzen-gr1",
+    "id": "p43"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "pflanzen-gr1",
+    "id": "p9"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "physik-bewegung",
+    "id": "ph40"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "sinne",
+    "id": "sn13"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "tiere",
+    "id": "t20"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "tiere",
+    "id": "t31"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "tiere",
+    "id": "t35"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "tiere",
+    "id": "t43"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "verkehr-sicherheit",
+    "id": "vs1"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "verkehr-sicherheit",
+    "id": "vs4"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "verkehr-sicherheit",
+    "id": "vs7"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "wetter-klima",
+    "id": "wk13"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "wetter-klima",
+    "id": "wk31"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "wetter-klima",
+    "id": "wk33"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "wetter-klima",
+    "id": "wk35"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "wetter-klima",
+    "id": "wk37"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "wetter-klima",
+    "id": "wk39"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "zeit-uhr-gr1",
+    "id": "u25"
+  },
+  {
+    "grade": 1,
+    "subject": "science",
+    "topic": "zeit-uhr-gr1",
+    "id": "u5"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "adjektive-gr2",
+    "id": "ag20"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "adjektive-gr2",
+    "id": "ag26"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "adjektive-gr2",
+    "id": "ag34"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "adjektive-gr2",
+    "id": "ag40"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "adjektive-gr2",
+    "id": "ag43"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "adjektive-gr2",
+    "id": "ag44"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "adjektive-gr2",
+    "id": "ag49"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n17"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n18"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n19"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n20"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n22"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n24"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n25"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n26"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n29"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n31"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n32"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n36"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n37"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n38"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n39"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n40"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n41"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n42"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n43"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n44"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n45"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n46"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n47"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n48"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n49"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "nomen-artikel",
+    "id": "n50"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr19"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr20"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr22"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr23"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr24"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr25"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr26"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr27"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr28"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr29"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr30"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr31"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr34"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr36"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr37"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr39"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr41"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr46"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr47"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr48"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr49"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "pronomen",
+    "id": "pr50"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "satzzeichen",
+    "id": "sz30"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "satzzeichen",
+    "id": "sz35"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "satzzeichen",
+    "id": "sz47"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "silben",
+    "id": "s50"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "singular-plural",
+    "id": "sp30"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "singular-plural",
+    "id": "sp36"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "texte-lesen",
+    "id": "tl40"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v24"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v25"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v26"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v27"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v33"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v35"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v37"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v39"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v40"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v43"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v44"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v47"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v49"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "verben",
+    "id": "v50"
+  },
+  {
+    "grade": 2,
+    "subject": "german",
+    "topic": "wortfamilien",
+    "id": "wf41"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "add-sub-100",
+    "id": "as39"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd10c"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd36c"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd37c"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "daten-diagramme",
+    "id": "dd38c"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "einmaleins",
+    "id": "e50"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "einmaleins-3-4",
+    "id": "e68"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "einmaleins-3-4",
+    "id": "e74"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "einmaleins-3-4",
+    "id": "e77"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "einmaleins-3-4",
+    "id": "e78"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g13"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g15"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g17"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g22"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g28"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g32"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g34"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g37"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g42"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g44"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g46"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "geld-chf",
+    "id": "g8"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "laengen-messen",
+    "id": "lm46"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "schaetzen",
+    "id": "sc37"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "schaetzen",
+    "id": "sc39"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "subtraktion-bis-20",
+    "id": "sb37"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "subtraktion-bis-20",
+    "id": "sb44"
+  },
+  {
+    "grade": 2,
+    "subject": "math",
+    "topic": "subtraktion-bis-20",
+    "id": "sb50"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "gesunde-ernaehrung",
+    "id": "ge18"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "lebensraeume",
+    "id": "lr10"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "lebensraeume",
+    "id": "lr26"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "lebewesen",
+    "id": "l11"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "lebewesen",
+    "id": "l32"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "lebewesen",
+    "id": "l35"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "wasser",
+    "id": "w15"
+  },
+  {
+    "grade": 2,
+    "subject": "science",
+    "topic": "wasser",
+    "id": "w26"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "adjektive",
+    "id": "aj36"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "adjektive",
+    "id": "aj43"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "adjektive",
+    "id": "aj49"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "leseverstaendnis",
+    "id": "lv48"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "rechtschreibung",
+    "id": "rs36"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "saetze",
+    "id": "sb25"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "synonyme-antonyme",
+    "id": "sa43"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "synonyme-antonyme",
+    "id": "sa50"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "textsorten",
+    "id": "ts36"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "textsorten",
+    "id": "ts50"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "verben-konjugieren",
+    "id": "vk21"
+  },
+  {
+    "grade": 3,
+    "subject": "german",
+    "topic": "verben-konjugieren",
+    "id": "vk50"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br12"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br13"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br19"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br21"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br22"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br26"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br35"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br36"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br40"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br42"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "brueche",
+    "id": "br47"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "division",
+    "id": "dv43"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "division",
+    "id": "dv49"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "flaeche-umfang",
+    "id": "fu42"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "flaeche-umfang",
+    "id": "fu50"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "geometrie",
+    "id": "geo19"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "geometrie",
+    "id": "geo26"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "geometrie",
+    "id": "geo27"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "geometrie",
+    "id": "geo39"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "geometrie",
+    "id": "geo45"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "geometrie",
+    "id": "geo6"
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topic": "rechnen-bis-1000",
+    "id": "r50k"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "demokratie",
+    "id": "d4"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "demokratie",
+    "id": "dk12"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "demokratie",
+    "id": "dk24"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "demokratie",
+    "id": "dk26"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "energie",
+    "id": "en25"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "energie",
+    "id": "en35"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "energie",
+    "id": "en36"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "energie",
+    "id": "en43"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "energie",
+    "id": "en46"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "energie",
+    "id": "en50"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "kalender-gr3",
+    "id": "kd41"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "kalender-gr3",
+    "id": "kd50"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "licht-schatten",
+    "id": "ls12"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "licht-schatten",
+    "id": "ls14"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "licht-schatten",
+    "id": "ls19"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "licht-schatten",
+    "id": "ls35"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "licht-schatten",
+    "id": "ls43"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "materialien",
+    "id": "mat19"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "materialien",
+    "id": "mat21"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "materialien",
+    "id": "mat26"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "materialien",
+    "id": "mat29"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "materialien",
+    "id": "mat33"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "materialien",
+    "id": "mat35"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "materialien",
+    "id": "mat44"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "materialien",
+    "id": "mat50"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "schweizer-geschichte",
+    "id": "sg35"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "schweizer-geschichte",
+    "id": "sg36"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "schweizer-geschichte",
+    "id": "sg44"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "uhr-24h-gr3",
+    "id": "u24h37"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "uhr-24h-gr3",
+    "id": "u24h38"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "uhr-24h-gr3",
+    "id": "u24h40"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "uhr-24h-gr3",
+    "id": "u24h41"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "uhr-24h-gr3",
+    "id": "u24h43"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "uhr-24h-gr3",
+    "id": "u24h48"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "uhr-24h-gr3",
+    "id": "u24h49"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "uhr-24h-gr3",
+    "id": "u24h50"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un18"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un22"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un26"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un28"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un35"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un36"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un39"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un43"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "umwelt-nachhaltigkeit",
+    "id": "un44"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "unsere-erde",
+    "id": "ue24"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "unsere-erde",
+    "id": "ue26"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "unsere-erde",
+    "id": "ue34"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "unsere-erde",
+    "id": "ue35"
+  },
+  {
+    "grade": 3,
+    "subject": "science",
+    "topic": "unsere-erde",
+    "id": "ue43"
+  },
+  {
+    "grade": 4,
+    "subject": "german",
+    "topic": "leseverstaendnis-4",
+    "id": "lv4_16"
+  },
+  {
+    "grade": 4,
+    "subject": "german",
+    "topic": "pronomen-4",
+    "id": "pr4_35"
+  },
+  {
+    "grade": 4,
+    "subject": "german",
+    "topic": "rechtschreibung-4",
+    "id": "g4rs1f"
+  },
+  {
+    "grade": 4,
+    "subject": "german",
+    "topic": "satzglieder",
+    "id": "g4sg2m"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "geometrie-4",
+    "id": "ge4_16"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "groessen-messen-4",
+    "id": "gm4_19"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "groessen-messen-4",
+    "id": "gm4_20"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "groessen-messen-4",
+    "id": "gm4_23"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "groessen-messen-4",
+    "id": "gm4_32"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "groessen-messen-4",
+    "id": "gm4_33"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "groessen-messen-4",
+    "id": "gm4_34"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "groessen-messen-4",
+    "id": "gm4_35"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "textaufgaben-4",
+    "id": "ta4_20"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topic": "textaufgaben-4",
+    "id": "ta4_35"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "europa-4",
+    "id": "eu4_37"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_10"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_12"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_13"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_16"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_2"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_24"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_27"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_29"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "gemeinde-kanton-4",
+    "id": "gk4_50"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "koerper-gesundheit",
+    "id": "g4kg2n"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_16"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_24"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_29"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_35"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_36"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_38"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_5"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_50"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "kraefte-energie-4",
+    "id": "ke4_9"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "lebensraeume-tiere",
+    "id": "g4lr2m"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "lebensraeume-tiere",
+    "id": "g4lr2n"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "lebensraeume-tiere",
+    "id": "g4lr3l"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "materie-stoffe-4",
+    "id": "ms4_15"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "materie-stoffe-4",
+    "id": "ms4_16"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "materie-stoffe-4",
+    "id": "ms4_21"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "materie-stoffe-4",
+    "id": "ms4_35"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "materie-stoffe-4",
+    "id": "ms4_36"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "materie-stoffe-4",
+    "id": "ms4_50"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "migration-kulturen-4",
+    "id": "mk4_16"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "migration-kulturen-4",
+    "id": "mk4_35"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "oekologie-4",
+    "id": "oek4_15"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "oekologie-4",
+    "id": "oek4_16"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "oekologie-4",
+    "id": "oek4_35"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "oekologie-4",
+    "id": "oek4_36"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "oekologie-4",
+    "id": "oek4_50"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "orientierung-karte-4",
+    "id": "ok4_36"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "orientierung-karte-4",
+    "id": "ok4_43"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "orientierung-karte-4",
+    "id": "ok4_50"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "ressourcen-wasser-4",
+    "id": "rw4_15"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "ressourcen-wasser-4",
+    "id": "rw4_16"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "ressourcen-wasser-4",
+    "id": "rw4_37"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "schweizer-geschichte-4",
+    "id": "sg4_23"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "schweizer-geschichte-4",
+    "id": "sg4_32"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "schweizer-geschichte-4",
+    "id": "sg4_35"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "schweizer-geschichte-4",
+    "id": "sg4_36"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "schweizer-geschichte-4",
+    "id": "sg4_41"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "schweizer-geschichte-4",
+    "id": "sg4_50"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "technik-4",
+    "id": "tech4_50"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "wetter-klima",
+    "id": "g4wk2n"
+  },
+  {
+    "grade": 4,
+    "subject": "science",
+    "topic": "wetter-klima",
+    "id": "g4wk2o"
+  },
+  {
+    "grade": 5,
+    "subject": "german",
+    "topic": "leseverstaendnis-5",
+    "id": "lv5-16"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "bevoelkerung-5",
+    "id": "bv5-36"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "erde-klima-5",
+    "id": "ek5-35"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "erde-klima-5",
+    "id": "ek5-36"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "klima-lebensraeume-5",
+    "id": "kl5-16"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "klima-lebensraeume-5",
+    "id": "kl5-36"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "kraefte-bewegung-5",
+    "id": "kb5-36"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "mittelalter-5",
+    "id": "ma5-36"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "nachhaltigkeit-5",
+    "id": "nh5-36"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "pflanzen-tiere-5",
+    "id": "pt5-36"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "reformation-5",
+    "id": "rf5-18"
+  },
+  {
+    "grade": 5,
+    "subject": "science",
+    "topic": "schweiz-politik-5",
+    "id": "sp5-17"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "demokratie-menschenrechte-6",
+    "id": "dm6_24"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "energie-nachh-6",
+    "id": "en6_39"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "energie-nachh-6",
+    "id": "en6_47"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "migration-flucht-6",
+    "id": "mf6_16"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "neuzeit-6",
+    "id": "nz6_13"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "neuzeit-6",
+    "id": "nz6_16"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "physik-licht-6",
+    "id": "lo6_16"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "physik-licht-6",
+    "id": "lo6_36"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "physik-licht-6",
+    "id": "lo6_39"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "zukunft-herausforderungen-6",
+    "id": "zh6_16"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "zukunft-herausforderungen-6",
+    "id": "zh6_27"
+  },
+  {
+    "grade": 6,
+    "subject": "science",
+    "topic": "zukunft-herausforderungen-6",
+    "id": "zh6_36"
+  }
+]

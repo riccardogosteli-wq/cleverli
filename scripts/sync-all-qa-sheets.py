@@ -79,9 +79,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved for NMG balance. Keep the permanent consolidation, composition, listening-modality and LP21 API gates; plan speaking separately.",
         ],
         11: [
-            "Fixed", "LP21 API exercise fit", "All", "1 score-4 exercise replaced; 100 new composition/listening exercises score 1–2; 0 score-4/5 remain",
-            "The Synästhesie outlier remains resolved. The authenticated API re-score reports 1,813 at score 1 and 50 at score 2. All 50 listening exercises score 1 / D.1.B.1 and now pass the reading-independence gate; all 50 composition exercises remain within the accepted score-1/2 target.",
-            "Resolved. Permanent replacement, composition, listening-modality, scoring, localisation, audio, format, hint and duplicate audits cover the catalogue.",
+            "Fixed", "Exercise-level grade suitability", "All", "107 unsuitable or uncertain exercises repaired; previous automated 1/2 claims invalidated",
+            "The rebuilt scorer evaluates each prompt, answer, options, hints, task type, reading load, numbers and terminology instead of defaulting from the topic. Grade 1 now has 558 score-1 and 1,305 score-2 exercises; zero score-3/4/5 remain.",
+            "Resolved. The old scores are superseded. Permanent regression tests reject the former ie/ei misspelling pattern and verify all 393 repaired IDs and preserved interaction types.",
         ],
         12: [
             "Fixed", "Developmental level", "German", "224 of 550 exercises across 11 topics",
@@ -126,9 +126,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Keep the permanent composition, listening-modality, Grade-2 reading-support and LP21 API gates. Treat automatic speaking assessment as separate product work.",
         ],
         19: [
-            "Fixed", "LP21 API exercise fit", "All", "3 score-5 exercises replaced; 100 new composition/listening exercises score 1–2; 0 score-4/5 remain",
-            "The three cell/DNA outliers remain resolved. The authenticated API re-score reports 1,702 at score 1 and 50 at score 2. All 50 listening exercises score 1 / D.1.B.1 and pass the spoken-choice and Grade-2 reading-support gates; all 50 composition exercises remain within the accepted score-1/2 target.",
-            "Resolved and covered by the permanent replacement, composition and listening-modality audits.",
+            "Fixed", "Exercise-level grade suitability", "All", "113 unsuitable or uncertain exercises repaired; previous automated 1/2 claims invalidated",
+            "The rebuilt scorer evaluates actual exercise content rather than topic metadata. Grade 2 now has 525 score-1 and 1,227 score-2 exercises; zero score-3/4/5 remain. One valid listening-comprehension item was restored after a false-positive audit rule was narrowed.",
+            "Resolved. The old scores are superseded; permanent target-resolution, format, duplicate, listening and scorer regression audits pass.",
         ],
     },
     3: {
@@ -183,9 +183,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved for NMG balance. Keep the permanent consolidation, listening-modality, Grade-3 reading-support and LP21 API gates; plan speaking separately.",
         ],
         16: [
-            "Fixed", "LP21 API exercise fit", "All", "3 score-4/5 exercises replaced; 0 remain",
-            "The advanced Ellipse and international-law outliers remain resolved. The API re-score now reports 1,954 at score 1 and 48 at score 2; all 50 new listening exercises score 1 / D.1.B.1.",
-            "Resolved and covered by the permanent 743-target LP21 replacement audit.",
+            "Fixed", "Exercise-level grade suitability", "All", "84 unsuitable or uncertain exercises repaired; previous automated 1/2 claims invalidated",
+            "The rebuilt content-level scorer reports 600 score-1 and 1,402 score-2 exercises in Grade 3; zero score-3/4/5 remain. Every repaired ID resolves once and the original drag/drop interaction is preserved.",
+            "Resolved. The old scores are superseded; permanent scorer, duplicate, format and LP21 content audits pass.",
         ],
     },
     4: {
@@ -235,9 +235,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Verified against LP21 MA.3.C.1.d with permanent structural, localisation, scoring and duplicate checks.",
         ],
         17: [
-            "Fixed", "LP21 API exercise fit", "All", "4 score-4/5 exercises replaced; 0 remain",
-            "The senses and Cycle-3 politics/history outliers remain resolved. The API re-score now reports 2,401 at score 1, 50 at score 2 and 50 at score 3; all 50 new listening exercises score 1 / D.1.B.1.",
-            "Resolved and covered by the permanent 743-target LP21 replacement audit.",
+            "Fixed", "Exercise-level grade suitability", "All", "65 unsuitable or uncertain exercises repaired; previous automated 1/2 claims invalidated",
+            "The rebuilt content-level scorer reports 750 score-1 and 1,751 score-2 exercises in Grade 4; zero score-3/4/5 remain. Premature volume, density, scale and specialist NMG content was replaced with topic-specific Cycle-2 work.",
+            "Resolved. The old scores are superseded; permanent scorer, content, format and duplicate audits pass.",
         ],
     },
     5: {
@@ -307,9 +307,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved for NMG balance. Keep the permanent consolidation, listening-modality, Grade-5 reading-support and LP21 API gates; plan speaking separately.",
         ],
         18: [
-            "Fixed", "LP21 API exercise fit", "All", "208 API/red-flag exercises replaced; 0 score-4/5 remain",
-            "All advanced chemistry, economics, astronomy and language outliers remain resolved. The API re-score now reports 2,350 at score 1, 300 at score 2 and 250 at score 3; all 50 new listening exercises score 1 / D.1.B.1.",
-            "Resolved with IDs, types, difficulties and totals preserved; permanent audits cover every frozen target.",
+            "Fixed", "Exercise-level grade suitability", "All", "12 unsuitable exercises repaired; previous automated 1/2 claims invalidated",
+            "The rebuilt content-level scorer reports 870 score-1 and 2,030 score-2 exercises in Grade 5; zero score-3/4/5 remain. Cycle-3 climate, biology, politics and language outliers were replaced with topic-specific Cycle-2 tasks.",
+            "Resolved. The old scores are superseded; permanent scorer, content, format and duplicate audits pass.",
         ],
     },
     6: {
@@ -354,9 +354,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved for NMG balance. Keep the permanent consolidation, listening-modality, Grade-6 reading-support and LP21 API gates; plan speaking separately.",
         ],
         15: [
-            "Fixed", "LP21 API exercise fit", "All", "917 API/red-flag exercises replaced; 0 score-4/5 remain",
-            "Advanced foreign-language grammar and Cycle-3 science/history/economics clusters remain resolved. The API re-score now reports 2,061 at score 1, 449 at score 2 and 390 at score 3; all 50 new listening exercises score 1 / D.1.B.1.",
-            "Resolved with IDs, formats, difficulties and totals preserved; 12 unsuitable topic labels were renamed without changing route IDs or saved progress.",
+            "Fixed", "Exercise-level grade suitability", "All", "12 unsuitable exercises repaired; previous automated 1/2 claims invalidated",
+            "The rebuilt content-level scorer reports 870 score-1 and 2,030 score-2 exercises in Grade 6; zero score-3/4/5 remain. Cycle-3 physics, migration, sustainability and future-theory outliers were replaced with Cycle-2 tasks.",
+            "Resolved. The old scores are superseded; IDs, formats, difficulties and totals remain stable and permanent scorer/content audits pass.",
         ],
     },
 }

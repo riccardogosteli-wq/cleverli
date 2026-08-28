@@ -3,6 +3,7 @@ import { getSubjects, getTopics } from "../src/data";
 import type { Exercise } from "../src/types/exercise";
 import { isLp21ApiFitTarget } from "../src/data/lp21ApiFitReplacements";
 import { getBalancedNmgCompetency } from "../src/data/nmgConsolidation";
+import { reviewGradeSuitability } from "./grade-suitability-review";
 
 const API_SNAPSHOT = process.env.LP21_API_SNAPSHOT ?? "/tmp/cleverli-lp21-live.json";
 const OUTPUT = process.env.LP21_FIT_OUTPUT ?? "/tmp/cleverli-lp21-fit-all.json";
@@ -145,56 +146,6 @@ function mapping(subject: string, topic: string, text = "", grade = 0): Mapping 
   return { code: "", area: "Kein LP21-Fachmapping" };
 }
 
-const TOPIC_SCORE: Partial<Record<string, 2 | 3 | 4 | 5>> = {
-  "1/science/physik-bewegung": 2,
-  "2/science/physik-bewegung": 2,
-  "3/science/demokratie": 2,
-  "4/science/roemisches-reich-4": 3,
-  "5/math/prozent-5": 3,
-  "5/science/chemie-einfuehrung-5": 3,
-  "5/science/mittelalter-5": 3,
-  "5/science/entdeckungen-5": 3,
-  "5/science/reformation-5": 3,
-  "5/science/schweiz-politik-5": 3,
-  "4/english/past-simple-4": 2,
-  "5/english/present-continuous-5": 2,
-  "5/english/future-plans-5": 2,
-  "5/english/past-experiences-5": 2,
-  "5/english/modal-verbs-5": 2,
-  "5/english/storytelling-5": 2,
-  "5/english/reading-comp-5": 2,
-  "6/german/sprache-wandel-6": 3,
-  "6/german/literatur-6": 3,
-  "6/german/argumentation-6": 3,
-  "6/french/passe-compose-6": 4,
-  "6/french/imparfait-6": 4,
-  "6/french/futur-simple-6": 4,
-  "6/french/pronoms-cod-coi-6": 4,
-  "6/english/passive-voice-6": 4,
-  "6/english/conditionals-6": 4,
-  "6/english/reported-speech-6": 4,
-  "6/english/reading-skills-6": 2,
-  "6/english/writing-skills-6": 2,
-  "6/english/vocabulary-6": 2,
-  "6/english/environment-debate-6": 3,
-  "6/english/culture-media-6": 2,
-  "6/english/exam-skills-6": 3,
-  "6/french/ville-directions-6": 2,
-  "6/french/sante-corps-6": 2,
-  "6/french/france-pays-francophones-6": 2,
-  "6/french/metiers-avenir-6": 2,
-  "6/french/culture-francophone-6": 2,
-  "6/science/mittelalter": 3,
-  "6/science/neuzeit-6": 3,
-  "6/science/physik-licht-6": 3,
-  "6/science/astronomie-6": 2,
-  "6/science/globalisierung-6": 3,
-  "6/science/wirtschaft-grundlagen-6": 3,
-  "6/science/demokratie-menschenrechte-6": 3,
-  "6/science/migration-flucht-6": 3,
-  "6/science/zukunft-herausforderungen-6": 3,
-};
-
 const CLEARLY_TOO_ADVANCED = /\b(?:passive voice|reported speech|third conditional|second conditional|conditionnel|imparfait|COD|COI|plus-que-parfait|Gerundivum|Diathese|Metonymie|Varianz|rechtsschief|Hypotenuse|Pythagoras|photoelektrisch|Eukaryoten|Phagozytose|Perowskit|superintelligence|Longtermism|Geoengineering|Erörterung|Sandwich-Methode|deduktiv\w*|induktiv\w*|linearer Argumentationsaufbau|objektivierende Sprache|Syllogismus|Logos|Pathos|Ethos|Trugschluss|Ad-hominem|Strawman|Autoritätsargument|Konzessivargument|Intertextualität|Prämisse|Konklusion|Diglossie|Lautverschiebung|Pidgin|Soziolekt|Idiolekt|Etymologie|Dysphemismus|Sprachpolitik|Kreolsprache|Sprachsterben|historische Semantik|Bedeutungserweiterung|Bedeutungsverengung|Sprachökonomie|Translanguaging|Epiphora|Klimax|Antiklimax|Oxymoron|Chiasmus|Litotes|Allegorie|Apostrophe|Synekdoche|Assonanz|Ellipse|Paradox|Antithese|Paronomasie|Polyptoton|Geminatio|Synästhesie|Pathetic Fallacy|Hendiadyoin|Enumeratio|Aposiopese|Correctio|Protektionismus|Oligopol|komparativer Vorteil|WTO|Bruttowertschöpfung|Handelsbilanz|Grenznutzen|Externalit(?:y|äten)|Nash-Gleichgewicht|Keynes|Tragödie der Allmende|Kaufkraftparität|Bretton-Woods|Gini-Koeffizient|Washingtoner Konsens|Dependency Theory|Hegemonie im Weltsystem|Quasar|Hertzsprung-Russell|kosmische Hintergrundstrahlung|Olbers-Paradoxon|Fermi-Paradoxon|Chandrasekhar|kosmische Inflation|Anthropische Prinzip)\b/i;
 
 function exerciseCoreText(exercise: Exercise): string {
@@ -227,17 +178,9 @@ function scoreExercise(grade: number, subjectId: string, topicId: string, exerci
     else if (/wirtschaft|globalisierung|kontinente|europa/.test(topicId)) target = { code: "NMG.6.4", area: "Einfache wirtschaftliche Regeln und Zusammenhänge" };
     else target = { code: "NMG.10.3", area: "Gemeinschaft, Rechte und Mitbestimmung" };
   }
-  const key = `${grade}/${subjectId}/${topicId}`;
-  let score: 1 | 2 | 3 | 4 | 5 = TOPIC_SCORE[key] ?? 1;
-  let reason = score === 1
-    ? `Direkter Match; Niveau für Klasse ${grade} plausibel.`
-    : score === 2
-      ? `Guter Match; vertiefende oder leicht anspruchsvolle Anwendung.`
-      : score === 3
-        ? `LP21-Bereich passt, genaue Klassenstufe oder Tiefe ist diskutabel.`
-        : score === 4
-          ? `Verwandter LP21-Bereich, aber Anforderung deutlich zu fortgeschritten.`
-          : `Kein glaubwürdiger Primarstufen-Match; Inhalt gehört überwiegend in Zyklus 3.`;
+  const suitability = reviewGradeSuitability(grade, subjectId, topicId, exercise);
+  let score: 1 | 2 | 3 | 4 | 5 = suitability.score;
+  let reason = suitability.reason;
   const astronomyTopic = subjectId === "science" && /astronomie|weltall|sonnensystem/.test(topicId);
   const astronomyBridge = /\b(?:Galaxie|Milchstrasse|Lichtjahr|Exoplanet|Komet|Sternbild)\b/i;
   const astronomyAdvanced = /\b(?:Schwarzes Loch|Urknall|Relativität|Hawking|Drake|Neutronenstern|Supernova|Raumzeit|Dunkle Materie)\b/i;
@@ -250,10 +193,6 @@ function scoreExercise(grade: number, subjectId: string, topicId: string, exerci
   } else if (CLEARLY_TOO_ADVANCED.test(coreText) && score < 4) {
     score = 4;
     reason = "Kompetenzbereich passt, die konkrete Fachsprache oder Struktur ist für die Primarstufe zu fortgeschritten.";
-  }
-  if (isReplacement) {
-    score = 1;
-    reason = "Nach Ersatz direkter API-Match; Inhalt und Fachsprache sind für die Primarstufe plausibel.";
   }
   if (!target.code || !apiCodes.has(target.code)) {
     score = 5;

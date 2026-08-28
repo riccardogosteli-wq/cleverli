@@ -259,10 +259,10 @@ export const TOPIC_TITLES: Record<string, Record<string, string>> = {
     en: "Uppercase and lowercase letters",
   },
   "ie-ei": {
-    de: "Laute hören: ie und ei",
-    fr: "Écouter les sons : ie et ei",
-    it: "Ascoltare i suoni: ie ed ei",
-    en: "Listen for sounds: ie and ei",
+    de: "Laute hören: Anlaute",
+    fr: "Écouter les sons initiaux",
+    it: "Ascoltare i suoni iniziali",
+    en: "Listening for initial sounds",
   },
   "rechtschreibung": {
     de: "Rechtschreibung",

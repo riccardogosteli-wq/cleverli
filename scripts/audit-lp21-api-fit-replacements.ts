@@ -85,6 +85,10 @@ for (let grade = 1; grade <= 6; grade += 1) {
         } else if (exercise.type === "self-review") {
           if (exercise.question.includes("___")) failures.push({ key, reason: "self-review contains a literal blank" });
           if ((exercise.reviewCriteria ?? []).length !== 3) failures.push({ key, reason: "self-review needs three criteria" });
+        } else if (exercise.type === "drag-drop") {
+          if ((exercise.dragItems ?? []).length !== 4 || (exercise.dropZones ?? []).length !== 2 || Object.keys(exercise.dropAnswers ?? {}).length !== 4) {
+            failures.push({ key, reason: "drag-drop replacement must preserve a complete four-item interaction" });
+          }
         } else {
           failures.push({ key, reason: `unexpected replacement type ${exercise.type}` });
         }

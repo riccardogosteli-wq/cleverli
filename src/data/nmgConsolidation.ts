@@ -50,8 +50,8 @@ const BALANCED_TOPICS: Record<string, BalancedTopic> = {
         fact("Was ist ein Merkpunkt im Quartier?", "Ein gut erkennbarer Ort", ["Ein unsichtbarer Weg", "Eine erfundene Strasse", "Ein zufälliges Geräusch"], "Ein auffälliger Brunnen kann ein ___ sein.", "Merkpunkt", "Merkpunkte helfen bei der Orientierung."),
       ],
       3: [
-        fact("Was macht einen Platz angenehm?", "Sitzplätze, Bäume und sichere Wege", ["Nur mehr Verkehr", "Weniger Übersicht", "Abgesperrte Zugänge"], "Bäume und Bänke erhöhen die ___ eines Platzes.", "Aufenthaltsqualität", "Denke an Sicherheit, Schatten und Begegnung."),
-        fact("Warum verändern sich Quartiere?", "Bedürfnisse und Nutzung ändern sich", ["Strassen bleiben immer gleich", "Gebäude wachsen von selbst", "Pläne verbieten jede Änderung"], "Neue Bedürfnisse können ein Quartier ___.", "verändern", "Menschen bauen Räume für neue Aufgaben um."),
+        fact("Was macht einen Platz angenehm?", "Bäume, Bänke und sichere Wege", ["Viele schnelle Autos", "Kaputte Lampen", "Abgesperrte Wege"], "Bäume geben auf einem Platz ___.", "Schatten", "Denke an einen Platz, auf dem du dich wohlfühlst."),
+        fact("Was hilft dir, einen Weg wiederzufinden?", "Gut sichtbare Orte", ["Geschlossene Augen", "Ein unbekanntes Geräusch", "Eine erfundene Strasse"], "Ein Brunnen kann beim Finden des Weges ___.", "helfen", "Auffällige Orte kann man sich gut merken."),
       ],
     },
   },
@@ -228,18 +228,18 @@ const BALANCED_TOPICS: Record<string, BalancedTopic> = {
 };
 
 const questionStarts = [
-  "Wähle:", "Überlege genau:", "Was passt?", "Prüfe:", "Entscheide:",
-  "Finde die richtige Aussage:", "Welche Antwort überzeugt?", "Denke an ein Beispiel:", "Ordne dein Wissen:", "Was trifft zu?",
-  "Wähle bewusst:", "Welche Lösung ist sinnvoll?", "Prüfe die Möglichkeiten:", "Was würdest du antworten?", "Finde die beste Begründung:",
-  "Achte auf den Zusammenhang:", "Welche Aussage ist richtig?", "Vergleiche die Antworten:", "Was erklärt den Begriff?", "Welche Antwort passt zum Alltag?",
-  "Denke einen Schritt weiter:", "Was ist hier entscheidend?", "Wähle die sachliche Antwort:", "Welche Lösung passt zum Thema?", "Prüfe dein Verständnis:",
+  "Wähle:", "Schau genau:", "Was passt?", "Prüfe:", "Entscheide:",
+  "Finde die richtige Antwort:", "Welche Antwort passt?", "Denke an deinen Alltag:", "Schau dir alles an:", "Was stimmt?",
+  "Wähle aus:", "Welche Lösung passt?", "Schau die Möglichkeiten an:", "Was würdest du wählen?", "Finde die beste Antwort:",
+  "Achte auf die Frage:", "Welche Aussage stimmt?", "Vergleiche die Antworten:", "Was passt hier?", "Welche Antwort passt zum Alltag?",
+  "Denke kurz nach:", "Was ist wichtig?", "Wähle die passende Antwort:", "Welche Lösung passt zum Thema?", "Zeig, was du weisst:",
 ];
 const fillStarts = [
-  "Ergänze:", "Setze das passende Wort ein:", "Vervollständige:", "Welches Wort fehlt?", "Fülle die Lücke:",
-  "Ergänze den Merksatz:", "Setze den Fachbegriff ein:", "Mache den Satz vollständig:", "Finde das fehlende Wort:", "Schliesse die Lücke:",
-  "Welcher Begriff passt?", "Ergänze sinnvoll:", "Setze das treffende Wort ein:", "Vervollständige die Aussage:", "Trage den passenden Begriff ein:",
-  "Formuliere den Satz fertig:", "Ergänze mit einem Wort:", "Setze die richtige Lösung ein:", "Finde den gesuchten Begriff:", "Mache die Aussage korrekt:",
-  "Ergänze den Zusammenhang:", "Welches Schlüsselwort fehlt?", "Setze den passenden Ausdruck ein:", "Beende den Satz:", "Prüfe und ergänze:",
+  "Ergänze:", "Setze das passende Wort ein:", "Mach den Satz fertig:", "Welches Wort fehlt?", "Fülle die Lücke:",
+  "Ergänze den Satz:", "Setze ein Wort ein:", "Mache den Satz vollständig:", "Finde das fehlende Wort:", "Schliesse die Lücke:",
+  "Welches Wort passt?", "Ergänze passend:", "Setze das richtige Wort ein:", "Vervollständige den Satz:", "Trage das passende Wort ein:",
+  "Mach den Satz fertig:", "Ergänze mit einem Wort:", "Setze die richtige Lösung ein:", "Finde das gesuchte Wort:", "Mache den Satz richtig:",
+  "Ergänze den Satz:", "Welches Wort fehlt?", "Setze den passenden Ausdruck ein:", "Beende den Satz:", "Prüfe und ergänze:",
 ];
 
 function specialExercise(topicKey: string, exercise: Exercise): Exercise | null {
