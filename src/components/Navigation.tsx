@@ -65,6 +65,7 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
+          prefetch={false}
           className="absolute left-1/2 flex min-h-[44px] -translate-x-1/2 items-center justify-center sm:static sm:left-auto sm:translate-x-0"
           onClick={() => setOpen(false)}
         >
@@ -85,6 +86,7 @@ export default function Navigation() {
           <XpBar />
           <Link
             href="/dashboard"
+            prefetch={false}
             className="flex items-center gap-1.5 text-sm text-green-700 hover:text-green-800 font-semibold py-2 px-2.5 rounded-xl bg-green-50 hover:bg-green-100 transition-colors whitespace-nowrap border border-green-200"
           >
             <Image src="/images/ui/Lernen-Dashboard-icon.svg" alt="Lernen" width={28} height={28} />
@@ -92,6 +94,7 @@ export default function Navigation() {
           </Link>
           <Link
             href="/rewards"
+            prefetch={false}
             className="flex items-center gap-1.5 text-sm text-amber-700 hover:text-amber-800 font-semibold py-2 px-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 transition-colors whitespace-nowrap border border-amber-200"
             aria-label={tr("navRewardsShort")}
             title={tr("navRewardsShort")}
@@ -103,6 +106,7 @@ export default function Navigation() {
           {session && (
             <Link
               href="/parents"
+              prefetch={false}
               className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-800 font-semibold py-2 px-2.5 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors whitespace-nowrap border border-gray-200"
               title={tr("navParents") ?? "Elternbereich"}
             >
@@ -149,6 +153,7 @@ export default function Navigation() {
               {!session?.premium && (
                 <Link
                   href="/upgrade"
+                  prefetch={false}
                   className="text-sm bg-amber-500 text-white px-3 py-1.5 rounded-full hover:bg-amber-600 transition-colors font-bold shadow-sm whitespace-nowrap"
                 >
                   ⭐ Upgrade
@@ -156,6 +161,7 @@ export default function Navigation() {
               )}
               <Link
                 href="/account"
+                prefetch={false}
                 className="text-sm text-gray-500 hover:text-gray-700 font-medium py-2 px-2 whitespace-nowrap"
                 title={session?.email ?? ""}
               >
@@ -166,6 +172,7 @@ export default function Navigation() {
             <>
               <Link
                 href="/login"
+                prefetch={false}
                 className="text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap"
                 style={{ minWidth: "56px", textAlign: "center" }}
               >
@@ -173,6 +180,7 @@ export default function Navigation() {
               </Link>
               <Link
                 href="/signup"
+                prefetch={false}
                 className="text-sm bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap inline-block text-center min-w-[160px]"
               >
                 {tr("signup")}
@@ -236,27 +244,27 @@ export default function Navigation() {
           style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))", maxHeight: "80dvh" }}
         >
           {/* Core nav — always visible */}
-          <Link href="/dashboard"
+          <Link href="/dashboard" prefetch={false}
             className="text-base border-2 border-green-700 text-green-700 px-4 py-3 rounded-full text-center font-semibold active:bg-green-50"
             onClick={() => setOpen(false)}>
             📚 {tr("goLearn")}
           </Link>
-          <Link href="/daily"
+          <Link href="/daily" prefetch={false}
             className="text-base border-2 border-amber-400 text-amber-700 px-4 py-3 rounded-full text-center font-semibold active:bg-amber-50"
             onClick={() => setOpen(false)}>
             ⚡ {tr("navDaily")}
           </Link>
-          <Link href="/missionen"
+          <Link href="/missionen" prefetch={false}
             className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
             onClick={() => setOpen(false)}>
             🏆 {tr("navTrophies")}
           </Link>
-          <Link href="/rewards"
+          <Link href="/rewards" prefetch={false}
             className="text-base text-amber-700 font-medium py-3 px-4 rounded-xl hover:bg-amber-50"
             onClick={() => setOpen(false)}>
             🎁 {tr("navRewards")}
           </Link>
-          <Link href="/shop"
+          <Link href="/shop" prefetch={false}
             className="text-base text-yellow-700 font-medium py-3 px-4 rounded-xl hover:bg-yellow-50"
             onClick={() => setOpen(false)}>
             🛍️ {lang === "fr" ? "Boutique" : lang === "it" ? "Negozio" : lang === "en" ? "Shop" : "Shop"}
@@ -266,14 +274,14 @@ export default function Navigation() {
           {session ? (
             <>
               {/* Parent & Kids links */}
-              <Link href="/parents"
+              <Link href="/parents" prefetch={false}
                 className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 flex items-center gap-2"
                 onClick={() => setOpen(false)}>
                 📊 {tr("navParents") ?? "Elternbereich"}
               </Link>
               {/* Premium upsell or badge */}
               {!isPremium ? (
-                <Link href="/upgrade"
+                <Link href="/upgrade" prefetch={false}
                   className="text-base bg-amber-500 text-white px-4 py-3 rounded-full text-center font-bold active:bg-amber-600"
                   onClick={() => setOpen(false)}>
                   ⭐ Upgrade → Premium
@@ -283,7 +291,7 @@ export default function Navigation() {
                   ⭐ Premium aktiv
                 </div>
               )}
-              <Link href="/account"
+              <Link href="/account" prefetch={false}
                 className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
                 onClick={() => setOpen(false)}>
                 👤 {tr("navAccount") ?? "Konto"}
@@ -296,12 +304,12 @@ export default function Navigation() {
             </>
           ) : (
             <>
-              <Link href="/login"
+              <Link href="/login" prefetch={false}
                 className="text-base text-gray-700 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 active:bg-gray-100"
                 onClick={() => setOpen(false)}>
                 {tr("login")}
               </Link>
-              <Link href="/signup"
+              <Link href="/signup" prefetch={false}
                 className="text-base bg-green-700 text-white px-4 py-3 rounded-full text-center font-bold active:bg-green-700"
                 onClick={() => setOpen(false)}>
                 {tr("signup")}

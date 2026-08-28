@@ -13,7 +13,7 @@ export default function XpBar() {
   const pct = getLevelProgress(profile.xp);
 
   return (
-    <Link href="/missionen" className="flex items-center gap-2 group cursor-pointer" aria-label="Meine Missionen">
+    <Link href="/missionen" prefetch={false} className="flex items-center gap-2 group cursor-pointer" aria-label="Meine Missionen">
       {/* Emoji + level */}
       <span className="text-base shrink-0" title={level.title}>{level.emoji}</span>
       {/* XP bar */}
