@@ -1,3 +1,5 @@
+import generatedTopicLocalizations from "./generatedTopicLocalizations.json";
+
 /**
  * Multilingual topic titles.
  * Key = topic id, value = { de, fr, it, en }
@@ -468,5 +470,6 @@ export function getTopicTitle(topicId: string, lang: string, fallback: string): 
     "Religionen & Weltanschauungen": { de: "Religionen & Weltanschauungen", fr: "Religions et visions du monde", it: "Religioni e visioni del mondo", en: "Religions & Worldviews" },
   };
   if (consolidated[fallback]) return consolidated[fallback][lang] ?? consolidated[fallback].de;
-  return TOPIC_TITLES[topicId]?.[lang] ?? TOPIC_TITLES[topicId]?.["de"] ?? fallback;
+  const exactTitle = (generatedTopicLocalizations as Record<string, Record<string, string>>)[fallback];
+  return exactTitle?.[lang] ?? TOPIC_TITLES[topicId]?.[lang] ?? TOPIC_TITLES[topicId]?.["de"] ?? fallback;
 }

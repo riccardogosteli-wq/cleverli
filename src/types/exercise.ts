@@ -14,6 +14,9 @@ export interface Exercise {
   optionsIT?: string[];
   answer: string;
   altAnswers?: string[];
+  altAnswersEN?: string[];
+  altAnswersFR?: string[];
+  altAnswersIT?: string[];
   answerEN?: string;
   answerFR?: string;
   answerIT?: string;
@@ -33,16 +36,29 @@ export interface Exercise {
   optionEmojis?: string[];  // per-option visual symbols for early-reader multiple-choice
   mascot?: "wave" | "think" | "celebrate" | "run" | "sit-read" | "jump-star";
   pairs?: { id: string; label: string; image?: string; emoji?: string }[];       // memory
+  pairsEN?: { id: string; label: string; image?: string; emoji?: string }[];
+  pairsFR?: { id: string; label: string; image?: string; emoji?: string }[];
+  pairsIT?: { id: string; label: string; image?: string; emoji?: string }[];
   dragItems?: { id: string; label: string; image?: string; emoji?: string }[];  // drag-drop
+  dragItemsEN?: { id: string; label: string; image?: string; emoji?: string }[];
+  dragItemsFR?: { id: string; label: string; image?: string; emoji?: string }[];
+  dragItemsIT?: { id: string; label: string; image?: string; emoji?: string }[];
   dropZones?: { id: string; label: string }[];                                  // drag-drop
+  dropZonesEN?: { id: string; label: string }[];
+  dropZonesFR?: { id: string; label: string }[];
+  dropZonesIT?: { id: string; label: string }[];
   dropAnswers?: Record<string, string>;                                          // drag-drop: zoneId→itemId
   numberMin?: number;   // number-line
   numberMax?: number;   // number-line
   numberStep?: number;  // number-line
   wordList?: string[];  // word-search
+  wordListEN?: string[];
+  wordListFR?: string[];
+  wordListIT?: string[];
   gridSize?: number;    // word-search
   free?: boolean;
   preserveGermanContent?: boolean; // keep German learning text intact when the surrounding UI is localised
+  completeLocalization?: boolean; // generated localisation covers every rendered exercise field
 }
 
 export interface Topic {

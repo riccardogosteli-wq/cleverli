@@ -121,7 +121,12 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     hints: exercise.hintsEN ?? exercise.hints,
     options: exercise.optionsEN ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsEN, exercise.answerEN),
+    altAnswers: exercise.altAnswersEN ?? exercise.altAnswers,
     reviewCriteria: exercise.reviewCriteriaEN ?? exercise.reviewCriteria,
+    pairs: exercise.pairsEN ?? exercise.pairs,
+    dragItems: exercise.dragItemsEN ?? exercise.dragItems,
+    dropZones: exercise.dropZonesEN ?? exercise.dropZones,
+    wordList: exercise.wordListEN ?? exercise.wordList,
   };
   if (lang === "fr") return {
     ...exercise,
@@ -129,7 +134,12 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     hints: exercise.hintsFR ?? exercise.hints,
     options: exercise.optionsFR ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsFR, exercise.answerFR),
+    altAnswers: exercise.altAnswersFR ?? exercise.altAnswers,
     reviewCriteria: exercise.reviewCriteriaFR ?? exercise.reviewCriteria,
+    pairs: exercise.pairsFR ?? exercise.pairs,
+    dragItems: exercise.dragItemsFR ?? exercise.dragItems,
+    dropZones: exercise.dropZonesFR ?? exercise.dropZones,
+    wordList: exercise.wordListFR ?? exercise.wordList,
   };
   if (lang === "it") {
     const localized = {
@@ -138,9 +148,14 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     hints: exercise.hintsIT ?? exercise.hints,
     options: exercise.optionsIT ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsIT, exercise.answerIT),
+    altAnswers: exercise.altAnswersIT ?? exercise.altAnswers,
     reviewCriteria: exercise.reviewCriteriaIT ?? exercise.reviewCriteria,
+    pairs: exercise.pairsIT ?? exercise.pairs,
+    dragItems: exercise.dragItemsIT ?? exercise.dragItems,
+    dropZones: exercise.dropZonesIT ?? exercise.dropZones,
+    wordList: exercise.wordListIT ?? exercise.wordList,
     };
-    return exercise.preserveGermanContent ? localized : cleanItalianExercise(localized);
+    return exercise.preserveGermanContent || exercise.completeLocalization ? localized : cleanItalianExercise(localized);
   }
   return exercise;
 }

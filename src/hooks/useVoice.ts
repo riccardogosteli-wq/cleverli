@@ -1,5 +1,7 @@
 "use client";
 import { useCallback, useRef } from "react";
+import { useLang } from "@/lib/LangContext";
+import type { Lang } from "@/lib/i18n";
 
 /**
  * useVoice — ElevenLabs TTS (Charlie Chatlin — conversational German) with Web Speech fallback.
@@ -308,7 +310,33 @@ function cleanForSpeech(text: string): string {
     .trim();
 }
 
+function cleanLocalizedSpeech(text: string, language: Exclude<Lang, "de">): string {
+  const words = {
+    en: { blank: "blank", plus: "plus", minus: "minus", times: "times", divided: "divided by", equals: "equals" },
+    fr: { blank: "blanc", plus: "plus", minus: "moins", times: "fois", divided: "divisé par", equals: "égale" },
+    it: { blank: "spazio vuoto", plus: "più", minus: "meno", times: "per", divided: "diviso", equals: "uguale" },
+  }[language];
+  return text
+    .replace(/___/g, words.blank)
+    .replace(/×/g, ` ${words.times} `)
+    .replace(/÷/g, ` ${words.divided} `)
+    .replace(/\+/g, ` ${words.plus} `)
+    .replace(/[−–](?=\s*\d)/g, `${words.minus} `)
+    .replace(/=/g, ` ${words.equals} `)
+    .replace(/«([^»]+)»/g, "$1")
+    .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}]/gu, "")
+    .replace(/[\u{FE00}-\u{FE0F}]/gu, "")
+    .replace(/[#*_~`→←↑↓✓✗✅❌]/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+export function cleanSpeechForLanguage(text: string, language: Lang): string {
+  return language === "de" ? cleanForSpeech(text) : cleanLocalizedSpeech(text, language);
+}
+
 export function useVoice() {
+  const { lang } = useLang();
   const ctxRef  = useRef<AudioContext | null>(null);
   const srcRef  = useRef<AudioBufferSourceNode | null>(null);
 
@@ -325,29 +353,30 @@ export function useVoice() {
     if (typeof window !== "undefined") window.speechSynthesis?.cancel();
   }, []);
 
-  const speakWebSpeech = useCallback((text: string) => {
+  const speakWebSpeech = useCallback((text: string, language: Lang) => {
     if (typeof window === "undefined" || !window.speechSynthesis) return;
     window.speechSynthesis.cancel();
     const utt = new SpeechSynthesisUtterance(text);
-    utt.lang = "de-DE";
+    utt.lang = { de: "de-CH", en: "en-GB", fr: "fr-CH", it: "it-CH" }[language];
     utt.rate = 0.85;
     utt.pitch = 1.1;
     const voices = window.speechSynthesis.getVoices();
-    const pref = voices.find(v => v.lang.startsWith("de") && /anna|hedda|female/i.test(v.name))
-              ?? voices.find(v => v.lang.startsWith("de"));
+    const prefix = language === "de" ? "de" : language;
+    const pref = voices.find(v => v.lang.toLowerCase().startsWith(prefix) && /anna|hedda|female/i.test(v.name))
+              ?? voices.find(v => v.lang.toLowerCase().startsWith(prefix));
     if (pref) utt.voice = pref;
     window.speechSynthesis.speak(utt);
   }, []);
 
-  const speak = useCallback(async (text: string) => {
-    const clean = cleanForSpeech(text);
+  const speak = useCallback(async (text: string, speechLanguage: Lang = lang) => {
+    const clean = cleanSpeechForLanguage(text, speechLanguage);
     if (!clean) return;
     stop();
 
-    const key = clean;
+    const key = `${speechLanguage}:${clean}`;
 
     if (Date.now() < preferWebSpeechUntil) {
-      speakWebSpeech(clean);
+      speakWebSpeech(clean, speechLanguage);
       return;
     }
 
@@ -369,7 +398,7 @@ export function useVoice() {
           if (res.headers.get("X-Cleverli-TTS-Fallback") === "web-speech") {
             preferWebSpeechUntil = Date.now() + 5 * 60 * 1000;
             audioCache.delete(key);
-            speakWebSpeech(clean);
+            speakWebSpeech(clean, speechLanguage);
             return;
           }
           const ab = await res.arrayBuffer();
@@ -377,7 +406,7 @@ export function useVoice() {
           audioCache.set(key, buffer);
         } else {
           // Already loading from another call — fall back to Web Speech
-          speakWebSpeech(clean);
+          speakWebSpeech(clean, speechLanguage);
           return;
         }
       }
@@ -390,9 +419,9 @@ export function useVoice() {
     } catch (err) {
       audioCache.delete(key);
       console.warn("[useVoice] ElevenLabs failed, falling back to Web Speech:", err);
-      speakWebSpeech(clean);
+      speakWebSpeech(clean, speechLanguage);
     }
-  }, [stop, speakWebSpeech]);
+  }, [lang, stop, speakWebSpeech]);
 
   const isSupported = typeof window !== "undefined" &&
     ("speechSynthesis" in window || "AudioContext" in window);

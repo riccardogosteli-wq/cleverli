@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
-import { getDailyChallenge, getDailyState, markDailyComplete, isDailyDoneToday, DAILY_XP_BONUS } from "@/lib/daily";
+import { getDailyState, markDailyComplete, isDailyDoneToday, DAILY_XP_BONUS, todayKey } from "@/lib/dailyState";
+import type { Exercise } from "@/types/exercise";
 import { getTopicTitle } from "@/data/topicTitles";
-import { localizeExercise } from "@/lib/exerciseLocalization";
 import { getLocalizedSubjectName } from "@/lib/seoContent";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
@@ -41,12 +41,37 @@ export default function DailyPage() {
   const [startTime] = useState(() => Date.now());
   const [alreadyDone, setAlreadyDone] = useState(false);
   const [streakMilestone, setStreakMilestone] = useState<number | null>(null);
-
-  const challenge = getDailyChallenge(grade);
+  const [challenge, setChallenge] = useState<{
+    exercise: Exercise;
+    subject: string;
+    topic: { id: string; title: string; emoji: string };
+  } | null | undefined>(undefined);
 
   useEffect(() => {
     setAlreadyDone(isDailyDoneToday());
   }, []);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(`/api/daily-challenge?grade=${grade}&lang=${lang}&date=${todayKey()}`, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Daily challenge HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(setChallenge)
+      .catch((error) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        console.error("[daily] Failed to load challenge", error);
+        setChallenge(null);
+      });
+    return () => controller.abort();
+  }, [grade, lang]);
+
+  if (challenge === undefined) return (
+    <div className="max-w-md mx-auto px-4 py-12 text-center">
+      <p className="text-gray-400">{lang === "fr" ? "Chargement…" : lang === "it" ? "Caricamento…" : lang === "en" ? "Loading…" : "Wird geladen…"}</p>
+    </div>
+  );
 
   if (!challenge) return (
     <div className="max-w-md mx-auto px-4 py-12 text-center">
@@ -55,7 +80,8 @@ export default function DailyPage() {
   );
 
   const { exercise, topic, subject } = challenge;
-  const localizedExercise = localizeExercise(exercise, lang);
+  const localizedExercise = exercise;
+  const exerciseSpeechLang = subject === "german" ? "de" : subject === "english" ? "en" : subject === "french" ? "fr" : lang;
 
   const handleAnswer = (correct: boolean) => {
     play(correct ? "correct" : "wrong");
@@ -254,7 +280,7 @@ export default function DailyPage() {
             onAnswer={handleAnswer}
           />
         )}
-        <HintSystem hints={localizedExercise.hints} onHintUsed={() => setHintsUsed(h => h + 1)} />
+        <HintSystem hints={localizedExercise.hints} speechLang={exerciseSpeechLang} onHintUsed={() => setHintsUsed(h => h + 1)} />
       </div>
 
       <p className="text-center text-xs text-gray-400">

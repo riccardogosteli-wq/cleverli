@@ -152,6 +152,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const { speak, stop, isSupported } = useVoice();
   const { play } = useSound();
   const { tr, lang } = useLang();
+  const exerciseSpeechLang = subject === "german" ? "de" : subject === "english" ? "en" : subject === "french" ? "fr" : lang;
   const { recordAnswer, profile, leveledUp, clearLeveledUp } = useProfileContext();
   const { session } = useSession();
   const level = getLevelForXp(profile.xp);
@@ -201,7 +202,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const currentCompleted = correctIds.size;
   const tierInfo = getTierProgress(topic, currentCompleted);
   const sessionTotal = Math.max(1, exercises.length);
-  const current: Exercise = localizeExercise(exercises[idx] ?? sortByDifficulty(topic.exercises)[0], lang);
+  const sourceCurrent: Exercise = exercises[idx] ?? sortByDifficulty(topic.exercises)[0];
+  const current: Exercise = localizeExercise(sourceCurrent, lang);
   useEffect(() => {
     try {
       const stored = parseInt(localStorage.getItem(freeUsageKey) ?? "0", 10) || 0;
@@ -485,13 +487,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     // Sound first, then voice after a short pause
     if (correct && (newStreak === 3 || newStreak === 5 || newStreak === 8)) {
       play("streak");
-      setTimeout(() => { if (voiceOn) speak(getPhrase("streak")); }, 400);
+      setTimeout(() => { if (voiceOn) speak(getPhrase("streak"), "de"); }, 400);
     } else if (correct) {
       play("correct");
-      setTimeout(() => { if (voiceOn) speak(getPhrase("correct")); }, 300);
+      setTimeout(() => { if (voiceOn) speak(getPhrase("correct"), "de"); }, 300);
     } else {
       play("wrong");
-      setTimeout(() => { if (voiceOn) speak(getPhrase("wrong")); }, 300);
+      setTimeout(() => { if (voiceOn) speak(getPhrase("wrong"), "de"); }, 300);
     }
   };
 
@@ -504,7 +506,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         setTimeout(() => setShowPerfect(false), 1800);
       } else {
         play("complete");
-        setTimeout(() => { if (voiceOn) speak(getPhrase("complete")); }, 600);
+        setTimeout(() => { if (voiceOn) speak(getPhrase("complete"), "de"); }, 600);
       }
       setExerciseInProgress(false); // UJ-12: clear in-progress flag on completion
       // UJ-7: if review mode done, check if still wrong answers → repeat, else done
@@ -930,7 +932,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           {/* Listening tasks play a hidden German stimulus; other tasks read the visible question. */}
           {isSupported && (
             <button
-              onClick={() => speak(current.listeningText ?? current.question)}
+              onClick={() => speak(sourceCurrent.listeningText ?? (subject === "math" || subject === "science" ? current.question : sourceCurrent.question), sourceCurrent.listeningText ? "de" : exerciseSpeechLang)}
               className="flex items-center justify-center gap-2 w-full text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-xl py-2.5 px-3 hover:bg-green-100 active:scale-95 transition-all"
               title={current.listeningText ? (lang === "fr" ? "Écouter le texte" : lang === "it" ? "Ascolta il testo" : lang === "en" ? "Play audio text" : "Hörtext abspielen") : tr("readAloudTitle")}
               aria-label={current.listeningText ? (lang === "fr" ? "Écouter le texte" : lang === "it" ? "Ascolta il testo" : lang === "en" ? "Play audio text" : "Hörtext abspielen") : tr("readAloudTitle")}
@@ -996,7 +998,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               onAnswer={handleAnswer}
             />
           )}
-          <HintSystem hints={current.hints} onHintUsed={() => {
+          <HintSystem hints={current.hints} speechLang={exerciseSpeechLang} onHintUsed={() => {
             const nextHintsUsed = hintsUsed + 1;
             setHintsUsed(nextHintsUsed);
             trackExerciseEvent("hint_used", exerciseTelemetryPayload({ hintsUsed: nextHintsUsed }));

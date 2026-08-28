@@ -32,6 +32,7 @@ import { applyLp21ExerciseReplacements } from "./lp21ExerciseReplacements";
 import { applyLp21ApiFitReplacements } from "./lp21ApiFitReplacements";
 import { consolidateNmgTopics } from "./nmgConsolidation";
 import { applyGrade1GermanLevel } from "./grade1GermanLevel";
+import { applyExerciseLocalizations } from "./exerciseLocalizations";
 
 const grade4Science = [...grade4NT, ...grade4RZG];
 const grade5Science = [...grade5NT, ...grade5RZG];
@@ -66,7 +67,8 @@ export function getTopics(grade: number, subject: string): Topic[] {
   const levelledTopics = grade === 1 && subject === "german"
     ? applyGrade1GermanLevel(repairedTopics)
     : repairedTopics;
-  return consolidateNmgTopics(grade, subject, applyLp21ApiFitReplacements(grade, subject, levelledTopics)).map((topic) => ({
+  const consolidatedTopics = consolidateNmgTopics(grade, subject, applyLp21ApiFitReplacements(grade, subject, levelledTopics));
+  return applyExerciseLocalizations(grade, subject, consolidatedTopics).map((topic) => ({
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
   }));

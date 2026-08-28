@@ -4,10 +4,11 @@ import Image from "next/image";
 import { useSound } from "@/hooks/useSound";
 import { useVoice } from "@/hooks/useVoice";
 import { useLang } from "@/lib/LangContext";
+import type { Lang } from "@/lib/i18n";
 
-interface Props { hints: string[]; onHintUsed?: () => void; }
+interface Props { hints: string[]; onHintUsed?: () => void; speechLang?: Lang; }
 
-export default function HintSystem({ hints, onHintUsed }: Props) {
+export default function HintSystem({ hints, onHintUsed, speechLang }: Props) {
   const [shown, setShown] = useState(false);
   const [idx, setIdx] = useState(0);
   const { play } = useSound();
@@ -36,7 +37,7 @@ export default function HintSystem({ hints, onHintUsed }: Props) {
           <p className="text-sm text-amber-900 font-medium leading-snug flex-1">{hints[idx]}</p>
           {isSupported && (
             <button
-              onClick={() => speak(hints[idx])}
+              onClick={() => speak(hints[idx], speechLang)}
               className="shrink-0 text-amber-700 hover:text-amber-900 transition-colors p-1 rounded hover:bg-amber-100"
               title={tr("readAloud") ?? "Vorlesen"}
               style={{ minHeight: "32px", minWidth: "32px", display: "flex", alignItems: "center", justifyContent: "center" }}

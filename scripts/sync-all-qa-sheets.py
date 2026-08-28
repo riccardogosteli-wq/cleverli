@@ -69,9 +69,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Make IDs globally unique when the schema is next migrated.",
         ],
         9: [
-            "High", "Localisation / scoring", "Mathematics / NMG", "At least 118 mixed-language exercises; 84 Italian option mismatches; 283 answer-localisation gaps",
-            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 84 Italian multiple-choice exercises the stored answer is not among the displayed options; 283 unique fill-ins have 839 language instances without a localised text answer.",
-            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+            "Fixed", "Localisation / scoring", "All", "1,863 exercises × EN/FR/IT; zero localisation integrity errors",
+            "Maths and NMG now have complete prompt, answer, option, hint and interaction-label localisation. Language subjects use a clear UI-language action cue while preserving the complete German, English or French learning target.",
+            "Resolved. Permanent catalogue and TTS gates cover all 41,754 locale instances; answer parity, blanks, structural IDs, mixed-language fallbacks and speech-language routing report zero failures.",
         ],
         10: [
             "Review", "LP21 competency coverage", "German / NMG", "Composition, listening and NMG balance improved; speaking remains",
@@ -101,9 +101,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved and covered by the one-character hint regression.",
         ],
         14: [
-            "High", "Localisation / scoring", "Mathematics / NMG", "At least 134 mixed-language exercises; 57 Italian option mismatches; 162 answer-localisation gaps",
-            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 57 Italian multiple-choice exercises the stored answer is not among the displayed options; 162 unique fill-ins have 478 language instances without a localised text answer.",
-            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+            "Fixed", "Localisation / scoring", "All", "1,752 exercises × EN/FR/IT; zero localisation integrity errors",
+            "Maths and NMG now have complete prompt, answer, option, hint and interaction-label localisation. Language subjects use a clear UI-language action cue while preserving the complete German, English or French learning target.",
+            "Resolved. Permanent catalogue and TTS gates cover all 41,754 locale instances; answer parity, blanks, structural IDs, mixed-language fallbacks and speech-language routing report zero failures.",
         ],
         15: [
             "Fixed", "Punctuation scoring", "German", "satzzeichen: 17 fill-in exercises",
@@ -148,9 +148,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Replaced with a clear double-consonant fill-in: “Der Boden ist na___.” → “ss”.",
         ],
         10: [
-            "High", "Localisation / scoring", "Mathematics / NMG", "At least 119 mixed-language exercises; 129 Italian option mismatches; 117 answer-localisation gaps",
-            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 129 Italian multiple-choice exercises the stored answer is not among the displayed options; 117 unique fill-ins have 341 language instances without a localised text answer.",
-            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+            "Fixed", "Localisation / scoring", "All", "2,002 exercises × EN/FR/IT; zero localisation integrity errors",
+            "Maths and NMG now have complete prompt, answer, option, hint and interaction-label localisation. Language subjects use a clear UI-language action cue while preserving the complete German, English or French learning target.",
+            "Resolved. Permanent catalogue and TTS gates cover all 41,754 locale instances; answer parity, blanks, structural IDs, mixed-language fallbacks and speech-language routing report zero failures.",
         ],
         6: [
             "Fixed", "LP21 level", "Mathematics / German / NMG", "103 exercises",
@@ -205,9 +205,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved by the verified 321-row Grade 4 repetition replacement; all affected content is now topic-specific.",
         ],
         11: [
-            "High", "Localisation / scoring", "Mathematics / NMG", "At least 842 mixed-language exercises; 156 Italian option mismatches; 29 answer-localisation gaps",
-            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 156 Italian multiple-choice exercises the stored answer is not among the displayed options; 29 unique fill-ins have 87 language instances without a localised text answer.",
-            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+            "Fixed", "Localisation / scoring", "All", "2,501 exercises × EN/FR/IT; zero localisation integrity errors",
+            "Maths and NMG now have complete prompt, answer, option, hint and interaction-label localisation. Language subjects use a clear UI-language action cue while preserving the complete German, English or French learning target.",
+            "Resolved. Permanent catalogue and TTS gates cover all 41,754 locale instances; answer parity, blanks, structural IDs, mixed-language fallbacks and speech-language routing report zero failures.",
         ],
         12: [
             "Fixed", "Punctuation scoring", "German", "rechtschreibung-4/g4rs2m; interpunktion-4: 22 exercises",
@@ -267,9 +267,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "All German Grade 5 content now uses Swiss/German guillemets without inner spaces; direct-speech comma rules are corrected and regression-tested.",
         ],
         11: [
-            "High", "Localisation / scoring", "Mathematics / NMG", "At least 894 mixed-language exercises; 159 Italian option mismatches; 14 answer-localisation gaps",
-            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 159 Italian multiple-choice exercises the stored answer is not among the displayed options; 14 unique fill-ins have 42 language instances without a localised text answer.",
-            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+            "Fixed", "Localisation / scoring", "All", "2,900 exercises × EN/FR/IT; zero localisation integrity errors",
+            "Maths and NMG now have complete prompt, answer, option, hint and interaction-label localisation. Language subjects use a clear UI-language action cue while preserving the complete German, English or French learning target.",
+            "Resolved. Permanent catalogue and TTS gates cover all 41,754 locale instances; answer parity, blanks, structural IDs, mixed-language fallbacks and speech-language routing report zero failures.",
         ],
         12: [
             "Fixed", "Punctuation scoring", "German", "direkte-rede: 7 fill-in exercises",
@@ -329,9 +329,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved by the verified 321-row Grade 6 repetition/duplicate replacement; all affected content is now topic-specific.",
         ],
         10: [
-            "High", "Localisation / scoring", "Mathematics / NMG", "At least 932 mixed-language exercises; 210 Italian option mismatches; 21 answer-localisation gaps",
-            "Live EN/FR/IT output contains substantial German or broken mixed-language prompts. In 210 Italian multiple-choice exercises the stored answer is not among the displayed options; 21 unique fill-ins have 63 language instances without a localised text answer.",
-            "Repair the central localisation pipeline first, then replace remaining fallback translations and run human DE/EN/FR/IT scoring QA.",
+            "Fixed", "Localisation / scoring", "All", "2,900 exercises × EN/FR/IT; zero localisation integrity errors",
+            "Maths and NMG now have complete prompt, answer, option, hint and interaction-label localisation. Language subjects use a clear UI-language action cue while preserving the complete German, English or French learning target.",
+            "Resolved. Permanent catalogue and TTS gates cover all 41,754 locale instances; answer parity, blanks, structural IDs, mixed-language fallbacks and speech-language routing report zero failures.",
         ],
         11: [
             "Fixed", "Multi-gap / open-response scoring", "English", "writing-skills-6/ws6-44; vocabulary-6/vb6-36; culture-media-6/cm6-40, cm6-48",

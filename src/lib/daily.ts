@@ -32,8 +32,8 @@ function seededRand(seed: string, max: number): number {
   return Math.abs(h) % max;
 }
 
-export function getDailyChallenge(grade: number): DailyChallenge | null {
-  const today = todayKey();
+export function getDailyChallenge(grade: number, date = todayKey()): DailyChallenge | null {
+  const today = date;
   const subjects = ["math", "german"];
 
   // Pick subject based on date
