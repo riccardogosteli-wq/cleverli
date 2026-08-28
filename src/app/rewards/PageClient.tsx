@@ -11,7 +11,11 @@ import {
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
-import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
+import {
+  CORE_SUBJECTS,
+  getProgressSubjectsFromCatalog,
+  getTopicSummaries,
+} from "@/data/topicCatalog";
 import { startCheckout } from "@/lib/checkoutClient";
 import { BelohnungenGuestPreview } from "@/components/GuestPreview";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
@@ -65,23 +69,23 @@ export default function RewardsPage() {
   useEffect(() => { reload(); }, []);
 
   // Per-subject topic completion counts (all grades)
-  const subjectProgress = SUBJECTS.map(s => {
+  const subjectProgress = CORE_SUBJECTS.map(s => {
     let done = 0, total = 0;
     for (const g of [1,2,3,4,5,6]) {
-      const topics = getTopics(g, s.id);
+      const topics = getTopicSummaries(g, s.id);
       total += topics.length;
       for (const t of topics) {
         try {
           let raw: string | null = null;
           if (typeof window !== "undefined") {
-            for (const progressSubject of getProgressSubjects(g, s.id, t.id)) {
+            for (const progressSubject of getProgressSubjectsFromCatalog(g, s.id, t.id)) {
               raw = localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`);
               if (raw) break;
             }
           }
           if (raw) {
             const progress = JSON.parse(raw);
-            if (getEffectiveCompleted(progress, t.exercises.length) >= t.exercises.length) done++;
+            if (getEffectiveCompleted(progress, t.exerciseCount) >= t.exerciseCount) done++;
           }
         } catch { /* ignore */ }
       }

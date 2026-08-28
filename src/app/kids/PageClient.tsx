@@ -11,7 +11,11 @@ import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import { getLevelProgress } from "@/lib/xp";
 import { ACHIEVEMENTS } from "@/lib/achievements";
-import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
+import {
+  CORE_SUBJECTS,
+  getProgressSubjectsFromCatalog,
+  getTopicSummaries,
+} from "@/data/topicCatalog";
 import { isDailyDoneToday } from "@/lib/dailyState";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 
@@ -35,7 +39,7 @@ const GRADE_COLORS = [
 function getTopicDone(grade: number, subject: string, topicId: string, total: number): boolean {
   if (typeof window === "undefined") return false;
   try {
-    for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
       const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
       if (!raw) continue;
       const p = JSON.parse(raw);
@@ -48,8 +52,8 @@ function getTopicDone(grade: number, subject: string, topicId: string, total: nu
 function SubjectIsland({ grade, subject, emoji, label, colorIdx }: {
   grade: number; subject: string; emoji: string; label: string; colorIdx: number;
 }) {
-  const topics = getTopics(grade, subject);
-  const done = topics.filter(t => getTopicDone(grade, subject, t.id, t.exercises.length)).length;
+  const topics = getTopicSummaries(grade, subject);
+  const done = topics.filter(t => getTopicDone(grade, subject, t.id, t.exerciseCount)).length;
   const pct = topics.length > 0 ? Math.round((done / topics.length) * 100) : 0;
   const c = GRADE_COLORS[colorIdx];
 
@@ -75,7 +79,7 @@ function GradeSection({ grade, idx }: { grade: number; idx: number }) {
     <div className={`bg-gradient-to-br ${c.bg} border-2 ${c.border} rounded-3xl p-4 space-y-3`}>
       <h2 className={`font-black text-base ${c.text}`}>{label}</h2>
       <div className="grid grid-cols-2 gap-2">
-        {SUBJECTS.map((s, si) => (
+        {CORE_SUBJECTS.map((s, si) => (
           <SubjectIsland key={s.id} grade={grade} subject={s.id} emoji={s.emoji} label={tr(s.id)} colorIdx={(idx + si) % GRADE_COLORS.length} />
         ))}
       </div>

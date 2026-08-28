@@ -4,8 +4,12 @@ import Link from "next/link";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import { loadFamily, getActiveProfileId } from "@/lib/family";
-import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
-import { getTierProgress } from "@/lib/tierProgress";
+import {
+  CORE_SUBJECTS,
+  getProgressSubjectsFromCatalog,
+  getTopicSummaries,
+} from "@/data/topicCatalog";
+import { getTierProgressFromCounts } from "@/lib/tierProgress";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { LEVELS, getLevelProgress } from "@/lib/xp";
 import AuthGuard from "@/components/AuthGuard";
@@ -28,7 +32,7 @@ interface TopicProgress {
 function loadTopicProgress(grade: number, subject: string, topicId: string, total: number): { completed: number; stars: number } {
   if (typeof window === "undefined") return { completed: 0, stars: 0 };
   try {
-    for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
       const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
       if (!raw) continue;
       const d = JSON.parse(raw);
@@ -155,7 +159,7 @@ function SubjectSection({ subjectId, topics, grade, completedCount, totalCount }
   totalCount: number;
 }) {
   const { tr } = useLang();
-  const meta = SUBJECTS.find(s => s.id === subjectId)!;
+  const meta = CORE_SUBJECTS.find(s => s.id === subjectId)!;
   const pct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
 
   const subjectColors: Record<string, { bg: string; border: string; bar: string; text: string }> = {
@@ -228,15 +232,15 @@ export default function MissionenPage() {
   // Build full curriculum progress map
   const curriculumData = useMemo(() => {
     if (!loaded) return null;
-    return SUBJECTS.map(subject => {
-      const topics = getTopics(grade, subject.id);
+    return CORE_SUBJECTS.map(subject => {
+      const topics = getTopicSummaries(grade, subject.id);
       let completedExercisesTotal = 0;
       let totalExercisesTotal = 0;
 
       const topicProgressList: TopicProgress[] = topics.map(topic => {
-        const total = topic.exercises.length;
+        const total = topic.exerciseCount;
         const { completed, stars } = loadTopicProgress(grade, subject.id, topic.id, total);
-        const tierInfo = getTierProgress(topic, completed);
+        const tierInfo = getTierProgressFromCounts(topic.tierCounts, completed);
 
         completedExercisesTotal += completed;
         totalExercisesTotal += total;

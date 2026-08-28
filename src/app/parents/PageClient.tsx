@@ -8,7 +8,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
-import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
+import {
+  CORE_SUBJECTS,
+  getProgressSubjectsFromCatalog,
+  getTopicSummaries,
+} from "@/data/topicCatalog";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
@@ -36,17 +40,17 @@ function loadAllStats(): TopicStat[] {
   const stats: TopicStat[] = [];
   for (const grade of [1,2,3,4,5,6]) {
     for (const subject of ["math", "german", "science"]) {
-      const topics = getTopics(grade, subject);
+      const topics = getTopicSummaries(grade, subject);
       for (const topic of topics) {
         try {
           let raw: string | null = null;
-          for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
+          for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
             raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
             if (raw) break;
           }
           if (!raw) continue;
           const p = JSON.parse(raw);
-          const completed = getEffectiveCompleted(p, topic.exercises.length);
+          const completed = getEffectiveCompleted(p, topic.exerciseCount);
           stats.push({
             grade, subject,
             topicId: topic.id,
@@ -55,7 +59,7 @@ function loadAllStats(): TopicStat[] {
             stars: p.stars ?? 0,
             score: p.score ?? 0,
             completed,
-            total: topic.exercises.length,
+            total: topic.exerciseCount,
             lastPlayed: p.lastPlayed ?? "",
             partial: p.partial ?? false,
           });
@@ -285,9 +289,9 @@ export default function ParentsDashboard() {
                 {grade}. {t("Klasse","Année","Classe","Grade")}
               </div>
               <div className="space-y-1.5">
-                {SUBJECTS.map(sub => {
+                {CORE_SUBJECTS.map(sub => {
                   const subStats = gradeStats.filter(s => s.subject === sub.id);
-                  const topics = getTopics(grade, sub.id);
+                  const topics = getTopicSummaries(grade, sub.id);
                   const doneCnt = subStats.filter(s => s.completed >= s.total).length;
                   const pct = topics.length > 0 ? Math.round((doneCnt / topics.length) * 100) : 0;
                   return (
