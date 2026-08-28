@@ -21,7 +21,16 @@ test.describe("TTS API", () => {
     expect(res.headers()["x-cleverli-tts-fallback"]).toBeUndefined();
     expect((await res.body()).byteLength).toBeGreaterThan(10_000);
     const cc = res.headers()["cache-control"] ?? "";
-    expect(cc).toContain("s-maxage=604800");
+    expect(cc).toContain("max-age=604800");
+
+    // Vercel consumes and strips s-maxage before sending the client response.
+    // A repeated request proves the edge cache is active without another
+    // metered provider call.
+    const cached = await request.get(TTS_ENDPOINT, {
+      params: { text: "Cleverli TTS smoke test version one.", lang: "de" },
+      headers: BROWSER_HEADERS,
+    });
+    expect(cached.headers()["x-vercel-cache"]).toBe("HIT");
   });
 
   test("TTS rejects non-browser bulk requests before provider use", async ({ request }) => {
