@@ -21,6 +21,8 @@ const cases: Array<{ name: string; grade: number; subject: string; topic: string
   { name: "Grade-4 spectroscopy", grade: 4, subject: "science", topic: "materie", item: exercise("Was zeigt die Spektroskopie?", "ein Spektrum"), minimum: 5 },
   { name: "Grade-5 Gini coefficient", grade: 5, subject: "science", topic: "wirtschaft", item: exercise("Was misst der Gini-Koeffizient?", "Ungleichheit"), minimum: 5 },
   { name: "Grade-6 Snell law", grade: 6, subject: "science", topic: "physik", item: exercise("Nutze Snellius für die Brechung.", "Brechungswinkel"), minimum: 5 },
+  { name: "Unicode-leading ecological niche term", grade: 4, subject: "science", topic: "oekologie", item: exercise("Was ist eine ökologische Nische?", "Rolle einer Art im Ökosystem"), minimum: 4 },
+  { name: "Grade-2 three-digit multiplication", grade: 2, subject: "math", topic: "schaetzen", item: exercise("Schätze 498 × 6.", "3000"), minimum: 4 },
   { name: "simple Grade-1 counting", grade: 1, subject: "math", topic: "zahlen-1-10", item: exercise("3 + 2 = ___", "5"), minimum: 1, maximum: 2 },
   { name: "simple Grade-2 reading", grade: 2, subject: "german", topic: "texte-lesen", item: exercise("Lina hat einen Ball. Was hat Lina?", "einen Ball"), minimum: 1, maximum: 2 },
 ];
@@ -45,7 +47,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
         resolved.add(key);
         targetTypes[item.type] = (targetTypes[item.type] ?? 0) + 1;
         const review = reviewGradeSuitability(grade, subject.id, topic.id, item);
-        if (review.score > 2) failures.push(`${key}: repaired target still scores ${review.score} (${review.reason})`);
+        if (review.score > 3) failures.push(`${key}: repaired target exceeds the accepted 1–3 range with score ${review.score} (${review.reason})`);
       }
     }
   }

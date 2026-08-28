@@ -34,6 +34,7 @@
     "generate:topic-catalog": "npx tsx scripts/generate-topic-catalog.ts",
     "qa:topic-catalog": "npx tsx scripts/generate-topic-catalog.ts --check",
     "qa:grade1-german-level": "npx tsx scripts/audit-grade1-german-level.ts",
+    "qa:german-editorial": "npx tsx scripts/audit-german-editorial.ts",
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",
     "lp21:gap": "DRY_RUN=1 npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",
     "lp21:gap:live": "npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",

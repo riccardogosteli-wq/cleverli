@@ -8,14 +8,28 @@ export interface SuitabilityReview {
   evidence: string[];
 }
 
-const CYCLE_3 = /\b(?:Hypotenuse|Pythagoras|Gerundivum|Metonymie|Varianz|rechtsschief|photoelektrisch|Eukaryot|Phagozytose|Perowskit|Longtermism|Geoengineering|Syllogismus|Ad-hominem|Strawman|Intertextualität|Prämisse|Konklusion|Diglossie|Pidgin|Soziolekt|Idiolekt|Dysphemismus|Kreolsprache|Epiphora|Antiklimax|Oxymoron|Chiasmus|Litotes|Allegorie|Synekdoche|Paronomasie|Polyptoton|Geminatio|Synästhesie|Hendiadyoin|Aposiopese|Protektionismus|Oligopol|komparativer Vorteil|Bruttowertschöpfung|Grenznutzen|Externalität|Nash-Gleichgewicht|Kaufkraftparität|Bretton-Woods|Gini-Koeffizient|Quasar|Hertzsprung-Russell|Olbers-Paradoxon|Fermi-Paradoxon|Chandrasekhar|kosmische Inflation|Snellius|Wellenoptik|Spektroskopie|Bohr.?sche[sn]? Atommodell|Trophieebenen-Effizienz|carrying capacity|Milankovitch|horizontaler Gentransfer|technologische Singularität|Segregationsindex|Degrowth|Postwachstum|Anthropozän|Tipping Point|Transmigration|Dublin-Verordnung|Westfälischer Frieden|Subsidiaritätsprinzip)\b/i;
+const CYCLE_3 = /(?<![\p{L}\p{N}_])(?:Hypotenuse|Pythagoras|Gerundivum|Metonymie|Varianz|rechtsschief|photoelektrisch|Eukaryot|Phagozytose|Perowskit|Longtermism|Geoengineering|Syllogismus|Ad-hominem|Strawman|Intertextualität|Prämisse|Konklusion|Diglossie|Pidgin|Soziolekt|Idiolekt|Dysphemismus|Kreolsprache|Epiphora|Antiklimax|Oxymoron|Chiasmus|Litotes|Allegorie|Synekdoche|Paronomasie|Polyptoton|Geminatio|Synästhesie|Hendiadyoin|Aposiopese|Protektionismus|Oligopol|komparativer Vorteil|Bruttowertschöpfung|Grenznutzen|Externalität|Nash-Gleichgewicht|Kaufkraftparität|Bretton-Woods|Gini-Koeffizient|Quasar|Hertzsprung-Russell|Olbers-Paradoxon|Fermi-Paradoxon|Chandrasekhar|kosmische Inflation|Snellius|Wellenoptik|Spektroskopie|Bohr.?sche[sn]? Atommodell|Trophieebenen-Effizienz|carrying capacity|Milankovitch|horizontaler Gentransfer|technologische Singularität|Segregationsindex|Degrowth|Postwachstum|Anthropozän|Tipping Point|Transmigration|Dublin-Verordnung|Westfälischer Frieden|Subsidiaritätsprinzip)(?![\p{L}\p{N}_])/iu;
 
 const MIN_GRADE_TERMS: Array<{ min: number; pattern: RegExp; label: string }> = [
-  { min: 2, pattern: /\b(?:Amphibien|Säugetiere|Wirbeltiere|Aussenskelett|Exoskelett|Sauerstoff|Nährstoffe|Zellatmung|Produzenten|Konsumenten|Photosynthese|Solidarität|Aufenthaltsqualität|Geruchssinn|Schmerzsinn)\b/i, label: "abstrakter Fachbegriff statt beobachtbarer Erstklass-Inhalt" },
-  { min: 3, pattern: /\b(?:Genitiv|Dativ|Akkusativ|Partizip|Perfekt|Präteritum|Passiv|Reflexivpronomen|Relativpronomen|Indefinitpronomen|Possessivpronomen|Demonstrativpronomen|Interrogativpronomen|Emphatisch|Konjunktionalsatz|indirekter Fragesatz|Zellatmung|Glucose|Aggregatzustand|Prozent|Dezimal|Ballaststoffe|Verdauung|Karnivore|Bundesverfassung)\b/i, label: "Konzept liegt über dem Aufbau der Klassen 1–2" },
-  { min: 4, pattern: /\b(?:Plusquamperfekt|Konnotation|Denotation|Archaismus|Fugenelement|Morphem|flektier|denominal|relationales Adjektiv|absolutes Adjektiv|Adverbialsatz|Kausalangabe|Haiku|Autobiografie|Primzahl|kleinstes gemeinsames Vielfaches|Hektar|Volumen|Kernspaltung|Wirkungsgrad|elektrische Leistung|Kurzschluss|Pariser Klimaabkommen|anthropogen|Nullmeridian|tropisches Jahr|UTC|Legierung|Aluminium|Kohlenstoff|Silizium|Prisma|Sonnenfinsternis|Erdmagnetfeld|Lichtjahr|Feldlinienbild|Klimazone|Fjord|Erosion|Photosynthese|Klimawandel|CO₂-Emission|Wiener Kongress|Helveter)\b/i, label: "Konzept liegt über dem typischen Aufbau der 3. Klasse" },
-  { min: 5, pattern: /\b(?:Konzessivangabe|Quantorpronomen|Inferenz|Homophon|Sekundärmetabolit|Insulin|Nahrungsnetz|Schmarotzer|Habitat|ökologische Nische|UV-Strahlung|Kipppunkt|Reinstoff|homogenes Gemisch|Chromatografie|Hebelgesetz|potentielle Energie|kinetische Energie|Archimedes|Lichtgeschwindigkeit|Blockchain|Ozonschicht|Greenwashing|Tragfähigkeit|Trophieebene|Mercator|Fernerkundung|Schengen-Abkommen|Gewaltentrennung|Legislative|Exekutive|Judikative|Milizsystem|Zweibundvertrag|Kappeler Landfrieden|bilateraler Weg|Europäischer Rat|römischer Senat|zyklisches Geschichtsbild|virtuelles Wasser|Hydrologie|Transmigration|UNHCR|Investiturstreit|Dekolonisierung|Suffizienz)\b/i, label: "Fach- oder Abstraktionsniveau liegt über der 4. Klasse" },
+  { min: 2, pattern: /\b(?:Amphibien|Säugetiere|Wirbeltiere|Aussenskelett|Exoskelett|Zellatmung|Produzenten|Konsumenten|Photosynthese|Geschmacksverstärker|Temperaturempfinden|Druckveränderungen|Seitenlinienorgan|Tiefenwahrnehmung|Nahrungssignale|Kontrollzentrum)\b/i, label: "abstrakter Fachbegriff statt beobachtbarer Erstklass-Inhalt" },
+  { min: 3, pattern: /\b(?:Genitiv|Dativ|Akkusativ|Partizip|Perfekt|Präteritum|Passiv|Reflexivpronomen|Relativpronomen|Indefinitpronomen|Possessivpronomen|Demonstrativpronomen|Interrogativpronomen|Reziprokpronomen|Singularetantum|Emphatisch|Konjunktionalsatz|indirekter Fragesatz|Fachsprachlich|Analogiebildung|Ableitungsprodukt|Oktaeder|Zellatmung|Glucose|Prozent|Dezimal|Nachkommastellen?|Ballaststoffe|Verdauung|Karnivore|Bundesverfassung|elektromagnetisch|Luftfeuchtigkeit|Punktsymmetrie|Virenreplikation|Wirtszelle|Biodiversität|Evolution|natürliche Selektion|Spezies|Zuckerkrankheit|Genmanipuliert|Blutkörperchen|Parlamentsdebatte|Volksinitiative|Regierungsentscheidung|Vergangenheitsbewältigung)\b/i, label: "Konzept liegt über dem Aufbau der Klassen 1–2" },
+  { min: 4, pattern: /\b(?:Plusquamperfekt|Konnotation|Denotation|Archaismus|Fugenelement|Morphem|flektier|denominal|relationales Adjektiv|absolutes Adjektiv|Adverbialsatz|Kausalangabe|Kausalnebensatz|Konditionalsatz|Partizipialkonstruktion|Adjektivdeklination|Dimensionsadjektiv|Intensivadjektiv|Genitivattribut|Haiku|Autobiografie|Erzählperspektive|Primzahl|kleinstes gemeinsames Vielfaches|Hektar|Volumen|Kernspaltung|Wirkungsgrad|elektrische Leistung|Kurzschluss|Energieerhaltungssatz|Piezoelektrizität|Parallelschaltung|Hochspannungsleitungen|Pariser Klimaabkommen|Biodiversitätsabkommen|Fluorchlorkohlenwasserstoffe|anthropogen|Nullmeridian|tropisches Jahr|UTC|Legierung|Aluminium|Kohlenstoff|Silizium|Prisma|Sonnenfinsternis|Erdmagnetfeld|Lichtjahr|Feldlinienbild|Klimazone|Fjord|Erosion|Photosynthese|Klimawandel|CO₂-Emission|Massenaussterben|Gesteinskreislauf|Wiener Kongress|Helveter|Sonderbundskrieg|Bundesverfassung|Verfassungsänderung|Wirtschaftssystem|Rentenversicherung|Militärorganisation|Geheimdienstorganisation)\b/i, label: "Konzept liegt über dem typischen Aufbau der 3. Klasse" },
+  { min: 5, pattern: /(?<![\p{L}\p{N}_])(?:Konzessivangabe|Quantorpronomen|Inferenz|Homophon|Sekundärmetabolit|Insulin|Nahrungsnetz|Schmarotzer|Habitat|ökologische Nische|ökologische Sukzession|Konkurrenzausschluss|Habitatfragmentierung|Populationsdynamik|Ökosystemdienstleistung|Biodiversitätskonvention|Biodiversitätsverlust|Kohlenstoffkreislauf|Stickstoffkreislauf|Energiestoffwechsel|UV-Strahlung|Kipppunkt|Reinstoff|homogenes Gemisch|Chromatografie|Elektronenaufnahme|Schadstoffkonzentration|Trinkwasseraufbereitung|Wassereinzugsgebiet|Hebelgesetz|potentielle Energie|kinetische Energie|Archimedes|Schwerkraftbeschleunigung|Lichtgeschwindigkeit|Blockchain|Ozonschicht|Greenwashing|Tragfähigkeit|Trophieebene|Mercator|Kartenprojektionen|Fernerkundung|Schengen-Abkommen|Gewaltentrennung|Legislative|Exekutive|Judikative|Milizsystem|Verhältniswahlrecht|Mehrheitswahlrecht|Gesetzgebungsprozess|Kollegialitätsprinzip|Direktorialverfassung|Personenfreizügigkeit|Superdiversität|Zweibundvertrag|Kappeler Landfrieden|bilateraler Weg|Europäischer Rat|römischer Senat|zyklisches Geschichtsbild|virtuelles Wasser|Hydrologie|Transmigration|UNHCR|Investiturstreit|Dekolonisierung|Suffizienz|Kulturrelativismus|Bevölkerungsexplosion)(?![\p{L}\p{N}_])/iu, label: "Fach- oder Abstraktionsniveau liegt über der 4. Klasse" },
   { min: 6, pattern: /\b(?:Thema-Rhema|Relativgeschwindigkeit|Milankovitch|Biodiversitätshotspot|Mikroklima|horizontaler Gentransfer|technologische Singularität|Segregationsindex|Degrowth|Postwachstum|Theologie|Frankophonie|formales Register)\b/i, label: "Fach- oder Sprachkonzept liegt über der 5. Klasse" },
+  { min: 3, pattern: /(?<![\p{L}\p{N}_])(?:Reziprokpronomen|Analogiebildung|Virenreplikation|Wirtszelle|Biodiversität|natürliche Selektion|Evolution|Spezies|Informationsveranstaltung)(?![\p{L}\p{N}_])/iu, label: "formales Sprach- oder Naturwissenschaftskonzept liegt über Klasse 2" },
+  { min: 4, pattern: /(?<![\p{L}\p{N}_])(?:Interrogativpronomen|Gerundium|Flächeninhalt eines Dreiecks|Dreiecksfläche|Erzählperspektive)(?![\p{L}\p{N}_])/iu, label: "formales Grammatik-, Literatur- oder Geometriekonzept liegt über Klasse 3" },
+  { min: 5, pattern: /(?<![\p{L}\p{N}_])(?:transitives Verb|Parasitismus|Photoperiodismus|Albedo|Nahrungsnetz|ökologische Nische|ökologische Sukzession|Bioindikator|Tageslichtlänge)(?![\p{L}\p{N}_])/iu, label: "spezialistisches Grammatik-, Ökologie- oder Klimakonzept liegt über Klasse 4" },
+  { min: 7, pattern: /(?<![\p{L}\p{N}_])(?:Gerundium|Präpositionalkasus|Rektion|Kongruenz zwischen Subjekt und Prädikat|Modalpassiv|Irrealitätssatz|Rahmenkonstruktion|Textanalyse|Kohäsion|Textintention|Rezeptionsgeschichte|literarische Ambiguität|Deutungshypothese|Konnotation|Denotation|Absichtsinterpretation|phonographische(?:s|n) Prinzip|morphematische(?:s|n) Schreiben|Morphemprinzip|Subjunktion|Gerundivum)(?![\p{L}\p{N}_])/iu, label: "sekundarstufentypischer Fachbegriff liegt über dem Ende von Cycle 2" },
+];
+
+const REVIEW_MIN_GRADE_TERMS: Array<{ min: number; pattern: RegExp; label: string }> = [
+  { min: 2, pattern: /(?<![\p{L}\p{N}_])(?:Sauerstoff|Nährstoffe|Solidarität|Aufenthaltsqualität|Geruchssinn|Schmerzsinn|Eidgenossenschaft|Pflanzenkrankheit|Körperfunktionen|Körpertemperatur|Gebärdensprache|Volksabstimmung|Balkendiagramm|wahrscheinlich)(?![\p{L}\p{N}_])/iu, label: "für Klasse 1 erklärungsbedürftige Sprache oder formale Darstellung" },
+  { min: 3, pattern: /(?<![\p{L}\p{N}_])(?:Reibung|Auftrieb|Schwingung|Vibration|Integration|Bürgerrecht|Kondensation|Ökosystem|Nährwert|Trinkwasser-Aufbereitung|Punktsymmetrie|Symmetrieachsen)(?![\p{L}\p{N}_])/iu, label: "für Cycle 1 erklärungsbedürftiger Fach- oder Abstraktionsbegriff" },
+  { min: 3, pattern: /(?<![\p{L}\p{N}_])(?:Aggregatzustände?|Ernährungspyramide|Gleichgewichtssinn|Wasseraufbereitung)(?![\p{L}\p{N}_])/iu, label: "inhaltlich anschlussfähig, aber formale Bezeichnung oder Tiefe für Klasse 2 prüfbedürftig" },
+  { min: 4, pattern: /(?<![\p{L}\p{N}_])(?:Fiktion)(?![\p{L}\p{N}_])/iu, label: "inhaltlich verwandt, aber die formale Bezeichnung ist für Klasse 3 prüfbedürftig" },
+  { min: 5, pattern: /(?<![\p{L}\p{N}_])(?:Ökosystem|Nahrungskette|Klima|Wetterstation|Wettervorhersage|Dürre|Tornado|Hochdruckgebiet|Tiefdruckgebiet|Golfstrom)(?![\p{L}\p{N}_])/iu, label: "inhaltlich verwandt, aber exakte Klassenplatzierung oder Tiefe ist prüfbedürftig" },
+  { min: 5, pattern: /(?<![\p{L}\p{N}_])(?:Flüchtlingskonvention|Multikulturalismus|Fremdenfeindlichkeit)(?![\p{L}\p{N}_])/iu, label: "gesellschaftliches Thema ist Cycle-2-nah, die formale Terminologie für Klasse 4 aber prüfbedürftig" },
+  { min: 7, pattern: /(?<![\p{L}\p{N}_])(?:Essay|Pressemitteilung|Reportage|Appelltext|Paralleltext|skimming|scanning|Antizipation|Textkritik|Handlungsstruktur|Chronologie|Partizip I|Partizip II|Reflexivpronomen|Demonstrativpronomen|Indefinitpronomen|Relativpronomen|Konjunktiv I|Konzessivsatz|Apposition)(?![\p{L}\p{N}_])/iu, label: "am Ende von Cycle 2 nur als anspruchsvolle Vertiefung plausibel" },
 ];
 
 function allText(exercise: Exercise): string {
@@ -59,9 +73,12 @@ function editDistance(left: string, right: string): number {
 
 function mathEvidence(grade: number, topic: string, exercise: Exercise): string[] {
   const evidence: string[] = [];
-  const core = [exercise.question, exercise.answer].join(" ");
+  // Hints are learner-facing teaching content too. A simple-looking prompt
+  // must not pass when its help text introduces algebra or later-grade maths.
+  const core = [exercise.question, exercise.answer, ...(exercise.hints ?? [])].join(" ");
+  const taskCore = [exercise.question, exercise.answer].join(" ");
   const optionText = (exercise.options ?? []).join(" ");
-  const values = numberValues(core);
+  const values = numberValues(taskCore);
   const max = values.length ? Math.max(...values.map(Math.abs)) : 0;
   const optionValues = numberValues(optionText);
   const maxOption = optionValues.length ? Math.max(...optionValues.map(Math.abs)) : 0;
@@ -75,6 +92,13 @@ function mathEvidence(grade: number, topic: string, exercise: Exercise): string[
     if (/%|\d+\s*\/\s*\d+|[²³]|\([^)]*[+−×÷*/][^)]*\)/.test(core)) evidence.push("Klasse 2 enthält Prozent, Bruch, Potenz oder formale Operationsreihenfolge");
     if (/\d+[,.]\d+[^\n]*[+−×÷*]|[+−×÷*][^\n]*\d+[,.]\d+/.test(core)) evidence.push("Dezimalrechnung in Klasse 2");
     if (/\b(?:Variable|Gleichung|x\s*=|n\s*=|proportional)\b/i.test(core)) evidence.push("formale Algebra in Klasse 2");
+    const multiplication = core.match(/\b(\d+)\s*[×*·]\s*(\d+)\b/);
+    if (multiplication) {
+      const left = Number(multiplication[1]);
+      const right = Number(multiplication[2]);
+      if (left >= 100 || right >= 100 || left * right > 100) evidence.push("Multiplikation überschreitet den Klasse-2-Zahlenraum bis 100");
+      else if (left > 10 || right > 10) evidence.push("erweiterte Malaufgabe ausserhalb der Kern-Einmaleinsreihen in Klasse 2");
+    }
   } else if (grade === 3) {
     if (/\d+\s*[²³]|\b(?:zum Quadrat|hoch \d|Volumen|Quadratwurzel|kgV|kleinstes gemeinsames Vielfaches|Variable|Gleichung)\b/i.test(core)) evidence.push("formale Potenz-, Volumen- oder Algebraanforderung in Klasse 3");
     if (/\d+\s*\/\s*\d+\s*[+−]\s*\d+\s*\/\s*\d+/.test(core)) evidence.push("Bruchrechnung mit mehreren Brüchen in Klasse 3");
@@ -127,6 +151,11 @@ export function reviewGradeSuitability(grade: number, subject: string, topic: st
   }
 
   const reviewEvidence = taskEvidence.filter((item) => !severeTaskEvidence.includes(item));
+  for (const rule of REVIEW_MIN_GRADE_TERMS) {
+    if (grade >= rule.min || !rule.pattern.test(text)) continue;
+    const hit = text.match(rule.pattern)?.[0] ?? rule.label;
+    reviewEvidence.push(`${rule.label}: «${hit}» (frühestens Klasse ${rule.min})`);
+  }
   if (reviewEvidence.length) return { score: 3, reason: reviewEvidence.join("; "), evidence: reviewEvidence };
 
   const score: SuitabilityScore = exercise.difficulty === 1 ? 1 : 2;
