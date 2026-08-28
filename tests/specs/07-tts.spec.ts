@@ -4,44 +4,31 @@
 import { test, expect } from "@playwright/test";
 
 const TTS_ENDPOINT = "https://www.cleverli.ch/api/tts";
+const BROWSER_HEADERS = {
+  referer: "https://www.cleverli.ch/learn/1/math/zahlen-1-10",
+  "user-agent": "Mozilla/5.0 Cleverli-TTS-Smoke-Test",
+};
 
 test.describe("TTS API", () => {
-  test("TTS endpoint returns audio for German text", async ({ request }) => {
+  test("TTS endpoint returns real ElevenLabs audio", async ({ request }) => {
     const res = await request.get(TTS_ENDPOINT, {
-      params: { text: "Guten Tag, willkommen bei Cleverli!", lang: "de" },
+      params: { text: "Cleverli TTS smoke test version one.", lang: "de" },
+      headers: BROWSER_HEADERS,
     });
     expect(res.status()).toBe(200);
     const contentType = res.headers()["content-type"] ?? "";
-    expect(contentType).toContain("audio");
-  });
-
-  test("TTS endpoint returns audio for French text", async ({ request }) => {
-    const res = await request.get(TTS_ENDPOINT, {
-      params: { text: "Bonjour, bienvenue sur Cleverli!", lang: "fr" },
-    });
-    expect(res.status()).toBe(200);
-  });
-
-  test("TTS endpoint returns audio for Italian text", async ({ request }) => {
-    const res = await request.get(TTS_ENDPOINT, {
-      params: { text: "Ciao, benvenuto su Cleverli!", lang: "it" },
-    });
-    expect(res.status()).toBe(200);
-  });
-
-  test("TTS endpoint returns audio for English text", async ({ request }) => {
-    const res = await request.get(TTS_ENDPOINT, {
-      params: { text: "Hello, welcome to Cleverli!", lang: "en" },
-    });
-    expect(res.status()).toBe(200);
-  });
-
-  test("TTS response has correct Cache-Control header", async ({ request }) => {
-    const res = await request.get(TTS_ENDPOINT, {
-      params: { text: "Test", lang: "de" },
-    });
+    expect(contentType).toContain("audio/mpeg");
+    expect(res.headers()["x-cleverli-tts-fallback"]).toBeUndefined();
+    expect((await res.body()).byteLength).toBeGreaterThan(10_000);
     const cc = res.headers()["cache-control"] ?? "";
-    expect(cc).toContain("max-age");
+    expect(cc).toContain("s-maxage=604800");
+  });
+
+  test("TTS rejects non-browser bulk requests before provider use", async ({ request }) => {
+    const res = await request.get(TTS_ENDPOINT, {
+      params: { text: "This request must never reach ElevenLabs.", lang: "de" },
+    });
+    expect(res.status()).toBe(403);
   });
 
   test("TTS with empty text returns 400", async ({ request }) => {

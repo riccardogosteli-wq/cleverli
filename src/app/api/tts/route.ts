@@ -2,6 +2,19 @@ import { NextRequest, NextResponse } from "next/server";
 
 const VOICE_ID = "vmVmHDKBkkCgbLVIOJRb"; // Charlie Chatlin — Real & Casual (German, Conversational)
 const API_KEY  = process.env.ELEVENLABS_API_KEY ?? "";
+const MAX_TEXT_LENGTH = 600;
+
+function isSameOriginBrowserRequest(req: NextRequest) {
+  const referer = req.headers.get("referer");
+  const userAgent = req.headers.get("user-agent") ?? "";
+  if (!referer || !/Mozilla\//i.test(userAgent)) return false;
+
+  try {
+    return new URL(referer).hostname === req.nextUrl.hostname;
+  } catch {
+    return false;
+  }
+}
 
 function browserFallback(reason: string) {
   return NextResponse.json(
@@ -19,6 +32,13 @@ function browserFallback(reason: string) {
 export async function GET(req: NextRequest) {
   const text = req.nextUrl.searchParams.get("text")?.trim();
   if (!text) return NextResponse.json({ error: "no text" }, { status: 400, headers: { "Cache-Control": "no-store" } });
+  if (text.length > MAX_TEXT_LENGTH) return NextResponse.json({ error: "text too long" }, { status: 413, headers: { "Cache-Control": "no-store" } });
+  // The endpoint proxies a metered provider. Only the Cleverli browser UI may
+  // create new audio; this prevents crawlers and bulk QA scripts from draining
+  // ElevenLabs credits with arbitrary text.
+  if (process.env.NODE_ENV === "production" && !isSameOriginBrowserRequest(req)) {
+    return NextResponse.json({ error: "browser request required" }, { status: 403, headers: { "Cache-Control": "no-store" } });
+  }
   if (!API_KEY) return browserFallback("provider_not_configured");
 
   try {
@@ -55,7 +75,7 @@ export async function GET(req: NextRequest) {
     return new NextResponse(audio, {
       headers: {
         "Content-Type": "audio/mpeg",
-        "Cache-Control": "public, max-age=604800, immutable",
+        "Cache-Control": "public, max-age=604800, s-maxage=604800, immutable",
       },
     });
   } catch (e) {
