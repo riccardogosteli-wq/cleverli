@@ -165,6 +165,17 @@ function repairHints(exercise: Exercise, key: string, subject: string): Exercise
       hintsIT: ["Leggi attentamente il numero e individua decine e unità.", "Calcola il valore indicato e controlla ogni cifra."],
     };
   }
+  const irrelevantWordLengthHint = ["math", "science"].includes(subject)
+    && exercise.hints.some((hint) => /(?:Das|das) (?:gesuchte )?Wort hat \d+ Buchstaben|Es ist ein einzelner Buchstabe/i.test(hint));
+  if (irrelevantWordLengthHint) {
+    return {
+      ...exercise,
+      hints: [exercise.hints[0], editorialHints(subject, "de")[1]],
+      hintsEN: [exercise.hintsEN?.[0] ?? editorialHints(subject, "en")[0], editorialHints(subject, "en")[1]],
+      hintsFR: [exercise.hintsFR?.[0] ?? editorialHints(subject, "fr")[0], editorialHints(subject, "fr")[1]],
+      hintsIT: [exercise.hintsIT?.[0] ?? editorialHints(subject, "it")[0], editorialHints(subject, "it")[1]],
+    };
+  }
   const unsafe = exercise.hints.some((hint) => hintContainsAnswer(hint, exercise.answer));
   const generic = exercise.hints.length === 2 && exercise.hints.every(isApprovedSafeHint);
   if (!unsafe && !generic && !HINT_CONFLICT_KEYS.has(key)) return exercise;

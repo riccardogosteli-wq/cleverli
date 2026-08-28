@@ -132,7 +132,7 @@ function answerAppearsInHint(exercise: Exercise): boolean {
   return exercise.hints.some((hint) => new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}([^\\p{L}\\p{N}]|$)`, "u").test(normalise(hint)));
 }
 
-function validateStructure(exercise: Exercise): Finding[] {
+function validateStructure(exercise: Exercise, subject: string): Finding[] {
   const findings: Finding[] = [];
   if (!exercise.question.trim()) findings.push({ severity: "High", category: "Missing content", detail: "Question is empty." });
   if (!exercise.answer.trim()) findings.push({ severity: "High", category: "Missing content", detail: "Stored answer is empty." });
@@ -142,6 +142,9 @@ function validateStructure(exercise: Exercise): Finding[] {
   if (answerAppearsInHint(exercise)) findings.push({ severity: "High", category: "Hints", detail: "A hint directly reveals the stored answer." });
   if (exercise.hints.length === 2 && exercise.hints.every((hint) => GENERIC_HINTS.has(hint))) {
     findings.push({ severity: "Medium", category: "Hints", detail: "Both hints are generic interaction advice rather than content-specific help." });
+  }
+  if (["math", "science"].includes(subject) && exercise.hints.some((hint) => /(?:Das|das) (?:gesuchte )?Wort hat \d+ Buchstaben|Es ist ein einzelner Buchstabe/i.test(hint))) {
+    findings.push({ severity: "Medium", category: "Hints", detail: "A maths/NMG hint gives a word-length clue instead of helping with the subject content." });
   }
 
   if (exercise.type === "multiple-choice") {
@@ -268,7 +271,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
         const fit = fitByKey.get(key);
         if (!fit) throw new Error(`Missing LP21 fit for ${key}`);
         const findings = [
-          ...validateStructure(exercise),
+          ...validateStructure(exercise, subject.id),
           ...validateLanguage(exercise),
           ...validateSpeech(exercise),
           ...validateTopicSemantics(topic.id, exercise),
