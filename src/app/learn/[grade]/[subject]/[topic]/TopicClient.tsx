@@ -6,7 +6,7 @@ import { useSession } from "@/hooks/useSession";
 import { countExercisesByDifficulty } from "@/lib/exerciseHelpers";
 import { getTierProgress } from "@/lib/tierProgress";
 import { useEffect, useState } from "react";
-import { getProgressSubjects } from "@/data";
+import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { getTopicTitle } from "@/data/topicTitles";
 import { useLang } from "@/lib/LangContext";
@@ -14,7 +14,7 @@ import { useLang } from "@/lib/LangContext";
 interface Props { topic: Topic; grade: number; subject: string; nextTopicId?: string | null; }
 
 function loadProgress(grade: number, subject: string, topic: Topic) {
-  for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
+  for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
     const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
     if (raw) {
       const progress = JSON.parse(raw);

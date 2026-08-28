@@ -31,7 +31,7 @@ import { checkAndUnlockRewards, loadRewards, countCompletedTopics, countTotalSta
 import RewardUnlockedModal from "./RewardUnlockedModal";
 import { getLevelForXp, getNextLevel } from "@/lib/xp";
 import SignupPromptModal from "./SignupPromptModal";
-import { getProgressSubjects } from "@/data";
+import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
 import { trackExerciseEvent, ExerciseTelemetryPayload } from "@/lib/exerciseTelemetry";
 import { startCheckout } from "@/lib/checkoutClient";
 import { captureAppError } from "@/lib/monitoring";
@@ -82,7 +82,7 @@ function getStoredCompleted(topic: Topic, grade: number, subject: string) {
 
 function getStoredProgress(grade: number, subject: string, topicId: string) {
   if (typeof window === "undefined") return null;
-  for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+  for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
     const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
     if (raw) return JSON.parse(raw);
   }

@@ -12,7 +12,7 @@ import { useLang } from "@/lib/LangContext";
 import { getLevelProgress } from "@/lib/xp";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
-import { isDailyDoneToday } from "@/lib/daily";
+import { isDailyDoneToday } from "@/lib/dailyState";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 const COSTUME_IMAGES = [

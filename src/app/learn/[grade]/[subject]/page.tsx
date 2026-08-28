@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getTopicsForSubject } from "@/data";
+import { getTopicSummaries } from "@/data/topicCatalog";
 import SubjectPageClient from "./SubjectPageClient";
 import { permanentRedirect } from "next/navigation";
 import Link from "next/link";
@@ -38,7 +38,7 @@ export default async function SubjectPage({ params }: Props) {
   if (parseInt(grade) <= 6 && (subject === "nt" || subject === "rzg")) {
     permanentRedirect(`/learn/${grade}/science`);
   }
-  const topics = getTopicsForSubject(parseInt(grade), subject);
+  const topics = getTopicSummaries(parseInt(grade), subject);
   const subjectSeo = getSubjectSeo(subject);
   const subjectName = SUBJECT_NAMES[subject] ?? subjectSeo.name;
   const gradeName = getGradeName(grade);

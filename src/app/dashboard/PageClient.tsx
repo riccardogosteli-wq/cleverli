@@ -5,14 +5,19 @@ import OnboardingModal from "@/components/OnboardingModal";
 import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
-import { getTopics, getSubjects, getProgressSubjects } from "@/data/index";
+import {
+  getCatalogSubjects,
+  getProgressSubjectsFromCatalog,
+  getTopicSummaries,
+  TopicSummary,
+} from "@/data/topicCatalog";
 import { getTopicTitle } from "@/data/topicTitles";
-import { isDailyDoneToday } from "@/lib/daily";
+import { isDailyDoneToday } from "@/lib/dailyState";
 import { useProfile, Profile } from "@/hooks/useProfile";
 import { useSession } from "@/hooks/useSession";
 import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
 import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
-import { getTierProgress } from "@/lib/tierProgress";
+import { getTierProgressFromCounts } from "@/lib/tierProgress";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 import RewardWidget from "@/components/RewardWidget";
 import { DashboardGuestPreview } from "@/components/GuestPreview";
@@ -81,16 +86,16 @@ const SUBJECT_ICONS: Record<string, string> = {
 
 const GRADE_KEY = "cleverli_last_grade";
 
-function getProgress(grade: number, subject: string, topic: { id: string; exercises: unknown[] }) {
+function getProgress(grade: number, subject: string, topic: TopicSummary) {
   if (typeof window === "undefined") return null;
   try {
-    for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
+    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
       const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
       if (raw) {
         const progress = JSON.parse(raw);
         return {
           ...progress,
-          completed: getEffectiveCompleted(progress, topic.exercises.length),
+          completed: getEffectiveCompleted(progress, topic.exerciseCount),
         };
       }
     }
@@ -353,10 +358,9 @@ function DashboardInner() {
               </div>
             </div>
             <div className="grid gap-3 sm:grid-cols-1">
-              {getSubjects(grade!).map(s => {
-                const meta = SUBJECT_META[s.id];
-                const topics = getTopics(grade!, s.id);
-                const done = topics.filter(t => (getProgress(grade!, s.id, t)?.completed ?? 0) >= t.exercises.length).length;
+              {getCatalogSubjects(grade!).map(s => {
+                const topics = getTopicSummaries(grade!, s.id);
+                const done = topics.filter(t => (getProgress(grade!, s.id, t)?.completed ?? 0) >= t.exerciseCount).length;
                 return (
                   <button key={s.id} onClick={() => setSubject(s.id)}
                     style={{ minHeight: "80px", transition: "all 0.15s ease" }}
@@ -385,13 +389,13 @@ function DashboardInner() {
   }
 
   // ── STEP 3: Topic list ────────────────────────────────────────────────────
-  const topics = getTopics(grade, subject);
+  const topics = getTopicSummaries(grade, subject);
   const currentSubjectMeta = SUBJECT_META[subject];
   const isTopicFullyDone = (topicId: string) => {
     const topic = topics.find(t => t.id === topicId);
     const prog = topic ? getProgress(grade, subject, topic) : null;
     if (!prog || !topic) return false;
-    return (prog.completed ?? 0) >= topic.exercises.length;
+    return (prog.completed ?? 0) >= topic.exerciseCount;
   };
   const completedCount = topics.filter(t => isTopicFullyDone(t.id)).length;
   // First not-done topic index — that's where we show "Start ✨"
@@ -419,10 +423,10 @@ function DashboardInner() {
                : `${activeMember.name} lernt heute`}
             </span>
           </div>
-          <a href="/parents"
+          <Link href="/parents"
             className="text-xs text-blue-600 hover:text-blue-800 font-semibold border border-blue-300 rounded-lg px-2.5 py-1 hover:bg-blue-100 transition-colors shrink-0">
             {lang === "fr" ? "Changer" : lang === "it" ? "Cambia" : lang === "en" ? "Switch" : "Wechseln"}
-          </a>
+          </Link>
         </div>
       )}
 
@@ -437,7 +441,7 @@ function DashboardInner() {
         <div className="w-10 h-10 flex items-center justify-center shrink-0">
           {SUBJECT_ICONS[subject]
             ? <Image src={SUBJECT_ICONS[subject]} alt={subject} width={40} height={40} className="w-full h-full object-contain" />
-            : <span className="text-3xl">{getSubjects(grade!).find(s => s.id === subject)?.emoji ?? "📚"}</span>
+            : <span className="text-3xl">{getCatalogSubjects(grade!).find(s => s.id === subject)?.emoji ?? "📚"}</span>
           }
         </div>
         <div className="flex-1 min-w-0">
@@ -458,7 +462,7 @@ function DashboardInner() {
 
       {/* Subject switcher — always visible, colored by subject */}
       <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
-        {getSubjects(grade!).map(s => {
+        {getCatalogSubjects(grade!).map(s => {
           const isActive = s.id === subject;
           const activeClsMap: Record<string, string> = {
             math:    "bg-blue-500 text-white border-blue-500",
@@ -543,11 +547,11 @@ function DashboardInner() {
               const prog = getProgress(grade, subject, topic);
               const stars = prog?.stars ?? 0;
               const completedExercises = prog?.completed ?? 0;
-              const done = completedExercises >= topic.exercises.length;
+              const done = completedExercises >= topic.exerciseCount;
               const isCurrent = i === firstCurrentIdx || (firstCurrentIdx === -1 && i === topics.length - 1);
               const iconBg = currentSubjectMeta?.iconBg ?? "bg-green-100";
 
-              const tierInfo = getTierProgress(topic, completedExercises);
+              const tierInfo = getTierProgressFromCounts(topic.tierCounts, completedExercises);
               const tierLevel =
                 tierInfo.isTiered && tierInfo.easy.done === tierInfo.easy.total && tierInfo.medium.done === tierInfo.medium.total && tierInfo.hard.done === tierInfo.hard.total ? 3
                 : tierInfo.isTiered && tierInfo.easy.done === tierInfo.easy.total && tierInfo.medium.done === tierInfo.medium.total ? 2
@@ -555,8 +559,8 @@ function DashboardInner() {
                 : 0;
 
               const progressLabel = completedExercises > 0
-                ? `${Math.min(completedExercises, topic.exercises.length)}/${topic.exercises.length} ${tr("exerciseCount")}`
-                : `${topic.exercises.length} ${tr("exerciseCount")}`;
+                ? `${Math.min(completedExercises, topic.exerciseCount)}/${topic.exerciseCount} ${tr("exerciseCount")}`
+                : `${topic.exerciseCount} ${tr("exerciseCount")}`;
 
               const cardContent = (
                 <>

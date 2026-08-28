@@ -1,14 +1,13 @@
 "use client";
 import Link from "next/link";
-import { Topic } from "@/types/exercise";
+import { TopicSummary, getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
 import { useEffect, useState } from "react";
 import { useLang } from "@/lib/LangContext";
 import { getTopicTitle } from "@/data/topicTitles";
-import { getTierProgress } from "@/lib/tierProgress";
-import { getProgressSubjects } from "@/data";
+import { getTierProgressFromCounts } from "@/lib/tierProgress";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 
-interface Props { grade: number; subject: string; topics: Topic[]; }
+interface Props { grade: number; subject: string; topics: TopicSummary[]; }
 
 const SUBJECT_META: Record<string, { emoji: string; nameKey: string; color: string }> = {
   math:   { emoji: "🔢", nameKey: "math",   color: "text-blue-700 bg-blue-50" },
@@ -25,14 +24,14 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
   useEffect(() => {
     const p: typeof progress = {};
     for (const t of topics) {
-      for (const progressSubject of getProgressSubjects(grade, subject, t.id)) {
+      for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, t.id)) {
         const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${t.id}`);
         if (raw) {
           try {
             const progressData = JSON.parse(raw);
             p[t.id] = {
               ...progressData,
-              completed: getEffectiveCompleted(progressData, t.exercises.length),
+              completed: getEffectiveCompleted(progressData, t.exerciseCount),
             };
           } catch { /* ignore */ }
           break;
@@ -46,7 +45,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
   const subjectName = tr(meta.nameKey) || subject;
 
   const hasAnyTieredTopic = topics.some(t => {
-    const tierInfo = getTierProgress(t, 0);
+    const tierInfo = getTierProgressFromCounts(t.tierCounts, 0);
     return tierInfo.easy.total + tierInfo.medium.total + tierInfo.hard.total > 0;
   });
 
@@ -79,9 +78,9 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
           const prog = progress[topic.id];
           const stars = prog?.stars ?? 0;
           const completedExercises = prog?.completed ?? 0;
-          const done = completedExercises >= topic.exercises.length;
+          const done = completedExercises >= topic.exerciseCount;
           const started = completedExercises > 0;
-          const tierInfo = getTierProgress(topic, completedExercises);
+          const tierInfo = getTierProgressFromCounts(topic.tierCounts, completedExercises);
           return (
             <Link key={topic.id} href={`/learn/${grade}/${subject}/${topic.id}`}
               className="bg-white rounded-2xl p-4 border-2 border-gray-100 hover:border-green-300 hover:bg-green-50 transition-all group shadow-sm space-y-3">
@@ -91,7 +90,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-semibold text-gray-800 group-hover:text-green-700">{getTopicTitle(topic.id, lang, topic.title)}</div>
-                  <div className="text-xs text-gray-400">{started ? `${Math.min(completedExercises, topic.exercises.length)}/${topic.exercises.length} Aufgaben` : `${topic.exercises.length} Aufgaben`}</div>
+                  <div className="text-xs text-gray-400">{started ? `${Math.min(completedExercises, topic.exerciseCount)}/${topic.exerciseCount} Aufgaben` : `${topic.exerciseCount} Aufgaben`}</div>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
                   {done ? (
@@ -105,7 +104,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
                     </div>
                   ) : started ? (
                     <span className="text-xs px-2 py-1 rounded-full font-medium bg-blue-50 text-blue-600">
-                      {Math.min(completedExercises, topic.exercises.length)}/{topic.exercises.length}
+                      {Math.min(completedExercises, topic.exerciseCount)}/{topic.exerciseCount}
                     </span>
                   ) : (
                     <span className="text-xs px-2 py-1 rounded-full font-medium bg-gray-50 text-gray-500">

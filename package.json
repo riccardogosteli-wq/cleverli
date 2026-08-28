@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run qa:topic-catalog",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -23,6 +24,8 @@
     "qa:grade4-data-probability": "npx tsx scripts/audit-grade4-data-probability.ts",
     "qa:guided-composition": "npx tsx scripts/audit-guided-composition.ts",
     "qa:listening-comprehension": "npx tsx scripts/audit-listening-comprehension.ts",
+    "generate:topic-catalog": "npx tsx scripts/generate-topic-catalog.ts",
+    "qa:topic-catalog": "npx tsx scripts/generate-topic-catalog.ts --check",
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",
     "lp21:gap": "DRY_RUN=1 npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",
     "lp21:gap:live": "npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",

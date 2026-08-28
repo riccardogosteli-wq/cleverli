@@ -1,7 +1,11 @@
 // ── Reward System ────────────────────────────────────────────────────────────
 // Rewards are defined by parents and tracked per-device in localStorage.
 // When a child reaches a trigger, the reward unlocks and shows a celebration.
-import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
+import {
+  CORE_SUBJECTS,
+  getProgressSubjectsFromCatalog,
+  getTopicSummaries,
+} from "@/data/topicCatalog";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 export type TriggerType = "tasks" | "topics" | "streak" | "stars";
@@ -113,7 +117,7 @@ export function getProgressValue(snap: ProgressSnapshot, type: TriggerType): num
 
 function loadNormalisedTopicProgress(grade: number, subject: string, topicId: string, total: number) {
   if (typeof window === "undefined") return null;
-  for (const progressSubject of getProgressSubjects(grade, subject, topicId)) {
+  for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
     const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
     if (!raw) continue;
     const progress = JSON.parse(raw);
@@ -129,11 +133,11 @@ export function countCompletedTopics(): number {
   if (typeof window === "undefined") return 0;
   let total = 0;
   for (const grade of [1,2,3,4,5,6]) {
-    for (const subject of SUBJECTS) {
-      for (const topic of getTopics(grade, subject.id)) {
+    for (const subject of CORE_SUBJECTS) {
+      for (const topic of getTopicSummaries(grade, subject.id)) {
         try {
-          const progress = loadNormalisedTopicProgress(grade, subject.id, topic.id, topic.exercises.length);
-          if (progress && progress.completed >= topic.exercises.length) total++;
+          const progress = loadNormalisedTopicProgress(grade, subject.id, topic.id, topic.exerciseCount);
+          if (progress && progress.completed >= topic.exerciseCount) total++;
         } catch { /* skip */ }
       }
     }
@@ -146,11 +150,11 @@ export function countTotalStars(): number {
   if (typeof window === "undefined") return 0;
   let total = 0;
   for (const grade of [1,2,3,4,5,6]) {
-    for (const subject of SUBJECTS) {
-      for (const topic of getTopics(grade, subject.id)) {
+    for (const subject of CORE_SUBJECTS) {
+      for (const topic of getTopicSummaries(grade, subject.id)) {
         try {
-          const progress = loadNormalisedTopicProgress(grade, subject.id, topic.id, topic.exercises.length);
-          if (progress && progress.completed >= topic.exercises.length && progress.stars > 0) {
+          const progress = loadNormalisedTopicProgress(grade, subject.id, topic.id, topic.exerciseCount);
+          if (progress && progress.completed >= topic.exerciseCount && progress.stars > 0) {
             total += progress.stars;
           }
         } catch { /* skip */ }

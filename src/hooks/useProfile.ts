@@ -2,10 +2,13 @@
 import { useState, useEffect, useCallback } from "react";
 import { getLevelForXp, getNextLevel, calcXpGain } from "@/lib/xp";
 import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
-import { getTopics, getProgressSubjects, SUBJECTS } from "@/data/index";
+import {
+  CORE_SUBJECTS,
+  getProgressSubjectsFromCatalog,
+  getTopicSummaries,
+} from "@/data/topicCatalog";
 import { getActiveProfileId } from "@/lib/family";
 import { syncProfileToSupabase, loadProfileFromSupabase, loadTopicProgressFromSupabase } from "@/lib/progressSync";
-import { getTierProgress } from "@/lib/tierProgress";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -100,21 +103,21 @@ function saveProfile(p: Profile) {
 // ── Subject completion check ─────────────────────────────────────────────────
 
 function isSubjectComplete(grade: number, subject: string): boolean {
-  const topics = getTopics(grade, subject);
+  const topics = getTopicSummaries(grade, subject);
   return topics.every(t => {
     let raw: string | null = null;
-    for (const progressSubject of getProgressSubjects(grade, subject, t.id)) {
+    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, t.id)) {
       raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${t.id}`);
       if (raw) break;
     }
     if (!raw) return false;
     const prog = JSON.parse(raw);
-    return getEffectiveCompleted(prog, t.exercises.length) >= t.exercises.length;
+    return getEffectiveCompleted(prog, t.exerciseCount) >= t.exerciseCount;
   });
 }
 
 function isGradeComplete(grade: number): boolean {
-  return SUBJECTS.every(s => isSubjectComplete(grade, s.id));
+  return CORE_SUBJECTS.every(s => isSubjectComplete(grade, s.id));
 }
 
 // ── Achievement evaluation ───────────────────────────────────────────────────
@@ -191,14 +194,14 @@ function checkAchievements(profile: Profile, opts: {
   // Science explorer — all science topics for any grade
   if (opts.topicComplete && !has("science_explorer")) {
     const scienceComplete = [1,2,3,4,5,6].some(g => {
-      const topics = getTopics(g, "science");
+      const topics = getTopicSummaries(g, "science");
       if (!topics.length) return false;
-      return topics.every((t: { id: string; exercises: unknown[] }) => {
+      return topics.every((t) => {
         try {
-          return getProgressSubjects(g, "science", t.id).some(progressSubject => {
+          return getProgressSubjectsFromCatalog(g, "science", t.id).some(progressSubject => {
             const raw = localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`);
             if (!raw) return false;
-            return getEffectiveCompleted(JSON.parse(raw), t.exercises.length) >= t.exercises.length;
+            return getEffectiveCompleted(JSON.parse(raw), t.exerciseCount) >= t.exerciseCount;
           });
         } catch {
           return false;

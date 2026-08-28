@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Exercise, Topic } from "@/types/exercise";
-import { getProgressSubjects } from "@/data";
+import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
@@ -58,7 +58,7 @@ const labels = {
 };
 
 function getStoredTopicCompleted(topic: Topic, grade: number, subject: string) {
-  for (const progressSubject of getProgressSubjects(grade, subject, topic.id)) {
+  for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
     const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
     if (!raw) continue;
     try {

@@ -28,6 +28,24 @@ export function getTierProgress(topic: Topic, completed: number): TierInfo {
   };
 }
 
+export function getTierProgressFromCounts(
+  counts: readonly [number, number, number],
+  completed: number,
+): TierInfo {
+  const [easy, medium, hard] = counts;
+  const easyBoundary = easy;
+  const mediumBoundary = easy + medium;
+
+  return {
+    easy: { total: easy, done: Math.min(completed, easyBoundary) },
+    medium: { total: medium, done: Math.max(0, Math.min(completed - easyBoundary, medium)) },
+    hard: { total: hard, done: Math.max(0, completed - mediumBoundary) },
+    isTiered: easy >= 5 && medium >= 5 && hard >= 5,
+    easyBoundary,
+    mediumBoundary,
+  };
+}
+
 /** Which tier is the exercise at index `idx` in? */
 export function tierAtIndex(tierInfo: TierInfo, idx: number): "easy" | "medium" | "hard" {
   if (idx < tierInfo.easyBoundary) return "easy";
