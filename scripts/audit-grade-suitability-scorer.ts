@@ -40,7 +40,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
   for (const subject of getSubjects(grade)) {
     for (const topic of getTopics(grade, subject.id)) {
       for (const item of topic.exercises) {
-        const key = `${grade}/${subject.id}/${topic.id}/${item.id}`;
+        const key = `${grade}/${subject.id}/${topic.id}/${item.legacyId ?? item.id}`;
         if (!targetKeys.has(key)) continue;
         resolved.add(key);
         targetTypes[item.type] = (targetTypes[item.type] ?? 0) + 1;

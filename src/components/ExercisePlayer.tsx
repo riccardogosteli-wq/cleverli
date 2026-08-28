@@ -37,6 +37,7 @@ import { startCheckout } from "@/lib/checkoutClient";
 import { captureAppError } from "@/lib/monitoring";
 import { getEffectiveCompleted, mergeCompletedProgress } from "@/lib/topicProgress";
 import { localizeExercise } from "@/lib/exerciseLocalization";
+import { normaliseCorrectExerciseIds } from "@/lib/exerciseIdProgress";
 
 interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; nextTopicId?: string | null; }
 
@@ -63,8 +64,7 @@ function getExerciseId(exercise: Exercise, index: number) {
 function getCorrectIdSet(topic: Topic, progress: { correctIds?: string[]; completed?: number; score?: number; stars?: number } | null | undefined) {
   const sorted = sortByDifficulty(topic.exercises);
   if (Array.isArray(progress?.correctIds) && progress.correctIds.length > 0) {
-    const validIds = new Set(sorted.map(getExerciseId));
-    return new Set(progress.correctIds.filter(id => validIds.has(id)));
+    return normaliseCorrectExerciseIds(topic, progress.correctIds);
   }
 
   const completed = getEffectiveCompleted(progress, topic.exercises.length);

@@ -49,7 +49,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
   for (const subject of getSubjects(grade)) {
     for (const topic of getTopics(grade, subject.id)) {
       for (const exercise of topic.exercises) {
-        const key = `${grade}/${subject.id}/${topic.id}/${exercise.id}`;
+        const key = `${grade}/${subject.id}/${topic.id}/${exercise.legacyId ?? exercise.id}`;
         exercises.set(key, exercise);
         gradeCount += 1;
         total += 1;

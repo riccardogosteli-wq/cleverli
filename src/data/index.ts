@@ -33,6 +33,7 @@ import { applyLp21ApiFitReplacements } from "./lp21ApiFitReplacements";
 import { consolidateNmgTopics } from "./nmgConsolidation";
 import { applyGrade1GermanLevel } from "./grade1GermanLevel";
 import { applyExerciseLocalizations } from "./exerciseLocalizations";
+import { applyExerciseIdMigrations } from "./exerciseIdMigrations";
 
 const grade4Science = [...grade4NT, ...grade4RZG];
 const grade5Science = [...grade5NT, ...grade5RZG];
@@ -47,7 +48,7 @@ export {
   grade6Math, grade6German, grade6NT, grade6RZG, grade6French, grade6English,
 };
 
-export function getTopics(grade: number, subject: string): Topic[] {
+export function getTopicsBeforeExerciseIdMigration(grade: number, subject: string): Topic[] {
   const map: Record<string, Topic[]> = {
     "1-math": grade1Math, "1-german": grade1German, "1-science": grade1Science,
     "2-math": grade2Math, "2-german": grade2German, "2-science": grade2Science,
@@ -72,6 +73,10 @@ export function getTopics(grade: number, subject: string): Topic[] {
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
   }));
+}
+
+export function getTopics(grade: number, subject: string): Topic[] {
+  return applyExerciseIdMigrations(grade, subject, getTopicsBeforeExerciseIdMigration(grade, subject));
 }
 
 export function getProgressSubjects(grade: number, subject: string, topicId: string): string[] {

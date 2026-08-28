@@ -2,6 +2,8 @@ export type ExerciseType = "multiple-choice" | "fill-in-blank" | "self-review" |
 
 export interface Exercise {
   id: string;
+  /** Previous topic-scoped ID retained only for backward-compatible progress migration. */
+  legacyId?: string;
   type: ExerciseType;
   question: string;
   questionEN?: string;

@@ -34,12 +34,13 @@ for (const grade of [1, 2, 3, 4, 5, 6]) {
   for (const subject of getSubjects(grade)) {
     for (const topic of getTopics(grade, subject.id)) {
       for (const exercise of topic.exercises) {
+        const sourceId = exercise.legacyId ?? exercise.id;
         totalExercises += 1;
         validatedFamilies.add(`${grade}/${subject.id}/${topic.id}/${exercise.type}`);
-        const location = `${grade}-${subject.id}-${exercise.id}`;
+        const location = `${grade}-${subject.id}-${sourceId}`;
         const expectedGroup = Object.entries(LP21_REPLACEMENT_GROUP_IDS).find(([group, ids]) => {
           const [groupGrade, groupSubject] = group.split("-");
-          return groupGrade === String(grade) && groupSubject === subject.id && (ids as readonly string[]).includes(exercise.id);
+          return groupGrade === String(grade) && groupSubject === subject.id && (ids as readonly string[]).includes(sourceId);
         });
         if (expectedGroup) resolvedLocations.add(location);
 

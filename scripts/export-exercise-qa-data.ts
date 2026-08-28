@@ -67,6 +67,7 @@ for (const grade of grades) {
         rows.push({
           grade,
           exerciseId: exercise.id,
+          legacyExerciseId: exercise.legacyId ?? "",
           subject: subjectName,
           subjectId: subject.id,
           topic: topic.title,

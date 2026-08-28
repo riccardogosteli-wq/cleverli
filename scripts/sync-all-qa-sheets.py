@@ -64,9 +64,9 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
             "Resolved as part of the 43 Grade 1 LP21 replacements; IDs, types, difficulty and totals were preserved.",
         ],
         8: [
-            "Structural", "IDs", "All", "50 cross-subject ID collisions",
-            "50 exercise IDs collide across Mathematics and NMG. Content remains distinguishable by subject/topic, but IDs are not globally unique.",
-            "Make IDs globally unique when the schema is next migrated.",
+            "Fixed", "IDs", "All", "1,220 duplicate occurrences across 1,107 legacy IDs",
+            "The original 50 Grade-1 finding understated the catalogue-wide issue: 1,220 later occurrences collided globally. Every later occurrence now has a unique canonical ID and retains an exact topic-scoped legacy alias.",
+            "Resolved. All 13,918 canonical IDs are globally unique; 14,195 historical progress-prefix cases and all 1,220 aliases preserve completed work from localStorage and Supabase correct_ids.",
         ],
         9: [
             "Fixed", "Localisation / scoring", "All", "1,863 exercises × EN/FR/IT; zero localisation integrity errors",
@@ -464,8 +464,9 @@ def align_rows_by_id(current_rows: list[list], source_rows: list[dict]) -> tuple
     current_index = 0
     for source_index, source_row in enumerate(source_rows):
         expected_id = str(source_row["exerciseId"])
+        legacy_id = str(source_row.get("legacyExerciseId") or "")
         actual_id = normalize(current_rows[current_index], 1)[0] if current_index < len(current_rows) else ""
-        if actual_id == expected_id:
+        if actual_id == expected_id or (legacy_id and actual_id == legacy_id):
             aligned.append(current_rows[current_index])
             current_index += 1
         else:
@@ -625,12 +626,25 @@ def verify_markers(
     special: bool = False,
     special_solution_column: int = 7,
 ) -> list[int]:
+    def read_cells(start_column: str, end_column: str) -> dict[int, list[dict]]:
+        cells_by_row: dict[int, list[dict]] = {}
+        for source_offset in range(0, len(source_rows), 400):
+            sheet_start = source_offset + 2
+            sheet_end = min(len(source_rows), source_offset + 400) + 1
+            start, row_data = grid_rows(
+                spreadsheet_id,
+                f"'{tab}'!{start_column}{sheet_start}:{end_column}{sheet_end}",
+            )
+            for row_offset, row in enumerate(row_data):
+                cells_by_row[start + row_offset] = row.get("values", [])
+        return cells_by_row
+
     if special:
         end_column = "H" if special_solution_column == 8 else "G"
-        start, row_data = grid_rows(spreadsheet_id, f"'{tab}'!G2:{end_column}{len(source_rows) + 1}")
+        cells_by_row = read_cells("G", end_column)
         failures = []
         for sheet_row, _ in enumerate(source_rows, start=2):
-            cells = row_data[sheet_row - start].get("values", []) if sheet_row - start < len(row_data) else []
+            cells = cells_by_row.get(sheet_row, [])
             expected_index = special_solution_column - 7
             cells += [{}] * (expected_index + 1 - len(cells))
             green_columns = [index for index, cell in enumerate(cells) if is_green(cell)]
@@ -638,10 +652,10 @@ def verify_markers(
                 failures.append(sheet_row)
         return failures
 
-    start, row_data = grid_rows(spreadsheet_id, f"'{tab}'!G2:K{len(source_rows) + 1}")
+    cells_by_row = read_cells("G", "K")
     failures = []
     for sheet_row, source in enumerate(source_rows, start=2):
-        cells = row_data[sheet_row - start].get("values", []) if sheet_row - start < len(row_data) else []
+        cells = cells_by_row.get(sheet_row, [])
         cells += [{}] * (5 - len(cells))
         green_columns = [index for index, cell in enumerate(cells[:5]) if is_green(cell)]
         options = (source.get("options") or [])[:4]

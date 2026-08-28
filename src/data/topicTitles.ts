@@ -471,5 +471,5 @@ export function getTopicTitle(topicId: string, lang: string, fallback: string): 
   };
   if (consolidated[fallback]) return consolidated[fallback][lang] ?? consolidated[fallback].de;
   const exactTitle = (generatedTopicLocalizations as Record<string, Record<string, string>>)[fallback];
-  return exactTitle?.[lang] ?? TOPIC_TITLES[topicId]?.[lang] ?? TOPIC_TITLES[topicId]?.["de"] ?? fallback;
+  return TOPIC_TITLES[topicId]?.[lang] ?? TOPIC_TITLES[topicId]?.["de"] ?? exactTitle?.[lang] ?? fallback;
 }

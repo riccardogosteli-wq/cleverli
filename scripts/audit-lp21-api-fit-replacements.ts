@@ -52,7 +52,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
         }
       }
       for (const exercise of topic.exercises) {
-        const key = `${grade}/${subject.id}/${topic.id}/${exercise.id}`;
+        const key = `${grade}/${subject.id}/${topic.id}/${exercise.legacyId ?? exercise.id}`;
         const signature = `${grade}|${subject.id}|${normalized(exercise.question)}|${normalized(exercise.answer)}`;
         const previous = signatures.get(signature);
         if (previous && (isLp21ApiFitTarget(key) || isLp21ApiFitTarget(previous))) targetDuplicates.push([previous, key]);
