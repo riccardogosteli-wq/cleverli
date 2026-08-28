@@ -135,6 +135,7 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
               <Link
                 key={related.id}
                 href={`/learn/${grade}/${subject}/${related.id}`}
+                prefetch={false}
                 className="rounded-full border border-green-100 bg-green-50 px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
               >
                 {getTopicTitle(related.id, lang, related.title)}

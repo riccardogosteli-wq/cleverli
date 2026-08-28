@@ -82,7 +82,7 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
           const started = completedExercises > 0;
           const tierInfo = getTierProgressFromCounts(topic.tierCounts, completedExercises);
           return (
-            <Link key={topic.id} href={`/learn/${grade}/${subject}/${topic.id}`}
+            <Link key={topic.id} href={`/learn/${grade}/${subject}/${topic.id}`} prefetch={false}
               className="bg-white rounded-2xl p-4 border-2 border-gray-100 hover:border-green-300 hover:bg-green-50 transition-all group shadow-sm space-y-3">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-xl shrink-0">

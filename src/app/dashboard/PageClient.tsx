@@ -618,7 +618,7 @@ function DashboardInner() {
               return (
                 <div key={topic.id}>
                   {i > 0 && <div className="h-3 w-0.5 bg-gray-200 mx-auto" />}
-                  <Link href={`/learn/${grade}/${subject}/${topic.id}`}
+                  <Link href={`/learn/${grade}/${subject}/${topic.id}`} prefetch={false}
                     style={{ minHeight: "66px" }}
                     className={`block rounded-2xl px-4 py-3 border-2 transition-all active:scale-95 shadow-sm ${
                       done

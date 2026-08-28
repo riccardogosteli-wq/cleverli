@@ -108,6 +108,7 @@ export default async function SubjectPage({ params }: Props) {
                 <Link
                   key={topic.id}
                   href={`/learn/${grade}/${subject}/${topic.id}`}
+                  prefetch={false}
                   className="rounded-full border border-green-100 bg-green-50 px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-100"
                 >
                   {topic.title}
