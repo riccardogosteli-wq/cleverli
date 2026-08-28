@@ -14,6 +14,7 @@
     "qa:translated-exercises": "npm run qa:english-exercises && npm run qa:french-exercises && npm run qa:italian-exercises",
     "qa:live-localizations": "npx tsx scripts/audit-live-localizations.ts",
     "qa:localization-tts": "npx tsx scripts/audit-localization-tts.ts",
+    "qa:single-voice": "npx tsx scripts/audit-single-voice.ts",
     "generate:topic-localizations": "npx tsx scripts/generate-topic-localizations.ts",
     "generate:exercise-id-migrations": "npx tsx scripts/generate-exercise-id-migrations.ts",
     "qa:global-exercise-ids": "npx tsx scripts/audit-global-exercise-ids.ts",

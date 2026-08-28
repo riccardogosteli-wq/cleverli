@@ -1,22 +1,75 @@
 "use client";
-import { useCallback, useRef } from "react";
+import { useCallback } from "react";
 import { useLang } from "@/lib/LangContext";
 import type { Lang } from "@/lib/i18n";
 
 /**
- * useVoice — ElevenLabs TTS (Charlie Chatlin — conversational German) with Web Speech fallback.
+ * useVoice — ElevenLabs TTS (Charlie Chatlin — conversational German).
  *
  * Primary: calls /api/tts?text=... → ElevenLabs eleven_multilingual_v2 + Charlie Chatlin voice
  *   - Real, casual, conversational German voice (vmVmHDKBkkCgbLVIOJRb)
  *   - Same voice used for reading questions in exercises
  *   - 7-day CDN cache (no repeated API calls for same text)
  *
- * Fallback: Web Speech API (device voice, used if API fails or key missing)
+ * There is deliberately no device/Web Speech fallback. A temporary silence is
+ * preferable to an unexpected robotic voice, and only one voice may play at a
+ * time across the whole application.
  */
 
-// ─── In-memory audio cache (URL → decoded AudioBuffer or "pending") ──────────
-const audioCache = new Map<string, AudioBuffer | "loading">();
-let preferWebSpeechUntil = 0;
+// ─── Shared voice runtime ────────────────────────────────────────────────────
+// useVoice is mounted by several components. Keeping playback and in-flight
+// requests at module scope prevents two hook instances from speaking at once.
+const audioCache = new Map<string, AudioBuffer>();
+const pendingAudio = new Map<string, Promise<AudioBuffer>>();
+let sharedAudioContext: AudioContext | null = null;
+let activeSource: AudioBufferSourceNode | null = null;
+let playbackGeneration = 0;
+
+function getAudioContext() {
+  if (!sharedAudioContext || sharedAudioContext.state === "closed") {
+    const AudioContextClass = window.AudioContext
+      || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+    sharedAudioContext = new AudioContextClass();
+  }
+  return sharedAudioContext;
+}
+
+function cancelActiveVoice() {
+  playbackGeneration += 1;
+  try {
+    activeSource?.stop();
+  } catch {
+    // The source may already have ended; it is still safe to clear it.
+  }
+  activeSource = null;
+  return playbackGeneration;
+}
+
+async function loadElevenLabsAudio(key: string, clean: string) {
+  const cached = audioCache.get(key);
+  if (cached) return cached;
+
+  const existing = pendingAudio.get(key);
+  if (existing) return existing;
+
+  const request = (async () => {
+    const res = await fetch(`/api/tts?text=${encodeURIComponent(clean)}`);
+    if (!res.ok) throw new Error(`TTS HTTP ${res.status}`);
+    if (!(res.headers.get("content-type") ?? "").toLowerCase().includes("audio/mpeg")) {
+      throw new Error("TTS did not return ElevenLabs audio");
+    }
+    const buffer = await getAudioContext().decodeAudioData(await res.arrayBuffer());
+    audioCache.set(key, buffer);
+    return buffer;
+  })();
+
+  pendingAudio.set(key, request);
+  try {
+    return await request;
+  } finally {
+    pendingAudio.delete(key);
+  }
+}
 
 // ─── Number words (German) ───────────────────────────────────────────────────
 function numToWordsDE(n: number): string {
@@ -361,94 +414,43 @@ export function cleanSpeechForLanguage(text: string, language: Lang): string {
 
 export function useVoice() {
   const { lang } = useLang();
-  const ctxRef  = useRef<AudioContext | null>(null);
-  const srcRef  = useRef<AudioBufferSourceNode | null>(null);
-
-  const getCtx = () => {
-    if (!ctxRef.current || ctxRef.current.state === "closed") {
-      ctxRef.current = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
-    }
-    return ctxRef.current;
-  };
 
   const stop = useCallback(() => {
-    srcRef.current?.stop();
-    srcRef.current = null;
-    if (typeof window !== "undefined") window.speechSynthesis?.cancel();
-  }, []);
-
-  const speakWebSpeech = useCallback((text: string, language: Lang) => {
-    if (typeof window === "undefined" || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const utt = new SpeechSynthesisUtterance(text);
-    utt.lang = { de: "de-CH", en: "en-GB", fr: "fr-CH", it: "it-CH" }[language];
-    utt.rate = 0.85;
-    utt.pitch = 1.1;
-    const voices = window.speechSynthesis.getVoices();
-    const prefix = language === "de" ? "de" : language;
-    const pref = voices.find(v => v.lang.toLowerCase().startsWith(prefix) && /anna|hedda|female/i.test(v.name))
-              ?? voices.find(v => v.lang.toLowerCase().startsWith(prefix));
-    if (pref) utt.voice = pref;
-    window.speechSynthesis.speak(utt);
+    cancelActiveVoice();
   }, []);
 
   const speak = useCallback(async (text: string, speechLanguage: Lang = lang) => {
     const clean = cleanSpeechForLanguage(text, speechLanguage);
     if (!clean) return;
-    stop();
+    const generation = cancelActiveVoice();
 
     const key = `${speechLanguage}:${clean}`;
-
-    if (Date.now() < preferWebSpeechUntil) {
-      speakWebSpeech(clean, speechLanguage);
-      return;
-    }
-
-    // ── Try ElevenLabs via /api/tts ──────────────────────────────────────────
     try {
-      const ctx = getCtx();
+      const ctx = getAudioContext();
 
       // Resume AudioContext if suspended (mobile requires user gesture first)
       if (ctx.state === "suspended") await ctx.resume();
+      const buffer = await loadElevenLabsAudio(key, clean);
 
-      let buffer = audioCache.get(key);
-
-      if (!buffer || buffer === "loading") {
-        if (buffer !== "loading") {
-          audioCache.set(key, "loading");
-          const url = `/api/tts?text=${encodeURIComponent(clean)}`;
-          const res = await fetch(url);
-          if (!res.ok) throw new Error(`TTS HTTP ${res.status}`);
-          if (res.headers.get("X-Cleverli-TTS-Fallback") === "web-speech") {
-            preferWebSpeechUntil = Date.now() + 5 * 60 * 1000;
-            audioCache.delete(key);
-            speakWebSpeech(clean, speechLanguage);
-            return;
-          }
-          const ab = await res.arrayBuffer();
-          buffer = await ctx.decodeAudioData(ab);
-          audioCache.set(key, buffer);
-        } else {
-          // Already loading from another call — fall back to Web Speech
-          speakWebSpeech(clean, speechLanguage);
-          return;
-        }
-      }
+      // A newer speak/stop call superseded this request while it was loading.
+      if (generation !== playbackGeneration) return;
 
       const src = ctx.createBufferSource();
-      src.buffer = buffer as AudioBuffer;
+      src.buffer = buffer;
       src.connect(ctx.destination);
-      srcRef.current = src;
+      activeSource = src;
+      src.onended = () => {
+        if (activeSource === src) activeSource = null;
+      };
       src.start(0);
     } catch (err) {
       audioCache.delete(key);
-      console.warn("[useVoice] ElevenLabs failed, falling back to Web Speech:", err);
-      speakWebSpeech(clean, speechLanguage);
+      console.warn("[useVoice] ElevenLabs unavailable; no fallback voice will play:", err);
     }
-  }, [lang, stop, speakWebSpeech]);
+  }, [lang]);
 
   const isSupported = typeof window !== "undefined" &&
-    ("speechSynthesis" in window || "AudioContext" in window);
+    ("AudioContext" in window || "webkitAudioContext" in window);
 
   return { speak, stop, isSupported };
 }

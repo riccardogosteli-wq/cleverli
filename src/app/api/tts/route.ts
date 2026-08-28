@@ -16,14 +16,14 @@ function isSameOriginBrowserRequest(req: NextRequest) {
   }
 }
 
-function browserFallback(reason: string) {
+function providerUnavailable(reason: string) {
   return NextResponse.json(
-    { fallback: "web-speech", reason },
+    { error: "tts unavailable", reason },
     {
-      status: 200,
+      status: 503,
       headers: {
         "Cache-Control": "no-store",
-        "X-Cleverli-TTS-Fallback": "web-speech",
+        "X-Cleverli-TTS-Status": reason,
       },
     },
   );
@@ -39,7 +39,7 @@ export async function GET(req: NextRequest) {
   if (process.env.NODE_ENV === "production" && !isSameOriginBrowserRequest(req)) {
     return NextResponse.json({ error: "browser request required" }, { status: 403, headers: { "Cache-Control": "no-store" } });
   }
-  if (!API_KEY) return browserFallback("provider_not_configured");
+  if (!API_KEY) return providerUnavailable("provider_not_configured");
 
   try {
     const res = await fetch(
@@ -68,7 +68,7 @@ export async function GET(req: NextRequest) {
     if (!res.ok) {
       const providerDetail = (await res.text()).slice(0, 500);
       console.error(`[tts] ElevenLabs ${res.status}: ${providerDetail}`);
-      return browserFallback("provider_unavailable");
+      return providerUnavailable("provider_unavailable");
     }
 
     const audio = await res.arrayBuffer();
@@ -80,6 +80,6 @@ export async function GET(req: NextRequest) {
     });
   } catch (e) {
     console.error("[tts]", e);
-    return browserFallback("provider_failed");
+    return providerUnavailable("provider_failed");
   }
 }

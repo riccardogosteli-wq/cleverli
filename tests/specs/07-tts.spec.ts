@@ -19,6 +19,7 @@ test.describe("TTS API", () => {
     const contentType = res.headers()["content-type"] ?? "";
     expect(contentType).toContain("audio/mpeg");
     expect(res.headers()["x-cleverli-tts-fallback"]).toBeUndefined();
+    expect(res.headers()["x-cleverli-tts-status"]).toBeUndefined();
     expect((await res.body()).byteLength).toBeGreaterThan(10_000);
     const cc = res.headers()["cache-control"] ?? "";
     expect(cc).toContain("max-age=604800");
@@ -45,5 +46,16 @@ test.describe("TTS API", () => {
       params: { text: "", lang: "de" },
     });
     expect([400, 422, 500]).toContain(res.status());
+  });
+
+  test("client bundle contains no robotic Web Speech fallback", async ({ request }) => {
+    const page = await request.get("https://www.cleverli.ch/learn/1/german/hoeren-verstehen");
+    expect(page.status()).toBe(200);
+    const html = await page.text();
+    const scriptUrls = Array.from(html.matchAll(/<script[^>]+src="([^"]+)"/g), match => new URL(match[1], TTS_ENDPOINT).toString());
+    const scripts = await Promise.all(scriptUrls.map(async url => (await request.get(url)).text()));
+    const bundle = scripts.join("\n");
+    expect(bundle).not.toContain("SpeechSynthesisUtterance");
+    expect(bundle).not.toContain("falling back to Web Speech");
   });
 });
