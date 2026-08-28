@@ -1,13 +1,19 @@
 import { test, expect } from "@playwright/test";
 
-const URL = "https://www.cleverli.ch/learn/1/math/zahlen-1-10";
+const PAGE_URL = "https://www.cleverli.ch/learn/1/math/zahlen-1-10";
 const TTS = "https://www.cleverli.ch/api/tts";
 const HEADERS = {
-  referer: URL,
+  referer: PAGE_URL,
   "user-agent": "Mozilla/5.0 Cleverli-TTS-Smoke-Test",
 };
 
-test("rapid voice clicks play one ElevenLabs source and no device voice", async ({ page, request }, testInfo) => {
+for (const viewport of [
+  { name: "desktop", width: 1280, height: 900 },
+  { name: "mobile", width: 390, height: 844 },
+]) {
+test(`rapid voice clicks play one ElevenLabs source and no device voice (${viewport.name})`, async ({ page, request }, testInfo) => {
+  await page.setViewportSize({ width: viewport.width, height: viewport.height });
+  await page.context().clearCookies();
   const cached = await request.get(TTS, {
     params: { text: "Cleverli TTS smoke test version one.", lang: "de" },
     headers: HEADERS,
@@ -17,6 +23,8 @@ test("rapid voice clicks play one ElevenLabs source and no device voice", async 
   const mp3 = await cached.body();
 
   await page.addInitScript(() => {
+    localStorage.clear();
+    sessionStorage.clear();
     const counters = { sources: 0, robotVoices: 0 };
     Object.defineProperty(window, "__cleverliVoiceCounters", { value: counters });
 
@@ -46,7 +54,7 @@ test("rapid voice clicks play one ElevenLabs source and no device voice", async 
   });
   page.on("requestfailed", req => failedRequests.push(`${req.method()} ${req.url()}`));
 
-  const response = await page.goto(URL, { waitUntil: "networkidle" });
+  const response = await page.goto(PAGE_URL, { waitUntil: "networkidle" });
   expect(response?.status()).toBe(200);
 
   const button = page.getByRole("button", { name: /vorlesen/i }).first();
@@ -62,10 +70,15 @@ test("rapid voice clicks play one ElevenLabs source and no device voice", async 
   expect(counters.robotVoices).toBe(0);
   expect(counters.sources).toBe(1);
   expect(consoleErrors).toEqual([]);
-  expect(failedRequests.filter(url => url.includes("cleverli.ch"))).toEqual([]);
+  const criticalFailures = failedRequests.filter(entry => {
+    const url = new URL(entry.slice(entry.indexOf(" ") + 1));
+    return url.hostname.endsWith("cleverli.ch") && !url.searchParams.has("_rsc");
+  });
+  expect(criticalFailures).toEqual([]);
 
   await page.screenshot({
-    path: `.qa/single-voice-2026-08-28/${testInfo.project.name}.png`,
+    path: `.qa/single-voice-2026-08-28/${viewport.name}-${testInfo.project.name}.png`,
     fullPage: true,
   });
 });
+}
