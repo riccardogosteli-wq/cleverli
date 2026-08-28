@@ -111,8 +111,23 @@ function ordinalToSpeech(n: number): string {
   return `${numToWordsDE(n)}ste`;
 }
 
+function ordinalWithEnding(n: number, ending: "e" | "en" | "er" | "es"): string {
+  const base = ordinalToSpeech(n);
+  return ending === "e" ? base : `${base}${ending.slice(1)}`;
+}
+
+function ratiosToSpeech(text: string): string {
+  return text.replace(
+    /(\b(?:Massstab|Verhältnis|Lehrer\s*:\s*Schüler|Vereinfache)[^.!?\n]{0,80}?)\b(\d+)\s*:\s*(\d+(?:\s\d{3})*)/gi,
+    (_match, context: string, left: string, right: string) => {
+      const rightNumber = Number(right.replace(/\s/g, ""));
+      return `${context}${numToWordsDE(Number(left))} zu ${numToWordsDE(rightNumber)}`;
+    },
+  );
+}
+
 function cleanForSpeech(text: string): string {
-  return text
+  return ratiosToSpeech(text)
     // ── 0a. Leading blank patterns ──────────────────────────────────────────
     // Math: "___ + 3 = 8" → "Welche Zahl plus 3 ist gleich 8" (Swiss teacher convention)
     .replace(/^___\s*\+\s*/g, "Welche Zahl plus ")
@@ -155,9 +170,18 @@ function cleanForSpeech(text: string): string {
     .replace(/(\d+)\s*°\b/g, (_: string, n: string) => `${numToWordsDE(parseInt(n))} Grad`)
     // ── 0e. Percentage: "60%" → "sechzig Prozent" ──
     .replace(/(\d+)\s*%/g, (_: string, n: string) => `${numToWordsDE(parseInt(n))} Prozent`)
-    // ── 0f. Ordinals before nouns: "2. Platz" → "zweite Platz" ──
+    // ── 0f. German ordinal inflection before the generic fallback ──
+    .replace(/\b(nach|vor) dem (\d+)\.\s+(Platz|Monat|Tag|Buchstabe|Jahr)\b/g,
+      (_: string, prep: string, n: string, noun: string) => `${prep} dem ${ordinalWithEnding(parseInt(n), "en")} ${noun}`)
+    .replace(/\ban der (\d+)\.\s+(Stelle|Runde|Zeile)\b/g,
+      (_: string, n: string, noun: string) => `an der ${ordinalWithEnding(parseInt(n), "en")} ${noun}`)
+    .replace(/\ban (\d+)\.\s+(Stelle)\b/g,
+      (_: string, n: string, noun: string) => `an ${ordinalWithEnding(parseInt(n), "er")} ${noun}`)
+    .replace(/\bnach der (\d+)\.\s+(Runde|Woche|Klasse|Zeile)\b/g,
+      (_: string, n: string, noun: string) => `nach der ${ordinalWithEnding(parseInt(n), "en")} ${noun}`)
+    // Generic nominative fallback: "2. Platz" → "zweiter Platz".
     .replace(/\b(\d+)\.\s+(Platz|Monat|Stelle|Tag|Buchstabe|Woche|Klasse|Mal|Jahr|Runde|Zeile)\b/g,
-      (_: string, n: string, noun: string) => `${ordinalToSpeech(parseInt(n))} ${noun}`)
+      (_: string, n: string, noun: string) => `${ordinalWithEnding(parseInt(n), ["Platz", "Monat", "Tag", "Buchstabe", "Jahr"].includes(noun) ? "er" : "e")} ${noun}`)
     // ── 1. Currency — number+unit first, then standalone ──
     .replace(/CHF\s*([\d.,]+)/g, "$1 Franken")
     .replace(/([\d.,]+)\s*CHF/g, "$1 Franken")

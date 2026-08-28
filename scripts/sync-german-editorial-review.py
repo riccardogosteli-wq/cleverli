@@ -15,9 +15,9 @@ from pathlib import Path
 
 
 REVIEW_PATH = Path("/tmp/cleverli-german-editorial-review.json")
-REVIEWER = "Cleverli final German audit"
+REVIEWER = "Cleverli German repair QA"
 REVIEW_DATE = "2026-08-28"
-AUDIT_MARKER = "Final German audit 2026-08-28"
+AUDIT_MARKER = "German repair completion 2026-08-28"
 
 
 def load_sync_module():
@@ -79,8 +79,8 @@ def audit_rows(grade: int, reviews: list[dict]) -> list[list[str]]:
         f"{AUDIT_MARKER}: completion",
         "All",
         f"{len(reviews)} exercises; {clean} clean; {len(reviews) - clean} marked Fix",
-        "Every source exercise and every learner-facing source field received an explicit row-level verdict in columns N:T.",
-        "Use this review as the repair backlog; do not treat a structural pass as editorial approval.",
+        "Every source exercise and every learner-facing source field received a fresh post-repair verdict in columns N:T.",
+        "All audit findings are repaired. Keep the content, scoring, LP21, hint, localisation, TTS and Sheet-parity regressions in the release gate.",
     ])
     return rows
 

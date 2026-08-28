@@ -1,5 +1,5 @@
 import { getSubjects, getTopics } from "../src/data";
-import { matchPunctuationOnlyAnswer } from "../src/lib/fillInBlankMatching";
+import { matchOrderedTextAnswer, matchPunctuationOnlyAnswer } from "../src/lib/fillInBlankMatching";
 import type { Exercise } from "../src/types/exercise";
 import { getExerciseDuplicateKey } from "./exercise-duplicate-key";
 
@@ -42,6 +42,7 @@ const malformedKeys = new Set([
 const failures: string[] = [];
 const exercises = new Map<string, Exercise>();
 let total = 0;
+let sequentialAnswers = 0;
 
 for (let grade = 1; grade <= 6; grade += 1) {
   let gradeCount = 0;
@@ -53,6 +54,13 @@ for (let grade = 1; grade <= 6; grade += 1) {
         exercises.set(key, exercise);
         gradeCount += 1;
         total += 1;
+        if (exercise.sequentialAnswer) {
+          sequentialAnswers += 1;
+          const blanks = exercise.question.match(/___/g)?.length ?? 0;
+          if (exercise.type !== "fill-in-blank" || blanks !== 1 || !/\[1\]/.test(exercise.question)) {
+            failures.push(`${key}: sequential answer is not rendered as one explicit ordered response`);
+          }
+        }
         const contentKey = getExerciseDuplicateKey(exercise);
         duplicateGroups.set(contentKey, [...(duplicateGroups.get(contentKey) ?? []), key]);
 
@@ -72,11 +80,17 @@ for (let grade = 1; grade <= 6; grade += 1) {
   }
 }
 
+if (sequentialAnswers !== 158) failures.push(`Expected 158 remaining repaired sequential multi-gap tasks, found ${sequentialAnswers}`);
+if (!matchOrderedTextAnswer("Sonne und Regen", "Sonne und Regen")) failures.push("Exact ordered text answer is rejected");
+if (matchOrderedTextAnswer("Regen und Sonne", "Sonne und Regen")) failures.push("Reversed word order is accepted");
+if (matchOrderedTextAnswer("Hund", "der Hund")) failures.push("Missing leading article is accepted");
+if (!matchOrderedTextAnswer("Der Hund", "der Hund")) failures.push("Case-insensitive exact answer is rejected");
+
 const punctuationRows = [...exercises.entries()].filter(([, exercise]) =>
   exercise.type === "fill-in-blank" && matchPunctuationOnlyAnswer(exercise.answer, exercise.answer) === true
 );
-if (punctuationRows.length !== 48) {
-  failures.push(`Expected 48 punctuation-only fill-ins, found ${punctuationRows.length}`);
+if (punctuationRows.length !== 49) {
+  failures.push(`Expected 49 punctuation-only fill-ins, found ${punctuationRows.length}`);
 }
 const wrongPunctuation = [".", ",", "?", "!", ":", "«", "»", "..."];
 for (const [key, exercise] of punctuationRows) {
@@ -141,4 +155,5 @@ console.log(JSON.stringify({
   selfReviewRepairs: selfReviewKeys.size,
   constrainedRepairs: constrainedKeys.size,
   malformedRepairs: malformedKeys.size,
+  sequentialAnswers,
 }, null, 2));

@@ -952,7 +952,14 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             />
           )}
           {current.type === "fill-in-blank" && (
-            <FillInBlank question={current.question} answer={current.answer} altAnswers={current.altAnswers} onAnswer={handleAnswer} questionImage={current.image} />
+            <FillInBlank
+              question={current.question}
+              answer={current.answer}
+              altAnswers={current.altAnswers}
+              sequentialAnswer={current.sequentialAnswer}
+              onAnswer={handleAnswer}
+              questionImage={current.image}
+            />
           )}
           {current.type === "self-review" && (
             <SelfReview

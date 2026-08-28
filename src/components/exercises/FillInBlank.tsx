@@ -2,12 +2,13 @@
 import { useState, useRef, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
-import { matchPunctuationOnlyAnswer } from "@/lib/fillInBlankMatching";
+import { matchOrderedTextAnswer, normaliseTextAnswer } from "@/lib/fillInBlankMatching";
 
 interface Props {
   question: string;
   answer: string;
   altAnswers?: string[];
+  sequentialAnswer?: boolean;
   onAnswer: (correct: boolean) => void;
   questionImage?: string;
 }
@@ -30,7 +31,7 @@ function isNegativeNumericAnswer(answer: string): boolean {
   return /^-\d+([.,]\d+)?$/.test(normalizeMinusSigns(answer).trim());
 }
 
-export default function FillInBlank({ question, answer, altAnswers, onAnswer, questionImage }: Props) {
+export default function FillInBlank({ question, answer, altAnswers, sequentialAnswer, onAnswer, questionImage }: Props) {
   const { tr } = useLang();
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -51,57 +52,24 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
     }
   }, []);
 
-  // Flexible answer matching: normalize spaces, punctuation, "und"/"and" variants
-  const normalize = (s: string) => normalizeMinusSigns(s).trim().toLowerCase()
-    .replace(/\s+/g, " ")           // collapse whitespace
-    .replace(/[.,;:!?'"»«]/g, "")   // strip punctuation
-    .replace(/\bund\b/g, " ")       // "S und E" → "S E"
-    .replace(/\band\b/g, " ")
-    .replace(/\bet\b/g, " ")        // French
-    .replace(/\be\b/g, " ")         // Italian
-    .replace(/\s+/g, " ")           // re-collapse
-    .trim();
-
-  const stripLeadingArticle = (s: string) => {
-    const words = s.split(" ").filter(Boolean);
-    if (words.length < 2) return s;
-
-    const articles = new Set([
-      "der", "die", "das", "den", "dem", "des", "ein", "eine", "einen", "einem", "einer",
-      "a", "an", "the",
-      "le", "la", "les", "un", "une", "des", "du",
-      "il", "lo", "l", "gli", "i", "uno", "una",
-    ]);
-
-    return articles.has(words[0]) ? words.slice(1).join(" ") : s;
-  };
-
   const matchesSingle = (input: string, expected: string) => {
-    const punctuationMatch = matchPunctuationOnlyAnswer(input, expected);
-    if (punctuationMatch !== null) return punctuationMatch;
-
-    const normalizedInput = normalize(input);
-    const normalizedExpected = normalize(expected);
-    if (normalizedInput === normalizedExpected) return true;
-    if (stripLeadingArticle(normalizedInput) === stripLeadingArticle(normalizedExpected)) return true;
-    if (stripLeadingArticle(normalizedInput) === normalizedExpected) return true;
-    if (normalizedInput === stripLeadingArticle(normalizedExpected)) return true;
-
-    const inputParts = normalizedInput.split(" ").filter(Boolean).sort();
-    const expectedParts = normalizedExpected.split(" ").filter(Boolean).sort();
-    return inputParts.join(" ") === expectedParts.join(" ");
+    return matchOrderedTextAnswer(input, expected);
   };
 
   const answerVariants = (expected: string) => {
     const variants = new Set([expected]);
 
-    expected
-      .split(/\s*\/\s*/g)
-      .map(part => part.trim())
-      .filter(Boolean)
-      .forEach(part => variants.add(part));
+    if (!sequentialAnswer) {
+      expected
+        .split(/\s*\/\s*/g)
+        .map(part => part.trim())
+        .filter(Boolean)
+        .forEach(part => variants.add(part));
+    }
 
-    const parentheticalAlternative = expected.match(/^(.+?)\s*\((?:oder|or|o|ou)\s+(.+?)\)$/i);
+    const parentheticalAlternative = sequentialAnswer
+      ? null
+      : expected.match(/^(.+?)\s*\((?:oder|or|o|ou)\s+(.+?)\)$/i);
     if (parentheticalAlternative) {
       variants.add(parentheticalAlternative[1].trim());
       variants.add(parentheticalAlternative[2].trim());
@@ -115,7 +83,7 @@ export default function FillInBlank({ question, answer, altAnswers, onAnswer, qu
     const hasCompositeAnswer = expected.includes("/") || /\((?:oder|or|o|ou)\s+/i.test(expected);
 
     const visible = variants
-      .filter(variant => !hasCompositeAnswer || normalize(variant) !== normalize(expected))
+      .filter(variant => !hasCompositeAnswer || normaliseTextAnswer(variant) !== normaliseTextAnswer(expected))
       .map(variant => variant.trim())
       .filter(Boolean);
 

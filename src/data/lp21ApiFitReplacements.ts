@@ -1,6 +1,7 @@
 import type { Exercise, Topic } from "@/types/exercise";
 import targets from "./lp21ApiFitTargets.json";
 import gradeSuitabilityTargets from "./gradeSuitabilityTargets.json";
+import { GERMAN_EDITORIAL_LEVEL_TARGET_KEYS } from "./germanEditorialLevelTargets";
 
 type Lang = "de" | "en" | "fr" | "it";
 type Texts = Record<Lang, string>;
@@ -540,6 +541,42 @@ function mathGenerated(grade: number, topic: string, ordinal: number): Generated
       const b = 2 + ordinal % 4;
       return compactGenerated(`Eine Liste zeigt ${a} rote und ${b} blaue Punkte. Wie viele Punkte sind es zusammen?`, `${a + b}`, [`${a}`, `${b}`, `${a + b + 1}`], "Addiere beide Anzahlen.");
     }
+    if (/addition-bis-20|add-sub-100/.test(topic)) {
+      const a = topic === "addition-bis-20" ? 8 + ordinal % 8 : 30 + ordinal * 7;
+      const b = topic === "addition-bis-20" ? 2 + ordinal % 5 : 12 + ordinal * 3;
+      return compactGenerated(`${a} + ${b} = ___`, `${a + b}`, [`${a + b - 1}`, `${a + b + 1}`, `${a + b + 10}`], "Addiere zuerst die Zehner, dann die Einer.");
+    }
+    if (/subtraktion-bis-20/.test(topic)) {
+      const a = 14 + ordinal % 7;
+      const b = 3 + ordinal % 6;
+      return compactGenerated(`${a} − ${b} = ___`, `${a - b}`, [`${a - b - 1}`, `${a - b + 1}`, `${a}`], "Zähle in passenden Schritten rückwärts.");
+    }
+    if (topic === "uhrzeit") {
+      const hour = 2 + ordinal * 2;
+      return compactGenerated(`Eine Stunde nach ${hour} Uhr ist es ___ Uhr.`, `${hour + 1}`, [`${hour - 1}`, `${hour + 2}`, `${hour + 3}`], "Gehe auf der Uhr eine Stunde weiter.");
+    }
+    if (topic === "laengen-messen") {
+      const cm = 100 + ordinal * 50;
+      return compactGenerated(`${cm} Zentimeter sind wie viele Meter?`, `${cm / 100} Meter`, [`${cm} Meter`, `${cm / 10} Meter`, `${cm / 100 + 1} Meter`], "100 Zentimeter sind 1 Meter.");
+    }
+    if (topic === "symmetrie") {
+      const rows: Array<[string, string, [string, string, string]]> = [
+        ["Welche Form hat mehrere Symmetrieachsen?", "Quadrat", ["unregelmässiges Dreieck", "offene Linie", "krumme Linie"]],
+        ["Was entsteht beim Falten an einer Symmetrieachse?", "Beide Hälften liegen deckungsgleich", ["Eine Hälfte verschwindet", "Die Form wird grösser", "Die Farben wechseln"]],
+      ];
+      const row = rows[ordinal % rows.length];
+      return compactGenerated(row[0], row[1], row[2], "Vergleiche die beiden Hälften der Form.");
+    }
+    if (topic === "schaetzen") {
+      const value = 25 + ordinal * 18;
+      const rounded = Math.round(value / 10) * 10;
+      return compactGenerated(`Welche Zehnerzahl liegt am nächsten bei ${value}?`, `${rounded}`, [`${rounded - 10}`, `${rounded + 10}`, `${rounded + 20}`], "Vergleiche den Abstand zum unteren und oberen Zehner.");
+    }
+    if (topic === "sachaufgaben") {
+      const a = 18 + ordinal * 4;
+      const b = 7 + ordinal * 2;
+      return compactGenerated(`In einer Kiste liegen ${a} rote und ${b} blaue Bausteine. Wie viele sind es zusammen?`, `${a + b}`, [`${a}`, `${b}`, `${a + b - 1}`], "Addiere beide Anzahlen.");
+    }
     const a = 30 + ordinal % 20;
     const b = 4 + ordinal % 10;
     const subtraction = /subtraktion/.test(topic);
@@ -645,6 +682,10 @@ function germanGenerated(grade: number, topic: string, ordinal: number): Generat
     ["Lies: Leo sitzt auf dem Stuhl. Wo sitzt Leo?", "auf dem Stuhl", ["auf dem Tisch", "im Bett", "im Auto"], "Die Antwort steht im Satz."],
   ]);
   if (topic.includes("verben")) return choose([["Wir ___ heute im Park.", "spielen", ["spielt", "spielst", "spielte"], "Das Verb muss zu wir passen."], ["Gestern ___ Mia ein Bild.", "malte", ["malt", "malen", "malst"], "Gestern zeigt die Vergangenheit."]]);
+  if (topic.includes("kasus")) return choose([["Welcher Fall antwortet auf «Wem?»", "Dativ", ["Nominativ", "Akkusativ", "Genitiv"], "Ordne die passende Frageprobe zu."], ["Bestimme den Fall: «mit dem Velo».", "Dativ", ["Nominativ", "Akkusativ", "Genitiv"], "Die Präposition «mit» verlangt den Dativ."], ["Bestimme den Fall: «den Ball» in «Mia wirft den Ball».", "Akkusativ", ["Nominativ", "Dativ", "Genitiv"], "Frage: Wen oder was wirft Mia?"]]);
+  if (topic.includes("grammatik")) return choose([["Welcher Satz ist grammatisch vollständig?", "Mia liest ein Buch.", ["Mia ein Buch.", "Liest ein.", "Ein Buch Mia."], "Ein vollständiger Satz braucht ein passendes Prädikat."], ["Welche Verbindung ist korrekt?", "weil es regnet", ["weil regnet es", "weil es regnen", "weil Regen"], "Im Nebensatz steht das konjugierte Verb am Schluss."], ["Welche Form passt zu «wir»?", "wir gingen", ["wir ging", "wir gingst", "wir gegangen"], "Subjekt und Verb müssen übereinstimmen."]]);
+  if (topic.includes("wortarten")) return choose([["Welche Wortart bezeichnet eine Tätigkeit?", "Verb", ["Nomen", "Adjektiv", "Artikel"], "Frage, was jemand tut."], ["Welche Wortart beschreibt eine Eigenschaft?", "Adjektiv", ["Verb", "Pronomen", "Präposition"], "Adjektive antworten oft auf «Wie?»."]]);
+  if (topic.includes("leseverstaendnis")) return choose([["Lies: «Der Zug verspätet sich wegen starken Schneefalls.» Warum kommt er später?", "wegen starken Schneefalls", ["wegen Sonnenschein", "wegen einer Feier", "wegen Ferien"], "Suche die ausdrücklich genannte Ursache."], ["Lies: «Nora nimmt einen Schirm mit, obwohl die Sonne scheint.» Was nimmt Nora mit?", "einen Schirm", ["eine Jacke", "ein Buch", "ein Velo"], "Die gesuchte Information steht direkt im Satz."], ["Lies: «Am Samstag repariert Amir sein Velo.» Wann repariert Amir das Velo?", "am Samstag", ["am Montag", "am Abend", "im Winter"], "Achte auf die Zeitangabe."]]);
   if (topic.includes("adjektive")) return choose([["Welches Wort beschreibt ein Nomen?", "fröhlich", ["lachen", "Freude", "Kind"], "Frage: Wie ist etwas?"]]);
   if (topic.includes("synonyme")) return choose([["Welches Wort bedeutet ähnlich wie froh?", "fröhlich", ["traurig", "müde", "laut"], "Suche ein Wort mit ähnlicher Bedeutung."], ["Welches Wort ist das Gegenteil von hell?", "dunkel", ["klar", "weiss", "leise"], "Gesucht ist die entgegengesetzte Bedeutung."]]);
   if (topic.includes("textsorten")) return choose([["Welcher Text erklärt, wie man etwas macht?", "Anleitung", ["Gedicht", "Brief", "Witz"], "Eine Anleitung nennt Schritte in einer Reihenfolge."]]);
@@ -706,7 +747,7 @@ function gradeScienceGenerated(grade: number, topic: string, ordinal: number): G
 
 function simpleGenerated(subject: string, topic: string, ordinal: number, grade = 6, gradeSuitability = false): Generated {
   if (gradeSuitability && subject === "math") return mathGenerated(grade, topic, ordinal);
-  if (gradeSuitability && subject === "german" && grade <= 5) return germanGenerated(grade, topic, ordinal);
+  if (gradeSuitability && subject === "german") return germanGenerated(grade, topic, ordinal);
   if (gradeSuitability && subject === "science") return gradeScienceGenerated(grade, topic, ordinal);
   if (subject === "english" && topic === "exam-skills-6") {
     const rows: Generated[] = [
@@ -725,6 +766,12 @@ function simpleGenerated(subject: string, topic: string, ordinal: number, grade 
     };
   }
   if (subject === "english") {
+    if (topic === "reading-skills-6") return {
+      question: tx("Read: “The path was wet because it had rained.” Why was the path wet?", "Read: “The path was wet because it had rained.” Why was the path wet?", "Read: “The path was wet because it had rained.” Why was the path wet?", "Read: “The path was wet because it had rained.” Why was the path wet?"),
+      answer: tx("Because it had rained", "Because it had rained", "Because it had rained", "Because it had rained"),
+      choices: { label: tx("Because it had rained", "Because it had rained", "Because it had rained", "Because it had rained"), wrong: [tx("Because it was sunny", "Because it was sunny", "Because it was sunny", "Because it was sunny"), tx("Because it was new", "Because it was new", "Because it was new", "Because it was new"), tx("Because it was closed", "Because it was closed", "Because it was closed", "Because it was closed")] },
+      hint: tx("Look for the cause stated in the sentence.", "Look for the cause stated in the sentence.", "Look for the cause stated in the sentence.", "Look for the cause stated in the sentence."),
+    };
     const profile = topic === "passive-voice-6" ? "everyday" : topic === "conditionals-6" ? "plans" : "talk";
     return englishGenerated(profile, ordinal);
   }
@@ -847,8 +894,8 @@ export function applyLp21ApiFitReplacements(grade: number, subject: string, topi
     let ordinal = 0;
     const exercises = topic.exercises.map((exercise) => {
       const key = `${topicKey}/${exercise.id}`;
-      if (!isLp21ApiFitTarget(key) && !isGradeSuitabilityTarget(key)) return exercise;
-      const gradeTarget = isGradeSuitabilityTarget(key);
+      if (!isLp21ApiFitTarget(key) && !isGradeSuitabilityTarget(key) && !GERMAN_EDITORIAL_LEVEL_TARGET_KEYS.has(key)) return exercise;
+      const gradeTarget = isGradeSuitabilityTarget(key) || GERMAN_EDITORIAL_LEVEL_TARGET_KEYS.has(key);
       let generated = withTopicContext(simpleGenerated(subject, topic.id, ordinal, grade, gradeTarget), topic.id);
       if (gradeTarget) {
         const number = ordinal + 1;

@@ -34,6 +34,7 @@ import { consolidateNmgTopics } from "./nmgConsolidation";
 import { applyGrade1GermanLevel } from "./grade1GermanLevel";
 import { applyExerciseLocalizations } from "./exerciseLocalizations";
 import { applyExerciseIdMigrations } from "./exerciseIdMigrations";
+import { applyGermanEditorialRepairs } from "./germanEditorialRepairs";
 
 const grade4Science = [...grade4NT, ...grade4RZG];
 const grade5Science = [...grade5NT, ...grade5RZG];
@@ -76,7 +77,26 @@ export function getTopicsBeforeExerciseIdMigration(grade: number, subject: strin
 }
 
 export function getTopics(grade: number, subject: string): Topic[] {
+  return applyGermanEditorialRepairs(
+    grade,
+    subject,
+    getTopicsAfterExerciseIdMigrationBeforeEditorial(grade, subject),
+  ).map((topic) => ({
+    ...topic,
+    exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
+  }));
+}
+
+export function getTopicsAfterExerciseIdMigrationBeforeEditorial(grade: number, subject: string): Topic[] {
   return applyExerciseIdMigrations(grade, subject, getTopicsBeforeExerciseIdMigration(grade, subject));
+}
+
+export function getTopicsAfterGermanEditorialRepairsBeforeFinalHintSanitising(grade: number, subject: string): Topic[] {
+  return applyGermanEditorialRepairs(
+    grade,
+    subject,
+    getTopicsAfterExerciseIdMigrationBeforeEditorial(grade, subject),
+  );
 }
 
 export function getProgressSubjects(grade: number, subject: string, topicId: string): string[] {

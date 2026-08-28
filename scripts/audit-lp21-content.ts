@@ -29,6 +29,7 @@ let totalExercises = 0;
 let fillExercises = 0;
 let fillExercisesWithLiteralBlank = 0;
 let multiGapFillExercises = 0;
+let sequentialAnswerExercises = 0;
 
 for (const grade of [1, 2, 3, 4, 5, 6]) {
   for (const subject of getSubjects(grade)) {
@@ -56,6 +57,7 @@ for (const grade of [1, 2, 3, 4, 5, 6]) {
         }
         if (exercise.type === "fill-in-blank") {
           fillExercises += 1;
+          if (exercise.sequentialAnswer) sequentialAnswerExercises += 1;
           const blankCount = (exercise.question.match(/___/g) ?? []).length;
           if (blankCount > 0) {
             fillExercisesWithLiteralBlank += 1;
@@ -78,8 +80,8 @@ for (const grade of [1, 2, 3, 4, 5, 6]) {
 if (totalExercises !== 13_918) {
   failures.push({ grade: 0, subject: "all", topic: "all", id: "count", reason: `expected 13,918 exercises, found ${totalExercises}` });
 }
-if (fillExercises !== 6_761 || fillExercisesWithLiteralBlank !== 5_048 || multiGapFillExercises !== 160) {
-  failures.push({ grade: 0, subject: "all", topic: "all", id: "fill-catalogue", reason: `expected 6,761 fill exercises / 5,048 literal-blank exercises / 160 multi-gap exercises, found ${fillExercises} / ${fillExercisesWithLiteralBlank} / ${multiGapFillExercises}` });
+if (fillExercises !== 6_760 || fillExercisesWithLiteralBlank !== 5_081 || multiGapFillExercises !== 0 || sequentialAnswerExercises !== 158) {
+  failures.push({ grade: 0, subject: "all", topic: "all", id: "fill-catalogue", reason: `expected 6,760 fill exercises / 5,081 literal-blank exercises / zero ambiguous multi-gap exercises / 158 ordered sequential-answer exercises, found ${fillExercises} / ${fillExercisesWithLiteralBlank} / ${multiGapFillExercises} / ${sequentialAnswerExercises}` });
 }
 if (validatedFamilies.size !== 708) {
   failures.push({ grade: 0, subject: "all", topic: "all", id: "families", reason: `expected validation coverage for 708 grade/subject/topic/type families, found ${validatedFamilies.size}` });
@@ -97,6 +99,7 @@ console.log(JSON.stringify({
   fillExercises,
   fillExercisesWithLiteralBlank,
   multiGapFillExercises,
+  sequentialAnswerExercises,
   validatedFamilies: validatedFamilies.size,
   failures: failures.length,
 }, null, 2));

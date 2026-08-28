@@ -1,4 +1,4 @@
-import { getSubjects, getTopics, getTopicsBeforeExerciseIdMigration } from "../src/data";
+import { getSubjects, getTopicsAfterExerciseIdMigrationBeforeEditorial, getTopicsBeforeExerciseIdMigration } from "../src/data";
 import { EXERCISE_ID_MIGRATIONS } from "../src/data/exerciseIdMigrations";
 
 const failures: string[] = [];
@@ -14,14 +14,16 @@ const usedMigrations = new Set<string>();
 let exerciseCount = 0;
 
 function withoutMigrationFields(value: Record<string, unknown>) {
-  const { id: _id, legacyId: _legacyId, ...rest } = value;
-  return rest;
+  const copy = { ...value };
+  delete copy.id;
+  delete copy.legacyId;
+  return copy;
 }
 
 for (let grade = 1; grade <= 6; grade += 1) {
   for (const { id: subject } of getSubjects(grade)) {
     const beforeTopics = getTopicsBeforeExerciseIdMigration(grade, subject);
-    const afterTopics = getTopics(grade, subject);
+    const afterTopics = getTopicsAfterExerciseIdMigrationBeforeEditorial(grade, subject);
     if (beforeTopics.length !== afterTopics.length) failures.push(`${grade}/${subject}: topic count changed`);
 
     beforeTopics.forEach((beforeTopic, topicIndex) => {

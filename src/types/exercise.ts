@@ -19,6 +19,8 @@ export interface Exercise {
   altAnswersEN?: string[];
   altAnswersFR?: string[];
   altAnswersIT?: string[];
+  /** Multi-gap task rendered as one explicitly ordered response. */
+  sequentialAnswer?: boolean;
   answerEN?: string;
   answerFR?: string;
   answerIT?: string;

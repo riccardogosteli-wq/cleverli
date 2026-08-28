@@ -1,6 +1,7 @@
 import { writeFileSync, readFileSync } from "node:fs";
 import { getSubjects, getTopics } from "../src/data";
 import { cleanSpeechForLanguage } from "../src/hooks/useVoice";
+import { matchOrderedTextAnswer } from "../src/lib/fillInBlankMatching";
 import type { Exercise } from "../src/types/exercise";
 
 type Severity = "High" | "Medium" | "Low";
@@ -47,7 +48,7 @@ const GENERIC_HINTS = new Set([
   "Achte auf den ersten und letzten Buchstaben jedes Wortes.",
 ]);
 
-const CONFIRMED_EDITORIAL_FINDINGS: Record<string, Finding[]> = {
+export const CONFIRMED_EDITORIAL_FINDINGS: Record<string, Finding[]> = {
   vs11: [{ severity: "Medium", category: "Language / typo", detail: "Hint contains the broken form «Fu-ssweg» instead of «Fussweg»." }],
   "g1-science-fuenf-sinne-s34": [{ severity: "High", category: "Language / grammar", detail: "Question says «mit einem Brille» instead of «mit einer Brille»." }],
   lm48: [{ severity: "High", category: "Language / grammar", detail: "Question says «Ein Schnecke» instead of «Eine Schnecke»." }],
@@ -102,6 +103,8 @@ const CONFIRMED_EDITORIAL_FINDINGS: Record<string, Finding[]> = {
   dm6_5: [{ severity: "High", category: "Language / broken content", detail: "Question contains a Cyrillic е in «direktе Demokratie»." }],
 };
 
+const LEGACY_EDITORIAL_DEFECT = /(?:mit einem Brille|\bEin Schnecke\b|\bKein Ecken\b|einem (?:feminines|neutrales|maskulines) Nomen|zu das Kind|ein Analogiebildung|eine unechte Bruch|ein Interjektion|ein invasive Art|eines Dampfturbine|Was ist pflanzliche Sekundärmetaboliten|ein Erzählperspektive|ein Inhaltsangabe|die milde Klimata|ein Megacity|Island Biogeography-Theorie|die Föderalismus|Fu-ssweg|Homonim|Konret|Kompas-Nadel|Wärmesstrahlung|wiedervwertet|Röschtigraben|Galleproduktion|Schneehas\b|Busturentüren|Rundläufig|franzöischer|Himmelrichtungen|kein systematische Verfolgung|Stammstrategegie|Subsidiariätsprinzip|Gefrierpunktsern|direktе Demokratie)/u;
+
 function normalise(value: string): string {
   return value.normalize("NFKC").toLocaleLowerCase("de-CH").replace(/\s+/g, " ").trim();
 }
@@ -124,6 +127,7 @@ function labels(exercise: Exercise): string[] {
 function answerAppearsInHint(exercise: Exercise): boolean {
   const answer = normalise(exercise.answer);
   if (answer.length < 2 || ["all", "done"].includes(answer)) return false;
+  if (["der", "die", "das", "den", "dem", "des", "ein", "eine", "la", "le", "les", "un", "une", "in", "on", "at"].includes(answer)) return false;
   const escaped = answer.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   return exercise.hints.some((hint) => new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}([^\\p{L}\\p{N}]|$)`, "u").test(normalise(hint)));
 }
@@ -167,14 +171,19 @@ function validateStructure(exercise: Exercise): Finding[] {
       }
     }
     const answerWords = normalise(exercise.answer)
-      .replace(/[.,;:!?'"»«]/g, "")
-      .replace(/\b(?:und|and|et|e)\b/g, " ")
+      .replace(/[^\p{L}\p{N}-]+/gu, " ")
       .split(/\s+/)
       .filter(Boolean);
     if (answerWords.length > 1) {
-      findings.push({ severity: "High", category: "Scoring / interaction", detail: "The current fill-in checker sorts multiword answers, so an arbitrary word order can be accepted as correct." });
+      const reversed = answerWords.toReversed().join(" ");
+      if (reversed !== answerWords.join(" ") && matchOrderedTextAnswer(reversed, exercise.answer)) {
+        findings.push({ severity: "High", category: "Scoring / interaction", detail: "The fill-in checker accepts an arbitrary word order as correct." });
+      }
       if (/^(?:der|die|das|den|dem|des|ein|eine|einen|einem|einer)\b/i.test(exercise.answer.trim())) {
-        findings.push({ severity: "High", category: "Scoring / interaction", detail: "The current fill-in checker also accepts omission of the leading German article." });
+        const missingArticle = exercise.answer.trim().replace(/^\S+\s+/, "");
+        if (matchOrderedTextAnswer(missingArticle, exercise.answer)) {
+          findings.push({ severity: "High", category: "Scoring / interaction", detail: "The fill-in checker accepts omission of the leading German article." });
+        }
       }
     }
   }
@@ -213,6 +222,7 @@ function validateLanguage(exercise: Exercise): Finding[] {
   if (/!!|\?\?|,,/.test(text)) findings.push({ severity: "Medium", category: "Language / punctuation", detail: "Contains duplicated punctuation." });
   if (/\?!/.test(text)) findings.push({ severity: "Medium", category: "Language / punctuation", detail: "Uses an over-emphatic combined question/exclamation mark («?!»)." });
   if (/ein Komma, dann klein weitergeht/i.test(text)) findings.push({ severity: "High", category: "Language / answer", detail: "Stored answer is grammatically malformed («ein Komma, dann klein weitergeht»)." });
+  if (LEGACY_EDITORIAL_DEFECT.test(text)) findings.push({ severity: "High", category: "Language / confirmed regression", detail: "A confirmed German editorial defect from the final audit remains in learner-facing text." });
   return findings;
 }
 
@@ -222,10 +232,11 @@ function validateSpeech(exercise: Exercise): Finding[] {
   const speech = cleanSpeechForLanguage(source, "de");
   if (!speech.trim()) findings.push({ severity: "High", category: "Voice", detail: "Speech preprocessing produces an empty utterance." });
   if (/___|[_#*`]|[×÷=]/.test(speech)) findings.push({ severity: "High", category: "Voice", detail: `Speech preprocessing leaves an unreadable token: «${speech.slice(0, 180)}».` });
-  if (/\b(?:an|auf|bei|in|mit|nach|seit|von|vor|zu)\s+(?:(?:dem|der|den|die|das|einem|einer|einen)\s+)?\d+\.\s+(?:Platz|Monat|Stelle|Tag|Buchstabe|Woche|Klasse|Mal|Jahr|Runde|Zeile)\b/i.test(source)) {
+  if (/\b(?:nach dem|vor dem)\s+(?:erste|zweite|dritte|vierte|fünfte|sechste|siebte|achte|neunte|zehnte)\s/i.test(speech)
+    || /\ban\s+(?:erste|zweite|dritte|vierte|fünfte|sechste|siebte|achte|neunte|zehnte)\s+Stelle\b/i.test(speech)) {
     findings.push({ severity: "Medium", category: "Voice", detail: "Ordinal speech expansion uses a fixed adjective ending and can produce wrong German case/gender inflection." });
   }
-  if (/\b\d{1,2}:\d{2}\b/.test(source) && /(?:Massstab|Verhältnis|Lehrer:Schüler|Vereinfache)/i.test(source)) {
+  if (/\b\d{1,2}\s+Uhr\s+\d{1,2}\b/.test(speech) && /(?:Massstab|Verhältnis|Lehrer:Schüler|Vereinfache)/i.test(source)) {
     findings.push({ severity: "High", category: "Voice", detail: "A ratio/scale is interpreted by TTS as a clock time." });
   }
   if (speech.length > 1_500) findings.push({ severity: "Medium", category: "Voice", detail: `Spoken text is very long (${speech.length} characters) for one playback action.` });
@@ -261,7 +272,6 @@ for (let grade = 1; grade <= 6; grade += 1) {
           ...validateLanguage(exercise),
           ...validateSpeech(exercise),
           ...validateTopicSemantics(topic.id, exercise),
-          ...(CONFIRMED_EDITORIAL_FINDINGS[exercise.id] ?? []),
         ];
         if (fit.score > 3) findings.push({ severity: "High", category: "LP21 level", detail: `LP21 grade-suitability score is ${fit.score}; maximum accepted score is 3.` });
         const allFields = labels(exercise);
