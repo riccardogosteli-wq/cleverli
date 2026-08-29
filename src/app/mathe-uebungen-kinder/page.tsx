@@ -3,8 +3,8 @@ import IntentLandingPage from "../ads/intent/IntentLandingPage";
 import { matheUebungenKinderConfig } from "../ads/intent/configs";
 
 export const metadata: Metadata = {
-  title: "Mathe Übungen für Kinder",
-  description: "Mathe-Übungen für Kinder in der Schweizer Primarschule. Rechnen, Einmaleins, Geometrie und mehr. 20 Aufgaben gratis testen.",
+  title: "Mathe-Übungen für Kinder | Primarschule Schweiz",
+  description: "Mathe-Übungen für Kinder in der Schweizer Primarschule: Rechnen, Einmaleins, Geometrie und mehr. 20 Aufgaben gratis online üben.",
   robots: {
     index: true,
     follow: true,

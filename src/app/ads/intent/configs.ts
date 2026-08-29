@@ -260,6 +260,11 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
       description: "Rechnen bis 100, Plus und Minus, Uhrzeit und Geld passend zur 2. Klasse üben.",
     },
     {
+      href: "/mathe-uebungen-3-klasse",
+      title: "Mathe Übungen 3. Klasse",
+      description: "Rechnen bis 1000, Mal und geteilt, Geometrie und Sachaufgaben üben.",
+    },
+    {
       href: "/einmaleins-ueben",
       title: "Einmaleins üben",
       description: "Reihen aufbauen, gemischte Aufgaben lösen und Fortschritt direkt sehen.",
@@ -468,6 +473,28 @@ export const lesenLernenConfig: IntentLandingPageConfig = {
       },
     ],
   },
+  relatedLinks: [
+    {
+      href: "/leseverstaendnis-uebungen-2-klasse",
+      title: "Leseverständnis Übungen 2. Klasse",
+      description: "Kurze Texte lesen, Informationen finden und Fragen beantworten.",
+    },
+    {
+      href: "/deutsch-uebungen-2-klasse",
+      title: "Deutsch Übungen 2. Klasse",
+      description: "Lesen, Sätze, Nomen, Verben und erste Rechtschreibung üben.",
+    },
+    {
+      href: "/deutsch-uebungen-kinder",
+      title: "Deutsch Übungen für Kinder",
+      description: "Lesen, Rechtschreibung und Grammatik für die Primarschule festigen.",
+    },
+    {
+      href: "/learn/1/german/saetze-lesen",
+      title: "Erste Sätze lesen",
+      description: "Direkt mit einer kostenlosen Leserunde im Browser starten.",
+    },
+  ],
   faq: [
     ["Für wen ist diese Seite gedacht?", "Für Kinder, die Buchstaben, Wörter und erste Sätze lesen lernen oder in der 1. und 2. Klasse mehr Übung brauchen."],
     ["Ist das dasselbe wie Deutsch Übungen?", "Nein. Diese Seite fokussiert gezielt auf den Leseeinstieg: Buchstaben, Wörter, Sätze und erstes Textverständnis."],

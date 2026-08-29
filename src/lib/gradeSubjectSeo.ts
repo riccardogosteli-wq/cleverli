@@ -508,9 +508,9 @@ const SPECIAL_SEO_PAGES: GradeSubjectSeoPage[] = [
     subject: "german",
     subjectName: "Deutsch",
     shortSubjectName: "Deutsch",
-    title: "Leseverständnis Übungen 2. Klasse - online lesen",
+    title: "Leseverständnis Übungen 2. Klasse – online üben",
     description:
-      "Leseverständnis Übungen 2. Klasse: kurze Texte online lesen, Informationen finden und Fragen beantworten. Für die Schweizer Primarschule.",
+      "Leseverständnis Übungen 2. Klasse: kurze Texte online lesen, Fragen beantworten und 20 Aufgaben gratis üben. Schweizer Primarschule.",
     h1: "Leseverständnis Übungen 2. Klasse",
     eyebrow: "Leseverständnis · 2. Klasse · Schweizer Primarschule",
     lead:
