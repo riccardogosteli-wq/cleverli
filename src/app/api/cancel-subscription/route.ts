@@ -46,11 +46,13 @@ export async function POST(req: NextRequest) {
   let userId: string;
   let cancellationReason = "not_provided";
   let cancellationComment = "";
+  let retentionOfferShown = false;
   try {
     const body = await req.json();
     userId = body.userId;
     cancellationReason = cleanCancellationReason(body.cancellationReason);
     cancellationComment = cleanCancellationComment(body.cancellationComment);
+    retentionOfferShown = body.retentionOfferShown === true && cancellationReason === "too_expensive";
     if (!userId) throw new Error("no userId");
   } catch {
     return NextResponse.json({ error: "bad_request" }, { status: 400 });
@@ -136,6 +138,8 @@ export async function POST(req: NextRequest) {
       cancellationReasonLabel: CANCELLATION_REASONS[cancellationReason],
       cancellationComment: cancellationComment || null,
       hasCancellationComment: Boolean(cancellationComment),
+      retentionOffer: retentionOfferShown ? "yearly_66" : null,
+      retentionOutcome: retentionOfferShown ? "declined" : null,
     },
   }).catch(() => {});
 

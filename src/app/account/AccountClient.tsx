@@ -19,7 +19,7 @@ export default function AccountPage() {
   const [resetSent, setResetSent] = useState(false);
 
   // Billing
-  const [cancelState, setCancelState] = useState<"idle" | "confirm" | "loading" | "done" | "error">("idle");
+  const [cancelState, setCancelState] = useState<"idle" | "confirm" | "loading" | "offer-loading" | "retained" | "done" | "error">("idle");
   const [cancelError, setCancelError] = useState("");
   const [cancelReason, setCancelReason] = useState("");
   const [cancelComment, setCancelComment] = useState("");
@@ -114,6 +114,7 @@ export default function AccountPage() {
           userId: session?.userId,
           cancellationReason: cancelReason || "not_provided",
           cancellationComment: cancelComment,
+          retentionOfferShown: cancelReason === "too_expensive",
         }),
       });
       const data = await res.json();
@@ -121,6 +122,32 @@ export default function AccountPage() {
       setCancelState("done");
       // Refresh session after a short delay so premium badge updates
       setTimeout(() => window.location.reload(), 1500);
+    } catch (e: unknown) {
+      setCancelError(e instanceof Error ? e.message : "Fehler");
+      setCancelState("error");
+    }
+  };
+
+  const handleRetentionOffer = async () => {
+    setCancelState("offer-loading");
+    setCancelError("");
+    try {
+      const supabase = getSupabase();
+      const { data: authData } = supabase ? await supabase.auth.getSession() : { data: { session: null } };
+      const token = authData.session?.access_token;
+      if (!token) throw new Error("unauthorized");
+
+      const res = await fetch("/api/retention-offer", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ userId: session?.userId }),
+      });
+      const data = await res.json();
+      if (!res.ok || data.error) throw new Error(data.error ?? "unknown");
+      setCancelState("retained");
     } catch (e: unknown) {
       setCancelError(e instanceof Error ? e.message : "Fehler");
       setCancelState("error");
@@ -207,13 +234,22 @@ export default function AccountPage() {
             </div>
 
             {/* Cancel flow */}
-            {cancelState === "done" ? (
+            {cancelState === "retained" ? (
+              <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-center text-sm text-green-800">
+                <div className="font-black">✅ {t("CHF 66/Jahr gesichert", "CHF 66/an confirmé", "CHF 66/anno confermato", "CHF 66/year confirmed")}</div>
+                <div className="mt-1 text-xs leading-5">
+                  {t("Der neue Jahrespreis gilt ab deiner nächsten Verlängerung.", "Le nouveau prix annuel s'appliquera dès ton prochain renouvellement.", "Il nuovo prezzo annuale si applicherà dal prossimo rinnovo.", "The new yearly price starts at your next renewal.")}
+                </div>
+              </div>
+            ) : cancelState === "done" ? (
               <div className="bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-600 text-center">
                 ✅ {t("Gekündigt. Zugang bis Ablauf der Laufzeit aktiv.", "Résilié. Accès actif jusqu'à la fin de la période.", "Annullato. Accesso attivo fino alla fine del periodo.", "Cancelled. Access remains active until the period ends.")}
               </div>
-            ) : cancelState === "loading" ? (
+            ) : cancelState === "loading" || cancelState === "offer-loading" ? (
               <div className="bg-gray-50 rounded-xl px-4 py-3 text-sm font-semibold text-gray-600 text-center">
-                {t("Kündigung wird verarbeitet …", "Résiliation en cours …", "Annullamento in corso …", "Cancelling …")}
+                {cancelState === "offer-loading"
+                  ? t("Angebot wird aktiviert …", "Activation de l'offre …", "Attivazione dell'offerta …", "Activating offer …")
+                  : t("Kündigung wird verarbeitet …", "Résiliation en cours …", "Annullamento in corso …", "Cancelling …")}
               </div>
             ) : cancelState === "error" ? (
               <div className="space-y-2">
@@ -268,9 +304,35 @@ export default function AccountPage() {
                   />
                 )}
 
+                {cancelReason === "too_expensive" && (
+                  <div className="rounded-2xl border-2 border-green-300 bg-white p-4 shadow-sm">
+                    <div className="text-xs font-black uppercase tracking-wider text-green-700">
+                      {t("Persönliches Angebot", "Offre personnelle", "Offerta personale", "Personal offer")}
+                    </div>
+                    <p className="mt-1 text-lg font-black text-gray-900">
+                      {t("Bleib für CHF 66/Jahr", "Reste pour CHF 66/an", "Resta per CHF 66/anno", "Stay for CHF 66/year")}
+                    </p>
+                    <p className="mt-1 text-xs leading-5 text-gray-600">
+                      {t("Statt CHF 99/Jahr. Der neue Preis gilt ab deiner nächsten Verlängerung und bleibt danach bei CHF 66/Jahr.",
+                         "Au lieu de CHF 99/an. Le nouveau prix s'applique dès ton prochain renouvellement et reste ensuite à CHF 66/an.",
+                         "Invece di CHF 99/anno. Il nuovo prezzo si applica dal prossimo rinnovo e resta poi CHF 66/anno.",
+                         "Instead of CHF 99/year. The new price starts at your next renewal and remains CHF 66/year after that.")}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={handleRetentionOffer}
+                      className="mt-3 min-h-11 w-full rounded-xl bg-green-700 px-4 py-3 text-sm font-black text-white hover:bg-green-800"
+                    >
+                      {t("CHF 66/Jahr sichern", "Confirmer CHF 66/an", "Conferma CHF 66/anno", "Confirm CHF 66/year")}
+                    </button>
+                  </div>
+                )}
+
                 <button onClick={handleCancel} disabled={false}
                   className="w-full bg-red-500 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-red-600 disabled:opacity-60">
-                  {t("Kündigung abschliessen", "Confirmer la résiliation", "Conferma annullamento", "Confirm cancellation")}
+                  {cancelReason === "too_expensive"
+                    ? t("Trotzdem kündigen", "Résilier quand même", "Annulla comunque", "Cancel anyway")
+                    : t("Kündigung abschliessen", "Confirmer la résiliation", "Conferma annullamento", "Confirm cancellation")}
                 </button>
                 <button onClick={() => setCancelState("idle")}
                   className="w-full border-2 border-gray-200 text-gray-500 py-2 rounded-xl text-sm">

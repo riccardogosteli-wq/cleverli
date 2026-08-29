@@ -118,6 +118,8 @@ type AdsAbPageStats = {
 type CancellationFeedbackStats = {
   total: number;
   withComment: number;
+  retentionAccepted: number;
+  retentionDeclined: number;
   byReason: Array<{
     reason: string;
     label: string;
@@ -916,6 +918,15 @@ function cancellationCommentFromEvent(event: ActivityEventRow) {
 
 function buildCancellationFeedbackStats(events: ActivityEventRow[]): CancellationFeedbackStats {
   const cancellations = events.filter(event => event.activity_type === "subscription_cancel_requested");
+  const retentionAccepted = events.filter(event =>
+    event.activity_type === "subscription_updated"
+    && event.metadata?.retentionOffer === "yearly_66"
+    && event.metadata?.retentionOutcome === "accepted"
+  ).length;
+  const retentionDeclined = cancellations.filter(event =>
+    event.metadata?.retentionOffer === "yearly_66"
+    && event.metadata?.retentionOutcome === "declined"
+  ).length;
   const byReasonMap = new Map<string, { reason: string; label: string; count: number; comments: number }>();
 
   for (const event of cancellations) {
@@ -935,6 +946,8 @@ function buildCancellationFeedbackStats(events: ActivityEventRow[]): Cancellatio
   return {
     total: cancellations.length,
     withComment: cancellations.filter(event => Boolean(cancellationCommentFromEvent(event))).length,
+    retentionAccepted,
+    retentionDeclined,
     byReason: [...byReasonMap.values()].sort((a, b) => b.count - a.count),
     recent: cancellations.slice(0, 20),
   };
@@ -1068,10 +1081,12 @@ export default async function InternalLogDashboard({
             </p>
           </div>
 
-          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+          <div className="mt-4 grid gap-3 sm:grid-cols-5">
             <Stat label="Kündigungen" value={cancellationStats.total} />
             <Stat label="Mit Kommentar" value={cancellationStats.withComment} />
             <Stat label="Kommentarquote" value={`${pct(cancellationStats.withComment, cancellationStats.total)}%`} />
+            <Stat label="CHF 66 angenommen" value={cancellationStats.retentionAccepted} />
+            <Stat label="Angebot abgelehnt" value={cancellationStats.retentionDeclined} />
           </div>
 
           <div className="mt-5 grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
