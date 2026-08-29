@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { createClient } from "@supabase/supabase-js";
 import { INTERNAL_LOG_COOKIE, verifyInternalSession } from "@/lib/internalDashboardAuth";
+import { buildOrganicFunnel } from "@/lib/organicFunnel";
 
 export const dynamic = "force-dynamic";
 
@@ -50,6 +51,7 @@ type AuthUserRow = {
   premium_until: string | null;
   premium_plan: string | null;
   cancelled: boolean;
+  userMetadata: Record<string, unknown>;
 };
 
 type ExerciseStats = {
@@ -349,6 +351,49 @@ async function loadAdsAbActivity(filters: Pick<ActivityFilters, "from" | "to">) 
   return rows;
 }
 
+async function loadOrganicFunnelActivity(filters: Pick<ActivityFilters, "from" | "to">) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) return [] as ActivityEventRow[];
+
+  const supabase = createClient(supabaseUrl, serviceKey, {
+    auth: { persistSession: false },
+  });
+  const from = filters.from
+    ? new Date(`${filters.from}T00:00:00`).toISOString()
+    : new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+  const to = filters.to ? new Date(`${filters.to}T23:59:59`).toISOString() : undefined;
+  const rows: ActivityEventRow[] = [];
+  const pageSize = 1000;
+
+  for (let offset = 0; offset < 10_000; offset += pageSize) {
+    let query = supabase
+      .from("user_activity_events")
+      .select("id, user_id, email, activity_type, path, source, exercise_id, grade, subject, topic_id, metadata, created_at")
+      .in("activity_type", [
+        "signup",
+        "checkout_started",
+        "subscription_trial_started",
+        "subscription_started",
+        "subscription_updated",
+      ])
+      .gte("created_at", from)
+      .order("created_at", { ascending: false })
+      .range(offset, offset + pageSize - 1);
+    if (to) query = query.lte("created_at", to);
+
+    const { data, error } = await query;
+    if (error) {
+      console.error("[internal-log-dashboard/organic-funnel]", error);
+      break;
+    }
+    rows.push(...((data ?? []) as ActivityEventRow[]));
+    if ((data?.length ?? 0) < pageSize) break;
+  }
+
+  return rows;
+}
+
 async function loadAuthUsers(filters: ActivityFilters) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -378,6 +423,7 @@ async function loadAuthUsers(filters: ActivityFilters) {
       premium_until: null,
       premium_plan: null,
       cancelled: false,
+      userMetadata: user.user_metadata ?? {},
     })));
 
     if (data.users.length < perPage) break;
@@ -485,7 +531,10 @@ function authActivityRows(authUsers: AuthUserRow[], events: ActivityEventRow[], 
         grade: null,
         subject: null,
         topic_id: null,
-        metadata: { source: "Supabase Auth" },
+        metadata: {
+          source: "Supabase Auth",
+          attribution: user.userMetadata.attribution ?? null,
+        },
         created_at: candidate.createdAt,
         synthetic: true,
       });
@@ -956,17 +1005,28 @@ export default async function InternalLogDashboard({
     to: params.to || "",
   };
   const events = await loadEvents();
-  const [activityEventsRaw, adsAbEventsRaw, authUsers] = await Promise.all([
+  const [activityEventsRaw, adsAbEventsRaw, organicEventsRaw, authUsersAll] = await Promise.all([
     loadActivity(activityFilters),
     loadAdsAbActivity({ from: activityFilters.from, to: activityFilters.to }),
-    loadAuthUsers(activityFilters),
+    loadOrganicFunnelActivity({ from: activityFilters.from, to: activityFilters.to }),
+    loadAuthUsers({ ...activityFilters, user: "" }),
   ]);
+  const authUserFilter = activityFilters.user.toLowerCase();
+  const authUsers = authUserFilter
+    ? authUsersAll.filter(user => user.id.toLowerCase() === authUserFilter || user.email?.toLowerCase().includes(authUserFilter))
+    : authUsersAll;
+  const syntheticSignupEvents = authActivityRows(authUsersAll, organicEventsRaw, {
+    ...activityFilters,
+    user: "",
+    activity: "signup",
+  });
   const activityEvents = [
     ...activityEventsRaw,
     ...authActivityRows(authUsers, activityEventsRaw, activityFilters),
   ].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()).slice(0, 1000);
   const stats = buildStats(events);
   const adsAbStats = buildAdsAbStats(adsAbEventsRaw);
+  const organicFunnel = buildOrganicFunnel([...organicEventsRaw, ...syntheticSignupEvents]);
   const cancellationStats = buildCancellationFeedbackStats(adsAbEventsRaw);
   const seedAuthSummaries = activityFilters.activity === "all" && !activityFilters.from && !activityFilters.to;
   const activitySummaries = buildActivitySummaries(activityEvents, seedAuthSummaries ? authUsers : []);
@@ -978,8 +1038,8 @@ export default async function InternalLogDashboard({
   const maxEvent = Math.max(1, ...Object.values(stats.byEvent));
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-6 text-gray-950 sm:px-6">
-      <div className="mx-auto max-w-7xl space-y-6">
+    <main className="min-h-screen overflow-x-hidden bg-gray-50 px-4 py-6 text-gray-950 sm:px-6">
+      <div className="mx-auto min-w-0 max-w-7xl space-y-6">
         <header className="flex flex-col gap-3 border-b border-gray-200 pb-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-green-700">Cleverli intern</p>
@@ -1184,6 +1244,75 @@ export default async function InternalLogDashboard({
                 {adsAbStats.recent.length === 0 && (
                   <tr>
                     <td colSpan={6} className="py-4 text-gray-500">Noch keine A/B-Test-Events im Zeitraum.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-lg border border-gray-200 bg-white p-4">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-sm font-black uppercase tracking-wide">Organic Funnel</h2>
+            <p className="text-sm text-gray-500">
+              First-Touch Organic Search nach ursprünglicher Landingpage. Gezählt werden nur eindeutig attribuierte Events im Zeitraum.
+            </p>
+            <p className="text-xs font-semibold text-gray-500">
+              Besucher und Sessions bleiben in GA4; diese Ansicht beginnt bewusst bei attribuierten Signups. Standard: letzte 30 Tage.
+            </p>
+          </div>
+
+          <form className="mt-4 grid gap-3 sm:max-w-xl sm:grid-cols-[1fr_1fr_auto]" action="/internal-log-dashboard">
+            <input
+              type="date"
+              name="from"
+              defaultValue={activityFilters.from}
+              aria-label="Organic Funnel von"
+              className="min-h-11 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-green-600"
+            />
+            <input
+              type="date"
+              name="to"
+              defaultValue={activityFilters.to}
+              aria-label="Organic Funnel bis"
+              className="min-h-11 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-green-600"
+            />
+            <button className="min-h-11 rounded-md bg-gray-950 px-4 py-2 text-sm font-bold text-white hover:bg-gray-800">
+              Zeitraum
+            </button>
+          </form>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-4">
+            <Stat label="Signups" value={organicFunnel.totals.signups} />
+            <Stat label="Checkouts" value={organicFunnel.totals.checkouts} />
+            <Stat label="Trials" value={organicFunnel.totals.trials} />
+            <Stat label="Bezahlt" value={organicFunnel.totals.paid} />
+          </div>
+
+          <div className="mt-5 overflow-x-auto">
+            <table className="w-full min-w-[720px] text-left text-sm">
+              <thead className="text-xs uppercase text-gray-500">
+                <tr>
+                  <th className="py-2">Erste Landingpage</th>
+                  <th>Signups</th>
+                  <th>Checkouts</th>
+                  <th>Trials</th>
+                  <th>Bezahlt</th>
+                </tr>
+              </thead>
+              <tbody>
+                {organicFunnel.byLandingPage.map(row => (
+                  <tr key={row.landingPage} className="border-t border-gray-100">
+                    <td className="max-w-[420px] truncate py-2 font-semibold" title={row.landingPage}>{row.landingPage}</td>
+                    <td>{row.signups}</td>
+                    <td>{row.checkouts}</td>
+                    <td>{row.trials}</td>
+                    <td>{row.paid}</td>
+                  </tr>
+                ))}
+                {organicFunnel.byLandingPage.length === 0 && (
+                  <tr>
+                    <td colSpan={5} className="py-4 text-gray-500">Noch keine eindeutig attribuierten Organic-Conversions im Zeitraum.</td>
                   </tr>
                 )}
               </tbody>

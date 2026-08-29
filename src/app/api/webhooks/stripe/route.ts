@@ -117,6 +117,7 @@ async function syncSubscription(subscription: Stripe.Subscription) {
   const premium = ["active", "trialing", "past_due"].includes(status);
   const stripeCustomerId = subscription.customer as string;
   const experiment = experimentFromMetadata(subscription.metadata);
+  const attribution = attributionFromMetadata(subscription.metadata);
 
   if (userId) {
     await patchParentProfile(userId, {
@@ -127,7 +128,7 @@ async function syncSubscription(subscription: Stripe.Subscription) {
       stripe_customer_id: stripeCustomerId,
       stripe_subscription_id: subscription.id,
     });
-    return { userId, email: undefined, plan, status, premium, premiumUntil, cancelAtPeriodEnd, experiment };
+    return { userId, email: undefined, plan, status, premium, premiumUntil, cancelAtPeriodEnd, experiment, attribution };
   }
 
   const user = await getUserByStripeCustomer(stripeCustomerId);
@@ -141,7 +142,7 @@ async function syncSubscription(subscription: Stripe.Subscription) {
     stripe_customer_id: stripeCustomerId,
     stripe_subscription_id: subscription.id,
   });
-  return { userId: user.userId, email: user.email, plan, status, premium, premiumUntil, cancelAtPeriodEnd, experiment };
+  return { userId: user.userId, email: user.email, plan, status, premium, premiumUntil, cancelAtPeriodEnd, experiment, attribution };
 }
 
 export async function POST(req: NextRequest) {
@@ -232,6 +233,7 @@ export async function POST(req: NextRequest) {
           premiumUntil: synced.premiumUntil,
           cancelAtPeriodEnd: synced.cancelAtPeriodEnd,
           stripeSubscriptionId: subscription.id,
+          attribution: synced.attribution,
           ...synced.experiment,
         },
       }).catch(() => {});
@@ -265,6 +267,7 @@ export async function POST(req: NextRequest) {
             billingReason: invoice.billing_reason,
             amountPaid: invoice.amount_paid,
             currency: invoice.currency,
+            attribution: synced.attribution,
             ...synced.experiment,
           },
         }).catch(() => {});

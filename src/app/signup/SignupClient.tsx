@@ -11,6 +11,7 @@ import { captureAppError } from "@/lib/monitoring";
 import { getCheckoutAuthUrl, getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
 import { trackUserActivity } from "@/lib/userActivityClient";
 import { readAdsExperimentAttribution } from "@/lib/adsAbVariant";
+import { getStoredAttribution } from "@/lib/attribution";
 
 export default function Signup() {
   const { tr } = useLang();
@@ -62,6 +63,7 @@ export default function Signup() {
       const supabase = getSupabase();
       if (!supabase) throw new Error("Supabase not available");
       const experimentAttribution = pendingCheckout?.experimentAttribution ?? readAdsExperimentAttribution();
+      const attribution = getStoredAttribution();
 
       const { data, error: signupError } = await supabase.auth.signUp({
         email,
@@ -69,6 +71,7 @@ export default function Signup() {
         options: {
           data: {
             name: email.split("@")[0],
+            attribution,
             ...(experimentAttribution
               ? {
                   ads_ab_experiment: experimentAttribution.experiment,
@@ -117,6 +120,7 @@ export default function Signup() {
         accessToken: data.session?.access_token,
         metadata: {
           pendingCheckout: pendingCheckout?.plan ?? null,
+          attribution,
           ...(experimentAttribution
             ? {
                 experiment: experimentAttribution.experiment,

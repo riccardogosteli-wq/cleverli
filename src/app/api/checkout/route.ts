@@ -28,12 +28,9 @@ function cleanText(value: unknown, max = 220) {
   return typeof value === "string" && value.trim() ? value.trim().slice(0, max) : null;
 }
 
-function parseAttribution(req: NextRequest) {
-  const raw = req.nextUrl.searchParams.get("attr");
-  if (!raw || raw.length > 4096) return null;
-
+function cleanAttribution(parsed: unknown) {
   try {
-    const parsed = JSON.parse(raw) as {
+    const value = parsed as {
       first?: Record<string, unknown> | null;
       last?: Record<string, unknown> | null;
     };
@@ -57,9 +54,20 @@ function parseAttribution(req: NextRequest) {
     };
 
     return {
-      first: cleanTouch(parsed.first),
-      last: cleanTouch(parsed.last),
+      first: cleanTouch(value.first),
+      last: cleanTouch(value.last),
     };
+  } catch {
+    return null;
+  }
+}
+
+function parseAttribution(req: NextRequest) {
+  const raw = req.nextUrl.searchParams.get("attr");
+  if (!raw || raw.length > 4096) return null;
+
+  try {
+    return cleanAttribution(JSON.parse(raw));
   } catch {
     return null;
   }
@@ -124,8 +132,7 @@ export async function GET(req: NextRequest) {
   const userId = req.nextUrl.searchParams.get("uid") ?? "";
   const trialDays = trialDaysFromRequest(req);
   const checkoutSource = req.nextUrl.searchParams.get("source") ?? "checkout_api";
-  const attribution = parseAttribution(req);
-  const attributionMetadata = stripeAttributionMetadata(attribution);
+  let attribution = parseAttribution(req);
   let experimentAttribution = parseAdsExperimentAttribution(req.nextUrl.searchParams);
 
   // Guest: redirect to signup
@@ -157,6 +164,7 @@ export async function GET(req: NextRequest) {
     const { data } = await supabase.auth.admin.getUserById(userId);
     customerEmail = data.user?.email ?? undefined;
     experimentAttribution ??= parseAdsExperimentMetadata(data.user?.user_metadata);
+    attribution ??= cleanAttribution(data.user?.user_metadata?.attribution);
 
     const { data: profile } = await supabase
       .from("parent_profiles")
@@ -171,6 +179,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const stripe = getStripe();
+    const attributionMetadata = stripeAttributionMetadata(attribution);
     const experimentMetadata = stripeExperimentMetadata(experimentAttribution);
     const checkoutIdempotencyKey = getCheckoutIdempotencyKey(userId, plan, checkoutSource, trialDays);
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
