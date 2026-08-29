@@ -2,7 +2,13 @@
 
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
-type Fbq = ((...args: unknown[]) => void) & { loaded?: boolean; queue?: unknown[][] };
+type Fbq = ((...args: unknown[]) => void) & {
+  callMethod?: (...args: unknown[]) => void;
+  loaded?: boolean;
+  push?: Fbq;
+  queue?: unknown[][];
+  version?: string;
+};
 
 declare global {
   interface Window {
@@ -25,9 +31,15 @@ export function initMetaPixel() {
   if (!META_PIXEL_ID || typeof window === "undefined" || typeof document === "undefined") return false;
   if (!window.fbq) {
     const fbq = function (...args: unknown[]) {
-      fbq.queue = fbq.queue ?? [];
-      fbq.queue.push(args);
+      if (fbq.callMethod) fbq.callMethod(...args);
+      else {
+        fbq.queue = fbq.queue ?? [];
+        fbq.queue.push(args);
+      }
     } as Fbq;
+    fbq.push = fbq;
+    fbq.loaded = true;
+    fbq.version = "2.0";
     fbq.queue = [];
     window.fbq = fbq;
     window._fbq = fbq;
