@@ -30,8 +30,8 @@ const features = [
 ];
 
 const trustItems = [
-  ["Keine Belastung heute", "Die Zahlung wird erst nach 7 Tagen ausgelöst."],
-  ["Jederzeit kündbar", "Du kannst vor Ablauf der Testphase kündigen."],
+  ["7 Tage kostenlos testen", "Premium eine Woche lang mit allen Übungen und Klassen ausprobieren."],
+  ["Jederzeit kündbar", "Das Abo bleibt flexibel."],
   ["Jährlich spart 17 %", "CHF 99/Jahr statt CHF 118.80 bei monatlicher Zahlung."],
   ["Sicher über Stripe", "Kartenzahlung, verschlüsselt und klar ausgewiesen."],
 ];
@@ -43,10 +43,10 @@ export default function AdsTrialLandingPage({
   freeTrialUrl = "/learn/2/math/addition-bis-20",
   eyebrow = "7 Tage Premium gratis testen",
   title = "Alle Übungen und Klassen 7 Tage gratis freischalten.",
-  lead = "Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang ohne Belastung. Erst danach wird bezahlt, wenn du nicht kündigst.",
+  lead = "Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang mit allen Übungen und Klassen.",
   heroImage = "/images/scenes/cleverli-teach-kids.jpg",
   imageAlt = "Cleverli Premium Vorschau",
-  trialCtaLabel = "7 Tage gratis testen",
+  trialCtaLabel = "7 Tage kostenlos testen",
   freeCtaLabel = "Erst 20 Aufgaben gratis",
 }: TrialLandingPageProps) {
   const { session } = useSession();
@@ -106,7 +106,7 @@ export default function AdsTrialLandingPage({
               </button>
             </div>
             <p className="mt-3 text-sm text-gray-500">
-              CHF 99/Jahr, spart CHF 19.80 gegenüber monatlich. Belastung erst nach der Testphase.
+              CHF 99/Jahr, spart CHF 19.80 gegenüber monatlich.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export default function AdsTrialLandingPage({
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950/75 via-gray-950/10 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur">
               <p className="text-xs font-black uppercase tracking-widest text-green-700">Premium-Test</p>
-              <h2 className="mt-1 text-xl font-black text-gray-950">Alles offen für 7 Tage</h2>
+              <h2 className="mt-1 text-xl font-black text-gray-950">7 Tage kostenlos testen</h2>
               <div className="mt-4 grid gap-2">
                 {features.map((feature) => (
                   <div key={feature} className="rounded-xl border border-green-100 bg-green-50 px-3 py-2 text-sm font-bold text-green-800">
@@ -130,9 +130,6 @@ export default function AdsTrialLandingPage({
                   </div>
                 ))}
               </div>
-              <p className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-800">
-                Du gibst Zahlungsdetails bei Stripe an. Cleverli belastet erst nach 7 Tagen, wenn du nicht vorher kündigst.
-              </p>
             </div>
           </div>
         </div>
@@ -159,7 +156,7 @@ export default function AdsTrialLandingPage({
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Abo wählen</p>
-            <h2 className="mt-2 text-3xl font-black text-gray-950">7 Tage testen. Danach nur zahlen, wenn es passt.</h2>
+            <h2 className="mt-2 text-3xl font-black text-gray-950">7 Tage kostenlos testen. Wähle dein Abo.</h2>
           </div>
           <div className="mt-8 grid items-stretch gap-5 md:grid-cols-2">
             <div className="flex min-h-[260px] flex-col rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm">
@@ -193,9 +190,6 @@ export default function AdsTrialLandingPage({
               </button>
             </div>
           </div>
-          <p className="mt-5 text-center text-sm text-gray-500">
-            Zahlung erst nach 7 Tagen. Du kannst vor Ablauf der Testphase kündigen. Stripe zeigt Preis und Startdatum nochmals klar an.
-          </p>
         </div>
       </section>
 
@@ -214,7 +208,7 @@ export default function AdsTrialLandingPage({
         <Image src="/cleverli-try-now.png" alt="" width={120} height={120} className="mx-auto mb-4 drop-shadow-lg" />
         <h2 className="mx-auto max-w-2xl text-3xl font-black">Premium eine Woche lang ohne Einschränkung testen.</h2>
         <p className="mx-auto mt-3 max-w-xl text-green-50">
-          Alle Übungen, alle Klassen, alle Kinderprofile. Belastung erst nach der Testphase.
+          Alle Übungen, alle Klassen und bis zu 3 Kinderprofile.
         </p>
         <button
           type="button"

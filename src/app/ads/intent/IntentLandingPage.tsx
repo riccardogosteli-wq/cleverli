@@ -229,7 +229,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
           heroImage={config.heroImage}
           imageAlt={config.imageAlt}
           title={`${config.title.replace(/\.$/, "")} - 7 Tage Premium gratis.`}
-          lead="Erstelle ein Konto, wähle dein Abo und teste alle Übungen und Klassen eine Woche lang ohne Belastung. Erst danach wird bezahlt, wenn du nicht kündigst."
+          lead="Erstelle ein Konto, wähle dein Abo und teste alle Übungen und Klassen eine Woche lang."
         />
         {seoDetailSection}
         {referenceTableSection}

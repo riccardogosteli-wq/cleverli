@@ -107,8 +107,8 @@ export default function AdsPrimarschuleClient() {
           pagePath="/primarschule-uebungen"
           checkoutSource="primarschule_uebungen"
           title="Mathe, Deutsch und NMG 7 Tage gratis freischalten."
-          lead="Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang mit allen Aufgaben und Klassen. Erst danach wird bezahlt, wenn du nicht kündigst."
-          trialCtaLabel="Alle Themen freischalten"
+          lead="Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang mit allen Aufgaben und Klassen."
+          trialCtaLabel="7 Tage kostenlos testen"
           freeCtaLabel="Gratis mit Übungen starten"
         />
         {seoCluster}
@@ -369,7 +369,6 @@ export default function AdsPrimarschuleClient() {
               </button>
             </div>
           </div>
-          <p className="mt-5 text-center text-sm text-gray-500">Heute CHF 0. Zahlung erst nach 7 Tagen, wenn du nicht vorher kündigst.</p>
         </div>
       </section>
 
