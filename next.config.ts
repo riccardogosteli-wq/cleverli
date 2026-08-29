@@ -27,7 +27,7 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com", // Next.js + GTM
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net", // Next.js + GTM + Meta Pixel
       "style-src 'self' 'unsafe-inline'",                // Tailwind inline styles
       "img-src 'self' data: blob: https: https://www.googletagmanager.com", // Next/Image + GTM
       "font-src 'self'",                                 // Geist is self-hosted via next/font
@@ -37,6 +37,7 @@ const securityHeaders = [
         "https://formspree.io",
         "https://*.google-analytics.com https://analytics.google.com https://region1.analytics.google.com",
         "https://ad.doubleclick.net https://stats.g.doubleclick.net https://www.google.com https://www.google.ch https://www.googletagmanager.com",
+        "https://connect.facebook.net https://www.facebook.com",
         "https://*.ingest.sentry.io https://*.ingest.us.sentry.io",
         "https://*.posthog.com https://*.i.posthog.com https://eu.i.posthog.com https://us.i.posthog.com",
       ].join(" "),
