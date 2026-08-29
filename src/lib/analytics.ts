@@ -6,6 +6,7 @@ import {
   resolveAdsLpTrackingVariant,
   type AdsLpVariant,
 } from "@/lib/adsAbVariant";
+import { trackMetaEvent } from "@/lib/metaPixel";
 
 export type CheckoutPlan = "monthly" | "yearly";
 type AdsLpCtaType = "paid" | "free";
@@ -131,6 +132,7 @@ function trackGoogleAdsPurchaseConversion(transactionId: string, value: number) 
 
 export function trackSignUp(method = "email") {
   pushDataLayerEvent("sign_up", { method });
+  trackMetaEvent("CompleteRegistration", { content_name: "Cleverli account", status: true });
 }
 
 export function trackBeginCheckout(plan: CheckoutPlan, source: string) {
@@ -169,6 +171,13 @@ export function trackTrialStarted(plan: CheckoutPlan, source: string, trialDays:
       },
     ],
   });
+  trackMetaEvent("StartTrial", {
+    currency: "CHF",
+    value: PLAN_VALUE[plan],
+    predicted_ltv: PLAN_VALUE[plan],
+    content_name: PLAN_NAME[plan],
+    trial_days: trialDays,
+  }, transactionId ? `trial_${transactionId}` : null);
 }
 
 export async function trackAdsLpCtaClick(

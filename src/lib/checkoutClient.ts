@@ -9,6 +9,7 @@ import {
   readAdsExperimentAttribution,
   type AdsExperimentAttribution,
 } from "@/lib/adsAbVariant";
+import { getMetaBrowserIdentifiers, trackMetaEvent } from "@/lib/metaPixel";
 
 const CHECKOUT_PLANS = new Set<CheckoutPlan>(["monthly", "yearly"]);
 let checkoutInFlightKey: string | null = null;
@@ -116,6 +117,9 @@ export async function startCheckout(plan: CheckoutPlan, source: string, userId?:
     appendAdsExperimentAttribution(params, experimentAttribution);
     const attribution = encodeAttributionForCheckout();
     if (attribution) params.set("attr", attribution);
+    const meta = getMetaBrowserIdentifiers();
+    if (meta.fbp) params.set("fbp", meta.fbp);
+    if (meta.fbc) params.set("fbc", meta.fbc);
     const res = await fetch(`/api/checkout?${params.toString()}`, {
       headers: {
         Accept: "application/json",
@@ -128,6 +132,13 @@ export async function startCheckout(plan: CheckoutPlan, source: string, userId?:
       window.location.assign("/upgrade?checkout=error");
       return;
     }
+
+    trackMetaEvent("InitiateCheckout", {
+      currency: "CHF",
+      value: plan === "yearly" ? 99 : 9.9,
+      content_name: `Cleverli Premium ${plan}`,
+      content_type: "product",
+    }, body.metaEventId);
 
     window.location.assign(body.url);
   } catch (error) {

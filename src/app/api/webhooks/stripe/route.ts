@@ -6,6 +6,7 @@ import {
   sendPaymentConfirmationEmail,
 } from "@/lib/email";
 import { logUserActivity } from "@/lib/userActivityServer";
+import { sendMetaConversion } from "@/lib/metaConversions";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!;
@@ -212,6 +213,27 @@ export async function POST(req: NextRequest) {
       },
     }).catch(() => {});
 
+    if (trialDays) {
+      await sendMetaConversion({
+        eventName: "StartTrial",
+        eventId: `trial_${session.id}`,
+        eventSourceUrl: "https://www.cleverli.ch/payment/success",
+        userData: {
+          email: customerEmail,
+          externalId: userId,
+          fbp: session.metadata?.meta_fbp,
+          fbc: session.metadata?.meta_fbc,
+        },
+        customData: {
+          currency: "CHF",
+          value: plan === "yearly" ? 99 : 9.9,
+          predicted_ltv: plan === "yearly" ? 99 : 9.9,
+          content_name: `Cleverli Premium ${plan}`,
+          trial_days: trialDays,
+        },
+      });
+    }
+
     console.log(`[stripe-webhook] ✅ Premium activated for ${userId} (${plan})`);
   }
 
@@ -287,6 +309,27 @@ export async function POST(req: NextRequest) {
               customerName = customer.name ?? customerName;
             }
           }
+
+
+          await sendMetaConversion({
+            eventName: "Purchase",
+            eventId: `purchase_${invoice.id}`,
+            eventSourceUrl: "https://www.cleverli.ch/payment/success",
+            eventTime: invoice.status_transitions?.paid_at ?? undefined,
+            userData: {
+              email: customerEmail,
+              externalId: synced.userId,
+              fbp: subscription.metadata?.meta_fbp,
+              fbc: subscription.metadata?.meta_fbc,
+            },
+            customData: {
+              currency: invoice.currency.toUpperCase(),
+              value: invoice.amount_paid / 100,
+              content_name: `Cleverli Premium ${synced.plan}`,
+              content_type: "product",
+              order_id: invoice.id,
+            },
+          });
 
           const emailTasks: Promise<unknown>[] = [
             sendAdminPaymentNotificationEmail({

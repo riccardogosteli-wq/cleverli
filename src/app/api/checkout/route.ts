@@ -4,6 +4,7 @@ import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
 import { logUserActivity } from "@/lib/userActivityServer";
 import { parseAdsExperimentAttribution, parseAdsExperimentMetadata } from "@/lib/adsAbVariant";
+import { sendMetaConversion } from "@/lib/metaConversions";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.cleverli.ch";
 
@@ -60,6 +61,10 @@ function cleanAttribution(parsed: unknown) {
   } catch {
     return null;
   }
+}
+
+function cleanMetaIdentifier(value: string | null, max: number) {
+  return value && /^[A-Za-z0-9._-]+$/.test(value) ? value.slice(0, max) : null;
 }
 
 function parseAttribution(req: NextRequest) {
@@ -132,6 +137,8 @@ export async function GET(req: NextRequest) {
   const userId = req.nextUrl.searchParams.get("uid") ?? "";
   const trialDays = trialDaysFromRequest(req);
   const checkoutSource = req.nextUrl.searchParams.get("source") ?? "checkout_api";
+  const metaFbp = cleanMetaIdentifier(req.nextUrl.searchParams.get("fbp"), 120);
+  const metaFbc = cleanMetaIdentifier(req.nextUrl.searchParams.get("fbc"), 300);
   let attribution = parseAttribution(req);
   let experimentAttribution = parseAdsExperimentAttribution(req.nextUrl.searchParams);
 
@@ -202,6 +209,8 @@ export async function GET(req: NextRequest) {
         ...attributionMetadata,
         ...experimentMetadata,
         ...(trialDays ? { trial_days: String(trialDays) } : {}),
+        ...(metaFbp ? { meta_fbp: metaFbp } : {}),
+        ...(metaFbc ? { meta_fbc: metaFbc } : {}),
       },
       subscription_data: {
         ...(trialDays ? { trial_period_days: trialDays } : {}),
@@ -213,6 +222,8 @@ export async function GET(req: NextRequest) {
           ...attributionMetadata,
           ...experimentMetadata,
           ...(trialDays ? { trial_days: String(trialDays) } : {}),
+          ...(metaFbp ? { meta_fbp: metaFbp } : {}),
+          ...(metaFbc ? { meta_fbc: metaFbc } : {}),
         },
       },
     };
@@ -224,6 +235,29 @@ export async function GET(req: NextRequest) {
       Sentry.captureMessage("[checkout] Stripe session missing URL", "error");
       return NextResponse.json({ error: "gateway_failed" }, { status: 500 });
     }
+
+
+    const metaEventId = `checkout_${session.id}`;
+    await sendMetaConversion({
+      eventName: "InitiateCheckout",
+      eventId: metaEventId,
+      eventSourceUrl: `${BASE_URL}${req.nextUrl.pathname}`,
+      userData: {
+        email: customerEmail,
+        externalId: userId,
+        clientIpAddress: req.headers.get("x-forwarded-for")?.split(",")[0]?.trim(),
+        clientUserAgent: req.headers.get("user-agent"),
+        fbp: metaFbp,
+        fbc: metaFbc,
+      },
+      customData: {
+        currency: "CHF",
+        value: plan === "yearly" ? 99 : 9.9,
+        content_name: `Cleverli Premium ${plan}`,
+        content_type: "product",
+        trial_days: trialDays ?? 0,
+      },
+    });
 
     const { data: existingLog } = await supabase
       .from("user_activity_events")
@@ -261,7 +295,7 @@ export async function GET(req: NextRequest) {
     }
 
     return wantsJson(req)
-      ? NextResponse.json({ url: session.url })
+      ? NextResponse.json({ url: session.url, metaEventId })
       : NextResponse.redirect(session.url, 302);
   } catch (err) {
     Sentry.captureException(err);

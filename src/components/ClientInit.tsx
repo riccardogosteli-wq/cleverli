@@ -3,12 +3,14 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { captureAttribution } from "@/lib/attribution";
 import { restoreFamilyFromSupabase } from "@/lib/progressSync";
+import { trackMetaPageView } from "@/lib/metaPixel";
 
 export default function ClientInit() {
   const pathname = usePathname();
 
   useEffect(() => {
     captureAttribution();
+    trackMetaPageView();
   }, [pathname]);
 
   useEffect(() => {
