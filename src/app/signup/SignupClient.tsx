@@ -8,8 +8,9 @@ import { useSession } from "@/hooks/useSession";
 import { getSupabase } from "@/lib/supabase";
 import { trackSignUp } from "@/lib/analytics";
 import { captureAppError } from "@/lib/monitoring";
-import { getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
+import { getCheckoutAuthUrl, getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
 import { trackUserActivity } from "@/lib/userActivityClient";
+import { readAdsExperimentAttribution } from "@/lib/adsAbVariant";
 
 export default function Signup() {
   const { tr } = useLang();
@@ -32,7 +33,10 @@ export default function Signup() {
   useEffect(() => {
     if (!loaded || !intentLoaded || !session) return;
     if (pendingCheckout) {
-      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, { trialDays: pendingCheckout.trialDays });
+      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, {
+        trialDays: pendingCheckout.trialDays,
+        experimentAttribution: pendingCheckout.experimentAttribution,
+      });
       return;
     }
     router.replace("/dashboard");
@@ -57,11 +61,26 @@ export default function Signup() {
     try {
       const supabase = getSupabase();
       if (!supabase) throw new Error("Supabase not available");
+      const experimentAttribution = pendingCheckout?.experimentAttribution ?? readAdsExperimentAttribution();
 
       const { data, error: signupError } = await supabase.auth.signUp({
         email,
         password,
-        options: { data: { name: email.split("@")[0] } },
+        options: {
+          data: {
+            name: email.split("@")[0],
+            ...(experimentAttribution
+              ? {
+                  ads_ab_experiment: experimentAttribution.experiment,
+                  ads_ab_variant: experimentAttribution.variant,
+                  ads_ab_visitor_id: experimentAttribution.visitorId,
+                  ads_ab_page: experimentAttribution.page,
+                  ads_ab_internal_qa: experimentAttribution.internalQa,
+                  ads_ab_forced: experimentAttribution.forcedVariant,
+                }
+              : {}),
+          },
+        },
       });
 
       if (signupError) {
@@ -96,14 +115,29 @@ export default function Signup() {
       trackUserActivity("signup", {
         email,
         accessToken: data.session?.access_token,
-        metadata: { pendingCheckout: pendingCheckout?.plan ?? null },
+        metadata: {
+          pendingCheckout: pendingCheckout?.plan ?? null,
+          ...(experimentAttribution
+            ? {
+                experiment: experimentAttribution.experiment,
+                variant: experimentAttribution.variant,
+                experiment_visitor_id: experimentAttribution.visitorId,
+                experiment_page: experimentAttribution.page,
+                internal_qa: experimentAttribution.internalQa,
+                forced_variant: experimentAttribution.forcedVariant,
+              }
+            : {}),
+        },
       });
       setSuccess(true);
 
       // If session is immediately available (email confirm disabled), redirect to first exercise
       if (data?.session) {
         if (pendingCheckout) {
-          setTimeout(() => startCheckout(pendingCheckout.plan, pendingCheckout.source, data.session?.user.id, { trialDays: pendingCheckout.trialDays }), 800);
+          setTimeout(() => startCheckout(pendingCheckout.plan, pendingCheckout.source, data.session?.user.id, {
+            trialDays: pendingCheckout.trialDays,
+            experimentAttribution: pendingCheckout.experimentAttribution,
+          }), 800);
           return;
         }
         setTimeout(() => router.push("/learn/1/math/zahlen-1-10"), 800);
@@ -193,7 +227,10 @@ export default function Signup() {
             <p className="text-center text-sm text-gray-600">
               Bereits ein Konto?{" "}
               <Link
-                href={pendingCheckout ? `/login?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}${pendingCheckout.trialDays ? `&trial=${pendingCheckout.trialDays}` : ""}` : "/login"}
+                href={pendingCheckout ? getCheckoutAuthUrl("/login", pendingCheckout.plan, pendingCheckout.source, {
+                  trialDays: pendingCheckout.trialDays,
+                  experimentAttribution: pendingCheckout.experimentAttribution,
+                }) : "/login"}
                 className="text-green-700 font-semibold hover:underline"
               >
                 Anmelden

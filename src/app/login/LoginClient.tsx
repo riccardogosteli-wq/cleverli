@@ -6,7 +6,7 @@ import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { getSupabase } from "@/lib/supabase";
-import { getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
+import { getCheckoutAuthUrl, getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
 import { trackUserActivity } from "@/lib/userActivityClient";
 
 export default function Login() {
@@ -37,7 +37,10 @@ export default function Login() {
   useEffect(() => {
     if (loaded && intentLoaded && session) {
       if (pendingCheckout) {
-        startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, { trialDays: pendingCheckout.trialDays });
+        startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, {
+          trialDays: pendingCheckout.trialDays,
+          experimentAttribution: pendingCheckout.experimentAttribution,
+        });
         return;
       }
       setRedirecting(true);
@@ -75,7 +78,10 @@ export default function Login() {
       setLoading(false);
       setLoginInProgress(false);
       if (pendingCheckout) {
-        startCheckout(pendingCheckout.plan, pendingCheckout.source, undefined, { trialDays: pendingCheckout.trialDays });
+        startCheckout(pendingCheckout.plan, pendingCheckout.source, undefined, {
+          trialDays: pendingCheckout.trialDays,
+          experimentAttribution: pendingCheckout.experimentAttribution,
+        });
         return;
       }
       router.replace("/dashboard");
@@ -88,7 +94,10 @@ export default function Login() {
   useEffect(() => {
     if (!loaded || !intentLoaded || !session) return;
     if (pendingCheckout) {
-      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, { trialDays: pendingCheckout.trialDays });
+      startCheckout(pendingCheckout.plan, pendingCheckout.source, session.userId, {
+        trialDays: pendingCheckout.trialDays,
+        experimentAttribution: pendingCheckout.experimentAttribution,
+      });
       return;
     }
     router.push("/dashboard");
@@ -168,7 +177,10 @@ export default function Login() {
               Passwort vergessen?
             </Link>
             <Link
-              href={pendingCheckout ? `/signup?checkout=${pendingCheckout.plan}&source=${encodeURIComponent(pendingCheckout.source)}${pendingCheckout.trialDays ? `&trial=${pendingCheckout.trialDays}` : ""}` : "/signup"}
+              href={pendingCheckout ? getCheckoutAuthUrl("/signup", pendingCheckout.plan, pendingCheckout.source, {
+                trialDays: pendingCheckout.trialDays,
+                experimentAttribution: pendingCheckout.experimentAttribution,
+              }) : "/signup"}
               className="inline-flex min-h-11 items-center justify-center px-2 text-xs text-green-700 underline"
             >
               Noch kein Konto? Jetzt registrieren →

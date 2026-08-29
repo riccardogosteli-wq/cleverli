@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { pushDataLayerEvent } from "@/lib/analytics";
 import { trackUserActivity } from "@/lib/userActivityClient";
 import {
+  ADS_LP_EXPERIMENT,
+  ensureAdsExperimentAttribution,
   getAdsLpVariant,
   readForcedAdsLpVariant,
   type AdsLpVariant,
@@ -31,6 +33,7 @@ export function useAdsLpVariant(page: string, pagePath: string): AdsLpVariant {
 
 export function trackAdsLpVariantAssignment(page: string, pagePath: string, variant: AdsLpVariant) {
   if (typeof window === "undefined") return;
+  const attribution = ensureAdsExperimentAttribution(variant, page);
   const key = `cleverli_ads_lp_ab_seen:${page}:${variant}`;
   try {
     if (window.sessionStorage.getItem(key)) return;
@@ -42,8 +45,10 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
   pushDataLayerEvent("ads_lp_ab_assignment", {
     page,
     page_path: pagePath,
-    experiment: "ads_lp_7_day_trial",
+    experiment: ADS_LP_EXPERIMENT,
     variant,
+    experiment_visitor_id: attribution?.visitorId ?? null,
+    experiment_page: attribution?.page ?? page,
     forced_variant: Boolean(readForcedAdsLpVariant()),
     internal_qa: isInternalQaRequest(),
   });
@@ -54,8 +59,10 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
     metadata: {
       page,
       page_path: pagePath,
-      experiment: "ads_lp_7_day_trial",
+      experiment: ADS_LP_EXPERIMENT,
       variant,
+      experiment_visitor_id: attribution?.visitorId ?? null,
+      experiment_page: attribution?.page ?? page,
       forced_variant: Boolean(readForcedAdsLpVariant()),
       internal_qa: isInternalQaRequest(),
     },

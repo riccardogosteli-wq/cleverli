@@ -1,6 +1,11 @@
 import { trackUserActivity } from "@/lib/userActivityClient";
 import { checkoutAttributionEventParams } from "@/lib/attribution";
-import { resolveAdsLpTrackingVariant, type AdsLpVariant } from "@/lib/adsAbVariant";
+import {
+  ADS_LP_EXPERIMENT,
+  ensureAdsExperimentAttribution,
+  resolveAdsLpTrackingVariant,
+  type AdsLpVariant,
+} from "@/lib/adsAbVariant";
 
 export type CheckoutPlan = "monthly" | "yearly";
 type AdsLpCtaType = "paid" | "free";
@@ -179,6 +184,7 @@ export async function trackAdsLpCtaClick(
   if (!claimAdsCtaClick(dedupeKey)) return false;
 
   const variant = resolveAdsLpTrackingVariant(pageContext.variant);
+  const experimentAttribution = ensureAdsExperimentAttribution(variant, page);
   const requestContext = adsLpRequestContext();
   const eventId = adsCtaEventId();
   const metadata = {
@@ -198,8 +204,10 @@ export async function trackAdsLpCtaClick(
           value: null,
           plan: null,
         }),
-    ...(pageContext.experiment ? { experiment: pageContext.experiment } : {}),
+    experiment: pageContext.experiment ?? ADS_LP_EXPERIMENT,
     variant,
+    experiment_visitor_id: experimentAttribution?.visitorId ?? null,
+    experiment_page: experimentAttribution?.page ?? page,
     ...(pageContext.trial_days ? { trial_days: pageContext.trial_days } : {}),
     cta_event_id: eventId,
     cta_session_id: adsCtaSessionId(),

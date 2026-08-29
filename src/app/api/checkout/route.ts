@@ -3,6 +3,7 @@ import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
 import { logUserActivity } from "@/lib/userActivityServer";
+import { parseAdsExperimentAttribution, parseAdsExperimentMetadata } from "@/lib/adsAbVariant";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.cleverli.ch";
 
@@ -82,6 +83,18 @@ function stripeAttributionMetadata(attribution: ReturnType<typeof parseAttributi
   };
 }
 
+function stripeExperimentMetadata(attribution: ReturnType<typeof parseAdsExperimentAttribution>): Record<string, string> {
+  if (!attribution) return {};
+  return {
+    experiment: attribution.experiment,
+    variant: attribution.variant,
+    experiment_visitor_id: attribution.visitorId,
+    experiment_page: attribution.page,
+    internal_qa: String(attribution.internalQa),
+    forced_variant: String(attribution.forcedVariant),
+  };
+}
+
 function getCheckoutIdempotencyKey(userId: string, plan: string, source: string, trialDays?: number) {
   const minuteBucket = Math.floor(Date.now() / 60_000);
   return [
@@ -113,6 +126,7 @@ export async function GET(req: NextRequest) {
   const checkoutSource = req.nextUrl.searchParams.get("source") ?? "checkout_api";
   const attribution = parseAttribution(req);
   const attributionMetadata = stripeAttributionMetadata(attribution);
+  let experimentAttribution = parseAdsExperimentAttribution(req.nextUrl.searchParams);
 
   // Guest: redirect to signup
   if (!userId) {
@@ -142,6 +156,7 @@ export async function GET(req: NextRequest) {
   try {
     const { data } = await supabase.auth.admin.getUserById(userId);
     customerEmail = data.user?.email ?? undefined;
+    experimentAttribution ??= parseAdsExperimentMetadata(data.user?.user_metadata);
 
     const { data: profile } = await supabase
       .from("parent_profiles")
@@ -156,6 +171,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const stripe = getStripe();
+    const experimentMetadata = stripeExperimentMetadata(experimentAttribution);
     const checkoutIdempotencyKey = getCheckoutIdempotencyKey(userId, plan, checkoutSource, trialDays);
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: "subscription",
@@ -173,7 +189,9 @@ export async function GET(req: NextRequest) {
         userId,
         plan,
         site: "cleverli.ch",
+        checkout_source: checkoutSource,
         ...attributionMetadata,
+        ...experimentMetadata,
         ...(trialDays ? { trial_days: String(trialDays) } : {}),
       },
       subscription_data: {
@@ -182,7 +200,9 @@ export async function GET(req: NextRequest) {
           userId,
           plan,
           site: "cleverli.ch",
+          checkout_source: checkoutSource,
           ...attributionMetadata,
+          ...experimentMetadata,
           ...(trialDays ? { trial_days: String(trialDays) } : {}),
         },
       },
@@ -211,7 +231,23 @@ export async function GET(req: NextRequest) {
         activityType: "checkout_started",
         source: checkoutSource,
         path: req.nextUrl.pathname,
-        metadata: { plan, trialDays: trialDays ?? null, stripeSessionId: session.id, attribution },
+        metadata: {
+          plan,
+          trialDays: trialDays ?? null,
+          stripeSessionId: session.id,
+          attribution,
+          checkout_source: checkoutSource,
+          ...(experimentAttribution
+            ? {
+                experiment: experimentAttribution.experiment,
+                variant: experimentAttribution.variant,
+                experiment_visitor_id: experimentAttribution.visitorId,
+                experiment_page: experimentAttribution.page,
+                internal_qa: experimentAttribution.internalQa,
+                forced_variant: experimentAttribution.forcedVariant,
+              }
+            : {}),
+        },
       }).catch(() => {});
     }
 

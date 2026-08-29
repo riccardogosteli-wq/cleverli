@@ -66,6 +66,22 @@ function attributionFromMetadata(metadata: Stripe.Metadata | null | undefined) {
   };
 }
 
+function experimentFromMetadata(metadata: Stripe.Metadata | null | undefined) {
+  const variant = metadata?.variant;
+  if (metadata?.experiment !== "ads_lp_7_day_trial" || (variant !== "control" && variant !== "trial")) {
+    return {};
+  }
+  return {
+    experiment: metadata.experiment,
+    variant,
+    experiment_visitor_id: metadata.experiment_visitor_id || null,
+    experiment_page: metadata.experiment_page || null,
+    checkout_source: metadata.checkout_source || null,
+    internal_qa: metadata.internal_qa === "true",
+    forced_variant: metadata.forced_variant === "true",
+  };
+}
+
 async function getUserByStripeCustomer(stripeCustomerId: string): Promise<{ userId: string; email: string } | null> {
   const res = await fetch(
     `${SUPABASE_URL}/rest/v1/parent_profiles?stripe_customer_id=eq.${stripeCustomerId}&select=id,email`,
@@ -100,6 +116,7 @@ async function syncSubscription(subscription: Stripe.Subscription) {
   const premiumUntil = subscriptionPeriodEnd(subscription);
   const premium = ["active", "trialing", "past_due"].includes(status);
   const stripeCustomerId = subscription.customer as string;
+  const experiment = experimentFromMetadata(subscription.metadata);
 
   if (userId) {
     await patchParentProfile(userId, {
@@ -110,7 +127,7 @@ async function syncSubscription(subscription: Stripe.Subscription) {
       stripe_customer_id: stripeCustomerId,
       stripe_subscription_id: subscription.id,
     });
-    return { userId, email: undefined, plan, status, premium, premiumUntil, cancelAtPeriodEnd };
+    return { userId, email: undefined, plan, status, premium, premiumUntil, cancelAtPeriodEnd, experiment };
   }
 
   const user = await getUserByStripeCustomer(stripeCustomerId);
@@ -124,7 +141,7 @@ async function syncSubscription(subscription: Stripe.Subscription) {
     stripe_customer_id: stripeCustomerId,
     stripe_subscription_id: subscription.id,
   });
-  return { userId: user.userId, email: user.email, plan, status, premium, premiumUntil, cancelAtPeriodEnd };
+  return { userId: user.userId, email: user.email, plan, status, premium, premiumUntil, cancelAtPeriodEnd, experiment };
 }
 
 export async function POST(req: NextRequest) {
@@ -190,6 +207,7 @@ export async function POST(req: NextRequest) {
         stripeCustomerId,
         stripeSubscriptionId,
         attribution: attributionFromMetadata(session.metadata),
+        ...experimentFromMetadata(session.metadata),
       },
     }).catch(() => {});
 
@@ -213,6 +231,8 @@ export async function POST(req: NextRequest) {
           premium: synced.premium,
           premiumUntil: synced.premiumUntil,
           cancelAtPeriodEnd: synced.cancelAtPeriodEnd,
+          stripeSubscriptionId: subscription.id,
+          ...synced.experiment,
         },
       }).catch(() => {});
       console.log(`[stripe-webhook] Subscription ${synced.status} for ${synced.userId}`);
@@ -241,7 +261,11 @@ export async function POST(req: NextRequest) {
             premium: synced.premium,
             premiumUntil: synced.premiumUntil,
             stripeInvoiceId: invoice.id,
+            stripeSubscriptionId: subscriptionId,
             billingReason: invoice.billing_reason,
+            amountPaid: invoice.amount_paid,
+            currency: invoice.currency,
+            ...synced.experiment,
           },
         }).catch(() => {});
 

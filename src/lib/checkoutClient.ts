@@ -3,12 +3,26 @@
 import { trackBeginCheckout, type CheckoutPlan } from "@/lib/analytics";
 import { encodeAttributionForCheckout } from "@/lib/attribution";
 import { getSupabase } from "@/lib/supabase";
+import {
+  appendAdsExperimentAttribution,
+  parseAdsExperimentAttribution,
+  readAdsExperimentAttribution,
+  type AdsExperimentAttribution,
+} from "@/lib/adsAbVariant";
 
 const CHECKOUT_PLANS = new Set<CheckoutPlan>(["monthly", "yearly"]);
 let checkoutInFlightKey: string | null = null;
 
 type CheckoutOptions = {
   trialDays?: number;
+  experimentAttribution?: AdsExperimentAttribution | null;
+};
+
+export type PendingCheckoutIntent = {
+  plan: CheckoutPlan;
+  source: string;
+  trialDays?: number;
+  experimentAttribution: AdsExperimentAttribution | null;
 };
 
 function cleanTrialDays(value: string | number | null | undefined) {
@@ -53,13 +67,14 @@ async function getCheckoutAuth(userId?: string): Promise<{ token?: string; userI
   }
 }
 
-function getCheckoutAuthUrl(path: "/signup" | "/login", plan: CheckoutPlan, source: string, options: CheckoutOptions = {}) {
+export function getCheckoutAuthUrl(path: "/signup" | "/login", plan: CheckoutPlan, source: string, options: CheckoutOptions = {}) {
   const params = new URLSearchParams({ checkout: plan, source });
   if (options.trialDays) params.set("trial", String(options.trialDays));
+  appendAdsExperimentAttribution(params, options.experimentAttribution ?? readAdsExperimentAttribution());
   return `${path}?${params.toString()}`;
 }
 
-export function getPendingCheckoutIntent(): { plan: CheckoutPlan; source: string; trialDays?: number } | null {
+export function getPendingCheckoutIntent(): PendingCheckoutIntent | null {
   if (typeof window === "undefined") return null;
   const params = new URLSearchParams(window.location.search);
   const plan = params.get("checkout") as CheckoutPlan | null;
@@ -68,11 +83,13 @@ export function getPendingCheckoutIntent(): { plan: CheckoutPlan; source: string
     plan,
     source: params.get("source") || "auth_checkout_resume",
     trialDays: cleanTrialDays(params.get("trial")),
+    experimentAttribution: parseAdsExperimentAttribution(params) ?? readAdsExperimentAttribution(),
   };
 }
 
 export async function startCheckout(plan: CheckoutPlan, source: string, userId?: string, options: CheckoutOptions = {}) {
   const trialDays = cleanTrialDays(options.trialDays);
+  const experimentAttribution = options.experimentAttribution ?? readAdsExperimentAttribution();
   const checkoutKey = [plan, source, userId ?? "guest", trialDays ?? "no_trial"].join(":");
   if (checkoutInFlightKey) return;
   checkoutInFlightKey = checkoutKey;
@@ -85,17 +102,18 @@ export async function startCheckout(plan: CheckoutPlan, source: string, userId?:
     const verifiedUserId = auth.userId;
 
     if (!verifiedUserId) {
-      window.location.assign(getCheckoutAuthUrl("/signup", plan, source, { trialDays }));
+      window.location.assign(getCheckoutAuthUrl("/signup", plan, source, { trialDays, experimentAttribution }));
       return;
     }
 
     if (!token) {
-      window.location.assign(getCheckoutAuthUrl("/login", plan, source, { trialDays }));
+      window.location.assign(getCheckoutAuthUrl("/login", plan, source, { trialDays, experimentAttribution }));
       return;
     }
 
     const params = new URLSearchParams({ plan, uid: verifiedUserId, source });
     if (trialDays) params.set("trial", String(trialDays));
+    appendAdsExperimentAttribution(params, experimentAttribution);
     const attribution = encodeAttributionForCheckout();
     if (attribution) params.set("attr", attribution);
     const res = await fetch(`/api/checkout?${params.toString()}`, {

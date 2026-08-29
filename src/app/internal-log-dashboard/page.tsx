@@ -26,6 +26,7 @@ type ExerciseEventRow = {
 };
 
 type ActivityEventRow = {
+  id: string;
   user_id: string | null;
   email: string | null;
   activity_type: string;
@@ -92,6 +93,7 @@ type AdsAbStats = {
   label: string;
   assignments: number;
   ctaClicks: number;
+  ctaVisitors: number;
   freeClicks: number;
   paidClicks: number;
   checkouts: number;
@@ -105,6 +107,7 @@ type AdsAbPageStats = {
   label: string;
   assignments: number;
   ctaClicks: number;
+  ctaVisitors: number;
   freeClicks: number;
   paidClicks: number;
   checkouts: number;
@@ -277,7 +280,7 @@ async function loadActivity(filters: ActivityFilters) {
 
   let query = supabase
     .from("user_activity_events")
-    .select("user_id, email, activity_type, path, source, exercise_id, grade, subject, topic_id, metadata, created_at")
+    .select("id, user_id, email, activity_type, path, source, exercise_id, grade, subject, topic_id, metadata, created_at")
     .gte("created_at", from)
     .order("created_at", { ascending: false })
     .limit(1000);
@@ -300,6 +303,50 @@ async function loadActivity(filters: ActivityFilters) {
   }
 
   return (data ?? []) as ActivityEventRow[];
+}
+
+async function loadAdsAbActivity(filters: Pick<ActivityFilters, "from" | "to">) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) return [] as ActivityEventRow[];
+
+  const supabase = createClient(supabaseUrl, serviceKey, {
+    auth: { persistSession: false },
+  });
+  const from = filters.from
+    ? new Date(`${filters.from}T00:00:00`).toISOString()
+    : new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+  const to = filters.to ? new Date(`${filters.to}T23:59:59`).toISOString() : undefined;
+  const rows: ActivityEventRow[] = [];
+  const pageSize = 1000;
+
+  for (let offset = 0; offset < 10_000; offset += pageSize) {
+    let query = supabase
+      .from("user_activity_events")
+      .select("id, user_id, email, activity_type, path, source, exercise_id, grade, subject, topic_id, metadata, created_at")
+      .in("activity_type", [
+        "ads_lp_ab_assignment",
+        "ads_lp_cta_click",
+        "checkout_started",
+        "subscription_trial_started",
+        "subscription_started",
+        "subscription_updated",
+      ])
+      .gte("created_at", from)
+      .order("created_at", { ascending: false })
+      .range(offset, offset + pageSize - 1);
+    if (to) query = query.lte("created_at", to);
+
+    const { data, error } = await query;
+    if (error) {
+      console.error("[internal-log-dashboard/ads-ab]", error);
+      break;
+    }
+    rows.push(...((data ?? []) as ActivityEventRow[]));
+    if ((data?.length ?? 0) < pageSize) break;
+  }
+
+  return rows;
 }
 
 async function loadAuthUsers(filters: ActivityFilters) {
@@ -428,6 +475,7 @@ function authActivityRows(authUsers: AuthUserRow[], events: ActivityEventRow[], 
       if (existing.has(key)) continue;
 
       rows.push({
+        id: `synthetic:${key}`,
         user_id: user.id,
         email: user.email,
         activity_type: candidate.activityType,
@@ -607,13 +655,10 @@ function inferAdsVariant(event: ActivityEventRow): AdsVariant | null {
   const variant = cleanString(event.metadata?.variant);
   if (variant === "trial" || variant === "control") return variant;
 
-  const trialDays = event.metadata?.trialDays ?? event.metadata?.trial_days;
-  if (trialDays === 7 || trialDays === "7") return "trial";
-  if (event.activity_type === "subscription_trial_started") return "trial";
-
-  const source = event.source ?? "";
-  if (source.includes("_trial_")) return "trial";
-  if (event.activity_type === "ads_lp_cta_click" || event.activity_type === "checkout_started") return "control";
+  // Before variant metadata was added to every CTA, Trial CTAs carried an
+  // explicit variant and Control CTAs did not. Keep only that narrow legacy
+  // fallback; never infer checkout/trial/payment attribution from trial days.
+  if (event.activity_type === "ads_lp_cta_click") return "control";
   return null;
 }
 
@@ -630,6 +675,7 @@ function createAdsVariantStats(variant: AdsVariant): AdsAbStats {
     label: variant === "trial" ? "Trial" : "Control",
     assignments: 0,
     ctaClicks: 0,
+    ctaVisitors: 0,
     freeClicks: 0,
     paidClicks: 0,
     checkouts: 0,
@@ -649,6 +695,7 @@ function adsPageStats(stats: AdsAbStats, pageKey: string) {
     label: ADS_AB_PAGES[key] ?? key,
     assignments: 0,
     ctaClicks: 0,
+    ctaVisitors: 0,
     freeClicks: 0,
     paidClicks: 0,
     checkouts: 0,
@@ -663,13 +710,16 @@ function buildAdsAbStats(events: ActivityEventRow[]) {
     trial: createAdsVariantStats("trial"),
   };
 
-  const relevantRaw = events.filter(event => [
-    "ads_lp_ab_assignment",
-    "ads_lp_cta_click",
-    "checkout_started",
-    "subscription_trial_started",
-    "subscription_started",
-  ].includes(event.activity_type) && !isInternalAdsAbEvent(event));
+  const relevantRaw = events.filter(event => (
+    [
+      "ads_lp_ab_assignment",
+      "ads_lp_cta_click",
+      "checkout_started",
+      "subscription_trial_started",
+      "subscription_started",
+    ].includes(event.activity_type)
+      || (event.activity_type === "subscription_updated" && Number(event.metadata?.amountPaid ?? 0) > 0)
+  ) && !isInternalAdsAbEvent(event));
 
   const seenCtaEventIds = new Set<string>();
   const lastCtaBySession = new Map<string, number>();
@@ -687,7 +737,7 @@ function buildAdsAbStats(events: ActivityEventRow[]) {
 
     const key = [
       sessionId,
-      normaliseAdsPage(event.metadata?.page, event.source, event.path),
+      normaliseAdsPage(event.metadata?.page ?? event.metadata?.experiment_page, event.source, event.path),
       cleanString(event.metadata?.cta_type),
       cleanString(event.metadata?.destination),
     ].join(":");
@@ -697,22 +747,51 @@ function buildAdsAbStats(events: ActivityEventRow[]) {
     return previous === undefined || Math.abs(previous - timestamp) >= 3_000;
   });
 
+  const assignedVisitors: Record<AdsVariant, Set<string>> = { control: new Set(), trial: new Set() };
+  const ctaVisitors: Record<AdsVariant, Set<string>> = { control: new Set(), trial: new Set() };
+  const checkoutIds: Record<AdsVariant, Set<string>> = { control: new Set(), trial: new Set() };
+  const trialIds: Record<AdsVariant, Set<string>> = { control: new Set(), trial: new Set() };
+  const subscriptionIds: Record<AdsVariant, Set<string>> = { control: new Set(), trial: new Set() };
+  const pageAssignments = new Set<string>();
+  const pageCtaVisitors = new Set<string>();
+  const pageCheckouts = new Set<string>();
+
   for (const event of relevant) {
     const variant = inferAdsVariant(event);
     if (!variant) continue;
 
-    const pageKey = normaliseAdsPage(event.metadata?.page, event.source, event.path);
+    const pageKey = normaliseAdsPage(event.metadata?.page ?? event.metadata?.experiment_page, event.source, event.path);
     const stats = variants[variant];
     const page = adsPageStats(stats, pageKey);
     const ctaType = cleanString(event.metadata?.cta_type);
+    const visitorId = cleanString(event.metadata?.experiment_visitor_id)
+      || cleanString(event.metadata?.cta_session_id)
+      || cleanString(event.metadata?.cta_event_id)
+      || event.id;
 
     if (event.activity_type === "ads_lp_ab_assignment") {
-      stats.assignments += 1;
-      page.assignments += 1;
+      if (!assignedVisitors[variant].has(visitorId)) {
+        assignedVisitors[variant].add(visitorId);
+        stats.assignments += 1;
+      }
+      const pageKeyForVisitor = `${variant}:${pageKey}:${visitorId}`;
+      if (!pageAssignments.has(pageKeyForVisitor)) {
+        pageAssignments.add(pageKeyForVisitor);
+        page.assignments += 1;
+      }
     }
     if (event.activity_type === "ads_lp_cta_click") {
       stats.ctaClicks += 1;
       page.ctaClicks += 1;
+      if (!ctaVisitors[variant].has(visitorId)) {
+        ctaVisitors[variant].add(visitorId);
+        stats.ctaVisitors += 1;
+      }
+      const pageKeyForVisitor = `${variant}:${pageKey}:${visitorId}`;
+      if (!pageCtaVisitors.has(pageKeyForVisitor)) {
+        pageCtaVisitors.add(pageKeyForVisitor);
+        page.ctaVisitors += 1;
+      }
       if (ctaType === "free") {
         stats.freeClicks += 1;
         page.freeClicks += 1;
@@ -723,16 +802,44 @@ function buildAdsAbStats(events: ActivityEventRow[]) {
       }
     }
     if (event.activity_type === "checkout_started") {
-      stats.checkouts += 1;
-      page.checkouts += 1;
+      const checkoutId = cleanString(event.metadata?.stripeSessionId) || event.id;
+      if (!checkoutIds[variant].has(checkoutId)) {
+        checkoutIds[variant].add(checkoutId);
+        stats.checkouts += 1;
+      }
+      const pageCheckoutKey = `${variant}:${pageKey}:${checkoutId}`;
+      if (!pageCheckouts.has(pageCheckoutKey)) {
+        pageCheckouts.add(pageCheckoutKey);
+        page.checkouts += 1;
+      }
     }
-    if (event.activity_type === "subscription_trial_started") stats.trialStarts += 1;
-    if (event.activity_type === "subscription_started") stats.subscriptions += 1;
+    if (event.activity_type === "subscription_trial_started") {
+      const subscriptionId = cleanString(event.metadata?.stripeSubscriptionId) || visitorId;
+      if (!trialIds[variant].has(subscriptionId)) {
+        trialIds[variant].add(subscriptionId);
+        stats.trialStarts += 1;
+      }
+    }
+    const isPaidStart = event.activity_type === "subscription_started"
+      || (event.activity_type === "subscription_updated" && Number(event.metadata?.amountPaid ?? 0) > 0);
+    if (isPaidStart) {
+      const subscriptionId = cleanString(event.metadata?.stripeSubscriptionId) || visitorId;
+      if (!subscriptionIds[variant].has(subscriptionId)) {
+        subscriptionIds[variant].add(subscriptionId);
+        stats.subscriptions += 1;
+      }
+    }
   }
 
   return {
     variants,
     recent: relevant.slice(0, 25),
+    unattributedConversions: relevantRaw.filter(event => [
+      "checkout_started",
+      "subscription_trial_started",
+      "subscription_started",
+      "subscription_updated",
+    ].includes(event.activity_type) && !inferAdsVariant(event)).length,
   };
 }
 
@@ -851,7 +958,7 @@ export default async function InternalLogDashboard({
   const events = await loadEvents();
   const [activityEventsRaw, adsAbEventsRaw, authUsers] = await Promise.all([
     loadActivity(activityFilters),
-    loadActivity({ user: "", activity: "all", from: activityFilters.from, to: activityFilters.to }),
+    loadAdsAbActivity({ from: activityFilters.from, to: activityFilters.to }),
     loadAuthUsers(activityFilters),
   ]);
   const activityEvents = [
@@ -964,14 +1071,18 @@ export default async function InternalLogDashboard({
           <div className="flex flex-col gap-1">
             <h2 className="text-sm font-black uppercase tracking-wide">Ads A/B Test</h2>
             <p className="text-sm text-gray-500">
-              Control gegen 7-Tage-Trial auf den Ads-LPs. Nutzt den Datumsfilter, aber ignoriert User-/Aktivitätsfilter.
+              Control gegen 7-Tage-Trial auf den Ads-LPs. Neue Events werden pro Experiment-Besucher gezählt und bis zur Stripe-Zahlung verbunden.
             </p>
+            {adsAbStats.unattributedConversions > 0 && (
+              <p className="text-xs font-semibold text-amber-700">
+                {adsAbStats.unattributedConversions} ältere Checkout-/Stripe-Events ohne belastbare Variante sind aus dem Variantenvergleich ausgeschlossen.
+              </p>
+            )}
           </div>
 
           <div className="mt-4 grid gap-3 lg:grid-cols-2">
             {(["control", "trial"] as AdsVariant[]).map(variant => {
               const item = adsAbStats.variants[variant];
-              const conversionBase = item.assignments || item.ctaClicks;
               return (
                 <div key={variant} className="rounded-lg border border-gray-200 bg-gray-50 p-4">
                   <div className="flex items-center justify-between gap-3">
@@ -980,16 +1091,18 @@ export default async function InternalLogDashboard({
                       {variant === "trial" ? "7 Tage Premium" : "20 Aufgaben gratis"}
                     </span>
                   </div>
-                  <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                    <Stat label="Zuweisungen" value={item.assignments} />
-                    <Stat label="CTA Klicks" value={item.ctaClicks} />
+                  <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                    <Stat label="Besucher" value={item.assignments} />
+                    <Stat label="CTA Nutzer" value={item.ctaVisitors} />
+                    <Stat label="CTA-Rate" value={`${pct(item.ctaVisitors, item.assignments)}%`} />
                     <Stat label="Checkout" value={item.checkouts} />
-                    <Stat label="Checkout-Rate" value={`${pct(item.checkouts, conversionBase)}%`} />
+                    <Stat label="Trials" value={item.trialStarts} />
+                    <Stat label="Bezahlt" value={item.subscriptions} />
                   </div>
                   <div className="mt-3 grid gap-2 text-sm text-gray-600 sm:grid-cols-3">
                     <div><span className="font-bold text-gray-950">{item.freeClicks}</span> Free-Klicks</div>
                     <div><span className="font-bold text-gray-950">{item.paidClicks}</span> Paid-Klicks</div>
-                    <div><span className="font-bold text-gray-950">{item.trialStarts + item.subscriptions}</span> Stripe Starts</div>
+                    <div><span className="font-bold text-gray-950">{item.ctaClicks}</span> CTA-Klicks total</div>
                   </div>
                 </div>
               );
@@ -1004,11 +1117,12 @@ export default async function InternalLogDashboard({
                   <th className="py-2">Variante</th>
                   <th>Landingpage</th>
                   <th>Zuweisungen</th>
-                  <th>CTA</th>
+                  <th>CTA Nutzer</th>
+                  <th>CTA Klicks</th>
                   <th>Free</th>
                   <th>Paid</th>
                   <th>Checkout</th>
-                  <th>Checkout-Rate</th>
+                  <th>CTA-Rate</th>
                 </tr>
               </thead>
               <tbody>
@@ -1021,17 +1135,18 @@ export default async function InternalLogDashboard({
                         <td className="py-2 font-bold">{item.label}</td>
                         <td>{page.label}</td>
                         <td>{page.assignments}</td>
+                        <td>{page.ctaVisitors}</td>
                         <td>{page.ctaClicks}</td>
                         <td>{page.freeClicks}</td>
                         <td>{page.paidClicks}</td>
                         <td>{page.checkouts}</td>
-                        <td>{pct(page.checkouts, page.assignments || page.ctaClicks)}%</td>
+                        <td>{pct(page.ctaVisitors, page.assignments)}%</td>
                       </tr>
                     ));
                 })}
                 {adsAbStats.variants.control.pages.size + adsAbStats.variants.trial.pages.size === 0 && (
                   <tr>
-                    <td colSpan={8} className="py-4 text-gray-500">Noch keine A/B-Test-Events im Zeitraum.</td>
+                    <td colSpan={9} className="py-4 text-gray-500">Noch keine A/B-Test-Events im Zeitraum.</td>
                   </tr>
                 )}
               </tbody>
