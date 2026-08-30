@@ -36,7 +36,7 @@ const securityHeaders = [
         "https://*.supabase.co wss://*.supabase.co",
         "https://formspree.io",
         "https://*.google-analytics.com https://analytics.google.com https://region1.analytics.google.com",
-        "https://ad.doubleclick.net https://stats.g.doubleclick.net https://www.google.com https://www.google.ch https://www.googletagmanager.com https://www.googleadservices.com",
+        "https://*.doubleclick.net https://www.google.com https://www.google.ch https://www.googletagmanager.com https://www.googleadservices.com",
         "https://connect.facebook.net https://www.facebook.com",
         "https://*.ingest.sentry.io https://*.ingest.us.sentry.io",
         "https://*.posthog.com https://*.i.posthog.com https://eu.i.posthog.com https://us.i.posthog.com",
