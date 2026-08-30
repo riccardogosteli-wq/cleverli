@@ -361,6 +361,14 @@ AUDIT_UPDATES: dict[int, dict[int, list[str]]] = {
     },
 }
 
+DISTRACTOR_REPAIR_COUNTS = {1: 37, 2: 45, 3: 165, 4: 330, 5: 406, 6: 358}
+for grade, repaired_count in DISTRACTOR_REPAIR_COUNTS.items():
+    AUDIT_UPDATES[grade][25] = [
+        "Fixed", "Answer-option quality", "All multiple-choice subjects", f"{repaired_count} exercises in Grade {grade}",
+        "All multiple-choice options were reviewed. Placeholder text, malformed fragments, unrelated one-word choices and structurally obvious distractors were replaced with plausible alternatives from the same topic and answer format; visual option mappings remain untouched.",
+        "Resolved. The catalogue-wide editorial audit now rejects placeholders, duplicate choices and distractors whose structure gives away a longer correct answer.",
+    ]
+
 
 def load_key() -> str:
     if os.environ.get("MATON_API_KEY"):

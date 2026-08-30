@@ -201,7 +201,9 @@ function ensureHintsDoNotRevealAnswer(exercise: Exercise, subject: string): Exer
   };
 }
 
-const PLACEHOLDER_OPTION = /^(?:Das Gegenteil des beschriebenen Konzepts|Eine unvollständige Version des Begriffs|Ein verwandter Begriff aus einem anderen Fachgebiet|Eine mathematische Formel für Sprachregeln|Ein Lautzeichen ohne grammatische Funktion|Eine sprachliche Ausnahme ohne Regelbezug)$/i;
+const PLACEHOLDER_OPTION = /^(?:Das Gegenteil des beschriebenen Konzepts|Eine unvollständige Version des Begriffs|Ein verwandter Begriff aus einem anderen Fachgebiet|Eine mathematische Formel für Sprachregeln|Ein Lautzeichen ohne grammatische Funktion|Eine sprachliche Ausnahme ohne Regelbezug|Eine geometrische Figur ohne Zahlenwert|Ein algebraisches Symbol ohne Bedeutung|Eine logische Aussage ohne numerische Basis)$/i;
+const MALFORMED_OPTION = /^(?:all|done|Listenenede)$/i;
+const OBVIOUSLY_ABSURD_OPTION = /^(?:Rot Noah Velo\.|Schwarz unter sitzt\.|Etwas ist etwas\.|Im klein Noah\.|Dann Turm\. Zuerst Mia\.|Mia baut, weil aber\.|Der Turm ist\. Ende zuerst\.|Damit niemand planen muss|Damit alle dasselbe tun|Damit Arbeit länger dauert|Alles sofort ausgeben|Nur Werbung beachten|Mehr kaufen als geplant|Damit niemand sie findet|Damit Preise verschwinden|Damit Wege länger werden)$/i;
 
 function answerFor(exercise: Exercise, lang: Lang): string {
   if (lang === "de") return exercise.answer;
@@ -222,14 +224,46 @@ function numericDistractors(answer: string): string[] | null {
   return [number - step, number + step, number + 2 * step].map((value) => `${String(Number(value.toFixed(2))).replace(".", ",")}${unit}`);
 }
 
+function wordCount(value: string): number {
+  return value.match(/[\p{L}\p{N}]+/gu)?.length ?? 0;
+}
+
+function isNumeric(value: string): boolean {
+  return /^-?\d+(?:[.,]\d+)?(?:\s|$)/.test(value.trim());
+}
+
+function isWeakDistractor(option: string, answer: string): boolean {
+  const candidate = option.trim();
+  if (!candidate || PLACEHOLDER_OPTION.test(candidate) || MALFORMED_OPTION.test(candidate) || OBVIOUSLY_ABSURD_OPTION.test(candidate)) return true;
+  const answerWords = wordCount(answer);
+  const optionWords = wordCount(candidate);
+  return (answerWords >= 4 && optionWords === 1) || (answerWords >= 7 && optionWords <= 2);
+}
+
+function normalisedOption(value: string): string {
+  return normalise(value).replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
+
+function optionScore(candidate: string, answer: string, existing: Set<string>): number {
+  const answerWords = wordCount(answer);
+  const candidateWords = wordCount(candidate);
+  const formatPenalty = isNumeric(candidate) === isNumeric(answer) ? 0 : 100;
+  const lengthPenalty = Math.abs(candidateWords - answerWords) / Math.max(answerWords, 1) * 20;
+  const existingBonus = existing.has(candidate) ? -3 : 0;
+  return formatPenalty + lengthPenalty + existingBonus;
+}
+
 function repairedOptions(exercise: Exercise, lang: Lang, pool: string[]): string[] {
   const answer = answerFor(exercise, lang);
   const existing = optionsFor(exercise, lang) ?? [];
   const numeric = numericDistractors(answer) ?? [];
+  const existingSet = new Set(existing);
   const candidates = [...numeric, ...existing, ...pool]
     .map((value) => value.trim())
-    .filter((value) => value && value !== answer && !PLACEHOLDER_OPTION.test(value));
-  const unique = [...new Set(candidates)].slice(0, 3);
+    .filter((value) => value && normalisedOption(value) !== normalisedOption(answer) && !isWeakDistractor(value, answer));
+  const unique = [...new Map(candidates.map((value) => [normalisedOption(value), value])).values()]
+    .sort((a, b) => optionScore(a, answer, existingSet) - optionScore(b, answer, existingSet))
+    .slice(0, 3);
   const fallbacks: Record<Lang, string[]> = {
     de: ["Keine der Aussagen passt", "Nur ein Teil davon stimmt", "Das gehört zu einem anderen Vorgang"],
     en: ["None of these statements fits", "Only part of it is true", "That belongs to a different process"],
@@ -237,13 +271,18 @@ function repairedOptions(exercise: Exercise, lang: Lang, pool: string[]): string
     it: ["Nessuna di queste affermazioni è adatta", "Solo una parte è corretta", "Questo appartiene a un altro fenomeno"],
   };
   for (const fallback of fallbacks[lang]) if (unique.length < 3 && fallback !== answer && !unique.includes(fallback)) unique.push(fallback);
-  return [answer, ...unique.slice(0, 3)];
+  const answerIndex = Math.max(0, existing.findIndex((option) => normalisedOption(option) === normalisedOption(answer)));
+  const repaired = unique.slice(0, 3);
+  repaired.splice(Math.min(answerIndex, repaired.length), 0, answer);
+  return repaired;
 }
 
 function repairAnswerOptions(exercise: Exercise, topicExercises: Exercise[]): Exercise {
   if (exercise.type !== "multiple-choice") return exercise;
+  if (exercise.optionImages?.length || exercise.optionEmojis?.length) return exercise;
   const options = exercise.options ?? [];
-  const broken = new Set(options.map((option) => option.trim())).size !== options.length || options.some((option) => PLACEHOLDER_OPTION.test(option));
+  const broken = new Set(options.map((option) => normalisedOption(option))).size !== options.length
+    || options.some((option) => normalisedOption(option) !== normalisedOption(exercise.answer) && isWeakDistractor(option, exercise.answer));
   if (!broken) return exercise;
   const pool = (lang: Lang) => topicExercises.map((item) => answerFor(item, lang));
   return {

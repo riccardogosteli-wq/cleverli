@@ -36,6 +36,7 @@
     "qa:topic-catalog": "npx tsx scripts/generate-topic-catalog.ts --check",
     "qa:grade1-german-level": "npx tsx scripts/audit-grade1-german-level.ts",
     "qa:german-editorial": "npx tsx scripts/audit-german-editorial.ts",
+    "qa:distractors": "npx tsx scripts/audit-distractor-quality.ts",
     "qa:success-messages": "npx tsx scripts/audit-success-messages.ts",
     "qa:wrong-answer-messages": "npx tsx scripts/audit-wrong-answer-messages.ts",
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",

@@ -156,8 +156,13 @@ function validateStructure(exercise: Exercise, subject: string): Finding[] {
     if ([...exactCounts.values()].some((count) => count > 1)) {
       findings.push({ severity: "High", category: "Answer options", detail: "The same visible answer option occurs more than once." });
     }
-    if (options.some((option) => /^(?:Das Gegenteil des beschriebenen Konzepts|Eine unvollständige Version des Begriffs|Ein verwandter Begriff aus einem anderen Fachgebiet|Eine mathematische Formel für Sprachregeln|Ein Lautzeichen ohne grammatische Funktion|Eine sprachliche Ausnahme ohne Regelbezug)$/i.test(option.trim()))) {
+    if (options.some((option) => /^(?:Das Gegenteil des beschriebenen Konzepts|Eine unvollständige Version des Begriffs|Ein verwandter Begriff aus einem anderen Fachgebiet|Eine mathematische Formel für Sprachregeln|Ein Lautzeichen ohne grammatische Funktion|Eine sprachliche Ausnahme ohne Regelbezug|Eine geometrische Figur ohne Zahlenwert|Ein algebraisches Symbol ohne Bedeutung|Eine logische Aussage ohne numerische Basis|all|done|Listenenede)$/i.test(option.trim()))) {
       findings.push({ severity: "Medium", category: "Answer options", detail: "Answer choices contain generic placeholder distractors instead of plausible topic-specific alternatives." });
+    }
+    const countTerms = (value: string) => value.match(/[\p{L}\p{N}]+/gu)?.length ?? 0;
+    const answerTerms = countTerms(exercise.answer);
+    if (options.some((option) => option !== exercise.answer && ((answerTerms >= 4 && countTerms(option) === 1) || (answerTerms >= 7 && countTerms(option) <= 2)))) {
+      findings.push({ severity: "Medium", category: "Answer options", detail: "A distractor is structurally much shorter than the correct answer and makes the solution too obvious." });
     }
   }
 

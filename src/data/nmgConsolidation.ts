@@ -63,7 +63,7 @@ const BALANCED_TOPICS: Record<string, BalancedTopic> = {
         fact("Was gehört zu jedem Beruf?", "Aufgaben und Fähigkeiten", ["Immer dieselbe Kleidung", "Nur Ferien", "Keine Verantwortung"], "Für einen Beruf braucht man passende ___.", "Fähigkeiten", "Menschen lernen, was sie für ihre Aufgaben benötigen."),
       ],
       2: [
-        fact("Warum arbeiten Berufe zusammen?", "Weil Aufgaben sich ergänzen", ["Damit niemand planen muss", "Damit alle dasselbe tun", "Damit Arbeit länger dauert"], "Im Team können sich verschiedene Berufe ___.", "ergänzen", "Ein Haus entsteht durch viele Fachpersonen."),
+        fact("Warum arbeiten Berufe zusammen?", "Weil Aufgaben sich ergänzen", ["Weil alle Berufe dieselben Aufgaben haben", "Weil jede Fachperson alles allein erledigt", "Weil dabei keine Absprachen nötig sind"], "Im Team können sich verschiedene Berufe ___.", "ergänzen", "Ein Haus entsteht durch viele Fachpersonen."),
         fact("Was ist unbezahlte Arbeit?", "Eine wichtige Tätigkeit ohne Lohn", ["Arbeit ohne Nutzen", "Nur ein Hobby", "Eine verbotene Aufgabe"], "Hausarbeit kann ___ Arbeit sein.", "unbezahlte", "Auch Betreuung und Hausarbeit brauchen Zeit und Können."),
       ],
       3: [
@@ -80,7 +80,7 @@ const BALANCED_TOPICS: Record<string, BalancedTopic> = {
         fact("Was zeigt ein Preis?", "Wie viel etwas kostet", ["Wie schwer etwas ist", "Wie alt jemand ist", "Wie lange ein Weg ist"], "Der ___ zeigt die Kosten eines Produkts.", "Preis", "Achte auf die Zahl beim Produkt."),
       ],
       2: [
-        fact("Was hilft beim Sparen?", "Ein Teil des Geldes wird zurückgelegt", ["Alles sofort ausgeben", "Nur Werbung beachten", "Mehr kaufen als geplant"], "Beim Sparen wird Geld ___.", "zurückgelegt", "Nicht jeder Franken muss sofort ausgegeben werden."),
+        fact("Was hilft beim Sparen?", "Ein Teil des Geldes wird zurückgelegt", ["Nur besonders günstige Dinge kaufen", "Jeden Monat das ganze Geld ausgeben", "Ausgaben erst im Nachhinein aufschreiben"], "Beim Sparen wird Geld ___.", "zurückgelegt", "Nicht jeder Franken muss sofort ausgegeben werden."),
         fact("Warum vergleicht man Preise?", "Damit man bewusst entscheiden kann", ["Damit alles gleich teuer wird", "Damit Verpackungen grösser werden", "Damit man nichts rechnen muss"], "Ein Preisvergleich unterstützt eine bewusste ___.", "Entscheidung", "Vergleiche auch Menge und Qualität."),
       ],
       3: [
@@ -165,7 +165,7 @@ const BALANCED_TOPICS: Record<string, BalancedTopic> = {
         fact("Was ist eine Dienstleistung?", "Eine bezahlte Tätigkeit für andere", ["Ein Rohstoff", "Eine Verpackung", "Ein Lagerhaus"], "Ein Haarschnitt ist eine ___.", "Dienstleistung", "Nicht nur Gegenstände werden verkauft."),
       ],
       2: [
-        fact("Warum lagern Betriebe Waren?", "Damit Produkte bei Bedarf verfügbar sind", ["Damit niemand sie findet", "Damit Preise verschwinden", "Damit Wege länger werden"], "Ein Lager hält Waren ___.", "verfügbar", "Nachfrage und Lieferung passen zeitlich nicht immer zusammen."),
+        fact("Warum lagern Betriebe Waren?", "Damit Produkte bei Bedarf verfügbar sind", ["Damit Waren erst nach dem Verkauf hergestellt werden", "Damit Produkte nicht mehr transportiert werden müssen", "Damit alle Produkte gleich viel kosten"], "Ein Lager hält Waren ___.", "verfügbar", "Nachfrage und Lieferung passen zeitlich nicht immer zusammen."),
         fact("Was beeinflusst den Verkaufspreis?", "Kosten für Material, Arbeit und Transport", ["Nur die Farbe", "Nur der Wochentag", "Nur das Firmenlogo"], "Material und Löhne gehören zu den ___.", "Kosten", "Ein Betrieb muss seine Ausgaben berücksichtigen."),
       ],
       3: [
