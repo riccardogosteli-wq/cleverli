@@ -27,10 +27,10 @@ export default function StreakMilestone({ streak, onDismiss, lang = "de" }: Stre
       if (streak === 30) return "One month – you are a legend!";
     }
     // Default: de
-    if (streak === 3) return "Du bist auf Feuer! Weiter so!";
+    if (streak === 3) return "Drei Tage am Stück – toll drangeblieben!";
     if (streak === 7) return "Eine ganze Woche! Fantastisch!";
-    if (streak === 14) return "Zwei Wochen – unaufhaltbar!";
-    if (streak === 30) return "Ein ganzer Monat! Du bist eine Legende!";
+    if (streak === 14) return "Zwei Wochen – richtig stark!";
+    if (streak === 30) return "Einen ganzen Monat drangeblieben – grossartig!";
     return "Grossartig!";
   };
 

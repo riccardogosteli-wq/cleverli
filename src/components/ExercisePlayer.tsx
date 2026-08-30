@@ -523,10 +523,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     if (!isReviewMode && answered === true && tierInfo.isTiered) {
       const nextCompleted = Math.min(topic.exercises.length, correctIds.size);
       if (nextCompleted === tierInfo.easyBoundary) {
-        setTierToast("🌱 Leicht-Level geschafft! +20 XP");
+        setTierToast("🌱 Leichte Aufgaben geschafft! +20 XP");
         setTimeout(() => setTierToast(null), 2500);
       } else if (nextCompleted === tierInfo.mediumBoundary) {
-        setTierToast("⚡ Mittel-Level geschafft! +30 XP");
+        setTierToast("⚡ Mittlere Aufgaben geschafft! +30 XP");
         setTimeout(() => setTierToast(null), 2500);
       }
     }

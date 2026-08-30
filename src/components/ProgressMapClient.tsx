@@ -11,9 +11,9 @@ import { useVoice } from "@/hooks/useVoice";
 // Coin celebration messages by language and level
 const COIN_VOICES: Record<string, Record<number, string>> = {
   de: {
-    0: "Wow! Glückwunsch zur Cleverli Bronze-Münze! Du bist grossartig!",
-    1: "Fantastisch! Die Cleverli Silber-Münze ist dein! Du wirst immer besser!",
-    2: "Unglaublich! Die Cleverli Gold-Münze! Du bist ein echter Champion!",
+    0: "Wow! Glückwunsch zur Cleverli-Bronzemünze! Das hast du grossartig gemacht!",
+    1: "Fantastisch! Die Cleverli-Silbermünze gehört dir! Du wirst immer sicherer!",
+    2: "Unglaublich! Die Cleverli-Goldmünze gehört dir! Stark gemacht!",
   },
   fr: {
     0: "Wow! Félicitations pour la pièce Cleverli bronze! Tu es formidable!",

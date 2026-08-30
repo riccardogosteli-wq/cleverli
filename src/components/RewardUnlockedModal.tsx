@@ -15,7 +15,7 @@ export default function RewardUnlockedModal({ reward, onClose }: Props) {
   const i18n = {
     title: lang === "fr" ? "Bravo !" : lang === "it" ? "Ottimo!" : lang === "en" ? "You did it!" : "Geschafft!",
     showParentTitle: lang === "fr" ? "Montre à maman ou papa !" : lang === "it" ? "Mostralo a mamma o papà!" : lang === "en" ? "Show mum or dad!" : "Zeig das Mama oder Papa!",
-    showParentDesc: lang === "fr" ? "Tu as atteint ton objectif — ils vont être si fiers ! 🥰" : lang === "it" ? "Hai raggiunto il tuo obiettivo — saranno così orgogliosi! 🥰" : lang === "en" ? "You reached your goal — they'll be so proud! 🥰" : "Du hast dein Ziel erreicht — sie werden so stolz sein! 🥰",
+    showParentDesc: lang === "fr" ? "Tu as atteint ton objectif — montre-leur ta réussite ! 🥰" : lang === "it" ? "Hai raggiunto il tuo obiettivo — mostra loro il tuo successo! 🥰" : lang === "en" ? "You reached your goal — show them what you achieved! 🥰" : "Du hast dein Ziel erreicht — zeig ihnen deinen Erfolg! 🥰",
     continueLearning: lang === "fr" ? "Continuer à apprendre ! 🚀" : lang === "it" ? "Continua a imparare! 🚀" : lang === "en" ? "Keep learning! 🚀" : "Weiter lernen! 🚀",
   };
 
