@@ -66,9 +66,6 @@ export default function LifetimeFounderOffer({
             <span className="text-4xl font-black text-green-800">CHF 249</span>
             <span className="text-sm font-semibold text-gray-500">{tr("einmalig", "une fois", "una tantum", "one-time")}</span>
           </div>
-          <div className="mt-1 text-sm text-gray-500">
-            <span className="line-through">CHF 594</span> · <span className="font-bold text-green-700">{tr("CHF 345 sparen", "économisez CHF 345", "risparmia CHF 345", "save CHF 345")}</span>
-          </div>
           <p className="mt-2 text-xs text-gray-500">
             {tr("Lebenslanger Zugang. Keine Verlängerung. Keine weiteren Abbuchungen.", "Accès à vie. Sans renouvellement ni autre prélèvement.", "Accesso a vita. Nessun rinnovo o ulteriore addebito.", "Lifetime access. No renewal. No further charges.")}
           </p>
@@ -82,7 +79,7 @@ export default function LifetimeFounderOffer({
         </button>
       </div>
       <p className="mt-4 text-xs text-gray-400">
-        {tr("Vergleich: 6 Jahre × CHF 99/Jahr. Familienzugang, nicht übertragbar.", "Comparaison : 6 ans × CHF 99/an. Accès familial non transférable.", "Confronto: 6 anni × CHF 99/anno. Accesso famiglia non trasferibile.", "Comparison: 6 years × CHF 99/year. Non-transferable family access.")}
+        {tr("Vergleich: 6 Jahre × CHF 99/Jahr.", "Comparaison : 6 ans × CHF 99/an.", "Confronto: 6 anni × CHF 99/anno.", "Comparison: 6 years × CHF 99/year.")}
       </p>
     </div>
   );
