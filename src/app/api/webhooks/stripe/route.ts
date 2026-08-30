@@ -168,10 +168,94 @@ export async function POST(req: NextRequest) {
   // ── Subscription activated ──────────────────────────────────────────────
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
+    const plan = session.metadata?.plan ?? "monthly";
+
+    if (session.mode === "payment" && plan === "schooltime") {
+      const userId = session.metadata?.userId;
+      const customerEmail = session.customer_details?.email ?? "";
+      const customerName = session.customer_details?.name ?? "";
+      const stripeCustomerId = typeof session.customer === "string" ? session.customer : session.customer?.id ?? "";
+
+      if (!userId) {
+        Sentry.captureMessage("[stripe-webhook] no userId in schooltime checkout metadata", "error");
+        return NextResponse.json({ error: "no_user" }, { status: 400 });
+      }
+
+      await patchParentProfile(userId, {
+        premium: true,
+        premium_plan: "schooltime",
+        premium_until: null,
+        cancelled: false,
+        stripe_customer_id: stripeCustomerId || null,
+        stripe_subscription_id: null,
+      });
+
+      logUserActivity({
+        userId,
+        email: customerEmail,
+        activityType: "schooltime_access_started",
+        source: "stripe_webhook",
+        metadata: {
+          plan: "schooltime",
+          amountTotal: session.amount_total,
+          currency: session.currency,
+          stripeCustomerId,
+          stripeSessionId: session.id,
+          attribution: attributionFromMetadata(session.metadata),
+          ...experimentFromMetadata(session.metadata),
+        },
+      }).catch(() => {});
+
+      await sendMetaConversion({
+        eventName: "Purchase",
+        eventId: `purchase_${session.id}`,
+        eventSourceUrl: "https://www.cleverli.ch/payment/success",
+        userData: {
+          email: customerEmail,
+          externalId: userId,
+          fbp: session.metadata?.meta_fbp,
+          fbc: session.metadata?.meta_fbc,
+        },
+        customData: {
+          currency: (session.currency ?? "chf").toUpperCase(),
+          value: (session.amount_total ?? 24900) / 100,
+          content_name: "Cleverli Premium Primarschulzeit",
+          content_type: "product",
+          order_id: session.id,
+        },
+      });
+
+      const emailResults = await Promise.allSettled([
+        sendAdminPaymentNotificationEmail({
+          customerEmail,
+          plan: "schooltime",
+          amountTotal: session.amount_total,
+          currency: session.currency,
+          stripeCustomerId,
+          stripeSubscriptionId: null,
+          idempotencyKey: `cleverli-${session.id}-admin`,
+        }),
+        ...(customerEmail ? [sendPaymentConfirmationEmail(
+          customerEmail,
+          customerName,
+          "schooltime",
+          { idempotencyKey: `cleverli-${session.id}-customer` },
+        )] : []),
+      ]);
+      emailResults.forEach((result, index) => {
+        if (result.status === "rejected") {
+          Sentry.captureException(result.reason);
+          console.error(`[stripe-webhook] schooltime payment email ${index} failed:`, result.reason);
+        }
+      });
+
+      console.log(`[stripe-webhook] ✅ Schooltime access activated for ${userId}`);
+      return NextResponse.json({ ok: true });
+    }
+
     if (session.mode !== "subscription") return NextResponse.json({ ok: true });
 
     const userId = session.metadata?.userId;
-    const plan = session.metadata?.plan ?? "monthly";
     const trialDays = Number(session.metadata?.trial_days ?? 0) || null;
     const customerEmail = session.customer_details?.email ?? "";
     const stripeCustomerId = session.customer as string;

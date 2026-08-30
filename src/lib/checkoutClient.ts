@@ -11,7 +11,7 @@ import {
 } from "@/lib/adsAbVariant";
 import { getMetaBrowserIdentifiers, trackMetaEvent } from "@/lib/metaPixel";
 
-const CHECKOUT_PLANS = new Set<CheckoutPlan>(["monthly", "yearly"]);
+const CHECKOUT_PLANS = new Set<CheckoutPlan>(["monthly", "yearly", "schooltime"]);
 let checkoutInFlightKey: string | null = null;
 
 type CheckoutOptions = {
@@ -135,7 +135,7 @@ export async function startCheckout(plan: CheckoutPlan, source: string, userId?:
 
     trackMetaEvent("InitiateCheckout", {
       currency: "CHF",
-      value: plan === "yearly" ? 99 : 9.9,
+      value: plan === "schooltime" ? 249 : plan === "yearly" ? 99 : 9.9,
       content_name: `Cleverli Premium ${plan}`,
       content_type: "product",
     }, body.metaEventId);

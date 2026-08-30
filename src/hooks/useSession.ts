@@ -8,7 +8,7 @@ export interface Session {
   name: string;
   premium: boolean;
   premiumUntil?: string | null;  // ISO date — access valid until this date
-  premiumPlan?: string | null;   // "monthly" | "yearly"
+  premiumPlan?: string | null;   // "monthly" | "yearly" | "schooltime"
   cancelled?: boolean;           // true if user cancelled (but still in paid period)
   userId?: string;               // Supabase user ID (present when using real auth)
 }

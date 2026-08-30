@@ -14,6 +14,7 @@ export default function SuccessClient() {
   const [pollCount, setPollCount] = useState(0);
   const [activated, setActivated] = useState(false);
   const [activationFailed, setActivationFailed] = useState(false);
+  const [isSchooltime, setIsSchooltime] = useState(false);
 
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
@@ -22,6 +23,7 @@ export default function SuccessClient() {
     const searchParams = new URLSearchParams(window.location.search);
     const sessionId = searchParams.get("session_id");
     const plan = searchParams.get("plan");
+    setIsSchooltime(plan === "schooltime");
     const trialDays = searchParams.get("trial") === "7" ? 7 : null;
     const dedupeKey = `cleverli_${trialDays ? "trial" : "purchase"}_tracked_${sessionId || plan || "unknown"}`;
 
@@ -84,7 +86,12 @@ export default function SuccessClient() {
           {t("Willkommen bei Cleverli Premium!", "Bienvenue dans Cleverli Premium !", "Benvenuto in Cleverli Premium!", "Welcome to Cleverli Premium!")}
         </h1>
         <p className="text-gray-500 text-lg">
-          {t("Dein Abonnement ist aktiv. Du hast jetzt unbegrenzten Zugang zu allen Aufgaben.",
+          {isSchooltime ? t(
+             "Dein Zugang für die gesamte Primarschulzeit ist aktiv. Es gibt keine Verlängerung und keine weiteren Abbuchungen.",
+             "Ton accès pour toute l’école primaire est actif, sans renouvellement ni autre prélèvement.",
+             "Il tuo accesso per tutta la scuola primaria è attivo, senza rinnovo o ulteriori addebiti.",
+             "Your access for the whole primary-school journey is active, with no renewal or further charges."
+           ) : t("Dein Abonnement ist aktiv. Du hast jetzt unbegrenzten Zugang zu allen Aufgaben.",
              "Ton abonnement est actif. Tu as maintenant accès illimité à tous les exercices.",
              "Il tuo abbonamento è attivo. Ora hai accesso illimitato a tutti gli esercizi.",
              "Your subscription is active. You now have unlimited access to all exercises.")}

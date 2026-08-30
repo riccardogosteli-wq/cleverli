@@ -35,7 +35,7 @@ Website: ${WEBSITE}
         heading: "3. Leistungsbeschreibung",
         body: `Cleverli ist eine digitale Lernplattform für Kinder der Primarschule (1.–6. Klasse) mit interaktiven Übungen in den Fächern Mathematik, Deutsch und Natur & Mensch (NMG). Die Plattform wird in den Sprachen Deutsch, Französisch, Italienisch und Englisch angeboten.
 
-Kostenlose Inhalte (die ersten 20 Aufgaben) stehen ohne Registrierung zur Verfügung. Der vollständige Zugang erfordert ein aktives Premium-Abonnement.
+Eine Auswahl an Inhalten steht kostenlos zur Verfügung. Der vollständige Zugang erfordert einen aktiven Premium-Zugang.
 
 Der Anbieter behält sich vor, den Funktionsumfang des Dienstes jederzeit zu erweitern, anzupassen oder einzelne Funktionen einzustellen, sofern dies zumutbar ist.`,
       },
@@ -50,10 +50,11 @@ Der Nutzer ist für die Geheimhaltung seiner Zugangsdaten verantwortlich. Bei Ve
         body: `Cleverli Premium ist erhältlich als:
 • Monatsabonnement: CHF 9.90 / Monat
 • Jahresabonnement: CHF 99.00 / Jahr (entspricht CHF 8.25 / Monat)
+• Befristete Gründeraktion: CHF 249.00 einmalig für den Familienzugang während der gesamten Primarschulzeit (1.–6. Klasse), für bis zu drei Kinderprofile
 
 Alle Preise verstehen sich in Schweizer Franken (CHF) inkl. Mehrwertsteuer.
 
-Das Abonnement verlängert sich automatisch um die gewählte Laufzeit, sofern es nicht rechtzeitig gekündigt wird. Die Abbuchung erfolgt im Voraus zum Beginn jeder Abrechnungsperiode.
+Monats- und Jahresabonnements verlängern sich automatisch um die gewählte Laufzeit, sofern sie nicht rechtzeitig gekündigt werden. Die Abbuchung erfolgt im Voraus zum Beginn jeder Abrechnungsperiode. Der einmalige Zugang aus der Gründeraktion verlängert sich nicht und löst keine weiteren Abbuchungen aus. Er ist an das persönliche Familienkonto gebunden und nicht übertragbar.
 
 Preisänderungen werden dem Nutzer mindestens 30 Tage vor Inkrafttreten per E-Mail mitgeteilt.`,
       },
@@ -131,7 +132,7 @@ Site web : ${WEBSITE}
         heading: "3. Description du service",
         body: `Cleverli est une plateforme d'apprentissage numérique pour les enfants du primaire (1re–6e année) proposant des exercices interactifs en mathématiques, allemand et connaissance de l'environnement. La plateforme est disponible en allemand, français, italien et anglais.
 
-Le contenu gratuit (les 20 premiers exercices) est accessible sans inscription. L'accès complet nécessite un abonnement Premium actif.
+Une sélection de contenus est disponible gratuitement. L'accès complet nécessite un accès Premium actif.
 
 Le Fournisseur se réserve le droit de modifier ou d'adapter le Service à tout moment dans la mesure du raisonnable.`,
       },
@@ -146,10 +147,11 @@ L'utilisateur est responsable de la confidentialité de ses identifiants. Tout a
         body: `Cleverli Premium est disponible en :
 • Abonnement mensuel : CHF 9.90 / mois
 • Abonnement annuel : CHF 99.00 / an (soit CHF 8.25 / mois)
+• Offre de lancement limitée : CHF 249.00 en une fois pour l’accès familial pendant toute l’école primaire (1re–6e année), jusqu’à trois profils enfants
 
 Tous les prix sont en francs suisses (CHF), TVA incluse.
 
-L'abonnement se renouvelle automatiquement pour la durée choisie, sauf résiliation dans les délais. Le paiement est prélevé à l'avance au début de chaque période de facturation.
+Les abonnements mensuel et annuel se renouvellent automatiquement pour la durée choisie, sauf résiliation dans les délais. Le paiement est prélevé à l'avance au début de chaque période de facturation. L’accès unique de l’offre de lancement ne se renouvelle pas et n’entraîne aucun autre prélèvement. Il est lié au compte familial personnel et n’est pas transférable.
 
 Toute modification tarifaire sera communiquée par e-mail au moins 30 jours avant son entrée en vigueur.`,
       },
@@ -227,7 +229,7 @@ Sito web: ${WEBSITE}
         heading: "3. Descrizione del servizio",
         body: `Cleverli è una piattaforma di apprendimento digitale per bambini della scuola elementare (1a–6a classe) con esercizi interattivi in matematica, tedesco e conoscenza dell'ambiente. La piattaforma è disponibile in tedesco, francese, italiano e inglese.
 
-I contenuti gratuiti (i primi 20 esercizi) sono accessibili senza registrazione. L'accesso completo richiede un abbonamento Premium attivo.
+Una selezione di contenuti è disponibile gratuitamente. L'accesso completo richiede un accesso Premium attivo.
 
 Il Fornitore si riserva il diritto di modificare o adattare il Servizio in qualsiasi momento nella misura del ragionevole.`,
       },
@@ -242,10 +244,11 @@ L'utente è responsabile della riservatezza delle proprie credenziali. Qualsiasi
         body: `Cleverli Premium è disponibile come:
 • Abbonamento mensile: CHF 9.90 / mese
 • Abbonamento annuale: CHF 99.00 / anno (pari a CHF 8.25 / mese)
+• Offerta di lancio limitata: CHF 249.00 una tantum per l’accesso famiglia durante tutta la scuola primaria (1a–6a classe), fino a tre profili bambino
 
 Tutti i prezzi sono in franchi svizzeri (CHF), IVA inclusa.
 
-L'abbonamento si rinnova automaticamente per la durata scelta, salvo disdetta nei termini previsti. Il pagamento avviene in anticipo all'inizio di ogni periodo di fatturazione.
+Gli abbonamenti mensile e annuale si rinnovano automaticamente per la durata scelta, salvo disdetta nei termini previsti. Il pagamento avviene in anticipo all'inizio di ogni periodo di fatturazione. L’accesso una tantum dell’offerta di lancio non si rinnova e non comporta ulteriori addebiti. È legato all’account famiglia personale e non è trasferibile.
 
 Eventuali modifiche tariffarie saranno comunicate via e-mail almeno 30 giorni prima dell'entrata in vigore.`,
       },
@@ -323,7 +326,7 @@ Website: ${WEBSITE}
         heading: "3. Service Description",
         body: `Cleverli is a digital learning platform for primary school children (grades 1–6) offering interactive exercises in mathematics, German, and general studies (nature & society). The platform is available in German, French, Italian, and English.
 
-Free content (the first 20 exercises) is available without registration. Full access requires an active Premium subscription.
+A selection of content is available free of charge. Full access requires active Premium access.
 
 The Provider reserves the right to expand, modify, or discontinue features of the Service at any time, to the extent reasonable.`,
       },
@@ -338,10 +341,11 @@ The user is responsible for keeping their login credentials confidential. Any su
         body: `Cleverli Premium is available as:
 • Monthly subscription: CHF 9.90 / month
 • Annual subscription: CHF 99.00 / year (equivalent to CHF 8.25 / month)
+• Limited founder offer: CHF 249.00 one-time for family access throughout primary school (grades 1–6), for up to three child profiles
 
 All prices are in Swiss Francs (CHF) including VAT.
 
-Subscriptions renew automatically for the chosen period unless cancelled in time. Payment is charged in advance at the beginning of each billing period.
+Monthly and annual subscriptions renew automatically for the chosen period unless cancelled in time. Payment is charged in advance at the beginning of each billing period. The founder-offer access is a one-time purchase, does not renew, and creates no further charges. It is tied to the personal family account and is non-transferable.
 
 Price changes will be communicated by email at least 30 days before taking effect.`,
       },

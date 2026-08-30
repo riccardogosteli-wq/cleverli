@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import UpgradePageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Premium freischalten — CHF 9.90/Monat | Cleverli",
-  description: "Alle Aufgaben in Mathe, Deutsch & NMG für CHF 9.90/Monat oder CHF 99/Jahr. TWINT & Kreditkarte. Jederzeit kündbar.",
+  title: "Cleverli Premium — gesamte Primarschulzeit für CHF 249",
+  description: "Kurzzeitige Gründeraktion: Cleverli für die gesamte Primarschulzeit und bis zu 3 Kinderprofile. Einmalig CHF 249 statt CHF 594.",
   openGraph: {
-    title: "Cleverli Premium — Alle Aufgaben freischalten",
-    description: "CHF 9.90/Monat · Alle Klassen 1–6 · Alle Fächer · TWINT & Karte · Jederzeit kündbar.",
+    title: "Cleverli für die gesamte Primarschulzeit — einmalig CHF 249",
+    description: "Befristete Gründeraktion: alle Klassen 1–6, alle Fächer und bis zu 3 Kinderprofile. CHF 249 statt CHF 594.",
     images: [{ url: "https://www.cleverli.ch/og-cleverli-primarschule-2026.png", width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
   },
   alternates: { canonical: "https://www.cleverli.ch/upgrade" },

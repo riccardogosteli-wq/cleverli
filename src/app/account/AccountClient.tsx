@@ -216,7 +216,9 @@ export default function AccountPage() {
         {session.premium ? (
           <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-5 space-y-4">
             <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
-              {t("Abonnement", "Abonnement", "Abbonamento", "Subscription")}
+              {session.premiumPlan === "schooltime"
+                ? t("Premium-Zugang", "Accès Premium", "Accesso Premium", "Premium access")
+                : t("Abonnement", "Abonnement", "Abbonamento", "Subscription")}
             </div>
 
             {/* Active plan info */}
@@ -224,7 +226,9 @@ export default function AccountPage() {
               <div>
                 <div className="font-bold text-gray-800 text-sm">👑 {t("Premium aktiv", "Premium actif", "Premium attivo", "Premium active")}</div>
                 <div className="text-xs text-gray-400 mt-0.5">
-                  {t("Verwaltet über Stripe · Jederzeit kündbar",
+                  {session.premiumPlan === "schooltime"
+                    ? t("Einmal bezahlt · Keine Verlängerung", "Payé une fois · Sans renouvellement", "Pagato una volta · Nessun rinnovo", "Paid once · No renewal")
+                    : t("Verwaltet über Stripe · Jederzeit kündbar",
                      "Géré via Stripe · Résiliable à tout moment",
                      "Gestito via Stripe · Annullabile in qualsiasi momento",
                      "Managed via Stripe · Cancel anytime")}
@@ -234,7 +238,14 @@ export default function AccountPage() {
             </div>
 
             {/* Cancel flow */}
-            {cancelState === "retained" ? (
+            {session.premiumPlan === "schooltime" ? (
+              <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-center text-sm text-green-800">
+                <div className="font-black">✅ {t("Gesamte Primarschulzeit freigeschaltet", "Toute l’école primaire débloquée", "Tutta la scuola primaria sbloccata", "Whole primary-school journey unlocked")}</div>
+                <div className="mt-1 text-xs leading-5">
+                  {t("Für bis zu 3 Kinderprofile. Es folgen keine weiteren Abbuchungen.", "Pour jusqu’à 3 profils enfants. Aucun autre prélèvement.", "Fino a 3 profili bambino. Nessun altro addebito.", "For up to 3 child profiles. No further charges.")}
+                </div>
+              </div>
+            ) : cancelState === "retained" ? (
               <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-center text-sm text-green-800">
                 <div className="font-black">✅ {t("CHF 66/Jahr gesichert", "CHF 66/an confirmé", "CHF 66/anno confermato", "CHF 66/year confirmed")}</div>
                 <div className="mt-1 text-xs leading-5">
@@ -355,10 +366,10 @@ export default function AccountPage() {
               {t("Abonnement", "Abonnement", "Abbonamento", "Subscription")}
             </div>
             <div className="text-sm text-gray-600">
-              {t("Du nutzt die Gratis-Version mit 20 Aufgaben.",
-                 "Tu utilises la version gratuite avec 20 exercices.",
-                 "Stai usando la versione gratuita con 20 esercizi.",
-                 "You're on the free plan with 20 exercises.")}
+              {t("Du nutzt Cleverli aktuell kostenlos.",
+                 "Tu utilises actuellement Cleverli gratuitement.",
+                 "Attualmente usi Cleverli gratuitamente.",
+                 "You're currently using Cleverli for free.")}
             </div>
             <Link href="/upgrade"
               className="block text-center bg-green-700 text-white font-bold py-3 rounded-xl text-sm hover:bg-green-700 active:scale-95 transition-all">

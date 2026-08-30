@@ -9,6 +9,7 @@ export type UserActivityType =
   | "checkout_started"
   | "subscription_trial_started"
   | "subscription_started"
+  | "schooltime_access_started"
   | "subscription_updated"
   | "subscription_cancel_requested"
   | "subscription_cancelled"

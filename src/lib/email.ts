@@ -96,7 +96,7 @@ export async function sendWelcomeEmail(to: string) {
 export async function sendPaymentConfirmationEmail(
   to: string,
   name: string,
-  plan: "monthly" | "yearly",
+  plan: "monthly" | "yearly" | "schooltime",
   options?: { idempotencyKey?: string }
 ) {
   const resend = getResend();
@@ -104,10 +104,16 @@ export async function sendPaymentConfirmationEmail(
   const greeting = name?.trim()
     ? `Hallo ${escapeHtml(name.trim())}, danke für dein Vertrauen in Cleverli!`
     : "Danke für dein Vertrauen in Cleverli!";
-  const planLabel = plan === "yearly" ? "Jahres-Abo (CHF 99/Jahr)" : "Monats-Abo (CHF 9.90/Monat)";
-  const planDetails = plan === "yearly"
-    ? "Du sparst 2 Monate gegenüber dem Monatsabo."
-    : "Dein Monatsabo ist aktiv. Die nächste Abbuchung erfolgt in 30 Tagen.";
+  const planLabel = plan === "schooltime"
+    ? "Gesamte Primarschulzeit (einmalig CHF 249)"
+    : plan === "yearly"
+      ? "Jahres-Abo (CHF 99/Jahr)"
+      : "Monats-Abo (CHF 9.90/Monat)";
+  const planDetails = plan === "schooltime"
+    ? "Einmal bezahlt – keine Verlängerung und keine weiteren Abbuchungen."
+    : plan === "yearly"
+      ? "Du sparst 2 Monate gegenüber dem Monatsabo."
+      : "Dein Monatsabo ist aktiv. Die nächste Abbuchung erfolgt in 30 Tagen.";
 
   const { error } = await resend.emails.send({
     from: FROM,
@@ -182,21 +188,21 @@ export async function sendAdminPaymentNotificationEmail({
   idempotencyKey,
 }: {
   customerEmail: string;
-  plan: "monthly" | "yearly";
+  plan: "monthly" | "yearly" | "schooltime";
   amountTotal?: number | null;
   currency?: string | null;
   stripeCustomerId: string;
-  stripeSubscriptionId: string;
+  stripeSubscriptionId?: string | null;
   idempotencyKey?: string;
 }) {
   const resend = getResend();
   if (!resend) return;
 
-  const planLabel = plan === "yearly" ? "Jahres-Abo" : "Monats-Abo";
+  const planLabel = plan === "schooltime" ? "Gesamte Primarschulzeit" : plan === "yearly" ? "Jahres-Abo" : "Monats-Abo";
   const amountLabel = formatCurrency(amountTotal, currency);
   const safeCustomerEmail = escapeHtml(customerEmail || "Unbekannt");
   const safeStripeCustomerId = escapeHtml(stripeCustomerId);
-  const safeStripeSubscriptionId = escapeHtml(stripeSubscriptionId);
+  const safeStripeSubscriptionId = escapeHtml(stripeSubscriptionId || "Einmalzahlung – kein Abo");
 
   const { error } = await resend.emails.send({
     from: FROM,

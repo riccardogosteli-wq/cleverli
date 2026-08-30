@@ -5,6 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 import { logUserActivity } from "@/lib/userActivityServer";
 import { parseAdsExperimentAttribution, parseAdsExperimentMetadata } from "@/lib/adsAbVariant";
 import { sendMetaConversion } from "@/lib/metaConversions";
+import { isSchooltimeOfferActive, SCHOOLTIME_OFFER_PRICE_CHF } from "@/lib/schooltimeOffer";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.cleverli.ch";
 
@@ -142,6 +143,10 @@ export async function GET(req: NextRequest) {
   let attribution = parseAttribution(req);
   let experimentAttribution = parseAdsExperimentAttribution(req.nextUrl.searchParams);
 
+  if (plan === "schooltime" && !isSchooltimeOfferActive()) {
+    return NextResponse.json({ error: "offer_expired" }, { status: 410 });
+  }
+
   // Guest: redirect to signup
   if (!userId) {
     const signupUrl = `${BASE_URL}/signup?checkout=${encodeURIComponent(plan)}&source=checkout_api${trialDays ? `&trial=${trialDays}` : ""}`;
@@ -158,6 +163,7 @@ export async function GET(req: NextRequest) {
       : NextResponse.redirect(`${BASE_URL}/login?checkout=${encodeURIComponent(plan)}&source=checkout_api${trialDays ? `&trial=${trialDays}` : ""}`);
   }
 
+  const isSchooltime = plan === "schooltime";
   const priceId = PRICE_IDS[plan] ?? PRICE_IDS.monthly;
 
   // Get user email and existing Stripe customer from Supabase.
@@ -190,8 +196,20 @@ export async function GET(req: NextRequest) {
     const experimentMetadata = stripeExperimentMetadata(experimentAttribution);
     const checkoutIdempotencyKey = getCheckoutIdempotencyKey(userId, plan, checkoutSource, trialDays);
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
-      mode: "subscription",
-      line_items: [{ price: priceId, quantity: 1 }],
+      mode: isSchooltime ? "payment" : "subscription",
+      line_items: isSchooltime
+        ? [{
+            price_data: {
+              currency: "chf",
+              unit_amount: SCHOOLTIME_OFFER_PRICE_CHF * 100,
+              product_data: {
+                name: "Cleverli Premium – gesamte Primarschulzeit",
+                description: "Einmalzahlung für alle Klassen 1–6 und bis zu 3 Kinderprofile.",
+              },
+            },
+            quantity: 1,
+          }]
+        : [{ price: priceId, quantity: 1 }],
       locale: "de",
       success_url: `${BASE_URL}/payment/success?plan=${plan}&session_id={CHECKOUT_SESSION_ID}${trialDays ? `&trial=${trialDays}` : ""}`,
       cancel_url: `${BASE_URL}/payment/cancel`,
@@ -201,6 +219,7 @@ export async function GET(req: NextRequest) {
         : customerEmail
           ? { customer_email: customerEmail }
           : {}),
+      ...(isSchooltime && !stripeCustomerId ? { customer_creation: "always" as const } : {}),
       metadata: {
         userId,
         plan,
@@ -212,7 +231,7 @@ export async function GET(req: NextRequest) {
         ...(metaFbp ? { meta_fbp: metaFbp } : {}),
         ...(metaFbc ? { meta_fbc: metaFbc } : {}),
       },
-      subscription_data: {
+      ...(!isSchooltime ? { subscription_data: {
         ...(trialDays ? { trial_period_days: trialDays } : {}),
         metadata: {
           userId,
@@ -225,7 +244,7 @@ export async function GET(req: NextRequest) {
           ...(metaFbp ? { meta_fbp: metaFbp } : {}),
           ...(metaFbc ? { meta_fbc: metaFbc } : {}),
         },
-      },
+      } } : {}),
     };
     const session = await stripe.checkout.sessions.create(sessionParams, {
       idempotencyKey: checkoutIdempotencyKey,
@@ -252,7 +271,7 @@ export async function GET(req: NextRequest) {
       },
       customData: {
         currency: "CHF",
-        value: plan === "yearly" ? 99 : 9.9,
+        value: isSchooltime ? SCHOOLTIME_OFFER_PRICE_CHF : plan === "yearly" ? 99 : 9.9,
         content_name: `Cleverli Premium ${plan}`,
         content_type: "product",
         trial_days: trialDays ?? 0,

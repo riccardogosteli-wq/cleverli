@@ -8,7 +8,7 @@ import {
 } from "@/lib/adsAbVariant";
 import { trackMetaEvent } from "@/lib/metaPixel";
 
-export type CheckoutPlan = "monthly" | "yearly";
+export type CheckoutPlan = "monthly" | "yearly" | "schooltime";
 type AdsLpCtaType = "paid" | "free";
 type AdsLpCtaLocation = "hero" | "pricing" | "bottom";
 type AdsLpPageContext = {
@@ -36,15 +36,17 @@ const recentAdsCtaClicks = new Map<string, number>();
 const PLAN_VALUE: Record<CheckoutPlan, number> = {
   monthly: 9.9,
   yearly: 99,
+  schooltime: 249,
 };
 
 const PLAN_NAME: Record<CheckoutPlan, string> = {
   monthly: "Cleverli Premium Monatsabo",
   yearly: "Cleverli Premium Jahresabo",
+  schooltime: "Cleverli Premium Primarschulzeit",
 };
 
 function isCheckoutPlan(plan: string | null): plan is CheckoutPlan {
-  return plan === "monthly" || plan === "yearly";
+  return plan === "monthly" || plan === "yearly" || plan === "schooltime";
 }
 
 function adsLpRequestContext() {
