@@ -136,7 +136,7 @@ async function verifyUserToken(userId: string, req: NextRequest) {
 export async function GET(req: NextRequest) {
   const plan = req.nextUrl.searchParams.get("plan") ?? "monthly";
   const userId = req.nextUrl.searchParams.get("uid") ?? "";
-  const trialDays = trialDaysFromRequest(req);
+  const trialDays = plan === "schooltime" ? undefined : trialDaysFromRequest(req);
   const checkoutSource = req.nextUrl.searchParams.get("source") ?? "checkout_api";
   const metaFbp = cleanMetaIdentifier(req.nextUrl.searchParams.get("fbp"), 120);
   const metaFbc = cleanMetaIdentifier(req.nextUrl.searchParams.get("fbc"), 300);
