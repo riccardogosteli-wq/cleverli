@@ -6,12 +6,12 @@ import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { getSupabase } from "@/lib/supabase";
-import { trackSignUp } from "@/lib/analytics";
+import { trackSignUp, trackSignupStarted } from "@/lib/analytics";
 import { captureAppError } from "@/lib/monitoring";
 import { getCheckoutAuthUrl, getPendingCheckoutIntent, startCheckout } from "@/lib/checkoutClient";
 import { trackUserActivity } from "@/lib/userActivityClient";
 import { readAdsExperimentAttribution } from "@/lib/adsAbVariant";
-import { getStoredAttribution } from "@/lib/attribution";
+import { getAnonymousSessionId, getStoredAttribution } from "@/lib/attribution";
 
 export default function Signup() {
   const { tr } = useLang();
@@ -58,6 +58,8 @@ export default function Signup() {
       setLoading(false);
       return;
     }
+
+    void trackSignupStarted();
 
     try {
       const supabase = getSupabase();
@@ -120,6 +122,7 @@ export default function Signup() {
         accessToken: data.session?.access_token,
         metadata: {
           pendingCheckout: pendingCheckout?.plan ?? null,
+          anonymous_session_id: getAnonymousSessionId(),
           attribution,
           ...(experimentAttribution
             ? {

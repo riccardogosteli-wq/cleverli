@@ -2,6 +2,13 @@
 
 import { captureProductEvent } from "@/lib/monitoring";
 import { trackUserActivity } from "@/lib/userActivityClient";
+import {
+  checkoutAttributionEventParams,
+  getAnonymousSessionId,
+  getTelemetryAttribution,
+  telemetryAttributionMetadata,
+} from "@/lib/attribution";
+import { pushDataLayerEvent } from "@/lib/analytics";
 
 export type ExerciseTelemetryEvent =
   | "exercise_started"
@@ -28,18 +35,6 @@ export type ExerciseTelemetryPayload = {
   lang?: string;
   path?: string;
 };
-
-const SESSION_KEY = "cleverli_telemetry_session";
-
-function getAnonymousSessionId() {
-  if (typeof window === "undefined") return "";
-  const existing = localStorage.getItem(SESSION_KEY);
-  if (existing) return existing;
-
-  const id = crypto.randomUUID();
-  localStorage.setItem(SESSION_KEY, id);
-  return id;
-}
 
 function sanitizePayload(payload: ExerciseTelemetryPayload): ExerciseTelemetryPayload {
   return {
@@ -68,32 +63,47 @@ export function trackExerciseEvent(eventName: ExerciseTelemetryEvent, payload: E
     anonymousSessionId: getAnonymousSessionId(),
     path: payload.path ?? window.location.pathname,
   };
+  const attribution = getTelemetryAttribution();
 
   captureProductEvent(eventName, safePayload);
+  pushDataLayerEvent(eventName, {
+    exercise_id: safePayload.exerciseId,
+    grade: safePayload.grade,
+    subject: safePayload.subject,
+    topic_id: safePayload.topicId,
+    exercise_type: safePayload.exerciseType,
+    is_correct: safePayload.isCorrect,
+    duration_ms: safePayload.durationMs,
+    anonymous_session_id: safePayload.anonymousSessionId,
+    ...checkoutAttributionEventParams(),
+  });
 
   const body = JSON.stringify({
     eventName,
     ...safePayload,
+    attribution,
   });
 
+  let sentWithBeacon = false;
   try {
     if (navigator.sendBeacon) {
       const blob = new Blob([body], { type: "application/json" });
-      navigator.sendBeacon("/api/telemetry/exercise", blob);
-      return;
+      sentWithBeacon = navigator.sendBeacon("/api/telemetry/exercise", blob);
     }
   } catch {
     // Fall through to fetch.
   }
 
-  fetch("/api/telemetry/exercise", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body,
-    keepalive: true,
-  }).catch(() => {
-    // Product telemetry must never break the exercise flow.
-  });
+  if (!sentWithBeacon) {
+    fetch("/api/telemetry/exercise", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body,
+      keepalive: true,
+    }).catch(() => {
+      // Product telemetry must never break the exercise flow.
+    });
+  }
 
   if (
     eventName === "exercise_started"
@@ -118,6 +128,7 @@ export function trackExerciseEvent(eventName: ExerciseTelemetryEvent, payload: E
         topicIndex: safePayload.topicIndex,
         topicTotal: safePayload.topicTotal,
         lang: safePayload.lang,
+        ...telemetryAttributionMetadata(),
       },
     });
   }

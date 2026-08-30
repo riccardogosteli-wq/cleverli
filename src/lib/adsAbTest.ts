@@ -10,6 +10,7 @@ import {
   readForcedAdsLpVariant,
   type AdsLpVariant,
 } from "@/lib/adsAbVariant";
+import { telemetryAttributionMetadata } from "@/lib/attribution";
 
 export { getAdsLpVariant, type AdsLpVariant } from "@/lib/adsAbVariant";
 
@@ -42,6 +43,7 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
     // Duplicate protection is best-effort.
   }
 
+  const funnelAttribution = telemetryAttributionMetadata();
   pushDataLayerEvent("ads_lp_ab_assignment", {
     page,
     page_path: pagePath,
@@ -51,6 +53,7 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
     experiment_page: attribution?.page ?? page,
     forced_variant: Boolean(readForcedAdsLpVariant()),
     internal_qa: isInternalQaRequest(),
+    anonymous_session_id: funnelAttribution.anonymous_session_id,
   });
   trackUserActivity("ads_lp_ab_assignment", {
     path: pagePath,
@@ -65,6 +68,7 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
       experiment_page: attribution?.page ?? page,
       forced_variant: Boolean(readForcedAdsLpVariant()),
       internal_qa: isInternalQaRequest(),
+      ...funnelAttribution,
     },
   });
 }

@@ -29,6 +29,11 @@ function cleanBool(value: unknown) {
   return typeof value === "boolean" ? value : null;
 }
 
+function cleanMetadata(value: unknown) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return value as Record<string, unknown>;
+}
+
 function requestIp(req: NextRequest) {
   return req.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
     ?? req.headers.get("x-real-ip")
@@ -121,7 +126,9 @@ export async function POST(req: NextRequest) {
       lang: cleanText(body.lang, 8),
       path: cleanText(body.path, 160),
       anonymous_session_id: cleanText(body.anonymousSessionId),
-      metadata: {},
+      metadata: {
+        attribution: cleanMetadata(body.attribution),
+      },
     });
 
     if (error) {

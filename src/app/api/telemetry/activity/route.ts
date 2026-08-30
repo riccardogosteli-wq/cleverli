@@ -6,6 +6,7 @@ import { logUserActivity, UserActivityType } from "@/lib/userActivityServer";
 const ALLOWED_EVENTS = new Set<UserActivityType>([
   "login",
   "signup",
+  "signup_started",
   "password_reset_requested",
   "password_updated",
   "ads_lp_ab_assignment",
@@ -20,6 +21,10 @@ const ANONYMOUS_EVENTS = new Set<UserActivityType>([
   "password_reset_requested",
   "ads_lp_ab_assignment",
   "ads_lp_cta_click",
+  "signup_started",
+  "exercise_started",
+  "exercise_completed",
+  "paywall_shown",
 ]);
 
 const MAX_BODY_BYTES = 4096;

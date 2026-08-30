@@ -4,6 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 export type UserActivityType =
   | "login"
   | "signup"
+  | "signup_started"
   | "password_reset_requested"
   | "password_updated"
   | "checkout_started"

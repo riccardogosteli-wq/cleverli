@@ -1,5 +1,9 @@
 import { trackUserActivity } from "@/lib/userActivityClient";
-import { checkoutAttributionEventParams } from "@/lib/attribution";
+import {
+  checkoutAttributionEventParams,
+  getAnonymousSessionId,
+  telemetryAttributionMetadata,
+} from "@/lib/attribution";
 import {
   ADS_LP_EXPERIMENT,
   ensureAdsExperimentAttribution,
@@ -133,8 +137,26 @@ function trackGoogleAdsPurchaseConversion(transactionId: string, value: number) 
 }
 
 export function trackSignUp(method = "email") {
-  pushDataLayerEvent("sign_up", { method });
+  pushDataLayerEvent("sign_up", {
+    method,
+    anonymous_session_id: getAnonymousSessionId(),
+    ...checkoutAttributionEventParams(),
+  });
   trackMetaEvent("CompleteRegistration", { content_name: "Cleverli account", status: true });
+}
+
+export function trackSignupStarted() {
+  const metadata = telemetryAttributionMetadata();
+  pushDataLayerEvent("signup_started", {
+    anonymous_session_id: metadata.anonymous_session_id,
+    ...checkoutAttributionEventParams(),
+  });
+  return trackUserActivity("signup_started", {
+    path: window.location.pathname,
+    source: "signup_form",
+    accessToken: null,
+    metadata,
+  });
 }
 
 export function trackBeginCheckout(plan: CheckoutPlan, source: string) {
@@ -222,6 +244,7 @@ export async function trackAdsLpCtaClick(
     ...(pageContext.trial_days ? { trial_days: pageContext.trial_days } : {}),
     cta_event_id: eventId,
     cta_session_id: adsCtaSessionId(),
+    ...telemetryAttributionMetadata(),
     ...requestContext,
   };
 

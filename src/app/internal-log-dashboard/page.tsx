@@ -131,6 +131,7 @@ type CancellationFeedbackStats = {
 
 const ACTIVITY_TYPES = [
   "login",
+  "signup_started",
   "signup",
   "password_reset_requested",
   "password_updated",
@@ -160,6 +161,7 @@ function subjectLabel(subject: string | null) {
 function activityLabel(activityType: string) {
   const labels: Record<string, string> = {
     login: "Login",
+    signup_started: "Signup gestartet",
     signup: "Signup",
     password_reset_requested: "PW Reset angefordert",
     password_updated: "PW geändert",
