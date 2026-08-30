@@ -105,12 +105,12 @@ export async function sendPaymentConfirmationEmail(
     ? `Hallo ${escapeHtml(name.trim())}, danke für dein Vertrauen in Cleverli!`
     : "Danke für dein Vertrauen in Cleverli!";
   const planLabel = plan === "schooltime"
-    ? "Gesamte Primarschulzeit (einmalig CHF 249)"
+    ? "Lebenslanger Zugang (einmalig CHF 249)"
     : plan === "yearly"
       ? "Jahres-Abo (CHF 99/Jahr)"
       : "Monats-Abo (CHF 9.90/Monat)";
   const planDetails = plan === "schooltime"
-    ? "Einmal bezahlt – keine Verlängerung und keine weiteren Abbuchungen."
+    ? "Lebenslanger Zugang – keine Verlängerung und keine weiteren Abbuchungen."
     : plan === "yearly"
       ? "Du sparst 2 Monate gegenüber dem Monatsabo."
       : "Dein Monatsabo ist aktiv. Die nächste Abbuchung erfolgt in 30 Tagen.";
@@ -198,7 +198,7 @@ export async function sendAdminPaymentNotificationEmail({
   const resend = getResend();
   if (!resend) return;
 
-  const planLabel = plan === "schooltime" ? "Gesamte Primarschulzeit" : plan === "yearly" ? "Jahres-Abo" : "Monats-Abo";
+  const planLabel = plan === "schooltime" ? "Lebenslanger Zugang" : plan === "yearly" ? "Jahres-Abo" : "Monats-Abo";
   const amountLabel = formatCurrency(amountTotal, currency);
   const safeCustomerEmail = escapeHtml(customerEmail || "Unbekannt");
   const safeStripeCustomerId = escapeHtml(stripeCustomerId);

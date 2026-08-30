@@ -217,21 +217,21 @@ export default function UpgradePageClient() {
       {schooltimeOfferActive && (
         <div className="relative overflow-hidden rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-white to-green-50 p-6 shadow-lg shadow-amber-100">
           <div className="absolute right-0 top-0 rounded-bl-2xl bg-amber-400 px-4 py-2 text-xs font-black uppercase tracking-wide text-amber-950">
-            {tr("Nur bis 6. September", "Jusqu’au 6 septembre", "Solo fino al 6 settembre", "Only until 6 September")}
+            {tr("Nur für kurze Zeit", "Pour une durée limitée", "Solo per poco tempo", "For a limited time")}
           </div>
           <div className="max-w-md space-y-3 pt-6 sm:pt-0">
             <div className="text-sm font-black uppercase tracking-widest text-green-700">
               {tr("Gründeraktion", "Offre de lancement", "Offerta lancio", "Founder offer")}
             </div>
             <h2 className="text-2xl font-black text-gray-900">
-              {tr("Die gesamte Primarschulzeit", "Toute l’école primaire", "Tutta la scuola primaria", "The whole primary-school journey")}
+              {tr("Lebenslanger Zugang zu Cleverli", "Accès à vie à Cleverli", "Accesso a vita a Cleverli", "Lifetime access to Cleverli")}
             </h2>
             <p className="text-sm leading-relaxed text-gray-600">
               {tr(
-                "Einmal bezahlen und Cleverli für alle Klassen 1–6 sowie bis zu 3 Kinderprofile nutzen.",
-                "Payez une seule fois et utilisez Cleverli pour les années 1–6 et jusqu’à 3 profils enfants.",
-                "Paga una sola volta e usa Cleverli per le classi 1–6 e fino a 3 profili bambino.",
-                "Pay once and use Cleverli for grades 1–6 and up to 3 child profiles."
+                "Einmal bezahlen, lebenslang nutzen: alle Klassen 1–6 und bis zu 3 Kinderprofile.",
+                "Payez une seule fois, utilisez Cleverli à vie : toutes les années 1–6 et jusqu’à 3 profils enfants.",
+                "Paga una sola volta, usa Cleverli a vita: tutte le classi 1–6 e fino a 3 profili bambino.",
+                "Pay once, use Cleverli for life: all grades 1–6 and up to 3 child profiles."
               )}
             </p>
           </div>
@@ -244,7 +244,7 @@ export default function UpgradePageClient() {
               <div className="mt-1 text-sm text-gray-500">
                 <span className="line-through">CHF 594</span> · <span className="font-bold text-green-700">{tr("CHF 345 sparen", "économisez CHF 345", "risparmia CHF 345", "save CHF 345")}</span>
               </div>
-              <p className="mt-2 text-xs text-gray-500">{tr("Keine Verlängerung. Keine weiteren Abbuchungen.", "Sans renouvellement ni autre prélèvement.", "Nessun rinnovo o ulteriore addebito.", "No renewal. No further charges.")}</p>
+              <p className="mt-2 text-xs text-gray-500">{tr("Lebenslanger Zugang. Keine Verlängerung. Keine weiteren Abbuchungen.", "Accès à vie. Sans renouvellement ni autre prélèvement.", "Accesso a vita. Nessun rinnovo o ulteriore addebito.", "Lifetime access. No renewal. No further charges.")}</p>
             </div>
             <button type="button" onClick={() => startCheckout("schooltime", "upgrade_schooltime_offer", uid)}
               className="min-h-12 rounded-xl bg-amber-400 px-6 py-3 font-black text-amber-950 transition-all hover:bg-amber-300 active:scale-95">

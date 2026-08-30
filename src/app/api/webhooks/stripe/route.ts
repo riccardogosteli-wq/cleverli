@@ -219,7 +219,7 @@ export async function POST(req: NextRequest) {
         customData: {
           currency: (session.currency ?? "chf").toUpperCase(),
           value: (session.amount_total ?? 24900) / 100,
-          content_name: "Cleverli Premium Primarschulzeit",
+          content_name: "Cleverli Premium lebenslanger Zugang",
           content_type: "product",
           order_id: session.id,
         },

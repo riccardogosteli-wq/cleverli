@@ -50,11 +50,11 @@ Der Nutzer ist für die Geheimhaltung seiner Zugangsdaten verantwortlich. Bei Ve
         body: `Cleverli Premium ist erhältlich als:
 • Monatsabonnement: CHF 9.90 / Monat
 • Jahresabonnement: CHF 99.00 / Jahr (entspricht CHF 8.25 / Monat)
-• Befristete Gründeraktion: CHF 249.00 einmalig für den Familienzugang während der gesamten Primarschulzeit (1.–6. Klasse), für bis zu drei Kinderprofile
+• Nur für kurze Zeit erhältliche Gründeraktion: CHF 249.00 einmalig für einen lebenslangen, zeitlich unbefristeten Familienzugang zu Cleverli mit den Inhalten der 1.–6. Klasse, für bis zu drei Kinderprofile
 
 Alle Preise verstehen sich in Schweizer Franken (CHF) inkl. Mehrwertsteuer.
 
-Monats- und Jahresabonnements verlängern sich automatisch um die gewählte Laufzeit, sofern sie nicht rechtzeitig gekündigt werden. Die Abbuchung erfolgt im Voraus zum Beginn jeder Abrechnungsperiode. Der einmalige Zugang aus der Gründeraktion verlängert sich nicht und löst keine weiteren Abbuchungen aus. Er ist an das persönliche Familienkonto gebunden und nicht übertragbar.
+Monats- und Jahresabonnements verlängern sich automatisch um die gewählte Laufzeit, sofern sie nicht rechtzeitig gekündigt werden. Die Abbuchung erfolgt im Voraus zum Beginn jeder Abrechnungsperiode. Der lebenslange Zugang aus der Gründeraktion ist zeitlich unbefristet, verlängert sich nicht und löst keine weiteren Abbuchungen aus. Er ist an das persönliche Familienkonto gebunden und nicht übertragbar.
 
 Preisänderungen werden dem Nutzer mindestens 30 Tage vor Inkrafttreten per E-Mail mitgeteilt.`,
       },

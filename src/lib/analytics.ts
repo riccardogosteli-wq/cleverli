@@ -42,7 +42,7 @@ const PLAN_VALUE: Record<CheckoutPlan, number> = {
 const PLAN_NAME: Record<CheckoutPlan, string> = {
   monthly: "Cleverli Premium Monatsabo",
   yearly: "Cleverli Premium Jahresabo",
-  schooltime: "Cleverli Premium Primarschulzeit",
+  schooltime: "Cleverli Premium lebenslanger Zugang",
 };
 
 function isCheckoutPlan(plan: string | null): plan is CheckoutPlan {

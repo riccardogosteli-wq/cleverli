@@ -240,9 +240,9 @@ export default function AccountPage() {
             {/* Cancel flow */}
             {session.premiumPlan === "schooltime" ? (
               <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-center text-sm text-green-800">
-                <div className="font-black">✅ {t("Gesamte Primarschulzeit freigeschaltet", "Toute l’école primaire débloquée", "Tutta la scuola primaria sbloccata", "Whole primary-school journey unlocked")}</div>
+                <div className="font-black">✅ {t("Lebenslanger Zugang freigeschaltet", "Accès à vie débloqué", "Accesso a vita sbloccato", "Lifetime access unlocked")}</div>
                 <div className="mt-1 text-xs leading-5">
-                  {t("Für bis zu 3 Kinderprofile. Es folgen keine weiteren Abbuchungen.", "Pour jusqu’à 3 profils enfants. Aucun autre prélèvement.", "Fino a 3 profili bambino. Nessun altro addebito.", "For up to 3 child profiles. No further charges.")}
+                  {t("Alle Klassen 1–6, für bis zu 3 Kinderprofile. Es folgen keine weiteren Abbuchungen.", "Toutes les années 1–6, pour jusqu’à 3 profils enfants. Aucun autre prélèvement.", "Tutte le classi 1–6, fino a 3 profili bambino. Nessun altro addebito.", "All grades 1–6, for up to 3 child profiles. No further charges.")}
                 </div>
               </div>
             ) : cancelState === "retained" ? (

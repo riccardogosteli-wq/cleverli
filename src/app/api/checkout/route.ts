@@ -203,8 +203,8 @@ export async function GET(req: NextRequest) {
               currency: "chf",
               unit_amount: SCHOOLTIME_OFFER_PRICE_CHF * 100,
               product_data: {
-                name: "Cleverli Premium – gesamte Primarschulzeit",
-                description: "Einmalzahlung für alle Klassen 1–6 und bis zu 3 Kinderprofile.",
+                name: "Cleverli Premium – lebenslanger Zugang",
+                description: "Einmalzahlung für lebenslangen Zugang, alle Klassen 1–6 und bis zu 3 Kinderprofile.",
               },
             },
             quantity: 1,

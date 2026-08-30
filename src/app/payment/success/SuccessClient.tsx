@@ -87,10 +87,10 @@ export default function SuccessClient() {
         </h1>
         <p className="text-gray-500 text-lg">
           {isSchooltime ? t(
-             "Dein Zugang für die gesamte Primarschulzeit ist aktiv. Es gibt keine Verlängerung und keine weiteren Abbuchungen.",
-             "Ton accès pour toute l’école primaire est actif, sans renouvellement ni autre prélèvement.",
-             "Il tuo accesso per tutta la scuola primaria è attivo, senza rinnovo o ulteriori addebiti.",
-             "Your access for the whole primary-school journey is active, with no renewal or further charges."
+             "Dein lebenslanger Zugang zu Cleverli ist aktiv. Es gibt keine Verlängerung und keine weiteren Abbuchungen.",
+             "Ton accès à vie à Cleverli est actif, sans renouvellement ni autre prélèvement.",
+             "Il tuo accesso a vita a Cleverli è attivo, senza rinnovo o ulteriori addebiti.",
+             "Your lifetime access to Cleverli is active, with no renewal or further charges."
            ) : t("Dein Abonnement ist aktiv. Du hast jetzt unbegrenzten Zugang zu allen Aufgaben.",
              "Ton abonnement est actif. Tu as maintenant accès illimité à tous les exercices.",
              "Il tuo abbonamento è attivo. Ora hai accesso illimitato a tutti gli esercizi.",
