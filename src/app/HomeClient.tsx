@@ -5,6 +5,7 @@ import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import { useState } from "react";
 import { startCheckout } from "@/lib/checkoutClient";
+import LifetimeFounderOffer from "@/components/LifetimeFounderOffer";
 
 
 
@@ -142,6 +143,13 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">{tr("pricingTitle")}</h2>
           <p className="text-center text-gray-400 text-sm mb-10">{tr("pricingSubtitle")}</p>
+          <LifetimeFounderOffer
+            uid={uid}
+            checkoutSource="homepage_schooltime_offer"
+            pageKey="homepage"
+            pagePath="/"
+            className="mb-8"
+          />
           <div className="grid gap-5 sm:grid-cols-3 max-w-5xl mx-auto">
             {/* Trial */}
             <div className="bg-white rounded-2xl p-5 sm:p-6 border-2 border-gray-100 shadow-sm flex flex-col">

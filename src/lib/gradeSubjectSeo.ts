@@ -340,7 +340,7 @@ function buildPage(grade: number, subject: GradeSeoSubject): GradeSubjectSeoPage
   const ctaTopic = isMath ? mathCtaTopic[grade] : germanCtaTopic[grade];
   const slug = `${slugSubject}-uebungen-${grade}-klasse`;
   const h1 = `${titleSubject} ${grade}. Klasse`;
-  const description = `${h1} für die Schweizer Primarschule: kurze Online-Aufgaben nach Lehrplan 21, direkt im Browser und 20 Aufgaben gratis testen.`;
+  const description = `${h1} für die Schweizer Primarschule: kurze Online-Aufgaben nach Lehrplan 21, direkt im Browser kostenlos testen.`;
 
   const basePage: GradeSubjectSeoPage = {
     slug,
@@ -510,7 +510,7 @@ const SPECIAL_SEO_PAGES: GradeSubjectSeoPage[] = [
     shortSubjectName: "Deutsch",
     title: "Leseverständnis Übungen 2. Klasse – online üben",
     description:
-      "Leseverständnis Übungen 2. Klasse: kurze Texte online lesen, Fragen beantworten und 20 Aufgaben gratis üben. Schweizer Primarschule.",
+      "Leseverständnis Übungen 2. Klasse: kurze Texte online lesen, Fragen beantworten und Cleverli kostenlos testen. Schweizer Primarschule.",
     h1: "Leseverständnis Übungen 2. Klasse",
     eyebrow: "Leseverständnis · 2. Klasse · Schweizer Primarschule",
     lead:

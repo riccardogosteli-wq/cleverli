@@ -45,7 +45,7 @@ export default function StructuredData() {
             name: "Kostenlos testen",
             price: "0",
             priceCurrency: "CHF",
-            description: "Erste 20 Aufgaben gratis",
+            description: "Cleverli kostenlos testen",
           },
           {
             "@type": "Offer",

@@ -10,6 +10,7 @@ import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
 import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
 import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
 import { getGradeSubjectSeoLinks } from "@/lib/gradeSubjectSeo";
+import LifetimeFounderOffer from "@/components/LifetimeFounderOffer";
 
 const subjects = [
   { icon: "/images/ui/Mathematik.png", title: "Mathematik", body: "Rechnen, Geometrie und Textaufgaben für die 1.–6. Klasse." },
@@ -121,12 +122,12 @@ export default function AdsPrimarschuleClient() {
       <section className="bg-gradient-to-br from-green-50 via-white to-amber-50 px-4 py-8 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-green-700">20 Aufgaben gratis · Schweizer Primarschule</p>
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-green-700">Kostenlos testen · Schweizer Primarschule</p>
             <h1 className="text-4xl font-black leading-tight text-gray-950 sm:text-5xl">
               Online-Übungen für die Schweizer Primarschule.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-              Mathe, Deutsch und NMG in kurzen Aufgaben mit direktem Feedback. Starte mit 20 Aufgaben gratis, direkt im Browser.
+              Mathe, Deutsch und NMG in kurzen Aufgaben mit direktem Feedback. Kostenlos starten, direkt im Browser.
             </p>
             <div className="mt-5 grid gap-3 text-sm font-semibold text-gray-700 sm:grid-cols-3">
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Ohne Kreditkarte</div>
@@ -320,13 +321,20 @@ export default function AdsPrimarschuleClient() {
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Preis</p>
-            <h2 className="mt-2 text-3xl font-black text-gray-950">20 Aufgaben gratis, danach 7 Tage Premium testen.</h2>
+            <h2 className="mt-2 text-3xl font-black text-gray-950">Kostenlos starten und danach Premium testen.</h2>
           </div>
+          <LifetimeFounderOffer
+            uid={uid}
+            checkoutSource="primarschule_uebungen_schooltime_offer"
+            pageKey="primarschule_uebungen"
+            pagePath="/primarschule-uebungen"
+            className="mt-8"
+          />
           <div className="mt-8 grid items-stretch gap-5 md:grid-cols-3">
             <div className="flex min-h-[220px] flex-col rounded-2xl border-2 border-gray-100 bg-white p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900">Kostenlos</h3>
               <p className="mt-2 text-3xl font-black text-gray-950">CHF 0</p>
-              <p className="mt-2 text-sm leading-6 text-gray-500">20 Aufgaben gratis testen, ohne Kreditkarte.</p>
+              <p className="mt-2 text-sm leading-6 text-gray-500">Kostenlos testen, ohne Kreditkarte.</p>
               <Link
                 href={freeTrialUrl}
                 onClick={() => trackAdsLpCtaClick("free", "pricing", freeTrialUrl)}
@@ -379,7 +387,7 @@ export default function AdsPrimarschuleClient() {
             {[
               ["Ist Cleverli nach Lehrplan 21 aufgebaut?", "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet."],
               ["Muss ich eine App installieren?", "Nein. Cleverli läuft direkt im Browser auf Handy, Tablet und Computer."],
-              ["Kann ich zuerst testen?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
+              ["Kann ich zuerst testen?", "Ja. Du kannst Cleverli kostenlos und ohne Kreditkarte ausprobieren."],
               ["Gilt der Jahrespreis pro Kind?", "Nein. Der Jahrespreis gilt für die Familie mit bis zu 3 Kinderprofilen."],
             ].map(([q, a]) => (
               <div key={q} className="rounded-2xl border border-gray-200 bg-white p-5">
@@ -394,7 +402,7 @@ export default function AdsPrimarschuleClient() {
       <section className="bg-green-700 px-4 py-12 text-center text-white sm:px-6 sm:py-16">
         <Image src="/cleverli-try-now.png" alt="" width={120} height={120} className="mx-auto mb-4 drop-shadow-lg" />
         <h2 className="mx-auto max-w-2xl text-3xl font-black">Bereit für eine kurze Übungsrunde daheim?</h2>
-        <p className="mx-auto mt-3 max-w-xl text-green-50">Teste 20 Aufgaben gratis oder schalte alle Übungen für die ganze Familie frei.</p>
+        <p className="mx-auto mt-3 max-w-xl text-green-50">Teste Cleverli kostenlos oder schalte alle Übungen für die ganze Familie frei.</p>
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
           <button
             type="button"

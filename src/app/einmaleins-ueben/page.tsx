@@ -4,7 +4,7 @@ import { einmaleinsUebenConfig } from "../ads/intent/configs";
 
 export const metadata: Metadata = {
   title: "Einmaleins üben online - 1x1 Aufgaben Schweiz",
-  description: "Einmaleins online üben: 1x1-Reihen, gemischte Aufgaben und Divisionen für die Schweizer Primarschule. 20 Aufgaben gratis testen.",
+  description: "Einmaleins online üben: 1x1-Reihen, gemischte Aufgaben und Divisionen für die Schweizer Primarschule. Kostenlos testen.",
   robots: {
     index: true,
     follow: true,

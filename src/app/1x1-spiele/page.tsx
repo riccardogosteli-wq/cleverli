@@ -4,7 +4,7 @@ import { einsMalEinsSpieleConfig } from "../ads/intent/configs";
 
 export const metadata: Metadata = {
   title: "1x1 Spiele online - Einmaleins spielerisch üben",
-  description: "1x1 Spiele für Kinder: Einmaleins mit Memory, Lückenaufgaben und kurzen Runden spielerisch üben. 20 Aufgaben gratis im Browser testen.",
+  description: "1x1 Spiele für Kinder: Einmaleins mit Memory, Lückenaufgaben und kurzen Runden spielerisch üben. Kostenlos im Browser testen.",
   robots: {
     index: true,
     follow: true,

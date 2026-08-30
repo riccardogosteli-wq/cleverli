@@ -5,6 +5,7 @@ import { trackAdsLpCtaClick } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkoutClient";
 import { useSession } from "@/hooks/useSession";
 import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
+import LifetimeFounderOffer from "@/components/LifetimeFounderOffer";
 
 type Plan = "monthly" | "yearly";
 
@@ -47,7 +48,7 @@ export default function AdsTrialLandingPage({
   heroImage = "/images/scenes/cleverli-teach-kids.jpg",
   imageAlt = "Cleverli Premium Vorschau",
   trialCtaLabel = "7 Tage kostenlos testen",
-  freeCtaLabel = "Erst 20 Aufgaben gratis",
+  freeCtaLabel = "Kostenlos mit Übungen starten",
 }: TrialLandingPageProps) {
   const { session } = useSession();
   const uid = session?.userId ?? "";
@@ -158,6 +159,13 @@ export default function AdsTrialLandingPage({
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Abo wählen</p>
             <h2 className="mt-2 text-3xl font-black text-gray-950">7 Tage kostenlos testen. Wähle dein Abo.</h2>
           </div>
+          <LifetimeFounderOffer
+            uid={uid}
+            checkoutSource={`${checkoutSource}_schooltime_offer`}
+            pageKey={pageKey}
+            pagePath={pagePath}
+            className="mt-8"
+          />
           <div className="mt-8 grid items-stretch gap-5 md:grid-cols-2">
             <div className="flex min-h-[260px] flex-col rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900">Monatlich</h3>
@@ -222,7 +230,7 @@ export default function AdsTrialLandingPage({
           onClick={() => startFreePractice("bottom")}
           className="mt-3 rounded-full border-2 border-white px-7 py-4 text-base font-bold text-white hover:bg-green-800"
         >
-          Zuerst 20 Aufgaben testen
+          Kostenlos mit Übungen starten
         </button>
       </section>
     </main>

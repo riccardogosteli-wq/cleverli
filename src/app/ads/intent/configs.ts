@@ -3,7 +3,7 @@ import type { IntentLandingPageConfig } from "./IntentLandingPage";
 export const einmaleinsUebenConfig: IntentLandingPageConfig = {
   pageKey: "einmaleins_ueben",
   path: "/einmaleins-ueben",
-  eyebrow: "Einmaleins üben · 20 Aufgaben gratis",
+  eyebrow: "Einmaleins üben · Kostenlos testen",
   title: "Einmaleins online üben",
   lead: "Kurze 1x1-Aufgaben für die Schweizer Primarschule. Dein Kind übt einzelne Reihen, gemischte Aufgaben und kleine Textaufgaben direkt im Browser.",
   badges: ["2er bis 10er-Reihen", "Gemischt üben", "Nach Lehrplan 21"],
@@ -99,7 +99,7 @@ export const einmaleinsUebenConfig: IntentLandingPageConfig = {
     ["Welche Malreihen kann mein Kind üben?", "Cleverli deckt einfache Reihen, gemischte 1x1-Aufgaben und passende Divisionen ab."],
     ["Passt das für die 2. Klasse?", "Ja. Das Einmaleins wird typischerweise ab der 2. Klasse aufgebaut und später regelmässig gefestigt."],
     ["Kann mein Kind die Aufgaben hören?", "Ja. In den Übungen gibt es eine Vorlesen-Funktion und zusätzliche Tipps."],
-    ["Kann ich zuerst testen?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
+    ["Kann ich zuerst testen?", "Ja. Du kannst Cleverli kostenlos und ohne Kreditkarte ausprobieren."],
   ],
 };
 
@@ -109,7 +109,7 @@ export const einsMalEinsSpieleConfig: IntentLandingPageConfig = {
   eyebrow: "1x1 Spiele · spielerisch üben",
   title: "1x1 Spiele online üben",
   lead: "Für Kinder, die das Einmaleins lieber spielerisch üben: kleine Aufgaben, klare Rückmeldung, Vorlesen und Tipps, wenn sie nicht weiterkommen.",
-  badges: ["Spielerisch üben", "Ohne Installation", "20 Aufgaben gratis"],
+  badges: ["Spielerisch üben", "Ohne Installation", "Kostenlos testen"],
   freeTrialUrl: "/learn/2/math/einmaleins",
   checkoutSource: "eins_mal_eins_spiele",
   heroImage: "/images/scenes/cleverli-chalkboard-quest.jpg",
@@ -206,7 +206,7 @@ export const einsMalEinsSpieleConfig: IntentLandingPageConfig = {
     ["Sind das echte Mathe-Übungen oder nur Spiele?", "Es sind echte Einmaleins-Aufgaben mit spielerischer Oberfläche, Feedback und Fortschritt."],
     ["Für welche Klasse passt das?", "Vor allem für Kinder, die das 1x1 in der Primarschule aufbauen oder festigen."],
     ["Kann mein Kind alleine üben?", "Ja. Vorlesen, Tipps und sofortige Rückmeldung helfen beim selbstständigen Üben."],
-    ["Was kostet es?", "20 Aufgaben sind gratis. Premium kostet CHF 9.90/Monat oder CHF 99/Jahr für die Familie."],
+    ["Was kostet es?", "Du kannst Cleverli kostenlos testen. Premium kostet CHF 9.90/Monat oder CHF 99/Jahr für die Familie."],
   ],
 };
 
@@ -216,7 +216,7 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
   eyebrow: "Mathe Übungen für Kinder · Primarschule",
   title: "Mathe Übungen für Kinder in der Primarschule",
   lead: "Kurze Online-Aufgaben für Rechnen, Einmaleins, Geometrie und Textaufgaben. Kinder bekommen direkt Feedback, Eltern sehen den Fortschritt.",
-  badges: ["1.–6. Klasse", "Rechnen, Geometrie, Zeit", "20 Aufgaben gratis"],
+  badges: ["1.–6. Klasse", "Rechnen, Geometrie, Zeit", "Kostenlos testen"],
   freeTrialUrl: "/learn/2/math/addition-bis-20",
   checkoutSource: "mathe_uebungen_kinder",
   heroImage: "/images/scenes/cleverli-solution.jpg",
@@ -284,7 +284,7 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
     ["Welche Mathe-Themen sind drin?", "Zahlen, Addition, Subtraktion, Einmaleins, Division, Geometrie, Uhrzeit, Daten und weitere Primarschul-Themen."],
     ["Ist Cleverli nach Lehrplan 21 aufgebaut?", "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet."],
     ["Muss mein Kind angemeldet sein?", "Zum kostenlosen Start nicht zwingend. Für Fortschritt über mehrere Geräte ist ein Konto sinnvoll."],
-    ["Kann ich zuerst testen?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
+    ["Kann ich zuerst testen?", "Ja. Du kannst Cleverli kostenlos und ohne Kreditkarte ausprobieren."],
   ],
 };
 
@@ -294,7 +294,7 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
   eyebrow: "Deutsch Übungen für Kinder · Primarschule",
   title: "Deutsch üben: Lesen, Rechtschreibung und Grammatik",
   lead: "Kurze Deutsch-Runden für Kinder der 1.–6. Klasse: lesen verstehen, Wörter richtig schreiben und Grammatik sicher anwenden.",
-  badges: ["1.–6. Klasse", "Lesen & Grammatik", "20 Aufgaben gratis"],
+  badges: ["1.–6. Klasse", "Lesen & Grammatik", "Kostenlos testen"],
   freeTrialUrl: "/learn/1/german/saetze-lesen",
   checkoutSource: "deutsch_uebungen_kinder",
   heroImage: "/images/scenes/cleverli-reading-abc.jpg",
@@ -402,7 +402,7 @@ export const lesenLernenConfig: IntentLandingPageConfig = {
   eyebrow: "Lesen lernen · 1. und 2. Klasse",
   title: "Lesen lernen online üben",
   lead: "Kurze Leseübungen für Kinder in der Primarschule: Buchstaben erkennen, Wörter verstehen und erste Sätze sicher lesen.",
-  badges: ["Buchstaben & Laute", "Wörter und Sätze", "20 Aufgaben gratis"],
+  badges: ["Buchstaben & Laute", "Wörter und Sätze", "Kostenlos testen"],
   freeTrialUrl: "/learn/1/german/saetze-lesen",
   checkoutSource: "lesen_lernen",
   heroImage: "/images/scenes/cleverli-reading-abc.jpg",
@@ -499,6 +499,6 @@ export const lesenLernenConfig: IntentLandingPageConfig = {
     ["Für wen ist diese Seite gedacht?", "Für Kinder, die Buchstaben, Wörter und erste Sätze lesen lernen oder in der 1. und 2. Klasse mehr Übung brauchen."],
     ["Ist das dasselbe wie Deutsch Übungen?", "Nein. Diese Seite fokussiert gezielt auf den Leseeinstieg: Buchstaben, Wörter, Sätze und erstes Textverständnis."],
     ["Kann mein Kind die Aufgaben hören?", "Ja. Cleverli kann Aufgaben vorlesen und gibt Tipps, wenn ein Kind nicht weiterkommt."],
-    ["Kann ich gratis starten?", "Ja. Die ersten 20 Aufgaben sind gratis und ohne Kreditkarte verfügbar."],
+    ["Kann ich gratis starten?", "Ja. Du kannst Cleverli kostenlos und ohne Kreditkarte ausprobieren."],
   ],
 };

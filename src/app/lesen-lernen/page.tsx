@@ -5,7 +5,7 @@ import { lesenLernenConfig } from "../ads/intent/configs";
 export const metadata: Metadata = {
   title: "Lesen lernen online üben - Primarschule Schweiz",
   description:
-    "Lesen lernen mit kurzen Online-Übungen für Kinder: Buchstaben, Wörter und erste Sätze. 20 Aufgaben gratis testen.",
+    "Lesen lernen mit kurzen Online-Übungen für Kinder: Buchstaben, Wörter und erste Sätze. Kostenlos testen.",
   robots: {
     index: true,
     follow: true,

@@ -176,7 +176,7 @@ export function DashboardGuestPreview() {
           { icon: "🎮", text: t4(lang, "Interaktive Übungen", "Exercices interactifs", "Esercizi interattivi", "Interactive exercises") },
           { icon: "🏆", text: t4(lang, "Trophäen & Level", "Trophées & niveaux", "Trofei e livelli", "Trophies & levels") },
           { icon: "⚡", text: t4(lang, "Tagesaufgabe", "Exercice du jour", "Esercizio del giorno", "Daily challenge") },
-          { icon: "🆓", text: t4(lang, "20 Aufgaben gratis", "20 exercices gratuits", "20 esercizi gratuiti", "20 free exercises") },
+          { icon: "🆓", text: t4(lang, "Kostenlos testen", "Tester gratuitement", "Prova gratuitamente", "Try for free") },
         ].map(f => (
           <div key={f.text} className="bg-white border border-gray-200 rounded-xl p-3 flex items-center gap-2 font-medium text-gray-700">
             <span className="text-xl">{f.icon}</span> {f.text}

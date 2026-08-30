@@ -8,6 +8,7 @@ import { useSession } from "@/hooks/useSession";
 import { useAdsLpVariant } from "@/lib/adsAbTest";
 import AdsTrialLandingPage from "@/app/ads/trial/AdsTrialLandingPage";
 import GameExercisePreview from "@/app/ads/components/GameExercisePreview";
+import LifetimeFounderOffer from "@/components/LifetimeFounderOffer";
 import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
 import { getGradeSubjectSeoLinks } from "@/lib/gradeSubjectSeo";
 
@@ -79,7 +80,7 @@ const priceCards = [
     plan: "free" as const,
     title: "Kostenlos",
     price: "CHF 0",
-    body: "20 Aufgaben gratis testen, ohne Kreditkarte.",
+    body: "Kostenlos testen, ohne Kreditkarte.",
   },
   {
     plan: "monthly" as const,
@@ -277,7 +278,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
                 onClick={() => trackFreeClick("hero")}
                 className="rounded-full bg-green-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-green-100 transition-colors hover:bg-green-800"
               >
-                20 Aufgaben gratis starten
+                Kostenlos starten
               </Link>
               <button
                 type="button"
@@ -420,8 +421,15 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Preis</p>
-            <h2 className="mt-2 text-3xl font-black text-gray-950">20 Aufgaben gratis, danach ein Familienabo.</h2>
+            <h2 className="mt-2 text-3xl font-black text-gray-950">Kostenlos testen, danach das passende Familienangebot wählen.</h2>
           </div>
+          <LifetimeFounderOffer
+            uid={uid}
+            checkoutSource={`${config.checkoutSource}_schooltime_offer`}
+            pageKey={config.pageKey}
+            pagePath={config.path}
+            className="mt-8"
+          />
           <div className="mt-8 grid items-stretch gap-5 md:grid-cols-3">
             {priceCards.map((card) => {
               const isYearly = card.plan === "yearly";
