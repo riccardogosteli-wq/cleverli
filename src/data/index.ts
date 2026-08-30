@@ -39,6 +39,7 @@ import { applyGermanEditorialRepairs } from "./germanEditorialRepairs";
 const grade4Science = [...grade4NT, ...grade4RZG];
 const grade5Science = [...grade5NT, ...grade5RZG];
 const grade6Science = [...grade6NT, ...grade6RZG];
+const finalTopicsCache = new Map<string, Topic[]>();
 
 export {
   grade1Math, grade1German, grade1Science,
@@ -77,7 +78,10 @@ export function getTopicsBeforeExerciseIdMigration(grade: number, subject: strin
 }
 
 export function getTopics(grade: number, subject: string): Topic[] {
-  return applyGermanEditorialRepairs(
+  const cacheKey = `${grade}-${subject}`;
+  const cached = finalTopicsCache.get(cacheKey);
+  if (cached) return cached;
+  const topics = applyGermanEditorialRepairs(
     grade,
     subject,
     getTopicsAfterExerciseIdMigrationBeforeEditorial(grade, subject),
@@ -85,6 +89,8 @@ export function getTopics(grade: number, subject: string): Topic[] {
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
   }));
+  finalTopicsCache.set(cacheKey, topics);
+  return topics;
 }
 
 export function getTopicsAfterExerciseIdMigrationBeforeEditorial(grade: number, subject: string): Topic[] {
