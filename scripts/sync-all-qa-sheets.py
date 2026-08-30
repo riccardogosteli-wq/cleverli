@@ -420,6 +420,41 @@ def normalize(values: list, width: int) -> list[str]:
     return [str(value) if value is not None else "" for value in padded[:width]]
 
 
+def canonical_audit_values(values: list[str]) -> list[str]:
+    """Return the current status vocabulary used by all Audit findings tabs."""
+    row = normalize(values, 6)
+    old_status, category = row[0], row[1]
+    if category == "Answer-option quality":
+        row[0] = "Verified"
+    elif old_status in {"Fixed", "Structural", "High", "Medium", "Low"}:
+        row[0] = "Resolved"
+    elif old_status == "Review":
+        if category.startswith("Final German audit") and category.endswith("completion"):
+            row[0] = "Superseded"
+        elif category.startswith("German repair completion"):
+            row[0] = "Verified"
+        elif category == "LP21 competency coverage":
+            row[0] = "Open – roadmap"
+        else:
+            row[0] = "Open – review"
+    return row
+
+
+def find_audit_row(rows: list[list], expected: list[str]) -> int:
+    """Locate findings by stable semantic fields, never by a hard-coded row."""
+    wanted = normalize(expected, 6)
+    matches = [
+        index
+        for index, actual in enumerate(rows, start=1)
+        if normalize(actual, 6)[1:3] == wanted[1:3]
+    ]
+    if len(matches) != 1:
+        raise RuntimeError(
+            f"Could not uniquely locate audit finding {wanted[1]!r} / {wanted[2]!r}: {matches}"
+        )
+    return matches[0]
+
+
 def main_values(row: dict) -> list:
     options = (row.get("options") or [])[:4]
     hints = (row.get("hints") or [])[:2]
@@ -716,11 +751,17 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
             special_updates.append({"range": f"'Special exercises'!A{sheet_row}:J{sheet_row}", "values": [expected]})
 
     audit_updates = []
-    current_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F100")
-    for audit_row, expected in AUDIT_UPDATES.get(grade, {}).items():
-        actual = current_audit[audit_row - 1] if audit_row <= len(current_audit) else []
-        if normalize(actual, 6) != normalize(expected, 6):
-            audit_updates.append({"range": f"'Audit findings'!A{audit_row}:F{audit_row}", "values": [expected]})
+    current_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F200")
+    if normalize(current_audit[0] if current_audit else [], 6)[0] != "Status":
+        audit_updates.append({"range": "'Audit findings'!A1:F1", "values": [[
+            "Status", "Category", "Subject", "Topic / exercise IDs", "Finding", "Recommended action",
+        ]]})
+    for expected in AUDIT_UPDATES.get(grade, {}).values():
+        canonical = canonical_audit_values(expected)
+        audit_row = find_audit_row(current_audit, canonical)
+        actual = current_audit[audit_row - 1]
+        if normalize(actual, 6) != canonical:
+            audit_updates.append({"range": f"'Audit findings'!A{audit_row}:F{audit_row}", "values": [canonical]})
 
     if apply:
         insert_sheet_rows(spreadsheet_id, main_tab, main_insert_blocks)
@@ -750,10 +791,14 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
     if len(reread_special) != len(special_rows) + 1:
         special_mismatches.extend(range(len(reread_special) + 1, len(special_rows) + 2))
     audit_mismatches = []
-    reread_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F100")
-    for audit_row, expected in AUDIT_UPDATES.get(grade, {}).items():
-        actual = reread_audit[audit_row - 1] if audit_row <= len(reread_audit) else []
-        if normalize(actual, 6) != normalize(expected, 6):
+    reread_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F200")
+    if normalize(reread_audit[0] if reread_audit else [], 6)[0] != "Status":
+        audit_mismatches.append(1)
+    for expected in AUDIT_UPDATES.get(grade, {}).values():
+        canonical = canonical_audit_values(expected)
+        audit_row = find_audit_row(reread_audit, canonical)
+        actual = reread_audit[audit_row - 1]
+        if normalize(actual, 6) != canonical:
             audit_mismatches.append(audit_row)
 
     marker_failures = verify_markers(spreadsheet_id, main_tab, source_rows)
