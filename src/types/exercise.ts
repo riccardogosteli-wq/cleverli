@@ -9,7 +9,8 @@ export interface Exercise {
   questionEN?: string;
   questionFR?: string;
   questionIT?: string;
-  listeningText?: string;  // hidden German audio stimulus for listening-comprehension tasks
+  listeningText?: string;  // hidden audio stimulus for listening-comprehension tasks
+  listeningLanguage?: "de" | "fr" | "it" | "en";
   options?: string[];
   optionsEN?: string[];
   optionsFR?: string[];
@@ -70,6 +71,8 @@ export interface Topic {
   title: string;
   emoji: string;
   exercises: Exercise[];
+  /** Official curriculum competency levels primarily practised by this topic. */
+  curriculumCodes?: string[];
 }
 
 export interface Subject {

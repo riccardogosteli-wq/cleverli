@@ -216,7 +216,7 @@ export async function loadProfileFromSupabase(childId: string): Promise<Partial<
       .from("child_progress")
       .select("*")
       .eq("child_id", childId)
-      .single();
+      .maybeSingle();
     if (error || !data) return null;
 
     return {

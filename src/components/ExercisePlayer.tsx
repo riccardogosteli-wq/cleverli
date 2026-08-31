@@ -929,10 +929,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           key={cardKey}
           style={{ animation: "slideIn 0.25s cubic-bezier(.34,1.56,.64,1)" }}
         >
-          {/* Listening tasks play a hidden German stimulus; other tasks read the visible question. */}
+          {/* Listening tasks play their hidden stimulus in its declared language; other tasks read the visible question. */}
           {isSupported && (
             <button
-              onClick={() => speak(sourceCurrent.listeningText ?? (subject === "math" || subject === "science" ? current.question : sourceCurrent.question), sourceCurrent.listeningText ? "de" : exerciseSpeechLang)}
+              onClick={() => speak(
+                sourceCurrent.listeningText ?? (subject === "math" || subject === "science" ? current.question : sourceCurrent.question),
+                sourceCurrent.listeningText ? (sourceCurrent.listeningLanguage ?? "de") : exerciseSpeechLang,
+              )}
               className="flex items-center justify-center gap-2 w-full text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-xl py-2.5 px-3 hover:bg-green-100 active:scale-95 transition-all"
               title={current.listeningText ? (lang === "fr" ? "Écouter le texte" : lang === "it" ? "Ascolta il testo" : lang === "en" ? "Play audio text" : "Hörtext abspielen") : tr("readAloudTitle")}
               aria-label={current.listeningText ? (lang === "fr" ? "Écouter le texte" : lang === "it" ? "Ascolta il testo" : lang === "en" ? "Play audio text" : "Hörtext abspielen") : tr("readAloudTitle")}

@@ -44,13 +44,13 @@ for (const canton of e3f5) {
 for (const canton of f3e5) {
   const resolved = resolveCurriculumProfile(selection(canton));
   assert.equal(resolved.id, "lp21_f3_e5", `${canton} must use F3/E5`);
-  assert.equal(resolved.supported, false, `${canton} waits for French grades 3–4`);
+  assert.equal(resolved.supported, true, `${canton} is covered by the French grades 3–4 catalogue`);
   assert.deepEqual(getCurriculumSubjectIds(3, selection(canton)).slice(-1), ["french"]);
 }
 assert.deepEqual(
   getAvailableCurriculumSubjectIds(3, selection("BE")),
-  ["math", "german", "science", "english"],
-  "unsupported profiles must retain the legacy catalogue until their content is ready",
+  ["math", "german", "science", "french"],
+  "French-first profiles must replace English with French in grade 3",
 );
 
 assert.equal(resolveCurriculumProfile(selection("AI")).id, "lp21_e3_only");

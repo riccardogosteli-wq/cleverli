@@ -8,11 +8,13 @@ import grade3Math from "./grade3/math";
 import grade3German from "./grade3/german";
 import grade3Science from "./grade3/science";
 import grade3English from "./grade3/english";
+import grade3French from "./grade3/french";
 import grade4Math from "./grade4/math";
 import grade4German from "./grade4/german";
 import grade4NT from "./grade4/nt";
 import grade4RZG from "./grade4/rzg";
 import grade4English from "./grade4/english";
+import grade4French from "./grade4/french";
 import grade5Math from "./grade5/math";
 import grade5German from "./grade5/german";
 import grade5NT from "./grade5/nt";
@@ -44,8 +46,8 @@ const finalTopicsCache = new Map<string, Topic[]>();
 export {
   grade1Math, grade1German, grade1Science,
   grade2Math, grade2German, grade2Science,
-  grade3Math, grade3German, grade3Science, grade3English,
-  grade4Math, grade4German, grade4NT, grade4RZG, grade4English,
+  grade3Math, grade3German, grade3Science, grade3English, grade3French,
+  grade4Math, grade4German, grade4NT, grade4RZG, grade4English, grade4French,
   grade5Math, grade5German, grade5NT, grade5RZG, grade5French, grade5English,
   grade6Math, grade6German, grade6NT, grade6RZG, grade6French, grade6English,
 };
@@ -55,9 +57,9 @@ export function getTopicsBeforeExerciseIdMigration(grade: number, subject: strin
     "1-math": grade1Math, "1-german": grade1German, "1-science": grade1Science,
     "2-math": grade2Math, "2-german": grade2German, "2-science": grade2Science,
     "3-math": grade3Math, "3-german": grade3German, "3-science": grade3Science,
-    "3-english": grade3English,
+    "3-english": grade3English, "3-french": grade3French,
     "4-math": grade4Math, "4-german": grade4German, "4-nt": grade4NT,
-    "4-rzg": grade4RZG, "4-science": grade4Science, "4-english": grade4English,
+    "4-rzg": grade4RZG, "4-science": grade4Science, "4-english": grade4English, "4-french": grade4French,
     "5-math": grade5Math, "5-german": grade5German, "5-nt": grade5NT,
     "5-rzg": grade5RZG, "5-science": grade5Science, "5-french": grade5French, "5-english": grade5English,
     "6-math": grade6Math, "6-german": grade6German, "6-nt": grade6NT,
@@ -130,6 +132,7 @@ export function getSubjects(grade: number) {
       { id: "german",  emoji: "📖", color: "bg-yellow-50 border-yellow-300 text-yellow-700" },
       { id: "science", emoji: "🌍", color: "bg-green-50 border-green-300 text-green-800" },
       { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
+      { id: "french",  emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
     ];
   }
   if (grade === 4) {
@@ -138,6 +141,7 @@ export function getSubjects(grade: number) {
       { id: "german",  emoji: "📖", color: "bg-yellow-50 border-yellow-300 text-yellow-700" },
       { id: "science", emoji: "🌍", color: "bg-green-50 border-green-300 text-green-800" },
       { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
+      { id: "french",  emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
     ];
   }
   // grades 5-6

@@ -34,6 +34,7 @@ export function getCatalogSubjects(grade: number) {
     return [
       ...CORE_SUBJECTS,
       { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
+      { id: "french", emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
     ];
   }
   return [

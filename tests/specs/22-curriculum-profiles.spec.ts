@@ -16,6 +16,8 @@ type StoredCurriculum = {
 
 async function seedChild(page: Page, grade: number, curriculum?: StoredCurriculum) {
   await page.context().clearCookies();
+  await page.route("**/rest/v1/child_progress**", route => route.fulfill({ status: 200, json: null }));
+  await page.route("**/rest/v1/topic_progress**", route => route.fulfill({ status: 200, json: [] }));
   await page.goto("/");
   await page.evaluate(() => localStorage.clear());
   await page.goto("/login");
@@ -54,6 +56,14 @@ test.describe("Curriculum profile rollout", () => {
     await expect(page.getByTestId("curriculum-canton")).toHaveCount(0);
   });
 
+  test("rollout flag keeps French grades 3–4 routes unavailable by default", async ({ page }) => {
+    test.skip(process.env.CURRICULUM_EXPECT_DISABLED !== "1", "Run against a server built without the rollout flag");
+    const subjectResponse = await page.goto("/learn/3/french");
+    expect(subjectResponse?.status()).toBe(404);
+    const topicResponse = await page.goto("/learn/4/french/journee-heure-4");
+    expect(topicResponse?.status()).toBe(404);
+  });
+
   test("legacy children keep today's E3/F5 subject visibility", async ({ page }) => {
     await seedChild(page, 3);
     await expect(page.getByTestId("subject-english")).toBeVisible();
@@ -82,15 +92,64 @@ test.describe("Curriculum profile rollout", () => {
     await expect(page.getByTestId("subject-french")).toHaveCount(0);
   });
 
-  test("unsupported F3/E5 selection safely retains the legacy catalogue", async ({ page }) => {
+  test("supported F3/E5 selection shows French instead of English in grade 3", async ({ page }) => {
     await seedChild(page, 3, {
       canton: "BE",
       schoolLanguage: "de",
       curriculumSystem: "lp21",
       version: 1,
     });
-    await expect(page.getByTestId("subject-english")).toBeVisible();
-    await expect(page.getByTestId("subject-french")).toHaveCount(0);
+    await expect(page.getByTestId("subject-french")).toBeVisible();
+    await expect(page.getByTestId("subject-english")).toHaveCount(0);
+  });
+
+  test("French-first grade 3 has nine responsive topics and a working exercise route", async ({ page }) => {
+    const consoleErrors: string[] = [];
+    page.on("console", message => {
+      if (message.type() === "error") consoleErrors.push(message.text());
+    });
+    await seedChild(page, 3, {
+      canton: "BE",
+      schoolLanguage: "de",
+      curriculumSystem: "lp21",
+      version: 1,
+    });
+    await page.getByTestId("subject-french").click();
+    const topicLinks = page.locator('a[href^="/learn/3/french/"]');
+    await expect(topicLinks).toHaveCount(9);
+    await expect(page.getByText("Bonjour et la classe")).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await page.screenshot({ path: path.join(QA_DIR, "mobile-french-grade3-topics.png"), fullPage: true });
+
+    await page.goto("/learn/3/french/bonjour-classe-3");
+    await expect(page).toHaveURL(/\/learn\/3\/french\/bonjour-classe-3/);
+    await expect(page.getByRole("heading", { name: "Bonjour et la classe", exact: true })).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await page.locator('button[data-answer="bonjour"]').click();
+    await page.getByRole("button", { name: /^Überprüfen/ }).click();
+    await expect(page.getByRole("button", { name: /^Weiter/ })).toBeVisible({ timeout: 4_000 });
+    await expect(page.getByText("Noch nicht richtig – schau dir die Lösung an", { exact: true })).toHaveCount(0);
+    expect(consoleErrors).toEqual([]);
+    await page.screenshot({ path: path.join(QA_DIR, "mobile-french-grade3-topic.png"), fullPage: true });
+  });
+
+  test("French grade 4 subject page is responsive on desktop", async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    const consoleErrors: string[] = [];
+    page.on("console", message => {
+      if (message.type() === "error") consoleErrors.push(message.text());
+    });
+    const response = await page.goto("/learn/4/french");
+    expect(response?.status()).toBe(200);
+    await expect(page.getByRole("heading", { name: "Französisch — 4. Klasse", exact: true })).toBeVisible();
+    const uniqueTopicHrefs = await page.locator('a[href^="/learn/4/french/"]').evaluateAll((links) =>
+      [...new Set(links.map((link) => link.getAttribute("href")))],
+    );
+    expect(uniqueTopicHrefs).toHaveLength(9);
+    await expect(page.getByRole("link", { name: /Ma journée et l'heure 50/ })).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    expect(consoleErrors).toEqual([]);
+    await page.screenshot({ path: path.join(QA_DIR, "desktop-french-grade4-topics.png"), fullPage: true });
   });
 
   test("selector handles multilingual and Graubünden requirements", async ({ page }) => {
@@ -104,7 +163,7 @@ test.describe("Curriculum profile rollout", () => {
 
     await canton.selectOption("BE");
     await expect(page.getByTestId("curriculum-school-language")).toBeVisible();
-    await expect(page.getByTestId("curriculum-profile-status")).toContainText("Vorbereitung");
+    await expect(page.getByTestId("curriculum-profile-status")).toContainText("verfügbar");
 
     await canton.selectOption("GR");
     await expect(page.getByTestId("curriculum-school-language")).toBeVisible();

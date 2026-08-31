@@ -257,7 +257,7 @@ export function resolveCurriculumProfile(
   if (F3_E5_CANTONS.has(selection.canton)) {
     return withLanguageLessonPlan({
       id: "lp21_f3_e5",
-      supported: false,
+      supported: true,
       firstForeignLanguage: { language: "french", startGrade: 3, required: true },
       secondForeignLanguage: { language: "english", startGrade: 5, required: true },
       miDelivery,

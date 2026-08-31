@@ -2,7 +2,13 @@ import { writeFileSync } from "node:fs";
 
 const API_BASE = "https://api.lehrplan.ch/getData.php";
 const ROOT_UID = "00000000000000000000000000000000";
-const TARGET_CODES = new Set(["D", "FS1E", "FS2F", "MA", "NMG", "MI"]);
+const TARGET_CODES = new Set(
+  (process.env.LP21_API_TARGET_CODES ?? "D,FS1E,FS2F,MA,NMG,MI")
+    .split(",")
+    .map((code) => code.trim())
+    .filter(Boolean),
+);
+const CANTON = process.env.LP21_API_CANTON ?? "AG";
 const API_USER = process.env.LP21_API_USER ?? "";
 const API_PASS = process.env.LP21_API_PASS ?? "";
 const OUTPUT = process.env.LP21_API_OUTPUT ?? "/tmp/cleverli-lp21-live.json";
@@ -26,7 +32,7 @@ function childUid(url: string): string | null {
 
 async function fetchNode(uid: string, attempt = 1): Promise<ApiNode> {
   const url = new URL(API_BASE);
-  url.searchParams.set("kanton", "AG");
+  url.searchParams.set("kanton", CANTON);
   url.searchParams.set("uid", uid);
   url.searchParams.set("user", API_USER);
   url.searchParams.set("password", API_PASS);
@@ -99,7 +105,7 @@ async function main(): Promise<void> {
   const points = [...nodes.values()].filter((node) => node.strukturtyp === "Aufzaehlungspunkt").length;
   const snapshot = {
     source: API_BASE,
-    canton: "AG",
+    canton: CANTON,
     language: "DE",
     fetchedAt: new Date().toISOString(),
     rootCodes: roots.map((node) => node.code),

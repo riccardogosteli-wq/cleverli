@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getTopicSummaries } from "@/data/topicCatalog";
 import SubjectPageClient from "./SubjectPageClient";
-import { permanentRedirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import { getGradeName, getSubjectSeo } from "@/lib/seoContent";
 import { getGradeSubjectSeoLinks } from "@/lib/gradeSubjectSeo";
@@ -107,6 +107,9 @@ const BASE = "https://www.cleverli.ch";
 
 export default async function SubjectPage({ params }: Props) {
   const { grade, subject } = await params;
+  if (subject === "french" && [3, 4].includes(parseInt(grade)) && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ENABLED !== "true") {
+    notFound();
+  }
   if (parseInt(grade) <= 6 && (subject === "nt" || subject === "rzg")) {
     permanentRedirect(`/learn/${grade}/science`);
   }
