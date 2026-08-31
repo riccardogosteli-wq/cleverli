@@ -14,7 +14,7 @@ import {
 import { getLevelForXp } from "@/lib/xp";
 import CurriculumSelector from "@/components/CurriculumSelector";
 import type { CurriculumSelection } from "@/lib/curriculumProfiles";
-import { isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
+import { getCurriculumRolloutContext, isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
 import { getAnonymousSessionId } from "@/lib/attribution";
 import { captureProductEvent } from "@/lib/monitoring";
 import { createChildInSupabase, deleteChildFromSupabase } from "@/lib/progressSync";
@@ -76,7 +76,7 @@ export default function FamilyPage() {
 
   useEffect(() => {
     refresh();
-    setCurriculumEnabled(isCurriculumProfilesRolloutEnabled(getAnonymousSessionId()));
+    setCurriculumEnabled(isCurriculumProfilesRolloutEnabled(getCurriculumRolloutContext(getAnonymousSessionId())));
   }, [refresh]);
 
   function handleAdd() {

@@ -36,6 +36,9 @@ const SUBJECT_NAMES: Record<string, { de: string; fr: string; it: string; en: st
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { grade, subject, topic: topicId } = await params;
+  const isInternalPrimaryFrenchRollout = subject === "french"
+    && [3, 4].includes(parseInt(grade))
+    && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ROLLOUT_MODE !== "all";
   const topics = getTopics(parseInt(grade), subject);
   const topic = topics.find(t => t.id === topicId);
   if (!topic) return { title: "Thema nicht gefunden – Cleverli", robots: { index: false } };
@@ -53,6 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: `${BASE}/og-cleverli-primarschule-2026.png`, width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
     },
     alternates: { canonical: `https://www.cleverli.ch/learn/${grade}/${subject}/${topicId}` },
+    robots: isInternalPrimaryFrenchRollout ? { index: false, follow: false } : undefined,
   };
 }
 

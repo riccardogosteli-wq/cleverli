@@ -1,5 +1,7 @@
 import { defineConfig } from "@playwright/test";
 
+const vercelProtectionBypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
+
 export default defineConfig({
   testDir: "./tests",
   // Resolve @/ imports from src/ (same as Next.js tsconfig paths)
@@ -22,6 +24,12 @@ export default defineConfig({
     video: "retain-on-failure",
     viewport: { width: 390, height: 844 },   // iPhone 14 Pro — default for all tests
     locale: "de-CH",
+    extraHTTPHeaders: vercelProtectionBypass
+      ? {
+          "x-vercel-protection-bypass": vercelProtectionBypass,
+          "x-vercel-set-bypass-cookie": "true",
+        }
+      : undefined,
   },
   projects: [
     {

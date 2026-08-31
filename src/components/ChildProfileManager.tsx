@@ -8,7 +8,7 @@ import {
 import { createChildInSupabase, deleteChildFromSupabase, updateChildInSupabase } from "@/lib/progressSync";
 import CurriculumSelector from "@/components/CurriculumSelector";
 import { CANTON_NAMES, type CurriculumSelection } from "@/lib/curriculumProfiles";
-import { isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
+import { getCurriculumRolloutContext, isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
 import { getAnonymousSessionId } from "@/lib/attribution";
 import { captureProductEvent } from "@/lib/monitoring";
 
@@ -278,7 +278,7 @@ export default function ChildProfileManager() {
 
   useEffect(() => {
     reload();
-    setCurriculumEnabled(isCurriculumProfilesRolloutEnabled(getAnonymousSessionId()));
+    setCurriculumEnabled(isCurriculumProfilesRolloutEnabled(getCurriculumRolloutContext(getAnonymousSessionId())));
   }, []);
 
   const handleSwitch = (id: string) => {

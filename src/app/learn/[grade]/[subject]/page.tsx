@@ -85,6 +85,9 @@ function getContextualSeoLinks(grade: number, subject: string): ContextualSeoLin
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { grade, subject } = await params;
+  const isInternalPrimaryFrenchRollout = subject === "french"
+    && [3, 4].includes(parseInt(grade))
+    && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ROLLOUT_MODE !== "all";
   const subjectSeo = getSubjectSeo(subject);
   const subjectName = SUBJECT_NAMES[subject] ?? subjectSeo.name;
   const gradeName = getGradeName(grade);
@@ -100,6 +103,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: `https://www.cleverli.ch/og-cleverli-primarschule-2026.png`, width: 1200, height: 630, alt: `${title} — Cleverli` }],
     },
     alternates: { canonical: `https://www.cleverli.ch/learn/${grade}/${subject}` },
+    robots: isInternalPrimaryFrenchRollout ? { index: false, follow: false } : undefined,
   };
 }
 

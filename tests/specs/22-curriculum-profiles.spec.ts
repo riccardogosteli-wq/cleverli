@@ -14,23 +14,33 @@ type StoredCurriculum = {
   version: number;
 };
 
+async function seedSession(page: Page, emailAddress = TEST_ACCOUNT.email) {
+  await page.addInitScript((email) => {
+    window.localStorage.setItem("cleverli_session", JSON.stringify({
+      email,
+      name: "QA Parent",
+      premium: true,
+    }));
+  }, emailAddress);
+}
+
+function isExpectedPreviewToolbarError(message: string) {
+  return message.includes("https://vercel.live/_next-live/feedback/feedback.js")
+    && message.includes("Content Security Policy");
+}
+
 async function seedChild(page: Page, grade: number, curriculum?: StoredCurriculum) {
   await page.context().clearCookies();
   await page.route("**/rest/v1/child_progress**", route => route.fulfill({ status: 200, json: null }));
   await page.route("**/rest/v1/topic_progress**", route => route.fulfill({ status: 200, json: [] }));
   await page.goto("/");
-  await page.evaluate(() => localStorage.clear());
-  await page.goto("/login");
-  const email = page.locator("input[type=email]");
-  if (await email.isVisible()) {
-    await email.fill(TEST_ACCOUNT.email);
-    await page.locator("input[type=password]").fill(TEST_ACCOUNT.password);
-    await page.getByRole("button", { name: /Anmelden|Login/ }).click();
-    await page.waitForURL(url => !url.pathname.includes("/login"));
-  }
-  await page.route("**/rest/v1/child_profiles**", route => route.fulfill({ status: 200, json: [] }));
-  await page.goto("/dashboard");
   await page.evaluate(({ childId, childGrade, storedCurriculum }) => {
+    localStorage.clear();
+    localStorage.setItem("cleverli_session", JSON.stringify({
+      email: "test@cleverli.ch",
+      name: "QA Parent",
+      premium: true,
+    }));
     localStorage.setItem("cleverli_family", JSON.stringify({
       members: [{
         id: childId,
@@ -44,7 +54,8 @@ async function seedChild(page: Page, grade: number, curriculum?: StoredCurriculu
     localStorage.setItem("cleverli_active_profile", childId);
     localStorage.setItem("cleverli_last_grade", String(childGrade));
   }, { childId: CHILD_ID, childGrade: grade, storedCurriculum: curriculum });
-  await page.reload();
+  await page.route("**/rest/v1/child_profiles**", route => route.fulfill({ status: 200, json: [] }));
+  await page.goto("/dashboard");
   await expect(page.getByText("Was möchtest du lernen?")).toBeVisible();
 }
 
@@ -54,6 +65,20 @@ test.describe("Curriculum profile rollout", () => {
     await page.goto("/family");
     await page.getByRole("button", { name: /Kind hinzufügen|Add a child|Ajouter un enfant|Aggiungi un bambino/ }).click();
     await expect(page.getByTestId("curriculum-canton")).toHaveCount(0);
+  });
+
+  test("customer accounts stay on today's profile setup during the internal rollout", async ({ page }) => {
+    await seedSession(page, "parent@example.ch");
+    await page.goto("/family");
+    await page.getByRole("button", { name: /Kind hinzufügen|Add a child|Ajouter un enfant|Aggiungi un bambino/ }).click();
+    await expect(page.getByTestId("curriculum-canton")).toHaveCount(0);
+  });
+
+  test("internal test accounts can preview the canton selector", async ({ page }) => {
+    await seedSession(page);
+    await page.goto("/family");
+    await page.getByRole("button", { name: /Kind hinzufügen|Add a child|Ajouter un enfant|Aggiungi un bambino/ }).click();
+    await expect(page.getByTestId("curriculum-canton")).toBeVisible();
   });
 
   test("rollout flag keeps French grades 3–4 routes unavailable by default", async ({ page }) => {
@@ -106,7 +131,9 @@ test.describe("Curriculum profile rollout", () => {
   test("French-first grade 3 has nine responsive topics and a working exercise route", async ({ page }) => {
     const consoleErrors: string[] = [];
     page.on("console", message => {
-      if (message.type() === "error") consoleErrors.push(message.text());
+      if (message.type() === "error" && !isExpectedPreviewToolbarError(message.text())) {
+        consoleErrors.push(message.text());
+      }
     });
     await seedChild(page, 3, {
       canton: "BE",
@@ -137,7 +164,9 @@ test.describe("Curriculum profile rollout", () => {
     await page.setViewportSize({ width: 1440, height: 1000 });
     const consoleErrors: string[] = [];
     page.on("console", message => {
-      if (message.type() === "error") consoleErrors.push(message.text());
+      if (message.type() === "error" && !isExpectedPreviewToolbarError(message.text())) {
+        consoleErrors.push(message.text());
+      }
     });
     const response = await page.goto("/learn/4/french");
     expect(response?.status()).toBe(200);
@@ -153,6 +182,7 @@ test.describe("Curriculum profile rollout", () => {
   });
 
   test("selector handles multilingual and Graubünden requirements", async ({ page }) => {
+    await seedSession(page);
     await page.goto("/family");
     await page.getByRole("button", { name: /Kind hinzufügen|Add a child|Ajouter un enfant|Aggiungi un bambino/ }).click();
 
@@ -176,6 +206,7 @@ test.describe("Curriculum profile rollout", () => {
 
   test("desktop selector has no overflow and clearly shows supported status", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 1000 });
+    await seedSession(page);
     await page.goto("/family");
     await page.getByRole("button", { name: /Kind hinzufügen|Add a child|Ajouter un enfant|Aggiungi un bambino/ }).click();
     await page.getByTestId("curriculum-canton").selectOption("ZH");
