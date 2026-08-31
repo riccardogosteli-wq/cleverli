@@ -337,6 +337,7 @@ async function loadAdsAbActivity(filters: Pick<ActivityFilters, "from" | "to">) 
         "subscription_trial_started",
         "subscription_started",
         "subscription_updated",
+        "subscription_cancel_requested",
       ])
       .gte("created_at", from)
       .order("created_at", { ascending: false })
