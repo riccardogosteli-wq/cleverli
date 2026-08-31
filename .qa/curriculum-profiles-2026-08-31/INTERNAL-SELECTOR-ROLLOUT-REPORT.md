@@ -18,8 +18,8 @@ Outcome: approved
 
 ## Deployment
 
-- Commit: `838a109`
-- Production deployment: `dpl_FsqbfSQG5wu1YC9cj7bfuMXLTPTc`
+- Commit: `77378e5`
+- Production deployment: `dpl_CehzGgaaLoE6pt3jm6zBXwp4XUxf`
 - Production URL: `https://www.cleverli.ch`
 
 ## Checks
