@@ -1,7 +1,7 @@
 # Cleverli SEO Scorecard
 
 Last setup: 2026-08-08
-Last reviewed: 2026-08-24
+Last reviewed: 2026-08-31
 
 ## Review Cadence
 
@@ -16,15 +16,15 @@ Last reviewed: 2026-08-24
 - Live page checks: HTTP status, canonical, sitemap inclusion, title/H1, example variety, obvious mobile issues.
 - Manual authority check: relevant Swiss family/education links and mentions.
 
-## Latest Review: 2026-08-24
+## Latest Review: 2026-08-31
 
 - Live checks: all 15 priority URLs returned `200`, had title/H1, self-canonical, sitemap inclusion, and no obvious broken rendering/404 risk.
-- Sitemap: `https://www.cleverli.ch/sitemap.xml` is submitted in GSC, last downloaded `2026-08-22`, with `0` warnings and `0` errors. The sitemap API reports `319` submitted and `0` indexed, but URL Inspection is unavailable through the current Maton route, so that aggregate indexed value is not treated as reliable per-URL evidence.
-- Google Search Console, `2026-08-17` to `2026-08-23`: the 12 new class pages total 60 impressions and 4 clicks (6.7% CTR). Ten had impressions this week; 11/12 have produced impressions since launch. `/deutsch-uebungen-2-klasse` still has no impressions, while `/mathe-uebungen-1-klasse` had impressions previously but none this week.
-- Strongest class-page signals: `/mathe-uebungen-2-klasse` led impressions (15, 0 clicks); `/deutsch-uebungen-4-klasse` had 11 impressions, 2 clicks, 18.2% CTR, and position 16.8. Pages currently around position 8-20 include `/mathe-uebungen-3-klasse`, `/mathe-uebungen-5-klasse`, `/mathe-uebungen-6-klasse`, `/deutsch-uebungen-4-klasse`, and `/deutsch-uebungen-6-klasse`.
-- GA4, `2026-08-17` to `2026-08-23`: organic landing sessions were `/mathe-uebungen-3-klasse` 1, `/mathe-uebungen-6-klasse` 1, and `/deutsch-uebungen-4-klasse` 1. These class pages recorded no organic CTA/checkout/trial/purchase event. Organic free-CTA clicks were recorded on `/mathe-uebungen-kinder` 1 and `/primarschule-uebungen` 1; no organic checkout/trial/purchase event was recorded on priority pages.
-- Supabase telemetry is reachable, but CTA rows remain tagged as `ads_lp`, not organic SEO traffic. Last 7 days: `/primarschule-uebungen` 23 ad CTA clicks, `/mathe-uebungen-kinder` 4, `/deutsch-uebungen-kinder` 4, and new class SEO pages 0.
-- Decision: prioritise `/deutsch-uebungen-2-klasse` indexing/internal links, improve snippet intent on `/mathe-uebungen-2-klasse`, and add stronger CTA proof on the three class pages receiving organic landing sessions without CTA.
+- Sitemap: `https://www.cleverli.ch/sitemap.xml` is submitted in GSC, last downloaded `2026-08-26`, with `0` warnings and `0` errors. The sitemap API still reports `319` submitted and `0` indexed, but URL Inspection remains unavailable through the Maton route, so this aggregate indexed value is not treated as reliable page-level evidence.
+- Google Search Console, latest available data `2026-08-24` to `2026-08-28`: all 12 new class pages had impressions, providing likely indexing evidence for `12/12`. Together they reached 90 impressions and 7 clicks (7.8% CTR), up from 60 impressions and 4 clicks in the previous review window.
+- Strongest class-page signals: `/mathe-uebungen-2-klasse` led impressions (28) but had 0 clicks; `/mathe-uebungen-3-klasse` had 7 impressions, 3 clicks, 42.9% CTR, and position 12.0; `/deutsch-uebungen-3-klasse` had 13 impressions, 4 clicks, 30.8% CTR, and position 7.6. Class pages around position 8-20 are `/mathe-uebungen-3-klasse`, `/mathe-uebungen-5-klasse`, `/deutsch-uebungen-1-klasse`, `/deutsch-uebungen-2-klasse`, and `/deutsch-uebungen-5-klasse`.
+- GA4, `2026-08-24` to `2026-08-30`: organic landing sessions were `/deutsch-uebungen-3-klasse` 3, `/mathe-uebungen-3-klasse` 2, and `/mathe-uebungen-5-klasse` 1. These pages recorded no organic CTA, checkout, trial, signup, or purchase event.
+- Supabase telemetry is reachable, but all 67 priority-page CTA rows were tagged as `ads_lp`, not organic SEO traffic. PostHog had no separately available reporting credentials in this run.
+- Decision: rewrite `/mathe-uebungen-2-klasse` snippet/H1 for CTR, enrich position-8-20 pages starting with `/mathe-uebungen-5-klasse` and `/mathe-uebungen-kinder`, and add stronger CTA proof on the three pages receiving organic landings without CTA.
 
 ## Scorecard Rules
 
@@ -39,21 +39,21 @@ Last reviewed: 2026-08-24
 
 | Page | Intent | Indexed | Impr. | Clicks | CTR | Avg pos. | Top query | Organic CTA | Next action |
 | --- | --- | --- | ---: | ---: | ---: | ---: | --- | ---: | --- |
-| `/mathe-uebungen-1-klasse` | mathe übungen 1 klasse | Likely | 0 | 0 | - | - | - | 0 | Monitor; strengthen internal links if impressions do not return |
-| `/mathe-uebungen-2-klasse` | mathe übungen 2 klasse | Likely | 15 | 0 | 0.0% | 41.3 | 2 klasse | 0 | Sharpen title/meta/H1 around class-specific Rechnen intent |
-| `/mathe-uebungen-3-klasse` | mathe übungen 3 klasse | Likely | 8 | 1 | 12.5% | 13.3 | - | Improve CTA wording and visual proof; organic landing without CTA |
-| `/mathe-uebungen-4-klasse` | mathe übungen 4 klasse | Likely | 1 | 0 | 0.0% | 7.0 | - | Monitor until sample is larger |
-| `/mathe-uebungen-5-klasse` | mathe übungen 5 klasse | Likely | 7 | 0 | 0.0% | 16.1 | hauptschule klasse 5 | 0 | Add richer intro, FAQ, examples, and internal links |
-| `/mathe-uebungen-6-klasse` | mathe übungen 6 klasse | Likely | 1 | 1 | 100.0% | 8.0 | - | Improve CTA wording and visual proof; organic landing without CTA |
-| `/deutsch-uebungen-1-klasse` | deutsch übungen 1 klasse | Likely | 3 | 0 | 0.0% | 7.3 | - | Monitor CTR until sample is larger |
-| `/deutsch-uebungen-2-klasse` | deutsch übungen 2 klasse | Unknown | 0 | 0 | - | - | - | 0 | Strengthen internal links + request indexing |
-| `/deutsch-uebungen-3-klasse` | deutsch übungen 3 klasse | Likely | 1 | 0 | 0.0% | 1.0 | - | Monitor until sample is larger |
-| `/deutsch-uebungen-4-klasse` | deutsch übungen 4 klasse | Likely | 11 | 2 | 18.2% | 16.8 | cleverli | 0 | Improve CTA wording and visual proof; organic landing without CTA |
-| `/deutsch-uebungen-5-klasse` | deutsch übungen 5 klasse | Likely | 10 | 0 | 0.0% | 20.6 | deutsch klasse 5 | 0 | Add richer examples, FAQ, and internal links |
-| `/deutsch-uebungen-6-klasse` | deutsch übungen 6 klasse | Likely | 3 | 0 | 0.0% | 9.7 | - | Sharpen title/meta/H1 for CTR; retain rich intro and FAQ |
-| `/mathe-uebungen-kinder` | mathe übungen kinder | Likely | 7 | 0 | 0.0% | 17.1 | lernhilfe mathe primar | 1 | Add richer intro and internal links to class pages |
-| `/deutsch-uebungen-kinder` | deutsch übungen kinder | Likely | 19 | 1 | 5.3% | 45.4 | cleverli | 0 | Strengthen non-brand Deutsch intent in snippet and intro |
-| `/primarschule-uebungen` | primarschule übungen | Likely | 1 | 0 | 0.0% | 29.0 | aufgabenblaetter primarschule | 1 | Strengthen examples and internal links to class pages |
+| `/mathe-uebungen-1-klasse` | mathe übungen 1 klasse | Likely | 2 | 0 | 0.0% | 5.5 | - | 0 | Monitor CTR until sample is larger |
+| `/mathe-uebungen-2-klasse` | mathe übungen 2 klasse | Likely | 28 | 0 | 0.0% | 40.1 | 2 klasse mathe | 0 | Rewrite title/meta/H1 around class-specific Rechnen intent |
+| `/mathe-uebungen-3-klasse` | mathe übungen 3 klasse | Likely | 7 | 3 | 42.9% | 12.0 | - | 0 | Add stronger CTA wording and visual proof; 2 organic sessions without CTA |
+| `/mathe-uebungen-4-klasse` | mathe übungen 4 klasse | Likely | 7 | 0 | 0.0% | 30.7 | uebungen 4 klasse | 0 | Sharpen title/meta/H1 and class-specific examples |
+| `/mathe-uebungen-5-klasse` | mathe übungen 5 klasse | Likely | 9 | 0 | 0.0% | 19.3 | hauptschule klasse 5 | 0 | Add richer intro, FAQ, internal links, and CTA proof |
+| `/mathe-uebungen-6-klasse` | mathe übungen 6 klasse | Likely | 5 | 0 | 0.0% | 6.2 | - | 0 | Sharpen title/meta/H1; ranking is already promising |
+| `/deutsch-uebungen-1-klasse` | deutsch übungen 1 klasse | Likely | 2 | 0 | 0.0% | 16.0 | - | 0 | Add richer intro, FAQ, examples, and internal links |
+| `/deutsch-uebungen-2-klasse` | deutsch übungen 2 klasse | Likely | 4 | 0 | 0.0% | 10.8 | - | 0 | Indexing signal achieved; add richer intro, FAQ, and internal links |
+| `/deutsch-uebungen-3-klasse` | deutsch übungen 3 klasse | Likely | 13 | 4 | 30.8% | 7.6 | deutsch online lernen 3 klasse | 0 | Add stronger CTA wording and visual proof; 3 organic sessions without CTA |
+| `/deutsch-uebungen-4-klasse` | deutsch übungen 4 klasse | Likely | 10 | 0 | 0.0% | 28.5 | 4 klasse | 0 | Rewrite title/meta/H1 for clear Deutsch intent |
+| `/deutsch-uebungen-5-klasse` | deutsch übungen 5 klasse | Likely | 1 | 0 | 0.0% | 10.0 | - | 0 | Monitor; enrich intro/FAQ if impressions grow |
+| `/deutsch-uebungen-6-klasse` | deutsch übungen 6 klasse | Likely | 2 | 0 | 0.0% | 6.5 | - | 0 | Monitor CTR until sample is larger |
+| `/mathe-uebungen-kinder` | mathe übungen kinder | Likely | 13 | 0 | 0.0% | 17.1 | lernhilfe mathe primar | 0 | Add richer intro, FAQ, and internal links to class pages |
+| `/deutsch-uebungen-kinder` | deutsch übungen kinder | Likely | 3 | 0 | 0.0% | 4.7 | - | 0 | Monitor CTR until sample is larger |
+| `/primarschule-uebungen` | primarschule übungen | Likely | 2 | 0 | 0.0% | 18.5 | aufgabenblaetter primarschule | 0 | Add richer examples, FAQ, and internal links to class pages |
 
 ## Weekly Output Format
 
