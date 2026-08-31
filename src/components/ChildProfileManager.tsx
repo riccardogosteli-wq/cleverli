@@ -3,9 +3,14 @@ import { useState, useEffect } from "react";
 import { useLang } from "@/lib/LangContext";
 import {
   FamilyMember, loadFamily, saveFamily, addMember, removeMember,
-  getActiveProfileId, setActiveProfileId, AVATARS, MAX_PROFILES,
+  getActiveProfileId, setActiveProfileId, updateMemberCurriculum, AVATARS, MAX_PROFILES,
 } from "@/lib/family";
 import { createChildInSupabase, deleteChildFromSupabase, updateChildInSupabase } from "@/lib/progressSync";
+import CurriculumSelector from "@/components/CurriculumSelector";
+import { CANTON_NAMES, type CurriculumSelection } from "@/lib/curriculumProfiles";
+import { isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
+import { getAnonymousSessionId } from "@/lib/attribution";
+import { captureProductEvent } from "@/lib/monitoring";
 
 function AvatarPicker({ value, onChange }: { value: string; onChange: (a: string) => void }) {
   return (
@@ -22,19 +27,36 @@ function AvatarPicker({ value, onChange }: { value: string; onChange: (a: string
   );
 }
 
-function AddChildForm({ onSave, onCancel }: { onSave: () => void; onCancel: () => void }) {
+function AddChildForm({
+  onSave,
+  onCancel,
+  curriculumEnabled,
+}: {
+  onSave: () => void;
+  onCancel: () => void;
+  curriculumEnabled: boolean;
+}) {
   const { tr } = useLang();
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState(AVATARS[0]);
   const [grade, setGrade] = useState<number>(1);
+  const [curriculum, setCurriculum] = useState<CurriculumSelection | undefined>();
   const [error, setError] = useState("");
 
   const handleSave = () => {
     if (!name.trim()) { setError(tr("errorEmailPw") ?? "Bitte gib einen Namen ein."); return; }
     try {
-      const member = addMember(name.trim(), avatar, grade);
+      const member = addMember(name.trim(), avatar, grade, curriculum);
       setActiveProfileId(member.id);
-      createChildInSupabase(member.id, member.name, member.grade, member.avatar);
+      createChildInSupabase(member.id, member.name, member.grade, member.avatar, member.curriculum);
+      if (curriculum) {
+        captureProductEvent("curriculum_profile_selected", {
+          canton: curriculum.canton,
+          school_language: curriculum.schoolLanguage,
+          curriculum_system: curriculum.curriculumSystem,
+          source: "child_created",
+        });
+      }
       onSave();
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Fehler");
@@ -79,6 +101,10 @@ function AddChildForm({ onSave, onCancel }: { onSave: () => void; onCancel: () =
         </div>
       </div>
 
+      {curriculumEnabled && (
+        <CurriculumSelector value={curriculum} onChange={setCurriculum} />
+      )}
+
       {error && <p className="text-red-500 text-sm">{error}</p>}
 
       <div className="flex gap-2">
@@ -95,16 +121,22 @@ function AddChildForm({ onSave, onCancel }: { onSave: () => void; onCancel: () =
   );
 }
 
-function ChildCard({ member, isActive, onSwitch, onDelete, onGradeChange }: {
+function ChildCard({ member, isActive, onSwitch, onDelete, onGradeChange, onCurriculumChange, curriculumEnabled }: {
   member: FamilyMember;
   isActive: boolean;
   onSwitch: () => void;
   onDelete: () => void;
   onGradeChange: (newGrade: number) => void;
+  onCurriculumChange: (selection: CurriculumSelection) => void;
+  curriculumEnabled: boolean;
 }) {
-  const { tr } = useLang();
+  const { tr, lang } = useLang();
+  const t = (de: string, fr: string, it: string, en: string) =>
+    lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [editingGrade, setEditingGrade] = useState(false);
+  const [editingCurriculum, setEditingCurriculum] = useState(false);
+  const [curriculumDraft, setCurriculumDraft] = useState<CurriculumSelection | undefined>(member.curriculum);
 
   return (
     <div className={`rounded-2xl border-2 p-4 transition-all ${
@@ -117,6 +149,11 @@ function ChildCard({ member, isActive, onSwitch, onDelete, onGradeChange }: {
         <div className="flex-1 min-w-0">
           <div className="font-bold text-gray-800 text-sm leading-tight truncate">{member.name}</div>
           <div className="text-xs text-gray-400">{member.grade}. {tr("gradeLabel")}</div>
+          {member.curriculum && (
+            <div className="text-xs text-gray-500 mt-0.5">
+              🏫 {CANTON_NAMES[member.curriculum.canton]} · {member.curriculum.schoolLanguage.toUpperCase()}
+            </div>
+          )}
           {isActive && <div className="text-xs text-green-700 font-semibold mt-0.5">✓ Aktiv</div>}
         </div>
         <div className="flex gap-2 shrink-0">
@@ -176,6 +213,53 @@ function ChildCard({ member, isActive, onSwitch, onDelete, onGradeChange }: {
           </button>
         </div>
       )}
+
+      {curriculumEnabled && !editingGrade && (
+        <div className="mt-3 pt-3 border-t border-gray-100">
+          {!editingCurriculum ? (
+            <button
+              type="button"
+              onClick={() => {
+                setCurriculumDraft(member.curriculum);
+                setEditingCurriculum(true);
+              }}
+              className="inline-flex min-h-11 items-center text-xs font-semibold text-green-700 hover:text-green-800"
+            >
+              🏫 {member.curriculum
+                ? t("Schulkanton ändern", "Changer de canton scolaire", "Cambia cantone scolastico", "Change school canton")
+                : t("Schulkanton festlegen", "Définir le canton scolaire", "Imposta cantone scolastico", "Set school canton")}
+            </button>
+          ) : (
+            <div className="space-y-2">
+              <CurriculumSelector
+                value={curriculumDraft}
+                onChange={setCurriculumDraft}
+              />
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  disabled={!curriculumDraft}
+                  onClick={() => {
+                    if (!curriculumDraft) return;
+                    onCurriculumChange(curriculumDraft);
+                    setEditingCurriculum(false);
+                  }}
+                  className="min-h-11 flex-1 rounded-xl bg-green-700 px-3 py-2 text-xs font-bold text-white disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  {tr("saveBtn")}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setEditingCurriculum(false)}
+                  className="min-h-11 flex-1 rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-600"
+                >
+                  {tr("cancelBtn")}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -185,13 +269,17 @@ export default function ChildProfileManager() {
   const [members, setMembers] = useState<FamilyMember[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [showAdd, setShowAdd] = useState(false);
+  const [curriculumEnabled, setCurriculumEnabled] = useState(false);
 
   const reload = () => {
     setMembers(loadFamily().members);
     setActiveId(getActiveProfileId());
   };
 
-  useEffect(() => { reload(); }, []);
+  useEffect(() => {
+    reload();
+    setCurriculumEnabled(isCurriculumProfilesRolloutEnabled(getAnonymousSessionId()));
+  }, []);
 
   const handleSwitch = (id: string) => {
     setActiveProfileId(id);
@@ -223,6 +311,18 @@ export default function ChildProfileManager() {
     }
     // Fire-and-forget sync to Supabase
     updateChildInSupabase(id, { grade: newGrade });
+    reload();
+  };
+
+  const handleCurriculumChange = (id: string, curriculum: CurriculumSelection) => {
+    const updated = updateMemberCurriculum(id, curriculum);
+    if (!updated) return;
+    updateChildInSupabase(id, { curriculum });
+    captureProductEvent("curriculum_profile_changed", {
+      canton: curriculum.canton,
+      school_language: curriculum.schoolLanguage,
+      curriculum_system: curriculum.curriculumSystem,
+    });
     reload();
   };
 
@@ -262,6 +362,8 @@ export default function ChildProfileManager() {
             onSwitch={() => handleSwitch(m.id)}
             onDelete={() => handleDelete(m.id)}
             onGradeChange={(g) => handleGradeChange(m.id, g)}
+            onCurriculumChange={(selection) => handleCurriculumChange(m.id, selection)}
+            curriculumEnabled={curriculumEnabled}
           />
         ))}
       </div>
@@ -270,6 +372,7 @@ export default function ChildProfileManager() {
         <AddChildForm
           onSave={() => { setShowAdd(false); reload(); }}
           onCancel={() => setShowAdd(false)}
+          curriculumEnabled={curriculumEnabled}
         />
       )}
 

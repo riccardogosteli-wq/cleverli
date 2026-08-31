@@ -6,6 +6,10 @@
 import { getSupabase } from "@/lib/supabase";
 import { ACTIVE_PROFILE_KEY, FAMILY_KEY, type FamilyMember, type FamilyStore } from "@/lib/family";
 import type { Profile } from "@/hooks/useProfile";
+import {
+  parseCurriculumSelection,
+  type CurriculumSelection,
+} from "@/lib/curriculumProfiles";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
@@ -32,7 +36,33 @@ export interface SupabaseChildProfile {
   name: string;
   grade: number;
   avatar: string;
+  canton: string | null;
+  school_language: string | null;
+  curriculum_system: string | null;
+  regional_profile: string | null;
+  curriculum_profile_version: number | null;
   created_at: string;
+}
+
+function curriculumFromSupabase(child: SupabaseChildProfile): CurriculumSelection | undefined {
+  return parseCurriculumSelection({
+    canton: child.canton,
+    schoolLanguage: child.school_language,
+    curriculumSystem: child.curriculum_system,
+    regionalProfile: child.regional_profile ?? undefined,
+    version: child.curriculum_profile_version,
+  });
+}
+
+function curriculumToSupabase(curriculum?: CurriculumSelection) {
+  if (!curriculum) return {};
+  return {
+    canton: curriculum.canton,
+    school_language: curriculum.schoolLanguage,
+    curriculum_system: curriculum.curriculumSystem,
+    regional_profile: curriculum.regionalProfile ?? null,
+    curriculum_profile_version: curriculum.version,
+  };
 }
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -302,23 +332,27 @@ export async function restoreFamilyFromSupabase(): Promise<void> {
 
   try {
     const restData = cachedAuth?.accessToken
-      ? await fetchSupabaseRows<SupabaseChildProfile>(`child_profiles?parent_id=eq.${parentId}&select=id,parent_id,name,grade,avatar,created_at&order=created_at.asc`, cachedAuth.accessToken)
+      ? await fetchSupabaseRows<SupabaseChildProfile>(`child_profiles?parent_id=eq.${parentId}&select=id,parent_id,name,grade,avatar,canton,school_language,curriculum_system,regional_profile,curriculum_profile_version,created_at&order=created_at.asc`, cachedAuth.accessToken)
       : null;
     const query = !restData ? await supabase
       .from("child_profiles")
-      .select("id, parent_id, name, grade, avatar, created_at")
+      .select("id, parent_id, name, grade, avatar, canton, school_language, curriculum_system, regional_profile, curriculum_profile_version, created_at")
       .eq("parent_id", parentId)
       .order("created_at", { ascending: true }) : null;
     const childData = restData ?? query?.data;
     if (!childData || childData.length === 0) return;
 
-    const remoteMembers: FamilyMember[] = (childData as SupabaseChildProfile[]).map(child => ({
-      id: child.id,
-      name: child.name,
-      grade: child.grade,
-      avatar: child.avatar,
-      createdAt: child.created_at,
-    }));
+    const remoteMembers: FamilyMember[] = (childData as SupabaseChildProfile[]).map(child => {
+      const curriculum = curriculumFromSupabase(child);
+      return {
+        id: child.id,
+        name: child.name,
+        grade: child.grade,
+        avatar: child.avatar,
+        createdAt: child.created_at,
+        ...(curriculum ? { curriculum } : {}),
+      };
+    });
     const existingRaw = localStorage.getItem(FAMILY_KEY);
     const existingStore = existingRaw ? JSON.parse(existingRaw) as FamilyStore : { members: [] };
     const existingById = new Map((existingStore.members ?? []).map(member => [member.id, member]));
@@ -347,20 +381,23 @@ export async function createChildInSupabase(
   childId: string,
   name: string,
   grade: number,
-  avatar: string
+  avatar: string,
+  curriculum?: CurriculumSelection,
 ): Promise<void> {
   const supabase = getSupabase();
   if (!supabase) return;
   const parentId = await getParentId();
   if (!parentId) return;
   try {
-    await supabase.from("child_profiles").upsert({
+    const { error } = await supabase.from("child_profiles").upsert({
       id: childId,
       parent_id: parentId,
       name,
       grade,
       avatar,
+      ...curriculumToSupabase(curriculum),
     }, { onConflict: "id" });
+    if (error) throw error;
   } catch (e) {
     console.warn("progressSync: child profile create failed", e);
   }
@@ -376,11 +413,19 @@ export async function deleteChildFromSupabase(childId: string): Promise<void> {
   }
 }
 
-export async function updateChildInSupabase(childId: string, updates: { grade?: number; name?: string; avatar?: string }): Promise<void> {
+export async function updateChildInSupabase(
+  childId: string,
+  updates: { grade?: number; name?: string; avatar?: string; curriculum?: CurriculumSelection },
+): Promise<void> {
   const supabase = getSupabase();
   if (!supabase) return;
   try {
-    await supabase.from("child_profiles").update(updates).eq("id", childId);
+    const { curriculum, ...profileUpdates } = updates;
+    const { error } = await supabase
+      .from("child_profiles")
+      .update({ ...profileUpdates, ...curriculumToSupabase(curriculum) })
+      .eq("id", childId);
+    if (error) throw error;
   } catch (e) {
     console.warn("progressSync: child profile update failed", e);
   }

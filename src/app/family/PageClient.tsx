@@ -12,6 +12,12 @@ import {
   AVATARS, GRADE_OPTIONS, MAX_PROFILES, FamilyMember,
 } from "@/lib/family";
 import { getLevelForXp } from "@/lib/xp";
+import CurriculumSelector from "@/components/CurriculumSelector";
+import type { CurriculumSelection } from "@/lib/curriculumProfiles";
+import { isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
+import { getAnonymousSessionId } from "@/lib/attribution";
+import { captureProductEvent } from "@/lib/monitoring";
+import { createChildInSupabase, deleteChildFromSupabase } from "@/lib/progressSync";
 
 interface MemberStat extends FamilyMember {
   xp: number;
@@ -37,6 +43,8 @@ export default function FamilyPage() {
   const [newName, setNewName] = useState("");
   const [newAvatar, setNewAvatar] = useState(AVATARS[0]);
   const [newGrade, setNewGrade] = useState(1);
+  const [newCurriculum, setNewCurriculum] = useState<CurriculumSelection | undefined>();
+  const [curriculumEnabled, setCurriculumEnabled] = useState(false);
   const [addError, setAddError] = useState("");
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
   const [confirmReset, setConfirmReset] = useState<string | null>(null);
@@ -66,18 +74,31 @@ export default function FamilyPage() {
     setStats(s);
   }, [lang]);
 
-  useEffect(() => { refresh(); }, [refresh]);
+  useEffect(() => {
+    refresh();
+    setCurriculumEnabled(isCurriculumProfilesRolloutEnabled(getAnonymousSessionId()));
+  }, [refresh]);
 
   function handleAdd() {
     if (!newName.trim()) { setAddError(t("Bitte einen Namen eingeben.", "Entre un prénom.", "Inserisci un nome.", "Please enter a name.")); return; }
     if (members.length >= MAX_PROFILES) { setAddError(t("Maximal 3 Profile.", "Maximum 3 profils.", "Massimo 3 profili.", "Max 3 profiles.")); return; }
-    addMember(newName.trim(), newAvatar, newGrade);
-    setNewName(""); setNewAvatar(AVATARS[0]); setNewGrade(1); setAddError(""); setShowAdd(false);
+    const member = addMember(newName.trim(), newAvatar, newGrade, newCurriculum);
+    createChildInSupabase(member.id, member.name, member.grade, member.avatar, member.curriculum);
+    if (newCurriculum) {
+      captureProductEvent("curriculum_profile_selected", {
+        canton: newCurriculum.canton,
+        school_language: newCurriculum.schoolLanguage,
+        curriculum_system: newCurriculum.curriculumSystem,
+        source: "family_page_child_created",
+      });
+    }
+    setNewName(""); setNewAvatar(AVATARS[0]); setNewGrade(1); setNewCurriculum(undefined); setAddError(""); setShowAdd(false);
     refresh();
   }
 
   function handleDelete(id: string) {
     removeMember(id);
+    deleteChildFromSupabase(id);
     setConfirmDelete(null);
     refresh();
   }
@@ -208,6 +229,10 @@ export default function FamilyPage() {
               ))}
             </div>
           </div>
+
+          {curriculumEnabled && (
+            <CurriculumSelector value={newCurriculum} onChange={setNewCurriculum} />
+          )}
 
           {addError && <p className="text-xs text-red-500">{addError}</p>}
 

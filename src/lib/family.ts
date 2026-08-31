@@ -3,6 +3,10 @@
 // Each profile is keyed by a local UUID so we can switch without auth.
 
 import type { Profile } from "@/hooks/useProfile";
+import {
+  parseCurriculumSelection,
+  type CurriculumSelection,
+} from "@/lib/curriculumProfiles";
 
 export const MAX_PROFILES = 3;
 export const FAMILY_KEY = "cleverli_family";
@@ -14,6 +18,7 @@ export interface FamilyMember {
   avatar: string;   // emoji
   grade: number;
   createdAt: string;
+  curriculum?: CurriculumSelection;
 }
 
 export interface FamilyStore {
@@ -32,7 +37,13 @@ export function loadFamily(): FamilyStore {
       saveFamily(migrated); // write back in new format
       return migrated;
     }
-    return parsed;
+    const members = Array.isArray(parsed.members)
+      ? parsed.members.map((member: FamilyMember) => ({
+          ...member,
+          curriculum: parseCurriculumSelection(member.curriculum),
+        }))
+      : [];
+    return { members };
   } catch { return { members: [] }; }
 }
 
@@ -41,17 +52,44 @@ export function saveFamily(store: FamilyStore) {
   localStorage.setItem(FAMILY_KEY, JSON.stringify(store));
 }
 
-export function addMember(name: string, avatar: string, grade: number): FamilyMember {
+export function addMember(
+  name: string,
+  avatar: string,
+  grade: number,
+  curriculum?: CurriculumSelection,
+): FamilyMember {
   const store = loadFamily();
   if (store.members.length >= MAX_PROFILES) throw new Error("Max 3 profiles");
   // Use crypto.randomUUID() so the same ID works in Supabase (valid UUID)
   const id = typeof crypto !== "undefined" && crypto.randomUUID
     ? crypto.randomUUID()
     : `${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
-  const member: FamilyMember = { id, name, avatar, grade, createdAt: new Date().toISOString() };
+  const member: FamilyMember = {
+    id,
+    name,
+    avatar,
+    grade,
+    createdAt: new Date().toISOString(),
+    ...(curriculum ? { curriculum } : {}),
+  };
   store.members.push(member);
   saveFamily(store);
   return member;
+}
+
+export function updateMemberCurriculum(id: string, curriculum: CurriculumSelection): FamilyMember | null {
+  const store = loadFamily();
+  const member = store.members.find(candidate => candidate.id === id);
+  if (!member) return null;
+  member.curriculum = curriculum;
+  saveFamily(store);
+  return member;
+}
+
+export function getActiveCurriculumSelection(): CurriculumSelection | undefined {
+  const activeId = getActiveProfileId();
+  if (!activeId) return undefined;
+  return loadFamily().members.find(member => member.id === activeId)?.curriculum;
 }
 
 export function removeMember(id: string) {

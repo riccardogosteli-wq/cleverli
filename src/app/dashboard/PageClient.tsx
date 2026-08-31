@@ -16,6 +16,7 @@ import { isDailyDoneToday } from "@/lib/dailyState";
 import { useProfile, Profile } from "@/hooks/useProfile";
 import { useSession } from "@/hooks/useSession";
 import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
+import { getAvailableCurriculumSubjectIds, type CurriculumSelection } from "@/lib/curriculumProfiles";
 import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
@@ -204,7 +205,7 @@ function DashboardInner() {
   const [grade, setGrade] = useState<number | null>(null);
   const [subject, setSubject] = useState<string | null>(preselectedSubject);
   const [dailyDone, setDailyDone] = useState(false);
-  const [activeMember, setActiveMember] = useState<{ name: string; avatar: string } | null>(null);
+  const [activeMember, setActiveMember] = useState<{ name: string; avatar: string; curriculum?: CurriculumSelection } | null>(null);
   const [familySize, setFamilySize] = useState(0);
   // (notify signup widget removed — state retained for safety)
   // Restore grade from active child profile (or fall back to last-used)
@@ -230,7 +231,7 @@ function DashboardInner() {
     if (family.members.length >= 1) {
       const activeId = getActiveProfileId();
       const member = family.members.find(m => m.id === activeId) ?? family.members[0];
-      if (member) setActiveMember({ name: member.name, avatar: member.avatar });
+      if (member) setActiveMember({ name: member.name, avatar: member.avatar, curriculum: member.curriculum });
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -238,6 +239,12 @@ function DashboardInner() {
     setSubject(preselectedSubject);
     if (preselectedSubject) setGrade(null);
   }, [preselectedSubject]);
+
+  useEffect(() => {
+    if (!grade || !subject) return;
+    const allowed = new Set(getAvailableCurriculumSubjectIds(grade, activeMember?.curriculum));
+    if (!allowed.has(subject)) setSubject(null);
+  }, [activeMember?.curriculum, grade, subject]);
 
   const chooseGrade = (g: number) => {
     localStorage.setItem(GRADE_KEY, String(g));
@@ -258,6 +265,11 @@ function DashboardInner() {
     const meta = SUBJECT_META[id];
     if (!meta) return id;
     return meta[key][lang as keyof typeof meta.label] ?? meta[key].de;
+  };
+
+  const visibleSubjects = (selectedGrade: number) => {
+    const allowed = new Set(getAvailableCurriculumSubjectIds(selectedGrade, activeMember?.curriculum));
+    return getCatalogSubjects(selectedGrade).filter(candidate => allowed.has(candidate.id));
   };
 
   const level = profile ? getLevelForXp(profile.xp) : null;
@@ -306,6 +318,7 @@ function DashboardInner() {
                 const isCurrent = _cur?.grade === g;
                 return (
                   <button key={g} onClick={() => chooseGrade(g)}
+                    data-testid={`grade-${g}`}
                     style={{ minHeight: "100px", transition: "all 0.15s ease" }}
                     className={`border-2 rounded-2xl font-bold active:scale-95 flex flex-col items-center justify-center gap-1 relative ${isCurrent ? 'ring-2 ring-blue-400 ring-offset-2' : ''} ${GRADE_COLORS[i].base}`}>
                     {isCurrent && <span className="absolute top-1.5 right-1.5 text-xs bg-blue-500 text-white px-1.5 py-0.5 rounded-full font-bold">✓</span>}
@@ -358,11 +371,12 @@ function DashboardInner() {
               </div>
             </div>
             <div className="grid gap-3 sm:grid-cols-1">
-              {getCatalogSubjects(grade!).map(s => {
+              {visibleSubjects(grade!).map(s => {
                 const topics = getTopicSummaries(grade!, s.id);
                 const done = topics.filter(t => (getProgress(grade!, s.id, t)?.completed ?? 0) >= t.exerciseCount).length;
                 return (
                   <button key={s.id} onClick={() => setSubject(s.id)}
+                    data-testid={`subject-${s.id}`}
                     style={{ minHeight: "80px", transition: "all 0.15s ease" }}
                     className={`border-2 rounded-2xl font-bold active:scale-95 flex items-center gap-4 px-5 text-left ${s.color}`}>
                     <div className="w-16 h-16 flex items-center justify-center shrink-0">
@@ -441,7 +455,7 @@ function DashboardInner() {
         <div className="w-10 h-10 flex items-center justify-center shrink-0">
           {SUBJECT_ICONS[subject]
             ? <Image src={SUBJECT_ICONS[subject]} alt={subject} width={40} height={40} className="w-full h-full object-contain" />
-            : <span className="text-3xl">{getCatalogSubjects(grade!).find(s => s.id === subject)?.emoji ?? "📚"}</span>
+            : <span className="text-3xl">{visibleSubjects(grade!).find(s => s.id === subject)?.emoji ?? "📚"}</span>
           }
         </div>
         <div className="flex-1 min-w-0">
@@ -462,7 +476,7 @@ function DashboardInner() {
 
       {/* Subject switcher — always visible, colored by subject */}
       <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
-        {getCatalogSubjects(grade!).map(s => {
+        {visibleSubjects(grade!).map(s => {
           const isActive = s.id === subject;
           const activeClsMap: Record<string, string> = {
             math:    "bg-blue-500 text-white border-blue-500",

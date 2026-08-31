@@ -68,6 +68,11 @@ create table if not exists public.child_profiles (
   name        text not null,
   grade       int not null check (grade between 1 and 6),
   avatar      text not null default '🦊',
+  canton      text check (canton is null or canton in ('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH')),
+  school_language text check (school_language is null or school_language in ('de', 'fr', 'it', 'rm')),
+  curriculum_system text check (curriculum_system is null or curriculum_system in ('lp21', 'per', 'piano_di_studio')),
+  regional_profile text check (regional_profile is null or regional_profile in ('de_italian', 'de_romansh', 'de_romansh_grade1', 'romansh_german', 'italian_german')),
+  curriculum_profile_version smallint check (curriculum_profile_version is null or curriculum_profile_version >= 1),
   created_at  timestamptz not null default now()
 );
 
