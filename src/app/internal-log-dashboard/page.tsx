@@ -1116,7 +1116,24 @@ export default async function InternalLogDashboard({
 
             <div className="max-h-[360px] overflow-auto">
               <h3 className="sticky top-0 mb-2 bg-white pb-2 text-xs font-black uppercase tracking-wide text-gray-500">Aktuelle Kündigungen</h3>
-              <table className="w-full min-w-[760px] text-left text-sm">
+              <div className="space-y-2 sm:hidden">
+                {cancellationStats.recent.map((event, index) => (
+                  <div key={`${event.created_at}-${index}`} className="rounded-lg border border-gray-100 bg-gray-50 p-3 text-sm">
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="font-bold text-gray-900">{CANCELLATION_REASON_LABELS[cancellationReasonFromEvent(event)]}</span>
+                      <span className="whitespace-nowrap text-xs text-gray-500">{dateTimeLabel(event.created_at)}</span>
+                    </div>
+                    <p className="mt-2 break-all font-semibold text-gray-700">{event.email ?? event.user_id ?? "-"}</p>
+                    {cancellationCommentFromEvent(event) && (
+                      <p className="mt-2 text-gray-600">{cancellationCommentFromEvent(event)}</p>
+                    )}
+                  </div>
+                ))}
+                {cancellationStats.recent.length === 0 && (
+                  <p className="py-4 text-sm text-gray-500">Keine Kündigungen im Zeitraum.</p>
+                )}
+              </div>
+              <table className="hidden w-full min-w-[760px] text-left text-sm sm:table">
                 <thead className="sticky top-7 bg-white text-xs uppercase text-gray-500">
                   <tr>
                     <th className="py-2">Zeit</th>
