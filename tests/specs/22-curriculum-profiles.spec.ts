@@ -15,6 +15,9 @@ type StoredCurriculum = {
 };
 
 async function seedChild(page: Page, grade: number, curriculum?: StoredCurriculum) {
+  await page.context().clearCookies();
+  await page.goto("/");
+  await page.evaluate(() => localStorage.clear());
   await page.goto("/login");
   const email = page.locator("input[type=email]");
   if (await email.isVisible()) {
