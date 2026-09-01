@@ -1,0 +1,218 @@
+[
+  {
+    "grade": 4,
+    "topicId": "koerper-gesundheit",
+    "topic": "Körper und Gesundheit",
+    "exerciseId": "nmg4-rich-koerper-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Körperteil und Aufgabe."
+  },
+  {
+    "grade": 4,
+    "topicId": "lebensraeume-tiere",
+    "topic": "Lebensräume der Tiere",
+    "exerciseId": "nmg4-rich-tiere-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Tier und passenden Lebensraum."
+  },
+  {
+    "grade": 4,
+    "topicId": "wetter-klima",
+    "topic": "Wetter und Klima",
+    "exerciseId": "nmg4-rich-wasser-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne die Schritte im Wasserkreislauf."
+  },
+  {
+    "grade": 4,
+    "topicId": "orientierung-karte-4",
+    "topic": "Orientierung & Karte",
+    "exerciseId": "nmg4-rich-karte-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Kartenzeichen und Bedeutung."
+  },
+  {
+    "grade": 4,
+    "topicId": "gemeinde-kanton-4",
+    "topic": "Gemeinde & Kanton",
+    "exerciseId": "nmg4-rich-gemeinde-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne Aufgaben von Gemeinde und Kanton."
+  },
+  {
+    "grade": 4,
+    "topicId": "oekologie-4",
+    "topic": "Ökologie & Umwelt",
+    "exerciseId": "nmg4-rich-oekologie-word-1",
+    "type": "word-search",
+    "difficulty": 1,
+    "question": "Finde Wörter rund um Lebensräume."
+  },
+  {
+    "grade": 4,
+    "topicId": "ressourcen-wasser-4",
+    "topic": "Wasser & Ressourcen",
+    "exerciseId": "nmg4-rich-wasser-review-1",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Du hast nur wenig Wasser für einen Schultag. Erkläre, wofür du es zuerst nutzt und warum."
+  },
+  {
+    "grade": 4,
+    "topicId": "energie-stoffe",
+    "topic": "Produktion & Konsum",
+    "exerciseId": "nmg4-rich-produktion-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne den Weg eines Brots vom Rohstoff bis zum Znüni."
+  },
+  {
+    "grade": 5,
+    "topicId": "oekosysteme",
+    "topic": "Ökosysteme",
+    "exerciseId": "nmg5-rich-oeko-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne die Rollen in einer Nahrungskette."
+  },
+  {
+    "grade": 5,
+    "topicId": "strom-energie",
+    "topic": "Strom und Energie",
+    "exerciseId": "nmg5-rich-strom-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Energieform und Beispiel."
+  },
+  {
+    "grade": 5,
+    "topicId": "menschlicher-koerper-5",
+    "topic": "Menschlicher Körper",
+    "exerciseId": "nmg5-rich-koerper-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Körpersystem und passende Aufgabe."
+  },
+  {
+    "grade": 5,
+    "topicId": "erde-klima-5",
+    "topic": "Erde & Klima",
+    "exerciseId": "nmg5-rich-klima-word-1",
+    "type": "word-search",
+    "difficulty": 1,
+    "question": "Finde Begriffe zu Wetter und Klima."
+  },
+  {
+    "grade": 5,
+    "topicId": "schweiz-politik-5",
+    "topic": "Schweiz — Politik & Demokratie",
+    "exerciseId": "nmg5-rich-politik-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne die Beispiele zu Demokratie und Alltag."
+  },
+  {
+    "grade": 5,
+    "topicId": "wirtschaft-handel-5",
+    "topic": "Wirtschaft im Alltag",
+    "exerciseId": "nmg5-rich-wirtschaft-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Wirtschaftsbegriff und einfache Erklärung."
+  },
+  {
+    "grade": 5,
+    "topicId": "nachhaltigkeit-5",
+    "topic": "Nachhaltigkeit & Zukunft",
+    "exerciseId": "nmg5-rich-nachhaltig-review-1",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Ein kaputter Rucksack kann repariert oder ersetzt werden. Erkläre eine sinnvolle Entscheidung."
+  },
+  {
+    "grade": 5,
+    "topicId": "klima-lebensraeume-5",
+    "topic": "Klimazonen & Lebensräume",
+    "exerciseId": "nmg5-rich-lebensraeume-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Klima und passenden Lebensraum."
+  },
+  {
+    "grade": 6,
+    "topicId": "energie-nachh-6",
+    "topic": "Energie & Nachhaltigkeit",
+    "exerciseId": "nmg6-rich-energie-drag-1",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Energiequellen nach erneuerbar und nicht erneuerbar."
+  },
+  {
+    "grade": 6,
+    "topicId": "demokratie-menschenrechte-6",
+    "topic": "Demokratie & Menschenrechte",
+    "exerciseId": "nmg6-rich-demokratie-match-1",
+    "type": "matching",
+    "difficulty": 3,
+    "question": "Verbinde demokratische Handlung und Bedeutung."
+  },
+  {
+    "grade": 6,
+    "topicId": "migration-flucht-6",
+    "topic": "Migration & Flucht",
+    "exerciseId": "nmg6-rich-migration-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Eine neue Schülerin kommt in die Klasse und spricht noch wenig Deutsch. Beschreibe zwei faire Unterstützungen."
+  },
+  {
+    "grade": 6,
+    "topicId": "wirtschaft-grundlagen-6",
+    "topic": "Wirtschaft im Alltag",
+    "exerciseId": "nmg6-rich-wirtschaft-drag-1",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Faktoren, die einen Preis beeinflussen."
+  },
+  {
+    "grade": 6,
+    "topicId": "globalisierung-6",
+    "topic": "Weltweit verbunden",
+    "exerciseId": "nmg6-rich-global-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde weltweite Verbindung und Beispiel."
+  },
+  {
+    "grade": 6,
+    "topicId": "kontinente-6",
+    "topic": "Kontinente & Weltregionen",
+    "exerciseId": "nmg6-rich-kontinente-word-1",
+    "type": "word-search",
+    "difficulty": 2,
+    "question": "Finde Kontinente."
+  },
+  {
+    "grade": 6,
+    "topicId": "zukunft-herausforderungen-6",
+    "topic": "Zukunft & Herausforderungen",
+    "exerciseId": "nmg6-rich-zukunft-match-1",
+    "type": "matching",
+    "difficulty": 3,
+    "question": "Verbinde Herausforderung und sinnvolle Frage."
+  },
+  {
+    "grade": 6,
+    "topicId": "technik-informatik-6",
+    "topic": "Technik & Informatik",
+    "exerciseId": "nmg6-rich-technik-drag-1",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Technikfolgen nach Chance und Risiko."
+  }
+]

@@ -45,7 +45,7 @@ for (const key of CONSOLIDATED_NMG_TOPIC_KEYS) {
   const competency = getBalancedNmgCompetency(grade, topicId);
   if (!competency) failures.push(`${key}: LP21 mapping missing`);
   else if (competency.code !== expectedCompetencies[key]) failures.push(`${key}: expected LP21 ${expectedCompetencies[key]}, found ${competency.code}`);
-  if (topic.exercises.length !== 50) failures.push(`${key}: expected 50 exercises, found ${topic.exercises.length}`);
+  if (topic.exercises.length < 50) failures.push(`${key}: expected at least 50 exercises, found ${topic.exercises.length}`);
   if (new Set(topic.exercises.map(exercise => exercise.id)).size !== topic.exercises.length) failures.push(`${key}: duplicate exercise IDs`);
   if (new Set(topic.exercises.map(exercise => `${exercise.type}|${exercise.question}|${exercise.answer}`)).size !== topic.exercises.length) failures.push(`${key}: duplicate exercise content`);
   const answerPositions = [0, 1, 2, 3].map(position => topic.exercises.filter(exercise => exercise.type === "multiple-choice" && exercise.options?.indexOf(exercise.answer) === position).length);
@@ -60,6 +60,6 @@ for (const key of CONSOLIDATED_NMG_TOPIC_KEYS) {
   }
 }
 
-if (exercises !== 600) failures.push(`expected 600 consolidated exercises, found ${exercises}`);
+if (exercises < 600) failures.push(`expected at least 600 consolidated exercises, found ${exercises}`);
 console.log(JSON.stringify({ topics: CONSOLIDATED_NMG_TOPIC_KEYS.length, exercises, failures }, null, 2));
 if (failures.length) process.exit(1);

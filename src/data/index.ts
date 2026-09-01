@@ -34,6 +34,7 @@ import { repairOpenWritingExercise } from "./openWritingExercises";
 import { applyLp21ExerciseReplacements } from "./lp21ExerciseReplacements";
 import { applyLp21ApiFitReplacements } from "./lp21ApiFitReplacements";
 import { consolidateNmgTopics } from "./nmgConsolidation";
+import { addNmgRichEnrichment } from "./nmgRichEnrichment";
 import { applyGrade1GermanLevel } from "./grade1GermanLevel";
 import { applyExerciseLocalizations } from "./exerciseLocalizations";
 import { applyExerciseIdMigrations } from "./exerciseIdMigrations";
@@ -76,7 +77,8 @@ export function getTopicsBeforeExerciseIdMigration(grade: number, subject: strin
     ? applyGrade1GermanLevel(repairedTopics)
     : repairedTopics;
   const consolidatedTopics = consolidateNmgTopics(grade, subject, applyLp21ApiFitReplacements(grade, subject, levelledTopics));
-  return applyExerciseLocalizations(grade, subject, consolidatedTopics).map((topic) => ({
+  const enrichedTopics = addNmgRichEnrichment(grade, subject, consolidatedTopics);
+  return applyExerciseLocalizations(grade, subject, enrichedTopics).map((topic) => ({
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
   }));
