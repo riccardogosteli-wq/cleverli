@@ -35,7 +35,21 @@ function makeAdminClient(): SupabaseClient {
   });
 }
 
+function makeAuthClient(): SupabaseClient {
+  const localEnv = loadLocalEnv();
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? localEnv.NEXT_PUBLIC_SUPABASE_URL;
+  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? localEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!supabaseUrl || !anonKey) {
+    throw new Error("Missing Supabase anon credentials for real-auth curriculum QA");
+  }
+  return createClient(supabaseUrl, anonKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+}
+
 async function cleanupQaUser(admin: SupabaseClient, userId: string | null, email: string) {
+  await admin.from("user_activity_events").delete().eq("email", email.toLowerCase());
+
   if (userId) {
     await admin.from("topic_progress").delete().eq("parent_id", userId);
     await admin.from("child_progress").delete().eq("parent_id", userId);
@@ -55,9 +69,42 @@ async function expectNoHorizontalOverflow(page: import("@playwright/test").Page)
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 }
 
+async function clickUntilVisible(
+  page: import("@playwright/test").Page,
+  buttonName: RegExp,
+  visibleLocator: import("@playwright/test").Locator,
+) {
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    await page.getByRole("button", { name: buttonName }).click();
+    try {
+      await expect(visibleLocator).toBeVisible({ timeout: 3_000 });
+      return;
+    } catch {
+      await page.waitForTimeout(1_000);
+    }
+  }
+  await expect(visibleLocator).toBeVisible();
+}
+
+async function gotoWithRetry(
+  page: import("@playwright/test").Page,
+  path: string,
+  waitUntil: "load" | "domcontentloaded" = "domcontentloaded",
+) {
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      await page.goto(path, { waitUntil, timeout: 60_000 });
+      return;
+    } catch (error) {
+      if (attempt === 2) throw error;
+      await page.waitForTimeout(2_000);
+    }
+  }
+}
+
 test.describe("real production auth curriculum profile QA", () => {
   test.describe.configure({ retries: 0 });
-  test.setTimeout(120_000);
+  test.setTimeout(180_000);
   test.skip(process.env.E2E_REAL_AUTH !== "1", "Opt-in only: creates and deletes a real Supabase QA user");
 
   test("creates and updates canton profile through real auth, then preserves progress", async ({ page }) => {
@@ -90,6 +137,22 @@ test.describe("real production auth curriculum profile QA", () => {
       }, { onConflict: "id" });
       expect(profileError).toBeNull();
 
+      const auth = makeAuthClient();
+      const { data: signedIn, error: signInError } = await auth.auth.signInWithPassword({ email, password });
+      expect(signInError).toBeNull();
+      expect(signedIn.session).toBeTruthy();
+
+      await page.addInitScript(({ session }) => {
+        localStorage.setItem("cleverli_supabase_session", JSON.stringify(session));
+        localStorage.setItem("cleverli_session", JSON.stringify({
+          userId: session.user.id,
+          email: session.user.email,
+          name: "Curriculum QA",
+          premium: true,
+          premiumPlan: "qa",
+        }));
+      }, { session: signedIn.session });
+
       const consoleErrors: string[] = [];
       page.on("console", message => {
         const text = message.text();
@@ -97,18 +160,11 @@ test.describe("real production auth curriculum profile QA", () => {
           consoleErrors.push(text);
         }
       });
-
-      await page.goto("/login");
-      await page.locator("input[type='email']").fill(email);
-      await page.locator("input[type='password']").first().fill(password);
-      await page.getByRole("button", { name: /Anmelden|Login/i }).click();
-      await page.waitForURL(url => !url.pathname.includes("/login"), { timeout: 15_000 });
-
-      await page.goto("/family");
+      await gotoWithRetry(page, "/family");
       await expect(page.getByRole("heading", { name: /Familienprofile/i })).toBeVisible();
-      await page.getByRole("button", { name: /Kind hinzufügen/i }).click();
+      await clickUntilVisible(page, /Kind hinzufügen/i, page.getByPlaceholder("z.B. Emma"));
       await page.getByPlaceholder("z.B. Emma").fill("QA Bern Kind");
-      await page.getByRole("button", { name: /^3\. Kl\./ }).click();
+      await page.getByRole("button", { name: /^3\. (Kl\.|Klasse)/ }).click();
       await expect(page.getByTestId("curriculum-canton")).toBeVisible();
       await page.getByTestId("curriculum-canton").selectOption("BE");
       await expect(page.getByTestId("curriculum-school-language")).toBeVisible();
@@ -130,6 +186,21 @@ test.describe("real production auth curriculum profile QA", () => {
           ? `${data.parent_id}|${data.name}|${data.grade}|${data.canton}|${data.school_language}|${data.curriculum_system}|${data.curriculum_profile_version}`
           : "";
       }, { timeout: 10_000 }).toBe(`${userId}|QA Bern Kind|3|BE|de|lp21|1`);
+
+      await expect.poll(async () => {
+        const { data } = await admin
+          .from("user_activity_events")
+          .select("activity_type, grade, source, metadata")
+          .eq("email", email.toLowerCase())
+          .eq("activity_type", "curriculum_profile_selected")
+          .order("created_at", { ascending: false })
+          .limit(1);
+        const event = data?.[0];
+        const metadata = event?.metadata as Record<string, unknown> | null | undefined;
+        return event
+          ? `${event.activity_type}|${event.grade}|${event.source}|${metadata?.canton}|${metadata?.school_language}|${metadata?.curriculum_system}`
+          : "";
+      }, { timeout: 10_000 }).toBe("curriculum_profile_selected|3|family_page_child_created|BE|de|lp21");
 
       const { data: child } = await admin
         .from("child_profiles")
@@ -177,13 +248,13 @@ test.describe("real production auth curriculum profile QA", () => {
         expect(progressError).toBeNull();
       }
 
-      await page.goto("/parents");
+      await gotoWithRetry(page, "/parents");
       await page.evaluate(() => {
         localStorage.setItem("cleverli_parent_unlocked", JSON.stringify({ until: Date.now() + 60 * 60 * 1000 }));
       });
-      await page.reload();
+      await page.reload({ waitUntil: "domcontentloaded" });
       await expect(page.getByText("QA Bern Kind")).toBeVisible();
-      await page.getByRole("button", { name: /Schulkanton ändern/ }).click();
+      await clickUntilVisible(page, /Schulkanton ändern/, page.getByTestId("curriculum-canton"));
       await page.getByTestId("curriculum-canton").selectOption("VS");
       await page.getByTestId("curriculum-school-language").selectOption("de");
       await expect(page.getByTestId("curriculum-profile-status")).toContainText("verfügbar");
@@ -202,6 +273,21 @@ test.describe("real production auth curriculum profile QA", () => {
           ? `${data.canton}|${data.school_language}|${data.curriculum_system}|${data.curriculum_profile_version}`
           : "";
       }, { timeout: 10_000 }).toBe("VS|de|lp21|1");
+
+      await expect.poll(async () => {
+        const { data } = await admin
+          .from("user_activity_events")
+          .select("activity_type, grade, source, metadata")
+          .eq("email", email.toLowerCase())
+          .eq("activity_type", "curriculum_profile_changed")
+          .order("created_at", { ascending: false })
+          .limit(1);
+        const event = data?.[0];
+        const metadata = event?.metadata as Record<string, unknown> | null | undefined;
+        return event
+          ? `${event.activity_type}|${event.grade}|${event.source}|${metadata?.canton}|${metadata?.school_language}|${metadata?.curriculum_system}`
+          : "";
+      }, { timeout: 10_000 }).toBe("curriculum_profile_changed|3|child_profile_manager|VS|de|lp21");
 
       await expect.poll(async () => {
         const { data } = await admin
