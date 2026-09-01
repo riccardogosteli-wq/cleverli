@@ -1,0 +1,482 @@
+[
+  {
+    "grade": 4,
+    "subject": "english",
+    "topicId": "my-daily-routine-4",
+    "topic": "My Daily Routine",
+    "exerciseId": "eng4-rich-routine-match-1",
+    "type": "matching",
+    "difficulty": 1,
+    "question": "Match the daily routine phrases."
+  },
+  {
+    "grade": 4,
+    "subject": "english",
+    "topicId": "my-daily-routine-4",
+    "topic": "My Daily Routine",
+    "exerciseId": "eng4-rich-routine-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Put the morning routine in a sensible order."
+  },
+  {
+    "grade": 4,
+    "subject": "english",
+    "topicId": "my-home-4",
+    "topic": "My Home & Town",
+    "exerciseId": "eng4-rich-home-memory-1",
+    "type": "memory",
+    "difficulty": 1,
+    "question": "Find the rooms and what happens there."
+  },
+  {
+    "grade": 4,
+    "subject": "english",
+    "topicId": "sports-hobbies-4",
+    "topic": "Sports & Hobbies",
+    "exerciseId": "eng4-rich-hobbies-review-1",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Write two English sentences about hobbies you like. Say where or when you do them."
+  },
+  {
+    "grade": 4,
+    "subject": "english",
+    "topicId": "food-shopping-4",
+    "topic": "Food & Shopping",
+    "exerciseId": "eng4-rich-food-word-1",
+    "type": "word-search",
+    "difficulty": 2,
+    "question": "Find food words in English."
+  },
+  {
+    "grade": 4,
+    "subject": "english",
+    "topicId": "travel-directions-4",
+    "topic": "Travel & Directions",
+    "exerciseId": "eng4-rich-directions-drag-1",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Order the short dialogue for asking the way."
+  },
+  {
+    "grade": 4,
+    "subject": "english",
+    "topicId": "travel-directions-4",
+    "topic": "Travel & Directions",
+    "exerciseId": "eng4-rich-directions-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Write two simple English sentences to tell a friend how to get from school to the bus stop."
+  },
+  {
+    "grade": 4,
+    "subject": "english",
+    "topicId": "describing-people-4",
+    "topic": "Describing People",
+    "exerciseId": "eng4-rich-people-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Match adjectives with friendly descriptions."
+  },
+  {
+    "grade": 4,
+    "subject": "french",
+    "topicId": "journee-heure-4",
+    "topic": "Ma journée et l'heure",
+    "exerciseId": "fr4-rich-journee-match-1",
+    "type": "matching",
+    "difficulty": 1,
+    "question": "Associe les moments de la journée."
+  },
+  {
+    "grade": 4,
+    "subject": "french",
+    "topicId": "journee-heure-4",
+    "topic": "Ma journée et l'heure",
+    "exerciseId": "fr4-rich-journee-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Mets la routine du matin dans le bon ordre."
+  },
+  {
+    "grade": 4,
+    "subject": "french",
+    "topicId": "maison-position-4",
+    "topic": "La maison et les positions",
+    "exerciseId": "fr4-rich-maison-memory-1",
+    "type": "memory",
+    "difficulty": 1,
+    "question": "Trouve les pièces de la maison."
+  },
+  {
+    "grade": 4,
+    "subject": "french",
+    "topicId": "ecole-horaire-4",
+    "topic": "L'école et l'horaire",
+    "exerciseId": "fr4-rich-ecole-review-1",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Écris deux phrases simples sur ton école ou ta classe."
+  },
+  {
+    "grade": 4,
+    "subject": "french",
+    "topicId": "achats-prix-4",
+    "topic": "Les achats et les prix",
+    "exerciseId": "fr4-rich-achats-word-1",
+    "type": "word-search",
+    "difficulty": 2,
+    "question": "Trouve des mots utiles au magasin."
+  },
+  {
+    "grade": 4,
+    "subject": "french",
+    "topicId": "ville-directions-4",
+    "topic": "En ville et les directions",
+    "exerciseId": "fr4-rich-ville-drag-1",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Mets le petit dialogue dans le bon ordre."
+  },
+  {
+    "grade": 4,
+    "subject": "french",
+    "topicId": "ville-directions-4",
+    "topic": "En ville et les directions",
+    "exerciseId": "fr4-rich-ville-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Écris deux phrases simples pour expliquer le chemin de l'école à l'arrêt de bus."
+  },
+  {
+    "grade": 4,
+    "subject": "french",
+    "topicId": "loisirs-capacites-4",
+    "topic": "Les loisirs et les capacités",
+    "exerciseId": "fr4-rich-loisirs-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Associe les loisirs et les phrases avec «je peux»."
+  },
+  {
+    "grade": 5,
+    "subject": "english",
+    "topicId": "present-continuous-5",
+    "topic": "Present Continuous",
+    "exerciseId": "eng5-rich-continuous-drag-1",
+    "type": "drag-drop",
+    "difficulty": 1,
+    "question": "Build present continuous sentences."
+  },
+  {
+    "grade": 5,
+    "subject": "english",
+    "topicId": "future-plans-5",
+    "topic": "Future Plans",
+    "exerciseId": "eng5-rich-future-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Match future plans with time expressions."
+  },
+  {
+    "grade": 5,
+    "subject": "english",
+    "topicId": "future-plans-5",
+    "topic": "Future Plans",
+    "exerciseId": "eng5-rich-future-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Write three English sentences about a realistic weekend plan."
+  },
+  {
+    "grade": 5,
+    "subject": "english",
+    "topicId": "past-experiences-5",
+    "topic": "Past Experiences",
+    "exerciseId": "eng5-rich-past-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Find present and past verb forms."
+  },
+  {
+    "grade": 5,
+    "subject": "english",
+    "topicId": "past-experiences-5",
+    "topic": "Past Experiences",
+    "exerciseId": "eng5-rich-past-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Order the short story."
+  },
+  {
+    "grade": 5,
+    "subject": "english",
+    "topicId": "technology-5",
+    "topic": "Technology & Media",
+    "exerciseId": "eng5-rich-tech-word-1",
+    "type": "word-search",
+    "difficulty": 1,
+    "question": "Find useful technology words."
+  },
+  {
+    "grade": 5,
+    "subject": "english",
+    "topicId": "countries-cultures-5",
+    "topic": "Countries & Cultures",
+    "exerciseId": "eng5-rich-culture-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Match countries with simple cultural clues."
+  },
+  {
+    "grade": 5,
+    "subject": "english",
+    "topicId": "reading-comp-5",
+    "topic": "Reading Comprehension",
+    "exerciseId": "eng5-rich-reading-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "After reading a short text, write one sentence about the main idea and one sentence about a detail."
+  },
+  {
+    "grade": 5,
+    "subject": "french",
+    "topicId": "bonjour-5",
+    "topic": "Bonjour! — Salutations",
+    "exerciseId": "fr5-rich-salutations-drag-1",
+    "type": "drag-drop",
+    "difficulty": 1,
+    "question": "Classe les salutations."
+  },
+  {
+    "grade": 5,
+    "subject": "french",
+    "topicId": "famille-5",
+    "topic": "La famille",
+    "exerciseId": "fr5-rich-famille-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Associe les membres de la famille."
+  },
+  {
+    "grade": 5,
+    "subject": "french",
+    "topicId": "famille-5",
+    "topic": "La famille",
+    "exerciseId": "fr5-rich-famille-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Présente ta famille en trois phrases simples."
+  },
+  {
+    "grade": 5,
+    "subject": "french",
+    "topicId": "ecole-5",
+    "topic": "L'école",
+    "exerciseId": "fr5-rich-ecole-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Trouve les objets d'école et leur usage."
+  },
+  {
+    "grade": 5,
+    "subject": "french",
+    "topicId": "nourriture-5",
+    "topic": "Nourriture & boissons",
+    "exerciseId": "fr5-rich-nourriture-word-1",
+    "type": "word-search",
+    "difficulty": 1,
+    "question": "Trouve des mots de nourriture."
+  },
+  {
+    "grade": 5,
+    "subject": "french",
+    "topicId": "verbes-etre-avoir-5",
+    "topic": "Être & Avoir",
+    "exerciseId": "fr5-rich-verbes-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Range les formes de être et avoir."
+  },
+  {
+    "grade": 5,
+    "subject": "french",
+    "topicId": "verbes-etre-avoir-5",
+    "topic": "Être & Avoir",
+    "exerciseId": "fr5-rich-verbes-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Écris deux phrases avec être et deux phrases avec avoir."
+  },
+  {
+    "grade": 5,
+    "subject": "french",
+    "topicId": "activites-loisirs-5",
+    "topic": "Activités & loisirs",
+    "exerciseId": "fr5-rich-loisirs-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Associe l'activité et le lieu."
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topicId": "passive-voice-6",
+    "topic": "Everyday English",
+    "exerciseId": "eng6-rich-everyday-drag-1",
+    "type": "drag-drop",
+    "difficulty": 1,
+    "question": "Match useful everyday English phrases with situations."
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topicId": "conditionals-6",
+    "topic": "Plans & Reasons",
+    "exerciseId": "eng6-rich-reasons-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Match plans with reasons."
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topicId": "conditionals-6",
+    "topic": "Plans & Reasons",
+    "exerciseId": "eng6-rich-reasons-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Write four English sentences about a plan and explain your reasons."
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topicId": "reported-speech-6",
+    "topic": "Conversations",
+    "exerciseId": "eng6-rich-conversation-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Order the conversation."
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topicId": "reading-skills-6",
+    "topic": "Reading Skills",
+    "exerciseId": "eng6-rich-reading-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Find reading strategies and their purpose."
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topicId": "vocabulary-6",
+    "topic": "Vocabulary Building",
+    "exerciseId": "eng6-rich-vocab-word-1",
+    "type": "word-search",
+    "difficulty": 1,
+    "question": "Find useful school and media words."
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topicId": "environment-debate-6",
+    "topic": "Environment & Debate",
+    "exerciseId": "eng6-rich-debate-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Match debate phrases with their job."
+  },
+  {
+    "grade": 6,
+    "subject": "english",
+    "topicId": "environment-debate-6",
+    "topic": "Environment & Debate",
+    "exerciseId": "eng6-rich-debate-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Write a short opinion about using less plastic. Include one reason and one example."
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topicId": "passe-compose-6",
+    "topic": "Ma journée",
+    "exerciseId": "fr6-rich-journee-drag-1",
+    "type": "drag-drop",
+    "difficulty": 1,
+    "question": "Associe les phrases utiles aux moments de la journée."
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topicId": "imparfait-6",
+    "topic": "À l’école",
+    "exerciseId": "fr6-rich-ecole-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Associe les phrases d'école et leur sens."
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topicId": "imparfait-6",
+    "topic": "À l’école",
+    "exerciseId": "fr6-rich-ecole-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Écris quatre phrases utiles pour parler en classe."
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topicId": "futur-simple-6",
+    "topic": "Projets & loisirs",
+    "exerciseId": "fr6-rich-projets-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Associe les projets et les raisons."
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topicId": "ville-directions-6",
+    "topic": "La ville & les directions",
+    "exerciseId": "fr6-rich-ville-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Mets les indications dans le bon ordre."
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topicId": "pronoms-cod-coi-6",
+    "topic": "Phrases utiles",
+    "exerciseId": "fr6-rich-phrases-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Trouve les phrases utiles et leur fonction."
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topicId": "france-pays-francophones-6",
+    "topic": "La France & pays francophones",
+    "exerciseId": "fr6-rich-pays-word-1",
+    "type": "word-search",
+    "difficulty": 1,
+    "question": "Trouve des mots de pays francophones."
+  },
+  {
+    "grade": 6,
+    "subject": "french",
+    "topicId": "culture-francophone-6",
+    "topic": "Culture francophone",
+    "exerciseId": "fr6-rich-culture-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Présente un pays ou une région francophone en quatre phrases simples."
+  }
+]
