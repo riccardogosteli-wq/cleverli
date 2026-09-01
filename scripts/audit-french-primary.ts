@@ -1,4 +1,5 @@
 import { getTopics } from "../src/data";
+import { getLanguageRichEnrichmentIds } from "../src/data/languageRichEnrichment";
 import type { Exercise, Topic } from "../src/types/exercise";
 
 const failures: string[] = [];
@@ -40,6 +41,12 @@ const summary: Record<number, Record<string, number>> = {};
 let totalExercises = 0;
 let totalListening = 0;
 let totalInteractive = 0;
+const frenchRichAdditions = getLanguageRichEnrichmentIds().filter((entry) => entry.subject === "french" && (entry.grade === 3 || entry.grade === 4));
+
+function languageRichAdditionsFor(grade: number, topic: Topic) {
+  const ids = new Set(frenchRichAdditions.filter((entry) => entry.grade === grade && entry.topicId === topic.id).map((entry) => entry.exerciseId));
+  return topic.exercises.filter((exercise) => ids.has(exercise.id));
+}
 
 for (const grade of [3, 4] as const) {
   const topics = getTopics(grade, "french");
@@ -51,9 +58,12 @@ for (const grade of [3, 4] as const) {
 
   summary[grade] = {};
   for (const topic of topics) {
-    if (topic.exercises.length !== 50) failures.push(`${path(grade, topic)}: expected 50 exercises`);
+    const richAdditions = languageRichAdditionsFor(grade, topic);
+    const expectedExerciseCount = 50 + richAdditions.length;
+    if (topic.exercises.length !== expectedExerciseCount) failures.push(`${path(grade, topic)}: expected ${expectedExerciseCount} exercises`);
     const tierCounts = [1, 2, 3].map((difficulty) => topic.exercises.filter((exercise) => exercise.difficulty === difficulty).length);
-    if (tierCounts.join(",") !== "15,20,15") failures.push(`${path(grade, topic)}: expected tiers 15/20/15, found ${tierCounts.join("/")}`);
+    const expectedTierCounts = [1, 2, 3].map((difficulty) => 15 + (difficulty === 2 ? 5 : 0) + richAdditions.filter((exercise) => exercise.difficulty === difficulty).length);
+    if (tierCounts.join(",") !== expectedTierCounts.join(",")) failures.push(`${path(grade, topic)}: expected tiers ${expectedTierCounts.join("/")}, found ${tierCounts.join("/")}`);
 
     const typeCounts = new Map<string, number>();
     for (const exercise of topic.exercises) {
@@ -109,6 +119,7 @@ for (const grade of [3, 4] as const) {
       "multiple-choice": 36, "fill-in-blank": 5, "matching": 2, memory: 1,
       "drag-drop": 2, "word-search": 1, "self-review": 3,
     };
+    for (const addition of richAdditions) expectedTypes[addition.type] = (expectedTypes[addition.type] ?? 0) + 1;
     for (const [type, count] of Object.entries(expectedTypes)) {
       if (typeCounts.get(type) !== count) failures.push(`${path(grade, topic)}: expected ${count} ${type}, found ${typeCounts.get(type) ?? 0}`);
     }
@@ -116,9 +127,11 @@ for (const grade of [3, 4] as const) {
   }
 }
 
-if (totalExercises !== 900) failures.push(`Expected 900 French primary exercises, found ${totalExercises}`);
+const expectedTotalExercises = 900 + frenchRichAdditions.length;
+if (totalExercises !== expectedTotalExercises) failures.push(`Expected ${expectedTotalExercises} French primary exercises, found ${totalExercises}`);
 if (totalListening !== 144) failures.push(`Expected 144 French listening tasks, found ${totalListening}`);
-if (totalInteractive !== 162) failures.push(`Expected 162 non-MC/non-fill interactive tasks, found ${totalInteractive}`);
+const expectedInteractive = 162 + frenchRichAdditions.length;
+if (totalInteractive !== expectedInteractive) failures.push(`Expected ${expectedInteractive} non-MC/non-fill interactive tasks, found ${totalInteractive}`);
 
 console.log(JSON.stringify({
   topics: 18,

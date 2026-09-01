@@ -27,6 +27,7 @@
     "qa:lp21-coverage": "npx tsx scripts/audit-lp21-coverage.ts",
     "qa:nmg-consolidation": "npx tsx scripts/audit-nmg-consolidation.ts",
     "qa:nmg-rich-enrichment": "npx tsx scripts/audit-nmg-rich-enrichment.ts",
+    "qa:language-rich-enrichment": "npx tsx scripts/audit-language-rich-enrichment.ts",
     "qa:lp21-fit": "npx tsx scripts/audit-lp21-exercise-fit.ts",
     "qa:grade-suitability-scorer": "npx tsx scripts/audit-grade-suitability-scorer.ts",
     "qa:lp21-fit-replacements": "npx tsx scripts/audit-lp21-api-fit-replacements.ts",
