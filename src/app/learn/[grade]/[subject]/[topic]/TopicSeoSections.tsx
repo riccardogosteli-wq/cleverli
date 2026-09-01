@@ -15,6 +15,7 @@ import {
   getLocalizedSubjectName,
   getTopicExerciseTypes,
 } from "@/lib/seoContent";
+import type { Lang } from "@/lib/i18n";
 
 interface SampleExerciseCard {
   exercise: Exercise;
@@ -70,6 +71,254 @@ function getStoredTopicCompleted(topic: Topic, grade: number, subject: string) {
   return 0;
 }
 
+function localizedList<T>(
+  exercise: Exercise,
+  lang: Lang,
+  key: "options" | "pairs" | "dragItems" | "dropZones" | "wordList" | "reviewCriteria"
+): T[] {
+  const localizedKey = lang === "en"
+    ? `${key}EN`
+    : lang === "fr"
+      ? `${key}FR`
+      : lang === "it"
+        ? `${key}IT`
+        : key;
+  const localized = exercise[localizedKey as keyof Exercise];
+  const base = exercise[key as keyof Exercise];
+  return (Array.isArray(localized) ? localized : Array.isArray(base) ? base : []) as T[];
+}
+
+function localizedAnswer(exercise: Exercise, lang: Lang) {
+  if (lang === "en") return exercise.answerEN ?? exercise.answer;
+  if (lang === "fr") return exercise.answerFR ?? exercise.answer;
+  if (lang === "it") return exercise.answerIT ?? exercise.answer;
+  return exercise.answer;
+}
+
+function displayText(value: string, max = 82) {
+  const clean = value.replace(/\s+/g, " ").trim();
+  return clean.length > max ? `${clean.slice(0, max - 1).trim()}...` : clean;
+}
+
+const previewTypePriority: Record<string, number> = {
+  "number-line": 1,
+  memory: 2,
+  "drag-drop": 3,
+  matching: 4,
+  "word-search": 5,
+  counting: 6,
+  "self-review": 7,
+  "multiple-choice": 8,
+  "fill-in-blank": 9,
+};
+
+function MiniNumberLine({ exercise }: { exercise: Exercise }) {
+  const min = exercise.numberMin ?? 0;
+  const max = exercise.numberMax ?? 10;
+  const parsedAnswer = Number.parseFloat(exercise.answer.replace(",", "."));
+  const answer = Number.isFinite(parsedAnswer) ? parsedAnswer : Math.round((min + max) / 2);
+  const pct = max === min ? 50 : Math.max(0, Math.min(100, ((answer - min) / (max - min)) * 100));
+
+  return (
+    <div className="rounded-xl bg-blue-50 px-3 py-4">
+      <div className="relative h-9">
+        <div className="absolute left-0 right-0 top-4 h-2 rounded-full bg-blue-100" />
+        <div className="absolute top-3 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-white bg-blue-600 shadow-sm" style={{ left: `${pct}%` }} />
+        <div className="absolute -top-1 -translate-x-1/2 rounded-full bg-white px-2 py-0.5 text-xs font-black text-blue-700 shadow-sm" style={{ left: `${pct}%` }}>
+          {exercise.answer}
+        </div>
+      </div>
+      <div className="mt-1 flex justify-between text-[11px] font-bold text-blue-500">
+        <span>{min}</span>
+        <span>{max}</span>
+      </div>
+    </div>
+  );
+}
+
+function MiniMatching({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  const pairs = localizedList<{ id: string; label: string; emoji?: string }>(exercise, lang, "pairs").slice(0, 4);
+  const visiblePairs = pairs.length >= 4 ? pairs : [
+    { id: "a1", label: displayText(exercise.answer, 28) },
+    { id: "a2", label: displayText(getLocalizedExerciseQuestion(exercise, lang), 28) },
+    { id: "b1", label: "passt" },
+    { id: "b2", label: "gehört dazu" },
+  ];
+  const left = visiblePairs.filter((_, index) => index % 2 === 0).slice(0, 2);
+  const right = visiblePairs.filter((_, index) => index % 2 === 1).slice(0, 2);
+
+  return (
+    <div className="grid grid-cols-2 gap-2">
+      {[left, right].map((column, columnIndex) => (
+        <div key={columnIndex} className="space-y-2">
+          {column.map((item) => (
+            <div key={item.id} className="flex min-h-12 items-center justify-center gap-1 rounded-xl border border-green-100 bg-white px-2 py-2 text-center text-xs font-bold text-gray-700 shadow-sm">
+              {item.emoji && <span className="text-lg leading-none">{item.emoji}</span>}
+              <span>{displayText(item.label, 34)}</span>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function MiniMemory({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  const pairs = localizedList<{ id: string; label: string; emoji?: string }>(exercise, lang, "pairs").slice(0, 2);
+  const fallback = [
+    { id: "m1", label: displayText(exercise.answer, 20), emoji: exercise.emoji },
+    { id: "m2", label: displayText(getLocalizedExerciseQuestion(exercise, lang), 20), emoji: undefined },
+  ];
+  const cards = (pairs.length ? pairs : fallback).slice(0, 2);
+
+  return (
+    <div className="grid grid-cols-4 gap-2">
+      <div className="aspect-square rounded-xl bg-green-600 shadow-sm" />
+      {cards.map((card) => (
+        <div key={card.id} className="flex aspect-square flex-col items-center justify-center rounded-xl border border-green-100 bg-white p-1 text-center shadow-sm">
+          {card.emoji && <span className="text-xl leading-none">{card.emoji}</span>}
+          <span className="text-[10px] font-bold leading-tight text-gray-700">{displayText(card.label, 22)}</span>
+        </div>
+      ))}
+      <div className="aspect-square rounded-xl bg-green-600 shadow-sm" />
+    </div>
+  );
+}
+
+function MiniDragDrop({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  const items = localizedList<{ id: string; label: string; emoji?: string }>(exercise, lang, "dragItems").slice(0, 3);
+  const zones = localizedList<{ id: string; label: string }>(exercise, lang, "dropZones").slice(0, 2);
+  const fallbackItems = items.length ? items : [
+    { id: "d1", label: displayText(exercise.answer, 22), emoji: exercise.emoji },
+    { id: "d2", label: displayText(getLocalizedExerciseQuestion(exercise, lang), 22) },
+  ];
+  const fallbackZones = zones.length ? zones : [
+    { id: "z1", label: "1" },
+    { id: "z2", label: "2" },
+  ];
+
+  return (
+    <div className="space-y-3">
+      <div className="flex flex-wrap gap-2">
+        {fallbackItems.map((item) => (
+          <span key={item.id} className="inline-flex min-h-9 items-center gap-1 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-bold text-amber-900 shadow-sm">
+            {item.emoji && <span>{item.emoji}</span>}
+            {displayText(item.label, 24)}
+          </span>
+        ))}
+      </div>
+      <div className="grid grid-cols-2 gap-2">
+        {fallbackZones.map((zone) => (
+          <div key={zone.id} className="flex min-h-14 items-center justify-center rounded-xl border-2 border-dashed border-amber-200 bg-white px-2 text-center text-[11px] font-black uppercase text-amber-700">
+            {displayText(zone.label, 24)}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MiniWordSearch({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  const words = localizedList<string>(exercise, lang, "wordList")
+    .map((word) => word.replace(/[^A-Za-zÄÖÜäöüÉÈÀÇéèàç]/g, "").toUpperCase())
+    .filter(Boolean)
+    .slice(0, 3);
+  const visibleWords = words.length ? words : [displayText(localizedAnswer(exercise, lang), 8).toUpperCase()];
+  const letters = [...visibleWords.join("LERNEN")].filter(Boolean);
+  const filler = "CLEVERLI";
+  const cells = Array.from({ length: 25 }, (_, index) => letters[index] ?? filler[index % filler.length]);
+
+  return (
+    <div className="flex gap-3">
+      <div className="grid grid-cols-5 gap-1">
+        {cells.map((letter, index) => (
+          <span key={`${letter}-${index}`} className="flex h-7 w-7 items-center justify-center rounded-md bg-green-50 text-xs font-black text-green-800">
+            {letter}
+          </span>
+        ))}
+      </div>
+      <div className="flex min-w-0 flex-1 flex-col justify-center gap-1">
+        {visibleWords.map((word) => (
+          <span key={word} className="rounded-full border border-green-100 bg-white px-2 py-1 text-[11px] font-bold text-gray-700">
+            {word}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MiniChoice({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  const options = localizedList<string>(exercise, lang, "options").slice(0, 4);
+  const visible = options.length ? options : [localizedAnswer(exercise, lang), "Option", "Antwort"];
+
+  return (
+    <div className="grid grid-cols-2 gap-2">
+      {visible.slice(0, 4).map((option, index) => (
+        <div key={`${option}-${index}`} className="flex min-h-11 items-center justify-center rounded-xl border border-gray-100 bg-white px-2 text-center text-xs font-bold text-gray-700 shadow-sm">
+          {displayText(option, 34)}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function MiniFillBlank({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  const question = getLocalizedExerciseQuestion(exercise, lang).replaceAll("___", "____");
+  return (
+    <div className="rounded-xl border border-gray-100 bg-white p-3 shadow-sm">
+      {!getLocalizedExerciseQuestion(exercise, lang).includes("___") && (
+        <p className="text-sm font-semibold leading-6 text-gray-700">{displayText(question, 92)}</p>
+      )}
+      <div className="mt-3 h-10 rounded-xl border-2 border-dashed border-green-200 bg-green-50" />
+    </div>
+  );
+}
+
+function MiniCounting({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  const answer = Number.parseInt(localizedAnswer(exercise, lang), 10);
+  const count = Number.isFinite(answer) ? Math.max(1, Math.min(answer, 10)) : 5;
+  const emoji = exercise.emoji ?? "🍎";
+  return (
+    <div className="rounded-xl bg-green-50 p-3">
+      <div className="flex flex-wrap justify-center gap-2">
+        {Array.from({ length: count }, (_, index) => (
+          <span key={index} className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-xl shadow-sm">
+            {emoji}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MiniSelfReview({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  const criteria = localizedList<string>(exercise, lang, "reviewCriteria").slice(0, 3);
+  const visible = criteria.length ? criteria : [localizedAnswer(exercise, lang)];
+  return (
+    <div className="space-y-2 rounded-xl bg-emerald-50 p-3">
+      {visible.map((criterion, index) => (
+        <div key={`${criterion}-${index}`} className="flex items-start gap-2 rounded-lg bg-white px-3 py-2 text-xs font-semibold text-gray-700 shadow-sm">
+          <span className="mt-0.5 h-4 w-4 rounded-full border-2 border-emerald-300" />
+          <span>{displayText(criterion, 58)}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function VisualExercisePreview({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
+  if (exercise.type === "number-line") return <MiniNumberLine exercise={exercise} />;
+  if (exercise.type === "matching") return <MiniMatching exercise={exercise} lang={lang} />;
+  if (exercise.type === "memory") return <MiniMemory exercise={exercise} lang={lang} />;
+  if (exercise.type === "drag-drop") return <MiniDragDrop exercise={exercise} lang={lang} />;
+  if (exercise.type === "word-search") return <MiniWordSearch exercise={exercise} lang={lang} />;
+  if (exercise.type === "self-review") return <MiniSelfReview exercise={exercise} lang={lang} />;
+  if (exercise.type === "counting") return <MiniCounting exercise={exercise} lang={lang} />;
+  if (exercise.type === "fill-in-blank") return <MiniFillBlank exercise={exercise} lang={lang} />;
+  return <MiniChoice exercise={exercise} lang={lang} />;
+}
+
 export default function TopicSeoSections({ topic, grade, subject, sampleExerciseCards, relatedTopics }: Props) {
   const { lang } = useLang();
   const { profile, loaded } = useProfileContext();
@@ -79,6 +328,9 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
   const subjectName = getLocalizedSubjectName(subject, lang);
   const topicDescription = buildTopicDescription(topic, grade, subject, lang, topicTitle);
   const exerciseTypes = getTopicExerciseTypes(topic, lang);
+  const visibleSampleExerciseCards = [...sampleExerciseCards]
+    .sort((a, b) => (previewTypePriority[a.exercise.type] ?? 20) - (previewTypePriority[b.exercise.type] ?? 20))
+    .slice(0, 3);
 
   useEffect(() => {
     if (!loaded) return;
@@ -110,19 +362,22 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
         {sampleExerciseCards.length > 0 && (
           <div className="mt-5">
             <h3 className="text-sm font-black text-gray-900">{copy.samples}</h3>
-            <ul className="mt-3 space-y-2">
-              {sampleExerciseCards.map(({ exercise, topicId, topicTitle: fallbackTitle }) => {
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              {visibleSampleExerciseCards.map(({ exercise, topicId, topicTitle: fallbackTitle }) => {
                 const sampleTopicTitle = getTopicTitle(topicId, lang, fallbackTitle);
                 return (
-                  <li key={`${topicId}-${exercise.id}`} className="rounded-xl border border-gray-100 bg-gray-50 px-3 py-2 text-sm leading-6 text-gray-700">
+                  <article key={`${topicId}-${exercise.id}`} className="rounded-2xl border border-gray-100 bg-gray-50 p-3 shadow-sm">
                     <span className="mb-1 block text-[11px] font-black uppercase tracking-widest text-green-700">
                       {sampleTopicTitle} · {getExerciseTypeLabel(exercise.type, lang)}
                     </span>
-                    {getLocalizedExerciseQuestion(exercise, lang)}
-                  </li>
+                    <p className="mb-3 text-sm font-semibold leading-6 text-gray-800">
+                      {displayText(getLocalizedExerciseQuestion(exercise, lang), 96)}
+                    </p>
+                    <VisualExercisePreview exercise={exercise} lang={lang} />
+                  </article>
                 );
               })}
-            </ul>
+            </div>
           </div>
         )}
       </section>
