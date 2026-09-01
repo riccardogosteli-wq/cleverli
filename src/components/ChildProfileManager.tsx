@@ -11,12 +11,15 @@ import { CANTON_NAMES, type CurriculumSelection } from "@/lib/curriculumProfiles
 import { getCurriculumRolloutContext, isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
 import { getAnonymousSessionId } from "@/lib/attribution";
 import { captureProductEvent } from "@/lib/monitoring";
+import { trackUserActivity } from "@/lib/userActivityClient";
 
-function AvatarPicker({ value, onChange }: { value: string; onChange: (a: string) => void }) {
+function AvatarPicker({ value, onChange, labelId }: { value: string; onChange: (a: string) => void; labelId: string }) {
   return (
-    <div className="grid grid-cols-6 gap-2">
+    <div className="grid grid-cols-6 gap-2" role="group" aria-labelledby={labelId}>
       {AVATARS.map(a => (
         <button key={a} type="button" onClick={() => onChange(a)}
+          aria-label={`Avatar ${a}`}
+          aria-pressed={value === a}
           className={`text-2xl w-11 h-11 rounded-xl flex items-center justify-center transition-all ${
             value === a ? "bg-green-100 ring-2 ring-green-500 scale-110" : "bg-gray-50 hover:bg-green-50"
           }`}>
@@ -50,11 +53,24 @@ function AddChildForm({
       setActiveProfileId(member.id);
       createChildInSupabase(member.id, member.name, member.grade, member.avatar, member.curriculum);
       if (curriculum) {
+        const source = "child_created";
         captureProductEvent("curriculum_profile_selected", {
           canton: curriculum.canton,
           school_language: curriculum.schoolLanguage,
           curriculum_system: curriculum.curriculumSystem,
-          source: "child_created",
+          source,
+        });
+        void trackUserActivity("curriculum_profile_selected", {
+          source,
+          grade,
+          metadata: {
+            child_id: member.id,
+            canton: curriculum.canton,
+            school_language: curriculum.schoolLanguage,
+            curriculum_system: curriculum.curriculumSystem,
+            regional_profile: curriculum.regionalProfile ?? null,
+            curriculum_profile_version: curriculum.version,
+          },
         });
       }
       onSave();
@@ -69,14 +85,15 @@ function AddChildForm({
 
       {/* Avatar */}
       <div>
-        <div className="text-xs font-medium text-gray-500 mb-2">{tr("chooseAvatar")}</div>
-        <AvatarPicker value={avatar} onChange={setAvatar} />
+        <div id="parents-add-child-avatar-label" className="text-xs font-medium text-gray-500 mb-2">{tr("chooseAvatar")}</div>
+        <AvatarPicker value={avatar} onChange={setAvatar} labelId="parents-add-child-avatar-label" />
       </div>
 
       {/* Name */}
       <div>
-        <div className="text-xs font-medium text-gray-500 mb-1">Name</div>
+        <label htmlFor="parents-add-child-name" className="text-xs font-medium text-gray-500 mb-1">Name</label>
         <input
+          id="parents-add-child-name"
           type="text" value={name} onChange={e => setName(e.target.value)}
           placeholder={tr("childNamePlaceholder") ?? "z.B. Lena"}
           className="w-full border-2 border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-green-400"
@@ -86,10 +103,12 @@ function AddChildForm({
 
       {/* Grade */}
       <div>
-        <div className="text-xs font-medium text-gray-500 mb-2">{tr("classLabel")}</div>
-        <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
+        <div id="parents-add-child-grade-label" className="text-xs font-medium text-gray-500 mb-2">{tr("classLabel")}</div>
+        <div className="grid grid-cols-3 gap-2 sm:grid-cols-6" role="group" aria-labelledby="parents-add-child-grade-label">
           {[1,2,3,4,5,6].map(g => (
             <button key={g} type="button" onClick={() => setGrade(g)}
+              aria-label={`${g}. ${tr("classLabel")}`}
+              aria-pressed={grade === g}
               className={`min-h-11 min-w-11 px-1 py-2 rounded-xl text-sm font-bold border-2 transition-all ${
                 grade === g
                   ? "border-green-700 bg-green-700 text-white"
@@ -322,6 +341,18 @@ export default function ChildProfileManager() {
       canton: curriculum.canton,
       school_language: curriculum.schoolLanguage,
       curriculum_system: curriculum.curriculumSystem,
+    });
+    void trackUserActivity("curriculum_profile_changed", {
+      source: "child_profile_manager",
+      grade: updated.grade,
+      metadata: {
+        child_id: updated.id,
+        canton: curriculum.canton,
+        school_language: curriculum.schoolLanguage,
+        curriculum_system: curriculum.curriculumSystem,
+        regional_profile: curriculum.regionalProfile ?? null,
+        curriculum_profile_version: curriculum.version,
+      },
     });
     reload();
   };

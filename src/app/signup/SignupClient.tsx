@@ -185,8 +185,9 @@ export default function Signup() {
               )}
 
               <div className="space-y-1">
-                <label className="block text-sm font-medium text-gray-700">E-Mail</label>
+                <label htmlFor="signup-email" className="block text-sm font-medium text-gray-700">E-Mail</label>
                 <input
+                  id="signup-email"
                   type="email"
                   value={email}
                   onChange={e => { setEmail(e.target.value); setError(""); }}
@@ -201,8 +202,9 @@ export default function Signup() {
               </div>
 
               <div className="space-y-1">
-                <label className="block text-sm font-medium text-gray-700">Passwort</label>
+                <label htmlFor="signup-password" className="block text-sm font-medium text-gray-700">Passwort</label>
                 <input
+                  id="signup-password"
                   type="password"
                   value={password}
                   onChange={e => { setPassword(e.target.value); setError(""); }}

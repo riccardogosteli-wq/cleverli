@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const PIN_HASH_KEY = "cleverli_parent_pin";
@@ -47,15 +47,6 @@ export default function ParentPinGate({ children }: Props) {
     setTimeout(() => inputRef.current?.focus(), 100);
   }, []);
 
-  // Auto-submit when 4 digits entered
-  useEffect(() => {
-    if (state === "enter" && pin.length === 4) handleEnter();
-    if (state === "setup" && pin.length === 4 && confirmPin.length === 0) {
-      inputRef.current?.blur();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pin, state]);
-
   const handleSetup = () => {
     if (pin.length !== 4) { setError("PIN muss 4 Ziffern haben."); return; }
     if (pin !== confirmPin) { setError("PINs stimmen nicht überein."); setConfirmPin(""); return; }
@@ -64,7 +55,7 @@ export default function ParentPinGate({ children }: Props) {
     setState("unlocked");
   };
 
-  const handleEnter = () => {
+  const handleEnter = useCallback(() => {
     const stored = localStorage.getItem(PIN_HASH_KEY);
     if (hashPin(pin) === stored) {
       setUnlocked();
@@ -76,7 +67,15 @@ export default function ParentPinGate({ children }: Props) {
       setPin("");
       setTimeout(() => inputRef.current?.focus(), 50);
     }
-  };
+  }, [attempts, pin]);
+
+  // Auto-submit when 4 digits entered
+  useEffect(() => {
+    if (state === "enter" && pin.length === 4) handleEnter();
+    if (state === "setup" && pin.length === 4 && confirmPin.length === 0) {
+      inputRef.current?.blur();
+    }
+  }, [confirmPin.length, handleEnter, pin.length, state]);
 
   if (state === "loading") return null;
   if (state === "unlocked") return <>{children}</>;
@@ -94,8 +93,9 @@ export default function ParentPinGate({ children }: Props) {
 
           <div className="space-y-3">
             <div>
-              <label className="text-xs text-gray-500 font-semibold tracking-wide block mb-1">Neuen PIN eingeben</label>
+              <label htmlFor="parent-pin-new" className="text-xs text-gray-500 font-semibold tracking-wide block mb-1">Neuen PIN eingeben</label>
               <input
+                id="parent-pin-new"
                 ref={inputRef}
                 type="password"
                 inputMode="numeric"
@@ -107,8 +107,9 @@ export default function ParentPinGate({ children }: Props) {
               />
             </div>
             <div>
-              <label className="text-xs text-gray-500 font-semibold tracking-wide block mb-1">PIN bestätigen</label>
+              <label htmlFor="parent-pin-confirm" className="text-xs text-gray-500 font-semibold tracking-wide block mb-1">PIN bestätigen</label>
               <input
+                id="parent-pin-confirm"
                 type="password"
                 inputMode="numeric"
                 maxLength={4}
@@ -138,6 +139,8 @@ export default function ParentPinGate({ children }: Props) {
           </div>
 
           <input
+            id="parent-pin-enter"
+            aria-label="Eltern-PIN eingeben"
             ref={inputRef}
             type="password"
             inputMode="numeric"

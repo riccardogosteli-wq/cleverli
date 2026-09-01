@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -73,8 +73,9 @@ function RequestReset() {
 
       <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
+          <label htmlFor="reset-email" className="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
           <input
+            id="reset-email"
             type="email" value={email}
             onChange={e => { setEmail(e.target.value); setError(""); }}
             onKeyDown={e => e.key === "Enter" && handleRequest()}
@@ -160,10 +161,10 @@ function SetNewPassword() {
 
       <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="new-password" className="block text-sm font-medium text-gray-700 mb-1">
             {t("Neues Passwort", "Nouveau mot de passe", "Nuova password", "New password")}
           </label>
-          <input type="password" value={password}
+          <input id="new-password" type="password" value={password}
             onChange={e => { setPassword(e.target.value); setError(""); }}
             placeholder="••••••••"
             className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-400"
@@ -171,10 +172,10 @@ function SetNewPassword() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="confirm-new-password" className="block text-sm font-medium text-gray-700 mb-1">
             {t("Passwort bestätigen", "Confirmer", "Conferma", "Confirm password")}
           </label>
-          <input type="password" value={confirm}
+          <input id="confirm-new-password" type="password" value={confirm}
             onChange={e => { setConfirm(e.target.value); setError(""); }}
             onKeyDown={e => e.key === "Enter" && handleUpdate()}
             placeholder="••••••••"

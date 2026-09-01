@@ -16,6 +16,8 @@ export type UserActivityType =
   | "subscription_cancelled"
   | "ads_lp_ab_assignment"
   | "ads_lp_cta_click"
+  | "curriculum_profile_selected"
+  | "curriculum_profile_changed"
   | "exercise_started"
   | "exercise_completed"
   | "exercise_wrong_answer"

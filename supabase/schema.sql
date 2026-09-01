@@ -73,10 +73,24 @@ create table if not exists public.child_profiles (
   curriculum_system text check (curriculum_system is null or curriculum_system in ('lp21', 'per', 'piano_di_studio')),
   regional_profile text check (regional_profile is null or regional_profile in ('de_italian', 'de_romansh', 'de_romansh_grade1', 'romansh_german', 'italian_german')),
   curriculum_profile_version smallint check (curriculum_profile_version is null or curriculum_profile_version >= 1),
-  created_at  timestamptz not null default now()
+  created_at  timestamptz not null default now(),
+  updated_at  timestamptz not null default now()
 );
 
 alter table public.child_profiles enable row level security;
+
+create or replace function public.touch_child_profiles_updated_at()
+returns trigger language plpgsql as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+
+drop trigger if exists child_profiles_touch_updated_at on public.child_profiles;
+create trigger child_profiles_touch_updated_at
+  before update on public.child_profiles
+  for each row execute function public.touch_child_profiles_updated_at();
 
 create policy "Parents can manage own children"
   on public.child_profiles for all
@@ -269,14 +283,18 @@ create table if not exists public.user_activity_events (
       'signup',
       'password_reset_requested',
       'password_updated',
+      'signup_started',
       'checkout_started',
       'subscription_trial_started',
       'subscription_started',
+      'schooltime_access_started',
       'subscription_updated',
       'subscription_cancel_requested',
       'subscription_cancelled',
       'ads_lp_ab_assignment',
       'ads_lp_cta_click',
+      'curriculum_profile_selected',
+      'curriculum_profile_changed',
       'exercise_started',
       'exercise_completed',
       'exercise_wrong_answer',

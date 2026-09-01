@@ -17,6 +17,7 @@ import type { CurriculumSelection } from "@/lib/curriculumProfiles";
 import { getCurriculumRolloutContext, isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
 import { getAnonymousSessionId } from "@/lib/attribution";
 import { captureProductEvent } from "@/lib/monitoring";
+import { trackUserActivity } from "@/lib/userActivityClient";
 import { createChildInSupabase, deleteChildFromSupabase } from "@/lib/progressSync";
 
 interface MemberStat extends FamilyMember {
@@ -85,11 +86,24 @@ export default function FamilyPage() {
     const member = addMember(newName.trim(), newAvatar, newGrade, newCurriculum);
     createChildInSupabase(member.id, member.name, member.grade, member.avatar, member.curriculum);
     if (newCurriculum) {
+      const source = "family_page_child_created";
       captureProductEvent("curriculum_profile_selected", {
         canton: newCurriculum.canton,
         school_language: newCurriculum.schoolLanguage,
         curriculum_system: newCurriculum.curriculumSystem,
-        source: "family_page_child_created",
+        source,
+      });
+      void trackUserActivity("curriculum_profile_selected", {
+        source,
+        grade: newGrade,
+        metadata: {
+          child_id: member.id,
+          canton: newCurriculum.canton,
+          school_language: newCurriculum.schoolLanguage,
+          curriculum_system: newCurriculum.curriculumSystem,
+          regional_profile: newCurriculum.regionalProfile ?? null,
+          curriculum_profile_version: newCurriculum.version,
+        },
       });
     }
     setNewName(""); setNewAvatar(AVATARS[0]); setNewGrade(1); setNewCurriculum(undefined); setAddError(""); setShowAdd(false);
@@ -187,8 +201,9 @@ export default function FamilyPage() {
 
           {/* Name */}
           <div>
-            <label className="text-xs text-gray-500 font-semibold">{t("Name","Prénom","Nome","Name")}</label>
+            <label htmlFor="family-child-name" className="text-xs text-gray-500 font-semibold">{t("Name","Prénom","Nome","Name")}</label>
             <input
+              id="family-child-name"
               type="text"
               value={newName}
               onChange={e => setNewName(e.target.value)}
@@ -200,12 +215,15 @@ export default function FamilyPage() {
 
           {/* Avatar */}
           <div>
-            <label className="text-xs text-gray-500 font-semibold">{t("Avatar","Avatar","Avatar","Avatar")}</label>
+            <div id="family-child-avatar-label" className="text-xs text-gray-500 font-semibold">{t("Avatar","Avatar","Avatar","Avatar")}</div>
             <div className="flex flex-wrap gap-2 mt-1">
               {AVATARS.map(a => (
                 <button
                   key={a}
+                  type="button"
                   onClick={() => setNewAvatar(a)}
+                  aria-label={`${t("Avatar","Avatar","Avatar","Avatar")} ${a}`}
+                  aria-pressed={newAvatar === a}
                   className={`text-2xl w-11 h-11 rounded-xl transition-all ${newAvatar === a ? "bg-green-100 ring-2 ring-green-500 scale-110" : "bg-gray-50 hover:bg-gray-100"}`}
                 >
                   {a}
@@ -216,12 +234,15 @@ export default function FamilyPage() {
 
           {/* Grade */}
           <div>
-            <label className="text-xs text-gray-500 font-semibold">{t("Klasse","Année","Classe","Grade")}</label>
+            <div id="family-child-grade-label" className="text-xs text-gray-500 font-semibold">{t("Klasse","Année","Classe","Grade")}</div>
             <div className="grid grid-cols-3 gap-2 mt-1 sm:grid-cols-6">
               {GRADE_OPTIONS.map(g => (
                 <button
                   key={g}
+                  type="button"
                   onClick={() => setNewGrade(g)}
+                  aria-label={`${g}. ${t("Klasse","Année","Classe","Grade")}`}
+                  aria-pressed={newGrade === g}
                   className={`min-h-11 min-w-11 px-1 py-2 rounded-xl font-bold text-sm transition-all ${newGrade === g ? "bg-green-700 text-white" : "bg-gray-100 text-gray-600"}`}
                 >
                   {g}. {t("Kl.","Année","Cl.","Gr.")}
@@ -298,10 +319,11 @@ export default function FamilyPage() {
               )}
             </p>
             <div>
-              <label className="text-xs font-semibold text-gray-500 block mb-1">
+              <label htmlFor="family-reset-confirm" className="text-xs font-semibold text-gray-500 block mb-1">
                 {t('Tippe "reset" zum Bestätigen', 'Tape "reset" pour confirmer', 'Scrivi "reset" per confermare', 'Type "reset" to confirm')}
               </label>
               <input
+                id="family-reset-confirm"
                 type="text"
                 value={resetInput}
                 onChange={e => setResetInput(e.target.value)}
