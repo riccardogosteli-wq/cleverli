@@ -138,11 +138,19 @@ function mapNmg(topic: string, text: string): Mapping {
   return { code: "NMG.7.4", area: "Lebensweisen und Lebensräume" };
 }
 
+function mapMi(topic: string): Mapping {
+  if (/algorithm|algorithmen|programme|befehle|daten-diagramme/.test(topic)) {
+    return { code: "MI.2.1", area: "Algorithmen, Programme und Daten verstehen" };
+  }
+  return { code: "MI.1.1", area: "Medien verstehen, prüfen und sicher nutzen" };
+}
+
 function mapping(subject: string, topic: string, text = "", grade = 0): Mapping {
   if (subject === "math") return mapMath(topic);
   if (subject === "german") return mapGerman(topic);
   if (subject === "english" || subject === "french") return mapForeign(subject, topic);
   if (subject === "science") return getBalancedNmgCompetency(grade, topic) ?? mapNmg(topic, text);
+  if (subject === "mi") return mapMi(topic);
   return { code: "", area: "Kein LP21-Fachmapping" };
 }
 
@@ -241,7 +249,7 @@ for (const grade of GRADES) {
   }
 }
 
-if (fits.length !== 13_918) throw new Error(`Expected 13,918 reviews, found ${fits.length}`);
+if (fits.length !== 15_190) throw new Error(`Expected 15,190 reviews, found ${fits.length}`);
 if (missingMappings.length) throw new Error(`Invalid live-API mappings: ${missingMappings.join(", ")}`);
 const duplicateRows = fits.filter((fit, index) => index > 0 && fit.grade === fits[index - 1].grade && fit.row === fits[index - 1].row);
 if (duplicateRows.length) throw new Error(`Duplicate Sheet rows in review: ${duplicateRows.length}`);
