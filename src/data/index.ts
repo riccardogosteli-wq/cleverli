@@ -37,6 +37,7 @@ import { applyGrade1GermanLevel } from "./grade1GermanLevel";
 import { applyExerciseLocalizations } from "./exerciseLocalizations";
 import { applyExerciseIdMigrations } from "./exerciseIdMigrations";
 import { applyGermanEditorialRepairs } from "./germanEditorialRepairs";
+import { applyTopicCurriculumCodes } from "./topicCurriculumCodes";
 
 const grade4Science = [...grade4NT, ...grade4RZG];
 const grade5Science = [...grade5NT, ...grade5RZG];
@@ -87,12 +88,13 @@ export function getTopics(grade: number, subject: string): Topic[] {
     grade,
     subject,
     getTopicsAfterExerciseIdMigrationBeforeEditorial(grade, subject),
-  ).map((topic) => ({
+  );
+  const codedTopics = applyTopicCurriculumCodes(grade, subject, topics).map((topic) => ({
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
   }));
-  finalTopicsCache.set(cacheKey, topics);
-  return topics;
+  finalTopicsCache.set(cacheKey, codedTopics);
+  return codedTopics;
 }
 
 export function getTopicsAfterExerciseIdMigrationBeforeEditorial(grade: number, subject: string): Topic[] {
