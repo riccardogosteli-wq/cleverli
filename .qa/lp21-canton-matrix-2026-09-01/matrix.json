@@ -1,0 +1,713 @@
+{
+  "generatedAt": "2026-09-01T08:51:27.572Z",
+  "verdict": "approved",
+  "interpretation": "Cleverli supports the German-school-language LP21 canton profiles in its shipped academic scope. PER, Ticino/Piano di studio and Graubuenden regional-language profiles remain intentionally guarded.",
+  "officialSourcesChecked": [
+    "https://www.lehrplan21.ch/",
+    "https://www.lehrplan21.ch/stundentafeln",
+    "https://edk.ch/de/bildungssystem/kantonale-schulorganisation/kantonsumfrage/b-11-fremdsprachen-sprache-beginn",
+    "https://v-fe.lehrplan.ch/index.php?code=e%7C10%7C4"
+  ],
+  "counts": {
+    "rows": 33,
+    "supportedRows": 20,
+    "guardedRows": 13,
+    "lp21CantonsRepresented": 21
+  },
+  "rows": [
+    {
+      "key": "AG-DE",
+      "canton": "AG",
+      "cantonName": "Aargau",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:3/6:3, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "AI-DE",
+      "canton": "AI",
+      "cantonName": "Appenzell Innerrhoden",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_only",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_3_6",
+      "languagePlan": "L2 english from grade 3 (3:2/4:2/5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + MI + Englisch",
+        "4": "Math + Deutsch + NMG + MI + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "AR-DE",
+      "canton": "AR",
+      "cantonName": "Appenzell Ausserrhoden",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:3/6:3, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "BE-DE",
+      "canton": "BE",
+      "cantonName": "Bern",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_f3_e5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 french from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Franzoesisch",
+        "4": "Math + Deutsch + NMG + Franzoesisch",
+        "5": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch",
+        "6": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch"
+      },
+      "note": "German-school-language region; LP21 supported."
+    },
+    {
+      "key": "BE-FR",
+      "canton": "BE",
+      "cantonName": "Bern",
+      "schoolLanguage": "fr",
+      "regionalProfile": "",
+      "curriculumSystem": "per",
+      "profileId": "unsupported_per",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "French-school-language region; PER guarded."
+    },
+    {
+      "key": "BL-DE",
+      "canton": "BL",
+      "cantonName": "Basel-Landschaft",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_f3_e5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 french from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Franzoesisch",
+        "4": "Math + Deutsch + NMG + Franzoesisch",
+        "5": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch",
+        "6": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "BS-DE",
+      "canton": "BS",
+      "cantonName": "Basel-Stadt",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_f3_e5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 french from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Franzoesisch",
+        "4": "Math + Deutsch + NMG + Franzoesisch",
+        "5": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch",
+        "6": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "FR-DE",
+      "canton": "FR",
+      "cantonName": "Freiburg",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_f3_e5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 french from grade 3 (3:3/4:2/5:2/6:2, 50min); L3 english from grade 5 (5:2/6:2, 50min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Franzoesisch",
+        "4": "Math + Deutsch + NMG + Franzoesisch",
+        "5": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch",
+        "6": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch"
+      },
+      "note": "German-school-language region; LP21 supported."
+    },
+    {
+      "key": "FR-FR",
+      "canton": "FR",
+      "cantonName": "Freiburg",
+      "schoolLanguage": "fr",
+      "regionalProfile": "",
+      "curriculumSystem": "per",
+      "profileId": "unsupported_per",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "French-school-language region; PER guarded."
+    },
+    {
+      "key": "GE-FR",
+      "canton": "GE",
+      "cantonName": "Genf",
+      "schoolLanguage": "fr",
+      "regionalProfile": "",
+      "curriculumSystem": "per",
+      "profileId": "unsupported_per",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "French-school-language canton; PER guarded."
+    },
+    {
+      "key": "GL-DE",
+      "canton": "GL",
+      "cantonName": "Glarus",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "GR-DE-I",
+      "canton": "GR",
+      "cantonName": "Graubünden",
+      "schoolLanguage": "de",
+      "regionalProfile": "de_italian",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_gr_de_i3_e5",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 italian from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Graubuenden German school with Italian first foreign language; guarded until Italian content exists."
+    },
+    {
+      "key": "GR-DE-RM",
+      "canton": "GR",
+      "cantonName": "Graubünden",
+      "schoolLanguage": "de",
+      "regionalProfile": "de_romansh",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_gr_de_rm3_e5",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 romansh from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Graubuenden German school with Romansh from grade 3; guarded until Romansh content exists."
+    },
+    {
+      "key": "GR-DE-RM1",
+      "canton": "GR",
+      "cantonName": "Graubünden",
+      "schoolLanguage": "de",
+      "regionalProfile": "de_romansh_grade1",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_gr_de_rm1_e5",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 romansh from grade 1 (1:2/2:2/3:3/4:3/5:2/6:2, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Graubuenden German school with Romansh from grade 1; guarded until Romansh content exists."
+    },
+    {
+      "key": "GR-IT-DE",
+      "canton": "GR",
+      "cantonName": "Graubünden",
+      "schoolLanguage": "it",
+      "regionalProfile": "italian_german",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_gr_it_d3_e5",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 german from grade 3 (3:3/4:3/5:3/6:3, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Italian-school-language region; guarded until German-as-foreign/Italian support exists."
+    },
+    {
+      "key": "GR-RM-DE",
+      "canton": "GR",
+      "cantonName": "Graubünden",
+      "schoolLanguage": "rm",
+      "regionalProfile": "romansh_german",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_gr_rm_d3_e5",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 german from grade 3 (3:3/4:4/5:5/6:5, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Romansh-school-language region; guarded until German-as-foreign/Romansh support exists."
+    },
+    {
+      "key": "JU-FR",
+      "canton": "JU",
+      "cantonName": "Jura",
+      "schoolLanguage": "fr",
+      "regionalProfile": "",
+      "curriculumSystem": "per",
+      "profileId": "unsupported_per",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "French-school-language canton; PER guarded."
+    },
+    {
+      "key": "LU-DE",
+      "canton": "LU",
+      "cantonName": "Luzern",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "integrated",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:3/6:3, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + MI + Englisch",
+        "4": "Math + Deutsch + NMG + MI + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "NE-FR",
+      "canton": "NE",
+      "cantonName": "Neuenburg",
+      "schoolLanguage": "fr",
+      "regionalProfile": "",
+      "curriculumSystem": "per",
+      "profileId": "unsupported_per",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "French-school-language canton; PER guarded."
+    },
+    {
+      "key": "NW-DE",
+      "canton": "NW",
+      "cantonName": "Nidwalden",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "integrated",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:3/6:3, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + MI + Englisch",
+        "4": "Math + Deutsch + NMG + MI + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "OW-DE",
+      "canton": "OW",
+      "cantonName": "Obwalden",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "integrated",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:3/6:3, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + MI + Englisch",
+        "4": "Math + Deutsch + NMG + MI + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "SG-DE",
+      "canton": "SG",
+      "cantonName": "St. Gallen",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:2/4:3/5:2/6:2, 50min); L3 french from grade 5 (5:2/6:2, 50min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "SH-DE",
+      "canton": "SH",
+      "cantonName": "Schaffhausen",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:3/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "SO-DE",
+      "canton": "SO",
+      "cantonName": "Solothurn",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_f3_e5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_3_6",
+      "languagePlan": "L2 french from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + MI + Franzoesisch",
+        "4": "Math + Deutsch + NMG + MI + Franzoesisch",
+        "5": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch",
+        "6": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "SZ-DE",
+      "canton": "SZ",
+      "cantonName": "Schwyz",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:2/4:2/5:2/6:2, 45min); L3 french from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "TG-DE",
+      "canton": "TG",
+      "cantonName": "Thurgau",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:3/4:2/5:2/6:2, 45min); L3 french from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "TI-IT",
+      "canton": "TI",
+      "cantonName": "Tessin",
+      "schoolLanguage": "it",
+      "regionalProfile": "",
+      "curriculumSystem": "piano_di_studio",
+      "profileId": "unsupported_piano_di_studio",
+      "productStatus": "guarded",
+      "miDelivery": "integrated",
+      "languagePlan": "",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Piano di studio guarded."
+    },
+    {
+      "key": "UR-DE",
+      "canton": "UR",
+      "cantonName": "Uri",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_i5_optional",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 italian from grade 5 optional (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "VD-FR",
+      "canton": "VD",
+      "cantonName": "Waadt",
+      "schoolLanguage": "fr",
+      "regionalProfile": "",
+      "curriculumSystem": "per",
+      "profileId": "unsupported_per",
+      "productStatus": "guarded",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "French-school-language canton; PER guarded."
+    },
+    {
+      "key": "VS-DE",
+      "canton": "VS",
+      "cantonName": "Wallis",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_f3_e5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "integrated",
+      "languagePlan": "L2 french from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 english from grade 5 (5:2/6:2, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + MI + Franzoesisch",
+        "4": "Math + Deutsch + NMG + MI + Franzoesisch",
+        "5": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch",
+        "6": "Math + Deutsch + NMG + MI + Franzoesisch + Englisch"
+      },
+      "note": "German-school-language region; LP21 supported."
+    },
+    {
+      "key": "VS-FR",
+      "canton": "VS",
+      "cantonName": "Wallis",
+      "schoolLanguage": "fr",
+      "regionalProfile": "",
+      "curriculumSystem": "per",
+      "profileId": "unsupported_per",
+      "productStatus": "guarded",
+      "miDelivery": "integrated",
+      "languagePlan": "",
+      "visibleByGrade": {
+        "1": "Guarded fallback: Math + Deutsch + NMG",
+        "2": "Guarded fallback: Math + Deutsch + NMG",
+        "3": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "4": "Guarded fallback: Math + Deutsch + NMG + Englisch",
+        "5": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Guarded fallback: Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "French-school-language region; PER guarded."
+    },
+    {
+      "key": "ZG-DE",
+      "canton": "ZG",
+      "cantonName": "Zug",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:3/6:3, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    },
+    {
+      "key": "ZH-DE",
+      "canton": "ZH",
+      "cantonName": "Zürich",
+      "schoolLanguage": "de",
+      "regionalProfile": "",
+      "curriculumSystem": "lp21",
+      "profileId": "lp21_e3_f5",
+      "productStatus": "supported_in_shipped_scope",
+      "miDelivery": "grades_5_6",
+      "languagePlan": "L2 english from grade 3 (3:3/4:3/5:2/6:2, 45min); L3 french from grade 5 (5:3/6:3, 45min)",
+      "visibleByGrade": {
+        "1": "Math + Deutsch + NMG",
+        "2": "Math + Deutsch + NMG",
+        "3": "Math + Deutsch + NMG + Englisch",
+        "4": "Math + Deutsch + NMG + Englisch",
+        "5": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch",
+        "6": "Math + Deutsch + NMG + MI + Englisch + Franzoesisch"
+      },
+      "note": "Default LP21 German-school-language row."
+    }
+  ],
+  "failures": []
+}

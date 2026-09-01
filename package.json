@@ -36,6 +36,8 @@
     "qa:topic-catalog": "npx tsx scripts/generate-topic-catalog.ts --check",
     "qa:curriculum-profiles": "npx tsx scripts/audit-curriculum-profiles.ts",
     "qa:curriculum-database": "npx tsx scripts/audit-curriculum-database.ts",
+    "qa:lp21-canton-matrix": "npx tsx scripts/audit-lp21-canton-matrix.ts",
+    "qa:exercise-type-coverage": "npx tsx scripts/audit-exercise-type-coverage.ts",
     "qa:french-primary": "npx tsx scripts/audit-french-primary.ts",
     "qa:grade1-german-level": "npx tsx scripts/audit-grade1-german-level.ts",
     "qa:german-editorial": "npx tsx scripts/audit-german-editorial.ts",
