@@ -1,0 +1,98 @@
+[
+  {
+    "label": "desktop",
+    "route": "/learn/3/math/einmaleins-komplett",
+    "status": 200,
+    "title": "Einmaleins komplett",
+    "hasInteractive": true,
+    "screenshot": "desktop-learn_3_math_einmaleins-komplett.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/3/math/brueche",
+    "status": 200,
+    "title": "Brüche",
+    "hasInteractive": true,
+    "screenshot": "desktop-learn_3_math_brueche.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/4/math/geometrie-4",
+    "status": 200,
+    "title": "Geometrie",
+    "hasInteractive": true,
+    "screenshot": "desktop-learn_4_math_geometrie-4.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/5/math/dezimalzahlen",
+    "status": 200,
+    "title": "Dezimalzahlen",
+    "hasInteractive": true,
+    "screenshot": "desktop-learn_5_math_dezimalzahlen.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/6/math/gleichungen",
+    "status": 200,
+    "title": "Gleichungen",
+    "hasInteractive": true,
+    "screenshot": "desktop-learn_6_math_gleichungen.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/6/math/negative-zahlen",
+    "status": 200,
+    "title": "Negative Zahlen",
+    "hasInteractive": true,
+    "screenshot": "desktop-learn_6_math_negative-zahlen.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/3/math/einmaleins-komplett",
+    "status": 200,
+    "title": "Einmaleins komplett",
+    "hasInteractive": true,
+    "screenshot": "mobile-learn_3_math_einmaleins-komplett.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/3/math/brueche",
+    "status": 200,
+    "title": "Brüche",
+    "hasInteractive": true,
+    "screenshot": "mobile-learn_3_math_brueche.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/4/math/geometrie-4",
+    "status": 200,
+    "title": "Geometrie",
+    "hasInteractive": true,
+    "screenshot": "mobile-learn_4_math_geometrie-4.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/5/math/dezimalzahlen",
+    "status": 200,
+    "title": "Dezimalzahlen",
+    "hasInteractive": true,
+    "screenshot": "mobile-learn_5_math_dezimalzahlen.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/6/math/gleichungen",
+    "status": 200,
+    "title": "Gleichungen",
+    "hasInteractive": true,
+    "screenshot": "mobile-learn_6_math_gleichungen.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/6/math/negative-zahlen",
+    "status": 200,
+    "title": "Negative Zahlen",
+    "hasInteractive": true,
+    "screenshot": "mobile-learn_6_math_negative-zahlen.png"
+  }
+]
