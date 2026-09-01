@@ -12,6 +12,7 @@ import {
   getCatalogSubjects,
   getProgressSubjectsFromCatalog,
   getTopicSummaries,
+  type TopicSummary,
 } from "@/data/topicCatalog";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
@@ -20,6 +21,13 @@ import ChildProfileManager from "@/components/ChildProfileManager";
 import { useSession } from "@/hooks/useSession";
 import { ParentsGuestPreview } from "@/components/GuestPreview";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
+import { getActiveProfileId, loadFamily, type FamilyMember } from "@/lib/family";
+import {
+  CANTON_NAMES,
+  getAvailableCurriculumSubjectIds,
+  resolveCurriculumProfile,
+  type CurriculumSelection,
+} from "@/lib/curriculumProfiles";
 
 interface TopicStat {
   grade: number;
@@ -33,6 +41,79 @@ interface TopicStat {
   total: number;
   lastPlayed: string;
   partial: boolean;
+}
+
+interface TopicProgress {
+  stars: number;
+  score: number;
+  completed: number;
+  lastPlayed: string;
+  partial: boolean;
+}
+
+interface SubjectCoverage {
+  grade: number;
+  subject: string;
+  emoji: string;
+  topics: number;
+  exercises: number;
+  startedTopics: number;
+  doneTopics: number;
+  weakTopics: number;
+  progressPct: number;
+  nextTopic: TopicSummary | null;
+}
+
+function loadActiveMember(): FamilyMember | null {
+  if (typeof window === "undefined") return null;
+  const family = loadFamily();
+  const activeId = getActiveProfileId();
+  return family.members.find(member => member.id === activeId) ?? family.members[0] ?? null;
+}
+
+function loadTopicProgress(grade: number, subject: string, topic: TopicSummary): TopicProgress | null {
+  if (typeof window === "undefined") return null;
+  try {
+    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
+      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+      if (!raw) continue;
+      const progress = JSON.parse(raw);
+      return {
+        stars: progress.stars ?? 0,
+        score: progress.score ?? 0,
+        completed: getEffectiveCompleted(progress, topic.exerciseCount),
+        lastPlayed: progress.lastPlayed ?? "",
+        partial: progress.partial ?? false,
+      };
+    }
+  } catch { /* skip broken progress entries */ }
+  return null;
+}
+
+function buildSubjectCoverage(grade: number, curriculum?: CurriculumSelection): SubjectCoverage[] {
+  const allowed = new Set(getAvailableCurriculumSubjectIds(grade, curriculum));
+  return getCatalogSubjects(grade)
+    .filter(subject => allowed.has(subject.id))
+    .map(subject => {
+      const topics = getTopicSummaries(grade, subject.id);
+      const topicProgress = topics.map(topic => ({ topic, progress: loadTopicProgress(grade, subject.id, topic) }));
+      const doneTopics = topicProgress.filter(({ topic, progress }) => progress && progress.completed >= topic.exerciseCount).length;
+      const startedTopics = topicProgress.filter(({ progress }) => (progress?.completed ?? 0) > 0).length;
+      const weakTopics = topicProgress.filter(({ progress }) => progress && progress.completed > 0 && progress.stars <= 1).length;
+      const nextTopic = topicProgress.find(({ topic, progress }) => !progress || progress.completed < topic.exerciseCount)?.topic ?? topics[0] ?? null;
+      return {
+        grade,
+        subject: subject.id,
+        emoji: subject.emoji,
+        topics: topics.length,
+        exercises: topics.reduce((sum, topic) => sum + topic.exerciseCount, 0),
+        startedTopics,
+        doneTopics,
+        weakTopics,
+        progressPct: topics.length > 0 ? Math.round((doneTopics / topics.length) * 100) : 0,
+        nextTopic,
+      };
+    });
 }
 
 function loadAllStats(): TopicStat[] {
@@ -91,6 +172,12 @@ export default function ParentsDashboard() {
 
   // ⚠️ All hooks must be called unconditionally before any early returns (React rules)
   const stats = useMemo(() => loaded ? loadAllStats() : [], [loaded]);
+  const activeMember = useMemo(() => loaded ? loadActiveMember() : null, [loaded]);
+  const activeGrade = activeMember?.grade ?? 1;
+  const subjectCoverage = useMemo(
+    () => loaded ? buildSubjectCoverage(activeGrade, activeMember?.curriculum) : [],
+    [activeGrade, activeMember?.curriculum, loaded],
+  );
 
   if (!sessionLoaded) return (
     <div className="flex items-center justify-center py-20">
@@ -140,6 +227,46 @@ export default function ParentsDashboard() {
     return subject;
   };
 
+  const curriculumProfile = resolveCurriculumProfile(activeMember?.curriculum);
+  const curriculumLabel = activeMember?.curriculum
+    ? `${CANTON_NAMES[activeMember.curriculum.canton]} · ${activeMember.curriculum.schoolLanguage.toUpperCase()}`
+    : t("Standardprofil", "Profil standard", "Profilo standard", "Default profile");
+  const totalCoveredTopics = subjectCoverage.reduce((sum, item) => sum + item.topics, 0);
+  const totalCoveredExercises = subjectCoverage.reduce((sum, item) => sum + item.exercises, 0);
+  const completedCoveredTopics = subjectCoverage.reduce((sum, item) => sum + item.doneTopics, 0);
+  const startedCoveredTopics = subjectCoverage.reduce((sum, item) => sum + item.startedTopics, 0);
+  const currentGradeStats = stats.filter(s => s.grade === activeGrade && s.completed > 0);
+  const nextPractice = weakSpots.find(s => s.grade === activeGrade)
+    ?? currentGradeStats.find(s => s.completed > 0 && s.completed < s.total)
+    ?? (() => {
+      const subject = subjectCoverage.find(item => item.nextTopic);
+      if (!subject?.nextTopic) return null;
+      return {
+        grade: activeGrade,
+        subject: subject.subject,
+        topicId: subject.nextTopic.id,
+        topicTitle: subject.nextTopic.title,
+        topicEmoji: subject.nextTopic.emoji,
+        stars: 0,
+        score: 0,
+        completed: 0,
+        total: subject.nextTopic.exerciseCount,
+        lastPlayed: "",
+        partial: false,
+      } satisfies TopicStat;
+    })();
+  const attentionItems = [
+    weakSpots.length > 0
+      ? t(`${weakSpots.length} Thema erneut üben`, `${weakSpots.length} thème à reprendre`, `${weakSpots.length} tema da riprendere`, `${weakSpots.length} topic to revisit`)
+      : null,
+    startedCoveredTopics === 0
+      ? t("Noch kein Fach gestartet", "Aucune matière commencée", "Nessuna materia iniziata", "No subject started yet")
+      : null,
+    subjectCoverage.some(item => item.startedTopics === 0)
+      ? t("Noch unberührte Fächer vorhanden", "Des matières sont encore intactes", "Ci sono materie non iniziate", "Some subjects are untouched")
+      : null,
+  ].filter(Boolean);
+
   return (
     <ParentPinGate>
     <main className="max-w-lg mx-auto px-4 py-6 pb-40 sm:pb-12 space-y-5">
@@ -161,13 +288,58 @@ export default function ParentsDashboard() {
       {/* ── Header ── */}
       <div className="flex items-center gap-3">
         <Image src="/cleverli-sit-read.png" alt="Cleverli" width={64} height={64} className="drop-shadow-md" />
-        <div>
+        <div className="flex-1 min-w-0">
           <h1 className="text-xl font-black text-gray-800">
             {t("Eltern-Übersicht", "Vue parents", "Vista genitori", "Parent Overview")}
           </h1>
           <p className="text-xs text-gray-400">
             {t("Lernfortschritt auf einen Blick", "Progrès d'apprentissage en un coup d'œil", "Progressi di apprendimento", "Learning progress at a glance")}
           </p>
+        </div>
+        {activeMember && (
+          <div className="text-right shrink-0">
+            <div className="text-2xl">{activeMember.avatar}</div>
+            <div className="text-xs font-bold text-gray-700 max-w-24 truncate">{activeMember.name}</div>
+          </div>
+        )}
+      </div>
+
+      {/* ── Learning status ── */}
+      <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 space-y-3">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <div className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">
+              {t("Lernprofil", "Profil d'apprentissage", "Profilo di apprendimento", "Learning profile")}
+            </div>
+            <h2 className="font-black text-gray-800 text-base">
+              {activeGrade}. {t("Klasse", "Année", "Classe", "Grade")} · {curriculumLabel}
+            </h2>
+            <p className="text-xs text-gray-500 mt-0.5">
+              {curriculumProfile.supported
+                ? t("LP21-Fächer passend zum Profil", "Matières LP21 selon le profil", "Materie LP21 secondo il profilo", "LP21 subjects matched to profile")
+                : t("Sicherer Standardumfang aktiv", "Périmètre standard sécurisé actif", "Ambito standard sicuro attivo", "Safe default scope active")}
+            </p>
+          </div>
+          <div className="text-right shrink-0">
+            <div className="text-xl font-black text-green-700">{completedCoveredTopics}/{totalCoveredTopics}</div>
+            <div className="text-[10px] text-gray-400 font-semibold">
+              {t("Themen", "Thèmes", "Temi", "topics")}
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-2">
+          <div className="rounded-xl bg-green-50 border border-green-100 px-3 py-2">
+            <div className="text-lg font-black text-green-800">{totalCoveredExercises}</div>
+            <div className="text-[10px] text-green-700 font-semibold">{t("Übungen", "Exercices", "Esercizi", "Exercises")}</div>
+          </div>
+          <div className="rounded-xl bg-blue-50 border border-blue-100 px-3 py-2">
+            <div className="text-lg font-black text-blue-800">{subjectCoverage.length}</div>
+            <div className="text-[10px] text-blue-700 font-semibold">{t("Fächer", "Matières", "Materie", "Subjects")}</div>
+          </div>
+          <div className="rounded-xl bg-amber-50 border border-amber-100 px-3 py-2">
+            <div className="text-lg font-black text-amber-800">{attentionItems.length}</div>
+            <div className="text-[10px] text-amber-700 font-semibold">{t("Hinweise", "Notes", "Note", "Notes")}</div>
+          </div>
         </div>
       </div>
 
@@ -186,6 +358,48 @@ export default function ParentsDashboard() {
           </div>
         ))}
       </div>
+
+      {/* ── Next practice ── */}
+      {nextPractice && (
+        <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-4 space-y-3">
+          <div className="flex items-start gap-3">
+            <span className="text-3xl shrink-0">{nextPractice.topicEmoji}</span>
+            <div className="flex-1 min-w-0">
+              <h2 className="font-bold text-blue-900 text-sm">
+                {t("Als Nächstes üben", "À pratiquer ensuite", "Da esercitare ora", "Practice next")}
+              </h2>
+              <div className="text-sm font-black text-gray-800 mt-0.5">{nextPractice.topicTitle}</div>
+              <p className="text-xs text-blue-700 mt-1">
+                {nextPractice.completed > 0
+                  ? t("Passt, weil hier schon Lernspuren sichtbar sind.", "Pertinent, car il y a déjà des traces d'apprentissage.", "Adatto perché ci sono già progressi visibili.", "Relevant because there is already progress here.")
+                  : t("Guter nächster Einstieg im aktuellen Lernprofil.", "Bonne prochaine entrée dans le profil actuel.", "Buon prossimo inizio nel profilo attuale.", "Good next step for the current profile.")}
+              </p>
+            </div>
+            <Link
+              href={`/learn/${nextPractice.grade}/${nextPractice.subject}/${nextPractice.topicId}`}
+              className="shrink-0 bg-blue-700 text-white rounded-xl px-3 py-2 text-xs font-bold active:scale-95 transition-all"
+            >
+              {t("Üben", "Pratiquer", "Esercitare", "Practise")}
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {attentionItems.length > 0 && (
+        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 space-y-2">
+          <h2 className="font-bold text-amber-900 text-sm">
+            {t("Worauf achten?", "À surveiller", "Da osservare", "Needs attention")}
+          </h2>
+          <div className="space-y-1.5">
+            {attentionItems.map(item => (
+              <div key={item} className="flex items-center gap-2 text-xs text-amber-800 font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* ── Activity heatmap (last 14 days) ── */}
       <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 space-y-2">
@@ -287,46 +501,55 @@ export default function ParentsDashboard() {
 
       {/* ── Subject breakdown ── */}
       <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 space-y-3">
-        <h2 className="font-bold text-gray-700 text-sm">
-          📚 {t("Fach-Übersicht", "Aperçu des matières", "Panoramica materie", "Subject overview")}
-        </h2>
-        {[1,2,3,4,5,6].map(grade => {
-          const gradeStats = stats.filter(s => s.grade === grade && s.completed > 0);
-          if (!gradeStats.length) return null;
-          return (
-            <div key={grade}>
-              <div className="text-xs font-bold text-gray-400 uppercase mb-1.5">
-                {grade}. {t("Klasse","Année","Classe","Grade")}
-              </div>
-              <div className="space-y-1.5">
-                {getCatalogSubjects(grade).map(sub => {
-                  const subStats = gradeStats.filter(s => s.subject === sub.id);
-                  const topics = getTopicSummaries(grade, sub.id);
-                  const doneCnt = subStats.filter(s => s.completed >= s.total).length;
-                  const pct = topics.length > 0 ? Math.round((doneCnt / topics.length) * 100) : 0;
-                  return (
-                    <div key={sub.id} className="flex items-center gap-2">
-                      <span className="text-lg shrink-0">{sub.emoji}</span>
-                      <div className="flex-1">
-                        <div className="flex justify-between text-[10px] text-gray-500 mb-0.5">
-                          <span>{subjectLabel(sub.id)}</span>
-                          <span>{doneCnt}/{topics.length}</span>
-                        </div>
-                        <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                          <div className="h-full bg-green-400 rounded-full" style={{ width: `${pct}%` }} />
-                        </div>
-                      </div>
-                      <span className="text-xs font-bold text-gray-500 w-8 text-right">{pct}%</span>
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="font-bold text-gray-700 text-sm">
+            📚 {t("Fach-Abdeckung", "Couverture des matières", "Copertura materie", "Subject coverage")}
+          </h2>
+          <span className="text-[10px] text-gray-400 font-semibold">
+            {activeGrade}. {t("Klasse", "Année", "Classe", "Grade")}
+          </span>
+        </div>
+        <div className="space-y-2">
+          {subjectCoverage.map(item => {
+            const nextHref = item.nextTopic ? `/learn/${item.grade}/${item.subject}/${item.nextTopic.id}` : "/dashboard";
+            return (
+              <Link
+                key={`${item.grade}-${item.subject}`}
+                href={nextHref}
+                className="block rounded-xl border border-gray-100 px-3 py-2.5 hover:border-green-200 hover:bg-green-50/60 active:scale-[0.99] transition-all"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="text-xl shrink-0">{item.emoji}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-xs font-bold text-gray-800 truncate">{subjectLabel(item.subject)}</span>
+                      <span className="text-[10px] text-gray-500 shrink-0">
+                        {item.doneTopics}/{item.topics} {t("Themen", "thèmes", "temi", "topics")}
+                      </span>
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-        {stats.filter(s => s.completed > 0).length === 0 && (
+                    <div className="mt-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                      <div className="h-full bg-green-500 rounded-full" style={{ width: `${item.progressPct}%` }} />
+                    </div>
+                    <div className="flex items-center justify-between gap-2 mt-1">
+                      <span className="text-[10px] text-gray-400">
+                        {item.exercises} {t("Übungen", "exercices", "esercizi", "exercises")} · {item.startedTopics} {t("gestartet", "commencés", "iniziati", "started")}
+                      </span>
+                      {item.weakTopics > 0 && (
+                        <span className="text-[10px] text-orange-600 font-bold shrink-0">
+                          {item.weakTopics} {t("wiederholen", "à revoir", "da ripetere", "review")}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <span className="text-xs font-black text-gray-500 w-9 text-right shrink-0">{item.progressPct}%</span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+        {subjectCoverage.length === 0 && (
           <p className="text-xs text-gray-400 text-center py-2">
-            {t("Noch keine Aufgaben gelöst.", "Aucun exercice encore.", "Nessun esercizio ancora.", "No exercises done yet.")}
+            {t("Für dieses Profil ist noch keine Fach-Abdeckung verfügbar.", "Aucune couverture disponible pour ce profil.", "Nessuna copertura disponibile per questo profilo.", "No subject coverage available for this profile.")}
           </p>
         )}
       </div>

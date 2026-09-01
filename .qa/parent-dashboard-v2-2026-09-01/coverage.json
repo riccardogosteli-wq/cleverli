@@ -1,0 +1,1108 @@
+[
+  {
+    "profile": "ZH-DE",
+    "grade": 1,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 711
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 1,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 1,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 602
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 2,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 652
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 2,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 2,
+    "subject": "science",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 3,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 512
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 3,
+    "subject": "german",
+    "topics": 9,
+    "exercises": 452
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 3,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 600
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 3,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 450
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 4,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 513
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 4,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 4,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 4,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 5,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 5,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 5,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 5,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 5,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 5,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 6,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 6,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 6,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 6,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 6,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "ZH-DE",
+    "grade": 6,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 1,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 711
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 1,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 1,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 602
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 2,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 652
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 2,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 2,
+    "subject": "science",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 3,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 512
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 3,
+    "subject": "german",
+    "topics": 9,
+    "exercises": 452
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 3,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 600
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 3,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 450
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 4,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 513
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 4,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 4,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 4,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 5,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 5,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 5,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 5,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 5,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 5,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 6,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 6,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 6,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 6,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 6,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "BE-DE",
+    "grade": 6,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 1,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 711
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 1,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 1,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 602
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 2,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 652
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 2,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 2,
+    "subject": "science",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 3,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 512
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 3,
+    "subject": "german",
+    "topics": 9,
+    "exercises": 452
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 3,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 600
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 3,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 450
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 3,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 4,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 513
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 4,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 4,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 4,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 4,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 5,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 5,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 5,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 5,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 5,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 6,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 6,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 6,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 6,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "AI-DE",
+    "grade": 6,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 1,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 711
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 1,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 1,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 602
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 2,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 652
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 2,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 2,
+    "subject": "science",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 3,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 512
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 3,
+    "subject": "german",
+    "topics": 9,
+    "exercises": 452
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 3,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 600
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 3,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 450
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 3,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 4,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 513
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 4,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 4,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 4,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 4,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 5,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 5,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 5,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 5,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 5,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 5,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 6,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 6,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 6,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 6,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 6,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "SO-DE",
+    "grade": 6,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 1,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 711
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 1,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 1,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 602
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 2,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 652
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 2,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 2,
+    "subject": "science",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 3,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 512
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 3,
+    "subject": "german",
+    "topics": 9,
+    "exercises": 452
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 3,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 600
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 3,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 450
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 3,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 4,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 513
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 4,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 4,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 4,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 4,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 5,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 5,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 5,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 5,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 5,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 5,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 6,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 6,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 6,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 6,
+    "subject": "french",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 6,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "LU-DE",
+    "grade": 6,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 1,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 711
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 1,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 1,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 602
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 2,
+    "subject": "math",
+    "topics": 13,
+    "exercises": 652
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 2,
+    "subject": "german",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 2,
+    "subject": "science",
+    "topics": 11,
+    "exercises": 550
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 3,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 512
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 3,
+    "subject": "german",
+    "topics": 9,
+    "exercises": 452
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 3,
+    "subject": "science",
+    "topics": 12,
+    "exercises": 600
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 3,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 450
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 4,
+    "subject": "math",
+    "topics": 10,
+    "exercises": 513
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 4,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 4,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 4,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 5,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 5,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 5,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 5,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 5,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 6,
+    "subject": "math",
+    "topics": 9,
+    "exercises": 462
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 6,
+    "subject": "german",
+    "topics": 10,
+    "exercises": 500
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 6,
+    "subject": "science",
+    "topics": 21,
+    "exercises": 1070
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 6,
+    "subject": "english",
+    "topics": 9,
+    "exercises": 458
+  },
+  {
+    "profile": "UR-DE",
+    "grade": 6,
+    "subject": "mi",
+    "topics": 2,
+    "exercises": 54
+  }
+]

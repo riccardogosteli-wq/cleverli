@@ -45,6 +45,7 @@ export default function MobileBottomNav() {
   // Don't show during active exercise or on auth/onboarding pages
   const isExercise = pathname.startsWith("/learn/");
   const isAuthPage = ["/signup", "/login", "/reset-password", "/account"].includes(pathname);
+  const isParentDashboard = pathname === "/parents";
   const isGradeSeoPage = /^\/(?:mathe|deutsch)-uebungen-[1-6]-klasse$/.test(pathname);
   const isAdsPage = pathname.startsWith("/ads/") ||
     pathname === "/primarschule-uebungen" ||
@@ -55,7 +56,7 @@ export default function MobileBottomNav() {
     isGradeSeoPage;
   const isInternalPage = pathname === "/internal-log-dashboard";
 
-  if (isExercise || isAuthPage || isAdsPage || isInternalPage) return null;
+  if (isExercise || isAuthPage || isAdsPage || isInternalPage || isParentDashboard) return null;
 
   return (
     <>
