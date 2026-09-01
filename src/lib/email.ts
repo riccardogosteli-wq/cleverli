@@ -33,8 +33,10 @@ function formatCurrency(amount: number | null | undefined, currency: string | nu
 // ── Welcome email after signup ───────────────────────────────────────────────
 export async function sendWelcomeEmail(to: string) {
   const resend = getResend();
-  if (!resend) return;
-  await resend.emails.send({
+  if (!resend) {
+    throw new Error("RESEND_API_KEY is not configured");
+  }
+  const { error } = await resend.emails.send({
     from: FROM,
     to,
     subject: "Willkommen bei Cleverli! 🎒",
@@ -90,6 +92,7 @@ export async function sendWelcomeEmail(to: string) {
 </body>
 </html>`,
   });
+  if (error) throw error;
 }
 
 // ── Payment confirmation email ────────────────────────────────────────────────
