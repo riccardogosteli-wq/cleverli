@@ -1,0 +1,194 @@
+[
+  {
+    "label": "desktop",
+    "route": "/learn/3/math/einmaleins-komplett",
+    "status": 200,
+    "found": [
+      {
+        "text": "Finde Einmaleins-Aufgabe und Ergebnis.",
+        "found": true
+      },
+      {
+        "text": "Ordne die Aufgaben zur passenden Einmaleins-Reihe.",
+        "found": true
+      }
+    ],
+    "screenshot": "desktop-learn_3_math_einmaleins-komplett.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/3/math/brueche",
+    "status": 200,
+    "found": [
+      {
+        "text": "Ordne Bruch und Beschreibung.",
+        "found": true
+      },
+      {
+        "text": "Zeige 1/2 auf dem Zahlenstrahl",
+        "found": true
+      }
+    ],
+    "screenshot": "desktop-learn_3_math_brueche.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/4/math/daten-diagramme-zufall-4",
+    "status": 200,
+    "found": [
+      {
+        "text": "In einem Balkendiagramm sind es 18 Stimmen",
+        "found": false
+      },
+      {
+        "text": "Ein Diagramm zeigt Lieblingssportarten",
+        "found": false
+      }
+    ],
+    "screenshot": "desktop-learn_4_math_daten-diagramme-zufall-4.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/5/math/dezimalzahlen",
+    "status": 200,
+    "found": [
+      {
+        "text": "Verbinde Dezimalzahl und Wort.",
+        "found": false
+      },
+      {
+        "text": "Zeige 2,4 auf dem Zahlenstrahl.",
+        "found": false
+      }
+    ],
+    "screenshot": "desktop-learn_5_math_dezimalzahlen.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/6/math/gleichungen",
+    "status": 200,
+    "found": [
+      {
+        "text": "Ordne Gleichungen und Lösungen.",
+        "found": true
+      },
+      {
+        "text": "Verbinde Gleichung und passenden Rechenschritt.",
+        "found": true
+      }
+    ],
+    "screenshot": "desktop-learn_6_math_gleichungen.png"
+  },
+  {
+    "label": "desktop",
+    "route": "/learn/6/math/negative-zahlen",
+    "status": 200,
+    "found": [
+      {
+        "text": "Zeige -3 auf dem Zahlenstrahl.",
+        "found": false
+      },
+      {
+        "text": "Verbinde Alltagssituation und Zahl.",
+        "found": true
+      }
+    ],
+    "screenshot": "desktop-learn_6_math_negative-zahlen.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/3/math/einmaleins-komplett",
+    "status": 200,
+    "found": [
+      {
+        "text": "Finde Einmaleins-Aufgabe und Ergebnis.",
+        "found": true
+      },
+      {
+        "text": "Ordne die Aufgaben zur passenden Einmaleins-Reihe.",
+        "found": true
+      }
+    ],
+    "screenshot": "mobile-learn_3_math_einmaleins-komplett.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/3/math/brueche",
+    "status": 200,
+    "found": [
+      {
+        "text": "Ordne Bruch und Beschreibung.",
+        "found": true
+      },
+      {
+        "text": "Zeige 1/2 auf dem Zahlenstrahl",
+        "found": true
+      }
+    ],
+    "screenshot": "mobile-learn_3_math_brueche.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/4/math/daten-diagramme-zufall-4",
+    "status": 200,
+    "found": [
+      {
+        "text": "In einem Balkendiagramm sind es 18 Stimmen",
+        "found": false
+      },
+      {
+        "text": "Ein Diagramm zeigt Lieblingssportarten",
+        "found": false
+      }
+    ],
+    "screenshot": "mobile-learn_4_math_daten-diagramme-zufall-4.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/5/math/dezimalzahlen",
+    "status": 200,
+    "found": [
+      {
+        "text": "Verbinde Dezimalzahl und Wort.",
+        "found": false
+      },
+      {
+        "text": "Zeige 2,4 auf dem Zahlenstrahl.",
+        "found": false
+      }
+    ],
+    "screenshot": "mobile-learn_5_math_dezimalzahlen.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/6/math/gleichungen",
+    "status": 200,
+    "found": [
+      {
+        "text": "Ordne Gleichungen und Lösungen.",
+        "found": true
+      },
+      {
+        "text": "Verbinde Gleichung und passenden Rechenschritt.",
+        "found": true
+      }
+    ],
+    "screenshot": "mobile-learn_6_math_gleichungen.png"
+  },
+  {
+    "label": "mobile",
+    "route": "/learn/6/math/negative-zahlen",
+    "status": 200,
+    "found": [
+      {
+        "text": "Zeige -3 auf dem Zahlenstrahl.",
+        "found": false
+      },
+      {
+        "text": "Verbinde Alltagssituation und Zahl.",
+        "found": true
+      }
+    ],
+    "screenshot": "mobile-learn_6_math_negative-zahlen.png"
+  }
+]

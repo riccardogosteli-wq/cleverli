@@ -1,0 +1,482 @@
+[
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "zahlen-bis-1000",
+    "topic": "Zahlen bis 1000",
+    "exerciseId": "math3-rich-zahlen-line-1",
+    "type": "number-line",
+    "difficulty": 1,
+    "question": "Zeige 340 auf dem Zahlenstrahl."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "zahlen-bis-1000",
+    "topic": "Zahlen bis 1000",
+    "exerciseId": "math3-rich-zahlen-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Zahl und Stellenwert."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "einmaleins-komplett",
+    "topic": "Einmaleins komplett",
+    "exerciseId": "math3-rich-1x1-memory-1",
+    "type": "memory",
+    "difficulty": 1,
+    "question": "Finde Einmaleins-Aufgabe und Ergebnis."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "einmaleins-komplett",
+    "topic": "Einmaleins komplett",
+    "exerciseId": "math3-rich-1x1-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne die Aufgaben zur passenden Einmaleins-Reihe."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "einmaleins-komplett",
+    "topic": "Einmaleins komplett",
+    "exerciseId": "math3-rich-1x1-match-2",
+    "type": "matching",
+    "difficulty": 3,
+    "question": "Verbinde schwierige Einmaleins-Aufgaben mit dem Ergebnis."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "division",
+    "topic": "Division",
+    "exerciseId": "math3-rich-division-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Division und passende Malaufgabe."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "division",
+    "topic": "Division",
+    "exerciseId": "math3-rich-division-drag-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Verteile 36 Karten gleichmässig auf Gruppen."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "brueche",
+    "topic": "Brüche",
+    "exerciseId": "math3-rich-brueche-drag-1",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Bruch und Beschreibung."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "brueche",
+    "topic": "Brüche",
+    "exerciseId": "math3-rich-brueche-line-1",
+    "type": "number-line",
+    "difficulty": 3,
+    "question": "Zeige 1/2 auf dem Zahlenstrahl von 0 bis 1."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "flaeche-umfang",
+    "topic": "Fläche & Umfang",
+    "exerciseId": "math3-rich-flaeche-line-1",
+    "type": "number-line",
+    "difficulty": 2,
+    "question": "Ein Rechteck ist 3 Kästchen breit und 4 Kästchen lang. Zeige die Fläche."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "flaeche-umfang",
+    "topic": "Fläche & Umfang",
+    "exerciseId": "math3-rich-umfang-line-1",
+    "type": "number-line",
+    "difficulty": 2,
+    "question": "Ein Rechteck hat Seiten 4 cm und 6 cm. Zeige den Umfang."
+  },
+  {
+    "grade": 3,
+    "subject": "math",
+    "topicId": "diagramme-daten",
+    "topic": "Daten & Diagramme",
+    "exerciseId": "math3-rich-daten-review-1",
+    "type": "self-review",
+    "difficulty": 1,
+    "question": "Du hast eine Strichliste zu Lieblingsfrüchten. Wie erkennst du, welche Frucht am beliebtesten ist?"
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "zahlen-bis-10000",
+    "topic": "Zahlen bis 10000",
+    "exerciseId": "math4-rich-zahlen-line-1",
+    "type": "number-line",
+    "difficulty": 1,
+    "question": "Zeige 7500 auf dem Zahlenstrahl."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "zahlen-bis-10000",
+    "topic": "Zahlen bis 10000",
+    "exerciseId": "math4-rich-zahlen-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Zahl und gerundete Zahl."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "einmaleins",
+    "topic": "Das Einmaleins",
+    "exerciseId": "math4-rich-1x1-memory-1",
+    "type": "memory",
+    "difficulty": 1,
+    "question": "Finde Aufgabe und Ergebnis."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "einmaleins",
+    "topic": "Das Einmaleins",
+    "exerciseId": "math4-rich-1x1-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne die Aufgaben nach Ergebnis."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "brueche-einfuehrung",
+    "topic": "Brüche kennenlernen",
+    "exerciseId": "math4-rich-brueche-line-1",
+    "type": "number-line",
+    "difficulty": 2,
+    "question": "Zeige 3/4 auf dem Zahlenstrahl von 0 bis 1."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "brueche-einfuehrung",
+    "topic": "Brüche kennenlernen",
+    "exerciseId": "math4-rich-brueche-match-1",
+    "type": "matching",
+    "difficulty": 3,
+    "question": "Verbinde gleich grosse Brüche."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "geometrie-4",
+    "topic": "Geometrie",
+    "exerciseId": "math4-rich-geometrie-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Figur und Eigenschaft."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "geometrie-4",
+    "topic": "Geometrie",
+    "exerciseId": "math4-rich-geometrie-drag-1",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Körper und passende Fläche."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "groessen-messen-4",
+    "topic": "Grössen und Messen",
+    "exerciseId": "math4-rich-groessen-line-1",
+    "type": "number-line",
+    "difficulty": 1,
+    "question": "Zeige 150 cm in Metern auf dem Zahlenstrahl."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "groessen-messen-4",
+    "topic": "Grössen und Messen",
+    "exerciseId": "math4-rich-groessen-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Einheit und passende Grösse."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "daten-diagramme-zufall-4",
+    "topic": "Daten, Diagramme & Zufall",
+    "exerciseId": "math4-rich-daten-line-1",
+    "type": "number-line",
+    "difficulty": 3,
+    "question": "In einem Balkendiagramm sind es 18 Stimmen. Zeige 18."
+  },
+  {
+    "grade": 4,
+    "subject": "math",
+    "topicId": "daten-diagramme-zufall-4",
+    "topic": "Daten, Diagramme & Zufall",
+    "exerciseId": "math4-rich-daten-review-1",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Ein Diagramm zeigt Lieblingssportarten. Wie erklärst du einem Kind, welche Sportart am häufigsten gewählt wurde?"
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "dezimalzahlen",
+    "topic": "Dezimalzahlen",
+    "exerciseId": "math5-rich-dezimal-match-0",
+    "type": "matching",
+    "difficulty": 1,
+    "question": "Verbinde Dezimalzahl und Wort."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "dezimalzahlen",
+    "topic": "Dezimalzahlen",
+    "exerciseId": "math5-rich-dezimal-line-1",
+    "type": "number-line",
+    "difficulty": 1,
+    "question": "Zeige 2,4 auf dem Zahlenstrahl."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "dezimalzahlen",
+    "topic": "Dezimalzahlen",
+    "exerciseId": "math5-rich-dezimal-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Dezimalzahl und Bruch."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "brueche-rechnen",
+    "topic": "Brüche addieren",
+    "exerciseId": "math5-rich-brueche-line-1",
+    "type": "number-line",
+    "difficulty": 2,
+    "question": "Zeige 1 1/2 auf dem Zahlenstrahl."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "brueche-rechnen",
+    "topic": "Brüche addieren",
+    "exerciseId": "math5-rich-brueche-drag-1",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Bruchrechnungen zum Ergebnis."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "prozent-5",
+    "topic": "Prozent",
+    "exerciseId": "math5-rich-prozent-match-1",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Prozent und Bedeutung."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "prozent-5",
+    "topic": "Prozent",
+    "exerciseId": "math5-rich-prozent-memory-1",
+    "type": "memory",
+    "difficulty": 3,
+    "question": "Finde einfache Prozentwerte."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "koordinatensystem-5",
+    "topic": "Koordinatensystem",
+    "exerciseId": "math5-rich-koordinaten-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne Punkte nach ihrer Lage im Koordinatensystem."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "groessen-5",
+    "topic": "Grössen & Einheiten",
+    "exerciseId": "math5-rich-groessen-memory-1",
+    "type": "memory",
+    "difficulty": 1,
+    "question": "Finde gleich grosse Längen."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "groessen-5",
+    "topic": "Grössen & Einheiten",
+    "exerciseId": "math5-rich-groessen-line-1",
+    "type": "number-line",
+    "difficulty": 2,
+    "question": "Zeige 2,5 km auf dem Zahlenstrahl."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "wahrscheinlichkeit-5",
+    "topic": "Wahrscheinlichkeit",
+    "exerciseId": "math5-rich-wahrscheinlichkeit-line-1",
+    "type": "number-line",
+    "difficulty": 3,
+    "question": "Bei 10 gleich grossen Feldern sind 3 rot. Zeige die Wahrscheinlichkeit als Dezimalzahl."
+  },
+  {
+    "grade": 5,
+    "subject": "math",
+    "topicId": "wahrscheinlichkeit-5",
+    "topic": "Wahrscheinlichkeit",
+    "exerciseId": "math5-rich-wahrscheinlichkeit-review-1",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Ein Glücksrad hat mehr blaue als rote Felder. Wie erklärst du, welche Farbe wahrscheinlicher ist?"
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "negative-zahlen",
+    "topic": "Negative Zahlen",
+    "exerciseId": "math6-rich-negativ-line-1",
+    "type": "number-line",
+    "difficulty": 1,
+    "question": "Zeige -3 auf dem Zahlenstrahl."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "negative-zahlen",
+    "topic": "Negative Zahlen",
+    "exerciseId": "math6-rich-negativ-match-1",
+    "type": "matching",
+    "difficulty": 1,
+    "question": "Verbinde Alltagssituation und Zahl."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "prozent",
+    "topic": "Prozent und Brüche",
+    "exerciseId": "math6-rich-prozent-line-1",
+    "type": "number-line",
+    "difficulty": 2,
+    "question": "Zeige 37,5 % als Dezimalzahl."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "prozent",
+    "topic": "Prozent und Brüche",
+    "exerciseId": "math6-rich-prozent-memory-1",
+    "type": "memory",
+    "difficulty": 3,
+    "question": "Finde Prozent, Bruch und Bedeutung."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "gleichungen",
+    "topic": "Einfache Gleichungen",
+    "exerciseId": "math6-rich-gleichungen-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne Gleichungen und Lösungen."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "gleichungen",
+    "topic": "Einfache Gleichungen",
+    "exerciseId": "math6-rich-gleichungen-match-1",
+    "type": "matching",
+    "difficulty": 3,
+    "question": "Verbinde Gleichung und passenden Rechenschritt."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "verhaeltnisse-6",
+    "topic": "Verhältnisse & Proportionen",
+    "exerciseId": "math6-rich-verhaeltnis-drag-1",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne Verhältnis und passende Beschreibung."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "verhaeltnisse-6",
+    "topic": "Verhältnisse & Proportionen",
+    "exerciseId": "math6-rich-verhaeltnis-review-1",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Ein Sirup wird im Verhältnis 1 : 5 gemischt. Erkläre, was das für Sirup und Wasser bedeutet."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "geometrie-6",
+    "topic": "Geometrie",
+    "exerciseId": "math6-rich-geometrie-match-1",
+    "type": "matching",
+    "difficulty": 1,
+    "question": "Verbinde Körper und Merkmal."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "statistik-6",
+    "topic": "Statistik",
+    "exerciseId": "math6-rich-statistik-line-1",
+    "type": "number-line",
+    "difficulty": 2,
+    "question": "Die Werte 4, 6 und 8 haben welchen Durchschnitt? Zeige ihn."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "statistik-6",
+    "topic": "Statistik",
+    "exerciseId": "math6-rich-statistik-memory-1",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Statistik-Begriff und Bedeutung."
+  },
+  {
+    "grade": 6,
+    "subject": "math",
+    "topicId": "flaechen-koerper-6",
+    "topic": "Flächen & Körper",
+    "exerciseId": "math6-rich-koerper-line-1",
+    "type": "number-line",
+    "difficulty": 2,
+    "question": "Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Zeige das Volumen."
+  }
+]

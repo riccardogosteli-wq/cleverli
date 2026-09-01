@@ -36,6 +36,7 @@ import { applyLp21ApiFitReplacements } from "./lp21ApiFitReplacements";
 import { consolidateNmgTopics } from "./nmgConsolidation";
 import { addNmgRichEnrichment } from "./nmgRichEnrichment";
 import { addLanguageRichEnrichment } from "./languageRichEnrichment";
+import { addMathRichEnrichment } from "./mathRichEnrichment";
 import { applyGrade1GermanLevel } from "./grade1GermanLevel";
 import { applyExerciseLocalizations } from "./exerciseLocalizations";
 import { applyExerciseIdMigrations } from "./exerciseIdMigrations";
@@ -79,7 +80,8 @@ export function getTopicsBeforeExerciseIdMigration(grade: number, subject: strin
     : repairedTopics;
   const consolidatedTopics = consolidateNmgTopics(grade, subject, applyLp21ApiFitReplacements(grade, subject, levelledTopics));
   const nmgEnrichedTopics = addNmgRichEnrichment(grade, subject, consolidatedTopics);
-  const enrichedTopics = addLanguageRichEnrichment(grade, subject, nmgEnrichedTopics);
+  const languageEnrichedTopics = addLanguageRichEnrichment(grade, subject, nmgEnrichedTopics);
+  const enrichedTopics = addMathRichEnrichment(grade, subject, languageEnrichedTopics);
   return applyExerciseLocalizations(grade, subject, enrichedTopics).map((topic) => ({
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
