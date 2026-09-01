@@ -82,7 +82,7 @@ const byGrade = rows.reduce<Record<string, number>>((acc, row) => {
   return acc;
 }, {});
 for (const grade of [4, 5, 6]) {
-  if (byGrade[String(grade)] !== 8) failures.push(`grade ${grade}: expected 8 enriched exercises, found ${byGrade[String(grade)] ?? 0}`);
+  if (byGrade[String(grade)] !== 20) failures.push(`grade ${grade}: expected 20 enriched exercises, found ${byGrade[String(grade)] ?? 0}`);
 }
 
 const byType = rows.reduce<Record<string, number>>((acc, row) => {
@@ -90,6 +90,16 @@ const byType = rows.reduce<Record<string, number>>((acc, row) => {
   acc[type] = (acc[type] ?? 0) + 1;
   return acc;
 }, {});
+const expectedByType: Record<string, number> = {
+  "drag-drop": 20,
+  matching: 15,
+  memory: 10,
+  "self-review": 9,
+  "word-search": 6,
+};
+for (const [type, expected] of Object.entries(expectedByType)) {
+  if ((byType[type] ?? 0) !== expected) failures.push(`type ${type}: expected ${expected}, found ${byType[type] ?? 0}`);
+}
 
 mkdirSync(QA_DIR, { recursive: true });
 writeFileSync(path.join(QA_DIR, "nmg-rich-exercises.json"), JSON.stringify(rows, null, 2));
@@ -103,7 +113,7 @@ ${failures.length ? "changes_requested" : "approved"}
 
 - Grades: 4, 5, 6
 - Added exercises checked individually: ${rows.length}
-- Expected per grade: 8
+- Expected per grade: 20
 - Counts by grade: ${JSON.stringify(byGrade)}
 - Counts by type: ${JSON.stringify(byType)}
 

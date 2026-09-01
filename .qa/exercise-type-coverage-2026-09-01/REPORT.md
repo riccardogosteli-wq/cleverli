@@ -9,10 +9,10 @@ Cleverli has all supported exercise types in the catalogue. MI is now balanced; 
 ## Catalogue Summary
 
 - Subjects scanned: 30
-- Exercises scanned: 15058
-- MC/fill-in share: 96.3%
-- Rich interactive share: 2.5%
-- Self-review exercises: 171
+- Exercises scanned: 15094
+- MC/fill-in share: 96.1%
+- Rich interactive share: 2.7%
+- Self-review exercises: 177
 - Listening exercises: 548
 
 ## Type Totals
@@ -21,13 +21,13 @@ Cleverli has all supported exercise types in the catalogue. MI is now balanced; 
 |---|---:|
 | multiple-choice | 7602 |
 | fill-in-blank | 6904 |
-| self-review | 171 |
+| self-review | 177 |
 | counting | 17 |
-| matching | 73 |
-| memory | 60 |
-| drag-drop | 188 |
+| matching | 82 |
+| memory | 66 |
+| drag-drop | 200 |
 | number-line | 13 |
-| word-search | 30 |
+| word-search | 33 |
 
 ## Grade/Subject Matrix
 
@@ -47,19 +47,19 @@ Cleverli has all supported exercise types in the catalogue. MI is now balanced; 
 | 3 | Medien und Informatik | 2 | 54 | 59.3% | 33.3% | 0 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
 | 4 | Mathe | 10 | 501 | 98.8% | 1.2% | 7 | multiple-choice, fill-in-blank, matching, drag-drop, number-line |
 | 4 | Deutsch | 10 | 500 | 98.4% | 1.6% | 6 | multiple-choice, fill-in-blank, drag-drop |
-| 4 | NMG | 21 | 1058 | 99% | 0.9% | 14 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
+| 4 | NMG | 21 | 1070 | 97.9% | 1.9% | 13 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
 | 4 | Englisch | 9 | 450 | 97.8% | 0% | 9 | multiple-choice, fill-in-blank, self-review |
 | 4 | Franzoesisch | 9 | 450 | 82% | 12% | 0 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
 | 4 | Medien und Informatik | 2 | 54 | 59.3% | 33.3% | 0 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
 | 5 | Mathe | 9 | 450 | 99.1% | 0.9% | 6 | multiple-choice, fill-in-blank, drag-drop, number-line |
 | 5 | Deutsch | 10 | 500 | 98.2% | 1.8% | 6 | multiple-choice, fill-in-blank, drag-drop |
-| 5 | NMG | 21 | 1058 | 99.1% | 0.7% | 14 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
+| 5 | NMG | 21 | 1070 | 97.9% | 1.6% | 14 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
 | 5 | Franzoesisch | 9 | 450 | 97.1% | 0% | 9 | multiple-choice, fill-in-blank, self-review |
 | 5 | Englisch | 9 | 450 | 96% | 0% | 9 | multiple-choice, fill-in-blank, self-review |
 | 5 | Medien und Informatik | 2 | 54 | 59.3% | 33.3% | 0 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
 | 6 | Mathe | 9 | 450 | 99.8% | 0.2% | 8 | multiple-choice, fill-in-blank, number-line |
 | 6 | Deutsch | 10 | 500 | 99% | 1% | 9 | multiple-choice, fill-in-blank, drag-drop |
-| 6 | NMG | 21 | 1058 | 99.2% | 0.7% | 14 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
+| 6 | NMG | 21 | 1070 | 98.1% | 1.6% | 14 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
 | 6 | Franzoesisch | 9 | 450 | 96.9% | 0% | 9 | multiple-choice, fill-in-blank, self-review |
 | 6 | Englisch | 9 | 450 | 94.9% | 0% | 9 | multiple-choice, fill-in-blank, self-review |
 | 6 | Medien und Informatik | 2 | 54 | 59.3% | 33.3% | 0 | multiple-choice, fill-in-blank, self-review, matching, memory, drag-drop, word-search |
@@ -82,13 +82,13 @@ Cleverli has all supported exercise types in the catalogue. MI is now balanced; 
 - High: Klasse 3 NMG: Only 1.7% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
 - High: Klasse 4 Deutsch: Only 1.6% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
 - High: Klasse 4 Mathe: Only 1.2% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
-- High: Klasse 4 NMG: Only 0.9% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
+- High: Klasse 4 NMG: Only 1.9% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
 - High: Klasse 5 Deutsch: Only 1.8% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
 - High: Klasse 5 Mathe: Only 0.9% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
-- High: Klasse 5 NMG: Only 0.7% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
+- High: Klasse 5 NMG: Only 1.6% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
 - High: Klasse 6 Deutsch: Only 1% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
 - High: Klasse 6 Mathe: Only 0.2% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
-- High: Klasse 6 NMG: Only 0.7% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
+- High: Klasse 6 NMG: Only 1.6% rich interactive exercises. Prioritise this grade/subject for the next interaction-format enrichment pass.
 - Medium: Klasse 1 Mathe: 93.7% of exercises are MC/fill-in and rich interaction is still below 10%. Add richer practice to the highest-volume topics first.
 - Medium: Klasse 3 Englisch: 9/9 topics have no rich interactive exercise. Spread new rich types across topics instead of adding them all to one topic.
 - Medium: Klasse 3 Mathe: 10/10 topics have no rich interactive exercise. Spread new rich types across topics instead of adding them all to one topic.

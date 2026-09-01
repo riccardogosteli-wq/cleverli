@@ -10,12 +10,48 @@
   },
   {
     "grade": 4,
+    "topicId": "koerper-gesundheit",
+    "topic": "Körper und Gesundheit",
+    "exerciseId": "nmg4-rich-koerper-match-2",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Sinn und passende Beobachtung."
+  },
+  {
+    "grade": 4,
+    "topicId": "koerper-gesundheit",
+    "topic": "Körper und Gesundheit",
+    "exerciseId": "nmg4-rich-koerper-review-2",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Du merkst, dass du nach langem Sitzen unruhig wirst. Was könntest du tun, damit dein Körper wieder wacher wird?"
+  },
+  {
+    "grade": 4,
     "topicId": "lebensraeume-tiere",
     "topic": "Lebensräume der Tiere",
     "exerciseId": "nmg4-rich-tiere-memory-1",
     "type": "memory",
     "difficulty": 2,
     "question": "Finde Tier und passenden Lebensraum."
+  },
+  {
+    "grade": 4,
+    "topicId": "lebensraeume-tiere",
+    "topic": "Lebensräume der Tiere",
+    "exerciseId": "nmg4-rich-tiere-drag-2",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne die Tiermerkmale zum passenden Nutzen."
+  },
+  {
+    "grade": 4,
+    "topicId": "lebensraeume-tiere",
+    "topic": "Lebensräume der Tiere",
+    "exerciseId": "nmg4-rich-tiere-match-2",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Spur und Tier."
   },
   {
     "grade": 4,
@@ -28,6 +64,33 @@
   },
   {
     "grade": 4,
+    "topicId": "wetter-klima",
+    "topic": "Wetter und Klima",
+    "exerciseId": "nmg4-rich-wetter-drag-2",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne Messgerät und Wetterbeobachtung."
+  },
+  {
+    "grade": 4,
+    "topicId": "wetter-klima",
+    "topic": "Wetter und Klima",
+    "exerciseId": "nmg4-rich-wetter-match-2",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Wetterzeichen und passende Bedeutung."
+  },
+  {
+    "grade": 4,
+    "topicId": "wetter-klima",
+    "topic": "Wetter und Klima",
+    "exerciseId": "nmg4-rich-wetter-word-2",
+    "type": "word-search",
+    "difficulty": 1,
+    "question": "Finde Wörter für Wetterbeobachtungen."
+  },
+  {
+    "grade": 4,
     "topicId": "orientierung-karte-4",
     "topic": "Orientierung & Karte",
     "exerciseId": "nmg4-rich-karte-match-1",
@@ -37,12 +100,39 @@
   },
   {
     "grade": 4,
+    "topicId": "orientierung-karte-4",
+    "topic": "Orientierung & Karte",
+    "exerciseId": "nmg4-rich-karte-drag-2",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne die Schritte für einen sicheren Weg mit der Karte."
+  },
+  {
+    "grade": 4,
+    "topicId": "orientierung-karte-4",
+    "topic": "Orientierung & Karte",
+    "exerciseId": "nmg4-rich-karte-memory-2",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Kartenzeichen und passenden Nutzen."
+  },
+  {
+    "grade": 4,
     "topicId": "gemeinde-kanton-4",
     "topic": "Gemeinde & Kanton",
     "exerciseId": "nmg4-rich-gemeinde-drag-1",
     "type": "drag-drop",
     "difficulty": 2,
     "question": "Ordne Aufgaben von Gemeinde und Kanton."
+  },
+  {
+    "grade": 4,
+    "topicId": "gemeinde-kanton-4",
+    "topic": "Gemeinde & Kanton",
+    "exerciseId": "nmg4-rich-gemeinde-review-2",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Auf dem Schulweg ist ein Zebrastreifen schlecht sichtbar. Wem würdest du das melden und warum?"
   },
   {
     "grade": 4,
@@ -64,12 +154,30 @@
   },
   {
     "grade": 4,
+    "topicId": "ressourcen-wasser-4",
+    "topic": "Wasser & Ressourcen",
+    "exerciseId": "nmg4-rich-wasser-memory-2",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Wassernutzung und passende Begründung."
+  },
+  {
+    "grade": 4,
     "topicId": "energie-stoffe",
     "topic": "Produktion & Konsum",
     "exerciseId": "nmg4-rich-produktion-drag-1",
     "type": "drag-drop",
     "difficulty": 2,
     "question": "Ordne den Weg eines Brots vom Rohstoff bis zum Znüni."
+  },
+  {
+    "grade": 4,
+    "topicId": "energie-stoffe",
+    "topic": "Produktion & Konsum",
+    "exerciseId": "nmg4-rich-produktion-drag-2",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne den Weg einer Glasflasche im Recycling."
   },
   {
     "grade": 5,
@@ -82,12 +190,57 @@
   },
   {
     "grade": 5,
+    "topicId": "oekosysteme",
+    "topic": "Ökosysteme",
+    "exerciseId": "nmg5-rich-oeko-drag-2",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne Veränderungen in einem Lebensraum nach möglicher Folge."
+  },
+  {
+    "grade": 5,
+    "topicId": "oekosysteme",
+    "topic": "Ökosysteme",
+    "exerciseId": "nmg5-rich-oeko-match-2",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Ökosystem-Begriff und Erklärung."
+  },
+  {
+    "grade": 5,
+    "topicId": "oekosysteme",
+    "topic": "Ökosysteme",
+    "exerciseId": "nmg5-rich-oeko-review-2",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "Eine Klasse möchte den Pausenplatz tierfreundlicher machen. Welche zwei Ideen sind sinnvoll?"
+  },
+  {
+    "grade": 5,
     "topicId": "strom-energie",
     "topic": "Strom und Energie",
     "exerciseId": "nmg5-rich-strom-match-1",
     "type": "matching",
     "difficulty": 2,
     "question": "Verbinde Energieform und Beispiel."
+  },
+  {
+    "grade": 5,
+    "topicId": "strom-energie",
+    "topic": "Strom und Energie",
+    "exerciseId": "nmg5-rich-strom-drag-2",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne die Energieumwandlung bei einer Velolampe."
+  },
+  {
+    "grade": 5,
+    "topicId": "strom-energie",
+    "topic": "Strom und Energie",
+    "exerciseId": "nmg5-rich-strom-memory-2",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Energiequelle und passende Nutzung."
   },
   {
     "grade": 5,
@@ -118,12 +271,57 @@
   },
   {
     "grade": 5,
+    "topicId": "schweiz-politik-5",
+    "topic": "Schweiz — Politik & Demokratie",
+    "exerciseId": "nmg5-rich-politik-drag-2",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne politische Ebenen und Beispiele."
+  },
+  {
+    "grade": 5,
+    "topicId": "schweiz-politik-5",
+    "topic": "Schweiz — Politik & Demokratie",
+    "exerciseId": "nmg5-rich-politik-review-2",
+    "type": "self-review",
+    "difficulty": 2,
+    "question": "In deiner Klasse gibt es zwei Vorschläge für den Ausflug. Wie kann die Klasse fair entscheiden?"
+  },
+  {
+    "grade": 5,
     "topicId": "wirtschaft-handel-5",
     "topic": "Wirtschaft im Alltag",
     "exerciseId": "nmg5-rich-wirtschaft-match-1",
     "type": "matching",
     "difficulty": 2,
     "question": "Verbinde Wirtschaftsbegriff und einfache Erklärung."
+  },
+  {
+    "grade": 5,
+    "topicId": "wirtschaft-handel-5",
+    "topic": "Wirtschaft im Alltag",
+    "exerciseId": "nmg5-rich-wirtschaft-drag-2",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Ordne den Weg eines Produkts vom Ursprung bis zum Verkauf."
+  },
+  {
+    "grade": 5,
+    "topicId": "wirtschaft-handel-5",
+    "topic": "Wirtschaft im Alltag",
+    "exerciseId": "nmg5-rich-wirtschaft-word-2",
+    "type": "word-search",
+    "difficulty": 1,
+    "question": "Finde Wörter rund um Wirtschaft."
+  },
+  {
+    "grade": 5,
+    "topicId": "wirtschaft-handel-5",
+    "topic": "Wirtschaft im Alltag",
+    "exerciseId": "nmg5-rich-wirtschaft-match-2",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Bedürfnis und Wunsch mit einem Beispiel."
   },
   {
     "grade": 5,
@@ -144,6 +342,24 @@
     "question": "Finde Klima und passenden Lebensraum."
   },
   {
+    "grade": 5,
+    "topicId": "klima-lebensraeume-5",
+    "topic": "Klimazonen & Lebensräume",
+    "exerciseId": "nmg5-rich-lebensraeume-match-2",
+    "type": "matching",
+    "difficulty": 2,
+    "question": "Verbinde Anpassung und passenden Lebensraum."
+  },
+  {
+    "grade": 5,
+    "topicId": "klima-lebensraeume-5",
+    "topic": "Klimazonen & Lebensräume",
+    "exerciseId": "nmg5-rich-lebensraeume-memory-2",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Beobachtung und mögliche Erklärung."
+  },
+  {
     "grade": 6,
     "topicId": "energie-nachh-6",
     "topic": "Energie & Nachhaltigkeit",
@@ -154,12 +370,57 @@
   },
   {
     "grade": 6,
+    "topicId": "energie-nachh-6",
+    "topic": "Energie & Nachhaltigkeit",
+    "exerciseId": "nmg6-rich-energie-drag-2",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Massnahmen nach direkter Wirkung."
+  },
+  {
+    "grade": 6,
+    "topicId": "energie-nachh-6",
+    "topic": "Energie & Nachhaltigkeit",
+    "exerciseId": "nmg6-rich-energie-match-2",
+    "type": "matching",
+    "difficulty": 3,
+    "question": "Verbinde Energie-Entscheidung und mögliche Folge."
+  },
+  {
+    "grade": 6,
     "topicId": "demokratie-menschenrechte-6",
     "topic": "Demokratie & Menschenrechte",
     "exerciseId": "nmg6-rich-demokratie-match-1",
     "type": "matching",
     "difficulty": 3,
     "question": "Verbinde demokratische Handlung und Bedeutung."
+  },
+  {
+    "grade": 6,
+    "topicId": "demokratie-menschenrechte-6",
+    "topic": "Demokratie & Menschenrechte",
+    "exerciseId": "nmg6-rich-demokratie-drag-2",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne die Schritte einer fairen Klassenentscheidung."
+  },
+  {
+    "grade": 6,
+    "topicId": "demokratie-menschenrechte-6",
+    "topic": "Demokratie & Menschenrechte",
+    "exerciseId": "nmg6-rich-demokratie-review-2",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Eine Mehrheit möchte eine Regel, die für ein paar Kinder unfair wäre. Wie könnte die Klasse besser vorgehen?"
+  },
+  {
+    "grade": 6,
+    "topicId": "demokratie-menschenrechte-6",
+    "topic": "Demokratie & Menschenrechte",
+    "exerciseId": "nmg6-rich-demokratie-match-2",
+    "type": "matching",
+    "difficulty": 3,
+    "question": "Verbinde Recht und Alltagssituation."
   },
   {
     "grade": 6,
@@ -190,6 +451,33 @@
   },
   {
     "grade": 6,
+    "topicId": "globalisierung-6",
+    "topic": "Weltweit verbunden",
+    "exerciseId": "nmg6-rich-global-drag-2",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Stationen einer Schokolade-Lieferkette."
+  },
+  {
+    "grade": 6,
+    "topicId": "globalisierung-6",
+    "topic": "Weltweit verbunden",
+    "exerciseId": "nmg6-rich-global-memory-2",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde globale Verbindung und mögliche Frage dazu."
+  },
+  {
+    "grade": 6,
+    "topicId": "globalisierung-6",
+    "topic": "Weltweit verbunden",
+    "exerciseId": "nmg6-rich-global-review-2",
+    "type": "self-review",
+    "difficulty": 3,
+    "question": "Du kaufst ein T-Shirt. Welche zwei Fragen helfen dir, fairer zu entscheiden?"
+  },
+  {
+    "grade": 6,
     "topicId": "kontinente-6",
     "topic": "Kontinente & Weltregionen",
     "exerciseId": "nmg6-rich-kontinente-word-1",
@@ -208,11 +496,47 @@
   },
   {
     "grade": 6,
+    "topicId": "zukunft-herausforderungen-6",
+    "topic": "Zukunft & Herausforderungen",
+    "exerciseId": "nmg6-rich-zukunft-word-2",
+    "type": "word-search",
+    "difficulty": 2,
+    "question": "Finde Begriffe zu Zukunftsfragen."
+  },
+  {
+    "grade": 6,
     "topicId": "technik-informatik-6",
     "topic": "Technik & Informatik",
     "exerciseId": "nmg6-rich-technik-drag-1",
     "type": "drag-drop",
     "difficulty": 3,
     "question": "Ordne Technikfolgen nach Chance und Risiko."
+  },
+  {
+    "grade": 6,
+    "topicId": "technik-informatik-6",
+    "topic": "Technik & Informatik",
+    "exerciseId": "nmg6-rich-technik-drag-2",
+    "type": "drag-drop",
+    "difficulty": 3,
+    "question": "Ordne Technikbeispiele nach Nutzen und möglicher Verantwortung."
+  },
+  {
+    "grade": 6,
+    "topicId": "technik-informatik-6",
+    "topic": "Technik & Informatik",
+    "exerciseId": "nmg6-rich-technik-match-2",
+    "type": "matching",
+    "difficulty": 3,
+    "question": "Verbinde technische Lösung und passende Prüffrage."
+  },
+  {
+    "grade": 6,
+    "topicId": "technik-informatik-6",
+    "topic": "Technik & Informatik",
+    "exerciseId": "nmg6-rich-technik-memory-2",
+    "type": "memory",
+    "difficulty": 2,
+    "question": "Finde Technikfolge und passendes Beispiel."
   }
 ]
