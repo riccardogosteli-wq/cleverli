@@ -32,6 +32,7 @@ const SUBJECT_NAMES: Record<string, { de: string; fr: string; it: string; en: st
   rzg:     { de: "NMG",        fr: "Sciences",       it: "Scienze",      en: "Science" },
   english: { de: "Englisch",   fr: "Anglais",        it: "Inglese",      en: "English" },
   french:  { de: "Französisch", fr: "Français",      it: "Francese",     en: "French" },
+  mi:      { de: "Medien & Informatik", fr: "Médias & informatique", it: "Media & informatica", en: "Media & Computing" },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

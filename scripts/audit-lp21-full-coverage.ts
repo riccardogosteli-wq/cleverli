@@ -210,13 +210,13 @@ const shippedSubjectAreas = [
   "NMG/Science",
   "Englisch",
   "Franzoesisch",
+  "Medien und Informatik",
 ] as const;
 
 const missingForFullLp21 = [
   "Gestalten is not a standalone Cleverli subject.",
   "Musik is not a standalone Cleverli subject.",
   "Bewegung und Sport is not a standalone Cleverli subject.",
-  "Medien und Informatik exists only as integrated NMG/science content, not as a canton-timed module with its own exercise path.",
   "Graubuenden regional languages need Italian/Romansh/German-as-foreign-language content before support can be unguarded.",
   "PER and Piano di studio need separate curriculum/content projects before French-school-language regions and Ticino can be called supported.",
   "Speaking/oral production is not covered as an evaluated exercise mode; writing is partly covered through self-review.",

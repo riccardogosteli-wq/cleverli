@@ -548,7 +548,8 @@ def insert_sheet_rows(spreadsheet_id: str, tab: str, blocks: list[tuple[int, int
                 "inheritFromBefore": False,
             }
         })
-    request("POST", f"{BASE}/{spreadsheet_id}:batchUpdate", {"requests": requests})
+    for offset in range(0, len(requests), 50):
+        request("POST", f"{BASE}/{spreadsheet_id}:batchUpdate", {"requests": requests[offset:offset + 50]})
 
 
 def is_green(cell: dict) -> bool:
@@ -708,7 +709,12 @@ def verify_markers(
     return failures
 
 
-def reconcile_grade(grade: int, apply: bool) -> dict:
+def reconcile_grade(
+    grade: int,
+    apply: bool,
+    skip_audit_updates: bool = False,
+    skip_marker_checks: bool = False,
+) -> dict:
     source = json.loads(Path(f"/tmp/cleverli-grade-{grade}-qa.json").read_text())
     source_rows = source["rows"]
     special_rows = [row for row in source_rows if row["type"] in SPECIAL_TYPES]
@@ -751,17 +757,18 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
             special_updates.append({"range": f"'Special exercises'!A{sheet_row}:J{sheet_row}", "values": [expected]})
 
     audit_updates = []
-    current_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F200")
-    if normalize(current_audit[0] if current_audit else [], 6)[0] != "Status":
-        audit_updates.append({"range": "'Audit findings'!A1:F1", "values": [[
-            "Status", "Category", "Subject", "Topic / exercise IDs", "Finding", "Recommended action",
-        ]]})
-    for expected in AUDIT_UPDATES.get(grade, {}).values():
-        canonical = canonical_audit_values(expected)
-        audit_row = find_audit_row(current_audit, canonical)
-        actual = current_audit[audit_row - 1]
-        if normalize(actual, 6) != canonical:
-            audit_updates.append({"range": f"'Audit findings'!A{audit_row}:F{audit_row}", "values": [canonical]})
+    current_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F200") if not skip_audit_updates else []
+    if not skip_audit_updates:
+        if normalize(current_audit[0] if current_audit else [], 6)[0] != "Status":
+            audit_updates.append({"range": "'Audit findings'!A1:F1", "values": [[
+                "Status", "Category", "Subject", "Topic / exercise IDs", "Finding", "Recommended action",
+            ]]})
+        for expected in AUDIT_UPDATES.get(grade, {}).values():
+            canonical = canonical_audit_values(expected)
+            audit_row = find_audit_row(current_audit, canonical)
+            actual = current_audit[audit_row - 1]
+            if normalize(actual, 6) != canonical:
+                audit_updates.append({"range": f"'Audit findings'!A{audit_row}:F{audit_row}", "values": [canonical]})
 
     if apply:
         insert_sheet_rows(spreadsheet_id, main_tab, main_insert_blocks)
@@ -791,21 +798,22 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
     if len(reread_special) != len(special_rows) + 1:
         special_mismatches.extend(range(len(reread_special) + 1, len(special_rows) + 2))
     audit_mismatches = []
-    reread_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F200")
-    if normalize(reread_audit[0] if reread_audit else [], 6)[0] != "Status":
-        audit_mismatches.append(1)
-    for expected in AUDIT_UPDATES.get(grade, {}).values():
-        canonical = canonical_audit_values(expected)
-        audit_row = find_audit_row(reread_audit, canonical)
-        actual = reread_audit[audit_row - 1]
-        if normalize(actual, 6) != canonical:
-            audit_mismatches.append(audit_row)
+    if not skip_audit_updates:
+        reread_audit = values_get(spreadsheet_id, "'Audit findings'!A1:F200")
+        if normalize(reread_audit[0] if reread_audit else [], 6)[0] != "Status":
+            audit_mismatches.append(1)
+        for expected in AUDIT_UPDATES.get(grade, {}).values():
+            canonical = canonical_audit_values(expected)
+            audit_row = find_audit_row(reread_audit, canonical)
+            actual = reread_audit[audit_row - 1]
+            if normalize(actual, 6) != canonical:
+                audit_mismatches.append(audit_row)
 
-    marker_failures = verify_markers(spreadsheet_id, main_tab, source_rows)
+    marker_failures = [] if skip_marker_checks else verify_markers(spreadsheet_id, main_tab, source_rows)
     if apply and marker_failures:
         repair_main_markers(spreadsheet_id, main_tab, source_rows, marker_failures)
         marker_failures = verify_markers(spreadsheet_id, main_tab, source_rows)
-    special_marker_failures = verify_markers(
+    special_marker_failures = [] if skip_marker_checks else verify_markers(
         spreadsheet_id,
         "Special exercises",
         special_rows,
@@ -845,9 +853,14 @@ def reconcile_grade(grade: int, apply: bool) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Write mismatched production-owned cells and stale audit rows")
+    parser.add_argument("--skip-audit-updates", action="store_true", help="Only reconcile exercise rows/special rows and green markers")
+    parser.add_argument("--skip-marker-checks", action="store_true", help="Skip green-marker GridData verification")
     parser.add_argument("--grades", nargs="+", type=int, choices=range(1, 7), default=list(range(1, 7)))
     args = parser.parse_args()
-    summary = {grade: reconcile_grade(grade, args.apply) for grade in args.grades}
+    summary = {
+        grade: reconcile_grade(grade, args.apply, args.skip_audit_updates, args.skip_marker_checks)
+        for grade in args.grades
+    }
     print(json.dumps({"applied": args.apply, "grades": summary}, indent=2))
     if any(
         result[key]

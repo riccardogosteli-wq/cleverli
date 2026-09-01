@@ -73,6 +73,11 @@ const SUBJECT_META: Record<string, {
     label:    { de: "Englisch",     fr: "Anglais",       it: "Inglese",      en: "English" },
     subtitle: { de: "Sprechen & Verstehen", fr: "Parler & comprendre", it: "Parlare & capire", en: "Speaking & Understanding" },
   },
+  mi: {
+    emoji: "💻", iconBg: "bg-cyan-100",
+    label:    { de: "Medien & Informatik", fr: "Médias & informatique", it: "Media & informatica", en: "Media & Computing" },
+    subtitle: { de: "Sicher online & logisch denken", fr: "Sécurité & logique", it: "Sicurezza & logica", en: "Safety & logic" },
+  },
 };
 
 const SUBJECT_ICONS: Record<string, string> = {
@@ -83,6 +88,7 @@ const SUBJECT_ICONS: Record<string, string> = {
   rzg:     "/images/ui/Zeit.svg",
   french:  "/images/ui/Woerter-Sprache.svg",
   english: "/images/ui/Woerter-Sprache.svg",
+  mi:      "/images/ui/Woerter-Sprache.svg",
 };
 
 const GRADE_KEY = "cleverli_last_grade";
@@ -486,6 +492,7 @@ function DashboardInner() {
             rzg:     "bg-orange-500 text-white border-orange-500",
             french:  "bg-purple-600 text-white border-purple-600",
             english: "bg-red-500 text-white border-red-500",
+            mi:      "bg-cyan-600 text-white border-cyan-600",
           };
           const activeCls = activeClsMap[s.id] ?? "bg-gray-600 text-white border-gray-600";
           return (

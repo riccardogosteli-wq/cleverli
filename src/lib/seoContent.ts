@@ -43,6 +43,13 @@ export const SUBJECT_SEO: Record<string, {
     intro: "Französisch-Übungen für die Primarschule: Wortschatz, einfache Sätze und Grundlagen wiederholen, ohne lange Vorbereitung daheim.",
     practice: ["Wortschatz wiederholen", "Verben und Formen", "Sätze lesen und verstehen"],
   },
+  mi: {
+    name: "Medien & Informatik",
+    shortName: "MI",
+    keywords: ["Medien und Informatik Übungen", "Medienkompetenz", "Informatik Primarschule", "Datenschutz", "Algorithmen"],
+    intro: "Medien-&-Informatik-Übungen für die Primarschule: sicher online handeln, Informationen prüfen, Daten verstehen und einfache Algorithmen üben.",
+    practice: ["sicher online handeln", "Informationen und Quellen prüfen", "Daten, Befehle und Algorithmen verstehen"],
+  },
 };
 
 export const GRADE_NAMES: Record<string, string> = {
@@ -121,6 +128,7 @@ const exerciseTypeLabels: Record<string, string> = {
   "drag-drop": "Drag & Drop",
   "number-line": "Zahlenstrahl",
   "word-search": "Wortsuche",
+  "self-review": "Selbstcheck",
 };
 
 const localizedExerciseTypeLabels: Record<Lang, Record<string, string>> = {
@@ -134,6 +142,7 @@ const localizedExerciseTypeLabels: Record<Lang, Record<string, string>> = {
     "drag-drop": "Glisser-déposer",
     "number-line": "Ligne numérique",
     "word-search": "Mots cachés",
+    "self-review": "Auto-évaluation",
   },
   it: {
     "multiple-choice": "Scelta multipla",
@@ -144,6 +153,7 @@ const localizedExerciseTypeLabels: Record<Lang, Record<string, string>> = {
     "drag-drop": "Drag & Drop",
     "number-line": "Retta numerica",
     "word-search": "Cerca parole",
+    "self-review": "Autovalutazione",
   },
   en: {
     "multiple-choice": "Multiple choice",
@@ -154,6 +164,7 @@ const localizedExerciseTypeLabels: Record<Lang, Record<string, string>> = {
     "drag-drop": "Drag & drop",
     "number-line": "Number line",
     "word-search": "Word search",
+    "self-review": "Self-check",
   },
 };
 
@@ -187,6 +198,12 @@ const localizedSubjectNames: Record<string, Record<Lang, { name: string; shortNa
     fr: { name: "Français", shortName: "Français" },
     it: { name: "Francese", shortName: "Francese" },
     en: { name: "French", shortName: "French" },
+  },
+  mi: {
+    de: { name: "Medien & Informatik", shortName: "MI" },
+    fr: { name: "Médias & informatique", shortName: "MI" },
+    it: { name: "Media & informatica", shortName: "MI" },
+    en: { name: "Media & Computing", shortName: "MI" },
   },
 };
 

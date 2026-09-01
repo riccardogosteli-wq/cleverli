@@ -152,7 +152,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const { speak, stop, isSupported } = useVoice();
   const { play } = useSound();
   const { tr, lang } = useLang();
-  const exerciseSpeechLang = subject === "german" ? "de" : subject === "english" ? "en" : subject === "french" ? "fr" : lang;
+  const exerciseSpeechLang = subject === "german" || subject === "mi" ? "de" : subject === "english" ? "en" : subject === "french" ? "fr" : lang;
   const { recordAnswer, profile, leveledUp, clearLeveledUp } = useProfileContext();
   const { session } = useSession();
   const level = getLevelForXp(profile.xp);

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T07:11:39.906Z",
+  "generatedAt": "2026-09-01T07:48:34.290Z",
   "officialSourcesChecked": [
     "https://www.lehrplan21.ch/",
     "https://www.lehrplan21.ch/stundentafeln",
@@ -86,6 +86,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -93,6 +94,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -104,6 +106,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -111,6 +114,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -192,6 +196,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -199,6 +204,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -210,6 +216,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -217,6 +224,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -298,6 +306,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -305,6 +314,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -316,6 +326,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -323,6 +334,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -372,12 +384,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -388,12 +402,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -404,6 +420,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -411,6 +428,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -422,6 +440,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -429,6 +448,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -478,12 +498,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -494,12 +516,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -510,6 +534,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -517,6 +542,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -528,6 +554,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -535,6 +562,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -584,12 +612,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -600,12 +630,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -616,6 +648,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -623,6 +656,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -634,6 +668,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -641,6 +676,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -722,6 +758,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -729,6 +766,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -740,6 +778,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -747,6 +786,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -828,6 +868,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -835,6 +876,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -846,6 +888,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -853,6 +896,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -934,6 +978,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -941,6 +986,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -952,6 +998,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -959,6 +1006,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1040,6 +1088,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1047,6 +1096,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1058,6 +1108,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1065,6 +1116,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1146,6 +1198,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1153,6 +1206,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1164,6 +1218,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1171,6 +1226,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1252,6 +1308,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1259,6 +1316,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1270,6 +1328,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1277,6 +1336,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -1358,6 +1418,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1365,6 +1426,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1376,6 +1438,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1383,6 +1446,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1464,6 +1528,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1471,6 +1536,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1482,6 +1548,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1489,6 +1556,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1570,6 +1638,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1577,6 +1646,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1588,6 +1658,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1595,6 +1666,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1676,6 +1748,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1683,6 +1756,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1694,6 +1768,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1701,6 +1776,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1750,12 +1826,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "french"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "french"
             ],
             "missingCatalogSubjects": []
@@ -1766,12 +1844,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "french"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "french"
             ],
             "missingCatalogSubjects": []
@@ -1782,6 +1862,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1789,6 +1870,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1800,6 +1882,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1807,6 +1890,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1856,12 +1940,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "french"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "french"
             ],
             "missingCatalogSubjects": []
@@ -1872,12 +1958,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "french"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "french"
             ],
             "missingCatalogSubjects": []
@@ -1888,6 +1976,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1895,6 +1984,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1906,6 +1996,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1913,6 +2004,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "french",
               "english"
             ],
@@ -1962,12 +2054,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -1978,12 +2072,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -1994,12 +2090,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -2010,12 +2108,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -2096,12 +2196,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -2112,12 +2214,14 @@
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english"
             ],
             "missingCatalogSubjects": []
@@ -2195,12 +2299,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2211,12 +2317,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2295,12 +2403,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2311,12 +2421,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2395,12 +2507,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2411,12 +2525,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2495,12 +2611,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2511,12 +2629,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2595,12 +2715,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2611,12 +2733,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2695,12 +2819,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2711,12 +2837,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2765,7 +2893,8 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
@@ -2780,7 +2909,8 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
@@ -2795,12 +2925,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2811,12 +2943,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2865,7 +2999,8 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
@@ -2880,7 +3015,8 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
@@ -2895,12 +3031,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2911,12 +3049,14 @@
             "desiredSubjects": [
               "math",
               "german",
-              "science"
+              "science",
+              "mi"
             ],
             "visibleSubjects": [
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -2998,6 +3138,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "italian",
               "english"
             ],
@@ -3005,6 +3146,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3016,6 +3158,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "italian",
               "english"
             ],
@@ -3023,6 +3166,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3104,6 +3248,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "romansh",
               "english"
             ],
@@ -3111,6 +3256,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3122,6 +3268,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "romansh",
               "english"
             ],
@@ -3129,6 +3276,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3212,6 +3360,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "romansh",
               "english"
             ],
@@ -3219,6 +3368,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3230,6 +3380,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "romansh",
               "english"
             ],
@@ -3237,6 +3388,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3318,6 +3470,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "german",
               "english"
             ],
@@ -3325,6 +3478,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3336,6 +3490,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "german",
               "english"
             ],
@@ -3343,6 +3498,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3424,6 +3580,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "german",
               "english"
             ],
@@ -3431,6 +3588,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3442,6 +3600,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "german",
               "english"
             ],
@@ -3449,6 +3608,7 @@
               "math",
               "german",
               "science",
+              "mi",
               "english",
               "french"
             ],
@@ -3473,7 +3633,8 @@
       "Mathematik",
       "NMG/Science",
       "Englisch",
-      "Franzoesisch"
+      "Franzoesisch",
+      "Medien und Informatik"
     ],
     "summaries": [
       {
@@ -3615,6 +3776,21 @@
         }
       },
       {
+        "grade": 3,
+        "subject": "mi",
+        "topics": 2,
+        "exercises": 38,
+        "exerciseTypes": {
+          "multiple-choice": 12,
+          "fill-in-blank": 10,
+          "matching": 4,
+          "memory": 4,
+          "drag-drop": 4,
+          "word-search": 2,
+          "self-review": 2
+        }
+      },
+      {
         "grade": 4,
         "subject": "math",
         "topics": 10,
@@ -3676,6 +3852,21 @@
         }
       },
       {
+        "grade": 4,
+        "subject": "mi",
+        "topics": 2,
+        "exercises": 38,
+        "exerciseTypes": {
+          "multiple-choice": 12,
+          "fill-in-blank": 10,
+          "matching": 4,
+          "memory": 4,
+          "drag-drop": 4,
+          "word-search": 2,
+          "self-review": 2
+        }
+      },
+      {
         "grade": 5,
         "subject": "math",
         "topics": 9,
@@ -3732,6 +3923,21 @@
         }
       },
       {
+        "grade": 5,
+        "subject": "mi",
+        "topics": 2,
+        "exercises": 38,
+        "exerciseTypes": {
+          "multiple-choice": 12,
+          "fill-in-blank": 10,
+          "matching": 4,
+          "memory": 4,
+          "drag-drop": 4,
+          "word-search": 2,
+          "self-review": 2
+        }
+      },
+      {
         "grade": 6,
         "subject": "math",
         "topics": 9,
@@ -3784,31 +3990,45 @@
           "fill-in-blank": 202,
           "self-review": 23
         }
+      },
+      {
+        "grade": 6,
+        "subject": "mi",
+        "topics": 2,
+        "exercises": 38,
+        "exerciseTypes": {
+          "multiple-choice": 12,
+          "fill-in-blank": 10,
+          "matching": 4,
+          "memory": 4,
+          "drag-drop": 4,
+          "word-search": 2,
+          "self-review": 2
+        }
       }
     ]
   },
   "exerciseCoverage": {
-    "totalTopics": 295,
-    "totalExercises": 14818,
+    "totalTopics": 303,
+    "totalExercises": 14970,
     "totalByType": {
-      "multiple-choice": 7528,
-      "fill-in-blank": 6850,
-      "self-review": 152,
+      "multiple-choice": 7576,
+      "fill-in-blank": 6890,
+      "self-review": 160,
       "counting": 17,
-      "matching": 43,
-      "memory": 40,
-      "drag-drop": 156,
+      "matching": 59,
+      "memory": 56,
+      "drag-drop": 172,
       "number-line": 13,
-      "word-search": 19
+      "word-search": 27
     },
     "listeningExercises": 548,
-    "localisedExercises": 14608
+    "localisedExercises": 14760
   },
   "gapsBeforeAdaptiveRecommendations": [
     "Gestalten is not a standalone Cleverli subject.",
     "Musik is not a standalone Cleverli subject.",
     "Bewegung und Sport is not a standalone Cleverli subject.",
-    "Medien und Informatik exists only as integrated NMG/science content, not as a canton-timed module with its own exercise path.",
     "Graubuenden regional languages need Italian/Romansh/German-as-foreign-language content before support can be unguarded.",
     "PER and Piano di studio need separate curriculum/content projects before French-school-language regions and Ticino can be called supported.",
     "Speaking/oral production is not covered as an evaluated exercise mode; writing is partly covered through self-review."

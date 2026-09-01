@@ -72,12 +72,19 @@ function inferFrenchCodes(grade: number, topicId: string): string[] {
   return languageCodes(grade >= 5 ? "FS2F" : "FS1F", includeCulture);
 }
 
+function inferMiCodes(topicId: string): string[] {
+  if (/(spuren|informationen|quellen|feed|medien|werbung)/.test(topicId)) return ["MI.1"];
+  if (/(daten|algorithmen|programme|befehle|netzwerke|sicherheit|online)/.test(topicId)) return ["MI.2"];
+  return ["MI.1", "MI.2"];
+}
+
 export function inferTopicCurriculumCodes(grade: number, subject: string, topicId: string): string[] {
   if (subject === "math") return inferMathCodes(topicId);
   if (subject === "german") return inferGermanCodes(topicId);
   if (subject === "science" || subject === "nt" || subject === "rzg") return inferScienceCodes(topicId);
   if (subject === "english") return inferEnglishCodes(grade, topicId);
   if (subject === "french") return inferFrenchCodes(grade, topicId);
+  if (subject === "mi") return inferMiCodes(topicId);
   return [];
 }
 

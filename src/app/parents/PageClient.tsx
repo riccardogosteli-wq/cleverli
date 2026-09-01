@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import {
-  CORE_SUBJECTS,
+  getCatalogSubjects,
   getProgressSubjectsFromCatalog,
   getTopicSummaries,
 } from "@/data/topicCatalog";
@@ -39,7 +39,7 @@ function loadAllStats(): TopicStat[] {
   if (typeof window === "undefined") return [];
   const stats: TopicStat[] = [];
   for (const grade of [1,2,3,4,5,6]) {
-    for (const subject of ["math", "german", "science"]) {
+    for (const subject of getCatalogSubjects(grade).map((item) => item.id)) {
       const topics = getTopicSummaries(grade, subject);
       for (const topic of topics) {
         try {
@@ -87,7 +87,7 @@ function buildHeatmap(playDates: string[]): { date: string; active: boolean }[] 
 export default function ParentsDashboard() {
   const { session, loaded: sessionLoaded } = useSession();
   const { profile, loaded } = useProfileContext();
-  const { lang, tr } = useLang();
+  const { lang } = useLang();
 
   // ⚠️ All hooks must be called unconditionally before any early returns (React rules)
   const stats = useMemo(() => loaded ? loadAllStats() : [], [loaded]);
@@ -129,6 +129,16 @@ export default function ParentsDashboard() {
 
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
+
+  const subjectLabel = (subject: string) => {
+    if (subject === "math") return t("Mathematik", "Mathématiques", "Matematica", "Maths");
+    if (subject === "german") return t("Deutsch", "Allemand", "Tedesco", "German");
+    if (subject === "science") return t("NMG", "Sciences", "Scienze", "Science");
+    if (subject === "english") return t("Englisch", "Anglais", "Inglese", "English");
+    if (subject === "french") return t("Französisch", "Français", "Francese", "French");
+    if (subject === "mi") return t("Medien & Informatik", "Médias & informatique", "Media & informatica", "Media & Computing");
+    return subject;
+  };
 
   return (
     <ParentPinGate>
@@ -214,7 +224,7 @@ export default function ParentsDashboard() {
                 <div className="flex-1 min-w-0">
                   <div className="text-xs font-semibold text-gray-800">{s.topicTitle}</div>
                   <div className="text-[10px] text-gray-400">
-                    {s.grade}. {t("Klasse","Année","Classe","Grade")} · {s.subject === "math" ? (lang === "fr" ? "Mathématiques" : lang === "it" ? "Matematica" : lang === "en" ? "Maths" : "Mathematik") : s.subject === "german" ? (lang === "fr" ? "Allemand" : lang === "it" ? "Tedesco" : lang === "en" ? "German" : "Deutsch") : (lang === "fr" ? "Sciences" : lang === "it" ? "Scienze" : lang === "en" ? "Science" : "NMG")}
+                    {s.grade}. {t("Klasse","Année","Classe","Grade")} · {subjectLabel(s.subject)}
                   </div>
                 </div>
                 <div className="text-sm shrink-0">
@@ -289,7 +299,7 @@ export default function ParentsDashboard() {
                 {grade}. {t("Klasse","Année","Classe","Grade")}
               </div>
               <div className="space-y-1.5">
-                {CORE_SUBJECTS.map(sub => {
+                {getCatalogSubjects(grade).map(sub => {
                   const subStats = gradeStats.filter(s => s.subject === sub.id);
                   const topics = getTopicSummaries(grade, sub.id);
                   const doneCnt = subStats.filter(s => s.completed >= s.total).length;
@@ -299,7 +309,7 @@ export default function ParentsDashboard() {
                       <span className="text-lg shrink-0">{sub.emoji}</span>
                       <div className="flex-1">
                         <div className="flex justify-between text-[10px] text-gray-500 mb-0.5">
-                          <span>{tr(sub.id)}</span>
+                          <span>{subjectLabel(sub.id)}</span>
                           <span>{doneCnt}/{topics.length}</span>
                         </div>
                         <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">

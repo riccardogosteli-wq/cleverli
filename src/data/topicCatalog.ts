@@ -14,6 +14,8 @@ export const CORE_SUBJECTS = [
   { id: "science", emoji: "🌍", color: "bg-green-50 border-green-300 text-green-800" },
 ] as const;
 
+const MI_SUBJECT = { id: "mi", emoji: "💻", color: "bg-cyan-50 border-cyan-300 text-cyan-800" } as const;
+
 export function getTopicSummaries(grade: number, subject: string): TopicSummary[] {
   const key = `${grade}-${subject}` as keyof typeof TOPIC_CATALOG;
   return (TOPIC_CATALOG[key] ?? []) as unknown as TopicSummary[];
@@ -35,11 +37,13 @@ export function getCatalogSubjects(grade: number) {
       ...CORE_SUBJECTS,
       { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
       { id: "french", emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
+      MI_SUBJECT,
     ];
   }
   return [
     ...CORE_SUBJECTS,
     { id: "french", emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
     { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
+    MI_SUBJECT,
   ];
 }

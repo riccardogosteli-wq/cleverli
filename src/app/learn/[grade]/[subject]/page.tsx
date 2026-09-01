@@ -9,7 +9,7 @@ import { getGradeSubjectSeoLinks } from "@/lib/gradeSubjectSeo";
 interface Props { params: Promise<{ grade: string; subject: string }> }
 
 const SUBJECT_NAMES: Record<string, string> = {
-  math: "Mathematik", german: "Deutsch", science: "NMG", nt: "NMG", rzg: "NMG", english: "Englisch", french: "Französisch",
+  math: "Mathematik", german: "Deutsch", science: "NMG", nt: "NMG", rzg: "NMG", english: "Englisch", french: "Französisch", mi: "Medien & Informatik",
 };
 
 type ContextualSeoLink = {

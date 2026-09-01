@@ -70,7 +70,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
   }
 }
 
-if (exerciseCount !== 14_818) failures.push(`Expected 14,818 exercises, found ${exerciseCount}`);
+if (exerciseCount !== 14_970) failures.push(`Expected 14,970 exercises, found ${exerciseCount}`);
 if (beforeDuplicateOccurrences !== 1_220) failures.push(`Expected 1,220 legacy duplicate occurrences, found ${beforeDuplicateOccurrences}`);
 if (beforeDuplicateIds.size !== 1_107) failures.push(`Expected 1,107 colliding legacy IDs, found ${beforeDuplicateIds.size}`);
 if (EXERCISE_ID_MIGRATIONS.length !== 1_220) failures.push(`Expected 1,220 migrations, found ${EXERCISE_ID_MIGRATIONS.length}`);

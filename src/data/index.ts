@@ -27,6 +27,7 @@ import grade6NT from "./grade6/nt";
 import grade6RZG from "./grade6/rzg";
 import grade6French from "./grade6/french";
 import grade6English from "./grade6/english";
+import { grade3Mi, grade4Mi, grade5Mi, grade6Mi } from "./mi";
 import { Topic } from "@/types/exercise";
 import { sanitiseExerciseHints } from "@/lib/exerciseHints";
 import { repairOpenWritingExercise } from "./openWritingExercises";
@@ -51,6 +52,7 @@ export {
   grade4Math, grade4German, grade4NT, grade4RZG, grade4English, grade4French,
   grade5Math, grade5German, grade5NT, grade5RZG, grade5French, grade5English,
   grade6Math, grade6German, grade6NT, grade6RZG, grade6French, grade6English,
+  grade3Mi, grade4Mi, grade5Mi, grade6Mi,
 };
 
 export function getTopicsBeforeExerciseIdMigration(grade: number, subject: string): Topic[] {
@@ -58,13 +60,13 @@ export function getTopicsBeforeExerciseIdMigration(grade: number, subject: strin
     "1-math": grade1Math, "1-german": grade1German, "1-science": grade1Science,
     "2-math": grade2Math, "2-german": grade2German, "2-science": grade2Science,
     "3-math": grade3Math, "3-german": grade3German, "3-science": grade3Science,
-    "3-english": grade3English, "3-french": grade3French,
+    "3-english": grade3English, "3-french": grade3French, "3-mi": grade3Mi,
     "4-math": grade4Math, "4-german": grade4German, "4-nt": grade4NT,
-    "4-rzg": grade4RZG, "4-science": grade4Science, "4-english": grade4English, "4-french": grade4French,
+    "4-rzg": grade4RZG, "4-science": grade4Science, "4-english": grade4English, "4-french": grade4French, "4-mi": grade4Mi,
     "5-math": grade5Math, "5-german": grade5German, "5-nt": grade5NT,
-    "5-rzg": grade5RZG, "5-science": grade5Science, "5-french": grade5French, "5-english": grade5English,
+    "5-rzg": grade5RZG, "5-science": grade5Science, "5-french": grade5French, "5-english": grade5English, "5-mi": grade5Mi,
     "6-math": grade6Math, "6-german": grade6German, "6-nt": grade6NT,
-    "6-rzg": grade6RZG, "6-science": grade6Science, "6-french": grade6French, "6-english": grade6English,
+    "6-rzg": grade6RZG, "6-science": grade6Science, "6-french": grade6French, "6-english": grade6English, "6-mi": grade6Mi,
   };
   const repairedTopics = applyLp21ExerciseReplacements(grade, subject, map[`${grade}-${subject}`] ?? []).map((topic) => ({
     ...topic,
@@ -135,6 +137,7 @@ export function getSubjects(grade: number) {
       { id: "science", emoji: "🌍", color: "bg-green-50 border-green-300 text-green-800" },
       { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
       { id: "french",  emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
+      { id: "mi",      emoji: "💻", color: "bg-cyan-50 border-cyan-300 text-cyan-800" },
     ];
   }
   if (grade === 4) {
@@ -144,6 +147,7 @@ export function getSubjects(grade: number) {
       { id: "science", emoji: "🌍", color: "bg-green-50 border-green-300 text-green-800" },
       { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
       { id: "french",  emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
+      { id: "mi",      emoji: "💻", color: "bg-cyan-50 border-cyan-300 text-cyan-800" },
     ];
   }
   // grades 5-6
@@ -153,6 +157,7 @@ export function getSubjects(grade: number) {
     { id: "science", emoji: "🌍", color: "bg-green-50 border-green-300 text-green-800" },
     { id: "french",  emoji: "🇫🇷", color: "bg-purple-50 border-purple-300 text-purple-700" },
     { id: "english", emoji: "🇬🇧", color: "bg-red-50 border-red-300 text-red-700" },
+    { id: "mi",      emoji: "💻", color: "bg-cyan-50 border-cyan-300 text-cyan-800" },
   ];
 }
 

@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-09-01T08:03:25.970Z",
+  "verdict": "approved",
+  "officialLp21Basis": "Lehrplan 21 module Medien und Informatik: Medien (MI.1) and Informatik (MI.2).",
+  "summaries": [
+    {
+      "grade": 3,
+      "topics": 2,
+      "exercises": 38,
+      "typeCounts": {
+        "multiple-choice": 12,
+        "fill-in-blank": 10,
+        "matching": 4,
+        "memory": 4,
+        "drag-drop": 4,
+        "word-search": 2,
+        "self-review": 2
+      }
+    },
+    {
+      "grade": 4,
+      "topics": 2,
+      "exercises": 38,
+      "typeCounts": {
+        "multiple-choice": 12,
+        "fill-in-blank": 10,
+        "matching": 4,
+        "memory": 4,
+        "drag-drop": 4,
+        "word-search": 2,
+        "self-review": 2
+      }
+    },
+    {
+      "grade": 5,
+      "topics": 2,
+      "exercises": 38,
+      "typeCounts": {
+        "multiple-choice": 12,
+        "fill-in-blank": 10,
+        "matching": 4,
+        "memory": 4,
+        "drag-drop": 4,
+        "word-search": 2,
+        "self-review": 2
+      }
+    },
+    {
+      "grade": 6,
+      "topics": 2,
+      "exercises": 38,
+      "typeCounts": {
+        "multiple-choice": 12,
+        "fill-in-blank": 10,
+        "matching": 4,
+        "memory": 4,
+        "drag-drop": 4,
+        "word-search": 2,
+        "self-review": 2
+      }
+    }
+  ],
+  "exerciseRows": 152,
+  "failures": []
+}

@@ -8,6 +8,7 @@ const subjectNames: Record<string, string> = {
   science: "Natur, Mensch, Gesellschaft",
   english: "Englisch",
   french: "Französisch",
+  mi: "Medien & Informatik",
 };
 
 function specialSolution(exercise: Exercise): string {

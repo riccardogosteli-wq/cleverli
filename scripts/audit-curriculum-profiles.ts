@@ -29,16 +29,17 @@ const f3e5 = ["BE", "BL", "BS", "FR", "SO", "VS"] as const;
 assert.equal(resolveCurriculumProfile().id, "legacy_e3_f5");
 assert.deepEqual(getCurriculumSubjectIds(2), ["math", "german", "science"]);
 assert.deepEqual(getCurriculumSubjectIds(3), ["math", "german", "science", "english"]);
-assert.deepEqual(getCurriculumSubjectIds(5), ["math", "german", "science", "english", "french"]);
+assert.deepEqual(getCurriculumSubjectIds(5), ["math", "german", "science", "mi", "english", "french"]);
 assert.deepEqual(getAvailableCurriculumSubjectIds(1), ["math", "german", "science"]);
 assert.deepEqual(getAvailableCurriculumSubjectIds(4), ["math", "german", "science", "english"]);
-assert.deepEqual(getAvailableCurriculumSubjectIds(6), ["math", "german", "science", "english", "french"]);
+assert.deepEqual(getAvailableCurriculumSubjectIds(6), ["math", "german", "science", "mi", "english", "french"]);
 
 for (const canton of e3f5) {
   const resolved = resolveCurriculumProfile(selection(canton));
   assert.equal(resolved.id, "lp21_e3_f5", `${canton} must use E3/F5`);
   assert.equal(resolved.supported, true, `${canton} is covered by today's language catalogue`);
   assert.deepEqual(getCurriculumSubjectIds(3, selection(canton)).slice(-1), ["english"]);
+  assert.equal(getCurriculumSubjectIds(5, selection(canton)).includes("mi"), true, `${canton} must include MI from grade 5`);
 }
 
 for (const canton of f3e5) {
@@ -46,17 +47,28 @@ for (const canton of f3e5) {
   assert.equal(resolved.id, "lp21_f3_e5", `${canton} must use F3/E5`);
   assert.equal(resolved.supported, true, `${canton} is covered by the French grades 3–4 catalogue`);
   assert.deepEqual(getCurriculumSubjectIds(3, selection(canton)).slice(-1), ["french"]);
+  assert.equal(getCurriculumSubjectIds(5, selection(canton)).includes("mi"), true, `${canton} must include MI from grade 5`);
 }
 assert.deepEqual(
   getAvailableCurriculumSubjectIds(3, selection("BE")),
   ["math", "german", "science", "french"],
   "French-first profiles must replace English with French in grade 3",
 );
+assert.deepEqual(
+  getAvailableCurriculumSubjectIds(3, selection("SO")),
+  ["math", "german", "science", "mi", "french"],
+  "SO must expose standalone MI from grade 3",
+);
+assert.deepEqual(
+  getAvailableCurriculumSubjectIds(3, selection("VS")),
+  ["math", "german", "science", "mi", "french"],
+  "Integrated MI cantons should still expose the Cleverli MI practice module from grade 3",
+);
 
 assert.equal(resolveCurriculumProfile(selection("AI")).id, "lp21_e3_only");
-assert.deepEqual(getCurriculumSubjectIds(5, selection("AI")), ["math", "german", "science", "english"]);
+assert.deepEqual(getCurriculumSubjectIds(5, selection("AI")), ["math", "german", "science", "mi", "english"]);
 assert.equal(resolveCurriculumProfile(selection("UR")).id, "lp21_e3_i5_optional");
-assert.deepEqual(getCurriculumSubjectIds(5, selection("UR")), ["math", "german", "science", "english"]);
+assert.deepEqual(getCurriculumSubjectIds(5, selection("UR")), ["math", "german", "science", "mi", "english"]);
 
 assert.equal(requiresSchoolLanguage("BE"), true);
 assert.equal(requiresSchoolLanguage("FR"), true);

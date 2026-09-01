@@ -290,6 +290,13 @@ export function getCurriculumSubjectIds(
 ): string[] {
   const profile = resolveCurriculumProfile(selection);
   const subjects = ["math", "german", "science"];
+  if (
+    (profile.miDelivery === "grades_3_6" || profile.miDelivery === "integrated")
+      ? grade >= 3 && grade <= 6
+      : grade >= 5 && grade <= 6
+  ) {
+    subjects.push("mi");
+  }
   for (const language of [profile.firstForeignLanguage, profile.secondForeignLanguage]) {
     if (!language || grade < language.startGrade || !language.required) continue;
     subjects.push(language.language);

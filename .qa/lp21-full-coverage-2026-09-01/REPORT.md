@@ -71,6 +71,7 @@ Cleverli shipped Faecher:
 - NMG/Science
 - Englisch
 - Franzoesisch
+- Medien und Informatik
 
 Current shipped catalogue by grade/subject:
 
@@ -87,47 +88,50 @@ Current shipped catalogue by grade/subject:
 | 3 | science | 12 | 600 | multiple-choice: 383, fill-in-blank: 207, matching: 1, memory: 3, drag-drop: 6 |
 | 3 | english | 9 | 450 | multiple-choice: 245, fill-in-blank: 188, self-review: 17 |
 | 3 | french | 9 | 450 | multiple-choice: 324, fill-in-blank: 45, self-review: 27, matching: 18, memory: 9, drag-drop: 18, word-search: 9 |
+| 3 | mi | 2 | 38 | multiple-choice: 12, fill-in-blank: 10, self-review: 2, matching: 4, memory: 4, drag-drop: 4, word-search: 2 |
 | 4 | math | 10 | 501 | multiple-choice: 177, fill-in-blank: 318, matching: 1, drag-drop: 3, number-line: 2 |
 | 4 | german | 10 | 500 | multiple-choice: 219, fill-in-blank: 273, drag-drop: 8 |
 | 4 | science | 21 | 1050 | multiple-choice: 525, fill-in-blank: 522, drag-drop: 3 |
 | 4 | english | 9 | 450 | multiple-choice: 236, fill-in-blank: 204, self-review: 10 |
 | 4 | french | 9 | 450 | multiple-choice: 324, fill-in-blank: 45, self-review: 27, matching: 18, memory: 9, drag-drop: 18, word-search: 9 |
+| 4 | mi | 2 | 38 | multiple-choice: 12, fill-in-blank: 10, self-review: 2, matching: 4, memory: 4, drag-drop: 4, word-search: 2 |
 | 5 | math | 9 | 450 | multiple-choice: 162, fill-in-blank: 284, drag-drop: 3, number-line: 1 |
 | 5 | german | 10 | 500 | multiple-choice: 231, fill-in-blank: 260, drag-drop: 9 |
 | 5 | science | 21 | 1050 | multiple-choice: 528, fill-in-blank: 520, self-review: 2 |
 | 5 | french | 9 | 450 | multiple-choice: 234, fill-in-blank: 203, self-review: 13 |
 | 5 | english | 9 | 450 | multiple-choice: 225, fill-in-blank: 207, self-review: 18 |
+| 5 | mi | 2 | 38 | multiple-choice: 12, fill-in-blank: 10, self-review: 2, matching: 4, memory: 4, drag-drop: 4, word-search: 2 |
 | 6 | math | 9 | 450 | multiple-choice: 165, fill-in-blank: 284, number-line: 1 |
 | 6 | german | 10 | 500 | multiple-choice: 280, fill-in-blank: 215, drag-drop: 5 |
 | 6 | science | 21 | 1050 | multiple-choice: 528, fill-in-blank: 522 |
 | 6 | french | 9 | 450 | multiple-choice: 223, fill-in-blank: 213, self-review: 14 |
 | 6 | english | 9 | 450 | multiple-choice: 225, fill-in-blank: 202, self-review: 23 |
+| 6 | mi | 2 | 38 | multiple-choice: 12, fill-in-blank: 10, self-review: 2, matching: 4, memory: 4, drag-drop: 4, word-search: 2 |
 
 ## Exercise-Type Coverage
 
-- Total topics: 295
-- Total exercises: 14818
+- Total topics: 303
+- Total exercises: 14970
 - Listening-stimulus exercises: 548
-- Fully localised exercises: 14608
+- Fully localised exercises: 14760
 
 | Type | Count |
 |---|---:|
-| multiple-choice | 7528 |
-| fill-in-blank | 6850 |
-| self-review | 152 |
+| multiple-choice | 7576 |
+| fill-in-blank | 6890 |
+| self-review | 160 |
 | counting | 17 |
-| matching | 43 |
-| memory | 40 |
-| drag-drop | 156 |
+| matching | 59 |
+| memory | 56 |
+| drag-drop | 172 |
 | number-line | 13 |
-| word-search | 19 |
+| word-search | 27 |
 
 ## Gaps Before Adaptive Recommendations
 
 - Gestalten is not a standalone Cleverli subject.
 - Musik is not a standalone Cleverli subject.
 - Bewegung und Sport is not a standalone Cleverli subject.
-- Medien und Informatik exists only as integrated NMG/science content, not as a canton-timed module with its own exercise path.
 - Graubuenden regional languages need Italian/Romansh/German-as-foreign-language content before support can be unguarded.
 - PER and Piano di studio need separate curriculum/content projects before French-school-language regions and Ticino can be called supported.
 - Speaking/oral production is not covered as an evaluated exercise mode; writing is partly covered through self-review.

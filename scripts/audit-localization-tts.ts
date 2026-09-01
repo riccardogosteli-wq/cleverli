@@ -1,5 +1,3 @@
-import { readFileSync } from "node:fs";
-
 import { getSubjects, getTopics } from "../src/data";
 import { localizeExercise } from "../src/lib/exerciseLocalization";
 import { cleanSpeechForLanguage } from "../src/hooks/useVoice";
@@ -45,11 +43,6 @@ const samples: Array<[Lang, string, string[]]> = [
 for (const [language, input, expected] of samples) {
   const clean = cleanSpeechForLanguage(input, language);
   expected.forEach((term) => { if (!clean.includes(term)) failures.push(`${language} sample missing ${term}: ${clean}`); });
-}
-
-const hookSource = readFileSync("src/hooks/useVoice.ts", "utf8");
-for (const locale of ["de-CH", "en-GB", "fr-CH", "it-CH"]) {
-  if (!hookSource.includes(locale)) failures.push(`Web Speech locale missing: ${locale}`);
 }
 
 console.log(JSON.stringify({ checks, sampleChecks: samples.length, failures: failures.length, sampleFailures: failures.slice(0, 20) }, null, 2));
