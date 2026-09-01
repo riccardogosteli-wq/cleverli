@@ -44,9 +44,8 @@ function checkExercise(grade: number, topicId: string, exercise: Exercise) {
   const key = `${grade}/science/${topicId}/${exercise.id}`;
   if (!allowedTypes.has(exercise.type)) failures.push(`${key}: unexpected type ${exercise.type}`);
   if (!exercise.hints || exercise.hints.length < 2) failures.push(`${key}: expected two hints`);
-  if (grade === 4 && exercise.difficulty > 2) failures.push(`${key}: grade 4 enrichment must stay difficulty 1-2`);
-  if (grade === 5 && exercise.difficulty > 2) failures.push(`${key}: grade 5 first enrichment must stay difficulty 1-2`);
-  if (grade === 6 && exercise.difficulty < 2) failures.push(`${key}: grade 6 enrichment should require cycle-2 reasoning`);
+  if (grade === 4 && exercise.difficulty === 3 && exercise.type === "word-search") failures.push(`${key}: grade 4 word-search should not be hard`);
+  if (grade === 6 && exercise.difficulty === 1 && exercise.type === "self-review") failures.push(`${key}: grade 6 self-review should require cycle-2 reasoning`);
   if (exercise.type === "matching" || exercise.type === "memory") checkPairs(key, exercise);
   if (exercise.type === "drag-drop") checkDragDrop(key, exercise);
   if (exercise.type === "word-search" && (!exercise.wordList || exercise.wordList.length < 5 || !exercise.gridSize)) failures.push(`${key}: incomplete word-search`);
@@ -90,6 +89,26 @@ const byType = rows.reduce<Record<string, number>>((acc, row) => {
   acc[type] = (acc[type] ?? 0) + 1;
   return acc;
 }, {});
+const byGradeDifficulty = rows.reduce<Record<string, Record<string, number>>>((acc, row) => {
+  const grade = String(row.grade);
+  const difficulty = Number(row.difficulty);
+  const label = difficulty === 1 ? "easy" : difficulty === 2 ? "medium" : "hard";
+  acc[grade] ??= { easy: 0, medium: 0, hard: 0 };
+  acc[grade][label] += 1;
+  return acc;
+}, {});
+const expectedByGradeDifficulty: Record<string, Record<string, number>> = {
+  "4": { easy: 5, medium: 10, hard: 5 },
+  "5": { easy: 4, medium: 10, hard: 6 },
+  "6": { easy: 3, medium: 9, hard: 8 },
+};
+for (const [grade, expected] of Object.entries(expectedByGradeDifficulty)) {
+  for (const [label, count] of Object.entries(expected)) {
+    if ((byGradeDifficulty[grade]?.[label] ?? 0) !== count) {
+      failures.push(`grade ${grade} ${label}: expected ${count}, found ${byGradeDifficulty[grade]?.[label] ?? 0}`);
+    }
+  }
+}
 const expectedByType: Record<string, number> = {
   "drag-drop": 20,
   matching: 15,
@@ -115,6 +134,7 @@ ${failures.length ? "changes_requested" : "approved"}
 - Added exercises checked individually: ${rows.length}
 - Expected per grade: 20
 - Counts by grade: ${JSON.stringify(byGrade)}
+- Difficulty by grade: ${JSON.stringify(byGradeDifficulty)}
 - Counts by type: ${JSON.stringify(byType)}
 
 ## Guardrails

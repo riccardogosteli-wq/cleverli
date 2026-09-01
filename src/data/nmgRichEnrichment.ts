@@ -16,13 +16,13 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Suche zuerst die Aufgaben, die du aus dem Alltag kennst.", "Herz und Blut gehören zusammen."],
       },
       {
-        id: "nmg4-rich-koerper-match-2", type: "matching", difficulty: 2,
+        id: "nmg4-rich-koerper-match-2", type: "matching", difficulty: 1,
         question: "Verbinde Sinn und passende Beobachtung.", answer: "all",
         pairs: [pair("sehen", "sehen", "👀"), pair("farbe", "eine Farbe erkennen", "🎨"), pair("hoeren", "hören", "👂"), pair("ton", "einen Ton bemerken", "🔔"), pair("riechen", "riechen", "👃"), pair("duft", "einen Duft wahrnehmen", "🌼"), pair("tasten", "tasten", "✋"), pair("rau", "eine raue Oberfläche spüren", "🪵")],
         hints: ["Denke an Beobachtungen im Schulzimmer oder draussen.", "Tasten passiert mit der Haut."],
       },
       {
-        id: "nmg4-rich-koerper-review-2", type: "self-review", difficulty: 2,
+        id: "nmg4-rich-koerper-review-2", type: "self-review", difficulty: 3,
         question: "Du merkst, dass du nach langem Sitzen unruhig wirst. Was könntest du tun, damit dein Körper wieder wacher wird?", answer: "review",
         reviewCriteria: ["Nennt eine passende Handlung wie bewegen, trinken oder frische Luft.", "Erklärt, warum die Handlung dem Körper hilft.", "Bleibt bei einer gesunden und sicheren Idee."],
         hints: ["Denke an Bewegung, Pausen und Trinken.", "Eine gute Antwort erklärt den Zusammenhang zum Körper."],
@@ -30,7 +30,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "lebensraeume-tiere": [
       {
-        id: "nmg4-rich-tiere-memory-1", type: "memory", difficulty: 2,
+        id: "nmg4-rich-tiere-memory-1", type: "memory", difficulty: 1,
         question: "Finde Tier und passenden Lebensraum.", answer: "all",
         pairs: [pair("frosch", "Frosch", "🐸"), pair("teich", "Teich", "💧"), pair("specht", "Specht", "🐦"), pair("wald", "Wald", "🌲"), pair("steinbock", "Steinbock", "🐐"), pair("berge", "Berge", "⛰️"), pair("biene", "Biene", "🐝"), pair("wiese", "Wiese", "🌼")],
         hints: ["Überlege, wo das Tier Nahrung und Schutz findet.", "Ein Frosch braucht feuchte Orte."],
@@ -52,7 +52,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "wetter-klima": [
       {
-        id: "nmg4-rich-wasser-drag-1", type: "drag-drop", difficulty: 2,
+        id: "nmg4-rich-wasser-drag-1", type: "drag-drop", difficulty: 3,
         question: "Ordne die Schritte im Wasserkreislauf.", answer: "all",
         dragItems: [item("verdunstung", "Wasser verdunstet", "☀️"), item("wolke", "Wolken bilden sich", "☁️"), item("regen", "Regen fällt", "🌧️"), item("fluss", "Wasser fliesst zurück", "🏞️")],
         dropZones: [zone("s1", "1"), zone("s2", "2"), zone("s3", "3"), zone("s4", "4")],
@@ -68,7 +68,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Messgeräte helfen, Wetter genau zu beschreiben.", "Das Thermometer zeigt, wie warm oder kalt es ist."],
       },
       {
-        id: "nmg4-rich-wetter-match-2", type: "matching", difficulty: 2,
+        id: "nmg4-rich-wetter-match-2", type: "matching", difficulty: 1,
         question: "Verbinde Wetterzeichen und passende Bedeutung.", answer: "all",
         pairs: [pair("sonne", "Sonne", "☀️"), pair("hell", "hell und oft warm", "😎"), pair("wolke", "Wolke", "☁️"), pair("bedeckt", "Himmel ist bedeckt", "🌫️"), pair("regen", "Regen", "🌧️"), pair("nass", "es wird nass", "💧"), pair("wind", "Wind", "🌬️"), pair("luft", "Luft bewegt sich", "🍃")],
         hints: ["Wetterzeichen fassen Beobachtungen kurz zusammen.", "Wind sieht man oft an Blättern oder Fahnen."],
@@ -88,7 +88,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Kartenzeichen sind kleine Abmachungen.", "Blau hat oft mit Wasser zu tun."],
       },
       {
-        id: "nmg4-rich-karte-drag-2", type: "drag-drop", difficulty: 2,
+        id: "nmg4-rich-karte-drag-2", type: "drag-drop", difficulty: 3,
         question: "Ordne die Schritte für einen sicheren Weg mit der Karte.", answer: "all",
         dragItems: [item("start", "Startpunkt finden", "📍"), item("ziel", "Ziel suchen", "🎯"), item("weg", "Weg vergleichen", "🗺️"), item("gehen", "Route Schritt für Schritt gehen", "🚶")],
         dropZones: [zone("s1", "1"), zone("s2", "2"), zone("s3", "3"), zone("s4", "4")],
@@ -112,7 +112,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Gemeinden kümmern sich oft um Dinge vor Ort.", "Der Kanton regelt grössere gemeinsame Aufgaben."],
       },
       {
-        id: "nmg4-rich-gemeinde-review-2", type: "self-review", difficulty: 2,
+        id: "nmg4-rich-gemeinde-review-2", type: "self-review", difficulty: 3,
         question: "Auf dem Schulweg ist ein Zebrastreifen schlecht sichtbar. Wem würdest du das melden und warum?", answer: "review",
         reviewCriteria: ["Nennt eine passende Stelle wie Lehrperson, Eltern oder Gemeinde.", "Begründet, warum die Meldung wichtig ist.", "Denkt an Sicherheit für mehrere Menschen."],
         hints: ["Gemeinden kümmern sich oft um Wege und Strassen.", "Eine gute Meldung beschreibt den Ort genau."],
@@ -150,7 +150,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Beginne auf dem Feld.", "Vor dem Backen braucht es Mehl."],
       },
       {
-        id: "nmg4-rich-produktion-drag-2", type: "drag-drop", difficulty: 2,
+        id: "nmg4-rich-produktion-drag-2", type: "drag-drop", difficulty: 3,
         question: "Ordne den Weg einer Glasflasche im Recycling.", answer: "all",
         dragItems: [item("sammeln", "Flasche sammeln", "🧺"), item("container", "in den Glascontainer bringen", "♻️"), item("schmelzen", "Glas einschmelzen", "🔥"), item("neu", "neues Glas herstellen", "🍾")],
         dropZones: [zone("s1", "1"), zone("s2", "2"), zone("s3", "3"), zone("s4", "4")],
@@ -170,7 +170,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Pflanzen stellen Nahrung selbst her.", "Zersetzer bauen totes Material ab."],
       },
       {
-        id: "nmg5-rich-oeko-drag-2", type: "drag-drop", difficulty: 2,
+        id: "nmg5-rich-oeko-drag-2", type: "drag-drop", difficulty: 3,
         question: "Ordne Veränderungen in einem Lebensraum nach möglicher Folge.", answer: "all",
         dragItems: [item("hecke", "Hecke wird gepflanzt", "🌿"), item("gift", "zu viel Gift im Garten", "⚠️"), item("teich", "kleiner Teich entsteht", "💧"), item("beton", "Wiese wird versiegelt", "⬜")],
         dropZones: [zone("mehr", "mehr Lebensraum"), zone("weniger", "weniger Lebensraum")],
@@ -184,7 +184,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Pflanzen stehen oft am Anfang.", "Zersetzer machen aus Resten wieder Nährstoffe."],
       },
       {
-        id: "nmg5-rich-oeko-review-2", type: "self-review", difficulty: 2,
+        id: "nmg5-rich-oeko-review-2", type: "self-review", difficulty: 3,
         question: "Eine Klasse möchte den Pausenplatz tierfreundlicher machen. Welche zwei Ideen sind sinnvoll?", answer: "review",
         reviewCriteria: ["Nennt zwei konkrete Ideen für mehr Lebensraum.", "Erklärt, wie Tiere oder Pflanzen davon profitieren.", "Achtet auf Sicherheit und Pflege im Schulalltag."],
         hints: ["Denke an Pflanzen, Verstecke, Wasser oder weniger Abfall.", "Gute Ideen passen zu einem Schulhaus."],
@@ -192,7 +192,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "strom-energie": [
       {
-        id: "nmg5-rich-strom-match-1", type: "matching", difficulty: 2,
+        id: "nmg5-rich-strom-match-1", type: "matching", difficulty: 1,
         question: "Verbinde Energieform und Beispiel.", answer: "all",
         pairs: [pair("licht", "Lichtenergie", "💡"), pair("lampe", "Lampe leuchtet", "🔦"), pair("bewegung", "Bewegungsenergie", "🚲"), pair("velo", "Velo rollt", "🚴"), pair("waerme", "Wärmeenergie", "🔥"), pair("tee", "Tee wird warm", "🍵"), pair("strom", "elektrische Energie", "⚡"), pair("akku", "Akku lädt", "🔋")],
         hints: ["Suche das Beispiel, in dem man die Energie sehen oder spüren kann.", "Wärme spürt man mit der Haut."],
@@ -238,7 +238,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Demokratie braucht Entscheidungen und respektvolle Gespräche.", "Eine Begründung hilft den anderen, dich zu verstehen."],
       },
       {
-        id: "nmg5-rich-politik-drag-2", type: "drag-drop", difficulty: 2,
+        id: "nmg5-rich-politik-drag-2", type: "drag-drop", difficulty: 3,
         question: "Ordne politische Ebenen und Beispiele.", answer: "all",
         dragItems: [item("spielplatz", "Spielplatz im Quartier", "🛝"), item("schule", "Schulorganisation", "🏫"), item("bahn", "Bahnverbindungen", "🚆"), item("bundesrat", "Bundesrat", "🇨🇭")],
         dropZones: [zone("gemeinde", "Gemeinde"), zone("kanton", "Kanton"), zone("bund", "Bund")],
@@ -246,7 +246,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Die Gemeinde ist nahe beim Wohnort.", "Der Bund betrifft die ganze Schweiz."],
       },
       {
-        id: "nmg5-rich-politik-review-2", type: "self-review", difficulty: 2,
+        id: "nmg5-rich-politik-review-2", type: "self-review", difficulty: 3,
         question: "In deiner Klasse gibt es zwei Vorschläge für den Ausflug. Wie kann die Klasse fair entscheiden?", answer: "review",
         reviewCriteria: ["Beschreibt einen fairen Entscheidungsweg.", "Nennt Zuhören, Begründen oder Abstimmen.", "Zeigt Respekt für Kinder mit anderer Meinung."],
         hints: ["Fair heisst nicht, dass alle am Ende ihren Wunsch bekommen.", "Gute Entscheidungen brauchen Informationen und Respekt."],
@@ -254,7 +254,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "wirtschaft-handel-5": [
       {
-        id: "nmg5-rich-wirtschaft-match-1", type: "matching", difficulty: 2,
+        id: "nmg5-rich-wirtschaft-match-1", type: "matching", difficulty: 1,
         question: "Verbinde Wirtschaftsbegriff und einfache Erklärung.", answer: "all",
         pairs: [pair("angebot", "Angebot", "🏪"), pair("verkauf", "Was verkauft wird", "🧺"), pair("nachfrage", "Nachfrage", "🙋"), pair("wunsch", "Was Menschen kaufen möchten", "🛒"), pair("kosten", "Kosten", "🧾"), pair("aufwand", "Was Herstellung und Arbeit brauchen", "🛠️"), pair("preis", "Preis", "🏷️"), pair("bezahlen", "Was man bezahlt", "🪙")],
         hints: ["Denke an einen Laden.", "Preis und Kosten sind verwandt, aber nicht dasselbe."],
@@ -282,7 +282,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "nachhaltigkeit-5": [
       {
-        id: "nmg5-rich-nachhaltig-review-1", type: "self-review", difficulty: 2,
+        id: "nmg5-rich-nachhaltig-review-1", type: "self-review", difficulty: 3,
         question: "Ein kaputter Rucksack kann repariert oder ersetzt werden. Erkläre eine sinnvolle Entscheidung.", answer: "review",
         reviewCriteria: ["Nennt Reparatur oder Ersatz als Möglichkeit.", "Bezieht Kosten, Nutzen oder Ressourcen ein.", "Begründet die Entscheidung fair."],
         hints: ["Überlege, ob der Rucksack noch sicher und brauchbar ist.", "Ressourcen sparen heisst nicht immer: nie etwas Neues kaufen."],
@@ -302,7 +302,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Lebewesen passen zu ihren Lebensbedingungen.", "Tiefe Wurzeln helfen bei wenig Wasser."],
       },
       {
-        id: "nmg5-rich-lebensraeume-memory-2", type: "memory", difficulty: 2,
+        id: "nmg5-rich-lebensraeume-memory-2", type: "memory", difficulty: 3,
         question: "Finde Beobachtung und mögliche Erklärung.", answer: "all",
         pairs: [pair("wenig_bienen", "wenig Bienen", "🐝"), pair("wenig_blueten", "wenig Blüten", "🌼"), pair("truebes_wasser", "trübes Wasser", "💧"), pair("aufgewirbelt", "Boden ist aufgewirbelt", "🌫️"), pair("viele_voegel", "viele Vögel", "🐦"), pair("nahrung", "viel Nahrung und Schutz", "🌳"), pair("trockene_wiese", "trockene Wiese", "🌾"), pair("wenig_regen", "lange wenig Regen", "☀️")],
         hints: ["Beobachtungen können mehrere Ursachen haben.", "Eine Erklärung muss zur Beobachtung passen."],
@@ -312,7 +312,7 @@ const ENRICHMENTS: Enrichment = {
   6: {
     "energie-nachh-6": [
       {
-        id: "nmg6-rich-energie-drag-1", type: "drag-drop", difficulty: 3,
+        id: "nmg6-rich-energie-drag-1", type: "drag-drop", difficulty: 2,
         question: "Ordne Energiequellen nach erneuerbar und nicht erneuerbar.", answer: "all",
         dragItems: [item("sonne", "Sonne", "☀️"), item("wind", "Wind", "🌬️"), item("erdgas", "Erdgas", "🔥"), item("kohle", "Kohle", "⬛")],
         dropZones: [zone("erneuerbar", "erneuerbar"), zone("nicht", "nicht erneuerbar")],
@@ -320,7 +320,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Erneuerbare Quellen erneuern sich in kurzer Zeit.", "Kohle und Erdgas entstehen nicht schnell neu."],
       },
       {
-        id: "nmg6-rich-energie-drag-2", type: "drag-drop", difficulty: 3,
+        id: "nmg6-rich-energie-drag-2", type: "drag-drop", difficulty: 2,
         question: "Ordne Massnahmen nach direkter Wirkung.", answer: "all",
         dragItems: [item("licht", "Licht ausschalten", "💡"), item("zug", "Zug statt Auto wählen", "🚆"), item("isolieren", "Fenster gut abdichten", "🏠"), item("teilen", "Gerät gemeinsam nutzen", "🤝")],
         dropZones: [zone("strom", "spart Strom"), zone("verkehr", "verändert Verkehr"), zone("waerme", "spart Wärme"), zone("ressourcen", "spart Ressourcen")],
@@ -336,7 +336,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "demokratie-menschenrechte-6": [
       {
-        id: "nmg6-rich-demokratie-match-1", type: "matching", difficulty: 3,
+        id: "nmg6-rich-demokratie-match-1", type: "matching", difficulty: 2,
         question: "Verbinde demokratische Handlung und Bedeutung.", answer: "all",
         pairs: [pair("waehlen", "wählen", "🗳️"), pair("vertreten", "mitentscheiden, wer vertritt", "👥"), pair("diskutieren", "diskutieren", "💬"), pair("gruende", "Gründe austauschen", "🧠"), pair("rechte", "Rechte kennen", "⚖️"), pair("schutz", "Menschen schützen", "🛡️"), pair("minderheit", "Minderheiten respektieren", "🤝"), pair("fair", "fair bleiben trotz Mehrheit", "✅")],
         hints: ["Demokratie ist mehr als Abstimmen.", "Rechte schützen auch Menschen, die nicht zur Mehrheit gehören."],
@@ -356,7 +356,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Demokratie schützt auch Minderheiten.", "Eine gute Lösung kann angepasst statt einfach durchgedrückt werden."],
       },
       {
-        id: "nmg6-rich-demokratie-match-2", type: "matching", difficulty: 3,
+        id: "nmg6-rich-demokratie-match-2", type: "matching", difficulty: 2,
         question: "Verbinde Recht und Alltagssituation.", answer: "all",
         pairs: [pair("meinung", "Meinungsfreiheit", "💬"), pair("sagen", "eigene Ansicht respektvoll sagen", "🗣️"), pair("bildung", "Recht auf Bildung", "📚"), pair("schule", "lernen dürfen", "🏫"), pair("schutz", "Schutz vor Gewalt", "🛡️"), pair("sicher", "sich sicher fühlen", "🤝"), pair("privat", "Privatsphäre", "🔐"), pair("persoenlich", "Persönliches schützen", "📱")],
         hints: ["Menschenrechte zeigen sich auch im Alltag.", "Privatsphäre bedeutet: Persönliches gehört nicht allen."],
@@ -364,7 +364,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "migration-flucht-6": [
       {
-        id: "nmg6-rich-migration-review-1", type: "self-review", difficulty: 3,
+        id: "nmg6-rich-migration-review-1", type: "self-review", difficulty: 2,
         question: "Eine neue Schülerin kommt in die Klasse und spricht noch wenig Deutsch. Beschreibe zwei faire Unterstützungen.", answer: "review",
         reviewCriteria: ["Nennt zwei konkrete Unterstützungen.", "Bleibt respektvoll und ohne Vorurteile.", "Begründet, warum die Unterstützung hilft."],
         hints: ["Denke an Sprache, Orientierung und Freundschaft.", "Fair heisst: unterstützen, ohne jemanden blosszustellen."],
@@ -372,7 +372,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "wirtschaft-grundlagen-6": [
       {
-        id: "nmg6-rich-wirtschaft-drag-1", type: "drag-drop", difficulty: 3,
+        id: "nmg6-rich-wirtschaft-drag-1", type: "drag-drop", difficulty: 2,
         question: "Ordne Faktoren, die einen Preis beeinflussen.", answer: "all",
         dragItems: [item("material", "Material", "🧱"), item("arbeit", "Arbeitszeit", "⏱️"), item("transport", "Transport", "🚚"), item("werbung", "Werbung", "📣")],
         dropZones: [zone("herstellung", "Herstellung"), zone("verkauf", "Verkauf")],
@@ -382,7 +382,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "globalisierung-6": [
       {
-        id: "nmg6-rich-global-memory-1", type: "memory", difficulty: 2,
+        id: "nmg6-rich-global-memory-1", type: "memory", difficulty: 1,
         question: "Finde weltweite Verbindung und Beispiel.", answer: "all",
         pairs: [pair("handel", "Handel", "🚢"), pair("banane", "Bananen aus weiter Ferne", "🍌"), pair("kommunikation", "Kommunikation", "📱"), pair("video", "Videoanruf", "💻"), pair("reise", "Reise", "✈️"), pair("zug", "Zug und Flugzeug", "🚆"), pair("daten", "Daten", "🌐"), pair("internet", "Internet", "🕸️")],
         hints: ["Globalisierung bedeutet: Menschen und Orte sind verbunden.", "Nicht jede Verbindung ist sichtbar."],
@@ -396,7 +396,7 @@ const ENRICHMENTS: Enrichment = {
         hints: ["Viele Alltagsprodukte haben eine lange Reise.", "Verkauft wird erst nach Herstellung und Transport."],
       },
       {
-        id: "nmg6-rich-global-memory-2", type: "memory", difficulty: 2,
+        id: "nmg6-rich-global-memory-2", type: "memory", difficulty: 1,
         question: "Finde globale Verbindung und mögliche Frage dazu.", answer: "all",
         pairs: [pair("kleidung", "Kleidung", "👕"), pair("arbeit", "Wer hat sie hergestellt?", "👷"), pair("essen", "Lebensmittel", "🍫"), pair("weg", "Wie weit wurde es transportiert?", "🚢"), pair("handy", "Handy", "📱"), pair("rohstoffe", "Welche Rohstoffe stecken darin?", "⛏️"), pair("ferien", "Ferienreise", "🧳"), pair("folgen", "Welche Folgen hat die Reise?", "🌍")],
         hints: ["Globale Verbindungen sieht man oft an Produkten.", "Gute Fragen schauen auch auf Menschen und Umwelt."],
@@ -410,7 +410,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "kontinente-6": [
       {
-        id: "nmg6-rich-kontinente-word-1", type: "word-search", difficulty: 2,
+        id: "nmg6-rich-kontinente-word-1", type: "word-search", difficulty: 1,
         question: "Finde Kontinente.", answer: "all",
         wordList: ["Europa", "Afrika", "Asien", "Amerika", "Ozeanien"], gridSize: 11,
         hints: ["Suche waagrecht und senkrecht.", "Kontinente sind grosse Landräume der Erde."],
@@ -432,7 +432,7 @@ const ENRICHMENTS: Enrichment = {
     ],
     "technik-informatik-6": [
       {
-        id: "nmg6-rich-technik-drag-1", type: "drag-drop", difficulty: 3,
+        id: "nmg6-rich-technik-drag-1", type: "drag-drop", difficulty: 2,
         question: "Ordne Technikfolgen nach Chance und Risiko.", answer: "all",
         dragItems: [item("hilfe", "hilft bei schweren Arbeiten", "🛠️"), item("tempo", "macht Abläufe schneller", "⚙️"), item("abhaengig", "macht abhängig von Geräten", "🔌"), item("daten", "braucht sorgfältigen Umgang mit Daten", "🔐")],
         dropZones: [zone("chance", "Chance"), zone("risiko", "Risiko")],

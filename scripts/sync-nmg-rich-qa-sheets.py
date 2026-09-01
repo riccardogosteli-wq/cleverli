@@ -77,6 +77,15 @@ def append_values(spreadsheet_id: str, range_: str, rows: list[list]) -> None:
     )
 
 
+def update_values(spreadsheet_id: str, range_: str, row: list) -> None:
+    encoded = urllib.parse.quote(range_, safe="")
+    request(
+        "PUT",
+        f"{BASE}/{spreadsheet_id}/values/{encoded}?valueInputOption=RAW",
+        {"majorDimension": "ROWS", "values": [row]},
+    )
+
+
 def main_values(row: dict) -> list:
     options = (row.get("options") or [])[:4]
     hints = (row.get("hints") or [])[:2]
@@ -105,27 +114,67 @@ def sync_grade(grade: int, apply: bool) -> dict:
     spreadsheet_id = SHEETS[grade]
     main_tab = f"Grade {grade} QA"
 
-    existing_main_ids = {str(row[0]) for row in values_get(spreadsheet_id, f"'{main_tab}'!A:A")[1:] if row}
-    existing_special_ids = {str(row[0]) for row in values_get(spreadsheet_id, "'Special exercises'!A:A")[1:] if row}
+    existing_main_rows = values_get(spreadsheet_id, f"'{main_tab}'!A:M")
+    existing_special_rows = values_get(spreadsheet_id, "'Special exercises'!A:J")
+    existing_main_ids = {str(row[0]) for row in existing_main_rows[1:] if row}
+    existing_special_ids = {str(row[0]) for row in existing_special_rows[1:] if row}
+    existing_main_by_id = {str(row[0]): (index + 2, row) for index, row in enumerate(existing_main_rows[1:]) if row}
+    existing_special_by_id = {str(row[0]): (index + 2, row) for index, row in enumerate(existing_special_rows[1:]) if row}
     missing_main = [row for row in rows if row["exerciseId"] not in existing_main_ids]
     missing_special = [row for row in special_rows if row["exerciseId"] not in existing_special_ids]
+    main_updates = [
+        (existing_main_by_id[row["exerciseId"]][0], main_values(row))
+        for row in rows
+        if row["exerciseId"] in existing_main_by_id
+        and [str(value) for value in existing_main_by_id[row["exerciseId"]][1] + [""] * 13][:13] != [str(value) for value in main_values(row)]
+    ]
+    special_updates = [
+        (existing_special_by_id[row["exerciseId"]][0], special_values(row))
+        for row in special_rows
+        if row["exerciseId"] in existing_special_by_id
+        and [str(value) for value in existing_special_by_id[row["exerciseId"]][1] + [""] * 10][:10] != [str(value) for value in special_values(row)]
+    ]
 
     if apply:
         append_values(spreadsheet_id, f"'{main_tab}'!A:M", [main_values(row) for row in missing_main])
         append_values(spreadsheet_id, "'Special exercises'!A:J", [special_values(row) for row in missing_special])
+        for row_index, values in main_updates:
+            update_values(spreadsheet_id, f"'{main_tab}'!A{row_index}:M{row_index}", values)
+        for row_index, values in special_updates:
+            update_values(spreadsheet_id, f"'Special exercises'!A{row_index}:J{row_index}", values)
 
-    reread_main_ids = {str(row[0]) for row in values_get(spreadsheet_id, f"'{main_tab}'!A:A")[1:] if row}
-    reread_special_ids = {str(row[0]) for row in values_get(spreadsheet_id, "'Special exercises'!A:A")[1:] if row}
+    reread_main_rows = values_get(spreadsheet_id, f"'{main_tab}'!A:M")
+    reread_special_rows = values_get(spreadsheet_id, "'Special exercises'!A:J")
+    reread_main_ids = {str(row[0]) for row in reread_main_rows[1:] if row}
+    reread_special_ids = {str(row[0]) for row in reread_special_rows[1:] if row}
+    reread_main_by_id = {str(row[0]): row for row in reread_main_rows[1:] if row}
+    reread_special_by_id = {str(row[0]): row for row in reread_special_rows[1:] if row}
     missing_after_main = [row["exerciseId"] for row in rows if row["exerciseId"] not in reread_main_ids]
     missing_after_special = [row["exerciseId"] for row in special_rows if row["exerciseId"] not in reread_special_ids]
+    stale_main = [
+        row["exerciseId"]
+        for row in rows
+        if row["exerciseId"] in reread_main_by_id
+        and [str(value) for value in reread_main_by_id[row["exerciseId"]] + [""] * 13][:13] != [str(value) for value in main_values(row)]
+    ]
+    stale_special = [
+        row["exerciseId"]
+        for row in special_rows
+        if row["exerciseId"] in reread_special_by_id
+        and [str(value) for value in reread_special_by_id[row["exerciseId"]] + [""] * 10][:10] != [str(value) for value in special_values(row)]
+    ]
 
     return {
         "nmgRichRows": len(rows),
         "nmgRichSpecialRows": len(special_rows),
         "plannedMainAppends": len(missing_main),
         "plannedSpecialAppends": len(missing_special),
+        "plannedMainUpdates": len(main_updates),
+        "plannedSpecialUpdates": len(special_updates),
         "missingAfterMain": len(missing_after_main),
         "missingAfterSpecial": len(missing_after_special),
+        "staleMain": len(stale_main),
+        "staleSpecial": len(stale_special),
     }
 
 
@@ -136,7 +185,7 @@ def main() -> None:
     args = parser.parse_args()
     summary = {grade: sync_grade(grade, args.apply) for grade in args.grades}
     print(json.dumps({"applied": args.apply, "grades": summary}, indent=2))
-    if args.apply and any(result["missingAfterMain"] or result["missingAfterSpecial"] for result in summary.values()):
+    if args.apply and any(result["missingAfterMain"] or result["missingAfterSpecial"] or result["staleMain"] or result["staleSpecial"] for result in summary.values()):
         raise SystemExit(1)
 
 

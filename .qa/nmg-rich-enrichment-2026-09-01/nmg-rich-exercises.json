@@ -14,7 +14,7 @@
     "topic": "Körper und Gesundheit",
     "exerciseId": "nmg4-rich-koerper-match-2",
     "type": "matching",
-    "difficulty": 2,
+    "difficulty": 1,
     "question": "Verbinde Sinn und passende Beobachtung."
   },
   {
@@ -23,7 +23,7 @@
     "topic": "Körper und Gesundheit",
     "exerciseId": "nmg4-rich-koerper-review-2",
     "type": "self-review",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Du merkst, dass du nach langem Sitzen unruhig wirst. Was könntest du tun, damit dein Körper wieder wacher wird?"
   },
   {
@@ -32,7 +32,7 @@
     "topic": "Lebensräume der Tiere",
     "exerciseId": "nmg4-rich-tiere-memory-1",
     "type": "memory",
-    "difficulty": 2,
+    "difficulty": 1,
     "question": "Finde Tier und passenden Lebensraum."
   },
   {
@@ -59,7 +59,7 @@
     "topic": "Wetter und Klima",
     "exerciseId": "nmg4-rich-wasser-drag-1",
     "type": "drag-drop",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Ordne die Schritte im Wasserkreislauf."
   },
   {
@@ -77,7 +77,7 @@
     "topic": "Wetter und Klima",
     "exerciseId": "nmg4-rich-wetter-match-2",
     "type": "matching",
-    "difficulty": 2,
+    "difficulty": 1,
     "question": "Verbinde Wetterzeichen und passende Bedeutung."
   },
   {
@@ -104,7 +104,7 @@
     "topic": "Orientierung & Karte",
     "exerciseId": "nmg4-rich-karte-drag-2",
     "type": "drag-drop",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Ordne die Schritte für einen sicheren Weg mit der Karte."
   },
   {
@@ -131,7 +131,7 @@
     "topic": "Gemeinde & Kanton",
     "exerciseId": "nmg4-rich-gemeinde-review-2",
     "type": "self-review",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Auf dem Schulweg ist ein Zebrastreifen schlecht sichtbar. Wem würdest du das melden und warum?"
   },
   {
@@ -176,7 +176,7 @@
     "topic": "Produktion & Konsum",
     "exerciseId": "nmg4-rich-produktion-drag-2",
     "type": "drag-drop",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Ordne den Weg einer Glasflasche im Recycling."
   },
   {
@@ -194,7 +194,7 @@
     "topic": "Ökosysteme",
     "exerciseId": "nmg5-rich-oeko-drag-2",
     "type": "drag-drop",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Ordne Veränderungen in einem Lebensraum nach möglicher Folge."
   },
   {
@@ -212,7 +212,7 @@
     "topic": "Ökosysteme",
     "exerciseId": "nmg5-rich-oeko-review-2",
     "type": "self-review",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Eine Klasse möchte den Pausenplatz tierfreundlicher machen. Welche zwei Ideen sind sinnvoll?"
   },
   {
@@ -221,7 +221,7 @@
     "topic": "Strom und Energie",
     "exerciseId": "nmg5-rich-strom-match-1",
     "type": "matching",
-    "difficulty": 2,
+    "difficulty": 1,
     "question": "Verbinde Energieform und Beispiel."
   },
   {
@@ -275,7 +275,7 @@
     "topic": "Schweiz — Politik & Demokratie",
     "exerciseId": "nmg5-rich-politik-drag-2",
     "type": "drag-drop",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Ordne politische Ebenen und Beispiele."
   },
   {
@@ -284,7 +284,7 @@
     "topic": "Schweiz — Politik & Demokratie",
     "exerciseId": "nmg5-rich-politik-review-2",
     "type": "self-review",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "In deiner Klasse gibt es zwei Vorschläge für den Ausflug. Wie kann die Klasse fair entscheiden?"
   },
   {
@@ -293,7 +293,7 @@
     "topic": "Wirtschaft im Alltag",
     "exerciseId": "nmg5-rich-wirtschaft-match-1",
     "type": "matching",
-    "difficulty": 2,
+    "difficulty": 1,
     "question": "Verbinde Wirtschaftsbegriff und einfache Erklärung."
   },
   {
@@ -329,7 +329,7 @@
     "topic": "Nachhaltigkeit & Zukunft",
     "exerciseId": "nmg5-rich-nachhaltig-review-1",
     "type": "self-review",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Ein kaputter Rucksack kann repariert oder ersetzt werden. Erkläre eine sinnvolle Entscheidung."
   },
   {
@@ -356,7 +356,7 @@
     "topic": "Klimazonen & Lebensräume",
     "exerciseId": "nmg5-rich-lebensraeume-memory-2",
     "type": "memory",
-    "difficulty": 2,
+    "difficulty": 3,
     "question": "Finde Beobachtung und mögliche Erklärung."
   },
   {
@@ -365,7 +365,7 @@
     "topic": "Energie & Nachhaltigkeit",
     "exerciseId": "nmg6-rich-energie-drag-1",
     "type": "drag-drop",
-    "difficulty": 3,
+    "difficulty": 2,
     "question": "Ordne Energiequellen nach erneuerbar und nicht erneuerbar."
   },
   {
@@ -374,7 +374,7 @@
     "topic": "Energie & Nachhaltigkeit",
     "exerciseId": "nmg6-rich-energie-drag-2",
     "type": "drag-drop",
-    "difficulty": 3,
+    "difficulty": 2,
     "question": "Ordne Massnahmen nach direkter Wirkung."
   },
   {
@@ -392,7 +392,7 @@
     "topic": "Demokratie & Menschenrechte",
     "exerciseId": "nmg6-rich-demokratie-match-1",
     "type": "matching",
-    "difficulty": 3,
+    "difficulty": 2,
     "question": "Verbinde demokratische Handlung und Bedeutung."
   },
   {
@@ -419,7 +419,7 @@
     "topic": "Demokratie & Menschenrechte",
     "exerciseId": "nmg6-rich-demokratie-match-2",
     "type": "matching",
-    "difficulty": 3,
+    "difficulty": 2,
     "question": "Verbinde Recht und Alltagssituation."
   },
   {
@@ -428,7 +428,7 @@
     "topic": "Migration & Flucht",
     "exerciseId": "nmg6-rich-migration-review-1",
     "type": "self-review",
-    "difficulty": 3,
+    "difficulty": 2,
     "question": "Eine neue Schülerin kommt in die Klasse und spricht noch wenig Deutsch. Beschreibe zwei faire Unterstützungen."
   },
   {
@@ -437,7 +437,7 @@
     "topic": "Wirtschaft im Alltag",
     "exerciseId": "nmg6-rich-wirtschaft-drag-1",
     "type": "drag-drop",
-    "difficulty": 3,
+    "difficulty": 2,
     "question": "Ordne Faktoren, die einen Preis beeinflussen."
   },
   {
@@ -446,7 +446,7 @@
     "topic": "Weltweit verbunden",
     "exerciseId": "nmg6-rich-global-memory-1",
     "type": "memory",
-    "difficulty": 2,
+    "difficulty": 1,
     "question": "Finde weltweite Verbindung und Beispiel."
   },
   {
@@ -464,7 +464,7 @@
     "topic": "Weltweit verbunden",
     "exerciseId": "nmg6-rich-global-memory-2",
     "type": "memory",
-    "difficulty": 2,
+    "difficulty": 1,
     "question": "Finde globale Verbindung und mögliche Frage dazu."
   },
   {
@@ -482,7 +482,7 @@
     "topic": "Kontinente & Weltregionen",
     "exerciseId": "nmg6-rich-kontinente-word-1",
     "type": "word-search",
-    "difficulty": 2,
+    "difficulty": 1,
     "question": "Finde Kontinente."
   },
   {
@@ -509,7 +509,7 @@
     "topic": "Technik & Informatik",
     "exerciseId": "nmg6-rich-technik-drag-1",
     "type": "drag-drop",
-    "difficulty": 3,
+    "difficulty": 2,
     "question": "Ordne Technikfolgen nach Chance und Risiko."
   },
   {
