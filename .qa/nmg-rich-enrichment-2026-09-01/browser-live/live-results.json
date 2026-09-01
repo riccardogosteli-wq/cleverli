@@ -1,0 +1,122 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "/learn/4/science/koerper-gesundheit",
+    "status": 200,
+    "title": "Körper und Gesundheit — NMG 4. Klasse | Cleverli",
+    "h1": "Körper und Gesundheit",
+    "bodyChars": 1490,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/learn/4/science/wetter-klima",
+    "status": 200,
+    "title": "Wetter und Klima — NMG 4. Klasse | Cleverli",
+    "h1": "Wetter und Klima",
+    "bodyChars": 1397,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/learn/5/science/oekosysteme",
+    "status": 200,
+    "title": "Ökosysteme — NMG 5. Klasse | Cleverli",
+    "h1": "Ökosysteme",
+    "bodyChars": 1414,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/learn/5/science/schweiz-politik-5",
+    "status": 200,
+    "title": "Schweiz — Politik & Demokratie — NMG 5. Klasse | Cleverli",
+    "h1": "Schweiz — Politik & Demokratie",
+    "bodyChars": 1619,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/learn/6/science/demokratie-menschenrechte-6",
+    "status": 200,
+    "title": "Demokratie & Menschenrechte — NMG 6. Klasse | Cleverli",
+    "h1": "Demokratie & Menschenrechte",
+    "bodyChars": 1752,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/learn/6/science/energie-nachh-6",
+    "status": 200,
+    "title": "Energie & Nachhaltigkeit — NMG 6. Klasse | Cleverli",
+    "h1": "Energie & Nachhaltigkeit",
+    "bodyChars": 1755,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/learn/4/science/koerper-gesundheit",
+    "status": 200,
+    "title": "Körper und Gesundheit — NMG 4. Klasse | Cleverli",
+    "h1": "Körper und Gesundheit",
+    "bodyChars": 1399,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/learn/4/science/wetter-klima",
+    "status": 200,
+    "title": "Wetter und Klima — NMG 4. Klasse | Cleverli",
+    "h1": "Wetter und Klima",
+    "bodyChars": 1306,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/learn/5/science/oekosysteme",
+    "status": 200,
+    "title": "Ökosysteme — NMG 5. Klasse | Cleverli",
+    "h1": "Ökosysteme",
+    "bodyChars": 1323,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/learn/5/science/schweiz-politik-5",
+    "status": 200,
+    "title": "Schweiz — Politik & Demokratie — NMG 5. Klasse | Cleverli",
+    "h1": "Schweiz — Politik & Demokratie",
+    "bodyChars": 1528,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/learn/6/science/demokratie-menschenrechte-6",
+    "status": 200,
+    "title": "Demokratie & Menschenrechte — NMG 6. Klasse | Cleverli",
+    "h1": "Demokratie & Menschenrechte",
+    "bodyChars": 1661,
+    "hasContent": true,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/learn/6/science/energie-nachh-6",
+    "status": 200,
+    "title": "Energie & Nachhaltigkeit — NMG 6. Klasse | Cleverli",
+    "h1": "Energie & Nachhaltigkeit",
+    "bodyChars": 1664,
+    "hasContent": true,
+    "errors": []
+  }
+]
