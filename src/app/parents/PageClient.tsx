@@ -3,7 +3,7 @@
  * Parent Dashboard — progress overview, weak spots, streak calendar, achievement summary.
  * Data is all from localStorage (no auth yet).
  */
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useProfileContext } from "@/lib/ProfileContext";
@@ -179,6 +179,15 @@ export default function ParentsDashboard() {
     [activeGrade, activeMember?.curriculum, loaded],
   );
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("lock") !== "1") return;
+    lockParentSession();
+    url.searchParams.delete("lock");
+    window.location.replace(url.pathname + url.search + url.hash);
+  }, []);
+
   if (!sessionLoaded) return (
     <div className="flex items-center justify-center py-20">
       <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
@@ -272,12 +281,14 @@ export default function ParentsDashboard() {
     <main className="max-w-lg mx-auto px-4 py-6 pb-40 sm:pb-12 space-y-5">
       {/* Lock button */}
       <div className="flex justify-end">
-        <button
-          onClick={() => { lockParentSession(); window.location.reload(); }}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- full reload is intentional so the PIN gate remounts after clearing local session */}
+        <a
+          href="/parents?lock=1"
+          data-testid="parent-dashboard-lock"
           className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-red-500 transition-colors py-1.5 px-3 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50"
         >
           🔒 <span>Elternbereich sperren</span>
-        </button>
+        </a>
       </div>
 
       {/* ── Child Profiles ── */}
