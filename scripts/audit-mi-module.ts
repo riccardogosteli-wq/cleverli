@@ -120,6 +120,7 @@ const summaries = GRADES.map((grade) => {
   const topicIds = new Set<string>();
   const exerciseIds = new Set<string>();
   const typeCounts: Partial<Record<ExerciseType, number>> = {};
+  const difficultyCounts: Record<1 | 2 | 3, number> = { 1: 0, 2: 0, 3: 0 };
   const gradeCodes = new Set<string>();
   let exercises = 0;
 
@@ -134,6 +135,7 @@ const summaries = GRADES.map((grade) => {
       assertOk(!exerciseIds.has(key), `${grade}/mi: duplicate exercise id ${key}`);
       exerciseIds.add(key);
       exercises += 1;
+      difficultyCounts[exercise.difficulty] += 1;
       typeCounts[exercise.type] = (typeCounts[exercise.type] ?? 0) + 1;
       inspectExercise(grade, topic, exercise);
     }
@@ -148,7 +150,7 @@ const summaries = GRADES.map((grade) => {
   assertOk(typeCounts["matching"] && typeCounts.memory && typeCounts["drag-drop"] && typeCounts["word-search"] && typeCounts["self-review"], `grade ${grade}: missing rich type coverage`);
   assertOk([...gradeCodes].some((code) => code.startsWith("MI.1")), `grade ${grade}: missing MI.1 media coverage`);
   assertOk([...gradeCodes].some((code) => code.startsWith("MI.2")), `grade ${grade}: missing MI.2 informatics coverage`);
-  return { grade, topics: topics.length, exercises, typeCounts };
+  return { grade, topics: topics.length, exercises, difficultyCounts, typeCounts };
 });
 
 assertOk(getAvailableCurriculumSubjectIds(3, createCurriculumSelection("SO")).includes("mi"), "SO grade 3 should include MI");
@@ -198,9 +200,9 @@ ${report.verdict}
 
 ## Summaries
 
-| Grade | Topics | Exercises | Type counts |
-|---:|---:|---:|---|
-${summaries.map((summary) => `| ${summary.grade} | ${summary.topics} | ${summary.exercises} | ${Object.entries(summary.typeCounts).map(([type, count]) => `${type}: ${count}`).join(", ")} |`).join("\n")}
+| Grade | Topics | Exercises | Easy | Medium | Hard | Type counts |
+|---:|---:|---:|---:|---:|---:|---|
+${summaries.map((summary) => `| ${summary.grade} | ${summary.topics} | ${summary.exercises} | ${summary.difficultyCounts[1]} | ${summary.difficultyCounts[2]} | ${summary.difficultyCounts[3]} | ${Object.entries(summary.typeCounts).map(([type, count]) => `${type}: ${count}`).join(", ")} |`).join("\n")}
 
 ## Failures
 

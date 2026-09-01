@@ -1,0 +1,66 @@
+[
+  {
+    "viewport": "desktop",
+    "url": "/learn/3/mi/digitale-spuren-3",
+    "status": 200,
+    "title": "Digitale Spuren — Medien & Informatik 3. Klasse | Cleverli",
+    "hasMi": true,
+    "screenshot": "/Users/riccardogosteli/projects/cleverli/.qa/mi-module-2026-09-01/browser-rebalance/desktop-learn-3-mi-digitale-spuren-3.png"
+  },
+  {
+    "viewport": "desktop",
+    "url": "/learn/4/mi/informationen-pruefen-4",
+    "status": 200,
+    "title": "Informationen prüfen — Medien & Informatik 4. Klasse | Cleverli",
+    "hasMi": true,
+    "screenshot": "/Users/riccardogosteli/projects/cleverli/.qa/mi-module-2026-09-01/browser-rebalance/desktop-learn-4-mi-informationen-pruefen-4.png"
+  },
+  {
+    "viewport": "desktop",
+    "url": "/learn/5/mi/sicher-online-5",
+    "status": 200,
+    "title": "Sicher online — Medien & Informatik 5. Klasse | Cleverli",
+    "hasMi": true,
+    "screenshot": "/Users/riccardogosteli/projects/cleverli/.qa/mi-module-2026-09-01/browser-rebalance/desktop-learn-5-mi-sicher-online-5.png"
+  },
+  {
+    "viewport": "desktop",
+    "url": "/learn/6/mi/feeds-algorithmen-6",
+    "status": 200,
+    "title": "Feeds & Algorithmen — Medien & Informatik 6. Klasse | Cleverli",
+    "hasMi": true,
+    "screenshot": "/Users/riccardogosteli/projects/cleverli/.qa/mi-module-2026-09-01/browser-rebalance/desktop-learn-6-mi-feeds-algorithmen-6.png"
+  },
+  {
+    "viewport": "mobile",
+    "url": "/learn/3/mi/digitale-spuren-3",
+    "status": 200,
+    "title": "Digitale Spuren — Medien & Informatik 3. Klasse | Cleverli",
+    "hasMi": true,
+    "screenshot": "/Users/riccardogosteli/projects/cleverli/.qa/mi-module-2026-09-01/browser-rebalance/mobile-learn-3-mi-digitale-spuren-3.png"
+  },
+  {
+    "viewport": "mobile",
+    "url": "/learn/4/mi/informationen-pruefen-4",
+    "status": 200,
+    "title": "Informationen prüfen — Medien & Informatik 4. Klasse | Cleverli",
+    "hasMi": true,
+    "screenshot": "/Users/riccardogosteli/projects/cleverli/.qa/mi-module-2026-09-01/browser-rebalance/mobile-learn-4-mi-informationen-pruefen-4.png"
+  },
+  {
+    "viewport": "mobile",
+    "url": "/learn/5/mi/sicher-online-5",
+    "status": 200,
+    "title": "Sicher online — Medien & Informatik 5. Klasse | Cleverli",
+    "hasMi": true,
+    "screenshot": "/Users/riccardogosteli/projects/cleverli/.qa/mi-module-2026-09-01/browser-rebalance/mobile-learn-5-mi-sicher-online-5.png"
+  },
+  {
+    "viewport": "mobile",
+    "url": "/learn/6/mi/feeds-algorithmen-6",
+    "status": 200,
+    "title": "Feeds & Algorithmen — Medien & Informatik 6. Klasse | Cleverli",
+    "hasMi": true,
+    "screenshot": "/Users/riccardogosteli/projects/cleverli/.qa/mi-module-2026-09-01/browser-rebalance/mobile-learn-6-mi-feeds-algorithmen-6.png"
+  }
+]

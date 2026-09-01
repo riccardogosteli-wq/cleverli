@@ -1,65 +1,85 @@
 {
-  "generatedAt": "2026-09-01T08:03:25.970Z",
+  "generatedAt": "2026-09-01T08:27:19.719Z",
   "verdict": "approved",
   "officialLp21Basis": "Lehrplan 21 module Medien und Informatik: Medien (MI.1) and Informatik (MI.2).",
   "summaries": [
     {
       "grade": 3,
       "topics": 2,
-      "exercises": 38,
+      "exercises": 54,
+      "difficultyCounts": {
+        "1": 17,
+        "2": 21,
+        "3": 16
+      },
       "typeCounts": {
-        "multiple-choice": 12,
-        "fill-in-blank": 10,
-        "matching": 4,
+        "multiple-choice": 18,
+        "fill-in-blank": 14,
+        "matching": 6,
         "memory": 4,
-        "drag-drop": 4,
+        "drag-drop": 6,
         "word-search": 2,
-        "self-review": 2
+        "self-review": 4
       }
     },
     {
       "grade": 4,
       "topics": 2,
-      "exercises": 38,
+      "exercises": 54,
+      "difficultyCounts": {
+        "1": 17,
+        "2": 22,
+        "3": 15
+      },
       "typeCounts": {
-        "multiple-choice": 12,
-        "fill-in-blank": 10,
-        "matching": 4,
+        "multiple-choice": 18,
+        "fill-in-blank": 14,
+        "matching": 6,
         "memory": 4,
-        "drag-drop": 4,
+        "drag-drop": 6,
         "word-search": 2,
-        "self-review": 2
+        "self-review": 4
       }
     },
     {
       "grade": 5,
       "topics": 2,
-      "exercises": 38,
+      "exercises": 54,
+      "difficultyCounts": {
+        "1": 16,
+        "2": 20,
+        "3": 18
+      },
       "typeCounts": {
-        "multiple-choice": 12,
-        "fill-in-blank": 10,
-        "matching": 4,
+        "multiple-choice": 18,
+        "fill-in-blank": 14,
+        "matching": 6,
         "memory": 4,
-        "drag-drop": 4,
+        "drag-drop": 6,
         "word-search": 2,
-        "self-review": 2
+        "self-review": 4
       }
     },
     {
       "grade": 6,
       "topics": 2,
-      "exercises": 38,
+      "exercises": 54,
+      "difficultyCounts": {
+        "1": 15,
+        "2": 21,
+        "3": 18
+      },
       "typeCounts": {
-        "multiple-choice": 12,
-        "fill-in-blank": 10,
-        "matching": 4,
+        "multiple-choice": 20,
+        "fill-in-blank": 12,
+        "matching": 6,
         "memory": 4,
-        "drag-drop": 4,
+        "drag-drop": 6,
         "word-search": 2,
-        "self-review": 2
+        "self-review": 4
       }
     }
   ],
-  "exerciseRows": 152,
+  "exerciseRows": 216,
   "failures": []
 }
