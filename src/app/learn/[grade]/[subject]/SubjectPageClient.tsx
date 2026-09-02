@@ -1,13 +1,12 @@
 "use client";
 import Link from "next/link";
-import { TopicSummary, getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
+import { TopicSummary } from "@/data/topicCatalog";
 import { useEffect, useState } from "react";
 import { useLang } from "@/lib/LangContext";
 import { getTopicTitle } from "@/data/topicTitles";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { getActiveProfileId } from "@/lib/family";
-import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
+import { readTopicProgressForChild } from "@/lib/reportingProgress";
 
 interface Props { grade: number; subject: string; topics: TopicSummary[]; }
 
@@ -28,21 +27,8 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
     const p: typeof progress = {};
     const activeChildId = getActiveProfileId();
     for (const t of topics) {
-      for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, t.id)) {
-        const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, t.id, activeChildId)) ?? (
-          hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${t.id}`)
-        );
-        if (raw) {
-          try {
-            const progressData = JSON.parse(raw);
-            p[t.id] = {
-              ...progressData,
-              completed: getEffectiveCompleted(progressData, t.exerciseCount),
-            };
-          } catch { /* ignore */ }
-          break;
-        }
-      }
+      const progressData = readTopicProgressForChild(grade, subject, t, activeChildId);
+      if (progressData) p[t.id] = progressData;
     }
     setProgress(p);
   }, [grade, subject, topics]);

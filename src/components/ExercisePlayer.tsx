@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
-import { getActiveProfileId } from "@/lib/family";
+import { getActiveProfileId, loadFamily } from "@/lib/family";
 import { syncTopicProgressToSupabase } from "@/lib/progressSync";
 import { Topic, Exercise } from "@/types/exercise";
 import MultipleChoice from "./exercises/MultipleChoice";
@@ -471,17 +471,20 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     if (correct && !isReplayMode && !isReviewMode) {
       setTimeout(() => {
         try {
-          const totalStars = countTotalStars();
-          const totalTopicsComplete = countCompletedTopics();
+          const activeChildId = getActiveProfileId();
+          const family = loadFamily();
+          const activeMember = family.members.find((member) => member.id === activeChildId) ?? family.members[0] ?? null;
+          const totalTopicsComplete = countCompletedTopics(activeChildId, activeMember?.curriculum);
+          const scopedTotalStars = countTotalStars(activeChildId, activeMember?.curriculum);
           // Build snapshot from localStorage profile (rewards.ts reads it internally)
-          const profileRaw = typeof window !== "undefined" ? localStorage.getItem(getProfileStorageKey(getActiveProfileId())) : null;
+          const profileRaw = typeof window !== "undefined" ? localStorage.getItem(getProfileStorageKey(activeChildId)) : null;
           const prof = profileRaw ? JSON.parse(profileRaw) : null;
           if (prof) {
             const snap = {
               totalExercises: prof.totalExercises ?? 0,
               totalTopicsComplete,
               dailyStreak: prof.dailyStreak ?? 0,
-              totalStars,
+              totalStars: scopedTotalStars,
             };
             const newIds = checkAndUnlockRewards(snap);
             if (newIds.length > 0) {

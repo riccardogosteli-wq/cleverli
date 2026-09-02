@@ -11,16 +11,12 @@ import {
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
-import {
-  CORE_SUBJECTS,
-  getProgressSubjectsFromCatalog,
-  getTopicSummaries,
-} from "@/data/topicCatalog";
+import { getTopicSummaries } from "@/data/topicCatalog";
 import { startCheckout } from "@/lib/checkoutClient";
 import { BelohnungenGuestPreview } from "@/components/GuestPreview";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
-import { getActiveProfileId } from "@/lib/family";
-import { getProfileStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
+import { getActiveProfileId, loadFamily } from "@/lib/family";
+import { getProfileStorageKey } from "@/lib/accountScopedStorage";
+import { getReportingSubjects, readTopicProgressForChild } from "@/lib/reportingProgress";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
   { type: "tasks",  values: [10, 20, 50, 100] },
@@ -53,10 +49,12 @@ export default function RewardsPage() {
   const reload = () => {
     setRewards(loadRewards());
     // Load current progress snapshot
-    const totalTopicsComplete = countCompletedTopics();
-    const totalStars = countTotalStars();
-    // ✅ Use active child's profile key, not the global fallback
     const activeId = getActiveProfileId();
+    const family = loadFamily();
+    const activeMember = family.members.find((member) => member.id === activeId) ?? family.members[0] ?? null;
+    const totalTopicsComplete = countCompletedTopics(activeId, activeMember?.curriculum);
+    const totalStars = countTotalStars(activeId, activeMember?.curriculum);
+    // ✅ Use active child's profile key, not the global fallback
     const profileKey = getProfileStorageKey(activeId);
     const raw = typeof window !== "undefined" ? localStorage.getItem(profileKey) : null;
     const profile = raw ? JSON.parse(raw) : {};
@@ -71,31 +69,27 @@ export default function RewardsPage() {
   useEffect(() => { reload(); }, []);
 
   // Per-subject topic completion counts (all grades)
-  const subjectProgress = CORE_SUBJECTS.map(s => {
-    let done = 0, total = 0;
+  const subjectProgress = (() => {
+    const activeId = getActiveProfileId();
+    const family = loadFamily();
+    const activeMember = family.members.find((member) => member.id === activeId) ?? family.members[0] ?? null;
+    const bySubject = new Map<string, { id: string; emoji: string; done: number; total: number }>();
     for (const g of [1,2,3,4,5,6]) {
-      const topics = getTopicSummaries(g, s.id);
-      total += topics.length;
-      for (const t of topics) {
-        try {
-          let raw: string | null = null;
-          if (typeof window !== "undefined") {
-            for (const progressSubject of getProgressSubjectsFromCatalog(g, s.id, t.id)) {
-              raw = localStorage.getItem(getTopicProgressStorageKey(g, progressSubject, t.id, getActiveProfileId())) ?? (
-                hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`)
-              );
-              if (raw) break;
-            }
+      for (const subject of getReportingSubjects(g, activeMember?.curriculum)) {
+        const current = bySubject.get(subject.id) ?? { id: subject.id, emoji: subject.emoji, done: 0, total: 0 };
+        const topics = getTopicSummaries(g, subject.id);
+        current.total += topics.length;
+        for (const t of topics) {
+          const progress = readTopicProgressForChild(g, subject.id, t, activeId);
+          if (progress && progress.completed >= t.exerciseCount) {
+            current.done += 1;
           }
-          if (raw) {
-            const progress = JSON.parse(raw);
-            if (getEffectiveCompleted(progress, t.exerciseCount) >= t.exerciseCount) done++;
-          }
-        } catch { /* ignore */ }
+        }
+        bySubject.set(subject.id, current);
       }
     }
-    return { id: s.id, emoji: s.emoji, done, total };
-  });
+    return Array.from(bySubject.values());
+  })();
 
   const tl = (key: keyof typeof TRIGGER_LABELS) =>
     TRIGGER_LABELS[key][lang as keyof typeof TRIGGER_LABELS[typeof key]] ?? TRIGGER_LABELS[key].de;

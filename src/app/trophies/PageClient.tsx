@@ -4,16 +4,12 @@ import Link from "next/link";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import { loadFamily, getActiveProfileId } from "@/lib/family";
-import { getLastGradeStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
-import {
-  CORE_SUBJECTS,
-  getProgressSubjectsFromCatalog,
-  getTopicSummaries,
-} from "@/data/topicCatalog";
+import { getLastGradeStorageKey } from "@/lib/accountScopedStorage";
+import { getTopicSummaries } from "@/data/topicCatalog";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
-import { getEffectiveCompleted, getEffectiveStars } from "@/lib/topicProgress";
 import { LEVELS, getLevelProgress } from "@/lib/xp";
 import AuthGuard from "@/components/AuthGuard";
+import { getReportingSubjects, readTopicProgressForChild } from "@/lib/reportingProgress";
 
 // ─── TYPES ───────────────────────────────────────────────────────────────────
 interface TopicProgress {
@@ -32,21 +28,8 @@ interface TopicProgress {
 // ─── READ SAVED PROGRESS FROM LOCALSTORAGE ──────────────────────────────────
 function loadTopicProgress(grade: number, subject: string, topicId: string, total: number): { completed: number; stars: number } {
   if (typeof window === "undefined") return { completed: 0, stars: 0 };
-  try {
-    const activeChildId = getActiveProfileId();
-    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
-      const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topicId, activeChildId)) ?? (
-        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`)
-      );
-      if (!raw) continue;
-      const d = JSON.parse(raw);
-      return {
-        completed: getEffectiveCompleted(d, total),
-        stars: getEffectiveStars(d, total),
-      };
-    }
-    return { completed: 0, stars: 0 };
-  } catch { return { completed: 0, stars: 0 }; }
+  const progress = readTopicProgressForChild(grade, subject, { id: topicId, exerciseCount: total });
+  return progress ? { completed: progress.completed, stars: progress.stars } : { completed: 0, stars: 0 };
 }
 
 // ─── MINI CHECKPOINT DOTS ────────────────────────────────────────────────────
@@ -166,23 +149,33 @@ function SubjectSection({ subjectId, topics, grade, completedCount, totalCount }
   totalCount: number;
 }) {
   const { tr } = useLang();
-  const meta = CORE_SUBJECTS.find(s => s.id === subjectId)!;
   const pct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
 
   const subjectColors: Record<string, { bg: string; border: string; bar: string; text: string }> = {
     math:    { bg: "bg-blue-50",   border: "border-blue-200",  bar: "#3b82f6",  text: "text-blue-900" },
     german:  { bg: "bg-yellow-50", border: "border-yellow-200",bar: "#f59e0b",  text: "text-yellow-900" },
     science: { bg: "bg-green-50",  border: "border-green-200", bar: "#22c55e",  text: "text-green-900" },
+    english: { bg: "bg-red-50",    border: "border-red-200",   bar: "#ef4444",  text: "text-red-900" },
+    french:  { bg: "bg-purple-50", border: "border-purple-200",bar: "#9333ea",  text: "text-purple-900" },
+    mi:      { bg: "bg-cyan-50",   border: "border-cyan-200",  bar: "#0891b2",  text: "text-cyan-900" },
   };
   const sc = subjectColors[subjectId] ?? subjectColors.math;
+  const subjectLabel = tr(subjectId as "math" | "german" | "science" | "english" | "french" | "mi") || subjectId;
+  const subjectEmoji = subjectId === "math" ? "🔢"
+    : subjectId === "german" ? "📖"
+    : subjectId === "science" ? "🌍"
+    : subjectId === "english" ? "🇬🇧"
+    : subjectId === "french" ? "🇫🇷"
+    : subjectId === "mi" ? "💻"
+    : "📚";
 
   return (
     <div className={`rounded-2xl border-2 ${sc.border} ${sc.bg} overflow-hidden`}>
       {/* Subject header */}
       <div className="px-4 py-3 flex items-center gap-3 border-b border-white/50">
-        <span className="text-2xl">{meta.emoji}</span>
+        <span className="text-2xl">{subjectEmoji}</span>
         <div className="flex-1">
-          <div className={`font-black text-base ${sc.text}`}>{tr(subjectId as "math" | "german" | "science")}</div>
+          <div className={`font-black text-base ${sc.text}`}>{subjectLabel}</div>
           <div className="text-xs text-gray-500 font-medium">
             {completedCount}/{totalCount} {tr("gradeLabel") ? "" : "Aufgaben"} · {pct}%
           </div>
@@ -210,7 +203,7 @@ function SubjectSection({ subjectId, topics, grade, completedCount, totalCount }
 export default function MissionenPage() {
   const { profile, loaded } = useProfileContext();
   const { lang, tr } = useLang();
-  const [activeTab, setActiveTab] = useState<"all" | "math" | "german" | "science">("all");
+  const [activeTab, setActiveTab] = useState<string>("all");
 
   // Get active child's grade from family store
   const grade = useMemo(() => {
@@ -236,10 +229,19 @@ export default function MissionenPage() {
     } catch { return null; }
   }, []);
 
+  const activeMember = useMemo(() => {
+    if (typeof window === "undefined") return null;
+    try {
+      const activeId = getActiveProfileId();
+      const family = loadFamily();
+      return family.members.find(m => m.id === activeId) ?? family.members[0] ?? null;
+    } catch { return null; }
+  }, []);
+
   // Build full curriculum progress map
   const curriculumData = useMemo(() => {
     if (!loaded) return null;
-    return CORE_SUBJECTS.map(subject => {
+    return getReportingSubjects(grade, activeMember?.curriculum).map(subject => {
       const topics = getTopicSummaries(grade, subject.id);
       let completedExercisesTotal = 0;
       let totalExercisesTotal = 0;
@@ -282,7 +284,7 @@ export default function MissionenPage() {
         totalExercises: totalExercisesTotal,
       };
     });
-  }, [grade, loaded, profile.totalExercises]); // re-run when exercises change
+  }, [activeMember?.curriculum, grade, loaded, profile.totalExercises]); // re-run when exercises change
 
   // Overall stats
   const overallCompleted = curriculumData?.reduce((s, d) => s + d.completedExercises, 0) ?? 0;
@@ -296,11 +298,13 @@ export default function MissionenPage() {
   if (!loaded) return <div className="animate-pulse space-y-4 p-4">{[...Array(3)].map((_, i) => <div key={i} className="h-40 bg-green-50 rounded-2xl"/>)}</div>;
 
   const tabs = [
-    { id: "all",     label: lang === "fr" ? "Tous" : lang === "it" ? "Tutti" : lang === "en" ? "All" : "Alle", emoji: "🗺️" },
-    { id: "math",    label: tr("math"),    emoji: "🔢" },
-    { id: "german",  label: tr("german"),  emoji: "📖" },
-    { id: "science", label: tr("science"), emoji: "🌍" },
-  ] as const;
+    { id: "all", label: lang === "fr" ? "Tous" : lang === "it" ? "Tutti" : lang === "en" ? "All" : "Alle", emoji: "🗺️" },
+    ...getReportingSubjects(grade, activeMember?.curriculum).map(subject => ({
+      id: subject.id,
+      label: tr(subject.id as "math" | "german" | "science" | "english" | "french" | "mi") || subject.id,
+      emoji: subject.emoji,
+    })),
+  ];
 
   const filteredData = activeTab === "all"
     ? (curriculumData ?? [])

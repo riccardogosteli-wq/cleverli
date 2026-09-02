@@ -11,15 +11,10 @@ import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import { getLevelProgress } from "@/lib/xp";
 import { ACHIEVEMENTS } from "@/lib/achievements";
-import {
-  CORE_SUBJECTS,
-  getProgressSubjectsFromCatalog,
-  getTopicSummaries,
-} from "@/data/topicCatalog";
+import { getTopicSummaries } from "@/data/topicCatalog";
 import { isDailyDoneToday } from "@/lib/dailyState";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
-import { getActiveProfileId } from "@/lib/family";
-import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
+import { getActiveProfileId, loadFamily } from "@/lib/family";
+import { getReportingSubjects, readTopicProgressForChild } from "@/lib/reportingProgress";
 
 const COSTUME_IMAGES = [
   "/cleverli-wave.png",
@@ -41,16 +36,8 @@ const GRADE_COLORS = [
 function getTopicDone(grade: number, subject: string, topicId: string, total: number): boolean {
   if (typeof window === "undefined") return false;
   try {
-    const activeChildId = getActiveProfileId();
-    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
-      const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topicId, activeChildId)) ?? (
-        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`)
-      );
-      if (!raw) continue;
-      const p = JSON.parse(raw);
-      return getEffectiveCompleted(p, total) >= total;
-    }
-    return false;
+    const progress = readTopicProgressForChild(grade, subject, { id: topicId, exerciseCount: total });
+    return progress ? progress.completed >= total : false;
   } catch { return false; }
 }
 
@@ -79,13 +66,17 @@ function GradeSection({ grade, idx }: { grade: number; idx: number }) {
   const { lang, tr } = useLang();
   const label = lang === "fr" ? `${grade}re année` : lang === "it" ? `${grade}a classe` : lang === "en" ? `Grade ${grade}` : `${grade}. Klasse`;
   const c = GRADE_COLORS[idx];
+  const activeId = getActiveProfileId();
+  const family = loadFamily();
+  const activeMember = family.members.find((member) => member.id === activeId) ?? family.members[0] ?? null;
+  const subjects = getReportingSubjects(grade, activeMember?.curriculum);
 
   return (
     <div className={`bg-gradient-to-br ${c.bg} border-2 ${c.border} rounded-3xl p-4 space-y-3`}>
       <h2 className={`font-black text-base ${c.text}`}>{label}</h2>
       <div className="grid grid-cols-2 gap-2">
-        {CORE_SUBJECTS.map((s, si) => (
-          <SubjectIsland key={s.id} grade={grade} subject={s.id} emoji={s.emoji} label={tr(s.id)} colorIdx={(idx + si) % GRADE_COLORS.length} />
+        {subjects.map((s, si) => (
+          <SubjectIsland key={s.id} grade={grade} subject={s.id} emoji={s.emoji} label={tr(s.id) || s.id} colorIdx={(idx + si) % GRADE_COLORS.length} />
         ))}
       </div>
     </div>

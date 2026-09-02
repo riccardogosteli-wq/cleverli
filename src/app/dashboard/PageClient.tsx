@@ -7,7 +7,6 @@ import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
 import {
   getCatalogSubjects,
-  getProgressSubjectsFromCatalog,
   getTopicSummaries,
   TopicSummary,
 } from "@/data/topicCatalog";
@@ -19,10 +18,10 @@ import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
 import { getAvailableCurriculumSubjectIds, type CurriculumSelection } from "@/lib/curriculumProfiles";
 import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
 import RewardWidget from "@/components/RewardWidget";
 import { DashboardGuestPreview } from "@/components/GuestPreview";
-import { getLastGradeStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
+import { getLastGradeStorageKey } from "@/lib/accountScopedStorage";
+import { readTopicProgressForChild } from "@/lib/reportingProgress";
 
 const GRADE_COLORS = [
   { base: "bg-blue-50 border-blue-300 text-blue-800 hover:bg-blue-100 active:bg-blue-200", emoji: "🐣" },
@@ -96,22 +95,7 @@ const GRADE_KEY = "cleverli_last_grade";
 
 function getProgress(grade: number, subject: string, topic: TopicSummary) {
   if (typeof window === "undefined") return null;
-  try {
-    const activeChildId = getActiveProfileId();
-    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-      const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
-        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
-      );
-      if (raw) {
-        const progress = JSON.parse(raw);
-        return {
-          ...progress,
-          completed: getEffectiveCompleted(progress, topic.exerciseCount),
-        };
-      }
-    }
-    return null;
-  } catch { return null; }
+  return readTopicProgressForChild(grade, subject, topic);
 }
 
 // ── Sidebar — defined OUTSIDE DashboardInner to avoid "component created during render" error ──

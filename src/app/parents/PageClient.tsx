@@ -9,8 +9,6 @@ import Image from "next/image";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import {
-  getCatalogSubjects,
-  getProgressSubjectsFromCatalog,
   getTopicSummaries,
   type TopicSummary,
 } from "@/data/topicCatalog";
@@ -20,15 +18,13 @@ import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import ChildProfileManager from "@/components/ChildProfileManager";
 import { useSession } from "@/hooks/useSession";
 import { ParentsGuestPreview } from "@/components/GuestPreview";
-import { getEffectiveCompleted, getEffectiveScore, getEffectiveStars } from "@/lib/topicProgress";
 import { getActiveProfileId, loadFamily, type FamilyMember } from "@/lib/family";
-import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 import {
   CANTON_NAMES,
-  getAvailableCurriculumSubjectIds,
   resolveCurriculumProfile,
   type CurriculumSelection,
 } from "@/lib/curriculumProfiles";
+import { getReportingSubjects, readTopicProgressForChild } from "@/lib/reportingProgress";
 
 interface TopicStat {
   grade: number;
@@ -74,31 +70,11 @@ function loadActiveMember(): FamilyMember | null {
 
 function loadTopicProgress(grade: number, subject: string, topic: TopicSummary): TopicProgress | null {
   if (typeof window === "undefined") return null;
-  try {
-    const activeChildId = getActiveProfileId();
-    for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-      const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
-        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
-      );
-      if (!raw) continue;
-      const progress = JSON.parse(raw);
-      const completed = getEffectiveCompleted(progress, topic.exerciseCount);
-      return {
-        stars: getEffectiveStars(progress, topic.exerciseCount),
-        score: getEffectiveScore(progress, topic.exerciseCount),
-        completed,
-        lastPlayed: progress.lastPlayed ?? "",
-        partial: progress.partial ?? false,
-      };
-    }
-  } catch { /* skip broken progress entries */ }
-  return null;
+  return readTopicProgressForChild(grade, subject, topic);
 }
 
 function buildSubjectCoverage(grade: number, curriculum?: CurriculumSelection): SubjectCoverage[] {
-  const allowed = new Set(getAvailableCurriculumSubjectIds(grade, curriculum));
-  return getCatalogSubjects(grade)
-    .filter(subject => allowed.has(subject.id))
+  return getReportingSubjects(grade, curriculum)
     .map(subject => {
       const topics = getTopicSummaries(grade, subject.id);
       const topicProgress = topics.map(topic => ({ topic, progress: loadTopicProgress(grade, subject.id, topic) }));
@@ -121,37 +97,28 @@ function buildSubjectCoverage(grade: number, curriculum?: CurriculumSelection): 
     });
 }
 
-function loadAllStats(): TopicStat[] {
+function loadAllStats(curriculum?: CurriculumSelection | null): TopicStat[] {
   if (typeof window === "undefined") return [];
   const stats: TopicStat[] = [];
   const activeChildId = getActiveProfileId();
   for (const grade of [1,2,3,4,5,6]) {
-    for (const subject of getCatalogSubjects(grade).map((item) => item.id)) {
-      const topics = getTopicSummaries(grade, subject);
+    for (const subject of getReportingSubjects(grade, curriculum)) {
+      const topics = getTopicSummaries(grade, subject.id);
       for (const topic of topics) {
         try {
-          let raw: string | null = null;
-          for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-            raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
-              hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
-            );
-            if (raw) break;
-          }
-          if (!raw) continue;
-          const p = JSON.parse(raw);
-          const completed = getEffectiveCompleted(p, topic.exerciseCount);
-          const score = getEffectiveScore(p, topic.exerciseCount);
+          const progress = readTopicProgressForChild(grade, subject.id, topic, activeChildId);
+          if (!progress) continue;
           stats.push({
-            grade, subject,
+            grade, subject: subject.id,
             topicId: topic.id,
             topicTitle: topic.title,
             topicEmoji: topic.emoji,
-            stars: getEffectiveStars(p, topic.exerciseCount),
-            score,
-            completed,
+            stars: progress.stars,
+            score: progress.score,
+            completed: progress.completed,
             total: topic.exerciseCount,
-            lastPlayed: p.lastPlayed ?? "",
-            partial: p.partial ?? false,
+            lastPlayed: progress.lastPlayed,
+            partial: progress.partial,
           });
         } catch { /* skip */ }
       }
@@ -180,9 +147,9 @@ export default function ParentsDashboard() {
   const { lang } = useLang();
 
   // ⚠️ All hooks must be called unconditionally before any early returns (React rules)
-  const stats = useMemo(() => loaded ? loadAllStats() : [], [loaded]);
   const activeMember = useMemo(() => loaded ? loadActiveMember() : null, [loaded]);
   const activeGrade = activeMember?.grade ?? 1;
+  const stats = useMemo(() => loaded ? loadAllStats(activeMember?.curriculum) : [], [activeMember?.curriculum, loaded]);
   const subjectCoverage = useMemo(
     () => loaded ? buildSubjectCoverage(activeGrade, activeMember?.curriculum) : [],
     [activeGrade, activeMember?.curriculum, loaded],

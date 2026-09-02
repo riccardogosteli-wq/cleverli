@@ -1,14 +1,13 @@
 // ── Reward System ────────────────────────────────────────────────────────────
 // Rewards are defined by parents and tracked per-device in localStorage.
 // When a child reaches a trigger, the reward unlocks and shows a celebration.
-import {
-  CORE_SUBJECTS,
-  getProgressSubjectsFromCatalog,
-  getTopicSummaries,
-} from "@/data/topicCatalog";
 import { getActiveProfileId } from "@/lib/family";
-import { getRewardsStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
-import { getEffectiveCompleted, getEffectiveStars } from "@/lib/topicProgress";
+import { getRewardsStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
+import {
+  countCompletedTopicsForChild,
+  countTotalStarsForChild,
+} from "@/lib/reportingProgress";
+import type { CurriculumSelection } from "@/lib/curriculumProfiles";
 
 export type TriggerType = "tasks" | "topics" | "streak" | "stars";
 export type RewardStatus = "active" | "unlocked" | "redeemed";
@@ -119,56 +118,13 @@ export function getProgressValue(snap: ProgressSnapshot, type: TriggerType): num
   }
 }
 
-function loadNormalisedTopicProgress(grade: number, subject: string, topicId: string, total: number) {
-  if (typeof window === "undefined") return null;
-  const activeChildId = getActiveProfileId();
-  for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
-    const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topicId, activeChildId)) ?? (
-      hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`)
-    );
-    if (!raw) continue;
-    const progress = JSON.parse(raw);
-    return {
-      completed: getEffectiveCompleted(progress, total),
-      stars: getEffectiveStars(progress, total),
-    };
-  }
-  return null;
-}
-
-export function countCompletedTopics(): number {
-  if (typeof window === "undefined") return 0;
-  let total = 0;
-  for (const grade of [1,2,3,4,5,6]) {
-    for (const subject of CORE_SUBJECTS) {
-      for (const topic of getTopicSummaries(grade, subject.id)) {
-        try {
-          const progress = loadNormalisedTopicProgress(grade, subject.id, topic.id, topic.exerciseCount);
-          if (progress && progress.completed >= topic.exerciseCount) total++;
-        } catch { /* skip */ }
-      }
-    }
-  }
-  return total;
+export function countCompletedTopics(childId: string | null = getActiveProfileId(), curriculum?: CurriculumSelection | null): number {
+  return countCompletedTopicsForChild(childId, curriculum);
 }
 
 /** Count total stars from completed topic progress entries. */
-export function countTotalStars(): number {
-  if (typeof window === "undefined") return 0;
-  let total = 0;
-  for (const grade of [1,2,3,4,5,6]) {
-    for (const subject of CORE_SUBJECTS) {
-      for (const topic of getTopicSummaries(grade, subject.id)) {
-        try {
-          const progress = loadNormalisedTopicProgress(grade, subject.id, topic.id, topic.exerciseCount);
-          if (progress && progress.completed >= topic.exerciseCount && progress.stars > 0) {
-            total += progress.stars;
-          }
-        } catch { /* skip */ }
-      }
-    }
-  }
-  return total;
+export function countTotalStars(childId: string | null = getActiveProfileId(), curriculum?: CurriculumSelection | null): number {
+  return countTotalStarsForChild(childId, curriculum);
 }
 
 /**

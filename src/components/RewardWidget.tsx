@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { loadRewards, getProgressValue, countCompletedTopics, countTotalStars, checkAndUnlockRewards, TRIGGER_LABELS, Reward, ProgressSnapshot } from "@/lib/rewards";
 import { useLang } from "@/lib/LangContext";
 import RewardUnlockedModal from "./RewardUnlockedModal";
+import { getActiveProfileId, loadFamily } from "@/lib/family";
 
 interface Props {
   profile: { totalExercises: number; totalTopicsComplete: number; dailyStreak: number };
@@ -15,10 +16,13 @@ export default function RewardWidget({ profile }: Props) {
   const [newlyUnlocked, setNewlyUnlocked] = useState<Reward | null>(null);
 
   useEffect(() => {
-    const totalStars = countTotalStars();
+    const activeId = getActiveProfileId();
+    const family = loadFamily();
+    const activeMember = family.members.find((member) => member.id === activeId) ?? family.members[0] ?? null;
+    const totalStars = countTotalStars(activeId, activeMember?.curriculum);
     const snapshot: ProgressSnapshot = {
       totalExercises: profile.totalExercises,
-      totalTopicsComplete: countCompletedTopics(),
+      totalTopicsComplete: countCompletedTopics(activeId, activeMember?.curriculum),
       dailyStreak: profile.dailyStreak,
       totalStars,
     };

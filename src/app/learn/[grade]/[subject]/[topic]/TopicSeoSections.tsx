@@ -3,10 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Exercise, Topic } from "@/types/exercise";
-import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { getTopicTitle } from "@/data/topicTitles";
 import {
   buildTopicDescription,
@@ -17,7 +15,7 @@ import {
 } from "@/lib/seoContent";
 import type { Lang } from "@/lib/i18n";
 import { getActiveProfileId } from "@/lib/family";
-import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
+import { readTopicProgressForChild } from "@/lib/reportingProgress";
 
 interface SampleExerciseCard {
   exercise: Exercise;
@@ -62,18 +60,7 @@ const labels = {
 
 function getStoredTopicCompleted(topic: Topic, grade: number, subject: string) {
   const activeChildId = getActiveProfileId();
-  for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-    const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
-      hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
-    );
-    if (!raw) continue;
-    try {
-      return getEffectiveCompleted(JSON.parse(raw), topic.exercises.length);
-    } catch {
-      return 0;
-    }
-  }
-  return 0;
+  return readTopicProgressForChild(grade, subject, topic, activeChildId)?.completed ?? 0;
 }
 
 function localizedList<T>(

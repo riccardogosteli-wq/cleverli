@@ -6,30 +6,16 @@ import { useSession } from "@/hooks/useSession";
 import { countExercisesByDifficulty } from "@/lib/exerciseHelpers";
 import { getTierProgress } from "@/lib/tierProgress";
 import { useEffect, useState } from "react";
-import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { getTopicTitle } from "@/data/topicTitles";
 import { useLang } from "@/lib/LangContext";
 import { getActiveProfileId } from "@/lib/family";
-import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
+import { readTopicProgressForChild, type NormalisedTopicProgress } from "@/lib/reportingProgress";
 
 interface Props { topic: Topic; grade: number; subject: string; nextTopicId?: string | null; }
 
-function loadProgress(grade: number, subject: string, topic: Topic) {
+function loadProgress(grade: number, subject: string, topic: Topic): NormalisedTopicProgress | null {
   const activeChildId = getActiveProfileId();
-  for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-    const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
-      hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
-    );
-    if (raw) {
-      const progress = JSON.parse(raw);
-      return {
-        ...progress,
-        completed: getEffectiveCompleted(progress, topic.exercises.length),
-      };
-    }
-  }
-  return {};
+  return readTopicProgressForChild(grade, subject, topic, activeChildId);
 }
 
 export default function TopicClient({ topic, grade, subject, nextTopicId = null }: Props) {
@@ -40,7 +26,7 @@ export default function TopicClient({ topic, grade, subject, nextTopicId = null 
 
   useEffect(() => {
     const progressData = loadProgress(grade, subject, topic);
-    const totalCompleted = progressData.completed ?? 0;
+    const totalCompleted = progressData?.completed ?? 0;
 
     // ✅ Use getTierProgress directly — same logic ExercisePlayer uses.
     // This gives accurate per-difficulty counts, not a proportional guess.
@@ -67,7 +53,7 @@ export default function TopicClient({ topic, grade, subject, nextTopicId = null 
   useEffect(() => {
     const refresh = () => {
       const progressData = loadProgress(grade, subject, topic);
-      const totalCompleted = progressData.completed ?? 0;
+      const totalCompleted = progressData?.completed ?? 0;
       const tierProgress = getTierProgress(topic, totalCompleted);
       setExerciseCounts({
         completed: { 1: tierProgress.easy.done, 2: tierProgress.medium.done, 3: tierProgress.hard.done },
