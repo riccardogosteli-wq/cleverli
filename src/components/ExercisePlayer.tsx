@@ -27,7 +27,7 @@ import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useSession } from "@/hooks/useSession";
 import Confetti from "./Confetti";
-import { checkAndUnlockRewards, loadRewards, countCompletedTopics, countTotalStars, Reward } from "@/lib/rewards";
+import { checkAndUnlockRewards, loadRewards, countCompletedExercises, countCompletedTopics, countTotalStars, Reward } from "@/lib/rewards";
 import RewardUnlockedModal from "./RewardUnlockedModal";
 import { getLevelForXp, getNextLevel } from "@/lib/xp";
 import SignupPromptModal from "./SignupPromptModal";
@@ -481,14 +481,14 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           const prof = profileRaw ? JSON.parse(profileRaw) : null;
           if (prof) {
             const snap = {
-              totalExercises: prof.totalExercises ?? 0,
+              totalExercises: Math.max(prof.totalExercises ?? 0, countCompletedExercises(activeChildId, activeMember?.curriculum)),
               totalTopicsComplete,
               dailyStreak: prof.dailyStreak ?? 0,
               totalStars: scopedTotalStars,
             };
-            const newIds = checkAndUnlockRewards(snap);
+            const newIds = checkAndUnlockRewards(snap, activeChildId);
             if (newIds.length > 0) {
-              const all = loadRewards();
+              const all = loadRewards(activeChildId);
               const first = all.find(r => r.id === newIds[0]);
               if (first) setUnlockedReward(first);
             }

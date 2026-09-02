@@ -109,24 +109,8 @@ export default function DailyPage() {
       subject,
       topicDurationMs: Date.now() - startTime,
       lang,
+      bonusXp: correct ? DAILY_XP_BONUS : 0,
     });
-
-    // Bonus XP for daily (record a second time with topic bonus signal)
-    if (correct) {
-      setTimeout(() => {
-        recordAnswer({
-          correct: true,
-          streak: 0,
-          hintsUsed,
-          isTopicComplete: true, // triggers TOPIC_DONE bonus used as daily bonus proxy
-          score: 1,
-          total: 1,
-          grade,
-          subject,
-          lang,
-        });
-      }, 800);
-    }
   };
 
   const subjectLabel = getLocalizedSubjectName(subject, lang);

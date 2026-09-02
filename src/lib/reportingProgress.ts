@@ -88,6 +88,24 @@ export function countCompletedTopicsForChild(
   return total;
 }
 
+export function countCompletedExercisesForChild(
+  childId: string | null = getActiveProfileId(),
+  curriculum?: CurriculumSelection | null,
+): number {
+  if (typeof window === "undefined") return 0;
+
+  let total = 0;
+  for (const grade of [1, 2, 3, 4, 5, 6]) {
+    for (const subject of getReportingSubjects(grade, curriculum)) {
+      for (const topic of getTopicSummaries(grade, subject.id)) {
+        const progress = readTopicProgressForChild(grade, subject.id, topic, childId);
+        if (progress) total += Math.min(topic.exerciseCount, Math.max(0, progress.completed));
+      }
+    }
+  }
+  return total;
+}
+
 export function countTotalStarsForChild(
   childId: string | null = getActiveProfileId(),
   curriculum?: CurriculumSelection | null,

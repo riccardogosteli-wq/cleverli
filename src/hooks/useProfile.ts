@@ -269,11 +269,14 @@ export function useProfile() {
       if (e.key === getActiveProfileStorageKey() || e.key === "cleverli_active_profile") reloadProfile();
     };
     const onFamilyRestored = () => reloadProfile();
+    const onActiveProfileChange = () => reloadProfile();
     window.addEventListener("storage", onStorage);
     window.addEventListener("cleverli-family-restored", onFamilyRestored);
+    window.addEventListener("cleverli-active-profile-change", onActiveProfileChange);
     return () => {
       window.removeEventListener("storage", onStorage);
       window.removeEventListener("cleverli-family-restored", onFamilyRestored);
+      window.removeEventListener("cleverli-active-profile-change", onActiveProfileChange);
     };
   }, []);
 
@@ -351,6 +354,7 @@ export function useProfile() {
     lang?: string;
     topicId?: string;
     tierCompleted?: "easy" | "medium" | "hard";
+    bonusXp?: number;
   }) => {
     setProfile(prev => {
       const today = todayStr();
@@ -377,9 +381,6 @@ export function useProfile() {
         score: opts.score,
         total: opts.total,
       });
-
-      // Achievement XP rewards
-      const achievementXp = 0; // calculated below after we know new achievements
 
       // Streak update (UJ-10: grace period handled on load; here we just increment/set on correct answer)
       let newStreak = prev.dailyStreak;
@@ -419,7 +420,8 @@ export function useProfile() {
       const currentWeek = weekStr();
       const weeklyXp = prev.weeklyXpDate === currentWeek ? prev.weeklyXp + xpEarned : xpEarned;
 
-      const newXp = prev.xp + xpEarned;
+      const bonusXp = Math.max(0, Math.round(opts.bonusXp ?? 0));
+      const newXp = prev.xp + xpEarned + bonusXp;
 
       // Coins: +1 per correct answer, +5 bonus on topic complete
       const newCoins = (prev.coins ?? 0)
@@ -487,7 +489,7 @@ export function useProfile() {
       saveProfile(finalProfile);
 
       // Side effects (state updates via setTimeout to avoid batching issues)
-      if (xpEarned + achXp > 0) setXpGained(xpEarned + achXp);
+      if (xpEarned + bonusXp + achXp > 0) setXpGained(xpEarned + bonusXp + achXp);
       if (earned.length > 0) setNewAchievements(earned);
 
       const prevLevel = getLevelForXp(prev.xp).id;

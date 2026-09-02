@@ -4,6 +4,7 @@
 import { getActiveProfileId } from "@/lib/family";
 import { getRewardsStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 import {
+  countCompletedExercisesForChild,
   countCompletedTopicsForChild,
   countTotalStarsForChild,
 } from "@/lib/reportingProgress";
@@ -14,6 +15,7 @@ export type RewardStatus = "active" | "unlocked" | "redeemed";
 
 export interface Reward {
   id: string;
+  childId?: string | null;
   emoji: string;
   title: string;               // parent's custom label
   triggerType: TriggerType;
@@ -33,6 +35,10 @@ export interface RewardProgress {
 
 const REWARDS_KEY = "cleverli_rewards";
 const MAX_ACTIVE = 3;
+
+export function isFamilyReward(reward: Reward): boolean {
+  return reward.childId == null;
+}
 
 // ── Pre-built templates ───────────────────────────────────────────────────────
 export interface RewardTemplate {
@@ -60,7 +66,7 @@ export const TRIGGER_LABELS: Record<TriggerType, { de: string; fr: string; it: s
 };
 
 // ── Storage ───────────────────────────────────────────────────────────────────
-export function loadRewards(): Reward[] {
+function loadStoredRewards(): Reward[] {
   if (typeof window === "undefined") return [];
   try {
     const raw = localStorage.getItem(getRewardsStorageKey()) ?? (
@@ -70,17 +76,25 @@ export function loadRewards(): Reward[] {
   } catch { return []; }
 }
 
+export function loadRewards(childId: string | null = getActiveProfileId()): Reward[] {
+  const rewards = loadStoredRewards();
+  if (!childId) return rewards;
+  return rewards.filter(reward => reward.childId === childId || isFamilyReward(reward));
+}
+
 export function saveRewards(rewards: Reward[]) {
   if (typeof window === "undefined") return;
   localStorage.setItem(getRewardsStorageKey(), JSON.stringify(rewards));
 }
 
 export function addReward(data: Omit<Reward, "id" | "status" | "createdAt">): Reward {
-  const rewards = loadRewards();
-  const active = rewards.filter(r => r.status === "active");
+  const childId = data.childId ?? getActiveProfileId();
+  const rewards = loadStoredRewards();
+  const active = rewards.filter(r => (r.childId === childId || isFamilyReward(r)) && r.status === "active");
   if (active.length >= MAX_ACTIVE) throw new Error(`Max ${MAX_ACTIVE} active rewards`);
   const reward: Reward = {
     ...data,
+    childId,
     id: `reward_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
     status: "active",
     createdAt: new Date().toISOString(),
@@ -91,14 +105,14 @@ export function addReward(data: Omit<Reward, "id" | "status" | "createdAt">): Re
 }
 
 export function markRedeemed(id: string) {
-  const rewards = loadRewards();
+  const rewards = loadStoredRewards();
   const r = rewards.find(r => r.id === id);
   if (r) { r.status = "redeemed"; r.redeemedAt = new Date().toISOString(); }
   saveRewards(rewards);
 }
 
 export function removeReward(id: string) {
-  saveRewards(loadRewards().filter(r => r.id !== id));
+  saveRewards(loadStoredRewards().filter(r => r.id !== id));
 }
 
 // ── Progress calculation ──────────────────────────────────────────────────────
@@ -118,6 +132,10 @@ export function getProgressValue(snap: ProgressSnapshot, type: TriggerType): num
   }
 }
 
+export function countCompletedExercises(childId: string | null = getActiveProfileId(), curriculum?: CurriculumSelection | null): number {
+  return countCompletedExercisesForChild(childId, curriculum);
+}
+
 export function countCompletedTopics(childId: string | null = getActiveProfileId(), curriculum?: CurriculumSelection | null): number {
   return countCompletedTopicsForChild(childId, curriculum);
 }
@@ -131,11 +149,12 @@ export function countTotalStars(childId: string | null = getActiveProfileId(), c
  * Check all active rewards against current progress.
  * Returns list of newly unlocked reward IDs.
  */
-export function checkAndUnlockRewards(snap: ProgressSnapshot): string[] {
-  const rewards = loadRewards();
+export function checkAndUnlockRewards(snap: ProgressSnapshot, childId: string | null = getActiveProfileId()): string[] {
+  const rewards = loadStoredRewards();
   const newlyUnlocked: string[] = [];
 
   rewards.forEach(r => {
+    if (childId && r.childId !== childId && !isFamilyReward(r)) return;
     if (r.status !== "active") return;
     const current = getProgressValue(snap, r.triggerType);
     if (current >= r.triggerValue) {
@@ -150,8 +169,8 @@ export function checkAndUnlockRewards(snap: ProgressSnapshot): string[] {
 }
 
 /** Get progress info for all active + recently unlocked rewards (for child widget). */
-export function getRewardProgress(snap: ProgressSnapshot): RewardProgress[] {
-  const rewards = loadRewards();
+export function getRewardProgress(snap: ProgressSnapshot, childId: string | null = getActiveProfileId()): RewardProgress[] {
+  const rewards = loadRewards(childId);
   const recentlyUnlocked = rewards.filter(r =>
     r.status === "unlocked" &&
     r.unlockedAt &&

@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   loadRewards, addReward, markRedeemed, removeReward,
-  countCompletedTopics, countTotalStars, REWARD_TEMPLATES, TRIGGER_LABELS,
+  countCompletedExercises, countCompletedTopics, countTotalStars, REWARD_TEMPLATES, TRIGGER_LABELS,
   Reward, TriggerType, ProgressSnapshot,
   getProgressValue,
+  isFamilyReward,
 } from "@/lib/rewards";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
@@ -47,9 +48,9 @@ export default function RewardsPage() {
   const [error, setError] = useState("");
 
   const reload = () => {
-    setRewards(loadRewards());
     // Load current progress snapshot
     const activeId = getActiveProfileId();
+    setRewards(loadRewards(activeId));
     const family = loadFamily();
     const activeMember = family.members.find((member) => member.id === activeId) ?? family.members[0] ?? null;
     const totalTopicsComplete = countCompletedTopics(activeId, activeMember?.curriculum);
@@ -58,8 +59,9 @@ export default function RewardsPage() {
     const profileKey = getProfileStorageKey(activeId);
     const raw = typeof window !== "undefined" ? localStorage.getItem(profileKey) : null;
     const profile = raw ? JSON.parse(raw) : {};
+    const completedExercises = countCompletedExercises(activeId, activeMember?.curriculum);
     setSnap({
-      totalExercises: profile.totalExercises ?? 0,
+      totalExercises: Math.max(profile.totalExercises ?? 0, completedExercises),
       totalTopicsComplete,
       dailyStreak: profile.dailyStreak ?? 0,
       totalStars,
@@ -102,7 +104,7 @@ export default function RewardsPage() {
     if (!form.title.trim()) { setError(lang === "fr" ? "Veuillez entrer un titre." : lang === "it" ? "Inserisci un titolo." : lang === "en" ? "Please enter a title." : "Bitte einen Titel eingeben."); return; }
     if (active.length >= 3) { setError(lang === "fr" ? "Max. 3 récompenses actives." : lang === "it" ? "Max. 3 premi attivi." : lang === "en" ? "Max 3 active rewards." : "Max. 3 aktive Belohnungen."); return; }
     try {
-      addReward({ emoji: form.emoji, title: form.title, triggerType: form.triggerType, triggerValue: form.triggerValue });
+      addReward({ childId: getActiveProfileId(), emoji: form.emoji, title: form.title, triggerType: form.triggerType, triggerValue: form.triggerValue });
       setAdding(false);
       setFormStep(1);
       setForm({ emoji: "🦁", title: "", triggerType: "tasks", triggerValue: 20 });
@@ -130,6 +132,9 @@ export default function RewardsPage() {
     if (r.status === "redeemed") return "bg-gray-50 border-gray-200 opacity-60";
     return "bg-white border-gray-200";
   };
+
+  const familyRewardLabel = () =>
+    lang === "fr" ? "Récompense famille" : lang === "it" ? "Premio famiglia" : lang === "en" ? "Family reward" : "Familien-Belohnung";
 
   // Guest gate — show preview for unauthenticated users
   if (loaded && !session) return <BelohnungenGuestPreview />;
@@ -419,7 +424,14 @@ export default function RewardsPage() {
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-3xl">{r.emoji}</span>
                 <div className="flex-1">
-                  <div className="font-bold text-gray-800">{r.title}</div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <div className="font-bold text-gray-800">{r.title}</div>
+                    {isFamilyReward(r) && (
+                      <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-700">
+                        {familyRewardLabel()}
+                      </span>
+                    )}
+                  </div>
                   <div className="text-xs text-gray-400">{current} / {r.triggerValue} {tl(r.triggerType)}</div>
                 </div>
                 {deleteConfirm === r.id ? (
@@ -463,7 +475,14 @@ export default function RewardsPage() {
             <div key={r.id} className="bg-amber-50 border-2 border-amber-400 rounded-2xl p-4 flex items-center gap-4 shadow-md">
               <span className="text-4xl">{r.emoji}</span>
               <div className="flex-1">
-                <div className="font-bold text-gray-800">{r.title}</div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <div className="font-bold text-gray-800">{r.title}</div>
+                  {isFamilyReward(r) && (
+                    <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-700">
+                      {familyRewardLabel()}
+                    </span>
+                  )}
+                </div>
                 <div className="text-xs text-amber-600 mt-0.5">
                   🎉 {lang === "de" ? "Dein Kind hat das Ziel erreicht!" : lang === "fr" ? "Votre enfant a atteint l'objectif!" : lang === "it" ? "Il tuo bambino ha raggiunto l'obiettivo!" : "Your child reached the goal!"}
                 </div>
@@ -506,7 +525,14 @@ export default function RewardsPage() {
               <div key={r.id} className="flex items-center gap-3">
                 <span className="text-2xl">{r.emoji}</span>
                 <div className="flex-1">
-                  <div className="text-sm font-semibold text-gray-700">{r.title}</div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <div className="text-sm font-semibold text-gray-700">{r.title}</div>
+                    {isFamilyReward(r) && (
+                      <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-700">
+                        {familyRewardLabel()}
+                      </span>
+                    )}
+                  </div>
                   <div className="text-xs text-gray-400">
                     ✓ {r.redeemedAt ? new Date(r.redeemedAt).toLocaleDateString(
                       lang === "de" ? "de-CH" : lang === "fr" ? "fr-CH" : lang === "it" ? "it-CH" : "en-GB"

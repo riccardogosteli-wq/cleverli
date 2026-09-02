@@ -147,7 +147,7 @@ export default function ParentsDashboard() {
   const { lang } = useLang();
 
   // ⚠️ All hooks must be called unconditionally before any early returns (React rules)
-  const activeMember = useMemo(() => loaded ? loadActiveMember() : null, [loaded]);
+  const activeMember = loaded ? loadActiveMember() : null;
   const activeGrade = activeMember?.grade ?? 1;
   const stats = useMemo(() => loaded ? loadAllStats(activeMember?.curriculum) : [], [activeMember?.curriculum, loaded]);
   const subjectCoverage = useMemo(
@@ -178,15 +178,9 @@ export default function ParentsDashboard() {
   const weakSpots = stats.filter(s => s.stars <= 1 && s.completed > 0).sort((a, b) => a.stars - b.stars);
   // Strong topics: 3 stars
   const strongTopics = stats.filter(s => s.stars === 3);
-  // All played
-  const played = stats.filter(s => s.completed > 0);
-
   const heatmap = buildHeatmap(profile.playDates ?? []);
 
-  const totalCorrect = stats.reduce((sum, s) => sum + s.score, 0);
-  const avgAccuracy = played.length > 0
-    ? Math.round(stats.reduce((sum, s) => sum + (s.total > 0 ? s.score / s.total : 0), 0) / Math.max(1, played.length) * 100)
-    : 0;
+  const totalCorrect = stats.reduce((sum, s) => sum + Math.min(s.score, s.completed), 0);
 
   const recentAchievements = profile.achievements
     .slice(-5)
@@ -335,7 +329,7 @@ export default function ParentsDashboard() {
         {[
           { label: t("Level","Niveau","Livello","Level"), value: `${level.emoji} ${levelTitle}`, sub: `${profile.xp} XP` },
           { label: t("Streak","Série","Serie","Streak"), value: `🔥 ${profile.dailyStreak}`, sub: t("Tage in Folge","jours de suite","giorni di fila","days in a row") },
-          { label: t("Richtige Antworten","Bonnes réponses","Risposte corrette","Correct answers"), value: totalCorrect.toString(), sub: `~${avgAccuracy}% ${t("Genauigkeit","précision","precisione","accuracy")}` },
+          { label: t("Gelöste Aufgaben","Exercices résolus","Esercizi risolti","Solved tasks"), value: totalCorrect.toString(), sub: totalCorrect > 0 ? t("aus Themenfortschritt","depuis la progression","dal progresso","from topic progress") : t("noch keine Aufgaben","pas encore d'exercices","ancora nessun esercizio","no tasks yet") },
           { label: t("Trophäen","Trophées","Trofei","Trophies"), value: `${profile.achievements.length}/${ACHIEVEMENTS.length}`, sub: t("freigeschaltet","débloqués","sbloccati","unlocked") },
         ].map(s => (
           <div key={s.label} className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">

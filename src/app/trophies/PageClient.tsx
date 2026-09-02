@@ -9,7 +9,7 @@ import { getTopicSummaries } from "@/data/topicCatalog";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
 import { LEVELS, getLevelProgress } from "@/lib/xp";
 import AuthGuard from "@/components/AuthGuard";
-import { getReportingSubjects, readTopicProgressForChild } from "@/lib/reportingProgress";
+import { countCompletedExercisesForChild, getReportingSubjects, readTopicProgressForChild } from "@/lib/reportingProgress";
 
 // ─── TYPES ───────────────────────────────────────────────────────────────────
 interface TopicProgress {
@@ -290,6 +290,7 @@ export default function MissionenPage() {
   const overallCompleted = curriculumData?.reduce((s, d) => s + d.completedExercises, 0) ?? 0;
   const overallTotal     = curriculumData?.reduce((s, d) => s + d.totalExercises, 0) ?? 1;
   const overallPct = Math.round((overallCompleted / overallTotal) * 100);
+  const completedExercises = Math.max(profile.totalExercises, countCompletedExercisesForChild(getActiveProfileId(), activeMember?.curriculum));
 
   const levelProgress = getLevelProgress(profile.xp);
   const currentLevelData = LEVELS.slice().reverse().find(l => profile.xp >= l.minXp) ?? LEVELS[0];
@@ -348,7 +349,7 @@ export default function MissionenPage() {
               <div className="mt-1 flex gap-2 text-xs text-gray-400">
                 <span>🔥 {profile.dailyStreak} Tage</span>
                 <span>⭐ {profile.xp} XP</span>
-                <span>📝 {profile.totalExercises} Aufgaben</span>
+                <span>📝 {completedExercises} Aufgaben</span>
               </div>
             </div>
           </div>

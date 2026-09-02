@@ -145,7 +145,7 @@ export async function syncProfileToSupabase(childId: string, profile: Profile): 
   if (!parentId) return;
 
   try {
-    await supabase.from("child_progress").upsert({
+    const { error } = await supabase.from("child_progress").upsert({
       child_id: childId,
       parent_id: parentId,
       xp: profile.xp,
@@ -158,6 +158,7 @@ export async function syncProfileToSupabase(childId: string, profile: Profile): 
       costume: profile.costume,
       updated_at: new Date().toISOString(),
     }, { onConflict: "child_id" });
+    if (error) throw error;
   } catch (e) {
     console.warn("progressSync: profile sync failed", e);
   }
@@ -191,7 +192,7 @@ export async function syncTopicProgressToSupabase(
       partial: data.partial,
       last_played: data.lastPlayed,
     };
-    const { error } = await supabase.from("topic_progress").upsert(payload, { onConflict: "child_id, grade, subject, topic_id" });
+    const { error } = await supabase.from("topic_progress").upsert(payload, { onConflict: "child_id,grade,subject,topic_id" });
     if (error && /correct_ids/i.test(error.message)) {
       const legacyPayload = {
         child_id: payload.child_id,
@@ -205,7 +206,8 @@ export async function syncTopicProgressToSupabase(
         partial: payload.partial,
         last_played: payload.last_played,
       };
-      await supabase.from("topic_progress").upsert(legacyPayload, { onConflict: "child_id, grade, subject, topic_id" });
+      const { error: legacyError } = await supabase.from("topic_progress").upsert(legacyPayload, { onConflict: "child_id,grade,subject,topic_id" });
+      if (legacyError) throw legacyError;
     } else if (error) {
       throw error;
     }

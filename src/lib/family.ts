@@ -123,6 +123,8 @@ export function setActiveProfileId(id: string) {
   localStorage.setItem(getActiveProfileStorageKey(), id);
   const member = loadFamily().members.find(candidate => candidate.id === id);
   if (member?.grade) localStorage.setItem(getLastGradeStorageKey(), String(member.grade));
+  window.dispatchEvent(new CustomEvent("cleverli-active-profile-change", { detail: { childId: id } }));
+  window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
 }
 
 // Load profile for a specific member (profile key includes member id)

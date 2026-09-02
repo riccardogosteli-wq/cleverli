@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { loadRewards, getProgressValue, countCompletedTopics, countTotalStars, checkAndUnlockRewards, TRIGGER_LABELS, Reward, ProgressSnapshot } from "@/lib/rewards";
+import { loadRewards, getProgressValue, countCompletedExercises, countCompletedTopics, countTotalStars, checkAndUnlockRewards, TRIGGER_LABELS, Reward, ProgressSnapshot, isFamilyReward } from "@/lib/rewards";
 import { useLang } from "@/lib/LangContext";
 import RewardUnlockedModal from "./RewardUnlockedModal";
 import { getActiveProfileId, loadFamily } from "@/lib/family";
@@ -20,8 +20,9 @@ export default function RewardWidget({ profile }: Props) {
     const family = loadFamily();
     const activeMember = family.members.find((member) => member.id === activeId) ?? family.members[0] ?? null;
     const totalStars = countTotalStars(activeId, activeMember?.curriculum);
+    const completedExercises = countCompletedExercises(activeId, activeMember?.curriculum);
     const snapshot: ProgressSnapshot = {
-      totalExercises: profile.totalExercises,
+      totalExercises: Math.max(profile.totalExercises, completedExercises),
       totalTopicsComplete: countCompletedTopics(activeId, activeMember?.curriculum),
       dailyStreak: profile.dailyStreak,
       totalStars,
@@ -29,8 +30,8 @@ export default function RewardWidget({ profile }: Props) {
     setSnap(snapshot);
 
     // Check for newly unlocked rewards
-    const unlockedIds = checkAndUnlockRewards(snapshot);
-    const all = loadRewards();
+    const unlockedIds = checkAndUnlockRewards(snapshot, activeId);
+    const all = loadRewards(activeId);
     setRewards(all);
 
     if (unlockedIds.length > 0) {
@@ -51,6 +52,8 @@ export default function RewardWidget({ profile }: Props) {
 
   const triggerLabel = (type: Reward["triggerType"]) =>
     TRIGGER_LABELS[type][lang as keyof typeof TRIGGER_LABELS[typeof type]] ?? TRIGGER_LABELS[type].de;
+  const familyRewardLabel =
+    lang === "fr" ? "Famille" : lang === "it" ? "Famiglia" : lang === "en" ? "Family" : "Familie";
 
   return (
     <>
@@ -82,6 +85,11 @@ export default function RewardWidget({ profile }: Props) {
                 <span className={`text-3xl ${isUnlocked ? "animate-bounce" : ""}`}>{r.emoji}</span>
                 <div className="flex-1 min-w-0">
                   <div className="font-bold text-gray-800 text-sm truncate">{r.title}</div>
+                  {isFamilyReward(r) && (
+                    <div className="text-[11px] font-semibold text-amber-600 mt-0.5">
+                      {familyRewardLabel}
+                    </div>
+                  )}
                   {isUnlocked ? (
                     <div className="text-xs text-amber-700 font-semibold mt-0.5">
                       🎉 {lang === "fr" ? "Montre à maman ou papa !" : lang === "it" ? "Mostralo a mamma o papà!" : lang === "en" ? "Show mum or dad!" : "Zeig das Mama oder Papa!"}
