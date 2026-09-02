@@ -5,7 +5,7 @@ import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
 import { useSession } from "@/hooks/useSession";
 import { useLang } from "@/lib/LangContext";
-import { clearLegacyFamilyState } from "@/lib/accountScopedStorage";
+import { clearLocalFamilyStateOnLogout } from "@/lib/accountScopedStorage";
 import ParentPinGate from "@/components/ParentPinGate";
 
 export default function AccountPage() {
@@ -64,7 +64,7 @@ export default function AccountPage() {
     const supabase = getSupabase();
     if (supabase) await supabase.auth.signOut();
     localStorage.removeItem("cleverli_session");
-    clearLegacyFamilyState();
+    clearLocalFamilyStateOnLogout();
     router.push("/");
   };
 

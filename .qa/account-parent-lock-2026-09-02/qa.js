@@ -75,6 +75,27 @@ async function main() {
   if (await page.getByLabel("Neuen PIN eingeben").isVisible().catch(() => false)) throw new Error("PIN reset opened new PIN setup without verification.");
   await page.screenshot({ path: ".qa/account-parent-lock-2026-09-02/pin-reset-password-required.png", fullPage: true });
 
+  await page.evaluate(({ scopeB }) => {
+    localStorage.setItem("cleverli_1_math_zahlen-1-10", JSON.stringify({ completed: 7, score: 7 }));
+    localStorage.setItem("cleverli_profile_12345678-1234-1234-1234-123456789abc", JSON.stringify({ totalExercises: 99 }));
+    localStorage.setItem(`cleverli_parent_unlocked__${scopeB}`, JSON.stringify({ until: Date.now() + 100000 }));
+    const event = new StorageEvent("storage", { key: "noop" });
+    window.dispatchEvent(event);
+  }, { scopeB });
+  await page.goto(`${baseUrl}/account`, { waitUntil: "networkidle" });
+  if (await page.getByLabel("Eltern-PIN eingeben").isVisible().catch(() => false)) {
+    await page.getByLabel("Eltern-PIN eingeben").fill("2468");
+    await page.waitForTimeout(500);
+  }
+  await page.getByRole("button", { name: /Abmelden|Log out/i }).click();
+  await page.waitForTimeout(500);
+  const leakedKeys = await page.evaluate(() => Object.keys(localStorage).filter(key =>
+    key === "cleverli_1_math_zahlen-1-10" ||
+    key === "cleverli_profile_12345678-1234-1234-1234-123456789abc" ||
+    key.startsWith("cleverli_parent_unlocked__account_")
+  ));
+  if (leakedKeys.length > 0) throw new Error(`Logout cleanup left local data behind: ${leakedKeys.join(", ")}`);
+
   const seriousErrors = errors.filter(text => !/Failed to load resource|supabase|Auth session missing|Invalid Refresh Token/i.test(text));
   if (seriousErrors.length) throw new Error(`Console errors: ${seriousErrors.join(" | ")}`);
   await browser.close();

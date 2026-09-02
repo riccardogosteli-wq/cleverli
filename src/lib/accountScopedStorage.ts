@@ -102,3 +102,37 @@ export function clearLegacyFamilyState() {
   window.localStorage.removeItem("cleverli_profile");
   window.localStorage.removeItem("cleverli_last_grade");
 }
+
+function isLegacyTopicProgressKey(key: string): boolean {
+  return /^cleverli_[1-6]_[a-z]+_[a-z0-9-]+$/.test(key);
+}
+
+function isLegacyChildProfileKey(key: string): boolean {
+  return /^cleverli_profile_[a-f0-9-]{8,}$/i.test(key);
+}
+
+export function clearParentUnlockedSessions() {
+  if (typeof window === "undefined") return;
+  for (const key of Object.keys(window.localStorage)) {
+    if (key === "cleverli_parent_unlocked" || key.startsWith("cleverli_parent_unlocked__account_")) {
+      window.localStorage.removeItem(key);
+    }
+  }
+}
+
+export function clearLocalFamilyStateOnLogout() {
+  if (typeof window === "undefined") return;
+  clearLegacyFamilyState();
+  clearParentUnlockedSessions();
+  for (const key of Object.keys(window.localStorage)) {
+    if (
+      isLegacyTopicProgressKey(key) ||
+      isLegacyChildProfileKey(key) ||
+      key.startsWith("cleverli_family__account_") ||
+      key.startsWith("cleverli_active_profile__account_") ||
+      key.startsWith("cleverli_last_grade__account_")
+    ) {
+      window.localStorage.removeItem(key);
+    }
+  }
+}
