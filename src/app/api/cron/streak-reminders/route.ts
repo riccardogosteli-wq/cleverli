@@ -1,6 +1,18 @@
-import { NextResponse } from "next/server";
+import crypto from "crypto";
+import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import webpush from "web-push";
+
+function authorizedCronRequest(req: NextRequest) {
+  const expected = process.env.CRON_SECRET;
+  const token = req.headers.get("authorization")?.replace(/^Bearer\s+/i, "").trim();
+  if (!expected || !token) return false;
+
+  const expectedBuffer = Buffer.from(expected);
+  const tokenBuffer = Buffer.from(token);
+  return expectedBuffer.length === tokenBuffer.length
+    && crypto.timingSafeEqual(expectedBuffer, tokenBuffer);
+}
 
 function configureServices() {
   const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
@@ -14,7 +26,11 @@ function configureServices() {
   return createClient(supabaseUrl, serviceKey);
 }
 
-export async function GET() {
+export async function GET(req: NextRequest) {
+  if (!authorizedCronRequest(req)) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
   const supabase = configureServices();
   if (!supabase) {
     return NextResponse.json({ error: "push_not_configured" }, { status: 503 });
