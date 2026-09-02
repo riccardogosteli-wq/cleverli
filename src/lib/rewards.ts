@@ -6,6 +6,8 @@ import {
   getProgressSubjectsFromCatalog,
   getTopicSummaries,
 } from "@/data/topicCatalog";
+import { getActiveProfileId } from "@/lib/family";
+import { getRewardsStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 
 export type TriggerType = "tasks" | "topics" | "streak" | "stars";
@@ -62,14 +64,16 @@ export const TRIGGER_LABELS: Record<TriggerType, { de: string; fr: string; it: s
 export function loadRewards(): Reward[] {
   if (typeof window === "undefined") return [];
   try {
-    const raw = localStorage.getItem(REWARDS_KEY);
+    const raw = localStorage.getItem(getRewardsStorageKey()) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(REWARDS_KEY)
+    );
     return raw ? JSON.parse(raw) : [];
   } catch { return []; }
 }
 
 export function saveRewards(rewards: Reward[]) {
   if (typeof window === "undefined") return;
-  localStorage.setItem(REWARDS_KEY, JSON.stringify(rewards));
+  localStorage.setItem(getRewardsStorageKey(), JSON.stringify(rewards));
 }
 
 export function addReward(data: Omit<Reward, "id" | "status" | "createdAt">): Reward {
@@ -117,8 +121,11 @@ export function getProgressValue(snap: ProgressSnapshot, type: TriggerType): num
 
 function loadNormalisedTopicProgress(grade: number, subject: string, topicId: string, total: number) {
   if (typeof window === "undefined") return null;
+  const activeChildId = getActiveProfileId();
   for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
-    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+    const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topicId, activeChildId)) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`)
+    );
     if (!raw) continue;
     const progress = JSON.parse(raw);
     return {

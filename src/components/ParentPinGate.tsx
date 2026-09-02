@@ -1,6 +1,12 @@
 "use client";
 import { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
+import { getSupabase } from "@/lib/supabase";
+import {
+  getParentPinHashStorageKey,
+  getParentPinUnlockStorageKey,
+  hasAuthenticatedStorageScope,
+} from "@/lib/accountScopedStorage";
 
 const PIN_HASH_KEY = "cleverli_parent_pin";
 const PIN_SESSION_KEY = "cleverli_parent_unlocked";
@@ -15,7 +21,9 @@ function hashPin(pin: string): string {
 
 function isUnlocked(): boolean {
   try {
-    const raw = localStorage.getItem(PIN_SESSION_KEY);
+    const raw = localStorage.getItem(getParentPinUnlockStorageKey()) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(PIN_SESSION_KEY)
+    );
     if (!raw) return false;
     const { until } = JSON.parse(raw);
     return Date.now() < until;
@@ -23,10 +31,11 @@ function isUnlocked(): boolean {
 }
 
 function setUnlocked() {
-  localStorage.setItem(PIN_SESSION_KEY, JSON.stringify({ until: Date.now() + UNLOCK_DURATION_MS }));
+  localStorage.setItem(getParentPinUnlockStorageKey(), JSON.stringify({ until: Date.now() + UNLOCK_DURATION_MS }));
 }
 
 export function lockParentSession() {
+  localStorage.removeItem(getParentPinUnlockStorageKey());
   localStorage.removeItem(PIN_SESSION_KEY);
 }
 
@@ -36,12 +45,18 @@ export default function ParentPinGate({ children }: Props) {
   const [state, setState] = useState<"loading" | "unlocked" | "setup" | "enter">("loading");
   const [pin, setPin] = useState("");
   const [confirmPin, setConfirmPin] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
   const [attempts, setAttempts] = useState(0);
+  const [resetMode, setResetMode] = useState(false);
+  const [resetLoading, setResetLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const hasPin = !!localStorage.getItem(PIN_HASH_KEY);
+    const hasPin = !!(localStorage.getItem(getParentPinHashStorageKey()) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(PIN_HASH_KEY)
+    ));
     if (isUnlocked()) { setState("unlocked"); return; }
     setState(hasPin ? "enter" : "setup");
     setTimeout(() => inputRef.current?.focus(), 100);
@@ -50,13 +65,15 @@ export default function ParentPinGate({ children }: Props) {
   const handleSetup = () => {
     if (pin.length !== 4) { setError("PIN muss 4 Ziffern haben."); return; }
     if (pin !== confirmPin) { setError("PINs stimmen nicht überein."); setConfirmPin(""); return; }
-    localStorage.setItem(PIN_HASH_KEY, hashPin(pin));
+    localStorage.setItem(getParentPinHashStorageKey(), hashPin(pin));
     setUnlocked();
     setState("unlocked");
   };
 
   const handleEnter = useCallback(() => {
-    const stored = localStorage.getItem(PIN_HASH_KEY);
+    const stored = localStorage.getItem(getParentPinHashStorageKey()) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(PIN_HASH_KEY)
+    );
     if (hashPin(pin) === stored) {
       setUnlocked();
       setState("unlocked");
@@ -68,6 +85,38 @@ export default function ParentPinGate({ children }: Props) {
       setTimeout(() => inputRef.current?.focus(), 50);
     }
   }, [attempts, pin]);
+
+  const handleVerifiedReset = async () => {
+    if (!password) {
+      setError("Bitte bestätige zuerst dein Kontopasswort.");
+      return;
+    }
+    setResetLoading(true);
+    setError("");
+    setNotice("");
+    try {
+      const supabase = getSupabase();
+      if (!supabase) throw new Error("Auth unavailable");
+      const { data: { user } } = await supabase.auth.getUser();
+      const email = user?.email;
+      if (!email) throw new Error("Bitte melde dich neu an.");
+      const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
+      if (authError) throw authError;
+      localStorage.removeItem(getParentPinHashStorageKey());
+      lockParentSession();
+      setPin("");
+      setConfirmPin("");
+      setPassword("");
+      setResetMode(false);
+      setNotice("Passwort bestätigt. Lege jetzt einen neuen PIN fest.");
+      setState("setup");
+      setTimeout(() => inputRef.current?.focus(), 100);
+    } catch {
+      setError("Passwort stimmt nicht. Der PIN wurde nicht zurückgesetzt.");
+    } finally {
+      setResetLoading(false);
+    }
+  };
 
   // Auto-submit when 4 digits entered
   useEffect(() => {
@@ -122,6 +171,7 @@ export default function ParentPinGate({ children }: Props) {
           </div>
 
           {error && <p className="text-sm text-red-600 font-medium">{error}</p>}
+          {notice && <p className="text-sm text-green-700 font-medium">{notice}</p>}
 
           <button
             onClick={handleSetup}
@@ -138,35 +188,65 @@ export default function ParentPinGate({ children }: Props) {
             <p className="text-gray-400 text-sm mt-2">Bitte gib deinen 4-stelligen PIN ein.</p>
           </div>
 
-          <input
-            id="parent-pin-enter"
-            aria-label="Eltern-PIN eingeben"
-            ref={inputRef}
-            type="password"
-            inputMode="numeric"
-            maxLength={4}
-            value={pin}
-            onChange={e => { setPin(e.target.value.replace(/\D/g, "")); setError(""); }}
-            placeholder="● ● ● ●"
-            className="w-full text-center text-3xl font-bold tracking-[0.5em] border-2 border-gray-200 rounded-2xl py-4 outline-none focus:border-green-500 bg-white"
-            autoFocus
-          />
+          {resetMode ? (
+            <div className="space-y-3 text-left">
+              <p className="text-sm text-gray-500 text-center">
+                Bestätige dein Kontopasswort, bevor du einen neuen PIN festlegst.
+              </p>
+              <div>
+                <label htmlFor="parent-pin-reset-password" className="text-xs text-gray-500 font-semibold tracking-wide block mb-1">Kontopasswort</label>
+                <input
+                  id="parent-pin-reset-password"
+                  type="password"
+                  value={password}
+                  onChange={e => { setPassword(e.target.value); setError(""); }}
+                  className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3 outline-none focus:border-green-500 bg-white"
+                  autoComplete="current-password"
+                />
+              </div>
+            </div>
+          ) : (
+            <input
+              id="parent-pin-enter"
+              aria-label="Eltern-PIN eingeben"
+              ref={inputRef}
+              type="password"
+              inputMode="numeric"
+              maxLength={4}
+              value={pin}
+              onChange={e => { setPin(e.target.value.replace(/\D/g, "")); setError(""); }}
+              placeholder="● ● ● ●"
+              className="w-full text-center text-3xl font-bold tracking-[0.5em] border-2 border-gray-200 rounded-2xl py-4 outline-none focus:border-green-500 bg-white"
+              autoFocus
+            />
+          )}
 
           {error && <p className="text-sm text-red-600 font-medium">{error}</p>}
+          {notice && <p className="text-sm text-green-700 font-medium">{notice}</p>}
+
+          {resetMode ? (
+            <button
+              onClick={handleVerifiedReset}
+              disabled={resetLoading || !password}
+              className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40"
+            >
+              {resetLoading ? "Prüfen …" : "Passwort bestätigen"}
+            </button>
+          ) : (
+            <button
+              onClick={handleEnter}
+              disabled={pin.length !== 4}
+              className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40"
+            >
+              Entsperren →
+            </button>
+          )}
 
           <button
-            onClick={handleEnter}
-            disabled={pin.length !== 4}
-            className="w-full bg-green-700 text-white py-4 rounded-2xl font-bold text-base hover:bg-green-700 active:scale-95 transition-all disabled:opacity-40"
-          >
-            Entsperren →
-          </button>
-
-          <button
-            onClick={() => { localStorage.removeItem(PIN_HASH_KEY); setState("setup"); setPin(""); setError(""); }}
+            onClick={() => { setResetMode(mode => !mode); setPin(""); setPassword(""); setError(""); setNotice(""); }}
             className="text-xs text-gray-400 hover:text-gray-600 underline"
           >
-            PIN vergessen? PIN zurücksetzen
+            {resetMode ? "Zurück zur PIN-Eingabe" : "PIN vergessen? Mit Passwort zurücksetzen"}
           </button>
         </>
       )}

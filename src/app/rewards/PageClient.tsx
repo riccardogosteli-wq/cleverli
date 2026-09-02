@@ -19,6 +19,8 @@ import {
 import { startCheckout } from "@/lib/checkoutClient";
 import { BelohnungenGuestPreview } from "@/components/GuestPreview";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
+import { getActiveProfileId } from "@/lib/family";
+import { getProfileStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 
 const TRIGGER_PRESETS: { type: TriggerType; values: number[] }[] = [
   { type: "tasks",  values: [10, 20, 50, 100] },
@@ -54,8 +56,8 @@ export default function RewardsPage() {
     const totalTopicsComplete = countCompletedTopics();
     const totalStars = countTotalStars();
     // ✅ Use active child's profile key, not the global fallback
-    const activeId = typeof window !== "undefined" ? localStorage.getItem("cleverli_active_profile") : null;
-    const profileKey = activeId ? `cleverli_profile_${activeId}` : "cleverli_profile";
+    const activeId = getActiveProfileId();
+    const profileKey = getProfileStorageKey(activeId);
     const raw = typeof window !== "undefined" ? localStorage.getItem(profileKey) : null;
     const profile = raw ? JSON.parse(raw) : {};
     setSnap({
@@ -79,7 +81,9 @@ export default function RewardsPage() {
           let raw: string | null = null;
           if (typeof window !== "undefined") {
             for (const progressSubject of getProgressSubjectsFromCatalog(g, s.id, t.id)) {
-              raw = localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`);
+              raw = localStorage.getItem(getTopicProgressStorageKey(g, progressSubject, t.id, getActiveProfileId())) ?? (
+                hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`)
+              );
               if (raw) break;
             }
           }

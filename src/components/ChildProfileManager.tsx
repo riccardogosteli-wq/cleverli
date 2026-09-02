@@ -12,6 +12,7 @@ import { getCurriculumRolloutContext, isCurriculumProfilesRolloutEnabled } from 
 import { getAnonymousSessionId } from "@/lib/attribution";
 import { captureProductEvent } from "@/lib/monitoring";
 import { trackUserActivity } from "@/lib/userActivityClient";
+import { getActiveProfileStorageKey, getLastGradeStorageKey } from "@/lib/accountScopedStorage";
 
 function AvatarPicker({ value, onChange, labelId }: { value: string; onChange: (a: string) => void; labelId: string }) {
   return (
@@ -311,7 +312,7 @@ export default function ChildProfileManager() {
     const remaining = loadFamily().members;
     if (activeId === id) {
       if (remaining.length > 0) setActiveProfileId(remaining[0].id);
-      else localStorage.removeItem("cleverli_active_profile");
+      else localStorage.removeItem(getActiveProfileStorageKey());
       window.location.reload();
       return;
     }
@@ -324,9 +325,9 @@ export default function ChildProfileManager() {
     if (!member) return;
     member.grade = newGrade;
     saveFamily(family);
-    // Also update cleverli_last_grade if this is the active profile
+    // Also update last grade if this is the active profile.
     if (id === activeId) {
-      localStorage.setItem("cleverli_last_grade", String(newGrade));
+      localStorage.setItem(getLastGradeStorageKey(), String(newGrade));
     }
     // Fire-and-forget sync to Supabase
     updateChildInSupabase(id, { grade: newGrade });

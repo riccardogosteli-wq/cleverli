@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useLang } from "@/lib/LangContext";
+import { getLastGradeStorageKey } from "@/lib/accountScopedStorage";
 
 const GRADES = [1, 2, 3, 4, 5, 6];
 const ONBOARDING_KEY = "cleverli_new_user";
@@ -22,7 +23,7 @@ export default function OnboardingModal() {
 
   useEffect(() => {
     const isNew = localStorage.getItem(ONBOARDING_KEY) === "true";
-    const hasGrade = localStorage.getItem(GRADE_KEY);
+    const hasGrade = localStorage.getItem(getLastGradeStorageKey()) ?? localStorage.getItem(GRADE_KEY);
     const role = localStorage.getItem(ROLE_KEY) ?? "";
     setIsParent(role === "parent");
     if (isNew || !hasGrade) setVisible(true);
@@ -30,7 +31,7 @@ export default function OnboardingModal() {
 
   const handleGradeSelect = (g: number) => {
     setGrade(g);
-    localStorage.setItem(GRADE_KEY, String(g));
+    localStorage.setItem(getLastGradeStorageKey(), String(g));
     setStep("explain");
   };
 

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
 import { useSession } from "@/hooks/useSession";
 import { useLang } from "@/lib/LangContext";
+import { clearLegacyFamilyState } from "@/lib/accountScopedStorage";
+import ParentPinGate from "@/components/ParentPinGate";
 
 export default function AccountPage() {
   const { session, loaded } = useSession();
@@ -62,6 +64,7 @@ export default function AccountPage() {
     const supabase = getSupabase();
     if (supabase) await supabase.auth.signOut();
     localStorage.removeItem("cleverli_session");
+    clearLegacyFamilyState();
     router.push("/");
   };
 
@@ -174,6 +177,7 @@ export default function AccountPage() {
   }
 
   return (
+    <ParentPinGate>
     <div className="min-h-screen bg-green-50 px-4 py-8 pb-24">
       <div className="max-w-sm mx-auto space-y-5">
 
@@ -447,5 +451,6 @@ export default function AccountPage() {
 
       </div>
     </div>
+    </ParentPinGate>
   );
 }

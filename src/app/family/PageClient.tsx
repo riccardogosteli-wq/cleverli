@@ -19,6 +19,9 @@ import { getAnonymousSessionId } from "@/lib/attribution";
 import { captureProductEvent } from "@/lib/monitoring";
 import { trackUserActivity } from "@/lib/userActivityClient";
 import { createChildInSupabase, deleteChildFromSupabase } from "@/lib/progressSync";
+import ParentPinGate from "@/components/ParentPinGate";
+import AuthGuard from "@/components/AuthGuard";
+import { getProfileStorageKey } from "@/lib/accountScopedStorage";
 
 interface MemberStat extends FamilyMember {
   xp: number;
@@ -119,13 +122,15 @@ export default function FamilyPage() {
 
   function handleReset(id: string) {
     // Clear profile stats (XP, streak, achievements) — keeps family member entry intact
-    localStorage.removeItem(`cleverli_profile_${id}`);
+    localStorage.removeItem(getProfileStorageKey(id));
     setConfirmReset(null);
     setResetInput("");
     refresh();
   }
 
   return (
+    <AuthGuard>
+    <ParentPinGate>
     <main className="max-w-lg mx-auto px-4 py-6 pb-40 sm:pb-12 space-y-5">
       {/* Header */}
       <div className="flex items-center gap-3">
@@ -373,5 +378,7 @@ export default function FamilyPage() {
         </Link>
       </div>
     </main>
+    </ParentPinGate>
+    </AuthGuard>
   );
 }

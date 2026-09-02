@@ -32,6 +32,7 @@ import RewardUnlockedModal from "./RewardUnlockedModal";
 import { getLevelForXp, getNextLevel } from "@/lib/xp";
 import SignupPromptModal from "./SignupPromptModal";
 import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
+import { getProfileStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 import { trackExerciseEvent, ExerciseTelemetryPayload } from "@/lib/exerciseTelemetry";
 import { startCheckout } from "@/lib/checkoutClient";
 import { captureAppError } from "@/lib/monitoring";
@@ -82,8 +83,11 @@ function getStoredCompleted(topic: Topic, grade: number, subject: string) {
 
 function getStoredProgress(grade: number, subject: string, topicId: string) {
   if (typeof window === "undefined") return null;
+  const activeChildId = getActiveProfileId();
   for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
-    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+    const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topicId, activeChildId)) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`)
+    );
     if (raw) return JSON.parse(raw);
   }
   return null;
@@ -281,7 +285,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const completed = Math.min(topic.exercises.length, correctIds.size);
       const s = calcStars(score, Math.max(1, idx)); // stars based on the current free session
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
-      localStorage.setItem(`cleverli_${grade}_${subject}_${topic.id}`, JSON.stringify({
+      localStorage.setItem(getTopicProgressStorageKey(grade, subject, topic.id, getActiveProfileId()), JSON.stringify({
         ...existing,
         completed, score, stars: s, correctIds: Array.from(correctIds), partial: true, lastPlayed: new Date().toISOString()
       }));
@@ -293,7 +297,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   useEffect(() => {
     if (done) {
       if (isReplayMode || isReviewMode) return;
-      const key = `cleverli_${grade}_${subject}_${topic.id}`;
+      const key = getTopicProgressStorageKey(grade, subject, topic.id, getActiveProfileId());
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       const prevScore = existing?.score ?? 0;
       const prevStars = existing?.stars ?? 0;
@@ -444,7 +448,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
     // Update localStorage topic progress with current completed count (for tier display)
     if (correct && !isReplayMode) {
-      const topicKey = `cleverli_${grade}_${subject}_${topic.id}`;
+      const topicKey = getTopicProgressStorageKey(grade, subject, topic.id, getActiveProfileId());
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       localStorage.setItem(topicKey, JSON.stringify({
         ...existing,
@@ -462,7 +466,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           const totalStars = countTotalStars();
           const totalTopicsComplete = countCompletedTopics();
           // Build snapshot from localStorage profile (rewards.ts reads it internally)
-          const profileRaw = typeof window !== "undefined" ? localStorage.getItem("cleverli_profile") : null;
+          const profileRaw = typeof window !== "undefined" ? localStorage.getItem(getProfileStorageKey(getActiveProfileId())) : null;
           const prof = profileRaw ? JSON.parse(profileRaw) : null;
           if (prof) {
             const snap = {
@@ -551,7 +555,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // UJ-7: start review round
   const startReview = () => {
     if (!isReplayMode && !isReviewMode) {
-      const key = `cleverli_${grade}_${subject}_${topic.id}`;
+      const key = getTopicProgressStorageKey(grade, subject, topic.id, getActiveProfileId());
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       const prevScore = existing?.score ?? 0;
       const prevStars = existing?.stars ?? 0;

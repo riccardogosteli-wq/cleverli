@@ -15,6 +15,8 @@ import CountingGame from "@/components/exercises/CountingGame";
 import HintSystem from "@/components/HintSystem";
 import { useSound } from "@/hooks/useSound";
 import StreakMilestone from "@/components/StreakMilestone";
+import { getActiveProfileId, loadFamily } from "@/lib/family";
+import { getLastGradeStorageKey } from "@/lib/accountScopedStorage";
 
 
 
@@ -27,12 +29,12 @@ export default function DailyPage() {
     if (typeof window === "undefined") return 1;
     // ✅ Prefer active child's grade from family store
     try {
-      const activeId = localStorage.getItem("cleverli_active_profile");
-      const family = JSON.parse(localStorage.getItem("cleverli_family") ?? "{}");
+      const activeId = getActiveProfileId();
+      const family = loadFamily();
       const member = (family.members ?? []).find((m: { id: string; grade: number }) => m.id === activeId);
       if (member?.grade && [1,2,3,4,5,6].includes(member.grade)) return member.grade;
     } catch { /* fall through */ }
-    const saved = localStorage.getItem("cleverli_last_grade");
+    const saved = localStorage.getItem(getLastGradeStorageKey());
     const g = saved ? parseInt(saved) : 1;
     return [1,2,3,4,5,6].includes(g) ? g : 1;
   });

@@ -7,6 +7,13 @@ import {
   parseCurriculumSelection,
   type CurriculumSelection,
 } from "@/lib/curriculumProfiles";
+import {
+  getActiveProfileStorageKey,
+  getFamilyStorageKey,
+  getLastGradeStorageKey,
+  getProfileStorageKey,
+  hasAuthenticatedStorageScope,
+} from "@/lib/accountScopedStorage";
 
 export const MAX_PROFILES = 3;
 export const FAMILY_KEY = "cleverli_family";
@@ -28,7 +35,10 @@ export interface FamilyStore {
 export function loadFamily(): FamilyStore {
   if (typeof window === "undefined") return { members: [] };
   try {
-    const raw = localStorage.getItem(FAMILY_KEY);
+    const scopedKey = getFamilyStorageKey();
+    const raw = localStorage.getItem(scopedKey) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(FAMILY_KEY)
+    );
     if (!raw) return { members: [] };
     const parsed = JSON.parse(raw);
     // Migration: old format used "children" instead of "members"
@@ -49,7 +59,7 @@ export function loadFamily(): FamilyStore {
 
 export function saveFamily(store: FamilyStore) {
   if (typeof window === "undefined") return;
-  localStorage.setItem(FAMILY_KEY, JSON.stringify(store));
+  localStorage.setItem(getFamilyStorageKey(), JSON.stringify(store));
 }
 
 export function addMember(
@@ -98,25 +108,31 @@ export function removeMember(id: string) {
   saveFamily(store);
   // Clean up their profile data
   if (typeof window !== "undefined") {
-    localStorage.removeItem(`cleverli_profile_${id}`);
+    localStorage.removeItem(getProfileStorageKey(id));
   }
 }
 
 export function getActiveProfileId(): string | null {
   if (typeof window === "undefined") return null;
-  return localStorage.getItem(ACTIVE_PROFILE_KEY);
+  return localStorage.getItem(getActiveProfileStorageKey()) ?? (
+    hasAuthenticatedStorageScope() ? null : localStorage.getItem(ACTIVE_PROFILE_KEY)
+  );
 }
 
 export function setActiveProfileId(id: string) {
   if (typeof window === "undefined") return;
-  localStorage.setItem(ACTIVE_PROFILE_KEY, id);
+  localStorage.setItem(getActiveProfileStorageKey(), id);
+  const member = loadFamily().members.find(candidate => candidate.id === id);
+  if (member?.grade) localStorage.setItem(getLastGradeStorageKey(), String(member.grade));
 }
 
 // Load profile for a specific member (profile key includes member id)
 export function loadMemberProfile(id: string): Profile | null {
   if (typeof window === "undefined") return null;
   try {
-    const raw = localStorage.getItem(`cleverli_profile_${id}`);
+    const raw = localStorage.getItem(getProfileStorageKey(id)) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_profile_${id}`)
+    );
     return raw ? JSON.parse(raw) : null;
   } catch { return null; }
 }

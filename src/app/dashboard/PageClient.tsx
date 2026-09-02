@@ -22,6 +22,7 @@ import { getTierProgressFromCounts } from "@/lib/tierProgress";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 import RewardWidget from "@/components/RewardWidget";
 import { DashboardGuestPreview } from "@/components/GuestPreview";
+import { getLastGradeStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 
 const GRADE_COLORS = [
   { base: "bg-blue-50 border-blue-300 text-blue-800 hover:bg-blue-100 active:bg-blue-200", emoji: "🐣" },
@@ -96,8 +97,11 @@ const GRADE_KEY = "cleverli_last_grade";
 function getProgress(grade: number, subject: string, topic: TopicSummary) {
   if (typeof window === "undefined") return null;
   try {
+    const activeChildId = getActiveProfileId();
     for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+      const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
+        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
+      );
       if (raw) {
         const progress = JSON.parse(raw);
         return {
@@ -224,10 +228,10 @@ function DashboardInner() {
       if (member?.grade) {
         // ✅ Always use the child's stored grade — not the global last-used key
         setGrade(member.grade);
-        localStorage.setItem(GRADE_KEY, String(member.grade));
+        localStorage.setItem(getLastGradeStorageKey(), String(member.grade));
       } else {
         // Guest / no profile: fall back to last-used grade
-        const saved = localStorage.getItem(GRADE_KEY);
+        const saved = localStorage.getItem(getLastGradeStorageKey()) ?? localStorage.getItem(GRADE_KEY);
         if (saved) setGrade(parseInt(saved));
       }
     }
@@ -253,7 +257,7 @@ function DashboardInner() {
   }, [activeMember?.curriculum, grade, subject]);
 
   const chooseGrade = (g: number) => {
-    localStorage.setItem(GRADE_KEY, String(g));
+    localStorage.setItem(getLastGradeStorageKey(), String(g));
     setGrade(g);
     // ✅ Also persist grade back to the child's family profile
     const family = loadFamily();

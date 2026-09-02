@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { getSupabase } from "@/lib/supabase";
 import { restoreFamilyFromSupabase } from "@/lib/progressSync";
+import { clearLegacyFamilyState } from "@/lib/accountScopedStorage";
 
 export interface Session {
   email: string;
@@ -196,6 +197,7 @@ export function useSession() {
   const logout = async () => {
     // Remove cache BEFORE signOut so the SIGNED_OUT listener sees no cache and clears state
     localStorage.removeItem(SESSION_KEY);
+    clearLegacyFamilyState();
     setSession(null);
     setPremiumVerified(false);
     setPremiumChecked(true);

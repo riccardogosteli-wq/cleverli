@@ -5,6 +5,14 @@
  */
 import { getSupabase } from "@/lib/supabase";
 import { ACTIVE_PROFILE_KEY, FAMILY_KEY, type FamilyMember, type FamilyStore } from "@/lib/family";
+import {
+  getActiveProfileStorageKey,
+  getFamilyStorageKey,
+  getLastGradeStorageKey,
+  getProfileStorageKey,
+  getTopicProgressStorageKey,
+  hasAuthenticatedStorageScope,
+} from "@/lib/accountScopedStorage";
 import type { Profile } from "@/hooks/useProfile";
 import {
   parseCurriculumSelection,
@@ -250,7 +258,7 @@ export async function loadTopicProgressFromSupabase(
 function writeTopicProgressToLocalStorage(topicData: SupabaseTopicProgress[]) {
   if (typeof window === "undefined") return;
   for (const t of topicData) {
-    const key = `cleverli_${t.grade}_${t.subject}_${t.topic_id}`;
+    const key = getTopicProgressStorageKey(t.grade, t.subject, t.topic_id, t.child_id);
     const remote = {
       stars: t.stars,
       score: t.score,
@@ -314,7 +322,7 @@ async function restoreActiveChildProgress(childId: string, accessToken?: string)
 
   if (typeof window === "undefined") return;
   if (profileHasProgress(remoteProfile)) {
-    const key = `cleverli_profile_${childId}`;
+    const key = getProfileStorageKey(childId);
     const raw = localStorage.getItem(key);
     const localProfile = raw ? JSON.parse(raw) : {};
     localStorage.setItem(key, JSON.stringify({ ...localProfile, ...remoteProfile }));
@@ -353,19 +361,23 @@ export async function restoreFamilyFromSupabase(): Promise<void> {
         ...(curriculum ? { curriculum } : {}),
       };
     });
-    const existingRaw = localStorage.getItem(FAMILY_KEY);
+    const existingRaw = localStorage.getItem(getFamilyStorageKey()) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(FAMILY_KEY)
+    );
     const existingStore = existingRaw ? JSON.parse(existingRaw) as FamilyStore : { members: [] };
     const existingById = new Map((existingStore.members ?? []).map(member => [member.id, member]));
     const mergedMembers = remoteMembers.map(member => ({ ...existingById.get(member.id), ...member }));
 
-    localStorage.setItem(FAMILY_KEY, JSON.stringify({ members: mergedMembers }));
+    localStorage.setItem(getFamilyStorageKey(), JSON.stringify({ members: mergedMembers }));
 
-    const activeId = localStorage.getItem(ACTIVE_PROFILE_KEY);
+    const activeId = localStorage.getItem(getActiveProfileStorageKey()) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(ACTIVE_PROFILE_KEY)
+    );
     const validActiveId = activeId && mergedMembers.some(member => member.id === activeId)
       ? activeId
       : mergedMembers[0].id;
-    localStorage.setItem(ACTIVE_PROFILE_KEY, validActiveId);
-    localStorage.setItem("cleverli_last_grade", String(mergedMembers.find(member => member.id === validActiveId)?.grade ?? 1));
+    localStorage.setItem(getActiveProfileStorageKey(), validActiveId);
+    localStorage.setItem(getLastGradeStorageKey(), String(mergedMembers.find(member => member.id === validActiveId)?.grade ?? 1));
 
     await restoreActiveChildProgress(validActiveId, cachedAuth?.accessToken);
     window.dispatchEvent(new CustomEvent("cleverli-family-restored"));

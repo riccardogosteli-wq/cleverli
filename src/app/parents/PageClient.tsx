@@ -22,6 +22,7 @@ import { useSession } from "@/hooks/useSession";
 import { ParentsGuestPreview } from "@/components/GuestPreview";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { getActiveProfileId, loadFamily, type FamilyMember } from "@/lib/family";
+import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 import {
   CANTON_NAMES,
   getAvailableCurriculumSubjectIds,
@@ -74,8 +75,11 @@ function loadActiveMember(): FamilyMember | null {
 function loadTopicProgress(grade: number, subject: string, topic: TopicSummary): TopicProgress | null {
   if (typeof window === "undefined") return null;
   try {
+    const activeChildId = getActiveProfileId();
     for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+      const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
+        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
+      );
       if (!raw) continue;
       const progress = JSON.parse(raw);
       return {
@@ -119,6 +123,7 @@ function buildSubjectCoverage(grade: number, curriculum?: CurriculumSelection): 
 function loadAllStats(): TopicStat[] {
   if (typeof window === "undefined") return [];
   const stats: TopicStat[] = [];
+  const activeChildId = getActiveProfileId();
   for (const grade of [1,2,3,4,5,6]) {
     for (const subject of getCatalogSubjects(grade).map((item) => item.id)) {
       const topics = getTopicSummaries(grade, subject);
@@ -126,7 +131,9 @@ function loadAllStats(): TopicStat[] {
         try {
           let raw: string | null = null;
           for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-            raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+            raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
+              hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
+            );
             if (raw) break;
           }
           if (!raw) continue;

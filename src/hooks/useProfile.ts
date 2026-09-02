@@ -8,6 +8,12 @@ import {
   getTopicSummaries,
 } from "@/data/topicCatalog";
 import { getActiveProfileId } from "@/lib/family";
+import {
+  getActiveProfileStorageKey,
+  getProfileStorageKey,
+  getTopicProgressStorageKey,
+  hasAuthenticatedStorageScope,
+} from "@/lib/accountScopedStorage";
 import { syncProfileToSupabase, loadProfileFromSupabase, loadTopicProgressFromSupabase } from "@/lib/progressSync";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 
@@ -32,13 +38,10 @@ export interface Profile {
   equippedItems: { hat?: string; accessory?: string; background?: string };
 }
 
-const PROFILE_KEY = "cleverli_profile";
-const STREAK_KEY  = "cleverli_streak";
-
 /** Returns the localStorage key for the currently active child profile, or the global key. */
 function getActiveProfileKey(): string {
   const childId = getActiveProfileId();
-  return childId ? `cleverli_profile_${childId}` : PROFILE_KEY;
+  return getProfileStorageKey(childId);
 }
 
 const DEFAULT_PROFILE: Profile = {
@@ -107,7 +110,9 @@ function isSubjectComplete(grade: number, subject: string): boolean {
   return topics.every(t => {
     let raw: string | null = null;
     for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, t.id)) {
-      raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${t.id}`);
+      raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, t.id, getActiveProfileId())) ?? (
+        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${t.id}`)
+      );
       if (raw) break;
     }
     if (!raw) return false;
@@ -199,7 +204,9 @@ function checkAchievements(profile: Profile, opts: {
       return topics.every((t) => {
         try {
           return getProgressSubjectsFromCatalog(g, "science", t.id).some(progressSubject => {
-            const raw = localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`);
+            const raw = localStorage.getItem(getTopicProgressStorageKey(g, progressSubject, t.id, getActiveProfileId())) ?? (
+              hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${g}_${progressSubject}_${t.id}`)
+            );
             if (!raw) return false;
             return getEffectiveCompleted(JSON.parse(raw), t.exerciseCount) >= t.exerciseCount;
           });
@@ -259,7 +266,7 @@ export function useProfile() {
   useEffect(() => {
     // Listen for active profile key change from another tab or after reload
     const onStorage = (e: StorageEvent) => {
-      if (e.key === "cleverli_active_profile") reloadProfile();
+      if (e.key === getActiveProfileStorageKey() || e.key === "cleverli_active_profile") reloadProfile();
     };
     const onFamilyRestored = () => reloadProfile();
     window.addEventListener("storage", onStorage);
@@ -306,7 +313,7 @@ export function useProfile() {
         // Restore topic progress into localStorage
         if (topicData) {
           for (const t of topicData) {
-            const key = `cleverli_${t.grade}_${t.subject}_${t.topic_id}`;
+            const key = getTopicProgressStorageKey(t.grade, t.subject, t.topic_id, childId);
             if (!localStorage.getItem(key)) {
               localStorage.setItem(key, JSON.stringify({
                 stars: t.stars, score: t.score, completed: t.completed,

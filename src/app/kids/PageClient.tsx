@@ -18,6 +18,8 @@ import {
 } from "@/data/topicCatalog";
 import { isDailyDoneToday } from "@/lib/dailyState";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
+import { getActiveProfileId } from "@/lib/family";
+import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 
 const COSTUME_IMAGES = [
   "/cleverli-wave.png",
@@ -39,8 +41,11 @@ const GRADE_COLORS = [
 function getTopicDone(grade: number, subject: string, topicId: string, total: number): boolean {
   if (typeof window === "undefined") return false;
   try {
+    const activeChildId = getActiveProfileId();
     for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
-      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+      const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topicId, activeChildId)) ?? (
+        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`)
+      );
       if (!raw) continue;
       const p = JSON.parse(raw);
       return getEffectiveCompleted(p, total) >= total;

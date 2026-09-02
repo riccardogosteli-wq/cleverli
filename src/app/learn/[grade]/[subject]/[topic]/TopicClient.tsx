@@ -10,12 +10,17 @@ import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
 import { getEffectiveCompleted } from "@/lib/topicProgress";
 import { getTopicTitle } from "@/data/topicTitles";
 import { useLang } from "@/lib/LangContext";
+import { getActiveProfileId } from "@/lib/family";
+import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 
 interface Props { topic: Topic; grade: number; subject: string; nextTopicId?: string | null; }
 
 function loadProgress(grade: number, subject: string, topic: Topic) {
+  const activeChildId = getActiveProfileId();
   for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topic.id)) {
-    const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`);
+    const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, activeChildId)) ?? (
+      hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
+    );
     if (raw) {
       const progress = JSON.parse(raw);
       return {

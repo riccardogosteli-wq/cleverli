@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
 import { loadFamily, getActiveProfileId } from "@/lib/family";
+import { getLastGradeStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 import {
   CORE_SUBJECTS,
   getProgressSubjectsFromCatalog,
@@ -32,8 +33,11 @@ interface TopicProgress {
 function loadTopicProgress(grade: number, subject: string, topicId: string, total: number): { completed: number; stars: number } {
   if (typeof window === "undefined") return { completed: 0, stars: 0 };
   try {
+    const activeChildId = getActiveProfileId();
     for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject, topicId)) {
-      const raw = localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`);
+      const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topicId, activeChildId)) ?? (
+        hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topicId}`)
+      );
       if (!raw) continue;
       const d = JSON.parse(raw);
       return { completed: getEffectiveCompleted(d, total), stars: d.stars ?? 0 };
@@ -209,12 +213,12 @@ export default function MissionenPage() {
   const grade = useMemo(() => {
     if (typeof window === "undefined") return 1;
     try {
-      const activeId = localStorage.getItem("cleverli_active_profile");
+      const activeId = getActiveProfileId();
       const family = loadFamily();
       const member = family.members.find(m => m.id === activeId);
       if (member?.grade) return member.grade;
     } catch { /* */ }
-    const saved = localStorage.getItem("cleverli_last_grade");
+    const saved = localStorage.getItem(getLastGradeStorageKey());
     return saved ? parseInt(saved) : 1;
   }, []);
 
@@ -222,7 +226,7 @@ export default function MissionenPage() {
   const childName = useMemo(() => {
     if (typeof window === "undefined") return null;
     try {
-      const activeId = localStorage.getItem("cleverli_active_profile");
+      const activeId = getActiveProfileId();
       const family = loadFamily();
       const member = family.members.find(m => m.id === activeId);
       return member ? { name: member.name, avatar: member.avatar } : null;
