@@ -4,6 +4,7 @@ import { getLevelForXp, getNextLevel, calcXpGain } from "@/lib/xp";
 import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
 import {
   CORE_SUBJECTS,
+  getCatalogSubjects,
   getProgressSubjectsFromCatalog,
   getTopicSummaries,
 } from "@/data/topicCatalog";
@@ -15,7 +16,7 @@ import {
   hasAuthenticatedStorageScope,
 } from "@/lib/accountScopedStorage";
 import { syncProfileToSupabase, loadProfileFromSupabase, loadTopicProgressFromSupabase } from "@/lib/progressSync";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
+import { getEffectiveCompleted, getEffectiveScore } from "@/lib/topicProgress";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -90,7 +91,12 @@ function loadProfile(): Profile {
     // If a child has no local data yet, they're genuinely new (XP=0).
     // Falling back would bleed the previous child's XP into the new one.
     if (!raw) return DEFAULT_PROFILE;
-    return { ...DEFAULT_PROFILE, ...JSON.parse(raw) };
+    const parsed = { ...DEFAULT_PROFILE, ...JSON.parse(raw) };
+    const sanitized = sanitizeAchievementsForProgress(parsed);
+    if (sanitized.achievements.length !== parsed.achievements.length) {
+      localStorage.setItem(key, JSON.stringify(sanitized));
+    }
+    return sanitized;
   } catch { return DEFAULT_PROFILE; }
 }
 
@@ -123,6 +129,51 @@ function isSubjectComplete(grade: number, subject: string): boolean {
 
 function isGradeComplete(grade: number): boolean {
   return CORE_SUBJECTS.every(s => isSubjectComplete(grade, s.id));
+}
+
+function getTopicCompletionEvidence() {
+  if (typeof window === "undefined") return { hasCompletedTopic: false, hasPerfectTopic: false };
+
+  let hasCompletedTopic = false;
+  let hasPerfectTopic = false;
+
+  for (const grade of [1, 2, 3, 4, 5, 6]) {
+    for (const subject of getCatalogSubjects(grade)) {
+      for (const topic of getTopicSummaries(grade, subject.id)) {
+        for (const progressSubject of getProgressSubjectsFromCatalog(grade, subject.id, topic.id)) {
+          const raw = localStorage.getItem(getTopicProgressStorageKey(grade, progressSubject, topic.id, getActiveProfileId())) ?? (
+            hasAuthenticatedStorageScope() ? null : localStorage.getItem(`cleverli_${grade}_${progressSubject}_${topic.id}`)
+          );
+          if (!raw) continue;
+          const progress = JSON.parse(raw);
+          const completed = getEffectiveCompleted(progress, topic.exerciseCount);
+          if (completed < topic.exerciseCount) continue;
+          hasCompletedTopic = true;
+          const score = getEffectiveScore(progress, topic.exerciseCount);
+          if (score >= topic.exerciseCount) hasPerfectTopic = true;
+          if (hasPerfectTopic) return { hasCompletedTopic, hasPerfectTopic };
+        }
+      }
+    }
+  }
+
+  return { hasCompletedTopic, hasPerfectTopic };
+}
+
+function sanitizeAchievementsForProgress(profile: Profile): Profile {
+  if (!profile.achievements.length) return profile;
+
+  const { hasCompletedTopic, hasPerfectTopic } = getTopicCompletionEvidence();
+  const achievements = profile.achievements.filter((id) => {
+    if (id === "first_topic" || id === "no_hints" || id === "speed_run" || id === "science_explorer") {
+      return hasCompletedTopic;
+    }
+    if (id === "perfect_score") return hasPerfectTopic;
+    if (/^(math_master|german_master|grade)_/.test(id)) return hasCompletedTopic;
+    return true;
+  });
+
+  return achievements.length === profile.achievements.length ? profile : { ...profile, achievements };
 }
 
 // ── Achievement evaluation ───────────────────────────────────────────────────

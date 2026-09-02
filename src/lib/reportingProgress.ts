@@ -55,12 +55,13 @@ export function readTopicProgressForChild(
       if (!raw) continue;
 
       const progress = JSON.parse(raw);
+      const completed = getEffectiveCompleted(progress, total);
       return {
         stars: getEffectiveStars(progress, total),
         score: getEffectiveScore(progress, total),
-        completed: getEffectiveCompleted(progress, total),
+        completed,
         lastPlayed: progress.lastPlayed ?? "",
-        partial: progress.partial ?? false,
+        partial: progress.partial ?? (total > 0 && completed < total),
       };
     }
   } catch {

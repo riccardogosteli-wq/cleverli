@@ -174,8 +174,11 @@ export default function ParentsDashboard() {
   const level = getLevelForXp(profile.xp);
   const levelTitle = lang === "fr" ? level.titleFr : lang === "it" ? level.titleIt : lang === "en" ? level.titleEn : level.title;
 
-  // Weak spots: completed/reviewed topics with low stars. In-progress topics should not be framed as weak.
-  const weakSpots = stats.filter(s => s.stars <= 1 && s.completed > 0 && !s.partial).sort((a, b) => a.stars - b.stars);
+  // Weak spots: only completed/reviewed topics with low stars. In-progress topics should not be framed as weak.
+  const weakSpots = stats.filter(s => s.stars <= 1 && s.completed >= s.total && !s.partial).sort((a, b) => a.stars - b.stars);
+  const inProgressTopics = stats
+    .filter(s => s.completed > 0 && s.completed < s.total)
+    .sort((a, b) => new Date(b.lastPlayed || 0).getTime() - new Date(a.lastPlayed || 0).getTime());
   // Strong topics: 3 stars
   const strongTopics = stats.filter(s => s.stars === 3);
   const heatmap = buildHeatmap(profile.playDates ?? []);
@@ -214,9 +217,8 @@ export default function ParentsDashboard() {
   const totalCoveredExercises = subjectCoverage.reduce((sum, item) => sum + item.exercises, 0);
   const completedCoveredTopics = subjectCoverage.reduce((sum, item) => sum + item.doneTopics, 0);
   const startedCoveredTopics = subjectCoverage.reduce((sum, item) => sum + item.startedTopics, 0);
-  const currentGradeStats = stats.filter(s => s.grade === activeGrade && s.completed > 0);
   const nextPractice = weakSpots.find(s => s.grade === activeGrade)
-    ?? currentGradeStats.find(s => s.completed > 0 && s.completed < s.total)
+    ?? inProgressTopics.find(s => s.grade === activeGrade)
     ?? (() => {
       const subject = subjectCoverage.find(item => item.nextTopic);
       if (!subject?.nextTopic) return null;
@@ -237,6 +239,9 @@ export default function ParentsDashboard() {
   const attentionItems = [
     weakSpots.length > 0
       ? t(`${weakSpots.length} Thema erneut üben`, `${weakSpots.length} thème à reprendre`, `${weakSpots.length} tema da riprendere`, `${weakSpots.length} topic to revisit`)
+      : null,
+    inProgressTopics.length > 0
+      ? t(`${inProgressTopics.length} Thema in Bearbeitung`, `${inProgressTopics.length} thème en cours`, `${inProgressTopics.length} tema in corso`, `${inProgressTopics.length} topic in progress`)
       : null,
     startedCoveredTopics === 0
       ? t("Noch kein Fach gestartet", "Aucune matière commencée", "Nessuna materia iniziata", "No subject started yet")
@@ -401,6 +406,38 @@ export default function ParentsDashboard() {
           {t("Grün = aktiv gelernt", "Vert = actif", "Verde = attivo", "Green = active")}
         </p>
       </div>
+
+      {/* ── In-progress topics ── */}
+      {inProgressTopics.length > 0 && (
+        <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-4 space-y-3">
+          <h2 className="font-bold text-blue-900 text-sm">
+            {t("In Bearbeitung", "En cours", "In corso", "In progress")}
+          </h2>
+          <div className="space-y-2">
+            {inProgressTopics.slice(0, 4).map(s => (
+              <Link
+                key={`${s.grade}-${s.subject}-${s.topicId}`}
+                href={`/learn/${s.grade}/${s.subject}/${s.topicId}`}
+                className="flex items-center gap-3 bg-white rounded-xl px-3 py-2 border border-blue-100 hover:border-blue-300 active:scale-95 transition-all"
+              >
+                <span className="text-2xl shrink-0">{s.topicEmoji}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="text-xs font-semibold text-gray-800">{s.topicTitle}</div>
+                  <div className="text-[10px] text-gray-400">
+                    {s.completed}/{s.total} {t("Aufgaben gelöst", "exercices résolus", "esercizi risolti", "tasks solved")} · {subjectLabel(s.subject)}
+                  </div>
+                </div>
+                <span className="shrink-0 text-xs font-bold text-blue-700">
+                  {t("Fortsetzen", "Continuer", "Continua", "Continue")}
+                </span>
+              </Link>
+            ))}
+          </div>
+          <p className="text-[10px] text-blue-700">
+            {t("Noch nicht bewertet: Sterne gibt es erst nach dem Abschluss eines Themas.", "Pas encore évalué: les étoiles arrivent à la fin d'un thème.", "Non ancora valutato: le stelle arrivano alla fine di un tema.", "Not rated yet: stars appear after a topic is completed.")}
+          </p>
+        </div>
+      )}
 
       {/* ── Weak spots ── */}
       {weakSpots.length > 0 && (
