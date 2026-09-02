@@ -32,6 +32,25 @@ function seededRand(seed: string, max: number): number {
   return Math.abs(h) % max;
 }
 
+const DAILY_RENDERABLE_TYPES = new Set<Exercise["type"]>([
+  "multiple-choice",
+  "fill-in-blank",
+  "self-review",
+  "counting",
+]);
+
+function isDailyRenderableExercise(exercise: Exercise): boolean {
+  return DAILY_RENDERABLE_TYPES.has(exercise.type) && !exercise.listeningText?.trim();
+}
+
+function getDailyExercisePool(topic: Topic): Exercise[] {
+  const eligibleExercises = topic.exercises.filter(isDailyRenderableExercise);
+  const freeExercises = topic.exercises
+    .filter((_, index) => index < 3)
+    .filter(isDailyRenderableExercise);
+  return freeExercises.length > 0 ? freeExercises : eligibleExercises;
+}
+
 export function getDailyChallenge(grade: number, date = todayKey()): DailyChallenge | null {
   const today = date;
   const subjects = ["math", "german"];
@@ -43,16 +62,20 @@ export function getDailyChallenge(grade: number, date = todayKey()): DailyChalle
   const topics = getTopics(grade, subject);
   if (!topics.length) return null;
 
-  // Pick topic
-  const topicIdx = seededRand(today + "topic", topics.length);
-  const topic = topics[topicIdx];
-  if (!topic.exercises.length) return null;
+  // Pick a topic, falling forward deterministically if the seeded topic has
+  // no exercise that Daily can render safely.
+  const startTopicIdx = seededRand(today + "topic", topics.length);
+  for (let offset = 0; offset < topics.length; offset++) {
+    const topic = topics[(startTopicIdx + offset) % topics.length];
+    const pool = getDailyExercisePool(topic);
+    if (!pool.length) continue;
 
-  // Pick exercise (prefer free exercises for accessibility)
-  const freeExercises = topic.exercises.filter((_, i) => i < 3);
-  const pool = freeExercises.length > 0 ? freeExercises : topic.exercises;
-  const exIdx = seededRand(today + "exercise", pool.length);
-  const exercise = pool[exIdx];
+    const exerciseSeed = offset === 0 ? `${today}exercise` : `${today}exercise${offset}`;
+    const exIdx = seededRand(exerciseSeed, pool.length);
+    const exercise = pool[exIdx];
 
-  return { date: today, grade, subject, topicId: topic.id, exerciseId: exercise.id, exercise, topic };
+    return { date: today, grade, subject, topicId: topic.id, exerciseId: exercise.id, exercise, topic };
+  }
+
+  return null;
 }
