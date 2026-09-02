@@ -425,6 +425,31 @@ export async function deleteChildFromSupabase(childId: string): Promise<void> {
   }
 }
 
+export async function resetChildProgressInSupabase(childId: string): Promise<void> {
+  const supabase = getSupabase();
+  if (!supabase || !childId) return;
+  const parentId = await getParentId();
+  if (!parentId) return;
+
+  try {
+    const { error: topicError } = await supabase
+      .from("topic_progress")
+      .delete()
+      .eq("child_id", childId)
+      .eq("parent_id", parentId);
+    if (topicError) throw topicError;
+
+    const { error: profileError } = await supabase
+      .from("child_progress")
+      .delete()
+      .eq("child_id", childId)
+      .eq("parent_id", parentId);
+    if (profileError) throw profileError;
+  } catch (e) {
+    console.warn("progressSync: child progress reset failed", e);
+  }
+}
+
 export async function updateChildInSupabase(
   childId: string,
   updates: { grade?: number; name?: string; avatar?: string; curriculum?: CurriculumSelection },

@@ -18,10 +18,10 @@ import { getCurriculumRolloutContext, isCurriculumProfilesRolloutEnabled } from 
 import { getAnonymousSessionId } from "@/lib/attribution";
 import { captureProductEvent } from "@/lib/monitoring";
 import { trackUserActivity } from "@/lib/userActivityClient";
-import { createChildInSupabase, deleteChildFromSupabase } from "@/lib/progressSync";
+import { createChildInSupabase, deleteChildFromSupabase, resetChildProgressInSupabase } from "@/lib/progressSync";
 import ParentPinGate from "@/components/ParentPinGate";
 import AuthGuard from "@/components/AuthGuard";
-import { getProfileStorageKey } from "@/lib/accountScopedStorage";
+import { clearLocalProgressForChild } from "@/lib/accountScopedStorage";
 
 interface MemberStat extends FamilyMember {
   xp: number;
@@ -121,8 +121,9 @@ export default function FamilyPage() {
   }
 
   function handleReset(id: string) {
-    // Clear profile stats (XP, streak, achievements) — keeps family member entry intact
-    localStorage.removeItem(getProfileStorageKey(id));
+    // Clear profile stats and topic progress while keeping the family member.
+    clearLocalProgressForChild(id);
+    void resetChildProgressInSupabase(id);
     setConfirmReset(null);
     setResetInput("");
     refresh();
@@ -317,10 +318,10 @@ export default function FamilyPage() {
             </p>
             <p className="text-xs text-gray-500 text-center">
               {t(
-                "XP, Streak und Auszeichnungen dieses Profils werden gelöscht. Das Profil selbst bleibt erhalten.",
-                "Les XP, la série et les trophées seront effacés. Le profil reste.",
-                "XP, serie e trofei verranno eliminati. Il profilo rimane.",
-                "XP, streak and achievements will be cleared. The profile stays."
+                "XP, Streak, Auszeichnungen und Themenfortschritt dieses Profils werden gelöscht. Das Profil selbst bleibt erhalten.",
+                "Les XP, la série, les trophées et la progression des thèmes seront effacés. Le profil reste.",
+                "XP, serie, trofei e progressi degli argomenti verranno eliminati. Il profilo rimane.",
+                "XP, streak, achievements and topic progress will be cleared. The profile stays."
               )}
             </p>
             <div>

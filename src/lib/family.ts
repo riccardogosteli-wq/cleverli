@@ -9,6 +9,7 @@ import {
 } from "@/lib/curriculumProfiles";
 import {
   getActiveProfileStorageKey,
+  clearLocalProgressForChild,
   getFamilyStorageKey,
   getLastGradeStorageKey,
   getProfileStorageKey,
@@ -107,9 +108,7 @@ export function removeMember(id: string) {
   store.members = store.members.filter(m => m.id !== id);
   saveFamily(store);
   // Clean up their profile data
-  if (typeof window !== "undefined") {
-    localStorage.removeItem(getProfileStorageKey(id));
-  }
+  clearLocalProgressForChild(id);
 }
 
 export function getActiveProfileId(): string | null {

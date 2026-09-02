@@ -92,6 +92,19 @@ export function getLegacyTopicProgressStorageKey(grade: number, subject: string,
   return `cleverli_${grade}_${subject}_${topicId}`;
 }
 
+export function clearLocalProgressForChild(childId: string) {
+  if (typeof window === "undefined" || !childId) return;
+
+  window.localStorage.removeItem(getProfileStorageKey(childId));
+  window.localStorage.removeItem(`cleverli_profile_${childId}`);
+
+  for (const key of Object.keys(window.localStorage)) {
+    if (key.includes(`_child_${childId}__`)) {
+      window.localStorage.removeItem(key);
+    }
+  }
+}
+
 export function clearLegacyFamilyState() {
   if (typeof window === "undefined") return;
   window.localStorage.removeItem("cleverli_family");
