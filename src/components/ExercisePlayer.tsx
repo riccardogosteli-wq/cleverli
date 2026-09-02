@@ -428,8 +428,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         streak: comboCount, // pass comboCount as streak param
         hintsUsed,
         isTopicComplete: isFullTopicComplete,
-        score: isFullTopicComplete ? absoluteCompleted : newScore,
-        total: isFullTopicComplete ? topic.exercises.length : sessionTotal,
+        score: newScore,
+        total: sessionTotal,
         grade,
         subject,
         topicDurationMs: isFullTopicComplete ? Date.now() - topicStartRef.current : undefined,

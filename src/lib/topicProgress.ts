@@ -30,7 +30,11 @@ export function getEffectiveScore(progress: StoredTopicProgress | null | undefin
   const completed = getEffectiveCompleted(progress, safeTotal);
   const score = Math.max(0, Number(progress?.score ?? 0));
 
-  return Math.min(safeTotal, Math.max(score, completed));
+  if (safeTotal > 0 && completed >= safeTotal && Array.isArray(progress?.correctIds) && progress.correctIds.length > 0) {
+    return safeTotal;
+  }
+
+  return Math.min(safeTotal, score);
 }
 
 export function getEffectiveStars(progress: StoredTopicProgress | null | undefined, total: number) {
