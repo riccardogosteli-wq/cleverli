@@ -62,9 +62,9 @@ export default function AccountPage() {
 
   const handleLogout = async () => {
     const supabase = getSupabase();
-    if (supabase) await supabase.auth.signOut();
     localStorage.removeItem("cleverli_session");
     clearLocalFamilyStateOnLogout();
+    if (supabase) await supabase.auth.signOut();
     router.push("/");
   };
 
