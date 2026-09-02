@@ -53,15 +53,15 @@
     "lp21:fetch": "npx tsx scripts/fetch-lp21-live.ts"
   },
   "dependencies": {
-    "@sentry/nextjs": "^10.67.0",
-    "@supabase/supabase-js": "^2.98.0",
+    "@sentry/nextjs": "^10.73.0",
+    "@supabase/supabase-js": "^2.109.0",
     "@types/pg": "^8.18.0",
-    "next": "16.1.6",
+    "next": "16.3.4",
     "pg": "^8.19.0",
-    "posthog-js": "^1.407.2",
+    "posthog-js": "^1.424.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "resend": "^6.9.3",
+    "resend": "^6.25.0",
     "stripe": "^20.4.1",
     "web-push": "^3.6.7"
   },
@@ -74,7 +74,7 @@
     "@types/react-dom": "^19",
     "@types/web-push": "^3.6.4",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "16.3.4",
     "lighthouse": "^13.0.3",
     "tailwindcss": "^4",
     "typescript": "^5"
