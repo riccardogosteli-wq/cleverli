@@ -287,7 +287,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const existing = getStoredProgress(grade, subject, topic.id) ?? {};
       localStorage.setItem(getTopicProgressStorageKey(grade, subject, topic.id, getActiveProfileId()), JSON.stringify({
         ...existing,
-        completed, score, stars: s, correctIds: Array.from(correctIds), partial: true, lastPlayed: new Date().toISOString()
+        completed,
+        score: Math.max(Number(existing?.score ?? 0), completed, score),
+        stars: s,
+        correctIds: Array.from(correctIds),
+        partial: true,
+        lastPlayed: new Date().toISOString()
       }));
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -302,12 +307,14 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const prevScore = existing?.score ?? 0;
       const prevStars = existing?.stars ?? 0;
       const completedCount = Math.min(topic.exercises.length, correctIds.size);
-      const s = calcStars(score, exercises.length);
+      const fullTopicComplete = completedCount >= topic.exercises.length;
+      const effectiveScore = fullTopicComplete ? Math.max(score, completedCount) : Math.max(prevScore, score, completedCount);
+      const s = calcStars(effectiveScore, fullTopicComplete ? topic.exercises.length : exercises.length);
       const lastPlayed = new Date().toISOString();
       const progressData = {
         ...existing,
         completed: mergeCompletedProgress(existing, completedCount, topic.exercises.length),
-        score: Math.max(prevScore, score),
+        score: Math.max(prevScore, effectiveScore),
         stars: completedCount >= topic.exercises.length ? Math.max(prevStars, s) : prevStars,
         correctIds: Array.from(correctIds),
         partial: completedCount < topic.exercises.length,
@@ -421,8 +428,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         streak: comboCount, // pass comboCount as streak param
         hintsUsed,
         isTopicComplete: isFullTopicComplete,
-        score: newScore,
-        total: sessionTotal,
+        score: isFullTopicComplete ? absoluteCompleted : newScore,
+        total: isFullTopicComplete ? topic.exercises.length : sessionTotal,
         grade,
         subject,
         topicDurationMs: isFullTopicComplete ? Date.now() - topicStartRef.current : undefined,
@@ -453,6 +460,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       localStorage.setItem(topicKey, JSON.stringify({
         ...existing,
         completed: mergeCompletedProgress(existing, absoluteCompleted, topic.exercises.length),
+        score: Math.max(Number(existing?.score ?? 0), absoluteCompleted, newScore),
         correctIds: Array.from(nextCorrectIds),
         lastPlayed: new Date().toISOString(),
       }));
@@ -560,11 +568,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       const prevScore = existing?.score ?? 0;
       const prevStars = existing?.stars ?? 0;
       const completedCount = Math.min(topic.exercises.length, correctIds.size);
-      const s = calcStars(score, sessionTotal);
+      const fullTopicComplete = completedCount >= topic.exercises.length;
+      const effectiveScore = fullTopicComplete ? Math.max(score, completedCount) : Math.max(prevScore, score, completedCount);
+      const s = calcStars(effectiveScore, fullTopicComplete ? topic.exercises.length : sessionTotal);
       const progressData = {
         ...existing,
         completed: mergeCompletedProgress(existing, completedCount, topic.exercises.length),
-        score: Math.max(prevScore, score),
+        score: Math.max(prevScore, effectiveScore),
         stars: completedCount >= topic.exercises.length ? Math.max(prevStars, s) : prevStars,
         correctIds: Array.from(correctIds),
         partial: completedCount < topic.exercises.length,
@@ -620,8 +630,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     const hasRemaining = !isReplayMode && completedCount < topic.exercises.length;
     const showTopicCompleteCelebration = !isReviewMode && !isReplayMode && completedCount >= topic.exercises.length;
     const totalEx = isReviewMode || hasRemaining || isReplayMode ? sessionTotal : topic.exercises.length;
-    const s = calcStars(score, totalEx);
-    const perfect = score === totalEx;
+    const displayScore = showTopicCompleteCelebration ? Math.max(score, completedCount) : score;
+    const s = calcStars(displayScore, totalEx);
+    const perfect = displayScore === totalEx;
     const completedCoin = showTopicCompleteCelebration ? getCompletedCoin(completedCount) : null;
     return (
       <div className="space-y-4 max-w-md mx-auto">
@@ -636,7 +647,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             <p className="text-green-700 font-bold">🎉 {tr("allErrorsCorrected") ?? "Alle Fehler korrigiert!"}</p>
           ) : (
             <p className="text-gray-600 font-medium">
-              {score} / {totalEx} {tr("correct")}{perfect && (" — " + (tr("perfectRun") ?? "Perfekt! 🌟"))}
+              {displayScore} / {totalEx} {tr("correct")}{perfect && (" — " + (tr("perfectRun") ?? "Perfekt! 🌟"))}
             </p>
           )}
           <div className="text-4xl flex justify-center gap-2">

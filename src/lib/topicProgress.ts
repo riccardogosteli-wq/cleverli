@@ -25,6 +25,23 @@ export function getEffectiveCompleted(progress: StoredTopicProgress | null | und
   return Math.min(safeTotal, completed);
 }
 
+export function getEffectiveScore(progress: StoredTopicProgress | null | undefined, total: number) {
+  const safeTotal = Math.max(0, total);
+  const completed = getEffectiveCompleted(progress, safeTotal);
+  const score = Math.max(0, Number(progress?.score ?? 0));
+
+  return Math.min(safeTotal, Math.max(score, completed));
+}
+
+export function getEffectiveStars(progress: StoredTopicProgress | null | undefined, total: number) {
+  const stars = Math.max(0, Math.min(3, Number(progress?.stars ?? 0)));
+  const completed = getEffectiveCompleted(progress, total);
+  const score = getEffectiveScore(progress, total);
+
+  if (total > 0 && completed >= total && score >= total) return 3;
+  return stars;
+}
+
 export function mergeCompletedProgress(existing: StoredTopicProgress | null | undefined, nextCompleted: number, total: number) {
   const effectiveExisting = getEffectiveCompleted(existing, total);
   return Math.max(effectiveExisting, Math.min(Math.max(0, nextCompleted), Math.max(0, total)));

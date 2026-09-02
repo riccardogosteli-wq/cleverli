@@ -12,7 +12,7 @@ import {
   getTopicSummaries,
 } from "@/data/topicCatalog";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
+import { getEffectiveCompleted, getEffectiveStars } from "@/lib/topicProgress";
 import { LEVELS, getLevelProgress } from "@/lib/xp";
 import { useSession } from "@/hooks/useSession";
 import { MissionenGuestPreview } from "@/components/GuestPreview";
@@ -42,7 +42,10 @@ function loadTopicProgress(grade: number, subject: string, topicId: string, tota
       );
       if (!raw) continue;
       const d = JSON.parse(raw);
-      return { completed: getEffectiveCompleted(d, total), stars: d.stars ?? 0 };
+      return {
+        completed: getEffectiveCompleted(d, total),
+        stars: getEffectiveStars(d, total),
+      };
     }
     return { completed: 0, stars: 0 };
   } catch { return { completed: 0, stars: 0 }; }

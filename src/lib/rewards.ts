@@ -8,7 +8,7 @@ import {
 } from "@/data/topicCatalog";
 import { getActiveProfileId } from "@/lib/family";
 import { getRewardsStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
+import { getEffectiveCompleted, getEffectiveStars } from "@/lib/topicProgress";
 
 export type TriggerType = "tasks" | "topics" | "streak" | "stars";
 export type RewardStatus = "active" | "unlocked" | "redeemed";
@@ -130,7 +130,7 @@ function loadNormalisedTopicProgress(grade: number, subject: string, topicId: st
     const progress = JSON.parse(raw);
     return {
       completed: getEffectiveCompleted(progress, total),
-      stars: Number(progress?.stars ?? 0),
+      stars: getEffectiveStars(progress, total),
     };
   }
   return null;

@@ -20,7 +20,7 @@ import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
 import ChildProfileManager from "@/components/ChildProfileManager";
 import { useSession } from "@/hooks/useSession";
 import { ParentsGuestPreview } from "@/components/GuestPreview";
-import { getEffectiveCompleted } from "@/lib/topicProgress";
+import { getEffectiveCompleted, getEffectiveScore, getEffectiveStars } from "@/lib/topicProgress";
 import { getActiveProfileId, loadFamily, type FamilyMember } from "@/lib/family";
 import { getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 import {
@@ -82,10 +82,11 @@ function loadTopicProgress(grade: number, subject: string, topic: TopicSummary):
       );
       if (!raw) continue;
       const progress = JSON.parse(raw);
+      const completed = getEffectiveCompleted(progress, topic.exerciseCount);
       return {
-        stars: progress.stars ?? 0,
-        score: progress.score ?? 0,
-        completed: getEffectiveCompleted(progress, topic.exerciseCount),
+        stars: getEffectiveStars(progress, topic.exerciseCount),
+        score: getEffectiveScore(progress, topic.exerciseCount),
+        completed,
         lastPlayed: progress.lastPlayed ?? "",
         partial: progress.partial ?? false,
       };
@@ -139,13 +140,14 @@ function loadAllStats(): TopicStat[] {
           if (!raw) continue;
           const p = JSON.parse(raw);
           const completed = getEffectiveCompleted(p, topic.exerciseCount);
+          const score = getEffectiveScore(p, topic.exerciseCount);
           stats.push({
             grade, subject,
             topicId: topic.id,
             topicTitle: topic.title,
             topicEmoji: topic.emoji,
-            stars: p.stars ?? 0,
-            score: p.score ?? 0,
+            stars: getEffectiveStars(p, topic.exerciseCount),
+            score,
             completed,
             total: topic.exerciseCount,
             lastPlayed: p.lastPlayed ?? "",
