@@ -28,10 +28,11 @@ test.describe("Missionen page", () => {
     expect(errors.filter(e => !e.includes("hydrat"))).toHaveLength(0);
   });
 
-  test("/trophies redirects to /missionen", async ({ page }) => {
+  test("/trophies renders the unified missionen view", async ({ page }) => {
     await page.goto("/trophies");
-    await page.waitForURL(/\/missionen/, { timeout: 8_000 });
-    expect(page.url()).toContain("/missionen");
+    await page.waitForLoadState("domcontentloaded");
+    expect(new URL(page.url()).pathname).toBe("/trophies");
+    await expect(page.locator("h1, h2").first()).toContainText(/Missionen|Missions|Missioni/, { timeout: 8_000 });
   });
 
   test("shows mission header title", async ({ page }) => {
@@ -53,9 +54,13 @@ test.describe("Missionen page", () => {
   test("subject tabs are visible", async ({ page }) => {
     await page.goto("/missionen");
     await page.waitForTimeout(2_000);
-    // At minimum: "Alle" tab + one subject tab
-    const tabButtons = page.locator("button").filter({ hasText: /Alle|Tous|All/i });
-    await expect(tabButtons.first()).toBeVisible({ timeout: 8_000 });
+    // Signed-in/local child state shows filter tabs; guest/public state shows a subject preview strip.
+    const tabButtons = page.locator("button").filter({ hasText: /Alle|Tous|Tutti|All/i });
+    if (await tabButtons.count() > 0) {
+      await expect(tabButtons.first()).toBeVisible({ timeout: 8_000 });
+    } else {
+      await expect(page.getByText(/Mathe|Math|Deutsch|NMG/).first()).toBeVisible({ timeout: 8_000 });
+    }
   });
 
   test("shows math topics for grade 1", async ({ page }) => {

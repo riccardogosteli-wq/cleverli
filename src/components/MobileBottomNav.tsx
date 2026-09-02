@@ -90,7 +90,7 @@ export default function MobileBottomNav() {
             key={tab.href}
             href={tab.href}
 
-            className={`flex-1 flex flex-col items-center justify-center py-2 gap-0.5 transition-colors active:bg-gray-50 relative ${
+            className={`flex-1 flex min-h-16 flex-col items-center justify-center py-2 gap-0.5 transition-colors active:bg-gray-50 relative ${
               isActive ? "text-green-700" : "text-gray-400"
             }`}
           >

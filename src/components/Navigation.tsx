@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { useLang } from "@/lib/LangContext";
@@ -62,7 +63,7 @@ export default function Navigation() {
         <div className="h-[44px] w-[44px] shrink-0 sm:hidden" aria-hidden="true" />
 
         {/* Logo */}
-        <a
+        <Link
           href="/"
 
           className="absolute left-1/2 flex min-h-[44px] -translate-x-1/2 items-center justify-center sm:static sm:left-auto sm:translate-x-0"
@@ -78,20 +79,20 @@ export default function Navigation() {
               priority
             />
           </div>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden sm:flex items-center gap-3" style={{ flexShrink: 0 }}>
           <XpBar />
-          <a
+          <Link
             href="/dashboard"
 
             className="flex items-center gap-1.5 text-sm text-green-700 hover:text-green-800 font-semibold py-2 px-2.5 rounded-xl bg-green-50 hover:bg-green-100 transition-colors whitespace-nowrap border border-green-200"
           >
             <Image src="/images/ui/Lernen-Dashboard-icon.svg" alt="Lernen" width={28} height={28} />
             <span className="hidden md:inline text-xs">{tr("learnNav")}</span>
-          </a>
-          <a
+          </Link>
+          <Link
             href="/rewards"
 
             className="flex items-center gap-1.5 text-sm text-amber-700 hover:text-amber-800 font-semibold py-2 px-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 transition-colors whitespace-nowrap border border-amber-200"
@@ -100,10 +101,10 @@ export default function Navigation() {
           >
             <Image src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen" width={28} height={28} />
             <span className="hidden md:inline text-xs">{tr("navRewardsShort")}</span>
-          </a>
+          </Link>
           {/* Parent dashboard link — shown when logged in */}
           {session && (
-            <a
+            <Link
               href="/parents"
 
               className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-800 font-semibold py-2 px-2.5 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors whitespace-nowrap border border-gray-200"
@@ -111,13 +112,16 @@ export default function Navigation() {
             >
               <span style={{ fontSize: "20px" }}>📊</span>
               <span className="hidden md:inline text-xs">{tr("navParents") ?? "Elternbereich"}</span>
-            </a>
+            </Link>
           )}
           {/* Profile switcher — shown when 2+ child profiles exist */}
           {session && members.length > 1 && (
             <div className="relative">
               <button onClick={() => setProfileOpen(v => !v)}
-                className="flex items-center gap-1.5 text-sm bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-full transition-colors font-medium">
+                className="flex min-h-11 items-center gap-1.5 text-sm bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-full transition-colors font-medium"
+                aria-label={activeMember ? `${activeMember.name} Profil wechseln` : "Profil wechseln"}
+                aria-expanded={profileOpen}
+                aria-haspopup="menu">
                 <span>{activeMember?.avatar ?? "👤"}</span>
                 <span className="hidden sm:inline text-xs text-gray-700 max-w-[60px] truncate">{activeMember?.name ?? ""}</span>
                 <span className="text-gray-400 text-xs">▾</span>
@@ -150,40 +154,40 @@ export default function Navigation() {
                 </span>
               )}
               {!session?.premium && (
-                <a
+                <Link
                   href="/upgrade"
 
-                  className="text-sm bg-amber-500 text-white px-3 py-1.5 rounded-full hover:bg-amber-600 transition-colors font-bold shadow-sm whitespace-nowrap"
+                  className="inline-flex min-h-11 items-center justify-center text-sm bg-amber-500 text-white px-3 py-1.5 rounded-full hover:bg-amber-600 transition-colors font-bold shadow-sm whitespace-nowrap"
                 >
                   ⭐ Upgrade
-                </a>
+                </Link>
               )}
-              <a
+              <Link
                 href="/account"
 
-                className="text-sm text-gray-500 hover:text-gray-700 font-medium py-2 px-2 whitespace-nowrap"
+                className="inline-flex min-h-11 items-center justify-center text-sm text-gray-500 hover:text-gray-700 font-medium py-2 px-2 whitespace-nowrap"
                 title={session?.email ?? ""}
               >
                 👤 Konto
-              </a>
+              </Link>
             </>
           ) : (
             <>
-              <a
+              <Link
                 href="/login"
 
                 className="flex min-h-11 items-center justify-center text-sm text-gray-600 hover:text-gray-900 font-medium py-2 px-2 whitespace-nowrap"
                 style={{ minWidth: "56px", textAlign: "center" }}
               >
                 {tr("login")}
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/signup"
 
                 className="inline-flex min-h-11 min-w-[160px] items-center justify-center text-sm bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-medium shadow-sm whitespace-nowrap text-center"
               >
                 {tr("signup")}
-              </a>
+              </Link>
             </>
           )}
 
@@ -243,58 +247,58 @@ export default function Navigation() {
           style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))", maxHeight: "80dvh" }}
         >
           {/* Core nav — always visible */}
-          <a href="/dashboard"
+          <Link href="/dashboard"
             className="text-base border-2 border-green-700 text-green-700 px-4 py-3 rounded-full text-center font-semibold active:bg-green-50"
             onClick={() => setOpen(false)}>
             📚 {tr("goLearn")}
-          </a>
-          <a href="/daily"
+          </Link>
+          <Link href="/daily"
             className="text-base border-2 border-amber-400 text-amber-700 px-4 py-3 rounded-full text-center font-semibold active:bg-amber-50"
             onClick={() => setOpen(false)}>
             ⚡ {tr("navDaily")}
-          </a>
-          <a href="/missionen"
+          </Link>
+          <Link href="/missionen"
             className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
             onClick={() => setOpen(false)}>
             🏆 {tr("navTrophies")}
-          </a>
-          <a href="/rewards"
+          </Link>
+          <Link href="/rewards"
             className="text-base text-amber-700 font-medium py-3 px-4 rounded-xl hover:bg-amber-50"
             onClick={() => setOpen(false)}>
             🎁 {tr("navRewards")}
-          </a>
-          <a href="/shop"
+          </Link>
+          <Link href="/shop"
             className="text-base text-yellow-700 font-medium py-3 px-4 rounded-xl hover:bg-yellow-50"
             onClick={() => setOpen(false)}>
             🛍️ {lang === "fr" ? "Boutique" : lang === "it" ? "Negozio" : lang === "en" ? "Shop" : "Shop"}
-          </a>
+          </Link>
 
           <div className="border-t border-gray-100 pt-2 mt-1 space-y-2">
           {session ? (
             <>
               {/* Parent & Kids links */}
-              <a href="/parents"
+              <Link href="/parents"
                 className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 flex items-center gap-2"
                 onClick={() => setOpen(false)}>
                 📊 {tr("navParents") ?? "Elternbereich"}
-              </a>
+              </Link>
               {/* Premium upsell or badge */}
               {!isPremium ? (
-                <a href="/upgrade"
+                <Link href="/upgrade"
                   className="text-base bg-amber-500 text-white px-4 py-3 rounded-full text-center font-bold active:bg-amber-600"
                   onClick={() => setOpen(false)}>
                   ⭐ Upgrade → Premium
-                </a>
+                </Link>
               ) : (
                 <div className="text-sm text-amber-600 font-bold bg-amber-50 px-4 py-2 rounded-full text-center border border-amber-200">
                   ⭐ Premium aktiv
                 </div>
               )}
-              <a href="/account"
+              <Link href="/account"
                 className="text-base text-gray-600 font-medium py-3 px-4 rounded-xl hover:bg-gray-50"
                 onClick={() => setOpen(false)}>
                 👤 {tr("navAccount") ?? "Konto"}
-              </a>
+              </Link>
               <button
                 onClick={() => { logout(); setOpen(false); }}
                 className="w-full text-base text-red-500 font-medium py-3 px-4 rounded-xl hover:bg-red-50 text-left">
@@ -303,16 +307,16 @@ export default function Navigation() {
             </>
           ) : (
             <>
-              <a href="/login"
+              <Link href="/login"
                 className="text-base text-gray-700 font-medium py-3 px-4 rounded-xl hover:bg-gray-50 active:bg-gray-100"
                 onClick={() => setOpen(false)}>
                 {tr("login")}
-              </a>
-              <a href="/signup"
+              </Link>
+              <Link href="/signup"
                 className="text-base bg-green-700 text-white px-4 py-3 rounded-full text-center font-bold active:bg-green-700"
                 onClick={() => setOpen(false)}>
                 {tr("signup")}
-              </a>
+              </Link>
             </>
           )}
           </div>
@@ -329,7 +333,7 @@ export default function Navigation() {
                   onClick={() => { setLang(l.code as Lang); setOpen(false); }}
                   aria-label={l.name}
                   aria-pressed={lang === l.code}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 text-sm font-semibold transition-colors flex-1 justify-center ${
+                  className={`flex min-h-11 items-center gap-1.5 px-3 py-2 rounded-xl border-2 text-sm font-semibold transition-colors flex-1 justify-center ${
                     lang === l.code
                       ? "border-green-400 bg-green-50 text-green-700"
                       : "border-gray-200 text-gray-500 hover:border-gray-300"

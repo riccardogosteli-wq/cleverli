@@ -174,13 +174,15 @@ export default function FamilyPage() {
                 <div className="text-[10px] text-gray-400">{s.achievements} 🏆</div>
                 <button
                   onClick={() => { setConfirmReset(s.id); setResetInput(""); }}
-                  className="text-[10px] text-orange-300 hover:text-orange-500 mt-1 block"
+                  className="mt-1 block min-h-11 min-w-11 rounded-lg px-2 text-[10px] text-orange-400 hover:bg-orange-50 hover:text-orange-600"
+                  aria-label={`${s.name}: ${t("Lernfortschritt zurücksetzen","Réinitialiser la progression","Reimposta progressi","Reset progress")}`}
                 >
                   {t("Zurücksetzen","Réinitialiser","Reimposta","Reset")}
                 </button>
                 <button
                   onClick={() => setConfirmDelete(s.id)}
-                  className="text-[10px] text-red-300 hover:text-red-500 mt-0.5 block"
+                  className="mt-0.5 block min-h-11 min-w-11 rounded-lg px-2 text-[10px] text-red-400 hover:bg-red-50 hover:text-red-600"
+                  aria-label={`${s.name}: ${t("Profil entfernen","Supprimer le profil","Rimuovi profilo","Remove profile")}`}
                 >
                   {t("Entfernen","Supprimer","Rimuovi","Remove")}
                 </button>
@@ -265,11 +267,11 @@ export default function FamilyPage() {
 
           <div className="flex gap-2">
             <button onClick={() => { setShowAdd(false); setAddError(""); }}
-              className="flex-1 border-2 border-gray-200 text-gray-600 py-2 rounded-xl font-semibold text-sm active:scale-95">
+              className="min-h-11 flex-1 border-2 border-gray-200 text-gray-600 py-2 rounded-xl font-semibold text-sm active:scale-95">
               {t("Abbrechen","Annuler","Annulla","Cancel")}
             </button>
             <button onClick={handleAdd}
-              className="flex-1 bg-green-700 text-white py-2 rounded-xl font-bold text-sm hover:bg-green-700 active:scale-95">
+              className="min-h-11 flex-1 bg-green-700 text-white py-2 rounded-xl font-bold text-sm hover:bg-green-700 active:scale-95">
               {t("Hinzufügen","Ajouter","Aggiungi","Add")}
             </button>
           </div>
@@ -292,11 +294,11 @@ export default function FamilyPage() {
             </p>
             <div className="flex gap-2">
               <button onClick={() => setConfirmDelete(null)}
-                className="flex-1 border-2 border-gray-200 text-gray-600 py-2 rounded-xl font-semibold text-sm">
+                className="min-h-11 flex-1 border-2 border-gray-200 text-gray-600 py-2 rounded-xl font-semibold text-sm">
                 {t("Abbrechen","Annuler","Annulla","Cancel")}
               </button>
               <button onClick={() => handleDelete(confirmDelete)}
-                className="flex-1 bg-red-500 text-white py-2 rounded-xl font-bold text-sm">
+                className="min-h-11 flex-1 bg-red-500 text-white py-2 rounded-xl font-bold text-sm">
                 {t("Löschen","Supprimer","Elimina","Delete")}
               </button>
             </div>
@@ -344,14 +346,14 @@ export default function FamilyPage() {
             <div className="flex gap-2">
               <button
                 onClick={() => { setConfirmReset(null); setResetInput(""); }}
-                className="flex-1 border-2 border-gray-200 text-gray-600 py-2 rounded-xl font-semibold text-sm"
+                className="min-h-11 flex-1 border-2 border-gray-200 text-gray-600 py-2 rounded-xl font-semibold text-sm"
               >
                 {t("Abbrechen","Annuler","Annulla","Cancel")}
               </button>
               <button
                 onClick={() => confirmReset && handleReset(confirmReset)}
                 disabled={resetInput.toLowerCase() !== "reset"}
-                className="flex-1 py-2 rounded-xl font-bold text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed bg-orange-500 text-white hover:bg-orange-600 active:scale-95"
+                className="min-h-11 flex-1 py-2 rounded-xl font-bold text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed bg-orange-500 text-white hover:bg-orange-600 active:scale-95"
               >
                 {t("Zurücksetzen","Réinitialiser","Reimposta","Reset")}
               </button>

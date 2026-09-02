@@ -42,7 +42,7 @@ const securityHeaders = [
         "https://*.posthog.com https://*.i.posthog.com https://eu.i.posthog.com https://us.i.posthog.com",
       ].join(" "),
       "worker-src 'self' blob:",
-      "frame-src https://www.googletagmanager.com",
+      "frame-src https://www.googletagmanager.com https://www.facebook.com https://web.facebook.com",
       "frame-ancestors 'none'",
       "object-src 'none'",
       "base-uri 'self'",

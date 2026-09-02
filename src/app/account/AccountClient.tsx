@@ -392,7 +392,7 @@ export default function AccountPage() {
               <div className="text-xs text-gray-400">••••••••</div>
             </div>
             <button onClick={() => { setPwMode(m => !m); setPwError(""); }}
-              className="inline-flex min-h-11 items-center text-xs text-green-700 underline font-semibold">
+              className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 text-xs text-green-700 underline font-semibold">
               {pwMode ? t("Abbrechen", "Annuler", "Annulla", "Cancel") : t("Ändern", "Modifier", "Modifica", "Change")}
             </button>
           </div>

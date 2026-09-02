@@ -433,7 +433,7 @@ export default function MissionenPage() {
       <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
         {tabs.map(tab => (
           <button key={tab.id} onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-1.5 px-3 py-2 rounded-xl font-bold text-sm whitespace-nowrap transition-all shrink-0 ${
+            className={`flex min-h-11 items-center gap-1.5 px-3 py-2 rounded-xl font-bold text-sm whitespace-nowrap transition-all shrink-0 ${
               activeTab === tab.id
                 ? "bg-green-700 text-white shadow-md"
                 : "bg-white border-2 border-gray-200 text-gray-600 hover:border-green-300"

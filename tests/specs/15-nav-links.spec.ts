@@ -8,6 +8,7 @@ const KNOWN_ROUTES = [
   { path: "/",              name: "Home",       expectText: /Klasse|grade|classe/i },
   { path: "/dashboard",     name: "Dashboard",  expectText: /Mathematik|Math|dashboard/i },
   { path: "/missionen",     name: "Missionen",  expectText: /Missionen|Missions/i },
+  { path: "/trophies",      name: "Trophies legacy URL", expectText: /Missionen|Missions/i },
   { path: "/rewards",       name: "Rewards",    expectText: /Belohnungen|Reward|récom/i },
   { path: "/shop",          name: "Shop",       expectText: /Shop|Münzen|coins/i },
   { path: "/daily",         name: "Daily",      expectText: /Tages|Daily|challenge/i },
@@ -18,10 +19,6 @@ const KNOWN_ROUTES = [
   { path: "/agb",           name: "AGB",        expectText: /Nutzungsbedingungen|conditions|Terms/i },
   { path: "/datenschutz",   name: "Datenschutz",expectText: /Datenschutz|confidentialité|Privacy/i },
   { path: "/impressum",     name: "Impressum",  expectText: /Impressum|Imprint/i },
-];
-
-const REDIRECT_ROUTES = [
-  { path: "/trophies", expectedTarget: "/missionen", name: "trophies redirect" },
 ];
 
 test.describe("Route health — all pages respond", () => {
@@ -41,16 +38,6 @@ test.describe("Route health — all pages respond", () => {
       // No JS runtime errors (ignoring hydration warnings)
       const realErrors = errors.filter(e => !e.includes("hydrat") && !e.includes("Warning"));
       expect(realErrors).toHaveLength(0);
-    });
-  }
-});
-
-test.describe("Redirect routes", () => {
-  for (const { path, expectedTarget, name } of REDIRECT_ROUTES) {
-    test(`${name}: ${path} → ${expectedTarget}`, async ({ page }) => {
-      await page.goto(path);
-      await page.waitForURL(new RegExp(expectedTarget), { timeout: 8_000 });
-      expect(page.url()).toContain(expectedTarget);
     });
   }
 });

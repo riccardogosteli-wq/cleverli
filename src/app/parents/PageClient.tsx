@@ -260,7 +260,7 @@ export default function ParentsDashboard() {
         <a
           href="/parents?lock=1"
           data-testid="parent-dashboard-lock"
-          className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-red-500 transition-colors py-1.5 px-3 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50"
+          className="flex min-h-11 items-center gap-1.5 text-xs text-gray-400 hover:text-red-500 transition-colors py-1.5 px-3 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50"
         >
           🔒 <span>Elternbereich sperren</span>
         </a>
@@ -363,7 +363,7 @@ export default function ParentsDashboard() {
             </div>
             <Link
               href={`/learn/${nextPractice.grade}/${nextPractice.subject}/${nextPractice.topicId}`}
-              className="shrink-0 bg-blue-700 text-white rounded-xl px-3 py-2 text-xs font-bold active:scale-95 transition-all"
+              className="inline-flex min-h-11 shrink-0 items-center justify-center bg-blue-700 text-white rounded-xl px-3 py-2 text-xs font-bold active:scale-95 transition-all"
             >
               {t("Üben", "Pratiquer", "Esercitare", "Practise")}
             </Link>
@@ -418,7 +418,7 @@ export default function ParentsDashboard() {
               <Link
                 key={`${s.grade}-${s.subject}-${s.topicId}`}
                 href={`/learn/${s.grade}/${s.subject}/${s.topicId}`}
-                className="flex items-center gap-3 bg-white rounded-xl px-3 py-2 border border-blue-100 hover:border-blue-300 active:scale-95 transition-all"
+                className="flex min-h-11 items-center gap-3 bg-white rounded-xl px-3 py-2 border border-blue-100 hover:border-blue-300 active:scale-95 transition-all"
               >
                 <span className="text-2xl shrink-0">{s.topicEmoji}</span>
                 <div className="flex-1 min-w-0">
@@ -450,7 +450,7 @@ export default function ParentsDashboard() {
               <Link
                 key={`${s.grade}-${s.subject}-${s.topicId}`}
                 href={`/learn/${s.grade}/${s.subject}/${s.topicId}`}
-                className="flex items-center gap-3 bg-white rounded-xl px-3 py-2 border border-orange-100 hover:border-orange-300 active:scale-95 transition-all"
+                className="flex min-h-11 items-center gap-3 bg-white rounded-xl px-3 py-2 border border-orange-100 hover:border-orange-300 active:scale-95 transition-all"
               >
                 <span className="text-2xl shrink-0">{s.topicEmoji}</span>
                 <div className="flex-1 min-w-0">
@@ -495,7 +495,7 @@ export default function ParentsDashboard() {
             <h2 className="font-bold text-gray-700 text-sm">
               🏆 {t("Neue Erfolge", "Nouveaux succès", "Nuovi traguardi", "Recent achievements")}
             </h2>
-            <Link href="/missionen" className="text-xs text-green-700 underline">
+            <Link href="/missionen" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 text-xs text-green-700 underline">
               {t("Alle","Tous","Tutti","All")}
             </Link>
           </div>

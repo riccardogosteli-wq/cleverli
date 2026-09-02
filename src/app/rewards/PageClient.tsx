@@ -185,14 +185,14 @@ export default function RewardsPage() {
       <div className="flex justify-end mb-2">
         <button
           onClick={() => { lockParentSession(); window.location.reload(); }}
-          className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-red-500 transition-colors py-1.5 px-3 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50"
+          className="flex min-h-11 items-center gap-1.5 text-xs text-gray-400 hover:text-red-500 transition-colors py-1.5 px-3 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50"
         >
           🔒 <span>{lang === "fr" ? "Verrouiller espace parents" : lang === "it" ? "Blocca area genitori" : lang === "en" ? "Lock parent area" : "Elternbereich sperren"}</span>
         </button>
       </div>
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
-        <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 min-w-[44px]">←</Link>
+        <Link href="/dashboard" aria-label={lang === "fr" ? "Retour au tableau de bord" : lang === "it" ? "Torna alla dashboard" : lang === "en" ? "Back to dashboard" : "Zurück zum Dashboard"} className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm text-gray-400 hover:text-gray-600">←</Link>
         <Image src="/cleverli-celebrate.png" alt="Cleverli feiert" width={44} height={44} className="drop-shadow-md" />
         <h1 className="text-xl font-bold text-gray-800 flex items-center gap-2">
           <Image src="/images/ui/Belohnungen-icon.svg" alt="" aria-hidden="true" width={24} height={24} />
@@ -263,7 +263,7 @@ export default function RewardsPage() {
             </span>
           ) : (!adding && (
             <button onClick={() => setAdding(true)}
-              className="flex items-center gap-1 bg-green-700 hover:bg-green-700 text-white text-sm font-semibold px-3 py-1.5 rounded-full transition-colors">
+              className="flex min-h-11 items-center gap-1 bg-green-700 hover:bg-green-700 text-white text-sm font-semibold px-3 py-1.5 rounded-full transition-colors">
               + {lang === "de" ? "Hinzufügen" : lang === "fr" ? "Ajouter" : lang === "it" ? "Aggiungi" : "Add"}
             </button>
           ))}
@@ -376,7 +376,7 @@ export default function RewardsPage() {
 
               {error && <div className="text-red-500 text-sm">{error}</div>}
               <div className="flex gap-2">
-                <button onClick={() => setFormStep(1)} className="px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-xl text-sm">←</button>
+              <button onClick={() => setFormStep(1)} aria-label={lang === "fr" ? "Retour" : lang === "it" ? "Indietro" : lang === "en" ? "Back" : "Zurück"} className="min-h-11 min-w-11 px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-xl text-sm">←</button>
                 <button onClick={handleAdd} className="flex-1 bg-green-700 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-colors">
                   🎁 {lang === "fr" ? "Créer la récompense" : lang === "it" ? "Crea il premio" : lang === "en" ? "Create reward" : "Belohnung erstellen"}
                 </button>
@@ -384,7 +384,7 @@ export default function RewardsPage() {
             </>)}
 
             <button onClick={() => { setAdding(false); setError(""); setFormStep(1); }}
-              className="w-full text-xs text-gray-400 hover:text-gray-600 py-1">
+              className="w-full min-h-11 text-xs text-gray-400 hover:text-gray-600 py-1">
               {lang === "fr" ? "Annuler" : lang === "it" ? "Annulla" : lang === "en" ? "Cancel" : "Abbrechen"}
             </button>
           </div>
@@ -409,7 +409,7 @@ export default function RewardsPage() {
                 : "Erstelle eine Belohnung für dein Kind — es sieht den Fortschritt direkt in der App!"}
             </div>
             <button onClick={() => setAdding(true)}
-              className="bg-amber-400 hover:bg-amber-500 text-white font-bold px-6 py-3 rounded-full transition-colors shadow-sm">
+              className="min-h-11 bg-amber-400 hover:bg-amber-500 text-white font-bold px-6 py-3 rounded-full transition-colors shadow-sm">
               + {lang === "fr" ? "Créer le premier prix" : lang === "it" ? "Crea il primo premio" : lang === "en" ? "Create first reward" : "Erste Belohnung erstellen"}
             </button>
           </div>
@@ -436,17 +436,18 @@ export default function RewardsPage() {
                 {deleteConfirm === r.id ? (
                   <div className="flex gap-1">
                     <button onClick={() => { removeReward(r.id); setDeleteConfirm(null); reload(); }}
-                      className="text-xs bg-red-100 text-red-600 hover:bg-red-200 px-2 py-1 rounded-lg font-bold">
+                      className="min-h-11 text-xs bg-red-100 text-red-600 hover:bg-red-200 px-3 py-1 rounded-lg font-bold">
                       {lang === "fr" ? "✓ Supprimer" : lang === "it" ? "✓ Elimina" : lang === "en" ? "✓ Delete" : "✓ Löschen"}
                     </button>
                     <button onClick={() => setDeleteConfirm(null)}
-                      className="text-xs bg-gray-100 text-gray-500 hover:bg-gray-200 px-2 py-1 rounded-lg">
+                      className="min-h-11 text-xs bg-gray-100 text-gray-500 hover:bg-gray-200 px-3 py-1 rounded-lg">
                       {lang === "fr" ? "Non" : lang === "it" ? "No" : lang === "en" ? "No" : "Nein"}
                     </button>
                   </div>
                 ) : (
                   <button onClick={() => setDeleteConfirm(r.id)}
-                    className="text-gray-300 hover:text-red-400 text-lg transition-colors px-2 py-1">✕</button>
+                    aria-label={lang === "fr" ? "Supprimer la récompense" : lang === "it" ? "Elimina premio" : lang === "en" ? "Delete reward" : "Belohnung löschen"}
+                    className="inline-flex min-h-11 min-w-11 items-center justify-center text-gray-300 hover:text-red-400 text-lg transition-colors px-2 py-1">✕</button>
                 )}
               </div>
               <div className="h-2.5 bg-gray-100 rounded-full overflow-hidden">
