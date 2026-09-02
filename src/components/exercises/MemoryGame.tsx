@@ -100,14 +100,18 @@ export default function MemoryGame({ pairs, onAnswer }: Props) {
       </div>
 
       <div className={`grid ${cols} gap-2`}>
-        {cards.map(card => {
+        {cards.map((card, index) => {
           const isFlipped = flipped.includes(card.key) || matched.includes(card.pairId);
           const isMatched = matched.includes(card.pairId);
+          const cardState = isMatched ? "gefunden" : isFlipped ? card.label : "verdeckt";
 
           return (
             <button
               key={card.key}
               onClick={() => flip(card.key)}
+              aria-label={`Memory-Karte ${index + 1}: ${cardState}`}
+              aria-pressed={isFlipped}
+              disabled={isMatched}
               className="relative aspect-square rounded-2xl border-2 transition-all active:scale-95 overflow-hidden"
               style={{
                 borderColor: isMatched ? "#22c55e" : isFlipped ? "#3b82f6" : "#e5e7eb",

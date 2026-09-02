@@ -196,6 +196,7 @@ function DashboardInner() {
   const searchParams = useSearchParams();
   const preselectedSubject = searchParams.get("subject");
 
+  const [ready, setReady] = useState(false);
   const [grade, setGrade] = useState<number | null>(null);
   const [subject, setSubject] = useState<string | null>(preselectedSubject);
   const [dailyDone, setDailyDone] = useState(false);
@@ -204,29 +205,36 @@ function DashboardInner() {
   // (notify signup widget removed — state retained for safety)
   // Restore grade from active child profile (or fall back to last-used)
   useEffect(() => {
-    setDailyDone(isDailyDoneToday());
-    if (!preselectedSubject) {
+    const refreshDashboardState = () => {
+      setDailyDone(isDailyDoneToday());
       const family = loadFamily();
+      setFamilySize(family.members.length);
       const activeId = getActiveProfileId();
       const member = family.members.find(m => m.id === activeId) ?? family.members[0];
-      if (member?.grade) {
-        // ✅ Always use the child's stored grade — not the global last-used key
-        setGrade(member.grade);
-        localStorage.setItem(getLastGradeStorageKey(), String(member.grade));
-      } else {
-        // Guest / no profile: fall back to last-used grade
-        const saved = localStorage.getItem(getLastGradeStorageKey()) ?? localStorage.getItem(GRADE_KEY);
-        if (saved) setGrade(parseInt(saved));
+      setActiveMember(member ? { name: member.name, avatar: member.avatar, curriculum: member.curriculum } : null);
+
+      if (!preselectedSubject) {
+        if (member?.grade) {
+          // ✅ Always use the child's stored grade — not the global last-used key
+          setGrade(member.grade);
+          localStorage.setItem(getLastGradeStorageKey(), String(member.grade));
+        } else {
+          // Guest / no profile: fall back to last-used grade
+          const saved = localStorage.getItem(getLastGradeStorageKey()) ?? localStorage.getItem(GRADE_KEY);
+          setGrade(saved ? parseInt(saved) : null);
+        }
       }
-    }
-    // PM-3/PM-4: show active child banner when family has 2+ profiles
-    const family = loadFamily();
-    setFamilySize(family.members.length);
-    if (family.members.length >= 1) {
-      const activeId = getActiveProfileId();
-      const member = family.members.find(m => m.id === activeId) ?? family.members[0];
-      if (member) setActiveMember({ name: member.name, avatar: member.avatar, curriculum: member.curriculum });
-    }
+    };
+
+    refreshDashboardState();
+    setReady(true);
+
+    window.addEventListener("cleverli-family-restored", refreshDashboardState);
+    window.addEventListener("cleverli-active-profile-change", refreshDashboardState);
+    return () => {
+      window.removeEventListener("cleverli-family-restored", refreshDashboardState);
+      window.removeEventListener("cleverli-active-profile-change", refreshDashboardState);
+    };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -268,6 +276,45 @@ function DashboardInner() {
 
   const level = profile ? getLevelForXp(profile.xp) : null;
   const nextLevel = profile ? getNextLevel(profile.xp) : null;
+
+  if (!ready) {
+    return (
+      <div className="max-w-md mx-auto px-4 py-16 pb-24 text-center space-y-4">
+        <Image src="/cleverli-sit-read.png" alt="Cleverli" width={96} height={96} className="mx-auto drop-shadow-md" />
+        <p className="text-sm font-semibold text-gray-500">
+          {lang === "fr" ? "Chargement..." : lang === "it" ? "Caricamento..." : lang === "en" ? "Loading..." : "Lade..."}
+        </p>
+      </div>
+    );
+  }
+
+  if (familySize === 0) {
+    return (
+      <div className="max-w-md mx-auto px-4 py-16 pb-24 text-center space-y-5">
+        <Image src="/cleverli-sit-read.png" alt="Cleverli" width={120} height={120} className="mx-auto drop-shadow-md" />
+        <div className="space-y-2">
+          <h1 className="text-2xl font-black text-gray-900">
+            {lang === "fr" ? "Ajoute d'abord un enfant" : lang === "it" ? "Aggiungi prima un bambino" : lang === "en" ? "Add a child first" : "Zuerst ein Kind hinzufügen"}
+          </h1>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            {lang === "fr"
+              ? "Ensuite, Cleverli affiche les bons exercices, progrès et récompenses pour cet enfant."
+              : lang === "it"
+              ? "Poi Cleverli mostra gli esercizi, i progressi e i premi giusti per quel bambino."
+              : lang === "en"
+              ? "Then Cleverli can show the right exercises, progress and rewards for that child."
+              : "Danach zeigt Cleverli die passenden Aufgaben, Fortschritte und Belohnungen für dieses Kind."}
+          </p>
+        </div>
+        <Link
+          href="/family"
+          className="inline-flex min-h-11 w-full items-center justify-center rounded-2xl bg-green-700 px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-green-700 active:scale-95"
+        >
+          {lang === "fr" ? "Ajouter un enfant" : lang === "it" ? "Aggiungi bambino" : lang === "en" ? "Add child" : "Kind hinzufügen"}
+        </Link>
+      </div>
+    );
+  }
 
   // ── STEP 1: Choose grade ──────────────────────────────────────────────────
   if (!grade) {

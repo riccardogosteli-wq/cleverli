@@ -80,7 +80,7 @@ function buildSubjectCoverage(grade: number, curriculum?: CurriculumSelection): 
       const topicProgress = topics.map(topic => ({ topic, progress: loadTopicProgress(grade, subject.id, topic) }));
       const doneTopics = topicProgress.filter(({ topic, progress }) => progress && progress.completed >= topic.exerciseCount).length;
       const startedTopics = topicProgress.filter(({ progress }) => (progress?.completed ?? 0) > 0).length;
-      const weakTopics = topicProgress.filter(({ progress }) => progress && progress.completed > 0 && progress.stars <= 1).length;
+      const weakTopics = topicProgress.filter(({ progress }) => progress && progress.completed > 0 && !progress.partial && progress.stars <= 1).length;
       const nextTopic = topicProgress.find(({ topic, progress }) => !progress || progress.completed < topic.exerciseCount)?.topic ?? topics[0] ?? null;
       return {
         grade,
@@ -174,8 +174,8 @@ export default function ParentsDashboard() {
   const level = getLevelForXp(profile.xp);
   const levelTitle = lang === "fr" ? level.titleFr : lang === "it" ? level.titleIt : lang === "en" ? level.titleEn : level.title;
 
-  // Weak spots: topics with 1 star or partial completion
-  const weakSpots = stats.filter(s => s.stars <= 1 && s.completed > 0).sort((a, b) => a.stars - b.stars);
+  // Weak spots: completed/reviewed topics with low stars. In-progress topics should not be framed as weak.
+  const weakSpots = stats.filter(s => s.stars <= 1 && s.completed > 0 && !s.partial).sort((a, b) => a.stars - b.stars);
   // Strong topics: 3 stars
   const strongTopics = stats.filter(s => s.stars === 3);
   const heatmap = buildHeatmap(profile.playDates ?? []);

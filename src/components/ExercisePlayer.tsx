@@ -208,6 +208,23 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const sessionTotal = Math.max(1, exercises.length);
   const sourceCurrent: Exercise = exercises[idx] ?? sortByDifficulty(topic.exercises)[0];
   const current: Exercise = localizeExercise(sourceCurrent, lang);
+  const progressLabel = () => {
+    if (isReviewMode) {
+      return lang === "fr" ? `Révision ${idx + 1} / ${sessionTotal}` : lang === "it" ? `Ripasso ${idx + 1} / ${sessionTotal}` : lang === "en" ? `Review ${idx + 1} of ${sessionTotal}` : `Fehler üben ${idx + 1} von ${sessionTotal}`;
+    }
+    if (!isReplayMode && sessionStartCompleted > 0) {
+      const doneCount = Math.min(topic.exercises.length, correctIds.size);
+      const openCount = Math.max(0, topic.exercises.length - doneCount);
+      return lang === "fr"
+        ? `${doneCount} sur ${topic.exercises.length} terminés · ${openCount} ouverts`
+        : lang === "it"
+        ? `${doneCount} di ${topic.exercises.length} completati · ${openCount} aperti`
+        : lang === "en"
+        ? `${doneCount} of ${topic.exercises.length} done · ${openCount} open`
+        : `${doneCount} von ${topic.exercises.length} erledigt · ${openCount} offen`;
+    }
+    return lang === "fr" ? `Exercice ${idx + 1} / ${sessionTotal}` : lang === "it" ? `Esercizio ${idx + 1} / ${sessionTotal}` : lang === "en" ? `Exercise ${idx + 1} of ${sessionTotal}` : `Aufgabe ${idx + 1} von ${sessionTotal}`;
+  };
   useEffect(() => {
     try {
       const stored = parseInt(localStorage.getItem(freeUsageKey) ?? "0", 10) || 0;
@@ -637,13 +654,19 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     const s = calcStars(displayScore, totalEx);
     const perfect = displayScore === totalEx;
     const completedCoin = showTopicCompleteCelebration ? getCompletedCoin(completedCount) : null;
+    const primaryCompleteLabel = hasRemaining
+      ? (lang === "fr" ? "Continuer ce thème" : lang === "it" ? "Continua questo argomento" : lang === "en" ? "Continue this topic" : "Weiter im Thema")
+      : nextTopicId
+      ? (tr("nextTopic") ?? "Nächstes Thema")
+      : tr("otherTopics");
     return (
       <div className="space-y-4 max-w-md mx-auto">
         <RewardAnimation
           correct={true}
           isTopicComplete={showTopicCompleteCelebration}
           label={hasRemaining ? (lang === "fr" ? "Continue ce thème" : lang === "it" ? "Continua questo argomento" : lang === "en" ? "Continue this topic" : "Weiter in diesem Thema") : undefined}
-          onContinue={() => hasRemaining ? startTopicSession("next") : router.push(`/learn/${grade}/${subject}`)}
+          buttonLabel={primaryCompleteLabel}
+          onContinue={() => hasRemaining ? startTopicSession("next") : nextTopicId ? router.push(`/learn/${grade}/${subject}/${nextTopicId}`) : router.push(`/learn/${grade}/${subject}`)}
         />
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center space-y-3">
           {isReviewMode ? (
@@ -678,26 +701,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               </div>
             </div>
           )}
-          <div className="flex gap-3 justify-center flex-wrap pt-1">
-            <button onClick={() => {
-              startTopicSession(hasRemaining ? "next" : "replay");
-            }} className="text-sm border-2 border-gray-200 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
-              {hasRemaining
-                ? (lang === "fr" ? "Continuer" : lang === "it" ? "Continua" : lang === "en" ? "Continue topic" : "Weiterlernen")
-                : tr("playAgainShort")}
-            </button>
-            {/* UJ-5: Next topic button */}
-            {nextTopicId && (
-              <Link href={`/learn/${grade}/${subject}/${nextTopicId}`}
-                className="text-sm bg-green-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 active:scale-95 transition-all flex items-center gap-1">
-                {tr("nextTopic") ?? "Nächstes Thema"} →
-              </Link>
-            )}
+          {(hasRemaining || nextTopicId) && (
             <Link href={`/learn/${grade}/${subject}`}
-              className="text-sm border-2 border-gray-200 text-gray-500 px-4 py-2 rounded-full hover:bg-gray-50 active:scale-95 transition-all">
+              className="inline-flex min-h-11 items-center justify-center text-sm text-gray-500 underline hover:text-gray-700">
               {tr("otherTopics")}
             </Link>
-          </div>
+          )}
         </div>
         <style>{`@keyframes popIn{from{transform:scale(0.3);opacity:0}to{transform:scale(1);opacity:1}}`}</style>
       </div>
@@ -915,7 +924,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             {/* Exercise count label for children (explicit X of Y text) */}
             <div className="flex justify-between items-center mb-1">
               <span className="text-xs font-semibold text-gray-500">
-                {isReviewMode ? "🔄 " : ""}{lang === "fr" ? `Exercice ${idx + 1} / ${sessionTotal}` : lang === "it" ? `Esercizio ${idx + 1} / ${sessionTotal}` : lang === "en" ? `Exercise ${idx + 1} of ${sessionTotal}` : `Aufgabe ${idx + 1} von ${sessionTotal}`}
+                {progressLabel()}
               </span>
               {streak >= 2 && (
                 <span className="text-xs font-bold text-orange-500">🔥 {streak}×</span>

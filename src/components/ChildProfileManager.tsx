@@ -167,7 +167,7 @@ function ChildCard({ member, isActive, onSwitch, onDelete, onGradeChange, onCurr
           {member.avatar}
         </div>
         <div className="flex-1 min-w-0">
-          <div className="font-bold text-gray-800 text-sm leading-tight truncate">{member.name}</div>
+          <div className="font-bold text-gray-800 text-sm leading-tight truncate" title={member.name}>{member.name}</div>
           <div className="text-xs text-gray-400">{member.grade}. {tr("gradeLabel")}</div>
           {member.curriculum && (
             <div className="text-xs text-gray-500 mt-0.5">
@@ -186,23 +186,27 @@ function ChildCard({ member, isActive, onSwitch, onDelete, onGradeChange, onCurr
           {/* ✅ Edit grade button */}
           {!editingGrade && !confirmDelete && (
             <button onClick={() => setEditingGrade(true)}
-              className="text-xs text-blue-500 hover:text-blue-700 px-2 py-1.5 rounded-lg transition-colors border border-blue-200 hover:border-blue-400 bg-blue-50">
+              aria-label={t(`${member.name}: Klasse ändern`, `${member.name}: changer de classe`, `${member.name}: cambia classe`, `${member.name}: change grade`)}
+              title={t("Klasse ändern", "Changer de classe", "Cambia classe", "Change grade")}
+              className="text-xs text-blue-500 hover:text-blue-700 min-h-11 min-w-11 rounded-lg transition-colors border border-blue-200 hover:border-blue-400 bg-blue-50">
               ✏️
             </button>
           )}
           {!confirmDelete && !editingGrade ? (
             <button onClick={() => setConfirmDelete(true)}
-              className="text-xs text-gray-400 hover:text-red-500 px-2 py-1.5 rounded-lg transition-colors">
+              aria-label={t(`${member.name}: Profil löschen`, `${member.name}: supprimer le profil`, `${member.name}: elimina profilo`, `${member.name}: delete profile`)}
+              title={t("Profil löschen", "Supprimer le profil", "Elimina profilo", "Delete profile")}
+              className="text-xs text-gray-400 hover:text-red-500 min-h-11 min-w-11 rounded-lg transition-colors">
               🗑️
             </button>
           ) : !editingGrade ? (
             <div className="flex gap-1">
               <button onClick={onDelete}
-                className="text-xs bg-red-500 text-white px-2 py-1.5 rounded-lg hover:bg-red-600">
+                className="min-h-11 text-xs bg-red-500 text-white px-3 py-2 rounded-lg hover:bg-red-600">
                 {tr("saveBtn") ?? "Ja"}
               </button>
               <button onClick={() => setConfirmDelete(false)}
-                className="text-xs border border-gray-200 px-2 py-1.5 rounded-lg hover:bg-gray-50">
+                className="min-h-11 text-xs border border-gray-200 px-3 py-2 rounded-lg hover:bg-gray-50">
                 {tr("cancelBtn") ?? "Nein"}
               </button>
             </div>

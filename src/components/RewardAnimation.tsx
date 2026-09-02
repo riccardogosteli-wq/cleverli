@@ -3,14 +3,14 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
 
-interface Props { correct: boolean; onContinue: () => void; label?: string; isTopicComplete?: boolean; }
+interface Props { correct: boolean; onContinue: () => void; label?: string; isTopicComplete?: boolean; buttonLabel?: string; }
 
 /* Confetti particle */
 interface Particle { x: number; y: number; vx: number; vy: number; color: string; size: number; angle: number; spin: number; life: number; }
 
 const COLORS = ["#22c55e","#f59e0b","#3b82f6","#ec4899","#f97316","#8b5cf6","#06b6d4","#fbbf24"];
 
-export default function RewardAnimation({ correct, onContinue, label, isTopicComplete }: Props) {
+export default function RewardAnimation({ correct, onContinue, label, isTopicComplete, buttonLabel }: Props) {
   const { tr } = useLang();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -110,7 +110,7 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
           style={{ animation: "popIn 0.4s 0.2s cubic-bezier(.34,1.56,.64,1) both" }}
           className={`mt-2 px-8 py-3 rounded-full font-bold text-white transition-all hover:scale-105 shadow-md
             ${isTopicComplete ? "bg-green-700 hover:bg-green-700 text-lg" : correct ? "bg-green-700 hover:bg-green-700" : "bg-orange-500 hover:bg-orange-600"}`}>
-          {isTopicComplete ? tr("otherTopics") : tr("next")}
+          {buttonLabel ?? (isTopicComplete ? tr("otherTopics") : tr("next"))}
         </button>
       </div>
 

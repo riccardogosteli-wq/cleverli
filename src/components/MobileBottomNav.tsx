@@ -33,11 +33,11 @@ export default function MobileBottomNav() {
 
   const getIcon = (iconKey: string) => {
     const iconMap: Record<string, { src: string; alt: string }> = {
-      learn: { src: "/images/ui/Lernen-Dashboard-icon.svg", alt: "Lernen" },
-      daily: { src: "/images/ui/Tagesaufgabe-icon.svg", alt: "Täglich" },
-      trophies: { src: "/images/ui/Trophaeen-icon.svg", alt: "Missionen" },
-      rewards: { src: "/images/ui/Belohnungen-icon.svg", alt: "Belohnungen" },
-      family: { src: "/images/ui/Familie.svg", alt: "Familie" },
+      learn: { src: "/images/ui/Lernen-Dashboard-icon.svg", alt: "" },
+      daily: { src: "/images/ui/Tagesaufgabe-icon.svg", alt: "" },
+      trophies: { src: "/images/ui/Trophaeen-icon.svg", alt: "" },
+      rewards: { src: "/images/ui/Belohnungen-icon.svg", alt: "" },
+      family: { src: "/images/ui/Familie.svg", alt: "" },
     };
     return iconMap[iconKey] || { src: "", alt: "" };
   };
@@ -98,6 +98,7 @@ export default function MobileBottomNav() {
             <Image
               src={getIcon(tab.icon).src}
               alt={getIcon(tab.icon).alt}
+              aria-hidden="true"
               width={32}
               height={32}
               className={`leading-none transition-opacity ${isActive ? "" : "opacity-60"}`}

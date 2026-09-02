@@ -183,7 +183,7 @@ export default function AccountPage() {
 
         {/* Header */}
         <div className="flex items-center gap-3">
-          <Link href="/dashboard" className="text-gray-400 hover:text-gray-600 text-sm">←</Link>
+          <Link href="/dashboard" aria-label={t("Zurück zum Dashboard", "Retour au tableau de bord", "Torna alla dashboard", "Back to dashboard")} className="inline-flex min-h-11 min-w-11 items-center justify-center text-gray-400 hover:text-gray-600 text-sm">←</Link>
           <h1 className="text-xl font-black text-gray-800">
             {t("Mein Konto", "Mon compte", "Il mio account", "My Account")}
           </h1>
@@ -209,7 +209,7 @@ export default function AccountPage() {
           }`}>
             {session.premium ? t("👑 Premium aktiv", "👑 Premium actif", "👑 Premium attivo", "👑 Premium active") : t("🔓 Gratis-Konto", "🔓 Compte gratuit", "🔓 Account gratuito", "🔓 Free account")}
             {!session.premium && (
-              <Link href="/upgrade" className="ml-auto text-xs text-green-700 underline font-normal">
+              <Link href="/upgrade" className="ml-auto inline-flex min-h-11 items-center text-xs text-green-700 underline font-normal">
                 {t("Upgrade →", "Passer Premium →", "Upgrade →", "Upgrade →")}
               </Link>
             )}
@@ -271,7 +271,7 @@ export default function AccountPage() {
                 <div className="bg-red-50 text-red-600 text-xs rounded-xl px-3 py-2">
                   ❌ {cancelError || t("Fehler beim Kündigen.", "Erreur d'annulation.", "Errore annullamento.", "Cancellation error.")}
                 </div>
-                <button onClick={() => setCancelState("idle")} className="w-full text-xs text-gray-400 underline">
+                <button onClick={() => setCancelState("idle")} className="min-h-11 w-full text-xs text-gray-400 underline">
                   {t("Zurück", "Retour", "Indietro", "Back")}
                 </button>
               </div>
@@ -295,7 +295,7 @@ export default function AccountPage() {
                       key={reason.value}
                       type="button"
                       onClick={() => setCancelReason(reason.value)}
-                      className={`w-full rounded-xl border px-3 py-1.5 text-left text-sm font-semibold transition-colors ${
+                      className={`min-h-11 w-full rounded-xl border px-3 py-2 text-left text-sm font-semibold transition-colors ${
                         cancelReason === reason.value
                           ? "border-green-500 bg-white text-green-800 shadow-sm"
                           : "border-gray-200 bg-white/80 text-gray-600 hover:border-green-200 hover:text-gray-800"
@@ -344,20 +344,20 @@ export default function AccountPage() {
                 )}
 
                 <button onClick={handleCancel} disabled={false}
-                  className="w-full bg-red-500 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-red-600 disabled:opacity-60">
+                  className="min-h-11 w-full bg-red-500 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-red-600 disabled:opacity-60">
                   {cancelReason === "too_expensive"
                     ? t("Trotzdem kündigen", "Résilier quand même", "Annulla comunque", "Cancel anyway")
                     : t("Kündigung abschliessen", "Confirmer la résiliation", "Conferma annullamento", "Confirm cancellation")}
                 </button>
                 <button onClick={() => setCancelState("idle")}
-                  className="w-full border-2 border-gray-200 text-gray-500 py-2 rounded-xl text-sm">
+                  className="min-h-11 w-full border-2 border-gray-200 text-gray-500 py-2 rounded-xl text-sm">
                   {t("Doch behalten", "Garder l'abonnement", "Mantieni abbonamento", "Keep subscription")}
                 </button>
               </div>
             ) : (
               <button
                 onClick={handleCancel}
-                className="w-full border-2 border-gray-200 text-gray-500 py-2.5 rounded-xl text-sm font-medium hover:border-red-300 hover:text-red-500 hover:bg-red-50 transition-colors"
+                className="min-h-11 w-full border-2 border-gray-200 text-gray-500 py-2.5 rounded-xl text-sm font-medium hover:border-red-300 hover:text-red-500 hover:bg-red-50 transition-colors"
               >
                 {t("Abonnement kündigen", "Résilier l'abonnement", "Annulla abbonamento", "Cancel subscription")}
               </button>
@@ -376,7 +376,7 @@ export default function AccountPage() {
                  "You're currently using Cleverli for free.")}
             </div>
             <Link href="/upgrade"
-              className="block text-center bg-green-700 text-white font-bold py-3 rounded-xl text-sm hover:bg-green-700 active:scale-95 transition-all">
+              className="block min-h-11 text-center bg-green-700 text-white font-bold py-3 rounded-xl text-sm hover:bg-green-700 active:scale-95 transition-all">
               ⭐ {t("Jetzt auf Premium upgraden →", "Passer à Premium →", "Passa a Premium →", "Upgrade to Premium →")}
             </Link>
           </div>
@@ -392,7 +392,7 @@ export default function AccountPage() {
               <div className="text-xs text-gray-400">••••••••</div>
             </div>
             <button onClick={() => { setPwMode(m => !m); setPwError(""); }}
-              className="text-xs text-green-700 underline font-semibold">
+              className="inline-flex min-h-11 items-center text-xs text-green-700 underline font-semibold">
               {pwMode ? t("Abbrechen", "Annuler", "Annulla", "Cancel") : t("Ändern", "Modifier", "Modifica", "Change")}
             </button>
           </div>
@@ -413,12 +413,12 @@ export default function AccountPage() {
               {pwError && <p className="text-red-500 text-xs">{pwError}</p>}
               {pwDone && <p className="text-green-700 text-xs font-semibold">✅ {t("Passwort geändert!", "Mot de passe changé !", "Password cambiata!", "Password updated!")}</p>}
               <button onClick={handleChangePassword} disabled={pwLoading}
-                className="w-full bg-green-700 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-green-700 disabled:opacity-60">
+                className="min-h-11 w-full bg-green-700 text-white font-bold py-2.5 rounded-xl text-sm hover:bg-green-700 disabled:opacity-60">
                 {pwLoading ? "…" : t("Speichern", "Enregistrer", "Salva", "Save")}
               </button>
 
               <div className="text-center">
-                <button onClick={handleSendReset} className="text-xs text-gray-400 underline hover:text-gray-600">
+                <button onClick={handleSendReset} className="inline-flex min-h-11 items-center text-xs text-gray-400 underline hover:text-gray-600">
                   {resetSent
                     ? t("✅ Reset-Link gesendet!", "✅ Lien envoyé !", "✅ Link inviato!", "✅ Reset link sent!")
                     : t("Per E-Mail zurücksetzen →", "Réinitialiser par e-mail →", "Reimposta per e-mail →", "Reset by email →")}
@@ -434,17 +434,17 @@ export default function AccountPage() {
             {t("Konto", "Compte", "Account", "Account")}
           </div>
           <button onClick={handleLogout}
-            className="w-full border-2 border-gray-200 text-gray-600 font-semibold py-2.5 rounded-xl text-sm hover:border-red-300 hover:text-red-500 hover:bg-red-50 transition-colors">
+            className="min-h-11 w-full border-2 border-gray-200 text-gray-600 font-semibold py-2.5 rounded-xl text-sm hover:border-red-300 hover:text-red-500 hover:bg-red-50 transition-colors">
             {t("Abmelden", "Se déconnecter", "Disconnetti", "Log out")}
           </button>
         </div>
 
         {/* Nav links */}
         <div className="flex gap-3">
-          <Link href="/parents" className="flex-1 text-center border border-gray-200 text-gray-500 py-2.5 rounded-full text-sm font-medium">
+          <Link href="/parents" className="flex-1 min-h-11 text-center border border-gray-200 text-gray-500 py-2.5 rounded-full text-sm font-medium">
             📊 {t("Eltern-Übersicht", "Vue parents", "Vista genitori", "Parent view")}
           </Link>
-          <Link href="/dashboard" className="flex-1 text-center bg-green-700 text-white py-2.5 rounded-full text-sm font-bold">
+          <Link href="/dashboard" className="flex-1 min-h-11 text-center bg-green-700 text-white py-2.5 rounded-full text-sm font-bold">
             🎒 {t("Üben", "Pratiquer", "Esercitati", "Practice")}
           </Link>
         </div>

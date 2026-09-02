@@ -22,33 +22,54 @@ interface Props {
 const labels = {
   de: {
     explained: "Kurz erklärt",
-    question: (topicTitle: string) => `Was lernt mein Kind bei ${topicTitle}?`,
+    question: (topicTitle: string) => `Das lernst du bei ${topicTitle}`,
     allTopics: "Alle Themen dieser Klasse",
     exerciseCount: "interaktive Übungen",
     curriculum: "Lehrplan 21 Schweiz",
   },
   fr: {
     explained: "En bref",
-    question: (topicTitle: string) => `Qu'apprend mon enfant avec ${topicTitle}?`,
+    question: (topicTitle: string) => `Ce que tu apprends avec ${topicTitle}`,
     allTopics: "Tous les thèmes de cette année",
     exerciseCount: "exercices interactifs",
     curriculum: "Programme suisse",
   },
   it: {
     explained: "In breve",
-    question: (topicTitle: string) => `Cosa impara mio figlio con ${topicTitle}?`,
+    question: (topicTitle: string) => `Cosa impari con ${topicTitle}`,
     allTopics: "Tutti gli argomenti di questa classe",
     exerciseCount: "esercizi interattivi",
     curriculum: "Programma svizzero",
   },
   en: {
     explained: "Quick overview",
-    question: (topicTitle: string) => `What will my child learn in ${topicTitle}?`,
+    question: (topicTitle: string) => `What you learn in ${topicTitle}`,
     allTopics: "All topics in this grade",
     exerciseCount: "interactive exercises",
     curriculum: "Swiss LP21 curriculum",
   },
 };
+
+function makeChildFacingAnswer(answer: string, lang: keyof typeof labels) {
+  if (lang === "en") {
+    return answer
+      .replace("Your child practises", "You practise")
+      .replace("This makes it clear", "This shows you");
+  }
+  if (lang === "fr") {
+    return answer
+      .replace("Ton enfant s'entraîne", "Tu t'entraînes")
+      .replace("On voit ainsi", "Tu vois ainsi");
+  }
+  if (lang === "it") {
+    return answer
+      .replace("Il tuo bambino si esercita", "Ti eserciti")
+      .replace("Così si vede", "Così vedi");
+  }
+  return answer
+    .replace("Dein Kind übt", "Du übst")
+    .replace("So wird sichtbar", "So siehst du");
+}
 
 export function TopicExplainerClient({ topic, grade, subject, gradeSeoHref }: Props) {
   const { lang } = useLang();
@@ -56,7 +77,7 @@ export function TopicExplainerClient({ topic, grade, subject, gradeSeoHref }: Pr
   const topicTitle = getTopicTitle(topic.id, lang, topic.title);
   const subjectShortName = getLocalizedSubjectShortName(subject, lang);
   const gradeName = getLocalizedGradeName(grade, lang);
-  const topicLearningAnswer = buildTopicLearningAnswer(topic, grade, subject, lang, topicTitle);
+  const topicLearningAnswer = makeChildFacingAnswer(buildTopicLearningAnswer(topic, grade, subject, lang, topicTitle), lang);
 
   return (
     <section className="rounded-2xl border border-green-100 bg-green-50 p-5 shadow-sm">

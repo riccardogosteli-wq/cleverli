@@ -155,7 +155,7 @@ async function rejectText(page, text) {
 
   await page.goto(`${baseURL}/rewards`);
   await expectText(page, "Aktueller Fortschritt");
-  await expectText(page, "1/36");
+  await expectText(page, "1/9");
 
   await seed(page, childB);
   await page.goto(`${baseURL}/dashboard?subject=mi`);
@@ -186,7 +186,7 @@ async function rejectText(page, text) {
 
   await page.goto(`${baseURL}/rewards`);
   await expectText(page, "Aktueller Fortschritt");
-  await expectText(page, "1/4");
+  await expectText(page, "1/2");
 
   await browser.close();
   console.log("per-child reporting QA passed");

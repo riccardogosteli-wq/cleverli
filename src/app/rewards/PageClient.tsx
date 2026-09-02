@@ -76,19 +76,18 @@ export default function RewardsPage() {
     const family = loadFamily();
     const activeMember = family.members.find((member) => member.id === activeId) ?? family.members[0] ?? null;
     const bySubject = new Map<string, { id: string; emoji: string; done: number; total: number }>();
-    for (const g of [1,2,3,4,5,6]) {
-      for (const subject of getReportingSubjects(g, activeMember?.curriculum)) {
+    const grade = activeMember?.grade ?? 1;
+    for (const subject of getReportingSubjects(grade, activeMember?.curriculum)) {
         const current = bySubject.get(subject.id) ?? { id: subject.id, emoji: subject.emoji, done: 0, total: 0 };
-        const topics = getTopicSummaries(g, subject.id);
+        const topics = getTopicSummaries(grade, subject.id);
         current.total += topics.length;
         for (const t of topics) {
-          const progress = readTopicProgressForChild(g, subject.id, t, activeId);
+          const progress = readTopicProgressForChild(grade, subject.id, t, activeId);
           if (progress && progress.completed >= t.exerciseCount) {
             current.done += 1;
           }
         }
         bySubject.set(subject.id, current);
-      }
     }
     return Array.from(bySubject.values());
   })();
@@ -117,7 +116,7 @@ export default function RewardsPage() {
 
   const TRIGGER_CONTEXT: Record<TriggerType, { de: string; en: string; fr: string; it: string }> = {
     tasks:  { de: "ca. 2 Wochen bei 10 Min./Tag", en: "~2 weeks at 10 min/day", fr: "~2 semaines à 10 min/jour", it: "~2 settimane a 10 min/giorno" },
-    topics: { de: "1 Thema = ca. 10–15 Aufgaben", en: "1 topic = ~10–15 exercises", fr: "1 thème = ~10–15 exercices", it: "1 argomento = ~10–15 esercizi" },
+    topics: { de: "1 Thema = meist 50 Aufgaben in Etappen", en: "1 topic = usually 50 tasks in stages", fr: "1 thème = souvent 50 exercices par étapes", it: "1 argomento = di solito 50 esercizi a tappe" },
     streak: { de: "Jeden Tag eine Aufgabe erledigen", en: "Complete one exercise every day", fr: "Un exercice chaque jour", it: "Un esercizio ogni giorno" },
     stars:  { de: "Sterne beim Thema-Abschluss", en: "Stars earned on topic completion", fr: "Étoiles à la fin d'un thème", it: "Stelle al completamento di un argomento" },
   };
@@ -196,7 +195,7 @@ export default function RewardsPage() {
         <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-600 min-w-[44px]">←</Link>
         <Image src="/cleverli-celebrate.png" alt="Cleverli feiert" width={44} height={44} className="drop-shadow-md" />
         <h1 className="text-xl font-bold text-gray-800 flex items-center gap-2">
-          <Image src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen" width={24} height={24} />
+          <Image src="/images/ui/Belohnungen-icon.svg" alt="" aria-hidden="true" width={24} height={24} />
           {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
         </h1>
         <div className="flex-1" />
@@ -506,7 +505,7 @@ export default function RewardsPage() {
               ) : (
                 <button onClick={() => setRedeemConfirm(r.id)}
                   className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-4 py-3 rounded-xl text-sm transition-colors active:scale-95 whitespace-nowrap shadow-sm">
-                  {lang === "de" ? "✅ Eingelöst!" : lang === "fr" ? "✅ Réclamé!" : lang === "it" ? "✅ Riscattato!" : "✅ Redeemed!"}
+                  {lang === "de" ? "Als eingelöst markieren" : lang === "fr" ? "Marquer comme reçu" : lang === "it" ? "Segna come riscattato" : "Mark as redeemed"}
                 </button>
               )}
             </div>

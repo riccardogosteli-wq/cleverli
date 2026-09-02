@@ -38,6 +38,7 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
   const [result, setResult] = useState<Record<string, boolean>>({});  // zoneId → correct?
   const [ghost, setGhost] = useState<Ghost | null>(null);
   const [activeItemId, setActiveItemId] = useState<string | null>(null);
+  const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
 
   const zoneRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const containerRef = useRef<HTMLDivElement>(null);
@@ -47,6 +48,19 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
   const placedIds = new Set(Object.values(placed).flat());
 
   useEffect(() => { ghostRef.current = ghost; }, [ghost]);
+
+  const placeItemInZone = useCallback((itemId: string, zoneId: string) => {
+    setPlaced(prev => {
+      const next: Record<string, string[]> = {};
+      // Copy all zones, removing itemId from any previous zone
+      for (const z of Object.keys(prev)) {
+        next[z] = (prev[z] ?? []).filter(id => id !== itemId);
+      }
+      // Add to new zone
+      next[zoneId] = [...(next[zoneId] ?? []), itemId];
+      return next;
+    });
+  }, []);
 
   const getZoneAtPoint = useCallback((x: number, y: number): string | null => {
     for (const [zoneId, el] of Object.entries(zoneRefs.current)) {
@@ -78,25 +92,18 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
     e.preventDefault();
     const zoneId = getZoneAtPoint(e.clientX, e.clientY);
     if (zoneId) {
-      setPlaced(prev => {
-        const next: Record<string, string[]> = {};
-        // Copy all zones, removing itemId from any previous zone
-        for (const z of Object.keys(prev)) {
-          next[z] = (prev[z] ?? []).filter(id => id !== g.itemId);
-        }
-        // Add to new zone
-        next[zoneId] = [...(next[zoneId] ?? []), g.itemId];
-        return next;
-      });
+      placeItemInZone(g.itemId, zoneId);
     }
     setGhost(null);
     setActiveItemId(null);
-  }, [getZoneAtPoint]);
+    setSelectedItemId(null);
+  }, [getZoneAtPoint, placeItemInZone]);
 
   // Remove a specific item from a zone (tap to unplace)
   const removeItem = (zoneId: string, itemId: string) => {
     if (checked) return;
     setPlaced(prev => ({ ...prev, [zoneId]: (prev[zoneId] ?? []).filter(id => id !== itemId) }));
+    if (selectedItemId === itemId) setSelectedItemId(null);
   };
 
   const handleCheck = () => {
@@ -121,6 +128,8 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
     play(allCorrect ? "correct" : "wrong");
     setTimeout(() => onAnswer(allCorrect), 1500);
   };
+
+  const selectedItem = selectedItemId ? items.find(item => item.id === selectedItemId) : null;
 
   const allItemsPlaced = items.every(item => placedIds.has(item.id));
   const remaining = items.length - placedIds.size;
@@ -158,6 +167,7 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
             <div
               key={zone.id}
               ref={el => { zoneRefs.current[zone.id] = el; }}
+              aria-label={`${zone.label}, Ablagefeld`}
               className="rounded-2xl border-2 border-dashed flex flex-col gap-1.5 transition-all p-2"
               style={{
                 minHeight: "90px",
@@ -175,6 +185,20 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
                 )}
               </div>
 
+              {selectedItem && !checked && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    placeItemInZone(selectedItem.id, zone.id);
+                    setSelectedItemId(null);
+                  }}
+                  className="rounded-xl border border-blue-200 bg-blue-50 px-2 py-2 text-xs font-bold text-blue-700 hover:bg-blue-100"
+                  aria-label={`${selectedItem.label} in ${zone.label} ablegen`}
+                >
+                  Hier ablegen
+                </button>
+              )}
+
               {/* Placed items as removable chips */}
               <div className="flex flex-wrap gap-1 justify-center">
                 {inZone.map(itemId => {
@@ -183,8 +207,12 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
                   return (
                     <button
                       key={itemId}
-                      onClick={() => removeItem(zone.id, itemId)}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        removeItem(zone.id, itemId);
+                      }}
                       disabled={checked}
+                      aria-label={`${item.label} aus ${zone.label} entfernen`}
                       className={`flex flex-col items-center gap-0.5 bg-white border rounded-xl px-2 py-1 shadow-sm transition-all ${
                         checked ? "cursor-default" : "hover:border-red-300 hover:bg-red-50 active:scale-95"
                       }`}
@@ -217,11 +245,17 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
         onPointerUp={handlePointerUp}
       >
         {items.filter(item => !placedIds.has(item.id)).map(item => (
-          <div
+          <button
+            type="button"
             key={item.id}
             onPointerDown={e => handlePointerDown(e, item.id)}
-            className="flex flex-col items-center gap-1 bg-white border-2 border-gray-200 rounded-2xl px-3 py-3 shadow-sm hover:border-blue-300 hover:bg-blue-50 transition-all"
+            onClick={() => setSelectedItemId(current => current === item.id ? null : item.id)}
+            aria-label={`${item.label} auswählen`}
+            aria-grabbed={selectedItemId === item.id}
+            className="flex flex-col items-center gap-1 bg-white border-2 rounded-2xl px-3 py-3 shadow-sm hover:border-blue-300 hover:bg-blue-50 transition-all"
             style={{
+              borderColor: selectedItemId === item.id ? "#2563eb" : "#e5e7eb",
+              background: selectedItemId === item.id ? "#eff6ff" : "#ffffff",
               minWidth: "76px",
               minHeight: "44px",
               cursor: "grab",
@@ -230,9 +264,15 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
             }}
           >
             {renderItemContent(item, 36)}
-          </div>
+          </button>
         ))}
       </div>
+
+      {selectedItem && !checked && (
+        <p className="text-center text-xs text-blue-600 font-semibold">
+          {selectedItem.label} ausgewählt. Wähle ein Ablagefeld.
+        </p>
+      )}
 
       {!allItemsPlaced && !checked && remaining > 0 && (
         <p className="text-center text-xs text-gray-400">
