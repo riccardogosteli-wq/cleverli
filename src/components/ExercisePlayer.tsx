@@ -161,6 +161,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const { session } = useSession();
   const level = getLevelForXp(profile.xp);
   const nextLevel = getNextLevel(profile.xp);
+  const levelTitle =
+    lang === "fr" ? level.titleFr :
+    lang === "it" ? level.titleIt :
+    lang === "en" ? level.titleEn :
+    level.title;
   
   // Track anonymous free usage and offer the trial bridge at the free limit.
   const [anonExerciseCount, setAnonExerciseCount] = useState(0);
@@ -800,7 +805,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         <div className="bg-gradient-to-r from-green-50 to-yellow-50 border-2 border-green-200 rounded-xl p-3 flex items-center gap-3">
           <div className="text-3xl">{level.emoji}</div>
           <div className="flex-1">
-            <div className="font-bold text-gray-800 text-sm">{level.title}</div>
+            <div className="font-bold text-gray-800 text-sm">{levelTitle}</div>
             <div className="text-xs text-gray-600">
               {nextLevel ? `${profile.xp - level.minXp} / ${nextLevel.minXp - level.minXp} XP` : `${profile.xp} XP`}
             </div>

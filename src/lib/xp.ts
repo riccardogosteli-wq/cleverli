@@ -15,7 +15,7 @@ export interface Level {
 export const LEVELS: Level[] = [
   { id: 1, title: "Lernling",      titleFr: "Apprenti",       titleIt: "Principiante", titleEn: "Beginner",     minXp: 0,    maxXp: 99,   emoji: "🌱", color: "#86efac" },
   { id: 2, title: "Bücherwurm",    titleFr: "Rat de biblio",  titleIt: "Topolino",     titleEn: "Bookworm",     minXp: 100,  maxXp: 299,  emoji: "📚", color: "#67e8f9" },
-  { id: 3, title: "Mathe-Ninja",   titleFr: "Ninja des maths",titleIt: "Ninja della Matematica", titleEn: "Math Ninja", minXp: 300, maxXp: 699, emoji: "🥷", color: "#fde68a" },
+  { id: 3, title: "Cleverli-Ninja", titleFr: "Ninja Cleverli", titleIt: "Ninja Cleverli", titleEn: "Cleverli Ninja", minXp: 300, maxXp: 699, emoji: "🥷", color: "#fde68a" },
   { id: 4, title: "Cleverli-Star", titleFr: "Étoile Cleverli",titleIt: "Stella Cleverli",titleEn: "Cleverli Star",minXp: 700, maxXp: 1299,emoji: "⭐", color: "#fca5a5" },
   { id: 5, title: "Cleverli-Meister", titleFr: "Maître Cleverli", titleIt: "Maestro Cleverli", titleEn: "Cleverli Master", minXp: 1300, maxXp: 99999, emoji: "👑", color: "#c4b5fd" },
 ];
