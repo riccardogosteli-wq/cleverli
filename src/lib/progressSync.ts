@@ -202,6 +202,13 @@ function getLocalFamilyChildCount() {
   }
 }
 
+function getActiveChildIdFromStorage(): string | null {
+  if (typeof window === "undefined") return null;
+  return localStorage.getItem(getActiveProfileStorageKey()) ?? (
+    hasAuthenticatedStorageScope() ? null : localStorage.getItem(ACTIVE_PROFILE_KEY)
+  );
+}
+
 async function fetchSupabaseRows<T>(path: string, accessToken: string): Promise<T[] | null> {
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return null;
   try {
@@ -413,6 +420,16 @@ async function restoreActiveChildProgress(childId: string, accessToken?: string)
   }
 
   if (topicData) writeTopicProgressToLocalStorage(topicData);
+}
+
+export async function restoreCurrentChildProgressFromSupabase(): Promise<void> {
+  if (typeof window === "undefined") return;
+  const childId = getActiveChildIdFromStorage();
+  if (!childId) return;
+  const cachedAuth = getCachedSupabaseAuth();
+  await restoreActiveChildProgress(childId, cachedAuth?.accessToken);
+  window.dispatchEvent(new CustomEvent("cleverli-active-profile-change", { detail: { childId } }));
+  window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
 }
 
 export async function restoreFamilyFromSupabase(): Promise<void> {

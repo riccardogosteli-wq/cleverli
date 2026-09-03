@@ -5,7 +5,12 @@ import {
   FamilyMember, loadFamily, saveFamily, addMember, removeMember,
   getActiveProfileId, setActiveProfileId, updateMemberCurriculum, AVATARS, MAX_PROFILES,
 } from "@/lib/family";
-import { createChildInSupabase, deleteChildFromSupabase, updateChildInSupabase } from "@/lib/progressSync";
+import {
+  createChildInSupabase,
+  deleteChildFromSupabase,
+  restoreCurrentChildProgressFromSupabase,
+  updateChildInSupabase,
+} from "@/lib/progressSync";
 import CurriculumSelector from "@/components/CurriculumSelector";
 import { CANTON_NAMES, type CurriculumSelection } from "@/lib/curriculumProfiles";
 import { getCurriculumRolloutContext, isCurriculumProfilesRolloutEnabled } from "@/lib/curriculumRollout";
@@ -307,7 +312,8 @@ export default function ChildProfileManager() {
 
   const handleSwitch = (id: string) => {
     setActiveProfileId(id);
-    window.location.reload();
+    reload();
+    restoreCurrentChildProgressFromSupabase().catch(() => {});
   };
 
   const handleDelete = (id: string) => {

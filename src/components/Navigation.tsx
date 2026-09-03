@@ -8,6 +8,7 @@ import { LANGUAGES, Lang } from "@/lib/i18n";
 import XpBar from "./XpBar";
 import { useSession } from "@/hooks/useSession";
 import { loadFamily, getActiveProfileId, setActiveProfileId, FamilyMember } from "@/lib/family";
+import { restoreCurrentChildProgressFromSupabase } from "@/lib/progressSync";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -33,8 +34,15 @@ export default function Navigation() {
         reloadFamily();
       }
     };
+    const onActiveProfileChange = () => reloadFamily();
     window.addEventListener("storage", onStorage);
-    return () => window.removeEventListener("storage", onStorage);
+    window.addEventListener("cleverli-active-profile-change", onActiveProfileChange);
+    window.addEventListener("cleverli-family-restored", onActiveProfileChange);
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener("cleverli-active-profile-change", onActiveProfileChange);
+      window.removeEventListener("cleverli-family-restored", onActiveProfileChange);
+    };
   }, []);
 
   const activeMember = members.find(m => m.id === activeId) ?? members[0] ?? null;
@@ -50,9 +58,8 @@ export default function Navigation() {
   const switchProfile = (id: string) => {
     setActiveProfileId(id);
     setProfileOpen(false);
-    // Reload immediately — no Supabase await before reload (was causing 300-800ms lag).
-    // useProfile will restore Supabase topic progress on the new page load if needed.
-    window.location.reload();
+    reloadFamily();
+    restoreCurrentChildProgressFromSupabase().catch(() => {});
   };
   const currentLang = LANGUAGES.find(l => l.code === lang);
 

@@ -104,11 +104,12 @@ export function useSession() {
     withTimeout(supabase.auth.getSession()).then(async ({ data: { session: sbSession } }) => {
       try {
         if (sbSession?.user) {
-          const { data: profile } = await withTimeout(supabase!
+          const { data: profile, error: profileError } = await withTimeout(supabase!
             .from("parent_profiles")
             .select("name, premium, premium_until, premium_plan, cancelled")
             .eq("id", sbSession.user.id)
             .single());
+          if (profileError) throw profileError;
 
           const sess: Session = {
             email: sbSession.user.email ?? "",
@@ -150,11 +151,12 @@ export function useSession() {
       async (event, sbSession) => {
         try {
           if (sbSession?.user) {
-            const { data: profile } = await withTimeout(supabase!
+            const { data: profile, error: profileError } = await withTimeout(supabase!
               .from("parent_profiles")
               .select("name, premium, premium_until, premium_plan, cancelled")
               .eq("id", sbSession.user.id)
               .single());
+            if (profileError) throw profileError;
 
             const sess: Session = {
               email: sbSession.user.email ?? "",
