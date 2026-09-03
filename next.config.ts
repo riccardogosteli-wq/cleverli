@@ -38,6 +38,7 @@ const securityHeaders = [
         "https://*.google-analytics.com https://analytics.google.com https://region1.analytics.google.com",
         "https://*.doubleclick.net https://www.google.com https://www.google.ch https://www.googletagmanager.com https://www.googleadservices.com",
         "https://connect.facebook.net https://www.facebook.com",
+        "https://e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws https://bded8a3c6ae-1-1053047382554.us-central1.run.app",
         "https://*.ingest.sentry.io https://*.ingest.us.sentry.io",
         "https://*.posthog.com https://*.i.posthog.com https://eu.i.posthog.com https://us.i.posthog.com",
       ].join(" "),
