@@ -81,6 +81,10 @@ export default function FamilyPage() {
   useEffect(() => {
     refresh();
     setCurriculumEnabled(isCurriculumProfilesRolloutEnabled(getCurriculumRolloutContext(getAnonymousSessionId())));
+    window.addEventListener("cleverli-family-restored", refresh);
+    return () => {
+      window.removeEventListener("cleverli-family-restored", refresh);
+    };
   }, [refresh]);
 
   function handleAdd() {
