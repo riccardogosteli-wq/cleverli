@@ -32,6 +32,7 @@ declare global {
 
 const GOOGLE_ADS_ID = "AW-18344865510";
 const GOOGLE_ADS_PURCHASE_SEND_TO = `${GOOGLE_ADS_ID}/i_-4CK_QtNUcEObdwatE`;
+const GOOGLE_ADS_TRIAL_STARTED_SEND_TO = `${GOOGLE_ADS_ID}/PVdpCL6_ve0cEObdwatE`;
 const ADS_CTA_DEDUP_WINDOW_MS = 3_000;
 const ADS_CTA_DEDUP_PREFIX = "cleverli_ads_cta_click:";
 const ADS_CTA_SESSION_KEY = "cleverli_ads_cta_session_id";
@@ -136,6 +137,17 @@ function trackGoogleAdsPurchaseConversion(transactionId: string, value: number) 
   });
 }
 
+function trackGoogleAdsTrialStartedConversion(transactionId: string, value: number) {
+  if (typeof window === "undefined") return;
+  ensureGoogleAdsTag();
+  window.gtag?.("event", "conversion", {
+    send_to: GOOGLE_ADS_TRIAL_STARTED_SEND_TO,
+    value,
+    currency: "CHF",
+    transaction_id: transactionId,
+  });
+}
+
 export function trackSignUp(method = "email") {
   pushDataLayerEvent("sign_up", {
     method,
@@ -178,8 +190,10 @@ export function trackBeginCheckout(plan: CheckoutPlan, source: string) {
 }
 
 export function trackTrialStarted(plan: CheckoutPlan, source: string, trialDays: number, transactionId?: string | null) {
+  const googleTransactionId = transactionId || `cleverli_trial_${plan}_${Date.now()}`;
+
   pushDataLayerEvent("trial_started", {
-    transaction_id: transactionId ?? undefined,
+    transaction_id: googleTransactionId,
     currency: "CHF",
     value: PLAN_VALUE[plan],
     plan,
@@ -195,6 +209,7 @@ export function trackTrialStarted(plan: CheckoutPlan, source: string, trialDays:
       },
     ],
   });
+  trackGoogleAdsTrialStartedConversion(googleTransactionId, PLAN_VALUE[plan]);
   trackMetaEvent("StartTrial", {
     currency: "CHF",
     value: PLAN_VALUE[plan],
