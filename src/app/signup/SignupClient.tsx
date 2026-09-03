@@ -24,6 +24,14 @@ export default function Signup() {
   const [success, setSuccess] = useState(false);
   const [pendingCheckout, setPendingCheckout] = useState<ReturnType<typeof getPendingCheckoutIntent>>(null);
   const [intentLoaded, setIntentLoaded] = useState(false);
+  const isPendingTrial = pendingCheckout?.trialDays === 7;
+  const pendingPlanLabel = pendingCheckout?.plan === "monthly"
+    ? "danach CHF 9.90/Monat"
+    : pendingCheckout?.plan === "yearly"
+      ? "danach CHF 99/Jahr"
+      : pendingCheckout?.plan === "schooltime"
+        ? "einmalig CHF 249"
+        : "";
 
   useEffect(() => {
     setPendingCheckout(getPendingCheckoutIntent());
@@ -173,7 +181,7 @@ export default function Signup() {
             <div className="text-center space-y-1">
               <h1 className="text-2xl font-bold text-gray-900">Konto erstellen</h1>
               <p className="text-sm text-gray-500">
-                {pendingCheckout ? "Konto erstellen, dann sicher bezahlen" : "Kostenlos · keine Kreditkarte nötig"}
+                {isPendingTrial ? "7 Tage Premium testen · heute CHF 0" : pendingCheckout ? "Konto erstellen, dann sicher bezahlen" : "Kostenlos · keine Kreditkarte nötig"}
               </p>
             </div>
 
@@ -181,6 +189,15 @@ export default function Signup() {
               {error && (
                 <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-700">
                   ⚠️ {error}
+                </div>
+              )}
+
+              {isPendingTrial && (
+                <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">
+                  <p className="font-bold">Premium bleibt 7 Tage kostenlos.</p>
+                  <p className="mt-1 text-xs leading-5">
+                    Alle Übungen, alle Klassen und bis zu 3 Kinderprofile. {pendingPlanLabel ? `${pendingPlanLabel}, vorher jederzeit kündbar.` : "Vorher jederzeit kündbar."}
+                  </p>
                 </div>
               )}
 
@@ -224,11 +241,11 @@ export default function Signup() {
                 style={{ minHeight: "48px" }}
                 className="w-full bg-green-700 text-white py-3 px-4 rounded-xl font-bold text-base hover:bg-green-600 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
               >
-                {loading ? "⏳ Konto wird erstellt..." : pendingCheckout ? "Weiter zur sicheren Zahlung" : "🎉 Kostenlos starten"}
+                {loading ? "⏳ Konto wird erstellt..." : isPendingTrial ? "Konto erstellen & 7 Tage testen" : pendingCheckout ? "Weiter zur sicheren Zahlung" : "🎉 Kostenlos starten"}
               </button>
 
               <p className="text-center text-xs text-gray-400">
-                Mit Signup stimmst du unseren{" "}
+                Mit der Registrierung stimmst du unseren{" "}
                 <Link href="/datenschutz" className="text-green-700 underline">Datenschutzbestimmungen</Link> zu
               </p>
             </form>

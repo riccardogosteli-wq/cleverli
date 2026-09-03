@@ -25,7 +25,7 @@ type TrialLandingPageProps = {
 
 const features = [
   "Alle Übungen und Klassen freigeschaltet",
-  "Mathe, Deutsch, NMG und Sprachen an einem Ort",
+  "Mathe, Deutsch, NMG, Sprachen und Medien an einem Ort",
   "Bis zu 3 Kinderprofile für die Familie",
   "Fortschritt auf Handy, Tablet und Computer",
 ];

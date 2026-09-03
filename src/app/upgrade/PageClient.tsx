@@ -9,8 +9,6 @@ export default function UpgradePageClient() {
   const { session } = useSession();
   const { lang } = useLang();
   const uid = session?.userId ?? "";
-  const tr = (de: string, fr: string, it: string, en: string) =>
-    lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
 
   const t = {
     de: {
@@ -23,12 +21,13 @@ export default function UpgradePageClient() {
       monthlyPer: "/Monat",
       yearlyPer: "/Jahr",
       yearlySave: "2 Monate gratis",
-      cta: "Jetzt starten",
+      monthlyCta: "Monatlich starten",
+      yearlyCta: "Jährlich starten",
       cancel: "Jederzeit kündbar",
       features: [
         "✅ Alle Aufgaben pro Thema",
         "✅ 3 Stufen: Leicht · Mittel · Schwer",
-        "✅ Alle Fächer (Mathe, Deutsch, NMG)",
+        "✅ Alle Fächer inkl. Sprachen & Medien",
         "✅ Alle Klassen 1–6",
         "✅ Fortschritt & Trophäen",
         "✅ Elternbereich mit Statistiken",
@@ -47,7 +46,7 @@ export default function UpgradePageClient() {
       monthly: "Mensuel", yearly: "Annuel",
       monthlyPrice: "CHF 9.90", yearlyPrice: "CHF 99",
       monthlyPer: "/mois", yearlyPer: "/an",
-      yearlySave: "2 mois gratuits", cta: "Commencer",
+      yearlySave: "2 mois gratuits", monthlyCta: "Commencer mensuel", yearlyCta: "Commencer annuel",
       cancel: "Résiliable à tout moment",
       features: ["✅ Tous les exercices par thème","✅ 3 niveaux","✅ Toutes les matières","✅ Années 1–6","✅ Trophées & progrès","✅ Espace parents","✅ TWINT & carte de crédit"],
       alreadyPremium: "Vous avez déjà Premium ! 🎉",
@@ -63,7 +62,7 @@ export default function UpgradePageClient() {
       monthly: "Mensile", yearly: "Annuale",
       monthlyPrice: "CHF 9.90", yearlyPrice: "CHF 99",
       monthlyPer: "/mese", yearlyPer: "/anno",
-      yearlySave: "2 mesi gratis", cta: "Inizia ora",
+      yearlySave: "2 mesi gratis", monthlyCta: "Inizia mensile", yearlyCta: "Inizia annuale",
       cancel: "Annullabile in qualsiasi momento",
       features: ["✅ Tutti gli esercizi per argomento","✅ 3 livelli","✅ Tutte le materie","✅ Classi 1–6","✅ Trofei e progressi","✅ Area genitori","✅ TWINT & carta di credito"],
       alreadyPremium: "Hai già Premium! 🎉",
@@ -79,7 +78,7 @@ export default function UpgradePageClient() {
       monthly: "Monthly", yearly: "Yearly",
       monthlyPrice: "CHF 9.90", yearlyPrice: "CHF 99",
       monthlyPer: "/month", yearlyPer: "/year",
-      yearlySave: "2 months free", cta: "Get started",
+      yearlySave: "2 months free", monthlyCta: "Start monthly", yearlyCta: "Start yearly",
       cancel: "Cancel anytime",
       features: ["✅ All exercises per topic","✅ 3 difficulty levels","✅ All subjects","✅ Grades 1–6","✅ Trophies & progress","✅ Parent dashboard","✅ TWINT & credit card"],
       alreadyPremium: "You already have Premium! 🎉",
@@ -163,6 +162,38 @@ export default function UpgradePageClient() {
         ))}
       </div>
 
+      {/* Plans */}
+      <div className="grid sm:grid-cols-2 gap-4">
+        {/* Yearly — highlighted */}
+        <div className="bg-green-700 rounded-2xl p-6 space-y-4 relative shadow-lg shadow-green-200">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-white text-xs font-black px-3 py-1 rounded-full">
+            {tx.yearlySave}
+          </div>
+          <div>
+            <div className="text-sm font-semibold text-green-50 uppercase tracking-wide">{tx.yearly}</div>
+            <div className="text-4xl font-black text-white mt-1">{tx.yearlyPrice}<span className="text-lg font-medium text-green-300">{tx.yearlyPer}</span></div>
+          </div>
+          <button type="button" onClick={() => startCheckout("yearly", "upgrade_page", uid)}
+            className="block w-full text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-white text-green-700 hover:bg-green-50">
+            {tx.yearlyCta} →
+          </button>
+          <p className="text-xs text-green-300 text-center">{tx.cancel}</p>
+        </div>
+
+        {/* Monthly */}
+        <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 space-y-4 hover:border-green-300 transition-all">
+          <div>
+            <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{tx.monthly}</div>
+            <div className="text-4xl font-black text-gray-800 mt-1">{tx.monthlyPrice}<span className="text-lg font-medium text-gray-400">{tx.monthlyPer}</span></div>
+          </div>
+          <button type="button" onClick={() => startCheckout("monthly", "upgrade_page", uid)}
+            className="block w-full text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-green-700 text-white hover:bg-green-700">
+            {tx.monthlyCta} →
+          </button>
+          <p className="text-xs text-gray-400 text-center">{tx.cancel}</p>
+        </div>
+      </div>
+
       {/* Parent rewards highlight */}
       <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 space-y-4">
         <div className="flex items-start gap-3">
@@ -202,50 +233,8 @@ export default function UpgradePageClient() {
         </div>
       </div>
 
-      {/* No account nudge */}
-      {!uid && (
-        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center space-y-2">
-          <p className="text-sm text-amber-800">{tx.noLogin}</p>
-          <Link href="/signup" className="inline-flex min-h-11 items-center justify-center bg-amber-500 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-amber-600 transition-all">
-            {tx.signup}
-          </Link>
-        </div>
-      )}
-
       {/* Limited founder offer */}
       <LifetimeFounderOffer uid={uid} checkoutSource="upgrade_schooltime_offer" pageKey="upgrade" pagePath="/upgrade" />
-
-      {/* Plans */}
-      <div className="grid sm:grid-cols-2 gap-4">
-        {/* Monthly */}
-        <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 space-y-4 hover:border-green-300 transition-all">
-          <div>
-            <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{tx.monthly}</div>
-            <div className="text-4xl font-black text-gray-800 mt-1">{tx.monthlyPrice}<span className="text-lg font-medium text-gray-400">{tx.monthlyPer}</span></div>
-          </div>
-          <button type="button" onClick={() => startCheckout("monthly", "upgrade_page", uid)}
-            className="block w-full text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-green-700 text-white hover:bg-green-700">
-            {tx.cta} →
-          </button>
-          <p className="text-xs text-gray-400 text-center">{tx.cancel}</p>
-        </div>
-
-        {/* Yearly — highlighted */}
-        <div className="bg-green-700 rounded-2xl p-6 space-y-4 relative shadow-lg shadow-green-200">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-white text-xs font-black px-3 py-1 rounded-full">
-            {tx.yearlySave}
-          </div>
-          <div>
-            <div className="text-sm font-semibold text-green-50 uppercase tracking-wide">{tx.yearly}</div>
-            <div className="text-4xl font-black text-white mt-1">{tx.yearlyPrice}<span className="text-lg font-medium text-green-300">{tx.yearlyPer}</span></div>
-          </div>
-          <button type="button" onClick={() => startCheckout("yearly", "upgrade_page", uid)}
-            className="block w-full text-center py-3 rounded-xl font-bold text-base transition-all active:scale-95 bg-white text-green-700 hover:bg-green-50">
-            {tx.cta} →
-          </button>
-          <p className="text-xs text-green-300 text-center">{tx.cancel}</p>
-        </div>
-      </div>
 
       {/* Payment methods */}
       <div className="text-center space-y-2">

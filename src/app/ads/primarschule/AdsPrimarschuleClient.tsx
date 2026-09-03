@@ -107,7 +107,7 @@ export default function AdsPrimarschuleClient() {
           pageKey="primarschule_uebungen"
           pagePath="/primarschule-uebungen"
           checkoutSource="primarschule_uebungen"
-          title="Mathe, Deutsch und NMG 7 Tage gratis freischalten."
+          title="Primarschul-Übungen 7 Tage gratis freischalten."
           lead="Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang mit allen Aufgaben und Klassen."
           trialCtaLabel="7 Tage kostenlos testen"
           freeCtaLabel="Gratis mit Übungen starten"
@@ -127,7 +127,7 @@ export default function AdsPrimarschuleClient() {
               Online-Übungen für die Schweizer Primarschule.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-              Mathe, Deutsch und NMG in kurzen Aufgaben mit direktem Feedback. Kostenlos starten, direkt im Browser.
+              Mathe, Deutsch, NMG, Sprachen und Medien in kurzen Aufgaben mit direktem Feedback. Kostenlos starten, direkt im Browser.
             </p>
             <div className="mt-5 grid gap-3 text-sm font-semibold text-gray-700 sm:grid-cols-3">
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Ohne Kreditkarte</div>
@@ -150,7 +150,7 @@ export default function AdsPrimarschuleClient() {
                 }}
                 className="rounded-full border-2 border-green-700 px-7 py-4 text-center text-base font-bold text-green-800 transition-colors hover:bg-green-50"
               >
-                Alle Themen freischalten
+                7 Tage Premium testen
               </button>
             </div>
             <p className="mt-3 text-sm text-gray-500">Heute CHF 0 · danach ab CHF 8.25 / Monat · bis zu 3 Kinderprofile</p>
