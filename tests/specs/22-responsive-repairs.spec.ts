@@ -7,7 +7,7 @@ test("mobile topic opens with the exercise in the first viewport", async ({ page
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/learn/1/math/zahlen-1-10", { waitUntil: "domcontentloaded" });
 
-  const question = page.getByText("Wie viele Äpfel siehst du?", { exact: true });
+  const question = page.getByText("Wie viele Äpfel siehst du?", { exact: true }).first();
   await expect(question).toBeVisible();
   const box = await question.boundingBox();
   expect(box).not.toBeNull();
@@ -92,6 +92,28 @@ test("word-search cells retain 44 pixel touch targets on a narrow phone", async 
   expect(box).not.toBeNull();
   expect(box!.width).toBeGreaterThanOrEqual(44);
   expect(box!.height).toBeGreaterThanOrEqual(44);
+});
+
+test("larger word-search grids fit inside a phone viewport", async ({ context, page }) => {
+  const topic = getTopics(3, "mi").find((entry) => entry.id === "digitale-spuren-3");
+  if (!topic) throw new Error("Missing digitale-spuren-3 topic");
+  const sorted = [...topic.exercises].sort((a, b) => (a.difficulty ?? 2) - (b.difficulty ?? 2));
+  const targetIndex = sorted.findIndex((exercise) => exercise.id === "mi3-digitale-spuren-3-ws1");
+  expect(targetIndex).toBeGreaterThanOrEqual(0);
+  const correctIds = sorted.slice(0, targetIndex).map((exercise) => exercise.id);
+  await context.addInitScript((ids) => {
+    localStorage.setItem("cleverli_3_mi_digitale-spuren-3", JSON.stringify({ correctIds: ids, completed: ids.length }));
+  }, correctIds);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/learn/3/mi/digitale-spuren-3", { waitUntil: "domcontentloaded" });
+  const grid = page.locator("[data-word-search]").first();
+  await expect(grid).toBeVisible();
+  await page.waitForTimeout(400);
+  const box = await grid.boundingBox();
+  expect(box).not.toBeNull();
+  expect(box!.x).toBeGreaterThanOrEqual(0);
+  expect(box!.x + box!.width).toBeLessThanOrEqual(390);
+  await expect(page.getByText("DATEN", { exact: true })).toBeVisible();
 });
 
 test("1x1 table explains horizontal scrolling before the table", async ({ page }) => {

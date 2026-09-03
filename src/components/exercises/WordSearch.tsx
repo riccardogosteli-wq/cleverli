@@ -64,6 +64,8 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
   const { play } = useSound();
   const { tr } = useLang();
   const { grid, placements } = useMemo(() => buildGrid(words, gridSize), [words, gridSize]);
+  const shouldFitGridToViewport = gridSize > 7;
+  const fullTouchGridWidth = gridSize * 44 + (gridSize - 1) * 3;
 
   const [selecting, setSelecting] = useState<{row: number; col: number}[]>([]);
   const [found, setFound] = useState<Set<string>>(new Set());
@@ -130,15 +132,17 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
         })}
       </div>
 
-      {/* Keep every letter at a reliable touch size; narrow phones can scroll the grid. */}
-      <div className="overflow-x-auto -mx-1 pb-1">
+      {/* Larger word-search grids must stay fully visible on phones. */}
+      <div className={shouldFitGridToViewport ? "px-1 pb-1" : "overflow-x-auto -mx-1 pb-1"}>
         <div
           className="mx-auto"
+          data-word-search
           style={{
             display: "grid",
-            gridTemplateColumns: `repeat(${gridSize}, 44px)`,
-            gap: "3px",
-            width: `${gridSize * 44 + (gridSize - 1) * 3}px`,
+            gridTemplateColumns: shouldFitGridToViewport ? `repeat(${gridSize}, minmax(0, 1fr))` : `repeat(${gridSize}, 44px)`,
+            gap: shouldFitGridToViewport ? "clamp(2px, 0.8vw, 3px)" : "3px",
+            width: shouldFitGridToViewport ? "100%" : `${fullTouchGridWidth}px`,
+            maxWidth: shouldFitGridToViewport ? `${fullTouchGridWidth}px` : undefined,
           }}
         >
           {grid.flatMap((row, r) => row.map((letter, c) => {
@@ -150,8 +154,9 @@ export default function WordSearch({ question, words, onAnswer, gridSize = 8 }: 
                 onClick={() => tapCell(r, c)}
                 className="rounded-md font-bold transition-all active:scale-90 select-none aspect-square flex items-center justify-center text-sm"
                 style={{
-                  width: "44px",
-                  height: "44px",
+                  width: shouldFitGridToViewport ? "100%" : "44px",
+                  height: shouldFitGridToViewport ? "auto" : "44px",
+                  minWidth: 0,
                   background: fnd ? "#bbf7d0" : sel ? "#bfdbfe" : "#f1f5f9",
                   color:      fnd ? "#15803d" : sel ? "#1d4ed8" : "#374151",
                   border:     fnd ? "2px solid #22c55e" : sel ? "2px solid #3b82f6" : "2px solid transparent",
