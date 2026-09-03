@@ -181,6 +181,91 @@ export async function sendPaymentConfirmationEmail(
   if (error) throw error;
 }
 
+export async function sendManualPremiumInviteEmail(
+  to: string,
+  name: string,
+  passwordSetupUrl: string,
+  options?: { idempotencyKey?: string }
+) {
+  const resend = getResend();
+  if (!resend) {
+    throw new Error("RESEND_API_KEY is not configured");
+  }
+
+  const safeName = name?.trim() ? escapeHtml(name.trim()) : "";
+  const greeting = safeName ? `Hallo ${safeName}` : "Hallo";
+  const safePasswordSetupUrl = escapeHtml(passwordSetupUrl);
+
+  const { error } = await resend.emails.send({
+    from: FROM,
+    to,
+    subject: "Dein Cleverli Premium ist aktiv",
+    html: `
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f0fdf4;font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:560px;margin:32px auto;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
+    <div style="background:linear-gradient(135deg,#d97706,#f59e0b);padding:32px 24px;text-align:center;">
+      <img src="https://www.cleverli.ch/cleverli-logo.png" alt="Cleverli" width="160" style="margin:0 auto 8px;display:block;" />
+      <h1 style="color:#fff;margin:0;font-size:22px;font-weight:800;">Premium aktiviert!</h1>
+    </div>
+    <div style="padding:32px 28px;color:#1f2937;">
+      <p style="font-size:16px;margin:0 0 16px;">${greeting}, schön bist du bei Cleverli.</p>
+      <p style="font-size:15px;line-height:1.7;color:#4b5563;margin:0 0 20px;">
+        Dein Cleverli Premium-Zugang ist kostenlos freigeschaltet. Es wurde keine Zahlung ausgelöst und es gibt keine automatische Verlängerung.
+      </p>
+      <div style="background:#fffbeb;border:2px solid #fbbf24;border-radius:12px;padding:16px 20px;margin:0 0 24px;">
+        <p style="font-size:13px;font-weight:700;color:#92400e;margin:0 0 4px;">Dein Zugang</p>
+        <p style="font-size:15px;font-weight:800;color:#1f2937;margin:0 0 4px;">Cleverli Premium</p>
+        <p style="font-size:12px;color:#6b7280;margin:0;">Kostenlos aktiviert - ohne Abbuchung.</p>
+      </div>
+      <div style="background:#f0fdf4;border-radius:12px;padding:16px 20px;margin:0 0 24px;">
+        <p style="font-size:13px;margin:0 0 8px;font-weight:700;color:#15803d;">Jetzt freigeschaltet:</p>
+        <ul style="font-size:13px;color:#374151;margin:0;padding-left:18px;line-height:1.8;">
+          <li>Mehr als 13'000 interaktive Übungen</li>
+          <li>Alle verfügbaren Fächer passend zur Klasse deines Kindes</li>
+          <li>Inhalte passend zur Schweizer Primarschule und zum Lehrplan 21</li>
+          <li>Belohnungs-System für Kinder</li>
+          <li>Bis zu 3 Kinderprofile</li>
+          <li>Elternbereich mit Statistiken</li>
+        </ul>
+      </div>
+      <div style="text-align:center;margin:28px 0;">
+        <a href="${safePasswordSetupUrl}"
+           style="background:#16a34a;color:#fff;text-decoration:none;padding:14px 32px;border-radius:50px;font-weight:800;font-size:16px;display:inline-block;">
+          Passwort setzen & loslegen
+        </a>
+      </div>
+      <p style="font-size:12px;color:#6b7280;line-height:1.6;margin:0;">
+        Falls der Button nicht funktioniert, kopiere diesen Link in deinen Browser:<br>
+        <a href="${safePasswordSetupUrl}" style="color:#15803d;word-break:break-all;">${safePasswordSetupUrl}</a>
+      </p>
+    </div>
+    <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
+      <p style="font-size:11px;color:#9ca3af;margin:0;">
+        Cleverli · Alexandra Gosteli Digital Solutions · Langenmooserstrasse 22, 8467 Truttikon<br>
+        <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a>
+        · <a href="https://www.cleverli.ch/impressum" style="color:#9ca3af;">Impressum</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>`,
+    text: `${greeting}, schön bist du bei Cleverli.
+
+Dein Cleverli Premium-Zugang ist kostenlos freigeschaltet. Es wurde keine Zahlung ausgelöst und es gibt keine automatische Verlängerung.
+
+Passwort setzen und loslegen:
+${passwordSetupUrl}
+
+Liebe Grüsse
+Cleverli`,
+  }, options?.idempotencyKey ? { idempotencyKey: options.idempotencyKey } : undefined);
+
+  if (error) throw error;
+}
+
 export async function sendAdminPaymentNotificationEmail({
   customerEmail,
   plan,
