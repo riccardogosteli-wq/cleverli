@@ -129,6 +129,34 @@ type CancellationFeedbackStats = {
   recent: ActivityEventRow[];
 };
 
+type CustomerFeedbackRow = {
+  id: string;
+  email: string;
+  rating: number | null;
+  liked: string | null;
+  disliked: string | null;
+  missing: string | null;
+  issues: string | null;
+  child_reaction: string | null;
+  improvement_idea: string | null;
+  allow_followup: boolean;
+  giveaway_opt_in: boolean;
+  giveaway_months: number;
+  giveaway_selected: boolean;
+  giveaway_awarded_at: string | null;
+  source: string | null;
+  created_at: string;
+};
+
+type CustomerFeedbackStats = {
+  total: number;
+  avgRating: number;
+  followups: number;
+  giveawayOptIns: number;
+  byRating: Array<{ rating: number; count: number }>;
+  recent: CustomerFeedbackRow[];
+};
+
 const ACTIVITY_TYPES = [
   "login",
   "signup_started",
@@ -474,6 +502,39 @@ async function loadAuthUsers(filters: ActivityFilters) {
   return enrichedUsers.filter(user => {
     return user.id.toLowerCase() === userFilter || user.email?.toLowerCase().includes(userFilter);
   });
+}
+
+async function loadCustomerFeedback(filters: Pick<ActivityFilters, "user" | "from" | "to">) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) return [] as CustomerFeedbackRow[];
+
+  const supabase = createClient(supabaseUrl, serviceKey, {
+    auth: { persistSession: false },
+  });
+
+  const from = filters.from
+    ? new Date(`${filters.from}T00:00:00`).toISOString()
+    : new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString();
+  const to = filters.to ? new Date(`${filters.to}T23:59:59`).toISOString() : undefined;
+
+  let query = supabase
+    .from("customer_feedback")
+    .select("id, email, rating, liked, disliked, missing, issues, child_reaction, improvement_idea, allow_followup, giveaway_opt_in, giveaway_months, giveaway_selected, giveaway_awarded_at, source, created_at")
+    .gte("created_at", from)
+    .order("created_at", { ascending: false })
+    .limit(250);
+
+  if (to) query = query.lte("created_at", to);
+  if (filters.user?.trim()) query = query.ilike("email", `%${filters.user.trim()}%`);
+
+  const { data, error } = await query;
+  if (error) {
+    console.error("[internal-log-dashboard/customer-feedback]", error);
+    return [];
+  }
+
+  return (data ?? []) as CustomerFeedbackRow[];
 }
 
 function minuteKey(date: string) {
@@ -960,6 +1021,36 @@ function buildCancellationFeedbackStats(events: ActivityEventRow[]): Cancellatio
   };
 }
 
+function buildCustomerFeedbackStats(rows: CustomerFeedbackRow[]): CustomerFeedbackStats {
+  const ratings = rows
+    .map(row => row.rating)
+    .filter((rating): rating is number => typeof rating === "number");
+  const byRating = [5, 4, 3, 2, 1].map(rating => ({
+    rating,
+    count: rows.filter(row => row.rating === rating).length,
+  }));
+
+  return {
+    total: rows.length,
+    avgRating: ratings.length ? Math.round((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length) * 10) / 10 : 0,
+    followups: rows.filter(row => row.allow_followup).length,
+    giveawayOptIns: rows.filter(row => row.giveaway_opt_in).length,
+    byRating,
+    recent: rows.slice(0, 40),
+  };
+}
+
+function responsePreview(row: CustomerFeedbackRow) {
+  return [
+    row.liked ? `Gut: ${row.liked}` : "",
+    row.disliked ? `Weniger: ${row.disliked}` : "",
+    row.missing ? `Fehlt: ${row.missing}` : "",
+    row.issues ? `Problem: ${row.issues}` : "",
+    row.child_reaction ? `Kind: ${row.child_reaction}` : "",
+    row.improvement_idea ? `Wunsch: ${row.improvement_idea}` : "",
+  ].filter(Boolean).join(" · ");
+}
+
 function LoginForm({ hasError }: { hasError: boolean }) {
   return (
     <main className="min-h-screen bg-gray-950 text-white flex items-center justify-center px-4">
@@ -1025,11 +1116,12 @@ export default async function InternalLogDashboard({
     to: params.to || "",
   };
   const events = await loadEvents();
-  const [activityEventsRaw, adsAbEventsRaw, organicEventsRaw, authUsersAll] = await Promise.all([
+  const [activityEventsRaw, adsAbEventsRaw, organicEventsRaw, authUsersAll, customerFeedbackRows] = await Promise.all([
     loadActivity(activityFilters),
     loadAdsAbActivity({ from: activityFilters.from, to: activityFilters.to }),
     loadOrganicFunnelActivity({ from: activityFilters.from, to: activityFilters.to }),
     loadAuthUsers({ ...activityFilters, user: "" }),
+    loadCustomerFeedback(activityFilters),
   ]);
   const authUserFilter = activityFilters.user.toLowerCase();
   const authUsers = authUserFilter
@@ -1048,6 +1140,7 @@ export default async function InternalLogDashboard({
   const adsAbStats = buildAdsAbStats(adsAbEventsRaw);
   const organicFunnel = buildOrganicFunnel([...organicEventsRaw, ...syntheticSignupEvents]);
   const cancellationStats = buildCancellationFeedbackStats(adsAbEventsRaw);
+  const customerFeedbackStats = buildCustomerFeedbackStats(customerFeedbackRows);
   const seedAuthSummaries = activityFilters.activity === "all" && !activityFilters.from && !activityFilters.to;
   const activitySummaries = buildActivitySummaries(activityEvents, seedAuthSummaries ? authUsers : []);
   const authById = new Map(authUsers.map(user => [user.id, user]));
@@ -1158,6 +1251,92 @@ export default async function InternalLogDashboard({
                   {cancellationStats.recent.length === 0 && (
                     <tr>
                       <td colSpan={4} className="py-4 text-gray-500">Keine Kündigungen im Zeitraum.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-lg border border-gray-200 bg-white p-4">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-sm font-black uppercase tracking-wide">Kundenfeedback</h2>
+            <p className="text-sm text-gray-500">
+              Antworten aus der privaten Premium-Feedback-Seite. Nutzt User- und Datumsfilter.
+            </p>
+          </div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-4">
+            <Stat label="Antworten" value={customerFeedbackStats.total} />
+            <Stat label="Ø Bewertung" value={customerFeedbackStats.avgRating ? `${customerFeedbackStats.avgRating}/5` : "-"} />
+            <Stat label="Follow-up erlaubt" value={customerFeedbackStats.followups} />
+            <Stat label="Verlosung" value={customerFeedbackStats.giveawayOptIns} />
+          </div>
+
+          <div className="mt-5 grid gap-5 lg:grid-cols-[0.7fr_1.3fr]">
+            <div className="space-y-3">
+              <h3 className="text-xs font-black uppercase tracking-wide text-gray-500">Bewertungen</h3>
+              {customerFeedbackStats.byRating.map(item => (
+                <div key={item.rating} className="rounded-lg border border-gray-100 bg-gray-50 p-3">
+                  <div className="flex items-center justify-between gap-3 text-sm">
+                    <span className="font-bold text-gray-800">{item.rating} von 5</span>
+                    <span className="text-xs font-bold text-gray-500">{item.count} · {pct(item.count, customerFeedbackStats.total)}%</span>
+                  </div>
+                  <div className="mt-2 h-2 overflow-hidden rounded-full bg-white">
+                    <div className="h-full rounded-full bg-green-600" style={{ width: `${pct(item.count, customerFeedbackStats.total)}%` }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="max-h-[420px] overflow-auto">
+              <h3 className="sticky top-0 mb-2 bg-white pb-2 text-xs font-black uppercase tracking-wide text-gray-500">Aktuelle Antworten</h3>
+              <div className="space-y-2 sm:hidden">
+                {customerFeedbackStats.recent.map(row => (
+                  <div key={row.id} className="rounded-lg border border-gray-100 bg-gray-50 p-3 text-sm">
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="font-bold text-gray-900">{row.rating ? `${row.rating}/5` : "-"}</span>
+                      <span className="whitespace-nowrap text-xs text-gray-500">{dateTimeLabel(row.created_at)}</span>
+                    </div>
+                    <p className="mt-2 break-all font-semibold text-gray-700">{row.email}</p>
+                    <p className="mt-2 text-gray-600">{responsePreview(row) || "-"}</p>
+                    <p className="mt-2 text-xs font-semibold text-gray-500">
+                      {row.allow_followup ? "Follow-up ok" : "Kein Follow-up"} · {row.giveaway_opt_in ? `${row.giveaway_months} Monate Verlosung` : "Keine Verlosung"}
+                    </p>
+                  </div>
+                ))}
+                {customerFeedbackStats.recent.length === 0 && (
+                  <p className="py-4 text-sm text-gray-500">Noch keine Kundenfeedback-Antworten im Zeitraum.</p>
+                )}
+              </div>
+              <table className="hidden w-full min-w-[980px] text-left text-sm sm:table">
+                <thead className="sticky top-7 bg-white text-xs uppercase text-gray-500">
+                  <tr>
+                    <th className="py-2">Zeit</th>
+                    <th>E-Mail</th>
+                    <th>Rating</th>
+                    <th>Flags</th>
+                    <th>Antwort</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {customerFeedbackStats.recent.map(row => (
+                    <tr key={row.id} className="border-t border-gray-100">
+                      <td className="whitespace-nowrap py-2">{dateTimeLabel(row.created_at)}</td>
+                      <td className="max-w-[210px] truncate font-semibold">{row.email}</td>
+                      <td>{row.rating ? `${row.rating}/5` : "-"}</td>
+                      <td className="whitespace-nowrap text-xs font-semibold text-gray-500">
+                        {row.allow_followup ? "Follow-up" : "-"} {row.giveaway_opt_in ? `· ${row.giveaway_months}M` : ""}
+                      </td>
+                      <td className="max-w-[460px] truncate text-gray-500" title={responsePreview(row)}>
+                        {responsePreview(row) || "-"}
+                      </td>
+                    </tr>
+                  ))}
+                  {customerFeedbackStats.recent.length === 0 && (
+                    <tr>
+                      <td colSpan={5} className="py-4 text-gray-500">Noch keine Kundenfeedback-Antworten im Zeitraum.</td>
                     </tr>
                   )}
                 </tbody>
