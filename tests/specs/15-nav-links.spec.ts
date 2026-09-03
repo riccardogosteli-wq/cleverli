@@ -43,6 +43,21 @@ test.describe("Route health — all pages respond", () => {
 });
 
 test.describe("Navigation links are reachable from homepage", () => {
+  test("homepage Alle Themen index includes every available subject group", async ({ page }) => {
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+
+    const topicIndex = page.locator("section", { hasText: "Alle Themen" });
+    await expect(topicIndex.getByRole("heading", { name: "Alle Themen" })).toBeVisible();
+
+    for (const subject of ["Mathematik", "Deutsch", "NMG", "Englisch", "Französisch", "Medien & Informatik"]) {
+      await expect(topicIndex.getByText(subject, { exact: true })).toBeVisible();
+    }
+
+    await expect(topicIndex.locator("a[href*='/learn/6/french']")).toHaveCount(1);
+    await expect(topicIndex.locator("a[href*='/learn/6/english']")).toHaveCount(1);
+    await expect(topicIndex.locator("a[href*='/learn/6/mi']")).toHaveCount(1);
+  });
+
   test("desktop nav links all resolve", async ({ page }) => {
     await page.goto("/");
     await page.waitForLoadState("domcontentloaded");
@@ -60,6 +75,15 @@ test.describe("Navigation links are reachable from homepage", () => {
       const status = res?.status() ?? 200;
       expect(status, `${href} returned ${status}`).toBeLessThan(400);
     }
+  });
+});
+
+test.describe("Subject page breadcrumbs", () => {
+  test("dashboard and grade crumbs are tappable links", async ({ page }) => {
+    await page.goto("/learn/6/science", { waitUntil: "domcontentloaded" });
+
+    await expect(page.getByRole("link", { name: "Dashboard" })).toHaveAttribute("href", "/dashboard");
+    await expect(page.getByRole("link", { name: "6. Klasse" })).toHaveAttribute("href", "/dashboard?grade=6");
   });
 });
 
