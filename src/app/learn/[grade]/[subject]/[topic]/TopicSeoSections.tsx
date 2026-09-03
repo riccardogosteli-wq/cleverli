@@ -92,6 +92,10 @@ function displayText(value: string, max = 82) {
   return clean.length > max ? `${clean.slice(0, max - 1).trim()}...` : clean;
 }
 
+function cleanDisplayText(value: string) {
+  return value.replace(/\s+/g, " ").trim();
+}
+
 const previewTypePriority: Record<string, number> = {
   "number-line": 1,
   memory: 2,
@@ -131,8 +135,8 @@ function MiniNumberLine({ exercise }: { exercise: Exercise }) {
 function MiniMatching({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
   const pairs = localizedList<{ id: string; label: string; emoji?: string }>(exercise, lang, "pairs").slice(0, 4);
   const visiblePairs = pairs.length >= 4 ? pairs : [
-    { id: "a1", label: displayText(exercise.answer, 28) },
-    { id: "a2", label: displayText(getLocalizedExerciseQuestion(exercise, lang), 28) },
+    { id: "a1", label: cleanDisplayText(exercise.answer) },
+    { id: "a2", label: cleanDisplayText(getLocalizedExerciseQuestion(exercise, lang)) },
     { id: "b1", label: "passt" },
     { id: "b2", label: "gehört dazu" },
   ];
@@ -144,9 +148,9 @@ function MiniMatching({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
       {[left, right].map((column, columnIndex) => (
         <div key={columnIndex} className="space-y-2">
           {column.map((item) => (
-            <div key={item.id} className="flex min-h-12 items-center justify-center gap-1 rounded-xl border border-green-100 bg-white px-2 py-2 text-center text-xs font-bold text-gray-700 shadow-sm">
+            <div key={item.id} className="flex min-h-12 items-center justify-center gap-1 rounded-xl border border-green-100 bg-white px-2 py-2 text-center text-[11px] font-bold leading-tight text-gray-700 shadow-sm sm:text-xs">
               {item.emoji && <span className="text-lg leading-none">{item.emoji}</span>}
-              <span>{displayText(item.label, 34)}</span>
+              <span className="min-w-0 break-words hyphens-auto">{cleanDisplayText(item.label)}</span>
             </div>
           ))}
         </div>
@@ -158,21 +162,21 @@ function MiniMatching({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
 function MiniMemory({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
   const pairs = localizedList<{ id: string; label: string; emoji?: string }>(exercise, lang, "pairs").slice(0, 2);
   const fallback = [
-    { id: "m1", label: displayText(exercise.answer, 20), emoji: exercise.emoji },
-    { id: "m2", label: displayText(getLocalizedExerciseQuestion(exercise, lang), 20), emoji: undefined },
+    { id: "m1", label: cleanDisplayText(exercise.answer), emoji: exercise.emoji },
+    { id: "m2", label: cleanDisplayText(getLocalizedExerciseQuestion(exercise, lang)), emoji: undefined },
   ];
   const cards = (pairs.length ? pairs : fallback).slice(0, 2);
 
   return (
-    <div className="grid grid-cols-4 gap-2">
-      <div className="aspect-square rounded-xl bg-green-600 shadow-sm" />
+    <div className="grid grid-cols-2 gap-2">
+      <div className="min-h-16 rounded-xl bg-green-600 shadow-sm" />
       {cards.map((card) => (
-        <div key={card.id} className="flex aspect-square flex-col items-center justify-center rounded-xl border border-green-100 bg-white p-1 text-center shadow-sm">
+        <div key={card.id} className="flex min-h-16 flex-col items-center justify-center rounded-xl border border-green-100 bg-white p-2 text-center shadow-sm">
           {card.emoji && <span className="text-xl leading-none">{card.emoji}</span>}
-          <span className="text-[10px] font-bold leading-tight text-gray-700">{displayText(card.label, 22)}</span>
+          <span className="min-w-0 break-words text-[10px] font-bold leading-tight text-gray-700 sm:text-[11px]">{cleanDisplayText(card.label)}</span>
         </div>
       ))}
-      <div className="aspect-square rounded-xl bg-green-600 shadow-sm" />
+      <div className="min-h-16 rounded-xl bg-green-600 shadow-sm" />
     </div>
   );
 }
@@ -181,8 +185,8 @@ function MiniDragDrop({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
   const items = localizedList<{ id: string; label: string; emoji?: string }>(exercise, lang, "dragItems").slice(0, 3);
   const zones = localizedList<{ id: string; label: string }>(exercise, lang, "dropZones").slice(0, 2);
   const fallbackItems = items.length ? items : [
-    { id: "d1", label: displayText(exercise.answer, 22), emoji: exercise.emoji },
-    { id: "d2", label: displayText(getLocalizedExerciseQuestion(exercise, lang), 22) },
+    { id: "d1", label: cleanDisplayText(exercise.answer), emoji: exercise.emoji },
+    { id: "d2", label: cleanDisplayText(getLocalizedExerciseQuestion(exercise, lang)) },
   ];
   const fallbackZones = zones.length ? zones : [
     { id: "z1", label: "1" },
@@ -195,14 +199,14 @@ function MiniDragDrop({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
         {fallbackItems.map((item) => (
           <span key={item.id} className="inline-flex min-h-9 items-center gap-1 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-bold text-amber-900 shadow-sm">
             {item.emoji && <span>{item.emoji}</span>}
-            {displayText(item.label, 24)}
+            <span className="break-words">{cleanDisplayText(item.label)}</span>
           </span>
         ))}
       </div>
       <div className="grid grid-cols-2 gap-2">
         {fallbackZones.map((zone) => (
           <div key={zone.id} className="flex min-h-14 items-center justify-center rounded-xl border-2 border-dashed border-amber-200 bg-white px-2 text-center text-[11px] font-black uppercase text-amber-700">
-            {displayText(zone.label, 24)}
+            <span className="break-words">{cleanDisplayText(zone.label)}</span>
           </div>
         ))}
       </div>
@@ -231,7 +235,7 @@ function MiniWordSearch({ exercise, lang }: { exercise: Exercise; lang: Lang }) 
       </div>
       <div className="flex min-w-0 flex-1 flex-col justify-center gap-1">
         {visibleWords.map((word) => (
-          <span key={word} className="rounded-full border border-green-100 bg-white px-2 py-1 text-[11px] font-bold text-gray-700">
+          <span key={word} className="break-all rounded-full border border-green-100 bg-white px-2 py-1 text-[11px] font-bold text-gray-700">
             {word}
           </span>
         ))}
@@ -247,8 +251,8 @@ function MiniChoice({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
   return (
     <div className="grid grid-cols-2 gap-2">
       {visible.slice(0, 4).map((option, index) => (
-        <div key={`${option}-${index}`} className="flex min-h-11 items-center justify-center rounded-xl border border-gray-100 bg-white px-2 text-center text-xs font-bold text-gray-700 shadow-sm">
-          {displayText(option, 34)}
+        <div key={`${option}-${index}`} className="flex min-h-12 items-center justify-center rounded-xl border border-gray-100 bg-white px-2 py-2 text-center text-[11px] font-bold leading-tight text-gray-700 shadow-sm sm:text-xs">
+          <span className="min-w-0 break-words hyphens-auto">{cleanDisplayText(option)}</span>
         </div>
       ))}
     </div>
@@ -260,7 +264,7 @@ function MiniFillBlank({ exercise, lang }: { exercise: Exercise; lang: Lang }) {
   return (
     <div className="rounded-xl border border-gray-100 bg-white p-3 shadow-sm">
       {!getLocalizedExerciseQuestion(exercise, lang).includes("___") && (
-        <p className="text-sm font-semibold leading-6 text-gray-700">{displayText(question, 92)}</p>
+        <p className="break-words text-sm font-semibold leading-6 text-gray-700">{cleanDisplayText(question)}</p>
       )}
       <div className="mt-3 h-10 rounded-xl border-2 border-dashed border-green-200 bg-green-50" />
     </div>
@@ -292,7 +296,7 @@ function MiniSelfReview({ exercise, lang }: { exercise: Exercise; lang: Lang }) 
       {visible.map((criterion, index) => (
         <div key={`${criterion}-${index}`} className="flex items-start gap-2 rounded-lg bg-white px-3 py-2 text-xs font-semibold text-gray-700 shadow-sm">
           <span className="mt-0.5 h-4 w-4 rounded-full border-2 border-emerald-300" />
-          <span>{displayText(criterion, 58)}</span>
+          <span className="break-words">{cleanDisplayText(criterion)}</span>
         </div>
       ))}
     </div>
@@ -322,7 +326,7 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
   const exerciseTypes = getTopicExerciseTypes(topic, lang);
   const visibleSampleExerciseCards = [...sampleExerciseCards]
     .sort((a, b) => (previewTypePriority[a.exercise.type] ?? 20) - (previewTypePriority[b.exercise.type] ?? 20))
-    .slice(0, 3);
+    .slice(0, 4);
 
   useEffect(() => {
     if (!loaded) return;
@@ -355,15 +359,16 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
           <div className="mt-5">
             <h3 className="text-sm font-black text-gray-900">{copy.samples}</h3>
             <div className="mt-3 grid gap-3 sm:grid-cols-2">
-              {visibleSampleExerciseCards.map(({ exercise, topicId, topicTitle: fallbackTitle }) => {
+              {visibleSampleExerciseCards.map(({ exercise, topicId, topicTitle: fallbackTitle }, index) => {
                 const sampleTopicTitle = getTopicTitle(topicId, lang, fallbackTitle);
+                const shouldSpan = visibleSampleExerciseCards.length === 3 && index === 2;
                 return (
-                  <article key={`${topicId}-${exercise.id}`} className="rounded-2xl border border-gray-100 bg-gray-50 p-3 shadow-sm">
+                  <article key={`${topicId}-${exercise.id}`} className={`rounded-2xl border border-gray-100 bg-gray-50 p-3 shadow-sm ${shouldSpan ? "sm:col-span-2" : ""}`}>
                     <span className="mb-1 block text-[11px] font-black uppercase tracking-widest text-green-700">
                       {sampleTopicTitle} · {getExerciseTypeLabel(exercise.type, lang)}
                     </span>
-                    <p className="mb-3 text-sm font-semibold leading-6 text-gray-800">
-                      {displayText(getLocalizedExerciseQuestion(exercise, lang), 96)}
+                    <p className="mb-3 break-words text-sm font-semibold leading-6 text-gray-800">
+                      {cleanDisplayText(getLocalizedExerciseQuestion(exercise, lang))}
                     </p>
                     <VisualExercisePreview exercise={exercise} lang={lang} />
                   </article>
