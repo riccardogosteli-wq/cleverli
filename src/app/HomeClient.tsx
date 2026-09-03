@@ -6,8 +6,17 @@ import { useSession } from "@/hooks/useSession";
 import { useState } from "react";
 import { startCheckout } from "@/lib/checkoutClient";
 import LifetimeFounderOffer from "@/components/LifetimeFounderOffer";
+import { getCatalogSubjects, getTopicSummaries } from "@/data/topicCatalog";
+import { getLocalizedSubjectName } from "@/lib/seoContent";
 
-
+const TOPIC_INDEX_SUBJECTS = [
+  { subject: "math", icon: "/images/ui/Mathematik.png" },
+  { subject: "german", icon: "/images/ui/Deutsch.png" },
+  { subject: "science", icon: "/images/ui/NMG.png" },
+  { subject: "english", icon: "/images/ui/Woerter-Sprache.svg" },
+  { subject: "french", icon: "/images/ui/Woerter-Sprache.svg" },
+  { subject: "mi", icon: "/images/ui/Woerter-Sprache.svg" },
+];
 
 export default function Home() {
   const { tr, lang } = useLang();
@@ -19,6 +28,15 @@ export default function Home() {
   const primaryLabel = session ? (isPremium ? (tr("toDashboard") ?? "Zum Dashboard →") : (tr("continueLearn") ?? "Weiterlernen →")) : `${tr("startFree")} →`;
   const showSignupCta = !session;
   const uid = session?.userId ?? "";
+  const topicIndex = TOPIC_INDEX_SUBJECTS
+    .map(item => ({
+      ...item,
+      grades: [1, 2, 3, 4, 5, 6].filter(grade =>
+        getCatalogSubjects(grade).some(subject => subject.id === item.subject) &&
+        getTopicSummaries(grade, item.subject).length > 0
+      ),
+    }))
+    .filter(item => item.grades.length > 0);
 
   return (
     <main className="min-h-screen bg-white">
@@ -362,18 +380,14 @@ export default function Home() {
             {lang === "fr" ? "Tous les thèmes" : lang === "it" ? "Tutti gli argomenti" : lang === "en" ? "All topics" : "Alle Themen"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[
-              { subject: "math",    emoji: "🔢", icon: "/images/ui/Mathematik.png", label: { de: "Mathematik", fr: "Mathématiques", it: "Matematica", en: "Maths" } },
-              { subject: "german",  emoji: "📖", icon: "/images/ui/Deutsch.png", label: { de: "Deutsch",    fr: "Allemand",       it: "Tedesco",   en: "German" } },
-              { subject: "science", emoji: "🌍", icon: "/images/ui/NMG.png", label: { de: "NMG",        fr: "Sciences",       it: "Scienze",   en: "Science" } },
-            ].map(s => (
+            {topicIndex.map(s => (
               <div key={s.subject}>
                 <div className="font-semibold text-gray-600 text-sm mb-2 flex items-center gap-2">
                   <Image src={s.icon} alt={s.subject} width={28} height={28} className="w-7 h-7 object-contain" />
-                  {s.label[lang as keyof typeof s.label] ?? s.label.de}
+                  {getLocalizedSubjectName(s.subject, lang)}
                 </div>
                 <div className="flex flex-wrap gap-x-3 gap-y-1">
-                  {[1,2,3,4,5,6].map(g => (
+                  {s.grades.map(g => (
                     <Link key={g} href={`/learn/${g}/${s.subject}`}
                       className="text-xs text-green-700 hover:underline whitespace-nowrap">
                       {g}. {lang === "fr" ? "Année" : lang === "it" ? "Classe" : lang === "en" ? "Grade" : "Klasse"}

@@ -195,6 +195,10 @@ function DashboardInner() {
   const { profile } = useProfile();
   const searchParams = useSearchParams();
   const preselectedSubject = searchParams.get("subject");
+  const preselectedGradeRaw = Number(searchParams.get("grade"));
+  const preselectedGrade = Number.isInteger(preselectedGradeRaw) && preselectedGradeRaw >= 1 && preselectedGradeRaw <= 6
+    ? preselectedGradeRaw
+    : null;
 
   const [ready, setReady] = useState(false);
   const [grade, setGrade] = useState<number | null>(null);
@@ -214,7 +218,10 @@ function DashboardInner() {
       setActiveMember(member ? { name: member.name, avatar: member.avatar, curriculum: member.curriculum } : null);
 
       if (!preselectedSubject) {
-        if (member?.grade) {
+        if (preselectedGrade) {
+          setGrade(preselectedGrade);
+          localStorage.setItem(getLastGradeStorageKey(), String(preselectedGrade));
+        } else if (member?.grade) {
           // ✅ Always use the child's stored grade — not the global last-used key
           setGrade(member.grade);
           localStorage.setItem(getLastGradeStorageKey(), String(member.grade));
@@ -240,7 +247,8 @@ function DashboardInner() {
   useEffect(() => {
     setSubject(preselectedSubject);
     if (preselectedSubject) setGrade(null);
-  }, [preselectedSubject]);
+    else if (preselectedGrade) setGrade(preselectedGrade);
+  }, [preselectedSubject, preselectedGrade]);
 
   useEffect(() => {
     if (!grade || !subject) return;

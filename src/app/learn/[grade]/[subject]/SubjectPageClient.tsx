@@ -44,12 +44,17 @@ export default function SubjectPageClient({ grade, subject, topics }: Props) {
   return (
     <div className="max-w-2xl mx-auto px-4 py-6 space-y-5">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-1.5 text-xs text-gray-400 flex-wrap">
-        <Link href="/dashboard" className="inline-flex min-h-11 items-center px-1 hover:text-green-700 transition-colors">Dashboard</Link>
-        <span>›</span>
-        <span className="text-gray-600 font-medium">{grade}. Klasse</span>
-        <span>›</span>
-        <span className="text-green-700 font-semibold">{subjectName}</span>
+      <nav className="flex items-center gap-1.5 text-xs text-gray-500 flex-wrap" aria-label="Breadcrumb">
+        <Link href="/dashboard" className="inline-flex min-h-11 items-center px-2 font-semibold hover:text-green-700 transition-colors">Dashboard</Link>
+        <span aria-hidden="true">›</span>
+        <Link
+          href={`/dashboard?grade=${grade}`}
+          className="inline-flex min-h-11 items-center px-2 font-semibold text-gray-700 hover:text-green-700 transition-colors"
+        >
+          {grade}. Klasse
+        </Link>
+        <span aria-hidden="true">›</span>
+        <span className="inline-flex min-h-11 items-center px-2 text-green-700 font-semibold">{subjectName}</span>
       </nav>
       <div className="flex items-center gap-3">
         <span className="text-4xl">{meta.emoji}</span>
