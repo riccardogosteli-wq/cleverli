@@ -3,7 +3,7 @@ import AdsPrimarschuleClient from "../ads/primarschule/AdsPrimarschuleClient";
 
 export const metadata: Metadata = {
   title: "Primarschule üben nach Lehrplan 21",
-  description: "Online-Übungen für Mathe, Deutsch und NMG in der Schweizer Primarschule. Kostenlos testen, danach für die ganze Familie.",
+  description: "Online-Übungen für Mathe, Deutsch, NMG, Sprachen und Medien in der Schweizer Primarschule. Kostenlos testen, danach für die ganze Familie.",
   robots: {
     index: true,
     follow: true,

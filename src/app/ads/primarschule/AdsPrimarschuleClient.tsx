@@ -246,7 +246,7 @@ export default function AdsPrimarschuleClient() {
               <p className="text-sm font-bold uppercase tracking-widest text-blue-700">Fächer</p>
               <h2 className="mt-2 text-3xl font-black text-gray-950">Die wichtigsten Primarschul-Fächer an einem Ort.</h2>
               <p className="mt-4 text-base leading-7 text-gray-600">
-                Für die deutschsprachige Schweiz: Mathe, Deutsch und NMG stehen im Zentrum. Französisch und Englisch sind für die höheren Primarklassen ebenfalls drin.
+                Für die deutschsprachige Schweiz: Mathe, Deutsch und NMG stehen im Zentrum. Französisch, Englisch und Medien & Informatik sind ebenfalls drin.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">

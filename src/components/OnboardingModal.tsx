@@ -66,10 +66,10 @@ export default function OnboardingModal() {
                     "Accompagne ton enfant dans son apprentissage. Fixe des récompenses, suis la progression et motive chaque jour.",
                     "Accompagna il tuo figlio nell'apprendimento. Imposta premi, segui i progressi e motiva ogni giorno.",
                     "Support your child's learning. Set rewards, track progress and motivate every day.")
-                : t("Hier lernst du Mathe, Deutsch und NMG — Schritt für Schritt, mit Spass und echten Belohnungen.",
-                    "Ici tu apprends les maths, l'allemand et les sciences — pas à pas, avec du plaisir et de vraies récompenses.",
-                    "Qui impari matematica, tedesco e scienze — passo dopo passo, con divertimento e veri premi.",
-                    "Here you learn maths, German and science — step by step, with fun and real rewards.")}
+                : t("Hier findest du passende Übungen für deine Klasse — Schritt für Schritt, mit Spass und echten Belohnungen.",
+                    "Ici tu trouves des exercices adaptés à ton année — pas à pas, avec du plaisir et de vraies récompenses.",
+                    "Qui trovi esercizi adatti alla tua classe — passo dopo passo, con divertimento e veri premi.",
+                    "Here you find exercises that fit your grade — step by step, with fun and real rewards.")}
             </p>
             <button
               onClick={() => isParent ? handleFinish() : setStep("grade")}

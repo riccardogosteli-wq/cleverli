@@ -389,7 +389,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
               ["Lehrplan 21", "Aufgaben passend zur Schweizer Primarschule."],
               ["Ohne App", "Läuft im Browser auf Handy, Tablet und Computer."],
               ["Eltern sehen Fortschritt", "XP, erledigte Aufgaben und Themen bleiben sichtbar."],
-              ["Deutsch, Mathe, NMG", "Die wichtigsten Primarschul-Fächer an einem Ort."],
+              ["Fächer je Klasse", "Die passenden Primarschul-Fächer an einem Ort."],
             ].map(([title, body]) => (
               <div key={title} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
                 <h3 className="font-bold text-gray-900">{title}</h3>

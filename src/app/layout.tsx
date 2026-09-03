@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Cleverli — Lernen macht Spass 🇨🇭",
-    description: "Interaktive Lernplattform für Kinder. Mathe, Deutsch & NMG, Klasse 1–6, Lehrplan 21.",
+    description: "Interaktive Lernplattform für Kinder. Mathe, Deutsch, NMG, Sprachen & Medien, Klasse 1–6, Lehrplan 21.",
     images: ["/og-cleverli-primarschule-2026.png"],
   },
   alternates: {

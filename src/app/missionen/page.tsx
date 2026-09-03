@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import MissionenClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Lernfortschritt & Missionen — Mathe, Deutsch, NMG | Cleverli",
-  description: "Verfolge deinen Lernfortschritt auf Cleverli. Missionen in Mathe, Deutsch und NMG für Klasse 1–6 — Bronze, Silber, Gold. Lehrplan 21 Schweiz.",
+  title: "Lernfortschritt & Missionen — verfügbare Fächer",
+  description: "Verfolge deinen Lernfortschritt auf Cleverli. Missionen für die verfügbaren Fächer je Klasse — Bronze, Silber, Gold. Lehrplan 21 Schweiz.",
   openGraph: {
     title: "Lernfortschritt & Missionen | Cleverli",
-    description: "Dein persönlicher Lernweg — alle Themen, alle Fächer, alle Klassen. Kostenlos ausprobieren.",
+    description: "Dein persönlicher Lernweg — alle passenden Themen und verfügbaren Fächer je Klasse. Kostenlos ausprobieren.",
     images: [{ url: "https://www.cleverli.ch/og-cleverli-primarschule-2026.png", width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
   },
   alternates: { canonical: "https://www.cleverli.ch/missionen" },

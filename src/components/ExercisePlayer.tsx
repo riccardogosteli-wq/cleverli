@@ -760,11 +760,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           {lang === "fr" ? "Prêt pour Premium ?" : lang === "it" ? "Pronto per Premium?" : lang === "en" ? "Ready for Premium?" : "Bereit für Premium?"}
         </h2>
         <p className="text-gray-500 text-sm">
-          {lang === "fr" ? "Teste 7 jours gratuitement: tous les exercices, toutes les classes, aucun débit aujourd'hui." : lang === "it" ? "Prova gratis per 7 giorni: tutti gli esercizi, tutte le classi, nessun addebito oggi." : lang === "en" ? "Try 7 days free: all exercises, all grades, no charge today." : "Teste 7 Tage gratis: alle Übungen, alle Klassen, heute CHF 0."}
+          {lang === "fr" ? "Teste 7 jours gratuitement: tous les exercices disponibles pour l'année, aucun débit aujourd'hui." : lang === "it" ? "Prova gratis per 7 giorni: tutti gli esercizi disponibili per la classe, nessun addebito oggi." : lang === "en" ? "Try 7 days free: all exercises available for the grade, no charge today." : "Teste 7 Tage gratis: alle verfügbaren Übungen für die Klasse, heute CHF 0."}
         </p>
         <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 text-sm text-green-800 text-left space-y-1 w-full max-w-xs">
           <div>✅ {lang === "en" ? "Progress saved" : "Fortschritt speichern"}</div>
-          <div>✅ {lang === "en" ? "All subjects and grades" : "Alle Fächer und Klassen"}</div>
+          <div>✅ {lang === "en" ? "Subjects matched to each grade" : "Passende Fächer je Klasse"}</div>
           <div>✅ {lang === "en" ? "Up to 3 child profiles" : "Bis zu 3 Kinderprofile"}</div>
           <div>✅ {lang === "en" ? "Charge only after 7 days" : "Zahlung erst nach 7 Tagen"}</div>
         </div>

@@ -65,7 +65,7 @@ export const ORGANIC_LANDING_PAGES = [
   {
     href: "/primarschule-uebungen",
     title: "Primarschule Übungen",
-    description: "Mathe, Deutsch und NMG für die Schweizer Primarschule.",
+    description: "Mathe, Deutsch, NMG, Sprachen und Medien für die Schweizer Primarschule.",
   },
   {
     href: "/mathe-uebungen-kinder",

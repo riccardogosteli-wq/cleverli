@@ -55,7 +55,7 @@ export async function sendWelcomeEmail(to: string) {
     <div style="padding:32px 28px;color:#1f2937;">
       <p style="font-size:16px;margin:0 0 16px;">Dein Konto ist bereit — Lernen kann sofort losgehen!</p>
       <p style="font-size:14px;color:#6b7280;margin:0 0 24px;">
-        Mit Cleverli lernen Kinder Mathe, Deutsch und NMG spielerisch —
+        Mit Cleverli lernen Kinder Mathe, Deutsch, NMG, Sprachen und Medien spielerisch —
         mit Aufgaben nach Lehrplan 21, lustigen Trophäen und täglichen Challenges.
       </p>
       <!-- CTA -->
@@ -150,7 +150,7 @@ export async function sendPaymentConfirmationEmail(
         <p style="font-size:13px;margin:0 0 8px;font-weight:700;color:#15803d;">✅ Jetzt freigeschaltet:</p>
         <ul style="font-size:13px;color:#374151;margin:0;padding-left:18px;line-height:1.8;">
           <li>🚀 Mehr als 13’000 interaktive Übungen</li>
-          <li>📚 Mathe, Deutsch und NMG für Klasse 1–6</li>
+          <li>📚 Alle verfügbaren Fächer passend zur Klasse deines Kindes</li>
           <li>🇨🇭 Inhalte passend zur Schweizer Primarschule und zum Lehrplan 21</li>
           <li>🎁 Belohnungs-System für Kinder</li>
           <li>👨‍👩‍👧‍👦 Bis zu 3 Kinderprofile</li>
