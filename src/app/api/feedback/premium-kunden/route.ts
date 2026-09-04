@@ -20,10 +20,6 @@ function cleanEmail(value: unknown) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email : "";
 }
 
-function cleanBoolean(value: unknown) {
-  return value === true;
-}
-
 function cleanRating(value: unknown) {
   const number = typeof value === "number" ? value : Number(value);
   if (!Number.isInteger(number) || number < 1 || number > 5) return null;
@@ -121,7 +117,7 @@ export async function POST(req: NextRequest) {
       issues: issues || null,
       child_reaction: childReaction || null,
       improvement_idea: improvementIdea || null,
-      allow_followup: cleanBoolean(body.allowFollowup),
+      allow_followup: rewardEligible,
       giveaway_opt_in: rewardEligible,
       giveaway_months: 3,
       source: cleanText(body.source, 120) || "premium_customer_feedback",

@@ -39,7 +39,6 @@ export default function FeedbackFormClient() {
       issues: formData.get("issues"),
       childReaction: formData.get("childReaction"),
       improvementIdea: formData.get("improvementIdea"),
-      allowFollowup: formData.get("allowFollowup") === "on",
       website: formData.get("website"),
       source,
     };
@@ -163,18 +162,6 @@ export default function FeedbackFormClient() {
         </label>
 
         <input name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
-
-        <div className="grid gap-2 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm">
-          <p className="font-bold text-amber-950">Danke fürs Mitmachen</p>
-          <p className="text-xs leading-relaxed text-amber-800">
-            Alle teilnehmenden Premium-Familien erhalten 1 Monat Cleverli Premium gratis. Zusätzlich verlosen wir unter allen Antworten 3x je 3 Monate Premium gratis.
-          </p>
-        </div>
-
-        <label className="flex gap-3 text-sm text-gray-700">
-          <input name="allowFollowup" type="checkbox" className="mt-1 h-5 w-5 rounded border-gray-300 text-green-700" />
-          <span>Cleverli darf mich bei Rückfragen zu meiner Rückmeldung per E-Mail kontaktieren.</span>
-        </label>
 
         {message && (
           <p className={`rounded-md px-4 py-3 text-sm font-semibold ${state === "error" ? "bg-red-50 text-red-700" : "bg-green-50 text-green-700"}`}>
