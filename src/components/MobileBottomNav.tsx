@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
@@ -30,17 +29,6 @@ export default function MobileBottomNav() {
     // Only shown when logged in (family features require auth)
     ...(session ? [{ href: "/family", icon: "family", label: TAB_LABELS.family[li] }] : []),
   ];
-
-  const getIcon = (iconKey: string) => {
-    const iconMap: Record<string, { src: string; alt: string }> = {
-      learn: { src: "/images/ui/Lernen-Dashboard-icon.svg", alt: "" },
-      daily: { src: "/images/ui/Tagesaufgabe-icon.svg", alt: "" },
-      trophies: { src: "/images/ui/Trophaeen-icon.svg", alt: "" },
-      rewards: { src: "/images/ui/Belohnungen-icon.svg", alt: "" },
-      family: { src: "/images/ui/Familie.svg", alt: "" },
-    };
-    return iconMap[iconKey] || { src: "", alt: "" };
-  };
 
   // Don't show during active exercise or on auth/onboarding pages
   const isExercise = pathname.startsWith("/learn/");
@@ -95,14 +83,7 @@ export default function MobileBottomNav() {
             }`}
           >
             {isActive && <span className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-8 bg-green-700 rounded-full" />}
-            <Image
-              src={getIcon(tab.icon).src}
-              alt={getIcon(tab.icon).alt}
-              aria-hidden="true"
-              width={32}
-              height={32}
-              className={`leading-none transition-opacity ${isActive ? "" : "opacity-60"}`}
-            />
+            <TabIcon iconKey={tab.icon} active={isActive} />
             <span className={`text-[10px] font-semibold leading-tight ${isActive ? "text-green-700" : "text-gray-400"}`}>
               {tab.label}
             </span>
@@ -112,5 +93,53 @@ export default function MobileBottomNav() {
       </div>
     </nav>
     </>
+  );
+}
+
+function TabIcon({ iconKey, active }: { iconKey: string; active: boolean }) {
+  const className = `h-6 w-6 ${active ? "text-green-700" : "text-gray-400"}`;
+
+  if (iconKey === "daily") {
+    return (
+      <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M8 2v3M16 2v3M4 9h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <rect x="4" y="5" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="2" />
+        <path d="m9 15 2 2 4-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (iconKey === "trophies") {
+    return (
+      <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M8 6H5a2 2 0 0 0 2 4h1M16 6h3a2 2 0 0 1-2 4h-1M12 12v4M9 20h6M10 16h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (iconKey === "rewards") {
+    return (
+      <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20 12v8H4v-8M3 8h18v4H3zM12 20V8" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M12 8H8.5A2.5 2.5 0 1 1 11 5.5L12 8Zm0 0h3.5A2.5 2.5 0 1 0 13 5.5L12 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (iconKey === "family") {
+    return (
+      <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" strokeWidth="2" />
+        <path d="M3.5 20a4.5 4.5 0 0 1 9 0M11.5 20a4.5 4.5 0 0 1 9 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M8 7h8M8 11h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
   );
 }

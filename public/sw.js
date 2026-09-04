@@ -10,6 +10,10 @@ self.addEventListener("push", function (event) {
   );
 });
 
+self.addEventListener("fetch", function () {
+  return;
+});
+
 self.addEventListener("notificationclick", function (event) {
   event.notification.close();
   event.waitUntil(clients.openWindow(event.notification.data.url));
