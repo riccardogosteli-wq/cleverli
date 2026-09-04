@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>Cleverli App Icon</title>
+  <defs>
+    <linearGradient id="bg" x1="88" y1="44" x2="432" y2="468" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="0.58" stop-color="#16a34a"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#052e16" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="112" cy="94" r="124" fill="#86efac" opacity="0.34"/>
+  <circle cx="420" cy="420" r="150" fill="#065f46" opacity="0.22"/>
+  <rect x="48" y="48" width="416" height="416" rx="104" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="4"/>
+  <g filter="url(#shadow)">
+    <circle cx="256" cy="266" r="142" fill="#ffffff" opacity="0.98"/>
+    <circle cx="256" cy="266" r="112" fill="none" stroke="#bbf7d0" stroke-width="12"/>
+    <text x="256" y="357" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="252" font-weight="800" fill="#15803d">C</text>
+  </g>
+  <g>
+    <path d="M256 76 370 116 256 158 142 116Z" fill="#facc15"/>
+    <path d="M142 116 256 76 370 116" fill="none" stroke="#fef08a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M207 149h98v22c-22 15-76 15-98 0Z" fill="#eab308"/>
+    <path d="M370 118v73" fill="none" stroke="#facc15" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="370" cy="204" r="14" fill="#facc15"/>
+  </g>
+  <g>
+    <rect x="352" y="350" width="72" height="72" rx="20" fill="#dc2626"/>
+    <path d="M388 369v34M371 386h34" stroke="#ffffff" stroke-width="15" stroke-linecap="round"/>
+  </g>
+</svg>
