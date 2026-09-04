@@ -26,6 +26,13 @@ function cleanRating(value: unknown) {
   return number;
 }
 
+function combineImprovementIdea(improvementIdea: string, otherFeedback: string) {
+  return [
+    improvementIdea,
+    otherFeedback ? `Sonstiges: ${otherFeedback}` : "",
+  ].filter(Boolean).join(" | ");
+}
+
 function hasActivePremium(profile: { premium: boolean | null; premium_until: string | null } | null | undefined) {
   if (!profile?.premium) return false;
   if (!profile.premium_until) return true;
@@ -73,10 +80,12 @@ export async function POST(req: NextRequest) {
   const issues = cleanText(body.issues);
   const childReaction = cleanText(body.childReaction);
   const improvementIdea = cleanText(body.improvementIdea);
+  const otherFeedback = cleanText(body.otherFeedback);
+  const combinedImprovementIdea = combineImprovementIdea(improvementIdea, otherFeedback);
 
   if (!email) return NextResponse.json({ error: "invalid_email" }, { status: 400 });
   if (!rating) return NextResponse.json({ error: "missing_rating" }, { status: 400 });
-  if (!liked && !disliked && !missing && !issues && !childReaction && !improvementIdea) {
+  if (!liked && !disliked && !missing && !issues && !childReaction && !combinedImprovementIdea) {
     return NextResponse.json({ error: "missing_feedback" }, { status: 400 });
   }
 
@@ -116,7 +125,7 @@ export async function POST(req: NextRequest) {
       missing: missing || null,
       issues: issues || null,
       child_reaction: childReaction || null,
-      improvement_idea: improvementIdea || null,
+      improvement_idea: combinedImprovementIdea || null,
       allow_followup: rewardEligible,
       giveaway_opt_in: rewardEligible,
       giveaway_months: 3,

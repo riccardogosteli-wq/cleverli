@@ -39,6 +39,7 @@ export default function FeedbackFormClient() {
       issues: formData.get("issues"),
       childReaction: formData.get("childReaction"),
       improvementIdea: formData.get("improvementIdea"),
+      otherFeedback: formData.get("otherFeedback"),
       website: formData.get("website"),
       source,
     };
@@ -159,6 +160,16 @@ export default function FeedbackFormClient() {
         <label className="grid gap-2">
           <span className="text-sm font-bold text-gray-800">Wenn du dir eine Sache wünschen könntest: was wäre es?</span>
           <textarea name="improvementIdea" rows={3} className="rounded-md border border-gray-300 px-4 py-3 text-base outline-none focus:border-green-600" />
+        </label>
+
+        <label className="grid gap-2">
+          <span className="text-sm font-bold text-gray-800">Gibt es sonst noch etwas, das du uns sagen möchtest?</span>
+          <textarea
+            name="otherFeedback"
+            rows={3}
+            className="rounded-md border border-gray-300 px-4 py-3 text-base outline-none focus:border-green-600"
+            placeholder="Weitere Gedanken, Ideen oder Hinweise..."
+          />
         </label>
 
         <input name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
