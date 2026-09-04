@@ -34,9 +34,9 @@ interface MemberStat extends FamilyMember {
 }
 
 const RANK_COLORS = [
-  "from-yellow-50 to-amber-100 border-amber-400",   // 🥇
-  "from-gray-50 to-gray-100 border-gray-300",        // 🥈
-  "from-orange-50 to-orange-100 border-orange-300",  // 🥉
+  "from-yellow-50 to-amber-100",   // 🥇
+  "from-gray-50 to-gray-100",        // 🥈
+  "from-orange-50 to-orange-100",  // 🥉
 ];
 const RANK_MEDALS = ["🥇", "🥈", "🥉"];
 
@@ -174,7 +174,7 @@ export default function FamilyPage() {
               className={`bg-gradient-to-r ${
                 s.id === activeId
                   ? "from-green-50 to-emerald-50 border-green-500 shadow-md"
-                  : `${RANK_COLORS[i] ?? "from-white to-gray-50 border-gray-200"} hover:shadow-sm`
+                  : `${RANK_COLORS[i] ?? "from-white to-gray-50"} border-gray-200 hover:shadow-sm`
               } border-2 rounded-2xl px-4 py-3 flex items-center gap-3 transition-all`}>
               <button
                 type="button"
