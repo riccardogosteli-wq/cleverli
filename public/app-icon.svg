@@ -15,16 +15,19 @@
   <circle cx="420" cy="420" r="150" fill="#065f46" opacity="0.22"/>
   <rect x="48" y="48" width="416" height="416" rx="104" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="4"/>
   <g filter="url(#shadow)">
-    <circle cx="256" cy="266" r="142" fill="#ffffff" opacity="0.98"/>
-    <circle cx="256" cy="266" r="112" fill="none" stroke="#bbf7d0" stroke-width="12"/>
-    <text x="256" y="357" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="252" font-weight="800" fill="#15803d">C</text>
+    <rect x="58" y="184" width="396" height="160" rx="54" fill="#ffffff" opacity="0.98"/>
+    <text x="256" y="290" text-anchor="middle" font-family="Arial Rounded MT Bold, Arial, Helvetica, sans-serif" font-size="82" font-weight="900" letter-spacing="-2">
+      <tspan fill="#ef4444">c</tspan><tspan fill="#f59e0b">l</tspan><tspan fill="#0ea5e9">e</tspan><tspan fill="#22c55e">v</tspan><tspan fill="#7c3aed">e</tspan><tspan fill="#f97316">r</tspan><tspan fill="#14b8a6">l</tspan><tspan fill="#ec4899">i</tspan>
+    </text>
+    <path d="M146 319c80 33 172 34 244 0" fill="none" stroke="#0ea5e9" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="404" cy="321" r="10" fill="#0ea5e9"/>
   </g>
   <g>
-    <path d="M256 76 370 116 256 158 142 116Z" fill="#facc15"/>
-    <path d="M142 116 256 76 370 116" fill="none" stroke="#fef08a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M207 149h98v22c-22 15-76 15-98 0Z" fill="#eab308"/>
-    <path d="M370 118v73" fill="none" stroke="#facc15" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="370" cy="204" r="14" fill="#facc15"/>
+    <path d="M256 94 356 130 256 166 156 130Z" fill="#facc15"/>
+    <path d="M156 130 256 94 356 130" fill="none" stroke="#fef08a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M211 158h90v22c-21 14-69 14-90 0Z" fill="#eab308"/>
+    <path d="M356 132v58" fill="none" stroke="#facc15" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="356" cy="202" r="13" fill="#facc15"/>
   </g>
   <g>
     <rect x="352" y="350" width="72" height="72" rx="20" fill="#dc2626"/>
