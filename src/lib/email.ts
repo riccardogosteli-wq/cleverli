@@ -83,7 +83,7 @@ export async function sendWelcomeEmail(to: string) {
     <!-- Footer -->
     <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
       <p style="font-size:11px;color:#9ca3af;margin:0;">
-        Cleverli · Alexandra Gosteli Digital Solutions · Langenmooserstrasse 22, 8467 Truttikon<br>
+        Cleverli<br>
         <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a> · 
         <a href="https://www.cleverli.ch/impressum" style="color:#9ca3af;">Impressum</a>
       </p>
@@ -168,7 +168,7 @@ export async function sendPaymentConfirmationEmail(
     <!-- Footer -->
     <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
       <p style="font-size:11px;color:#9ca3af;margin:0;">
-        Cleverli · Alexandra Gosteli Digital Solutions · Langenmooserstrasse 22, 8467 Truttikon<br>
+        Cleverli<br>
         <a href="https://www.cleverli.ch/agb" style="color:#9ca3af;">AGB</a> · 
         <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a>
       </p>
@@ -244,7 +244,7 @@ export async function sendManualPremiumInviteEmail(
     </div>
     <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
       <p style="font-size:11px;color:#9ca3af;margin:0;">
-        Cleverli · Alexandra Gosteli Digital Solutions · Langenmooserstrasse 22, 8467 Truttikon<br>
+        Cleverli<br>
         <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a>
         · <a href="https://www.cleverli.ch/impressum" style="color:#9ca3af;">Impressum</a>
       </p>
@@ -277,7 +277,7 @@ export async function sendCustomerFeedbackRequestEmail(
 
   const feedbackUrl = "https://www.cleverli.ch/feedback/premium-kunden?source=premium_feedback_email";
   const safeFeedbackUrl = escapeHtml(feedbackUrl);
-  const subject = `${options?.test ? "[TEST] " : ""}Deine Meinung zu Cleverli zählt`;
+  const subject = `${options?.test ? "[TEST] " : ""}1 Monat Cleverli Premium gratis für dein Feedback`;
 
   const { error } = await resend.emails.send({
     from: FROM,
@@ -287,66 +287,51 @@ export async function sendCustomerFeedbackRequestEmail(
     html: `
 <!DOCTYPE html>
 <html lang="de">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#f0fdf4;font-family:Arial,Helvetica,sans-serif;">
-  <div style="max-width:560px;margin:32px auto;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
-    <div style="background:linear-gradient(135deg,#16a34a,#22c55e);padding:32px 24px;text-align:center;">
-      <img src="https://www.cleverli.ch/cleverli-logo.png" alt="Cleverli" width="160" style="margin:0 auto 8px;display:block;" />
-      <h1 style="color:#fff;margin:0;font-size:22px;font-weight:800;">Hilfst du uns kurz?</h1>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${subject}</title></head>
+<body style="margin:0;padding:0;background:#f0fdf4;font-family:Arial,Helvetica,sans-serif;color:#1f2937;">
+  <div style="display:none;max-height:0;overflow:hidden;color:transparent;opacity:0;">Sag uns kurz, was euch hilft, was fehlt und was wir besser machen können.</div>
+  <div style="max-width:560px;margin:32px auto;background:#ffffff;border-radius:18px;overflow:hidden;border:1px solid #dcfce7;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
+    <div style="background:#15803d;padding:28px 24px;text-align:center;">
+      <img src="https://www.cleverli.ch/cleverli-logo.png" alt="Cleverli" width="150" style="display:block;margin:0 auto 10px;" />
+      <h1 style="margin:0;color:#ffffff;font-size:22px;line-height:1.3;font-weight:800;">Hilfst du uns, Cleverli besser zu machen?</h1>
     </div>
-    <div style="padding:32px 28px;color:#1f2937;">
-      <p style="font-size:16px;margin:0 0 16px;">Hallo</p>
-      <p style="font-size:15px;line-height:1.7;color:#4b5563;margin:0 0 18px;">
-        Danke, dass du Cleverli Premium nutzt. Wir möchten Cleverli noch besser auf Schweizer Familien ausrichten - und dafür ist dein ehrliches Feedback Gold wert.
-      </p>
-      <p style="font-size:15px;line-height:1.7;color:#4b5563;margin:0 0 20px;">
-        Die Umfrage dauert etwa 3 Minuten. Sag uns einfach, was gut funktioniert, was fehlt und was wir für dein Kind verbessern sollen.
-      </p>
-      <div style="background:#fffbeb;border:2px solid #fbbf24;border-radius:12px;padding:16px 20px;margin:0 0 24px;">
-        <p style="font-size:13px;font-weight:800;color:#92400e;margin:0 0 6px;">Als Dankeschön</p>
-        <p style="font-size:14px;line-height:1.6;color:#4b5563;margin:0;">
-          Jede teilnehmende Premium-Familie erhält 1 Monat Cleverli gratis. Zusätzlich verlosen wir 3x je 3 Monate gratis.
-        </p>
+    <div style="padding:30px 28px;">
+      <p style="margin:0 0 16px;font-size:16px;line-height:1.6;">Hallo liebe Cleverli-Familie</p>
+      <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#4b5563;">Danke, dass ihr Cleverli Premium nutzt. Wir möchten besser verstehen, was euch und eurem Kind beim Lernen wirklich hilft, was noch fehlt und wo wir Cleverli einfacher oder schöner machen können.</p>
+      <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4b5563;">Darum freuen wir uns sehr über eine kurze, ehrliche Rückmeldung. Das Formular dauert etwa 3 Minuten.</p>
+      <div style="background:#fffbeb;border:1px solid #facc15;border-radius:12px;padding:16px 18px;margin:0 0 24px;">
+        <p style="margin:0 0 6px;font-size:14px;font-weight:800;color:#78350f;">Als Dankeschön</p>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#92400e;">Alle teilnehmenden Premium-Familien erhalten 1 Monat Cleverli Premium gratis. Zusätzlich verlosen wir unter allen Antworten 3x je 3 Monate Premium gratis.</p>
       </div>
-      <div style="text-align:center;margin:28px 0;">
-        <a href="${safeFeedbackUrl}"
-           style="background:#16a34a;color:#fff;text-decoration:none;padding:14px 28px;border-radius:50px;font-weight:800;font-size:16px;display:inline-block;">
-          Feedback geben
-        </a>
-      </div>
-      <p style="font-size:13px;line-height:1.6;color:#6b7280;margin:0 0 18px;">
-        Wichtig: Bitte verwende im Formular die E-Mail-Adresse deines Cleverli-Kontos, damit wir den Gratis-Monat richtig zuordnen können.
-      </p>
-      <p style="font-size:15px;line-height:1.7;color:#4b5563;margin:0;">
-        Liebe Grüsse<br>
-        Alexandra & Ricci von Cleverli
-      </p>
+      <div style="text-align:center;margin:28px 0;"><a href="${safeFeedbackUrl}" style="background:#16a34a;color:#ffffff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:800;font-size:16px;display:inline-block;">Feedback geben</a></div>
+      <p style="margin:0 0 16px;font-size:13px;line-height:1.6;color:#6b7280;">Wichtig: Bitte nutzt im Formular die E-Mail-Adresse, mit der ihr Cleverli verwendet. So können wir den Gratis-Monat korrekt zuordnen.</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#4b5563;">Liebe Grüsse<br>Alexandra & das Cleverli-Team</p>
     </div>
-    <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
-      <p style="font-size:11px;color:#9ca3af;margin:0;">
-        Cleverli · Alexandra Gosteli Digital Solutions · Langenmooserstrasse 22, 8467 Truttikon<br>
-        <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a>
-        · <a href="https://www.cleverli.ch/impressum" style="color:#9ca3af;">Impressum</a>
-      </p>
+    <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;background:#f9fafb;">
+      <p style="font-size:11px;line-height:1.5;color:#9ca3af;margin:0;">Cleverli<br><a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a> · <a href="https://www.cleverli.ch/impressum" style="color:#9ca3af;">Impressum</a></p>
     </div>
   </div>
 </body>
 </html>`,
-    text: `Hallo
+    text: `Hallo liebe Cleverli-Familie
 
-Danke, dass du Cleverli Premium nutzt. Wir möchten Cleverli noch besser auf Schweizer Familien ausrichten - und dafür ist dein ehrliches Feedback Gold wert.
+Danke, dass ihr Cleverli Premium nutzt. Wir möchten besser verstehen, was euch und eurem Kind beim Lernen wirklich hilft, was noch fehlt und wo wir Cleverli einfacher oder schöner machen können.
 
-Die Umfrage dauert etwa 3 Minuten. Sag uns einfach, was gut funktioniert, was fehlt und was wir für dein Kind verbessern sollen.
+Darum freuen wir uns sehr über eine kurze, ehrliche Rückmeldung. Das Formular dauert etwa 3 Minuten.
 
-Als Dankeschön erhält jede teilnehmende Premium-Familie 1 Monat Cleverli gratis. Zusätzlich verlosen wir 3x je 3 Monate gratis.
+Als Dankeschön erhalten alle teilnehmenden Premium-Familien 1 Monat Cleverli Premium gratis. Zusätzlich verlosen wir unter allen Antworten 3x je 3 Monate Premium gratis.
 
 Feedback geben:
 ${feedbackUrl}
 
-Wichtig: Bitte verwende im Formular die E-Mail-Adresse deines Cleverli-Kontos, damit wir den Gratis-Monat richtig zuordnen können.
+Wichtig: Bitte nutzt im Formular die E-Mail-Adresse, mit der ihr Cleverli verwendet. So können wir den Gratis-Monat korrekt zuordnen.
 
 Liebe Grüsse
-Alexandra & Ricci von Cleverli`,
+Alexandra & das Cleverli-Team
+
+Cleverli
+Datenschutz: https://www.cleverli.ch/datenschutz
+Impressum: https://www.cleverli.ch/impressum`,
   }, options?.idempotencyKey ? { idempotencyKey: options.idempotencyKey } : undefined);
 
   if (error) throw error;
