@@ -22,6 +22,7 @@ import RewardWidget from "@/components/RewardWidget";
 import { DashboardGuestPreview } from "@/components/GuestPreview";
 import { getLastGradeStorageKey } from "@/lib/accountScopedStorage";
 import { readTopicProgressForChild } from "@/lib/reportingProgress";
+import { updateChildInSupabase } from "@/lib/progressSync";
 
 const GRADE_COLORS = [
   { base: "bg-blue-50 border-blue-300 text-blue-800 hover:bg-blue-100 active:bg-blue-200", emoji: "🐣" },
@@ -92,6 +93,42 @@ const SUBJECT_ICONS: Record<string, string> = {
 };
 
 const GRADE_KEY = "cleverli_last_grade";
+const PENDING_GRADE_KEY_PREFIX = "cleverli_pending_grade_update";
+const PENDING_GRADE_TTL_MS = 2 * 60 * 1000;
+
+function getPendingGradeStorageKey(childId: string) {
+  return `${PENDING_GRADE_KEY_PREFIX}_${childId}`;
+}
+
+function setPendingGradeOverride(childId: string, grade: number) {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.setItem(getPendingGradeStorageKey(childId), JSON.stringify({
+      grade,
+      expiresAt: Date.now() + PENDING_GRADE_TTL_MS,
+    }));
+  } catch {
+    // Best-effort guard against an in-flight profile restore with stale grade data.
+  }
+}
+
+function getPendingGradeOverride(childId: string): number | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.sessionStorage.getItem(getPendingGradeStorageKey(childId));
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as { grade?: unknown; expiresAt?: unknown };
+    if (typeof parsed.expiresAt !== "number" || parsed.expiresAt <= Date.now()) {
+      window.sessionStorage.removeItem(getPendingGradeStorageKey(childId));
+      return null;
+    }
+    return typeof parsed.grade === "number" && parsed.grade >= 1 && parsed.grade <= 6
+      ? parsed.grade
+      : null;
+  } catch {
+    return null;
+  }
+}
 
 function getProgress(grade: number, subject: string, topic: TopicSummary) {
   if (typeof window === "undefined") return null;
@@ -207,6 +244,23 @@ function DashboardInner() {
   const [activeMember, setActiveMember] = useState<{ name: string; avatar: string; curriculum?: CurriculumSelection } | null>(null);
   const [familySize, setFamilySize] = useState(0);
   // (notify signup widget removed — state retained for safety)
+  const persistActiveChildGrade = (g: number, shouldDispatch = false) => {
+    const family = loadFamily();
+    const activeId = getActiveProfileId();
+    const member = family.members.find(m => m.id === activeId) ?? family.members[0];
+    if (!member) return;
+
+    member.grade = g;
+    saveFamily(family);
+    setPendingGradeOverride(member.id, g);
+    setActiveMember({ name: member.name, avatar: member.avatar, curriculum: member.curriculum });
+    void updateChildInSupabase(member.id, { grade: g });
+    if (shouldDispatch) {
+      window.dispatchEvent(new CustomEvent("cleverli-active-profile-change", { detail: { childId: member.id } }));
+      window.dispatchEvent(new CustomEvent("cleverli-progress-update"));
+    }
+  };
+
   // Restore grade from active child profile (or fall back to last-used)
   useEffect(() => {
     const refreshDashboardState = () => {
@@ -215,14 +269,22 @@ function DashboardInner() {
       setFamilySize(family.members.length);
       const activeId = getActiveProfileId();
       const member = family.members.find(m => m.id === activeId) ?? family.members[0];
+      const pendingGrade = member ? getPendingGradeOverride(member.id) : null;
+      if (member && pendingGrade && member.grade !== pendingGrade) {
+        member.grade = pendingGrade;
+        saveFamily(family);
+        localStorage.setItem(getLastGradeStorageKey(), String(pendingGrade));
+        void updateChildInSupabase(member.id, { grade: pendingGrade });
+      }
       setActiveMember(member ? { name: member.name, avatar: member.avatar, curriculum: member.curriculum } : null);
 
       if (!preselectedSubject) {
         if (preselectedGrade) {
+          persistActiveChildGrade(preselectedGrade);
           setGrade(preselectedGrade);
           localStorage.setItem(getLastGradeStorageKey(), String(preselectedGrade));
         } else if (member?.grade) {
-          // ✅ Always use the child's stored grade — not the global last-used key
+          // Always use the child's stored grade, not the global last-used key.
           setGrade(member.grade);
           localStorage.setItem(getLastGradeStorageKey(), String(member.grade));
         } else {
@@ -259,14 +321,7 @@ function DashboardInner() {
   const chooseGrade = (g: number) => {
     localStorage.setItem(getLastGradeStorageKey(), String(g));
     setGrade(g);
-    // ✅ Also persist grade back to the child's family profile
-    const family = loadFamily();
-    const activeId = getActiveProfileId();
-    const member = family.members.find(m => m.id === activeId);
-    if (member && member.grade !== g) {
-      member.grade = g;
-      saveFamily(family);
-    }
+    persistActiveChildGrade(g, true);
   };
 
 
