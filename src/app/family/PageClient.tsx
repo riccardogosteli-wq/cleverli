@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import {
   loadFamily, addMember, removeMember, loadMemberProfile,
+  getActiveProfileId, setActiveProfileId,
   AVATARS, GRADE_OPTIONS, MAX_PROFILES, FamilyMember,
 } from "@/lib/family";
 import { getLevelForXp } from "@/lib/xp";
@@ -18,7 +19,7 @@ import { getCurriculumRolloutContext, isCurriculumProfilesRolloutEnabled } from 
 import { getAnonymousSessionId } from "@/lib/attribution";
 import { captureProductEvent } from "@/lib/monitoring";
 import { trackUserActivity } from "@/lib/userActivityClient";
-import { createChildInSupabase, deleteChildFromSupabase, resetChildProgressInSupabase } from "@/lib/progressSync";
+import { createChildInSupabase, deleteChildFromSupabase, resetChildProgressInSupabase, restoreCurrentChildProgressFromSupabase } from "@/lib/progressSync";
 import ParentPinGate from "@/components/ParentPinGate";
 import AuthGuard from "@/components/AuthGuard";
 import { clearLocalProgressForChild } from "@/lib/accountScopedStorage";
@@ -43,6 +44,7 @@ export default function FamilyPage() {
   const { lang } = useLang();
   const [members, setMembers] = useState<FamilyMember[]>([]);
   const [stats, setStats] = useState<MemberStat[]>([]);
+  const [activeId, setActiveId] = useState<string | null>(null);
   const [showAdd, setShowAdd] = useState(false);
   const [newName, setNewName] = useState("");
   const [newAvatar, setNewAvatar] = useState(AVATARS[0]);
@@ -60,6 +62,7 @@ export default function FamilyPage() {
   const refresh = useCallback(() => {
     const { members: m } = loadFamily();
     setMembers(m);
+    setActiveId(getActiveProfileId());
 
     const s: MemberStat[] = m.map(member => {
       const profile = loadMemberProfile(member.id);
@@ -81,11 +84,19 @@ export default function FamilyPage() {
   useEffect(() => {
     refresh();
     setCurriculumEnabled(isCurriculumProfilesRolloutEnabled(getCurriculumRolloutContext(getAnonymousSessionId())));
+    window.addEventListener("cleverli-active-profile-change", refresh);
     window.addEventListener("cleverli-family-restored", refresh);
     return () => {
+      window.removeEventListener("cleverli-active-profile-change", refresh);
       window.removeEventListener("cleverli-family-restored", refresh);
     };
   }, [refresh]);
+
+  function handleSwitch(id: string) {
+    setActiveProfileId(id);
+    refresh();
+    restoreCurrentChildProgressFromSupabase().catch(() => {});
+  }
 
   function handleAdd() {
     if (!newName.trim()) { setAddError(t("Bitte einen Namen eingeben.", "Entre un prénom.", "Inserisci un nome.", "Please enter a name.")); return; }
@@ -160,19 +171,36 @@ export default function FamilyPage() {
         <div className="space-y-3">
           {stats.map((s, i) => (
             <div key={s.id}
-              className={`bg-gradient-to-r ${RANK_COLORS[i] ?? "from-white to-gray-50 border-gray-200"} border-2 rounded-2xl px-4 py-3 flex items-center gap-3`}>
-              <div className="text-3xl shrink-0">{RANK_MEDALS[i] ?? "🎖️"}</div>
-              <div className="text-3xl shrink-0">{s.avatar}</div>
-              <div className="flex-1 min-w-0">
-                <div className="font-black text-gray-800">{s.name}</div>
-                <div className="text-xs text-gray-500">
-                  {s.levelEmoji} {s.level} · {s.grade}. {t("Klasse","Année","Classe","Grade")}
+              className={`bg-gradient-to-r ${
+                s.id === activeId
+                  ? "from-green-50 to-emerald-50 border-green-500 shadow-md"
+                  : `${RANK_COLORS[i] ?? "from-white to-gray-50 border-gray-200"} hover:shadow-sm`
+              } border-2 rounded-2xl px-4 py-3 flex items-center gap-3 transition-all`}>
+              <button
+                type="button"
+                onClick={() => handleSwitch(s.id)}
+                aria-pressed={s.id === activeId}
+                aria-label={`${s.name}: ${t("Profil auswählen","Choisir le profil","Seleziona profilo","Select profile")}`}
+                className="flex min-w-0 flex-1 items-center gap-3 rounded-xl text-left transition-transform active:scale-[0.99]"
+              >
+                <div className="text-3xl shrink-0">{RANK_MEDALS[i] ?? "🎖️"}</div>
+                <div className="text-3xl shrink-0">{s.avatar}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-black text-gray-800">{s.name}</div>
+                  {s.id === activeId && (
+                    <div className="mt-0.5 inline-flex rounded-full bg-green-700 px-2 py-0.5 text-[10px] font-black text-white">
+                      {t("Aktiv","Actif","Attivo","Active")}
+                    </div>
+                  )}
+                  <div className="text-xs text-gray-500">
+                    {s.levelEmoji} {s.level} · {s.grade}. {t("Klasse","Année","Classe","Grade")}
+                  </div>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <div className="text-xs font-bold text-green-700">⚡ {s.weeklyXp} {t("XP diese Woche","XP cette semaine","XP questa settimana","XP this week")}</div>
+                    {s.streak >= 2 && <div className="text-xs text-orange-500 font-bold">🔥{s.streak}</div>}
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 mt-0.5">
-                  <div className="text-xs font-bold text-green-700">⚡ {s.weeklyXp} {t("XP diese Woche","XP cette semaine","XP questa settimana","XP this week")}</div>
-                  {s.streak >= 2 && <div className="text-xs text-orange-500 font-bold">🔥{s.streak}</div>}
-                </div>
-              </div>
+              </button>
               <div className="text-right shrink-0">
                 <div className="text-sm font-black text-gray-700">{s.xp} XP</div>
                 <div className="text-[10px] text-gray-400">{s.achievements} 🏆</div>
