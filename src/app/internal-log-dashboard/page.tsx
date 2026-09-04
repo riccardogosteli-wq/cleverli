@@ -1113,6 +1113,13 @@ function issueReportPreview(row: ExerciseIssueReportRow) {
   ].filter(Boolean).join(" · ");
 }
 
+function issueReportParts(row: ExerciseIssueReportRow) {
+  return [
+    row.issues ? { label: "Notiz", value: row.issues } : null,
+    row.liked ? { label: "Frage", value: row.liked } : null,
+  ].filter(Boolean) as Array<{ label: string; value: string }>;
+}
+
 function responsePreview(row: CustomerFeedbackRow) {
   return [
     row.liked ? `Gut: ${row.liked}` : "",
@@ -1122,6 +1129,32 @@ function responsePreview(row: CustomerFeedbackRow) {
     row.child_reaction ? `Kind: ${row.child_reaction}` : "",
     row.improvement_idea ? `Wunsch: ${row.improvement_idea}` : "",
   ].filter(Boolean).join(" · ");
+}
+
+function responseParts(row: CustomerFeedbackRow) {
+  return [
+    row.liked ? { label: "Gut", value: row.liked } : null,
+    row.disliked ? { label: "Weniger", value: row.disliked } : null,
+    row.missing ? { label: "Fehlt", value: row.missing } : null,
+    row.issues ? { label: "Problem", value: row.issues } : null,
+    row.child_reaction ? { label: "Kind", value: row.child_reaction } : null,
+    row.improvement_idea ? { label: "Wunsch", value: row.improvement_idea } : null,
+  ].filter(Boolean) as Array<{ label: string; value: string }>;
+}
+
+function AnswerParts({ parts }: { parts: Array<{ label: string; value: string }> }) {
+  if (parts.length === 0) return <span className="text-gray-400">-</span>;
+
+  return (
+    <div className="space-y-1.5">
+      {parts.map(part => (
+        <div key={part.label} className="grid gap-1 sm:grid-cols-[72px_1fr]">
+          <span className="text-[11px] font-black uppercase tracking-wide text-gray-400">{part.label}</span>
+          <span className="min-w-0 whitespace-pre-wrap break-words text-gray-700">{part.value}</span>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function LoginForm({ hasError }: { hasError: boolean }) {
@@ -1375,7 +1408,9 @@ export default async function InternalLogDashboard({
                       <span className="whitespace-nowrap text-xs text-gray-500">{dateTimeLabel(row.created_at)}</span>
                     </div>
                     <p className="mt-2 break-all font-semibold text-gray-700">{row.email}</p>
-                    <p className="mt-2 text-gray-600">{responsePreview(row) || "-"}</p>
+                    <div className="mt-3">
+                      <AnswerParts parts={responseParts(row)} />
+                    </div>
                     <p className="mt-2 text-xs font-semibold text-gray-500">
                       {row.allow_followup ? "Follow-up ok" : "Kein Follow-up"} · {row.giveaway_opt_in ? `1 Monat fix + 3x ${row.giveaway_months}M Verlosung` : "Kein Reward"}
                     </p>
@@ -1404,8 +1439,8 @@ export default async function InternalLogDashboard({
                       <td className="whitespace-nowrap text-xs font-semibold text-gray-500">
                         {row.allow_followup ? "Follow-up" : "-"} {row.giveaway_opt_in ? `· 1M + ${row.giveaway_months}M` : ""}
                       </td>
-                      <td className="max-w-[460px] truncate text-gray-500" title={responsePreview(row)}>
-                        {responsePreview(row) || "-"}
+                      <td className="max-w-[560px] py-3 text-sm" title={responsePreview(row)}>
+                        <AnswerParts parts={responseParts(row)} />
                       </td>
                     </tr>
                   ))}
@@ -1459,8 +1494,8 @@ export default async function InternalLogDashboard({
                     <td className="whitespace-nowrap">Alexandra</td>
                     <td className="max-w-[210px] truncate" title={row.missing ?? ""}>{row.missing ?? "-"}</td>
                     <td className="max-w-[260px] truncate" title={row.improvement_idea ?? ""}>{row.improvement_idea ?? "-"}</td>
-                    <td className="max-w-[360px] truncate text-gray-500" title={issueReportPreview(row)}>
-                      {issueReportPreview(row) || "-"}
+                    <td className="max-w-[460px] py-3 text-sm" title={issueReportPreview(row)}>
+                      <AnswerParts parts={issueReportParts(row)} />
                     </td>
                     <td className="max-w-[220px] truncate text-gray-500">{row.email}</td>
                   </tr>
