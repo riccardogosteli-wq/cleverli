@@ -40,8 +40,8 @@ export default function PremiumCustomerFeedbackPage() {
               <p className="mt-1">Kurze, ehrliche Antworten reichen völlig.</p>
             </div>
             <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
-              <p className="font-bold text-amber-950">Optional: 3 Monate Premium gratis</p>
-              <p className="mt-1 text-amber-900">Wer möchte, kann am Ende freiwillig an der Verlosung teilnehmen.</p>
+              <p className="font-bold text-amber-950">1 Monat gratis für alle Teilnehmenden</p>
+              <p className="mt-1 text-amber-900">Zusätzlich verlosen wir 3x je 3 Monate Cleverli Premium gratis.</p>
             </div>
           </div>
         </section>

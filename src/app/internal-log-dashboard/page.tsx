@@ -152,7 +152,7 @@ type CustomerFeedbackStats = {
   total: number;
   avgRating: number;
   followups: number;
-  giveawayOptIns: number;
+  rewardEntries: number;
   byRating: Array<{ rating: number; count: number }>;
   recent: CustomerFeedbackRow[];
 };
@@ -1034,7 +1034,7 @@ function buildCustomerFeedbackStats(rows: CustomerFeedbackRow[]): CustomerFeedba
     total: rows.length,
     avgRating: ratings.length ? Math.round((ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length) * 10) / 10 : 0,
     followups: rows.filter(row => row.allow_followup).length,
-    giveawayOptIns: rows.filter(row => row.giveaway_opt_in).length,
+    rewardEntries: rows.filter(row => row.giveaway_opt_in).length,
     byRating,
     recent: rows.slice(0, 40),
   };
@@ -1271,7 +1271,7 @@ export default async function InternalLogDashboard({
             <Stat label="Antworten" value={customerFeedbackStats.total} />
             <Stat label="Ø Bewertung" value={customerFeedbackStats.avgRating ? `${customerFeedbackStats.avgRating}/5` : "-"} />
             <Stat label="Follow-up erlaubt" value={customerFeedbackStats.followups} />
-            <Stat label="Verlosung" value={customerFeedbackStats.giveawayOptIns} />
+            <Stat label="Reward-Teilnahmen" value={customerFeedbackStats.rewardEntries} />
           </div>
 
           <div className="mt-5 grid gap-5 lg:grid-cols-[0.7fr_1.3fr]">
@@ -1302,7 +1302,7 @@ export default async function InternalLogDashboard({
                     <p className="mt-2 break-all font-semibold text-gray-700">{row.email}</p>
                     <p className="mt-2 text-gray-600">{responsePreview(row) || "-"}</p>
                     <p className="mt-2 text-xs font-semibold text-gray-500">
-                      {row.allow_followup ? "Follow-up ok" : "Kein Follow-up"} · {row.giveaway_opt_in ? `${row.giveaway_months} Monate Verlosung` : "Keine Verlosung"}
+                      {row.allow_followup ? "Follow-up ok" : "Kein Follow-up"} · {row.giveaway_opt_in ? `1 Monat fix + 3x ${row.giveaway_months}M Verlosung` : "Kein Reward"}
                     </p>
                   </div>
                 ))}
@@ -1327,7 +1327,7 @@ export default async function InternalLogDashboard({
                       <td className="max-w-[210px] truncate font-semibold">{row.email}</td>
                       <td>{row.rating ? `${row.rating}/5` : "-"}</td>
                       <td className="whitespace-nowrap text-xs font-semibold text-gray-500">
-                        {row.allow_followup ? "Follow-up" : "-"} {row.giveaway_opt_in ? `· ${row.giveaway_months}M` : ""}
+                        {row.allow_followup ? "Follow-up" : "-"} {row.giveaway_opt_in ? `· 1M + ${row.giveaway_months}M` : ""}
                       </td>
                       <td className="max-w-[460px] truncate text-gray-500" title={responsePreview(row)}>
                         {responsePreview(row) || "-"}

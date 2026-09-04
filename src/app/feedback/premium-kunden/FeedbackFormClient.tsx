@@ -40,7 +40,6 @@ export default function FeedbackFormClient() {
       childReaction: formData.get("childReaction"),
       improvementIdea: formData.get("improvementIdea"),
       allowFollowup: formData.get("allowFollowup") === "on",
-      giveawayOptIn: formData.get("giveawayOptIn") === "on",
       website: formData.get("website"),
       source,
     };
@@ -74,7 +73,7 @@ export default function FeedbackFormClient() {
         <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-2xl">✓</div>
         <h2 className="mt-4 text-2xl font-black text-gray-950">Danke für deine Rückmeldung.</h2>
         <p className="mt-3 text-gray-600">
-          Das hilft uns sehr, Cleverli für Familien noch passender zu machen.
+          Das hilft uns sehr, Cleverli für Familien noch passender zu machen. Den Gratis-Monat ordnen wir anhand deines Cleverli-Kontos zu.
         </p>
       </div>
     );
@@ -165,15 +164,10 @@ export default function FeedbackFormClient() {
 
         <input name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
 
-        <div className="grid gap-3 rounded-lg border border-amber-200 bg-amber-50 p-4">
-          <label className="flex gap-3 text-sm text-amber-950">
-            <input name="giveawayOptIn" type="checkbox" className="mt-1 h-5 w-5 rounded border-amber-300 text-green-700" />
-            <span>
-              Ja, ich möchte an der Verlosung für <strong>3 Monate Cleverli Premium gratis</strong> teilnehmen.
-            </span>
-          </label>
+        <div className="grid gap-2 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm">
+          <p className="font-bold text-amber-950">Danke fürs Mitmachen</p>
           <p className="text-xs leading-relaxed text-amber-800">
-            Die Teilnahme ist freiwillig. Wir speichern deine Rückmeldung intern und kontaktieren die Gewinnerin oder den Gewinner per E-Mail.
+            Alle teilnehmenden Premium-Familien erhalten 1 Monat Cleverli Premium gratis. Zusätzlich verlosen wir unter allen Antworten 3x je 3 Monate Premium gratis.
           </p>
         </div>
 
