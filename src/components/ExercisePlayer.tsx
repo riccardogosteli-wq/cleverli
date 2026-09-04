@@ -23,6 +23,7 @@ import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/Top
 import { useVoice, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
 import PushPrompt from "./PushPrompt";
+import ExerciseIssueReporter from "./ExerciseIssueReporter";
 import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useSession } from "@/hooks/useSession";
@@ -213,6 +214,17 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const sessionTotal = Math.max(1, exercises.length);
   const sourceCurrent: Exercise = exercises[idx] ?? sortByDifficulty(topic.exercises)[0];
   const current: Exercise = localizeExercise(sourceCurrent, lang);
+  const reportContext = {
+    session,
+    grade,
+    subject,
+    topicId: topic.id,
+    topicTitle: topic.title,
+    exerciseId: sourceCurrent?.id ?? null,
+    exerciseType: sourceCurrent?.type ?? null,
+    question: current?.question ?? sourceCurrent?.question ?? null,
+    childId: getActiveProfileId(),
+  };
   const progressLabel = () => {
     if (isReviewMode) {
       return lang === "fr" ? `Révision ${idx + 1} / ${sessionTotal}` : lang === "it" ? `Ripasso ${idx + 1} / ${sessionTotal}` : lang === "en" ? `Review ${idx + 1} of ${sessionTotal}` : `Fehler üben ${idx + 1} von ${sessionTotal}`;
@@ -636,6 +648,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         >
           {(tr("reviewBtnLabel") ?? "🔄 Nochmal üben ({n})").replace("{n}", String(wrongIds.length))}
         </button>
+        <ExerciseIssueReporter
+          {...reportContext}
+          context="review"
+          exerciseId={wrongIds[0] ?? reportContext.exerciseId}
+          question={wrongIds.length ? `${wrongIds.length} Fehler in dieser Runde` : reportContext.question}
+        />
         <button
           onClick={() => {
             setShowReview(false);
@@ -712,6 +730,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               {tr("otherTopics")}
             </Link>
           )}
+          <ExerciseIssueReporter
+            {...reportContext}
+            context="topic_complete"
+            exerciseId={null}
+            exerciseType={null}
+            question="Abschlussbildschirm / Thema"
+          />
         </div>
         <style>{`@keyframes popIn{from{transform:scale(0.3);opacity:0}to{transform:scale(1);opacity:1}}`}</style>
       </div>
@@ -1045,6 +1070,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             setHintsUsed(nextHintsUsed);
             trackExerciseEvent("hint_used", exerciseTelemetryPayload({ hintsUsed: nextHintsUsed }));
           }} />
+          <ExerciseIssueReporter {...reportContext} />
         </div>
       )}
 
@@ -1068,8 +1094,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
       {/* Correct answer — keep the celebration animation */}
       {answered === true && (
-        <div>
+        <div className="space-y-3">
           <RewardAnimation correct={true} onContinue={handleContinue} />
+          <ExerciseIssueReporter {...reportContext} />
         </div>
       )}
 

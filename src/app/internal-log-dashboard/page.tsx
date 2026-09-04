@@ -148,6 +148,16 @@ type CustomerFeedbackRow = {
   created_at: string;
 };
 
+type ExerciseIssueReportRow = {
+  id: string;
+  email: string;
+  liked: string | null;
+  missing: string | null;
+  issues: string | null;
+  improvement_idea: string | null;
+  created_at: string;
+};
+
 type CustomerFeedbackStats = {
   total: number;
   avgRating: number;
@@ -155,6 +165,14 @@ type CustomerFeedbackStats = {
   rewardEntries: number;
   byRating: Array<{ rating: number; count: number }>;
   recent: CustomerFeedbackRow[];
+};
+
+type ExerciseIssueReportStats = {
+  total: number;
+  open: number;
+  withNote: number;
+  withoutNote: number;
+  recent: ExerciseIssueReportRow[];
 };
 
 const ACTIVITY_TYPES = [
@@ -521,6 +539,7 @@ async function loadCustomerFeedback(filters: Pick<ActivityFilters, "user" | "fro
   let query = supabase
     .from("customer_feedback")
     .select("id, email, rating, liked, disliked, missing, issues, child_reaction, improvement_idea, allow_followup, giveaway_opt_in, giveaway_months, giveaway_selected, giveaway_awarded_at, source, created_at")
+    .or("source.is.null,source.neq.exercise_issue_report")
     .gte("created_at", from)
     .order("created_at", { ascending: false })
     .limit(250);
@@ -535,6 +554,43 @@ async function loadCustomerFeedback(filters: Pick<ActivityFilters, "user" | "fro
   }
 
   return (data ?? []) as CustomerFeedbackRow[];
+}
+
+async function loadExerciseIssueReports(filters: Pick<ActivityFilters, "user" | "from" | "to">) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) return [] as ExerciseIssueReportRow[];
+
+  const supabase = createClient(supabaseUrl, serviceKey, {
+    auth: { persistSession: false },
+  });
+
+  const from = filters.from
+    ? new Date(`${filters.from}T00:00:00`).toISOString()
+    : new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString();
+  const to = filters.to ? new Date(`${filters.to}T23:59:59`).toISOString() : undefined;
+
+  let query = supabase
+    .from("customer_feedback")
+    .select("id, email, liked, missing, issues, improvement_idea, created_at")
+    .eq("source", "exercise_issue_report")
+    .gte("created_at", from)
+    .order("created_at", { ascending: false })
+    .limit(250);
+
+  if (to) query = query.lte("created_at", to);
+  if (filters.user?.trim()) {
+    const term = filters.user.trim();
+    query = query.or(`email.ilike.%${term}%,missing.ilike.%${term}%,improvement_idea.ilike.%${term}%`);
+  }
+
+  const { data, error } = await query;
+  if (error) {
+    console.error("[internal-log-dashboard/exercise-issue-reports]", error);
+    return [];
+  }
+
+  return (data ?? []) as ExerciseIssueReportRow[];
 }
 
 function minuteKey(date: string) {
@@ -1040,6 +1096,23 @@ function buildCustomerFeedbackStats(rows: CustomerFeedbackRow[]): CustomerFeedba
   };
 }
 
+function buildExerciseIssueReportStats(rows: ExerciseIssueReportRow[]): ExerciseIssueReportStats {
+  return {
+    total: rows.length,
+    open: rows.length,
+    withNote: rows.filter(row => Boolean(row.issues && row.issues !== "Report ohne Notiz")).length,
+    withoutNote: rows.filter(row => row.issues === "Report ohne Notiz").length,
+    recent: rows.slice(0, 60),
+  };
+}
+
+function issueReportPreview(row: ExerciseIssueReportRow) {
+  return [
+    row.issues ? `Notiz: ${row.issues}` : "",
+    row.liked ? `Frage: ${row.liked}` : "",
+  ].filter(Boolean).join(" · ");
+}
+
 function responsePreview(row: CustomerFeedbackRow) {
   return [
     row.liked ? `Gut: ${row.liked}` : "",
@@ -1116,12 +1189,13 @@ export default async function InternalLogDashboard({
     to: params.to || "",
   };
   const events = await loadEvents();
-  const [activityEventsRaw, adsAbEventsRaw, organicEventsRaw, authUsersAll, customerFeedbackRows] = await Promise.all([
+  const [activityEventsRaw, adsAbEventsRaw, organicEventsRaw, authUsersAll, customerFeedbackRows, exerciseIssueReportRows] = await Promise.all([
     loadActivity(activityFilters),
     loadAdsAbActivity({ from: activityFilters.from, to: activityFilters.to }),
     loadOrganicFunnelActivity({ from: activityFilters.from, to: activityFilters.to }),
     loadAuthUsers({ ...activityFilters, user: "" }),
     loadCustomerFeedback(activityFilters),
+    loadExerciseIssueReports(activityFilters),
   ]);
   const authUserFilter = activityFilters.user.toLowerCase();
   const authUsers = authUserFilter
@@ -1141,6 +1215,7 @@ export default async function InternalLogDashboard({
   const organicFunnel = buildOrganicFunnel([...organicEventsRaw, ...syntheticSignupEvents]);
   const cancellationStats = buildCancellationFeedbackStats(adsAbEventsRaw);
   const customerFeedbackStats = buildCustomerFeedbackStats(customerFeedbackRows);
+  const exerciseIssueReportStats = buildExerciseIssueReportStats(exerciseIssueReportRows);
   const seedAuthSummaries = activityFilters.activity === "all" && !activityFilters.from && !activityFilters.to;
   const activitySummaries = buildActivitySummaries(activityEvents, seedAuthSummaries ? authUsers : []);
   const authById = new Map(authUsers.map(user => [user.id, user]));
@@ -1342,6 +1417,61 @@ export default async function InternalLogDashboard({
                 </tbody>
               </table>
             </div>
+          </div>
+        </section>
+
+        <section className="rounded-lg border border-gray-200 bg-white p-4">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-sm font-black uppercase tracking-wide">Übungsreports</h2>
+            <p className="text-sm text-gray-500">
+              Manuelle QA-Meldungen aus Alexandras Test-Account. Nutzt User- und Datumsfilter.
+            </p>
+          </div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-5">
+            <Stat label="Reports" value={exerciseIssueReportStats.total} />
+            <Stat label="Offen" value={exerciseIssueReportStats.open} />
+            <Stat label="Mit Notiz" value={exerciseIssueReportStats.withNote} />
+            <Stat label="Ohne Notiz" value={exerciseIssueReportStats.withoutNote} />
+            <Stat label="Quelle" value="Alexandra" />
+          </div>
+
+          <div className="mt-5 overflow-x-auto">
+            <table className="w-full min-w-[1080px] text-left text-sm">
+              <thead className="text-xs uppercase text-gray-500">
+                <tr>
+                  <th className="py-2">Zeit</th>
+                  <th>Status</th>
+                  <th>Kontext</th>
+                  <th>Quelle</th>
+                  <th>Thema</th>
+                  <th>Übung</th>
+                  <th>Report</th>
+                  <th>E-Mail</th>
+                </tr>
+              </thead>
+              <tbody>
+                {exerciseIssueReportStats.recent.map(row => (
+                  <tr key={row.id} className="border-t border-gray-100">
+                    <td className="whitespace-nowrap py-2">{dateTimeLabel(row.created_at)}</td>
+                    <td className="font-bold">open</td>
+                    <td>Alexandra QA</td>
+                    <td className="whitespace-nowrap">Alexandra</td>
+                    <td className="max-w-[210px] truncate" title={row.missing ?? ""}>{row.missing ?? "-"}</td>
+                    <td className="max-w-[260px] truncate" title={row.improvement_idea ?? ""}>{row.improvement_idea ?? "-"}</td>
+                    <td className="max-w-[360px] truncate text-gray-500" title={issueReportPreview(row)}>
+                      {issueReportPreview(row) || "-"}
+                    </td>
+                    <td className="max-w-[220px] truncate text-gray-500">{row.email}</td>
+                  </tr>
+                ))}
+                {exerciseIssueReportStats.recent.length === 0 && (
+                  <tr>
+                    <td colSpan={8} className="py-4 text-gray-500">Noch keine Übungsreports im Zeitraum.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
           </div>
         </section>
 
