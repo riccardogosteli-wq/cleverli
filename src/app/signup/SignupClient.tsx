@@ -19,6 +19,7 @@ export default function Signup() {
   const { session, loaded } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -63,6 +64,11 @@ export default function Signup() {
     }
     if (password.length < 6) {
       setError(tr("passwordMin6") ?? "Passwort muss mindestens 6 Zeichen haben.");
+      setLoading(false);
+      return;
+    }
+    if (!privacyAccepted) {
+      setError("Bitte akzeptiere die Datenschutzbestimmungen.");
       setLoading(false);
       return;
     }
@@ -235,19 +241,29 @@ export default function Signup() {
                 <p className="text-xs text-gray-400">Merke dir dein Passwort — du brauchst es zum Einloggen</p>
               </div>
 
+              <label className="flex items-start gap-3 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={privacyAccepted}
+                  onChange={e => { setPrivacyAccepted(e.target.checked); setError(""); }}
+                  required
+                  disabled={loading}
+                  className="mt-1 h-4 w-4 rounded border-gray-300 text-green-700 focus:ring-green-600 disabled:opacity-50"
+                />
+                <span>
+                  Ich akzeptiere die{" "}
+                  <Link href="/datenschutz" className="font-semibold text-green-700 underline">Datenschutzbestimmungen</Link>.
+                </span>
+              </label>
+
               <button
                 type="submit"
-                disabled={loading || !email.trim() || password.length < 6}
+                disabled={loading || !email.trim() || password.length < 6 || !privacyAccepted}
                 style={{ minHeight: "48px" }}
                 className="w-full bg-green-700 text-white py-3 px-4 rounded-xl font-bold text-base hover:bg-green-600 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {loading ? "⏳ Konto wird erstellt..." : isPendingTrial ? "Konto erstellen & 7 Tage testen" : pendingCheckout ? "Weiter zur sicheren Zahlung" : "🎉 Kostenlos starten"}
               </button>
-
-              <p className="text-center text-xs text-gray-400">
-                Mit der Registrierung stimmst du unseren{" "}
-                <Link href="/datenschutz" className="text-green-700 underline">Datenschutzbestimmungen</Link> zu
-              </p>
             </form>
 
             <p className="text-center text-sm text-gray-600">

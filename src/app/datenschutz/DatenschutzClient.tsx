@@ -8,7 +8,7 @@ const T: Record<Lang, {
   back: string; title: string; updated: string;
   s1h: string; s1p: string;
   s2h: string; s2progress: string; s2account: string; s2tech: string;
-  s3h: string; s3p1: string; s3p2: string;
+  s3h: string; s3p1: string; s3p2: string; s3p3: string;
   s4h: string; s4p: string;
   s5h: string; s5p: string;
   s6h: string; s6p: string;
@@ -26,6 +26,7 @@ const T: Record<Lang, {
     s3h: "3. Cookies & Tag-Management",
     s3p1: "Wir verwenden Google Analytics, Google Ads Conversion Tracking sowie Meta Pixel und Meta Conversions API, um die Nutzung und den Erfolg unserer Kampagnen zu messen und Cleverli zu verbessern.",
     s3p2: "Dabei können technische Kennungen, besuchte Seiten sowie Registrierungs-, Checkout-, Test- und Kaufereignisse an Google beziehungsweise Meta übermittelt werden. E-Mail-Adressen werden für die serverseitige Zuordnung nur normalisiert und verschlüsselt gehasht übertragen. Personalisierte Werbung für Kinder nutzen wir nicht.",
+    s3p3: "Mit deiner Einwilligung verwenden wir deine E-Mail-Adresse in geschützter Form, um Cleverli-Angebote und Werbung besser auf Eltern und Kundinnen/Kunden auszurichten. Kinderprofile, Lernfortschritte und Antworten werden dafür nicht verwendet. Du kannst diese Einwilligung jederzeit widerrufen.",
     s4h: "4. Kinder & Datenschutz",
     s4p: "Cleverli richtet sich an Kinder unter 13 Jahren. Wir erheben bewusst minimale Daten und empfehlen, dass Eltern das Konto für ihre Kinder erstellen. Gemäss DSG (Schweiz) und DSGVO.",
     s5h: "5. Deine Rechte",
@@ -46,6 +47,7 @@ const T: Record<Lang, {
     s3h: "3. Cookies & gestion des balises",
     s3p1: "Nous utilisons Google Analytics, le suivi des conversions Google Ads, le pixel Meta et l’API Conversions de Meta afin de mesurer l’utilisation et les performances de nos campagnes et d’améliorer Cleverli.",
     s3p2: "Des identifiants techniques, les pages consultées ainsi que les événements d’inscription, de paiement, d’essai et d’achat peuvent être transmis à Google ou Meta. Pour l’attribution côté serveur, les adresses e-mail sont uniquement transmises sous forme normalisée et hachée de manière cryptographique. Nous n’utilisons pas de publicité personnalisée pour les enfants.",
+    s3p3: "Avec ton consentement, nous utilisons ton adresse e-mail sous une forme protégée afin de mieux adapter les offres Cleverli et la publicité aux parents et aux clientes/clients. Les profils enfants, les progrès d’apprentissage et les réponses ne sont pas utilisés à cette fin. Tu peux retirer ce consentement à tout moment.",
     s4h: "4. Enfants & protection des données",
     s4p: "Cleverli s'adresse aux enfants de moins de 13 ans. Nous collectons un minimum de données et recommandons que les parents créent le compte pour leurs enfants. Conformément au nDPT (Suisse) et au RGPD.",
     s5h: "5. Tes droits",
@@ -66,6 +68,7 @@ const T: Record<Lang, {
     s3h: "3. Cookie & gestione dei tag",
     s3p1: "Utilizziamo Google Analytics, il monitoraggio delle conversioni Google Ads, il pixel Meta e l’API Conversions di Meta per misurare l’utilizzo e il rendimento delle nostre campagne e migliorare Cleverli.",
     s3p2: "Identificatori tecnici, pagine visitate ed eventi di registrazione, checkout, prova e acquisto possono essere trasmessi a Google o Meta. Per l’attribuzione lato server, gli indirizzi e-mail vengono trasmessi solo in forma normalizzata e con hash crittografico. Non utilizziamo pubblicità personalizzata per i bambini.",
+    s3p3: "Con il tuo consenso, utilizziamo il tuo indirizzo e-mail in forma protetta per rendere le offerte Cleverli e la pubblicità più adatte ai genitori e alle clienti/ai clienti. I profili dei bambini, i progressi di apprendimento e le risposte non vengono utilizzati a questo scopo. Puoi revocare questo consenso in qualsiasi momento.",
     s4h: "4. Bambini & protezione dei dati",
     s4p: "Cleverli si rivolge a bambini di età inferiore ai 13 anni. Raccogliamo il minimo indispensabile e consigliamo che i genitori creino l'account per i propri figli. In conformità con la LPD (Svizzera) e il GDPR.",
     s5h: "5. I tuoi diritti",
@@ -86,6 +89,7 @@ const T: Record<Lang, {
     s3h: "3. Cookies & Tag Management",
     s3p1: "We use Google Analytics, Google Ads conversion tracking, the Meta Pixel and Meta Conversions API to measure usage and campaign performance and improve Cleverli.",
     s3p2: "Technical identifiers, visited pages, and registration, checkout, trial and purchase events may be sent to Google or Meta. For server-side attribution, email addresses are only sent in normalised and cryptographically hashed form. We do not use personalised advertising for children.",
+    s3p3: "With your consent, we use your email address in protected form to better tailor Cleverli offers and advertising to parents and customers. Child profiles, learning progress and answers are not used for this. You can withdraw this consent at any time.",
     s4h: "4. Children & Privacy",
     s4p: "Cleverli is aimed at children under 13. We collect minimal data and recommend that parents create accounts for their children. In accordance with the Swiss DSG and GDPR.",
     s5h: "5. Your Rights",
@@ -123,6 +127,7 @@ export default function DatenschutzClient() {
           <h2 className="font-bold text-gray-900 text-base mb-2">{t.s3h}</h2>
           <p className="text-gray-600">{t.s3p1}</p>
           <p className="text-gray-600 mt-2">{t.s3p2}</p>
+          <p className="text-gray-600 mt-2">{t.s3p3}</p>
         </section>
 
         <section>
