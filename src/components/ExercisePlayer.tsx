@@ -41,7 +41,7 @@ import { getEffectiveCompleted, mergeCompletedProgress } from "@/lib/topicProgre
 import { localizeExercise } from "@/lib/exerciseLocalization";
 import { normaliseCorrectExerciseIds } from "@/lib/exerciseIdProgress";
 
-interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; nextTopicId?: string | null; }
+interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; nextTopicId?: string | null; focusExerciseId?: string | null; }
 
 const FREE_EXERCISE_LIMIT = 20;
 const FREE_TRIAL_CHECKOUT_OPTIONS = { trialDays: 7 };
@@ -122,7 +122,12 @@ function getInitialSessionExercises(topic: Topic, grade: number, subject: string
     : selectCurrentTierExercises(topic, correctIds);
 }
 
-export default function ExercisePlayer({ topic, grade, subject, isPremium = false, nextTopicId = null }: Props) {
+function findExerciseById(topic: Topic, exerciseId: string | null | undefined) {
+  if (!exerciseId) return null;
+  return topic.exercises.find((exercise, index) => getExerciseId(exercise, index) === exerciseId) ?? null;
+}
+
+export default function ExercisePlayer({ topic, grade, subject, isPremium = false, nextTopicId = null, focusExerciseId = null }: Props) {
   const router = useRouter();
 
   const getCompletedCoin = (completedCount: number) => {
@@ -183,10 +188,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const freeUsageKey = uid ? `cleverli_free_exercises_${uid}` : "cleverli_anon_exercises";
   const [freeExercisesUsed, setFreeExercisesUsed] = useState(() => profile.totalExercises);
   // Select the current difficulty section, so Grün/Gelb/Rot progress matches the actual session.
-  const [sessionStartCompleted, setSessionStartCompleted] = useState(() => getInitialSessionStart(topic, grade, subject));
-  const [fullSetExercises, setFullSetExercises] = useState(() => getInitialSessionExercises(topic, grade, subject));
+  const initialFocusedExercise = findExerciseById(topic, focusExerciseId);
+  const [sessionStartCompleted, setSessionStartCompleted] = useState(() => initialFocusedExercise ? 0 : getInitialSessionStart(topic, grade, subject));
+  const [fullSetExercises, setFullSetExercises] = useState(() => initialFocusedExercise ? [initialFocusedExercise] : getInitialSessionExercises(topic, grade, subject));
   const [exercises, setExercises] = useState(fullSetExercises);
-  const [isReplayMode, setIsReplayMode] = useState(() => getStoredCompleted(topic, grade, subject) >= topic.exercises.length);
+  const [isReplayMode, setIsReplayMode] = useState(() => Boolean(initialFocusedExercise) || getStoredCompleted(topic, grade, subject) >= topic.exercises.length);
   const [correctIds, setCorrectIds] = useState<Set<string>>(() => getCorrectIdSet(topic, getStoredProgress(grade, subject, topic.id)));
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
@@ -259,6 +265,31 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const isFreeLimitLocked = !isPremium && freeExercisesUsed >= FREE_EXERCISE_LIMIT;
   const isLocked = isFreeLimitLocked;
   const exerciseStartRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    const focusedExercise = findExerciseById(topic, focusExerciseId);
+    if (!focusedExercise) return;
+
+    setSessionStartCompleted(0);
+    setFullSetExercises([focusedExercise]);
+    setExercises([focusedExercise]);
+    setIsReplayMode(true);
+    setIsReviewMode(false);
+    setWrongIds([]);
+    setIdx(0);
+    setScore(0);
+    setStreak(0);
+    setAnswered(null);
+    setDone(false);
+    setShowReview(false);
+    setHintsUsed(0);
+    setComboCount(0);
+    setWrongCountSession(0);
+    setCorrectAnswerCount(0);
+    setTierToast(null);
+    setMascotReaction(null);
+    setCardKey(k => k + 1);
+  }, [topic, focusExerciseId]);
 
   const exerciseTelemetryPayload = (extra: ExerciseTelemetryPayload = {}): ExerciseTelemetryPayload => ({
     exerciseId: current?.id ?? String(idx),

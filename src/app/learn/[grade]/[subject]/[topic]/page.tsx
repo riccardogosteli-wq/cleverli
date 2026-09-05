@@ -10,7 +10,10 @@ import type { Exercise } from "@/types/exercise";
 
 const BASE = "https://www.cleverli.ch";
 
-interface Props { params: Promise<{ grade: string; subject: string; topic: string }> }
+interface Props {
+  params: Promise<{ grade: string; subject: string; topic: string }>;
+  searchParams?: Promise<{ exercise?: string }>;
+}
 
 export function generateStaticParams() {
   return GRADES.flatMap((grade) =>
@@ -61,8 +64,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function TopicPage({ params }: Props) {
+export default async function TopicPage({ params, searchParams }: Props) {
   const { grade, subject, topic: topicId } = await params;
+  const query = await searchParams;
   if (subject === "french" && [3, 4].includes(parseInt(grade)) && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ENABLED !== "true") {
     notFound();
   }
@@ -171,6 +175,7 @@ export default async function TopicPage({ params }: Props) {
         grade={parseInt(grade)}
         subject={subject}
         nextTopicId={topics[topicIndex + 1]?.id ?? null}
+        focusExerciseId={query?.exercise ?? null}
       />
 
       <div className="sm:hidden">

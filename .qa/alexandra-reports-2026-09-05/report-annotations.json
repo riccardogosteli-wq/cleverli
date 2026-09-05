@@ -1,0 +1,170 @@
+{
+  "1/math/zahlen-1-10/z6": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T11:42:30.750116+00:00",
+    "reportReason": "Stimme sagt sieben durch sieben wie weiter | Frage: Schreibe die Zahl nach der 7: 7, ___",
+    "correctionMade": "Fixed German TTS so prose colons like «7: 7, ___» are not read as division.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/zahlen-1-10?exercise=z6#exercise"
+  },
+  "1/science/tiere/t16": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T11:53:10.570085+00:00",
+    "reportReason": "Smile Bär dazu ist zu offensichtlich | Frage: Welches Tier schläft im Winter? 🐻",
+    "correctionMade": "Removed answer-revealing bear emoji/image cue; question now asks neutrally for the animal that hibernates.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/science/tiere?exercise=t16#exercise"
+  },
+  "6/science/schweiz-geografie/g6sg1e": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T15:19:47.326897+00:00",
+    "reportReason": "Ist ein wenig blöd, Man soll Wort wörtlich Antwort schreiben, besser ein mc Aufgabe daraus machen | Frage: Was ist der Bodensee?",
+    "correctionMade": "Changed exact-definition fill-in to multiple choice with clear lake-focused distractors.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/science/schweiz-geografie?exercise=g6sg1e#exercise"
+  },
+  "6/science/schweiz-geografie/g6sg1f": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T15:20:32.3964+00:00",
+    "reportReason": "Es gibt auch ein Kanton Jura, also war mein Antwort “Kanton” auch richtig | Frage: Was ist der Jura?",
+    "correctionMade": "Disambiguated question to ask for the Jura as Swiss landscape region, not Kanton Jura.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/science/schweiz-geografie?exercise=g6sg1f#exercise"
+  },
+  "6/science/schweiz-geografie/g6sg1k": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T15:22:19.22624+00:00",
+    "reportReason": "Ist auch ein wenig blöd, dass man Wort wörtlich die richtige Antwort schreiben muss, ist fast unmöglich | Frage: Was ist das Schweizer Bundesgericht?",
+    "correctionMade": "Changed exact-definition fill-in to multiple choice about the Swiss Federal Supreme Court.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/science/schweiz-geografie?exercise=g6sg1k#exercise"
+  },
+  "6/science/energie-nachh-6/en6_2": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:02:45.706429+00:00",
+    "reportReason": "Wieder bei solchen Aufgaben erwartet Cleverli dass ich wortwörtlich einen langen Satz schreibe, es ist nicht möglich | Frage: Was ist fossile Energie?",
+    "correctionMade": "Changed exact-definition fill-in to multiple choice about fossil energy.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/science/energie-nachh-6?exercise=en6_2#exercise"
+  },
+  "6/science/energie-nachh-6/en6_4": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:03:27.581482+00:00",
+    "reportReason": "Report ohne Notiz | Frage: Was ist Klimawandel?",
+    "correctionMade": "Changed exact-definition fill-in to multiple choice about climate change.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/science/energie-nachh-6?exercise=en6_4#exercise"
+  },
+  "6/science/energie-nachh-6/en6_6": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:04:20.982953+00:00",
+    "reportReason": "Report ohne Notiz | Frage: Wie funktioniert Solarenergie?",
+    "correctionMade": "Changed exact-definition fill-in to multiple choice about solar cells turning light into electricity.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/science/energie-nachh-6?exercise=en6_6#exercise"
+  },
+  "6/german/kasus/g6ka1c": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:09:14.826294+00:00",
+    "reportReason": "Soll auch zum Beispiel “was wen” akzeptiert werden | Frage: Mit welcher Frage bestimmt man den Akkusativ?",
+    "correctionMade": "Added valid alternative answers including «Was wen» and reversed word order variants.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/german/kasus?exercise=g6ka1c#exercise"
+  },
+  "6/german/kasus/g6ka1e": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:10:19.970267+00:00",
+    "reportReason": "Man erwartet genauer Antwort, es ist nicht möglich | Frage: Was ist der Genitiv? Beispiel.\nReport ohne Notiz | Frage: Was ist der Genitiv? Beispiel.",
+    "correctionMade": "Changed exact Genitiv definition/example fill-in to multiple choice.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/german/kasus?exercise=g6ka1e#exercise"
+  },
+  "6/german/kasus/g6ka1k": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:12:17.811753+00:00",
+    "reportReason": "Wieder schwer zu erraten der genauer Text was man erwartet | Frage: «Die Bücher der Schüler» = Genitiv Plural. Was zeigt der Genitiv an?",
+    "correctionMade": "Changed exact Genitiv Plural free-text answer to multiple choice.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/german/kasus?exercise=g6ka1k#exercise"
+  },
+  "6/math/negative-zahlen/g6nz1g": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:15:20.940992+00:00",
+    "reportReason": "Mein richtiger Antwort ohne Abstand nach dem Komma gilt als falsch | Frage: Sortiere: −3, 2, −7, 0, 5 (klein→gross)",
+    "correctionMade": "Fixed fill-in matching so comma-separated negative-number answers are accepted with or without spaces.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/math/negative-zahlen?exercise=g6nz1g#exercise"
+  },
+  "1/math/verdoppeln-halbieren/v23": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:32:20.27024+00:00",
+    "reportReason": "Audio” Verdopple fünf durch welche Zahl “ ist falsch, es soll sein “verdopple fünf” dann zum Beispiel “was kommt dann” oder “wie viel wird es” | Frage: Lernrunde 4: Verdopple 5: ___",
+    "correctionMade": "Fixed German TTS so doubling prompts with colon blanks are not read as division.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/verdoppeln-halbieren?exercise=v23#exercise"
+  },
+  "1/math/verdoppeln-halbieren/v24": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:32:44.269377+00:00",
+    "reportReason": "Report ohne Notiz | Frage: Lernrunde 5: Verdopple 6: ___",
+    "correctionMade": "Fixed German TTS so doubling prompts with colon blanks are not read as division.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/verdoppeln-halbieren?exercise=v24#exercise"
+  },
+  "1/math/verdoppeln-halbieren/v26": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:33:19.201136+00:00",
+    "reportReason": "Wieder durch welche Zahl am Ende : ist falsch | Frage: Lernrunde 7: Verdopple 8: ___",
+    "correctionMade": "Fixed German TTS so doubling prompts with colon blanks are not read as division.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/verdoppeln-halbieren?exercise=v26#exercise"
+  },
+  "1/math/verdoppeln-halbieren/v27": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:33:54.745523+00:00",
+    "reportReason": "Verdopple neun ! Nicht “durch welche Zahl danach” | Frage: Lernrunde 8: Verdopple 9: ___",
+    "correctionMade": "Fixed German TTS so doubling prompts with colon blanks are not read as division.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/verdoppeln-halbieren?exercise=v27#exercise"
+  },
+  "1/math/verdoppeln-halbieren/v29": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:34:20.935362+00:00",
+    "reportReason": "Report ohne Notiz | Frage: Lernrunde 9: Verdopple 2: ___",
+    "correctionMade": "Fixed German TTS so doubling prompts with colon blanks are not read as division.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/verdoppeln-halbieren?exercise=v29#exercise"
+  },
+  "1/math/verdoppeln-halbieren/v31": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:34:46.027236+00:00",
+    "reportReason": "Report ohne Notiz | Frage: Lernrunde 10: Verdopple 3: ___",
+    "correctionMade": "Fixed German TTS so doubling prompts with colon blanks are not read as division.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/verdoppeln-halbieren?exercise=v31#exercise"
+  },
+  "1/math/verdoppeln-halbieren/v33": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:35:46.931414+00:00",
+    "reportReason": "Audio sagt “Ben hat welches Wort Sticker” es soll heißen “Ben hat wie viele Sticker” | Frage: Anna hat 9 Sticker. Ben hat das Doppelte. Ben hat ___ Sticker.",
+    "correctionMade": "Fixed German TTS count-noun blanks so «___ Sticker» is read as «wie viele Sticker».",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/verdoppeln-halbieren?exercise=v33#exercise"
+  },
+  "1/german/einfache-woerter/ew16": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:46:28.614919+00:00",
+    "reportReason": "Die Bilder sollen angepasst werden, es ist nicht cool bellt und schnurrt vor allem bellt, besser nur die Nomen benutzen | Frage: Finde alle Tier-Paare! 🐾",
+    "correctionMade": "Replaced verb/sound memory cards with animal noun/image cards only.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/german/einfache-woerter?exercise=ew16#exercise"
+  },
+  "1/german/einfache-woerter/ew50": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-04T20:54:46.831575+00:00",
+    "reportReason": "Obst ist doch anderer Wort für Früchte oder ? | Frage: Was haben ein Apfel, eine Birne und eine Orange gemeinsam? Sie sind alle ___.",
+    "correctionMade": "Added «Obst» as accepted alternative answer for «Früchte».",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/german/einfache-woerter?exercise=ew50#exercise"
+  }
+}

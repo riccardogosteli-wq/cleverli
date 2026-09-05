@@ -5,24 +5,25 @@ import ProgressMapClient from "@/components/ProgressMapClient";
 import { useSession } from "@/hooks/useSession";
 import { countExercisesByDifficulty } from "@/lib/exerciseHelpers";
 import { getTierProgress } from "@/lib/tierProgress";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getTopicTitle } from "@/data/topicTitles";
 import { useLang } from "@/lib/LangContext";
 import { getActiveProfileId } from "@/lib/family";
 import { readTopicProgressForChild, type NormalisedTopicProgress } from "@/lib/reportingProgress";
 
-interface Props { topic: Topic; grade: number; subject: string; nextTopicId?: string | null; }
+interface Props { topic: Topic; grade: number; subject: string; nextTopicId?: string | null; focusExerciseId?: string | null; }
 
 function loadProgress(grade: number, subject: string, topic: Topic): NormalisedTopicProgress | null {
   const activeChildId = getActiveProfileId();
   return readTopicProgressForChild(grade, subject, topic, activeChildId);
 }
 
-export default function TopicClient({ topic, grade, subject, nextTopicId = null }: Props) {
+export default function TopicClient({ topic, grade, subject, nextTopicId = null, focusExerciseId = null }: Props) {
   const { session, isPremium, loaded, premiumChecked } = useSession();
   const { lang } = useLang();
   const topicTitle = getTopicTitle(topic.id, lang, topic.title);
   const [exerciseCounts, setExerciseCounts] = useState<ReturnType<typeof countExercisesByDifficulty> | null>(null);
+  const exerciseSectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const progressData = loadProgress(grade, subject, topic);
@@ -47,6 +48,13 @@ export default function TopicClient({ topic, grade, subject, nextTopicId = null 
 
     setExerciseCounts(counts);
   }, [grade, subject, topic]);
+
+  useEffect(() => {
+    if (!focusExerciseId) return;
+    window.requestAnimationFrame(() => {
+      exerciseSectionRef.current?.scrollIntoView({ block: "start" });
+    });
+  }, [focusExerciseId]);
 
   // Re-read from localStorage whenever ExercisePlayer saves (after each answer)
   // By subscribing to the storage event we refresh the roadmap live.
@@ -89,13 +97,14 @@ export default function TopicClient({ topic, grade, subject, nextTopicId = null 
           totalExercisesByDifficulty={exerciseCounts.total}
         />
       </div>
-      <div className="order-1 sm:order-2">
+      <div id="exercise" ref={exerciseSectionRef} className="scroll-mt-20 order-1 sm:order-2">
         <ExercisePlayer
           topic={topic}
           grade={grade}
           subject={subject}
           isPremium={loaded && premiumChecked ? isPremium : false}
           nextTopicId={nextTopicId}
+          focusExerciseId={focusExerciseId}
         />
       </div>
     </div>

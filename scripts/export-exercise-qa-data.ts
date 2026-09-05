@@ -1,4 +1,4 @@
-import { writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { getSubjects, getTopics } from "../src/data";
 import type { Exercise } from "../src/types/exercise";
 
@@ -10,6 +10,25 @@ const subjectNames: Record<string, string> = {
   french: "Französisch",
   mi: "Medien & Informatik",
 };
+
+type ReportAnnotation = {
+  reportStatus?: string;
+  reportedAt?: string;
+  reportReason?: string;
+  correctionMade?: string;
+  fixedAt?: string;
+  retestUrl?: string;
+};
+
+const SITE_BASE = process.env.EXERCISE_QA_SITE_BASE ?? "https://www.cleverli.ch";
+const annotationsPath = process.env.EXERCISE_QA_ANNOTATIONS_PATH ?? "/tmp/cleverli-exercise-issue-report-annotations.json";
+const annotations: Record<string, ReportAnnotation> = existsSync(annotationsPath)
+  ? JSON.parse(readFileSync(annotationsPath, "utf8"))
+  : {};
+
+function annotationFor(grade: number, subjectId: string, topicId: string, exerciseId: string): ReportAnnotation {
+  return annotations[`${grade}/${subjectId}/${topicId}/${exerciseId}`] ?? {};
+}
 
 function specialSolution(exercise: Exercise): string {
   if (exercise.type === "counting") {
@@ -62,6 +81,8 @@ for (const grade of grades) {
       topics.push({ subject: subjectName, topicId: topic.id, topic: topic.title, count: topic.exercises.length });
       for (const exercise of topic.exercises) {
         const location = `${subject.id}/${topic.id}`;
+        const retestUrl = `${SITE_BASE}/learn/${grade}/${subject.id}/${topic.id}?exercise=${encodeURIComponent(exercise.id)}#exercise`;
+        const annotation = annotationFor(grade, subject.id, topic.id, exercise.id);
         const first = seen.get(exercise.id);
         if (first) duplicateIds.push({ id: exercise.id, first, second: location });
         else seen.set(exercise.id, location);
@@ -81,6 +102,12 @@ for (const grade of grades) {
           storedAnswer: exercise.answer,
           hints: exercise.hints ?? [],
           structure: exercise.listeningText ? JSON.stringify({ listeningText: exercise.listeningText, interaction: technicalStructure(exercise) }) : technicalStructure(exercise),
+          reportStatus: annotation.reportStatus ?? "",
+          reportedAt: annotation.reportedAt ?? "",
+          reportReason: annotation.reportReason ?? "",
+          correctionMade: annotation.correctionMade ?? "",
+          fixedAt: annotation.fixedAt ?? "",
+          retestUrl: annotation.retestUrl ?? retestUrl,
           exercise,
         });
       }

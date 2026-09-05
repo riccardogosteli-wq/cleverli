@@ -22,7 +22,8 @@ MAIN_HEADERS = [
     "Exercise ID", "Subject", "Topic", "Type", "Difficulty", "Question",
     "Answer 1", "Answer 2", "Answer 3", "Answer 4", "Correct answer / solution",
     "Hint 1", "Hint 2", "LP21 fit", "Correctness", "Language", "Reviewer notes",
-    "Decision", "Reviewed by", "Reviewed date",
+    "Decision", "Reviewed by", "Reviewed date", "Report status", "Reported at",
+    "Report reason", "Correction made", "Fixed at", "Retest URL",
 ]
 
 SPECIAL_TYPES = {"counting", "matching", "memory", "drag-drop", "number-line", "word-search"}
@@ -67,6 +68,8 @@ def create_workbook(source: Path, output: Path) -> dict:
         main.append([
             item["exerciseId"], item["subject"], item["topic"], item["type"], item["difficulty"], item["question"],
             *options, item["correct"], *hints, None, None, None, None, None, None, None,
+            item.get("reportStatus"), item.get("reportedAt"), item.get("reportReason"),
+            item.get("correctionMade"), item.get("fixedAt"), item.get("retestUrl"),
         ])
         row_number = main.max_row
         if item["type"] == "multiple-choice" and item["storedAnswer"] in item["options"][:4]:
@@ -77,15 +80,17 @@ def create_workbook(source: Path, output: Path) -> dict:
 
     style_header(main, len(MAIN_HEADERS))
     main.freeze_panes = "D2"
-    main.auto_filter.ref = f"A1:T{main.max_row}"
+    main.auto_filter.ref = f"A1:Z{main.max_row}"
     main.sheet_view.showGridLines = False
-    add_table(main, f"Grade{grade}QATable", "T", main.max_row)
+    add_table(main, f"Grade{grade}QATable", "Z", main.max_row)
     add_dropdown(main, "N", ["Yes", "Questionable", "No"], main.max_row)
     add_dropdown(main, "O", ["Correct", "Wrong", "Unclear"], main.max_row)
     add_dropdown(main, "P", ["Good", "Needs work"], main.max_row)
     add_dropdown(main, "R", ["Approved", "Fix", "Remove"], main.max_row)
+    add_dropdown(main, "U", ["new", "reviewed", "fixed", "wont_fix", "retest_passed"], main.max_row)
     widths = {"A": 18, "B": 28, "C": 30, "D": 18, "E": 11, "F": 65, "G": 28, "H": 28, "I": 28, "J": 28,
-              "K": 42, "L": 48, "M": 48, "N": 15, "O": 15, "P": 16, "Q": 50, "R": 14, "S": 18, "T": 16}
+              "K": 42, "L": 48, "M": 48, "N": 15, "O": 15, "P": 16, "Q": 50, "R": 14, "S": 18, "T": 16,
+              "U": 16, "V": 22, "W": 54, "X": 62, "Y": 18, "Z": 56}
     for column, width in widths.items():
         main.column_dimensions[column].width = width
     for row in main.iter_rows(min_row=2, max_row=main.max_row):

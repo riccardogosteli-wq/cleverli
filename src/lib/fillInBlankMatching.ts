@@ -26,7 +26,7 @@ export function normaliseTextAnswer(value: string): string {
     .replace(MINUS_SIGN_VARIANTS, "-")
     .trim()
     .toLocaleLowerCase("de-CH")
-    .replace(/[.,;:!?\u0027\u0022»«]/g, "")
+    .replace(/[.,;:!?\u0027\u0022»«]/g, " ")
     .replace(/[|/]/g, " ")
     .replace(/\s+/g, " ")
     .trim();

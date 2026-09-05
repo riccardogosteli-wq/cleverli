@@ -186,7 +186,7 @@ function cleanForSpeech(text: string): string {
     .replace(/^___\s*\+\s*/g, "Welche Zahl plus ")
     .replace(/^___\s*[\-\u2212]\s*/g, "Welche Zahl minus ")
     .replace(/^___\s*[\u00d7x\*]\s*/g, "Welche Zahl mal ")
-    .replace(/^___\s*[\u00f7:]\s*/g, "Welche Zahl durch ")
+    .replace(/^___\s*[\u00f7÷]\s*/g, "Welche Zahl durch ")
     // Article fill-in: "___ Hund bellt" → "Welcher Artikel? Hund bellt"
     .replace(/^___\s+(der|die|das|ein|eine|einen|einem|einer|des|dem|den)\b/gi, "Welcher Artikel? $1")
     // Genitiv/inflected noun: "___ Kindes..." → "Welches Wort fehlt? Kindes..."
@@ -290,11 +290,11 @@ function cleanForSpeech(text: string): string {
     .replace(/(\d+)\s*\+\s*___/g, "$1 plus welche Zahl")
     .replace(/(\d+)\s*[\-\u2212]\s*___/g, "$1 minus welche Zahl")
     .replace(/(\d+)\s*[\u00d7x\*]\s*___/g, "$1 mal welche Zahl")
-    .replace(/(\d+)\s*[\u00f7:]\s*___/g, "$1 durch welche Zahl")
+    .replace(/(\d+)\s*[\u00f7÷]\s*___/g, "$1 durch welche Zahl")
     // ── 6b. Colon + blank: "ist: ___" → "ist was?" ──
     .replace(/:\s*___/g, ": was?")
     // ── 6c. Blank + unit: "___ Zentimeter" / "___ kg" → "wie viele Zentimeter?" ──
-    .replace(/___\s+(Zentimeter|Kilometer|Millimeter|Meter|Kilogramm|Gramm|Milligramm|Liter|Deziliter|Milliliter|Zentiliter|Franken|Rappen|Grad|Stunden?|Minuten?|Sekunden?|Tage?|Wochen?|Monate?|Jahre?|Prozent)/g, "wie viele $1?")
+    .replace(/___\s+(Zentimeter|Kilometer|Millimeter|Meter|Kilogramm|Gramm|Milligramm|Liter|Deziliter|Milliliter|Zentiliter|Franken|Rappen|Grad|Stunden?|Minuten?|Sekunden?|Tage?|Wochen?|Monate?|Jahre?|Prozent|Sticker|Murmeln|Äpfel|Sterne?|Blumen?|Punkte?|Karten?|Stifte?|Beine?|Münzen?)/g, "wie viele $1?")
     // ── 6d. Multiple blanks: "___ und ___" → "was und was?" ──
     .replace(/___\s+und\s+___/g, "was und was?")
     .replace(/___,\s*___,\s*___/g, "was, was, was?")
@@ -333,7 +333,7 @@ function cleanForSpeech(text: string): string {
     //    "= ___ Unit" → "gleich wie viele Unit?"
     .replace(/=\s*___\s+([A-ZÄÖÜ][\wäöüÄÖÜß-]+)/g, "gleich wie viele $1?")
     //    "Unit ___" — only match actual measurement/count nouns, NOT articles/determiners
-    .replace(/\b(Franken|Rappen|Meter|Kilometer|Zentimeter|Millimeter|Kilogramm|Gramm|Liter|Deziliter|Milliliter|Grad|Stunden?|Minuten?|Sekunden?|Tage?|Wochen?|Monate?|Jahre?|Prozent|Ecken?|Seiten?|Punkte?|Kinder?|Schüler)\s+___/g, "wie viele $1?")
+    .replace(/\b(Franken|Rappen|Meter|Kilometer|Zentimeter|Millimeter|Kilogramm|Gramm|Liter|Deziliter|Milliliter|Grad|Stunden?|Minuten?|Sekunden?|Tage?|Wochen?|Monate?|Jahre?|Prozent|Ecken?|Seiten?|Punkte?|Kinder?|Schüler|Sticker|Murmeln|Äpfel|Sterne?|Blumen?|Karten?|Stifte?|Beine?|Münzen?)\s+___/g, "wie viele $1?")
     //    "= ___" → "gleich wie viel?"
     .replace(/=\s*___/g, "gleich wie viel?")
     //    ", ___" at end of sequence → ", wie weiter?"
@@ -349,7 +349,7 @@ function cleanForSpeech(text: string): string {
     // ── 7. Math operators — digit+op+digit first, then standalone symbols ──
     .replace(/(\d)\s*[×x\u00d7]\s*(\d)/g, "$1 mal $2")
     .replace(/(\d)\s*[\u00f7÷]\s*(\d)/g, "$1 durch $2")
-    .replace(/(\d)\s*:\s*(\d)/g, "$1 durch $2")
+    .replace(/(\d):(\d)/g, "$1 durch $2")
     .replace(/(\d)\s*\+\s*(\d)/g, "$1 plus $2")
     .replace(/(\d)\s*[\u2212\-]\s*(\d)/g, "$1 minus $2")
     // Standalone × ÷ not between digits (e.g. "Regel × 2", "2 × (")
@@ -380,6 +380,7 @@ function cleanForSpeech(text: string): string {
     .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}]/gu, "")
     .replace(/[\u{FE00}-\u{FE0F}]/gu, "")
     // ── Formatting ──
+    .replace(/\?+\s*[.!?]+/g, "?")
     .replace(/___/g, "")
     .replace(/«([^»]+)»/g, "$1")
     .replace(/[#*_~`→←↑↓✓✗✅❌]/g, "")

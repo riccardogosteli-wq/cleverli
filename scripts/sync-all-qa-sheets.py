@@ -30,6 +30,9 @@ MAIN_HEADERS = [
     "Answer 1", "Answer 2", "Answer 3", "Answer 4", "Correct answer / solution",
     "Hint 1", "Hint 2",
 ]
+REPORT_HEADERS = [
+    "Report status", "Reported at", "Report reason", "Correction made", "Fixed at", "Retest URL",
+]
 SPECIAL_HEADERS = [
     "Exercise ID", "Subject", "Topic", "Type", "Difficulty", "Question",
     "Readable solution", "Technical structure", "Hint 1", "Hint 2",
@@ -464,6 +467,17 @@ def main_values(row: dict) -> list:
     ]
 
 
+def report_values(row: dict) -> list:
+    return [
+        row.get("reportStatus") or "",
+        row.get("reportedAt") or "",
+        row.get("reportReason") or "",
+        row.get("correctionMade") or "",
+        row.get("fixedAt") or "",
+        row.get("retestUrl") or "",
+    ]
+
+
 def special_values(row: dict) -> list:
     hints = (row.get("hints") or [])[:2]
     return [
@@ -721,7 +735,7 @@ def reconcile_grade(
     spreadsheet_id = SHEETS[grade]
     main_tab = f"Grade {grade} QA"
 
-    current_main = values_get(spreadsheet_id, f"'{main_tab}'!A1:T{len(source_rows) + 1}")
+    current_main = values_get(spreadsheet_id, f"'{main_tab}'!A1:Z{len(source_rows) + 1}")
     current_special = values_get(spreadsheet_id, f"'Special exercises'!A1:J{len(special_rows) + 1}")
     if normalize(current_main[0], 13) != MAIN_HEADERS:
         raise RuntimeError(f"Grade {grade}: unexpected main header")
@@ -739,10 +753,15 @@ def reconcile_grade(
     aligned_special, special_insert_blocks = align_rows_by_id(current_special[1:], special_rows)
 
     main_updates = []
+    if normalize(current_main[0], 26)[20:26] != REPORT_HEADERS:
+        main_updates.append({"range": f"'{main_tab}'!U1:Z1", "values": [REPORT_HEADERS]})
     for sheet_row, (current, expected_source) in enumerate(zip(aligned_main, source_rows), start=2):
         expected = main_values(expected_source)
         if normalize(current, 13) != normalize(expected, 13):
             main_updates.append({"range": f"'{main_tab}'!A{sheet_row}:M{sheet_row}", "values": [expected]})
+        expected_report = report_values(expected_source)
+        if normalize(current, 26)[20:26] != expected_report:
+            main_updates.append({"range": f"'{main_tab}'!U{sheet_row}:Z{sheet_row}", "values": [expected_report]})
 
     special_updates = []
     if normalize(current_special[0], 10) != expected_special_header:
@@ -775,12 +794,15 @@ def reconcile_grade(
         insert_sheet_rows(spreadsheet_id, "Special exercises", special_insert_blocks)
         batch_write(spreadsheet_id, main_updates + special_updates + audit_updates)
 
-    reread_main = values_get(spreadsheet_id, f"'{main_tab}'!A1:T{len(source_rows) + 1}")
+    reread_main = values_get(spreadsheet_id, f"'{main_tab}'!A1:Z{len(source_rows) + 1}")
     reread_special = values_get(spreadsheet_id, f"'Special exercises'!A1:J{len(special_rows) + 1}")
     main_mismatches = [
         index for index, (actual, source_row) in enumerate(zip(reread_main[1:], source_rows), start=2)
         if normalize(actual, 13) != normalize(main_values(source_row), 13)
+        or normalize(actual, 26)[20:26] != report_values(source_row)
     ]
+    if normalize(reread_main[0] if reread_main else [], 26)[20:26] != REPORT_HEADERS:
+        main_mismatches.append(1)
     if len(reread_main) != len(source_rows) + 1:
         main_mismatches.extend(range(len(reread_main) + 1, len(source_rows) + 2))
     special_mismatches = []
