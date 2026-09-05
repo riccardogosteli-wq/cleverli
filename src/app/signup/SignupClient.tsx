@@ -80,6 +80,7 @@ export default function Signup() {
       if (!supabase) throw new Error("Supabase not available");
       const experimentAttribution = pendingCheckout?.experimentAttribution ?? readAdsExperimentAttribution();
       const attribution = getStoredAttribution();
+      const privacyPolicyAcceptedAt = new Date().toISOString();
 
       const { data, error: signupError } = await supabase.auth.signUp({
         email,
@@ -88,6 +89,9 @@ export default function Signup() {
           data: {
             name: email.split("@")[0],
             attribution,
+            privacy_policy_accepted: true,
+            privacy_policy_accepted_at: privacyPolicyAcceptedAt,
+            privacy_policy_version: "2026-09-05",
             ...(experimentAttribution
               ? {
                   ads_ab_experiment: experimentAttribution.experiment,
@@ -138,6 +142,9 @@ export default function Signup() {
           pendingCheckout: pendingCheckout?.plan ?? null,
           anonymous_session_id: getAnonymousSessionId(),
           attribution,
+          privacy_policy_accepted: true,
+          privacy_policy_accepted_at: privacyPolicyAcceptedAt,
+          privacy_policy_version: "2026-09-05",
           ...(experimentAttribution
             ? {
                 experiment: experimentAttribution.experiment,
