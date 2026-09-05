@@ -1,0 +1,82 @@
+{
+  "1/science/tiere/t11": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: question used a direct visual emoji clue for the answer.",
+    "correctionMade": "Removed direct bird emoji clue and rewrote the question to ask for feathers and wings; cleaned EN/IT/FR question text.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/science/tiere?exercise=t11#exercise"
+  },
+  "1/science/tiere/t29": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: question used a direct visual emoji clue for the answer.",
+    "correctionMade": "Removed direct cheetah emoji clue and rewrote the question to ask for the fastest land animal; cleaned EN/IT/FR question text.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/science/tiere?exercise=t29#exercise"
+  },
+  "4/science/lebensraeume-tiere/g4s13": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: question used a direct visual emoji clue for the answer.",
+    "correctionMade": "Removed direct camel emoji clue and rewrote the question around dry desert adaptation.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/4/science/lebensraeume-tiere?exercise=g4s13#exercise"
+  },
+  "6/math/verhaeltnisse-6/g6vh3": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: TTS could read ratio notation as division.",
+    "correctionMade": "Updated TTS normalisation so ratio equations are spoken as 'zu', not 'durch'.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/math/verhaeltnisse-6?exercise=g6vh3#exercise"
+  },
+  "6/math/verhaeltnisse-6/g6vh10": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: TTS could read ratio notation as division.",
+    "correctionMade": "Updated TTS normalisation so ratio equations are spoken as 'zu', not 'durch'.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/math/verhaeltnisse-6?exercise=g6vh10#exercise"
+  },
+  "6/math/verhaeltnisse-6/g6vh25": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: TTS could read labelled ratios as division.",
+    "correctionMade": "Updated TTS normalisation so labelled ratios are spoken as 'Silber zu Gold ist gleich drei zu eins'.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/math/verhaeltnisse-6?exercise=g6vh25#exercise"
+  },
+  "6/math/verhaeltnisse-6/g6vh26": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: TTS could read map scale notation as division.",
+    "correctionMade": "Updated TTS normalisation so map scales are spoken as 'Karte eins zu zweihunderttausend'.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/math/verhaeltnisse-6?exercise=g6vh26#exercise"
+  },
+  "6/math/verhaeltnisse-6/g6vh27": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: TTS could read labelled ratios as division.",
+    "correctionMade": "Updated TTS normalisation so labelled ratios are spoken as 'Länge zu Breite ist gleich fünf zu drei'.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/math/verhaeltnisse-6?exercise=g6vh27#exercise"
+  },
+  "6/math/verhaeltnisse-6/g6vh34": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: TTS could read labelled ratios as division.",
+    "correctionMade": "Updated TTS normalisation so labelled ratios are spoken as 'Butter zu Mehl ist gleich eins zu vier'.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/math/verhaeltnisse-6?exercise=g6vh34#exercise"
+  },
+  "6/math/verhaeltnisse-6/g6vh35": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review after Alexandra reports: TTS could read map scale notation as division.",
+    "correctionMade": "Updated TTS normalisation so map scales are spoken as 'Karte eins zu zehntausend'.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/6/math/verhaeltnisse-6?exercise=g6vh35#exercise"
+  }
+}

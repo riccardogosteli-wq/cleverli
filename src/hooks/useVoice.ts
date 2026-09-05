@@ -169,12 +169,41 @@ function ordinalWithEnding(n: number, ending: "e" | "en" | "er" | "es"): string 
   return ending === "e" ? base : `${base}${ending.slice(1)}`;
 }
 
+function ratioNumberToSpeech(value: string): string {
+  const number = Number(value.replace(/[\s'’]/g, ""));
+  if (!Number.isFinite(number)) return value;
+  if (number === 1) return "eins";
+  if (number > 1000 && number < 1000000) {
+    const thousands = Math.floor(number / 1000);
+    const rest = number % 1000;
+    return rest === 0
+      ? `${numToWordsDE(thousands)}tausend`
+      : `${numToWordsDE(thousands)}tausend${numToWordsDE(rest)}`;
+  }
+  return numToWordsDE(number);
+}
+
 function ratiosToSpeech(text: string): string {
-  return text.replace(
+  return text
+    .replace(
+      /\b(Karte|Massstab)\s+(\d+)\s*:\s*(\d+(?:[\s'’]?\d{3})*)/gi,
+      (_match, label: string, left: string, right: string) =>
+        `${label} ${ratioNumberToSpeech(left)} zu ${ratioNumberToSpeech(right)}`,
+    )
+    .replace(
+      /\b([A-ZÄÖÜ][A-Za-zÄÖÜäöüß]+)\s*:\s*([A-ZÄÖÜ][A-Za-zÄÖÜäöüß]+)\s*=\s*(\d+)\s*:\s*(\d+)/g,
+      (_match, leftLabel: string, rightLabel: string, left: string, right: string) =>
+        `${leftLabel} zu ${rightLabel} ist gleich ${ratioNumberToSpeech(left)} zu ${ratioNumberToSpeech(right)}`,
+    )
+    .replace(
+      /^\s*(\d+)\s*:\s*(\d+)\s*=\s*(\d+)\s*:\s*\?/g,
+      (_match, leftA: string, rightA: string, leftB: string) =>
+        `${ratioNumberToSpeech(leftA)} zu ${ratioNumberToSpeech(rightA)} ist gleich ${ratioNumberToSpeech(leftB)} zu ?`,
+    )
+    .replace(
     /(\b(?:Massstab|Verhältnis|Lehrer\s*:\s*Schüler|Vereinfache)[^.!?\n]{0,80}?)\b(\d+)\s*:\s*(\d+(?:\s\d{3})*)/gi,
     (_match, context: string, left: string, right: string) => {
-      const rightNumber = Number(right.replace(/\s/g, ""));
-      return `${context}${numToWordsDE(Number(left))} zu ${numToWordsDE(rightNumber)}`;
+      return `${context}${ratioNumberToSpeech(left)} zu ${ratioNumberToSpeech(right)}`;
     },
   );
 }

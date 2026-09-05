@@ -84,7 +84,7 @@ const grade4NT: Topic[] = [
     exercises: [
       { id: "g4s11", type: "multiple-choice", question: "Wo lebt der Eisbär? 🐻‍❄️", answer: "Arktis", options: ["Arktis","Wüste","Regenwald","Meer"], hints: ["Kalt, Eis und Schnee.", "Arktis = Nordpol."], difficulty: 1, free: true },
       { id: "g4s12", type: "fill-in-blank", question: "Welches Tier lebt im Meer? ___", answer: "Delfin", hints: ["Fische, Wale, Delfine...", "z.B. Delfin, Hai, Wal, Fisch"], difficulty: 1, free: true },
-      { id: "g4s13", type: "multiple-choice", question: "Welches Tier lebt in der Wüste? 🐪", answer: "Kamel", options: ["Pinguin","Kamel","Frosch","Eichhörnchen"], hints: ["Heiss, trocken, Sanddünen.", "Kamele speichern Wasser."], difficulty: 1, free: true },
+      { id: "g4s13", type: "multiple-choice", question: "Welches Tier ist gut an trockene Wüsten angepasst?", answer: "Kamel", options: ["Pinguin","Kamel","Frosch","Eichhörnchen"], hints: ["Heiss, trocken, Sanddünen.", "Kamele speichern Wasser."], difficulty: 1, free: true },
       { id: "g4s14", type: "fill-in-blank", question: "Im Regenwald gibt es viele ___.", answer: "Pflanzen", hints: ["Viel Regen → viel Grün.", "Tiere, Pflanzen, Bäume..."], difficulty: 2 },
       { id: "g4s15", type: "multiple-choice", question: "Welches Tier lebt im Wald in der Schweiz? 🇨🇭", answer: "Reh", options: ["Löwe","Reh","Krokodil","Papagei"], hints: ["Einheimische Tiere: Reh, Fuchs, Wildschwein...", "Rehe sind Pflanzenfresser."], difficulty: 2 },
       { id: "g4s16", type: "drag-drop", question: "Ordne die Tiere ihren Lebensräumen zu! 🌍", answer: "all",

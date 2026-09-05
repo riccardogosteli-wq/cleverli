@@ -1,0 +1,975 @@
+{
+  "generatedAt": "2026-09-05T09:20:10.496Z",
+  "speechChecks": [
+    {
+      "input": "3:6 = 1:?",
+      "output": "drei zu sechs ist gleich eins zu ?",
+      "hasDurch": false
+    },
+    {
+      "input": "2:5 = 8:?",
+      "output": "zwei zu fünf ist gleich acht zu ?",
+      "hasDurch": false
+    },
+    {
+      "input": "Silber:Gold = 3:1. Gesamt: 24",
+      "output": "Silber zu Gold ist gleich drei zu eins. Gesamt: 24",
+      "hasDurch": false
+    },
+    {
+      "input": "Karte 1:200000. 5 cm = ? km",
+      "output": "Karte eins zu zweihunderttausend. 5 Zentimeter ist gleich ? Kilometer",
+      "hasDurch": false
+    },
+    {
+      "input": "Länge:Breite=5:3",
+      "output": "Länge zu Breite ist gleich fünf zu drei",
+      "hasDurch": false
+    },
+    {
+      "input": "Butter:Mehl=1:4",
+      "output": "Butter zu Mehl ist gleich eins zu vier",
+      "hasDurch": false
+    },
+    {
+      "input": "Schreibe die Zahl nach der 7: 7, ___",
+      "output": "Schreibe die Zahl nach der 7: 7, wie weiter?",
+      "hasDurch": false
+    },
+    {
+      "input": "Lernrunde 4: Verdopple 5: ___",
+      "output": "Lernrunde 4: Verdopple 5: was?",
+      "hasDurch": false
+    }
+  ],
+  "speechCheckFailures": [],
+  "visualAnswerEmoji": [
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "addition-bis-10",
+      "id": "a45",
+      "question": "Wenn 4 + 6 = 10, was ist dann 6 + 4? 🤔",
+      "answer": "10"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "subtraktion-bis-10",
+      "id": "s37",
+      "question": "Anna hat 8 Blumen. Sie gibt 3 an Mama, 2 an Lena. Wie viele hat sie noch? 🌸",
+      "answer": "3"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "subtraktion-bis-10",
+      "id": "s45",
+      "question": "Es gibt 8 Plätze im Bus. 3 sind besetzt. Dann steigen 2 ein. Wie viele Plätze sind frei? 🚌",
+      "answer": "3"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "muster",
+      "id": "m3b",
+      "question": "Was kommt als nächstes? 🔴🔵🔴🔵🔴___",
+      "answer": "🔵"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "muster",
+      "id": "m10",
+      "question": "Was kommt als nächstes? 🔵🔴🔵🔴___",
+      "answer": "🔵"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "muster",
+      "id": "m14",
+      "question": "Was kommt als nächstes? ⭐⭐⭐🌙⭐⭐⭐🌙___",
+      "answer": "⭐"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "muster",
+      "id": "m21",
+      "question": "Was kommt als nächstes? 🔺🟥🔺🟥🔺___",
+      "answer": "🟥"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "muster",
+      "id": "m33",
+      "question": "Was kommt als nächstes? ⭐🌙⭐🌙⭐🌙___",
+      "answer": "⭐"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "muster",
+      "id": "m36",
+      "question": "Was kommt als nächstes? 🔴 🟢 🔴 🟢 🔴 ___",
+      "answer": "🟢"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "muster",
+      "id": "m50",
+      "question": "Das Muster: ⭐⭐ 🌙 ⭐⭐ 🌙 ⭐⭐ ___",
+      "answer": "🌙"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "ordinalzahlen",
+      "id": "o8",
+      "question": "Wer ist an 2. Stelle? 🥈 A, B, C, D, E",
+      "answer": "B"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "sachaufgaben",
+      "id": "sa37",
+      "question": "Tom bekommt je Tag 1 Sticker. Nach 5 Tagen hat er ___ Sticker. 🌟",
+      "answer": "5"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "daten-diagramme",
+      "id": "dd3",
+      "question": "Im Diagramm hat Rot 4 Stimmen, Blau 3 Stimmen. Welche Farbe hat mehr? 🔵🔴",
+      "answer": "Rot"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "daten-diagramme",
+      "id": "dd17",
+      "question": "Im Diagramm: Montag 3, Dienstag 5, Mittwoch 4. An welchem Tag regnete es am meisten? 🌧️",
+      "answer": "Dienstag"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b1",
+      "question": "🍎 Mit welchem Buchstaben beginnt das Wort «Apfel»?",
+      "answer": "A"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b2",
+      "question": "🐻 Mit welchem Buchstaben beginnt das Wort «Bär»?",
+      "answer": "B"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b3",
+      "question": "🐱 Mit welchem Buchstaben beginnt das Wort «Katze»?",
+      "answer": "K"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b4",
+      "question": "🐶 Mit welchem Buchstaben beginnt das Wort «Hund»?",
+      "answer": "H"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b5",
+      "question": "🌞 Mit welchem Buchstaben beginnt das Wort «Sonne»?",
+      "answer": "S"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b6",
+      "question": "🐟 Mit welchem Buchstaben beginnt das Wort «Fisch»?",
+      "answer": "F"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b7",
+      "question": "🏠 Mit welchem Buchstaben beginnt das Wort «Haus»?",
+      "answer": "H"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b8",
+      "question": "🦁 Der erste Buchstabe von «Löwe» ist: ___",
+      "answer": "L"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b9",
+      "question": "🐘 Mit welchem Buchstaben beginnt das Wort «Elefant»?",
+      "answer": "E"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b10",
+      "question": "🎈 Der erste Buchstabe von «Ball» ist: ___",
+      "answer": "B"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b11",
+      "question": "🌊 Mit welchem Buchstaben beginnt «Wasser»?",
+      "answer": "W"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b12",
+      "question": "🌙 Der erste Buchstabe von «Mond» ist: ___",
+      "answer": "M"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b13",
+      "question": "🦋 Mit welchem Buchstaben beginnt «Vogel»?",
+      "answer": "V"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b14",
+      "question": "🎂 Der erste Buchstabe von «Torte» ist: ___",
+      "answer": "T"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "buchstaben",
+      "id": "b15",
+      "question": "🐧 Mit welchem Buchstaben beginnt «Pinguin»?",
+      "answer": "P"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "reime",
+      "id": "r4",
+      "question": "Was reimt sich auf «Brot»? 🍞",
+      "answer": "rot"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie1",
+      "question": "Hör genau: 🐶 «Tier». Welchen Laut hörst du am Anfang?",
+      "answer": "T"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie2",
+      "question": "Hör genau: 🥚 «Ei». Welchen Laut hörst du am Anfang?",
+      "answer": "E"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie3",
+      "question": "Hör genau: 🐝 «Biene». Welchen Laut hörst du am Anfang?",
+      "answer": "B"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie4",
+      "question": "Hör genau: 🍦 «Eis». Welchen Laut hörst du am Anfang?",
+      "answer": "E"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie6",
+      "question": "Hör genau: 🦵 «Bein». Welchen Laut hörst du am Anfang?",
+      "answer": "B"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie7",
+      "question": "Hör genau: ✉️ «Brief». Welchen Laut hörst du am Anfang?",
+      "answer": "B"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie8",
+      "question": "Hör genau: 🪨 «Stein». Welchen Laut hörst du am Anfang?",
+      "answer": "S"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie9",
+      "question": "Hör genau: 🎲 «Spiel». Welchen Laut hörst du am Anfang?",
+      "answer": "S"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie10",
+      "question": "Hör genau: 🪢 «Seil». Welchen Laut hörst du am Anfang?",
+      "answer": "S"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie11",
+      "question": "Hör genau: 🌱 «Wiese». Welchen Laut hörst du am Anfang?",
+      "answer": "W"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie13",
+      "question": "Hör genau: 🐐 «Ziege». Welchen Laut hörst du am Anfang?",
+      "answer": "Z"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie14",
+      "question": "Hör genau: 👗 «Kleid». Welchen Laut hörst du am Anfang?",
+      "answer": "K"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie15",
+      "question": "Hör genau: 🦵 «Knie». Welchen Laut hörst du am Anfang?",
+      "answer": "K"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie17",
+      "question": "Sprich 🎵 «Lied» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "L"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie18",
+      "question": "Sprich 🛞 «Reifen» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "R"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie19",
+      "question": "Sprich 🥾 «Stiefel» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "S"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie20",
+      "question": "Sprich 🪜 «Leiter» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "L"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie21",
+      "question": "Sprich 🪰 «Fliege» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "F"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie22",
+      "question": "Sprich 🐦 «Meise» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "M"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie27",
+      "question": "Sprich 🎯 «Ziel» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "Z"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie28",
+      "question": "Sprich 🏹 «Pfeil» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "P"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie29",
+      "question": "Sprich 🪞 «Spiegel» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "S"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie30",
+      "question": "Sprich 🪣 «Eimer» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "E"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie31",
+      "question": "Sprich 📄 «Papier» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "P"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie32",
+      "question": "Sprich 🧳 «Reise» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "R"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie33",
+      "question": "Sprich ❤️ «Liebe» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "L"
+    },
+    {
+      "grade": 1,
+      "subject": "german",
+      "topic": "ie-ei",
+      "id": "ie34",
+      "question": "Sprich ⭕ «Kreis» langsam. Schreibe den ersten Buchstaben.",
+      "answer": "K"
+    },
+    {
+      "grade": 2,
+      "subject": "math",
+      "topic": "sachaufgaben",
+      "id": "sa30c",
+      "question": "Bäcker bäckt 50 Brötchen. Er verkauft 35 am Morgen und 10 am Nachmittag. Wie viele hat er noch? 🥐",
+      "answer": "5"
+    },
+    {
+      "grade": 2,
+      "subject": "math",
+      "topic": "daten-diagramme",
+      "id": "dd13c",
+      "question": "Strichliste: Äpfel ||||| ||||| (10 Striche). Wie viele Äpfel? 🍎",
+      "answer": "10"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "pronomen",
+      "id": "pr1",
+      "question": "Wie ersetze ich «Max» mit einem Pronomen? 👦",
+      "answer": "er"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebewesen",
+      "id": "l5",
+      "question": "Ein Lebewesen, das wächst, atmet und sich ernährt, nennt man ___. 🌿",
+      "answer": "Lebewesen"
+    },
+    {
+      "grade": 3,
+      "subject": "science",
+      "topic": "umwelt-nachhaltigkeit",
+      "id": "g3-science-umwelt-nachhaltigkeit-u1",
+      "question": "Welcher Abfall in welche Tonne? 🗑️",
+      "answer": "all"
+    },
+    {
+      "grade": 4,
+      "subject": "german",
+      "topic": "satzglieder",
+      "id": "g4d3",
+      "question": "Was ist das Objekt in: 'Tim isst einen Apfel'? 🍎",
+      "answer": "einen Apfel"
+    },
+    {
+      "grade": 5,
+      "subject": "math",
+      "topic": "brueche-rechnen",
+      "id": "g5m23",
+      "question": "Was ist 1/2 + 1/2? 🍕",
+      "answer": "1"
+    }
+  ],
+  "definitionCandidateCount": 421,
+  "definitionCandidateSamples": [
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "formen",
+      "id": "f26",
+      "question": "Ein Quadrat ist ein besonderes ___.",
+      "answer": "Rechteck"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "ordinalzahlen",
+      "id": "o20",
+      "question": "Was ist der 12. Monat? ___",
+      "answer": "Dezember"
+    },
+    {
+      "grade": 1,
+      "subject": "math",
+      "topic": "ordinalzahlen",
+      "id": "o24",
+      "question": "Welcher Wochentag ist der 4.? ___",
+      "answer": "Donnerstag"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "tiere",
+      "id": "t37",
+      "question": "Ein Tier, das nur Pflanzen frisst, heisst ___fresser.",
+      "answer": "Pflanzen"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "tiere",
+      "id": "t45",
+      "question": "Tiere, die tote Stoffe zersetzen, nennt man ___.",
+      "answer": "Zersetzer"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "tiere",
+      "id": "t46",
+      "question": "Tiere, die in Gruppen zusammenleben, nennt man ___.",
+      "answer": "Rudeltiere"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "tiere",
+      "id": "t48",
+      "question": "Tiere, die ihren Körper selbst wärmen, nennt man ___.",
+      "answer": "Warmblüter"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "tiere",
+      "id": "t49",
+      "question": "Tiere ohne Wirbelsäule nennt man ___.",
+      "answer": "Wirbellose"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "pflanzen-gr1",
+      "id": "p24",
+      "question": "Eine Pflanze, die im Wasser wächst, nennt man ___.",
+      "answer": "Wasserpflanze"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "pflanzen-gr1",
+      "id": "p39",
+      "question": "Ein Baum mit Nadeln statt Blättern heisst ___.",
+      "answer": "Nadelbaum"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "pflanzen-gr1",
+      "id": "p49",
+      "question": "Eine Pflanze, die in Wasser wächst, heisst ___.",
+      "answer": "Wasserpflanze"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "familie-gemeinschaft",
+      "id": "fg25",
+      "question": "In der Schweiz entscheidet das Volk direkt — das nennt man ___.",
+      "answer": "direkte Demokratie"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "familie-gemeinschaft",
+      "id": "fg27",
+      "question": "Der 1. August ist der Schweizer ___.",
+      "answer": "Nationalfeiertag"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "familie-gemeinschaft",
+      "id": "fg29",
+      "question": "Kinder haben das Recht auf Bildung — das ist ein ___.",
+      "answer": "Menschenrecht/Kinderrecht"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "familie-gemeinschaft",
+      "id": "fg31",
+      "question": "Menschen, die freiwillig helfen, nennt man ___.",
+      "answer": "Ehrenamtliche/Freiwillige"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "familie-gemeinschaft",
+      "id": "fg33",
+      "question": "In einer Familie teilt man Aufgaben — das nennt man ___.",
+      "answer": "Aufgabenteilung"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "wochentage-monate-gr1",
+      "id": "wm8",
+      "question": "Der letzte Monat des Jahres heisst ___. 🎄",
+      "answer": "Dezember"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "wochentage-monate-gr1",
+      "id": "wm37",
+      "question": "Der letzte Monat des Jahres heisst ___.",
+      "answer": "Dezember"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "verben",
+      "id": "g2-german-verben-v22",
+      "question": "Was ist das Gegenteil von «aufstehen»?",
+      "answer": "hinlegen/hinsetzen"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "adjektive-gr2",
+      "id": "ag36",
+      "question": "«Er ist der ___ (schnell) Läufer.» (Superlativ, Nom. mask., best.)",
+      "answer": "schnellste"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "texte-lesen",
+      "id": "tl14",
+      "question": "«Es hat geregnet. Die Strasse ist nass.» Was ist die Ursache?",
+      "answer": "Es hat geregnet"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "texte-lesen",
+      "id": "tl18",
+      "question": "«Es war einmal ein Drache, der kein Feuer spucken konnte. Er trainierte jeden Tag. Bald war er der beste Drache.» Was ist die Moral?",
+      "answer": "Übung macht den Meister"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "texte-lesen",
+      "id": "tl26",
+      "question": "«Wenn es regnet, nehme ich den Schirm.» Was ist die Bedingung?",
+      "answer": "Es regnet"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "texte-lesen",
+      "id": "tl38",
+      "question": "«Je mehr du übst, desto besser wirst du.» Was ist die Botschaft?",
+      "answer": "Viel Übung führt zu Verbesserung"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "texte-lesen",
+      "id": "tl42",
+      "question": "«Er war so müde, dass er einschlief.» Was ist die Wirkung?",
+      "answer": "Er schlief ein"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "texte-lesen",
+      "id": "tl46",
+      "question": "Was ist ein «Sachtext»?",
+      "answer": "Ein Text mit echten Informationen / Fakten"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "wortfamilien",
+      "id": "wf19",
+      "question": "Was bedeutet das Präfix «un-» in Wörtern wie «unfreundlich» oder «unglücklich»?",
+      "answer": "nicht / das Gegenteil"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "wortfamilien",
+      "id": "wf21",
+      "question": "Das Präfix «ver-» in «vergessen», «verlieren» bedeutet oft...",
+      "answer": "weg / falsch / intensiv"
+    },
+    {
+      "grade": 2,
+      "subject": "german",
+      "topic": "wortfamilien",
+      "id": "wf46",
+      "question": "Das Präfix «über-» in «übertreiben» bedeutet...",
+      "answer": "zu viel / hinaus"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebewesen",
+      "id": "l5",
+      "question": "Ein Lebewesen, das wächst, atmet und sich ernährt, nennt man ___. 🌿",
+      "answer": "Lebewesen"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebewesen",
+      "id": "l12",
+      "question": "Ist ein Pilz ein Tier oder eine Pflanze?",
+      "answer": "Weder noch — Pilze sind ein eigenes Reich"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebewesen",
+      "id": "l25",
+      "question": "Wie nennt man die Wissenschaft, die Lebewesen klassifiziert?",
+      "answer": "Taxonomie"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebewesen",
+      "id": "l36",
+      "question": "Tiere, die nur Pflanzen fressen, nennt man ___.",
+      "answer": "Pflanzenfresser"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebewesen",
+      "id": "l44",
+      "question": "Ein Tier, das im Wasser und an Land lebt, heisst ___.",
+      "answer": "Amphibie"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "gesunde-ernaehrung",
+      "id": "ge41",
+      "question": "Das Frühstück ist die wichtigste ___.",
+      "answer": "Mahlzeit"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebensraeume",
+      "id": "lr5",
+      "question": "Tiere, die im Winter in den Süden fliegen, nennt man ___. 🐦",
+      "answer": "Zugvögel"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebensraeume",
+      "id": "lr23",
+      "question": "Ein Riff, das aus Korallen besteht, heisst ___.",
+      "answer": "Korallenriff"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebensraeume",
+      "id": "lr25",
+      "question": "Tiere, die sich von Pflanzen ernähren, nennt man ___.",
+      "answer": "Pflanzenfresser/Herbivore"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebensraeume",
+      "id": "lr27",
+      "question": "Ein Tier, das sowohl Pflanzen als auch Fleisch frisst, heisst ___.",
+      "answer": "Allesfresser/Omnivore"
+    },
+    {
+      "grade": 2,
+      "subject": "science",
+      "topic": "lebensraeume",
+      "id": "lr29",
+      "question": "Tiere, die nachts aktiv sind, nennt man ___ (Adjektiv).",
+      "answer": "nachtaktiv"
+    }
+  ],
+  "changedReadback": [
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "tiere",
+      "id": "t11",
+      "question": "Welches Tier hat Federn und Flügel?",
+      "answer": "Vogel",
+      "speech": "Welches Tier hat Federn und Flügel?"
+    },
+    {
+      "grade": 1,
+      "subject": "science",
+      "topic": "tiere",
+      "id": "t29",
+      "question": "Welches Tier ist das schnellste Landtier?",
+      "answer": "Gepard",
+      "speech": "Welches Tier ist das schnellste Landtier?"
+    },
+    {
+      "grade": 4,
+      "subject": "science",
+      "topic": "lebensraeume-tiere",
+      "id": "g4s13",
+      "question": "Welches Tier ist gut an trockene Wüsten angepasst?",
+      "answer": "Kamel",
+      "speech": "Welches Tier ist gut an trockene Wüsten angepasst?"
+    },
+    {
+      "grade": 6,
+      "subject": "math",
+      "topic": "verhaeltnisse-6",
+      "id": "g6vh3",
+      "question": "3:6 = 1:?",
+      "answer": "2",
+      "speech": "drei zu sechs ist gleich eins zu ?"
+    },
+    {
+      "grade": 6,
+      "subject": "math",
+      "topic": "verhaeltnisse-6",
+      "id": "g6vh10",
+      "question": "2:5 = 8:?",
+      "answer": "20",
+      "speech": "zwei zu fünf ist gleich acht zu ?"
+    },
+    {
+      "grade": 6,
+      "subject": "math",
+      "topic": "verhaeltnisse-6",
+      "id": "g6vh25",
+      "question": "Silber:Gold = 3:1. Gesamt 200 g. Gold = ?",
+      "answer": "50 g",
+      "speech": "Silber zu Gold ist gleich drei zu eins. Gesamt 200 Gramm. Gold ist gleich ?"
+    },
+    {
+      "grade": 6,
+      "subject": "math",
+      "topic": "verhaeltnisse-6",
+      "id": "g6vh26",
+      "question": "Karte 1:200000. 5 cm = ? km in Realität",
+      "answer": "10",
+      "speech": "Karte eins zu zweihunderttausend. 5 Zentimeter ist gleich ? Kilometer in Realität"
+    },
+    {
+      "grade": 6,
+      "subject": "math",
+      "topic": "verhaeltnisse-6",
+      "id": "g6vh27",
+      "question": "Länge:Breite=5:3. Länge=25 cm. Breite=?",
+      "answer": "15 cm",
+      "speech": "Länge zu Breite ist gleich fünf zu drei. Länge ist gleich 25 Zentimeter. Breite ist gleich ?"
+    },
+    {
+      "grade": 6,
+      "subject": "math",
+      "topic": "verhaeltnisse-6",
+      "id": "g6vh34",
+      "question": "Butter:Mehl=1:4. 300 g Mehl → ? g Butter",
+      "answer": "75",
+      "speech": "Butter zu Mehl ist gleich eins zu vier. 300 Gramm Mehl , ? Gramm Butter"
+    },
+    {
+      "grade": 6,
+      "subject": "math",
+      "topic": "verhaeltnisse-6",
+      "id": "g6vh35",
+      "question": "Karte 1:10000. 2 km in Realität = ? cm auf Karte",
+      "answer": "20 cm",
+      "speech": "Karte eins zu zehntausend. 2 Kilometer in Realität ist gleich ? Zentimeter auf Karte"
+    }
+  ]
+}
