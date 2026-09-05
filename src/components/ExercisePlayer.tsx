@@ -20,7 +20,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { getTierProgress } from "@/lib/tierProgress";
 import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
-import { useVoice, getPhrase } from "@/hooks/useVoice";
+import { useVoice, getExerciseSpeechText, getPhrase } from "@/hooks/useVoice";
 import { useSound } from "@/hooks/useSound";
 import PushPrompt from "./PushPrompt";
 import ExerciseIssueReporter from "./ExerciseIssueReporter";
@@ -1021,7 +1021,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
           {isSupported && (
             <button
               onClick={() => speak(
-                sourceCurrent.listeningText ?? (subject === "math" || subject === "science" ? current.question : sourceCurrent.question),
+                getExerciseSpeechText(sourceCurrent, current, subject, exerciseSpeechLang),
                 sourceCurrent.listeningText ? (sourceCurrent.listeningLanguage ?? "de") : exerciseSpeechLang,
               )}
               className="flex items-center justify-center gap-2 w-full text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-xl py-2.5 px-3 hover:bg-green-100 active:scale-95 transition-all"

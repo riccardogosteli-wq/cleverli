@@ -1,6 +1,6 @@
 import { getSubjects, getTopics } from "../src/data";
 import { localizeExercise } from "../src/lib/exerciseLocalization";
-import { cleanSpeechForLanguage } from "../src/hooks/useVoice";
+import { cleanSpeechForLanguage, getExerciseSpeechText } from "../src/hooks/useVoice";
 import type { Lang } from "../src/lib/i18n";
 
 const locales: Exclude<Lang, "de">[] = ["en", "fr", "it"];
@@ -22,8 +22,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
           const localized = localizeExercise(exercise, locale);
           const learningLanguage = subjectLanguage(subject.id);
           const speechLanguage: Lang = exercise.listeningText ? "de" : learningLanguage ?? locale;
-          const speechText = exercise.listeningText ?? (learningLanguage ? exercise.question : localized.question);
-          const clean = cleanSpeechForLanguage(speechText, speechLanguage);
+          const clean = getExerciseSpeechText(exercise, localized, subject.id, speechLanguage);
           const key = `${grade}/${subject.id}/${topic.id}/${exercise.id}/${locale}`;
           checks += 1;
           if (!clean) failures.push(`${key}: empty speech text`);

@@ -1,0 +1,18 @@
+{
+  "1/math/verdoppeln-halbieren/v29": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Vorlesen sprach die sichtbare Lücke als \"was\" und las die Lernrunde mit.",
+    "correctionMade": "Vorlesen nutzt jetzt den semantischen Prompt: \"Was ist das Doppelte von zwei?\"",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/verdoppeln-halbieren?exercise=v29#exercise"
+  },
+  "1/math/zahlen-1-10/z6": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Vorlesen wiederholte die Zahl und sprach die Lücke als \"wie weiter\".",
+    "correctionMade": "Vorlesen nutzt jetzt den semantischen Prompt: \"Welche Zahl kommt nach sieben?\"",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/math/zahlen-1-10?exercise=z6#exercise"
+  }
+}

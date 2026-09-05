@@ -9,6 +9,11 @@ export interface Exercise {
   questionEN?: string;
   questionFR?: string;
   questionIT?: string;
+  /** Learner-facing wording used only by the read-aloud control; display and scoring remain unchanged. */
+  spokenPrompt?: string;
+  spokenPromptEN?: string;
+  spokenPromptFR?: string;
+  spokenPromptIT?: string;
   listeningText?: string;  // hidden audio stimulus for listening-comprehension tasks
   listeningLanguage?: "de" | "fr" | "it" | "en";
   options?: string[];

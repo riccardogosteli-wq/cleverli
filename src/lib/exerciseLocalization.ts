@@ -118,6 +118,7 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
   if (lang === "en") return {
     ...exercise,
     question: exercise.questionEN ?? exercise.question,
+    spokenPrompt: exercise.spokenPromptEN ?? exercise.spokenPrompt,
     hints: exercise.hintsEN ?? exercise.hints,
     options: exercise.optionsEN ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsEN, exercise.answerEN),
@@ -131,6 +132,7 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
   if (lang === "fr") return {
     ...exercise,
     question: exercise.questionFR ?? exercise.question,
+    spokenPrompt: exercise.spokenPromptFR ?? exercise.spokenPrompt,
     hints: exercise.hintsFR ?? exercise.hints,
     options: exercise.optionsFR ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsFR, exercise.answerFR),
@@ -145,6 +147,7 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     const localized = {
     ...exercise,
     question: exercise.questionIT ?? exercise.question,
+    spokenPrompt: exercise.spokenPromptIT ?? exercise.spokenPrompt,
     hints: exercise.hintsIT ?? exercise.hints,
     options: exercise.optionsIT ?? exercise.options,
     answer: resolveLocalizedAnswer(exercise, exercise.optionsIT, exercise.answerIT),

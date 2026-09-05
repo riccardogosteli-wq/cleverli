@@ -2,6 +2,7 @@
 import { useCallback } from "react";
 import { useLang } from "@/lib/LangContext";
 import type { Lang } from "@/lib/i18n";
+import type { Exercise } from "@/types/exercise";
 
 /**
  * useVoice — ElevenLabs TTS (Charlie Chatlin — conversational German).
@@ -440,6 +441,187 @@ function cleanLocalizedSpeech(text: string, language: Exclude<Lang, "de">): stri
 
 export function cleanSpeechForLanguage(text: string, language: Lang): string {
   return language === "de" ? cleanForSpeech(text) : cleanLocalizedSpeech(text, language);
+}
+
+function spokenNumberDE(value: string): string {
+  const number = Number(value.replace(",", "."));
+  return Number.isInteger(number) && number >= 0 && number <= 1000 ? numToWordsDE(number) : value;
+}
+
+function stripRoundLabel(text: string): string {
+  return text
+    .replace(/^\s*(?:Lernrunde|Denkaufgabe|Aufgabe)\s+\d+\s*:\s*/i, "")
+    .replace(/\s*Antwort\s*:\s*___\s*$/i, "")
+    .trim();
+}
+
+function mathOperationWord(operator: string): string | null {
+  if (operator === "+") return "plus";
+  if (/^[−-]$/.test(operator)) return "minus";
+  if (/^[×x·*]$/.test(operator)) return "mal";
+  if (/^[÷:]$/.test(operator)) return "geteilt durch";
+  return null;
+}
+
+/**
+ * Turns compact worksheet notation into the question a child should actually hear.
+ * This intentionally covers only unambiguous patterns; all other content keeps the
+ * established speech normalisation rather than being guessed at.
+ */
+function germanMathPrompt(displayText: string): string {
+  const question = stripRoundLabel(displayText);
+  const doubleMatch = question.match(/^Verdopple\s+(\d+)\s*:\s*___\s*[.!?]?$/i);
+  if (doubleMatch) return `Was ist das Doppelte von ${spokenNumberDE(doubleMatch[1])}?`;
+
+  const halfMatch = question.match(/^Halbiere\s+(\d+)\s*:\s*___\s*[.!?]?$/i);
+  if (halfMatch) return `Was ist die Hälfte von ${spokenNumberDE(halfMatch[1])}?`;
+
+  const nextMatch = question.match(/^Schreibe die Zahl nach der\s+(\d+)\s*:\s*\d+\s*,\s*___\s*[.!?]?$/i);
+  if (nextMatch) return `Welche Zahl kommt nach ${spokenNumberDE(nextMatch[1])}?`;
+
+  const nextQuestionMatch = question.match(/^(?:Was kommt|Was steht) nach der\s+(\d+)\?\s*\d+\s*,\s*___\s*[.!?]?$/i);
+  if (nextQuestionMatch) return `Welche Zahl kommt nach ${spokenNumberDE(nextQuestionMatch[1])}?`;
+
+  const previousMatch = question.match(/^Schreibe die Zahl vor der\s+(\d+)\s*:\s*___\s*,\s*\d+\s*[.!?]?$/i);
+  if (previousMatch) return `Welche Zahl kommt vor ${spokenNumberDE(previousMatch[1])}?`;
+
+  const previousQuestionMatch = question.match(/^(?:Was kommt|Was steht) vor der\s+(\d+)\?\s*___\s*,\s*\d+\s*[.!?]?$/i);
+  if (previousQuestionMatch) return `Welche Zahl kommt vor ${spokenNumberDE(previousQuestionMatch[1])}?`;
+
+  const equation = question.match(/(?:^|.*?\?\s*)(___|\d+)\s*([+−\-×x·*÷:])\s*(___|\d+)\s*=\s*(___|\d+)(?:\s+[^.!?]+)?\s*[.!?]?$/);
+  if (equation) {
+    const [, left, operator, right, result] = equation;
+    const operation = mathOperationWord(operator);
+    if (operation) {
+      if (left === "___" && right !== "___" && result !== "___") {
+        return `Welche Zahl ${operation} ${spokenNumberDE(right)} ist gleich ${spokenNumberDE(result)}?`;
+      }
+      if (left !== "___" && right === "___" && result !== "___") {
+        return `${spokenNumberDE(left)} ${operation} welche Zahl ist gleich ${spokenNumberDE(result)}?`;
+      }
+      if (left !== "___" && right !== "___" && result === "___") {
+        return `Wie viel ist ${spokenNumberDE(left)} ${operation} ${spokenNumberDE(right)}?`;
+      }
+    }
+  }
+
+  const sequenceMatch = question.match(/^(?:Ergänze(?: die Zahlenreihe)?|Welche Zahl fehlt\?)\s*:?\s*((?:\d+\s*,\s*)*___(?:\s*,\s*\d+)*)\s*[.!?]?$/i);
+  if (sequenceMatch) {
+    const sequence = sequenceMatch[1].replace(/___/g, "eine Zahl").replace(/\s*,\s*/g, ", ");
+    return `Welche Zahl fehlt in der Zahlenreihe: ${sequence}?`;
+  }
+
+  if (question.includes("___")) {
+    const totalMatch = question.match(/^(.*?)\s+Zusammen\s*:\s*___\s*[.!?]?$/i);
+    if (totalMatch) return `${totalMatch[1]}. Wie viele sind es zusammen?`;
+    const withoutTrailingBlank = question
+      .replace(/\s*Antwort\s*:\s*___\s*$/i, "")
+      .replace(/\s*___\s*$/g, "")
+      .trim();
+    // Existing question wording is usually already child-friendly; the blank itself
+    // is visual, so it should be a pause rather than a spoken placeholder.
+    if (/[?]$/.test(withoutTrailingBlank)) return withoutTrailingBlank;
+    const paused = question.replace(/___/g, "...").replace(/\s+([,.!?])/g, "$1").trim();
+    return `${paused} Ergänze die fehlende Antwort.`;
+  }
+
+  if (/:\s*$/.test(question)) {
+    return `${question.replace(/:\s*$/, ".")} Was ist die richtige Antwort?`;
+  }
+
+  return question;
+}
+
+function germanLearningPrompt(displayText: string): string {
+  const question = stripRoundLabel(displayText)
+    .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27FF}\u{2B00}-\u{2BFF}]/gu, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  const firstLetter = question.match(/^Der erste Buchstabe von\s+«?(.+?)»?\s+ist\s*:\s*___\s*[.!?]?$/i);
+  if (firstLetter) return `Mit welchem Buchstaben beginnt das Wort ${firstLetter[1]}?`;
+
+  const finalLetter = question.match(/^Das Wort\s+«?(.+?)»?\s+endet mit\s*:\s*___\s*[.!?]?$/i);
+  if (finalLetter) return `Mit welchem Buchstaben endet das Wort ${finalLetter[1]}?`;
+
+  const opposite = question.match(/^Das Gegenteil von\s+«?(.+?)»?\s+ist\s+___\s*[.!?]?$/i);
+  if (opposite) return `Was ist das Gegenteil von ${opposite[1]}?`;
+
+  const rhyme = question.match(/^Schreibe ein Reimwort zu\s+«?(.+?)»?\s*:\s*___\s*[.!?]?$/i);
+  if (rhyme) return `Finde ein Reimwort zu ${rhyme[1]}.`;
+
+  const wordPair = question.match(/^Was passt zusammen:\s*(.+?)\s+und\s+___\??$/i);
+  if (wordPair) return `Welches Wort passt zu ${wordPair[1]}?`;
+
+  const verbForm = question.match(/^(Ich|Du|Er|Sie|Wir|Ihr)\s+___\s+\(([^)]+)\)\??$/i);
+  if (verbForm) return `Welche Form von ${verbForm[2]} passt zu ${verbForm[1]}?`;
+
+  const pastForm = question.match(/^Präteritum von\s+['«]?([^'»]+)['»]?\s*\(([^)]+)\)\s*:\s*[^_]*___\??$/i);
+  if (pastForm) return `Wie heisst die Präteritumform von ${pastForm[1]} für ${pastForm[2]}?`;
+
+  const accusative = question.match(/^[«“]?Ich sehe\s+___[»”]?\s*\(([^)]+)\)\s*:\s*Akkusativ\??$/i);
+  if (accusative) return `Welche Akkusativform von ${accusative[1]} passt?`;
+
+  if (/^Frage nach dem Subjekt:\s*Wer oder ___\??$/i.test(question)) {
+    return "Mit welcher Frage findest du das Subjekt?";
+  }
+
+  if (/^In einem Bericht antwortet man auf:.*auch ___\??$/i.test(question)) {
+    return "Welche weitere Frage gehört zu einem Bericht?";
+  }
+
+  const cantonLanguages = question.match(/^Der Kanton\s+(.+?)\s+ist\s+___\s+\(welche Sprachen\)\??$/i);
+  if (cantonLanguages) return `Welche Sprachen spricht man im Kanton ${cantonLanguages[1]}?`;
+
+  if (/\bBeide Lücken\?$/i.test(question)) return "Welche Wörter ergänzen die beiden Lücken?";
+  if (/\bwas kommt in die Lücke\?$/i.test(question)) return "Welches Zeichen oder Wort passt in die Lücke?";
+
+  const quotedSentenceQuestion = question.match(/^«?(.+?)»?\s*[—-]\s*(Was ist realistisch)\?$/i);
+  if (quotedSentenceQuestion && quotedSentenceQuestion[1].includes("___")) {
+    return "Welche Ergänzung ist im Satz realistisch?";
+  }
+
+  if (/\bWelches Wort passt\?$/i.test(question)) return "Welches Wort ergänzt den Satz?";
+  if (/\bWelche Konjunktion passt\?$/i.test(question)) return "Welche Konjunktion ergänzt den Satz?";
+  if (/\bPronomen\?$/i.test(question)) return "Welches Pronomen ergänzt den Satz?";
+
+  const dativeObject = question.match(/^Dativobjekt:\s*(.+?)\s+___\.\s*Frage:\s*Wem\?$/i);
+  if (dativeObject) return `Welches Dativobjekt ergänzt den Satz: ${dativeObject[1]} …?`;
+
+  const blankWithPrompt = question.match(/^(.*?)___\s*[.!?]?\s*((?:Welches Wort passt|Welche Konjunktion passt|Welches Pronomen passt|Was ist realistisch).*)\?$/i);
+  if (blankWithPrompt) {
+    return `${blankWithPrompt[1].trim()} … ${blankWithPrompt[2]}?`;
+  }
+
+  if (question.includes("___")) {
+    const withoutTrailingBlank = question
+      .replace(/\s*Antwort\s*:\s*___\s*$/i, "")
+      .replace(/\s*___\s*$/g, "")
+      .trim();
+    // Questions are already complete instructions. The blank is purely visual,
+    // so reading it would only make the sentence worse.
+    if (!withoutTrailingBlank.includes("___") && /[?]$/.test(withoutTrailingBlank)) return withoutTrailingBlank;
+    const paused = question.replace(/___/g, "…").replace(/\s+([,.!?])/g, "$1").trim();
+    return `${paused} Ergänze die fehlende Antwort.`;
+  }
+
+  if (/:\s*$/.test(question)) return `${question.replace(/:\s*$/, ".")} Welche Antwort passt?`;
+  return question;
+}
+
+function fallbackQuestion(source: Exercise, localized: Exercise, subject: string): string {
+  // Maths and NMG follow the selected interface language; language subjects retain
+  // their learning language, as they did before this semantic layer.
+  return subject === "math" || subject === "science" ? localized.question : source.question;
+}
+
+export function getExerciseSpeechText(source: Exercise, localized: Exercise, subject: string, language: Lang): string {
+  if (source.listeningText) return source.listeningText;
+  const prompt = localized.spokenPrompt ?? source.spokenPrompt;
+  const displayText = prompt ?? fallbackQuestion(source, localized, subject);
+  const semanticText = language === "de" && !prompt
+    ? subject === "math" ? germanMathPrompt(displayText) : germanLearningPrompt(displayText)
+    : displayText;
+  return cleanSpeechForLanguage(semanticText, language);
 }
 
 export function useVoice() {
