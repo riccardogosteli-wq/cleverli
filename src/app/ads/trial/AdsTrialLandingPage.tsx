@@ -140,7 +140,7 @@ export default function AdsTrialLandingPage({
         <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-3">
           {[
             ["7 Tage", "Premium gratis"],
-            ["13’000+", "interaktive Übungen"],
+            ["15’000+", "interaktive Übungen"],
             ["1.–6.", "Klasse Primarschule"],
           ].map(([value, label]) => (
             <div key={label} className="text-center">

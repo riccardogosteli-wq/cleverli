@@ -11,7 +11,7 @@ export const t: Record<Lang, Record<string, string>> = {
   de: {
     bannerLehrplan: "Lehrplan 21",
     bannerTeachers: "Von Lehrern empfohlen",
-    bannerExercises: "Mehr als 13’000 interaktive Übungen",
+    bannerExercises: "Mehr als 15’000 interaktive Übungen",
     tagline: "Lernen macht Spass — mit Cleverli!",
     subtitle: "Die Lernplattform für Kinder der 1.-6. Klasse.\nInteraktiv · Auf Lehrplan 21 abgestimmt · Auf Deutsch, Français, Italiano & English",
     toDashboard: "Zum Dashboard →",
@@ -267,7 +267,7 @@ export const t: Record<Lang, Record<string, string>> = {
   fr: {
     bannerLehrplan: "Plan d'études romand",
     bannerTeachers: "Recommandé par les enseignants",
-    bannerExercises: "Plus de 13 000 exercices interactifs",
+    bannerExercises: "Plus de 15 000 exercices interactifs",
     tagline: "Apprendre devient amusant — avec Cleverli!",
     subtitle: "La plateforme d'apprentissage pour les enfants de la 1re à la 6e année.\nInteractif · Aligné sur le PER · En Deutsch, Français, Italiano & English",
     toDashboard: "Au tableau de bord →",
@@ -518,7 +518,7 @@ export const t: Record<Lang, Record<string, string>> = {
   it: {
     bannerLehrplan: "Piano di studio",
     bannerTeachers: "Raccomandato dagli insegnanti",
-    bannerExercises: "Oltre 13.000 esercizi interattivi",
+    bannerExercises: "Oltre 15.000 esercizi interattivi",
     tagline: "Imparare è divertente — con Cleverli!",
     subtitle: "La piattaforma di apprendimento per bambini dalla 1a alla 6a classe.\nInterattivo · Allineato al PER · In Deutsch, Français, Italiano & English",
     toDashboard: "Vai alla dashboard →",
@@ -769,7 +769,7 @@ export const t: Record<Lang, Record<string, string>> = {
   en: {
     bannerLehrplan: "Swiss Curriculum LP21",
     bannerTeachers: "Recommended by teachers",
-    bannerExercises: "Over 13,000 interactive exercises",
+    bannerExercises: "Over 15,000 interactive exercises",
     tagline: "Learning is fun — with Cleverli!",
     subtitle: "The learning platform for children in grades 1–6.\nInteractive · Aligned with Swiss curriculum · In Deutsch, Français, Italiano & English",
     toDashboard: "To dashboard →",

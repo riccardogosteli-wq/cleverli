@@ -71,7 +71,7 @@ export default function SuccessClient() {
   }, [isPremium, pollCount, loaded, session]);
 
   const features = [
-    t("Mehr als 13’000 interaktive Übungen nach Lehrplan 21", "Plus de 13 000 exercices interactifs pour l'école primaire suisse", "Oltre 13.000 esercizi interattivi per la scuola primaria svizzera", "Over 13,000 interactive exercises for Swiss primary school"),
+    t("Mehr als 15’000 interaktive Übungen nach Lehrplan 21", "Plus de 15 000 exercices interactifs pour l'école primaire suisse", "Oltre 15.000 esercizi interattivi per la scuola primaria svizzera", "Over 15,000 interactive exercises for Swiss primary school"),
     t("Alle verfügbaren Fächer passend zur Klasse deines Kindes", "Toutes les matières disponibles selon l'année de ton enfant", "Tutte le materie disponibili adatte alla classe di tuo figlio", "All available subjects matched to your child's grade"),
     t("Alle Stufen: Leicht · Mittel · Schwer", "Tous les niveaux : Facile · Moyen · Difficile", "Tutti i livelli: Facile · Medio · Difficile", "All difficulty tiers: Easy · Medium · Hard"),
     t("Detaillierte Lernfortschritte", "Suivi détaillé des progrès", "Progressi di apprendimento dettagliati", "Detailed learning progress"),

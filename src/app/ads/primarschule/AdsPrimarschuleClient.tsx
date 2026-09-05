@@ -199,7 +199,7 @@ export default function AdsPrimarschuleClient() {
       <section className="border-y border-gray-100 bg-white px-4 py-8 sm:px-6">
         <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-4">
           {[
-            ["13’000+", "interaktive Übungen"],
+            ["15’000+", "interaktive Übungen"],
             ["1.–6.", "Klasse Primarschule"],
             ["20", "Aufgaben gratis"],
             ["LP21", "nach Lehrplan 21"],

@@ -229,7 +229,7 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
     tip: "Tipp: Starte bei 13 und zähle 5 Schritte weiter.",
   },
   stats: [
-    ["13'000+", "interaktive Übungen"],
+    ["15'000+", "interaktive Übungen"],
     ["1.–6.", "Klasse Primarschule"],
     ["20", "Aufgaben gratis"],
     ["LP21", "Schweizer Lehrplan"],
@@ -307,7 +307,7 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
     tip: "Tipp: Achte darauf, welches Wort zum Satz passt.",
   },
   stats: [
-    ["13'000+", "interaktive Übungen"],
+    ["15'000+", "interaktive Übungen"],
     ["1.–6.", "Klasse Primarschule"],
     ["20", "Aufgaben gratis"],
     ["LP21", "Schweizer Lehrplan"],
