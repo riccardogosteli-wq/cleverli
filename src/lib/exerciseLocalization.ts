@@ -1,5 +1,6 @@
 import type { Exercise } from "@/types/exercise";
 import type { Lang } from "@/lib/i18n";
+import { getQuestionForDisplay } from "@/lib/exerciseQuestionVisuals";
 
 function resolveLocalizedAnswer(exercise: Exercise, localizedOptions?: string[], localizedAnswer?: string) {
   if (localizedAnswer) return localizedAnswer;
@@ -114,8 +115,15 @@ function cleanItalianExercise(exercise: Exercise): Exercise {
   };
 }
 
+function withUsefulQuestionVisuals(exercise: Exercise): Exercise {
+  return {
+    ...exercise,
+    question: getQuestionForDisplay(exercise.question, exercise.type),
+  };
+}
+
 export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
-  if (lang === "en") return {
+  if (lang === "en") return withUsefulQuestionVisuals({
     ...exercise,
     question: exercise.questionEN ?? exercise.question,
     spokenPrompt: exercise.spokenPromptEN ?? exercise.spokenPrompt,
@@ -128,8 +136,8 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     dragItems: exercise.dragItemsEN ?? exercise.dragItems,
     dropZones: exercise.dropZonesEN ?? exercise.dropZones,
     wordList: exercise.wordListEN ?? exercise.wordList,
-  };
-  if (lang === "fr") return {
+  });
+  if (lang === "fr") return withUsefulQuestionVisuals({
     ...exercise,
     question: exercise.questionFR ?? exercise.question,
     spokenPrompt: exercise.spokenPromptFR ?? exercise.spokenPrompt,
@@ -142,7 +150,7 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     dragItems: exercise.dragItemsFR ?? exercise.dragItems,
     dropZones: exercise.dropZonesFR ?? exercise.dropZones,
     wordList: exercise.wordListFR ?? exercise.wordList,
-  };
+  });
   if (lang === "it") {
     const localized = {
     ...exercise,
@@ -158,7 +166,7 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     dropZones: exercise.dropZonesIT ?? exercise.dropZones,
     wordList: exercise.wordListIT ?? exercise.wordList,
     };
-    return exercise.preserveGermanContent || exercise.completeLocalization ? localized : cleanItalianExercise(localized);
+    return withUsefulQuestionVisuals(exercise.preserveGermanContent || exercise.completeLocalization ? localized : cleanItalianExercise(localized));
   }
-  return exercise;
+  return withUsefulQuestionVisuals(exercise);
 }

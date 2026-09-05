@@ -15,6 +15,7 @@
     "qa:live-localizations": "npx tsx scripts/audit-live-localizations.ts",
     "qa:localization-tts": "npx tsx scripts/audit-localization-tts.ts",
     "qa:exercise-speech": "npx tsx scripts/audit-exercise-speech.ts",
+    "qa:question-visuals": "npx tsx scripts/audit-question-visuals.ts",
     "qa:single-voice": "npx tsx scripts/audit-single-voice.ts",
     "generate:topic-localizations": "npx tsx scripts/generate-topic-localizations.ts",
     "generate:exercise-id-migrations": "npx tsx scripts/generate-exercise-id-migrations.ts",
