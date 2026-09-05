@@ -156,7 +156,7 @@ function validateStructure(exercise: Exercise, subject: string): Finding[] {
     if ([...exactCounts.values()].some((count) => count > 1)) {
       findings.push({ severity: "High", category: "Answer options", detail: "The same visible answer option occurs more than once." });
     }
-    if (options.some((option) => /^(?:Das Gegenteil des beschriebenen Konzepts|Eine unvollständige Version des Begriffs|Ein verwandter Begriff aus einem anderen Fachgebiet|Eine mathematische Formel für Sprachregeln|Ein Lautzeichen ohne grammatische Funktion|Eine sprachliche Ausnahme ohne Regelbezug|Eine geometrische Figur ohne Zahlenwert|Ein algebraisches Symbol ohne Bedeutung|Eine logische Aussage ohne numerische Basis|all|done|Listenenede)$/i.test(option.trim()))) {
+    if (options.some((option) => /^(?:Das Gegenteil des beschriebenen Konzepts|Eine unvollständige Version des Begriffs|Ein verwandter Begriff aus einem anderen Fachgebiet|Eine mathematische Formel für Sprachregeln|Ein Lautzeichen ohne grammatische Funktion|Eine sprachliche Ausnahme ohne Regelbezug|Eine geometrische Figur ohne Zahlenwert|Ein algebraisches Symbol ohne Bedeutung|Eine logische Aussage ohne numerische Basis|all|Listenenede)$/i.test(option.trim()))) {
       findings.push({ severity: "Medium", category: "Answer options", detail: "Answer choices contain generic placeholder distractors instead of plausible topic-specific alternatives." });
     }
     const countTerms = (value: string) => value.match(/[\p{L}\p{N}]+/gu)?.length ?? 0;
@@ -300,7 +300,7 @@ for (let grade = 1; grade <= 6; grade += 1) {
   }
 }
 
-if (reviews.length !== 13_918) throw new Error(`Expected 13,918 reviews, found ${reviews.length}`);
+if (reviews.length !== 15_190) throw new Error(`Expected 15,190 reviews, found ${reviews.length}`);
 const counts: Record<string, number> = {};
 for (const finding of reviews.flatMap((review) => review.findings)) counts[`${finding.severity}: ${finding.category}`] = (counts[`${finding.severity}: ${finding.category}`] ?? 0) + 1;
 const report = {

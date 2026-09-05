@@ -259,7 +259,7 @@ const TARGETED: Record<string, Partial<Exercise>> = {
   r3: { question: "Was reimt sich auf «Sonne»?", answer: "Tonne", options: ["Tonne", "Mond", "Stern", "Wolke"], hints: ["Sprich die Wörter laut aus.", "Achte auf «-onne»."] },
   r7: { question: "Was reimt sich auf «Tag»?", answer: "mag", options: ["mag", "Hut", "rot", "Wind"], hints: ["Sprich TAG und die Antworten laut aus.", "Achte auf «-ag»."] },
   r8: { question: "Was reimt sich auf «Ball»?", answer: "Fall", options: ["Fall", "Haus", "Brot", "Kind"], hints: ["Sprich BALL und die Antworten laut aus.", "Achte auf «-all»."] },
-  r14: { question: "Was reimt sich auf «Hand»?", answer: "Wand", options: ["Wand", "Hund", "Mond", "Wind"], hints: ["Sprich HAND und die Antworten laut aus.", "Achte auf «-and»."] },
+  r14: { type: "multiple-choice", question: "Was reimt sich auf «Hand»?", answer: "Wand", options: ["Wand", "Hund", "Mond", "Wind"], hints: ["Sprich HAND und die Antworten laut aus.", "Achte auf «-and»."] },
 };
 
 function applyTargetedExercise(exercise: Exercise): Exercise {

@@ -1,0 +1,34 @@
+{
+  "1/german/reime/r14": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review: visible choices were configured on a fill-in exercise instead of a multiple-choice interaction.",
+    "correctionMade": "Changed the rendered interaction to multiple choice; the four existing rhyme choices and answer remain unchanged.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/1/german/reime?exercise=r14#exercise"
+  },
+  "2/german/satzzeichen/sz45": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review: a generated distractor was malformed and made the punctuation answer too obvious.",
+    "correctionMade": "Replaced all distractors with complete, plausible sentence-ending alternatives; retained the correct exclamation-mark answer.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/2/german/satzzeichen?exercise=sz45#exercise"
+  },
+  "2/science/gesunde-ernaehrung/g2-science-gesunde-ernaehrung-g7": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review: one nutrition distractor was unrelated to the question and used wording above Grade 2.",
+    "correctionMade": "Replaced the option set with age-appropriate food and drink categories in German, English, French and Italian; correct carbohydrate answer unchanged.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/2/science/gesunde-ernaehrung?exercise=g2-science-gesunde-ernaehrung-g7#exercise"
+  },
+  "3/english/food-drink-3/fd3-10": {
+    "reportStatus": "fixed",
+    "reportedAt": "2026-09-05",
+    "reportReason": "Pattern review: the orange emoji directly revealed the vocabulary answer.",
+    "correctionMade": "Removed the direct answer-revealing emoji; question, answer choices and scoring remain unchanged.",
+    "fixedAt": "2026-09-05",
+    "retestUrl": "https://www.cleverli.ch/learn/3/english/food-drink-3?exercise=fd3-10#exercise"
+  }
+}

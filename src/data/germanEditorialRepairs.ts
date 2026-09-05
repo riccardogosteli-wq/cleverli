@@ -51,6 +51,20 @@ function repairKnownAnswer(exercise: Exercise, key: string): Exercise {
     const options = ["einen Punkt; danach geht es gross weiter", answer, "ein Ausrufezeichen; danach geht es gross weiter", "kein Satzzeichen; danach geht es gross weiter"];
     return { ...exercise, answer, answerEN: answer, answerFR: answer, answerIT: answer, options, optionsEN: options, optionsFR: options, optionsIT: options };
   }
+  if (key === "2/german/satzzeichen/sz45") {
+    const options = ["Am Ende jeder Aussage", "Bei einer Frage mit W-Fragewort", "Immer (z.B. «Komm her!»)", "Bei einer höflichen Bitte"];
+    const answer = "Immer (z.B. «Komm her!»)";
+    return { ...exercise, answer, answerEN: answer, answerFR: answer, answerIT: answer, options, optionsEN: options, optionsFR: options, optionsIT: options };
+  }
+  if (key === "2/science/gesunde-ernaehrung/g2-science-gesunde-ernaehrung-g7") {
+    return {
+      ...exercise,
+      options: ["Vitamine aus Obst und Gemüse", "Kohlenhydrate (Brot, Nudeln, Reis)", "Proteine aus Ei und Bohnen", "Wasser und ungesüsster Tee"],
+      optionsEN: ["Vitamins from fruit and vegetables", "Carbohydrates (bread, pasta, rice)", "Proteins from eggs and beans", "Water and unsweetened tea"],
+      optionsFR: ["Vitamines des fruits et légumes", "Glucides (pain, pâtes, riz)", "Protéines des oeufs et haricots", "Eau et thé non sucré"],
+      optionsIT: ["Vitamine da frutta e verdura", "Carboidrati (pane, pasta, riso)", "Proteine da uova e fagioli", "Acqua e tè non zuccherato"],
+    };
+  }
   if (key === "2/science/gesunde-ernaehrung/ge30") {
     return {
       ...exercise,
@@ -362,7 +376,9 @@ export function applyGermanEditorialRepairs(grade: number, subject: string, topi
       const hintRepaired = repairHints(optionRepaired, key, subject);
       const textRepaired = repairGermanText(repairMultiBlankInteraction(hintRepaired));
       const deduplicated = repairAnswerOptions(textRepaired, topic.exercises);
-      return ensureHintsDoNotRevealAnswer(deduplicated, subject);
+      // These verified items need their topic-specific options after generic distractor repair.
+      const finalKnownAnswer = repairKnownAnswer(deduplicated, key);
+      return ensureHintsDoNotRevealAnswer(finalKnownAnswer, subject);
     }),
   }));
 }
