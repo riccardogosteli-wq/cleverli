@@ -39,7 +39,7 @@ const DAILY_RENDERABLE_TYPES = new Set<Exercise["type"]>([
   "counting",
 ]);
 
-function isDailyRenderableExercise(exercise: Exercise): boolean {
+export function isDailyRenderableExercise(exercise: Exercise): boolean {
   return DAILY_RENDERABLE_TYPES.has(exercise.type) && !exercise.listeningText?.trim();
 }
 

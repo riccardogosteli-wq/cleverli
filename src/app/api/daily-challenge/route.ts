@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
   if (!challenge) return NextResponse.json(null);
   return NextResponse.json({
     ...challenge,
-    exercise: localizeExercise(challenge.exercise, language),
+    exercise: localizeExercise(challenge.exercise, challenge.subject === "german" ? "de" : language),
     topic: {
       id: challenge.topic.id,
       title: challenge.topic.title,
