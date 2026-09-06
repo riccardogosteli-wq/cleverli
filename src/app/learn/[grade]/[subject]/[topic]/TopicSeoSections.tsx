@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { localizeExercise } from "@/lib/exerciseLocalization";
 import Link from "next/link";
 import type { Exercise, Topic } from "@/types/exercise";
 import { useProfileContext } from "@/lib/ProfileContext";
@@ -325,6 +326,9 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
   const topicDescription = buildTopicDescription(topic, grade, subject, lang, topicTitle);
   const exerciseTypes = getTopicExerciseTypes(topic, lang);
   const visibleSampleExerciseCards = [...sampleExerciseCards]
+    .map(card => grade === 1 && subject === "german" && lang === "de"
+      ? { ...card, exercise: localizeExercise(card.exercise, "de") }
+      : card)
     .sort((a, b) => (previewTypePriority[a.exercise.type] ?? 20) - (previewTypePriority[b.exercise.type] ?? 20))
     .slice(0, 4);
 

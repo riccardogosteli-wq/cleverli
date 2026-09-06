@@ -3,5 +3,6 @@
   "src/lib/germanExerciseQaCorrections.ts": "fd76eb4427477b3138a295f0db3c51e11e764797470eff942fd18de10eb4cc79",
   "src/components/exercises/FillInBlank.tsx": "90ae939a1376e88df972b1ded63fd303218b8b9ce3d21dd87d3d81a32afd7faa",
   "src/components/ExercisePlayer.tsx": "df1eba88ebfdcb3d7bff6271f169ad57383212a9274dc86d5a03ef0dec9e640b",
-  "src/types/exercise.ts": "202ce353302d0cdf9801719fc0502591cde2d67c3ffa2896535e399ffc8d5e42"
+  "src/types/exercise.ts": "202ce353302d0cdf9801719fc0502591cde2d67c3ffa2896535e399ffc8d5e42",
+  "src/app/learn/[grade]/[subject]/[topic]/TopicSeoSections.tsx": "95c1131dadd7eff44fae20b307e01ac293532ad2a072b528b41b852fe0d5034e"
 }
