@@ -1,3 +1,4 @@
+import { applyGermanExerciseQaCorrections } from "@/lib/germanExerciseQaCorrections";
 import type { Exercise } from "@/types/exercise";
 import type { Lang } from "@/lib/i18n";
 import { getQuestionForDisplay } from "@/lib/exerciseQuestionVisuals";
@@ -168,5 +169,5 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     };
     return withUsefulQuestionVisuals(exercise.preserveGermanContent || exercise.completeLocalization ? localized : cleanItalianExercise(localized));
   }
-  return withUsefulQuestionVisuals(exercise);
+  return withUsefulQuestionVisuals(applyGermanExerciseQaCorrections(exercise));
 }
