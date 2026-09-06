@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Metadata } from "next";
 import { GRADES, getSubjects, getTopics, getTopicsForSubject } from "@/data/index";
 import TopicClient from "./TopicClient";
@@ -12,7 +13,6 @@ const BASE = "https://www.cleverli.ch";
 
 interface Props {
   params: Promise<{ grade: string; subject: string; topic: string }>;
-  searchParams?: Promise<{ exercise?: string }>;
 }
 
 export function generateStaticParams() {
@@ -64,9 +64,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function TopicPage({ params, searchParams }: Props) {
+export default async function TopicPage({ params }: Props) {
   const { grade, subject, topic: topicId } = await params;
-  const query = await searchParams;
   if (subject === "french" && [3, 4].includes(parseInt(grade)) && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ENABLED !== "true") {
     notFound();
   }
@@ -170,13 +169,14 @@ export default async function TopicPage({ params, searchParams }: Props) {
         gradeSeoHref={gradeSeoHref}
       />
 
+      <Suspense fallback={null}>
       <TopicClient
         topic={topic}
         grade={parseInt(grade)}
         subject={subject}
         nextTopicId={topics[topicIndex + 1]?.id ?? null}
-        focusExerciseId={query?.exercise ?? null}
       />
+      </Suspense>
 
       <div className="sm:hidden">
         <TopicExplainerClient

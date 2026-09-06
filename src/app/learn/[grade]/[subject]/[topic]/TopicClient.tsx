@@ -1,4 +1,5 @@
 "use client";
+import { useSearchParams } from "next/navigation";
 import { Topic } from "@/types/exercise";
 import ExercisePlayer from "@/components/ExercisePlayer";
 import ProgressMapClient from "@/components/ProgressMapClient";
@@ -11,14 +12,16 @@ import { useLang } from "@/lib/LangContext";
 import { getActiveProfileId } from "@/lib/family";
 import { readTopicProgressForChild, type NormalisedTopicProgress } from "@/lib/reportingProgress";
 
-interface Props { topic: Topic; grade: number; subject: string; nextTopicId?: string | null; focusExerciseId?: string | null; }
+interface Props { topic: Topic; grade: number; subject: string; nextTopicId?: string | null; }
 
 function loadProgress(grade: number, subject: string, topic: Topic): NormalisedTopicProgress | null {
   const activeChildId = getActiveProfileId();
   return readTopicProgressForChild(grade, subject, topic, activeChildId);
 }
 
-export default function TopicClient({ topic, grade, subject, nextTopicId = null, focusExerciseId = null }: Props) {
+export default function TopicClient({ topic, grade, subject, nextTopicId = null }: Props) {
+  const searchParams = useSearchParams();
+  const focusExerciseId = searchParams.get("exercise");
   const { session, isPremium, loaded, premiumChecked } = useSession();
   const { lang } = useLang();
   const topicTitle = getTopicTitle(topic.id, lang, topic.title);
