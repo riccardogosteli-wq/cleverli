@@ -1048,6 +1048,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               answer={current.answer}
               altAnswers={current.altAnswers}
               sequentialAnswer={current.sequentialAnswer}
+              caseSensitiveAnswer={current.caseSensitiveAnswer}
               onAnswer={handleAnswer}
               questionImage={current.image}
             />

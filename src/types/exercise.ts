@@ -27,6 +27,7 @@ export interface Exercise {
   altAnswersIT?: string[];
   /** Multi-gap task rendered as one explicitly ordered response. */
   sequentialAnswer?: boolean;
+  caseSensitiveAnswer?: boolean; // Explicit letter-case learning tasks only.
   answerEN?: string;
   answerFR?: string;
   answerIT?: string;

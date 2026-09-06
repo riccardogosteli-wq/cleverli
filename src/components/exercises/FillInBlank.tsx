@@ -9,6 +9,7 @@ interface Props {
   answer: string;
   altAnswers?: string[];
   sequentialAnswer?: boolean;
+  caseSensitiveAnswer?: boolean;
   onAnswer: (correct: boolean) => void;
   questionImage?: string;
 }
@@ -31,7 +32,7 @@ function isNegativeNumericAnswer(answer: string): boolean {
   return /^-\d+([.,]\d+)?$/.test(normalizeMinusSigns(answer).trim());
 }
 
-export default function FillInBlank({ question, answer, altAnswers, sequentialAnswer, onAnswer, questionImage }: Props) {
+export default function FillInBlank({ question, answer, altAnswers, sequentialAnswer, caseSensitiveAnswer, onAnswer, questionImage }: Props) {
   const { tr } = useLang();
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -53,7 +54,7 @@ export default function FillInBlank({ question, answer, altAnswers, sequentialAn
   }, []);
 
   const matchesSingle = (input: string, expected: string) => {
-    return matchOrderedTextAnswer(input, expected);
+    return caseSensitiveAnswer ? input.normalize("NFKC").trim() === expected.normalize("NFKC").trim() : matchOrderedTextAnswer(input, expected);
   };
 
   const answerVariants = (expected: string) => {

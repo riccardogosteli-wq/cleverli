@@ -1,3 +1,4 @@
+import { applyGrade1DeutschQaCorrections } from "@/lib/grade1DeutschQaCorrections";
 import type { Exercise } from "@/types/exercise";
 // Reviewed Grade 1 Maths corrections, German branch only.
 const corrections: Record<string, Partial<Exercise>> = {
@@ -3679,5 +3680,5 @@ const corrections: Record<string, Partial<Exercise>> = {
 };
 export function applyGermanExerciseQaCorrections(exercise: Exercise): Exercise {
  const correction = corrections[exercise.id];
- return correction ? {...exercise,...correction} : exercise;
+ return applyGrade1DeutschQaCorrections(correction ? {...exercise,...correction} : exercise);
 }

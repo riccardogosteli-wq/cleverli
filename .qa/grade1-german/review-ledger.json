@@ -1,0 +1,4526 @@
+[
+  {
+    "key": "1/german/buchstaben/b1",
+    "baselineHash": "ae4854063cb9274a882442f36e2c428c009de91dece27ee0d9f082cd3a99e20a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b2",
+    "baselineHash": "7a1076d7bd5dc3e8c4b784e77ad2b00a2459a36827554fc195ff2f6974a53eb4",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b3",
+    "baselineHash": "570591814ab6d6414163ea1fa63914be3174c5ea093a66e7ae028a693e071636",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b4",
+    "baselineHash": "c695aa4a0db1d0cfa91d2df0001c14b59c81fda93412300982973ab1f9432228",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b5",
+    "baselineHash": "50b647ae6fbf33706f6f027d6b5097ca7fd66fe4ff1162bfcb561c798d455ed8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b6",
+    "baselineHash": "e34833b96f3e461fb2e331441f14121983d90c8bbb1efd2de1fb51497253cb42",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b7",
+    "baselineHash": "8f78ecd92539a78b68d01d8b4dd57a66280c2d8abb7e68eb8b713ffc9358cf3d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b8",
+    "baselineHash": "710ff5404cbf7a2b277d97e9cddb7bfcf18ee566d09d7c2fee8258fe8d217ac8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b9",
+    "baselineHash": "b567c1ebfc83c2acba172c34175114fab10b055089243d43fb1ec9732d3e0369",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b10",
+    "baselineHash": "656bc633c52d68a19422aaf0cbf2f7cf35da255491f8854325adcdf8588e6c4c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b11",
+    "baselineHash": "288c961f9092dccbf207964a21d33770a15a531446335662692fcb8022a70fd9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b12",
+    "baselineHash": "c0998c58f4934a97aa202b5bb806854735b2ccec2fb35a9b749cf26883367b34",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b13",
+    "baselineHash": "da4e45a468d8db0541dc3147ec4bd6532652d9b24e8afe93d6dab166464b155c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b14",
+    "baselineHash": "92e48e1d45f1b237cbfc564deb9c8053e34ebf80625d94322a3745667bc1652a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b15",
+    "baselineHash": "e8b14d9f551b7485c4e2bba3a07c7d65cde1ed967cbbacee17f59936dead131a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b16",
+    "baselineHash": "905d90f288b9671ff4779d5fc229a4547d4c9fbb740338040ebb40c628ef0a5a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b17",
+    "baselineHash": "34609671b79c068ff6e5d96e577fdcc43356f324a8138ef83af799c4245d2805",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b18",
+    "baselineHash": "06c8e03a1f72f3ffd0c25598420faf4a3a5624cbe064ef967a824139ef304451",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b19",
+    "baselineHash": "8dcc5fe3f440b953565d795b1e0d8b59e707f655a3429d1a6b974a34a60be6c6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Make missing position audible"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b20",
+    "baselineHash": "e5d602dc9c2980cbac1ff849bc0b4d30cc9234d3533bf90144940266a452a10a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b21",
+    "baselineHash": "8a8a8cc7601cce29c95bb74cc46d0b3947f47de8f18220ee7e78455cde8ef446",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b22",
+    "baselineHash": "64af5afce83af318714b736ffba424e258c0aeb7b5c09e93bf8b35819be08de0",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b23",
+    "baselineHash": "8bb122a14f86a3e098997b34ac21a6c9a5af69e865a4e6f630c4e42dee2dfcac",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b24",
+    "baselineHash": "59f46773c11cfffd72a7c991d269588be2a10e901302c91c2a379b4d5b3195ae",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b25",
+    "baselineHash": "bfe1c563e2f7b464aa602d099d3673132897f8582f464c3119997c4127c977c7",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Concrete letter recognition instead of foreign alphabet exception"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b26",
+    "baselineHash": "30e5817b1d4550ce78c70487691cf85199da45b59f575b8d8906ee87975ba63d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b27",
+    "baselineHash": "6ac9a70efbf8cd538cab65e36735d158eb115c44c0c050548bc5fbf10e143c27",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b28",
+    "baselineHash": "76b1d34886c1665de4740f703475d05c1ffb43cbe34cde54210b563d1a78b104",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b29",
+    "baselineHash": "eae3450bfd53b837fca11bf04600feef348f0a2a4ed85fb333d464bb75c8223e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Make missing position audible"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b30",
+    "baselineHash": "1d5b93de08f70fb8e620038f6c68212ce4b7eb5fe4f3a8020bedd5011f5b2c65",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b31",
+    "baselineHash": "90912b5ae92815b34bf62cfe30c54181bc4bd249e46b2c4c4a1cb0665ea6b4bc",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b32",
+    "baselineHash": "44c3a6d154a0f692d8d838084121f2bff7c59617223d502c55b39e801b07b12f",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b33",
+    "baselineHash": "387fa105a68046a5fe7394e66822a9d44322248e99db9caf55fd994eb2372763",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b34",
+    "baselineHash": "79f43721d16b9f274c9032aa47fc970aaa6fb176ee739832567c3b561366f68a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b35",
+    "baselineHash": "838a29d39a86f8f5f7dce1d3226a11e13aae8cd18a3d519886f4357d2dfbaadc",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b36",
+    "baselineHash": "ee51a5a70d3ddfffd9c17bd14babe823eb114af5f72f5f4efe9755427442c598",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b37",
+    "baselineHash": "6f645573c1ce1926da9a194ef80e6946175f4b124855d4be749971946e0bcf96",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "ch is two letters, not one"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b38",
+    "baselineHash": "14f5c270f17ea289410b88b867c88f1b7f0031c524883debdcd57851667d3485",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b39",
+    "baselineHash": "7772049b15b03885ed04ddc1d8f34d90d59715a98ad0754b736c93fce20a2c7f",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b40",
+    "baselineHash": "3be5e4c3fb4a895ca99fdadfc2c6365cdf8ff62515ed9055cd0547665e4ae231",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b41",
+    "baselineHash": "8a780a01d67f6af1c51bec6f5d2df69e7a2aa131f43eb709977a4c23545a5fa4",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b42",
+    "baselineHash": "481615def65ed40aa77b3f131c7dc5e958fb087ddc580c2fce4a60af7b58cc86",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b43",
+    "baselineHash": "d4f7dfce15acfd71c1bcd774d8054c63c092a740b7c0c92152ab9392f2c21e09",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b44",
+    "baselineHash": "c956162209b09c2a43ef3ff90dbb6f7ed28a914442c534105c9cc5e179480cb6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b45",
+    "baselineHash": "be02021799ae3dd0d8024e9e2ba3744af902b70f81fe8eb52e053281db1d10fb",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Remove duplicate answer, disclosed solution and wrong Z position"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b46",
+    "baselineHash": "ca38e59da0ef3060256d49bc0a47662f3cfde0d29d338fb5dfbc1f27d46b065b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b47",
+    "baselineHash": "5e05c89a14f02c6b6bb283b0bb42804115bd6ff07efe455b1db1971b989bc7db",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Correct spoken ordinal inflection"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b48",
+    "baselineHash": "fca30f64d4acad7088d5056d4e8e58fe6f59cf8f123433fc2841d3ae782e223d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b49",
+    "baselineHash": "5a4639061972c595c7c064d56b9e9b720d4a8a5b546afc99b0225deb7fc70231",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/buchstaben/b50",
+    "baselineHash": "394a5ed1491bd47eb5a1a5100cece4e8a780ce7138cd68e7387ef2c7e50b4ea2",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Remove English ANT distractor"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew1",
+    "baselineHash": "af7068455320cd57d2787f957226fb13cc7eaeda8a486af462945c396d41ef59",
+    "status": "correction-candidate",
+    "reasons": [
+      "Restore missing required visual"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew2",
+    "baselineHash": "00601e4b355e9c63c4a48df05abf05b16af0f5ae4251a4cfbe8b7cbb9411d6cd",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew3",
+    "baselineHash": "e82bea11560c86a28021bf443a6f018aac5b915c73adb60092742ff0a003fe94",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew4",
+    "baselineHash": "f46705b0fdaad8d1a68988263b78f633e5c6c40b3a92397e0f88fb96b204430e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew5",
+    "baselineHash": "d001d370f407efcc086e8b9671a90b0e14394cf74ded74861cdd5436165db05d",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew6",
+    "baselineHash": "f49e7e67fb8f9ccdafdc9fac42fa43fc06933d40ddead815ecd1e839464a62b3",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew7",
+    "baselineHash": "a895a3923eb1266a829dd1b402bf16a85a951e10acd254541e892293eb2f8cf8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Avoid false intrinsic water colour"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew8",
+    "baselineHash": "d8371a153a819ec15d5cadc4b5f7876e2c6aa79a74f4294f59e3e93f93b98f2c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Exclude daytime moon ambiguity"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew9",
+    "baselineHash": "9e5b4a286dca0450e940c1597aece747313027f0d671cb1a23d9efec27cffc7b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Exclude learning outside school ambiguity"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew10",
+    "baselineHash": "4c1431b5c6134b598eda4d2ceca1450a4ee52a92814d8dbe83b2cce13f284d7f",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew11",
+    "baselineHash": "013b3a97add1d92fba6c8f45b357540da45c89c7f8fa6046d96e759f78ff95e3",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew12",
+    "baselineHash": "c4c0d63b9ed3ec2f4eb5258867e980ea698ce2eb66729a8c4764f21fe0c480d5",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew13",
+    "baselineHash": "522be9da4f572e38e6f7b68dde42f34ee7e0ec43e5420209b1f573c9b728cc58",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew14",
+    "baselineHash": "2d87f99f4b538337167e8984ff4465a00629bb273f3a6d12eb86f8d8e63466ac",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew15",
+    "baselineHash": "19484f2fb3a3b35c4bc90c4703135f0a19650821c548f7a29569b4dd198e49f8",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew16",
+    "baselineHash": "e564c642b3404efd9439961fc0c4f21e792cd4ab07684461b9e3acc57ada614c",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew17",
+    "baselineHash": "804f9c3f4ba451c1b5abef7e8695bd99ae9f56120ea473606ff395c3e3a8b19d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Match task to sound categories"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew18",
+    "baselineHash": "639eb38f2028a0ae638a4f61c49e6d0f2b3724963e352d05a20daa93fd6a0a4b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew19",
+    "baselineHash": "fe93a3d11e1312190a37d780437c6c572d12e832a415ca71166aa990edd0ec47",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew20",
+    "baselineHash": "57758077797a3113d724588e9e308370f1191617cddc325cb829824125d7809f",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew21",
+    "baselineHash": "d8e58c70b5f069695e8d0000079319decf03fb562d815fa8ee40ddd7fd4ed690",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew22",
+    "baselineHash": "12a5222df614bb7fb9a8b5d7eaafeb62b4912ff9bdc0d654e27b859056eac9e1",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew23",
+    "baselineHash": "37853c47c783bb16c9d09a9e48796cce3926b34e3bf4e138cc52d1d7aaf2ae5b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Remove misleading chair icon on table"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew24",
+    "baselineHash": "15e987ac8ea91c5b2ba2d010d630896a02761be862b40fde27f3e4cbe39c1fb2",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew25",
+    "baselineHash": "66645284cb7d0195a7bdc2755705d1e96eea0d69510ffe3858ef5f22d2f5413e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew26",
+    "baselineHash": "754d207bc78bedc61e217b0bba626f0beb30dc8758ec8fb33655417ff6c7a1bb",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew27",
+    "baselineHash": "727c6b04d25c8827394a880695c4c4b32cc8e5c2933b938d067013043aeb05a6",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew28",
+    "baselineHash": "c9853cd79748aba7e1b5a48def5fe163736695d2b1e18daaf7913fa4ea038c95",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew29",
+    "baselineHash": "b7fac061fab2d44589f0d3c6600d3327f2540e91a0dc660c1ac63c9eca90cad4",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew30",
+    "baselineHash": "dea28bfa79e9b43111e3f71b85859d1bd5e546ccae1ca0dc1af092bc9ed47dcd",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew31",
+    "baselineHash": "483c326c813b671e793829b071d467c739e61c4e8afd415f476697f87232f8d3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace subjective breakfast preference with identifying description"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew32",
+    "baselineHash": "aa7409fadc402c5c4bf4e4412566f6f4d2d73b11e4874feb4e064ead911aa69b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew33",
+    "baselineHash": "b3289340943255769dc84d0b6c71e5de5d2140fd1bc2f025885904068cd4be42",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew34",
+    "baselineHash": "63a6bace05ff5c21f12e2137742807a18adfcff9ebceab007d9bd538994d6940",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew35",
+    "baselineHash": "5a0da0fd3bb7bd3a3789ebe79db78315d143d35afb352bb9529c1eba5c86678a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew36",
+    "baselineHash": "dc235f4e7e14ddc1dcb6eb0bfcafcd92cf21f065500a3e1c1ab09b987776c7e9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Speak visual reference without leaking answer"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew37",
+    "baselineHash": "5ab5a99f0d04bc1bdaed59732da66b561c5bb92a4d98e4ab2776f6672c348631",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept valid temperature alternative and fix irrelevant hint"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew38",
+    "baselineHash": "99453a70b648db7cb39ef99b893a163dbae3bd620140d60681af2ce2558dd6e3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Speak visual reference without leaking answer"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew39",
+    "baselineHash": "f8433273ce6958069553ea7611d135a4c4bc522e231791ca3b06235b5bb6fc62",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew40",
+    "baselineHash": "fac3a8abc9e7e8470f3aa97ca98543311274b635cffe796f74cf1370edf7c4e7",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew41",
+    "baselineHash": "9e23a034d0e598052155af153d2fd2a329f0ccdbc6d08e84ba4fd595457dbe78",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew42",
+    "baselineHash": "5f1d8aaaeb46a5fe09e4fd2ff6d8a6c315b26ea613923a571be5b5035ec08e6a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept equivalent natural response"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew43",
+    "baselineHash": "dc6d64f7aa6d95aeeda0be0f58e21b96255b0575f3e4422519e2dfabd68efe73",
+    "status": "correction-candidate",
+    "reasons": [
+      "Speak visual reference without leaking answer"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew44",
+    "baselineHash": "f037bf717ac1c5761bf537fec35d0a31ddeed6e4010e47f133edb9af96a12fc5",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew45",
+    "baselineHash": "7f0ae19c4c25c6d27f25f22906852e06767b5e6bf0dfc7d8aa2dabfe382a6cf5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Avoid categorical Swiss seasonal claim"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew46",
+    "baselineHash": "08f28d8d0edb83e2a650a70d626a5005cecddd13c8f63429428c7d44af50d29b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace ungrammatical analogy with concrete sentence"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew47",
+    "baselineHash": "600598bad7ea781bcaf71bbd37c5e52f19cc2f614a8e5beeb2bcddf478fe727b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew48",
+    "baselineHash": "c913630070bf75a455fe0470f56c8de32467da32f7ca9b2730ae89ead5db1c24",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept Swiss and standard schoolbag synonyms"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew49",
+    "baselineHash": "01729dd3a6327277eb3d70c81ff336e78545516da8404c523be48210ce552f2e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/einfache-woerter/ew50",
+    "baselineHash": "d8eb82ffefa6f57bc0d0667d3438724e17d2cefe14df10aed1b13c2bc0aa96ff",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk1",
+    "baselineHash": "efb1b28c3f4cf5ac632a987a0795501c6db5e34d1597152c14fc4b4e502f8013",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk2",
+    "baselineHash": "402129e13af270a31211aecaf066360cc1bd16686c61283417b75c0b299e563d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk3",
+    "baselineHash": "cbc24863b360f01fc83842b02e28a27d1383aa91a710614e884c027da516207e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk4",
+    "baselineHash": "ea9d75b866c40521f24e3679a9300634818e29a926ef21931305b08d307299fd",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk5",
+    "baselineHash": "51ee2eb4d77c75e985c076688eb1001586c90631d0833762cdf366f22f0535ca",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk6",
+    "baselineHash": "b031986099aa28f43c53d06d19047073bb079e4102971a8733c7a1f4dcfe507e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk7",
+    "baselineHash": "3df9c91939af20a3d04937c1e13d9b52e25f81b9b44ab00e9993247701752c4d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk8",
+    "baselineHash": "02a40c81c7524808a247e697ffd36ebb976ab33fe8d9a1b03a721bba3d70bdda",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk9",
+    "baselineHash": "26b26cbae733d0e2bc95f6b3018e00ba417bd4a82a6cc144ba79a3f13fd2468c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk10",
+    "baselineHash": "37119818eac6724eb1e5c9e88257f7f72ff4dc74911035ea0f54610e76e91229",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk11",
+    "baselineHash": "c4a4f62f3331dcbb9d20911f33bbc21aca7e6d33a396e469019642a20bd23527",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk12",
+    "baselineHash": "f7b6028b8d2ab34a2fb2279d7c4c31b47c03f665b48b748d992bbd8df1db849f",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk13",
+    "baselineHash": "b65a2ca0dddd2197b955dab54d97a68856a3bdc9c348f750729b6e02bf52dc90",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk14",
+    "baselineHash": "bfcc77a2d66ff44f06b2842ae4e186d7278d25d34f2d7edd11a53c2c0ff99589",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk15",
+    "baselineHash": "d20a9e52e741ceaa9e491c4bb9733b2afdfdbba5531ecfe8cc81da963a8c04b3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk16",
+    "baselineHash": "cedfad62f195e193d09179a3e3b68ef0759b0c0209522ff601e13da0d419a046",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk17",
+    "baselineHash": "c3a603181a99f06e3a048c703f88d955577c74aaccf074a66284bc44a730640c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk18",
+    "baselineHash": "4155c6f5ca40f2df971685d8a5c55be1f63d4d962d256aa01cce553d3e914ad5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk19",
+    "baselineHash": "658d6b3698b2507d57c0646c35aae0ff74fcd5968d1c1e5032b8f6f4b009bba6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk20",
+    "baselineHash": "0120a11fde9392e1e5f9f05914fa4eda4e1bcc4bb885c7fa18e3aee14e9fa6fc",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk21",
+    "baselineHash": "772e7eb95a70fc9591f477bbe23a1e7faaa2b4d1e3968b2db08280eb9d3925b9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk22",
+    "baselineHash": "83d9c097ff67aed226646e99f704f50b58ecd4d3364e41cb62080ef1c38c2bfb",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk23",
+    "baselineHash": "ec45be891d1af87f492a1a9134b503cf5d5416f066caf40b4151929c5d6b4e71",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk24",
+    "baselineHash": "de2ca69210b4b4fa072dcbd903e8f9021a5cdc09a8f0d165a7087568b14840b3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk25",
+    "baselineHash": "b5118ac4a909202e89b28ee7ce546e32574a6a6d1c4eef67a0f0de10c227d168",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk26",
+    "baselineHash": "92a5e1b9af0be76ed09fe768fd500ad4ab452867b88817aa1609e4a56fbedfef",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk27",
+    "baselineHash": "7b5cb2dd3cebe461729f06457ff650ba44113df63be607182682afe534f4b8cc",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk28",
+    "baselineHash": "67517ff530d164f8036d545df0a878b5733d0e3e8d53030049cf518e1547887b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk29",
+    "baselineHash": "d612ba242baf67ef0f94618a7a801902e03f3a4df8c4dcb1e7e0357fc6828135",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk30",
+    "baselineHash": "635ea9b3149cae7ae9a5524506c7589e70852b9714b792549e692180d635e34e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk31",
+    "baselineHash": "88f7ac36b375a8fa5df9c117a644af6145b37a7e4147e4dd0f8af932a1372384",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk32",
+    "baselineHash": "e83ad51d684d620171532c927a38fca62b97f51c8e4fd00f574f7f46d05c20b3",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk33",
+    "baselineHash": "a7a4fc7442ec80cb8564d3e086240b9cd5d27de229f92408117fc55973674d67",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk34",
+    "baselineHash": "cb24cdf7881b871e352dcabe3c00674aaf515c29098f344274677d888d6beb67",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk35",
+    "baselineHash": "b68cea1ceb8f85bf83093e0490b746ce79a706b8e18621571f6b32a20fcf18a5",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk36",
+    "baselineHash": "1cf6055b17908f81466cd11b2dff9b18693c4a5a06400dedc75477209b13b5b0",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk37",
+    "baselineHash": "0a5ecd1f24a9d15bd3b3694f9dd8cc6a89ede26fbcd9d9840ba383eaa75812be",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk38",
+    "baselineHash": "05f104711f138973865a911cf616b08c5c70fb1da8e45029892892d0b6dc29c8",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk39",
+    "baselineHash": "b6a7c435cfa47f5952d7675d0bc8818ae4371a2f4733cf4f2e82b3d4e1022962",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk40",
+    "baselineHash": "d77be1b55d304e0ecfec054c3d6541065e0646e8a2fdbec650b9d7b81b68d6a5",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk41",
+    "baselineHash": "3312f804c311b006aab9f01ac0bf94dc3785c6d9e26b3831da5090a6aaad8f4e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk42",
+    "baselineHash": "c9e9a35ed06ce54ef418d760b74343d6f63c9e6ca79771f7659299ddf8175c4a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk43",
+    "baselineHash": "87fb6eb07697d714e86717de6860181862a05e985964bd8033f7792d3bc1d4bf",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk44",
+    "baselineHash": "d6d49d4cfa02b07d5386d7565c3e4e40f3cde6ba53cb7073500539bbad49dcbc",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk45",
+    "baselineHash": "2cdc640a06e048db2489650bb9662cf2e31c24bf91c14a79c2c7943aedbf2b9c",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk46",
+    "baselineHash": "4a44a9ea995d6f8eb117506e43232a41561c347aadcd5ccfe12138f7ad581c9a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk47",
+    "baselineHash": "806771cd76c58dbdff7d478481a299458d065e17f682358f391426bfee039fe2",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk48",
+    "baselineHash": "0b2aceaa94168b37defb870ada6c2c9c486c030311a91f1f4179b5e026e06723",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk49",
+    "baselineHash": "881876cca6f9c9ac671d53decc69cec78db95a689c4b168d7e1302f4efc00f83",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gross-kleinschreibung/gk50",
+    "baselineHash": "2877f5902559d14ea6b6d6198f3d1532edee0c9995d8e1aaeba7347632bb7703",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r1",
+    "baselineHash": "7af6daa6679c71efc4d15dcb128d925440aa473dd5515e3543256c77d64fd457",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r2",
+    "baselineHash": "92edf602018edc2d80dce37ddee4fdf3a6992b74e580efd63a53cb45b1c9b6a5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r3",
+    "baselineHash": "d10e5b82416fcc1856c2184de2bb4148a867d7816b892b255f83c87e1b33c7c2",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r4",
+    "baselineHash": "8e35c6254779aef4a19cad3ea0731300ecd9f7977e75e875eb359ce07e8d84f6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r5",
+    "baselineHash": "02c3a7d7ac99107cb6a5157929440b52c6b11ed3ad7b9f169eddc189c68d1780",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r6",
+    "baselineHash": "f33091361fe94cfa001e19fc4848365c7e55c0683105d81648b194d92a79525d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r7",
+    "baselineHash": "460f600696c9fe954a9080dad25210ae958a3bfa1b74cd35feb11a87ff135b92",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r8",
+    "baselineHash": "1d64fe7d619f8c512f792257d0c418722d91b2ae35d1114679df95b2e80ccac8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r9",
+    "baselineHash": "d30841cc21bbbf7aea382f77f08cef4abd69742db4696e34f9d8219014570059",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r10",
+    "baselineHash": "8746f7f76862b11857bea43a82a5d7278ddd97acd4a8820bc03f63bdfb2ec550",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r11",
+    "baselineHash": "e5a75934b40912a13f5f8a9d93805380372ad2dabbc5e023f0a62794e2249b23",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r12",
+    "baselineHash": "54bb35fe6e87bdd597ab24d9af2ca384b7374b9a08899aaa5495c5111198c9ae",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r13",
+    "baselineHash": "14fc1053fd92dcfd2d68026b883017c193645b21f58498c4fbaab6925df17c14",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r14",
+    "baselineHash": "86b124884a2eddab7f1f7d675b1bb1290076906e2347a834da434743688bcb43",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r15",
+    "baselineHash": "71e723449d9c88e5be284593d03f5e3c555e16fde4c1d852216960a124a425a1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r16",
+    "baselineHash": "cf1227be4aa85826d5bb100a89f2099048e6b5adfe9905325f89b9bfeaf6e843",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r17",
+    "baselineHash": "e9ddb4aca4fb39d38dfb6ae8b235b4b44ab1578cdbb6eb296237eb79cdd4d83d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r18",
+    "baselineHash": "3ec8ee234322168f911b084e4971506e930e1805d70532d34336113c69ea2010",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r19",
+    "baselineHash": "437f397504e890ccb5797793ed44a595eeb681103579e406aadf2b116b2ccc0e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r20",
+    "baselineHash": "446d9f41a1b94e7224e674f0ccaa31b961b5475777458328254de8c2c0936fd5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r21",
+    "baselineHash": "73c42fdb6a48c96bef654df4f5860c3bcee8cd9176310c69bc5a99fd45480957",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r22",
+    "baselineHash": "c47ce59dc9670c54034b57b778b67f8976c471c642d587d5b7051724c9071fc4",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r23",
+    "baselineHash": "edb6e2ec7479d7430a5f1499abfe3a7e8a859bde1d67529c3c6ebc498f79beb9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r24",
+    "baselineHash": "72e49e0b102bb915a241472469b24fe9f1465d1b0a1650645b1b04b6f8b43165",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Self-rhyme is not a rhyme task"
+    ]
+  },
+  {
+    "key": "1/german/reime/r25",
+    "baselineHash": "b1a6a0e56392d233368e8249f733fda4088c6b41362635e002ef35c9b1d8a34b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r26",
+    "baselineHash": "2ba85da409057220c23007fde30cb09d9787d60e146f23aa1e7ce756fb6d08ea",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r27",
+    "baselineHash": "598aa3f948725dba3697e6effbdb58160781dd85bb1eb8f8d823584e2d8ebc69",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r28",
+    "baselineHash": "8d5298f115e37d0ef5e898bde25c3c15dee733800617369f5e8fdd627e9e8a41",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r29",
+    "baselineHash": "dd8b79019367110966c1912b28355a3aada5bfd8bd399fb6e0733b9a89eb1116",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r30",
+    "baselineHash": "a99757b25d6370205ee35fd89ce89e36ff3e20f6df0b6c9e45fadf7eb11259f1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r31",
+    "baselineHash": "9af5d1239647bdb49dc3899b0012056857b7514578f1845fc86bdc18c4e1614e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r32",
+    "baselineHash": "1e3b632918b5b50256ef2a1aa4c7ccba37c28d38ba7764193ae2f923459c3ec2",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "gross and Schloss differ in vowel length"
+    ]
+  },
+  {
+    "key": "1/german/reime/r33",
+    "baselineHash": "08c527d86dd97ff750e3c311e4b47ca5310d3209c6361dea680dae1ef5262669",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r34",
+    "baselineHash": "5cfcc07c61427afeb1b073f93ce6320e0c1eccd69592b3ce91b6078140dfcd9a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r35",
+    "baselineHash": "bb194f133287e34888837a870e7685a994d05e5bed5c0a0315c8bd60d91090df",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r36",
+    "baselineHash": "ad88c15be877b21415d2dddd2ff6655d144a89d0916d00b5ad0e9c57dccc37b7",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r37",
+    "baselineHash": "f99fe7da2e0c6cbc0459ccaee45b6efa8440c19864088cb16b81dbdd19127e56",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r38",
+    "baselineHash": "37e4c94f8572e26bc5bdb79dbf245d72eb28d10b431159d162ed8c23792614ce",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r39",
+    "baselineHash": "8aca5074d91e86617b49d6014cd763701f5c8b413615d943f49318aa56ff4626",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r40",
+    "baselineHash": "a1bae289bc80c8a3b70845ee71df67c1a0a102e2f09850d3f8d8c630153580ad",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r41",
+    "baselineHash": "12709ae22d918bbd59fd297cd64ec77cfa1be891b33b99b55207da3d8e150b57",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r42",
+    "baselineHash": "2e05e90aaac5fb2d3ab1e22790f31d173aa1a66188ac5934f0ff0696c2ae56f9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r43",
+    "baselineHash": "356790ba664899432255857dfc1b54b6f5a9817659f6da52ed664ab0008a21f9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r44",
+    "baselineHash": "d86e14a2e3cca3293f2392a418ccb286f2eddc7cee0242a6e81168200b508a38",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r45",
+    "baselineHash": "8e907b7b36445245fa2aae6534a4d843dc43196db2e37ff1dd3716d06cfd7841",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r46",
+    "baselineHash": "f594338ffe1ada9e6ab386def26510bc6b423f5cc76c62930c042cbadf42b98a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r47",
+    "baselineHash": "a90295aea65ae0a5b2ae9badb4a9053e77cc71c507a65f9fa0ca7ebaf4e3dbdc",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/reime/r48",
+    "baselineHash": "5e27c6a03df4ddfb72523949520fcf006c49031c3682ac5c5e0fa6033133c760",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Constrain open rhyme to identifiable target instead of incomplete answer whitelist"
+    ]
+  },
+  {
+    "key": "1/german/reime/r49",
+    "baselineHash": "f94eb4b926fbea44cdb5de466b808259cae8f7051eeea6c75102fa506e56bda5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Orangen and Schlangen do not reliably rhyme in standard German"
+    ]
+  },
+  {
+    "key": "1/german/reime/r50",
+    "baselineHash": "96177e0d19d709e9c27bc2825e0fe8dbb631eb4d67cc61a4177376a9deb9aea3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc1",
+    "baselineHash": "d6aef874b2ee6882a6633deff0796278a06e5ee0fc263049db8fdc1f1b8c2f48",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc2",
+    "baselineHash": "58410b298946aec3f974b618bce54e7bd0f7a364ce88c67cd5a4938a94a4e38a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc3",
+    "baselineHash": "a5fbe085d39cf99bc02ac0608b7640338931a06a143f208ee6914eac20054333",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc4",
+    "baselineHash": "d3a9459e49db7388bb82dc7052f690c15d7c0963377bfd34aa56b8e31bf0b6b7",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc5",
+    "baselineHash": "9c2c237a6277845124d95166491b70a5def2bd6ca7ad11eba39f2867f17ae1ec",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc6",
+    "baselineHash": "0ac7a68cf1f764e1c81538b8ae158b26b81ac071fe2c33f51248f150e823024a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc7",
+    "baselineHash": "6f2c201e324bd3f0d3bc3baffd27988a583bacff64ce5f6cb73bb31022f672af",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc8",
+    "baselineHash": "a1f190612901fd282229fc1db61040fe07bea1cb879a5437e0dcf8c45cafaade",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc9",
+    "baselineHash": "24597abd4fa3a6c61df125a68fbe9302f6aed8b17d49d9bf5a731434244ad453",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc10",
+    "baselineHash": "2e6a9f338dfe1856dec9e4b58e98b853191b520efbe1ac39f32268e9dedb9f25",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc11",
+    "baselineHash": "441144e4799559a44977dbb26f5f11d163433c7550b775cb913721380523c3c6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc12",
+    "baselineHash": "063f3433817d7b8a336e24ee957a081fa630afcf4ec3c7a93de555512459aa19",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc13",
+    "baselineHash": "32efaf2f38fde678c76db49bcfe85897c06f925b33241289c377ed2010b10cf1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc14",
+    "baselineHash": "73b14cd38ed89026d62b511103f761028a067de4cc14a99726151131e696bcfc",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc15",
+    "baselineHash": "162a1c5075a4f73770cd247e299a12e11240083603c2bd04a923a0d411307eeb",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc16",
+    "baselineHash": "dbce1cfeba60012c860f4ad31c0d1f19376bd83b6b67ee07ca68bc1d3a938bd0",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc17",
+    "baselineHash": "75c7243429a89c511f9fa420dd23c7e2e3c29600a6f0bdbcdc2fac2b5f92c2c6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc18",
+    "baselineHash": "68778b11fddb591650382116b95b6d8f0051511625d06251306162267a0eda1d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc19",
+    "baselineHash": "872307e7a13428c6e55e51c3dc03cd94da26e42da01a7e262f6e053168bfac8d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc20",
+    "baselineHash": "77790342bf2784235e5688b008ebd0ac98e548557ab44b073f76527dfa064bbf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc21",
+    "baselineHash": "3680ba491df5eb8bae2f88754b2fcfa12a1edceb90238965104726e025bdb5c7",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc22",
+    "baselineHash": "7685821800e12c7f137d97c2a7c46e4beb59fae3c205874d35813a3e5edd3bed",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc23",
+    "baselineHash": "e5b8d1badbc6866471d238877183e225e677b60a0ff7614e19d5838753fd8b6f",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc24",
+    "baselineHash": "9ad96ed91731f6f7d4bf143a9c8c485a4070656a6e8dd0d819cad1916ac5196c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc25",
+    "baselineHash": "9c4890ab7f9817f88dc741108e347c377e47cef695d855335f393ac150b2982d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc26",
+    "baselineHash": "20475de5e800416e383bed5f4685f1c19f663ae7e047139d4a4ab9b05e00fcba",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc27",
+    "baselineHash": "741235678230ebd911aff3945962784fcf2b9d8bdcc1ff4543cec72ffe8ccb7d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc28",
+    "baselineHash": "2d92e10b91e115f5052dda3bf73571a146f3f173673c4da0bc90f480e60143de",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc29",
+    "baselineHash": "b7c682abf5c951dba326b6d820565b8236da7f4d222c40675bb1df3e424eaf64",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc30",
+    "baselineHash": "ef618d44798b4a14031f96cded419d7e45bde24fbbfaf70978ba3002022df6bf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc31",
+    "baselineHash": "eeb8fdb255c81ca52c93969b0de3b8a1862705826056627c9b8bcab325bb6f8a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc32",
+    "baselineHash": "9d18071a2ea366fa89b9c8d91d1a94a5b341b915d2b1a4e096ee9d3218248640",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc33",
+    "baselineHash": "5f9f55f387414404b6b59ff3385715a4b6cc4d32c5296e4a42709cd7606ae2b9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc34",
+    "baselineHash": "34375509f2cc2e054f313af76cfdcefbbf43f5e0bfc22bac22289e95c3bd28c8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc35",
+    "baselineHash": "d4d4f2a899d384516061026fc30ef6c4757be971c0aacd2264c08cbd4df953d5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc36",
+    "baselineHash": "a646bc4ac084ce7fd69d423a0607a042d71c57f3490e1a61d383afa4f11012f3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc37",
+    "baselineHash": "d6ad2bdf8eaf3efdf9c532df6791ee94ef4d898c26ce0c72619a477c4828e3bf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc38",
+    "baselineHash": "7f3eef68e585ab09a701738495501b854653bb1ff9330d6a2033cd6c6c0c48e8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc39",
+    "baselineHash": "5c09f320c13c0c528e6c8692660ea8820842459467a544bb80f375b356645d69",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc40",
+    "baselineHash": "3fa59127f8defeb8332ae76d92899356fcc74f3382f97c9e75454fca9990f31b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc41",
+    "baselineHash": "6cb828a4d1e6fbfabd5193a4c0759844c2aa36087b88d1c45a73b19d11a53cbf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc42",
+    "baselineHash": "9aad226024bb9affe8e4921733ba335b2ef1d6e39351eb4ca9894bfef4b829f8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc43",
+    "baselineHash": "ef4b0744428721746a3f836f6c541f92a07e8d837095ef31e6bf519116eb8ad5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc44",
+    "baselineHash": "0b7b6739ed5388a655aee113c7b446da0010ed54775e7d16a3e7ed638112618b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc45",
+    "baselineHash": "8e5a45c85e4eced060f4bcdfa207bd2adcdb1d4b1787e24051095d643040ae98",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc46",
+    "baselineHash": "cc13dc7123915120df44bfb79e4f5473c04a9fb6a4513553f14462ed0e2eec4e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc47",
+    "baselineHash": "9349f876eef23585efe11674afae3c0915b5d416129739af4e8f1b18b9331745",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc48",
+    "baselineHash": "aba59f91fcec4e51cd2b0b418ae8f75f4465958e0db6f376c744743d8955286a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc49",
+    "baselineHash": "b05ba4937a10652076df1d6ead82b2add2f98a7baca1361d913695895062d17c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/abc-reihenfolge/abc50",
+    "baselineHash": "7b94744f6782d8c71196277a96b864689143d83f3fb1d75b3f7f00e94741c7ad",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Speak missing position explicitly"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl1",
+    "baselineHash": "5f3916a3a106097708e69216e599b22106be9b793d394574ee3b82e30aa54e5f",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl2",
+    "baselineHash": "b513d249dd28584965b7f352d20e1e7d94e9a7e07a7419b4e46085e8f16e5977",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl3",
+    "baselineHash": "6ce730414719fd3bfe43b1eed41856cb909cd48af0670019976e605ce36b9476",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl4",
+    "baselineHash": "27a339b1f8f81946c7d0b5ef3eb31671c46552728790e5760be34feddb0b0e5a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl5",
+    "baselineHash": "d1e797d28f3bc4d5c6da0978bda3d5e38b592c71aaeca1677721ad81becd7871",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl6",
+    "baselineHash": "81c73185ccf0d04edcae0480f80c399ac035b6dc84b12d6a44d1696a5c58f7a8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl7",
+    "baselineHash": "8ae9c038f1a47b9a734247bf0544baed9e0bb198f4bbfe26baabf82e92f7acd6",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl8",
+    "baselineHash": "18346f2b7289fd291b5b6230cde0f2a669067d346d601e3678cea94f9ef1af38",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl9",
+    "baselineHash": "5f79d6cd61c4cf7137c53dd28ba67b05af6f1155f4c811ad515d37461042821e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl10",
+    "baselineHash": "9281a079345ffcd847013104ace28a18737f3e4e54eb44eaee6ba44c11124e7b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl11",
+    "baselineHash": "25d211b745788cfe911a0cb5f0bd3f1a1ce232f682df0af37de56c3c7d2ea16a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl12",
+    "baselineHash": "34fd624554ae56e2fd0cd5bb07b8e728a5d452c4c9cd053afbbf13c92b591666",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl13",
+    "baselineHash": "1bbca9e4eb3bd131db186b39e3388a460dab352027c3bef5ad3c2a33867098df",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl14",
+    "baselineHash": "2f1c8348f6226deb588684f89bd31a8c59d947775a21df50bd0ca3551ff52de5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Remove name stereotype and answer disclosure"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl15",
+    "baselineHash": "3b46d9aa5e330361f3311e765661a3810e6a5e921616228e54fe92979d4a00be",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl16",
+    "baselineHash": "11983776aa0f1e4c543824d5dcddb62d9b68d8161dbd17520271202720fb8cc1",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl17",
+    "baselineHash": "bdc88f7d5e0ed98415ea2b0106d179b4c128c2b4019744be320ce97124e8a885",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl18",
+    "baselineHash": "99224ff8fd5d7a5f9de3a1d13c362e5990316d7c7030cb72d2ce8171bc62778e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept natural grade answers"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl19",
+    "baselineHash": "fc9e676f99b624a5279ae0739d6a8cea27111b7a1f96dc683d9294dc945bfb2e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl20",
+    "baselineHash": "7dcf7dd4d49e2ce99eb541591a53bab774708f85f30ba111f92b5fad4c995dfa",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl21",
+    "baselineHash": "9186933df38c7411b2b96881623f2543d53137352bad567b3d4119132264113a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl22",
+    "baselineHash": "2e7fbfc63c6adf0d7380ffe8972eaf09eb80dab215d0c1502f7d886ca37c3e6a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Hint referred to absent dann"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl23",
+    "baselineHash": "68cebcd63f3fe1412d1bace8c44dcb12bde391b191c23822cbb57f8106ba536c",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl24",
+    "baselineHash": "5a3a300bf13a0bdace440377851a20250c5e136c021a37aed1a298005d181a99",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unlimited open completion with text-grounded answer"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl25",
+    "baselineHash": "acd71f45c6ded9d5d4cdf705ea4c02992d45833785fd267af788fe55e3d7ed7b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl26",
+    "baselineHash": "5f6998453c8147b50f107ddc15d93f6fb39fda68b64d322a04e646388a1279de",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept Swiss Velo and short answer"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl27",
+    "baselineHash": "aeff042810e44613ef6553453be2d76c232ee0dc1d503b47a27d0f7b719e2b33",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl28",
+    "baselineHash": "74da8e186c21de1dd30b00a0c1d5647750eb9e640a72ca8d54fb2db0282a5499",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl29",
+    "baselineHash": "426d9a0de12501894e14eb4869069260573ffcb25013c78ad4a14521801d2bde",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl30",
+    "baselineHash": "336e39dd5613f50012822948bee407d0ad94467093807cf463c9de5423b9c8a0",
+    "status": "correction-candidate",
+    "reasons": [
+      "Parenthetical composite rejected natural response"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl31",
+    "baselineHash": "9fd320213c2a0acf9edabe2a55723cf2a64034afe7c5f50457bb9cadbd376d4c",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl32",
+    "baselineHash": "6a5a671f60a0ca7604eebae45790384c1c99aa1eac1b9d7262b666cf91991e09",
+    "status": "correction-candidate",
+    "reasons": [
+      "Simplify ordered two-part input"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl33",
+    "baselineHash": "b729dac8f09cdae74d9def784caaa1043c91c01b56082183daeeb2c92451d2ae",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl34",
+    "baselineHash": "1e3363373d2c4658cf5d1cca8d0cbf8f2ecc22e28e8e81eff6aebafa9a8be40a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl35",
+    "baselineHash": "951fcee64a3925bfedde8a93aa5ee2e0af4df4b8b2e9d02488ecfeab290b71db",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl36",
+    "baselineHash": "16ca781a68c7fe8873e15ecd00bdbb3152adefec2d7d9a17c8a6c685591a58dc",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl37",
+    "baselineHash": "a6cbea1195f1c1926b5725e82569513cef85064796ab0dfdfd451a77a1bdfa97",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept article in natural response"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl38",
+    "baselineHash": "3601ff4cbfb24d9585f461b7a45feecb94ada92cda7757715b88b4cf41165d1b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl39",
+    "baselineHash": "b237d6b8912eb75aac127ee622aca267cd52af81e18042f0359459e94b409932",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept complete action response"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl40",
+    "baselineHash": "ad9d615e84073b78dae53a0104aa2089410ecceb2e030931828a7f6afc087dda",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl41",
+    "baselineHash": "5f9e72068a846cf459970a36fd5f72860782447d98ff3c13fe5503b8b3087b1e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl42",
+    "baselineHash": "925421dab5f236e6add1437686a1297e1bdbf208ca317913cd293570003d3be2",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl43",
+    "baselineHash": "afb11728f2c6c458fe7ede433e861c688c72549696c11063da17c49eaf9eb178",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept article in natural response"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl44",
+    "baselineHash": "0da84cbb185bb7564bf10b9339700b9aac3d992773b5a403aa5ed3248748c8ce",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl45",
+    "baselineHash": "7048bbbdab38ce29a52faef0afc3c6153d016c28c43930695a41e22ac2605809",
+    "status": "correction-candidate",
+    "reasons": [
+      "Avoid advanced clock arithmetic in first-grade reading"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl46",
+    "baselineHash": "f228e4d5c3a6e747929d38ee9fcee75db0069fe5fad86a0f755c751c28a80fdb",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl47",
+    "baselineHash": "1cabc4d0ab536c73c26450818930f68656e6a7ffe38c7bcf82226885e51aaa70",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl48",
+    "baselineHash": "c62598367a73ba3013e7aa8636f26057ca224edf899e981d63226166165da5e4",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl49",
+    "baselineHash": "0a6da3676b88c0717d9e41270f656764c688c38f0e061726df8c67ef9245a7c8",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/saetze-lesen/sl50",
+    "baselineHash": "6a3c980cc73f0780e68436b1f094c3bc03a846438d7253bf095e63d2a238c92c",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk1",
+    "baselineHash": "8a09cf683ce598c7a537b738ef4453e35e8936b4982416cb4ce8c5edfc8173b3",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk2",
+    "baselineHash": "05361bab7e6a5cdaa74d6fb218b09ce45369faf2c7b5cafb03b774caed352c59",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk3",
+    "baselineHash": "c4456d358159a6717ca1af5557d9f4358285d0ca33a766c1146ae205917087f9",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk4",
+    "baselineHash": "6fd880d214760276e44113d5e8f5439610edb90bccdf943e1905acd42a1a0b76",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept familiar equivalent terms"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk5",
+    "baselineHash": "09762a494ecaa60e16a121aac761ead8b8cbbee85a0564245880bad1604e765e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk6",
+    "baselineHash": "9f97ad3c6df54d9a661afad40b8890571d8ecd9a707ef78ef1dd3dcaa0409063",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk7",
+    "baselineHash": "94657328874b8ba2b11a7667951122dce3d0bf3b8ec1181d4313e3708f8803d3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept familiar equivalent terms"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk8",
+    "baselineHash": "356fcae0f9b81093d88925c3f9f82a6245b759903a9f3fc73442b469db465250",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk9",
+    "baselineHash": "40029269253e92a26ae687d6fad7348d09e03233a0cc2eb9e9351adc4e8287f1",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk10",
+    "baselineHash": "73381e6c2a05678bbd01d6bbf4d539fb50d1e52ec838482d2ca2348977b693d6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept familiar equivalent terms"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk11",
+    "baselineHash": "b9a6db00a508cba760f79cbe0842f4c17ee24ad062f6d9feacdcdde6cfad6469",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk12",
+    "baselineHash": "6df94431e598f671c77de04f112658d037d37c9110a4bdae7d6d876f6c5476b2",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk13",
+    "baselineHash": "42338185545760a272174df7857ec62a5929728ba6f8f48ede229bcb46b13730",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept familiar equivalent terms"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk14",
+    "baselineHash": "ec7641113ef6f1999ba20ceb9186a5e1feaa1290f842c5d80ea4940735ea2713",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk15",
+    "baselineHash": "dbbed2d3bc16e2ca4a053bd0f21a30c096dbace6ba71c9874ff086031f82dcb0",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept familiar equivalent terms"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk16",
+    "baselineHash": "ee9cb03e78315cdf1cea803a84a50714e879d8d35f7e037257cdad590660368a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk17",
+    "baselineHash": "ff9bd8029963a99aaf253709e65623dda0136275fdbe1a2fdfc6faac79176f35",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk18",
+    "baselineHash": "e5cfe82c3d3f9d131bb613f5e821d2a9c0f7b32827ba90f9675dd28d368293a9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk19",
+    "baselineHash": "813b14a9a780158112e259e39a8fedab138f8119c517c1538b451a424e9380d4",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk20",
+    "baselineHash": "9a1c1784156b32f6b12aba3b8c5422ac9349817a344cd54089da1aa074075e89",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk21",
+    "baselineHash": "d2c344ead677d69f5c3b3d96f778754ac3980d81bccc5e176b1690a64398d836",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk22",
+    "baselineHash": "cca1e2c1846036d83ddec74ecc747c7731e2c42d29a5a5fe150e25179a5411dd",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk23",
+    "baselineHash": "ebf33813be8a5656ed473e6dfccba629679f3e5a025446f09f4b723a7cd0166b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk24",
+    "baselineHash": "32c9d1c45213b55d6dcaf0b7a545fbfc5051ca7e93b877502174697c9f5a35df",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk25",
+    "baselineHash": "278005d498e7a9a3764cd113c2f76108476db57104b589449235c147d47851b1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk26",
+    "baselineHash": "fa98ee3b5ab4fede1bca0c9d58189374fd8ff0d2e7db9214c5799fb40a5d53e8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk27",
+    "baselineHash": "b2a8b27bde1c1038eac11dbe01f3531b4f42d04b4bb7f9abebb1d2ee6703be44",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk28",
+    "baselineHash": "d9c6a0a4307a4c5ea10b9387f537bfc522de6c68720495a806d113e9d01d1344",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk29",
+    "baselineHash": "df84eab88f68f3b456eb63969be7a99f610069586091ebb538014a9b39fff1e2",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk30",
+    "baselineHash": "3049bb3476f05f5ef7beb451f921eb34e3130f0accd380697eff4c7fc8e72c08",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk31",
+    "baselineHash": "83928e42607c6050614653b18e198b5262bdc3618d4742bcd6b6576a7253252a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk32",
+    "baselineHash": "e49b54130d500fde0af4dcc0a3da7a0facd29b5708169c76429fac059cc32c29",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk33",
+    "baselineHash": "59373d3066ecc80a679f31d9e7f1b0218c4a4d4a227e28174bb6da7b096fc0a1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk34",
+    "baselineHash": "ad0ad4c7698eabb955187560468a9a692f1507e1ac96550378161dd92ca64ee1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk35",
+    "baselineHash": "03be885c2fb7675f2e3abbcf20de2619ad126086eb5bb3e4b57257e1859e2fe6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk36",
+    "baselineHash": "891a4645a1f7f1b4b4d6fa1449cd599a6ea1f77edfa5e795ab4c5d8d47b7aa2b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk37",
+    "baselineHash": "efd2db2cce991b6db5655b1bdb2565684df0ab1d17a839803b425f7f57b3cacf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk38",
+    "baselineHash": "fdc4c895dca57ef7ebb6f6ca891b1b206ab6d74994a9e0fd8e44ac3de66c97b1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk39",
+    "baselineHash": "a408e541e962957ea569fb3e056b482947325d07b569a5f795a7e26bad255221",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk40",
+    "baselineHash": "6ddd3d7734029a282215cd344d0aac901b930ba720eb4e20f1a96afe4c17a858",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk41",
+    "baselineHash": "ddeccf1f8d1f6fcd910a469c79bb67ee678ef72300922ad2e4c7a10e021e6ffd",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk42",
+    "baselineHash": "bd26874b2b13f5290eace8849a56cc583f1cd844a49768c886a42de5ed9b6770",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk43",
+    "baselineHash": "eac2e7c553aa85c531f9c76ca49db05e516a7fa2b80e65761b3d535ab2f5a56b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk44",
+    "baselineHash": "00b500ac9c21b4bad86c9d94e2edea9e5d6e61defea0c7d6077a518843ea5dd3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk45",
+    "baselineHash": "e390b4be1bc19783882cedabb25bdca6eaee1042200572bea9ced2e58ed79801",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk46",
+    "baselineHash": "39e9e08c2e28971064263b9d97a740935ee85ba42fee20a8f6c63f2d03db45ba",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk47",
+    "baselineHash": "a10660b3bd4fee37f8aee2df177004bc9b3429c5cf93142fedf66fc21449794a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk48",
+    "baselineHash": "d6d16c75bc2decf262c718e0d5fa149a4e6e643756a39db215bc9075c05e14c5",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk49",
+    "baselineHash": "8efdb76d8aa2d33d04aafe638387e8bca40177d98feb9545eecd803623e08ca9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/vokale-konsonanten/vk50",
+    "baselineHash": "bbb4526db665e4bddf5f21aa1489dc7a358e74e8e76cc5041534831f8f41b4dd",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk1",
+    "baselineHash": "ad23888f554a203fc78fee9eac742e8d30f2bb45ab4af369668b3d47cada9893",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk2",
+    "baselineHash": "395ee2e7d7c235dfdecf096d65d6014994badbeea8400a3a01e4816fcc05e769",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk3",
+    "baselineHash": "19f95c891f6c1bbd8ef3b7cfaedb83c24aa0f2859fa69213337a678e290b7b75",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk4",
+    "baselineHash": "9e0c7d84ad07e12228de882c7c9b2c6a82873ea557db6428e6a683392424cf79",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk5",
+    "baselineHash": "545a7f78180cdb0302cd1c7db15bbc635db4173967b4a0551a2d1c3d30ed6941",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk6",
+    "baselineHash": "f5dfc14fd8786b685fe581bb62db3a95ee8331c389630ddba4acd6bfeef26720",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk7",
+    "baselineHash": "4089d6675a7b4270ebd1e33bb227b4307435dd77dfda4e3c7572f613ef52a0b3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk8",
+    "baselineHash": "9675d2c3f917ef6bcbab01c798483a37423db6850bd6c2c386d47839eea4b6f1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk9",
+    "baselineHash": "a9b37b6b0a15dc1bf0a539d273f20ab20309fbf9cc75f0fb4bce54b2d549fb36",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk10",
+    "baselineHash": "4f6672228d344a17d597cd59793ee8009d4ba0a4a7d3d41fb389f1426c764981",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk11",
+    "baselineHash": "87ff8657d9d0ef0a20e5b559a90276ae466d4e8684fcf36fd7ea68c327900152",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk12",
+    "baselineHash": "7971c69e5f0a5fe1e12ebf9b5b2d7549ee0f011cf173053883f15dc83d8495be",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk13",
+    "baselineHash": "c16c3e5354813a8fab13a2dd3593306c5278a8819ffa67e68dfed13cbfe43e2a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk14",
+    "baselineHash": "fa0283c9ec6b2d1e9db8900ebf03d227a55620b0477500f13dc83255aa15d3d7",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk15",
+    "baselineHash": "b8d78bc9d98eece1792a15e0d65d98e3c052f8d2a1341455c7a4342ec7dbfaaf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk16",
+    "baselineHash": "e9c2aab59016b71fb7f7c5e3be85f1ea74d72b991bdfad1209f48b1ee5f11e76",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk17",
+    "baselineHash": "3e9371e199c867fc5cabaf4c8b2d1f7265f1470a31b8c3c920388c64e024fb73",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk18",
+    "baselineHash": "275088b494e3572e56ae2e473e917060ab43a067a9898705c04935c2c2394ddf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk19",
+    "baselineHash": "9bf24c74095e42358cf9993c3af50a0606702099ffc5818d61f9dbd2a3f14dc1",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk20",
+    "baselineHash": "bb5827c28bf91afea33fe6ac1fedc9a41429cc5aa1403d605cd132a2d3e59a6f",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk21",
+    "baselineHash": "7e41cb5d66a1d0522b26f59917cfa638c60f686a511a9470ebc5e9356883529c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk22",
+    "baselineHash": "0db5fbd226a52e80b22892f78a3690e42cec555db287f3bb36aa834a678c035c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk23",
+    "baselineHash": "dabba2d74d5b619a3655a2deba8bfae7d4dff603cbc61d9d2ad58018927f9f3c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk24",
+    "baselineHash": "8a58a0d0adbb4111148c045835900c3f4d46d1f6c4da9eb6d3968bfb70929a42",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk25",
+    "baselineHash": "85a939ac36402f8fda3f93edeb06b862fcebbce9b4daf12bedaf5cab78cf8afd",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk26",
+    "baselineHash": "8ab99ec7e30b716911fc6c74cce717d10efd0f310fd49c395bf921d3f1e812e2",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Remove second correct three-syllable choice Sonnenschein"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk27",
+    "baselineHash": "965fcc17776847b519b2ad088b7d119eb522bd5bdf316694ffa1b645adfade85",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk28",
+    "baselineHash": "3d008db38ccacd4f8abce8782e7d68406da1fe075bc0443ae6454196d95a8b48",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk29",
+    "baselineHash": "2dad0994247bb99ee1de5253047b3f62b94a25cd4d54c351a9dab2cd6c65fc20",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk30",
+    "baselineHash": "33ba554370c78edb3a2b9ec3bf64a8b85f89242b0949166df4b0509cf389c0ea",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Remove second correct two-syllable choice Einhorn"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk31",
+    "baselineHash": "f1b9d8378577a9e35d8c0c9857404f3096922586e6ad9e0172f56d8949a8924e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk32",
+    "baselineHash": "4b4c984284a0b56987e87955e39dc2af694a9041462b958f2714d47005bfc836",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk33",
+    "baselineHash": "d032d8992d25f57d34a6cac57063d779bb1dae41d10fef274c4479680bfb68e3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk34",
+    "baselineHash": "525507f05f11ff75525a1c21d133256f0cfc534bfef14c202f7e367b14e05efb",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk35",
+    "baselineHash": "6ef07085e2bb711d7f9d10538880db9868edb041175ddbe50f74500c65c78f09",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk36",
+    "baselineHash": "7ef8c51301223eb53f7ec107b84019acd263a6f559c980554ceaa4bcb48cd1ea",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk37",
+    "baselineHash": "bc4ea66c8f69cd6bb1444c5bef0c7c7aee2d33121e23d88b71f28d82c460541e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk38",
+    "baselineHash": "e29804ea4bd6b693d72fd41c8e03829c0583e203ad25eb3183b4d906e47863f9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk39",
+    "baselineHash": "2e565f623c30b12aebaf2e6f5f7fe4fcd6abbde8901c5c11297fab12d2c3e35c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk40",
+    "baselineHash": "5edbd52e14e7eb7aacfd613e8432d6eb18d0eb2d45ef4951df537629f5da90c9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk41",
+    "baselineHash": "f6fd29db2486d464c63eb3f3eaf9efa86078147fa577fcd5319b8749b7dd5e9d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk42",
+    "baselineHash": "f39648a3243762a24163d7c29e8e118efd52d7eea60d788c89c394b8b0c5c3a4",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk43",
+    "baselineHash": "48de193c6839d00f310d8c11829fce199a62bc28794937e4799aa14fa239ff7e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk44",
+    "baselineHash": "ee34693bc98bb317a8419be7a918cb442614ecc2ff3b514b267522ab2235dcc8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk45",
+    "baselineHash": "f0301d96cc62fe2e22df6a4d96f09ef12665b965668234fe2d9df480eb7a2201",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Avoid false universal phonological claim with syllabic consonants"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk46",
+    "baselineHash": "a04871457c3c607fcbe2aa560d933a3e13f5e15b1d520e0134dcc69c2becb21f",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk47",
+    "baselineHash": "9f0e9cdc918208f8ee4597ccc69859cbf7f26196c5177a022e2c071b871ba116",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk48",
+    "baselineHash": "056edd7da33d717b0364b76f3ebb1f2799212ca26d8118bb97d5123bba5e3295",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk49",
+    "baselineHash": "a2f0ccd12fe0b97ed98b258fec86afda96b3e9d5a08cfe5da1604224e93d9289",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/silben-klatschen/sk50",
+    "baselineHash": "6f4e567061fdde751adc71539a5a2f6b95f9c3bf80e95cf5a65a0f6722fe49ac",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Present whole word for actual syllable counting"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie1",
+    "baselineHash": "8c57d49f1a04d5a72bd77765c14622047825664e485649c86338e05733ffe68f",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie2",
+    "baselineHash": "bbcf86f7b126754624235dcd8e5ba812d34d0c65bc76d4a139721d1ce86d8a71",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie3",
+    "baselineHash": "2b819f87ca4c2c23f50e9162120cc85c460ab9a1e1802dd9bb44e79aa4a33f09",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie4",
+    "baselineHash": "3b4869622a3fb8f5bd594900ae6435db8ab5ccd903b96c4186c59db4116f1544",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie5",
+    "baselineHash": "1ffa17952902c98cf908aedda42752a5feab660b6bc92bb3575398ad4a85be78",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie6",
+    "baselineHash": "a221c846e058f884aa9c69e9b64bebfaaebfb3fb786e4f59e9b0952fbbdeae6d",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie7",
+    "baselineHash": "16389ed679975fb49c34f3f2bef07fb3ac44ca983e10c58a0e68b79036ac2c6b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie8",
+    "baselineHash": "91569dc1e352e258f9446cf39e02158baaea0349c4b69d3fa769bc50f04ea8f0",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie9",
+    "baselineHash": "d60b90b3bf1b6eb6915f8bc6125cef2f55f2a0fe0215fa1dc06f6aaee94fdf21",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie10",
+    "baselineHash": "2481fc792cb813425f6bd65b59daaecb43b275ed7eb4f34a7a6d5233c8ceb2ff",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie11",
+    "baselineHash": "955a31de27c0c98338ef8740d2d9e68c8f9a6fb0c5256a2212d075ff1c8d0bb3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie12",
+    "baselineHash": "d1ca4b93eed5856187ffd440d2c3dbfa11992d01fc1a4dbfb876830fd3f5eaca",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie13",
+    "baselineHash": "5fba891387b66497ea2f05b124c285d4bc31dab7a2795695b11b5329bc9ed4b0",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie14",
+    "baselineHash": "1ca182ff25a6febb5942489ab086ca88c46f21bc51c78b98538a85a0023c24d8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie15",
+    "baselineHash": "a208be15ad9ba57178f0d6cf782c65cc703d738750e3a61ea02ccba2aef15b56",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Distinguish letters from diphthongs and consonant clusters"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie16",
+    "baselineHash": "d727f17e51da70986ed50b93ee74b11e32fdfd7d637def398fb8c21139f049a4",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie17",
+    "baselineHash": "f85d874e6aa921968647ee07b2d81f1d38d69baf8298c11d432017c391c4a018",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie18",
+    "baselineHash": "4b55c83020d02a93f0ece4e37a8b3bd2aba2a331452dc835a960bb2e5a9afdf8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie19",
+    "baselineHash": "b3a96e04fd7c78f0f8319621c5e89c71dd53291447bfc1702848d9a3c09ee14c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie20",
+    "baselineHash": "1baf9fbc051a060e3ea62eee26a5325e9b71c3ed4b70ec63ceecd5b3d842d2b4",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie21",
+    "baselineHash": "c1a2cb8ceaf2c2deb4e9cfa078670f9331097ce3739f8fe2d90981db4f0eb0e6",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie22",
+    "baselineHash": "b986aa69833e2f21d231cde8f9b48306444bb1821ee3ff70662900302e3b4893",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie23",
+    "baselineHash": "01d20a1b459d6c71818be0197386260bbccaa1d3af262ea540b165876059182c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie24",
+    "baselineHash": "dc293c4841fedf6130d58a41bb95110da68065f1ffcd8b3725289a34ff19c078",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie25",
+    "baselineHash": "4a1b3e7357b7c8fb603ba853853cf23e7be0d6b5998e7d695095c10c2a84fb68",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie26",
+    "baselineHash": "a9f45ee6a06621f0b74171933aac8b4e891ee3e70e7cd45209b7be27c013c8a2",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie27",
+    "baselineHash": "ffc79db2f645b9f955a94f985b94ec32bb9237f9c8d8cc2ad3a9b97f55e6cc2c",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie28",
+    "baselineHash": "011d3234d988cba74b45b3abbc6308d42b4f684de341288d0b1bdd3e30998f3b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie29",
+    "baselineHash": "4a3eab7821ca78fcd5f4152b6ec078ee050401f06c361f941835a7544f939496",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie30",
+    "baselineHash": "690b88f7b89f544e0b6c74123ecd504d8d47bf242f46775d99498993c90b02d3",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie31",
+    "baselineHash": "ecc4cc0667464b989ca0edfaf7b35bf78a1042563e86e3b63ac064ba2061ec51",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie32",
+    "baselineHash": "28a47e303a96994b0aa03c6c061632c9221f36f3e46acb4a9db86c3ae77b6d64",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie33",
+    "baselineHash": "42ba903471d6c27f9bef417e7e94d49b0f0d3df4a0678ba611fe0ca01d39b07e",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie34",
+    "baselineHash": "06a10cf49ba880932c0a04c9b56ed9e41be435f6f010cf8c2975929ef5808bc9",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy",
+      "Match instruction to choice interaction"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie35",
+    "baselineHash": "46b08ab120d05f9d87915e4ef4d7b4ca96bfeeefe51bb6f4729d81e993ed1c4a",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie36",
+    "baselineHash": "c46f8f60f154a5e3942f2a00fb74666f48a99655dd21123e81f151a53cb9b9ee",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie37",
+    "baselineHash": "5d71acad20cd0d387a2e000137f3bbf5347bba8d734a1fbf5ecdabba319c0719",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie38",
+    "baselineHash": "8a1d323df42c507cabddfef75fee77776f3f2eab7c96c607a0b0c36662f3152b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie39",
+    "baselineHash": "de06f15028b3a8eeee2017d9f2187ff865defe0e5aaaa7af8956121f0297c286",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie40",
+    "baselineHash": "c4ae147d5ee4d4637e6a1679db3274143c4e3ffdd8732b4b8d072b1c1a404ccf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie41",
+    "baselineHash": "96826cdf6b139b55b7be7358c6185bc77659c1c8a534b27309ef54e6db319dfc",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie42",
+    "baselineHash": "6530ace6c3f1a2109746a507ff025ff75f30c18a1baa94fdffb32d9938cf2fb2",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie43",
+    "baselineHash": "da8ab6a5f1381c2df60fc794e4cca36bf469c615e18824f5ed8883e1d911aa99",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie44",
+    "baselineHash": "3dd8afa8c29134b69bd0c2b902c19dd392e7e7e10b80bd92a55d10c666b97c12",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie45",
+    "baselineHash": "cb027b21b373dcf8a7805451f4cd9f056101b492519414a638befcf8a1b99110",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie46",
+    "baselineHash": "a585b2bdd67e4d1a1084baf759e8bb04873d334b2c457768a9bfd1d8ba16ab2b",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie47",
+    "baselineHash": "505095ccc09b0a6e2f80887b72c87f227d12476299c9c71541d22d1da6da9c32",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie48",
+    "baselineHash": "38793a3afd996be2678ce672c296d3f155f8ce4f06270435795b6e744cf4a971",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie49",
+    "baselineHash": "a6b2ed671f0719bcd4c141cb5c248c5f98b4597e89ddbe5cea053cccdfc49fde",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/ie-ei/ie50",
+    "baselineHash": "b71c4f4f6a2b772a330f743e8e8098c3a51f7097dcab08f94636a41b9f6d7271",
+    "status": "correction-candidate",
+    "reasons": [
+      "Replace unrelated or answer-revealing hints with task-specific strategy"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs1",
+    "baselineHash": "daa07ffc546aa70c210aa4503ec71ed7d0af4ff7927ab01f9e053fd7cc447d0a",
+    "status": "correction-candidate",
+    "reasons": [
+      "No illustration supplied; assess meaningful sentence instead"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs2",
+    "baselineHash": "1f4c2c07021c3dc9f00d525690f61e3390be3c4feb842ed780886ed69b53d1d4",
+    "status": "correction-candidate",
+    "reasons": [
+      "No illustration supplied; assess meaningful sentence instead"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs3",
+    "baselineHash": "9775af832e96c29ab1db6bba37be07783af2cbbc7ac8e08467c3312252bfc265",
+    "status": "correction-candidate",
+    "reasons": [
+      "No illustration supplied; assess meaningful sentence instead"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs4",
+    "baselineHash": "7dea8c86642a35cd6e1dfca747e7e650d9a0d5646f32a6cd33c09916639bdff7",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs5",
+    "baselineHash": "8f5371fccee7ba1a62ad17f8b39ea8638a0abd5c462a96136b753416eee2f04d",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs6",
+    "baselineHash": "29c48e0ee949738d11a7137d7c4348ce72dfb93c8289edcbfdd91df6ef3f6669",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs7",
+    "baselineHash": "8f192748384f9d14c7a3e7f14e29e567fd940c73ec97d3f1268a4891ca7602bb",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs8",
+    "baselineHash": "d05793787d770b6f5bec8ffdad95856e8984f899782cce2bc782420d48ad8e17",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs9",
+    "baselineHash": "39f9e697f6e4db1e1291b1ade5ff814dba344347e38a2dcb7b70011beb3f093b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs10",
+    "baselineHash": "b045b957d6a9c8ba2f2e20e98abed54a8bc8757feec1f85435b9ab7698fa1c3b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs11",
+    "baselineHash": "15b45d00d02fcda8f91c7a904435195deaec1e75b3fef10bdeef322a7f72cd49",
+    "status": "correction-candidate",
+    "reasons": [
+      "All original options started correctly"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs12",
+    "baselineHash": "ba871b8fc0996ce8de901ed0f64466c3fe21d662f54b7e5a86d36417d6d705e1",
+    "status": "correction-candidate",
+    "reasons": [
+      "All original options ended correctly"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs13",
+    "baselineHash": "4c4996b158df8f7160af12442adf2f9a62e2aa357807a42759e618fd264a1384",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs14",
+    "baselineHash": "4e5dfe6b093b989f902d9f47ea8bb527ff8720c55b47f3294140f5a3a38c7646",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs15",
+    "baselineHash": "afd506454140f1f3e25f47270a1cb65bf669bb810b68bdc5d7f693bb7f53a1ed",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs16",
+    "baselineHash": "04ca6f078772fc3298423f0dacf61e4a285c9387c29da587ae31baaa47fc8937",
+    "status": "correction-candidate",
+    "reasons": [
+      "Constrain sentence order to canonical scoring"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs17",
+    "baselineHash": "a68491c69b0b7c010dd995faf636ccca2350a44982d7050d027781ae5112eab8",
+    "status": "correction-candidate",
+    "reasons": [
+      "Constrain sentence order to canonical scoring"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs18",
+    "baselineHash": "695a3dbd72842f54c50b9906e050828870c554f97a93a0c6133c111e566b02bf",
+    "status": "correction-candidate",
+    "reasons": [
+      "Constrain sentence order to canonical scoring"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs19",
+    "baselineHash": "ca8a87295bbe685cc8fbc26367fe3607e9f8bf4b0292610268057c199347ae99",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs20",
+    "baselineHash": "a04be34282d44dce653cfbb491b917e65181813b068534790c239018f31436f7",
+    "status": "correction-candidate",
+    "reasons": [
+      "Constrain sentence order to canonical scoring"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs21",
+    "baselineHash": "6960d091707e4434d78e255d461f6182115bfbfe61b729d79070dcc4f9da6fc7",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs22",
+    "baselineHash": "45fd6f319fc13910ef2b1e6fe80ff84ffac2c4192bfcd7967a18b4dd4f10bb37",
+    "status": "correction-candidate",
+    "reasons": [
+      "Missing image makes detailed comparison unsolvable"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs23",
+    "baselineHash": "8d085fae8ff8ec224cba753a8b19afadba7818ebbc30482ea9aae5e6c73a7f77",
+    "status": "correction-candidate",
+    "reasons": [
+      "Missing image makes detailed comparison unsolvable"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs24",
+    "baselineHash": "33f7b71207d1e78c87ed88c14eb1f2eeae7541087cc42c8e7ce963e8f1b559cf",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs25",
+    "baselineHash": "1f6628bd6d856db2e3bc9652b507ef5fabab3d4783d7fff59e1d33cfda1a5825",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs26",
+    "baselineHash": "281a9c619202e4d3fdcd1dbccb95b3aa552648b862942b999d4c3a0d5d4b4a3a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs27",
+    "baselineHash": "17980900235d2cbff6ae215bd0f51d1c45e446f489e107feaf5c80d1dbbed137",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs28",
+    "baselineHash": "aee7aee5ddb877c7eb598fd7556331520d804512b6a1551b089fc9a299b40b89",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept valid temporal connectors"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs29",
+    "baselineHash": "8072efdd2114a18cc4c75014665a9920c49d6907e35bb0d4b75d1c0981bc8483",
+    "status": "correction-candidate",
+    "reasons": [
+      "Accept valid temporal connectors"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs30",
+    "baselineHash": "aeae147398885bfaace3fcc61b9685b0c6fb914b7c72f31cff56c6491b9f0a65",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs31",
+    "baselineHash": "6b05c580512bd74988f5eda2ccb5df9e1a8daead27b9f75c3edf499ed8f97b27",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs32",
+    "baselineHash": "17fa8b3ac214c209218ca926d08f8f6a454f568cca1e5b5eba3c3a08b3ea4301",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs33",
+    "baselineHash": "c495ed52e2bf5511944f55a4452c72c3b59b8cef20aab4e2cfc13732471f9286",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs34",
+    "baselineHash": "320068a221a8832d68ad552ea01b3254f492561862b7e03ddb5efe230b5035fb",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs35",
+    "baselineHash": "df913516219b81d9f01320931bdf119a4d7075de9113fef870624814cbb8e266",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs36",
+    "baselineHash": "20cd64c71c5024aaf7be2e9e67b88973ebf2c30da4f6b2e1766ba183b44a7943",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs37",
+    "baselineHash": "2494bf7b16330266f545717373e1292b29da7255b20305369bb3fe3f4644d557",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs38",
+    "baselineHash": "30a15b5815cc4273ed18681c17ac7ee655bd1f42732f4ad71ad07b7aef72a9ad",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs39",
+    "baselineHash": "f9008a2ca841e4bc40aad3451193392c3fa36d1c5fd97ecc35be473102a54ae9",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs40",
+    "baselineHash": "7a38b6dcace659a50fa6a954c912850776c47f1dba8592d23da39b20125717b5",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs41",
+    "baselineHash": "0e822d5d64a89a427f9dc30d1ec7805cad1aa762680cedd168bb1162f50612eb",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs42",
+    "baselineHash": "e3ad240d55984483a3e15bb6769a3d3f368554d3bdee682fcaefd62af18adb6d",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs43",
+    "baselineHash": "a58ef14de95bcc216f2bd22ce3df6bc2b9205e6e60ff1b09d781f4883302c4e5",
+    "status": "correction-candidate",
+    "reasons": [
+      "All options clearer; specify required details"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs44",
+    "baselineHash": "967c3116e48f3bdafa675d1f2f63f24fdcda194046f5cf65b1b2da4b030f9ed0",
+    "status": "correction-candidate",
+    "reasons": [
+      "All options clearer; specify both details"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs45",
+    "baselineHash": "08577b2e843daca2116f391d435a14f1e8cca781fa98f281b11b0db30542e533",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs46",
+    "baselineHash": "4cb11b17b92766a280658af0a0515f3db0382bd317d07f3ad05dafa0d01c50e7",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs47",
+    "baselineHash": "4fc83adc20115d33c7d97fb43cb5fc3dedb4fd8182298a8cb74062fa640c3a29",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs48",
+    "baselineHash": "5b7bddf93a8b5a6d07af9ddbee1531310282ce5fa70fcdcf3a24252215438956",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs49",
+    "baselineHash": "f58c4c1971967ef48d35995bb44f5d2479ff51d5252ca715ff9f211fa91c312f",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/gefuehrtes-schreiben-1/g1gs50",
+    "baselineHash": "d4ca3b903f5d7f3eb71a50c3f33ede64c72d07cf5220a4a83f256080ca4426c2",
+    "status": "correction-candidate",
+    "reasons": [
+      "Two-sentence option is also complete; specify intended resolution"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer1",
+    "baselineHash": "f506a4dc6495c04e45f15a123905d452b79d1f7246bb54ab5b1d5b5e43df5006",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer2",
+    "baselineHash": "9510e0849a31058d54a3eb991933956e17525f439bae5531e47dc9f76f655ad0",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer3",
+    "baselineHash": "b33681b7239d63741376f7941549a895b0289f3fa7d0a3a5679ec862053dfb11",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer4",
+    "baselineHash": "1386077952faaaebe19f718bd236726411273c8bc925bbc3bf03a201f1123e95",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer5",
+    "baselineHash": "8d25166b3ce65a25caf8932f2f1633a13b8aca997bee6f15a68bb70a49ad87df",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer6",
+    "baselineHash": "00da0ed322b62ac44176a8feb1604c21ea75b2fa09c7701f60ee52660f7ccd9d",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer7",
+    "baselineHash": "d3a582fd6bc09166db5a1a914047ece6581fc4ee9a1c50a90277620bd51f6cda",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer8",
+    "baselineHash": "71feff041ce670c8a88e7624636a76d2a776b2cffba156e3f4f8b4872654792a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer9",
+    "baselineHash": "0ec0c239ea383dd645c90bfb8a8d0f4956f12b863c807c6f05fdc7e325aeb255",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer10",
+    "baselineHash": "90ae8c26ec2b0ab057ffa771dc05c4efb91dad55446ae8c223292d0cd729bf4e",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer11",
+    "baselineHash": "01e46f3001c9df7ca9c5af290b235c683615d2004b477da7bc1b1114d9a634f0",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer12",
+    "baselineHash": "a8def6b57fb65fff40e985ea65d7c3195eb68f2294e1cbf5c490277eea1f44a9",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer13",
+    "baselineHash": "e964c6896c52d9d7f26e9ee7ba5d6a54ae29436e986ce0c17daeb6565afa981f",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer14",
+    "baselineHash": "afb131ceed3458e95f1d37561e274f4694b0206bea692a3c8894c0996549c261",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer15",
+    "baselineHash": "b3f251a0ed363214d0e0d112b027ef7e6a5b7f62aefe75ac32b82e67ab0839f3",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer16",
+    "baselineHash": "5478c60e3bea75125a00b6b518045c0537fe2c21205c1282290544c653054386",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer17",
+    "baselineHash": "997a8327c0d58ab4fc18394d14196753a712a5507d52eeecfdfb938099f529cd",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer18",
+    "baselineHash": "09817aff952bc9712eff5e16f02195307d33d8b846c214a1348d035dfdd89fac",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer19",
+    "baselineHash": "919795d708e32a175a1dd418c8b95acdfcb3fd349372689aafb1996b6121a464",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer20",
+    "baselineHash": "5ea2a54527f663cb2a48617ab69979e74ad3bccd4ad41b509d9db6f6306fda99",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer21",
+    "baselineHash": "b37537bd47737462d3eee55a7365abfc914898a72573809ececb11ab3d690aed",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer22",
+    "baselineHash": "9cc54317c924c1a72d57a925a80731ca7393bcbb52d5a8476c3684c91fde7ad2",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer23",
+    "baselineHash": "990860c886c0be3b4bcc7ab389e9e347301a45a8295664a3ac82ba3fca96da17",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer24",
+    "baselineHash": "d499b5c9e33249cace32b1276aec1e36c211f247a9068c577f5f16ededc57adf",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer25",
+    "baselineHash": "6209363f5a13eba95bb01194c5b3d4e9b813546c3b191b6e9bfefd3989d94575",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer26",
+    "baselineHash": "3e0d2ad396464cfdadf5eb1a3d3f25216908adf723ad47d3b6a15310df9f98b3",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer27",
+    "baselineHash": "9618c3eda06b7fb87e5f5dad8ab2e872383001d27afa73f8a093a30080b3beb8",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer28",
+    "baselineHash": "d61d7916d29a48adc76b66104b5794ff1ce93740ce5b55ae1d75d0745693c78f",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer29",
+    "baselineHash": "c095756e8f89fcce98a9627a0a0bac511f774bf8d4816ab44e7690d8fc9fef7a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer30",
+    "baselineHash": "a873fea45a51e31262ae4b6d9126d997faf2ad5f981d4f9911b5bffe2f993279",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer31",
+    "baselineHash": "a387c8333eb90264402e8ba1acc8ff1f73d8f8eeb0219e50413097b70abd5cdb",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer32",
+    "baselineHash": "4e07aba4386d80aee4b63d77826ef92696d691faff32cee06c98ff520e35759d",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer33",
+    "baselineHash": "04040d137fe2d8e7a9461e456af1a18ecd3dc6e59eec388633602fbbb83895c9",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer34",
+    "baselineHash": "edfd751ceba3feeb80238898958a3ba3acca9acb265f186be95f1a3910b8afcf",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer35",
+    "baselineHash": "3ec5e3a6d7e37619d6ea526f784dd8c78b789d41e4677db70ba881dc329b95bf",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer36",
+    "baselineHash": "0d92e0675f0a20196894bb1700fd9de0ae1facecd3300847fd91bac81deb34c1",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer37",
+    "baselineHash": "bcc46e67d41ac1d01fd38146d9132a181851a85d24c38833659204098f0c8e73",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer38",
+    "baselineHash": "2fd7fa148da5ae1e4d6092eccc83da44957e173369f5739dea269243ac46d13b",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer39",
+    "baselineHash": "079ab1a3cbd37068128e3db6e70f96e40f214d77cb80de7c2143e83895d26f1f",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer40",
+    "baselineHash": "d64e722cb25b71f609ec91a78986b479d78211b45570b40e3c834b7a5a30a442",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer41",
+    "baselineHash": "43c5a99bcd88c21d03d455bb2c7e069f0e7900a123420570ff93f05fc80e0a94",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer42",
+    "baselineHash": "a94f25c51065463a2e4db687784e0bb9caf611662fcdb9a960528b9b0e381867",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer43",
+    "baselineHash": "40bf9bcc6ed12d4e1948fceeb8af271ef4391c03b9953e114b57fc1ead6c1ea9",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer44",
+    "baselineHash": "f42176b5d70aba4ab857b97079f4dba149969206f97c32f92c3f28d94acc228c",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer45",
+    "baselineHash": "ad97aef1ea5e8685295f79205c467b869c5b419003b99c126458a320ea51a137",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer46",
+    "baselineHash": "489b1142b7ee12dac0341c265532f088b243a89d4c6e4c0e54c20a2b3ac389d4",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer47",
+    "baselineHash": "b590ba6003d7aec97c4a7fc3ebcfde8bcbec4a179ea9c0ed04ee5902dd211a5a",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer48",
+    "baselineHash": "2547b7f98c4490804f4fbf13713a61061b6c4d4d93eef59da69de2935830523c",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer49",
+    "baselineHash": "b5eff2573bca66aae99c784c5ea6dc9a7ddab4d4d03ca64c26195236158b05cd",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  },
+  {
+    "key": "1/german/hoerverstehen-1/g1hoer50",
+    "baselineHash": "54fe5aab1289c458794855f062c40abbb03a7b1fa68ddf4f50e88e50cd83ef45",
+    "status": "content-inspected-validation-pending",
+    "reasons": [
+      "Inspected prompt, answer, distractors, hints and supplied interaction data; validation still pending"
+    ]
+  }
+]
