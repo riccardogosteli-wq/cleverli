@@ -1075,6 +1075,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               items={current.dragItems ?? []}
               zones={current.dropZones ?? []}
               answers={current.dropAnswers ?? {}}
+              interchangeableItems={current.interchangeableDragItems}
               onAnswer={handleAnswer}
             />
           )}

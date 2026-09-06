@@ -1,0 +1,474 @@
+{
+  "sa25": {
+    "note": "Easy2+2=4; specific draw/count hints, no missing image.",
+    "patch": {
+      "question": "Mia hat 2 Äpfel. Sie bekommt 2 dazu. Wie viele Äpfel hat sie jetzt? ___",
+      "hints": [
+        "Zeichne zuerst Mias Äpfel.",
+        "Zeichne die geschenkten Äpfel dazu und zähle alle Äpfel."
+      ]
+    }
+  },
+  "sa31": {
+    "note": "Medium inverse10-4=6; preserves key.",
+    "patch": {
+      "question": "In einer Schachtel waren einige Stifte. Mia legt 4 dazu. Jetzt sind es 10. Wie viele waren vorher darin? ___",
+      "hints": [
+        "Zeichne zehn Stifte.",
+        "Markiere die vier neuen Stifte. Zähle die Stifte, die vorher schon da waren."
+      ]
+    }
+  },
+  "sa32": {
+    "note": "Medium difference9-4=5.",
+    "patch": {
+      "question": "Ben hat 9 Murmeln, Mia hat 4. Wie viele Murmeln hat Ben mehr als Mia?",
+      "hints": [
+        "Lege für jedes Kind eine Reihe mit Murmeln.",
+        "Verbinde immer eine Murmel von Ben mit einer von Mia. Zähle Bens übrige Murmeln."
+      ]
+    }
+  },
+  "sa33": {
+    "note": "Hard12-3-2=7; two changes instead of easy repeated sum.",
+    "patch": {
+      "question": "Im Bus sitzen 12 Kinder. Beim ersten Halt steigen 3 aus, beim zweiten Halt noch 2. Wie viele Kinder bleiben im Bus? ___",
+      "hints": [
+        "Zeichne für jedes Kind einen Kreis.",
+        "Streiche zuerst die Kinder vom ersten Halt und dann die vom zweiten Halt durch. Zähle die übrigen Kreise."
+      ]
+    }
+  },
+  "sa34": {
+    "note": "Medium inverse14-5=9.",
+    "patch": {
+      "question": "Auf dem Tisch liegen 14 Karten. Davon sind 5 rot, alle anderen blau. Wie viele blaue Karten sind es?",
+      "hints": [
+        "Zeichne vierzehn Karten.",
+        "Markiere fünf Karten rot. Zähle alle anderen Karten."
+      ]
+    }
+  },
+  "sa35": {
+    "note": "Medium equal distribution9/3=3.",
+    "patch": {
+      "question": "9 Äpfel werden gleichmässig auf 3 Körbe verteilt. Wie viele Äpfel kommen in jeden Korb? ___",
+      "hints": [
+        "Zeichne drei Körbe und neun Äpfel.",
+        "Lege reihum in jeden Korb einen Apfel, bis alle verteilt sind. Zähle in einem Korb."
+      ]
+    }
+  },
+  "sa37": {
+    "note": "Explicit initiallyzero;5daily additions count new stickers only.",
+    "patch": {
+      "question": "Tom bekommt an jedem Tag 1 neuen Sticker. Wie viele neue Sticker bekommt er in 5 Tagen zusammen? ___",
+      "hints": [
+        "Zeichne für jeden Tag ein Kästchen.",
+        "Zeichne in jedes Kästchen den neuen Sticker. Zähle die Sticker aller Tage."
+      ]
+    }
+  },
+  "sa39": {
+    "note": "Hard inverse x+4-2=7 =>5.",
+    "patch": {
+      "question": "Mia hat einige Äpfel. Sie bekommt 4 dazu und gibt danach 2 weg. Nun hat sie 7. Wie viele hatte sie am Anfang? ___",
+      "hints": [
+        "Gehe die Geschichte rückwärts durch: Lege die weggegebenen Äpfel wieder dazu.",
+        "Nimm danach die geschenkten Äpfel weg. Jetzt siehst du den Anfang."
+      ]
+    }
+  },
+  "sa1_11": {
+    "note": "Easy4-2=2; remove concrete apples.",
+    "patch": {
+      "question": "Lena hat 4 Äpfel. Sie gibt 2 weg. Wie viele hat sie noch?",
+      "hints": [
+        "Zeichne Lenas vier Äpfel.",
+        "Streiche die weggegebenen Äpfel durch und zähle die übrigen."
+      ]
+    }
+  },
+  "sa1_17": {
+    "note": "Medium14/2=7; repeated distribution instead of sum.",
+    "patch": {
+      "question": "14 Kinder bilden Paare. Jedes Paar besteht aus 2 Kindern. Wie viele Paare entstehen?",
+      "hints": [
+        "Zeichne vierzehn Punkte für die Kinder.",
+        "Kreise immer zwei Punkte gemeinsam ein. Zähle die Kreise mit je zwei Kindern."
+      ]
+    }
+  },
+  "sa1_20": {
+    "note": "Medium missing20-14=6.",
+    "patch": {
+      "question": "Ein Regal hat Platz für 20 Bücher. 14 Plätze sind besetzt. Wie viele Bücher passen noch hinein? ___",
+      "hints": [
+        "Zeichne zwei Reihen mit je zehn Plätzen.",
+        "Markiere vierzehn Plätze als besetzt. Zähle die freien Plätze."
+      ]
+    }
+  },
+  "sa1_29": {
+    "note": "Medium missingstart x-5=8 after13, unique8.",
+    "patch": {
+      "question": "Mia hat 13 Kastanien. Sie verschenkt 5. Wie viele Kastanien behält sie?",
+      "hints": [
+        "Zeichne zehn Kastanien und daneben noch drei.",
+        "Streiche zuerst die drei neben der Zehnergruppe und dann noch zwei durch. Zähle den Rest."
+      ]
+    }
+  },
+  "sa1_37": {
+    "note": "Hard8+4-7=5; two-stage story.",
+    "patch": {
+      "question": "Auf einem Baum sitzen 8 Vögel. 4 kommen dazu. Dann fliegen 7 weg. Wie viele Vögel bleiben?",
+      "hints": [
+        "Zähle zuerst die angekommenen Vögel dazu.",
+        "Nimm danach die weggeflogenen Vögel von dieser neuen Anzahl weg."
+      ]
+    }
+  },
+  "dd2": {
+    "note": "Tallymeaning preserved; narrate strokes not bars.",
+    "patch": {
+      "question": "Was zeigt eine Strichliste? | | | |",
+      "hints": [
+        "Für jedes gezählte Ding wird ein Strich gemacht.",
+        "Überlege, was du herausfindest, wenn du die Striche zählst."
+      ],
+      "spokenPrompt": "Was zeigt eine Strichliste? Du siehst einzelne Zählstriche."
+    }
+  },
+  "dd4": {
+    "note": "4>3 dog; semantic stroke narration.",
+    "patch": {
+      "question": "Strichliste: Hund | | | |, Katze | | |. Welches Tier wurde öfter gezählt?",
+      "hints": [
+        "Verbinde gedanklich immer einen Hund-Strich mit einem Katze-Strich.",
+        "Bei welchem Tier bleibt ein Strich ohne Partner?"
+      ],
+      "spokenPrompt": "Strichliste: Hund vier Striche, Katze drei Striche. Welches Tier wurde öfter gezählt?"
+    }
+  },
+  "dd5": {
+    "note": "Actual3marks instead of supplied answer/missing picture; count-only easy.",
+    "patch": {
+      "question": "Strichliste Sterne: | | |. Wie viele Sterne wurden gezählt? ___",
+      "hints": [
+        "Jeder Strich steht für einen Stern.",
+        "Zeige von links nach rechts auf jeden Strich genau einmal."
+      ],
+      "spokenPrompt": "Strichliste Sterne: ein Strich, ein Strich, ein Strich. Wie viele Sterne wurden gezählt?"
+    }
+  },
+  "dd7": {
+    "note": "Medium tallydifference7-3=4.",
+    "patch": {
+      "question": "Strichliste: Rot | | | | | | |, Blau | | |. Wie viele rote Stimmen gibt es mehr? ___",
+      "hints": [
+        "Ordne jedem blauen Strich einen roten zu.",
+        "Zähle die roten Striche ohne Partner."
+      ],
+      "spokenPrompt": "Rot erhält sieben Stimmen, Blau drei. Wie viele rote Stimmen gibt es mehr?"
+    }
+  },
+  "dd9": {
+    "note": "Medium combine2+3=5.",
+    "patch": {
+      "question": "Strichliste Fahrzeuge: Velo | |, Bus | | |. Wie viele Fahrzeuge wurden zusammen gezählt? ___",
+      "hints": [
+        "Jeder Strich steht für ein Fahrzeug.",
+        "Zähle zuerst die Velos und dann die Busse dazu."
+      ],
+      "spokenPrompt": "Es wurden zwei Velos und drei Busse gezählt. Wie viele Fahrzeuge sind das zusammen?"
+    }
+  },
+  "dd11": {
+    "note": "5+1=6 tally grouping; speech groups not punctuation.",
+    "patch": {
+      "question": "Strichliste Hunde: ||||/ |. Wie viele Hunde sind das? ___",
+      "hints": [
+        "Vier senkrechte Striche und ein schräger Strich bilden zusammen eine Fünfergruppe.",
+        "Zähle von der Fünfergruppe aus die einzelnen Striche dazu."
+      ],
+      "spokenPrompt": "Die Strichliste Hunde zeigt eine Fünfergruppe und einen einzelnen Strich. Wie viele Hunde sind das?"
+    }
+  },
+  "dd13": {
+    "note": "3rain separate4sun; select relevant row.",
+    "patch": {
+      "question": "Strichliste Wetter: Regen | | |, Sonne | | | |. Wie viele Regentage wurden gezählt? ___",
+      "hints": [
+        "Suche die Zeile mit Regen.",
+        "Zähle nur die Striche beim Regen, nicht die bei Sonne."
+      ],
+      "spokenPrompt": "Regen: ein Strich, ein Strich, ein Strich. Sonne: vier Striche. Wie viele Regentage wurden gezählt?"
+    }
+  },
+  "dd14": {
+    "note": "Actual6marks easy count not stated answer.",
+    "patch": {
+      "question": "Strichliste Sterne: | | | | | |. Wie viele Sterne wurden gezählt?",
+      "hints": [
+        "Jeder Strich steht für einen Stern.",
+        "Zeige nacheinander auf jeden Strich und zähle ihn nur einmal."
+      ],
+      "spokenPrompt": "Sterne: eine Fünfergruppe und ein einzelner Strich. Wie viele Sterne wurden gezählt?"
+    }
+  },
+  "dd17": {
+    "note": "Data table self-contained not invisible diagram; max5Tuesday.",
+    "patch": {
+      "question": "Gemessener Regen: Montag 3 Becher, Dienstag 5 Becher, Mittwoch 4 Becher. An welchem Tag regnete es am meisten? ___",
+      "hints": [
+        "Vergleiche die Regenmengen von zwei Tagen.",
+        "Vergleiche die grössere davon auch mit dem dritten Tag. Schreibe den zugehörigen Tag."
+      ]
+    }
+  },
+  "dd18": {
+    "note": "5+3+4=12; explicit fruit names for accessibility.",
+    "patch": {
+      "question": "Strichliste Früchte: Äpfel |||||, Orangen |||, Bananen ||||. Wie viele Früchte sind es insgesamt?",
+      "hints": [
+        "Zähle die Striche jeder Fruchtgruppe.",
+        "Zähle die drei Gruppen zusammen, ohne eine Gruppe doppelt zu zählen."
+      ],
+      "spokenPrompt": "Es wurden fünf Äpfel, drei Orangen und vier Bananen gezählt. Wie viele Früchte sind es insgesamt?"
+    }
+  },
+  "dd19": {
+    "note": "Medium5+2=7tally totals.",
+    "patch": {
+      "question": "Umfrage Spiele: Fangen |||||, Verstecken ||. Jedes Kind stimmt einmal ab. Wie viele Kinder haben abgestimmt? ___",
+      "hints": [
+        "Zähle die Stimmen jeder Gruppe.",
+        "Zähle beide Gruppen zusammen. Jede Stimme gehört zu einem Kind."
+      ],
+      "spokenPrompt": "Fangen erhält fünf Stimmen, Verstecken zwei. Jedes Kind stimmt einmal ab. Wie viele Kinder haben abgestimmt?"
+    }
+  },
+  "dd21": {
+    "note": "Medium13-5=8 missing count.",
+    "patch": {
+      "question": "13 Kinder stimmen einmal über ihr Lieblingstier ab. 5 wählen den Hund, alle anderen die Katze. Wie viele wählen die Katze? ___",
+      "hints": [
+        "Zeichne dreizehn Striche für alle Stimmen.",
+        "Markiere die fünf Stimmen für den Hund. Zähle die übrigen Stimmen."
+      ]
+    }
+  },
+  "dd25": {
+    "note": "max5green; canonical/alternate existing preserved.",
+    "patch": {
+      "question": "Strichliste Farben: Rot ||||, Blau |||, Grün |||||. Welche Farbe kommt am häufigsten vor? ___",
+      "hints": [
+        "Vergleiche die Reihen der Striche.",
+        "Welche Reihe ist am längsten? Schreibe den Namen dieser Farbe."
+      ],
+      "spokenPrompt": "Rot erhält vier Stimmen, Blau drei und Grün fünf. Welche Farbe kommt am häufigsten vor?"
+    }
+  },
+  "dd28": {
+    "note": "6+4+2=12; grouped animals clear.",
+    "patch": {
+      "question": "Strichliste Haustiere: Hund ||||| |, Katze ||||, Hamster ||. Wie viele Haustiere wurden insgesamt gezählt?",
+      "hints": [
+        "Zähle die Striche jeder Tiergruppe.",
+        "Fasse zuerst zwei Gruppen zusammen und zähle die dritte dazu."
+      ],
+      "spokenPrompt": "Gezählt wurden sechs Hunde, vier Katzen und zwei Hamster. Wie viele Haustiere sind das insgesamt?"
+    }
+  },
+  "dd30": {
+    "note": "Hard two-step deficit10-(4+3)=3.",
+    "patch": {
+      "question": "10 Kinder stimmen einmal ab. Rot erhält 4 Stimmen, Blau 3. Alle übrigen Stimmen sind für Grün. Wie viele Stimmen erhält Grün? ___",
+      "hints": [
+        "Zähle zuerst die Stimmen für Rot und Blau zusammen.",
+        "Ziehe diese Summe von allen zehn Stimmen ab."
+      ]
+    }
+  },
+  "dd32": {
+    "note": "Actual4marks easy count.",
+    "patch": {
+      "question": "Strichliste Bälle: | | | |. Wie viele Bälle wurden gezählt?",
+      "hints": [
+        "Jeder Strich steht für einen Ball.",
+        "Zähle die Striche von links nach rechts genau einmal."
+      ],
+      "spokenPrompt": "Bälle: ein Strich, ein Strich, ein Strich, ein Strich. Wie viele Bälle wurden gezählt?"
+    }
+  },
+  "dd34": {
+    "note": "8>6cat explicit labels + groups.",
+    "patch": {
+      "question": "Strichliste: Katze ||||/ |||, Hund ||||/ |. Welches Tier wurde öfter gezählt?",
+      "hints": [
+        "Beide Tiere haben eine Fünfergruppe.",
+        "Vergleiche die Striche, die nach der Fünfergruppe übrig bleiben."
+      ],
+      "spokenPrompt": "Katze: eine Fünfergruppe und drei einzelne Striche. Hund: eine Fünfergruppe und ein einzelner Strich. Welches Tier wurde öfter gezählt?"
+    }
+  },
+  "dd38": {
+    "note": "10+9=19; group speech and no solving hints.",
+    "patch": {
+      "question": "Strichliste Kinder: Jungen ||||| |||||, Mädchen ||||| ||||. Wie viele Kinder sind es insgesamt?",
+      "hints": [
+        "Suche zuerst die vollständigen Fünfergruppen.",
+        "Zähle deren Wert zusammen und die einzelnen Striche dazu."
+      ],
+      "spokenPrompt": "Jungen: zwei Fünfergruppen. Mädchen: eine Fünfergruppe und vier einzelne Striche. Wie viele Kinder sind es insgesamt?"
+    }
+  },
+  "dd40": {
+    "note": "Hard combined7+4-6=5 comparison of totals.",
+    "patch": {
+      "question": "Gezählt wurden 7 rote und 4 blaue Bälle sowie 6 grüne Bälle. Wie viele rote und blaue Bälle zusammen gibt es mehr als grüne?",
+      "hints": [
+        "Zähle zuerst die roten und blauen Bälle zusammen.",
+        "Vergleiche diese gemeinsame Anzahl mit den grünen Bällen. Gesucht ist der Unterschied."
+      ]
+    }
+  },
+  "dd1_17": {
+    "note": "Actual6 tally birds.",
+    "patch": {
+      "question": "Strichliste Vögel: ||||/ |. Wie viele Vögel wurden gezählt?",
+      "hints": [
+        "Eine Gruppe mit dem schrägen Strich steht für fünf Vögel.",
+        "Zähle von dort aus die einzelnen Striche dazu."
+      ],
+      "spokenPrompt": "Die Vogelliste zeigt eine Fünfergruppe und einen einzelnen Strich. Wie viele Vögel wurden gezählt?"
+    }
+  },
+  "dd1_18": {
+    "note": "5>3 summer; strategy rather than answer leak.",
+    "patch": {
+      "question": "Umfrage: 5 mögen Sommer, 3 mögen Winter. Welche Jahreszeit hat mehr Stimmen? ___",
+      "hints": [
+        "Zeichne für jede Jahreszeit eine Reihe mit ihren Stimmen.",
+        "Vergleiche die beiden Reihen. Schreibe den Namen der Jahreszeit mit der längeren Reihe."
+      ]
+    }
+  },
+  "dd1_19": {
+    "note": "4>2 dog; semantic audio.",
+    "patch": {
+      "question": "Strichliste: Hund ||||, Katze ||. Welches Tier wurde öfter gezählt?",
+      "hints": [
+        "Ordne jedem Katze-Strich einen Hund-Strich zu.",
+        "Bei welchem Tier bleiben Striche übrig?"
+      ],
+      "spokenPrompt": "Hund: vier Striche. Katze: zwei Striche. Welches Tier wurde öfter gezählt?"
+    }
+  },
+  "dd1_22": {
+    "note": "4+1=5; count complete records, speech no punctuation.",
+    "patch": {
+      "question": "Strichliste: |||| |. Wie viele Einträge sind das? ___",
+      "hints": [
+        "Zähle zuerst die zusammenstehenden Striche.",
+        "Zähle den einzelnen Strich rechts dazu."
+      ],
+      "spokenPrompt": "Vier Striche stehen zusammen. Rechts daneben steht ein einzelner Strich. Wie viele Einträge sind das zusammen?"
+    }
+  },
+  "dd1_26": {
+    "note": "4+3=7 sum fruits.",
+    "patch": {
+      "question": "Strichliste: Äpfel ||||, Birnen |||. Wie viele Früchte sind es zusammen? ___",
+      "hints": [
+        "Zähle zuerst die Äpfel.",
+        "Zähle die Birnen zu den Äpfeln dazu."
+      ],
+      "spokenPrompt": "Vier Äpfel und drei Birnen wurden gezählt. Wie viele Früchte sind es zusammen?"
+    }
+  },
+  "dd1_28": {
+    "note": "Compare5>3 =>grösser; no missing diagram.",
+    "patch": {
+      "question": "Die gemessene Anzahl ändert sich von 3 auf 5. Wird die Anzahl grösser oder kleiner? ___",
+      "hints": [
+        "Stelle dir die beiden Zahlen auf einem Zahlenstrahl vor.",
+        "Geht der Schritt nach rechts oder nach links? Überlege, was das für die Anzahl bedeutet."
+      ]
+    }
+  },
+  "dd1_34": {
+    "note": "4-2=2 pairwise tally comparison.",
+    "patch": {
+      "question": "Strichliste: Gruppe 1 ||||, Gruppe 2 ||. Wie viele Einträge hat Gruppe 1 mehr? ___",
+      "hints": [
+        "Verbinde jeden Strich von Gruppe zwei mit einem Strich von Gruppe eins.",
+        "Zähle die Striche, die in Gruppe eins ohne Partner bleiben."
+      ],
+      "spokenPrompt": "Gruppe eins hat vier Einträge, Gruppe zwei zwei Einträge. Wie viele Einträge hat Gruppe eins mehr?"
+    }
+  },
+  "dd1_39": {
+    "note": "Hard total data5+4+3-5=7 excluding one group.",
+    "patch": {
+      "question": "Umfrage: 5 Kinder wählen Fangen, 4 Verstecken und 3 Seilspringen. Jedes Kind wählt ein Spiel. Wie viele wählen nicht Fangen?",
+      "hints": [
+        "Suche die beiden Spiele, die nicht Fangen sind.",
+        "Zähle nur die Stimmen dieser beiden Spiele zusammen."
+      ]
+    }
+  },
+  "dd1_42": {
+    "note": "Hard update9-4=5 instead of trivial5group hard repetition.",
+    "patch": {
+      "question": "Eine Strichliste enthält 9 Einträge. 4 wurden versehentlich doppelt gezählt und werden gestrichen. Wie viele verbleibende Einträge bleiben? ___",
+      "hints": [
+        "Zeichne neun Striche.",
+        "Streiche die vier doppelt gezählten Einträge. Zähle nur die Striche, die bleiben."
+      ],
+      "spokenPrompt": "Eine Strichliste enthält neun Einträge. Vier wurden versehentlich doppelt gezählt und werden gestrichen. Wie viele verbleibende Einträge bleiben?"
+    }
+  },
+  "dd1_45": {
+    "note": "Hard missing20-7-5=8.",
+    "patch": {
+      "question": "20 Kinder wählen je ein Lieblingstier. 7 wählen den Hund, 5 die Katze, alle anderen das Pferd. Wie viele wählen das Pferd?",
+      "hints": [
+        "Zähle zuerst die Stimmen für Hund und Katze zusammen.",
+        "Ziehe diese Stimmen von der Gesamtzahl der Kinder ab."
+      ]
+    }
+  },
+  "dd1_46": {
+    "note": "5+5+1=11 semantically grouped audio.",
+    "patch": {
+      "question": "Strichliste Gruppe A: ||||/ ||||/ |. Wie viele Einträge sind das? ___",
+      "hints": [
+        "Suche die vollständigen Fünfergruppen.",
+        "Zähle diese Gruppen zusammen und ergänze die einzelnen Striche."
+      ],
+      "spokenPrompt": "Gruppe A hat zwei Fünfergruppen und einen einzelnen Strich. Wie viele Einträge sind das zusammen?"
+    }
+  },
+  "dd1_47": {
+    "note": "Hard beforecompare8-2 vs3 gives3.",
+    "patch": {
+      "question": "Rot erhält 8 Stimmen, Blau 3. Zwei rote Stimmen sind nicht zählbar. Wie viele verbleibende rote Stimmen gibt es mehr als blaue?",
+      "hints": [
+        "Ziehe zuerst die doppelt gezählten Stimmen von den roten Stimmen ab.",
+        "Vergleiche die verbleibenden roten Stimmen mit den blauen. Gesucht ist der Unterschied."
+      ]
+    }
+  },
+  "dd1_50": {
+    "note": "Hard two-stage missing12-3-5=4.",
+    "patch": {
+      "question": "12 Kinder stimmen ab. 3 Stimmen sind nicht zählbar. Von den verbleibenden Stimmen sind 5 für Rot und der Rest für Blau. Wie viele verbleibende Stimmen sind für Blau? ___",
+      "hints": [
+        "Rechne zuerst aus, wie viele Stimmen zählbar sind.",
+        "Ziehe davon die Stimmen für Rot ab."
+      ]
+    }
+  }
+}

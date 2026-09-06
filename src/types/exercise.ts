@@ -57,7 +57,8 @@ export interface Exercise {
   dropZonesEN?: { id: string; label: string }[];
   dropZonesFR?: { id: string; label: string }[];
   dropZonesIT?: { id: string; label: string }[];
-  dropAnswers?: Record<string, string>;                                          // drag-drop: zoneId→itemId
+  dropAnswers?: Record<string, string>;                                          // drag-drop: itemId→zoneId
+  interchangeableDragItems?: boolean; // Identical counters can exchange IDs; opt-in only.
   numberMin?: number;   // number-line
   numberMax?: number;   // number-line
   numberStep?: number;  // number-line

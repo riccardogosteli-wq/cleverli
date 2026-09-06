@@ -1,0 +1,441 @@
+{
+  "v3": {
+    "note": "5+5=10; concrete paired hands, semantic speech replaces blank.",
+    "patch": {
+      "hints": [
+        "Zeige an einer Hand fünf Finger und an der anderen gleich viele.",
+        "Zähle die Finger beider Hände zusammen."
+      ],
+      "spokenPrompt": "Was ist das Doppelte von fünf?"
+    }
+  },
+  "v4": {
+    "note": "7+7=14; concrete two rows instead of answer interval.",
+    "patch": {
+      "hints": [
+        "Zeichne sieben Punkte und darunter noch einmal gleich viele.",
+        "Zähle beide Reihen zusammen. Beginne bei der zweiten Reihe nicht wieder bei eins."
+      ]
+    }
+  },
+  "v5": {
+    "note": "Easy double2 remains; concrete drawing replaces grammar hint.",
+    "patch": {
+      "hints": [
+        "Zeichne zwei Punkte und daneben noch einmal zwei.",
+        "Zähle alle gezeichneten Punkte zusammen."
+      ]
+    }
+  },
+  "v6": {
+    "note": "Medium inverse half: unknown whole with half3 is6, replacing easy double3 repeat.",
+    "patch": {
+      "hints": [
+        "Die ganze Menge besteht aus zwei gleich grossen Teilen.",
+        "Zeichne drei Steine für den einen Teil und genauso viele für den anderen. Zähle beide Teile zusammen."
+      ],
+      "question": "Die Hälfte meiner Steine sind 3 Steine. Wie viele Steine habe ich insgesamt?"
+    }
+  },
+  "v7": {
+    "note": "16/2=8; equal distribution instead of abstract generic hint.",
+    "patch": {
+      "hints": [
+        "Verteile sechzehn kleine Gegenstände abwechselnd auf zwei Teller.",
+        "Prüfe, ob auf beiden Tellern gleich viele liegen. Zähle dann einen Teller."
+      ],
+      "spokenPrompt": "Was ist die Hälfte von sechzehn?"
+    }
+  },
+  "v8": {
+    "note": "9+9=18; bridge10 without supplied subtotal.",
+    "patch": {
+      "hints": [
+        "Zeichne zwei Reihen mit je neun Punkten.",
+        "Verschiebe aus der zweiten Reihe einen Punkt in die erste. Zähle die volle Zehnerreihe und die übrigen Punkte zusammen."
+      ]
+    }
+  },
+  "v9": {
+    "note": "2+2=4; concrete pairs and natural speech.",
+    "patch": {
+      "hints": [
+        "Lege zwei Steine hin und daneben noch einmal gleich viele.",
+        "Zähle die Steine beider Gruppen zusammen."
+      ],
+      "spokenPrompt": "Was ist das Doppelte von zwei?"
+    }
+  },
+  "v10": {
+    "note": "6/2=3; distribute alternating instead of range.",
+    "patch": {
+      "hints": [
+        "Verteile sechs Steine abwechselnd auf zwei Teller.",
+        "Wenn beide Teller gleich viele Steine haben, zähle nur einen Teller."
+      ]
+    }
+  },
+  "v11": {
+    "note": "1+1=2; two single objects, no answer interval.",
+    "patch": {
+      "hints": [
+        "Lege einen Stein hin und daneben noch einmal gleich viele.",
+        "Zähle beide Gruppen zusammen."
+      ],
+      "spokenPrompt": "Was ist das Doppelte von eins?"
+    }
+  },
+  "v12": {
+    "note": "4/2=2; pair-based concrete half.",
+    "patch": {
+      "hints": [
+        "Lege vier Steine bereit und zeichne zwei Kreise als Teller.",
+        "Lege abwechselnd einen Stein auf jeden Teller. Zähle am Schluss nur einen Teller."
+      ]
+    }
+  },
+  "v13": {
+    "note": "4+4=8; duplicate group, exact semantic question.",
+    "patch": {
+      "hints": [
+        "Zeichne vier Punkte und eine zweite Gruppe mit gleich vielen Punkten.",
+        "Zähle beide Gruppen zusammen."
+      ],
+      "spokenPrompt": "Was ist das Doppelte von vier?"
+    }
+  },
+  "v15": {
+    "note": "6+6=12; two6groups, count-on strategy.",
+    "patch": {
+      "hints": [
+        "Lege sechs kleine Gegenstände hin und daneben noch einmal sechs.",
+        "Beginne bei sechs und zähle die zweite Gruppe dazu."
+      ],
+      "spokenPrompt": "Was ist das Doppelte von sechs?"
+    }
+  },
+  "v16": {
+    "note": "20/2=10; alternate distributing20, no range.",
+    "patch": {
+      "hints": [
+        "Lege zwanzig kleine Gegenstände bereit.",
+        "Verteile sie abwechselnd auf zwei Teller und zähle danach die Gegenstände auf einem Teller."
+      ]
+    }
+  },
+  "v17": {
+    "note": "0+0=0; empty groups model doublingzero without writing key in hints.",
+    "patch": {
+      "hints": [
+        "Stelle dir zwei leere Schalen vor. In beiden ist gleich viel.",
+        "Wie viele Steine kannst du insgesamt zählen, wenn du die beiden Schalen zusammenschiebst?"
+      ],
+      "spokenPrompt": "Was ist das Doppelte von null?"
+    }
+  },
+  "v18": {
+    "note": "8+8=16; two rows, bridge10 model.",
+    "patch": {
+      "hints": [
+        "Zeichne zwei Reihen mit je acht Punkten.",
+        "Ergänze die erste Reihe mit Punkten aus der zweiten auf zehn. Zähle dann die übrigen Punkte dazu."
+      ]
+    }
+  },
+  "v19": {
+    "note": "14/2=7; alternate distribution and double-check inverse.",
+    "patch": {
+      "hints": [
+        "Verteile vierzehn Steine abwechselnd auf zwei Teller.",
+        "Zähle einen Teller. Zur Kontrolle muss diese Menge zweimal wieder alle Steine ergeben."
+      ],
+      "spokenPrompt": "Was ist die Hälfte von vierzehn?"
+    }
+  },
+  "v20": {
+    "note": "Medium inverse double16 gives8 original key; replaces double4 repeat.",
+    "patch": {
+      "hints": [
+        "Gesucht ist die Menge in einem von zwei gleich grossen Teilen.",
+        "Verteile sechzehn Punkte auf zwei gleich grosse Gruppen. Zähle eine Gruppe."
+      ],
+      "question": "Ich verdopple eine Zahl und erhalte 16. Welche Zahl war es?"
+    }
+  },
+  "v21": {
+    "note": "Unknown double10 gives5; model equal parts, semantic missing operand speech.",
+    "patch": {
+      "hints": [
+        "Zeichne zehn Punkte und verteile sie auf zwei gleich grosse Gruppen.",
+        "Zähle eine Gruppe. Prüfe, ob zweimal diese Menge zusammen zehn ergibt."
+      ],
+      "spokenPrompt": "Welche Zahl musst du verdoppeln, damit du zehn erhältst?"
+    }
+  },
+  "v22": {
+    "note": "18/2=9; pair distribution, not generic verification.",
+    "patch": {
+      "hints": [
+        "Verteile achtzehn Gegenstände abwechselnd auf zwei Teller.",
+        "Zähle die Gegenstände auf einem Teller und prüfe, ob der andere gleich viele hat."
+      ]
+    }
+  },
+  "v23": {
+    "note": "Medium inverse half5 giveswhole10; replaces double5 worksheet repeat.",
+    "patch": {
+      "hints": [
+        "Zeichne die fünf Perlen von Mia als eine Gruppe.",
+        "Für die ganze Menge brauchst du noch eine gleich grosse Gruppe. Zähle beide zusammen."
+      ],
+      "question": "Mia bekommt die Hälfte aller Perlen. Das sind 5 Perlen. Wie viele Perlen waren es insgesamt?"
+    }
+  },
+  "v24": {
+    "note": "Medium double5 plus2 gives12; transfer doubling to two equal bags then addition.",
+    "patch": {
+      "hints": [
+        "Zeichne zwei Gruppen mit je fünf Nüssen.",
+        "Zähle beide Gruppen zusammen und lege danach die zwei weiteren Nüsse dazu."
+      ],
+      "question": "In 2 Beuteln sind je 5 Nüsse. Du legst noch 2 Nüsse dazu. Wie viele Nüsse sind es insgesamt?"
+    }
+  },
+  "v25": {
+    "note": "Medium missing whole half7 gives14; inverse rather than direct repeat.",
+    "patch": {
+      "hints": [
+        "Die sieben Murmeln sind nur einer von zwei gleich grossen Teilen.",
+        "Lege für den anderen Teil gleich viele Murmeln hin und zähle beide Teile zusammen."
+      ],
+      "question": "Ben verschenkt die Hälfte seiner Murmeln und behält 7. Wie viele hatte er vorher?"
+    }
+  },
+  "v26": {
+    "note": "Medium inverse operation halfwhole8 gives16; explicit not number of sharedobjects.",
+    "patch": {
+      "hints": [
+        "Zeichne acht Kreise für Leas Kastanien.",
+        "Tim hat zwei solche Gruppen. Zeichne die zweite dazu und zähle Tims Kastanien."
+      ],
+      "question": "Lea hat 8 Kastanien. Das sind halb so viele wie Tim hat. Wie viele Kastanien hat Tim?"
+    }
+  },
+  "v27": {
+    "note": "Medium doubles compensation10+10 minus2 gives18; preservekey and limit20.",
+    "patch": {
+      "hints": [
+        "Zeichne zwei Reihen mit je zehn Punkten.",
+        "Streiche in jeder Reihe einen Punkt durch. Zähle die übrigen Punkte beider Reihen zusammen."
+      ],
+      "question": "Auf 2 Tellern liegen je 10 Beeren. Von jedem Teller nimmst du 1 Beere weg. Wie viele Beeren bleiben insgesamt?"
+    }
+  },
+  "v28": {
+    "note": "2cats each4legs gives8; draw both groups, no answer range.",
+    "patch": {
+      "hints": [
+        "Zeichne für jede Katze vier Striche als Beine.",
+        "Zähle die Striche beider Katzen zusammen."
+      ]
+    }
+  },
+  "v29": {
+    "note": "Medium inverse double8 gives4; remove repeated easydouble2.",
+    "patch": {
+      "hints": [
+        "Die acht Sticker bestehen aus zwei gleich grossen Gruppen.",
+        "Verteile acht Punkte abwechselnd auf zwei Gruppen. Zähle eine Gruppe."
+      ],
+      "question": "Ich verdopple meine Stickerzahl und habe dann 8 Sticker. Wie viele hatte ich vorher?"
+    }
+  },
+  "v31": {
+    "note": "Medium doublehalf12 gives6; equal-share context not easy3double.",
+    "patch": {
+      "hints": [
+        "Zeichne zwölf Punkte für die Trauben.",
+        "Verteile sie abwechselnd auf zwei Teller und zähle die Trauben auf einem Teller."
+      ],
+      "question": "Du teilst 12 Trauben gerecht auf 2 Teller auf. Wie viele Trauben kommen auf jeden Teller?"
+    }
+  },
+  "v32": {
+    "note": "10/2*2=10; separate operations, do not give intermediate result.",
+    "patch": {
+      "hints": [
+        "Verteile zehn Steine auf zwei gleich grosse Gruppen.",
+        "Nimm eine Gruppe und lege noch einmal gleich viele Steine dazu. Zähle diese neue Menge."
+      ]
+    }
+  },
+  "v33": {
+    "note": "9*2=18; Ben compared toAnna not combinedtotal, natural speech.",
+    "patch": {
+      "hints": [
+        "Zeichne neun Kästchen für Annas Sticker.",
+        "Ben hat zwei solche Gruppen. Zeichne beide Gruppen für Ben und zähle sie zusammen."
+      ],
+      "spokenPrompt": "Anna hat neun Sticker. Ben hat doppelt so viele. Wie viele Sticker hat Ben?"
+    }
+  },
+  "v34": {
+    "note": "8/2/2=2; halve only one first half.",
+    "patch": {
+      "hints": [
+        "Verteile acht Steine auf zwei gleich grosse Gruppen.",
+        "Nimm nur eine dieser Gruppen und teile sie nochmals gleichmässig in zwei Teile. Zähle einen dieser Teile."
+      ]
+    }
+  },
+  "v35": {
+    "note": "Medium missing partner group total16withhalf8 gives8; replaces directdouble4.",
+    "patch": {
+      "hints": [
+        "Beide Schalen sollen gleich viele Nüsse enthalten.",
+        "Zeichne sechzehn Punkte und ordne sie paarweise den beiden Schalen zu. Zähle eine Schale."
+      ],
+      "question": "In 2 Schalen liegen zusammen 16 Nüsse. In beiden Schalen sind gleich viele. Wie viele sind in einer Schale?"
+    }
+  },
+  "v36": {
+    "note": "Hard inverse chain unknown doubleminus2 gives8 =>5; old prompt reduced to easyhalve10.",
+    "patch": {
+      "hints": [
+        "Gehe rückwärts: Mache zuerst das Wegnehmen von zwei rückgängig.",
+        "Teile die erhaltene Menge in zwei gleich grosse Gruppen. Eine Gruppe zeigt die gesuchte Zahl."
+      ],
+      "question": "Ich verdopple eine Zahl und nehme dann 2 weg. Es bleiben 8. Welche Zahl habe ich verdoppelt?",
+      "spokenPrompt": "Ich verdopple eine Zahl und nehme dann zwei weg. Es bleiben acht. Welche Zahl habe ich verdoppelt?"
+    }
+  },
+  "v37": {
+    "note": "3*2*2=12; remove evaluated first doubling and range.",
+    "patch": {
+      "hints": [
+        "Zeichne drei Punkte und noch einmal gleich viele.",
+        "Verdopple nun die ganze gezeichnete Menge, nicht nur die erste Gruppe."
+      ]
+    }
+  },
+  "v38": {
+    "note": "4*2/2=4; align Ben visible/speech and unambiguous Sarahalf.",
+    "patch": {
+      "hints": [
+        "Zeichne Tims vier Murmeln. Ben hat zwei solche Gruppen.",
+        "Teile Bens ganze Menge in zwei gleich grosse Gruppen. Eine davon zeigt Saras Murmeln."
+      ],
+      "question": "Tim hat 4 Murmeln. Ben hat das Doppelte. Sara hat halb so viele wie Ben. Wie viele Murmeln hat Sara?",
+      "spokenPrompt": "Tim hat vier Murmeln. Ben hat das Doppelte. Sara hat halb so viele wie Ben. Wie viele Murmeln hat Sara?"
+    }
+  },
+  "v40": {
+    "note": "Hard double4thenadd2 =>10; replaces easydouble5.",
+    "patch": {
+      "hints": [
+        "Zeichne zuerst vier Punkte und noch einmal gleich viele.",
+        "Zeichne erst danach zwei weitere Punkte dazu. Zähle alle Punkte."
+      ],
+      "question": "Du verdoppelst 4 Steine und legst danach 2 dazu. Wie viele Steine sind es nun?"
+    }
+  },
+  "v41": {
+    "note": "Strict constraints12<2n<15 unique integer7; enumerate options without answer leak.",
+    "patch": {
+      "hints": [
+        "Verdopple jede angebotene Zahl, indem du sie zu sich selbst dazuzählst.",
+        "Prüfe jedes Ergebnis an beiden Grenzen: Es muss grösser als zwölf und kleiner als fünfzehn sein."
+      ]
+    }
+  },
+  "v42": {
+    "note": "4*2/2*2=8; track all3 operations and replace literal result speech.",
+    "patch": {
+      "hints": [
+        "Spiele die Schritte mit Steinen nach. Beginne mit vier und lege gleich viele dazu.",
+        "Nimm dann nur die Hälfte dieser Menge. Lege zum Schluss noch einmal so viele dazu."
+      ],
+      "spokenPrompt": "Verdopple vier. Halbiere das Ergebnis und verdopple es wieder. Welche Zahl erhältst du am Schluss?"
+    }
+  },
+  "v43": {
+    "note": "Strict6<2n<10 unique4 among3/4/5/6; testbothbounds.",
+    "patch": {
+      "hints": [
+        "Verdopple jede angebotene Zahl für sich.",
+        "Behalte nur ein Ergebnis, das über sechs und unter zehn liegt. Gesucht ist die Zahl vor dem Verdoppeln."
+      ]
+    }
+  },
+  "v44": {
+    "note": "Hard half20 plus2 gives12; avoid directdouble6repeat.",
+    "patch": {
+      "hints": [
+        "Verteile zwanzig Steine gleichmässig auf zwei Teller.",
+        "Zähle einen Teller und lege dort zwei Steine dazu. Zähle nur diesen Teller."
+      ],
+      "question": "Du halbierst 20 Steine. Zu einer Hälfte legst du 2 Steine dazu. Wie viele sind in dieser Gruppe?"
+    }
+  },
+  "v45": {
+    "note": "Hard doubles compensation8*2-2=14; originalkey/options.",
+    "patch": {
+      "hints": [
+        "Zeichne zwei Gruppen mit je acht Perlen.",
+        "Streiche aus jeder Gruppe eine Perle durch und zähle die übrigen zusammen."
+      ],
+      "question": "In 2 Beuteln sind je 8 Perlen. Aus jedem Beutel nimmst du 1 Perle. Wie viele bleiben insgesamt?"
+    }
+  },
+  "v46": {
+    "note": "Hard doublehalf chain5*2-2 then*2=16; all intermediates<=20.",
+    "patch": {
+      "hints": [
+        "Verdopple zuerst fünf und nimm von dieser Menge zwei weg.",
+        "Verdopple nun die übrig gebliebene Menge. Spiele die Schritte mit Steinen nach."
+      ],
+      "question": "Verdopple 5, nimm 2 weg und verdopple den Rest. Welche Zahl erhältst du?",
+      "spokenPrompt": "Verdopple fünf, nimm zwei weg und verdopple den Rest. Welche Zahl erhältst du?"
+    }
+  },
+  "v47": {
+    "note": "Hard inverse halfminus1=8 meanswhole18; key18 retained.",
+    "patch": {
+      "hints": [
+        "Mache zuerst das Wegnehmen rückgängig: Lege zu acht wieder einen Stein dazu.",
+        "Diese Menge ist erst die Hälfte. Lege eine gleich grosse Gruppe daneben und zähle alles."
+      ],
+      "question": "Ich halbiere meine Steinmenge und nehme von einer Hälfte 1 Stein weg. Dort bleiben 8. Wie viele Steine hatte ich am Anfang?"
+    }
+  },
+  "v48": {
+    "note": "Hard inverse doubleplus2=10 =>4; originalkey4.",
+    "patch": {
+      "hints": [
+        "Mache zuerst das Dazulegen rückgängig: Nimm von zehn zwei weg.",
+        "Teile den Rest in zwei gleich grosse Gruppen. Eine Gruppe zeigt die Anfangsmenge."
+      ],
+      "question": "Ich verdopple meine Murmeln und lege 2 dazu. Nun sind es 10. Wie viele Murmeln hatte ich am Anfang?"
+    }
+  },
+  "v49": {
+    "note": "Hard nested half16/2then-2=6; originalMCkey.",
+    "patch": {
+      "hints": [
+        "Verteile sechzehn Nüsse auf zwei gleich grosse Gruppen.",
+        "Nimm von einer Gruppe zwei Nüsse weg. Zähle, wie viele in dieser Gruppe bleiben."
+      ],
+      "question": "Du halbierst 16 Nüsse und isst von einer Hälfte 2. Wie viele bleiben in dieser Hälfte?"
+    }
+  },
+  "v50": {
+    "note": "Hard inverse halfplus2=6 =>8; reverse two operations instead of directdouble4.",
+    "patch": {
+      "hints": [
+        "Mache zuerst das Dazulegen rückgängig: Nimm von sechs zwei Steine weg.",
+        "Diese Menge ist die Hälfte der Anfangsmenge. Lege noch einmal gleich viele dazu."
+      ],
+      "question": "Ich halbiere meine Steine und lege zu einer Hälfte 2 Steine dazu. Dort liegen nun 6. Wie viele Steine hatte ich am Anfang?"
+    }
+  }
+}

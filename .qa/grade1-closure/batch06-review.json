@@ -1,0 +1,332 @@
+{
+  "m2": {
+    "note": "Counting renderer creates8 stars from key8; tap-once strategy replaces answer interval.",
+    "patch": {
+      "hints": [
+        "Tippe beim Zählen jeden Stern einmal an.",
+        "Zähle nur Sterne, die du noch nicht angetippt hast. Merke dir die letzte Zahl."
+      ]
+    }
+  },
+  "m6x2": {
+    "note": "10 minus4 leaves6; remove range and repair spoken blank.",
+    "patch": {
+      "hints": [
+        "Zeichne für jede Praline einen Kreis.",
+        "Streiche die vier gegessenen Pralinen durch und zähle die übrigen."
+      ],
+      "spokenPrompt": "In einer Schachtel sind zehn Pralinen. Du isst vier. Wie viele Pralinen bleiben übrig?"
+    }
+  },
+  "m9x2": {
+    "note": "5dogs plus2cats gives7animals; category union and natural speech.",
+    "patch": {
+      "hints": [
+        "Hunde und Katzen zählen beide als Tiere.",
+        "Beginne bei fünf und zähle für jede Katze einen Schritt weiter."
+      ],
+      "spokenPrompt": "Fünf Hunde und zwei Katzen: Wie viele Tiere sind das zusammen?"
+    }
+  },
+  "m10x2": {
+    "note": "Renderer shows7 stars; once-only tapping replaces range.",
+    "patch": {
+      "hints": [
+        "Tippe jeden Stern genau einmal an und zähle dabei laut.",
+        "Die letzte Zählzahl sagt dir, wie viele Sterne es sind."
+      ]
+    }
+  },
+  "m11x2": {
+    "note": "6 minus2 gives4; replace abstract elements with concrete stones, key unchanged.",
+    "patch": {
+      "hints": [
+        "Lege für jeden Stein einen kleinen Gegenstand hin.",
+        "Nimm zwei davon weg und zähle, wie viele noch liegen."
+      ],
+      "question": "Auf dem Tisch liegen 6 Steine. Du nimmst 2 weg. Wie viele bleiben?"
+    }
+  },
+  "m12x2": {
+    "note": "3red plus3blue marbles gives6; colour groups counted together.",
+    "patch": {
+      "hints": [
+        "Zeichne die roten und die blauen Murmeln in zwei Gruppen.",
+        "Zähle bei der zweiten Gruppe weiter, statt wieder bei eins zu beginnen."
+      ],
+      "spokenPrompt": "Ich habe drei rote und drei blaue Murmeln. Wie viele Murmeln habe ich zusammen?"
+    }
+  },
+  "m13x2": {
+    "note": "Renderer shows4 butterflies; tapping matches actual UI, no range.",
+    "patch": {
+      "hints": [
+        "Tippe beim Zählen jeden Schmetterling einmal an.",
+        "Prüfe, ob noch ein Schmetterling übrig ist, den du nicht angetippt hast."
+      ]
+    }
+  },
+  "m15x2": {
+    "note": "9 minus1 gives8; explicit single backward step and semantic speech.",
+    "patch": {
+      "hints": [
+        "Es wird eine Frucht weniger. Zähle rückwärts.",
+        "Starte bei neun und gehe einen Zählschritt zurück."
+      ],
+      "spokenPrompt": "Im Korb sind neun Früchte. Jonas nimmt eine heraus. Wie viele Früchte bleiben im Korb?"
+    }
+  },
+  "m17x2": {
+    "note": "6 minus3 gives3; concrete drawing replaces abstract generic hints.",
+    "patch": {
+      "hints": [
+        "Zeichne für jedes spielende Kind einen Kreis.",
+        "Streiche die drei Kinder durch, die nach Hause gehen. Zähle die übrigen Kreise."
+      ]
+    }
+  },
+  "m18x2": {
+    "note": "4forks plus5knives gives9; both counted as cutlery.",
+    "patch": {
+      "hints": [
+        "Gabeln und Messer zählen beide als Besteckteile.",
+        "Beginne mit den fünf Messern und zähle für jede Gabel einen Schritt weiter."
+      ]
+    }
+  },
+  "m19x2": {
+    "note": "8 plus7 gives15; bridge10 strategy without subtotal/result leakage.",
+    "patch": {
+      "hints": [
+        "Zähle die Mädchen und Jungen zusammen.",
+        "Ergänze von acht zuerst bis zehn. Zähle danach die noch übrigen Jungen dazu."
+      ]
+    }
+  },
+  "m21x2": {
+    "note": "Medium inverse quantity:8 total minus5 visible gives3 hidden, replaces counting3 repeat.",
+    "patch": {
+      "hints": [
+        "Zeichne für jede der acht Murmeln einen Kreis.",
+        "Markiere die fünf sichtbaren Murmeln. Die übrigen Kreise gehören unter den Becher."
+      ],
+      "question": "Von 8 Murmeln sind 5 sichtbar. Die anderen liegen unter einem Becher. Wie viele sind versteckt?"
+    }
+  },
+  "m24x2": {
+    "note": "Medium missing addend6 to10 gives4, original options/key unique.",
+    "patch": {
+      "hints": [
+        "Zeichne zehn Plätze für die Steine.",
+        "Besetze sechs Plätze. Zähle die noch freien Plätze."
+      ],
+      "question": "Du möchtest 10 Steine sammeln und hast schon 6. Wie viele fehlen noch?"
+    }
+  },
+  "m25x2": {
+    "note": "Medium category complement12 minus7 gives5, rather than easy5dots.",
+    "patch": {
+      "hints": [
+        "Zeichne für jede der zwölf Perlen einen Kreis.",
+        "Markiere sieben Kreise als rot. Zähle die Kreise, die blau sein müssen."
+      ],
+      "question": "In einer Dose sind 12 Perlen. 7 sind rot, alle anderen blau. Wie viele sind blau?"
+    }
+  },
+  "m27x2": {
+    "note": "4 plus3 plus2 gives9; retain all3 flower categories and spoken semantic question.",
+    "patch": {
+      "hints": [
+        "Zeichne die Blumen nach Farben in drei Gruppen.",
+        "Zähle erst die roten und gelben Blumen zusammen. Zähle danach die weissen dazu."
+      ],
+      "spokenPrompt": "In einem Garten wachsen vier rote, drei gelbe und zwei weisse Blumen. Wie viele Blumen sind es insgesamt?"
+    }
+  },
+  "m29x2": {
+    "note": "3 minus1 plus2 gives4; ordered changes modelled with objects.",
+    "patch": {
+      "hints": [
+        "Lege drei Gegenstände als Autos hin. Spiele die Geschichte nach.",
+        "Nimm zuerst ein Auto weg. Lege dann zwei dazu und zähle die Autos am Schluss."
+      ]
+    }
+  },
+  "m30x2": {
+    "note": "Medium comparison11 minus5 gives6 extra stones, replaces6dot enumeration.",
+    "patch": {
+      "hints": [
+        "Zeichne die beiden Steinsammlungen in zwei Reihen untereinander.",
+        "Ordne jedem Stein von Ben einen von Mia zu. Zähle Mias Steine ohne Partner."
+      ],
+      "question": "Mia hat 11 Steine, Ben hat 5. Wie viele Steine hat Mia mehr als Ben?"
+    }
+  },
+  "m31x2": {
+    "note": "7 minus3 gives4; sticker-removal concrete hints.",
+    "patch": {
+      "hints": [
+        "Zeichne sieben Kästchen für Tims Aufkleber.",
+        "Streiche drei Kästchen durch. Zähle nur die Aufkleber, die Tim behält."
+      ]
+    }
+  },
+  "m32x2": {
+    "note": "10 shared equally gives5; concrete halves rather than abstract groups.",
+    "patch": {
+      "hints": [
+        "Verteile zehn kleine Gegenstände abwechselnd auf zwei Teller.",
+        "Prüfe, ob auf beiden Tellern gleich viele liegen. Zähle dann nur einen Teller."
+      ],
+      "question": "Du verteilst 10 Steine gleichmässig auf 2 Teller. Wie viele liegen auf jedem Teller?"
+    }
+  },
+  "m33x2": {
+    "note": "Two groups of5 gives10; concrete marbles replace elements, semantic speech.",
+    "patch": {
+      "hints": [
+        "Zeichne für jeden Beutel eine Gruppe Murmeln.",
+        "Zähle beide Gruppen zusammen. Beginne beim zweiten Beutel nicht wieder bei eins."
+      ],
+      "question": "In 2 Beuteln sind je 5 Murmeln. Wie viele Murmeln sind es zusammen?",
+      "spokenPrompt": "In zwei Beuteln sind je fünf Murmeln. Wie viele Murmeln sind es zusammen?"
+    }
+  },
+  "m34x2": {
+    "note": "6hares plus4foxes gives10; category union count-on.",
+    "patch": {
+      "hints": [
+        "Hasen und Füchse zählen beide als Tiere.",
+        "Starte bei den sechs Hasen. Zähle für jeden Fuchs einen Schritt weiter."
+      ]
+    }
+  },
+  "m35x2": {
+    "note": "Medium category complement13 minus6 gives7, replacing7dots.",
+    "patch": {
+      "hints": [
+        "Zeichne dreizehn Kreise für alle Äpfel.",
+        "Markiere sechs als grün. Zähle die übrigen roten Äpfel."
+      ],
+      "question": "In einem Korb sind 13 Äpfel. 6 sind grün, alle anderen rot. Wie viele sind rot?"
+    }
+  },
+  "m36x2": {
+    "note": "Hard two-stage hidden-set subtraction16 minus5 minus3 gives8; unchangedkey8.",
+    "patch": {
+      "hints": [
+        "Zeichne sechzehn Kreise für alle Muscheln.",
+        "Markiere zuerst die fünf auf dem Tisch und dann die drei in der Schale. Zähle die übrigen."
+      ],
+      "question": "Du hast 16 Muscheln. 5 liegen auf dem Tisch, 3 in einer Schale und die übrigen in einer Dose. Wie viele sind in der Dose?"
+    }
+  },
+  "m37x2": {
+    "note": "10 equally split2 thenremove3 fromonehalf gives2; make retained half explicit.",
+    "patch": {
+      "hints": [
+        "Verteile zehn Steine abwechselnd auf zwei Teller, bis beide gleich viele haben.",
+        "Nimm vom ersten Teller drei Steine weg. Zähle nur die Steine, die dort bleiben."
+      ],
+      "question": "Du verteilst 10 Steine gleichmässig auf 2 Teller. Vom ersten Teller nimmst du 3 weg. Wie viele bleiben auf diesem Teller?"
+    }
+  },
+  "m38x2": {
+    "note": "Hard remove thenadd14 minus8 plus3 gives9; replaces9dots.",
+    "patch": {
+      "hints": [
+        "Lege vierzehn kleine Gegenstände für die Murmeln hin.",
+        "Nimm zuerst acht weg. Lege dann drei dazu und zähle den neuen Bestand."
+      ],
+      "question": "Du hast 14 Murmeln, verschenkst 8 und bekommst danach 3 dazu. Wie viele hast du nun?"
+    }
+  },
+  "m40x2": {
+    "note": "Hard red/blue total thenremoval8 plus5 minus4 gives9, improves old easy4plus5 repeat while retaining key.",
+    "patch": {
+      "hints": [
+        "Zähle zuerst die roten und blauen Bonbons zusammen.",
+        "Streiche danach die vier herausgenommenen Bonbons durch. Zähle die übrigen."
+      ],
+      "question": "In einer Schale sind 8 rote und 5 blaue Bonbons. Du nimmst 4 Bonbons heraus. Wie viele bleiben?"
+    }
+  },
+  "m42x2": {
+    "note": "Hard equal-share18/2 thenadd1 gives10, replaces10dot repeat.",
+    "patch": {
+      "hints": [
+        "Verteile achtzehn Steine abwechselnd auf zwei Beutel.",
+        "Zähle die Steine in einem Beutel und lege dort noch einen dazu."
+      ],
+      "question": "Du verteilst 18 Steine gleichmässig auf 2 Beutel. Danach legst du in einen Beutel noch 1 Stein. Wie viele sind jetzt in diesem Beutel?"
+    }
+  },
+  "m43x2": {
+    "note": "Hard capacity complement12 minus6 minus4 gives2 freeplaces, unchangedoptions/key.",
+    "patch": {
+      "hints": [
+        "Zeichne zwölf Kästchen für die Plätze.",
+        "Besetze zuerst sechs mit roten und dann vier mit blauen Murmeln. Zähle die freien Plätze."
+      ],
+      "question": "Eine Schachtel hat Platz für 12 Murmeln. Du legst 6 rote und 4 blaue hinein. Wie viele Plätze bleiben frei?"
+    }
+  },
+  "m44x2": {
+    "note": "6 plus3 plus4 gives13; choose ten-complement pair and include remaining category.",
+    "patch": {
+      "hints": [
+        "Du darfst die Farbgruppen in einer anderen Reihenfolge zusammenzählen.",
+        "Zähle zuerst die sechs roten und vier blauen Steine zusammen. Nimm danach die gelben dazu."
+      ]
+    }
+  },
+  "m45x2": {
+    "note": "7 plus8 plus2 gives17; pair8and2, no evaluatedsubtotal/result in hints.",
+    "patch": {
+      "hints": [
+        "Zähle alle drei Fruchtsorten mit.",
+        "Beginne mit den acht Birnen und den zwei Orangen. Zähle danach die Äpfel dazu."
+      ]
+    }
+  },
+  "m46x2": {
+    "note": "10 minus3 minus2 gives5; preserve released precise question while replacing range.",
+    "patch": {
+      "hints": [
+        "Zeichne zehn Kreise für die Pralinen.",
+        "Streiche erst die drei gegessenen und dann zwei weitere verschenkte Pralinen durch. Zähle die übrigen."
+      ]
+    }
+  },
+  "m47x2": {
+    "note": "Comparison8 minus3 gives5 forTim; distinguish relative fewer from actualgiveaway.",
+    "patch": {
+      "hints": [
+        "Zeichne Lenas acht Beeren als eine Reihe.",
+        "Zeichne darunter Tims Reihe. Sie soll drei Beeren kürzer sein. Zähle Tims Beeren."
+      ],
+      "spokenPrompt": "Lena hat acht Beeren. Tim hat drei weniger als Lena. Wie viele Beeren hat Tim?"
+    }
+  },
+  "m48x2": {
+    "note": "Hard group-size inverse:15 split3 gives5thenremove2 gives3; explicit thirds via concrete baskets not formaldivision.",
+    "patch": {
+      "hints": [
+        "Verteile fünfzehn Gegenstände der Reihe nach auf drei Körbe, bis alle gleich viele haben.",
+        "Nimm aus einem Korb zwei weg. Zähle, wie viele in diesem Korb bleiben."
+      ],
+      "question": "Du verteilst 15 Äpfel gleichmässig auf 3 Körbe. Aus einem Korb nimmst du 2 Äpfel. Wie viele bleiben in diesem Korb?"
+    }
+  },
+  "m50x2": {
+    "note": "Hard changes17 minus8 plus3 gives12 rather than easy7plus5; align Ben visible/speech, originalMCkey12.",
+    "patch": {
+      "hints": [
+        "Zeichne siebzehn Kreise für Bens Kastanien.",
+        "Streiche acht durch und zeichne drei neue dazu. Zähle die Kastanien, die Ben am Schluss hat."
+      ],
+      "question": "Ben hat 17 Kastanien. Er verschenkt 8 und findet danach 3 neue. Wie viele hat er nun?",
+      "spokenPrompt": "Ben hat siebzehn Kastanien. Er verschenkt acht und findet danach drei neue. Wie viele hat er nun?"
+    }
+  }
+}

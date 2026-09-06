@@ -1,0 +1,234 @@
+{
+  "o2": {
+    "note": "Next place after2=3; concrete step along numbered positions replaces generic hints; unique choice retained.",
+    "patch": {
+      "hints": [
+        "Stelle dir nummerierte Plätze in einer Reihe vor.",
+        "Beginne beim zweiten Platz und gehe genau einen Platz weiter."
+      ]
+    }
+  },
+  "o3": {
+    "note": "Alphabet third=C; count letters fromA without printing key in hint.",
+    "patch": {
+      "hints": [
+        "Sprich die Buchstaben des Alphabets von A an.",
+        "Zähle bei jedem Buchstaben einen Finger dazu. Halte beim dritten Finger an."
+      ]
+    }
+  },
+  "o6": {
+    "note": "Mia fourth of5 has only fifth behind; draw and count from front, no key leak.",
+    "patch": {
+      "hints": [
+        "Zeichne fünf Kinder hintereinander und markiere den Anfang der Reihe.",
+        "Zähle von vorne bis zu Mia. Schau, welcher Platz direkt hinter ihrem liegt."
+      ]
+    }
+  },
+  "o7": {
+    "note": "Monday-based weekday index ofWednesday3; explicit week origin and natural speech instead of blank reading/range.",
+    "patch": {
+      "question": "Die Woche beginnt am Montag. An welcher Stelle steht der Mittwoch? Schreibe die Ordnungszahl.",
+      "spokenPrompt": "Die Woche beginnt am Montag. An welcher Stelle steht der Mittwoch? Schreibe die Ordnungszahl.",
+      "hints": [
+        "Suche Montag und Mittwoch in einem Wochenkalender.",
+        "Zähle die Tage ab Montag bis Mittwoch. Schreibe die Zahl mit einem Punkt."
+      ]
+    }
+  },
+  "o9": {
+    "note": "Missing ordinal between2and4=3; semantic speech with both bounds; point-format guidance.",
+    "patch": {
+      "spokenPrompt": "Welche Ordnungszahl fehlt zwischen der zweiten und der vierten? Schreibe die Zahl mit einem Punkt.",
+      "hints": [
+        "Lies die Plätze der Reihe nach: erster, zweiter und weiter.",
+        "Gehe vom zweiten Platz einen Platz weiter. Prüfe, ob danach der vierte kommt."
+      ]
+    }
+  },
+  "o11": {
+    "note": "Fifth word-form retained, spoken five uses cardinal to avoid saying target word; explicit written word request.",
+    "patch": {
+      "spokenPrompt": "Mia erreicht im Rennen Platz fünf. Schreibe das passende Wort: Mia ist die wievielte?",
+      "hints": [
+        "Gesucht ist ein Wort für Mias Platz, keine Ziffer.",
+        "Denke an das Zahlwort fünf. Wie nennst du ein Mädchen auf diesem Platz?"
+      ]
+    }
+  },
+  "o12": {
+    "note": "Highest podium belongs winner first; sports convention explained through winner rather than giving rank.",
+    "patch": {
+      "hints": [
+        "Auf dem Siegerpodest stehen die besten Teilnehmenden eines Rennens.",
+        "Die höchste Stufe gehört dem Kind, das gewonnen hat. Welchen Platz hat es erreicht?"
+      ]
+    }
+  },
+  "o13": {
+    "note": "Next aftersix=seven; ordinal point guidance replaces abstract operations.",
+    "patch": {
+      "hints": [
+        "Stelle dir die Plätze eines Rennens der Reihe nach vor.",
+        "Zähle von sechs genau einen Schritt weiter. Schreibe die Zahl mit einem Punkt."
+      ]
+    }
+  },
+  "o16": {
+    "note": "Fifth of displayedABCDE=E; point-and-count provided sequence, no key printed in hint.",
+    "patch": {
+      "hints": [
+        "Beginne links beim A und zeige auf jeden Buchstaben der Reihe.",
+        "Zähle bei jedem Buchstaben einen Platz weiter. Halte an der fünften Stelle an."
+      ]
+    }
+  },
+  "o17": {
+    "note": "Third of10 has7 behind; exclude self and preceding children using marked circles; natural spoken third.",
+    "patch": {
+      "spokenPrompt": "Du stehst an dritter Stelle in einer Reihe von zehn Kindern. Wie viele Kinder stehen hinter dir?",
+      "hints": [
+        "Zeichne zehn Kreise in einer Reihe. Markiere den dritten Kreis als deinen Platz.",
+        "Zähle nur die Kreise hinter deinem Platz. Dein eigener Kreis zählt nicht mit."
+      ]
+    }
+  },
+  "o18": {
+    "note": "Monday-basedFriday index5; explicit origin, remove full partial solution and interval.",
+    "patch": {
+      "question": "Die Woche beginnt am Montag. An welcher Stelle steht der Freitag? Schreibe die Ordnungszahl.",
+      "spokenPrompt": "Die Woche beginnt am Montag. An welcher Stelle steht der Freitag? Schreibe die Ordnungszahl.",
+      "hints": [
+        "Nenne die Wochentage ab Montag der Reihe nach.",
+        "Zähle jeden Tag bis Freitag mit. Schreibe die Anzahl mit einem Punkt."
+      ]
+    }
+  },
+  "o19": {
+    "note": "SeventhPetra has6before, regardless10total; draw and exclude own position, semantic ordinal speech.",
+    "patch": {
+      "spokenPrompt": "Zehn Kinder stehen in einer Reihe. Petra steht an siebter Stelle. Wie viele Kinder stehen vor ihr?",
+      "hints": [
+        "Zeichne zehn Plätze und markiere Petras Platz.",
+        "Zähle vom Anfang der Reihe bis direkt vor Petra. Petra selbst zählt nicht mit."
+      ]
+    }
+  },
+  "o24": {
+    "note": "Monday-originfourth=Thursday; avoid answer abbreviationDo in hint, natural speech.",
+    "patch": {
+      "question": "Die Woche beginnt am Montag. Wie heisst der 4. Wochentag?",
+      "spokenPrompt": "Die Woche beginnt am Montag. Wie heisst der vierte Wochentag?",
+      "hints": [
+        "Schau dir die Tage in einem Wochenkalender an.",
+        "Zähle bei Montag los und halte beim vierten Tag an. Schreibe seinen Namen."
+      ]
+    }
+  },
+  "o26": {
+    "note": "September month9; calendar count replaces eight-item partial key and answer interval.",
+    "patch": {
+      "spokenPrompt": "An welcher Stelle im Jahr steht der September? Schreibe die Ordnungszahl.",
+      "hints": [
+        "Suche September in einem Jahreskalender.",
+        "Zähle die Monate ab Januar bis September. Schreibe die Anzahl mit einem Punkt."
+      ]
+    }
+  },
+  "o30": {
+    "note": "Five floors explicitly bottom1 gives top5; no ground-floor ambiguity; natural query not literal blanks.",
+    "patch": {
+      "spokenPrompt": "Ein Turm hat fünf Stockwerke. Das unterste zählt als erstes Stockwerk. Welche Nummer hat das oberste? Schreibe die Ordnungszahl.",
+      "hints": [
+        "Zeichne fünf Kästchen übereinander als Stockwerke.",
+        "Nummeriere sie von unten nach oben. Beginne unten mit eins und schreibe die gesuchte Zahl mit einem Punkt."
+      ]
+    }
+  },
+  "o31": {
+    "note": "3,6,9 continues12; original missing question had no gap. Ask next and state same step rule; unique12 retained.",
+    "patch": {
+      "question": "Die Plätze gehen in gleich grossen Schritten weiter: 3., 6., 9., ___. Welcher Platz kommt als Nächstes?",
+      "spokenPrompt": "Dritter Platz, sechster Platz, neunter Platz. Die Abstände bleiben gleich. Welcher Platz kommt als Nächstes?",
+      "hints": [
+        "Zähle die Schritte vom dritten zum sechsten Platz und vom sechsten zum neunten.",
+        "Gehe vom neunten Platz noch einmal genauso viele Schritte weiter."
+      ]
+    }
+  },
+  "o32": {
+    "note": "Januaryfirst retained; remove explicit key and negative lower bound, calendar origin strategy.",
+    "patch": {
+      "question": "An welcher Stelle im Jahr steht der Januar? Schreibe die Ordnungszahl.",
+      "spokenPrompt": "An welcher Stelle im Jahr steht der Januar? Schreibe die Ordnungszahl.",
+      "hints": [
+        "Schau nach, mit welchem Monat ein Jahreskalender beginnt.",
+        "Zähle die Monatsplätze vom Jahresanfang an. Schreibe die gesuchte Zahl mit einem Punkt."
+      ]
+    }
+  },
+  "o33": {
+    "note": "Eighth of10 leaves2. Exact speech test exposed existing x-to-mal normalizer corrupting Max. Scoped visible and spoken name aligned to Ben instead of changing global voice behavior; concrete hints exclude own position.",
+    "patch": {
+      "spokenPrompt": "Ben steht an achter Stelle in einer Reihe von zehn Kindern. Wie viele Kinder stehen hinter ihm?",
+      "hints": [
+        "Zeichne zehn Plätze und markiere den achten als Bens Platz.",
+        "Zähle nur die Plätze nach Ben. Sein eigener Platz zählt nicht mit."
+      ],
+      "question": "Ben steht an 8. Stelle in einer Reihe von 10 Kindern. Wie viele Kinder stehen hinter ihm?"
+    }
+  },
+  "o36": {
+    "note": "Twelfth of20 has11before; diagram excludeLena, proper spoken ordinal.",
+    "patch": {
+      "spokenPrompt": "In einem Rennen mit zwanzig Teilnehmenden liegt Lena auf dem zwölften Platz. Wie viele Teilnehmende sind vor ihr?",
+      "hints": [
+        "Zeichne die Plätze bis zu Lena und nummeriere sie vom Anfang an.",
+        "Zähle die Plätze vor Lena. Ihr eigener Platz gehört nicht dazu."
+      ]
+    }
+  },
+  "o38": {
+    "note": "Chapter predecessor7=6; remove complete7−1=6 hint; semantic speech retains context and ordinal format.",
+    "patch": {
+      "spokenPrompt": "Ein Buch hat zehn Kapitel. Kapitel sieben heisst Der Drache. Welche Nummer hat das Kapitel direkt davor? Schreibe die Ordnungszahl.",
+      "hints": [
+        "Stelle dir das Inhaltsverzeichnis mit den Kapitelnummern vor.",
+        "Gehe von Kapitel sieben genau ein Kapitel zurück. Schreibe dessen Nummer mit einem Punkt."
+      ]
+    }
+  },
+  "o40": {
+    "note": "Ninth of15 leaves6; concrete marking and excluded self, natural ninth speech.",
+    "patch": {
+      "spokenPrompt": "Mia steht an neunter Stelle in einer Reihe von fünfzehn Kindern. Wie viele Kinder stehen hinter ihr?",
+      "hints": [
+        "Zeichne fünfzehn Kreise und markiere den neunten als Mias Platz.",
+        "Zähle die Kreise hinter Mia. Beginne erst beim Kreis nach ihrem Platz."
+      ]
+    }
+  },
+  "o43": {
+    "note": "O is15th basic alphabet; original shelves order implicit, now explicitAtoZ without umlauts, no lexical gap speech.",
+    "patch": {
+      "question": "In einer Bibliothek stehen 26 Regale in der Reihenfolge A bis Z, ohne Umlaute. Das A-Regal ist das 1. Regal. An welcher Stelle steht das O-Regal?",
+      "spokenPrompt": "In einer Bibliothek stehen sechsundzwanzig Regale in der Reihenfolge A bis Z, ohne Umlaute. Das A-Regal ist das erste Regal. An welcher Stelle steht das O-Regal?",
+      "hints": [
+        "Schreibe die Buchstaben von A bis O der Reihe nach auf.",
+        "Nummeriere deine Buchstaben ab eins. Welche Nummer bekommt das O?"
+      ]
+    }
+  },
+  "o46": {
+    "note": "ThirdWednesdayinclusive=3; speech previously discarded parenthetical inclusion; make it explicit in both visible and spoken, no answer leak.",
+    "patch": {
+      "question": "Heute ist der 3. Mittwoch des Monats. Wie viele Mittwoche gab es in diesem Monat schon? Zähle heute mit.",
+      "spokenPrompt": "Heute ist der dritte Mittwoch des Monats. Wie viele Mittwoche gab es in diesem Monat schon? Zähle heute mit.",
+      "hints": [
+        "Markiere in einem Monatskalender die Mittwoche vom Monatsanfang bis heute.",
+        "Zähle deine Markierungen. Auch der heutige Mittwoch gehört dazu."
+      ]
+    }
+  }
+}

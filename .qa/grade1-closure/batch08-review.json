@@ -1,0 +1,298 @@
+{
+  "g2": {
+    "note": "Currency unit100 retained; two50 coins model whole franc without giving numeric key.",
+    "patch": {
+      "hints": [
+        "Zwei Münzen zu je fünfzig Rappen haben zusammen den Wert eines Frankens.",
+        "Zähle die Rappenwerte der beiden Münzen zusammen."
+      ]
+    }
+  },
+  "g4": {
+    "note": "50-20=30; count tens back, no answer interval.",
+    "patch": {
+      "hints": [
+        "Zeichne fünf Kreise. Jeder Kreis steht für zehn Rappen.",
+        "Streiche für den Preis zwei Kreise durch. Zähle den Wert der übrigen Kreise in Zehnerschritten."
+      ]
+    }
+  },
+  "g6": {
+    "note": "500-180=320 Rappen =3.20CHF; preserve decimal answer, make notation explicit and speech natural.",
+    "patch": {
+      "hints": [
+        "Ergänze den Preis zuerst bis zu zwei Franken und dann bis zu fünf Franken.",
+        "Zähle beide Ergänzungen zusammen. Schreibe Franken und Rappen mit einem Punkt, zum Beispiel 2.50 für zwei Franken fünfzig."
+      ],
+      "question": "Luca kauft ein Eis für CHF 1.80 und bezahlt CHF 5. Wie viel Rückgeld bekommt er? Schreibe den Betrag in Franken mit einem Punkt.",
+      "spokenPrompt": "Luca kauft ein Eis für einen Franken achtzig und bezahlt fünf Franken. Wie viel Rückgeld bekommt er? Schreibe den Betrag in Franken mit einem Punkt."
+    }
+  },
+  "g8": {
+    "note": "100/2=50; share ten10coins, not centred range.",
+    "patch": {
+      "hints": [
+        "Ein Franken lässt sich in zehn Münzen zu je zehn Rappen wechseln.",
+        "Verteile diese Münzen gleichmässig auf zwei Gruppen. Zähle den Wert einer Gruppe in Zehnerschritten."
+      ]
+    }
+  },
+  "g9": {
+    "note": "2+1=3; tangible1CHF coins and semantic speech.",
+    "patch": {
+      "hints": [
+        "Lege für zwei Franken zwei Einfrankenmünzen hin.",
+        "Lege noch eine Einfrankenmünze dazu und zähle den ganzen Betrag."
+      ],
+      "spokenPrompt": "Wie viele Franken ergeben zwei Franken plus ein Franken?"
+    }
+  },
+  "g10": {
+    "note": "100>90; common unit with tens comparison.",
+    "patch": {
+      "hints": [
+        "Ein Franken hat den Wert von zehn Zehnrappenmünzen.",
+        "Neunzig Rappen sind neun Zehnrappenmünzen. Vergleiche die beiden Münzreihen."
+      ]
+    }
+  },
+  "g11": {
+    "note": "10+10=20; count two10coins.",
+    "patch": {
+      "hints": [
+        "Zeichne zwei Münzen und schreibe auf jede zehn Rappen.",
+        "Zähle ihren Wert in Zehnerschritten zusammen."
+      ]
+    }
+  },
+  "g13": {
+    "note": "5*20/100=1; concrete tens counting then unit conversion, natural speech.",
+    "patch": {
+      "hints": [
+        "Zeichne fünf Münzen mit je zwanzig Rappen. Zähle ihren Wert zusammen.",
+        "Du kannst für jede Münze zwei Zehnerschritte zählen. Hundert Rappen lassen sich in einen Franken wechseln."
+      ],
+      "spokenPrompt": "Fünf Münzen sind je zwanzig Rappen wert. Wie viele Franken sind sie zusammen wert?"
+    }
+  },
+  "g14": {
+    "note": "3<5 =>CHF3; price meaning and compare rows.",
+    "patch": {
+      "hints": [
+        "Günstiger bedeutet: Du musst weniger bezahlen.",
+        "Zeichne für jeden Preis eine Reihe aus Einfrankenmünzen. Welche Reihe braucht weniger Münzen?"
+      ]
+    }
+  },
+  "g15": {
+    "note": "100-50=50; exchange and subtract in10coins.",
+    "patch": {
+      "hints": [
+        "Wechsle den Franken gedanklich in zehn Zehnrappenmünzen.",
+        "Nimm Münzen im Wert von fünfzig Rappen weg. Zähle den Wert der übrigen Münzen."
+      ]
+    }
+  },
+  "g16": {
+    "note": "2>1 means Heft; object-price alignment and proper einen speech.",
+    "patch": {
+      "hints": [
+        "Zeichne neben das Heft und den Stift jeweils die nötigen Einfrankenmünzen.",
+        "Für welchen Gegenstand brauchst du mehr Münzen?"
+      ],
+      "spokenPrompt": "Was kostet mehr: ein Heft für zwei Franken oder ein Stift für einen Franken?"
+    }
+  },
+  "g17": {
+    "note": "3*1=3; distinguish numbercoins and totalvalue, natural speech.",
+    "patch": {
+      "hints": [
+        "Zeichne für jede Münze einen Kreis mit dem Wert ein Franken.",
+        "Zähle die Frankenwerte aller Kreise zusammen."
+      ],
+      "spokenPrompt": "Du hast drei Münzen zu je einem Franken. Wie viele Franken sind das zusammen?"
+    }
+  },
+  "g22": {
+    "note": "Medium missing budget10-4=6 replacing easy sum.",
+    "patch": {
+      "hints": [
+        "Zeichne zehn Einfrankenmünzen für den Preis.",
+        "Markiere vier davon als dein Erspartes. Wie viele fehlen noch?"
+      ],
+      "question": "Ein Buch kostet 10 Franken. Du hast 4 Franken gespart. Wie viele Franken fehlen dir noch?"
+    }
+  },
+  "g29": {
+    "note": "Medium count denomination4*2=8 replacing direct sum.",
+    "patch": {
+      "hints": [
+        "Zeichne vier Münzen und schreibe auf jede zwei Franken.",
+        "Zähle ihren Wert in Zweierschritten. Gesucht ist der Betrag, nicht die Anzahl Münzen."
+      ],
+      "question": "Du hast 4 Zweifrankenmünzen. Wie viele Franken sind das zusammen?"
+    }
+  },
+  "g35": {
+    "note": "Medium change10-3-2=5 replacing direct sum.",
+    "patch": {
+      "hints": [
+        "Zähle zuerst die Preise von Heft und Stift zusammen.",
+        "Ziehe diesen Gesamtpreis von den zehn Franken ab."
+      ],
+      "question": "Ein Heft kostet 3 Franken und ein Stift 2 Franken. Du bezahlst beides mit 10 Franken. Wie viele Franken bekommst du zurück?"
+    }
+  },
+  "g36": {
+    "note": "Hard inverse original budgetminus4minus2=3 => here remaining10-4-3=3, two purchases.",
+    "patch": {
+      "hints": [
+        "Zeichne zehn Einfrankenmünzen.",
+        "Streiche zuerst den Preis des Hefts und dann den Preis des Stifts durch. Zähle das übrige Geld."
+      ],
+      "question": "Du hast 10 Franken. Du kaufst ein Heft für 4 Franken und einen Stift für 3 Franken. Wie viele Franken bleiben dir?"
+    }
+  },
+  "g37": {
+    "note": "Hard coin selection100-20-20-10=50; original50Rappen option remainsunique.",
+    "patch": {
+      "hints": [
+        "Zähle zuerst den Wert der drei vorhandenen Münzen zusammen.",
+        "Ein Franken sind hundert Rappen. Welche angebotene Münze ergänzt den Betrag genau?"
+      ],
+      "question": "Du hast zweimal 20 Rappen und einmal 10 Rappen. Welche Münze fehlt dir noch bis zu 1 Franken?"
+    }
+  },
+  "g38": {
+    "note": "Hard coin decomposition5-2*2=1CHF; unknown denomination constrained.",
+    "patch": {
+      "hints": [
+        "Zähle den Wert der beiden Zweifrankenmünzen zusammen.",
+        "Ergänze diesen Betrag bis zu fünf Franken. Gesucht ist der Wert der dritten Münze."
+      ],
+      "question": "Du hast genau 3 Münzen im Wert von zusammen 5 Franken. Zwei davon sind Zweifrankenmünzen. Wie viele Franken ist die dritte Münze wert?"
+    }
+  },
+  "g39": {
+    "note": "Hard500-200-200=100Rappen; unitconversion after two purchases.",
+    "patch": {
+      "hints": [
+        "Rechne zuerst aus, was die beiden Hefte zusammen kosten.",
+        "Ziehe den Preis von fünf Franken ab. Wandle das übrige Geld in Rappen um."
+      ],
+      "question": "Du bezahlst 2 Hefte zu je 2 Franken mit 5 Franken. Wie viel Rückgeld bekommst du in Rappen?"
+    }
+  },
+  "g40": {
+    "note": "Hard missingcost10-5-2=3; reverse budget rather than repeated2+1.",
+    "patch": {
+      "hints": [
+        "Ziehe zuerst das Rückgeld von den bezahlten zehn Franken ab.",
+        "Von diesem Gesamtpreis gehört ein Teil zum Heft. Ziehe dessen Preis ab."
+      ],
+      "question": "Du bezahlst ein Heft und einen Stift mit 10 Franken und bekommst 5 Franken zurück. Das Heft kostet 2 Franken. Wie viele Franken kostet der Stift?"
+    }
+  },
+  "g41": {
+    "note": "Hard two purchases20-8-5=7 instead ofsum5+2.",
+    "patch": {
+      "hints": [
+        "Zähle die Preise des Balls und des Seils zusammen.",
+        "Ziehe den Gesamtpreis von deinem Geld ab."
+      ],
+      "question": "Du hast 20 Franken. Ein Ball kostet 8 Franken, ein Seil 5 Franken. Wie viele Franken bleiben nach beiden Käufen?"
+    }
+  },
+  "g42": {
+    "note": "Hard count coins missing6/2=3 after5CHF; answercounts coins not francs.",
+    "patch": {
+      "hints": [
+        "Ziehe den Wert der Fünffrankenmünze vom Gesamtbetrag ab.",
+        "Lege den fehlenden Betrag mit Zweifrankenmünzen. Zähle diese Münzen."
+      ],
+      "question": "Du möchtest 11 Franken genau bezahlen. Du legst eine Fünffrankenmünze hin und ergänzt nur Zweifrankenmünzen. Wie viele Zweifrankenmünzen brauchst du?"
+    }
+  },
+  "g43": {
+    "note": "Hard total50+50+20=120minus70=50Rappen, select exact change.",
+    "patch": {
+      "hints": [
+        "Zähle zuerst den Wert deiner drei Münzen zusammen.",
+        "Ziehe den Preis ab. Welche angebotene Münze hat genau den Wert des Rückgelds?"
+      ],
+      "question": "Du bezahlst einen Znüni für 70 Rappen mit zwei 50-Rappen-Münzen und einer 20-Rappen-Münze. Welche Münze bekommst du als Rückgeld?"
+    }
+  },
+  "g44": {
+    "note": "Hard equal budget comparison5-(2+2)=1; difference instead of coin naming.",
+    "patch": {
+      "hints": [
+        "Rechne aus, wie viel Geld Ben insgesamt hat.",
+        "Vergleiche Bens Betrag mit Mias Betrag. Wie viel fehlt ihm bis zu Mias Betrag?"
+      ],
+      "question": "Mia hat eine Fünffrankenmünze. Ben hat zwei Zweifrankenmünzen. Wie viele Franken hat Mia mehr als Ben?"
+    }
+  },
+  "g45": {
+    "note": "Hard two wholefrancs minus5*20Rappen =>100Rappen.",
+    "patch": {
+      "hints": [
+        "Rechne zuerst aus, wie viele Rappen die fünf Bonbons zusammen kosten.",
+        "Zwei Franken sind zweihundert Rappen. Ziehe den Gesamtpreis davon ab."
+      ],
+      "question": "Du kaufst 5 Bonbons zu je 20 Rappen und bezahlst mit 2 Franken. Wie viel Rückgeld bekommst du?"
+    }
+  },
+  "g46": {
+    "note": "Hard inverse missingbudget12-4-5=3; two savers plus difference.",
+    "patch": {
+      "hints": [
+        "Zähle Mias und Bens Geld zusammen.",
+        "Ergänze den gemeinsamen Betrag bis zum Preis des Spiels."
+      ],
+      "question": "Ein Spiel kostet 12 Franken. Mia hat 4 Franken, Ben 5 Franken. Wie viele Franken fehlen ihnen zusammen noch?"
+    }
+  },
+  "g47": {
+    "note": "Hard budget after exchange:5*2-6=4 remaining1CHFcoins; counts value then spends, originalkey4.",
+    "patch": {
+      "question": "Du wechselst 5 Zweifrankenmünzen in Einfrankenmünzen. Dann bezahlst du damit ein Buch für 6 Franken. Wie viele Einfrankenmünzen bleiben?",
+      "spokenPrompt": "Du wechselst fünf Zweifrankenmünzen in Einfrankenmünzen. Dann bezahlst du damit ein Buch für sechs Franken. Wie viele Einfrankenmünzen bleiben?",
+      "hints": [
+        "Jede Zweifrankenmünze wird zu zwei Einfrankenmünzen. Zähle die Einfrankenmünzen nach dem Wechseln.",
+        "Nimm für jeden Franken des Buchpreises eine Münze weg. Zähle die übrigen Münzen."
+      ]
+    }
+  },
+  "g48": {
+    "note": "Hard repeatedcost3*2=6 vs9 gives3 change.",
+    "patch": {
+      "hints": [
+        "Zähle den Preis der drei Karten zusammen.",
+        "Ziehe diesen Preis von neun Franken ab."
+      ],
+      "question": "Du kaufst 3 Karten zu je 2 Franken und bezahlst mit 9 Franken. Wie viele Franken bekommst du zurück?"
+    }
+  },
+  "g49": {
+    "note": "Hard wholeamount remaining200-150=50Rappen with actual50coin choices.",
+    "patch": {
+      "hints": [
+        "Ein Franken fünfzig sind hundertfünfzig Rappen. Zwei Franken sind zweihundert Rappen.",
+        "Zähle vom Preis bis zum bezahlten Betrag weiter. Welche Münze passt zu dieser Ergänzung?"
+      ],
+      "question": "Du bezahlst einen Apfel für 1 Franken 50 Rappen mit einer Zweifrankenmünze. Welche Münze bekommst du zurück?",
+      "spokenPrompt": "Du bezahlst einen Apfel für einen Franken fünfzig mit einer Zweifrankenmünze. Welche Münze bekommst du zurück?"
+    }
+  },
+  "g50": {
+    "note": "Hard missing budget10-2*2-5=1 after donation andpurchase.",
+    "patch": {
+      "hints": [
+        "Zeichne zehn Einfrankenmünzen. Nimm zweimal zwei Franken für die Geschwister weg.",
+        "Nimm danach den Preis des Hefts weg und zähle das übrige Geld."
+      ],
+      "question": "Du hast 10 Franken und gibst deinen beiden Geschwistern je 2 Franken. Danach kaufst du ein Heft für 5 Franken. Wie viele Franken bleiben dir?"
+    }
+  }
+}

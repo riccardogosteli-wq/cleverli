@@ -8,6 +8,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
 import { useSound } from "@/hooks/useSound";
+import { scoreDropZones } from "@/lib/dragDropScoring";
 
 export interface DragItem { id: string; label: string; image?: string; emoji?: string; }
 export interface DropZone  { id: string; label: string; }
@@ -17,6 +18,7 @@ interface Props {
   items: DragItem[];
   zones: DropZone[];
   answers: Record<string, string>; // itemId → zoneId
+  interchangeableItems?: boolean;
   onAnswer: (correct: boolean) => void;
 }
 
@@ -28,7 +30,7 @@ interface Ghost {
   h: number;
 }
 
-export default function DragDrop({ question, items, zones, answers, onAnswer }: Props) {
+export default function DragDrop({ question, items, zones, answers, onAnswer, interchangeableItems = false }: Props) {
   const { tr } = useLang();
   const { play } = useSound();
 
@@ -108,20 +110,8 @@ export default function DragDrop({ question, items, zones, answers, onAnswer }: 
 
   const handleCheck = () => {
     if (checked) return;
-    const res: Record<string, boolean> = {};
-    let allCorrect = true;
-
-    for (const zone of zones) {
-      const inZone = placed[zone.id] ?? [];
-      // Items that SHOULD be in this zone
-      const expected = items.filter(item => answers[item.id] === zone.id).map(i => i.id);
-      // Zone correct if: same set of items (order-independent)
-      const zoneCorrect =
-        inZone.length === expected.length &&
-        expected.every(id => inZone.includes(id));
-      res[zone.id] = zoneCorrect;
-      if (!zoneCorrect) allCorrect = false;
-    }
+    const res = scoreDropZones(items, zones, answers, placed, interchangeableItems);
+    const allCorrect = Object.values(res).every(Boolean);
 
     setResult(res);
     setChecked(true);
