@@ -615,7 +615,7 @@ function fallbackQuestion(source: Exercise, localized: Exercise, subject: string
 }
 
 export function getExerciseSpeechText(source: Exercise, localized: Exercise, subject: string, language: Lang): string {
-  if (source.listeningText) return source.listeningText;
+  if (source.listeningText) return localized.listeningText ?? source.listeningText;
   const prompt = localized.spokenPrompt ?? source.spokenPrompt;
   const displayText = prompt ?? fallbackQuestion(source, localized, subject);
   const semanticText = language === "de" && !prompt

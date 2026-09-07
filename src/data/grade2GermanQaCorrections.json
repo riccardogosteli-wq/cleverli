@@ -1,0 +1,5136 @@
+{
+  "patches": {
+    "n1": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Hund bellt laut.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n2": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Katze schläft.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n3": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Kind spielt.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n4": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Apfel ist rot.",
+      "options": [
+        "Die",
+        "Das",
+        "Der"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n5": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Blume ist schön.",
+      "options": [
+        "Das",
+        "Der",
+        "Die"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n6": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Buch liegt auf dem Tisch.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n7": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Schule beginnt um 8 Uhr.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n8": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Auto fährt schnell.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n9": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Baum ist gross.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n10": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Sonne scheint.",
+      "options": [
+        "Das",
+        "Der",
+        "Die"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n11": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Tisch ist braun.",
+      "options": [
+        "Die",
+        "Das",
+        "Der"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n12": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Fenster ist offen.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n13": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Mutter kocht.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n14": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Vater liest.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n15": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Glas ist voll.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n17": {
+      "question": "Welches Wort ist ein Nomen?",
+      "answer": "Katze",
+      "options": [
+        "schnell",
+        "Katze",
+        "leise",
+        "laufen"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n18": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Lampe? Wähle der, die oder das.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n19": {
+      "question": "Welches Wort ist ein Nomen und wird grossgeschrieben?",
+      "answer": "Blume",
+      "options": [
+        "Blume",
+        "malen",
+        "leise",
+        "rennen"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n20": {
+      "question": "Welches Wort ist ein Nomen: Hund, leise oder laufen? ___",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n22": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Boot? Wähle der, die oder das.",
+      "answer": "das",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n24": {
+      "question": "Wähle das Nomen aus «baum, leise, laufen». Schreibe es mit grossem Anfangsbuchstaben: ___",
+      "altAnswers": [],
+      "caseSensitiveAnswer": true,
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n25": {
+      "question": "Welches Wort ist ein Nomen?",
+      "answer": "Heft",
+      "options": [
+        "laufen",
+        "schnell",
+        "Heft",
+        "leise"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n26": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Fisch? Wähle der, die oder das.",
+      "answer": "der",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n29": {
+      "question": "Welches Wort ist ein Nomen und wird grossgeschrieben?",
+      "answer": "Haus",
+      "options": [
+        "malen",
+        "leise",
+        "rennen",
+        "Haus"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n31": {
+      "question": "Welches Wort ist ein Nomen?",
+      "answer": "Maus",
+      "options": [
+        "laufen",
+        "schnell",
+        "Maus",
+        "leise"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n32": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Tasche? Wähle der, die oder das.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n36": {
+      "question": "Wähle das Nomen aus «haus, leise, laufen». Schreibe es mit grossem Anfangsbuchstaben: ___",
+      "answer": "Haus",
+      "altAnswers": [],
+      "caseSensitiveAnswer": true,
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n37": {
+      "question": "Welches Wort ist ein Nomen?",
+      "answer": "Zug",
+      "options": [
+        "leise",
+        "laufen",
+        "schnell",
+        "Zug"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n38": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Heft? Wähle der, die oder das.",
+      "answer": "das",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n39": {
+      "question": "Welches Wort ist ein Nomen und wird grossgeschrieben?",
+      "answer": "Lampe",
+      "options": [
+        "Lampe",
+        "malen",
+        "leise",
+        "rennen"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n40": {
+      "question": "Welches Wort ist ein Nomen: Buch, leise oder laufen? ___",
+      "answer": "Buch",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n41": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Zug? Wähle der, die oder das.",
+      "answer": "der",
+      "options": [
+        "das",
+        "der",
+        "die"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n42": {
+      "question": "Wähle das Nomen aus «ball, leise, laufen». Schreibe es mit grossem Anfangsbuchstaben: ___",
+      "answer": "Ball",
+      "altAnswers": [],
+      "caseSensitiveAnswer": true,
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n43": {
+      "question": "Welches Wort ist ein Nomen?",
+      "answer": "Lampe",
+      "options": [
+        "Lampe",
+        "leise",
+        "laufen",
+        "schnell"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n44": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Wolke? Wähle der, die oder das.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n45": {
+      "question": "Welches Wort ist ein Nomen und wird grossgeschrieben?",
+      "answer": "Buch",
+      "options": [
+        "leise",
+        "rennen",
+        "Buch",
+        "malen"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n46": {
+      "question": "Welches Wort ist ein Nomen: Blume, leise oder laufen? ___",
+      "answer": "Blume",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n47": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Bett? Wähle der, die oder das.",
+      "answer": "das",
+      "options": [
+        "das",
+        "der",
+        "die"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n48": {
+      "question": "Wähle das Nomen aus «blume, leise, laufen». Schreibe es mit grossem Anfangsbuchstaben: ___",
+      "answer": "Blume",
+      "altAnswers": [],
+      "caseSensitiveAnswer": true,
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n49": {
+      "question": "Welches Wort ist ein Nomen?",
+      "answer": "Auto",
+      "options": [
+        "laufen",
+        "schnell",
+        "Auto",
+        "leise"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n50": {
+      "question": "Welcher bestimmte Begleiter passt: ___ Stern? Wähle der, die oder das.",
+      "answer": "der",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "g2-german-verben-v24": {
+      "question": "Welches Wort zeigt eine Tätigkeit?",
+      "answer": "schwimmen",
+      "options": [
+        "gestern",
+        "schwimmen",
+        "Ball",
+        "leise"
+      ],
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v25": {
+      "question": "Lina ___ eine Blume. (malen)",
+      "answer": "malt",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v26": {
+      "question": "Wir ___ gern. (tanzen)",
+      "answer": "tanzen",
+      "options": [
+        "tanzst",
+        "tanzt",
+        "tanze",
+        "tanzen"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v27": {
+      "question": "Welches Wort zeigt eine Tätigkeit: springen, Ball oder rot? ___",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v33": {
+      "question": "Noah ___ ein Haus. (bauen)",
+      "answer": "baut",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v35": {
+      "question": "Wir ___ ein Lied. (singen)",
+      "answer": "singen",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v37": {
+      "question": "Welches Wort zeigt eine Tätigkeit?",
+      "answer": "tanzen",
+      "options": [
+        "leise",
+        "gestern",
+        "tanzen",
+        "Ball"
+      ],
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v39": {
+      "question": "Lina ___ ein Bild. (malen)",
+      "answer": "malt",
+      "options": [
+        "malt",
+        "male",
+        "malen",
+        "malst"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v40": {
+      "question": "Wir ___ einen Brief. (schreiben)",
+      "answer": "schreiben",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v43": {
+      "question": "Welches Wort zeigt eine Tätigkeit?",
+      "answer": "singen",
+      "options": [
+        "leise",
+        "gestern",
+        "singen",
+        "Ball"
+      ],
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v44": {
+      "question": "Lena ___ im Heft. (rechnen)",
+      "answer": "rechnet",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v47": {
+      "question": "Wir ___ ein Haus. (bauen)",
+      "answer": "bauen",
+      "options": [
+        "baue",
+        "baust",
+        "bauen",
+        "baut"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v49": {
+      "question": "Welches Wort zeigt eine Tätigkeit?",
+      "answer": "zeichnen",
+      "options": [
+        "Ball",
+        "leise",
+        "gestern",
+        "zeichnen"
+      ],
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v50": {
+      "question": "Noah ___ über den Witz. (lachen)",
+      "answer": "lacht",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-silben-s37": {
+      "question": "Wie viele Silben hat «Papagei»? ___",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s38": {
+      "question": "Wie viele Silben hat «Sommer»?",
+      "answer": "2",
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s50": {
+      "question": "Wie viele Silben hat «Eisenbahn»?",
+      "options": [
+        "5",
+        "2",
+        "3",
+        "4"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "ag20": {
+      "question": "Welches Wort beschreibt eine Farbe: rot, Ball oder laufen? ___",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag26": {
+      "question": "Setze «spannend» passend ein: ein ___ Buch",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag34": {
+      "question": "Welches Wort beschreibt eine Farbe: rot, Ball oder laufen? ___",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag40": {
+      "question": "Setze «spannend» passend ein: ein ___ Buch",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag43": {
+      "question": "Welches Wort beschreibt den Ball? Der Ball ist ___.",
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag44": {
+      "question": "Setze «spannend» passend ein: ein ___ Buch",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag49": {
+      "question": "Welches Wort beschreibt den Ball? Der Ball ist ___.",
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "sz30": {
+      "question": "Welches Satzzeichen gehört ans Ende? Kommst du mit___",
+      "options": [
+        ",",
+        ".",
+        "!",
+        "?"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz35": {
+      "question": "Welches Satzzeichen gehört ans Ende? Kommst du mit___",
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz47": {
+      "question": "Welches Satzzeichen gehört ans Ende? Kommst du mit___",
+      "options": [
+        ".",
+        "!",
+        "?",
+        ","
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "tl40": {
+      "question": "Lies: Mia hat einen roten Ball. Welche Farbe hat der Ball? Antwort: ___",
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "sp30": {
+      "question": "Ergänze die Mehrzahl: 1 Garten → viele ___",
+      "answer": "Gärten",
+      "options": [
+        "Gärten",
+        "Gartes",
+        "Gärter",
+        "Garten"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp36": {
+      "question": "Ergänze die Mehrzahl: 1 Ball → viele ___",
+      "answer": "Bälle",
+      "options": [
+        "Ballen",
+        "Ball",
+        "Bäller",
+        "Bälle"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp49": {
+      "question": "Ergänze die Mehrzahl: 1 Zebra → viele ___",
+      "answer": "Zebras",
+      "options": [
+        "Zebras",
+        "Zebrer",
+        "Zebren",
+        "Zebra"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "wf39": {
+      "question": "Welches Wort gehört zu fahren?",
+      "options": [
+        "Farbe",
+        "Faden",
+        "Fenster",
+        "Fahrer"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf41": {
+      "question": "Welches Wort gehört zu fahren?",
+      "options": [
+        "Faden",
+        "Fenster",
+        "Fahrer",
+        "Farbe"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf43": {
+      "question": "Welches Wort gehört zu fahren?",
+      "options": [
+        "Faden",
+        "Fenster",
+        "Fahrer",
+        "Farbe"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf49": {
+      "question": "Welches Wort gehört zu fahren?",
+      "options": [
+        "Farbe",
+        "Faden",
+        "Fenster",
+        "Fahrer"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "pr19": {
+      "question": "Der Hund schläft. ___ schläft. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Er",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr20": {
+      "question": "Die Blume blüht. ___ blüht. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Sie",
+      "options": [
+        "Wir",
+        "Sie",
+        "Er",
+        "Es"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr22": {
+      "question": "Das Buch liegt auf dem Tisch. ___ liegt auf dem Tisch. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "options": [
+        "Wir",
+        "Es",
+        "Er",
+        "Sie"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr23": {
+      "question": "Die Kinder lachen. ___ lachen. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr24": {
+      "question": "Der Vater kocht. ___ kocht. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "options": [
+        "Es",
+        "Wir",
+        "Er",
+        "Sie"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr25": {
+      "question": "Die Lampe leuchtet. ___ leuchtet. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Sie",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr26": {
+      "question": "Das Auto fährt. ___ fährt. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Es",
+      "options": [
+        "Es",
+        "Er",
+        "Sie",
+        "Wir"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr27": {
+      "question": "Lena und ich lesen. ___ lesen. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Wir",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr28": {
+      "question": "Das Pferd frisst. ___ frisst. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "options": [
+        "Wir",
+        "Es",
+        "Er",
+        "Sie"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr29": {
+      "question": "Die Mutter winkt. ___ winkt. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr30": {
+      "question": "Die Katze spielt. ___ spielt. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Sie",
+      "options": [
+        "Wir",
+        "Sie",
+        "Er",
+        "Es"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr31": {
+      "question": "Der Ball rollt. ___ rollt. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Er",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr34": {
+      "question": "Das Baby weint. ___ weint. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Es",
+      "options": [
+        "Wir",
+        "Es",
+        "Er",
+        "Sie"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr36": {
+      "question": "Die Stifte liegen im Etui. ___ liegen im Etui. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Sie",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr37": {
+      "question": "Die Vögel singen. ___ singen. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Sie",
+      "options": [
+        "Wir",
+        "Sie",
+        "Er",
+        "Es"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr39": {
+      "question": "Mia und ich basteln. ___ basteln. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "answer": "Wir",
+      "options": [
+        "Sie",
+        "Es",
+        "Wir",
+        "Er"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr41": {
+      "question": "Der Vogel fliegt. ___ fliegt. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "options": [
+        "Es",
+        "Wir",
+        "Er",
+        "Sie"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr45": {
+      "question": "Das Heft liegt hier. ___ liegt hier. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "options": [
+        "Sie",
+        "Wir",
+        "Es",
+        "Er"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr46": {
+      "question": "Die Uhr tickt. ___ tickt. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr47": {
+      "question": "Der Lehrer liest. ___ liest. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "options": [
+        "Sie",
+        "Es",
+        "Wir",
+        "Er"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr48": {
+      "question": "Das Kaninchen hoppelt. ___ hoppelt. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr49": {
+      "question": "Die Mädchen rennen. ___ rennen. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "options": [
+        "Wir",
+        "Sie",
+        "Er",
+        "Es"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr50": {
+      "question": "Mein Bruder übt. ___ übt. Ersetze den genannten Namen oder das Nomen durch ein passendes Ersatzwort.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "n16": {
+      "question": "Ergänze mit dem bestimmten Begleiter (der, die oder das): ___ Brille liegt auf dem Tisch.",
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n23": {
+      "question": "Wie lautet die Mehrzahl von «der Stuhl»?",
+      "options": [
+        "die Stühle",
+        "das Stühle",
+        "den Stühle",
+        "der Stühle"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n28": {
+      "question": "Ergänze mit dem bestimmten Begleiter: ___ Apfel liegt im Korb.",
+      "answer": "Der",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n30": {
+      "question": "Ergänze mit dem bestimmten Begleiter: ___ Kind lacht.",
+      "answer": "Das",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n33": {
+      "question": "Welche Form passt? «Ich habe ___ Brot mehr.»",
+      "options": [
+        "keinen",
+        "keinem",
+        "kein",
+        "keine"
+      ],
+      "hints": [
+        "Nomen benennen Lebewesen, Dinge oder Orte.",
+        "Unterscheide Dingwörter von Tätigkeitswörtern und Wiewörtern."
+      ]
+    },
+    "n34": {
+      "question": "Ergänze mit dem bestimmten Begleiter: ___ Auto steht vor dem Haus.",
+      "answer": "Das",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n35": {
+      "question": "Welches Nomen hat in der Einzahl den Begleiter «die»?",
+      "options": [
+        "Hund",
+        "Ball",
+        "Tisch",
+        "Blume"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "g2-german-verben-v8": {
+      "question": "Lena ___ ein Buch. (lesen)",
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v12": {
+      "question": "Wie heisst die Grundform zu «läuft»? Schreibe das Tunwort: ___",
+      "hints": [
+        "Suche die Form, mit der du eine Tätigkeit benennst.",
+        "Löse das Tunwort von einer bestimmten Person. Die Grundform endet häufig auf -en."
+      ]
+    },
+    "g2-german-verben-v13": {
+      "question": "Wie heisst die Grundform zu «singt»?",
+      "options": [
+        "singen",
+        "sang",
+        "gesungen",
+        "singt"
+      ],
+      "hints": [
+        "Suche die Form, mit der du eine Tätigkeit benennst.",
+        "Löse das Tunwort von einer bestimmten Person. Die Grundform endet häufig auf -en."
+      ]
+    },
+    "g2-german-verben-v17": {
+      "question": "Die Kinder ___ ins Kino. (gehen)",
+      "options": [
+        "gehe",
+        "geht",
+        "gehen",
+        "gehst"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v22": {
+      "question": "Ergänze mit dem Gegenwort: aufstehen oder hinsetzen? «Ich stehe nicht auf, ich möchte mich ___.»",
+      "answer": "hinsetzen",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v28": {
+      "question": "Leo ___ gerne Fussball. Setze «spielen» passend ein.",
+      "answer": "spielt",
+      "options": [
+        "spielst",
+        "spielen",
+        "spiele",
+        "spielt"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v30": {
+      "question": "Setze «kommen» passend ein: Du ___ mit.",
+      "answer": "kommst",
+      "options": [
+        "komme",
+        "kommst",
+        "kommt",
+        "kommen"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v31": {
+      "question": "Lena ___ gestern sehr müde. Setze «sein» passend in die Vergangenheit.",
+      "hints": [
+        "Achte auf das Zeitwort im Satz: Geschieht es jetzt oder ist es schon vorbei?",
+        "Sprich den ganzen Satz als Erzählung über gestern."
+      ]
+    },
+    "g2-german-verben-v34": {
+      "question": "Der Hund und die Katze laufen nacheinander los. Was passt zu «Die Katze ___»?",
+      "answer": "läuft",
+      "options": [
+        "laufen",
+        "läufst",
+        "läuft",
+        "laufe"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v41": {
+      "question": "Welches Tunwort ist in «Ich stehe früh auf» auseinandergezogen?",
+      "options": [
+        "sprechen",
+        "aufstehen",
+        "verstehen",
+        "erreichen"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v42": {
+      "question": "Er ___ jeden Morgen um sieben Uhr auf. Setze «aufstehen» passend ein.",
+      "answer": "steht",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v45": {
+      "question": "Du ___ am Tisch. Setze «sitzen» passend ein.",
+      "answer": "sitzt",
+      "options": [
+        "sitze",
+        "sitzt",
+        "sitzen",
+        "sass"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v46": {
+      "question": "Das Kind ___ das Fenster zu. Setze «zumachen» passend ein.",
+      "answer": "macht",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-silben-s34": {
+      "question": "Wie viele Silben hat «Regenbogen»?",
+      "answer": "4",
+      "options": [
+        "5",
+        "2",
+        "3",
+        "4"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s42": {
+      "question": "Wie viele Silben hat «Feuerwehr»?",
+      "answer": "3",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s45": {
+      "question": "Wie viele Silben hat «Blumenwiese»? ___",
+      "answer": "4",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s39": {
+      "question": "Trenne «Wassermelone» mit Bindestrichen in Silben: ___",
+      "answer": "Was-ser-me-lo-ne",
+      "altAnswers": [
+        "Was - ser - me - lo - ne"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s19": {
+      "altAnswers": [
+        "Schul - ta - sche"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s21": {
+      "altAnswers": [
+        "Haus - auf - ga - ben"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s23": {
+      "altAnswers": [
+        "Fahr - rad"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s25": {
+      "altAnswers": [
+        "Ta - schen - lam - pe"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s27": {
+      "altAnswers": [
+        "Un - ter - richt"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s29": {
+      "altAnswers": [
+        "Som - mer - fe - ri - en"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s33": {
+      "altAnswers": [
+        "Schul - bü - cher"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s35": {
+      "altAnswers": [
+        "Ma - the - ma - tik"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s41": {
+      "altAnswers": [
+        "Schul - aus - flug"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s43": {
+      "altAnswers": [
+        "Schwei - ze - risch"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s47": {
+      "altAnswers": [
+        "Jah - res - zei - ten"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "g2-german-silben-s49": {
+      "altAnswers": [
+        "Sprach - ent - wick - lung"
+      ],
+      "hints": [
+        "Sprich das Wort langsam und höre auf die Sprechabschnitte.",
+        "Setze die Trennstriche zwischen die Abschnitte, nicht mitten in eine Silbe."
+      ]
+    },
+    "ag9": {
+      "question": "Wähle jung oder kurz: Ein Mensch ist nicht alt, sondern ___.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag11": {
+      "question": "Wähle leicht oder nass: Ein Rucksack wiegt wenig. Er ist nicht schwer, sondern ___.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "ag14": {
+      "question": "Welche Farbe hat das Fell eines Eisbären normalerweise dem Aussehen nach?",
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag16": {
+      "question": "Setze «rot» passend ein: Der ___ Apfel liegt auf dem Tisch.",
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag22": {
+      "question": "Setze «fleissig» passend ein: Eine ___ Schülerin übt.",
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag24": {
+      "question": "Setze «schön» passend ein: Das ___ Bild hängt hier.",
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag32": {
+      "question": "Setze «lustig» passend ein: Ein ___ Film beginnt.",
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag36": {
+      "question": "Setze die stärkste Form von «schnell» ein: Er ist der ___ Läufer.",
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag42": {
+      "question": "Setze «rot» passend ein: ___ Rosen stehen in der Vase.",
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag46": {
+      "question": "Setze die stärkste Form von «schön» ein: Das ___ aller Bilder hängt hier.",
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag19": {
+      "question": "Setze «gross» passend ein: Der ___ Hund läuft im Park.",
+      "answer": "grosse",
+      "options": [
+        "grossen",
+        "grosser",
+        "grosse",
+        "grosses"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag25": {
+      "question": "Welches Wort beschreibt, wie sich eine Decke anfühlen kann?",
+      "answer": "weich",
+      "options": [
+        "Decke",
+        "weich",
+        "gestern",
+        "laufen"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag37": {
+      "question": "Setze «rot» passend ein: Er kauft einen ___ Apfel.",
+      "answer": "roten",
+      "options": [
+        "rote",
+        "roter",
+        "roten",
+        "rotes"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag38": {
+      "question": "Welches Wiewort beschreibt das Tempo in «Er läuft schnell»? ___",
+      "answer": "schnell",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag39": {
+      "question": "Setze «gut» in der stärksten Form ein: Das war die ___ Idee.",
+      "options": [
+        "beste",
+        "bestigste",
+        "guteste",
+        "bessere"
+      ],
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag41": {
+      "question": "Welches Wiewort beschreibt jemanden, der die Wahrheit sagt?",
+      "options": [
+        "ehrlich",
+        "schnell",
+        "blau",
+        "rund"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag45": {
+      "question": "Vergleiche: warm – ___ – am wärmsten.",
+      "answer": "wärmer",
+      "options": [
+        "warm",
+        "wärmste",
+        "warmer",
+        "wärmer"
+      ],
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag47": {
+      "question": "Setze «wichtig» passend ein: Eine ___ Frage bleibt offen.",
+      "options": [
+        "wichtigem",
+        "wichtigen",
+        "wichtiger",
+        "wichtige"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag48": {
+      "question": "Bilde ein Wiewort aus «Freund» und «-lich»: ___",
+      "answer": "freundlich",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag50": {
+      "question": "Vergleiche: leicht – ___ – am leichtesten.",
+      "answer": "leichter",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag7": {
+      "question": "Welches Wiewort beschreibt die Körpergrösse eines erwachsenen Elefanten im Vergleich zu einer Maus?",
+      "options": [
+        "klein",
+        "schlafen",
+        "laufen",
+        "gross"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "sz15": {
+      "question": "Verbinde die letzten Tiere der Aufzählung miteinander: «Hunde, Katzen ___ Vögel sind Tiere.»",
+      "altAnswers": [
+        "sowie"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Am Ende der Aufzählung werden die letzten beiden Glieder verbunden.",
+        "Suche ein Bindewort, das die Tiere gemeinsam nennt."
+      ]
+    },
+    "sz19": {
+      "question": "Setze das Zeichen vor der direkten Rede: Er sagt___ «Ich komme morgen.»",
+      "hints": [
+        "Eine Ankündigung bereitet auf etwas Folgendes vor.",
+        "Hier folgen danach eine Aufzählung oder direkt gesprochene Worte."
+      ]
+    },
+    "sz3": {
+      "question": "Setze das Ende eines deutlichen Ausrufs: «Schau, ein Regenbogen___»",
+      "options": [
+        "!",
+        "?",
+        ",",
+        "."
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz7": {
+      "question": "Setze das Ende einer dringenden Bitte: «Bitte hilf mir___»",
+      "options": [
+        ",",
+        ".",
+        "!",
+        "?"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz11": {
+      "question": "Setze das Ende einer eindringlichen Aufforderung: «Komm her___»",
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz13": {
+      "question": "Setze das Ende einer neutralen Aussage: «Es schneit___»",
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz14": {
+      "question": "Was trennt ein Komma in einer einfachen Aufzählung?",
+      "answer": "die aufgezählten Dinge",
+      "options": [
+        "jedes Wort",
+        "jede Silbe",
+        "die aufgezählten Dinge",
+        "alle Buchstaben"
+      ],
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz18": {
+      "question": "Welches Satzzeichen beendet die Frage «Wo wohnst du___»?",
+      "answer": "?",
+      "options": [
+        "?",
+        ",",
+        ".",
+        "!"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz21": {
+      "question": "«Im Korb liegen Äpfel___ Birnen und Bananen.» Setze das fehlende Satzzeichen.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz23": {
+      "question": "«Wir brauchen Papier___ Stifte und Kleber.» Setze das fehlende Satzzeichen.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz33": {
+      "question": "«Im Wald sehen wir Rehe___ Füchse und Hasen.» Setze das fehlende Satzzeichen.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz38": {
+      "question": "«Nora malt___ liest und singt gern.» Setze das fehlende Satzzeichen.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz46": {
+      "question": "«Tom kauft Brot___ Käse und Milch.» Setze das fehlende Satzzeichen.",
+      "answer": ",",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz50": {
+      "question": "«Im Etui liegen Stifte___ ein Radiergummi und ein Lineal.» Setze das fehlende Satzzeichen.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz24": {
+      "question": "Welches Zeichen zeigt am Zeilenende, dass ein Wort auf der nächsten Zeile weitergeht?",
+      "answer": "Bindestrich",
+      "options": [
+        "Ausrufezeichen",
+        "Fragezeichen",
+        "Punkt",
+        "Bindestrich"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz27": {
+      "question": "Setze das fehlende Komma: «Hey___ du bist super!»",
+      "answer": ",",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz29": {
+      "question": "Der Satz wird abgebrochen: «Ich wollte dir___» Setze die drei Auslassungspunkte.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz31": {
+      "question": "Setze das Ende einer neutralen Aussage: «Im Sommer ist es warm___»",
+      "answer": ".",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz32": {
+      "question": "Welche Briefschreibweise ist in der Schweiz üblich?",
+      "answer": "Nach der Anrede kein Komma; der folgende Satz beginnt gross.",
+      "options": [
+        "Der ganze Brief wird kleingeschrieben.",
+        "Nach jedem Wort steht ein Komma.",
+        "Nach der Anrede immer ein Punkt.",
+        "Nach der Anrede kein Komma; der folgende Satz beginnt gross."
+      ],
+      "hints": [
+        "Denke an einen persönlichen Brief, wie er in der Schweiz üblich ist.",
+        "Vergleiche die Anrede mit dem Beginn der nächsten Zeile."
+      ]
+    },
+    "sz34": {
+      "question": "Welcher Satz beginnt richtig?",
+      "answer": "Mia liest.",
+      "options": [
+        "mIa liest.",
+        "Mia liest.",
+        "miA liest.",
+        "mia liest."
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz36": {
+      "question": "Setze das öffnende Anführungszeichen: ___Ich bin hier.»",
+      "answer": "«",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Direkt Gesprochenes hat ein öffnendes und ein schliessendes Zeichen.",
+        "Achte darauf, ob die Rede an der Lücke beginnt oder endet."
+      ]
+    },
+    "sz40": {
+      "question": "Beende den deutlichen Ausruf: «Oh___ Das ist toll!»",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz41": {
+      "question": "Welches Zeichen beendet eine neutrale Aussage?",
+      "answer": "Punkt",
+      "options": [
+        "Komma",
+        "Punkt",
+        "Fragezeichen",
+        "Doppelpunkt"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz42": {
+      "question": "Setze das Ende einer neutralen Aussage: «Ich lese noch ein Kapitel___»",
+      "answer": ".",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz43": {
+      "question": "Wo ist das Komma in der Aufzählung richtig gesetzt?",
+      "answer": "Ich kaufe Brot, Käse und Tomaten.",
+      "options": [
+        "Ich kaufe Brot Käse, und Tomaten.",
+        "Ich kaufe Brot Käse und, Tomaten.",
+        "Ich, kaufe Brot Käse und Tomaten.",
+        "Ich kaufe Brot, Käse und Tomaten."
+      ],
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz44": {
+      "question": "Wie heisst das Zeichen am Ende einer Frage? Schreibe seinen Namen: ___",
+      "answer": "Fragezeichen",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz45": {
+      "question": "Welcher Satz ist eine Frage?",
+      "answer": "Kommst du mit?",
+      "options": [
+        "Kommst du mit?",
+        "Mitkommen.",
+        "Komm mit!",
+        "Wir kommen mit."
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "tl10": {
+      "question": "«Die Schule beginnt um acht. Die Pause ist um zehn.» Nach wie vielen Stunden beginnt die Pause? ___ Stunden",
+      "answer": "2",
+      "altAnswers": [
+        "zwei"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die Zahlen und achte darauf, was genau gefragt ist.",
+        "Manchmal kannst du eine Angabe direkt übernehmen; manchmal musst du mit den Angaben rechnen."
+      ]
+    },
+    "tl14": {
+      "question": "«Es hat geregnet. Deshalb ist die Strasse nass.» Was machte die Strasse nass? Der ___.",
+      "answer": "Regen",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl18": {
+      "question": "«Der Drache übt jeden Tag.» Wie oft übt er? Schreibe «täglich» oder «wöchentlich»: ___",
+      "answer": "täglich",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl21": {
+      "question": "«Das Buch hat 20 Seiten. Tim liest jeden Tag 5 Seiten.» Nach wie vielen Tagen ist er fertig?",
+      "answer": "4 Tage",
+      "options": [
+        "2 Tage",
+        "3 Tage",
+        "4 Tage",
+        "5 Tage"
+      ],
+      "hints": [
+        "Suche die Zahlen und achte darauf, was genau gefragt ist.",
+        "Manchmal kannst du eine Angabe direkt übernehmen; manchmal musst du mit den Angaben rechnen."
+      ]
+    },
+    "tl22": {
+      "question": "«Viele Menschen suchen ein Hotelzimmer. Die Preise steigen.» Ergänze mit einem Wort aus dem Text: Die Preise ___.",
+      "answer": "steigen",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl24": {
+      "question": "«Im Regal stehen 30 Bücher.2 werden ausgeliehen.» Wie viele bleiben? ___",
+      "answer": "28",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die Zahlen und achte darauf, was genau gefragt ist.",
+        "Manchmal kannst du eine Angabe direkt übernehmen; manchmal musst du mit den Angaben rechnen."
+      ]
+    },
+    "tl26": {
+      "question": "«Wenn es regnet, nehme ich einen Schirm mit.» Ergänze: Ich nehme den Schirm mit, wenn es ___.",
+      "answer": "regnet",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl32": {
+      "question": "«Zuerst kochte die Mutter, dann deckte das Kind den Tisch.» Wer kochte zuerst? Die ___.",
+      "answer": "Mutter",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl34": {
+      "question": "«Der Turm ist 30 Meter hoch.» Wie hoch ist der Turm? ___ Meter",
+      "answer": "30",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Suche die Zahlen und achte darauf, was genau gefragt ist.",
+        "Manchmal kannst du eine Angabe direkt übernehmen; manchmal musst du mit den Angaben rechnen."
+      ]
+    },
+    "tl36": {
+      "question": "«Obwohl es regnete, spielten die Kinder draussen.» Wo spielten sie? ___",
+      "answer": "draussen",
+      "altAnswers": [
+        "im Freien"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl37": {
+      "question": "«Weil es wenig regnet, führt der Fluss weniger Wasser.» Warum führt er im Text weniger Wasser?",
+      "answer": "Es regnet wenig.",
+      "options": [
+        "Alle Tiere schlafen.",
+        "Es regnet wenig.",
+        "Es regnet sehr stark.",
+        "Es schneit ununterbrochen."
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl38": {
+      "question": "«Je mehr Lea übt, desto besser liest sie.» Ergänze mit einem Wort aus dem Text: Lea liest durch Üben ___.",
+      "answer": "besser",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl41": {
+      "question": "«Mia übt regelmässig. Dadurch liest sie bald flüssiger.» Was hilft ihr im Text?",
+      "answer": "regelmässiges Üben",
+      "options": [
+        "Bücher verstecken",
+        "regelmässiges Üben",
+        "seltener lesen",
+        "Stifte verlieren"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl42": {
+      "question": "«Er war müde und schlief ein.» Ergänze mit einem Wort aus dem Text: Er ___ ein.",
+      "answer": "schlief",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl43": {
+      "question": "«Der Hund kommt, wenn Lena ihn ruft. Auf ihr «Sitz» setzt er sich.» Was ist wahrscheinlich?",
+      "answer": "Der Hund hat diese Kommandos gelernt.",
+      "options": [
+        "Der Hund hat Flügel.",
+        "Der Hund hat diese Kommandos gelernt.",
+        "Der Hund lebt im Meer.",
+        "Der Hund kann lesen."
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl44": {
+      "question": "«Das Mädchen lächelte, obwohl es traurig war.» Ergänze mit einem Wort aus dem Text: Das Mädchen ___.",
+      "answer": "lächelte",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl46": {
+      "question": "Ein Text erklärt mit Fakten, wie Bienen leben. Ist er ein Sachtext oder ein Märchen? ___",
+      "answer": "Sachtext",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl48": {
+      "question": "«Die Zeitung berichtet: Im Dorf entsteht ein neuer Spielplatz.» Ergänze: Ein neuer ___ entsteht.",
+      "answer": "Spielplatz",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl50": {
+      "question": "«Er schlief ein, während die anderen feierten.» Ergänze mit einem Wort aus dem Text: Er ___ ein.",
+      "answer": "schlief",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "sp5": {
+      "question": "Viele ___ knabbern am Käse. Setze «Maus» in die Mehrzahl.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp37": {
+      "question": "Ergänze die Mehrzahl: 1 Bild → viele ___",
+      "answer": "Bilder",
+      "options": [
+        "Bild",
+        "Bilder",
+        "Bilden",
+        "Bilde"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp43": {
+      "question": "Ergänze die Mehrzahl: 1 Freund → viele ___",
+      "answer": "Freunde",
+      "options": [
+        "Freunds",
+        "Freund",
+        "Freunden",
+        "Freunde"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp47": {
+      "question": "Ergänze die Mehrzahl: 1 Bruder → viele ___",
+      "answer": "Brüder",
+      "options": [
+        "Bruder",
+        "Brüder",
+        "Brudern",
+        "Bruders"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp38": {
+      "question": "1 Flasche → viele ___",
+      "answer": "Flaschen",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp40": {
+      "question": "1 Kleid → viele ___",
+      "answer": "Kleider",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp42": {
+      "question": "1 Ohr → viele ___",
+      "answer": "Ohren",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp44": {
+      "question": "1 Vater → viele ___",
+      "answer": "Väter",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp46": {
+      "question": "1 Tochter → viele ___",
+      "answer": "Töchter",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp48": {
+      "question": "1 Pinguin → viele ___",
+      "answer": "Pinguine",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp50": {
+      "question": "1 Elefant → viele ___",
+      "answer": "Elefanten",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp39": {
+      "question": "Welches Wort bezeichnet bereits mehrere Tiere?",
+      "answer": "Hunde",
+      "options": [
+        "Hund",
+        "Katze",
+        "Hunde",
+        "Maus"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp41": {
+      "question": "Welcher Begleiter passt zur Mehrzahl «Häuser»?",
+      "answer": "die",
+      "options": [
+        "das",
+        "ein",
+        "der",
+        "die"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "wf3": {
+      "question": "Bäcker und Bäckerei gehören zur Familie eines Tunworts. Wie heisst seine Grundform? ___",
+      "answer": "backen",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf5": {
+      "question": "Welcher gemeinsame Stamm steckt in «Schreibheft», «Schreiber» und «schreiben»? ___",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf7": {
+      "question": "Ergänze das Tunwort: Ein Bäcker kann Brot ___.",
+      "answer": "backen",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf9": {
+      "question": "Welches Grundwort gehört zu «Buchhändler» und «Bücherregal»? Schreibe die Einzahl ohne Begleiter: ___",
+      "answer": "Buch",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf19": {
+      "question": "Setze «un-» vor «freundlich». Schreibe das neue Wort: ___",
+      "answer": "unfreundlich",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf21": {
+      "question": "Bilde ein Wort aus «Spiel» und «Platz»: ___",
+      "answer": "Spielplatz",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Setze die vorgegebenen Wortteile in der angegebenen Reihenfolge zusammen.",
+        "Schreibe das zusammengesetzte Nomen als ein Wort mit grossem Anfang."
+      ]
+    },
+    "wf23": {
+      "question": "Bilde ein Wort aus «Schreib» und «Heft»: ___",
+      "answer": "Schreibheft",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Setze die vorgegebenen Wortteile in der angegebenen Reihenfolge zusammen.",
+        "Schreibe das zusammengesetzte Nomen als ein Wort mit grossem Anfang."
+      ]
+    },
+    "wf24": {
+      "question": "Welches Wort gehört zur Familie «lernen»?",
+      "answer": "Lernheft",
+      "options": [
+        "Schuh",
+        "Ball",
+        "Lernheft",
+        "Malbuch"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf25": {
+      "question": "Welches Wort gehört zur Familie «bauen»?",
+      "answer": "Bauplatz",
+      "options": [
+        "Ball",
+        "Baum",
+        "Bauch",
+        "Bauplatz"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf26": {
+      "question": "Welches Wort gehört zur Familie «wohnen»?",
+      "answer": "Wohnung",
+      "options": [
+        "Wolke",
+        "Wort",
+        "Woche",
+        "Wohnung"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf27": {
+      "question": "Welches Wort gehört zur Familie «Spiel»: Spielplatz, Wasserfall oder Waldtier? ___",
+      "answer": "Spielplatz",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf28": {
+      "question": "Welches Grundwort gehört zu «Buchhandlung» und «Bücherregal»?",
+      "answer": "Buch",
+      "options": [
+        "Bauch",
+        "Buch",
+        "Bank",
+        "Bach"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf29": {
+      "question": "Bilde ein Wort aus «Hand» und «Schuh»: ___",
+      "answer": "Handschuh",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Setze die vorgegebenen Wortteile in der angegebenen Reihenfolge zusammen.",
+        "Schreibe das zusammengesetzte Nomen als ein Wort mit grossem Anfang."
+      ]
+    },
+    "wf32": {
+      "question": "Welches Wort gehört zur Familie «singen»?",
+      "answer": "Sänger",
+      "options": [
+        "Sänger",
+        "Sessel",
+        "Sonne",
+        "Sand"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf33": {
+      "question": "Bilde ein Wort aus «Regen» und «Mantel»: ___",
+      "answer": "Regenmantel",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Setze die vorgegebenen Wortteile in der angegebenen Reihenfolge zusammen.",
+        "Schreibe das zusammengesetzte Nomen als ein Wort mit grossem Anfang."
+      ]
+    },
+    "wf36": {
+      "question": "Welche Wörter gehören alle zur Familie «tanzen»?",
+      "answer": "Tanz, tanzen, Tänzer",
+      "options": [
+        "Tanz, Tisch, Tür",
+        "Tänzer, Turner, Taucher",
+        "tanzen, laufen, lesen",
+        "Tanz, tanzen, Tänzer"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf37": {
+      "question": "Welches Wort gehört zur Familie «malen»?",
+      "answer": "Maler",
+      "options": [
+        "Mutter",
+        "Maler",
+        "Maus",
+        "Mund"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf38": {
+      "question": "Setze «un-» vor «glücklich». Schreibe das neue Wort: ___",
+      "answer": "unglücklich",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf40": {
+      "question": "Welches Wort gehört zu «schreiben»: Schreibheft, Malkasten oder Schulhof? ___",
+      "answer": "Schreibheft",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf42": {
+      "question": "Bilde ein Wort aus «Nacht» und «Licht»: ___",
+      "answer": "Nachtlicht",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Setze die vorgegebenen Wortteile in der angegebenen Reihenfolge zusammen.",
+        "Schreibe das zusammengesetzte Nomen als ein Wort mit grossem Anfang."
+      ]
+    },
+    "wf44": {
+      "question": "Welcher Stamm steckt in «Lernheft», «lernen» und «Lerngruppe»? ___",
+      "answer": "lern",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf45": {
+      "question": "Welche Wörter gehören alle zur Familie «fahren»?",
+      "answer": "Fahrer, Fahrzeug, Abfahrt",
+      "options": [
+        "Flug, Flieger, fliegen",
+        "Fisch, Fischer, fischen",
+        "Farbe, Faden, Falter",
+        "Fahrer, Fahrzeug, Abfahrt"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf46": {
+      "question": "Bilde ein Wort aus «Haus» und «Tür»: ___",
+      "answer": "Haustür",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Setze die vorgegebenen Wortteile in der angegebenen Reihenfolge zusammen.",
+        "Schreibe das zusammengesetzte Nomen als ein Wort mit grossem Anfang."
+      ]
+    },
+    "wf48": {
+      "question": "Welches Nomen gehört zu «gehen»: Gehweg, Garten oder Glas? ___",
+      "answer": "Gehweg",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf50": {
+      "question": "Schreibe 3 verschiedene Wörter aus der Familie «sehen». Prüfe sie anschliessend mit der Checkliste.",
+      "answer": "sehen, ansehen, zusehen",
+      "reviewCriteria": [
+        "Ich habe 3 verschiedene Wörter aufgeschrieben.",
+        "Meine Wörter gehören zur Familie «sehen».",
+        "Ich habe Nomen gross und Tunwörter klein geschrieben."
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "pr3": {
+      "question": "Ordne jedem Ersatzwort zu, wen es meint.",
+      "dropZones": [
+        {
+          "id": "selbst",
+          "label": "Ich selbst"
+        },
+        {
+          "id": "person-angeredet",
+          "label": "Person, die ich anrede"
+        },
+        {
+          "id": "mann",
+          "label": "Ein Mann / Junge"
+        },
+        {
+          "id": "frau",
+          "label": "Eine Frau oder eine Schülerin"
+        },
+        {
+          "id": "gruppe",
+          "label": "Eine Gruppe mit mir"
+        }
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr21": {
+      "question": "Der Vater liest. ___ liest. Ersetze «der Vater» durch ein passendes Ersatzwort.",
+      "answer": "Er",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr32": {
+      "question": "Was bedeutet «unser» in «unser Ball»?",
+      "answer": "Der Ball gehört uns.",
+      "options": [
+        "Der Ball gehört uns.",
+        "Der Ball ist kaputt.",
+        "Der Ball gehört niemandem.",
+        "Der Ball gehört nur dir."
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr33": {
+      "question": "«Mia und ich lesen.» Ersetze beide Personen: ___ lesen.",
+      "answer": "Wir",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr35": {
+      "question": "Setze das passende Wort ein: Jemand oder niemand? «Die Tür öffnet sich, aber es ist keine Person da. ___ steht vor der Tür.»",
+      "answer": "Niemand",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr38": {
+      "question": "Die Bücher liegen da. ___ liegen da. Ersetze «die Bücher».",
+      "answer": "Sie",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr40": {
+      "question": "Das Heft ist offen. ___ ist offen. Ersetze «das Heft».",
+      "answer": "Es",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr42": {
+      "question": "Frage nach einer Person: «___ hat gerufen?» Wähle wer oder was.",
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr44": {
+      "question": "Ergänze: «Ich freue ___ auf dich.» Wähle mich oder sich.",
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "g2gs6": {
+      "question": "Verbinde beide Tätigkeiten mit einem Bindewort: «Ben malt. Ben hört Musik.» → «Ben malt ___ hört Musik.»",
+      "altAnswers": [
+        "sowie"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Überlege, ob die Gedanken zusammengehören, sich widersprechen oder einen Grund nennen.",
+        "Setze ein passendes Bindewort ein und prüfe den Sinn des ganzen Satzes."
+      ]
+    },
+    "g2gs7": {
+      "question": "Verbinde als Gegensatz: «Ich mag Äpfel, ___ keine Birnen.»",
+      "altAnswers": [
+        "doch",
+        "jedoch"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Überlege, ob die Gedanken zusammengehören, sich widersprechen oder einen Grund nennen.",
+        "Setze ein passendes Bindewort ein und prüfe den Sinn des ganzen Satzes."
+      ]
+    },
+    "g2gs10": {
+      "question": "Verbinde als Gegensatz: «Wir wollten draussen spielen, ___ es regnete.»",
+      "altAnswers": [
+        "doch",
+        "jedoch"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Überlege, ob die Gedanken zusammengehören, sich widersprechen oder einen Grund nennen.",
+        "Setze ein passendes Bindewort ein und prüfe den Sinn des ganzen Satzes."
+      ]
+    },
+    "g2gs37": {
+      "question": "Verbinde als Gegensatz: «Wir wollten baden, ___ das Wasser war zu kalt.»",
+      "altAnswers": [
+        "doch",
+        "jedoch"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Überlege, ob die Gedanken zusammengehören, sich widersprechen oder einen Grund nennen.",
+        "Setze ein passendes Bindewort ein und prüfe den Sinn des ganzen Satzes."
+      ]
+    },
+    "g2gs8": {
+      "question": "Verbinde mit einer Begründung: «Ich ziehe die Jacke an, ___ es kalt ist.»",
+      "altAnswers": [
+        "da"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Überlege, ob die Gedanken zusammengehören, sich widersprechen oder einen Grund nennen.",
+        "Setze ein passendes Bindewort ein und prüfe den Sinn des ganzen Satzes."
+      ]
+    },
+    "g2gs36": {
+      "question": "Verbinde mit einer Begründung: «Ich blieb zu Hause, ___ ich Fieber hatte.»",
+      "altAnswers": [
+        "da"
+      ],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Überlege, ob die Gedanken zusammengehören, sich widersprechen oder einen Grund nennen.",
+        "Setze ein passendes Bindewort ein und prüfe den Sinn des ganzen Satzes."
+      ]
+    },
+    "g2gs16": {
+      "question": "Ordne den Satz: Beginne mit «Am Abend». Nenne nach dem Tunwort zuerst die Person und danach den Ort.",
+      "hints": [
+        "Achte auf den vorgegebenen Anfang und darauf, was als Nächstes geschieht.",
+        "Lies die geordneten Teile als zusammenhängenden Satz oder Ablauf."
+      ]
+    },
+    "g2gs17": {
+      "question": "Ordne den Satz: Beginne mit «Der kleine Igel». Nach dem Tunwort folgt «sich», danach der Ort.",
+      "hints": [
+        "Achte auf den vorgegebenen Anfang und darauf, was als Nächstes geschieht.",
+        "Lies die geordneten Teile als zusammenhängenden Satz oder Ablauf."
+      ]
+    },
+    "g2gs3": {
+      "question": "Welcher Satz nennt am genauesten, wer wo was tut?",
+      "options": [
+        "Der Baum liest Nora.",
+        "Ein Buch gross unter.",
+        "Nora liest unter dem grossen Baum ein Buch.",
+        "Nora ist dort."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs4": {
+      "question": "Welcher Satz enthält Angaben zum Hund, zum Ort und zur Handlung?",
+      "options": [
+        "Jung gelb nach.",
+        "Der junge Hund jagt im Park dem gelben Ball nach.",
+        "Der Hund ist.",
+        "Der Ball jagt den Park."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2hoer9": {
+      "question": "Wovon handelt Leas Buch?",
+      "listeningText": "Lea leiht in der Bibliothek ein Sachbuch über Wale aus. Wovon handelt Leas Buch? Antwort 1: über Berge. Antwort 2: über Ritter. Antwort 3: über Planeten. Antwort 4: über Wale."
+    },
+    "g2hoer31": {
+      "listeningText": "Zuerst liest Amir die Aufgabe. Danach rechnet er im Heft. Zum Schluss prüft er das Ergebnis. Ordne die drei Schritte so, wie du es gehört hast."
+    },
+    "g2hoer32": {
+      "listeningText": "Nora mischt den Teig. Dann füllt sie ihn in die Form. Nach dem Backen lässt sie den Kuchen abkühlen. Ordne die drei Schritte so, wie du es gehört hast."
+    },
+    "g2hoer33": {
+      "listeningText": "Mia schreibt eine Einladung. Danach steckt sie sie in ein Couvert. Am Ende bringt sie den Brief zur Post. Ordne die drei Schritte so, wie du es gehört hast."
+    },
+    "g2hoer34": {
+      "listeningText": "Die Klasse sammelt Ideen. Dann stimmt sie darüber ab. Danach plant sie den Ausflug. Ordne die drei Schritte so, wie du es gehört hast."
+    },
+    "g2hoer35": {
+      "listeningText": "Lio entdeckt eine Pfütze. Er holt seine Gummistiefel. Dann springt er hinein. Ordne die drei Schritte so, wie du es gehört hast."
+    },
+    "g2hoer50": {
+      "listeningText": "Sara erzählt von einem Tier mit Federn, einem breiten Schnabel und Schwimmhäuten. Es lebt am Teich und kann gut schwimmen. Welches Tier beschreibt Sara? Antwort 1: ein Eichhörnchen. Antwort 2: ein Frosch. Antwort 3: eine Ente. Antwort 4: eine Katze."
+    },
+    "ag5": {
+      "question": "Wähle dunkel oder warm: Das Gegenteil von hell ist ___.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "ag13": {
+      "question": "Wähle trocken oder hart: Das Gegenteil von nass ist ___.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "ag15": {
+      "question": "Wähle hart oder hell: Das Gegenteil von weich ist ___.",
+      "altAnswers": [],
+      "caseSensitiveAnswer": false,
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "g2-german-verben-v1": {
+      "question": "Setze «laufen» in der Gegenwart ein: Das Kind ___ auf dem Spielplatz.",
+      "options": [
+        "laufen",
+        "lief",
+        "lauft",
+        "läuft"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "ag3": {
+      "options": [
+        "heiss",
+        "kalt",
+        "nass",
+        "hell"
+      ],
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "ag8": {
+      "question": "Welches Gegenwort zu «laut» beschreibt eine geringe Lautstärke?",
+      "options": [
+        "hell",
+        "rund",
+        "laut",
+        "leise"
+      ],
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "ag29": {
+      "question": "Setze «gross» passend ein: ___ Tiere laufen über die Wiese.",
+      "options": [
+        "Grossen",
+        "Grossem",
+        "Gross",
+        "Grosse"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "sp1": {
+      "question": "1 Hund → viele ___",
+      "options": [
+        "Hund",
+        "Hunde",
+        "Hunds",
+        "Hunden"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp24": {
+      "question": "1 Blatt → viele ___",
+      "answer": "Blätter",
+      "options": [
+        "Blätter",
+        "Blatts",
+        "Blatte",
+        "Blatter"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp2": {
+      "question": "Ergänze die Mehrzahl: 1 Kind → viele ___",
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp9": {
+      "question": "Ergänze die Mehrzahl: 1 Tisch → viele ___",
+      "options": [
+        "Tische",
+        "Tischen",
+        "Tischern",
+        "Tischs"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp11": {
+      "question": "Ergänze die Mehrzahl: 1 Buch → viele ___",
+      "options": [
+        "Buche",
+        "Bücher",
+        "Büches",
+        "Buchs"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp15": {
+      "question": "Ergänze die Mehrzahl: 1 Frau → viele ___",
+      "options": [
+        "Fraues",
+        "Fraus",
+        "Fraue",
+        "Frauen"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp20": {
+      "question": "Ergänze die Mehrzahl: 1 Zeuge → viele ___",
+      "options": [
+        "Zeuge",
+        "Zeugen",
+        "Zeuges",
+        "Zeugs"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp22": {
+      "question": "Ergänze die Mehrzahl: 1 Ergebnis → viele ___",
+      "options": [
+        "Ergebnisses",
+        "Ergebnis",
+        "Ergebnissen",
+        "Ergebnisse"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp26": {
+      "question": "Ergänze die Mehrzahl: 1 Auftrag → viele ___",
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp34": {
+      "question": "Ergänze die Mehrzahl: 1 Museum → viele ___",
+      "options": [
+        "Museumse",
+        "Museums",
+        "Museen",
+        "Museume"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sz37": {
+      "question": "Wo sind die Kommas in der einfachen Aufzählung richtig gesetzt?",
+      "answer": "Ich mag Äpfel, Birnen und Bananen.",
+      "options": [
+        "Ich mag Äpfel, Birnen und Bananen.",
+        "Ich mag Äpfel Birnen, und Bananen.",
+        "Ich mag, Äpfel Birnen und Bananen.",
+        "Ich mag Äpfel Birnen und, Bananen."
+      ],
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz39": {
+      "question": "Mit welchem Satzzeichen trennen wir zwei neutrale Aussagesätze?",
+      "options": [
+        "Doppelpunkt",
+        "Punkt",
+        "Komma",
+        "Semikolon"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz2": {
+      "options": [
+        "!",
+        "?",
+        ",",
+        "."
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz4": {
+      "options": [
+        ",",
+        ".",
+        "!",
+        "?"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz5": {
+      "options": [
+        "!",
+        "?",
+        ",",
+        "."
+      ],
+      "question": "Welches Satzzeichen steht am Ende einer Frage?",
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz8": {
+      "options": [
+        ",",
+        ".",
+        "!",
+        "?"
+      ],
+      "question": "Welches Satzzeichen beendet einen deutlichen Ausruf?",
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz49": {
+      "options": [
+        "Etwas wird weggelassen oder der Satz bricht ab",
+        "Jeder Satz muss so enden",
+        "Das Zeichen ersetzt jeden Buchstaben",
+        "Es zeigt eine Frage an"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "tl13": {
+      "question": "«Der Hund ist schwarz und weiss.» Welche Farbe hat er laut Text nicht?",
+      "options": [
+        "Schwarz",
+        "Weiss",
+        "Braun",
+        "Schwarz und weiss"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl17": {
+      "question": "«Lisa übt täglich Klavier. Nach einem Jahr spielt sie flüssiger.» Was hilft ihr laut Text beim Lernen?",
+      "answer": "tägliches Üben",
+      "options": [
+        "die Tasten verstecken",
+        "das Klavier verschenken",
+        "seltener spielen",
+        "tägliches Üben"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl25": {
+      "question": "«Paul ist krank. Die Mutter bringt ihm Tee, damit er sich wohler fühlt.» Wie handelt die Mutter?",
+      "options": [
+        "Traurig",
+        "Fürsorglich",
+        "Gleichgültig",
+        "Wütend"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "wf20": {
+      "question": "Was drückt die Endung «-lich» in «freundlich» oder «herzlich» aus?",
+      "options": [
+        "Eine Sache benennen",
+        "Eine Tätigkeit",
+        "Eine Eigenschaft ausdrücken",
+        "Einen Ort beschreiben"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf30": {
+      "question": "Welches Wort ist aus zwei Wörtern zusammengesetzt?",
+      "options": [
+        "schnell",
+        "Schulbuch",
+        "Freude",
+        "lesen"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf47": {
+      "question": "Welche Endung macht aus «Kind» das Wiewort «kindlich»?",
+      "options": [
+        "-ung",
+        "-lich",
+        "-er",
+        "-heit"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "g2gs1": {
+      "question": "Welche Ergänzung beschreibt einen Fuchs, der sich leise durch einen dunklen Wald bewegt? «Der Fuchs läuft ___.»",
+      "options": [
+        "leise über die helle Wiese",
+        "schnell durch das offene Feld",
+        "leise durch den dunklen Wald",
+        "laut durch den dunklen Wald"
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs11": {
+      "question": "Wähle den Anfang, der eine Figur, eine Tageszeit und ein bestimmtes Geräusch nennt.",
+      "options": [
+        "Lio stand am Morgen beim Fenster.",
+        "Eines Morgens hörte Lio ein leises Klopfen am Fenster.",
+        "Lio hörte irgendwann ein Geräusch.",
+        "Am Fenster war etwas zu hören."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs23": {
+      "question": "Verbinde als Grund und Folge: «Es schneit. Wir bauen einen Schneemann.»",
+      "hints": [
+        "Überlege, ob die Gedanken zusammengehören, sich widersprechen oder einen Grund nennen.",
+        "Setze ein passendes Bindewort ein und prüfe den Sinn des ganzen Satzes."
+      ]
+    },
+    "g2gs24": {
+      "question": "Verbinde als Gegensatz: «Nina ist müde. Sie liest noch eine Seite.»",
+      "options": [
+        "Nina ist müde, darum liest sie noch eine Seite.",
+        "Nina ist müde, weil sie noch eine Seite liest.",
+        "Nina ist müde, bevor sie noch eine Seite liest.",
+        "Nina ist müde, aber sie liest noch eine Seite."
+      ],
+      "hints": [
+        "Überlege, ob die Gedanken zusammengehören, sich widersprechen oder einen Grund nennen.",
+        "Setze ein passendes Bindewort ein und prüfe den Sinn des ganzen Satzes."
+      ]
+    },
+    "n21": {
+      "options": [
+        "Die",
+        "Das",
+        "Der"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "n27": {
+      "options": [
+        "Einem",
+        "Ein",
+        "Eine",
+        "Einen"
+      ],
+      "hints": [
+        "Sprich Nomen und Begleiter zusammen.",
+        "Vergleiche mit vertrauten Dingwörtern und achte auf Einzahl oder Mehrzahl."
+      ]
+    },
+    "g2-german-verben-v2": {
+      "options": [
+        "Tisch",
+        "Hund",
+        "gross",
+        "schlafen"
+      ],
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v5": {
+      "options": [
+        "haben",
+        "habe",
+        "hast",
+        "hat"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v7": {
+      "options": [
+        "trinken",
+        "singen",
+        "rennen",
+        "Schule"
+      ],
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v9": {
+      "options": [
+        "bist",
+        "ist",
+        "sind",
+        "bin"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v11": {
+      "options": [
+        "Hund",
+        "Sonne",
+        "singen",
+        "gross"
+      ],
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v19": {
+      "options": [
+        "schnell laufen",
+        "essen",
+        "singen",
+        "schlafen"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v21": {
+      "options": [
+        "lacht",
+        "lachen",
+        "lache",
+        "lachst"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v32": {
+      "options": [
+        "gehst",
+        "geht",
+        "gehen",
+        "gehe"
+      ],
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-silben-s2": {
+      "options": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s3": {
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s4": {
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s5": {
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s9": {
+      "options": [
+        "2",
+        "3",
+        "1"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s11": {
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s13": {
+      "options": [
+        "2",
+        "3",
+        "1"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s15": {
+      "options": [
+        "2",
+        "3",
+        "1"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s17": {
+      "options": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s20": {
+      "options": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s24": {
+      "options": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s26": {
+      "options": [
+        "Tomate",
+        "Ball",
+        "Hund",
+        "Schule"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s28": {
+      "options": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s30": {
+      "options": [
+        "Tiger",
+        "Krokodil",
+        "Marienkäfer",
+        "Elefant"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s32": {
+      "options": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s40": {
+      "options": [
+        "Kindergeburtstag",
+        "Ball",
+        "Schule",
+        "Geburtstag"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s44": {
+      "options": [
+        "Regen",
+        "Gewitter",
+        "Donnerschlag",
+        "Blitz"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s46": {
+      "options": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "ag1": {
+      "options": [
+        "laufen",
+        "Hund",
+        "schnell",
+        "grosse"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag4": {
+      "options": [
+        "langsam",
+        "stark",
+        "gross",
+        "laut"
+      ],
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "ag6": {
+      "options": [
+        "Kreis",
+        "Ball",
+        "rund",
+        "rollen"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag10": {
+      "options": [
+        "breit",
+        "kurz",
+        "klein",
+        "schwach"
+      ],
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "ag12": {
+      "options": [
+        "Mutige",
+        "Mut",
+        "mutig",
+        "muten"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag17": {
+      "options": [
+        "schöniger, am schönigsten",
+        "mehr schön, am meisten schön",
+        "schöner, am schönsten",
+        "schöner, schönst"
+      ],
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag21": {
+      "options": [
+        "am besten",
+        "am bestem",
+        "am guten",
+        "am gutsten"
+      ],
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag27": {
+      "options": [
+        "mutig",
+        "ängstlich",
+        "stark",
+        "tapfer"
+      ],
+      "hints": [
+        "Achte darauf, welche Eigenschaft in diesem Zusammenhang gemeint ist.",
+        "Suche die entgegengesetzte Eigenschaft, nicht nur eine ähnliche."
+      ]
+    },
+    "ag31": {
+      "options": [
+        "näher, am nächsten",
+        "mehr nah, am nähsten",
+        "nahe, am nähsten",
+        "naher, am nahsten"
+      ],
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag33": {
+      "options": [
+        "sonnen",
+        "gesonnigt",
+        "sonnig",
+        "Sonne"
+      ],
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "sz6": {
+      "options": [
+        "Wann beginnt die Schule?",
+        "Die Schule beginnt um 8 Uhr.",
+        "Hurra, schulfrei!"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz10": {
+      "options": [
+        "Ein Satzzeichen",
+        "Ein Bindestrich",
+        "Ein Grossbuchstabe",
+        "Ein Kleinbuchstabe"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz12": {
+      "options": [
+        "kursiv",
+        "klein",
+        "gross",
+        "mit Ausrufezeichen"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz16": {
+      "options": [
+        "Komma",
+        "Ausrufezeichen",
+        "Bindestrich",
+        "Punkt"
+      ],
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz20": {
+      "options": [
+        "Gedankenstrich",
+        "Komma",
+        "Punkt",
+        "Anführungszeichen «"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz22": {
+      "options": [
+        "Komm her!",
+        "Das ist toll!",
+        "Die Katze schläft.",
+        "Wie heisst du."
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz26": {
+      "options": [
+        "Kein Komma nötig",
+        "Vor und",
+        "Nach Brot",
+        "Am Satzende"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz28": {
+      "options": [
+        "Er ersetzt ein Komma",
+        "Er beendet den Satz",
+        "Er trennt Aufzählungen",
+        "Er kündigt etwas an (Liste, Zitat, Erklärung)"
+      ],
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "tl1": {
+      "options": [
+        "Rex",
+        "Tim",
+        "Bello",
+        "Max"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl2": {
+      "options": [
+        "Sie schwimmen.",
+        "Sie schlafen.",
+        "Sie spielen Fussball.",
+        "Sie bauen einen Schneemann."
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl3": {
+      "options": [
+        "5",
+        "6",
+        "3",
+        "2"
+      ],
+      "hints": [
+        "Suche die Zahlen und achte darauf, was genau gefragt ist.",
+        "Manchmal kannst du eine Angabe direkt übernehmen; manchmal musst du mit den Angaben rechnen."
+      ]
+    },
+    "tl4": {
+      "options": [
+        "30 Minuten",
+        "1 Stunde",
+        "5 Minuten",
+        "15 Minuten"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl9": {
+      "options": [
+        "Keines von beidem",
+        "Einen Hund",
+        "Eine Katze",
+        "Beide"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl11": {
+      "options": [
+        "Die des Erzählers",
+        "Tims",
+        "Janas",
+        "Maxis"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl19": {
+      "options": [
+        "Sie bereitet sich auf die Ferien vor.",
+        "Sie spielten draussen trotz des Regens",
+        "Anna hat ihr Versprechen nicht gehalten.",
+        "Der Titel, der zusammenfasst, worum es geht"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl23": {
+      "options": [
+        "Jemand, der kein Fleisch isst",
+        "Jemand, der sehr viel isst",
+        "Jemand, der kein Gemüse isst",
+        "Jemand, der nur Obst isst"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl27": {
+      "options": [
+        "200 Grad",
+        "0 Grad",
+        "50 Grad",
+        "100 Grad"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl29": {
+      "options": [
+        "Blauwale sind grösser als Elefanten auf dem Land.",
+        "Elefanten sind Meerestiere.",
+        "Elefanten sind die grössten Landtiere.",
+        "Elefanten wiegen 1 Tonne."
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl31": {
+      "options": [
+        "Den Sommer",
+        "Frühling",
+        "Herbst",
+        "Den Winter"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl35": {
+      "options": [
+        "Fünf Jahre",
+        "Drei Monate",
+        "Ein Jahr",
+        "Drei Jahre"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl45": {
+      "options": [
+        "Der Hund ist ängstlich",
+        "Es regnet",
+        "Der Hund versteckt sich",
+        "Es donnert"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl47": {
+      "options": [
+        "Fiktion ist erfunden; Sachtext ist real",
+        "Sachtexte sind kürzer",
+        "Beides ist gleich",
+        "Fiktion hat mehr Seiten"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl49": {
+      "options": [
+        "Der Titel, der zusammenfasst, worum es geht",
+        "Anna hat ihr Versprechen nicht gehalten.",
+        "Sie bereitet sich auf die Ferien vor.",
+        "Sie spielten draussen trotz des Regens"
+      ],
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "sp6": {
+      "options": [
+        "Kindes",
+        "Häuser",
+        "Kinder",
+        "Bücher"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp17": {
+      "options": [
+        "Kätzen",
+        "Katzs",
+        "Katze",
+        "Kätze"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp28": {
+      "options": [
+        "Wörts",
+        "Wort",
+        "Wortung",
+        "Wörter"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp32": {
+      "options": [
+        "der Lehrer",
+        "der Mann",
+        "die Frau",
+        "das Kind"
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp45": {
+      "options": [
+        "Er ändert die Bedeutung komplett.",
+        "Er hat keine Funktion.",
+        "Er ist dekorativ.",
+        "Er zeigt, dass es mehr als eines gibt."
+      ],
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "wf1": {
+      "options": [
+        "schreiben, Schrift, Stift",
+        "spielen, Spielplatz, Mitspieler",
+        "kochen, Küche, backen",
+        "laufen, Lauf, Läufer"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf4": {
+      "options": [
+        "Wanderung",
+        "Abfahrt",
+        "Fahrer",
+        "Fahrzeug"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf6": {
+      "options": [
+        "unfreundlich",
+        "frei",
+        "Freund",
+        "lich"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf10": {
+      "options": [
+        "Sonnenblume",
+        "Sonnenschirm",
+        "Mondschein",
+        "sonnig"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf16": {
+      "options": [
+        "Ausgabe",
+        "Ausflug",
+        "Aussicht",
+        "Aussprache"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf34": {
+      "options": [
+        "Kraftwerk",
+        "Fahrt",
+        "kraftvoll",
+        "kräftig"
+      ],
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "pr1": {
+      "options": [
+        "wir",
+        "sie",
+        "er",
+        "ich"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr6": {
+      "options": [
+        "Sie",
+        "Es",
+        "Ihr",
+        "Er"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr12": {
+      "options": [
+        "Wir",
+        "Ich",
+        "Du",
+        "Er"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr14": {
+      "options": [
+        "Ich und andere Personen",
+        "Andere, nicht ich",
+        "Sie und er",
+        "Nur ich"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr16": {
+      "options": [
+        "Es",
+        "Wir",
+        "Er",
+        "Sie"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr18": {
+      "options": [
+        "es",
+        "ich",
+        "er",
+        "sie"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr43": {
+      "options": [
+        "sich, sich",
+        "dich, dich",
+        "uns, uns",
+        "mich, mich"
+      ],
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "g2gs2": {
+      "options": [
+        "backen wir",
+        "Küche weil",
+        "in der Küche einen Apfelkuchen",
+        "am Samstag"
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs5": {
+      "options": [
+        "Ich treffe etwas irgendwann.",
+        "Spielplatz Schule Mia.",
+        "Nach der Schule treffe ich Mia auf dem Spielplatz.",
+        "Nachher dort Mia."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs12": {
+      "options": [
+        "Der Schrank miaut Mara.",
+        "Danach sucht sie ihn zum ersten Mal.",
+        "Erleichtert nimmt Mara den Kater in den Arm.",
+        "Zuerst beginnt die Suche morgen."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs13": {
+      "options": [
+        "Rezept für Suppe",
+        "Meine Schulregeln",
+        "Unser Tag im Zoo",
+        "Der verlorene Turnschuh"
+      ],
+      "hints": [
+        "Suche das gemeinsame Thema des Textes.",
+        "Wähle Wörter, die den Inhalt treffen, nicht nur ein zufälliges Detail."
+      ]
+    },
+    "g2gs14": {
+      "options": [
+        "Ein Hund im Schnee",
+        "So faltest du ein Papierboot",
+        "leise durch den dunklen Wald",
+        "in der Küche einen Apfelkuchen"
+      ],
+      "hints": [
+        "Suche das gemeinsame Thema des Textes.",
+        "Wähle Wörter, die den Inhalt treffen, nicht nur ein zufälliges Detail."
+      ]
+    },
+    "g2gs15": {
+      "options": [
+        "Der wilde Sturm",
+        "Liebe Oma",
+        "Einkaufsliste",
+        "Schritt 1"
+      ],
+      "hints": [
+        "Überlege, wer den Text lesen soll und welche Angaben diese Person braucht.",
+        "Achte auf verständliche, freundliche Formulierungen und die genannten Informationen."
+      ]
+    },
+    "g2gs22": {
+      "options": [
+        "1. Jan liest. 2. Der Teig rennt. 3. Der Ofen trinkt.",
+        "1. Jan mischt den Teig. 2. Er füllt ihn in die Form. 3. Der Kuchen kommt in den Ofen.",
+        "1. Der Kuchen ist fertig. 2. Jan mischt später. 3. Der Ofen wird zuerst gekauft.",
+        "1. Der Teig mischt Jan. 2. Form Ofen. 3. Kuchen."
+      ],
+      "hints": [
+        "Achte auf den vorgegebenen Anfang und darauf, was als Nächstes geschieht.",
+        "Lies die geordneten Teile als zusammenhängenden Satz oder Ablauf."
+      ]
+    },
+    "g2gs27": {
+      "options": [
+        "Name – Ende – Anrede – Titel",
+        "Brieftext – Einkaufsliste – Anrede – Schritt",
+        "Gruss – Name – Anrede – kein Text",
+        "Anrede – Brieftext – Gruss – Name"
+      ],
+      "hints": [
+        "Achte auf den vorgegebenen Anfang und darauf, was als Nächstes geschieht.",
+        "Lies die geordneten Teile als zusammenhängenden Satz oder Ablauf."
+      ]
+    },
+    "g2gs28": {
+      "options": [
+        "Komm um 14 Uhr zu mir. Wir feiern meinen Geburtstag.",
+        "Komm am Samstag um 14 Uhr. Wir feiern meinen Geburtstag.",
+        "Komm am Samstag um 14 Uhr zu mir. Wir feiern meinen Geburtstag.",
+        "Komm am Samstag zu mir. Wir feiern meinen Geburtstag."
+      ],
+      "hints": [
+        "Überlege, wer den Text lesen soll und welche Angaben diese Person braucht.",
+        "Achte auf verständliche, freundliche Formulierungen und die genannten Informationen."
+      ]
+    },
+    "g2gs29": {
+      "options": [
+        "Warte dort später.",
+        "Hallo, vielleicht Brunnen.",
+        "15 Uhr jemand.",
+        "Hallo Mia, ich warte um 15 Uhr beim Brunnen. Gruss, Lea"
+      ],
+      "hints": [
+        "Überlege, wer den Text lesen soll und welche Angaben diese Person braucht.",
+        "Achte auf verständliche, freundliche Formulierungen und die genannten Informationen."
+      ]
+    },
+    "g2gs30": {
+      "options": [
+        "Hallo Mia, ich warte um 15 Uhr beim Brunnen. Gruss, Lea",
+        "Der Igel hat braune Stacheln und rollt sich bei Gefahr zusammen.",
+        "Der junge Hund jagt im Park dem gelben Ball nach.",
+        "Würfle einmal und ziehe deine Figur um die gewürfelte Zahl vor."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs31": {
+      "options": [
+        "Raumschiff – Mond – Stern",
+        "Wald – Pilz – Reh",
+        "Backofen – Kuchen – Mehl",
+        "Schwimmbad – Sprungbrett – Badetuch"
+      ],
+      "hints": [
+        "Suche das gemeinsame Thema des Textes.",
+        "Wähle Wörter, die den Inhalt treffen, nicht nur ein zufälliges Detail."
+      ]
+    },
+    "g2gs32": {
+      "options": [
+        "Zahnbürste – Seife – Handtuch",
+        "Gäste – Spiele – Kuchen – Geschenk",
+        "Schnee – Schlitten – Handschuhe",
+        "Bus – Haltestelle – Fahrplan"
+      ],
+      "hints": [
+        "Suche das gemeinsame Thema des Textes.",
+        "Wähle Wörter, die den Inhalt treffen, nicht nur ein zufälliges Detail."
+      ]
+    },
+    "g2gs33": {
+      "options": [
+        "So backst du Brot",
+        "Der erste Schultag",
+        "Ein Tag am See",
+        "Mein neues Haustier"
+      ],
+      "hints": [
+        "Suche das gemeinsame Thema des Textes.",
+        "Wähle Wörter, die den Inhalt treffen, nicht nur ein zufälliges Detail."
+      ]
+    },
+    "g2gs40": {
+      "options": [
+        "Am Abend löste ich meine Mathematikaufgaben.",
+        "Zum Schluss sahen wir die Pinguine.",
+        "Wir beobachteten die jungen Löwen.",
+        "Die Affen kletterten geschickt."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs42": {
+      "options": [
+        "Etwas machte etwas.",
+        "Der nasse Hund trottete langsam zur Tür.",
+        "Der Hund ging.",
+        "Hund der zur."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs43": {
+      "options": [
+        "Darin öffnet die Schachtel Mia.",
+        "Mia öffnet die Schachtel. Darin findet sie einen Ring.",
+        "Mia öffnet die Schachtel. Mia findet in der Schachtel einen Ring.",
+        "Schachtel Mia Ring Schachtel."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs44": {
+      "options": [
+        "Zuerst giesse ich die Pflanze. Dann fülle ich Erde ein. Zum Schluss setze ich sie in den Topf.",
+        "Zuerst setze ich die Pflanze ein. Zum Schluss fülle ich Erde in den Topf. Dann giesse ich sie.",
+        "Dann fülle ich Erde ein. Zuerst giesse ich. Zum Schluss setze ich die Pflanze ein.",
+        "Zuerst fülle ich Erde in den Topf. Dann setze ich die Pflanze ein. Zum Schluss giesse ich sie."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs46": {
+      "options": [
+        "Ich mag Flugzeuge, aber Ende.",
+        "Mit dieser Anleitung faltest du aus einem Blatt einen Papierflieger.",
+        "Es war einmal vielleicht.",
+        "Papier ist weiss."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs47": {
+      "options": [
+        "Der Igel hat braune Stacheln und kurze Beine.",
+        "Der Igel rollt sich bei Gefahr zusammen und versteckt sich.",
+        "Der Igel lebt unter Hecken und sucht nachts nach Futter.",
+        "Der Igel hat braune Stacheln und rollt sich bei Gefahr zusammen."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs48": {
+      "options": [
+        "Lio findet die Katze. Am Morgen beginnt danach zuerst.",
+        "Die Katze verfolgt den Schnee bis Lio.",
+        "Am Morgen entdeckt Lio eine Spur im Schnee. Er folgt ihr bis zum Gartenhaus. Dort findet er seine Katze.",
+        "Spur Schnee. Katze Gartenhaus."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs50": {
+      "options": [
+        "Erleichtert nimmt Mara den Kater in den Arm.",
+        "Er entdeckt ein nasses Kätzchen unter der Bank.",
+        "Falte danach die obere Ecke bis zur Mittellinie.",
+        "Nora liest unter dem grossen Baum ein Buch."
+      ],
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2-german-verben-v3": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v4": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v6": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v10": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v14": {
+      "hints": [
+        "Suche ein Wort für etwas, das jemand tun kann.",
+        "Dingwörter benennen etwas; Tunwörter erzählen eine Handlung."
+      ]
+    },
+    "g2-german-verben-v15": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v16": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v18": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v20": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v23": {
+      "hints": [
+        "Achte auf das Zeitwort im Satz: Geschieht es jetzt oder ist es schon vorbei?",
+        "Sprich den ganzen Satz als Erzählung über gestern."
+      ]
+    },
+    "g2-german-verben-v29": {
+      "hints": [
+        "Achte auf das Zeitwort im Satz: Geschieht es jetzt oder ist es schon vorbei?",
+        "Sprich den ganzen Satz als Erzählung über gestern."
+      ]
+    },
+    "g2-german-verben-v36": {
+      "hints": [
+        "Achte auf das Zeitwort im Satz: Geschieht es jetzt oder ist es schon vorbei?",
+        "Sprich den ganzen Satz als Erzählung über gestern."
+      ]
+    },
+    "g2-german-verben-v38": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-verben-v48": {
+      "hints": [
+        "Achte darauf, wer etwas tut und ob eine oder mehrere Personen handeln.",
+        "Setze das Tunwort passend zur Person ein und lies den ganzen Satz."
+      ]
+    },
+    "g2-german-silben-s1": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s6": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s7": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s8": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s10": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s12": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s14": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s16": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s18": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s22": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s31": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s36": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "g2-german-silben-s48": {
+      "hints": [
+        "Sprich das Wort langsam in natürlichen Sprechabschnitten.",
+        "Klatsche zu jedem Abschnitt einmal; sprich das Wort danach nochmals zusammen."
+      ]
+    },
+    "ag2": {
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag18": {
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag23": {
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag28": {
+      "hints": [
+        "Vergleiche die Eigenschaft in mehreren Stufen.",
+        "Prüfe, ob die Grundform, die Vergleichsform oder die stärkste Form gesucht ist."
+      ]
+    },
+    "ag30": {
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "ag35": {
+      "hints": [
+        "Wiewörter beschreiben eine Eigenschaft eines Dinges oder Lebewesens.",
+        "Lies Begleiter, Wiewort und Nomen zusammen und prüfe die Endung."
+      ]
+    },
+    "sz1": {
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz9": {
+      "hints": [
+        "Prüfe, ob der Satz etwas mitteilt, etwas fragt oder etwas deutlich ausruft.",
+        "Lies ihn mit passender Stimme und entscheide dann über das Satzzeichen."
+      ]
+    },
+    "sz17": {
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz25": {
+      "hints": [
+        "Suche die einzelnen Dinge oder Tätigkeiten in der Aufzählung.",
+        "Zwischen den aufgezählten Teilen braucht es eine Trennung; direkt vor und meist nicht."
+      ]
+    },
+    "sz48": {
+      "hints": [
+        "Eine Ankündigung bereitet auf etwas Folgendes vor.",
+        "Hier folgen danach eine Aufzählung oder direkt gesprochene Worte."
+      ]
+    },
+    "tl5": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl6": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl7": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl8": {
+      "hints": [
+        "Suche die Zahlen und achte darauf, was genau gefragt ist.",
+        "Manchmal kannst du eine Angabe direkt übernehmen; manchmal musst du mit den Angaben rechnen."
+      ]
+    },
+    "tl12": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl15": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl16": {
+      "hints": [
+        "Suche die Zahlen und achte darauf, was genau gefragt ist.",
+        "Manchmal kannst du eine Angabe direkt übernehmen; manchmal musst du mit den Angaben rechnen."
+      ]
+    },
+    "tl20": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl28": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl30": {
+      "hints": [
+        "Suche die Zahlen und achte darauf, was genau gefragt ist.",
+        "Manchmal kannst du eine Angabe direkt übernehmen; manchmal musst du mit den Angaben rechnen."
+      ]
+    },
+    "tl33": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "tl39": {
+      "hints": [
+        "Lies die Frage und suche die passende Stelle im Text.",
+        "Nimm nur Informationen aus dem Text; ergänze keine eigene Geschichte."
+      ]
+    },
+    "sp3": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp4": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp7": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp8": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp10": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp12": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp13": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp14": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp16": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp18": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp19": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp21": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp23": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp25": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp27": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp29": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp31": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp33": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "sp35": {
+      "hints": [
+        "Stelle dir zuerst ein Ding und dann mehrere davon vor.",
+        "Sprich die Mehrzahl; achte auf eine veränderte Endung oder einen Umlaut."
+      ]
+    },
+    "wf2": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf8": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf11": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf12": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf13": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf14": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf15": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf17": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf18": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf22": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf31": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "wf35": {
+      "hints": [
+        "Vergleiche gemeinsame Wortteile und ihre Bedeutung.",
+        "Verwandte Wörter können unterschiedliche Endungen oder einen Umlaut haben."
+      ]
+    },
+    "pr2": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr4": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr5": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr7": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr8": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr9": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr10": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr11": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr13": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr15": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "pr17": {
+      "hints": [
+        "Bestimme, ob eine Person, mehrere Personen oder ein Ding gemeint ist.",
+        "Das Ersatzwort muss zum gemeinten Nomen und zur Verbform passen."
+      ]
+    },
+    "g2gs9": {
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs18": {
+      "hints": [
+        "Achte auf den vorgegebenen Anfang und darauf, was als Nächstes geschieht.",
+        "Lies die geordneten Teile als zusammenhängenden Satz oder Ablauf."
+      ]
+    },
+    "g2gs19": {
+      "hints": [
+        "Achte auf den vorgegebenen Anfang und darauf, was als Nächstes geschieht.",
+        "Lies die geordneten Teile als zusammenhängenden Satz oder Ablauf."
+      ]
+    },
+    "g2gs20": {
+      "hints": [
+        "Achte auf den vorgegebenen Anfang und darauf, was als Nächstes geschieht.",
+        "Lies die geordneten Teile als zusammenhängenden Satz oder Ablauf."
+      ]
+    },
+    "g2gs21": {
+      "hints": [
+        "Achte auf den vorgegebenen Anfang und darauf, was als Nächstes geschieht.",
+        "Lies die geordneten Teile als zusammenhängenden Satz oder Ablauf."
+      ]
+    },
+    "g2gs25": {
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs26": {
+      "hints": [
+        "Überlege, wer den Text lesen soll und welche Angaben diese Person braucht.",
+        "Achte auf verständliche, freundliche Formulierungen und die genannten Informationen."
+      ]
+    },
+    "g2gs34": {
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs35": {
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs38": {
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs39": {
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs41": {
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs45": {
+      "hints": [
+        "Achte darauf, welche Information der Auftrag verlangt.",
+        "Vergleiche, welcher Satz die verlangten Angaben klar und ohne unnötige Wiederholung enthält."
+      ]
+    },
+    "g2gs49": {
+      "hints": [
+        "Überlege, wer den Text lesen soll und welche Angaben diese Person braucht.",
+        "Achte auf verständliche, freundliche Formulierungen und die genannten Informationen."
+      ]
+    }
+  },
+  "removedFields": {
+    "g2-german-verben-v42": [
+      "sequentialAnswer"
+    ],
+    "g2-german-verben-v46": [
+      "sequentialAnswer"
+    ],
+    "sz46": [
+      "sequentialAnswer"
+    ],
+    "sz36": [
+      "sequentialAnswer"
+    ],
+    "wf27": [
+      "sequentialAnswer"
+    ],
+    "wf40": [
+      "sequentialAnswer"
+    ]
+  }
+}
