@@ -30,20 +30,6 @@
         "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
-    "g2-science-berufe-b21": {
-      "question": "Was ist mit einem «freien Beruf» gemeint?",
-      "answer": "Ein Beruf mit besonderer Fachkenntnis und persönlicher Verantwortung, zum Beispiel Ärztin oder Anwalt",
-      "options": [
-        "Menschen behandeln, wenn sie krank sind",
-        "Ein Beruf mit besonderer Fachkenntnis und persönlicher Verantwortung, zum Beispiel Ärztin oder Anwalt",
-        "Tiere behandeln, wenn sie krank sind",
-        "Zahnarzt behandelt nur Zähne und Mund"
-      ],
-      "hints": [
-        "Denke an Berufe mit einer besonderen Ausbildung und persönlicher Verantwortung.",
-        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
-      ]
-    },
     "g2-science-berufe-b29": {
       "options": [
         "Computer reparieren",
@@ -208,9 +194,6 @@
         "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
-    "ge25": {
-      "question": "1 Gramm Fett liefert ungefähr ___ Kilokalorien (kcal)."
-    },
     "ge26": {
       "hints": [
         "Überlege, welche Lebensmittel von Tieren stammen.",
@@ -296,9 +279,6 @@
     "ge47": {
       "question": "Kartoffeln liefern Stärke. Stärke gehört zu den ___.",
       "answer": "Kohlenhydraten"
-    },
-    "g2-science-kalender-gr2-k20": {
-      "question": "Um welches Datum ist in der Schweiz die Wintersonnenwende (kürzester Tag)?"
     },
     "g2-science-kalender-gr2-k32": {
       "question": "Wann beginnt der Herbst in der Schweiz astronomisch ungefähr?",
@@ -775,22 +755,6 @@
         "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
-    "ch26": {
-      "question": "Aus welchem Jahr stammt der berühmte Bundesbrief von Anfang August?"
-    },
-    "ch27": {
-      "answer": "Eine Herkunftsangabe für Produkte, die die Schweizer Herkunftsregeln erfüllen",
-      "options": [
-        "Ein wichtiger Fluss, der durch die Nordschweiz fliesst",
-        "Eine Herkunftsangabe für Produkte, die die Schweizer Herkunftsregeln erfüllen",
-        "Ein wichtiger Pass und Tunnel durch die Alpen",
-        "Ein berühmter Berg (4478 m) im Wallis"
-      ],
-      "hints": [
-        "Die Angabe sagt etwas über die Herkunft eines Produkts.",
-        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
-      ]
-    },
     "ch29": {
       "hints": [
         "Denke an die oberste Ebene der Rechtsprechung.",
@@ -973,25 +937,6 @@
       "hints": [
         "Lies links den Vorgang und suche rechts den passenden Begriff.",
         "Prüfe am Schluss, ob jedes Element genau einmal zugeordnet ist."
-      ]
-    },
-    "w6": {
-      "question": "Wasser bei normalem Luftdruck auf Meereshöhe siedet (kocht) bei ___ Grad Celsius."
-    },
-    "w11": {
-      "question": "Wasser bei normalem Luftdruck auf Meereshöhe kocht bei ___ Grad Celsius."
-    },
-    "w37": {
-      "question": "Wasser bei normalem Luftdruck auf Meereshöhe kocht bei ___°C."
-    },
-    "w7": {
-      "question": "Wie viel Wasser enthält der Körper eines Erwachsenen ungefähr?",
-      "answer": "Etwa 60 Prozent",
-      "options": [
-        "Es schmeckt gut",
-        "Etwa 60 Prozent",
-        "Man kann damit spielen",
-        "Es macht uns stark"
       ]
     },
     "w10": {
