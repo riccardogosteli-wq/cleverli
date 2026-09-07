@@ -235,6 +235,8 @@ function DailyChallengePage({ context }: { context: string }) {
             answer={localizedExercise.answer}
             altAnswers={localizedExercise.altAnswers}
             sequentialAnswer={localizedExercise.sequentialAnswer}
+            mathAnswerMode={localizedExercise.mathAnswerMode}
+            mathAnswerUnit={localizedExercise.mathAnswerUnit}
             onAnswer={handleAnswer}
             questionImage={localizedExercise.image}
           />
