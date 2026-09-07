@@ -4,11 +4,15 @@ import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
 import { matchOrderedTextAnswer, normaliseTextAnswer } from "@/lib/fillInBlankMatching";
 
+import { matchScopedMathAnswer, type MathAnswerMode } from "@/lib/scopedMathAnswerMatching";
+
 interface Props {
   question: string;
   answer: string;
   altAnswers?: string[];
   sequentialAnswer?: boolean;
+  mathAnswerMode?: MathAnswerMode;
+  mathAnswerUnit?: string;
   caseSensitiveAnswer?: boolean;
   onAnswer: (correct: boolean) => void;
   questionImage?: string;
@@ -32,7 +36,7 @@ function isNegativeNumericAnswer(answer: string): boolean {
   return /^-\d+([.,]\d+)?$/.test(normalizeMinusSigns(answer).trim());
 }
 
-export default function FillInBlank({ question, answer, altAnswers, sequentialAnswer, caseSensitiveAnswer, onAnswer, questionImage }: Props) {
+export default function FillInBlank({ question, answer, altAnswers, sequentialAnswer, mathAnswerMode, mathAnswerUnit, caseSensitiveAnswer, onAnswer, questionImage }: Props) {
   const { tr } = useLang();
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -107,6 +111,7 @@ export default function FillInBlank({ question, answer, altAnswers, sequentialAn
   };
 
   const isCorrect = (input: string, expected: string) => {
+    if (mathAnswerMode) return matchScopedMathAnswer(input, expected, mathAnswerMode, mathAnswerUnit);
     if (matchesOpenEndedNumberList(input, question)) return true;
     if (matchesSingle(input, expected)) return true;
     if (answerVariants(expected).some(variant => matchesSingle(input, variant))) return true;

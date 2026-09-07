@@ -1,0 +1,663 @@
+{
+  "patches": {
+    "z7k": {
+      "hints": [
+        "Rechne zuerst mit den Hundertern, ohne das Ergebnis vorwegzunehmen.",
+        "Zähle von 300 noch 200 weiter."
+      ]
+    },
+    "z21k": {
+      "question": "Was ist 1000 minus 300?",
+      "hints": [
+        "Ziehe drei Hunderter von zehn Hundertern ab.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "z33k": {
+      "hints": [
+        "Bestimme die kleinste und die grösste dreistellige Zahl und zähle beide Grenzen mit.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "z40k": {
+      "hints": [
+        "Bestimme zuerst die beiden Grenzzahlen und berechne dann ihre Differenz.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "r2k": {
+      "hints": [
+        "Rechne mit den Hundertern und wandle dein Ergebnis wieder in eine Zahl um.",
+        "Zähle von 700 genau 300 zurück."
+      ]
+    },
+    "r10k": {
+      "hints": [
+        "Rechne mit den Hundertern und wandle dein Ergebnis wieder in eine Zahl um.",
+        "Zähle von 900 genau 500 zurück."
+      ]
+    },
+    "r12k": {
+      "hints": [
+        "Rechne mit den Hundertern und wandle dein Ergebnis wieder in eine Zahl um.",
+        "Zähle von 600 noch 200 weiter."
+      ]
+    },
+    "r15k": {
+      "hints": [
+        "Rechne mit den Hundertern und wandle dein Ergebnis wieder in eine Zahl um.",
+        "Zähle von 1000 genau 200 zurück."
+      ]
+    },
+    "r16k": {
+      "hints": [
+        "Rechne mit den Hundertern und wandle dein Ergebnis wieder in eine Zahl um.",
+        "Zähle von 500 noch 300 weiter."
+      ]
+    },
+    "g3-math-einmaleins-komplett-e1": {
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Nutze 6 mal 5 und addiere noch zwei Gruppen mit je 6."
+      ]
+    },
+    "g3-math-einmaleins-komplett-e3": {
+      "hints": [
+        "Zeige alle zehn Finger und klappe den neunten ein. Lies links die Zehner und rechts die Einer ab.",
+        "Addiere 9 genau 9 mal."
+      ]
+    },
+    "math3-rich-1x1-memory-1": {
+      "question": "Finde jeweils zwei gleiche Karten mit derselben Aufgabe oder derselben Zahl."
+    },
+    "math3-rich-1x1-drag-1": {
+      "question": "Ordne jede Aufgabe nach ihrer ersten Zahl der 4er- oder 6er-Reihe zu.",
+      "hints": [
+        "Die erste Zahl zeigt hier die Reihe.",
+        "Achte bei jeder Aufgabe nur auf die Zahl vor dem Malzeichen."
+      ]
+    },
+    "math3-rich-1x1-match-2": {
+      "hints": [
+        "Denke an Nachbaraufgaben, wenn du unsicher bist.",
+        "7 × 8 ist eine Gruppe von 7 mehr als 7 × 7."
+      ]
+    },
+    "dv39": {
+      "hints": [
+        "Suche das grösste Vielfache von 7 unter 1000 und berechne den Abstand.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "dv42": {
+      "question": "Ergänze die Teilbarkeitsregel: Ist die Quersumme durch 9 teilbar, dann ist auch die Zahl durch ___ teilbar.",
+      "answer": "9",
+      "spokenPrompt": "Ist die Quersumme durch neun teilbar, dann ist auch die Zahl durch welche Zahl teilbar?",
+      "hints": [
+        "Die Regel verknüpft die Teilbarkeit einer Zahl mit der Teilbarkeit ihrer Quersumme.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "dv45": {
+      "spokenPrompt": "Ergänze den fehlenden Teiler von zwölf in dieser Liste: eins, zwei, drei, vier, eine Lücke, zwölf."
+    },
+    "dv47": {
+      "hints": [
+        "Multipliziere den Quotienten mit dem Divisor. Überlege, welcher Teil des Dividenden dann noch fehlt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "math3-rich-division-drag-1": {
+      "question": "Finde jeweils zwei gleiche Karten mit derselben Gruppenanzahl oder derselben Kartenanzahl."
+    },
+    "br8": {
+      "hints": [
+        "Lege in Gedanken halbe Kreise zusammen, bis ein ganzer Kreis entsteht.",
+        "Die Zahl liegt zwischen 0 und 4."
+      ]
+    },
+    "br15": {
+      "hints": [
+        "Überlege, wie du einen Anteil beschreiben kannst, wenn ein Ganzes in gleich grosse Teile geteilt wird.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "br24": {
+      "hints": [
+        "Vergleiche die Zahlen unter dem Bruchstrich bei den Brüchen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "br25": {
+      "question": "Bringe 1/2 und 1/3 auf den Nenner 6. Schreibe nur die beiden Zähler in dieser Reihenfolge, getrennt durch ein Komma.",
+      "answer": "3, 2",
+      "altAnswers": [
+        "3 und 2",
+        "3;2"
+      ],
+      "sequentialAnswer": true,
+      "spokenPrompt": "Bringe ein Halb und ein Drittel auf den Nenner sechs. Schreibe nur die beiden Zähler in dieser Reihenfolge."
+    },
+    "br28": {
+      "answer": "Bruch, bei dem der Zähler mindestens so gross wie der Nenner ist",
+      "options": [
+        "Bruch, bei dem der Zähler kleiner als der Nenner ist",
+        "Bruch, bei dem der Zähler mindestens so gross wie der Nenner ist",
+        "Bruch, bei dem der Nenner null ist",
+        "Bruch, bei dem nur der Nenner negativ ist"
+      ],
+      "hints": [
+        "Prüfe, ob der Bruch kleiner als ein Ganzes sein muss oder auch ein Ganzes erreichen kann.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "br34": {
+      "spokenPrompt": "Ordne ein Viertel, ein Drittel und ein Halb von klein nach gross."
+    },
+    "br43": {
+      "spokenPrompt": "Schreibe zwei und zwei Drittel als unechten Bruch."
+    },
+    "br46": {
+      "spokenPrompt": "Ein Bruch mit dem Zähler n und dem Nenner fünf ist gleich drei Fünfzehnteln. Was ist n?"
+    },
+    "br49": {
+      "spokenPrompt": "Null Komma eins periodisch, also null Komma eins eins eins und immer so weiter: Welcher Bruch ist das?"
+    },
+    "math3-rich-brueche-line-1": {
+      "hints": [
+        "1/2 liegt genau in der Mitte.",
+        "Teile die Strecke zwischen null und eins in zwei gleich lange Abschnitte."
+      ]
+    },
+    "br12": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br19": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br21": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br23": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br27": {
+      "mathAnswerMode": "reduced-fraction",
+      "sequentialAnswer": true
+    },
+    "br29": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br33": {
+      "mathAnswerMode": "reduced-fraction",
+      "sequentialAnswer": true
+    },
+    "br35": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br36": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br38": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br40": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br42": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "br44": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "geo5": {
+      "hints": [
+        "Zähle die geraden Randstücke eines Dreiecks.",
+        "Die Zahl liegt zwischen 1 und 5."
+      ]
+    },
+    "geo12": {
+      "hints": [
+        "Vergleiche den Winkel mit der Ecke eines rechteckigen Blatts.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "geo15": {
+      "altAnswers": [
+        "gleichseitiges Dreieck",
+        "ein gleichseitiges Dreieck"
+      ]
+    },
+    "geo20": {
+      "hints": [
+        "Zähle die Seiten eines Siebenecks.",
+        "Die Zahl liegt zwischen 5 und 9."
+      ]
+    },
+    "geo22": {
+      "hints": [
+        "Multipliziere die Grundlinie mit der senkrechten Höhe.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "geo23": {
+      "question": "Ein Quader ist ein räumlicher Körper. Seine sechs Flächen sind ___.",
+      "answer": "Rechtecke",
+      "altAnswers": [
+        "rechteckig"
+      ],
+      "spokenPrompt": "Ein Quader ist ein räumlicher Körper. Welche Form haben seine sechs Flächen?",
+      "hints": [
+        "Betrachte die Flächen einer rechteckigen Schachtel.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "geo27": {
+      "altAnswers": [
+        "Raute",
+        "eine Raute",
+        "ein Quadrat",
+        "Rhombus"
+      ]
+    },
+    "geo30": {
+      "question": "Welche Aussage beschreibt jedes gleichschenklige Dreieck?",
+      "answer": "Es hat mindestens zwei gleich lange Seiten.",
+      "options": [
+        "Es hat immer drei verschieden lange Seiten.",
+        "Es hat mindestens zwei gleich lange Seiten.",
+        "Es hat immer einen rechten Winkel.",
+        "Es hat immer genau drei rechte Winkel."
+      ],
+      "hints": [
+        "Vergleiche die Längen der Schenkel, ohne den Fall dreier gleicher Seiten auszuschliessen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "geo37": {
+      "hints": [
+        "Zähle die geraden Seiten und überlege, wie die Form heisst.",
+        "Prüfe den Zusammenhang noch einmal."
+      ]
+    },
+    "geo43": {
+      "hints": [
+        "Zähle die geraden Seiten und überlege, wie die Form heisst.",
+        "Prüfe den Zusammenhang noch einmal."
+      ]
+    },
+    "geo49": {
+      "hints": [
+        "Zähle die geraden Seiten und überlege, wie die Form heisst.",
+        "Prüfe den Zusammenhang noch einmal."
+      ]
+    },
+    "fu40": {
+      "hints": [
+        "Zähle die geraden Seiten und überlege, wie die Form heisst.",
+        "Prüfe den Zusammenhang noch einmal."
+      ]
+    },
+    "g3-math-textaufgaben-t8": {
+      "hints": [
+        "Addiere die beiden zurückgelegten Strecken.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t10": {
+      "hints": [
+        "Ziehe den Buchpreis vom bezahlten Betrag ab.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t18": {
+      "hints": [
+        "Berechne zuerst den Preis beider Stifte und addiere den Heftpreis.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t20": {
+      "hints": [
+        "Teile die Gesamtstrecke durch die Fahrzeit.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t22": {
+      "hints": [
+        "Teile den Umfang durch die Anzahl gleich langer Seiten.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t26": {
+      "hints": [
+        "Berechne zuerst die Wochenstrecke und danach die Strecke von vier Wochen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t29": {
+      "hints": [
+        "Teile die Gesamtmasse durch die Anzahl gleich schwerer Päckchen.",
+        "Rechne oder ordne Schritt für Schritt und kontrolliere das Ergebnis mit der umgekehrten Richtung."
+      ],
+      "spokenPrompt": "Drei gleich schwere Päckchen wiegen zusammen siebenhundertfünfzig Gramm. Wie schwer ist jedes Päckchen?",
+      "altAnswers": [
+        "250 g",
+        "250 Gramm",
+        "250",
+        "0,25 kg",
+        "0.25 kg"
+      ]
+    },
+    "g3-math-textaufgaben-t30": {
+      "hints": [
+        "Multipliziere die Anzahl Schulwochen mit den Schultagen pro Woche.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t34": {
+      "hints": [
+        "Berechne ein Zehntel des alten Preises und addiere diesen Zuschlag.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t36": {
+      "hints": [
+        "Mias Anteil zählt einmal und Leons Anteil zweimal. Teile die Gesamtsumme in diese gleich grossen Anteile.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "question": "Leon hat doppelt so viel Geld wie Mia. Zusammen haben sie CHF 180. Wie viele Franken hat Leon? Schreibe nur die Zahl.",
+      "answer": "120",
+      "spokenPrompt": "Leon hat doppelt so viel Geld wie Mia. Zusammen haben sie hundertachtzig Franken. Wie viele Franken hat Leon?"
+    },
+    "g3-math-textaufgaben-t37": {
+      "hints": [
+        "Der Umfang eines Quadrats besteht aus vier gleich langen Seiten.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Ein Quadrat und ein Rechteck haben beide vierzig Zentimeter Umfang. Das Rechteck ist vierzehn Zentimeter lang. Wie lang ist eine Seite des Quadrats?"
+    },
+    "g3-math-textaufgaben-t39": {
+      "hints": [
+        "Teile die Strecke in zwei Hälften. Berechne beide Fahrzeiten und addiere sie.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t41": {
+      "hints": [
+        "Berechne zuerst die Arbeitsmenge in Arbeitstagen einer Person.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t43": {
+      "hints": [
+        "Berechne zuerst den Inhalt eines Viertels.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t45": {
+      "hints": [
+        "Verdopple die Anzahl dreimal nacheinander.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t47": {
+      "hints": [
+        "Nenne Tims heutiges Alter t. Addiere bei beiden Personen die vier Jahre.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Alter-Problem: Maks ist 3× so alt wie Tim. In 4 Jahren ist Maks 2× so alt. Wie alt ist Tim jetzt?"
+    },
+    "g3-math-textaufgaben-t49": {
+      "hints": [
+        "Multipliziere die tägliche Zunahme mit der Anzahl Tage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t7": {
+      "spokenPrompt": "Maks hat 15 Murmeln. Er findet noch 7 dazu. Wie viele hat er jetzt?"
+    },
+    "g3-math-textaufgaben-t23": {
+      "spokenPrompt": "Maks kauft 5 Hefte à CHF 2.80 und 3 Stifte à CHF 1.50. Total: CHF ___",
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g3-math-textaufgaben-t27": {
+      "answer": "gleich schnell",
+      "altAnswers": [
+        "Beide sind gleich schnell",
+        "Beide gleich schnell",
+        "beide",
+        "keiner"
+      ],
+      "spokenPrompt": "Zug A fährt dreihundertfünfzig Kilometer in zwei Stunden dreissig Minuten. Zug B fährt vierhundertzwanzig Kilometer in drei Stunden. Welcher ist schneller, oder sind beide gleich schnell?",
+      "hints": [
+        "Wandle die Fahrzeiten in Stunden um und vergleiche Strecke geteilt durch Zeit.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-math-textaufgaben-t32": {
+      "question": "Fünf Pizzen sind in je acht Stücke geschnitten. Sechs Kinder erhalten gleich viele ganze Stücke. Die Stücke werden nicht weiter geteilt. Wie viele bekommt jedes Kind, und wie viele bleiben insgesamt übrig?",
+      "answer": "6 pro Kind, 4 bleiben übrig",
+      "options": [
+        "7 pro Kind, 2 bleiben übrig",
+        "6 pro Kind, 4 bleiben übrig",
+        "8 pro Kind, 0 bleiben übrig",
+        "5 pro Kind, 5 bleiben übrig"
+      ],
+      "hints": [
+        "Berechne zuerst die Gesamtzahl der Stücke. Teile sie dann mit Rest durch sechs.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-textaufgaben-t50": {
+      "altAnswers": [
+        "-7"
+      ],
+      "spokenPrompt": "n zum Quadrat plus zweimal n ergibt fünfunddreissig. Nenne eine mögliche ganze Zahl für n."
+    },
+    "g3-math-flaeche-umfang-f7": {
+      "answer": "Beide gleich (20 cm)",
+      "hints": [
+        "Berechne beide Umfänge einzeln und vergleiche sie.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-flaeche-umfang-f5": {
+      "hints": [
+        "Multipliziere Länge und Breite des Zimmers.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fu8": {
+      "hints": [
+        "Addiere die drei Seitenlängen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Ein Dreieck hat die Seitenlängen drei Zentimeter, vier Zentimeter und fünf Zentimeter. Wie gross ist sein Umfang?"
+    },
+    "fu16": {
+      "hints": [
+        "Berechne Grundlinie mal Höhe und halbiere das Produkt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fu22": {
+      "hints": [
+        "Bestimme zuerst die Länge aus der gegebenen Breite.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fu28": {
+      "hints": [
+        "Vergleiche ein Quadrat mit Seite s und eines mit Seite zweimal s.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fu32": {
+      "hints": [
+        "Bestimme die Länge aus Fläche und Breite; addiere danach alle vier Seiten.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fu34": {
+      "hints": [
+        "Addiere die drei gleich langen Seiten.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fu36": {
+      "hints": [
+        "Multipliziere bei jedem Rechteck seine beiden Seitenlängen und vergleiche.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Rechteck A ist drei Zentimeter lang und acht Zentimeter breit. Rechteck B ist vier Zentimeter lang und sechs Zentimeter breit. Welches hat die grössere Fläche, oder sind sie gleich gross?"
+    },
+    "fu38": {
+      "hints": [
+        "Berechne zuerst eine quadratische Fläche, dann die gesamte Oberfläche.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fu13": {
+      "question": "Die Fläche misst den Inhalt einer Figur. Der ___ misst die Länge ihres Randes.",
+      "answer": "Umfang",
+      "hints": [
+        "Überlege, welche Grösse du misst, wenn du einmal um die Figur herumgehst.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "fu44": {
+      "question": "Acht Rechtecke mit Seitenlängen 3 cm und 4 cm werden ohne Lücken zu einem Rechteck gelegt. Welche Aussage stimmt?",
+      "answer": "Alle drei sind möglich",
+      "options": [
+        "Nur 6×16 ist möglich",
+        "Nur 8×12 ist möglich",
+        "Nur 4×24 ist möglich",
+        "Alle drei sind möglich"
+      ],
+      "spokenPrompt": "Acht Rechtecke mit Seitenlängen drei und vier Zentimeter werden ohne Lücken zu einem Rechteck gelegt. Sind nur sechs mal sechzehn, nur acht mal zwölf, nur vier mal vierundzwanzig oder alle drei Möglichkeiten möglich?"
+    },
+    "sr5": {
+      "hints": [
+        "Multipliziere schriftlich von den Einern zu den Hundertern und beachte Überträge.",
+        "Addiere 4 genau 123 mal."
+      ]
+    },
+    "sr36": {
+      "hints": [
+        "Beginne bei den Einern und entbündle bei Bedarf einen Zehner. Beachte danach die veränderte Zehnerzahl.",
+        "Zähle von 456 genau 189 zurück."
+      ]
+    },
+    "sr47": {
+      "hints": [
+        "Multipliziere die Tausenderfaktoren und bestimme die Anzahl Nullen.",
+        "Addiere 1000 genau 1000 mal."
+      ]
+    },
+    "d1": {
+      "question": "Wie stellt ein Balkendiagramm die Grösse verschiedener Mengen dar?",
+      "options": [
+        "Durch gleich lange Balken ohne Beschriftung",
+        "Mengen als unterschiedlich hohe Balken",
+        "Nur durch die Farbe der Überschrift",
+        "Nur durch den Namen der Tabelle"
+      ],
+      "hints": [
+        "Je höher der Balken, desto mehr!",
+        "Vergleiche die Ausdehnung der Balken mit den zugehörigen Werten."
+      ]
+    },
+    "d7x2": {
+      "question": "Am Montag wurden 3 Bücher gelesen, am Dienstag 7 und am Mittwoch 5. Der höchste Wert gehört zum ___.",
+      "altAnswers": [
+        "am Dienstag"
+      ]
+    },
+    "g3-math-diagramme-daten-dd11": {
+      "question": "Ein Liniendiagramm verbindet Messpunkte und zeigt einen Verlauf. Ergänze: Es zeigt Veränderungen über die ___.",
+      "answer": "Zeit",
+      "hints": [
+        "Überlege, was Angaben wie Montag, Dienstag und Mittwoch gemeinsam beschreiben.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-math-diagramme-daten-dd14": {
+      "spokenPrompt": "Was zeigt die waagrechte Achse, die sogenannte iks-Achse, in einem Diagramm typischerweise?",
+      "hints": [
+        "Überlege, wo du Beschriftungen wie Monate oder verschiedene Gruppen findest.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-diagramme-daten-dd18": {
+      "answer": "9 (11−2=9 grösster minus kleinster Wert)"
+    },
+    "g3-math-diagramme-daten-dd24": {
+      "spokenPrompt": "Eine Klasse hat dreissig Kinder. Zehn bevorzugen Fussball, acht Basketball und zwölf Tennis. Wie viel Prozent bevorzugen Tennis?",
+      "altAnswers": [
+        "40",
+        "40 Prozent"
+      ]
+    },
+    "g3-math-diagramme-daten-dd29": {
+      "question": "Balkendiagramm: Jan=120, Feb=90, März=150. Wie verändert sich der Wert von Januar zu Februar?",
+      "hints": [
+        "Vergleiche den Wert im Februar mit dem Wert im Januar.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-math-diagramme-daten-dd32": {
+      "question": "Daten: 10, 10, 10, 100. Berechne den Mittelwert: ___",
+      "spokenPrompt": "Berechne den Mittelwert der vier Zahlen zehn, zehn, zehn und hundert.",
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": ""
+    },
+    "dd49": {
+      "spokenPrompt": "Wie viel ergibt die Wahrscheinlichkeit eines Ereignisses A plus die Wahrscheinlichkeit des Gegenereignisses nicht A?"
+    },
+    "g3-math-diagramme-daten-dd9": {
+      "altAnswers": [
+        "am Dienstag"
+      ]
+    },
+    "g3-math-textaufgaben-t3": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g3-math-textaufgaben-t15": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g3-math-textaufgaben-t21": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g3-math-textaufgaben-t31": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g3-math-textaufgaben-t40": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g3-math-textaufgaben-t42": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "fu35": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    }
+  }
+}

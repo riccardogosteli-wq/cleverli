@@ -27,6 +27,9 @@ export interface Exercise {
   altAnswersIT?: string[];
   /** Multi-gap task rendered as one explicitly ordered response. */
   sequentialAnswer?: boolean;
+  /** Individually reviewed mathematical input semantics; opt-in only. */
+  mathAnswerMode?: "number" | "fraction" | "reduced-fraction";
+  mathAnswerUnit?: string;
   caseSensitiveAnswer?: boolean; // Explicit letter-case learning tasks only.
   answerEN?: string;
   answerFR?: string;
