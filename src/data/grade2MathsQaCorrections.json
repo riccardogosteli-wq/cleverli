@@ -168,6 +168,9 @@
       "hints": [
         "Übersetze zuerst halb sieben in eine digitale Uhrzeit.",
         "Gehe von dort fünfzehn Minuten weiter."
+      ],
+      "altAnswers": [
+        "06:45"
       ]
     },
     "g2-math-uhrzeit-u39": {
@@ -389,6 +392,10 @@
       "hints": [
         "Der Preis bleibt für jedes Buch gleich.",
         "Nutze die Malrechnung mit der Anzahl Bücher."
+      ],
+      "altAnswers": [
+        "48.00",
+        "48.0"
       ]
     },
     "as37": {
@@ -1295,6 +1302,9 @@
       "hints": [
         "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "07:30"
       ]
     },
     "g2-math-uhrzeit-u5": {
@@ -1307,6 +1317,10 @@
       "hints": [
         "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "07:00",
+        "7"
       ]
     },
     "g2-math-uhrzeit-u7": {
@@ -1319,12 +1333,18 @@
       "hints": [
         "Viertel = 15 Minuten",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "03:15"
       ]
     },
     "g2-math-uhrzeit-u10": {
       "hints": [
         "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "03:45"
       ]
     },
     "g2-math-uhrzeit-u11": {
@@ -1343,6 +1363,9 @@
       "hints": [
         "9 + 2 = 11.",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "11"
       ]
     },
     "u15c": {
@@ -1361,6 +1384,9 @@
       "hints": [
         "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "03:30"
       ]
     },
     "g2-math-uhrzeit-u17": {
@@ -1409,6 +1435,9 @@
       "hints": [
         "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "05:30"
       ]
     },
     "g2-math-uhrzeit-u27": {
@@ -1433,12 +1462,18 @@
       "hints": [
         "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "04:20"
       ]
     },
     "g2-math-uhrzeit-u33": {
       "hints": [
         "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
         "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ],
+      "altAnswers": [
+        "08:55"
       ]
     },
     "g2-math-uhrzeit-u34": {
@@ -1871,6 +1906,10 @@
       "hints": [
         "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "1.00",
+        "1.0"
       ]
     },
     "g2-math-geld-chf-g3": {
@@ -1883,6 +1922,10 @@
       "hints": [
         "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "100.00",
+        "100.0"
       ]
     },
     "g2-math-geld-chf-g5": {
@@ -1895,12 +1938,19 @@
       "hints": [
         "5.00 - 3.80 = ?",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "1.2"
       ]
     },
     "g2-math-geld-chf-g8": {
       "hints": [
         "Addiere die beiden Beträge.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "15.00",
+        "15.0"
       ]
     },
     "g2-math-geld-chf-g10": {
@@ -1919,6 +1969,10 @@
       "hints": [
         "Addiere die beiden Beträge.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "17.00",
+        "17.0"
       ]
     },
     "g2-math-geld-chf-g14": {
@@ -1931,6 +1985,10 @@
       "hints": [
         "Addiere die beiden Beträge.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "19.00",
+        "19.0"
       ]
     },
     "g2-math-geld-chf-g16": {
@@ -1943,12 +2001,19 @@
       "hints": [
         "Addiere die beiden Beträge.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "21.00",
+        "21.0"
       ]
     },
     "g2-math-geld-chf-g19": {
       "hints": [
         "2.40+1.20=3.60, +1.80=?",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "5.4"
       ]
     },
     "g2-math-geld-chf-g20": {
@@ -1961,6 +2026,9 @@
       "hints": [
         "3 × 4.50 = ?",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "13.5"
       ]
     },
     "g2-math-geld-chf-g22": {
@@ -1985,6 +2053,10 @@
       "hints": [
         "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "4.00",
+        "4.0"
       ]
     },
     "g2-math-geld-chf-g28": {
@@ -1997,6 +2069,9 @@
       "hints": [
         "2×2.90=5.80. 8.00−5.80=?",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "2.2"
       ]
     },
     "g2-math-geld-chf-g32": {
@@ -2015,12 +2090,18 @@
       "hints": [
         "50.00 − 23.50 = ?",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "26.5"
       ]
     },
     "g2-math-geld-chf-g36": {
       "hints": [
         "47.10 ÷ 3 = ?",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "15.7"
       ]
     },
     "g2-math-geld-chf-g37": {
@@ -2039,6 +2120,10 @@
       "hints": [
         "Addiere die beiden Beträge.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "33.00",
+        "33.0"
       ]
     },
     "g2-math-geld-chf-g43": {
@@ -2051,6 +2136,10 @@
       "hints": [
         "Addiere die beiden Beträge.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "25.00",
+        "25.0"
       ]
     },
     "g2-math-geld-chf-g45": {
@@ -2063,6 +2152,10 @@
       "hints": [
         "Addiere die beiden Beträge.",
         "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ],
+      "altAnswers": [
+        "27.00",
+        "27.0"
       ]
     },
     "g2-math-geld-chf-g47": {
@@ -2663,6 +2756,14 @@
       "hints": [
         "Gleich viel = gleichviel.",
         "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ],
+      "answer": "15",
+      "altAnswers": [
+        "15 Fr.",
+        "15 Franken",
+        "15.00",
+        "15.0",
+        "CHF 15"
       ]
     },
     "sa37c": {
@@ -2729,6 +2830,86 @@
       "hints": [
         "Das Gegenteil ist das Minimum.",
         "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "g2-math-geld-chf-g9": {
+      "altAnswers": [
+        "60.00",
+        "60.0"
+      ]
+    },
+    "g2-math-geld-chf-g11": {
+      "altAnswers": [
+        "3.00",
+        "3.0"
+      ]
+    },
+    "g2-math-geld-chf-g23": {
+      "altAnswers": [
+        "14.00",
+        "14.0"
+      ]
+    },
+    "g2-math-geld-chf-g25": {
+      "altAnswers": [
+        "4.00",
+        "4.0"
+      ]
+    },
+    "g2-math-geld-chf-g31": {
+      "altAnswers": [
+        "12.00",
+        "12.0"
+      ]
+    },
+    "g2-math-geld-chf-g33": {
+      "altAnswers": [
+        "42.00",
+        "42.0"
+      ]
+    },
+    "g2-math-geld-chf-g38": {
+      "altAnswers": [
+        "52.00",
+        "52.0"
+      ]
+    },
+    "g2-math-geld-chf-g48": {
+      "altAnswers": [
+        "60.00",
+        "60.0"
+      ]
+    },
+    "g2-math-geld-chf-g50": {
+      "altAnswers": [
+        "21.00",
+        "21.0"
+      ]
+    },
+    "g2-math-uhrzeit-u22": {
+      "altAnswers": [
+        "15:00"
+      ]
+    },
+    "sa35c": {
+      "answer": "44",
+      "altAnswers": [
+        "44 Fr.",
+        "44 Franken",
+        "44.00",
+        "44.0",
+        "CHF 44"
+      ]
+    },
+    "dd2c": {
+      "question": "Im gleichen Balkendiagramm gilt: Je höher ein Balken, desto grösser ist die dargestellte ___.",
+      "answer": "Menge",
+      "hints": [
+        "Vergleiche die Höhe der Balken auf derselben Skala.",
+        "Die Balkenhöhe steht für den Umfang dessen, was gezählt wurde."
+      ],
+      "altAnswers": [
+        "Anzahl"
       ]
     }
   },

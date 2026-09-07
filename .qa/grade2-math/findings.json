@@ -196,10 +196,12 @@
     "topic": "uhrzeit",
     "fields": [
       "question",
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Clear, objectively gradable German wording and answer"
+      "Clear, objectively gradable German wording and answer",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -506,10 +508,12 @@
     "fields": [
       "question",
       "answer",
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Clear, objectively gradable German wording and answer"
+      "Clear, objectively gradable German wording and answer",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -1669,10 +1673,12 @@
     "id": "g2-math-uhrzeit-u4",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -1689,10 +1695,12 @@
     "id": "g2-math-uhrzeit-u6",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -1709,20 +1717,24 @@
     "id": "g2-math-uhrzeit-u8",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
     "id": "g2-math-uhrzeit-u10",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -1749,10 +1761,12 @@
     "id": "g2-math-uhrzeit-u14",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -1779,10 +1793,12 @@
     "id": "g2-math-uhrzeit-u16",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -1859,10 +1875,12 @@
     "id": "g2-math-uhrzeit-u26",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -1899,20 +1917,24 @@
     "id": "g2-math-uhrzeit-u30",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
     "id": "g2-math-uhrzeit-u33",
     "topic": "uhrzeit",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2629,10 +2651,12 @@
     "id": "g2-math-geld-chf-g2",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2649,10 +2673,12 @@
     "id": "g2-math-geld-chf-g4",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2669,20 +2695,24 @@
     "id": "g2-math-geld-chf-g6",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
     "id": "g2-math-geld-chf-g8",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2709,10 +2739,12 @@
     "id": "g2-math-geld-chf-g13",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2729,10 +2761,12 @@
     "id": "g2-math-geld-chf-g15",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2749,20 +2783,24 @@
     "id": "g2-math-geld-chf-g17",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
     "id": "g2-math-geld-chf-g19",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2779,10 +2817,12 @@
     "id": "g2-math-geld-chf-g21",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2819,10 +2859,12 @@
     "id": "g2-math-geld-chf-g27",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2839,10 +2881,12 @@
     "id": "g2-math-geld-chf-g29",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2869,20 +2913,24 @@
     "id": "g2-math-geld-chf-g35",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
     "id": "g2-math-geld-chf-g36",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2909,10 +2957,12 @@
     "id": "g2-math-geld-chf-g42",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2929,10 +2979,12 @@
     "id": "g2-math-geld-chf-g44",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -2949,10 +3001,12 @@
     "id": "g2-math-geld-chf-g46",
     "topic": "geld-chf",
     "fields": [
-      "hints"
+      "hints",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept equivalent money decimals or zero-padded clock input"
     ]
   },
   {
@@ -3949,10 +4003,13 @@
     "id": "sa33c",
     "topic": "sachaufgaben",
     "fields": [
-      "hints"
+      "hints",
+      "answer",
+      "altAnswers"
     ],
     "reasons": [
-      "Replace generic review boilerplate with a topical method"
+      "Replace generic review boilerplate with a topical method",
+      "Accept the correct monetary number without requiring a repeated currency unit"
     ]
   },
   {
@@ -4063,6 +4120,130 @@
     ],
     "reasons": [
       "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g9",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g11",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g23",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g25",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g31",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g33",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g38",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g48",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g50",
+    "topic": "geld-chf",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept equivalent money decimals or zero-padded clock input"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u22",
+    "topic": "uhrzeit",
+    "fields": [
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept a full digital time for an exact afternoon hour"
+    ]
+  },
+  {
+    "id": "sa35c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "answer",
+      "altAnswers"
+    ],
+    "reasons": [
+      "Accept the correct monetary number without requiring a repeated currency unit"
+    ]
+  },
+  {
+    "id": "dd2c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "question",
+      "answer",
+      "hints",
+      "altAnswers"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
     ]
   }
 ]

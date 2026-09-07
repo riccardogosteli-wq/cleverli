@@ -1662,9 +1662,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "307a81631618438d48b126f30b1b946389c9d2f226cf0179e9b95387ce2b0249",
-      "hash": "472854c2fb2fe62096fe652d0db5e9412373331ed20f64804d8e0edb79dc52d9",
+      "hash": "53b3c03e4dcbfa99b63ce511e9720027a3a41a477c673f30b72a92304ce4d6a3",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -1686,9 +1687,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "3fa61df55f41ef3a0ee2373b657bb4f999a39e0c2584e4d08cadffc7e57642bf",
-      "hash": "539cc1569421296ba9b5607ca2cdcf7aaee40a5da9241e69673a5f447a6c5268",
+      "hash": "67f627541283a1415bf56dacb6290d7b040ccc8027b36e48cc157acd4043c669",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -1710,9 +1712,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "78550a0493f3079ba160f9bc9b2ec49608b42950bbf1eaf992b6b2986f41cf14",
-      "hash": "a0e662157fcad6583c7f3590df2106d37817fdb721bfee72702d1c3a472d447d",
+      "hash": "9d94c430e34536918b1b80a4544ecf500424d49dd1f2c31ae96f4c15da0195fc",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -1736,9 +1739,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "ff192783d186810a223e7c525641374c8115642fac73b3ef0efc4d0023faed6d",
-      "hash": "5effcda66562905f9e4a99ffcf6ad68bad4336b8aa24a6ffc8ffc35864b6aed5",
+      "hash": "fae52d50d69f37426e70897e1e56b0e1e5441b368ccc7b6b1e03226bf2df71ae",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -1786,9 +1790,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "7db647533025165994fdd90e3b78387c4b6edf6d171a85994a9a3d4561ee6678",
-      "hash": "d447467133c23ab535056c0995e7f63d46cf911492e2ddbf7517a644698d23d6",
+      "hash": "a01262e38d1c28e94f79253efbd1cd795e2e6f40afddca7909c973c4ef73b604",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -1842,9 +1847,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "8cda808413fc3f2f7cf760c2b70e8117127d73a530d38d95f0f8b412c34c738e",
-      "hash": "fe822ac2ee4d83aa50339dd9e25043f53f0ef0e6a832e6e8efeb4dccbd4aee71",
+      "hash": "e92b194a15feddf79a3d0c46a40b7fd0eb1ab6a3433c618bcc4df3450758887d",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -1912,10 +1918,12 @@
       "id": "g2-math-uhrzeit-u22",
       "topic": "uhrzeit",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "22c5741d9a77ee17688a1993d3390a95209ca8a3429958b03bab68e73fa60832",
-      "hash": "22c5741d9a77ee17688a1993d3390a95209ca8a3429958b03bab68e73fa60832",
-      "changedFields": []
+      "hash": "858397778e376440924d403d8aae5fb0c6bb05b5f1afa91dd2531489a1ce340e",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/uhrzeit/g2-math-uhrzeit-u23",
@@ -1963,9 +1971,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "bac5a4a56da1f1afe4816fe15defd033799caf8a75e4fffc712b2830cf32178e",
-      "hash": "644352f595320065639b3a0b87515df1ed02d4da225b88dcab3d3a2ce12d46b9",
+      "hash": "5aa7e68fc030a2547ea7ba30947b8cf023cb98d8b26bd9088f01515745d654c2",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -2011,9 +2020,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "23fa52b884c7d3f172250e93f8aa8857d9375bd2e6d0940ef0f6ea9215aec1c5",
-      "hash": "3daac666437926b66abd39a2e15bfea8a119bdac79acbfcb7097df9055572fd9",
+      "hash": "2404253fe6ab02ac7cfb171fd939bd9ca95091f13588da50516e2b467f83de20",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -2033,10 +2043,11 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "79fa6c89ad3548c12d059d00bdf260e133a3560d9c9a38eec9bb1527efc6c8b9",
-      "hash": "52803e6b19999a04e402363fbff03e721c4ebcfee7fd57aaaac9a7f552714844",
+      "hash": "d2556e66f4e344be437dfda7311319c4e1335ced2c0a7beec3fe1fb2c29e7b4d",
       "changedFields": [
         "question",
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -2046,9 +2057,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "d4574850a140ad8bc21df6d99f4b93e8f51db663a353a02c0ee5cbe52b7a40b5",
-      "hash": "678cf3b636c9706f131cb402b6b501bb482f21e27d2e2f26de71fafb1e8e1bf3",
+      "hash": "f905d64eea4e16483a2472e0b8afd04e27c65e8a5e940634b2e374fda49362ca",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3449,9 +3461,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "a032456cae84fcc5c78757b4c14788762055b7c80c196cdc3829468fc9e73470",
-      "hash": "a812a198bb991436f1e4bc92fd91b37640f9f86c54e2341be7aed7e02e65e4ed",
+      "hash": "f2dcb2c2c54d2b6ff8517673931f2af9ca9fb4d93d08e15fbe3ec287caff2d3d",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3473,9 +3486,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "e7106832035327248b0b5e697fe20873d1552c8ef30421684711cbb1b18782d5",
-      "hash": "978e35cd153a1165a08c63a96e90919cd65a1e1240213d88c0824e57b1e601ba",
+      "hash": "c7428abf11d146a19f82792dd3976a4a6affc914867bce7465d6458cabb87cd9",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3497,9 +3511,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "595658e724ee5ead1febe66d7e251d458b37c0fe264d81a6302ec4b21362367f",
-      "hash": "22d046cc7800041b39600da4010964c53ab6aa3e2a1db0b73925ea30156213ba",
+      "hash": "1d0154c940530065994b332415c03b225f4194f3e4c71e3d671fa4197f77ed28",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3519,9 +3534,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "721169e62fbdd77aa75cb61b55de49963d71de80cb6d59b1e11dd8a1cf885164",
-      "hash": "e310b3654bc06bbe1b612876cc367dd04ca193b8bd6f20ff3a20d5753debcd82",
+      "hash": "13de7ec1b11de343d97fc8ac174bfcc075d95501f605158de2d80f7a0834970a",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3529,10 +3545,12 @@
       "id": "g2-math-geld-chf-g9",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "2de6a8ffab6b2533f0935aeb7ac3e1c990a3c06370e627786d36d294988c440b",
-      "hash": "2de6a8ffab6b2533f0935aeb7ac3e1c990a3c06370e627786d36d294988c440b",
-      "changedFields": []
+      "hash": "2eff50bf42dd5feeb61031d8677328d2fbf6625d73e83b9e736573663f4f54ec",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/geld-chf/g2-math-geld-chf-g10",
@@ -3551,10 +3569,12 @@
       "id": "g2-math-geld-chf-g11",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "b519daba4710c02ee7485ac498481506e9241ed22ecda02c462c8be5aea87883",
-      "hash": "b519daba4710c02ee7485ac498481506e9241ed22ecda02c462c8be5aea87883",
-      "changedFields": []
+      "hash": "6809a032e41408f54d139dc29c49be2c0b9996432462dc06cd72b9a26dbffde0",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/geld-chf/g2-math-geld-chf-g12",
@@ -3575,9 +3595,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "6f710865bbd5f2879851ae386b4fb10b03971059125672ee81051075ae865c24",
-      "hash": "94192cdde0a5ab29d0a773a2a661ec9a93b5fd7db5701d05961609e19f6d4968",
+      "hash": "0d0ae80d69a968b9d2274c7d795a41e9f8f449c687e1b23e2ce24dcb148a62e1",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3599,9 +3620,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "9eb5a49dd0065f861f6be1ace2305c4ce2dc05137d6d3c42e21337317d720456",
-      "hash": "e95395aec6132b51327d42a74afbf399c71a9dba32a5f411837f4f06fc675dbe",
+      "hash": "6a5202cbea5bea7b0926d9203b63cd4d8a20188b6f250ca9a96cd3f81a329d31",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3623,9 +3645,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "add409851fee69fc4ff8487e3e91a0ca1033829bb0d5d7dc45b6a6c88bac883e",
-      "hash": "3ff4478eddc7b4c2a59bb3c09d3c05aaf5a82f7f7f73cf9a24984c58e9e689a1",
+      "hash": "3fb881204a2e4ee191cfe2bd283be5600d025463d3edec138957846a48ef3e05",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3645,9 +3668,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "0015a783db8a5bec5390b76c47110cc5c7ad8f5265853fcfb5c0c7608dc7d42a",
-      "hash": "16f2dfb0715d9a465a1da0624b59c35736e5595537e9187aaf8f1e8c3b4ee72b",
+      "hash": "bb1b10adbf6881cbdca8f2cfea9862fabf805581146ab4929f8afaa9846fdee3",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3669,9 +3693,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "91039b8c5d3b0e18eac3f57c1d2f7056828a0fc45e07745989d97ebf416ed331",
-      "hash": "0317f763df40b54d07c81738f0089e5544006086cec5710f0aea67a4dbf71255",
+      "hash": "6bed8513c4aff26b5600267a784716cf3a9dc4adfd15c6e76c06b9c8f0278eb0",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3691,10 +3716,12 @@
       "id": "g2-math-geld-chf-g23",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "c014007f6d7e2763f79201e73a2edce6841b932c7c952de73c340647202354a7",
-      "hash": "c014007f6d7e2763f79201e73a2edce6841b932c7c952de73c340647202354a7",
-      "changedFields": []
+      "hash": "291dd292233fe7594330bbe46e7b1a5604175f08923433130f5012b006507458",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/geld-chf/g2-math-geld-chf-g24",
@@ -3713,10 +3740,12 @@
       "id": "g2-math-geld-chf-g25",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "a3284a486b2225b766c58a8db81ddec1296cf117c5040be0729f0ae1af397fbd",
-      "hash": "a3284a486b2225b766c58a8db81ddec1296cf117c5040be0729f0ae1af397fbd",
-      "changedFields": []
+      "hash": "22a43617d7c332bd9e3f1f29191d3119c5e84da4a9e7b5fabaabf3947d5d01ed",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/geld-chf/g2-math-geld-chf-g26",
@@ -3737,9 +3766,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "11d31d99252a7164bb190339ea8317eac2855fe9752b34d632a0a49ac0e35dc2",
-      "hash": "da466c3205064903359a11da4fc079358e2b085a9fea0c21b21683dd97b79f65",
+      "hash": "07faecaff1d2d641eb850635a374988a55efddb13d0676f9a4a4a06b0e5f8c7e",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3761,9 +3791,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "1243fc69cbd4905075de5ec052c6e72c55e4ca3a59650ba097ee27665510775d",
-      "hash": "4d1d2957dae7c6df8d991022f4aad5c4e0f75af8a11c83dec20dc9fd22b18974",
+      "hash": "76361eadacae5054d21c0f847b21e31c1bb911c72d354405e55b4943e7d84bd9",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3785,10 +3816,12 @@
       "id": "g2-math-geld-chf-g31",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "c9836b915070ea178cb45baca73a6ed738e140ca000e1c5b92df7fafdfaf7be0",
-      "hash": "c9836b915070ea178cb45baca73a6ed738e140ca000e1c5b92df7fafdfaf7be0",
-      "changedFields": []
+      "hash": "af4a6ad6143139737be159c664bf004105fa67d65ab521e9edaf3dc816607c0d",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/geld-chf/g2-math-geld-chf-g32",
@@ -3807,10 +3840,12 @@
       "id": "g2-math-geld-chf-g33",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "94e6e49e7ab96ac975f7232247128e1927c6550dee8ada992d8660327e5825f0",
-      "hash": "94e6e49e7ab96ac975f7232247128e1927c6550dee8ada992d8660327e5825f0",
-      "changedFields": []
+      "hash": "ec849db4a693942b90c743bc71d884531b807437aff7605293ec34f747d09204",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/geld-chf/g2-math-geld-chf-g34",
@@ -3831,9 +3866,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "ee6b18970ab3edbf61662af329599421ba828b62c05b67d4cf1205a8987bd07e",
-      "hash": "5822dd1355a1dd14339824692749b579edeebaa4bdc5be80cfb2104698f0d730",
+      "hash": "78954684e3c248832b9e3528962821dd6ffdb3615fd4447a552ccec82517abc1",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3843,9 +3879,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "7cc20f89c24e2afda0bc95f9af208c06f4288f657657d54ad80ab97bc2f14609",
-      "hash": "1a4ac60631bc35401038a9cddda9ce5d6ca7f87519e2f0241777bee01647338a",
+      "hash": "9a87a9d9f1e8d6cd7ae5063c54c5e821b8d592372bc7e67f7e16035c810db79b",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3865,10 +3902,12 @@
       "id": "g2-math-geld-chf-g38",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "1bad10a16a13ea680aea8206dbd7d457aae185c48ac5404048e7f3a29cc44f33",
-      "hash": "1bad10a16a13ea680aea8206dbd7d457aae185c48ac5404048e7f3a29cc44f33",
-      "changedFields": []
+      "hash": "6f45f225ec4c57e159d28e519cc9aef67219ec38b8bb2b679cf09d2019324fe5",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/geld-chf/g2-math-geld-chf-g39",
@@ -3892,11 +3931,12 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "aaec365990cc549f34466920f132e8f23706f614f472afd296a0de3f6e670f79",
-      "hash": "988b2cf73e0d848804f4961293088436a3da50a676c6d968c9a718d6e2d64b35",
+      "hash": "d89800cda6e6e467b6a9c86a99ce2237bc62f6071e5c64d6be31875a109d0027",
       "changedFields": [
         "question",
         "answer",
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3918,9 +3958,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "e691e27589f827d90a9ac3b15f6bdb7e31010b6aef6beb04d3881eab564c454d",
-      "hash": "ff842da03b52360bf58ebc7a92da5d7915055c1bc8f5eff541f2b965d3a0a96b",
+      "hash": "682b7f3008d448bc1fb990c2db4962be65a384dabb663f7dea9b9235277dd06d",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3942,9 +3983,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "ef1ce80f9ec5d7d36bad797e77495462a3c8d50adf5863320c9500a40de17cf7",
-      "hash": "936e98e304b55fbd2bc42101fbcf2390586441bbc667b9cd4a9bf8f7a62337f9",
+      "hash": "d6598652eec7297be26bfbab1e5101cb6b29922690c414406fa800900a99aaf5",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3966,9 +4008,10 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "7bc36b163310246194d884cab013af4876769860d9e935eb3515ab3cac8a5add",
-      "hash": "c817e60cd01c7ad9e1fd1b6d7f059dcd8c5e38b783ee80f739863906ecdf96e5",
+      "hash": "5c1d3e56054a730ff1104505da6d5ffae1898101100c552bb0efa4fe8cfc459e",
       "changedFields": [
-        "hints"
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -3988,10 +4031,12 @@
       "id": "g2-math-geld-chf-g48",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "f60aac91b9f43471d62ec1de461ed9e8ee820bda990490a997afd65d7cf11948",
-      "hash": "f60aac91b9f43471d62ec1de461ed9e8ee820bda990490a997afd65d7cf11948",
-      "changedFields": []
+      "hash": "c38b4e577346c2bf4106b88ab0cfb95893db76b120fce469399fb35b67f72e1d",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/geld-chf/g2-math-geld-chf-g49",
@@ -4010,10 +4055,12 @@
       "id": "g2-math-geld-chf-g50",
       "topic": "geld-chf",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "6d75333e47922fa70401a973d1adb2ec1655325abc2d250db5e63f0df1937b3d",
-      "hash": "6d75333e47922fa70401a973d1adb2ec1655325abc2d250db5e63f0df1937b3d",
-      "changedFields": []
+      "hash": "b2b4a173b3ccb3e8e375f8c0c821fd6ea3d8c01d59dac35b8479dd2d6ae8f6e5",
+      "changedFields": [
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/add-sub-100/as1",
@@ -6745,9 +6792,11 @@
       "type": "fill-in-blank",
       "changed": true,
       "beforeHash": "a1fd04adee51cc1f233d47db03320e50aca3243034df069bd190a84dfcbe37a1",
-      "hash": "8dc4f424b33ec287b2a8d3920e4b108a6f5bec696527b2d0ee30adcaf95be077",
+      "hash": "0bd11e964840bb42069534cb17da9626768494c8dbc1cdd643213b791f01ee9e",
       "changedFields": [
-        "hints"
+        "answer",
+        "hints",
+        "altAnswers"
       ]
     },
     {
@@ -6770,10 +6819,13 @@
       "id": "sa35c",
       "topic": "sachaufgaben",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "529c1d1fc91b82a8f60ca2e449685c4b351fd3e200197eccd61c84be4cfa4b86",
-      "hash": "529c1d1fc91b82a8f60ca2e449685c4b351fd3e200197eccd61c84be4cfa4b86",
-      "changedFields": []
+      "hash": "4c214287a73c76a6930745e3e20f0d12c49d1b97621ebfb51579a75b57b5bbff",
+      "changedFields": [
+        "answer",
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/sachaufgaben/sa36c",
@@ -6954,10 +7006,15 @@
       "id": "dd2c",
       "topic": "daten-diagramme",
       "type": "fill-in-blank",
-      "changed": false,
+      "changed": true,
       "beforeHash": "2b2596987b45c8eeb3231997c9f1ef8c326b015b944534956a4be7d226201097",
-      "hash": "2b2596987b45c8eeb3231997c9f1ef8c326b015b944534956a4be7d226201097",
-      "changedFields": []
+      "hash": "b3877812442dc125c7591fe12615684e721e5b5cd2bd31cf609df6c1cec7fd41",
+      "changedFields": [
+        "question",
+        "answer",
+        "hints",
+        "altAnswers"
+      ]
     },
     {
       "key": "2/math/daten-diagramme/dd3c",
