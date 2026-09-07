@@ -237,6 +237,7 @@ function DailyChallengePage({ context }: { context: string }) {
             sequentialAnswer={localizedExercise.sequentialAnswer}
             mathAnswerMode={localizedExercise.mathAnswerMode}
             mathAnswerUnit={localizedExercise.mathAnswerUnit}
+            caseSensitiveAnswer={grade === 3 && subject === "german" && lang === "de" ? localizedExercise.caseSensitiveAnswer : undefined}
             onAnswer={handleAnswer}
             questionImage={localizedExercise.image}
           />
