@@ -1,3 +1,4 @@
+import { applyGrade1NmgQaCorrections } from "@/data/grade1NmgQaCorrections";
 import { applyGermanExerciseQaCorrections } from "@/lib/germanExerciseQaCorrections";
 import type { Exercise } from "@/types/exercise";
 import type { Lang } from "@/lib/i18n";
@@ -169,5 +170,5 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     };
     return withUsefulQuestionVisuals(exercise.preserveGermanContent || exercise.completeLocalization ? localized : cleanItalianExercise(localized));
   }
-  return withUsefulQuestionVisuals(applyGermanExerciseQaCorrections(exercise));
+  return withUsefulQuestionVisuals(applyGrade1NmgQaCorrections(applyGermanExerciseQaCorrections(exercise)));
 }

@@ -1,0 +1,2688 @@
+{
+  "patches": {
+    "t3": {
+      "hints": [
+        "Merke dir die Bilder und die Positionen der Karten.",
+        "Drehe zwei Karten mit demselben Bild und demselben Wort um."
+      ],
+      "question": "Finde immer zwei gleiche Karten!"
+    },
+    "t6": {
+      "options": [
+        "Henne",
+        "Hund",
+        "Katze",
+        "Pferd"
+      ],
+      "hints": [
+        "Denke an Tiere auf einem Bauernhof.",
+        "Suche das Tier, aus dessen Ei ein Küken schlüpft."
+      ]
+    },
+    "t7": {
+      "hints": [
+        "Überlege, wo jedes Tier lebt.",
+        "Ordne zuerst das Tier mit dem Nest zu."
+      ]
+    },
+    "t8": {
+      "hints": [
+        "Eine Spinne hat mehr Beine als ein Insekt.",
+        "Zähle ihre Beine paarweise."
+      ]
+    },
+    "t14": {
+      "hints": [
+        "Der Rücken eines Igels fühlt sich pieksig an.",
+        "Dieses Körpermerkmal schützt den Igel."
+      ]
+    },
+    "t16": {
+      "question": "Welches Tier hält echten Winterschlaf?",
+      "answer": "Igel",
+      "options": [
+        "Igel",
+        "Hund",
+        "Katze",
+        "Vogel"
+      ],
+      "hints": [
+        "Dieses Tier sucht im Herbst ein geschütztes Versteck.",
+        "Im Winter fährt es Atmung und Herzschlag stark herunter."
+      ]
+    },
+    "t17": {
+      "hints": [
+        "Er baut es aus Zweigen und Federn.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "t22": {
+      "question": "Aus dem Ei eines Schmetterlings schlüpft zuerst eine ___.",
+      "hints": [
+        "Denke an die Entwicklung vor der Puppe.",
+        "Das Tier frisst Blätter und wächst, bevor es sich verpuppt."
+      ]
+    },
+    "t26": {
+      "question": "Welche Aufgabe können Fell oder Federn haben?",
+      "answer": "Sie schützen vor Kälte und können tarnen",
+      "options": [
+        "Sie schützen vor Kälte und können tarnen",
+        "Sie machen jedes Tier flugfähig",
+        "Sie ersetzen die Haut",
+        "Sie wachsen nur im Winter"
+      ],
+      "hints": [
+        "Denke daran, wie Tiere warm bleiben.",
+        "Manche Fell- und Federfarben helfen auch beim Verstecken."
+      ]
+    },
+    "t27": {
+      "question": "Ein ___ hält im Winter in einem geschützten Laubhaufen Winterschlaf.",
+      "answer": "Igel",
+      "hints": [
+        "Das gesuchte Tier hat Stacheln.",
+        "Im Herbst sucht es Laub und Reisig als Versteck."
+      ]
+    },
+    "t34": {
+      "hints": [
+        "Sie ziehen sich dort hinein, wenn sie Angst haben.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ],
+      "question": "Eine Gehäuseschnecke trägt ihr ___ auf dem Rücken.",
+      "altAnswers": [
+        "Schneckenhaus",
+        "Gehäuse"
+      ]
+    },
+    "t36": {
+      "question": "Ein Tier, das Fleisch frisst, nennt man ___.",
+      "answer": "Fleischfresser",
+      "hints": [
+        "Denke an die Nahrung von Löwen und Wölfen.",
+        "Der Begriff nennt zuerst die Nahrung und dann das Fressen."
+      ]
+    },
+    "t37": {
+      "question": "Ein Tier, das nur Pflanzen frisst, nennt man ___.",
+      "answer": "Pflanzenfresser",
+      "hints": [
+        "Kühe und Kaninchen gehören zu dieser Gruppe.",
+        "Der Begriff nennt zuerst die Nahrung und dann das Fressen."
+      ]
+    },
+    "t38": {
+      "question": "Hühner und viele andere Vögel legen ___.",
+      "answer": "Eier",
+      "hints": [
+        "Aus ihnen können Jungtiere schlüpfen.",
+        "Denke an ein Küken vor dem Schlüpfen."
+      ]
+    },
+    "t39": {
+      "question": "Igel halten im Winter ___.",
+      "hints": [
+        "Dabei sind sie lange inaktiv und sparen Energie.",
+        "Denke an die kalte Jahreszeit und langes Schlafen."
+      ]
+    },
+    "t40": {
+      "hints": [
+        "So nennt man eine junge Kuh.",
+        "Denke an das Jungtier, das Milch bei der Kuh trinkt."
+      ]
+    },
+    "t41": {
+      "hints": [
+        "So nennt man einen jungen Hund.",
+        "Denke an ein kleines Hundejunges."
+      ]
+    },
+    "t42": {
+      "hints": [
+        "So nennt man ein junges Pferd.",
+        "Denke an ein Pferdejunges mit langen Beinen."
+      ]
+    },
+    "t44": {
+      "hints": [
+        "Das Tier lebt im Meer und ist ein Säugetier.",
+        "Es ist sogar grösser als die grössten Dinosaurier."
+      ]
+    },
+    "t45": {
+      "question": "Pilze und kleine Bodenlebewesen bauen tote Pflanzenreste ab. Sie sind ___.",
+      "hints": [
+        "Sie machen aus abgestorbenem Material wieder Nährstoffe.",
+        "Denke an den Kreislauf im Boden."
+      ]
+    },
+    "t46": {
+      "question": "Wölfe leben oft gemeinsam in einem ___.",
+      "answer": "Rudel",
+      "hints": [
+        "Die Gruppe jagt und kümmert sich gemeinsam um Jungtiere.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "t47": {
+      "hints": [
+        "Die Beute bleibt an klebrigen Fäden hängen.",
+        "Denke an kleine Tiere mit sechs Beinen."
+      ]
+    },
+    "t48": {
+      "question": "Menschen und Hunde erzeugen ihre Körperwärme selbst. Sie sind ___.",
+      "answer": "gleichwarm",
+      "hints": [
+        "Ihre Körpertemperatur bleibt meist in einem engen Bereich.",
+        "Vergleiche sie mit Tieren, deren Temperatur stark von der Umgebung abhängt."
+      ]
+    },
+    "t49": {
+      "hints": [
+        "Dazu gehören zum Beispiel Würmer, Schnecken und Insekten.",
+        "Achte darauf, ob im Rücken eine Wirbelsäule liegt."
+      ]
+    },
+    "t50": {
+      "question": "Die feste Körperhülle eines Insekts liegt ___.",
+      "hints": [
+        "Sie schützt den weichen Körper wie eine Rüstung.",
+        "Vergleiche diese Hülle mit unserem Skelett im Körper."
+      ]
+    },
+    "j3": {
+      "question": "Was siehst du bei Regen oft am Himmel?"
+    },
+    "j7": {
+      "question": "Was fällt im Winter in weichen Flocken vom Himmel?",
+      "options": [
+        "Regen",
+        "Schnee",
+        "Nebel",
+        "Wind"
+      ],
+      "hints": [
+        "Die Flocken bestehen aus Eiskristallen.",
+        "Bei Kälte bleiben sie auf dem Boden liegen."
+      ]
+    },
+    "j20": {
+      "question": "Warum wird es im Winter am Nachmittag früher dunkel?",
+      "answer": "Die hellen Stunden des Tages sind kürzer",
+      "options": [
+        "Die hellen Stunden des Tages sind kürzer",
+        "Die Sonne ist kaputt",
+        "Der Mond deckt die Sonne täglich ab",
+        "Uhren laufen im Winter schneller"
+      ],
+      "hints": [
+        "Vergleiche einen Winterabend mit einem Sommerabend.",
+        "Im Winter geht die Sonne früher unter."
+      ]
+    },
+    "j22": {
+      "options": [
+        "Rauch aus Fabriken",
+        "Winzige Wassertröpfchen in der Luft",
+        "Gefrorener Schnee",
+        "Staub in der Luft"
+      ]
+    },
+    "j23": {
+      "hints": [
+        "Ein Thermometer zeigt die passende Einheit an.",
+        "Auf dem Gerät steht dafür oft das Zeichen °C."
+      ],
+      "altAnswers": [
+        "Celsius",
+        "°C"
+      ]
+    },
+    "j32": {
+      "question": "Ein Regenbogen entsteht, wenn Sonnenlicht auf viele kleine ___ trifft.",
+      "answer": "Regentropfen",
+      "hints": [
+        "Das Licht wird in den Tropfen in verschiedene Farben zerlegt.",
+        "Denke an Sonne direkt nach einem Regenschauer."
+      ]
+    },
+    "j35": {
+      "question": "Was tust du draussen, wenn ein Gewitter näher kommt?",
+      "answer": "In ein festes Gebäude gehen",
+      "options": [
+        "In ein festes Gebäude gehen",
+        "Unter einen einzelnen Baum stehen",
+        "Auf einer freien Wiese bleiben",
+        "Im Wasser weiterschwimmen"
+      ],
+      "hints": [
+        "Suche einen geschützten Ort.",
+        "Meide Wasser, freie Flächen und einzelne hohe Bäume."
+      ]
+    },
+    "j42": {
+      "question": "Wasser verdunstet und wird zu ___ in der Luft.",
+      "answer": "Wasserdampf",
+      "hints": [
+        "Die Sonne erwärmt Wasser in Seen und Pfützen.",
+        "Das Wasser steigt unsichtbar in die Luft."
+      ]
+    },
+    "j44": {
+      "hints": [
+        "Dabei sieht man Blitze und hört Donner.",
+        "Gehe bei diesem Wetter an einen geschützten Ort."
+      ]
+    },
+    "j48": {
+      "hints": [
+        "0°C = Gefrierpunkt. Im Winter wird es kälter.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "j49": {
+      "question": "Viele Früchte werden im Herbst ___.",
+      "hints": [
+        "Äpfel, Birnen, Trauben — wann werden sie gepflückt?",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "k1": {
+      "hints": [
+        "Denke an Geräusche und Musik.",
+        "Das gesuchte Körperteil liegt links und rechts am Kopf."
+      ]
+    },
+    "k3": {
+      "dropZones": [
+        {
+          "id": "augen",
+          "label": "Augen"
+        },
+        {
+          "id": "ohren",
+          "label": "Ohren"
+        },
+        {
+          "id": "nase",
+          "label": "Nase"
+        },
+        {
+          "id": "mund",
+          "label": "Zunge"
+        }
+      ]
+    },
+    "k5": {
+      "hints": [
+        "Diese Flüssigkeit fliesst durch Adern.",
+        "Sie bringt Sauerstoff und Nährstoffe durch den Körper."
+      ]
+    },
+    "k10": {
+      "hints": [
+        "Halte Abstand zu anderen und bedecke Mund und Nase.",
+        "So gelangen weniger Tröpfchen in die Umgebung."
+      ]
+    },
+    "k11": {
+      "hints": [
+        "Denke an Farben, Formen und Licht.",
+        "Das gesuchte Körperteil liegt zweimal im Gesicht."
+      ]
+    },
+    "k17": {
+      "question": "Wann soll man sich die Hände waschen?",
+      "answer": "Vor dem Essen und nach dem Toilettengang",
+      "options": [
+        "Vor dem Essen und nach dem Toilettengang",
+        "Nur einmal im Monat",
+        "Nur wenn jemand zuschaut",
+        "Nie nach dem Spielen draussen"
+      ],
+      "hints": [
+        "Denke an Situationen, in denen Keime an die Hände gelangen.",
+        "Wasser und Seife helfen, die Hände sauber zu machen."
+      ]
+    },
+    "k18": {
+      "hints": [
+        "Dabei ist die Körpertemperatur deutlich höher als gewöhnlich.",
+        "Ein Erwachsener kann mit einem Thermometer nachmessen."
+      ]
+    },
+    "k20": {
+      "question": "Das Herz schlägt auch weiter, wenn wir ___.",
+      "answer": "schlafen",
+      "hints": [
+        "Dieses Organ arbeitet Tag und Nacht.",
+        "Auch in der Ruhe braucht der Körper Blut und Sauerstoff."
+      ]
+    },
+    "k25": {
+      "question": "Warum muss der Körper regelmässig Wasser bekommen?",
+      "answer": "Damit Organe und Kreislauf gut arbeiten",
+      "options": [
+        "Damit Organe und Kreislauf gut arbeiten",
+        "Damit man nie mehr schlafen muss",
+        "Damit die Haut blau wird",
+        "Damit Zähne schneller wachsen"
+      ],
+      "hints": [
+        "Wasser wird im ganzen Körper gebraucht.",
+        "Wir verlieren Wasser beim Atmen, Schwitzen und auf der Toilette."
+      ]
+    },
+    "k26": {
+      "question": "Bei Sport oder Hitze braucht der Körper ___ Wasser als sonst.",
+      "answer": "mehr",
+      "hints": [
+        "Beim Schwitzen verliert der Körper Flüssigkeit.",
+        "Trinke regelmässig, bevor du starken Durst bekommst."
+      ]
+    },
+    "k27": {
+      "question": "Welches Zeichen passt zu einer Erkältung?",
+      "answer": "Laufende Nase und Husten",
+      "options": [
+        "Laufende Nase und Husten",
+        "Ein gebrochener Bleistift",
+        "Nasse Schuhe",
+        "Ein leerer Teller"
+      ],
+      "hints": [
+        "Denke an Nase, Hals und Atemwege.",
+        "Die Beschwerden beginnen oft mit Schnupfen oder Halsweh."
+      ]
+    },
+    "k28": {
+      "question": "Beim Schlafen erholt sich der ___.",
+      "hints": [
+        "Ruhe hilft Gehirn, Muskeln und Abwehr.",
+        "Nach genügend Schlaf fühlt man sich oft wieder wach."
+      ]
+    },
+    "k34": {
+      "question": "Zähne soll man ___-mal täglich putzen."
+    },
+    "k35": {
+      "question": "Was kann passieren, wenn man sehr oft viel Zucker isst?",
+      "answer": "Die Zähne können Schaden nehmen",
+      "options": [
+        "Die Zähne können Schaden nehmen",
+        "Die Ohren hören besser",
+        "Knochen werden sofort länger",
+        "Man braucht keinen Schlaf mehr"
+      ],
+      "hints": [
+        "Bakterien im Mund nutzen Zucker.",
+        "Regelmässiges Zähneputzen und wenig Süsses schützen die Zähne."
+      ]
+    },
+    "k36": {
+      "hints": [
+        "Es schlägt etwa 70 Mal pro Minute.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "k37": {
+      "question": "Die ___ filtern Abfallstoffe aus dem Blut.",
+      "answer": "Nieren",
+      "hints": [
+        "Von diesen Organen haben die meisten Menschen zwei.",
+        "Sie bilden zusammen mit den Harnwegen ein Reinigungssystem."
+      ]
+    },
+    "k41": {
+      "hints": [
+        "Sie ziehen die Knochen.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "k44": {
+      "hints": [
+        "Das Essen landet nach dem Schlucken dort.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "k46": {
+      "hints": [
+        "Es bedeckt den gesamten Körper von aussen.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "k47": {
+      "hints": [
+        "Der Blutfarbstoff Hämoglobin gibt die Farbe.",
+        "Schau auf einen kleinen Blutstropfen bei einer Schürfwunde."
+      ]
+    },
+    "p4": {
+      "question": "Was macht ein Laubbaum im Herbst?",
+      "options": [
+        "Er verliert seine Blätter",
+        "Er bekommt sofort neue Blüten",
+        "Er wird zu einem Nadelbaum",
+        "Er wächst nur noch unter der Erde"
+      ],
+      "hints": [
+        "Die Blätter verfärben sich zuerst.",
+        "Im Winter sind viele Laubbäume kahl."
+      ]
+    },
+    "p6": {
+      "question": "Was braucht eine grüne Pflanze zum Wachsen?",
+      "answer": "Wasser, Licht und Luft",
+      "options": [
+        "Wasser, Licht und Luft",
+        "Nur Dunkelheit",
+        "Milch und Zucker",
+        "Nur einen farbigen Topf"
+      ],
+      "hints": [
+        "Denke an eine Pflanze am Fenster.",
+        "Auch die Blätter tauschen Gase mit der Luft aus."
+      ]
+    },
+    "p7": {
+      "hints": [
+        "Dieser Teil wächst meist unter der Erde.",
+        "Er hält die Pflanze fest und nimmt Wasser auf."
+      ]
+    },
+    "p8": {
+      "answer": "Ein Baum mit flachen Blättern",
+      "options": [
+        "Ein Baum mit flachen Blättern",
+        "Ein Baum ohne Wurzeln",
+        "Ein Baum aus Kunststoff",
+        "Eine Blume ohne Stängel"
+      ],
+      "hints": [
+        "Eiche, Ahorn und Buche gehören dazu.",
+        "Viele dieser Bäume verlieren im Herbst ihre Blätter."
+      ]
+    },
+    "p11": {
+      "question": "Eine Tanne behält ihre Nadeln meistens auch ___.",
+      "hints": [
+        "Dieser Baum bleibt das ganze Jahr grün.",
+        "Vergleiche die Tanne mit einem Laubbaum."
+      ]
+    },
+    "p14": {
+      "question": "Woran erkennt man eine Sonnenblume?",
+      "answer": "An ihrer grossen gelben Blüte",
+      "options": [
+        "An ihrer grossen gelben Blüte",
+        "An blauen Nadeln",
+        "An einem Stamm aus Stein",
+        "An Blättern ohne Stängel"
+      ],
+      "hints": [
+        "Denke an Farbe und Form der Blüte.",
+        "Die Mitte ist dunkel und von gelben Blütenblättern umgeben."
+      ]
+    },
+    "p17": {
+      "question": "Was geschieht in grünen Blättern mit Hilfe von Licht?",
+      "answer": "Die Pflanze stellt Zucker als Nahrung her",
+      "options": [
+        "Die Pflanze stellt Zucker als Nahrung her",
+        "Die Pflanze verwandelt sich in ein Tier",
+        "Die Wurzeln hören auf zu wachsen",
+        "Das Wasser wird zu Sand"
+      ],
+      "hints": [
+        "Blätter nutzen Licht, Wasser und Luft.",
+        "Dieser Vorgang heisst Fotosynthese."
+      ]
+    },
+    "p19": {
+      "question": "Welches Gemüse kannst du essen?",
+      "options": [
+        "Brokkoli",
+        "Efeu",
+        "Fingerhut",
+        "Farn"
+      ],
+      "hints": [
+        "Denke an Gemüse auf einem Teller.",
+        "Die anderen Pflanzen sind keine üblichen Lebensmittel."
+      ]
+    },
+    "p20": {
+      "question": "Mit Duft und Farbe lockt eine Blüte oft ___ an.",
+      "hints": [
+        "Bienen und Schmetterlinge besuchen Blüten.",
+        "Dabei kann Blütenstaub weitergetragen werden."
+      ]
+    },
+    "p21": {
+      "question": "Was zeigt ein Jahresring in einem Baumstamm?",
+      "options": [
+        "Tannen behalten ihre Nadeln, Laubbäume verlieren ihre Blätter",
+        "Ein Ring, der jedes Jahr Wachstum zeigt — so kennt man das Alter",
+        "Sie produzieren Nahrung mit Hilfe von Sonnenlicht",
+        "Die Pflanze stellt Zucker als Nahrung her"
+      ],
+      "hints": [
+        "In jedem Wachstumsjahr kommt meist ein Ring dazu.",
+        "An einem gefällten Stamm kann man die Ringe zählen."
+      ]
+    },
+    "p25": {
+      "options": [
+        "Sie produzieren Nahrung mit Hilfe von Sonnenlicht",
+        "Die Pflanze stellt Zucker als Nahrung her",
+        "Weder Pflanze noch Tier — eine eigene Gruppe",
+        "Verrottete Pflanzenreste, die den Boden düngen"
+      ]
+    },
+    "p26": {
+      "question": "Schneeglöckchen und Krokusse blühen oft im ___.",
+      "hints": [
+        "Sie gehören zu den ersten Blumen nach dem Winter.",
+        "Denke an die Jahreszeit, in der es wieder wärmer wird."
+      ]
+    },
+    "p27": {
+      "question": "Welcher Baum trägt Äpfel?",
+      "options": [
+        "Apfelbaum",
+        "Tanne",
+        "Birke",
+        "Fichte"
+      ],
+      "hints": [
+        "Der Name der Frucht steckt im Namen des Baums.",
+        "Im Herbst hängen daran oft runde Früchte."
+      ]
+    },
+    "p31": {
+      "options": [
+        "Sie produzieren Nahrung mit Hilfe von Sonnenlicht",
+        "Tannen behalten ihre Nadeln, Laubbäume verlieren ihre Blätter",
+        "Die Pflanze stellt Zucker als Nahrung her",
+        "Weder Pflanze noch Tier — eine eigene Gruppe"
+      ]
+    },
+    "p34": {
+      "hints": [
+        "Unbekannte Beeren und Blätter darfst du nicht probieren.",
+        "Frage immer einen Erwachsenen, bevor du eine unbekannte Pflanze anfasst oder isst."
+      ]
+    },
+    "p37": {
+      "question": "Durch kleine Öffnungen in den ___ tauscht eine Pflanze Gase mit der Luft aus.",
+      "answer": "Blättern",
+      "hints": [
+        "Der grüne Pflanzenteil fängt auch Licht ein.",
+        "Die Öffnungen sind so klein, dass man sie kaum sieht."
+      ]
+    },
+    "p38": {
+      "hints": [
+        "Zuerst kommen eine kleine Wurzel und erste Blätter.",
+        "Denke an den Beginn des Pflanzenwachstums."
+      ],
+      "question": "Eine junge Pflanze, die aus einem Samen wächst, nennt man ___.",
+      "answer": "Keimling"
+    },
+    "p45": {
+      "hints": [
+        "Manche Samen haben Flügel oder Schirmchen.",
+        "Luftbewegung kann sie weit von der Mutterpflanze tragen."
+      ]
+    },
+    "p47": {
+      "question": "Ein Kaktus wächst in der ___, wo es wenig Wasser gibt."
+    },
+    "p50": {
+      "question": "Champignons und Fliegenpilze gehören zu den ___.",
+      "hints": [
+        "Sie sind weder Tiere noch Pflanzen.",
+        "Denke an die eigene Gruppe dieser Lebewesen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s12": {
+      "question": "Blinde Menschen sehen wenig oder nichts. Sie können ihre anderen Sinne besonders gut ___.",
+      "answer": "nutzen",
+      "hints": [
+        "Übung und Hilfsmittel unterstützen die Orientierung.",
+        "Denke an Hören, Tasten und Riechen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s15": {
+      "question": "Mit welchem Sinn erkennst du, ob eine Oberfläche glatt oder rau ist?",
+      "hints": [
+        "Du kannst die Augen dabei schliessen.",
+        "Die Haut an den Fingern nimmt die Oberfläche wahr."
+      ]
+    },
+    "s15b": {
+      "hints": [
+        "Das Ohr ist der Hör-Sinn!",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s18": {
+      "hints": [
+        "Die Haut nimmt Wärme wahr.",
+        "Dieser Sinn kann den Körper vor Verbrennungen warnen."
+      ],
+      "question": "Welcher Sinn hilft dir, einen heissen Becher rechtzeitig loszulassen?",
+      "answer": "Tasten",
+      "options": [
+        "Tasten",
+        "Schmecken",
+        "Riechen",
+        "Sehen"
+      ]
+    },
+    "g1-science-fuenf-sinne-s21": {
+      "question": "Bei einer Erkältung riecht man oft nur ___.",
+      "answer": "wenig",
+      "hints": [
+        "Eine verstopfte Nase erschwert das Riechen.",
+        "Vergleiche den Geruchssinn vor und während eines Schnupfens."
+      ],
+      "altAnswers": [
+        "kaum etwas"
+      ]
+    },
+    "g1-science-fuenf-sinne-s22": {
+      "question": "Welcher Sinn warnt dich vor einer lauten Autohupe, auch wenn du nicht hinschaust?",
+      "answer": "Hören",
+      "options": [
+        "Hören",
+        "Sehen",
+        "Schmecken",
+        "Lesen"
+      ],
+      "hints": [
+        "Ein Signal oder Ruf erreicht dich auch von hinten.",
+        "Denke an eine Klingel oder ein hupendes Fahrzeug."
+      ]
+    },
+    "g1-science-fuenf-sinne-s26": {
+      "question": "Warum kneifen wir bei sehr hellem Licht oft die Augen zu?",
+      "answer": "Um weniger starkes Licht ins Auge zu lassen",
+      "options": [
+        "Um weniger starkes Licht ins Auge zu lassen",
+        "Damit die Ohren besser hören",
+        "Damit Farben verschwinden",
+        "Weil Augen nur nachts arbeiten"
+      ],
+      "hints": [
+        "Sehr helles Licht kann unangenehm sein.",
+        "Die Lider schützen das Auge und verringern den Lichteinfall."
+      ]
+    },
+    "g1-science-fuenf-sinne-s27": {
+      "question": "Schmerz warnt uns davor, dass etwas dem Körper ___.",
+      "answer": "schadet",
+      "hints": [
+        "Dieses Gefühl ist ein Warnsignal.",
+        "Es hilft uns, eine gefährliche Handlung zu stoppen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s29": {
+      "question": "Blindheit bedeutet, dass man sehr wenig oder gar nicht ___ kann.",
+      "hints": [
+        "Es gibt unterschiedliche Formen von Blindheit.",
+        "Der betroffene Sinn nimmt Licht und Bilder eingeschränkt wahr."
+      ]
+    },
+    "g1-science-fuenf-sinne-s32": {
+      "question": "Welcher Sinn weckt dich oft bei einem lauten Wecker?",
+      "options": [
+        "Hören",
+        "Schmecken",
+        "Riechen",
+        "Tasten"
+      ],
+      "hints": [
+        "Der Wecker erzeugt ein Geräusch.",
+        "Auch im Schlaf reagiert das Gehirn auf starke Töne."
+      ]
+    },
+    "g1-science-fuenf-sinne-s35": {
+      "question": "Katzen sehen bei wenig Licht besser als Menschen, zum Beispiel ___.",
+      "answer": "nachts",
+      "hints": [
+        "Ihre Augen nutzen schwaches Licht besonders gut.",
+        "Denke an die dunkle Zeit zwischen Abend und Morgen."
+      ],
+      "altAnswers": [
+        "in der Nacht"
+      ]
+    },
+    "g1-science-fuenf-sinne-s38": {
+      "hints": [
+        "Blumen, Parfüm — die Nase nimmt es wahr.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s41": {
+      "hints": [
+        "Was sehen wir ausser Formen?",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s42": {
+      "hints": [
+        "Schall entsteht durch Vibrationen.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s43": {
+      "question": "Wer blind ist, kann sehr wenig oder gar nicht ___.",
+      "hints": [
+        "Blindheit kann unterschiedlich stark sein.",
+        "Der betroffene Sinn arbeitet mit den Augen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s44": {
+      "question": "Wer gehörlos ist, kann wenig oder gar nicht ___.",
+      "hints": [
+        "Gehörlosigkeit kann unterschiedlich sein.",
+        "Gebärdensprache ermöglicht Verständigung ohne gesprochene Töne."
+      ]
+    },
+    "g1-science-fuenf-sinne-s45": {
+      "question": "Sonnenbrillen schützen die Augen vor starkem Licht und ___-Strahlen.",
+      "answer": "UV",
+      "hints": [
+        "Diese unsichtbaren Strahlen kommen von der Sonne.",
+        "Eine gute Sonnenbrille filtert sie."
+      ]
+    },
+    "g1-science-fuenf-sinne-s46": {
+      "hints": [
+        "Im Dunkeln können wir nichts erkennen.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "g1-science-fuenf-sinne-s47": {
+      "question": "Zu süss, sauer, salzig, bitter und umami gehören ___ Grundgeschmäcker.",
+      "answer": "5",
+      "hints": [
+        "Zähle die aufgezählten Geschmäcker.",
+        "Umami beschreibt einen herzhaften Geschmack."
+      ],
+      "altAnswers": [
+        "fünf"
+      ]
+    },
+    "g1-science-fuenf-sinne-s49": {
+      "hints": [
+        "Wenn wir uns stossen, spüren wir etwas.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg1": {
+      "question": "Welche Aussage über Familien stimmt?",
+      "answer": "Familien können unterschiedlich aussehen und füreinander sorgen",
+      "options": [
+        "Familien können unterschiedlich aussehen und füreinander sorgen",
+        "Zu jeder Familie gehören genau zwei Eltern",
+        "Alle Familien wohnen im selben Haus",
+        "Nur Erwachsene können Familie sein"
+      ],
+      "hints": [
+        "Denke an verschiedene Familien in deinem Umfeld.",
+        "Wichtig sind Verbundenheit und Fürsorge, nicht eine einzige Form."
+      ]
+    },
+    "fg4": {
+      "dragItems": [
+        {
+          "id": "helfen",
+          "label": "🤝 Helfen"
+        },
+        {
+          "id": "teilen",
+          "label": "🎁 Teilen"
+        },
+        {
+          "id": "ausschliessen",
+          "label": "🚫 Absichtlich ausschliessen"
+        },
+        {
+          "id": "zuhoeren",
+          "label": "👂 Zuhören"
+        },
+        {
+          "id": "beleidigen",
+          "label": "😡 Beleidigen"
+        },
+        {
+          "id": "respekt",
+          "label": "❤️ Respekt"
+        }
+      ],
+      "dropAnswers": {
+        "helfen": "gut",
+        "teilen": "gut",
+        "ausschliessen": "schlecht",
+        "zuhoeren": "gut",
+        "beleidigen": "schlecht",
+        "respekt": "gut"
+      }
+    },
+    "fg8": {
+      "question": "Das Kind deiner Tante oder deines Onkels ist dein Cousin oder deine ___.",
+      "answer": "Cousine",
+      "hints": [
+        "Diese Person gehört zur gleichen Generation wie du.",
+        "Das Wort bezeichnet die weibliche Form von Cousin."
+      ]
+    },
+    "fg14": {
+      "question": "Die Schweiz hat ___ Landessprachen.",
+      "hints": [
+        "Dazu gehören Deutsch, Französisch, Italienisch und Rätoromanisch.",
+        "Zähle die genannten Sprachen."
+      ]
+    },
+    "fg17": {
+      "question": "Was kann eine Familie sein?",
+      "answer": "Menschen, die verbunden sind und füreinander sorgen",
+      "options": [
+        "Menschen, die verbunden sind und füreinander sorgen",
+        "Nur Menschen mit demselben Nachnamen",
+        "Immer genau vier Personen",
+        "Nur Menschen im selben Haus"
+      ],
+      "hints": [
+        "Familien können sehr unterschiedlich zusammengesetzt sein.",
+        "Fürsorge und Verbundenheit sind wichtiger als eine feste Form."
+      ]
+    },
+    "fg18": {
+      "question": "Wie kann eine Klasse gemeinsam entscheiden?",
+      "answer": "Alle hören einander zu und stimmen ab",
+      "options": [
+        "Alle hören einander zu und stimmen ab",
+        "Die lauteste Person entscheidet immer",
+        "Niemand darf seine Meinung sagen",
+        "Die Entscheidung wird ausgelost, ohne darüber zu sprechen"
+      ],
+      "hints": [
+        "Jede Person soll ihre Sicht sagen dürfen.",
+        "Eine Abstimmung kann nach einem Gespräch helfen."
+      ]
+    },
+    "fg20": {
+      "hints": [
+        "Ein Brauch wird zu bestimmten Zeiten wiederholt.",
+        "Denke an Kerzen, Lieder oder besondere Handlungen bei einem Fest."
+      ]
+    },
+    "fg21": {
+      "hints": [
+        "Niemand steht über dem Gesetz!",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg25": {
+      "question": "Wenn eine Klasse gemeinsam ihre Stimmen zählt, macht sie eine ___.",
+      "answer": "Abstimmung",
+      "hints": [
+        "Vorher können alle Vorschläge besprochen werden.",
+        "Am Ende werden die Stimmen gezählt."
+      ]
+    },
+    "fg27": {
+      "hints": [
+        "An diesem Tag wird die Schweiz gefeiert.",
+        "Er liegt mitten im Sommer."
+      ]
+    },
+    "fg29": {
+      "question": "Das Recht auf Bildung gehört zu den ___.",
+      "answer": "Kinderrechten",
+      "hints": [
+        "Diese Rechte gelten für alle Kinder.",
+        "Dazu gehören auch Schutz, Gesundheit und Mitbestimmung."
+      ],
+      "altAnswers": [
+        "Menschenrechten"
+      ]
+    },
+    "fg31": {
+      "question": "Menschen, die freiwillig anderen helfen, nennt man ___.",
+      "answer": "Freiwillige",
+      "hints": [
+        "Sie helfen ohne Zwang und oft ohne Lohn.",
+        "Denke an Unterstützung in einem Verein oder Quartier."
+      ],
+      "altAnswers": [
+        "Ehrenamtliche"
+      ]
+    },
+    "fg34": {
+      "question": "Wofür wird gemeinsames Geld von Gemeinde und Kanton verwendet?",
+      "answer": "Zum Beispiel für Schulen, Strassen und Spitäler",
+      "options": [
+        "Zum Beispiel für Schulen, Strassen und Spitäler",
+        "Familien können unterschiedlich aussehen und füreinander sorgen",
+        "Menschen, die verbunden sind und füreinander sorgen",
+        "Alle hören einander zu und stimmen ab"
+      ],
+      "hints": [
+        "Denke an Einrichtungen, die viele Menschen nutzen.",
+        "Steuern helfen, gemeinsame Aufgaben zu bezahlen."
+      ]
+    },
+    "fg37": {
+      "hints": [
+        "Die Kinder in deiner Klasse.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg38": {
+      "question": "Verbindliche Regeln eines Landes heissen ___.",
+      "hints": [
+        "Sie werden von staatlichen Stellen beschlossen.",
+        "Sie gelten nicht nur in einer einzelnen Familie oder Klasse."
+      ]
+    },
+    "fg40": {
+      "hints": [
+        "Was macht einen guten Freund aus?",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg41": {
+      "hints": [
+        "Er wohnt im selben Haus oder direkt daneben.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg42": {
+      "hints": [
+        "Wir behandeln andere so, wie wir behandelt werden wollen.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg43": {
+      "hints": [
+        "Reden hilft mehr als streiten.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg44": {
+      "hints": [
+        "Was machen gute Freunde?",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg46": {
+      "hints": [
+        "Sportverein, Musikverein — was haben die Mitglieder gemeinsam?",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "fg48": {
+      "question": "Familien können zusammen oder getrennt wohnen und trotzdem füreinander ___ sein.",
+      "answer": "da",
+      "hints": [
+        "Nähe zeigt sich auch durch Hilfe und Kontakt.",
+        "Denke an Menschen, die sich umeinander kümmern."
+      ]
+    },
+    "vs2": {
+      "hints": [
+        "In der Schweiz erkennst du ihn an gelben Streifen auf der Fahrbahn.",
+        "Halte davor an und prüfe beide Richtungen."
+      ]
+    },
+    "vs5": {
+      "answer": "Am Rand anhalten und in beide Richtungen schauen",
+      "options": [
+        "Am Rand anhalten und in beide Richtungen schauen",
+        "Zwischen parkierten Autos losrennen",
+        "Auf das Handy schauen",
+        "Mit geschlossenen Augen weitergehen"
+      ],
+      "hints": [
+        "Bleibe stehen, bevor du die Fahrbahn betrittst.",
+        "Achte auf Fahrzeuge aus beiden Richtungen."
+      ]
+    },
+    "vs8": {
+      "question": "Beim Velofahren schützt ein ___ den Kopf.",
+      "hints": [
+        "Er kann Verletzungen bei einem Sturz vermindern.",
+        "Er muss gut passen und geschlossen sein."
+      ]
+    },
+    "vs11": {
+      "question": "Was ist ein Trottoir?",
+      "options": [
+        "Eine gefährliche Situation, die sofortige Hilfe braucht",
+        "Der Weg für Fussgänger neben der Strasse",
+        "Am Rand anhalten und in beide Richtungen schauen",
+        "Damit Kinder sicher zur Schule kommen"
+      ]
+    },
+    "vs12": {
+      "question": "Wenn es keinen Veloweg oder Velostreifen gibt, dürfen Kinder bis 12 Jahre auf dem ___ Velo fahren.",
+      "hints": [
+        "Auf der Fahrbahn wäre der Weg dann gefährlicher.",
+        "Fahre dort langsam und nimm Rücksicht auf Menschen zu Fuss."
+      ]
+    },
+    "vs13": {
+      "question": "Was macht man direkt nach dem Einsteigen in ein Auto?"
+    },
+    "vs15": {
+      "answer": "Einer erwachsenen Person Bescheid sagen",
+      "options": [
+        "Einer erwachsenen Person Bescheid sagen",
+        "Die Verletzung geheim halten",
+        "Alleine weglaufen",
+        "So tun, als sei nichts passiert"
+      ],
+      "hints": [
+        "Hole Hilfe, auch wenn du unsicher bist.",
+        "Eine erwachsene Person kann die Verletzung ansehen und richtig reagieren."
+      ]
+    },
+    "vs18": {
+      "question": "Wozu dient ein Kindersitz im Auto?",
+      "answer": "Er schützt Kinder bei starkem Bremsen oder einem Unfall",
+      "options": [
+        "Er schützt Kinder bei starkem Bremsen oder einem Unfall",
+        "Er macht das Auto schneller",
+        "Er ersetzt den Sicherheitsgurt für Erwachsene",
+        "Er zeigt die Fahrtrichtung"
+      ],
+      "hints": [
+        "Der Sitz passt Gurt und Schutz an die Körpergrösse an.",
+        "Kinder müssen darin richtig angeschnallt sein."
+      ]
+    },
+    "vs21": {
+      "question": "Eine grüne Fussgängerampel zeigt meist eine ___ Person.",
+      "answer": "gehende",
+      "hints": [
+        "Die Figur bewegt sich im Bild nach vorn.",
+        "Trotz Grün prüfst du, ob Fahrzeuge wirklich anhalten."
+      ],
+      "altAnswers": [
+        "laufende"
+      ]
+    },
+    "vs24": {
+      "answer": "Rettungsdienst / medizinische Notfälle",
+      "options": [
+        "Polizei",
+        "Feuerwehr",
+        "Rettungsdienst / medizinische Notfälle",
+        "Gemeindeverwaltung"
+      ],
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "vs26": {
+      "question": "Was tust du, wenn du ein Feuer bemerkst?",
+      "answer": "Abstand halten, Erwachsene warnen und 118 rufen lassen",
+      "options": [
+        "Abstand halten, Erwachsene warnen und 118 rufen lassen",
+        "Dich im Rauch verstecken",
+        "Alleine ins Feuer laufen",
+        "Das Feuer geheim halten"
+      ],
+      "hints": [
+        "Bringe zuerst dich selbst aus dem Gefahrenbereich.",
+        "Warne andere und rufe die Feuerwehr nur von einem sicheren Ort aus."
+      ]
+    },
+    "vs28": {
+      "options": [
+        "Eine Person, die Kindern beim sicheren Überqueren der Strasse hilft",
+        "Ein besonderes Spielzeug",
+        "Eine Person, die Autos repariert",
+        "Ein Velorennen"
+      ],
+      "answer": "Eine Person, die Kindern beim sicheren Überqueren der Strasse hilft"
+    },
+    "vs32": {
+      "question": "Wie wartest du sicher auf den Bus?",
+      "answer": "Mit Abstand zum Fahrbahnrand",
+      "options": [
+        "Mit Abstand zum Fahrbahnrand",
+        "Direkt auf der Fahrbahn",
+        "Hinter dem Bus versteckt",
+        "Mit Rennen und Schubsen"
+      ],
+      "hints": [
+        "Bleibe ruhig an der Haltestelle.",
+        "Gehe erst zum Bus, wenn er steht und die Türen offen sind."
+      ]
+    },
+    "vs34": {
+      "question": "Was macht ein Reflektor am Velo?",
+      "answer": "Er wirft Licht zurück und macht das Velo sichtbar",
+      "options": [
+        "Er wirft Licht zurück und macht das Velo sichtbar",
+        "Er bremst das Velo automatisch",
+        "Er ersetzt beide Lampen",
+        "Er zeigt die Uhrzeit"
+      ],
+      "hints": [
+        "Scheinwerferlicht trifft auf seine Oberfläche.",
+        "So erkennen andere das Velo im Dunkeln besser."
+      ]
+    },
+    "vs35": {
+      "question": "Menschen zu Fuss gehen auf dem ___, nicht auf der Fahrbahn.",
+      "answer": "Trottoir",
+      "hints": [
+        "Suche im Auftrag nach der beschriebenen Ursache, Wirkung oder beobachtbaren Eigenschaft.",
+        "Prüfe, ob deine Wahl genau zum Vorgang in Natur, Alltag oder Gesellschaft passt."
+      ]
+    },
+    "vs36": {
+      "question": "An der Ampel zeigt ___ an, dass man stehen bleiben muss."
+    },
+    "vs37": {
+      "hints": [
+        "Schwarz-weiss gestreift wie ein Tier.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "vs38": {
+      "question": "An einer Kreuzung ohne Schilder oder Ampel gilt: Rechts vor ___.",
+      "answer": "links",
+      "hints": [
+        "Prüfe zuerst, ob ein Fahrzeug von rechts kommt.",
+        "Schilder und Ampeln können diese Regel ändern."
+      ]
+    },
+    "vs39": {
+      "hints": [
+        "Was ist das Wichtigste zu schützen?",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "vs40": {
+      "hints": [
+        "Bei einem Unfall hält er uns fest.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "vs41": {
+      "hints": [
+        "Das Schild hat acht Ecken und eine weisse Schrift.",
+        "Seine Farbe signalisiert deutliches Anhalten."
+      ]
+    },
+    "vs42": {
+      "hints": [
+        "Damit Autofahrer uns sehen.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "vs43": {
+      "hints": [
+        "Nicht die Strasse — das Trottoir!",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "vs44": {
+      "question": "Bei einem medizinischen Notfall ruft man in der Schweiz ___.",
+      "hints": [
+        "Diese Nummer verbindet mit dem Rettungsdienst.",
+        "Nenne ruhig Ort, Situation und Anzahl verletzter Personen."
+      ]
+    },
+    "vs46": {
+      "hints": [
+        "Nicht auf der Strasse laufen!",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "vs47": {
+      "hints": [
+        "Damit man im Dunkeln gesehen wird.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "vs48": {
+      "question": "Am Fussgängerstreifen müssen Fahrzeuge Menschen zu Fuss den ___ lassen.",
+      "hints": [
+        "Fahrzeuge müssen rechtzeitig anhalten können.",
+        "Betritt die Fahrbahn trotzdem nie überraschend."
+      ]
+    },
+    "vs49": {
+      "question": "Gelb an der Fahrzeugampel bedeutet: Wenn sicher möglich, ___.",
+      "answer": "anhalten",
+      "hints": [
+        "Die Ampel wechselt gleich auf Rot.",
+        "Starkes Bremsen kann gefährlich sein; achte auf die Situation."
+      ]
+    },
+    "vs50": {
+      "question": "Ohne Veloweg oder Velostreifen ist das Fahren auf dem Trottoir für Kinder bis 12 Jahre ___.",
+      "hints": [
+        "Auf dem Trottoir haben Menschen zu Fuss Vorrang.",
+        "Fahre langsam und rücksichtsvoll."
+      ]
+    },
+    "u17": {
+      "question": "Wie spät ist es, wenn der lange Zeiger auf 6 und der kurze zwischen 3 und 4 steht?"
+    },
+    "u26": {
+      "question": "«Viertel nach sechs» bedeutet ___ Uhr.",
+      "hints": [
+        "Eine Viertelstunde sind 15 Minuten.",
+        "Beginne bei sechs Uhr und gehe 15 Minuten weiter."
+      ],
+      "altAnswers": [
+        "06:15"
+      ]
+    },
+    "u36": {
+      "question": "Die Zeiger einer Uhr zeigen die ___.",
+      "hints": [
+        "Der kurze Zeiger steht für Stunden, der lange für Minuten.",
+        "Zusammen zeigen beide, wie spät es ist."
+      ]
+    },
+    "u37": {
+      "question": "Eine Uhr hilft uns, einen Zeitpunkt zu ___.",
+      "answer": "bestimmen",
+      "hints": [
+        "Wir lesen dafür Stunden und Minuten ab.",
+        "So wissen wir zum Beispiel, wann die Schule beginnt."
+      ]
+    },
+    "u49": {
+      "hints": [
+        "12:00 = Mittag. Danach?",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm2": {
+      "hints": [
+        "Sprich die Wochentage ab Montag der Reihe nach.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wm3": {
+      "hints": [
+        "Prüfe jede Zuordnung nochmals anhand der Aufgabe.",
+        "Das Wochenende sind Samstag und Sonntag."
+      ]
+    },
+    "wm4": {
+      "hints": [
+        "Diese beiden Tage folgen direkt auf Freitag.",
+        "Viele Schulen haben an diesen Tagen keinen Unterricht."
+      ]
+    },
+    "wm17": {
+      "question": "Ostern liegt immer im ___.",
+      "answer": "Frühling",
+      "hints": [
+        "Das Fest kann im März oder April liegen.",
+        "Beide Monate gehören zu derselben Jahreszeit."
+      ]
+    },
+    "wm22": {
+      "question": "Welche Liste enthält nur Monate mit 31 Tagen?",
+      "answer": "Januar, März, Mai und Juli",
+      "options": [
+        "Januar, März, Mai und Juli",
+        "April, Juni, September und November",
+        "Februar, April, Juni und September",
+        "Juni, Juli, September und November"
+      ],
+      "hints": [
+        "Einige Monate haben 30, einer hat 28 oder 29 Tage.",
+        "Nutze einen Kalender und prüfe jeden Monat der Liste."
+      ]
+    },
+    "wm23": {
+      "question": "Ein normales Jahr hat 52 ganze Wochen und ___ zusätzlichen Tag.",
+      "answer": "1",
+      "hints": [
+        "52 Wochen sind 364 Tage.",
+        "Vergleiche das mit den 365 Tagen eines normalen Jahres."
+      ],
+      "altAnswers": [
+        "einen"
+      ]
+    },
+    "wm33": {
+      "question": "Jeder Monat hat mindestens ___ Tage.",
+      "answer": "28",
+      "altAnswers": [
+        "achtundzwanzig"
+      ]
+    },
+    "wm34": {
+      "question": "Welche Monate gehören zum Winter?",
+      "answer": "Dezember, Januar und Februar",
+      "options": [
+        "Dezember, Januar und Februar",
+        "März, April und Mai",
+        "Juni, Juli und August",
+        "September, Oktober und November"
+      ],
+      "hints": [
+        "Beginne mit dem Monat, in dem Weihnachten liegt.",
+        "Die Jahreszeit endet vor dem März."
+      ]
+    },
+    "wm36": {
+      "hints": [
+        "Er kommt nach Silvester.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm37": {
+      "hints": [
+        "Weihnachten ist in diesem Monat.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm38": {
+      "question": "Der Weihnachtstag ist am 25. ___.",
+      "hints": [
+        "Welcher Monat hat Weihnachten?",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm39": {
+      "hints": [
+        "März ist der dritte Monat.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm40": {
+      "hints": [
+        "Er hat nur 28 oder 29 Tage.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm41": {
+      "hints": [
+        "An diesen Tagen gibt es keine Schule.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm42": {
+      "question": "Montag bis Freitag sind fünf ___.",
+      "answer": "Wochentage",
+      "hints": [
+        "Zähle die Tage vom Wochenanfang bis vor Samstag.",
+        "Der Begriff beschreibt alle Tage einer Woche."
+      ]
+    },
+    "wm43": {
+      "hints": [
+        "Nach dem Wochenende.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm44": {
+      "hints": [
+        "Nach Samstag.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm45": {
+      "question": "Zum Winter gehören Dezember, Januar und ___.",
+      "answer": "Februar",
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Danach beginnt im März der Frühling."
+      ]
+    },
+    "wm46": {
+      "question": "Frühlingsmonate sind März, April und ___.",
+      "hints": [
+        "Der Frühling hat drei Monate.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm47": {
+      "hints": [
+        "Der Sommer hat drei Monate.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "wm48": {
+      "hints": [
+        "Der Herbst hat drei Monate.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "ph3": {
+      "hints": [
+        "Nicht nur das Gewicht entscheidet, sondern auch Material und Form.",
+        "Prüfe, welche Gegenstände dichter als Wasser sind."
+      ]
+    },
+    "ph9": {
+      "hints": [
+        "Material und Form entscheiden, ob etwas schwimmt.",
+        "Ein trockenes Holzstück bleibt meist an der Oberfläche."
+      ]
+    },
+    "ph11": {
+      "hints": [
+        "Drücken und Ziehen sind Kräfte.",
+        "Lies den vollständigen Satz mit deiner Lösung und prüfe, ob Sinn und Form passen."
+      ]
+    },
+    "ph12": {
+      "hints": [
+        "Material und Form beeinflussen das Sinken.",
+        "Ein kompakter Stein ist dichter als Wasser."
+      ]
+    },
+    "ph13": {
+      "question": "Auf demselben Boden rollt ein Ball meist weiter, wenn man ihn ___ stösst.",
+      "hints": [
+        "Vergleiche einen leichten mit einem kräftigen Stoss.",
+        "Mehr Kraft kann dem Ball am Anfang mehr Geschwindigkeit geben."
+      ],
+      "answer": "stärker",
+      "altAnswers": [
+        "fester",
+        "kräftiger"
+      ]
+    },
+    "ph14": {
+      "question": "Wozu kann ein Hebel helfen?",
+      "answer": "Eine schwere Last mit weniger Kraft anzuheben",
+      "options": [
+        "Eine schwere Last mit weniger Kraft anzuheben",
+        "Licht in Wasser zu verwandeln",
+        "Einen Magnetpol zu löschen",
+        "Die Zeit anzuhalten"
+      ],
+      "hints": [
+        "Eine Wippe ist ein Beispiel für einen Hebel.",
+        "Ein längerer Hebelarm kann das Heben erleichtern."
+      ]
+    },
+    "ph18": {
+      "answer": "Eine geneigte Fläche wie eine Rampe",
+      "options": [
+        "Eine geneigte Fläche wie eine Rampe",
+        "Ein runder Magnet",
+        "Eine Uhr ohne Zeiger",
+        "Ein Behälter für Wasser"
+      ],
+      "hints": [
+        "Über diese Fläche kann man etwas nach oben rollen oder schieben.",
+        "Der Weg wird länger, dafür braucht man weniger Kraft."
+      ]
+    },
+    "ph20": {
+      "hints": [
+        "Vergleiche einen sanften und einen kräftigen Tritt.",
+        "Mehr übertragene Kraft verändert die Bewegung stärker."
+      ],
+      "question": "Was passiert mit einem Ball, wenn du stärker gegen ihn trittst?",
+      "answer": "Er startet meist schneller",
+      "options": [
+        "Er startet meist schneller",
+        "Er wird zu Wasser",
+        "Er verliert seine runde Form immer",
+        "Er bewegt sich rückwärts ohne Grund"
+      ]
+    },
+    "ph21": {
+      "question": "Auf derselben Strecke gleitet ein Gegenstand auf einer glatten Fläche meist ___.",
+      "answer": "weiter",
+      "hints": [
+        "Eine glatte Fläche bremst weniger.",
+        "Vergleiche dieselbe Bewegung auf Teppich und glattem Boden."
+      ],
+      "altAnswers": [
+        "besser"
+      ]
+    },
+    "ph22": {
+      "answer": "Eine Kraft, die im Wasser nach oben wirkt",
+      "options": [
+        "Eine Kraft, die im Wasser nach oben wirkt",
+        "Eine Farbe im Regenbogen",
+        "Ein Ton aus einer Glocke",
+        "Eine Zeit auf der Uhr"
+      ],
+      "hints": [
+        "Du kannst diese Kraft spüren, wenn du einen Ball unter Wasser drückst.",
+        "Sie wirkt der Gewichtskraft entgegen."
+      ]
+    },
+    "ph23": {
+      "question": "Ein Magnet zieht Eisen und ___ an.",
+      "answer": "Stahl",
+      "hints": [
+        "Viele Büroklammern bestehen aus diesem Material.",
+        "Nicht jedes Metall reagiert auf einen Magneten."
+      ]
+    },
+    "ph24": {
+      "options": [
+        "Eine Kraft, die Dinge zur Erde zieht",
+        "Eine Kraft nur in Magneten",
+        "Ein Stoff im Wasser",
+        "Eine Farbe des Lichts"
+      ],
+      "hints": [
+        "Lässt du einen Ball los, fällt er nach unten.",
+        "Diese Kraft wirkt auf alle Gegenstände mit Masse."
+      ]
+    },
+    "ph28": {
+      "question": "Welche Änderung macht einen Ball auf gleichem Boden meist schwerer anzuschieben?",
+      "answer": "Mehr Gewicht im Ball",
+      "options": [
+        "Mehr Gewicht im Ball",
+        "Eine hellere Farbe",
+        "Ein aufgemalter Stern",
+        "Ein anderer Name"
+      ],
+      "hints": [
+        "Vergleiche zwei gleich grosse Bälle mit unterschiedlichem Gewicht.",
+        "Mehr Masse braucht für dieselbe Bewegungsänderung mehr Kraft."
+      ]
+    },
+    "ph39": {
+      "question": "Beim Rennen und Springen braucht dein Körper ___.",
+      "answer": "Energie",
+      "hints": [
+        "Muskeln arbeiten dabei besonders stark.",
+        "Nahrung liefert dem Körper einen Teil davon."
+      ]
+    },
+    "ph47": {
+      "question": "Warum gleitet ein Schlitten auf Schnee gut?",
+      "answer": "Die Kufen haben wenig Reibung auf dem Schnee",
+      "options": [
+        "Die Kufen haben wenig Reibung auf dem Schnee",
+        "Schnee zieht den Schlitten magnetisch an",
+        "Der Schlitten wird unsichtbar",
+        "Schnee zählt die Fahrten"
+      ],
+      "hints": [
+        "Die schmalen Kufen gleiten über die Oberfläche.",
+        "Wenig Reibung bremst die Bewegung weniger."
+      ]
+    },
+    "si3": {
+      "options": [
+        "Ein neues Spiel",
+        "Wasser",
+        "Ein Ballon",
+        "Ein Sticker"
+      ]
+    },
+    "si8": {
+      "options": [
+        "Damit die Werbung gewinnt",
+        "Damit beide teurer werden",
+        "Damit man mehr wegwirft",
+        "Um passend auszuwählen"
+      ]
+    },
+    "si10": {
+      "options": [
+        "Sie bestimmt jedes Bedürfnis",
+        "Sie kann Wünsche wecken",
+        "Sie macht alles kostenlos",
+        "Sie ersetzt eine Einkaufsliste"
+      ]
+    },
+    "sn11": {
+      "question": "Zum Trinken braucht der Körper ___.",
+      "hints": [
+        "Denke an ein tägliches Grundbedürfnis.",
+        "Süsse Getränke sind dafür nicht nötig."
+      ]
+    },
+    "sn12": {
+      "question": "Was ist ein Wunsch?",
+      "options": [
+        "Etwas, das der Körper immer zum Überleben braucht",
+        "Sie möchte oft ein Produkt besonders attraktiv zeigen",
+        "Etwas, das schön wäre, aber nicht lebensnotwendig ist",
+        "Nur so viel kaufen, wie man braucht"
+      ],
+      "answer": "Etwas, das schön wäre, aber nicht lebensnotwendig ist",
+      "hints": [
+        "Wünsche dürfen verschieden sein.",
+        "Vergleiche «brauchen» mit «gern haben»."
+      ]
+    },
+    "sn13": {
+      "question": "Wenn ich Hunger habe, brauche ich ___.",
+      "answer": "Essen",
+      "hints": [
+        "Der Körper benötigt regelmässig Nährstoffe.",
+        "Denke an ein Grundbedürfnis."
+      ]
+    },
+    "sn14": {
+      "question": "Was brauchst du bei grosser Kälte?",
+      "options": [
+        "Ein neues Spielzeug",
+        "Einen Sticker",
+        "Eine zweite Schultasche",
+        "Warme Kleidung"
+      ],
+      "answer": "Warme Kleidung",
+      "hints": [
+        "Der Körper muss vor Kälte geschützt werden.",
+        "Jacke, Mütze und Handschuhe können helfen."
+      ]
+    },
+    "sn15": {
+      "question": "Wenn ich sehr müde bin, brauche ich ___.",
+      "answer": "Schlaf",
+      "hints": [
+        "Der Körper und das Gehirn müssen sich erholen.",
+        "Dieses Bedürfnis erfüllt man nachts oder bei einer Ruhepause."
+      ]
+    },
+    "sn16": {
+      "question": "Welches Beispiel ist eher ein Wunsch?",
+      "options": [
+        "Ein zweites Spielzeugauto",
+        "Sauberes Trinkwasser",
+        "Genug Schlaf",
+        "Schutz vor Kälte"
+      ],
+      "answer": "Ein zweites Spielzeugauto",
+      "hints": [
+        "Frage dich, was zum sicheren und gesunden Leben nötig ist.",
+        "Ein Wunsch kann Freude machen, ist aber nicht lebensnotwendig."
+      ]
+    },
+    "sn17": {
+      "question": "Menschen brauchen einen sicheren Ort zum ___.",
+      "answer": "Wohnen",
+      "hints": [
+        "Dieser Ort schützt vor Wetter und Gefahr.",
+        "Denke an Zuhause und Unterkunft."
+      ]
+    },
+    "sn18": {
+      "question": "Welches Beispiel ist ein Grundbedürfnis?",
+      "options": [
+        "Das neueste Handy",
+        "Genug Nahrung",
+        "Ein Sammelsticker",
+        "Ein dritter Fussball"
+      ],
+      "answer": "Genug Nahrung",
+      "hints": [
+        "Der Körper braucht es, um gesund zu bleiben.",
+        "Wähle das Beispiel, auf das Menschen nicht dauerhaft verzichten können."
+      ]
+    },
+    "sn19": {
+      "question": "Kinder brauchen Erwachsene, die sie schützen und sich um sie ___.",
+      "answer": "kümmern",
+      "hints": [
+        "Fürsorge gehört zu einem sicheren Aufwachsen.",
+        "Denke an Hilfe, Trost und Schutz."
+      ]
+    },
+    "sn20": {
+      "question": "Was kann für ein Kind ein Wunsch sein?",
+      "options": [
+        "Trinkwasser",
+        "Schutz vor Gewalt",
+        "Ein neues Brettspiel",
+        "Genug Schlaf"
+      ],
+      "answer": "Ein neues Brettspiel",
+      "hints": [
+        "Ein Wunsch darf schön sein, ist aber nicht zum Überleben nötig.",
+        "Vergleiche Spiel und körperliche Grundbedürfnisse."
+      ]
+    },
+    "sn21": {
+      "question": "Vor dem Einkaufen hilft eine ___.",
+      "hints": [
+        "Darauf steht, was wirklich gebraucht wird.",
+        "Sie hilft, nichts Wichtiges zu vergessen."
+      ]
+    },
+    "sn22": {
+      "question": "Warum vergleicht man zwei Produkte?",
+      "options": [
+        "Damit beide teurer werden",
+        "Damit Verpackungen wichtiger werden",
+        "Damit man mehr wegwirft",
+        "Um Preis, Menge und Nutzen abzuwägen"
+      ],
+      "answer": "Um Preis, Menge und Nutzen abzuwägen",
+      "hints": [
+        "Zwei ähnliche Produkte können unterschiedlich viel kosten.",
+        "Prüfe auch, wie viel enthalten ist und wofür du es brauchst."
+      ]
+    },
+    "sn23": {
+      "question": "Auf einem Preisschild steht, wie viel etwas ___.",
+      "answer": "kostet",
+      "hints": [
+        "Dort siehst du einen Betrag in Franken und Rappen.",
+        "Der Betrag hilft beim Vergleichen."
+      ]
+    },
+    "sn24": {
+      "question": "Was hilft, weniger Lebensmittel wegzuwerfen?",
+      "options": [
+        "Nur so viel kaufen, wie man braucht",
+        "Immer die grösste Packung nehmen",
+        "Essbares sofort entsorgen",
+        "Ohne Plan einkaufen"
+      ],
+      "answer": "Nur so viel kaufen, wie man braucht",
+      "hints": [
+        "Überlege vor dem Kauf, wie viel gegessen wird.",
+        "Reste kann man oft später verwenden."
+      ]
+    },
+    "sn25": {
+      "question": "Eine kaputte Sache kann man manchmal ___.",
+      "answer": "reparieren",
+      "hints": [
+        "So muss man nicht sofort etwas Neues kaufen.",
+        "Prüfe zuerst, ob sich der Schaden beheben lässt."
+      ]
+    },
+    "sn26": {
+      "question": "Was ist sparsam?",
+      "options": [
+        "Brauchbares sofort wegwerfen",
+        "Eine Trinkflasche mehrmals benutzen",
+        "Mehr kaufen als nötig",
+        "Das Licht unnötig brennen lassen"
+      ],
+      "answer": "Eine Trinkflasche mehrmals benutzen",
+      "hints": [
+        "Sparsam bedeutet, Dinge und Energie bewusst zu nutzen.",
+        "Wiederverwenden vermeidet Abfall."
+      ]
+    },
+    "sn27": {
+      "question": "Ein Buch, das du nur kurz brauchst, kannst du in der Bibliothek ___.",
+      "answer": "ausleihen",
+      "hints": [
+        "Danach gibst du es zurück.",
+        "So können viele Menschen dasselbe Buch nutzen."
+      ]
+    },
+    "sn28": {
+      "question": "Welche Verpackung verursacht meist weniger Abfall?",
+      "options": [
+        "Viele einzelne Wegwerfbeutel",
+        "Eine doppelte Verpackung ohne Zweck",
+        "Eine passende, wiederverwendbare Dose",
+        "Eine grössere Verpackung als nötig"
+      ],
+      "answer": "Eine passende, wiederverwendbare Dose",
+      "hints": [
+        "Denke an Wiederverwenden statt Wegwerfen.",
+        "Die Verpackung soll zum Inhalt passen."
+      ]
+    },
+    "sn29": {
+      "question": "Vor einem Kauf frage ich: Brauche ich das wirklich oder ist es ein ___?",
+      "answer": "Wunsch",
+      "hints": [
+        "Die Frage hilft bei einer bewussten Entscheidung.",
+        "Nicht alles, was gefällt, wird gerade benötigt."
+      ]
+    },
+    "sn30": {
+      "question": "Was tust du mit gut erhaltenen Kleidern, die nicht mehr passen?",
+      "options": [
+        "Sofort verbrennen",
+        "In die Natur werfen",
+        "Zerschneiden, ohne sie weiterzuverwenden",
+        "Weitergeben oder tauschen"
+      ],
+      "answer": "Weitergeben oder tauschen",
+      "hints": [
+        "Andere Kinder können die Kleider noch nutzen.",
+        "Lange Nutzung spart Material und Abfall."
+      ]
+    },
+    "sn31": {
+      "question": "Wer Dinge lange nutzt, handelt ___.",
+      "hints": [
+        "Gutes muss nicht sofort ersetzt werden.",
+        "So werden Material und Geld geschont."
+      ]
+    },
+    "sn32": {
+      "question": "Was kann Werbung bewirken?",
+      "options": [
+        "Sie kann neue Wünsche wecken",
+        "Sie bestimmt alle Grundbedürfnisse",
+        "Sie macht alles kostenlos",
+        "Sie sagt immer die ganze Wahrheit"
+      ],
+      "answer": "Sie kann neue Wünsche wecken",
+      "hints": [
+        "Werbung möchte Aufmerksamkeit und oft einen Kauf erreichen.",
+        "Überlege nach einer Werbung, ob du die Sache vorher schon wolltest."
+      ]
+    },
+    "sn33": {
+      "question": "Wenn ich Geld nicht sofort ausgebe, kann ich es ___.",
+      "answer": "sparen",
+      "hints": [
+        "So bleibt es für einen späteren Wunsch oder Bedarf.",
+        "Ein Sparziel hilft beim Warten."
+      ]
+    },
+    "sn34": {
+      "question": "Wie erkennst du Werbung?",
+      "options": [
+        "Sie enthält immer nur Wetterdaten",
+        "Sie möchte oft ein Produkt besonders attraktiv zeigen",
+        "Sie verbietet jede Entscheidung",
+        "Sie ist immer ein Schulgesetz"
+      ],
+      "answer": "Sie möchte oft ein Produkt besonders attraktiv zeigen",
+      "hints": [
+        "Frage: Wer zeigt mir das und mit welchem Ziel?",
+        "Bilder, Musik und Versprechen sollen oft Lust auf einen Kauf machen."
+      ]
+    },
+    "sn35": {
+      "question": "Bevor ich etwas kaufe, kann ich eine Nacht darüber ___.",
+      "answer": "schlafen",
+      "hints": [
+        "Warten hilft, einen spontanen Wunsch zu prüfen.",
+        "Am nächsten Tag kannst du nochmals entscheiden."
+      ]
+    },
+    "sn36": {
+      "question": "Was ist nachhaltiger?",
+      "options": [
+        "Jede Woche dasselbe neu kaufen",
+        "Brauchbares wegwerfen",
+        "Ein stabiles Spielzeug lange nutzen",
+        "Nur die grösste Verpackung wählen"
+      ],
+      "answer": "Ein stabiles Spielzeug lange nutzen",
+      "hints": [
+        "Denke an Material, Herstellung und Abfall.",
+        "Lange Nutzung braucht seltener Ersatz."
+      ]
+    },
+    "sn37": {
+      "question": "Wenn mehrere Kinder ein Spiel gemeinsam nutzen, können sie es ___.",
+      "answer": "teilen",
+      "hints": [
+        "So braucht nicht jede Person ein eigenes Exemplar.",
+        "Absprachen helfen, dass es fair bleibt."
+      ]
+    },
+    "sn38": {
+      "question": "Welche Frage hilft gegen einen Werbeimpuls?",
+      "options": [
+        "Wie schnell kann ich alles ausgeben?",
+        "Wie gross ist das Logo?",
+        "Kann ich die Verpackung sammeln?",
+        "Brauche ich das oder wünsche ich es mir nur?"
+      ],
+      "answer": "Brauche ich das oder wünsche ich es mir nur?",
+      "hints": [
+        "Halte kurz inne, bevor du entscheidest.",
+        "Trenne Bedarf und Wunsch."
+      ]
+    },
+    "sn39": {
+      "question": "Ein festes Ziel hilft dabei, Geld zu ___.",
+      "answer": "sparen",
+      "hints": [
+        "Du legst dafür regelmässig einen kleinen Teil zurück.",
+        "Das Ziel macht sichtbar, wofür du wartest."
+      ]
+    },
+    "sn40": {
+      "question": "Was schont Ressourcen?",
+      "options": [
+        "Reparieren statt sofort ersetzen",
+        "Brauchbares wegwerfen",
+        "Mehr Verpackung verlangen",
+        "Dinge nur einmal nutzen"
+      ],
+      "answer": "Reparieren statt sofort ersetzen",
+      "hints": [
+        "Ressourcen sind Material, Energie und Arbeit.",
+        "Eine längere Nutzung vermeidet neue Herstellung."
+      ]
+    },
+    "sn41": {
+      "question": "Was hilft vor dem Einkaufen?",
+      "options": [
+        "Alles spontan nehmen",
+        "Eine Einkaufsliste",
+        "Nur auf bunte Bilder achten",
+        "Den Preis nie anschauen"
+      ],
+      "hints": [
+        "Plane, was tatsächlich fehlt.",
+        "Eine Liste schützt vor unnötigen Käufen."
+      ]
+    },
+    "sn42": {
+      "question": "Vor dem Kauf kann man Produkte ___.",
+      "hints": [
+        "Achte auf Preis, Menge und Qualität.",
+        "Ähnliche Produkte können verschieden gut passen."
+      ]
+    },
+    "sn43": {
+      "question": "Was bedeutet «Bedarf»?",
+      "options": [
+        "Etwas ist nur besonders bunt",
+        "Eine Werbefigur erscheint",
+        "Etwas wird wirklich gebraucht",
+        "Ein Laden schliesst"
+      ],
+      "answer": "Etwas wird wirklich gebraucht",
+      "hints": [
+        "Denke an notwendige Dinge im Alltag.",
+        "Bedarf und Wunsch sind nicht immer dasselbe."
+      ]
+    },
+    "sn44": {
+      "question": "Eine Sache, die Freude macht, aber nicht nötig ist, ist ein ___.",
+      "answer": "Wunsch",
+      "hints": [
+        "Menschen können unterschiedliche davon haben.",
+        "Vergleiche mit Wasser, Nahrung und Schutz."
+      ]
+    },
+    "sn45": {
+      "question": "Welche Entscheidung ist gut geplant?",
+      "options": [
+        "Alles sofort kaufen",
+        "Nur Werbung entscheiden lassen",
+        "Nie Preise vergleichen",
+        "Erst prüfen, dann passend auswählen"
+      ],
+      "answer": "Erst prüfen, dann passend auswählen",
+      "hints": [
+        "Nimm dir Zeit für Bedarf und Möglichkeiten.",
+        "Ein Plan hilft, Fehlkäufe zu vermeiden."
+      ]
+    },
+    "sn46": {
+      "question": "Wer eine eigene Tasche mitnimmt, spart oft ___.",
+      "answer": "Verpackung",
+      "hints": [
+        "Die Tasche kann immer wieder benutzt werden.",
+        "So braucht es weniger Einwegmaterial."
+      ]
+    },
+    "sn47": {
+      "question": "Was ist sparsam?",
+      "options": [
+        "Vorhandene Sachen lange nutzen",
+        "Mehr kaufen als nötig",
+        "Brauchbares wegwerfen",
+        "Immer das Neuste verlangen"
+      ],
+      "hints": [
+        "Prüfe zuerst, was schon da ist.",
+        "Lange Nutzung schont Geld und Material."
+      ]
+    },
+    "sn48": {
+      "question": "Werbung kann neue ___ wecken.",
+      "hints": [
+        "Sie zeigt Produkte besonders attraktiv.",
+        "Frage dich, ob du die Sache vorher schon haben wolltest."
+      ]
+    },
+    "sn49": {
+      "question": "Was ist eine bewusste Kaufentscheidung?",
+      "options": [
+        "Nur die Farbe beachten",
+        "Bedarf, Preis und Nutzen prüfen",
+        "Spontan alles nehmen",
+        "Die grösste Packung wählen"
+      ],
+      "answer": "Bedarf, Preis und Nutzen prüfen",
+      "hints": [
+        "Mehrere Merkmale können wichtig sein.",
+        "Die passende Entscheidung muss nicht die teuerste sein."
+      ]
+    },
+    "sn50": {
+      "question": "Wenn ich etwas nur selten brauche, kann ich es vielleicht ___.",
+      "answer": "ausleihen",
+      "hints": [
+        "Danach gibst du es der Besitzerin oder dem Besitzer zurück.",
+        "So muss nicht jede Person alles selbst kaufen."
+      ]
+    },
+    "wt3": {
+      "options": [
+        "Auf der Fahrbahn",
+        "Auf dem Spielplatz",
+        "Auf dem Bahngleis",
+        "In einer Baustelle"
+      ]
+    },
+    "wt7": {
+      "options": [
+        "Zum Lagern von Abfall",
+        "Zum schnellen Autofahren",
+        "Zum Parkieren",
+        "Zum sicheren Gehen"
+      ]
+    },
+    "wt10": {
+      "options": [
+        "Geschlossene Augen",
+        "Gut sichtbare Orte",
+        "Ein unbekanntes Geräusch",
+        "Eine erfundene Strasse"
+      ]
+    },
+    "wk11": {
+      "question": "Im Quartier spielen Kinder sicher auf dem ___.",
+      "hints": [
+        "Dieser Ort ist für Bewegung und Spiel eingerichtet.",
+        "Er liegt getrennt von der Fahrbahn."
+      ]
+    },
+    "wk12": {
+      "question": "Wo leiht man Bücher aus?",
+      "options": [
+        "Auf dem Parkplatz",
+        "An der Tankstelle",
+        "In der Bibliothek",
+        "In einer Baustelle"
+      ],
+      "hints": [
+        "Dort stehen Bücher für viele Menschen bereit.",
+        "Nach der Leihfrist bringt man sie zurück."
+      ]
+    },
+    "wk13": {
+      "question": "Auf den Bus wartest du an der ___.",
+      "answer": "Haltestelle",
+      "hints": [
+        "Dort hält das Fahrzeug zum Ein- und Aussteigen.",
+        "Ein Schild oder Fahrplan markiert den Ort."
+      ]
+    },
+    "wk14": {
+      "question": "Wo kannst du einen Brief aufgeben?",
+      "options": [
+        "Auf dem Spielplatz",
+        "Im Bach",
+        "Auf dem Veloweg",
+        "Bei der Post"
+      ],
+      "answer": "Bei der Post",
+      "hints": [
+        "Dort werden Briefe und Pakete angenommen.",
+        "Achte auf das gelbe Postzeichen."
+      ]
+    },
+    "wk15": {
+      "question": "Medikamente erhält man in der ___.",
+      "answer": "Apotheke",
+      "hints": [
+        "Dort beraten Fachpersonen zu Arzneimitteln.",
+        "Das Geschäft ist oft mit einem grünen Kreuz gekennzeichnet."
+      ]
+    },
+    "wk16": {
+      "question": "Wo kaufst du Lebensmittel?",
+      "options": [
+        "In einem Laden",
+        "An einer Ampel",
+        "Auf einem Fussballfeld",
+        "In einem Brunnen"
+      ],
+      "answer": "In einem Laden",
+      "hints": [
+        "Denke an Brot, Gemüse oder Milch.",
+        "Im Quartier kann das ein kleiner Laden oder Supermarkt sein."
+      ]
+    },
+    "wk17": {
+      "question": "Eine Ärztin oder ein Arzt arbeitet oft in einer ___.",
+      "answer": "Praxis",
+      "hints": [
+        "Dort werden kranke oder verletzte Menschen untersucht.",
+        "Man vereinbart meist einen Termin."
+      ]
+    },
+    "wk18": {
+      "question": "Wo kannst du mit anderen Kindern lernen?",
+      "options": [
+        "Auf dem Bahngleis",
+        "In der Schule",
+        "In einer Autogarage",
+        "Mitten auf der Strasse"
+      ],
+      "answer": "In der Schule",
+      "hints": [
+        "Dort gibt es Klassenräume und Lehrpersonen.",
+        "Der Ort gehört zu deinem täglichen Schulweg."
+      ]
+    },
+    "wk19": {
+      "question": "Abfall gehört in einen ___.",
+      "answer": "Abfalleimer",
+      "hints": [
+        "So bleibt der Platz sauber.",
+        "Trenne Wertstoffe, wenn passende Sammelstellen vorhanden sind."
+      ]
+    },
+    "wk20": {
+      "question": "Wo darfst du die Fahrbahn sicher überqueren?",
+      "options": [
+        "Zwischen parkierten Autos",
+        "In einer unübersichtlichen Kurve",
+        "Am Fussgängerstreifen",
+        "Mit geschlossenen Augen"
+      ],
+      "answer": "Am Fussgängerstreifen",
+      "hints": [
+        "In der Schweiz markieren gelbe Streifen diesen Ort.",
+        "Halte an und prüfe beide Richtungen."
+      ]
+    },
+    "wk21": {
+      "question": "Ein Weg nur für Menschen zu Fuss heisst ___.",
+      "hints": [
+        "Autos dürfen ihn normalerweise nicht befahren.",
+        "Ein Schild kann zeigen, wer ihn benutzen darf."
+      ]
+    },
+    "wk22": {
+      "question": "Was ist ein Merkpunkt im Quartier?",
+      "options": [
+        "Eine unsichtbare Linie",
+        "Eine erfundene Strasse",
+        "Ein zufälliger Gedanke",
+        "Ein gut erkennbarer Ort"
+      ],
+      "hints": [
+        "Merkpunkte helfen bei der Orientierung.",
+        "Ein Turm, Brunnen oder auffälliges Gebäude kann einer sein."
+      ]
+    },
+    "wk23": {
+      "question": "Auf einem Ortsplan sind Strassen als ___ eingezeichnet.",
+      "answer": "Linien",
+      "hints": [
+        "Der Plan zeigt die Wege von oben.",
+        "Vergleiche eine Strasse im Quartier mit ihrem Zeichen auf dem Plan."
+      ]
+    },
+    "wk24": {
+      "question": "Wozu dient eine Legende auf einem Plan?",
+      "options": [
+        "Sie erklärt die Zeichen",
+        "Sie macht alle Wege länger",
+        "Sie ersetzt die Strassennamen",
+        "Sie zeigt nur das Wetter"
+      ],
+      "answer": "Sie erklärt die Zeichen",
+      "hints": [
+        "Ein Symbol kann für einen Bahnhof, Park oder ein Spital stehen.",
+        "Die Legende übersetzt Symbole in Bedeutungen."
+      ]
+    },
+    "wk25": {
+      "question": "Die Adresse nennt Strasse und ___.",
+      "answer": "Hausnummer",
+      "hints": [
+        "Damit lässt sich ein bestimmtes Gebäude finden.",
+        "Mehrere Häuser können an derselben Strasse stehen."
+      ]
+    },
+    "wk26": {
+      "question": "Was hilft, den sichersten Schulweg zu wählen?",
+      "options": [
+        "Möglichst oft die Fahrbahn wechseln",
+        "Fussgängerstreifen und ruhige Wege beachten",
+        "Zwischen Autos hindurchgehen",
+        "Nur den kürzesten Weg nehmen"
+      ],
+      "answer": "Fussgängerstreifen und ruhige Wege beachten",
+      "hints": [
+        "Der kürzeste Weg ist nicht immer der sicherste.",
+        "Prüfe Übergänge, Sicht und Verkehr."
+      ]
+    },
+    "wk27": {
+      "question": "Ein Plan zeigt ein Gebiet von ___.",
+      "answer": "oben",
+      "hints": [
+        "Stell dir vor, du blickst aus grosser Höhe hinunter.",
+        "Häuser und Wege erscheinen als Zeichen und Linien."
+      ]
+    },
+    "wk28": {
+      "question": "Woran erkennst du eine Bushaltestelle?",
+      "options": [
+        "An einer privaten Haustür",
+        "An einem Gartenschlauch",
+        "An einem Haltestellenschild",
+        "An einem Fussballtor"
+      ],
+      "answer": "An einem Haltestellenschild",
+      "hints": [
+        "Oft steht dort auch ein Fahrplan.",
+        "Busse halten an diesem markierten Ort."
+      ]
+    },
+    "wk29": {
+      "question": "Eine Ampel ordnet den ___.",
+      "answer": "Verkehr",
+      "hints": [
+        "Lichtsignale zeigen, wer fahren oder gehen darf.",
+        "Rot bedeutet warten."
+      ]
+    },
+    "wk30": {
+      "question": "Was ist ein öffentlicher Ort?",
+      "options": [
+        "Ein abgeschlossenes privates Zimmer",
+        "Ein geheimer Weg",
+        "Nur ein Bild auf einer Karte",
+        "Ein Ort, den viele Menschen nutzen dürfen"
+      ],
+      "answer": "Ein Ort, den viele Menschen nutzen dürfen",
+      "hints": [
+        "Denke an Park, Platz oder Bibliothek.",
+        "Dort gelten Regeln für ein gutes Miteinander."
+      ]
+    },
+    "wk31": {
+      "question": "Bäume geben auf einem Platz ___.",
+      "hints": [
+        "Unter ihrer Krone ist es an heissen Tagen kühler.",
+        "Blätter halten einen Teil des Sonnenlichts ab."
+      ]
+    },
+    "wk32": {
+      "question": "Was hilft dir, einen Weg wiederzufinden?",
+      "options": [
+        "Gut sichtbare Merkpunkte",
+        "Geschlossene Augen",
+        "Eine erfundene Strasse",
+        "Ein Geräusch ohne feste Richtung"
+      ],
+      "answer": "Gut sichtbare Merkpunkte",
+      "hints": [
+        "Auffällige Orte kann man sich gut merken.",
+        "Merke dir eine Reihenfolge von Gebäuden, Plätzen oder Schildern."
+      ]
+    },
+    "wk33": {
+      "question": "Ein Zebrastreifen hilft beim sicheren Überqueren der ___.",
+      "answer": "Strasse",
+      "hints": [
+        "Halte davor an und schaue in beide Richtungen.",
+        "Fahrzeuge müssen dich rechtzeitig sehen können."
+      ]
+    },
+    "wk34": {
+      "question": "Was macht einen Platz angenehm?",
+      "options": [
+        "Abfall auf dem Boden",
+        "Sitzplätze, Bäume und sichere Wege",
+        "Unübersichtlicher Verkehr",
+        "Kaputte Beleuchtung"
+      ],
+      "answer": "Sitzplätze, Bäume und sichere Wege",
+      "hints": [
+        "Denke an Sicherheit, Sauberkeit und Aufenthalt.",
+        "Verschiedene Menschen sollen den Ort nutzen können."
+      ]
+    },
+    "wk35": {
+      "question": "Ein Brunnen kann ein gut sichtbarer ___ sein.",
+      "answer": "Merkpunkt",
+      "hints": [
+        "Du kannst ihn in einer Wegbeschreibung nennen.",
+        "Auffällige Orte helfen beim Orientieren."
+      ]
+    },
+    "wk36": {
+      "question": "Warum braucht ein Quartier Grünflächen?",
+      "options": [
+        "Damit Wege verschwinden",
+        "Damit niemand draussen sein kann",
+        "Für Erholung, Schatten und Lebensräume",
+        "Nur für Autoparkplätze"
+      ],
+      "answer": "Für Erholung, Schatten und Lebensräume",
+      "hints": [
+        "Parks und Bäume nützen Menschen, Tieren und Pflanzen.",
+        "Denke an heisse Tage und spielende Kinder."
+      ]
+    },
+    "wk37": {
+      "question": "Eine Sitzbank bietet einen Ort zum ___.",
+      "answer": "Ausruhen",
+      "hints": [
+        "Nicht alle Menschen können lange stehen oder gehen.",
+        "Ein Platz wird dadurch besser nutzbar."
+      ]
+    },
+    "wk38": {
+      "question": "Wie bleibt ein gemeinsamer Platz sauber?",
+      "options": [
+        "Verpackungen liegen lassen",
+        "Abfalleimer umkippen",
+        "Alles in den Brunnen werfen",
+        "Abfall richtig entsorgen"
+      ],
+      "answer": "Abfall richtig entsorgen",
+      "hints": [
+        "Gemeinsame Orte gehören allen Nutzerinnen und Nutzern.",
+        "Nutze Abfalleimer und Sammelstellen."
+      ]
+    },
+    "wk39": {
+      "question": "Gute Beleuchtung macht einen Weg im Dunkeln ___.",
+      "answer": "sichtbar",
+      "hints": [
+        "Man erkennt Hindernisse und andere Menschen besser.",
+        "Lampen helfen besonders am Abend und im Winter."
+      ]
+    },
+    "wk40": {
+      "question": "Was verbessert einen Schulweg?",
+      "options": [
+        "Übersichtliche Übergänge und langsamer Verkehr",
+        "Verdeckte Kreuzungen",
+        "Schnelle Autos direkt vor der Schule",
+        "Fehlende Trottoirs"
+      ],
+      "answer": "Übersichtliche Übergänge und langsamer Verkehr",
+      "hints": [
+        "Kinder müssen gut sehen und gesehen werden.",
+        "Tempo und klare Übergänge beeinflussen die Sicherheit."
+      ]
+    },
+    "wk41": {
+      "question": "Wo können Kinder sicher spielen?",
+      "options": [
+        "Auf der Fahrbahn",
+        "Auf einem Spielplatz",
+        "Auf einem Bahngleis",
+        "In einer Baustelle"
+      ],
+      "answer": "Auf einem Spielplatz",
+      "hints": [
+        "Suche einen geschützten Ort mit Platz zum Bewegen.",
+        "Er soll vom fahrenden Verkehr getrennt sein."
+      ]
+    },
+    "wk42": {
+      "question": "Ein auffälliger Turm kann bei der Orientierung ein ___ sein.",
+      "hints": [
+        "Er ist von mehreren Orten aus gut sichtbar.",
+        "Du kannst ihn in einer Wegbeschreibung nennen."
+      ]
+    },
+    "wk43": {
+      "question": "Wer benutzt einen Fussweg?",
+      "options": [
+        "Nur Lastwagen",
+        "Nur Züge",
+        "Menschen zu Fuss",
+        "Flugzeuge"
+      ],
+      "answer": "Menschen zu Fuss",
+      "hints": [
+        "Der Name sagt, wie man sich dort fortbewegt.",
+        "Achte auf entsprechende Verkehrsschilder."
+      ]
+    },
+    "wk44": {
+      "question": "Auf einem Fahrplan steht, wann der Bus ___.",
+      "answer": "fährt",
+      "hints": [
+        "Dort findest du Zeiten und Haltestellen.",
+        "Prüfe die passende Linie und Richtung."
+      ]
+    },
+    "wk45": {
+      "question": "Was tust du, wenn du dich im Quartier verirrt hast?",
+      "options": [
+        "Auf die Fahrbahn laufen",
+        "Dich an einem unbekannten Ort verstecken",
+        "Ohne Plan immer weitergehen",
+        "Eine vertrauenswürdige erwachsene Person um Hilfe bitten"
+      ],
+      "answer": "Eine vertrauenswürdige erwachsene Person um Hilfe bitten",
+      "hints": [
+        "Bleibe an einem sicheren, gut sichtbaren Ort.",
+        "Polizei, Ladenpersonal oder Familien können helfen."
+      ]
+    },
+    "wk46": {
+      "question": "Ein Wegweiser zeigt eine ___.",
+      "answer": "Richtung",
+      "hints": [
+        "Ein Pfeil weist zum Ziel.",
+        "Lies zusätzlich den Ortsnamen auf dem Schild."
+      ]
+    },
+    "wk47": {
+      "question": "Was gehört zu einem kinderfreundlichen Quartier?",
+      "options": [
+        "Sichere Wege und Orte zum Spielen",
+        "Schneller Verkehr ohne Übergänge",
+        "Keine Grünflächen",
+        "Unbeleuchtete Schulwege"
+      ],
+      "answer": "Sichere Wege und Orte zum Spielen",
+      "hints": [
+        "Kinder sollen sich sicher bewegen und draussen aufhalten können.",
+        "Denke an Trottoirs, Spielplätze und Verkehrsberuhigung."
+      ]
+    },
+    "wk48": {
+      "question": "Strassennamen und Hausnummern bilden eine ___.",
+      "answer": "Adresse",
+      "hints": [
+        "Sie hilft, ein Gebäude eindeutig zu finden.",
+        "Auch Rettungsdienste brauchen genaue Angaben."
+      ]
+    },
+    "wk49": {
+      "question": "Was bedeutet Rücksicht im Quartier?",
+      "options": [
+        "Wege absichtlich blockieren",
+        "Andere beachten und gemeinsame Regeln einhalten",
+        "Lärm ohne Pause machen",
+        "Abfall liegen lassen"
+      ],
+      "answer": "Andere beachten und gemeinsame Regeln einhalten",
+      "hints": [
+        "Viele Menschen teilen Wege und Plätze.",
+        "Achte auf Kinder, ältere Menschen und Personen mit Behinderung."
+      ]
+    },
+    "wk50": {
+      "question": "Ein Quartier ist ein Teil einer Stadt oder ___.",
+      "answer": "Gemeinde",
+      "hints": [
+        "Dort liegen Wohnungen, Wege und gemeinsame Orte nah beieinander.",
+        "Mehrere Quartiere können zusammen einen grösseren Ort bilden."
+      ]
+    },
+    "j4": {
+      "question": "Finde immer zwei gleiche Karten!",
+      "hints": [
+        "Merke dir die Bilder und die Positionen der Karten.",
+        "Drehe zwei Karten mit demselben Bild und demselben Wort um."
+      ]
+    },
+    "p2": {
+      "question": "Finde immer zwei gleiche Karten!",
+      "hints": [
+        "Merke dir die Bilder und die Positionen der Karten.",
+        "Drehe zwei Karten mit demselben Bild und demselben Wort um."
+      ]
+    },
+    "g1-science-fuenf-sinne-s4": {
+      "question": "Finde immer zwei gleiche Karten!",
+      "hints": [
+        "Merke dir die Bilder und die Positionen der Karten.",
+        "Drehe zwei Karten mit demselben Bild und demselben Wort um."
+      ]
+    },
+    "fg2": {
+      "question": "Finde immer zwei gleiche Karten!",
+      "hints": [
+        "Merke dir die Bilder und die Positionen der Karten.",
+        "Drehe zwei Karten mit demselben Bild und demselben Wort um."
+      ]
+    },
+    "wm9": {
+      "question": "Finde immer zwei gleiche Karten!",
+      "hints": [
+        "Merke dir die Bilder und die Positionen der Karten.",
+        "Drehe zwei Karten mit demselben Bild und demselben Wort um."
+      ]
+    },
+    "si5": {
+      "question": "Finde immer zwei gleiche Karten!",
+      "hints": [
+        "Merke dir die Bilder und die Positionen der Karten.",
+        "Drehe zwei Karten mit demselben Bild und demselben Wort um."
+      ]
+    },
+    "wt8": {
+      "question": "Finde immer zwei gleiche Karten!",
+      "hints": [
+        "Merke dir die Bilder und die Positionen der Karten.",
+        "Drehe zwei Karten mit demselben Bild und demselben Wort um."
+      ]
+    },
+    "k12": {
+      "question": "Die Körperteile, mit denen wir gehen und laufen, heissen ___.",
+      "answer": "Beine",
+      "hints": [
+        "Denke an die beiden Körperteile unterhalb der Hüfte.",
+        "Gesucht ist die Mehrzahl; mit ihnen machst du Schritte."
+      ]
+    },
+    "j28": {
+      "altAnswers": [
+        "rot"
+      ]
+    },
+    "p39": {
+      "question": "Ein Baum mit schmalen, nadelförmigen Blättern heisst ___.",
+      "hints": [
+        "Tanne und Fichte gehören zu dieser Gruppe.",
+        "Achte auf die Form ihrer Blätter."
+      ]
+    },
+    "p35": {
+      "answer": "Gemüse, dessen Wurzeln wir essen",
+      "options": [
+        "Gemüse, dessen Wurzeln wir essen",
+        "Gemüse, von dem wir nur die Blüten essen",
+        "Obst von einem Baum",
+        "Pilze im Wald"
+      ],
+      "hints": [
+        "Karotten gehören zu dieser Gruppe.",
+        "Bei ihnen essen wir einen Teil, der unter der Erde wächst."
+      ]
+    },
+    "fg19": {
+      "question": "Die Bundesstadt der Schweiz heisst ___.",
+      "hints": [
+        "Dort arbeiten das Parlament und die Landesregierung.",
+        "Die Stadt liegt an der Aare."
+      ]
+    },
+    "ph8": {
+      "question": "Wenn zwei gleiche Magnetpole zusammenkommen, ___ sie sich ab.",
+      "answer": "stossen",
+      "hints": [
+        "Gleiche Pole ziehen sich nicht an.",
+        "Sie bewegen sich voneinander weg."
+      ]
+    },
+    "wm32": {
+      "question": "Wie viele Tage hat ein Jahr, das kein Schaltjahr ist?"
+    },
+    "wm50": {
+      "question": "Ein Jahr, das kein Schaltjahr ist, hat ___ Tage.",
+      "hints": [
+        "In diesem Jahr hat der Februar 28 Tage.",
+        "Es hat einen Tag weniger als ein Schaltjahr."
+      ]
+    },
+    "k43": {
+      "question": "Sehen, Hören, Riechen, Schmecken und Tasten sind die ___ klassischen Sinne.",
+      "hints": [
+        "Zähle die genannten Sinne einzeln.",
+        "Nutze für jeden genannten Sinn einen Finger."
+      ]
+    },
+    "g1-science-fuenf-sinne-s6": {
+      "question": "Sehen, Hören, Riechen, Schmecken und Tasten sind die ___ klassischen Sinne.",
+      "hints": [
+        "Zähle die genannten Sinne einzeln.",
+        "Nutze für jeden genannten Sinn einen Finger."
+      ]
+    },
+    "g1-science-fuenf-sinne-s50": {
+      "question": "Sehen, Hören, Riechen, Schmecken und Tasten sind die ___ klassischen Sinne.",
+      "hints": [
+        "Zähle die genannten Sinne einzeln.",
+        "Nutze für jeden genannten Sinn einen Finger."
+      ]
+    }
+  },
+  "removedFields": {
+    "j32": [
+      "sequentialAnswer"
+    ],
+    "u26": [
+      "sequentialAnswer"
+    ],
+    "wm17": [
+      "sequentialAnswer"
+    ],
+    "ph23": [
+      "sequentialAnswer"
+    ]
+  }
+}
