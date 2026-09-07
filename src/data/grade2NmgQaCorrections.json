@@ -1,0 +1,1168 @@
+{
+  "patches": {
+    "g2-science-berufe-b4": {
+      "question": "Ein ___ baut Mauern aus Backsteinen und Mörtel."
+    },
+    "g2-science-berufe-b5": {
+      "question": "Welcher Beruf bewacht nachts ein Gebäude?"
+    },
+    "g2-science-berufe-b8": {
+      "altAnswers": [
+        "Friseur"
+      ]
+    },
+    "g2-science-berufe-b12": {
+      "altAnswers": [
+        "Automechaniker",
+        "Automechatroniker",
+        "Automobil-Mechatroniker"
+      ]
+    },
+    "g2-science-berufe-b16": {
+      "altAnswers": [
+        "Postbote",
+        "Pöstler"
+      ]
+    },
+    "g2-science-berufe-b18": {
+      "hints": [
+        "Dieser Beruf plant Räume und zeichnet Baupläne.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g2-science-berufe-b21": {
+      "question": "Was ist mit einem «freien Beruf» gemeint?",
+      "answer": "Ein Beruf mit besonderer Fachkenntnis und persönlicher Verantwortung, zum Beispiel Ärztin oder Anwalt",
+      "options": [
+        "Menschen behandeln, wenn sie krank sind",
+        "Ein Beruf mit besonderer Fachkenntnis und persönlicher Verantwortung, zum Beispiel Ärztin oder Anwalt",
+        "Tiere behandeln, wenn sie krank sind",
+        "Zahnarzt behandelt nur Zähne und Mund"
+      ],
+      "hints": [
+        "Denke an Berufe mit einer besonderen Ausbildung und persönlicher Verantwortung.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2-science-berufe-b29": {
+      "options": [
+        "Computer reparieren",
+        "Computer-Programme schreiben",
+        "Internet aufbauen",
+        "Briefe austragen"
+      ]
+    },
+    "g2-science-berufe-b35": {
+      "question": "Was ist die übergeordnete Aufgabe eines Försters?"
+    },
+    "g2-science-berufe-b36": {
+      "question": "Der Körper braucht ___. Wähle das passende Wort: Energie oder Sand."
+    },
+    "g2-science-berufe-b37": {
+      "question": "Vitamine sind wichtig für unsere ___. Wähle das passende Wort: Gesundheit oder Schuhgrösse."
+    },
+    "g2-science-berufe-b41": {
+      "question": "Schlaf ist wichtig für unsere ___. Wähle das passende Wort: Gesundheit oder Haarfarbe."
+    },
+    "g2-science-berufe-b42": {
+      "question": "Bewegung ist gut für ___. Wähle das passende Wort: den Körper oder die Hausnummer."
+    },
+    "g2-science-berufe-b44": {
+      "altAnswers": [
+        "kauen"
+      ]
+    },
+    "g2-science-berufe-b47": {
+      "altAnswers": [
+        "Busfahrer"
+      ]
+    },
+    "g2-science-berufe-b48": {
+      "altAnswers": [
+        "Tischler"
+      ]
+    },
+    "g2-science-gesunde-ernaehrung-g1": {
+      "question": "Was gehört regelmässig zu einer ausgewogenen Ernährung, was nur gelegentlich in kleinen Mengen?",
+      "dropZones": [
+        {
+          "id": "gesund",
+          "label": "✅ Regelmässig in passenden Mengen"
+        },
+        {
+          "id": "ungesund",
+          "label": "⚠️ Gelegentlich in kleinen Mengen"
+        }
+      ],
+      "hints": [
+        "Denke an abwechslungsreiche Mahlzeiten und an kleine Extras.",
+        "Zu viel Süsses ist nicht gut."
+      ]
+    },
+    "g2-science-gesunde-ernaehrung-g2": {
+      "hints": [
+        "Zähle die empfohlenen Portionen für Früchte und Gemüse zusammen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2-science-gesunde-ernaehrung-g3": {
+      "question": "Wie heisst die erste Mahlzeit am Morgen?",
+      "hints": [
+        "Die erste Mahlzeit des Tages.",
+        "Denke an die Mahlzeiten im Tagesablauf."
+      ]
+    },
+    "g2-science-gesunde-ernaehrung-g4": {
+      "hints": [
+        "Suche jeweils zwei Karten mit genau demselben Bild und Namen.",
+        "Beginne mit einem Paar, an dessen Positionen du dich sicher erinnerst."
+      ]
+    },
+    "g2-science-gesunde-ernaehrung-g5": {
+      "altAnswers": [
+        "Kalzium"
+      ]
+    },
+    "g2-science-gesunde-ernaehrung-g6": {
+      "question": "Wie viele Gläser Wasser pro Tag empfiehlt die Schweizer Ernährungsscheibe für Kinder ungefähr?",
+      "answer": "4–5 Gläser",
+      "options": [
+        "Ein Glas",
+        "4–5 Gläser",
+        "20 Gläser",
+        "Kein Wasser nötig"
+      ],
+      "hints": [
+        "Verteile das Trinken über den Tag.",
+        "Mehr bei Sport oder Hitze!"
+      ]
+    },
+    "g2-science-gesunde-ernaehrung-g7": {
+      "question": "Welche Nährstoffgruppe steckt reichlich in Brot, Nudeln und Reis?"
+    },
+    "ge8": {
+      "question": "Welche Farbe haben die meisten Rüebli, die man im Laden sieht?"
+    },
+    "ge11": {
+      "hints": [
+        "Denke an regelmässige Mahlzeiten und kleine Zwischenmahlzeiten.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge15": {
+      "hints": [
+        "Vitamine unterstützen wichtige Vorgänge in unserem Körper.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge16": {
+      "altAnswers": [
+        "Erdbeere",
+        "Johannisbeere",
+        "schwarze Johannisbeere",
+        "Orange",
+        "Zitrone",
+        "Kiwi"
+      ]
+    },
+    "ge17": {
+      "hints": [
+        "Denke besonders an Zähne und an eine ausgewogene Ernährung.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge18": {
+      "question": "Das Herz ___ Blut. Ergänze das Verb.",
+      "answer": "pumpt"
+    },
+    "ge19": {
+      "hints": [
+        "Es kommt auf die Art der Fettsäuren an, nicht nur auf die Herkunft.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge21": {
+      "question": "Nenne ein Lebensmittel, das Omega-3-Fettsäuren enthält: ___.",
+      "answer": "Fisch / Nüsse / Leinöl",
+      "sequentialAnswer": false,
+      "altAnswers": [
+        "Lachs",
+        "Sardinen",
+        "Walnüsse",
+        "Walnuss",
+        "Leinsamen"
+      ],
+      "hints": [
+        "Denke an bestimmte Fische, Öle oder Nüsse.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ge23": {
+      "altAnswers": [
+        "Knochen und Zähne",
+        "für Knochen und Zähne",
+        "starke Knochen und Zähne"
+      ],
+      "hints": [
+        "Denke an die festen Teile deines Körpers.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ge25": {
+      "question": "1 Gramm Fett liefert ungefähr ___ Kilokalorien (kcal)."
+    },
+    "ge26": {
+      "hints": [
+        "Überlege, welche Lebensmittel von Tieren stammen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge27": {
+      "question": "Die Schweizer Ernährungsscheibe empfiehlt Kindern ungefähr vier bis ___ Gläser Wasser pro Tag.",
+      "answer": "5",
+      "altAnswers": [
+        "fünf"
+      ],
+      "hints": [
+        "Die Empfehlung ist ein Richtwert; bei Hitze und Bewegung brauchst du mehr.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ge28": {
+      "hints": [
+        "Es wird Speisesalz zugesetzt, damit der Körper genug davon bekommt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge31": {
+      "hints": [
+        "Beim langsamen Essen kannst du besser auf Hunger und Sättigung achten.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ge33": {
+      "question": "Gemüse wie Karotten, Rüebli, Spinat liefern vor allem ___. Wähle das passende Wort: Vitamine und Mineralstoffe oder Alkohol."
+    },
+    "ge36": {
+      "question": "Obst und Gemüse sind ___. Wähle das passende Wort: gesund oder giftig."
+    },
+    "ge37": {
+      "question": "Fleisch hat viel ___. Wähle das passende Wort: Protein oder Alkohol.",
+      "altAnswers": [
+        "Eiweiss"
+      ]
+    },
+    "ge38": {
+      "question": "Milch ist gut für starke ___. Wähle das passende Wort: Knochen oder Haare."
+    },
+    "ge39": {
+      "question": "Zucker gibt Energie, aber zu viel ist nicht ___. Wähle das passende Wort: gut oder rund.",
+      "altAnswers": [
+        "gesund"
+      ]
+    },
+    "ge43": {
+      "question": "Nüsse haben viel ___. Wähle das passende Wort: Fett oder Wasser."
+    },
+    "ge48": {
+      "question": "Fisch ist gut für das ___. Wähle das passende Wort: Gehirn oder Autodach."
+    },
+    "ge49": {
+      "question": "Süssigkeiten sind nicht sehr ___. Wähle das passende Wort: gesund oder durchsichtig."
+    },
+    "ge50": {
+      "question": "Obst und Gemüse haben viele ___. Wähle das passende Wort: Vitamine oder Knochen."
+    },
+    "ge40": {
+      "question": "Wasser ist als Durstlöscher besser als die braune, zuckerhaltige Limonade namens ___."
+    },
+    "ge41": {
+      "question": "Das Frühstück ist eine ___ am Morgen."
+    },
+    "ge42": {
+      "question": "Käse und Butter aus Kuhmilch kommen von der ___."
+    },
+    "ge44": {
+      "altAnswers": [
+        "Mehl"
+      ]
+    },
+    "ge45": {
+      "question": "Hühnereier kommen von ___."
+    },
+    "ge46": {
+      "question": "Spinat enthält das Mineral, dessen chemisches Zeichen Fe ist: ___."
+    },
+    "ge47": {
+      "question": "Kartoffeln liefern Stärke. Stärke gehört zu den ___.",
+      "answer": "Kohlenhydraten"
+    },
+    "g2-science-kalender-gr2-k20": {
+      "question": "Um welches Datum ist in der Schweiz die Wintersonnenwende (kürzester Tag)?"
+    },
+    "g2-science-kalender-gr2-k32": {
+      "question": "Wann beginnt der Herbst in der Schweiz astronomisch ungefähr?",
+      "answer": "22. oder 23. September",
+      "options": [
+        "1. September",
+        "22. oder 23. September",
+        "1. Oktober",
+        "21. Oktober"
+      ]
+    },
+    "g2-science-kalender-gr2-k22": {
+      "hints": [
+        "Ziehe das frühere Tagesdatum vom späteren ab.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2-science-kalender-gr2-k7": {
+      "hints": [
+        "Meistens kommt alle vier Jahre ein zusätzlicher Tag dazu; bei manchen Jahrhundertjahren gibt es Ausnahmen.",
+        "2024 war ein Schaltjahr!"
+      ]
+    },
+    "g2-science-kalender-gr2-k23": {
+      "hints": [
+        "Meistens kommt alle vier Jahre ein zusätzlicher Tag dazu; bei manchen Jahrhundertjahren gibt es Ausnahmen.",
+        "Die Zahl ist grösser als 9 und kleiner als 49."
+      ]
+    },
+    "g2-science-kalender-gr2-k34": {
+      "hints": [
+        "Der erste Wortteil verrät, wie viele Monate gemeint sind.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2-science-kalender-gr2-k36": {
+      "hints": [
+        "Rechne 2 × 7.",
+        "Rechne nach und prüfe das Ergebnis mit einer zweiten Rechnung."
+      ]
+    },
+    "g2-science-kalender-gr2-k37": {
+      "hints": [
+        "Rechne 3 × 7.",
+        "Rechne nach und prüfe das Ergebnis mit einer zweiten Rechnung."
+      ]
+    },
+    "g2-science-kalender-gr2-k38": {
+      "hints": [
+        "Rechne 7 + 5.",
+        "Rechne nach und prüfe das Ergebnis mit einer zweiten Rechnung."
+      ]
+    },
+    "g2-science-kalender-gr2-k49": {
+      "hints": [
+        "Rechne 12 + 7.",
+        "Rechne nach und prüfe das Ergebnis mit einer zweiten Rechnung."
+      ]
+    },
+    "lr1": {
+      "dragItems": [
+        {
+          "id": "loewe",
+          "label": "Löwe",
+          "image": "/images/animals/Loewe.svg"
+        },
+        {
+          "id": "pinguin",
+          "label": "🐧 Kaiserpinguin",
+          "emoji": "🐧"
+        },
+        {
+          "id": "frosch",
+          "label": "Frosch",
+          "image": "/images/animals/Frosch.svg"
+        },
+        {
+          "id": "steinbock",
+          "label": "🦌 Steinbock",
+          "emoji": "🦌"
+        },
+        {
+          "id": "delphin",
+          "label": "🐬 Delphin",
+          "emoji": "🐬"
+        },
+        {
+          "id": "eichhoernchen",
+          "label": "🐿️ Eichhörnchen",
+          "emoji": "🐿️"
+        }
+      ],
+      "dropZones": [
+        {
+          "id": "savanne",
+          "label": "🌾 Savanne"
+        },
+        {
+          "id": "polarmeer",
+          "label": "🧊 Antarktisches Polarmeer"
+        },
+        {
+          "id": "teich",
+          "label": "🌊 Teich/See"
+        },
+        {
+          "id": "berge",
+          "label": "⛰️ Berge"
+        },
+        {
+          "id": "ozean",
+          "label": "🌊 Offener Ozean ausserhalb der Polarregionen"
+        },
+        {
+          "id": "wald2",
+          "label": "🌲 Wald"
+        }
+      ]
+    },
+    "lr3": {
+      "answer": "Tiere senken im Winter ihre Körperfunktionen und sparen Energie",
+      "options": [
+        "Tiere fressen mehr",
+        "Tiere senken im Winter ihre Körperfunktionen und sparen Energie",
+        "Tiere wandern in wärmere Gebiete",
+        "Tiere wechseln ihr Fell"
+      ],
+      "hints": [
+        "Igel und Murmeltiere überstehen so die nahrungsarme Jahreszeit.",
+        "Sie sparen so Energie!"
+      ]
+    },
+    "lr4": {
+      "question": "Finde jeweils zwei gleiche Karten zu Tieren und ihrem Schutz!",
+      "hints": [
+        "Merke dir Bild und Namen jeder aufgedeckten Karte.",
+        "Beginne mit einem Paar, an dessen Positionen du dich sicher erinnerst."
+      ]
+    },
+    "lr8": {
+      "hints": [
+        "Kamele kommen lange ohne Trinken aus.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lr24": {
+      "hints": [
+        "Kamele speichern Fett im Höcker als Energievorrat.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lr9": {
+      "question": "Kaiserpinguine leben in der Antarktis auf der ___halbkugel.",
+      "hints": [
+        "Die Antarktis liegt auf der Landkarte weit unten.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lr19": {
+      "altAnswers": [
+        "Kaninchen",
+        "Maus",
+        "Feldmaus"
+      ]
+    },
+    "lr21": {
+      "hints": [
+        "Ihr Fellmuster besteht aus dunklen und hellen Streifen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lr32": {
+      "hints": [
+        "Denke an Flechten: Pilz und Alge leben zusammen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lr34": {
+      "hints": [
+        "Der Blauwal filtert sehr kleine Tiere aus dem Wasser.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lr36": {
+      "question": "Im Wald leben viele ___ und Pflanzen. Wähle das passende Wort: Tiere oder Autos."
+    },
+    "lr37": {
+      "question": "Am See wohnen ___ wie Fische. Wähle das passende Wort: Tiere oder Möbel."
+    },
+    "lr40": {
+      "question": "Wale sind ___ und leben im Meer. Wähle das passende Wort: Säugetiere oder Fische."
+    },
+    "lr44": {
+      "question": "Adler sind ___. Wähle das passende Wort: Vögel oder Fische."
+    },
+    "lr45": {
+      "question": "Schlangen sind ___. Wähle das passende Wort: Reptilien oder Säugetiere."
+    },
+    "lr50": {
+      "question": "Wasser ist wichtig für alle ___. Wähle das passende Wort: Lebewesen oder Steine."
+    },
+    "lr38": {
+      "altAnswers": [
+        "Lebensraum"
+      ]
+    },
+    "lr48": {
+      "altAnswers": [
+        "Lebensraum"
+      ]
+    },
+    "lr41": {
+      "altAnswers": [
+        "Zuhause",
+        "Lebensraum",
+        "Unterschlupf"
+      ]
+    },
+    "lr49": {
+      "altAnswers": [
+        "Licht"
+      ]
+    },
+    "lr39": {
+      "question": "Blätter und Früchte von Bäumen dienen vielen Tieren als ___."
+    },
+    "lr42": {
+      "question": "Viele Gartenpflanzen wachsen mit ihren Wurzeln in der ___."
+    },
+    "lr47": {
+      "question": "Aus Schmetterlingseiern schlüpfen ___."
+    },
+    "l3": {
+      "question": "Was können die meisten Tiere, aber keine fest verwurzelten Pflanzen?",
+      "answer": "Sich von einem Ort zum anderen fortbewegen",
+      "options": [
+        "Pflanzen sind grüner",
+        "Sich von einem Ort zum anderen fortbewegen",
+        "Pflanzen leben länger",
+        "Tiere brauchen kein Wasser"
+      ],
+      "hints": [
+        "Eine Pflanze steht immer am selben Ort.",
+        "Vergleiche eine Katze beim Laufen mit einem Baum."
+      ]
+    },
+    "l4": {
+      "question": "Finde jeweils zwei gleiche Karten zu Tieren und ihren Jungen!",
+      "hints": [
+        "Merke dir das Bild und den Namen auf jeder Karte.",
+        "Beginne mit einem Paar, an dessen Positionen du dich sicher erinnerst."
+      ]
+    },
+    "l5": {
+      "question": "Etwas, das wächst, atmet und sich ernährt, nennt man ___."
+    },
+    "l9": {
+      "hints": [
+        "Vergleiche einen Stein mit einer Pflanze.",
+        "Die anderen Antworten (Sie haben Zähne, Sie können sprechen) sind nicht korrekt."
+      ]
+    },
+    "l12": {
+      "altAnswers": [
+        "weder noch",
+        "ein eigenes Reich",
+        "Pilze"
+      ],
+      "hints": [
+        "Überlege, ob die beiden angebotenen Gruppen vollständig sind.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "l13": {
+      "answer": "Die meisten Tiere können ihren Ort wechseln und müssen Nahrung aufnehmen",
+      "options": [
+        "Tiere wachsen nicht",
+        "Die meisten Tiere können ihren Ort wechseln und müssen Nahrung aufnehmen",
+        "Pflanzen können sprechen",
+        "Tiere atmen nicht"
+      ]
+    },
+    "l14": {
+      "altAnswers": [
+        "nicht lebendig",
+        "unbelebt"
+      ]
+    },
+    "l16": {
+      "altAnswers": [
+        "Sauerstoff",
+        "O2",
+        "O₂"
+      ],
+      "hints": [
+        "Denke an das Gas, das Menschen zum Atmen brauchen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "l18": {
+      "altAnswers": [
+        "Energie",
+        "für Energie",
+        "zum Wachsen",
+        "zum Überleben"
+      ],
+      "hints": [
+        "Denke daran, was der Körper bei Bewegung und Wachstum verbraucht.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "l19": {
+      "question": "Können unbelebte Stoffe wie Fels und Wasser leben?"
+    },
+    "l20": {
+      "question": "Eine Nahrungskette zeigt, wer wen ___.",
+      "answer": "frisst"
+    },
+    "l21": {
+      "question": "Welche winzigen einzelligen Lebewesen ohne Zellkern sind weit verbreitet?"
+    },
+    "l26": {
+      "answer": "Produzenten stellen Nahrung her (Pflanzen); Konsumenten nehmen Nahrung auf (Tiere)",
+      "options": [
+        "Warmblüter halten konstante Körpertemperatur; Kaltblüter passen sich der Umgebung an",
+        "Produzenten stellen Nahrung her (Pflanzen); Konsumenten nehmen Nahrung auf (Tiere)",
+        "Tiere können sich bewegen und müssen Nahrung aufnehmen",
+        "Weder noch — Pilze sind ein eigenes Reich"
+      ]
+    },
+    "l29": {
+      "question": "Ein Lebensraum bietet Nahrung, Schutz und ___.",
+      "answer": "Platz",
+      "altAnswers": [
+        "Raum"
+      ]
+    },
+    "l31": {
+      "question": "Zu welchem erwachsenen Insekt wird eine Raupe nach der Puppenzeit?"
+    },
+    "l35": {
+      "question": "Für die Fotosynthese braucht eine grüne Pflanze unter anderem Wasser und ___.",
+      "answer": "Licht",
+      "altAnswers": [
+        "Sonnenlicht"
+      ]
+    },
+    "l37": {
+      "question": "Aus einem Froschei schlüpft eine ___."
+    },
+    "l41": {
+      "altAnswers": [
+        "Pollen",
+        "Blütenstaub"
+      ]
+    },
+    "l42": {
+      "altAnswers": [
+        "6"
+      ]
+    },
+    "l43": {
+      "altAnswers": [
+        "8"
+      ],
+      "hints": [
+        "Sie haben zwei Beine mehr als Insekten.",
+        "Zähle die Beine auf beiden Körperseiten zusammen."
+      ]
+    },
+    "l44": {
+      "question": "Zu welcher Tiergruppe gehört ein Frosch? Ergänze: Er ist eine ___.",
+      "altAnswers": [
+        "Amphibie",
+        "Amphibienart"
+      ]
+    },
+    "l50": {
+      "altAnswers": [
+        "Unterschlupf",
+        "Ort"
+      ]
+    },
+    "g2bew_norm_6": {
+      "altAnswers": [
+        "Stoss",
+        "Anstoss"
+      ]
+    },
+    "g2bew_norm_10": {
+      "altAnswers": [
+        "Laufen",
+        "Sprinten"
+      ]
+    },
+    "g2bew_norm_18": {
+      "altAnswers": [
+        "Schieben"
+      ]
+    },
+    "g2bew_norm_20": {
+      "altAnswers": [
+        "Drachen"
+      ]
+    },
+    "g2bew_norm_34": {
+      "altAnswers": [
+        "still",
+        "stehen",
+        "unbewegt"
+      ]
+    },
+    "g2bew_norm_36": {
+      "altAnswers": [
+        "Erdanziehungskraft",
+        "Gravitation"
+      ]
+    },
+    "g2bew_norm_50": {
+      "altAnswers": [
+        "Schnelligkeit"
+      ]
+    },
+    "g2bew_norm_39": {
+      "hints": [
+        "Sie speichert beim Zusammendrücken Energie.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2bew_norm_44": {
+      "hints": [
+        "Sie speichert beim Zusammendrücken Energie.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g2bew_norm_49": {
+      "question": "Zwei gleiche Bälle unterscheiden sich nur in der Farbe. Sie werden gleich stark auf demselben glatten Boden gestossen. Welcher rollt weiter?"
+    },
+    "ch1": {
+      "hints": [
+        "Die Schweizer Flagge ist quadratisch!",
+        "Denke an die Fahne, die du am 1. August siehst."
+      ]
+    },
+    "ch2": {
+      "question": "Wie viele Landessprachen hat die Schweiz?",
+      "hints": [
+        "Zähle die offiziell anerkannten Landessprachen auf.",
+        "Die Schweiz ist vielsprachig!"
+      ]
+    },
+    "ch3": {
+      "hints": [
+        "Denke an die Sprachregionen im Norden, Westen und Süden der Schweiz.",
+        "Ordne zuerst die eindeutigen Elemente zu und prüfe danach den Rest."
+      ]
+    },
+    "ch8": {
+      "question": "Finde jeweils zwei gleiche Karten zu Kantonen und ihren Hauptstädten!",
+      "hints": [
+        "Achte darauf, ob auf der Karte Kanton oder Stadt steht.",
+        "Beginne mit einem Paar, an dessen Positionen du dich sicher erinnerst."
+      ]
+    },
+    "ch12": {
+      "hints": [
+        "Das Tier auf dem Wappen hat ein braunes Fell und kräftige Tatzen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ch22": {
+      "hints": [
+        "Denke an den Namen des Gebäudes mit der grossen Kuppel in Bern.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ch26": {
+      "question": "Aus welchem Jahr stammt der berühmte Bundesbrief von Anfang August?"
+    },
+    "ch27": {
+      "answer": "Eine Herkunftsangabe für Produkte, die die Schweizer Herkunftsregeln erfüllen",
+      "options": [
+        "Ein wichtiger Fluss, der durch die Nordschweiz fliesst",
+        "Eine Herkunftsangabe für Produkte, die die Schweizer Herkunftsregeln erfüllen",
+        "Ein wichtiger Pass und Tunnel durch die Alpen",
+        "Ein berühmter Berg (4478 m) im Wallis"
+      ],
+      "hints": [
+        "Die Angabe sagt etwas über die Herkunft eines Produkts.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ch29": {
+      "hints": [
+        "Denke an die oberste Ebene der Rechtsprechung.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ch32": {
+      "altAnswers": [
+        "Cailler",
+        "Frey",
+        "Villars",
+        "Läderach",
+        "Sprüngli"
+      ]
+    },
+    "ch47": {
+      "altAnswers": [
+        "Jet d'Eau",
+        "Jet deau",
+        "Jet d eau"
+      ]
+    },
+    "g2sinne_norm_11": {
+      "question": "Welcher Sinn hilft dir, das Läuten einer entfernten Glocke wahrzunehmen?"
+    },
+    "g2sinne_norm_12": {
+      "altAnswers": [
+        "ertasten",
+        "tasten"
+      ]
+    },
+    "g2sinne_norm_14": {
+      "altAnswers": [
+        "Geschmacksrichtungen"
+      ]
+    },
+    "g2sinne_norm_20": {
+      "altAnswers": [
+        "schaden"
+      ]
+    },
+    "g2sinne_norm_32": {
+      "altAnswers": [
+        "Schmerz",
+        "Schmerzen"
+      ]
+    },
+    "g2sinne_norm_34": {
+      "altAnswers": [
+        "Innenohr"
+      ]
+    },
+    "g2sinne_norm_38": {
+      "altAnswers": [
+        "wehtun"
+      ]
+    },
+    "g2sinne_norm_50": {
+      "altAnswers": [
+        "Gefahr"
+      ]
+    },
+    "g2sinne_norm_15": {
+      "question": "Mit welchem Organ siehst du gedruckte Buchstaben beim Lesen?"
+    },
+    "g2sinne_norm_41": {
+      "question": "Wie reagiert die Pupille auf unterschiedlich helles Licht?"
+    },
+    "g2uhr_norm_5": {
+      "hints": [
+        "Teile die Minuten einer vollen Stunde in zwei gleiche Teile.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2uhr_norm_16": {
+      "hints": [
+        "Rechne die Minuten schrittweise weiter und beachte die volle Stunde.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g2uhr_norm_18": {
+      "hints": [
+        "Rechne die Minuten schrittweise weiter und beachte die volle Stunde.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g2uhr_norm_19": {
+      "hints": [
+        "Rechne die Minuten schrittweise weiter und beachte die volle Stunde.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2uhr_norm_21": {
+      "hints": [
+        "Rechne die Minuten schrittweise weiter und beachte die volle Stunde.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2uhr_norm_23": {
+      "hints": [
+        "Rechne die Minuten schrittweise weiter und beachte die volle Stunde.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2uhr_norm_24": {
+      "hints": [
+        "Rechne die Minuten schrittweise weiter und beachte die volle Stunde.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g2uhr_norm_41": {
+      "hints": [
+        "Rechne die Minuten schrittweise weiter und beachte die volle Stunde.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g2uhr_norm_20": {
+      "question": "Eine halbe Stunde vor 7:45 ist ___.",
+      "hints": [
+        "Gehe auf der Uhr eine halbe Stunde zurück.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g2uhr_norm_40": {
+      "question": "Genau in der Mitte zwischen 3:15 und 3:45 liegt ___.",
+      "hints": [
+        "Bestimme zuerst den Zeitabstand und halbiere ihn.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g2uhr_norm_45": {
+      "hints": [
+        "Vergleiche jede angebotene Zeit mit beiden Grenzen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "w3": {
+      "hints": [
+        "Denke an den Übergang von flüssigem Wasser zu Eis.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "w4": {
+      "answer": "Aus Quellen, Grundwasser und Seen",
+      "options": [
+        "Aus dem Meer",
+        "Aus Quellen, Grundwasser und Seen",
+        "Aus dem Regen direkt",
+        "Aus dem Boden aus Afrika"
+      ]
+    },
+    "w5": {
+      "question": "Verbinde die Beschreibung mit dem passenden Begriff!",
+      "pairs": [
+        {
+          "id": "sonne3",
+          "label": "Sonnenwärme macht flüssiges Wasser gasförmig"
+        },
+        {
+          "id": "verdunstung",
+          "label": "Verdunstung"
+        },
+        {
+          "id": "wolken",
+          "label": "Wassertropfen fallen aus Wolken"
+        },
+        {
+          "id": "regen2",
+          "label": "Regen"
+        },
+        {
+          "id": "meer",
+          "label": "Damit sind Meere und Seen gefüllt"
+        },
+        {
+          "id": "wasser3",
+          "label": "Wasser"
+        }
+      ],
+      "hints": [
+        "Lies links den Vorgang und suche rechts den passenden Begriff.",
+        "Prüfe am Schluss, ob jedes Element genau einmal zugeordnet ist."
+      ]
+    },
+    "w6": {
+      "question": "Wasser bei normalem Luftdruck auf Meereshöhe siedet (kocht) bei ___ Grad Celsius."
+    },
+    "w11": {
+      "question": "Wasser bei normalem Luftdruck auf Meereshöhe kocht bei ___ Grad Celsius."
+    },
+    "w37": {
+      "question": "Wasser bei normalem Luftdruck auf Meereshöhe kocht bei ___°C."
+    },
+    "w7": {
+      "question": "Wie viel Wasser enthält der Körper eines Erwachsenen ungefähr?",
+      "answer": "Etwa 60 Prozent",
+      "options": [
+        "Es schmeckt gut",
+        "Etwa 60 Prozent",
+        "Man kann damit spielen",
+        "Es macht uns stark"
+      ]
+    },
+    "w10": {
+      "hints": [
+        "Denke an die drei Zustände eines Stoffes.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "w13": {
+      "altAnswers": [
+        "schmilzt",
+        "Es schmilzt",
+        "schmilzt zu Wasser"
+      ],
+      "hints": [
+        "Vergleiche einen Eiswürfel im Gefrierfach mit einem auf einem warmen Teller.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "w15": {
+      "question": "Klares Fensterglas lässt Licht hindurch. Es ist ___.",
+      "altAnswers": [
+        "transparent",
+        "lichtdurchlässig"
+      ]
+    },
+    "w16": {
+      "hints": [
+        "Denke an eine Pfütze, die langsam trocknet.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "w17": {
+      "altAnswers": [
+        "Wassertröpfchen oder Eiskristallen",
+        "Wassertröpfchen und Eiskristallen",
+        "Wassertropfen oder Eiskristallen",
+        "Wassertröpfchen",
+        "Eiskristallen"
+      ],
+      "hints": [
+        "Es sind sehr kleine flüssige oder feste Teilchen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "w18": {
+      "hints": [
+        "Beobachte die Tropfen aussen an einem kalten Glas.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "w24": {
+      "altAnswers": [
+        "Wasser reinigen",
+        "Reinigung von Wasser",
+        "Wasser trinkbar machen",
+        "Reinigung von Wasser zum Trinken"
+      ]
+    },
+    "w26": {
+      "question": "Metall leitet Wärme gut. Es ist ___."
+    },
+    "w27": {
+      "hints": [
+        "Achte auf den Salzgehalt; sauber ist nicht jedes Wasser aus einem Fluss.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "w28": {
+      "altAnswers": [
+        "Wassermangel",
+        "Mangel an Wasser",
+        "zu wenig Wasser",
+        "Mangel an sauberem Wasser"
+      ],
+      "hints": [
+        "Überlege, ob genug Wasser für alle nötigen Zwecke vorhanden ist.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "w40": {
+      "question": "Der Rhein mündet schliesslich in die Nordsee, also ins ___."
+    },
+    "w42": {
+      "question": "Fische brauchen ___. Wähle das passende Wort: Wasser oder Möbel."
+    },
+    "w43": {
+      "question": "Pflanzen brauchen ___. Wähle das passende Wort: Wasser oder Benzin."
+    },
+    "w45": {
+      "question": "Der Ozean ist sehr ___. Wähle das passende Wort: gross oder winzig."
+    },
+    "w47": {
+      "question": "Wasser hat keine ___. Wähle das passende Wort: Farbe oder Masse."
+    },
+    "w49": {
+      "question": "Das Wasser ist ___. Wähle das passende Wort: durchsichtig oder undurchsichtig."
+    },
+    "w50": {
+      "question": "Im Bach leben ___. Wähle das passende Wort: Fische oder Löwen."
+    },
+    "w44": {
+      "question": "Der Zürichsee enthält kaum Salz. Sein Wasser ist ___."
+    },
+    "w48": {
+      "question": "Zum Trinken nehmen wir täglich sauberes ___."
+    },
+    "g2wetter_norm_8": {
+      "altAnswers": [
+        "Schnee",
+        "Hagel",
+        "Niederschlag"
+      ]
+    },
+    "g2wetter_norm_12": {
+      "altAnswers": [
+        "wolkenlos",
+        "blau"
+      ]
+    },
+    "g2wetter_norm_24": {
+      "altAnswers": [
+        "gerade",
+        "jetzt",
+        "aktuell"
+      ]
+    },
+    "g2wetter_norm_26": {
+      "altAnswers": [
+        "Niederschlags"
+      ]
+    },
+    "g2wetter_norm_34": {
+      "altAnswers": [
+        "kühler"
+      ]
+    },
+    "g2wetter_norm_38": {
+      "altAnswers": [
+        "häufig",
+        "schnell"
+      ]
+    },
+    "g2wetter_norm_40": {
+      "altAnswers": [
+        "Niederschlag",
+        "Luftdruck",
+        "Luftfeuchtigkeit"
+      ]
+    },
+    "g2wetter_norm_42": {
+      "altAnswers": [
+        "Niederschlag",
+        "Schnee",
+        "Hagel"
+      ]
+    },
+    "g2wetter_norm_44": {
+      "altAnswers": [
+        "kalt"
+      ]
+    },
+    "g2wetter_norm_50": {
+      "altAnswers": [
+        "ändern",
+        "verändern"
+      ]
+    },
+    "g2wetter_norm_18": {
+      "question": "Viele Wolken bestehen aus winzigen Wasser___. Andere enthalten auch Eiskristalle."
+    }
+  },
+  "removedFields": {}
+}
