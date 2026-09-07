@@ -1,0 +1,4068 @@
+[
+  {
+    "id": "g2-math-zahlen-bis-100-z32",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "99 minus10 is89, not90"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z33",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Several original choices satisfied the condition"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z34",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "question",
+      "answer",
+      "hints",
+      "altAnswers"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z42",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "25 and35 are not multiples of ten"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a22",
+    "topic": "addition-bis-20",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a35",
+    "topic": "addition-bis-20",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a36",
+    "topic": "addition-bis-20",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a37",
+    "topic": "addition-bis-20",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a45",
+    "topic": "addition-bis-20",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a47",
+    "topic": "addition-bis-20",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "e42b",
+    "topic": "einmaleins",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "e53",
+    "topic": "einmaleins",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u2",
+    "topic": "uhrzeit",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u9",
+    "topic": "uhrzeit",
+    "fields": [
+      "question",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u12",
+    "topic": "uhrzeit",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u25",
+    "topic": "uhrzeit",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u32",
+    "topic": "uhrzeit",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u39",
+    "topic": "uhrzeit",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sb27",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sb35",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sb38",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sb40",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm11",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm18",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm20",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm22",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm24",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm26",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm28",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm30",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm36",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm40",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm44",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm46",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm34",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm37",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm38",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm41",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm48",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "lm50",
+    "topic": "laengen-messen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g30",
+    "topic": "geld-chf",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g39",
+    "topic": "geld-chf",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g40",
+    "topic": "geld-chf",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "as37",
+    "topic": "add-sub-100",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "as40",
+    "topic": "add-sub-100",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "as43",
+    "topic": "add-sub-100",
+    "fields": [
+      "question",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "as45",
+    "topic": "add-sub-100",
+    "fields": [
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Two original options summed to99"
+    ]
+  },
+  {
+    "id": "as47",
+    "topic": "add-sub-100",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "as48",
+    "topic": "add-sub-100",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "as50",
+    "topic": "add-sub-100",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "e38",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "question",
+      "pairs",
+      "hints"
+    ],
+    "reasons": [
+      "Memory renderer pairs identical cards; duplicate24 labels were indistinguishable"
+    ]
+  },
+  {
+    "id": "e58",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "e70",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "question",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "e80",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy23",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy26",
+    "topic": "symmetrie",
+    "fields": [
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy34",
+    "topic": "symmetrie",
+    "fields": [
+      "options",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy27",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy37",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy38",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy41",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy42",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy48",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "answer",
+      "hints",
+      "altAnswers"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy49",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sy50",
+    "topic": "symmetrie",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc1",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc11",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc20",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc22",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc24",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc26",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc28",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc32",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc34",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc38",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc40",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc42",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc44",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc46",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc50",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc29",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc31",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc41",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc47",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc49",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc17",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc21",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc23",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc25",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sc27",
+    "topic": "schaetzen",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sa25c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "question",
+      "answer",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sa2_17",
+    "topic": "sachaufgaben",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sa34c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "question",
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sa36c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "sa38c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd4c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd8c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd9c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd11c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "answer",
+      "altAnswers",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd15c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "answer",
+      "altAnswers",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd17c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "answer",
+      "altAnswers",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd21c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "answer",
+      "altAnswers",
+      "hints",
+      "question"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer",
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd31c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "answer",
+      "altAnswers",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd35c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "answer",
+      "altAnswers",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd14c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "answer",
+      "options",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd25c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "question"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd27c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "question",
+      "answer",
+      "hints",
+      "altAnswers"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "dd2_16",
+    "topic": "daten-diagramme",
+    "fields": [
+      "question",
+      "hints"
+    ],
+    "reasons": [
+      "Clear, objectively gradable German wording and answer"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z1",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z2",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z3",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z7",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z8",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z11",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z19",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z23",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z30",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z36",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z37",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z39",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z43",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z45",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-zahlen-bis-100-z46",
+    "topic": "zahlen-bis-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a2",
+    "topic": "addition-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a9",
+    "topic": "addition-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a20",
+    "topic": "addition-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a28",
+    "topic": "addition-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a33",
+    "topic": "addition-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a39",
+    "topic": "addition-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-addition-bis-20-a44",
+    "topic": "addition-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e2",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e6",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e14",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e15c",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e17",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e18",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e24",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e26",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e28",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e41b",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e46",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e49",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e50",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e52",
+    "topic": "einmaleins",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u3",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u4",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u5",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u6",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u7",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u8",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u10",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u11",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u13",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u14",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "u15c",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "u15d",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u16",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u17",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u18",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u19",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u20",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u21",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u23",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u24",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u26",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u27",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u28",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u29",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u30",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u33",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u34",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u35",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u36",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u37",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u38",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u40",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u41",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u42",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u43",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u44",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u45",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-uhrzeit-u46",
+    "topic": "uhrzeit",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb2",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb6",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb8",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb10",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb12",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb13",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb14",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb15",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb16",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb17",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb19",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb20",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb25",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb28",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb29",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb31",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb32",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb33",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb34",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb36",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb37",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb39",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb41",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb42",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb43",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb44",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb45",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb46",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb48",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb49",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sb50",
+    "topic": "subtraktion-bis-20",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm2",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm4",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm5",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm6",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm7",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm8",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm9",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm10",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm12",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm13",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm14",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm15",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm16",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm17",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm17b",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm19",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm21",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm25",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm27",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm29",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm31",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm33",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm35",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm39",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm43",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm45",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "lm49",
+    "topic": "laengen-messen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g1",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g2",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g3",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g4",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g5",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g6",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g8",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g10",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g12",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g13",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g14",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g15",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g16",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g17",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g19",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g20",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g21",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g22",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g24",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g26",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g27",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g28",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g29",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g32",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g34",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g35",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g36",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g37",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g41",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g42",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g43",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g44",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g45",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g46",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g47",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "g2-math-geld-chf-g49",
+    "topic": "geld-chf",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as4",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as5",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as8",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as9",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as10",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as12",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as15",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as17",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as18",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as20",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as21",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as22",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as23",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as24",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as25",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as26",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as28",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as29",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as31",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as32",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as33",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as34",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as35",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as36",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as38",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as39",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as41",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as42",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as44",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as46",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "as49",
+    "topic": "add-sub-100",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e34",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e37",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e43",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e47x2",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e49x2",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e55",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e56",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e57",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e60",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e61",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e64",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e65",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e66",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e67",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e68",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e69",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e71",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e72",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e73",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e74",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e75",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e77",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e78",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "e79",
+    "topic": "einmaleins-3-4",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy7",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy8",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy9",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy11",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy12",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy14",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy15",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy16",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy17",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy18",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy20",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy22",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy24",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy25",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy28",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy30",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy32",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy33",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy35",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy36",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy39",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy40",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy43",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy45",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy46",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sy47",
+    "topic": "symmetrie",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc2",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc6",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc15",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc19",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc30",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc33",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc35",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc37",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc39",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc43",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sc45",
+    "topic": "schaetzen",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sa23c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sa24c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sa26c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sa27c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sa29c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sa33c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sa37c",
+    "topic": "sachaufgaben",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "sa2_11",
+    "topic": "sachaufgaben",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd7c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd10c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd32c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd36c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd37c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd38c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd40c",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd2_14",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  },
+  {
+    "id": "dd2_20",
+    "topic": "daten-diagramme",
+    "fields": [
+      "hints"
+    ],
+    "reasons": [
+      "Replace generic review boilerplate with a topical method"
+    ]
+  }
+]

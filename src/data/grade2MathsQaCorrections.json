@@ -1,0 +1,2752 @@
+{
+  "patches": {
+    "g2-math-zahlen-bis-100-z32": {
+      "answer": "89",
+      "hints": [
+        "Die kleinste zweistellige Zahl ist zehn.",
+        "Ziehe sie von der grössten zweistelligen Zahl ab."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z33": {
+      "options": [
+        "24",
+        "42",
+        "48",
+        "12"
+      ],
+      "hints": [
+        "Die linke Ziffer zählt die Zehner, die rechte die Einer.",
+        "Prüfe bei jeder Zahl, ob die linke Ziffer doppelt so gross ist."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z34": {
+      "question": "Nenne eine zweistellige Zahl grösser als 50, deren Ziffern zusammen 9 ergeben: ___.",
+      "answer": "54",
+      "hints": [
+        "Wähle eine Zehnerziffer ab fünf.",
+        "Ergänze die Einerziffer so, dass beide Ziffern zusammen neun ergeben."
+      ],
+      "altAnswers": [
+        "63",
+        "72",
+        "81",
+        "90"
+      ]
+    },
+    "g2-math-zahlen-bis-100-z42": {
+      "question": "Die Summe zweier Zahlen ist 60. Die eine ist 10 mehr als die andere. Die kleinere ist ___.",
+      "hints": [
+        "Teile zunächst die Summe gleichmässig auf.",
+        "Verschiebe dann gleich viel von der einen zur anderen Zahl, bis ihr Abstand stimmt."
+      ]
+    },
+    "g2-math-addition-bis-20-a22": {
+      "question": "12 + 7 =?",
+      "answer": "19",
+      "options": [
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "hints": [
+        "Zerlege die zweite Zahl in kleine Schritte.",
+        "Prüfe mit der Rückwärtsrechnung."
+      ]
+    },
+    "g2-math-addition-bis-20-a35": {
+      "question": "Im Wald sind 6 Füchse und doppelt so viele Hasen. Wie viele Hasen sind es? ___",
+      "answer": "12",
+      "hints": [
+        "Doppelt bedeutet zweimal gleich viel.",
+        "Addiere die Anzahl der Füchse zweimal."
+      ]
+    },
+    "g2-math-addition-bis-20-a36": {
+      "question": "Welche Zahl ergänzt 14 bis zum nächsten vollen Fünfer, also bis 15?",
+      "answer": "1",
+      "options": [
+        "1",
+        "2",
+        "5",
+        "6"
+      ],
+      "hints": [
+        "Beginne bei vierzehn und zähle weiter.",
+        "Wie viele Schritte fehlen bis zur genannten Zielzahl?"
+      ]
+    },
+    "g2-math-addition-bis-20-a37": {
+      "question": "Addiere die vier aufeinanderfolgenden Zahlen ab 3: ___",
+      "answer": "18",
+      "hints": [
+        "Schreibe zuerst die vier Zahlen der Reihe nach auf.",
+        "Fasse jeweils zwei Zahlen zusammen."
+      ]
+    },
+    "g2-math-addition-bis-20-a45": {
+      "question": "Du beginnst bei 20 und ziehst wiederholt 3 ab. Nach wie vielen Schritten erreichst du 2? ___",
+      "answer": "6",
+      "hints": [
+        "Schreibe nach jedem Abziehen die neue Zahl auf.",
+        "Zähle die Rechenschritte, nicht die aufgeschriebenen Zahlen."
+      ]
+    },
+    "g2-math-addition-bis-20-a47": {
+      "question": "Haus A hat 8 Fenster und Haus B hat 11 Fenster. Zusammen sind es ___ Fenster.",
+      "answer": "19",
+      "hints": [
+        "Addiere die Fenster beider Häuser.",
+        "Ergänze zuerst bis zum nächsten Zehner."
+      ]
+    },
+    "e42b": {
+      "question": "5 × 10 ÷ 5 = ___",
+      "hints": [
+        "Rechne von links nach rechts.",
+        "Prüfe, wie oft die Zahl im Zwischenergebnis enthalten ist."
+      ]
+    },
+    "e53": {
+      "question": "Welche beiden Zahlen aus dem 5er-Einmaleins liegen zwischen 30 und 45, ohne die Randzahlen?",
+      "answer": "35 und 40",
+      "options": [
+        "33 und 38",
+        "35 und 40",
+        "30 und 45",
+        "34 und 39"
+      ],
+      "hints": [
+        "Zähle von dreissig in Fünferschritten weiter.",
+        "Die obere und die untere Randzahl zählen nicht mit."
+      ]
+    },
+    "g2-math-uhrzeit-u2": {
+      "question": "Der lange Zeiger zeigt auf die 6, der kurze steht zwischen 8 und 9. Wie spät ist es?",
+      "hints": [
+        "Der lange Zeiger hat die Hälfte einer Runde zurückgelegt.",
+        "Der kurze Zeiger ist schon über die vorherige volle Stunde hinaus."
+      ]
+    },
+    "g2-math-uhrzeit-u9": {
+      "question": "Wie viele Stunden sind die Hälfte von 12 Stunden?",
+      "options": [
+        "3",
+        "4",
+        "6",
+        "12"
+      ],
+      "hints": [
+        "Teile die Zeitspanne in zwei gleich grosse Teile.",
+        "Beide Teile müssen zusammen wieder die ganze Zeitspanne ergeben."
+      ]
+    },
+    "g2-math-uhrzeit-u12": {
+      "question": "30 Minuten sind eine ___ Stunde.",
+      "answer": "halbe",
+      "hints": [
+        "Vergleiche die Minuten mit einer ganzen Stunde.",
+        "Zwei solche Zeitspannen ergeben eine ganze Stunde."
+      ]
+    },
+    "g2-math-uhrzeit-u25": {
+      "question": "Welche Uhrzeit bedeutet Mitternacht?",
+      "answer": "00:00 Uhr",
+      "options": [
+        "06:00 Uhr",
+        "12:00 Uhr",
+        "18:00 Uhr",
+        "00:00 Uhr"
+      ],
+      "hints": [
+        "Hier beginnt ein neuer Kalendertag.",
+        "Der Stundenwert beginnt im 24-Stunden-System wieder von vorn."
+      ]
+    },
+    "g2-math-uhrzeit-u32": {
+      "question": "Es ist halb sieben. Eine Viertelstunde später ist es ___ Uhr.",
+      "hints": [
+        "Übersetze zuerst halb sieben in eine digitale Uhrzeit.",
+        "Gehe von dort fünfzehn Minuten weiter."
+      ]
+    },
+    "g2-math-uhrzeit-u39": {
+      "question": "Eine Fahrt beginnt um 10:30 Uhr und endet um 12:00 Uhr. Sie dauert ___ Minuten.",
+      "answer": "90",
+      "hints": [
+        "Rechne zuerst bis zur nächsten vollen Stunde.",
+        "Zähle die restliche Zeit bis zum Ende dazu."
+      ]
+    },
+    "sb27": {
+      "question": "14 − ___ = 6",
+      "hints": [
+        "Beginne beim Ergebnis und zähle bis zur ersten Zahl.",
+        "Prüfe die gefundene Differenz mit einer Addition."
+      ]
+    },
+    "sb35": {
+      "question": "14 + ___ = 20",
+      "hints": [
+        "Ergänze bis zum nächsten vollen Zehner.",
+        "Kontrolliere die Ergänzung mit einer Subtraktion."
+      ]
+    },
+    "sb38": {
+      "question": "___ − 7 = 10",
+      "hints": [
+        "Beginne mit dem Ergebnis.",
+        "Mache das Abziehen rückgängig."
+      ]
+    },
+    "sb40": {
+      "question": "15 − 7 = ___",
+      "hints": [
+        "Ziehe zuerst bis zum nächsten Zehner ab.",
+        "Ziehe dann den übrigen Teil ab."
+      ]
+    },
+    "lm11": {
+      "question": "100 cm = ___ m",
+      "answer": "1",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm18": {
+      "question": "250 cm sind 2 m und ___ cm.",
+      "answer": "50",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm20": {
+      "question": "3 m und 50 cm sind ___ cm.",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm22": {
+      "question": "150 cm sind 1 m und ___ cm.",
+      "answer": "50",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm24": {
+      "question": "200 cm = ___ m",
+      "answer": "2",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm26": {
+      "question": "250 cm sind 2 m und ___ cm.",
+      "answer": "50",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm28": {
+      "question": "450 cm sind 4 m und ___ cm.",
+      "answer": "50",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm30": {
+      "question": "Zwei Stäbe sind 65 cm und 85 cm lang. Zusammen sind sie ___ cm lang.",
+      "answer": "150",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm36": {
+      "question": "3 m und 75 cm sind ___ cm.",
+      "answer": "375",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm40": {
+      "question": "350 cm sind 3 m und ___ cm.",
+      "answer": "50",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm44": {
+      "question": "450 cm sind 4 m und ___ cm.",
+      "answer": "50",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm46": {
+      "question": "550 cm sind 5 m und ___ cm.",
+      "answer": "50",
+      "hints": [
+        "Rechne zuerst alle Längen in dieselbe Einheit um.",
+        "Bündle jeweils hundert Zentimeter zu einem Meter."
+      ]
+    },
+    "lm34": {
+      "question": "Eine Giraffenfigur ist 30 cm hoch, eine Elefantenfigur 10 cm niedriger. Wie hoch ist die Elefantenfigur? ___ cm.",
+      "answer": "20",
+      "hints": [
+        "Vergleiche die beiden Höhen.",
+        "Ziehe den Höhenunterschied von der höheren Figur ab."
+      ]
+    },
+    "lm37": {
+      "question": "Ein Rechteck ist 3 m lang und 2 m breit. Wie lang ist sein Rand insgesamt?",
+      "answer": "10 m",
+      "options": [
+        "5 m",
+        "6 m",
+        "8 m",
+        "10 m"
+      ],
+      "hints": [
+        "Jede Seitenlänge kommt zweimal vor.",
+        "Addiere die Längen aller vier Seiten."
+      ]
+    },
+    "lm38": {
+      "question": "Ein Schritt ist hier genau 50 cm lang. Wie viele Schritte brauchst du für 2 m? ___",
+      "answer": "4",
+      "hints": [
+        "Rechne die Strecke in Zentimeter um.",
+        "Zähle die gleich langen Schritte bis zum Ziel."
+      ]
+    },
+    "lm41": {
+      "question": "Ein Weg ist 80 m lang. Du bist die Hälfte gegangen. Wie weit bist du gegangen?",
+      "answer": "40 m",
+      "options": [
+        "20 m",
+        "30 m",
+        "40 m",
+        "60 m"
+      ],
+      "hints": [
+        "Teile die gesamte Strecke in zwei gleich grosse Teile.",
+        "Prüfe, ob zweimal deine Teilstrecke die ganze Strecke ergibt."
+      ]
+    },
+    "lm48": {
+      "question": "Eine Spielfigur wird pro Zug 4 cm vorwärts geschoben. Nach 5 Zügen sind es ___ cm.",
+      "answer": "20",
+      "hints": [
+        "Jeder Zug ist gleich lang.",
+        "Addiere die Schrittlänge mehrmals oder nutze das Einmaleins."
+      ]
+    },
+    "lm50": {
+      "question": "Zwei Bänder sind je 30 cm lang. Zusammen sind sie ___ cm lang.",
+      "answer": "60",
+      "hints": [
+        "Beide Stücke sind gleich lang.",
+        "Verdopple die Länge eines Stücks."
+      ]
+    },
+    "g2-math-geld-chf-g30": {
+      "question": "Zwei Schülerinnen teilen CHF 9 gleichmässig. Wie viel bekommt jede?",
+      "answer": "Jede bekommt CHF 4.50",
+      "hints": [
+        "Franken können auch in Rappen gewechselt werden.",
+        "Prüfe, ob zweimal ein Anteil wieder den Gesamtbetrag ergibt."
+      ]
+    },
+    "g2-math-geld-chf-g39": {
+      "question": "Vier Münzen zu je CHF 5 ergeben zusammen:",
+      "answer": "CHF 20",
+      "options": [
+        "CHF 10",
+        "CHF 15",
+        "CHF 20",
+        "CHF 25"
+      ],
+      "hints": [
+        "Alle Münzen haben denselben Wert.",
+        "Zähle in passenden gleich grossen Schritten."
+      ]
+    },
+    "g2-math-geld-chf-g40": {
+      "question": "Ein Buch kostet CHF 8. Wie viel kosten 6 gleiche Bücher? CHF ___",
+      "answer": "48",
+      "hints": [
+        "Der Preis bleibt für jedes Buch gleich.",
+        "Nutze die Malrechnung mit der Anzahl Bücher."
+      ]
+    },
+    "as37": {
+      "question": "Welcher Rechenweg ergänzt 49 sinnvoll zum nächsten Zehner, um 49 + 37 zu rechnen?",
+      "answer": "50 + 37 − 1 = 86",
+      "options": [
+        "50 + 37 − 1 = 86",
+        "50 + 37 + 1 = 88",
+        "40 + 37 = 77",
+        "50 + 30 = 80"
+      ],
+      "hints": [
+        "Erhöhe die erste Zahl zunächst um einen Einer.",
+        "Diese Änderung musst du am Schluss wieder ausgleichen."
+      ]
+    },
+    "as40": {
+      "question": "Vier aufeinanderfolgende gerade Zahlen enden mit 28. Ihre Summe ist ___.",
+      "answer": "100",
+      "hints": [
+        "Gehe von der grössten Zahl in Zweierschritten zurück.",
+        "Addiere die vier gefundenen Zahlen."
+      ]
+    },
+    "as43": {
+      "question": "100 − 25 − 25 =?",
+      "options": [
+        "25",
+        "50",
+        "75",
+        "100"
+      ],
+      "hints": [
+        "Ziehe die beiden gleichen Teilmengen nacheinander ab.",
+        "Du kannst die beiden Teilmengen auch zuerst zusammenzählen."
+      ]
+    },
+    "as45": {
+      "options": [
+        "30 + 30 + 39",
+        "33 + 33 + 32",
+        "25 + 35 + 40",
+        "40 + 40 + 20"
+      ],
+      "hints": [
+        "Addiere zuerst zwei Zahlen jeder Auswahl.",
+        "Zähle die dritte dazu und vergleiche mit dem Zielwert."
+      ]
+    },
+    "as47": {
+      "question": "Drei Schachteln enthalten je 20 Stifte. Wie viele Stifte sind es zusammen?",
+      "hints": [
+        "Alle Schachteln enthalten gleich viele Stifte.",
+        "Addiere die gleiche Anzahl für jede Schachtel."
+      ]
+    },
+    "as48": {
+      "question": "Addiere alle geraden Zahlen von 2 bis 10: ___",
+      "answer": "30",
+      "hints": [
+        "Schreibe die Zahlen in Zweierschritten auf.",
+        "Fasse Zahlen zu praktischen Paaren zusammen."
+      ]
+    },
+    "as50": {
+      "question": "Drei Zahlen haben die Summe 90. Die zweite ist 10 grösser als die erste, die dritte 20 grösser. Die kleinste Zahl ist ___.",
+      "hints": [
+        "Ziehe die beiden zusätzlichen Beträge von der Summe ab.",
+        "Teile den verbleibenden Betrag in drei gleich grosse Teile."
+      ]
+    },
+    "e38": {
+      "question": "Finde immer zwei gleiche Rechenkarten!",
+      "pairs": [
+        {
+          "id": "mal3-5",
+          "label": "3 × 5 = 15"
+        },
+        {
+          "id": "mal4-6",
+          "label": "4 × 6 = 24"
+        },
+        {
+          "id": "mal3-8",
+          "label": "3 × 8 = 24"
+        },
+        {
+          "id": "mal4-9",
+          "label": "4 × 9 = 36"
+        }
+      ],
+      "hints": [
+        "Merke dir die ganze Rechnung und die Position jeder Karte.",
+        "Suche zwei Karten mit genau derselben Rechnung."
+      ]
+    },
+    "e58": {
+      "question": "3 × ___ = 36",
+      "hints": [
+        "Zähle in Dreierschritten bis zum Ergebnis.",
+        "Wie oft hast du die gleiche Gruppe gebraucht?"
+      ]
+    },
+    "e70": {
+      "question": "Welche Zahl ergänzt 3 × ___ = 36?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "hints": [
+        "Mache zuerst die letzte Rechenoperation rückgängig.",
+        "Prüfe die eingesetzte Zahl mit der vollständigen Rechnung."
+      ]
+    },
+    "e80": {
+      "question": "4 × ___ − 4 = 28. Welche Zahl fehlt?",
+      "hints": [
+        "Mache zuerst die letzte Rechenoperation rückgängig.",
+        "Prüfe die eingesetzte Zahl mit der vollständigen Rechnung."
+      ]
+    },
+    "sy23": {
+      "question": "Eine Raute, die kein Quadrat ist, hat ___ Spiegelachsen.",
+      "hints": [
+        "Vergleiche die Linien durch gegenüberliegende Ecken.",
+        "Beim Falten müssen beide Hälften genau aufeinanderliegen."
+      ]
+    },
+    "sy26": {
+      "options": [
+        "Dreieck mit drei verschieden langen Seiten",
+        "Dreieck mit 2 gleich langen Seiten",
+        "Ein runder Körper ohne Ecken",
+        "Viereck mit vier gleich langen Seiten"
+      ],
+      "hints": [
+        "Achte auf das Wort gleich im Namen.",
+        "Vergleiche die Längen der Seiten miteinander."
+      ]
+    },
+    "sy34": {
+      "options": [
+        "Quadrat",
+        "Gleichschenkliges, nicht gleichseitiges Dreieck",
+        "Kreis",
+        "Rechteck"
+      ],
+      "answer": "Gleichschenkliges, nicht gleichseitiges Dreieck",
+      "hints": [
+        "Prüfe mögliche Faltlinien jeder Form.",
+        "Gesucht ist eine Form mit nur einer passenden Faltlinie."
+      ]
+    },
+    "sy27": {
+      "question": "Ein Siebeneck hat ___ Seiten.",
+      "hints": [
+        "Der Name nennt die Anzahl der Ecken.",
+        "Bei dieser Figur gibt es gleich viele Ecken und Seiten."
+      ]
+    },
+    "sy37": {
+      "question": "Wie viele Spiegelachsen hat ein Quadrat?",
+      "answer": "4",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "hints": [
+        "Prüfe Faltlinien durch gegenüberliegende Seiten.",
+        "Prüfe auch Faltlinien durch gegenüberliegende Ecken."
+      ]
+    },
+    "sy38": {
+      "question": "Ein Rechteck hat zwei Paare gegenüberliegender Seiten. Wie viele Seiten sind das zusammen? ___",
+      "answer": "4",
+      "hints": [
+        "Ein Paar besteht aus zwei Teilen.",
+        "Zähle beide Paare zusammen."
+      ]
+    },
+    "sy41": {
+      "question": "Welche Form entsteht, wenn du ein Quadrat entlang einer Diagonale halbierst?",
+      "answer": "Zwei Dreiecke",
+      "options": [
+        "Zwei Dreiecke",
+        "Zwei Kreise",
+        "Zwei Fünfecke",
+        "Zwei Kugeln"
+      ],
+      "hints": [
+        "Eine Diagonale verbindet gegenüberliegende Ecken.",
+        "Zähle die Seiten der beiden entstehenden Teile."
+      ]
+    },
+    "sy42": {
+      "question": "Ein Quadrat hat ___ rechte Winkel.",
+      "answer": "4",
+      "hints": [
+        "Prüfe jede Ecke des Quadrats.",
+        "Alle Ecken haben dieselbe Form."
+      ]
+    },
+    "sy48": {
+      "question": "Beim Falten an einer Spiegelachse liegen beide Hälften genau ___.",
+      "answer": "aufeinander",
+      "hints": [
+        "Die Faltlinie teilt die Figur in passende Hälften.",
+        "Keine Hälfte soll über die andere hinausragen."
+      ],
+      "altAnswers": [
+        "übereinander",
+        "deckungsgleich"
+      ]
+    },
+    "sy49": {
+      "question": "Welche Figur hat keine Spiegelachse?",
+      "answer": "Ein unregelmässiges Dreieck mit drei verschieden langen Seiten",
+      "options": [
+        "Ein Quadrat",
+        "Ein Kreis",
+        "Ein unregelmässiges Dreieck mit drei verschieden langen Seiten",
+        "Ein gleichseitiges Dreieck"
+      ],
+      "hints": [
+        "Prüfe, ob eine Faltlinie zwei passende Hälften bildet.",
+        "Bei einer Form passen die Hälften an keiner Linie genau zusammen."
+      ]
+    },
+    "sy50": {
+      "question": "Ein Rechteck, das kein Quadrat ist, hat ___ Spiegelachsen.",
+      "answer": "2",
+      "hints": [
+        "Prüfe eine Linie durch die Mitte von oben nach unten.",
+        "Prüfe auch eine Linie durch die Mitte von links nach rechts."
+      ]
+    },
+    "sc1": {
+      "question": "In einem Glas liegen 19 Murmeln. Welche Zehnerzahl ist eine gute Schätzung?",
+      "options": [
+        "Ca. 10",
+        "Ca. 20",
+        "Ca. 50",
+        "Ca. 100"
+      ],
+      "hints": [
+        "Vergleiche die benachbarten vollen Zehner.",
+        "Welche davon liegt näher bei der angegebenen Anzahl?"
+      ]
+    },
+    "sc11": {
+      "question": "Ein Regal hat 5 Fächer mit je ungefähr 10 Büchern. Wie viele Bücher sind es ungefähr?",
+      "answer": "Ca. 50",
+      "options": [
+        "Ca. 10",
+        "Ca. 25",
+        "Ca. 50",
+        "Ca. 100"
+      ],
+      "hints": [
+        "Jedes Fach trägt ungefähr gleich viel zur Gesamtmenge bei.",
+        "Zähle die Zehnergruppen zusammen."
+      ]
+    },
+    "sc20": {
+      "question": "Runde 34 auf volle Zehner: ___",
+      "answer": "30",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc22": {
+      "question": "Runde 65 auf volle Zehner: ___",
+      "answer": "70",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc24": {
+      "question": "Runde 24 auf volle Zehner: ___",
+      "answer": "20",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc26": {
+      "question": "Runde 75 auf volle Zehner: ___",
+      "answer": "80",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc28": {
+      "question": "Runde 25 auf volle Zehner: ___",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc32": {
+      "question": "Runde 93 auf volle Zehner: ___",
+      "answer": "90",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc34": {
+      "question": "Runde 49 auf volle Zehner: ___",
+      "answer": "50",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc38": {
+      "question": "Runde 38 auf volle Zehner: ___",
+      "answer": "40",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc40": {
+      "question": "Runde 84 auf volle Zehner: ___",
+      "answer": "80",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc42": {
+      "question": "Runde 56 auf volle Zehner: ___",
+      "answer": "60",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc44": {
+      "question": "Runde 78 auf volle Zehner: ___",
+      "answer": "80",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc46": {
+      "question": "Runde 99 auf volle Zehner: ___",
+      "answer": "100",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc50": {
+      "question": "Runde 46 auf volle Zehner: ___",
+      "answer": "50",
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc29": {
+      "question": "Runde 16 auf volle Zehner.",
+      "answer": "20",
+      "options": [
+        "10",
+        "16",
+        "20",
+        "30"
+      ],
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc31": {
+      "question": "Runde 45 auf volle Zehner.",
+      "answer": "50",
+      "options": [
+        "40",
+        "45",
+        "50",
+        "60"
+      ],
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc41": {
+      "question": "Runde 49 auf volle Zehner.",
+      "answer": "50",
+      "options": [
+        "40",
+        "49",
+        "50",
+        "60"
+      ],
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc47": {
+      "question": "Runde 95 auf volle Zehner.",
+      "answer": "100",
+      "options": [
+        "90",
+        "95",
+        "100",
+        "101"
+      ],
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc49": {
+      "question": "Runde 72 auf volle Zehner.",
+      "answer": "70",
+      "options": [
+        "60",
+        "70",
+        "72",
+        "80"
+      ],
+      "hints": [
+        "Finde die beiden benachbarten vollen Zehner.",
+        "Bei fünf oder mehr Einern rundest du auf, sonst ab."
+      ]
+    },
+    "sc17": {
+      "question": "7 × 9 ergibt genau:",
+      "answer": "63",
+      "options": [
+        "49",
+        "56",
+        "63",
+        "72"
+      ],
+      "hints": [
+        "Nutze ein bekanntes Nachbarprodukt.",
+        "Ziehe von sieben Zehnern eine Siebenergruppe ab."
+      ]
+    },
+    "sc21": {
+      "question": "Schätze 53 − 19, indem du beide Zahlen zuerst auf volle Zehner rundest.",
+      "answer": "Ca. 30",
+      "options": [
+        "Ca. 20",
+        "Ca. 30",
+        "Ca. 40",
+        "Ca. 50"
+      ],
+      "hints": [
+        "Runde zuerst jede Zahl einzeln.",
+        "Subtrahiere danach die beiden gerundeten Zahlen."
+      ]
+    },
+    "sc23": {
+      "question": "Schätze 97 − 43, indem du beide Zahlen zuerst auf volle Zehner rundest.",
+      "answer": "Ca. 60",
+      "options": [
+        "Ca. 40",
+        "Ca. 50",
+        "Ca. 60",
+        "Ca. 70"
+      ],
+      "hints": [
+        "Runde zuerst beide Zahlen auf Zehner.",
+        "Rechne mit diesen vereinfachten Zahlen weiter."
+      ]
+    },
+    "sc25": {
+      "question": "Wie viele Minuten sind eine Stunde ungefähr?",
+      "answer": "60",
+      "options": [
+        "6",
+        "30",
+        "60",
+        "100"
+      ],
+      "hints": [
+        "Denke an eine ganze Runde des Minutenzeigers.",
+        "Prüfe die bekannte Zeiteinheit."
+      ]
+    },
+    "sc27": {
+      "question": "Ein Weg dauert ungefähr 28 Minuten. Welche gerundete Zeit passt am besten?",
+      "answer": "Ca. 30 Minuten",
+      "options": [
+        "Ca. 10 Minuten",
+        "Ca. 20 Minuten",
+        "Ca. 30 Minuten",
+        "Ca. 60 Minuten"
+      ],
+      "hints": [
+        "Vergleiche die Zeit mit den benachbarten Zehnern.",
+        "Wähle die näher liegende Zeit."
+      ]
+    },
+    "sa25c": {
+      "question": "Julia hat 30 Fr. Die Schuhe kosten 22 Fr. Wie viele Franken bleiben übrig? ___",
+      "answer": "8",
+      "hints": [
+        "Vergleiche den Preis mit dem vorhandenen Geld.",
+        "Ziehe den Preis vom Geldbetrag ab."
+      ]
+    },
+    "sa2_17": {
+      "question": "Zur Klasse gehören 18 Kinder. Heute sind 6 krank und fehlen. Wie viele Kinder sind heute in der Schule?",
+      "hints": [
+        "Nicht alle Kinder der Klasse sind heute anwesend.",
+        "Ziehe die fehlenden Kinder von der Klassengrösse ab."
+      ]
+    },
+    "sa34c": {
+      "question": "Ein Kind geht täglich 2 km zu Fuss. Wie weit geht es in 5 Tagen?",
+      "answer": "10 km",
+      "options": [
+        "5 km",
+        "7 km",
+        "10 km",
+        "12 km"
+      ],
+      "hints": [
+        "An jedem Tag wird dieselbe Strecke zurückgelegt.",
+        "Zähle die Tagesstrecke für jeden der genannten Tage."
+      ]
+    },
+    "sa36c": {
+      "answer": "2 Stunden 30 Minuten",
+      "options": [
+        "1 Stunde 30 Minuten",
+        "2 Stunden",
+        "2 Stunden 30 Minuten",
+        "3 Stunden"
+      ],
+      "hints": [
+        "Gehe zuerst von der Abfahrt bis zur nächsten vollen Stunde.",
+        "Zähle die übrigen vollen Stunden und Minuten dazu."
+      ]
+    },
+    "sa38c": {
+      "question": "Eine Bäckerei backt 24 kleine Kuchen. Für jeden Kuchen braucht sie 3 Eier. Wie viele Eier braucht sie?",
+      "hints": [
+        "Für jeden Kuchen wird dieselbe Anzahl Eier gebraucht.",
+        "Multipliziere die Anzahl Kuchen mit den Eiern pro Kuchen."
+      ]
+    },
+    "dd4c": {
+      "question": "In einem Bilddiagramm steht jedes Bild für 5 Blumen. Es gibt 3 Bilder. Wie viele Blumen sind das?",
+      "hints": [
+        "Ein Bild steht für mehrere Blumen.",
+        "Zähle den Wert eines Bildes für jedes vorhandene Bild dazu."
+      ]
+    },
+    "dd8c": {
+      "question": "In einem Bilddiagramm steht jedes Bild für 2 Pizzen. Klasse 1 hat 3 Bilder, Klasse 2 hat 4 Bilder. Welche Klasse ass mehr?",
+      "hints": [
+        "Beide Klassen verwenden denselben Bildwert.",
+        "Vergleiche zuerst die Anzahl der Bilder."
+      ]
+    },
+    "dd9c": {
+      "question": "Eine Tabelle zeigt: März 15 °C, April 18 °C, Mai 22 °C. In welchem Monat war es am wärmsten?",
+      "hints": [
+        "Vergleiche die drei Temperaturwerte.",
+        "Suche zum höchsten Wert den passenden Monat."
+      ]
+    },
+    "dd11c": {
+      "answer": "Dienstag",
+      "altAnswers": [
+        "Dienstag (15°C)",
+        "Dienstag 15°C"
+      ],
+      "hints": [
+        "Vergleiche die angegebenen Werte miteinander.",
+        "Nenne nur den zur Frage passenden Namen oder Abschnitt."
+      ]
+    },
+    "dd15c": {
+      "answer": "Pizza",
+      "altAnswers": [
+        "Pizza (10)"
+      ],
+      "hints": [
+        "Vergleiche die angegebenen Werte miteinander.",
+        "Nenne nur den zur Frage passenden Namen oder Abschnitt."
+      ]
+    },
+    "dd17c": {
+      "answer": "C",
+      "altAnswers": [
+        "Weg C",
+        "C (5 Min)"
+      ],
+      "hints": [
+        "Vergleiche die angegebenen Werte miteinander.",
+        "Nenne nur den zur Frage passenden Namen oder Abschnitt."
+      ]
+    },
+    "dd21c": {
+      "answer": "Mittwoch",
+      "altAnswers": [
+        "Mittwoch (45 Minuten)"
+      ],
+      "hints": [
+        "Vergleiche die angegebenen Werte miteinander.",
+        "Nenne nur den zur Frage passenden Namen oder Abschnitt."
+      ],
+      "question": "Die Lernzeit beträgt am Montag 30 Minuten, am Dienstag 20 Minuten und am Mittwoch 45 Minuten. An welchem Tag wurde am längsten gelernt?"
+    },
+    "dd31c": {
+      "answer": "2A",
+      "altAnswers": [
+        "Klasse 2A",
+        "2A (20 Schüler)"
+      ],
+      "hints": [
+        "Vergleiche die angegebenen Werte miteinander.",
+        "Nenne nur den zur Frage passenden Namen oder Abschnitt."
+      ]
+    },
+    "dd35c": {
+      "answer": "Woche 3",
+      "altAnswers": [
+        "3",
+        "Woche 3 (150)"
+      ],
+      "hints": [
+        "Vergleiche die angegebenen Werte miteinander.",
+        "Nenne nur den zur Frage passenden Namen oder Abschnitt."
+      ]
+    },
+    "dd14c": {
+      "answer": "Der Wert ist doppelt so gross geworden",
+      "options": [
+        "Der Wert ist doppelt so gross geworden",
+        "Der Wert ist gleich geblieben",
+        "Der Wert ist halb so gross geworden",
+        "Der Wert ist kleiner geworden"
+      ],
+      "hints": [
+        "Vergleiche den neuen Wert mit dem alten.",
+        "Prüfe, wie oft der alte Wert im neuen enthalten ist."
+      ]
+    },
+    "dd25c": {
+      "question": "Im Balkendiagramm hat eine Klasse 28 Kinder und eine andere 20 Kinder. Wie gross ist der Unterschied? ___ Kinder."
+    },
+    "dd27c": {
+      "question": "Eine Tabelle zeigt: Januar 12 Besuche, Februar 11, März 9. Die Zahl der Besuche ___ im Verlauf der Monate.",
+      "answer": "sinkt",
+      "hints": [
+        "Lies die Werte in zeitlicher Reihenfolge.",
+        "Werden die Werte grösser oder kleiner?"
+      ],
+      "altAnswers": [
+        "nimmt ab",
+        "wird kleiner"
+      ]
+    },
+    "dd2_16": {
+      "question": "Jedes Kind nennt genau ein Lieblingstier: 10 nennen Hunde, 6 Katzen und 4 Fische. Wie viele Kinder wurden befragt? ___",
+      "hints": [
+        "Jedes Kind wird genau einmal gezählt.",
+        "Addiere die Anzahlen der drei Gruppen."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z1": {
+      "hints": [
+        "49, dann kommt eine runde Zahl.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z2": {
+      "hints": [
+        "Dreissig = 30, sieben = 7",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z3": {
+      "hints": [
+        "Zweistellig = zwei Ziffern, die grösste ist 9 und 9.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z7": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z8": {
+      "hints": [
+        "6 Zehner und ___ Einer = 63",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z11": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z19": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z23": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z30": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z36": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z37": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z39": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z43": {
+      "hints": [
+        "Suche Zahlen, bei denen die Zehnerzahl doppelt so gross ist wie die Einerzahl.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z45": {
+      "hints": [
+        "52, 54, 56, 58 — wie viele?",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-zahlen-bis-100-z46": {
+      "hints": [
+        "Prüfe getrennt die Zehnerstelle und die Einerstelle.",
+        "Vergleiche die Zahl mit ihren Nachbarzahlen und der beschriebenen Bedingung."
+      ]
+    },
+    "g2-math-addition-bis-20-a2": {
+      "hints": [
+        "Überlege, was gegeben ist und welche Anzahl noch gesucht wird.",
+        "Nutze den nächsten Zehner als Zwischenstation und prüfe durch Rückwärtsrechnen."
+      ]
+    },
+    "g2-math-addition-bis-20-a9": {
+      "hints": [
+        "Überlege, was gegeben ist und welche Anzahl noch gesucht wird.",
+        "Nutze den nächsten Zehner als Zwischenstation und prüfe durch Rückwärtsrechnen."
+      ]
+    },
+    "g2-math-addition-bis-20-a20": {
+      "hints": [
+        "Rechne jede durch. Welche ergibt genau 20?",
+        "Nutze den nächsten Zehner als Zwischenstation und prüfe durch Rückwärtsrechnen."
+      ]
+    },
+    "g2-math-addition-bis-20-a28": {
+      "hints": [
+        "Rechne jede durch.",
+        "Nutze den nächsten Zehner als Zwischenstation und prüfe durch Rückwärtsrechnen."
+      ]
+    },
+    "g2-math-addition-bis-20-a33": {
+      "hints": [
+        "Addiere zuerst die Zehner, dann die Einer.",
+        "Nutze den nächsten Zehner als Zwischenstation und prüfe durch Rückwärtsrechnen."
+      ]
+    },
+    "g2-math-addition-bis-20-a39": {
+      "hints": [
+        "Überlege, was gegeben ist und welche Anzahl noch gesucht wird.",
+        "Nutze den nächsten Zehner als Zwischenstation und prüfe durch Rückwärtsrechnen."
+      ]
+    },
+    "g2-math-addition-bis-20-a44": {
+      "hints": [
+        "Rechne jeden Term aus. Welcher ergibt NICHT 18?",
+        "Nutze den nächsten Zehner als Zwischenstation und prüfe durch Rückwärtsrechnen."
+      ]
+    },
+    "e2": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e6": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e14": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e15c": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e17": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e18": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e24": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e26": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e28": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e41b": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e46": {
+      "hints": [
+        "Denke an gleich grosse Gruppen.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e49": {
+      "hints": [
+        "Tauschgesetz: a×b = b×a",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e50": {
+      "hints": [
+        "Denke an gleich grosse Gruppen.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "e52": {
+      "hints": [
+        "Stelle dir gleich grosse Gruppen vor.",
+        "Nutze ein bekanntes Nachbarprodukt und ergänze oder entferne eine Gruppe."
+      ]
+    },
+    "g2-math-uhrzeit-u3": {
+      "hints": [
+        "Frühstück = am Morgen",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u4": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u5": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u6": {
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u7": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u8": {
+      "hints": [
+        "Viertel = 15 Minuten",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u10": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u11": {
+      "hints": [
+        "1 Stunde = 60 Minuten. 2 + 1 = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u13": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u14": {
+      "hints": [
+        "9 + 2 = 11.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "u15c": {
+      "hints": [
+        "Kurzer Zeiger = Stunde. Langer auf 12 = volle Stunde!",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "u15d": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u16": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u17": {
+      "hints": [
+        "12 − 8 = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u18": {
+      "hints": [
+        "30 + 45 = 75 Minuten = 1h 15min. 10+1=11h, 15min.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u19": {
+      "hints": [
+        "45 − 15 = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u20": {
+      "hints": [
+        "Viertel nach = +15 Minuten. 11:00 + 15min = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u21": {
+      "hints": [
+        "Wie viele Minuten von :00 bis :45?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u23": {
+      "hints": [
+        "11:45 + 30 Min = 12:15",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u24": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u26": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u27": {
+      "hints": [
+        "Von 20:30 bis 24:00 = 3.5h. Von 24:00 bis 6:30 = 6.5h. Total?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u28": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u29": {
+      "hints": [
+        "Viertel vor = 15 Minuten VOR der nächsten Stunde.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u30": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u33": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u34": {
+      "hints": [
+        "14:30 + 1h = 15:30. 15:30 + 45min = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u35": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u36": {
+      "hints": [
+        "15:00 + 25 Min = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u37": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u38": {
+      "hints": [
+        "8 × 7 = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u40": {
+      "hints": [
+        "Bus: 7:50+20=8:10. Ankunft: 7:50+15=8:05. 8:05 < 8:10?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u41": {
+      "hints": [
+        "8:00, 10:00, 12:00 — welche liegen ZWISCHEN 7:00 und 13:00?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u42": {
+      "hints": [
+        "4 Stunden × 60 Min/h = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u43": {
+      "hints": [
+        "Trenne die Rechnung in volle Stunden und verbleibende Minuten.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u44": {
+      "hints": [
+        "Gehe auf der Uhr eine Stunde weiter.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u45": {
+      "hints": [
+        "10:05 + 5 Minuten = ?",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "g2-math-uhrzeit-u46": {
+      "hints": [
+        "Gehe auf der Uhr eine Stunde weiter.",
+        "Gehe auf der Uhr in kleinen Zeitabschnitten vorwärts oder rückwärts."
+      ]
+    },
+    "sb2": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb6": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb8": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb10": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb12": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb13": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb14": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb15": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb16": {
+      "hints": [
+        "20 − 15: wie viele von 15 bis 20?",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb17": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb19": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb20": {
+      "hints": [
+        "13 + 7 = 20? Überprüfe!",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb25": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb28": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb29": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb31": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb32": {
+      "hints": [
+        "7+4=11. 20−11=9.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb33": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb34": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb36": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb37": {
+      "hints": [
+        "Zähle in passenden Schritten rückwärts.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb39": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb41": {
+      "hints": [
+        "20−6=14, 14−6=8, 8−6=2. Wie viele Schritte?",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb42": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb43": {
+      "hints": [
+        "Zähle in passenden Schritten rückwärts.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb44": {
+      "hints": [
+        "Zähle in passenden Schritten rückwärts.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb45": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb46": {
+      "hints": [
+        "Tom + Lisa = 18, Lisa = Tom + 4. Also: 2 × Tom + 4 = 18.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb48": {
+      "hints": [
+        "20,17,14,11,8,5,2 — zähle die Minusschritte!",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb49": {
+      "hints": [
+        "Prüfe, was weggenommen wird und was übrig bleibt.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "sb50": {
+      "hints": [
+        "Zähle in passenden Schritten rückwärts.",
+        "Kontrolliere die Rechnung, indem du den abgezogenen Teil wieder dazuzählst."
+      ]
+    },
+    "lm2": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm4": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm5": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm6": {
+      "hints": [
+        "Kilometer = sehr grosse Strecken",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm7": {
+      "hints": [
+        "1 m = 100 cm. Was bleibt übrig, wenn du 100 von 150 abziehst?",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm8": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm9": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm10": {
+      "hints": [
+        "1 m = 100 cm. 80 < 100.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm12": {
+      "hints": [
+        "Es hat Zentimeter-Striche!",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm13": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm14": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm15": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm16": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm17": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm17b": {
+      "hints": [
+        "Eine normale Tür ist etwa 1 m breit!",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm19": {
+      "hints": [
+        "30 − 17 = ?",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm21": {
+      "hints": [
+        "1 m ist wie die Länge einer Gitarre!",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm25": {
+      "hints": [
+        "1 m 40 cm = 140 cm. 140 > 135!",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm27": {
+      "hints": [
+        "Bringe die Längen zunächst in dieselbe Einheit.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm29": {
+      "hints": [
+        "100 Zentimeter sind 1 Meter.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm31": {
+      "hints": [
+        "Kilometer für lange Wege und Reisen!",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm33": {
+      "hints": [
+        "1 cm = 10 mm. 100 cm × 10 = ?",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm35": {
+      "hints": [
+        "Die Hälfte der Zeit = die Hälfte der Strecke.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm39": {
+      "hints": [
+        "2100 cm = 21 m. 47 > 21!",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm43": {
+      "hints": [
+        "100 Zentimeter sind 1 Meter.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm45": {
+      "hints": [
+        "100 Zentimeter sind 1 Meter.",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "lm49": {
+      "hints": [
+        "24 ÷ 4 Seiten = ?",
+        "Prüfe danach, ob du vergleichen, zusammenzählen oder einen Unterschied berechnen musst."
+      ]
+    },
+    "g2-math-geld-chf-g1": {
+      "hints": [
+        "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g2": {
+      "hints": [
+        "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g3": {
+      "hints": [
+        "100 Rp - 80 Rp = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g4": {
+      "hints": [
+        "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g5": {
+      "hints": [
+        "Rechne erst beide Beträge aus — welcher ist grösser?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g6": {
+      "hints": [
+        "5.00 - 3.80 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g8": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g10": {
+      "hints": [
+        "3 > 2.5!",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g12": {
+      "hints": [
+        "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g13": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g14": {
+      "hints": [
+        "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g15": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g16": {
+      "hints": [
+        "5.00 − 3.20 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g17": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g19": {
+      "hints": [
+        "2.40+1.20=3.60, +1.80=?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g20": {
+      "hints": [
+        "10.00 − 6.75 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g21": {
+      "hints": [
+        "3 × 4.50 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g22": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g24": {
+      "hints": [
+        "20.00 − 12.80 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g26": {
+      "hints": [
+        "15 ÷ 3 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g27": {
+      "hints": [
+        "Prüfe, welche Beträge bezahlt, geteilt oder zurückgegeben werden.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g28": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g29": {
+      "hints": [
+        "2×2.90=5.80. 8.00−5.80=?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g32": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g34": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g35": {
+      "hints": [
+        "50.00 − 23.50 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g36": {
+      "hints": [
+        "47.10 ÷ 3 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g37": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g41": {
+      "hints": [
+        "90 ÷ 15 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g42": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g43": {
+      "hints": [
+        "3×0.75=2.25, 2×1.10=2.20, 2.25+2.20=?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g44": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g45": {
+      "hints": [
+        "1500 ÷ 100 = ?",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g46": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g47": {
+      "hints": [
+        "Addiere die beiden Beträge.",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "g2-math-geld-chf-g49": {
+      "hints": [
+        "5×2.40=12. 12 > 10!",
+        "Rechne Franken und Rappen sorgfältig und kontrolliere durch Zusammenzählen."
+      ]
+    },
+    "as4": {
+      "hints": [
+        "Ziehe zuerst die Zehner ab, dann die Einer — Schritt für Schritt",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as5": {
+      "hints": [
+        "Probiere jede aus.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as8": {
+      "hints": [
+        "55 − 17 = ?",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as9": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as10": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as12": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as15": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as17": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as18": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as20": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as21": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as22": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as23": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as24": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as25": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as26": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as28": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as29": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as31": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as32": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as33": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as34": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as35": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as36": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as38": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as39": {
+      "hints": [
+        "Addiere zuerst die Zehner, dann die Einer.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as41": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as42": {
+      "hints": [
+        "Addiere zuerst die Zehner, dann die Einer.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as44": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as46": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "as49": {
+      "hints": [
+        "Rechne zuerst mit den Zehnern und danach mit den Einern.",
+        "Prüfe das Ergebnis mit der umgekehrten Rechenoperation."
+      ]
+    },
+    "e34": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e37": {
+      "hints": [
+        "3 × 9 = ?",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e43": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e47x2": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e49x2": {
+      "hints": [
+        "Jede Zahl × 1 = die Zahl selbst!",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e55": {
+      "hints": [
+        "4, 8, 12, 16, 20, 24 — wie viele Schritte?",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e56": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e57": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e60": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e61": {
+      "hints": [
+        "3×8=24, 4×6=24!",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e64": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e65": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e66": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e67": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e68": {
+      "hints": [
+        "Denke an gleich grosse Gruppen.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e69": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e71": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e72": {
+      "hints": [
+        "4 Seiten × 4 cm = ?",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e73": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e74": {
+      "hints": [
+        "Denke an gleich grosse Gruppen.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e75": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e77": {
+      "hints": [
+        "Denke an gleich grosse Gruppen.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e78": {
+      "hints": [
+        "Denke an gleich grosse Gruppen.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "e79": {
+      "hints": [
+        "Stelle dir Dreiergruppen oder Vierergruppen vor.",
+        "Nutze ein Nachbarprodukt und zähle eine passende Gruppe hinzu oder weg."
+      ]
+    },
+    "sy7": {
+      "hints": [
+        "Falte ihn der Mitte — sind beide Hälften gleich?",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy8": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy9": {
+      "hints": [
+        "Wie ein Ball!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy11": {
+      "hints": [
+        "Keine Kante, keine Ecke!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy12": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy14": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy15": {
+      "hints": [
+        "Spiegelachse: links = rechts beim Schmetterling!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy16": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy17": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy18": {
+      "hints": [
+        "Gleichseitig = alle Seiten gleich!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy20": {
+      "hints": [
+        "Spiegle D waagerecht — ober- und untere Hälfte gleich!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy22": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy24": {
+      "hints": [
+        "Eine Spitze oben, quadratische Basis unten!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy25": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy28": {
+      "hints": [
+        "n-Eck hat n Seiten!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy30": {
+      "hints": [
+        "Wie ein Eiswaffelhorn!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy32": {
+      "hints": [
+        "Vergleiche die beiden Hälften der Form.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy33": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy35": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy36": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy39": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy40": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy43": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy45": {
+      "hints": [
+        "Kreise haben KEINE Ecken!",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy46": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sy47": {
+      "hints": [
+        "Betrachte Seiten, Ecken und mögliche Faltlinien der beschriebenen Figur.",
+        "Prüfe am Modell oder an einer Skizze, welche Eigenschaft genau gefragt ist."
+      ]
+    },
+    "sc2": {
+      "hints": [
+        "Ersetze schwierige Zahlen durch nahe, einfacher zu rechnende Zahlen.",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc6": {
+      "hints": [
+        "5 oder mehr → aufrunden.",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc15": {
+      "hints": [
+        "30+30=60. Passt!",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc19": {
+      "hints": [
+        "49 ≈ 50. 50×2=100!",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc30": {
+      "hints": [
+        "Ersetze schwierige Zahlen durch nahe, einfacher zu rechnende Zahlen.",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc33": {
+      "hints": [
+        "Vergleiche den Abstand zum unteren und oberen Zehner.",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc35": {
+      "hints": [
+        "500+300+200=1000m=1km!",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc37": {
+      "hints": [
+        "Vergleiche den Abstand zum unteren und oberen Zehner.",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc39": {
+      "hints": [
+        "Vergleiche den Abstand zum unteren und oberen Zehner.",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc43": {
+      "hints": [
+        "Vergleiche den Abstand zum unteren und oberen Zehner.",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sc45": {
+      "hints": [
+        "Normal-Schritttempo: etwa 5 km/h!",
+        "Prüfe, ob die ungefähre Grössenordnung zur Aufgabe passt."
+      ]
+    },
+    "sa23c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ]
+    },
+    "sa24c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ]
+    },
+    "sa26c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ]
+    },
+    "sa27c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ]
+    },
+    "sa29c": {
+      "hints": [
+        "Welche Angaben brauchst du, und was soll am Ende herauskommen?",
+        "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ]
+    },
+    "sa33c": {
+      "hints": [
+        "Gleich viel = gleichviel.",
+        "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ]
+    },
+    "sa37c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ]
+    },
+    "sa2_11": {
+      "hints": [
+        "Welche Angaben brauchst du, und was soll am Ende herauskommen?",
+        "Wähle passend zur Geschichte Plus, Minus, Mal oder Teilen und prüfe am Text."
+      ]
+    },
+    "dd7c": {
+      "hints": [
+        "2 + 3 + 2 = ?",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "dd10c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "dd32c": {
+      "hints": [
+        "Vergleiche die Zahlen.",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "dd36c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "dd37c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "dd38c": {
+      "hints": [
+        "Addiere beide Anzahlen.",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "dd40c": {
+      "hints": [
+        "20 ist die grösste Zahl.",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "dd2_14": {
+      "hints": [
+        "Lies die angegebenen Werte und die zugehörigen Namen sorgfältig.",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    },
+    "dd2_20": {
+      "hints": [
+        "Das Gegenteil ist das Minimum.",
+        "Prüfe, ob du einen höchsten Wert, einen Unterschied oder eine Summe suchst."
+      ]
+    }
+  },
+  "removedFields": {
+    "g2-math-uhrzeit-u39": [
+      "sequentialAnswer"
+    ],
+    "lm18": [
+      "sequentialAnswer"
+    ],
+    "lm28": [
+      "sequentialAnswer"
+    ],
+    "lm30": [
+      "sequentialAnswer"
+    ],
+    "lm36": [
+      "sequentialAnswer"
+    ]
+  }
+}
