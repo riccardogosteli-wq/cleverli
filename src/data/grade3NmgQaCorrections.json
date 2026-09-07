@@ -1,0 +1,1292 @@
+{
+  "patches": {
+    "g3-science-unsere-erde-e3": {
+      "hints": [
+        "Denke an bekannte Tiere, Landschaften oder Sehenswürdigkeiten!",
+        "Vergleiche die typischen Tiere und Landschaften mit den Kontinenten."
+      ]
+    },
+    "g3-science-unsere-erde-e6": {
+      "hints": [
+        "Vergleiche, welche Seite der Erde gerade Sonnenlicht erhält.",
+        "Die eine Seite ist der Sonne zugewandt, die andere nicht."
+      ]
+    },
+    "g3-science-unsere-erde-e7": {
+      "question": "Finde jeweils zwei gleiche Karten zu Tieren und Kontinenten!",
+      "hints": [
+        "Merke dir Bild und Namen jeder aufgedeckten Karte.",
+        "Beginne mit einem Paar, an dessen Positionen du dich sicher erinnerst."
+      ]
+    },
+    "ue10": {
+      "hints": [
+        "Setze die Wörter für die beiden Erdteile und ihre Trennlinie zusammen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ue17": {
+      "hints": [
+        "Der grösste Teil des Landes liegt südlich des Mittelmeers.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "question": "Auf welchem Kontinent liegt der grösste Teil Ägyptens?"
+    },
+    "ue30": {
+      "hints": [
+        "Denke an Hawaii und seine vielen Inseln.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ue41": {
+      "hints": [
+        "An vielen Plattengrenzen kann Magma an die Oberfläche gelangen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ue42": {
+      "hints": [
+        "Gesucht ist eine Skala, keine Temperaturmessung.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ue50": {
+      "hints": [
+        "Vergleiche die Wasserflächen auf einer Weltkarte.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ue14": {
+      "altAnswers": [
+        "Everest"
+      ]
+    },
+    "ue18": {
+      "altAnswers": [
+        "Eine grosse bewegte Eismasse",
+        "Eine langsam fliessende Eismasse",
+        "Eismasse"
+      ]
+    },
+    "ue20": {
+      "altAnswers": [
+        "Heisswüste",
+        "Eine Heisswüste",
+        "Die grösste Heisswüste"
+      ]
+    },
+    "ue21": {
+      "altAnswers": [
+        "Die Bewegung der Erdplatten",
+        "Bewegung der Erdplatten"
+      ]
+    },
+    "ue31": {
+      "altAnswers": [
+        "Ein Fluss",
+        "Fluss",
+        "Der wasserreichste Fluss der Welt"
+      ]
+    },
+    "ue33": {
+      "altAnswers": [
+        "Landmasse",
+        "Eine grosse Landmasse"
+      ]
+    },
+    "ue36": {
+      "altAnswers": [
+        "Lava",
+        "Asche"
+      ],
+      "hints": [
+        "Denke an flüssiges Gestein und feine Teilchen aus dem Erdinneren.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ue38": {
+      "altAnswers": [
+        "71"
+      ]
+    },
+    "ue49": {
+      "altAnswers": [
+        "warm"
+      ],
+      "hints": [
+        "Vergleiche die Wassertemperatur mit dem üblichen Zustand.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ue37": {
+      "question": "Wie heisst die äusserste Gesteinsschicht der Erde?",
+      "answer": "Erdkruste",
+      "altAnswers": [
+        "Kruste"
+      ],
+      "hints": [
+        "Vergleiche den Schalenaufbau mit der dünnen Aussenschicht eines Apfels.",
+        "Der Fachbegriff beginnt mit «Erd»."
+      ]
+    },
+    "ue40": {
+      "question": "Welcher Pol ist durch den nördlichen Endpunkt der Erdachse festgelegt?",
+      "answer": "Der geografische Nordpol",
+      "options": [
+        "Der geografische Nordpol",
+        "Der magnetische Nordpol",
+        "Der Südpol",
+        "Der Äquator"
+      ],
+      "hints": [
+        "Unterscheide die Erdachse vom veränderlichen Magnetfeld.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ue43": {
+      "question": "Lernrunde 5: Unsere Erde: Eine Region: Welche Aussage passt? Antwort: ___ Wähle: kann gemeinsame Merkmale haben oder muss immer ein Staat sein."
+    },
+    "ue45": {
+      "question": "Lernrunde 6: Unsere Erde: Eine Kartenlegende: Welche Aussage passt? Antwort: ___ Wähle: erklärt Zeichen und Farben oder misst die Temperatur."
+    },
+    "g3-science-materialien-m1": {
+      "dragItems": [
+        {
+          "id": "tisch",
+          "label": "🪑 Tischplatte aus einem Baumstamm",
+          "emoji": "🪑"
+        },
+        {
+          "id": "hammer",
+          "label": "🔨 Hammerkopf aus Stahl",
+          "emoji": "🔨"
+        },
+        {
+          "id": "fenster",
+          "label": "🪟 Glasscheibe",
+          "emoji": "🪟"
+        },
+        {
+          "id": "pullover",
+          "label": "🧥 Pullover aus Baumwollstoff",
+          "emoji": "🧥"
+        },
+        {
+          "id": "topf",
+          "label": "🪣 Kochtopf aus Stahl",
+          "emoji": "🪣"
+        },
+        {
+          "id": "tasche",
+          "label": "👜 Tasche aus Baumwollstoff",
+          "emoji": "👜"
+        }
+      ]
+    },
+    "g3-science-materialien-m5": {
+      "question": "Finde jeweils zwei gleiche Karten zu Materialien und Eigenschaften!",
+      "hints": [
+        "Merke dir Bild und Namen jeder Karte.",
+        "Beginne mit einem Paar, an dessen Positionen du dich sicher erinnerst."
+      ]
+    },
+    "g3-science-materialien-m7": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Probiere dies nie an einer Steckdose aus; feuchte Materialien können Strom leiten."
+      ]
+    },
+    "mat10": {
+      "question": "Welches Material ist durchsichtig? Wähle: Glas oder Holz.",
+      "hints": [
+        "Vergleiche, ob Licht durch das Material hindurchkommt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "mat16": {
+      "altAnswers": [
+        "Silber",
+        "Gold",
+        "Aluminium"
+      ]
+    },
+    "mat22": {
+      "altAnswers": [
+        "Holz",
+        "Zellstoff",
+        "Altpapier",
+        "Papierfasern"
+      ],
+      "hints": [
+        "Denke an pflanzliche Fasern oder gebrauchtes Papier.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "mat24": {
+      "altAnswers": [
+        "Ein Material aus mehreren Materialien",
+        "Mehrere Materialien zusammen"
+      ]
+    },
+    "mat28": {
+      "altAnswers": [
+        "Pflanzenfaser",
+        "Eine Pflanzenfaser"
+      ]
+    },
+    "mat34": {
+      "altAnswers": [
+        "Zement, Sand, Kies und Wasser"
+      ],
+      "hints": [
+        "Denke an das Bindemittel, die feinen und groben Körner sowie die Flüssigkeit.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "mat37": {
+      "altAnswers": [
+        "spröde flexibel",
+        "spröde dehnbar"
+      ]
+    },
+    "mat38": {
+      "altAnswers": [
+        "Werkstoffe"
+      ]
+    },
+    "mat47": {
+      "altAnswers": [
+        "Wasser"
+      ]
+    },
+    "mat26": {
+      "question": "Lernrunde 3: Materialien: Metall: Welche Aussage passt? Antwort: ___ Wähle: wärmeleitend oder durchsichtig."
+    },
+    "mat44": {
+      "question": "Lernrunde 7: Materialien: Stein im Wasser: Welche Aussage passt? Antwort: ___ Wähle: sinkend oder verdampfend."
+    },
+    "mat50": {
+      "question": "Lernrunde 8: Materialien: Kork im Wasser: Welche Aussage passt? Antwort: ___ Wähle: schwimmend oder schmelzend."
+    },
+    "mat15": {
+      "hints": [
+        "Denke an die Fasern, aus denen warme Pullover gestrickt werden.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "mat18": {
+      "hints": [
+        "Welcher Stoff kehrt nach dem Dehnen wieder in seine Form zurück?",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Was ist elastisch: Gummi, Glas oder Stein?",
+      "verbatimSpeech": true
+    },
+    "mat48": {
+      "question": "Keramik hält hohe Temperaturen aus. Sie ist ___.",
+      "answer": "hitzebeständig",
+      "altAnswers": [
+        "hitzefest",
+        "wärmebeständig"
+      ],
+      "hints": [
+        "Setze das Wort für hohe Temperatur mit dem Wort für Widerstandsfähigkeit zusammen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ls3": {
+      "hints": [
+        "Vergleiche jedes Element mit den möglichen Zielbereichen.",
+        "Nicht jedes Metall wird angezogen. Denke an einen Versuch mit einem Magneten."
+      ]
+    },
+    "ls4": {
+      "hints": [
+        "Vergleiche gleiche mit entgegengesetzten Polen.",
+        "Überlege, ob sich die gleichen Pole näherkommen oder voneinander entfernen."
+      ]
+    },
+    "ls5": {
+      "question": "Was passiert mit weissem Sonnenlicht, wenn ein Regenbogen entsteht?"
+    },
+    "ls7": {
+      "pairs": [
+        {
+          "id": "sonne4",
+          "label": "☀️ Sonne",
+          "emoji": "☀️"
+        },
+        {
+          "id": "lichtquelle",
+          "label": "💡 Lichtquelle am Taghimmel",
+          "emoji": "💡"
+        },
+        {
+          "id": "mond2",
+          "label": "🌕 Mond",
+          "emoji": "🌕"
+        },
+        {
+          "id": "reflektor",
+          "label": "🔭 Reflektiert",
+          "emoji": "🔭"
+        },
+        {
+          "id": "kerze",
+          "label": "🕯️ Kerze",
+          "emoji": "🕯️"
+        },
+        {
+          "id": "lichtquelle2",
+          "label": "💡 Lichtquelle mit einer Flamme",
+          "emoji": "💡"
+        }
+      ],
+      "hints": [
+        "Überlege, welches Objekt selbst Licht erzeugt und welches fremdes Licht zurückwirft.",
+        "Prüfe am Schluss, ob jedes Element genau einmal zugeordnet ist."
+      ]
+    },
+    "ls11": {
+      "altAnswers": [
+        "Rot, Grün, Blau",
+        "Rot, Blau, Grün",
+        "Grün, Rot, Blau",
+        "Grün, Blau, Rot",
+        "Blau, Rot, Grün",
+        "Blau, Grün, Rot"
+      ],
+      "hints": [
+        "Denke an die drei Farben eines Bildschirms.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ls15": {
+      "altAnswers": [
+        "Eisen, Nickel, Kobalt",
+        "Eisen, Kobalt, Nickel",
+        "Nickel, Eisen, Kobalt",
+        "Nickel, Kobalt, Eisen",
+        "Kobalt, Eisen, Nickel",
+        "Kobalt, Nickel, Eisen"
+      ],
+      "hints": [
+        "Denke an die drei klassischen ferromagnetischen Metalle.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ls17": {
+      "altAnswers": [
+        "blockiert",
+        "aufhält",
+        "abschirmt"
+      ]
+    },
+    "ls19": {
+      "question": "Lernrunde 3: Licht und Schatten: Metall: Welche Aussage passt? Antwort: ___ Wähle: wärmeleitend oder durchsichtig."
+    },
+    "ls10": {
+      "hints": [
+        "Denke an den dünnen Draht im Inneren einer klassischen Glühbirne.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ls21": {
+      "hints": [
+        "Vergleiche einfallenden und ausfallenden Lichtstrahl am Spiegel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Reflexion von Licht?",
+      "verbatimSpeech": true
+    },
+    "ls27": {
+      "hints": [
+        "Überlege, welche unsichtbare Eigenschaft die Erde und einen Magneten verbindet.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ls28": {
+      "hints": [
+        "Vergleiche einen Kühlschrankmagneten mit einem Elektromagneten.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ls50": {
+      "hints": [
+        "Vergleiche ein Fenster mit einer dicken Holztür.",
+        "Überprüfe die Aussage nochmals genau."
+      ]
+    },
+    "g3-science-demokratie-d1": {
+      "hints": [
+        "Demo = Volk, Kratie = Herrschaft (Griechisch).",
+        "Stimmberechtigte Menschen dürfen bei Wahlen und Abstimmungen mitentscheiden."
+      ]
+    },
+    "g3-science-demokratie-d2": {
+      "question": "Ab welchem Alter dürfen Schweizerinnen und Schweizer auf Bundesebene abstimmen?",
+      "hints": [
+        "Gesucht ist das Alter der Volljährigkeit.",
+        "Dann bekommt man das Stimm- und Wahlrecht."
+      ]
+    },
+    "g3-science-demokratie-d3": {
+      "question": "Was können Stimmberechtigte mit einer eidgenössischen Volksinitiative vorschlagen?",
+      "answer": "Eine Änderung der Bundesverfassung",
+      "options": [
+        "Eine Wahl für den Bundesrat",
+        "Eine Änderung der Bundesverfassung",
+        "Eine Sportveranstaltung",
+        "Ein Schulprojekt"
+      ]
+    },
+    "g3-science-demokratie-d4": {
+      "question": "Ordne zu: Was hilft bei einem respektvollen Gespräch, was nicht?"
+    },
+    "g3-science-demokratie-d5": {
+      "hints": [
+        "Der Bundesrat ist eine kleine Gruppe und entscheidet gemeinsam.",
+        "Jedes Jahr wird jemand anderes Bundespräsident/-in."
+      ]
+    },
+    "dk7": {
+      "altAnswers": [
+        "Volk",
+        "Bürger",
+        "Bürgerinnen und Bürger"
+      ],
+      "hints": [
+        "Die Macht liegt nicht bei einer einzelnen Herrscherperson.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "dk8": {
+      "hints": [
+        "Stimmberechtigte entscheiden über eine Sachfrage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "dk15": {
+      "altAnswers": [
+        "Weiss und Rot"
+      ],
+      "hints": [
+        "Denke an die Hintergrundfarbe und an die Farbe des Kreuzes.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "dk17": {
+      "altAnswers": [
+        "Presse darf ohne Zensur berichten",
+        "Ohne Zensur berichten",
+        "Freie Berichterstattung"
+      ]
+    },
+    "dk19": {
+      "altAnswers": [
+        "Eine verbindliche Regel",
+        "Eine Regel",
+        "Verbindliche Regel"
+      ]
+    },
+    "dk22": {
+      "altAnswers": [
+        "Gewählte Vertreter entscheiden",
+        "Das Volk wählt Vertreter"
+      ]
+    },
+    "dk23": {
+      "hints": [
+        "Die meisten Kantone haben zwei Sitze, sechs Kantone je einen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "dk34": {
+      "options": [
+        "ruhig zuhören und gemeinsam sprechen",
+        "Ein Bundesstaat innerhalb der Schweiz",
+        "Sie organisiert Aufgaben am Wohnort",
+        "einander beleidigen"
+      ]
+    },
+    "sg8": {
+      "question": "In welcher Region Europas liegt die Schweiz geografisch?"
+    },
+    "sg9": {
+      "hints": [
+        "Dort steht das Bundeshaus.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sg13": {
+      "hints": [
+        "Denke an das helle Zeichen auf dem farbigen Hintergrund.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sg19": {
+      "hints": [
+        "Denke an die Stadt am Zürichsee.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sg17": {
+      "hints": [
+        "1798 wurde die alte Eidgenossenschaft durch einen zentral organisierten Staat ersetzt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sg26": {
+      "hints": [
+        "Die Ausstellung fand an mehreren Orten in der Drei-Seen-Region statt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "en2": {
+      "hints": [
+        "Überlege, welche Quellen sich auf menschlichen Zeitskalen erneuern.",
+        "Bei anderen Quellen werden endliche Vorräte abgebaut."
+      ]
+    },
+    "en7": {
+      "altAnswers": [
+        "Heizung",
+        "Kochen",
+        "Verkehr",
+        "Maschinen",
+        "Computer",
+        "Heizen",
+        "Beleuchtung",
+        "Bewegung",
+        "Laufen",
+        "Wachsen",
+        "Atmen",
+        "Auto fahren",
+        "Waschen"
+      ]
+    },
+    "en9": {
+      "altAnswers": [
+        "Windkraft"
+      ]
+    },
+    "en11": {
+      "altAnswers": [
+        "Ressourcen schonen",
+        "Die Umwelt schützen",
+        "Klimaschutz",
+        "Geld sparen",
+        "Weniger Energie verbrauchen"
+      ]
+    },
+    "en13": {
+      "altAnswers": [
+        "Wärme",
+        "Licht und Wärme"
+      ]
+    },
+    "en17": {
+      "altAnswers": [
+        "Elektrizität",
+        "Elektrische Energie",
+        "Wärme"
+      ]
+    },
+    "en29": {
+      "altAnswers": [
+        "Atomenergie"
+      ]
+    },
+    "en15": {
+      "question": "Die Sonne ist eine ___ Energiequelle. Wähle: erneuerbare oder nicht erneuerbare.",
+      "answer": "erneuerbare"
+    },
+    "en37": {
+      "question": "Woher bekommt eine batteriebetriebene Taschenlampe ihre elektrische Energie?"
+    },
+    "en38": {
+      "altAnswers": [
+        "U = R × I",
+        "U = R * I",
+        "U = R I",
+        "Spannung = Widerstand mal Stromstärke"
+      ],
+      "hints": [
+        "Verbinde Spannung, Widerstand und Stromstärke in einer Gleichung.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "en36": {
+      "question": "Lernrunde 4: Energie im Alltag: Wolle: Welche Aussage passt? Antwort: ___ Wähle: wärmedämmend oder magnetisch."
+    },
+    "en26": {
+      "spokenPrompt": "Was ist Kohlendioxid?",
+      "verbatimSpeech": true
+    },
+    "g3-science-umwelt-nachhaltigkeit-u5": {
+      "question": "Finde jeweils zwei gleiche Karten zu Umweltproblemen und Lösungen!",
+      "hints": [
+        "Merke dir Bild und Namen jeder Karte.",
+        "Beginne mit einem Paar, an dessen Positionen du dich sicher erinnerst."
+      ]
+    },
+    "g3-science-umwelt-nachhaltigkeit-u8": {
+      "spokenPrompt": "Was ist der Kohlendioxid-Fussabdruck?",
+      "verbatimSpeech": true
+    },
+    "un13": {
+      "altAnswers": [
+        "Verschmutzung von Wasser",
+        "Schadstoffe im Wasser",
+        "Wenn Wasser verschmutzt wird"
+      ]
+    },
+    "un19": {
+      "altAnswers": [
+        "Ein Auto mit Elektromotor",
+        "Ein Auto mit elektrischem Antrieb",
+        "Ein Auto das mit Strom fährt"
+      ]
+    },
+    "un33": {
+      "altAnswers": [
+        "Vulkanausbruch",
+        "Überschwemmung",
+        "Hochwasser",
+        "Lawine",
+        "Sturm",
+        "Tsunami",
+        "Dürre",
+        "Wirbelsturm",
+        "Hurrikan",
+        "Tornado",
+        "Erdrutsch",
+        "Bergsturz",
+        "Waldbrand"
+      ]
+    },
+    "u24h2": {
+      "hints": [
+        "Ziehe bei der Stundenzahl zwölf ab.",
+        "Plus 30 Minuten."
+      ]
+    },
+    "u24h4": {
+      "hints": [
+        "9:45 → 10:45 = 1 Stunde",
+        "Rechne von der Zwischenzeit bis zur Ankunft weiter."
+      ]
+    },
+    "u24h15": {
+      "question": "Wie schreibt man Mitternacht am Beginn eines neuen Tages?"
+    },
+    "u24h16": {
+      "question": "Wie nennt man die Tageszeit um 12:00 Uhr?"
+    },
+    "u24h21": {
+      "altAnswers": [
+        "1 30",
+        "1, 30",
+        "1 / 30",
+        "90 Minuten",
+        "1h 30min"
+      ],
+      "hints": [
+        "Rechne zuerst bis zur nächsten vollen Stunde und dann weiter.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "u24h23": {
+      "altAnswers": [
+        "4h 15min",
+        "255 Minuten"
+      ],
+      "hints": [
+        "Rechne zuerst bis zur nächsten vollen Stunde und dann weiter.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "u24h27": {
+      "altAnswers": [
+        "2 15",
+        "2, 15",
+        "2 / 15",
+        "135 Minuten",
+        "2h 15min"
+      ],
+      "hints": [
+        "Rechne zuerst bis zur nächsten vollen Stunde und dann weiter.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "u24h33": {
+      "altAnswers": [
+        "8 30",
+        "8, 30",
+        "8 / 30",
+        "510 Minuten",
+        "8h 30min"
+      ],
+      "hints": [
+        "Rechne zuerst bis zur nächsten vollen Stunde und dann weiter.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "u24h36": {
+      "altAnswers": [
+        "16 15",
+        "16, 15",
+        "16 / 15",
+        "975 Minuten",
+        "16h 15min"
+      ],
+      "hints": [
+        "Rechne zuerst bis zur nächsten vollen Stunde und dann weiter.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "u24h28": {
+      "hints": [
+        "Teile die Zeitspanne bei Mitternacht und addiere beide Teile.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "u24h30": {
+      "hints": [
+        "Teile die Zeitspanne bei Mitternacht und addiere beide Teile.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "u24h32": {
+      "hints": [
+        "Bei «halb» nennst du die folgende Stunde.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "u24h35": {
+      "altAnswers": [
+        "Viertel vor 11",
+        "zehn Uhr fünfundvierzig",
+        "10 Uhr 45",
+        "dreiviertel elf"
+      ]
+    },
+    "kd4": {
+      "hints": [
+        "2 Wochen = 14 Tage.",
+        "Rechne zuerst bis Ende April und dann im Mai weiter."
+      ]
+    },
+    "kd7": {
+      "hints": [
+        "Der 24. ist Heiligabend.",
+        "Unterscheide den Heiligabend vom folgenden Feiertag."
+      ]
+    },
+    "kd16": {
+      "hints": [
+        "Gehe im Kalender einen Monat weiter.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "kd19": {
+      "hints": [
+        "Zähle die Monate vom Jahresanfang aus.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Der sechste Monat heisst ….",
+      "verbatimSpeech": true
+    },
+    "kd21": {
+      "question": "Vom 10. Februar 2026 bis zum 10. März 2026 sind es ___ Tage."
+    },
+    "kd22": {
+      "hints": [
+        "Nach einer Woche ist wieder derselbe Wochentag. Zähle dann weiter.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "kd31": {
+      "question": "Wie viele Tage hat das Jahr 2026, vom 1. Januar bis und mit 31. Dezember?"
+    },
+    "kd47": {
+      "question": "Wie viele Tage zählt man 2026 vom 1. Januar bis und mit 24. Dezember?"
+    },
+    "kd40": {
+      "altAnswers": [
+        "Papst Gregor XIII",
+        "Gregor XIII",
+        "Papst Gregor der Dreizehnte"
+      ],
+      "hints": [
+        "Der Kalender ist nach einem Papst benannt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "kd46": {
+      "altAnswers": [
+        "BC",
+        "Before Christ"
+      ],
+      "hints": [
+        "Gesucht ist die traditionelle englische Abkürzung für die Zeit vor Christi Geburt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "kd48": {
+      "altAnswers": [
+        "2 Jahre"
+      ],
+      "hints": [
+        "Denke an die Bedeutung der Vorsilbe «bi».",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "kd6": {
+      "spokenPrompt": "Der dritte Monat des Jahres heisst ….",
+      "verbatimSpeech": true
+    },
+    "kd11": {
+      "spokenPrompt": "Der zwölfte Monat heisst ….",
+      "verbatimSpeech": true
+    },
+    "karte_norm_6": {
+      "altAnswers": [
+        "von oben",
+        "verkleinert",
+        "aus der Vogelperspektive"
+      ]
+    },
+    "karte_norm_8": {
+      "altAnswers": [
+        "Symbole",
+        "Farben",
+        "Symbole und Farben"
+      ]
+    },
+    "karte_norm_10": {
+      "altAnswers": [
+        "Gebäude",
+        "Plätze"
+      ]
+    },
+    "karte_norm_18": {
+      "altAnswers": [
+        "Land",
+        "Gebiet"
+      ]
+    },
+    "karte_norm_20": {
+      "altAnswers": [
+        "Strassen",
+        "Siedlungen",
+        "Orte",
+        "Gebäude"
+      ]
+    },
+    "karte_norm_22": {
+      "altAnswers": [
+        "Wegweiser",
+        "Schilder",
+        "Markierungen",
+        "GPS"
+      ]
+    },
+    "karte_norm_24": {
+      "altAnswers": [
+        "Kantone",
+        "Städte",
+        "Gemeinden"
+      ]
+    },
+    "karte_norm_30": {
+      "altAnswers": [
+        "zu drehen",
+        "einzunorden",
+        "zu orientieren"
+      ]
+    },
+    "karte_norm_36": {
+      "altAnswers": [
+        "berechnen",
+        "bestimmen",
+        "messen",
+        "umrechnen"
+      ]
+    },
+    "karte_norm_38": {
+      "altAnswers": [
+        "Punkt",
+        "Standort"
+      ]
+    },
+    "karte_norm_40": {
+      "altAnswers": [
+        "Kompass",
+        "Höhenlinien"
+      ]
+    },
+    "karte_norm_44": {
+      "altAnswers": [
+        "Raum"
+      ]
+    },
+    "karte_norm_50": {
+      "altAnswers": [
+        "Zeichen",
+        "Farben",
+        "Zeichen und Farben"
+      ]
+    },
+    "energie_norm_2": {
+      "altAnswers": [
+        "Kenntnisse",
+        "Kompetenzen",
+        "Fertigkeiten",
+        "Qualifikationen"
+      ]
+    },
+    "energie_norm_4": {
+      "altAnswers": [
+        "Kenntnisse",
+        "Kompetenzen",
+        "Fertigkeiten",
+        "Qualifikationen"
+      ]
+    },
+    "energie_norm_6": {
+      "altAnswers": [
+        "Kenntnisse",
+        "Kompetenzen",
+        "Fertigkeiten",
+        "Qualifikationen"
+      ]
+    },
+    "energie_norm_8": {
+      "altAnswers": [
+        "Kenntnisse",
+        "Kompetenzen",
+        "Fertigkeiten",
+        "Qualifikationen"
+      ]
+    },
+    "energie_norm_10": {
+      "altAnswers": [
+        "Kenntnisse",
+        "Kompetenzen",
+        "Fertigkeiten",
+        "Qualifikationen"
+      ]
+    },
+    "energie_norm_12": {
+      "altAnswers": [
+        "Kenntnisse",
+        "Kompetenzen",
+        "Fertigkeiten",
+        "Qualifikationen"
+      ]
+    },
+    "energie_norm_14": {
+      "altAnswers": [
+        "Kenntnisse",
+        "Kompetenzen",
+        "Fertigkeiten",
+        "Qualifikationen"
+      ]
+    },
+    "energie_norm_16": {
+      "question": "Mache den Satz vollständig: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_18": {
+      "question": "Finde das fehlende Wort: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_20": {
+      "question": "Schliesse die Lücke: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_22": {
+      "question": "Welches Wort passt? Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_24": {
+      "question": "Ergänze passend: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_26": {
+      "question": "Setze das richtige Wort ein: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_28": {
+      "question": "Vervollständige den Satz: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_30": {
+      "question": "Trage das passende Wort ein: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_32": {
+      "question": "Mach den Satz fertig: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_34": {
+      "question": "Ergänze mit einem Wort: Hausarbeit kann ___ Arbeit sein. Wähle: unbezahlte oder unsichtbare."
+    },
+    "energie_norm_36": {
+      "altAnswers": [
+        "Tätigkeiten",
+        "Arbeiten",
+        "Berufsaufgaben"
+      ]
+    },
+    "energie_norm_38": {
+      "altAnswers": [
+        "Tätigkeiten",
+        "Arbeiten",
+        "Berufsaufgaben"
+      ]
+    },
+    "energie_norm_40": {
+      "altAnswers": [
+        "Tätigkeiten",
+        "Arbeiten",
+        "Berufsaufgaben"
+      ]
+    },
+    "energie_norm_42": {
+      "altAnswers": [
+        "Tätigkeiten",
+        "Arbeiten",
+        "Berufsaufgaben"
+      ]
+    },
+    "energie_norm_44": {
+      "altAnswers": [
+        "Tätigkeiten",
+        "Arbeiten",
+        "Berufsaufgaben"
+      ]
+    },
+    "energie_norm_46": {
+      "altAnswers": [
+        "Tätigkeiten",
+        "Arbeiten",
+        "Berufsaufgaben"
+      ]
+    },
+    "energie_norm_48": {
+      "altAnswers": [
+        "Tätigkeiten",
+        "Arbeiten",
+        "Berufsaufgaben"
+      ]
+    },
+    "energie_norm_50": {
+      "altAnswers": [
+        "Tätigkeiten",
+        "Arbeiten",
+        "Berufsaufgaben"
+      ]
+    },
+    "energie_norm_37": {
+      "question": "Was passt hier? Welche technische Entwicklung verändert viele Berufe?"
+    },
+    "energie_norm_39": {
+      "question": "Welche Antwort passt zum Alltag? Welche technische Entwicklung verändert viele Berufe?"
+    },
+    "energie_norm_41": {
+      "question": "Denke kurz nach: Welche technische Entwicklung verändert viele Berufe?"
+    },
+    "energie_norm_43": {
+      "question": "Was ist wichtig? Welche technische Entwicklung verändert viele Berufe?"
+    },
+    "energie_norm_45": {
+      "question": "Wähle die passende Antwort: Welche technische Entwicklung verändert viele Berufe?"
+    },
+    "energie_norm_47": {
+      "question": "Welche Lösung passt zum Thema? Welche technische Entwicklung verändert viele Berufe?"
+    },
+    "energie_norm_49": {
+      "question": "Zeig, was du weisst: Welche technische Entwicklung verändert viele Berufe?"
+    },
+    "licht_norm_16": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_18": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_20": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_22": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_24": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_26": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_28": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_30": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_32": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_34": {
+      "altAnswers": [
+        "Kaufentscheidung",
+        "Wahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_36": {
+      "altAnswers": [
+        "Entscheidung",
+        "Kaufwahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_38": {
+      "altAnswers": [
+        "Entscheidung",
+        "Kaufwahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_40": {
+      "altAnswers": [
+        "Entscheidung",
+        "Kaufwahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_42": {
+      "altAnswers": [
+        "Entscheidung",
+        "Kaufwahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_44": {
+      "altAnswers": [
+        "Entscheidung",
+        "Kaufwahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_46": {
+      "altAnswers": [
+        "Entscheidung",
+        "Kaufwahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_48": {
+      "altAnswers": [
+        "Entscheidung",
+        "Kaufwahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_50": {
+      "altAnswers": [
+        "Entscheidung",
+        "Kaufwahl",
+        "Auswahl"
+      ]
+    },
+    "licht_norm_17": {
+      "question": "Schau dir alles an: Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_19": {
+      "question": "Was stimmt? Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_21": {
+      "question": "Wähle aus: Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_23": {
+      "question": "Welche Lösung passt? Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_25": {
+      "question": "Schau die Möglichkeiten an: Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_27": {
+      "question": "Was würdest du wählen? Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_29": {
+      "question": "Finde die beste Antwort: Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_31": {
+      "question": "Achte auf die Frage: Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_33": {
+      "question": "Welche Aussage stimmt? Was bedeutet, Geld für später zu sparen?"
+    },
+    "licht_norm_35": {
+      "question": "Vergleiche die Antworten: Was bedeutet, Geld für später zu sparen?"
+    },
+    "sg40": {
+      "question": "Welches Volksrecht führte der Kanton Schaffhausen 1852 ein?",
+      "answer": "Das Volksveto gegen Gesetze",
+      "options": [
+        "Das Volksveto gegen Gesetze",
+        "Das Frauenstimmrecht",
+        "Die Wahl des Bundesrats durch das Volk",
+        "Den Beitritt zur UNO"
+      ],
+      "hints": [
+        "Die Bevölkerung konnte sich gegen ein beschlossenes Gesetz wehren.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sg32": {
+      "altAnswers": [
+        "Bern"
+      ]
+    },
+    "kd26": {
+      "hints": [
+        "Denke an die Jahreszeit nach dem Winter.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "mat40": {
+      "hints": [
+        "Vergleiche das Material eines Stromkabels mit seiner schützenden Hülle.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    }
+  }
+}
