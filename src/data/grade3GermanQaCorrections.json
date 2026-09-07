@@ -1,0 +1,1363 @@
+{
+  "patches": {
+    "g3-german-wortarten-w14": {
+      "question": "«tanzen» ist ein ___ (Nomen/Verb/Adjektiv).",
+      "spokenPrompt": "tanzen ist ein … (Nomen/Verb/Adjektiv).",
+      "verbatimSpeech": true
+    },
+    "g3-german-wortarten-w16": {
+      "question": "Nenne die Wortart von «Baum»: ___",
+      "spokenPrompt": "Nenne die Wortart von Baum: …",
+      "verbatimSpeech": true
+    },
+    "g3-german-wortarten-w18": {
+      "question": "«Der» in «der Hund» ist ein ___.",
+      "spokenPrompt": "Der in der Hund ist ein ….",
+      "verbatimSpeech": true
+    },
+    "g3-german-wortarten-w21": {
+      "options": [
+        "Wörter, die nicht dekliniert/konjugiert werden, z.B. Präpositionen",
+        "Ein Pronomen, das auf etwas zeigt (dieser, jener, solcher)",
+        "Ein Wort, das Verben, Adjektive oder andere Adverbien beschreibt",
+        "Ein Verb in der Grundform"
+      ],
+      "hints": [
+        "«sehr» und «hier» sind Beispiele für Adverbien.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-wortarten-w25": {
+      "question": "Welche Antwort nennt ausschliesslich Wortarten?",
+      "spokenPrompt": "Welche Antwort nennt ausschliesslich Wortarten?",
+      "verbatimSpeech": true
+    },
+    "g3-german-wortarten-w28": {
+      "altAnswers": [
+        "Numerus",
+        "Zahl",
+        "Geschlecht"
+      ]
+    },
+    "g3-german-wortarten-w32": {
+      "altAnswers": [
+        "Ausrufewort",
+        "ein Ausrufewort",
+        "Ausruf"
+      ]
+    },
+    "g3-german-wortarten-w36": {
+      "altAnswers": [
+        "veränderliche Wortarten",
+        "beugbare Wortarten"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-german-verben-konjugieren-vk7": {
+      "altAnswers": [
+        "haben gelesen"
+      ]
+    },
+    "g3-german-verben-konjugieren-vk27": {
+      "question": "Vorgangspassiv im Präsens: Das Buch ___ gelesen.",
+      "spokenPrompt": "Vorgangspassiv im Präsens: Das Buch … gelesen.",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk31": {
+      "hints": [
+        "Viele Verben der Orts- oder Zustandsveränderung bilden das Perfekt mit «sein».",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-verben-konjugieren-vk37": {
+      "options": [
+        "Ich bin",
+        "Du spielst",
+        "Sie (Mehrzahl) geht",
+        "Wir laufen"
+      ],
+      "answer": "Sie (Mehrzahl) geht"
+    },
+    "g3-german-verben-konjugieren-vk38": {
+      "question": "Ergänze «sich waschen»: Der Junge [1] [2] mit Wasser. Schreibe beide Teile der Reihe nach: ___",
+      "spokenPrompt": "Ergänze sich waschen: Der Junge [1] [2] mit Wasser. Schreibe beide Teile der Reihe nach: …",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk39": {
+      "question": "Perfekt im Vorgangspassiv: Das Buch [1] schon [2]. (lesen) Schreibe beide fehlenden Teile der Reihe nach: ___",
+      "answer": "ist gelesen worden",
+      "spokenPrompt": "Perfekt im Vorgangspassiv: Das Buch [1] schon [2]. (lesen) Schreibe beide fehlenden Teile der Reihe nach: …",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk46": {
+      "question": "Denkaufgabe 1: Gestern ___ wir im Park. (Präteritum von spielen)",
+      "spokenPrompt": "Denkaufgabe 1: Gestern … wir im Park. (Präteritum von spielen)",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk47": {
+      "question": "Lernrunde 2: Gestern ___ Mia ein Bild. (Präteritum von malen)",
+      "spokenPrompt": "Lernrunde 2: Gestern … Mia ein Bild. (Präteritum von malen)",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk48": {
+      "altAnswers": [
+        "Imperfekt"
+      ]
+    },
+    "g3-german-verben-konjugieren-vk50": {
+      "question": "Lernrunde 3: Wir ___ heute im Park. (Präsens von spielen)",
+      "spokenPrompt": "Lernrunde 3: Wir … heute im Park. (Präsens von spielen)",
+      "verbatimSpeech": true
+    },
+    "aj3": {
+      "altAnswers": [
+        "heiss"
+      ]
+    },
+    "aj7": {
+      "altAnswers": [
+        "glücklich",
+        "froh",
+        "heiter"
+      ]
+    },
+    "aj17": {
+      "altAnswers": [
+        "eng"
+      ]
+    },
+    "aj25": {
+      "options": [
+        "am kaltsten",
+        "am kältesten",
+        "kältst",
+        "kälter"
+      ]
+    },
+    "aj26": {
+      "question": "Setze das richtige Adjektiv ein: «einen ___ Hund» (gross, Akkusativ)",
+      "hints": [
+        "Achte auf den Artikel «einen» und den Fall.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Setze das richtige Adjektiv ein: einen … Hund (gross, Akkusativ)",
+      "verbatimSpeech": true
+    },
+    "aj32": {
+      "question": "Drei Männer sind unterschiedlich alt. Der dritte ist am ___. (Superlativ von alt)",
+      "spokenPrompt": "Drei Männer sind unterschiedlich alt. Der dritte ist am …. (Superlativ von alt)",
+      "verbatimSpeech": true
+    },
+    "aj34": {
+      "question": "Artikel für «der Berg» im Genitiv: «das Bild ___ hohen Berges»",
+      "spokenPrompt": "Artikel für der Berg im Genitiv: das Bild … hohen Berges",
+      "verbatimSpeech": true
+    },
+    "aj42": {
+      "altAnswers": [
+        "Gefühlsadjektive",
+        "gefühlsbeschreibende Adjektive"
+      ]
+    },
+    "aj47": {
+      "question": "Ergänze die Adjektive: Das [1] Kind spielte auf dem [2] Platz. (klein, grün) Schreibe beide Formen der Reihe nach: ___",
+      "answer": "kleine grünen",
+      "spokenPrompt": "Ergänze die Adjektive: Das [1] Kind spielte auf dem [2] Platz. (klein, grün) Schreibe beide Formen der Reihe nach: …",
+      "verbatimSpeech": true
+    },
+    "aj48": {
+      "question": "Schreib das Adjektiv: «Ein ___ Buch finde ich interessant.» (blau)",
+      "answer": "blaues",
+      "spokenPrompt": "Schreib das Adjektiv: Ein … Buch finde ich interessant. (blau)",
+      "verbatimSpeech": true
+    },
+    "g3-german-saetze-sb9": {
+      "answer": "Das Satzglied, nach dem man mit «Wer oder was?» fragt",
+      "options": [
+        "Wörtliche Wiedergabe mit Anführungszeichen (Er sagt: «Ich bin müde.»)",
+        "Das Satzglied, nach dem man mit «Wer oder was?» fragt",
+        "Ein Nebensatz, der ein Nomen näher beschreibt (der, die, das)",
+        "Mehrere gleichwertige Hauptsätze, verbunden mit und/oder/aber"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-saetze-sb10": {
+      "question": "Ein einfacher Aussagesatz wie «Mia lacht.» hat ein [1] und ein [2]. Nenne die beiden Satzglieder: ___",
+      "answer": "Subjekt Prädikat",
+      "altAnswers": [
+        "Prädikat Subjekt",
+        "Subjekt Verb",
+        "Verb Subjekt"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Ein einfacher Aussagesatz wie Mia lacht. hat ein [1] und ein [2]. Nenne die beiden Satzglieder: …",
+      "verbatimSpeech": true
+    },
+    "g3-german-saetze-sb12": {
+      "altAnswers": [
+        "Bücher lesen die Kinder.",
+        "Lesen die Kinder Bücher?",
+        "Kinder lesen die Bücher."
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-german-saetze-sb15": {
+      "question": "Wo steht das Verb im Fragesatz «Kommst du heute?»?",
+      "answer": "Am Anfang",
+      "options": [
+        "Am Anfang",
+        "Am Ende",
+        "In der Mitte",
+        "Kein Verb"
+      ],
+      "hints": [
+        "Suche zuerst das Verb in diesem Satz.",
+        "Zähle die Satzglieder vor dem Verb."
+      ],
+      "spokenPrompt": "Wo steht das Verb im Fragesatz Kommst du heute??",
+      "verbatimSpeech": true
+    },
+    "g3-german-saetze-sb24": {
+      "hints": [
+        "Vor «weil» kommt immer ein Komma!",
+        "Gesucht ist ein einzelnes Satzzeichen."
+      ]
+    },
+    "g3-german-saetze-sb26": {
+      "altAnswers": [
+        "Hauptsatz und Hauptsatz",
+        "mehrere Hauptsätze",
+        "mehrere gleichwertige Hauptsätze",
+        "Verbindung von Hauptsätzen"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-german-saetze-sb28": {
+      "altAnswers": [
+        "indirektes Objekt"
+      ]
+    },
+    "g3-german-saetze-sb30": {
+      "altAnswers": [
+        "da",
+        "wenn"
+      ]
+    },
+    "g3-german-saetze-sb34": {
+      "altAnswers": [
+        "Sobald",
+        "Falls"
+      ]
+    },
+    "g3-german-saetze-sb36": {
+      "answer": "zweiten",
+      "altAnswers": [
+        "2.",
+        "2"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-german-saetze-sb37": {
+      "options": [
+        "Mein Freund, Max, kommt morgen.",
+        "Mein Freund, kommt morgen Max",
+        "Das Verb bzw. die Verbgruppe",
+        "Ich spiele mein Freund liest."
+      ]
+    },
+    "g3-german-saetze-sb39": {
+      "question": "Welcher Satz enthält einen Nebensatz?",
+      "spokenPrompt": "Welcher Satz enthält einen Nebensatz?",
+      "verbatimSpeech": true
+    },
+    "g3-german-saetze-sb40": {
+      "altAnswers": [
+        "lasen"
+      ]
+    },
+    "g3-german-saetze-sb44": {
+      "question": "Setze ins Präsens: «Ich ___ Musik.» (Infinitiv: hören)",
+      "spokenPrompt": "Setze ins Präsens: Ich … Musik. (Infinitiv: hören)",
+      "verbatimSpeech": true
+    },
+    "g3-german-saetze-sb46": {
+      "question": "Ergänze im Präteritum: «Obwohl es regnete, ___ die Kinder noch im Park.» (spielen)",
+      "answer": "spielten",
+      "spokenPrompt": "Ergänze im Präteritum: Obwohl es regnete, … die Kinder noch im Park. (spielen)",
+      "verbatimSpeech": true
+    },
+    "g3-german-saetze-sb48": {
+      "question": "Ergänze «Das Kind liest ___.» mit einem der Wörter: schnell, heute, laut.",
+      "answer": "schnell",
+      "altAnswers": [
+        "heute",
+        "laut"
+      ],
+      "spokenPrompt": "Ergänze Das Kind liest …. mit einem der Wörter: schnell, heute, laut.",
+      "verbatimSpeech": true
+    },
+    "g3-german-saetze-sb50": {
+      "question": "Ordne die übrigen Wörter: «Der Junge / spielt / Fussball / gerne.» Der Junge spielt [1] [2]. Schreibe beide Wörter der Reihe nach: ___",
+      "answer": "gerne Fussball",
+      "altAnswers": [
+        "Fussball gerne"
+      ],
+      "spokenPrompt": "Ordne die übrigen Wörter: Der Junge / spielt / Fussball / gerne. Der Junge spielt [1] [2]. Schreibe beide Wörter der Reihe nach: …",
+      "verbatimSpeech": true
+    },
+    "sb51": {
+      "altAnswers": [
+        "Wohin",
+        "Woher",
+        "Weshalb",
+        "Weswegen",
+        "Wozu",
+        "Wem",
+        "Wen",
+        "Wessen",
+        "Wie viele",
+        "Wie viel"
+      ]
+    },
+    "rs1": {
+      "options": [
+        "Freund",
+        "Freudn",
+        "Freunt",
+        "Freunnd"
+      ]
+    },
+    "rs15": {
+      "options": [
+        "Strasse",
+        "Strase",
+        "Strassse",
+        "Straasse"
+      ]
+    },
+    "rs9": {
+      "question": "Welches Wort ist richtig? «Die Sonne ___» (scheinen)",
+      "spokenPrompt": "Welches Wort ist richtig? Die Sonne … (scheinen)",
+      "verbatimSpeech": true
+    },
+    "rs10": {
+      "caseSensitiveAnswer": true
+    },
+    "rs14": {
+      "caseSensitiveAnswer": true
+    },
+    "rs16": {
+      "question": "Ergänze mit dem Gegenteil von kalt: Die Suppe ist sehr ___. Das Wort endet auf ss.",
+      "spokenPrompt": "Ergänze mit dem Gegenteil von kalt: Die Suppe ist sehr …. Das Wort endet auf ss.",
+      "verbatimSpeech": true
+    },
+    "rs18": {
+      "altAnswers": [
+        "Das Buch liegt auf dem Tisch."
+      ]
+    },
+    "rs22": {
+      "altAnswers": [
+        "Ein"
+      ]
+    },
+    "rs33": {
+      "question": "Was ist richtig? «Morgen ___ wir ins Kino.» (kommen)",
+      "answer": "kommen",
+      "options": [
+        "kommt",
+        "kommen",
+        "komme",
+        "kommst"
+      ],
+      "spokenPrompt": "Was ist richtig? Morgen … wir ins Kino. (kommen)",
+      "verbatimSpeech": true
+    },
+    "rs36": {
+      "question": "Schreibe das zusammengesetzte Nomen aus «fahren» und «Rad»: ___",
+      "spokenPrompt": "Schreibe das zusammengesetzte Nomen aus fahren und Rad: …",
+      "verbatimSpeech": true
+    },
+    "rs41": {
+      "hints": [
+        "Achte auf die Grossschreibung der Nomen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs42": {
+      "answer": "Haus Tür",
+      "altAnswers": [
+        "Haus + Tür"
+      ]
+    },
+    "rs48": {
+      "hints": [
+        "Vergleiche: Jemand schläft. Jemand gibt jemandem etwas.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs50": {
+      "altAnswers": [
+        "beugen",
+        "Wörter beugen",
+        "Wortformen verändern",
+        "deklinieren oder konjugieren"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa4": {
+      "altAnswers": [
+        "starten"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa6": {
+      "altAnswers": [
+        "Traurigkeit",
+        "Kummer",
+        "Leid"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa8": {
+      "altAnswers": [
+        "flink",
+        "hurtig",
+        "zügig",
+        "geschwind"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa14": {
+      "altAnswers": [
+        "abreisen",
+        "weggehen",
+        "abgehen",
+        "fortgehen"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa16": {
+      "altAnswers": [
+        "attraktiv",
+        "ansprechend",
+        "reizend",
+        "wunderschön"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa18": {
+      "altAnswers": [
+        "sich unterhalten",
+        "sich äussern"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa24": {
+      "altAnswers": [
+        "Unwahrheit"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa26": {
+      "altAnswers": [
+        "ergreifen",
+        "packen"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa28": {
+      "altAnswers": [
+        "beherzt",
+        "kühn",
+        "unerschrocken",
+        "furchtlos"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa30": {
+      "altAnswers": [
+        "Kumpel",
+        "Gefährte",
+        "Kollege"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa32": {
+      "altAnswers": [
+        "zornig",
+        "erbost",
+        "sauer",
+        "ärgerlich",
+        "aufgebracht"
+      ]
+    },
+    "sa43": {
+      "altAnswers": [
+        "glücklich",
+        "heiter",
+        "vergnügt"
+      ]
+    },
+    "sa45": {
+      "altAnswers": [
+        "Unterbegriff"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa15": {
+      "options": [
+        "laut",
+        "leise",
+        "hell",
+        "schnell"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa20": {
+      "question": "Nenne zwei Synonyme für «gehen» aus dieser Auswahl: laufen, schreiten, schlafen. Schreibe beide passenden Wörter: ___",
+      "altAnswers": [
+        "schreiten laufen"
+      ],
+      "spokenPrompt": "Nenne zwei Synonyme für gehen aus dieser Auswahl: laufen, schreiten, schlafen. Schreibe beide passenden Wörter: …",
+      "verbatimSpeech": true
+    },
+    "g3-german-synonyme-antonyme-sa29": {
+      "options": [
+        "Mitte",
+        "Ende",
+        "Beginn",
+        "Start"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa37": {
+      "answer": "gleichbedeutendes Wort",
+      "altAnswers": [
+        "bedeutungsgleiches Wort",
+        "sinnverwandtes Wort"
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa39": {
+      "altAnswers": [
+        "Homonyme",
+        "Homophon",
+        "Homophone"
+      ]
+    },
+    "sa46": {
+      "question": "Finde ein Wort, das mit «Hund» verwandt ist: Ein junger Hund ist ein ___.",
+      "answer": "Welpe",
+      "altAnswers": [
+        "Hundewelpe",
+        "Hündchen"
+      ],
+      "spokenPrompt": "Finde ein Wort, das mit Hund verwandt ist: Ein junger Hund ist ein ….",
+      "verbatimSpeech": true
+    },
+    "lv3": {
+      "question": "«Die Biene sammelt Nektar und macht daraus Honig.» – Was möchte die Biene laut Text daraus machen?",
+      "spokenPrompt": "Die Biene sammelt Nektar und macht daraus Honig. – Was möchte die Biene laut Text daraus machen?",
+      "verbatimSpeech": true
+    },
+    "lv45": {
+      "answer": "Ein inhaltlich zusammengehörender Textblock, der in einer neuen Zeile beginnt",
+      "options": [
+        "Das Wissen über die Form der Erde",
+        "Ein inhaltlich zusammengehörender Textblock, der in einer neuen Zeile beginnt",
+        "Wie viel Geld hat Ben noch?",
+        "Das Verlieren der Blätter im Herbst"
+      ],
+      "spokenPrompt": "Was ist ein Textabschnitt (Absatz)?",
+      "verbatimSpeech": true
+    },
+    "lv1": {
+      "question": "«Der Bär schläft im Winter in seiner Höhle. Diese Ruhezeit heisst Winterruhe.» – Was macht der Bär im Winter?",
+      "spokenPrompt": "Der Bär schläft im Winter in seiner Höhle. Diese Ruhezeit heisst Winterruhe. – Was macht der Bär im Winter?",
+      "verbatimSpeech": true
+    },
+    "lv4": {
+      "altAnswers": [
+        "Sie geht zum Sport",
+        "geht zum Sport",
+        "zum Sport",
+        "Sie macht Sport"
+      ]
+    },
+    "lv7": {
+      "altAnswers": [
+        "in die Berge",
+        "an den See",
+        "See",
+        "in die Berge oder an den See",
+        "Berge oder See",
+        "Berge und See"
+      ]
+    },
+    "lv9": {
+      "altAnswers": [
+        "blaue Augen und rote Haare"
+      ]
+    },
+    "lv11": {
+      "altAnswers": [
+        "in Bern"
+      ]
+    },
+    "lv13": {
+      "altAnswers": [
+        "8",
+        "acht Uhr",
+        "um 8 Uhr",
+        "um acht Uhr"
+      ]
+    },
+    "lv17": {
+      "altAnswers": [
+        "Frühling",
+        "im Frühjahr",
+        "Frühjahr"
+      ]
+    },
+    "lv19": {
+      "altAnswers": [
+        "9",
+        "neun Stunden"
+      ]
+    },
+    "lv21": {
+      "altAnswers": [
+        "im Sommer"
+      ]
+    },
+    "lv23": {
+      "altAnswers": [
+        "damit er im Winter überlebt",
+        "um den Winter zu überleben"
+      ]
+    },
+    "lv27": {
+      "altAnswers": [
+        "Haus",
+        "ihr Haus",
+        "Gehäuse",
+        "ihr Gehäuse",
+        "das Gehäuse"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Aus dem Text: Die Schnecke trägt ihr Haus auf dem Rücken. Das schützt sie. – Was schützt die Schnecke?",
+      "verbatimSpeech": true
+    },
+    "lv29": {
+      "altAnswers": [
+        "verstecken sich",
+        "sich verstecken"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv31": {
+      "altAnswers": [
+        "Eine Person, die kein Fleisch isst",
+        "Sie isst kein Fleisch",
+        "kein Fleisch essen"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "lv33": {
+      "altAnswers": [
+        "vier"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Die Zahl liegt zwischen 2 und 6."
+      ]
+    },
+    "lv34": {
+      "altAnswers": [
+        "Das Wissen",
+        "Unser Wissen über die Erde",
+        "Die Vorstellung von der Erde"
+      ],
+      "question": "«Früher glaubten manche Menschen, die Erde sei flach. Heute wissen wir, dass sie rund ist.» – Was hat sich verändert?",
+      "spokenPrompt": "Früher glaubten manche Menschen, die Erde sei flach. Heute wissen wir, dass sie rund ist. – Was hat sich verändert?",
+      "verbatimSpeech": true
+    },
+    "lv36": {
+      "altAnswers": [
+        "Durch Lesen wird man besser",
+        "Man wird durch Lesen besser",
+        "Übung macht den Meister"
+      ]
+    },
+    "lv38": {
+      "altAnswers": [
+        "Folgerung"
+      ],
+      "spokenPrompt": "Was ist eine Schlussfolgerung aus einem Text? (eine Folgerung/Meinung/Zusammenfassung)",
+      "verbatimSpeech": true
+    },
+    "lv40": {
+      "altAnswers": [
+        "Körper",
+        "unseren Körper",
+        "den Körper"
+      ]
+    },
+    "lv42": {
+      "altAnswers": [
+        "Sie ist mehrsprachig",
+        "Mehrsprachigkeit",
+        "Man spricht mehrere Sprachen"
+      ]
+    },
+    "lv44": {
+      "altAnswers": [
+        "Protagonistin",
+        "Hauptperson",
+        "Held",
+        "Heldin"
+      ]
+    },
+    "lv46": {
+      "altAnswers": [
+        "Hauptaussage",
+        "zentrale Aussage"
+      ],
+      "spokenPrompt": "Was nennt man die Gesamtaussage oder das Thema eines Textes?",
+      "verbatimSpeech": true
+    },
+    "lv50": {
+      "altAnswers": [
+        "am Morgen"
+      ]
+    },
+    "lv8": {
+      "question": "«Ben hat CHF 10. Er kauft ein Buch für CHF 6.50.» – Welche Frage lässt sich erst durch Rechnen beantworten?",
+      "hints": [
+        "Vergleiche Bens Geld vor und nach dem Einkauf.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Ben hat CHF 10. Er kauft ein Buch für CHF 6.50. – Welche Frage lässt sich erst durch Rechnen beantworten?",
+      "verbatimSpeech": true
+    },
+    "lv39": {
+      "question": "«Wasser gefriert bei 0°C. Es siedet bei 100°C. Dazwischen ist es flüssig.» – Welcher Temperaturbereich wird für flüssiges Wasser genannt?",
+      "spokenPrompt": "Wasser gefriert bei 0°C. Es siedet bei 100°C. Dazwischen ist es flüssig. – Welcher Temperaturbereich wird für flüssiges Wasser genannt?",
+      "verbatimSpeech": true
+    },
+    "ts4": {
+      "question": "Ein Tagebucheintrag beginnt mit «Liebes Tagebuch,» — das ist die ___.",
+      "spokenPrompt": "Ein Tagebucheintrag beginnt mit Liebes Tagebuch, — das ist die ….",
+      "verbatimSpeech": true
+    },
+    "ts6": {
+      "altAnswers": [
+        "Abschiedsgruss"
+      ]
+    },
+    "ts12": {
+      "altAnswers": [
+        "Hauptteil"
+      ]
+    },
+    "ts14": {
+      "altAnswers": [
+        "erster Vers"
+      ],
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ts18": {
+      "altAnswers": [
+        "Präteritum",
+        "Imperfekt"
+      ]
+    },
+    "ts20": {
+      "altAnswers": [
+        "Weshalb",
+        "Weswegen"
+      ],
+      "spokenPrompt": "In einem Bericht antwortet man auf: Wer? Was? Wann? Wo? Wie? und auch …?",
+      "verbatimSpeech": true
+    },
+    "ts22": {
+      "altAnswers": [
+        "Lehre",
+        "Botschaft"
+      ]
+    },
+    "ts26": {
+      "altAnswers": [
+        "Zusammenfassung"
+      ]
+    },
+    "ts28": {
+      "altAnswers": [
+        "Bericht",
+        "Zeitungsbericht",
+        "Meldung",
+        "Nachricht"
+      ]
+    },
+    "ts32": {
+      "altAnswers": [
+        "das Thema einführen",
+        "ins Thema einführen",
+        "Leser neugierig machen"
+      ],
+      "spokenPrompt": "Was ist die Aufgabe der Einleitung in einem Text?",
+      "verbatimSpeech": true
+    },
+    "ts38": {
+      "altAnswers": [
+        "Blickwinkel",
+        "Sichtweise",
+        "Blickwinkel des Erzählers",
+        "Sichtweise des Erzählers"
+      ]
+    },
+    "ts44": {
+      "altAnswers": [
+        "Auflösung"
+      ]
+    },
+    "ts48": {
+      "altAnswers": [
+        "Abschiedsgruss"
+      ]
+    },
+    "ts50": {
+      "altAnswers": [
+        "Gebrauchsanweisung",
+        "Anweisung"
+      ],
+      "spokenPrompt": "Lernrunde 3: Textsorten: Welcher Text erklärt, wie man etwas macht? Antwort: …",
+      "verbatimSpeech": true
+    },
+    "ts27": {
+      "question": "In welcher Person berichtet man mit «ich» in einem Brief über sich selbst?",
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "In welcher Person berichtet man mit ich in einem Brief über sich selbst?",
+      "verbatimSpeech": true
+    },
+    "g3-german-wortarten-w1": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Vergleiche deine Vermutung mit der Aufgabe, bevor du antwortest."
+      ]
+    },
+    "g3-german-wortarten-w2": {
+      "hints": [
+        "Verben = Tätigkeiten (was man tut)",
+        "Vergleiche deine Vermutung mit der Aufgabe, bevor du antwortest."
+      ]
+    },
+    "g3-german-wortarten-w3": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Vergleiche deine Vermutung mit der Aufgabe, bevor du antwortest."
+      ]
+    },
+    "g3-german-wortarten-w11": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Vergleiche deine Vermutung mit der Aufgabe, bevor du antwortest."
+      ]
+    },
+    "g3-german-wortarten-w13": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Vergleiche deine Vermutung mit der Aufgabe, bevor du antwortest."
+      ]
+    },
+    "g3-german-wortarten-w17": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-wortarten-w20": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-german-wortarten-w22": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-german-wortarten-w29": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-wortarten-w31": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-wortarten-w33": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-wortarten-w44": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g3-german-verben-konjugieren-vk25": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-verben-konjugieren-vk29": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-verben-konjugieren-vk33": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "aj21": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "aj24": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "aj33": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "aj44": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-saetze-sb5": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g3-german-saetze-sb11": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-saetze-sb19": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-saetze-sb23": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-saetze-sb27": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-saetze-sb29": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs4": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs11": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs19": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs27": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs35": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Präfix?",
+      "verbatimSpeech": true
+    },
+    "rs39": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs40": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "rs43": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs46": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs49": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs51": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-synonyme-antonyme-sa38": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa44": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa47": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa48": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv12": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv22": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv28": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Um 7 Uhr frühstückt Max. Eine Stunde später geht er zur Schule. – Wann geht Max zur Schule?",
+      "verbatimSpeech": true
+    },
+    "lv30": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv32": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv37": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv41": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv43": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts2": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Ordne zuerst die eindeutigen Elemente zu und prüfe danach den Rest."
+      ]
+    },
+    "ts7": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts13": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts15": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was gehört NICHT in einen Sachtext?",
+      "verbatimSpeech": true
+    },
+    "ts19": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts21": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts23": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts25": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts29": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts31": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts35": {
+      "hints": [
+        "Überlege zuerst selbst, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g3-german-wortarten-w19": {
+      "spokenPrompt": "Was ist ein Pronomen?",
+      "verbatimSpeech": true
+    },
+    "g3-german-wortarten-w47": {
+      "spokenPrompt": "Was ist ein Reflexivpronomen?",
+      "verbatimSpeech": true
+    },
+    "lv10": {
+      "spokenPrompt": "Der Hund heisst Max und ist 3 Jahre alt. – Wie alt ist Max?",
+      "verbatimSpeech": true
+    },
+    "lv47": {
+      "spokenPrompt": "Welche Strategie hilft beim Lesen eines schwierigen Textes?",
+      "verbatimSpeech": true
+    },
+    "lv48": {
+      "spokenPrompt": "Lernrunde 1: Texte verstehen: Lies: Der Zug verspätet sich wegen starken Schneefalls. Warum kommt er später?",
+      "verbatimSpeech": true
+    },
+    "ts10": {
+      "spokenPrompt": "Was kommt am Anfang eines Berichts? (die 5 W-Fragen: Wer, Was, Wann, Wo, …)",
+      "verbatimSpeech": true
+    },
+    "ts33": {
+      "spokenPrompt": "Was nennt man direkte Rede im Text?",
+      "verbatimSpeech": true
+    },
+    "ts34": {
+      "spokenPrompt": "Was nutzt man, um einen Sachtext zu strukturieren? (Absätze/Strophen)",
+      "verbatimSpeech": true
+    },
+    "ts36": {
+      "spokenPrompt": "Lernrunde 1: Textsorten: Welcher Text erklärt, wie man etwas macht?",
+      "verbatimSpeech": true
+    },
+    "ts42": {
+      "spokenPrompt": "Wie nennt man eine extreme Übertreibung als Stilmittel?",
+      "verbatimSpeech": true
+    },
+    "ts46": {
+      "spokenPrompt": "Lernrunde 2: Textsorten: Welcher Text erklärt, wie man etwas macht?",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk6": {
+      "spokenPrompt": "Vergangenheit: Gestern … (spielen, wir) Basketball.",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk16": {
+      "spokenPrompt": "Sie (Singular) … (helfen).",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk34": {
+      "spokenPrompt": "Imperativ von helfen (du-Form): …!",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk36": {
+      "spokenPrompt": "Setze das Verb ins Präteritum: Die Kinder … im Park. (Infinitiv: spielen)",
+      "verbatimSpeech": true
+    },
+    "g3-german-verben-konjugieren-vk49": {
+      "spokenPrompt": "Werden kann sein:... 1) Vollverb (Es wird Winter) oder... 2) Hilfsverb (Es wird regnen). Welcher Satz nutzt es als Hilfsverb?",
+      "verbatimSpeech": true
+    },
+    "aj31": {
+      "spokenPrompt": "Welche Endung bekommt das Adjektiv nach die (Femininum Nominativ)?",
+      "verbatimSpeech": true
+    },
+    "rs34": {
+      "spokenPrompt": "Schreibe Genitiv: der Hut … (der Vater)",
+      "verbatimSpeech": true
+    },
+    "g3-german-saetze-sb14": {
+      "spokenPrompt": "Wie nennt man einen Satz, der etwas feststellt? (Aussage-/Frage-/Befehlssatz)",
+      "verbatimSpeech": true
+    },
+    "g3hoer6": {
+      "verbatimSpeech": true
+    },
+    "g3hoer7": {
+      "verbatimSpeech": true
+    },
+    "g3hoer8": {
+      "verbatimSpeech": true
+    },
+    "g3hoer9": {
+      "verbatimSpeech": true
+    },
+    "g3hoer10": {
+      "verbatimSpeech": true
+    },
+    "g3hoer16": {
+      "verbatimSpeech": true
+    },
+    "g3hoer17": {
+      "verbatimSpeech": true
+    },
+    "g3hoer18": {
+      "verbatimSpeech": true
+    },
+    "g3hoer19": {
+      "verbatimSpeech": true
+    },
+    "g3hoer20": {
+      "verbatimSpeech": true
+    },
+    "g3hoer41": {
+      "verbatimSpeech": true
+    },
+    "g3hoer42": {
+      "verbatimSpeech": true
+    },
+    "g3hoer43": {
+      "verbatimSpeech": true
+    },
+    "g3hoer44": {
+      "verbatimSpeech": true
+    },
+    "g3hoer45": {
+      "verbatimSpeech": true
+    },
+    "g3hoer46": {
+      "verbatimSpeech": true
+    },
+    "g3hoer47": {
+      "verbatimSpeech": true
+    },
+    "g3hoer48": {
+      "verbatimSpeech": true
+    },
+    "g3hoer49": {
+      "verbatimSpeech": true
+    },
+    "g3hoer50": {
+      "verbatimSpeech": true
+    }
+  }
+}

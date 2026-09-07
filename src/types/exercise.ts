@@ -11,6 +11,8 @@ export interface Exercise {
   questionIT?: string;
   /** Learner-facing wording used only by the read-aloud control; display and scoring remain unchanged. */
   spokenPrompt?: string;
+  /** Reviewed speech already in spoken form: preserve text through playback. */
+  verbatimSpeech?: boolean;
   spokenPromptEN?: string;
   spokenPromptFR?: string;
   spokenPromptIT?: string;

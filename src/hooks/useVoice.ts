@@ -616,6 +616,7 @@ function fallbackQuestion(source: Exercise, localized: Exercise, subject: string
 
 export function getExerciseSpeechText(source: Exercise, localized: Exercise, subject: string, language: Lang): string {
   if (source.listeningText) return localized.listeningText ?? source.listeningText;
+  if (localized.verbatimSpeech) return localized.spokenPrompt ?? localized.question;
   const prompt = localized.spokenPrompt ?? source.spokenPrompt;
   const displayText = prompt ?? fallbackQuestion(source, localized, subject);
   const semanticText = language === "de" && !prompt
@@ -631,8 +632,8 @@ export function useVoice() {
     cancelActiveVoice();
   }, []);
 
-  const speak = useCallback(async (text: string, speechLanguage: Lang = lang) => {
-    const clean = cleanSpeechForLanguage(text, speechLanguage);
+  const speak = useCallback(async (text: string, speechLanguage: Lang = lang, verbatim = false) => {
+    const clean = verbatim ? text.trim() : cleanSpeechForLanguage(text, speechLanguage);
     if (!clean) return;
     const generation = cancelActiveVoice();
 

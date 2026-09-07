@@ -1023,6 +1023,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               onClick={() => speak(
                 getExerciseSpeechText(sourceCurrent, current, subject, exerciseSpeechLang),
                 sourceCurrent.listeningText ? (sourceCurrent.listeningLanguage ?? "de") : exerciseSpeechLang,
+                current.verbatimSpeech,
               )}
               className="flex items-center justify-center gap-2 w-full text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-xl py-2.5 px-3 hover:bg-green-100 active:scale-95 transition-all"
               title={current.listeningText ? (lang === "fr" ? "Écouter le texte" : lang === "it" ? "Ascolta il testo" : lang === "en" ? "Play audio text" : "Hörtext abspielen") : tr("readAloudTitle")}
