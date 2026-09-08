@@ -568,6 +568,10 @@
         "Addition",
         "mit der Addition",
         "durch Addition"
+      ],
+      "hints": [
+        "Überlege, mit welcher Umkehroperation du das Ergebnis kontrollieren kannst.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
     "gm4_30": {
@@ -890,6 +894,24 @@
       "hints": [
         "Entbündle bei Bedarf einen Hunderter in Zehner und einen Zehner in Einer. Kontrolliere durch Addition.",
         "Zähle von 513 genau 278 zurück."
+      ]
+    },
+    "g4m2b": {
+      "hints": [
+        "Addiere zuerst die Tausender und dann die Hunderter.",
+        "Zähle von 4500 noch 3200 weiter."
+      ]
+    },
+    "g4m2p": {
+      "hints": [
+        "Durch 1'000 teilbar: letzte 3 Stellen = 000!",
+        "Kontrolliere die letzten drei Stellen jeder angebotenen Zahl."
+      ]
+    },
+    "ge4_7": {
+      "hints": [
+        "Denke daran, wie du die Figur mit einem Zirkel zeichnest.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
       ]
     },
     "ge4_30": {
