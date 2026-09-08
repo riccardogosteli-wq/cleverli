@@ -1,0 +1,139 @@
+{
+  "patches": {
+    "mi4-informationen-pruefen-4-fb1": {
+      "altAnswers": [
+        "Informationsquelle"
+      ]
+    },
+    "mi4-informationen-pruefen-4-fb2": {
+      "altAnswers": [
+        "überprüfen",
+        "belegen",
+        "nachprüfen",
+        "nachweisen"
+      ]
+    },
+    "mi4-informationen-pruefen-4-fb3": {
+      "altAnswers": [
+        "bestellt",
+        "kaufen möchte",
+        "anklickt"
+      ]
+    },
+    "mi4-informationen-pruefen-4-fb4": {
+      "altAnswers": [
+        "Nachweis",
+        "Beweis"
+      ]
+    },
+    "mi4-informationen-pruefen-4-fb6": {
+      "altAnswers": [
+        "Informationsquelle"
+      ]
+    },
+    "mi4-informationen-pruefen-4-fb7": {
+      "altAnswers": [
+        "behauptet",
+        "schreibt",
+        "veröffentlicht",
+        "mitteilt"
+      ]
+    },
+    "mi4-programme-befehle-4-fb1": {
+      "altAnswers": [
+        "Anweisungen",
+        "Instruktionen"
+      ]
+    },
+    "mi4-programme-befehle-4-fb2": {
+      "altAnswers": [
+        "Iteration"
+      ]
+    },
+    "mi4-programme-befehle-4-fb3": {
+      "altAnswers": [
+        "Programmfehler",
+        "Probleme",
+        "Bugs"
+      ]
+    },
+    "mi4-programme-befehle-4-fb5": {
+      "altAnswers": [
+        "Abfolge"
+      ]
+    },
+    "mi4-programme-befehle-4-fb6": {
+      "altAnswers": [
+        "läuft",
+        "richtig funktioniert",
+        "korrekt funktioniert"
+      ]
+    },
+    "mi4-programme-befehle-4-fb7": {
+      "altAnswers": [
+        "Programmfehler",
+        "Bug"
+      ]
+    },
+    "mi4-informationen-pruefen-4-fb5": {
+      "question": "Ergänze das Gegenteil von «richtig»: Eine Meinung ist nicht automatisch ___.",
+      "spokenPrompt": "Ergänze das Gegenteil von «richtig»: Eine Meinung ist nicht automatisch …. Ergänze die fehlende Antwort."
+    },
+    "mi4-programme-befehle-4-mc6": {
+      "question": "Welche Antwort enthält eine Bedingung mit einer zugehörigen Handlung?",
+      "spokenPrompt": "Welche Antwort enthält eine Bedingung mit einer zugehörigen Handlung?"
+    },
+    "mi4-programme-befehle-4-fb4": {
+      "question": "In einer Wenn-dann-Regel nennt man die Voraussetzung nach «wenn» die ___.",
+      "spokenPrompt": "In einer Wenn-dann-Regel nennt man die Voraussetzung nach «wenn» die …. Ergänze die fehlende Antwort."
+    },
+    "mi4-informationen-pruefen-4-mc3": {
+      "question": "Welche Frage hilft dir, die Herkunft und Absicht eines Bildes im Internet zu prüfen?",
+      "spokenPrompt": "Welche Frage hilft dir, die Herkunft und Absicht eines Bildes im Internet zu prüfen?"
+    },
+    "mi4-informationen-pruefen-4-me1": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi4-informationen-pruefen-4-me2": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi4-programme-befehle-4-me1": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true,
+      "hints": [
+        "Vergleiche den ganzen Text auf den aufgedeckten Karten.",
+        "Merke dir die Karten, die schon aufgedeckt waren."
+      ]
+    },
+    "mi4-programme-befehle-4-me2": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi4-programme-befehle-4-dd2": {
+      "dragItems": [
+        {
+          "id": "dreimal",
+          "label": "Wiederhole dreimal"
+        },
+        {
+          "id": "solange",
+          "label": "Wiederholt klatschen, solange Musik läuft"
+        },
+        {
+          "id": "wenn",
+          "label": "Wenn richtig"
+        },
+        {
+          "id": "falls",
+          "label": "Falls es regnet"
+        }
+      ]
+    }
+  }
+}
