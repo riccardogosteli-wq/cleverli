@@ -1,0 +1,181 @@
+{
+  "patches": {
+    "mi3-digitale-spuren-3-mc2": {
+      "question": "Welche Angabe verrät, wo du wohnst?",
+      "spokenPrompt": "Welche Angabe verrät, wo du wohnst?"
+    },
+    "mi3-digitale-spuren-3-mc8": {
+      "question": "Jemand schickt das Geheimnis einer Freundin weiter, ohne sie zu fragen. Was ist daran problematisch?",
+      "spokenPrompt": "Jemand schickt das Geheimnis einer Freundin weiter, ohne sie zu fragen. Was ist daran problematisch?"
+    },
+    "mi3-digitale-spuren-3-fb1": {
+      "altAnswers": [
+        "persönliche",
+        "vertrauliche"
+      ]
+    },
+    "mi3-digitale-spuren-3-fb2": {
+      "altAnswers": [
+        "Zustimmung",
+        "Einverständnis"
+      ],
+      "question": "Vor dem Teilen eines Fotos von einer Freundin frage ich sie um ___.",
+      "spokenPrompt": "Vor dem Teilen eines Fotos von einer Freundin frage ich sie um … . Ergänze die fehlende Antwort."
+    },
+    "mi3-digitale-spuren-3-fb3": {
+      "altAnswers": [
+        "Unterstützung",
+        "Rat"
+      ]
+    },
+    "mi3-digitale-spuren-3-fb4": {
+      "altAnswers": [
+        "Wörter",
+        "Nachrichten",
+        "Beiträge",
+        "Kommentare"
+      ]
+    },
+    "mi3-digitale-spuren-3-fb5": {
+      "altAnswers": [
+        "gespeichert",
+        "auffindbar",
+        "erhalten"
+      ]
+    },
+    "mi3-digitale-spuren-3-fb6": {
+      "altAnswers": [
+        "Zustimmung",
+        "Einverständnis"
+      ]
+    },
+    "mi3-digitale-spuren-3-fb7": {
+      "altAnswers": [
+        "Voraussetzung"
+      ]
+    },
+    "mi3-algorithmen-alltag-3-fb1": {
+      "altAnswers": [
+        "Anweisungen",
+        "Arbeitsschritten"
+      ]
+    },
+    "mi3-algorithmen-alltag-3-fb2": {
+      "altAnswers": [
+        "Genauigkeit",
+        "Verständlichkeit"
+      ]
+    },
+    "mi3-algorithmen-alltag-3-fb3": {
+      "altAnswers": [
+        "repetieren"
+      ]
+    },
+    "mi3-algorithmen-alltag-3-fb4": {
+      "altAnswers": [
+        "überprüfen",
+        "untersuchen",
+        "suchen",
+        "finden",
+        "beheben",
+        "korrigieren"
+      ]
+    },
+    "mi3-algorithmen-alltag-3-fb5": {
+      "altAnswers": [
+        "Anweisungen",
+        "Instruktionen"
+      ]
+    },
+    "mi3-algorithmen-alltag-3-fb6": {
+      "altAnswers": [
+        "Voraussetzung"
+      ]
+    },
+    "mi3-algorithmen-alltag-3-fb7": {
+      "altAnswers": [
+        "Voraussetzung"
+      ]
+    },
+    "mi3-digitale-spuren-3-ma1": {
+      "pairs": [
+        {
+          "id": "mi3-digitale-spuren-3-ma1-l1",
+          "label": "Wohnadresse"
+        },
+        {
+          "id": "mi3-digitale-spuren-3-ma1-r1",
+          "label": "privat: zeigt meinen Wohnort"
+        },
+        {
+          "id": "mi3-digitale-spuren-3-ma1-l2",
+          "label": "Lieblingsfarbe"
+        },
+        {
+          "id": "mi3-digitale-spuren-3-ma1-r2",
+          "label": "meist harmlos: eine Farbe, die ich mag"
+        },
+        {
+          "id": "mi3-digitale-spuren-3-ma1-l3",
+          "label": "Telefonnummer"
+        },
+        {
+          "id": "mi3-digitale-spuren-3-ma1-r3",
+          "label": "privat: damit kann man mich anrufen"
+        },
+        {
+          "id": "mi3-digitale-spuren-3-ma1-l4",
+          "label": "Lieblingstier"
+        },
+        {
+          "id": "mi3-digitale-spuren-3-ma1-r4",
+          "label": "meist harmlos: ein Tier, das ich mag"
+        }
+      ]
+    },
+    "mi3-digitale-spuren-3-me1": {
+      "question": "Finde im Memory immer zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde im Memory immer zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi3-digitale-spuren-3-me2": {
+      "question": "Finde im Memory immer zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde im Memory immer zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi3-algorithmen-alltag-3-me1": {
+      "question": "Finde im Memory immer zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde im Memory immer zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi3-algorithmen-alltag-3-me2": {
+      "question": "Finde im Memory immer zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde im Memory immer zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi3-algorithmen-alltag-3-dd3": {
+      "dragItems": [
+        {
+          "id": "dreimal",
+          "label": "dreimal klatschen"
+        },
+        {
+          "id": "solange",
+          "label": "wiederholt klatschen, solange Musik läuft"
+        },
+        {
+          "id": "wennrot",
+          "label": "wenn es rot ist"
+        },
+        {
+          "id": "fallsleer",
+          "label": "falls die Box leer ist"
+        }
+      ]
+    },
+    "mi3-digitale-spuren-3-sr1": {
+      "question": "Schreibe zwei Regeln für sicheres Chatten: eine zu privaten Angaben und eine zu freundlicher Sprache.",
+      "spokenPrompt": "Schreibe zwei Regeln für sicheres Chatten: eine zu privaten Angaben und eine zu freundlicher Sprache."
+    }
+  }
+}
