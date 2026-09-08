@@ -1,0 +1,846 @@
+{
+  "patches": {
+    "gr3-19": {
+      "question": "Put the words in order, starting with My: [name / my / is / Anna]",
+      "spokenPrompt": "Put the words in order, starting with My: [name / my / is / Anna]"
+    },
+    "gr3-35": {
+      "question": "Translate using 'years old': 'Ich bin neun Jahre alt.'",
+      "spokenPrompt": "Translate using 'years old': 'Ich bin neun Jahre alt.'"
+    },
+    "gr3-37": {
+      "question": "Which dialogue includes a greeting, a question about feelings, and an answer to that question?",
+      "spokenPrompt": "Which dialogue includes a greeting, a question about feelings, and an answer to that question?"
+    },
+    "nu3-27": {
+      "question": "Count the pencils. I have ___ pencils: ✏️ ✏️ ✏️ ✏️ ✏️ ✏️ ✏️",
+      "spokenPrompt": "Count the pencils: pencil, pencil, pencil, pencil, pencil, pencil, pencil. How many pencils are there? Choose the English number word."
+    },
+    "cs3-3": {
+      "question": "Grass is ___. Write the colour in English.",
+      "sequentialAnswer": false,
+      "spokenPrompt": "Grass is ___. Write the colour in English."
+    },
+    "cs3-4": {
+      "question": "What flat shape is the outline of a round football?",
+      "spokenPrompt": "What flat shape is the outline of a round football?"
+    },
+    "cs3-5": {
+      "question": "Which colour word means gelb?",
+      "spokenPrompt": "Which colour word means gelb?"
+    },
+    "cs3-8": {
+      "question": "What colour is the peel of a ripe yellow banana?",
+      "spokenPrompt": "What colour is the peel of a ripe yellow banana?"
+    },
+    "cs3-14": {
+      "question": "A strawberry is red and ___. Complete with the opposite of big.",
+      "spokenPrompt": "A strawberry is red and ___. Complete with the opposite of big."
+    },
+    "cs3-17": {
+      "question": "Which is the most specific name for a shape with 4 equal sides and 4 right angles?",
+      "spokenPrompt": "Which is the most specific name for a shape with 4 equal sides and 4 right angles?"
+    },
+    "cs3-23": {
+      "question": "Which colour word means grün?",
+      "spokenPrompt": "Which colour word means grün?"
+    },
+    "cs3-27": {
+      "question": "What shape is a round clock face?",
+      "spokenPrompt": "What shape is a round clock face?"
+    },
+    "cs3-34": {
+      "question": "The sky at sunset is ___ and pink. Use the English word for orange.",
+      "spokenPrompt": "The sky at sunset is ___ and pink. Use the English word for orange."
+    },
+    "cs3-36": {
+      "question": "Name the colours of a standard traffic light from top to bottom in English: ___",
+      "altAnswers": [
+        "red amber green"
+      ],
+      "spokenPrompt": "Name the colours of a standard traffic light from top to bottom in English: ___"
+    },
+    "cs3-38": {
+      "question": "Name these two flat shapes in English, in this order: Kreis, Oval. ___",
+      "altAnswers": [
+        "circle oval"
+      ],
+      "spokenPrompt": "Name these two flat shapes in English, in this order: Kreis, Oval. ___"
+    },
+    "cs3-44": {
+      "question": "Translate: ein grosses schwarzes Quadrat. Complete: It is a [1] [2] square. Write only the two missing English words, in order: ___",
+      "spokenPrompt": "Translate: ein grosses schwarzes Quadrat. Complete: It is a ___ ___ square. Write only the two missing English words, in order: ___"
+    },
+    "cs3-48": {
+      "question": "Write these six colours in English, in the same order: rot, orange, gelb, grün, blau, violett. ___",
+      "answer": "red, orange, yellow, green, blue, violet",
+      "sequentialAnswer": true,
+      "altAnswers": [
+        "red orange yellow green blue purple"
+      ],
+      "spokenPrompt": "Write these six colours in English, in the same order: rot, orange, gelb, grün, blau, violett. ___"
+    },
+    "so3-16": {
+      "question": "The school subject covering physics, chemistry and biology is called ___.",
+      "spokenPrompt": "The school subject covering physics, chemistry and biology is called ___."
+    },
+    "so3-20": {
+      "question": "The room where a school class has lessons is called a ___.",
+      "hints": [
+        "Think of the place where a teacher and pupils have lessons.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "The room where a school class has lessons is called a ___."
+    },
+    "so3-29": {
+      "question": "What is 'Kleber' in English?",
+      "spokenPrompt": "What is 'Kleber' in English?"
+    },
+    "so3-30": {
+      "question": "School starts at 8:00 in the morning. Complete in English: School starts at ___.",
+      "altAnswers": [
+        "8 am",
+        "eight am",
+        "8:00",
+        "eight"
+      ],
+      "spokenPrompt": "School starts at 8:00 in the morning. Complete in English: School starts at ___."
+    },
+    "so3-32": {
+      "question": "We read books in ___ class. Translate Deutsch for the gap.",
+      "spokenPrompt": "We read books in ___ class. Translate Deutsch for the gap."
+    },
+    "ff3-40": {
+      "question": "Complete with the English word for Mutter: 'I look like my ___. We have the same eyes.'",
+      "altAnswers": [
+        "mum",
+        "mom",
+        "mummy",
+        "mommy"
+      ],
+      "spokenPrompt": "Complete with the English word for Mutter: 'I look like my ___. We have the same eyes.'"
+    },
+    "ff3-42": {
+      "question": "A good friend ___ with you, helps you, and makes you laugh. Use play in the correct form.",
+      "spokenPrompt": "A good friend ___ with you, helps you, and makes you laugh. Use play in the correct form."
+    },
+    "ff3-45": {
+      "question": "Anna is talking about her own grandmother: '___ grandmother is 70 years old.' What possessive is missing?",
+      "spokenPrompt": "Anna is talking about her own grandmother: '___ grandmother is 70 years old.' What possessive is missing?"
+    },
+    "an3-14": {
+      "question": "A ___ is an orange pet fish. Translate Goldfisch.",
+      "spokenPrompt": "A ___ is an orange pet fish. Translate Goldfisch."
+    },
+    "an3-26": {
+      "question": "A ___ has a spiral shell, no legs, and moves very slowly.",
+      "spokenPrompt": "A ___ has a spiral shell, no legs, and moves very slowly."
+    },
+    "an3-34": {
+      "question": "A ___ lives in Australia, has powerful back legs for hopping and a long tail, and carries its baby in a pouch. Write the English word for Känguru.",
+      "spokenPrompt": "A ___ lives in Australia, has powerful back legs for hopping and a long tail, and carries its baby in a pouch. Write the English word for Känguru."
+    },
+    "an3-42": {
+      "question": "A caterpillar becomes a ___ after its chrysalis stage.",
+      "altAnswers": [
+        "moth"
+      ],
+      "spokenPrompt": "A caterpillar becomes a ___ after its chrysalis stage."
+    },
+    "fd3-22": {
+      "question": "Fruit and ___ are healthy foods. Write the English word for Gemüse.",
+      "spokenPrompt": "Fruit and ___ are healthy foods. Write the English word for Gemüse."
+    },
+    "fd3-24": {
+      "question": "I don't like ___, but I love strawberries. Write the English word for Spinat.",
+      "spokenPrompt": "I don't like ___, but I love strawberries. Write the English word for Spinat."
+    },
+    "fd3-33": {
+      "question": "Which of these is usually eaten as a sweet dessert?",
+      "spokenPrompt": "Which of these is usually eaten as a sweet dessert?"
+    },
+    "fd3-46": {
+      "question": "Complete with the English words for Früchte and Gemüse, in that order: We need to eat [1] and [2] to stay healthy. Write only the missing words: ___",
+      "answer": "fruit / vegetables",
+      "altAnswers": [
+        "fruits / vegetables"
+      ],
+      "spokenPrompt": "Complete with the English words for Früchte and Gemüse, in that order: We need to eat ___ and ___ to stay healthy. Write only the missing words: ___"
+    },
+    "dm3-16": {
+      "question": "Today is [1]. Yesterday was [2]. Today is Montag. Write the two missing day names in English, in order: ___",
+      "spokenPrompt": "Today is ___. Yesterday was ___. Today is Montag. Write the two missing day names in English, in order: ___"
+    },
+    "dm3-26": {
+      "question": "The weekend is [1] and [2]. Write only the two missing day names, starting with Saturday: ___",
+      "answer": "Saturday / Sunday",
+      "spokenPrompt": "The weekend is ___ and ___. Write only the two missing day names, starting with Saturday: ___"
+    },
+    "dm3-30": {
+      "question": "Translate orange and braun into English: In autumn, the leaves turn [1] and [2]. Write only the two missing words, in order: ___",
+      "answer": "orange / brown",
+      "spokenPrompt": "Translate orange and braun into English: In autumn, the leaves turn ___ and ___. Write only the two missing words, in order: ___"
+    },
+    "dm3-37": {
+      "question": "What is the correct order of seasons, starting with spring?",
+      "spokenPrompt": "What is the correct order of seasons, starting with spring?"
+    },
+    "dm3-44": {
+      "question": "Write the first 6 months of the year in English, in order: ___",
+      "spokenPrompt": "Write the first 6 months of the year in English, in order: ___"
+    },
+    "dm3-48": {
+      "question": "In this school, summer holidays are in Juli and August. Write the two month names in English, in that order: ___",
+      "answer": "July / August",
+      "spokenPrompt": "In this school, summer holidays are in Juli and August. Write the two month names in English, in that order: ___"
+    },
+    "ss3-3": {
+      "question": "Complete with the present form of to be: We ___ happy today.",
+      "spokenPrompt": "Complete with the present form of to be: We ___ happy today."
+    },
+    "ss3-6": {
+      "question": "Complete with the present form of to be: They ___ from Switzerland.",
+      "spokenPrompt": "Complete with the present form of to be: They ___ from Switzerland."
+    },
+    "ss3-8": {
+      "question": "Complete with the present form of to be: She ___ not at school today. She is sick.",
+      "spokenPrompt": "Complete with the present form of to be: She ___ not at school today. She is sick."
+    },
+    "ss3-13": {
+      "question": "Which is a correctly ordered statement (not a question)?",
+      "spokenPrompt": "Which is a correctly ordered statement (not a question)?"
+    },
+    "ss3-17": {
+      "question": "Which is the standard yes/no question formed by putting the verb before the subject?",
+      "spokenPrompt": "Which is the standard yes/no question formed by putting the verb before the subject?"
+    },
+    "ss3-21": {
+      "options": [
+        "I am happy.",
+        "Is he a student?",
+        "He isn't here.",
+        "It is cold today."
+      ]
+    },
+    "ss3-27": {
+      "options": [
+        "Nicht wahr? / Oder?",
+        "Wann genau?",
+        "Was ist das?",
+        "Ist es das?"
+      ]
+    },
+    "ss3-22": {
+      "question": "Complete both gaps with the present form of to be: The cat [1] on the table. It [2] playing. Write only the missing words, in order: ___",
+      "spokenPrompt": "Complete both gaps with the present form of to be: The cat ___ on the table. It ___ playing. Write only the missing words, in order: ___"
+    },
+    "ss3-26": {
+      "question": "Complete both gaps with the present form of to be: The boys [1] not in the garden. They [2] in the house. Write only the missing words, in order: ___",
+      "spokenPrompt": "Complete both gaps with the present form of to be: The boys ___ not in the garden. They ___ in the house. Write only the missing words, in order: ___"
+    },
+    "gr3-21": {
+      "altAnswers": [
+        "well",
+        "good",
+        "okay",
+        "ok",
+        "great"
+      ]
+    },
+    "gr3-27": {
+      "altAnswers": [
+        "come"
+      ]
+    },
+    "gr3-30": {
+      "altAnswers": [
+        "pleased",
+        "glad",
+        "delighted"
+      ]
+    },
+    "gr3-46": {
+      "altAnswers": [
+        "are / well",
+        "are / good",
+        "are / okay",
+        "are / ok",
+        "are / great"
+      ],
+      "spokenPrompt": "Complete the conversation: A: 'How ___ you?' B: 'I am ___, thank you. And you?' Write all missing parts in order: ___"
+    },
+    "gr3-38": {
+      "altAnswers": [
+        "Good evening! My name is Max. Pleased to meet you.",
+        "Good evening! My name is Max. It is nice to meet you.",
+        "Good evening! My name is Max. It's nice to meet you.",
+        "Good evening! My name is Max. It’s nice to meet you.",
+        "Good evening! My name's Max. It is nice to meet you.",
+        "Good evening! My name's Max. It's nice to meet you.",
+        "Good evening! My name's Max. Nice to meet you.",
+        "Good evening! My name's Max. Pleased to meet you.",
+        "Good evening! My name’s Max. It is nice to meet you.",
+        "Good evening! My name’s Max. It’s nice to meet you.",
+        "Good evening! My name’s Max. Nice to meet you.",
+        "Good evening! My name’s Max. Pleased to meet you."
+      ]
+    },
+    "gr3-42": {
+      "altAnswers": [
+        "I am ten years old and I am from Bern.",
+        "I am ten and I come from Bern.",
+        "I am ten years old and come from Bern.",
+        "I am ten years old and I'm from Bern.",
+        "I am ten years old and I’m from Bern.",
+        "I'm ten and I come from Bern.",
+        "I'm ten years old and I am from Bern.",
+        "I'm ten years old and I come from Bern.",
+        "I'm ten years old and I'm from Bern.",
+        "I'm ten years old and come from Bern.",
+        "I’m ten and I come from Bern.",
+        "I’m ten years old and I am from Bern.",
+        "I’m ten years old and I come from Bern.",
+        "I’m ten years old and I’m from Bern.",
+        "I’m ten years old and come from Bern."
+      ]
+    },
+    "gr3-48": {
+      "altAnswers": [
+        "Bye and see you tomorrow!",
+        "Goodbye and until tomorrow!"
+      ],
+      "hints": [
+        "Use a farewell, then say when you will see the person again.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "cs3-20": {
+      "altAnswers": [
+        "gray"
+      ]
+    },
+    "cs3-24": {
+      "altAnswers": [
+        "violet"
+      ]
+    },
+    "cs3-26": {
+      "altAnswers": [
+        "little"
+      ]
+    },
+    "cs3-28": {
+      "altAnswers": [
+        "7"
+      ]
+    },
+    "cs3-32": {
+      "altAnswers": [
+        "gray"
+      ]
+    },
+    "cs3-42": {
+      "altAnswers": [
+        "big"
+      ]
+    },
+    "cs3-40": {
+      "altAnswers": [
+        "Der grosse rote Kreis befindet sich neben dem kleinen blauen Quadrat.",
+        "Der grosse rote Kreis liegt neben dem kleinen blauen Quadrat."
+      ]
+    },
+    "so3-3": {
+      "altAnswers": [
+        "desk"
+      ]
+    },
+    "so3-9": {
+      "altAnswers": [
+        "blackboard",
+        "whiteboard"
+      ]
+    },
+    "so3-24": {
+      "altAnswers": [
+        "physical education",
+        "sports",
+        "gym"
+      ]
+    },
+    "so3-26": {
+      "altAnswers": [
+        "lift",
+        "put up"
+      ]
+    },
+    "so3-38": {
+      "altAnswers": [
+        "Can I open my book?",
+        "Am I allowed to open my book?"
+      ]
+    },
+    "so3-40": {
+      "altAnswers": [
+        "I have forgotten my ruler.",
+        "I have forgotten to bring my ruler.",
+        "I've forgotten my ruler.",
+        "I've forgotten to bring my ruler.",
+        "I’ve forgotten my ruler.",
+        "I’ve forgotten to bring my ruler."
+      ]
+    },
+    "so3-48": {
+      "altAnswers": [
+        "Please write your name on the sheet.",
+        "Please write your name on the sheet of paper.",
+        "Write your name on the paper, please."
+      ]
+    },
+    "ff3-6": {
+      "altAnswers": [
+        "granddad",
+        "grandad",
+        "grandpa"
+      ]
+    },
+    "ff3-24": {
+      "altAnswers": [
+        "3"
+      ]
+    },
+    "ff3-38": {
+      "altAnswers": [
+        "My grandpa has three children: my father, my uncle and my aunt.",
+        "My grandfather has three children: my dad, my uncle and my aunt."
+      ]
+    },
+    "ff3-44": {
+      "altAnswers": [
+        "My sister is younger than I am. She is five years old.",
+        "My sister is younger than me. She is five.",
+        "My sister is younger than I am. She's five years old.",
+        "My sister is younger than I am. She’s five years old.",
+        "My sister is younger than I'm. She is five years old.",
+        "My sister is younger than I'm. She's five years old.",
+        "My sister is younger than I’m. She is five years old.",
+        "My sister is younger than I’m. She’s five years old.",
+        "My sister is younger than me. She's five years old.",
+        "My sister is younger than me. She's five.",
+        "My sister is younger than me. She’s five years old.",
+        "My sister is younger than me. She’s five."
+      ]
+    },
+    "ff3-50": {
+      "altAnswers": [
+        "My uncle and aunt have two children. They are my cousins.",
+        "My uncle and my aunt have two children. These are my cousins."
+      ]
+    },
+    "an3-16": {
+      "altAnswers": [
+        "His",
+        "Her"
+      ]
+    },
+    "an3-38": {
+      "altAnswers": [
+        "Elephants are big animals that live in Africa and Asia.",
+        "Elephants are large animals which live in Africa and Asia."
+      ]
+    },
+    "an3-44": {
+      "altAnswers": [
+        "plant eaters",
+        "plant-eaters"
+      ]
+    },
+    "an3-46": {
+      "altAnswers": [
+        "What animals can you find in Switzerland?",
+        "Which animals are found in Switzerland?",
+        "Which animals live in Switzerland?"
+      ]
+    },
+    "fd3-16": {
+      "altAnswers": [
+        "and",
+        "although",
+        "though",
+        "yet"
+      ]
+    },
+    "fd3-18": {
+      "altAnswers": [
+        "I enjoy eating pizza.",
+        "I like to eat pizza.",
+        "I enjoy pizza."
+      ]
+    },
+    "fd3-32": {
+      "altAnswers": [
+        "I eat fruits every day.",
+        "Every day I eat fruit."
+      ]
+    },
+    "fd3-38": {
+      "altAnswers": [
+        "My favourite food is fondue because it is a typical Swiss dish.",
+        "My favourite food is fondue because it is traditionally Swiss.",
+        "My favorite food is fondue because it is a typical Swiss dish.",
+        "My favorite food is fondue because it is traditionally Swiss.",
+        "My favorite food is fondue because it is typically Swiss.",
+        "My favorite food is fondue because it's a typical Swiss dish.",
+        "My favorite food is fondue because it's traditionally Swiss.",
+        "My favorite food is fondue because it's typically Swiss.",
+        "My favorite food is fondue because it’s a typical Swiss dish.",
+        "My favorite food is fondue because it’s traditionally Swiss.",
+        "My favorite food is fondue because it’s typically Swiss.",
+        "My favourite food is fondue because it's a typical Swiss dish.",
+        "My favourite food is fondue because it's traditionally Swiss.",
+        "My favourite food is fondue because it's typically Swiss.",
+        "My favourite food is fondue because it’s a typical Swiss dish.",
+        "My favourite food is fondue because it’s traditionally Swiss.",
+        "My favourite food is fondue because it’s typically Swiss."
+      ]
+    },
+    "fd3-42": {
+      "altAnswers": [
+        "We often eat bread and cheese for dinner.",
+        "For supper we often eat bread and cheese."
+      ]
+    },
+    "fd3-48": {
+      "altAnswers": [
+        "In the morning I drink orange juice.",
+        "I drink orange juice in the mornings."
+      ]
+    },
+    "dm3-12": {
+      "altAnswers": [
+        "12"
+      ]
+    },
+    "dm3-24": {
+      "altAnswers": [
+        "In winter it is cold and it snows often.",
+        "In winter it's cold and it often snows.",
+        "In winter it's cold and it snows often.",
+        "In winter it’s cold and it often snows.",
+        "In winter it’s cold and it snows often."
+      ]
+    },
+    "dm3-36": {
+      "altAnswers": [
+        "In spring flowers bloom and birds sing.",
+        "In spring the flowers blossom and the birds sing."
+      ]
+    },
+    "dm3-46": {
+      "altAnswers": [
+        "1st"
+      ]
+    },
+    "ss3-12": {
+      "altAnswers": [
+        "has"
+      ]
+    },
+    "ss3-38": {
+      "altAnswers": [
+        "My dog is brown and he is very friendly.",
+        "My dog is brown and very friendly.",
+        "My dog is brown and it's very friendly.",
+        "My dog is brown and it’s very friendly."
+      ]
+    },
+    "ss3-40": {
+      "altAnswers": [
+        "he",
+        "she",
+        "that",
+        "this"
+      ]
+    },
+    "ss3-42": {
+      "altAnswers": [
+        "Is this your school? Yes, this is my school.",
+        "Is it your school? Yes, it is my school.",
+        "Is it your school? Yes, it's my school.",
+        "Is it your school? Yes, it’s my school.",
+        "Is that your school? Yes, that's my school.",
+        "Is that your school? Yes, that’s my school."
+      ]
+    },
+    "so3-42": {
+      "altAnswers": [
+        "Where's the pencil case?",
+        "Where’s the pencil case?"
+      ],
+      "hints": [
+        "Start with a question about a place, then name the classroom object.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "dm3-42": {
+      "altAnswers": [
+        "What is your favorite month and why?",
+        "What's your favorite month and why?",
+        "What's your favourite month and why?",
+        "What’s your favorite month and why?",
+        "What’s your favourite month and why?"
+      ]
+    },
+    "ss3-30": {
+      "altAnswers": [
+        "We aren't tired, we are happy.",
+        "We aren’t tired, we are happy.",
+        "We're not tired, we are happy.",
+        "We'ren't tired, we are happy.",
+        "We’re not tired, we are happy.",
+        "We’ren’t tired, we are happy."
+      ]
+    },
+    "ss3-46": {
+      "altAnswers": [
+        "Are your parents at home? No, they aren't at home.",
+        "Are your parents at home? No, they aren’t at home."
+      ]
+    },
+    "ss3-24": {
+      "caseSensitiveAnswer": true,
+      "altAnswers": [
+        "it's",
+        "IT'S",
+        "It’s",
+        "it’s",
+        "IT’S"
+      ]
+    },
+    "nu3-3": {
+      "hints": [
+        "It follows nine and has three letters.",
+        "Das Wort hat 3 Buchstaben."
+      ]
+    },
+    "nu3-7": {
+      "hints": [
+        "Think of the number after nineteen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "nu3-16": {
+      "hints": [
+        "Think of the number after twelve.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-18": {
+      "hints": [
+        "Think of six groups of ten.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-20": {
+      "hints": [
+        "Think of the number just before twenty.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-22": {
+      "hints": [
+        "Write the tens first, then the ones; join them with a hyphen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-25": {
+      "hints": [
+        "Check the base number and the ending used for numbers from thirteen to nineteen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "nu3-26": {
+      "hints": [
+        "Write the tens first, then the ones; join them with a hyphen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-30": {
+      "hints": [
+        "Think of the number after fifteen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-32": {
+      "hints": [
+        "Think of nine groups of ten.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-34": {
+      "hints": [
+        "Write the tens first, then the ones; join them with a hyphen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-35": {
+      "hints": [
+        "Think about what happens when a quantity becomes twice as large.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "nu3-36": {
+      "hints": [
+        "Write the tens first, then the ones.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-40": {
+      "hints": [
+        "Write the tens first, then the ones.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-44": {
+      "hints": [
+        "Write the tens first, then the ones.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-48": {
+      "hints": [
+        "Think of the number after sixteen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "nu3-50": {
+      "hints": [
+        "Write the tens first, then the ones.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "cs3-7": {
+      "hints": [
+        "Trace the sides of the shape and count them once each.",
+        "Die Zahl liegt zwischen 1 und 5."
+      ]
+    },
+    "cs3-10": {
+      "hints": [
+        "Trace the sides of a square and count each one once.",
+        "Die Zahl liegt zwischen 2 und 6."
+      ]
+    },
+    "cs3-25": {
+      "hints": [
+        "Trace a triangle and count each corner once.",
+        "Die Zahl liegt zwischen 1 und 5."
+      ]
+    },
+    "cs3-37": {
+      "hints": [
+        "Compare the angles of both four-sided shapes.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cs3-43": {
+      "hints": [
+        "Think about the difference between a pale colour and a dark colour.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cs3-45": {
+      "hints": [
+        "Sketch a pentagon and count its straight sides.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cs3-49": {
+      "hints": [
+        "Picture a stop sign and count its edges.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "so3-23": {
+      "hints": [
+        "Is this an instruction about hearing, reading or moving?",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "so3-27": {
+      "hints": [
+        "Think about the action and the polite word in the instruction.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "so3-43": {
+      "hints": [
+        "Use subject, verb and object. Put the adjective before its noun.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fd3-27": {
+      "hints": [
+        "Which choice is a starchy vegetable in cooking rather than a fruit?",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fd3-31": {
+      "hints": [
+        "Think of food that supports your body and wellbeing.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fd3-43": {
+      "hints": [
+        "Think about how you feel after eating enough.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "dm3-28": {
+      "hints": [
+        "Use the word for the next day, followed by the correct weekday.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ss3-18": {
+      "hints": [
+        "Start the yes/no question with the verb, then the person and relationship.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ss3-19": {
+      "hints": [
+        "Identify the plural pronoun and the negative form of to be.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ss3-45": {
+      "hints": [
+        "Decide whether the subject is singular or plural before choosing the verb.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ss3-47": {
+      "hints": [
+        "Expand the apostrophe contraction and keep the negative word.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "gr3-36": {
+      "spokenPrompt": "Write a full introduction: 'Hello! My ___ is Mia. I ___ from Zurich. I ___ eight years old.' Write all missing parts in order: ___"
+    },
+    "gr3-40": {
+      "spokenPrompt": "A: 'What is your name?' B: 'My name ___ Luca.' A: 'Nice to meet ___, Luca!' Write all missing parts in order: ___"
+    },
+    "cs3-50": {
+      "spokenPrompt": "The flag of Switzerland is ___ with a ___ cross. Write all missing parts in order: ___"
+    },
+    "an3-24": {
+      "spokenPrompt": "I ___ a dog. He ___ very friendly. Write all missing parts in order: ___"
+    },
+    "ss3-50": {
+      "spokenPrompt": "Complete: 'We ___ in Grade 3. Our teacher ___ Ms Brown. We ___ happy at school.' Write all missing parts in order: ___"
+    }
+  }
+}
