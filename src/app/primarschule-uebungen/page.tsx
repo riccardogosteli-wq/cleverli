@@ -1,7 +1,8 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
 import AdsPrimarschuleClient from "../ads/primarschule/AdsPrimarschuleClient";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "Primarschule üben nach Lehrplan 21",
   description: "Online-Übungen für Mathe, Deutsch, NMG, Sprachen und Medien in der Schweizer Primarschule. Kostenlos testen, danach für die ganze Familie.",
   robots: {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.cleverli.ch/primarschule-uebungen",
   },
-};
+});
 
 export default function PrimarschuleUebungenPage() {
   return <AdsPrimarschuleClient />;

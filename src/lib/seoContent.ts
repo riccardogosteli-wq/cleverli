@@ -1,3 +1,4 @@
+import { getTopicSummaries } from "@/data/topicCatalog";
 import type { Exercise, Topic } from "@/types/exercise";
 import type { Lang } from "@/lib/i18n";
 
@@ -241,6 +242,58 @@ export function getSubjectSeo(subject: string) {
     keywords: [subject],
     intro: "Kurze interaktive Übungen für die Schweizer Primarschule.",
     practice: ["Grundlagen üben", "Wissen festigen", "Fortschritt sehen"],
+  };
+}
+
+// Curated topic IDs keep representative copy grade-aware; titles come from the
+// current catalog (not legacy IDs, which sometimes describe retired content).
+const SUBJECT_HIGHLIGHTS: Record<string, string[]> = {
+  "1-math": ["zahlen-bis-20", "addition-bis-10", "formen"],
+  "2-math": ["zahlen-bis-100", "einmaleins", "uhrzeit"],
+  "3-math": ["rechnen-bis-1000", "division", "brueche"],
+  "4-math": ["zahlen-bis-10000", "brueche-einfuehrung", "groessen-messen-4"],
+  "5-math": ["dezimalzahlen", "brueche-rechnen", "statistik-5"],
+  "6-math": ["negative-zahlen", "gleichungen", "prozent"],
+  "1-german": ["buchstaben", "silben-klatschen", "saetze-lesen"],
+  "2-german": ["nomen-artikel", "texte-lesen", "satzzeichen"],
+  "3-german": ["wortarten", "leseverstaendnis", "rechtschreibung"],
+  "4-german": ["satzglieder", "zeitformen-4", "leseverstaendnis-4"],
+  "5-german": ["direkte-rede", "aufsatz-aufbau", "leseverstaendnis-5"],
+  "6-german": ["kasus", "argumentation-6", "hoerverstehen-6"],
+  "1-science": ["tiere", "jahreszeiten", "mein-koerper"],
+  "2-science": ["wasser", "gesunde-ernaehrung", "schweiz-symbole"],
+  "3-science": ["unsere-erde", "materialien", "demokratie"],
+  "4-science": ["kraefte-energie-4", "kantone-schweiz-4", "roemisches-reich-4"],
+  "5-science": ["oekosysteme", "strom-energie", "schweiz-politik-5"],
+  "6-science": ["schweiz-geografie", "energie-nachh-6", "demokratie-menschenrechte-6"],
+  "3-english": ["greetings-3", "school-objects-3", "simple-sentences-3"],
+  "4-english": ["my-daily-routine-4", "past-simple-4", "travel-directions-4"],
+  "5-english": ["present-continuous-5", "storytelling-5", "reading-comp-5"],
+  "6-english": ["passive-voice-6", "reading-skills-6", "writing-skills-6"],
+  "3-french": ["bonjour-classe-3", "je-me-presente-3", "ecole-objets-3"],
+  "4-french": ["journee-heure-4", "achats-prix-4", "messages-invitations-4"],
+  "5-french": ["bonjour-5", "famille-5", "verbes-etre-avoir-5"],
+  "6-french": ["passe-compose-6", "ville-directions-6", "culture-francophone-6"],
+  "3-mi": ["digitale-spuren-3", "algorithmen-alltag-3"],
+  "4-mi": ["informationen-pruefen-4", "programme-befehle-4"],
+  "5-mi": ["sicher-online-5", "daten-diagramme-5"],
+  "6-mi": ["feeds-algorithmen-6", "netzwerke-sicherheit-6"],
+};
+
+export function getGradeSubjectSeo(grade: string | number, subject: string) {
+  const base = getSubjectSeo(subject);
+  const topics = getTopicSummaries(Number(grade), subject);
+  const selected = (SUBJECT_HIGHLIGHTS[`${grade}-${subject}`] ?? [])
+    .map((id) => topics.find((topic) => topic.id === id))
+    .filter((topic) => topic !== undefined);
+  const practice = (selected.length ? selected : topics.slice(0, 3)).map((topic) => topic.title);
+  return {
+    ...base,
+    shortName: subject === "mi" ? base.name : base.shortName,
+    keywords: [`${base.name} Übungen`, ...topics.map((topic) => topic.title)],
+    practice,
+    intro: `${base.name} in der ${getGradeName(grade)}: Dein Kind übt hier unter anderem ${practice.join(", ")}. Die ersten 20 Aufgaben kannst du kostenlos testen – direkt im Browser.`,
+    description: `${base.name} ${getGradeName(grade)}: ${practice.join(", ")}. Übungen für die Schweizer Primarschule kostenlos testen.`,
   };
 }
 

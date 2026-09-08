@@ -1,3 +1,4 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getGradeSubjectSeoPage(seoSlug);
   if (!page) return { title: "Seite nicht gefunden - Cleverli", robots: { index: false } };
 
-  return {
+  return withPageSocial({
     title: page.title,
     description: page.description,
     robots: {
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${BASE}${page.href}`,
       images: [{ url: `${BASE}/og-cleverli-primarschule-2026.png`, width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
     },
-  };
+  });
 }
 
 export default async function GradeSubjectSeoRoute({ params }: Props) {
@@ -77,8 +78,8 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
     "@type": "ItemList",
     name: `${page.h1} - Themen`,
     url: `${BASE}${page.href}`,
-    numberOfItems: topics.length,
-    itemListElement: topics.map((topic, index) => ({
+    numberOfItems: topicLinks.length,
+    itemListElement: topicLinks.map((topic, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: topic.title,
@@ -90,22 +91,6 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      {
-        "@type": "Question",
-        name: `Sind die ${page.h1} kostenlos?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Die ersten 20 Aufgaben können gratis getestet werden. Für alle Aufgaben, Klassen und Familienprofile gibt es Cleverli Premium.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Passt Cleverli zur Schweizer Primarschule?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet.",
-        },
-      },
       ...(page.faqItems ?? []).map((item) => ({
         "@type": "Question",
         name: item.question,
@@ -120,7 +105,7 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
   return (
     <main className="bg-white text-gray-900">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      {page.faqItems && page.faqItems.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
 
       <section className="border-b border-green-100 bg-green-50 px-4 py-10 sm:px-6 sm:py-14">
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_420px] lg:items-center">

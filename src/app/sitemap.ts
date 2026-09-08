@@ -7,16 +7,16 @@ const BASE = "https://www.cleverli.ch";
 const GRADES = [1, 2, 3, 4, 5, 6];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
+  // Omit lastmod: no verified per-page significant modification dates are tracked.
   const routes: MetadataRoute.Sitemap = [
     // Marketing & conversion pages
-    { url: BASE,                   lastModified: now, changeFrequency: "weekly",  priority: 1.0 },
-    { url: `${BASE}/parents`,      lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/missionen`,    lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
-    { url: `${BASE}/upgrade`,      lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: BASE,               changeFrequency: "weekly",  priority: 1.0 },
+    { url: `${BASE}/parents`,      changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/missionen`,    changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${BASE}/upgrade`,      changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/blog`, changeFrequency: "monthly", priority: 0.7 },
     // Blog (SEO content)
-    { url: `${BASE}/blog/kinder-motivieren-zum-lernen`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
+    { url: `${BASE}/blog/kinder-motivieren-zum-lernen`, changeFrequency: "yearly", priority: 0.7 },
     // NOTE: app-only pages, legal pages, auth pages, and /ads test routes
     //       are excluded because they are noindex or not intended for organic search.
   ];
@@ -24,7 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const page of ORGANIC_LANDING_PAGES) {
     routes.push({
       url: `${BASE}${page.href}`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.9,
     });
@@ -33,7 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const page of GRADE_SUBJECT_SEO_PAGES) {
     routes.push({
       url: `${BASE}${page.href}`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.85,
     });
@@ -44,7 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const subject of getSubjects(grade).map(s => s.id)) {
       routes.push({
         url: `${BASE}/learn/${grade}/${subject}`,
-        lastModified: now,
         changeFrequency: "monthly",
         priority: 0.9,
       });
@@ -53,7 +50,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       for (const topic of topics) {
         routes.push({
           url: `${BASE}/learn/${grade}/${subject}/${topic.id}`,
-          lastModified: now,
           changeFrequency: "monthly",
           priority: 0.7,
         });

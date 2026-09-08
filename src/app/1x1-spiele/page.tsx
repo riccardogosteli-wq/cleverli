@@ -1,8 +1,9 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
 import IntentLandingPage from "../ads/intent/IntentLandingPage";
 import { einsMalEinsSpieleConfig } from "../ads/intent/configs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "1x1 Spiele online - Einmaleins spielerisch üben",
   description: "1x1 Spiele für Kinder: Einmaleins mit Memory, Lückenaufgaben und kurzen Runden spielerisch üben. Kostenlos im Browser testen.",
   robots: {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://www.cleverli.ch/1x1-spiele",
     images: [{ url: "https://www.cleverli.ch/og-cleverli-primarschule-2026.png", width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
   },
-};
+});
 
 export default function EinsMalEinsSpielePage() {
   const faqJsonLd = {

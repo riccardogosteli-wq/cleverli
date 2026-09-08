@@ -1,11 +1,12 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "Cleverli Blog – Lernen, Motivation und Primarschule",
   description: "Praktische, kindgerechte Tipps rund ums Lernen, Motivation und den Schweizer Primarschulalltag.",
   alternates: { canonical: "https://www.cleverli.ch/blog" },
-};
+});
 
 export default function BlogPage() {
   return (

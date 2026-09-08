@@ -1,9 +1,9 @@
+import { validateLearningRoute } from "@/lib/learningRoute";
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import { Metadata } from "next";
-import { getTopicSummaries } from "@/data/topicCatalog";
 import SubjectPageClient from "./SubjectPageClient";
-import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
-import { getGradeName, getSubjectSeo } from "@/lib/seoContent";
+import { getGradeName, getGradeSubjectSeo } from "@/lib/seoContent";
 import { getGradeSubjectSeoLinks } from "@/lib/gradeSubjectSeo";
 
 interface Props { params: Promise<{ grade: string; subject: string }> }
@@ -85,15 +85,16 @@ function getContextualSeoLinks(grade: number, subject: string): ContextualSeoLin
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { grade, subject } = await params;
+  validateLearningRoute(grade, subject);
   const isInternalPrimaryFrenchRollout = subject === "french"
     && [3, 4].includes(parseInt(grade))
     && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ROLLOUT_MODE !== "all";
-  const subjectSeo = getSubjectSeo(subject);
+  const subjectSeo = getGradeSubjectSeo(grade, subject);
   const subjectName = SUBJECT_NAMES[subject] ?? subjectSeo.name;
   const gradeName = getGradeName(grade);
   const title = subjectPageTitle(grade, subject, subjectSeo.shortName);
-  const description = `Kostenlose ${subjectName}-Übungen für die ${gradeName}: ${subjectSeo.keywords.slice(1, 4).join(", ")}. Lehrplan 21 Schweiz, direkt im Browser.`;
-  return {
+  const description = subjectSeo.description;
+  return withPageSocial({
     title,
     description,
     keywords: [subjectName, gradeName, "Lehrplan 21", "Schweiz", "Cleverli", "Übungen kostenlos", ...subjectSeo.keywords],
@@ -104,23 +105,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     alternates: { canonical: `https://www.cleverli.ch/learn/${grade}/${subject}` },
     robots: isInternalPrimaryFrenchRollout ? { index: false, follow: false } : undefined,
-  };
+  });
 }
 
 const BASE = "https://www.cleverli.ch";
 
 export default async function SubjectPage({ params }: Props) {
   const { grade, subject } = await params;
-  if (subject === "french" && [3, 4].includes(parseInt(grade)) && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ENABLED !== "true") {
-    notFound();
-  }
-  if (parseInt(grade) <= 6 && (subject === "nt" || subject === "rzg")) {
-    permanentRedirect(`/learn/${grade}/science`);
-  }
-  const topics = getTopicSummaries(parseInt(grade), subject);
-  const subjectSeo = getSubjectSeo(subject);
-  const subjectName = SUBJECT_NAMES[subject] ?? subjectSeo.name;
-  const gradeName = getGradeName(grade);
+  const topics = validateLearningRoute(grade, subject);
+  const subjectSeo = getGradeSubjectSeo(grade, subject);
   const title = subjectPageTitle(grade, subject, subjectSeo.shortName);
   const sampleTopics = topics.slice(0, 6);
   const contextualSeoLinks = getContextualSeoLinks(parseInt(grade), subject);
@@ -130,7 +123,7 @@ export default async function SubjectPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": `${title} — Cleverli`,
-    "description": `Kostenlose ${subjectName}-Übungen für die ${gradeName}, Lehrplan 21 Schweiz`,
+    "description": subjectSeo.description,
     "url": `${BASE}/learn/${grade}/${subject}`,
     "numberOfItems": topics.length,
     "itemListElement": topics.map((topic, i) => ({
@@ -141,33 +134,9 @@ export default async function SubjectPage({ params }: Props) {
     })),
   };
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": `Was übt mein Kind in ${subjectName} ${gradeName}?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": subjectSeo.intro,
-        },
-      },
-      {
-        "@type": "Question",
-        "name": "Sind die Übungen kostenlos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die ersten 20 Aufgaben können gratis getestet werden. Für alle Aufgaben und Familienprofile gibt es Cleverli Premium.",
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <SubjectPageClient grade={parseInt(grade)} subject={subject} topics={topics} />
       <section className="mx-auto max-w-2xl px-4 pb-24 pt-2">
         <div className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm">

@@ -1,8 +1,9 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "Wie ich meinen Sohn wieder fürs Lernen begeistert habe — Cleverli Blog",
   description: "Als Elternteil kenne ich die Frustration: Das Kind sitzt am Tisch, will aber einfach nicht lernen. Hier teile ich, was bei uns wirklich geholfen hat.",
   openGraph: {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.cleverli.ch/blog/kinder-motivieren-zum-lernen",
   },
-};
+});
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -31,6 +32,7 @@ const articleJsonLd = {
     "url": "https://www.cleverli.ch",
   },
   "publisher": {
+    "@id": "https://www.cleverli.ch/#organization",
     "@type": "Organization",
     "name": "Cleverli",
     "logo": {

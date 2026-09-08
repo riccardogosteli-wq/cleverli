@@ -1,8 +1,9 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
 import IntentLandingPage from "../ads/intent/IntentLandingPage";
 import { matheUebungenKinderConfig } from "../ads/intent/configs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "Mathe-Übungen für Kinder | Primarschule Schweiz",
   description: "Mathe-Übungen für Kinder in der Schweizer Primarschule: Rechnen, Einmaleins, Geometrie und mehr. Kostenlos online testen.",
   robots: {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.cleverli.ch/mathe-uebungen-kinder",
   },
-};
+});
 
 export default function MatheUebungenKinderPage() {
   return <IntentLandingPage config={matheUebungenKinderConfig} />;
