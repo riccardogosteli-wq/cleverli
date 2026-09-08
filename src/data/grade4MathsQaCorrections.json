@@ -1,0 +1,932 @@
+{
+  "patches": {
+    "g4m5": {
+      "mathAnswerMode": "number"
+    },
+    "g4m10": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "g4m1a": {
+      "mathAnswerMode": "number"
+    },
+    "g4m1e": {
+      "mathAnswerMode": "number"
+    },
+    "g4m1g": {
+      "mathAnswerMode": "number"
+    },
+    "g4m1i": {
+      "mathAnswerMode": "number"
+    },
+    "g4m1k": {
+      "mathAnswerMode": "number"
+    },
+    "g4m2a": {
+      "mathAnswerMode": "number"
+    },
+    "g4m2c": {
+      "mathAnswerMode": "number"
+    },
+    "g4m2e": {
+      "mathAnswerMode": "number",
+      "hints": [
+        "Addiere zuerst die Einer und beachte die Überträge.",
+        "Zähle von 3456 noch 2544 weiter."
+      ]
+    },
+    "g4m2g": {
+      "mathAnswerMode": "number"
+    },
+    "g4m2i": {
+      "mathAnswerMode": "number"
+    },
+    "g4m2k": {
+      "mathAnswerMode": "number"
+    },
+    "g4m2m": {
+      "mathAnswerMode": "number"
+    },
+    "g4m2o": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3c": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3d": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3e": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3f": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3g": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3h": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3i": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3j": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3k": {
+      "mathAnswerMode": "number"
+    },
+    "g4m3l": {
+      "mathAnswerMode": "number"
+    },
+    "g4m22": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "g4m26": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "g4b2c": {
+      "mathAnswerMode": "reduced-fraction",
+      "sequentialAnswer": true
+    },
+    "g4b2e": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "g4b2g": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "g4b2m": {
+      "mathAnswerMode": "reduced-fraction",
+      "sequentialAnswer": true
+    },
+    "g4-math-schriftl-addieren-sa18": {
+      "mathAnswerMode": "number",
+      "hints": [
+        "Addiere stellenweise und nimm Überträge in die nächste Stelle mit.",
+        "Zähle von 729 noch 483 weiter."
+      ]
+    },
+    "g4-math-schriftl-addieren-sa20": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa22": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa24": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa28": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa30": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa31": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa33": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa35": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa36": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa37": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa38": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa39": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa40": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa41": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa42": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa43": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa44": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa45": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa46": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa47": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa48": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa49": {
+      "mathAnswerMode": "number"
+    },
+    "g4-math-schriftl-addieren-sa50": {
+      "mathAnswerMode": "number"
+    },
+    "ss20": {
+      "mathAnswerMode": "number"
+    },
+    "ss22": {
+      "mathAnswerMode": "number"
+    },
+    "ss26": {
+      "mathAnswerMode": "number"
+    },
+    "ss28": {
+      "mathAnswerMode": "number"
+    },
+    "ss30": {
+      "mathAnswerMode": "number"
+    },
+    "ss31": {
+      "mathAnswerMode": "number"
+    },
+    "ss33": {
+      "mathAnswerMode": "number"
+    },
+    "ss35": {
+      "mathAnswerMode": "number"
+    },
+    "ss36": {
+      "mathAnswerMode": "number"
+    },
+    "ss37": {
+      "mathAnswerMode": "number"
+    },
+    "ss38": {
+      "mathAnswerMode": "number"
+    },
+    "ss39": {
+      "mathAnswerMode": "number"
+    },
+    "ss40": {
+      "mathAnswerMode": "number"
+    },
+    "ss41": {
+      "mathAnswerMode": "number"
+    },
+    "ss42": {
+      "mathAnswerMode": "number"
+    },
+    "ss43": {
+      "mathAnswerMode": "number"
+    },
+    "ss44": {
+      "mathAnswerMode": "number"
+    },
+    "ss45": {
+      "mathAnswerMode": "number"
+    },
+    "ss46": {
+      "mathAnswerMode": "number"
+    },
+    "ss47": {
+      "mathAnswerMode": "number"
+    },
+    "ss48": {
+      "mathAnswerMode": "number"
+    },
+    "ss49": {
+      "mathAnswerMode": "number"
+    },
+    "ss50": {
+      "mathAnswerMode": "number"
+    },
+    "sm3": {
+      "mathAnswerMode": "number"
+    },
+    "sm9": {
+      "mathAnswerMode": "number"
+    },
+    "sm15": {
+      "mathAnswerMode": "number"
+    },
+    "sm16": {
+      "mathAnswerMode": "number"
+    },
+    "sm18": {
+      "mathAnswerMode": "number"
+    },
+    "sm20": {
+      "mathAnswerMode": "number"
+    },
+    "sm22": {
+      "mathAnswerMode": "number"
+    },
+    "sm24": {
+      "mathAnswerMode": "number"
+    },
+    "sm26": {
+      "mathAnswerMode": "number"
+    },
+    "sm28": {
+      "mathAnswerMode": "number"
+    },
+    "sm30": {
+      "mathAnswerMode": "number"
+    },
+    "sm31": {
+      "mathAnswerMode": "number"
+    },
+    "sm33": {
+      "mathAnswerMode": "number"
+    },
+    "sm35": {
+      "mathAnswerMode": "number"
+    },
+    "sm38": {
+      "mathAnswerMode": "number"
+    },
+    "sm39": {
+      "mathAnswerMode": "number"
+    },
+    "sm40": {
+      "mathAnswerMode": "number"
+    },
+    "sm41": {
+      "mathAnswerMode": "number"
+    },
+    "sm42": {
+      "mathAnswerMode": "number"
+    },
+    "sm43": {
+      "mathAnswerMode": "number"
+    },
+    "sm44": {
+      "mathAnswerMode": "number"
+    },
+    "sm45": {
+      "mathAnswerMode": "number"
+    },
+    "sm46": {
+      "mathAnswerMode": "number"
+    },
+    "sm47": {
+      "mathAnswerMode": "number"
+    },
+    "sm48": {
+      "mathAnswerMode": "number"
+    },
+    "sm49": {
+      "mathAnswerMode": "number"
+    },
+    "sm50": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_2": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_4": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_8": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_10": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_12": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_16": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_18": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_22": {
+      "mathAnswerMode": "number",
+      "hints": [
+        "Ein Quadratmeter ist ein Quadrat mit einem Meter Seitenlänge. Wandle beide Seiten in Zentimeter um.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "gm4_28": {
+      "mathAnswerMode": "number",
+      "hints": [
+        "Wandle zuerst Tage in Stunden, dann in Minuten und Sekunden um.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "gm4_36": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_39": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_41": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "gm4_42": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_48": {
+      "mathAnswerMode": "number"
+    },
+    "gm4_49": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "ta4_13": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g4dz23": {
+      "mathAnswerMode": "number"
+    },
+    "g4dz31": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g4dz45": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "ge4_6": {
+      "altAnswers": [
+        "180"
+      ]
+    },
+    "ge4_16": {
+      "altAnswers": [
+        "90"
+      ]
+    },
+    "gm4_20": {
+      "altAnswers": [
+        "1000"
+      ]
+    },
+    "gm4_32": {
+      "altAnswers": [
+        "60"
+      ]
+    },
+    "gm4_34": {
+      "altAnswers": [
+        "1000"
+      ]
+    },
+    "ta4_3": {
+      "altAnswers": [
+        "60"
+      ],
+      "sequentialAnswer": true
+    },
+    "ta4_5": {
+      "altAnswers": [
+        "40"
+      ]
+    },
+    "ta4_15": {
+      "altAnswers": [
+        "3"
+      ]
+    },
+    "ta4_30": {
+      "altAnswers": [
+        "45"
+      ]
+    },
+    "ta4_34": {
+      "altAnswers": [
+        "15"
+      ]
+    },
+    "g4dz14": {
+      "altAnswers": [
+        "8"
+      ]
+    },
+    "g4dz25": {
+      "altAnswers": [
+        "7"
+      ]
+    },
+    "g4dz27": {
+      "altAnswers": [
+        "15"
+      ]
+    },
+    "g4dz28": {
+      "altAnswers": [
+        "4"
+      ],
+      "spokenPrompt": "Tabelle Ballwurfweiten: zwölf Meter, fünfzehn Meter, elf Meter, vierzehn Meter. Wie gross ist der Unterschied zwischen Maximum und Minimum?",
+      "verbatimSpeech": true
+    },
+    "g4dz35": {
+      "altAnswers": [
+        "8"
+      ]
+    },
+    "g4dz37": {
+      "altAnswers": [
+        "8"
+      ],
+      "spokenPrompt": "Piktogramm: Eine Raute steht für vier Kilogramm. Gruppe A hat drei Rauten, Gruppe B fünf Rauten. Wie viele Kilogramm mehr sammelte B?",
+      "verbatimSpeech": true
+    },
+    "g4dz44": {
+      "altAnswers": [
+        "2"
+      ]
+    },
+    "g4m1": {
+      "question": "Welche Ziffer steht bei 1'340 an der Zehnerstelle?"
+    },
+    "g4b1i": {
+      "question": "Schreibe einen Bruch mit dem Wert null und einem Nenner grösser als null: ___",
+      "answer": "0/3",
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
+    },
+    "g4b2k": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true
+    },
+    "g4b2h": {
+      "options": [
+        "2/3",
+        "3/6",
+        "1",
+        "4/3"
+      ]
+    },
+    "ge4_3": {
+      "question": "Wie heisst ein Viereck mit vier gleich langen Seiten und vier rechten Winkeln?",
+      "options": [
+        "Rechteck mit ungleichen Nachbarseiten",
+        "Raute ohne rechte Winkel",
+        "Quadrat",
+        "Trapez mit genau einem Paar paralleler Seiten"
+      ]
+    },
+    "ge4_28": {
+      "answer": "Gleiche Form; die Grösse kann gleich oder verschieden sein.",
+      "altAnswers": [
+        "Gleiche Form und gleiche oder verschiedene Grösse",
+        "Gleiche Form, aber verschiedene Grösse",
+        "Gleiche Form",
+        "gleiche Form und proportional entsprechende Seiten"
+      ],
+      "hints": [
+        "Prüfe, ob eine Figur durch gleichmässiges Vergrössern oder Verkleinern mit der anderen übereinstimmt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ge4_22": {
+      "altAnswers": [
+        "Ein Dreieck mit mindestens zwei gleich langen Seiten",
+        "Dreieck mit zwei gleich langen Seiten",
+        "mindestens zwei gleich lange Seiten",
+        "zwei gleich lange Seiten"
+      ],
+      "hints": [
+        "Achte auf die beiden Schenkel und vergleiche ihre Längen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ge4_32": {
+      "altAnswers": [
+        "1",
+        "eine",
+        "eine Gerade"
+      ]
+    },
+    "ge4_34": {
+      "altAnswers": [
+        "Sechseck",
+        "Hexagon"
+      ],
+      "hints": [
+        "Der deutsche Name setzt sich aus der Seitenzahl und der Endung -eck zusammen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ss24": {
+      "altAnswers": [
+        "Subtrahend + Differenz = Minuend",
+        "Addition",
+        "mit der Addition",
+        "durch Addition"
+      ]
+    },
+    "gm4_30": {
+      "altAnswers": [
+        "1/1000",
+        "ein Tausendstel",
+        "0,001",
+        "0.001"
+      ],
+      "sequentialAnswer": true,
+      "spokenPrompt": "Was bedeutet der Vorsatz Milli?",
+      "verbatimSpeech": true
+    },
+    "ge4_43": {
+      "question": "Ein Rechteck mit unterschiedlich langen Nachbarseiten hat ___ Symmetrieachsen.",
+      "hints": [
+        "Prüfe, entlang welcher Linien du die Figur deckungsgleich falten kannst.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "gm4_15": {
+      "question": "Was ist die SI-Grundeinheit der Länge?",
+      "hints": [
+        "Gesucht ist die Basiseinheit, nicht ein Vielfaches oder ein Bruchteil davon.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ta4_16": {
+      "question": "Ein Schwimmbad enthält 1250 m³ Wasser. Täglich werden 45 m³ verbraucht. Nach wie vielen ganzen Tagen sind erstmals mindestens 625 m³ verbraucht?",
+      "answer": "14 Tage",
+      "altAnswers": [
+        "14",
+        "ca. 14 Tage",
+        "ungefähr 14 Tage"
+      ],
+      "hints": [
+        "Teile die gesuchte verbrauchte Wassermenge durch den täglichen Verbrauch und prüfe die nächste ganze Tageszahl.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Ein Schwimmbad enthält eintausendzweihundertfünfzig Kubikmeter Wasser. Täglich werden fünfundvierzig Kubikmeter verbraucht. Nach wie vielen ganzen Tagen sind erstmals mindestens sechshundertfünfundzwanzig Kubikmeter verbraucht?",
+      "verbatimSpeech": true
+    },
+    "ta4_26": {
+      "altAnswers": [
+        "105 Minuten",
+        "105 min",
+        "1 h 45 min",
+        "1h45min",
+        "1 Stunde und 45 Minuten",
+        "1,75 Stunden"
+      ],
+      "hints": [
+        "Rechne zuerst bis zur nächsten vollen Stunde und dann bis zur Ankunft.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ta4_22": {
+      "answer": "103.95",
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF",
+      "hints": [
+        "Multipliziere Literzahl und Preis pro Liter.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4dz20": {
+      "question": "Münzwürfe: Kopf kam 12-mal, Zahl 8-mal. Verbinde jede Anzahl mit der passenden Münzseite."
+    },
+    "g4dz38": {
+      "answer": "in keinem"
+    },
+    "math4-rich-1x1-memory-1": {
+      "question": "Finde jeweils zwei gleiche Karten."
+    },
+    "math4-rich-groessen-memory-1": {
+      "question": "Finde jeweils zwei gleiche Karten."
+    },
+    "math4-rich-geometrie-match-1": {
+      "question": "Verbinde jede Figur mit ihrer genauesten Beschreibung. Das Rechteck hat hier unterschiedlich lange Nachbarseiten.",
+      "pairs": [
+        {
+          "id": "quadrat",
+          "label": "Quadrat",
+          "emoji": "⬛"
+        },
+        {
+          "id": "vier-gleich",
+          "label": "vier gleich lange Seiten und vier rechte Winkel",
+          "emoji": "📏"
+        },
+        {
+          "id": "rechteck",
+          "label": "Rechteck",
+          "emoji": "▭"
+        },
+        {
+          "id": "gegenueber",
+          "label": "vier rechte Winkel, Nachbarseiten unterschiedlich lang",
+          "emoji": "↔️"
+        },
+        {
+          "id": "dreieck",
+          "label": "Dreieck",
+          "emoji": "🔺"
+        },
+        {
+          "id": "drei-seiten",
+          "label": "drei Seiten",
+          "emoji": "3️⃣"
+        },
+        {
+          "id": "kreis",
+          "label": "Kreis",
+          "emoji": "⭕"
+        },
+        {
+          "id": "rund",
+          "label": "keine Ecken",
+          "emoji": "🔄"
+        }
+      ],
+      "hints": [
+        "Zähle Seiten und Ecken.",
+        "Prüfe die Merkmale jeder Figur einzeln."
+      ]
+    },
+    "math4-rich-geometrie-drag-1": {
+      "question": "Ordne die Körper zu. Der Quader hat drei unterschiedlich lange Kanten.",
+      "dropZones": [
+        {
+          "id": "quadrat",
+          "label": "alle Flächen sind Quadrate"
+        },
+        {
+          "id": "rechteck",
+          "label": "rechteckige Flächen, aber keine Quadrate"
+        },
+        {
+          "id": "kreis",
+          "label": "hat Kreisflächen"
+        }
+      ],
+      "hints": [
+        "Stell dir vor, welche Flächen du anfassen kannst.",
+        "Betrachte Grundfläche und Seitenflächen jedes Körpers."
+      ]
+    },
+    "g4m28": {
+      "question": "Ordne die Brüche den passenden Bezeichnungen zu!",
+      "hints": [
+        "Lies jeden Bruch und suche die passende Bezeichnung.",
+        "Der Nenner nennt die Anzahl gleich grosser Teile."
+      ]
+    },
+    "g4m3": {
+      "hints": [
+        "Zerlege die Zahl in Tausender, Hunderter, Zehner und Einer und schreibe die Zahlwörter zusammen.",
+        "Trenne die Tausender, Hunderter, Zehner und Einer."
+      ]
+    },
+    "g4m13": {
+      "hints": [
+        "Berechne jedes Produkt und vergleiche es mit der gesuchten Zahl.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4em_drag": {
+      "hints": [
+        "Nutze bekannte Nachbaraufgaben aus dem Einmaleins.",
+        "Rechne jede Aufgabe einzeln."
+      ]
+    },
+    "math4-rich-1x1-drag-1": {
+      "hints": [
+        "Zwei Aufgaben können dasselbe Ergebnis haben.",
+        "Rechne jede Aufgabe aus, bevor du sie zuordnest."
+      ]
+    },
+    "g4b1d": {
+      "hints": [
+        "Addiere die Zähler, wenn die Nenner gleich sind.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4b1l": {
+      "hints": [
+        "Vergleiche die Zahl der genommenen Teile mit der Zahl aller Teile.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4b2p": {
+      "hints": [
+        "Vergleiche die obere mit der unteren Zahl und denke an mehr als ein Ganzes.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "math4-rich-brueche-match-1": {
+      "hints": [
+        "Erweitern verändert den Wert nicht.",
+        "Multipliziere Zähler und Nenner mit derselben Zahl und vergleiche."
+      ]
+    },
+    "ge4_9": {
+      "hints": [
+        "Zeichne eine Linie von einem Kreisrand durch den Mittelpunkt zum anderen Kreisrand.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge4_10": {
+      "hints": [
+        "Überlege, was der Wortteil gleichseitig über die Seiten aussagt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ge4_12": {
+      "hints": [
+        "Stelle dir gerade Bahngleise vor und beschreibe ihren Abstand.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge4_14": {
+      "hints": [
+        "Vergleiche die Winkelöffnung mit einer Blattecke.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ge4_15": {
+      "hints": [
+        "Prüfe, welche gegenüberliegenden Seiten sich auch verlängert nicht schneiden.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge4_25": {
+      "hints": [
+        "Drehe die Figur um weniger als eine ganze Umdrehung und vergleiche sie mit dem Ausgangsbild.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge4_27": {
+      "hints": [
+        "Überlege, ob du die Figuren ohne Vergrössern genau übereinanderlegen kannst.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge4_29": {
+      "hints": [
+        "Überlege, was zwei übereinstimmende Winkel über den dritten Winkel verraten.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge4_31": {
+      "hints": [
+        "Vergleiche Gerade, Strecke und Strahl hinsichtlich ihrer Endpunkte.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ge4_35": {
+      "hints": [
+        "Vergleiche sowohl die Seitenlängen als auch die Winkel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "gm4_29": {
+      "hints": [
+        "Denke an die aufeinanderfolgenden Vorsätze Kilo, Mega und Giga.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was bedeutet der Vorsatz Mega?",
+      "verbatimSpeech": true
+    },
+    "math4-rich-groessen-line-1": {
+      "hints": [
+        "100 cm sind 1 m.",
+        "Wandle die Zentimeter in Meter um, bevor du den Regler einstellst."
+      ]
+    },
+    "ta4_2": {
+      "hints": [
+        "Multipliziere den Preis pro Buch mit der Anzahl Bücher.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ta4_4": {
+      "hints": [
+        "Ziehe den Preis vom verfügbaren Geld ab und beachte Franken und Rappen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ta4_17": {
+      "hints": [
+        "Bei gleicher Arbeitsleistung verteilt sich dieselbe Arbeit auf mehr Personen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ta4_19": {
+      "hints": [
+        "Subtrahiere Toms Betrag von Lisas Betrag.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ta4_31": {
+      "hints": [
+        "Wandle die Grammzahl in einen Anteil eines Kilogramms um.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ta4_33": {
+      "hints": [
+        "Berechne zuerst den Preis eines Bleistifts und dann den Preis der gesuchten Anzahl.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4-math-schriftl-addieren-sa17": {
+      "hints": [
+        "Addiere die Einer, dann Zehner und Hunderter; notiere jeden Übertrag.",
+        "Zähle von 567 noch 384 weiter."
+      ]
+    },
+    "ss16": {
+      "hints": [
+        "Entbündle bei Bedarf einen Hunderter in Zehner und einen Zehner in Einer. Kontrolliere durch Addition.",
+        "Zähle von 513 genau 278 zurück."
+      ]
+    },
+    "ge4_30": {
+      "spokenPrompt": "Wo liegt der Punkt P mit den Koordinaten x gleich drei und y gleich fünf?",
+      "verbatimSpeech": true
+    },
+    "g4dz5": {
+      "spokenPrompt": "Piktogramm: Ein Stern steht für zwei Kinder. Bei Velo stehen vier Sterne. Wie viele Kinder fahren Velo?",
+      "verbatimSpeech": true
+    },
+    "g4dz6": {
+      "spokenPrompt": "Strichliste zur Würfelzahl vier: eine Fünfergruppe Striche und zwei weitere Striche. Wie oft wurde die vier gewürfelt?",
+      "verbatimSpeech": true
+    },
+    "g4dz12": {
+      "spokenPrompt": "Piktogramm: Ein Kreis steht für fünf Minuten. Für Lesen stehen drei Kreise. Wie viele Minuten wurde gelesen?",
+      "verbatimSpeech": true
+    },
+    "g4dz17": {
+      "spokenPrompt": "Piktogramm: Ein Dreieck steht für drei Velos. Montag stehen zwei Dreiecke, Dienstag vier Dreiecke. Wie viele Velos sind es zusammen?",
+      "verbatimSpeech": true
+    },
+    "ta4_18": {
+      "spokenPrompt": "Ein Auto fährt hundertachtzig Kilometer in zweieinhalb Stunden. Wie schnell fährt es in Kilometern pro Stunde?",
+      "verbatimSpeech": true
+    },
+    "ta4_23": {
+      "spokenPrompt": "Zürich bis Basel: sechsundachtzig Kilometer. Zürich bis Bern: hundertfünfundzwanzig Kilometer. Wie weit ist der Weg von Bern nach Basel über Zürich?",
+      "verbatimSpeech": true
+    },
+    "ta4_28": {
+      "spokenPrompt": "Eine Pizza wird in acht gleich grosse Stücke geteilt. Lena isst drei Stücke. Welchen Anteil in Prozent isst sie?",
+      "verbatimSpeech": true
+    },
+    "ta4_24": {
+      "spokenPrompt": "Vierzehn mal vierzehn. Ergänze das Ergebnis in Quadratzentimetern.",
+      "verbatimSpeech": true
+    }
+  }
+}

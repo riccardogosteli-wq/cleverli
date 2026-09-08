@@ -1,4 +1,4 @@
-export type MathAnswerMode = "number" | "fraction" | "reduced-fraction";
+export type MathAnswerMode = "number" | "fraction" | "reduced-fraction" | "number-or-fraction";
 
 function numeric(value: string): number | null {
   // Accept decimal comma/point and Swiss thousands separators, never expressions.
@@ -20,6 +20,12 @@ function gcd(a: number, b: number): number {
 }
 /** Opt-in for individually reviewed records. Other exercises retain their matcher. */
 export function matchScopedMathAnswer(input: string, expected: string, mode: MathAnswerMode, unit = ""): boolean {
+  if (mode === "number-or-fraction") {
+    const a = fraction(input), b = fraction(expected);
+    const left = a ? a[0] / a[1] : numeric(input);
+    const right = b ? b[0] / b[1] : numeric(expected);
+    return left !== null && right !== null && left === right;
+  }
   if (mode !== "number") {
     const a = fraction(input), b = fraction(expected);
     if (!a || !b) return false;
