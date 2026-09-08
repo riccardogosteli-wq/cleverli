@@ -1060,6 +1060,42 @@
       "spokenPrompt": "Ergänze das Adjektiv mit «-bar»: sehen, Aussicht, ….",
       "verbatimSpeech": true
     },
+    "g4d8": {
+      "altAnswers": [
+        "Tätigkeit"
+      ]
+    },
+    "g4d9": {
+      "altAnswers": [
+        "einfache Vergangenheit",
+        "erste Vergangenheit"
+      ]
+    },
+    "wa4_2": {
+      "altAnswers": [
+        "Tätigkeit"
+      ]
+    },
+    "pr4_32": {
+      "altAnswers": [
+        "welches"
+      ]
+    },
+    "pr4_44": {
+      "altAnswers": [
+        "welches"
+      ]
+    },
+    "pr4_30": {
+      "question": "Welches Interrogativpronomen fragt im Nominativ allgemein nach einer Person?",
+      "spokenPrompt": "Welches Interrogativpronomen fragt im Nominativ allgemein nach einer Person?",
+      "verbatimSpeech": true
+    },
+    "pr4_31": {
+      "question": "Welches Interrogativpronomen fragt allgemein nach einer Sache, ohne eine Auswahl vorzugeben?",
+      "spokenPrompt": "Welches Interrogativpronomen fragt allgemein nach einer Sache, ohne eine Auswahl vorzugeben?",
+      "verbatimSpeech": true
+    },
     "g4d6": {
       "hints": [
         "Subjekt = Wer? Prädikat = Was tut? Objekt = Wen/Was?",
