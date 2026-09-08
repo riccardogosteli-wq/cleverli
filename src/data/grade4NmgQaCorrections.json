@@ -1,0 +1,4706 @@
+{
+  "patches": {
+    "g4kg1c": {
+      "altAnswers": [
+        "Eine bewegliche Verbindung zwischen Knochen"
+      ]
+    },
+    "g4kg1g": {
+      "altAnswers": [
+        "Krankheitserreger abwehren",
+        "Bekämpfung von Krankheitserregern",
+        "Immunabwehr"
+      ],
+      "hints": [
+        "Überlege, was der Körper gegen eindringende Mikroorganismen tun muss.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4kg1k": {
+      "altAnswers": [
+        "Den Körper steuern",
+        "Körperfunktionen steuern",
+        "Denken und den Körper steuern"
+      ],
+      "hints": [
+        "Denke an das Zusammenspiel zwischen Sinneseindrücken, Entscheidungen und Bewegungen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4kg2a": {
+      "altAnswers": [
+        "Vom Herzen durch den Körper und zurück zum Herzen",
+        "Herz Körper Herz"
+      ],
+      "hints": [
+        "Unterscheide den Weg durch den Körper vom Weg durch die Lunge.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4kg2c": {
+      "altAnswers": [
+        "Nahrung zerkleinern und Nährstoffe aufnehmen",
+        "Nahrung in Nährstoffe zerlegen"
+      ]
+    },
+    "g4kg2e": {
+      "altAnswers": [
+        "Das Abwehrsystem des Körpers",
+        "Die körpereigene Abwehr",
+        "Abwehrsystem"
+      ]
+    },
+    "g4kg2i": {
+      "altAnswers": [
+        "Ein Entgiftungsorgan",
+        "Ein Organ das Galle produziert und Giftstoffe abbaut"
+      ]
+    },
+    "g4kg2k": {
+      "altAnswers": [
+        "Zähne und Knochen"
+      ]
+    },
+    "g4kg2m": {
+      "altAnswers": [
+        "Die tastbare Druckwelle in den Arterien",
+        "Der tastbare Herzschlag",
+        "Herzschlag"
+      ]
+    },
+    "g4kg2o": {
+      "altAnswers": [
+        "Verbindung zwischen Muskel und Knochen",
+        "Bindegewebe das Muskel und Knochen verbindet"
+      ],
+      "hints": [
+        "Denke an das Gewebe, über das ein Muskel an einem festen Körperteil zieht.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4kg3f": {
+      "altAnswers": [
+        "Lunge"
+      ],
+      "hints": [
+        "Das Organ, mit dem wir atmen.",
+        "Überlege, welchen Weg eingeatmeter Rauch nimmt."
+      ]
+    },
+    "g4s12": {
+      "altAnswers": [
+        "Wal",
+        "Hai",
+        "Fisch",
+        "Blauwal",
+        "Seepferdchen",
+        "Krake",
+        "Qualle",
+        "Robbe",
+        "Meeresschildkröte"
+      ]
+    },
+    "g4s14": {
+      "altAnswers": [
+        "Bäume",
+        "Tiere",
+        "Insekten",
+        "Tierarten",
+        "Pflanzenarten"
+      ]
+    },
+    "g4lr1a": {
+      "altAnswers": [
+        "Der Ort an dem ein Tier lebt",
+        "Ein Gebiet in dem ein Lebewesen lebt",
+        "Der natürliche Aufenthaltsort eines Lebewesens"
+      ]
+    },
+    "g4lr1c": {
+      "altAnswers": [
+        "Luchs",
+        "Wolf",
+        "Dachs",
+        "Wildkatze",
+        "Baummarder"
+      ]
+    },
+    "g4lr1e": {
+      "altAnswers": [
+        "Omnivoren"
+      ]
+    },
+    "g4lr1g": {
+      "altAnswers": [
+        "Ein energiesparender Ruhezustand im Winter",
+        "Ein tiefer Schlaf im Winter um Energie zu sparen"
+      ]
+    },
+    "g4lr1i": {
+      "altAnswers": [
+        "Eine Abfolge die zeigt wer wen frisst",
+        "Eine Folge von Lebewesen die sich voneinander ernähren"
+      ]
+    },
+    "g4lr1k": {
+      "altAnswers": [
+        "Ein Tier das Insekten frisst zum Beispiel ein Igel",
+        "Ein Tier das Insekten frisst zum Beispiel ein Frosch"
+      ]
+    },
+    "g4lr2a": {
+      "altAnswers": [
+        "Lebewesen und ihr Lebensraum",
+        "Die Gemeinschaft von Lebewesen mit ihrer unbelebten Umwelt"
+      ]
+    },
+    "g4lr2e": {
+      "altAnswers": [
+        "Nachahmung einer gefährlichen Art",
+        "Ein harmloses Tier ahmt ein gefährliches Tier nach"
+      ]
+    },
+    "g4lr2g": {
+      "altAnswers": [
+        "Ein Tier das andere Tiere frisst",
+        "Ein Tier das ein anderes Tier jagt und frisst"
+      ]
+    },
+    "g4lr2i": {
+      "altAnswers": [
+        "Storch",
+        "Weissstorch",
+        "Kuckuck",
+        "Mauersegler",
+        "Rauchschwalbe",
+        "Mehlschwalbe"
+      ],
+      "hints": [
+        "Denke an Vögel, die im Herbst wegziehen und im Frühling zurückkehren.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4lr2k": {
+      "altAnswers": [
+        "Ein Vogel der das ganze Jahr im gleichen Gebiet lebt",
+        "Ein Vogel der nicht wegzieht"
+      ]
+    },
+    "g4lr2o": {
+      "altAnswers": [
+        "Lebewesen die tote Pflanzen und Tiere zersetzen",
+        "Organismen die abgestorbene Lebewesen abbauen"
+      ]
+    },
+    "g4lr3a": {
+      "altAnswers": [
+        "Wasser",
+        "Raum"
+      ]
+    },
+    "g4lr3e": {
+      "altAnswers": [
+        "Gegenseitige evolutionäre Anpassung zweier Arten",
+        "Zwei Arten passen sich im Lauf der Evolution aneinander an"
+      ]
+    },
+    "g4lr3i": {
+      "altAnswers": [
+        "Zerschneidung von Lebensräumen",
+        "Aufteilung zusammenhängender Lebensräume in kleinere Teile"
+      ]
+    },
+    "g4s22": {
+      "altAnswers": [
+        "Regentropfen",
+        "Wassertropfen"
+      ],
+      "hints": [
+        "Wasser in kleinen Teilen.",
+        "Denke an die kleinen flüssigen Teile, die du auf dem Fenster siehst."
+      ]
+    },
+    "g4wk1a": {
+      "altAnswers": [
+        "Das durchschnittliche Wetter über lange Zeit",
+        "Die durchschnittlichen Wetterbedingungen über Jahrzehnte"
+      ],
+      "hints": [
+        "Unterscheide eine einzelne Wetterbeobachtung von einer langjährigen Beschreibung.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4wk1c": {
+      "altAnswers": [
+        "Feuchtigkeit der Luft"
+      ]
+    },
+    "g4wk1e": {
+      "altAnswers": [
+        "Eine Anlage zur Messung von Wetterdaten",
+        "Eine Messstation für das Wetter"
+      ]
+    },
+    "g4wk1g": {
+      "altAnswers": [
+        "Kondenswasser auf kühlen Oberflächen",
+        "Wassertropfen auf abgekühlten Oberflächen"
+      ]
+    },
+    "g4wk1i": {
+      "altAnswers": [
+        "Wasser das aus der Atmosphäre auf die Erde gelangt",
+        "Regen Schnee und Hagel"
+      ]
+    },
+    "g4wk1k": {
+      "altAnswers": [
+        "Eine Prognose für das Wetter",
+        "Eine Vorhersage wie das Wetter wird"
+      ]
+    },
+    "g4wk2a": {
+      "altAnswers": [
+        "Wasser verdunstet bildet Wolken fällt als Regen und fliesst zurück",
+        "Verdunstung Kondensation Niederschlag Abfluss"
+      ],
+      "hints": [
+        "Überlege, welchen Weg Wasser zwischen Gewässer, Luft und Boden nehmen kann.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4wk2c": {
+      "altAnswers": [
+        "Luftdruck",
+        "Luftfeuchtigkeit",
+        "Feuchtigkeit"
+      ]
+    },
+    "g4wk2e": {
+      "altAnswers": [
+        "Ein Gebiet mit hohem Luftdruck",
+        "Ein Gebiet mit höherem Luftdruck als die Umgebung"
+      ]
+    },
+    "g4wk2g": {
+      "altAnswers": [
+        "Warme Luft steigt auf und kalte Luft sinkt ab"
+      ],
+      "hints": [
+        "Vergleiche die Bewegung warmer und kühler Luft.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4wk2i": {
+      "altAnswers": [
+        "Flüssiges Wasser wird gasförmig",
+        "Wasser wird zu Wasserdampf"
+      ],
+      "hints": [
+        "Beobachte gedanklich, was mit einer Pfütze nach einigen trockenen Stunden passiert.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4wk2k": {
+      "altAnswers": [
+        "Federwolken",
+        "Hohe dünne Wolken aus Eiskristallen"
+      ]
+    },
+    "g4wk2m": {
+      "altAnswers": [
+        "Die Schweiz liegt zwischen unterschiedlichen Luftmassen"
+      ]
+    },
+    "g4wk3a": {
+      "altAnswers": [
+        "Treibhausgase halten Wärmestrahlung zurück und erwärmen die Erde",
+        "Erwärmung durch Treibhausgase"
+      ]
+    },
+    "g4wk3e": {
+      "altAnswers": [
+        "Eine ungewöhnliche Erwärmung des tropischen Pazifiks",
+        "Erwärmung des östlichen tropischen Pazifiks"
+      ]
+    },
+    "g4wk3g": {
+      "altAnswers": [
+        "Ein rotierender Luftwirbel zwischen Wolke und Boden"
+      ],
+      "hints": [
+        "Denke an die Form und Bewegung des Luftwirbels unter einer Gewitterwolke.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4wk3i": {
+      "altAnswers": [
+        "Eine lange Trockenperiode",
+        "Länger andauernder Niederschlagsmangel"
+      ]
+    },
+    "g4wk3k": {
+      "hints": [
+        "Überlege, welche Art von Bewegung im Atlantik Wärme transportiert.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "altAnswers": [
+        "Eine warme Meeresströmung vom Golf von Mexiko entlang der Ostküste Nordamerikas in den Nordatlantik"
+      ]
+    },
+    "pfl4_2": {
+      "altAnswers": [
+        "Fotosynthese"
+      ]
+    },
+    "pfl4_32": {
+      "altAnswers": [
+        "Fotosynthese"
+      ]
+    },
+    "pfl4_16": {
+      "altAnswers": [
+        "Zucker",
+        "Glucose",
+        "Glukose",
+        "Traubenzucker"
+      ],
+      "hints": [
+        "Gesucht ist ein energiereicher Stoff, den die Pflanze zum Wachsen nutzt.",
+        "CO₂ + Wasser + Licht → Energie-Produkt + Sauerstoff."
+      ],
+      "spokenPrompt": "Die Gleichung der Photosynthese: Kohlendioxid und Wasser werden mit Licht zu … und Sauerstoff. Ergänze das fehlende Produkt.",
+      "verbatimSpeech": true
+    },
+    "pfl4_20": {
+      "altAnswers": [
+        "schwach",
+        "dünn",
+        "lang"
+      ]
+    },
+    "pfl4_22": {
+      "altAnswers": [
+        "Schmarotzer"
+      ]
+    },
+    "pfl4_26": {
+      "altAnswers": [
+        "Stabilität"
+      ]
+    },
+    "pfl4_36": {
+      "altAnswers": [
+        "Stabilität"
+      ]
+    },
+    "pfl4_28": {
+      "altAnswers": [
+        "Speicherorganen",
+        "Wurzeln",
+        "Früchten",
+        "Samen",
+        "Knollen"
+      ]
+    },
+    "pfl4_42": {
+      "altAnswers": [
+        "Sauerstoff",
+        "Luft"
+      ]
+    },
+    "pfl4_44": {
+      "altAnswers": [
+        "Gegenseitige evolutionäre Anpassung",
+        "Pflanzen und Bestäuber passen sich gegenseitig an"
+      ]
+    },
+    "pfl4_46": {
+      "altAnswers": [
+        "Abgabe von Wassertropfen an Blatträndern",
+        "Wasserabgabe durch Hydathoden"
+      ]
+    },
+    "pfl4_48": {
+      "altAnswers": [
+        "Drehen einer Pflanze um den gerichteten Schwerkraftreiz auszugleichen"
+      ]
+    },
+    "ms4_6": {
+      "altAnswers": [
+        "Gefrieren",
+        "Erstarren"
+      ]
+    },
+    "ms4_10": {
+      "altAnswers": [
+        "Stromleiter",
+        "elektrische Leiter"
+      ]
+    },
+    "ms4_12": {
+      "altAnswers": [
+        "Nichtleiter",
+        "elektrische Isolatoren"
+      ],
+      "spokenPrompt": "Holz, Plastik und Gummi sind … für elektrischen Strom. Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "ms4_18": {
+      "altAnswers": [
+        "Filtration",
+        "Dekantieren",
+        "Abgiessen",
+        "Sedimentieren"
+      ],
+      "hints": [
+        "Überlege, wie du die festen Teilchen vom flüssigen Wasser trennen kannst.",
+        "Welche Trennmethode nutzt den Grössenunterschied der Teilchen?"
+      ]
+    },
+    "ms4_20": {
+      "altAnswers": [
+        "Wasser und Sauerstoff",
+        "Wasser Sauerstoff",
+        "Sauerstoff Wasser"
+      ],
+      "hints": [
+        "Warum rostet Eisen nicht in Öl?",
+        "Vergleiche trocken gelagertes Eisen mit Eisen an feuchter Luft."
+      ]
+    },
+    "ms4_26": {
+      "altAnswers": [
+        "Erdöl",
+        "Rohöl"
+      ]
+    },
+    "ms4_30": {
+      "altAnswers": [
+        "Eisen",
+        "Nickel",
+        "Kobalt",
+        "ferromagnetische Metalle"
+      ],
+      "hints": [
+        "Nicht alle Metalle werden angezogen.",
+        "Vergleiche verschiedene Metalle bei einem Magnetversuch."
+      ]
+    },
+    "ms4_32": {
+      "altAnswers": [
+        "Mendelejew",
+        "Dmitri Mendelejew",
+        "Dmitri Mendeleev",
+        "Mendeleev"
+      ]
+    },
+    "ms4_38": {
+      "altAnswers": [
+        "Eine Bindung zwischen positiv und negativ geladenen Ionen",
+        "Elektrostatische Anziehung zwischen entgegengesetzt geladenen Ionen"
+      ]
+    },
+    "ms4_40": {
+      "altAnswers": [
+        "Eine Reaktion die Wärme abgibt",
+        "Freisetzung von Wärme bei einer Reaktion"
+      ],
+      "hints": [
+        "Überlege, was du in der Nähe eines brennenden Holzstücks spürst.",
+        "Betrachte den Energiefluss zwischen Reaktion und Umgebung."
+      ],
+      "spokenPrompt": "Was ist Exothermie in der Chemie?",
+      "verbatimSpeech": true
+    },
+    "ms4_44": {
+      "altAnswers": [
+        "Zerlegung von Verbindungen mit elektrischem Strom",
+        "Eine durch Strom erzwungene chemische Reaktion"
+      ],
+      "hints": [
+        "Wasser → H₂ + O₂ durch Strom.",
+        "Überlege, welche Wirkung angelegte elektrische Energie auf eine Verbindung haben kann."
+      ]
+    },
+    "ms4_46": {
+      "altAnswers": [
+        "Ein fein verteiltes Gemisch zwischen Lösung und Suspension"
+      ]
+    },
+    "ms4_48": {
+      "altAnswers": [
+        "Spontaner Zerfall instabiler Atomkerne unter Abgabe von Strahlung",
+        "Zerfall instabiler Atomkerne"
+      ],
+      "hints": [
+        "Uran, Radium = radioaktive Elemente.",
+        "Überlege, was bei einem instabilen Atomkern geschehen kann."
+      ]
+    },
+    "ke4_2": {
+      "altAnswers": [
+        "Newton",
+        "N"
+      ],
+      "hints": [
+        "Gesucht ist die Einheit auf einem Kraftmesser.",
+        "Sie ist nach einem englischen Physiker benannt."
+      ]
+    },
+    "ke4_6": {
+      "altAnswers": [
+        "potentielle",
+        "potenzielle",
+        "Lage"
+      ],
+      "hints": [
+        "Wenn er fällt, wird daraus Bewegungsenergie.",
+        "Vergleiche die Energie vor und nach dem Herunterfallen."
+      ]
+    },
+    "ke4_10": {
+      "altAnswers": [
+        "Strahlungs",
+        "Licht",
+        "Wärme",
+        "solare"
+      ],
+      "hints": [
+        "Ohne Sonne kein Leben auf der Erde.",
+        "Überlege, auf welchem Weg Sonnenenergie die Erde erreicht."
+      ]
+    },
+    "ke4_12": {
+      "altAnswers": [
+        "Kräfte",
+        "Anziehung",
+        "Abstossung"
+      ],
+      "hints": [
+        "Gleiche Pole stossen sich ab, ungleiche ziehen sich an.",
+        "Denke an das Ziehen und Drücken zwischen den Magneten."
+      ]
+    },
+    "ke4_18": {
+      "altAnswers": [
+        "elastische",
+        "Spann",
+        "potentielle",
+        "potenzielle"
+      ],
+      "hints": [
+        "Gespannte Feder = Energie gespeichert.",
+        "Denke an die Verformung der Feder vor dem Loslassen."
+      ]
+    },
+    "ke4_20": {
+      "altAnswers": [
+        "Joule",
+        "J"
+      ],
+      "hints": [
+        "Gesucht ist eine nach einem Physiker benannte Energieeinheit.",
+        "Unterscheide die Energieeinheit von der Einheit für Leistung."
+      ]
+    },
+    "ke4_22": {
+      "altAnswers": [
+        "Wasser",
+        "fliessendem Wasser"
+      ]
+    },
+    "ke4_26": {
+      "altAnswers": [
+        "Schwingungen",
+        "Vibrationen"
+      ],
+      "hints": [
+        "Beobachte gedanklich die Membran eines Lautsprechers.",
+        "Überlege, welche Bewegung eine Druckwelle auslösen kann."
+      ]
+    },
+    "ke4_28": {
+      "altAnswers": [
+        "Spaltung",
+        "Kernspaltung",
+        "Fusion",
+        "Kernfusion"
+      ],
+      "hints": [
+        "Denke an eine Veränderung der Atomkerne, bei der Energie frei wird.",
+        "Kern = Atom-Kern."
+      ]
+    },
+    "ke4_30": {
+      "altAnswers": [
+        "mechanische",
+        "Bewegungs",
+        "kinetische"
+      ],
+      "hints": [
+        "Vergleiche die Energie vor und nach dem Dynamo.",
+        "Denke daran, was du tun musst, damit ein Fahrraddynamo Strom liefert."
+      ]
+    },
+    "ke4_36": {
+      "altAnswers": [
+        "schwimmt",
+        "treibt"
+      ]
+    },
+    "ke4_38": {
+      "altAnswers": [
+        "transparent",
+        "lichtdurchlässig"
+      ]
+    },
+    "ke4_42": {
+      "altAnswers": [
+        "Verstärkung einer Schwingung durch Anregung mit der Eigenfrequenz"
+      ],
+      "hints": [
+        "Schaukeln: im richtigen Rhythmus schiessen = Resonanz.",
+        "Vergleiche den Takt des Anschubs mit dem eigenen Takt einer Schaukel."
+      ]
+    },
+    "ke4_44": {
+      "altAnswers": [
+        "Eine Änderung des Magnetfelds erzeugt eine Spannung",
+        "Spannung entsteht durch Änderung des magnetischen Flusses"
+      ],
+      "hints": [
+        "Dynamo: Magnet dreht sich → Strom entsteht.",
+        "Überlege, was ein bewegter Magnet in der Nähe einer Spule bewirken kann."
+      ]
+    },
+    "ke4_46": {
+      "altAnswers": [
+        "Bei Fusion verschmelzen Atomkerne bei Spaltung werden sie geteilt"
+      ],
+      "hints": [
+        "Vergleiche die Atomkerne vor und nach den beiden Vorgängen.",
+        "Überlege, ob aus kleineren Kernen grössere werden oder umgekehrt."
+      ]
+    },
+    "ke4_48": {
+      "altAnswers": [
+        "Die wahrgenommene Frequenz ändert sich bei Bewegung zwischen Quelle und Empfänger"
+      ],
+      "hints": [
+        "Ambulanz nähert sich: höherer Ton. Entfernt sich: tiefer.",
+        "Vergleiche den Ton eines sich nähernden und eines sich entfernenden Fahrzeugs."
+      ]
+    },
+    "tech4_2": {
+      "altAnswers": [
+        "Flaschenzug"
+      ]
+    },
+    "tech4_4": {
+      "altAnswers": [
+        "Rollen",
+        "Umlenkrollen"
+      ],
+      "hints": [
+        "Überlege, über welche Bauteile das Seil geführt wird.",
+        "Vergleiche einen Flaschenzug mit einem einfachen Seil."
+      ]
+    },
+    "tech4_8": {
+      "altAnswers": [
+        "Spalten"
+      ]
+    },
+    "tech4_10": {
+      "altAnswers": [
+        "Luft",
+        "Druckluft"
+      ],
+      "hints": [
+        "Überlege, welches komprimierbare Medium im Schlauch steckt.",
+        "Bustüren = Pneumatik."
+      ]
+    },
+    "tech4_12": {
+      "altAnswers": [
+        "mechanische Energie",
+        "Bewegungsenergie"
+      ],
+      "hints": [
+        "Beobachte gedanklich die Welle eines laufenden Motors.",
+        "Welche Energieform hat ein sich drehendes Rad?"
+      ]
+    },
+    "tech4_14": {
+      "altAnswers": [
+        "Zahnräder",
+        "Ritzel",
+        "Kettenblätter"
+      ]
+    },
+    "tech4_16": {
+      "altAnswers": [
+        "überträgt",
+        "verändert"
+      ],
+      "hints": [
+        "Vergleiche die Aufgabe des Antriebs mit der Aufgabe der verbundenen Zahnräder.",
+        "Getriebe ändert Geschwindigkeit und Drehmoment."
+      ]
+    },
+    "tech4_18": {
+      "altAnswers": [
+        "Sonnenlicht",
+        "Lichtenergie",
+        "Licht"
+      ],
+      "hints": [
+        "Auf Dächern oder in Taschenrechnern.",
+        "Überlege, welche Energie auf die Oberfläche einer Solarzelle trifft."
+      ]
+    },
+    "tech4_20": {
+      "altAnswers": [
+        "wiederkehrende",
+        "einfache",
+        "viele"
+      ]
+    },
+    "tech4_24": {
+      "altAnswers": [
+        "verbundenen",
+        "vernetzten"
+      ],
+      "hints": [
+        "Denke an Computer, die miteinander Daten austauschen können.",
+        "Netzwerk von Netzwerken."
+      ]
+    },
+    "tech4_26": {
+      "altAnswers": [
+        "2"
+      ],
+      "hints": [
+        "Computer kennen nur an/aus.",
+        "Zähle die möglichen Zustände eines einfachen An-Aus-Schalters."
+      ],
+      "spokenPrompt": "Binär bedeutet: nur … Zustände, nämlich null und eins. Ergänze die fehlende Zahl.",
+      "verbatimSpeech": true
+    },
+    "tech4_28": {
+      "altAnswers": [
+        "temporärer",
+        "flüchtiger",
+        "kurzfristiger"
+      ],
+      "hints": [
+        "RAM verliert Daten beim Ausschalten.",
+        "Vergleiche, was beim Ausschalten mit den gespeicherten Daten passiert."
+      ]
+    },
+    "tech4_30": {
+      "altAnswers": [
+        "viele",
+        "verschiedene"
+      ]
+    },
+    "tech4_32": {
+      "altAnswers": [
+        "Bögen",
+        "Pfeiler"
+      ],
+      "hints": [
+        "Denke an Bauteile, die die Last in den Boden weiterleiten.",
+        "Brückenformen: Bogen, Balken, Hänge."
+      ]
+    },
+    "tech4_36": {
+      "altAnswers": [
+        "Dampf bringt die Turbine zum Drehen",
+        "Dampf treibt die Schaufeln an und dreht die Turbine"
+      ],
+      "hints": [
+        "Überlege, wie ein Dampfstrahl eine Turbinenschaufel beeinflusst.",
+        "Verfolge die Energie vom heissen Dampf bis zur bewegten Welle."
+      ]
+    },
+    "tech4_38": {
+      "altAnswers": [
+        "Ein nachträglich programmierbarer Logikchip"
+      ]
+    },
+    "tech4_40": {
+      "altAnswers": [
+        "Computer lernen Muster aus Daten",
+        "Maschinen lernen aus Beispielen"
+      ],
+      "hints": [
+        "System verbessert sich durch Erfahrung.",
+        "Überlege, wodurch ein System seine Ergebnisse verbessern kann."
+      ]
+    },
+    "tech4_42": {
+      "altAnswers": [
+        "Position",
+        "Platzierung"
+      ]
+    },
+    "tech4_44": {
+      "altAnswers": [
+        "Ein System mit Rückmeldung das Soll und Ist vergleicht und Abweichungen korrigiert"
+      ],
+      "hints": [
+        "Überlege, wie das System merkt, ob das gewünschte Ergebnis erreicht ist.",
+        "Was müsste nach dem Messen einer Abweichung geschehen?"
+      ]
+    },
+    "tech4_46": {
+      "altAnswers": [
+        "Schutz von Computern und Daten vor Angriffen",
+        "Schutz von IT-Systemen vor unbefugtem Zugriff"
+      ],
+      "hints": [
+        "Passwörter, Verschlüsselung = Cybersicherheit.",
+        "Überlege, welche Risiken Passwörter und Verschlüsselung verringern sollen."
+      ]
+    },
+    "tech4_48": {
+      "altAnswers": [
+        "Die reale Welt wird mit digitalen Informationen ergänzt",
+        "Erweiterung der Realität durch digitale Inhalte"
+      ]
+    },
+    "oek4_4": {
+      "altAnswers": [
+        "Pflanzenfresser",
+        "Herbivoren"
+      ]
+    },
+    "oek4_6": {
+      "altAnswers": [
+        "Fleischfresser",
+        "Karnivoren"
+      ],
+      "hints": [
+        "Überlege, welche Nahrung Wolf, Adler und Löwe hauptsächlich nutzen.",
+        "Karni = Fleisch, vore = fressen."
+      ]
+    },
+    "oek4_10": {
+      "altAnswers": [
+        "Kinder",
+        "Enkel",
+        "Nachkommen"
+      ]
+    },
+    "oek4_12": {
+      "altAnswers": [
+        "Wasser",
+        "Wasserkraft",
+        "Biomasse",
+        "Geothermie"
+      ],
+      "hints": [
+        "Was erneuert sich von selbst?",
+        "Denke an eine weitere Quelle, die sich auf menschlichen Zeitskalen erneuert."
+      ]
+    },
+    "oek4_20": {
+      "altAnswers": [
+        "Meerestieren",
+        "Fischen",
+        "Walen",
+        "Schildkröten"
+      ]
+    },
+    "oek4_22": {
+      "altAnswers": [
+        "Reuse",
+        "wiederverwenden"
+      ]
+    },
+    "oek4_24": {
+      "altAnswers": [
+        "Schwefeloxide und Stickoxide",
+        "Stickoxide und Schwefeloxide"
+      ],
+      "hints": [
+        "Abgase von Fabriken und Autos.",
+        "Bestimmte gasförmige Schadstoffe reagieren in der Atmosphäre und lassen saure Verbindungen entstehen."
+      ]
+    },
+    "oek4_26": {
+      "altAnswers": [
+        "Klimaerwärmung",
+        "globale Erwärmung"
+      ]
+    },
+    "oek4_28": {
+      "altAnswers": [
+        "Holzgewinnung",
+        "Holzeinschlag",
+        "Bergbau"
+      ]
+    },
+    "oek4_30": {
+      "altAnswers": [
+        "bedrohten Tier- und Pflanzenarten",
+        "bedrohten Arten"
+      ],
+      "hints": [
+        "Convention on International Trade in Endangered Species.",
+        "Überlege, welche Lebewesen durch unkontrollierten Handel gefährdet werden können."
+      ]
+    },
+    "oek4_34": {
+      "altAnswers": [
+        "organischem",
+        "abgestorbenem"
+      ],
+      "hints": [
+        "Tote Blätter, Tiere → Humus.",
+        "Denke an die Herkunft der abgestorbenen Pflanzenreste."
+      ]
+    },
+    "oek4_38": {
+      "altAnswers": [
+        "Biotische Faktoren sind lebendig abiotische Faktoren sind unbelebt"
+      ],
+      "hints": [
+        "Sortiere zuerst Beispiele wie Temperatur, Konkurrenz und Fressfeinde nach ihrer Herkunft.",
+        "Überlege, welche Einflüsse von Organismen ausgehen und welche auch ohne Organismen bestehen."
+      ]
+    },
+    "oek4_44": {
+      "altAnswers": [
+        "recycelt",
+        "umgewandelt"
+      ]
+    },
+    "oek4_46": {
+      "altAnswers": [
+        "Abfälle",
+        "Chemikalien"
+      ]
+    },
+    "oek4_48": {
+      "altAnswers": [
+        "In Küstenökosystemen gespeicherter Kohlenstoff",
+        "Kohlenstoffspeicherung in Mangroven und Seegraswiesen"
+      ]
+    },
+    "kan4_10": {
+      "altAnswers": [
+        "Südwesten"
+      ]
+    },
+    "kan4_20": {
+      "altAnswers": [
+        "Deutsch und Französisch",
+        "Französisch und Deutsch"
+      ]
+    },
+    "kan4_24": {
+      "altAnswers": [
+        "Ausserrhoden und Innerrhoden"
+      ]
+    },
+    "kan4_34": {
+      "altAnswers": [
+        "Sankt Gallen"
+      ]
+    },
+    "kan4_40": {
+      "altAnswers": [
+        "Delsberg",
+        "Delémont"
+      ],
+      "hints": [
+        "Hauptort von JU.",
+        "Gesucht ist der deutsch- oder französischsprachige Name des Hauptorts."
+      ]
+    },
+    "kan4_42": {
+      "altAnswers": [
+        "Bezirk",
+        "Ecke"
+      ],
+      "hints": [
+        "Kantone sind Verwaltungseinheiten.",
+        "Der Begriff bezeichnet einen begrenzten Teil eines grösseren Gebiets."
+      ]
+    },
+    "kan4_44": {
+      "altAnswers": [
+        "D",
+        "Deutsch Deutsch Deutsch Deutsch"
+      ],
+      "hints": [
+        "Welche Sprache kommt in allen vier genannten Kantonen vor?",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Welche gemeinsame Amtssprache fehlt jeweils? Freiburg: … und Französisch. Graubünden: …, Rätoromanisch und Italienisch. Wallis und Bern: jeweils … und Französisch. Nenne die gesuchte Sprache einmal.",
+      "verbatimSpeech": true
+    },
+    "kan4_46": {
+      "altAnswers": [
+        "Gotthardpass",
+        "Gotthard",
+        "St. Gotthard"
+      ],
+      "hints": [
+        "Wichtigster Alpenpass der Schweiz.",
+        "Der Pass liegt auf einer bekannten Nord-Süd-Verbindung durch die Alpen."
+      ]
+    },
+    "kan4_48": {
+      "altAnswers": [
+        "Bundesstaat",
+        "Eidgenossenschaft"
+      ]
+    },
+    "kan4_50": {
+      "altAnswers": [
+        "0,5",
+        "0.5"
+      ]
+    },
+    "sg4_6": {
+      "altAnswers": [
+        "Schlacht bei Morgarten"
+      ],
+      "hints": [
+        "Erster grosser Sieg der Eidgenossen.",
+        "Gesucht ist der Ort einer Schlacht am Ägerisee."
+      ]
+    },
+    "sg4_10": {
+      "altAnswers": [
+        "Kriegen",
+        "bewaffneten Konflikten"
+      ]
+    },
+    "sg4_14": {
+      "altAnswers": [
+        "neutral",
+        "immerwährend neutral"
+      ]
+    },
+    "sg4_20": {
+      "altAnswers": [
+        "Unabhängigkeit",
+        "Freiheit"
+      ],
+      "hints": [
+        "Die Gegner waren nicht bei jeder Schlacht dieselben.",
+        "Militärische Siege = Stärke des Bundes."
+      ]
+    },
+    "sg4_22": {
+      "altAnswers": [
+        "Schlacht bei Solferino"
+      ],
+      "hints": [
+        "Denke an Dunants Erlebnis während einer Schlacht in Norditalien.",
+        "Dunant sah tausende Verwundete."
+      ]
+    },
+    "sg4_24": {
+      "altAnswers": [
+        "Schweizergarde",
+        "Päpstliche Garde",
+        "Päpstliche Schweizergarde"
+      ],
+      "hints": [
+        "Denke an eine bekannte Truppe, die heute im Vatikan Dienst leistet.",
+        "Gesucht ist der Name dieser besonderen Schutztruppe."
+      ]
+    },
+    "sg4_38": {
+      "altAnswers": [
+        "Niederlage der Eidgenossen gegen Frankreich",
+        "Die Eidgenossen verloren gegen Frankreich"
+      ],
+      "hints": [
+        "Letzte grosse Schweizer Offensive.",
+        "Überlege, ob die Eidgenossen ihre Expansionspolitik nach dieser Schlacht fortsetzen konnten."
+      ]
+    },
+    "sg4_40": {
+      "altAnswers": [
+        "Ein Nachbarstaat unter Karl dem Kühnen"
+      ],
+      "spokenPrompt": "Was war das Burgunderreich, hier das Herzogtum Burgund?",
+      "verbatimSpeech": true
+    },
+    "sg4_42": {
+      "altAnswers": [
+        "1891 und 1874"
+      ],
+      "hints": [
+        "Unterscheide das Verlangen einer Gesetzesabstimmung von der zwingenden Verfassungsabstimmung.",
+        "Denke an die Erweiterung der Volksrechte in der zweiten Hälfte des 19. Jahrhunderts."
+      ],
+      "question": "In welchen Jahren wurden die eidgenössische Volksinitiative auf Teilrevision und das fakultative Gesetzesreferendum eingeführt? Nenne zuerst die Initiative, dann das Referendum."
+    },
+    "sg4_44": {
+      "altAnswers": [
+        "Ein Treffen der SVP Zürich",
+        "Eine Veranstaltung der Zürcher SVP"
+      ],
+      "hints": [
+        "Kein Schulstoff.",
+        "Gesucht ist ein regelmässiges Treffen einer Zürcher Partei."
+      ],
+      "answer": "Das Albisgüetli-Treffen der Zürcher SVP"
+    },
+    "sg4_48": {
+      "altAnswers": [
+        "Keine Ausnahme weil es ein Bürgerkrieg war",
+        "Ein innerer Konflikt keine Verletzung der Aussenneutralität"
+      ],
+      "hints": [
+        "Unterscheide einen Konflikt im Inland von einem Krieg zwischen Staaten.",
+        "Neutralität = gegenüber Ausland."
+      ],
+      "question": "Warum war der Sonderbundskrieg keine Ausnahme von der aussenpolitischen Neutralität der Schweiz?"
+    },
+    "eu4_8": {
+      "altAnswers": [
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50"
+      ]
+    },
+    "eu4_12": {
+      "altAnswers": [
+        "Euro",
+        "€"
+      ]
+    },
+    "eu4_14": {
+      "altAnswers": [
+        "kein"
+      ],
+      "hints": [
+        "Unterscheide die Mitgliedschaft von der Zusammenarbeit durch Verträge.",
+        "Bilaterale Abkommen statt Mitgliedschaft."
+      ]
+    },
+    "eu4_16": {
+      "altAnswers": [
+        "Strassburg und Brüssel",
+        "Strassburg Brüssel",
+        "Strasbourg Bruxelles"
+      ],
+      "hints": [
+        "Die beiden gesuchten Städte liegen in Frankreich und Belgien.",
+        "Ordne jeder Institution ihren offiziellen Sitz zu."
+      ]
+    },
+    "eu4_30": {
+      "altAnswers": [
+        "über 100",
+        "mehr als 100"
+      ]
+    },
+    "eu4_32": {
+      "altAnswers": [
+        "Schweizer Franken",
+        "Franken",
+        "CHF"
+      ],
+      "hints": [
+        "Liechtenstein hat keine eigene Währung.",
+        "Liechtenstein nutzt dieselbe Währung wie sein westlicher Nachbar."
+      ]
+    },
+    "eu4_36": {
+      "altAnswers": [
+        "Parlament sind gewählte Abgeordnete Europäischer Rat sind Staats- und Regierungschefs"
+      ],
+      "hints": [
+        "Vergleiche die direkt gewählten Personen mit den Mitgliedern der nationalen Regierungen.",
+        "Achte darauf, wen die jeweilige Institution vertritt."
+      ]
+    },
+    "eu4_38": {
+      "altAnswers": [
+        "EFTA ist eine Freihandelsorganisation die EU eine politische und wirtschaftliche Union"
+      ]
+    },
+    "eu4_40": {
+      "altAnswers": [
+        "Verordnungen gelten direkt Richtlinien werden in nationales Recht umgesetzt"
+      ],
+      "hints": [
+        "Vergleiche, ob ein nationaler Gesetzgeber den Rechtsakt erst umsetzen muss.",
+        "Direkte vs. indirekte Wirkung."
+      ]
+    },
+    "eu4_42": {
+      "altAnswers": [
+        "Ein Massnahmenpaket für Klimaneutralität bis 2050",
+        "Europas Plan bis 2050 klimaneutral zu werden"
+      ],
+      "hints": [
+        "Überlege, welches langfristige Klimaziel das Paket verfolgt.",
+        "Europas Reaktion auf Klimawandel."
+      ]
+    },
+    "eu4_44": {
+      "altAnswers": [
+        "Bilateral zwei Parteien multilateral mehrere Parteien",
+        "Zwei Vertragspartner oder mehrere Vertragspartner"
+      ],
+      "hints": [
+        "Zähle die beteiligten Vertragspartner.",
+        "Vergleiche einen Vertrag zwischen zwei Partnern mit einem Vertrag zwischen mehreren."
+      ]
+    },
+    "eu4_46": {
+      "altAnswers": [
+        "Der Gründungsvertrag der Europäischen Union",
+        "Ein Vertrag zur Gründung der EU"
+      ],
+      "hints": [
+        "Überlege, welche politische Union mit diesem Vertrag geschaffen wurde.",
+        "Vergleiche die europäischen Gemeinschaften vor und nach dem Vertrag."
+      ]
+    },
+    "eu4_48": {
+      "altAnswers": [
+        "Europäische Atomgemeinschaft",
+        "Europäische Gemeinschaft für Atomenergie"
+      ]
+    },
+    "eu4_50": {
+      "altAnswers": [
+        "Die Schweiz gehört zum Europarat aber nicht zur EU"
+      ],
+      "hints": [
+        "Unterscheide die beiden Organisationen und prüfe die jeweilige Mitgliedschaft.",
+        "EU: 27, ohne Schweiz."
+      ]
+    },
+    "gk4_14": {
+      "altAnswers": [
+        "4",
+        "vier",
+        "viermal"
+      ],
+      "hints": [
+        "Denke an die regelmässig vorgesehenen Termine über das Jahr verteilt.",
+        "März, Juni, September, November."
+      ]
+    },
+    "gk4_18": {
+      "altAnswers": [
+        "kollegiale"
+      ],
+      "answer": "gemeinsame",
+      "hints": [
+        "Der Bundesrat trägt seine Beschlüsse als Kollegium nach aussen.",
+        "Ein Beschluss kann auch mit einer Mehrheit zustande kommen."
+      ]
+    },
+    "gk4_20": {
+      "altAnswers": [
+        "über"
+      ],
+      "hints": [
+        "Vergleiche die Stellung der Bundesverfassung mit einer kantonalen Regel.",
+        "Hierarchie: Verfassung > Kantonsrecht."
+      ]
+    },
+    "gk4_28": {
+      "altAnswers": [
+        "Gemeindeverfassung",
+        "Grundordnung einer Gemeinde"
+      ],
+      "hints": [
+        "Gemeinde hat eigene Regeln.",
+        "Vergleiche die grundlegenden Regeln einer Gemeinde mit denen eines Kantons."
+      ]
+    },
+    "gk4_32": {
+      "altAnswers": [
+        "Geschäfte",
+        "Abstimmungen"
+      ]
+    },
+    "gk4_36": {
+      "altAnswers": [
+        "Exekutive führt Gesetze aus Legislative beschliesst Gesetze"
+      ],
+      "hints": [
+        "Vergleiche das Beschliessen einer Regel mit ihrem Vollzug.",
+        "Exekutiv ≠ Législatif."
+      ],
+      "spokenPrompt": "Was ist der Unterschied zwischen Exekutiv- und Legislativkompetenz?",
+      "verbatimSpeech": true
+    },
+    "gk4_38": {
+      "altAnswers": [
+        "Ein Ministerium",
+        "Ein Teil der Bundesverwaltung unter Leitung eines Bundesrats"
+      ]
+    },
+    "gk4_40": {
+      "altAnswers": [
+        "Ein Verzeichnis der Stimmberechtigten",
+        "Liste der stimmberechtigten Personen"
+      ],
+      "hints": [
+        "Eingetragene Stimmberechtigte.",
+        "Überlege, wie die Gemeinde festhält, wer teilnehmen darf."
+      ]
+    },
+    "gk4_42": {
+      "altAnswers": [
+        "Eine unabhängige Vermittlungsstelle zwischen Bevölkerung und Behörden",
+        "Eine Schlichtungsstelle für Beschwerden gegen Behörden"
+      ],
+      "hints": [
+        "Beschwerdestelle ohne Gerichtsverfahren.",
+        "Überlege, an wen sich Menschen bei einem ungelösten Streit mit einer Behörde wenden können."
+      ]
+    },
+    "gk4_44": {
+      "altAnswers": [
+        "Proporz Verhältniswahl Majorz Mehrheitswahl"
+      ],
+      "hints": [
+        "Nationalrat: Proporz. Ständerat: Majorz.",
+        "Vergleiche die Verteilung nach Stimmenanteilen mit dem Gewinnen einer Mehrheit."
+      ]
+    },
+    "gk4_46": {
+      "altAnswers": [
+        "Statistische Daten über die Schweiz sammeln und veröffentlichen"
+      ]
+    },
+    "rr4_6": {
+      "altAnswers": [
+        "Strassen",
+        "Römerstrassen"
+      ]
+    },
+    "rr4_14": {
+      "altAnswers": [
+        "Forum",
+        "Amphitheater"
+      ]
+    },
+    "rr4_16": {
+      "altAnswers": [
+        "Gallien",
+        "Westgallien"
+      ],
+      "hints": [
+        "Denke an das grosse keltisch geprägte Gebiet westlich der heutigen Schweiz.",
+        "Keltische Wanderungsbewegung."
+      ]
+    },
+    "rr4_18": {
+      "altAnswers": [
+        "Grenze",
+        "Grenzlinie",
+        "Grenzwall"
+      ],
+      "hints": [
+        "Nordgrenze: Rhein und Donau.",
+        "Überlege, wozu Kastelle und Wälle am Rand des Reichs dienten."
+      ]
+    },
+    "rr4_20": {
+      "altAnswers": [
+        "unterworfene Völker die römische",
+        "eroberte Völker die römische"
+      ]
+    },
+    "rr4_22": {
+      "altAnswers": [
+        "Griffel",
+        "Stylus",
+        "Stilus"
+      ],
+      "hints": [
+        "Überlege, womit man Zeichen in eine weiche Wachsschicht ritzen kann.",
+        "Gesucht ist ein Schreibwerkzeug, kein Papier."
+      ]
+    },
+    "rr4_24": {
+      "altAnswers": [
+        "Europas"
+      ]
+    },
+    "rr4_28": {
+      "altAnswers": [
+        "Ein Wohnblock",
+        "Ein Mietshaus",
+        "Ein mehrstöckiges Mietshaus"
+      ],
+      "hints": [
+        "Reiche: Domus. Arme: Insula.",
+        "Vergleiche einen solchen Bau mit einem einzelnen vornehmen Privathaus."
+      ]
+    },
+    "rr4_36": {
+      "altAnswers": [
+        "In der Republik gab es Konsuln und Senat im Kaiserreich regierte ein Kaiser"
+      ]
+    },
+    "rr4_38": {
+      "altAnswers": [
+        "Der lateinische Name der Schweiz",
+        "Schweiz auf Latein"
+      ],
+      "hints": [
+        "Überlege, auf welche Bezeichnung des Landes der Name zurückgeht.",
+        "Vergleiche die Landesbezeichnung mit den heute gesprochenen Landessprachen."
+      ]
+    },
+    "rr4_40": {
+      "altAnswers": [
+        "Übernahme der römischen Sprache und Kultur aus Latein entstanden romanische Sprachen"
+      ]
+    },
+    "rr4_42": {
+      "altAnswers": [
+        "Die Übernahme von Latein aus dem romanische Sprachen entstanden"
+      ],
+      "spokenPrompt": "Was ist Romanisierung im Kontext der Sprache?",
+      "verbatimSpeech": true
+    },
+    "rr4_44": {
+      "altAnswers": [
+        "Mietshäuser",
+        "Wohnblöcke",
+        "Mehrgeschossige Mietshäuser"
+      ],
+      "hints": [
+        "Reiche: Domus. Arme: Insula (5-7 Stockwerke).",
+        "Vergleiche das Wohnen vieler Familien mit einem einzelnen Privathaus."
+      ]
+    },
+    "rr4_46": {
+      "altAnswers": [
+        "Ein Ehrenbogen für einen militärischen Sieg",
+        "Ein Ehrenmonument für siegreiche Feldherren"
+      ]
+    },
+    "rr4_48": {
+      "altAnswers": [
+        "Münzkunde römische Münzen zeigen Kaiser Götter und Siege"
+      ]
+    },
+    "rr4_50": {
+      "altAnswers": [
+        "Strassen Ortsnamen und Sprache",
+        "Strassenverläufe Stadtpläne Ortsnamen und Lehnwörter"
+      ]
+    },
+    "lw4_2": {
+      "altAnswers": [
+        "Bauernhof",
+        "Feld"
+      ]
+    },
+    "lw4_4": {
+      "altAnswers": [
+        "1876"
+      ],
+      "hints": [
+        "Ende 19. Jahrhundert.",
+        "Die Erfindung liegt im letzten Viertel des 19. Jahrhunderts."
+      ]
+    },
+    "lw4_6": {
+      "altAnswers": [
+        "von Hand",
+        "manuell"
+      ]
+    },
+    "lw4_8": {
+      "altAnswers": [
+        "1830"
+      ],
+      "hints": [
+        "Denke an die erste Hälfte des 19. Jahrhunderts.",
+        "Dampflokomotive."
+      ]
+    },
+    "lw4_14": {
+      "altAnswers": [
+        "Landwirtschaft",
+        "Industrie"
+      ],
+      "hints": [
+        "Denke an Tätigkeiten wie Ackerbau und Viehzucht.",
+        "Strukturwandel der Wirtschaft."
+      ]
+    },
+    "lw4_18": {
+      "altAnswers": [
+        "1885"
+      ],
+      "hints": [
+        "Die Entwicklung liegt in der Mitte der 1880er-Jahre.",
+        "Erster Benzinmotor im Auto."
+      ]
+    },
+    "lw4_20": {
+      "altAnswers": [
+        "84",
+        "83",
+        "85"
+      ]
+    },
+    "lw4_22": {
+      "altAnswers": [
+        "einer Amme"
+      ],
+      "hints": [
+        "Gesucht ist eine historische Bezeichnung für Frauen mit dieser Aufgabe.",
+        "Sie ernährten ein fremdes Baby mit ihrer eigenen Muttermilch."
+      ],
+      "question": "Früher wurden Säuglinge auch von ___ gestillt, wenn nicht die eigene Mutter sie stillte.",
+      "answer": "Ammen"
+    },
+    "lw4_24": {
+      "altAnswers": [
+        "Routineaufgaben",
+        "einfache wiederkehrende Aufgaben"
+      ]
+    },
+    "lw4_28": {
+      "altAnswers": [
+        "Lehre",
+        "Zunftlehre",
+        "Meisterlehre"
+      ]
+    },
+    "lw4_30": {
+      "altAnswers": [
+        "Schulpflicht",
+        "kantonale Gesetze"
+      ],
+      "hints": [
+        "Die Regeln für den Schulbesuch wurden gesetzlich festgelegt.",
+        "Pflichtschule = für alle."
+      ]
+    },
+    "lw4_32": {
+      "altAnswers": [
+        "Maschinen haben die Zeit für Hausarbeit verringert"
+      ]
+    },
+    "lw4_34": {
+      "altAnswers": [
+        "Internet und Computer",
+        "Computer und Internet",
+        "Digitalisierung"
+      ],
+      "question": "Digital vernetzte Büroarbeit von zu Hause wurde durch ___ möglich.",
+      "hints": [
+        "Überlege, welche Geräte und Verbindungen den Austausch mit dem Büro ermöglichen.",
+        "Heimarbeit gab es schon früher; hier geht es um digital vernetzte Büroarbeit."
+      ]
+    },
+    "lw4_36": {
+      "altAnswers": [
+        "Linear bedeutet vorwärts zyklisch bedeutet wiederkehrend"
+      ],
+      "hints": [
+        "Aufklärung: linear. Antike: zyklisch (Jahreszeiten).",
+        "Vergleiche eine gerade Linie mit einem Kreis als Bild für Geschichte."
+      ]
+    },
+    "lw4_38": {
+      "altAnswers": [
+        "Bevölkerungswissenschaft",
+        "Die Wissenschaft von der Bevölkerung und ihrer Entwicklung"
+      ]
+    },
+    "lw4_40": {
+      "altAnswers": [
+        "Eine Phase nach der Moderne mit vielfältigen Lebensformen und Deutungen"
+      ]
+    },
+    "lw4_42": {
+      "altAnswers": [
+        "Der schaffende Mensch",
+        "Der Mensch als Gestalter und Werkzeugmacher"
+      ]
+    },
+    "lw4_44": {
+      "altAnswers": [
+        "Als real definierte Situationen haben reale Folgen"
+      ],
+      "hints": [
+        "Glaube an Hexen → Hexenverfolgung → reale Folgen.",
+        "Überlege, ob ein Glaube das Handeln beeinflussen kann, selbst wenn er sachlich falsch ist."
+      ]
+    },
+    "lw4_46": {
+      "altAnswers": [
+        "Tradition bewahrt Überliefertes Innovation schafft Neues"
+      ],
+      "hints": [
+        "Vergleiche etwas Überliefertes mit etwas neu Entwickeltem.",
+        "Gesellschaft braucht beides."
+      ]
+    },
+    "lw4_48": {
+      "altAnswers": [
+        "Evolution ist allmählicher Wandel Revolution ein grundlegender Umbruch"
+      ]
+    },
+    "lw4_50": {
+      "altAnswers": [
+        "Zeitliche Reihenfolge von Ereignissen",
+        "Anordnung von Ereignissen nach der Zeit"
+      ]
+    },
+    "mk4_2": {
+      "altAnswers": [
+        "25"
+      ]
+    },
+    "mk4_6": {
+      "altAnswers": [
+        "Immigration",
+        "Einwanderung"
+      ],
+      "hints": [
+        "Im = hinein.",
+        "Gesucht ist der Fachbegriff für das Hineinwandern in ein Land."
+      ]
+    },
+    "mk4_8": {
+      "altAnswers": [
+        "Krieg",
+        "Verfolgung",
+        "Naturkatastrophen"
+      ]
+    },
+    "mk4_12": {
+      "altAnswers": [
+        "Frankreich",
+        "Deutschland",
+        "den USA",
+        "Amerika"
+      ]
+    },
+    "mk4_14": {
+      "altAnswers": [
+        "Integration",
+        "Teilhabe"
+      ],
+      "hints": [
+        "Sprachkenntnisse erleichtern die Verständigung mit anderen Menschen.",
+        "Überlege, wozu die Verständigung mit anderen Menschen im neuen Land beiträgt."
+      ]
+    },
+    "mk4_20": {
+      "altAnswers": [
+        "einheimischen",
+        "aufnehmenden"
+      ]
+    },
+    "mk4_22": {
+      "altAnswers": [
+        "Menschenrechte",
+        "Religionsfreiheit",
+        "kulturelle Rechte"
+      ]
+    },
+    "mk4_24": {
+      "altAnswers": [
+        "Andere Kulturen kennenlernen und Vorurteile abbauen"
+      ],
+      "hints": [
+        "Überlege, wie Begegnungen mit anderen Lebensweisen unsere Vorstellungen verändern können.",
+        "Inter = zwischen. Kulturelles = Kulturen."
+      ]
+    },
+    "mk4_26": {
+      "altAnswers": [
+        "Benachteiligung wegen Hautfarbe oder Herkunft",
+        "Diskriminierung wegen zugeschriebener Herkunft"
+      ],
+      "hints": [
+        "Überlege, welche Merkmale zur ungerechten Behandlung einer Person benutzt werden.",
+        "Rassismus verletzt Menschenwürde."
+      ]
+    },
+    "mk4_32": {
+      "altAnswers": [
+        "religiöse Vielfalt",
+        "religiöse Pluralität",
+        "religiösen Pluralismus"
+      ]
+    },
+    "mk4_34": {
+      "altAnswers": [
+        "Amerika",
+        "Brasilien",
+        "Lateinamerika"
+      ],
+      "hints": [
+        "Armut und Hungersnot: Auswanderung.",
+        "Denke an Auswanderungsziele auf der anderen Seite des Atlantiks."
+      ]
+    },
+    "mk4_40": {
+      "altAnswers": [
+        "Benachteiligung durch gesellschaftliche Regeln und Strukturen"
+      ]
+    },
+    "mk4_42": {
+      "altAnswers": [
+        "Neue kulturelle Formen durch die Verbindung verschiedener Kulturen"
+      ]
+    },
+    "mk4_44": {
+      "altAnswers": [
+        "Bindungen an mehrere Länder gleichzeitig pflegen"
+      ]
+    },
+    "mk4_46": {
+      "altAnswers": [
+        "Eine Ideologie die Einheimische gegenüber Zugewanderten bevorzugt"
+      ],
+      "hints": [
+        "Nativus = eingeboren.",
+        "Vergleiche, wie diese Ideologie Einheimische und Zugewanderte bewertet."
+      ]
+    },
+    "mk4_48": {
+      "altAnswers": [
+        "Staatsbürgerschaft gibt Bürgerrechte Aufenthaltsrecht erlaubt das Leben im Land"
+      ],
+      "hints": [
+        "Unterscheide Bürgerrechte von einer Erlaubnis, im Land zu leben.",
+        "Auf kantonaler oder kommunaler Ebene können auch bestimmte ausländische Personen stimmberechtigt sein."
+      ]
+    },
+    "mk4_50": {
+      "altAnswers": [
+        "Toleranz",
+        "Offenheit"
+      ]
+    },
+    "ok4_2": {
+      "altAnswers": [
+        "Norden",
+        "Nord"
+      ]
+    },
+    "ok4_4": {
+      "altAnswers": [
+        "Wasser",
+        "Seen",
+        "Flüsse",
+        "Meere"
+      ]
+    },
+    "ok4_6": {
+      "altAnswers": [
+        "Symbole",
+        "Zeichen",
+        "Farben"
+      ]
+    },
+    "ok4_12": {
+      "altAnswers": [
+        "Gelände",
+        "Relief"
+      ]
+    },
+    "ok4_14": {
+      "altAnswers": [
+        "Kompass"
+      ],
+      "hints": [
+        "Windrose = alle Richtungen auf einem Gerät.",
+        "Denke an das Gerät, dessen Nadel dir bei der Orientierung hilft."
+      ]
+    },
+    "ok4_18": {
+      "altAnswers": [
+        "Längengrade Breitengrade",
+        "Meridiane Parallelen",
+        "Längenkreise Breitenkreise"
+      ],
+      "hints": [
+        "Vergleiche die Linien von Pol zu Pol mit den Linien parallel zum Äquator.",
+        "Gitter auf Weltkarten."
+      ]
+    },
+    "ok4_20": {
+      "altAnswers": [
+        "Greenwich",
+        "London"
+      ],
+      "hints": [
+        "Gesucht ist der Name einer bekannten Sternwarte in London.",
+        "Dort wurde die Bezugslinie für die geografische Länge festgelegt."
+      ]
+    },
+    "ok4_22": {
+      "altAnswers": [
+        "Landeskarte",
+        "Landeskarten",
+        "Landeskarten der Schweiz"
+      ]
+    },
+    "ok4_24": {
+      "altAnswers": [
+        "Breite"
+      ],
+      "hints": [
+        "Eine der beiden Angaben beschreibt, wie weit nördlich oder südlich ein Ort liegt.",
+        "Unterscheide die Nord-Süd-Angabe von der Ost-West-Angabe."
+      ]
+    },
+    "ok4_26": {
+      "altAnswers": [
+        "Meeresspiegel"
+      ],
+      "hints": [
+        "Überlege, welcher gemeinsame Bezugspunkt Höhen verschiedener Orte vergleichbar macht.",
+        "Meter über Meer."
+      ]
+    },
+    "ok4_30": {
+      "altAnswers": [
+        "elektronische",
+        "interaktive"
+      ],
+      "hints": [
+        "Nicht auf Papier, sondern auf Bildschirm.",
+        "Vergleiche eine Karte auf Papier mit einer Karte auf dem Bildschirm."
+      ]
+    },
+    "ok4_32": {
+      "altAnswers": [
+        "Berggipfel",
+        "Gipfel"
+      ],
+      "hints": [
+        "Dreieck = spitze Form = Berg.",
+        "Überlege, welcher besonders hohe Punkt durch eine spitze Form dargestellt werden kann."
+      ]
+    },
+    "ok4_38": {
+      "altAnswers": [
+        "Winkel zwischen geografischem und magnetischem Norden",
+        "Magnetische Missweisung"
+      ]
+    },
+    "ok4_42": {
+      "altAnswers": [
+        "Ein Koordinatensystem für die Schweiz",
+        "Das schweizerische Landeskoordinatensystem"
+      ],
+      "spokenPrompt": "Was ist das Schweizer Koordinatensystem L V fünfundneunzig?",
+      "verbatimSpeech": true
+    },
+    "ok4_46": {
+      "altAnswers": [
+        "Entfernungsmessung mit Laserlicht",
+        "Geländeerfassung mit Laserpulsen"
+      ],
+      "hints": [
+        "LIDAR = Light Detection and Ranging.",
+        "Überlege, wie ausgesandtes Licht zur Entfernungsmessung genutzt werden kann."
+      ]
+    },
+    "rw4_2": {
+      "altAnswers": [
+        "Flüsse und Seen",
+        "Seen und Flüsse",
+        "Quellen"
+      ]
+    },
+    "rw4_6": {
+      "altAnswers": [
+        "Genfersee",
+        "Lac Léman"
+      ],
+      "hints": [
+        "Schweiz + Frankreich teilen ihn.",
+        "Der See liegt an der Grenze zwischen der Westschweiz und Frankreich."
+      ]
+    },
+    "rw4_8": {
+      "altAnswers": [
+        "Wasser",
+        "Sonne",
+        "Wind"
+      ]
+    },
+    "rw4_14": {
+      "altAnswers": [
+        "Klimaerwärmung",
+        "des Klimawandels",
+        "der globalen Erwärmung"
+      ]
+    },
+    "rw4_18": {
+      "altAnswers": [
+        "6"
+      ]
+    },
+    "rw4_22": {
+      "altAnswers": [
+        "Süsswasser enthält wenig Salz Meerwasser viel mehr Salz"
+      ],
+      "hints": [
+        "Vergleiche die Salzmenge. Auch Süsswasser ist nicht automatisch trinkbar.",
+        "Meer = Salzwasser. Fluss = Süsswasser."
+      ]
+    },
+    "rw4_28": {
+      "altAnswers": [
+        "Strahlung"
+      ],
+      "hints": [
+        "Sonnenstrahlen = Energie.",
+        "Überlege, welche Energie die Sonne durch den Weltraum zur Erde sendet."
+      ]
+    },
+    "rw4_30": {
+      "altAnswers": [
+        "Menschen",
+        "Einwohnern"
+      ]
+    },
+    "rw4_32": {
+      "altAnswers": [
+        "lebenswichtig",
+        "notwendig",
+        "unverzichtbar"
+      ],
+      "question": "Denkaufgabe 2: Sauberes Trinkwasser ist für Menschen ___."
+    },
+    "rw4_34": {
+      "altAnswers": [
+        "60"
+      ]
+    },
+    "rw4_36": {
+      "altAnswers": [
+        "Laufwasserkraftwerke nutzen Flusswasser Speicherkraftwerke Wasser aus Stauseen"
+      ]
+    },
+    "rw4_38": {
+      "altAnswers": [
+        "säubert",
+        "klärt"
+      ],
+      "hints": [
+        "Überlege, wozu die verschiedenen Stufen einer Kläranlage dienen.",
+        "Prüfe den Zusammenhang noch einmal."
+      ]
+    },
+    "rw4_40": {
+      "altAnswers": [
+        "Materialien werden wiederverwendet und recycelt",
+        "Wirtschaft mit möglichst geschlossenen Materialkreisläufen"
+      ]
+    },
+    "rw4_42": {
+      "altAnswers": [
+        "Veränderte Niederschläge führen zu Dürren und Überschwemmungen"
+      ]
+    },
+    "rw4_44": {
+      "altAnswers": [
+        "Wasser wird hochgepumpt und bei Bedarf zur Stromerzeugung abgelassen"
+      ],
+      "hints": [
+        "Vergleiche die Höhe des gespeicherten Wassers bei Stromüberschuss und bei Strombedarf.",
+        "Batterie aus Wasser."
+      ]
+    },
+    "rw4_46": {
+      "altAnswers": [
+        "Mehr Nutzen mit weniger Ressourcen"
+      ]
+    },
+    "rw4_50": {
+      "altAnswers": [
+        "Eine staatliche Bewilligung zur Nutzung von Wasser",
+        "Eine Erlaubnis zur Wassernutzung"
+      ]
+    },
+    "kan4_36": {
+      "altAnswers": [
+        "Uri, Schwyz, Unterwalden",
+        "Uri, Unterwalden, Schwyz",
+        "Schwyz, Uri, Unterwalden",
+        "Schwyz, Unterwalden, Uri",
+        "Unterwalden, Uri, Schwyz",
+        "Unterwalden, Schwyz, Uri"
+      ],
+      "question": "Welche drei Orte schlossen den auf 1291 datierten Bundesbrief?",
+      "hints": [
+        "Denke an die drei historischen Waldstätten in der Zentralschweiz.",
+        "Nenne die drei Namen ohne Kantonskürzel."
+      ]
+    },
+    "ks4_36": {
+      "altAnswers": [
+        "moralischen Wert",
+        "ethischen Wert",
+        "Grundwert"
+      ],
+      "hints": [
+        "Überlege, woran du beurteilst, ob ein Verhalten fair und richtig ist.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "ks4_38": {
+      "altAnswers": [
+        "moralischen Wert",
+        "ethischen Wert",
+        "Grundwert"
+      ],
+      "hints": [
+        "Überlege, woran du beurteilst, ob ein Verhalten fair und richtig ist.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "ks4_40": {
+      "altAnswers": [
+        "moralischen Wert",
+        "ethischen Wert",
+        "Grundwert"
+      ],
+      "hints": [
+        "Überlege, woran du beurteilst, ob ein Verhalten fair und richtig ist.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "ks4_42": {
+      "altAnswers": [
+        "moralischen Wert",
+        "ethischen Wert",
+        "Grundwert"
+      ],
+      "hints": [
+        "Überlege, woran du beurteilst, ob ein Verhalten fair und richtig ist.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "ks4_44": {
+      "altAnswers": [
+        "moralischen Wert",
+        "ethischen Wert",
+        "Grundwert"
+      ],
+      "hints": [
+        "Überlege, woran du beurteilst, ob ein Verhalten fair und richtig ist.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "ks4_46": {
+      "altAnswers": [
+        "moralischen Wert",
+        "ethischen Wert",
+        "Grundwert"
+      ],
+      "hints": [
+        "Überlege, woran du beurteilst, ob ein Verhalten fair und richtig ist.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "ks4_48": {
+      "altAnswers": [
+        "moralischen Wert",
+        "ethischen Wert",
+        "Grundwert"
+      ],
+      "hints": [
+        "Überlege, woran du beurteilst, ob ein Verhalten fair und richtig ist.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "ks4_50": {
+      "altAnswers": [
+        "moralischen Wert",
+        "ethischen Wert",
+        "Grundwert"
+      ],
+      "hints": [
+        "Überlege, woran du beurteilst, ob ein Verhalten fair und richtig ist.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-2": {
+      "altAnswers": [
+        "gebacken",
+        "produziert"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-4": {
+      "altAnswers": [
+        "gebacken",
+        "produziert"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-6": {
+      "altAnswers": [
+        "gebacken",
+        "produziert"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-8": {
+      "altAnswers": [
+        "gebacken",
+        "produziert"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-10": {
+      "altAnswers": [
+        "gebacken",
+        "produziert"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-12": {
+      "altAnswers": [
+        "gebacken",
+        "produziert"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-14": {
+      "altAnswers": [
+        "gebacken",
+        "produziert"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-16": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-18": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-20": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-22": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-24": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-26": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-28": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-30": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-32": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-34": {
+      "altAnswers": [
+        "Herkunftsangabe",
+        "Etikette",
+        "Verpackung"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-36": {
+      "altAnswers": [
+        "reduzieren",
+        "senken",
+        "mindern",
+        "verkleinern"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-38": {
+      "altAnswers": [
+        "reduzieren",
+        "senken",
+        "mindern",
+        "verkleinern"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-40": {
+      "altAnswers": [
+        "reduzieren",
+        "senken",
+        "mindern",
+        "verkleinern"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-42": {
+      "altAnswers": [
+        "reduzieren",
+        "senken",
+        "mindern",
+        "verkleinern"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-44": {
+      "altAnswers": [
+        "reduzieren",
+        "senken",
+        "mindern",
+        "verkleinern"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-46": {
+      "altAnswers": [
+        "reduzieren",
+        "senken",
+        "mindern",
+        "verkleinern"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-48": {
+      "altAnswers": [
+        "reduzieren",
+        "senken",
+        "mindern",
+        "verkleinern"
+      ]
+    },
+    "g4-science-energie-stoffe-energie-norm-50": {
+      "altAnswers": [
+        "reduzieren",
+        "senken",
+        "mindern",
+        "verkleinern"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-2": {
+      "altAnswers": [
+        "Ritual"
+      ],
+      "hints": [
+        "Denke an eine Handlung, die bei einem Fest regelmässig wiederholt wird.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-4": {
+      "altAnswers": [
+        "Ritual"
+      ],
+      "hints": [
+        "Denke an eine Handlung, die bei einem Fest regelmässig wiederholt wird.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-6": {
+      "altAnswers": [
+        "Ritual"
+      ],
+      "hints": [
+        "Denke an eine Handlung, die bei einem Fest regelmässig wiederholt wird.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-8": {
+      "altAnswers": [
+        "Ritual"
+      ],
+      "hints": [
+        "Denke an eine Handlung, die bei einem Fest regelmässig wiederholt wird.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-10": {
+      "altAnswers": [
+        "Ritual"
+      ],
+      "hints": [
+        "Denke an eine Handlung, die bei einem Fest regelmässig wiederholt wird.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-12": {
+      "altAnswers": [
+        "Ritual"
+      ],
+      "hints": [
+        "Denke an eine Handlung, die bei einem Fest regelmässig wiederholt wird.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-14": {
+      "altAnswers": [
+        "Ritual"
+      ],
+      "hints": [
+        "Denke an eine Handlung, die bei einem Fest regelmässig wiederholt wird.",
+        "Lies den vollständigen Satz mit deinem Wort."
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-16": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-18": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-20": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-22": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-24": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-26": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-28": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-30": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-32": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-34": {
+      "altAnswers": [
+        "Botschaft",
+        "Aussage"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-36": {
+      "altAnswers": [
+        "Sichtbare",
+        "Wahrnehmbare",
+        "Offensichtliche"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-38": {
+      "altAnswers": [
+        "Sichtbare",
+        "Wahrnehmbare",
+        "Offensichtliche"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-40": {
+      "altAnswers": [
+        "Sichtbare",
+        "Wahrnehmbare",
+        "Offensichtliche"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-42": {
+      "altAnswers": [
+        "Sichtbare",
+        "Wahrnehmbare",
+        "Offensichtliche"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-44": {
+      "altAnswers": [
+        "Sichtbare",
+        "Wahrnehmbare",
+        "Offensichtliche"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-46": {
+      "altAnswers": [
+        "Sichtbare",
+        "Wahrnehmbare",
+        "Offensichtliche"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-48": {
+      "altAnswers": [
+        "Sichtbare",
+        "Wahrnehmbare",
+        "Offensichtliche"
+      ]
+    },
+    "g4-science-raeume-karte-karte-norm-50": {
+      "altAnswers": [
+        "Sichtbare",
+        "Wahrnehmbare",
+        "Offensichtliche"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-2": {
+      "altAnswers": [
+        "aufgehalten",
+        "abgeschirmt"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-4": {
+      "altAnswers": [
+        "spiegelt"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-12": {
+      "altAnswers": [
+        "weist"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-16": {
+      "altAnswers": [
+        "hindurchdringen",
+        "hindurchscheinen",
+        "durchdringen"
+      ],
+      "answer": "hindurchgehen"
+    },
+    "g4-science-licht-optik-licht-norm-22": {
+      "altAnswers": [
+        "Spektralfarben"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-24": {
+      "altAnswers": [
+        "durch"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-26": {
+      "altAnswers": [
+        "deutlich",
+        "scharf",
+        "hindurch"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-28": {
+      "altAnswers": [
+        "Spektralfarben"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-30": {
+      "altAnswers": [
+        "zurückwirft"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-32": {
+      "altAnswers": [
+        "vergrössert"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-34": {
+      "altAnswers": [
+        "länger"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-36": {
+      "altAnswers": [
+        "gross",
+        "länger"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-40": {
+      "altAnswers": [
+        "blockiert",
+        "abschirmt",
+        "aufhält"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-42": {
+      "altAnswers": [
+        "Ausbreitungsrichtung"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-44": {
+      "altAnswers": [
+        "Stoffe",
+        "Oberflächen"
+      ],
+      "spokenPrompt": "In einem Lichtexperiment prüfst du Licht und …. Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "g4-science-licht-optik-licht-norm-46": {
+      "altAnswers": [
+        "gebrochen"
+      ]
+    },
+    "g4-science-licht-optik-licht-norm-50": {
+      "altAnswers": [
+        "abgelenkt"
+      ]
+    },
+    "g4lr2c": {
+      "altAnswers": [
+        "bietet Nahrung und Schutz",
+        "ist ein Ort an dem Lebewesen leben"
+      ]
+    },
+    "g4lr2m": {
+      "altAnswers": [
+        "zeigt wer wen frisst",
+        "zeigt Nahrungsbeziehungen"
+      ]
+    },
+    "g4lr3c": {
+      "altAnswers": [
+        "ist die Vielfalt der Arten"
+      ]
+    },
+    "g4lr3k": {
+      "altAnswers": [
+        "benötigt Wasser und Licht",
+        "braucht Wasser und Nährstoffe"
+      ]
+    },
+    "g4wk2o": {
+      "altAnswers": [
+        "sorgt für faire Arbeitsbedingungen",
+        "faire Preise für Produzenten zahlen"
+      ]
+    },
+    "g4wk3c": {
+      "altAnswers": [
+        "verbindet Menschen weltweit",
+        "ermöglicht weltweite Kommunikation"
+      ]
+    },
+    "pfl4_38": {
+      "altAnswers": [
+        "bietet Nahrung und Schutz",
+        "ist ein Ort an dem Lebewesen leben"
+      ]
+    },
+    "pfl4_50": {
+      "altAnswers": [
+        "zeigt wer wen frisst",
+        "zeigt Nahrungsbeziehungen"
+      ]
+    },
+    "ms4_16": {
+      "altAnswers": [
+        "dehnbar",
+        "flexibel"
+      ]
+    },
+    "ms4_36": {
+      "altAnswers": [
+        "magnetisch",
+        "von Magneten anziehbar"
+      ]
+    },
+    "ms4_50": {
+      "altAnswers": [
+        "sinkt"
+      ]
+    },
+    "ke4_16": {
+      "altAnswers": [
+        "isolierend",
+        "wärmeisolierend"
+      ]
+    },
+    "ke4_24": {
+      "altAnswers": [
+        "magnetisch",
+        "von Magneten anziehbar"
+      ]
+    },
+    "ke4_50": {
+      "altAnswers": [
+        "dehnbar",
+        "flexibel"
+      ]
+    },
+    "tech4_50": {
+      "altAnswers": [
+        "transparent",
+        "lichtdurchlässig"
+      ]
+    },
+    "oek4_16": {
+      "altAnswers": [
+        "zeigt wer wen frisst",
+        "zeigt Nahrungsbeziehungen"
+      ]
+    },
+    "oek4_36": {
+      "altAnswers": [
+        "ist die Vielfalt der Arten"
+      ]
+    },
+    "oek4_40": {
+      "altAnswers": [
+        "benötigt Wasser und Licht",
+        "braucht Wasser und Nährstoffe"
+      ]
+    },
+    "oek4_42": {
+      "altAnswers": [
+        "zeigt wer wen frisst",
+        "zeigt Nahrungsbeziehungen"
+      ]
+    },
+    "oek4_50": {
+      "altAnswers": [
+        "benötigt Wasser und Licht",
+        "braucht Wasser und Nährstoffe"
+      ]
+    },
+    "ok4_36": {
+      "altAnswers": [
+        "erklärt Kartenzeichen",
+        "erklärt die Symbole"
+      ]
+    },
+    "ok4_48": {
+      "altAnswers": [
+        "trennt Gebiete",
+        "grenzt Länder voneinander ab"
+      ]
+    },
+    "ok4_50": {
+      "altAnswers": [
+        "ist eine grosse Landmasse",
+        "ist ein Erdteil"
+      ]
+    },
+    "sg4_32": {
+      "altAnswers": [
+        "Maschinen antreiben",
+        "Lokomotiven antreiben"
+      ]
+    },
+    "sg4_36": {
+      "altAnswers": [
+        "miteinander telefonieren",
+        "aus der Ferne miteinander sprechen"
+      ]
+    },
+    "sg4_46": {
+      "altAnswers": [
+        "Maschinen antreiben",
+        "Lokomotiven antreiben"
+      ]
+    },
+    "sg4_50": {
+      "altAnswers": [
+        "Menschen und Güter transportieren",
+        "Personen transportieren"
+      ]
+    },
+    "gk4_2": {
+      "altAnswers": [
+        "ruhig miteinander reden",
+        "einander zuhören",
+        "einen Kompromiss suchen"
+      ]
+    },
+    "gk4_10": {
+      "altAnswers": [
+        "Argumente austauschen",
+        "einander zuhören",
+        "die eigene Meinung begründen"
+      ]
+    },
+    "gk4_12": {
+      "altAnswers": [
+        "fair abstimmen",
+        "alle Stimmen zählen",
+        "das Ergebnis respektieren"
+      ]
+    },
+    "gk4_16": {
+      "altAnswers": [
+        "die Person einbeziehen",
+        "helfen und Unterstützung holen"
+      ]
+    },
+    "gk4_24": {
+      "altAnswers": [
+        "Argumente austauschen",
+        "einander zuhören",
+        "die eigene Meinung begründen"
+      ]
+    },
+    "gk4_48": {
+      "altAnswers": [
+        "die Person einbeziehen",
+        "helfen und Unterstützung holen"
+      ]
+    },
+    "gk4_50": {
+      "altAnswers": [
+        "ruhig miteinander reden",
+        "einander zuhören",
+        "einen Kompromiss suchen"
+      ]
+    },
+    "rw4_16": {
+      "altAnswers": [
+        "sorgt für faire Arbeitsbedingungen",
+        "faire Preise für Produzenten zahlen"
+      ]
+    },
+    "rw4_48": {
+      "altAnswers": [
+        "helfen bei der Verständigung",
+        "ermöglichen Kommunikation"
+      ]
+    },
+    "mk4_16": {
+      "altAnswers": [
+        "ruhig miteinander reden",
+        "einander zuhören",
+        "einen Kompromiss suchen"
+      ]
+    },
+    "mk4_30": {
+      "altAnswers": [
+        "Argumente austauschen",
+        "einander zuhören",
+        "die eigene Meinung begründen"
+      ]
+    },
+    "mk4_38": {
+      "altAnswers": [
+        "alle Beteiligten fragen",
+        "gemeinsam Regeln besprechen"
+      ]
+    },
+    "g4s5": {
+      "hints": [
+        "Welche Körperteile bewegen sich beim Laufen?",
+        "Überlege, welche Muskelgruppe die Schritte hauptsächlich antreibt."
+      ]
+    },
+    "g4s6": {
+      "hints": [
+        "Überlege bei jedem Organ, was es im Körper tut.",
+        "Jedes Organ hat eine wichtige Aufgabe."
+      ]
+    },
+    "g4s8": {
+      "hints": [
+        "Teile den Arm in den Abschnitt vor und den Abschnitt nach dem Ellbogen ein.",
+        "Zwischen Schulter und Ellbogen."
+      ]
+    },
+    "g4s10": {
+      "hints": [
+        "Überlege, welcher Teil sich zusammenziehen kann.",
+        "Unterscheide den bewegenden Teil vom bewegten Teil."
+      ]
+    },
+    "g4kg1b": {
+      "hints": [
+        "Denke an die festen Teile, die deinen Körper stützen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4kg2b": {
+      "hints": [
+        "Überlege, wo das Blut neuen Sauerstoff erhält.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4kg2d": {
+      "hints": [
+        "Vergleiche die Aufgaben der Abschnitte des Verdauungstrakts.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4kg2j": {
+      "hints": [
+        "Überlege, welche Zellart Nachrichten im Körper weiterleitet.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4kg2p": {
+      "hints": [
+        "Vergleiche die Verbindungen an einem Gelenk mit denen eines Muskels.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "options": [
+        "Eine automatische, unwillkürliche Reaktion des Körpers",
+        "Bindegewebe, das Knochen mit Knochen verbindet",
+        "Das Abwehrsystem des Körpers gegen Krankheitserreger",
+        "Vorbereitung des Immunsystems auf bestimmte Krankheitserreger durch einen Impfstoff"
+      ]
+    },
+    "nmg4-rich-koerper-match-1": {
+      "hints": [
+        "Vergleiche die Begriffe und suche zuerst ein eindeutiges Paar.",
+        "Vergleiche die Aufgabe des Organs mit dem beschriebenen Vorgang."
+      ]
+    },
+    "g4s15": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Welche der genannten Arten kannst du in einem heimischen Wald beobachten?"
+      ]
+    },
+    "g4s16": {
+      "hints": [
+        "Vergleiche, wo die Tiere Nahrung finden und wie sie sich fortbewegen.",
+        "Überlege, wo jedes Tier lebt."
+      ]
+    },
+    "nmg4-rich-tiere-drag-2": {
+      "hints": [
+        "Ein Merkmal hilft einem Tier in seinem Lebensraum.",
+        "Überlege, bei welcher Bewegung die Form des Körperteils nützt."
+      ]
+    },
+    "nmg4-rich-tiere-match-2": {
+      "hints": [
+        "Vergleiche die beschriebenen Körpermerkmale und Verhaltensweisen der Tiere.",
+        "Achte besonders auf Fell, Schwanz und die Art der Fortbewegung."
+      ],
+      "question": "Verbinde das Tiermerkmal mit dem passenden Tier.",
+      "pairs": [
+        {
+          "id": "pfote",
+          "label": "rotes Fell, buschiger Schwanz und hundeartiger Kopf",
+          "emoji": "🐾"
+        },
+        {
+          "id": "fuchs",
+          "label": "Fuchs",
+          "emoji": "🦊"
+        },
+        {
+          "id": "loch",
+          "label": "kleines Nagetier mit langem, fast haarlosem Schwanz",
+          "emoji": "🕳️"
+        },
+        {
+          "id": "maus",
+          "label": "Maus",
+          "emoji": "🐭"
+        },
+        {
+          "id": "frass",
+          "label": "buschiger Schwanz und Klettern in Baumkronen",
+          "emoji": "🌰"
+        },
+        {
+          "id": "eichhoernchen",
+          "label": "Eichhörnchen",
+          "emoji": "🐿️"
+        },
+        {
+          "id": "feder",
+          "label": "Feder",
+          "emoji": "🪶"
+        },
+        {
+          "id": "vogel",
+          "label": "Vogel",
+          "emoji": "🐦"
+        }
+      ]
+    },
+    "g4s23": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Überlege, welche Erscheinung einen gefährlichen elektrischen Schlag auslösen kann."
+      ]
+    },
+    "g4s26": {
+      "hints": [
+        "Vergleiche die Eigenschaften der dargestellten Wettersituationen.",
+        "Überlege, welche Eigenschaften passen."
+      ]
+    },
+    "g4s27": {
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Denke an die Flüssigkeit, die auch in einem Regentropfen steckt."
+      ]
+    },
+    "g4s28": {
+      "hints": [
+        "Überlege, welchen Zustand Wasser beim Abkühlen an dieser Temperatur erreicht.",
+        "Vergleiche flüssiges Wasser mit einem Eiswürfel."
+      ]
+    },
+    "g4wk1d": {
+      "hints": [
+        "Überlege, was bei eingeschränkter Sicht in Bodennähe in der Luft schwebt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4wk1f": {
+      "hints": [
+        "Vergleiche die Härte und Form dieser Körner mit gewöhnlichem Regen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4wk1l": {
+      "hints": [
+        "Suche nach der Messgrösse, auf die sich diese Linien beziehen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "nmg4-rich-wasser-drag-1": {
+      "hints": [
+        "Beginne bei der Sonne, die Wasser erwärmt.",
+        "Prüfe, welcher Vorgang den nächsten Schritt möglich macht."
+      ],
+      "question": "Ordne den Wasserkreislauf. Beginne damit, dass Wasser durch die Sonne verdunstet."
+    },
+    "nmg4-rich-wetter-drag-2": {
+      "hints": [
+        "Messgeräte helfen, Wetter genau zu beschreiben.",
+        "Vergleiche die Messskala oder Bewegung des Geräts mit der gesuchten Beobachtung."
+      ]
+    },
+    "pfl4_5": {
+      "hints": [
+        "Überlege, was nach dem Verblühen entstehen kann.",
+        "Denke an den Lebenszyklus einer Pflanze."
+      ]
+    },
+    "pfl4_9": {
+      "hints": [
+        "Bienen und Wind helfen dabei.",
+        "Überlege, welchen Weg die kleinen Körnchen zwischen Blüten nehmen."
+      ]
+    },
+    "pfl4_11": {
+      "hints": [
+        "Ein Ring = ein Jahr.",
+        "Was lässt sich aus regelmässig entstandenen Schichten ableiten?"
+      ]
+    },
+    "pfl4_13": {
+      "hints": [
+        "Überlege, auf welchem Weg Wasser aus einer Pflanze wieder in die Luft gelangt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "pfl4_19": {
+      "hints": [
+        "Vergleiche die Formen verschiedener Samen: Manche haben Flügel oder Haken.",
+        "Samen reisen auf verschiedene Arten."
+      ]
+    },
+    "pfl4_25": {
+      "hints": [
+        "Erdbeeren machen Ausläufer — das ist vegetative Vermehrung.",
+        "Vergleiche eine neue Pflanze aus einem Steckling mit einer Pflanze aus einem Samen."
+      ]
+    },
+    "pfl4_31": {
+      "hints": [
+        "Keimblätter = erste Blätter nach der Keimung.",
+        "Zähle die ersten Blätter, die beim Keimen sichtbar werden."
+      ]
+    },
+    "pfl4_37": {
+      "hints": [
+        "Mais, Zuckerrohr = C4. Weizen, Reis = C3.",
+        "Vergleiche die Bedingungen an einem heissen, trockenen und an einem kühleren Standort."
+      ],
+      "options": [
+        "Eine Pflanze, die in einem Jahr keimt, blüht, Samen bildet und abstirbt",
+        "C4-Pflanzen fixieren CO₂ effizienter bei hoher Temperatur und wenig Wasser (z.B. Mais)",
+        "Eine Pflanze, die auf anderen Pflanzen lebt, ohne Parasit zu sein (z.B. Orchideen auf Bäumen)",
+        "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter"
+      ]
+    },
+    "pfl4_43": {
+      "hints": [
+        "Überlege, in welchem Zustand sich die Nahrungsquelle jeweils befindet.",
+        "Wirt lebt oder tot?"
+      ],
+      "options": [
+        "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter",
+        "Saprophyten ernähren sich von toten Organismen; Parasiten von lebenden Wirten",
+        "Pflanzen geben Stoffe ab, die das Wachstum anderer Pflanzen hemmen",
+        "Pflanzenhormone, die Wachstum, Blüte und Fruchtreife steuern (Auxin, Gibberellin, Cytokinin)"
+      ]
+    },
+    "pfl4_45": {
+      "hints": [
+        "Bitterer Geschmack schreckt Frasstiere ab.",
+        "Überlege, wozu eine Pflanze einen abschreckend schmeckenden Stoff nutzen kann."
+      ]
+    },
+    "pfl4_49": {
+      "hints": [
+        "Vergleiche das Leben auf einem Baum mit dem Entziehen von Nährstoffen aus dem Baum.",
+        "Auf Oberfläche = Epiphyt."
+      ],
+      "options": [
+        "C4-Pflanzen fixieren CO₂ effizienter bei hoher Temperatur und wenig Wasser (z.B. Mais)",
+        "Eine Pflanze, die auf anderen Pflanzen lebt, ohne Parasit zu sein (z.B. Orchideen auf Bäumen)",
+        "Eine Pflanze, die in einem Jahr keimt, blüht, Samen bildet und abstirbt",
+        "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter"
+      ]
+    },
+    "ms4_2": {
+      "hints": [
+        "Fest → ? → Gasförmig.",
+        "Vergleiche einen Eiswürfel mit dem Wasser, das nach dem Schmelzen übrig bleibt."
+      ]
+    },
+    "ms4_3": {
+      "hints": [
+        "Wasser auf der Strasse nach dem Regen verschwindet.",
+        "Überlege, welchen Zustand das Wasser vor und nach dem Vorgang hat."
+      ]
+    },
+    "ms4_13": {
+      "hints": [
+        "Eisen ist dichter als Holz.",
+        "Vergleiche zwei gleich grosse Würfel aus unterschiedlich schweren Materialien."
+      ]
+    },
+    "ms4_17": {
+      "hints": [
+        "Überlege, welcher Teil des Gemischs beim Erwärmen in die Luft gelangen kann.",
+        "Prüfe, welcher Stoff danach im Gefäss übrig bleibt."
+      ],
+      "options": [
+        "Filtrieren",
+        "Durch Eindampfen des Wassers",
+        "Magneten",
+        "Schütteln"
+      ],
+      "answer": "Durch Eindampfen des Wassers"
+    },
+    "ms4_19": {
+      "hints": [
+        "Verbrennen, Rosten = chemische Reaktionen.",
+        "Vergleiche die Eigenschaften des Stoffes vor und nach dem Vorgang."
+      ]
+    },
+    "ms4_24": {
+      "hints": [
+        "Gesucht ist das kleinste Teilchen, das noch zu einem bestimmten chemischen Element gehört.",
+        "Denke an das Teilchenmodell eines chemischen Elements."
+      ]
+    },
+    "ms4_27": {
+      "hints": [
+        "Zitronensäure, Essig = Säuren.",
+        "Vergleiche die Lage auf der pH-Skala mit neutralem Wasser."
+      ]
+    },
+    "ms4_29": {
+      "hints": [
+        "Alkohol siedet bei 78°C, Wasser bei 100°C → trennbar.",
+        "Überlege, warum beim Erwärmen nicht alle Flüssigkeiten gleichzeitig verdampfen."
+      ]
+    },
+    "ms4_31": {
+      "hints": [
+        "Enzyme in unserem Körper sind Katalysatoren.",
+        "Überlege, welche Rolle ein Stoff spielen kann, der nach der Reaktion noch vorhanden ist."
+      ]
+    },
+    "ms4_33": {
+      "hints": [
+        "Vergleiche einen Eiswürfel, Wasser und Wasserdampf.",
+        "Zustand der Materie."
+      ]
+    },
+    "ms4_37": {
+      "hints": [
+        "H₂O: O und H teilen Elektronen.",
+        "Vergleiche die Rolle der Elektronen mit einer Ionenbindung."
+      ]
+    },
+    "ms4_39": {
+      "hints": [
+        "Überlege, wohin bei einem Kältepack Energie übertragen wird.",
+        "Betrachte den Energiefluss zwischen Reaktion und Umgebung."
+      ]
+    },
+    "ms4_43": {
+      "hints": [
+        "Plastik (Polyethylen) = Polymer.",
+        "Denke an eine lange Kette aus vielen wiederkehrenden Bausteinen."
+      ]
+    },
+    "ms4_47": {
+      "hints": [
+        "Wasser: Schmelzpunkt 0°C, Siedepunkt 100°C.",
+        "Vergleiche die Zustände vor und nach jedem der beiden Übergänge."
+      ]
+    },
+    "ke4_14": {
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Denke an die technische Gruppe, zu der Hebel und schiefe Ebene gehören."
+      ]
+    },
+    "ke4_17": {
+      "hints": [
+        "Vergleiche das Rollen eines Balls auf glattem und rauem Boden.",
+        "Überlege, wie der Kontakt mit dem Boden die Bewegung beeinflusst."
+      ]
+    },
+    "ke4_19": {
+      "hints": [
+        "Vergleiche zwei Geräte, die dieselbe Arbeit unterschiedlich schnell erledigen.",
+        "In Watt (W) gemessen."
+      ]
+    },
+    "ke4_23": {
+      "hints": [
+        "100% = verlustfrei (nicht erreichbar).",
+        "Vergleiche, wie viel der zugeführten Energie für den gewünschten Zweck genutzt wird."
+      ]
+    },
+    "ke4_27": {
+      "hints": [
+        "Vergleiche das Ziehen einer Kiste mit dem Ziehen eines Wagens.",
+        "Überlege, welchen Einfluss Räder auf den Kontakt zum Boden haben."
+      ]
+    },
+    "ke4_31": {
+      "hints": [
+        "Ein Ball rollt weiter, bis Reibung ihn stoppt.",
+        "Überlege, was ohne eine zusätzliche äussere Kraft mit einer Bewegung geschieht."
+      ]
+    },
+    "ke4_33": {
+      "hints": [
+        "Solarzellen auf Dächern = Photovoltaik.",
+        "Vergleiche, welche Energie eine Solarzelle aufnimmt und welche sie abgibt."
+      ]
+    },
+    "ke4_34": {
+      "hints": [
+        "Jede Kraft hat eine gleich grosse Gegenkraft.",
+        "Denke an die Kraftpaare zwischen zwei wechselwirkenden Körpern."
+      ]
+    },
+    "ke4_37": {
+      "hints": [
+        "1 Watt = 1 Joule pro Sekunde.",
+        "Vergleiche einen Energievorrat mit der Geschwindigkeit seiner Nutzung."
+      ],
+      "options": [
+        "Vektor: Grösse mit Richtung (Kraft, Geschwindigkeit). Skalar: nur Betrag (Masse, Energie).",
+        "Energie: gespeicherte Arbeit (J). Leistung: Energie pro Zeit (W = J/s).",
+        "Wärme fliesst nicht von selbst von kalt nach warm",
+        "Eine thermodynamische Grösse; in einem isolierten System kann sie zunehmen oder gleich bleiben"
+      ]
+    },
+    "ke4_41": {
+      "hints": [
+        "Vergleiche einen leichten und einen schweren Wagen bei unterschiedlichem Tempo.",
+        "Impuls = Bewegungsgrösse."
+      ]
+    },
+    "ke4_47": {
+      "hints": [
+        "Zimmer wird unordentlicher, nicht ordentlicher.",
+        "Denke an die Verteilung von Energie und die Zahl möglicher Zustände."
+      ],
+      "options": [
+        "Energie: gespeicherte Arbeit (J). Leistung: Energie pro Zeit (W = J/s).",
+        "Eine thermodynamische Grösse; in einem isolierten System kann sie zunehmen oder gleich bleiben",
+        "Vektor: Grösse mit Richtung (Kraft, Geschwindigkeit). Skalar: nur Betrag (Masse, Energie).",
+        "Wärme fliesst nicht von selbst von kalt nach warm"
+      ],
+      "answer": "Eine thermodynamische Grösse; in einem isolierten System kann sie zunehmen oder gleich bleiben"
+    },
+    "ke4_49": {
+      "hints": [
+        "Ball am Faden kreist: Faden zieht nach innen.",
+        "Überlege, wohin der Faden einen kreisenden Ball zieht."
+      ],
+      "options": [
+        "Energie: gespeicherte Arbeit (J). Leistung: Energie pro Zeit (W = J/s).",
+        "Eine Kraft, die einen Körper auf einer Kreisbahn hält, nach innen gerichtet",
+        "Vektor: Grösse mit Richtung (Kraft, Geschwindigkeit). Skalar: nur Betrag (Masse, Energie).",
+        "Wärme fliesst nicht von selbst von kalt nach warm"
+      ]
+    },
+    "tech4_3": {
+      "hints": [
+        "Fahrradgetriebe = Zahnräder.",
+        "Überlege, was passiert, wenn sich eines von zwei ineinandergreifenden Rädern dreht."
+      ]
+    },
+    "tech4_7": {
+      "hints": [
+        "Stelle dir vor, du wickelst das Gewinde zu einer flachen Form ab.",
+        "Spiralförmig = Schraube."
+      ]
+    },
+    "tech4_9": {
+      "hints": [
+        "Baggerarm wird durch Öldruck bewegt.",
+        "Vergleiche den Inhalt eines Hydraulikschlauchs mit dem eines Druckluftschlauchs."
+      ]
+    },
+    "tech4_15": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Überlege, was beim Ein- und Ausschalten im Leitungsweg verändert wird."
+      ]
+    },
+    "tech4_19": {
+      "hints": [
+        "Vergleiche einen 3D-Drucker mit einer Maschine, die Material aus einem Block entfernt.",
+        "Additives Fertigungsverfahren."
+      ]
+    },
+    "tech4_23": {
+      "hints": [
+        "Otto-Motor, Diesel = Verbrennungsmotoren.",
+        "Verfolge die Energie vom Kraftstoff bis zur bewegten Motorwelle."
+      ]
+    },
+    "tech4_27": {
+      "hints": [
+        "CPU = Central Processing Unit.",
+        "Vergleiche die zentrale Aufgabe dieses Bauteils mit Bildschirm und Festplatte."
+      ],
+      "question": "Was ist die zentrale Aufgabe eines Prozessors (CPU)?"
+    },
+    "tech4_29": {
+      "hints": [
+        "Fliessband in Fabriken = Automatisierung.",
+        "Überlege, wer oder was die einzelnen Arbeitsschritte übernimmt."
+      ]
+    },
+    "tech4_39": {
+      "hints": [
+        "Thermometer mit Zeiger = analog. Digitaluhr = digital.",
+        "Vergleiche die Anzeige eines Zeigerinstruments mit einer Anzeige, die nur feste Ziffernwerte zeigt."
+      ]
+    },
+    "tech4_43": {
+      "hints": [
+        "Klettverschluss = abgeschaut von Klette.",
+        "Vergleiche die Form einer Klette mit einem Klettverschluss."
+      ]
+    },
+    "tech4_45": {
+      "hints": [
+        "Überlege, ob bei diesem Verfahren Material hinzukommt oder entfernt wird.",
+        "Gegenteil: subtraktive Fertigung (Fräsen)."
+      ]
+    },
+    "tech4_49": {
+      "hints": [
+        "AR: Handy drauf halten. VR: Brille aufsetzen.",
+        "Vergleiche, wie viel von der wirklichen Umgebung du noch siehst."
+      ]
+    },
+    "oek4_1": {
+      "hints": [
+        "Wald, See, Wiese = Ökosysteme.",
+        "Betrachte nicht nur ein einzelnes Tier, sondern seine Beziehungen zur Umgebung."
+      ]
+    },
+    "oek4_3": {
+      "hints": [
+        "Gras → Reh → Wolf = Nahrungskette.",
+        "Verfolge den Weg der Nahrung von einem Lebewesen zum nächsten."
+      ]
+    },
+    "oek4_5": {
+      "hints": [
+        "Vergleiche einen Lebensraum mit wenigen und einen mit vielen unterschiedlichen Lebewesen.",
+        "Bio = Leben, Diversität = Vielfalt."
+      ]
+    },
+    "oek4_21": {
+      "hints": [
+        "Wie viel Erde braucht dein Lebensstil?",
+        "Überlege, was deine Ernährung, Wohnung und Mobilität an Fläche beanspruchen."
+      ],
+      "options": [
+        "Eine fremde Art, die in einem neuen Lebensraum einheimische Arten verdrängt",
+        "Mass für den Ressourcenverbrauch einer Person im Vergleich zur verfügbaren Fläche",
+        "Langfristige Veränderungen des globalen Klimas, hauptsächlich durch menschliche CO₂-Emissionen",
+        "Das Aussterben von Arten, nicht nur von Tieren"
+      ]
+    },
+    "oek4_23": {
+      "hints": [
+        "Marienkäfer = Fressfeind der Blattlaus.",
+        "Vergleiche den Einsatz von Chemikalien mit dem Einsatz eines geeigneten Lebewesens."
+      ],
+      "options": [
+        "Langfristige Veränderungen des globalen Klimas, hauptsächlich durch menschliche CO₂-Emissionen",
+        "Einsatz natürlicher Feinde statt Pestizide (z.B. Marienkäfer gegen Blattläuse)",
+        "Das Aussterben von Arten, nicht nur von Tieren",
+        "Biotisch: lebende Faktoren (Konkurrenz, Räuber). Abiotisch: nicht-lebend (Temperatur, Wasser)."
+      ]
+    },
+    "oek4_43": {
+      "hints": [
+        "Wolf zurückbringen → Nahrungskette reguliert sich.",
+        "Vergleiche ein stark vom Menschen verändertes Gebiet mit einem Gebiet, in dem natürliche Prozesse wieder mehr Raum haben."
+      ]
+    },
+    "kan4_17": {
+      "hints": [
+        "Suche den Kanton am nördlichen Ufer des Genfersees.",
+        "Vaud = französischer Name."
+      ]
+    },
+    "kan4_21": {
+      "hints": [
+        "Rösti = Deutsch. Graben = Grenze.",
+        "Überlege, welche beiden grossen Sprachregionen gemeint sind."
+      ]
+    },
+    "kan4_22": {
+      "hints": [
+        "Rätoromanisch, Deutsch, Italienisch gesprochen.",
+        "Suche den grossen Gebirgskanton im Südosten."
+      ]
+    },
+    "kan4_25": {
+      "hints": [
+        "Appenzell AI Hauptort = Appenzell Dorf.",
+        "Vergleiche die beiden Appenzeller Kantone und ihre Verwaltungsorte."
+      ]
+    },
+    "kan4_31": {
+      "hints": [
+        "Denke an den Kanton, in dem La Chaux-de-Fonds liegt.",
+        "Le Locle, La Chaux-de-Fonds = Uhrenstadt."
+      ],
+      "question": "In welchem Kanton liegen die Uhrenstädte Le Locle und La Chaux-de-Fonds?",
+      "spokenPrompt": "In welchem Kanton liegen die Uhrenstädte Le Locle und La Chaux-de-Fonds?",
+      "verbatimSpeech": true
+    },
+    "ok4_1": {
+      "hints": [
+        "Zähle die Hauptrichtungen auf einer Windrose.",
+        "Unterscheide Hauptrichtungen von Zwischenrichtungen."
+      ]
+    },
+    "ok4_3": {
+      "hints": [
+        "1:25'000 bedeutet 1cm = 250m.",
+        "Vergleiche eine gemessene Kartenstrecke mit der entsprechenden Strecke draussen."
+      ]
+    },
+    "ok4_9": {
+      "hints": [
+        "Schau nach, welche Flächenfarbe in der Kartenlegende für bewaldete Gebiete verwendet wird.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ok4_11": {
+      "hints": [
+        "Zwischen den Hauptrichtungen.",
+        "Überlege, welche Richtungen jeweils zwischen zwei benachbarten Hauptrichtungen liegen."
+      ]
+    },
+    "ok4_13": {
+      "hints": [
+        "Satelliten senden Signale → Position bestimmen.",
+        "Gesucht ist die Abkürzung eines satellitengestützten Ortungssystems."
+      ],
+      "question": "Welches System bestimmt die Position mithilfe von Satellitensignalen?"
+    },
+    "ok4_15": {
+      "hints": [
+        "Vergleiche, welche Merkmale auf den beiden Kartenarten hervorgehoben werden.",
+        "Natur vs. Menschen."
+      ]
+    },
+    "ok4_17": {
+      "hints": [
+        "Norden = 0°. Osten = 90°. Süden = 180°.",
+        "Überlege, wie man eine Richtung mit einer Zahl angeben kann."
+      ]
+    },
+    "ok4_19": {
+      "hints": [
+        "Gürtel der Erde in der Mitte.",
+        "Überlege, welche Breite die Mittellinie zwischen den Polen besitzt."
+      ]
+    },
+    "ok4_21": {
+      "hints": [
+        "Rechne die Länge zuerst in Zentimetern und dann in Metern aus.",
+        "Wanderkarten: oft 1:25'000."
+      ]
+    },
+    "ok4_27": {
+      "hints": [
+        "Iso = gleich. Hypse = Höhe.",
+        "Vergleiche die Höhenangaben entlang einer solchen Linie."
+      ]
+    },
+    "ok4_34": {
+      "hints": [
+        "Überlege, wo die Winkelzählung einer Windrose beginnt.",
+        "Kreis beginnt und endet bei Nord."
+      ]
+    },
+    "ok4_35": {
+      "hints": [
+        "Ohne Legende kann man Karte nicht lesen.",
+        "Suche den Kartenteil, der beim Verstehen der verwendeten Zeichen hilft."
+      ]
+    },
+    "ok4_44": {
+      "hints": [
+        "Messen auf Karte → umrechnen mit Massstab.",
+        "Überlege, womit du eine Strecke auf dem Papier messen kannst."
+      ]
+    },
+    "sg4_2": {
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Der Feiertag erinnert an den Bundesbrief und liegt im Hochsommer."
+      ]
+    },
+    "sg4_15": {
+      "hints": [
+        "Denke an das keltische Volk, von dem ein lateinischer Name der Schweiz stammt.",
+        "Schweiz = Helvetia."
+      ]
+    },
+    "sg4_25": {
+      "hints": [
+        "Zähle die Orte der alten Eidgenossenschaft nach dem Beitritt Appenzells.",
+        "Vergleiche die alte Eidgenossenschaft mit den drei ursprünglichen Waldstätten."
+      ]
+    },
+    "sg4_27": {
+      "hints": [
+        "Vergleiche die Ordnung der Helvetischen Republik mit der Ordnung nach 1803.",
+        "Mediationsakte = Ende Helvetische Republik."
+      ],
+      "spokenPrompt": "Was war die Mediation von 1803?",
+      "verbatimSpeech": true
+    },
+    "sg4_31": {
+      "hints": [
+        "Bilaterale I: sieben Verträge mit der EU.",
+        "Denke an das Ende der 1990er-Jahre."
+      ],
+      "question": "In welchem Jahr wurden die Bilateralen I zwischen der Schweiz und der EU unterzeichnet?"
+    },
+    "sg4_39": {
+      "hints": [
+        "Überlege, wie mehrere grosse Parteien an einer Regierung beteiligt werden können.",
+        "Proporz ohne Gesetz."
+      ]
+    },
+    "eu4_1": {
+      "hints": [
+        "Fünf Nachbarländer.",
+        "Gehe auf der Karte einmal rund um die Schweizer Grenze."
+      ]
+    },
+    "eu4_3": {
+      "hints": [
+        "Nutze eine Karte mit Norden oben und suche Deutschland.",
+        "Schaffhausen grenzt direkt an Deutschland."
+      ],
+      "question": "In welcher Himmelsrichtung liegt Deutschland von der Schweiz aus gesehen?"
+    },
+    "eu4_13": {
+      "hints": [
+        "Schau auf der Karte auf die Meere südlich der europäischen Landmasse.",
+        "Vergleiche die Lage der genannten Gewässer."
+      ]
+    },
+    "eu4_18": {
+      "hints": [
+        "Er fliesst vom Alpenraum Richtung Norden.",
+        "Er bildet auf einem Teil seines Weges eine Grenze zwischen der Schweiz und Deutschland."
+      ],
+      "question": "Welcher Fluss fliesst durch Basel und mündet in den Niederlanden in die Nordsee?",
+      "answer": "Rhein"
+    },
+    "eu4_25": {
+      "hints": [
+        "Belgien ist offiziell dreisprachig.",
+        "Vergleiche die drei Sprachgemeinschaften Belgiens."
+      ]
+    },
+    "eu4_45": {
+      "hints": [
+        "Grösste Exportnation Europas.",
+        "Vergleiche die Wirtschaftsleistung der grossen europäischen Staaten."
+      ]
+    },
+    "gk4_1": {
+      "hints": [
+        "Denke vom Wohnort über die Region bis zum ganzen Land.",
+        "Drei-Ebenen-Föderalismus."
+      ]
+    },
+    "gk4_3": {
+      "hints": [
+        "Die Landesregierung ist ein kleines Kollegium, kein grosses Parlament.",
+        "Kollegial = alle gemeinsam."
+      ]
+    },
+    "gk4_17": {
+      "hints": [
+        "Vergleiche eine zwingende Volksabstimmung mit einer, die erst verlangt werden muss.",
+        "Obligatorisch = zwingend."
+      ]
+    },
+    "gk4_22": {
+      "hints": [
+        "Überlege, welche Ebene im Namen der jeweiligen Kammer anklingt.",
+        "Vergleiche die Vertretung nach Kantonen mit der Vertretung nach Bevölkerungszahl."
+      ]
+    },
+    "gk4_25": {
+      "hints": [
+        "Überlege, welche Ebene ein Problem möglichst nahe bei den Betroffenen lösen kann.",
+        "Sub = unten. Tiefste Ebene zuerst."
+      ]
+    },
+    "gk4_34": {
+      "hints": [
+        "Vergleiche die Legislatur mit dem Abstand zwischen zwei ordentlichen Nationalratswahlen.",
+        "Legislatur = Amtszeit des Parlaments."
+      ]
+    },
+    "gk4_37": {
+      "hints": [
+        "Überlege, welche beiden Ergebnisse bei einer Verfassungsabstimmung zählen.",
+        "Doppeltes Mehr = beide Mehrheiten nötig."
+      ],
+      "options": [
+        "Eine Volksinitiative ermöglicht Bürgern, eine Verfassungsänderung zu beantragen (100'000 Unterschriften)",
+        "Mehrheit der gültigen Stimmen und Mehrheit der Standesstimmen erforderlich (bei Verfassungsänderungen)",
+        "Ein Vertrag zwischen mehreren Kantonen zu gemeinsamen Themen (z.B. Schule)",
+        "Dringlich: kann sofort in Kraft treten und ist befristet; ordentlich: Inkrafttreten auf dem üblichen Gesetzgebungsweg"
+      ],
+      "answer": "Mehrheit der gültigen Stimmen und Mehrheit der Standesstimmen erforderlich (bei Verfassungsänderungen)"
+    },
+    "gk4_43": {
+      "hints": [
+        "Vergleiche persönliche Ansichten mit der gemeinsamen Vertretung eines Regierungsentscheids.",
+        "Kollegial = gemeinsam."
+      ]
+    },
+    "rr4_9": {
+      "hints": [
+        "Legion = 5000-6000 Soldaten.",
+        "Überlege, wer in einer Legion Dienst leistete."
+      ]
+    },
+    "rr4_12": {
+      "hints": [
+        "Römer liebten Bäder.",
+        "Denke an grosse Badeanlagen aus der Römerzeit."
+      ]
+    },
+    "rr4_19": {
+      "hints": [
+        "Vergleiche einen solchen Landsitz mit einem Stadthaus.",
+        "Rustika = ländlich."
+      ]
+    },
+    "rr4_23": {
+      "hints": [
+        "Überlege, wie Wärme unter einem Fussboden verteilt werden könnte.",
+        "Denke an eine Technik, die auch grosse römische Badeanlagen erwärmte."
+      ]
+    },
+    "rr4_25": {
+      "hints": [
+        "Denke an den obersten Gott im römischen Pantheon.",
+        "Sein griechisches Gegenstück heisst Zeus."
+      ]
+    },
+    "rr4_32": {
+      "hints": [
+        "Römische Zahlen: I, V, X, L, C, D, M.",
+        "Ordne jedem Zeichen seinen Zahlenwert zu."
+      ]
+    },
+    "rr4_33": {
+      "hints": [
+        "Denke an das letzte Viertel des fünften Jahrhunderts.",
+        "Odoaker setzte letzten Kaiser ab."
+      ],
+      "spokenPrompt": "Wann endete das weströmische Reich?",
+      "verbatimSpeech": true
+    },
+    "rr4_49": {
+      "hints": [
+        "Vergleiche die lateinischen Namen mit ihren heutigen Ortsnamen.",
+        "Röm. Ortsnamen erkennen."
+      ]
+    },
+    "lw4_25": {
+      "hints": [
+        "Bauer früher: eigener Verbrauch. Heute: verkauft.",
+        "Vergleiche die Produktion für den eigenen Haushalt mit der Produktion zum Verkauf."
+      ]
+    },
+    "lw4_33": {
+      "hints": [
+        "Fake News erkennen = Medienkompetenz.",
+        "Überlege, welche Fähigkeiten helfen, eine Nachricht nicht ungeprüft zu glauben."
+      ]
+    },
+    "lw4_41": {
+      "hints": [
+        "AHV = Solidarität zwischen Generationen.",
+        "Überlege, wer im Umlageverfahren die laufenden Renten finanziert."
+      ]
+    },
+    "lw4_45": {
+      "hints": [
+        "Rütlischwur = Teil des Schweizer kollektiven Gedächtnisses.",
+        "Vergleiche das Erinnern einer einzelnen Person mit dem einer Gemeinschaft."
+      ]
+    },
+    "rw4_1": {
+      "hints": [
+        "Mehr als die Hälfte der Erde.",
+        "Der Anteil liegt deutlich über zwei Dritteln."
+      ]
+    },
+    "rw4_12": {
+      "hints": [
+        "Setze den Namen der Energiequelle mit dem Namen einer Stromerzeugungsanlage zusammen.",
+        "Fliessendes Wasser → Strom."
+      ]
+    },
+    "rw4_19": {
+      "hints": [
+        "Arabische Länder nutzen Desalination.",
+        "Überlege, welcher gelöste Stoff aus dem Meerwasser entfernt werden muss."
+      ]
+    },
+    "rw4_24": {
+      "hints": [
+        "Entstanden aus abgestorbenen Organismen.",
+        "Denke an Brennstoffe, die über sehr lange geologische Zeiträume entstanden sind."
+      ]
+    },
+    "mk4_11": {
+      "hints": [
+        "Denke an die Teilnahme am gesellschaftlichen Alltag.",
+        "Vergleiche Teilhabe mit einer dauerhaften Ausgrenzung."
+      ]
+    },
+    "mk4_13": {
+      "hints": [
+        "Einbürgern = zum Bürger machen.",
+        "Vergleiche eine Aufenthaltserlaubnis mit dem Erwerb eines Bürgerrechts."
+      ]
+    },
+    "mk4_21": {
+      "hints": [
+        "Vergleiche gesellschaftliche Teilhabe mit dem vollständigen Aufgeben der eigenen kulturellen Identität.",
+        "Assimilation > Integration."
+      ]
+    },
+    "mk4_23": {
+      "hints": [
+        "Xeno = fremd, Phobie = Angst.",
+        "Überlege, welche Haltung gegen als fremd wahrgenommene Menschen gemeint ist."
+      ]
+    },
+    "mk4_25": {
+      "hints": [
+        "Betrachte, ob verschiedene Gruppen im selben Quartier oder räumlich voneinander getrennt wohnen.",
+        "Getrennt wohnen nach Herkunft."
+      ],
+      "spokenPrompt": "Was ist Segregation im städtischen Kontext?",
+      "verbatimSpeech": true
+    },
+    "mk4_31": {
+      "hints": [
+        "Heim = Heimat. Weh = Schmerz.",
+        "Denke an das Gefühl, einen vertrauten Ort und vertraute Menschen zu vermissen."
+      ]
+    },
+    "mk4_39": {
+      "hints": [
+        "Vergleiche ein blosses Nebeneinander mit tatsächlicher Begegnung und Verständigung.",
+        "Austausch vs. Koexistenz."
+      ]
+    },
+    "g4kg2f": {
+      "answer": "Vorbereitung des Immunsystems auf bestimmte Krankheitserreger durch einen Impfstoff",
+      "options": [
+        "Ein Medikament gegen Schmerzen",
+        "Vorbereitung des Immunsystems auf bestimmte Krankheitserreger durch einen Impfstoff",
+        "Eine Bluttransfusion",
+        "Eine Operation"
+      ]
+    },
+    "g4s13": {
+      "hints": [
+        "Heiss, trocken, Sanddünen.",
+        "Überlege, welche Art lange mit wenig Trinkwasser auskommen kann."
+      ]
+    },
+    "g4s20": {
+      "question": "Welche Anpassung der Nieren hilft Kamelen, Wasser zu sparen?",
+      "answer": "Stark konzentrierter Urin",
+      "options": [
+        "Dickes Fell",
+        "Stark konzentrierter Urin",
+        "Flügel",
+        "Kiemen"
+      ],
+      "hints": [
+        "Kamele können lange ohne Wasser auskommen.",
+        "Vergleiche die ausgeschiedene Flüssigkeitsmenge mit der Menge gelöster Stoffe."
+      ]
+    },
+    "sg4_8": {
+      "answer": "1999",
+      "hints": [
+        "Unterscheide die Gründung des Bundesstaats von der jüngsten Totalrevision.",
+        "Die heutige Verfassung wurde am Ende des 20. Jahrhunderts angenommen."
+      ]
+    },
+    "mk4_41": {
+      "answer": "Regeln dafür, welcher Dublin-Staat ein Asylgesuch prüft",
+      "options": [
+        "Ca. 1960–1970: Anwerbung von Arbeitern aus Südeuropa (Italien, Spanien) für Schweizer Wirtschaft",
+        "Regeln dafür, welcher Dublin-Staat ein Asylgesuch prüft",
+        "Eine Person, die im Ausland wohnt und in der Schweiz arbeitet; die Rückkehr kann auch wöchentlich erfolgen",
+        "Ein Land, das als sicher gilt und dessen Bürger grundsätzlich kein Asyl erhalten"
+      ],
+      "hints": [
+        "Überlege, warum nicht mehrere Staaten dasselbe Gesuch parallel prüfen sollen.",
+        "Schweiz ist auch am Dublin-Abkommen beteiligt."
+      ]
+    },
+    "nmg4-rich-tiere-memory-1": {
+      "question": "Finde jeweils zwei gleiche Karten zu Tieren und Lebensräumen.",
+      "hints": [
+        "Merke dir Bild und Namen jeder aufgedeckten Karte.",
+        "Suche die zweite Karte mit genau demselben Bild und Namen."
+      ]
+    },
+    "nmg4-rich-karte-memory-2": {
+      "question": "Finde jeweils zwei gleiche Karten zu Kartenzeichen und ihren Aufgaben.",
+      "hints": [
+        "Merke dir Bild und Namen jeder aufgedeckten Karte.",
+        "Suche die zweite Karte mit genau demselben Bild und Namen."
+      ]
+    },
+    "nmg4-rich-wasser-memory-2": {
+      "question": "Finde jeweils zwei gleiche Karten zu Wassernutzung.",
+      "hints": [
+        "Merke dir Bild und Namen jeder aufgedeckten Karte.",
+        "Suche die zweite Karte mit genau demselben Bild und Namen."
+      ]
+    },
+    "eu4_23": {
+      "options": [
+        "Verordnung: direkt in allen Ländern gültig. Richtlinie: muss national umgesetzt werden.",
+        "EU: politisch-wirtschaftlich (27 Länder). Europarat: Menschenrechte (46 Länder, inkl. Schweiz).",
+        "Binnenmarkt: freier Verkehr von Waren, Personen, Kapital, Diensten. Zollunion: nur Waren.",
+        "Die EU hat 27 Länder; 21 davon nutzen den Euro."
+      ],
+      "answer": "EU: politisch-wirtschaftlich (27 Länder). Europarat: Menschenrechte (46 Länder, inkl. Schweiz).",
+      "hints": [
+        "Europarat und EU sind unterschiedliche Organisationen.",
+        "Europarat → EMRK. EU → Wirtschaft."
+      ]
+    },
+    "eu4_47": {
+      "options": [
+        "EU: politisch-wirtschaftlich (27 Länder). Europarat: Menschenrechte (46 Länder, inkl. Schweiz).",
+        "Binnenmarkt: freier Verkehr von Waren, Personen, Kapital, Diensten. Zollunion: nur Waren.",
+        "Verordnung: direkt in allen Ländern gültig. Richtlinie: muss national umgesetzt werden.",
+        "Die EU hat 27 Länder; 21 davon nutzen den Euro."
+      ]
+    },
+    "g4wk1h": {
+      "options": [
+        "Ein Hurrikan ist ein grossräumiger tropischer Wirbelsturm; ein Tornado ein viel kleinerer Luftwirbel mit Kontakt zur Erdoberfläche",
+        "Regen besteht aus flüssigen Tropfen, Schnee aus Eiskristallen",
+        "Eine längere Periode mit deutlich weniger Niederschlag als normal",
+        "Eine warme Meeresströmung im Atlantik, die Europas Klima mässigt"
+      ],
+      "answer": "Regen besteht aus flüssigen Tropfen, Schnee aus Eiskristallen",
+      "hints": [
+        "Vergleiche die Form und den Zustand des fallenden Wassers.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4wk3h": {
+      "options": [
+        "Regen besteht aus flüssigen Tropfen, Schnee aus Eiskristallen",
+        "Ein Hurrikan ist ein grossräumiger tropischer Wirbelsturm; ein Tornado ein viel kleinerer Luftwirbel mit Kontakt zur Erdoberfläche",
+        "Eine längere Periode mit deutlich weniger Niederschlag als normal",
+        "Eine warme Meeresströmung im Atlantik, die Europas Klima mässigt"
+      ],
+      "answer": "Ein Hurrikan ist ein grossräumiger tropischer Wirbelsturm; ein Tornado ein viel kleinerer Luftwirbel mit Kontakt zur Erdoberfläche",
+      "hints": [
+        "Vergleiche die räumliche Ausdehnung und den Aufbau der beiden Wettererscheinungen.",
+        "Auch über Wasser können Tornados auftreten."
+      ]
+    },
+    "g4wk3l": {
+      "options": [
+        "Regen besteht aus flüssigen Tropfen, Schnee aus Eiskristallen",
+        "Schwellenwerte, nach deren Überschreitung sich das Klimasystem irreversibel verändert",
+        "Ein Hurrikan ist ein grossräumiger tropischer Wirbelsturm; ein Tornado ein viel kleinerer Luftwirbel mit Kontakt zur Erdoberfläche",
+        "Eine längere Periode mit deutlich weniger Niederschlag als normal"
+      ]
+    },
+    "gk4_15": {
+      "question": "Was bedeutet das Stimm- und Wahlrecht für Schweizerinnen und Schweizer auf Bundesebene?"
+    },
+    "gk4_30": {
+      "question": "Ab welchem Alter haben Schweizerinnen und Schweizer auf Bundesebene das Stimm- und Wahlrecht? ___ Jahre",
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Es gilt das Alter der Volljährigkeit."
+      ]
+    },
+    "g4s17": {
+      "question": "Zu welcher Tiergruppe gehören Frösche, Kröten und Molche?",
+      "altAnswers": [
+        "Lurche"
+      ]
+    },
+    "g4s24": {
+      "question": "Wind ist bewegte ___."
+    },
+    "pfl4_30": {
+      "question": "Hülsenfrüchtler (Leguminosen) können mithilfe von Knöllchenbakterien ___ aus der Luft binden."
+    },
+    "oek4_2": {
+      "hints": [
+        "Sie stellen Nahrung durch Photosynthese her.",
+        "Welche Lebewesen stellen die energiereichen Stoffe am Anfang der Kette her?"
+      ]
+    },
+    "gk4_21": {
+      "options": [
+        "ruhig zuhören und gemeinsam sprechen",
+        "Die lokale Verfassung einer Gemeinde",
+        "Gemeinde, Kanton und Bund",
+        "Die andere Person beschimpfen"
+      ]
+    },
+    "kan4_49": {
+      "question": "Welcher Kanton grenzt an vier andere Kantone und drei Länder?"
+    },
+    "kan4_41": {
+      "hints": [
+        "Drei Kantone kamen 1815 hinzu: Wallis, Genf und Neuenburg.",
+        "Vergleiche ihre Reihenfolge in der üblichen Kantonsliste."
+      ],
+      "question": "Welcher Kanton steht in der üblichen Reihenfolge der Schweizer Kantone direkt vor Jura?"
+    },
+    "g4kg2g": {
+      "question": "Nenne eine mögliche Zahl für den üblichen Ruhepuls eines 7- bis 9-jährigen Kindes: ___ Herzschläge pro Minute.",
+      "answer": "90",
+      "altAnswers": [
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98",
+        "99",
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108",
+        "109",
+        "110"
+      ]
+    },
+    "g4kg3b": {
+      "question": "Nenne eine mögliche Zahl für den üblichen Ruhepuls eines 7- bis 9-jährigen Kindes: ___ Herzschläge pro Minute.",
+      "answer": "90",
+      "altAnswers": [
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98",
+        "99",
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108",
+        "109",
+        "110"
+      ],
+      "hints": [
+        "Der Puls ist keine feste Zahl und unterscheidet sich von Kind zu Kind.",
+        "Denke an den Puls nach mehreren Minuten ruhigem Sitzen, nicht nach dem Sport."
+      ]
+    },
+    "g4s9": {
+      "altAnswers": [
+        "4",
+        "4,5",
+        "5,5",
+        "6"
+      ]
+    },
+    "g4kg1e": {
+      "altAnswers": [
+        "Myokard"
+      ]
+    },
+    "pfl4_4": {
+      "altAnswers": [
+        "Blattgrün"
+      ]
+    },
+    "pfl4_18": {
+      "altAnswers": [
+        "Atmung"
+      ]
+    },
+    "pfl4_24": {
+      "altAnswers": [
+        "Fototropismus"
+      ]
+    },
+    "g4kg3d": {
+      "altAnswers": [
+        "Hormone",
+        "Kohlendioxid"
+      ]
+    },
+    "g4kg3l": {
+      "altAnswers": [
+        "Energie"
+      ]
+    },
+    "rw4_20": {
+      "altAnswers": [
+        "eindringen"
+      ]
+    },
+    "lw4_16": {
+      "altAnswers": [
+        "Watt"
+      ]
+    },
+    "kan4_30": {
+      "altAnswers": [
+        "Stadt, Landschaft, Ausserrhoden, Innerrhoden, walden, walden"
+      ],
+      "spokenPrompt": "Ergänze die Namen der sechs früher sogenannten Halbkantone. Basel …, Basel …, Appenzell …, Appenzell …, Nid … und Ob …. Schreibe alle sechs fehlenden Namensbestandteile in dieser Reihenfolge.",
+      "verbatimSpeech": true
+    },
+    "rr4_30": {
+      "question": "Das Wort «Strasse» geht auf ein lateinisches Wort mit der Bedeutung «gepflastert» zurück. Dieses Wort lautet ___."
+    },
+    "nmg4-rich-karte-drag-2": {
+      "question": "Plane einen sicheren Weg mit der Karte. Finde zuerst deinen Startpunkt und ordne danach die weiteren Schritte."
+    },
+    "sg4_1": {
+      "question": "Auf welches Jahr ist der Bundesbrief von Uri, Schwyz und Unterwalden datiert?"
+    },
+    "kan4_12": {
+      "question": "Welcher Kanton hat die gleichnamige Stadt am westlichen Ende des Genfersees als Hauptort?"
+    },
+    "ke4_40": {
+      "answer": "Wärme fliesst nicht von selbst von kalt nach warm",
+      "altAnswers": [
+        "Wärme fliesst spontan nur von warm nach kalt",
+        "In einem abgeschlossenen System nimmt die Entropie nicht ab",
+        "Die Entropie eines isolierten Systems kann nicht abnehmen"
+      ],
+      "hints": [
+        "Denke daran, in welche Richtung Wärme von selbst übertragen wird.",
+        "Ein warmer Gegenstand und seine kühlere Umgebung gleichen ihre Temperaturen an."
+      ]
+    },
+    "sg4_30": {
+      "hints": [
+        "Kein Kriegseintritt.",
+        "Gesucht ist der Fachbegriff für diese aussenpolitische Haltung."
+      ]
+    },
+    "mk4_36": {
+      "question": "Ordne die Begriffe den Beschreibungen zu: [1] Person, die ihren Wohnort wechselt (Oberbegriff nach IOM); [2] Person mit Anspruch auf internationalen Flüchtlingsschutz; [3] Person, über deren Asylgesuch noch nicht entschieden wurde. Schreibe die drei Begriffe in dieser Reihenfolge.",
+      "answer": "Migrant, Flüchtling, Asylsuchender",
+      "altAnswers": [
+        "Migrant Flüchtling Asylsuchender",
+        "Migrantin, Flüchtling, Asylsuchende",
+        "Migrant, Flüchtling, Asylsuchende"
+      ],
+      "hints": [
+        "Unterscheide einen allgemeinen Begriff von Schutz und einem noch laufenden Verfahren.",
+        "Die Begriffe können sich überschneiden; sie sind keine drei voneinander getrennten Gruppen."
+      ],
+      "spokenPrompt": "Ordne die Begriffe den Beschreibungen zu. Erstens: Person, die ihren Wohnort wechselt, Oberbegriff nach der Internationalen Organisation für Migration. Zweitens: Person mit Anspruch auf internationalen Flüchtlingsschutz. Drittens: Person, über deren Asylgesuch noch nicht entschieden wurde. Schreibe die drei Begriffe in dieser Reihenfolge.",
+      "verbatimSpeech": true
+    },
+    "ok4_40": {
+      "question": "Nenne eine Möglichkeit, dich im Gelände ohne Kompass zu orientieren.",
+      "answer": "Wegweiser",
+      "altAnswers": [
+        "Wegzeichen",
+        "Wandermarkierungen",
+        "Karte",
+        "Landkarte",
+        "GPS",
+        "Sonne",
+        "Sonnenstand",
+        "Sterne",
+        "Polarstern",
+        "markierte Wege"
+      ],
+      "hints": [
+        "Nutze überprüfbare Hinweise und gleiche mehrere Informationen miteinander ab.",
+        "Moos zeigt nicht zuverlässig nach Norden. Bleibe auf markierten Wegen und hole Hilfe, wenn du dich verirrst."
+      ]
+    },
+    "pfl4_17": {
+      "options": [
+        "Pflanzen geben Stoffe ab, die das Wachstum anderer Pflanzen hemmen",
+        "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter",
+        "Pflanzenhormone, die Wachstum, Blüte und Fruchtreife steuern (Auxin, Gibberellin, Cytokinin)",
+        "Saprophyten ernähren sich von toten Organismen; Parasiten von lebenden Wirten"
+      ],
+      "answer": "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter"
+    },
+    "pfl4_27": {
+      "options": [
+        "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter",
+        "Eine Pflanze, die in einem Jahr keimt, blüht, Samen bildet und abstirbt",
+        "Pflanzen geben Stoffe ab, die das Wachstum anderer Pflanzen hemmen",
+        "C4-Pflanzen fixieren CO₂ effizienter bei hoher Temperatur und wenig Wasser (z.B. Mais)"
+      ]
+    },
+    "pfl4_33": {
+      "options": [
+        "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter",
+        "Pflanzen geben Stoffe ab, die das Wachstum anderer Pflanzen hemmen",
+        "Pflanzenhormone, die Wachstum, Blüte und Fruchtreife steuern (Auxin, Gibberellin, Cytokinin)",
+        "Saprophyten ernähren sich von toten Organismen; Parasiten von lebenden Wirten"
+      ]
+    },
+    "pfl4_41": {
+      "options": [
+        "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter",
+        "Pflanzenhormone, die Wachstum, Blüte und Fruchtreife steuern (Auxin, Gibberellin, Cytokinin)",
+        "Pflanzen geben Stoffe ab, die das Wachstum anderer Pflanzen hemmen",
+        "Saprophyten ernähren sich von toten Organismen; Parasiten von lebenden Wirten"
+      ]
+    },
+    "pfl4_47": {
+      "options": [
+        "Nadelbäume haben meist Nadeln oder Schuppen; Laubbäume meist breite Blätter",
+        "Abnormales, langes Wachstum von Pflanzen bei Lichtmangel (blass, dünne Stängel)",
+        "Pflanzen geben Stoffe ab, die das Wachstum anderer Pflanzen hemmen",
+        "Pflanzenhormone, die Wachstum, Blüte und Fruchtreife steuern (Auxin, Gibberellin, Cytokinin)"
+      ]
+    },
+    "pfl4_23": {
+      "hints": [
+        "Beobachte, wie sich die Wuchsrichtung nach dem Drehen eines Keimlings verändert.",
+        "Der Reiz wirkt unabhängig davon, aus welcher Richtung das Licht kommt."
+      ]
+    },
+    "g4lr3h": {
+      "hints": [
+        "Nicht jede neu eingeführte Art verursacht Schäden.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ke4_39": {
+      "options": [
+        "Energie: gespeicherte Arbeit (J). Leistung: Energie pro Zeit (W = J/s).",
+        "Vektor: Grösse mit Richtung (Kraft, Geschwindigkeit). Skalar: nur Betrag (Masse, Energie).",
+        "Wärme fliesst nicht von selbst von kalt nach warm",
+        "Eine thermodynamische Grösse; in einem isolierten System kann sie zunehmen oder gleich bleiben"
+      ]
+    },
+    "kan4_3": {
+      "question": "Welcher Kanton liegt am nördlichsten Punkt der Schweiz?"
+    },
+    "kan4_11": {
+      "question": "Welche drei Orte werden mit dem Bundesbrief von 1291 verbunden?",
+      "hints": [
+        "Gesucht sind die drei historischen Waldstätten in der Zentralschweiz.",
+        "Luzern und Zürich traten dem Bündnis später bei."
+      ]
+    },
+    "sg4_3": {
+      "options": [
+        "Eine religiöse Erneuerungsbewegung (Zwingli in Zürich, Calvin in Genf) im 16. Jh.",
+        "Eine Sagengestalt — Schweizer Nationalheld, der einen Apfel vom Kopf seines Sohnes schoss",
+        "Die Wiese am Vierwaldstättersee, auf der laut der Sage der Rütlischwur stattfand",
+        "Eine Versammlung von Gesandten aller Kantone zur gemeinsamen Entscheidungsfindung (vor 1848)"
+      ]
+    },
+    "sg4_5": {
+      "options": [
+        "Eine Versammlung von Gesandten aller Kantone zur gemeinsamen Entscheidungsfindung (vor 1848)",
+        "Die Wiese am Vierwaldstättersee, auf der laut der Sage der Rütlischwur stattfand",
+        "Geistige Landesverteidigung: Schutz der Schweizer Werte und Neutralität gegen Nazi-Ideologie",
+        "Volksaufstand gegen die Helvetische Republik — führte zur Auflösung und Mediation Napoleons"
+      ],
+      "answer": "Die Wiese am Vierwaldstättersee, auf der laut der Sage der Rütlischwur stattfand",
+      "hints": [
+        "Die Wiese ist ein wichtiger Erinnerungsort der Schweiz.",
+        "Am Ufer des Vierwaldstättersees."
+      ]
+    },
+    "sg4_19": {
+      "options": [
+        "Eine Sagengestalt — Schweizer Nationalheld, der einen Apfel vom Kopf seines Sohnes schoss",
+        "Eine religiöse Erneuerungsbewegung (Zwingli in Zürich, Calvin in Genf) im 16. Jh.",
+        "Die Wiese am Vierwaldstättersee, auf der laut der Sage der Rütlischwur stattfand",
+        "Eine Versammlung von Gesandten aller Kantone zur gemeinsamen Entscheidungsfindung (vor 1848)"
+      ]
+    },
+    "sg4_21": {
+      "options": [
+        "Die Wiese am Vierwaldstättersee, auf der laut der Sage der Rütlischwur stattfand",
+        "Eine Versammlung von Gesandten aller Kantone zur gemeinsamen Entscheidungsfindung (vor 1848)",
+        "Geistige Landesverteidigung: Schutz der Schweizer Werte und Neutralität gegen Nazi-Ideologie",
+        "Volksaufstand gegen die Helvetische Republik — führte zur Auflösung und Mediation Napoleons"
+      ]
+    },
+    "sg4_37": {
+      "options": [
+        "Die Wiese am Vierwaldstättersee, auf der laut der Sage der Rütlischwur stattfand",
+        "Geistige Landesverteidigung: Schutz der Schweizer Werte und Neutralität gegen Nazi-Ideologie",
+        "Eine Versammlung von Gesandten aller Kantone zur gemeinsamen Entscheidungsfindung (vor 1848)",
+        "Volksaufstand gegen die Helvetische Republik — führte zur Auflösung und Mediation Napoleons"
+      ],
+      "question": "Was bedeutete die geistige Landesverteidigung in der Zeit des Zweiten Weltkriegs?",
+      "hints": [
+        "Vergleiche eine kulturelle Auseinandersetzung mit einer militärischen Verteidigungsstrategie.",
+        "Es geht um die Haltung gegenüber totalitären Ideologien."
+      ]
+    },
+    "sg4_45": {
+      "options": [
+        "Die Wiese am Vierwaldstättersee, auf der laut der Sage der Rütlischwur stattfand",
+        "Volksaufstand gegen die Helvetische Republik — führte zur Auflösung und Mediation Napoleons",
+        "Eine Versammlung von Gesandten aller Kantone zur gemeinsamen Entscheidungsfindung (vor 1848)",
+        "Geistige Landesverteidigung: Schutz der Schweizer Werte und Neutralität gegen Nazi-Ideologie"
+      ]
+    },
+    "sg4_28": {
+      "hints": [
+        "Mehr als die Hälfte der gültigen Stimmen war dafür.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "rr4_7": {
+      "question": "Wie lautet der aus dem Lateinischen stammende Fachbegriff für römische Wasserleitungen?"
+    },
+    "lw4_3": {
+      "question": "Welche Möglichkeiten gab es vor dem Internet, einzelne schriftliche Nachrichten über grosse Entfernungen zu verschicken?"
+    },
+    "lw4_26": {
+      "question": "Das Frauenstimm- und Wahlrecht auf Bundesebene wurde in der Schweiz ___ eingeführt."
+    },
+    "rw4_17": {
+      "question": "Was ist ein Einzugsgebiet eines Flusses?",
+      "options": [
+        "Reinigung von Schmutzwasser in Kläranlagen, bevor es in Flüsse fliesst",
+        "Das Gebiet, aus dem ein Gewässer (Fluss) sein Wasser sammelt",
+        "Biomasse: organisches Material aus heutigen Lebewesen (erneuerbar). Fossile Brennstoffe: über geologische Zeiträume entstandene Energieträger.",
+        "Ca. 2 Milliarden Menschen haben keinen Zugang zu sauberem Trinkwasser"
+      ]
+    },
+    "kan4_45": {
+      "options": [
+        "Kantone haben eigene Rechte in Bereichen, die nicht dem Bund übertragen wurden",
+        "Einer von sechs Kantonen mit einem Ständeratssitz und einer halben Standesstimme bei Verfassungsabstimmungen",
+        "Das älteste Dokument der Eidgenossenschaft — ein gegenseitiges Schutzversprechen der drei Urkantone",
+        "Eine öffentliche Versammlung, bei der Bürger direkt durch Handzeichen abstimmen"
+      ],
+      "answer": "Einer von sechs Kantonen mit einem Ständeratssitz und einer halben Standesstimme bei Verfassungsabstimmungen",
+      "hints": [
+        "Unterscheide die Sitze im Ständerat von den kantonalen Stimmen bei einer Volksabstimmung.",
+        "Die Sonderregel betrifft Basel, Appenzell und Unterwalden."
+      ]
+    },
+    "eu4_39": {
+      "hints": [
+        "Unterscheide den ESM von seiner Vorgängerorganisation EFSF.",
+        "Überlege, warum Staaten des Euroraums bei einer schweren Schuldenkrise zusammenarbeiten."
+      ],
+      "options": [
+        "Ein Gebiet in Europa, in dem reguläre Personenkontrollen an den Binnengrenzen grundsätzlich entfallen",
+        "Ein EU-Rettungsfonds für Länder in Finanznot (Eurozone)",
+        "über 100 (Bilaterale I 1999, Bilaterale II 2004)",
+        "Der wichtigste Fluss Westeuropas, historische Grenze und Handelsweg"
+      ]
+    },
+    "mk4_15": {
+      "options": [
+        "Eine Person, die im Ausland wohnt und in der Schweiz arbeitet; die Rückkehr kann auch wöchentlich erfolgen",
+        "Ca. 1960–1970: Anwerbung von Arbeitern aus Südeuropa (Italien, Spanien) für Schweizer Wirtschaft",
+        "Ein Land, das als sicher gilt und dessen Bürger grundsätzlich kein Asyl erhalten",
+        "Eine Person, die wegen Verfolgung etwa aufgrund ihrer Religion, Herkunft oder politischen Überzeugung Schutz ausserhalb ihres Heimatlandes benötigt"
+      ]
+    },
+    "mk4_29": {
+      "options": [
+        "Ca. 1960–1970: Anwerbung von Arbeitern aus Südeuropa (Italien, Spanien) für Schweizer Wirtschaft",
+        "Eine Person, die im Ausland wohnt und in der Schweiz arbeitet; die Rückkehr kann auch wöchentlich erfolgen",
+        "Ein Land, das als sicher gilt und dessen Bürger grundsätzlich kein Asyl erhalten",
+        "Eine Person, die wegen Verfolgung etwa aufgrund ihrer Religion, Herkunft oder politischen Überzeugung Schutz ausserhalb ihres Heimatlandes benötigt"
+      ],
+      "answer": "Eine Person, die im Ausland wohnt und in der Schweiz arbeitet; die Rückkehr kann auch wöchentlich erfolgen",
+      "hints": [
+        "Wohnort und Arbeitsort liegen in verschiedenen Ländern.",
+        "Nicht alle betroffenen Personen fahren jeden Tag nach Hause."
+      ]
+    },
+    "mk4_43": {
+      "options": [
+        "Ca. 1960–1970: Anwerbung von Arbeitern aus Südeuropa (Italien, Spanien) für Schweizer Wirtschaft",
+        "Ein Land, das als sicher gilt und dessen Bürger grundsätzlich kein Asyl erhalten",
+        "Eine Person, die im Ausland wohnt und in der Schweiz arbeitet; die Rückkehr kann auch wöchentlich erfolgen",
+        "Eine Person, die wegen Verfolgung etwa aufgrund ihrer Religion, Herkunft oder politischen Überzeugung Schutz ausserhalb ihres Heimatlandes benötigt"
+      ]
+    },
+    "gk4_5": {
+      "options": [
+        "Ein Vertrag zwischen mehreren Kantonen zu gemeinsamen Themen (z.B. Schule)",
+        "Eine Volksinitiative ermöglicht Bürgern, eine Verfassungsänderung zu beantragen (100'000 Unterschriften)",
+        "Dringlich: kann sofort in Kraft treten und ist befristet; ordentlich: Inkrafttreten auf dem üblichen Gesetzgebungsweg",
+        "Mehrheit der gültigen Stimmen und Mehrheit der Standesstimmen erforderlich (bei Verfassungsänderungen)"
+      ]
+    },
+    "gk4_23": {
+      "options": [
+        "Eine Volksinitiative ermöglicht Bürgern, eine Verfassungsänderung zu beantragen (100'000 Unterschriften)",
+        "Ein Vertrag zwischen mehreren Kantonen zu gemeinsamen Themen (z.B. Schule)",
+        "Dringlich: kann sofort in Kraft treten und ist befristet; ordentlich: Inkrafttreten auf dem üblichen Gesetzgebungsweg",
+        "Mehrheit der gültigen Stimmen und Mehrheit der Standesstimmen erforderlich (bei Verfassungsänderungen)"
+      ]
+    },
+    "gk4_33": {
+      "options": [
+        "Eine Volksinitiative ermöglicht Bürgern, eine Verfassungsänderung zu beantragen (100'000 Unterschriften)",
+        "Dringlich: kann sofort in Kraft treten und ist befristet; ordentlich: Inkrafttreten auf dem üblichen Gesetzgebungsweg",
+        "Ein Vertrag zwischen mehreren Kantonen zu gemeinsamen Themen (z.B. Schule)",
+        "Mehrheit der gültigen Stimmen und Mehrheit der Standesstimmen erforderlich (bei Verfassungsänderungen)"
+      ],
+      "answer": "Dringlich: kann sofort in Kraft treten und ist befristet; ordentlich: Inkrafttreten auf dem üblichen Gesetzgebungsweg",
+      "hints": [
+        "Vergleiche den Zeitpunkt des Inkrafttretens.",
+        "Bei dringlichen Gesetzen ist auch ihre Geltungsdauer wichtig."
+      ]
+    },
+    "gk4_45": {
+      "options": [
+        "Eine Volksinitiative ermöglicht Bürgern, eine Verfassungsänderung zu beantragen (100'000 Unterschriften)",
+        "Ein hoher Beamter, der internationale Verhandlungen leitet oder ein Departement unterstützt",
+        "Ein Vertrag zwischen mehreren Kantonen zu gemeinsamen Themen (z.B. Schule)",
+        "Dringlich: kann sofort in Kraft treten und ist befristet; ordentlich: Inkrafttreten auf dem üblichen Gesetzgebungsweg"
+      ]
+    },
+    "mk4_4": {
+      "question": "Deutsch, Französisch, Italienisch und Rätoromanisch sind die vier ___ der Schweiz."
+    },
+    "mk4_3": {
+      "options": [
+        "Eine Gemeinschaft von Menschen, die ausserhalb ihres Heimatlandes lebt, aber Bindung behält",
+        "Eine Person, die wegen Verfolgung etwa aufgrund ihrer Religion, Herkunft oder politischen Überzeugung Schutz ausserhalb ihres Heimatlandes benötigt",
+        "Ein internationales Recht für Verfolgte, Schutz in einem anderen Land zu suchen",
+        "Das Bewegen von Menschen von einem Ort/Land in einen anderen"
+      ],
+      "answer": "Eine Person, die wegen Verfolgung etwa aufgrund ihrer Religion, Herkunft oder politischen Überzeugung Schutz ausserhalb ihres Heimatlandes benötigt",
+      "question": "Was bedeutet «Flüchtling» im rechtlichen Sinn?",
+      "hints": [
+        "Genfer Flüchtlingskonvention (1951) schützt Flüchtlinge.",
+        "Es geht um drohende oder erlittene Verfolgung aus bestimmten Gründen."
+      ]
+    },
+    "mk4_17": {
+      "options": [
+        "Eine Person, die wegen Verfolgung etwa aufgrund ihrer Religion, Herkunft oder politischen Überzeugung Schutz ausserhalb ihres Heimatlandes benötigt",
+        "Eine Gemeinschaft von Menschen, die ausserhalb ihres Heimatlandes lebt, aber Bindung behält",
+        "Ein internationales Recht für Verfolgte, Schutz in einem anderen Land zu suchen",
+        "Das Bewegen von Menschen von einem Ort/Land in einen anderen"
+      ]
+    },
+    "mk4_19": {
+      "hints": [
+        "Asyl = Zufluchtsstätte.",
+        "Die Allgemeine Erklärung der Menschenrechte behandelt dieses Recht in Artikel 14."
+      ]
+    },
+    "rr4_21": {
+      "options": [
+        "Republik: Konsuln, Senat, Wahlen. Kaiserreich: ab 27 v. Chr. ein Kaiser (Augustus) regiert allein.",
+        "Die ca. 200-jährige Friedensperiode im Römischen Reich (27 v. Chr. – 180 n. Chr.)",
+        "Alemannen drängten Römer ab 3. Jh. n. Chr. zurück; Ende röm. Herrschaft ca. 5. Jh.",
+        "Eine wichtige Römerstrasse, die Norditalien über den Reschen- und Fernpass mit dem heutigen Bayern verband"
+      ],
+      "spokenPrompt": "Was ist die Pax Romana?",
+      "verbatimSpeech": true
+    },
+    "rr4_35": {
+      "options": [
+        "Amphitheater in Rom für Gladiatorenkämpfe und Tierhetzen (50'000 Zuschauer)",
+        "Ein Rat der Adligen, der Gesetze beriet und die Regierung kontrollierte",
+        "Eine wichtige Römerstrasse, die Norditalien über den Reschen- und Fernpass mit dem heutigen Bayern verband",
+        "Übernahme der röm. Sprache und Kultur → Latein → Rätoromanisch, Französisch entstanden"
+      ]
+    },
+    "rr4_37": {
+      "options": [
+        "Legionär: Bürger des Reichs in einer Legion. Auxiliar: Verbündete Nichtbürger in Hilfstruppen.",
+        "Eine wichtige Römerstrasse, die Norditalien über den Reschen- und Fernpass mit dem heutigen Bayern verband",
+        "Römer bauten Städte als Zentren der röm. Kultur → lokale Bevölkerung übernahm Kultur",
+        "Ein Rat der Adligen, der Gesetze beriet und die Regierung kontrollierte"
+      ],
+      "answer": "Eine wichtige Römerstrasse, die Norditalien über den Reschen- und Fernpass mit dem heutigen Bayern verband",
+      "question": "Welche Bedeutung hatte die Via Claudia Augusta für den Verkehr über die Alpen?"
+    },
+    "rr4_39": {
+      "options": [
+        "Die ca. 200-jährige Friedensperiode im Römischen Reich (27 v. Chr. – 180 n. Chr.)",
+        "Alemannen drängten Römer ab 3. Jh. n. Chr. zurück; Ende röm. Herrschaft ca. 5. Jh.",
+        "Republik: Konsuln, Senat, Wahlen. Kaiserreich: ab 27 v. Chr. ein Kaiser (Augustus) regiert allein.",
+        "Eine wichtige Römerstrasse, die Norditalien über den Reschen- und Fernpass mit dem heutigen Bayern verband"
+      ]
+    },
+    "rr4_41": {
+      "options": [
+        "Eine wichtige Römerstrasse, die Norditalien über den Reschen- und Fernpass mit dem heutigen Bayern verband",
+        "Legionär: Bürger des Reichs in einer Legion. Auxiliar: Verbündete Nichtbürger in Hilfstruppen.",
+        "Römer bauten Städte als Zentren der röm. Kultur → lokale Bevölkerung übernahm Kultur",
+        "Ein Rat der Adligen, der Gesetze beriet und die Regierung kontrollierte"
+      ],
+      "spokenPrompt": "Was ist der Unterschied zwischen Legionär und Auxiliar?",
+      "verbatimSpeech": true
+    },
+    "rr4_45": {
+      "options": [
+        "Eine wichtige Römerstrasse, die Norditalien über den Reschen- und Fernpass mit dem heutigen Bayern verband",
+        "Römer bauten Städte als Zentren der röm. Kultur → lokale Bevölkerung übernahm Kultur",
+        "Legionär: Bürger des Reichs in einer Legion. Auxiliar: Verbündete Nichtbürger in Hilfstruppen.",
+        "Ein Rat der Adligen, der Gesetze beriet und die Regierung kontrollierte"
+      ]
+    },
+    "eu4_17": {
+      "options": [
+        "über 100 (Bilaterale I 1999, Bilaterale II 2004)",
+        "Ein Gebiet in Europa, in dem reguläre Personenkontrollen an den Binnengrenzen grundsätzlich entfallen",
+        "Der wichtigste Fluss Westeuropas, historische Grenze und Handelsweg",
+        "Ein EU-Rettungsfonds für Länder in Finanznot (Eurozone)"
+      ],
+      "answer": "Ein Gebiet in Europa, in dem reguläre Personenkontrollen an den Binnengrenzen grundsätzlich entfallen",
+      "hints": [
+        "Unterscheide regelmässige Grenzkontrollen von der Pflicht, geeignete Reisedokumente mitzuführen.",
+        "Zeitweise können Kontrollen an Binnengrenzen wieder eingeführt werden."
+      ]
+    },
+    "eu4_31": {
+      "options": [
+        "Ein Gebiet in Europa, in dem reguläre Personenkontrollen an den Binnengrenzen grundsätzlich entfallen",
+        "Der wichtigste Fluss Westeuropas, historische Grenze und Handelsweg",
+        "über 100 (Bilaterale I 1999, Bilaterale II 2004)",
+        "Ein EU-Rettungsfonds für Länder in Finanznot (Eurozone)"
+      ]
+    },
+    "eu4_41": {
+      "options": [
+        "Ein Gebiet in Europa, in dem reguläre Personenkontrollen an den Binnengrenzen grundsätzlich entfallen",
+        "EU-Gesetz zum Schutz persönlicher Daten von Bürgern",
+        "über 100 (Bilaterale I 1999, Bilaterale II 2004)",
+        "Der wichtigste Fluss Westeuropas, historische Grenze und Handelsweg"
+      ]
+    },
+    "eu4_43": {
+      "options": [
+        "Parlament: gewählte Abgeordnete. Rat: Staats-/Regierungschefs der EU-Länder.",
+        "Eurozone: Euro-Währungsraum. EWR: Europäischer Wirtschaftsraum (inkl. Norwegen, Island).",
+        "EFTA: Freihandelszone (Schweiz, Norwegen, Island, Liechtenstein). EU: politische Union.",
+        "Ein Gebiet in Europa, in dem reguläre Personenkontrollen an den Binnengrenzen grundsätzlich entfallen"
+      ]
+    },
+    "kan4_7": {
+      "hints": [
+        "Die Gründungskantone der Eidgenossenschaft.",
+        "Der Name erinnert an die vier historischen Waldstätten rund um den See."
+      ]
+    },
+    "kan4_32": {
+      "hints": [
+        "Der Hauptort trägt denselben Namen wie der Kanton.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sg4_7": {
+      "hints": [
+        "Vergleiche einen zentral regierten Staat mit einem Bund selbstständiger Kantone.",
+        "1798: Frankreich → Einheitsstaat."
+      ]
+    },
+    "rr4_13": {
+      "question": "Zu welchen zwei römischen Provinzen gehörten grosse Teile der heutigen Nord- und Ostschweiz?"
+    },
+    "lw4_1": {
+      "hints": [
+        "Denke an die Zeit vor der Verbreitung von Motorfahrzeugen.",
+        "Pferde, Ochsen, Kutschen."
+      ]
+    },
+    "rw4_26": {
+      "hints": [
+        "Suche die Wasserscheide im zentralen Alpenraum.",
+        "Europäische Wasserscheide."
+      ]
+    },
+    "rw4_23": {
+      "options": [
+        "Das Gebiet, aus dem ein Gewässer (Fluss) sein Wasser sammelt",
+        "Reinigung von Schmutzwasser in Kläranlagen, bevor es in Flüsse fliesst",
+        "Biomasse: organisches Material aus heutigen Lebewesen (erneuerbar). Fossile Brennstoffe: über geologische Zeiträume entstandene Energieträger.",
+        "Ca. 2 Milliarden Menschen haben keinen Zugang zu sauberem Trinkwasser"
+      ]
+    },
+    "rw4_25": {
+      "options": [
+        "Das Gebiet, aus dem ein Gewässer (Fluss) sein Wasser sammelt",
+        "Biomasse: organisches Material aus heutigen Lebewesen (erneuerbar). Fossile Brennstoffe: über geologische Zeiträume entstandene Energieträger.",
+        "Reinigung von Schmutzwasser in Kläranlagen, bevor es in Flüsse fliesst",
+        "Ca. 2 Milliarden Menschen haben keinen Zugang zu sauberem Trinkwasser"
+      ],
+      "answer": "Biomasse: organisches Material aus heutigen Lebewesen (erneuerbar). Fossile Brennstoffe: über geologische Zeiträume entstandene Energieträger."
+    },
+    "rw4_39": {
+      "options": [
+        "Das Gebiet, aus dem ein Gewässer (Fluss) sein Wasser sammelt",
+        "Der Zeitpunkt der maximalen Erdölproduktion, nach dem die Produktion sinkt",
+        "Reinigung von Schmutzwasser in Kläranlagen, bevor es in Flüsse fliesst",
+        "Biomasse: organisches Material aus heutigen Lebewesen (erneuerbar). Fossile Brennstoffe: über geologische Zeiträume entstandene Energieträger."
+      ]
+    },
+    "oek4_9": {
+      "options": [
+        "Das Aussterben von Arten, nicht nur von Tieren",
+        "Langfristige Veränderungen des globalen Klimas, hauptsächlich durch menschliche CO₂-Emissionen",
+        "Einsatz natürlicher Feinde statt Pestizide (z.B. Marienkäfer gegen Blattläuse)",
+        "Biotisch: lebende Faktoren (Konkurrenz, Räuber). Abiotisch: nicht-lebend (Temperatur, Wasser)."
+      ]
+    },
+    "oek4_19": {
+      "options": [
+        "Natürlicher Prozess nur",
+        "Das Aussterben von Arten, nicht nur von Tieren",
+        "Nur in Wüsten",
+        "Nur im Ozean"
+      ],
+      "answer": "Das Aussterben von Arten, nicht nur von Tieren"
+    },
+    "eu4_35": {
+      "hints": [
+        "Verträge regeln die Zusammenarbeit in bestimmten Bereichen.",
+        "Zugangsvorteil ohne Mitgliedschaft."
+      ]
+    },
+    "g4kg1h": {
+      "hints": [
+        "Vergleiche die Breite der verschiedenen Stufen der Schweizer Lebensmittelpyramide.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4lr1j": {
+      "options": [
+        "Gras",
+        "Baumrinde",
+        "Insekten",
+        "Beeren"
+      ]
+    },
+    "g4wk2l": {
+      "question": "Was ist ein Polarwirbel?",
+      "hints": [
+        "Denke an ein grossräumiges Strömungsmuster in der Atmosphäre.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "gk4_39": {
+      "options": [
+        "Das Recht, an Abstimmungen und Wahlen teilzunehmen (ab 18 Jahren)",
+        "Volksinitiative bezeichnet ein bestimmtes politisches Instrument; Volksbegehren wird auch in der Schweiz als Bezeichnung für ein Anliegen des Volkes verwendet",
+        "Umverteilung von reichen zu armen Kantonen zur Angleichung der Steuerkraft",
+        "Eine Volksinitiative ermöglicht Bürgern, eine Verfassungsänderung zu beantragen (100'000 Unterschriften)"
+      ],
+      "answer": "Volksinitiative bezeichnet ein bestimmtes politisches Instrument; Volksbegehren wird auch in der Schweiz als Bezeichnung für ein Anliegen des Volkes verwendet",
+      "hints": [
+        "Unterscheide den Namen eines politischen Instruments von einer allgemeineren Bezeichnung.",
+        "Auch Schweizer Rechtstexte verwenden den Ausdruck «Volksbegehren»."
+      ]
+    },
+    "gk4_41": {
+      "options": [
+        "Das Recht, an Abstimmungen und Wahlen teilzunehmen (ab 18 Jahren)",
+        "Umverteilung von reichen zu armen Kantonen zur Angleichung der Steuerkraft",
+        "Volksinitiative bezeichnet ein bestimmtes politisches Instrument; Volksbegehren wird auch in der Schweiz als Bezeichnung für ein Anliegen des Volkes verwendet",
+        "Eine Volksinitiative ermöglicht Bürgern, eine Verfassungsänderung zu beantragen (100'000 Unterschriften)"
+      ]
+    },
+    "g4kg1l": {
+      "spokenPrompt": "Was ist ein Reflex?",
+      "verbatimSpeech": true
+    },
+    "pfl4_10": {
+      "spokenPrompt": "Pflanzen nehmen Kohlendioxid aus der … auf. Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "ms4_34": {
+      "spokenPrompt": "C O zwei ist die chemische Formel für …. Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "oek4_18": {
+      "spokenPrompt": "Kohlendioxid-Ausstoss durch fossile Brennstoffe verstärkt den …. Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "g4-science-licht-optik-licht-norm-39": {
+      "spokenPrompt": "Denke an das Thema: Was ist ein Experiment mit Licht?",
+      "verbatimSpeech": true
+    },
+    "lw4_43": {
+      "spokenPrompt": "Was ist Automatisierung im historischen Kontext?",
+      "verbatimSpeech": true
+    },
+    "eu4_20": {
+      "spokenPrompt": "Wie viele Mitgliedstaaten hatte die Europäische Union im Jahr 2024? Ergänze die fehlende Zahl.",
+      "verbatimSpeech": true
+    }
+  }
+}
