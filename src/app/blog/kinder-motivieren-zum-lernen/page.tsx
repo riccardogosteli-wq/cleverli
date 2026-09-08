@@ -78,7 +78,7 @@ export default function BlogPost() {
       <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 mb-8 text-center">
         <Image
           src="/cleverli-sit-read.png"
-          alt="Cleverli Maskottchen liest ein Buch"
+          alt="Cleverli Maskottchen beim Lernen"
           width={140}
           height={140}
           className="mx-auto drop-shadow-lg"
