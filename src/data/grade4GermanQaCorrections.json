@@ -1,0 +1,1480 @@
+{
+  "patches": {
+    "g4d4": {
+      "question": "Ergänze das Subjekt aus «Das Kind spielt im Garten.»: «___ spielt im Garten.»",
+      "spokenPrompt": "Ergänze das Subjekt aus «Das Kind spielt im Garten.»: «… spielt im Garten.»",
+      "verbatimSpeech": true
+    },
+    "g4d7": {
+      "answer": "Was"
+    },
+    "g4d10": {
+      "question": "Ergänze das Bindewort für eine Bedingung: «___ es regnet, bleibe ich zu Hause.» (wenn/weil)",
+      "spokenPrompt": "Ergänze das Bindewort für eine Bedingung: «… es regnet, bleibe ich zu Hause.» (wenn/weil)",
+      "verbatimSpeech": true
+    },
+    "g4sg1h": {
+      "question": "Wie viele Subjekte hat der Satz «Die Kinder spielen»?",
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Wie viele Subjekte hat der Satz «Die Kinder spielen»?",
+      "verbatimSpeech": true
+    },
+    "g4sg2a": {
+      "question": "Welche Ergänzung beschreibt ein Nomen näher: Attribut oder Prädikat? ___",
+      "answer": "Attribut",
+      "spokenPrompt": "Welche Ergänzung beschreibt ein Nomen näher: Attribut oder Prädikat? …",
+      "verbatimSpeech": true
+    },
+    "g4sg2g": {
+      "question": "Im Satz «Sie läuft täglich um 7 Uhr»: Schreibe beide Zeitangaben zusammen: ___",
+      "spokenPrompt": "Im Satz «Sie läuft täglich um 7 Uhr»: Schreibe beide Zeitangaben zusammen: …",
+      "verbatimSpeech": true
+    },
+    "g4sg2h": {
+      "hints": [
+        "Im einfachen Aussagesatz steht die finite Verbform meist an zweiter Satzgliedstelle.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4sg2j": {
+      "options": [
+        "Ein Satzglied, das dem Subjekt eine Eigenschaft zuschreibt (Er ist müde.)",
+        "Ein Satzgliedteil im Genitiv, das ein Nomen näher beschreibt (das Buch des Lehrers)",
+        "Eine Ergänzung für Zeit, Ort oder Art (wann, wo, wie)",
+        "Verb und Subjekt stimmen in Person und Numerus überein"
+      ],
+      "answer": "Ein Satzgliedteil im Genitiv, das ein Nomen näher beschreibt (das Buch des Lehrers)"
+    },
+    "g4sg2f": {
+      "options": [
+        "Eine Ergänzung für Zeit, Ort oder Art (wann, wo, wie)",
+        "Ein Satzglied, das dem Subjekt eine Eigenschaft zuschreibt (Er ist müde.)",
+        "Ein Satzgliedteil im Genitiv, das ein Nomen näher beschreibt (das Buch des Lehrers)",
+        "Verb und Subjekt stimmen in Person und Numerus überein"
+      ]
+    },
+    "g4sg3b": {
+      "question": "Welche Endung hat das Partizip I von «gehen»? geh___",
+      "altAnswers": [
+        "end"
+      ],
+      "spokenPrompt": "Welche Endung hat das Partizip I von «gehen»? geh…",
+      "verbatimSpeech": true
+    },
+    "g4sg2i": {
+      "question": "Wandle in eine Ja/Nein-Frage um: «Du kommst heute.» → ___",
+      "spokenPrompt": "Wandle in eine Ja/Nein-Frage um: «Du kommst heute.» → …",
+      "verbatimSpeech": true
+    },
+    "g4zf1d": {
+      "question": "Welche Vergangenheitsform verwendet man im Gespräch meist?",
+      "spokenPrompt": "Welche Vergangenheitsform verwendet man im Gespräch meist?",
+      "verbatimSpeech": true
+    },
+    "g4zf2a": {
+      "options": [
+        "Vorvergangenheit: hatte + Partizip II (Er hatte gegessen, als sie kam.)",
+        "Für Handlungen in der Zukunft",
+        "ist + Partizip II + worden (Das Buch ist gelesen worden.)",
+        "Präteritum: schriftlich (las). Perfekt: mündlich (habe gelesen)."
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4zf2e": {
+      "options": [
+        "Für Handlungen, die noch vor einer anderen Vergangenheit stattfanden",
+        "ist + Partizip II + worden (Das Buch ist gelesen worden.)",
+        "Für Handlungen, die erst morgen stattfinden",
+        "Präteritum: schriftlich (las). Perfekt: mündlich (habe gelesen)."
+      ]
+    },
+    "g4zf2h": {
+      "question": "Welche Zeitform hat «hatte gegessen» in «Als ich ankam, hatte er schon gegessen»?",
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welche Zeitform hat «hatte gegessen» in «Als ich ankam, hatte er schon gegessen»?",
+      "verbatimSpeech": true
+    },
+    "g4zf2k": {
+      "question": "Denkaufgabe 2: Perfekt von spielen: Ich habe ___.",
+      "spokenPrompt": "Denkaufgabe 2: Perfekt von spielen: Ich habe ….",
+      "verbatimSpeech": true
+    },
+    "g4zf2o": {
+      "question": "Denkaufgabe 4: Gestern ___ ich nach Hause. (Präteritum von gehen)",
+      "spokenPrompt": "Denkaufgabe 4: Gestern … ich nach Hause. (Präteritum von gehen)",
+      "verbatimSpeech": true
+    },
+    "g4d22": {
+      "question": "Ergänze das Gegenteil von kalt: Das Wasser ist sehr ___. Das Wort endet auf ss.",
+      "spokenPrompt": "Ergänze das Gegenteil von kalt: Das Wasser ist sehr …. Das Wort endet auf ss.",
+      "verbatimSpeech": true
+    },
+    "g4d27": {
+      "question": "Ergänze: Die K___ gibt Milch.",
+      "answer": "uh",
+      "hints": [
+        "Der Vokal wird lang gesprochen.",
+        "Vergleiche mit dem Wort für das junge Tier: Kalb."
+      ],
+      "spokenPrompt": "Ergänze: Die K… gibt Milch.",
+      "verbatimSpeech": true
+    },
+    "g4rs1b": {
+      "answer": "Freunt",
+      "options": [
+        "Freunt",
+        "Hund",
+        "Kind",
+        "Land"
+      ]
+    },
+    "g4rs1d": {
+      "hints": [
+        "Das Wort endet auf zwei s.",
+        "Der Vokal wird lang gesprochen."
+      ]
+    },
+    "g4rs1e": {
+      "caseSensitiveAnswer": true,
+      "spokenPrompt": "Gross- oder kleinschreiben? «das … (schreiben) fällt schwer»",
+      "verbatimSpeech": true
+    },
+    "g4rs2o": {
+      "caseSensitiveAnswer": true,
+      "spokenPrompt": "Was ist Grosskann-Regel? Nomen nach «etwas»: «etwas … (schönes/Schönes)»",
+      "verbatimSpeech": true
+    },
+    "g4rs2a": {
+      "answer": "Herbst",
+      "altAnswers": [
+        "nicht trennbar",
+        "einsilbig",
+        "Herbst (nicht trennbar, da einsilbig)"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g4rs2k": {
+      "question": "Ergänze die Regel: Nach einem ___ Vokal schreibt man in Katze und Mütze tz.",
+      "answer": "kurzen",
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Ergänze die Regel: Nach einem … Vokal schreibt man in Katze und Mütze tz.",
+      "verbatimSpeech": true
+    },
+    "g4rs2m": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Gesucht ist ein einzelnes Satzzeichen."
+      ]
+    },
+    "wa4_12": {
+      "answer": "Adjektiv",
+      "altAnswers": [
+        "adverbial verwendetes Adjektiv"
+      ]
+    },
+    "wa4_9": {
+      "hints": [
+        "«gestern» und «dort» sind Adverbien.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "options": [
+        "Pronomen, das einen Relativsatz einleitet: der, die, das, welcher",
+        "Ein unveränderliches Wort wie gestern oder dort, das Umstände angibt",
+        "Ein Hilfsverb (können, müssen, dürfen, wollen, sollen, mögen)",
+        "Veränderung von Nomen/Artikel/Adjektiv nach Kasus/Numerus"
+      ],
+      "answer": "Ein unveränderliches Wort wie gestern oder dort, das Umstände angibt"
+    },
+    "wa4_24": {
+      "options": [
+        "Adjektiv wird zum Nomen: das Gute, das Böse, das Schöne",
+        "Ein unveränderliches Wort wie gestern oder dort, das Umstände angibt",
+        "Pronomen, das einen Relativsatz einleitet: der, die, das, welcher",
+        "Ein Hilfsverb (können, müssen, dürfen, wollen, sollen, mögen)"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa4_28": {
+      "options": [
+        "Pronomen, das einen Relativsatz einleitet: der, die, das, welcher",
+        "Ein unveränderliches Wort wie gestern oder dort, das Umstände angibt",
+        "Ein Hilfsverb (können, müssen, dürfen, wollen, sollen, mögen)",
+        "Veränderung von Nomen/Artikel/Adjektiv nach Kasus/Numerus"
+      ]
+    },
+    "wa4_1": {
+      "options": [
+        "Adjektive sind meist steigerbar; Adverbien wie dort sind unveränderlich.",
+        "Ein Wort für Dinge, Personen oder Begriffe",
+        "Veränderung des Verbs nach Person/Numerus/Tempus",
+        "Steigerung des Adjektivs (schön → schöner → am schönsten)"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Die anderen Antworten (Ein Tunwort, Ein Eigenschaftswort) sind nicht korrekt."
+      ]
+    },
+    "wa4_16": {
+      "options": [
+        "Adjektive sind meist steigerbar; Adverbien wie dort sind unveränderlich.",
+        "Ein Wort für Dinge, Personen oder Begriffe",
+        "Veränderung des Verbs nach Person/Numerus/Tempus",
+        "Steigerung des Adjektivs (schön → schöner → am schönsten)"
+      ],
+      "answer": "Adjektive sind meist steigerbar; Adverbien wie dort sind unveränderlich.",
+      "hints": [
+        "Vergleiche «schnell, schneller» mit dem unveränderlichen «dort».",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa4_19": {
+      "options": [
+        "Ein Wort für Dinge, Personen oder Begriffe",
+        "Veränderung des Verbs nach Person/Numerus/Tempus",
+        "Adjektive sind meist steigerbar; Adverbien wie dort sind unveränderlich.",
+        "Steigerung des Adjektivs (schön → schöner → am schönsten)"
+      ]
+    },
+    "wa4_21": {
+      "options": [
+        "Ein Wort für Dinge, Personen oder Begriffe",
+        "Steigerung des Adjektivs (schön → schöner → am schönsten)",
+        "Adjektive sind meist steigerbar; Adverbien wie dort sind unveränderlich.",
+        "Veränderung des Verbs nach Person/Numerus/Tempus"
+      ]
+    },
+    "wa4_27": {
+      "options": [
+        "Ein Wort für Dinge, Personen oder Begriffe",
+        "Ein Verb ohne Akkusativobjekt (schlafen, gehen, lachen)",
+        "Adjektive sind meist steigerbar; Adverbien wie dort sind unveränderlich.",
+        "Veränderung des Verbs nach Person/Numerus/Tempus"
+      ]
+    },
+    "wa4_29": {
+      "options": [
+        "Ein Wort für Dinge, Personen oder Begriffe",
+        "Verbinden gleichrangige Satzteile: und, aber, oder, denn",
+        "Adjektive sind meist steigerbar; Adverbien wie dort sind unveränderlich.",
+        "Veränderung des Verbs nach Person/Numerus/Tempus"
+      ]
+    },
+    "wa4_35": {
+      "options": [
+        "Ein Wort für Dinge, Personen oder Begriffe",
+        "Unbestimmtes Pronomen: man, jemand, niemand, alle, etwas",
+        "Adjektive sind meist steigerbar; Adverbien wie dort sind unveränderlich.",
+        "Veränderung des Verbs nach Person/Numerus/Tempus"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa4_48": {
+      "answer": "Adjektiv",
+      "altAnswers": [
+        "adverbial verwendetes Adjektiv"
+      ]
+    },
+    "wa4_14": {
+      "question": "Wie viele Wortarten unterscheidet das Zehn-Wortarten-Modell?",
+      "altAnswers": [
+        "zehn"
+      ],
+      "spokenPrompt": "Wie viele Wortarten unterscheidet das Zehn-Wortarten-Modell?",
+      "verbatimSpeech": true
+    },
+    "wa4_4": {
+      "altAnswers": [
+        "Tunwort",
+        "Tätigkeitswort"
+      ]
+    },
+    "wa4_6": {
+      "altAnswers": [
+        "Substantiv",
+        "Hauptwort"
+      ]
+    },
+    "wa4_8": {
+      "altAnswers": [
+        "Fürwort",
+        "Personalpronomen"
+      ]
+    },
+    "wa4_10": {
+      "altAnswers": [
+        "Bindewort",
+        "Subjunktion"
+      ]
+    },
+    "wa4_36": {
+      "altAnswers": [
+        "Tunwort",
+        "Tätigkeitswort"
+      ]
+    },
+    "wa4_38": {
+      "altAnswers": [
+        "Substantiv",
+        "Hauptwort"
+      ]
+    },
+    "wa4_39": {
+      "altAnswers": [
+        "Personalpronomen",
+        "Fürwort"
+      ]
+    },
+    "wa4_40": {
+      "altAnswers": [
+        "Verhältniswort",
+        "Vorwort"
+      ]
+    },
+    "wa4_41": {
+      "altAnswers": [
+        "Bindewort"
+      ]
+    },
+    "wa4_45": {
+      "altAnswers": [
+        "Bindewort"
+      ]
+    },
+    "wa4_46": {
+      "altAnswers": [
+        "Personalpronomen",
+        "Fürwort"
+      ]
+    },
+    "wa4_47": {
+      "altAnswers": [
+        "Verhältniswort",
+        "Vorwort"
+      ]
+    },
+    "wa4_49": {
+      "altAnswers": [
+        "Tunwort",
+        "Tätigkeitswort"
+      ]
+    },
+    "wa4_50": {
+      "altAnswers": [
+        "Substantiv",
+        "Hauptwort"
+      ]
+    },
+    "wa4_20": {
+      "question": "Wie nennt man das Beugen von Nomen, Artikeln und Adjektiven? ___",
+      "answer": "Deklination",
+      "hints": [
+        "Vergleiche die Formen eines Nomens in verschiedenen Fällen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wie nennt man das Beugen von Nomen, Artikeln und Adjektiven? …",
+      "verbatimSpeech": true
+    },
+    "wa4_34": {
+      "question": "Wie heisst ein hinweisendes Pronomen wie «dieser»? ___",
+      "answer": "Demonstrativpronomen",
+      "altAnswers": [
+        "hinweisendes Pronomen",
+        "hinweisendes Fürwort"
+      ],
+      "spokenPrompt": "Wie heisst ein hinweisendes Pronomen wie «dieser»? …",
+      "verbatimSpeech": true
+    },
+    "wa4_43": {
+      "question": "Bestimme die Wortart von «der» in «der Hund»: ___",
+      "spokenPrompt": "Bestimme die Wortart von «der» in «der Hund»: …",
+      "verbatimSpeech": true
+    },
+    "pr4_5": {
+      "question": "Was ist «ihr» in «Ihr spielt» (Personalpronomen)?",
+      "spokenPrompt": "Was ist «ihr» in «Ihr spielt» (Personalpronomen)?",
+      "verbatimSpeech": true
+    },
+    "pr4_14": {
+      "question": "Was ist das zweite «der» in «der Mann, der kam»?",
+      "spokenPrompt": "Was ist das zweite «der» in «der Mann, der kam»?",
+      "verbatimSpeech": true
+    },
+    "pr4_28": {
+      "question": "Dekliniere «mein» im Akkusativ Maskulin: «Ich sehe ___ Hund.»",
+      "spokenPrompt": "Dekliniere «mein» im Akkusativ Maskulin: «Ich sehe … Hund.»",
+      "verbatimSpeech": true
+    },
+    "pr4_34": {
+      "answer": "Indefinitpronomen",
+      "altAnswers": [
+        "unbestimmtes Pronomen",
+        "unbestimmtes Fürwort",
+        "Indefinitpronomen: unbestimmte Person"
+      ]
+    },
+    "pr4_49": {
+      "question": "Ergänze mit der passenden Form von «sein»: Das Haus hat ___ Fenster offen.",
+      "altAnswers": [
+        "sein"
+      ],
+      "spokenPrompt": "Ergänze mit der passenden Form von «sein»: Das Haus hat … Fenster offen.",
+      "verbatimSpeech": true
+    },
+    "pr4_41": {
+      "question": "Die Jacke gehört Nora. Ergänze: Ist das ___ Jacke, Nora?",
+      "spokenPrompt": "Die Jacke gehört Nora. Ergänze: Ist das … Jacke, Nora?",
+      "verbatimSpeech": true
+    },
+    "pr4_42": {
+      "question": "Die Rucksäcke gehören uns. Ergänze: Wir packen ___ Rucksäcke.",
+      "spokenPrompt": "Die Rucksäcke gehören uns. Ergänze: Wir packen … Rucksäcke.",
+      "verbatimSpeech": true
+    },
+    "pr4_43": {
+      "question": "Der Schwanz gehört dem Hund. Ergänze: Der Hund wedelt mit ___ Schwanz.",
+      "spokenPrompt": "Der Schwanz gehört dem Hund. Ergänze: Der Hund wedelt mit … Schwanz.",
+      "verbatimSpeech": true
+    },
+    "pr4_46": {
+      "question": "Genau ein Stift ist gemeint. Ergänze: Ich sehe zwei Stifte. ___ ist blau.",
+      "spokenPrompt": "Genau ein Stift ist gemeint. Ergänze: Ich sehe zwei Stifte. … ist blau.",
+      "verbatimSpeech": true
+    },
+    "pr4_48": {
+      "question": "Die sprechende Person braucht Hilfe. Ergänze: Kannst du ___ bitte helfen?",
+      "spokenPrompt": "Die sprechende Person braucht Hilfe. Ergänze: Kannst du … bitte helfen?",
+      "verbatimSpeech": true
+    },
+    "lv4_2": {
+      "altAnswers": [
+        "Kerngedanke",
+        "der Kerngedanke",
+        "Kernaussage",
+        "die Kernaussage",
+        "der wichtigste Gedanke"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv4_4": {
+      "altAnswers": [
+        "Anfang",
+        "der Anfang",
+        "Anfang des Textes",
+        "der Anfang des Textes"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Was ist die Einleitung eines Textes?",
+      "verbatimSpeech": true
+    },
+    "lv4_6": {
+      "altAnswers": [
+        "Titel",
+        "der Titel",
+        "ein Titel"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv4_8": {
+      "altAnswers": [
+        "direkt gesagt",
+        "ausdrücklich",
+        "klar ausgedrückt"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ],
+      "spokenPrompt": "Was bedeutet «explizit» im Text?",
+      "verbatimSpeech": true
+    },
+    "lv4_10": {
+      "altAnswers": [
+        "Methode zum Textverständnis",
+        "eine Methode zum Textverständnis",
+        "Methode zum besseren Textverständnis"
+      ]
+    },
+    "lv4_16": {
+      "altAnswers": [
+        "wegen des starken Schneefalls",
+        "weil es stark schneit",
+        "starker Schneefall"
+      ]
+    },
+    "lv4_18": {
+      "altAnswers": [
+        "Überfliegen",
+        "schnelles Überfliegen",
+        "den Text überfliegen"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv4_22": {
+      "altAnswers": [
+        "Begründung",
+        "eine Begründung",
+        "Begründung für eine These"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv4_24": {
+      "altAnswers": [
+        "Informationen zusammenführen",
+        "Zusammenführen von Informationen"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv4_26": {
+      "altAnswers": [
+        "wörtliche Übernahme",
+        "eine wörtliche Übernahme",
+        "wörtliche Übernahme aus einem Text"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv4_28": {
+      "altAnswers": [
+        "Fragen zum Text beantworten",
+        "Textfragen beantworten"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Was ist Textverständnis prüfen? (Methode)",
+      "verbatimSpeech": true
+    },
+    "lv4_32": {
+      "altAnswers": [
+        "Buchstaben in Laute umwandeln"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv4_34": {
+      "altAnswers": [
+        "auf Stilmittel achten",
+        "Sprachgestaltung untersuchen"
+      ]
+    },
+    "lv4_36": {
+      "altAnswers": [
+        "am Mittwoch"
+      ],
+      "spokenPrompt": "Text: «Lea fährt am Mittwoch mit dem Velo zur Bibliothek.» An welchem Tag fährt Lea? …",
+      "verbatimSpeech": true
+    },
+    "lv4_37": {
+      "altAnswers": [
+        "5"
+      ],
+      "spokenPrompt": "Text: «Im roten Korb liegen fünf Äpfel und zwei Birnen.» Wie viele Äpfel liegen dort? …",
+      "verbatimSpeech": true
+    },
+    "lv4_38": {
+      "altAnswers": [
+        "weil es draussen regnet",
+        "es regnet",
+        "wegen des Regens"
+      ],
+      "spokenPrompt": "Text: «Noah zieht die Stiefel an, weil es draussen regnet.» Warum zieht er Stiefel an? …",
+      "verbatimSpeech": true
+    },
+    "lv4_39": {
+      "altAnswers": [
+        "nach Bern"
+      ],
+      "spokenPrompt": "Text: «Der Zug nach Bern fährt auf Gleis sieben.» Wohin fährt der Zug? …",
+      "verbatimSpeech": true
+    },
+    "lv4_40": {
+      "altAnswers": [
+        "ein Glas Wasser"
+      ],
+      "spokenPrompt": "Text: «Nach dem Training trinkt Elin ein Glas Wasser.» Was trinkt Elin? …",
+      "verbatimSpeech": true
+    },
+    "lv4_41": {
+      "altAnswers": [
+        "hinter dem grossen Stein"
+      ],
+      "spokenPrompt": "Text: «Der Fuchs versteckt sich hinter dem grossen Stein.» Wo versteckt er sich? …",
+      "verbatimSpeech": true
+    },
+    "lv4_42": {
+      "altAnswers": [
+        "um halb acht",
+        "7:30",
+        "7.30 Uhr",
+        "um 7:30 Uhr"
+      ],
+      "spokenPrompt": "Text: «Um halb acht beginnt der Unterricht.» Wann beginnt er? …",
+      "verbatimSpeech": true
+    },
+    "lv4_43": {
+      "altAnswers": [
+        "Schirm",
+        "einen Regenschirm",
+        "Regenschirm"
+      ],
+      "spokenPrompt": "Text: «Sam nimmt einen Schirm mit, obwohl die Sonne scheint.» Was nimmt Sam mit? …",
+      "verbatimSpeech": true
+    },
+    "lv4_44": {
+      "altAnswers": [
+        "Recycling"
+      ],
+      "spokenPrompt": "Text: «Die Klasse sammelt Papier für das Recycling.» Wofür sammelt sie Papier? …",
+      "verbatimSpeech": true
+    },
+    "lv4_45": {
+      "altAnswers": [
+        "Amsel"
+      ],
+      "spokenPrompt": "Text: «Auf dem höchsten Ast sitzt eine Amsel.» Welches Tier sitzt dort? …",
+      "verbatimSpeech": true
+    },
+    "lv4_46": {
+      "altAnswers": [
+        "Anleitung"
+      ],
+      "spokenPrompt": "Text: «Mara liest zuerst die Anleitung und baut danach das Modell.» Was liest sie zuerst? …",
+      "verbatimSpeech": true
+    },
+    "lv4_47": {
+      "altAnswers": [
+        "See",
+        "zum See"
+      ],
+      "spokenPrompt": "Text: «Der kleine Bach fliesst durch den Wald zum See.» Wohin fliesst er? …",
+      "verbatimSpeech": true
+    },
+    "lv4_48": {
+      "altAnswers": [
+        "Winter"
+      ],
+      "spokenPrompt": "Text: «Im Winter trägt Jan einen dicken Wollpullover.» Wann trägt Jan ihn? …",
+      "verbatimSpeech": true
+    },
+    "lv4_49": {
+      "altAnswers": [
+        "Akku"
+      ],
+      "spokenPrompt": "Text: «Weil der Akku leer ist, lädt Livia das Tablet.» Was ist leer? …",
+      "verbatimSpeech": true
+    },
+    "lv4_50": {
+      "altAnswers": [
+        "zehn Uhr",
+        "10 Uhr",
+        "um 10 Uhr",
+        "10:00"
+      ],
+      "spokenPrompt": "Text: «Das Museum öffnet um zehn Uhr und schliesst um fünf.» Wann öffnet es? …",
+      "verbatimSpeech": true
+    },
+    "ip4_10": {
+      "altAnswers": [
+        "oder"
+      ]
+    },
+    "ip4_12": {
+      "altAnswers": [
+        "Ergänzung",
+        "Zusatzinformation",
+        "Zusatzbemerkung",
+        "Bemerkung"
+      ]
+    },
+    "ip4_11": {
+      "question": "Welches Satzzeichen ist das letzte Zeichen der Abkürzung «Dr.»?",
+      "spokenPrompt": "Welches Satzzeichen ist das letzte Zeichen der Abkürzung «Dr.»?",
+      "verbatimSpeech": true
+    },
+    "ip4_27": {
+      "answer": "Ich mag Äpfel, Birnen und Kirschen."
+    },
+    "ip4_30": {
+      "answer": ", ,",
+      "hints": [
+        "Einschübe/Appositionen werden durch Kommas abgetrennt.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ip4_22": {
+      "hints": [
+        "Relativsätze werden durch Kommas abgetrennt.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ip4_33": {
+      "question": "Welcher Satz trennt einen Nebensatz mit einem Komma ab?",
+      "spokenPrompt": "Welcher Satz trennt einen Nebensatz mit einem Komma ab?",
+      "verbatimSpeech": true
+    },
+    "ip4_35": {
+      "options": [
+        "!",
+        "Punkt",
+        "Fragezeichen",
+        "Komma"
+      ],
+      "hints": [
+        "Es ist ein Ausruf der Bewunderung.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ip4_45": {
+      "question": "Ergänze: Im Rucksack sind diese Dinge___ Trinkflasche, Karte und Jacke.",
+      "spokenPrompt": "Ergänze: Im Rucksack sind diese Dinge… Trinkflasche, Karte und Jacke.",
+      "verbatimSpeech": true
+    },
+    "pp4_2": {
+      "question": "Das Buch berührt die obere Tischfläche. Das Buch liegt ___ dem Tisch. (auf/unter)",
+      "spokenPrompt": "Das Buch berührt die obere Tischfläche. Das Buch liegt … dem Tisch. (auf/unter)",
+      "verbatimSpeech": true
+    },
+    "pp4_4": {
+      "question": "Der Hund befindet sich auf der Vorderseite der Tür. Der Hund sitzt ___ der Tür. (vor/hinter)",
+      "spokenPrompt": "Der Hund befindet sich auf der Vorderseite der Tür. Der Hund sitzt … der Tür. (vor/hinter)",
+      "verbatimSpeech": true
+    },
+    "pp4_6": {
+      "question": "Das Bild ist an der Wand befestigt. Das Bild hängt ___ der Wand.",
+      "spokenPrompt": "Das Bild ist an der Wand befestigt. Das Bild hängt … der Wand.",
+      "verbatimSpeech": true
+    },
+    "pp4_10": {
+      "question": "Die Katze liegt auf der Sitzfläche. Die Katze schläft ___ dem Sofa.",
+      "spokenPrompt": "Die Katze liegt auf der Sitzfläche. Die Katze schläft … dem Sofa.",
+      "verbatimSpeech": true
+    },
+    "pp4_12": {
+      "question": "Der Hund begleitet uns. Wir gehen ___ dem Hund spazieren.",
+      "spokenPrompt": "Der Hund begleitet uns. Wir gehen … dem Hund spazieren.",
+      "verbatimSpeech": true
+    },
+    "pp4_14": {
+      "question": "Der Vogel ist höher als das Haus. Der Vogel fliegt ___ dem Haus.",
+      "spokenPrompt": "Der Vogel ist höher als das Haus. Der Vogel fliegt … dem Haus.",
+      "verbatimSpeech": true
+    },
+    "pp4_22": {
+      "question": "Die Eltern begleiten ihn. Er fährt ___ seinen Eltern nach Luzern.",
+      "answer": "mit",
+      "spokenPrompt": "Die Eltern begleiten ihn. Er fährt … seinen Eltern nach Luzern.",
+      "verbatimSpeech": true
+    },
+    "pp4_24": {
+      "question": "Die Schule steht direkt seitlich der Kirche. Die Schule ist ___ der Kirche. (auf der gleichen Seite einer Strasse)",
+      "spokenPrompt": "Die Schule steht direkt seitlich der Kirche. Die Schule ist … der Kirche. (auf der gleichen Seite einer Strasse)",
+      "verbatimSpeech": true
+    },
+    "pp4_28": {
+      "question": "Gemeint ist das Zusammenwohnen im Haus der Grossmutter. Sie wohnt ___ ihrer Grossmutter.",
+      "spokenPrompt": "Gemeint ist das Zusammenwohnen im Haus der Grossmutter. Sie wohnt … ihrer Grossmutter.",
+      "verbatimSpeech": true
+    },
+    "pp4_30": {
+      "question": "Die Fahrt findet innerhalb der Ferien statt. Wir fahren ___ den Ferien ans Meer.",
+      "spokenPrompt": "Die Fahrt findet innerhalb der Ferien statt. Wir fahren … den Ferien ans Meer.",
+      "verbatimSpeech": true
+    },
+    "pp4_34": {
+      "question": "Das Buch soll auf die obere Tischfläche. Er legt das Buch ___ den Tisch. (Bewegung → Akkusativ)",
+      "spokenPrompt": "Das Buch soll auf die obere Tischfläche. Er legt das Buch … den Tisch. (Bewegung → Akkusativ)",
+      "verbatimSpeech": true
+    },
+    "pp4_36": {
+      "question": "Das Buch berührt die obere Tischfläche. Ergänze: Das Buch liegt ___ dem Tisch.",
+      "spokenPrompt": "Das Buch berührt die obere Tischfläche. Ergänze: Das Buch liegt … dem Tisch.",
+      "verbatimSpeech": true
+    },
+    "pp4_37": {
+      "question": "Die Katze befindet sich unterhalb des Sofas. Ergänze: Die Katze sitzt ___ dem Sofa.",
+      "spokenPrompt": "Die Katze befindet sich unterhalb des Sofas. Ergänze: Die Katze sitzt … dem Sofa.",
+      "verbatimSpeech": true
+    },
+    "pp4_38": {
+      "question": "Wir benutzen die Oberseite der Brücke. Ergänze: Wir gehen ___ die Brücke.",
+      "spokenPrompt": "Wir benutzen die Oberseite der Brücke. Ergänze: Wir gehen … die Brücke.",
+      "verbatimSpeech": true
+    },
+    "pp4_39": {
+      "question": "Der Spalt liegt unterhalb des Bettes. Ergänze: Der Ball rollt in den Spalt ___ dem Bett.",
+      "spokenPrompt": "Der Spalt liegt unterhalb des Bettes. Ergänze: Der Ball rollt in den Spalt … dem Bett.",
+      "verbatimSpeech": true
+    },
+    "pp4_43": {
+      "question": "Der Grossvater ist der Empfänger. Ergänze: Der Brief ist ___ meinen Grossvater.",
+      "spokenPrompt": "Der Grossvater ist der Empfänger. Ergänze: Der Brief ist … meinen Grossvater.",
+      "verbatimSpeech": true
+    },
+    "pp4_44": {
+      "question": "Gemeint ist der Zweck des Lernens. Ergänze: Seit Montag lernt Ben ___ die Prüfung.",
+      "spokenPrompt": "Gemeint ist der Zweck des Lernens. Ergänze: Seit Montag lernt Ben … die Prüfung.",
+      "verbatimSpeech": true
+    },
+    "pp4_45": {
+      "question": "Man geht in den Wald hinein und auf der anderen Seite hinaus. Ergänze: Der Weg führt ___ den Wald.",
+      "spokenPrompt": "Man geht in den Wald hinein und auf der anderen Seite hinaus. Ergänze: Der Weg führt … den Wald.",
+      "verbatimSpeech": true
+    },
+    "pp4_46": {
+      "question": "Der Regen wäre eigentlich ein Grund, drinnen zu bleiben. Ergänze: ___ des Regens spielen wir draussen.",
+      "spokenPrompt": "Der Regen wäre eigentlich ein Grund, drinnen zu bleiben. Ergänze: … des Regens spielen wir draussen.",
+      "verbatimSpeech": true
+    },
+    "pp4_47": {
+      "question": "Das Treffen findet später als das Mittagessen statt. Ergänze: Wir treffen uns ___ dem Mittagessen.",
+      "spokenPrompt": "Das Treffen findet später als das Mittagessen statt. Ergänze: Wir treffen uns … dem Mittagessen.",
+      "verbatimSpeech": true
+    },
+    "pp4_48": {
+      "question": "Wir lösen die Aufgabe zur gleichen Zeit wie die Pause. Ergänze: ___ der Pause lösen wir die Aufgabe.",
+      "spokenPrompt": "Wir lösen die Aufgabe zur gleichen Zeit wie die Pause. Ergänze: … der Pause lösen wir die Aufgabe.",
+      "verbatimSpeech": true
+    },
+    "pp4_49": {
+      "question": "Danach ist der Vogel von vorne nicht mehr sichtbar. Ergänze: Der Vogel fliegt ___ das Haus.",
+      "spokenPrompt": "Danach ist der Vogel von vorne nicht mehr sichtbar. Ergänze: Der Vogel fliegt … das Haus.",
+      "verbatimSpeech": true
+    },
+    "pp4_50": {
+      "question": "Acht Uhr ist der Beginn der Öffnungszeit. Ergänze: Der Laden ist ___ acht Uhr geöffnet.",
+      "altAnswers": [
+        "seit"
+      ],
+      "spokenPrompt": "Acht Uhr ist der Beginn der Öffnungszeit. Ergänze: Der Laden ist … acht Uhr geöffnet.",
+      "verbatimSpeech": true
+    },
+    "pp4_8": {
+      "altAnswers": [
+        "von"
+      ],
+      "spokenPrompt": "Er kommt … Zürich. (Herkunft)",
+      "verbatimSpeech": true
+    },
+    "pp4_40": {
+      "altAnswers": [
+        "bei"
+      ]
+    },
+    "pp4_41": {
+      "altAnswers": [
+        "von"
+      ]
+    },
+    "pp4_13": {
+      "question": "Das Auto fährt in die Stadt hinein und am anderen Ende hinaus. Welche Präposition passt? «Das Auto fährt ___ die Stadt.»",
+      "spokenPrompt": "Das Auto fährt in die Stadt hinein und am anderen Ende hinaus. Welche Präposition passt? «Das Auto fährt … die Stadt.»",
+      "verbatimSpeech": true
+    },
+    "pp4_16": {
+      "question": "Er wartet ___ den Bus.",
+      "spokenPrompt": "Er wartet … den Bus.",
+      "verbatimSpeech": true
+    },
+    "pp4_20": {
+      "question": "Das Geschenk soll dir gehören. Das Geschenk ist ___ dich.",
+      "spokenPrompt": "Das Geschenk soll dir gehören. Das Geschenk ist … dich.",
+      "verbatimSpeech": true
+    },
+    "pp4_21": {
+      "question": "Sie setzt sich für mehr Gerechtigkeit ein. Welche Präposition passt? «Sie kämpft ___ Gerechtigkeit.»",
+      "spokenPrompt": "Sie setzt sich für mehr Gerechtigkeit ein. Welche Präposition passt? «Sie kämpft … Gerechtigkeit.»",
+      "verbatimSpeech": true
+    },
+    "pp4_27": {
+      "question": "Er und seine Lehrerin führen ein Gespräch miteinander. Welche Präposition passt? «Er spricht ___ seiner Lehrerin.»",
+      "spokenPrompt": "Er und seine Lehrerin führen ein Gespräch miteinander. Welche Präposition passt? «Er spricht … seiner Lehrerin.»",
+      "verbatimSpeech": true
+    },
+    "pp4_32": {
+      "question": "Das Flugzeug bleibt höher als die Wolken. Es fliegt ___ den Wolken.",
+      "spokenPrompt": "Das Flugzeug bleibt höher als die Wolken. Es fliegt … den Wolken.",
+      "verbatimSpeech": true
+    },
+    "pp4_33": {
+      "answer": "Bei einer Ortsangabe (Wo?)",
+      "options": [
+        "Bei einer Richtungsangabe (Wohin?)",
+        "Bei einer Ortsangabe (Wo?)",
+        "Immer",
+        "Nie"
+      ],
+      "hints": [
+        "Vergleiche: im Park laufen und in den Park laufen.",
+        "Entscheidend ist, ob ein Ort oder ein Ziel angegeben wird."
+      ]
+    },
+    "ws4_1": {
+      "answer": "Der Grundteil eines Wortes, der sich auch verändern kann",
+      "options": [
+        "Ein Suffix",
+        "Der Grundteil eines Wortes, der sich auch verändern kann",
+        "Ein Artikel",
+        "Ein Präfix"
+      ]
+    },
+    "ws4_17": {
+      "options": [
+        "Der Grundteil eines Wortes, der sich auch verändern kann",
+        "Etwas geschieht falsch",
+        "Alle Wörter, die denselben Wortstamm haben",
+        "Es verändert nur die Zeitform"
+      ],
+      "question": "Welche Bedeutung hat «ver-» in «sich verlaufen»?",
+      "answer": "Etwas geschieht falsch",
+      "spokenPrompt": "Welche Bedeutung hat «ver-» in «sich verlaufen»?",
+      "verbatimSpeech": true
+    },
+    "ws4_4": {
+      "question": "Welcher Wortstamm steckt in «Schreiber» und «schreiben»?",
+      "spokenPrompt": "Welcher Wortstamm steckt in «Schreiber» und «schreiben»?",
+      "verbatimSpeech": true
+    },
+    "ws4_6": {
+      "altAnswers": [
+        "un"
+      ],
+      "spokenPrompt": "Das Präfix in 'unmöglich' ist ….",
+      "verbatimSpeech": true
+    },
+    "ws4_8": {
+      "altAnswers": [
+        "heit"
+      ],
+      "spokenPrompt": "Das Suffix in 'Freiheit' ist ….",
+      "verbatimSpeech": true
+    },
+    "ws4_10": {
+      "question": "Nenne die Vorleseveranstaltung aus der Wortfamilie «lesen»: ___",
+      "spokenPrompt": "Nenne die Vorleseveranstaltung aus der Wortfamilie «lesen»: …",
+      "verbatimSpeech": true
+    },
+    "ws4_15": {
+      "options": [
+        "Fähre, Farbe, Fahrrad",
+        "Fahrer, Fahrt, Abfahrt",
+        "Faser, Faden, Farbe",
+        "Faden, Fabrik, Fahrplan"
+      ],
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Gleicher Stamm 'fahr-'."
+      ]
+    },
+    "ws4_16": {
+      "hints": [
+        "Vergleiche die Wortart von «Hoffnung» und «Meinung».",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Das Suffix '-ung' bildet ein ….",
+      "verbatimSpeech": true
+    },
+    "ws4_22": {
+      "question": "Bilde aus «kommen» mit der Vorsilbe «be-» ein Verb: ___",
+      "spokenPrompt": "Bilde aus «kommen» mit der Vorsilbe «be-» ein Verb: …",
+      "verbatimSpeech": true
+    },
+    "ws4_28": {
+      "question": "Bilde aus «arbeiten» mit «be-» das Partizip II: ___",
+      "spokenPrompt": "Bilde aus «arbeiten» mit «be-» das Partizip II: …",
+      "verbatimSpeech": true
+    },
+    "ws4_32": {
+      "question": "Bilde aus «Arbeit» mit «-s-» und «-los» ein Adjektiv: ___",
+      "spokenPrompt": "Bilde aus «Arbeit» mit «-s-» und «-los» ein Adjektiv: …",
+      "verbatimSpeech": true
+    },
+    "ws4_36": {
+      "question": "Nenne den Wortstamm des ersten Teils von «Spielplatz»: ___",
+      "spokenPrompt": "Nenne den Wortstamm des ersten Teils von «Spielplatz»: …",
+      "verbatimSpeech": true
+    },
+    "ws4_38": {
+      "question": "Ergänze das Nomen für geschriebene Zeichen: schreiben, Schreiber, ___.",
+      "spokenPrompt": "Ergänze das Nomen für geschriebene Zeichen: schreiben, Schreiber, ….",
+      "verbatimSpeech": true
+    },
+    "ws4_39": {
+      "question": "Bilde aus «laufen» ein Nomen ohne Vorsilbe und ohne Endung: ___.",
+      "spokenPrompt": "Bilde aus «laufen» ein Nomen ohne Vorsilbe und ohne Endung: ….",
+      "verbatimSpeech": true
+    },
+    "ws4_40": {
+      "altAnswers": [
+        "Lernender",
+        "Lerner",
+        "Lernerin",
+        "Lernende Person"
+      ]
+    },
+    "ws4_46": {
+      "question": "Ergänze das Adjektiv mit «-bar»: sehen, Aussicht, ___.",
+      "spokenPrompt": "Ergänze das Adjektiv mit «-bar»: sehen, Aussicht, ….",
+      "verbatimSpeech": true
+    },
+    "g4d6": {
+      "hints": [
+        "Subjekt = Wer? Prädikat = Was tut? Objekt = Wen/Was?",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g4sg1b": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4sg2n": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4d13": {
+      "hints": [
+        "Perfekt = haben/sein + Partizip.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g4d16": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Präsens = jetzt, Präteritum = früher (geschriebene Form), Perfekt = abgeschlossen (gesprochene Form)."
+      ]
+    },
+    "g4zf1a": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Die Zahl liegt zwischen 4 und 8."
+      ],
+      "spokenPrompt": "Wie viele Zeitformen gibt es im Deutschen? (Hauptformen)",
+      "verbatimSpeech": true
+    },
+    "g4zf1h": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g4d24": {
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g4rs1i": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "wa4_3": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa4_11": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa4_13": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa4_15": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa4_18": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa4_26": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "wa4_33": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "pr4_12": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "pr4_13": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "pr4_33": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv4_1": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Die anderen Antworten (Jedes Wort genau lesen, Laut vorlesen) sind nicht korrekt."
+      ],
+      "spokenPrompt": "Was macht man beim Überfliegen eines Textes?",
+      "verbatimSpeech": true
+    },
+    "lv4_5": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Schluss in einem Text?",
+      "verbatimSpeech": true
+    },
+    "lv4_9": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "lv4_11": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv4_12": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv4_13": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Wofür steht «Ton» in einem Text?",
+      "verbatimSpeech": true
+    },
+    "lv4_14": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist die Textsorte?",
+      "verbatimSpeech": true
+    },
+    "lv4_15": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Textstruktur?",
+      "verbatimSpeech": true
+    },
+    "lv4_19": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv4_20": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Kontext beim Verstehen unbekannter Wörter?",
+      "verbatimSpeech": true
+    },
+    "lv4_25": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv4_30": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv4_31": {
+      "hints": [
+        "Überlege, welche Regel oder Textstelle zur Frage passt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ip4_8": {
+      "hints": [
+        "Der häufigste Abschluss eines Satzes.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ip4_15": {
+      "hints": [
+        "Nord-Süd, Eis-Kaffee — welches Zeichen?",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ip4_32": {
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ws4_3": {
+      "hints": [
+        "fahren, Fahrer, Fahrt, abfahren = Wortfamilie?",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ws4_5": {
+      "hints": [
+        "be-, ver-, un- kommen VOR dem Stamm.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ],
+      "spokenPrompt": "Was ist ein Präfix?",
+      "verbatimSpeech": true
+    },
+    "ws4_7": {
+      "hints": [
+        "-heit, -ung, -er kommen NACH dem Stamm.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ],
+      "spokenPrompt": "Was ist ein Suffix?",
+      "verbatimSpeech": true
+    },
+    "ws4_11": {
+      "hints": [
+        "möglich → unmöglich — was macht 'un-'?",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ],
+      "spokenPrompt": "Was macht ein Präfix mit der Wortbedeutung?",
+      "verbatimSpeech": true
+    },
+    "ws4_19": {
+      "hints": [
+        "freund-lich, natur-lich, möglich → welche Wortart?",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ],
+      "spokenPrompt": "Was macht das Suffix '-lich'?",
+      "verbatimSpeech": true
+    },
+    "ws4_23": {
+      "hints": [
+        "lehren → Lehrer (Ableitung durch -er).",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ws4_29": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "ws4_31": {
+      "hints": [
+        "Freund-schaft, Mann-schaft — welche Wortart?",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ],
+      "spokenPrompt": "Was macht das Suffix '-schaft'?",
+      "verbatimSpeech": true
+    },
+    "ws4_33": {
+      "hints": [
+        "lang → Länge, gross → Grösse, kurz → kürzer.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "pr4_9": {
+      "spokenPrompt": "Was ist ein Reflexivpronomen?",
+      "verbatimSpeech": true
+    },
+    "pr4_16": {
+      "spokenPrompt": "Dativ von «sie» (Singular):",
+      "verbatimSpeech": true
+    },
+    "pr4_19": {
+      "spokenPrompt": "«Ich gebe … das Buch» (er): Welches Pronomen?",
+      "verbatimSpeech": true
+    },
+    "pr4_20": {
+      "spokenPrompt": "«Ich sehe …» (du): Akkusativ?",
+      "verbatimSpeech": true
+    },
+    "pp4_7": {
+      "spokenPrompt": "Ich fahre … Bern. (mit Ziel)",
+      "verbatimSpeech": true
+    },
+    "ws4_20": {
+      "spokenPrompt": "Bilde ein Nomen mit Suffix '-heit': 'gesund' → …",
+      "verbatimSpeech": true
+    },
+    "ws4_21": {
+      "spokenPrompt": "Welche Wortart hat das Suffix '-ig'?",
+      "verbatimSpeech": true
+    },
+    "ws4_24": {
+      "spokenPrompt": "Das Gegenteil von 'glücklich' gebildet mit Präfix: …",
+      "verbatimSpeech": true
+    },
+    "ws4_26": {
+      "spokenPrompt": "Von 'Kraft' mit Suffix '-ig': …",
+      "verbatimSpeech": true
+    },
+    "ws4_34": {
+      "spokenPrompt": "Präfix 'zer-' in 'zerbrechen' bedeutet ….",
+      "verbatimSpeech": true
+    },
+    "ws4_35": {
+      "spokenPrompt": "Welche Wortart hat das Suffix '-sam'?",
+      "verbatimSpeech": true
+    },
+    "g4hoer6": {
+      "verbatimSpeech": true
+    },
+    "g4hoer7": {
+      "verbatimSpeech": true
+    },
+    "g4hoer8": {
+      "verbatimSpeech": true
+    },
+    "g4hoer9": {
+      "verbatimSpeech": true
+    },
+    "g4hoer10": {
+      "verbatimSpeech": true
+    },
+    "g4hoer16": {
+      "verbatimSpeech": true
+    },
+    "g4hoer17": {
+      "verbatimSpeech": true
+    },
+    "g4hoer18": {
+      "verbatimSpeech": true
+    },
+    "g4hoer19": {
+      "verbatimSpeech": true
+    },
+    "g4hoer20": {
+      "verbatimSpeech": true
+    },
+    "g4hoer36": {
+      "verbatimSpeech": true
+    },
+    "g4hoer37": {
+      "verbatimSpeech": true
+    },
+    "g4hoer38": {
+      "verbatimSpeech": true
+    },
+    "g4hoer39": {
+      "verbatimSpeech": true
+    },
+    "g4hoer41": {
+      "verbatimSpeech": true
+    },
+    "g4hoer42": {
+      "verbatimSpeech": true
+    },
+    "g4hoer43": {
+      "verbatimSpeech": true
+    },
+    "g4hoer44": {
+      "verbatimSpeech": true
+    },
+    "g4hoer45": {
+      "verbatimSpeech": true
+    },
+    "g4hoer46": {
+      "verbatimSpeech": true
+    },
+    "g4hoer47": {
+      "verbatimSpeech": true
+    },
+    "g4hoer48": {
+      "verbatimSpeech": true
+    },
+    "g4hoer49": {
+      "verbatimSpeech": true
+    },
+    "g4hoer50": {
+      "verbatimSpeech": true
+    },
+    "g4hoer11": {
+      "question": "Was soll am Schluss getan werden?",
+      "listeningText": "Lies den Abschnitt. Unterstreiche danach zwei Schlüsselwörter und formuliere eine Überschrift. Was soll am Schluss getan werden? Antwort 1: die Höhe in die Tabelle übertragen. Antwort 2: eine Überschrift formulieren. Antwort 3: das Ergebnis runden. Antwort 4: die Datei im Klassenordner speichern."
+    },
+    "g4hoer13": {
+      "question": "Was soll am Schluss getan werden?",
+      "listeningText": "Öffne die Datei, ergänze deinen Namen und speichere sie danach im Klassenordner. Was soll am Schluss getan werden? Antwort 1: eine Überschrift formulieren. Antwort 2: das Ergebnis runden. Antwort 3: die Höhe in die Tabelle übertragen. Antwort 4: die Datei im Klassenordner speichern."
+    },
+    "g4hoer14": {
+      "question": "Was soll am Schluss getan werden?",
+      "listeningText": "Betrachte die Karte. Suche den höchsten Punkt und übertrage seine Höhe in die Tabelle. Was soll am Schluss getan werden? Antwort 1: das Ergebnis runden. Antwort 2: die Datei im Klassenordner speichern. Antwort 3: die Höhe in die Tabelle übertragen. Antwort 4: eine Überschrift formulieren."
+    }
+  }
+}
