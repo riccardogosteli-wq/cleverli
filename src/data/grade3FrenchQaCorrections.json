@@ -678,17 +678,11 @@
     "famille-amis-3-cloze-1": {
       "altAnswers": [
         "soeur"
-      ],
-      "question": "L’autre fille de mes parents est ma ___.",
-      "spokenPrompt": "L’autre fille de mes parents est ma …."
-    },
-    "famille-amis-3-cloze-2": {
-      "question": "L’autre fils de mes parents est mon ___.",
-      "spokenPrompt": "L’autre fils de mes parents est mon …."
+      ]
     },
     "couleurs-vetements-3-context-1": {
-      "question": "Une tomate mûre de variété rouge: quelle est sa couleur?",
-      "spokenPrompt": "Une tomate mûre de variété rouge: quelle est sa couleur?"
+      "question": "Quelle est généralement la couleur d’une tomate mûre?",
+      "spokenPrompt": "Quelle est généralement la couleur d’une tomate mûre?"
     },
     "couleurs-vetements-3-context-2": {
       "question": "Quel vêtement a deux jambes séparées, une pour chaque jambe du corps?",
@@ -747,6 +741,55 @@
           "emoji": "🏙️"
         }
       ]
+    },
+    "bonjour-classe-3-cloze-4": {
+      "question": "Complète avec le verbe qui signifie «hör zu»: Le professeur dit «___ et répète.»",
+      "spokenPrompt": "Complète avec le verbe qui signifie «hör zu»: Le professeur dit «… et répète.»"
+    },
+    "bonjour-classe-3-cloze-5": {
+      "question": "Complète avec le mot qui signifie «ja»: Je réponds positivement ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «ja»: Je réponds positivement …."
+    },
+    "je-me-presente-3-cloze-5": {
+      "question": "Complète avec le mot qui signifie «gut»: Comment ça va? — Très ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «gut»: Comment ça va? — Très …."
+    },
+    "ecole-objets-3-cloze-3": {
+      "question": "Complète avec le mot qui signifie «Lineal»: La ___ sert à mesurer.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Lineal»: La … sert à mesurer."
+    },
+    "animaux-3-cloze-1": {
+      "question": "Complète avec le mot qui signifie «Katze»: Le ___ miaule.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Katze»: Le … miaule."
+    },
+    "animaux-3-cloze-2": {
+      "question": "Complète avec le mot qui signifie «Hund»: Le ___ aboie.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Hund»: Le … aboie."
+    },
+    "suisse-romande-3-cloze-1": {
+      "question": "Complète avec le mot qui signifie «Stadt»: Genève est une ___ suisse.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Stadt»: Genève est une … suisse."
+    },
+    "suisse-romande-3-cloze-3": {
+      "question": "Complète avec le mot qui signifie «See»: Le Léman est un ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «See»: Le Léman est un …."
+    },
+    "suisse-romande-3-cloze-5": {
+      "question": "Complète avec le mot qui signifie «Lied»: Une ___ a des paroles et une mélodie.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Lied»: Une … a des paroles et une mélodie."
+    },
+    "bonjour-classe-3-cloze-3": {
+      "altAnswers": [
+        "merci beaucoup"
+      ]
+    },
+    "je-me-presente-3-cloze-4": {
+      "question": "Complète avec la préposition qui signifie «aus»: Je viens ___ Suisse.",
+      "spokenPrompt": "Complète avec la préposition qui signifie «aus»: Je viens … Suisse."
+    },
+    "animaux-3-cloze-4": {
+      "question": "Complète avec le mot qui signifie «Wasser»: Le poisson nage dans l’___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Wasser»: Le poisson nage dans l’…."
     }
   }
 }
