@@ -519,6 +519,10 @@
     "dm3-12": {
       "altAnswers": [
         "12"
+      ],
+      "hints": [
+        "Count the months from January through December.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
     "dm3-24": {
@@ -539,6 +543,10 @@
     "dm3-46": {
       "altAnswers": [
         "1st"
+      ],
+      "hints": [
+        "Think of Swiss National Day and use an ordinal number for its date.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
     "ss3-12": {
