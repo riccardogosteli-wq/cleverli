@@ -326,7 +326,7 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
   const topicDescription = buildTopicDescription(topic, grade, subject, lang, topicTitle);
   const exerciseTypes = getTopicExerciseTypes(topic, lang);
   const visibleSampleExerciseCards = [...sampleExerciseCards]
-    .map(card => ((grade === 1 && (subject === "german" || subject === "science")) || (grade === 2 && (subject === "math" || subject === "german" || subject === "science")) || (grade === 3 && (subject === "math" || subject === "german" || subject === "science" || subject === "english" || subject === "french" || subject === "mi")) || (grade === 4 && (subject === "german" || subject === "science"))) && lang === "de"
+    .map(card => ((grade === 1 && (subject === "german" || subject === "science")) || (grade === 2 && (subject === "math" || subject === "german" || subject === "science")) || (grade === 3 && (subject === "math" || subject === "german" || subject === "science" || subject === "english" || subject === "french" || subject === "mi")) || (grade === 4 && (subject === "german" || subject === "science" || subject === "english"))) && lang === "de"
       ? { ...card, exercise: localizeExercise(card.exercise, "de") }
       : card)
     .sort((a, b) => (previewTypePriority[a.exercise.type] ?? 20) - (previewTypePriority[b.exercise.type] ?? 20))

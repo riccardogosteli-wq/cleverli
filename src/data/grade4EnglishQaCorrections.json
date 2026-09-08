@@ -1,0 +1,1075 @@
+{
+  "patches": {
+    "dr4-1": {
+      "hints": [
+        "Think about the moment when sleep ends.",
+        "Die anderen Antworten (Ich schlafe, Ich esse) sind nicht korrekt."
+      ]
+    },
+    "dr4-2": {
+      "hints": [
+        "Think about a daily action that keeps your mouth clean.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "dr4-3": {
+      "altAnswers": [
+        "have"
+      ]
+    },
+    "dr4-4": {
+      "hints": [
+        "Think about travelling to the place where lessons happen.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "dr4-12": {
+      "hints": [
+        "Read the number word in the time expression.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "dr4-15": {
+      "hints": [
+        "Think about putting your clothes on before leaving home.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "dr4-18": {
+      "altAnswers": [
+        "He always eats breakfast at eight o’clock.",
+        "He always has breakfast at 8."
+      ]
+    },
+    "dr4-21": {
+      "hints": [
+        "Keep the question word and the time phrase in your translation.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "dr4-24": {
+      "altAnswers": [
+        "I get up at six thirty."
+      ]
+    },
+    "dr4-26": {
+      "spokenPrompt": "I blank 1 (brush) my teeth before I blank 2 (go) to bed. Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "dr4-28": {
+      "altAnswers": [
+        "My mother never sleeps for a long time."
+      ]
+    },
+    "dr4-34": {
+      "spokenPrompt": "I blank 1 (do) my homework and then I blank 2 (watch) TV. Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "dr4-36": {
+      "altAnswers": [
+        "I get up, take a shower, eat breakfast and then go to school."
+      ]
+    },
+    "dr4-38": {
+      "altAnswers": [
+        "My sister never makes her bed, but I always do."
+      ]
+    },
+    "dr4-42": {
+      "altAnswers": [
+        "What do you usually do in the evening?"
+      ]
+    },
+    "dr4-43": {
+      "hints": [
+        "Check the short answer and the verb form in both sentences.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "dr4-44": {
+      "spokenPrompt": "Write: 'After school, I blank 1 (play) with friends, then I blank 2 (do) homework, and finally I blank 3 (have) dinner.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "dr4-46": {
+      "altAnswers": [
+        "does not"
+      ]
+    },
+    "eng4-rich-routine-match-1": {
+      "pairs": [
+        {
+          "id": "wake",
+          "label": "wake up",
+          "emoji": "⏰"
+        },
+        {
+          "id": "aufstehen",
+          "label": "aufwachen",
+          "emoji": "🛏️"
+        },
+        {
+          "id": "breakfast",
+          "label": "have breakfast",
+          "emoji": "🥣"
+        },
+        {
+          "id": "fruehstueck",
+          "label": "frühstücken",
+          "emoji": "🍞"
+        },
+        {
+          "id": "school",
+          "label": "go to school",
+          "emoji": "🎒"
+        },
+        {
+          "id": "schule",
+          "label": "zur Schule gehen",
+          "emoji": "🏫"
+        },
+        {
+          "id": "bed",
+          "label": "go to bed",
+          "emoji": "🌙"
+        },
+        {
+          "id": "bett",
+          "label": "ins Bett gehen",
+          "emoji": "🛌"
+        }
+      ]
+    },
+    "eng4-rich-routine-drag-1": {
+      "question": "Order this routine: first I wake up, then wash my face, then have breakfast, and finally go to school.",
+      "spokenPrompt": "Order this routine: first I wake up, then wash my face, then have breakfast, and finally go to school.",
+      "verbatimSpeech": true
+    },
+    "mh4-6": {
+      "altAnswers": [
+        "underneath"
+      ]
+    },
+    "mh4-11": {
+      "altAnswers": [
+        "close to"
+      ]
+    },
+    "mh4-13": {
+      "altAnswers": [
+        "beside",
+        "next to",
+        "near"
+      ]
+    },
+    "mh4-19": {
+      "question": "Which word means 'zwischen' and can describe a position?",
+      "spokenPrompt": "Which word means 'zwischen' and can describe a position?",
+      "verbatimSpeech": true
+    },
+    "mh4-20": {
+      "altAnswers": [
+        "The book lies under the chair."
+      ]
+    },
+    "mh4-21": {
+      "spokenPrompt": "Where is the library? 'blank to the post office.'",
+      "verbatimSpeech": true
+    },
+    "mh4-27": {
+      "question": "The cat is sitting on top of the chair. Complete: 'The cat is ___ the chair.'",
+      "spokenPrompt": "The cat is sitting on top of the chair. Complete: 'The cat is blank the chair.'",
+      "verbatimSpeech": true
+    },
+    "mh4-28": {
+      "altAnswers": [
+        "The hospital is a long way from here."
+      ]
+    },
+    "mh4-30": {
+      "altAnswers": [
+        "beside",
+        "next to"
+      ]
+    },
+    "mh4-38": {
+      "altAnswers": [
+        "There are five rooms in my apartment: a living room, a kitchen, two bedrooms and a bathroom."
+      ]
+    },
+    "mh4-39": {
+      "question": "The supermarket is beside the bank and across from the church. Complete: 'It's ___ the bank, ___ the church.'",
+      "spokenPrompt": "The supermarket is beside the bank and across from the church. Complete: 'It's blank the bank, blank the church.'",
+      "verbatimSpeech": true
+    },
+    "mh4-40": {
+      "altAnswers": [
+        "The book is beside the lamp which is on the table."
+      ]
+    },
+    "mh4-42": {
+      "question": "Write directions using the meanings 'neben' and 'auf der anderen Strassenseite': 'The bakery is [1] the park, [2] the road from the school.' Write both missing parts in order: ___",
+      "spokenPrompt": "Write directions using the meanings 'neben' and 'auf der anderen Strassenseite': 'The bakery is blank 1 the park, blank 2 the road from the school.' Write both missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "mh4-44": {
+      "altAnswers": [
+        "My room is not large, but it is cozy and bright."
+      ]
+    },
+    "mh4-45": {
+      "question": "The cat is by the window and hidden behind the curtain. Complete: 'The cat is sitting ___ the window, ___ the curtain.'",
+      "spokenPrompt": "The cat is by the window and hidden behind the curtain. Complete: 'The cat is sitting blank the window, blank the curtain.'",
+      "verbatimSpeech": true
+    },
+    "mh4-48": {
+      "altAnswers": [
+        "The picture hangs above the desk in my room."
+      ]
+    },
+    "eng4-rich-home-memory-1": {
+      "question": "Find two identical cards for each room or activity.",
+      "hints": [
+        "Remember where each card is.",
+        "Match the same word or phrase twice."
+      ],
+      "spokenPrompt": "Find two identical cards for each room or activity.",
+      "verbatimSpeech": true
+    },
+    "sh4-2": {
+      "hints": [
+        "Think about an ability involving movement in water.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "sh4-3": {
+      "altAnswers": [
+        "to play"
+      ],
+      "hints": [
+        "After 'like', an -ing form is possible; an infinitive can also be correct.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sh4-6": {
+      "altAnswers": [
+        "to read"
+      ],
+      "hints": [
+        "After 'like', an -ing form is possible; an infinitive can also be correct.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sh4-10": {
+      "altAnswers": [
+        "to listen to"
+      ],
+      "hints": [
+        "After 'like', an -ing form is possible; an infinitive can also be correct. You listen 'to' music.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sh4-11": {
+      "options": [
+        "Ich hasse es zu tanzen.",
+        "Ich liebe es zu tanzen.",
+        "Ich tanze gut.",
+        "Ich möchte tanzen."
+      ]
+    },
+    "sh4-14": {
+      "altAnswers": [
+        "to get"
+      ],
+      "hints": [
+        "After 'hate', an -ing form is possible; an infinitive can also be correct.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sh4-15": {
+      "hints": [
+        "Think about enjoying an activity with colours and brushes.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sh4-16": {
+      "altAnswers": [
+        "I can play tennis well, but I cannot ski."
+      ]
+    },
+    "sh4-22": {
+      "altAnswers": [
+        "cannot"
+      ]
+    },
+    "sh4-23": {
+      "question": "Which sentence uses 'play' correctly with a musical instrument?",
+      "options": [
+        "I play football.",
+        "I play swimming.",
+        "I play the piano.",
+        "I play to the piano."
+      ],
+      "spokenPrompt": "Which sentence uses 'play' correctly with a musical instrument?",
+      "verbatimSpeech": true
+    },
+    "sh4-24": {
+      "hints": [
+        "Begin with the modal verb and use the instrument name.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sh4-25": {
+      "hints": [
+        "Think about doing well in a school subject.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "sh4-26": {
+      "altAnswers": [
+        "to run"
+      ],
+      "hints": [
+        "After 'doesn't like', an -ing form is possible; an infinitive can also be correct.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sh4-28": {
+      "altAnswers": [
+        "cannot"
+      ]
+    },
+    "sh4-31": {
+      "hints": [
+        "Choose a question about interests rather than personal details.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sh4-32": {
+      "altAnswers": [
+        "I play basketball at a club."
+      ]
+    },
+    "sh4-38": {
+      "altAnswers": [
+        "My brother plays the piano and is very good at it, but I cannot play an instrument."
+      ]
+    },
+    "sh4-40": {
+      "hints": [
+        "Use a modal question and the instrument name.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sh4-41": {
+      "question": "Which question specifically asks which sports someone does?",
+      "spokenPrompt": "Which question specifically asks which sports someone does?",
+      "verbatimSpeech": true
+    },
+    "sh4-42": {
+      "altAnswers": [
+        "I prefer tennis to football because tennis is more fun."
+      ]
+    },
+    "sh4-44": {
+      "altAnswers": [
+        "she / she"
+      ],
+      "spokenPrompt": "Write the question: 'Can blank 1 (you/she) dance?' Answer: 'Yes, blank 2 (I/she) can.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "sh4-46": {
+      "altAnswers": [
+        "in / to paint"
+      ],
+      "spokenPrompt": "She is interested blank 1 art and loves blank 2 (paint) pictures. Write all missing parts in order: blank",
+      "verbatimSpeech": true,
+      "hints": [
+        "'interested in'; after 'loves' an -ing form is possible; an infinitive can also be correct.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "sh4-47": {
+      "question": "Which sentence includes the definite article before the musical instrument?",
+      "answer": "I play the piano.",
+      "options": [
+        "I play piano.",
+        "I play the piano.",
+        "I practise piano.",
+        "I enjoy piano."
+      ],
+      "hints": [
+        "Look for a word placed before the instrument name.",
+        "The task asks about the definite article, not whether a sentence without it is possible."
+      ],
+      "spokenPrompt": "Which sentence includes the definite article before the musical instrument?",
+      "verbatimSpeech": true
+    },
+    "fs4-1": {
+      "hints": [
+        "Think about asking for the price of something.",
+        "Die anderen Antworten (Was ist das?, Haben Sie das?) sind nicht korrekt."
+      ]
+    },
+    "fs4-2": {
+      "hints": [
+        "Think about a polite offer, not a question about habits.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fs4-3": {
+      "altAnswers": [
+        "thank you"
+      ]
+    },
+    "fs4-18": {
+      "altAnswers": [
+        "I would like a kilogram of apples, please."
+      ]
+    },
+    "fs4-21": {
+      "hints": [
+        "Think about the paper you receive after paying.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fs4-22": {
+      "question": "Compare prices: the apples cost 4 francs, the oranges cost 2 francs. The apples are [1] expensive. The oranges are [2] (cheap). Write both missing parts in order: ___",
+      "spokenPrompt": "Compare prices: the apples cost 4 francs, the oranges cost 2 francs. The apples are blank 1 expensive. The oranges are blank 2 (cheap). Write both missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fs4-23": {
+      "hints": [
+        "Ask where to locate the item, using the verb find.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fs4-24": {
+      "spokenPrompt": "I need to buy blank 1 (some) milk. Do you blank 2 (have) any? Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fs4-25": {
+      "hints": [
+        "Think about a temporarily reduced price.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "fs4-26": {
+      "altAnswers": [
+        "That costs 13 francs 50."
+      ]
+    },
+    "fs4-28": {
+      "question": "There [1] (be) some bread and there [2] (be) some apples on the table. Write both missing parts in order: ___",
+      "spokenPrompt": "There blank 1 (be) some bread and there blank 2 (be) some apples on the table. Write both missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fs4-32": {
+      "altAnswers": [
+        "Do you have this in another size?"
+      ]
+    },
+    "fs4-33": {
+      "hints": [
+        "Think about a product that is no longer in stock.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "fs4-34": {
+      "altAnswers": [
+        "thank you"
+      ]
+    },
+    "fs4-38": {
+      "answer": "Can I exchange this product? It is broken.",
+      "altAnswers": [
+        "Can I exchange this product? It is defective."
+      ]
+    },
+    "fs4-39": {
+      "question": "Which question uses 'does' to ask for a price?",
+      "options": [
+        "How much this cost?",
+        "What is the price of this?",
+        "How much does this cost?",
+        "How much do this costs?"
+      ],
+      "spokenPrompt": "Which question uses 'does' to ask for a price?",
+      "verbatimSpeech": true
+    },
+    "fs4-40": {
+      "altAnswers": [
+        "I am looking for a present for my mother. What do you recommend?"
+      ]
+    },
+    "fs4-42": {
+      "altAnswers": [
+        "Strawberries cost less in summer than in winter."
+      ]
+    },
+    "fs4-43": {
+      "question": "A customer wants to return a jacket. Which question asks for proof of purchase?",
+      "spokenPrompt": "A customer wants to return a jacket. Which question asks for proof of purchase?",
+      "verbatimSpeech": true
+    },
+    "fs4-45": {
+      "question": "Which translation uses 'rather than' to express 'Ich zahle lieber mit Karte als mit Bargeld.'?",
+      "spokenPrompt": "Which translation uses 'rather than' to express 'Ich zahle lieber mit Karte als mit Bargeld.'?",
+      "verbatimSpeech": true
+    },
+    "fs4-46": {
+      "altAnswers": [
+        "Excuse me, where is the vegetable aisle?"
+      ]
+    },
+    "fs4-48": {
+      "altAnswers": [
+        "This T-shirt costs 19 francs 90. That is cheap!"
+      ]
+    },
+    "ws4-1": {
+      "hints": [
+        "Think about a bright sky with sunshine.",
+        "Die anderen Antworten (Es regnet., Es schneit.) sind nicht korrekt."
+      ]
+    },
+    "ws4-5": {
+      "hints": [
+        "Think about air moving strongly outside.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ws4-6": {
+      "question": "Complete with the meanings 'heiss' and 'sonnig': 'The weather in summer is usually [1] and [2].' Write both missing words in order: ___",
+      "answer": "hot / sunny",
+      "sequentialAnswer": true,
+      "spokenPrompt": "Complete with the meanings 'heiss' and 'sonnig': 'The weather in summer is usually blank 1 and blank 2.' Write both missing words in order: blank",
+      "verbatimSpeech": true
+    },
+    "ws4-12": {
+      "question": "Use the comparative forms of 'cool' and 'windy': 'In autumn, the weather becomes [1] and [2].' Write both missing words in order: ___",
+      "answer": "cooler / windier",
+      "sequentialAnswer": true,
+      "spokenPrompt": "Use the comparative forms of 'cool' and 'windy': 'In autumn, the weather becomes blank 1 and blank 2.' Write both missing words in order: blank",
+      "verbatimSpeech": true
+    },
+    "ws4-14": {
+      "altAnswers": [
+        "pouring"
+      ]
+    },
+    "ws4-16": {
+      "altAnswers": [
+        "What's the weather like where you are today?"
+      ]
+    },
+    "ws4-22": {
+      "altAnswers": [
+        "It is warmer than yesterday, but still chilly."
+      ]
+    },
+    "ws4-23": {
+      "question": "Which option names two seasons when thunderstorms often occur in Switzerland?",
+      "hints": [
+        "Think about the warmer part of the year.",
+        "Thunderstorms often develop when warm, moist air rises."
+      ],
+      "spokenPrompt": "Which option names two seasons when thunderstorms often occur in Switzerland?",
+      "verbatimSpeech": true
+    },
+    "ws4-24": {
+      "altAnswers": [
+        "plains"
+      ]
+    },
+    "ws4-29": {
+      "options": [
+        "Wetterbeobachtung",
+        "Wettervorhersage",
+        "Wetterkarte",
+        "Wetterlage"
+      ]
+    },
+    "ws4-32": {
+      "altAnswers": [
+        "Which month is wettest?"
+      ]
+    },
+    "ws4-33": {
+      "question": "Complete with the usual -est superlative and its article: 'July is ___ month here.' (sunny)",
+      "spokenPrompt": "Complete with the usual -est superlative and its article: 'July is blank month here.' (sunny)",
+      "verbatimSpeech": true
+    },
+    "ws4-34": {
+      "question": "Use the comparative forms of 'hot' and 'warm': 'Summer is [1] than winter. Today is [2] than yesterday.' Write both missing words in order: ___",
+      "spokenPrompt": "Use the comparative forms of 'hot' and 'warm': 'Summer is blank 1 than winter. Today is blank 2 than yesterday.' Write both missing words in order: blank",
+      "verbatimSpeech": true
+    },
+    "ws4-38": {
+      "altAnswers": [
+        "When it snows, the children play outdoors in the snow."
+      ]
+    },
+    "ws4-40": {
+      "altAnswers": [
+        "In winter it is much colder in the mountains than down in the valley."
+      ]
+    },
+    "ws4-42": {
+      "altAnswers": [
+        "The nicest weather of the year is in August."
+      ]
+    },
+    "ws4-43": {
+      "question": "Which warning tells you to watch out for lightning?",
+      "hints": [
+        "Think about which weather event can produce lightning.",
+        "The warning names the kind of storm."
+      ],
+      "spokenPrompt": "Which warning tells you to watch out for lightning?",
+      "verbatimSpeech": true
+    },
+    "ws4-44": {
+      "altAnswers": [
+        "According to the forecast, it will rain tomorrow."
+      ]
+    },
+    "ws4-46": {
+      "question": "In this example, the annual rainfall totals are: London 600 mm, Zurich 1100 mm, Dubai 100 mm. Complete: '[1] is the [2] city.' Write both missing parts in order: ___",
+      "answer": "Zurich / wettest",
+      "sequentialAnswer": true,
+      "hints": [
+        "Compare the three annual rainfall totals.",
+        "Use the city with the largest total and the superlative of wet."
+      ],
+      "spokenPrompt": "In this example, the annual rainfall totals are: London 600 mm, Zurich 1100 mm, Dubai 100 mm. Complete: 'blank 1 is the blank 2 city.' Write both missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "ws4-48": {
+      "altAnswers": [
+        "In spring the weather can be very changeable within a single day."
+      ]
+    },
+    "ws4-49": {
+      "hints": [
+        "Think about a special wind associated with the Alps.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ps4-7": {
+      "question": "Which word on its own means 'gestern'?",
+      "spokenPrompt": "Which word on its own means 'gestern'?",
+      "verbatimSpeech": true
+    },
+    "ps4-16": {
+      "altAnswers": [
+        "I played football yesterday."
+      ]
+    },
+    "ps4-17": {
+      "question": "How do you make a past simple negative with an ordinary action verb such as 'play'?",
+      "spokenPrompt": "How do you make a past simple negative with an ordinary action verb such as 'play'?",
+      "verbatimSpeech": true
+    },
+    "ps4-18": {
+      "altAnswers": [
+        "did not come"
+      ]
+    },
+    "ps4-19": {
+      "question": "How do you form a past simple yes/no question with an ordinary action verb such as 'play'?",
+      "spokenPrompt": "How do you form a past simple yes/no question with an ordinary action verb such as 'play'?",
+      "verbatimSpeech": true
+    },
+    "ps4-22": {
+      "altAnswers": [
+        "He did not eat breakfast yesterday."
+      ]
+    },
+    "ps4-24": {
+      "altAnswers": [
+        "traveled"
+      ]
+    },
+    "ps4-26": {
+      "altAnswers": [
+        "did not"
+      ]
+    },
+    "ps4-28": {
+      "altAnswers": [
+        "We cooked a delicious dinner yesterday."
+      ]
+    },
+    "ps4-34": {
+      "altAnswers": [
+        "did not finish"
+      ]
+    },
+    "ps4-36": {
+      "altAnswers": [
+        "Last weekend I travelled to the mountains with my family."
+      ]
+    },
+    "ps4-38": {
+      "altAnswers": [
+        "I did not do my homework because I was ill."
+      ]
+    },
+    "ps4-40": {
+      "spokenPrompt": "Write a short story in the past: 'Last Saturday, I blank 1 (wake) up early. I blank 2 (eat) breakfast and blank 3 (go) to the park.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "ps4-44": {
+      "altAnswers": [
+        "He slept a long time because he was tired."
+      ]
+    },
+    "ps4-45": {
+      "question": "Which past simple question asks for the place in: 'She visited Paris last summer.'?",
+      "spokenPrompt": "Which past simple question asks for the place in: 'She visited Paris last summer.'?",
+      "verbatimSpeech": true
+    },
+    "ps4-46": {
+      "altAnswers": [
+        "The children played all afternoon in the park."
+      ]
+    },
+    "ps4-47": {
+      "question": "Choose the past simple form of 'call': 'While I was reading, she ___ (call).'",
+      "spokenPrompt": "Choose the past simple form of 'call': 'While I was reading, she blank (call).'",
+      "verbatimSpeech": true
+    },
+    "ps4-48": {
+      "altAnswers": [
+        "We did not eat anything yesterday evening because the restaurant was closed."
+      ]
+    },
+    "hb4-3": {
+      "altAnswers": [
+        "unwell"
+      ]
+    },
+    "hb4-5": {
+      "hints": [
+        "Think about what a doctor measures when you feel unwell.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "hb4-6": {
+      "question": "Your ___ beats about 70 times per minute. (Herz)",
+      "spokenPrompt": "Your blank beats about 70 times per minute. (Herz)",
+      "verbatimSpeech": true
+    },
+    "hb4-16": {
+      "altAnswers": [
+        "My knee is sore."
+      ]
+    },
+    "hb4-18": {
+      "altAnswers": [
+        "I have a sore throat and must see a doctor."
+      ]
+    },
+    "hb4-22": {
+      "hints": [
+        "Think about medicines used to reduce pain.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "altAnswers": [
+        "Have you got painkillers?"
+      ]
+    },
+    "hb4-24": {
+      "altAnswers": [
+        "I sprained my wrist."
+      ]
+    },
+    "hb4-26": {
+      "altAnswers": [
+        "Take a tablet three times daily."
+      ]
+    },
+    "hb4-28": {
+      "altAnswers": [
+        "My back hurts after exercise."
+      ]
+    },
+    "hb4-30": {
+      "altAnswers": [
+        "Can you give me a prescription?"
+      ]
+    },
+    "hb4-32": {
+      "altAnswers": [
+        "Have you taken your temperature?"
+      ]
+    },
+    "hb4-35": {
+      "hints": [
+        "Think about the feeling that the room is spinning.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "hb4-36": {
+      "altAnswers": [
+        "I have had a fever and a sore throat for three days. What should I do?"
+      ]
+    },
+    "hb4-38": {
+      "altAnswers": [
+        "The doctor said I should stay home for three days."
+      ]
+    },
+    "hb4-40": {
+      "altAnswers": [
+        "Eating fruit and vegetables daily is important to stay healthy."
+      ]
+    },
+    "hb4-42": {
+      "altAnswers": [
+        "You should exercise more, eat less sugar and go to bed earlier."
+      ]
+    },
+    "hb4-44": {
+      "altAnswers": [
+        "Drink at least two liters of water daily."
+      ]
+    },
+    "hb4-46": {
+      "altAnswers": [
+        "My doctor advised me to drink more water and reduce stress."
+      ]
+    },
+    "hb4-48": {
+      "altAnswers": [
+        "The hospital has a 24-hour emergency room."
+      ]
+    },
+    "hb4-50": {
+      "altAnswers": [
+        "Exercise, healthy nutrition and sufficient sleep are the three most important factors for good health."
+      ]
+    },
+    "td4-1": {
+      "hints": [
+        "Picture changing direction towards your left-hand side.",
+        "Die anderen Antworten (Geh geradeaus., Biege rechts ab.) sind nicht korrekt."
+      ]
+    },
+    "td4-3": {
+      "altAnswers": [
+        "straight"
+      ]
+    },
+    "td4-8": {
+      "altAnswers": [
+        "far away"
+      ]
+    },
+    "td4-12": {
+      "altAnswers": [
+        "along"
+      ]
+    },
+    "td4-16": {
+      "altAnswers": [
+        "How can I best get to the library?"
+      ]
+    },
+    "td4-18": {
+      "altAnswers": [
+        "Walk across the bridge and then turn right."
+      ]
+    },
+    "td4-22": {
+      "altAnswers": [
+        "The town hall is across from the railway station."
+      ]
+    },
+    "td4-24": {
+      "altAnswers": [
+        "Turn left at the traffic lights and go straight ahead."
+      ]
+    },
+    "td4-25": {
+      "question": "Which verb means 'reisen'?",
+      "spokenPrompt": "Which verb means 'reisen'?",
+      "verbatimSpeech": true
+    },
+    "td4-26": {
+      "answer": "Where is the nearest underground station?",
+      "altAnswers": [
+        "Where is the nearest metro station?",
+        "Where is the nearest subway station?"
+      ]
+    },
+    "td4-30": {
+      "altAnswers": [
+        "The hotel is in the city center."
+      ]
+    },
+    "td4-32": {
+      "altAnswers": [
+        "How long does the train trip take?"
+      ]
+    },
+    "td4-34": {
+      "altAnswers": [
+        "Take the number 8 bus to the final stop."
+      ]
+    },
+    "td4-36": {
+      "altAnswers": [
+        "Excuse me, I'm lost. How can I get to the station?"
+      ]
+    },
+    "td4-38": {
+      "altAnswers": [
+        "Drive along the main road to the third traffic light, then turn left."
+      ]
+    },
+    "td4-40": {
+      "altAnswers": [
+        "The city museum is about ten minutes' walk from the station."
+      ]
+    },
+    "td4-41": {
+      "question": "Which sentence says to go through the park, cross over the bridge and enter the old town?",
+      "spokenPrompt": "Which sentence says to go through the park, cross over the bridge and enter the old town?",
+      "verbatimSpeech": true
+    },
+    "td4-42": {
+      "altAnswers": [
+        "Which form of transport is fastest: train, bus or car?"
+      ]
+    },
+    "td4-44": {
+      "altAnswers": [
+        "The taxi drives us straight to the hotel."
+      ]
+    },
+    "td4-48": {
+      "altAnswers": [
+        "What's the name of this street?"
+      ]
+    },
+    "td4-49": {
+      "question": "Which carries people between floors inside a building rather than along a route through town?",
+      "hints": [
+        "Think about a vertical journey inside a building.",
+        "The other choices are normally used on roads, rails or water."
+      ],
+      "spokenPrompt": "Which carries people between floors inside a building rather than along a route through town?",
+      "verbatimSpeech": true
+    },
+    "td4-50": {
+      "altAnswers": [
+        "Could you mark the route on the map of the city?"
+      ]
+    },
+    "dp4-1": {
+      "hints": [
+        "Opposite of short.",
+        "This word describes a person’s height."
+      ]
+    },
+    "dp4-2": {
+      "hints": [
+        "Think about the colour and the part of the face mentioned.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "dp4-16": {
+      "altAnswers": [
+        "He is tall and has short blond hair and green eyes."
+      ]
+    },
+    "dp4-18": {
+      "altAnswers": [
+        "My teacher is very patient and always friendly."
+      ]
+    },
+    "dp4-20": {
+      "altAnswers": [
+        "He looks like his father; they both have brown eyes."
+      ]
+    },
+    "dp4-24": {
+      "altAnswers": [
+        "He is not very tall, but he is very athletic."
+      ]
+    },
+    "dp4-26": {
+      "altAnswers": [
+        "My grandmother has short gray hair and brown eyes."
+      ]
+    },
+    "dp4-28": {
+      "altAnswers": [
+        "She is the most friendly person in our class."
+      ]
+    },
+    "dp4-30": {
+      "altAnswers": [
+        "He has glasses and short brown hair."
+      ]
+    },
+    "dp4-32": {
+      "altAnswers": [
+        "My male teacher is stricter than my female teacher."
+      ]
+    },
+    "dp4-33": {
+      "hints": [
+        "Think about someone you can trust who treats others well.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "dp4-34": {
+      "altAnswers": [
+        "Anna is as tall as me.",
+        "Anna is as tall as I am."
+      ]
+    },
+    "dp4-36": {
+      "hints": [
+        "Include appearance and personality in your translation.",
+        "Check that every detail from the German description is included."
+      ]
+    },
+    "dp4-38": {
+      "altAnswers": [
+        "My friend is the most helpful person that I know."
+      ]
+    },
+    "dp4-40": {
+      "altAnswers": [
+        "He is darker than his brother, but both of them are very tall."
+      ]
+    },
+    "dp4-42": {
+      "altAnswers": [
+        "Even though he is shy, he is a very loyal friend."
+      ]
+    },
+    "dp4-44": {
+      "altAnswers": [
+        "What kind of person are you? I am honest, helpful and sometimes a bit stubborn."
+      ]
+    },
+    "dp4-46": {
+      "altAnswers": [
+        "He does not look like his father, but he has the same laugh."
+      ]
+    },
+    "dp4-48": {
+      "answer": "My friend and I look very similar, but we have very different personalities.",
+      "altAnswers": [
+        "My friend and I look very similar, but we have very different characters."
+      ]
+    },
+    "dp4-50": {
+      "answer": "My best friend has dark hair and brown eyes. She is kind. She is also helpful."
+    }
+  }
+}
