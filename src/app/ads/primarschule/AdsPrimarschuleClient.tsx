@@ -130,7 +130,7 @@ export default function AdsPrimarschuleClient() {
               Mathe, Deutsch, NMG, Sprachen und Medien in kurzen Aufgaben mit direktem Feedback. Kostenlos starten, direkt im Browser.
             </p>
             <div className="mt-5 grid gap-3 text-sm font-semibold text-gray-700 sm:grid-cols-3">
-              <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Ohne Kreditkarte</div>
+              <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Kurze Übungsrunden</div>
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">Direkt im Browser</div>
               <div className="rounded-2xl border border-green-100 bg-white px-4 py-3 shadow-sm">1.–6. Klasse</div>
             </div>
@@ -334,7 +334,7 @@ export default function AdsPrimarschuleClient() {
             <div className="flex min-h-[220px] flex-col rounded-2xl border-2 border-gray-100 bg-white p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900">Kostenlos</h3>
               <p className="mt-2 text-3xl font-black text-gray-950">CHF 0</p>
-              <p className="mt-2 text-sm leading-6 text-gray-500">Kostenlos testen, ohne Kreditkarte.</p>
+              <p className="mt-2 text-sm leading-6 text-gray-500">Kurze Übungen zum Kennenlernen.</p>
               <Link
                 href={freeTrialUrl}
                 onClick={() => trackAdsLpCtaClick("free", "pricing", freeTrialUrl)}
@@ -387,7 +387,7 @@ export default function AdsPrimarschuleClient() {
             {[
               ["Ist Cleverli nach Lehrplan 21 aufgebaut?", "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet."],
               ["Muss ich eine App installieren?", "Nein. Cleverli läuft direkt im Browser auf Handy, Tablet und Computer."],
-              ["Kann ich zuerst testen?", "Ja. Du kannst Cleverli kostenlos und ohne Kreditkarte ausprobieren."],
+              ["Kann ich zuerst testen?", "Ja. Du kannst ausgewählte Übungen kostenlos ausprobieren. Für die Premium-Testphase wird eine Zahlungskarte benötigt."],
               ["Gilt der Jahrespreis pro Kind?", "Nein. Der Jahrespreis gilt für die Familie mit bis zu 3 Kinderprofilen."],
             ].map(([q, a]) => (
               <div key={q} className="rounded-2xl border border-gray-200 bg-white p-5">
