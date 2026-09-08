@@ -1,0 +1,869 @@
+{
+  "patches": {
+    "journee-heure-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "journee-heure-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "journee-heure-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "journee-heure-4-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "journee-heure-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "journee-heure-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "journee-heure-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "journee-heure-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "journee-heure-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "journee-heure-4-words": {
+      "question": "Trouve les cinq mots du thème «Ma journée et l'heure».",
+      "spokenPrompt": "Trouve les cinq mots du thème «Ma journée et l'heure»."
+    },
+    "maison-position-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "maison-position-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "maison-position-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "maison-position-4-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "maison-position-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "maison-position-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "maison-position-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "maison-position-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "maison-position-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "fr4-rich-maison-memory-1": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Pense aux endroits à la maison.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "ecole-horaire-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-horaire-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-horaire-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-horaire-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-horaire-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-horaire-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-horaire-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-horaire-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "loisirs-capacites-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "loisirs-capacites-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "loisirs-capacites-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "loisirs-capacites-4-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "loisirs-capacites-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "loisirs-capacites-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "loisirs-capacites-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "loisirs-capacites-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "loisirs-capacites-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "achats-prix-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "achats-prix-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "achats-prix-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "achats-prix-4-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "achats-prix-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "achats-prix-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "achats-prix-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "achats-prix-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "achats-prix-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "meteo-saisons-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "meteo-saisons-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "meteo-saisons-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "meteo-saisons-4-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "meteo-saisons-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "meteo-saisons-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "meteo-saisons-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "meteo-saisons-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "meteo-saisons-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "ville-directions-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ville-directions-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ville-directions-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ville-directions-4-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ville-directions-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ville-directions-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ville-directions-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ville-directions-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "ville-directions-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "messages-invitations-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "messages-invitations-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ],
+      "listeningText": "Cher Paul, bonjour.",
+      "question": "Écoute la salutation. Que signifie le premier mot en allemand?"
+    },
+    "messages-invitations-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "messages-invitations-4-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "messages-invitations-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "messages-invitations-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "messages-invitations-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "messages-invitations-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "messages-invitations-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "histoires-cultures-4-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "histoires-cultures-4-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "histoires-cultures-4-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "histoires-cultures-4-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "histoires-cultures-4-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "histoires-cultures-4-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "histoires-cultures-4-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "histoires-cultures-4-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute, puis compare les traductions proposées."
+      ]
+    },
+    "histoires-cultures-4-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même texte."
+      ]
+    },
+    "histoires-cultures-4-words": {
+      "question": "Trouve les quatre mots du thème «Histoires et cultures francophones».",
+      "spokenPrompt": "Trouve les quatre mots du thème «Histoires et cultures francophones»."
+    },
+    "journee-heure-4-context-2": {
+      "hints": [
+        "Pense à la dernière action avant le sommeil.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "journee-heure-4-context-5": {
+      "hints": [
+        "Pense au moment qui suit la fin des cours.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "maison-position-4-context-1": {
+      "hints": [
+        "Pense aux appareils nécessaires pour préparer un repas.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "maison-position-4-context-2": {
+      "hints": [
+        "Cherche une position avec un contact au-dessus.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "maison-position-4-context-3": {
+      "hints": [
+        "Pense à une position au-dessous.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "ecole-horaire-4-context-2": {
+      "hints": [
+        "Pense à la matière où tu utilises des nombres et des opérations.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "ecole-horaire-4-context-4": {
+      "hints": [
+        "Cherche une phrase qui dit ce que la personne apprécie.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "loisirs-capacites-4-context-1": {
+      "hints": [
+        "Pense à une activité adaptée à un bassin rempli d’eau.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "loisirs-capacites-4-context-2": {
+      "hints": [
+        "Choisis une réponse qui parle de savoir faire cette activité.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "loisirs-capacites-4-context-3": {
+      "hints": [
+        "Cherche une expression plus forte qu’une simple appréciation.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "loisirs-capacites-4-context-5": {
+      "hints": [
+        "Cherche une question sur ce que la personne apprécie faire.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "achats-prix-4-context-1": {
+      "hints": [
+        "Cherche une question sur la somme à payer.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "achats-prix-4-context-2": {
+      "hints": [
+        "Cherche une demande respectueuse, pas un ordre.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "achats-prix-4-context-3": {
+      "hints": [
+        "Soustrais le prix de la somme donnée.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "achats-prix-4-context-5": {
+      "hints": [
+        "Pense à l’information donnée par un montant en francs.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "meteo-saisons-4-context-2": {
+      "hints": [
+        "Pense à la saison qui précède l’hiver.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "ville-directions-4-context-1": {
+      "hints": [
+        "Cherche le lieu où les voyageurs attendent les trains.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "ville-directions-4-context-2": {
+      "hints": [
+        "Cherche le commerce spécialisé dans le pain.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "histoires-cultures-4-context-1": {
+      "hints": [
+        "Cherche qui vit les événements du récit.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "histoires-cultures-4-context-5": {
+      "hints": [
+        "Pense aux coutumes, pas aux propriétés mathématiques.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "fr4-rich-journee-match-1": {
+      "hints": [
+        "Commence par les mots que tu connais déjà.",
+        "Compare les moments de la journée dans les deux langues."
+      ]
+    },
+    "journee-heure-4-cloze-1": {
+      "question": "Complète avec le mot ou le verbe qui signifie «aufstehen»: Le matin, je me ___ à sept heures.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «aufstehen»: Le matin, je me … à sept heures."
+    },
+    "journee-heure-4-cloze-2": {
+      "question": "Complète avec le mot ou le verbe qui signifie «essen»: À midi, je ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «essen»: À midi, je …."
+    },
+    "journee-heure-4-cloze-3": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Hausaufgaben»: Après l'école, je fais mes ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Hausaufgaben»: Après l'école, je fais mes …."
+    },
+    "journee-heure-4-cloze-4": {
+      "question": "Complète avec le mot ou le verbe qui signifie «sich hinlegen»: Le soir, je me ___ à neuf heures.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «sich hinlegen»: Le soir, je me … à neuf heures."
+    },
+    "maison-position-4-cloze-1": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Schlafzimmer»: Je dors dans ma ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Schlafzimmer»: Je dors dans ma …."
+    },
+    "maison-position-4-cloze-2": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Wohnzimmer»: Nous regardons un film dans le ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Wohnzimmer»: Nous regardons un film dans le …."
+    },
+    "maison-position-4-cloze-3": {
+      "question": "Complète avec le mot ou le verbe qui signifie «auf»: La tasse est ___ la table.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «auf»: La tasse est … la table."
+    },
+    "maison-position-4-cloze-4": {
+      "question": "Complète avec le mot ou le verbe qui signifie «unter»: Les chaussures sont ___ le lit.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «unter»: Les chaussures sont … le lit."
+    },
+    "maison-position-4-cloze-5": {
+      "question": "Complète avec le mot ou le verbe qui signifie «hinter»: Le vélo est ___ la maison, dans le jardin.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «hinter»: Le vélo est … la maison, dans le jardin."
+    },
+    "ecole-horaire-4-cloze-4": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Musik»: Nous chantons en cours de ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Musik»: Nous chantons en cours de …."
+    },
+    "loisirs-capacites-4-cloze-1": {
+      "question": "Complète avec le mot ou le verbe qui signifie «können»: Je ___ jouer au football.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «können»: Je … jouer au football."
+    },
+    "loisirs-capacites-4-cloze-2": {
+      "question": "Complète avec le mot ou le verbe qui signifie «nicht»: Je ne peux ___ nager.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «nicht»: Je ne peux … nager."
+    },
+    "loisirs-capacites-4-cloze-3": {
+      "question": "Complète avec le mot ou le verbe qui signifie «lieben»: J'___ lire des bandes dessinées.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «lieben»: J'… lire des bandes dessinées."
+    },
+    "loisirs-capacites-4-cloze-4": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Velo»: Elle fait du ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Velo»: Elle fait du …."
+    },
+    "loisirs-capacites-4-cloze-5": {
+      "question": "Complète avec le mot ou le verbe qui signifie «singen»: Nous aimons ___ ensemble.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «singen»: Nous aimons … ensemble."
+    },
+    "achats-prix-4-cloze-1": {
+      "question": "Complète avec le mot ou le verbe qui signifie «kosten»: Combien ça ___?",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «kosten»: Combien ça …?"
+    },
+    "achats-prix-4-cloze-2": {
+      "question": "Complète avec le mot ou le verbe qui signifie «möchten»: Je ___ acheter ce livre.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «möchten»: Je … acheter ce livre."
+    },
+    "achats-prix-4-cloze-3": {
+      "question": "Complète avec le mot ou le verbe qui signifie «teuer»: Ce jouet est très ___: CHF 80!",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «teuer»: Ce jouet est très …: CHF 80!"
+    },
+    "achats-prix-4-cloze-4": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Franken»: Cette gomme coûte un ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Franken»: Cette gomme coûte un …."
+    },
+    "achats-prix-4-cloze-5": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Rückgeld»: Après avoir payé, je reçois la ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Rückgeld»: Après avoir payé, je reçois la …."
+    },
+    "meteo-saisons-4-cloze-1": {
+      "question": "Complète avec le mot ou le verbe qui signifie «kalt»: En hiver, il fait souvent ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «kalt»: En hiver, il fait souvent …."
+    },
+    "messages-invitations-4-cloze-1": {
+      "question": "Complète avec le mot ou le verbe qui signifie «liebe»: ___ Emma, je t'invite à ma fête.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «liebe»: … Emma, je t'invite à ma fête."
+    },
+    "messages-invitations-4-cloze-3": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Samstag»: La fête est ___ à 15 h.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Samstag»: La fête est … à 15 h."
+    },
+    "messages-invitations-4-cloze-4": {
+      "question": "Complète avec le mot ou le verbe qui signifie «antworten»: Merci pour ton message. Je vais ___.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «antworten»: Merci pour ton message. Je vais …."
+    },
+    "histoires-cultures-4-cloze-1": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Anfang»: Au ___ de l'histoire, le personnage arrive à Genève.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Anfang»: Au … de l'histoire, le personnage arrive à Genève."
+    },
+    "histoires-cultures-4-cloze-2": {
+      "question": "Complète avec le mot ou le verbe qui signifie «Ende»: À la ___, tout le monde rentre à la maison.",
+      "spokenPrompt": "Complète avec le mot ou le verbe qui signifie «Ende»: À la …, tout le monde rentre à la maison."
+    },
+    "ecole-horaire-4-cloze-3": {
+      "altAnswers": [
+        "mathématiques",
+        "mathematiques"
+      ]
+    },
+    "messages-invitations-4-cloze-5": {
+      "altAnswers": [
+        "desole",
+        "désolée",
+        "desolee"
+      ]
+    },
+    "histoires-cultures-4-cloze-3": {
+      "altAnswers": [
+        "drole",
+        "amusante",
+        "comique",
+        "humoristique",
+        "hilarante"
+      ]
+    },
+    "ville-directions-4-cloze-2": {
+      "question": "Complète avec le mot qui signifie «links»: Tourne à ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «links»: Tourne à ….",
+      "hints": [
+        "Pense au côté opposé à la main droite.",
+        "Lis la phrase complète avec ta réponse."
+      ]
+    },
+    "fr4-rich-journee-drag-1": {
+      "question": "Mets la routine du matin dans l’ordre. Dans cette routine, on se lave avant de prendre le petit-déjeuner.",
+      "spokenPrompt": "Mets la routine du matin dans l’ordre. Dans cette routine, on se lave avant de prendre le petit-déjeuner."
+    },
+    "fr4-rich-ville-drag-1": {
+      "question": "Mets le dialogue dans l’ordre. Le trajet commence par aller tout droit avant de tourner.",
+      "spokenPrompt": "Mets le dialogue dans l’ordre. Le trajet commence par aller tout droit avant de tourner."
+    },
+    "histoires-cultures-4-sort-theme": {
+      "dropZones": [
+        {
+          "id": "category-0",
+          "label": "📚 Éléments et descriptions d’un récit"
+        },
+        {
+          "id": "category-1",
+          "label": "🌍 Formes d’expression et notions culturelles"
+        }
+      ]
+    },
+    "achats-prix-4-sort-theme": {
+      "dropZones": [
+        {
+          "id": "category-0",
+          "label": "💰 Prix et argent"
+        },
+        {
+          "id": "category-1",
+          "label": "🛍️ Souhait, action et lieu d’achat"
+        }
+      ]
+    },
+    "meteo-saisons-4-write-3": {
+      "answer": "En été, il fait chaud. En hiver, il fait froid. Il neige parfois."
+    },
+    "journee-heure-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    },
+    "maison-position-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    },
+    "ecole-horaire-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    },
+    "loisirs-capacites-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    },
+    "achats-prix-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    },
+    "meteo-saisons-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    },
+    "ville-directions-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    },
+    "messages-invitations-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    },
+    "histoires-cultures-4-strategy-1": {
+      "hints": [
+        "Pense à une première étape avant une lecture détaillée.",
+        "Commence par ce que tu comprends déjà."
+      ]
+    }
+  }
+}
