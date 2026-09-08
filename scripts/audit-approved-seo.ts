@@ -59,7 +59,7 @@ assert.deepEqual(rules[0].allow, ["/", "/_next/static/", "/_next/image"]);
 assert.ok(rules[0].disallow?.includes("/api/"));
 assert.ok(fs.readFileSync("src/components/ExercisePlayer.tsx", "utf8").includes("const FREE_EXERCISE_LIMIT = 20;"));
 const schema = fs.readFileSync("src/components/StructuredData.tsx", "utf8");
-assert.ok(!/FAQPage|screenshot|aggregateRating|priceValidUntil|iOS, Android/.test(schema));
+assert.ok(!/FAQPage|screenshot|aggregateRating|priceValidUntil|billingDuration|iOS, Android/.test(schema));
 assert.ok(schema.includes("UCN8EKFH2QTYlOpYld89OjQQ"));
 assert.ok(!fs.readFileSync("src/app/layout.tsx", "utf8").includes("languages:"));
 const landingPaths = [...new Set([...ORGANIC_LANDING_PAGES, ...GRADE_SUBJECT_SEO_PAGES].map(({ href }) => href))];
