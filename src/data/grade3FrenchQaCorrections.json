@@ -1,0 +1,752 @@
+{
+  "patches": {
+    "bonjour-classe-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "bonjour-classe-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "bonjour-classe-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "bonjour-classe-3-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "bonjour-classe-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "bonjour-classe-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "bonjour-classe-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "bonjour-classe-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "bonjour-classe-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ]
+    },
+    "je-me-presente-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "je-me-presente-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "je-me-presente-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "je-me-presente-3-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "je-me-presente-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "je-me-presente-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "je-me-presente-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "je-me-presente-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "je-me-presente-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ]
+    },
+    "nombres-dates-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "nombres-dates-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "nombres-dates-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "nombres-dates-3-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "nombres-dates-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "nombres-dates-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "nombres-dates-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "nombres-dates-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "nombres-dates-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ]
+    },
+    "ecole-objets-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-objets-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-objets-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-objets-3-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-objets-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-objets-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-objets-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-objets-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "ecole-objets-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ]
+    },
+    "famille-amis-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "famille-amis-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "famille-amis-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "famille-amis-3-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "famille-amis-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "famille-amis-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "famille-amis-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "famille-amis-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ],
+      "listeningText": "C'est mon amie. Elle s'appelle Léa.",
+      "question": "Écoute les phrases. De qui parle-t-on?"
+    },
+    "famille-amis-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ]
+    },
+    "couleurs-vetements-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "couleurs-vetements-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "couleurs-vetements-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "couleurs-vetements-3-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "couleurs-vetements-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "couleurs-vetements-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "couleurs-vetements-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "couleurs-vetements-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "couleurs-vetements-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ]
+    },
+    "manger-boire-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "manger-boire-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "manger-boire-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "manger-boire-3-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "manger-boire-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "manger-boire-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "manger-boire-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "manger-boire-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "manger-boire-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ]
+    },
+    "animaux-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "animaux-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "animaux-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "animaux-3-listen-4": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "animaux-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "animaux-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "animaux-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "animaux-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "animaux-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ]
+    },
+    "suisse-romande-3-listen-1": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "suisse-romande-3-listen-2": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "suisse-romande-3-listen-3": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "suisse-romande-3-listen-5": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "suisse-romande-3-listen-6": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "suisse-romande-3-listen-7": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "suisse-romande-3-listen-8": {
+      "hints": [
+        "Écoute une deuxième fois et fais attention au début du mot.",
+        "Réécoute sans lire de transcription, puis compare les traductions proposées."
+      ]
+    },
+    "suisse-romande-3-memory": {
+      "question": "Trouve les paires de cartes identiques.",
+      "spokenPrompt": "Trouve les paires de cartes identiques.",
+      "hints": [
+        "Mémorise la position des cartes.",
+        "Les deux cartes de chaque paire montrent le même mot."
+      ],
+      "pairs": [
+        {
+          "id": "fr-2-0",
+          "label": "Genève",
+          "emoji": "⛲"
+        },
+        {
+          "id": "de-2-0",
+          "label": "Genf",
+          "emoji": "⛲"
+        },
+        {
+          "id": "fr-2-1",
+          "label": "Lausanne",
+          "emoji": "🏙️"
+        },
+        {
+          "id": "fr-2-2",
+          "label": "Neuchâtel",
+          "emoji": "🏰"
+        },
+        {
+          "id": "de-2-2",
+          "label": "Neuenburg",
+          "emoji": "🏰"
+        },
+        {
+          "id": "fr-2-3",
+          "label": "le lac",
+          "emoji": "🌊"
+        },
+        {
+          "id": "de-2-3",
+          "label": "der See",
+          "emoji": "🌊"
+        }
+      ]
+    },
+    "bonjour-classe-3-context-1": {
+      "hints": [
+        "Pense à une salutation utilisée pendant la journée.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "bonjour-classe-3-context-2": {
+      "hints": [
+        "Choisis une formule pour prendre congé.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "bonjour-classe-3-context-5": {
+      "hints": [
+        "Cherche une demande polie adressée à un camarade.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "nombres-dates-3-context-2": {
+      "hints": [
+        "Additionne les deux quantités.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "nombres-dates-3-cloze-4": {
+      "hints": [
+        "Ajouter zéro ne change pas un nombre.",
+        "Lis la phrase complète avec ta réponse."
+      ]
+    },
+    "ecole-objets-3-context-1": {
+      "hints": [
+        "Cherche un objet qui laisse une trace sur le papier.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "ecole-objets-3-context-4": {
+      "hints": [
+        "Cherche ce qui permet de transporter plusieurs objets.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "couleurs-vetements-3-context-4": {
+      "hints": [
+        "Pense aux deux couleurs du drapeau national.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "nombres-dates-3-context-3": {
+      "hints": [
+        "Le h ne se prononce pas. Écoute la prononciation du nombre.",
+        "Relis toute la phrase avant de répondre."
+      ]
+    },
+    "bonjour-classe-3-cloze-1": {
+      "question": "Complète avec la salutation qui signifie «Guten Tag»: Le matin, je dis ___.",
+      "spokenPrompt": "Complète avec la salutation qui signifie «Guten Tag»: Le matin, je dis …."
+    },
+    "bonjour-classe-3-cloze-2": {
+      "question": "Complète avec la formule qui signifie «Auf Wiedersehen»: Quand je pars, je dis ___.",
+      "spokenPrompt": "Complète avec la formule qui signifie «Auf Wiedersehen»: Quand je pars, je dis …."
+    },
+    "je-me-presente-3-cloze-3": {
+      "question": "Complète avec le verbe qui signifie «wohnen»: J’___ à Bâle.",
+      "spokenPrompt": "Complète avec le verbe qui signifie «wohnen»: J’… à Bâle."
+    },
+    "ecole-objets-3-cloze-1": {
+      "question": "Complète avec le mot qui signifie «Bleistift»: J’écris avec un ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Bleistift»: J’écris avec un …."
+    },
+    "ecole-objets-3-cloze-2": {
+      "question": "Complète avec le mot qui signifie «Heft»: Je dessine dans mon ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Heft»: Je dessine dans mon …."
+    },
+    "ecole-objets-3-cloze-4": {
+      "question": "Complète avec le mot qui signifie «Stuhl»: Je m’assieds sur la ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Stuhl»: Je m’assieds sur la …."
+    },
+    "ecole-objets-3-cloze-5": {
+      "question": "Complète avec le mot qui signifie «Fenster»: La lumière entre par la ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Fenster»: La lumière entre par la …."
+    },
+    "famille-amis-3-cloze-5": {
+      "question": "Complète avec le possessif qui signifie «mein»: Voici ___ ami Léo.",
+      "spokenPrompt": "Complète avec le possessif qui signifie «mein»: Voici … ami Léo."
+    },
+    "couleurs-vetements-3-cloze-1": {
+      "question": "Complète avec «vert» au féminin: L’herbe est ___.",
+      "spokenPrompt": "Complète avec «vert» au féminin: L’herbe est …."
+    },
+    "couleurs-vetements-3-cloze-2": {
+      "question": "Complète avec la couleur qui signifie «gelb»: Sur mon dessin, le soleil est ___.",
+      "spokenPrompt": "Complète avec la couleur qui signifie «gelb»: Sur mon dessin, le soleil est …."
+    },
+    "couleurs-vetements-3-cloze-3": {
+      "question": "Complète avec le mot qui signifie «Pullover»: Je porte un ___ bleu.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Pullover»: Je porte un … bleu."
+    },
+    "couleurs-vetements-3-cloze-4": {
+      "question": "Complète avec le mot qui signifie «Kleid»: Elle porte une ___ rouge.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Kleid»: Elle porte une … rouge."
+    },
+    "couleurs-vetements-3-cloze-5": {
+      "question": "Complète avec le mot qui signifie «Schuhe»: Mes ___ sont noires.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Schuhe»: Mes … sont noires."
+    },
+    "manger-boire-3-cloze-1": {
+      "question": "Complète avec le mot qui signifie «Wasser»: Je bois de l’___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Wasser»: Je bois de l’…."
+    },
+    "manger-boire-3-cloze-2": {
+      "question": "Complète avec le verbe qui signifie «mögen»: J’___ les bananes.",
+      "spokenPrompt": "Complète avec le verbe qui signifie «mögen»: J’… les bananes."
+    },
+    "manger-boire-3-cloze-3": {
+      "question": "Complète la négation qui signifie «nicht»: Je n’aime ___ le lait.",
+      "spokenPrompt": "Complète la négation qui signifie «nicht»: Je n’aime … le lait."
+    },
+    "manger-boire-3-cloze-4": {
+      "question": "Complète avec le mot qui signifie «Karotte»: La ___ est orange.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Karotte»: La … est orange."
+    },
+    "manger-boire-3-cloze-5": {
+      "question": "Complète avec le mot qui signifie «Hunger»: À midi, j’ai ___.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Hunger»: À midi, j’ai …."
+    },
+    "animaux-3-cloze-3": {
+      "question": "Complète avec le mot qui signifie «Vogel»: L’___ vole dans le ciel.",
+      "spokenPrompt": "Complète avec le mot qui signifie «Vogel»: L’… vole dans le ciel."
+    },
+    "animaux-3-cloze-5": {
+      "question": "Complète avec «petit» au féminin: Une souris est ___.",
+      "spokenPrompt": "Complète avec «petit» au féminin: Une souris est …."
+    },
+    "suisse-romande-3-cloze-2": {
+      "question": "Complète avec la langue qui signifie «Französisch»: À Lausanne, on parle notamment ___.",
+      "spokenPrompt": "Complète avec la langue qui signifie «Französisch»: À Lausanne, on parle notamment …."
+    },
+    "famille-amis-3-cloze-1": {
+      "altAnswers": [
+        "soeur"
+      ],
+      "question": "L’autre fille de mes parents est ma ___.",
+      "spokenPrompt": "L’autre fille de mes parents est ma …."
+    },
+    "famille-amis-3-cloze-2": {
+      "question": "L’autre fils de mes parents est mon ___.",
+      "spokenPrompt": "L’autre fils de mes parents est mon …."
+    },
+    "couleurs-vetements-3-context-1": {
+      "question": "Une tomate mûre de variété rouge: quelle est sa couleur?",
+      "spokenPrompt": "Une tomate mûre de variété rouge: quelle est sa couleur?"
+    },
+    "couleurs-vetements-3-context-2": {
+      "question": "Quel vêtement a deux jambes séparées, une pour chaque jambe du corps?",
+      "spokenPrompt": "Quel vêtement a deux jambes séparées, une pour chaque jambe du corps?"
+    },
+    "famille-amis-3-words": {
+      "wordList": [
+        "LAMERE",
+        "LEPERE",
+        "LASOEUR",
+        "LEFRERE",
+        "LAMIE",
+        "LAMI"
+      ]
+    },
+    "suisse-romande-3-sort-language": {
+      "dragItems": [
+        {
+          "id": "lang-fr-0",
+          "label": "la Suisse",
+          "emoji": "🇨🇭"
+        },
+        {
+          "id": "lang-de-0",
+          "label": "die Schweiz",
+          "emoji": "🇨🇭"
+        },
+        {
+          "id": "lang-fr-1",
+          "label": "le français",
+          "emoji": "🇫🇷"
+        },
+        {
+          "id": "lang-de-1",
+          "label": "Französisch",
+          "emoji": "🇫🇷"
+        },
+        {
+          "id": "lang-fr-2",
+          "label": "Genève",
+          "emoji": "⛲"
+        },
+        {
+          "id": "lang-de-2",
+          "label": "Genf",
+          "emoji": "⛲"
+        },
+        {
+          "id": "lang-fr-3",
+          "label": "la ville",
+          "emoji": "🏙️"
+        },
+        {
+          "id": "lang-de-3",
+          "label": "die Stadt",
+          "emoji": "🏙️"
+        }
+      ]
+    }
+  }
+}
