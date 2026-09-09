@@ -660,17 +660,17 @@
     },
     "vol5-14": {
       "mathAnswerMode": "number",
-      "spokenPrompt": "5 l gleich ... Kubikzentimeter",
+      "spokenPrompt": "5 Liter gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-18": {
       "mathAnswerMode": "number",
-      "spokenPrompt": "Aquarium 60 mal 30 mal 40 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "Aquarium 60 mal 30 mal 40 Zentimeter: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-26": {
       "mathAnswerMode": "number",
-      "spokenPrompt": "Schuhkarton 30 mal 15 mal 12 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "Schuhkarton 30 mal 15 mal 12 Zentimeter: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-28": {
@@ -685,12 +685,12 @@
     },
     "vol5-46": {
       "mathAnswerMode": "number",
-      "spokenPrompt": "V gleich 0,4 m mal 0,5 m mal 2 m gleich ... Kubikmeter",
+      "spokenPrompt": "V gleich 0,4 Meter mal 0,5 Meter mal 2 Meter gleich ... Kubikmeter",
       "verbatimSpeech": true
     },
     "vol5-48": {
       "mathAnswerMode": "number",
-      "spokenPrompt": "2,5 l gleich ... Kubikzentimeter",
+      "spokenPrompt": "2,5 Liter gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-50": {
@@ -699,14 +699,10 @@
       "verbatimSpeech": true
     },
     "wk5-10": {
-      "mathAnswerMode": "number-or-fraction",
-      "spokenPrompt": "Beutel mit 3 roten, 2 blauen Kugeln: Wahrscheinlichkeit für rot gleich ...",
-      "verbatimSpeech": true
+      "mathAnswerMode": "number-or-fraction"
     },
     "wk5-14": {
-      "mathAnswerMode": "number-or-fraction",
-      "spokenPrompt": "5 gleiche Lose, 1 Gewinnlos: Wahrscheinlichkeit für Gewinn gleich ...",
-      "verbatimSpeech": true
+      "mathAnswerMode": "number-or-fraction"
     },
     "wk5-16": {
       "mathAnswerMode": "fraction",
@@ -720,12 +716,12 @@
     },
     "wk5-22": {
       "mathAnswerMode": "number-or-fraction",
-      "spokenPrompt": "Wahrscheinlichkeit für 2x Kopf beim 2x Münzwerfen: ...",
+      "spokenPrompt": "Wahrscheinlichkeit für 2 mal Kopf beim 2 mal Münzwerfen: ...",
       "verbatimSpeech": true
     },
     "wk5-26": {
       "mathAnswerMode": "number-or-fraction",
-      "spokenPrompt": "Wahrscheinlichkeit für mind. 1 Kopf bei 2x Münzwurf: ...",
+      "spokenPrompt": "Wahrscheinlichkeit für mind. 1 Kopf bei 2 mal Münzwurf: ...",
       "verbatimSpeech": true
     },
     "wk5-28": {
@@ -747,9 +743,7 @@
       "mathAnswerMode": "reduced-fraction"
     },
     "wk5-4": {
-      "mathAnswerMode": "number-or-fraction",
-      "spokenPrompt": "Beim Münzwurf: Wahrscheinlichkeit für Kopf gleich ...",
-      "verbatimSpeech": true
+      "mathAnswerMode": "number-or-fraction"
     },
     "wk5-42": {
       "mathAnswerMode": "number"
@@ -902,10 +896,6 @@
       "spokenPrompt": "Dreieck mit Eckpunkten Punkt A mit Koordinaten 0 und 0, Punkt B mit Koordinaten 4 und 0, Punkt C mit Koordinaten 0 und 3. Grundlinie gleich ... Einheiten",
       "verbatimSpeech": true
     },
-    "ks5-35": {
-      "spokenPrompt": "Was ist die Steigung einer Gerade Ypsilon gleich zwei mal iks?",
-      "verbatimSpeech": true
-    },
     "ks5-36": {
       "spokenPrompt": "Vom Ursprung bis Punkt R mit Koordinaten 0 und minus 8 sind es ... Einheiten.",
       "verbatimSpeech": true
@@ -967,7 +957,7 @@
       "verbatimSpeech": true
     },
     "vol5-6": {
-      "spokenPrompt": "Würfel mit Seite 3 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "Würfel mit Seite 3 Zentimeter: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-7": {
@@ -975,19 +965,19 @@
       "verbatimSpeech": true
     },
     "vol5-8": {
-      "spokenPrompt": "Würfel mit Seite 1 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "Würfel mit Seite 1 Zentimeter: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-12": {
-      "spokenPrompt": "Quader 5 mal 2 mal 2 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "Quader 5 mal 2 mal 2 Zentimeter: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-15": {
-      "spokenPrompt": "Was ist 1 ml in Kubikzentimeter?",
+      "spokenPrompt": "Was ist 1 Milliliter in Kubikzentimeter?",
       "verbatimSpeech": true
     },
     "vol5-16": {
-      "spokenPrompt": "Quader 10 mal 5 mal 3 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "Quader 10 mal 5 mal 3 Zentimeter: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-17": {
@@ -1003,11 +993,11 @@
       "verbatimSpeech": true
     },
     "vol5-22": {
-      "spokenPrompt": "Würfel mit Seite 5 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "Würfel mit Seite 5 Zentimeter: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-24": {
-      "spokenPrompt": "Pool 5 m mal 2 m mal 1,5 m: V gleich ... Kubikmeter",
+      "spokenPrompt": "Pool 5 Meter mal 2 Meter mal 1,5 Meter: V gleich ... Kubikmeter",
       "verbatimSpeech": true
     },
     "vol5-25": {
@@ -1019,11 +1009,11 @@
       "verbatimSpeech": true
     },
     "vol5-30": {
-      "spokenPrompt": "Container 12 m mal 2,5 m mal 2,5 m: V gleich ... Kubikmeter",
+      "spokenPrompt": "Container 12 Meter mal 2,5 Meter mal 2,5 Meter: V gleich ... Kubikmeter",
       "verbatimSpeech": true
     },
     "vol5-32": {
-      "spokenPrompt": "0,125 l gleich ... Kubikzentimeter",
+      "spokenPrompt": "0,125 Liter gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-33": {
@@ -1031,15 +1021,15 @@
       "verbatimSpeech": true
     },
     "vol5-36": {
-      "spokenPrompt": "Quader V gleich 924 Kubikzentimeter, Länge 11 cm, Breite 7 cm: Höhe gleich ... cm",
+      "spokenPrompt": "Quader V gleich 924 Kubikzentimeter, Länge 11 Zentimeter, Breite 7 Zentimeter: Höhe gleich ... Zentimeter",
       "verbatimSpeech": true
     },
     "vol5-37": {
-      "spokenPrompt": "V gleich 8 cm mal 5 cm mal 3 cm gleich ... Kubikzentimeter",
+      "spokenPrompt": "V gleich 8 Zentimeter mal 5 Zentimeter mal 3 Zentimeter gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-38": {
-      "spokenPrompt": "Würfelvolumen 512 Kubikzentimeter: Kante gleich ... cm",
+      "spokenPrompt": "Würfelvolumen 512 Kubikzentimeter: Kante gleich ... Zentimeter",
       "verbatimSpeech": true
     },
     "vol5-41": {
@@ -1047,23 +1037,23 @@
       "verbatimSpeech": true
     },
     "vol5-42": {
-      "spokenPrompt": "V gleich 12 cm mal 4 cm mal 6 cm gleich ... Kubikzentimeter",
+      "spokenPrompt": "V gleich 12 Zentimeter mal 4 Zentimeter mal 6 Zentimeter gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-43": {
-      "spokenPrompt": "Quader V gleich 360 Kubikzentimeter, Grundfläche 45 Quadratzentimeter: Höhe gleich ... cm",
+      "spokenPrompt": "Quader V gleich 360 Kubikzentimeter, Grundfläche 45 Quadratzentimeter: Höhe gleich ... Zentimeter",
       "verbatimSpeech": true
     },
     "vol5-44": {
-      "spokenPrompt": "V gleich 15 m mal 6 m mal 2 m gleich ... Kubikmeter",
+      "spokenPrompt": "V gleich 15 Meter mal 6 Meter mal 2 Meter gleich ... Kubikmeter",
       "verbatimSpeech": true
     },
     "vol5-45": {
-      "spokenPrompt": "V gleich 9 cm mal 9 cm mal 10 cm gleich ... Kubikzentimeter",
+      "spokenPrompt": "V gleich 9 Zentimeter mal 9 Zentimeter mal 10 Zentimeter gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-47": {
-      "spokenPrompt": "Würfelkante 7 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "Würfelkante 7 Zentimeter: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "wk5-5": {
@@ -1078,28 +1068,16 @@
       "spokenPrompt": "Wahrscheinlichkeit für rot gleich 0,3. Was ist Wahrscheinlichkeit für nicht rot?",
       "verbatimSpeech": true
     },
-    "wk5-17": {
-      "spokenPrompt": "Beutel: 4 rot, 3 blau, 3 grün. Wahrscheinlichkeit für blau:",
-      "verbatimSpeech": true
-    },
     "wk5-19": {
-      "spokenPrompt": "10 Karten (1 minus 10). Wahrscheinlichkeit für Primzahl?",
-      "verbatimSpeech": true
-    },
-    "wk5-21": {
-      "spokenPrompt": "Würfel 2x werfen. Wie viele Ergebnispaare total?",
+      "spokenPrompt": "10 Karten (eins bis zehn). Wahrscheinlichkeit für Primzahl?",
       "verbatimSpeech": true
     },
     "wk5-25": {
       "spokenPrompt": "Klasse: 12 Mädchen, 8 Jungen. Wahrscheinlichkeit für Junge zufällig gewählt?",
       "verbatimSpeech": true
     },
-    "wk5-27": {
-      "spokenPrompt": "Beim Roulette: 18 rote, 18 schwarze, 1 grüne Felder. Wahrscheinlichkeit für schwarz?",
-      "verbatimSpeech": true
-    },
     "wk5-29": {
-      "spokenPrompt": "Experiment: 100x gewürfelt, 18x eine 6. Relative Häufigkeit?",
+      "spokenPrompt": "Experiment: 100 mal gewürfelt, 18 mal eine 6. Relative Häufigkeit?",
       "verbatimSpeech": true
     },
     "wk5-30": {
@@ -1114,10 +1092,6 @@
       "spokenPrompt": "Wahrscheinlichkeit für kein Ass bei 52 Karten (4 Asse):",
       "verbatimSpeech": true
     },
-    "wk5-39": {
-      "spokenPrompt": "Beutel: 4 rote, 3 blaue, 3 grüne Kugeln. Wahrscheinlichkeit für rot gleich ... /10",
-      "verbatimSpeech": true
-    },
     "wk5-43": {
       "spokenPrompt": "Würfel: Wahrscheinlichkeit für Zahl grösser als 4 gleich ... /6",
       "verbatimSpeech": true
@@ -1126,16 +1100,8 @@
       "spokenPrompt": "Beutel: 5 weisse, 2 schwarze Kugeln. Wahrscheinlichkeit für nicht schwarz gleich ... /7",
       "verbatimSpeech": true
     },
-    "wk5-46": {
-      "spokenPrompt": "Wahrscheinlichkeit für Ereignis gleich 0 bedeutet: ... Prozent",
-      "verbatimSpeech": true
-    },
     "wk5-48": {
       "spokenPrompt": "Würfel: Wahrscheinlichkeit für gerade Zahl gleich ... /6",
-      "verbatimSpeech": true
-    },
-    "wk5-49": {
-      "spokenPrompt": "Glücksrad mit 8 gleichen Feldern, davon 2 Sterne: Wahrscheinlichkeit für Stern gleich ... /4",
       "verbatimSpeech": true
     },
     "st5-28": {
