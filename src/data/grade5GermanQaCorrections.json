@@ -1308,7 +1308,7 @@
     "rs5-49": {
       "question": "Ergänze: Sie empf___t das neue Buch.",
       "answer": "iehl",
-      "spokenPrompt": "Ergänze: Sie empf…t das neue Buch.",
+      "spokenPrompt": "Ergänze die fehlenden Buchstaben im Verb. Der Satz lautet: Sie, Verb mit Lücke, das neue Buch. Das Verb beginnt mit den Buchstaben E, M, P, F. Danach kommt die Lücke. Am Schluss steht T.",
       "verbatimSpeech": true
     },
     "lv5-2": {
