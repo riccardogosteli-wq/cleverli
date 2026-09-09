@@ -476,7 +476,7 @@
     },
     "ai5-50": {
       "question": "Nommez 3 animaux menacés en Suisse. Expliquez les menaces connues ou indiquez si les causes de leur déclin sont encore étudiées.",
-      "spokenPrompt": "Nommez 3 animaux menacés en Suisse. Expliquez les menaces connues ou indiquez si les causes de leur déclin sont encore étudiées.",
+      "spokenPrompt": "Nommez trois animaux menacés en Suisse. Quelles menaces pèsent sur ces animaux ? Expliquez ce qui est connu. Si les causes de leur déclin sont encore étudiées, indiquez-le.",
       "answer": "Le grand tétras souffre des dérangements et a besoin de forêts adaptées. Le pouillot siffleur est menacé car les forêts qui lui conviennent deviennent plus rares. La bécasse des bois a beaucoup diminué en Suisse; les causes de son déclin sont encore étudiées."
     }
   }
