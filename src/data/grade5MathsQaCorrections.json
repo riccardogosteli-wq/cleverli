@@ -1,0 +1,1145 @@
+{
+  "patches": {
+    "g5dz1b": {
+      "options": [
+        "1,0",
+        "0,1",
+        "0,01",
+        "0,001"
+      ]
+    },
+    "g5dz2j": {
+      "question": "Welche Zahl liegt genau in der Mitte zwischen 2,3 und 2,5?"
+    },
+    "g5dz3i": {
+      "question": "Welche Zahl liegt genau in der Mitte zwischen 2.3 und 2.5?"
+    },
+    "g5dz2n": {
+      "question": "Welche Ziffer steht an der Tausendstelstelle von 3,456?"
+    },
+    "g5m23": {
+      "options": [
+        "1/2",
+        "1",
+        "2/3",
+        "1/4"
+      ],
+      "hints": [
+        "Bringe die Bruchteile zusammen und prüfe, ob sie eine vollständige Einheit bilden.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5br2p": {
+      "options": [
+        "8/3",
+        "1/6",
+        "3/12",
+        "4/6"
+      ]
+    },
+    "wk5-23": {
+      "options": [
+        "1/12",
+        "6/36",
+        "5/36",
+        "7/36"
+      ],
+      "spokenPrompt": "Wahrscheinlichkeit für Summe gleich 7 bei 2 Würfeln:",
+      "verbatimSpeech": true
+    },
+    "wk5-33": {
+      "answer": "1/6",
+      "options": [
+        "1/3",
+        "1/4",
+        "1/6",
+        "1/2"
+      ],
+      "spokenPrompt": "Wahrscheinlichkeit für gerade und grösser als 4 beim Würfeln (eins bis sechs):",
+      "verbatimSpeech": true
+    },
+    "wk5-24": {
+      "question": "Aus 2 roten (R), 3 blauen (B) Kugeln: P(R dann B ohne Zurücklegen) = ___/20",
+      "spokenPrompt": "Aus 2 roten (R), 3 blauen (B) Kugeln: Wahrscheinlichkeit für R dann B ohne Zurücklegen gleich ... /20",
+      "verbatimSpeech": true
+    },
+    "math5-rich-wahrscheinlichkeit-review-1": {
+      "question": "Ein Glücksrad hat gleich grosse Felder, mehr blaue als rote. Wie erklärst du, welche Farbe wahrscheinlicher ist?"
+    },
+    "vol5-34": {
+      "question": "Wäschekorb 50 × 35 × 30 cm: V = ___ l (auf eine Dezimalstelle gerundet)",
+      "mathAnswerMode": "number"
+    },
+    "st5-34": {
+      "question": "5 Schüler erzielen 4, 5, 3, 6, 7 Punkte. Ein 6. Schüler erzielt 3 Punkte. Neuer Mittelwert = ___ (auf zwei Dezimalstellen gerundet)"
+    },
+    "st5-5": {
+      "question": "Was ist der Median bei einer ungeraden Anzahl von Werten?",
+      "hints": [
+        "Ordne die Werte und streiche von beiden Enden gleich viele weg.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "math5-rich-prozent-memory-1": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "math5-rich-groessen-memory-1": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "g5m1": {
+      "hints": [
+        "Eine Stelle nach dem Komma = Zehntel.",
+        "Vergleiche die Stellenwerte nach dem Komma."
+      ]
+    },
+    "g5m2": {
+      "hints": [
+        "Der Nenner gibt den Stellenwert der Ziffer nach dem Komma an.",
+        "Ein Zehntel = 0,1"
+      ],
+      "mathAnswerMode": "number"
+    },
+    "g5m4": {
+      "hints": [
+        "Schreibe die Zahlen so untereinander, dass die Kommas übereinander stehen.",
+        "Addiere zuerst die Zehntel, danach die Einer."
+      ],
+      "mathAnswerMode": "number"
+    },
+    "g5m6": {
+      "hints": [
+        "Ergänze vom kleineren zum grösseren Wert und zähle die Ergänzungen zusammen.",
+        "Subtrahiere stellenweise."
+      ],
+      "mathAnswerMode": "number"
+    },
+    "g5m7": {
+      "hints": [
+        "Suche zuerst die ganzen Zahlen, zwischen denen der gesuchte Wert liegt.",
+        "Zähle in Zehntel-Schritten."
+      ]
+    },
+    "g5m10": {
+      "hints": [
+        "Vergleiche zuerst die Zehntel und danach die Hundertstel.",
+        "Ergänze Nullen zum Vergleichen."
+      ]
+    },
+    "g5dz1a": {
+      "hints": [
+        "Überlege, welcher Teil eine Anzahl vollständiger Einheiten angibt.",
+        "Das gesuchte Wort beginnt mit «G»."
+      ],
+      "altAnswers": [
+        "Ganzzahlteil",
+        "ganze Zahl",
+        "ganze Zahlen",
+        "Ganze"
+      ]
+    },
+    "g5dz2p": {
+      "hints": [
+        "Multipliziere zunächst ohne Komma und berücksichtige danach die Dezimalstellen.",
+        "Die Zahl liegt zwischen -1 und 3."
+      ]
+    },
+    "g5dz3h": {
+      "hints": [
+        "Hundertstel = zweite Dezimalstelle.",
+        "Überlege, ob vor der Hundertstelziffer noch eine Null nötig ist."
+      ],
+      "spokenPrompt": "Schreibe sieben Hundertstel als Dezimalzahl. Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "g5dz3l": {
+      "hints": [
+        "Vergleiche die Zehntel-Stelle zuerst.",
+        "Vergleiche bei gleichen Zehnteln die Hundertstel."
+      ]
+    },
+    "math5-rich-dezimal-match-0": {
+      "hints": [
+        "Die Stelle nach dem Komma zeigt Zehntel.",
+        "Lies den Wert der Zehntelstelle und suche die entsprechende Wortkarte."
+      ]
+    },
+    "math5-rich-dezimal-match-1": {
+      "hints": [
+        "Zehntel und Hundertstel helfen beim Vergleichen.",
+        "Erweitere die Brüche auf Zehntel oder Hundertstel."
+      ]
+    },
+    "math5-rich-dezimal-line-1": {
+      "hints": [
+        "Prüfe die Schrittweite zwischen den Markierungen.",
+        "Beginne bei der kleineren ganzen Zahl und zähle die Schritte."
+      ]
+    },
+    "g5m13": {
+      "hints": [
+        "Stelle dir die Fläche als Reihen gleich grosser Einheitsquadrate vor.",
+        "Welche Rechnung zählt gleich viele Quadrate in mehreren Reihen?"
+      ]
+    },
+    "g5m17": {
+      "hints": [
+        "Vergleiche jedes Element mit den möglichen Zielbereichen.",
+        "Unterscheide das Zählen von Einheitsquadraten vom Abmessen des Randes."
+      ]
+    },
+    "g5fu1a": {
+      "hints": [
+        "Stelle dir vor, du gehst einmal um den Rand der Figur.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "altAnswers": [
+        "Summe aller Seitenlängen",
+        "Länge der Randlinie",
+        "Summe der Seitenlängen"
+      ]
+    },
+    "g5fu1g": {
+      "hints": [
+        "Zeichne gedanklich ein Quadrat mit einer Seitenlänge von einem Meter.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "mathAnswerMode": "number"
+    },
+    "g5fu2b": {
+      "hints": [
+        "Ergänze das Dreieck zu einem Rechteck mit derselben Grundseite und Höhe.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5fu2j": {
+      "hints": [
+        "Überlege, ob du den Rand abmisst oder die Figur mit Einheitsquadraten bedeckst.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5fu2m": {
+      "hints": [
+        "Ein Hektar entspricht einem Quadrat mit einer Seitenlänge von hundert Metern.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "mathAnswerMode": "number"
+    },
+    "g5fu2p": {
+      "hints": [
+        "Berechne zu jedem Rechteck erst den Umfang und dann die Fläche.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5m27": {
+      "hints": [
+        "Addiere die Zähler, Nenner bleibt.",
+        "Prüfe bei jeder Rechnung, ob die Nenner gleich sind."
+      ]
+    },
+    "math5-rich-brueche-line-1": {
+      "hints": [
+        "1 1/2 ist eine ganze Zahl plus eine Hälfte.",
+        "Beginne bei der ganzen Zahl und zähle die passenden Teilschritte."
+      ]
+    },
+    "p5-1": {
+      "hints": [
+        "Denke an die Einteilung einer Prozenttafel in gleich grosse Felder.",
+        "Wie viele Felder umfasst eine vollständig gefüllte Prozenttafel?"
+      ]
+    },
+    "p5-9": {
+      "hints": [
+        "Kürze den Bruch mit dem Nenner hundert.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "p5-21": {
+      "hints": [
+        "Berechne den genannten Anteil des ursprünglichen Preises.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "math5-rich-prozent-match-1": {
+      "hints": [
+        "Prozent bedeutet von hundert.",
+        "Schreibe die Prozentzahl als Bruch und kürze."
+      ]
+    },
+    "ks5-1": {
+      "hints": [
+        "Denke an die Reihenfolge, in der man Koordinaten einträgt.",
+        "Vergleiche die beiden Achsen eines üblichen Koordinatensystems."
+      ],
+      "spokenPrompt": "Was ist die iks-Achse?",
+      "verbatimSpeech": true
+    },
+    "ks5-3": {
+      "hints": [
+        "Denke daran, was die zweite Koordinate eines Punktes beschreibt.",
+        "Vergleiche die Richtungen der beiden Achsen."
+      ]
+    },
+    "ks5-7": {
+      "hints": [
+        "Achte auf die Reihenfolge der beiden Buchstaben in der Koordinatenangabe.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was liest man zuerst bei Koordinaten (iks, Ypsilon)?",
+      "verbatimSpeech": true
+    },
+    "ks5-8": {
+      "hints": [
+        "Zeichne zwei sich schneidende Achsen und zähle die Bereiche.",
+        "Die Zahl liegt zwischen 2 und 6."
+      ]
+    },
+    "ks5-13": {
+      "hints": [
+        "Überlege, wie sich ein negatives Vorzeichen auf die Richtung auswirkt.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ],
+      "spokenPrompt": "Was bedeutet iks gleich minus 2 in einem Punkt?",
+      "verbatimSpeech": true
+    },
+    "ks5-15": {
+      "hints": [
+        "Die Quadranten werden gegen den Uhrzeigersinn gezählt, beginnend oben rechts.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ks5-19": {
+      "hints": [
+        "Vergleiche die Koordinaten auf der Achse, auf der sich die Punkte unterscheiden.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Abstand zwischen Punkt P mit Koordinaten 1 und 0 und Punkt Q mit Koordinaten 5 und 0?",
+      "verbatimSpeech": true
+    },
+    "ks5-24": {
+      "hints": [
+        "Bilde für jede Koordinate den Mittelwert der beiden Angaben.",
+        "Die Zahl liegt zwischen 3 und 7."
+      ],
+      "spokenPrompt": "Mittelpunkt zwischen Punkt A mit Koordinaten 2 und 0 und Punkt B mit Koordinaten 8 und 0: Punkt M mit Koordinaten erste Lücke und zweite Lücke Schreibe alle fehlenden Teile in der richtigen Reihenfolge in das Eingabefeld: ...",
+      "verbatimSpeech": true
+    },
+    "ks5-25": {
+      "hints": [
+        "Überlege, welche Koordinate sich ändern darf und welche fest bleibt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ks5-27": {
+      "hints": [
+        "Subtrahiere auf der gemeinsamen Achse die kleinere von der grösseren Koordinate.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Abstand zwischen Punkt A mit Koordinaten 0 und 1 und Punkt B mit Koordinaten 0 und 6:",
+      "verbatimSpeech": true
+    },
+    "ks5-32": {
+      "hints": [
+        "Setze die bekannte Koordinate in die Gleichung ein.",
+        "Rechne oder ordne Schritt für Schritt und kontrolliere das Ergebnis mit der umgekehrten Richtung."
+      ],
+      "spokenPrompt": "Punkt P liegt auf Ypsilon gleich iks bei iks gleich 4. Also ist Punkt P mit Koordinaten erste Lücke und zweite Lücke Schreibe alle fehlenden Teile in der richtigen Reihenfolge in das Eingabefeld: ...",
+      "verbatimSpeech": true
+    },
+    "ks5-45": {
+      "hints": [
+        "Vergleiche die Vorzeichen mit der Anordnung der vier Quadranten.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Punkt P mit Koordinaten 3 und minus 7 liegt im Quadranten ... .",
+      "verbatimSpeech": true
+    },
+    "ks5-50": {
+      "hints": [
+        "Prüfe, in welche Richtung dich jedes Vorzeichen führt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Punkt Q mit Koordinaten minus 5 und 6 liegt im Quadranten ... .",
+      "verbatimSpeech": true
+    },
+    "vol5-1": {
+      "hints": [
+        "Vergleiche das Füllen eines Körpers mit dem Bedecken seiner Oberfläche.",
+        "Einheit: cm³ oder m³."
+      ]
+    },
+    "vol5-4": {
+      "hints": [
+        "Überlege, welche drei räumlichen Abmessungen ein Quader besitzt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "vol5-27": {
+      "hints": [
+        "Teile das Volumen durch die Grundfläche.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Quader mit V gleich 120 Kubikzentimeter, l gleich 10, b gleich 4. h gleich ?",
+      "verbatimSpeech": true
+    },
+    "vol5-35": {
+      "hints": [
+        "Berechne die drei verschiedenen Seitenflächen und berücksichtige ihre Gegenflächen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wk5-9": {
+      "hints": [
+        "Vergleiche die Ereignisse mit den möglichen Ergebnissen eines gewöhnlichen Würfels.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wk5-11": {
+      "hints": [
+        "Ein sicheres Ereignis muss alle möglichen Würfelergebnisse einschliessen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wk5-45": {
+      "hints": [
+        "Zähle alle möglichen Ergebnisfolgen und dann die passenden.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Zwei Münzwürfe: Wahrscheinlichkeit für zweimal Kopf gleich 1/ ...",
+      "verbatimSpeech": true
+    },
+    "math5-rich-wahrscheinlichkeit-line-1": {
+      "hints": [
+        "3 von 10 sind drei Zehntel.",
+        "Teile die Anzahl roter Felder durch die Gesamtzahl der Felder."
+      ]
+    },
+    "st5-1": {
+      "hints": [
+        "Stelle dir vor, du verteilst die Gesamtmenge gleichmässig auf alle Werte.",
+        "Welche Rechenschritte sind für diese gleichmässige Verteilung nötig?"
+      ]
+    },
+    "st5-3": {
+      "hints": [
+        "Überlege, welche Eigenschaft der Balken eine Datenmenge darstellt.",
+        "Balken verlaufen waagrecht, Säulen senkrecht."
+      ]
+    },
+    "st5-4": {
+      "hints": [
+        "Überlege, was die Verbindung aufeinanderfolgender Messpunkte sichtbar macht.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "altAnswers": [
+        "Entwicklung über die Zeit",
+        "Verlauf über die Zeit",
+        "Veränderung über die Zeit"
+      ]
+    },
+    "st5-6": {
+      "hints": [
+        "Zähle die Vorkommen der verschiedenen Werte.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "altAnswers": [
+        "häufigster Wert",
+        "der häufigste Wert"
+      ]
+    },
+    "st5-9": {
+      "hints": [
+        "Überlege, wie ein Kreis in unterschiedlich grosse Stücke aufgeteilt werden kann.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "st5-13": {
+      "hints": [
+        "Denke an die Ergebnisse einer Umfrage oder einer Messung.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "st5-14": {
+      "hints": [
+        "Überlege, welche gemessene Grösse die Höhe einer Säule beschreibt.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ],
+      "altAnswers": [
+        "Häufigkeit",
+        "Anzahl"
+      ]
+    },
+    "st5-21": {
+      "hints": [
+        "Nach dem Sortieren bleiben beim paarweisen Streichen zwei mittlere Werte übrig.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "st5-27": {
+      "hints": [
+        "Vergleiche, wie stark sich die Kennzahlen durch einen sehr grossen Einzelwert verändern.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "st5-29": {
+      "hints": [
+        "Überlege, ob du Kategorien vergleichen oder ihre Anteile darstellen möchtest.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "st5-35": {
+      "hints": [
+        "Achte auf die Richtung, in der die Datenstreifen verlaufen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wk5-8": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Aus Losen 1, 2, 3, 4, 5: Wahrscheinlichkeit für Zahl grösser als 3 gleich ...",
+      "verbatimSpeech": true
+    },
+    "gr5-44": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-16": {
+      "mathAnswerMode": "number"
+    },
+    "wk5-6": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für gerade Zahl beim Würfelwurf (eins bis sechs): ...",
+      "verbatimSpeech": true
+    },
+    "gr5-41": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-37": {
+      "mathAnswerMode": "number"
+    },
+    "wk5-4": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Beim Münzwurf: Wahrscheinlichkeit für Kopf gleich ...",
+      "verbatimSpeech": true
+    },
+    "g5m30": {
+      "mathAnswerMode": "fraction"
+    },
+    "gr5-28": {
+      "mathAnswerMode": "number"
+    },
+    "g5m29": {
+      "mathAnswerMode": "fraction"
+    },
+    "wk5-26": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für mind. 1 Kopf bei 2x Münzwurf: ...",
+      "verbatimSpeech": true
+    },
+    "vol5-26": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "Schuhkarton 30 mal 15 mal 12 cm: V gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "g5br3d": {
+      "mathAnswerMode": "fraction"
+    },
+    "gr5-8": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-42": {
+      "mathAnswerMode": "number"
+    },
+    "p5-40": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g5br1k": {
+      "mathAnswerMode": "reduced-fraction"
+    },
+    "st5-50": {
+      "mathAnswerMode": "number"
+    },
+    "g5br3k": {
+      "mathAnswerMode": "reduced-fraction"
+    },
+    "g5m8": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5br3c": {
+      "mathAnswerMode": "fraction"
+    },
+    "wk5-28": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für Augenzahl grösser als 4 beim Würfeln: ...",
+      "verbatimSpeech": true
+    },
+    "vol5-50": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "Ein Behälter enthält 3 Kubikmeter Wasser gleich ... l.",
+      "verbatimSpeech": true
+    },
+    "gr5-40": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "0,65 Quadratmeter gleich ... Quadratzentimeter",
+      "verbatimSpeech": true
+    },
+    "wk5-32": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Lottozahlen eins bis neunundvierzig, eine gezogen: Wahrscheinlichkeit für kleiner oder gleich 10 gleich ...",
+      "verbatimSpeech": true
+    },
+    "g5br2a": {
+      "mathAnswerMode": "fraction"
+    },
+    "vol5-18": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "Aquarium 60 mal 30 mal 40 cm: V gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "gr5-18": {
+      "mathAnswerMode": "number"
+    },
+    "vol5-10": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "1 Kubikdezimeter gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "wk5-10": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Beutel mit 3 roten, 2 blauen Kugeln: Wahrscheinlichkeit für rot gleich ...",
+      "verbatimSpeech": true
+    },
+    "wk5-16": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für Zahl kleiner als 3 beim Würfeln (eins bis sechs): ...",
+      "verbatimSpeech": true
+    },
+    "gr5-24": {
+      "mathAnswerMode": "number"
+    },
+    "p5-49": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g5dz2m": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-32": {
+      "mathAnswerMode": "number"
+    },
+    "wk5-38": {
+      "mathAnswerMode": "reduced-fraction"
+    },
+    "g5br1e": {
+      "mathAnswerMode": "reduced-fraction"
+    },
+    "g5br1g": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5m28": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5br1c": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5br1a": {
+      "mathAnswerMode": "fraction"
+    },
+    "p5-30": {
+      "mathAnswerMode": "number"
+    },
+    "g5br2k": {
+      "mathAnswerMode": "fraction"
+    },
+    "wk5-14": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "5 gleiche Lose, 1 Gewinnlos: Wahrscheinlichkeit für Gewinn gleich ...",
+      "verbatimSpeech": true
+    },
+    "wk5-22": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für 2x Kopf beim 2x Münzwerfen: ...",
+      "verbatimSpeech": true
+    },
+    "wk5-34": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Spielkarten (52): Wahrscheinlichkeit für Herz-Ass gleich ...",
+      "verbatimSpeech": true
+    },
+    "vol5-46": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "V gleich 0,4 m mal 0,5 m mal 2 m gleich ... Kubikmeter",
+      "verbatimSpeech": true
+    },
+    "gr5-22": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "1 Quadratkilometer gleich ... Quadratmeter",
+      "verbatimSpeech": true
+    },
+    "vol5-14": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "5 l gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "g5m18": {
+      "mathAnswerMode": "number"
+    },
+    "g5br1i": {
+      "mathAnswerMode": "fraction"
+    },
+    "gr5-47": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz2i": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz1k": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz2e": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz2o": {
+      "mathAnswerMode": "number"
+    },
+    "g5br3i": {
+      "mathAnswerMode": "fraction"
+    },
+    "wk5-42": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz1c": {
+      "mathAnswerMode": "number"
+    },
+    "vol5-39": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "4500 Kubikzentimeter gleich ... l",
+      "verbatimSpeech": true
+    },
+    "g5m24": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5dz1g": {
+      "mathAnswerMode": "number"
+    },
+    "g5br3l": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5dz2c": {
+      "mathAnswerMode": "number"
+    },
+    "p5-8": {
+      "mathAnswerMode": "number"
+    },
+    "g5m22": {
+      "mathAnswerMode": "fraction"
+    },
+    "gr5-46": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "2,4 Kubikmeter gleich ... l",
+      "verbatimSpeech": true
+    },
+    "vol5-28": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "1,5 Kubikdezimeter gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "wk5-18": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für A gleich 2/5. Wahrscheinlichkeit für nicht A gleich ...",
+      "verbatimSpeech": true
+    },
+    "gr5-36": {
+      "mathAnswerMode": "number"
+    },
+    "g5m26": {
+      "mathAnswerMode": "fraction"
+    },
+    "vol5-48": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "2,5 l gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "g5br2e": {
+      "altAnswers": [
+        "1 3/4",
+        "1 3 / 4"
+      ],
+      "sequentialAnswer": true
+    },
+    "g5br2g": {
+      "altAnswers": [
+        "3/4",
+        "6/8",
+        "3 / 4",
+        "6 / 8"
+      ],
+      "sequentialAnswer": true
+    },
+    "g5br3a": {
+      "altAnswers": [
+        "3½",
+        "3 1 / 2"
+      ],
+      "sequentialAnswer": true
+    },
+    "g5br3f": {
+      "altAnswers": [
+        "2½",
+        "2 1 / 2"
+      ],
+      "sequentialAnswer": true
+    },
+    "g5br3h": {
+      "altAnswers": [
+        "2 1 / 6"
+      ],
+      "sequentialAnswer": true
+    },
+    "vol5-2": {
+      "altAnswers": [
+        "a^3",
+        "a × a × a",
+        "a*a*a",
+        "a · a · a"
+      ]
+    },
+    "ks5-2": {
+      "altAnswers": [
+        "Nullpunkt"
+      ],
+      "spokenPrompt": "Der Schnittpunkt von iks- und Ypsilon-Achse heisst ...",
+      "verbatimSpeech": true
+    },
+    "ks5-26": {
+      "altAnswers": [
+        "vertikale"
+      ],
+      "spokenPrompt": "Gerade iks gleich 4: Das ist eine ... Gerade",
+      "verbatimSpeech": true
+    },
+    "g5fu2e": {
+      "spokenPrompt": "Was ist 1 Quadratdezimeter in Quadratzentimeter?",
+      "verbatimSpeech": true
+    },
+    "g5fu2o": {
+      "spokenPrompt": "Was ist 3 Quadratmeter in Quadratdezimeter?",
+      "verbatimSpeech": true
+    },
+    "g5fu3k": {
+      "spokenPrompt": "Ein Garten ist zwanzig Meter lang und zwölf Meter breit. Wie viele Quadratmeter beträgt seine Fläche?",
+      "verbatimSpeech": true
+    },
+    "ks5-4": {
+      "spokenPrompt": "Ein Punkt wird mit zwei Koordinaten angegeben: (iks, ... )",
+      "verbatimSpeech": true
+    },
+    "ks5-6": {
+      "spokenPrompt": "Punkt A liegt bei iks gleich 3 und Ypsilon gleich 2. Man schreibt: Punkt A mit Koordinaten ...",
+      "verbatimSpeech": true
+    },
+    "ks5-10": {
+      "spokenPrompt": "Punkt B mit Koordinaten 0 und 5 liegt auf der ... -Achse",
+      "verbatimSpeech": true
+    },
+    "ks5-11": {
+      "spokenPrompt": "Punkt C mit Koordinaten 4 und 0 liegt auf welcher Achse?",
+      "verbatimSpeech": true
+    },
+    "ks5-12": {
+      "spokenPrompt": "Wie weit geht man nach rechts bei Punkt P mit Koordinaten 5 und 3? ... Einheiten",
+      "verbatimSpeech": true
+    },
+    "ks5-14": {
+      "spokenPrompt": "Punkt P mit Koordinaten 2 und 3: Wie weit nach oben? ... Einheiten",
+      "verbatimSpeech": true
+    },
+    "ks5-16": {
+      "spokenPrompt": "Punkt A mit Koordinaten minus 3 und 4: Im ... Quadranten",
+      "verbatimSpeech": true
+    },
+    "ks5-18": {
+      "spokenPrompt": "Punkt B mit Koordinaten minus 2 und minus 4: Im ... Quadranten",
+      "verbatimSpeech": true
+    },
+    "ks5-20": {
+      "spokenPrompt": "Spiegle Punkt A mit Koordinaten 3 und 2 an der Ypsilon-Achse: A'(erste Lücke, zweite Lücke) Schreibe alle fehlenden Teile in der richtigen Reihenfolge in das Eingabefeld: ...",
+      "verbatimSpeech": true
+    },
+    "ks5-21": {
+      "spokenPrompt": "Spiegelung von Punkt P mit Koordinaten 4 und minus 3 an der iks-Achse:",
+      "verbatimSpeech": true
+    },
+    "ks5-22": {
+      "spokenPrompt": "Ein Rechteck hat Ecken bei Punkt A mit Koordinaten 1 und 1, Punkt B mit Koordinaten 4 und 1, Punkt C mit Koordinaten 4 und 3, Punkt D mit Koordinaten 1 und 3. Breite: ... Einheiten",
+      "verbatimSpeech": true
+    },
+    "ks5-28": {
+      "spokenPrompt": "Rechteck Ecken Punkt A mit Koordinaten 0 und 0, Punkt B mit Koordinaten 5 und 0, Punkt C mit Koordinaten 5 und 4, Punkt D mit Koordinaten 0 und 4: Fläche gleich ... Quadrateinheiten",
+      "verbatimSpeech": true
+    },
+    "ks5-29": {
+      "spokenPrompt": "Koordinaten des Mittelpunkts von Punkt A mit Koordinaten 1 und 2 und Punkt B mit Koordinaten 5 und 6:",
+      "verbatimSpeech": true
+    },
+    "ks5-30": {
+      "spokenPrompt": "Welcher Quadrant: iks gleich 5, Ypsilon gleich minus 7? ... Quadrant",
+      "verbatimSpeech": true
+    },
+    "ks5-31": {
+      "spokenPrompt": "Wie viele Punkte hat die Gerade Ypsilon gleich iks?",
+      "verbatimSpeech": true
+    },
+    "ks5-33": {
+      "spokenPrompt": "Spiegelung von Punkt P mit Koordinaten minus 2 und 3 am Ursprung:",
+      "verbatimSpeech": true
+    },
+    "ks5-34": {
+      "spokenPrompt": "Dreieck mit Eckpunkten Punkt A mit Koordinaten 0 und 0, Punkt B mit Koordinaten 4 und 0, Punkt C mit Koordinaten 0 und 3. Grundlinie gleich ... Einheiten",
+      "verbatimSpeech": true
+    },
+    "ks5-35": {
+      "spokenPrompt": "Was ist die Steigung einer Gerade Ypsilon gleich zwei mal iks?",
+      "verbatimSpeech": true
+    },
+    "ks5-36": {
+      "spokenPrompt": "Vom Ursprung bis Punkt R mit Koordinaten 0 und minus 8 sind es ... Einheiten.",
+      "verbatimSpeech": true
+    },
+    "ks5-37": {
+      "spokenPrompt": "Punkt P mit Koordinaten 4 und minus 3: iks gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-38": {
+      "spokenPrompt": "Punkt B mit Koordinaten minus 1 und 3 wird 5 nach unten verschoben: Ypsilon' gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-39": {
+      "spokenPrompt": "Punkt A mit Koordinaten 1 und 2, Punkt B mit Koordinaten 8 und 2: Länge AB gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-40": {
+      "spokenPrompt": "Mittelpunkt von Punkt C mit Koordinaten minus 3 und 1 und Punkt D mit Koordinaten minus 3 und 9: Ypsilon gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-41": {
+      "spokenPrompt": "Punkt S mit Koordinaten minus 4 und 0 liegt auf der ... -Achse.",
+      "verbatimSpeech": true
+    },
+    "ks5-42": {
+      "spokenPrompt": "Punkt Q mit Koordinaten minus 6 und 2: Ypsilon gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-43": {
+      "spokenPrompt": "Spiegelung von Punkt C mit Koordinaten 7 und minus 4 an der Ypsilon-Achse: iks' gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-44": {
+      "spokenPrompt": "Punkt E mit Koordinaten minus 2 und minus 5, Punkt F mit Koordinaten minus 2 und 4: Länge EF gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-46": {
+      "spokenPrompt": "Punkt A mit Koordinaten minus 2 und 3 → Punkt B mit Koordinaten 4 und 3: Verschiebung in iks-Richtung gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-47": {
+      "spokenPrompt": "Punkt A mit Koordinaten 2 und 5 wird 4 nach rechts verschoben: iks' gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-48": {
+      "spokenPrompt": "Spiegelung von Punkt D mit Koordinaten minus 3 und 6 an der iks-Achse: Ypsilon' gleich ...",
+      "verbatimSpeech": true
+    },
+    "ks5-49": {
+      "spokenPrompt": "Mittelpunkt von Punkt A mit Koordinaten 2 und 4 und Punkt B mit Koordinaten 8 und 4: iks gleich ...",
+      "verbatimSpeech": true
+    },
+    "gr5-29": {
+      "spokenPrompt": "5 Quadratzentimeter gleich ... Quadratmillimeter?",
+      "verbatimSpeech": true
+    },
+    "vol5-3": {
+      "spokenPrompt": "Wie viel Kubikzentimeter sind 1 Liter?",
+      "verbatimSpeech": true
+    },
+    "vol5-6": {
+      "spokenPrompt": "Würfel mit Seite 3 cm: V gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-7": {
+      "spokenPrompt": "2000 Kubikzentimeter gleich ... l?",
+      "verbatimSpeech": true
+    },
+    "vol5-8": {
+      "spokenPrompt": "Würfel mit Seite 1 cm: V gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-12": {
+      "spokenPrompt": "Quader 5 mal 2 mal 2 cm: V gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-15": {
+      "spokenPrompt": "Was ist 1 ml in Kubikzentimeter?",
+      "verbatimSpeech": true
+    },
+    "vol5-16": {
+      "spokenPrompt": "Quader 10 mal 5 mal 3 cm: V gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-17": {
+      "spokenPrompt": "Würfel mit V gleich 64 Kubikzentimeter: Seitenlänge?",
+      "verbatimSpeech": true
+    },
+    "vol5-19": {
+      "spokenPrompt": "72 000 Kubikzentimeter gleich ... l?",
+      "verbatimSpeech": true
+    },
+    "vol5-20": {
+      "spokenPrompt": "Quader: l gleich 8, b gleich 4, h gleich ?. V gleich 96 Kubikzentimeter. h gleich ...",
+      "verbatimSpeech": true
+    },
+    "vol5-22": {
+      "spokenPrompt": "Würfel mit Seite 5 cm: V gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-24": {
+      "spokenPrompt": "Pool 5 m mal 2 m mal 1,5 m: V gleich ... Kubikmeter",
+      "verbatimSpeech": true
+    },
+    "vol5-25": {
+      "spokenPrompt": "15 Kubikmeter Wasser gleich ... l?",
+      "verbatimSpeech": true
+    },
+    "vol5-29": {
+      "spokenPrompt": "Ein Würfel hat V gleich 1 Kubikmeter. Wie viel Liter sind das?",
+      "verbatimSpeech": true
+    },
+    "vol5-30": {
+      "spokenPrompt": "Container 12 m mal 2,5 m mal 2,5 m: V gleich ... Kubikmeter",
+      "verbatimSpeech": true
+    },
+    "vol5-32": {
+      "spokenPrompt": "0,125 l gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-33": {
+      "spokenPrompt": "Würfel mit V gleich 27 Kubikmeter: Seitenlänge?",
+      "verbatimSpeech": true
+    },
+    "vol5-36": {
+      "spokenPrompt": "Quader V gleich 924 Kubikzentimeter, Länge 11 cm, Breite 7 cm: Höhe gleich ... cm",
+      "verbatimSpeech": true
+    },
+    "vol5-37": {
+      "spokenPrompt": "V gleich 8 cm mal 5 cm mal 3 cm gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-38": {
+      "spokenPrompt": "Würfelvolumen 512 Kubikzentimeter: Kante gleich ... cm",
+      "verbatimSpeech": true
+    },
+    "vol5-41": {
+      "spokenPrompt": "Drei Würfel mit je 125 Kubikzentimeter haben zusammen ... Kubikzentimeter.",
+      "verbatimSpeech": true
+    },
+    "vol5-42": {
+      "spokenPrompt": "V gleich 12 cm mal 4 cm mal 6 cm gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-43": {
+      "spokenPrompt": "Quader V gleich 360 Kubikzentimeter, Grundfläche 45 Quadratzentimeter: Höhe gleich ... cm",
+      "verbatimSpeech": true
+    },
+    "vol5-44": {
+      "spokenPrompt": "V gleich 15 m mal 6 m mal 2 m gleich ... Kubikmeter",
+      "verbatimSpeech": true
+    },
+    "vol5-45": {
+      "spokenPrompt": "V gleich 9 cm mal 9 cm mal 10 cm gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-47": {
+      "spokenPrompt": "Würfelkante 7 cm: V gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "wk5-5": {
+      "spokenPrompt": "Was ist Wahrscheinlichkeit für 6 beim Würfelwurf (6-seitiger Würfel)?",
+      "verbatimSpeech": true
+    },
+    "wk5-13": {
+      "spokenPrompt": "Wahrscheinlichkeit für ungerade beim Würfeln (eins bis sechs):",
+      "verbatimSpeech": true
+    },
+    "wk5-15": {
+      "spokenPrompt": "Wahrscheinlichkeit für rot gleich 0,3. Was ist Wahrscheinlichkeit für nicht rot?",
+      "verbatimSpeech": true
+    },
+    "wk5-17": {
+      "spokenPrompt": "Beutel: 4 rot, 3 blau, 3 grün. Wahrscheinlichkeit für blau:",
+      "verbatimSpeech": true
+    },
+    "wk5-19": {
+      "spokenPrompt": "10 Karten (1 minus 10). Wahrscheinlichkeit für Primzahl?",
+      "verbatimSpeech": true
+    },
+    "wk5-21": {
+      "spokenPrompt": "Würfel 2x werfen. Wie viele Ergebnispaare total?",
+      "verbatimSpeech": true
+    },
+    "wk5-25": {
+      "spokenPrompt": "Klasse: 12 Mädchen, 8 Jungen. Wahrscheinlichkeit für Junge zufällig gewählt?",
+      "verbatimSpeech": true
+    },
+    "wk5-27": {
+      "spokenPrompt": "Beim Roulette: 18 rote, 18 schwarze, 1 grüne Felder. Wahrscheinlichkeit für schwarz?",
+      "verbatimSpeech": true
+    },
+    "wk5-29": {
+      "spokenPrompt": "Experiment: 100x gewürfelt, 18x eine 6. Relative Häufigkeit?",
+      "verbatimSpeech": true
+    },
+    "wk5-30": {
+      "spokenPrompt": "Wahrscheinlichkeit für A oder B bei unvereinbaren Ereignissen gleich Wahrscheinlichkeit für A plus ...",
+      "verbatimSpeech": true
+    },
+    "wk5-31": {
+      "spokenPrompt": "Wahrscheinlichkeit für 1 oder 2 beim Würfeln:",
+      "verbatimSpeech": true
+    },
+    "wk5-35": {
+      "spokenPrompt": "Wahrscheinlichkeit für kein Ass bei 52 Karten (4 Asse):",
+      "verbatimSpeech": true
+    },
+    "wk5-39": {
+      "spokenPrompt": "Beutel: 4 rote, 3 blaue, 3 grüne Kugeln. Wahrscheinlichkeit für rot gleich ... /10",
+      "verbatimSpeech": true
+    },
+    "wk5-43": {
+      "spokenPrompt": "Würfel: Wahrscheinlichkeit für Zahl grösser als 4 gleich ... /6",
+      "verbatimSpeech": true
+    },
+    "wk5-44": {
+      "spokenPrompt": "Beutel: 5 weisse, 2 schwarze Kugeln. Wahrscheinlichkeit für nicht schwarz gleich ... /7",
+      "verbatimSpeech": true
+    },
+    "wk5-46": {
+      "spokenPrompt": "Wahrscheinlichkeit für Ereignis gleich 0 bedeutet: ... Prozent",
+      "verbatimSpeech": true
+    },
+    "wk5-48": {
+      "spokenPrompt": "Würfel: Wahrscheinlichkeit für gerade Zahl gleich ... /6",
+      "verbatimSpeech": true
+    },
+    "wk5-49": {
+      "spokenPrompt": "Glücksrad mit 8 gleichen Feldern, davon 2 Sterne: Wahrscheinlichkeit für Stern gleich ... /4",
+      "verbatimSpeech": true
+    },
+    "st5-28": {
+      "spokenPrompt": "Wie viele Schüler haben Note fünf laut Tabelle? Note vier: drei Schüler. Note fünf: sieben Schüler. Note sechs: fünf Schüler.",
+      "verbatimSpeech": true
+    }
+  }
+}
