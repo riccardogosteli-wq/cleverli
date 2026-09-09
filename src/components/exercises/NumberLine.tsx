@@ -17,10 +17,11 @@ interface Props {
   max: number;
   answer: number;
   step?: number;
+  exactTicks?: boolean;
   onAnswer: (correct: boolean) => void;
 }
 
-export default function NumberLine({ question, min, max, answer, step = 1, onAnswer }: Props) {
+export default function NumberLine({ question, min, max, answer, step = 1, exactTicks = false, onAnswer }: Props) {
   const { play } = useSound();
   const { tr } = useLang();
   const [value, setValue] = useState<number>(Math.round((min + max) / 2));
@@ -45,7 +46,12 @@ export default function NumberLine({ question, min, max, answer, step = 1, onAns
 
   // Tick marks
   const ticks: number[] = [];
-  for (let i = min; i <= max; i += step) ticks.push(i);
+  if (exactTicks) {
+    const count = Math.round((max - min) / step);
+    for (let i = 0; i <= count; i++) ticks.push(Number((min + i * step).toFixed(10)));
+  } else {
+    for (let i = min; i <= max; i += step) ticks.push(i);
+  }
   // Only show every Nth label to avoid crowding
   const labelEvery = Math.ceil(ticks.length / 6);
 

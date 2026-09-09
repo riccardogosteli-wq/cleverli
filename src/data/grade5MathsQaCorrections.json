@@ -122,7 +122,8 @@
       "hints": [
         "Suche zuerst die ganzen Zahlen, zwischen denen der gesuchte Wert liegt.",
         "Zähle in Zehntel-Schritten."
-      ]
+      ],
+      "exactNumberLineTicks": true
     },
     "g5m10": {
       "hints": [
@@ -178,7 +179,8 @@
       "hints": [
         "Prüfe die Schrittweite zwischen den Markierungen.",
         "Beginne bei der kleineren ganzen Zahl und zähle die Schritte."
-      ]
+      ],
+      "exactNumberLineTicks": true
     },
     "g5m13": {
       "hints": [
@@ -417,7 +419,8 @@
       "hints": [
         "3 von 10 sind drei Zehntel.",
         "Teile die Anzahl roter Felder durch die Gesamtzahl der Felder."
-      ]
+      ],
+      "exactNumberLineTicks": true
     },
     "st5-1": {
       "hints": [

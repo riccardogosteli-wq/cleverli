@@ -32,6 +32,8 @@ export interface Exercise {
   /** Individually reviewed mathematical input semantics; opt-in only. */
   mathAnswerMode?: "number" | "fraction" | "reduced-fraction";
   mathAnswerUnit?: string;
+  /** Reviewed decimal number lines: avoid accumulated floating-point tick labels. */
+  exactNumberLineTicks?: boolean;
   caseSensitiveAnswer?: boolean; // Explicit letter-case learning tasks only.
   answerEN?: string;
   answerFR?: string;

@@ -1090,6 +1090,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
               max={current.numberMax ?? 10}
               answer={Number(current.answer)}
               step={current.numberStep ?? 1}
+              exactTicks={current.exactNumberLineTicks}
               onAnswer={handleAnswer}
             />
           )}
