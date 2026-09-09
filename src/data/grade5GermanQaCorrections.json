@@ -1,0 +1,2602 @@
+{
+  "patches": {
+    "g5d3": {
+      "question": "Wie nennt man den Satzteil «sagte Tim», der angibt, wer die direkte Rede spricht?",
+      "spokenPrompt": "Wie nennt man den Satzteil «sagte Tim», der angibt, wer die direkte Rede spricht?",
+      "verbatimSpeech": true
+    },
+    "g5d5": {
+      "question": "Welcher Satz gibt den Ausruf «Komm mit!» mit einem nachgestellten Begleitsatz wieder?",
+      "spokenPrompt": "Welcher Satz gibt den Ausruf «Komm mit!» mit einem nachgestellten Begleitsatz wieder?",
+      "verbatimSpeech": true
+    },
+    "g5d7": {
+      "question": "Ergänze mit dem Präteritum von «fragen»: «Wann kommst du?», ___ Tom.",
+      "spokenPrompt": "Ergänze mit dem Präteritum von «fragen»: «Wann kommst du?», … Tom.",
+      "verbatimSpeech": true
+    },
+    "g5d8": {
+      "altAnswers": [
+        "Samstag"
+      ]
+    },
+    "g5d9": {
+      "altAnswers": [
+        "Wörter",
+        "Satzteile",
+        "Wörter und Sätze"
+      ],
+      "hints": [
+        "Was verbinden Konjunktionen?",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g5d10": {
+      "altAnswers": [
+        "Substantiv",
+        "Hauptwort",
+        "Bezugswort"
+      ],
+      "hints": [
+        "Was ist ein Hauptwort?",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g5dr1a": {
+      "question": "Ergänze: In direkter Rede werden die Worte einer Person ___ wiedergegeben.",
+      "answer": "wörtlich",
+      "altAnswers": [
+        "direkt"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Ergänze: In direkter Rede werden die Worte einer Person … wiedergegeben.",
+      "verbatimSpeech": true
+    },
+    "g5dr1c": {
+      "question": "Wie nennt man den Satzteil, der sagt, wer die direkte Rede spricht? ___",
+      "answer": "Begleitsatz",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schlüsselwort: «spricht»."
+      ],
+      "spokenPrompt": "Wie nennt man den Satzteil, der sagt, wer die direkte Rede spricht? …",
+      "verbatimSpeech": true
+    },
+    "g5dr1d": {
+      "question": "Welches Wort bezeichnet eine leise Sprechweise im Präteritum?",
+      "spokenPrompt": "Welches Wort bezeichnet eine leise Sprechweise im Präteritum?",
+      "verbatimSpeech": true
+    },
+    "g5dr1e": {
+      "question": "Ergänze das Präteritum von «rufen»: «Ich komme gleich!», ___ Leo.",
+      "spokenPrompt": "Ergänze das Präteritum von «rufen»: «Ich komme gleich!», … Leo.",
+      "verbatimSpeech": true
+    },
+    "g5dr1f": {
+      "question": "Welche Zeichen schliessen die direkte Rede in «Hallo!», sagte Tim. ein?",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welche Zeichen schliessen die direkte Rede in «Hallo!», sagte Tim. ein?",
+      "verbatimSpeech": true
+    },
+    "g5dr1j": {
+      "question": "Welches Satzzeichen kann einen Ausruf in direkter Rede abschliessen?",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welches Satzzeichen kann einen Ausruf in direkter Rede abschliessen?",
+      "verbatimSpeech": true
+    },
+    "g5dr2a": {
+      "question": "Wandle mit Schweizer Guillemets in direkte Rede um: Tim fragte, ob er kommen darf. Beginne mit «Tim fragte:».",
+      "caseSensitiveAnswer": true,
+      "altAnswers": [
+        "Tim fragte: «Darf ich kommen?»"
+      ],
+      "spokenPrompt": "Wandle mit Schweizer Guillemets in direkte Rede um: Tim fragte, ob er kommen darf. Beginne mit «Tim fragte:».",
+      "verbatimSpeech": true
+    },
+    "g5dr2b": {
+      "options": [
+        "«Ich», sagte Lisa, «komme bald.»",
+        "«Ich komme bald.», sagte Lisa",
+        "Tim fragte: «Darf ich kommen?»",
+        "«Komm mit!», rief Max."
+      ]
+    },
+    "g5dr2c": {
+      "question": "Ergänze: Eingebettete direkte Rede ist in einen längeren ___ eingebaut.",
+      "answer": "Satz",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ],
+      "spokenPrompt": "Ergänze: Eingebettete direkte Rede ist in einen längeren … eingebaut.",
+      "verbatimSpeech": true
+    },
+    "g5dr2e": {
+      "question": "Wandle mit Konjunktiv I um: «Ich bin hungrig», sagte Max. → Max sagte, ___",
+      "altAnswers": [
+        "dass er hungrig sei"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wandle mit Konjunktiv I um: «Ich bin hungrig», sagte Max. → Max sagte, …",
+      "verbatimSpeech": true
+    },
+    "g5dr2g": {
+      "altAnswers": [
+        "Doppelpunkt",
+        ":",
+        "ein Doppelpunkt"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g5dr2h": {
+      "options": [
+        "«Komm her!», rief sie.",
+        "«Komm mit!» rief Max.",
+        "Eine Person direkt (wörtlich)",
+        "Ausrufezeichen am Ende: «Hilfe!»"
+      ]
+    },
+    "g5dr2j": {
+      "options": [
+        "Direkte Rede ist in einen längeren Satz eingebaut",
+        "Unmittelbare Wiedergabe der Gedanken einer Figur in der Ichform",
+        "Verbform für indirekte Rede (er sagte, er sei müde)",
+        "Ein Satz, der die direkte Rede ankündigt (Er sagte:)"
+      ],
+      "answer": "Unmittelbare Wiedergabe der Gedanken einer Figur in der Ichform",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5dr2l": {
+      "options": [
+        "Zeichen für wörtliche Rede («…» oder Gänsefüsschen)",
+        "Direkte Rede ist in einen längeren Satz eingebaut",
+        "Ein Gespräch mit drei oder mehr Personen",
+        "Unmittelbare Wiedergabe der Gedanken einer Figur in der Ichform"
+      ],
+      "question": "Was ist ein Polylog?",
+      "hints": [
+        "Achte darauf, wie viele Personen am Gespräch beteiligt sind.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Polylog?",
+      "verbatimSpeech": true
+    },
+    "g5dr2k": {
+      "altAnswers": [
+        "Ja",
+        "Ja, im Dialog",
+        "ja, in einem Gespräch"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "g5dr2m": {
+      "question": "Schreibe mit Konjunktiv I in indirekte Rede um: «Ich komme morgen.» → Sie sagte, ___",
+      "altAnswers": [
+        "dass sie morgen komme",
+        "sie komme am nächsten Tag",
+        "dass sie am nächsten Tag komme"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ],
+      "spokenPrompt": "Schreibe mit Konjunktiv I in indirekte Rede um: «Ich komme morgen.» → Sie sagte, …",
+      "verbatimSpeech": true
+    },
+    "g5dr3a": {
+      "altAnswers": [
+        "3"
+      ]
+    },
+    "g5dr3b": {
+      "question": "In «Er wartet dort» bestimmt das Adverb «dort» das ___ näher.",
+      "altAnswers": [
+        "Tätigkeitswort",
+        "Zeitwort"
+      ],
+      "spokenPrompt": "In «Er wartet dort» bestimmt das Adverb «dort» das … näher.",
+      "verbatimSpeech": true
+    },
+    "g5dr3d": {
+      "question": "Ergänze das Satzzeichen für den Ausruf: «Ich bin gleich da___», ruft Amir.",
+      "spokenPrompt": "Ergänze das Satzzeichen für den Ausruf: «Ich bin gleich da…», ruft Amir.",
+      "verbatimSpeech": true
+    },
+    "g5dr3e": {
+      "altAnswers": [
+        "Sprechverb",
+        "Redeverb",
+        "Begleitsatzverb",
+        "Begleitsatz-Verb"
+      ]
+    },
+    "g5dr3f": {
+      "question": "Ein Begleitsatz zeigt, welche Person ___.",
+      "answer": "spricht",
+      "altAnswers": [
+        "redet"
+      ],
+      "spokenPrompt": "Ein Begleitsatz zeigt, welche Person ….",
+      "verbatimSpeech": true
+    },
+    "g5dr3h": {
+      "altAnswers": [
+        "höfliche Bitten",
+        "Möglichkeiten"
+      ]
+    },
+    "g5dr3j": {
+      "altAnswers": [
+        "komplexen"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Auch: Satzgefüge genannt."
+      ]
+    },
+    "g5d17": {
+      "altAnswers": [
+        "äussern",
+        "mitteilen",
+        "erklären",
+        "berichten",
+        "erzählen",
+        "bemerken"
+      ]
+    },
+    "g5d18": {
+      "altAnswers": [
+        "flink",
+        "zügig",
+        "geschwind",
+        "fix"
+      ]
+    },
+    "g5sy1c": {
+      "altAnswers": [
+        "laufen",
+        "schreiten",
+        "spazieren",
+        "wandern",
+        "marschieren",
+        "spazieren gehen"
+      ]
+    },
+    "g5sy1e": {
+      "altAnswers": [
+        "ermattet",
+        "schläfrig",
+        "abgeschlagen",
+        "kraftlos"
+      ]
+    },
+    "g5sy1g": {
+      "altAnswers": [
+        "Versehen",
+        "Patzer",
+        "Schnitzer",
+        "Fehlleistung"
+      ]
+    },
+    "g5sy1i": {
+      "altAnswers": [
+        "komisch",
+        "amüsant",
+        "humorvoll",
+        "unterhaltsam",
+        "heiter"
+      ]
+    },
+    "g5sy1k": {
+      "altAnswers": [
+        "gewaltig",
+        "enorm",
+        "riesenhaft",
+        "gigantisch",
+        "umfangreich"
+      ]
+    },
+    "g5sy2c": {
+      "altAnswers": [
+        "sich äussern",
+        "sich unterhalten",
+        "konversieren"
+      ]
+    },
+    "g5sy2e": {
+      "altAnswers": [
+        "vollenden",
+        "vollbringen",
+        "fertigstellen"
+      ]
+    },
+    "g5sy2g": {
+      "altAnswers": [
+        "Gegenteil",
+        "Gegenwort"
+      ]
+    },
+    "g5sy2m": {
+      "altAnswers": [
+        "entgegnen",
+        "replizieren"
+      ]
+    },
+    "g5sy3a": {
+      "altAnswers": [
+        "anschauen",
+        "beobachten",
+        "begutachten",
+        "besichtigen"
+      ]
+    },
+    "g5sy3b": {
+      "altAnswers": [
+        "ablehnen",
+        "verneinen"
+      ]
+    },
+    "g5sy3c": {
+      "altAnswers": [
+        "verhüllen",
+        "verdecken",
+        "kaschieren"
+      ]
+    },
+    "g5sy3d": {
+      "altAnswers": [
+        "knauserig",
+        "kleinlich",
+        "knickerig"
+      ]
+    },
+    "g5sy3e": {
+      "altAnswers": [
+        "couragiert",
+        "beherzt",
+        "furchtlos",
+        "kühn"
+      ]
+    },
+    "g5sy3f": {
+      "altAnswers": [
+        "tiefgründig",
+        "eingehend",
+        "sorgfältig"
+      ]
+    },
+    "g5sy3g": {
+      "altAnswers": [
+        "verwundert",
+        "verblüfft",
+        "verdutzt"
+      ]
+    },
+    "g5sy3h": {
+      "altAnswers": [
+        "verringern",
+        "reduzieren"
+      ]
+    },
+    "g5sy3i": {
+      "altAnswers": [
+        "starten",
+        "einsetzen"
+      ]
+    },
+    "g5sy3j": {
+      "altAnswers": [
+        "oft",
+        "oftmals",
+        "regelmässig"
+      ]
+    },
+    "g5sy3k": {
+      "altAnswers": [
+        "still sein",
+        "nichts sagen",
+        "verstummen",
+        "stumm bleiben"
+      ],
+      "answer": "still sein"
+    },
+    "g5sy3l": {
+      "altAnswers": [
+        "unkompliziert",
+        "simpel",
+        "leicht"
+      ]
+    },
+    "g5sy1a": {
+      "question": "Wie nennt man ein Wort mit ähnlicher Bedeutung? ___",
+      "answer": "Synonym",
+      "altAnswers": [
+        "gleichbedeutendes Wort"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wie nennt man ein Wort mit ähnlicher Bedeutung? …",
+      "verbatimSpeech": true
+    },
+    "g5sy2i": {
+      "question": "Wie heisst ein Unterbegriff wie «Rose» zum Oberbegriff «Blume»? ___",
+      "answer": "Hyponym",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wie heisst ein Unterbegriff wie «Rose» zum Oberbegriff «Blume»? …",
+      "verbatimSpeech": true
+    },
+    "g5sy2k": {
+      "question": "Wie nennt man ein zusammengesetztes Wort wie «Haustür»? ___",
+      "answer": "Kompositum",
+      "altAnswers": [
+        "Zusammensetzung"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wie nennt man ein zusammengesetztes Wort wie «Haustür»? …",
+      "verbatimSpeech": true
+    },
+    "g5sy2o": {
+      "question": "Wie nennt man ein neu geprägtes Wort? ___",
+      "answer": "Neologismus",
+      "altAnswers": [
+        "Wortneuschöpfung",
+        "Wortneubildung"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wie nennt man ein neu geprägtes Wort? …",
+      "verbatimSpeech": true
+    },
+    "g5d21": {
+      "question": "Welcher der drei Aufsatzteile Einleitung, Hauptteil und Schluss kommt zuerst?",
+      "spokenPrompt": "Welcher der drei Aufsatzteile Einleitung, Hauptteil und Schluss kommt zuerst?",
+      "verbatimSpeech": true
+    },
+    "g5d24": {
+      "altAnswers": [
+        "Schlussteil"
+      ],
+      "hints": [
+        "Lies den ganzen Satz und überlege, welcher Eintrag zur Lücke passt.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g5d27": {
+      "altAnswers": [
+        "prägnant",
+        "aussagekräftig",
+        "treffend",
+        "passend"
+      ]
+    },
+    "g5d28": {
+      "altAnswers": [
+        "Handlungsstrang",
+        "Gedanken"
+      ]
+    },
+    "g5d29": {
+      "altAnswers": [
+        "Spannungshöhepunkt",
+        "Klimax"
+      ]
+    },
+    "g5d30": {
+      "altAnswers": [
+        "lebendiger",
+        "anschaulich",
+        "anschaulicher",
+        "spannend",
+        "spannender",
+        "lebensnah"
+      ]
+    },
+    "g5au1a": {
+      "altAnswers": [
+        "Einleitung, Hauptteil und Schluss"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g5au1c": {
+      "altAnswers": [
+        "Wer, wann, wo",
+        "Wer, was, wann und wo",
+        "die W-Fragen"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g5au1e": {
+      "question": "Wie heisst der letzte Teil eines Aufsatzes, der die Geschichte abschliesst? ___",
+      "answer": "Schluss",
+      "altAnswers": [
+        "Schlussteil"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wie heisst der letzte Teil eines Aufsatzes, der die Geschichte abschliesst? …",
+      "verbatimSpeech": true
+    },
+    "g5au1g": {
+      "altAnswers": [
+        "Titel",
+        "ein Titel",
+        "der Titel",
+        "ein kurzer Titel"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g5au1i": {
+      "question": "Adjektive machen einen Text anschaulich, indem sie Eigenschaften ___.",
+      "answer": "beschreiben",
+      "altAnswers": [
+        "benennen",
+        "darstellen"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Adjektive machen einen Text anschaulich, indem sie Eigenschaften ….",
+      "verbatimSpeech": true
+    },
+    "g5au1k": {
+      "question": "Wie nennt man das Erzählen aus einer anderen Sicht? ___",
+      "answer": "Perspektivwechsel",
+      "altAnswers": [
+        "Wechsel der Perspektive"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wie nennt man das Erzählen aus einer anderen Sicht? …",
+      "verbatimSpeech": true
+    },
+    "g5au2g": {
+      "question": "Atmosphärische Beschreibungen erzeugen eine bestimmte ___.",
+      "answer": "Stimmung",
+      "altAnswers": [
+        "Atmosphäre"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Atmosphärische Beschreibungen erzeugen eine bestimmte ….",
+      "verbatimSpeech": true
+    },
+    "g5au2i": {
+      "question": "Wie nennt man die systematische Beschreibung eines Bildes? ___",
+      "answer": "Bildbeschreibung",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Wie nennt man die systematische Beschreibung eines Bildes? …",
+      "verbatimSpeech": true
+    },
+    "g5au3d": {
+      "question": "Eine erzählende Figur verwendet die erste Person. Sie erzählt in der ___-Perspektive.",
+      "spokenPrompt": "Eine erzählende Figur verwendet die erste Person. Sie erzählt in der …-Perspektive.",
+      "verbatimSpeech": true
+    },
+    "g5au3a": {
+      "altAnswers": [
+        "Schlussteil"
+      ]
+    },
+    "g5au3b": {
+      "altAnswers": [
+        "Zeichensetzung",
+        "Aufbau",
+        "Grammatik"
+      ]
+    },
+    "g5au3c": {
+      "altAnswers": [
+        "Teile",
+        "Sinnabschnitte",
+        "Textabschnitte"
+      ],
+      "spokenPrompt": "Absätze gliedern einen längeren Text in sinnvolle ….",
+      "verbatimSpeech": true
+    },
+    "g5au3e": {
+      "altAnswers": [
+        "Plan",
+        "Gliederungsplan",
+        "Konzept"
+      ]
+    },
+    "g5au3g": {
+      "altAnswers": [
+        "angezeigt",
+        "gezeigt",
+        "gekennzeichnet",
+        "dargestellt",
+        "beschrieben"
+      ]
+    },
+    "g5au3k": {
+      "altAnswers": [
+        "Anfang",
+        "Beginn",
+        "Einstiegssatz"
+      ]
+    },
+    "g5au3l": {
+      "altAnswers": [
+        "Meinungen",
+        "Bewertungen",
+        "Urteile"
+      ]
+    },
+    "wa5-2": {
+      "altAnswers": [
+        "einen Artikel",
+        "Artikel",
+        "der",
+        "die",
+        "das"
+      ],
+      "hints": [
+        "der Hund, die Katze, das Haus = Nomen.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "wa5-4": {
+      "altAnswers": [
+        "wollen",
+        "sollen",
+        "mögen"
+      ]
+    },
+    "wa5-6": {
+      "altAnswers": [
+        "Eigenschaftswort",
+        "ein Eigenschaftswort",
+        "Wiewort",
+        "ein Wort, das Eigenschaften beschreibt"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "wa5-8": {
+      "answer": "Ein Umstandswort (hier, jetzt, oft)",
+      "altAnswers": [
+        "Umstandswort",
+        "ein Umstandswort"
+      ],
+      "hints": [
+        "Prüfe, ob das Wort veränderlich ist und welche Umstände es angibt.",
+        "Vergleiche Wörter für Ort, Zeit und Häufigkeit."
+      ]
+    },
+    "wa5-9": {
+      "spokenPrompt": "Was ist ein Pronomen?",
+      "verbatimSpeech": true,
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "ich, du, er, sie, es, wir, ihr, sie = Personalpronomen."
+      ]
+    },
+    "wa5-11": {
+      "question": "«Du musst das machen.» Wie lautet der Infinitiv von «musst»?",
+      "spokenPrompt": "«Du musst das machen.» Wie lautet der Infinitiv von «musst»?",
+      "verbatimSpeech": true
+    },
+    "wa5-14": {
+      "question": "Nenne ein Temporaladverb (Umstandswort der Zeit): ___.",
+      "altAnswers": [
+        "heute",
+        "morgen",
+        "gestern",
+        "bald",
+        "später",
+        "damals",
+        "nie",
+        "immer",
+        "nachher",
+        "vorher",
+        "kürzlich",
+        "soeben",
+        "eben",
+        "danach",
+        "zuvor",
+        "nun",
+        "gleich",
+        "bisher",
+        "oft",
+        "selten"
+      ],
+      "spokenPrompt": "Nenne ein Temporaladverb (Umstandswort der Zeit): ….",
+      "verbatimSpeech": true
+    },
+    "wa5-36": {
+      "question": "Bestimme die Wortart von «aber» in «Ich bin müde, aber ich komme»: ___.",
+      "altAnswers": [
+        "Bindewort",
+        "nebenordnende Konjunktion"
+      ],
+      "spokenPrompt": "Bestimme die Wortart von «aber» in «Ich bin müde, aber ich komme»: ….",
+      "verbatimSpeech": true
+    },
+    "wa5-43": {
+      "answer": "Adjektiv",
+      "altAnswers": [
+        "adverbial verwendetes Adjektiv"
+      ]
+    },
+    "wa5-10": {
+      "altAnswers": [
+        "Verhältniswort",
+        "Vorwort"
+      ]
+    },
+    "wa5-12": {
+      "altAnswers": [
+        "Kausalsatz"
+      ]
+    },
+    "wa5-16": {
+      "altAnswers": [
+        "Verhältniswort",
+        "Vorwort"
+      ]
+    },
+    "wa5-22": {
+      "altAnswers": [
+        "2. Fall",
+        "zweiten Fall"
+      ]
+    },
+    "wa5-28": {
+      "altAnswers": [
+        "Temporaladverb",
+        "Häufigkeitsadverb",
+        "Umstandswort"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "wa5-37": {
+      "altAnswers": [
+        "Konjunktionaladverb",
+        "Umstandswort"
+      ]
+    },
+    "wa5-38": {
+      "altAnswers": [
+        "Demonstrativpronomen",
+        "Fürwort",
+        "hinweisendes Fürwort"
+      ]
+    },
+    "wa5-39": {
+      "altAnswers": [
+        "Zeitwort",
+        "Tätigkeitswort",
+        "Tunwort"
+      ]
+    },
+    "wa5-40": {
+      "altAnswers": [
+        "Pronomen",
+        "besitzanzeigendes Fürwort",
+        "besitzanzeigendes Pronomen"
+      ]
+    },
+    "wa5-41": {
+      "altAnswers": [
+        "Zahlwort",
+        "Kardinalzahl",
+        "Grundzahl"
+      ]
+    },
+    "wa5-42": {
+      "altAnswers": [
+        "Verhältniswort",
+        "Vorwort"
+      ]
+    },
+    "wa5-44": {
+      "altAnswers": [
+        "Substantiv",
+        "Hauptwort"
+      ]
+    },
+    "wa5-45": {
+      "altAnswers": [
+        "Verhältniswort",
+        "Vorwort"
+      ]
+    },
+    "wa5-46": {
+      "altAnswers": [
+        "Ausrufewort",
+        "Empfindungswort"
+      ]
+    },
+    "wa5-47": {
+      "altAnswers": [
+        "Subjunktion",
+        "Bindewort"
+      ]
+    },
+    "wa5-48": {
+      "altAnswers": [
+        "Eigenschaftswort",
+        "Wiewort"
+      ]
+    },
+    "wa5-49": {
+      "altAnswers": [
+        "Subjunktion",
+        "Bindewort"
+      ]
+    },
+    "wa5-50": {
+      "altAnswers": [
+        "Temporaladverb",
+        "Zeitadverb",
+        "Umstandswort"
+      ]
+    },
+    "zf5-16": {
+      "altAnswers": [
+        "Partizip 2",
+        "zweites Partizip",
+        "Partizip Perfekt"
+      ]
+    },
+    "zf5-18": {
+      "altAnswers": [
+        "lasen"
+      ]
+    },
+    "zf5-20": {
+      "altAnswers": [
+        "würde gehen"
+      ]
+    },
+    "zf5-25": {
+      "question": "Wofür wird Konjunktiv I in «Er sagte, er sei müde» verwendet?",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Wofür wird Konjunktiv I in «Er sagte, er sei müde» verwendet?",
+      "verbatimSpeech": true
+    },
+    "zf5-31": {
+      "question": "Welche Zeitform hat «hatte gegessen» in «Als er ankam, hatte sie schon gegessen»?",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welche Zeitform hat «hatte gegessen» in «Als er ankam, hatte sie schon gegessen»?",
+      "verbatimSpeech": true
+    },
+    "zf5-37": {
+      "question": "Setze «essen» ins Plusquamperfekt: Sie ging, nachdem sie ___.",
+      "spokenPrompt": "Setze «essen» ins Plusquamperfekt: Sie ging, nachdem sie ….",
+      "verbatimSpeech": true
+    },
+    "zf5-43": {
+      "question": "Setze «schreiben» ins Plusquamperfekt: Ich hatte den Brief ___.",
+      "spokenPrompt": "Setze «schreiben» ins Plusquamperfekt: Ich hatte den Brief ….",
+      "verbatimSpeech": true
+    },
+    "sa5-2": {
+      "question": "Im Satz «Ich bleibe, weil es regnet» hängt der Nebensatz vom ___ ab.",
+      "spokenPrompt": "Im Satz «Ich bleibe, weil es regnet» hängt der Nebensatz vom … ab.",
+      "verbatimSpeech": true
+    },
+    "sa5-4": {
+      "altAnswers": [
+        "Zeitwort",
+        "Tätigkeitswort"
+      ]
+    },
+    "sa5-6": {
+      "question": "Setze «das Kind» in den Dativ: Ich helfe ___.",
+      "spokenPrompt": "Setze «das Kind» in den Dativ: Ich helfe ….",
+      "verbatimSpeech": true
+    },
+    "sa5-8": {
+      "altAnswers": [
+        "am Relativpronomen",
+        "durch ein Relativpronomen",
+        "Relativpronomen"
+      ]
+    },
+    "sa5-11": {
+      "hints": [
+        "Prüfe, welcher Satz jemanden zu einer Handlung auffordert.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa5-12": {
+      "question": "In der Entscheidungsfrage «Kommt er?» steht das finite Verb an ___ Stelle.",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "In der Entscheidungsfrage «Kommt er?» steht das finite Verb an … Stelle.",
+      "verbatimSpeech": true
+    },
+    "sa5-14": {
+      "question": "Im Aussagesatz «Heute scheint die Sonne» steht das finite Verb auf Position ___.",
+      "altAnswers": [
+        "zwei"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Im Aussagesatz «Heute scheint die Sonne» steht das finite Verb auf Position ….",
+      "verbatimSpeech": true
+    },
+    "sa5-15": {
+      "question": "Wo steht das finite Verb im Nebensatz «weil es regnet»?",
+      "spokenPrompt": "Wo steht das finite Verb im Nebensatz «weil es regnet»?",
+      "verbatimSpeech": true
+    },
+    "sa5-18": {
+      "question": "«Morgen geht er ins Kino.» Der Aussagesatz hat ___-Stellung.",
+      "answer": "Verb-Zweit",
+      "altAnswers": [
+        "Verbzweit",
+        "V2"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "«Morgen geht er ins Kino.» Der Aussagesatz hat …-Stellung.",
+      "verbatimSpeech": true
+    },
+    "sa5-35": {
+      "options": [
+        "Verb-Zweit-Stellung im Aussagesatz",
+        "Ein Satz, der allein stehen kann",
+        "Eine Folge/Konsequenz (sodass, so...dass)",
+        "Ob Wörter eine Einheit bilden (Satzglied)"
+      ],
+      "hints": [
+        "Es regnete stark, sodass wir nass wurden. Welche Beziehung besteht zwischen den Teilsätzen?",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa5-20": {
+      "altAnswers": [
+        "obgleich",
+        "obschon",
+        "obzwar",
+        "wenngleich",
+        "wenn auch"
+      ]
+    },
+    "sa5-24": {
+      "question": "Welche zwei Wortarten können in «Er ist müde» und «Er ist Lehrer» das Prädikativum bilden? ___",
+      "altAnswers": [
+        "Adjektiv und Nomen",
+        "Nomen und Adjektiv",
+        "Adjektiv und Substantiv"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Welche zwei Wortarten können in «Er ist müde» und «Er ist Lehrer» das Prädikativum bilden? …",
+      "verbatimSpeech": true
+    },
+    "sa5-26": {
+      "question": "Bezieht sich «als» in «Als ich jung war» auf einen einmaligen vergangenen Zeitraum oder auf wiederholte Ereignisse? ___",
+      "answer": "einen einmaligen vergangenen Zeitraum",
+      "altAnswers": [
+        "einmaliger vergangener Zeitraum",
+        "einmalig Vergangenes",
+        "einmalig",
+        "Vergangenheit"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Bezieht sich «als» in «Als ich jung war» auf einen einmaligen vergangenen Zeitraum oder auf wiederholte Ereignisse? …",
+      "verbatimSpeech": true
+    },
+    "sa5-30": {
+      "altAnswers": [
+        "Ende"
+      ]
+    },
+    "sa5-32": {
+      "question": "Ersetze «schnell» durch ein verweisendes Adverb: «Er geht schnell.» → «Er geht ___.»",
+      "spokenPrompt": "Ersetze «schnell» durch ein verweisendes Adverb: «Er geht schnell.» → «Er geht ….»",
+      "verbatimSpeech": true
+    },
+    "sa5-40": {
+      "question": "Welche Art von Nebensatz ist «Wenn du Zeit hast» in «Wenn du Zeit hast, ruf mich an»? ___",
+      "altAnswers": [
+        "Konditionalsatz",
+        "konditionaler Nebensatz"
+      ],
+      "spokenPrompt": "Welche Art von Nebensatz ist «Wenn du Zeit hast» in «Wenn du Zeit hast, ruf mich an»? …",
+      "verbatimSpeech": true
+    },
+    "sa5-43": {
+      "question": "Wie nennt man eine Frage mit Verb an erster Stelle, auf die man mit Ja oder Nein antwortet? ___",
+      "altAnswers": [
+        "Entscheidungsfrage",
+        "Ja-Nein-Frage",
+        "Ja/Nein-Frage",
+        "Ja-Nein-Fragesatz"
+      ],
+      "spokenPrompt": "Wie nennt man eine Frage mit Verb an erster Stelle, auf die man mit Ja oder Nein antwortet? …",
+      "verbatimSpeech": true
+    },
+    "sa5-46": {
+      "question": "Der Aussagesatz «Ich weiss nicht, wann sie kommt» enthält eine indirekte Frage. Mit welchem Satzzeichen endet der ganze Satz? ___",
+      "altAnswers": [
+        "."
+      ],
+      "spokenPrompt": "Der Aussagesatz «Ich weiss nicht, wann sie kommt» enthält eine indirekte Frage. Mit welchem Satzzeichen endet der ganze Satz? …",
+      "verbatimSpeech": true
+    },
+    "sa5-36": {
+      "altAnswers": [
+        "Zeitsatz",
+        "temporalen Nebensatz",
+        "Nebensatz"
+      ]
+    },
+    "sa5-37": {
+      "altAnswers": [
+        "Befehlssatz",
+        "Imperativsatz"
+      ]
+    },
+    "sa5-38": {
+      "altAnswers": [
+        "Ausrufssatz",
+        "Exklamativsatz"
+      ]
+    },
+    "sa5-39": {
+      "altAnswers": [
+        "2.",
+        "zweiten"
+      ]
+    },
+    "sa5-41": {
+      "altAnswers": [
+        "relativen Nebensatz",
+        "Nebensatz"
+      ]
+    },
+    "sa5-42": {
+      "altAnswers": [
+        "Ergänzungsfragesatz",
+        "W-Fragesatz"
+      ]
+    },
+    "sa5-45": {
+      "altAnswers": [
+        "Zwecksatz",
+        "finalen Nebensatz",
+        "Nebensatz"
+      ]
+    },
+    "sa5-48": {
+      "altAnswers": [
+        "Kausalsatz"
+      ]
+    },
+    "sa5-49": {
+      "altAnswers": [
+        "Hauptsatzreihe",
+        "Satzverbindung"
+      ]
+    },
+    "sa5-50": {
+      "altAnswers": [
+        "Einräumungssatz",
+        "konzessiven Nebensatz",
+        "Nebensatz"
+      ]
+    },
+    "rs5-2": {
+      "question": "Schreibe das gesuchte Wort: Die Kinder gehen über die ___ mit dem Fussgängerstreifen.",
+      "spokenPrompt": "Schreibe das gesuchte Wort: Die Kinder gehen über die … mit dem Fussgängerstreifen.",
+      "verbatimSpeech": true
+    },
+    "rs5-3": {
+      "options": [
+        "Am Anfang jedes neuen Satzes",
+        "das sehen (Infinitiv als Nomen muss gross)",
+        "Bei vielen Wörtern mit langem i-Laut (lieben, fliegen, Bier)",
+        "Bei Auslassung von Buchstaben (Wie geht's?)"
+      ],
+      "answer": "Bei vielen Wörtern mit langem i-Laut (lieben, fliegen, Bier)",
+      "hints": [
+        "Vergleiche einen langen und einen kurzen i-Laut.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "rs5-9": {
+      "options": [
+        "Bei vielen Wörtern mit langem i-Laut (lieben, fliegen, Bier)",
+        "Bei langem Vokal in bestimmten Wörtern (fahren, wohnen, Stuhl)",
+        "Am Anfang jedes neuen Satzes",
+        "das sehen (Infinitiv als Nomen muss gross)"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs5-15": {
+      "options": [
+        "Bei vielen Wörtern mit langem i-Laut (lieben, fliegen, Bier)",
+        "Am Anfang jedes neuen Satzes",
+        "das sehen (Infinitiv als Nomen muss gross)",
+        "Bei Auslassung von Buchstaben (Wie geht's?)"
+      ],
+      "answer": "Am Anfang jedes neuen Satzes",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs5-25": {
+      "options": [
+        "Bei vielen Wörtern mit langem i-Laut (lieben, fliegen, Bier)",
+        "Am Anfang jedes neuen Satzes",
+        "Bei Auslassung von Buchstaben (Wie geht's?)",
+        "das sehen (Infinitiv als Nomen muss gross)"
+      ],
+      "question": "Welche Schreibweise eines substantivierten Infinitivs ist falsch?",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welche Schreibweise eines substantivierten Infinitivs ist falsch?",
+      "verbatimSpeech": true
+    },
+    "rs5-4": {
+      "question": "Schreibe das ganze Wort für Zuneigung: L___be (langes i).",
+      "spokenPrompt": "Schreibe das ganze Wort für Zuneigung: L…be (langes i).",
+      "verbatimSpeech": true
+    },
+    "rs5-8": {
+      "question": "Ergänze den fehlenden Vokal: die H___tte (ein kleines Haus).",
+      "spokenPrompt": "Ergänze den fehlenden Vokal: die H…tte (ein kleines Haus).",
+      "verbatimSpeech": true
+    },
+    "rs5-10": {
+      "caseSensitiveAnswer": true
+    },
+    "rs5-12": {
+      "question": "Schreibt man das substantivierte Adjektiv in «das ___» (gut) gross oder klein? ___",
+      "spokenPrompt": "Schreibt man das substantivierte Adjektiv in «das …» (gut) gross oder klein? …",
+      "verbatimSpeech": true
+    },
+    "rs5-16": {
+      "question": "Setze «sein» im Präsens ein: Die Kinder ___ zu Hause.",
+      "spokenPrompt": "Setze «sein» im Präsens ein: Die Kinder … zu Hause.",
+      "verbatimSpeech": true
+    },
+    "rs5-18": {
+      "question": "Schreibe das ganze Wort: das K___nd (kurzes i).",
+      "spokenPrompt": "Schreibe das ganze Wort: das K…nd (kurzes i).",
+      "verbatimSpeech": true
+    },
+    "rs5-20": {
+      "question": "Ergänze nur die fehlenden Buchstaben: Philo___phie.",
+      "answer": "so",
+      "spokenPrompt": "Ergänze nur die fehlenden Buchstaben: Philo…phie.",
+      "verbatimSpeech": true
+    },
+    "rs5-23": {
+      "hints": [
+        "Prüfe, ob «das» durch «dieses», «jenes» oder «welches» ersetzt werden könnte.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "options": [
+        "klein (egal ist hier ein prädikativ verwendetes Adjektiv)",
+        "Als Konjunktion (Ich weiss, dass...)",
+        "Als Artikel (das Buch)",
+        ", wenn er Zeit hat."
+      ]
+    },
+    "rs5-27": {
+      "hints": [
+        "Überlege, ob in einer verkürzten Form Buchstaben fehlen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs5-28": {
+      "question": "Trenne «backen» am Zeilenende: ___",
+      "answer": "ba-cken",
+      "spokenPrompt": "Trenne «backen» am Zeilenende: …",
+      "verbatimSpeech": true
+    },
+    "rs5-29": {
+      "options": [
+        "Als Konjunktion (Ich weiss, dass...)",
+        "klein (egal ist hier ein prädikativ verwendetes Adjektiv)",
+        ", wenn er Zeit hat.",
+        "Kein Komma nötig (optional)"
+      ],
+      "answer": "klein (egal ist hier ein prädikativ verwendetes Adjektiv)",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs5-30": {
+      "question": "Ergänze den ersten Buchstaben des englischen Nomens für Radfahren: ___ycling.",
+      "caseSensitiveAnswer": true,
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Ergänze den ersten Buchstaben des englischen Nomens für Radfahren: …ycling.",
+      "verbatimSpeech": true
+    },
+    "rs5-32": {
+      "altAnswers": [
+        "ein Komma",
+        ","
+      ]
+    },
+    "rs5-34": {
+      "altAnswers": [
+        "zwei"
+      ]
+    },
+    "rs5-33": {
+      "hints": [
+        "Prüfe, ob das Adjektiv ein Nomen begleitet oder selbst als Nomen gebraucht wird.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs5-49": {
+      "question": "Ergänze: Sie empf___t das neue Buch.",
+      "answer": "iehl",
+      "spokenPrompt": "Ergänze: Sie empf…t das neue Buch.",
+      "verbatimSpeech": true
+    },
+    "lv5-2": {
+      "altAnswers": [
+        "Hauptaussage",
+        "Kerninformation",
+        "zentrale Aussage",
+        "Kerngedanke"
+      ],
+      "spokenPrompt": "Die Hauptinformation eines Textes nennt man …",
+      "verbatimSpeech": true
+    },
+    "lv5-4": {
+      "altAnswers": [
+        "Titel",
+        "der Titel",
+        "ein Titel",
+        "Überschrift"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Was ist eine Überschrift im Text?",
+      "verbatimSpeech": true
+    },
+    "lv5-6": {
+      "altAnswers": [
+        "Überschriften"
+      ]
+    },
+    "lv5-8": {
+      "altAnswers": [
+        "gezieltes Lesen",
+        "gezielt Informationen suchen",
+        "Suchlesen",
+        "selektives Lesen",
+        "nach bestimmten Informationen suchen"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "lv5-10": {
+      "altAnswers": [
+        "Textabschnitt",
+        "ein Textabschnitt",
+        "Sinnabschnitt"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv5-16": {
+      "altAnswers": [
+        "wegen des starken Schneefalls",
+        "weil es stark schneit",
+        "starker Schneefall"
+      ]
+    },
+    "lv5-18": {
+      "altAnswers": [
+        "sachlicher Ton",
+        "Fakten",
+        "Grafiken",
+        "Überschriften",
+        "Absätze",
+        "Tabellen"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Was ist ein Textmerkmal von Sachtexten?",
+      "verbatimSpeech": true
+    },
+    "lv5-20": {
+      "altAnswers": [
+        "Leseverständnis",
+        "Verstehen",
+        "Lesen"
+      ]
+    },
+    "lv5-22": {
+      "altAnswers": [
+        "ein wichtiger Satz",
+        "Hauptsatz des Textes",
+        "ein als wichtig markierter Satz"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "lv5-26": {
+      "altAnswers": [
+        "Überschrift",
+        "Überschriften"
+      ],
+      "spokenPrompt": "Strategie: Man liest zuerst die … und den letzten Absatz, um den Text zu erfassen.",
+      "verbatimSpeech": true
+    },
+    "lv5-30": {
+      "altAnswers": [
+        "Erzähltext",
+        "Sachtext",
+        "Brief",
+        "Argumentationstext",
+        "Erzählung",
+        "Bericht",
+        "Beschreibung",
+        "Erörterung"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Was ist ein Texttyp? Nenne einen Beispieltyp.",
+      "verbatimSpeech": true
+    },
+    "lv5-32": {
+      "altAnswers": [
+        "Anführungszeichen",
+        "mit Anführungszeichen",
+        "Guillemets"
+      ],
+      "spokenPrompt": "Zitat aus dem Text: Beleg für eigene Aussage. Wie kennzeichnet man Zitate?",
+      "verbatimSpeech": true
+    },
+    "lv5-34": {
+      "altAnswers": [
+        "Randnotizen"
+      ],
+      "spokenPrompt": "Was hilft beim Erschliessen schwieriger Texte? Randbemerkungen heissen …",
+      "verbatimSpeech": true
+    },
+    "lv5-36": {
+      "altAnswers": [
+        "die Temperatur sank",
+        "sie wurde niedriger",
+        "sie nahm ab",
+        "es wurde kühler",
+        "sank"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob deine Lösung grammatisch und zum Satz genau passt."
+      ],
+      "spokenPrompt": "Text: «Je höher die Wanderer stiegen, desto kühler wurde die Luft.» Was geschah mit der Temperatur? …",
+      "verbatimSpeech": true
+    },
+    "lv5-37": {
+      "altAnswers": [
+        "vor dem Mittag"
+      ],
+      "spokenPrompt": "Text: «Obwohl der Weg steil war, erreichte die Gruppe vor Mittag den Gipfel.» Wann kam sie an? …",
+      "verbatimSpeech": true
+    },
+    "lv5-38": {
+      "altAnswers": [
+        "Zug",
+        "den Zug statt das Auto"
+      ],
+      "spokenPrompt": "Text: «Im Gegensatz zu seinem Bruder fährt Nino lieber Zug als Auto.» Welches Verkehrsmittel bevorzugt Nino? …",
+      "verbatimSpeech": true
+    },
+    "lv5-39": {
+      "altAnswers": [
+        "um den dunklen Keller zu untersuchen",
+        "damit sie den dunklen Keller untersuchen konnte",
+        "den Keller untersuchen",
+        "zum Untersuchen des Kellers"
+      ],
+      "spokenPrompt": "Text: «Lea nahm eine Taschenlampe mit, damit sie den dunklen Keller untersuchen konnte.» Wozu brauchte sie die Lampe? …",
+      "verbatimSpeech": true
+    },
+    "lv5-40": {
+      "altAnswers": [
+        "2 Wochen",
+        "vierzehn Tage",
+        "14 Tage"
+      ],
+      "spokenPrompt": "Text: «Die Bibliothek verlängert die Leihfrist auf Wunsch um zwei Wochen.» Wie lange ist die Verlängerung? …",
+      "verbatimSpeech": true
+    },
+    "lv5-41": {
+      "altAnswers": [
+        "die Nachteile",
+        "Nachteile"
+      ],
+      "spokenPrompt": "Text: «Der Artikel nennt zuerst Vorteile und anschliessend zwei Nachteile.» Was kommt zuletzt? …",
+      "verbatimSpeech": true
+    },
+    "lv5-42": {
+      "altAnswers": [
+        "Mila legte das Buch beiseite",
+        "das Buch beiseitelegen",
+        "sie legte es beiseite"
+      ],
+      "spokenPrompt": "Text: «Mila legte das Buch beiseite, nachdem sie das letzte Kapitel gelesen hatte.» Was tat sie danach? …",
+      "verbatimSpeech": true
+    },
+    "lv5-43": {
+      "altAnswers": [
+        "am Ende des Oktobers",
+        "Ende des Oktobers"
+      ],
+      "spokenPrompt": "Text: «Die Ausstellung bleibt bis Ende Oktober geöffnet.» Wann schliesst sie? …",
+      "verbatimSpeech": true
+    },
+    "lv5-44": {
+      "altAnswers": [
+        "als es dämmerte",
+        "in der Dämmerung",
+        "bei Dämmerung"
+      ],
+      "spokenPrompt": "Text: «Der Fuchs verliess seinen Bau erst, als es dämmerte.» Wann kam er heraus? …",
+      "verbatimSpeech": true
+    },
+    "lv5-45": {
+      "altAnswers": [
+        "den Tisch decken",
+        "er deckte den Tisch während Mara kochte",
+        "Tisch decken"
+      ],
+      "spokenPrompt": "Text: «Während Mara kochte, deckte ihr Bruder den Tisch.» Was machte der Bruder? …",
+      "verbatimSpeech": true
+    },
+    "lv5-46": {
+      "altAnswers": [
+        "Anmeldung bis Freitag",
+        "sich bis Freitag anmelden",
+        "man muss sich bis Freitag anmelden"
+      ],
+      "spokenPrompt": "Text: «Nur wer sich bis Freitag anmeldet, darf am Turnier teilnehmen.» Was ist Voraussetzung? …",
+      "verbatimSpeech": true
+    },
+    "lv5-47": {
+      "altAnswers": [
+        "Regen",
+        "weil es drei Tage lang geregnet hatte",
+        "drei Tage Regen",
+        "der dreitägige Regen"
+      ],
+      "spokenPrompt": "Text: «Der Bach trat über die Ufer, weil es drei Tage lang geregnet hatte.» Was war die Ursache? …",
+      "verbatimSpeech": true
+    },
+    "lv5-48": {
+      "altAnswers": [
+        "das Läuten der Glocke",
+        "die Glocke hatte geläutet",
+        "die Glocke läutete zuerst"
+      ],
+      "spokenPrompt": "Text: «Kaum hatte die Glocke geläutet, rannten die Kinder auf den Pausenplatz.» Was geschah zuerst? …",
+      "verbatimSpeech": true
+    },
+    "lv5-49": {
+      "altAnswers": [
+        "3"
+      ],
+      "spokenPrompt": "Text: «Von den zwölf Setzlingen überstanden neun den Frost.» Wie viele gingen ein? …",
+      "verbatimSpeech": true
+    },
+    "lv5-50": {
+      "altAnswers": [
+        "wegen starkem Wind",
+        "weil der Wind zu stark war",
+        "starker Wind",
+        "wegen des Windes"
+      ],
+      "spokenPrompt": "Text: «Das Konzert wurde wegen des starken Windes ins Gemeindehaus verlegt.» Warum wechselte der Ort? …",
+      "verbatimSpeech": true
+    },
+    "lv5-3": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Begründe eine Schlussfolgerung mit mehreren passenden Hinweisen aus dem Text."
+      ],
+      "options": [
+        "Ein wichtiges Wort, das den Textinhalt erschliesst",
+        "Explizit = direkt gesagt; implizit = zwischen den Zeilen",
+        "Ein Satz, der als Hauptpunkt markiert wird",
+        "Ein informierender Sachtext stellt Fakten dar; ein Kommentar bewertet sie"
+      ],
+      "spokenPrompt": "Was ist der Unterschied zwischen expliziten und impliziten Informationen?",
+      "verbatimSpeech": true
+    },
+    "lv5-9": {
+      "options": [
+        "Explizit = direkt gesagt; implizit = zwischen den Zeilen",
+        "Ein wichtiges Wort, das den Textinhalt erschliesst",
+        "Ein Satz, der als Hauptpunkt markiert wird",
+        "Ein informierender Sachtext stellt Fakten dar; ein Kommentar bewertet sie"
+      ]
+    },
+    "lv5-23": {
+      "options": [
+        "Explizit = direkt gesagt; implizit = zwischen den Zeilen",
+        "Ein informierender Sachtext stellt Fakten dar; ein Kommentar bewertet sie",
+        "Ein wichtiges Wort, das den Textinhalt erschliesst",
+        "Ein Satz, der als Hauptpunkt markiert wird"
+      ],
+      "answer": "Ein informierender Sachtext stellt Fakten dar; ein Kommentar bewertet sie",
+      "question": "Was unterscheidet einen informierenden Sachtext von einem Kommentar?",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was unterscheidet einen informierenden Sachtext von einem Kommentar?",
+      "verbatimSpeech": true
+    },
+    "lv5-33": {
+      "options": [
+        "Der Zusammenhang, in dem ein Wort/Satz steht",
+        "Wörter mit ähnlicher Bedeutung, zum Beispiel gehen, schreiten und schlendern",
+        "Ein Wort, das Textstruktur anzeigt (erstens, jedoch, deshalb)",
+        "Die Aufteilung des Textes in Abschnitte mit Teilthemen"
+      ],
+      "answer": "Wörter mit ähnlicher Bedeutung, zum Beispiel gehen, schreiten und schlendern",
+      "hints": [
+        "Vergleiche Bedeutungsähnlichkeit mit einem bloss gemeinsamen Thema.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-2": {
+      "question": "Welche der beiden Textsorten wird traditionell auf Papier verschickt: Brief oder E-Mail? ___",
+      "altAnswers": [
+        "der Brief",
+        "ein Brief"
+      ],
+      "spokenPrompt": "Welche der beiden Textsorten wird traditionell auf Papier verschickt: Brief oder E-Mail? …",
+      "verbatimSpeech": true
+    },
+    "ts5-3": {
+      "options": [
+        "Eine schriftliche Aufzeichnung des Verlaufs einer Sitzung",
+        "Ein Text über wirkliche Sachverhalte, der zum Beispiel informiert oder argumentiert",
+        "Eine kurze Zusammenfassung oder ein Konzept eines geplanten Textes",
+        "Ein unterhaltend-informierender Text mit persönlichem Stil"
+      ],
+      "answer": "Ein Text über wirkliche Sachverhalte, der zum Beispiel informiert oder argumentiert",
+      "hints": [
+        "Sachtext: Lexikonartikel, Zeitungsbericht, Sachbuch.",
+        "Unterscheide Texte über wirkliche Sachverhalte von erfundenen Geschichten."
+      ],
+      "spokenPrompt": "Was ist ein Sachtext?",
+      "verbatimSpeech": true
+    },
+    "ts5-11": {
+      "options": [
+        "Ein Text über wirkliche Sachverhalte, der zum Beispiel informiert oder argumentiert",
+        "Eine schriftliche Aufzeichnung des Verlaufs einer Sitzung",
+        "Eine kurze Zusammenfassung oder ein Konzept eines geplanten Textes",
+        "Ein unterhaltend-informierender Text mit persönlichem Stil"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-13": {
+      "options": [
+        "Ein Text über wirkliche Sachverhalte, der zum Beispiel informiert oder argumentiert",
+        "Eine kurze Zusammenfassung oder ein Konzept eines geplanten Textes",
+        "Eine schriftliche Aufzeichnung des Verlaufs einer Sitzung",
+        "Ein unterhaltend-informierender Text mit persönlichem Stil"
+      ],
+      "answer": "Eine kurze Zusammenfassung oder ein Konzept eines geplanten Textes",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Exposé?",
+      "verbatimSpeech": true
+    },
+    "ts5-21": {
+      "options": [
+        "Ein Text über wirkliche Sachverhalte, der zum Beispiel informiert oder argumentiert",
+        "Ein unterhaltend-informierender Text mit persönlichem Stil",
+        "Eine schriftliche Aufzeichnung des Verlaufs einer Sitzung",
+        "Eine kurze Zusammenfassung oder ein Konzept eines geplanten Textes"
+      ],
+      "question": "Was ist ein journalistisches Feature?",
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein journalistisches Feature?",
+      "verbatimSpeech": true
+    },
+    "ts5-29": {
+      "options": [
+        "Ein Text über wirkliche Sachverhalte, der zum Beispiel informiert oder argumentiert",
+        "Die schriftliche Darstellung des Lebens einer Person",
+        "Eine schriftliche Aufzeichnung des Verlaufs einer Sitzung",
+        "Eine kurze Zusammenfassung oder ein Konzept eines geplanten Textes"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-30": {
+      "options": [
+        "Die Lebensgeschichte, die eine Person selbst schreibt",
+        "Ein Text über wirkliche Sachverhalte, der zum Beispiel informiert oder argumentiert",
+        "Eine schriftliche Aufzeichnung des Verlaufs einer Sitzung",
+        "Eine kurze Zusammenfassung oder ein Konzept eines geplanten Textes"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-32": {
+      "options": [
+        "Ein persönlicher Textbeitrag auf einer Webseite (Blog)",
+        "Ein Text über wirkliche Sachverhalte, der zum Beispiel informiert oder argumentiert",
+        "Eine schriftliche Aufzeichnung des Verlaufs einer Sitzung",
+        "Eine kurze Zusammenfassung oder ein Konzept eines geplanten Textes"
+      ]
+    },
+    "ts5-16": {
+      "question": "Welcher Briefbestandteil begrüsst den Empfänger, zum Beispiel «Sehr geehrte Frau Müller»? ___",
+      "spokenPrompt": "Welcher Briefbestandteil begrüsst den Empfänger, zum Beispiel «Sehr geehrte Frau Müller»? …",
+      "verbatimSpeech": true
+    },
+    "ts5-27": {
+      "options": [
+        "Ein kurzer, informativer Text über ein aktuelles Ereignis",
+        "Eine Wörterliste mit Erklärungen",
+        "Ein Text, der etwas genau und systematisch darstellt",
+        "Ein Meinungstext, der ein Thema aus Autorensicht bewertet"
+      ],
+      "answer": "Eine Wörterliste mit Erklärungen",
+      "hints": [
+        "Überlege, welche Hilfe eine alphabetische Liste von Fachbegriffen bietet.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-18": {
+      "altAnswers": [
+        "Gegenwart",
+        "Gegenwartsform"
+      ]
+    },
+    "ts5-24": {
+      "altAnswers": [
+        "Magie",
+        "Zauber",
+        "magische Gegenstände"
+      ]
+    },
+    "ts5-26": {
+      "altAnswers": [
+        "Was passiert",
+        "Was geschieht",
+        "was ist passiert"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "ts5-37": {
+      "altAnswers": [
+        "Schritte",
+        "Handlungsschritte"
+      ]
+    },
+    "ts5-38": {
+      "altAnswers": [
+        "erfundenen Ereignissen",
+        "übernatürlichen Ereignissen",
+        "fantastischen Elementen",
+        "Übernatürlichem"
+      ]
+    },
+    "ts5-39": {
+      "altAnswers": [
+        "Gruss",
+        "Grusswort",
+        "Schlussgruss"
+      ]
+    },
+    "ts5-41": {
+      "altAnswers": [
+        "Vorgeschichte"
+      ]
+    },
+    "ts5-42": {
+      "altAnswers": [
+        "Fragen",
+        "W Fragen"
+      ]
+    },
+    "ts5-43": {
+      "altAnswers": [
+        "Überschrift",
+        "Titelzeile"
+      ]
+    },
+    "ts5-44": {
+      "altAnswers": [
+        "Theaterstück",
+        "Kunstwerk",
+        "Album",
+        "Spiel"
+      ]
+    },
+    "ts5-46": {
+      "altAnswers": [
+        "neutral",
+        "objektiv",
+        "verständlich",
+        "genau"
+      ],
+      "spokenPrompt": "Ein Lexikonartikel erklärt einen Begriff möglichst ….",
+      "verbatimSpeech": true
+    },
+    "ts5-47": {
+      "altAnswers": [
+        "Moral",
+        "Lebensweisheit"
+      ]
+    },
+    "ts5-48": {
+      "altAnswers": [
+        "Erlebnis",
+        "Empfinden"
+      ]
+    },
+    "ts5-49": {
+      "altAnswers": [
+        "Persönlichkeit"
+      ]
+    },
+    "ts5-50": {
+      "altAnswers": [
+        "Besprechung",
+        "Versammlung",
+        "Konferenz"
+      ]
+    },
+    "ts5-45": {
+      "question": "Direkte Rede gibt gesprochene ___ wieder.",
+      "answer": "Worte",
+      "altAnswers": [
+        "Wörter",
+        "Äusserungen"
+      ],
+      "spokenPrompt": "Direkte Rede gibt gesprochene … wieder.",
+      "verbatimSpeech": true
+    },
+    "g5hoer11": {
+      "question": "Was soll am Schluss getan werden?",
+      "listeningText": "Notiere die Behauptung. Suche danach zwei Belege und kennzeichne, aus welcher Quelle sie stammen. Was soll am Schluss getan werden? Antwort 1: die verantwortliche Person oder Organisation prüfen. Antwort 2: die Quellen der Belege kennzeichnen. Antwort 3: Gemeinsamkeit und Unterschied beschreiben. Antwort 4: die wichtigsten Argumente notieren."
+    },
+    "g5hoer30": {
+      "question": "Welche Wirkung erzielt die Werbung besonders durch «nur heute»?",
+      "listeningText": "Die Werbung wiederholt mehrmals, dass das Angebot nur heute gilt. Welche Wirkung erzielt die Werbung besonders durch «nur heute»? Antwort 1: Ihre Aussage glaubwürdig belegen. Antwort 2: Eine Aussage präzisieren lassen. Antwort 3: Zeitdruck erzeugen. Antwort 4: Zum Handeln anregen."
+    },
+    "g5hoer44": {
+      "answer": "Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten.",
+      "options": [
+        "Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten.",
+        "Bäume können städtische Hitze mindern.",
+        "Strukturierte Gespräche helfen bei Konflikten.",
+        "Digitale Geräte haben Nutzen und Risiken."
+      ],
+      "listeningText": "Forschende markieren Zugvögel und vergleichen ihre Routen über mehrere Jahre. Was ist die Hauptaussage des Hörtexts? Antwort 1: Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten. Antwort 2: Bäume können städtische Hitze mindern. Antwort 3: Strukturierte Gespräche helfen bei Konflikten. Antwort 4: Digitale Geräte haben Nutzen und Risiken.",
+      "verbatimSpeech": true
+    },
+    "g5hoer41": {
+      "options": [
+        "Strukturierte Gespräche helfen bei Konflikten.",
+        "Digitale Geräte haben Nutzen und Risiken.",
+        "Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten.",
+        "Bäume können städtische Hitze mindern."
+      ],
+      "listeningText": "Eine Stadt pflanzt Bäume entlang heisser Strassen. Messungen zeigen später tiefere Temperaturen im Schatten und angenehmere Wege. Was ist die Hauptaussage des Hörtexts? Antwort 1: Strukturierte Gespräche helfen bei Konflikten. Antwort 2: Digitale Geräte haben Nutzen und Risiken. Antwort 3: Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten. Antwort 4: Bäume können städtische Hitze mindern.",
+      "verbatimSpeech": true
+    },
+    "g5hoer42": {
+      "options": [
+        "Digitale Geräte haben Nutzen und Risiken.",
+        "Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten.",
+        "Strukturierte Gespräche helfen bei Konflikten.",
+        "Bäume können städtische Hitze mindern."
+      ],
+      "listeningText": "Ein Klassenrat sammelt Konflikte, hört alle Beteiligten an und vereinbart überprüfbare Lösungen. Was ist die Hauptaussage des Hörtexts? Antwort 1: Digitale Geräte haben Nutzen und Risiken. Antwort 2: Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten. Antwort 3: Strukturierte Gespräche helfen bei Konflikten. Antwort 4: Bäume können städtische Hitze mindern.",
+      "verbatimSpeech": true
+    },
+    "g5hoer43": {
+      "options": [
+        "Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten.",
+        "Digitale Geräte haben Nutzen und Risiken.",
+        "Bäume können städtische Hitze mindern.",
+        "Strukturierte Gespräche helfen bei Konflikten."
+      ],
+      "listeningText": "Ein Bericht erklärt Chancen digitaler Geräte, nennt aber auch Ablenkung und Datenschutz als Risiken. Was ist die Hauptaussage des Hörtexts? Antwort 1: Langzeitbeobachtungen ermöglichen den Vergleich von Zugrouten. Antwort 2: Digitale Geräte haben Nutzen und Risiken. Antwort 3: Bäume können städtische Hitze mindern. Antwort 4: Strukturierte Gespräche helfen bei Konflikten.",
+      "verbatimSpeech": true
+    },
+    "g5d1": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "In der Schweiz stehen keine Leerzeichen innerhalb der Guillemets."
+      ]
+    },
+    "g5d6": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g5dr1b": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g5dr1h": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5dr1k": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5dr1l": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "g5dr2d": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5dr2f": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5dr2i": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g5dr2n": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5dr2o": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist «free indirect discourse» (erlebte Rede)?",
+      "verbatimSpeech": true
+    },
+    "g5dr3i": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g5d16": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Synonyme haben ähnliche Bedeutung."
+      ]
+    },
+    "g5d20": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Gegensätze finden."
+      ]
+    },
+    "g5sy1b": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5sy2d": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5sy2h": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5sy2j": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5sy2l": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5sy2n": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5sy2p": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5d23": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "g5d26": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ],
+      "spokenPrompt": "Ordne die Textteile richtig!",
+      "verbatimSpeech": true
+    },
+    "g5au1b": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au1d": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au1h": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au1l": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2a": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2b": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2d": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2e": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2f": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2h": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2j": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2k": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2l": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2m": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2n": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2o": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g5au2p": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa5-1": {
+      "hints": [
+        "Verben beschreiben Handlungen oder Zustände.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "wa5-7": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "wa5-13": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa5-23": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Unterordnend: leitet Nebensatz ein. weil, dass, wenn."
+      ]
+    },
+    "wa5-25": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa5-27": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa5-29": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa5-31": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa5-33": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa5-35": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "zf5-1": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "zf5-5": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "zf5-9": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "zf5-10": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "zf5-13": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Mündlich: meistens Perfekt."
+      ]
+    },
+    "zf5-21": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "zf5-23": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "zf5-29": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa5-1": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "sa5-3": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "sa5-5": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa5-10": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa5-25": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa5-33": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "sa5-34": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs5-17": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "rs5-19": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv5-1": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ]
+    },
+    "lv5-5": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist eine Textzusammenfassung?",
+      "verbatimSpeech": true
+    },
+    "lv5-7": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "lv5-12": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ]
+    },
+    "lv5-13": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv5-15": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv5-17": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv5-19": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv5-24": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Kohärenz im Text?",
+      "verbatimSpeech": true
+    },
+    "lv5-27": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was sind Textverweise?",
+      "verbatimSpeech": true
+    },
+    "lv5-28": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "lv5-29": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist bei Tabellen im Text zu beachten?",
+      "verbatimSpeech": true
+    },
+    "lv5-35": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist die Textperspektive?",
+      "verbatimSpeech": true
+    },
+    "ts5-1": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Prüfe deine Vermutung an der ganzen Aufgabe."
+      ],
+      "spokenPrompt": "Was ist ein Erzähltext (narrative Textsorte)?",
+      "verbatimSpeech": true
+    },
+    "ts5-4": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-5": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-9": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Kommentar (in der Zeitung)?",
+      "verbatimSpeech": true
+    },
+    "ts5-12": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-14": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-17": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-19": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-20": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-22": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-25": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-28": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-31": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ts5-33": {
+      "hints": [
+        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "wa5-20": {
+      "spokenPrompt": "Was ist ein Reflexivpronomen? Beispiel: 'Er wäscht ….'",
+      "verbatimSpeech": true
+    },
+    "rs5-37": {
+      "spokenPrompt": "Ergänze: Das Experiment ist misslu…en.",
+      "verbatimSpeech": true
+    },
+    "lv5-11": {
+      "spokenPrompt": "Was ist der Kontext?",
+      "verbatimSpeech": true
+    },
+    "lv5-14": {
+      "spokenPrompt": "Textstruktur: Einleitung → … → Schluss",
+      "verbatimSpeech": true
+    },
+    "lv5-21": {
+      "spokenPrompt": "Was ist eine Textgliederung?",
+      "verbatimSpeech": true
+    },
+    "lv5-25": {
+      "spokenPrompt": "Was ist eine Schlussfolgerung aus einem Text?",
+      "verbatimSpeech": true
+    },
+    "lv5-31": {
+      "spokenPrompt": "Wie erkennt man Ironie im Text?",
+      "verbatimSpeech": true
+    },
+    "ts5-8": {
+      "spokenPrompt": "Welche Textsorte ist ein Kochrezept?",
+      "verbatimSpeech": true
+    },
+    "ts5-10": {
+      "spokenPrompt": "Texte: Eine Geschichte: Welche Aussage passt?",
+      "verbatimSpeech": true
+    },
+    "ts5-15": {
+      "spokenPrompt": "Was ist ein Werbetext?",
+      "verbatimSpeech": true
+    },
+    "ts5-23": {
+      "spokenPrompt": "Texte: Eine Überschrift: Welche Aussage passt?",
+      "verbatimSpeech": true
+    },
+    "g5hoer6": {
+      "verbatimSpeech": true
+    },
+    "g5hoer7": {
+      "verbatimSpeech": true
+    },
+    "g5hoer8": {
+      "verbatimSpeech": true
+    },
+    "g5hoer9": {
+      "verbatimSpeech": true
+    },
+    "g5hoer10": {
+      "verbatimSpeech": true
+    },
+    "g5hoer14": {
+      "verbatimSpeech": true
+    },
+    "g5hoer16": {
+      "verbatimSpeech": true
+    },
+    "g5hoer17": {
+      "verbatimSpeech": true
+    },
+    "g5hoer18": {
+      "verbatimSpeech": true
+    },
+    "g5hoer19": {
+      "verbatimSpeech": true
+    },
+    "g5hoer20": {
+      "verbatimSpeech": true
+    },
+    "g5hoer25": {
+      "verbatimSpeech": true
+    },
+    "g5hoer45": {
+      "verbatimSpeech": true
+    },
+    "g5hoer46": {
+      "verbatimSpeech": true
+    },
+    "g5hoer47": {
+      "verbatimSpeech": true
+    },
+    "g5hoer48": {
+      "verbatimSpeech": true
+    },
+    "g5hoer49": {
+      "verbatimSpeech": true
+    },
+    "g5hoer50": {
+      "verbatimSpeech": true
+    }
+  }
+}

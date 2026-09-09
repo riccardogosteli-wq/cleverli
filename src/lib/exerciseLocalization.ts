@@ -1,3 +1,4 @@
+import { applyGrade5GermanQaCorrections } from "@/data/grade5GermanQaCorrections";
 import { applyGrade5MathsQaCorrections } from "@/data/grade5MathsQaCorrections";
 import { applyGrade4MiQaCorrections } from "@/data/grade4MiQaCorrections";
 import { applyGrade4FrenchQaCorrections } from "@/data/grade4FrenchQaCorrections";
@@ -186,5 +187,5 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     };
     return withUsefulQuestionVisuals(exercise.preserveGermanContent || exercise.completeLocalization ? localized : cleanItalianExercise(localized));
   }
-  return applyGrade5MathsQaCorrections(withUsefulQuestionVisuals(applyGrade4MiQaCorrections(applyGrade4FrenchQaCorrections(applyGrade4EnglishQaCorrections(applyGrade4NmgQaCorrections(applyGrade4GermanQaCorrections(applyGrade4MathsQaCorrections(applyGrade3MiQaCorrections(applyGrade3FrenchQaCorrections(applyGrade3EnglishQaCorrections(applyGrade3NmgQaCorrections(applyGrade3GermanQaCorrections(applyGrade3MathsQaCorrections(applyGrade2NmgQaCorrections(applyGrade2GermanQaCorrections(applyGrade2MathsQaCorrections(applyGrade1NmgQaCorrections(applyGermanExerciseQaCorrections(exercise)))))))))))))))))));
+  return applyGrade5GermanQaCorrections(applyGrade5MathsQaCorrections(withUsefulQuestionVisuals(applyGrade4MiQaCorrections(applyGrade4FrenchQaCorrections(applyGrade4EnglishQaCorrections(applyGrade4NmgQaCorrections(applyGrade4GermanQaCorrections(applyGrade4MathsQaCorrections(applyGrade3MiQaCorrections(applyGrade3FrenchQaCorrections(applyGrade3EnglishQaCorrections(applyGrade3NmgQaCorrections(applyGrade3GermanQaCorrections(applyGrade3MathsQaCorrections(applyGrade2NmgQaCorrections(applyGrade2GermanQaCorrections(applyGrade2MathsQaCorrections(applyGrade1NmgQaCorrections(applyGermanExerciseQaCorrections(exercise))))))))))))))))))));
 }
