@@ -80,7 +80,7 @@ const priceCards = [
     plan: "free" as const,
     title: "Kostenlos",
     price: "CHF 0",
-    body: "Kostenlos testen, ohne Kreditkarte.",
+    body: "Kurze Übungen zum Kennenlernen.",
   },
   {
     plan: "monthly" as const,

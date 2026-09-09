@@ -27,6 +27,7 @@ export default function StructuredData() {
           contactType: "customer service",
           availableLanguage: ["German", "French", "Italian", "English"],
         },
+        sameAs: ["https://www.youtube.com/channel/UCN8EKFH2QTYlOpYld89OjQQ"],
         areaServed: { "@type": "Country", name: "Switzerland" },
       },
       {
@@ -34,26 +35,51 @@ export default function StructuredData() {
         "@id": "https://www.cleverli.ch/#app",
         name: "Cleverli",
         applicationCategory: "EducationalApplication",
-        operatingSystem: "Web, iOS, Android",
+        operatingSystem: "Web browser",
         url: "https://www.cleverli.ch",
         description: "Cleverli ist die interaktive Lernplattform für Kinder der 1.-6. Klasse. Mathe, Deutsch und mehr — abgestimmt auf Lehrplan 21.",
         inLanguage: ["de-CH", "fr-CH", "it-CH", "en-GB"],
-        screenshot: "https://www.cleverli.ch/og-cleverli-primarschule-2026.png",
+        publisher: { "@id": "https://www.cleverli.ch/#organization" },
         offers: [
           {
             "@type": "Offer",
             name: "Kostenlos testen",
             price: "0",
             priceCurrency: "CHF",
-            description: "Cleverli kostenlos testen",
+            description: "Die ersten 20 Aufgaben kostenlos testen",
           },
           {
             "@type": "Offer",
-            name: "Premium",
+            name: "Premium monatlich",
             price: "9.90",
             priceCurrency: "CHF",
-            billingDuration: "P1M",
+            priceSpecification: {
+              "@type": "UnitPriceSpecification",
+              price: "9.90",
+              priceCurrency: "CHF",
+              referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+            },
             description: "Voller Zugriff auf alle Übungen",
+          },
+          {
+            "@type": "Offer",
+            name: "Premium jährlich",
+            price: "99",
+            priceCurrency: "CHF",
+            priceSpecification: {
+              "@type": "UnitPriceSpecification",
+              price: "99",
+              priceCurrency: "CHF",
+              referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "ANN" },
+            },
+            description: "Voller Zugriff, jährliche Abrechnung",
+          },
+          {
+            "@type": "Offer",
+            name: "Premium lebenslang",
+            price: "249",
+            priceCurrency: "CHF",
+            description: "Lebenslanger Zugang, einmalige Zahlung",
           },
         ],
         audience: {
@@ -67,44 +93,6 @@ export default function StructuredData() {
             alignmentType: "educationalFramework",
             targetName: "Lehrplan 21",
             targetUrl: "https://www.lehrplan21.ch",
-          },
-        ],
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.cleverli.ch/#faq",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Kann ich Cleverli kostenlos ausprobieren?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Ja! Die ersten 20 Aufgaben kannst du kostenlos testen — ganz ohne Anmeldung oder Kreditkarte.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Für welche Klassen ist Cleverli?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Cleverli deckt die 1.–6. Klasse ab (Schweizer Lehrplan 21, alle Kantone).",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Brauche ich eine App herunterladen?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Nein. Cleverli läuft direkt im Browser auf Handy, Tablet und Computer — nichts installieren nötig.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Wie kündige ich das Abo?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Jederzeit kündbar, kein Mindestabo. Die Kündigung wird zum Ende des aktuellen Abrechnungszeitraums wirksam — bis dahin bleibt dein Zugriff vollständig erhalten.",
-            },
           },
         ],
       },

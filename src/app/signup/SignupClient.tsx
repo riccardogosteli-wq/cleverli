@@ -194,7 +194,7 @@ export default function Signup() {
             <div className="text-center space-y-1">
               <h1 className="text-2xl font-bold text-gray-900">Konto erstellen</h1>
               <p className="text-sm text-gray-500">
-                {isPendingTrial ? "7 Tage Premium testen · heute CHF 0" : pendingCheckout ? "Konto erstellen, dann sicher bezahlen" : "Kostenlos · keine Kreditkarte nötig"}
+                {isPendingTrial ? "7 Tage Premium testen · heute CHF 0" : pendingCheckout ? "Konto erstellen, dann sicher bezahlen" : "Kostenloses Konto erstellen"}
               </p>
             </div>
 

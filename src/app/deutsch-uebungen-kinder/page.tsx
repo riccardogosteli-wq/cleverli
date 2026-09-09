@@ -1,8 +1,9 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
 import IntentLandingPage from "../ads/intent/IntentLandingPage";
 import { deutschUebungenKinderConfig } from "../ads/intent/configs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "Deutsch Übungen für Kinder - Primarschule Schweiz",
   description: "Deutsch Übungen für Kinder: Lesen, Rechtschreibung, Grammatik, Satzbau und Wortschatz für die Schweizer Primarschule.",
   robots: {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.cleverli.ch/deutsch-uebungen-kinder",
   },
-};
+});
 
 export default function DeutschUebungenKinderPage() {
   return <IntentLandingPage config={deutschUebungenKinderConfig} />;

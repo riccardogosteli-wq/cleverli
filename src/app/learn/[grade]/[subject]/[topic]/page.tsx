@@ -1,12 +1,13 @@
+import { validateLearningRoute } from "@/lib/learningRoute";
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import { Suspense } from "react";
 import { Metadata } from "next";
 import { GRADES, getSubjects, getTopics, getTopicsForSubject } from "@/data/index";
 import TopicClient from "./TopicClient";
 import TopicHeaderClient, { TopicExplainerClient } from "./TopicHeaderClient";
 import TopicSeoSections from "./TopicSeoSections";
-import Link from "next/link";
-import { notFound, permanentRedirect } from "next/navigation";
-import { buildTopicDescription, getRelatedTopics, getSampleExercises, getSubjectSeo } from "@/lib/seoContent";
+import { notFound } from "next/navigation";
+import { buildTopicDescription, getRelatedTopics, getSampleExercises } from "@/lib/seoContent";
 import type { Exercise } from "@/types/exercise";
 
 const BASE = "https://www.cleverli.ch";
@@ -40,18 +41,19 @@ const SUBJECT_NAMES: Record<string, { de: string; fr: string; it: string; en: st
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { grade, subject, topic: topicId } = await params;
+  validateLearningRoute(grade, subject, topicId);
   const isInternalPrimaryFrenchRollout = subject === "french"
     && [3, 4].includes(parseInt(grade))
     && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ROLLOUT_MODE !== "all";
   const topics = getTopics(parseInt(grade), subject);
   const topic = topics.find(t => t.id === topicId);
-  if (!topic) return { title: "Thema nicht gefunden – Cleverli", robots: { index: false } };
+  if (!topic) notFound();
 
   const subjectNames = SUBJECT_NAMES[subject];
   const subjectName = subjectNames?.de ?? subject; // German for primary SEO (Swiss market)
   const title = `${topic.title} — ${subjectName} ${grade}. Klasse`;
   const description = buildTopicDescription(topic, grade, subject);
-  return {
+  return withPageSocial({
     title,
     description,
     openGraph: {
@@ -61,33 +63,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     alternates: { canonical: `https://www.cleverli.ch/learn/${grade}/${subject}/${topicId}` },
     robots: isInternalPrimaryFrenchRollout ? { index: false, follow: false } : undefined,
-  };
+  });
 }
 
 export default async function TopicPage({ params }: Props) {
   const { grade, subject, topic: topicId } = await params;
-  if (subject === "french" && [3, 4].includes(parseInt(grade)) && process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ENABLED !== "true") {
-    notFound();
-  }
-  if (parseInt(grade) <= 6 && (subject === "nt" || subject === "rzg")) {
-    permanentRedirect(`/learn/${grade}/science/${topicId}`);
-  }
+  validateLearningRoute(grade, subject, topicId);
   const topics = getTopics(parseInt(grade), subject);
   const topic = topics.find(t => t.id === topicId);
 
-  if (!topic) {
-    return (
-      <div className="max-w-xl mx-auto px-4 py-16 text-center">
-        <p className="text-gray-500">Thema nicht gefunden.</p>
-        <Link href="/dashboard" className="text-green-700 underline mt-4 block">Zurück zur Übersicht</Link>
-      </div>
-    );
-  }
+  if (!topic) notFound();
 
   const topicIndex = topics.findIndex(t => t.id === topicId);
   const subjectNames = SUBJECT_NAMES[subject];
   const subjectName = subjectNames?.de ?? subject; // German for primary SEO (Swiss market)
-  const subjectSeo = getSubjectSeo(subject);
   const topicDescription = buildTopicDescription(topic, grade, subject);
   const sampleExercises = getSampleExercises(topic, 4);
   const sampleExerciseCards: { exercise: Exercise; topicId: string; topicTitle: string }[] = [];
@@ -150,11 +139,9 @@ export default async function TopicPage({ params }: Props) {
     "learningResourceType": "Practice problem",
     "educationalLevel": `${grade}. Klasse`,
     "inLanguage": "de-CH",
-    "teaches": [topic.title, subjectName, ...subjectSeo.keywords.slice(0, 3)],
+    "teaches": [topic.title, subjectName],
     "provider": {
-      "@type": "Organization",
-      "name": "Cleverli",
-      "url": BASE,
+      "@id": `${BASE}/#organization`,
     },
   };
 

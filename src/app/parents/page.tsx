@@ -1,8 +1,9 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import { Metadata } from "next";
 import ParentsClient from "./PageClient";
 
-export const metadata: Metadata = {
-  title: "Elternbereich — Lernfortschritt deines Kindes verfolgen | Cleverli",
+export const metadata: Metadata = withPageSocial({
+  title: "Elternbereich — Lernfortschritt deines Kindes verfolgen",
   description: "Im Cleverli-Elternbereich siehst du den Lernfortschritt deines Kindes auf einen Blick. Schwachstellen, Streak-Kalender, Belohnungen einrichten. Kostenlos testen.",
   openGraph: {
     title: "Elternbereich | Cleverli",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     images: [{ url: "https://www.cleverli.ch/og-cleverli-primarschule-2026.png", width: 1200, height: 630, alt: "Cleverli – Die Lernplattform für die Primarschule" }],
   },
   alternates: { canonical: "https://www.cleverli.ch/parents" },
-};
+});
 
 export default function ParentsPage() {
   return <ParentsClient />;

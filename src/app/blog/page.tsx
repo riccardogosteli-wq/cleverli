@@ -1,11 +1,12 @@
+import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Cleverli Blog – Lernen, Motivation und Primarschule",
+export const metadata: Metadata = withPageSocial({
+  title: "Cleverli Blog: Lernen, Motivation und Primarschule",
   description: "Praktische, kindgerechte Tipps rund ums Lernen, Motivation und den Schweizer Primarschulalltag.",
   alternates: { canonical: "https://www.cleverli.ch/blog" },
-};
+});
 
 export default function BlogPage() {
   return (
@@ -15,16 +16,16 @@ export default function BlogPage() {
         Lernen mit Freude begleiten
       </h1>
       <p className="mt-4 max-w-2xl text-base leading-7 text-gray-700">
-        Ehrliche, praktische Impulse für Eltern – warm, alltagstauglich und passend zur Schweizer Primarschule.
+        Praktische Anregungen für Eltern, die ihr Kind im Schweizer Primarschulalltag beim Lernen begleiten möchten.
       </p>
 
       <article className="mt-8 rounded-3xl border border-green-100 bg-white p-6 shadow-sm sm:p-8">
         <p className="text-xs font-bold uppercase tracking-widest text-green-700">Motivation</p>
         <h2 className="mt-2 text-2xl font-black text-gray-950">
-          Kinder zum Lernen motivieren: Was wirklich hilft
+          Kinder zum Lernen motivieren: Ideen für den Alltag
         </h2>
         <p className="mt-3 text-sm leading-6 text-gray-700 sm:text-base sm:leading-7">
-          Warum Druck selten hilft – und wie kleine Erfolgserlebnisse, passende Routinen und echte Mitbestimmung das Lernen leichter machen.
+          Ein Ratgeber für Eltern mit Anregungen zu kleinen Lernschritten, Mitbestimmung, Pausen und einem bewussten Umgang mit Belohnungen.
         </p>
         <Link
           href="/blog/kinder-motivieren-zum-lernen"

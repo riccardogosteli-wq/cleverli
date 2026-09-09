@@ -99,7 +99,7 @@ export const einmaleinsUebenConfig: IntentLandingPageConfig = {
     ["Welche Malreihen kann mein Kind üben?", "Cleverli deckt einfache Reihen, gemischte 1x1-Aufgaben und passende Divisionen ab."],
     ["Passt das für die 2. Klasse?", "Ja. Das Einmaleins wird typischerweise ab der 2. Klasse aufgebaut und später regelmässig gefestigt."],
     ["Kann mein Kind die Aufgaben hören?", "Ja. In den Übungen gibt es eine Vorlesen-Funktion und zusätzliche Tipps."],
-    ["Kann ich zuerst testen?", "Ja. Du kannst Cleverli kostenlos und ohne Kreditkarte ausprobieren."],
+    ["Kann ich zuerst testen?", "Ja. Du kannst ausgewählte Übungen kostenlos ausprobieren. Für die Premium-Testphase wird eine Zahlungskarte benötigt."],
   ],
 };
 
@@ -284,7 +284,7 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
     ["Welche Mathe-Themen sind drin?", "Zahlen, Addition, Subtraktion, Einmaleins, Division, Geometrie, Uhrzeit, Daten und weitere Primarschul-Themen."],
     ["Ist Cleverli nach Lehrplan 21 aufgebaut?", "Ja. Cleverli ist auf die Schweizer Primarschule und Lehrplan 21 ausgerichtet."],
     ["Muss mein Kind angemeldet sein?", "Zum kostenlosen Start nicht zwingend. Für Fortschritt über mehrere Geräte ist ein Konto sinnvoll."],
-    ["Kann ich zuerst testen?", "Ja. Du kannst Cleverli kostenlos und ohne Kreditkarte ausprobieren."],
+    ["Kann ich zuerst testen?", "Ja. Du kannst ausgewählte Übungen kostenlos ausprobieren. Für die Premium-Testphase wird eine Zahlungskarte benötigt."],
   ],
 };
 
@@ -499,6 +499,6 @@ export const lesenLernenConfig: IntentLandingPageConfig = {
     ["Für wen ist diese Seite gedacht?", "Für Kinder, die Buchstaben, Wörter und erste Sätze lesen lernen oder in der 1. und 2. Klasse mehr Übung brauchen."],
     ["Ist das dasselbe wie Deutsch Übungen?", "Nein. Diese Seite fokussiert gezielt auf den Leseeinstieg: Buchstaben, Wörter, Sätze und erstes Textverständnis."],
     ["Kann mein Kind die Aufgaben hören?", "Ja. Cleverli kann Aufgaben vorlesen und gibt Tipps, wenn ein Kind nicht weiterkommt."],
-    ["Kann ich gratis starten?", "Ja. Du kannst Cleverli kostenlos und ohne Kreditkarte ausprobieren."],
+    ["Kann ich gratis starten?", "Ja. Du kannst ausgewählte Übungen kostenlos ausprobieren. Für die Premium-Testphase wird eine Zahlungskarte benötigt."],
   ],
 };
