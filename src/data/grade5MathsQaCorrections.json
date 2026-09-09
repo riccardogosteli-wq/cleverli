@@ -64,7 +64,8 @@
       "verbatimSpeech": true
     },
     "math5-rich-wahrscheinlichkeit-review-1": {
-      "question": "Ein Glücksrad hat gleich grosse Felder, mehr blaue als rote. Wie erklärst du, welche Farbe wahrscheinlicher ist?"
+      "question": "Ein Glücksrad hat gleich grosse Felder, mehr blaue als rote. Wie erklärst du, welche Farbe wahrscheinlicher ist?",
+      "answer": "Blau ist wahrscheinlicher, weil mehr gleich grosse Felder blau sind. Rot kann trotzdem vorkommen; das Ergebnis ist nicht sicher."
     },
     "vol5-34": {
       "question": "Wäschekorb 50 × 35 × 30 cm: V = ___ l (auf eine Dezimalstelle gerundet)",
@@ -497,109 +498,159 @@
         "Schliesse unpassende Antworten aus und vergleiche die übrigen."
       ]
     },
-    "wk5-8": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Aus Losen 1, 2, 3, 4, 5: Wahrscheinlichkeit für Zahl grösser als 3 gleich ...",
-      "verbatimSpeech": true
-    },
-    "gr5-44": {
-      "mathAnswerMode": "number"
-    },
-    "gr5-16": {
-      "mathAnswerMode": "number"
-    },
-    "wk5-6": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Wahrscheinlichkeit für gerade Zahl beim Würfelwurf (eins bis sechs): ...",
-      "verbatimSpeech": true
-    },
-    "gr5-41": {
-      "mathAnswerMode": "number"
-    },
-    "gr5-37": {
-      "mathAnswerMode": "number"
-    },
-    "wk5-4": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Beim Münzwurf: Wahrscheinlichkeit für Kopf gleich ...",
-      "verbatimSpeech": true
-    },
-    "g5m30": {
+    "g5br1a": {
       "mathAnswerMode": "fraction"
     },
-    "gr5-28": {
-      "mathAnswerMode": "number"
+    "g5br1c": {
+      "mathAnswerMode": "number-or-fraction"
     },
-    "g5m29": {
+    "g5br1e": {
+      "mathAnswerMode": "reduced-fraction"
+    },
+    "g5br1g": {
+      "mathAnswerMode": "number-or-fraction"
+    },
+    "g5br1i": {
       "mathAnswerMode": "fraction"
-    },
-    "wk5-26": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Wahrscheinlichkeit für mind. 1 Kopf bei 2x Münzwurf: ...",
-      "verbatimSpeech": true
-    },
-    "vol5-26": {
-      "mathAnswerMode": "number",
-      "spokenPrompt": "Schuhkarton 30 mal 15 mal 12 cm: V gleich ... Kubikzentimeter",
-      "verbatimSpeech": true
-    },
-    "g5br3d": {
-      "mathAnswerMode": "fraction"
-    },
-    "gr5-8": {
-      "mathAnswerMode": "number"
-    },
-    "gr5-42": {
-      "mathAnswerMode": "number"
-    },
-    "p5-40": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
     },
     "g5br1k": {
       "mathAnswerMode": "reduced-fraction"
     },
-    "st5-50": {
-      "mathAnswerMode": "number"
-    },
-    "g5br3k": {
-      "mathAnswerMode": "reduced-fraction"
-    },
-    "g5m8": {
+    "g5br2a": {
       "mathAnswerMode": "fraction"
+    },
+    "g5br2k": {
+      "mathAnswerMode": "number-or-fraction"
     },
     "g5br3c": {
       "mathAnswerMode": "fraction"
     },
-    "wk5-28": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Wahrscheinlichkeit für Augenzahl grösser als 4 beim Würfeln: ...",
+    "g5br3d": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5br3i": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5br3k": {
+      "mathAnswerMode": "reduced-fraction"
+    },
+    "g5br3l": {
+      "mathAnswerMode": "number-or-fraction"
+    },
+    "g5dz1c": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz1g": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz1k": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz2c": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz2e": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz2i": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz2m": {
+      "mathAnswerMode": "number"
+    },
+    "g5dz2o": {
+      "mathAnswerMode": "number"
+    },
+    "g5m18": {
+      "mathAnswerMode": "number"
+    },
+    "g5m22": {
+      "mathAnswerMode": "number-or-fraction"
+    },
+    "g5m24": {
+      "mathAnswerMode": "number-or-fraction"
+    },
+    "g5m26": {
+      "mathAnswerMode": "number-or-fraction"
+    },
+    "g5m28": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5m29": {
+      "mathAnswerMode": "number-or-fraction"
+    },
+    "g5m30": {
+      "mathAnswerMode": "fraction"
+    },
+    "g5m8": {
+      "mathAnswerMode": "fraction"
+    },
+    "gr5-16": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-18": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-22": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "1 Quadratkilometer gleich ... Quadratmeter",
       "verbatimSpeech": true
     },
-    "vol5-50": {
-      "mathAnswerMode": "number",
-      "spokenPrompt": "Ein Behälter enthält 3 Kubikmeter Wasser gleich ... l.",
-      "verbatimSpeech": true
+    "gr5-24": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-28": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-32": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-36": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-37": {
+      "mathAnswerMode": "number"
     },
     "gr5-40": {
       "mathAnswerMode": "number",
       "spokenPrompt": "0,65 Quadratmeter gleich ... Quadratzentimeter",
       "verbatimSpeech": true
     },
-    "wk5-32": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Lottozahlen eins bis neunundvierzig, eine gezogen: Wahrscheinlichkeit für kleiner oder gleich 10 gleich ...",
-      "verbatimSpeech": true
+    "gr5-41": {
+      "mathAnswerMode": "number"
     },
-    "g5br2a": {
-      "mathAnswerMode": "fraction"
+    "gr5-42": {
+      "mathAnswerMode": "number"
     },
-    "vol5-18": {
+    "gr5-44": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-46": {
       "mathAnswerMode": "number",
-      "spokenPrompt": "Aquarium 60 mal 30 mal 40 cm: V gleich ... Kubikzentimeter",
+      "spokenPrompt": "2,4 Kubikmeter gleich ... l",
       "verbatimSpeech": true
     },
-    "gr5-18": {
+    "gr5-47": {
+      "mathAnswerMode": "number"
+    },
+    "gr5-8": {
+      "mathAnswerMode": "number"
+    },
+    "p5-30": {
+      "mathAnswerMode": "number"
+    },
+    "p5-40": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "p5-49": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "p5-8": {
+      "mathAnswerMode": "number"
+    },
+    "st5-50": {
       "mathAnswerMode": "number"
     },
     "vol5-10": {
@@ -607,139 +658,19 @@
       "spokenPrompt": "1 Kubikdezimeter gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
-    "wk5-10": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Beutel mit 3 roten, 2 blauen Kugeln: Wahrscheinlichkeit für rot gleich ...",
-      "verbatimSpeech": true
-    },
-    "wk5-16": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Wahrscheinlichkeit für Zahl kleiner als 3 beim Würfeln (eins bis sechs): ...",
-      "verbatimSpeech": true
-    },
-    "gr5-24": {
-      "mathAnswerMode": "number"
-    },
-    "p5-49": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g5dz2m": {
-      "mathAnswerMode": "number"
-    },
-    "gr5-32": {
-      "mathAnswerMode": "number"
-    },
-    "wk5-38": {
-      "mathAnswerMode": "reduced-fraction"
-    },
-    "g5br1e": {
-      "mathAnswerMode": "reduced-fraction"
-    },
-    "g5br1g": {
-      "mathAnswerMode": "fraction"
-    },
-    "g5m28": {
-      "mathAnswerMode": "fraction"
-    },
-    "g5br1c": {
-      "mathAnswerMode": "fraction"
-    },
-    "g5br1a": {
-      "mathAnswerMode": "fraction"
-    },
-    "p5-30": {
-      "mathAnswerMode": "number"
-    },
-    "g5br2k": {
-      "mathAnswerMode": "fraction"
-    },
-    "wk5-14": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "5 gleiche Lose, 1 Gewinnlos: Wahrscheinlichkeit für Gewinn gleich ...",
-      "verbatimSpeech": true
-    },
-    "wk5-22": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Wahrscheinlichkeit für 2x Kopf beim 2x Münzwerfen: ...",
-      "verbatimSpeech": true
-    },
-    "wk5-34": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Spielkarten (52): Wahrscheinlichkeit für Herz-Ass gleich ...",
-      "verbatimSpeech": true
-    },
-    "vol5-46": {
-      "mathAnswerMode": "number",
-      "spokenPrompt": "V gleich 0,4 m mal 0,5 m mal 2 m gleich ... Kubikmeter",
-      "verbatimSpeech": true
-    },
-    "gr5-22": {
-      "mathAnswerMode": "number",
-      "spokenPrompt": "1 Quadratkilometer gleich ... Quadratmeter",
-      "verbatimSpeech": true
-    },
     "vol5-14": {
       "mathAnswerMode": "number",
       "spokenPrompt": "5 l gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
-    "g5m18": {
-      "mathAnswerMode": "number"
-    },
-    "g5br1i": {
-      "mathAnswerMode": "fraction"
-    },
-    "gr5-47": {
-      "mathAnswerMode": "number"
-    },
-    "g5dz2i": {
-      "mathAnswerMode": "number"
-    },
-    "g5dz1k": {
-      "mathAnswerMode": "number"
-    },
-    "g5dz2e": {
-      "mathAnswerMode": "number"
-    },
-    "g5dz2o": {
-      "mathAnswerMode": "number"
-    },
-    "g5br3i": {
-      "mathAnswerMode": "fraction"
-    },
-    "wk5-42": {
-      "mathAnswerMode": "number"
-    },
-    "g5dz1c": {
-      "mathAnswerMode": "number"
-    },
-    "vol5-39": {
+    "vol5-18": {
       "mathAnswerMode": "number",
-      "spokenPrompt": "4500 Kubikzentimeter gleich ... l",
+      "spokenPrompt": "Aquarium 60 mal 30 mal 40 cm: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
-    "g5m24": {
-      "mathAnswerMode": "fraction"
-    },
-    "g5dz1g": {
-      "mathAnswerMode": "number"
-    },
-    "g5br3l": {
-      "mathAnswerMode": "fraction"
-    },
-    "g5dz2c": {
-      "mathAnswerMode": "number"
-    },
-    "p5-8": {
-      "mathAnswerMode": "number"
-    },
-    "g5m22": {
-      "mathAnswerMode": "fraction"
-    },
-    "gr5-46": {
+    "vol5-26": {
       "mathAnswerMode": "number",
-      "spokenPrompt": "2,4 Kubikmeter gleich ... l",
+      "spokenPrompt": "Schuhkarton 30 mal 15 mal 12 cm: V gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
     "vol5-28": {
@@ -747,20 +678,90 @@
       "spokenPrompt": "1,5 Kubikdezimeter gleich ... Kubikzentimeter",
       "verbatimSpeech": true
     },
-    "wk5-18": {
-      "mathAnswerMode": "fraction",
-      "spokenPrompt": "Wahrscheinlichkeit für A gleich 2/5. Wahrscheinlichkeit für nicht A gleich ...",
+    "vol5-39": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "4500 Kubikzentimeter gleich ... l",
       "verbatimSpeech": true
     },
-    "gr5-36": {
-      "mathAnswerMode": "number"
-    },
-    "g5m26": {
-      "mathAnswerMode": "fraction"
+    "vol5-46": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "V gleich 0,4 m mal 0,5 m mal 2 m gleich ... Kubikmeter",
+      "verbatimSpeech": true
     },
     "vol5-48": {
       "mathAnswerMode": "number",
       "spokenPrompt": "2,5 l gleich ... Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "vol5-50": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "Ein Behälter enthält 3 Kubikmeter Wasser gleich ... l.",
+      "verbatimSpeech": true
+    },
+    "wk5-10": {
+      "mathAnswerMode": "number-or-fraction",
+      "spokenPrompt": "Beutel mit 3 roten, 2 blauen Kugeln: Wahrscheinlichkeit für rot gleich ...",
+      "verbatimSpeech": true
+    },
+    "wk5-14": {
+      "mathAnswerMode": "number-or-fraction",
+      "spokenPrompt": "5 gleiche Lose, 1 Gewinnlos: Wahrscheinlichkeit für Gewinn gleich ...",
+      "verbatimSpeech": true
+    },
+    "wk5-16": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für Zahl kleiner als 3 beim Würfeln (eins bis sechs): ...",
+      "verbatimSpeech": true
+    },
+    "wk5-18": {
+      "mathAnswerMode": "number-or-fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für A gleich 2/5. Wahrscheinlichkeit für nicht A gleich ...",
+      "verbatimSpeech": true
+    },
+    "wk5-22": {
+      "mathAnswerMode": "number-or-fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für 2x Kopf beim 2x Münzwerfen: ...",
+      "verbatimSpeech": true
+    },
+    "wk5-26": {
+      "mathAnswerMode": "number-or-fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für mind. 1 Kopf bei 2x Münzwurf: ...",
+      "verbatimSpeech": true
+    },
+    "wk5-28": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für Augenzahl grösser als 4 beim Würfeln: ...",
+      "verbatimSpeech": true
+    },
+    "wk5-32": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Lottozahlen eins bis neunundvierzig, eine gezogen: Wahrscheinlichkeit für kleiner oder gleich 10 gleich ...",
+      "verbatimSpeech": true
+    },
+    "wk5-34": {
+      "mathAnswerMode": "fraction",
+      "spokenPrompt": "Spielkarten (52): Wahrscheinlichkeit für Herz-Ass gleich ...",
+      "verbatimSpeech": true
+    },
+    "wk5-38": {
+      "mathAnswerMode": "reduced-fraction"
+    },
+    "wk5-4": {
+      "mathAnswerMode": "number-or-fraction",
+      "spokenPrompt": "Beim Münzwurf: Wahrscheinlichkeit für Kopf gleich ...",
+      "verbatimSpeech": true
+    },
+    "wk5-42": {
+      "mathAnswerMode": "number"
+    },
+    "wk5-6": {
+      "mathAnswerMode": "number-or-fraction",
+      "spokenPrompt": "Wahrscheinlichkeit für gerade Zahl beim Würfelwurf (eins bis sechs): ...",
+      "verbatimSpeech": true
+    },
+    "wk5-8": {
+      "mathAnswerMode": "number-or-fraction",
+      "spokenPrompt": "Aus Losen 1, 2, 3, 4, 5: Wahrscheinlichkeit für Zahl grösser als 3 gleich ...",
       "verbatimSpeech": true
     },
     "g5br2e": {
