@@ -1,0 +1,483 @@
+{
+  "patches": {
+    "bj5-9": {
+      "question": "Comment dit-on 'Bitte' pour demander poliment quelque chose en français?",
+      "spokenPrompt": "Comment dit-on 'Bitte' pour demander poliment quelque chose en français?"
+    },
+    "bj5-14": {
+      "question": "Dans une conversation avec une seule personne, compare les registres: 'vous' est [1] et 'tu' est [2]. Schreibe beide Wörter in der richtigen Reihenfolge: ___",
+      "spokenPrompt": "Dans une conversation avec une seule personne, compare les registres: 'vous' est ___ et 'tu' est ___. Complète les blancs dans le bon ordre.",
+      "hints": [
+        "Compare la manière de parler à une personne que tu connais bien et à une personne que tu vouvoies.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "bj5-47": {
+      "question": "Un élève s'adresse poliment à sa professeure, qui le tutoie. Quel dialogue convient?",
+      "spokenPrompt": "Un élève s'adresse poliment à sa professeure, qui le tutoie. Quel dialogue convient?"
+    },
+    "g5-french-chiffres-5-ch5-17": {
+      "question": "Comment écrit-on '80' avec la forme composée de quatre et de vingt?",
+      "spokenPrompt": "Comment écrit-on '80' avec la forme composée de quatre et de vingt?"
+    },
+    "g5-french-chiffres-5-ch5-27": {
+      "question": "Quel mot suisse romand pour 70 est formé à partir de sept?",
+      "spokenPrompt": "Quel mot suisse romand pour 70 est formé à partir de sept?"
+    },
+    "g5-french-chiffres-5-ch5-39": {
+      "question": "Quel mot suisse romand pour 90 est formé à partir de neuf plutôt que de vingt?",
+      "spokenPrompt": "Quel mot suisse romand pour 90 est formé à partir de neuf plutôt que de vingt?"
+    },
+    "g5-french-chiffres-5-ch5-37": {
+      "question": "Quel calcul de la table de huit donne quarante-huit? Choisis le calcul qui contient le facteur 8.",
+      "spokenPrompt": "Quel calcul de la table de huit donne quarante-huit? Choisis le calcul qui contient le facteur 8."
+    },
+    "fa5-12": {
+      "question": "C'est ___ sœur. (Das ist seine Schwester.) Das Nomen sœur ist weiblich.",
+      "spokenPrompt": "C'est ___ sœur. (Das ist seine Schwester.) Das Nomen sœur ist weiblich."
+    },
+    "fa5-14": {
+      "question": "C'est ___ livre. (Das ist ihr Buch, das Buch von Léa.) Das Nomen livre ist männlich.",
+      "spokenPrompt": "C'est ___ livre. (Das ist ihr Buch, das Buch von Léa.) Das Nomen livre ist männlich."
+    },
+    "fa5-24": {
+      "question": "Nos parents ont ___ maison à Genève. (Unsere Eltern haben ihr eigenes Haus in Genf.)",
+      "spokenPrompt": "Nos parents ont ___ maison à Genève. (Unsere Eltern haben ihr eigenes Haus in Genf.)"
+    },
+    "fa5-19": {
+      "question": "Quelle phrase nomme les deux parents en répétant le possessif correct devant chaque nom?",
+      "spokenPrompt": "Quelle phrase nomme les deux parents en répétant le possessif correct devant chaque nom?",
+      "hints": [
+        "Accorde chaque possessif avec le nom qui le suit.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fa5-35": {
+      "question": "Traduisez: 'Léas Bruder ist jünger als ihre Schwester.' Remplace Léa par un possessif.",
+      "spokenPrompt": "Traduisez: 'Léas Bruder ist jünger als ihre Schwester.' Remplace Léa par un possessif."
+    },
+    "fa5-50": {
+      "answer": "Dans ma famille, nous sommes quatre. Ma mère aime lire. Mon frère aime nager."
+    },
+    "ec5-35": {
+      "question": "Dans un bulletin scolaire, que signifie une note qui évalue un travail?",
+      "spokenPrompt": "Dans un bulletin scolaire, que signifie une note qui évalue un travail?",
+      "hints": [
+        "Pense au résultat d'une évaluation scolaire.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ec5-49": {
+      "answer": "Quelle note as-tu eue à l'examen?",
+      "options": [
+        "Quelle note as-tu eue à l'examen?",
+        "Combien était ton test?",
+        "Quand tu eu note?",
+        "Note quelle tu as eu?"
+      ]
+    },
+    "ec5-50": {
+      "answer": "Mon école s'appelle Primarschule. J'ai cours le lundi. Ma matière préférée est le français."
+    },
+    "no5-17": {
+      "question": "Quelle phrase utilise la négation écrite complète ne ... pas pour dire qu'on n'aime pas les épinards?",
+      "spokenPrompt": "Quelle phrase utilise la négation écrite complète ne ... pas pour dire qu'on n'aime pas les épinards?"
+    },
+    "no5-25": {
+      "question": "Quelle phrase permet de commander poliment une pizza au restaurant?",
+      "spokenPrompt": "Quelle phrase permet de commander poliment une pizza au restaurant?"
+    },
+    "no5-50": {
+      "answer": "Entrée: une salade. Plat principal: des pâtes au fromage. Dessert: une pomme."
+    },
+    "cd5-23": {
+      "question": "Quel groupe nominal est au féminin singulier et décrit une petite chatte noire?",
+      "spokenPrompt": "Quel groupe nominal est au féminin singulier et décrit une petite chatte noire?"
+    },
+    "cd5-29": {
+      "question": "Quel groupe contient cinq adjectifs courants qui se placent souvent avant le nom?",
+      "spokenPrompt": "Quel groupe contient cinq adjectifs courants qui se placent souvent avant le nom?"
+    },
+    "cd5-19": {
+      "question": "Quelle formule introduit la question «Welche Farbe hat ...?» en français?",
+      "spokenPrompt": "Quelle formule introduit la question «Welche Farbe hat ...?» en français?"
+    },
+    "va5-33": {
+      "question": "Quelle traduction de 'j'ai peur' utilise en allemand le verbe haben et le nom Angst?",
+      "spokenPrompt": "Quelle traduction de 'j'ai peur' utilise en allemand le verbe haben et le nom Angst?"
+    },
+    "va5-35": {
+      "question": "Quelle négation de 'tu as un stylo' utilise ne ... pas et remplace un par de?",
+      "spokenPrompt": "Quelle négation de 'tu as un stylo' utilise ne ... pas et remplace un par de?"
+    },
+    "va5-46": {
+      "question": "Complétez avec être au présent: A: 'Vous [1] d'où?' B: 'Je [2] de Suisse. Et vous, vous [3] suisse aussi?' Schreibe die drei Verbformen in der richtigen Reihenfolge: ___",
+      "spokenPrompt": "Complétez avec être au présent: A: 'Vous ___ d'où?' B: 'Je ___ de Suisse. Et vous, vous ___ suisse aussi?' Complète les blancs dans le bon ordre."
+    },
+    "al5-17": {
+      "question": "Traduisez avec le verbe jouer: 'In meiner Freizeit spiele ich Gitarre.'",
+      "spokenPrompt": "Traduisez avec le verbe jouer: 'In meiner Freizeit spiele ich Gitarre.'"
+    },
+    "al5-31": {
+      "question": "Complète avec le verbe jouer au présent: 'Il ___ de la guitare.'",
+      "spokenPrompt": "Complète avec le verbe jouer au présent: 'Il ___ de la guitare.'"
+    },
+    "al5-46": {
+      "question": "Complétez avec les mots français pour Tanzen (nom) et schwimmen (infinitif): 'Tu aimes la [1]? Moi, je préfère [2] à la piscine.' Schreibe beide Wörter in der richtigen Reihenfolge: ___",
+      "spokenPrompt": "Complétez avec les mots français pour Tanzen (nom) et schwimmen (infinitif): 'Tu aimes la ___? Moi, je préfère ___ à la piscine.' Complète les blancs dans le bon ordre."
+    },
+    "fr5-rich-salutations-drag-1": {
+      "question": "Classe les salutations. Ici, Salut et Bonsoir sont employés pour commencer une rencontre.",
+      "spokenPrompt": "Classe les salutations. Ici, Salut et Bonsoir sont employés pour commencer une rencontre.",
+      "hints": [
+        "Certaines salutations commencent une conversation.",
+        "Relis la scène et distingue le début de la rencontre de la fin."
+      ]
+    },
+    "fr5-rich-ecole-memory-1": {
+      "question": "Retrouve les deux cartes identiques pour chaque mot ou expression de l'école.",
+      "spokenPrompt": "Retrouve les deux cartes identiques pour chaque mot ou expression de l'école.",
+      "hints": [
+        "Retourne deux cartes et compare exactement leurs mots.",
+        "Mémorise la place des cartes déjà retournées."
+      ]
+    },
+    "fr5-rich-famille-review-1": {
+      "answer": "Ma mère aime lire. Mon frère aime nager. Nous jouons ensemble.",
+      "hints": [
+        "Schreibe drei einfache Sätze und nenne mindestens zwei Familienmitglieder.",
+        "Garde les phrases simples et vraies pour toi."
+      ]
+    },
+    "fr5-rich-verbes-review-1": {
+      "answer": "Je suis élève. Ma sœur est gentille. J'ai un livre. Nous avons un jardin.",
+      "hints": [
+        "Schreibe je zwei Sätze mit einer Form von être und von avoir.",
+        "Vérifie que le sujet et le verbe vont ensemble."
+      ]
+    },
+    "fr5-rich-verbes-drag-1": {
+      "hints": [
+        "Être beschreibt, wer oder wie jemand ist.",
+        "Avoir drückt oft aus, was jemand hat."
+      ]
+    },
+    "bj5-16": {
+      "hints": [
+        "Cherche le pronom réfléchi devant une voyelle.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "bj5-22": {
+      "hints": [
+        "Demande le nombre d'années de la personne.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "bj5-41": {
+      "hints": [
+        "Choisis une réponse polie à un remerciement.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fa5-3": {
+      "hints": [
+        "Cherche le nom féminin pour un enfant des mêmes parents.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "fa5-4": {
+      "hints": [
+        "Cherche le nom masculin pour un enfant des mêmes parents.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fa5-29": {
+      "hints": [
+        "Vérifie l'accord au pluriel du possessif et du nom.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fa5-33": {
+      "hints": [
+        "Vérifie si le pronom et l'adjectif correspondent au nom.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fa5-47": {
+      "hints": [
+        "Vérifie le pluriel du possessif et du nom.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ec5-29": {
+      "hints": [
+        "On y range des feuilles perforées.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "ec5-41": {
+      "hints": [
+        "Ce document rassemble les résultats scolaires d'un élève.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "no5-20": {
+      "hints": [
+        "Utilise une expression avec avoir pour dire que tu veux manger.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "no5-21": {
+      "hints": [
+        "Pense au besoin de boire.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "no5-27": {
+      "hints": [
+        "On le dit quand un aliment a très bon goût.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "no5-47": {
+      "hints": [
+        "Cherche la phrase dont le verbe, l'article et le jour sont corrects.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cd5-10": {
+      "hints": [
+        "Pense à une couleur plus claire que le rouge.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "cd5-21": {
+      "hints": [
+        "Accorde le nom et la couleur au masculin pluriel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cd5-27": {
+      "hints": [
+        "Accorde la couleur avec le nom féminin singulier.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cd5-35": {
+      "hints": [
+        "Vérifie le genre de femme et les deux adjectifs.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cd5-43": {
+      "hints": [
+        "Compare cette forme au singulier et au pluriel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cd5-47": {
+      "hints": [
+        "Vérifie le genre et le nombre du nom et de l'adjectif.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "va5-17": {
+      "hints": [
+        "Compare chaque verbe avec le sujet nous.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "va5-25": {
+      "hints": [
+        "Distingue les noms employés avec avoir des adjectifs qui décrivent un état.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "va5-27": {
+      "hints": [
+        "Compare chaque sujet avec la personne de son verbe.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "va5-31": {
+      "hints": [
+        "Une sensation exprimée par un nom ne se construit pas comme un adjectif.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "va5-41": {
+      "hints": [
+        "Cherche un sens autre que la possession d'un objet ou une relation familiale.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "va5-45": {
+      "hints": [
+        "Vérifie si chaque mot après le verbe est un adjectif ou un nom.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "al5-6": {
+      "hints": [
+        "Cherche le verbe pour comprendre un texte et le nom de ce qu'on lit.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "al5-10": {
+      "hints": [
+        "Cherche le verbe pour bouger au rythme de la musique.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "al5-11": {
+      "hints": [
+        "Retire -er et choisis la terminaison de la première personne du singulier.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "al5-13": {
+      "hints": [
+        "Retire -er et choisis la terminaison de la troisième personne du singulier.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "al5-24": {
+      "hints": [
+        "Retire -er et choisis la terminaison de nous.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "al5-29": {
+      "hints": [
+        "Retire -er et choisis la terminaison de vous.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "al5-34": {
+      "hints": [
+        "Retire -er et choisis la terminaison de ils.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "al5-41": {
+      "hints": [
+        "Compare chaque personne et sa terminaison sans oublier nous et vous.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "cd5-26": {
+      "answer": "Le chien est petit et brun.",
+      "altAnswers": [
+        "Le chien est petit et marron."
+      ]
+    },
+    "ai5-44": {
+      "answer": "Le loup est un mammifère qui vit dans les forêts et mange notamment des cerfs."
+    },
+    "g5-french-chiffres-5-ch5-16": {
+      "altAnswers": [
+        "septante"
+      ]
+    },
+    "g5-french-chiffres-5-ch5-18": {
+      "altAnswers": [
+        "nonante"
+      ]
+    },
+    "g5-french-chiffres-5-ch5-26": {
+      "altAnswers": [
+        "nonante-neuf"
+      ]
+    },
+    "g5-french-chiffres-5-ch5-30": {
+      "altAnswers": [
+        "huitante et un",
+        "huitante-et-un"
+      ]
+    },
+    "g5-french-chiffres-5-ch5-36": {
+      "altAnswers": [
+        "septante-cinq"
+      ]
+    },
+    "g5-french-chiffres-5-ch5-42": {
+      "altAnswers": [
+        "huitante-six"
+      ]
+    },
+    "g5-french-chiffres-5-ch5-44": {
+      "altAnswers": [
+        "huitante-quatre"
+      ]
+    },
+    "g5-french-chiffres-5-ch5-46": {
+      "altAnswers": [
+        "septante-huit"
+      ]
+    },
+    "g5-french-chiffres-5-ch5-50": {
+      "altAnswers": [
+        "nonante-neuf"
+      ]
+    },
+    "bj5-32": {
+      "altAnswers": [
+        "Enchanté de vous rencontrer.",
+        "Enchantée de vous rencontrer.",
+        "Ravi de vous rencontrer.",
+        "Ravie de vous rencontrer."
+      ]
+    },
+    "bj5-44": {
+      "altAnswers": [
+        "Je suis ravi de vous rencontrer tous!",
+        "Je suis ravie de vous rencontrer tous!"
+      ]
+    },
+    "ec5-48": {
+      "altAnswers": [
+        "Parlez plus lentement, s'il vous plaît. Je suis encore débutant.",
+        "Parlez plus lentement, s'il vous plaît. Je suis encore débutante."
+      ]
+    },
+    "no5-28": {
+      "altAnswers": [
+        "Je ne mange pas de viande. Je suis végétarien.",
+        "Je ne mange pas de viande. Je suis végétarienne."
+      ]
+    },
+    "va5-16": {
+      "altAnswers": [
+        "Je suis fatigué et j'ai faim.",
+        "Je suis fatiguée et j'ai faim."
+      ]
+    },
+    "fa5-40": {
+      "altAnswers": [
+        "Je vois mes grands-parents chaque dimanche pour le dîner."
+      ]
+    },
+    "no5-18": {
+      "altAnswers": [
+        "Qu'est-ce que tu manges au déjeuner?"
+      ]
+    },
+    "no5-30": {
+      "altAnswers": [
+        "Quelle est la différence entre le dîner et le souper?"
+      ]
+    },
+    "fr5-rich-loisirs-match-1": {
+      "hints": [
+        "Cherche le lieu qui convient à l'activité.",
+        "Vergleiche die Orte mit dem, was man dort tun kann."
+      ]
+    },
+    "ai5-50": {
+      "question": "Nommez 3 animaux menacés en Suisse. Expliquez les menaces connues ou indiquez si les causes de leur déclin sont encore étudiées.",
+      "spokenPrompt": "Nommez 3 animaux menacés en Suisse. Expliquez les menaces connues ou indiquez si les causes de leur déclin sont encore étudiées.",
+      "answer": "Le grand tétras souffre des dérangements et a besoin de forêts adaptées. Le pouillot siffleur est menacé car les forêts qui lui conviennent deviennent plus rares. La bécasse des bois a beaucoup diminué en Suisse; les causes de son déclin sont encore étudiées."
+    }
+  }
+}
