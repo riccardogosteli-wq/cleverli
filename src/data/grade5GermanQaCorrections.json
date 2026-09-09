@@ -96,9 +96,6 @@
     "g5dr2a": {
       "question": "Wandle mit Schweizer Guillemets in direkte Rede um: Tim fragte, ob er kommen darf. Beginne mit «Tim fragte:».",
       "caseSensitiveAnswer": true,
-      "altAnswers": [
-        "Tim fragte: «Darf ich kommen?»"
-      ],
       "spokenPrompt": "Wandle mit Schweizer Guillemets in direkte Rede um: Tim fragte, ob er kommen darf. Beginne mit «Tim fragte:».",
       "verbatimSpeech": true
     },
@@ -414,7 +411,6 @@
     },
     "g5sy3k": {
       "altAnswers": [
-        "still sein",
         "nichts sagen",
         "verstummen",
         "stumm bleiben"
@@ -1080,6 +1076,7 @@
         "Ja/Nein-Frage",
         "Ja-Nein-Fragesatz"
       ],
+      "sequentialAnswer": true,
       "spokenPrompt": "Wie nennt man eine Frage mit Verb an erster Stelle, auf die man mit Ja oder Nein antwortet? …",
       "verbatimSpeech": true
     },
@@ -1112,8 +1109,7 @@
     },
     "sa5-39": {
       "altAnswers": [
-        "2.",
-        "zweiten"
+        "2."
       ]
     },
     "sa5-41": {
