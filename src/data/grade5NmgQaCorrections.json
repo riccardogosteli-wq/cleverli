@@ -2,7 +2,11 @@
   "scope": "Grade 5 NMG, German interface only",
   "patches": {
     "g5s10": {
-      "question": "Die Gesamtmasse der Lebewesen einer Art in einem Ökosystem nennt man ihre ___."
+      "question": "Die Gesamtmasse der Lebewesen einer Art in einem Ökosystem nennt man ihre ___.",
+      "hints": [
+        "Setze einen Fachbegriff zusammen, der Lebewesen und ihre Gesamtmenge bezeichnet.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
     },
     "g5oe3d": {
       "question": "Was ist die Theorie der Inselbiogeografie?"
@@ -21,6 +25,10 @@
         "Darstellung des Energieflusses: Produzenten bilden die breite Basis, darüber folgen Konsumenten",
         "An jeder Stufe wird nur ~10% der Energie weitergegeben",
         "Die Wissenschaft der Verbreitung von Organismen auf der Erde"
+      ],
+      "hints": [
+        "Überlege, ob die gesamte aufgenommene Energie an die nächste Stufe weitergegeben werden kann.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
       ]
     },
     "g5se3k": {
@@ -1566,10 +1574,18 @@
       "question": "Welches der folgenden Länder hat die meisten Einwohner?"
     },
     "eg5-31": {
-      "question": "Welches der folgenden europäischen oder teilweise europäischen Länder grenzt insgesamt an 14 Staaten?"
+      "question": "Welches der folgenden europäischen oder teilweise europäischen Länder grenzt insgesamt an 14 Staaten?",
+      "hints": [
+        "Berücksichtige sowohl den europäischen als auch den asiatischen Teil der genannten Länder.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
     },
     "eg5-35": {
-      "question": "Welche der folgenden Hauptstädte liegt am weitesten westlich?"
+      "question": "Welche der folgenden Hauptstädte liegt am weitesten westlich?",
+      "hints": [
+        "Vergleiche die Lage der genannten Städte auf einer Europakarte. Westen liegt auf üblichen Karten links.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
     },
     "eg5-37": {
       "question": "Welche Reihenfolge zeigt vier europäische Hauptstädte von Westen nach Osten?",
@@ -1579,6 +1595,10 @@
         "London, Paris, Berlin, Warschau",
         "Veränderungen von Bevölkerungsgrösse und Altersstruktur, etwa durch Geburten, Sterbefälle und Migration",
         "Statistische Gebietseinteilung der EU für regionale Daten"
+      ],
+      "hints": [
+        "Suche die vier Städte auf einer Europakarte und vergleiche ihre Lage von links nach rechts.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
       ]
     },
     "bv5-26": {
@@ -1627,7 +1647,11 @@
       ]
     },
     "rf5-23": {
-      "question": "Welche Bedeutung hatte der Buchdruck für die Reformation?"
+      "question": "Welche Bedeutung hatte der Buchdruck für die Reformation?",
+      "hints": [
+        "Überlege, wie viele Menschen eine handgeschriebene und eine vielfach gedruckte Schrift erreichen können.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
     },
     "rf5-34": {
       "question": "Was ist ein Katechismus?",
@@ -1646,6 +1670,10 @@
         "Abnahme religiöser Bedeutung in der Gesellschaft (Moderne)",
         "Europäischer Religionskrieg, der als konfessioneller Konflikt begann",
         "Zwingli und Calvin betonten unter anderem andere Abendmahlslehren und entfernten viele religiöse Bilder"
+      ],
+      "hints": [
+        "Vergleiche die Bedeutung religiöser Einrichtungen für den Alltag und öffentliche Entscheidungen in verschiedenen Zeiten.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
       ]
     },
     "eg5-41": {
@@ -2959,6 +2987,10 @@
     "kl5-50": {
       "altAnswers": [
         "alle gefrorenen Wasserbestände der Erde"
+      ],
+      "hints": [
+        "Überlege, welcher gemeinsame Zustand des Wassers für diesen Teil des Erdsystems entscheidend ist.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
     "nh5-10": {
@@ -3200,6 +3232,10 @@
         "Mit weniger Ressourcen dasselbe erreichen (z.B. energieeffiziente Geräte)",
         "Die einer Person, Organisation oder einem Produkt zugerechneten Treibhausgasemissionen, ausgedrückt als CO₂-Äquivalente",
         "Bus, Tram, Zug reduzieren CO₂ pro Person gegenüber Autofahren"
+      ],
+      "hints": [
+        "Vergleiche den Ressourceneinsatz zweier Geräte, die dieselbe Aufgabe erfüllen.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
       ]
     },
     "kb5-4": {
@@ -3277,6 +3313,10 @@
       "question": "Wer entwickelte um 1450 in Europa den Buchdruck mit beweglichen Metalllettern?",
       "altAnswers": [
         "Johannes Gutenberg"
+      ],
+      "hints": [
+        "Gesucht ist ein Drucker aus Mainz, dessen Verfahren die Herstellung vieler gleicher Bücher erleichterte.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
     "te5-11": {
@@ -3297,6 +3337,10 @@
       "question": "Welche Brüder führten 1903 einen kontrollierten, angetriebenen Flug mit einem Flugzeug durch?",
       "altAnswers": [
         "Gebrüder Wright"
+      ],
+      "hints": [
+        "Gesucht sind zwei amerikanische Brüder, die zunächst Fahrräder bauten und gemeinsam Flugversuche unternahmen.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
       ]
     },
     "te5-28": {
@@ -5592,6 +5636,12 @@
     },
     "ch5-47": {
       "question": "Stoffe im Alltag: Lerncheck 47: Ein kompakter Granitstein im Wasser: Welche Aussage stimmt?"
+    },
+    "kb5-6": {
+      "hints": [
+        "Welche zusätzliche Messgrösse brauchst du neben der Strecke, um langsame und schnelle Bewegungen zu vergleichen?",
+        "Prüfe, ob deine Wahl genau zum Vorgang in Natur, Alltag oder Gesellschaft passt."
+      ]
     }
   }
 }
