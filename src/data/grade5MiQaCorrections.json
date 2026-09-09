@@ -1,0 +1,177 @@
+{
+  "patches": {
+    "mi5-sicher-online-5-fb1": {
+      "altAnswers": [
+        "knacken"
+      ]
+    },
+    "mi5-sicher-online-5-fb3": {
+      "altAnswers": [
+        "Gruppenchat",
+        "öffentlichen Chat",
+        "Klassenchat"
+      ]
+    },
+    "mi5-sicher-online-5-fb4": {
+      "altAnswers": [
+        "beheben",
+        "beseitigen"
+      ]
+    },
+    "mi5-sicher-online-5-fb5": {
+      "altAnswers": [
+        "vertrauenswürdige",
+        "vertraute",
+        "zuverlässige"
+      ]
+    },
+    "mi5-sicher-online-5-fb6": {
+      "altAnswers": [
+        "vertraulich"
+      ]
+    },
+    "mi5-sicher-online-5-fb7": {
+      "altAnswers": [
+        "überprüfen",
+        "kontrollieren",
+        "lesen",
+        "untersuchen",
+        "hinterfragen"
+      ]
+    },
+    "mi5-daten-diagramme-5-fb1": {
+      "altAnswers": [
+        "analysieren",
+        "untersuchen"
+      ]
+    },
+    "mi5-daten-diagramme-5-fb2": {
+      "altAnswers": [
+        "anschaulich",
+        "übersichtlich",
+        "verständlich",
+        "vergleichbar"
+      ]
+    },
+    "mi5-daten-diagramme-5-fb3": {
+      "altAnswers": [
+        "Datenschutz"
+      ]
+    },
+    "mi5-daten-diagramme-5-fb4": {
+      "altAnswers": [
+        "verfälschen",
+        "beeinflussen",
+        "verzerren"
+      ]
+    },
+    "mi5-daten-diagramme-5-fb5": {
+      "altAnswers": [
+        "Auswerten",
+        "Ordnen",
+        "Sortieren",
+        "Zählen"
+      ]
+    },
+    "mi5-daten-diagramme-5-fb6": {
+      "altAnswers": [
+        "Anonymität",
+        "persönlichen Daten"
+      ]
+    },
+    "mi5-daten-diagramme-5-fb7": {
+      "altAnswers": [
+        "Datenquelle",
+        "Herkunft"
+      ]
+    },
+    "mi5-sicher-online-5-fb2": {
+      "question": "Wie heisst der Trick, bei dem gefälschte Nachrichten Passwörter oder andere Daten stehlen sollen? ___.",
+      "spokenPrompt": "Wie heisst der Trick, bei dem gefälschte Nachrichten Passwörter oder andere Daten stehlen sollen? …. Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "mi5-daten-diagramme-5-mc3": {
+      "hints": [
+        "Überlege, wie du die Anzahl mehrerer Gruppen nebeneinander vergleichen kannst.",
+        "Vergleiche genau und lies alle Antworten langsam."
+      ]
+    },
+    "mi5-sicher-online-5-me1": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi5-sicher-online-5-me2": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi5-daten-diagramme-5-me1": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi5-daten-diagramme-5-me2": {
+      "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true,
+      "pairs": [
+        {
+          "id": "mi5-daten-diagramme-5-me2-p1",
+          "label": "Anzahl Velos: Zahl"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-me2-p2",
+          "label": "Lieblingsfach: Kategorie"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-me2-p3",
+          "label": "Geburtsdatum: persönlich"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-me2-p4",
+          "label": "Gemessene Lufttemperatur: Messung"
+        }
+      ]
+    },
+    "mi5-daten-diagramme-5-ma2": {
+      "pairs": [
+        {
+          "id": "mi5-daten-diagramme-5-ma2-l1",
+          "label": "Anzahl Velos"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-ma2-r1",
+          "label": "Zahl"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-ma2-l2",
+          "label": "Lieblingsfach"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-ma2-r2",
+          "label": "Kategorie"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-ma2-l3",
+          "label": "Geburtsdatum"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-ma2-r3",
+          "label": "persönlich"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-ma2-l4",
+          "label": "Gemessene Lufttemperatur"
+        },
+        {
+          "id": "mi5-daten-diagramme-5-ma2-r4",
+          "label": "Messung"
+        }
+      ],
+      "question": "Ordne jedem Beispiel die hier passende Beschreibung zu.",
+      "spokenPrompt": "Ordne jedem Beispiel die hier passende Beschreibung zu.",
+      "verbatimSpeech": true
+    }
+  }
+}
