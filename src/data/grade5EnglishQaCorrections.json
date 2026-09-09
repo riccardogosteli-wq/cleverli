@@ -1,0 +1,870 @@
+{
+  "patches": {
+    "pc5-16": {
+      "answer": "is not crying",
+      "altAnswers": [
+        "is not crying",
+        "isn't crying"
+      ],
+      "spokenPrompt": "Make the negative: 'She is crying.' → 'She blank 1 blank 2.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-22": {
+      "answer": "are not sleeping",
+      "altAnswers": [
+        "are not sleeping",
+        "aren't sleeping"
+      ],
+      "spokenPrompt": "Complete the negative: 'They blank 1 blank 2 (sleep).' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-46": {
+      "answer": "is not crying",
+      "altAnswers": [
+        "is not crying",
+        "isn't crying"
+      ],
+      "spokenPrompt": "Make negative: 'The baby blank 1 blank 2 (cry) any more — she's smiling now!' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fp5-18": {
+      "answer": "is not going",
+      "altAnswers": [
+        "is not going",
+        "isn't going"
+      ],
+      "spokenPrompt": "Make the negative: 'She is going to cook dinner.' → 'She blank 1 blank 2 to cook dinner.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-31": {
+      "hints": [
+        "For verbs ending in -ie, replace -ie with -y before adding -ing.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "pc5-39": {
+      "question": "Why do we normally say 'Do you want some tea?' rather than 'Are you wanting some tea?'",
+      "options": [
+        "'Wanting' is spelled incorrectly.",
+        "We should use 'does' not 'are'.",
+        "We normally use 'want' in the simple form because it is a stative verb.",
+        "The question word order is wrong."
+      ],
+      "answer": "We normally use 'want' in the simple form because it is a stative verb.",
+      "hints": [
+        "Stative verbs usually describe states rather than actions in progress.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Why do we normally say 'Do you want some tea?' rather than 'Are you wanting some tea?'",
+      "verbatimSpeech": true
+    },
+    "fp5-15": {
+      "question": "Which is the contracted negative of 'She will come'?",
+      "options": [
+        "She will not come.",
+        "She won't come.",
+        "She will come not.",
+        "She not come."
+      ],
+      "spokenPrompt": "Which is the contracted negative of 'She will come'?",
+      "verbatimSpeech": true
+    },
+    "fp5-38": {
+      "question": "Make a question: '[1] the teacher [2] to give us homework?' Schreibe alle fehlenden Teile in der richtigen Reihenfolge in das Eingabefeld: ___",
+      "spokenPrompt": "Make a question: 'blank 1 the teacher blank 2 to give us homework?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fp5-44": {
+      "question": "Complete: 'By 2050, scientists predict that humans ___ have found a cure for many diseases.'",
+      "spokenPrompt": "Complete: 'By 2050, scientists predict that humans blank have found a cure for many diseases.'",
+      "verbatimSpeech": true
+    },
+    "eng5-rich-future-review-1": {
+      "answer": "I am going to visit my grandma on Saturday. We will cook lunch together. On Sunday, I am going to play football with my friends.",
+      "hints": [
+        "Choose a weekend activity and say when you plan to do it.",
+        "Add when, where or with whom."
+      ]
+    },
+    "eng5-rich-future-match-1": {
+      "question": "Match the time expressions with their meanings.",
+      "pairs": [
+        {
+          "id": "tomorrow",
+          "label": "tomorrow",
+          "emoji": "📅"
+        },
+        {
+          "id": "one-day",
+          "label": "the day after today",
+          "emoji": "➡️"
+        },
+        {
+          "id": "weekend",
+          "label": "at the weekend",
+          "emoji": "🎒"
+        },
+        {
+          "id": "sat-sun",
+          "label": "Saturday or Sunday",
+          "emoji": "🗓️"
+        },
+        {
+          "id": "summer",
+          "label": "in summer",
+          "emoji": "☀️"
+        },
+        {
+          "id": "holidays",
+          "label": "during the summer months",
+          "emoji": "🏖️"
+        },
+        {
+          "id": "tonight",
+          "label": "tonight",
+          "emoji": "🌙"
+        },
+        {
+          "id": "evening",
+          "label": "this evening",
+          "emoji": "🏠"
+        }
+      ],
+      "spokenPrompt": "Match the time expressions with their meanings.",
+      "verbatimSpeech": true
+    },
+    "pe5-1": {
+      "question": "Which question opening uses the present perfect to ask about life experiences?",
+      "spokenPrompt": "Which question opening uses the present perfect to ask about life experiences?",
+      "verbatimSpeech": true
+    },
+    "pe5-14": {
+      "question": "Complete with a word meaning 'not at any time': 'I have ___ tried skydiving.'",
+      "spokenPrompt": "Complete with a word meaning 'not at any time': 'I have blank tried skydiving.'",
+      "verbatimSpeech": true
+    },
+    "pe5-21": {
+      "question": "Which sentence correctly uses the present perfect?",
+      "spokenPrompt": "Which sentence correctly uses the present perfect?",
+      "verbatimSpeech": true
+    },
+    "pe5-34": {
+      "question": "Complete with 'already' or 'yet': 'Have you bought the tickets ___?'",
+      "answer": "yet",
+      "spokenPrompt": "Complete with 'already' or 'yet': 'Have you bought the tickets blank?'",
+      "verbatimSpeech": true
+    },
+    "pe5-40": {
+      "question": "Complete the question: [1] your parents ever [2] (be) to Asia? Schreibe alle fehlenden Teile in der richtigen Reihenfolge in das Eingabefeld: ___",
+      "spokenPrompt": "Complete the question: blank 1 your parents ever blank 2 (be) to Asia? Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pe5-47": {
+      "question": "She moved to Paris three years ago and still lives there. Which sentence describes this continuing situation?",
+      "spokenPrompt": "She moved to Paris three years ago and still lives there. Which sentence describes this continuing situation?",
+      "verbatimSpeech": true
+    },
+    "pe5-49": {
+      "question": "Build a present perfect sentence: 'my friend / never / try / skiing'",
+      "spokenPrompt": "Build a present perfect sentence: 'my friend / never / try / skiing'",
+      "verbatimSpeech": true
+    },
+    "eng5-rich-past-memory-1": {
+      "question": "Find two identical cards for each verb form.",
+      "hints": [
+        "Remember the word and position of each card.",
+        "The two matching cards have the same word and picture."
+      ],
+      "spokenPrompt": "Find two identical cards for each verb form.",
+      "verbatimSpeech": true
+    },
+    "eng5-rich-past-drag-1": {
+      "dragItems": [
+        {
+          "id": "arrive",
+          "label": "We arrived at the lake.",
+          "emoji": "🏞️"
+        },
+        {
+          "id": "walk",
+          "label": "Before our picnic, we walked along the water.",
+          "emoji": "🚶"
+        },
+        {
+          "id": "eat",
+          "label": "After our walk, we ate our picnic.",
+          "emoji": "🥪"
+        },
+        {
+          "id": "home",
+          "label": "Then we went home.",
+          "emoji": "🏠"
+        }
+      ]
+    },
+    "env5-20": {
+      "question": "Name the cause of water pollution described by these words: factories / releasing / chemicals.",
+      "spokenPrompt": "Name the cause of water pollution described by these words: factories / releasing / chemicals.",
+      "verbatimSpeech": true
+    },
+    "env5-24": {
+      "answer": "It is renewable.",
+      "question": "Name one advantage of solar energy using 'renewable'.",
+      "spokenPrompt": "Name one advantage of solar energy using 'renewable'.",
+      "verbatimSpeech": true
+    },
+    "env5-32": {
+      "question": "Complete: 'Burning coal ___ air pollution.'",
+      "answer": "causes",
+      "spokenPrompt": "Complete: 'Burning coal blank air pollution.'",
+      "verbatimSpeech": true
+    },
+    "env5-39": {
+      "options": [
+        "Renewable energy is good.",
+        "Wind is free.",
+        "Wind and solar energy can reduce pollution compared with fossil fuels, use renewable sources, and create jobs.",
+        "We should use more energy."
+      ],
+      "answer": "Wind and solar energy can reduce pollution compared with fossil fuels, use renewable sources, and create jobs."
+    },
+    "env5-40": {
+      "question": "Write one environmental recommendation with 'shouldn't': 'People shouldn't ___ because ___.'",
+      "spokenPrompt": "Write one environmental recommendation with 'shouldn't': 'People shouldn't blank because blank.'",
+      "verbatimSpeech": true
+    },
+    "env5-50": {
+      "question": "Complete with a modal expressing strong obligation: 'We ___ protect endangered species before it is too late.'",
+      "answer": "must",
+      "sequentialAnswer": false,
+      "spokenPrompt": "Complete with a modal expressing strong obligation: 'We blank protect endangered species before it is too late.'",
+      "verbatimSpeech": true
+    },
+    "tech5-11": {
+      "hints": [
+        "A website is reached through its web address in a browser.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "tech5-20": {
+      "answer": "but / yet / although"
+    },
+    "tech5-42": {
+      "question": "Complete with a prediction and a possibility: 'In the future, artificial intelligence [1] probably replace some jobs, which [2] be a problem for some workers.' Write both missing words in order: ___",
+      "answer": "will / could",
+      "altAnswers": [
+        "will / might",
+        "will / may",
+        "might / could",
+        "could / might"
+      ],
+      "spokenPrompt": "Complete with a prediction and a possibility: 'In the future, artificial intelligence blank 1 probably replace some jobs, which blank 2 be a problem for some workers.' Write both missing words in order: blank",
+      "verbatimSpeech": true
+    },
+    "cc5-25": {
+      "question": "In which country is the Carnival in Rio de Janeiro held?",
+      "spokenPrompt": "In which country is the Carnival in Rio de Janeiro held?",
+      "verbatimSpeech": true
+    },
+    "cc5-36": {
+      "question": "Complete: 'The capital of Australia is [1], but the most populous Greater Capital City Statistical Area is [2].' Schreibe alle fehlenden Teile in der richtigen Reihenfolge in das Eingabefeld: ___",
+      "spokenPrompt": "Complete: 'The capital of Australia is blank 1, but the most populous Greater Capital City Statistical Area is blank 2.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "cc5-37": {
+      "options": [
+        "Tourism",
+        "Migration",
+        "Cultural exchange",
+        "Colonisation"
+      ]
+    },
+    "cc5-44": {
+      "question": "Write the missing country: Greek (Greece), Dutch (Netherlands), Swedish (___).",
+      "spokenPrompt": "Write the missing country: Greek (Greece), Dutch (Netherlands), Swedish (blank).",
+      "verbatimSpeech": true
+    },
+    "mv5-8": {
+      "question": "Complete: 'Could you ___ me the salt, please?' (use a verb meaning 'hand over')",
+      "spokenPrompt": "Complete: 'Could you blank me the salt, please?' (use a verb meaning 'hand over')",
+      "verbatimSpeech": true
+    },
+    "mv5-16": {
+      "question": "Complete with a negative modal for past ability: 'You ___ swim when you were a baby.'",
+      "spokenPrompt": "Complete with a negative modal for past ability: 'You blank swim when you were a baby.'",
+      "verbatimSpeech": true
+    },
+    "mv5-38": {
+      "question": "Complete with negative past ability and positive present ability: 'He [1] run a marathon before training, but he [2] now!' Write both missing parts in order: ___",
+      "altAnswers": [
+        "could not / can"
+      ],
+      "spokenPrompt": "Complete with negative past ability and positive present ability: 'He blank 1 run a marathon before training, but he blank 2 now!' Write both missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "mv5-41": {
+      "question": "A tie is optional, but formal shoes are required. Which sentence matches this rule?",
+      "spokenPrompt": "A tie is optional, but formal shoes are required. Which sentence matches this rule?",
+      "verbatimSpeech": true
+    },
+    "rc5-50": {
+      "question": "Read: 'Her hands were trembling and she could not speak.' Write an inference using: 'We can infer that ___ because the text says ___.'",
+      "spokenPrompt": "Read: 'Her hands were trembling and she could not speak.' Write an inference using: 'We can infer that blank because the text says blank.'",
+      "verbatimSpeech": true
+    },
+    "eng5-rich-reading-review-1": {
+      "question": "Read: 'Mia cycles to school every day. Her route passes a park. Cycling keeps her active.' Write one sentence about the main idea and one about a detail.",
+      "answer": "The text is about Mia cycling to school. Her route passes a park.",
+      "spokenPrompt": "Read: 'Mia cycles to school every day. Her route passes a park. Cycling keeps her active.' Write one sentence about the main idea and one about a detail.",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-4": {
+      "answer": "When / After / As"
+    },
+    "g5-english-storytelling-5-st5-26": {
+      "answer": "problem / climax",
+      "altAnswers": [
+        "rising action / climax"
+      ],
+      "spokenPrompt": "Complete: 'The story begins with the setting, then the blank 1, then the blank 2, and finally the resolution.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-28": {
+      "answer": "was / arrived",
+      "altAnswers": [
+        "was / knocked"
+      ],
+      "spokenPrompt": "Complete the story opener: 'It blank 1 a dark and stormy night when the traveller blank 2 at the castle gates.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-32": {
+      "answer": "After / When / Once"
+    },
+    "g5-english-storytelling-5-st5-38": {
+      "question": "Complete this story with the supplied events in a logical order: he escaped / he entered the cave / he heard a noise / he found the treasure. 'First, [1]. Then, [2]. Suddenly, [3]. Finally, [4].' Write the four missing parts in order: ___",
+      "answer": "he entered the cave / he found the treasure / he heard a noise / he escaped",
+      "spokenPrompt": "Complete this story with the supplied events in a logical order: he escaped / he entered the cave / he heard a noise / he found the treasure. 'First, blank 1. Then, blank 2. Suddenly, blank 3. Finally, blank 4.' Write the four missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-46": {
+      "question": "Rewrite 'He was scared and he ran away.' using these phrases in order: filled with terror / he fled / into the darkness.",
+      "spokenPrompt": "Rewrite 'He was scared and he ran away.' using these phrases in order: filled with terror / he fled / into the darkness.",
+      "verbatimSpeech": true
+    },
+    "pc5-35": {
+      "hints": [
+        "Start with a negative short answer, then check the form of the explanation.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "pc5-40": {
+      "hints": [
+        "Write the contraction as separate words while preserving the sentence.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "fp5-1": {
+      "hints": [
+        "Think about something you intend to do later.",
+        "Die anderen Antworten (A past event, A present habit) sind nicht korrekt."
+      ]
+    },
+    "fp5-7": {
+      "hints": [
+        "Think about deciding what to do at the moment you speak.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fp5-9": {
+      "hints": [
+        "Locate today on a calendar and think about the time direction.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "fp5-25": {
+      "hints": [
+        "Check whether the time phrase agrees with a plan that has not happened yet.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "pe5-16": {
+      "hints": [
+        "Use the experience adverb, followed by the irregular past participle.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Complete: 'Have you blank 1 blank 2 (ever / meet) a famous person?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pe5-25": {
+      "hints": [
+        "Make the short answer agree with the question, then check the negative statement.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "pe5-29": {
+      "hints": [
+        "The word tells you how often the visit happened.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "pe5-41": {
+      "hints": [
+        "After have, use the irregular past participle rather than the base verb.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "tech5-14": {
+      "hints": [
+        "Think of another verb for starting a device again.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "rc5-2": {
+      "hints": [
+        "Think about reading headings and main points without stopping at every detail.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "rc5-4": {
+      "hints": [
+        "Think about looking for one name, number or date rather than reading every sentence.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "rc5-10": {
+      "hints": [
+        "Compare the colour in the statement with the colour in the short text.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "rc5-12": {
+      "hints": [
+        "Compare the word describing the desert in the text and in the statement.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "rc5-24": {
+      "hints": [
+        "Compare the risk described by endangered with the statement about the bears.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "rc5-34": {
+      "hints": [
+        "Use both the movement and the slamming door as clues to his emotion.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "eng5-rich-culture-match-1": {
+      "hints": [
+        "Match each country with its capital.",
+        "Use the country names and the cities you know to check each pair."
+      ]
+    },
+    "pc5-28": {
+      "altAnswers": [
+        "I am not"
+      ]
+    },
+    "pc5-36": {
+      "altAnswers": [
+        "Tom isn't studying at home."
+      ]
+    },
+    "pc5-34": {
+      "altAnswers": [
+        "No.",
+        "No, it is not."
+      ]
+    },
+    "pc5-42": {
+      "altAnswers": [
+        "In the garden she is reading."
+      ]
+    },
+    "pc5-50": {
+      "altAnswers": [
+        "Your friend is sitting next to you right now."
+      ]
+    },
+    "fp5-24": {
+      "altAnswers": [
+        "will not"
+      ]
+    },
+    "fp5-34": {
+      "altAnswers": [
+        "will not"
+      ]
+    },
+    "fp5-46": {
+      "altAnswers": [
+        "My family are going to fly to Australia next summer."
+      ]
+    },
+    "pe5-2": {
+      "altAnswers": [
+        "been"
+      ]
+    },
+    "pe5-8": {
+      "altAnswers": [
+        "have not"
+      ]
+    },
+    "pe5-44": {
+      "altAnswers": [
+        "I've never tried bungee jumping."
+      ]
+    },
+    "env5-4": {
+      "altAnswers": [
+        "should not"
+      ]
+    },
+    "env5-14": {
+      "altAnswers": [
+        "should not"
+      ]
+    },
+    "env5-16": {
+      "altAnswers": [
+        "should not"
+      ]
+    },
+    "env5-38": {
+      "altAnswers": [
+        "do not / will"
+      ],
+      "spokenPrompt": "Complete: 'If we blank 1 take action against climate change, the consequences blank 2 be severe.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "tech5-2": {
+      "altAnswers": [
+        "search for",
+        "type",
+        "enter"
+      ]
+    },
+    "tech5-4": {
+      "altAnswers": [
+        "application"
+      ]
+    },
+    "tech5-6": {
+      "altAnswers": [
+        "uploading"
+      ]
+    },
+    "tech5-8": {
+      "altAnswers": [
+        "wifi",
+        "wi fi"
+      ]
+    },
+    "tech5-16": {
+      "altAnswers": [
+        "connect"
+      ]
+    },
+    "tech5-18": {
+      "altAnswers": [
+        "drawback"
+      ]
+    },
+    "tech5-28": {
+      "altAnswers": [
+        "phone",
+        "smartphone",
+        "computer"
+      ]
+    },
+    "tech5-32": {
+      "altAnswers": [
+        "have"
+      ]
+    },
+    "tech5-46": {
+      "altAnswers": [
+        "could make",
+        "may make",
+        "might make"
+      ]
+    },
+    "cc5-16": {
+      "altAnswers": [
+        "Brasilia"
+      ]
+    },
+    "cc5-22": {
+      "altAnswers": [
+        "Argentine"
+      ]
+    },
+    "cc5-24": {
+      "altAnswers": [
+        "Pretoria",
+        "Bloemfontein"
+      ]
+    },
+    "cc5-30": {
+      "altAnswers": [
+        "the United Kingdom",
+        "UK",
+        "the UK"
+      ]
+    },
+    "cc5-46": {
+      "altAnswers": [
+        "lunisolar"
+      ]
+    },
+    "cc5-48": {
+      "altAnswers": [
+        "Italian / French"
+      ],
+      "spokenPrompt": "Complete: 'Switzerland has four official languages: German, blank 1, blank 2, and Romansh.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "mv5-12": {
+      "altAnswers": [
+        "should not"
+      ]
+    },
+    "mv5-24": {
+      "altAnswers": [
+        "should not"
+      ]
+    },
+    "mv5-18": {
+      "altAnswers": [
+        "must not"
+      ]
+    },
+    "mv5-30": {
+      "altAnswers": [
+        "must not"
+      ]
+    },
+    "mv5-6": {
+      "altAnswers": [
+        "could"
+      ]
+    },
+    "mv5-10": {
+      "altAnswers": [
+        "have to"
+      ]
+    },
+    "mv5-20": {
+      "altAnswers": [
+        "must"
+      ]
+    },
+    "mv5-42": {
+      "altAnswers": [
+        "must"
+      ]
+    },
+    "mv5-48": {
+      "altAnswers": [
+        "may"
+      ]
+    },
+    "mv5-46": {
+      "altAnswers": [
+        "must / must not"
+      ],
+      "spokenPrompt": "Complete: 'If you want to pass, you blank 1 study harder. You blank 2 relax all day.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "rc5-8": {
+      "altAnswers": [
+        "overcast",
+        "gray"
+      ]
+    },
+    "rc5-14": {
+      "altAnswers": [
+        "It is raining.",
+        "It might rain.",
+        "Rain is expected."
+      ]
+    },
+    "rc5-16": {
+      "altAnswers": [
+        "The rain did not stop the match."
+      ]
+    },
+    "rc5-22": {
+      "altAnswers": [
+        "He was unwilling to help."
+      ]
+    },
+    "rc5-26": {
+      "altAnswers": [
+        "She passed with an excellent result."
+      ]
+    },
+    "rc5-30": {
+      "altAnswers": [
+        "dry"
+      ]
+    },
+    "rc5-36": {
+      "altAnswers": [
+        "She is determined.",
+        "She faces her fears."
+      ]
+    },
+    "rc5-42": {
+      "altAnswers": [
+        "He became disappointed."
+      ]
+    },
+    "rc5-46": {
+      "altAnswers": [
+        "It was hidden or secret and had to be investigated."
+      ]
+    },
+    "rc5-48": {
+      "altAnswers": [
+        "Making inferences.",
+        "Understanding what is implied but not directly stated."
+      ]
+    },
+    "g5-english-storytelling-5-st5-6": {
+      "altAnswers": [
+        "Eventually"
+      ]
+    },
+    "g5-english-storytelling-5-st5-18": {
+      "altAnswers": [
+        "Yes.",
+        "Yes, it is correct."
+      ]
+    },
+    "g5-english-storytelling-5-st5-20": {
+      "altAnswers": [
+        "When / was",
+        "As / was"
+      ],
+      "spokenPrompt": "Complete: 'blank 1 the dragon attacked the village, the knight blank 2 already riding to the rescue.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-22": {
+      "altAnswers": [
+        "He was digging when he suddenly found gold.",
+        "While he was digging, he suddenly found gold."
+      ]
+    },
+    "pc5-18": {
+      "spokenPrompt": "Make a question: 'blank 1 you blank 2 (listen) to music?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-20": {
+      "spokenPrompt": "Complete: 'My brother blank 1 blank 2 (write) a letter right now.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-26": {
+      "spokenPrompt": "Complete: 'What blank 1 the children blank 2 (do)?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-30": {
+      "spokenPrompt": "Complete: 'My parents blank 1 not blank 2 (work) today — it's Sunday.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-32": {
+      "spokenPrompt": "Complete: 'Why blank 1 you blank 2 (laugh)?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-38": {
+      "spokenPrompt": "Write a question: blank 1 your sister blank 2 (help) you with your homework? Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-44": {
+      "spokenPrompt": "Complete both gaps: 'Every day she blank 1 (walk) to school, but today she blank 2 (ride) her bike.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pc5-48": {
+      "spokenPrompt": "Write a question about Tom: 'blank 1 Tom blank 2 (do) his homework?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fp5-28": {
+      "spokenPrompt": "Complete: 'What blank 1 you blank 2 to do this weekend?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fp5-36": {
+      "spokenPrompt": "Complete both: 'I blank 1 (have a plan) going to visit Paris, and I think it blank 2 (prediction) be amazing.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fp5-40": {
+      "spokenPrompt": "Write a plan + a prediction: 'I blank 1 to study medicine (plan), and I think I blank 2 help many people (prediction).' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "fp5-42": {
+      "spokenPrompt": "Negative question: 'blank 1 he blank 2 to join the team?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pe5-18": {
+      "spokenPrompt": "Make a question: 'blank 1 she ever blank 2 (fly) in a helicopter?' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pe5-22": {
+      "spokenPrompt": "Complete: 'I blank 1 blank 2 (just / finish) reading that book. It was great!' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pe5-32": {
+      "spokenPrompt": "Complete: 'She blank 1 blank 2 (already/read) that book — she knows the ending!' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pe5-38": {
+      "spokenPrompt": "Complete the mini-dialogue: A: 'blank 1 you ever blank 2 (fall) off a bicycle?' B: 'Yes, I blank 3, when I was eight.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pe5-46": {
+      "spokenPrompt": "Complete both gaps: 'A: Have you blank 1 (read) Harry Potter?' B: 'Yes, I blank 2 read all the books!' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "pe5-50": {
+      "spokenPrompt": "Complete: 'They blank 1 blank 2 (already/see) this film three times!' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "env5-36": {
+      "spokenPrompt": "Write a recommendation: 'Governments blank 1 ban single-use plastics to blank 2 pollution.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "cc5-38": {
+      "spokenPrompt": "Someone from Poland is called blank 1, and their language is called blank 2. Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "cc5-40": {
+      "spokenPrompt": "Complete: 'Someone from Turkey is called blank 1 and they speak blank 2.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "mv5-40": {
+      "spokenPrompt": "Complete: 'I think it blank 1 be too expensive. We blank 2 look for a cheaper option.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-16": {
+      "spokenPrompt": "Complete: 'I blank 1 (read) my book when my phone blank 2 (ring) suddenly.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-24": {
+      "spokenPrompt": "Complete: 'The children blank 1 (play) in the garden when they blank 2 (hear) a strange sound.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-30": {
+      "spokenPrompt": "Complete with the right tense: 'She blank 1 (run) towards the exit when the alarm blank 2 (go off).' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-34": {
+      "spokenPrompt": "Complete: 'The characters blank 1 (talk) quietly when, without warning, the door blank 2 (burst) open.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    },
+    "g5-english-storytelling-5-st5-42": {
+      "spokenPrompt": "Complete the story resolution: 'After all the danger, they blank 1 safely home and blank 2 (never/forget) the adventure.' Write all missing parts in order: blank",
+      "verbatimSpeech": true
+    }
+  }
+}
