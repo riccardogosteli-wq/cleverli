@@ -3,7 +3,7 @@ import { INTERNAL_LOG_COOKIE, verifyInternalSession } from '@/lib/internalDashbo
 import { FROM,TO,SUBJECT,MAIL_ID,mailDb,prepareMail,sendFixedMail } from '@/lib/privateOfferMail';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
-const headers={'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow','Content-Security-Policy':"default-src 'none'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'"};
+const headers={'Cache-Control':'no-store','Referrer-Policy':'same-origin','X-Robots-Tag':'noindex, nofollow','Content-Security-Policy':"default-src 'none'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'"};
 function authorized(req:NextRequest){try{return verifyInternalSession(req.cookies.get(INTERNAL_LOG_COOKIE)?.value);}catch{return false;}}
 export async function GET(req:NextRequest){
  if(!authorized(req))return new NextResponse('Bitte zuerst im internen Dashboard anmelden.',{status:401,headers});
@@ -28,6 +28,6 @@ export async function POST(req:NextRequest){
    if(form.get('confirmed')!=='yes')return NextResponse.json({error:'confirmation_required'},{status:400,headers});
    const receipt=await sendFixedMail(artifact);return NextResponse.json({ok:true,...receipt,from:FROM,to:TO,subject:SUBJECT},{headers});
   }
-  const result=await prepareMail(artifact);return NextResponse.json({dryRun:true,from:FROM,to:TO,subject:SUBJECT,approvedBody:true,bodyHash:result.bodyHash,state:result.row.state,providerId:result.row.provider_id,productionSendEnabled:process.env.VERCEL_ENV==='production'},{headers});
+  const result=await prepareMail(artifact);return NextResponse.json({dryRun:true,from:FROM,to:TO,subject:SUBJECT,approvedBody:true,bodyHash:result.bodyHash,state:result.row.state,providerId:result.row.provider_id,productionSendEnabled:process.env.VERCEL_ENV==='production'&&process.env.PRIVATE_OFFER_MAIL_SEND_ENABLED==='true'},{headers});
  }catch{return NextResponse.json({error:'not_sent_or_receipt_reconciliation_required'}, {status:409,headers});}
 }
