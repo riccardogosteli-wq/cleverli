@@ -149,6 +149,8 @@
     },
     "ff6-36": {
       "type": "self-review",
+      "answer": "La francophonie relie des personnes qui parlent français et comprend différentes cultures.",
+      "question": "Traduisez : « Die Frankophonie verbindet Menschen, die Französisch sprechen, und umfasst unterschiedliche Kulturen. »",
       "reviewCriteria": [
         "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
         "Les verbes et les accords correspondent à la phrase.",
@@ -158,10 +160,12 @@
         "Repère le sujet, les actions et les informations à conserver.",
         "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
       ],
-      "spokenPrompt": "Traduisez: 'Die Frankophonie ist nicht nur eine Sprache, sondern auch ein kulturelles Erbe, das verschiedene Völker verbindet.'"
+      "spokenPrompt": "Traduisez : « Die Frankophonie verbindet Menschen, die Französisch sprechen, und umfasst unterschiedliche Kulturen. »"
     },
     "ff6-38": {
       "type": "self-review",
+      "answer": "La Suisse est un pays multilingue et participe à la Francophonie.",
+      "question": "Traduisez : « Die Schweiz ist ein mehrsprachiges Land und beteiligt sich an der Frankophonie. »",
       "reviewCriteria": [
         "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
         "Les verbes et les accords correspondent à la phrase.",
@@ -171,7 +175,7 @@
         "Repère le sujet, les actions et les informations à conserver.",
         "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
       ],
-      "spokenPrompt": "Traduisez: 'Die Schweiz nimmt eine einzigartige Rolle in der Frankophonie ein, da sie ein mehrsprachiges Land ist.'"
+      "spokenPrompt": "Traduisez : « Die Schweiz ist ein mehrsprachiges Land und beteiligt sich an der Frankophonie. »"
     },
     "ff6-40": {
       "type": "self-review",
@@ -271,6 +275,8 @@
     },
     "ma6-22": {
       "type": "self-review",
+      "answer": "À l’avenir, l’automatisation peut transformer certains métiers.",
+      "question": "Traduisez : « In Zukunft kann die Automatisierung manche Berufe verändern. »",
       "reviewCriteria": [
         "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
         "Les verbes et les accords correspondent à la phrase.",
@@ -280,7 +286,7 @@
         "Repère le sujet, les actions et les informations à conserver.",
         "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
       ],
-      "spokenPrompt": "Traduisez: 'In der Zukunft werden viele Berufe durch die Automatisierung verschwinden.'"
+      "spokenPrompt": "Traduisez : « In Zukunft kann die Automatisierung manche Berufe verändern. »"
     },
     "ma6-24": {
       "type": "self-review",
@@ -505,6 +511,8 @@
     },
     "cf6-24": {
       "type": "self-review",
+      "answer": "Le Tour de France est une course cycliste connue qui a généralement lieu en juillet.",
+      "question": "Traduisez : « Die Tour de France ist ein bekanntes Radrennen, das normalerweise im Juli stattfindet. »",
       "reviewCriteria": [
         "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
         "Les verbes et les accords correspondent à la phrase.",
@@ -514,7 +522,7 @@
         "Repère le sujet, les actions et les informations à conserver.",
         "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
       ],
-      "spokenPrompt": "Traduisez: 'Der Tour de France ist das berühmteste Radrennen der Welt und findet jedes Jahr im Juli statt.'"
+      "spokenPrompt": "Traduisez : « Die Tour de France ist ein bekanntes Radrennen, das normalerweise im Juli stattfindet. »"
     },
     "cf6-26": {
       "type": "self-review",
@@ -709,6 +717,12 @@
     "pr6-50": {
       "question": "Lis le modèle : « Je voudrais de l’eau. » Écris une autre demande polie avec « Je voudrais ».",
       "spokenPrompt": "Lis le modèle : « Je voudrais de l’eau. » Écris une autre demande polie avec « Je voudrais »."
+    },
+    "fr6-rich-ecole-review-1": {
+      "answer": "Je ne comprends pas. Pouvez-vous répéter, s’il vous plaît ? J’ai une question. Merci pour votre aide."
+    },
+    "fr6-rich-culture-review-1": {
+      "answer": "Je présente la Suisse. Le français est une de ses langues nationales. Genève est une ville suisse. J’aimerais visiter cette ville."
     },
     "pr6-2": {
       "question": "Complète le refus poli : « Non, ___. »",
@@ -1623,6 +1637,33 @@
     "sc6-12": {
       "altAnswers": [
         "main"
+      ]
+    },
+    "cf6-13": {
+      "question": "Cette technique de chant alpin alterne rapidement les registres de la voix : c’est le ___.",
+      "spokenPrompt": "Cette technique de chant alpin alterne rapidement les registres de la voix : c’est le ___."
+    },
+    "sc6-22": {
+      "question": "Complète au passé composé : « Elle ___ (se casser) la jambe en faisant du ski. » Écris seulement le groupe manquant.",
+      "spokenPrompt": "Complète au passé composé : « Elle ___ (se casser) la jambe en faisant du ski. » Écris seulement le groupe manquant."
+    },
+    "vd6-46": {
+      "question": "Complète à l’impératif avec « vous » : « Pour aller au stade, [1] (suivre) la rue principale jusqu’au rond-point, puis [2] (tourner) à gauche. » Écris seulement les deux verbes dans l’ordre : ___",
+      "spokenPrompt": "Complète à l’impératif avec « vous » : « Pour aller au stade, [1] (suivre) la rue principale jusqu’au rond-point, puis [2] (tourner) à gauche. » Écris seulement les deux verbes dans l’ordre : ___"
+    },
+    "ff6-3": {
+      "altAnswers": [
+        "4"
+      ]
+    },
+    "ff6-15": {
+      "altAnswers": [
+        "quatorze"
+      ]
+    },
+    "ma6-15": {
+      "altAnswers": [
+        "entrepreneure"
       ]
     }
   }
