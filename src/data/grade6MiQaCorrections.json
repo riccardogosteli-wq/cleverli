@@ -1,0 +1,287 @@
+{
+  "patches": {
+    "mi6-feeds-algorithmen-6-fb1": {
+      "altAnswers": [
+        "Posts",
+        "Meldungen",
+        "Videos",
+        "Inhalten"
+      ]
+    },
+    "mi6-feeds-algorithmen-6-fb3": {
+      "altAnswers": [
+        "Beiträge",
+        "Meinungen",
+        "Informationen"
+      ]
+    },
+    "mi6-feeds-algorithmen-6-fb4": {
+      "altAnswers": [
+        "Informationsquellen",
+        "Perspektiven",
+        "Sichtweisen",
+        "Blickwinkel"
+      ]
+    },
+    "mi6-feeds-algorithmen-6-fb5": {
+      "altAnswers": [
+        "Nachweise",
+        "Beweise",
+        "Argumente"
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-fb2": {
+      "altAnswers": [
+        "Zugriff"
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-fb4": {
+      "altAnswers": [
+        "unverständlich",
+        "unleserlich"
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-fb5": {
+      "altAnswers": [
+        "Informationen",
+        "Nachrichten",
+        "Fotos",
+        "Dokumente"
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-fb7": {
+      "altAnswers": [
+        "achtsam",
+        "umsichtig"
+      ]
+    },
+    "mi6-feeds-algorithmen-6-fb2": {
+      "question": "Ein Algorithmus kann Beiträge in eine Reihenfolge bringen, also ___.",
+      "altAnswers": [
+        "ordnen",
+        "anordnen"
+      ],
+      "hints": [
+        "Denke an eine Rangliste von Beiträgen.",
+        "Gesucht ist ein Verb für das Festlegen einer Reihenfolge."
+      ],
+      "spokenPrompt": "Ein Algorithmus kann Beiträge in eine Reihenfolge bringen, also …. Ergänze die fehlende Antwort."
+    },
+    "mi6-netzwerke-sicherheit-6-fb1": {
+      "question": "Ein Computernetzwerk verbindet mehrere ___.",
+      "altAnswers": [
+        "Computer",
+        "Rechner",
+        "Endgeräte"
+      ],
+      "hints": [
+        "Denke an technische Gegenstände, die Daten austauschen.",
+        "Gesucht ist ein Oberbegriff oder ein Beispiel in der Mehrzahl."
+      ],
+      "spokenPrompt": "Ein Computernetzwerk verbindet mehrere …. Ergänze die fehlende Antwort."
+    },
+    "mi6-netzwerke-sicherheit-6-fb3": {
+      "question": "Wie lautet das englische Fachwort für eine Sicherungskopie? ___",
+      "hints": [
+        "Der Begriff wird auch in deutschsprachigen Computerprogrammen verwendet.",
+        "Das gesuchte englische Wort hat sechs Buchstaben."
+      ],
+      "spokenPrompt": "Wie lautet das englische Fachwort für eine Sicherungskopie?"
+    },
+    "mi6-netzwerke-sicherheit-6-fb6": {
+      "question": "Ich prüfe, von wem eine Datei kommt und warum sie geschickt wurde, also Absender und ___.",
+      "altAnswers": [
+        "Absicht",
+        "Grund"
+      ],
+      "hints": [
+        "Denke an das Ziel der Nachricht.",
+        "Gesucht ist ein Hauptwort für das Wozu."
+      ],
+      "spokenPrompt": "Ich prüfe, von wem eine Datei kommt und warum sie geschickt wurde, also Absender und …. Ergänze die fehlende Antwort."
+    },
+    "mi6-feeds-algorithmen-6-sr1": {
+      "answer": "Ich schaue nach, wer den Beitrag veröffentlicht hat und wann. Dann vergleiche ich die Behauptung mit einer unabhängigen, verlässlichen Quelle. Ich prüfe, ob der Beitrag als Werbung gekennzeichnet ist. Auch viele Likes beweisen nicht, dass er stimmt."
+    },
+    "mi6-feeds-algorithmen-6-sr2": {
+      "answer": "Wenn ich häufig Tierfilme anklicke und lange anschaue, kann das System diese Nutzung als Hinweis auf mein Interesse verwenden. Es empfiehlt mir dann möglicherweise weitere Tierfilme. Ich suche bewusst auch andere Themen und Quellen, damit ich nicht nur Ähnliches sehe."
+    },
+    "mi6-netzwerke-sicherheit-6-sr1": {
+      "answer": "Ich sperre das Schul-Tablet, wenn ich es nicht benutze. Unbekannte Dateien und Links öffne ich nicht einfach, sondern frage die Lehrperson. Wichtige Schuldateien sichere ich nach den Regeln der Schule an einem dafür vorgesehenen zweiten Speicherort."
+    },
+    "mi6-netzwerke-sicherheit-6-sr2": {
+      "answer": "Die Bildschirmsperre erschwert anderen den Zugriff auf ein unbeaufsichtigtes Tablet. Das Login kontrolliert den Zugang zum Konto. Ein Backup hilft, wenn eine wichtige Datei verloren geht. Wenn ich mein Tablet verliere, schützt die Sperre vor einfachem Zugriff und eine getrennte Sicherung kann meine Schuldateien retten.",
+      "reviewCriteria": [
+        "Ich erkläre mindestens zwei Schutzmassnahmen.",
+        "Ich nenne einen passenden Alltagsfall.",
+        "Ich zeige, dass Schutz an mehreren Stellen hilft."
+      ]
+    },
+    "mi6-feeds-algorithmen-6-ma2": {
+      "pairs": [
+        {
+          "id": "mi6-feeds-algorithmen-6-ma2-l1",
+          "label": "Nur einem Feed folgen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma2-r1",
+          "label": "weniger unterschiedliche Informationsquellen nutzen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma2-l2",
+          "label": "Unabhängige Quellen vergleichen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma2-r2",
+          "label": "Behauptungen mit weiteren Belegen abgleichen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma2-l3",
+          "label": "Den Artikel zur Überschrift lesen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma2-r3",
+          "label": "den Zusammenhang hinter dem Titel erfahren"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma2-l4",
+          "label": "Werbung erkennen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma2-r4",
+          "label": "eine Verkaufsabsicht bemerken"
+        }
+      ]
+    },
+    "mi6-feeds-algorithmen-6-ma3": {
+      "pairs": [
+        {
+          "id": "mi6-feeds-algorithmen-6-ma3-l1",
+          "label": "Like"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma3-r1",
+          "label": "ausdrücklich markiertes Gefallen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma3-l2",
+          "label": "Sehzeit"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma3-r2",
+          "label": "Dauer des Anschauens"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma3-l3",
+          "label": "Quelle"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma3-r3",
+          "label": "Herkunft einer Information"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma3-l4",
+          "label": "Filterblase"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-ma3-r4",
+          "label": "überwiegend ähnliche Sichtweisen im eigenen Informationsumfeld"
+        }
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-ma3": {
+      "pairs": [
+        {
+          "id": "mi6-netzwerke-sicherheit-6-ma3-l1",
+          "label": "Bildschirm sperren"
+        },
+        {
+          "id": "mi6-netzwerke-sicherheit-6-ma3-r1",
+          "label": "unbeaufsichtigtes Gerät gegen einfachen Zugriff schützen"
+        },
+        {
+          "id": "mi6-netzwerke-sicherheit-6-ma3-l2",
+          "label": "Backup machen"
+        },
+        {
+          "id": "mi6-netzwerke-sicherheit-6-ma3-r2",
+          "label": "zusätzliche Kopie wichtiger Dateien erstellen"
+        },
+        {
+          "id": "mi6-netzwerke-sicherheit-6-ma3-l3",
+          "label": "Login nutzen"
+        },
+        {
+          "id": "mi6-netzwerke-sicherheit-6-ma3-r3",
+          "label": "sich beim eigenen Konto anmelden"
+        },
+        {
+          "id": "mi6-netzwerke-sicherheit-6-ma3-l4",
+          "label": "Unbekannte Datei prüfen"
+        },
+        {
+          "id": "mi6-netzwerke-sicherheit-6-ma3-r4",
+          "label": "Absender und erwarteten Zweck vor dem Öffnen klären"
+        }
+      ]
+    },
+    "mi6-feeds-algorithmen-6-dd3": {
+      "dragItems": [
+        {
+          "id": "vergleich",
+          "label": "mehrere Quellen lesen"
+        },
+        {
+          "id": "nurfeed",
+          "label": "nur dem Feed folgen"
+        },
+        {
+          "id": "andere",
+          "label": "andere Sichtweise suchen"
+        },
+        {
+          "id": "sofort",
+          "label": "andere Informationsquellen absichtlich meiden"
+        }
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-dd2": {
+      "dragItems": [
+        {
+          "id": "wlan",
+          "label": "Tablet im WLAN"
+        },
+        {
+          "id": "mail",
+          "label": "Computer sendet eine Mail über das Internet"
+        },
+        {
+          "id": "offline",
+          "label": "Taschenrechner ohne Verbindung"
+        },
+        {
+          "id": "papier",
+          "label": "Tablet im Flugmodus, WLAN und Bluetooth ausgeschaltet"
+        }
+      ]
+    },
+    "mi6-feeds-algorithmen-6-mc1": {
+      "hints": [
+        "Überlege, ob Sprache, Ort oder Einstellungen bei beiden Kindern gleich sind.",
+        "Dieselbe Suchanfrage kann je nach solchen Bedingungen anders behandelt werden."
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-mc2": {
+      "hints": [
+        "Denke an ein persönliches Konto statt an Einstellungen des Bildschirms.",
+        "Was muss ein Dienst prüfen, bevor er persönliche Inhalte zeigt?"
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-mc7": {
+      "hints": [
+        "Du möchtest verhindern, dass jemand in deiner Abwesenheit deine Apps benutzt.",
+        "Überlege, welche Massnahme vor dem Weiterbenutzen eine Entsperrung verlangt."
+      ]
+    }
+  }
+}
