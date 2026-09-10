@@ -1,0 +1,3839 @@
+{
+  "patches": {
+    "g6s7": {
+      "question": "Welcher Kanton hat als einziger drei Amtssprachen?",
+      "hints": [
+        "Gesucht ist ein Kanton im Südosten der Schweiz.",
+        "Dort sind Deutsch, Italienisch und Rätoromanisch Amtssprachen."
+      ]
+    },
+    "g6sg2d": {
+      "question": "Welcher Fluss fliesst durch das Wallis und den Genfersee?",
+      "options": [
+        "Rhein",
+        "Aare",
+        "Rhone",
+        "Limmat"
+      ]
+    },
+    "g6sg2h": {
+      "answer": "Sechs Kantone mit je einem Ständeratssitz und einer halben Standesstimme",
+      "options": [
+        "Sechs Kantone mit je einem Ständeratssitz und einer halben Standesstimme",
+        "Sechs Kantone ohne Vertretung im Ständerat",
+        "Drei Kantone mit je vier Ständeratssitzen",
+        "Kantone ohne eigene Verfassung"
+      ],
+      "hints": [
+        "Unterscheide die Vertretung im Parlament von der Standesstimme bei Abstimmungen.",
+        "Vergleiche Appenzell Ausserrhoden mit einem Kanton wie Zürich."
+      ]
+    },
+    "g6sg2f": {
+      "question": "Was bezeichnet die NEAT?",
+      "answer": "Eine Eisenbahnverbindung durch die Alpen mit den Basistunneln am Lötschberg, Gotthard und Ceneri",
+      "options": [
+        "Eine Eisenbahnverbindung durch die Alpen mit den Basistunneln am Lötschberg, Gotthard und Ceneri",
+        "Eine Autobahn entlang des Rheins",
+        "Ein Flughafen im Kanton Tessin",
+        "Eine Schifffahrtslinie auf dem Genfersee"
+      ],
+      "hints": [
+        "Denke an den Verkehr zwischen Nord und Süd.",
+        "Die Abkürzung gehört zu einem grossen Schweizer Bahnprojekt."
+      ]
+    },
+    "g6sg1h": {
+      "answer": "Die Schweiz beteiligt sich nicht an bewaffneten Konflikten zwischen anderen Staaten",
+      "options": [
+        "Die Schweiz hat keine Armee",
+        "Die Schweiz beteiligt sich nicht an bewaffneten Konflikten zwischen anderen Staaten",
+        "Die Schweiz ist Mitglied der EU",
+        "Die Schweiz hat keine Grenzen"
+      ]
+    },
+    "g6sg2n": {
+      "hints": [
+        "Denke an die wirtschaftlichen Dienstleistungen in einer grossen Stadt.",
+        "Welche Rolle spielen Banken und die Börse?"
+      ]
+    },
+    "g6s16": {
+      "options": [
+        "Bindung eines Bauern an seinen Grundherrn",
+        "Eine Seuche, die im 14. Jahrhundert viele Menschen tötete",
+        "Ein mittelalterliches Steuersystem",
+        "Eine Vereinigung von Kaufleuten"
+      ]
+    },
+    "g6ma2n": {
+      "options": [
+        "Eine mittelalterliche Handelsroute",
+        "Beulenpest, tötete ca. 1/3 der Europäer 1347-1353",
+        "Eine Abgabe an einen Grundherrn",
+        "Eine Bauweise für Kathedralen"
+      ]
+    },
+    "g6ma2l": {
+      "question": "Wofür ist Karl der Grosse bekannt?",
+      "answer": "Erweiterung des Frankenreichs und Förderung von Bildung",
+      "options": [
+        "Erweiterung des Frankenreichs und Förderung von Bildung",
+        "Erfindung des Buchdrucks mit beweglichen Lettern",
+        "Beginn der Reformation im Jahr 1517",
+        "Gründung der Hanse"
+      ]
+    },
+    "g6ma2c": {
+      "answer": "Philosophisch-theologische Lehrform des Mittelalters, etwa bei Thomas von Aquin"
+    },
+    "g6az1k": {
+      "hints": [
+        "Vergleiche eine trocknende Pfütze mit sprudelnd kochendem Wasser.",
+        "Überlege, wo die Teilchen die Flüssigkeit verlassen."
+      ]
+    },
+    "g6az3b": {
+      "hints": [
+        "Denke an einen Stoff bei sehr hohem Druck und hoher Temperatur.",
+        "Vergleiche diesen Bereich mit dem Endpunkt der Flüssig-Gas-Grenzlinie."
+      ]
+    },
+    "g6az3e": {
+      "hints": [
+        "Gesucht ist der untere Bezugspunkt der Kelvinskala.",
+        "Denke an die Grenze, der man beim Abkühlen immer näher kommen kann."
+      ]
+    },
+    "lo6_17": {
+      "answer": "Licht wird beim Übergang zum optisch dünneren Medium vollständig zurückgeworfen, wenn der Einfallswinkel grösser als der Grenzwinkel ist",
+      "options": [
+        "Licht wird beim Übergang zum optisch dünneren Medium vollständig zurückgeworfen, wenn der Einfallswinkel grösser als der Grenzwinkel ist",
+        "Licht wird in jeder Flüssigkeit vollständig verschluckt",
+        "Weisses Licht verliert alle Farben",
+        "Licht breitet sich nur noch im Vakuum aus"
+      ],
+      "spokenPrompt": "Was ist totale Innenreflexion?",
+      "verbatimSpeech": true
+    },
+    "lo6_44": {
+      "question": "Welche Formel verbindet die Energie E eines Photons mit seiner Frequenz f? Schreibe nur die Formel.",
+      "answer": "E = h · f",
+      "altAnswers": [
+        "E=hf",
+        "E=h*f",
+        "E=h×f",
+        "E=hν",
+        "E=h nu"
+      ],
+      "hints": [
+        "Die Energie wächst proportional mit der Frequenz.",
+        "Die Proportionalitätskonstante wird mit h bezeichnet."
+      ]
+    },
+    "lo6_32": {
+      "altAnswers": [
+        "stärker",
+        "grösser"
+      ]
+    },
+    "g6az3a": {
+      "altAnswers": [
+        "schneller"
+      ]
+    },
+    "en6_13": {
+      "answer": "Abkommen, die Erwärmung deutlich unter 2 °C zu halten und sie möglichst auf 1,5 °C zu begrenzen",
+      "options": [
+        "Abkommen, die Erwärmung deutlich unter 2 °C zu halten und sie möglichst auf 1,5 °C zu begrenzen",
+        "Abkommen über ein weltweites Tempolimit",
+        "Abkommen zur Abschaffung aller Wasserkraftwerke",
+        "Abkommen über internationale Zeitzonen"
+      ],
+      "hints": [
+        "Vergleiche eine langfristige Klimavereinbarung mit Regeln für einzelne Verkehrsmittel.",
+        "Es geht um die Erwärmung gegenüber der vorindustriellen Zeit."
+      ]
+    },
+    "en6_17": {
+      "hints": [
+        "Vergleiche, was ein Gerät aufnimmt und was davon für die gewünschte Aufgabe nutzbar wird.",
+        "Ein Teil der zugeführten Energie wird beispielsweise als ungenutzte Wärme abgegeben."
+      ]
+    },
+    "en6_26": {
+      "question": "Was ist grüner Wasserstoff als Energieträger?"
+    },
+    "ti6_41": {
+      "hints": [
+        "Denke an den Schutz vertraulicher Nachrichten.",
+        "Vergleiche Verschlüsseln mit dem blossen Verstecken einer Nachricht."
+      ]
+    },
+    "ti6_31": {
+      "question": "Welche Beschreibung passt zu einer Blockchain?",
+      "answer": "Eine Datenstruktur aus kryptografisch verknüpften Blöcken, die nachträgliche Änderungen erschwert",
+      "options": [
+        "Eine Datenstruktur aus kryptografisch verknüpften Blöcken, die nachträgliche Änderungen erschwert",
+        "Ein Bildschirm zur Bildbearbeitung",
+        "Ein Programm zum Malen",
+        "Ein Kabel zum Laden eines Akkus"
+      ],
+      "hints": [
+        "Achte darauf, wie mehrere Datensammlungen miteinander verbunden sind.",
+        "Die Verbindung hilft dabei, nachträgliche Änderungen zu erkennen."
+      ]
+    },
+    "en6_12": {
+      "altAnswers": [
+        "Zürich",
+        "Bern",
+        "Genf"
+      ]
+    },
+    "g6s28": {
+      "altAnswers": [
+        "100 °C",
+        "100°C",
+        "100 Grad",
+        "100 Grad Celsius"
+      ]
+    },
+    "nmg6-rich-technik-memory-2": {
+      "question": "Finde jeweils zwei gleiche Karten.",
+      "hints": [
+        "Decke zwei Karten auf und vergleiche ihren Text und ihr Bild.",
+        "Merke dir die Positionen und suche die genau gleiche Karte."
+      ]
+    },
+    "nmg6-rich-global-memory-1": {
+      "question": "Finde jeweils zwei gleiche Karten.",
+      "hints": [
+        "Decke zwei Karten auf und vergleiche ihren Text und ihr Bild.",
+        "Merke dir die Positionen und suche die genau gleiche Karte."
+      ]
+    },
+    "nmg6-rich-global-memory-2": {
+      "question": "Finde jeweils zwei gleiche Karten.",
+      "hints": [
+        "Decke zwei Karten auf und vergleiche ihren Text und ihr Bild.",
+        "Merke dir die Positionen und suche die genau gleiche Karte."
+      ]
+    },
+    "nmg6-rich-wirtschaft-drag-1": {
+      "dragItems": [
+        {
+          "id": "material",
+          "label": "Material für die Herstellung",
+          "emoji": "🧱"
+        },
+        {
+          "id": "arbeit",
+          "label": "Arbeitszeit in der Produktion",
+          "emoji": "⏱️"
+        },
+        {
+          "id": "transport",
+          "label": "Fertige Ware zum Laden bringen",
+          "emoji": "🚚"
+        },
+        {
+          "id": "werbung",
+          "label": "Werbung für die fertige Ware",
+          "emoji": "📣"
+        }
+      ]
+    },
+    "nmg6-rich-demokratie-review-2": {
+      "answer": "Die Klasse hört zuerst an, warum die Regel für einige Kinder unfair wäre. Danach passt sie die Regel so an, dass deren Rechte und Bedürfnisse geschützt sind. Eine Mehrheit darf nicht einfach über diese Rechte hinweggehen."
+    },
+    "nmg6-rich-global-review-2": {
+      "question": "Du kaufst ein T-Shirt. Welche zwei Fragen helfen dir, fairer zu entscheiden? Begründe, warum sie wichtig sind.",
+      "answer": "Unter welchen Bedingungen wurde das T-Shirt hergestellt? Das ist wichtig für die Rechte der Menschen, die daran arbeiten. Wie lange werde ich es tragen? Eine lange Nutzung spart Material und vermeidet unnötige neue Käufe."
+    },
+    "nmg6-rich-migration-review-1": {
+      "question": "Eine neue Schülerin kommt in die Klasse und spricht noch wenig Deutsch. Beschreibe zwei faire Unterstützungen und begründe, warum sie helfen.",
+      "answer": "Ich zeige ihr die wichtigen Orte im Schulhaus, damit sie sich leichter zurechtfindet. Ich lade sie zum Mitspielen ein und erkläre die Regeln mit einfachen Worten oder Bildern, damit sie mitmachen und Kontakte knüpfen kann."
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-17": {
+      "answer": "Ein Weg mit sehr kleinem Widerstand kann eine gefährlich grosse Stromstärke verursachen",
+      "options": [
+        "Ein Weg mit sehr kleinem Widerstand kann eine gefährlich grosse Stromstärke verursachen",
+        "Die Batterie wird voller",
+        "Die Lampe wird zu Wasser",
+        "Der Schalter verschwindet"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-27": {
+      "question": "Zwei gleiche Batterien werden hintereinander geschaltet, der Pluspol der einen mit dem Minuspol der anderen. Wie gross ist die Gesamtspannung gegenüber einer Batterie?"
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-25": {
+      "question": "Welche elektrische Grösse wird in Volt angegeben?"
+    },
+    "nz6_4": {
+      "question": "Die Ankunft von Kolumbus in Amerika gilt oft als Beginn der Neuzeit. In welchem Jahr war sie?"
+    },
+    "nz6_11": {
+      "question": "Was ist Absolutismus?",
+      "hints": [
+        "Denke an einen Monarchen, der möglichst viel Macht in seiner Hand vereint.",
+        "Vergleiche diese Herrschaft mit einer Regierung, die ein Parlament kontrolliert."
+      ]
+    },
+    "nz6_15": {
+      "answer": "Schweizer Einheitsstaat von 1798 bis 1803 unter starkem französischem Einfluss",
+      "options": [
+        "Eine mittelalterliche Handelsorganisation",
+        "Schweizer Einheitsstaat von 1798 bis 1803 unter starkem französischem Einfluss",
+        "Ein Zusammenschluss aller deutschen Fürstentümer",
+        "Die Schweizer Bundesverfassung von 1848"
+      ],
+      "hints": [
+        "Denke an die Zeit der französischen Revolutionstruppen in der Schweiz.",
+        "Vergleiche einen zentral regierten Staat mit selbstständigen Kantonen."
+      ]
+    },
+    "nz6_29": {
+      "answer": "Mit der Mediationsakte von 1803 gab er den Kantonen wieder mehr Selbstständigkeit",
+      "options": [
+        "Mit der Mediationsakte von 1803 gab er den Kantonen wieder mehr Selbstständigkeit",
+        "Er führte 1971 das Frauenstimmrecht ein",
+        "Er gründete 1848 den modernen Bundesstaat",
+        "Er baute den Gotthard-Basistunnel"
+      ],
+      "hints": [
+        "Denke an seine Vermittlung nach den Konflikten der Helvetischen Republik.",
+        "Vergleiche die Macht der Kantone vor und nach dieser Vermittlung."
+      ]
+    },
+    "nz6_35": {
+      "question": "Was regelte der Augsburger Religionsfriede von 1555?",
+      "answer": "Reichsstände konnten zwischen katholischem und lutherischem Bekenntnis für ihr Gebiet wählen",
+      "options": [
+        "Reichsstände konnten zwischen katholischem und lutherischem Bekenntnis für ihr Gebiet wählen",
+        "Alle Religionen erhielten überall gleiche Rechte",
+        "Die Französische Revolution begann",
+        "Das Christentum wurde verboten"
+      ]
+    },
+    "nz6_50": {
+      "answer": "Historiker deuten und ordnen Quellen; ihre Darstellungen hängen auch von Fragen und Perspektiven ab",
+      "hints": [
+        "Vergleiche zwei Darstellungen desselben Ereignisses.",
+        "Unterschiedliche Perspektiven müssen trotzdem an Quellen geprüft werden."
+      ]
+    },
+    "dm6_2": {
+      "question": "In welchem Jahr erhielten Schweizer Frauen das Stimm- und Wahlrecht auf Bundesebene?"
+    },
+    "dm6_15": {
+      "question": "Ab welchem Alter dürfen Schweizer Bürgerinnen und Bürger auf Bundesebene abstimmen?",
+      "hints": [
+        "Unterscheide die Bundesebene von kantonalen Sonderregeln.",
+        "Gesucht ist das Alter der Volljährigkeit."
+      ]
+    },
+    "dm6_19": {
+      "options": [
+        "ruhig zuhören und gemeinsam sprechen",
+        "andere absichtlich beleidigen",
+        "niemanden ausreden lassen",
+        "Gerüchte über andere verbreiten"
+      ]
+    },
+    "dm6_22": {
+      "answer": "Wahlsystem, bei dem je nach Wahlgang eine absolute oder relative Mehrheit nötig ist",
+      "hints": [
+        "Vergleiche die Wahl einer Person mit der Verteilung von Sitzen auf Parteien.",
+        "Prüfe, ob mehr als die Hälfte oder nur mehr Stimmen als andere nötig sind."
+      ]
+    },
+    "dm6_34": {
+      "answer": "Grundrechtekatalog, der EU-Organe und Mitgliedstaaten bei der Durchführung von EU-Recht bindet",
+      "hints": [
+        "Unterscheide einen Grundrechtekatalog von Regeln für den Warenhandel.",
+        "Es geht um den Schutz von Menschen im Anwendungsbereich des EU-Rechts."
+      ]
+    },
+    "dm6_46": {
+      "hints": [
+        "Achte auf das Motiv hinter der Tat.",
+        "Wird jemand wegen einer zugeschriebenen Gruppenzugehörigkeit angegriffen?"
+      ]
+    },
+    "wk6_1": {
+      "options": [
+        "ruhig zuhören und gemeinsam sprechen",
+        "andere absichtlich beleidigen",
+        "niemanden ausreden lassen",
+        "Gerüchte verbreiten"
+      ]
+    },
+    "wk6_11": {
+      "options": [
+        "ruhig zuhören und gemeinsam sprechen",
+        "andere absichtlich beleidigen",
+        "niemanden ausreden lassen",
+        "Gerüchte verbreiten"
+      ]
+    },
+    "wk6_21": {
+      "options": [
+        "ruhig zuhören und gemeinsam sprechen",
+        "andere absichtlich beleidigen",
+        "niemanden ausreden lassen",
+        "Gerüchte verbreiten"
+      ]
+    },
+    "wk6_31": {
+      "options": [
+        "ruhig zuhören und gemeinsam sprechen",
+        "andere absichtlich beleidigen",
+        "niemanden ausreden lassen",
+        "Gerüchte verbreiten"
+      ]
+    },
+    "wk6_41": {
+      "options": [
+        "ruhig zuhören und gemeinsam sprechen",
+        "andere absichtlich beleidigen",
+        "niemanden ausreden lassen",
+        "Gerüchte verbreiten"
+      ]
+    },
+    "wk6_5": {
+      "options": [
+        "Hilfe holen und die Person einbeziehen",
+        "die Person absichtlich weiter ausschliessen",
+        "alle Gespräche mit der Person verbieten",
+        "die Person auslachen"
+      ]
+    },
+    "wk6_15": {
+      "options": [
+        "Hilfe holen und die Person einbeziehen",
+        "die Person absichtlich weiter ausschliessen",
+        "alle Gespräche mit der Person verbieten",
+        "die Person auslachen"
+      ]
+    },
+    "wk6_25": {
+      "options": [
+        "Hilfe holen und die Person einbeziehen",
+        "die Person absichtlich weiter ausschliessen",
+        "alle Gespräche mit der Person verbieten",
+        "die Person auslachen"
+      ]
+    },
+    "wk6_35": {
+      "options": [
+        "Hilfe holen und die Person einbeziehen",
+        "die Person absichtlich weiter ausschliessen",
+        "alle Gespräche mit der Person verbieten",
+        "die Person auslachen"
+      ]
+    },
+    "wk6_45": {
+      "options": [
+        "Hilfe holen und die Person einbeziehen",
+        "die Person absichtlich weiter ausschliessen",
+        "alle Gespräche mit der Person verbieten",
+        "die Person auslachen"
+      ]
+    },
+    "ko6_1": {
+      "question": "In einem Modell werden Europa und Asien sowie Nordamerika und Südamerika getrennt gezählt. Antarktis, Afrika und Australien zählen ebenfalls dazu. Wie viele Kontinente sind es?",
+      "answer": "7",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "hints": [
+        "Zähle jeden genannten Kontinent genau einmal.",
+        "Achte darauf, welche Landmassen in diesem Modell getrennt betrachtet werden."
+      ]
+    },
+    "ko6_3": {
+      "answer": "Asien",
+      "options": [
+        "Europa",
+        "Afrika",
+        "Asien",
+        "Südamerika"
+      ],
+      "hints": [
+        "Denke an die Verteilung der grossen Bevölkerungszentren.",
+        "Auf diesem Kontinent liegen Indien und China."
+      ]
+    },
+    "ko6_7": {
+      "answer": "Der grösste tropische Regenwald der Erde, in Brasilien und weiteren südamerikanischen Ländern",
+      "options": [
+        "Eine Eiswüste am Südpol",
+        "Der grösste tropische Regenwald der Erde, in Brasilien und weiteren südamerikanischen Ländern",
+        "Ein Gebirge in Zentralasien",
+        "Eine trockene Landschaft in Australien"
+      ],
+      "hints": [
+        "Denke an ein warmes, feuchtes Gebiet mit sehr vielen Arten.",
+        "Es liegt im Einzugsgebiet eines grossen südamerikanischen Flusses."
+      ],
+      "question": "Was ist der Amazonas-Regenwald?"
+    },
+    "ko6_8": {
+      "question": "Welcher Kontinent ist im Durchschnitt der wärmste?",
+      "answer": "Afrika",
+      "hints": [
+        "Ein grosser Teil dieses Kontinents liegt zwischen den Wendekreisen.",
+        "Denke an den Kontinent südlich von Europa."
+      ]
+    },
+    "ko6_11": {
+      "answer": "Verband südostasiatischer Staaten zur politischen, wirtschaftlichen und kulturellen Zusammenarbeit",
+      "options": [
+        "Ein Gebirge in Afrika",
+        "Verband südostasiatischer Staaten zur politischen, wirtschaftlichen und kulturellen Zusammenarbeit",
+        "Ein Ozean zwischen Amerika und Europa",
+        "Eine Stadt in Australien"
+      ]
+    },
+    "ko6_12": {
+      "hints": [
+        "Denke an einen sehr trockenen Landschaftsraum im Norden Afrikas.",
+        "Unterscheide eine Heisswüste von den Eiswüsten der Polarregionen."
+      ]
+    },
+    "ko6_14": {
+      "hints": [
+        "Denke an einen sehr grossen Fluss in Südamerika.",
+        "Sein Einzugsgebiet umfasst riesige Regenwaldflächen."
+      ],
+      "question": "Was ist der Amazonas?"
+    },
+    "ko6_18": {
+      "hints": [
+        "Denke an die Grenzen grosser Erdplatten.",
+        "Gesucht ist ein Gebiet rund um einen Ozean mit vielen Vulkanen und Erdbeben."
+      ]
+    },
+    "ko6_19": {
+      "answer": "Ein Windsystem, dessen vorherrschende Richtung sich im Jahreslauf ändert und oft Regen- und Trockenzeiten prägt",
+      "options": [
+        "Eine Meeresströmung im Atlantik",
+        "Ein Windsystem, dessen vorherrschende Richtung sich im Jahreslauf ändert und oft Regen- und Trockenzeiten prägt",
+        "Ein dauerhaft gefrorener Boden",
+        "Ein Gebirge am Südpol"
+      ],
+      "hints": [
+        "Vergleiche die Luftströmungen im Sommer und im Winter.",
+        "Der Temperaturunterschied zwischen Land und Meer ist wichtig."
+      ]
+    },
+    "ko6_22": {
+      "answer": "In vielen afrikanischen Ländern wächst die Bevölkerung stark; wie stark sie künftig wächst, hängt von Geburten, Sterbefällen und Migration ab",
+      "hints": [
+        "Vergleiche die Zahl der Geburten mit der Zahl der Sterbefälle.",
+        "Prognosen beschreiben mögliche Entwicklungen, keine sichere Zukunft."
+      ]
+    },
+    "ko6_25": {
+      "answer": "Untergrund, der mindestens zwei Jahre in Folge höchstens 0 °C warm bleibt",
+      "options": [
+        "Ein kurzzeitig vereister Gehweg",
+        "Untergrund, der mindestens zwei Jahre in Folge höchstens 0 °C warm bleibt",
+        "Ein warmer Meeresstrom",
+        "Eine Schicht aus frischem Schnee"
+      ],
+      "hints": [
+        "Denke an die Temperatur im Untergrund, nicht nur an Schnee an der Oberfläche.",
+        "Es geht um einen Zustand über mehrere Jahre."
+      ]
+    },
+    "ko6_38": {
+      "answer": "Mögliches zusätzliches Wirtschaftswachstum bei hohem Anteil Erwerbsfähiger, wenn etwa Bildung und Arbeitsplätze vorhanden sind",
+      "hints": [
+        "Vergleiche die Zahl erwerbsfähiger Menschen mit der Zahl der Kinder und älteren Menschen.",
+        "Eine günstige Altersstruktur hilft nur, wenn Menschen ihre Fähigkeiten einsetzen können."
+      ]
+    },
+    "ko6_41": {
+      "answer": "Strategische Engstellen wichtiger Verkehrswege, etwa Meerengen oder Kanäle",
+      "options": [
+        "Eine Art von Wüstenpflanze",
+        "Strategische Engstellen wichtiger Verkehrswege, etwa Meerengen oder Kanäle",
+        "Eine Sprache in Zentralasien",
+        "Eine Messgrösse für Erdbeben"
+      ]
+    },
+    "ko6_43": {
+      "answer": "Megastadt: städtischer Ballungsraum mit über 10 Millionen Menschen. Metropolregion: eng verflochtene Stadtregion mit Umland",
+      "options": [
+        "Megastadt: städtischer Ballungsraum mit über 10 Millionen Menschen. Metropolregion: eng verflochtene Stadtregion mit Umland",
+        "Megastadt: jedes Dorf. Metropolregion: ein unbewohntes Gebiet",
+        "Megastadt: ein Ozean. Metropolregion: eine Insel",
+        "Beide Begriffe bezeichnen Staaten"
+      ],
+      "hints": [
+        "Achte darauf, ob die Einwohnerzahl oder die Verflechtung mit dem Umland im Mittelpunkt steht.",
+        "Stadtregionen enden nicht immer an der Verwaltungsgrenze einer Stadt."
+      ]
+    },
+    "ko6_46": {
+      "answer": "BRICS: Staatengruppe mit Ländern wie Brasilien, Indien und China. G7: sieben Industriestaaten, darunter USA, Deutschland und Japan",
+      "hints": [
+        "Vergleiche zwei internationale Staatengruppen.",
+        "Die Schweiz gehört nicht zu den sieben Staaten der G7."
+      ]
+    },
+    "mf6_2": {
+      "question": "Was ist ein Flüchtling im Sinne der Genfer Flüchtlingskonvention?",
+      "answer": "Eine Person ausserhalb ihres Herkunftslandes, die wegen begründeter Furcht vor Verfolgung dessen Schutz nicht nutzen kann oder will",
+      "hints": [
+        "Denke an den Unterschied zwischen einem allgemeinen Ortswechsel und einem rechtlichen Schutzstatus.",
+        "Entscheidend sind Verfolgungsgründe und die Situation ausserhalb des Herkunftslandes."
+      ]
+    },
+    "mf6_4": {
+      "answer": "Migration bezeichnet einen Orts- oder Wohnortwechsel aus verschiedenen Gründen. Flüchtlinge brauchen besonderen Schutz vor Verfolgung",
+      "hints": [
+        "Die Begriffe beschreiben unterschiedliche Aspekte eines Ortswechsels.",
+        "Nicht jede Migration ist freiwillig, und ein Schutzstatus hat rechtliche Voraussetzungen."
+      ]
+    },
+    "mf6_10": {
+      "question": "Welche UN-Organisation veröffentlicht weltweit Berichte über Flüchtlinge und andere gewaltsam vertriebene Menschen? Schreibe die Abkürzung.",
+      "answer": "UNHCR",
+      "altAnswers": [
+        "U.N.H.C.R."
+      ],
+      "hints": [
+        "Gesucht ist das Flüchtlingshilfswerk der Vereinten Nationen.",
+        "Die internationale Abkürzung beginnt mit UN."
+      ]
+    },
+    "mf6_20": {
+      "answer": "Abkommen zur Abschaffung regulärer Personenkontrollen an den Binnengrenzen der teilnehmenden Staaten",
+      "hints": [
+        "Unterscheide Grenzkontrollen von Regeln zum Arbeiten im Ausland.",
+        "Vorübergehende Kontrollen können unter bestimmten Bedingungen trotzdem stattfinden."
+      ]
+    },
+    "mf6_21": {
+      "hints": [
+        "Denke an ein behördliches Verfahren zur Prüfung eines Schutzgesuchs.",
+        "Die zuständige Bundesbehörde prüft den individuellen Fall."
+      ]
+    },
+    "mf6_22": {
+      "answer": "Menschen ohne geregelte Aufenthaltsbewilligung",
+      "hints": [
+        "Der Begriff betrifft den Aufenthaltsstatus, nicht den Wert eines Menschen.",
+        "Auch ohne Aufenthaltsbewilligung gelten grundlegende Menschenrechte."
+      ]
+    },
+    "mf6_24": {
+      "answer": "Zwangsweise Verschleppung oder Verbringung von Menschen an einen anderen Ort",
+      "hints": [
+        "Achte darauf, ob die betroffenen Menschen den Ortswechsel freiwillig wählen.",
+        "Der Begriff wird besonders für erzwungene Verbringungen verwendet."
+      ]
+    },
+    "mf6_28": {
+      "answer": "Rechte zur Einreise, zum Aufenthalt und zur Erwerbstätigkeit nach EU-Recht beziehungsweise dem Abkommen zwischen der Schweiz und der EU",
+      "hints": [
+        "Unterscheide das Recht zu arbeiten von der Frage, ob an einer Grenze kontrolliert wird.",
+        "Für die Schweiz ist ein eigenes Abkommen mit der EU wichtig."
+      ]
+    },
+    "mf6_40": {
+      "question": "Was ist eine staatenlose Person?",
+      "hints": [
+        "Gesucht ist ein rechtlicher Status, nicht ein bestimmter Wohnort.",
+        "Ein Mensch kann dauerhaft irgendwo leben und trotzdem keine Staatsangehörigkeit besitzen."
+      ]
+    },
+    "mf6_43": {
+      "question": "Wie kann Zuwanderung einer alternden Gesellschaft wirtschaftlich helfen?",
+      "answer": "Sie kann den Anteil der Erwerbstätigen erhöhen und zur Finanzierung der Sozialsysteme beitragen",
+      "options": [
+        "Sie kann den Anteil der Erwerbstätigen erhöhen und zur Finanzierung der Sozialsysteme beitragen",
+        "Sie beendet automatisch alle Finanzierungsprobleme",
+        "Sie macht jede Ausbildung unnötig",
+        "Sie schafft alle Renten ab"
+      ],
+      "hints": [
+        "Vergleiche die Zahl der Menschen im Erwerbsleben mit der Zahl der Rentenbeziehenden.",
+        "Es handelt sich um einen möglichen Beitrag neben weiteren Massnahmen."
+      ]
+    },
+    "zh6_1": {
+      "question": "Was ist eine zentrale Ursache der heutigen globalen Erwärmung?",
+      "answer": "Zusätzliche Treibhausgase aus menschlichen Tätigkeiten",
+      "options": [
+        "Ein wechselnder Wochentag",
+        "Zusätzliche Treibhausgase aus menschlichen Tätigkeiten",
+        "Die tägliche Drehung der Erde",
+        "Die Mondphasen"
+      ],
+      "hints": [
+        "Betrachte Veränderungen über viele Jahrzehnte, nicht das Wetter eines Tages.",
+        "Denke an Stoffe in der Atmosphäre, die den Wärmehaushalt beeinflussen."
+      ]
+    },
+    "zh6_4": {
+      "answer": "Internationales Abkommen, die Erwärmung deutlich unter 2 °C zu halten und sie möglichst auf 1,5 °C zu begrenzen"
+    },
+    "zh6_5": {
+      "hints": [
+        "Vergleiche Quellen, die sich auf menschlichen Zeitskalen erneuern, mit fossilen Vorräten.",
+        "Bei nachwachsenden Rohstoffen darf nicht dauerhaft mehr genutzt werden, als nachwächst."
+      ]
+    },
+    "zh6_25": {
+      "hints": [
+        "Vergleiche die Menschen im Erwerbsleben mit den Menschen, die eine Rente beziehen.",
+        "Denke auch daran, wie sich die Lebenserwartung verändert."
+      ],
+      "answer": "Wenn im Verhältnis mehr Menschen Rente beziehen, kann die Finanzierung der Altersvorsorge schwieriger werden",
+      "options": [
+        "Wenn im Verhältnis mehr Menschen Rente beziehen, kann die Finanzierung der Altersvorsorge schwieriger werden",
+        "Alle Renten werden automatisch abgeschafft",
+        "Die Lebenserwartung spielt keine Rolle",
+        "Es gibt keine Möglichkeiten, die Finanzierung anzupassen"
+      ]
+    },
+    "zh6_35": {
+      "hints": [
+        "Vergleiche einzelne Tätigkeiten innerhalb eines Berufs.",
+        "Neue Technik kann Aufgaben ersetzen, verändern oder neu entstehen lassen."
+      ]
+    },
+    "zh6_17": {
+      "answer": "Wirtschaftsweise, die Produkte lange nutzt und Materialien möglichst im Kreislauf hält",
+      "options": [
+        "Eine Wirtschaftsweise, die alles nach einmaliger Nutzung wegwirft",
+        "Wirtschaftsweise, die Produkte lange nutzt und Materialien möglichst im Kreislauf hält",
+        "Ein Verbot aller Reparaturen",
+        "Ein System nur für den Geldwechsel"
+      ]
+    },
+    "ch6_2": {
+      "question": "Gummi kehrt nach dem Dehnen in seine ursprüngliche Form zurück. Diese Eigenschaft nennt man ___.",
+      "answer": "elastisch",
+      "altAnswers": [
+        "dehnbar"
+      ],
+      "hints": [
+        "Vergleiche Gummi mit einem Material, das nach dem Ziehen verformt bleibt.",
+        "Achte darauf, was nach dem Loslassen passiert."
+      ]
+    },
+    "ch6_4": {
+      "question": "Wolle vermindert den Wärmeaustausch. Man sagt: Wolle wirkt ___.",
+      "answer": "wärmedämmend",
+      "altAnswers": [
+        "wärmeisolierend",
+        "isolierend"
+      ],
+      "hints": [
+        "Denke an die eingeschlossene Luft zwischen den Fasern.",
+        "Eine Wolljacke erzeugt selbst keine Wärme."
+      ]
+    },
+    "ch6_6": {
+      "question": "Ein Schwamm kann Flüssigkeit in seinen Poren aufnehmen. Er ist ___.",
+      "answer": "saugfähig",
+      "altAnswers": [
+        "aufsaugend"
+      ],
+      "hints": [
+        "Vergleiche einen Schwamm mit einer glatten Glasplatte.",
+        "Denke an die kleinen Hohlräume im Material."
+      ]
+    },
+    "ch6_8": {
+      "question": "Ein Stück Kork bleibt an der Wasseroberfläche. Es kann auf Wasser ___.",
+      "answer": "schwimmen",
+      "altAnswers": [
+        "schwimmt"
+      ],
+      "hints": [
+        "Vergleiche die Dichte des Materials mit der Dichte von Wasser.",
+        "Überlege, ob das Stück nach unten geht oder oben bleibt."
+      ]
+    },
+    "ch6_10": {
+      "question": "Wenn reines Wasser bei normalem Luftdruck zu Eis wird, nennt man diesen Vorgang ___.",
+      "answer": "Gefrieren",
+      "altAnswers": [
+        "Erstarren",
+        "gefrieren"
+      ],
+      "hints": [
+        "Vergleiche den Zustand vorher und nachher.",
+        "Die Flüssigkeit wird fest."
+      ]
+    },
+    "ch6_12": {
+      "question": "Gummi kehrt nach dem Dehnen in seine ursprüngliche Form zurück. Diese Eigenschaft nennt man ___.",
+      "answer": "elastisch",
+      "altAnswers": [
+        "dehnbar"
+      ],
+      "hints": [
+        "Vergleiche Gummi mit einem Material, das nach dem Ziehen verformt bleibt.",
+        "Achte darauf, was nach dem Loslassen passiert."
+      ]
+    },
+    "ch6_14": {
+      "question": "Wolle vermindert den Wärmeaustausch. Man sagt: Wolle wirkt ___.",
+      "answer": "wärmedämmend",
+      "altAnswers": [
+        "wärmeisolierend",
+        "isolierend"
+      ],
+      "hints": [
+        "Denke an die eingeschlossene Luft zwischen den Fasern.",
+        "Eine Wolljacke erzeugt selbst keine Wärme."
+      ]
+    },
+    "ch6_16": {
+      "question": "Ein Schwamm kann Flüssigkeit in seinen Poren aufnehmen. Er ist ___.",
+      "answer": "saugfähig",
+      "altAnswers": [
+        "aufsaugend"
+      ],
+      "hints": [
+        "Vergleiche einen Schwamm mit einer glatten Glasplatte.",
+        "Denke an die kleinen Hohlräume im Material."
+      ]
+    },
+    "ch6_18": {
+      "question": "Ein Stück Kork bleibt an der Wasseroberfläche. Es kann auf Wasser ___.",
+      "answer": "schwimmen",
+      "altAnswers": [
+        "schwimmt"
+      ],
+      "hints": [
+        "Vergleiche die Dichte des Materials mit der Dichte von Wasser.",
+        "Überlege, ob das Stück nach unten geht oder oben bleibt."
+      ]
+    },
+    "ch6_20": {
+      "question": "Wenn reines Wasser bei normalem Luftdruck zu Eis wird, nennt man diesen Vorgang ___.",
+      "answer": "Gefrieren",
+      "altAnswers": [
+        "Erstarren",
+        "gefrieren"
+      ],
+      "hints": [
+        "Vergleiche den Zustand vorher und nachher.",
+        "Die Flüssigkeit wird fest."
+      ]
+    },
+    "ch6_22": {
+      "question": "Gummi kehrt nach dem Dehnen in seine ursprüngliche Form zurück. Diese Eigenschaft nennt man ___.",
+      "answer": "elastisch",
+      "altAnswers": [
+        "dehnbar"
+      ],
+      "hints": [
+        "Vergleiche Gummi mit einem Material, das nach dem Ziehen verformt bleibt.",
+        "Achte darauf, was nach dem Loslassen passiert."
+      ]
+    },
+    "ch6_24": {
+      "question": "Wolle vermindert den Wärmeaustausch. Man sagt: Wolle wirkt ___.",
+      "answer": "wärmedämmend",
+      "altAnswers": [
+        "wärmeisolierend",
+        "isolierend"
+      ],
+      "hints": [
+        "Denke an die eingeschlossene Luft zwischen den Fasern.",
+        "Eine Wolljacke erzeugt selbst keine Wärme."
+      ]
+    },
+    "ch6_26": {
+      "question": "Ein Schwamm kann Flüssigkeit in seinen Poren aufnehmen. Er ist ___.",
+      "answer": "saugfähig",
+      "altAnswers": [
+        "aufsaugend"
+      ],
+      "hints": [
+        "Vergleiche einen Schwamm mit einer glatten Glasplatte.",
+        "Denke an die kleinen Hohlräume im Material."
+      ]
+    },
+    "ch6_28": {
+      "question": "Ein Stück Kork bleibt an der Wasseroberfläche. Es kann auf Wasser ___.",
+      "answer": "schwimmen",
+      "altAnswers": [
+        "schwimmt"
+      ],
+      "hints": [
+        "Vergleiche die Dichte des Materials mit der Dichte von Wasser.",
+        "Überlege, ob das Stück nach unten geht oder oben bleibt."
+      ]
+    },
+    "ch6_30": {
+      "question": "Wenn reines Wasser bei normalem Luftdruck zu Eis wird, nennt man diesen Vorgang ___.",
+      "answer": "Gefrieren",
+      "altAnswers": [
+        "Erstarren",
+        "gefrieren"
+      ],
+      "hints": [
+        "Vergleiche den Zustand vorher und nachher.",
+        "Die Flüssigkeit wird fest."
+      ]
+    },
+    "ch6_32": {
+      "question": "Gummi kehrt nach dem Dehnen in seine ursprüngliche Form zurück. Diese Eigenschaft nennt man ___.",
+      "answer": "elastisch",
+      "altAnswers": [
+        "dehnbar"
+      ],
+      "hints": [
+        "Vergleiche Gummi mit einem Material, das nach dem Ziehen verformt bleibt.",
+        "Achte darauf, was nach dem Loslassen passiert."
+      ]
+    },
+    "ch6_34": {
+      "question": "Wolle vermindert den Wärmeaustausch. Man sagt: Wolle wirkt ___.",
+      "answer": "wärmedämmend",
+      "altAnswers": [
+        "wärmeisolierend",
+        "isolierend"
+      ],
+      "hints": [
+        "Denke an die eingeschlossene Luft zwischen den Fasern.",
+        "Eine Wolljacke erzeugt selbst keine Wärme."
+      ]
+    },
+    "ch6_36": {
+      "question": "Ein Schwamm kann Flüssigkeit in seinen Poren aufnehmen. Er ist ___.",
+      "answer": "saugfähig",
+      "altAnswers": [
+        "aufsaugend"
+      ],
+      "hints": [
+        "Vergleiche einen Schwamm mit einer glatten Glasplatte.",
+        "Denke an die kleinen Hohlräume im Material."
+      ]
+    },
+    "ch6_38": {
+      "question": "Ein Stück Kork bleibt an der Wasseroberfläche. Es kann auf Wasser ___.",
+      "answer": "schwimmen",
+      "altAnswers": [
+        "schwimmt"
+      ],
+      "hints": [
+        "Vergleiche die Dichte des Materials mit der Dichte von Wasser.",
+        "Überlege, ob das Stück nach unten geht oder oben bleibt."
+      ]
+    },
+    "ch6_40": {
+      "question": "Wenn reines Wasser bei normalem Luftdruck zu Eis wird, nennt man diesen Vorgang ___.",
+      "answer": "Gefrieren",
+      "altAnswers": [
+        "Erstarren",
+        "gefrieren"
+      ],
+      "hints": [
+        "Vergleiche den Zustand vorher und nachher.",
+        "Die Flüssigkeit wird fest."
+      ]
+    },
+    "ch6_42": {
+      "question": "Gummi kehrt nach dem Dehnen in seine ursprüngliche Form zurück. Diese Eigenschaft nennt man ___.",
+      "answer": "elastisch",
+      "altAnswers": [
+        "dehnbar"
+      ],
+      "hints": [
+        "Vergleiche Gummi mit einem Material, das nach dem Ziehen verformt bleibt.",
+        "Achte darauf, was nach dem Loslassen passiert."
+      ]
+    },
+    "ch6_44": {
+      "question": "Wolle vermindert den Wärmeaustausch. Man sagt: Wolle wirkt ___.",
+      "answer": "wärmedämmend",
+      "altAnswers": [
+        "wärmeisolierend",
+        "isolierend"
+      ],
+      "hints": [
+        "Denke an die eingeschlossene Luft zwischen den Fasern.",
+        "Eine Wolljacke erzeugt selbst keine Wärme."
+      ]
+    },
+    "ch6_46": {
+      "question": "Ein Schwamm kann Flüssigkeit in seinen Poren aufnehmen. Er ist ___.",
+      "answer": "saugfähig",
+      "altAnswers": [
+        "aufsaugend"
+      ],
+      "hints": [
+        "Vergleiche einen Schwamm mit einer glatten Glasplatte.",
+        "Denke an die kleinen Hohlräume im Material."
+      ]
+    },
+    "ch6_48": {
+      "question": "Ein Stück Kork bleibt an der Wasseroberfläche. Es kann auf Wasser ___.",
+      "answer": "schwimmen",
+      "altAnswers": [
+        "schwimmt"
+      ],
+      "hints": [
+        "Vergleiche die Dichte des Materials mit der Dichte von Wasser.",
+        "Überlege, ob das Stück nach unten geht oder oben bleibt."
+      ]
+    },
+    "ch6_50": {
+      "question": "Wenn reines Wasser bei normalem Luftdruck zu Eis wird, nennt man diesen Vorgang ___.",
+      "answer": "Gefrieren",
+      "altAnswers": [
+        "Erstarren",
+        "gefrieren"
+      ],
+      "hints": [
+        "Vergleiche den Zustand vorher und nachher.",
+        "Die Flüssigkeit wird fest."
+      ]
+    },
+    "lo6_36": {
+      "question": "Gummi kehrt nach dem Dehnen in seine ursprüngliche Form zurück. Diese Eigenschaft nennt man ___.",
+      "answer": "elastisch",
+      "altAnswers": [
+        "dehnbar"
+      ],
+      "hints": [
+        "Vergleiche Gummi mit einem Material, das nach dem Ziehen verformt bleibt.",
+        "Achte darauf, was nach dem Loslassen passiert."
+      ]
+    },
+    "bz6_2": {
+      "question": "In der Lunge gelangt Sauerstoff ins Blut. Welches Gas wird dabei aus dem Blut an die Atemluft abgegeben?",
+      "answer": "Kohlenstoffdioxid",
+      "altAnswers": [
+        "Kohlendioxid",
+        "CO2",
+        "CO₂"
+      ],
+      "hints": [
+        "Denke an ein gasförmiges Produkt der Zellatmung.",
+        "Es enthält Kohlenstoff und Sauerstoff."
+      ]
+    },
+    "bz6_4": {
+      "question": "Welches Organ umhüllt den Körper, schützt ihn und nimmt Berührungen wahr?",
+      "answer": "Haut",
+      "altAnswers": [
+        "die Haut"
+      ],
+      "hints": [
+        "Denke an das grösste Organ an der Körperoberfläche.",
+        "Es ist die äussere Grenze zwischen deinem Körper und der Umgebung."
+      ]
+    },
+    "bz6_6": {
+      "question": "Zusammen bilden die Knochen das ___.",
+      "answer": "Skelett",
+      "altAnswers": [
+        "das Skelett"
+      ],
+      "hints": [
+        "Denke an das tragende Gerüst des Körpers.",
+        "Gesucht ist der Name für alle Knochen zusammen."
+      ]
+    },
+    "bz6_8": {
+      "question": "In welchem Darmabschnitt werden die meisten Nährstoffe ins Blut oder in die Lymphe aufgenommen?",
+      "answer": "Dünndarm",
+      "altAnswers": [
+        "im Dünndarm"
+      ],
+      "hints": [
+        "Denke an den langen Abschnitt nach dem Magen.",
+        "Seine innere Oberfläche ist durch Zotten stark vergrössert."
+      ]
+    },
+    "bz6_10": {
+      "question": "Wie heisst das Abwehrsystem des Körpers gegen Krankheitserreger?",
+      "answer": "Immunsystem",
+      "altAnswers": [
+        "das Immunsystem"
+      ],
+      "hints": [
+        "Denke an das Zusammenspiel verschiedener Abwehrzellen.",
+        "Der Begriff beginnt mit Immun."
+      ]
+    },
+    "bz6_12": {
+      "question": "In der Lunge gelangt Sauerstoff ins Blut. Welches Gas wird dabei aus dem Blut an die Atemluft abgegeben?",
+      "answer": "Kohlenstoffdioxid",
+      "altAnswers": [
+        "Kohlendioxid",
+        "CO2",
+        "CO₂"
+      ],
+      "hints": [
+        "Denke an ein gasförmiges Produkt der Zellatmung.",
+        "Es enthält Kohlenstoff und Sauerstoff."
+      ]
+    },
+    "bz6_14": {
+      "question": "Welches Organ umhüllt den Körper, schützt ihn und nimmt Berührungen wahr?",
+      "answer": "Haut",
+      "altAnswers": [
+        "die Haut"
+      ],
+      "hints": [
+        "Denke an das grösste Organ an der Körperoberfläche.",
+        "Es ist die äussere Grenze zwischen deinem Körper und der Umgebung."
+      ]
+    },
+    "bz6_16": {
+      "question": "Zusammen bilden die Knochen das ___.",
+      "answer": "Skelett",
+      "altAnswers": [
+        "das Skelett"
+      ],
+      "hints": [
+        "Denke an das tragende Gerüst des Körpers.",
+        "Gesucht ist der Name für alle Knochen zusammen."
+      ]
+    },
+    "bz6_18": {
+      "question": "In welchem Darmabschnitt werden die meisten Nährstoffe ins Blut oder in die Lymphe aufgenommen?",
+      "answer": "Dünndarm",
+      "altAnswers": [
+        "im Dünndarm"
+      ],
+      "hints": [
+        "Denke an den langen Abschnitt nach dem Magen.",
+        "Seine innere Oberfläche ist durch Zotten stark vergrössert."
+      ]
+    },
+    "bz6_20": {
+      "question": "Wie heisst das Abwehrsystem des Körpers gegen Krankheitserreger?",
+      "answer": "Immunsystem",
+      "altAnswers": [
+        "das Immunsystem"
+      ],
+      "hints": [
+        "Denke an das Zusammenspiel verschiedener Abwehrzellen.",
+        "Der Begriff beginnt mit Immun."
+      ]
+    },
+    "bz6_22": {
+      "question": "In der Lunge gelangt Sauerstoff ins Blut. Welches Gas wird dabei aus dem Blut an die Atemluft abgegeben?",
+      "answer": "Kohlenstoffdioxid",
+      "altAnswers": [
+        "Kohlendioxid",
+        "CO2",
+        "CO₂"
+      ],
+      "hints": [
+        "Denke an ein gasförmiges Produkt der Zellatmung.",
+        "Es enthält Kohlenstoff und Sauerstoff."
+      ]
+    },
+    "bz6_24": {
+      "question": "Welches Organ umhüllt den Körper, schützt ihn und nimmt Berührungen wahr?",
+      "answer": "Haut",
+      "altAnswers": [
+        "die Haut"
+      ],
+      "hints": [
+        "Denke an das grösste Organ an der Körperoberfläche.",
+        "Es ist die äussere Grenze zwischen deinem Körper und der Umgebung."
+      ]
+    },
+    "bz6_26": {
+      "question": "Zusammen bilden die Knochen das ___.",
+      "answer": "Skelett",
+      "altAnswers": [
+        "das Skelett"
+      ],
+      "hints": [
+        "Denke an das tragende Gerüst des Körpers.",
+        "Gesucht ist der Name für alle Knochen zusammen."
+      ]
+    },
+    "bz6_28": {
+      "question": "In welchem Darmabschnitt werden die meisten Nährstoffe ins Blut oder in die Lymphe aufgenommen?",
+      "answer": "Dünndarm",
+      "altAnswers": [
+        "im Dünndarm"
+      ],
+      "hints": [
+        "Denke an den langen Abschnitt nach dem Magen.",
+        "Seine innere Oberfläche ist durch Zotten stark vergrössert."
+      ]
+    },
+    "bz6_30": {
+      "question": "Wie heisst das Abwehrsystem des Körpers gegen Krankheitserreger?",
+      "answer": "Immunsystem",
+      "altAnswers": [
+        "das Immunsystem"
+      ],
+      "hints": [
+        "Denke an das Zusammenspiel verschiedener Abwehrzellen.",
+        "Der Begriff beginnt mit Immun."
+      ]
+    },
+    "bz6_32": {
+      "question": "In der Lunge gelangt Sauerstoff ins Blut. Welches Gas wird dabei aus dem Blut an die Atemluft abgegeben?",
+      "answer": "Kohlenstoffdioxid",
+      "altAnswers": [
+        "Kohlendioxid",
+        "CO2",
+        "CO₂"
+      ],
+      "hints": [
+        "Denke an ein gasförmiges Produkt der Zellatmung.",
+        "Es enthält Kohlenstoff und Sauerstoff."
+      ]
+    },
+    "bz6_34": {
+      "question": "Welches Organ umhüllt den Körper, schützt ihn und nimmt Berührungen wahr?",
+      "answer": "Haut",
+      "altAnswers": [
+        "die Haut"
+      ],
+      "hints": [
+        "Denke an das grösste Organ an der Körperoberfläche.",
+        "Es ist die äussere Grenze zwischen deinem Körper und der Umgebung."
+      ]
+    },
+    "bz6_36": {
+      "question": "Zusammen bilden die Knochen das ___.",
+      "answer": "Skelett",
+      "altAnswers": [
+        "das Skelett"
+      ],
+      "hints": [
+        "Denke an das tragende Gerüst des Körpers.",
+        "Gesucht ist der Name für alle Knochen zusammen."
+      ]
+    },
+    "bz6_38": {
+      "question": "In welchem Darmabschnitt werden die meisten Nährstoffe ins Blut oder in die Lymphe aufgenommen?",
+      "answer": "Dünndarm",
+      "altAnswers": [
+        "im Dünndarm"
+      ],
+      "hints": [
+        "Denke an den langen Abschnitt nach dem Magen.",
+        "Seine innere Oberfläche ist durch Zotten stark vergrössert."
+      ]
+    },
+    "bz6_40": {
+      "question": "Wie heisst das Abwehrsystem des Körpers gegen Krankheitserreger?",
+      "answer": "Immunsystem",
+      "altAnswers": [
+        "das Immunsystem"
+      ],
+      "hints": [
+        "Denke an das Zusammenspiel verschiedener Abwehrzellen.",
+        "Der Begriff beginnt mit Immun."
+      ]
+    },
+    "bz6_42": {
+      "question": "In der Lunge gelangt Sauerstoff ins Blut. Welches Gas wird dabei aus dem Blut an die Atemluft abgegeben?",
+      "answer": "Kohlenstoffdioxid",
+      "altAnswers": [
+        "Kohlendioxid",
+        "CO2",
+        "CO₂"
+      ],
+      "hints": [
+        "Denke an ein gasförmiges Produkt der Zellatmung.",
+        "Es enthält Kohlenstoff und Sauerstoff."
+      ]
+    },
+    "bz6_44": {
+      "question": "Welches Organ umhüllt den Körper, schützt ihn und nimmt Berührungen wahr?",
+      "answer": "Haut",
+      "altAnswers": [
+        "die Haut"
+      ],
+      "hints": [
+        "Denke an das grösste Organ an der Körperoberfläche.",
+        "Es ist die äussere Grenze zwischen deinem Körper und der Umgebung."
+      ]
+    },
+    "bz6_46": {
+      "question": "Zusammen bilden die Knochen das ___.",
+      "answer": "Skelett",
+      "altAnswers": [
+        "das Skelett"
+      ],
+      "hints": [
+        "Denke an das tragende Gerüst des Körpers.",
+        "Gesucht ist der Name für alle Knochen zusammen."
+      ]
+    },
+    "bz6_48": {
+      "question": "In welchem Darmabschnitt werden die meisten Nährstoffe ins Blut oder in die Lymphe aufgenommen?",
+      "answer": "Dünndarm",
+      "altAnswers": [
+        "im Dünndarm"
+      ],
+      "hints": [
+        "Denke an den langen Abschnitt nach dem Magen.",
+        "Seine innere Oberfläche ist durch Zotten stark vergrössert."
+      ]
+    },
+    "bz6_50": {
+      "question": "Wie heisst das Abwehrsystem des Körpers gegen Krankheitserreger?",
+      "answer": "Immunsystem",
+      "altAnswers": [
+        "das Immunsystem"
+      ],
+      "hints": [
+        "Denke an das Zusammenspiel verschiedener Abwehrzellen.",
+        "Der Begriff beginnt mit Immun."
+      ]
+    },
+    "as6_2": {
+      "question": "Ein Umlauf der Erde um die Sonne dauert ungefähr ein ___.",
+      "answer": "Jahr",
+      "altAnswers": [
+        "Jahr"
+      ],
+      "hints": [
+        "Vergleiche den Umlauf mit der viel kürzeren täglichen Erddrehung.",
+        "Vergleiche diesen Zeitraum mit einem Monat und mit einem Tag."
+      ]
+    },
+    "as6_4": {
+      "question": "Die Sonne erzeugt durch Kernfusion Energie und leuchtet selbst. Sie ist ein ___.",
+      "answer": "Stern",
+      "altAnswers": [
+        "Stern"
+      ],
+      "hints": [
+        "Vergleiche die Sonne mit der Erde.",
+        "Ein Planet leuchtet nicht aus eigener Kraft wie die Sonne."
+      ]
+    },
+    "as6_6": {
+      "question": "Die Planeten unseres Sonnensystems umkreisen die ___.",
+      "answer": "Sonne",
+      "altAnswers": [
+        "Sonne"
+      ],
+      "hints": [
+        "Denke an den zentralen Himmelskörper unseres Planetensystems.",
+        "Er liefert Licht und Wärme für die Erde."
+      ]
+    },
+    "as6_8": {
+      "question": "Die Jahreszeiten hängen mit dem Umlauf der Erde und der Neigung ihrer ___ zusammen.",
+      "answer": "Erdachse",
+      "altAnswers": [
+        "Achse",
+        "Rotationsachse"
+      ],
+      "hints": [
+        "Denke an die gedachte Linie durch Nord- und Südpol.",
+        "Ihre Schrägstellung verändert im Jahreslauf den Einfallswinkel des Sonnenlichts."
+      ]
+    },
+    "as6_10": {
+      "question": "Ein unbemanntes Raumfahrzeug erforscht Himmelskörper und sendet Messdaten zur Erde. Es ist eine ___.",
+      "answer": "Raumsonde",
+      "altAnswers": [
+        "Sonde"
+      ],
+      "hints": [
+        "Denke an ein Forschungsgerät ohne Menschen an Bord.",
+        "Es reist beispielsweise zu einem anderen Planeten."
+      ]
+    },
+    "as6_12": {
+      "question": "Ein Umlauf der Erde um die Sonne dauert ungefähr ein ___.",
+      "answer": "Jahr",
+      "altAnswers": [
+        "Jahr"
+      ],
+      "hints": [
+        "Vergleiche den Umlauf mit der viel kürzeren täglichen Erddrehung.",
+        "Vergleiche diesen Zeitraum mit einem Monat und mit einem Tag."
+      ]
+    },
+    "as6_14": {
+      "question": "Die Sonne erzeugt durch Kernfusion Energie und leuchtet selbst. Sie ist ein ___.",
+      "answer": "Stern",
+      "altAnswers": [
+        "Stern"
+      ],
+      "hints": [
+        "Vergleiche die Sonne mit der Erde.",
+        "Ein Planet leuchtet nicht aus eigener Kraft wie die Sonne."
+      ]
+    },
+    "as6_16": {
+      "question": "Die Planeten unseres Sonnensystems umkreisen die ___.",
+      "answer": "Sonne",
+      "altAnswers": [
+        "Sonne"
+      ],
+      "hints": [
+        "Denke an den zentralen Himmelskörper unseres Planetensystems.",
+        "Er liefert Licht und Wärme für die Erde."
+      ]
+    },
+    "as6_18": {
+      "question": "Die Jahreszeiten hängen mit dem Umlauf der Erde und der Neigung ihrer ___ zusammen.",
+      "answer": "Erdachse",
+      "altAnswers": [
+        "Achse",
+        "Rotationsachse"
+      ],
+      "hints": [
+        "Denke an die gedachte Linie durch Nord- und Südpol.",
+        "Ihre Schrägstellung verändert im Jahreslauf den Einfallswinkel des Sonnenlichts."
+      ]
+    },
+    "as6_20": {
+      "question": "Ein unbemanntes Raumfahrzeug erforscht Himmelskörper und sendet Messdaten zur Erde. Es ist eine ___.",
+      "answer": "Raumsonde",
+      "altAnswers": [
+        "Sonde"
+      ],
+      "hints": [
+        "Denke an ein Forschungsgerät ohne Menschen an Bord.",
+        "Es reist beispielsweise zu einem anderen Planeten."
+      ]
+    },
+    "as6_22": {
+      "question": "Ein Umlauf der Erde um die Sonne dauert ungefähr ein ___.",
+      "answer": "Jahr",
+      "altAnswers": [
+        "Jahr"
+      ],
+      "hints": [
+        "Vergleiche den Umlauf mit der viel kürzeren täglichen Erddrehung.",
+        "Vergleiche diesen Zeitraum mit einem Monat und mit einem Tag."
+      ]
+    },
+    "as6_24": {
+      "question": "Die Sonne erzeugt durch Kernfusion Energie und leuchtet selbst. Sie ist ein ___.",
+      "answer": "Stern",
+      "altAnswers": [
+        "Stern"
+      ],
+      "hints": [
+        "Vergleiche die Sonne mit der Erde.",
+        "Ein Planet leuchtet nicht aus eigener Kraft wie die Sonne."
+      ]
+    },
+    "as6_26": {
+      "question": "Die Planeten unseres Sonnensystems umkreisen die ___.",
+      "answer": "Sonne",
+      "altAnswers": [
+        "Sonne"
+      ],
+      "hints": [
+        "Denke an den zentralen Himmelskörper unseres Planetensystems.",
+        "Er liefert Licht und Wärme für die Erde."
+      ]
+    },
+    "as6_28": {
+      "question": "Die Jahreszeiten hängen mit dem Umlauf der Erde und der Neigung ihrer ___ zusammen.",
+      "answer": "Erdachse",
+      "altAnswers": [
+        "Achse",
+        "Rotationsachse"
+      ],
+      "hints": [
+        "Denke an die gedachte Linie durch Nord- und Südpol.",
+        "Ihre Schrägstellung verändert im Jahreslauf den Einfallswinkel des Sonnenlichts."
+      ]
+    },
+    "as6_30": {
+      "question": "Ein unbemanntes Raumfahrzeug erforscht Himmelskörper und sendet Messdaten zur Erde. Es ist eine ___.",
+      "answer": "Raumsonde",
+      "altAnswers": [
+        "Sonde"
+      ],
+      "hints": [
+        "Denke an ein Forschungsgerät ohne Menschen an Bord.",
+        "Es reist beispielsweise zu einem anderen Planeten."
+      ]
+    },
+    "as6_32": {
+      "question": "Ein Umlauf der Erde um die Sonne dauert ungefähr ein ___.",
+      "answer": "Jahr",
+      "altAnswers": [
+        "Jahr"
+      ],
+      "hints": [
+        "Vergleiche den Umlauf mit der viel kürzeren täglichen Erddrehung.",
+        "Vergleiche diesen Zeitraum mit einem Monat und mit einem Tag."
+      ]
+    },
+    "as6_34": {
+      "question": "Die Sonne erzeugt durch Kernfusion Energie und leuchtet selbst. Sie ist ein ___.",
+      "answer": "Stern",
+      "altAnswers": [
+        "Stern"
+      ],
+      "hints": [
+        "Vergleiche die Sonne mit der Erde.",
+        "Ein Planet leuchtet nicht aus eigener Kraft wie die Sonne."
+      ]
+    },
+    "as6_36": {
+      "question": "Die Planeten unseres Sonnensystems umkreisen die ___.",
+      "answer": "Sonne",
+      "altAnswers": [
+        "Sonne"
+      ],
+      "hints": [
+        "Denke an den zentralen Himmelskörper unseres Planetensystems.",
+        "Er liefert Licht und Wärme für die Erde."
+      ]
+    },
+    "as6_38": {
+      "question": "Die Jahreszeiten hängen mit dem Umlauf der Erde und der Neigung ihrer ___ zusammen.",
+      "answer": "Erdachse",
+      "altAnswers": [
+        "Achse",
+        "Rotationsachse"
+      ],
+      "hints": [
+        "Denke an die gedachte Linie durch Nord- und Südpol.",
+        "Ihre Schrägstellung verändert im Jahreslauf den Einfallswinkel des Sonnenlichts."
+      ]
+    },
+    "as6_40": {
+      "question": "Ein unbemanntes Raumfahrzeug erforscht Himmelskörper und sendet Messdaten zur Erde. Es ist eine ___.",
+      "answer": "Raumsonde",
+      "altAnswers": [
+        "Sonde"
+      ],
+      "hints": [
+        "Denke an ein Forschungsgerät ohne Menschen an Bord.",
+        "Es reist beispielsweise zu einem anderen Planeten."
+      ]
+    },
+    "as6_42": {
+      "question": "Ein Umlauf der Erde um die Sonne dauert ungefähr ein ___.",
+      "answer": "Jahr",
+      "altAnswers": [
+        "Jahr"
+      ],
+      "hints": [
+        "Vergleiche den Umlauf mit der viel kürzeren täglichen Erddrehung.",
+        "Vergleiche diesen Zeitraum mit einem Monat und mit einem Tag."
+      ]
+    },
+    "as6_44": {
+      "question": "Die Sonne erzeugt durch Kernfusion Energie und leuchtet selbst. Sie ist ein ___.",
+      "answer": "Stern",
+      "altAnswers": [
+        "Stern"
+      ],
+      "hints": [
+        "Vergleiche die Sonne mit der Erde.",
+        "Ein Planet leuchtet nicht aus eigener Kraft wie die Sonne."
+      ]
+    },
+    "as6_46": {
+      "question": "Die Planeten unseres Sonnensystems umkreisen die ___.",
+      "answer": "Sonne",
+      "altAnswers": [
+        "Sonne"
+      ],
+      "hints": [
+        "Denke an den zentralen Himmelskörper unseres Planetensystems.",
+        "Er liefert Licht und Wärme für die Erde."
+      ]
+    },
+    "as6_48": {
+      "question": "Die Jahreszeiten hängen mit dem Umlauf der Erde und der Neigung ihrer ___ zusammen.",
+      "answer": "Erdachse",
+      "altAnswers": [
+        "Achse",
+        "Rotationsachse"
+      ],
+      "hints": [
+        "Denke an die gedachte Linie durch Nord- und Südpol.",
+        "Ihre Schrägstellung verändert im Jahreslauf den Einfallswinkel des Sonnenlichts."
+      ]
+    },
+    "as6_50": {
+      "question": "Ein unbemanntes Raumfahrzeug erforscht Himmelskörper und sendet Messdaten zur Erde. Es ist eine ___.",
+      "answer": "Raumsonde",
+      "altAnswers": [
+        "Sonde"
+      ],
+      "hints": [
+        "Denke an ein Forschungsgerät ohne Menschen an Bord.",
+        "Es reist beispielsweise zu einem anderen Planeten."
+      ]
+    },
+    "nz6_16": {
+      "question": "Welche historische Maschine nutzt die Ausdehnung von Wasserdampf, um Bewegung zu erzeugen?",
+      "answer": "Dampfmaschine",
+      "altAnswers": [
+        "eine Dampfmaschine"
+      ],
+      "hints": [
+        "Denke an die Energieumwandlung von Wärme in Bewegung.",
+        "Die Maschine spielte bei der Industrialisierung eine wichtige Rolle."
+      ]
+    },
+    "in6_2": {
+      "question": "Welche historische Maschine nutzt die Ausdehnung von Wasserdampf, um Bewegung zu erzeugen?",
+      "answer": "Dampfmaschine",
+      "altAnswers": [
+        "eine Dampfmaschine"
+      ],
+      "hints": [
+        "Denke an die Energieumwandlung von Wärme in Bewegung.",
+        "Die Maschine spielte bei der Industrialisierung eine wichtige Rolle."
+      ]
+    },
+    "in6_4": {
+      "question": "Mit welcher Erfindung konnten Menschen über weite Entfernungen direkt miteinander sprechen?",
+      "answer": "Telefon",
+      "altAnswers": [
+        "Telephon"
+      ],
+      "hints": [
+        "Gesucht ist eine Erfindung zur Übertragung der Stimme.",
+        "Im Unterschied zu einem Brief hört man die andere Person."
+      ]
+    },
+    "in6_6": {
+      "question": "Welches Haushaltsgerät reinigt Kleidung mit weniger Handarbeit?",
+      "answer": "Waschmaschine",
+      "altAnswers": [
+        "eine Waschmaschine"
+      ],
+      "hints": [
+        "Denke an Wasser, Waschmittel und eine sich drehende Trommel.",
+        "Das Gerät übernimmt einen grossen Teil des Waschens."
+      ]
+    },
+    "in6_8": {
+      "question": "Welche programmierbare Maschine kann zum Beispiel in einer Fabrik wiederholt Bauteile zusammensetzen?",
+      "answer": "Roboter",
+      "altAnswers": [
+        "ein Roboter"
+      ],
+      "hints": [
+        "Gesucht ist eine Maschine, die bestimmte Arbeitsabläufe ausführen kann.",
+        "In Fabriken hat sie manchmal einen beweglichen Greifarm."
+      ]
+    },
+    "in6_10": {
+      "question": "Ein defektes Produkt wird wieder funktionsfähig gemacht. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur",
+        "reparieren"
+      ],
+      "hints": [
+        "Denke an den Unterschied zwischen Wegwerfen und Instandsetzen.",
+        "Das Produkt wird nicht durch ein neues ersetzt."
+      ]
+    },
+    "in6_12": {
+      "question": "Welche historische Maschine nutzt die Ausdehnung von Wasserdampf, um Bewegung zu erzeugen?",
+      "answer": "Dampfmaschine",
+      "altAnswers": [
+        "eine Dampfmaschine"
+      ],
+      "hints": [
+        "Denke an die Energieumwandlung von Wärme in Bewegung.",
+        "Die Maschine spielte bei der Industrialisierung eine wichtige Rolle."
+      ]
+    },
+    "in6_14": {
+      "question": "Mit welcher Erfindung konnten Menschen über weite Entfernungen direkt miteinander sprechen?",
+      "answer": "Telefon",
+      "altAnswers": [
+        "Telephon"
+      ],
+      "hints": [
+        "Gesucht ist eine Erfindung zur Übertragung der Stimme.",
+        "Im Unterschied zu einem Brief hört man die andere Person."
+      ]
+    },
+    "in6_16": {
+      "question": "Welches Haushaltsgerät reinigt Kleidung mit weniger Handarbeit?",
+      "answer": "Waschmaschine",
+      "altAnswers": [
+        "eine Waschmaschine"
+      ],
+      "hints": [
+        "Denke an Wasser, Waschmittel und eine sich drehende Trommel.",
+        "Das Gerät übernimmt einen grossen Teil des Waschens."
+      ]
+    },
+    "in6_18": {
+      "question": "Welche programmierbare Maschine kann zum Beispiel in einer Fabrik wiederholt Bauteile zusammensetzen?",
+      "answer": "Roboter",
+      "altAnswers": [
+        "ein Roboter"
+      ],
+      "hints": [
+        "Gesucht ist eine Maschine, die bestimmte Arbeitsabläufe ausführen kann.",
+        "In Fabriken hat sie manchmal einen beweglichen Greifarm."
+      ]
+    },
+    "in6_20": {
+      "question": "Ein defektes Produkt wird wieder funktionsfähig gemacht. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur",
+        "reparieren"
+      ],
+      "hints": [
+        "Denke an den Unterschied zwischen Wegwerfen und Instandsetzen.",
+        "Das Produkt wird nicht durch ein neues ersetzt."
+      ]
+    },
+    "in6_22": {
+      "question": "Welche historische Maschine nutzt die Ausdehnung von Wasserdampf, um Bewegung zu erzeugen?",
+      "answer": "Dampfmaschine",
+      "altAnswers": [
+        "eine Dampfmaschine"
+      ],
+      "hints": [
+        "Denke an die Energieumwandlung von Wärme in Bewegung.",
+        "Die Maschine spielte bei der Industrialisierung eine wichtige Rolle."
+      ]
+    },
+    "in6_24": {
+      "question": "Mit welcher Erfindung konnten Menschen über weite Entfernungen direkt miteinander sprechen?",
+      "answer": "Telefon",
+      "altAnswers": [
+        "Telephon"
+      ],
+      "hints": [
+        "Gesucht ist eine Erfindung zur Übertragung der Stimme.",
+        "Im Unterschied zu einem Brief hört man die andere Person."
+      ]
+    },
+    "in6_26": {
+      "question": "Welches Haushaltsgerät reinigt Kleidung mit weniger Handarbeit?",
+      "answer": "Waschmaschine",
+      "altAnswers": [
+        "eine Waschmaschine"
+      ],
+      "hints": [
+        "Denke an Wasser, Waschmittel und eine sich drehende Trommel.",
+        "Das Gerät übernimmt einen grossen Teil des Waschens."
+      ]
+    },
+    "in6_28": {
+      "question": "Welche programmierbare Maschine kann zum Beispiel in einer Fabrik wiederholt Bauteile zusammensetzen?",
+      "answer": "Roboter",
+      "altAnswers": [
+        "ein Roboter"
+      ],
+      "hints": [
+        "Gesucht ist eine Maschine, die bestimmte Arbeitsabläufe ausführen kann.",
+        "In Fabriken hat sie manchmal einen beweglichen Greifarm."
+      ]
+    },
+    "in6_30": {
+      "question": "Ein defektes Produkt wird wieder funktionsfähig gemacht. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur",
+        "reparieren"
+      ],
+      "hints": [
+        "Denke an den Unterschied zwischen Wegwerfen und Instandsetzen.",
+        "Das Produkt wird nicht durch ein neues ersetzt."
+      ]
+    },
+    "in6_32": {
+      "question": "Welche historische Maschine nutzt die Ausdehnung von Wasserdampf, um Bewegung zu erzeugen?",
+      "answer": "Dampfmaschine",
+      "altAnswers": [
+        "eine Dampfmaschine"
+      ],
+      "hints": [
+        "Denke an die Energieumwandlung von Wärme in Bewegung.",
+        "Die Maschine spielte bei der Industrialisierung eine wichtige Rolle."
+      ]
+    },
+    "in6_34": {
+      "question": "Mit welcher Erfindung konnten Menschen über weite Entfernungen direkt miteinander sprechen?",
+      "answer": "Telefon",
+      "altAnswers": [
+        "Telephon"
+      ],
+      "hints": [
+        "Gesucht ist eine Erfindung zur Übertragung der Stimme.",
+        "Im Unterschied zu einem Brief hört man die andere Person."
+      ]
+    },
+    "in6_36": {
+      "question": "Welches Haushaltsgerät reinigt Kleidung mit weniger Handarbeit?",
+      "answer": "Waschmaschine",
+      "altAnswers": [
+        "eine Waschmaschine"
+      ],
+      "hints": [
+        "Denke an Wasser, Waschmittel und eine sich drehende Trommel.",
+        "Das Gerät übernimmt einen grossen Teil des Waschens."
+      ]
+    },
+    "in6_38": {
+      "question": "Welche programmierbare Maschine kann zum Beispiel in einer Fabrik wiederholt Bauteile zusammensetzen?",
+      "answer": "Roboter",
+      "altAnswers": [
+        "ein Roboter"
+      ],
+      "hints": [
+        "Gesucht ist eine Maschine, die bestimmte Arbeitsabläufe ausführen kann.",
+        "In Fabriken hat sie manchmal einen beweglichen Greifarm."
+      ]
+    },
+    "in6_40": {
+      "question": "Ein defektes Produkt wird wieder funktionsfähig gemacht. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur",
+        "reparieren"
+      ],
+      "hints": [
+        "Denke an den Unterschied zwischen Wegwerfen und Instandsetzen.",
+        "Das Produkt wird nicht durch ein neues ersetzt."
+      ]
+    },
+    "in6_42": {
+      "question": "Welche historische Maschine nutzt die Ausdehnung von Wasserdampf, um Bewegung zu erzeugen?",
+      "answer": "Dampfmaschine",
+      "altAnswers": [
+        "eine Dampfmaschine"
+      ],
+      "hints": [
+        "Denke an die Energieumwandlung von Wärme in Bewegung.",
+        "Die Maschine spielte bei der Industrialisierung eine wichtige Rolle."
+      ]
+    },
+    "in6_44": {
+      "question": "Mit welcher Erfindung konnten Menschen über weite Entfernungen direkt miteinander sprechen?",
+      "answer": "Telefon",
+      "altAnswers": [
+        "Telephon"
+      ],
+      "hints": [
+        "Gesucht ist eine Erfindung zur Übertragung der Stimme.",
+        "Im Unterschied zu einem Brief hört man die andere Person."
+      ]
+    },
+    "in6_46": {
+      "question": "Welches Haushaltsgerät reinigt Kleidung mit weniger Handarbeit?",
+      "answer": "Waschmaschine",
+      "altAnswers": [
+        "eine Waschmaschine"
+      ],
+      "hints": [
+        "Denke an Wasser, Waschmittel und eine sich drehende Trommel.",
+        "Das Gerät übernimmt einen grossen Teil des Waschens."
+      ]
+    },
+    "in6_48": {
+      "question": "Welche programmierbare Maschine kann zum Beispiel in einer Fabrik wiederholt Bauteile zusammensetzen?",
+      "answer": "Roboter",
+      "altAnswers": [
+        "ein Roboter"
+      ],
+      "hints": [
+        "Gesucht ist eine Maschine, die bestimmte Arbeitsabläufe ausführen kann.",
+        "In Fabriken hat sie manchmal einen beweglichen Greifarm."
+      ]
+    },
+    "in6_50": {
+      "question": "Ein defektes Produkt wird wieder funktionsfähig gemacht. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur",
+        "reparieren"
+      ],
+      "hints": [
+        "Denke an den Unterschied zwischen Wegwerfen und Instandsetzen.",
+        "Das Produkt wird nicht durch ein neues ersetzt."
+      ]
+    },
+    "dm6_24": {
+      "question": "Bei unterschiedlichen Meinungen hilft es, Argumente auszutauschen. Ein anderes Wort für Argumente ist ___.",
+      "answer": "Gründe",
+      "altAnswers": [
+        "Begründungen"
+      ],
+      "hints": [
+        "Denke an das Warum hinter einer Meinung.",
+        "Eine Behauptung wird dadurch nachvollziehbarer."
+      ]
+    },
+    "wk6_2": {
+      "question": "Bei unterschiedlichen Meinungen hilft es, Argumente auszutauschen. Ein anderes Wort für Argumente ist ___.",
+      "answer": "Gründe",
+      "altAnswers": [
+        "Begründungen"
+      ],
+      "hints": [
+        "Denke an das Warum hinter einer Meinung.",
+        "Eine Behauptung wird dadurch nachvollziehbarer."
+      ]
+    },
+    "wk6_4": {
+      "question": "Wer sollte bei einer neuen Klassenregel mitreden dürfen: nur die Lehrperson oder alle ___?",
+      "answer": "Betroffenen",
+      "altAnswers": [
+        "Beteiligten"
+      ],
+      "hints": [
+        "Denke an die Menschen, für die die Regel gelten soll.",
+        "Wer die Folgen spürt, soll seine Sicht erklären können."
+      ]
+    },
+    "wk6_6": {
+      "question": "Bei einer unklaren Nachricht prüfst du den Inhalt und woher sie stammt. Diese Herkunft nennt man ___.",
+      "answer": "Quelle",
+      "altAnswers": [
+        "Informationsquelle"
+      ],
+      "hints": [
+        "Frage nach Autor, Veröffentlichungsort und Datum.",
+        "Gesucht ist der Ursprung einer Information."
+      ]
+    },
+    "wk6_8": {
+      "question": "Bei welcher Lösung eines Streits geben beide Seiten etwas nach?",
+      "answer": "Kompromiss",
+      "altAnswers": [
+        "bei einem Kompromiss"
+      ],
+      "hints": [
+        "Keine Seite setzt ihre Wünsche vollständig durch.",
+        "Gesucht ist eine gemeinsam tragbare Zwischenlösung."
+      ]
+    },
+    "wk6_10": {
+      "question": "Ein respektvolles Gespräch, bei dem beide Seiten zuhören, nennt man ___.",
+      "answer": "Dialog",
+      "altAnswers": [
+        "Gespräch"
+      ],
+      "hints": [
+        "Denke an einen Austausch, nicht an einen Monolog.",
+        "Das Wort beginnt mit Dia."
+      ]
+    },
+    "wk6_12": {
+      "question": "Bei unterschiedlichen Meinungen hilft es, Argumente auszutauschen. Ein anderes Wort für Argumente ist ___.",
+      "answer": "Gründe",
+      "altAnswers": [
+        "Begründungen"
+      ],
+      "hints": [
+        "Denke an das Warum hinter einer Meinung.",
+        "Eine Behauptung wird dadurch nachvollziehbarer."
+      ]
+    },
+    "wk6_14": {
+      "question": "Wer sollte bei einer neuen Klassenregel mitreden dürfen: nur die Lehrperson oder alle ___?",
+      "answer": "Betroffenen",
+      "altAnswers": [
+        "Beteiligten"
+      ],
+      "hints": [
+        "Denke an die Menschen, für die die Regel gelten soll.",
+        "Wer die Folgen spürt, soll seine Sicht erklären können."
+      ]
+    },
+    "wk6_16": {
+      "question": "Bei einer unklaren Nachricht prüfst du den Inhalt und woher sie stammt. Diese Herkunft nennt man ___.",
+      "answer": "Quelle",
+      "altAnswers": [
+        "Informationsquelle"
+      ],
+      "hints": [
+        "Frage nach Autor, Veröffentlichungsort und Datum.",
+        "Gesucht ist der Ursprung einer Information."
+      ]
+    },
+    "wk6_18": {
+      "question": "Bei welcher Lösung eines Streits geben beide Seiten etwas nach?",
+      "answer": "Kompromiss",
+      "altAnswers": [
+        "bei einem Kompromiss"
+      ],
+      "hints": [
+        "Keine Seite setzt ihre Wünsche vollständig durch.",
+        "Gesucht ist eine gemeinsam tragbare Zwischenlösung."
+      ]
+    },
+    "wk6_20": {
+      "question": "Ein respektvolles Gespräch, bei dem beide Seiten zuhören, nennt man ___.",
+      "answer": "Dialog",
+      "altAnswers": [
+        "Gespräch"
+      ],
+      "hints": [
+        "Denke an einen Austausch, nicht an einen Monolog.",
+        "Das Wort beginnt mit Dia."
+      ]
+    },
+    "wk6_22": {
+      "question": "Bei unterschiedlichen Meinungen hilft es, Argumente auszutauschen. Ein anderes Wort für Argumente ist ___.",
+      "answer": "Gründe",
+      "altAnswers": [
+        "Begründungen"
+      ],
+      "hints": [
+        "Denke an das Warum hinter einer Meinung.",
+        "Eine Behauptung wird dadurch nachvollziehbarer."
+      ]
+    },
+    "wk6_24": {
+      "question": "Wer sollte bei einer neuen Klassenregel mitreden dürfen: nur die Lehrperson oder alle ___?",
+      "answer": "Betroffenen",
+      "altAnswers": [
+        "Beteiligten"
+      ],
+      "hints": [
+        "Denke an die Menschen, für die die Regel gelten soll.",
+        "Wer die Folgen spürt, soll seine Sicht erklären können."
+      ]
+    },
+    "wk6_26": {
+      "question": "Bei einer unklaren Nachricht prüfst du den Inhalt und woher sie stammt. Diese Herkunft nennt man ___.",
+      "answer": "Quelle",
+      "altAnswers": [
+        "Informationsquelle"
+      ],
+      "hints": [
+        "Frage nach Autor, Veröffentlichungsort und Datum.",
+        "Gesucht ist der Ursprung einer Information."
+      ]
+    },
+    "wk6_28": {
+      "question": "Bei welcher Lösung eines Streits geben beide Seiten etwas nach?",
+      "answer": "Kompromiss",
+      "altAnswers": [
+        "bei einem Kompromiss"
+      ],
+      "hints": [
+        "Keine Seite setzt ihre Wünsche vollständig durch.",
+        "Gesucht ist eine gemeinsam tragbare Zwischenlösung."
+      ]
+    },
+    "wk6_30": {
+      "question": "Ein respektvolles Gespräch, bei dem beide Seiten zuhören, nennt man ___.",
+      "answer": "Dialog",
+      "altAnswers": [
+        "Gespräch"
+      ],
+      "hints": [
+        "Denke an einen Austausch, nicht an einen Monolog.",
+        "Das Wort beginnt mit Dia."
+      ]
+    },
+    "wk6_32": {
+      "question": "Bei unterschiedlichen Meinungen hilft es, Argumente auszutauschen. Ein anderes Wort für Argumente ist ___.",
+      "answer": "Gründe",
+      "altAnswers": [
+        "Begründungen"
+      ],
+      "hints": [
+        "Denke an das Warum hinter einer Meinung.",
+        "Eine Behauptung wird dadurch nachvollziehbarer."
+      ]
+    },
+    "wk6_34": {
+      "question": "Wer sollte bei einer neuen Klassenregel mitreden dürfen: nur die Lehrperson oder alle ___?",
+      "answer": "Betroffenen",
+      "altAnswers": [
+        "Beteiligten"
+      ],
+      "hints": [
+        "Denke an die Menschen, für die die Regel gelten soll.",
+        "Wer die Folgen spürt, soll seine Sicht erklären können."
+      ]
+    },
+    "wk6_36": {
+      "question": "Bei einer unklaren Nachricht prüfst du den Inhalt und woher sie stammt. Diese Herkunft nennt man ___.",
+      "answer": "Quelle",
+      "altAnswers": [
+        "Informationsquelle"
+      ],
+      "hints": [
+        "Frage nach Autor, Veröffentlichungsort und Datum.",
+        "Gesucht ist der Ursprung einer Information."
+      ]
+    },
+    "wk6_38": {
+      "question": "Bei welcher Lösung eines Streits geben beide Seiten etwas nach?",
+      "answer": "Kompromiss",
+      "altAnswers": [
+        "bei einem Kompromiss"
+      ],
+      "hints": [
+        "Keine Seite setzt ihre Wünsche vollständig durch.",
+        "Gesucht ist eine gemeinsam tragbare Zwischenlösung."
+      ]
+    },
+    "wk6_40": {
+      "question": "Ein respektvolles Gespräch, bei dem beide Seiten zuhören, nennt man ___.",
+      "answer": "Dialog",
+      "altAnswers": [
+        "Gespräch"
+      ],
+      "hints": [
+        "Denke an einen Austausch, nicht an einen Monolog.",
+        "Das Wort beginnt mit Dia."
+      ]
+    },
+    "wk6_42": {
+      "question": "Bei unterschiedlichen Meinungen hilft es, Argumente auszutauschen. Ein anderes Wort für Argumente ist ___.",
+      "answer": "Gründe",
+      "altAnswers": [
+        "Begründungen"
+      ],
+      "hints": [
+        "Denke an das Warum hinter einer Meinung.",
+        "Eine Behauptung wird dadurch nachvollziehbarer."
+      ]
+    },
+    "wk6_44": {
+      "question": "Wer sollte bei einer neuen Klassenregel mitreden dürfen: nur die Lehrperson oder alle ___?",
+      "answer": "Betroffenen",
+      "altAnswers": [
+        "Beteiligten"
+      ],
+      "hints": [
+        "Denke an die Menschen, für die die Regel gelten soll.",
+        "Wer die Folgen spürt, soll seine Sicht erklären können."
+      ]
+    },
+    "wk6_46": {
+      "question": "Bei einer unklaren Nachricht prüfst du den Inhalt und woher sie stammt. Diese Herkunft nennt man ___.",
+      "answer": "Quelle",
+      "altAnswers": [
+        "Informationsquelle"
+      ],
+      "hints": [
+        "Frage nach Autor, Veröffentlichungsort und Datum.",
+        "Gesucht ist der Ursprung einer Information."
+      ]
+    },
+    "wk6_48": {
+      "question": "Bei welcher Lösung eines Streits geben beide Seiten etwas nach?",
+      "answer": "Kompromiss",
+      "altAnswers": [
+        "bei einem Kompromiss"
+      ],
+      "hints": [
+        "Keine Seite setzt ihre Wünsche vollständig durch.",
+        "Gesucht ist eine gemeinsam tragbare Zwischenlösung."
+      ]
+    },
+    "wk6_50": {
+      "question": "Ein respektvolles Gespräch, bei dem beide Seiten zuhören, nennt man ___.",
+      "answer": "Dialog",
+      "altAnswers": [
+        "Gespräch"
+      ],
+      "hints": [
+        "Denke an einen Austausch, nicht an einen Monolog.",
+        "Das Wort beginnt mit Dia."
+      ]
+    },
+    "gl6_2": {
+      "question": "Handel soll gerechte Arbeits- und Lebensbedingungen für Produzierende fördern. Man nennt ihn ___ Handel.",
+      "answer": "fairen",
+      "altAnswers": [
+        "fairen"
+      ],
+      "hints": [
+        "Denke an die Menschen, die ein Produkt herstellen.",
+        "Nicht nur der möglichst niedrige Preis soll zählen."
+      ]
+    },
+    "gl6_4": {
+      "question": "Menschen teilen Bräuche, Wissen und Erfahrungen über kulturelle Grenzen hinweg. Das nennt man kulturellen ___.",
+      "answer": "Austausch",
+      "altAnswers": [
+        "Austausch"
+      ],
+      "hints": [
+        "Denke an ein gegenseitiges Geben und Aufnehmen von Ideen.",
+        "Es geht nicht darum, dass alle Menschen gleich leben müssen."
+      ]
+    },
+    "gl6_6": {
+      "question": "Beim Klimaschutz müssen Länder zusammenarbeiten. Diese Zusammenarbeit über Ländergrenzen hinweg ist ___.",
+      "answer": "international",
+      "altAnswers": [
+        "grenzüberschreitend"
+      ],
+      "hints": [
+        "Denke an ein Problem, das nicht an der Landesgrenze endet.",
+        "Das gesuchte Wort bedeutet zwischen verschiedenen Ländern."
+      ]
+    },
+    "gl6_8": {
+      "question": "Menschen verlegen ihren Wohnort innerhalb eines Landes oder über eine Grenze. Der Oberbegriff dafür ist ___.",
+      "answer": "Migration",
+      "altAnswers": [
+        "Wanderung"
+      ],
+      "hints": [
+        "Denke sowohl an freiwillige als auch an erzwungene Ortswechsel.",
+        "Der Fachbegriff beginnt mit Mig."
+      ]
+    },
+    "gl6_10": {
+      "question": "Wer beim Einkaufen soziale und ökologische Folgen berücksichtigt, konsumiert ___.",
+      "answer": "bewusst",
+      "altAnswers": [
+        "nachhaltig",
+        "verantwortungsvoll"
+      ],
+      "hints": [
+        "Denke über Preis und Verpackung hinaus.",
+        "Auch Herstellung und spätere Entsorgung spielen eine Rolle."
+      ]
+    },
+    "gl6_12": {
+      "question": "Handel soll gerechte Arbeits- und Lebensbedingungen für Produzierende fördern. Man nennt ihn ___ Handel.",
+      "answer": "fairen",
+      "altAnswers": [
+        "fairen"
+      ],
+      "hints": [
+        "Denke an die Menschen, die ein Produkt herstellen.",
+        "Nicht nur der möglichst niedrige Preis soll zählen."
+      ]
+    },
+    "gl6_14": {
+      "question": "Menschen teilen Bräuche, Wissen und Erfahrungen über kulturelle Grenzen hinweg. Das nennt man kulturellen ___.",
+      "answer": "Austausch",
+      "altAnswers": [
+        "Austausch"
+      ],
+      "hints": [
+        "Denke an ein gegenseitiges Geben und Aufnehmen von Ideen.",
+        "Es geht nicht darum, dass alle Menschen gleich leben müssen."
+      ]
+    },
+    "gl6_16": {
+      "question": "Beim Klimaschutz müssen Länder zusammenarbeiten. Diese Zusammenarbeit über Ländergrenzen hinweg ist ___.",
+      "answer": "international",
+      "altAnswers": [
+        "grenzüberschreitend"
+      ],
+      "hints": [
+        "Denke an ein Problem, das nicht an der Landesgrenze endet.",
+        "Das gesuchte Wort bedeutet zwischen verschiedenen Ländern."
+      ]
+    },
+    "gl6_18": {
+      "question": "Menschen verlegen ihren Wohnort innerhalb eines Landes oder über eine Grenze. Der Oberbegriff dafür ist ___.",
+      "answer": "Migration",
+      "altAnswers": [
+        "Wanderung"
+      ],
+      "hints": [
+        "Denke sowohl an freiwillige als auch an erzwungene Ortswechsel.",
+        "Der Fachbegriff beginnt mit Mig."
+      ]
+    },
+    "gl6_20": {
+      "question": "Wer beim Einkaufen soziale und ökologische Folgen berücksichtigt, konsumiert ___.",
+      "answer": "bewusst",
+      "altAnswers": [
+        "nachhaltig",
+        "verantwortungsvoll"
+      ],
+      "hints": [
+        "Denke über Preis und Verpackung hinaus.",
+        "Auch Herstellung und spätere Entsorgung spielen eine Rolle."
+      ]
+    },
+    "gl6_22": {
+      "question": "Handel soll gerechte Arbeits- und Lebensbedingungen für Produzierende fördern. Man nennt ihn ___ Handel.",
+      "answer": "fairen",
+      "altAnswers": [
+        "fairen"
+      ],
+      "hints": [
+        "Denke an die Menschen, die ein Produkt herstellen.",
+        "Nicht nur der möglichst niedrige Preis soll zählen."
+      ]
+    },
+    "gl6_24": {
+      "question": "Menschen teilen Bräuche, Wissen und Erfahrungen über kulturelle Grenzen hinweg. Das nennt man kulturellen ___.",
+      "answer": "Austausch",
+      "altAnswers": [
+        "Austausch"
+      ],
+      "hints": [
+        "Denke an ein gegenseitiges Geben und Aufnehmen von Ideen.",
+        "Es geht nicht darum, dass alle Menschen gleich leben müssen."
+      ]
+    },
+    "gl6_26": {
+      "question": "Beim Klimaschutz müssen Länder zusammenarbeiten. Diese Zusammenarbeit über Ländergrenzen hinweg ist ___.",
+      "answer": "international",
+      "altAnswers": [
+        "grenzüberschreitend"
+      ],
+      "hints": [
+        "Denke an ein Problem, das nicht an der Landesgrenze endet.",
+        "Das gesuchte Wort bedeutet zwischen verschiedenen Ländern."
+      ]
+    },
+    "gl6_28": {
+      "question": "Menschen verlegen ihren Wohnort innerhalb eines Landes oder über eine Grenze. Der Oberbegriff dafür ist ___.",
+      "answer": "Migration",
+      "altAnswers": [
+        "Wanderung"
+      ],
+      "hints": [
+        "Denke sowohl an freiwillige als auch an erzwungene Ortswechsel.",
+        "Der Fachbegriff beginnt mit Mig."
+      ]
+    },
+    "gl6_30": {
+      "question": "Wer beim Einkaufen soziale und ökologische Folgen berücksichtigt, konsumiert ___.",
+      "answer": "bewusst",
+      "altAnswers": [
+        "nachhaltig",
+        "verantwortungsvoll"
+      ],
+      "hints": [
+        "Denke über Preis und Verpackung hinaus.",
+        "Auch Herstellung und spätere Entsorgung spielen eine Rolle."
+      ]
+    },
+    "gl6_32": {
+      "question": "Handel soll gerechte Arbeits- und Lebensbedingungen für Produzierende fördern. Man nennt ihn ___ Handel.",
+      "answer": "fairen",
+      "altAnswers": [
+        "fairen"
+      ],
+      "hints": [
+        "Denke an die Menschen, die ein Produkt herstellen.",
+        "Nicht nur der möglichst niedrige Preis soll zählen."
+      ]
+    },
+    "gl6_34": {
+      "question": "Menschen teilen Bräuche, Wissen und Erfahrungen über kulturelle Grenzen hinweg. Das nennt man kulturellen ___.",
+      "answer": "Austausch",
+      "altAnswers": [
+        "Austausch"
+      ],
+      "hints": [
+        "Denke an ein gegenseitiges Geben und Aufnehmen von Ideen.",
+        "Es geht nicht darum, dass alle Menschen gleich leben müssen."
+      ]
+    },
+    "gl6_36": {
+      "question": "Beim Klimaschutz müssen Länder zusammenarbeiten. Diese Zusammenarbeit über Ländergrenzen hinweg ist ___.",
+      "answer": "international",
+      "altAnswers": [
+        "grenzüberschreitend"
+      ],
+      "hints": [
+        "Denke an ein Problem, das nicht an der Landesgrenze endet.",
+        "Das gesuchte Wort bedeutet zwischen verschiedenen Ländern."
+      ]
+    },
+    "gl6_38": {
+      "question": "Menschen verlegen ihren Wohnort innerhalb eines Landes oder über eine Grenze. Der Oberbegriff dafür ist ___.",
+      "answer": "Migration",
+      "altAnswers": [
+        "Wanderung"
+      ],
+      "hints": [
+        "Denke sowohl an freiwillige als auch an erzwungene Ortswechsel.",
+        "Der Fachbegriff beginnt mit Mig."
+      ]
+    },
+    "gl6_40": {
+      "question": "Wer beim Einkaufen soziale und ökologische Folgen berücksichtigt, konsumiert ___.",
+      "answer": "bewusst",
+      "altAnswers": [
+        "nachhaltig",
+        "verantwortungsvoll"
+      ],
+      "hints": [
+        "Denke über Preis und Verpackung hinaus.",
+        "Auch Herstellung und spätere Entsorgung spielen eine Rolle."
+      ]
+    },
+    "gl6_42": {
+      "question": "Handel soll gerechte Arbeits- und Lebensbedingungen für Produzierende fördern. Man nennt ihn ___ Handel.",
+      "answer": "fairen",
+      "altAnswers": [
+        "fairen"
+      ],
+      "hints": [
+        "Denke an die Menschen, die ein Produkt herstellen.",
+        "Nicht nur der möglichst niedrige Preis soll zählen."
+      ]
+    },
+    "gl6_44": {
+      "question": "Menschen teilen Bräuche, Wissen und Erfahrungen über kulturelle Grenzen hinweg. Das nennt man kulturellen ___.",
+      "answer": "Austausch",
+      "altAnswers": [
+        "Austausch"
+      ],
+      "hints": [
+        "Denke an ein gegenseitiges Geben und Aufnehmen von Ideen.",
+        "Es geht nicht darum, dass alle Menschen gleich leben müssen."
+      ]
+    },
+    "gl6_46": {
+      "question": "Beim Klimaschutz müssen Länder zusammenarbeiten. Diese Zusammenarbeit über Ländergrenzen hinweg ist ___.",
+      "answer": "international",
+      "altAnswers": [
+        "grenzüberschreitend"
+      ],
+      "hints": [
+        "Denke an ein Problem, das nicht an der Landesgrenze endet.",
+        "Das gesuchte Wort bedeutet zwischen verschiedenen Ländern."
+      ]
+    },
+    "gl6_48": {
+      "question": "Menschen verlegen ihren Wohnort innerhalb eines Landes oder über eine Grenze. Der Oberbegriff dafür ist ___.",
+      "answer": "Migration",
+      "altAnswers": [
+        "Wanderung"
+      ],
+      "hints": [
+        "Denke sowohl an freiwillige als auch an erzwungene Ortswechsel.",
+        "Der Fachbegriff beginnt mit Mig."
+      ]
+    },
+    "gl6_50": {
+      "question": "Wer beim Einkaufen soziale und ökologische Folgen berücksichtigt, konsumiert ___.",
+      "answer": "bewusst",
+      "altAnswers": [
+        "nachhaltig",
+        "verantwortungsvoll"
+      ],
+      "hints": [
+        "Denke über Preis und Verpackung hinaus.",
+        "Auch Herstellung und spätere Entsorgung spielen eine Rolle."
+      ]
+    },
+    "wi6_2": {
+      "question": "Wie nennt man einen Plan für Einnahmen und Ausgaben?",
+      "answer": "Budget",
+      "altAnswers": [
+        "Haushaltsplan",
+        "Finanzplan"
+      ],
+      "hints": [
+        "Vergleiche das verfügbare Geld mit den geplanten Kosten.",
+        "Ein solcher Plan hilft, nicht mehr auszugeben als vorhanden ist."
+      ]
+    },
+    "wi6_4": {
+      "question": "Der Kauf und Verkauf von Waren zwischen Anbietern und Kundschaft heisst ___.",
+      "answer": "Handel",
+      "altAnswers": [
+        "Warenhandel"
+      ],
+      "hints": [
+        "Denke an Geschäfte, Märkte und den Austausch von Waren.",
+        "Der Begriff bezeichnet eine wirtschaftliche Tätigkeit."
+      ]
+    },
+    "wi6_6": {
+      "question": "Welches allgemeine Zahlungsmittel erleichtert den Tausch von Waren und Leistungen?",
+      "answer": "Geld",
+      "altAnswers": [
+        "Geld"
+      ],
+      "hints": [
+        "Man muss dadurch nicht immer Ware gegen Ware tauschen.",
+        "Es gibt es beispielsweise als Münzen und Banknoten."
+      ]
+    },
+    "wi6_8": {
+      "question": "Wie nennt man den Geldbetrag, den man für eine Ware bezahlen soll?",
+      "answer": "Preis",
+      "altAnswers": [
+        "Kaufpreis"
+      ],
+      "hints": [
+        "Denke an die Angabe in Franken neben einer Ware.",
+        "Die Angabe ist kein Gewicht und keine Menge."
+      ]
+    },
+    "wi6_10": {
+      "question": "Ein kaputtes Gerät wird instand gesetzt, statt weggeworfen. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur"
+      ],
+      "hints": [
+        "Denke daran, vorhandene Materialien länger zu nutzen.",
+        "Das alte Gerät soll wieder funktionieren."
+      ]
+    },
+    "wi6_12": {
+      "question": "Wie nennt man einen Plan für Einnahmen und Ausgaben?",
+      "answer": "Budget",
+      "altAnswers": [
+        "Haushaltsplan",
+        "Finanzplan"
+      ],
+      "hints": [
+        "Vergleiche das verfügbare Geld mit den geplanten Kosten.",
+        "Ein solcher Plan hilft, nicht mehr auszugeben als vorhanden ist."
+      ]
+    },
+    "wi6_14": {
+      "question": "Der Kauf und Verkauf von Waren zwischen Anbietern und Kundschaft heisst ___.",
+      "answer": "Handel",
+      "altAnswers": [
+        "Warenhandel"
+      ],
+      "hints": [
+        "Denke an Geschäfte, Märkte und den Austausch von Waren.",
+        "Der Begriff bezeichnet eine wirtschaftliche Tätigkeit."
+      ]
+    },
+    "wi6_16": {
+      "question": "Welches allgemeine Zahlungsmittel erleichtert den Tausch von Waren und Leistungen?",
+      "answer": "Geld",
+      "altAnswers": [
+        "Geld"
+      ],
+      "hints": [
+        "Man muss dadurch nicht immer Ware gegen Ware tauschen.",
+        "Es gibt es beispielsweise als Münzen und Banknoten."
+      ]
+    },
+    "wi6_18": {
+      "question": "Wie nennt man den Geldbetrag, den man für eine Ware bezahlen soll?",
+      "answer": "Preis",
+      "altAnswers": [
+        "Kaufpreis"
+      ],
+      "hints": [
+        "Denke an die Angabe in Franken neben einer Ware.",
+        "Die Angabe ist kein Gewicht und keine Menge."
+      ]
+    },
+    "wi6_20": {
+      "question": "Ein kaputtes Gerät wird instand gesetzt, statt weggeworfen. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur"
+      ],
+      "hints": [
+        "Denke daran, vorhandene Materialien länger zu nutzen.",
+        "Das alte Gerät soll wieder funktionieren."
+      ]
+    },
+    "wi6_22": {
+      "question": "Wie nennt man einen Plan für Einnahmen und Ausgaben?",
+      "answer": "Budget",
+      "altAnswers": [
+        "Haushaltsplan",
+        "Finanzplan"
+      ],
+      "hints": [
+        "Vergleiche das verfügbare Geld mit den geplanten Kosten.",
+        "Ein solcher Plan hilft, nicht mehr auszugeben als vorhanden ist."
+      ]
+    },
+    "wi6_24": {
+      "question": "Der Kauf und Verkauf von Waren zwischen Anbietern und Kundschaft heisst ___.",
+      "answer": "Handel",
+      "altAnswers": [
+        "Warenhandel"
+      ],
+      "hints": [
+        "Denke an Geschäfte, Märkte und den Austausch von Waren.",
+        "Der Begriff bezeichnet eine wirtschaftliche Tätigkeit."
+      ]
+    },
+    "wi6_26": {
+      "question": "Welches allgemeine Zahlungsmittel erleichtert den Tausch von Waren und Leistungen?",
+      "answer": "Geld",
+      "altAnswers": [
+        "Geld"
+      ],
+      "hints": [
+        "Man muss dadurch nicht immer Ware gegen Ware tauschen.",
+        "Es gibt es beispielsweise als Münzen und Banknoten."
+      ]
+    },
+    "wi6_28": {
+      "question": "Wie nennt man den Geldbetrag, den man für eine Ware bezahlen soll?",
+      "answer": "Preis",
+      "altAnswers": [
+        "Kaufpreis"
+      ],
+      "hints": [
+        "Denke an die Angabe in Franken neben einer Ware.",
+        "Die Angabe ist kein Gewicht und keine Menge."
+      ]
+    },
+    "wi6_30": {
+      "question": "Ein kaputtes Gerät wird instand gesetzt, statt weggeworfen. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur"
+      ],
+      "hints": [
+        "Denke daran, vorhandene Materialien länger zu nutzen.",
+        "Das alte Gerät soll wieder funktionieren."
+      ]
+    },
+    "wi6_32": {
+      "question": "Wie nennt man einen Plan für Einnahmen und Ausgaben?",
+      "answer": "Budget",
+      "altAnswers": [
+        "Haushaltsplan",
+        "Finanzplan"
+      ],
+      "hints": [
+        "Vergleiche das verfügbare Geld mit den geplanten Kosten.",
+        "Ein solcher Plan hilft, nicht mehr auszugeben als vorhanden ist."
+      ]
+    },
+    "wi6_34": {
+      "question": "Der Kauf und Verkauf von Waren zwischen Anbietern und Kundschaft heisst ___.",
+      "answer": "Handel",
+      "altAnswers": [
+        "Warenhandel"
+      ],
+      "hints": [
+        "Denke an Geschäfte, Märkte und den Austausch von Waren.",
+        "Der Begriff bezeichnet eine wirtschaftliche Tätigkeit."
+      ]
+    },
+    "wi6_36": {
+      "question": "Welches allgemeine Zahlungsmittel erleichtert den Tausch von Waren und Leistungen?",
+      "answer": "Geld",
+      "altAnswers": [
+        "Geld"
+      ],
+      "hints": [
+        "Man muss dadurch nicht immer Ware gegen Ware tauschen.",
+        "Es gibt es beispielsweise als Münzen und Banknoten."
+      ]
+    },
+    "wi6_38": {
+      "question": "Wie nennt man den Geldbetrag, den man für eine Ware bezahlen soll?",
+      "answer": "Preis",
+      "altAnswers": [
+        "Kaufpreis"
+      ],
+      "hints": [
+        "Denke an die Angabe in Franken neben einer Ware.",
+        "Die Angabe ist kein Gewicht und keine Menge."
+      ]
+    },
+    "wi6_40": {
+      "question": "Ein kaputtes Gerät wird instand gesetzt, statt weggeworfen. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur"
+      ],
+      "hints": [
+        "Denke daran, vorhandene Materialien länger zu nutzen.",
+        "Das alte Gerät soll wieder funktionieren."
+      ]
+    },
+    "wi6_42": {
+      "question": "Wie nennt man einen Plan für Einnahmen und Ausgaben?",
+      "answer": "Budget",
+      "altAnswers": [
+        "Haushaltsplan",
+        "Finanzplan"
+      ],
+      "hints": [
+        "Vergleiche das verfügbare Geld mit den geplanten Kosten.",
+        "Ein solcher Plan hilft, nicht mehr auszugeben als vorhanden ist."
+      ]
+    },
+    "wi6_44": {
+      "question": "Der Kauf und Verkauf von Waren zwischen Anbietern und Kundschaft heisst ___.",
+      "answer": "Handel",
+      "altAnswers": [
+        "Warenhandel"
+      ],
+      "hints": [
+        "Denke an Geschäfte, Märkte und den Austausch von Waren.",
+        "Der Begriff bezeichnet eine wirtschaftliche Tätigkeit."
+      ]
+    },
+    "wi6_46": {
+      "question": "Welches allgemeine Zahlungsmittel erleichtert den Tausch von Waren und Leistungen?",
+      "answer": "Geld",
+      "altAnswers": [
+        "Geld"
+      ],
+      "hints": [
+        "Man muss dadurch nicht immer Ware gegen Ware tauschen.",
+        "Es gibt es beispielsweise als Münzen und Banknoten."
+      ]
+    },
+    "wi6_48": {
+      "question": "Wie nennt man den Geldbetrag, den man für eine Ware bezahlen soll?",
+      "answer": "Preis",
+      "altAnswers": [
+        "Kaufpreis"
+      ],
+      "hints": [
+        "Denke an die Angabe in Franken neben einer Ware.",
+        "Die Angabe ist kein Gewicht und keine Menge."
+      ]
+    },
+    "wi6_50": {
+      "question": "Ein kaputtes Gerät wird instand gesetzt, statt weggeworfen. Diese Tätigkeit heisst ___.",
+      "answer": "Reparieren",
+      "altAnswers": [
+        "Reparatur"
+      ],
+      "hints": [
+        "Denke daran, vorhandene Materialien länger zu nutzen.",
+        "Das alte Gerät soll wieder funktionieren."
+      ]
+    },
+    "en6_1": {
+      "hints": [
+        "Vergleiche Quellen, die sich auf menschlichen Zeitskalen erneuern, mit endlichen Vorräten.",
+        "Überlege, ob die Quelle nach der Nutzung in absehbarer Zeit wieder verfügbar ist."
+      ]
+    },
+    "en6_3": {
+      "question": "Welche erneuerbare Quelle liefert in der Schweiz den grössten Anteil an der Stromerzeugung?",
+      "hints": [
+        "Denke an die natürlichen Bedingungen in einem Alpenland.",
+        "Gesucht ist eine Quelle, die auch grosse Speicherkraftwerke nutzen."
+      ]
+    },
+    "en6_18": {
+      "question": "Welches Treibhausgas entsteht beim Verbrennen von Benzin oder Diesel aus dem Kohlenstoff im Treibstoff?",
+      "answer": "Kohlenstoffdioxid",
+      "altAnswers": [
+        "Kohlendioxid",
+        "CO2",
+        "CO₂"
+      ],
+      "hints": [
+        "Kohlenstoff reagiert bei der Verbrennung mit Sauerstoff.",
+        "Gesucht ist ein Gas, das zum menschengemachten Treibhauseffekt beiträgt."
+      ]
+    },
+    "en6_22": {
+      "question": "Auf welche durchschnittliche Primärenergie-Dauerleistung pro Person zielt die 2000-Watt-Gesellschaft?",
+      "answer": "2000 Watt",
+      "altAnswers": [
+        "2000 W",
+        "2000",
+        "2 kW",
+        "2 Kilowatt"
+      ],
+      "hints": [
+        "Es geht um einen langfristigen Durchschnitt, nicht um die Leistung eines einzelnen Geräts.",
+        "Die gesuchte Grösse ist eine Leistung pro Person, keine Energiemenge in Kilowattstunden."
+      ]
+    },
+    "en6_34": {
+      "answer": "Anstieg des Meeresspiegels vor allem durch die Erwärmung des Meerwassers und das Schmelzen von Eis auf dem Land",
+      "hints": [
+        "Wärmeres Wasser braucht mehr Platz.",
+        "Unterscheide schwimmendes Eis von Gletschern und Eisschilden auf dem Land."
+      ]
+    },
+    "en6_41": {
+      "options": [
+        "Solaranlagen auf Hausdächern",
+        "Windkraftanlagen im Meer, wo Wind stärker und konstanter weht",
+        "Wasserkraftwerke an Bergflüssen",
+        "Geothermieanlagen im Untergrund"
+      ]
+    },
+    "en6_45": {
+      "question": "Welches Treibhausgas entsteht bei der Verdauung von Wiederkäuern wie Kühen?",
+      "answer": "Methan",
+      "options": [
+        "Methan",
+        "Sauerstoff",
+        "Helium",
+        "Neon"
+      ],
+      "hints": [
+        "Mikroorganismen im Verdauungssystem bauen pflanzliche Nahrung ab.",
+        "Dabei entsteht ein Gas aus Kohlenstoff und Wasserstoff."
+      ]
+    },
+    "en6_46": {
+      "hints": [
+        "Denke an Kohlenstoff, der in Pflanzen und Böden an Küsten gebunden wird.",
+        "Solche Lebensräume liegen im Übergang zwischen Land und Meer."
+      ]
+    },
+    "g6sg2q": {
+      "spokenPrompt": "Was ist die Schweizer Exportquote?",
+      "verbatimSpeech": true
+    },
+    "g6sg3h": {
+      "spokenPrompt": "Was ist Landesindex der Konsumentenpreise (LIK)?",
+      "verbatimSpeech": true
+    },
+    "lo6_3": {
+      "spokenPrompt": "Was ist Reflexion?",
+      "verbatimSpeech": true
+    },
+    "lo6_24": {
+      "spokenPrompt": "Was ist ein konvexer Spiegel?",
+      "verbatimSpeech": true
+    },
+    "en6_8": {
+      "spokenPrompt": "Was ist Kohlendioxid-Fussabdruck?",
+      "verbatimSpeech": true
+    },
+    "en6_23": {
+      "spokenPrompt": "Welcher Sektor emittiert global am meisten Kohlendioxid?",
+      "verbatimSpeech": true
+    },
+    "en6_31": {
+      "spokenPrompt": "Welcher Anteil der weltweiten Stromerzeugung kam ungefähr im Jahr zweitausenddreiundzwanzig aus erneuerbaren Quellen?",
+      "verbatimSpeech": true
+    },
+    "wi6_27": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Ein Budget: Welche Aussage passt?",
+      "verbatimSpeech": true
+    },
+    "wi6_29": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Handel: Welche Aussage passt?",
+      "verbatimSpeech": true
+    },
+    "wi6_31": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Geld: Was trifft zu?",
+      "verbatimSpeech": true
+    },
+    "wi6_33": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Ein Preis: Was trifft zu?",
+      "verbatimSpeech": true
+    },
+    "wi6_35": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Reparieren: Was trifft zu?",
+      "verbatimSpeech": true
+    },
+    "wi6_37": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Ein Budget: Ergänze die passende Eigenschaft oder Wirkung: … Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "wi6_39": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Handel: Ergänze die passende Eigenschaft oder Wirkung: … Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
+    },
+    "wi6_41": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Geld: Welche Beschreibung ist richtig?",
+      "verbatimSpeech": true
+    },
+    "wi6_43": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Ein Preis: Welche Beschreibung ist richtig?",
+      "verbatimSpeech": true
+    },
+    "wi6_45": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Reparieren: Welche Beschreibung ist richtig?",
+      "verbatimSpeech": true
+    },
+    "wi6_47": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Lerncheck 47: Ein Budget – welche Aussage stimmt?",
+      "verbatimSpeech": true
+    },
+    "wi6_49": {
+      "spokenPrompt": "Wirtschaft im Alltag: Praxisrunde: Lerncheck 49: Handel – welche Aussage stimmt?",
+      "verbatimSpeech": true
+    },
+    "mf6_44": {
+      "spokenPrompt": "Was ist Segregation im städtischen Kontext?",
+      "verbatimSpeech": true
+    },
+    "zh6_3": {
+      "spokenPrompt": "Was ist Kohlendioxid?",
+      "verbatimSpeech": true
+    },
+    "g6-science-weltall-g5weltall-norm-16": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-18": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-20": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-22": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-24": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-26": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-28": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-30": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-32": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-34": {
+      "altAnswers": [
+        "kontinuierliches",
+        "fortlaufendes"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-36": {
+      "altAnswers": [
+        "Aufgaben",
+        "Arbeitsschritte"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-38": {
+      "altAnswers": [
+        "Aufgaben",
+        "Arbeitsschritte"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-40": {
+      "altAnswers": [
+        "Aufgaben",
+        "Arbeitsschritte"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-42": {
+      "altAnswers": [
+        "Aufgaben",
+        "Arbeitsschritte"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-44": {
+      "altAnswers": [
+        "Aufgaben",
+        "Arbeitsschritte"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-46": {
+      "altAnswers": [
+        "Aufgaben",
+        "Arbeitsschritte"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-48": {
+      "altAnswers": [
+        "Aufgaben",
+        "Arbeitsschritte"
+      ]
+    },
+    "g6-science-weltall-g5weltall-norm-50": {
+      "altAnswers": [
+        "Aufgaben",
+        "Arbeitsschritte"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-2": {
+      "altAnswers": [
+        "Spannung"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-6": {
+      "altAnswers": [
+        "elektrische Energie"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-10": {
+      "altAnswers": [
+        "Aluminium",
+        "Metall"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-16": {
+      "altAnswers": [
+        "Nichtleiter"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-18": {
+      "altAnswers": [
+        "in Reihe",
+        "in Serie"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-24": {
+      "altAnswers": [
+        "Stromwege",
+        "Zweige"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-26": {
+      "altAnswers": [
+        "Nichtleiter"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-32": {
+      "altAnswers": [
+        "Akkumulator"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-34": {
+      "altAnswers": [
+        "Strommessgerät",
+        "Stromstärkemessgerät"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-40": {
+      "altAnswers": [
+        "lebensgefährlich",
+        "tödlich"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-42": {
+      "altAnswers": [
+        "Strom"
+      ]
+    },
+    "g6-science-strom-elektrizitaet-g5strom-norm-46": {
+      "altAnswers": [
+        "kW"
+      ]
+    },
+    "nz6_1": {
+      "hints": [
+        "Denke an die Wiederaufnahme antiker Ideen in Kunst und Wissenschaft.",
+        "Vergleiche eine kulturelle Bewegung mit einer einzelnen Erfindung."
+      ]
+    },
+    "nz6_2": {
+      "question": "Welche Drucktechnik entwickelte Gutenberg um 1450 in Europa weiter?",
+      "altAnswers": [
+        "Buchdruck",
+        "Buchdruck mit beweglichen Lettern",
+        "Druck mit beweglichen Metalllettern"
+      ],
+      "hints": [
+        "Denke an wiederverwendbare Zeichen für die Herstellung vieler Buchseiten.",
+        "Die Technik erleichterte die Vervielfältigung von Texten."
+      ]
+    },
+    "nz6_8": {
+      "altAnswers": [
+        "Freiheit, Gleichheit, Brüderlichkeit",
+        "Liberté, Égalité, Fraternité"
+      ],
+      "hints": [
+        "Denke an die bekannte dreiteilige Losung der Revolution.",
+        "Es geht um Selbstbestimmung, gleiche Rechte und Zusammenhalt."
+      ]
+    },
+    "nz6_9": {
+      "question": "Welcher Wissenschaftler veröffentlichte 1543 ein Werk, das die Sonne in den Mittelpunkt des Planetensystems stellte?",
+      "hints": [
+        "Gesucht ist ein Gelehrter, der vor Galileis Fernrohrbeobachtungen lebte.",
+        "Sein Modell widersprach der damaligen Vorstellung von der Erde im Zentrum."
+      ]
+    },
+    "nz6_14": {
+      "altAnswers": [
+        "Rousseau"
+      ],
+      "hints": [
+        "Gesucht ist ein in Genf geborener Denker der Aufklärung.",
+        "Er beschäftigte sich damit, wie politische Herrschaft durch das Volk begründet werden kann."
+      ]
+    },
+    "nz6_19": {
+      "question": "Welcher Begriff bezeichnet eine Sichtweise, die Gott statt des Menschen in den Mittelpunkt stellt?"
+    },
+    "nz6_21": {
+      "question": "Welche Folgen hatte die Ankunft von Kolumbus in Amerika für Europa?",
+      "answer": "Neue transatlantische Handelswege, europäische Kolonisierung Amerikas und Ausweitung des versklavenden Menschenhandels",
+      "options": [
+        "Eine Abschaffung aller europäischen Königreiche",
+        "Neue transatlantische Handelswege, europäische Kolonisierung Amerikas und Ausweitung des versklavenden Menschenhandels",
+        "Das Ende sämtlicher Kriege",
+        "Die sofortige Gleichberechtigung aller Menschen"
+      ],
+      "hints": [
+        "Betrachte wirtschaftliche Verbindungen und Machtverhältnisse auf beiden Seiten des Atlantiks.",
+        "Berücksichtige auch Gewalt und Ausbeutung, nicht nur neue Waren."
+      ]
+    },
+    "nz6_24": {
+      "question": "Welche vier grossen Monde entdeckte Galilei 1610 mit dem Fernrohr: Monde des Jupiter oder der Erde? Schreibe nur den Planetennamen.",
+      "answer": "Jupiter",
+      "altAnswers": [
+        "des Jupiter"
+      ],
+      "hints": [
+        "Die Beobachtung zeigte, dass nicht alle Himmelskörper die Erde umkreisen.",
+        "Gesucht ist der grösste Planet unseres Sonnensystems."
+      ]
+    },
+    "nz6_30": {
+      "question": "In welchem Jahr entstand die Schweiz als moderner Bundesstaat?"
+    },
+    "nz6_36": {
+      "answer": "Eine Revolution verändert die politische oder gesellschaftliche Ordnung grundlegend; eine Reform verändert Teile innerhalb einer bestehenden Ordnung",
+      "hints": [
+        "Vergleiche den Umfang der Veränderung, nicht nur ihre Geschwindigkeit.",
+        "Auch eine grundlegende Umgestaltung kann ohne Gewalt verlaufen."
+      ]
+    },
+    "nz6_39": {
+      "question": "Was bedeutete das Legitimitätsprinzip des Wiener Kongresses?",
+      "answer": "Die früheren Herrscherdynastien sollten als rechtmässige Herrscher wieder eingesetzt werden",
+      "options": [
+        "Die früheren Herrscherdynastien sollten als rechtmässige Herrscher wieder eingesetzt werden",
+        "Alle Staaten sollten dieselbe Sprache sprechen",
+        "Jede Regierung sollte täglich neu gewählt werden",
+        "Alle Grenzen sollten verschwinden"
+      ]
+    },
+    "dm6_1": {
+      "hints": [
+        "Denke daran, wer politische Entscheidungen legitimiert.",
+        "Vergleiche die Beteiligung der Bevölkerung mit der Herrschaft einer einzelnen Person."
+      ]
+    },
+    "dm6_6": {
+      "question": "Wie viele gültige Unterschriften braucht eine eidgenössische Volksinitiative innerhalb von 18 Monaten? Schreibe die Zahl.",
+      "answer": "100000",
+      "altAnswers": [
+        "100'000",
+        "100 000",
+        "100.000"
+      ],
+      "hints": [
+        "Unterscheide die Bundesebene von kantonalen Volksinitiativen.",
+        "Es sind doppelt so viele wie beim fakultativen Referendum auf Bundesebene."
+      ]
+    },
+    "dm6_7": {
+      "question": "Wie kann ein fakultatives Referendum gegen ein Bundesgesetz zustande kommen?",
+      "answer": "Durch 50'000 gültige Unterschriften oder das Verlangen von acht Kantonen innerhalb von 100 Tagen",
+      "options": [
+        "Durch 50'000 gültige Unterschriften oder das Verlangen von acht Kantonen innerhalb von 100 Tagen",
+        "Durch eine einzelne anonyme Nachricht",
+        "Nur durch die Zustimmung aller europäischen Staaten",
+        "Automatisch bei jedem Bundesgesetz"
+      ],
+      "hints": [
+        "Es gibt einen Weg über Stimmberechtigte und einen über Kantone.",
+        "Das Begehren muss innerhalb einer gesetzlichen Frist eingereicht werden."
+      ]
+    },
+    "dm6_13": {
+      "hints": [
+        "Denke an persönliche ethische und religiöse Überzeugungen.",
+        "Unterscheide die Freiheit innerer Überzeugungen von Regeln für äusseres Handeln."
+      ]
+    },
+    "dm6_16": {
+      "hints": [
+        "Vergleiche eine Volksabstimmung mit einem Entscheid gewählter Parlamentsmitglieder.",
+        "In einem Staat können beide Formen miteinander verbunden sein."
+      ]
+    },
+    "dm6_23": {
+      "question": "Was schützt die absolute parlamentarische Immunität in der Schweiz?",
+      "answer": "Äusserungen von Parlamentsmitgliedern in der Bundesversammlung und ihren Organen vor rechtlicher Verantwortlichkeit",
+      "options": [
+        "Äusserungen von Parlamentsmitgliedern in der Bundesversammlung und ihren Organen vor rechtlicher Verantwortlichkeit",
+        "Jede private Handlung eines Politikers",
+        "Alle Verkehrsverstösse von Kandidierenden",
+        "Nur die Gesundheit der Abgeordneten"
+      ]
+    },
+    "dm6_28": {
+      "answer": "Ungerechtfertigte Benachteiligung von Menschen aufgrund persönlicher oder zugeschriebener Merkmale",
+      "hints": [
+        "Unterscheide sachlich begründete Regeln von ungerechter Benachteiligung.",
+        "Betrachte etwa Herkunft, Geschlecht, Religion oder Behinderung."
+      ]
+    },
+    "dm6_32": {
+      "question": "Was bedeutet das Öffentlichkeitsprinzip bei Behörden?",
+      "answer": "Grundsätzlich Zugang zu amtlichen Dokumenten erhalten, soweit keine gesetzlichen Ausnahmen entgegenstehen",
+      "hints": [
+        "Denke an Transparenz staatlichen Handelns.",
+        "Der Schutz persönlicher Daten kann den Zugang begrenzen."
+      ]
+    },
+    "dm6_43": {
+      "answer": "Verantwortung zum Schutz vor Völkermord, Kriegsverbrechen, ethnischen Säuberungen und Verbrechen gegen die Menschlichkeit im Rahmen der UN-Charta",
+      "options": [
+        "Verantwortung zum Schutz vor Völkermord, Kriegsverbrechen, ethnischen Säuberungen und Verbrechen gegen die Menschlichkeit im Rahmen der UN-Charta",
+        "Erlaubnis für jeden Staat, beliebig Krieg zu führen",
+        "Pflicht zur Abschaffung aller Landesgrenzen",
+        "Ein internationales Steuerabkommen"
+      ],
+      "hints": [
+        "Zuerst trägt jeder Staat Verantwortung für den Schutz seiner Bevölkerung.",
+        "Vorbeugung, internationale Hilfe und die Regeln der Vereinten Nationen sind wichtig."
+      ]
+    },
+    "dm6_45": {
+      "question": "Was ist der Internationale Strafgerichtshof (ICC)?"
+    },
+    "ko6_10": {
+      "hints": [
+        "Denke an den eisbedeckten Kontinent rund um den Südpol.",
+        "Der Antarktisvertrag regelt friedliche Nutzung und Forschung; bestehende Gebietsansprüche bleiben ungeklärt."
+      ]
+    },
+    "ko6_16": {
+      "answer": "Die Region Afrikas südlich der Sahara",
+      "hints": [
+        "Unterscheide die Wüstenregion im Norden von den weiter südlich gelegenen Gebieten.",
+        "Die Bezeichnung umfasst viele unterschiedliche Länder und Lebensräume."
+      ]
+    },
+    "ko6_23": {
+      "answer": "Teile Amerikas, die vor allem durch spanische, portugiesische oder französische Sprache und Kolonialgeschichte geprägt sind",
+      "options": [
+        "Teile Amerikas, die vor allem durch spanische, portugiesische oder französische Sprache und Kolonialgeschichte geprägt sind",
+        "Alle Länder nördlich des Polarkreises",
+        "Nur Kanada und die USA",
+        "Eine Inselgruppe im Indischen Ozean"
+      ],
+      "hints": [
+        "Denke auch an Teile der Karibik.",
+        "Der Begriff verbindet sprachliche und geschichtliche Merkmale."
+      ]
+    },
+    "ko6_26": {
+      "answer": "China ist eine der grössten Volkswirtschaften und ein bedeutender Hersteller und Exporteur von Waren",
+      "hints": [
+        "Betrachte die Herstellung von Produkten und den Handel mit anderen Ländern.",
+        "Wirtschaftliche Ranglisten hängen auch davon ab, wie man vergleicht."
+      ]
+    },
+    "ko6_29": {
+      "hints": [
+        "Weniger Meereis kann die Nutzung bestimmter Routen zeitweise erleichtern.",
+        "Eis, Wetter, Umweltschutz und unterschiedliche Gebietsansprüche bleiben wichtig."
+      ]
+    },
+    "ko6_31": {
+      "hints": [
+        "Der Fluss entspringt in China und erreicht über Südostasien das Meer.",
+        "Er bildet stellenweise Landesgrenzen und ist wichtig für Fischerei und Landwirtschaft."
+      ]
+    },
+    "ko6_34": {
+      "answer": "Eine vielfältige Region Afrikas, in der unter anderem Kenia, Ruanda und Äthiopien in Infrastruktur und Wirtschaft investieren",
+      "hints": [
+        "Vergleiche unterschiedliche Länder statt eine Entwicklung auf die ganze Region zu übertragen.",
+        "Wachstum kann sich je nach Land, Zeitraum und Wirtschaftsbereich unterscheiden."
+      ]
+    },
+    "ko6_35": {
+      "answer": "In einer häufigen Einteilung: Kasachstan, Usbekistan, Turkmenistan, Tadschikistan und Kirgisistan",
+      "options": [
+        "In einer häufigen Einteilung: Kasachstan, Usbekistan, Turkmenistan, Tadschikistan und Kirgisistan",
+        "Nur Australien und Neuseeland",
+        "Kanada, USA und Mexiko",
+        "Spanien, Portugal und Frankreich"
+      ]
+    },
+    "ko6_37": {
+      "hints": [
+        "Unterscheide eine geopolitische These von einem bewiesenen Naturgesetz.",
+        "Die Theorie betont die strategische Bedeutung des Inneren Eurasiens."
+      ]
+    },
+    "ko6_39": {
+      "hints": [
+        "Denke an die wachsende Bedeutung von Wirtschaft und Politik im asiatisch-pazifischen Raum.",
+        "Der Ausdruck beschreibt eine These über die Zukunft, keine sichere Vorhersage."
+      ]
+    },
+    "ko6_40": {
+      "answer": "Ein Staat, dessen Institutionen zentrale Aufgaben wie Sicherheit und öffentliche Versorgung nicht mehr ausreichend erfüllen",
+      "hints": [
+        "Vergleiche vorhandene staatliche Institutionen mit ihrer tatsächlichen Handlungsfähigkeit.",
+        "Der Begriff ist umstritten und beschreibt keine unveränderliche Eigenschaft eines Landes."
+      ]
+    },
+    "ko6_45": {
+      "answer": "Veränderungen von Schnee und Gletschern können die saisonale Wasserversorgung in Flusseinzugsgebieten beeinflussen",
+      "options": [
+        "Veränderungen von Schnee und Gletschern können die saisonale Wasserversorgung in Flusseinzugsgebieten beeinflussen",
+        "Gletscher erzeugen unbegrenzt neues Wasser",
+        "Alle Flüsse versiegen überall gleichzeitig",
+        "Meerwasser fliesst bergauf in die Gletscher"
+      ],
+      "hints": [
+        "Denke an Schnee und Eis als Speicher für verschiedene Jahreszeiten.",
+        "Die Folgen hängen auch von Niederschlag, Nutzung und der jeweiligen Region ab."
+      ]
+    },
+    "ko6_47": {
+      "answer": "Eine Situation, in der nutzbares Wasser im Verhältnis zum Bedarf knapp ist",
+      "options": [
+        "Eine Situation, in der nutzbares Wasser im Verhältnis zum Bedarf knapp ist",
+        "Ein Gebirge zwischen Europa und Asien",
+        "Ein anderer Name für die Gezeiten",
+        "Ein Zustand, in dem jedes Wasser immer trinkbar ist"
+      ],
+      "hints": [
+        "Vergleiche verfügbares Wasser mit Haushalten, Landwirtschaft und Industrie.",
+        "Auch Verschmutzung kann die nutzbare Menge verringern."
+      ]
+    },
+    "ko6_48": {
+      "hints": [
+        "Betrachte die zusammenhängende Landmasse zweier Kontinente.",
+        "Verkehrswege verbinden dort viele unterschiedliche Staaten und Wirtschaftsräume."
+      ]
+    },
+    "mf6_1": {
+      "answer": "Vorübergehende oder dauerhafte Verlegung des gewöhnlichen Wohnorts innerhalb eines Landes oder über Grenzen hinweg",
+      "options": [
+        "Vorübergehende oder dauerhafte Verlegung des gewöhnlichen Wohnorts innerhalb eines Landes oder über Grenzen hinweg",
+        "Jeder tägliche Weg zur Schule",
+        "Nur eine Ferienreise mit Rückkehr nach Hause",
+        "Ausschliesslich ein Telefonanruf ins Ausland"
+      ],
+      "hints": [
+        "Achte darauf, ob sich der gewöhnliche Wohnort verändert.",
+        "Ein Ortswechsel kann freiwillige oder erzwungene Gründe haben."
+      ]
+    },
+    "mf6_5": {
+      "hints": [
+        "Denke an eine Organisation der Vereinten Nationen mit Schutzauftrag.",
+        "Sie arbeitet mit Staaten und anderen Organisationen an Hilfe und dauerhaften Lösungen."
+      ]
+    },
+    "mf6_7": {
+      "answer": "Bedingungen am Herkunftsort, die Menschen zum Weggehen bewegen können, etwa Unsicherheit, Armut oder fehlende Arbeit",
+      "options": [
+        "Bedingungen am Herkunftsort, die Menschen zum Weggehen bewegen können, etwa Unsicherheit, Armut oder fehlende Arbeit",
+        "Nur schöne Ferienbilder aus dem Zielland",
+        "Eine automatische Pflicht für alle Menschen umzuziehen",
+        "Ausschliesslich der Preis eines Flugtickets"
+      ]
+    },
+    "mf6_14": {
+      "answer": "Verlegung des Wohnorts wegen einer Erwerbstätigkeit innerhalb eines Landes oder über eine Landesgrenze hinweg"
+    },
+    "mf6_17": {
+      "answer": "Wohnortwechsel, bei denen Folgen des Klimawandels eine wichtige Rolle spielen",
+      "options": [
+        "Wohnortwechsel, bei denen Folgen des Klimawandels eine wichtige Rolle spielen",
+        "Jede Fahrt bei Regen",
+        "Ausschliesslich Ferien in warmen Ländern",
+        "Eine tägliche Wettervorhersage"
+      ],
+      "hints": [
+        "Klimafolgen können mit wirtschaftlichen und sozialen Gründen zusammenwirken.",
+        "Prognosen hängen von Annahmen ab; nicht jede betroffene Person hat einen rechtlichen Flüchtlingsstatus."
+      ]
+    },
+    "mf6_19": {
+      "answer": "Abwanderung gut ausgebildeter Menschen, wodurch am Herkunftsort Fachwissen und Fachkräfte fehlen können",
+      "options": [
+        "Abwanderung gut ausgebildeter Menschen, wodurch am Herkunftsort Fachwissen und Fachkräfte fehlen können",
+        "Ein Austausch von Kochrezepten",
+        "Nur eine kurzfristige Ferienreise",
+        "Eine Methode zur Wettervorhersage"
+      ]
+    },
+    "mf6_27": {
+      "answer": "Migration, bei der bestehende Kontakte zu bereits Zugewanderten weitere Ortswechsel erleichtern",
+      "options": [
+        "Migration, bei der bestehende Kontakte zu bereits Zugewanderten weitere Ortswechsel erleichtern",
+        "Eine automatische Einreisebewilligung für alle Bekannten",
+        "Ein Verbot von Familienkontakten",
+        "Ausschliesslich ein täglicher Arbeitsweg"
+      ],
+      "hints": [
+        "Kontakte können Informationen, Orientierung oder Unterstützung bieten.",
+        "Aufenthaltsrechte hängen trotzdem von den geltenden Gesetzen ab."
+      ]
+    },
+    "mf6_32": {
+      "answer": "Freiheitsentzug unter gesetzlichen Voraussetzungen zur Sicherung einer Weg- oder Ausweisung",
+      "hints": [
+        "Unterscheide eine strafrechtliche Verurteilung von einer ausländerrechtlichen Massnahme.",
+        "Auch solche Massnahmen unterliegen rechtlichen Grenzen und gerichtlicher Kontrolle."
+      ]
+    },
+    "mf6_33": {
+      "hints": [
+        "Denke an den Erwerb des Bürgerrechts durch ein gesetzliches Verfahren.",
+        "In der Schweiz unterscheiden sich die Voraussetzungen je nach Einbürgerungsverfahren."
+      ]
+    },
+    "mf6_36": {
+      "question": "Was besagt das Recht auf Rückkehr nach Artikel 13 der Allgemeinen Erklärung der Menschenrechte?",
+      "answer": "Jeder Mensch hat das Recht, in sein eigenes Land zurückzukehren",
+      "hints": [
+        "Unterscheide das Verlassen eines Landes von der Rückkehr in das eigene Land.",
+        "Das Recht ist nicht auf eine bestimmte Gruppe von Vertriebenen beschränkt."
+      ]
+    },
+    "mf6_39": {
+      "answer": "Anwerbung, Beförderung oder Aufnahme von Menschen zum Zweck der Ausbeutung, etwa durch Zwang, Täuschung oder Ausnutzung einer Notlage",
+      "options": [
+        "Anwerbung, Beförderung oder Aufnahme von Menschen zum Zweck der Ausbeutung, etwa durch Zwang, Täuschung oder Ausnutzung einer Notlage",
+        "Jeder freiwillige Stellenwechsel",
+        "Eine normale Fahrkarte für den Zug",
+        "Eine legale Urlaubsbuchung"
+      ],
+      "hints": [
+        "Entscheidend ist die beabsichtigte Ausbeutung, nicht bloss eine Reise.",
+        "Für den Schutz von Kindern gelten besonders strenge Regeln."
+      ]
+    },
+    "mf6_48": {
+      "answer": "Das Zusammenwirken verschiedener Formen von Benachteiligung, etwa aufgrund von Herkunft, Geschlecht und sozialer Lage",
+      "hints": [
+        "Betrachte, wie sich verschiedene gesellschaftliche Zuschreibungen gegenseitig beeinflussen können.",
+        "Benachteiligungen lassen sich nicht einfach als feste Anzahl zusammenzählen."
+      ]
+    },
+    "mf6_11": {
+      "hints": [
+        "Denke an Geld, Wissen und Kontakte zwischen Herkunfts- und Aufnahmeland.",
+        "Solche Verbindungen können Familien unterstützen, ersetzen aber nicht jede andere Entwicklungsmassnahme."
+      ]
+    },
+    "mf6_49": {
+      "hints": [
+        "Denke an Geld, Wissen und Kontakte zwischen Herkunfts- und Aufnahmeland.",
+        "Solche Verbindungen können Familien unterstützen, ersetzen aber nicht jede andere Entwicklungsmassnahme."
+      ]
+    },
+    "mf6_29": {
+      "hints": [
+        "Achte darauf, ob eine Staatsgrenze überschritten wurde.",
+        "Auch innerhalb eines Landes vertriebene Menschen brauchen Schutz."
+      ]
+    },
+    "zh6_6": {
+      "question": "Was versteht man unter dem heutigen beschleunigten Artensterben?",
+      "answer": "Das verstärkte Verschwinden von Arten, zu dem menschliche Eingriffe in Lebensräume wesentlich beitragen",
+      "hints": [
+        "Unterscheide natürliche Veränderungen über lange Zeit von der heutigen Geschwindigkeit.",
+        "Lebensraumverlust, Übernutzung und Verschmutzung spielen eine Rolle."
+      ]
+    },
+    "zh6_9": {
+      "hints": [
+        "Vergleiche die Zahl der Geburten mit der Zahl der Sterbefälle.",
+        "Zukunftszahlen beruhen auf Annahmen und können sich ändern."
+      ]
+    },
+    "zh6_10": {
+      "answer": "Nutzbares Wasser reicht im Verhältnis zum Bedarf von Menschen und Umwelt nicht ausreichend aus",
+      "hints": [
+        "Denke neben Trinkwasser auch an Landwirtschaft und Ökosysteme.",
+        "Jahreszeiten, Wasserqualität und Verteilung beeinflussen die Versorgung."
+      ]
+    },
+    "zh6_12": {
+      "hints": [
+        "Es geht nicht nur um die vorhandene Menge, sondern auch um sicheren Zugang.",
+        "Qualität und Verlässlichkeit der Versorgung gehören dazu."
+      ]
+    },
+    "zh6_20": {
+      "hints": [
+        "Vergleiche einen Behördengang vor Ort mit einem digitalen Verfahren.",
+        "Zugänglichkeit, Datenschutz und Sicherheit müssen berücksichtigt werden."
+      ]
+    },
+    "zh6_21": {
+      "hints": [
+        "Vergleiche die Verteilung von Einkommen, Vermögen und Chancen.",
+        "Starke Unterschiede können Vertrauen und gesellschaftliche Teilhabe erschweren."
+      ]
+    },
+    "zh6_22": {
+      "hints": [
+        "Denke an Gegenstände, die nach einer Mission in einer Umlaufbahn bleiben.",
+        "Auch kleine Teile können wegen ihrer hohen Geschwindigkeit gefährlich sein."
+      ]
+    },
+    "zh6_23": {
+      "hints": [
+        "Nicht der menschliche Körper, sondern Bakterien können widerstandsfähig werden.",
+        "Ein gezielter Einsatz von Antibiotika hilft, die Entwicklung von Resistenzen zu begrenzen."
+      ]
+    },
+    "zh6_26": {
+      "hints": [
+        "Denke daran, wie Abfälle aus dem Alltag in Flüsse und Meere gelangen.",
+        "Kunststoff kann lange bestehen bleiben und in immer kleinere Teile zerfallen."
+      ]
+    },
+    "zh6_29": {
+      "hints": [
+        "Denke an mehrere Politikbereiche, nicht nur an ein einzelnes Kraftwerk.",
+        "Der Plan verbindet Klimaziele mit Veränderungen von Wirtschaft und Ressourcennutzung."
+      ]
+    },
+    "zh6_31": {
+      "question": "Warum kann eine wachsende Weltbevölkerung die Versorgung vor Herausforderungen stellen?",
+      "answer": "Mehr Menschen benötigen Nahrung, Wasser und Energie; auch Verbrauch und Verteilung bestimmen die Belastung",
+      "options": [
+        "Mehr Menschen benötigen Nahrung, Wasser und Energie; auch Verbrauch und Verteilung bestimmen die Belastung",
+        "Die Zukunft ist unabhängig von allen Entscheidungen festgelegt",
+        "Jeder Mensch verbraucht überall genau gleich viel",
+        "Technik und gerechte Verteilung können nichts verändern"
+      ],
+      "hints": [
+        "Betrachte die Anzahl Menschen gemeinsam mit ihrem Verbrauch.",
+        "Unterschiedliche Entwicklungen sind möglich; Prognosen sind keine Gewissheiten."
+      ]
+    },
+    "zh6_37": {
+      "hints": [
+        "Das Modell beschreibt Belastungsgrenzen verschiedener Erdsysteme.",
+        "Es geht beispielsweise um Klima, biologische Vielfalt und Stoffkreisläufe."
+      ]
+    },
+    "mf6_50": {
+      "answer": "Menschenrechte gelten auch für Zugewanderte; ungerechtfertigte Benachteiligung aufgrund persönlicher Merkmale ist unzulässig",
+      "hints": [
+        "Unterscheide Menschenrechte von sachlich begründeten Regeln für bestimmte Aufenthaltsverfahren.",
+        "Die Würde und grundlegenden Rechte eines Menschen hängen nicht von seinen Papieren ab."
+      ]
+    },
+    "mf6_31": {
+      "question": "Welche der folgenden Ländergruppen war 2023 stark von Krieg oder bewaffneten Konflikten und Flucht betroffen?",
+      "answer": "Syrien, Afghanistan, Ukraine, Sudan, Myanmar (2023)",
+      "hints": [
+        "Gesucht sind Beispiele, keine vollständige Rangliste aller Herkunftsländer.",
+        "Achte auf den in der Frage genannten Zeitraum."
+      ]
+    },
+    "nz6_10": {
+      "question": "Leonardo da Vinci zeichnete Entwürfe für Flugmaschinen. Waren dies vor allem Skizzen oder bereits serienmässig gebaute Flugzeuge? Schreibe eines der beiden Wörter.",
+      "answer": "Skizzen",
+      "altAnswers": [
+        "Entwürfe"
+      ],
+      "hints": [
+        "Vergleiche eine Zeichnung mit einer tatsächlich hergestellten Maschine.",
+        "Nicht jede Idee wurde zu seinen Lebzeiten gebaut."
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-2": {
+      "altAnswers": [
+        "Glaubensvorstellungen",
+        "Glaubensüberzeugungen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-4": {
+      "altAnswers": [
+        "Glaubensvorstellungen",
+        "Glaubensüberzeugungen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-6": {
+      "altAnswers": [
+        "Glaubensvorstellungen",
+        "Glaubensüberzeugungen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-8": {
+      "altAnswers": [
+        "Glaubensvorstellungen",
+        "Glaubensüberzeugungen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-10": {
+      "altAnswers": [
+        "Glaubensvorstellungen",
+        "Glaubensüberzeugungen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-12": {
+      "altAnswers": [
+        "Glaubensvorstellungen",
+        "Glaubensüberzeugungen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-14": {
+      "altAnswers": [
+        "Glaubensvorstellungen",
+        "Glaubensüberzeugungen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-16": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-18": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-20": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-22": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-24": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-26": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-28": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-30": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-32": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-34": {
+      "altAnswers": [
+        "ergänzen",
+        "beeinflussen",
+        "vermischen"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-36": {
+      "altAnswers": [
+        "Herabsetzung",
+        "Herabwürdigung"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-38": {
+      "altAnswers": [
+        "Herabsetzung",
+        "Herabwürdigung"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-40": {
+      "altAnswers": [
+        "Herabsetzung",
+        "Herabwürdigung"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-42": {
+      "altAnswers": [
+        "Herabsetzung",
+        "Herabwürdigung"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-44": {
+      "altAnswers": [
+        "Herabsetzung",
+        "Herabwürdigung"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-46": {
+      "altAnswers": [
+        "Herabsetzung",
+        "Herabwürdigung"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-48": {
+      "altAnswers": [
+        "Herabsetzung",
+        "Herabwürdigung"
+      ]
+    },
+    "g6-science-geschichte-zeit-g5zeit-norm-50": {
+      "altAnswers": [
+        "Herabsetzung",
+        "Herabwürdigung"
+      ]
+    },
+    "zh6_40": {
+      "altAnswers": [
+        "Gefahren",
+        "Nachteile"
+      ]
+    },
+    "zh6_42": {
+      "altAnswers": [
+        "Natur",
+        "Tiere",
+        "Zukunft"
+      ]
+    },
+    "zh6_48": {
+      "altAnswers": [
+        "sichern",
+        "vertraulich behandeln"
+      ]
+    },
+    "mf6_42": {
+      "altAnswers": [
+        "unverbindlich",
+        "nicht verbindlich"
+      ]
+    },
+    "nz6_40": {
+      "altAnswers": [
+        "schneller reisen"
+      ]
+    },
+    "dm6_36": {
+      "altAnswers": [
+        "die Person zum Mitmachen einladen"
+      ]
+    },
+    "ko6_36": {
+      "altAnswers": [
+        "erklärt die Symbole einer Karte"
+      ]
+    },
+    "ko6_42": {
+      "altAnswers": [
+        "zeigt Norden"
+      ]
+    },
+    "mf6_16": {
+      "altAnswers": [
+        "ruhig miteinander reden"
+      ]
+    },
+    "zh6_16": {
+      "altAnswers": [
+        "zeigt den Weg eines Produkts"
+      ]
+    },
+    "zh6_36": {
+      "altAnswers": [
+        "ermöglicht weltweite Kommunikation"
+      ]
+    },
+    "zh6_44": {
+      "altAnswers": [
+        "Menschen verlieren wegen neuer Technik ihre Arbeit"
+      ]
+    },
+    "zh6_46": {
+      "altAnswers": [
+        "mit künstlicher Intelligenz gefälschte Medien"
+      ]
+    },
+    "zh6_50": {
+      "altAnswers": [
+        "die Zukunft vorausschauend mitgestalten"
+      ]
+    },
+    "nz6_45": {
+      "answer": "Amerikanische Revolution: Unabhängigkeit von Grossbritannien. Französische Revolution: Umgestaltung von Monarchie und Ständegesellschaft.",
+      "options": [
+        "Amerikanische Revolution: Unabhängigkeit von Grossbritannien. Französische Revolution: Umgestaltung von Monarchie und Ständegesellschaft.",
+        "Beide Revolutionen schafften eine gemeinsame europäische Monarchie.",
+        "Die französische Revolution führte zur Unabhängigkeit von Grossbritannien.",
+        "Die amerikanische Revolution fand erst nach dem Ersten Weltkrieg statt."
+      ],
+      "hints": [
+        "Vergleiche das Verhältnis zu einer Kolonialmacht mit der politischen Ordnung im eigenen Land.",
+        "Beide Revolutionen hatten mehrere Ursachen und betrafen politische Rechte."
+      ]
+    },
+    "mf6_26": {
+      "question": "Wie nennt man es, wenn in einem Flüchtlingslager mehr Menschen leben, als Platz vorhanden ist?",
+      "answer": "Überfüllung",
+      "altAnswers": [
+        "Ueberfuellung",
+        "Überbelegung",
+        "Ueberbelegung",
+        "Überbevölkerung"
+      ],
+      "hints": [
+        "Denke an das Verhältnis zwischen der Zahl der Menschen und dem verfügbaren Raum.",
+        "Gesucht ist ein Nomen für zu viele Menschen auf zu wenig Platz."
+      ]
+    }
+  }
+}
