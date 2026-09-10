@@ -7,6 +7,7 @@ import {
 } from "@/lib/email";
 import { logUserActivity } from "@/lib/userActivityServer";
 import { sendMetaConversion } from "@/lib/metaConversions";
+import { redeemPrivateOffer } from "@/lib/privateOfferServer";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!;
@@ -166,11 +167,27 @@ export async function POST(req: NextRequest) {
   }
 
   // ── Subscription activated ──────────────────────────────────────────────
-  if (event.type === "checkout.session.completed") {
-    const session = event.data.object as Stripe.Checkout.Session;
+  if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
+    let session = event.data.object as Stripe.Checkout.Session;
     const plan = session.metadata?.plan ?? "monthly";
 
     if (session.mode === "payment" && plan === "schooltime") {
+      // Never grant paid access merely because the customer finished Checkout.
+      if (session.payment_status !== "paid") return NextResponse.json({ ok: true });
+      const privateOffer = session.metadata?.private_offer_id;
+      if (privateOffer) {
+        try {
+          session = await getStripe().checkout.sessions.retrieve(session.id);
+          if (session.payment_status !== "paid" || session.metadata?.private_offer_id !== privateOffer) {
+            return NextResponse.json({ error: "private_payment_not_paid" }, { status: 409 });
+          }
+          const firstRedemption = await redeemPrivateOffer(session);
+          if (!firstRedemption) return NextResponse.json({ ok: true });
+        } catch {
+          // Retriable; never leak session URLs, tokens or Stripe response bodies.
+          return NextResponse.json({ error: "private_payment_fulfilment_failed" }, { status: 500 });
+        }
+      }
       const userId = session.metadata?.userId;
       const customerEmail = session.customer_details?.email ?? "";
       const customerName = session.customer_details?.name ?? "";
@@ -181,7 +198,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "no_user" }, { status: 400 });
       }
 
-      await patchParentProfile(userId, {
+      if (!privateOffer) await patchParentProfile(userId, {
         premium: true,
         premium_plan: "schooltime",
         premium_until: null,
@@ -253,7 +270,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: true });
     }
 
-    if (session.mode !== "subscription") return NextResponse.json({ ok: true });
+    if (event.type !== "checkout.session.completed" || session.mode !== "subscription") return NextResponse.json({ ok: true });
 
     const userId = session.metadata?.userId;
     const trialDays = Number(session.metadata?.trial_days ?? 0) || null;

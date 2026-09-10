@@ -1,6 +1,10 @@
 {
   "crons": [
     {
+      "path": "/api/cron/private-offers",
+      "schedule": "0 15 * * *"
+    },
+    {
       "path": "/api/cron/streak-reminders",
       "schedule": "0 16 * * *"
     }

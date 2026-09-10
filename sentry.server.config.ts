@@ -7,7 +7,12 @@ if (dsn) {
     dsn,
     environment: process.env.VERCEL_ENV ?? process.env.NODE_ENV,
     tracesSampleRate: process.env.NODE_ENV === "production" ? 0.05 : 1.0,
+    // Private offer capabilities arrive in a POST body, never report that request.
+    beforeSendTransaction(event) {
+      return event.transaction?.includes("/offer/personal") ? null : event;
+    },
     beforeSend(event) {
+      if (event.request?.url?.includes("/offer/personal") || event.transaction?.includes("/offer/personal")) return null;
       if (event.user) {
         delete event.user.email;
         delete event.user.username;
