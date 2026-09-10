@@ -1,3 +1,4 @@
+import { applyGrade6EnglishQaCorrections } from "@/data/grade6EnglishQaCorrections";
 import { applyGrade6NmgQaCorrections } from "@/data/grade6NmgQaCorrections";
 import { applyGrade6GermanQaCorrections } from "@/data/grade6GermanQaCorrections";
 import { applyGrade6MathsQaCorrections } from "@/data/grade6MathsQaCorrections";
@@ -194,5 +195,5 @@ export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
     };
     return withUsefulQuestionVisuals(exercise.preserveGermanContent || exercise.completeLocalization ? localized : cleanItalianExercise(localized));
   }
-  return applyGrade6NmgQaCorrections(applyGrade6GermanQaCorrections(applyGrade6MathsQaCorrections(applyGrade5FrenchQaCorrections(applyGrade5MiQaCorrections(applyGrade5EnglishQaCorrections(applyGrade5NmgQaCorrections(applyGrade5GermanQaCorrections(applyGrade5MathsQaCorrections(withUsefulQuestionVisuals(applyGrade4MiQaCorrections(applyGrade4FrenchQaCorrections(applyGrade4EnglishQaCorrections(applyGrade4NmgQaCorrections(applyGrade4GermanQaCorrections(applyGrade4MathsQaCorrections(applyGrade3MiQaCorrections(applyGrade3FrenchQaCorrections(applyGrade3EnglishQaCorrections(applyGrade3NmgQaCorrections(applyGrade3GermanQaCorrections(applyGrade3MathsQaCorrections(applyGrade2NmgQaCorrections(applyGrade2GermanQaCorrections(applyGrade2MathsQaCorrections(applyGrade1NmgQaCorrections(applyGermanExerciseQaCorrections(exercise)))))))))))))))))))))))))));
+  return applyGrade6EnglishQaCorrections(applyGrade6NmgQaCorrections(applyGrade6GermanQaCorrections(applyGrade6MathsQaCorrections(applyGrade5FrenchQaCorrections(applyGrade5MiQaCorrections(applyGrade5EnglishQaCorrections(applyGrade5NmgQaCorrections(applyGrade5GermanQaCorrections(applyGrade5MathsQaCorrections(withUsefulQuestionVisuals(applyGrade4MiQaCorrections(applyGrade4FrenchQaCorrections(applyGrade4EnglishQaCorrections(applyGrade4NmgQaCorrections(applyGrade4GermanQaCorrections(applyGrade4MathsQaCorrections(applyGrade3MiQaCorrections(applyGrade3FrenchQaCorrections(applyGrade3EnglishQaCorrections(applyGrade3NmgQaCorrections(applyGrade3GermanQaCorrections(applyGrade3MathsQaCorrections(applyGrade2NmgQaCorrections(applyGrade2GermanQaCorrections(applyGrade2MathsQaCorrections(applyGrade1NmgQaCorrections(applyGermanExerciseQaCorrections(exercise))))))))))))))))))))))))))));
 }

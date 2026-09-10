@@ -1,0 +1,1629 @@
+{
+  "patches": {
+    "pv6-42": {
+      "type": "self-review",
+      "answer": "Mia draws a flower.",
+      "reviewCriteria": [
+        "Writes a new complete English sentence.",
+        "Uses a verb form that fits the subject and the model.",
+        "Checks the capital letter and final punctuation."
+      ]
+    },
+    "pv6-50": {
+      "type": "self-review",
+      "answer": "Emma finds her pencil.",
+      "reviewCriteria": [
+        "Writes a new complete English sentence.",
+        "Uses a verb form that fits the subject and the model.",
+        "Checks the capital letter and final punctuation."
+      ]
+    },
+    "cond6-38": {
+      "type": "self-review",
+      "answer": "Mia is going to read on Sunday.",
+      "reviewCriteria": [
+        "Writes a new complete English sentence.",
+        "Uses a verb form that fits the subject and the model.",
+        "Checks the capital letter and final punctuation."
+      ]
+    },
+    "cond6-46": {
+      "type": "self-review",
+      "answer": "Lina is going to play outside on Monday.",
+      "reviewCriteria": [
+        "Writes a new complete English sentence.",
+        "Uses a verb form that fits the subject and the model.",
+        "Checks the capital letter and final punctuation."
+      ]
+    },
+    "cond6-50": {
+      "type": "self-review",
+      "answer": "Ben is going to make a sandwich after school.",
+      "reviewCriteria": [
+        "Writes a new complete English sentence.",
+        "Uses a verb form that fits the subject and the model.",
+        "Checks the capital letter and final punctuation."
+      ]
+    },
+    "eng6-rich-reasons-review-1": {
+      "type": "self-review",
+      "answer": "I am going to visit the library on Saturday. I want to find a book about space. I will take the bus because the library is far away. I will return home early so I can finish my homework.",
+      "reviewCriteria": [
+        "Uses at least four understandable English sentences.",
+        "Explains reasons with because or so.",
+        "The plan and reasons fit together."
+      ]
+    },
+    "eng6-rich-debate-review-1": {
+      "type": "self-review",
+      "answer": "I think we should use less plastic. This can reduce waste. For example, we can carry water in a refillable bottle.",
+      "reviewCriteria": [
+        "States a clear opinion.",
+        "Gives one reason.",
+        "Gives one example that fits the reason."
+      ]
+    },
+    "rs6-2": {
+      "question": "Conversations: At school: Complete the polite refusal: 'No, ___ you.'",
+      "answer": "thank",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At school: Complete the polite refusal: 'No, ___ you.'"
+    },
+    "rs6-4": {
+      "question": "Conversations: At school: The book is in the library. Complete the reply: 'In the ___.'",
+      "answer": "library",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At school: The book is in the library. Complete the reply: 'In the ___.'"
+    },
+    "rs6-6": {
+      "question": "Conversations: At school: Say that you are fine: 'I am ___, thanks.'",
+      "answer": "fine",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At school: Say that you are fine: 'I am ___, thanks.'"
+    },
+    "rs6-8": {
+      "question": "Conversations: At school: Give a left turn as the direction: 'Turn ___ here.'",
+      "answer": "left",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At school: Give a left turn as the direction: 'Turn ___ here.'"
+    },
+    "rs6-10": {
+      "question": "Conversations: At school: Complete the polite request: 'I would ___ some water.'",
+      "answer": "like",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At school: Complete the polite request: 'I would ___ some water.'"
+    },
+    "rs6-12": {
+      "question": "Conversations: At home: Complete the polite refusal: 'No, ___ you.'",
+      "answer": "thank",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At home: Complete the polite refusal: 'No, ___ you.'"
+    },
+    "rs6-14": {
+      "question": "Conversations: At home: The book is in the library. Complete the reply: 'In the ___.'",
+      "answer": "library",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At home: The book is in the library. Complete the reply: 'In the ___.'"
+    },
+    "rs6-16": {
+      "question": "Conversations: At home: Say that you are fine: 'I am ___, thanks.'",
+      "answer": "fine",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At home: Say that you are fine: 'I am ___, thanks.'"
+    },
+    "rs6-18": {
+      "question": "Conversations: At home: Give a left turn as the direction: 'Turn ___ here.'",
+      "answer": "left",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At home: Give a left turn as the direction: 'Turn ___ here.'"
+    },
+    "rs6-20": {
+      "question": "Conversations: At home: Complete the polite request: 'I would ___ some water.'",
+      "answer": "like",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At home: Complete the polite request: 'I would ___ some water.'"
+    },
+    "rs6-22": {
+      "question": "Conversations: At the shop: Complete the polite refusal: 'No, ___ you.'",
+      "answer": "thank",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At the shop: Complete the polite refusal: 'No, ___ you.'"
+    },
+    "rs6-24": {
+      "question": "Conversations: At the shop: The book is in the library. Complete the reply: 'In the ___.'",
+      "answer": "library",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At the shop: The book is in the library. Complete the reply: 'In the ___.'"
+    },
+    "rs6-26": {
+      "question": "Conversations: At the shop: Say that you are fine: 'I am ___, thanks.'",
+      "answer": "fine",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At the shop: Say that you are fine: 'I am ___, thanks.'"
+    },
+    "rs6-28": {
+      "question": "Conversations: At the shop: Give a left turn as the direction: 'Turn ___ here.'",
+      "answer": "left",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At the shop: Give a left turn as the direction: 'Turn ___ here.'"
+    },
+    "rs6-30": {
+      "question": "Conversations: At the shop: Complete the polite request: 'I would ___ some water.'",
+      "answer": "like",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: At the shop: Complete the polite request: 'I would ___ some water.'"
+    },
+    "rs6-32": {
+      "question": "Conversations: On a trip: Complete the polite refusal: 'No, ___ you.'",
+      "answer": "thank",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: On a trip: Complete the polite refusal: 'No, ___ you.'"
+    },
+    "rs6-34": {
+      "question": "Conversations: On a trip: The book is in the library. Complete the reply: 'In the ___.'",
+      "answer": "library",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: On a trip: The book is in the library. Complete the reply: 'In the ___.'"
+    },
+    "rs6-36": {
+      "question": "Conversations: On a trip: Say that you are fine: 'I am ___, thanks.'",
+      "answer": "fine",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: On a trip: Say that you are fine: 'I am ___, thanks.'"
+    },
+    "rs6-38": {
+      "question": "Conversations: On a trip: Give a left turn as the direction: 'Turn ___ here.'",
+      "answer": "left",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: On a trip: Give a left turn as the direction: 'Turn ___ here.'"
+    },
+    "rs6-40": {
+      "question": "Conversations: On a trip: Complete the polite request: 'I would ___ some water.'",
+      "answer": "like",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: On a trip: Complete the polite request: 'I would ___ some water.'"
+    },
+    "rs6-42": {
+      "question": "Conversations: With a friend: Complete the polite refusal: 'No, ___ you.'",
+      "answer": "thank",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: With a friend: Complete the polite refusal: 'No, ___ you.'"
+    },
+    "rs6-44": {
+      "question": "Conversations: With a friend: The book is in the library. Complete the reply: 'In the ___.'",
+      "answer": "library",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: With a friend: The book is in the library. Complete the reply: 'In the ___.'"
+    },
+    "rs6-46": {
+      "question": "Conversations: With a friend: Say that you are fine: 'I am ___, thanks.'",
+      "answer": "fine",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: With a friend: Say that you are fine: 'I am ___, thanks.'"
+    },
+    "rs6-48": {
+      "question": "Conversations: With a friend: Give a left turn as the direction: 'Turn ___ here.'",
+      "answer": "left",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: With a friend: Give a left turn as the direction: 'Turn ___ here.'"
+    },
+    "rs6-50": {
+      "question": "Conversations: With a friend: Complete the polite request: 'I would ___ some water.'",
+      "answer": "like",
+      "altAnswers": [],
+      "hints": [
+        "Read the instruction and the whole reply.",
+        "Write only the missing word and then read the reply again."
+      ],
+      "spokenPrompt": "Conversations: With a friend: Complete the polite request: 'I would ___ some water.'"
+    },
+    "rsk6-14": {
+      "question": "Choose nervous or confident: 'She avoided eye contact and spoke in a whisper.' She may have felt ___.",
+      "answer": "nervous",
+      "altAnswers": [],
+      "hints": [
+        "Notice how loudly she speaks and where she looks.",
+        "Compare the two feelings with both actions."
+      ],
+      "spokenPrompt": "Choose nervous or confident: 'She avoided eye contact and spoke in a whisper.' She may have felt ___."
+    },
+    "rsk6-18": {
+      "question": "Choose contrast or addition: The linking word 'however' usually signals a ___.",
+      "answer": "contrast",
+      "altAnswers": [],
+      "spokenPrompt": "Choose contrast or addition: The linking word 'however' usually signals a ___."
+    },
+    "rsk6-20": {
+      "question": "Choose impatient or relaxed: 'She sighed and checked the clock again while waiting for the late bus.' She seems ___.",
+      "answer": "impatient",
+      "altAnswers": [],
+      "hints": [
+        "Think about what waiting for a late bus can feel like.",
+        "Compare each offered feeling with her sigh and repeated clock checks."
+      ],
+      "spokenPrompt": "Choose impatient or relaxed: 'She sighed and checked the clock again while waiting for the late bus.' She seems ___."
+    },
+    "rsk6-22": {
+      "question": "Choose abandoned or busy: 'The shelves were empty. The windows were dusty. Nobody had visited for years.' The place seemed ___.",
+      "answer": "abandoned",
+      "altAnswers": [],
+      "hints": [
+        "Look at the dust, empty shelves and missing visitors.",
+        "Which of the two descriptions fits all three clues?"
+      ],
+      "spokenPrompt": "Choose abandoned or busy: 'The shelves were empty. The windows were dusty. Nobody had visited for years.' The place seemed ___."
+    },
+    "rsk6-26": {
+      "question": "Choose talented or untrained: 'She became the youngest champion after years of successful practice.' The text presents her as ___.",
+      "answer": "talented",
+      "altAnswers": [],
+      "spokenPrompt": "Choose talented or untrained: 'She became the youngest champion after years of successful practice.' The text presents her as ___."
+    },
+    "rsk6-28": {
+      "question": "Choose disappointed or delighted: 'The child’s face fell when she heard the bad news.' She became ___.",
+      "answer": "disappointed",
+      "altAnswers": [],
+      "hints": [
+        "The phrase describes a change in facial expression.",
+        "Use the news she heard to choose between the two feelings."
+      ],
+      "spokenPrompt": "Choose disappointed or delighted: 'The child’s face fell when she heard the bad news.' She became ___."
+    },
+    "rsk6-32": {
+      "question": "Choose ending or beginning: 'In conclusion' normally introduces the ___ of an argument.",
+      "answer": "ending",
+      "altAnswers": [],
+      "spokenPrompt": "Choose ending or beginning: 'In conclusion' normally introduces the ___ of an argument."
+    },
+    "rsk6-34": {
+      "question": "Choose purpose or length: The reason an author writes a text is the author's ___.",
+      "answer": "purpose",
+      "altAnswers": [],
+      "hints": [
+        "Think about what the writer wants the reader to know, feel or do.",
+        "Choose the term about intention, not the number of words."
+      ],
+      "spokenPrompt": "Choose purpose or length: The reason an author writes a text is the author's ___."
+    },
+    "rsk6-36": {
+      "question": "Choose tension or calm: Short, sharp sentences during a dangerous climax can increase ___.",
+      "answer": "tension",
+      "altAnswers": [],
+      "hints": [
+        "Read the short sentences aloud and notice the pace.",
+        "Think about the reader’s feeling at a dangerous moment."
+      ],
+      "spokenPrompt": "Choose tension or calm: Short, sharp sentences during a dangerous climax can increase ___."
+    },
+    "rsk6-44": {
+      "question": "Choose bias or balance: Unfairly favouring one viewpoint in a text is called ___.",
+      "answer": "bias",
+      "altAnswers": [],
+      "hints": [
+        "Think about whether different viewpoints receive fair treatment.",
+        "Choose the term that describes unfair favouritism."
+      ],
+      "spokenPrompt": "Choose bias or balance: Unfairly favouring one viewpoint in a text is called ___."
+    },
+    "rsk6-6": {
+      "altAnswers": [
+        "contextual"
+      ]
+    },
+    "rsk6-12": {
+      "altAnswers": [
+        "attitude",
+        "position"
+      ]
+    },
+    "rsk6-38": {
+      "altAnswers": [
+        "It had rained",
+        "It rained",
+        "Because of the rain",
+        "Rain"
+      ]
+    },
+    "rsk6-42": {
+      "altAnswers": [
+        "chronological order",
+        "sequential",
+        "sequence",
+        "sequence of events"
+      ]
+    },
+    "rsk6-46": {
+      "altAnswers": [
+        "remarkable"
+      ]
+    },
+    "rsk6-48": {
+      "altAnswers": [
+        "parallelism",
+        "repetition"
+      ]
+    },
+    "rsk6-7": {
+      "question": "Text: 'After hearing a scream, he rushed in, breathless and pale, his eyes wide with alarm.' What does this most strongly suggest?",
+      "hints": [
+        "Read the event before the description of his face.",
+        "Which emotion best fits all the clues together?"
+      ],
+      "spokenPrompt": "Text: 'After hearing a scream, he rushed in, breathless and pale, his eyes wide with alarm.' What does this most strongly suggest?"
+    },
+    "rsk6-17": {
+      "question": "Text: 'He spent every evening at the library reading textbooks for his exams, returning home long after dark.' What can we infer?",
+      "options": [
+        "He never opens a book.",
+        "He is a dedicated reader or student.",
+        "He is afraid of the dark.",
+        "He goes there only to repair the lights."
+      ],
+      "hints": [
+        "Look at what he does at the library and how often.",
+        "Choose an inference supported by his repeated actions."
+      ],
+      "spokenPrompt": "Text: 'He spent every evening at the library reading textbooks for his exams, returning home long after dark.' What can we infer?"
+    },
+    "rsk6-27": {
+      "question": "Which sentence uses a reporting verb that can suggest doubt about whether the statement is true?",
+      "hints": [
+        "Compare the reporting verbs, not just the people mentioned.",
+        "Which verb reports a statement without confirming that it is true?"
+      ],
+      "spokenPrompt": "Which sentence uses a reporting verb that can suggest doubt about whether the statement is true?"
+    },
+    "rsk6-35": {
+      "question": "Which sentence offers the strongest clue that a character may be nervous?",
+      "spokenPrompt": "Which sentence offers the strongest clue that a character may be nervous?"
+    },
+    "rsk6-50": {
+      "type": "self-review",
+      "answer": "I think Nina is brave because the text says she entered the dark room to help her friend even though she was afraid.",
+      "reviewCriteria": [
+        "States an opinion about Nina.",
+        "Uses a clue from the provided text.",
+        "Connects the opinion and clue with because."
+      ],
+      "question": "Read this short story: 'Nina was afraid of the dark room, but she went inside to help her friend.' Write an opinion about Nina and support it with a clue: 'I think Nina is ___ because ___.'",
+      "spokenPrompt": "Read this short story: 'Nina was afraid of the dark room, but she went inside to help her friend.' Write an opinion about Nina and support it with a clue: 'I think Nina is ___ because ___.'"
+    },
+    "eng6-rich-reading-memory-1": {
+      "question": "Find identical cards showing a reading strategy and its purpose.",
+      "pairs": [
+        {
+          "id": "skim",
+          "label": "skim: get the main idea",
+          "emoji": "👀"
+        },
+        {
+          "id": "scan",
+          "label": "scan: find a detail quickly",
+          "emoji": "🔎"
+        },
+        {
+          "id": "infer",
+          "label": "infer: read between the lines",
+          "emoji": "💭"
+        },
+        {
+          "id": "summarise",
+          "label": "summarise: say the main points briefly",
+          "emoji": "✍️"
+        }
+      ],
+      "spokenPrompt": "Find identical cards showing a reading strategy and its purpose."
+    },
+    "ws6-16": {
+      "type": "self-review",
+      "answer": "Many people believe that global warming is a serious problem.",
+      "reviewCriteria": [
+        "Keeps the meaning of the original sentence.",
+        "Uses a complete sentence without slang or contractions.",
+        "Checks grammar and punctuation."
+      ]
+    },
+    "ws6-20": {
+      "type": "self-review",
+      "answer": "It is going to be a problem.",
+      "reviewCriteria": [
+        "Keeps the meaning of the original sentence.",
+        "Uses a complete sentence without slang or contractions.",
+        "Checks grammar and punctuation."
+      ]
+    },
+    "ws6-38": {
+      "type": "self-review",
+      "answer": "I would like to learn more about your company.",
+      "reviewCriteria": [
+        "Keeps the meaning of the original sentence.",
+        "Uses a complete sentence without slang or contractions.",
+        "Checks grammar and punctuation."
+      ]
+    },
+    "ws6-48": {
+      "type": "self-review",
+      "answer": "The situation was very disorganised, and nobody took action to resolve it.",
+      "reviewCriteria": [
+        "Keeps the meaning of the original sentence.",
+        "Uses a complete sentence without slang or contractions.",
+        "Checks grammar and punctuation."
+      ]
+    },
+    "ws6-19": {
+      "options": [
+        "Technology offers many benefits; however, excessive use can be harmful.",
+        "Although technology offers benefits, but excessive use can be harmful.",
+        "Technology offers benefits because, excessive use can be harmful.",
+        "However technology, offers many benefits excessive use."
+      ]
+    },
+    "ws6-28": {
+      "question": "Complete with an adjective meaning 'ernste': 'The problem has ___ consequences.'",
+      "answer": "serious",
+      "altAnswers": [
+        "severe",
+        "grave"
+      ],
+      "sequentialAnswer": false,
+      "spokenPrompt": "Complete with an adjective meaning 'ernste': 'The problem has ___ consequences.'"
+    },
+    "ws6-30": {
+      "question": "Complete with a linker meaning 'as a result': 'Emissions increased; ___, temperatures rose.'",
+      "answer": "consequently",
+      "altAnswers": [
+        "therefore",
+        "thus",
+        "hence",
+        "accordingly"
+      ],
+      "spokenPrompt": "Complete with a linker meaning 'as a result': 'Emissions increased; ___, temperatures rose.'"
+    },
+    "ws6-42": {
+      "question": "Read: 'Firstly, exercise strengthens the body. Furthermore, it can improve mood. In conclusion, exercise supports health.' Is this an argument structure or an alphabetical list? Write argument or alphabetical: ___",
+      "answer": "argument",
+      "altAnswers": [
+        "argument structure"
+      ],
+      "sequentialAnswer": false,
+      "spokenPrompt": "Read: 'Firstly, exercise strengthens the body. Furthermore, it can improve mood. In conclusion, exercise supports health.' Is this an argument structure or an alphabetical list? Write argument or alphabetical: ___"
+    },
+    "ws6-26": {
+      "question": "Complete with an addition linker: 'Solar panels generate electricity without burning fuel. ___, they can be installed on rooftops.'",
+      "altAnswers": [
+        "Additionally",
+        "Also"
+      ],
+      "spokenPrompt": "Complete with an addition linker: 'Solar panels generate electricity without burning fuel. ___, they can be installed on rooftops.'"
+    },
+    "ws6-10": {
+      "altAnswers": [
+        "also",
+        "besides"
+      ]
+    },
+    "ws6-14": {
+      "altAnswers": [
+        "so",
+        "thus",
+        "hence",
+        "accordingly"
+      ]
+    },
+    "ws6-24": {
+      "altAnswers": [
+        "Still",
+        "Even so",
+        "Nonetheless",
+        "Yet"
+      ]
+    },
+    "ws6-32": {
+      "altAnswers": [
+        "Though",
+        "Whilst"
+      ]
+    },
+    "vb6-17": {
+      "question": "Which phrase means completing the work your teacher has set for you?",
+      "options": [
+        "make homework",
+        "do homework",
+        "take homework home without doing it",
+        "have homework to do later"
+      ],
+      "hints": [
+        "Think about the verb normally used for completing school tasks.",
+        "Choose the phrase that means actually completing the work."
+      ],
+      "spokenPrompt": "Which phrase means completing the work your teacher has set for you?"
+    },
+    "vb6-20": {
+      "question": "Use the past simple of 'disagree': 'She ___ with the plan.'",
+      "answer": "disagreed",
+      "altAnswers": [],
+      "spokenPrompt": "Use the past simple of 'disagree': 'She ___ with the plan.'"
+    },
+    "vb6-26": {
+      "question": "Form the complete adjective from 'success' using '-ful': ___",
+      "answer": "successful",
+      "altAnswers": [],
+      "spokenPrompt": "Form the complete adjective from 'success' using '-ful': ___"
+    },
+    "vb6-28": {
+      "question": "Form a noun from 'act' using '-ion': ___",
+      "answer": "action",
+      "altAnswers": [],
+      "spokenPrompt": "Form a noun from 'act' using '-ion': ___"
+    },
+    "vb6-31": {
+      "question": "Which option adds '-less' to 'hope' to make an adjective?",
+      "hints": [
+        "Look at the exact suffix named in the question.",
+        "Check that the word combines the given base and that suffix."
+      ],
+      "spokenPrompt": "Which option adds '-less' to 'hope' to make an adjective?"
+    },
+    "vb6-35": {
+      "question": "Which sentence uses 'look up' to mean searching for information in a reference source?",
+      "spokenPrompt": "Which sentence uses 'look up' to mean searching for information in a reference source?"
+    },
+    "vb6-38": {
+      "question": "Form adjectives using '-ful': beauty → [1]; care → [2]; use → [3]. Write all three words in this order, separated by commas: ___",
+      "spokenPrompt": "Form adjectives using '-ful': beauty → [1]; care → [2]; use → [3]. Write all three words in this order, separated by commas: ___"
+    },
+    "vb6-43": {
+      "question": "Which option explicitly labels the verb, nouns and adjective correctly?",
+      "spokenPrompt": "Which option explicitly labels the verb, nouns and adjective correctly?"
+    },
+    "vb6-47": {
+      "question": "Which phrase means accepting responsibility for what you do?",
+      "spokenPrompt": "Which phrase means accepting responsibility for what you do?"
+    },
+    "vb6-2": {
+      "altAnswers": [
+        "mean",
+        "unfriendly"
+      ]
+    },
+    "vb6-4": {
+      "altAnswers": [
+        "dispute",
+        "hold a different opinion",
+        "differ in opinion"
+      ]
+    },
+    "vb6-6": {
+      "altAnswers": [
+        "having no home",
+        "no home",
+        "not having a home"
+      ]
+    },
+    "vb6-12": {
+      "altAnswers": [
+        "stopped trying",
+        "quit trying"
+      ],
+      "hints": [
+        "Read what she was doing before the phrasal verb.",
+        "Use a past-tense phrase with the same meaning in this context."
+      ]
+    },
+    "vb6-30": {
+      "altAnswers": [
+        "reorganize"
+      ]
+    },
+    "vb6-34": {
+      "altAnswers": [
+        "find",
+        "work"
+      ]
+    },
+    "vb6-40": {
+      "altAnswers": [
+        "went on",
+        "pushed on"
+      ],
+      "hints": [
+        "Use a past-tense phrasal verb for continuing despite difficulty.",
+        "Check that your phrase fits before “with her project”."
+      ]
+    },
+    "vb6-42": {
+      "altAnswers": [
+        "figured out",
+        "worked out"
+      ],
+      "hints": [
+        "The action happened in the past.",
+        "Use a phrasal verb that fits learning something previously unknown."
+      ]
+    },
+    "ed6-11": {
+      "answer": "The release of carbon dioxide into the atmosphere, for example when fossil fuels are burned.",
+      "options": [
+        "Oxygen produced by plants",
+        "The release of carbon dioxide into the atmosphere, for example when fossil fuels are burned.",
+        "Water pollution from factories",
+        "Chemicals in soil"
+      ],
+      "hints": [
+        "Think about what leaves a chimney when fuel burns.",
+        "Choose the description of gases released into the air, not a solid material."
+      ]
+    },
+    "ed6-17": {
+      "question": "An imaginary beach survey found 80 discarded plastic bags in one small area. Which opinion uses the supplied evidence?",
+      "answer": "I think we should use fewer disposable bags because the survey found 80 discarded bags in this small area.",
+      "options": [
+        "I think plastic is bad.",
+        "I think we should use fewer disposable bags because the survey found 80 discarded bags in this small area.",
+        "Plastic should be banned.",
+        "Plastic bags are a problem in my opinion."
+      ],
+      "spokenPrompt": "An imaginary beach survey found 80 discarded plastic bags in one small area. Which opinion uses the supplied evidence?"
+    },
+    "ed6-27": {
+      "answer": "UNEP estimates that the fashion industry produces 2 to 8 percent of global carbon emissions. Buying fewer, longer-lasting clothes can also reduce textile waste.",
+      "options": [
+        "Fast fashion is cheap.",
+        "UNEP estimates that the fashion industry produces 2 to 8 percent of global carbon emissions. Buying fewer, longer-lasting clothes can also reduce textile waste.",
+        "I don't like fast fashion.",
+        "Fast fashion changes styles too quickly."
+      ]
+    },
+    "ed6-37": {
+      "answer": "We should reduce greenhouse gas emissions. The IPCC reports that human activity has warmed the planet and raised global sea levels. Reducing emissions can limit future warming and related risks.",
+      "options": [
+        "Climate change is bad and we should stop it.",
+        "We should reduce greenhouse gas emissions. The IPCC reports that human activity has warmed the planet and raised global sea levels. Reducing emissions can limit future warming and related risks.",
+        "I think climate change is a big problem.",
+        "We need to do something about the environment."
+      ]
+    },
+    "ed6-26": {
+      "question": "Use the present simple of 'agree': 'I think we ___ that climate action is urgent, even if we disagree on the solutions.'",
+      "answer": "agree",
+      "altAnswers": [],
+      "spokenPrompt": "Use the present simple of 'agree': 'I think we ___ that climate action is urgent, even if we disagree on the solutions.'"
+    },
+    "ed6-14": {
+      "type": "self-review",
+      "answer": "Walking instead of driving can reduce air pollution.",
+      "reviewCriteria": [
+        "Names an action that can reduce air pollution.",
+        "Explains or clearly shows how the action helps.",
+        "Uses understandable English."
+      ],
+      "question": "Write one English sentence suggesting an action that can reduce air pollution.",
+      "spokenPrompt": "Write one English sentence suggesting an action that can reduce air pollution."
+    },
+    "ed6-6": {
+      "question": "Use the one-word pronoun for one speaker: '___ agree with that point.'",
+      "answer": "I",
+      "altAnswers": [],
+      "spokenPrompt": "Use the one-word pronoun for one speaker: '___ agree with that point.'"
+    },
+    "ed6-30": {
+      "question": "Choose global or local: 'This issue affects everyone on the planet, so it is a ___ issue.'",
+      "answer": "global",
+      "altAnswers": [],
+      "spokenPrompt": "Choose global or local: 'This issue affects everyone on the planet, so it is a ___ issue.'"
+    },
+    "ed6-46": {
+      "question": "Complete with an adjective meaning 'ethisch': 'Protecting the environment is not just a political issue; it is an ___ one.'",
+      "answer": "ethical",
+      "altAnswers": [],
+      "spokenPrompt": "Complete with an adjective meaning 'ethisch': 'Protecting the environment is not just a political issue; it is an ___ one.'"
+    },
+    "ed6-44": {
+      "question": "Use a coordinating conjunction showing contrast: 'I appreciate your perspective, ___ I feel the evidence points in a different direction.'",
+      "answer": "but / yet",
+      "altAnswers": [],
+      "spokenPrompt": "Use a coordinating conjunction showing contrast: 'I appreciate your perspective, ___ I feel the evidence points in a different direction.'"
+    },
+    "ed6-47": {
+      "answer": "Even though electric cars can cost more to buy, they can reduce running costs.",
+      "options": [
+        "Even though electric cars expensive, but they cost money.",
+        "Even though electric cars can cost more to buy, they can reduce running costs.",
+        "Electric cars even though, can reduce costs.",
+        "Even though the price, is costly but."
+      ]
+    },
+    "ed6-35": {
+      "answer": "However, critics point out that electric cars may use electricity generated from fossil fuels.",
+      "options": [
+        "In conclusion, I believe recycling is important because it reduces waste.",
+        "However, critics point out that electric cars may use electricity generated from fossil fuels.",
+        "That is a good point. I couldn't agree more.",
+        "it makes no sense / it is counterproductive / it is illogical"
+      ]
+    },
+    "ed6-10": {
+      "altAnswers": [
+        "reasonable",
+        "sensible"
+      ]
+    },
+    "ed6-24": {
+      "altAnswers": [
+        "On the one / on"
+      ]
+    },
+    "ed6-32": {
+      "altAnswers": [
+        "Because",
+        "Now that"
+      ]
+    },
+    "ed6-34": {
+      "altAnswers": [
+        "recognized",
+        "acknowledged"
+      ]
+    },
+    "ed6-38": {
+      "altAnswers": [
+        "recognize"
+      ]
+    },
+    "cm6-5": {
+      "answer": "To play audio or video as data arrives, without waiting for the whole file to download.",
+      "options": [
+        "To print content",
+        "To play audio or video as data arrives, without waiting for the whole file to download.",
+        "To record on a DVD",
+        "To share with friends"
+      ]
+    },
+    "cm6-11": {
+      "answer": "When people share content so that it spreads very quickly online.",
+      "options": [
+        "When a video is deleted",
+        "When people share content so that it spreads very quickly online.",
+        "When a website crashes",
+        "When content is copyrighted"
+      ],
+      "hints": [
+        "Think about what happens when users repeatedly share the same post.",
+        "The expression describes the spread of content, not a computer malfunction."
+      ]
+    },
+    "cm6-27": {
+      "question": "Which description defines a streaming service?",
+      "answer": "A service that delivers audio or video over the internet while it plays.",
+      "options": [
+        "A service that only mails DVDs.",
+        "A service that delivers audio or video over the internet while it plays.",
+        "A service that sells only tickets for in-person events.",
+        "A shop that rents physical discs."
+      ],
+      "hints": [
+        "Focus on how the media reaches the viewer, not how the company charges.",
+        "Subscriptions and free access can both use this delivery method."
+      ],
+      "spokenPrompt": "Which description defines a streaming service?"
+    },
+    "cm6-29": {
+      "question": "Which description best explains digitally editing an existing photo?",
+      "options": [
+        "Taking a new photo quickly.",
+        "Digitally altering an image to change its appearance",
+        "Printing an unchanged photo.",
+        "Storing the original photo without changing it."
+      ],
+      "hints": [
+        "Compare changing an existing image with making or storing a new copy.",
+        "Which option changes what the viewer sees in the photo?"
+      ],
+      "spokenPrompt": "Which description best explains digitally editing an existing photo?"
+    },
+    "cm6-18": {
+      "question": "Choose editorial or report: 'An ___ expresses the newspaper’s opinion.'",
+      "answer": "editorial",
+      "altAnswers": [],
+      "spokenPrompt": "Choose editorial or report: 'An ___ expresses the newspaper’s opinion.'"
+    },
+    "cm6-22": {
+      "question": "Use the noun from 'compare': 'Social media ___ can affect how people feel about themselves.'",
+      "answer": "comparison",
+      "altAnswers": [],
+      "spokenPrompt": "Use the noun from 'compare': 'Social media ___ can affect how people feel about themselves.'"
+    },
+    "cm6-30": {
+      "question": "Use the adjective from 'rhythm': 'Strong ___ beats are common in hip-hop music.'",
+      "answer": "rhythmic",
+      "altAnswers": [],
+      "spokenPrompt": "Use the adjective from 'rhythm': 'Strong ___ beats are common in hip-hop music.'"
+    },
+    "cm6-32": {
+      "question": "A film set in a past period of history is a ___ film.",
+      "spokenPrompt": "A film set in a past period of history is a ___ film."
+    },
+    "cm6-6": {
+      "altAnswers": [
+        "science-fiction",
+        "sci fi"
+      ]
+    },
+    "cm6-12": {
+      "altAnswers": [
+        "disco",
+        "techno",
+        "house",
+        "EDM"
+      ]
+    },
+    "cm6-16": {
+      "altAnswers": [
+        "evaluate",
+        "assess",
+        "cross-check"
+      ]
+    },
+    "cm6-28": {
+      "altAnswers": [
+        "assessment"
+      ]
+    },
+    "cm6-44": {
+      "altAnswers": [
+        "streaming"
+      ]
+    },
+    "cm6-48": {
+      "altAnswers": [
+        "trustworthy",
+        "credible",
+        "dependable",
+        "reputable"
+      ]
+    },
+    "ex6-36": {
+      "type": "self-review",
+      "answer": "Read the instructions. Look at all the questions. Plan your time.",
+      "reviewCriteria": [
+        "Ich habe alle Teile der Aufgabe beantwortet.",
+        "Ich habe passende Wörter und die verlangte Satzform verwendet.",
+        "Ich habe Grossschreibung, Rechtschreibung und Satzzeichen geprüft."
+      ]
+    },
+    "ex6-50": {
+      "type": "self-review",
+      "answer": "My best exam strategy is to read the instructions carefully because this helps me understand what to do.",
+      "reviewCriteria": [
+        "Ich habe alle Teile der Aufgabe beantwortet.",
+        "Ich habe passende Wörter und die verlangte Satzform verwendet.",
+        "Ich habe Grossschreibung, Rechtschreibung und Satzzeichen geprüft."
+      ]
+    },
+    "ex6-37": {
+      "question": "Which strategy explicitly uses elimination to handle a difficult multiple choice question?",
+      "hints": [
+        "Focus on the strategy named in the question.",
+        "Which option explicitly removes unsuitable choices before comparing what remains?"
+      ],
+      "spokenPrompt": "Which strategy explicitly uses elimination to handle a difficult multiple choice question?"
+    },
+    "ex6-39": {
+      "answer": "Use tenses that match the timing and stay consistent when the time frame has not changed.",
+      "options": [
+        "Change tenses to show variety.",
+        "Use tenses that match the timing and stay consistent when the time frame has not changed.",
+        "Use present tense for everything.",
+        "Check tenses only at the end."
+      ],
+      "hints": [
+        "Think about whether the events happen at the same time or at different times.",
+        "An essay can need more than one tense when its time frame changes."
+      ]
+    },
+    "ex6-2": {
+      "altAnswers": [
+        "entire"
+      ]
+    },
+    "ex6-4": {
+      "altAnswers": [
+        "skip it",
+        "move on",
+        "leave the question",
+        "mark it"
+      ]
+    },
+    "ex6-8": {
+      "altAnswers": [
+        "rule out",
+        "discard",
+        "exclude",
+        "remove"
+      ]
+    },
+    "ex6-12": {
+      "altAnswers": [
+        "poor",
+        "inaccurate"
+      ]
+    },
+    "ex6-14": {
+      "altAnswers": [
+        "important",
+        "essential"
+      ]
+    },
+    "ex6-16": {
+      "altAnswers": [
+        "important",
+        "relevant"
+      ]
+    },
+    "ex6-22": {
+      "altAnswers": [
+        "opinion",
+        "viewpoint",
+        "argument",
+        "claim"
+      ]
+    },
+    "ex6-24": {
+      "altAnswers": [
+        "summary",
+        "brief outline"
+      ]
+    },
+    "ex6-32": {
+      "altAnswers": [
+        "phrases",
+        "details"
+      ]
+    },
+    "ex6-34": {
+      "altAnswers": [
+        "argument / points",
+        "position / arguments",
+        "main argument / points",
+        "viewpoint / points"
+      ]
+    },
+    "ex6-40": {
+      "altAnswers": [
+        "Organization"
+      ]
+    },
+    "ex6-46": {
+      "altAnswers": [
+        "most appropriate",
+        "most accurate",
+        "most suitable"
+      ]
+    },
+    "ex6-48": {
+      "altAnswers": [
+        "review",
+        "double-check",
+        "recheck"
+      ]
+    },
+    "ed6-1": {
+      "hints": [
+        "Look for a phrase that marks a personal viewpoint.",
+        "Which option makes clear that the speaker is giving a view rather than a fact?"
+      ]
+    },
+    "ed6-5": {
+      "hints": [
+        "Compare a harmful change with actions that help nature.",
+        "Choose the option describing damage rather than a solution."
+      ]
+    },
+    "ed6-7": {
+      "hints": [
+        "Think about the job of each linking phrase.",
+        "Choose the one used when considering a different side of an issue."
+      ]
+    },
+    "ed6-9": {
+      "hints": [
+        "Break the word into its parts and notice the forest connection.",
+        "Think about what happens to land when a forest is cleared."
+      ]
+    },
+    "ed6-13": {
+      "hints": [
+        "Notice whether the speaker supports or challenges the other person.",
+        "Read the negative wording carefully: does it actually express opposition?"
+      ]
+    },
+    "ed6-15": {
+      "hints": [
+        "Compare how the energy sources become available again.",
+        "Which description fits sources that nature replenishes on human timescales?"
+      ]
+    },
+    "ed6-19": {
+      "hints": [
+        "A reply should address the other person’s actual point.",
+        "Compare evidence-based replies with personal attacks or unsupported claims."
+      ]
+    },
+    "ed6-23": {
+      "hints": [
+        "Think about the range of living things in a habitat.",
+        "Choose a definition covering more than just one species."
+      ]
+    },
+    "ed6-25": {
+      "hints": [
+        "Ask whether the phrase adds, opposes or concludes.",
+        "Choose a phrase you could use before another reason for the same position."
+      ]
+    },
+    "ed6-31": {
+      "hints": [
+        "Look for both respectful wording and a reason for a different view.",
+        "A polite opening alone is not enough: check what follows."
+      ]
+    },
+    "ed6-33": {
+      "hints": [
+        "Think about the climate impact connected with everyday activities.",
+        "Compare an overall measure of emissions with a physical mark on the ground."
+      ]
+    },
+    "ed6-41": {
+      "hints": [
+        "Compare how the options connect claims and supporting information.",
+        "Which combination helps a listener judge why the conclusion follows?"
+      ]
+    },
+    "ed6-49": {
+      "hints": [
+        "Look for a formal tone and clear support for the previous speaker.",
+        "Avoid slang, insults and vague reactions."
+      ]
+    },
+    "cm6-1": {
+      "hints": [
+        "Think about whether the film investigates the real world or invents a story.",
+        "Compare that purpose with the other media formats in the choices."
+      ]
+    },
+    "cm6-3": {
+      "hints": [
+        "Think about whether the information deserves the appearance of a news report.",
+        "Being old or from another country does not by itself make news fake."
+      ]
+    },
+    "cm6-7": {
+      "hints": [
+        "Think about symbols you see attached to topic words in a post.",
+        "Which description explains how readers can find posts on the same subject?"
+      ]
+    },
+    "cm6-9": {
+      "hints": [
+        "Think about choosing an episode and playing it when you want.",
+        "Compare this with programmes that must be heard at a fixed broadcast time."
+      ]
+    },
+    "cm6-13": {
+      "hints": [
+        "Consider how an online audience may respond to someone’s recommendations.",
+        "Choose the role defined by that relationship with followers."
+      ]
+    },
+    "cm6-15": {
+      "hints": [
+        "Think about a private conversation rather than a public post.",
+        "Which expansion of the initials names that feature?"
+      ]
+    },
+    "cm6-17": {
+      "hints": [
+        "Think about the skills needed before trusting or sharing a message.",
+        "Which option goes beyond simply operating an app?"
+      ]
+    },
+    "cm6-21": {
+      "hints": [
+        "Think about whether your feed exposes you to varied viewpoints.",
+        "Choose the description about restricted exposure, not a photo effect."
+      ]
+    },
+    "cm6-23": {
+      "hints": [
+        "Think about what a cinema shows before a film is released.",
+        "Compare the purpose and length of that material with the completed work."
+      ]
+    },
+    "cm6-25": {
+      "hints": [
+        "Ask how you could establish whether a post is accurate.",
+        "Compare the options with the possibility that a post was changed before publication."
+      ]
+    },
+    "cm6-31": {
+      "hints": [
+        "Think about rights associated with creating an original work.",
+        "Choose the legal concept, not a platform feature; exceptions and licences can affect permitted use."
+      ]
+    },
+    "cm6-33": {
+      "hints": [
+        "Think about why two users may see different feeds.",
+        "Which option describes selecting content rather than creating or verifying it?"
+      ]
+    },
+    "cm6-35": {
+      "hints": [
+        "Consider harmful repeated behaviour involving digital communication.",
+        "Distinguish treatment of a person from a technical fault."
+      ]
+    },
+    "cm6-37": {
+      "hints": [
+        "Think about how a reader can judge a message rather than simply consume it.",
+        "Which option describes a skill useful across different types of media?"
+      ]
+    },
+    "cm6-39": {
+      "hints": [
+        "Think about where the line is spoken as a character introduces himself.",
+        "Compare fictional film characters with real politicians and playwrights."
+      ]
+    },
+    "cm6-41": {
+      "hints": [
+        "Think about who appears in a story and the roles they are given.",
+        "Which definition concerns portrayal rather than audience size or production cost?"
+      ]
+    },
+    "cm6-45": {
+      "hints": [
+        "Think about audiences with different backgrounds.",
+        "Which reason concerns people and the society shown, rather than just money?"
+      ]
+    },
+    "cm6-47": {
+      "hints": [
+        "Compare how the images connect to what the song expresses.",
+        "Which answer discusses a meaningful connection rather than length or equipment?"
+      ]
+    },
+    "cm6-49": {
+      "hints": [
+        "Think about how quickly users can pass a political message along.",
+        "Consider both dependable and misleading messages, rather than assuming all posts are alike."
+      ]
+    },
+    "rsk6-1": {
+      "hints": [
+        "Think about reading when you need an overview rather than a particular detail.",
+        "Compare how much attention each method gives to individual words."
+      ]
+    },
+    "rsk6-9": {
+      "hints": [
+        "Think about what a reader should be able to explain after reading.",
+        "Distinguish making sense of a text from merely pronouncing its words."
+      ]
+    },
+    "rsk6-11": {
+      "hints": [
+        "Think about what can guide your search in the text.",
+        "Choose a step that helps you know which details will matter."
+      ]
+    },
+    "rsk6-13": {
+      "hints": [
+        "Think about telling someone the important parts of a longer text.",
+        "Which definition avoids unnecessary detail and new personal opinions?"
+      ]
+    },
+    "rsk6-15": {
+      "hints": [
+        "Compare information you can point to with information you must work out.",
+        "Which option does not require an inference?"
+      ]
+    },
+    "rsk6-19": {
+      "hints": [
+        "Think about how you could check each kind of statement.",
+        "Separate evidence that can be checked from a person’s judgement."
+      ]
+    },
+    "rsk6-21": {
+      "hints": [
+        "Look at what connects one sentence with the next.",
+        "Which definition concerns those connections rather than text length?"
+      ]
+    },
+    "rsk6-23": {
+      "hints": [
+        "Notice what the writer does with reasons and evidence.",
+        "Consider the response the writer wants from the reader."
+      ]
+    },
+    "rsk6-25": {
+      "hints": [
+        "Try the linker between two reasons for the same position.",
+        "Does the second sentence add, oppose or conclude?"
+      ]
+    },
+    "rsk6-31": {
+      "hints": [
+        "You are looking for one detail rather than the overall message.",
+        "Compare the reading strategies with that specific goal."
+      ]
+    },
+    "rsk6-33": {
+      "hints": [
+        "Notice the contrast between the smile and the eyes.",
+        "Choose the interpretation that explains why the writer mentions both."
+      ]
+    },
+    "rsk6-41": {
+      "hints": [
+        "Notice how the three sentences begin.",
+        "Consider how that pattern changes the strength of the message."
+      ]
+    },
+    "rsk6-47": {
+      "hints": [
+        "Consider whether the writer expects a literal reply.",
+        "Think about what the question encourages the reader to do or feel."
+      ]
+    },
+    "rsk6-49": {
+      "hints": [
+        "A poem may communicate through sound as well as literal meaning.",
+        "Choose an approach that considers several clues rather than rushing to one answer."
+      ]
+    },
+    "ws6-3": {
+      "hints": [
+        "Think about what words such as however and therefore do in a paragraph.",
+        "Choose the definition about their role rather than their length or spelling."
+      ]
+    },
+    "ws6-9": {
+      "hints": [
+        "Consider how you would write to a friend and to an official.",
+        "Which term describes that choice of style?"
+      ]
+    },
+    "ws6-13": {
+      "hints": [
+        "Think about how a reader knows what the paragraph will discuss.",
+        "Choose the sentence’s overall job rather than one supporting detail."
+      ]
+    },
+    "ws6-15": {
+      "hints": [
+        "Imagine introducing another reason for the same view.",
+        "Compare that job with showing a contrast or a result."
+      ]
+    },
+    "ws6-17": {
+      "hints": [
+        "Think about what a reader needs before supporting details make sense.",
+        "Compare the order of introducing, developing and ending a point."
+      ]
+    },
+    "ws6-21": {
+      "hints": [
+        "The letters name four different jobs within a paragraph.",
+        "Choose the sequence that connects a claim with support and explains its relevance."
+      ]
+    },
+    "ws6-25": {
+      "hints": [
+        "Consider the tone suitable for a letter to someone you do not know well.",
+        "Compare conventional letter closings with casual chat expressions."
+      ]
+    },
+    "ws6-29": {
+      "hints": [
+        "Think about what the reader should remember when the paragraph ends.",
+        "Choose a purpose that closes the discussion rather than introducing unrelated material."
+      ]
+    },
+    "ws6-33": {
+      "hints": [
+        "Imagine reading a paragraph whose ideas jump around unexpectedly.",
+        "Which option describes what that paragraph is missing?"
+      ]
+    },
+    "ws6-39": {
+      "hints": [
+        "Think about what the reader needs after the main argument has been developed.",
+        "Compare bringing ideas together with adding unrelated evidence."
+      ]
+    },
+    "ws6-41": {
+      "hints": [
+        "Try each linker between two sentences.",
+        "Compare a logical consequence with a change of direction."
+      ]
+    },
+    "ws6-43": {
+      "hints": [
+        "Check the relationship between each pair of sentences.",
+        "Every linker should fit that relationship, not merely sound formal."
+      ]
+    },
+    "ws6-47": {
+      "hints": [
+        "Think about how the reader knows who is being addressed and why.",
+        "Choose the set that provides a complete conventional letter rather than a casual message."
+      ]
+    },
+    "ws6-49": {
+      "hints": [
+        "Consider how an unfamiliar reader enters and follows the argument.",
+        "Choose an order that develops the discussion before closing it."
+      ]
+    },
+    "ex6-3": {
+      "hints": [
+        "Think about why a test includes plausible alternatives.",
+        "Which definition explains a choice that can mislead a reader?"
+      ]
+    },
+    "ex6-5": {
+      "hints": [
+        "Think about the difference between a first draft and a checked answer.",
+        "Choose a benefit connected with accuracy rather than simply length."
+      ]
+    },
+    "ex6-7": {
+      "hints": [
+        "An exam has several tasks and a limited total duration.",
+        "Which option accounts for both instead of focusing only on the first task?"
+      ]
+    },
+    "ex6-11": {
+      "hints": [
+        "Look at the words on either side of the gap.",
+        "Which clue helps distinguish a verb, noun or adjective?"
+      ]
+    },
+    "ex6-13": {
+      "hints": [
+        "Think about whether an answer expresses a complete thought.",
+        "Length alone does not tell you whether the instruction has been followed."
+      ]
+    },
+    "ex6-15": {
+      "hints": [
+        "Your word must fit the sentence around it.",
+        "Choose a step that helps you judge that fit rather than just counting letters."
+      ]
+    },
+    "ex6-19": {
+      "hints": [
+        "Think about what you can do with choices that clearly conflict with the question.",
+        "Which strategy narrows the remaining possibilities?"
+      ]
+    },
+    "ex6-21": {
+      "hints": [
+        "Consider how tempting wrong options might affect your thinking.",
+        "Choose a strategy that starts from understanding the question rather than guessing from appearance."
+      ]
+    },
+    "ex6-25": {
+      "hints": [
+        "Look at the quantity explicitly requested.",
+        "Choose the response that follows that quantity without omitting a required part."
+      ]
+    },
+    "ex6-27": {
+      "hints": [
+        "Think about the audience and style requested in the task.",
+        "Compare meeting that requirement with a claim that casual language is always wrong."
+      ]
+    },
+    "ex6-29": {
+      "hints": [
+        "The expression is not about a real animal in the question.",
+        "Think about a tempting choice that leads your attention away from the right issue."
+      ]
+    },
+    "ex6-33": {
+      "hints": [
+        "Consider the time left and what parts of your answer are still usable.",
+        "Choose a response that repairs the logic without unnecessarily discarding valid work."
+      ]
+    },
+    "ex6-41": {
+      "hints": [
+        "Consider what you need to know before dividing your time across the paper.",
+        "Choose a step that prepares you for the whole exam rather than only the first question."
+      ]
+    },
+    "ex6-43": {
+      "hints": [
+        "Think about where the requested information can be found.",
+        "Choose a method that answers the actual question rather than copying a whole paragraph."
+      ]
+    },
+    "ex6-45": {
+      "hints": [
+        "Try your word in the whole sentence.",
+        "Choose a set of checks that goes beyond whether the gap contains anything."
+      ]
+    },
+    "ex6-47": {
+      "hints": [
+        "An answer should meet the task and be understandable.",
+        "Compare those goals with merely writing a lot or using difficult words."
+      ]
+    },
+    "vb6-7": {
+      "hints": [
+        "Compare a word such as decorate with decoration.",
+        "Think about the grammatical job of each word."
+      ]
+    },
+    "vb6-11": {
+      "hints": [
+        "Read the expression in a dictionary-use context.",
+        "Choose the meaning that fits checking an unfamiliar word."
+      ]
+    },
+    "vb6-15": {
+      "hints": [
+        "Think about what happens to an object after its first use.",
+        "Choose the meaning of the whole word, not just its base."
+      ]
+    },
+    "vb6-25": {
+      "hints": [
+        "Imagine opening the fridge and finding an empty milk bottle.",
+        "Which meaning fits what you would tell someone who wants milk?"
+      ]
+    },
+    "vb6-29": {
+      "hints": [
+        "Imagine finding an interesting article while looking for something else.",
+        "Choose the meaning that fits an unplanned discovery."
+      ]
+    },
+    "vb6-33": {
+      "hints": [
+        "Think about the conventional verb used with an impression.",
+        "The sentence requires its past-tense form."
+      ]
+    },
+    "vb6-37": {
+      "hints": [
+        "Focus on the whole expression rather than translating each word separately.",
+        "Which phrase is conventionally used for accepting a difficult situation?"
+      ]
+    },
+    "vb6-39": {
+      "hints": [
+        "Think about a noise that annoys you but that you continue to live with.",
+        "Which meaning fits that situation?"
+      ]
+    },
+    "vb6-41": {
+      "hints": [
+        "Compare a fair judge with someone who finds a topic boring.",
+        "Choose the option that distinguishes those two meanings."
+      ]
+    },
+    "ex6-20": {
+      "hints": [
+        "Read the two grammatical labels supplied with the numbered gaps.",
+        "Enter both missing parts in the requested order."
+      ]
+    },
+    "vb6-22": {
+      "altAnswers": [
+        "pollutant",
+        "polluter"
+      ]
+    }
+  }
+}
