@@ -14,7 +14,7 @@ const WEBSITE = "www.cleverli.ch";
 const content = {
   de: {
     title: "Allgemeine Geschäftsbedingungen (AGB)",
-    updated: "Stand: März 2026",
+    updated: "Stand: 10. September 2026",
     sections: [
       {
         heading: "1. Anbieter",
@@ -41,9 +41,7 @@ Der Anbieter behält sich vor, den Funktionsumfang des Dienstes jederzeit zu erw
       },
       {
         heading: "4. Registrierung & Nutzerkonto",
-        body: `Die Registrierung steht volljährigen Personen (Eltern, Erziehungsberechtigte) offen. Bei der Registrierung sind wahrheitsgemässe Angaben zu machen. Das Nutzerkonto ist persönlich und nicht übertragbar.
-
-Der Nutzer ist für die Geheimhaltung seiner Zugangsdaten verantwortlich. Bei Verdacht auf Missbrauch ist der Anbieter unverzüglich zu informieren.`,
+        body: `Die Registrierung steht volljährigen Personen offen, insbesondere Eltern, Erziehungsberechtigten und Lehrpersonen. Lehrpersonen dürfen Cleverli zur Unterrichtsvorbereitung, zur gemeinsamen Bearbeitung und Vorführung im Unterricht sowie zur begleiteten individuellen Förderung nutzen. Angaben bei der Registrierung müssen wahrheitsgemäss sein. Zugangsdaten bleiben persönlich und dürfen nicht an eine Klasse weitergegeben werden. Die bestehenden Grenzen des gebuchten Angebots, insbesondere die Anzahl Kinderprofile, bleiben unverändert. Ein Familienzugang ist keine unbeschränkte Klassenlizenz. Für zusätzliche Profile oder institutionelle Vereinbarungen kontaktieren Sie hello@cleverli.ch.`,
       },
       {
         heading: "5. Abonnement & Preise",
@@ -72,15 +70,11 @@ Eine Rückerstattung bereits bezahlter Beträge erfolgt nicht, ausser der Anbiet
       },
       {
         heading: "8. Datenschutz",
-        body: `Die Erhebung und Verarbeitung personenbezogener Daten erfolgt gemäss unserer Datenschutzerklärung, die unter ${WEBSITE}/datenschutz abrufbar ist.
-
-Wir nehmen den Schutz von Kinderdaten besonders ernst. Persönliche Daten von Kindern werden nur im Rahmen der Plattformnutzung verarbeitet und nicht an Dritte weitergegeben. Die Nutzung des Dienstes durch Minderjährige erfolgt unter Aufsicht und Verantwortung der erziehungsberechtigten Person.`,
+        body: `Personenbezogene Daten werden gemäss unserer Datenschutzerklärung unter www.cleverli.ch/datenschutz verarbeitet. Darin sind auch die eingesetzten technischen Dienstleister und mögliche Bearbeitungen im Ausland beschrieben. Wir verkaufen keine Kinderprofile oder Lernfortschritte. Minderjährige nutzen Cleverli unter Aufsicht einer erziehungsberechtigten Person oder einer verantwortlichen Lehrperson. Vor dem Anlegen personenbezogener Schülerprofile muss die Schule die erforderliche Rechtsgrundlage, Information der Erziehungsberechtigten und gegebenenfalls Einwilligung sowie eine erforderliche Vereinbarung zur Auftragsbearbeitung klären. Eine Lehrperson kann nicht allein durch Annahme dieser AGB im Namen aller Eltern einwilligen. Verwenden Sie möglichst Spitznamen und keine sensiblen Angaben. Eine Aufnahme in ein Anwendungsverzeichnis ersetzt keine schulische Datenschutzprüfung.`,
       },
       {
         heading: "9. Geistiges Eigentum",
-        body: `Alle Inhalte auf Cleverli (Texte, Grafiken, Illustrationen, Software, Übungen) sind urheberrechtlich geschützt und Eigentum des Anbieters oder lizenzierter Dritter. Eine Vervielfältigung, Verbreitung oder Bearbeitung ohne ausdrückliche Genehmigung ist untersagt.
-
-Die Nutzung ist ausschliesslich für den privaten, nicht-kommerziellen Gebrauch im Rahmen des Abonnements gestattet.`,
+        body: `Alle Inhalte auf Cleverli sind urheberrechtlich geschützt und gehören dem Anbieter oder lizenzierten Dritten. Neben privatem Lernen ist die pädagogische Nutzung durch Lehrpersonen im Rahmen ihres Unterrichts und des gebuchten Zugangs ausdrücklich gestattet, einschliesslich Vorführung und gemeinsamer Bearbeitung der Übungen. Die berufliche Tätigkeit einer Lehrperson steht dieser Erlaubnis nicht entgegen. Nicht umfasst sind Weiterverkauf, öffentliche Wiederveröffentlichung, systematische Vervielfältigung oder eine eigene kommerzielle Verwertung der Inhalte. Dafür ist eine separate Genehmigung erforderlich.`,
       },
       {
         heading: "10. Haftung",
@@ -111,7 +105,7 @@ E-Mail: ${EMAIL}`,
 
   fr: {
     title: "Conditions Générales d'Utilisation (CGU)",
-    updated: "Version : mars 2026",
+    updated: "Version : 10 septembre 2026",
     sections: [
       {
         heading: "1. Fournisseur",
@@ -138,9 +132,7 @@ Le Fournisseur se réserve le droit de modifier ou d'adapter le Service à tout 
       },
       {
         heading: "4. Inscription & compte utilisateur",
-        body: `L'inscription est réservée aux personnes majeures (parents, tuteurs légaux). Les informations fournies lors de l'inscription doivent être exactes. Le compte est personnel et non cessible.
-
-L'utilisateur est responsable de la confidentialité de ses identifiants. Tout abus suspecté doit être signalé immédiatement au Fournisseur.`,
+        body: `L’inscription est ouverte aux personnes majeures, notamment aux parents, représentants légaux et enseignants. Les enseignants peuvent utiliser Cleverli pour préparer leurs cours, présenter et résoudre des exercices en classe et accompagner un travail individuel. Les informations fournies doivent être exactes. Les identifiants restent personnels et ne peuvent pas être distribués à une classe. Les limites de l’offre souscrite, notamment le nombre de profils enfants, restent inchangées. Un accès familial ne constitue pas une licence de classe illimitée. Pour des profils supplémentaires ou une convention institutionnelle, contactez hello@cleverli.ch.`,
       },
       {
         heading: "5. Abonnement & tarifs",
@@ -169,15 +161,11 @@ Aucun remboursement n'est accordé pour les périodes déjà payées, sauf en ca
       },
       {
         heading: "8. Protection des données",
-        body: `La collecte et le traitement des données personnelles sont régis par notre Politique de confidentialité, disponible à l'adresse ${WEBSITE}/datenschutz.
-
-Nous accordons une attention particulière à la protection des données des enfants. Les données personnelles des enfants sont traitées uniquement dans le cadre de l'utilisation de la plateforme et ne sont pas transmises à des tiers. L'utilisation du Service par des mineurs s'effectue sous la surveillance et la responsabilité du parent ou tuteur légal.`,
+        body: `Les données personnelles sont traitées selon notre politique de confidentialité sur www.cleverli.ch/datenschutz, qui décrit aussi les prestataires techniques et les traitements possibles à l’étranger. Nous ne vendons pas les profils enfants ni leur progression. Les mineurs utilisent Cleverli sous la surveillance d’un représentant légal ou d’un enseignant responsable. Avant de créer des profils élèves contenant des données personnelles, l’école doit clarifier la base légale, l’information des représentants légaux, le consentement si nécessaire et toute convention de sous-traitance requise. Accepter ces CGU ne permet pas à un enseignant de consentir au nom de tous les parents. Privilégiez les pseudonymes et évitez les données sensibles. Une inscription dans un annuaire ne remplace pas l’examen de protection des données de l’école.`,
       },
       {
         heading: "9. Propriété intellectuelle",
-        body: `Tous les contenus de Cleverli (textes, graphiques, illustrations, logiciels, exercices) sont protégés par le droit d'auteur et appartiennent au Fournisseur ou à des tiers licenciés. Toute reproduction, diffusion ou modification sans autorisation expresse est interdite.
-
-L'utilisation est autorisée uniquement à des fins privées et non commerciales dans le cadre de l'abonnement.`,
+        body: `Les contenus de Cleverli sont protégés par le droit d’auteur et appartiennent au Fournisseur ou à des tiers licenciés. Outre l’apprentissage privé, leur utilisation pédagogique par les enseignants dans leurs cours et dans les limites de l’accès souscrit est expressément autorisée, y compris la présentation et la résolution collective des exercices. Le caractère professionnel de l’activité enseignante ne s’oppose pas à cette autorisation. La revente, la republication publique, la reproduction systématique et une exploitation commerciale distincte nécessitent une autorisation séparée.`,
       },
       {
         heading: "10. Responsabilité",
@@ -208,7 +196,7 @@ E-mail : ${EMAIL}`,
 
   it: {
     title: "Condizioni Generali di Contratto (CGC)",
-    updated: "Versione: marzo 2026",
+    updated: "Versione: 10 settembre 2026",
     sections: [
       {
         heading: "1. Fornitore",
@@ -235,9 +223,7 @@ Il Fornitore si riserva il diritto di modificare o adattare il Servizio in quals
       },
       {
         heading: "4. Registrazione & account utente",
-        body: `La registrazione è aperta a persone maggiorenni (genitori, tutori legali). Le informazioni fornite devono essere veritiere. L'account è personale e non cedibile.
-
-L'utente è responsabile della riservatezza delle proprie credenziali. Qualsiasi abuso sospetto deve essere segnalato immediatamente al Fornitore.`,
+        body: `La registrazione è aperta alle persone maggiorenni, in particolare genitori, tutori e docenti. I docenti possono usare Cleverli per preparare le lezioni, presentare e svolgere insieme gli esercizi in classe e accompagnare l’apprendimento individuale. I dati forniti devono essere veritieri. Le credenziali restano personali e non possono essere distribuite a una classe. Restano invariati i limiti dell’offerta acquistata, incluso il numero di profili bambino. Un accesso famiglia non è una licenza di classe illimitata. Per profili aggiuntivi o accordi istituzionali contattare hello@cleverli.ch.`,
       },
       {
         heading: "5. Abbonamento & prezzi",
@@ -266,15 +252,11 @@ Non è previsto alcun rimborso per i periodi già pagati, salvo in caso di cessa
       },
       {
         heading: "8. Protezione dei dati",
-        body: `La raccolta e il trattamento dei dati personali sono regolati dalla nostra Informativa sulla privacy, disponibile all'indirizzo ${WEBSITE}/datenschutz.
-
-Prestiamo particolare attenzione alla protezione dei dati dei bambini. I dati personali dei bambini vengono trattati esclusivamente nell'ambito dell'utilizzo della piattaforma e non vengono trasmessi a terzi. L'utilizzo del Servizio da parte di minori avviene sotto la supervisione e la responsabilità del genitore o tutore legale.`,
+        body: `I dati personali sono trattati secondo l’informativa su www.cleverli.ch/datenschutz, che descrive anche i fornitori tecnici e i possibili trattamenti all’estero. Non vendiamo profili dei bambini o progressi di apprendimento. I minori usano Cleverli sotto la supervisione di un tutore o docente responsabile. Prima di creare profili degli allievi con dati personali, la scuola deve chiarire la base giuridica, l’informazione dei tutori, l’eventuale consenso e gli accordi sul trattamento per conto terzi necessari. Accettare queste CGC non consente al docente di prestare consenso per tutti i genitori. Usare preferibilmente soprannomi ed evitare dati sensibili. L’inserimento in un elenco di applicazioni non sostituisce la verifica della scuola in materia di protezione dei dati.`,
       },
       {
         heading: "9. Proprietà intellettuale",
-        body: `Tutti i contenuti di Cleverli (testi, grafica, illustrazioni, software, esercizi) sono protetti dal diritto d'autore e appartengono al Fornitore o a terzi licenziatari. Qualsiasi riproduzione, diffusione o modifica senza espressa autorizzazione è vietata.
-
-L'utilizzo è consentito esclusivamente per uso privato e non commerciale nell'ambito dell'abbonamento.`,
+        body: `I contenuti di Cleverli sono protetti dal diritto d’autore e appartengono al Fornitore o a terzi licenziatari. Oltre all’apprendimento privato, è espressamente autorizzato l’uso didattico da parte dei docenti nelle proprie lezioni e nei limiti dell’accesso acquistato, inclusa la presentazione e lo svolgimento collettivo degli esercizi. L’attività professionale del docente non è esclusa da questa autorizzazione. Rivendita, ripubblicazione pubblica, riproduzione sistematica e sfruttamento commerciale separato richiedono un’autorizzazione distinta.`,
       },
       {
         heading: "10. Responsabilità",
@@ -305,7 +287,7 @@ E-mail: ${EMAIL}`,
 
   en: {
     title: "Terms and Conditions",
-    updated: "Version: March 2026",
+    updated: "Version: 10 September 2026",
     sections: [
       {
         heading: "1. Provider",
@@ -332,9 +314,7 @@ The Provider reserves the right to expand, modify, or discontinue features of th
       },
       {
         heading: "4. Registration & User Account",
-        body: `Registration is open to adults (parents, legal guardians). Information provided during registration must be accurate. The user account is personal and non-transferable.
-
-The user is responsible for keeping their login credentials confidential. Any suspected misuse must be reported to the Provider immediately.`,
+        body: `Registration is open to adults, including parents, legal guardians and teachers. Teachers may use Cleverli to prepare lessons, present and work through exercises in class, and support supervised individual learning. Registration details must be accurate. Login credentials remain personal and must not be distributed to a class. Existing plan limits, including the number of child profiles, remain unchanged. A family plan is not an unlimited classroom licence. For additional profiles or institutional arrangements, contact hello@cleverli.ch.`,
       },
       {
         heading: "5. Subscription & Pricing",
@@ -363,15 +343,11 @@ No refunds are given for periods already paid, except if the Provider discontinu
       },
       {
         heading: "8. Data Protection",
-        body: `The collection and processing of personal data is governed by our Privacy Policy, available at ${WEBSITE}/datenschutz.
-
-We take the protection of children's data particularly seriously. Personal data of children is processed solely in the context of platform use and is not shared with third parties. Use of the Service by minors is subject to the supervision and responsibility of the parent or legal guardian.`,
+        body: `Personal data is processed according to our privacy policy at www.cleverli.ch/datenschutz, which also describes technical service providers and possible processing abroad. We do not sell child profiles or learning progress. Minors use Cleverli under the supervision of a legal guardian or responsible teacher. Before creating identifiable pupil profiles, the school must establish the required legal basis, parental information, consent where necessary, and any required data processing agreement. Accepting these terms does not allow a teacher to consent on behalf of every parent. Prefer nicknames and avoid sensitive information. Inclusion in an application directory does not replace a school’s data protection assessment.`,
       },
       {
         heading: "9. Intellectual Property",
-        body: `All content on Cleverli (text, graphics, illustrations, software, exercises) is protected by copyright and belongs to the Provider or licensed third parties. Reproduction, distribution, or modification without express permission is prohibited.
-
-Use is permitted solely for private, non-commercial purposes within the scope of the subscription.`,
+        body: `Cleverli content is protected by copyright and belongs to the Provider or licensed third parties. In addition to private learning, teachers are expressly permitted to use it for educational purposes in their lessons within the purchased access limits, including presenting and jointly completing exercises. A teacher’s professional activity does not invalidate this permission. Resale, public republication, systematic reproduction and separate commercial exploitation require separate permission.`,
       },
       {
         heading: "10. Liability",
