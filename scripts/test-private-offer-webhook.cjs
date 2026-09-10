@@ -32,6 +32,7 @@ async function run({status='paid',privateOffer=false,eventType='checkout.session
   const duplicate=await run({privateOffer:true,duplicate:true});assert.equal(duplicate.calls.email,0);assert.equal(duplicate.calls.activity,0);checks++;
   const stale=await run({privateOffer:true,retrievedStatus:'unpaid'});assert.equal(stale.result.status,409);assert.equal(stale.calls.redeem,0);checks++;
   const failed=await run({privateOffer:true,fail:true});assert.equal(failed.result.status,500);assert.equal(failed.calls.email,0);checks++;
+  const genericAsync=await run({eventType:'checkout.session.async_payment_succeeded'});assert.equal(genericAsync.result.status,200);assert.deepEqual(genericAsync.calls,{patch:0,redeem:0,email:0,activity:0,meta:0});checks++;
   const asyncPaid=await run({privateOffer:true,eventType:'checkout.session.async_payment_succeeded'});assert.equal(asyncPaid.calls.redeem,1);checks++;
   const asyncUnpaid=await run({privateOffer:true,eventType:'checkout.session.async_payment_succeeded',status:'unpaid'});assert.equal(asyncUnpaid.calls.redeem,0);checks++;
   const trial=await run({mode:'subscription',status:'unpaid',trial:true});assert.equal(trial.calls.patch,1);assert.equal(trial.calls.email,0);checks++;

@@ -167,7 +167,10 @@ export async function POST(req: NextRequest) {
   }
 
   // ── Subscription activated ──────────────────────────────────────────────
-  if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
+  if (event.type === "checkout.session.completed" || (
+    event.type === "checkout.session.async_payment_succeeded"
+    && Boolean((event.data.object as Stripe.Checkout.Session).metadata?.private_offer_id)
+  )) {
     let session = event.data.object as Stripe.Checkout.Session;
     const plan = session.metadata?.plan ?? "monthly";
 
