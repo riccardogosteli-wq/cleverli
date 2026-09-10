@@ -507,7 +507,7 @@
     },
     "g6d24": {
       "question": "Verlängere das Wort für einen runden Teil am Velo: «Ra___» wird zu «Rä___er». Ergänze denselben Buchstaben: d oder t.",
-      "spokenPrompt": "Verlängere das Wort für einen runden Teil am Velo: «Wort mit Lücke» wird zu «Wort mit Lücke». Ergänze denselben Buchstaben: d oder t. Vor der Lücke stehen die Buchstaben R, A. Nach der Lücke stehen keine weiteren Buchstaben. Vor der Lücke stehen die Buchstaben R, Ä. Nach der Lücke stehen die Buchstaben E, R.",
+      "spokenPrompt": "Verlängere das Wort für einen runden Teil am Velo: «Wort mit Lücke» wird zu «Wort mit Lücke». Ergänze denselben Buchstaben: d oder t. Vor der Lücke stehen die Buchstaben R, A. Nach der Lücke stehen keine weiteren Buchstaben. Vor der Lücke stehen die Buchstaben R, A mit Umlaut. Nach der Lücke stehen die Buchstaben E, R.",
       "verbatimSpeech": true
     },
     "g6d25": {
@@ -2957,7 +2957,7 @@
       "verbatimSpeech": true
     },
     "g6d3": {
-      "spokenPrompt": "«Ich gebe … Hund einen Knochen.» — Ergänze den richtigen Artikel (dem/den/der).",
+      "spokenPrompt": "Ergänze den Artikel in der Lücke. Ich gebe, Lücke, Hund einen Knochen. Wähle zwischen dem, den und der.",
       "verbatimSpeech": true
     },
     "g6d5": {
@@ -2977,11 +2977,11 @@
       "verbatimSpeech": true
     },
     "g6d28": {
-      "spokenPrompt": "Ergänze korrekt: Die Gruppe löst die Aufgabe Wort mit Lücke. Vor der Lücke stehen die Buchstaben S, E, L, B, S, T, S, T, Ä. Nach der Lücke stehen die Buchstaben I, G.",
+      "spokenPrompt": "Ergänze korrekt: Die Gruppe löst die Aufgabe Wort mit Lücke. Vor der Lücke stehen die Buchstaben S, E, L, B, S, T, S, T, A mit Umlaut. Nach der Lücke stehen die Buchstaben I, G.",
       "verbatimSpeech": true
     },
     "g6d29": {
-      "spokenPrompt": "Ergänze korrekt: Die Klasse diskutiert Wort mit Lücke. Vor der Lücke stehen die Buchstaben R, Ü. Nach der Lücke stehen die Buchstaben S, I, C, H, T, S, V, O, L, L.",
+      "spokenPrompt": "Ergänze korrekt: Die Klasse diskutiert Wort mit Lücke. Vor der Lücke stehen die Buchstaben R, U mit Umlaut. Nach der Lücke stehen die Buchstaben S, I, C, H, T, S, V, O, L, L.",
       "verbatimSpeech": true
     },
     "g6d30": {
@@ -3005,7 +3005,7 @@
       "verbatimSpeech": true
     },
     "g6rs3f": {
-      "spokenPrompt": "Ergänze korrekt: Der Beschluss gilt Wort mit Lücke. Vor der Lücke stehen die Buchstaben E, N, D, G, Ü. Nach der Lücke stehen die Buchstaben I, G.",
+      "spokenPrompt": "Ergänze korrekt: Der Beschluss gilt Wort mit Lücke. Vor der Lücke stehen die Buchstaben E, N, D, G, U mit Umlaut. Nach der Lücke stehen die Buchstaben I, G.",
       "verbatimSpeech": true
     },
     "g6rs3g": {
@@ -3013,19 +3013,19 @@
       "verbatimSpeech": true
     },
     "g6rs3h": {
-      "spokenPrompt": "Ergänze korrekt: Das Ergebnis ist Wort mit Lücke. Vor der Lücke stehen die Buchstaben Z, U, V, E, R, L, Ä. Nach der Lücke stehen die Buchstaben I, G.",
+      "spokenPrompt": "Ergänze korrekt: Das Ergebnis ist Wort mit Lücke. Vor der Lücke stehen die Buchstaben Z, U, V, E, R, L, A mit Umlaut. Nach der Lücke stehen die Buchstaben I, G.",
       "verbatimSpeech": true
     },
     "g6rs3i": {
-      "spokenPrompt": "Ergänze korrekt: Der Weg ist Wort mit Lücke steil. Vor der Lücke stehen die Buchstaben A, U. Nach der Lücke stehen die Buchstaben E, R, G, E, W, Ö, H, N, L, I, C, H.",
+      "spokenPrompt": "Ergänze korrekt: Der Weg ist Wort mit Lücke steil. Vor der Lücke stehen die Buchstaben A, U. Nach der Lücke stehen die Buchstaben E, R, G, E, W, O mit Umlaut, H, N, L, I, C, H.",
       "verbatimSpeech": true
     },
     "g6rs3k": {
-      "spokenPrompt": "Ergänze korrekt: Die Erklärung ist Wort mit Lücke. Vor der Lücke stehen die Buchstaben M, I, S, S, V, E, R, S, T, Ä. Nach der Lücke stehen die Buchstaben L, I, C, H.",
+      "spokenPrompt": "Ergänze korrekt: Die Erklärung ist Wort mit Lücke. Vor der Lücke stehen die Buchstaben M, I, S, S, V, E, R, S, T, A mit Umlaut. Nach der Lücke stehen die Buchstaben L, I, C, H.",
       "verbatimSpeech": true
     },
     "g6rs3l": {
-      "spokenPrompt": "Ergänze korrekt: Sie fasst die Ergebnisse Wort mit Lücke zusammen. Vor der Lücke stehen die Buchstaben P, R, Ä. Nach der Lücke stehen die Buchstaben I, S, E.",
+      "spokenPrompt": "Ergänze korrekt: Sie fasst die Ergebnisse Wort mit Lücke zusammen. Vor der Lücke stehen die Buchstaben P, R, A mit Umlaut. Nach der Lücke stehen die Buchstaben I, S, E.",
       "verbatimSpeech": true
     }
   }
