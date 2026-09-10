@@ -9,10 +9,10 @@ if (dsn) {
     tracesSampleRate: process.env.NODE_ENV === "production" ? 0.05 : 1.0,
     // Private offer capabilities arrive in a POST body, never report that request.
     beforeSendTransaction(event) {
-      return event.transaction?.includes("/offer/personal") ? null : event;
+      return ["/offer/personal", "/internal-log-dashboard/private-offer-mail", "/offer/click/"].some(path => event.transaction?.includes(path)) ? null : event;
     },
     beforeSend(event) {
-      if (event.request?.url?.includes("/offer/personal") || event.transaction?.includes("/offer/personal")) return null;
+      if (["/offer/personal", "/internal-log-dashboard/private-offer-mail", "/offer/click/"].some(path => event.request?.url?.includes(path) || event.transaction?.includes(path))) return null;
       if (event.user) {
         delete event.user.email;
         delete event.user.username;
