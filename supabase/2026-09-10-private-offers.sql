@@ -56,7 +56,8 @@ create or replace function public.redeem_private_offer(
 declare o public.private_checkout_offers;
 begin
   select * into strict o from public.private_checkout_offers where id = p_id for update;
-  if p_paid is not true or o.session_id is distinct from p_session or o.user_id is distinct from p_user
+  if p_paid is not true or p_session is null or p_session = '' or p_expires is null
+    or o.session_id is distinct from p_session or o.user_id is distinct from p_user
     or o.customer_id is distinct from p_customer or o.amount is distinct from p_amount or o.currency is distinct from p_currency
     or o.session_expires is distinct from p_expires or p_expires > o.deadline then
     raise exception 'payment_mismatch';

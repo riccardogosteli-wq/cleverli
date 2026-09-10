@@ -12,6 +12,8 @@ const { PGlite } = require(process.env.PRIVATE_OFFER_TEST_PGLITE_MODULE || '@ele
     const now = Math.floor(Date.now() / 1000), deadline = now + 100000;
     await db.query('insert into parent_profiles(id) values($1)', [user]);
     await db.query('insert into private_checkout_offers(id,token_hash,user_id,customer_id,amount,deadline) values($1,$2,$3,$4,$5,$6)', [id,'a'.repeat(64),user,'cus_fake',19900,deadline]);
+    // Unissued offers must not be redeemable with NULL session/expiry arguments.
+    await assert.rejects(db.query('select public.redeem_private_offer($1,null,$2,$3,19900,\'chf\',true,null)', [id,user,'cus_fake'])); checks++;
     const advance = () => db.query('select (public.advance_private_offer($1,0,$2)).*', [id, now + 80000]);
     const results = await Promise.all([advance(), advance()]);
     assert.equal(results[0].rows[0].generation, 1); assert.equal(results[1].rows[0].generation, 1); checks += 2;
