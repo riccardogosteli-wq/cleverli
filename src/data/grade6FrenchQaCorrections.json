@@ -1,0 +1,1629 @@
+{
+  "patches": {
+    "vd6-48": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduis: 'The hospital is behind the park, next to the post office.'"
+    },
+    "ff6-16": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Frankophonie ist eine internationale Organisation der französischsprachigen Länder.'"
+    },
+    "ff6-18": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'In welchen Schweizer Kantonen wird Französisch gesprochen?'"
+    },
+    "ff6-20": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Der Unterschied zwischen belgischem und schweizerischem Französisch ist vor allem im Wortschatz zu hören.'"
+    },
+    "ff6-22": {
+      "type": "self-review",
+      "answer": "L’Oktoberfest a lieu à Munich ; l’Escalade est une fête historique à Genève.",
+      "question": "Traduisez : « Das Oktoberfest findet in München statt; die Escalade ist ein historisches Fest in Genf. »",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez : « Das Oktoberfest findet in München statt; die Escalade ist ein historisches Fest in Genf. »"
+    },
+    "ff6-24": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Auf Quebecois ist 'char' das Wort für Auto.'"
+    },
+    "ff6-26": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Schweizer Identität ist mehrsprachig und multikulturell.'"
+    },
+    "ff6-28": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Der 1. August ist der Schweizer Nationalfeiertag.'"
+    },
+    "ff6-30": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Frankreich ist dafür bekannt, für seine Küche und seinen Wein.'"
+    },
+    "ff6-32": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Haiti ist das einzige frankophone Land in der Karibik.'"
+    },
+    "ff6-34": {
+      "type": "self-review",
+      "answer": "Le siège du Comité international olympique se trouve à Lausanne.",
+      "question": "Traduisez : « In Lausanne befindet sich der Sitz des Internationalen Olympischen Komitees. »",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez : « In Lausanne befindet sich der Sitz des Internationalen Olympischen Komitees. »"
+    },
+    "ff6-36": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Frankophonie ist nicht nur eine Sprache, sondern auch ein kulturelles Erbe, das verschiedene Völker verbindet.'"
+    },
+    "ff6-38": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Schweiz nimmt eine einzigartige Rolle in der Frankophonie ein, da sie ein mehrsprachiges Land ist.'"
+    },
+    "ff6-40": {
+      "type": "self-review",
+      "answer": "En Wallonie, on parle principalement français ; la Région de Bruxelles-Capitale est officiellement bilingue.",
+      "question": "Traduisez : « In der Wallonie wird überwiegend Französisch gesprochen; die Region Brüssel-Hauptstadt ist offiziell zweisprachig. »",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez : « In der Wallonie wird überwiegend Französisch gesprochen; die Region Brüssel-Hauptstadt ist offiziell zweisprachig. »"
+    },
+    "ff6-44": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Senegal ist ein stabiles demokratisches Land, das seinen kulturellen Reichtum bewahrt.'"
+    },
+    "ff6-46": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Unterschiede zwischen dem europäischen und dem afrikanischen Französisch sind faszinierend und zeigen, wie Sprache sich entwickelt.'"
+    },
+    "ff6-48": {
+      "type": "self-review",
+      "answer": "Le Maroc se trouve en Afrique du Nord ; le français y est souvent utilisé.",
+      "question": "Traduisez : « Marokko liegt in Nordafrika; Französisch wird dort häufig verwendet. »",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez : « Marokko liegt in Nordafrika; Französisch wird dort häufig verwendet. »"
+    },
+    "ma6-16": {
+      "type": "self-review",
+      "answer": "Que voudrais-tu devenir quand tu seras grand ?",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Was möchtest du werden, wenn du gross bist?'"
+    },
+    "ma6-18": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Um Arzt zu werden, muss man viele Jahre studieren.'"
+    },
+    "ma6-20": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Ich träume davon, eines Tages eine eigene Firma zu gründen.'"
+    },
+    "ma6-22": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'In der Zukunft werden viele Berufe durch die Automatisierung verschwinden.'"
+    },
+    "ma6-24": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Ich möchte einen Beruf ausüben, der der Gesellschaft nützt.'"
+    },
+    "ma6-26": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Eine gute Arbeit-Leben-Balance ist für die Gesundheit wichtig.'"
+    },
+    "ma6-28": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Ich habe mich für ein Praktikum in einem Architekturbüro beworben.'"
+    },
+    "ma6-30": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Digitalisierung schafft neue Berufe, die es früher nicht gab.'"
+    },
+    "ma6-32": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Welche Qualitäten braucht ein guter Lehrer?'"
+    },
+    "ma6-34": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Mein Traumberuf ist Archäologe, weil ich Geschichte faszinierend finde.'"
+    },
+    "ma6-36": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'In der heutigen Gesellschaft sind Sprachkenntnisse entscheidend für den beruflichen Erfolg.'"
+    },
+    "ma6-38": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Um erfolgreich zu sein, muss man sich ständig weiterbilden und anpassungsfähig sein.'"
+    },
+    "ma6-40": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Globalisierung hat die Berufswelt grundlegend verändert, indem sie neue Möglichkeiten und Herausforderungen schafft.'"
+    },
+    "ma6-42": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Das Unternehmertum erfordert Mut, Kreativität und die Bereitschaft, Risiken einzugehen.'"
+    },
+    "ma6-44": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die künstliche Intelligenz wird Ärzten helfen, Krankheiten schneller und genauer zu diagnostizieren.'"
+    },
+    "ma6-46": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Ich möchte eines Tages eine NGO gründen, die Bildung in Entwicklungsländern fördert.'"
+    },
+    "ma6-48": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die beste Vorbereitung auf die Zukunft ist eine breite Bildung und die Fähigkeit, sich anzupassen.'"
+    },
+    "cf6-16": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die frankophone Kultur zeichnet sich durch eine reiche literarische Tradition aus.'"
+    },
+    "cf6-18": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Der Eurovision Song Contest bringt europäische Kulturen zusammen, darunter viele frankophone Länder.'"
+    },
+    "cf6-20": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Schweizer Uhrenindustrie ist weltberühmt für ihre Präzision.'"
+    },
+    "cf6-22": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Molière hat die französische Komödie durch seine Stücke über menschliche Schwächen geprägt.'"
+    },
+    "cf6-24": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Der Tour de France ist das berühmteste Radrennen der Welt und findet jedes Jahr im Juli statt.'"
+    },
+    "cf6-26": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Das Impressionismus-Museum Orsay in Paris beherbergt Werke von Monet, Renoir und Degas.'"
+    },
+    "cf6-28": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'In der Schweiz gibt es eine lebhafte frankophone Kulturszene, besonders in Genf und Lausanne.'"
+    },
+    "cf6-30": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Der Jazz hat sich in Frankreich durch Musiker wie Django Reinhardt und Stéphane Grappelli entwickelt.'"
+    },
+    "cf6-32": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die afrikanische Musikszene hat die moderne frankophone Musik stark beeinflusst.'"
+    },
+    "cf6-34": {
+      "type": "self-review",
+      "answer": "La Fête des Vignerons est une grande fête à Vevey qui célèbre le travail des vignerons.",
+      "question": "Traduisez : « Die Fête des Vignerons ist ein grosses Fest in Vevey, das die Arbeit der Winzer feiert. »",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez : « Die Fête des Vignerons ist ein grosses Fest in Vevey, das die Arbeit der Winzer feiert. »"
+    },
+    "cf6-36": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die frankophone Literatur spiegelt die Vielfalt der Kulturen und Erfahrungen der französischsprachigen Welt wider.'"
+    },
+    "cf6-38": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Der belgische Surrealismus, repräsentiert durch René Magritte, hat die moderne Kunst weltweit beeinflusst.'"
+    },
+    "cf6-40": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die Negritude-Bewegung, angeführt von Senghor und Césaire, war ein wichtiger kultureller Beitrag der frankophonen Welt.'"
+    },
+    "cf6-42": {
+      "type": "self-review",
+      "answer": "Le repas gastronomique des Français a été inscrit en 2010 sur la liste du patrimoine culturel immatériel de l’UNESCO.",
+      "question": "Traduisez : « Das gastronomische Mahl der Franzosen wurde 2010 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen. »",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez : « Das gastronomische Mahl der Franzosen wurde 2010 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen. »"
+    },
+    "cf6-44": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Der Louvre in Paris ist das meistbesuchte Museum der Welt und beherbergt die Mona Lisa.'"
+    },
+    "cf6-46": {
+      "type": "self-review",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez: 'Die frankophone Welt ist eine der reichsten kulturellen Gemeinschaften, die verschiedene Kontinente umfasst.'"
+    },
+    "cf6-48": {
+      "type": "self-review",
+      "answer": "Albert Camus est né en Algérie, écrivait en français et a reçu le prix Nobel de littérature.",
+      "question": "Traduisez : « Albert Camus wurde in Algerien geboren, schrieb auf Französisch und erhielt den Literaturnobelpreis. »",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "hints": [
+        "Repère le sujet, les actions et les informations à conserver.",
+        "Traduis le sens, puis vérifie les temps, les accords et les petits mots."
+      ],
+      "spokenPrompt": "Traduisez : « Albert Camus wurde in Algerien geboren, schrieb auf Französisch und erhielt den Literaturnobelpreis. »"
+    },
+    "imp6-40": {
+      "answer": "À l’école, Mia cherche la clé.",
+      "hints": [
+        "Choisis un sujet et une action qui correspondent au thème.",
+        "Écris une phrase complète, avec une majuscule et un point."
+      ]
+    },
+    "imp6-50": {
+      "answer": "À l’école, Léo cherche la clé.",
+      "hints": [
+        "Choisis un sujet et une action qui correspondent au thème.",
+        "Écris une phrase complète, avec une majuscule et un point."
+      ]
+    },
+    "fs6-38": {
+      "answer": "Samedi, Tom va ranger la chambre.",
+      "hints": [
+        "Choisis un sujet et une action qui correspondent au thème.",
+        "Écris une phrase complète, avec une majuscule et un point."
+      ]
+    },
+    "fs6-50": {
+      "answer": "Dimanche, Sam va préparer un sandwich.",
+      "hints": [
+        "Choisis un sujet et une action qui correspondent au thème.",
+        "Écris une phrase complète, avec une majuscule et un point."
+      ]
+    },
+    "pr6-50": {
+      "question": "Lis le modèle : « Je voudrais de l’eau. » Écris une autre demande polie avec « Je voudrais ».",
+      "spokenPrompt": "Lis le modèle : « Je voudrais de l’eau. » Écris une autre demande polie avec « Je voudrais »."
+    },
+    "pr6-2": {
+      "question": "Complète le refus poli : « Non, ___. »",
+      "answer": "merci",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète le refus poli : « Non, ___. »"
+    },
+    "pr6-4": {
+      "question": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »",
+      "answer": "bibliothèque",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »"
+    },
+    "pr6-6": {
+      "question": "Complète pour dire que tu vas bien : « Ça va ___, merci. »",
+      "answer": "bien",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète pour dire que tu vas bien : « Ça va ___, merci. »"
+    },
+    "pr6-8": {
+      "question": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »",
+      "answer": "gauche",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »"
+    },
+    "pr6-10": {
+      "question": "Complète la demande polie avec le verbe vouloir au conditionnel : « Je ___ de l’eau. »",
+      "answer": "voudrais",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète la demande polie avec le verbe vouloir au conditionnel : « Je ___ de l’eau. »"
+    },
+    "pr6-12": {
+      "question": "Complète le refus poli : « Non, ___. »",
+      "answer": "merci",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète le refus poli : « Non, ___. »"
+    },
+    "pr6-14": {
+      "question": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »",
+      "answer": "bibliothèque",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »"
+    },
+    "pr6-16": {
+      "question": "Complète pour dire que tu vas bien : « Ça va ___, merci. »",
+      "answer": "bien",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète pour dire que tu vas bien : « Ça va ___, merci. »"
+    },
+    "pr6-18": {
+      "question": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »",
+      "answer": "gauche",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »"
+    },
+    "pr6-20": {
+      "question": "Complète la demande polie avec le verbe vouloir au conditionnel : « Je ___ de l’eau. »",
+      "answer": "voudrais",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète la demande polie avec le verbe vouloir au conditionnel : « Je ___ de l’eau. »"
+    },
+    "pr6-22": {
+      "question": "Complète le refus poli : « Non, ___. »",
+      "answer": "merci",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète le refus poli : « Non, ___. »"
+    },
+    "pr6-24": {
+      "question": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »",
+      "answer": "bibliothèque",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »"
+    },
+    "pr6-26": {
+      "question": "Complète pour dire que tu vas bien : « Ça va ___, merci. »",
+      "answer": "bien",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète pour dire que tu vas bien : « Ça va ___, merci. »"
+    },
+    "pr6-28": {
+      "question": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »",
+      "answer": "gauche",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »"
+    },
+    "pr6-30": {
+      "question": "Complète la demande polie avec le verbe vouloir au conditionnel : « Je ___ de l’eau. »",
+      "answer": "voudrais",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète la demande polie avec le verbe vouloir au conditionnel : « Je ___ de l’eau. »"
+    },
+    "pr6-32": {
+      "question": "Complète le refus poli : « Non, ___. »",
+      "answer": "merci",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète le refus poli : « Non, ___. »"
+    },
+    "pr6-34": {
+      "question": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »",
+      "answer": "bibliothèque",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »"
+    },
+    "pr6-36": {
+      "question": "Complète pour dire que tu vas bien : « Ça va ___, merci. »",
+      "answer": "bien",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète pour dire que tu vas bien : « Ça va ___, merci. »"
+    },
+    "pr6-38": {
+      "question": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »",
+      "answer": "gauche",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »"
+    },
+    "pr6-40": {
+      "question": "Complète la demande polie avec le verbe vouloir au conditionnel : « Je ___ de l’eau. »",
+      "answer": "voudrais",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète la demande polie avec le verbe vouloir au conditionnel : « Je ___ de l’eau. »"
+    },
+    "pr6-42": {
+      "question": "Complète le refus poli : « Non, ___. »",
+      "answer": "merci",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète le refus poli : « Non, ___. »"
+    },
+    "pr6-44": {
+      "question": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »",
+      "answer": "bibliothèque",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le livre est dans la bibliothèque. Complète : « Il est à la ___. »"
+    },
+    "pr6-46": {
+      "question": "Complète pour dire que tu vas bien : « Ça va ___, merci. »",
+      "answer": "bien",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Complète pour dire que tu vas bien : « Ça va ___, merci. »"
+    },
+    "pr6-48": {
+      "question": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »",
+      "answer": "gauche",
+      "hints": [
+        "Lis la situation et complète seulement le mot manquant.",
+        "Relis la réponse entière pour vérifier son sens et sa grammaire."
+      ],
+      "spokenPrompt": "Le parc est à gauche. Complète l’indication : « Tourne à ___. »"
+    },
+    "fr6-rich-journee-drag-1": {
+      "question": "Associe chaque phrase au moment de la journée indiqué par son heure.",
+      "dragItems": [
+        {
+          "id": "matin",
+          "label": "À sept heures, je me lève.",
+          "emoji": "🌅"
+        },
+        {
+          "id": "midi",
+          "label": "À douze heures, je mange.",
+          "emoji": "🥪"
+        },
+        {
+          "id": "soir",
+          "label": "À dix-neuf heures, je fais mes devoirs.",
+          "emoji": "📚"
+        },
+        {
+          "id": "nuit",
+          "label": "À minuit, je dors.",
+          "emoji": "🌙"
+        }
+      ],
+      "hints": [
+        "Cherche l’heure dans chaque phrase.",
+        "Distingue le début du jour, son milieu, le soir et la nuit."
+      ],
+      "spokenPrompt": "Associe chaque phrase au moment de la journée indiqué par son heure."
+    },
+    "fr6-rich-ville-drag-1": {
+      "question": "Voici le trajet : pars de l’école, tourne à droite, traverse ensuite le pont, puis repère la gare à gauche. Remets les indications dans cet ordre.",
+      "spokenPrompt": "Voici le trajet : pars de l’école, tourne à droite, traverse ensuite le pont, puis repère la gare à gauche. Remets les indications dans cet ordre."
+    },
+    "vd6-17": {
+      "question": "Quelle indication demande d’aller tout droit puis de tourner à gauche au feu ?",
+      "spokenPrompt": "Quelle indication demande d’aller tout droit puis de tourner à gauche au feu ?"
+    },
+    "vd6-37": {
+      "question": "Quelle question polie demande où se trouve la gare ?",
+      "options": [
+        "Où se trouve le musée ?",
+        "La gare ouvre à six heures.",
+        "Pardon, excusez-moi, pourriez-vous m'indiquer où se trouve la gare?",
+        "Tournez à droite après la poste."
+      ],
+      "spokenPrompt": "Quelle question polie demande où se trouve la gare ?"
+    },
+    "vd6-30": {
+      "answer": "dans la",
+      "altAnswers": []
+    },
+    "vd6-32": {
+      "question": "Complète : « Est-ce qu’il y a un ___ de billets près d’ici ? » (Geldautomat)",
+      "answer": "distributeur",
+      "altAnswers": [],
+      "hints": [
+        "On utilise cette machine pour retirer de l’argent.",
+        "Écris seulement le nom masculin avant « de billets »."
+      ],
+      "spokenPrompt": "Complète : « Est-ce qu’il y a un ___ de billets près d’ici ? » (Geldautomat)"
+    },
+    "vd6-42": {
+      "question": "Complète : « Excusez-moi, est-ce qu’il y a un hôtel ___ d’ici ? » (in der Nähe)",
+      "answer": "près",
+      "altAnswers": [
+        "non loin"
+      ],
+      "spokenPrompt": "Complète : « Excusez-moi, est-ce qu’il y a un hôtel ___ d’ici ? » (in der Nähe)"
+    },
+    "vd6-36": {
+      "answer": "Pour aller de la gare au musée, il faut aller tout droit, puis tourner à gauche, et finalement traverser la place.",
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "vd6-40": {
+      "question": "Complète au futur simple : « Pour aller à l’aéroport, vous ___ (devoir) prendre le train depuis la gare centrale. »",
+      "spokenPrompt": "Complète au futur simple : « Pour aller à l’aéroport, vous ___ (devoir) prendre le train depuis la gare centrale. »"
+    },
+    "vd6-14": {
+      "answer": "un feu de signalisation",
+      "altAnswers": [
+        "feu de signalisation",
+        "un feu",
+        "feu",
+        "un feu rouge",
+        "feu rouge",
+        "un feu tricolore",
+        "feu tricolore"
+      ]
+    },
+    "sc6-8": {
+      "answer": "l’œil",
+      "altAnswers": [
+        "œil",
+        "l'oeil",
+        "oeil"
+      ],
+      "hints": [
+        "Repère le sens demandé et la forme attendue dans la question.",
+        "Vérifie le nombre, l’article et la place des mots dans ta réponse."
+      ]
+    },
+    "sc6-38": {
+      "question": "Complète au passé composé : « Hier, Paul [1] (se blesser) au genou pendant le match et [2] (aller) aux urgences. » Écris seulement les deux groupes de mots manquants, dans l’ordre : ___",
+      "spokenPrompt": "Complète au passé composé : « Hier, Paul [1] (se blesser) au genou pendant le match et [2] (aller) aux urgences. » Écris seulement les deux groupes de mots manquants, dans l’ordre : ___"
+    },
+    "sc6-40": {
+      "question": "Complète : « Je ne [1] pas bien depuis quelques jours, j’ai des [2] et je suis très [3]. » (sich fühlen / Kopfschmerzen / müde) Écris les trois groupes dans l’ordre : ___",
+      "answer": "me sens / maux de tête / fatigué",
+      "altAnswers": [
+        "me sens / maux de tête / fatiguée"
+      ],
+      "hints": [
+        "Les indices allemands donnent les trois idées à exprimer.",
+        "Accorde le dernier adjectif avec la personne qui parle."
+      ],
+      "spokenPrompt": "Complète : « Je ne [1] pas bien depuis quelques jours, j’ai des [2] et je suis très [3]. » (sich fühlen / Kopfschmerzen / müde) Écris les trois groupes dans l’ordre : ___"
+    },
+    "sc6-48": {
+      "type": "self-review",
+      "answer": "Où avez-vous mal et depuis quand ?",
+      "reviewCriteria": [
+        "Le sens de la phrase est conservé, sans information ajoutée ou oubliée.",
+        "Les verbes et les accords correspondent à la phrase.",
+        "Je compare avec le modèle : une autre formulation correcte est possible."
+      ],
+      "spokenPrompt": "Complète la conversation: 'Docteur: — ___? Patient: — J'ai mal au dos depuis lundi.'"
+    },
+    "sc6-17": {
+      "question": "Dans un dialogue fictif, quelle phrase conseille de se reposer ?",
+      "answer": "Vous devriez vous reposer.",
+      "options": [
+        "Vous devriez aller courir.",
+        "Vous devriez vous reposer.",
+        "Vous devriez travailler davantage.",
+        "Vous devriez aller danser."
+      ],
+      "hints": [
+        "Cherche une invitation à récupérer plutôt qu’à faire un effort.",
+        "La question porte sur le sens des mots, pas sur un diagnostic."
+      ],
+      "spokenPrompt": "Dans un dialogue fictif, quelle phrase conseille de se reposer ?"
+    },
+    "sc6-23": {
+      "question": "Quelle phrase encourage une bonne habitude de sommeil ?",
+      "answer": "Il faut dormir suffisamment et à des horaires réguliers.",
+      "options": [
+        "Il faut manger du sucre tout le temps.",
+        "Il faut dormir suffisamment et à des horaires réguliers.",
+        "Il faut éviter de boire de l’eau.",
+        "Il faut rester éveillé toute la nuit."
+      ],
+      "spokenPrompt": "Quelle phrase encourage une bonne habitude de sommeil ?"
+    },
+    "sc6-25": {
+      "question": "Que signifie « être allergique à quelque chose » ?",
+      "spokenPrompt": "Que signifie « être allergique à quelque chose » ?"
+    },
+    "sc6-41": {
+      "question": "Dans un dialogue fictif, quelle phrase précise un médicament, une fréquence et une durée ? Ce n’est pas un conseil de traitement.",
+      "spokenPrompt": "Dans un dialogue fictif, quelle phrase précise un médicament, une fréquence et une durée ? Ce n’est pas un conseil de traitement."
+    },
+    "sc6-45": {
+      "question": "Dans un dialogue fictif, quelle phrase contient le verbe « prescrire » ? Ce n’est pas un conseil de traitement.",
+      "spokenPrompt": "Dans un dialogue fictif, quelle phrase contient le verbe « prescrire » ? Ce n’est pas un conseil de traitement."
+    },
+    "ff6-11": {
+      "question": "Selon le rapport 2026 de l’OIF, environ combien de millions de personnes parlent français dans le monde ? Écris le nombre : ___",
+      "answer": "396",
+      "altAnswers": [
+        "trois cent quatre-vingt-seize",
+        "trois cent nonante-six"
+      ],
+      "hints": [
+        "Le nombre demandé vient d’un rapport daté de 2026.",
+        "Indique un nombre de millions, sans multiplier par un million."
+      ],
+      "spokenPrompt": "Selon le rapport 2026 de l’OIF, environ combien de millions de personnes parlent français dans le monde ? Écris le nombre : ___"
+    },
+    "ff6-5": {
+      "question": "En Belgique, la Communauté française rassemble des personnes de langue ___.",
+      "answer": "française",
+      "spokenPrompt": "En Belgique, la Communauté française rassemble des personnes de langue ___."
+    },
+    "ff6-23": {
+      "hints": [
+        "L’organisation favorise les échanges entre ses membres.",
+        "Développe les lettres du sigle sans ajouter de mot."
+      ]
+    },
+    "ff6-25": {
+      "answer": "On utilise septante et nonante ; huitante est employé dans certaines régions.",
+      "options": [
+        "Il n’y a aucune différence.",
+        "La grammaire est entièrement différente.",
+        "On utilise septante et nonante ; huitante est employé dans certaines régions.",
+        "On utilise un autre alphabet."
+      ],
+      "hints": [
+        "Les mots pour certains nombres diffèrent selon les régions.",
+        "Vérifie que la réponse tient compte des différences régionales."
+      ]
+    },
+    "ff6-27": {
+      "question": "Dans la salutation « faire la bise », que signifie « la bise » ?",
+      "spokenPrompt": "Dans la salutation « faire la bise », que signifie « la bise » ?"
+    },
+    "ff6-29": {
+      "question": "Dans quelle ville suisse se trouve le Palais des Nations ?",
+      "spokenPrompt": "Dans quelle ville suisse se trouve le Palais des Nations ?"
+    },
+    "ff6-31": {
+      "question": "Quel bâtiment de Berne accueille les séances du Parlement suisse ?",
+      "answer": "Le Palais fédéral",
+      "options": [
+        "Le Château de Chillon",
+        "Le Palais fédéral",
+        "Le Palais des Nations",
+        "La cathédrale de Lausanne"
+      ],
+      "hints": [
+        "Le Parlement siège dans la ville fédérale.",
+        "Cherche le bâtiment consacré aux institutions fédérales."
+      ],
+      "spokenPrompt": "Quel bâtiment de Berne accueille les séances du Parlement suisse ?"
+    },
+    "ff6-35": {
+      "question": "Quelle langue, également enseignée dans cette matière, a joué un rôle majeur dans la diplomatie européenne aux XVIIIe et XIXe siècles ?",
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ],
+      "spokenPrompt": "Quelle langue, également enseignée dans cette matière, a joué un rôle majeur dans la diplomatie européenne aux XVIIIe et XIXe siècles ?"
+    },
+    "ff6-37": {
+      "question": "Quelle affirmation décrit l’Organisation internationale de la Francophonie ?",
+      "answer": "L’OIF réunit des États et des gouvernements qui coopèrent notamment dans les domaines de la langue, de la culture et de l’éducation.",
+      "options": [
+        "L’OIF ne concerne que la France.",
+        "L’OIF est une langue.",
+        "L’OIF réunit des États et des gouvernements qui coopèrent notamment dans les domaines de la langue, de la culture et de l’éducation.",
+        "L’OIF est une organisation uniquement européenne."
+      ],
+      "hints": [
+        "Distingue une langue d’une organisation de coopération.",
+        "Une organisation peut agir dans plusieurs domaines."
+      ],
+      "spokenPrompt": "Quelle affirmation décrit l’Organisation internationale de la Francophonie ?"
+    },
+    "ff6-45": {
+      "question": "Pourquoi Genève joue-t-elle un rôle important dans la diplomatie et l’aide humanitaire ?",
+      "spokenPrompt": "Pourquoi Genève joue-t-elle un rôle important dans la diplomatie et l’aide humanitaire ?"
+    },
+    "ff6-47": {
+      "answer": "Le français est parlé sur plusieurs continents et utilisé dans des organisations internationales.",
+      "options": [
+        "Le français n’est plus utilisé.",
+        "Le français est parlé sur plusieurs continents et utilisé dans des organisations internationales.",
+        "Le français est seulement utile en France.",
+        "Le français est une langue morte."
+      ]
+    },
+    "ma6-19": {
+      "question": "Comment dit-on « Teilzeit arbeiten » en français ?",
+      "answer": "travailler à temps partiel",
+      "options": [
+        "travailler à temps partiel",
+        "travailler à plein temps",
+        "chercher un emploi",
+        "prendre sa retraite"
+      ],
+      "hints": [
+        "Distingue une durée de travail réduite d’un horaire complet.",
+        "Une durée réduite n’est pas obligatoirement la moitié du temps."
+      ],
+      "spokenPrompt": "Comment dit-on « Teilzeit arbeiten » en français ?"
+    },
+    "ma6-27": {
+      "question": "Comment dit-on « der Lohn » en français ?",
+      "spokenPrompt": "Comment dit-on « der Lohn » en français ?"
+    },
+    "ma6-35": {
+      "question": "Comment dit-on « die Arbeitslosigkeit » en français ?",
+      "spokenPrompt": "Comment dit-on « die Arbeitslosigkeit » en français ?"
+    },
+    "ma6-25": {
+      "question": "Quelle réponse associe des compétences liées à l’informatique à la capacité de créer des idées ?",
+      "spokenPrompt": "Quelle réponse associe des compétences liées à l’informatique à la capacité de créer des idées ?"
+    },
+    "ma6-33": {
+      "question": "Quelle réponse cite trois domaines : intelligence artificielle, santé et environnement ?",
+      "spokenPrompt": "Quelle réponse cite trois domaines : intelligence artificielle, santé et environnement ?"
+    },
+    "ma6-37": {
+      "answer": "L’automatisation peut transformer certaines tâches ; ses effets varient selon les métiers.",
+      "options": [
+        "L’automatisation supprime tous les emplois.",
+        "L’automatisation peut transformer certaines tâches ; ses effets varient selon les métiers.",
+        "Rien ne change dans le monde du travail.",
+        "Seuls les ingénieurs auront du travail."
+      ]
+    },
+    "ma6-41": {
+      "answer": "Le français peut servir à travailler avec des personnes et des organisations dans plusieurs régions du monde.",
+      "options": [
+        "Le français n’est utile qu’en France.",
+        "Le français peut servir à travailler avec des personnes et des organisations dans plusieurs régions du monde.",
+        "Seul l’anglais est important.",
+        "Personne ne travaille en français."
+      ]
+    },
+    "ma6-45": {
+      "question": "Quelle phrase présente à la fois un avantage et une difficulté possible du télétravail ?",
+      "answer": "Le télétravail peut réduire les trajets, mais rendre les échanges entre collègues plus difficiles.",
+      "options": [
+        "Le télétravail va forcément disparaître.",
+        "Le télétravail peut réduire les trajets, mais rendre les échanges entre collègues plus difficiles.",
+        "Le télétravail n’a aucun avantage.",
+        "Le télétravail n’existe pas."
+      ],
+      "spokenPrompt": "Quelle phrase présente à la fois un avantage et une difficulté possible du télétravail ?"
+    },
+    "cf6-1": {
+      "question": "Quelle fête musicale a lieu chaque année le 21 juin en France ?",
+      "answer": "La Fête de la Musique",
+      "options": [
+        "Le Carnaval de Québec",
+        "La Fête de la Musique",
+        "Le Festival de Cannes",
+        "La Fête des Vignerons"
+      ],
+      "hints": [
+        "Cette fête invite les musiciens à jouer dans de nombreux lieux.",
+        "Cherche une fête consacrée aux concerts, et non au cinéma ou aux vendanges."
+      ],
+      "spokenPrompt": "Quelle fête musicale a lieu chaque année le 21 juin en France ?"
+    },
+    "cf6-3": {
+      "question": "Cette viennoiserie française est en forme de demi-lune, avec une pâte levée feuilletée. C’est un ___.",
+      "spokenPrompt": "Cette viennoiserie française est en forme de demi-lune, avec une pâte levée feuilletée. C’est un ___."
+    },
+    "cf6-5": {
+      "question": "La Fête des Vignerons se déroule à ___, une ville au bord du lac Léman.",
+      "answer": "Vevey",
+      "altAnswers": [],
+      "hints": [
+        "Cherche une ville vaudoise au bord du lac Léman.",
+        "Le nom demandé est celui de la ville, pas celui d’une danse."
+      ],
+      "spokenPrompt": "La Fête des Vignerons se déroule à ___, une ville au bord du lac Léman."
+    },
+    "cf6-15": {
+      "question": "Les Jeux olympiques d’hiver de 1948 ont eu lieu à Saint-___, en Suisse.",
+      "answer": "Moritz",
+      "altAnswers": [],
+      "hints": [
+        "Cherche une station de montagne des Grisons.",
+        "La même ville avait déjà accueilli les Jeux d’hiver de 1928."
+      ],
+      "spokenPrompt": "Les Jeux olympiques d’hiver de 1948 ont eu lieu à Saint-___, en Suisse."
+    },
+    "cf6-21": {
+      "answer": "La Fête des Vignerons à Vevey, qui célèbre le travail de la vigne.",
+      "options": [
+        "Un festival de lanternes à Bâle.",
+        "La Fête des Vignerons à Vevey, qui célèbre le travail de la vigne.",
+        "Une fête de musique à Paris.",
+        "Un carnaval d’hiver à Québec."
+      ]
+    },
+    "cf6-29": {
+      "hints": [
+        "Elle a écrit sur la condition des femmes et sur la liberté.",
+        "Cherche une personne connue pour ses essais philosophiques."
+      ]
+    },
+    "cf6-41": {
+      "answer": "La bande dessinée est souvent appelée le neuvième art et s’adresse à des lecteurs de tous âges.",
+      "options": [
+        "Elle n’a aucune importance.",
+        "La bande dessinée est souvent appelée le neuvième art et s’adresse à des lecteurs de tous âges.",
+        "Elle est seulement pour les enfants.",
+        "Elle copie uniquement les comics américains."
+      ]
+    },
+    "cf6-45": {
+      "hints": [
+        "Pense aux arts, à l’architecture et à l’aide humanitaire.",
+        "Compare plusieurs domaines de contribution."
+      ]
+    },
+    "ff6-14": {
+      "options": [
+        "L’OIF réunit des États et des gouvernements qui coopèrent notamment dans les domaines de la langue, de la culture et de l’éducation.",
+        "Il n'y a pas de plat unique; la baguette et le fromage sont iconiques.",
+        "La Suisse joue un rôle unique dans la Francophonie, car c'est un pays multilingue.",
+        "La Wallonie est la région francophone de Belgique; la Région de Bruxelles-Capitale est bilingue."
+      ]
+    },
+    "ma6-21": {
+      "options": [
+        "L’automatisation peut transformer certaines tâches ; ses effets varient selon les métiers.",
+        "Un chirurgien opère des patients à l'hôpital et doit avoir de nombreuses années de formation.",
+        "La mondialisation a fondamentalement transformé le monde du travail en créant de nouvelles opportunités et défis.",
+        "Un jour, j'aimerais fonder une ONG qui promeut l'éducation dans les pays en développement."
+      ]
+    },
+    "vd6-1": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "vd6-3": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "vd6-6": {
+      "hints": [
+        "Repère le sens demandé et la forme attendue dans la question.",
+        "Vérifie le nombre, l’article et la place des mots dans ta réponse."
+      ],
+      "altAnswers": [
+        "gare"
+      ]
+    },
+    "vd6-7": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "vd6-9": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "vd6-11": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "vd6-13": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "vd6-18": {
+      "hints": [
+        "Repère le sens demandé et la forme attendue dans la question.",
+        "Vérifie le nombre, l’article et la place des mots dans ta réponse."
+      ]
+    },
+    "vd6-21": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "vd6-31": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "vd6-45": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "sc6-1": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "sc6-2": {
+      "hints": [
+        "Repère le sens demandé et la forme attendue dans la question.",
+        "Vérifie le nombre, l’article et la place des mots dans ta réponse."
+      ],
+      "altAnswers": [
+        "ventre",
+        "estomac"
+      ]
+    },
+    "sc6-5": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "sc6-7": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "sc6-9": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "sc6-10": {
+      "hints": [
+        "Repère le sens demandé et la forme attendue dans la question.",
+        "Vérifie le nombre, l’article et la place des mots dans ta réponse."
+      ],
+      "altAnswers": [
+        "dos"
+      ]
+    },
+    "sc6-14": {
+      "hints": [
+        "Repère le sens demandé et la forme attendue dans la question.",
+        "Vérifie le nombre, l’article et la place des mots dans ta réponse."
+      ],
+      "altAnswers": [
+        "dent"
+      ]
+    },
+    "sc6-15": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "sc6-21": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "sc6-31": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "ff6-10": {
+      "hints": [
+        "Repère le mot ou l’idée à traduire dans la question.",
+        "Compare le sens de chaque proposition avant de choisir."
+      ]
+    },
+    "fr6-rich-phrases-memory-1": {
+      "hints": [
+        "Compare ce que fait chaque phrase dans la discussion.",
+        "Distingue une opinion, un accord, un désaccord et un exemple."
+      ]
+    },
+    "vd6-15": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "vd6-27": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "vd6-29": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "vd6-43": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "vd6-44": {
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "vd6-50": {
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "sc6-3": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "sc6-29": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "sc6-36": {
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "sc6-46": {
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "sc6-50": {
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "ff6-41": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "ff6-50": {
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "ma6-8": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "ma6-50": {
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "cf6-14": {
+      "hints": [
+        "Repère précisément ce que demande la question.",
+        "Écarte les propositions qui ne répondent pas à cette demande."
+      ]
+    },
+    "cf6-50": {
+      "hints": [
+        "Note les informations demandées avant de rédiger.",
+        "Relis ton texte avec les critères de comparaison."
+      ]
+    },
+    "vd6-4": {
+      "altAnswers": [
+        "pharmacie"
+      ]
+    },
+    "vd6-8": {
+      "altAnswers": [
+        "supermarché"
+      ]
+    },
+    "vd6-10": {
+      "altAnswers": [
+        "musée"
+      ]
+    },
+    "vd6-12": {
+      "altAnswers": [
+        "poste",
+        "bureau de poste"
+      ]
+    },
+    "sc6-4": {
+      "altAnswers": [
+        "bras"
+      ]
+    },
+    "sc6-6": {
+      "altAnswers": [
+        "jambe"
+      ]
+    },
+    "sc6-12": {
+      "altAnswers": [
+        "main"
+      ]
+    }
+  }
+}
