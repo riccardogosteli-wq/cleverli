@@ -1,0 +1,3032 @@
+{
+  "patches": {
+    "g6d8": {
+      "altAnswers": [
+        "wer oder was"
+      ]
+    },
+    "g6ka1a": {
+      "altAnswers": [
+        "vier"
+      ]
+    },
+    "g6d10": {
+      "altAnswers": [
+        "Relativpronomen",
+        "bezüglichen Fürwort"
+      ],
+      "question": "In «Das Buch, das ich lese, ist spannend» beginnt der Relativsatz mit einem ___.",
+      "spokenPrompt": "In «Das Buch, das ich lese, ist spannend» beginnt der Relativsatz mit einem ….",
+      "verbatimSpeech": true
+    },
+    "g6ts1a": {
+      "altAnswers": [
+        "ein informierender Text"
+      ],
+      "spokenPrompt": "Was ist ein Sachtext?",
+      "verbatimSpeech": true
+    },
+    "g6ts1i": {
+      "altAnswers": [
+        "Zusammenfassung"
+      ]
+    },
+    "g6ts2k": {
+      "altAnswers": [
+        "inhaltlicher Zusammenhang"
+      ]
+    },
+    "g6wa10": {
+      "altAnswers": [
+        "Substantiv",
+        "Nomen"
+      ]
+    },
+    "g6wa22": {
+      "altAnswers": [
+        "aber",
+        "oder",
+        "denn",
+        "sondern",
+        "doch"
+      ],
+      "question": "Nenne eine nebenordnende Konjunktion. ___",
+      "answer": "und",
+      "spokenPrompt": "Nenne eine nebenordnende Konjunktion. …",
+      "verbatimSpeech": true
+    },
+    "g6wa26": {
+      "altAnswers": [
+        "müssen",
+        "wollen",
+        "dürfen",
+        "sollen",
+        "mögen"
+      ],
+      "question": "Nenne ein Modalverb im Infinitiv. ___",
+      "answer": "können",
+      "spokenPrompt": "Nenne ein Modalverb im Infinitiv. …",
+      "verbatimSpeech": true
+    },
+    "g6wa28": {
+      "altAnswers": [
+        "diese",
+        "dieses",
+        "jener",
+        "jene",
+        "jenes",
+        "derjenige",
+        "diejenige",
+        "dasjenige",
+        "derselbe",
+        "dieselbe",
+        "dasselbe"
+      ],
+      "question": "Nenne ein Demonstrativpronomen. ___",
+      "answer": "dieser",
+      "spokenPrompt": "Nenne ein Demonstrativpronomen. …",
+      "verbatimSpeech": true
+    },
+    "g6wa30": {
+      "altAnswers": [
+        "man",
+        "niemand",
+        "alle",
+        "etwas",
+        "nichts",
+        "jeder",
+        "jede",
+        "jedes",
+        "einige",
+        "manche"
+      ],
+      "question": "Nenne ein Indefinitpronomen. ___",
+      "answer": "jemand",
+      "spokenPrompt": "Nenne ein Indefinitpronomen. …",
+      "verbatimSpeech": true
+    },
+    "g6gr2": {
+      "altAnswers": [
+        "Das Buch wird gelesen."
+      ]
+    },
+    "g6gr38": {
+      "altAnswers": [
+        "welches ich lese"
+      ]
+    },
+    "g6gr43": {
+      "altAnswers": [
+        "wird gelöst"
+      ]
+    },
+    "g6gr40": {
+      "altAnswers": [
+        "Befehlssatz"
+      ]
+    },
+    "g6lv16": {
+      "altAnswers": [
+        "Schirm",
+        "Regenschirm"
+      ]
+    },
+    "g6lv36": {
+      "altAnswers": [
+        "wegen starken Regens"
+      ],
+      "spokenPrompt": "Text: «Wegen starken Regens wurde das Spiel verschoben.» Grund der Verschiebung: ….",
+      "verbatimSpeech": true
+    },
+    "g6lv37": {
+      "altAnswers": [
+        "der Weg ist gesperrt"
+      ],
+      "spokenPrompt": "Text: «Der Bach trat über die Ufer; deshalb blieb der Weg gesperrt.» Folge: ….",
+      "verbatimSpeech": true
+    },
+    "g6lv38": {
+      "altAnswers": [
+        "real",
+        "faktisch"
+      ],
+      "spokenPrompt": "Text: «Im Gegensatz zum Roman beruht die Biografie auf einem echten Leben.» Die Biografie ist ….",
+      "verbatimSpeech": true
+    },
+    "g6lv40": {
+      "altAnswers": [
+        "der Akku war leer"
+      ],
+      "spokenPrompt": "Text: «Da der Akku leer war, liess sich das Gerät nicht starten.» Ursache: ….",
+      "verbatimSpeech": true
+    },
+    "g6lv41": {
+      "altAnswers": [
+        "pünktlich anzukommen"
+      ],
+      "spokenPrompt": "Text: «Mira nahm den früheren Zug, damit sie pünktlich ankam.» Ziel: ….",
+      "verbatimSpeech": true
+    },
+    "g6lv42": {
+      "altAnswers": [
+        "gründlich",
+        "gewissenhaft",
+        "genau",
+        "sehr sorgfältig"
+      ],
+      "spokenPrompt": "Text: «Nora überprüfte zweimal alle Quellen.» Wie arbeitete Nora? ….",
+      "verbatimSpeech": true
+    },
+    "g6lv47": {
+      "altAnswers": [
+        "10 Uhr",
+        "10:00",
+        "10.00 Uhr",
+        "um zehn Uhr"
+      ],
+      "spokenPrompt": "Text: «Das Museum öffnet erst um zehn Uhr.» Früheste Öffnungszeit: ….",
+      "verbatimSpeech": true
+    },
+    "g6lv48": {
+      "altAnswers": [
+        "null"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe, ob deine Lösung grammatisch und inhaltlich genau passt."
+      ],
+      "spokenPrompt": "Text: «Keine der drei Lösungen erfüllte alle Bedingungen.» Anzahl vollständiger Lösungen: ….",
+      "verbatimSpeech": true
+    },
+    "g6lv49": {
+      "altAnswers": [
+        "zwei"
+      ],
+      "spokenPrompt": "Text: «Die Autorin nennt zwei Vorteile, aber auch ein Risiko.» Anzahl Vorteile: ….",
+      "verbatimSpeech": true
+    },
+    "g6ts3f": {
+      "altAnswers": [
+        "Moral"
+      ]
+    },
+    "g6ts3d": {
+      "altAnswers": [
+        "Buchkritik"
+      ]
+    },
+    "g6ka1l": {
+      "question": "Wie nennt man den Nominativ auch auf Latein?",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Wie nennt man den Nominativ auch auf Latein?",
+      "verbatimSpeech": true
+    },
+    "g6ka2e": {
+      "question": "Welchen Fall verlangen «für», «durch», «gegen», «um» und «ohne»? ___",
+      "answer": "Akkusativ",
+      "altAnswers": [
+        "4. Fall",
+        "vierter Fall"
+      ],
+      "spokenPrompt": "Welchen Fall verlangen «für», «durch», «gegen», «um» und «ohne»? …",
+      "verbatimSpeech": true
+    },
+    "g6ka2i": {
+      "question": "Ergänze die Präposition «auf» mit dem bestimmten Artikel: «Stell das Buch ___ Tisch.»",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Ergänze die Präposition «auf» mit dem bestimmten Artikel: «Stell das Buch … Tisch.»",
+      "verbatimSpeech": true
+    },
+    "g6ka2m": {
+      "question": "Was ist eine Ellipse in einem Gespräch?",
+      "options": [
+        "Auslassen von Satzteilen, die aus dem Zusammenhang verständlich sind",
+        "Er zeigt Besitz oder Zugehörigkeit, z.B. das Buch des Schülers.",
+        "Präposition, die je nach Bedeutung Dativ (Ort) oder Akkusativ (Richtung) verlangt",
+        "mit, nach, bei, seit, von, zu, aus, gegenüber"
+      ],
+      "answer": "Auslassen von Satzteilen, die aus dem Zusammenhang verständlich sind",
+      "spokenPrompt": "Was ist eine Ellipse in einem Gespräch?",
+      "verbatimSpeech": true
+    },
+    "g6ka2d": {
+      "options": [
+        "für, durch, gegen, um, bis, ohne, entlang",
+        "mit, nach, bei, seit, von, zu, aus, gegenüber",
+        "Auslassen von Satzteilen, die aus dem Zusammenhang verständlich sind",
+        "für, durch, gegen, um"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ka2g": {
+      "options": [
+        "Präposition, die je nach Bedeutung Dativ (Ort) oder Akkusativ (Richtung) verlangt",
+        "Er zeigt Besitz oder Zugehörigkeit, z.B. das Buch des Schülers.",
+        "Auslassen von Satzteilen, die aus dem Zusammenhang verständlich sind",
+        "mit, nach, bei, seit, von, zu, aus, gegenüber"
+      ]
+    },
+    "g6ka3b": {
+      "question": "Eine Metapher wie «ein Meer von Blumen» ist ein sprachliches ___.",
+      "answer": "Bild",
+      "altAnswers": [
+        "Sprachbild"
+      ],
+      "spokenPrompt": "Eine Metapher wie «ein Meer von Blumen» ist ein sprachliches ….",
+      "verbatimSpeech": true
+    },
+    "g6ka3c": {
+      "question": "Ergänze den bestimmten Artikel: Ich helfe ___ verletzten Vogel.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: Ich helfe … verletzten Vogel.",
+      "verbatimSpeech": true
+    },
+    "g6ka3d": {
+      "question": "Ergänze den bestimmten Artikel: Das Fahrrad ___ Kindes ist rot.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: Das Fahrrad … Kindes ist rot.",
+      "verbatimSpeech": true
+    },
+    "g6ka3e": {
+      "question": "Ergänze den bestimmten Artikel: Sie schenkt ___ Freundin ein Buch.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: Sie schenkt … Freundin ein Buch.",
+      "verbatimSpeech": true
+    },
+    "g6ka3f": {
+      "question": "Ergänze den bestimmten Artikel: Wir hören ___ lauten Donner.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: Wir hören … lauten Donner.",
+      "verbatimSpeech": true
+    },
+    "g6ka3g": {
+      "question": "Ergänze den bestimmten Artikel: ___ junge Forscherin erklärt den Versuch.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: … junge Forscherin erklärt den Versuch.",
+      "verbatimSpeech": true
+    },
+    "g6ka3h": {
+      "question": "Ergänze den bestimmten Artikel: Wir besuchen ___ neue Bibliothek.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: Wir besuchen … neue Bibliothek.",
+      "verbatimSpeech": true
+    },
+    "g6ka3i": {
+      "question": "Ergänze den bestimmten Artikel: ___ schnelle Zug fährt pünktlich ab.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: … schnelle Zug fährt pünktlich ab.",
+      "verbatimSpeech": true
+    },
+    "g6ka3j": {
+      "question": "Ergänze den bestimmten Artikel: Der Hund folgt ___ schmalen Weg.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: Der Hund folgt … schmalen Weg.",
+      "verbatimSpeech": true
+    },
+    "g6ka3k": {
+      "question": "Ergänze den bestimmten Artikel: Die Farbe ___ alten Hauses verblasst.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: Die Farbe … alten Hauses verblasst.",
+      "verbatimSpeech": true
+    },
+    "g6ka3l": {
+      "question": "Ergänze den bestimmten Artikel: Der Trainer dankt ___ ganzen Mannschaft.",
+      "spokenPrompt": "Ergänze den bestimmten Artikel: Der Trainer dankt … ganzen Mannschaft.",
+      "verbatimSpeech": true
+    },
+    "g6d13": {
+      "question": "Eine Geschichte hat Figuren und eine ___.",
+      "answer": "Handlung",
+      "altAnswers": [
+        "Story"
+      ],
+      "spokenPrompt": "Eine Geschichte hat Figuren und eine ….",
+      "verbatimSpeech": true
+    },
+    "g6ts3l": {
+      "question": "Eine regionale Sprachform nennt man ___.",
+      "answer": "Dialekt",
+      "altAnswers": [
+        "Mundart"
+      ],
+      "spokenPrompt": "Eine regionale Sprachform nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6ts1k": {
+      "options": [
+        "Texte, die reale Fakten vermitteln (Berichte, Biografien)",
+        "Ein Text mit ausschliesslich erfundenen Ereignissen",
+        "Eine volkstümliche Erzählung, meist historisch und übernatürlich",
+        "Ein persönlicher, reflektierender Text zu einem Thema"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts1b": {
+      "options": [
+        "Eine kurze Erzählung, oft mit wenigen Figuren und einem offenen Ende",
+        "Eine fantastische Erzählung mit typischen Elementen (Es war einmal...)",
+        "Eine lange, komplexe Erzählung mit vielen Figuren und Handlungssträngen",
+        "Kurze Darstellung des geplanten Inhalts eines Projekts oder Texts"
+      ]
+    },
+    "g6ts1f": {
+      "options": [
+        "Eine fantastische Erzählung mit typischen Elementen (Es war einmal...)",
+        "Eine kurze Erzählung, oft mit wenigen Figuren und einem offenen Ende",
+        "Eine lange, komplexe Erzählung mit vielen Figuren und Handlungssträngen",
+        "Kurze Darstellung des geplanten Inhalts eines Projekts oder Texts"
+      ],
+      "answer": "Eine kurze Erzählung, oft mit wenigen Figuren und einem offenen Ende",
+      "hints": [
+        "Achte auf Umfang, Einstieg und Gestaltung des Endes.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts1g": {
+      "options": [
+        "Eine lange, komplexe Erzählung mit vielen Figuren und Handlungssträngen",
+        "Eine fantastische Erzählung mit typischen Elementen (Es war einmal...)",
+        "Eine kurze Erzählung, oft mit wenigen Figuren und einem offenen Ende",
+        "Kurze Darstellung des geplanten Inhalts eines Projekts oder Texts"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts1h": {
+      "options": [
+        "Ein Text, der den Leser zu einer Handlung auffordern soll",
+        "Ein Text für die Bühne (Theater), mit Dialogen und Regieanweisungen",
+        "Eine fantastische Erzählung mit typischen Elementen (Es war einmal...)",
+        "Eine kurze Erzählung, oft mit wenigen Figuren und einem offenen Ende"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2n": {
+      "options": [
+        "Ein Text für die Bühne (Theater), mit Dialogen und Regieanweisungen",
+        "Ein Text, der den Leser zu einer Handlung auffordern soll",
+        "Eine fantastische Erzählung mit typischen Elementen (Es war einmal...)",
+        "Eine kurze Erzählung, oft mit wenigen Figuren und einem offenen Ende"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Appelltext?",
+      "verbatimSpeech": true
+    },
+    "g6ts2o": {
+      "options": [
+        "Kurze Darstellung des geplanten Inhalts eines Projekts oder Texts",
+        "Eine fantastische Erzählung mit typischen Elementen (Es war einmal...)",
+        "Eine kurze Erzählung, oft mit wenigen Figuren und einem offenen Ende",
+        "Eine lange, komplexe Erzählung mit vielen Figuren und Handlungssträngen"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Exposé?",
+      "verbatimSpeech": true
+    },
+    "g6d18": {
+      "altAnswers": [
+        "Geschichte"
+      ],
+      "spokenPrompt": "Ein Text mit Figuren, Handlung und erfundenen Ereignissen ist eine ….",
+      "verbatimSpeech": true
+    },
+    "g6d19": {
+      "altAnswers": [
+        "Warum"
+      ]
+    },
+    "g6ts3b": {
+      "altAnswers": [
+        "Informationen",
+        "Gedanken",
+        "Punkte",
+        "Inhalte"
+      ]
+    },
+    "g6ts3e": {
+      "altAnswers": [
+        "objektiv",
+        "neutral",
+        "verständlich",
+        "genau"
+      ],
+      "spokenPrompt": "Ein Lexikonartikel erklärt einen Begriff möglichst ….",
+      "verbatimSpeech": true
+    },
+    "g6ts3g": {
+      "altAnswers": [
+        "Schilderungen",
+        "Beschreibungen",
+        "Eindrücken"
+      ]
+    },
+    "g6ts3i": {
+      "altAnswers": [
+        "Begrüssung"
+      ]
+    },
+    "g6ts3j": {
+      "altAnswers": [
+        "Bewerbungsschreiben",
+        "Anschreiben"
+      ]
+    },
+    "g6ts3k": {
+      "altAnswers": [
+        "Position",
+        "Ansicht"
+      ]
+    },
+    "g6d21": {
+      "question": "Welche Probe hilft, ein Nomen zu erkennen?",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ],
+      "spokenPrompt": "Welche Probe hilft, ein Nomen zu erkennen?",
+      "verbatimSpeech": true
+    },
+    "g6d22": {
+      "question": "Verlängere das Adjektiv für niedrige Temperatur: «kal___» wird zu «kal___e Luft». Ergänze in beiden Lücken denselben Buchstaben: d oder t.",
+      "spokenPrompt": "Verlängere das Adjektiv für niedrige Temperatur: «Wort mit Lücke» wird zu «Wort mit Lücke Luft». Ergänze in beiden Lücken denselben Buchstaben: d oder t. Vor der Lücke stehen die Buchstaben K, A, L. Nach der Lücke stehen keine weiteren Buchstaben. Vor der Lücke stehen die Buchstaben K, A, L. Nach der Lücke stehen die Buchstaben E.",
+      "verbatimSpeech": true
+    },
+    "g6d24": {
+      "question": "Verlängere das Wort für einen runden Teil am Velo: «Ra___» wird zu «Rä___er». Ergänze denselben Buchstaben: d oder t.",
+      "spokenPrompt": "Verlängere das Wort für einen runden Teil am Velo: «Wort mit Lücke» wird zu «Wort mit Lücke». Ergänze denselben Buchstaben: d oder t. Vor der Lücke stehen die Buchstaben R, A. Nach der Lücke stehen keine weiteren Buchstaben. Vor der Lücke stehen die Buchstaben R, Ä. Nach der Lücke stehen die Buchstaben E, R.",
+      "verbatimSpeech": true
+    },
+    "g6d25": {
+      "options": [
+        "Einen langen Vokal erkennen und die passende Schreibung prüfen, zum Beispiel h, ie oder Doppelvokal",
+        "Nach kurzem Vokal: ck statt kk (Bäcker, Brücke)",
+        "Wenn das Wort eine Konjunktion ist und nicht durch «dieses», «jenes» oder «welches» ersetzt werden kann",
+        "Verbindung mit Bindestrich bei langen Komposita oder Fremdwörtern"
+      ],
+      "answer": "Wenn das Wort eine Konjunktion ist und nicht durch «dieses», «jenes» oder «welches» ersetzt werden kann"
+    },
+    "g6rs1c": {
+      "options": [
+        "Einen langen Vokal erkennen und die passende Schreibung prüfen, zum Beispiel h, ie oder Doppelvokal",
+        "Wenn das Wort eine Konjunktion ist und nicht durch «dieses», «jenes» oder «welches» ersetzt werden kann",
+        "Nach kurzem Vokal: ck statt kk (Bäcker, Brücke)",
+        "Verbindung mit Bindestrich bei langen Komposita oder Fremdwörtern"
+      ],
+      "answer": "Einen langen Vokal erkennen und die passende Schreibung prüfen, zum Beispiel h, ie oder Doppelvokal"
+    },
+    "g6rs2d": {
+      "options": [
+        "Wenn das Wort eine Konjunktion ist und nicht durch «dieses», «jenes» oder «welches» ersetzt werden kann",
+        "Nach kurzem Vokal: ck statt kk (Bäcker, Brücke)",
+        "Einen langen Vokal erkennen und die passende Schreibung prüfen, zum Beispiel h, ie oder Doppelvokal",
+        "Verbindung mit Bindestrich bei langen Komposita oder Fremdwörtern"
+      ],
+      "question": "Wann schreibt man bei einem betonten kurzen Vokal im Wortstamm «ck» statt «kk»?",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Wann schreibt man bei einem betonten kurzen Vokal im Wortstamm «ck» statt «kk»?",
+      "verbatimSpeech": true
+    },
+    "g6rs2g": {
+      "options": [
+        "Zwei Wörter getrennt schreiben, zum Beispiel «Auto fahren»",
+        "Das Wort dehnen und auf den langen Laut hören",
+        "Wenn das Wort eine Konjunktion ist und nicht durch «dieses», «jenes» oder «welches» ersetzt werden kann",
+        "Wort so formen, dass der Endlaut hörbar wird (kalt → kalte)"
+      ],
+      "answer": "Zwei Wörter getrennt schreiben, zum Beispiel «Auto fahren»",
+      "hints": [
+        "Prüfe, ob das Nomen seine selbstständige Bedeutung behält.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6rs2i": {
+      "options": [
+        "Verbindung mit Bindestrich bei langen Komposita oder Fremdwörtern",
+        "Wenn das Wort eine Konjunktion ist und nicht durch «dieses», «jenes» oder «welches» ersetzt werden kann",
+        "Einen langen Vokal erkennen und die passende Schreibung prüfen, zum Beispiel h, ie oder Doppelvokal",
+        "Nach kurzem Vokal: ck statt kk (Bäcker, Brücke)"
+      ]
+    },
+    "g6d26": {
+      "question": "Ergänze die Vergangenheitsform von «schreiben»: «er schrie___». Welcher Buchstabe fehlt: b oder p?",
+      "answer": "b",
+      "altAnswers": [],
+      "spokenPrompt": "Ergänze die Vergangenheitsform von «schreiben»: «er Wort mit Lücke». Welcher Buchstabe fehlt: b oder p? Vor der Lücke stehen die Buchstaben S, C, H, R, I, E. Nach der Lücke stehen keine weiteren Buchstaben.",
+      "verbatimSpeech": true
+    },
+    "g6rs1a": {
+      "options": [
+        "Wort so formen, dass der Endlaut hörbar wird (kalt → kalte)",
+        "Ein Wort mit einem verwandten Grundwort erklären, zum Beispiel Hände mit Hand",
+        "Das Wort dehnen und auf den langen Laut hören",
+        "Wenn «und» gleichrangige Satzteile verbindet: Er läuft und springt."
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6rs1b": {
+      "options": [
+        "Wort so formen, dass der Endlaut hörbar wird (kalt → kalte)",
+        "Ein Wort mit einem verwandten Grundwort erklären, zum Beispiel Hände mit Hand",
+        "Das Wort dehnen und auf den langen Laut hören",
+        "Wenn «und» gleichrangige Satzteile verbindet: Er läuft und springt."
+      ],
+      "answer": "Ein Wort mit einem verwandten Grundwort erklären, zum Beispiel Hände mit Hand",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6rs2f": {
+      "options": [
+        "Wort so formen, dass der Endlaut hörbar wird (kalt → kalte)",
+        "Wenn «und» gleichrangige Satzteile verbindet: Er läuft und springt.",
+        "Ein Wort mit einem verwandten Grundwort erklären, zum Beispiel Hände mit Hand",
+        "Das Wort dehnen und auf den langen Laut hören"
+      ],
+      "answer": "Wenn «und» gleichrangige Satzteile verbindet: Er läuft und springt.",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6rs1e": {
+      "question": "Das Adjektiv bedeutet «farbig»: «bun___» wird verlängert zu «bun___e». Ergänze in beiden Lücken denselben Buchstaben: d oder t.",
+      "answer": "t",
+      "spokenPrompt": "Das Adjektiv bedeutet «farbig»: «Wort mit Lücke» wird verlängert zu «Wort mit Lücke». Ergänze in beiden Lücken denselben Buchstaben: d oder t. Vor der Lücke stehen die Buchstaben B, U, N. Nach der Lücke stehen keine weiteren Buchstaben. Vor der Lücke stehen die Buchstaben B, U, N. Nach der Lücke stehen die Buchstaben E.",
+      "verbatimSpeech": true
+    },
+    "g6rs1l": {
+      "question": "«Sie ist so klug, ___ sie alles schafft.» Welches Wort passt: «dass» oder «das»?",
+      "spokenPrompt": "«Sie ist so klug, … sie alles schafft.» Welches Wort passt: «dass» oder «das»?",
+      "verbatimSpeech": true
+    },
+    "g6rs1g": {
+      "question": "Welches Begleitwort weist in «das Laufen» auf die Nominalisierung hin? ___",
+      "answer": "das",
+      "altAnswers": [
+        "der Artikel das",
+        "Artikel"
+      ],
+      "spokenPrompt": "Welches Begleitwort weist in «das Laufen» auf die Nominalisierung hin? …",
+      "verbatimSpeech": true
+    },
+    "g6rs1i": {
+      "question": "Wie nennt man das Aufteilen eines Wortes in Sprechsilben? ___",
+      "answer": "Silbentrennung",
+      "altAnswers": [
+        "Silbengliederung"
+      ],
+      "spokenPrompt": "Wie nennt man das Aufteilen eines Wortes in Sprechsilben? …",
+      "verbatimSpeech": true
+    },
+    "g6rs2c": {
+      "question": "Das silbische Prinzip orientiert die Schreibung an der ___.",
+      "answer": "Silbenstruktur",
+      "altAnswers": [
+        "Struktur der Silben"
+      ],
+      "spokenPrompt": "Das silbische Prinzip orientiert die Schreibung an der ….",
+      "verbatimSpeech": true
+    },
+    "g6rs2e": {
+      "question": "Welches Satzzeichen trennt einen Nebensatz vom Hauptsatz? ___",
+      "answer": "Komma",
+      "altAnswers": [
+        ",",
+        "ein Komma"
+      ],
+      "spokenPrompt": "Welches Satzzeichen trennt einen Nebensatz vom Hauptsatz? …",
+      "verbatimSpeech": true
+    },
+    "g6rs1d": {
+      "options": [
+        "Rechtschreibung und Worttrennung am Zeilenende",
+        "Kurzen Vokal vor Doppelkonsonant erkennen",
+        "Schreibung orientiert sich an Silbenstruktur",
+        "Fähigkeit, Texte regelkonform zu schreiben"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6rs2j": {
+      "options": [
+        "Kurzen Vokal vor Doppelkonsonant erkennen",
+        "Fähigkeit, Texte regelkonform zu schreiben",
+        "Rechtschreibung und Worttrennung am Zeilenende",
+        "Schreibung orientiert sich an Silbenstruktur"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa1": {
+      "question": "Welche Wortart hat «schnell» in «ein schnelles Auto»?",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ],
+      "spokenPrompt": "Welche Wortart hat «schnell» in «ein schnelles Auto»?",
+      "verbatimSpeech": true
+    },
+    "g6wa5": {
+      "question": "Welche Antwort enthält ausschliesslich Personalpronomen?",
+      "options": [
+        "Der gefundene Schlüssel liegt auf dem Tisch.",
+        "er, sie, es, wir",
+        "Verb mit eigener Bedeutung: rennen, schlafen, lesen",
+        "Leitet Relativsatz ein: der, die, das, welcher"
+      ],
+      "answer": "er, sie, es, wir",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welche Antwort enthält ausschliesslich Personalpronomen?",
+      "verbatimSpeech": true
+    },
+    "g6wa8": {
+      "question": "Wie viele Gruppen unterscheidet das Zehnwortartenmodell? ___",
+      "altAnswers": [
+        "zehn"
+      ],
+      "spokenPrompt": "Wie viele Gruppen unterscheidet das Zehnwortartenmodell? …",
+      "verbatimSpeech": true
+    },
+    "g6wa11": {
+      "options": [
+        "Vergangenheitsform",
+        "Partizip der Gegenwart: lachend, springend",
+        "Futurform",
+        "Grundform"
+      ],
+      "answer": "Partizip der Gegenwart: lachend, springend",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa9": {
+      "hints": [
+        "Prüfe das unveränderliche Ortswort in «Er wartet dort».",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa14": {
+      "question": "Wie nennt man ein Numerale auf Deutsch? ___",
+      "altAnswers": [
+        "Zahlwort"
+      ],
+      "spokenPrompt": "Wie nennt man ein Numerale auf Deutsch? …",
+      "verbatimSpeech": true
+    },
+    "g6wa40": {
+      "answer": "Adjektiv",
+      "altAnswers": [
+        "adverbial verwendetes Adjektiv"
+      ]
+    },
+    "g6wa2": {
+      "altAnswers": [
+        "Tätigkeitswort",
+        "Zeitwort"
+      ]
+    },
+    "g6wa38": {
+      "altAnswers": [
+        "Tätigkeitswort",
+        "Zeitwort"
+      ]
+    },
+    "g6wa50": {
+      "altAnswers": [
+        "Tätigkeitswort",
+        "Zeitwort"
+      ]
+    },
+    "g6wa4": {
+      "altAnswers": [
+        "Bindewort",
+        "Subjunktion"
+      ]
+    },
+    "g6wa36": {
+      "altAnswers": [
+        "Bindewort",
+        "Subjunktion"
+      ]
+    },
+    "g6wa39": {
+      "altAnswers": [
+        "Bindewort"
+      ]
+    },
+    "g6wa6": {
+      "altAnswers": [
+        "Verhältniswort"
+      ]
+    },
+    "g6wa41": {
+      "altAnswers": [
+        "Verhältniswort"
+      ]
+    },
+    "g6wa44": {
+      "altAnswers": [
+        "Verhältniswort"
+      ]
+    },
+    "g6wa45": {
+      "altAnswers": [
+        "Substantiv",
+        "Hauptwort"
+      ]
+    },
+    "g6wa47": {
+      "altAnswers": [
+        "Substantiv",
+        "Hauptwort"
+      ]
+    },
+    "g6wa32": {
+      "altAnswers": [
+        "Eigenschaftswort"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6wa42": {
+      "altAnswers": [
+        "Eigenschaftswort"
+      ]
+    },
+    "g6wa12": {
+      "altAnswers": [
+        "Partizip 2",
+        "Partizip Perfekt"
+      ]
+    },
+    "g6wa37": {
+      "altAnswers": [
+        "Temporaladverb",
+        "Zeitadverb"
+      ]
+    },
+    "g6wa43": {
+      "altAnswers": [
+        "Personalpronomen",
+        "persönliches Fürwort"
+      ]
+    },
+    "g6wa46": {
+      "altAnswers": [
+        "Indefinitpronomen",
+        "unbestimmtes Fürwort"
+      ]
+    },
+    "g6wa49": {
+      "altAnswers": [
+        "Demonstrativpronomen",
+        "hinweisendes Fürwort"
+      ]
+    },
+    "g6gr19": {
+      "question": "Welcher Satz gibt mit Konjunktiv I wieder, dass die Sprecherin selbst das Buch gelesen hat?",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welcher Satz gibt mit Konjunktiv I wieder, dass die Sprecherin selbst das Buch gelesen hat?",
+      "verbatimSpeech": true
+    },
+    "g6gr9": {
+      "question": "Gib «Ich lerne fleissig» in indirekter Rede mit Konjunktiv I wieder. Beginne mit «Er sagt,».",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Gib «Ich lerne fleissig» in indirekter Rede mit Konjunktiv I wieder. Beginne mit «Er sagt,».",
+      "verbatimSpeech": true
+    },
+    "g6gr22": {
+      "question": "Ordne zum Nebensatz: «regnet / weil / es». ___",
+      "spokenPrompt": "Ordne zum Nebensatz: «regnet / weil / es». …",
+      "verbatimSpeech": true
+    },
+    "g6gr25": {
+      "question": "Wozu verwenden Zeitungen Konjunktiv I bei fremden Aussagen?",
+      "options": [
+        "Satz aus Haupt- und Nebensatz(sätzen)",
+        "Wiedergabe fremder Aussagen ohne eigene Wertung",
+        "Das Buch wird von den Schülern gelesen.",
+        "Um die eigene Aussage als sicher bewiesen darzustellen."
+      ],
+      "spokenPrompt": "Wozu verwenden Zeitungen Konjunktiv I bei fremden Aussagen?",
+      "verbatimSpeech": true
+    },
+    "g6gr35": {
+      "question": "Wann verwendet man in indirekter Rede normalerweise Konjunktiv I statt einer Ersatzform?",
+      "hints": [
+        "Vergleiche «sie kommen» mit «er komme». Ist die Form von der Wirklichkeitsform unterscheidbar?",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Wann verwendet man in indirekter Rede normalerweise Konjunktiv I statt einer Ersatzform?",
+      "verbatimSpeech": true
+    },
+    "g6gr46": {
+      "hints": [
+        "Behalte Person und Bedeutung bei; ändere die Zeitform des Verbs.",
+        "Prüfe, ob deine Lösung grammatisch und inhaltlich genau passt."
+      ]
+    },
+    "g6gr49": {
+      "question": "Ergänze mit Konjunktiv I von «werden»: Sie sagt, sie ___ morgen kommen.",
+      "spokenPrompt": "Ergänze mit Konjunktiv I von «werden»: Sie sagt, sie … morgen kommen.",
+      "verbatimSpeech": true
+    },
+    "g6gr8": {
+      "question": "Ergänze das Hilfsverb: Das Zustandspassiv bildet man mit ___ und Partizip II.",
+      "answer": "sein",
+      "altAnswers": [],
+      "spokenPrompt": "Ergänze das Hilfsverb: Das Zustandspassiv bildet man mit … und Partizip II.",
+      "verbatimSpeech": true
+    },
+    "g6gr14": {
+      "question": "Nenne eine Konjunktion, die einen Konzessivsatz einleitet. ___",
+      "answer": "obwohl",
+      "altAnswers": [
+        "obgleich",
+        "wenngleich",
+        "obschon"
+      ],
+      "spokenPrompt": "Nenne eine Konjunktion, die einen Konzessivsatz einleitet. …",
+      "verbatimSpeech": true
+    },
+    "g6gr28": {
+      "question": "Wie nennt man eine Verbindung aus einem Hauptsatz und mindestens einem Nebensatz? ___",
+      "answer": "Satzgefüge",
+      "altAnswers": [
+        "Hypotaxe"
+      ],
+      "spokenPrompt": "Wie nennt man eine Verbindung aus einem Hauptsatz und mindestens einem Nebensatz? …",
+      "verbatimSpeech": true
+    },
+    "g6gr30": {
+      "question": "Wie nennt man einen Nebensatz, der als Objekt dient? ___",
+      "answer": "Objektsatz",
+      "spokenPrompt": "Wie nennt man einen Nebensatz, der als Objekt dient? …",
+      "verbatimSpeech": true
+    },
+    "g6gr31": {
+      "question": "Welche Einleitung drückt einen Zweck aus?",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welche Einleitung drückt einen Zweck aus?",
+      "verbatimSpeech": true
+    },
+    "g6gr29": {
+      "options": [
+        "Das Buch wird von den Schülern gelesen.",
+        "Verbindung von Hauptsätzen: Er kommt, und sie geht.",
+        "Indirekte Rede: Er sagt, er komme morgen.",
+        "Sein + Partizip II: Das Fenster ist geöffnet."
+      ],
+      "answer": "Verbindung von Hauptsätzen: Er kommt, und sie geht."
+    },
+    "g6ar1": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar2": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar3": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar4": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar5": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar6": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar7": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar8": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar9": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar10": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Zuerst die Behauptung, dann die Begründung und danach ein Beispiel: Das ist eine sinnvolle ___.",
+      "answer": "Reihenfolge",
+      "altAnswers": [
+        "Ordnung",
+        "Abfolge",
+        "Gliederung"
+      ],
+      "spokenPrompt": "Zuerst die Behauptung, dann die Begründung und danach ein Beispiel: Das ist eine sinnvolle ….",
+      "verbatimSpeech": true
+    },
+    "g6ar11": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar12": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine Erklärung dafür, warum man etwas meint, nennt man ___.",
+      "answer": "Begründung",
+      "altAnswers": [],
+      "spokenPrompt": "Eine Erklärung dafür, warum man etwas meint, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6ar13": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar14": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar15": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar16": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine Einigung, bei der beide Seiten auf einen Teil ihrer Forderungen verzichten, heisst ___.",
+      "answer": "Kompromiss",
+      "altAnswers": [],
+      "spokenPrompt": "Eine Einigung, bei der beide Seiten auf einen Teil ihrer Forderungen verzichten, heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6ar17": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar18": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine abschliessende Zusammenfassung der wichtigsten Gedanken heisst ___.",
+      "answer": "Fazit",
+      "altAnswers": [
+        "Zusammenfassung",
+        "Resümee",
+        "Schluss"
+      ],
+      "spokenPrompt": "Eine abschliessende Zusammenfassung der wichtigsten Gedanken heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6ar19": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar20": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Zuerst die Behauptung, dann die Begründung und danach ein Beispiel: Das ist eine sinnvolle ___.",
+      "answer": "Reihenfolge",
+      "altAnswers": [
+        "Ordnung",
+        "Abfolge",
+        "Gliederung"
+      ],
+      "spokenPrompt": "Zuerst die Behauptung, dann die Begründung und danach ein Beispiel: Das ist eine sinnvolle ….",
+      "verbatimSpeech": true
+    },
+    "g6ar21": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar22": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine Erklärung dafür, warum man etwas meint, nennt man ___.",
+      "answer": "Begründung",
+      "altAnswers": [],
+      "spokenPrompt": "Eine Erklärung dafür, warum man etwas meint, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6ar23": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar24": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Herkunft einer Information macht sie überprüfbar. Diese Herkunft nennt man ___.",
+      "answer": "Quelle",
+      "altAnswers": [
+        "Informationsquelle"
+      ],
+      "spokenPrompt": "Die Herkunft einer Information macht sie überprüfbar. Diese Herkunft nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6ar25": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar26": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar27": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar28": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine abschliessende Zusammenfassung der wichtigsten Gedanken heisst ___.",
+      "answer": "Fazit",
+      "altAnswers": [
+        "Zusammenfassung",
+        "Resümee",
+        "Schluss"
+      ],
+      "spokenPrompt": "Eine abschliessende Zusammenfassung der wichtigsten Gedanken heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6ar29": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar30": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar31": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar32": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar33": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar34": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar35": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6ar36": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine Einigung, bei der beide Seiten auf einen Teil ihrer Forderungen verzichten, heisst ___.",
+      "answer": "Kompromiss",
+      "altAnswers": [],
+      "spokenPrompt": "Eine Einigung, bei der beide Seiten auf einen Teil ihrer Forderungen verzichten, heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6ar37": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "In einer fairen Diskussion behandelt man andere Meinungen ___.",
+      "answer": "respektvoll",
+      "altAnswers": [
+        "fair",
+        "respektierend",
+        "mit Respekt"
+      ],
+      "spokenPrompt": "In einer fairen Diskussion behandelt man andere Meinungen ….",
+      "verbatimSpeech": true
+    },
+    "g6ar38": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine abschliessende Zusammenfassung der wichtigsten Gedanken heisst ___.",
+      "answer": "Fazit",
+      "altAnswers": [
+        "Zusammenfassung",
+        "Resümee",
+        "Schluss"
+      ],
+      "spokenPrompt": "Eine abschliessende Zusammenfassung der wichtigsten Gedanken heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6ar39": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein überprüfbarer wirklicher Sachverhalt ist eine ___.",
+      "answer": "Tatsache",
+      "altAnswers": [],
+      "spokenPrompt": "Ein überprüfbarer wirklicher Sachverhalt ist eine ….",
+      "verbatimSpeech": true
+    },
+    "g6ar40": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Zuerst die Behauptung, dann die Begründung und danach ein Beispiel: Das ist eine sinnvolle ___.",
+      "answer": "Reihenfolge",
+      "altAnswers": [
+        "Ordnung",
+        "Abfolge",
+        "Gliederung"
+      ],
+      "spokenPrompt": "Zuerst die Behauptung, dann die Begründung und danach ein Beispiel: Das ist eine sinnvolle ….",
+      "verbatimSpeech": true
+    },
+    "g6ar41": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine persönliche Ansicht zu einem Thema nennt man ___.",
+      "answer": "Meinung",
+      "altAnswers": [
+        "Position",
+        "Standpunkt"
+      ],
+      "spokenPrompt": "Eine persönliche Ansicht zu einem Thema nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6ar42": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine Erklärung dafür, warum man etwas meint, nennt man ___.",
+      "answer": "Begründung",
+      "altAnswers": [],
+      "spokenPrompt": "Eine Erklärung dafür, warum man etwas meint, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6ar43": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein konkreter Einzelfall veranschaulicht ein Argument. Er dient als ___.",
+      "answer": "Beispiel",
+      "altAnswers": [],
+      "spokenPrompt": "Ein konkreter Einzelfall veranschaulicht ein Argument. Er dient als ….",
+      "verbatimSpeech": true
+    },
+    "g6ar44": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Herkunft einer Information macht sie überprüfbar. Diese Herkunft nennt man ___.",
+      "answer": "Quelle",
+      "altAnswers": [
+        "Informationsquelle"
+      ],
+      "spokenPrompt": "Die Herkunft einer Information macht sie überprüfbar. Diese Herkunft nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6ar45": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein begründeter Einwand gegen ein Argument ist ein ___.",
+      "answer": "Gegenargument",
+      "altAnswers": [],
+      "spokenPrompt": "Ein begründeter Einwand gegen ein Argument ist ein ….",
+      "verbatimSpeech": true
+    },
+    "g6ar46": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine Einigung, bei der beide Seiten auf einen Teil ihrer Forderungen verzichten, heisst ___.",
+      "answer": "Kompromiss",
+      "altAnswers": [],
+      "spokenPrompt": "Eine Einigung, bei der beide Seiten auf einen Teil ihrer Forderungen verzichten, heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6ar47": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "In einer fairen Diskussion behandelt man andere Meinungen ___.",
+      "answer": "respektvoll",
+      "altAnswers": [
+        "fair",
+        "respektierend",
+        "mit Respekt"
+      ],
+      "spokenPrompt": "In einer fairen Diskussion behandelt man andere Meinungen ….",
+      "verbatimSpeech": true
+    },
+    "g6ar48": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine abschliessende Zusammenfassung der wichtigsten Gedanken heisst ___.",
+      "answer": "Fazit",
+      "altAnswers": [
+        "Zusammenfassung",
+        "Resümee",
+        "Schluss"
+      ],
+      "spokenPrompt": "Eine abschliessende Zusammenfassung der wichtigsten Gedanken heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6ar49": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein überprüfbarer wirklicher Sachverhalt ist eine ___.",
+      "answer": "Tatsache",
+      "altAnswers": [],
+      "spokenPrompt": "Ein überprüfbarer wirklicher Sachverhalt ist eine ….",
+      "verbatimSpeech": true
+    },
+    "g6ar50": {
+      "hints": [
+        "Überlege, welche Rolle der Begriff in einer fairen Diskussion spielt.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Zuerst die Behauptung, dann die Begründung und danach ein Beispiel: Das ist eine sinnvolle ___.",
+      "answer": "Reihenfolge",
+      "altAnswers": [
+        "Ordnung",
+        "Abfolge",
+        "Gliederung"
+      ],
+      "spokenPrompt": "Zuerst die Behauptung, dann die Begründung und danach ein Beispiel: Das ist eine sinnvolle ….",
+      "verbatimSpeech": true
+    },
+    "g6spw1": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw2": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw3": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw4": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw5": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw6": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Welches Wort ist in der Deutschschweiz für «Fahrrad» üblich? ___",
+      "answer": "Velo",
+      "altAnswers": [],
+      "spokenPrompt": "Welches Wort ist in der Deutschschweiz für «Fahrrad» üblich? …",
+      "verbatimSpeech": true
+    },
+    "g6spw7": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw8": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw9": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw10": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "In welchem Nachschlagewerk findest du Wörter und ihre Schreibweisen? Im ___.",
+      "answer": "Wörterbuch",
+      "altAnswers": [
+        "Rechtschreibwörterbuch"
+      ],
+      "spokenPrompt": "In welchem Nachschlagewerk findest du Wörter und ihre Schreibweisen? Im ….",
+      "verbatimSpeech": true
+    },
+    "g6spw11": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw12": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw13": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw14": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Sprachform vieler junger Menschen mit eigenen Ausdrücken heisst ___.",
+      "answer": "Jugendsprache",
+      "altAnswers": [],
+      "spokenPrompt": "Die Sprachform vieler junger Menschen mit eigenen Ausdrücken heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6spw15": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw16": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Welches Wort ist in der Deutschschweiz für «Fahrrad» üblich? ___",
+      "answer": "Velo",
+      "altAnswers": [],
+      "spokenPrompt": "Welches Wort ist in der Deutschschweiz für «Fahrrad» üblich? …",
+      "verbatimSpeech": true
+    },
+    "g6spw17": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw18": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Wenn sich die Bedeutung eines Wortes über die Zeit verändert, nennt man das ___.",
+      "answer": "Bedeutungswandel",
+      "altAnswers": [
+        "semantischen Wandel"
+      ],
+      "spokenPrompt": "Wenn sich die Bedeutung eines Wortes über die Zeit verändert, nennt man das ….",
+      "verbatimSpeech": true
+    },
+    "g6spw19": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw20": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw21": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw22": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw23": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw24": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Sprachform vieler junger Menschen mit eigenen Ausdrücken heisst ___.",
+      "answer": "Jugendsprache",
+      "altAnswers": [],
+      "spokenPrompt": "Die Sprachform vieler junger Menschen mit eigenen Ausdrücken heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6spw25": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw26": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw27": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw28": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw29": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw30": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw31": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw32": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw33": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw34": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Sprachform vieler junger Menschen mit eigenen Ausdrücken heisst ___.",
+      "answer": "Jugendsprache",
+      "altAnswers": [],
+      "spokenPrompt": "Die Sprachform vieler junger Menschen mit eigenen Ausdrücken heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6spw35": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6spw36": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Welches Wort ist in der Deutschschweiz für «Fahrrad» üblich? ___",
+      "answer": "Velo",
+      "altAnswers": [],
+      "spokenPrompt": "Welches Wort ist in der Deutschschweiz für «Fahrrad» üblich? …",
+      "verbatimSpeech": true
+    },
+    "g6spw37": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine verkürzte Schreibweise wie «z. B.» heisst ___.",
+      "answer": "Abkürzung",
+      "altAnswers": [],
+      "spokenPrompt": "Eine verkürzte Schreibweise wie «z. B.» heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6spw38": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Wenn sich die Bedeutung eines Wortes über die Zeit verändert, nennt man das ___.",
+      "answer": "Bedeutungswandel",
+      "altAnswers": [
+        "semantischen Wandel"
+      ],
+      "spokenPrompt": "Wenn sich die Bedeutung eines Wortes über die Zeit verändert, nennt man das ….",
+      "verbatimSpeech": true
+    },
+    "g6spw39": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Verwendung mehrerer Sprachen nennt man ___.",
+      "answer": "Mehrsprachigkeit",
+      "altAnswers": [],
+      "spokenPrompt": "Die Verwendung mehrerer Sprachen nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6spw40": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "In welchem Nachschlagewerk findest du Wörter und ihre Schreibweisen? Im ___.",
+      "answer": "Wörterbuch",
+      "altAnswers": [
+        "Rechtschreibwörterbuch"
+      ],
+      "spokenPrompt": "In welchem Nachschlagewerk findest du Wörter und ihre Schreibweisen? Im ….",
+      "verbatimSpeech": true
+    },
+    "g6spw41": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein aus einer anderen Sprache übernommenes Wort mit fremden Merkmalen nennt man ___.",
+      "answer": "Fremdwort",
+      "altAnswers": [],
+      "spokenPrompt": "Ein aus einer anderen Sprache übernommenes Wort mit fremden Merkmalen nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6spw42": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine regionale Sprachform nennt man ___.",
+      "answer": "Dialekt",
+      "altAnswers": [
+        "Mundart"
+      ],
+      "spokenPrompt": "Eine regionale Sprachform nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6spw43": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die überregionale, normierte Form einer Sprache nennt man ___.",
+      "answer": "Standardsprache",
+      "altAnswers": [],
+      "spokenPrompt": "Die überregionale, normierte Form einer Sprache nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6spw44": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Sprachform vieler junger Menschen mit eigenen Ausdrücken heisst ___.",
+      "answer": "Jugendsprache",
+      "altAnswers": [],
+      "spokenPrompt": "Die Sprachform vieler junger Menschen mit eigenen Ausdrücken heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6spw45": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Wie viele Landessprachen hat die Schweiz? ___",
+      "answer": "4",
+      "altAnswers": [
+        "vier"
+      ],
+      "spokenPrompt": "Wie viele Landessprachen hat die Schweiz? …",
+      "verbatimSpeech": true
+    },
+    "g6spw46": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Welches Wort ist in der Deutschschweiz für «Fahrrad» üblich? ___",
+      "answer": "Velo",
+      "altAnswers": [],
+      "spokenPrompt": "Welches Wort ist in der Deutschschweiz für «Fahrrad» üblich? …",
+      "verbatimSpeech": true
+    },
+    "g6spw47": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine verkürzte Schreibweise wie «z. B.» heisst ___.",
+      "answer": "Abkürzung",
+      "altAnswers": [],
+      "spokenPrompt": "Eine verkürzte Schreibweise wie «z. B.» heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6spw48": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Wenn sich die Bedeutung eines Wortes über die Zeit verändert, nennt man das ___.",
+      "answer": "Bedeutungswandel",
+      "altAnswers": [
+        "semantischen Wandel"
+      ],
+      "spokenPrompt": "Wenn sich die Bedeutung eines Wortes über die Zeit verändert, nennt man das ….",
+      "verbatimSpeech": true
+    },
+    "g6spw49": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Verwendung mehrerer Sprachen nennt man ___.",
+      "answer": "Mehrsprachigkeit",
+      "altAnswers": [],
+      "spokenPrompt": "Die Verwendung mehrerer Sprachen nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6spw50": {
+      "hints": [
+        "Denke daran, wie und wo Menschen Sprache verwenden.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "In welchem Nachschlagewerk findest du Wörter und ihre Schreibweisen? Im ___.",
+      "answer": "Wörterbuch",
+      "altAnswers": [
+        "Rechtschreibwörterbuch"
+      ],
+      "spokenPrompt": "In welchem Nachschlagewerk findest du Wörter und ihre Schreibweisen? Im ….",
+      "verbatimSpeech": true
+    },
+    "g6lit1": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit2": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Zeile über einem Text kündigt sein Thema an. Sie ist die ___.",
+      "answer": "Überschrift",
+      "altAnswers": [
+        "Titel"
+      ],
+      "spokenPrompt": "Die Zeile über einem Text kündigt sein Thema an. Sie ist die ….",
+      "verbatimSpeech": true
+    },
+    "g6lit3": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit4": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit5": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit6": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit7": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit8": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit9": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit10": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Einleitung, Hauptteil und ___ bilden den Aufbau einer abgeschlossenen Erzählung.",
+      "answer": "Schluss",
+      "altAnswers": [
+        "Schlussteil"
+      ],
+      "spokenPrompt": "Einleitung, Hauptteil und … bilden den Aufbau einer abgeschlossenen Erzählung.",
+      "verbatimSpeech": true
+    },
+    "g6lit11": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit12": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Zeile über einem Text kündigt sein Thema an. Sie ist die ___.",
+      "answer": "Überschrift",
+      "altAnswers": [
+        "Titel"
+      ],
+      "spokenPrompt": "Die Zeile über einem Text kündigt sein Thema an. Sie ist die ….",
+      "verbatimSpeech": true
+    },
+    "g6lit13": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit14": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit15": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit16": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit17": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit18": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit19": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit20": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit21": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit22": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit23": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit24": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit25": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit26": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit27": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit28": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit29": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit30": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit31": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit32": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit33": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit34": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine erfundene Person, die in einer Geschichte handelt, nennt man ___.",
+      "answer": "Figur",
+      "altAnswers": [
+        "Romanfigur",
+        "Erzählfigur"
+      ],
+      "spokenPrompt": "Eine erfundene Person, die in einer Geschichte handelt, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6lit35": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ]
+    },
+    "g6lit36": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Den Ort, an dem eine Geschichte spielt, nennt man ___.",
+      "answer": "Schauplatz",
+      "altAnswers": [
+        "Handlungsort"
+      ],
+      "spokenPrompt": "Den Ort, an dem eine Geschichte spielt, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6lit37": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Stimme, die eine Geschichte erzählt, nennt man ___.",
+      "answer": "Erzählstimme",
+      "altAnswers": [
+        "Erzähler",
+        "Erzählerin"
+      ],
+      "spokenPrompt": "Die Stimme, die eine Geschichte erzählt, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6lit38": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein aus mehreren Versen bestehender Abschnitt eines Gedichts heisst ___.",
+      "answer": "Strophe",
+      "altAnswers": [],
+      "spokenPrompt": "Ein aus mehreren Versen bestehender Abschnitt eines Gedichts heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6lit39": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein sprachliches Bild wie «ein Meer von Blumen» ist eine ___.",
+      "answer": "Metapher",
+      "altAnswers": [],
+      "spokenPrompt": "Ein sprachliches Bild wie «ein Meer von Blumen» ist eine ….",
+      "verbatimSpeech": true
+    },
+    "g6lit40": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Einleitung, Hauptteil und ___ bilden den Aufbau einer abgeschlossenen Erzählung.",
+      "answer": "Schluss",
+      "altAnswers": [
+        "Schlussteil"
+      ],
+      "spokenPrompt": "Einleitung, Hauptteil und … bilden den Aufbau einer abgeschlossenen Erzählung.",
+      "verbatimSpeech": true
+    },
+    "g6lit41": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein Text erzählt von Figuren und einer Handlung. Er ist eine ___.",
+      "answer": "Geschichte",
+      "altAnswers": [
+        "Erzählung"
+      ],
+      "spokenPrompt": "Ein Text erzählt von Figuren und einer Handlung. Er ist eine ….",
+      "verbatimSpeech": true
+    },
+    "g6lit42": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Zeile über einem Text kündigt sein Thema an. Sie ist die ___.",
+      "answer": "Überschrift",
+      "altAnswers": [
+        "Titel"
+      ],
+      "spokenPrompt": "Die Zeile über einem Text kündigt sein Thema an. Sie ist die ….",
+      "verbatimSpeech": true
+    },
+    "g6lit43": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Haus und Maus haben ähnlich klingende Enden. Sie bilden einen ___.",
+      "answer": "Reim",
+      "altAnswers": [],
+      "spokenPrompt": "Haus und Maus haben ähnlich klingende Enden. Sie bilden einen ….",
+      "verbatimSpeech": true
+    },
+    "g6lit44": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Eine erfundene Person, die in einer Geschichte handelt, nennt man ___.",
+      "answer": "Figur",
+      "altAnswers": [
+        "Romanfigur",
+        "Erzählfigur"
+      ],
+      "spokenPrompt": "Eine erfundene Person, die in einer Geschichte handelt, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6lit45": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Ereignisse einer Geschichte bilden ihre ___.",
+      "answer": "Handlung",
+      "altAnswers": [],
+      "spokenPrompt": "Die Ereignisse einer Geschichte bilden ihre ….",
+      "verbatimSpeech": true
+    },
+    "g6lit46": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Den Ort, an dem eine Geschichte spielt, nennt man ___.",
+      "answer": "Schauplatz",
+      "altAnswers": [
+        "Handlungsort"
+      ],
+      "spokenPrompt": "Den Ort, an dem eine Geschichte spielt, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6lit47": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Die Stimme, die eine Geschichte erzählt, nennt man ___.",
+      "answer": "Erzählstimme",
+      "altAnswers": [
+        "Erzähler",
+        "Erzählerin"
+      ],
+      "spokenPrompt": "Die Stimme, die eine Geschichte erzählt, nennt man ….",
+      "verbatimSpeech": true
+    },
+    "g6lit48": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein aus mehreren Versen bestehender Abschnitt eines Gedichts heisst ___.",
+      "answer": "Strophe",
+      "altAnswers": [],
+      "spokenPrompt": "Ein aus mehreren Versen bestehender Abschnitt eines Gedichts heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6lit49": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Ein sprachliches Bild wie «ein Meer von Blumen» ist eine ___.",
+      "answer": "Metapher",
+      "altAnswers": [],
+      "spokenPrompt": "Ein sprachliches Bild wie «ein Meer von Blumen» ist eine ….",
+      "verbatimSpeech": true
+    },
+    "g6lit50": {
+      "hints": [
+        "Überlege, welche Aufgabe der Begriff in einer Geschichte oder einem Gedicht hat.",
+        "Prüfe Frage und Antwort noch einmal."
+      ],
+      "question": "Einleitung, Hauptteil und ___ bilden den Aufbau einer abgeschlossenen Erzählung.",
+      "answer": "Schluss",
+      "altAnswers": [
+        "Schlussteil"
+      ],
+      "spokenPrompt": "Einleitung, Hauptteil und … bilden den Aufbau einer abgeschlossenen Erzählung.",
+      "verbatimSpeech": true
+    },
+    "g6lv4": {
+      "altAnswers": [
+        "Verstehen einzelner Wörter und Sätze"
+      ],
+      "spokenPrompt": "Was ist Textverständnis auf lokaler Ebene?",
+      "verbatimSpeech": true
+    },
+    "g6lv6": {
+      "altAnswers": [
+        "ein wichtiges Wort"
+      ],
+      "spokenPrompt": "Was ist ein Schlüsselwort (Keyword) im Text?",
+      "verbatimSpeech": true
+    },
+    "g6lv20": {
+      "altAnswers": [
+        "überfliegendes Lesen",
+        "den Text überfliegen"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g6lv22": {
+      "altAnswers": [
+        "Vorhersagen",
+        "Erwartungen bilden"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g6lv32": {
+      "altAnswers": [
+        "zeitliche Reihenfolge",
+        "zeitliche Abfolge"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
+      "spokenPrompt": "Was ist Chronologie eines Textes?",
+      "verbatimSpeech": true
+    },
+    "g6lv39": {
+      "altAnswers": [
+        "2. Messung"
+      ],
+      "spokenPrompt": "Text: «Erst nach der zweiten Messung wurde der Fehler sichtbar.» Wann wurde er sichtbar? Nach der ….",
+      "verbatimSpeech": true
+    },
+    "g6lv44": {
+      "altAnswers": [
+        "hielt den Versuch fest",
+        "protokollierte den Versuch"
+      ],
+      "spokenPrompt": "Text: «Während die einen aufräumten, dokumentierten die anderen den Versuch.» Die zweite Gruppe ….",
+      "verbatimSpeech": true
+    },
+    "g6lv45": {
+      "altAnswers": [
+        "knapp angenommen"
+      ],
+      "spokenPrompt": "Text: «Der Vorschlag wurde knapp angenommen.» Ergebnis: Der Vorschlag wurde ….",
+      "verbatimSpeech": true
+    },
+    "g6lv46": {
+      "altAnswers": [
+        "schloss den Bericht ab",
+        "stellte den Bericht fertig"
+      ],
+      "spokenPrompt": "Text: «Obwohl Leo müde war, beendete er den Bericht.» Was tat Leo? Er ….",
+      "verbatimSpeech": true
+    },
+    "g6lv43": {
+      "question": "Text: «Die Solaranlage erzeugte mehr Strom als erwartet.» Wie viel Strom erzeugte sie im Vergleich zur Erwartung? ___",
+      "spokenPrompt": "Text: «Die Solaranlage erzeugte mehr Strom als erwartet.» Wie viel Strom erzeugte sie im Vergleich zur Erwartung? …",
+      "verbatimSpeech": true
+    },
+    "g6lv2": {
+      "options": [
+        "Information, die nicht direkt steht, aber erschlossen werden kann",
+        "Eine wortwörtlich zitierte Textstelle",
+        "Eine ohne Textbezug erfundene Behauptung",
+        "Erzähler beschränkt auf Sichtweise einer Figur (Er/Sie)"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6lv12": {
+      "options": [
+        "Bedeutung unter der Oberfläche des Textes, nicht direkt gesagt",
+        "Eine wortwörtlich zitierte Textstelle",
+        "Die Anzahl der Absätze",
+        "Erzähler beschränkt auf Sichtweise einer Figur (Er/Sie)"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Subtext?",
+      "verbatimSpeech": true
+    },
+    "g6lv11": {
+      "options": [
+        "Ein Erzähler, der alle Gedanken aller Figuren kennt",
+        "Aufbau der Handlung: Exposition, Steigerung, Höhepunkt, Wendepunkt, Lösung",
+        "Erzähler beschränkt auf Sichtweise einer Figur (Er/Sie)",
+        "Gefühlston, den der Text vermittelt: Trauer, Freude, Spannung"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6lv27": {
+      "options": [
+        "Das Wissen eines allwissenden Erzählers",
+        "Sicht und Erleben einer bestimmten Figur im Text",
+        "Aufbau der Handlung: Exposition, Steigerung, Höhepunkt, Wendepunkt, Lösung",
+        "Gefühlston, den der Text vermittelt: Trauer, Freude, Spannung"
+      ],
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6lv14": {
+      "question": "Welche Tätigkeit bezeichnet «inferieren» beim Lesen?",
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Denk an die Übersetzung — sie klingt ähnlich."
+      ],
+      "spokenPrompt": "Welche Tätigkeit bezeichnet «inferieren» beim Lesen?",
+      "verbatimSpeech": true
+    },
+    "g6hoer6": {
+      "question": "Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt?",
+      "listeningText": "Die Abstimmung endet mit 58 Prozent Ja-Stimmen bei einer Beteiligung von 42 Prozent. Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt? Antwort 1: Sonntags fährt der Bus jede halbe Stunde. Antwort 2: Holz hält die Wärme am längsten. Antwort 3: 58 Prozent stimmen Ja. Antwort 4: Sechs Gemeinden werden verglichen."
+    },
+    "g6hoer7": {
+      "question": "Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt?",
+      "listeningText": "Der Bericht vergleicht Daten von 2019 bis 2025 und berücksichtigt sechs Gemeinden. Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt? Antwort 1: Holz hält die Wärme am längsten. Antwort 2: Sechs Gemeinden werden verglichen. Antwort 3: 58 Prozent stimmen Ja. Antwort 4: Sonntags fährt der Bus jede halbe Stunde."
+    },
+    "g6hoer8": {
+      "question": "Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt?",
+      "listeningText": "Die neue Buslinie fährt werktags alle fünfzehn Minuten, am Sonntag jedoch nur jede halbe Stunde. Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt? Antwort 1: Sonntags fährt der Bus jede halbe Stunde. Antwort 2: 58 Prozent stimmen Ja. Antwort 3: Sechs Gemeinden werden verglichen. Antwort 4: Holz hält die Wärme am längsten."
+    },
+    "g6hoer9": {
+      "question": "Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt?",
+      "listeningText": "Von den drei getesteten Materialien hält Holz die Wärme am längsten, Metall am kürzesten. Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt? Antwort 1: 58 Prozent stimmen Ja. Antwort 2: Sechs Gemeinden werden verglichen. Antwort 3: Sonntags fährt der Bus jede halbe Stunde. Antwort 4: Holz hält die Wärme am längsten."
+    },
+    "g6hoer10": {
+      "question": "Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt?",
+      "listeningText": "Die Autorin veröffentlicht den Artikel unter ihrem Namen und verlinkt alle verwendeten Statistiken. Welche Information wird in der Geschichte vor den Antwortmöglichkeiten genannt? Antwort 1: Sechs Gemeinden werden verglichen. Antwort 2: Sonntags fährt der Bus jede halbe Stunde. Antwort 3: Die verwendeten Statistiken sind verlinkt. Antwort 4: 58 Prozent stimmen Ja."
+    },
+    "g6hoer11": {
+      "question": "Was soll nach dem ersten Schritt getan werden?",
+      "listeningText": "Notiere die zentrale These. Ordne danach jedes Argument danach, ob es die These stützt oder ihr widerspricht. Was soll nach dem ersten Schritt getan werden? Antwort 1: die Vollständigkeit des Zitats prüfen. Antwort 2: Argumente nach ihrer Funktion ordnen. Antwort 3: die dargestellten Zeiträume vergleichen. Antwort 4: Fakten und Bewertungen unterscheiden."
+    },
+    "g6hoer12": {
+      "question": "Was soll nach dem ersten Schritt getan werden?",
+      "listeningText": "Prüfe die Grafik zuerst auf Achsen und Einheit. Vergleiche anschliessend die dargestellten Zeiträume. Was soll nach dem ersten Schritt getan werden? Antwort 1: die dargestellten Zeiträume vergleichen. Antwort 2: Argumente nach ihrer Funktion ordnen. Antwort 3: Fakten und Bewertungen unterscheiden. Antwort 4: die Vollständigkeit des Zitats prüfen."
+    },
+    "g6hoer13": {
+      "question": "Was soll nach dem ersten Schritt getan werden?",
+      "listeningText": "Höre beide Aussagen. Markiere danach, wo Fakten genannt und wo Bewertungen geäussert werden. Was soll nach dem ersten Schritt getan werden? Antwort 1: Argumente nach ihrer Funktion ordnen. Antwort 2: die dargestellten Zeiträume vergleichen. Antwort 3: die Vollständigkeit des Zitats prüfen. Antwort 4: Fakten und Bewertungen unterscheiden."
+    },
+    "g6hoer14": {
+      "question": "Was soll nach dem ersten Schritt getan werden?",
+      "listeningText": "Recherchiere die ursprüngliche Quelle. Kontrolliere dann, ob das Zitat vollständig wiedergegeben wurde. Was soll nach dem ersten Schritt getan werden? Antwort 1: die dargestellten Zeiträume vergleichen. Antwort 2: Fakten und Bewertungen unterscheiden. Antwort 3: die Vollständigkeit des Zitats prüfen. Antwort 4: Argumente nach ihrer Funktion ordnen."
+    },
+    "g6hoer15": {
+      "question": "Was soll nach dem ersten Schritt getan werden?",
+      "listeningText": "Formuliere ein Gegenargument und antworte darauf mit einem passenden Beleg. Was soll nach dem ersten Schritt getan werden? Antwort 1: Fakten und Bewertungen unterscheiden. Antwort 2: das Gegenargument mit einem Beleg beantworten. Antwort 3: Argumente nach ihrer Funktion ordnen. Antwort 4: die dargestellten Zeiträume vergleichen."
+    },
+    "g6hoer46": {
+      "question": "Welche Haltung beschreibt die Aussage am genauesten?",
+      "listeningText": "Die Daten stützen meine Vermutung nur teilweise. Deshalb formuliere ich die Aussage vorsichtiger. Welche Haltung beschreibt die Aussage am genauesten? Antwort 1: unsachlich und abwertend. Antwort 2: zustimmend, aber kritisch prüfend. Antwort 3: evidenzorientiert und selbstkritisch. Antwort 4: abwägend und pragmatisch."
+    },
+    "g6hoer47": {
+      "question": "Welche Haltung beschreibt die Aussage am genauesten?",
+      "listeningText": "Diese Massnahme hat Nachteile, doch im Vergleich zu den Alternativen verursacht sie die geringsten Probleme. Welche Haltung beschreibt die Aussage am genauesten? Antwort 1: zustimmend, aber kritisch prüfend. Antwort 2: abwägend und pragmatisch. Antwort 3: evidenzorientiert und selbstkritisch. Antwort 4: unsachlich und abwertend."
+    },
+    "g6hoer49": {
+      "question": "Welche Haltung beschreibt die Aussage am genauesten?",
+      "listeningText": "Ich finde den Vorschlag überzeugend, möchte aber wissen, wie die Kosten berechnet wurden. Welche Haltung beschreibt die Aussage am genauesten? Antwort 1: evidenzorientiert und selbstkritisch. Antwort 2: abwägend und pragmatisch. Antwort 3: unsachlich und abwertend. Antwort 4: zustimmend, aber kritisch prüfend."
+    },
+    "g6hoer50": {
+      "question": "Welche Haltung beschreibt die Aussage am genauesten?",
+      "listeningText": "Noch fehlen Langzeitdaten. Eine endgültige Aussage wäre deshalb verfrüht. Welche Haltung beschreibt die Aussage am genauesten? Antwort 1: abwägend und pragmatisch. Antwort 2: unsachlich und abwertend. Antwort 3: vorsichtig gegenüber voreiligen Schlüssen. Antwort 4: evidenzorientiert und selbstkritisch."
+    },
+    "g6d1": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ]
+    },
+    "g6ka1b": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ka1k": {
+      "hints": [
+        "Wessen Bücher? Die Bücher der Schüler.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ]
+    },
+    "g6ka2h": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ka2n": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6d11": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ]
+    },
+    "g6d12": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6d14": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Welche Textsorte hat Strophen und Refrains?",
+      "verbatimSpeech": true
+    },
+    "g6ts1c": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts1d": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts1j": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts1l": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2a": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2b": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2c": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2d": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2e": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2f": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2g": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2h": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2i": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ts2p": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Paralleltext?",
+      "verbatimSpeech": true
+    },
+    "g6d27": {
+      "hints": [
+        "Lies die Frage und alle Antwortmöglichkeiten sorgfältig.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ]
+    },
+    "g6rs1f": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6rs1h": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6rs1j": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6rs1k": {
+      "hints": [
+        "Nach dem kurzen u folgen zwei gleiche Konsonanten.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ],
+      "spokenPrompt": "Ergänze den Doppelkonsonanten: «Wort mit Lücke» Vor der Lücke stehen die Buchstaben F, L, U. Nach der Lücke stehen keine weiteren Buchstaben.",
+      "verbatimSpeech": true
+    },
+    "g6rs2h": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa3": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa7": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa13": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa16": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ]
+    },
+    "g6wa17": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa24": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa25": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa27": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Reflexivverb? Beispiel.",
+      "verbatimSpeech": true
+    },
+    "g6wa33": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa34": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6wa35": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gr1": {
+      "hints": [
+        "Aktiv: Er isst den Apfel. Passiv: Der Apfel wird gegessen.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ]
+    },
+    "g6gr3": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gr4": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gr7": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gr12": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gr13": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gr23": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gr27": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gr34": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6lv1": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Prüfe deine Vermutung an der vollständigen Aufgabe."
+      ],
+      "spokenPrompt": "Was ist explizite Information in einem Text?",
+      "verbatimSpeech": true
+    },
+    "g6lv3": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist die Hauptaussage eines Textes?",
+      "verbatimSpeech": true
+    },
+    "g6lv5": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Textverständnis auf globaler Ebene?",
+      "verbatimSpeech": true
+    },
+    "g6lv7": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Textaufbau?",
+      "verbatimSpeech": true
+    },
+    "g6lv10": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6lv13": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Textzusammenhang (Kohärenz)?",
+      "verbatimSpeech": true
+    },
+    "g6lv15": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist ein Textzweck?",
+      "verbatimSpeech": true
+    },
+    "g6lv21": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6lv23": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Textkritik?",
+      "verbatimSpeech": true
+    },
+    "g6lv28": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6lv30": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Stimmung (Atmosphäre) in einem Text?",
+      "verbatimSpeech": true
+    },
+    "g6lv31": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Wie erkennt man Ironie im Text?",
+      "verbatimSpeech": true
+    },
+    "g6lv33": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Anachronie in Erzähltexten?",
+      "verbatimSpeech": true
+    },
+    "g6lv34": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Was ist Konflikt in Erzähltexten?",
+      "verbatimSpeech": true
+    },
+    "g6lv35": {
+      "hints": [
+        "Vergleiche die Merkmale mit der Frage und prüfe ein eigenes Beispiel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6d16": {
+      "spokenPrompt": "Textsorten: Eine Überschrift: Welche Aussage passt?",
+      "verbatimSpeech": true
+    },
+    "g6d17": {
+      "spokenPrompt": "Ein Text, der eine Geschichte erzählt (mit Figuren, Ort, Zeit, Handlung), heisst ….",
+      "verbatimSpeech": true
+    },
+    "g6ts2j": {
+      "spokenPrompt": "Lernrunde 3: Textsorten: Welcher Text erklärt, wie man etwas macht?",
+      "verbatimSpeech": true
+    },
+    "g6ts2l": {
+      "spokenPrompt": "Lernrunde 4: Textsorten: Welcher Text erklärt, wie man etwas macht?",
+      "verbatimSpeech": true
+    },
+    "g6ts2m": {
+      "spokenPrompt": "Lernrunde 5: Textsorten: Welcher Text erklärt, wie man etwas macht?",
+      "verbatimSpeech": true
+    },
+    "g6ts3c": {
+      "spokenPrompt": "Ein kurzer sachlicher Text über ein aktuelles Ereignis ist eine ….",
+      "verbatimSpeech": true
+    },
+    "g6rs3e": {
+      "spokenPrompt": "Ergänze korrekt: Das Experiment Wort mit Lücke beim ersten Versuch. Vor der Lücke stehen die Buchstaben M, I, S, S, L, I. Nach der Lücke stehen die Buchstaben T.",
+      "verbatimSpeech": true
+    },
+    "g6rs3j": {
+      "spokenPrompt": "Ergänze korrekt: Sie liest den Text Wort mit Lücke. Vor der Lücke stehen die Buchstaben A, U, F, M, E, R. Nach der Lücke stehen die Buchstaben S, A, M.",
+      "verbatimSpeech": true
+    },
+    "g6lv17": {
+      "spokenPrompt": "Was ist ironische Bedeutung in einem Text?",
+      "verbatimSpeech": true
+    },
+    "g6lv26": {
+      "spokenPrompt": "Was ist Texttreue in der Interpretation?",
+      "verbatimSpeech": true
+    },
+    "g6lv50": {
+      "spokenPrompt": "Text: «Je höher die Temperatur, desto schneller schmolz das Eis.» Bei höherer Temperatur schmolz es ….",
+      "verbatimSpeech": true
+    },
+    "g6hoer16": {
+      "verbatimSpeech": true
+    },
+    "g6hoer17": {
+      "verbatimSpeech": true
+    },
+    "g6hoer18": {
+      "verbatimSpeech": true
+    },
+    "g6hoer19": {
+      "verbatimSpeech": true
+    },
+    "g6hoer20": {
+      "verbatimSpeech": true
+    },
+    "g6hoer32": {
+      "verbatimSpeech": true
+    },
+    "g6hoer41": {
+      "verbatimSpeech": true
+    },
+    "g6hoer42": {
+      "verbatimSpeech": true
+    },
+    "g6hoer43": {
+      "verbatimSpeech": true
+    },
+    "g6hoer44": {
+      "verbatimSpeech": true
+    },
+    "g6hoer45": {
+      "verbatimSpeech": true
+    },
+    "g6hoer48": {
+      "verbatimSpeech": true
+    },
+    "g6d3": {
+      "spokenPrompt": "«Ich gebe … Hund einen Knochen.» — Ergänze den richtigen Artikel (dem/den/der).",
+      "verbatimSpeech": true
+    },
+    "g6d5": {
+      "spokenPrompt": "«Ich besuche … Freundin.» Ergänze (die/der/das).",
+      "verbatimSpeech": true
+    },
+    "g6d7": {
+      "spokenPrompt": "«Das Geschenk gehört … Bruder.» Ergänze (dem/den/der).",
+      "verbatimSpeech": true
+    },
+    "g6ka1f": {
+      "spokenPrompt": "Artikel «der» im Akkusativ (maskulin):",
+      "verbatimSpeech": true
+    },
+    "g6ka1h": {
+      "spokenPrompt": "Artikel «die» im Genitiv (feminin):",
+      "verbatimSpeech": true
+    },
+    "g6d28": {
+      "spokenPrompt": "Ergänze korrekt: Die Gruppe löst die Aufgabe Wort mit Lücke. Vor der Lücke stehen die Buchstaben S, E, L, B, S, T, S, T, Ä. Nach der Lücke stehen die Buchstaben I, G.",
+      "verbatimSpeech": true
+    },
+    "g6d29": {
+      "spokenPrompt": "Ergänze korrekt: Die Klasse diskutiert Wort mit Lücke. Vor der Lücke stehen die Buchstaben R, Ü. Nach der Lücke stehen die Buchstaben S, I, C, H, T, S, V, O, L, L.",
+      "verbatimSpeech": true
+    },
+    "g6d30": {
+      "spokenPrompt": "Ergänze korrekt: Wir sammeln wissenschaftliche Wort mit Lücke. Vor der Lücke stehen die Buchstaben E, R, K, E, N. Nach der Lücke stehen die Buchstaben N, I, S, S, E.",
+      "verbatimSpeech": true
+    },
+    "g6rs3a": {
+      "spokenPrompt": "Ergänze korrekt: Die Wanderung ist Wort mit Lücke. Vor der Lücke stehen die Buchstaben A, N, S, T, R, E. Nach der Lücke stehen die Buchstaben E, N, D.",
+      "verbatimSpeech": true
+    },
+    "g6rs3b": {
+      "spokenPrompt": "Ergänze korrekt: Wir begründen unsere Wort mit Lücke. Vor der Lücke stehen die Buchstaben E, N, T, S, C, H, E, I. Nach der Lücke stehen die Buchstaben U, N, G.",
+      "verbatimSpeech": true
+    },
+    "g6rs3c": {
+      "spokenPrompt": "Ergänze korrekt: Wir übernehmen Wort mit Lücke. Vor der Lücke stehen die Buchstaben V, E, R, A, N, T, W, O, R. Nach der Lücke stehen die Buchstaben U, N, G.",
+      "verbatimSpeech": true
+    },
+    "g6rs3d": {
+      "spokenPrompt": "Ergänze korrekt: Sie Wort mit Lücke ein spannendes Buch. Vor der Lücke stehen die Buchstaben E, M, P, F, I, E. Nach der Lücke stehen die Buchstaben T.",
+      "verbatimSpeech": true
+    },
+    "g6rs3f": {
+      "spokenPrompt": "Ergänze korrekt: Der Beschluss gilt Wort mit Lücke. Vor der Lücke stehen die Buchstaben E, N, D, G, Ü. Nach der Lücke stehen die Buchstaben I, G.",
+      "verbatimSpeech": true
+    },
+    "g6rs3g": {
+      "spokenPrompt": "Ergänze korrekt: Das Team arbeitet Wort mit Lücke. Vor der Lücke stehen die Buchstaben G, E, W, I. Nach der Lücke stehen die Buchstaben E, N, H, A, F, T.",
+      "verbatimSpeech": true
+    },
+    "g6rs3h": {
+      "spokenPrompt": "Ergänze korrekt: Das Ergebnis ist Wort mit Lücke. Vor der Lücke stehen die Buchstaben Z, U, V, E, R, L, Ä. Nach der Lücke stehen die Buchstaben I, G.",
+      "verbatimSpeech": true
+    },
+    "g6rs3i": {
+      "spokenPrompt": "Ergänze korrekt: Der Weg ist Wort mit Lücke steil. Vor der Lücke stehen die Buchstaben A, U. Nach der Lücke stehen die Buchstaben E, R, G, E, W, Ö, H, N, L, I, C, H.",
+      "verbatimSpeech": true
+    },
+    "g6rs3k": {
+      "spokenPrompt": "Ergänze korrekt: Die Erklärung ist Wort mit Lücke. Vor der Lücke stehen die Buchstaben M, I, S, S, V, E, R, S, T, Ä. Nach der Lücke stehen die Buchstaben L, I, C, H.",
+      "verbatimSpeech": true
+    },
+    "g6rs3l": {
+      "spokenPrompt": "Ergänze korrekt: Sie fasst die Ergebnisse Wort mit Lücke zusammen. Vor der Lücke stehen die Buchstaben P, R, Ä. Nach der Lücke stehen die Buchstaben I, S, E.",
+      "verbatimSpeech": true
+    }
+  }
+}
