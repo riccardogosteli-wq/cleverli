@@ -2,11 +2,19 @@
   "patches": {
     "g6vh5": {
       "question": "15 Mädchen und 10 Knaben. Wie lautet das vollständig gekürzte Verhältnis Mädchen zu Knaben?",
+      "hints": [
+        "Teile beide Anzahlen durch fünf.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
       "spokenPrompt": "15 Mädchen und 10 Knaben. Wie lautet das vollständig gekürzte Verhältnis Mädchen zu Knaben?",
       "verbatimSpeech": true
     },
     "g6vh15": {
       "question": "Wie lautet das vollständig gekürzte Verhältnis 100:250?",
+      "hints": [
+        "Teile beide Zahlen durch fünfzig.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
       "spokenPrompt": "Wie lautet das vollständig gekürzte Verhältnis 100:250?",
       "verbatimSpeech": true
     },
@@ -27,16 +35,28 @@
     },
     "g6geo10": {
       "question": "Trapez mit parallelen Seiten a und c, alle Längen in cm: a=6, c=10, h=4. A=? cm²",
+      "hints": [
+        "Addiere die parallelen Seiten, halbiere die Summe und multipliziere mit der Höhe.",
+        "Die Zahl ist grösser als 12 und kleiner als 52."
+      ],
       "spokenPrompt": "Trapez mit parallelen Seiten a und c, alle Längen in Zentimeter: a gleich 6, c gleich 10, Höhe gleich 4. A gleich ? Quadratzentimeter",
       "verbatimSpeech": true
     },
     "g6geo17": {
       "question": "Trapez mit parallelen Seiten a und c, alle Längen in cm: a=8, c=14, h=6. A=?",
+      "hints": [
+        "Berechne den Mittelwert der parallelen Seiten und multipliziere ihn mit der Höhe.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
       "spokenPrompt": "Trapez mit parallelen Seiten a und c, alle Längen in Zentimeter: a gleich 8, c gleich 14, Höhe gleich 6. A gleich ?",
       "verbatimSpeech": true
     },
     "g6geo34": {
       "question": "Trapez mit parallelen Seiten a und c, alle Längen in cm: a=10, c=6, h=5. A=? cm²",
+      "hints": [
+        "Addiere die parallelen Seiten, halbiere die Summe und multipliziere mit der Höhe.",
+        "Die Zahl ist grösser als 20 und kleiner als 60."
+      ],
       "spokenPrompt": "Trapez mit parallelen Seiten a und c, alle Längen in Zentimeter: a gleich 10, c gleich 6, Höhe gleich 5. A gleich ? Quadratzentimeter",
       "verbatimSpeech": true
     },
@@ -67,6 +87,10 @@
     },
     "g6fk17": {
       "question": "Quader (alle Längen in cm): l=8, b=5, h=3. Oberfläche=?",
+      "hints": [
+        "Berechne die drei verschiedenen Rechtecksflächen, addiere sie und verdopple die Summe.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
       "spokenPrompt": "Quader Klammer auf alle Längen in Zentimeter Klammer zu : Länge gleich 8, Breite gleich 5, Höhe gleich 3. Oberfläche gleich ?",
       "verbatimSpeech": true
     },
@@ -82,11 +106,19 @@
     },
     "g6fk31": {
       "question": "Ein Quader hat ein Volumen von 240 cm³, eine Länge von 8 cm und eine Breite von 6 cm. Wie hoch ist er?",
+      "hints": [
+        "Teile das Volumen durch die Grundfläche.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
       "spokenPrompt": "Ein Quader hat ein Volumen von 240 Kubikzentimeter, eine Länge von 8 Zentimeter und eine Breite von 6 Zentimeter. Wie hoch ist er?",
       "verbatimSpeech": true
     },
     "g6geo25": {
       "question": "Wechselwinkel an zwei parallelen Geraden, die von einer dritten Geraden geschnitten werden:",
+      "hints": [
+        "Zeichne eine Z-förmige Hilfslinie entlang der Geraden.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
       "spokenPrompt": "Wechselwinkel an zwei parallelen Geraden, die von einer dritten Geraden geschnitten werden:",
       "verbatimSpeech": true
     },
@@ -116,7 +148,11 @@
         "Die Variable (meist x), die gesucht ist",
         "Eine Umformung, die beide Seiten gleich verändert"
       ],
-      "answer": "Eine Aussage, dass zwei Terme den gleichen Wert haben"
+      "answer": "Eine Aussage, dass zwei Terme den gleichen Wert haben",
+      "hints": [
+        "Achte auf das Zeichen, das die beiden Terme verbindet.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
     },
     "g6geo15": {
       "options": [
@@ -243,6 +279,10 @@
     },
     "math6-rich-statistik-memory-1": {
       "question": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "hints": [
+        "Der Mittelwert ist der Durchschnitt.",
+        "Achte auf den grössten und den kleinsten Wert."
+      ],
       "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
       "verbatimSpeech": true
     },
@@ -352,7 +392,7 @@
     },
     "math6-rich-prozent-line-1": {
       "hints": [
-        "37,5 % sind 37,5 von 100.",
+        "Die Prozentangabe beschreibt einen Anteil von hundert.",
         "Teile die Prozentangabe durch hundert."
       ],
       "spokenPrompt": "Zeige siebenunddreissig Komma fünf Prozent als Dezimalzahl auf dem Zahlenstrahl.",
@@ -608,6 +648,10 @@
         "Ein Versuch mit zufälligem Ausgang",
         "Vorgang mit zufälligem Ausgang"
       ],
+      "hints": [
+        "Überlege, ob sich das genaue Ergebnis schon vor dem Versuch vorhersagen lässt.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
       "spokenPrompt": "Was ist ein Zufallsexperiment?",
       "verbatimSpeech": true
     },
@@ -622,74 +666,207 @@
       "spokenPrompt": "Die Menge A enthält eins, zwei und drei. Die Menge B enthält zwei, drei, vier und fünf. Welche Elemente gehören zur Schnittmenge von A und B?",
       "verbatimSpeech": true
     },
+    "g6m22": {
+      "hints": [
+        "Dividiere beide Seiten durch zwei.",
+        "Die Zahl liegt zwischen 6 und 10."
+      ],
+      "spokenPrompt": "2 mal iks gleich 16. Was ist iks?",
+      "verbatimSpeech": true
+    },
+    "g6m23": {
+      "hints": [
+        "Addiere auf beiden Seiten vier.",
+        "Die Zahl liegt zwischen 13 und 17."
+      ],
+      "spokenPrompt": "iks minus 4 gleich 11. Was ist iks?",
+      "verbatimSpeech": true
+    },
+    "g6m24": {
+      "hints": [
+        "Dividiere beide Seiten durch drei.",
+        "Die Zahl liegt zwischen 6 und 10."
+      ],
+      "spokenPrompt": "3 mal iks gleich 24. Was ist iks?",
+      "verbatimSpeech": true
+    },
+    "g6m25": {
+      "hints": [
+        "Subtrahiere auf beiden Seiten dreizehn.",
+        "Die Zahl liegt zwischen 15 und 19."
+      ],
+      "spokenPrompt": "iks plus 13 gleich 30. Was ist iks?",
+      "verbatimSpeech": true
+    },
+    "g6m26": {
+      "hints": [
+        "Multipliziere beide Seiten mit vier.",
+        "Die Zahl ist grösser als 8 und kleiner als 48."
+      ],
+      "spokenPrompt": "iks geteilt durch 4 gleich 7. Was ist iks?",
+      "verbatimSpeech": true
+    },
+    "g6m27": {
+      "hints": [
+        "Subtrahiere zuerst drei und dividiere danach durch zwei.",
+        "Die Zahl liegt zwischen 2 und 6."
+      ],
+      "spokenPrompt": "2 mal iks plus 3 gleich 11. Was ist iks?",
+      "verbatimSpeech": true
+    },
+    "g6gl2e": {
+      "hints": [
+        "Achte darauf, mit welcher Potenz die Unbekannte vorkommt.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6gl2l": {
+      "hints": [
+        "Vergleiche die Zeichen für Gleichheit und Grössenvergleiche.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6vh2": {
+      "hints": [
+        "Suche den grössten gemeinsamen Teiler und teile beide Zahlen durch ihn.",
+        "Rechne oder ordne Schritt für Schritt und kontrolliere das Ergebnis mit der umgekehrten Richtung."
+      ]
+    },
+    "g6vh4": {
+      "hints": [
+        "Teile beide Zahlen durch drei.",
+        "Rechne oder ordne Schritt für Schritt und kontrolliere das Ergebnis mit der umgekehrten Richtung."
+      ]
+    },
+    "g6vh6": {
+      "hints": [
+        "Teile beide Zahlen durch sechs.",
+        "Rechne oder ordne Schritt für Schritt und kontrolliere das Ergebnis mit der umgekehrten Richtung."
+      ]
+    },
+    "g6vh33": {
+      "hints": [
+        "Berechne zuerst den Proportionalitätsfaktor aus dem bekannten Wertepaar.",
+        "Die Zahl ist grösser als 1 und kleiner als 41."
+      ],
+      "spokenPrompt": "Iks und Ypsilon sind direkt proportional. Bei iks gleich vier ist Ypsilon gleich zwölf. Wie gross ist Ypsilon bei iks gleich sieben?",
+      "verbatimSpeech": true
+    },
+    "g6geo3": {
+      "hints": [
+        "Teile einen vollen Kreis in vier gleich grosse Winkel.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6geo8": {
+      "hints": [
+        "Multipliziere Grundseite und zugehörige Höhe.",
+        "Die Zahl ist grösser als 20 und kleiner als 60."
+      ],
+      "spokenPrompt": "Parallelogramm: Grundseite gleich 10 Zentimeter, Höhe gleich 4 Zentimeter. A gleich ? Quadratzentimeter",
+      "verbatimSpeech": true
+    },
+    "g6geo32": {
+      "hints": [
+        "Zerlege das Fünfeck durch Diagonalen von einer Ecke aus in Dreiecke.",
+        "Das Ergebnis liegt nahe bei 500."
+      ]
+    },
+    "g6stat8": {
+      "hints": [
+        "Ziehe den kleinsten Wert vom grössten Wert ab.",
+        "Die Zahl liegt zwischen 7 und 11."
+      ]
+    },
+    "g6stat20": {
+      "hints": [
+        "Bilde den Mittelwert der beiden mittleren Werte.",
+        "Die Zahl liegt zwischen 3 und 7."
+      ]
+    },
+    "g6wk19": {
+      "hints": [
+        "Multipliziere die Wahrscheinlichkeiten der unabhängigen Ereignisse.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Die Wahrscheinlichkeit für A beträgt null Komma drei, für B null Komma fünf. A und B sind unabhängig. Wie gross ist die Wahrscheinlichkeit, dass A und B beide eintreten?",
+      "verbatimSpeech": true
+    },
     "g6wk32": {
+      "hints": [
+        "Addiere die beiden Einzelwahrscheinlichkeiten und ziehe die Wahrscheinlichkeit ihrer Vereinigung ab.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
       "mathAnswerMode": "number",
       "spokenPrompt": "Die Wahrscheinlichkeit für A beträgt null Komma sechs, für B null Komma fünf und für A oder B null Komma acht. Wie gross ist die Wahrscheinlichkeit für A und B gemeinsam?",
       "verbatimSpeech": true
     },
-    "g6wk41": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "2 von 6 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
-      "verbatimSpeech": true
+    "g6ta5": {
+      "hints": [
+        "Addiere Länge und Breite und verdopple die Summe.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
     },
-    "g6pz2c": {
+    "g6ta10": {
+      "hints": [
+        "Teile den Gesamtbetrag entsprechend dem Verhältnis auf.",
+        "Die Zahl ist grösser als 0 und kleiner als 40."
+      ],
       "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6wk43": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "2 von 9 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "mathAnswerUnit": "CHF",
+      "spokenPrompt": "Tina hat 3 mal so viel Geld wie Max. Zusammen haben sie Franken 80. Max hat Franken?",
       "verbatimSpeech": true
     },
-    "g6ta6": {
+    "g6ta11": {
+      "hints": [
+        "Berechne die Zunahme und vergleiche sie mit dem ursprünglichen Preis.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ta17": {
+      "hints": [
+        "Addiere die Geschwindigkeiten und multipliziere mit der Fahrzeit.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ]
+    },
+    "g6ta24": {
+      "hints": [
+        "Multipliziere jede Note mit ihrer Häufigkeit und teile die Summe durch die Anzahl Schüler.",
+        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+      ],
       "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6wk47": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "3 von 10 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "spokenPrompt": "Drei Schüler haben die Note vier, fünf Schüler die Note fünf und zwei Schüler die Note sechs. Was ist der Mittelwert?",
       "verbatimSpeech": true
     },
-    "g6ta36": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6wk45": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "13 von 40 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+    "g6ta33": {
+      "hints": [
+        "Berechne die Steuer und addiere sie zum Nettopreis.",
+        "Schliesse unpassende Antworten aus und vergleiche die übrigen."
+      ],
+      "spokenPrompt": "Auf hundertfünfzig Franken kommen acht Komma eins Prozent Mehrwertsteuer. Wie hoch ist der Endpreis?",
       "verbatimSpeech": true
     },
-    "g6wk22": {
+    "g6ta35": {
+      "hints": [
+        "Addiere die beiden Beziehungen für Summe und Differenz.",
+        "Die Zahl ist grösser als 10 und kleiner als 50."
+      ]
+    },
+    "g6wk44": {
       "mathAnswerMode": "number-or-fraction",
       "sequentialAnswer": true,
-      "spokenPrompt": "2 Münzen. Wahrscheinlichkeit für genau 1 Kopf gleich ?",
+      "spokenPrompt": "1 von 3 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
       "verbatimSpeech": true
     },
-    "g6wk2": {
+    "g6wk37": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "5 von 12 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "verbatimSpeech": true
+    },
+    "g6wk10": {
       "mathAnswerMode": "number-or-fraction",
       "sequentialAnswer": true
-    },
-    "g6ta45": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6ta37": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6vh32": {
-      "mathAnswerMode": "number"
-    },
-    "g6stat43": {
-      "mathAnswerMode": "number"
-    },
-    "g6ta41": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
     },
     "g6wk48": {
       "mathAnswerMode": "number-or-fraction",
@@ -702,58 +879,61 @@
       "spokenPrompt": "Quader 10 Zentimeter mal 10 Zentimeter mal 15 Zentimeter: Volumen gleich gesuchte Zahl Kubikzentimeter",
       "verbatimSpeech": true
     },
-    "g6wk20": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "Würfel: Wahrscheinlichkeit für keine 6 gleich ?",
-      "verbatimSpeech": true
-    },
-    "g6wk24": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true
-    },
-    "g6vh18": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
     "g6wk39": {
       "mathAnswerMode": "number-or-fraction",
       "sequentialAnswer": true,
       "spokenPrompt": "5 von 16 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
       "verbatimSpeech": true
     },
-    "g6stat45": {
-      "mathAnswerMode": "number"
+    "g6wk20": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "Würfel: Wahrscheinlichkeit für keine 6 gleich ?",
+      "verbatimSpeech": true
     },
-    "g6ta49": {
+    "g6wk50": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "17 von 50 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "verbatimSpeech": true
+    },
+    "g6wk45": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "13 von 40 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "verbatimSpeech": true
+    },
+    "g6ta20": {
       "mathAnswerMode": "number",
       "mathAnswerUnit": "CHF"
     },
-    "g6wk49": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "9 von 25 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
-      "verbatimSpeech": true
+    "g6ta47": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6ta38": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
     },
     "g6fk50": {
       "mathAnswerMode": "number",
       "spokenPrompt": "Quader 24 Zentimeter mal 8 Zentimeter mal 6 Zentimeter: Volumen gleich gesuchte Zahl Kubikzentimeter",
       "verbatimSpeech": true
     },
-    "g6wk36": {
+    "g6wk41": {
       "mathAnswerMode": "number-or-fraction",
       "sequentialAnswer": true,
-      "spokenPrompt": "1 von 6 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "spokenPrompt": "2 von 6 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
       "verbatimSpeech": true
     },
     "g6m8": {
       "mathAnswerMode": "number-or-fraction",
       "sequentialAnswer": true
     },
-    "g6wk38": {
+    "g6wk47": {
       "mathAnswerMode": "number-or-fraction",
       "sequentialAnswer": true,
-      "spokenPrompt": "7 von 20 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "spokenPrompt": "3 von 10 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
       "verbatimSpeech": true
     },
     "g6wk18": {
@@ -762,82 +942,37 @@
       "spokenPrompt": "Münze 3 mal . Wahrscheinlichkeit für 3 mal Kopf gleich ?",
       "verbatimSpeech": true
     },
-    "g6wk44": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "1 von 3 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
-      "verbatimSpeech": true
-    },
     "g6pz1k": {
       "mathAnswerMode": "number"
-    },
-    "g6ta42": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6stat10": {
-      "mathAnswerMode": "fraction",
-      "sequentialAnswer": true
-    },
-    "g6ta38": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6wk10": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true
-    },
-    "g6ta39": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6ta48": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6wk16": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true
     },
     "g6ta43": {
       "mathAnswerMode": "number",
       "mathAnswerUnit": "CHF"
     },
-    "g6wk28": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "Sack: 2 rot, 3 blau, ohne Zurücklegen. Wahrscheinlichkeit für erst rot, dann blau gleich ?",
-      "verbatimSpeech": true
-    },
-    "g6ta46": {
+    "g6ta45": {
       "mathAnswerMode": "number",
       "mathAnswerUnit": "CHF"
     },
-    "g6ta34": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "Eine faire Münze wird fünfmal geworfen. Wie gross ist die Wahrscheinlichkeit, dass kein einziges Mal Kopf erscheint?",
-      "verbatimSpeech": true
-    },
-    "g6ta47": {
+    "g6ta36": {
       "mathAnswerMode": "number",
       "mathAnswerUnit": "CHF"
-    },
-    "g6wk8": {
-      "mathAnswerMode": "number",
-      "spokenPrompt": "Die Wahrscheinlichkeit für Ereignis A beträgt null Komma vier. Wie gross ist die Wahrscheinlichkeit seines Gegenereignisses?",
-      "verbatimSpeech": true
-    },
-    "g6ta24": {
-      "mathAnswerMode": "number",
-      "spokenPrompt": "Drei Schüler haben die Note vier, fünf Schüler die Note fünf und zwei Schüler die Note sechs. Was ist der Mittelwert?",
-      "verbatimSpeech": true
     },
     "g6ta4": {
       "mathAnswerMode": "number",
       "mathAnswerUnit": "CHF"
     },
-    "g6ta40": {
+    "g6ta37": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6wk2": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true
+    },
+    "g6stat45": {
+      "mathAnswerMode": "number"
+    },
+    "g6ta39": {
       "mathAnswerMode": "number",
       "mathAnswerUnit": "CHF"
     },
@@ -847,31 +982,15 @@
       "spokenPrompt": "Würfel: Wahrscheinlichkeit für durch 3 teilbar gleich ?",
       "verbatimSpeech": true
     },
-    "g6ta20": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF"
-    },
-    "g6wk6": {
+    "g6wk38": {
       "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true
-    },
-    "g6fk8": {
-      "mathAnswerMode": "number",
-      "spokenPrompt": "1 Liter gleich ? Kubikzentimeter",
+      "sequentialAnswer": true,
+      "spokenPrompt": "7 von 20 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
       "verbatimSpeech": true
     },
-    "g6ta10": {
-      "mathAnswerMode": "number",
-      "mathAnswerUnit": "CHF",
-      "spokenPrompt": "Tina hat 3 mal so viel Geld wie Max. Zusammen haben sie Franken 80. Max hat Franken?",
-      "verbatimSpeech": true
-    },
-    "g6vh16": {
+    "g6pz2c": {
       "mathAnswerMode": "number",
       "mathAnswerUnit": "CHF"
-    },
-    "g6stat37": {
-      "mathAnswerMode": "number"
     },
     "g6wk40": {
       "mathAnswerMode": "number-or-fraction",
@@ -879,7 +998,86 @@
       "spokenPrompt": "11 von 30 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
       "verbatimSpeech": true
     },
+    "g6wk8": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "Die Wahrscheinlichkeit für Ereignis A beträgt null Komma vier. Wie gross ist die Wahrscheinlichkeit seines Gegenereignisses?",
+      "verbatimSpeech": true
+    },
+    "g6ta49": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6ta42": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6fk8": {
+      "mathAnswerMode": "number",
+      "spokenPrompt": "1 Liter gleich ? Kubikzentimeter",
+      "verbatimSpeech": true
+    },
+    "g6wk28": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "Sack: 2 rot, 3 blau, ohne Zurücklegen. Wahrscheinlichkeit für erst rot, dann blau gleich ?",
+      "verbatimSpeech": true
+    },
+    "g6wk24": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true
+    },
+    "g6wk36": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "1 von 6 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "verbatimSpeech": true
+    },
+    "g6wk49": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "9 von 25 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "verbatimSpeech": true
+    },
+    "g6vh16": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6ta41": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6ta6": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6wk6": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true
+    },
+    "g6vh32": {
+      "mathAnswerMode": "number"
+    },
+    "g6wk16": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true
+    },
+    "g6wk43": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "2 von 9 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "verbatimSpeech": true
+    },
+    "g6wk46": {
+      "mathAnswerMode": "number-or-fraction",
+      "sequentialAnswer": true,
+      "spokenPrompt": "3 von 8 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "verbatimSpeech": true
+    },
     "g6ta44": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6vh18": {
       "mathAnswerMode": "number",
       "mathAnswerUnit": "CHF"
     },
@@ -893,23 +1091,39 @@
       "spokenPrompt": "1 von 4 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
       "verbatimSpeech": true
     },
-    "g6wk46": {
+    "g6wk22": {
       "mathAnswerMode": "number-or-fraction",
       "sequentialAnswer": true,
-      "spokenPrompt": "3 von 8 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "spokenPrompt": "2 Münzen. Wahrscheinlichkeit für genau 1 Kopf gleich ?",
       "verbatimSpeech": true
     },
-    "g6wk50": {
+    "g6ta48": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6stat43": {
+      "mathAnswerMode": "number"
+    },
+    "g6ta46": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6stat37": {
+      "mathAnswerMode": "number"
+    },
+    "g6ta40": {
+      "mathAnswerMode": "number",
+      "mathAnswerUnit": "CHF"
+    },
+    "g6ta34": {
       "mathAnswerMode": "number-or-fraction",
       "sequentialAnswer": true,
-      "spokenPrompt": "17 von 50 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
+      "spokenPrompt": "Eine faire Münze wird fünfmal geworfen. Wie gross ist die Wahrscheinlichkeit, dass kein einziges Mal Kopf erscheint?",
       "verbatimSpeech": true
     },
-    "g6wk37": {
-      "mathAnswerMode": "number-or-fraction",
-      "sequentialAnswer": true,
-      "spokenPrompt": "5 von 12 gleich möglichen Ergebnissen sind günstig. P gleich gesuchte Zahl",
-      "verbatimSpeech": true
+    "g6stat10": {
+      "mathAnswerMode": "fraction",
+      "sequentialAnswer": true
     },
     "g6nz1g": {
       "spokenPrompt": "Sortiere die Zahlen minus drei, zwei, minus sieben, null und fünf von klein nach gross.",
@@ -957,30 +1171,6 @@
     },
     "g6m21": {
       "spokenPrompt": "iks plus 5 gleich 12. Was ist iks?",
-      "verbatimSpeech": true
-    },
-    "g6m22": {
-      "spokenPrompt": "2 mal iks gleich 16. Was ist iks?",
-      "verbatimSpeech": true
-    },
-    "g6m23": {
-      "spokenPrompt": "iks minus 4 gleich 11. Was ist iks?",
-      "verbatimSpeech": true
-    },
-    "g6m24": {
-      "spokenPrompt": "3 mal iks gleich 24. Was ist iks?",
-      "verbatimSpeech": true
-    },
-    "g6m25": {
-      "spokenPrompt": "iks plus 13 gleich 30. Was ist iks?",
-      "verbatimSpeech": true
-    },
-    "g6m26": {
-      "spokenPrompt": "iks geteilt durch 4 gleich 7. Was ist iks?",
-      "verbatimSpeech": true
-    },
-    "g6m27": {
-      "spokenPrompt": "2 mal iks plus 3 gleich 11. Was ist iks?",
       "verbatimSpeech": true
     },
     "g6m28": {
@@ -1111,20 +1301,12 @@
       "spokenPrompt": "5 mal iks plus 13 gleich 98; iks gleich gesuchte Zahl",
       "verbatimSpeech": true
     },
-    "g6vh33": {
-      "spokenPrompt": "Iks und Ypsilon sind direkt proportional. Bei iks gleich vier ist Ypsilon gleich zwölf. Wie gross ist Ypsilon bei iks gleich sieben?",
-      "verbatimSpeech": true
-    },
     "g6geo2": {
       "spokenPrompt": "Dreieck: Grundseite gleich 8 Zentimeter, Höhe gleich 5 Zentimeter. A gleich ? Quadratzentimeter",
       "verbatimSpeech": true
     },
     "g6geo6": {
       "spokenPrompt": "5 mal 5 mal 5 gleich gesuchte Zahl Kubikzentimeter.",
-      "verbatimSpeech": true
-    },
-    "g6geo8": {
-      "spokenPrompt": "Parallelogramm: Grundseite gleich 10 Zentimeter, Höhe gleich 4 Zentimeter. A gleich ? Quadratzentimeter",
       "verbatimSpeech": true
     },
     "g6geo28": {
@@ -1173,10 +1355,6 @@
     },
     "g6wk17": {
       "spokenPrompt": "Würfel 2 mal . Wahrscheinlichkeit für zwei Sechsen gleich ?",
-      "verbatimSpeech": true
-    },
-    "g6wk19": {
-      "spokenPrompt": "Die Wahrscheinlichkeit für A beträgt null Komma drei, für B null Komma fünf. A und B sind unabhängig. Wie gross ist die Wahrscheinlichkeit, dass A und B beide eintreten?",
       "verbatimSpeech": true
     },
     "g6wk25": {
@@ -1261,10 +1439,6 @@
     },
     "g6ta25": {
       "spokenPrompt": "Wasser fliesst mit drei Litern pro Minute in ein leeres Becken mit zweihundertsiebzig Litern Volumen. Wie lange dauert es, bis es voll ist?",
-      "verbatimSpeech": true
-    },
-    "g6ta33": {
-      "spokenPrompt": "Auf hundertfünfzig Franken kommen acht Komma eins Prozent Mehrwertsteuer. Wie hoch ist der Endpreis?",
       "verbatimSpeech": true
     }
   }
