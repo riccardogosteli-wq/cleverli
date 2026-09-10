@@ -1,4 +1,6 @@
 import { Resend } from "resend";
+import { reserveFeedback, persistFeedbackReceipt } from "./customerFeedbackMail";
+import { FEEDBACK_FORM } from "./customerFeedbackCampaign";
 
 const FROM = "Cleverli <hello@cleverli.ch>";
 const ADMIN_PAYMENT_NOTIFY_EMAIL =
@@ -275,11 +277,15 @@ export async function sendCustomerFeedbackRequestEmail(
     throw new Error("RESEND_API_KEY is not configured");
   }
 
+  if (options?.test) throw new Error("feedback_test_send_disabled");
+  const reservation = await reserveFeedback(to);
+  to = reservation.email;
+
   const feedbackUrl = "https://www.cleverli.ch/feedback/premium-kunden?source=premium_feedback_email";
   const safeFeedbackUrl = escapeHtml(feedbackUrl);
   const subject = `${options?.test ? "[TEST] " : ""}1 Monat Cleverli Premium gratis für dein Feedback`;
 
-  const { error } = await resend.emails.send({
+  const { data, error } = await resend.emails.send({
     from: FROM,
     replyTo: "hello@cleverli.ch",
     to,
@@ -332,9 +338,12 @@ Alexandra & das Cleverli-Team
 Cleverli
 Datenschutz: https://www.cleverli.ch/datenschutz
 Impressum: https://www.cleverli.ch/impressum`,
-  }, options?.idempotencyKey ? { idempotencyKey: options.idempotencyKey } : undefined);
+  }, { idempotencyKey: `feedback-${FEEDBACK_FORM}-${to}` });
 
-  if (error) throw error;
+  // Every failure after reservation stays locked, including ambiguous provider errors.
+  if (error || !data?.id) throw new Error("receipt_reconciliation_required");
+  await persistFeedbackReceipt(reservation.db, to, data.id);
+  return { id: data.id };
 }
 
 export async function sendAdminPaymentNotificationEmail({

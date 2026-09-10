@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { approvedFeedbackEmail } from "@/lib/customerFeedbackCampaign";
+import { feedbackStatus } from "@/lib/customerFeedbackMail";
 import * as Sentry from "@sentry/nextjs";
 import { sendCustomerFeedbackRequestEmail } from "@/lib/email";
 
@@ -36,17 +38,26 @@ export async function POST(req: NextRequest) {
   }
 
   const email = cleanEmail(body.email);
+  try { approvedFeedbackEmail(email); } catch {
+    return NextResponse.json({ error: "recipient_not_approved" }, { status: 400 });
+  }
+  if (body.test === true) return NextResponse.json({ error: "feedback_test_send_disabled" }, { status: 400 });
   if (!email) return NextResponse.json({ error: "invalid_email" }, { status: 400 });
 
   const dryRun = body.send !== true;
   const hasResend = Boolean(process.env.RESEND_API_KEY);
   if (dryRun) {
+    let ledger;
+    try { ledger = await feedbackStatus(email); } catch {
+      return NextResponse.json({ error: "store_unavailable" }, { status: 503 });
+    }
     return NextResponse.json({
       ok: true,
       dryRun: true,
       wouldUseSender: "Cleverli <hello@cleverli.ch>",
       wouldReplyTo: "hello@cleverli.ch",
-      wouldSend: hasResend,
+      ledger,
+      wouldSend: hasResend && process.env.VERCEL_ENV === "production" && ledger[0].state === "ready",
       hasResend,
     });
   }
@@ -56,13 +67,14 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    await sendCustomerFeedbackRequestEmail(email, {
+    const receipt = await sendCustomerFeedbackRequestEmail(email, {
       idempotencyKey: `customer-feedback-email-${email}-${body.test === true ? "test" : "prod"}`,
       test: body.test === true,
     });
 
     return NextResponse.json({
       ok: true,
+      providerId: receipt.id,
       email,
       sender: "Cleverli <hello@cleverli.ch>",
       replyTo: "hello@cleverli.ch",

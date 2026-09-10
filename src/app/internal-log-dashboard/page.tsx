@@ -1274,6 +1274,10 @@ export default async function InternalLogDashboard({
           </form>
         </header>
 
+        {/* Native document route, not a React page. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a className="inline-block rounded-md border border-green-700 px-4 py-3 font-bold text-green-800" href="/internal-log-dashboard/feedback-mail">Freigegebene Feedback-Einladungen</a>
+
         <section className="grid gap-3 sm:grid-cols-4">
           <Stat label="Übungs-Events 24h" value={stats.total24h} />
           <Stat label="Übungs-Events 7 Tage" value={stats.total7d} />
