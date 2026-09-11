@@ -42,6 +42,7 @@ import { applyExerciseLocalizations } from "./exerciseLocalizations";
 import { applyExerciseIdMigrations } from "./exerciseIdMigrations";
 import { applyGermanEditorialRepairs } from "./germanEditorialRepairs";
 import { applyTopicCurriculumCodes } from "./topicCurriculumCodes";
+import { applyReviewedKnowledgeChoices } from "./knowledgeChoiceReviews";
 
 const grade4Science = [...grade4NT, ...grade4RZG];
 const grade5Science = [...grade5NT, ...grade5RZG];
@@ -97,7 +98,8 @@ export function getTopics(grade: number, subject: string): Topic[] {
     subject,
     getTopicsAfterExerciseIdMigrationBeforeEditorial(grade, subject),
   );
-  const codedTopics = applyTopicCurriculumCodes(grade, subject, topics).map((topic) => ({
+  const choiceReviewedTopics = applyReviewedKnowledgeChoices(grade, subject, topics);
+  const codedTopics = applyTopicCurriculumCodes(grade, subject, choiceReviewedTopics).map((topic) => ({
     ...topic,
     exercises: topic.exercises.map((exercise) => sanitiseExerciseHints(exercise)),
   }));
