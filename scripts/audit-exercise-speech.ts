@@ -34,7 +34,7 @@ const germanFixtures: Array<[string, Exercise, string]> = [
   ["verb-form", getExercise(3, "german", "verben-konjugieren", "g3-german-verben-konjugieren-vk9"), "Welche Form von laufen passt zu Er?"],
   ["conjunction", getExercise(3, "german", "saetze", "g3-german-saetze-sb30"), "Welche Konjunktion ergänzt den Satz?"],
   ["dative-object", getExercise(5, "german", "satzarten-5", "sa5-6"), "Welches Dativobjekt ergänzt den Satz: Ich helfe …?"],
-  ["canton-language", getExercise(4, "science", "kantone-schweiz-4", "kan4_20"), "Welche Sprachen spricht man im Kanton Freiburg?"],
+  ["canton-language", getExercise(4, "science", "kantone-schweiz-4", "kan4_20"), "Welche zwei Amtssprachen hat der Kanton Freiburg?"],
 ];
 
 for (const [key, exercise, expected] of germanFixtures) {

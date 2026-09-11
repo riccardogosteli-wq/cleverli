@@ -6,7 +6,8 @@ const expectedFillRepairsByGrade: Record<number, number> = {
   2: 16,
   // Consolidated NMG slots no longer use the legacy energy/light/map/space
   // normalizer. Keep this count tied to the normalized topics that remain.
-  3: 14,
+  // karte_norm_6 is now an individually reviewed multiple-choice question.
+  3: 13,
   4: 14,
   5: 0,
   6: 13,
