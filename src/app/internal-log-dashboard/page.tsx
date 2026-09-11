@@ -1276,6 +1276,8 @@ export default async function InternalLogDashboard({
 
         {/* Native document route, not a React page. */}
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a className="inline-block rounded-md border border-green-700 px-4 py-3 font-bold text-green-800" href="/internal-log-dashboard/teacher-accounts">Lehrerkonten verwalten</a>
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- this authenticated control is a native HTML route, not an App Router page */}
         <a className="inline-block rounded-md border border-green-700 px-4 py-3 font-bold text-green-800" href="/internal-log-dashboard/feedback-mail">Freigegebene Feedback-Einladungen</a>
 
         <section className="grid gap-3 sm:grid-cols-4">

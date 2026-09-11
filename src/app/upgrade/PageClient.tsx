@@ -6,7 +6,7 @@ import { startCheckout } from "@/lib/checkoutClient";
 import LifetimeFounderOffer from "@/components/LifetimeFounderOffer";
 
 export default function UpgradePageClient() {
-  const { session } = useSession();
+  const { session, isPremium } = useSession();
   const { lang } = useLang();
   const uid = session?.userId ?? "";
 
@@ -132,7 +132,7 @@ export default function UpgradePageClient() {
 
   const tx = t[lang as keyof typeof t] ?? t.de;
 
-  if (session?.premium) {
+  if (isPremium) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center px-4">
         <div className="text-center space-y-4">

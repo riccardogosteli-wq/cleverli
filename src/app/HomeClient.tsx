@@ -400,6 +400,11 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-t border-green-100 bg-green-50 px-6 py-8 text-center">
+        <h2 className="text-xl font-bold text-green-900">{lang === "fr" ? "Cleverli pour les enseignants" : lang === "it" ? "Cleverli per docenti" : lang === "en" ? "Cleverli for teachers" : "Cleverli für Lehrpersonen"}</h2>
+        <p className="mx-auto mt-2 max-w-xl text-gray-700">{lang === "fr" ? "Un compte enseignant avec profils enfants illimités, sur demande." : lang === "it" ? "Un account docente con profili bambino illimitati, su richiesta." : lang === "en" ? "A teacher account with unlimited child profiles, available on request." : "Ein Lehrerkonto mit unbegrenzt vielen Kinderprofilen, auf Anfrage."}</p>
+        <Link href="/lehrpersonen" className="mt-4 inline-block rounded-xl bg-green-700 px-6 py-3 font-bold text-white">{lang === "fr" ? "En savoir plus" : lang === "it" ? "Scopri di più" : lang === "en" ? "Learn more" : "Mehr erfahren"}</Link>
+      </section>
       {/* Footer */}
       <footer className="py-8 px-6 pb-24 sm:pb-8 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">

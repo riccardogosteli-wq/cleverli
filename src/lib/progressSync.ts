@@ -521,11 +521,13 @@ export async function createChildInSupabase(
   grade: number,
   avatar: string,
   curriculum?: CurriculumSelection,
+  strict = false,
+  expectedParentId?: string,
 ): Promise<void> {
   const supabase = getSupabase();
-  if (!supabase) return;
+  if (!supabase) { if (strict) throw new Error("Bitte erneut anmelden."); return; }
   const parentId = await getParentId();
-  if (!parentId) return;
+  if (!parentId || (expectedParentId && parentId !== expectedParentId)) { if (strict) throw new Error("Das Konto hat sich geändert. Bitte erneut öffnen."); return; }
   try {
     const { error } = await supabase.from("child_profiles").upsert({
       id: childId,
@@ -537,6 +539,7 @@ export async function createChildInSupabase(
     }, { onConflict: "id" });
     if (error) throw error;
   } catch (e) {
+    if (strict) throw new Error("Das Profil konnte nicht gespeichert werden. Bitte Verbindung und Lehrerkonto prüfen.");
     console.warn("progressSync: child profile create failed", e);
   }
 }

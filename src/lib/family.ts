@@ -8,6 +8,7 @@ import {
   type CurriculumSelection,
 } from "@/lib/curriculumProfiles";
 import {
+  getAccountStorageScope,
   getActiveProfileStorageKey,
   clearLocalProgressForChild,
   getFamilyStorageKey,
@@ -140,3 +141,14 @@ export function loadMemberProfile(id: string): Profile | null {
 
 export const AVATARS = ["🦊","🐻","🐼","🦁","🐯","🐨","🐸","🐧","🦋","🦄","🐶","🐱","🐰","🐹","🦖","🦕","🐬","🦅"];
 export const GRADE_OPTIONS = [1, 2, 3, 4, 5, 6];
+
+// Teacher profiles are persisted first. Offline/cached state never creates elevated access.
+export async function addTeacherMember(name: string, avatar: string, grade: number, curriculum: CurriculumSelection | undefined, userId: string): Promise<FamilyMember> {
+  const scope = getAccountStorageScope();
+  const member: FamilyMember = { id: crypto.randomUUID(), name, avatar, grade, createdAt: new Date().toISOString(), ...(curriculum ? { curriculum } : {}) };
+  const { createChildInSupabase } = await import("@/lib/progressSync");
+  if (scope !== getAccountStorageScope()) throw new Error("Das Konto hat sich geändert. Bitte erneut öffnen.");
+  await createChildInSupabase(member.id, name, grade, avatar, curriculum, true, userId);
+  if (scope !== getAccountStorageScope()) throw new Error("Das Konto hat sich geändert. Das gespeicherte Profil erscheint beim nächsten Anmelden im ursprünglichen Konto.");
+  const store = loadFamily(); store.members.push(member); saveFamily(store); return member;
+}

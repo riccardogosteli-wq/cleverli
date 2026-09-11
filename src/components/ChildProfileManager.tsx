@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useTeacherAccount } from "@/hooks/useTeacherAccount";
 import { useLang } from "@/lib/LangContext";
 import {
-  FamilyMember, loadFamily, saveFamily, addMember, removeMember,
+  FamilyMember, loadFamily, saveFamily, addMember, addTeacherMember, removeMember,
   getActiveProfileId, setActiveProfileId, updateMemberCurriculum, AVATARS, MAX_PROFILES,
 } from "@/lib/family";
 import {
@@ -46,18 +47,22 @@ function AddChildForm({
   curriculumEnabled: boolean;
 }) {
   const { tr } = useLang();
+  const { isTeacher, teacherAccount } = useTeacherAccount();
+  const [saving, setSaving] = useState(false);
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState(AVATARS[0]);
   const [grade, setGrade] = useState<number>(1);
   const [curriculum, setCurriculum] = useState<CurriculumSelection | undefined>();
   const [error, setError] = useState("");
 
-  const handleSave = () => {
+  const handleSave = async () => {
+    if (saving) return;
     if (!name.trim()) { setError(tr("errorEmailPw") ?? "Bitte gib einen Namen ein."); return; }
+    setSaving(true);
     try {
-      const member = addMember(name.trim(), avatar, grade, curriculum);
+      const member = isTeacher && teacherAccount ? await addTeacherMember(name.trim(), avatar, grade, curriculum, teacherAccount.user_id) : addMember(name.trim(), avatar, grade, curriculum);
       setActiveProfileId(member.id);
-      createChildInSupabase(member.id, member.name, member.grade, member.avatar, member.curriculum);
+      if (!isTeacher) void createChildInSupabase(member.id, member.name, member.grade, member.avatar, member.curriculum);
       if (curriculum) {
         const source = "child_created";
         captureProductEvent("curriculum_profile_selected", {
@@ -82,7 +87,7 @@ function AddChildForm({
       onSave();
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Fehler");
-    }
+    } finally { setSaving(false); }
   };
 
   return (
@@ -133,7 +138,7 @@ function AddChildForm({
       {error && <p className="text-red-500 text-sm">{error}</p>}
 
       <div className="flex gap-2">
-        <button onClick={handleSave}
+        <button onClick={handleSave} disabled={saving}
           className="flex-1 bg-green-700 text-white font-bold py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all text-sm">
           {tr("saveBtn")}
         </button>
@@ -294,7 +299,9 @@ function ChildCard({ member, isActive, onSwitch, onDelete, onGradeChange, onCurr
 }
 
 export default function ChildProfileManager() {
-  const { tr } = useLang();
+  const { tr, lang } = useLang();
+  const { isTeacher } = useTeacherAccount();
+  const teacherLabel = lang === "fr" ? "Compte enseignant : profils enfants illimités" : lang === "it" ? "Account docente: profili bambino illimitati" : lang === "en" ? "Teacher account: unlimited child profiles" : "Lehrerkonto: unbegrenzt viele Kinderprofile";
   const [members, setMembers] = useState<FamilyMember[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [showAdd, setShowAdd] = useState(false);
@@ -368,14 +375,14 @@ export default function ChildProfileManager() {
     reload();
   };
 
-  const canAdd = members.length < MAX_PROFILES;
+  const canAdd = isTeacher || members.length < MAX_PROFILES;
 
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-base font-bold text-gray-800">👶 {tr("childProfilesTitle")}</h2>
-          <p className="text-xs text-gray-400 mt-0.5">{(tr("maxProfilesMsg") ?? "").replace("{n}", String(MAX_PROFILES))}</p>
+          <p className="text-xs text-gray-400 mt-0.5">{isTeacher ? teacherLabel : (tr("maxProfilesMsg") ?? "").replace("{n}", String(MAX_PROFILES))}</p>
         </div>
         {canAdd && !showAdd && (
           <button onClick={() => setShowAdd(true)}

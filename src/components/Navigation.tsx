@@ -134,7 +134,7 @@ export default function Navigation() {
                 <span className="text-gray-400 text-xs">▾</span>
               </button>
               {profileOpen && (
-                <div className="absolute right-0 top-full mt-1 bg-white rounded-2xl shadow-lg border border-gray-100 p-2 min-w-[160px] z-50">
+                <div className="absolute right-0 top-full mt-1 bg-white rounded-2xl shadow-lg border border-gray-100 p-2 min-w-[160px] max-h-[60vh] overflow-y-auto z-50">
                   {members.map(m => (
                     <button key={m.id} onClick={() => switchProfile(m.id)}
                       className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl text-sm transition-colors ${
@@ -160,7 +160,7 @@ export default function Navigation() {
                   ⭐ Premium
                 </span>
               )}
-              {!session?.premium && (
+              {!isPremium && (
                 <Link
                   href="/upgrade"
 

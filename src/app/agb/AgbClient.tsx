@@ -14,7 +14,7 @@ const WEBSITE = "www.cleverli.ch";
 const content = {
   de: {
     title: "Allgemeine Geschäftsbedingungen (AGB)",
-    updated: "Stand: 10. September 2026",
+    updated: "Stand: 11. September 2026",
     sections: [
       {
         heading: "1. Anbieter",
@@ -41,7 +41,7 @@ Der Anbieter behält sich vor, den Funktionsumfang des Dienstes jederzeit zu erw
       },
       {
         heading: "4. Registrierung & Nutzerkonto",
-        body: `Die Registrierung steht volljährigen Personen offen, insbesondere Eltern, Erziehungsberechtigten und Lehrpersonen. Lehrpersonen dürfen Cleverli zur Unterrichtsvorbereitung, zur gemeinsamen Bearbeitung und Vorführung im Unterricht sowie zur begleiteten individuellen Förderung nutzen. Angaben bei der Registrierung müssen wahrheitsgemäss sein. Zugangsdaten bleiben persönlich und dürfen nicht an eine Klasse weitergegeben werden. Die bestehenden Grenzen des gebuchten Angebots, insbesondere die Anzahl Kinderprofile, bleiben unverändert. Ein Familienzugang ist keine unbeschränkte Klassenlizenz. Für zusätzliche Profile oder institutionelle Vereinbarungen kontaktieren Sie hello@cleverli.ch.`,
+        body: `Die Registrierung steht volljährigen Personen offen, insbesondere Eltern, Erziehungsberechtigten und Lehrpersonen. Lehrpersonen dürfen Cleverli zur Unterrichtsvorbereitung, zur gemeinsamen Bearbeitung und Vorführung im Unterricht sowie zur begleiteten individuellen Förderung nutzen. Angaben bei der Registrierung müssen wahrheitsgemäss sein. Zugangsdaten bleiben persönlich und dürfen nicht an eine Klasse weitergegeben werden. Familienangebote umfassen weiterhin bis zu drei Kinderprofile. Auf Anfrage unter hello@cleverli.ch schalten wir nach persönlicher Vereinbarung ein Lehrerkonto mit Premium-Zugang und unbegrenzt vielen Kinderprofilen für die eigene pädagogische Arbeit der benannten Lehrperson frei. Das Lehrerkonto ist nicht online kaufbar und keine übertragbare Schullizenz. Kinderprofile haben keine eigenen Anmeldedaten; die Nutzung erfolgt begleitet im verantwortlichen Erwachsenenkonto. Die Freischaltung begründet keine Vertretungsbefugnis für Eltern und ersetzt keine erforderlichen schulischen Datenschutzvereinbarungen.`,
       },
       {
         heading: "5. Abonnement & Preise",
@@ -49,6 +49,8 @@ Der Anbieter behält sich vor, den Funktionsumfang des Dienstes jederzeit zu erw
 • Monatsabonnement: CHF 9.90 / Monat
 • Jahresabonnement: CHF 99.00 / Jahr (entspricht CHF 8.25 / Monat)
 • Nur für kurze Zeit erhältliche Gründeraktion: CHF 249.00 einmalig für einen lebenslangen, zeitlich unbefristeten Familienzugang zu Cleverli mit den Inhalten der 1.–6. Klasse, für bis zu drei Kinderprofile
+
+Für Lehrerkonten vereinbaren wir Preis, Leistungszeitraum und Zahlungsweise vor der manuellen Freischaltung schriftlich. Ohne ausdrückliche Vereinbarung gibt es keine automatische Verlängerung oder Abbuchung. Eine Freischaltung kündigt ein bestehendes Familienabonnement nicht. Nach Ablauf oder Beendigung des Lehrerzugangs bleiben die Kinderprofile erhalten; neue Profile unterliegen wieder dem Familienlimit. Ein zusätzlich bestehender Familienzugang bleibt nach seinen eigenen Bedingungen gültig.
 
 Alle Preise verstehen sich in Schweizer Franken (CHF) inkl. Mehrwertsteuer.
 
@@ -105,7 +107,7 @@ E-Mail: ${EMAIL}`,
 
   fr: {
     title: "Conditions Générales d'Utilisation (CGU)",
-    updated: "Version : 10 septembre 2026",
+    updated: "Version : 11 septembre 2026",
     sections: [
       {
         heading: "1. Fournisseur",
@@ -132,7 +134,7 @@ Le Fournisseur se réserve le droit de modifier ou d'adapter le Service à tout 
       },
       {
         heading: "4. Inscription & compte utilisateur",
-        body: `L’inscription est ouverte aux personnes majeures, notamment aux parents, représentants légaux et enseignants. Les enseignants peuvent utiliser Cleverli pour préparer leurs cours, présenter et résoudre des exercices en classe et accompagner un travail individuel. Les informations fournies doivent être exactes. Les identifiants restent personnels et ne peuvent pas être distribués à une classe. Les limites de l’offre souscrite, notamment le nombre de profils enfants, restent inchangées. Un accès familial ne constitue pas une licence de classe illimitée. Pour des profils supplémentaires ou une convention institutionnelle, contactez hello@cleverli.ch.`,
+        body: `L’inscription est ouverte aux personnes majeures, notamment aux parents, représentants légaux et enseignants. Les enseignants peuvent utiliser Cleverli pour préparer leurs cours, présenter et résoudre des exercices en classe et accompagner un travail individuel. Les informations fournies doivent être exactes. Les identifiants restent personnels et ne peuvent pas être distribués à une classe. Les offres familiales restent limitées à trois profils enfants. Sur demande à hello@cleverli.ch et après accord personnel, nous activons un compte enseignant avec accès Premium et profils enfants illimités pour le propre travail pédagogique de l’enseignant désigné. Ce compte n’est pas vendu en ligne et ne constitue pas une licence scolaire transférable. Les profils enfants n’ont pas leurs propres identifiants et sont utilisés sous supervision dans le compte adulte responsable. L’activation ne donne aucun pouvoir de représenter les parents et ne remplace pas les accords scolaires de protection des données requis.`,
       },
       {
         heading: "5. Abonnement & tarifs",
@@ -140,6 +142,8 @@ Le Fournisseur se réserve le droit de modifier ou d'adapter le Service à tout 
 • Abonnement mensuel : CHF 9.90 / mois
 • Abonnement annuel : CHF 99.00 / an (soit CHF 8.25 / mois)
 • Offre de lancement limitée : CHF 249.00 en une fois pour l’accès familial pendant toute l’école primaire (1re–6e année), jusqu’à trois profils enfants
+
+Pour les comptes enseignants, le prix, la durée et le paiement sont convenus par écrit avant l’activation manuelle. Aucun renouvellement ni prélèvement automatique sans accord explicite. L’activation ne résilie pas un abonnement familial existant. À l’expiration ou à la fin de l’accès enseignant, les profils sont conservés et les nouveaux profils sont à nouveau soumis à la limite familiale. Tout accès familial supplémentaire reste valable selon ses propres conditions.
 
 Tous les prix sont en francs suisses (CHF), TVA incluse.
 
@@ -196,7 +200,7 @@ E-mail : ${EMAIL}`,
 
   it: {
     title: "Condizioni Generali di Contratto (CGC)",
-    updated: "Versione: 10 settembre 2026",
+    updated: "Versione: 11 settembre 2026",
     sections: [
       {
         heading: "1. Fornitore",
@@ -223,7 +227,7 @@ Il Fornitore si riserva il diritto di modificare o adattare il Servizio in quals
       },
       {
         heading: "4. Registrazione & account utente",
-        body: `La registrazione è aperta alle persone maggiorenni, in particolare genitori, tutori e docenti. I docenti possono usare Cleverli per preparare le lezioni, presentare e svolgere insieme gli esercizi in classe e accompagnare l’apprendimento individuale. I dati forniti devono essere veritieri. Le credenziali restano personali e non possono essere distribuite a una classe. Restano invariati i limiti dell’offerta acquistata, incluso il numero di profili bambino. Un accesso famiglia non è una licenza di classe illimitata. Per profili aggiuntivi o accordi istituzionali contattare hello@cleverli.ch.`,
+        body: `La registrazione è aperta alle persone maggiorenni, in particolare genitori, tutori e docenti. I docenti possono usare Cleverli per preparare le lezioni, presentare e svolgere insieme gli esercizi in classe e accompagnare l’apprendimento individuale. I dati forniti devono essere veritieri. Le credenziali restano personali e non possono essere distribuite a una classe. Le offerte famiglia restano limitate a tre profili bambino. Su richiesta a hello@cleverli.ch e previo accordo personale, attiviamo un account docente con accesso Premium e profili bambino illimitati per la propria attività pedagogica del docente nominato. Non è acquistabile online e non è una licenza scolastica trasferibile. I profili bambino non hanno credenziali proprie e vengono utilizzati sotto supervisione nell’account adulto responsabile. L’attivazione non conferisce alcun potere di rappresentare i genitori e non sostituisce gli accordi scolastici sulla protezione dei dati richiesti.`,
       },
       {
         heading: "5. Abbonamento & prezzi",
@@ -231,6 +235,8 @@ Il Fornitore si riserva il diritto di modificare o adattare il Servizio in quals
 • Abbonamento mensile: CHF 9.90 / mese
 • Abbonamento annuale: CHF 99.00 / anno (pari a CHF 8.25 / mese)
 • Offerta di lancio limitata: CHF 249.00 una tantum per l’accesso famiglia durante tutta la scuola primaria (1a–6a classe), fino a tre profili bambino
+
+Per gli account docente, prezzo, durata e pagamento vengono concordati per iscritto prima dell’attivazione manuale. Nessun rinnovo o addebito automatico senza accordo esplicito. L’attivazione non disdice un abbonamento famiglia esistente. Alla scadenza o alla cessazione dell’accesso docente, i profili restano conservati e i nuovi profili sono nuovamente soggetti al limite famiglia. Un eventuale accesso famiglia aggiuntivo resta valido secondo le proprie condizioni.
 
 Tutti i prezzi sono in franchi svizzeri (CHF), IVA inclusa.
 
@@ -287,7 +293,7 @@ E-mail: ${EMAIL}`,
 
   en: {
     title: "Terms and Conditions",
-    updated: "Version: 10 September 2026",
+    updated: "Version: 11 September 2026",
     sections: [
       {
         heading: "1. Provider",
@@ -314,7 +320,7 @@ The Provider reserves the right to expand, modify, or discontinue features of th
       },
       {
         heading: "4. Registration & User Account",
-        body: `Registration is open to adults, including parents, legal guardians and teachers. Teachers may use Cleverli to prepare lessons, present and work through exercises in class, and support supervised individual learning. Registration details must be accurate. Login credentials remain personal and must not be distributed to a class. Existing plan limits, including the number of child profiles, remain unchanged. A family plan is not an unlimited classroom licence. For additional profiles or institutional arrangements, contact hello@cleverli.ch.`,
+        body: `Registration is open to adults, including parents, legal guardians and teachers. Teachers may use Cleverli to prepare lessons, present and work through exercises in class, and support supervised individual learning. Registration details must be accurate. Login credentials remain personal and must not be distributed to a class. Family plans remain limited to three child profiles. On request at hello@cleverli.ch and following a personal agreement, we manually activate a teacher account with Premium access and unlimited child profiles for the named teacher’s own teaching work. This account cannot be purchased online and is not a transferable school licence. Child profiles have no separate login credentials and are used under supervision within the responsible adult account. Activation does not authorize teachers to represent parents or replace required school data protection agreements.`,
       },
       {
         heading: "5. Subscription & Pricing",
@@ -322,6 +328,8 @@ The Provider reserves the right to expand, modify, or discontinue features of th
 • Monthly subscription: CHF 9.90 / month
 • Annual subscription: CHF 99.00 / year (equivalent to CHF 8.25 / month)
 • Limited founder offer: CHF 249.00 one-time for family access throughout primary school (grades 1–6), for up to three child profiles
+
+For teacher accounts, price, duration and payment are agreed in writing before manual activation. There is no automatic renewal or charge without explicit agreement. Activation does not cancel an existing family subscription. When teacher access expires or ends, existing profiles are retained and new profiles are again subject to the family limit. Any additional family access remains valid under its own terms.
 
 All prices are in Swiss Francs (CHF) including VAT.
 

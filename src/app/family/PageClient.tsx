@@ -6,9 +6,10 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTeacherAccount } from "@/hooks/useTeacherAccount";
 import { useLang } from "@/lib/LangContext";
 import {
-  loadFamily, addMember, removeMember, loadMemberProfile,
+  loadFamily, addMember, addTeacherMember, removeMember, loadMemberProfile,
   getActiveProfileId, setActiveProfileId,
   AVATARS, GRADE_OPTIONS, MAX_PROFILES, FamilyMember,
 } from "@/lib/family";
@@ -42,6 +43,8 @@ const RANK_MEDALS = ["🥇", "🥈", "🥉"];
 
 export default function FamilyPage() {
   const { lang } = useLang();
+  const { isTeacher, teacherAccount } = useTeacherAccount();
+  const [saving, setSaving] = useState(false);
   const [members, setMembers] = useState<FamilyMember[]>([]);
   const [stats, setStats] = useState<MemberStat[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -98,11 +101,14 @@ export default function FamilyPage() {
     restoreCurrentChildProgressFromSupabase().catch(() => {});
   }
 
-  function handleAdd() {
+  async function handleAdd() {
+    if (saving) return;
     if (!newName.trim()) { setAddError(t("Bitte einen Namen eingeben.", "Entre un prénom.", "Inserisci un nome.", "Please enter a name.")); return; }
-    if (members.length >= MAX_PROFILES) { setAddError(t("Maximal 3 Profile.", "Maximum 3 profils.", "Massimo 3 profili.", "Max 3 profiles.")); return; }
-    const member = addMember(newName.trim(), newAvatar, newGrade, newCurriculum);
-    createChildInSupabase(member.id, member.name, member.grade, member.avatar, member.curriculum);
+    if (!isTeacher && members.length >= MAX_PROFILES) { setAddError(t("Maximal 3 Profile.", "Maximum 3 profils.", "Massimo 3 profili.", "Max 3 profiles.")); return; }
+    setSaving(true);
+    try {
+    const member = isTeacher && teacherAccount ? await addTeacherMember(newName.trim(), newAvatar, newGrade, newCurriculum, teacherAccount.user_id) : addMember(newName.trim(), newAvatar, newGrade, newCurriculum);
+    if (!isTeacher) void createChildInSupabase(member.id, member.name, member.grade, member.avatar, member.curriculum);
     if (newCurriculum) {
       const source = "family_page_child_created";
       captureProductEvent("curriculum_profile_selected", {
@@ -126,6 +132,7 @@ export default function FamilyPage() {
     }
     setNewName(""); setNewAvatar(AVATARS[0]); setNewGrade(1); setNewCurriculum(undefined); setAddError(""); setShowAdd(false);
     refresh();
+    } catch (e) { setAddError(e instanceof Error ? e.message : "Bitte erneut versuchen."); } finally { setSaving(false); }
   }
 
   function handleDelete(id: string) {
@@ -225,12 +232,12 @@ export default function FamilyPage() {
       )}
 
       {/* Add profile */}
-      {members.length < MAX_PROFILES && !showAdd && (
+      {(isTeacher || members.length < MAX_PROFILES) && !showAdd && (
         <button
           onClick={() => setShowAdd(true)}
           className="w-full border-2 border-dashed border-green-300 text-green-700 rounded-2xl py-4 font-bold text-sm hover:bg-green-50 active:scale-95 transition-all"
         >
-          + {t("Kind hinzufügen","Ajouter un enfant","Aggiungi un bambino","Add a child")} ({members.length}/{MAX_PROFILES})
+          + {t("Kind hinzufügen","Ajouter un enfant","Aggiungi un bambino","Add a child")} ({members.length}/{isTeacher ? "∞" : MAX_PROFILES})
         </button>
       )}
 
@@ -302,7 +309,7 @@ export default function FamilyPage() {
               className="min-h-11 flex-1 border-2 border-gray-200 text-gray-600 py-2 rounded-xl font-semibold text-sm active:scale-95">
               {t("Abbrechen","Annuler","Annulla","Cancel")}
             </button>
-            <button onClick={handleAdd}
+            <button onClick={handleAdd} disabled={saving}
               className="min-h-11 flex-1 bg-green-700 text-white py-2 rounded-xl font-bold text-sm hover:bg-green-700 active:scale-95">
               {t("Hinzufügen","Ajouter","Aggiungi","Add")}
             </button>
@@ -396,7 +403,7 @@ export default function FamilyPage() {
 
       {/* Info note */}
       <div className="bg-blue-50 border border-blue-100 rounded-2xl p-3 text-xs text-blue-600">
-        💡 {t(
+        💡 {isTeacher ? t("Lehrerkonto: unbegrenzt viele Kinderprofile für deine pädagogische Arbeit.", "Compte enseignant : profils enfants illimités pour votre travail pédagogique.", "Account docente: profili bambino illimitati per la tua attività pedagogica.", "Teacher account: unlimited child profiles for your teaching work.") : t(
           "Mit einem Premium-Abo kannst du bis zu 3 Kinder-Profile verwalten und ihren Lernfortschritt verfolgen.",
           "Avec un abonnement Premium, tu peux gérer jusqu'à 3 profils enfants.",
           "Con un abbonamento Premium puoi gestire fino a 3 profili bambini.",

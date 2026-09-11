@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { useTeacherAccount } from "@/hooks/useTeacherAccount";
 import { getSupabase } from "@/lib/supabase";
 import { restoreFamilyFromSupabase } from "@/lib/progressSync";
 import { clearLocalFamilyStateOnLogout } from "@/lib/accountScopedStorage";
@@ -51,6 +52,7 @@ async function refreshLocalFamily() {
 }
 
 export function useSession() {
+  const { isTeacher, teacherAccount, teacherChecked } = useTeacherAccount();
   // ✅ INSTANT init from localStorage cache — eliminates "Anmelden" flash on reload
   // Must start as null on server (SSR), then hydrate from localStorage on client only.
   // This prevents React hydration mismatch (#418) caused by server/client HTML divergence.
@@ -215,5 +217,5 @@ export function useSession() {
     return new Date(session.premiumUntil) > new Date();
   })();
 
-  return { session, loaded, isPremium, premiumChecked, logout, setLoginInProgress };
+  return { session, loaded, isPremium: isPremium || isTeacher, premiumChecked: premiumChecked && teacherChecked, isTeacher, teacherAccount, logout, setLoginInProgress };
 }

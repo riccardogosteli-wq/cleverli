@@ -9,7 +9,7 @@ import { clearLocalFamilyStateOnLogout } from "@/lib/accountScopedStorage";
 import ParentPinGate from "@/components/ParentPinGate";
 
 export default function AccountPage() {
-  const { session, loaded } = useSession();
+  const { session, loaded, isTeacher, teacherAccount, isPremium } = useSession();
   const { lang } = useLang();
   const router = useRouter();
   const [pwMode, setPwMode] = useState(false);
@@ -203,12 +203,12 @@ export default function AccountPage() {
 
           {/* Premium badge */}
           <div className={`flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-semibold ${
-            session.premium
+            isPremium
               ? "bg-amber-50 text-amber-700 border border-amber-200"
               : "bg-gray-50 text-gray-500 border border-gray-100"
           }`}>
-            {session.premium ? t("👑 Premium aktiv", "👑 Premium actif", "👑 Premium attivo", "👑 Premium active") : t("🔓 Gratis-Konto", "🔓 Compte gratuit", "🔓 Account gratuito", "🔓 Free account")}
-            {!session.premium && (
+            {isTeacher ? t("Lehrerkonto aktiv", "Compte enseignant actif", "Account docente attivo", "Teacher account active") : session.premium ? t("👑 Premium aktiv", "👑 Premium actif", "👑 Premium attivo", "👑 Premium active") : t("🔓 Gratis-Konto", "🔓 Compte gratuit", "🔓 Account gratuito", "🔓 Free account")}
+            {!isPremium && (
               <Link href="/upgrade" className="ml-auto inline-flex min-h-11 items-center text-xs text-green-700 underline font-normal">
                 {t("Upgrade →", "Passer Premium →", "Upgrade →", "Upgrade →")}
               </Link>
@@ -216,6 +216,15 @@ export default function AccountPage() {
           </div>
         </div>
 
+        {isTeacher && teacherAccount && (
+          <section className="rounded-3xl border border-green-200 bg-green-50 p-5 text-green-900">
+            <h2 className="font-bold">{t("Lehrerkonto", "Compte enseignant", "Account docente", "Teacher account")}</h2>
+            <p className="mt-2">{teacherAccount.school_name}</p>
+            <p className="mt-2 text-sm">{t("Unbegrenzt viele Kinderprofile. Freigeschaltet bis", "Profils enfants illimités. Activé jusqu’au", "Profili bambino illimitati. Attivo fino al", "Unlimited child profiles. Active until")} {new Date(teacherAccount.valid_until).toLocaleDateString(lang === "de" ? "de-CH" : lang)}.</p>
+            <p className="mt-2 text-sm">{t("Preis und Verlängerung nach persönlicher Vereinbarung. Ein bestehendes Familienabonnement wird separat verwaltet.", "Prix et renouvellement sur accord personnel. Un abonnement familial existant est géré séparément.", "Prezzo e rinnovo su accordo personale. Un abbonamento famiglia esistente è gestito separatamente.", "Price and renewal by personal agreement. Any existing family subscription is managed separately.")}</p>
+            <a className="mt-3 inline-block underline" href="mailto:hello@cleverli.ch">hello@cleverli.ch</a>
+          </section>
+        )}
         {/* ── Billing section ── */}
         {session.premium ? (
           <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-5 space-y-4">
