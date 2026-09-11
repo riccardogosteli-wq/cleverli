@@ -19,6 +19,6 @@ function req({method='POST',auth=true,origin='https://www.cleverli.ch',site='sam
  const hook=fs.readFileSync('src/hooks/useTeacherAccount.ts','utf8');assert.ok(!/localStorage\s*\./.test(hook));assert.ok(hook.includes('.eq(\'user_id\', session.user.id)'));assert.ok(hook.includes('attempt === generation'));checks+=3;
  const family=fs.readFileSync('src/lib/family.ts','utf8');assert.ok(family.indexOf('await createChildInSupabase(member.id')<family.indexOf('const store = loadFamily(); store.members.push(member)'));assert.ok(family.includes('scope !== getAccountStorageScope()'));checks+=2;
  for(const file of ['src/components/ChildProfileManager.tsx','src/app/family/PageClient.tsx']){const s=fs.readFileSync(file,'utf8');assert.ok(s.includes('await addTeacherMember'));assert.ok(s.includes('disabled={saving}'));checks+=2;}
- const publicPage=fs.readFileSync('src/app/lehrpersonen/TeacherPage.tsx','utf8');assert.ok(publicPage.includes('mailto:hello@cleverli.ch'));assert.ok(!publicPage.includes('startCheckout'));assert.ok(publicPage.includes('Preis nach Vereinbarung'));checks+=3;
+ const publicPage=fs.readFileSync('src/app/lehrpersonen/TeacherPage.tsx','utf8');assert.ok(publicPage.includes('mailto:hello@cleverli.ch'));assert.ok(!publicPage.includes('startCheckout'));assert.ok(publicPage.includes('CHF 99 pro Klasse und Jahr'));checks+=3;
  console.log(`${checks} teacher access, admin session/CSRF/confirmation, dry-run, no-checkout and profile creation contract checks passed; DB mutations mocked.`);
 })().catch(e=>{console.error(e);process.exitCode=1;});
