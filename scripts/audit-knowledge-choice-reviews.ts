@@ -41,4 +41,6 @@ assert.equal(grade1Remaining.length,0,'Grade1 NMG long text candidates must all 
 const grade2Remaining=[...current].map(([key,e])=>[key,localizeExercise(e,'de')] as const).filter(([key,e])=>key.startsWith('2/science/')&&e.type==='fill-in-blank'&&(e.answer.match(/\p{L}+(?:[-’']\p{L}+)*/gu)||[]).length>=3);
 assert.equal(grade2Remaining.length,0,'Grade2 NMG long text candidates must all be reviewed');
 assert.equal(current.get('2/science/schweiz-symbole/ch47')?.type,'fill-in-blank','Preserve short proper-name retrieval');
-console.log(JSON.stringify({status:'pass',reviewed:reviewed.size,localeChecks,unchanged,grade1Remaining:grade1Remaining.length,grade2Remaining:grade2Remaining.length,total:current.size},null,2));
+const grade3Remaining=[...current].map(([key,e])=>[key,localizeExercise(e,'de')] as const).filter(([key,e])=>key.startsWith('3/science/')&&e.type==='fill-in-blank'&&(e.answer.match(/\p{L}+(?:[-’']\p{L}+)*/gu)||[]).length>=3);
+assert.equal(grade3Remaining.length,0,'Grade3 NMG long text candidates must all be reviewed');
+console.log(JSON.stringify({status:'pass',reviewed:reviewed.size,localeChecks,unchanged,grade1Remaining:grade1Remaining.length,grade2Remaining:grade2Remaining.length,grade3Remaining:grade3Remaining.length,total:current.size},null,2));
