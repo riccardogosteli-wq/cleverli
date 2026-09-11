@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const subjectSeo = getGradeSubjectSeo(grade, subject);
   const subjectName = SUBJECT_NAMES[subject] ?? subjectSeo.name;
   const gradeName = getGradeName(grade);
-  const title = subjectPageTitle(grade, subject, subjectSeo.shortName);
+  const title = `${subjectPageTitle(grade, subject, subjectSeo.shortName)}: Themenübersicht`;
   const description = subjectSeo.description;
   return withPageSocial({
     title,

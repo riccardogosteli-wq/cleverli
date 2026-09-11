@@ -44,7 +44,9 @@ for (const grade of [3, 4]) {
 validateLearningRoute("5", "french");
 process.env.NEXT_PUBLIC_CURRICULUM_PROFILES_ENABLED = "true";
 const urls = sitemap().map(({ url }) => url);
-assert.equal(urls.length, 361);
+assert.equal(urls.length, 362);
+assert.ok(urls.includes(`${base}/lehrpersonen`));
+assert.ok(!urls.some(url => /\/(reset-password|test)(\/|$)/.test(url)));
 assert.equal(new Set(urls).size, urls.length);
 assert.ok(sitemap().every((entry) => !entry.lastModified));
 assert.ok(urls.includes(`${base}/blog`));
@@ -55,7 +57,7 @@ for (const row of rows) {
 assert.ok(urls.every((url) => !/\/learn\/\d\/(nt|rzg)(\/|$)|\?|\/dashboard/.test(url)));
 const rules = robots().rules;
 assert.ok(Array.isArray(rules));
-assert.deepEqual(rules[0].allow, ["/", "/_next/static/", "/_next/image"]);
+assert.deepEqual(rules[0].allow, ["/", "/_next/static/", "/_next/image", "/test/roadmap"]);
 assert.ok(rules[0].disallow?.includes("/api/"));
 assert.ok(fs.readFileSync("src/components/ExercisePlayer.tsx", "utf8").includes("const FREE_EXERCISE_LIMIT = 20;"));
 const schema = fs.readFileSync("src/components/StructuredData.tsx", "utf8");
@@ -66,4 +68,4 @@ const landingPaths = [...new Set([...ORGANIC_LANDING_PAGES, ...GRADE_SUBJECT_SEO
 const out = { status: "pass", hubs: rows.length, topics: 303, sitemap: urls.length, rows, landingPaths, urls };
 fs.mkdirSync(".qa/seo", { recursive: true });
 fs.writeFileSync(".qa/seo/catalog-source.json", JSON.stringify(out, null, 2));
-console.log("PASS: 30 hubs, 303 topics, 361 canonical sitemap URLs; current catalog-bound metadata; invalid routes; NT/RZG aliases; French gates; free-count unchanged.");
+console.log("PASS: 30 hubs, 303 topics, 362 canonical sitemap URLs; current catalog-bound metadata; invalid routes; NT/RZG aliases; French gates; free-count unchanged.");

@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: ["/", "/_next/static/", "/_next/image"],
+        // Let crawlers read this public fixture's noindex; other test routes stay blocked.
+        allow: ["/", "/_next/static/", "/_next/image", "/test/roadmap"],
         disallow: [
         "/api/",
         "/_next/",
