@@ -38,4 +38,7 @@ if(arg>=0){
 }
 const grade1Remaining=[...current].map(([key,e])=>[key,localizeExercise(e,'de')] as const).filter(([key,e])=>key.startsWith('1/science/')&&e.type==='fill-in-blank'&&(e.answer.match(/\p{L}+(?:[-’']\p{L}+)*/gu)||[]).length>=3);
 assert.equal(grade1Remaining.length,0,'Grade1 NMG long text candidates must all be reviewed');
-console.log(JSON.stringify({status:'pass',reviewed:reviewed.size,localeChecks,unchanged,grade1Remaining:grade1Remaining.length,total:current.size},null,2));
+const grade2Remaining=[...current].map(([key,e])=>[key,localizeExercise(e,'de')] as const).filter(([key,e])=>key.startsWith('2/science/')&&e.type==='fill-in-blank'&&(e.answer.match(/\p{L}+(?:[-’']\p{L}+)*/gu)||[]).length>=3);
+assert.equal(grade2Remaining.length,0,'Grade2 NMG long text candidates must all be reviewed');
+assert.equal(current.get('2/science/schweiz-symbole/ch47')?.type,'fill-in-blank','Preserve short proper-name retrieval');
+console.log(JSON.stringify({status:'pass',reviewed:reviewed.size,localeChecks,unchanged,grade1Remaining:grade1Remaining.length,grade2Remaining:grade2Remaining.length,total:current.size},null,2));

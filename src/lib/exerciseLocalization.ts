@@ -152,6 +152,7 @@ function withUsefulQuestionVisuals(exercise: Exercise): Exercise {
 }
 
 export function localizeExercise(exercise: Exercise, lang: Lang): Exercise {
+  if (lang === "de" && exercise.reviewedKnowledgeChoice) return withUsefulQuestionVisuals(exercise);
   if (lang === "en") return withUsefulQuestionVisuals({
     ...exercise,
     question: exercise.questionEN ?? exercise.question,

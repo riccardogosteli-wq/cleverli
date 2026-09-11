@@ -77,6 +77,7 @@ export interface Exercise {
   gridSize?: number;    // word-search
   free?: boolean;
   preserveGermanContent?: boolean; // keep German learning text intact when the surrounding UI is localised
+  reviewedKnowledgeChoice?: boolean; // final individually reviewed knowledge choice, supersedes earlier German text patches
   completeLocalization?: boolean; // generated localisation covers every rendered exercise field
 }
 
