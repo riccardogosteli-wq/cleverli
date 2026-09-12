@@ -24,5 +24,16 @@ const {PGlite}=require(process.env.PRIVATE_OFFER_TEST_PGLITE_MODULE||'@electric-
  for(const role of ['anon','authenticated']){await db.exec('set role '+role);await assert.rejects(db.query('select * from school_outreach_mail'));await assert.rejects(claim(rows[3].email));checks+=2;await db.exec('reset role');}
  await db.exec('set role service_role');await assert.rejects(db.query("delete from school_outreach_mail"));await assert.rejects(db.query("insert into school_outreach_mail(form_key,email,campaign) values('school-outreach','unexpected@example.com','new')"));checks+=2;await db.exec('reset role');
  assert.equal((await db.query('select count(*)::int n from school_outreach_mail')).rows[0].n,5);checks++;
+ const firstBefore=(await db.query('select * from school_outreach_mail order by email')).rows;
+ await db.exec(fs.readFileSync('supabase/2026-09-12-school-outreach-batch2.sql','utf8'));
+ const all=(await db.query('select * from school_outreach_mail order by email')).rows;
+ assert.equal(all.length,8);checks++;
+ assert.deepEqual(all.filter(r=>r.campaign==='school-outreach-20260912'),firstBefore);checks++;
+ const second=all.filter(r=>r.campaign==='school-outreach-batch2-20260912');assert.equal(second.length,3);checks++;
+ assert.ok(second.every(r=>r.state==='blocked'&&!r.provider_id));checks++;
+ for(const r of second){assert.equal((await claim(r.email)).rows.length,0);checks++;}
+ await db.exec("update school_outreach_mail set state='ready',reviewed_at=now(),review_evidence='approved batch2 fixture' where campaign='school-outreach-batch2-20260912'");
+ for(const r of second){const results=await Promise.all(Array.from({length:20},()=>claim(r.email)));assert.equal(results.reduce((n,r)=>n+r.rows.length,0),1);checks++;assert.equal((await claim(r.email)).rows.length,0);checks++;}
+ assert.deepEqual((await db.query("select * from school_outreach_mail where campaign='school-outreach-20260912' order by email")).rows,firstBefore);checks++;
  console.log(checks+' ephemeral SQL checks passed, including 20 concurrent claims, persistent duplicate and ambiguous locks, eligibility, RLS and fixed batch. No live DB touched.');
 }finally{await db.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
