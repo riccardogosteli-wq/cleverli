@@ -9867,6 +9867,21372 @@ export const KNOWLEDGE_CHOICE_REVIEWS: Review[] = [
 },
 
 
+// BEGIN GRADE 5 KNOWLEDGE CHOICE REVIEW
+{
+  "key": "5/science/oekosysteme/g5oe1a",
+  "reason": "Identify a producer from organisms with distinct feeding roles.",
+  "de": [
+    "Welches Lebewesen ist ein Produzent?",
+    "Eine Eiche",
+    "Ein Fuchs",
+    "Ein Regenwurm",
+    "Ein Steinpilz",
+    "Denke an den Anfang einer Nahrungskette.",
+    "Welches Lebewesen nutzt Sonnenlicht zur Herstellung von Zucker?"
+  ],
+  "en": [
+    "Which organism is a producer?",
+    "An oak tree",
+    "A fox",
+    "An earthworm",
+    "A mushroom",
+    "Think of the start of a food chain.",
+    "Which organism uses sunlight to make sugar?"
+  ],
+  "fr": [
+    "Quel être vivant est un producteur ?",
+    "Un chêne",
+    "Un renard",
+    "Un ver de terre",
+    "Un cèpe",
+    "Pense au début d’une chaîne alimentaire.",
+    "Quel être vivant utilise la lumière pour fabriquer du sucre ?"
+  ],
+  "it": [
+    "Quale organismo è un produttore?",
+    "Una quercia",
+    "Una volpe",
+    "Un lombrico",
+    "Un porcino",
+    "Pensa all’inizio di una catena alimentare.",
+    "Quale organismo usa la luce per produrre zucchero?"
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe1c",
+  "reason": "Recognise photosynthesis inputs without reproducing a chemical formula. Second pass: individually refined distractors.",
+  "de": [
+    "Was braucht ein grünes Blatt für die Fotosynthese?",
+    "Licht, Wasser und Kohlenstoffdioxid",
+    "Licht, Wasser und Sauerstoff",
+    "Licht, Zucker und Sauerstoff",
+    "Wärme, Zucker und Kohlenstoffdioxid",
+    "Denke an die Umgebung einer gesunden Pflanze.",
+    "Berücksichtige Luft, Wurzeln und den Standort."
+  ],
+  "en": [
+    "What does a green leaf need for photosynthesis?",
+    "Light, water and carbon dioxide",
+    "Light, water and oxygen",
+    "Light, sugar and oxygen",
+    "Heat, sugar and carbon dioxide",
+    "Think about a healthy plant’s surroundings.",
+    "Consider the air, roots and growing location."
+  ],
+  "fr": [
+    "De quoi une feuille verte a-t-elle besoin pour la photosynthèse ?",
+    "De lumière, d’eau et de dioxyde de carbone",
+    "Lumière, eau et oxygène",
+    "Lumière, sucre et oxygène",
+    "Chaleur, sucre et dioxyde de carbone",
+    "Pense à l’environnement d’une plante saine.",
+    "Tiens compte de l’air, des racines et de l’emplacement."
+  ],
+  "it": [
+    "Cosa serve a una foglia verde per la fotosintesi?",
+    "Luce, acqua e anidride carbonica",
+    "Luce, acqua e ossigeno",
+    "Luce, zucchero e ossigeno",
+    "Calore, zucchero e anidride carbonica",
+    "Pensa all’ambiente di una pianta sana.",
+    "Considera l’aria, le radici e il luogo in cui cresce."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe1g",
+  "reason": "Apply prey concept to a concrete predator-prey relationship.",
+  "de": [
+    "Ein Fuchs jagt eine Maus. Wer ist die Beute?",
+    "Die Maus",
+    "Der Fuchs",
+    "Beide Tiere",
+    "Keines der Tiere",
+    "Unterscheide Jäger und gejagtes Tier.",
+    "Welches Tier versucht zu entkommen?"
+  ],
+  "en": [
+    "A fox hunts a mouse. Which animal is the prey?",
+    "The mouse",
+    "The fox",
+    "Both animals",
+    "Neither animal",
+    "Distinguish the hunter from the hunted animal.",
+    "Which animal is trying to escape?"
+  ],
+  "fr": [
+    "Un renard chasse une souris. Qui est la proie ?",
+    "La souris",
+    "Le renard",
+    "Les deux animaux",
+    "Aucun des deux",
+    "Distingue le chasseur de l’animal chassé.",
+    "Quel animal essaie de s’échapper ?"
+  ],
+  "it": [
+    "Una volpe caccia un topo. Qual è la preda?",
+    "Il topo",
+    "La volpe",
+    "Entrambi gli animali",
+    "Nessuno dei due",
+    "Distingui il cacciatore dall’animale cacciato.",
+    "Quale animale cerca di scappare?"
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe1i",
+  "reason": "Replace jargon definition with observable decomposition. Second pass: individually refined distractors.",
+  "de": [
+    "Was geschieht beim Zersetzen von Laub?",
+    "Lebewesen bauen tote Blätter ab",
+    "Tote Blätter nehmen über ihre Blattstiele wieder Wasser auf",
+    "Die Blätter trocknen nur, ohne dass Lebewesen sie abbauen",
+    "Nährstoffe bleiben vollständig in unveränderten Blättern gebunden",
+    "Schau auf den Waldboden.",
+    "Überlege, warum dort nicht das ganze Laub vieler Jahre liegt."
+  ],
+  "en": [
+    "What happens when leaf litter decomposes?",
+    "Organisms break down dead leaves",
+    "Dead leaves take up water through their stalks again",
+    "Leaves only dry, without organisms breaking them down",
+    "Nutrients stay entirely bound in unchanged leaves",
+    "Think about the forest floor.",
+    "Why is it not covered by all the leaves from many years?"
+  ],
+  "fr": [
+    "Que se passe-t-il quand les feuilles mortes se décomposent ?",
+    "Des êtres vivants dégradent les feuilles mortes",
+    "Les feuilles mortes absorbent de nouveau de l’eau par leurs pétioles",
+    "Les feuilles sèchent seulement, sans décomposition par des organismes",
+    "Les nutriments restent entièrement liés aux feuilles inchangées",
+    "Pense au sol de la forêt.",
+    "Pourquoi n’y trouve-t-on pas toutes les feuilles de nombreuses années ?"
+  ],
+  "it": [
+    "Cosa succede quando le foglie morte si decompongono?",
+    "Gli organismi degradano le foglie morte",
+    "Le foglie morte assorbono di nuovo acqua dai piccioli",
+    "Le foglie si asciugano soltanto, senza decomposizione da organismi",
+    "I nutrienti restano interamente legati alle foglie invariate",
+    "Pensa al suolo del bosco.",
+    "Perché non è coperto da tutte le foglie cadute in molti anni?"
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe1k",
+  "reason": "Recognise competition for a shared resource.",
+  "de": [
+    "Wann konkurrieren zwei Bäume miteinander?",
+    "Wenn beide um knappes Licht wachsen",
+    "Wenn sie auf verschiedenen Kontinenten stehen",
+    "Wenn ein Baum von einem Specht besucht wird",
+    "Wenn Regen auf ihre Blätter fällt",
+    "Konkurrenz entsteht nicht bei jeder Begegnung.",
+    "Denke an etwas, das beide brauchen und das knapp ist."
+  ],
+  "en": [
+    "When do two trees compete?",
+    "When both grow towards limited light",
+    "When they stand on different continents",
+    "When a woodpecker visits one tree",
+    "When rain falls on their leaves",
+    "Not every interaction is competition.",
+    "Think of something both need that is in short supply."
+  ],
+  "fr": [
+    "Quand deux arbres sont-ils en concurrence ?",
+    "Quand ils cherchent tous deux une lumière limitée",
+    "Quand ils poussent sur des continents différents",
+    "Quand un pic visite l’un des arbres",
+    "Quand la pluie tombe sur leurs feuilles",
+    "Toute interaction n’est pas une concurrence.",
+    "Pense à une ressource nécessaire aux deux et disponible en quantité limitée."
+  ],
+  "it": [
+    "Quando due alberi sono in competizione?",
+    "Quando entrambi cercano luce scarsa",
+    "Quando crescono in continenti diversi",
+    "Quando un picchio visita un albero",
+    "Quando piove sulle loro foglie",
+    "Non ogni interazione è una competizione.",
+    "Pensa a una risorsa necessaria a entrambi ma scarsa."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe2a",
+  "reason": "Replace succession terminology with an observable habitat change. Second pass: individually refined distractors.",
+  "de": [
+    "Was kann auf einer brachliegenden Fläche nach Jahren wachsen?",
+    "Gräser, später auch Sträucher und Bäume",
+    "Es bleiben unabhängig von den Bedingungen genau dieselben Pflanzen",
+    "Ein geschlossener Wald steht dort bereits am nächsten Tag",
+    "Neue Pflanzen können nur nach menschlicher Aussaat wachsen",
+    "Samen können auf verschiedene Weise ankommen.",
+    "Vergleiche eine frisch freie Fläche mit einer lange ungestörten."
+  ],
+  "en": [
+    "What may grow on unused land over the years?",
+    "Grasses, then shrubs and trees too",
+    "Exactly the same plants remain regardless of conditions",
+    "A closed forest is already there the next day",
+    "New plants grow only after people sow seeds",
+    "Seeds can arrive in several ways.",
+    "Compare newly cleared land with land left undisturbed for years."
+  ],
+  "fr": [
+    "Que peut-il pousser sur un terrain abandonné au fil des années ?",
+    "Des herbes, puis aussi des arbustes et des arbres",
+    "Les mêmes plantes restent exactement, quelles que soient les conditions",
+    "Une forêt fermée apparaît dès le lendemain",
+    "De nouvelles plantes poussent seulement après un semis humain",
+    "Les graines peuvent arriver de plusieurs façons.",
+    "Compare un terrain dégagé à un terrain laissé tranquille pendant des années."
+  ],
+  "it": [
+    "Cosa può crescere su un terreno abbandonato negli anni?",
+    "Erbe, poi anche arbusti e alberi",
+    "Restano esattamente le stesse piante indipendentemente dalle condizioni",
+    "Una foresta chiusa compare già il giorno dopo",
+    "Nuove piante crescono solo dopo una semina umana",
+    "I semi possono arrivare in vari modi.",
+    "Confronta un terreno appena libero con uno indisturbato da anni."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe2c",
+  "reason": "Trace nutrient return in a concrete cycle. Second pass: individually refined distractors.",
+  "de": [
+    "Wie gelangen Nährstoffe aus Laub wieder zu Pflanzen?",
+    "Durch Zersetzung und Aufnahme über die Wurzeln",
+    "Durch direkte Aufnahme ganzer Blätter in die Wurzeln",
+    "Durch Aufnahme der Mineralstoffe ausschliesslich aus Sonnenlicht",
+    "Durch unveränderte Lagerung des Laubs ohne Abbau",
+    "Denke an den Weg durch den Boden.",
+    "Welcher Pflanzenteil nimmt gelöste Stoffe auf?"
+  ],
+  "en": [
+    "How do nutrients in dead leaves return to plants?",
+    "Through decomposition and uptake by roots",
+    "By roots directly taking in whole leaves",
+    "By taking minerals exclusively from sunlight",
+    "By storing leaves unchanged without decomposition",
+    "Think about the route through the soil.",
+    "Which part of a plant takes up dissolved substances?"
+  ],
+  "fr": [
+    "Comment les nutriments des feuilles mortes retournent-ils aux plantes ?",
+    "Par décomposition puis absorption par les racines",
+    "Par absorption directe des feuilles entières dans les racines",
+    "Par absorption des minéraux uniquement depuis la lumière solaire",
+    "Par stockage des feuilles inchangées sans décomposition",
+    "Pense au trajet dans le sol.",
+    "Quelle partie de la plante absorbe les substances dissoutes ?"
+  ],
+  "it": [
+    "Come tornano alle piante i nutrienti delle foglie morte?",
+    "Con la decomposizione e l’assorbimento dalle radici",
+    "Assorbendo foglie intere direttamente nelle radici",
+    "Assorbendo minerali esclusivamente dalla luce solare",
+    "Conservando foglie invariate senza decomposizione",
+    "Pensa al percorso attraverso il suolo.",
+    "Quale parte della pianta assorbe le sostanze disciolte?"
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe2e",
+  "reason": "Assess one accessible part of the carbon cycle. Second pass: individually refined distractors.",
+  "de": [
+    "Was nimmt ein grünes Blatt bei der Fotosynthese aus der Luft auf?",
+    "Kohlenstoffdioxid",
+    "Sauerstoff",
+    "Stickstoff",
+    "Wasserstoff",
+    "Es handelt sich um ein Gas.",
+    "Denke daran, welche Stoffe Pflanzen für den Aufbau von Zucker brauchen."
+  ],
+  "en": [
+    "What does a green leaf take from the air during photosynthesis?",
+    "Carbon dioxide",
+    "Oxygen",
+    "Nitrogen",
+    "Hydrogen",
+    "It is a gas.",
+    "Think about the substances plants need to make sugar."
+  ],
+  "fr": [
+    "Que prélève une feuille verte dans l’air pendant la photosynthèse ?",
+    "Du dioxyde de carbone",
+    "Oxygène",
+    "Azote",
+    "Hydrogène",
+    "Il s’agit d’un gaz.",
+    "Pense aux substances nécessaires pour fabriquer du sucre."
+  ],
+  "it": [
+    "Cosa assorbe dall’aria una foglia verde durante la fotosintesi?",
+    "Anidride carbonica",
+    "Ossigeno",
+    "Azoto",
+    "Idrogeno",
+    "È un gas.",
+    "Pensa alle sostanze necessarie per produrre zucchero."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe2g",
+  "reason": "Use species variety as a concrete entry to biodiversity.",
+  "de": [
+    "Welche Wiese hat in diesem Vergleich die grössere Artenvielfalt?",
+    "Eine Wiese mit 20 Pflanzenarten",
+    "Eine Wiese mit nur einer Grasart",
+    "Eine Wiese mit vielen Pflanzen derselben Art",
+    "Eine Wiese ohne Pflanzen",
+    "Zähle die Arten, nicht die einzelnen Pflanzen.",
+    "Viele Exemplare können alle zur gleichen Art gehören."
+  ],
+  "en": [
+    "Which meadow has more plant species in this comparison?",
+    "A meadow with 20 plant species",
+    "A meadow with just one grass species",
+    "A meadow with many plants of one species",
+    "A meadow without plants",
+    "Count species, not individual plants.",
+    "Many individual plants may belong to the same species."
+  ],
+  "fr": [
+    "Quelle prairie a la plus grande diversité de plantes dans ce cas ?",
+    "Une prairie avec 20 espèces végétales",
+    "Une prairie avec une seule espèce d’herbe",
+    "Une prairie avec beaucoup de plantes de la même espèce",
+    "Une prairie sans plantes",
+    "Compte les espèces, pas les plantes individuelles.",
+    "De nombreux individus peuvent appartenir à la même espèce."
+  ],
+  "it": [
+    "Quale prato ha più specie vegetali in questo confronto?",
+    "Un prato con 20 specie vegetali",
+    "Un prato con una sola specie d’erba",
+    "Un prato con molte piante della stessa specie",
+    "Un prato senza piante",
+    "Conta le specie, non le singole piante.",
+    "Molti individui possono appartenere alla stessa specie."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe2i",
+  "reason": "Apply protected-area rules rather than recall legal definition.",
+  "de": [
+    "In einem Schutzgebiet gilt ein Wegegebot. Was tust du?",
+    "Auf den markierten Wegen bleiben",
+    "Für ein Foto quer durch die Wiese laufen",
+    "Seltene Blumen als Andenken pflücken",
+    "Tiere aus ihren Verstecken treiben",
+    "Lies die Regeln am Eingang.",
+    "Auch scheinbar unbenutzte Flächen können Lebensräume sein."
+  ],
+  "en": [
+    "A nature reserve requires visitors to stay on paths. What should you do?",
+    "Stay on marked paths",
+    "Cross the meadow for a photo",
+    "Pick rare flowers as souvenirs",
+    "Drive animals out of their hiding places",
+    "Read the rules at the entrance.",
+    "Even apparently unused areas may be habitats."
+  ],
+  "fr": [
+    "Une réserve impose de rester sur les chemins. Que fais-tu ?",
+    "Rester sur les chemins balisés",
+    "Traverser la prairie pour une photo",
+    "Cueillir des fleurs rares en souvenir",
+    "Faire sortir les animaux de leurs abris",
+    "Lis les règles à l’entrée.",
+    "Même un espace apparemment inutilisé peut abriter des êtres vivants."
+  ],
+  "it": [
+    "Una riserva impone di restare sui sentieri. Cosa fai?",
+    "Restare sui sentieri segnati",
+    "Attraversare il prato per una foto",
+    "Raccogliere fiori rari come ricordo",
+    "Far uscire gli animali dai rifugi",
+    "Leggi le regole all’ingresso.",
+    "Anche aree apparentemente inutilizzate possono ospitare esseri viventi."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe2k",
+  "reason": "Replace energy-pyramid definition with food-chain ordering.",
+  "de": [
+    "Was steht am Anfang dieser Nahrungskette: Gras, Hase, Fuchs?",
+    "Das Gras",
+    "Der Hase",
+    "Der Fuchs",
+    "Alle drei an derselben Stelle",
+    "Die Kette beginnt nicht mit dem grössten Tier.",
+    "Suche das Lebewesen, das keine anderen Lebewesen fressen muss."
+  ],
+  "en": [
+    "What begins this food chain: grass, rabbit, fox?",
+    "Grass",
+    "The rabbit",
+    "The fox",
+    "All three at the same position",
+    "The chain does not start with the largest animal.",
+    "Find the organism that does not need to eat other organisms."
+  ],
+  "fr": [
+    "Qui commence cette chaîne alimentaire : herbe, lapin, renard ?",
+    "L’herbe",
+    "Le lapin",
+    "Le renard",
+    "Les trois au même niveau",
+    "La chaîne ne commence pas par le plus grand animal.",
+    "Cherche l’être vivant qui n’a pas besoin d’en manger d’autres."
+  ],
+  "it": [
+    "Cosa inizia questa catena alimentare: erba, coniglio, volpe?",
+    "L’erba",
+    "Il coniglio",
+    "La volpe",
+    "Tutti e tre nella stessa posizione",
+    "La catena non inizia con l’animale più grande.",
+    "Cerca l’organismo che non deve mangiare altri organismi."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe2m",
+  "reason": "Teach environmental observation with appropriate evidential caution. Second pass: individually refined distractors.",
+  "de": [
+    "Was kann das Vorkommen empfindlicher Wassertiere anzeigen?",
+    "Hinweise auf die Wasserqualität",
+    "Die exakte Wassertiefe ohne weitere Messung",
+    "Die genaue Regenmenge des nächsten Monats",
+    "Den genauen Salzgehalt allein aus der Zahl der Tiere",
+    "Manche Tiere vertragen Verschmutzung schlecht.",
+    "Eine Beobachtung liefert Hinweise und ersetzt nicht jede Messung."
+  ],
+  "en": [
+    "What can sensitive aquatic animals indicate?",
+    "Clues about water quality",
+    "Exact water depth without further measurement",
+    "Exact rainfall next month",
+    "Exact salinity solely from the number of animals",
+    "Some animals tolerate pollution poorly.",
+    "An observation gives clues but does not replace every measurement."
+  ],
+  "fr": [
+    "Que peut indiquer la présence d’animaux aquatiques sensibles ?",
+    "Des indices sur la qualité de l’eau",
+    "La profondeur exacte sans autre mesure",
+    "La pluie exacte du mois prochain",
+    "La salinité exacte à partir du seul nombre d’animaux",
+    "Certains animaux supportent mal la pollution.",
+    "Une observation fournit des indices sans remplacer toutes les mesures."
+  ],
+  "it": [
+    "Cosa può indicare la presenza di animali acquatici sensibili?",
+    "Indizi sulla qualità dell’acqua",
+    "La profondità esatta senza altre misure",
+    "La pioggia esatta del prossimo mese",
+    "La salinità esatta dal solo numero di animali",
+    "Alcuni animali tollerano male l’inquinamento.",
+    "Un’osservazione dà indizi ma non sostituisce ogni misurazione."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe2o",
+  "reason": "Replace refugium terminology with habitat shelter. Second pass: individually refined distractors.",
+  "de": [
+    "Warum hilft eine Hecke vielen kleinen Tieren?",
+    "Sie bietet Nahrung und Verstecke",
+    "Sie bietet jedem Tier ausschliesslich denselben Nistplatz",
+    "Sie hält alle Beutetiere ohne Fluchtmöglichkeit fest",
+    "Sie verhindert den Zugang zu sämtlichen Früchten und Samen",
+    "Denke an Vögel und kleine Säugetiere.",
+    "Vergleiche die Hecke mit einer offenen, kahlen Fläche."
+  ],
+  "en": [
+    "Why does a hedge help many small animals?",
+    "It provides food and hiding places",
+    "It offers every animal only the same nesting place",
+    "It traps all prey with no way to escape",
+    "It prevents access to all fruit and seeds",
+    "Think of birds and small mammals.",
+    "Compare a hedge with an open, bare area."
+  ],
+  "fr": [
+    "Pourquoi une haie aide-t-elle de nombreux petits animaux ?",
+    "Elle offre de la nourriture et des abris",
+    "Elle offre à chaque animal uniquement le même nid",
+    "Elle emprisonne toutes les proies sans issue",
+    "Elle empêche l’accès à tous les fruits et graines",
+    "Pense aux oiseaux et aux petits mammifères.",
+    "Compare une haie à un terrain ouvert et nu."
+  ],
+  "it": [
+    "Perché una siepe aiuta molti piccoli animali?",
+    "Offre cibo e rifugi",
+    "Offre a ogni animale solo lo stesso nido",
+    "Intrappola tutte le prede senza via di fuga",
+    "Impedisce l’accesso a tutti i frutti e semi",
+    "Pensa agli uccelli e ai piccoli mammiferi.",
+    "Confronta una siepe con un’area aperta e spoglia."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe3a",
+  "reason": "Replace abstract resilience with observable recovery. Second pass: individually refined distractors.",
+  "de": [
+    "Woran erkennst du, dass sich eine Wiese nach Trockenheit erholt?",
+    "Neue Triebe wachsen nach dem Regen",
+    "Die Zahl abgestorbener Pflanzen nimmt weiter zu",
+    "Es erscheinen trotz feuchtem Boden keine neuen Triebe",
+    "Immer mehr zuvor grüne Flächen werden dauerhaft kahl",
+    "Vergleiche Beobachtungen vor und nach dem Regen.",
+    "Suche ein Zeichen für neues Wachstum."
+  ],
+  "en": [
+    "What shows a meadow recovering after a drought?",
+    "New shoots grow after rain",
+    "The number of dead plants continues to increase",
+    "No new shoots appear despite moist soil",
+    "More previously green patches become permanently bare",
+    "Compare observations before and after rain.",
+    "Look for a sign of new growth."
+  ],
+  "fr": [
+    "Quel signe montre qu’une prairie se rétablit après une sécheresse ?",
+    "De nouvelles pousses apparaissent après la pluie",
+    "Le nombre de plantes mortes continue d’augmenter",
+    "Aucune nouvelle pousse apparaît malgré le sol humide",
+    "Davantage de zones vertes deviennent durablement nues",
+    "Compare les observations avant et après la pluie.",
+    "Cherche un signe de nouvelle croissance."
+  ],
+  "it": [
+    "Cosa mostra che un prato si riprende dopo una siccità?",
+    "Nuovi germogli crescono dopo la pioggia",
+    "Il numero di piante morte continua ad aumentare",
+    "Non compaiono germogli nonostante il terreno umido",
+    "Più aree prima verdi diventano permanentemente spoglie",
+    "Confronta le osservazioni prima e dopo la pioggia.",
+    "Cerca un segno di nuova crescita."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe3c",
+  "reason": "Replace metapopulation theory with connected habitats.",
+  "de": [
+    "Wozu dient eine Wildtierbrücke über eine Autobahn?",
+    "Tiere können zwischen Lebensräumen wechseln",
+    "Autos können darauf schneller fahren",
+    "Tiere werden damit im Wald eingesperrt",
+    "Sie ersetzt alle natürlichen Lebensräume",
+    "Eine Autobahn kann Lebensräume trennen.",
+    "Überlege, wer die begrünte Brücke benutzen soll."
+  ],
+  "en": [
+    "What is a wildlife bridge over a motorway for?",
+    "Animals can move between habitats",
+    "Cars can travel faster on it",
+    "Animals are locked inside the forest",
+    "It replaces all natural habitats",
+    "A motorway can divide habitats.",
+    "Think about who should use the planted bridge."
+  ],
+  "fr": [
+    "À quoi sert un passage à faune au-dessus d’une autoroute ?",
+    "Les animaux peuvent passer d’un habitat à l’autre",
+    "Les voitures peuvent y rouler plus vite",
+    "Les animaux sont enfermés dans la forêt",
+    "Il remplace tous les habitats naturels",
+    "Une autoroute peut séparer des habitats.",
+    "Pense aux utilisateurs de ce pont végétalisé."
+  ],
+  "it": [
+    "A cosa serve un ponte per animali sopra un’autostrada?",
+    "Gli animali possono passare tra habitat",
+    "Le auto possono correre più velocemente",
+    "Gli animali vengono rinchiusi nel bosco",
+    "Sostituisce tutti gli habitat naturali",
+    "Un’autostrada può separare gli habitat.",
+    "Pensa a chi deve usare questo ponte verde."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe3e",
+  "reason": "Replace population viability calculation with conservation needs. Second pass: individually refined distractors.",
+  "de": [
+    "Was braucht eine gefährdete Tierart zum langfristigen Überleben?",
+    "Geeignete Lebensräume und Fortpflanzungsmöglichkeiten",
+    "Ein geschütztes Einzeltier ohne Möglichkeit zur Fortpflanzung",
+    "Nahrung für einen Tag ohne dauerhaft geeigneten Lebensraum",
+    "Geeignete Verstecke, aber keinerlei Zugang zu Nahrung",
+    "Eine Art soll über viele Generationen bestehen.",
+    "Denke sowohl an den Lebensraum als auch an Jungtiere."
+  ],
+  "en": [
+    "What does an endangered species need to survive long term?",
+    "Suitable habitats and opportunities to reproduce",
+    "One protected individual with no possibility of reproduction",
+    "Food for one day without lasting suitable habitat",
+    "Suitable hiding places but no access to food",
+    "A species must persist for many generations.",
+    "Think about both its habitat and its young."
+  ],
+  "fr": [
+    "De quoi une espèce menacée a-t-elle besoin pour survivre durablement ?",
+    "D’habitats adaptés et de possibilités de reproduction",
+    "Un individu protégé sans possibilité de reproduction",
+    "De la nourriture pour un jour sans habitat adapté durable",
+    "Des abris adaptés mais aucun accès à la nourriture",
+    "Une espèce doit se maintenir sur plusieurs générations.",
+    "Pense à son habitat et à ses petits."
+  ],
+  "it": [
+    "Cosa serve a una specie minacciata per sopravvivere a lungo?",
+    "Habitat adatti e possibilità di riprodursi",
+    "Un individuo protetto senza possibilità di riproduzione",
+    "Cibo per un giorno senza habitat adatto duraturo",
+    "Rifugi adatti ma nessun accesso al cibo",
+    "Una specie deve continuare per molte generazioni.",
+    "Pensa sia all’habitat sia ai piccoli."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe3g",
+  "reason": "Replace denitrification chemistry with the role of soil organisms. Second pass: individually refined distractors.",
+  "de": [
+    "Welche Aufgabe können Bakterien im Boden übernehmen?",
+    "Abgestorbene Pflanzenreste abbauen",
+    "Unveränderte tote Blätter dauerhaft vor jedem Abbau schützen",
+    "Mineralstoffe durch Wurzeln in einen Baum transportieren",
+    "Alle Pflanzenreste nur mechanisch mit Zähnen zerkauen",
+    "Nicht alle Bakterien machen krank.",
+    "Denke an die Veränderungen in einem Komposthaufen."
+  ],
+  "en": [
+    "What can bacteria in soil do?",
+    "Break down dead plant material",
+    "Permanently protect unchanged dead leaves from any breakdown",
+    "Transport minerals through roots into a tree",
+    "Only mechanically chew all plant remains with teeth",
+    "Not all bacteria cause illness.",
+    "Think about changes in a compost heap."
+  ],
+  "fr": [
+    "Que peuvent faire des bactéries du sol ?",
+    "Décomposer des restes de plantes mortes",
+    "Protéger durablement les feuilles mortes de toute décomposition",
+    "Transporter des minéraux par les racines dans un arbre",
+    "Mâcher seulement tous les restes végétaux avec des dents",
+    "Toutes les bactéries ne provoquent pas de maladies.",
+    "Pense aux changements dans un tas de compost."
+  ],
+  "it": [
+    "Cosa possono fare i batteri nel suolo?",
+    "Decomporre resti di piante morte",
+    "Proteggere per sempre le foglie morte da ogni decomposizione",
+    "Trasportare minerali attraverso radici in un albero",
+    "Masticare soltanto tutti i resti vegetali con denti",
+    "Non tutti i batteri causano malattie.",
+    "Pensa ai cambiamenti in un cumulo di compost."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe3i",
+  "reason": "Replace Gaia hypothesis with water-cycle connection, without treating a hypothesis as fact. Second pass: individually refined distractors.",
+  "de": [
+    "Wie sind Wald und Wasserkreislauf verbunden?",
+    "Bäume geben über Blätter Wasser an die Luft ab",
+    "Alles von Wurzeln aufgenommene Wasser bleibt dauerhaft im Stamm",
+    "Blätter nehmen Wasser nur auf und geben nie welches ab",
+    "Wasser verlässt den Wald ausschliesslich in Bächen",
+    "Denke an Wasserwege in einer Pflanze.",
+    "Verfolge den Weg von den Wurzeln bis zu den Blättern."
+  ],
+  "en": [
+    "How are forests connected to the water cycle?",
+    "Trees release water into the air through leaves",
+    "All water taken up by roots stays permanently in the trunk",
+    "Leaves only take in water and never release it",
+    "Water leaves forests only through streams",
+    "Think of water moving through a plant.",
+    "Trace the route from roots to leaves."
+  ],
+  "fr": [
+    "Comment la forêt participe-t-elle au cycle de l’eau ?",
+    "Les arbres libèrent de l’eau dans l’air par les feuilles",
+    "Toute eau absorbée reste définitivement dans le tronc",
+    "Les feuilles absorbent seulement l’eau sans jamais en libérer",
+    "L’eau quitte les forêts uniquement par les ruisseaux",
+    "Pense au trajet de l’eau dans une plante.",
+    "Suis le parcours des racines aux feuilles."
+  ],
+  "it": [
+    "Come partecipa il bosco al ciclo dell’acqua?",
+    "Gli alberi rilasciano acqua nell’aria dalle foglie",
+    "Tutta l’acqua assorbita resta permanentemente nel tronco",
+    "Le foglie assorbono solo acqua senza mai rilasciarla",
+    "L’acqua lascia i boschi soltanto attraverso ruscelli",
+    "Pensa al percorso dell’acqua in una pianta.",
+    "Segui il percorso dalle radici alle foglie."
+  ]
+},
+{
+  "key": "5/science/oekosysteme/g5oe3k",
+  "reason": "Apply landscape connections to a simple local observation.",
+  "de": [
+    "Ein Bach fliesst vom Wald in einen Teich. Was zeigt das?",
+    "Lebensräume sind miteinander verbunden",
+    "Jeder Lebensraum ist völlig abgeschlossen",
+    "Wasser bleibt immer an einem Ort",
+    "Wald und Teich können nie Stoffe austauschen",
+    "Verfolge den Weg des Wassers.",
+    "Überlege, ob etwas vom Wald in den Teich gelangen kann."
+  ],
+  "en": [
+    "A stream flows from a forest into a pond. What does this show?",
+    "Habitats are connected",
+    "Every habitat is completely isolated",
+    "Water always stays in one place",
+    "Forests and ponds can never exchange materials",
+    "Follow the water’s route.",
+    "Could anything travel from the forest to the pond?"
+  ],
+  "fr": [
+    "Un ruisseau va de la forêt à un étang. Que montre-t-il ?",
+    "Les habitats sont reliés",
+    "Chaque habitat est totalement isolé",
+    "L’eau reste toujours au même endroit",
+    "Forêt et étang ne peuvent jamais échanger de matière",
+    "Suis le trajet de l’eau.",
+    "Quelque chose peut-il passer de la forêt à l’étang ?"
+  ],
+  "it": [
+    "Un ruscello va dal bosco a uno stagno. Cosa mostra?",
+    "Gli habitat sono collegati",
+    "Ogni habitat è completamente isolato",
+    "L’acqua resta sempre nello stesso luogo",
+    "Bosco e stagno non possono mai scambiarsi sostanze",
+    "Segui il percorso dell’acqua.",
+    "Qualcosa può passare dal bosco allo stagno?"
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5s13",
+  "reason": "Replace template with the origin of moonlight.",
+  "de": [
+    "Warum sehen wir den Mond leuchten?",
+    "Er reflektiert Sonnenlicht",
+    "Er erzeugt Licht wie die Sonne",
+    "Seine Wolken erzeugen das Licht",
+    "Er wird nur von Sternschnuppen beleuchtet",
+    "Vergleiche einen Stern mit einem Mond.",
+    "Eine helle Oberfläche kann fremdes Licht zurückwerfen."
+  ],
+  "en": [
+    "Why does the Moon appear bright?",
+    "It reflects sunlight",
+    "It produces light like the Sun",
+    "Its clouds produce the light",
+    "Only shooting stars illuminate it",
+    "Compare a star with a moon.",
+    "A bright surface can reflect light from elsewhere."
+  ],
+  "fr": [
+    "Pourquoi voyons-nous la Lune briller ?",
+    "Elle réfléchit la lumière du Soleil",
+    "Elle produit de la lumière comme le Soleil",
+    "Ses nuages produisent la lumière",
+    "Seules les étoiles filantes l’éclairent",
+    "Compare une étoile et une lune.",
+    "Une surface claire peut renvoyer une lumière venue d’ailleurs."
+  ],
+  "it": [
+    "Perché vediamo brillare la Luna?",
+    "Riflette la luce solare",
+    "Produce luce come il Sole",
+    "Le sue nuvole producono luce",
+    "La illuminano solo le stelle cadenti",
+    "Confronta una stella con una luna.",
+    "Una superficie chiara può riflettere luce proveniente da altrove."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5s15",
+  "reason": "Assess the central body of the solar system.",
+  "de": [
+    "Welcher Stern gehört zu unserem Sonnensystem?",
+    "Die Sonne",
+    "Der Polarstern",
+    "Sirius",
+    "Beteigeuze",
+    "Denke an den Stern, dem die Erde nahe ist.",
+    "Um ihn bewegen sich unsere acht Planeten."
+  ],
+  "en": [
+    "Which star belongs to our solar system?",
+    "The Sun",
+    "Polaris",
+    "Sirius",
+    "Betelgeuse",
+    "Think of the star close to Earth.",
+    "Our eight planets orbit it."
+  ],
+  "fr": [
+    "Quelle étoile appartient à notre système solaire ?",
+    "Le Soleil",
+    "L’étoile Polaire",
+    "Sirius",
+    "Bételgeuse",
+    "Pense à l’étoile proche de la Terre.",
+    "Nos huit planètes tournent autour d’elle."
+  ],
+  "it": [
+    "Quale stella appartiene al nostro sistema solare?",
+    "Il Sole",
+    "La Stella Polare",
+    "Sirio",
+    "Betelgeuse",
+    "Pensa alla stella vicina alla Terra.",
+    "I nostri otto pianeti le orbitano attorno."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5s18",
+  "reason": "Replace repeated template with seasonal cause. Second pass: individually refined alternatives.",
+  "de": [
+    "Warum hat die Schweiz verschiedene Jahreszeiten?",
+    "Die geneigte Erdachse verändert die Sonnenbestrahlung im Jahreslauf",
+    "Die Entfernung zur Sonne allein verursacht gleichzeitig überall Sommer",
+    "Die Mondphasen bestimmen die Jahreszeiten",
+    "Die tägliche Erdrotation ersetzt den jährlichen Umlauf",
+    "Betrachte Erdachse und Umlauf gemeinsam.",
+    "Vergleiche Sonnenstand und Tageslänge im Sommer und Winter."
+  ],
+  "en": [
+    "Why does Switzerland have different seasons?",
+    "Earth’s tilted axis changes sunlight over the year",
+    "Distance from the Sun alone causes summer everywhere at once",
+    "Moon phases determine the seasons",
+    "Daily Earth rotation replaces its yearly orbit",
+    "Consider the axis and orbit together.",
+    "Compare the Sun’s height and day length in summer and winter."
+  ],
+  "fr": [
+    "Pourquoi la Suisse connaît-elle différentes saisons ?",
+    "L’axe incliné de la Terre modifie l’ensoleillement au fil de l’année",
+    "La distance au Soleil seule produit l’été partout en même temps",
+    "Les phases lunaires déterminent les saisons",
+    "La rotation quotidienne remplace la révolution annuelle",
+    "Considère ensemble l’axe et l’orbite.",
+    "Compare la hauteur du Soleil et la durée du jour en été et en hiver."
+  ],
+  "it": [
+    "Perché in Svizzera ci sono stagioni diverse?",
+    "L’asse terrestre inclinato cambia l’illuminazione durante l’anno",
+    "La sola distanza dal Sole causa estate ovunque insieme",
+    "Le fasi lunari determinano le stagioni",
+    "La rotazione quotidiana sostituisce la rivoluzione annuale",
+    "Considera insieme l’asse e l’orbita.",
+    "Confronta altezza del Sole e durata del giorno in estate e inverno."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5s20",
+  "reason": "Distinguish probe observations from crewed spaceflight. Second pass: individually refined alternatives.",
+  "de": [
+    "Was kann eine unbemannte Raumsonde untersuchen?",
+    "Die Oberfläche eines fernen Planeten",
+    "Die persönlichen Gedanken aller Menschen auf dem Planeten",
+    "Das genaue Wetter dort für alle kommenden Jahrhunderte",
+    "Alle Eigenschaften des Planeten ohne Messgeräte",
+    "Eine Sonde trägt wissenschaftliche Geräte.",
+    "Sie kann Orte erreichen, an denen noch kein Mensch war."
+  ],
+  "en": [
+    "What can an uncrewed space probe study?",
+    "The surface of a distant planet",
+    "The personal thoughts of everyone on the planet",
+    "The exact weather there for every coming century",
+    "Every property of the planet without instruments",
+    "A probe carries scientific instruments.",
+    "It can reach places no human has visited."
+  ],
+  "fr": [
+    "Que peut étudier une sonde spatiale sans équipage ?",
+    "La surface d’une planète lointaine",
+    "Les pensées personnelles de tous les habitants de la planète",
+    "Le temps exact pour tous les siècles à venir",
+    "Toutes les propriétés de la planète sans instruments",
+    "Une sonde transporte des instruments scientifiques.",
+    "Elle peut atteindre des lieux jamais visités par un humain."
+  ],
+  "it": [
+    "Cosa può studiare una sonda spaziale senza equipaggio?",
+    "La superficie di un pianeta lontano",
+    "I pensieri personali di tutti gli abitanti del pianeta",
+    "Il tempo esatto per tutti i secoli futuri",
+    "Tutte le proprietà del pianeta senza strumenti",
+    "Una sonda trasporta strumenti scientifici.",
+    "Può raggiungere luoghi mai visitati da esseri umani."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss1a",
+  "reason": "Assess daily rotation directly.",
+  "de": [
+    "Was verursacht den Wechsel von Tag und Nacht?",
+    "Die Drehung der Erde um ihre Achse",
+    "Der jährliche Erdumlauf um die Sonne",
+    "Die Mondphasen allein",
+    "Eine tägliche Abkühlung der Sonne",
+    "Denke an eine beleuchtete Kugel.",
+    "Was geschieht mit einer markierten Stelle, wenn die Kugel rotiert?"
+  ],
+  "en": [
+    "What causes day and night to alternate?",
+    "Earth rotating on its axis",
+    "Earth’s yearly orbit around the Sun",
+    "Moon phases alone",
+    "The Sun cooling every day",
+    "Think of an illuminated ball.",
+    "What happens to a marked point as the ball rotates?"
+  ],
+  "fr": [
+    "Qu’est-ce qui provoque l’alternance du jour et de la nuit ?",
+    "La rotation de la Terre sur son axe",
+    "L’orbite annuelle de la Terre autour du Soleil",
+    "Les seules phases de la Lune",
+    "Le refroidissement quotidien du Soleil",
+    "Pense à une boule éclairée.",
+    "Que devient un point marqué quand la boule tourne ?"
+  ],
+  "it": [
+    "Cosa causa l’alternanza di giorno e notte?",
+    "La rotazione della Terra sul proprio asse",
+    "L’orbita annuale della Terra intorno al Sole",
+    "Solo le fasi lunari",
+    "Il raffreddamento quotidiano del Sole",
+    "Pensa a una palla illuminata.",
+    "Cosa succede a un punto segnato quando la palla ruota?"
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss1c",
+  "reason": "Replace repeated moon-light statement with its orbit.",
+  "de": [
+    "Welchen Himmelskörper umkreist unser Mond?",
+    "Die Erde",
+    "Den Mars",
+    "Den Jupiter",
+    "Die Venus",
+    "Denke an den Begleiter unseres Planeten.",
+    "Er erscheint regelmässig an unserem Himmel."
+  ],
+  "en": [
+    "Which body does our Moon orbit?",
+    "Earth",
+    "Mars",
+    "Jupiter",
+    "Venus",
+    "Think of our planet’s companion.",
+    "It regularly appears in our sky."
+  ],
+  "fr": [
+    "Autour de quel astre notre Lune tourne-t-elle ?",
+    "La Terre",
+    "Mars",
+    "Jupiter",
+    "Vénus",
+    "Pense au compagnon de notre planète.",
+    "Il apparaît régulièrement dans notre ciel."
+  ],
+  "it": [
+    "Attorno a quale corpo celeste orbita la nostra Luna?",
+    "La Terra",
+    "Marte",
+    "Giove",
+    "Venere",
+    "Pensa al compagno del nostro pianeta.",
+    "Appare regolarmente nel nostro cielo."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss1e",
+  "reason": "Introduce planetary order without repeating a definition.",
+  "de": [
+    "Welcher Planet ist der Sonne am nächsten?",
+    "Merkur",
+    "Erde",
+    "Mars",
+    "Neptun",
+    "Vergleiche die inneren und äusseren Planeten.",
+    "Gesucht ist der innerste Planet."
+  ],
+  "en": [
+    "Which planet is closest to the Sun?",
+    "Mercury",
+    "Earth",
+    "Mars",
+    "Neptune",
+    "Compare the inner and outer planets.",
+    "Look for the innermost planet."
+  ],
+  "fr": [
+    "Quelle planète est la plus proche du Soleil ?",
+    "Mercure",
+    "La Terre",
+    "Mars",
+    "Neptune",
+    "Compare les planètes internes et externes.",
+    "Cherche la planète la plus intérieure."
+  ],
+  "it": [
+    "Quale pianeta è più vicino al Sole?",
+    "Mercurio",
+    "Terra",
+    "Marte",
+    "Nettuno",
+    "Confronta pianeti interni ed esterni.",
+    "Cerca il pianeta più interno."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss1g",
+  "reason": "Recognise appropriate astronomical observation tool.",
+  "de": [
+    "Womit kannst du Details auf dem Mond besser sehen?",
+    "Mit einem Teleskop",
+    "Mit einem Thermometer",
+    "Mit einer Waage",
+    "Mit einem Kompass",
+    "Das Gerät sammelt Licht.",
+    "Es hilft beim Betrachten sehr weit entfernter Dinge."
+  ],
+  "en": [
+    "What helps you see details on the Moon?",
+    "A telescope",
+    "A thermometer",
+    "A scale",
+    "A compass",
+    "The instrument gathers light.",
+    "It helps you observe very distant objects."
+  ],
+  "fr": [
+    "Quel instrument aide à voir des détails sur la Lune ?",
+    "Un télescope",
+    "Un thermomètre",
+    "Une balance",
+    "Une boussole",
+    "L’instrument recueille de la lumière.",
+    "Il aide à observer des objets très éloignés."
+  ],
+  "it": [
+    "Quale strumento aiuta a vedere dettagli sulla Luna?",
+    "Un telescopio",
+    "Un termometro",
+    "Una bilancia",
+    "Una bussola",
+    "Lo strumento raccoglie luce.",
+    "Aiuta a osservare oggetti molto lontani."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss1i",
+  "reason": "Address the misconception that phases change lunar shape.",
+  "de": [
+    "Verändert der Mond bei seinen Phasen seine Kugelform?",
+    "Nein, wir sehen unterschiedlich viel von der beleuchteten Hälfte",
+    "Ja, er wird wirklich zu einer Sichel",
+    "Ja, er verliert regelmässig die Hälfte seiner Masse",
+    "Nein, weil er von allen Seiten selbst leuchtet",
+    "Unterscheide Körperform und sichtbare Beleuchtung.",
+    "Betrachte eine Kugel, die nur von einer Seite beleuchtet wird."
+  ],
+  "en": [
+    "Does the Moon change its spherical shape during its phases?",
+    "No, we see different amounts of its lit half",
+    "Yes, it physically becomes a crescent",
+    "Yes, it regularly loses half its mass",
+    "No, because it produces light on every side",
+    "Distinguish shape from visible illumination.",
+    "Imagine a ball lit from one side."
+  ],
+  "fr": [
+    "La Lune change-t-elle de forme sphérique pendant ses phases ?",
+    "Non, nous voyons des parts différentes de sa moitié éclairée",
+    "Oui, elle devient vraiment un croissant",
+    "Oui, elle perd régulièrement la moitié de sa masse",
+    "Non, car elle produit sa propre lumière de tous côtés",
+    "Distingue la forme et l’éclairage visible.",
+    "Imagine une boule éclairée d’un seul côté."
+  ],
+  "it": [
+    "La Luna cambia forma sferica durante le sue fasi?",
+    "No, vediamo parti diverse della metà illuminata",
+    "Sì, diventa davvero una falce",
+    "Sì, perde regolarmente metà della sua massa",
+    "No, perché produce luce da ogni lato",
+    "Distingui la forma dall’illuminazione visibile.",
+    "Immagina una palla illuminata da un lato."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss1k",
+  "reason": "Apply day/night illumination to a globe model.",
+  "de": [
+    "Eine Lampe stellt die Sonne dar. Wo ist auf dem Globus Nacht?",
+    "Auf der von der Lampe abgewandten Seite",
+    "Auf der direkt beleuchteten Seite",
+    "Immer am Äquator",
+    "Immer am Nordpol",
+    "Betrachte Licht und Schatten.",
+    "Welche Seite erhält gerade kein direktes Lampenlicht?"
+  ],
+  "en": [
+    "A lamp represents the Sun. Where is it night on the globe?",
+    "On the side facing away from the lamp",
+    "On the directly lit side",
+    "Always at the equator",
+    "Always at the North Pole",
+    "Look at light and shadow.",
+    "Which side receives no direct lamplight?"
+  ],
+  "fr": [
+    "Une lampe représente le Soleil. Où fait-il nuit sur le globe ?",
+    "Du côté opposé à la lampe",
+    "Du côté directement éclairé",
+    "Toujours à l’équateur",
+    "Toujours au pôle Nord",
+    "Observe lumière et ombre.",
+    "Quel côté ne reçoit pas directement la lumière ?"
+  ],
+  "it": [
+    "Una lampada rappresenta il Sole. Dove è notte sul globo?",
+    "Sul lato rivolto lontano dalla lampada",
+    "Sul lato direttamente illuminato",
+    "Sempre all’equatore",
+    "Sempre al Polo Nord",
+    "Osserva luce e ombra.",
+    "Quale lato non riceve luce diretta dalla lampada?"
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2a",
+  "reason": "Distinguish an orbital year from daily rotation.",
+  "de": [
+    "Wie lange braucht die Erde ungefähr für einen Sonnenumlauf?",
+    "Ein Jahr",
+    "Einen Tag",
+    "Eine Woche",
+    "Eine Stunde",
+    "Verwechsle Umlauf und Eigendrehung nicht.",
+    "Denke an die Rückkehr derselben Jahreszeit."
+  ],
+  "en": [
+    "About how long does Earth take to orbit the Sun?",
+    "One year",
+    "One day",
+    "One week",
+    "One hour",
+    "Do not confuse orbiting with spinning.",
+    "Think about the return of the same season."
+  ],
+  "fr": [
+    "Combien de temps la Terre met-elle environ pour tourner autour du Soleil ?",
+    "Un an",
+    "Un jour",
+    "Une semaine",
+    "Une heure",
+    "Ne confonds pas orbite et rotation sur soi-même.",
+    "Pense au retour de la même saison."
+  ],
+  "it": [
+    "Quanto impiega circa la Terra a orbitare attorno al Sole?",
+    "Un anno",
+    "Un giorno",
+    "Una settimana",
+    "Un’ora",
+    "Non confondere orbita e rotazione su sé stessa.",
+    "Pensa al ritorno della stessa stagione."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2c",
+  "reason": "Recognise a star's own light production.",
+  "de": [
+    "Was unterscheidet die Sonne von einem Planeten?",
+    "Sie erzeugt selbst sehr viel Licht",
+    "Sie reflektiert nur Mondlicht",
+    "Sie besteht nur aus kaltem Gestein",
+    "Sie kreist als Mond um die Erde",
+    "Vergleiche Stern und Planet.",
+    "Überlege, woher das Tageslicht kommt."
+  ],
+  "en": [
+    "What distinguishes the Sun from a planet?",
+    "It produces a great deal of its own light",
+    "It only reflects moonlight",
+    "It consists only of cold rock",
+    "It orbits Earth as a moon",
+    "Compare a star with a planet.",
+    "Think about where daylight comes from."
+  ],
+  "fr": [
+    "Qu’est-ce qui distingue le Soleil d’une planète ?",
+    "Il produit lui-même beaucoup de lumière",
+    "Il réfléchit seulement la lumière lunaire",
+    "Il est uniquement composé de roche froide",
+    "Il tourne comme une lune autour de la Terre",
+    "Compare une étoile et une planète.",
+    "Pense à l’origine de la lumière du jour."
+  ],
+  "it": [
+    "Cosa distingue il Sole da un pianeta?",
+    "Produce molta luce propria",
+    "Riflette solo la luce lunare",
+    "È composto solo da roccia fredda",
+    "Orbita come una luna attorno alla Terra",
+    "Confronta una stella con un pianeta.",
+    "Pensa all’origine della luce del giorno."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2e",
+  "reason": "Identify a terrestrial planet from different body categories.",
+  "de": [
+    "Welcher dieser Himmelskörper ist ein Planet?",
+    "Mars",
+    "Die Sonne",
+    "Unser Mond",
+    "Der Polarstern",
+    "Unterscheide Sterne, Planeten und Monde.",
+    "Der gesuchte Körper umkreist die Sonne als einer der acht Planeten."
+  ],
+  "en": [
+    "Which of these bodies is a planet?",
+    "Mars",
+    "The Sun",
+    "Our Moon",
+    "Polaris",
+    "Distinguish stars, planets and moons.",
+    "The body orbits the Sun as one of eight planets."
+  ],
+  "fr": [
+    "Lequel de ces astres est une planète ?",
+    "Mars",
+    "Le Soleil",
+    "Notre Lune",
+    "L’étoile Polaire",
+    "Distingue étoiles, planètes et lunes.",
+    "Cet astre est l’une des huit planètes autour du Soleil."
+  ],
+  "it": [
+    "Quale di questi corpi celesti è un pianeta?",
+    "Marte",
+    "Il Sole",
+    "La nostra Luna",
+    "La Stella Polare",
+    "Distingui stelle, pianeti e lune.",
+    "Il corpo è uno degli otto pianeti intorno al Sole."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2g",
+  "reason": "Apply seasonal contrast across hemispheres.",
+  "de": [
+    "In der Schweiz ist Sommer. Welche Jahreszeit hat Australien dann?",
+    "Winter",
+    "Auch Sommer",
+    "Überall Frühling",
+    "Überall Herbst",
+    "Die Länder liegen auf verschiedenen Erdhalbkugeln.",
+    "Diese Halbkugeln sind im Jahreslauf unterschiedlich zur Sonne geneigt."
+  ],
+  "en": [
+    "It is summer in Switzerland. What season is it in Australia?",
+    "Winter",
+    "Summer too",
+    "Spring everywhere",
+    "Autumn everywhere",
+    "The countries are in different hemispheres.",
+    "The hemispheres tilt towards the Sun at different times of year."
+  ],
+  "fr": [
+    "C’est l’été en Suisse. Quelle saison est-ce en Australie ?",
+    "L’hiver",
+    "L’été aussi",
+    "Le printemps partout",
+    "L’automne partout",
+    "Les pays se trouvent dans des hémisphères différents.",
+    "Les hémisphères sont inclinés vers le Soleil à des moments différents."
+  ],
+  "it": [
+    "È estate in Svizzera. Che stagione è in Australia?",
+    "Inverno",
+    "Anche estate",
+    "Primavera ovunque",
+    "Autunno ovunque",
+    "I paesi si trovano in emisferi diversi.",
+    "Gli emisferi sono inclinati verso il Sole in momenti diversi dell’anno."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2i",
+  "reason": "Distinguish measured data from unsupported inference. Second pass: individually refined alternatives.",
+  "de": [
+    "Eine Sonde misst die Temperatur auf dem Mars. Was liefert sie?",
+    "Messdaten über die Bedingungen dort",
+    "Die Temperatur an jedem Ort des Mars für immer",
+    "Den sicheren Nachweis von Leben allein durch diesen Messwert",
+    "Die vollständige Zusammensetzung des Marsinneren allein durch diesen Messwert",
+    "Eine Messung beantwortet eine bestimmte Frage.",
+    "Unterscheide gemessene Werte von weitergehenden Behauptungen."
+  ],
+  "en": [
+    "A probe measures temperature on Mars. What does it provide?",
+    "Measurements of conditions there",
+    "The temperature everywhere on Mars forever",
+    "Certain evidence of life from this reading alone",
+    "The complete composition of Mars’s interior from this reading alone",
+    "A measurement answers a particular question.",
+    "Distinguish measured values from broader claims."
+  ],
+  "fr": [
+    "Une sonde mesure la température sur Mars. Que fournit-elle ?",
+    "Des données sur les conditions locales",
+    "La température partout sur Mars pour toujours",
+    "Une preuve certaine de vie par cette seule mesure",
+    "La composition complète de l’intérieur de Mars par cette seule mesure",
+    "Une mesure répond à une question précise.",
+    "Distingue les valeurs mesurées des affirmations plus larges."
+  ],
+  "it": [
+    "Una sonda misura la temperatura su Marte. Cosa fornisce?",
+    "Dati sulle condizioni locali",
+    "La temperatura ovunque su Marte per sempre",
+    "Prova certa di vita da questa sola misura",
+    "La composizione completa dell’interno di Marte da questa sola misura",
+    "Una misura risponde a una domanda precisa.",
+    "Distingui i valori misurati dalle affermazioni più ampie."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2k",
+  "reason": "Replace repeated year definition with comparison to a lunar month.",
+  "de": [
+    "Was dauert am längsten?",
+    "Ein Umlauf der Erde um die Sonne",
+    "Eine Drehung der Erde um ihre Achse",
+    "Ein Wechsel von Vollmond zu Vollmond",
+    "Eine Schulstunde",
+    "Vergleiche Stunde, Tag, Monat und Jahr.",
+    "Ordne die Vorgänge nach ihrer ungefähren Dauer."
+  ],
+  "en": [
+    "Which takes the longest?",
+    "Earth orbiting the Sun once",
+    "Earth rotating on its axis once",
+    "One full moon to the next",
+    "One school lesson",
+    "Compare an hour, day, month and year.",
+    "Order the events by their approximate duration."
+  ],
+  "fr": [
+    "Qu’est-ce qui dure le plus longtemps ?",
+    "Un tour de la Terre autour du Soleil",
+    "Une rotation de la Terre sur son axe",
+    "Le passage d’une pleine lune à la suivante",
+    "Une leçon à l’école",
+    "Compare heure, jour, mois et année.",
+    "Classe les événements selon leur durée approximative."
+  ],
+  "it": [
+    "Cosa dura più a lungo?",
+    "Un’orbita della Terra attorno al Sole",
+    "Una rotazione terrestre sul proprio asse",
+    "Il passaggio da una luna piena alla successiva",
+    "Una lezione scolastica",
+    "Confronta ora, giorno, mese e anno.",
+    "Ordina gli eventi secondo la durata approssimativa."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2m",
+  "reason": "Introduce safe solar observation without technical formulas.",
+  "de": [
+    "Was gilt beim Beobachten der Sonne mit einem Teleskop?",
+    "Nur mit geeigneter Schutzausrüstung unter fachkundiger Anleitung",
+    "Eine normale Sonnenbrille reicht immer",
+    "Kurzes Hineinschauen ist ohne Schutz sicher",
+    "Ein getöntes Fensterglas genügt",
+    "Gebündeltes Sonnenlicht kann die Augen schwer schädigen.",
+    "Alltagssonnenbrillen sind keine speziellen Sonnenfilter."
+  ],
+  "en": [
+    "What is essential when viewing the Sun through a telescope?",
+    "Proper protective equipment and expert guidance",
+    "Ordinary sunglasses are always enough",
+    "A quick look without protection is safe",
+    "Tinted window glass is sufficient",
+    "Concentrated sunlight can seriously damage the eyes.",
+    "Everyday sunglasses are not special solar filters."
+  ],
+  "fr": [
+    "Que faut-il pour observer le Soleil au télescope ?",
+    "Une protection adaptée et un encadrement compétent",
+    "Des lunettes de soleil ordinaires suffisent toujours",
+    "Un regard rapide sans protection est sans danger",
+    "Un verre de fenêtre teinté suffit",
+    "La lumière solaire concentrée peut gravement abîmer les yeux.",
+    "Les lunettes ordinaires ne sont pas des filtres solaires spéciaux."
+  ],
+  "it": [
+    "Cosa serve per osservare il Sole con un telescopio?",
+    "Protezioni adatte e la guida di un esperto",
+    "Bastano sempre normali occhiali da sole",
+    "Un’occhiata breve senza protezione è sicura",
+    "Basta un vetro da finestra colorato",
+    "La luce solare concentrata può danneggiare gravemente gli occhi.",
+    "Gli occhiali comuni non sono filtri solari speciali."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2o",
+  "reason": "Replace another orbit template with outer planet identification.",
+  "de": [
+    "Welcher der acht Planeten ist am weitesten von der Sonne entfernt?",
+    "Neptun",
+    "Merkur",
+    "Venus",
+    "Erde",
+    "Suche einen äusseren Planeten.",
+    "Er liegt noch jenseits von Uranus."
+  ],
+  "en": [
+    "Which of the eight planets is farthest from the Sun?",
+    "Neptune",
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Look for an outer planet.",
+    "It lies beyond Uranus."
+  ],
+  "fr": [
+    "Laquelle des huit planètes est la plus éloignée du Soleil ?",
+    "Neptune",
+    "Mercure",
+    "Vénus",
+    "La Terre",
+    "Cherche une planète externe.",
+    "Elle se trouve au-delà d’Uranus."
+  ],
+  "it": [
+    "Quale degli otto pianeti è più lontano dal Sole?",
+    "Nettuno",
+    "Mercurio",
+    "Venere",
+    "Terra",
+    "Cerca un pianeta esterno.",
+    "Si trova oltre Urano."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss2q",
+  "reason": "Apply changing day length to Switzerland rather than repeat the cause.",
+  "de": [
+    "Wann sind die Tage in der Schweiz im Allgemeinen länger?",
+    "Im Sommer als im Winter",
+    "Im Winter als im Sommer",
+    "In jeder Jahreszeit genau gleich lang",
+    "Nur bei Vollmond",
+    "Vergleiche die Zeiten von Sonnenaufgang und Sonnenuntergang.",
+    "Denke an helle Abende während der Sommerferien."
+  ],
+  "en": [
+    "When are days generally longer in Switzerland?",
+    "In summer than in winter",
+    "In winter than in summer",
+    "Exactly the same length in every season",
+    "Only at full moon",
+    "Compare sunrise and sunset times.",
+    "Think of bright evenings in the summer holidays."
+  ],
+  "fr": [
+    "Quand les journées sont-elles généralement plus longues en Suisse ?",
+    "En été qu’en hiver",
+    "En hiver qu’en été",
+    "Elles ont la même durée à chaque saison",
+    "Seulement à la pleine lune",
+    "Compare les heures de lever et de coucher du Soleil.",
+    "Pense aux soirées claires des vacances d’été."
+  ],
+  "it": [
+    "Quando sono generalmente più lunghe le giornate in Svizzera?",
+    "In estate rispetto all’inverno",
+    "In inverno rispetto all’estate",
+    "Hanno sempre la stessa durata in ogni stagione",
+    "Solo durante la luna piena",
+    "Confronta gli orari di alba e tramonto.",
+    "Pensa alle serate luminose delle vacanze estive."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss3a",
+  "reason": "Identify full moon illumination without duplicated template.",
+  "de": [
+    "Welche Mondphase zeigt uns eine vollständig beleuchtete Mondscheibe?",
+    "Vollmond",
+    "Neumond",
+    "Zunehmende Sichel",
+    "Abnehmende Sichel",
+    "Betrachte den sichtbaren hellen Anteil.",
+    "Die gesuchte Scheibe erscheint rund und ganz hell."
+  ],
+  "en": [
+    "Which phase shows a fully lit lunar disc?",
+    "Full moon",
+    "New moon",
+    "Waxing crescent",
+    "Waning crescent",
+    "Consider the visible illuminated portion.",
+    "The disc appears round and entirely bright."
+  ],
+  "fr": [
+    "Quelle phase montre un disque lunaire entièrement éclairé ?",
+    "La pleine lune",
+    "La nouvelle lune",
+    "Le premier croissant",
+    "Le dernier croissant",
+    "Observe la partie claire visible.",
+    "Le disque paraît rond et entièrement lumineux."
+  ],
+  "it": [
+    "Quale fase mostra un disco lunare completamente illuminato?",
+    "Luna piena",
+    "Luna nuova",
+    "Falce crescente",
+    "Falce calante",
+    "Considera la parte illuminata visibile.",
+    "Il disco appare rotondo e tutto luminoso."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss3c",
+  "reason": "Replace repeated daily-rotation statement with rotation duration.",
+  "de": [
+    "Wie lange dauert eine Erdumdrehung ungefähr?",
+    "24 Stunden",
+    "30 Tage",
+    "365 Tage",
+    "60 Minuten",
+    "Es geht um die Eigendrehung, nicht um den Sonnenumlauf.",
+    "Vergleiche mit einem ganzen Tag."
+  ],
+  "en": [
+    "About how long does one Earth rotation take?",
+    "24 hours",
+    "30 days",
+    "365 days",
+    "60 minutes",
+    "This is spinning, not orbiting the Sun.",
+    "Compare it with a whole day."
+  ],
+  "fr": [
+    "Combien dure environ une rotation de la Terre ?",
+    "24 heures",
+    "30 jours",
+    "365 jours",
+    "60 minutes",
+    "Il s’agit de tourner sur soi-même, pas autour du Soleil.",
+    "Compare avec une journée entière."
+  ],
+  "it": [
+    "Quanto dura circa una rotazione terrestre?",
+    "24 ore",
+    "30 giorni",
+    "365 giorni",
+    "60 minuti",
+    "Si tratta di ruotare su sé stessa, non attorno al Sole.",
+    "Confronta con una giornata intera."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss3e",
+  "reason": "Differentiate an eclipse from ordinary phases. Second pass: individually refined alternatives.",
+  "de": [
+    "Was geschieht bei einer Mondfinsternis?",
+    "Der Mond tritt in den Schatten der Erde",
+    "Der Mond steht zwischen Erde und Sonne",
+    "Der Mond verschwindet hinter einer Wolke der Erdatmosphäre",
+    "Die beleuchtete Mondhälfte dreht sich bei jeder normalen Mondphase in den Erdschatten",
+    "Es geht um den Schatten eines Himmelskörpers.",
+    "Überlege, welcher Körper zwischen Sonne und Mond stehen muss."
+  ],
+  "en": [
+    "What happens during a lunar eclipse?",
+    "The Moon enters Earth’s shadow",
+    "The Moon is between Earth and the Sun",
+    "The Moon disappears behind a cloud in Earth’s atmosphere",
+    "The illuminated half turns into Earth’s shadow during every normal Moon phase",
+    "Think about a body casting a shadow.",
+    "Which body must be between the Sun and the Moon?"
+  ],
+  "fr": [
+    "Que se passe-t-il pendant une éclipse de Lune ?",
+    "La Lune entre dans l’ombre de la Terre",
+    "La Lune se trouve entre Terre et Soleil",
+    "La Lune disparaît derrière un nuage terrestre",
+    "La moitié éclairée entre dans l’ombre terrestre à chaque phase lunaire normale",
+    "Pense à l’ombre d’un astre.",
+    "Quel astre doit se trouver entre Soleil et Lune ?"
+  ],
+  "it": [
+    "Cosa avviene durante un’eclissi lunare?",
+    "La Luna entra nell’ombra della Terra",
+    "La Luna è tra Terra e Sole",
+    "La Luna scompare dietro una nuvola terrestre",
+    "La metà illuminata entra nell’ombra terrestre a ogni normale fase lunare",
+    "Pensa all’ombra di un corpo celeste.",
+    "Quale corpo deve trovarsi tra Sole e Luna?"
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss3g",
+  "reason": "Recognise scale beyond our solar system.",
+  "de": [
+    "Zu welcher Galaxie gehört unser Sonnensystem?",
+    "Zur Milchstrasse",
+    "Zum Andromedanebel",
+    "Zum Orionnebel",
+    "Zum Asteroidengürtel",
+    "Eine Galaxie enthält sehr viele Sterne.",
+    "Den Namen kennst du vielleicht als helles Band am Nachthimmel."
+  ],
+  "en": [
+    "Which galaxy contains our solar system?",
+    "The Milky Way",
+    "Andromeda",
+    "The Orion Nebula",
+    "The asteroid belt",
+    "A galaxy contains many stars.",
+    "Its name describes a pale band across the night sky."
+  ],
+  "fr": [
+    "Dans quelle galaxie se trouve notre système solaire ?",
+    "La Voie lactée",
+    "Andromède",
+    "La nébuleuse d’Orion",
+    "La ceinture d’astéroïdes",
+    "Une galaxie contient de nombreuses étoiles.",
+    "Son nom évoque une bande claire dans le ciel nocturne."
+  ],
+  "it": [
+    "In quale galassia si trova il nostro sistema solare?",
+    "Nella Via Lattea",
+    "In Andromeda",
+    "Nella nebulosa di Orione",
+    "Nella fascia degli asteroidi",
+    "Una galassia contiene molte stelle.",
+    "Il suo nome richiama una fascia chiara nel cielo notturno."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss3i",
+  "reason": "Replace repeated telescope definition with observation conditions.",
+  "de": [
+    "Wo erkennst du in einer klaren Nacht meist mehr Sterne?",
+    "An einem dunklen Ort fern von Strassenlampen",
+    "Direkt unter einer hellen Strassenlampe",
+    "Durch eine stark beleuchtete Fensterscheibe",
+    "Vor einer blendenden Leuchtreklame",
+    "Zusätzliches Licht kann schwache Sterne überstrahlen.",
+    "Vergleiche die Helligkeit deiner Umgebung."
+  ],
+  "en": [
+    "Where can you usually see more stars on a clear night?",
+    "In a dark place away from streetlights",
+    "Directly beneath a bright streetlight",
+    "Through a brightly lit window",
+    "In front of a dazzling advertising sign",
+    "Extra light can outshine faint stars.",
+    "Compare how bright your surroundings are."
+  ],
+  "fr": [
+    "Où voit-on généralement plus d’étoiles par nuit claire ?",
+    "Dans un endroit sombre loin des lampadaires",
+    "Juste sous un lampadaire lumineux",
+    "À travers une fenêtre fortement éclairée",
+    "Devant une enseigne éblouissante",
+    "La lumière supplémentaire peut masquer les étoiles faibles.",
+    "Compare la luminosité autour de toi."
+  ],
+  "it": [
+    "Dove si vedono di solito più stelle in una notte serena?",
+    "In un luogo buio lontano dai lampioni",
+    "Proprio sotto un lampione luminoso",
+    "Attraverso una finestra molto illuminata",
+    "Davanti a un’insegna abbagliante",
+    "La luce aggiuntiva può nascondere le stelle deboli.",
+    "Confronta la luminosità dell’ambiente."
+  ]
+},
+{
+  "key": "5/science/sonnensystem/g5ss3k",
+  "reason": "Distinguish monthly phases from weather changes. Second pass: individually refined alternatives.",
+  "de": [
+    "Warum ist eine Wolke vor dem Mond keine Mondphase?",
+    "Wolken verdecken nur unsere Sicht auf den Mond",
+    "Die Wolke verändert die Form des festen Mondkörpers",
+    "Die Wolke verschiebt die beleuchtete Hälfte auf der Mondoberfläche",
+    "Die Wolke ist ein Teil des Mondschattens auf der Erde",
+    "Unterscheide die Erdatmosphäre vom Weltraum.",
+    "Überlege, was zu sehen wäre, wenn die Wolke weiterzieht."
+  ],
+  "en": [
+    "Why is a cloud in front of the Moon not a lunar phase?",
+    "Clouds only block our view of the Moon",
+    "The cloud changes the shape of the solid Moon",
+    "The cloud moves the illuminated half across the Moon’s surface",
+    "The cloud is part of the Moon’s shadow on Earth",
+    "Distinguish Earth’s atmosphere from space.",
+    "What would you see if the cloud moved away?"
+  ],
+  "fr": [
+    "Pourquoi un nuage devant la Lune n’est-il pas une phase lunaire ?",
+    "Les nuages cachent seulement notre vue de la Lune",
+    "Le nuage change la forme du corps solide de la Lune",
+    "Le nuage déplace la moitié éclairée sur la surface lunaire",
+    "Le nuage fait partie de l’ombre de la Lune sur Terre",
+    "Distingue l’atmosphère terrestre de l’espace.",
+    "Que verrais-tu si le nuage s’éloignait ?"
+  ],
+  "it": [
+    "Perché una nuvola davanti alla Luna non è una fase lunare?",
+    "Le nuvole nascondono soltanto la Luna alla vista",
+    "La nuvola cambia la forma del corpo solido della Luna",
+    "La nuvola sposta la metà illuminata sulla superficie lunare",
+    "La nuvola è parte dell’ombra lunare sulla Terra",
+    "Distingui l’atmosfera terrestre dallo spazio.",
+    "Cosa vedresti se la nuvola si spostasse?"
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se1a",
+  "reason": "Replace charge-motion definition with a simple circuit requirement.",
+  "de": [
+    "Eine passende Batterie und Lampe funktionieren. Welche Verbindung lässt die Lampe leuchten?",
+    "Wenn der Stromkreis geschlossen ist",
+    "Wenn beide Kabel am selben Batteriepol enden",
+    "Wenn ein Kabel unterbrochen ist",
+    "Wenn die Batterie nur neben der Lampe liegt",
+    "Verfolge den ganzen Weg zwischen den Batteriepolen.",
+    "Die Lampe braucht eine durchgehende Verbindung."
+  ],
+  "en": [
+    "A suitable battery and lamp both work. Which connection lets the lamp light up?",
+    "When the circuit is closed",
+    "When both wires end at the same battery terminal",
+    "When one wire is broken",
+    "When the battery is only placed beside the bulb",
+    "Trace the whole path between the battery terminals.",
+    "The bulb needs a continuous connection."
+  ],
+  "fr": [
+    "Une pile et une lampe adaptées fonctionnent. Quel raccordement permet à la lampe de s’allumer ?",
+    "Quand le circuit est fermé",
+    "Quand les deux fils arrivent à la même borne",
+    "Quand un fil est coupé",
+    "Quand la pile est seulement posée près de la lampe",
+    "Suis le trajet entre les bornes de la pile.",
+    "La lampe a besoin d’une connexion continue."
+  ],
+  "it": [
+    "Una batteria e una lampada adatte funzionano. Quale collegamento accende la lampada?",
+    "Quando il circuito è chiuso",
+    "Quando i fili finiscono allo stesso polo",
+    "Quando un filo è interrotto",
+    "Quando la pila è solo accanto alla lampadina",
+    "Segui il percorso tra i poli della pila.",
+    "La lampadina ha bisogno di un collegamento continuo."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se1c",
+  "reason": "Apply switch function.",
+  "de": [
+    "Was macht ein geöffneter Schalter im Stromkreis?",
+    "Er unterbricht die Verbindung",
+    "Er lädt die Batterie automatisch auf",
+    "Er erzeugt zusätzlichen Strom",
+    "Er macht ein fehlendes Kabel überflüssig",
+    "Betrachte die Kontakte im Schalter.",
+    "Können Ladungen noch den ganzen Weg zurücklegen?"
+  ],
+  "en": [
+    "What does an open switch do in a circuit?",
+    "It breaks the connection",
+    "It automatically charges the battery",
+    "It produces extra current",
+    "It replaces a missing wire",
+    "Look at the switch contacts.",
+    "Can charges still follow the complete path?"
+  ],
+  "fr": [
+    "Que fait un interrupteur ouvert dans un circuit ?",
+    "Il interrompt la connexion",
+    "Il recharge automatiquement la pile",
+    "Il produit du courant supplémentaire",
+    "Il remplace un fil manquant",
+    "Observe les contacts de l’interrupteur.",
+    "Les charges peuvent-elles encore suivre tout le trajet ?"
+  ],
+  "it": [
+    "Cosa fa un interruttore aperto nel circuito?",
+    "Interrompe il collegamento",
+    "Ricarica automaticamente la pila",
+    "Produce corrente aggiuntiva",
+    "Sostituisce un filo mancante",
+    "Osserva i contatti dell’interruttore.",
+    "Le cariche possono ancora percorrere tutto il circuito?"
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se1e",
+  "reason": "Identify the energy input of a wind turbine. Second pass: individually refined alternatives.",
+  "de": [
+    "Was setzt die Flügel eines Windrads in Bewegung?",
+    "Strömende Luft",
+    "Fliessendes Wasser an den Flügeln",
+    "Wärme im Fundament",
+    "Sonnenlicht direkt auf der Nabe",
+    "Betrachte die Umgebung des Windrads.",
+    "Die Energiequelle muss nicht als Brennstoff angeliefert werden."
+  ],
+  "en": [
+    "What makes wind turbine blades move?",
+    "Moving air",
+    "Water flowing against the blades",
+    "Heat in the foundation",
+    "Sunlight directly on the hub",
+    "Look at the turbine’s surroundings.",
+    "Its energy source does not need delivery as fuel."
+  ],
+  "fr": [
+    "Qu’est-ce qui fait tourner les pales d’une éolienne ?",
+    "L’air en mouvement",
+    "L’eau qui coule sur les pales",
+    "La chaleur des fondations",
+    "La lumière directement sur le moyeu",
+    "Observe l’environnement de l’éolienne.",
+    "Sa source d’énergie n’est pas livrée comme combustible."
+  ],
+  "it": [
+    "Cosa fa muovere le pale di una turbina eolica?",
+    "L’aria in movimento",
+    "Acqua che scorre sulle pale",
+    "Calore nelle fondamenta",
+    "Luce direttamente sul mozzo",
+    "Osserva l’ambiente della turbina.",
+    "La fonte energetica non va consegnata come combustibile."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se1g",
+  "reason": "Identify a useful solar energy transfer.",
+  "de": [
+    "Wie gelangt Energie von der Sonne zur Erde?",
+    "Durch Strahlung",
+    "Durch ein Stromkabel",
+    "Nur durch bewegte Luft",
+    "Nur durch fliessendes Wasser",
+    "Zwischen Sonne und Erde liegt weitgehend leerer Raum.",
+    "Welche Übertragung braucht kein Kabel und keine Luftströmung?"
+  ],
+  "en": [
+    "How does energy travel from the Sun to Earth?",
+    "By radiation",
+    "Through an electrical cable",
+    "Only through moving air",
+    "Only through flowing water",
+    "Space between the Sun and Earth is mostly empty.",
+    "Which transfer needs neither wires nor moving air?"
+  ],
+  "fr": [
+    "Comment l’énergie arrive-t-elle du Soleil à la Terre ?",
+    "Par rayonnement",
+    "Par un câble électrique",
+    "Uniquement par de l’air en mouvement",
+    "Uniquement par de l’eau qui coule",
+    "L’espace entre le Soleil et la Terre est surtout vide.",
+    "Quel transfert ne nécessite ni câble ni courant d’air ?"
+  ],
+  "it": [
+    "Come arriva l’energia dal Sole alla Terra?",
+    "Tramite radiazione",
+    "Attraverso un cavo elettrico",
+    "Solo tramite aria in movimento",
+    "Solo tramite acqua corrente",
+    "Lo spazio tra Sole e Terra è quasi vuoto.",
+    "Quale trasferimento non richiede cavi o aria in movimento?"
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se1i",
+  "reason": "Assess gravitational potential through height comparison. Second pass: individually refined alternatives.",
+  "de": [
+    "Derselbe Ball liegt einmal tief, einmal höher. Wo hat er mehr Lageenergie?",
+    "Am höheren Ort",
+    "Am tieferen Ort",
+    "An beiden Orten gleich viel, weil es derselbe Ball ist",
+    "Das lässt sich auch bei bekannter Höhe und Masse nie vergleichen",
+    "Vergleiche die mögliche Fallhöhe.",
+    "Die Masse des Balls bleibt gleich."
+  ],
+  "en": [
+    "The same ball is placed low and then higher. Where has it more gravitational potential energy?",
+    "At the higher position",
+    "At the lower place",
+    "The same at both places because it is the same ball",
+    "It can never be compared even with height and mass known",
+    "Compare the possible falling distance.",
+    "The ball’s mass stays the same."
+  ],
+  "fr": [
+    "La même balle est placée en bas puis plus haut. Où a-t-elle plus d’énergie de position ?",
+    "À l’endroit le plus haut",
+    "Au point le plus bas",
+    "Autant aux deux endroits car c’est la même balle",
+    "On ne peut jamais comparer même avec hauteur et masse connues",
+    "Compare la hauteur de chute possible.",
+    "La masse de la balle reste la même."
+  ],
+  "it": [
+    "La stessa palla è prima in basso e poi più in alto. Dove ha più energia potenziale gravitazionale?",
+    "Nel punto più alto",
+    "Nel punto più basso",
+    "Uguale nei due luoghi perché è la stessa palla",
+    "Non si può mai confrontare nemmeno conoscendo altezza e massa",
+    "Confronta la possibile altezza di caduta.",
+    "La massa della palla resta uguale."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se1k",
+  "reason": "Recognise generator conversion in a bicycle dynamo. Second pass: individually refined alternatives.",
+  "de": [
+    "Welche Energie wandelt ein Fahrraddynamo in elektrische Energie um?",
+    "Bewegungsenergie",
+    "Wärmeenergie aus der Umgebung",
+    "Lichtenergie von der Strassenbeleuchtung",
+    "Chemische Energie aus einem Brennstoff im Dynamo",
+    "Der Dynamo arbeitet, wenn sich etwas dreht.",
+    "Verfolge die Verbindung zum Rad."
+  ],
+  "en": [
+    "What energy does a bicycle dynamo turn into electrical energy?",
+    "Movement energy",
+    "Heat from the surroundings",
+    "Light energy from street lamps",
+    "Chemical energy from fuel inside the dynamo",
+    "The dynamo operates when something rotates.",
+    "Follow its connection to the wheel."
+  ],
+  "fr": [
+    "Quelle énergie une dynamo de vélo transforme-t-elle en énergie électrique ?",
+    "L’énergie du mouvement",
+    "La chaleur ambiante",
+    "La lumière des lampadaires",
+    "L’énergie chimique d’un carburant dans la dynamo",
+    "La dynamo fonctionne quand quelque chose tourne.",
+    "Suis sa connexion à la roue."
+  ],
+  "it": [
+    "Quale energia trasforma in elettricità una dinamo da bicicletta?",
+    "L’energia del movimento",
+    "Calore dell’ambiente",
+    "Energia luminosa dei lampioni",
+    "Energia chimica di un combustibile nella dinamo",
+    "La dinamo funziona quando qualcosa ruota.",
+    "Segui il collegamento con la ruota."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se2a",
+  "reason": "Clarify series-circuit interruption rather than a blanket failure statement. Second pass: individually refined alternatives.",
+  "de": [
+    "Zwei Lampen liegen in Reihe. Ein Kabel wird getrennt. Was geschieht?",
+    "Beide Lampen erlöschen",
+    "Nur die erste Lampe erlischt",
+    "Nur die zweite Lampe erlischt",
+    "Beide leuchten unverändert weiter",
+    "Es gibt nur einen gemeinsamen Stromweg.",
+    "Prüfe, ob dieser Weg noch geschlossen ist."
+  ],
+  "en": [
+    "Two bulbs are in series. A wire is disconnected. What happens?",
+    "Both bulbs go out",
+    "Only the first lamp goes out",
+    "Only the second lamp goes out",
+    "Both keep shining unchanged",
+    "There is only one shared current path.",
+    "Check whether this path is still complete."
+  ],
+  "fr": [
+    "Deux lampes sont en série. Un fil est débranché. Que se passe-t-il ?",
+    "Les deux lampes s’éteignent",
+    "Seule la première lampe s’éteint",
+    "Seule la deuxième lampe s’éteint",
+    "Les deux brillent sans changement",
+    "Il n’y a qu’un trajet commun pour le courant.",
+    "Vérifie si ce trajet est encore fermé."
+  ],
+  "it": [
+    "Due lampadine sono in serie. Si scollega un filo. Cosa succede?",
+    "Entrambe si spengono",
+    "Si spegne solo la prima lampada",
+    "Si spegne solo la seconda lampada",
+    "Entrambe continuano invariate",
+    "C’è un solo percorso comune per la corrente.",
+    "Controlla se quel percorso è ancora chiuso."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se2i",
+  "reason": "Replace transformer technical definition with safe classroom electricity practice.",
+  "de": [
+    "Welche Stromquelle ist für einen einfachen Schulversuch vorgesehen?",
+    "Eine passende Kleinspannungsbatterie nach Anleitung",
+    "Eine selbst geöffnete Steckdose",
+    "Ein beschädigtes Netzkabel",
+    "Ein Stromkasten an der Strasse",
+    "Arbeitet nach der Anleitung der Lehrperson.",
+    "Netzspannung gehört nicht in selbst gebaute Kinderstromkreise."
+  ],
+  "en": [
+    "Which power source suits a simple school circuit experiment?",
+    "A suitable low-voltage battery used as instructed",
+    "A wall socket you open yourself",
+    "A damaged mains cable",
+    "A street electrical cabinet",
+    "Follow your teacher’s instructions.",
+    "Mains voltage does not belong in children’s homemade circuits."
+  ],
+  "fr": [
+    "Quelle source convient à une expérience électrique simple à l’école ?",
+    "Une pile de basse tension adaptée, selon les consignes",
+    "Une prise ouverte soi-même",
+    "Un câble secteur abîmé",
+    "Une armoire électrique dans la rue",
+    "Suis les consignes de l’enseignant.",
+    "La tension du secteur ne convient pas aux circuits fabriqués par les enfants."
+  ],
+  "it": [
+    "Quale fonte va bene per un semplice circuito scolastico?",
+    "Una pila adatta a bassa tensione secondo le istruzioni",
+    "Una presa aperta da soli",
+    "Un cavo di rete danneggiato",
+    "Un armadio elettrico stradale",
+    "Segui le istruzioni dell’insegnante.",
+    "La tensione di rete non va usata nei circuiti costruiti dai bambini."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se2k",
+  "reason": "Classify nuclear fuel without nuclear reaction details.",
+  "de": [
+    "Welche Energiequelle ist nicht erneuerbar?",
+    "Uran",
+    "Sonnenlicht",
+    "Wind",
+    "Fliessendes Wasser",
+    "Erneuerbare Quellen werden natürlich laufend erneuert.",
+    "Welcher Stoff wird als begrenzter Rohstoff abgebaut?"
+  ],
+  "en": [
+    "Which energy source is not renewable?",
+    "Uranium",
+    "Sunlight",
+    "Wind",
+    "Flowing water",
+    "Renewable sources are naturally replenished.",
+    "Which substance is mined as a limited raw material?"
+  ],
+  "fr": [
+    "Quelle source d’énergie n’est pas renouvelable ?",
+    "L’uranium",
+    "La lumière solaire",
+    "Le vent",
+    "L’eau qui coule",
+    "Les sources renouvelables se renouvellent naturellement.",
+    "Quelle substance est extraite comme ressource limitée ?"
+  ],
+  "it": [
+    "Quale fonte energetica non è rinnovabile?",
+    "L’uranio",
+    "La luce solare",
+    "Il vento",
+    "L’acqua corrente",
+    "Le fonti rinnovabili si rigenerano naturalmente.",
+    "Quale sostanza viene estratta come risorsa limitata?"
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se2m",
+  "reason": "Recognise a transition away from fossil generation.",
+  "de": [
+    "Welche Veränderung nutzt statt Kohle eine erneuerbare Energiequelle?",
+    "Strom aus Windkraft statt aus einem Kohlekraftwerk",
+    "Strom aus Erdöl statt aus Kohle",
+    "Mehr Kohle pro erzeugter Strommenge",
+    "Ein Kohlekraftwerk nur anders benennen",
+    "Vergleiche die Energiequellen, nicht ihre Namen.",
+    "Achte darauf, ob ein fossiler Brennstoff gebraucht wird."
+  ],
+  "en": [
+    "Which change replaces coal with a renewable energy source?",
+    "Wind power instead of a coal power station",
+    "Oil power instead of coal",
+    "More coal for the same electricity output",
+    "Only renaming a coal power station",
+    "Compare energy sources, not their names.",
+    "Check whether a fossil fuel is needed."
+  ],
+  "fr": [
+    "Quel changement remplace le charbon par une énergie renouvelable ?",
+    "L’électricité éolienne à la place d’une centrale à charbon",
+    "L’électricité au pétrole à la place du charbon",
+    "Plus de charbon pour autant d’électricité",
+    "Renommer seulement une centrale à charbon",
+    "Compare les sources, pas leurs noms.",
+    "Vérifie si un combustible fossile est nécessaire."
+  ],
+  "it": [
+    "Quale cambiamento sostituisce il carbone con energia rinnovabile?",
+    "Energia eolica al posto di una centrale a carbone",
+    "Energia dal petrolio al posto del carbone",
+    "Più carbone per la stessa elettricità",
+    "Cambiare solo il nome di una centrale a carbone",
+    "Confronta le fonti, non i loro nomi.",
+    "Controlla se serve un combustibile fossile."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se3a",
+  "reason": "Replace efficiency formula with equal-output comparison.",
+  "de": [
+    "Zwei Lampen sind gleich hell. Welche ist sparsamer?",
+    "Die Lampe mit geringerem Stromverbrauch",
+    "Die Lampe mit höherem Stromverbrauch",
+    "Immer die schwerere Lampe",
+    "Immer die grössere Verpackung",
+    "Die gewünschte Lichtmenge ist bei beiden gleich.",
+    "Vergleiche die benötigte elektrische Energie."
+  ],
+  "en": [
+    "Two lamps are equally bright. Which is more energy-efficient?",
+    "The one using less electricity",
+    "The one using more electricity",
+    "Always the heavier lamp",
+    "Always the larger package",
+    "Both provide the same amount of light.",
+    "Compare the electrical energy they need."
+  ],
+  "fr": [
+    "Deux lampes éclairent autant. Laquelle est plus économe ?",
+    "Celle qui consomme moins d’électricité",
+    "Celle qui consomme plus d’électricité",
+    "Toujours la plus lourde",
+    "Toujours le plus grand emballage",
+    "Les deux fournissent autant de lumière.",
+    "Compare l’énergie électrique nécessaire."
+  ],
+  "it": [
+    "Due lampade illuminano ugualmente. Quale è più efficiente?",
+    "Quella che consuma meno elettricità",
+    "Quella che consuma più elettricità",
+    "Sempre la più pesante",
+    "Sempre la confezione più grande",
+    "Entrambe forniscono la stessa luce.",
+    "Confronta l’energia elettrica necessaria."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se3c",
+  "reason": "Replace Faraday law with a hand-cranked generator application. Second pass: individually refined alternatives.",
+  "de": [
+    "Eine Kurbellampe hat keine Batterie. Wodurch erhält sie beim Kurbeln Energie?",
+    "Durch die Muskelarbeit an der Kurbel",
+    "Durch die Raumwärme ohne weitere Energiezufuhr",
+    "Durch das eigene Licht, das vollständig wieder genutzt wird",
+    "Durch die Luftfeuchtigkeit ohne weitere Energiequelle",
+    "Denke daran, wer die Kurbel bewegt.",
+    "Ein Generator kann eine Drehbewegung nutzen."
+  ],
+  "en": [
+    "A hand-cranked lamp has no battery. Where does its energy come from while cranking?",
+    "Muscle work on the crank",
+    "From room heat without any other energy input",
+    "From its own light being completely reused",
+    "From humidity without any other energy source",
+    "Think about who turns the crank.",
+    "A generator can use rotation."
+  ],
+  "fr": [
+    "Une lampe à manivelle n’a pas de pile. D’où vient son énergie quand on tourne ?",
+    "Du travail des muscles sur la manivelle",
+    "Par la chaleur de la pièce sans autre apport",
+    "Par sa propre lumière entièrement réutilisée",
+    "Par l’humidité sans autre source d’énergie",
+    "Pense à la personne qui tourne la manivelle.",
+    "Un générateur peut utiliser une rotation."
+  ],
+  "it": [
+    "Una lampada a manovella non ha pila. Da dove viene l’energia quando la giri?",
+    "Dal lavoro dei muscoli sulla manovella",
+    "Dal calore della stanza senza altro apporto",
+    "Dalla propria luce interamente riutilizzata",
+    "Dall’umidità senza altra fonte energetica",
+    "Pensa a chi gira la manovella.",
+    "Un generatore può usare una rotazione."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se3e",
+  "reason": "Recognise photovoltaic conversion with related energy alternatives.",
+  "de": [
+    "Was wandelt eine Solarzelle direkt in elektrische Energie um?",
+    "Licht",
+    "Windbewegung",
+    "Kohle",
+    "Fliessendes Wasser",
+    "Nicht jede erneuerbare Anlage arbeitet gleich.",
+    "Denke an eine Anlage auf einem sonnigen Dach."
+  ],
+  "en": [
+    "What does a solar cell turn directly into electrical energy?",
+    "Light",
+    "Wind movement",
+    "Coal",
+    "Flowing water",
+    "Not all renewable systems work the same way.",
+    "Think of an installation on a sunny roof."
+  ],
+  "fr": [
+    "Que transforme directement une cellule solaire en électricité ?",
+    "La lumière",
+    "Le mouvement du vent",
+    "Le charbon",
+    "L’eau qui coule",
+    "Toutes les installations renouvelables ne fonctionnent pas pareil.",
+    "Pense à une installation sur un toit ensoleillé."
+  ],
+  "it": [
+    "Cosa trasforma direttamente in elettricità una cella solare?",
+    "La luce",
+    "Il movimento del vento",
+    "Il carbone",
+    "L’acqua corrente",
+    "Non tutti gli impianti rinnovabili funzionano allo stesso modo.",
+    "Pensa a un impianto su un tetto soleggiato."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se3g",
+  "reason": "Replace capacitor field theory with rechargeable energy storage. Second pass: individually refined alternatives.",
+  "de": [
+    "Wozu dient der Akku einer Taschenlampe?",
+    "Energie beim Laden aufnehmen und später für das Licht bereitstellen",
+    "Während des Gebrauchs unbegrenzt neue Energie erzeugen",
+    "Elektrische Energie nur direkt aus der Raumluft beziehen",
+    "Beim Entladen mehr nutzbare Energie abgeben, als zuvor zugeführt wurde",
+    "Vergleiche Aufladen und späteres Benutzen.",
+    "Auch ein voller Akku wird beim Betrieb allmählich leer."
+  ],
+  "en": [
+    "What is a torch’s rechargeable battery for?",
+    "Take in energy when charging and supply it later for light",
+    "Generate unlimited new energy during use",
+    "Obtain electrical energy only directly from room air",
+    "Deliver more usable energy when discharging than was supplied",
+    "Compare charging with later use.",
+    "Even a full battery gradually runs down during use."
+  ],
+  "fr": [
+    "À quoi sert la batterie rechargeable d’une lampe de poche ?",
+    "Recevoir de l’énergie à la recharge et la fournir ensuite pour éclairer",
+    "Créer une énergie nouvelle illimitée pendant l’usage",
+    "Obtenir l’énergie électrique uniquement de l’air ambiant",
+    "Fournir plus d’énergie utilisable que celle reçue",
+    "Compare la recharge et l’utilisation ultérieure.",
+    "Même une batterie pleine se décharge progressivement."
+  ],
+  "it": [
+    "A cosa serve la batteria ricaricabile di una torcia?",
+    "Ricevere energia durante la ricarica e fornirla poi per illuminare",
+    "Generare nuova energia illimitata durante l’uso",
+    "Ottenere energia elettrica solo dall’aria ambiente",
+    "Fornire più energia utilizzabile di quella ricevuta",
+    "Confronta ricarica e uso successivo.",
+    "Anche una batteria carica si scarica gradualmente durante l’uso."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se3i",
+  "reason": "Replace fusion reaction details with distinguishing natural and engineered sources. Second pass: individually refined alternatives.",
+  "de": [
+    "Welche Quelle liefert der Erde natürlich Licht und Wärme?",
+    "Die Sonne",
+    "Der Mond als selbst leuchtender Stern",
+    "Das Erdmagnetfeld als Lichtquelle",
+    "Die Atmosphäre als alleinige Quelle des Sonnenlichts",
+    "Die Quelle liegt ausserhalb der Erde.",
+    "Viele erneuerbare Energieformen hängen von ihr ab."
+  ],
+  "en": [
+    "Which source naturally supplies Earth with light and heat?",
+    "The Sun",
+    "The Moon as a self-luminous star",
+    "Earth’s magnetic field as a light source",
+    "The atmosphere as the sole source of sunlight",
+    "The source is outside Earth.",
+    "Many renewable energy forms depend on it."
+  ],
+  "fr": [
+    "Quelle source fournit naturellement lumière et chaleur à la Terre ?",
+    "Le Soleil",
+    "La Lune comme étoile lumineuse",
+    "Le champ magnétique terrestre comme source lumineuse",
+    "L’atmosphère comme seule source du soleil",
+    "La source se trouve hors de la Terre.",
+    "De nombreuses énergies renouvelables en dépendent."
+  ],
+  "it": [
+    "Quale fonte fornisce naturalmente luce e calore alla Terra?",
+    "Il Sole",
+    "La Luna come stella luminosa",
+    "Il campo magnetico terrestre come fonte luminosa",
+    "L’atmosfera come sola fonte della luce solare",
+    "La fonte si trova fuori dalla Terra.",
+    "Molte forme di energia rinnovabile ne dipendono."
+  ]
+},
+{
+  "key": "5/science/strom-energie/g5se3k",
+  "reason": "Replace entropy abstraction with observed heat transfer. Second pass: individually refined alternatives.",
+  "de": [
+    "Eine warme Tasse steht im kühleren Zimmer. Was geschieht ohne Heizung?",
+    "Sie gibt Wärme an die Umgebung ab",
+    "Sie nimmt netto Wärme aus dem kühleren Raum auf",
+    "Sie behält ohne Energiezufuhr für immer ihre höhere Temperatur",
+    "Sie wird dauerhaft kälter als der Raum, nur weil sie anfangs wärmer war",
+    "Vergleiche die Temperaturen von Tasse und Raum.",
+    "Beobachte, wie sich der Unterschied mit der Zeit verändert."
+  ],
+  "en": [
+    "A warm cup stands in a cooler room. What happens without heating?",
+    "It transfers heat to its surroundings",
+    "It gains net heat from the cooler room",
+    "It keeps its higher temperature forever without energy input",
+    "It becomes permanently colder than the room just because it started warmer",
+    "Compare the cup and room temperatures.",
+    "Notice how the difference changes with time."
+  ],
+  "fr": [
+    "Une tasse chaude est dans une pièce plus fraîche. Que se passe-t-il sans chauffage ?",
+    "Elle cède de la chaleur à son environnement",
+    "Elle reçoit globalement de la chaleur de la pièce plus froide",
+    "Elle garde sa température élevée sans apport pour toujours",
+    "Elle devient durablement plus froide que la pièce parce qu’elle était plus chaude",
+    "Compare les températures de la tasse et de la pièce.",
+    "Observe l’évolution de leur différence."
+  ],
+  "it": [
+    "Una tazza calda è in una stanza più fresca. Cosa succede senza riscaldarla?",
+    "Cede calore all’ambiente",
+    "Riceve calore netto dalla stanza più fredda",
+    "Mantiene per sempre la temperatura maggiore senza apporto",
+    "Diventa permanentemente più fredda della stanza solo perché prima era più calda",
+    "Confronta temperatura della tazza e della stanza.",
+    "Osserva come cambia la differenza nel tempo."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-12",
+  "reason": "Assess the digestive role of the pancreas without requiring a hormone/enzyme list.",
+  "de": [
+    "Wobei hilft der Verdauungssaft der Bauchspeicheldrüse?",
+    "Nahrung im Dünndarm zerlegen",
+    "Luft in die Lunge pumpen",
+    "Knochen bewegen",
+    "Licht auf der Netzhaut aufnehmen",
+    "Verfolge den Weg einer Mahlzeit.",
+    "Verschiedene Organe helfen, Nährstoffe verfügbar zu machen."
+  ],
+  "en": [
+    "What does digestive juice from the pancreas help do?",
+    "Break down food in the small intestine",
+    "Pump air into the lungs",
+    "Move bones",
+    "Detect light on the retina",
+    "Follow the journey of a meal.",
+    "Several organs help make nutrients available."
+  ],
+  "fr": [
+    "À quoi sert le suc digestif du pancréas ?",
+    "Décomposer les aliments dans l’intestin grêle",
+    "Pomper l’air dans les poumons",
+    "Déplacer les os",
+    "Capter la lumière sur la rétine",
+    "Suis le trajet d’un repas.",
+    "Plusieurs organes aident à rendre les nutriments disponibles."
+  ],
+  "it": [
+    "A cosa serve il succo digestivo del pancreas?",
+    "Scomporre il cibo nell’intestino tenue",
+    "Pompare aria nei polmoni",
+    "Muovere le ossa",
+    "Rilevare luce sulla retina",
+    "Segui il percorso di un pasto.",
+    "Diversi organi aiutano a rendere disponibili i nutrienti."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-22",
+  "reason": "Simplify endocrine terminology to the messenger function of hormones.",
+  "de": [
+    "Welche Aufgabe haben Hormone im Körper?",
+    "Als Botenstoffe Vorgänge mitsteuern",
+    "Als Knochen den Körper stützen",
+    "Als Zähne die Nahrung zerkleinern",
+    "Als Haare die Haut bedecken",
+    "Nicht jede Steuerung geschieht über Nerven.",
+    "Denke an Nachrichten zwischen verschiedenen Organen."
+  ],
+  "en": [
+    "What do hormones do in the body?",
+    "Act as messengers that help control processes",
+    "Support the body as bones",
+    "Break up food as teeth",
+    "Cover the skin as hair",
+    "Not all control happens through nerves.",
+    "Think of messages travelling between organs."
+  ],
+  "fr": [
+    "Quel rôle les hormones jouent-elles dans le corps ?",
+    "Servir de messagers pour régler des processus",
+    "Soutenir le corps comme les os",
+    "Broyer les aliments comme les dents",
+    "Couvrir la peau comme les poils",
+    "Les nerfs ne sont pas le seul moyen de commande.",
+    "Pense aux messages entre différents organes."
+  ],
+  "it": [
+    "Che ruolo hanno gli ormoni nel corpo?",
+    "Agire da messaggeri che regolano processi",
+    "Sostenere il corpo come le ossa",
+    "Sminuzzare il cibo come i denti",
+    "Coprire la pelle come i peli",
+    "Non tutti i comandi passano dai nervi.",
+    "Pensa ai messaggi tra diversi organi."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-24",
+  "reason": "Recognise coordination through a movement example.",
+  "de": [
+    "Wobei hilft dir das Kleinhirn besonders?",
+    "Beim Koordinieren von Bewegungen",
+    "Beim Filtern des Blutes zu Urin",
+    "Beim Bilden von Magensäure",
+    "Beim Aufnehmen von Sauerstoff in der Lunge",
+    "Denke an das Balancieren auf einem Bein.",
+    "Mehrere Muskeln müssen gut zusammenspielen."
+  ],
+  "en": [
+    "What does the cerebellum particularly help you do?",
+    "Coordinate movements",
+    "Filter blood to form urine",
+    "Produce stomach acid",
+    "Take up oxygen in the lungs",
+    "Think about balancing on one leg.",
+    "Several muscles must work together smoothly."
+  ],
+  "fr": [
+    "À quoi le cervelet t’aide-t-il particulièrement ?",
+    "À coordonner les mouvements",
+    "À filtrer le sang pour former l’urine",
+    "À produire l’acide de l’estomac",
+    "À absorber l’oxygène dans les poumons",
+    "Pense à l’équilibre sur une jambe.",
+    "Plusieurs muscles doivent bien travailler ensemble."
+  ],
+  "it": [
+    "In cosa ti aiuta soprattutto il cervelletto?",
+    "A coordinare i movimenti",
+    "A filtrare il sangue per formare urina",
+    "A produrre acido nello stomaco",
+    "Ad assorbire ossigeno nei polmoni",
+    "Pensa all’equilibrio su una gamba.",
+    "Diversi muscoli devono collaborare bene."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-28",
+  "reason": "Recognise an automatic body function without memorised terminology.",
+  "de": [
+    "Was läuft auch ab, wenn du nicht bewusst daran denkst?",
+    "Dein Herz schlägt",
+    "Du schreibst deinen Namen",
+    "Du bindest deine Schuhe",
+    "Du liest eine neue Geschichte",
+    "Vergleiche lebenswichtige Vorgänge mit gelernten Handlungen.",
+    "Der gesuchte Vorgang geht auch im Schlaf weiter."
+  ],
+  "en": [
+    "What happens even when you do not consciously think about it?",
+    "Your heart beats",
+    "You write your name",
+    "You tie your shoes",
+    "You read a new story",
+    "Compare vital functions with learned actions.",
+    "The process continues during sleep."
+  ],
+  "fr": [
+    "Que se passe-t-il même sans y penser consciemment ?",
+    "Ton cœur bat",
+    "Tu écris ton nom",
+    "Tu attaches tes chaussures",
+    "Tu lis une nouvelle histoire",
+    "Compare les fonctions vitales aux actions apprises.",
+    "Le processus recherché continue pendant le sommeil."
+  ],
+  "it": [
+    "Cosa avviene anche senza pensarci consapevolmente?",
+    "Il tuo cuore batte",
+    "Scrivi il tuo nome",
+    "Allacci le scarpe",
+    "Leggi una storia nuova",
+    "Confronta le funzioni vitali con le azioni imparate.",
+    "Il processo cercato continua anche durante il sonno."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-32",
+  "reason": "Identify a protective reflex from contrasting voluntary actions.",
+  "de": [
+    "Welche Reaktion ist ein Schutzreflex?",
+    "Die Hand unwillkürlich von etwas Heissem wegziehen",
+    "Sich bewusst für ein Buch entscheiden",
+    "Einen Brief sorgfältig schreiben",
+    "Einen Weg auf einer Karte planen",
+    "Ein Reflex geschieht sehr schnell.",
+    "Du musst die Bewegung nicht erst bewusst planen."
+  ],
+  "en": [
+    "Which reaction is a protective reflex?",
+    "Automatically pulling your hand away from something hot",
+    "Consciously choosing a book",
+    "Writing a letter carefully",
+    "Planning a route on a map",
+    "A reflex happens very quickly.",
+    "You do not need to consciously plan the movement first."
+  ],
+  "fr": [
+    "Quelle réaction est un réflexe de protection ?",
+    "Retirer involontairement la main d’un objet chaud",
+    "Choisir consciemment un livre",
+    "Écrire soigneusement une lettre",
+    "Préparer un trajet sur une carte",
+    "Un réflexe se produit très vite.",
+    "Tu n’as pas besoin de préparer consciemment le mouvement."
+  ],
+  "it": [
+    "Quale reazione è un riflesso protettivo?",
+    "Ritirare involontariamente la mano da qualcosa di caldo",
+    "Scegliere consapevolmente un libro",
+    "Scrivere con cura una lettera",
+    "Pianificare un percorso su una mappa",
+    "Un riflesso avviene molto rapidamente.",
+    "Non devi prima pianificare consapevolmente il movimento."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-42",
+  "reason": "Replace antigen/antibody technical comparison with infection prevention.",
+  "de": [
+    "Warum wäschst du vor dem Essen die Hände mit Seife?",
+    "Um Schmutz und viele Krankheitserreger zu entfernen",
+    "Um alle Abwehrzellen aus der Haut zu spülen",
+    "Um Nahrung schon in der Hand zu verdauen",
+    "Um keine Flüssigkeit mehr trinken zu müssen",
+    "Denke daran, was du mit den Händen berührst.",
+    "Manches auf der Haut kannst du nicht sehen."
+  ],
+  "en": [
+    "Why wash your hands with soap before eating?",
+    "To remove dirt and many germs",
+    "To wash all immune cells out of the skin",
+    "To digest food while holding it",
+    "To avoid ever needing a drink",
+    "Think about what your hands touch.",
+    "Some things on your skin are too small to see."
+  ],
+  "fr": [
+    "Pourquoi se laver les mains avec du savon avant de manger ?",
+    "Pour enlever la saleté et de nombreux microbes",
+    "Pour éliminer toutes les cellules immunitaires de la peau",
+    "Pour digérer les aliments en les tenant",
+    "Pour ne plus jamais avoir besoin de boire",
+    "Pense à ce que tes mains touchent.",
+    "Certaines choses sur la peau sont invisibles à l’œil nu."
+  ],
+  "it": [
+    "Perché lavi le mani con sapone prima di mangiare?",
+    "Per rimuovere sporco e molti germi",
+    "Per eliminare tutte le cellule immunitarie dalla pelle",
+    "Per digerire il cibo mentre lo tieni in mano",
+    "Per non dover più bere",
+    "Pensa a ciò che tocchi con le mani.",
+    "Alcune cose sulla pelle sono troppo piccole da vedere."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-44",
+  "reason": "Replace thyroxine recall with accessible growth and changing body needs.",
+  "de": [
+    "Was unterstützt einen wachsenden Körper?",
+    "Abwechslungsreich essen, schlafen und sich bewegen",
+    "Jede Nacht möglichst wenig schlafen",
+    "Ausschliesslich Süssigkeiten essen",
+    "Bewegung grundsätzlich vermeiden",
+    "Der Körper benötigt Erholung und Nährstoffe.",
+    "Suche eine Kombination verschiedener gesunder Gewohnheiten."
+  ],
+  "en": [
+    "What supports a growing body?",
+    "Varied food, sleep and physical activity",
+    "Sleeping as little as possible every night",
+    "Eating only sweets",
+    "Avoiding all physical activity",
+    "The body needs rest and nutrients.",
+    "Look for a combination of healthy habits."
+  ],
+  "fr": [
+    "Qu’est-ce qui aide un corps en pleine croissance ?",
+    "Une alimentation variée, du sommeil et de l’activité physique",
+    "Dormir le moins possible chaque nuit",
+    "Manger uniquement des bonbons",
+    "Éviter toute activité physique",
+    "Le corps a besoin de repos et de nutriments.",
+    "Cherche une combinaison d’habitudes saines."
+  ],
+  "it": [
+    "Cosa sostiene un corpo in crescita?",
+    "Cibo vario, sonno e attività fisica",
+    "Dormire il meno possibile ogni notte",
+    "Mangiare soltanto dolci",
+    "Evitare ogni attività fisica",
+    "Il corpo ha bisogno di riposo e nutrienti.",
+    "Cerca una combinazione di abitudini sane."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-46",
+  "reason": "Replace haemolysis pathology with red blood cell function.",
+  "de": [
+    "Was transportieren rote Blutkörperchen von der Lunge zum Körper?",
+    "Sauerstoff",
+    "Unzerkaute Nahrung",
+    "Ganze Knochenzellen",
+    "Magensaft",
+    "Denke an den Austausch beim Atmen.",
+    "Muskeln und andere Organe brauchen diesen Stoff."
+  ],
+  "en": [
+    "What do red blood cells carry from the lungs to the body?",
+    "Oxygen",
+    "Unchewed food",
+    "Whole bone cells",
+    "Stomach juice",
+    "Think about the exchange during breathing.",
+    "Muscles and other organs need this substance."
+  ],
+  "fr": [
+    "Que transportent les globules rouges des poumons vers le corps ?",
+    "De l’oxygène",
+    "Des aliments non mâchés",
+    "Des cellules osseuses entières",
+    "Du suc gastrique",
+    "Pense aux échanges pendant la respiration.",
+    "Les muscles et les autres organes ont besoin de cette substance."
+  ],
+  "it": [
+    "Cosa trasportano i globuli rossi dai polmoni al corpo?",
+    "Ossigeno",
+    "Cibo non masticato",
+    "Intere cellule ossee",
+    "Succo gastrico",
+    "Pensa agli scambi durante la respirazione.",
+    "Muscoli e altri organi hanno bisogno di questa sostanza."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-48",
+  "reason": "Replace somatic/visceral distinction with organ location.",
+  "de": [
+    "Welches Organ liegt im Brustkorb?",
+    "Die Lunge",
+    "Der Magen",
+    "Die Harnblase",
+    "Das Gehirn",
+    "Orientiere dich an den Rippen.",
+    "Denke an die Bewegung deines Brustkorbs beim Atmen."
+  ],
+  "en": [
+    "Which organ is inside the chest?",
+    "The lungs",
+    "The stomach",
+    "The bladder",
+    "The brain",
+    "Use the ribs as a guide.",
+    "Think about your chest moving when you breathe."
+  ],
+  "fr": [
+    "Quel organe se trouve dans la cage thoracique ?",
+    "Les poumons",
+    "L’estomac",
+    "La vessie",
+    "Le cerveau",
+    "Repère les côtes.",
+    "Pense aux mouvements du thorax pendant la respiration."
+  ],
+  "it": [
+    "Quale organo si trova nel torace?",
+    "I polmoni",
+    "Lo stomaco",
+    "La vescica",
+    "Il cervello",
+    "Prendi le costole come riferimento.",
+    "Pensa ai movimenti del torace quando respiri."
+  ]
+},
+{
+  "key": "5/science/menschlicher-koerper-5/mk5-50",
+  "reason": "Replace lethal-dose toxicology with age-appropriate poisoning prevention.",
+  "de": [
+    "Du findest eine Flasche mit unbekannter Flüssigkeit. Was ist sicher?",
+    "Nicht probieren und eine erwachsene Person informieren",
+    "Einen kleinen Schluck zur Probe trinken",
+    "Die Flüssigkeit mit einem Getränk mischen",
+    "Ein anderes Kind kosten lassen",
+    "Aussehen und Geruch verraten nicht zuverlässig, ob etwas gefährlich ist.",
+    "Ein unbekannter Inhalt gehört nicht in den Mund."
+  ],
+  "en": [
+    "You find a bottle of unknown liquid. What is safe?",
+    "Do not taste it and tell an adult",
+    "Drink a small sip to test it",
+    "Mix the liquid with a drink",
+    "Let another child taste it",
+    "Appearance and smell cannot reliably show whether something is dangerous.",
+    "An unknown substance does not belong in your mouth."
+  ],
+  "fr": [
+    "Tu trouves une bouteille de liquide inconnu. Que faire par sécurité ?",
+    "Ne pas goûter et prévenir un adulte",
+    "Boire une petite gorgée pour tester",
+    "Mélanger le liquide à une boisson",
+    "Faire goûter un autre enfant",
+    "L’aspect et l’odeur ne permettent pas de savoir sûrement si c’est dangereux.",
+    "Une substance inconnue ne doit pas être mise dans la bouche."
+  ],
+  "it": [
+    "Trovi una bottiglia con un liquido sconosciuto. Cosa è sicuro?",
+    "Non assaggiarlo e avvisare un adulto",
+    "Bere un piccolo sorso per provarlo",
+    "Mescolarlo con una bevanda",
+    "Farlo assaggiare a un altro bambino",
+    "Aspetto e odore non indicano con certezza se qualcosa è pericoloso.",
+    "Una sostanza sconosciuta non va messa in bocca."
+  ]
+},
+{
+  "key": "5/science/kraefte-bewegung-5/kb5-24",
+  "reason": "Recognise gravity in a falling-object scenario instead of formal free-fall definition. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Warum fällt ein losgelassener Ball zum Boden?",
+    "Die Erde zieht ihn an",
+    "Nur die nach unten strömende Luft kann ihn bewegen",
+    "Nur ein weiterer Stoss nach dem Loslassen kann ihn bewegen",
+    "Die Bewegung entsteht ausschliesslich durch seine Drehung",
+    "Der Ball fällt auch ohne angeschoben zu werden.",
+    "Denke an eine Kraft, die zwischen Massen wirkt."
+  ],
+  "en": [
+    "Why does a released ball fall to the ground?",
+    "The Earth attracts it",
+    "Only downward-flowing air can move it",
+    "Only another push after release can move it",
+    "Its motion arises only from spinning",
+    "The ball falls without being pushed.",
+    "Think of a force acting between masses."
+  ],
+  "fr": [
+    "Pourquoi un ballon lâché tombe-t-il au sol ?",
+    "La Terre l’attire",
+    "Seul l’air descendant peut le déplacer",
+    "Seule une autre poussée après le lâcher peut le déplacer",
+    "Le mouvement vient uniquement de sa rotation",
+    "Le ballon tombe sans être poussé.",
+    "Pense à une force entre des masses."
+  ],
+  "it": [
+    "Perché una palla lasciata andare cade a terra?",
+    "La Terra la attrae",
+    "Solo l’aria discendente può muoverla",
+    "Solo un’altra spinta dopo il rilascio può muoverla",
+    "Il movimento deriva solo dalla rotazione",
+    "La palla cade senza essere spinta.",
+    "Pensa a una forza tra masse."
+  ]
+},
+{
+  "key": "5/science/kraefte-bewegung-5/kb5-40",
+  "reason": "Replace gravitational constant memorisation with gravitational strength comparison. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Derselbe Astronaut steht auf Erde und Mond. Wo ist seine Gewichtskraft kleiner?",
+    "Auf dem Mond",
+    "Auf der Erde",
+    "An beiden Orten ist sie gleich, weil die Masse gleich bleibt",
+    "Auf dem Mond gibt es grundsätzlich gar keine Gewichtskraft",
+    "Die Masse des Astronauten bleibt gleich.",
+    "Die Himmelskörper ziehen ihn unterschiedlich stark an."
+  ],
+  "en": [
+    "The same astronaut stands on Earth and on the Moon. Where is his weight smaller?",
+    "On the Moon",
+    "On Earth",
+    "It is equal in both places because mass stays equal",
+    "There is no weight force at all on the Moon",
+    "The astronaut’s mass stays the same.",
+    "The two bodies attract him with different strengths."
+  ],
+  "fr": [
+    "Le même astronaute est sur Terre puis sur la Lune. Où son poids est-il plus faible ?",
+    "Sur la Lune",
+    "Sur Terre",
+    "Elle est identique car la masse reste identique",
+    "Il n’existe aucune force de pesanteur sur la Lune",
+    "La masse de l’astronaute reste la même.",
+    "Les deux astres ne l’attirent pas avec la même force."
+  ],
+  "it": [
+    "Lo stesso astronauta è sulla Terra e sulla Luna. Dove pesa meno?",
+    "Sulla Luna",
+    "Sulla Terra",
+    "È uguale perché la massa resta uguale",
+    "Sulla Luna non esiste alcuna forza peso",
+    "La massa dell’astronauta resta uguale.",
+    "I due corpi celesti lo attraggono con forze diverse."
+  ]
+},
+{
+  "key": "5/science/kraefte-bewegung-5/kb5-42",
+  "reason": "Replace Coriolis effect with observing circular motion in familiar equipment. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Was verändert sich bei einer gleichmässigen Fahrt im Kreis ständig?",
+    "Die Bewegungsrichtung",
+    "Die Geschwindigkeit wird bei jeder Runde zwingend grösser",
+    "Die Masse nimmt bei jeder Richtungsänderung zu",
+    "Der Abstand zum Kreismittelpunkt wächst ständig",
+    "Vergleiche eine Kreisfahrt mit einer geraden Strecke.",
+    "Schau, wohin die Vorderseite des Fahrzeugs zeigt."
+  ],
+  "en": [
+    "What constantly changes during steady motion in a circle?",
+    "The direction of motion",
+    "Speed necessarily increases with every lap",
+    "Mass increases with every direction change",
+    "Distance from the centre constantly increases",
+    "Compare a circular route with a straight one.",
+    "Notice where the front of the vehicle points."
+  ],
+  "fr": [
+    "Qu’est-ce qui change constamment lors d’un déplacement régulier en cercle ?",
+    "La direction du mouvement",
+    "La vitesse augmente forcément à chaque tour",
+    "La masse augmente à chaque changement de direction",
+    "La distance au centre augmente sans cesse",
+    "Compare un trajet circulaire à un trajet droit.",
+    "Observe vers où pointe l’avant du véhicule."
+  ],
+  "it": [
+    "Cosa cambia continuamente muovendosi in cerchio a velocità costante?",
+    "La direzione del movimento",
+    "La velocità aumenta necessariamente a ogni giro",
+    "La massa aumenta a ogni cambio di direzione",
+    "La distanza dal centro aumenta continuamente",
+    "Confronta un percorso circolare con uno rettilineo.",
+    "Osserva dove punta la parte anteriore del veicolo."
+  ]
+},
+{
+  "key": "5/science/kraefte-bewegung-5/kb5-48",
+  "reason": "Replace vector/scalar terminology with the meaning of a force arrow.",
+  "de": [
+    "Was zeigt die Spitze eines Kraftpfeils?",
+    "In welche Richtung die Kraft wirkt",
+    "Wie warm der Gegenstand ist",
+    "Aus welchem Material er besteht",
+    "Wie lange er schon dort liegt",
+    "Ein Pfeil hat eine Richtung und eine Länge.",
+    "Achte hier auf das spitze Ende, nicht auf die Länge."
+  ],
+  "en": [
+    "What does the tip of a force arrow show?",
+    "The direction in which the force acts",
+    "How warm the object is",
+    "What material it is made of",
+    "How long it has been there",
+    "An arrow has a direction and a length.",
+    "Focus on the pointed end, not the length."
+  ],
+  "fr": [
+    "Que montre la pointe d’une flèche représentant une force ?",
+    "Le sens dans lequel la force agit",
+    "La température de l’objet",
+    "La matière dont il est fait",
+    "Depuis combien de temps il est là",
+    "Une flèche a un sens et une longueur.",
+    "Regarde l’extrémité pointue, pas la longueur."
+  ],
+  "it": [
+    "Cosa mostra la punta di una freccia che rappresenta una forza?",
+    "Il verso in cui agisce la forza",
+    "La temperatura dell’oggetto",
+    "Il materiale di cui è fatto",
+    "Da quanto tempo si trova lì",
+    "Una freccia ha un verso e una lunghezza.",
+    "Concentrati sulla punta, non sulla lunghezza."
+  ]
+},
+{
+  "key": "5/science/kraefte-bewegung-5/kb5-50",
+  "reason": "Replace superposition abstraction with balancing opposite forces.",
+  "de": [
+    "Zwei gleich grosse Kräfte ziehen entgegengesetzt an einer Kiste. Wie ist ihre Gesamtkraft?",
+    "Null",
+    "Doppelt so gross nach links",
+    "Doppelt so gross nach rechts",
+    "Immer nach oben gerichtet",
+    "Vergleiche Stärke und Richtung beider Kräfte.",
+    "Keine Seite zieht stärker als die andere."
+  ],
+  "en": [
+    "Two equal forces pull a box in opposite directions. What is their combined force?",
+    "Zero",
+    "Twice as large to the left",
+    "Twice as large to the right",
+    "Always directed upwards",
+    "Compare the strength and direction of both forces.",
+    "Neither side pulls harder than the other."
+  ],
+  "fr": [
+    "Deux forces égales tirent une caisse en sens opposés. Quelle est leur force totale ?",
+    "Nulle",
+    "Deux fois plus grande vers la gauche",
+    "Deux fois plus grande vers la droite",
+    "Toujours dirigée vers le haut",
+    "Compare l’intensité et le sens des deux forces.",
+    "Aucun côté ne tire plus fort que l’autre."
+  ],
+  "it": [
+    "Due forze uguali tirano una cassa in versi opposti. Qual è la forza totale?",
+    "Zero",
+    "Il doppio verso sinistra",
+    "Il doppio verso destra",
+    "Sempre diretta verso l’alto",
+    "Confronta intensità e verso delle due forze.",
+    "Nessun lato tira più forte dell’altro."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-4",
+  "reason": "Recognise equatorial climate zone.",
+  "de": [
+    "Welche Klimazone liegt rund um den Äquator?",
+    "Die tropische Zone",
+    "Die Polarzone",
+    "Die subpolare Zone",
+    "Die gemässigte Zone",
+    "Suche die Mitte zwischen Nordpol und Südpol.",
+    "Dort steht die Sonne im Jahreslauf besonders hoch."
+  ],
+  "en": [
+    "Which climate zone surrounds the equator?",
+    "The tropical zone",
+    "The polar zone",
+    "The subpolar zone",
+    "The temperate zone",
+    "Look halfway between the poles.",
+    "The Sun is high in the sky there through the year."
+  ],
+  "fr": [
+    "Quelle zone climatique entoure l’équateur ?",
+    "La zone tropicale",
+    "La zone polaire",
+    "La zone subpolaire",
+    "La zone tempérée",
+    "Cherche à mi-chemin entre les pôles.",
+    "Le Soleil y est haut dans le ciel au fil de l’année."
+  ],
+  "it": [
+    "Quale zona climatica circonda l’equatore?",
+    "La zona tropicale",
+    "La zona polare",
+    "La zona subpolare",
+    "La zona temperata",
+    "Cerca a metà strada tra i poli.",
+    "Qui il Sole è alto nel cielo durante l’anno."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-8",
+  "reason": "Clarify the human cause of current warming; chemistry token boundary is not itself a defect.",
+  "de": [
+    "Was trägt wesentlich zur heutigen globalen Erwärmung bei?",
+    "Zusätzliche Treibhausgase durch menschliche Tätigkeiten",
+    "Nur der Wechsel von Tag und Nacht",
+    "Nur die Mondphasen",
+    "Die Jahreszeiten allein",
+    "Unterscheide regelmässige Zyklen vom langfristigen Trend.",
+    "Denke an die Verbrennung von Kohle, Öl und Gas."
+  ],
+  "en": [
+    "What contributes greatly to current global warming?",
+    "Extra greenhouse gases from human activities",
+    "Only the change between day and night",
+    "Only the Moon’s phases",
+    "The seasons alone",
+    "Distinguish regular cycles from the long-term trend.",
+    "Think about burning coal, oil and gas."
+  ],
+  "fr": [
+    "Qu’est-ce qui contribue fortement au réchauffement mondial actuel ?",
+    "Les gaz à effet de serre supplémentaires issus des activités humaines",
+    "Seulement l’alternance du jour et de la nuit",
+    "Seulement les phases lunaires",
+    "Les seules saisons",
+    "Distingue les cycles réguliers de la tendance à long terme.",
+    "Pense à la combustion du charbon, du pétrole et du gaz."
+  ],
+  "it": [
+    "Cosa contribuisce molto all’attuale riscaldamento globale?",
+    "Ulteriori gas serra prodotti dalle attività umane",
+    "Solo l’alternanza di giorno e notte",
+    "Solo le fasi lunari",
+    "Soltanto le stagioni",
+    "Distingui i cicli regolari dalla tendenza a lungo termine.",
+    "Pensa alla combustione di carbone, petrolio e gas."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-10",
+  "reason": "Replace CFC reaction with protective ozone role. Second pass: subject-specific alternatives.",
+  "de": [
+    "Wovor schützt die Ozonschicht die Erde besonders?",
+    "Vor einem Teil der schädlichen UV-Strahlung",
+    "Vor sämtlicher sichtbarer Sonnenstrahlung",
+    "Vor der gesamten Wärmestrahlung der Erde",
+    "Vor sämtlichen Funkwellen",
+    "Es geht um Strahlung aus dem Weltraum.",
+    "Auch beim Sonnenschutz spielt diese Strahlung eine Rolle."
+  ],
+  "en": [
+    "What does the ozone layer particularly protect Earth from?",
+    "Some harmful ultraviolet radiation",
+    "All visible sunlight",
+    "All heat radiation from Earth",
+    "All radio waves",
+    "Think of radiation from space.",
+    "This radiation also matters for sun protection."
+  ],
+  "fr": [
+    "De quoi la couche d’ozone protège-t-elle particulièrement la Terre ?",
+    "D’une partie des rayons ultraviolets nocifs",
+    "Tout le rayonnement solaire visible",
+    "Tout le rayonnement thermique terrestre",
+    "Toutes les ondes radio",
+    "Pense au rayonnement venant de l’espace.",
+    "Ces rayons comptent aussi pour la protection solaire."
+  ],
+  "it": [
+    "Da cosa protegge particolarmente la Terra lo strato di ozono?",
+    "Da parte dei raggi ultravioletti nocivi",
+    "Tutta la luce solare visibile",
+    "Tutta la radiazione termica terrestre",
+    "Tutte le onde radio",
+    "Pensa alle radiazioni dallo spazio.",
+    "Questi raggi contano anche per la protezione solare."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-14",
+  "reason": "Replace acid chemistry with air-pollution prevention. Second pass: subject-specific alternatives.",
+  "de": [
+    "Welche Massnahme verringert schädliche Abgase aus einer Fabrik?",
+    "Geeignete Filter und sauberere Verfahren einsetzen",
+    "Den Ausstoss nur nachts statt tagsüber freisetzen",
+    "Die Abgase nur durch einen höheren Schornstein verteilen",
+    "Die Messung beenden, ohne das Verfahren zu ändern",
+    "Eine wirksame Massnahme verändert die ausgestossenen Stoffe.",
+    "Nicht messen ist nicht dasselbe wie weniger verschmutzen."
+  ],
+  "en": [
+    "What reduces harmful emissions from a factory?",
+    "Suitable filters and cleaner processes",
+    "Release emissions only at night instead of daytime",
+    "Only disperse emissions through a taller chimney",
+    "Stop measuring without changing the process",
+    "An effective measure changes the substances released.",
+    "Not measuring is not the same as polluting less."
+  ],
+  "fr": [
+    "Qu’est-ce qui réduit les rejets nocifs d’une usine ?",
+    "Des filtres adaptés et des procédés plus propres",
+    "Émettre seulement la nuit plutôt que le jour",
+    "Disperser seulement les émissions par une cheminée plus haute",
+    "Arrêter les mesures sans changer le procédé",
+    "Une mesure efficace change les substances rejetées.",
+    "Ne pas mesurer ne signifie pas moins polluer."
+  ],
+  "it": [
+    "Cosa riduce le emissioni nocive di una fabbrica?",
+    "Filtri adatti e processi più puliti",
+    "Emettere solo di notte invece che di giorno",
+    "Disperdere solo le emissioni da un camino più alto",
+    "Smettere di misurare senza cambiare il processo",
+    "Una misura efficace cambia le sostanze emesse.",
+    "Non misurare non significa inquinare meno."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-18",
+  "reason": "Recognise ocean current rather than overstate sole European warming cause. Second pass: subject-specific alternatives.",
+  "de": [
+    "Was ist der Golfstrom?",
+    "Eine warme Meeresströmung im Atlantik",
+    "Eine kalte Meeresströmung im Pazifik",
+    "Eine jahreszeitliche Luftströmung über Indien",
+    "Ein kalter Fallwind in den Alpen",
+    "Der Name enthält zwar Strom, meint aber keinen elektrischen Strom.",
+    "Suche im Ozean zwischen Amerika und Europa."
+  ],
+  "en": [
+    "What is the Gulf Stream?",
+    "A warm Atlantic Ocean current",
+    "A cold ocean current in the Pacific",
+    "A seasonal air current over India",
+    "A cold downslope wind in the Alps",
+    "Stream here is not an electrical current.",
+    "Look in the ocean between America and Europe."
+  ],
+  "fr": [
+    "Qu’est-ce que le Gulf Stream ?",
+    "Un courant marin chaud de l’Atlantique",
+    "Un courant marin froid du Pacifique",
+    "Un courant d’air saisonnier sur l’Inde",
+    "Un vent froid descendant dans les Alpes",
+    "Il s’agit d’un courant, mais pas électrique.",
+    "Cherche dans l’océan entre l’Amérique et l’Europe."
+  ],
+  "it": [
+    "Cos’è la Corrente del Golfo?",
+    "Una corrente marina calda nell’Atlantico",
+    "Una corrente marina fredda nel Pacifico",
+    "Una corrente d’aria stagionale sull’India",
+    "Un vento freddo discendente nelle Alpi",
+    "È una corrente, ma non elettrica.",
+    "Cerca nell’oceano tra America ed Europa."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-20",
+  "reason": "Distinguish permafrost from seasonal frost.",
+  "de": [
+    "Welcher Boden erfüllt die Definition von Permafrost?",
+    "Boden, der mindestens zwei Jahre durchgehend gefroren bleibt",
+    "Boden, der nur eine Winternacht gefriert",
+    "Jeder Boden mit Schnee für einen Tag",
+    "Jeder trockene Wüstenboden",
+    "Achte auf die Dauer des Gefrorenseins.",
+    "Eine kurze Frostperiode reicht nicht."
+  ],
+  "en": [
+    "Which ground meets the definition of permafrost?",
+    "Ground frozen continuously for at least two years",
+    "Ground frozen for just one winter night",
+    "Any ground with snow for one day",
+    "Any dry desert soil",
+    "Notice how long it stays frozen.",
+    "A short frost period is not enough."
+  ],
+  "fr": [
+    "Quel sol correspond à la définition du pergélisol ?",
+    "Un sol gelé continuellement pendant au moins deux ans",
+    "Un sol gelé une seule nuit d’hiver",
+    "Tout sol enneigé pendant un jour",
+    "Tout sol désertique sec",
+    "Observe la durée du gel.",
+    "Une courte période de gel ne suffit pas."
+  ],
+  "it": [
+    "Quale terreno corrisponde alla definizione di permafrost?",
+    "Terreno gelato continuamente per almeno due anni",
+    "Terreno gelato per una sola notte invernale",
+    "Qualsiasi terreno innevato per un giorno",
+    "Qualsiasi suolo desertico secco",
+    "Nota la durata del congelamento.",
+    "Un breve periodo di gelo non basta."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-22",
+  "reason": "Assess international climate cooperation without treaty-number recitation. Second pass: subject-specific alternatives.",
+  "de": [
+    "Was ist ein Ziel des Pariser Klimaabkommens?",
+    "Die globale Erwärmung gemeinsam begrenzen",
+    "Nur eine Wettervorhersage für den folgenden Tag veröffentlichen",
+    "Ausschliesslich die Ortszeit in allen Ländern vereinheitlichen",
+    "Nur die Grenzverläufe zwischen europäischen Ländern ändern",
+    "Treibhausgase wirken über Staatsgrenzen hinaus.",
+    "Länder vereinbaren gemeinsame Ziele für einen langfristigen Trend."
+  ],
+  "en": [
+    "What is a goal of the Paris climate agreement?",
+    "Jointly limit global warming",
+    "Publish only a weather forecast for the following day",
+    "Only make local time identical in every country",
+    "Only change borders between European countries",
+    "Greenhouse gases affect areas beyond national borders.",
+    "Countries agree on shared goals for a long-term trend."
+  ],
+  "fr": [
+    "Quel est un objectif de l’accord de Paris sur le climat ?",
+    "Limiter ensemble le réchauffement mondial",
+    "Publier seulement la météo du lendemain",
+    "Uniformiser seulement l’heure locale de tous les pays",
+    "Changer seulement les frontières entre pays européens",
+    "Les gaz à effet de serre agissent au-delà des frontières.",
+    "Les pays fixent des objectifs communs pour une tendance durable."
+  ],
+  "it": [
+    "Qual è un obiettivo dell’accordo di Parigi sul clima?",
+    "Limitare insieme il riscaldamento globale",
+    "Pubblicare solo il tempo del giorno dopo",
+    "Uniformare solo l’ora locale di tutti i paesi",
+    "Cambiare solo i confini tra paesi europei",
+    "I gas serra agiscono oltre i confini nazionali.",
+    "I paesi fissano obiettivi comuni per una tendenza a lungo termine."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-26",
+  "reason": "Use seasonal monsoon rainfall pattern.",
+  "de": [
+    "Was ist typisch für viele Monsungebiete?",
+    "Ein jahreszeitlicher Wechsel von Regen- und Trockenzeiten",
+    "Genau gleich viel Regen an jedem Tag",
+    "Ganzjährig ausschliesslich Schneefall",
+    "Keine Winde zu irgendeiner Jahreszeit",
+    "Betrachte das Wetter über ein ganzes Jahr.",
+    "Die vorherrschenden Winde ändern sich mit der Jahreszeit."
+  ],
+  "en": [
+    "What is typical of many monsoon regions?",
+    "Seasonal changes between wet and dry periods",
+    "Exactly the same rain every day",
+    "Only snowfall throughout the year",
+    "No winds in any season",
+    "Look at the weather over a whole year.",
+    "Prevailing winds change with the season."
+  ],
+  "fr": [
+    "Qu’est-ce qui caractérise de nombreuses régions de mousson ?",
+    "Une alternance saisonnière de périodes humides et sèches",
+    "Exactement autant de pluie chaque jour",
+    "Uniquement de la neige toute l’année",
+    "Aucun vent à aucune saison",
+    "Observe une année entière.",
+    "Les vents dominants changent selon la saison."
+  ],
+  "it": [
+    "Cosa caratterizza molte regioni monsoniche?",
+    "L’alternanza stagionale di periodi piovosi e secchi",
+    "Esattamente la stessa pioggia ogni giorno",
+    "Solo neve per tutto l’anno",
+    "Nessun vento in nessuna stagione",
+    "Osserva un anno intero.",
+    "I venti dominanti cambiano con la stagione."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-28",
+  "reason": "Distinguish melting land ice from floating sea ice.",
+  "de": [
+    "Welches Schmelzen trägt zum Meeresspiegelanstieg bei?",
+    "Landeis, dessen Schmelzwasser ins Meer fliesst",
+    "Ein Eiswürfel im geschlossenen Gefrierfach",
+    "Reif, der im Gefrierfach bleibt",
+    "Schnee, dessen Wasser vollständig in einer geschlossenen Flasche bleibt",
+    "Entscheidend ist, ob zusätzliches Wasser ins Meer gelangt.",
+    "Verfolge den Weg des Schmelzwassers."
+  ],
+  "en": [
+    "Which melting contributes to sea-level rise?",
+    "Land ice whose meltwater flows into the sea",
+    "An ice cube in a closed freezer",
+    "Frost remaining inside a freezer",
+    "Snow whose water stays entirely in a sealed bottle",
+    "What matters is whether extra water reaches the sea.",
+    "Follow the meltwater’s route."
+  ],
+  "fr": [
+    "Quelle fonte contribue à la hausse du niveau marin ?",
+    "Celle des glaces terrestres dont l’eau rejoint la mer",
+    "Un glaçon dans un congélateur fermé",
+    "Du givre restant dans un congélateur",
+    "De la neige dont toute l’eau reste dans une bouteille fermée",
+    "Il faut que de l’eau supplémentaire rejoigne la mer.",
+    "Suis le trajet de l’eau de fonte."
+  ],
+  "it": [
+    "Quale fusione contribuisce all’innalzamento del mare?",
+    "Quella del ghiaccio terrestre la cui acqua arriva al mare",
+    "Un cubetto in un congelatore chiuso",
+    "Brina che resta nel congelatore",
+    "Neve la cui acqua resta tutta in una bottiglia chiusa",
+    "Conta se arriva acqua aggiuntiva al mare.",
+    "Segui il percorso dell’acqua di fusione."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-30",
+  "reason": "Recognise fog without foreign-label or exact-definition entry. Second pass: subject-specific alternatives.",
+  "de": [
+    "Woraus besteht Nebel hauptsächlich?",
+    "Aus winzigen Wassertröpfchen in der Luft",
+    "Aus unsichtbarem Wasserdampf allein",
+    "Aus Rauchpartikeln ohne Wassertröpfchen",
+    "Aus trockenen Staubkörnern ohne Wassertröpfchen",
+    "Nebel gehört zum Wetter, nicht automatisch zu einem Feuer.",
+    "Denke an eine Wolke nahe am Boden."
+  ],
+  "en": [
+    "What does fog mainly consist of?",
+    "Tiny water droplets in the air",
+    "Invisible water vapour alone",
+    "Smoke particles without water droplets",
+    "Dry dust grains without water droplets",
+    "Fog is weather, not automatically evidence of fire.",
+    "Think of a cloud close to the ground."
+  ],
+  "fr": [
+    "De quoi le brouillard est-il principalement composé ?",
+    "De minuscules gouttelettes d’eau dans l’air",
+    "Uniquement de vapeur d’eau invisible",
+    "De particules de fumée sans gouttelettes",
+    "De poussières sèches sans gouttelettes",
+    "Le brouillard est météorologique, pas forcément lié à un feu.",
+    "Pense à un nuage près du sol."
+  ],
+  "it": [
+    "Da cosa è composta principalmente la nebbia?",
+    "Minuscole goccioline d’acqua nell’aria",
+    "Solo vapore acqueo invisibile",
+    "Particelle di fumo senza goccioline",
+    "Polvere secca senza goccioline",
+    "La nebbia è un fenomeno meteorologico, non indica sempre un incendio.",
+    "Pensa a una nuvola vicina al suolo."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-32",
+  "reason": "Replace carbon capture technology acronym with emissions reduction application.",
+  "de": [
+    "Welche Handlung senkt beim Heizen unnötigen Energieverbrauch?",
+    "Nicht genutzte Räume passend weniger stark heizen",
+    "Dauerhaft bei offenem Fenster stark heizen",
+    "Die Heizung im Sommer ohne Bedarf voll aufdrehen",
+    "Heizkörper verdecken und deshalb stärker heizen",
+    "Vergleiche Bedarf und Verbrauch.",
+    "Wärme soll dort eingesetzt werden, wo sie tatsächlich gebraucht wird."
+  ],
+  "en": [
+    "Which action reduces unnecessary heating energy use?",
+    "Appropriately reducing heating in unused rooms",
+    "Heating strongly with a window permanently open",
+    "Turning heating fully on in summer without need",
+    "Covering radiators and then heating harder",
+    "Compare need with consumption.",
+    "Heat should be used where it is actually needed."
+  ],
+  "fr": [
+    "Quel geste réduit l’énergie de chauffage inutile ?",
+    "Adapter à la baisse le chauffage des pièces inutilisées",
+    "Chauffer fort avec une fenêtre constamment ouverte",
+    "Chauffer à fond en été sans besoin",
+    "Couvrir les radiateurs puis chauffer davantage",
+    "Compare besoin et consommation.",
+    "La chaleur doit être utilisée là où elle est nécessaire."
+  ],
+  "it": [
+    "Quale gesto riduce il consumo inutile per riscaldare?",
+    "Ridurre adeguatamente il riscaldamento nelle stanze inutilizzate",
+    "Scaldare molto con una finestra sempre aperta",
+    "Accendere al massimo in estate senza bisogno",
+    "Coprire i radiatori e poi scaldare di più",
+    "Confronta bisogno e consumo.",
+    "Il calore va usato dove è davvero necessario."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-34",
+  "reason": "Replace atmospheric-layer altitude memorisation with the atmosphere concept.",
+  "de": [
+    "Was ist die Atmosphäre der Erde?",
+    "Die Gashülle um die Erde",
+    "Nur das Wasser aller Meere",
+    "Nur das feste Gestein im Erdkern",
+    "Die Oberfläche des Mondes",
+    "Der Begriff beschreibt eine Hülle.",
+    "Darin befinden sich die Luft und das Wettergeschehen."
+  ],
+  "en": [
+    "What is Earth’s atmosphere?",
+    "The layer of gases surrounding Earth",
+    "Only the water in all seas",
+    "Only solid rock in Earth’s core",
+    "The Moon’s surface",
+    "The term describes a surrounding layer.",
+    "It contains the air and weather."
+  ],
+  "fr": [
+    "Qu’est-ce que l’atmosphère terrestre ?",
+    "L’enveloppe de gaz autour de la Terre",
+    "Seulement l’eau de toutes les mers",
+    "Seulement la roche solide du noyau terrestre",
+    "La surface de la Lune",
+    "Le terme décrit une enveloppe.",
+    "Elle contient l’air et les phénomènes météorologiques."
+  ],
+  "it": [
+    "Cos’è l’atmosfera terrestre?",
+    "L’involucro di gas attorno alla Terra",
+    "Solo l’acqua di tutti i mari",
+    "Solo la roccia solida del nucleo terrestre",
+    "La superficie della Luna",
+    "Il termine descrive un involucro.",
+    "Contiene l’aria e i fenomeni meteorologici."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-36",
+  "reason": "Replace misplaced fair-trade template with climate measurement timescale.",
+  "de": [
+    "Welche Daten helfen besonders, das Klima eines Ortes zu beschreiben?",
+    "Wetteraufzeichnungen über viele Jahre",
+    "Nur die Temperatur von heute Mittag",
+    "Nur ein Foto von gestern",
+    "Nur ein einzelner Regentropfen",
+    "Klima beschreibt langfristige Verhältnisse.",
+    "Viele Beobachtungen sind aussagekräftiger als ein einzelner Moment."
+  ],
+  "en": [
+    "Which data best help describe a place’s climate?",
+    "Weather records over many years",
+    "Only today’s noon temperature",
+    "Only one photograph from yesterday",
+    "Only a single raindrop",
+    "Climate describes long-term conditions.",
+    "Many observations say more than one moment."
+  ],
+  "fr": [
+    "Quelles données aident le mieux à décrire le climat d’un lieu ?",
+    "Des relevés météorologiques sur de nombreuses années",
+    "Seulement la température de midi aujourd’hui",
+    "Seulement une photo d’hier",
+    "Seulement une goutte de pluie",
+    "Le climat décrit des conditions durables.",
+    "De nombreuses observations en disent plus qu’un instant."
+  ],
+  "it": [
+    "Quali dati aiutano meglio a descrivere il clima di un luogo?",
+    "Rilevazioni meteorologiche di molti anni",
+    "Solo la temperatura di oggi a mezzogiorno",
+    "Solo una fotografia di ieri",
+    "Solo una goccia di pioggia",
+    "Il clima descrive condizioni di lungo periodo.",
+    "Molte osservazioni dicono più di un solo momento."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-38",
+  "reason": "Retain essential weather-versus-climate reasoning.",
+  "de": [
+    "Ein Tag ist ungewöhnlich kalt. Was folgt daraus für den Klimatrend?",
+    "Ein einzelner Tag bestimmt den langfristigen Trend nicht",
+    "Die globale Erwärmung ist damit widerlegt",
+    "Das Klima ändert sich niemals",
+    "Alle Orte der Erde sind an diesem Tag gleich kalt",
+    "Vergleiche einzelne Werte mit langjährigen Reihen.",
+    "Auch in einem wärmeren Klima kann es kalte Tage geben."
+  ],
+  "en": [
+    "One day is unusually cold. What does that tell us about the climate trend?",
+    "One day does not determine the long-term trend",
+    "Global warming is disproved",
+    "Climate never changes",
+    "Every place on Earth is equally cold that day",
+    "Compare individual values with long records.",
+    "A warmer climate can still include cold days."
+  ],
+  "fr": [
+    "Un jour est inhabituellement froid. Que peut-on en déduire sur la tendance climatique ?",
+    "Un seul jour ne détermine pas la tendance durable",
+    "Le réchauffement mondial est réfuté",
+    "Le climat ne change jamais",
+    "Tous les lieux terrestres sont aussi froids ce jour-là",
+    "Compare des valeurs isolées à de longues séries.",
+    "Un climat plus chaud peut encore avoir des jours froids."
+  ],
+  "it": [
+    "Un giorno è insolitamente freddo. Cosa indica sulla tendenza climatica?",
+    "Un solo giorno non determina la tendenza a lungo termine",
+    "Il riscaldamento globale è smentito",
+    "Il clima non cambia mai",
+    "Ogni luogo sulla Terra è ugualmente freddo quel giorno",
+    "Confronta singoli valori con serie lunghe.",
+    "Anche un clima più caldo può avere giornate fredde."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-40",
+  "reason": "Replace thermohaline mechanism with ocean heat transport. Second pass: subject-specific alternatives.",
+  "de": [
+    "Was können Meeresströmungen zwischen Regionen transportieren?",
+    "Wärme mit dem bewegten Wasser",
+    "Nur die Wassertemperatur als Zahl, ohne Energie zu verlagern",
+    "Wärme ausschliesslich entgegen jeder Bewegung des Wassers",
+    "Keine Wärme, weil Wasserbewegung und Energie nichts miteinander zu tun haben",
+    "Wasser kann unterschiedlich warm sein.",
+    "Überlege, was mitwandert, wenn sich eine Wassermasse bewegt."
+  ],
+  "en": [
+    "What can ocean currents transport between regions?",
+    "Heat carried by moving water",
+    "Only temperature as a number without moving energy",
+    "Heat exclusively opposite to every movement of water",
+    "No heat because water movement and energy are unrelated",
+    "Water can have different temperatures.",
+    "Think of what travels with a moving water mass."
+  ],
+  "fr": [
+    "Que peuvent transporter les courants marins entre régions ?",
+    "De la chaleur avec l’eau en mouvement",
+    "Seulement la température comme nombre sans déplacer d’énergie",
+    "La chaleur uniquement contre tout mouvement de l’eau",
+    "Aucune chaleur car mouvement de l’eau et énergie sont sans lien",
+    "L’eau peut avoir des températures différentes.",
+    "Pense à ce qui accompagne une masse d’eau en mouvement."
+  ],
+  "it": [
+    "Cosa possono trasportare le correnti marine tra regioni?",
+    "Calore insieme all’acqua in movimento",
+    "Solo la temperatura come numero senza spostare energia",
+    "Calore soltanto contro ogni movimento dell’acqua",
+    "Nessun calore perché movimento dell’acqua ed energia non sono collegati",
+    "L’acqua può avere temperature diverse.",
+    "Pensa a cosa accompagna una massa d’acqua che si muove."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-42",
+  "reason": "Replace RCP acronym with conditional projection reasoning. Second pass: subject-specific alternatives.",
+  "de": [
+    "Warum berechnen Forschende mehrere mögliche Klimazukünfte?",
+    "Künftige Emissionen hängen auch von menschlichen Entscheidungen ab",
+    "Weil alle künftigen Emissionsmengen schon genau feststehen",
+    "Weil ein einzelnes Modell jede künftige Entscheidung sicher vorhersagt",
+    "Weil eine einzige Tagesmessung alle Entwicklungen ersetzt",
+    "Zukunftsrechnungen können verschiedene Annahmen verwenden.",
+    "Vergleiche einen Weg mit mehr und einen mit weniger Treibhausgasen."
+  ],
+  "en": [
+    "Why do researchers calculate several possible climate futures?",
+    "Future emissions also depend on human choices",
+    "Because every future emission amount is already known exactly",
+    "Because one model certainly predicts every future decision",
+    "Because one daily measurement replaces every development",
+    "Projections can use different assumptions.",
+    "Compare a pathway with more greenhouse gases with one with fewer."
+  ],
+  "fr": [
+    "Pourquoi les scientifiques calculent-ils plusieurs futurs climatiques possibles ?",
+    "Les émissions futures dépendent aussi des choix humains",
+    "Parce que toutes les émissions futures sont déjà connues exactement",
+    "Parce qu’un seul modèle prévoit sûrement chaque décision future",
+    "Parce qu’une mesure quotidienne remplace toutes les évolutions",
+    "Les projections peuvent utiliser différentes hypothèses.",
+    "Compare une trajectoire avec plus et une avec moins de gaz à effet de serre."
+  ],
+  "it": [
+    "Perché gli scienziati calcolano diversi futuri climatici possibili?",
+    "Le emissioni future dipendono anche dalle scelte umane",
+    "Perché tutte le emissioni future sono già note esattamente",
+    "Perché un solo modello prevede sicuramente ogni decisione futura",
+    "Perché una misura giornaliera sostituisce ogni evoluzione",
+    "Le proiezioni possono usare ipotesi diverse.",
+    "Confronta un percorso con più gas serra con uno con meno."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-44",
+  "reason": "Replace radiative forcing units with greenhouse-effect concept. Second pass: subject-specific alternatives.",
+  "de": [
+    "Wie wirken zusätzliche Treibhausgase auf die Wärmeabgabe der Erde?",
+    "Sie erschweren die direkte Abgabe eines Teils der Wärmestrahlung ins All",
+    "Sie lassen die gesamte Wärmestrahlung ungehindert schneller entweichen",
+    "Sie verhindern vollständig, dass die Erde noch Wärme abstrahlt",
+    "Sie wirken nur auf sichtbares Licht und nie auf Wärmestrahlung",
+    "Es geht um Wärmestrahlung, nicht um Tageslänge.",
+    "Die Atmosphäre beeinflusst den Energieaustausch mit dem Weltraum."
+  ],
+  "en": [
+    "How do extra greenhouse gases affect Earth’s heat loss?",
+    "They hinder some heat radiation from escaping directly to space",
+    "They let all heat radiation escape faster without hindrance",
+    "They completely stop Earth from radiating any heat",
+    "They affect only visible light and never heat radiation",
+    "This concerns heat radiation, not day length.",
+    "The atmosphere affects energy exchange with space."
+  ],
+  "fr": [
+    "Comment des gaz à effet de serre supplémentaires influencent-ils la perte de chaleur terrestre ?",
+    "Ils freinent la sortie directe d’une partie du rayonnement thermique vers l’espace",
+    "Ils laissent tout rayonnement thermique s’échapper plus vite sans obstacle",
+    "Ils empêchent complètement tout rayonnement thermique terrestre",
+    "Ils agissent seulement sur la lumière visible, jamais sur le rayonnement thermique",
+    "Il s’agit de rayonnement thermique, pas de durée du jour.",
+    "L’atmosphère influence les échanges d’énergie avec l’espace."
+  ],
+  "it": [
+    "Come influiscono ulteriori gas serra sulla perdita di calore terrestre?",
+    "Ostacolano l’uscita diretta di parte della radiazione termica nello spazio",
+    "Lasciano uscire più velocemente tutta la radiazione termica senza ostacoli",
+    "Impediscono completamente ogni radiazione termica terrestre",
+    "Agiscono solo sulla luce visibile, mai sulla radiazione termica",
+    "Si tratta di radiazione termica, non della durata del giorno.",
+    "L’atmosfera influisce sugli scambi energetici con lo spazio."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-46",
+  "reason": "Replace treaty-date recall with shared climate action rationale. Second pass: subject-specific alternatives.",
+  "de": [
+    "Warum ist Klimaschutz eine internationale Aufgabe?",
+    "Treibhausgase und ihre Wirkungen enden nicht an Landesgrenzen",
+    "Jedes Land besitzt eine vollständig getrennte Atmosphäre",
+    "Emissionen eines Landes wirken ausschliesslich auf dessen Hauptstadt",
+    "Die Wirkung von Treibhausgasen endet an Küsten",
+    "Betrachte die Erde als zusammenhängendes System.",
+    "Luftmassen bewegen sich auch über Grenzen hinweg."
+  ],
+  "en": [
+    "Why is climate protection an international task?",
+    "Greenhouse gases and their effects do not stop at borders",
+    "Every country has a completely separate atmosphere",
+    "A country’s emissions affect only its capital",
+    "Greenhouse gas effects stop at coastlines",
+    "Consider Earth as a connected system.",
+    "Air masses also move across borders."
+  ],
+  "fr": [
+    "Pourquoi la protection du climat est-elle une tâche internationale ?",
+    "Les gaz à effet de serre et leurs effets ne s’arrêtent pas aux frontières",
+    "Chaque pays possède une atmosphère entièrement séparée",
+    "Les émissions d’un pays touchent seulement sa capitale",
+    "Les effets des gaz à effet de serre s’arrêtent aux côtes",
+    "Considère la Terre comme un système relié.",
+    "Les masses d’air traversent aussi les frontières."
+  ],
+  "it": [
+    "Perché proteggere il clima è un compito internazionale?",
+    "I gas serra e i loro effetti non si fermano ai confini",
+    "Ogni paese possiede un’atmosfera completamente separata",
+    "Le emissioni di un paese agiscono solo sulla capitale",
+    "Gli effetti dei gas serra si fermano alle coste",
+    "Considera la Terra come un sistema collegato.",
+    "Le masse d’aria attraversano anche i confini."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-48",
+  "reason": "Replace climate-sensitivity range with reading a measured trend.",
+  "de": [
+    "Eine Grafik zeigt über Jahrzehnte steigende Mitteltemperaturen. Was beschreibt sie?",
+    "Einen Erwärmungstrend",
+    "Die Temperatur jeder einzelnen Minute",
+    "Den Beweis, dass nie mehr Schnee fällt",
+    "Die genaue Temperatur in jedem Zimmer",
+    "Beachte Zeitraum und dargestellte Grösse.",
+    "Ein Mittelwert lässt einzelne Schwankungen zu."
+  ],
+  "en": [
+    "A graph shows average temperatures rising over decades. What does it describe?",
+    "A warming trend",
+    "The temperature of every minute",
+    "Proof that snow will never fall again",
+    "The exact temperature in every room",
+    "Notice the timescale and quantity shown.",
+    "An average still allows individual fluctuations."
+  ],
+  "fr": [
+    "Un graphique montre des températures moyennes croissantes sur des décennies. Que décrit-il ?",
+    "Une tendance au réchauffement",
+    "La température de chaque minute",
+    "La preuve qu’il ne neigera plus jamais",
+    "La température exacte de chaque pièce",
+    "Observe la durée et la grandeur représentée.",
+    "Une moyenne permet encore des variations individuelles."
+  ],
+  "it": [
+    "Un grafico mostra temperature medie in aumento per decenni. Cosa descrive?",
+    "Una tendenza al riscaldamento",
+    "La temperatura di ogni minuto",
+    "La prova che non nevicherà mai più",
+    "La temperatura esatta in ogni stanza",
+    "Nota il periodo e la grandezza rappresentata.",
+    "Una media consente comunque singole variazioni."
+  ]
+},
+{
+  "key": "5/science/erde-klima-5/ek5-50",
+  "reason": "Introduce emissions balance with a transparent numerical model, not broad climate-neutrality claims. Second pass: subject-specific alternatives.",
+  "de": [
+    "Ein Modell zählt 10 Einheiten CO₂-Ausstoss und 10 dauerhaft entfernte Einheiten. Wie ist die CO₂-Bilanz?",
+    "Ausgeglichen",
+    "10 zusätzliche Einheiten",
+    "20 zusätzliche Einheiten",
+    "10 Einheiten weniger",
+    "Vergleiche hinzugefügte und entfernte Mengen.",
+    "Berücksichtige beide Seiten der Bilanz."
+  ],
+  "en": [
+    "A model counts 10 units of CO₂ emitted and 10 permanently removed. What is the CO₂ balance?",
+    "Balanced",
+    "10 additional units",
+    "20 additional units",
+    "10 fewer units",
+    "Compare added and removed amounts.",
+    "Consider both sides of the balance."
+  ],
+  "fr": [
+    "Un modèle compte 10 unités de CO₂ émises et 10 retirées durablement. Quel est le bilan CO₂ ?",
+    "Équilibré",
+    "10 unités supplémentaires",
+    "20 unités supplémentaires",
+    "10 unités en moins",
+    "Compare les quantités ajoutées et retirées.",
+    "Tiens compte des deux côtés du bilan."
+  ],
+  "it": [
+    "Un modello conta 10 unità di CO₂ emesse e 10 rimosse stabilmente. Com’è il bilancio del CO₂?",
+    "In equilibrio",
+    "10 unità in più",
+    "20 unità in più",
+    "10 unità in meno",
+    "Confronta quantità aggiunte e rimosse.",
+    "Considera entrambi i lati del bilancio."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-4",
+  "reason": "Identify camouflage as reduced visibility, not literal invisibility. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Wie hilft eine passende Tarnfarbe einem Tier?",
+    "Es fällt in seiner Umgebung weniger auf",
+    "Es ist unabhängig vom Hintergrund immer gleich gut getarnt",
+    "Es fällt durch stärkeren Farbkontrast leichter auf",
+    "Es wird auch für Räuber mit gutem Geruchssinn sicher unauffindbar",
+    "Vergleiche Tierfarbe und Hintergrund.",
+    "Tarnung erschwert das Entdecken, verhindert es aber nicht sicher."
+  ],
+  "en": [
+    "How does suitable camouflage colouring help an animal?",
+    "It is less noticeable in its surroundings",
+    "It is equally well hidden against every background",
+    "It stands out more through stronger colour contrast",
+    "It certainly cannot be found even by predators with a good sense of smell",
+    "Compare the animal’s colour with its background.",
+    "Camouflage makes detection harder but cannot guarantee concealment."
+  ],
+  "fr": [
+    "Comment une couleur de camouflage adaptée aide-t-elle un animal ?",
+    "Il se remarque moins dans son environnement",
+    "Il est aussi bien caché sur tous les fonds",
+    "Il se remarque davantage par un contraste plus fort",
+    "Il devient introuvable même pour les prédateurs à l’odorat développé",
+    "Compare sa couleur au fond.",
+    "Le camouflage rend la détection plus difficile sans la rendre impossible."
+  ],
+  "it": [
+    "Come aiuta un animale una colorazione mimetica adatta?",
+    "Si nota meno nell’ambiente",
+    "È nascosto altrettanto bene su ogni sfondo",
+    "Si nota di più grazie a un contrasto maggiore",
+    "Diventa introvabile anche per predatori dal buon olfatto",
+    "Confronta il colore dell’animale con lo sfondo.",
+    "Il mimetismo rende più difficile scoprirlo, ma non lo garantisce."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-6",
+  "reason": "Apply producer concept to a pond habitat.",
+  "de": [
+    "Wer stellt in einem Teich mit Sonnenlicht Zucker her?",
+    "Grüne Algen",
+    "Frösche",
+    "Libellenlarven",
+    "Wasserschnecken",
+    "Suche ein Lebewesen mit Fotosynthese.",
+    "Nicht jedes Lebewesen im Wasser ist ein Tier."
+  ],
+  "en": [
+    "Who makes sugar using sunlight in a pond?",
+    "Green algae",
+    "Frogs",
+    "Dragonfly larvae",
+    "Water snails",
+    "Look for an organism that photosynthesises.",
+    "Not every organism in water is an animal."
+  ],
+  "fr": [
+    "Qui fabrique du sucre avec la lumière dans un étang ?",
+    "Les algues vertes",
+    "Les grenouilles",
+    "Les larves de libellules",
+    "Les escargots aquatiques",
+    "Cherche un organisme qui réalise la photosynthèse.",
+    "Tous les êtres vivants de l’eau ne sont pas des animaux."
+  ],
+  "it": [
+    "Chi produce zucchero con la luce in uno stagno?",
+    "Le alghe verdi",
+    "Le rane",
+    "Le larve di libellula",
+    "Le lumache acquatiche",
+    "Cerca un organismo che fa fotosintesi.",
+    "Non ogni essere vivente nell’acqua è un animale."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-8",
+  "reason": "Recognise energy conservation during hibernation. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Was geschieht bei einem Igel im Winterschlaf?",
+    "Körpertemperatur und Herzschlag werden stark gesenkt",
+    "Sein Körper bleibt so aktiv wie bei der Nahrungssuche im Sommer",
+    "Sein Herz schlägt deutlich schneller als beim Laufen",
+    "Er hält seine Körpertemperatur durch ständiges Herumlaufen hoch",
+    "Im Winter ist geeignete Nahrung knapp.",
+    "Vergleiche den Energiebedarf mit der aktiven Jahreszeit."
+  ],
+  "en": [
+    "What happens to a hedgehog during hibernation?",
+    "Its body temperature and heart rate drop greatly",
+    "Its body stays as active as when searching for food in summer",
+    "Its heart beats much faster than when running",
+    "It keeps its body warm by walking around constantly",
+    "Suitable food is scarce in winter.",
+    "Compare its energy needs with the active season."
+  ],
+  "fr": [
+    "Que se passe-t-il chez un hérisson en hibernation ?",
+    "Sa température et son rythme cardiaque baissent fortement",
+    "Son corps reste aussi actif que pendant la recherche de nourriture en été",
+    "Son cœur bat bien plus vite que lorsqu’il court",
+    "Il garde son corps chaud en marchant constamment",
+    "La nourriture adaptée manque en hiver.",
+    "Compare ses besoins énergétiques à ceux de la saison active."
+  ],
+  "it": [
+    "Cosa succede a un riccio in letargo?",
+    "Temperatura corporea e battito cardiaco diminuiscono molto",
+    "Il corpo resta attivo come durante la ricerca di cibo in estate",
+    "Il cuore batte molto più veloce che durante la corsa",
+    "Mantiene il corpo caldo camminando continuamente",
+    "In inverno il cibo adatto è scarso.",
+    "Confronta il fabbisogno energetico con la stagione attiva."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-10",
+  "reason": "Replace blanket southward movement with the purpose of seasonal migration. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Warum ziehen viele Zugvögel im Herbst in andere Gebiete?",
+    "Dort finden sie im Winter eher genügend Nahrung",
+    "Sie können in ihrem Brutgebiet grundsätzlich nie Nahrung finden",
+    "Sie legen die Strecke nur zurück, um ihr Gefieder zu trocknen",
+    "Sie verlieren im Herbst dauerhaft ihre Flugfähigkeit",
+    "Denke an Insekten und andere Nahrung im Winter.",
+    "Nicht jede Vogelart verbringt das Jahr am selben Ort."
+  ],
+  "en": [
+    "Why do many migratory birds move to other regions in autumn?",
+    "They are more likely to find enough food there in winter",
+    "They can never find food in their breeding grounds",
+    "They travel only to dry their feathers",
+    "They permanently lose the ability to fly in autumn",
+    "Think of insects and other food in winter.",
+    "Not every bird species stays in one place all year."
+  ],
+  "fr": [
+    "Pourquoi de nombreux oiseaux migrent-ils en automne ?",
+    "Ils trouvent plus facilement assez de nourriture ailleurs en hiver",
+    "Ils ne trouvent jamais de nourriture dans leur région de reproduction",
+    "Ils voyagent seulement pour sécher leurs plumes",
+    "Ils perdent définitivement le vol en automne",
+    "Pense aux insectes et aux autres aliments en hiver.",
+    "Toutes les espèces ne restent pas au même endroit toute l’année."
+  ],
+  "it": [
+    "Perché molti uccelli migrano in autunno?",
+    "Altrove trovano più facilmente cibo sufficiente in inverno",
+    "Non trovano mai cibo nelle zone di riproduzione",
+    "Viaggiano solo per asciugare le piume",
+    "Perdono definitivamente la capacità di volare in autunno",
+    "Pensa agli insetti e ad altro cibo in inverno.",
+    "Non ogni specie resta nello stesso luogo tutto l’anno."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-12",
+  "reason": "Choose the correct butterfly development sequence.",
+  "de": [
+    "Welche Reihenfolge beschreibt die Entwicklung eines Schmetterlings ab dem Ei?",
+    "Ei, Raupe, Puppe, Falter",
+    "Ei, Puppe, Raupe, Falter",
+    "Raupe, Ei, Falter, Puppe",
+    "Ei, Raupe, Falter, Puppe",
+    "Beginne beim abgelegten Ei.",
+    "Die fressende Larve kommt vor dem Puppenstadium."
+  ],
+  "en": [
+    "Which sequence describes a butterfly developing from an egg?",
+    "Egg, caterpillar, pupa, butterfly",
+    "Egg, pupa, caterpillar, butterfly",
+    "Caterpillar, egg, butterfly, pupa",
+    "Egg, caterpillar, butterfly, pupa",
+    "Start with the laid egg.",
+    "The feeding larva comes before the pupal stage."
+  ],
+  "fr": [
+    "Quel ordre décrit le développement du papillon à partir de l’œuf ?",
+    "Œuf, chenille, chrysalide, papillon",
+    "Œuf, chrysalide, chenille, papillon",
+    "Chenille, œuf, papillon, chrysalide",
+    "Œuf, chenille, papillon, chrysalide",
+    "Commence par l’œuf pondu.",
+    "La larve qui se nourrit précède le stade de chrysalide."
+  ],
+  "it": [
+    "Quale ordine descrive lo sviluppo della farfalla a partire dall’uovo?",
+    "Uovo, bruco, crisalide, farfalla",
+    "Uovo, crisalide, bruco, farfalla",
+    "Bruco, uovo, farfalla, crisalide",
+    "Uovo, bruco, farfalla, crisalide",
+    "Inizia dall’uovo deposto.",
+    "La larva che si nutre precede la crisalide."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-14",
+  "reason": "Replace niche definition with species-specific food use. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Zwei Vogelarten suchen Nahrung in verschiedenen Baumteilen. Was kann das verringern?",
+    "Ihre Konkurrenz um dieselbe Nahrung",
+    "Die Konkurrenz um Futter wird dadurch grundsätzlich stärker",
+    "Beide Arten müssen nun dieselben einzelnen Insekten fressen",
+    "Beide Arten können danach nur noch am Boden Nahrung suchen",
+    "Vergleiche die genutzten Futterplätze.",
+    "Getrennte Nahrungsquellen können das direkte Zusammentreffen reduzieren."
+  ],
+  "en": [
+    "Two bird species feed in different parts of a tree. What can this reduce?",
+    "Competition for the same food",
+    "Competition for food necessarily becomes stronger",
+    "Both species now have to eat the very same individual insects",
+    "Both species can then feed only on the ground",
+    "Compare the feeding locations.",
+    "Separate food sources can reduce direct competition."
+  ],
+  "fr": [
+    "Deux espèces d’oiseaux se nourrissent dans différentes parties d’un arbre. Que peut réduire cette différence ?",
+    "La concurrence pour la même nourriture",
+    "La concurrence alimentaire devient forcément plus forte",
+    "Les deux espèces doivent manger exactement les mêmes insectes individuels",
+    "Les deux espèces ne peuvent ensuite se nourrir qu’au sol",
+    "Compare les lieux d’alimentation.",
+    "Des ressources séparées peuvent limiter la concurrence directe."
+  ],
+  "it": [
+    "Due specie di uccelli si nutrono in parti diverse di un albero. Cosa può diminuire?",
+    "La competizione per lo stesso cibo",
+    "La competizione alimentare diventa necessariamente maggiore",
+    "Entrambe devono mangiare esattamente gli stessi singoli insetti",
+    "Entrambe possono poi nutrirsi solo al suolo",
+    "Confronta i luoghi di alimentazione.",
+    "Fonti separate possono ridurre la competizione diretta."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-16",
+  "reason": "Recognise chlorophyll as a leaf pigment. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Was ist Chlorophyll?",
+    "Ein grüner Farbstoff, der Licht aufnimmt",
+    "Ein Zucker, der als Energievorrat gespeichert wird",
+    "Ein Mineralstoff, den Wurzeln aus dem Boden aufnehmen",
+    "Ein Gas, das Pflanzen bei der Fotosynthese abgeben",
+    "Denke an grüne Blätter.",
+    "Der Stoff hilft Pflanzen bei der Nutzung von Licht."
+  ],
+  "en": [
+    "What is chlorophyll?",
+    "A green pigment that absorbs light",
+    "A sugar stored as an energy reserve",
+    "A mineral taken up by roots from soil",
+    "A gas released by plants during photosynthesis",
+    "Think of green leaves.",
+    "The substance helps plants use light."
+  ],
+  "fr": [
+    "Qu’est-ce que la chlorophylle ?",
+    "Un pigment vert qui absorbe la lumière",
+    "Un sucre stocké comme réserve énergétique",
+    "Un minéral absorbé du sol par les racines",
+    "Un gaz libéré par les plantes pendant la photosynthèse",
+    "Pense aux feuilles vertes.",
+    "Cette substance aide les plantes à utiliser la lumière."
+  ],
+  "it": [
+    "Cos’è la clorofilla?",
+    "Un pigmento verde che assorbe luce",
+    "Uno zucchero conservato come riserva energetica",
+    "Un minerale assorbito dal suolo dalle radici",
+    "Un gas rilasciato dalle piante durante la fotosintesi",
+    "Pensa alle foglie verdi.",
+    "La sostanza aiuta le piante a usare la luce."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-18",
+  "reason": "Replace primary/secondary succession comparison with seed colonisation. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Wie können neue Pflanzen auf eine freie Fläche gelangen?",
+    "Samen werden etwa durch Wind oder Tiere verbreitet",
+    "Jede neue Pflanze muss von Menschen gesetzt werden",
+    "Samen bleiben unabhängig von Wind und Tieren immer neben der Mutterpflanze",
+    "Nur bereits vollständig ausgewachsene Bäume können neue Flächen besiedeln",
+    "Denke an Löwenzahnsamen und Früchte.",
+    "Es gibt verschiedene Wege der Ausbreitung."
+  ],
+  "en": [
+    "How can new plants reach an open area?",
+    "Seeds can be spread by wind or animals",
+    "Every new plant must be planted by people",
+    "Seeds always remain beside the parent plant regardless of wind and animals",
+    "Only fully grown trees can colonise new areas",
+    "Think of dandelion seeds and fruit.",
+    "There are several ways to spread."
+  ],
+  "fr": [
+    "Comment de nouvelles plantes arrivent-elles sur un espace libre ?",
+    "Le vent ou les animaux peuvent disperser les graines",
+    "Chaque nouvelle plante doit être plantée par des humains",
+    "Les graines restent toujours près de la plante mère malgré vent et animaux",
+    "Seuls des arbres déjà adultes peuvent coloniser de nouveaux espaces",
+    "Pense aux graines de pissenlit et aux fruits.",
+    "Il existe plusieurs modes de dispersion."
+  ],
+  "it": [
+    "Come arrivano nuove piante su un’area libera?",
+    "I semi possono essere diffusi dal vento o dagli animali",
+    "Ogni nuova pianta deve essere piantata da persone",
+    "I semi restano sempre accanto alla pianta madre nonostante vento e animali",
+    "Solo alberi già adulti possono colonizzare nuove aree",
+    "Pensa ai semi di tarassaco e ai frutti.",
+    "Esistono diversi modi di diffusione."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-20",
+  "reason": "Replace endosymbiosis theory with plant-cell observation.",
+  "de": [
+    "Womit lassen sich viele Pflanzenzellen vergrössert beobachten?",
+    "Mit einem Mikroskop",
+    "Mit einer Küchenwaage",
+    "Mit einem Regenmesser",
+    "Mit einem Kompass",
+    "Zellen sind oft zu klein für das blosse Auge.",
+    "Suche ein optisches Vergrösserungsgerät."
+  ],
+  "en": [
+    "What lets you view many plant cells magnified?",
+    "A microscope",
+    "A kitchen scale",
+    "A rain gauge",
+    "A compass",
+    "Cells are often too small for the naked eye.",
+    "Look for an optical magnifying instrument."
+  ],
+  "fr": [
+    "Avec quoi observe-t-on de nombreuses cellules végétales agrandies ?",
+    "Un microscope",
+    "Une balance de cuisine",
+    "Un pluviomètre",
+    "Une boussole",
+    "Les cellules sont souvent trop petites pour l’œil nu.",
+    "Cherche un instrument optique grossissant."
+  ],
+  "it": [
+    "Con cosa si osservano ingrandite molte cellule vegetali?",
+    "Un microscopio",
+    "Una bilancia da cucina",
+    "Un pluviometro",
+    "Una bussola",
+    "Le cellule sono spesso troppo piccole per l’occhio nudo.",
+    "Cerca uno strumento ottico che ingrandisce."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-22",
+  "reason": "Recognise transpiration in simple terms. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Was geben Blätter bei der Transpiration ab?",
+    "Wasserdampf",
+    "Flüssiges Wasser nur als grosse Regentropfen",
+    "Zucker als sichtbare Kristalle",
+    "Mineralstoffe als trockenen Staub",
+    "Wasser gelangt von den Wurzeln durch die Pflanze.",
+    "Es kann in gasförmiger Form nach aussen gelangen."
+  ],
+  "en": [
+    "What do leaves release during transpiration?",
+    "Water vapour",
+    "Liquid water only as large raindrops",
+    "Sugar as visible crystals",
+    "Minerals as dry dust",
+    "Water moves from roots through the plant.",
+    "It can leave in gaseous form."
+  ],
+  "fr": [
+    "Que libèrent les feuilles pendant la transpiration ?",
+    "De la vapeur d’eau",
+    "De l’eau liquide uniquement en grosses gouttes de pluie",
+    "Du sucre en cristaux visibles",
+    "Des minéraux en poussière sèche",
+    "L’eau traverse la plante depuis les racines.",
+    "Elle peut sortir sous forme gazeuse."
+  ],
+  "it": [
+    "Cosa rilasciano le foglie durante la traspirazione?",
+    "Vapore acqueo",
+    "Acqua liquida solo in grandi gocce di pioggia",
+    "Zucchero in cristalli visibili",
+    "Minerali come polvere secca",
+    "L’acqua attraversa la pianta dalle radici.",
+    "Può uscire in forma gassosa."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-24",
+  "reason": "Replace coevolution with concrete pollination benefit. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Wie können Bienen einer Blütenpflanze helfen?",
+    "Sie übertragen Pollen zwischen Blüten",
+    "Sie bringen fertige Samen direkt in jede Blüte",
+    "Sie ersetzen die Aufnahme von Wasser durch die Wurzeln",
+    "Sie entfernen alle Staubblätter, bevor Pollen entstehen kann",
+    "Beobachte, was beim Blütenbesuch am Körper haften bleibt.",
+    "Pollenübertragung kann zur Fortpflanzung beitragen."
+  ],
+  "en": [
+    "How can bees help a flowering plant?",
+    "They transfer pollen between flowers",
+    "They bring finished seeds directly into every flower",
+    "They replace the uptake of water through roots",
+    "They remove all stamens before pollen can form",
+    "Notice what sticks to a bee during a flower visit.",
+    "Pollen transfer can support reproduction."
+  ],
+  "fr": [
+    "Comment les abeilles peuvent-elles aider une plante à fleurs ?",
+    "Elles transportent le pollen entre les fleurs",
+    "Elles apportent des graines déjà formées dans chaque fleur",
+    "Elles remplacent l’absorption d’eau par les racines",
+    "Elles retirent toutes les étamines avant la formation du pollen",
+    "Observe ce qui adhère à l’abeille lors d’une visite.",
+    "Le transport du pollen peut aider la reproduction."
+  ],
+  "it": [
+    "Come possono le api aiutare una pianta da fiore?",
+    "Trasportano polline tra i fiori",
+    "Portano semi già formati direttamente in ogni fiore",
+    "Sostituiscono l’assorbimento d’acqua dalle radici",
+    "Rimuovono tutti gli stami prima che si formi il polline",
+    "Osserva cosa si attacca all’ape durante una visita.",
+    "Il trasporto di polline può aiutare la riproduzione."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-26",
+  "reason": "Replace secondary metabolism with scent function. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Wozu kann der Duft einer Blüte dienen?",
+    "Bestäubende Insekten anlocken",
+    "Wasser aus dem Boden in die Wurzeln ziehen",
+    "Den Samen als feste Schutzhülle umgeben",
+    "Die Pflanze mechanisch im Boden verankern",
+    "Blüten können auf verschiedene Weise auf sich aufmerksam machen.",
+    "Denke an Tiere, die Blüten besuchen."
+  ],
+  "en": [
+    "What can a flower’s scent help do?",
+    "Attract pollinating insects",
+    "Pull water from soil into roots",
+    "Surround seeds as a solid protective coat",
+    "Mechanically anchor the plant in soil",
+    "Flowers can attract attention in different ways.",
+    "Think of animals that visit flowers."
+  ],
+  "fr": [
+    "À quoi peut servir le parfum d’une fleur ?",
+    "À attirer les insectes pollinisateurs",
+    "Attirer l’eau du sol dans les racines",
+    "Entourer la graine d’une enveloppe solide",
+    "Ancrer mécaniquement la plante dans le sol",
+    "Les fleurs peuvent attirer l’attention de plusieurs façons.",
+    "Pense aux animaux qui visitent les fleurs."
+  ],
+  "it": [
+    "A cosa può servire il profumo di un fiore?",
+    "Ad attirare insetti impollinatori",
+    "Attirare acqua dal suolo nelle radici",
+    "Circondare il seme con un involucro solido",
+    "Ancorare meccanicamente la pianta nel suolo",
+    "I fiori possono attirare attenzione in modi diversi.",
+    "Pensa agli animali che visitano i fiori."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-28",
+  "reason": "Recognise essential mineral supply even without soil. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Eine Pflanze wächst ohne Erde in einer Nährlösung. Was erhält sie daraus?",
+    "Wasser und gelöste Mineralstoffe",
+    "Nur Licht, aber kein Wasser",
+    "Nur Wasser, aber keinerlei Mineralstoffe",
+    "Fertige Blätter statt gelöster Nährstoffe",
+    "Erde ist nicht die einzige Möglichkeit, Wurzeln zu versorgen.",
+    "Beachte den Begriff Lösung."
+  ],
+  "en": [
+    "A plant grows without soil in a nutrient solution. What does it get from it?",
+    "Water and dissolved minerals",
+    "Only light, but no water",
+    "Only water, but no minerals",
+    "Ready-made leaves instead of dissolved nutrients",
+    "Soil is not the only way to supply roots.",
+    "Notice the word solution."
+  ],
+  "fr": [
+    "Une plante pousse sans terre dans une solution nutritive. Qu’y reçoit-elle ?",
+    "De l’eau et des minéraux dissous",
+    "Seulement de la lumière, sans eau",
+    "Seulement de l’eau, sans minéraux",
+    "Des feuilles déjà formées au lieu de nutriments dissous",
+    "La terre n’est pas le seul moyen d’alimenter les racines.",
+    "Observe le mot solution."
+  ],
+  "it": [
+    "Una pianta cresce senza terra in una soluzione nutritiva. Cosa riceve?",
+    "Acqua e minerali disciolti",
+    "Solo luce, senza acqua",
+    "Solo acqua, senza minerali",
+    "Foglie già formate invece di nutrienti disciolti",
+    "La terra non è l’unico modo per nutrire le radici.",
+    "Nota la parola soluzione."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-30",
+  "reason": "Preserve qualified indicator statement rather than overclaim proof.",
+  "de": [
+    "Viele empfindliche Flechten wachsen an einem Ort. Worauf kann das hinweisen?",
+    "Auf eher geringe Luftverschmutzung",
+    "Auf garantiert völlig schadstofffreie Luft",
+    "Auf die genaue Temperatur von morgen",
+    "Auf die Zahl aller Tiere im Wald",
+    "Es ist ein Hinweis, keine vollständige Messung.",
+    "Empfindliche Arten vertragen manche Schadstoffe schlecht."
+  ],
+  "en": [
+    "Many sensitive lichens grow in a place. What may this indicate?",
+    "Relatively low air pollution",
+    "Guaranteed completely pollutant-free air",
+    "Tomorrow’s exact temperature",
+    "The number of all animals in the forest",
+    "It is a clue, not a complete measurement.",
+    "Sensitive species tolerate some pollutants poorly."
+  ],
+  "fr": [
+    "De nombreux lichens sensibles poussent dans un lieu. Que peuvent-ils indiquer ?",
+    "Une pollution de l’air plutôt faible",
+    "Un air garanti sans aucun polluant",
+    "La température exacte de demain",
+    "Le nombre de tous les animaux de la forêt",
+    "C’est un indice, pas une mesure complète.",
+    "Les espèces sensibles supportent mal certains polluants."
+  ],
+  "it": [
+    "Molti licheni sensibili crescono in un luogo. Cosa possono indicare?",
+    "Un inquinamento dell’aria piuttosto basso",
+    "Aria garantita senza alcun inquinante",
+    "La temperatura esatta di domani",
+    "Il numero di tutti gli animali del bosco",
+    "È un indizio, non una misurazione completa.",
+    "Le specie sensibili tollerano male alcuni inquinanti."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-32",
+  "reason": "Replace phenology definition with comparable observations over years.",
+  "de": [
+    "Wie vergleichst du Blühzeiten eines Kirschbaums über mehrere Jahre?",
+    "Jedes Jahr den Beginn der Blüte notieren",
+    "Nur einmal die Baumhöhe schätzen",
+    "Die Blütenfarbe aus dem Gedächtnis raten",
+    "Jedes Jahr einen anderen Baum an einem anderen Ort ohne Kennzeichnung verwenden",
+    "Für Vergleiche braucht es vergleichbare Beobachtungen.",
+    "Halte fest, wann dasselbe Ereignis eintritt."
+  ],
+  "en": [
+    "How can you compare a cherry tree’s flowering time over several years?",
+    "Record the start of flowering each year",
+    "Estimate its height only once",
+    "Guess flower colour from memory",
+    "Use a different unlabelled tree elsewhere every year",
+    "Comparisons need comparable observations.",
+    "Record when the same event occurs."
+  ],
+  "fr": [
+    "Comment comparer les dates de floraison d’un cerisier sur plusieurs années ?",
+    "Noter chaque année le début de la floraison",
+    "Estimer sa hauteur une seule fois",
+    "Deviner la couleur des fleurs de mémoire",
+    "Utiliser chaque année un autre arbre ailleurs sans l’identifier",
+    "Il faut des observations comparables.",
+    "Note quand le même événement se produit."
+  ],
+  "it": [
+    "Come confronti la fioritura di un ciliegio per diversi anni?",
+    "Annotare ogni anno l’inizio della fioritura",
+    "Stimare una sola volta l’altezza",
+    "Indovinare a memoria il colore dei fiori",
+    "Usare ogni anno un altro albero altrove senza identificarlo",
+    "Servono osservazioni confrontabili.",
+    "Annota quando avviene lo stesso evento."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-34",
+  "reason": "Recognise endemism from a simple distribution description.",
+  "de": [
+    "Eine Art kommt natürlicherweise nur auf einer bestimmten Insel vor. Was bedeutet das?",
+    "Ihr natürliches Verbreitungsgebiet ist auf diese Insel beschränkt",
+    "Sie lebt natürlicherweise in jedem Land",
+    "Sie ist deshalb kein Lebewesen",
+    "Sie kann auf der Insel keinen Nachwuchs haben",
+    "Es geht um die natürliche Verbreitung.",
+    "Unterscheide einen einzigen Lebensraum von weltweitem Vorkommen."
+  ],
+  "en": [
+    "A species naturally occurs only on one island. What does this mean?",
+    "Its natural range is restricted to that island",
+    "It naturally lives in every country",
+    "It is therefore not alive",
+    "It cannot reproduce on the island",
+    "Focus on natural distribution.",
+    "Distinguish one restricted area from worldwide occurrence."
+  ],
+  "fr": [
+    "Une espèce existe naturellement sur une seule île. Que signifie cela ?",
+    "Son aire naturelle est limitée à cette île",
+    "Elle vit naturellement dans tous les pays",
+    "Ce n’est donc pas un être vivant",
+    "Elle ne peut pas se reproduire sur l’île",
+    "Concentre-toi sur la répartition naturelle.",
+    "Distingue une aire limitée d’une présence mondiale."
+  ],
+  "it": [
+    "Una specie vive naturalmente solo su un’isola. Cosa significa?",
+    "La sua area naturale è limitata a quell’isola",
+    "Vive naturalmente in ogni paese",
+    "Quindi non è un essere vivente",
+    "Non può riprodursi sull’isola",
+    "Concentrati sulla distribuzione naturale.",
+    "Distingui un’area limitata da una presenza mondiale."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-36",
+  "reason": "Replace generic plant-needs template with a fair light comparison. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Du prüfst, wie Licht das Pflanzenwachstum beeinflusst. Was hältst du möglichst gleich?",
+    "Pflanzenart, Wasser und Temperatur",
+    "Pflanzenart und Wasser ändern, nur das Licht gleich halten",
+    "Licht, Wasser und Temperatur gleichzeitig ändern",
+    "Nur die Topffarbe gleich halten und alle Wachstumsbedingungen ändern",
+    "Ändere möglichst nur den untersuchten Faktor.",
+    "Andere Unterschiede könnten das Ergebnis ebenfalls erklären."
+  ],
+  "en": [
+    "You test how light affects plant growth. What should stay as similar as possible?",
+    "Plant species, water and temperature",
+    "Change species and water, keeping only light the same",
+    "Change light, water and temperature together",
+    "Keep only pot colour the same and change all growing conditions",
+    "Change only the factor being studied where possible.",
+    "Other differences might also explain the result."
+  ],
+  "fr": [
+    "Tu testes l’effet de la lumière sur la croissance. Que gardes-tu aussi semblable que possible ?",
+    "L’espèce, l’eau et la température",
+    "Changer espèce et eau en gardant seulement la lumière identique",
+    "Changer lumière, eau et température ensemble",
+    "Garder seulement la couleur du pot et changer toutes les conditions",
+    "Ne change si possible que le facteur étudié.",
+    "D’autres différences pourraient aussi expliquer le résultat."
+  ],
+  "it": [
+    "Studi l’effetto della luce sulla crescita. Cosa mantieni il più possibile uguale?",
+    "Specie, acqua e temperatura",
+    "Cambiare specie e acqua mantenendo uguale solo la luce",
+    "Cambiare insieme luce, acqua e temperatura",
+    "Mantenere solo il colore del vaso e cambiare tutte le condizioni",
+    "Cambia possibilmente solo il fattore studiato.",
+    "Altre differenze potrebbero spiegare il risultato."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-38",
+  "reason": "Replace kin selection with observable care of young.",
+  "de": [
+    "Was ist ein Beispiel für Brutpflege?",
+    "Ein Vogel füttert seine Jungen im Nest",
+    "Ein Vogel verliert eine Feder",
+    "Ein Vogel wirft einen Schatten",
+    "Ein Vogel sitzt ohne Junge auf einem Dach",
+    "Brutpflege betrifft den Nachwuchs.",
+    "Achte auf eine Handlung, die den Jungen hilft."
+  ],
+  "en": [
+    "Which is an example of caring for young?",
+    "A bird feeds its chicks in the nest",
+    "A bird loses a feather",
+    "A bird casts a shadow",
+    "A bird sits alone on a roof",
+    "Parental care concerns offspring.",
+    "Look for an action that helps the young."
+  ],
+  "fr": [
+    "Quel est un exemple de soins aux petits ?",
+    "Un oiseau nourrit ses petits au nid",
+    "Un oiseau perd une plume",
+    "Un oiseau projette une ombre",
+    "Un oiseau est seul sur un toit",
+    "Les soins parentaux concernent les petits.",
+    "Cherche une action qui les aide."
+  ],
+  "it": [
+    "Qual è un esempio di cura dei piccoli?",
+    "Un uccello nutre i piccoli nel nido",
+    "Un uccello perde una piuma",
+    "Un uccello proietta un’ombra",
+    "Un uccello è solo su un tetto",
+    "Le cure parentali riguardano i piccoli.",
+    "Cerca un’azione che li aiuta."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-40",
+  "reason": "Replace misplaced immunology with respectful wildlife observation.",
+  "de": [
+    "Du entdeckst ein Vogelnest mit Jungen. Wie beobachtest du es schonend?",
+    "Abstand halten und die Altvögel nicht stören",
+    "Die Jungen herausnehmen",
+    "Den Nesteingang versperren",
+    "Lange direkt vor dem Nest stehen bleiben",
+    "Die Eltern müssen zum Nest gelangen können.",
+    "Beobachten bedeutet nicht anfassen oder eingreifen."
+  ],
+  "en": [
+    "You find a bird nest with chicks. How can you observe gently?",
+    "Keep your distance and avoid disturbing the adults",
+    "Take the chicks out",
+    "Block the nest entrance",
+    "Stand directly in front of it for a long time",
+    "The parents must be able to reach the nest.",
+    "Observing does not mean touching or intervening."
+  ],
+  "fr": [
+    "Tu découvres un nid avec des petits. Comment observer sans déranger ?",
+    "Garder ses distances et ne pas gêner les adultes",
+    "Sortir les petits",
+    "Bloquer l’entrée du nid",
+    "Rester longtemps juste devant le nid",
+    "Les parents doivent pouvoir rejoindre le nid.",
+    "Observer ne signifie pas toucher ou intervenir."
+  ],
+  "it": [
+    "Trovi un nido con piccoli. Come osservi senza disturbare?",
+    "Mantenere distanza e non disturbare gli adulti",
+    "Togliere i piccoli dal nido",
+    "Bloccare l’ingresso",
+    "Restare a lungo proprio davanti al nido",
+    "I genitori devono poter raggiungere il nido.",
+    "Osservare non significa toccare o intervenire."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-42",
+  "reason": "Replace island biogeography theory with habitat-space reasoning. Second pass: explicitly refined alternatives. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Warum kann eine grössere Naturfläche mehr Lebensräume bieten?",
+    "Sie kann unterschiedliche Bereiche wie Wiesen, Wasser und Gehölze enthalten",
+    "Jede grosse Fläche hat automatisch mehr Arten, auch ohne passende Lebensräume",
+    "Die Flächengrösse ersetzt jede Prüfung von Boden und Wasser",
+    "Auf einer grossen Fläche können keine unterschiedlichen Lebensräume nebeneinander vorkommen",
+    "Grösse allein erklärt nicht alles.",
+    "Achte auf die Vielfalt der vorhandenen Bedingungen."
+  ],
+  "en": [
+    "Why can a larger natural area offer more habitats?",
+    "It can include different areas such as grassland, water and trees",
+    "Every large area automatically has more species even without suitable habitats",
+    "Area size replaces all checks of soil and water",
+    "Different habitats cannot coexist in a large area",
+    "Size alone does not explain everything.",
+    "Notice the variety of conditions present."
+  ],
+  "fr": [
+    "Pourquoi un grand espace naturel peut-il offrir plus d’habitats ?",
+    "Il peut réunir prairies, eau et zones boisées",
+    "Toute grande surface a automatiquement plus d’espèces même sans habitats adaptés",
+    "La superficie remplace tout examen du sol et de l’eau",
+    "Des habitats différents ne peuvent coexister sur une grande surface",
+    "La taille n’explique pas tout.",
+    "Observe la diversité des conditions présentes."
+  ],
+  "it": [
+    "Perché un’area naturale più grande può offrire più habitat?",
+    "Può includere prati, acqua e zone alberate",
+    "Ogni area grande ha automaticamente più specie anche senza habitat adatti",
+    "La superficie sostituisce ogni esame di suolo e acqua",
+    "Habitat diversi non possono coesistere in un’area grande",
+    "La grandezza da sola non spiega tutto.",
+    "Osserva la varietà delle condizioni presenti."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-44",
+  "reason": "Replace heterozygote advantage with variation within species.",
+  "de": [
+    "Was zeigt, dass Individuen derselben Art verschieden sein können?",
+    "Zwei Hauskatzen haben unterschiedliche Fellfarben",
+    "Eine Katze und ein Ahorn gehören zur selben Art",
+    "Alle Katzen haben immer genau dieselbe Grösse",
+    "Unterschiedliche Fellfarbe macht jedes Tier zu einer neuen Tierklasse",
+    "Vergleiche Merkmale innerhalb einer Art.",
+    "Ein Unterschied bedeutet nicht automatisch eine andere Art."
+  ],
+  "en": [
+    "What shows that individuals of one species can differ?",
+    "Two domestic cats have different coat colours",
+    "A cat and a maple belong to one species",
+    "All cats are always exactly the same size",
+    "Every coat colour makes a new animal class",
+    "Compare features within one species.",
+    "A difference does not automatically mean a different species."
+  ],
+  "fr": [
+    "Qu’est-ce qui montre des différences entre individus d’une même espèce ?",
+    "Deux chats domestiques ont des pelages de couleurs différentes",
+    "Un chat et un érable appartiennent à la même espèce",
+    "Tous les chats ont toujours exactement la même taille",
+    "Chaque couleur de pelage crée une nouvelle classe animale",
+    "Compare les caractères au sein d’une espèce.",
+    "Une différence ne signifie pas forcément une autre espèce."
+  ],
+  "it": [
+    "Cosa mostra differenze tra individui della stessa specie?",
+    "Due gatti domestici hanno mantelli di colori diversi",
+    "Un gatto e un acero appartengono alla stessa specie",
+    "Tutti i gatti hanno sempre la stessa grandezza",
+    "Ogni colore crea una nuova classe animale",
+    "Confronta caratteristiche nella stessa specie.",
+    "Una differenza non significa automaticamente una specie diversa."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-46",
+  "reason": "Replace ambiguous swimming ability comparison with a specific trout body feature.",
+  "de": [
+    "Welches Körpermerkmal hilft einer Forelle beim Schwimmen?",
+    "Flossen",
+    "Federn",
+    "Hufe",
+    "Flügeldecken",
+    "Vergleiche die Körperteile verschiedener Tiergruppen.",
+    "Denke an die Steuerung und Bewegung im Wasser."
+  ],
+  "en": [
+    "Which body feature helps a trout swim?",
+    "Fins",
+    "Feathers",
+    "Hooves",
+    "Wing cases",
+    "Compare body parts of different animal groups.",
+    "Think of steering and moving through water."
+  ],
+  "fr": [
+    "Quel caractère corporel aide une truite à nager ?",
+    "Des nageoires",
+    "Des plumes",
+    "Des sabots",
+    "Des élytres",
+    "Compare les parties du corps de différents groupes animaux.",
+    "Pense à la direction et au déplacement dans l’eau."
+  ],
+  "it": [
+    "Quale caratteristica corporea aiuta una trota a nuotare?",
+    "Pinne",
+    "Piume",
+    "Zoccoli",
+    "Elitre",
+    "Confronta parti del corpo di diversi gruppi animali.",
+    "Pensa alla direzione e al movimento nell’acqua."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-48",
+  "reason": "Replace cryptic-species genetics with careful identification.",
+  "de": [
+    "Zwei Tiere sehen ähnlich aus. Was ist eine sorgfältige Schlussfolgerung?",
+    "Für die Artbestimmung können weitere Merkmale nötig sein",
+    "Sie gehören sicher zur selben Art",
+    "Sie sind sicher Geschwister",
+    "Ihr Aussehen verrät sicher ihr genaues Alter",
+    "Ähnlichkeit ist ein Hinweis, aber kein vollständiger Beweis.",
+    "Vergleiche mehrere Merkmale und nutze ein Bestimmungsbuch."
+  ],
+  "en": [
+    "Two animals look similar. What is a careful conclusion?",
+    "More features may be needed to identify their species",
+    "They certainly belong to the same species",
+    "They are certainly siblings",
+    "Appearance proves their exact age",
+    "Similarity is a clue, not complete proof.",
+    "Compare several features and use an identification guide."
+  ],
+  "fr": [
+    "Deux animaux se ressemblent. Quelle conclusion est prudente ?",
+    "D’autres caractères peuvent être nécessaires pour identifier l’espèce",
+    "Ils appartiennent sûrement à la même espèce",
+    "Ils sont sûrement frères et sœurs",
+    "L’apparence prouve leur âge exact",
+    "La ressemblance est un indice, pas une preuve complète.",
+    "Compare plusieurs caractères avec un guide d’identification."
+  ],
+  "it": [
+    "Due animali si assomigliano. Quale conclusione è prudente?",
+    "Possono servire altre caratteristiche per identificare la specie",
+    "Appartengono sicuramente alla stessa specie",
+    "Sono sicuramente fratelli",
+    "L’aspetto dimostra la loro età esatta",
+    "La somiglianza è un indizio, non una prova completa.",
+    "Confronta più caratteristiche usando una guida."
+  ]
+},
+{
+  "key": "5/science/pflanzen-tiere-5/pt5-50",
+  "reason": "Replace rewilding definition with responsible reintroduction requirements. Second pass: explicitly refined alternatives.",
+  "de": [
+    "Was muss vor der Wiederansiedlung einer Tierart geprüft werden?",
+    "Ob Lebensraum, Nahrung und Schutz geeignet sind",
+    "Nur ob die Art in irgendeinem anderen Land vorkommt",
+    "Nur ob sich die Tiere gut fotografieren lassen",
+    "Nur ob die Anzahl ausgesetzter Tiere möglichst gross ist",
+    "Eine Wiederansiedlung braucht fachliche Planung.",
+    "Die Tiere müssen langfristig in dem Gebiet leben können."
+  ],
+  "en": [
+    "What must be checked before reintroducing a species?",
+    "Whether habitat, food and protection are suitable",
+    "Only whether the species occurs in any other country",
+    "Only whether the animals photograph well",
+    "Only whether as many animals as possible are released",
+    "Reintroduction needs expert planning.",
+    "The animals must be able to live in the area long term."
+  ],
+  "fr": [
+    "Que faut-il vérifier avant de réintroduire une espèce ?",
+    "Si l’habitat, la nourriture et la protection conviennent",
+    "Seulement si l’espèce existe dans un autre pays",
+    "Seulement si les animaux sont photogéniques",
+    "Seulement si le nombre d’animaux relâchés est très grand",
+    "Une réintroduction demande une préparation spécialisée.",
+    "Les animaux doivent pouvoir vivre durablement dans le lieu."
+  ],
+  "it": [
+    "Cosa va controllato prima di reintrodurre una specie?",
+    "Se habitat, cibo e protezione sono adatti",
+    "Solo se la specie esiste in un altro paese",
+    "Solo se gli animali sono fotogenici",
+    "Solo se il numero di animali liberati è molto grande",
+    "La reintroduzione richiede pianificazione esperta.",
+    "Gli animali devono poter vivere a lungo nell’area."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-4",
+  "reason": "Retain qualified European printing history without exact-date suffix input.",
+  "de": [
+    "Wer entwickelte um 1450 in Europa den Druck mit beweglichen Metalllettern?",
+    "Johannes Gutenberg",
+    "James Watt",
+    "Marie Curie",
+    "Albert Einstein",
+    "Denke an die Herstellung vieler gleicher Buchseiten.",
+    "Der gesuchte Name gehört zur Geschichte des Buchdrucks."
+  ],
+  "en": [
+    "Who developed printing with movable metal type in Europe around 1450?",
+    "Johannes Gutenberg",
+    "James Watt",
+    "Marie Curie",
+    "Albert Einstein",
+    "Think of producing many identical book pages.",
+    "The name belongs to the history of printing."
+  ],
+  "fr": [
+    "Qui développa l’impression à caractères métalliques mobiles en Europe vers 1450 ?",
+    "Johannes Gutenberg",
+    "James Watt",
+    "Marie Curie",
+    "Albert Einstein",
+    "Pense à la fabrication de nombreuses pages identiques.",
+    "Le nom appartient à l’histoire de l’imprimerie."
+  ],
+  "it": [
+    "Chi sviluppò in Europa la stampa a caratteri metallici mobili verso il 1450?",
+    "Johannes Gutenberg",
+    "James Watt",
+    "Marie Curie",
+    "Albert Einstein",
+    "Pensa alla produzione di molte pagine uguali.",
+    "Il nome appartiene alla storia della stampa."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-8",
+  "reason": "Avoid attributing the entire AC system to a sole inventor. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Auf welchem Gebiet leistete Nikola Tesla wichtige Beiträge?",
+    "Elektrotechnik",
+    "Buchdruck mit beweglichen Lettern im 15. Jahrhundert",
+    "Entwicklung des Penicillins als Arzneimittel",
+    "Erfindung des ersten mechanischen Fahrrads",
+    "Denke an Motoren und Wechselstrom.",
+    "Viele technische Entwicklungen entstehen durch Beiträge mehrerer Menschen."
+  ],
+  "en": [
+    "In which field did Nikola Tesla make important contributions?",
+    "Electrical engineering",
+    "Printing with movable type in the fifteenth century",
+    "Developing penicillin as a medicine",
+    "Inventing the first mechanical bicycle",
+    "Think of motors and alternating current.",
+    "Many technologies develop through contributions from several people."
+  ],
+  "fr": [
+    "Dans quel domaine Nikola Tesla apporta-t-il des contributions importantes ?",
+    "L’électrotechnique",
+    "L’imprimerie à caractères mobiles au XVe siècle",
+    "Le développement de la pénicilline comme médicament",
+    "L’invention du premier vélo mécanique",
+    "Pense aux moteurs et au courant alternatif.",
+    "Beaucoup de techniques résultent du travail de plusieurs personnes."
+  ],
+  "it": [
+    "In quale campo Nikola Tesla diede contributi importanti?",
+    "Elettrotecnica",
+    "Stampa a caratteri mobili nel Quattrocento",
+    "Sviluppo della penicillina come medicinale",
+    "Invenzione della prima bicicletta meccanica",
+    "Pensa a motori e corrente alternata.",
+    "Molte tecnologie derivano dal lavoro di più persone."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-10",
+  "reason": "Recognise additive manufacture from comparable production methods.",
+  "de": [
+    "Wie entsteht ein Gegenstand beim üblichen 3D-Druck?",
+    "Material wird nach einem digitalen Modell schichtweise aufgebaut",
+    "Ein fertiger Gegenstand wird nur fotografiert",
+    "Ein Blatt Papier wird nur bedruckt",
+    "Ein Werkstück wird ausschliesslich mit einer Säge zerteilt",
+    "Vergleiche Aufbauen und Wegschneiden.",
+    "Der Drucker folgt einem räumlichen Entwurf."
+  ],
+  "en": [
+    "How is an object made in typical 3D printing?",
+    "Material is built up in layers from a digital model",
+    "A finished object is only photographed",
+    "Only a sheet of paper is printed",
+    "A workpiece is only cut apart with a saw",
+    "Compare building up with cutting away.",
+    "The printer follows a three-dimensional design."
+  ],
+  "fr": [
+    "Comment fabrique-t-on un objet par impression 3D courante ?",
+    "On ajoute des couches selon un modèle numérique",
+    "On photographie seulement un objet fini",
+    "On imprime seulement une feuille de papier",
+    "On découpe uniquement une pièce à la scie",
+    "Compare ajout de matière et découpe.",
+    "L’imprimante suit un modèle en trois dimensions."
+  ],
+  "it": [
+    "Come si crea un oggetto nella normale stampa 3D?",
+    "Si aggiungono strati secondo un modello digitale",
+    "Si fotografa soltanto un oggetto finito",
+    "Si stampa soltanto un foglio di carta",
+    "Si taglia soltanto un pezzo con una sega",
+    "Confronta aggiungere materiale e toglierlo.",
+    "La stampante segue un progetto tridimensionale."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-12",
+  "reason": "Replace compound penicillin question with an appropriately limited historical attribution. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Was beobachtete Alexander Fleming 1928 bei einem Schimmelpilz?",
+    "Dass er das Wachstum bestimmter Bakterien hemmte",
+    "Dass er das Wachstum aller Bakterien beschleunigte",
+    "Dass Bakterien nur bei Anwesenheit von Schimmel wachsen konnten",
+    "Dass die Bakterien im gesamten Versuch unverändert weiterwuchsen",
+    "Die Beobachtung gehört zur Geschichte von Arzneimitteln.",
+    "Unterscheide Bakterien von Viren und Beobachtung von einem fertigen Heilmittel."
+  ],
+  "en": [
+    "What did Alexander Fleming observe about a mould in 1928?",
+    "It inhibited the growth of certain bacteria",
+    "It accelerated the growth of all bacteria",
+    "Bacteria could grow only when mould was present",
+    "Bacteria throughout the experiment kept growing unchanged",
+    "The observation belongs to the history of medicines.",
+    "Distinguish bacteria from viruses and an observation from a finished treatment."
+  ],
+  "fr": [
+    "Qu’observa Alexander Fleming à propos d’une moisissure en 1928 ?",
+    "Elle freinait la croissance de certaines bactéries",
+    "Elle accélérait la croissance de toutes les bactéries",
+    "Les bactéries ne pouvaient pousser qu’en présence de moisissure",
+    "Les bactéries continuaient toutes à pousser sans changement",
+    "L’observation appartient à l’histoire des médicaments.",
+    "Distingue bactéries et virus, observation et traitement prêt à l’emploi."
+  ],
+  "it": [
+    "Cosa osservò Alexander Fleming in una muffa nel 1928?",
+    "Impediva la crescita di alcuni batteri",
+    "Accelerava la crescita di tutti i batteri",
+    "I batteri potevano crescere solo in presenza di muffa",
+    "Tutti i batteri continuavano a crescere invariati",
+    "L’osservazione appartiene alla storia dei medicinali.",
+    "Distingui batteri e virus, osservazione e cura pronta all’uso."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-14",
+  "reason": "Avoid lone-hero Enigma attribution by identifying the field of work. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Mit welchem Gebiet ist Alan Turing besonders verbunden?",
+    "Grundlagen der Informatik",
+    "Entwicklung des Buchdrucks mit Metalllettern",
+    "Verbesserung der Dampfmaschine im 18. Jahrhundert",
+    "Entdeckung der Röntgenstrahlung",
+    "Denke an Rechnen, Informationen und Maschinen.",
+    "Seine Arbeiten sind für die Geschichte der Computer wichtig."
+  ],
+  "en": [
+    "Which field is Alan Turing particularly associated with?",
+    "Foundations of computer science",
+    "Developing printing with metal type",
+    "Improving the steam engine in the eighteenth century",
+    "Discovering X-rays",
+    "Think of calculations, information and machines.",
+    "His work matters in the history of computers."
+  ],
+  "fr": [
+    "À quel domaine Alan Turing est-il particulièrement lié ?",
+    "Aux fondements de l’informatique",
+    "Au développement de l’impression à caractères métalliques",
+    "À l’amélioration de la machine à vapeur au XVIIIe siècle",
+    "À la découverte des rayons X",
+    "Pense au calcul, à l’information et aux machines.",
+    "Ses travaux comptent dans l’histoire des ordinateurs."
+  ],
+  "it": [
+    "A quale campo è particolarmente legato Alan Turing?",
+    "Ai fondamenti dell’informatica",
+    "Allo sviluppo della stampa a caratteri metallici",
+    "Al miglioramento della macchina a vapore nel Settecento",
+    "Alla scoperta dei raggi X",
+    "Pensa a calcoli, informazioni e macchine.",
+    "Il suo lavoro conta nella storia dei computer."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-18",
+  "reason": "Teach careful use of AI outputs rather than anthropomorphic definition.",
+  "de": [
+    "Eine KI gibt eine Antwort. Was ist sinnvoll?",
+    "Wichtige Angaben mit verlässlichen Quellen prüfen",
+    "Jede Antwort ungeprüft für richtig halten",
+    "Annehmen, dass KI nie Fehler macht",
+    "Alle persönlichen Passwörter zur Kontrolle eingeben",
+    "Eine überzeugende Formulierung ist noch kein Beweis.",
+    "Prüfe besonders Aussagen, auf die du dich verlassen möchtest."
+  ],
+  "en": [
+    "An AI gives an answer. What is sensible?",
+    "Check important claims against reliable sources",
+    "Accept every answer without checking",
+    "Assume AI never makes mistakes",
+    "Enter all your personal passwords for checking",
+    "Confident wording is not proof.",
+    "Check especially the claims you intend to rely on."
+  ],
+  "fr": [
+    "Une IA donne une réponse. Que faire raisonnablement ?",
+    "Vérifier les informations importantes avec des sources fiables",
+    "Accepter chaque réponse sans vérifier",
+    "Supposer que l’IA ne se trompe jamais",
+    "Saisir tous ses mots de passe personnels pour vérifier",
+    "Une formulation convaincante n’est pas une preuve.",
+    "Vérifie surtout les affirmations sur lesquelles tu veux t’appuyer."
+  ],
+  "it": [
+    "Un’IA dà una risposta. Cosa è ragionevole?",
+    "Verificare le informazioni importanti con fonti affidabili",
+    "Accettare ogni risposta senza controllare",
+    "Pensare che l’IA non sbagli mai",
+    "Inserire tutte le password personali per verificare",
+    "Una formulazione convincente non è una prova.",
+    "Controlla soprattutto le affermazioni su cui vuoi fare affidamento."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-20",
+  "reason": "Replace blockchain cryptography with useful digital backup practice.",
+  "de": [
+    "Wozu dient eine Sicherungskopie einer Datei?",
+    "Daten nach einem Verlust wiederherstellen zu können",
+    "Das ursprüngliche Gerät unzerstörbar zu machen",
+    "Jeden Fehler in der Datei automatisch zu korrigieren",
+    "Das Passwort öffentlich bekannt zu machen",
+    "Auch Geräte können kaputtgehen.",
+    "Eine getrennte, geschützte Kopie hilft bei einem Ausfall."
+  ],
+  "en": [
+    "What is a file backup for?",
+    "Recovering data after a loss",
+    "Making the original device indestructible",
+    "Automatically correcting every mistake in the file",
+    "Making the password public",
+    "Devices can fail too.",
+    "A separate protected copy helps after a failure."
+  ],
+  "fr": [
+    "À quoi sert une sauvegarde de fichier ?",
+    "À retrouver les données après une perte",
+    "À rendre l’appareil d’origine indestructible",
+    "À corriger automatiquement chaque erreur du fichier",
+    "À rendre le mot de passe public",
+    "Les appareils peuvent tomber en panne.",
+    "Une copie séparée et protégée aide après une panne."
+  ],
+  "it": [
+    "A cosa serve una copia di sicurezza di un file?",
+    "A recuperare i dati dopo una perdita",
+    "A rendere indistruttibile il dispositivo originale",
+    "A correggere automaticamente ogni errore del file",
+    "A rendere pubblica la password",
+    "Anche i dispositivi possono guastarsi.",
+    "Una copia separata e protetta aiuta dopo un guasto."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-22",
+  "reason": "Recognise augmented reality through a concrete example.",
+  "de": [
+    "Welches Beispiel zeigt erweiterte Realität auf einem Bildschirm?",
+    "Digitale Hinweise erscheinen über dem Kamerabild der echten Umgebung",
+    "Ein Buch ohne Bildschirm wird vorgelesen",
+    "Ein Radio spielt nur Musik",
+    "Ein Foto wird ohne zusätzliche Inhalte ausgedruckt",
+    "Echte Umgebung und digitale Ergänzung werden gemeinsam gezeigt.",
+    "Achte auf das Zusammenspiel beider Bildebenen."
+  ],
+  "en": [
+    "Which example shows augmented reality on a screen?",
+    "Digital labels appear over a camera view of real surroundings",
+    "A book is read aloud without a screen",
+    "A radio only plays music",
+    "A photo is printed without added content",
+    "Real surroundings and digital additions appear together.",
+    "Look at the combination of both image layers."
+  ],
+  "fr": [
+    "Quel exemple montre la réalité augmentée sur un écran ?",
+    "Des indications numériques apparaissent sur l’image réelle de la caméra",
+    "On lit un livre à voix haute sans écran",
+    "Une radio diffuse seulement de la musique",
+    "Une photo est imprimée sans contenu ajouté",
+    "L’environnement réel et les ajouts numériques apparaissent ensemble.",
+    "Observe la combinaison des deux couches d’image."
+  ],
+  "it": [
+    "Quale esempio mostra realtà aumentata su uno schermo?",
+    "Indicazioni digitali compaiono sull’immagine reale della fotocamera",
+    "Si legge un libro ad alta voce senza schermo",
+    "Una radio riproduce solo musica",
+    "Si stampa una foto senza contenuti aggiunti",
+    "Ambiente reale e aggiunte digitali compaiono insieme.",
+    "Osserva la combinazione dei due livelli dell’immagine."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-24",
+  "reason": "Recognise training data without claiming software needs no programming. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Ein Programm lernt, Katzenbilder zu erkennen. Was helfen ihm viele beschriftete Beispiele?",
+    "Muster zwischen Bildern und Bezeichnungen zu finden",
+    "Jedes künftige Bild garantiert fehlerfrei zu erkennen",
+    "Katzen ohne Bilder allein aus der Gehäusefarbe zu erkennen",
+    "Die Beschriftungen zu ignorieren und nur Dateigrössen zu vergleichen",
+    "Beispiele liefern Informationen für das Training.",
+    "Lernen aus Beispielen bedeutet nicht Fehlerfreiheit."
+  ],
+  "en": [
+    "A program learns to recognise cat pictures. How do labelled examples help?",
+    "They help it find patterns linking images and labels",
+    "Guarantee error-free recognition of every future image",
+    "Recognise cats without images solely from the case colour",
+    "Ignore labels and compare only file sizes",
+    "Examples provide training information.",
+    "Learning from examples does not mean being error-free."
+  ],
+  "fr": [
+    "Un programme apprend à reconnaître des chats. À quoi servent des exemples étiquetés ?",
+    "À trouver des relations entre images et étiquettes",
+    "À garantir la reconnaissance parfaite de toute image future",
+    "À reconnaître les chats sans images par la seule couleur du boîtier",
+    "À ignorer les étiquettes et comparer seulement les tailles de fichiers",
+    "Les exemples fournissent des informations d’entraînement.",
+    "Apprendre avec des exemples ne signifie pas être sans erreur."
+  ],
+  "it": [
+    "Un programma impara a riconoscere gatti. A cosa servono esempi etichettati?",
+    "A trovare relazioni tra immagini ed etichette",
+    "A garantire riconoscimento perfetto di ogni immagine futura",
+    "A riconoscere gatti senza immagini dal solo colore del dispositivo",
+    "A ignorare le etichette e confrontare solo le dimensioni dei file",
+    "Gli esempi forniscono informazioni per l’addestramento.",
+    "Imparare da esempi non significa essere senza errori."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-28",
+  "reason": "Recognise an artificial satellite’s orbit. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Was macht ein künstlicher Erdsatellit?",
+    "Er bewegt sich auf einer Umlaufbahn um die Erde",
+    "Er folgt als Schiff einer Route auf der Meeresoberfläche",
+    "Er schwebt wie ein Wetterballon in der unteren Atmosphäre",
+    "Er bewegt sich als Fahrzeug auf einer Strasse",
+    "Der Name nennt den umkreisten Himmelskörper.",
+    "Künstlich bedeutet hier von Menschen gebaut."
+  ],
+  "en": [
+    "What does an artificial Earth satellite do?",
+    "It travels in an orbit around Earth",
+    "It follows a sea route as a ship",
+    "It floats like a weather balloon in the lower atmosphere",
+    "It travels along a road as a vehicle",
+    "The name identifies the body being orbited.",
+    "Artificial here means built by people."
+  ],
+  "fr": [
+    "Que fait un satellite artificiel de la Terre ?",
+    "Il suit une orbite autour de la Terre",
+    "Il suit une route maritime comme navire",
+    "Il flotte comme un ballon météo dans la basse atmosphère",
+    "Il roule sur une route comme véhicule",
+    "Le nom indique l’astre autour duquel il tourne.",
+    "Artificiel signifie ici construit par des humains."
+  ],
+  "it": [
+    "Cosa fa un satellite artificiale terrestre?",
+    "Segue un’orbita attorno alla Terra",
+    "Segue una rotta marina come nave",
+    "Galleggia come un pallone meteorologico nella bassa atmosfera",
+    "Viaggia su una strada come veicolo",
+    "Il nome indica il corpo attorno a cui orbita.",
+    "Artificiale qui significa costruito da persone."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-30",
+  "reason": "Replace nanometre-scale abstraction with material selection in design.",
+  "de": [
+    "Welches Material eignet sich für eine durchsichtige Fensterscheibe?",
+    "Durchsichtiges Glas",
+    "Undurchsichtiges Holz",
+    "Dicker Karton",
+    "Eine geschlossene Stahlplatte",
+    "Welche Eigenschaft muss die Scheibe erfüllen?",
+    "Licht soll hindurchgelangen können."
+  ],
+  "en": [
+    "Which material suits a transparent window pane?",
+    "Clear glass",
+    "Opaque wood",
+    "Thick cardboard",
+    "A solid steel plate",
+    "Which property must the pane have?",
+    "Light should be able to pass through it."
+  ],
+  "fr": [
+    "Quel matériau convient à une vitre transparente ?",
+    "Du verre transparent",
+    "Du bois opaque",
+    "Du carton épais",
+    "Une plaque d’acier pleine",
+    "Quelle propriété la vitre doit-elle avoir ?",
+    "La lumière doit pouvoir la traverser."
+  ],
+  "it": [
+    "Quale materiale va bene per una finestra trasparente?",
+    "Vetro trasparente",
+    "Legno opaco",
+    "Cartone spesso",
+    "Una lastra piena d’acciaio",
+    "Quale proprietà deve avere la finestra?",
+    "La luce deve poterla attraversare."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-32",
+  "reason": "Distinguish battery electric propulsion from combustion fuels. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Woraus erhält ein reines Batterie-Elektroauto beim Fahren seine Antriebsenergie?",
+    "Aus elektrischer Energie im Akku",
+    "Aus Benzin in einem Verbrennungsmotor",
+    "Aus Diesel in einem Verbrennungsmotor",
+    "Aus Wasserstoff in einer Brennstoffzelle",
+    "Gesucht ist ausdrücklich ein reines Batterieauto.",
+    "Denke daran, was beim Laden gespeichert wird."
+  ],
+  "en": [
+    "Where does a battery-only electric car get its driving energy?",
+    "Electrical energy stored in its battery",
+    "Petrol in a combustion engine",
+    "Diesel in a combustion engine",
+    "Hydrogen in a fuel cell",
+    "The question specifies a battery-only car.",
+    "Think about what is stored when charging."
+  ],
+  "fr": [
+    "D’où une voiture entièrement électrique à batterie tire-t-elle son énergie motrice ?",
+    "De l’énergie électrique stockée dans la batterie",
+    "De l’essence dans un moteur à combustion",
+    "Du diesel dans un moteur à combustion",
+    "De l’hydrogène dans une pile à combustible",
+    "Il s’agit uniquement d’une voiture à batterie.",
+    "Pense à ce qui est stocké pendant la recharge."
+  ],
+  "it": [
+    "Da dove prende l’energia motrice un’auto solo elettrica a batteria?",
+    "Dall’energia elettrica nella batteria",
+    "Dalla benzina in un motore a combustione",
+    "Dal diesel in un motore a combustione",
+    "Dall’idrogeno in una cella a combustibile",
+    "Si tratta di un’auto esclusivamente a batteria.",
+    "Pensa a cosa viene immagazzinato durante la ricarica."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-34",
+  "reason": "Clarify open-source reuse remains governed by a licence. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Du möchtest offenen Programmcode weiterverwenden. Was prüfst du?",
+    "Die Bedingungen der zugehörigen Lizenz",
+    "Nur ob ich den Code im Browser sehen kann",
+    "Nur ob der Dateiname das Wort frei enthält",
+    "Nur ob andere den Code schon kopiert haben",
+    "Öffentlich sichtbar bedeutet nicht ohne Regeln nutzbar.",
+    "Die Erlaubnisse und Pflichten stehen in einem rechtlichen Text."
+  ],
+  "en": [
+    "You want to reuse open-source code. What should you check?",
+    "The terms of its licence",
+    "Only whether I can see the code in a browser",
+    "Only whether the filename contains the word free",
+    "Only whether others have already copied the code",
+    "Publicly visible does not mean free of rules.",
+    "Permissions and obligations are set out in a legal text."
+  ],
+  "fr": [
+    "Tu veux réutiliser du code ouvert. Que vérifies-tu ?",
+    "Les conditions de sa licence",
+    "Seulement si le code est visible dans un navigateur",
+    "Seulement si le nom contient le mot libre",
+    "Seulement si d’autres ont déjà copié le code",
+    "Visible publiquement ne signifie pas sans règles.",
+    "Les autorisations et obligations figurent dans un texte juridique."
+  ],
+  "it": [
+    "Vuoi riutilizzare codice aperto. Cosa controlli?",
+    "Le condizioni della sua licenza",
+    "Solo se il codice è visibile nel browser",
+    "Solo se il nome contiene la parola libero",
+    "Solo se altri hanno già copiato il codice",
+    "Visibile pubblicamente non significa senza regole.",
+    "Permessi e obblighi sono indicati in un testo legale."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-36",
+  "reason": "Replace hypothetical singularity with limits of technological forecasts.",
+  "de": [
+    "Jemand sagt genau voraus, was Computer in 100 Jahren können. Wie beurteilst du das?",
+    "Als unsichere Vorhersage, nicht als bereits bewiesene Tatsache",
+    "Als sichere Tatsache, nur weil es um Technik geht",
+    "Als Messwert von heute",
+    "Als Beweis, dass Forschung unnötig ist",
+    "Zukunftsideen und heutige Beobachtungen sind verschieden.",
+    "Prüfe, welche Annahmen und Belege vorliegen."
+  ],
+  "en": [
+    "Someone predicts exactly what computers will do in 100 years. How should you judge this?",
+    "As an uncertain prediction, not an already proven fact",
+    "As certain simply because it concerns technology",
+    "As a measurement from today",
+    "As proof research is unnecessary",
+    "Future ideas differ from present observations.",
+    "Check the assumptions and evidence."
+  ],
+  "fr": [
+    "Quelqu’un prédit exactement les capacités des ordinateurs dans 100 ans. Comment juger cela ?",
+    "Comme une prévision incertaine, pas un fait déjà prouvé",
+    "Comme une certitude parce que cela concerne la technique",
+    "Comme une mesure d’aujourd’hui",
+    "Comme la preuve que la recherche est inutile",
+    "Les idées sur l’avenir diffèrent des observations actuelles.",
+    "Vérifie les hypothèses et les preuves."
+  ],
+  "it": [
+    "Qualcuno prevede esattamente cosa faranno i computer tra 100 anni. Come valuti l’affermazione?",
+    "Come previsione incerta, non come fatto già dimostrato",
+    "Come certezza solo perché riguarda la tecnologia",
+    "Come misurazione di oggi",
+    "Come prova che la ricerca non serve",
+    "Le idee sul futuro differiscono dalle osservazioni attuali.",
+    "Controlla ipotesi e prove."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-38",
+  "reason": "Replace repeated printing template with its historical effect. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Was erleichterte der Buchdruck im Vergleich zum Abschreiben von Hand?",
+    "Viele Exemplare desselben Textes herstellen",
+    "Viele Exemplare durch vollständiges Abschreiben jeder Seite herstellen",
+    "Jede Kopie nur mündlich an den nächsten Leser weitergeben",
+    "Jedes Exemplar als einziges Original ohne Wiederverwendung der Vorlage herstellen",
+    "Vergleiche die Arbeit für eine Seite und für viele gleiche Seiten.",
+    "Eine vorbereitete Druckform kann mehrfach benutzt werden."
+  ],
+  "en": [
+    "What did printing make easier than copying by hand?",
+    "Producing many copies of the same text",
+    "Produce many copies by handwriting every page completely",
+    "Pass every copy only orally to the next reader",
+    "Produce each copy as a sole original without reusing a template",
+    "Compare making one page with many identical pages.",
+    "A prepared printing form can be used repeatedly."
+  ],
+  "fr": [
+    "Qu’a facilité l’imprimerie par rapport à la copie manuscrite ?",
+    "Produire de nombreux exemplaires d’un même texte",
+    "Produire de nombreuses copies en recopiant chaque page entièrement",
+    "Transmettre chaque copie seulement oralement au lecteur suivant",
+    "Produire chaque exemplaire sans réutiliser de modèle",
+    "Compare une page à de nombreuses pages identiques.",
+    "Une forme préparée peut servir plusieurs fois."
+  ],
+  "it": [
+    "Cosa ha facilitato la stampa rispetto alla copia a mano?",
+    "Produrre molte copie dello stesso testo",
+    "Produrre molte copie riscrivendo interamente ogni pagina",
+    "Trasmettere ogni copia solo oralmente al lettore successivo",
+    "Produrre ogni esemplare senza riutilizzare un modello",
+    "Confronta una pagina con molte pagine uguali.",
+    "Una forma preparata può essere usata più volte."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-40",
+  "reason": "Replace speculative transport attribution with prototype evaluation.",
+  "de": [
+    "Eine neue Transportidee wird vorgestellt. Was zeigt ihre Alltagstauglichkeit am besten?",
+    "Überprüfbare Tests zu Sicherheit und Zuverlässigkeit",
+    "Nur ein besonders schönes Werbebild",
+    "Nur ein berühmter Name",
+    "Nur ein hoher versprochener Geschwindigkeitswert",
+    "Eine Idee ist noch kein bewährtes Verkehrsmittel.",
+    "Prüfe, ob Versprechen unter realistischen Bedingungen getestet wurden."
+  ],
+  "en": [
+    "A new transport idea is proposed. What best shows practical suitability?",
+    "Checkable tests of safety and reliability",
+    "Only an attractive advertisement",
+    "Only a famous name",
+    "Only a high promised speed",
+    "An idea is not yet a proven transport system.",
+    "Check whether claims were tested under realistic conditions."
+  ],
+  "fr": [
+    "Un nouveau transport est proposé. Qu’est-ce qui montre le mieux son utilité réelle ?",
+    "Des tests vérifiables de sécurité et de fiabilité",
+    "Seulement une belle publicité",
+    "Seulement un nom célèbre",
+    "Seulement une vitesse élevée promise",
+    "Une idée n’est pas encore un transport éprouvé.",
+    "Vérifie si les promesses ont été testées dans des conditions réalistes."
+  ],
+  "it": [
+    "Viene proposto un nuovo trasporto. Cosa ne mostra meglio l’utilità pratica?",
+    "Test verificabili di sicurezza e affidabilità",
+    "Solo una bella pubblicità",
+    "Solo un nome famoso",
+    "Solo un’alta velocità promessa",
+    "Un’idea non è ancora un trasporto collaudato.",
+    "Controlla se le promesse sono state testate in condizioni realistiche."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-44",
+  "reason": "Apply basic account security without collecting credentials.",
+  "de": [
+    "Eine fremde Nachricht fragt nach deinem Passwort. Was tust du?",
+    "Nicht weitergeben und eine vertrauenswürdige erwachsene Person fragen",
+    "Das Passwort sofort senden",
+    "Dasselbe Passwort öffentlich posten",
+    "Auch Passwörter anderer Kinder mitschicken",
+    "Passwörter gehören nicht in fremde Nachrichten.",
+    "Prüfe mit Unterstützung, ob die Anfrage echt und nötig ist."
+  ],
+  "en": [
+    "An unfamiliar message asks for your password. What should you do?",
+    "Do not share it and ask a trusted adult",
+    "Send the password immediately",
+    "Post the same password publicly",
+    "Send other children’s passwords too",
+    "Passwords do not belong in unfamiliar messages.",
+    "Get help checking whether the request is genuine and necessary."
+  ],
+  "fr": [
+    "Un message inconnu demande ton mot de passe. Que fais-tu ?",
+    "Ne pas le donner et demander à un adulte de confiance",
+    "Envoyer le mot de passe immédiatement",
+    "Publier aussi ce mot de passe",
+    "Envoyer les mots de passe d’autres enfants",
+    "Les mots de passe n’ont pas leur place dans des messages inconnus.",
+    "Fais vérifier si la demande est authentique et nécessaire."
+  ],
+  "it": [
+    "Un messaggio sconosciuto chiede la tua password. Cosa fai?",
+    "Non condividerla e chiedere a un adulto fidato",
+    "Inviare subito la password",
+    "Pubblicare anche la stessa password",
+    "Inviare anche le password di altri bambini",
+    "Le password non vanno in messaggi sconosciuti.",
+    "Fatti aiutare a verificare se la richiesta è autentica e necessaria."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-46",
+  "reason": "Replace deep-learning mechanisms with input/output classification. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Welche Eingabe braucht ein Programm, das gesprochene Wörter erkennen soll?",
+    "Eine Tonaufnahme",
+    "Eine Bilddatei ohne Ton",
+    "Eine Tabelle mit Bildschirmgrössen",
+    "Eine Liste mit Gehäusefarben",
+    "Das Programm soll Sprache hören können.",
+    "Die Eingabedaten müssen zur Aufgabe passen."
+  ],
+  "en": [
+    "What input does a program recognising spoken words need?",
+    "An audio recording",
+    "An image file without sound",
+    "A table of screen sizes",
+    "A list of case colours",
+    "The program needs access to the speech sound.",
+    "Input data must match the task."
+  ],
+  "fr": [
+    "Quelle entrée faut-il à un programme qui reconnaît des mots prononcés ?",
+    "Un enregistrement sonore",
+    "Une image sans son",
+    "Un tableau de tailles d’écrans",
+    "Une liste de couleurs de boîtiers",
+    "Le programme doit avoir accès aux sons de la parole.",
+    "Les données doivent correspondre à la tâche."
+  ],
+  "it": [
+    "Quale input serve a un programma che riconosce parole pronunciate?",
+    "Una registrazione audio",
+    "Un’immagine senza suono",
+    "Una tabella di grandezze degli schermi",
+    "Una lista di colori dei dispositivi",
+    "Il programma deve avere accesso al suono della voce.",
+    "I dati devono corrispondere al compito."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-48",
+  "reason": "Replace synthetic biology with responsible laboratory practice.",
+  "de": [
+    "Warum gelten bei einem Laborversuch genaue Sicherheitsregeln?",
+    "Um Menschen und Umwelt vor Risiken zu schützen",
+    "Um Beobachtungen grundsätzlich zu verhindern",
+    "Damit Ergebnisse ohne Messen erfunden werden",
+    "Weil jede unbekannte Substanz harmlos ist",
+    "Unbekannte Materialien können Risiken haben.",
+    "Fachkundige Anleitung und passende Schutzmassnahmen gehören zum Versuch."
+  ],
+  "en": [
+    "Why do laboratory experiments have specific safety rules?",
+    "To protect people and the environment from risks",
+    "To prevent all observation",
+    "So results can be invented without measuring",
+    "Because every unknown substance is harmless",
+    "Unfamiliar materials may pose risks.",
+    "Expert guidance and suitable protection are part of an experiment."
+  ],
+  "fr": [
+    "Pourquoi les expériences de laboratoire ont-elles des règles de sécurité précises ?",
+    "Pour protéger les personnes et l’environnement",
+    "Pour empêcher toute observation",
+    "Pour inventer les résultats sans mesurer",
+    "Parce que toute substance inconnue est inoffensive",
+    "Les matériaux inconnus peuvent présenter des risques.",
+    "L’encadrement et les protections font partie de l’expérience."
+  ],
+  "it": [
+    "Perché gli esperimenti di laboratorio hanno regole precise di sicurezza?",
+    "Per proteggere persone e ambiente dai rischi",
+    "Per impedire ogni osservazione",
+    "Per inventare risultati senza misurare",
+    "Perché ogni sostanza sconosciuta è innocua",
+    "Materiali sconosciuti possono presentare rischi.",
+    "Guida esperta e protezioni adatte fanno parte dell’esperimento."
+  ]
+},
+{
+  "key": "5/science/technik-erfinungen-5/te5-50",
+  "reason": "Describe assistive exoskeleton without implying a universal cure. Second pass: replace unrelated or fantasy distractors.",
+  "de": [
+    "Wozu kann ein technisches Exoskelett dienen?",
+    "Bewegungen eines Menschen von aussen unterstützen",
+    "Die Unterstützung durch Training und Anpassung in jedem Fall ersetzen",
+    "Jede Bewegung unabhängig von Einstellung und Person gleich ausführen",
+    "Jede Ursache einer Bewegungseinschränkung dauerhaft beseitigen",
+    "Es wird am Körper getragen.",
+    "Technische Unterstützung ist nicht dasselbe wie die Heilung jeder Krankheit."
+  ],
+  "en": [
+    "What can a technical exoskeleton do?",
+    "Support a person’s movement from outside the body",
+    "Replace training and adjustment in every case",
+    "Perform every movement identically regardless of settings and person",
+    "Permanently remove every cause of limited movement",
+    "It is worn on the body.",
+    "Technical support is not the same as curing every condition."
+  ],
+  "fr": [
+    "À quoi peut servir un exosquelette technique ?",
+    "À soutenir les mouvements d’une personne depuis l’extérieur du corps",
+    "Remplacer tout entraînement et réglage dans tous les cas",
+    "Effectuer tout mouvement de façon identique quels que soient réglages et personne",
+    "Supprimer définitivement toute cause de mobilité réduite",
+    "Il se porte sur le corps.",
+    "Une aide technique ne guérit pas nécessairement une maladie."
+  ],
+  "it": [
+    "A cosa può servire un esoscheletro tecnico?",
+    "A sostenere i movimenti dall’esterno del corpo",
+    "Sostituire ogni allenamento e regolazione in tutti i casi",
+    "Eseguire ogni movimento identico indipendentemente da impostazioni e persona",
+    "Eliminare definitivamente ogni causa di mobilità ridotta",
+    "Si indossa sul corpo.",
+    "Un sostegno tecnico non equivale a guarire ogni condizione."
+  ]
+},
+{
+  "key": "5/science/europa-geografie-5/eg5-18",
+  "reason": "Preserve Rhine geography while removing parenthetical input requirements. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "In welchem Land liegen die Quellgebiete des Rheins?",
+    "In der Schweiz",
+    "In Deutschland",
+    "In Frankreich",
+    "In den Niederlanden",
+    "Suche in den Alpen.",
+    "Denke an den Kanton Graubünden."
+  ],
+  "en": [
+    "In which country are the Rhine’s headwaters?",
+    "Switzerland",
+    "In Germany",
+    "In France",
+    "In the Netherlands",
+    "Look in the Alps.",
+    "Think of the canton of Graubünden."
+  ],
+  "fr": [
+    "Dans quel pays se trouvent les sources du Rhin ?",
+    "En Suisse",
+    "En Allemagne",
+    "En France",
+    "Aux Pays-Bas",
+    "Cherche dans les Alpes.",
+    "Pense au canton des Grisons."
+  ],
+  "it": [
+    "In quale paese si trovano le sorgenti del Reno?",
+    "In Svizzera",
+    "In Germania",
+    "In Francia",
+    "Nei Paesi Bassi",
+    "Cerca nelle Alpi.",
+    "Pensa al canton Grigioni."
+  ]
+},
+{
+  "key": "5/science/europa-geografie-5/eg5-22",
+  "reason": "Recognise Gibraltar from actual straits instead of exact phrase entry.",
+  "de": [
+    "Welche Meerenge verbindet Atlantik und Mittelmeer?",
+    "Die Strasse von Gibraltar",
+    "Der Bosporus",
+    "Die Beringstrasse",
+    "Die Strasse von Hormus",
+    "Suche am westlichen Ende des Mittelmeers.",
+    "Die Meerenge liegt zwischen Spanien und Marokko."
+  ],
+  "en": [
+    "Which strait connects the Atlantic and Mediterranean?",
+    "The Strait of Gibraltar",
+    "The Bosporus",
+    "The Bering Strait",
+    "The Strait of Hormuz",
+    "Look at the western end of the Mediterranean.",
+    "The strait lies between Spain and Morocco."
+  ],
+  "fr": [
+    "Quel détroit relie l’Atlantique et la Méditerranée ?",
+    "Le détroit de Gibraltar",
+    "Le Bosphore",
+    "Le détroit de Béring",
+    "Le détroit d’Ormuz",
+    "Cherche à l’ouest de la Méditerranée.",
+    "Le détroit se trouve entre l’Espagne et le Maroc."
+  ],
+  "it": [
+    "Quale stretto collega Atlantico e Mediterraneo?",
+    "Lo stretto di Gibilterra",
+    "Il Bosforo",
+    "Lo stretto di Bering",
+    "Lo stretto di Hormuz",
+    "Cerca a ovest del Mediterraneo.",
+    "Lo stretto è tra Spagna e Marocco."
+  ]
+},
+{
+  "key": "5/science/europa-geografie-5/eg5-38",
+  "reason": "Recognise the Eurasian landmass without broad cultural generalisation.",
+  "de": [
+    "Welche zwei Erdteile bilden die Landmasse Eurasien?",
+    "Europa und Asien",
+    "Europa und Afrika",
+    "Asien und Australien",
+    "Nordamerika und Südamerika",
+    "Zerlege den Namen in seine Teile.",
+    "Suche die grosse zusammenhängende Landfläche auf der Karte."
+  ],
+  "en": [
+    "Which two continents form the landmass Eurasia?",
+    "Europe and Asia",
+    "Europe and Africa",
+    "Asia and Australia",
+    "North and South America",
+    "Break the name into parts.",
+    "Find the large connected landmass on a map."
+  ],
+  "fr": [
+    "Quels deux continents forment la masse terrestre de l’Eurasie ?",
+    "L’Europe et l’Asie",
+    "L’Europe et l’Afrique",
+    "L’Asie et l’Australie",
+    "L’Amérique du Nord et du Sud",
+    "Décompose le nom.",
+    "Repère la grande masse terrestre continue sur une carte."
+  ],
+  "it": [
+    "Quali due continenti formano la massa terrestre dell’Eurasia?",
+    "Europa e Asia",
+    "Europa e Africa",
+    "Asia e Australia",
+    "America del Nord e del Sud",
+    "Dividi il nome in parti.",
+    "Trova la grande massa terrestre continua sulla carta."
+  ]
+},
+{
+  "key": "5/science/europa-geografie-5/eg5-40",
+  "reason": "Replace Malthus theory with map-based population distribution.",
+  "de": [
+    "Was zeigt eine Karte der Bevölkerungsdichte?",
+    "Wie viele Menschen pro Fläche wohnen",
+    "Wie hoch jeder Berg ist",
+    "Wie viel jede Familie verdient",
+    "Welche Sprache jedes Kind spricht",
+    "Beachte die Einheit Menschen pro Quadratkilometer.",
+    "Vergleiche gleich grosse Gebiete."
+  ],
+  "en": [
+    "What does a population density map show?",
+    "How many people live per unit of area",
+    "How high every mountain is",
+    "How much each family earns",
+    "Which language each child speaks",
+    "Notice the unit people per square kilometre.",
+    "Compare areas of equal size."
+  ],
+  "fr": [
+    "Que montre une carte de densité de population ?",
+    "Le nombre d’habitants par unité de surface",
+    "La hauteur de chaque montagne",
+    "Le revenu de chaque famille",
+    "La langue de chaque enfant",
+    "Observe l’unité habitants par kilomètre carré.",
+    "Compare des zones de même taille."
+  ],
+  "it": [
+    "Cosa mostra una carta della densità di popolazione?",
+    "Quante persone abitano per unità di superficie",
+    "L’altezza di ogni montagna",
+    "Il reddito di ogni famiglia",
+    "La lingua di ogni bambino",
+    "Osserva l’unità abitanti per chilometro quadrato.",
+    "Confronta aree della stessa grandezza."
+  ]
+},
+{
+  "key": "5/science/europa-geografie-5/eg5-42",
+  "reason": "Use seasonal alpine farming practice without technical terminology. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Warum kommen viele Kühe im Sommer auf die Alp?",
+    "Um dort die Sommerweiden zu nutzen",
+    "Weil die Tiere im Sommer grundsätzlich keine Nahrung brauchen",
+    "Damit die Sommerweiden das ganze Jahr über beweidet werden",
+    "Weil die Weiden auf der Alp im Winter leichter zugänglich sind",
+    "Denke an die Jahreszeit, in der Bergweiden zugänglich sind.",
+    "Vergleiche die Futterflächen in verschiedenen Höhenlagen."
+  ],
+  "en": [
+    "Why are many cows taken to alpine pastures in summer?",
+    "To graze the summer pastures there",
+    "Because the animals never need food in summer",
+    "So summer pastures are grazed all year round",
+    "Because alpine pastures are easier to reach in winter",
+    "Think about when mountain pastures become accessible.",
+    "Compare grazing areas at different heights."
+  ],
+  "fr": [
+    "Pourquoi de nombreuses vaches montent-elles à l’alpage en été ?",
+    "Pour profiter des pâturages d’été",
+    "Parce que les animaux n’ont jamais besoin de nourriture en été",
+    "Pour que les pâturages estivaux soient utilisés toute l’année",
+    "Parce que les alpages sont plus accessibles en hiver",
+    "Pense à la saison où les pâturages de montagne deviennent accessibles.",
+    "Compare les surfaces de pâture à différentes altitudes."
+  ],
+  "it": [
+    "Perché molte mucche salgono all’alpe in estate?",
+    "Per utilizzare i pascoli estivi",
+    "Perché gli animali non hanno mai bisogno di cibo in estate",
+    "Per usare i pascoli estivi tutto l’anno",
+    "Perché gli alpeggi sono più accessibili in inverno",
+    "Pensa a quando i pascoli di montagna diventano accessibili.",
+    "Confronta i pascoli a diverse altitudini."
+  ]
+},
+{
+  "key": "5/science/europa-geografie-5/eg5-44",
+  "reason": "Replace maritime economic-zone law with coastal geography.",
+  "de": [
+    "Welches dieser Länder hat eine Meeresküste?",
+    "Portugal",
+    "Die Schweiz",
+    "Österreich",
+    "Luxemburg",
+    "Suche die Länder auf einer Europakarte.",
+    "Prüfe, wo Land direkt an ein Meer grenzt."
+  ],
+  "en": [
+    "Which of these countries has a sea coast?",
+    "Portugal",
+    "Switzerland",
+    "Austria",
+    "Luxembourg",
+    "Find the countries on a map of Europe.",
+    "Check where land directly borders the sea."
+  ],
+  "fr": [
+    "Lequel de ces pays a une côte maritime ?",
+    "Le Portugal",
+    "La Suisse",
+    "L’Autriche",
+    "Le Luxembourg",
+    "Repère les pays sur une carte d’Europe.",
+    "Vérifie où la terre touche directement la mer."
+  ],
+  "it": [
+    "Quale di questi paesi ha una costa marittima?",
+    "Il Portogallo",
+    "La Svizzera",
+    "L’Austria",
+    "Il Lussemburgo",
+    "Trova i paesi su una carta d’Europa.",
+    "Controlla dove la terra confina direttamente con il mare."
+  ]
+},
+{
+  "key": "5/science/europa-geografie-5/eg5-48",
+  "reason": "Replace inaccurate East/West cultural stereotype with responsible geographical comparison.",
+  "de": [
+    "Wie vergleichst du zwei europäische Länder sachlich?",
+    "Mit überprüfbaren Angaben, etwa Fläche und Einwohnerzahl",
+    "Indem du allen Menschen im Osten dieselbe Religion zuschreibst",
+    "Indem du nur ein Gerücht über ein Land verwendest",
+    "Indem du eine Person für die ganze Bevölkerung sprechen lässt",
+    "Unterscheide Daten von pauschalen Urteilen.",
+    "Eine Aussage über ein Land trifft nicht automatisch auf jeden Menschen zu."
+  ],
+  "en": [
+    "How can you compare two European countries factually?",
+    "Using checkable information such as area and population",
+    "Giving everyone in the east the same religion",
+    "Using only a rumour about a country",
+    "Letting one person represent the entire population",
+    "Distinguish data from sweeping judgements.",
+    "A claim about a country does not automatically describe every person."
+  ],
+  "fr": [
+    "Comment comparer objectivement deux pays européens ?",
+    "Avec des données vérifiables, comme la superficie et la population",
+    "En attribuant la même religion à tous les habitants de l’Est",
+    "En utilisant seulement une rumeur sur un pays",
+    "En laissant une personne représenter toute la population",
+    "Distingue les données des jugements généraux.",
+    "Une affirmation sur un pays ne décrit pas chaque personne."
+  ],
+  "it": [
+    "Come confronti due paesi europei in modo oggettivo?",
+    "Con dati verificabili, come superficie e popolazione",
+    "Attribuendo la stessa religione a tutti gli abitanti dell’Est",
+    "Usando solo una voce su un paese",
+    "Facendo rappresentare l’intera popolazione da una persona",
+    "Distingui i dati dai giudizi generici.",
+    "Un’affermazione su un paese non descrive ogni persona."
+  ]
+},
+{
+  "key": "5/science/europa-geografie-5/eg5-50",
+  "reason": "Replace Rimland geopolitics with readable map direction. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Wo liegt Italien im Vergleich zur Schweiz?",
+    "Südlich",
+    "Nördlich",
+    "Westlich",
+    "Östlich",
+    "Orientiere die Karte mit Norden oben.",
+    "Suche die gemeinsame Grenze auf der Alpensüdseite."
+  ],
+  "en": [
+    "Where is Italy relative to Switzerland?",
+    "To the south",
+    "North",
+    "West",
+    "East",
+    "Orient the map with north at the top.",
+    "Find the shared border on the southern side of the Alps."
+  ],
+  "fr": [
+    "Où se trouve l’Italie par rapport à la Suisse ?",
+    "Au sud",
+    "Au nord",
+    "À l’ouest",
+    "À l’est",
+    "Oriente la carte avec le nord en haut.",
+    "Cherche la frontière commune au sud des Alpes."
+  ],
+  "it": [
+    "Dove si trova l’Italia rispetto alla Svizzera?",
+    "A sud",
+    "A nord",
+    "A ovest",
+    "A est",
+    "Orienta la carta con il nord in alto.",
+    "Cerca il confine comune sul versante sud delle Alpi."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-10",
+  "reason": "Recognise the actual national-language set.",
+  "de": [
+    "Welche Liste nennt die vier Schweizer Landessprachen?",
+    "Deutsch, Französisch, Italienisch, Rätoromanisch",
+    "Deutsch, Französisch, Italienisch, Englisch",
+    "Deutsch, Spanisch, Italienisch, Rätoromanisch",
+    "Deutsch, Französisch, Portugiesisch, Englisch",
+    "Landessprachen sind nicht dasselbe wie alle hier gesprochenen Sprachen.",
+    "Denke auch an eine Sprache aus Graubünden."
+  ],
+  "en": [
+    "Which list gives Switzerland’s four national languages?",
+    "German, French, Italian, Romansh",
+    "German, French, Italian, English",
+    "German, Spanish, Italian, Romansh",
+    "German, French, Portuguese, English",
+    "National languages are not every language spoken here.",
+    "Remember a language from Graubünden."
+  ],
+  "fr": [
+    "Quelle liste donne les quatre langues nationales suisses ?",
+    "Allemand, français, italien, romanche",
+    "Allemand, français, italien, anglais",
+    "Allemand, espagnol, italien, romanche",
+    "Allemand, français, portugais, anglais",
+    "Les langues nationales ne sont pas toutes les langues parlées ici.",
+    "Pense aussi à une langue des Grisons."
+  ],
+  "it": [
+    "Quale elenco indica le quattro lingue nazionali svizzere?",
+    "Tedesco, francese, italiano, romancio",
+    "Tedesco, francese, italiano, inglese",
+    "Tedesco, spagnolo, italiano, romancio",
+    "Tedesco, francese, portoghese, inglese",
+    "Le lingue nazionali non sono tutte le lingue parlate qui.",
+    "Pensa anche a una lingua dei Grigioni."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-16",
+  "reason": "Recognise the parliamentary chamber representing cantons. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Welche Parlamentskammer vertritt die Kantone auf Bundesebene?",
+    "Der Ständerat",
+    "Der Nationalrat",
+    "Der Bundesrat",
+    "Das Bundesgericht",
+    "Das Schweizer Parlament hat zwei Kammern.",
+    "Gesucht ist weder die Regierung noch ein Gericht."
+  ],
+  "en": [
+    "Which parliamentary chamber represents the cantons federally?",
+    "The Council of States",
+    "The National Council",
+    "The Federal Council",
+    "The Federal Supreme Court",
+    "Swiss parliament has two chambers.",
+    "It is neither the government nor a court."
+  ],
+  "fr": [
+    "Quelle chambre parlementaire représente les cantons au niveau fédéral ?",
+    "Le Conseil des États",
+    "Le Conseil national",
+    "Le Conseil fédéral",
+    "Le Tribunal fédéral",
+    "Le Parlement suisse a deux chambres.",
+    "Ce n’est ni le gouvernement ni un tribunal."
+  ],
+  "it": [
+    "Quale camera parlamentare rappresenta i cantoni a livello federale?",
+    "Il Consiglio degli Stati",
+    "Il Consiglio nazionale",
+    "Il Consiglio federale",
+    "Il Tribunale federale",
+    "Il Parlamento svizzero ha due camere.",
+    "Non è né il governo né un tribunale."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-20",
+  "reason": "Replace concordance abstraction with compromise in democratic deliberation.",
+  "de": [
+    "Was ist ein Kompromiss bei unterschiedlichen Vorschlägen?",
+    "Eine gemeinsame Lösung, bei der beide Seiten nachgeben",
+    "Eine Seite bekommt immer alles",
+    "Niemand darf seine Meinung sagen",
+    "Die Entscheidung wird vor jeder Diskussion geheim festgelegt",
+    "Vergleiche Einigung mit einem einseitigen Sieg.",
+    "Beide Seiten sollen an der Lösung mitarbeiten."
+  ],
+  "en": [
+    "What is a compromise between different proposals?",
+    "A shared solution in which both sides make concessions",
+    "One side always gets everything",
+    "Nobody may express an opinion",
+    "The decision is secretly fixed before discussion",
+    "Compare agreement with a one-sided victory.",
+    "Both sides should help shape the solution."
+  ],
+  "fr": [
+    "Qu’est-ce qu’un compromis entre des propositions différentes ?",
+    "Une solution commune où chaque côté fait des concessions",
+    "Un côté obtient toujours tout",
+    "Personne ne peut donner son avis",
+    "La décision est fixée secrètement avant la discussion",
+    "Compare l’accord à une victoire d’un seul côté.",
+    "Les deux côtés participent à la solution."
+  ],
+  "it": [
+    "Cos’è un compromesso tra proposte diverse?",
+    "Una soluzione comune in cui entrambe le parti fanno concessioni",
+    "Una parte ottiene sempre tutto",
+    "Nessuno può esprimere un’opinione",
+    "La decisione è fissata in segreto prima di discutere",
+    "Confronta un accordo con una vittoria unilaterale.",
+    "Entrambe le parti contribuiscono alla soluzione."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-22",
+  "reason": "Replace intelligence-service acronym recall with federal civic institutions. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Wo arbeitet das Schweizer Parlament?",
+    "Im Bundeshaus in Bern",
+    "Im Bundesgerichtsgebäude in Lausanne",
+    "Im Zürcher Rathaus",
+    "Im Genfer Rathaus",
+    "Suche den Sitz der Bundesbehörden.",
+    "Das Gebäude steht in der Bundesstadt."
+  ],
+  "en": [
+    "Where does the Swiss parliament work?",
+    "In the Federal Palace in Bern",
+    "In the Federal Supreme Court building in Lausanne",
+    "In Zurich Town Hall",
+    "In Geneva Town Hall",
+    "Think of the seat of federal authorities.",
+    "The building is in the federal city."
+  ],
+  "fr": [
+    "Où travaille le Parlement suisse ?",
+    "Au Palais fédéral à Berne",
+    "Au bâtiment du Tribunal fédéral à Lausanne",
+    "À l’hôtel de ville de Zurich",
+    "À l’hôtel de ville de Genève",
+    "Cherche le siège des autorités fédérales.",
+    "Le bâtiment se trouve dans la ville fédérale."
+  ],
+  "it": [
+    "Dove lavora il Parlamento svizzero?",
+    "A Palazzo federale a Berna",
+    "Nel palazzo del Tribunale federale a Losanna",
+    "Nel municipio di Zurigo",
+    "Nel municipio di Ginevra",
+    "Pensa alla sede delle autorità federali.",
+    "L’edificio si trova nella città federale."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-28",
+  "reason": "Replace federal-decree legal details with the distinction between proposal and decision.",
+  "de": [
+    "Eine Idee wird im Parlament diskutiert. Ist sie deshalb schon geltendes Gesetz?",
+    "Nein, dafür braucht es die vorgeschriebenen weiteren Schritte",
+    "Ja, jede geäusserte Idee gilt sofort",
+    "Ja, wenn ein Fernsehsender darüber berichtet",
+    "Ja, sobald ein einzelnes Mitglied zustimmt",
+    "Unterscheide Vorschlag und gültige Regel.",
+    "Für Gesetze gibt es ein geregeltes Verfahren."
+  ],
+  "en": [
+    "Parliament discusses an idea. Is it already law?",
+    "No, the required further steps must be completed",
+    "Yes, every spoken idea applies immediately",
+    "Yes, if television reports it",
+    "Yes, as soon as one member agrees",
+    "Distinguish a proposal from a valid rule.",
+    "Laws follow a defined process."
+  ],
+  "fr": [
+    "Une idée est discutée au Parlement. Est-elle déjà une loi en vigueur ?",
+    "Non, les autres étapes prescrites doivent être suivies",
+    "Oui, chaque idée exprimée s’applique aussitôt",
+    "Oui, si la télévision en parle",
+    "Oui, dès qu’un seul membre est d’accord",
+    "Distingue proposition et règle valable.",
+    "Les lois suivent une procédure définie."
+  ],
+  "it": [
+    "Il Parlamento discute un’idea. È già una legge in vigore?",
+    "No, servono gli ulteriori passi previsti",
+    "Sì, ogni idea espressa vale subito",
+    "Sì, se ne parla la televisione",
+    "Sì, appena un solo membro è d’accordo",
+    "Distingui una proposta da una regola valida.",
+    "Le leggi seguono una procedura definita."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-30",
+  "reason": "Recognise federal law-making institution. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Welche Institution beschliesst Bundesgesetze?",
+    "Die Bundesversammlung",
+    "Das Bundesgericht",
+    "Die Schweizerische Nationalbank",
+    "Ein einzelner Gemeinderat",
+    "Denke an die beiden Parlamentskammern.",
+    "Unterscheide die Aufgaben von Parlament, Gericht, Nationalbank und Gemeinde."
+  ],
+  "en": [
+    "Which institution passes federal laws?",
+    "The Federal Assembly",
+    "The Federal Supreme Court",
+    "The Swiss National Bank",
+    "A single municipal council",
+    "Think of the two parliamentary chambers.",
+    "Distinguish the roles of parliament, court, national bank and municipality."
+  ],
+  "fr": [
+    "Quelle institution adopte les lois fédérales ?",
+    "L’Assemblée fédérale",
+    "Le Tribunal fédéral",
+    "La Banque nationale suisse",
+    "Un seul conseil communal",
+    "Pense aux deux chambres parlementaires.",
+    "Distingue les rôles du parlement, du tribunal, de la banque nationale et de la commune."
+  ],
+  "it": [
+    "Quale istituzione approva le leggi federali?",
+    "L’Assemblea federale",
+    "Il Tribunale federale",
+    "La Banca nazionale svizzera",
+    "Un singolo consiglio comunale",
+    "Pensa alle due camere parlamentari.",
+    "Distingui i ruoli di parlamento, tribunale, banca nazionale e comune."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-32",
+  "reason": "Use age-appropriate civic participation.",
+  "de": [
+    "Wie können Kinder bei einem geplanten Spielplatz mitwirken?",
+    "Ihre Ideen in einer Kinderbefragung einbringen",
+    "Die Meinung anderer Kinder verbieten",
+    "Abstimmungszettel Erwachsener heimlich ausfüllen",
+    "Falsche Unterschriften sammeln",
+    "Mitwirken braucht nicht immer ein Stimmrecht.",
+    "Suche einen ehrlichen Weg, eigene Bedürfnisse mitzuteilen."
+  ],
+  "en": [
+    "How can children help plan a playground?",
+    "Share ideas in a children’s consultation",
+    "Forbid other children’s opinions",
+    "Secretly fill in adults’ ballots",
+    "Collect fake signatures",
+    "Participation does not always require voting rights.",
+    "Look for an honest way to express your needs."
+  ],
+  "fr": [
+    "Comment les enfants peuvent-ils participer à un projet de place de jeux ?",
+    "Partager leurs idées lors d’une consultation d’enfants",
+    "Interdire les opinions des autres enfants",
+    "Remplir secrètement les bulletins des adultes",
+    "Recueillir de fausses signatures",
+    "Participer ne nécessite pas toujours le droit de vote.",
+    "Cherche un moyen honnête d’exprimer tes besoins."
+  ],
+  "it": [
+    "Come possono i bambini contribuire a progettare un parco giochi?",
+    "Condividere idee in una consultazione per bambini",
+    "Vietare le opinioni degli altri bambini",
+    "Compilare di nascosto le schede degli adulti",
+    "Raccogliere firme false",
+    "Partecipare non richiede sempre il diritto di voto.",
+    "Cerca un modo onesto per esprimere i tuoi bisogni."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-34",
+  "reason": "Replace overgeneralised election-law definition with an explicit simple voting rule. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Eine Klassenwahl verlangt mehr als die Hälfte von 20 Stimmen. Reichen 10 Stimmen?",
+    "Nein, es braucht mindestens 11",
+    "Ja, genau 10 genügen",
+    "Nein, es braucht mindestens 15",
+    "Nein, es braucht alle 20",
+    "Bestimme zuerst die Hälfte von 20.",
+    "Beachte das Wort mehr."
+  ],
+  "en": [
+    "A class election requires more than half of 20 votes. Are 10 enough?",
+    "No, at least 11 are needed",
+    "Yes, exactly 10 are enough",
+    "No, at least 15 are needed",
+    "No, all 20 are needed",
+    "First find half of 20.",
+    "Notice the words more than."
+  ],
+  "fr": [
+    "Une élection de classe exige plus de la moitié de 20 voix. Dix suffisent-elles ?",
+    "Non, il en faut au moins 11",
+    "Oui, exactement 10 suffisent",
+    "Non, il en faut au moins 15",
+    "Non, il faut les 20",
+    "Calcule d’abord la moitié de 20.",
+    "Observe les mots plus de."
+  ],
+  "it": [
+    "Un’elezione di classe richiede più della metà di 20 voti. Ne bastano 10?",
+    "No, ne servono almeno 11",
+    "Sì, esattamente 10 bastano",
+    "No, ne servono almeno 15",
+    "No, servono tutti e 20",
+    "Calcola prima la metà di 20.",
+    "Nota le parole più della."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-36",
+  "reason": "Clarify EU membership using countries, not a parenthetical negative.",
+  "de": [
+    "Welches dieser Länder ist kein EU-Mitglied?",
+    "Die Schweiz",
+    "Frankreich",
+    "Italien",
+    "Deutschland",
+    "Europa und EU sind nicht dasselbe.",
+    "Ein Land kann in Europa liegen, ohne der EU anzugehören."
+  ],
+  "en": [
+    "Which of these countries is not an EU member?",
+    "Switzerland",
+    "France",
+    "Italy",
+    "Germany",
+    "Europe and the EU are not the same.",
+    "A country can be in Europe without belonging to the EU."
+  ],
+  "fr": [
+    "Lequel de ces pays n’est pas membre de l’UE ?",
+    "La Suisse",
+    "La France",
+    "L’Italie",
+    "L’Allemagne",
+    "L’Europe et l’UE ne sont pas la même chose.",
+    "Un pays peut être en Europe sans appartenir à l’UE."
+  ],
+  "it": [
+    "Quale di questi paesi non è membro dell’UE?",
+    "La Svizzera",
+    "La Francia",
+    "L’Italia",
+    "La Germania",
+    "Europa e UE non sono la stessa cosa.",
+    "Un paese può essere in Europa senza appartenere all’UE."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-38",
+  "reason": "Introduce voting on proposals without procedural thresholds. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Worüber entscheiden Stimmberechtigte bei einer Sachabstimmung?",
+    "Über eine vorgelegte Sachfrage",
+    "Ausschliesslich über die Besetzung eines politischen Amts",
+    "Nur über die Reihenfolge der Namen auf einer Wahlliste",
+    "Ausschliesslich darüber, wer eine Sitzung leitet",
+    "Unterscheide Wahl und Abstimmung.",
+    "Bei der gesuchten Entscheidung geht es um eine Vorlage."
+  ],
+  "en": [
+    "What do eligible voters decide in a vote on an issue?",
+    "A proposed issue or measure",
+    "Only on filling a political office",
+    "Only on the order of names on an electoral list",
+    "Only on who chairs a meeting",
+    "Distinguish elections from votes on issues.",
+    "The decision concerns a proposal."
+  ],
+  "fr": [
+    "Sur quoi les personnes ayant le droit de vote décident-elles lors d’une votation ?",
+    "Sur un objet soumis au vote",
+    "Uniquement sur l’attribution d’un mandat politique",
+    "Seulement sur l’ordre des noms d’une liste électorale",
+    "Uniquement sur la présidence d’une séance",
+    "Distingue élection et votation.",
+    "La décision porte sur une proposition."
+  ],
+  "it": [
+    "Su cosa decidono gli aventi diritto in una votazione su un oggetto?",
+    "Su una proposta sottoposta al voto",
+    "Solo sull’assegnazione di una carica politica",
+    "Solo sull’ordine dei nomi di una lista elettorale",
+    "Solo su chi presiede una seduta",
+    "Distingui elezione e votazione.",
+    "La decisione riguarda una proposta."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-40",
+  "reason": "Replace conciliation committee mechanics with parliamentary discussion. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Warum beraten Parlamentsmitglieder über verschiedene Vorschläge?",
+    "Um Argumente abzuwägen und Entscheidungen vorzubereiten",
+    "Damit die erste geäusserte Meinung ohne Prüfung gilt",
+    "Damit nur die Lautstärke und nicht die Begründung zählt",
+    "Damit jede unterschiedliche Ansicht von Anfang an ausgeschlossen bleibt",
+    "Gute Entscheidungen brauchen Informationen.",
+    "Auch unterschiedliche Ansichten können wichtige Hinweise liefern."
+  ],
+  "en": [
+    "Why do members of parliament discuss different proposals?",
+    "To weigh arguments and prepare decisions",
+    "So the first opinion expressed applies without examination",
+    "So only loudness matters rather than reasons",
+    "So every different view is excluded from the start",
+    "Good decisions need information.",
+    "Different views can provide useful insights."
+  ],
+  "fr": [
+    "Pourquoi les parlementaires discutent-ils de différentes propositions ?",
+    "Pour peser les arguments et préparer les décisions",
+    "Pour que le premier avis s’impose sans examen",
+    "Pour que seul le volume de la voix compte",
+    "Pour exclure dès le début tout avis différent",
+    "De bonnes décisions demandent des informations.",
+    "Des avis différents peuvent apporter des éléments utiles."
+  ],
+  "it": [
+    "Perché i parlamentari discutono proposte diverse?",
+    "Per valutare argomenti e preparare decisioni",
+    "Perché valga la prima opinione senza esame",
+    "Perché conti solo il volume della voce",
+    "Per escludere dall’inizio ogni opinione diversa",
+    "Le buone decisioni richiedono informazioni.",
+    "Opinioni diverse possono offrire elementi utili."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-42",
+  "reason": "Replace contentious historical initiative mechanics with universal religious respect.",
+  "de": [
+    "Was bedeutet respektvoller Umgang mit verschiedenen Religionen?",
+    "Niemanden wegen seines Glaubens abwerten",
+    "Allen dieselbe Religion vorschreiben",
+    "Kinder wegen ihrer Religion ausschliessen",
+    "Nur die eigene Sicht anhören",
+    "Menschen können unterschiedliche Überzeugungen haben.",
+    "Respekt ist auch bei Meinungsverschiedenheiten wichtig."
+  ],
+  "en": [
+    "What does respecting different religions mean?",
+    "Not belittling anyone because of their beliefs",
+    "Requiring everyone to have the same religion",
+    "Excluding children because of their religion",
+    "Listening only to your own view",
+    "People can hold different beliefs.",
+    "Respect matters even when people disagree."
+  ],
+  "fr": [
+    "Que signifie respecter les différentes religions ?",
+    "Ne dévaloriser personne à cause de ses croyances",
+    "Imposer la même religion à tous",
+    "Exclure des enfants à cause de leur religion",
+    "Écouter uniquement son propre point de vue",
+    "Les personnes peuvent avoir des convictions différentes.",
+    "Le respect compte même en cas de désaccord."
+  ],
+  "it": [
+    "Cosa significa rispettare religioni diverse?",
+    "Non sminuire nessuno per le sue convinzioni",
+    "Imporre a tutti la stessa religione",
+    "Escludere bambini per la loro religione",
+    "Ascoltare solo il proprio punto di vista",
+    "Le persone possono avere convinzioni diverse.",
+    "Il rispetto conta anche quando non si è d’accordo."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-44",
+  "reason": "Replace mandatory-office legal detail with a public-service role. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Welche Aufgabe gehört zu einer Gemeinde?",
+    "Örtliche Aufgaben wie Abfallentsorgung organisieren",
+    "Die Landeswährung herausgeben",
+    "Die Aussenpolitik für die gesamte Schweiz festlegen",
+    "Die Bundesverfassung allein ändern",
+    "Denke an Dienste in deinem Wohnort.",
+    "Die Aufgabe betrifft das Zusammenleben vor Ort."
+  ],
+  "en": [
+    "Which task belongs to a municipality?",
+    "Organising local services such as waste collection",
+    "Issue the national currency",
+    "Set foreign policy for all Switzerland",
+    "Change the Federal Constitution alone",
+    "Think of services where you live.",
+    "The task concerns local community life."
+  ],
+  "fr": [
+    "Quelle tâche relève d’une commune ?",
+    "Organiser des services locaux comme la collecte des déchets",
+    "Émettre la monnaie nationale",
+    "Fixer la politique étrangère de toute la Suisse",
+    "Modifier seule la Constitution fédérale",
+    "Pense aux services de ton lieu de vie.",
+    "La tâche concerne la vie collective locale."
+  ],
+  "it": [
+    "Quale compito spetta a un comune?",
+    "Organizzare servizi locali come la raccolta dei rifiuti",
+    "Emettere la valuta nazionale",
+    "Stabilire la politica estera di tutta la Svizzera",
+    "Modificare da solo la Costituzione federale",
+    "Pensa ai servizi del luogo dove vivi.",
+    "Il compito riguarda la vita della comunità locale."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-46",
+  "reason": "Replace abstract multiculturalism with factual linguistic diversity.",
+  "de": [
+    "Was ist über Menschen in der Schweiz richtig?",
+    "Sie können verschiedene Sprachen und Religionen haben",
+    "Alle sprechen ausschliesslich Deutsch",
+    "Alle haben dieselbe Familiengeschichte",
+    "Alle feiern jedes Fest genau gleich",
+    "Denke an unterschiedliche Familien und Regionen.",
+    "Ein gemeinsamer Wohnstaat bedeutet nicht identische Lebensweisen."
+  ],
+  "en": [
+    "Which statement about people in Switzerland is correct?",
+    "They can have different languages and religions",
+    "Everyone speaks only German",
+    "Everyone has the same family history",
+    "Everyone celebrates every festival identically",
+    "Think of different families and regions.",
+    "Living in one country does not mean identical ways of life."
+  ],
+  "fr": [
+    "Quelle affirmation sur les habitants de Suisse est correcte ?",
+    "Ils peuvent avoir des langues et religions différentes",
+    "Tous parlent uniquement allemand",
+    "Tous ont la même histoire familiale",
+    "Tous célèbrent chaque fête exactement pareil",
+    "Pense aux différentes familles et régions.",
+    "Vivre dans le même pays ne signifie pas vivre tous de la même façon."
+  ],
+  "it": [
+    "Quale affermazione sugli abitanti della Svizzera è corretta?",
+    "Possono avere lingue e religioni diverse",
+    "Tutti parlano solo tedesco",
+    "Tutti hanno la stessa storia familiare",
+    "Tutti celebrano ogni festa nello stesso modo",
+    "Pensa a famiglie e regioni diverse.",
+    "Vivere nello stesso paese non significa vivere tutti allo stesso modo."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-48",
+  "reason": "Introduce representation through a transparent proportional example.",
+  "de": [
+    "Eine Modellwahl verteilt 10 Sitze genau proportional. Eine Gruppe erhält die Hälfte der Stimmen. Wie viele Sitze erhält sie?",
+    "5",
+    "10",
+    "1",
+    "0",
+    "In diesem vereinfachten Modell zählen nur die Anteile.",
+    "Bestimme die Hälfte der verfügbaren Sitze."
+  ],
+  "en": [
+    "A model election shares 10 seats exactly proportionally. A group gets half the votes. How many seats does it get?",
+    "5",
+    "10",
+    "1",
+    "0",
+    "In this simplified model only proportions matter.",
+    "Find half the available seats."
+  ],
+  "fr": [
+    "Une élection modèle répartit 10 sièges exactement proportionnellement. Un groupe obtient la moitié des voix. Combien de sièges reçoit-il ?",
+    "5",
+    "10",
+    "1",
+    "0",
+    "Dans ce modèle simplifié, seules les proportions comptent.",
+    "Calcule la moitié des sièges disponibles."
+  ],
+  "it": [
+    "Un’elezione modello distribuisce 10 seggi in modo esattamente proporzionale. Un gruppo ha metà dei voti. Quanti seggi riceve?",
+    "5",
+    "10",
+    "1",
+    "0",
+    "In questo modello semplificato contano solo le proporzioni.",
+    "Calcola la metà dei seggi disponibili."
+  ]
+},
+{
+  "key": "5/science/schweiz-politik-5/sp5-50",
+  "reason": "Use humanitarian assistance objective instead of agency expansion recall. Second pass: stronger subject-specific alternatives.",
+  "de": [
+    "Was ist ein Ziel humanitärer Hilfe nach einer Katastrophe?",
+    "Menschen in Not mit lebenswichtigen Dingen unterstützen",
+    "Zuerst touristische Werbung für das Gebiet finanzieren",
+    "Ausschliesslich neue Sportrekorde im Gebiet fördern",
+    "Hilfe nur nach der Bekanntheit einzelner Betroffener vergeben",
+    "Denke an unmittelbare Bedürfnisse nach einem Erdbeben.",
+    "Menschen brauchen etwa Schutz, Nahrung und medizinische Versorgung."
+  ],
+  "en": [
+    "What is a goal of humanitarian aid after a disaster?",
+    "Support people in need with essential supplies",
+    "First finance tourism advertising for the region",
+    "Only promote new sporting records in the area",
+    "Allocate help only by how famous affected people are",
+    "Think of immediate needs after an earthquake.",
+    "People need shelter, food and medical care."
+  ],
+  "fr": [
+    "Quel est un objectif de l’aide humanitaire après une catastrophe ?",
+    "Fournir l’essentiel aux personnes en détresse",
+    "Financer d’abord la publicité touristique de la région",
+    "Promouvoir seulement de nouveaux records sportifs",
+    "Distribuer l’aide uniquement selon la célébrité des personnes",
+    "Pense aux besoins immédiats après un séisme.",
+    "Les personnes ont besoin d’abri, de nourriture et de soins."
+  ],
+  "it": [
+    "Qual è un obiettivo dell’aiuto umanitario dopo una catastrofe?",
+    "Fornire beni essenziali alle persone in difficoltà",
+    "Finanziare prima la pubblicità turistica della regione",
+    "Promuovere solo nuovi record sportivi",
+    "Distribuire aiuti solo secondo la fama delle persone",
+    "Pensa ai bisogni immediati dopo un terremoto.",
+    "Servono riparo, cibo e cure mediche."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-4",
+  "reason": "Teach period boundaries as conventions rather than endorse discovery framing.",
+  "de": [
+    "Warum ist eine Epochengrenze wie 1492 eine vereinfachte Einteilung?",
+    "Veränderungen geschahen nicht überall an einem einzigen Tag",
+    "Alle Menschen änderten an diesem Tag gleichzeitig ihr Leben",
+    "Vor diesem Datum gab es keine Geschichte",
+    "Jede Epoche dauert genau 100 Jahre",
+    "Epochen helfen beim Ordnen langer Zeiträume.",
+    "Vergleiche Veränderungen in verschiedenen Regionen."
+  ],
+  "en": [
+    "Why is a period boundary such as 1492 a simplified division?",
+    "Changes did not happen everywhere on a single day",
+    "Everyone changed their life simultaneously that day",
+    "There was no history before that date",
+    "Every historical period lasts exactly 100 years",
+    "Periods help organise long spans of time.",
+    "Compare changes in different regions."
+  ],
+  "fr": [
+    "Pourquoi une limite historique comme 1492 est-elle une simplification ?",
+    "Les changements n’ont pas eu lieu partout en un seul jour",
+    "Tout le monde a changé de vie simultanément ce jour-là",
+    "Il n’y avait pas d’histoire avant cette date",
+    "Chaque époque dure exactement 100 ans",
+    "Les époques aident à organiser de longues durées.",
+    "Compare les changements dans différentes régions."
+  ],
+  "it": [
+    "Perché un confine storico come il 1492 è una semplificazione?",
+    "I cambiamenti non avvennero ovunque in un solo giorno",
+    "Tutti cambiarono vita contemporaneamente quel giorno",
+    "Prima di quella data non esisteva storia",
+    "Ogni epoca dura esattamente 100 anni",
+    "Le epoche aiutano a ordinare lunghi periodi.",
+    "Confronta cambiamenti in regioni diverse."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-8",
+  "reason": "Locate the medieval empire without treating it as a modern nation-state.",
+  "de": [
+    "Wo lag ein grosser Teil des Heiligen Römischen Reiches?",
+    "In Mitteleuropa",
+    "In Australien",
+    "In Südamerika",
+    "In der Antarktis",
+    "Vergleiche historische und heutige Karten.",
+    "Die Grenzen waren nicht dieselben wie die eines heutigen Landes."
+  ],
+  "en": [
+    "Where was a large part of the Holy Roman Empire?",
+    "Central Europe",
+    "Australia",
+    "South America",
+    "Antarctica",
+    "Compare historical and modern maps.",
+    "Its borders were not those of a single modern country."
+  ],
+  "fr": [
+    "Où se situait une grande partie du Saint-Empire romain germanique ?",
+    "En Europe centrale",
+    "En Australie",
+    "En Amérique du Sud",
+    "En Antarctique",
+    "Compare cartes anciennes et actuelles.",
+    "Ses frontières n’étaient pas celles d’un seul pays actuel."
+  ],
+  "it": [
+    "Dove si trovava gran parte del Sacro Romano Impero?",
+    "In Europa centrale",
+    "In Australia",
+    "In Sudamerica",
+    "In Antartide",
+    "Confronta carte storiche e attuali.",
+    "I suoi confini non erano quelli di un solo paese moderno."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-14",
+  "reason": "Recognise the purpose of tournaments.",
+  "de": [
+    "Was war ein Ritterturnier?",
+    "Ein Wettkampf zur Übung und Unterhaltung",
+    "Eine tägliche Bauernversammlung zur Ernteplanung",
+    "Eine Schreibstube für Handschriften",
+    "Ein Markt nur für Gewürze",
+    "Denke an Fähigkeiten im Umgang mit Pferd und Waffen.",
+    "Ein Turnier war nicht dasselbe wie eine gewöhnliche Schlacht."
+  ],
+  "en": [
+    "What was a knights’ tournament?",
+    "A contest for practice and entertainment",
+    "A daily farmers’ meeting to plan harvests",
+    "A room for copying manuscripts",
+    "A market only for spices",
+    "Think of skills with horses and weapons.",
+    "A tournament was not the same as an ordinary battle."
+  ],
+  "fr": [
+    "Qu’était un tournoi de chevaliers ?",
+    "Une compétition d’entraînement et de divertissement",
+    "Une réunion quotidienne de paysans pour les récoltes",
+    "Un atelier de copie de manuscrits",
+    "Un marché réservé aux épices",
+    "Pense aux compétences avec chevaux et armes.",
+    "Un tournoi n’était pas une bataille ordinaire."
+  ],
+  "it": [
+    "Cos’era un torneo cavalleresco?",
+    "Una gara di esercizio e spettacolo",
+    "Una riunione quotidiana di contadini per il raccolto",
+    "Una stanza per copiare manoscritti",
+    "Un mercato solo di spezie",
+    "Pensa alle abilità con cavalli e armi.",
+    "Un torneo non era una normale battaglia."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-16",
+  "reason": "Simplify investiture dispute to conflict over appointments. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Worum stritten Papst und Kaiser im Investiturstreit besonders?",
+    "Wer Bischöfe einsetzen durfte",
+    "Wer die Marktgebühren einer einzelnen Stadt einsammelte",
+    "Wer die Zunftmeister aller Handwerker auswählte",
+    "Wer die Schiffe einer Kaufmannsflotte belud",
+    "Der Streit betraf kirchliche Ämter und Macht.",
+    "Denke an die Auswahl wichtiger Amtsträger."
+  ],
+  "en": [
+    "What was a key dispute between pope and emperor in the Investiture Controversy?",
+    "Who could appoint bishops",
+    "Who collected market fees in one town",
+    "Who selected all craft guild leaders",
+    "Who loaded the ships of a merchant fleet",
+    "The dispute concerned church offices and power.",
+    "Think about choosing important office-holders."
+  ],
+  "fr": [
+    "Quel était un enjeu central de la querelle des Investitures entre pape et empereur ?",
+    "Qui pouvait nommer les évêques",
+    "Qui encaissait les taxes du marché d’une ville",
+    "Qui choisissait les maîtres de toutes les corporations",
+    "Qui chargeait les navires d’une flotte marchande",
+    "Le conflit concernait les fonctions ecclésiastiques et le pouvoir.",
+    "Pense au choix de responsables importants."
+  ],
+  "it": [
+    "Qual era un punto centrale della lotta per le investiture tra papa e imperatore?",
+    "Chi poteva nominare i vescovi",
+    "Chi riscuoteva le tasse del mercato di una città",
+    "Chi sceglieva i maestri di tutte le corporazioni",
+    "Chi caricava le navi di una flotta mercantile",
+    "Il conflitto riguardava cariche ecclesiastiche e potere.",
+    "Pensa alla scelta di responsabili importanti."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-18",
+  "reason": "Replace military date recall with historical-source perspective.",
+  "de": [
+    "Warum können Berichte über denselben Kreuzzug unterschiedlich sein?",
+    "Die Schreibenden hatten verschiedene Erfahrungen und Interessen",
+    "Alle Berichte wurden von derselben Person geschrieben",
+    "Jeder mittelalterliche Text ist automatisch neutral",
+    "Unterschiedliche Berichte beweisen, dass nichts geschehen ist",
+    "Frage, wer berichtet und für wen.",
+    "Ein Bericht zeigt oft auch die Sicht seiner Verfasser."
+  ],
+  "en": [
+    "Why can accounts of the same crusade differ?",
+    "Writers had different experiences and interests",
+    "Every account was written by one person",
+    "Every medieval text is automatically neutral",
+    "Different accounts prove nothing happened",
+    "Ask who wrote it and for whom.",
+    "An account often reflects its author’s perspective."
+  ],
+  "fr": [
+    "Pourquoi des récits d’une même croisade peuvent-ils différer ?",
+    "Leurs auteurs avaient des expériences et intérêts différents",
+    "Tous furent écrits par une seule personne",
+    "Chaque texte médiéval est automatiquement neutre",
+    "Des récits différents prouvent que rien ne s’est passé",
+    "Demande qui écrit et pour qui.",
+    "Un récit reflète souvent le point de vue de son auteur."
+  ],
+  "it": [
+    "Perché racconti della stessa crociata possono differire?",
+    "Gli autori avevano esperienze e interessi diversi",
+    "Furono tutti scritti da una sola persona",
+    "Ogni testo medievale è automaticamente neutrale",
+    "Racconti diversi dimostrano che non accadde nulla",
+    "Chiediti chi scrive e per chi.",
+    "Un racconto riflette spesso il punto di vista dell’autore."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-22",
+  "reason": "Distinguish idealised chivalry from universal historical behaviour. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Ein Text nennt Ritter mutig und gerecht. Was musst du unterscheiden?",
+    "Ein Idealbild und das tatsächliche Verhalten einzelner Ritter",
+    "Ein Lob im Text beweist das Verhalten aller Ritter",
+    "Eine Erzählung ersetzt die Prüfung weiterer Quellen",
+    "Eine vorgeschriebene Regel wurde sicher von jedem immer befolgt",
+    "Eine Beschreibung kann ein Vorbild zeigen.",
+    "Ob Menschen so handelten, muss mit Quellen geprüft werden."
+  ],
+  "en": [
+    "A text calls knights brave and just. What must you distinguish?",
+    "An ideal image from how individual knights actually behaved",
+    "Praise in a text proves the behaviour of all knights",
+    "A story replaces checking other sources",
+    "A written rule was certainly always followed by everyone",
+    "A description can present an ideal.",
+    "Evidence is needed to check how people acted."
+  ],
+  "fr": [
+    "Un texte décrit les chevaliers comme courageux et justes. Que faut-il distinguer ?",
+    "Un idéal et le comportement réel de chaque chevalier",
+    "Un éloge prouve le comportement de tous les chevaliers",
+    "Un récit remplace l’examen d’autres sources",
+    "Une règle écrite était sûrement toujours respectée par tous",
+    "Une description peut montrer un modèle idéal.",
+    "Il faut des sources pour vérifier les comportements."
+  ],
+  "it": [
+    "Un testo descrive i cavalieri come coraggiosi e giusti. Cosa va distinto?",
+    "Un ideale dal comportamento reale dei singoli cavalieri",
+    "Un elogio prova il comportamento di tutti i cavalieri",
+    "Un racconto sostituisce l’esame di altre fonti",
+    "Una regola scritta era sicuramente sempre rispettata da tutti",
+    "Una descrizione può presentare un ideale.",
+    "Servono fonti per verificare i comportamenti."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-24",
+  "reason": "Recognise pilgrimage through purpose rather than exact phrasing.",
+  "de": [
+    "Was kennzeichnet eine Pilgerreise?",
+    "Eine Reise zu einem religiös bedeutsamen Ort",
+    "Jede Reise zum Einkaufen",
+    "Ausschliesslich eine militärische Eroberung",
+    "Nur ein Transport von Getreide",
+    "Denke an den Grund der Reise.",
+    "Der Zielort hat für die Reisenden eine besondere Glaubensbedeutung."
+  ],
+  "en": [
+    "What characterises a pilgrimage?",
+    "A journey to a place of religious significance",
+    "Every shopping trip",
+    "Only a military conquest",
+    "Only transporting grain",
+    "Think of the reason for the journey.",
+    "The destination has special religious meaning for the travellers."
+  ],
+  "fr": [
+    "Qu’est-ce qui caractérise un pèlerinage ?",
+    "Un voyage vers un lieu important pour la religion",
+    "Tout déplacement pour faire des achats",
+    "Uniquement une conquête militaire",
+    "Seulement un transport de céréales",
+    "Pense à la raison du voyage.",
+    "Le lieu a une importance particulière pour la foi des voyageurs."
+  ],
+  "it": [
+    "Cosa caratterizza un pellegrinaggio?",
+    "Un viaggio verso un luogo di importanza religiosa",
+    "Ogni viaggio per fare acquisti",
+    "Solo una conquista militare",
+    "Solo un trasporto di cereali",
+    "Pensa al motivo del viaggio.",
+    "La meta ha un significato speciale per la fede dei viaggiatori."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-26",
+  "reason": "Replace scholastic philosophy with medieval knowledge transmission.",
+  "de": [
+    "Wie wurden viele Bücher vor dem Buchdruck vervielfältigt?",
+    "Von Hand abgeschrieben",
+    "Mit Fotokopierern kopiert",
+    "Als Computerdateien verschickt",
+    "Mit digitalen Druckern gedruckt",
+    "Vergleiche die verfügbaren Werkzeuge verschiedener Zeiten.",
+    "Das Herstellen eines weiteren Exemplars brauchte viel Schreibarbeit."
+  ],
+  "en": [
+    "How were many books copied before printing?",
+    "Copied out by hand",
+    "Copied on photocopiers",
+    "Sent as computer files",
+    "Printed on digital printers",
+    "Compare tools available in different periods.",
+    "Making another copy required much writing work."
+  ],
+  "fr": [
+    "Comment reproduisait-on de nombreux livres avant l’imprimerie ?",
+    "En les recopiant à la main",
+    "Avec des photocopieuses",
+    "En envoyant des fichiers informatiques",
+    "Avec des imprimantes numériques",
+    "Compare les outils de différentes époques.",
+    "Un nouvel exemplaire demandait beaucoup de travail d’écriture."
+  ],
+  "it": [
+    "Come si copiavano molti libri prima della stampa?",
+    "Ricopiandoli a mano",
+    "Con fotocopiatrici",
+    "Inviandoli come file informatici",
+    "Con stampanti digitali",
+    "Confronta gli strumenti di epoche diverse.",
+    "Una nuova copia richiedeva molto lavoro di scrittura."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-28",
+  "reason": "Retain accessible Constantinople geography.",
+  "de": [
+    "Wie heisst das frühere Konstantinopel heute?",
+    "Istanbul",
+    "Rom",
+    "Paris",
+    "Bern",
+    "Suche am Bosporus.",
+    "Die Stadt liegt in der heutigen Türkei."
+  ],
+  "en": [
+    "What is former Constantinople called today?",
+    "Istanbul",
+    "Rome",
+    "Paris",
+    "Bern",
+    "Look at the Bosporus.",
+    "The city is in present-day Türkiye."
+  ],
+  "fr": [
+    "Comment s’appelle aujourd’hui l’ancienne Constantinople ?",
+    "Istanbul",
+    "Rome",
+    "Paris",
+    "Berne",
+    "Cherche sur le Bosphore.",
+    "La ville se trouve dans la Turquie actuelle."
+  ],
+  "it": [
+    "Come si chiama oggi l’antica Costantinopoli?",
+    "Istanbul",
+    "Roma",
+    "Parigi",
+    "Berna",
+    "Cerca sul Bosforo.",
+    "La città si trova nell’attuale Turchia."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-32",
+  "reason": "Distinguish a historical alliance document from later national symbolism.",
+  "de": [
+    "Was war der Bundesbrief von 1291 ursprünglich?",
+    "Ein schriftlicher Bündnisvertrag",
+    "Die heutige Bundesverfassung",
+    "Ein Wahlzettel für den heutigen Bundesrat",
+    "Ein Reiseprospekt für Touristen",
+    "Unterscheide damalige Vereinbarung und spätere Bedeutung.",
+    "Der Text regelte Zusammenarbeit zwischen beteiligten Orten."
+  ],
+  "en": [
+    "What was the Federal Charter of 1291 originally?",
+    "A written alliance agreement",
+    "Today’s Federal Constitution",
+    "A ballot for today’s Federal Council",
+    "A tourism brochure",
+    "Distinguish the original agreement from later meaning.",
+    "The text set out cooperation between the participating communities."
+  ],
+  "fr": [
+    "Qu’était à l’origine le Pacte fédéral de 1291 ?",
+    "Un accord d’alliance écrit",
+    "La Constitution fédérale actuelle",
+    "Un bulletin pour le Conseil fédéral actuel",
+    "Une brochure touristique",
+    "Distingue l’accord initial de sa signification ultérieure.",
+    "Le texte organisait la coopération des communautés concernées."
+  ],
+  "it": [
+    "Cos’era in origine il Patto federale del 1291?",
+    "Un accordo scritto di alleanza",
+    "L’attuale Costituzione federale",
+    "Una scheda per l’attuale Consiglio federale",
+    "Un opuscolo turistico",
+    "Distingui l’accordo originale dal significato successivo.",
+    "Il testo regolava la collaborazione tra le comunità coinvolte."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-34",
+  "reason": "Replace French maxim with differing social obligations. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Was war im Mittelalter für viele Bauern eine Belastung?",
+    "Abgaben und Dienste für Grundherren",
+    "Eine vollständige Befreiung von allen Abgaben",
+    "Ein Anspruch auf die gesamte Ernte der Grundherren",
+    "Eine freie Wahl aller Pflichten ohne Zustimmung der Grundherren",
+    "Denke an Besitz und Arbeit auf dem Land.",
+    "Nicht die gesamte Ernte blieb bei den Bauernfamilien."
+  ],
+  "en": [
+    "What burden affected many medieval peasants?",
+    "Dues and services owed to landlords",
+    "Complete exemption from all dues",
+    "A right to the landlords’ entire harvest",
+    "A free choice of all obligations without landlords’ agreement",
+    "Think of land ownership and work.",
+    "Peasant families did not keep their entire harvest."
+  ],
+  "fr": [
+    "Quelle charge pesait sur de nombreux paysans médiévaux ?",
+    "Des redevances et des services dus aux seigneurs",
+    "Une exemption complète de toutes les redevances",
+    "Un droit à toute la récolte des seigneurs",
+    "Un libre choix de toutes les obligations sans accord seigneurial",
+    "Pense à la propriété des terres et au travail.",
+    "Les familles paysannes ne gardaient pas toute leur récolte."
+  ],
+  "it": [
+    "Quale peso gravava su molti contadini medievali?",
+    "Tributi e servizi dovuti ai signori",
+    "Esenzione completa da tutti i tributi",
+    "Diritto all’intero raccolto dei signori",
+    "Libera scelta di ogni obbligo senza accordo dei signori",
+    "Pensa alla proprietà della terra e al lavoro.",
+    "Le famiglie contadine non tenevano tutto il raccolto."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-36",
+  "reason": "Replace repeated printing template with a craft-guild objective. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Welche Menschen schlossen sich in vielen mittelalterlichen Städten zu Zünften zusammen?",
+    "Handwerker eines Berufs",
+    "Geistliche eines Klosters",
+    "Bauern eines einzelnen Hofs",
+    "Ritter eines Heeres",
+    "Denke an Bäcker, Schmiede oder Weber.",
+    "Gemeinsame Berufsregeln und Ausbildung waren wichtig."
+  ],
+  "en": [
+    "Who formed guilds in many medieval towns?",
+    "Craftspeople of a trade",
+    "Clergy of a monastery",
+    "Peasants on a single farm",
+    "Knights in an army",
+    "Think of bakers, smiths or weavers.",
+    "Shared trade rules and training mattered."
+  ],
+  "fr": [
+    "Qui formait des corporations dans de nombreuses villes médiévales ?",
+    "Les artisans d’un métier",
+    "Les religieux d’un monastère",
+    "Les paysans d’une seule ferme",
+    "Les chevaliers d’une armée",
+    "Pense aux boulangers, forgerons ou tisserands.",
+    "Les règles professionnelles et la formation comptaient."
+  ],
+  "it": [
+    "Chi formava corporazioni in molte città medievali?",
+    "Gli artigiani di un mestiere",
+    "I religiosi di un monastero",
+    "I contadini di una sola fattoria",
+    "I cavalieri di un esercito",
+    "Pensa a fornai, fabbri o tessitori.",
+    "Contavano regole professionali e formazione comuni."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-38",
+  "reason": "Replace excommunication terminology with historical church influence without religious endorsement. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Welche Aussage über die Kirche im europäischen Mittelalter ist sachlich?",
+    "Sie beeinflusste in vielen Regionen auch Bildung und Politik",
+    "Sie hatte ausschliesslich Einfluss auf die Kleidung",
+    "Ihre Einrichtungen hatten nie wirtschaftliche Aufgaben",
+    "Sie war von jeder politischen Entscheidung vollständig getrennt",
+    "Betrachte mehrere Lebensbereiche.",
+    "Religiöse Einrichtungen waren nicht nur Orte für Gottesdienste."
+  ],
+  "en": [
+    "Which statement about the church in medieval Europe is factual?",
+    "In many regions it also influenced education and politics",
+    "It influenced only clothing",
+    "Its institutions never had economic roles",
+    "It was entirely separate from every political decision",
+    "Consider several areas of life.",
+    "Religious institutions were not only places of worship."
+  ],
+  "fr": [
+    "Quelle affirmation sur l’Église dans l’Europe médiévale est factuelle ?",
+    "Dans beaucoup de régions, elle influençait aussi l’éducation et la politique",
+    "Elle influençait uniquement les vêtements",
+    "Ses institutions n’avaient jamais de rôle économique",
+    "Elle était entièrement séparée de toute décision politique",
+    "Considère plusieurs domaines de la vie.",
+    "Les institutions religieuses n’étaient pas seulement des lieux de culte."
+  ],
+  "it": [
+    "Quale affermazione sulla Chiesa nell’Europa medievale è oggettiva?",
+    "In molte regioni influenzava anche istruzione e politica",
+    "Influenzava soltanto l’abbigliamento",
+    "Le istituzioni non avevano mai ruoli economici",
+    "Era completamente separata da ogni decisione politica",
+    "Considera diversi ambiti della vita.",
+    "Le istituzioni religiose non erano solo luoghi di culto."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-40",
+  "reason": "Replace chanson terminology with distinction between epic and documentary evidence. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Was musst du bei einer mittelalterlichen Heldenerzählung beachten?",
+    "Sie kann erfundene oder ausgeschmückte Teile enthalten",
+    "Jeder Satz ist automatisch ein überprüfter Tatsachenbericht",
+    "Alle geschilderten Taten gelten ohne Vergleich als bewiesen",
+    "Die Sicht der erzählenden Person spielt keine Rolle",
+    "Denke an den Zweck einer spannenden Geschichte.",
+    "Vergleiche sie mit anderen Quellen."
+  ],
+  "en": [
+    "What should you remember about a medieval heroic tale?",
+    "It may contain invented or embellished parts",
+    "Every sentence is automatically verified fact",
+    "Every described deed is proven without comparison",
+    "The narrator’s perspective does not matter",
+    "Think about the purpose of an exciting story.",
+    "Compare it with other sources."
+  ],
+  "fr": [
+    "Que faut-il retenir d’un récit héroïque médiéval ?",
+    "Il peut contenir des passages inventés ou embellis",
+    "Chaque phrase est automatiquement un fait vérifié",
+    "Chaque action racontée est prouvée sans comparaison",
+    "Le point de vue du narrateur ne compte pas",
+    "Pense au but d’une histoire captivante.",
+    "Compare-la à d’autres sources."
+  ],
+  "it": [
+    "Cosa va ricordato su un racconto eroico medievale?",
+    "Può contenere parti inventate o abbellite",
+    "Ogni frase è automaticamente un fatto verificato",
+    "Ogni azione raccontata è provata senza confronto",
+    "Il punto di vista del narratore non conta",
+    "Pensa allo scopo di una storia avvincente.",
+    "Confrontala con altre fonti."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-42",
+  "reason": "Replace remote battle significance with castle defence observation. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Wozu dienten starke Mauern bei einer Burg?",
+    "Den Zugang erschweren und Schutz bieten",
+    "Den Handel automatisch von allen Zöllen befreien",
+    "Die Ernte auf umliegenden Feldern ohne Arbeit vergrössern",
+    "Jeden Bewohner vor sämtlichen Krankheiten schützen",
+    "Betrachte Tore, Mauern und die Lage der Burg.",
+    "Denke an den Schutz vor Angriffen."
+  ],
+  "en": [
+    "What were strong castle walls for?",
+    "Making entry harder and providing protection",
+    "Automatically exempt trade from every toll",
+    "Increase harvests in surrounding fields without work",
+    "Protect every resident from every disease",
+    "Look at gates, walls and the castle’s position.",
+    "Think about protection from attack."
+  ],
+  "fr": [
+    "À quoi servaient les murs solides d’un château ?",
+    "À rendre l’accès difficile et offrir une protection",
+    "Exempter automatiquement le commerce de tous les péages",
+    "Augmenter les récoltes alentour sans travail",
+    "Protéger tous les habitants de toute maladie",
+    "Observe portes, murs et emplacement.",
+    "Pense à la protection contre les attaques."
+  ],
+  "it": [
+    "A cosa servivano le mura robuste di un castello?",
+    "A rendere difficile l’accesso e offrire protezione",
+    "Esentare automaticamente il commercio da ogni pedaggio",
+    "Aumentare i raccolti attorno senza lavoro",
+    "Proteggere tutti gli abitanti da ogni malattia",
+    "Osserva porte, mura e posizione.",
+    "Pensa alla protezione dagli attacchi."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-44",
+  "reason": "Replace Domesday title/date recall with historical records as sources. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Was kann ein altes Verzeichnis über Landbesitz zeigen?",
+    "Wer laut dem Verzeichnis welche Flächen besass",
+    "Wie alle Bauern über die Besitzverteilung dachten",
+    "Ob jede aufgeführte Person mit den Abgaben einverstanden war",
+    "Wie sich jeder einzelne Landbesitz in den nächsten Jahrhunderten änderte",
+    "Achte darauf, was tatsächlich erfasst wurde.",
+    "Eine Quelle beantwortet nicht jede historische Frage."
+  ],
+  "en": [
+    "What can an old land-ownership register show?",
+    "Who owned which land according to the register",
+    "What all peasants thought about the distribution of land",
+    "Whether every listed person agreed with the dues",
+    "How every holding changed over the following centuries",
+    "Notice what was actually recorded.",
+    "One source cannot answer every historical question."
+  ],
+  "fr": [
+    "Que peut montrer un ancien registre foncier ?",
+    "Qui possédait quelles terres selon le registre",
+    "Ce que tous les paysans pensaient du partage des terres",
+    "Si chaque personne approuvait les redevances",
+    "Comment chaque propriété changea durant les siècles suivants",
+    "Observe ce qui a réellement été inscrit.",
+    "Une source ne répond pas à toutes les questions historiques."
+  ],
+  "it": [
+    "Cosa può mostrare un antico registro fondiario?",
+    "Chi possedeva quali terre secondo il registro",
+    "Cosa pensavano tutti i contadini della distribuzione delle terre",
+    "Se ogni persona approvava i tributi",
+    "Come cambiò ogni proprietà nei secoli successivi",
+    "Nota cosa fu davvero registrato.",
+    "Una fonte non risponde a ogni domanda storica."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-46",
+  "reason": "Replace interregnum dates with plurality of medieval political authority. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Warum zeigt eine mittelalterliche Europakarte oft viele Herrschaftsgebiete?",
+    "Macht war auf verschiedene Herrscher und Städte verteilt",
+    "Die Karte zeigt genau die Grenzen der heutigen EU-Staaten",
+    "Jede Stadt regierte damals über ganz Europa",
+    "Alle eingezeichneten Gebiete gehörten zu einer einzigen Gemeinde",
+    "Heutige Staatsgrenzen erklären die Vergangenheit nicht vollständig.",
+    "Vergleiche die vielen Namen und Flächen der Karte."
+  ],
+  "en": [
+    "Why do maps of medieval Europe often show many territories?",
+    "Power was divided among different rulers and towns",
+    "The map shows exactly today’s EU state borders",
+    "Every town ruled all Europe then",
+    "Every marked territory belonged to one municipality",
+    "Today’s state borders do not fully explain the past.",
+    "Compare the many names and areas on the map."
+  ],
+  "fr": [
+    "Pourquoi les cartes médiévales d’Europe montrent-elles souvent de nombreux territoires ?",
+    "Le pouvoir était partagé entre différents seigneurs et villes",
+    "La carte montre exactement les frontières actuelles de l’UE",
+    "Chaque ville régnait alors sur toute l’Europe",
+    "Tous les territoires relevaient d’une seule commune",
+    "Les frontières actuelles n’expliquent pas tout le passé.",
+    "Compare les nombreux noms et espaces de la carte."
+  ],
+  "it": [
+    "Perché le carte dell’Europa medievale mostrano spesso molti territori?",
+    "Il potere era diviso tra diversi signori e città",
+    "La carta mostra esattamente i confini attuali dell’UE",
+    "Ogni città governava allora tutta l’Europa",
+    "Tutti i territori appartenevano a un solo comune",
+    "I confini attuali non spiegano tutto il passato.",
+    "Confronta i molti nomi e territori sulla carta."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-48",
+  "reason": "Replace scholastic realism with object-source inference. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Was lässt sich aus einem gefundenen mittelalterlichen Werkzeug untersuchen?",
+    "Material und mögliche Verwendung",
+    "Die genaue Absicht des Besitzers bei jeder Benutzung",
+    "Die vollständige Arbeitszeit aller Menschen im Dorf",
+    "Die persönlichen Ansichten des Herstellers ohne weitere Quellen",
+    "Beginne mit beobachtbaren Eigenschaften.",
+    "Form und Gebrauchsspuren können Hinweise geben."
+  ],
+  "en": [
+    "What can a discovered medieval tool help us investigate?",
+    "Its material and possible use",
+    "The owner’s exact intention on every use",
+    "The complete working hours of everyone in the village",
+    "The maker’s personal views without further sources",
+    "Start with observable features.",
+    "Shape and wear can provide clues."
+  ],
+  "fr": [
+    "Que peut-on étudier à partir d’un outil médiéval retrouvé ?",
+    "Son matériau et son usage possible",
+    "L’intention exacte du propriétaire à chaque utilisation",
+    "Les horaires complets de tous les villageois",
+    "Les opinions personnelles du fabricant sans autres sources",
+    "Commence par les caractères observables.",
+    "La forme et les traces d’usure peuvent donner des indices."
+  ],
+  "it": [
+    "Cosa si può studiare da un utensile medievale ritrovato?",
+    "Materiale e possibile utilizzo",
+    "L’intenzione esatta del proprietario a ogni uso",
+    "Gli orari completi di tutti gli abitanti",
+    "Le opinioni personali del fabbricante senza altre fonti",
+    "Inizia dalle caratteristiche osservabili.",
+    "Forma e usura possono dare indizi."
+  ]
+},
+{
+  "key": "5/science/mittelalter-5/ma5-50",
+  "reason": "Replace Latin motto recall with varied monastery activities. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Welche Tätigkeiten gehörten in vielen Klöstern zum Alltag?",
+    "Beten, arbeiten und lernen",
+    "Ausschliesslich Turniere und Waffenübungen",
+    "Ausschliesslich Fernhandel ohne religiöse Aufgaben",
+    "Ausschliesslich Rechtsprechung für alle Städte Europas",
+    "Ein Kloster hatte mehrere Aufgaben.",
+    "Denke auch an Gärten, Bücher und Unterricht."
+  ],
+  "en": [
+    "Which activities were part of daily life in many monasteries?",
+    "Praying, working and learning",
+    "Only tournaments and weapons practice",
+    "Only long-distance trade with no religious duties",
+    "Only administering justice for every European town",
+    "A monastery had several roles.",
+    "Think also of gardens, books and teaching."
+  ],
+  "fr": [
+    "Quelles activités faisaient partie du quotidien de nombreux monastères ?",
+    "Prier, travailler et apprendre",
+    "Uniquement tournois et exercices militaires",
+    "Uniquement commerce lointain sans rôle religieux",
+    "Uniquement justice pour toutes les villes européennes",
+    "Un monastère avait plusieurs rôles.",
+    "Pense aussi aux jardins, aux livres et à l’enseignement."
+  ],
+  "it": [
+    "Quali attività facevano parte della vita quotidiana di molti monasteri?",
+    "Pregare, lavorare e imparare",
+    "Solo tornei ed esercizi militari",
+    "Solo commercio lontano senza ruoli religiosi",
+    "Solo giustizia per tutte le città europee",
+    "Un monastero aveva diversi ruoli.",
+    "Pensa anche a giardini, libri e insegnamento."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-4",
+  "reason": "Retain sea-route attribution with other navigators as meaningful distractors.",
+  "de": [
+    "Wer erreichte 1498 Indien auf dem Seeweg um das Kap der Guten Hoffnung?",
+    "Vasco da Gama",
+    "Christoph Kolumbus",
+    "James Cook",
+    "Ferdinand Magellan",
+    "Vergleiche die Ziele der bekannten Seereisen.",
+    "Gesucht ist die portugiesische Fahrt nach Indien, nicht eine Atlantiküberquerung nach Amerika."
+  ],
+  "en": [
+    "Who reached India by sea around the Cape of Good Hope in 1498?",
+    "Vasco da Gama",
+    "Christopher Columbus",
+    "James Cook",
+    "Ferdinand Magellan",
+    "Compare the destinations of these voyages.",
+    "Look for the Portuguese voyage to India, not an Atlantic crossing to America."
+  ],
+  "fr": [
+    "Qui atteignit l’Inde par mer en contournant le cap de Bonne-Espérance en 1498 ?",
+    "Vasco de Gama",
+    "Christophe Colomb",
+    "James Cook",
+    "Fernand de Magellan",
+    "Compare les destinations des voyages.",
+    "Cherche le voyage portugais vers l’Inde, pas une traversée vers l’Amérique."
+  ],
+  "it": [
+    "Chi raggiunse l’India via mare passando dal Capo di Buona Speranza nel 1498?",
+    "Vasco da Gama",
+    "Cristoforo Colombo",
+    "James Cook",
+    "Ferdinando Magellano",
+    "Confronta le mete dei viaggi.",
+    "Cerca il viaggio portoghese verso l’India, non una traversata verso l’America."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-8",
+  "reason": "Distinguish colonial claims from legitimate ownership or local consent.",
+  "de": [
+    "Was vereinbarten Spanien und Portugal im Vertrag von Tordesillas?",
+    "Eine Aufteilung ihrer überseeischen Herrschaftsansprüche",
+    "Die Unabhängigkeit aller Kolonien",
+    "Ein Verbot aller Fahrten über den Atlantik",
+    "Die Gründung eines gemeinsamen europäischen Staates",
+    "Unterscheide einen Anspruch von der Zustimmung der dort lebenden Menschen.",
+    "Der Vertrag betraf die Konkurrenz zweier Seemächte ausserhalb Europas."
+  ],
+  "en": [
+    "What did Spain and Portugal agree in the Treaty of Tordesillas?",
+    "A division of their overseas claims to rule",
+    "Independence for all colonies",
+    "A ban on every Atlantic voyage",
+    "The creation of one shared European state",
+    "Distinguish a claim from the consent of people living there.",
+    "The treaty concerned rivalry between two sea powers beyond Europe."
+  ],
+  "fr": [
+    "Que décidèrent l’Espagne et le Portugal à Tordesillas ?",
+    "Un partage de leurs prétentions territoriales outre-mer",
+    "L’indépendance de toutes les colonies",
+    "L’interdiction de toute traversée de l’Atlantique",
+    "La création d’un seul État européen commun",
+    "Distingue une prétention de l’accord des populations locales.",
+    "Le traité concernait la rivalité de deux puissances maritimes hors d’Europe."
+  ],
+  "it": [
+    "Cosa concordarono Spagna e Portogallo a Tordesillas?",
+    "Una divisione delle loro rivendicazioni di dominio oltremare",
+    "L’indipendenza di tutte le colonie",
+    "Il divieto di ogni viaggio atlantico",
+    "La creazione di un unico Stato europeo comune",
+    "Distingui una rivendicazione dal consenso delle popolazioni locali.",
+    "Il trattato riguardava la rivalità di due potenze marittime fuori dall’Europa."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-10",
+  "reason": "Include Indigenous allies rather than attribute conquest to one man alone.",
+  "de": [
+    "Welche Rolle spielte Hernán Cortés bei der Eroberung des Aztekenreichs?",
+    "Er führte spanische Truppen, die mit indigenen Verbündeten kämpften",
+    "Er regierte als letzter aztekischer Herrscher",
+    "Er leitete die erste portugiesische Fahrt nach Indien",
+    "Er führte die Unabhängigkeitsbewegung Mexikos im 19. Jahrhundert",
+    "Achte auf Zeit, Ort und beteiligte Gruppen.",
+    "Die Eroberung war nicht das Werk eines einzelnen Menschen."
+  ],
+  "en": [
+    "What was Hernán Cortés’s role in the conquest of the Aztec Empire?",
+    "He led Spanish forces fighting alongside Indigenous allies",
+    "He ruled as the last Aztec ruler",
+    "He led the first Portuguese voyage to India",
+    "He led Mexico’s nineteenth-century independence movement",
+    "Consider the time, place and groups involved.",
+    "The conquest was not the work of one person alone."
+  ],
+  "fr": [
+    "Quel rôle joua Hernán Cortés dans la conquête de l’Empire aztèque ?",
+    "Il dirigeait des forces espagnoles avec des alliés autochtones",
+    "Il était le dernier souverain aztèque",
+    "Il dirigeait le premier voyage portugais vers l’Inde",
+    "Il dirigeait l’indépendance mexicaine au XIXe siècle",
+    "Considère la date, le lieu et les groupes concernés.",
+    "La conquête ne fut pas l’œuvre d’une personne seule."
+  ],
+  "it": [
+    "Quale ruolo ebbe Hernán Cortés nella conquista dell’Impero azteco?",
+    "Guidava forze spagnole insieme ad alleati indigeni",
+    "Era l’ultimo sovrano azteco",
+    "Guidava il primo viaggio portoghese verso l’India",
+    "Guidava l’indipendenza messicana nell’Ottocento",
+    "Considera epoca, luogo e gruppi coinvolti.",
+    "La conquista non fu opera di una sola persona."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-12",
+  "reason": "Use comparable historical capitals and remove mistranslated sea hints.",
+  "de": [
+    "Zu welchem Reich gehörte die Hauptstadt Tenochtitlan?",
+    "Zum Aztekenreich",
+    "Zum Inkareich",
+    "Zum Römischen Reich",
+    "Zum Osmanischen Reich",
+    "Suche im Gebiet des heutigen Mexiko.",
+    "Vergleiche die Lage der Reiche auf einer historischen Karte."
+  ],
+  "en": [
+    "Which empire had Tenochtitlan as its capital?",
+    "The Aztec Empire",
+    "The Inca Empire",
+    "The Roman Empire",
+    "The Ottoman Empire",
+    "Look in the region of present-day Mexico.",
+    "Compare the empires’ locations on a historical map."
+  ],
+  "fr": [
+    "De quel empire Tenochtitlan était-elle la capitale ?",
+    "L’Empire aztèque",
+    "L’Empire inca",
+    "L’Empire romain",
+    "L’Empire ottoman",
+    "Cherche dans la région du Mexique actuel.",
+    "Compare la position des empires sur une carte historique."
+  ],
+  "it": [
+    "Di quale impero era capitale Tenochtitlan?",
+    "Dell’Impero azteco",
+    "Dell’Impero inca",
+    "Dell’Impero romano",
+    "Dell’Impero ottomano",
+    "Cerca nella regione dell’attuale Messico.",
+    "Confronta la posizione degli imperi su una carta storica."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-16",
+  "reason": "Preserve reached-coast wording in all locales instead of discovery of inhabited territory.",
+  "de": [
+    "Welcher portugiesische Seefahrer erreichte 1500 die Küste Brasiliens?",
+    "Pedro Álvares Cabral",
+    "Vasco da Gama",
+    "Bartolomeu Dias",
+    "Ferdinand Magellan",
+    "Vergleiche die Routen der portugiesischen Seefahrer.",
+    "Gesucht ist die Fahrt nach Südamerika, nicht die Ankunft in Indien 1498."
+  ],
+  "en": [
+    "Which Portuguese navigator reached Brazil’s coast in 1500?",
+    "Pedro Álvares Cabral",
+    "Vasco da Gama",
+    "Bartolomeu Dias",
+    "Ferdinand Magellan",
+    "Compare the Portuguese navigators’ routes.",
+    "Look for the voyage to South America, not the arrival in India in 1498."
+  ],
+  "fr": [
+    "Quel navigateur portugais atteignit la côte du Brésil en 1500 ?",
+    "Pedro Álvares Cabral",
+    "Vasco de Gama",
+    "Bartolomeu Dias",
+    "Fernand de Magellan",
+    "Compare les routes des navigateurs portugais.",
+    "Cherche le voyage vers l’Amérique du Sud, pas l’arrivée en Inde en 1498."
+  ],
+  "it": [
+    "Quale navigatore portoghese raggiunse la costa del Brasile nel 1500?",
+    "Pedro Álvares Cabral",
+    "Vasco da Gama",
+    "Bartolomeu Dias",
+    "Ferdinando Magellano",
+    "Confronta le rotte dei navigatori portoghesi.",
+    "Cerca il viaggio verso il Sudamerica, non l’arrivo in India nel 1498."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-22",
+  "reason": "Explain colonial coercion without advanced administrative terminology.",
+  "de": [
+    "Was bedeutet Zwangsarbeit im Zusammenhang mit der Kolonialherrschaft?",
+    "Menschen mussten gegen ihren Willen arbeiten",
+    "Menschen wählten eine Arbeit frei aus",
+    "Menschen halfen freiwillig bei einem Fest",
+    "Menschen entschieden selbst über ihre Freizeit",
+    "Achte auf die Entscheidungsfreiheit der betroffenen Menschen.",
+    "Arbeit unter Drohung unterscheidet sich von freiwilliger Hilfe."
+  ],
+  "en": [
+    "What does forced labour mean in colonial history?",
+    "People had to work against their will",
+    "People freely chose a job",
+    "People volunteered at a festival",
+    "People decided how to spend their leisure time",
+    "Consider the affected people’s freedom to choose.",
+    "Work under threat differs from voluntary help."
+  ],
+  "fr": [
+    "Que signifie le travail forcé dans l’histoire coloniale ?",
+    "Des personnes devaient travailler contre leur volonté",
+    "Des personnes choisissaient librement un emploi",
+    "Des personnes aidaient bénévolement à une fête",
+    "Des personnes décidaient de leurs loisirs",
+    "Considère la liberté de choix des personnes concernées.",
+    "Travailler sous la menace diffère d’une aide volontaire."
+  ],
+  "it": [
+    "Cosa significa lavoro forzato nella storia coloniale?",
+    "Le persone dovevano lavorare contro la propria volontà",
+    "Le persone sceglievano liberamente un impiego",
+    "Le persone aiutavano volontariamente a una festa",
+    "Le persone decidevano del proprio tempo libero",
+    "Considera la libertà di scelta delle persone coinvolte.",
+    "Lavorare sotto minaccia è diverso dall’aiuto volontario."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-24",
+  "reason": "Replace mercantilism abstraction with colonial trade interests.",
+  "de": [
+    "Warum interessierten sich europäische Kolonialmächte für Rohstoffe aus anderen Gebieten?",
+    "Sie wollten damit handeln und Waren herstellen",
+    "Sie wollten damit nur ihre Landkarten zeichnen",
+    "Sie wollten damit die Schifffahrt abschaffen",
+    "Sie wollten damit alle Handelsplätze schliessen",
+    "Denke an den wirtschaftlichen Wert von Baumwolle oder Metallen.",
+    "Frage, wer über die Rohstoffe verfügte und vom Handel profitierte."
+  ],
+  "en": [
+    "Why did European colonial powers seek raw materials from other regions?",
+    "They wanted to trade them and manufacture goods",
+    "They wanted only to draw maps with them",
+    "They wanted to abolish shipping",
+    "They wanted to close all trading posts",
+    "Think of the economic value of cotton or metals.",
+    "Ask who controlled the materials and benefited from trade."
+  ],
+  "fr": [
+    "Pourquoi les puissances coloniales européennes recherchaient-elles des matières premières ailleurs ?",
+    "Pour les vendre et fabriquer des produits",
+    "Uniquement pour dessiner leurs cartes",
+    "Pour supprimer la navigation",
+    "Pour fermer tous les comptoirs",
+    "Pense à la valeur économique du coton ou des métaux.",
+    "Demande qui contrôlait ces ressources et profitait du commerce."
+  ],
+  "it": [
+    "Perché le potenze coloniali europee cercavano materie prime altrove?",
+    "Per commerciarle e fabbricare prodotti",
+    "Solo per disegnare carte geografiche",
+    "Per abolire la navigazione",
+    "Per chiudere tutti gli empori",
+    "Pensa al valore economico di cotone o metalli.",
+    "Chiediti chi controllava le risorse e traeva vantaggio dal commercio."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-26",
+  "reason": "Specify period and activity instead of framing inhabited lands as first discoveries.",
+  "de": [
+    "Welche beiden Länder organisierten um 1500 besonders viele europäische Überseefahrten?",
+    "Portugal und Spanien",
+    "Schweiz und Österreich",
+    "Polen und Ungarn",
+    "Dänemark und Schweden",
+    "Vergleiche die Ausgangshäfen der Fahrten nach Amerika und um Afrika.",
+    "Suche zwei Länder auf der Iberischen Halbinsel."
+  ],
+  "en": [
+    "Which two countries organised many European overseas voyages around 1500?",
+    "Portugal and Spain",
+    "Switzerland and Austria",
+    "Poland and Hungary",
+    "Denmark and Sweden",
+    "Compare the departure ports for voyages to America and around Africa.",
+    "Look for two countries on the Iberian Peninsula."
+  ],
+  "fr": [
+    "Quels pays organisèrent de nombreux voyages européens outre-mer vers 1500 ?",
+    "Le Portugal et l’Espagne",
+    "La Suisse et l’Autriche",
+    "La Pologne et la Hongrie",
+    "Le Danemark et la Suède",
+    "Compare les ports de départ vers l’Amérique et autour de l’Afrique.",
+    "Cherche deux pays de la péninsule Ibérique."
+  ],
+  "it": [
+    "Quali paesi organizzarono molti viaggi europei oltremare verso il 1500?",
+    "Portogallo e Spagna",
+    "Svizzera e Austria",
+    "Polonia e Ungheria",
+    "Danimarca e Svezia",
+    "Confronta i porti di partenza verso l’America e attorno all’Africa.",
+    "Cerca due paesi della penisola iberica."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-28",
+  "reason": "Describe missionary activity historically without endorsing or denigrating faith.",
+  "de": [
+    "Welches Ziel hatten christliche Missionare in Kolonialgebieten?",
+    "Menschen für das Christentum gewinnen",
+    "Ausschliesslich Seekarten vermessen",
+    "Ausschliesslich Gewürzpreise festlegen",
+    "Ausschliesslich Schiffe reparieren",
+    "Denke an die religiöse Aufgabe der Mission.",
+    "Unterscheide Glaubensverbreitung von Handel und Navigation."
+  ],
+  "en": [
+    "What was the aim of Christian missionaries in colonial territories?",
+    "To convert people to Christianity",
+    "Only to survey nautical charts",
+    "Only to set spice prices",
+    "Only to repair ships",
+    "Think of the religious purpose of a mission.",
+    "Distinguish spreading a faith from trade and navigation."
+  ],
+  "fr": [
+    "Quel était le but des missionnaires chrétiens dans les colonies ?",
+    "Convertir des personnes au christianisme",
+    "Uniquement mesurer des cartes marines",
+    "Uniquement fixer le prix des épices",
+    "Uniquement réparer des navires",
+    "Pense au rôle religieux d’une mission.",
+    "Distingue diffusion d’une religion, commerce et navigation."
+  ],
+  "it": [
+    "Qual era lo scopo dei missionari cristiani nelle colonie?",
+    "Convertire persone al cristianesimo",
+    "Solo misurare carte nautiche",
+    "Solo fissare i prezzi delle spezie",
+    "Solo riparare navi",
+    "Pensa al ruolo religioso di una missione.",
+    "Distingui diffusione religiosa, commercio e navigazione."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-30",
+  "reason": "Teach multi-causal history without racial superiority implications.",
+  "de": [
+    "Welche Erklärung für die Eroberung des Aztekenreichs berücksichtigt mehrere Ursachen?",
+    "Kriege, Bündnisse und eingeschleppte Krankheiten wirkten zusammen",
+    "Nur die Zahl der spanischen Schiffe entschied",
+    "Nur die Sprache der Eroberer entschied",
+    "Nur das Wetter an einem einzigen Tag entschied",
+    "Ein grosses historisches Ereignis hat oft mehrere Ursachen.",
+    "Berücksichtige die beteiligten Gruppen und die Lebensbedingungen."
+  ],
+  "en": [
+    "Which explanation of the Aztec Empire’s conquest considers several causes?",
+    "Warfare, alliances and introduced diseases acted together",
+    "Only the number of Spanish ships mattered",
+    "Only the conquerors’ language mattered",
+    "Only the weather on one day mattered",
+    "Major historical events often have several causes.",
+    "Consider the groups involved and their living conditions."
+  ],
+  "fr": [
+    "Quelle explication de la conquête de l’Empire aztèque tient compte de plusieurs causes ?",
+    "Les guerres, les alliances et les maladies introduites se combinaient",
+    "Seul le nombre de navires espagnols comptait",
+    "Seule la langue des conquérants comptait",
+    "Seule la météo d’un jour comptait",
+    "Un grand événement historique a souvent plusieurs causes.",
+    "Considère les groupes concernés et leurs conditions de vie."
+  ],
+  "it": [
+    "Quale spiegazione della conquista azteca considera più cause?",
+    "Guerre, alleanze e malattie introdotte agirono insieme",
+    "Contava solo il numero di navi spagnole",
+    "Contava solo la lingua dei conquistatori",
+    "Contava solo il tempo di un giorno",
+    "Un grande evento storico ha spesso più cause.",
+    "Considera i gruppi coinvolti e le condizioni di vita."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-34",
+  "reason": "Clarify whose perspective the New World label expressed. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Warum ist die europäische Bezeichnung «Neue Welt» für Amerika erklärungsbedürftig?",
+    "Dort lebten bereits lange vor der europäischen Ankunft Menschen",
+    "Es war für alle dort lebenden Menschen ebenfalls ein unbekanntes Land",
+    "Die Bezeichnung beweist, dass vorher niemand den Kontinent kannte",
+    "Die Bezeichnung gibt automatisch die Sicht aller Bevölkerungen wieder",
+    "Frage, für wen etwas neu war.",
+    "Die Geschichte eines Ortes beginnt nicht erst mit ausländischen Besuchern."
+  ],
+  "en": [
+    "Why does the European label ‘New World’ for America need explanation?",
+    "People lived there long before Europeans arrived",
+    "It was also unknown land to everyone living there",
+    "The name proves nobody previously knew the continent",
+    "The name automatically represents every population’s perspective",
+    "Ask for whom it was new.",
+    "A place’s history does not begin with foreign visitors."
+  ],
+  "fr": [
+    "Pourquoi faut-il expliquer le nom européen « Nouveau Monde » donné à l’Amérique ?",
+    "Des personnes y vivaient bien avant l’arrivée des Européens",
+    "C’était aussi une terre inconnue pour tous ses habitants",
+    "Le nom prouve que personne ne connaissait auparavant le continent",
+    "Le nom représente automatiquement le point de vue de tous",
+    "Demande pour qui ce monde était nouveau.",
+    "L’histoire d’un lieu ne commence pas avec des visiteurs étrangers."
+  ],
+  "it": [
+    "Perché va spiegato il nome europeo «Nuovo Mondo» dato all’America?",
+    "Vi vivevano persone molto prima dell’arrivo degli europei",
+    "Era terra sconosciuta anche per tutti gli abitanti",
+    "Il nome prova che nessuno conosceva prima il continente",
+    "Il nome rappresenta automaticamente il punto di vista di tutti",
+    "Chiediti per chi fosse nuovo.",
+    "La storia di un luogo non inizia con visitatori stranieri."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-36",
+  "reason": "Teach independence without advanced periodisation.",
+  "de": [
+    "Was bedeutet politische Unabhängigkeit für eine ehemalige Kolonie?",
+    "Sie steht nicht mehr unter der Herrschaft der Kolonialmacht",
+    "Sie wird nur in eine andere Kolonie umbenannt",
+    "Ihre Regierung wird weiterhin von der Kolonialmacht bestimmt",
+    "Sie hat keinen Kontakt mehr zu anderen Ländern",
+    "Unterscheide Selbstbestimmung von vollständiger Abschottung.",
+    "Es geht darum, wer die politische Herrschaft ausübt."
+  ],
+  "en": [
+    "What does political independence mean for a former colony?",
+    "It is no longer ruled by the colonial power",
+    "It is merely renamed as another colony",
+    "Its government is still appointed by the colonial power",
+    "It has no contact with any other country",
+    "Distinguish self-government from total isolation.",
+    "Consider who exercises political authority."
+  ],
+  "fr": [
+    "Que signifie l’indépendance politique pour une ancienne colonie ?",
+    "Elle n’est plus gouvernée par la puissance coloniale",
+    "Elle change seulement de nom comme colonie",
+    "Son gouvernement est encore choisi par la puissance coloniale",
+    "Elle n’a plus de contact avec aucun pays",
+    "Distingue autonomie politique et isolement total.",
+    "Il s’agit de savoir qui exerce le pouvoir politique."
+  ],
+  "it": [
+    "Cosa significa indipendenza politica per un’ex colonia?",
+    "Non è più governata dalla potenza coloniale",
+    "Cambia soltanto nome come colonia",
+    "Il governo è ancora scelto dalla potenza coloniale",
+    "Non ha più contatti con nessun paese",
+    "Distingui autogoverno e isolamento totale.",
+    "Considera chi esercita il potere politico."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-38",
+  "reason": "Compare perspectives without assigning a single view to every Indigenous person.",
+  "de": [
+    "Wie untersuchst du die Folgen einer europäischen Eroberung sorgfältig?",
+    "Quellen der Eroberer und der betroffenen Bevölkerung vergleichen",
+    "Nur den Siegesbericht der Eroberer lesen",
+    "Nur die Zahl der Schiffe aufschreiben",
+    "Alle späteren Untersuchungen ausschliessen",
+    "Verschiedene Menschen erlebten dasselbe Ereignis unterschiedlich.",
+    "Suche auch nach Stimmen, die in einem Bericht fehlen."
+  ],
+  "en": [
+    "How can you carefully study the effects of a European conquest?",
+    "Compare sources from conquerors and affected populations",
+    "Read only the conquerors’ victory account",
+    "Record only the number of ships",
+    "Exclude all later research",
+    "Different people experienced the same event differently.",
+    "Look for voices missing from an account."
+  ],
+  "fr": [
+    "Comment étudier soigneusement les conséquences d’une conquête européenne ?",
+    "Comparer les sources des conquérants et des populations touchées",
+    "Lire seulement le récit victorieux des conquérants",
+    "Noter seulement le nombre de navires",
+    "Exclure toutes les recherches ultérieures",
+    "Différentes personnes ont vécu le même événement autrement.",
+    "Cherche aussi les voix absentes d’un récit."
+  ],
+  "it": [
+    "Come studi con attenzione le conseguenze di una conquista europea?",
+    "Confrontando fonti dei conquistatori e delle popolazioni coinvolte",
+    "Leggendo solo il racconto vittorioso dei conquistatori",
+    "Annotando solo il numero delle navi",
+    "Escludendo tutte le ricerche successive",
+    "Persone diverse vissero lo stesso evento diversamente.",
+    "Cerca anche le voci assenti da un racconto."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-40",
+  "reason": "Replace racialised population label with concrete language history.",
+  "de": [
+    "Warum wird in vielen Ländern Lateinamerikas Spanisch gesprochen?",
+    "Spanische Kolonialherrschaft verbreitete die Sprache",
+    "Spanisch entstand unabhängig in jedem dieser Länder",
+    "Dort wurden früher ausschliesslich europäische Sprachen gesprochen",
+    "Alle indigenen Sprachen sind mit Spanisch identisch",
+    "Denke an die Folgen von Herrschaft, Verwaltung und Unterricht.",
+    "Eine heute verbreitete Sprache erklärt nicht die gesamte frühere Sprachvielfalt."
+  ],
+  "en": [
+    "Why is Spanish spoken in many Latin American countries?",
+    "Spanish colonial rule spread the language",
+    "Spanish developed independently in each country",
+    "Only European languages were spoken there before",
+    "All Indigenous languages are identical to Spanish",
+    "Consider the effects of rule, administration and education.",
+    "A widespread language today does not describe all earlier language diversity."
+  ],
+  "fr": [
+    "Pourquoi parle-t-on espagnol dans de nombreux pays latino-américains ?",
+    "La domination coloniale espagnole a diffusé cette langue",
+    "L’espagnol est né séparément dans chaque pays",
+    "On n’y parlait auparavant que des langues européennes",
+    "Toutes les langues autochtones sont identiques à l’espagnol",
+    "Pense aux effets du pouvoir, de l’administration et de l’enseignement.",
+    "La langue répandue aujourd’hui ne résume pas toute la diversité passée."
+  ],
+  "it": [
+    "Perché si parla spagnolo in molti paesi latinoamericani?",
+    "Il dominio coloniale spagnolo diffuse la lingua",
+    "Lo spagnolo nacque separatamente in ogni paese",
+    "Prima vi si parlavano solo lingue europee",
+    "Tutte le lingue indigene sono identiche allo spagnolo",
+    "Pensa agli effetti di governo, amministrazione e istruzione.",
+    "Una lingua diffusa oggi non descrive tutta la diversità precedente."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-42",
+  "reason": "Replace legal protectorate distinction with accessible colonial rule concept.",
+  "de": [
+    "Was kennzeichnet ein Gebiet unter Kolonialherrschaft?",
+    "Eine auswärtige Macht übt dort Herrschaft aus",
+    "Es handelt nur freiwillig mit Nachbarländern",
+    "Es hat lediglich dieselbe Zeitzone wie ein anderes Land",
+    "Seine Einwohner lernen eine Fremdsprache",
+    "Handel und Sprachkenntnisse allein bedeuten keine Kolonialherrschaft.",
+    "Achte auf die politische Macht über das Gebiet."
+  ],
+  "en": [
+    "What characterises a territory under colonial rule?",
+    "An outside power rules it",
+    "It only trades voluntarily with neighbours",
+    "It merely shares another country’s time zone",
+    "Its residents learn a foreign language",
+    "Trade and language learning alone do not mean colonial rule.",
+    "Focus on political power over the territory."
+  ],
+  "fr": [
+    "Qu’est-ce qui caractérise un territoire sous domination coloniale ?",
+    "Une puissance extérieure y exerce le pouvoir",
+    "Il commerce seulement librement avec ses voisins",
+    "Il partage seulement le fuseau horaire d’un autre pays",
+    "Ses habitants apprennent une langue étrangère",
+    "Commerce et apprentissage linguistique ne suffisent pas à définir une colonie.",
+    "Concentre-toi sur le pouvoir politique exercé sur le territoire."
+  ],
+  "it": [
+    "Cosa caratterizza un territorio sotto dominio coloniale?",
+    "Una potenza esterna vi esercita il potere",
+    "Commercia solo liberamente con i vicini",
+    "Condivide solo il fuso orario di un altro paese",
+    "Gli abitanti imparano una lingua straniera",
+    "Commercio e apprendimento linguistico non bastano a definire una colonia.",
+    "Concentrati sul potere politico sul territorio."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-44",
+  "reason": "Describe late nineteenth-century colonisation without implying an empty continent.",
+  "de": [
+    "Was geschah bei der europäischen Kolonialisierung grosser Teile Afrikas im späten 19. Jahrhundert?",
+    "Europäische Mächte beanspruchten und eroberten bereits bewohnte Gebiete",
+    "Afrika wurde zum ersten Mal von Menschen besiedelt",
+    "Alle afrikanischen Staaten traten freiwillig einem einzigen Land bei",
+    "Die europäischen Mächte gaben alle bestehenden Kolonien auf",
+    "Unterscheide Eroberung von erstmaliger Besiedlung.",
+    "Beachte die bereits bestehenden Gesellschaften und Herrschaftsgebiete."
+  ],
+  "en": [
+    "What happened during European colonisation of much of Africa in the late nineteenth century?",
+    "European powers claimed and conquered already inhabited territories",
+    "Humans settled Africa for the first time",
+    "All African states voluntarily joined one country",
+    "European powers gave up all existing colonies",
+    "Distinguish conquest from first settlement.",
+    "Consider the societies and territories already present."
+  ],
+  "fr": [
+    "Que se passa-t-il lors de la colonisation européenne d’une grande partie de l’Afrique à la fin du XIXe siècle ?",
+    "Des puissances européennes revendiquèrent et conquirent des territoires déjà habités",
+    "Des humains peuplèrent l’Afrique pour la première fois",
+    "Tous les États africains rejoignirent volontairement un seul pays",
+    "Les puissances européennes abandonnèrent toutes leurs colonies",
+    "Distingue conquête et premier peuplement.",
+    "Considère les sociétés et territoires déjà présents."
+  ],
+  "it": [
+    "Cosa avvenne durante la colonizzazione europea di gran parte dell’Africa a fine Ottocento?",
+    "Potenze europee rivendicarono e conquistarono territori già abitati",
+    "Gli esseri umani popolarono l’Africa per la prima volta",
+    "Tutti gli Stati africani aderirono volontariamente a un solo paese",
+    "Le potenze europee abbandonarono tutte le colonie",
+    "Distingui conquista e primo popolamento.",
+    "Considera società e territori già presenti."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-46",
+  "reason": "Replace diaspora definition with concrete long-distance cultural connections.",
+  "de": [
+    "Eine Familie zieht in ein anderes Land. Welche Aussage trifft zu?",
+    "Sie kann weiterhin Beziehungen zu ihrem Herkunftsland pflegen",
+    "Sie verliert dadurch automatisch jede frühere Beziehung",
+    "Sie darf keine frühere Sprache mehr sprechen",
+    "Sie muss alle bisherigen Bräuche sofort vergessen",
+    "Ein Wohnortwechsel beendet nicht automatisch soziale Beziehungen.",
+    "Denke an Besuche, Gespräche und gemeinsame Feste."
+  ],
+  "en": [
+    "A family moves to another country. Which statement is correct?",
+    "It can maintain ties with its country of origin",
+    "It automatically loses every previous relationship",
+    "It may no longer speak its earlier language",
+    "It must immediately forget every previous custom",
+    "Moving does not automatically end social relationships.",
+    "Think of visits, conversations and shared celebrations."
+  ],
+  "fr": [
+    "Une famille s’installe dans un autre pays. Quelle affirmation est correcte ?",
+    "Elle peut garder des liens avec son pays d’origine",
+    "Elle perd automatiquement toute relation antérieure",
+    "Elle ne peut plus parler sa langue précédente",
+    "Elle doit oublier immédiatement toutes ses coutumes",
+    "Un déménagement ne met pas automatiquement fin aux relations.",
+    "Pense aux visites, aux conversations et aux fêtes partagées."
+  ],
+  "it": [
+    "Una famiglia si trasferisce in un altro paese. Quale affermazione è corretta?",
+    "Può mantenere legami con il paese d’origine",
+    "Perde automaticamente ogni relazione precedente",
+    "Non può più parlare la lingua precedente",
+    "Deve dimenticare subito tutte le usanze",
+    "Un trasloco non interrompe automaticamente le relazioni.",
+    "Pensa a visite, conversazioni e feste condivise."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-48",
+  "reason": "Replace Said theory with evidence-based examination of historical stereotypes.",
+  "de": [
+    "Ein Reisebericht beschreibt alle Menschen eines Landes als gleich. Was ist kritisch daran?",
+    "Er verallgemeinert und übersieht Unterschiede zwischen Menschen",
+    "Er enthält deshalb besonders genaue Angaben zu jeder Person",
+    "Er ersetzt alle anderen Quellen zuverlässig",
+    "Er beweist, dass es dort keine Unterschiede gibt",
+    "Prüfe Wörter wie «alle» und «immer».",
+    "Einzelne Beobachtungen reichen nicht für Aussagen über jede Person."
+  ],
+  "en": [
+    "A travel account describes everyone in a country as alike. What is the problem?",
+    "It generalises and overlooks differences between people",
+    "It therefore gives especially precise information on each person",
+    "It reliably replaces all other sources",
+    "It proves that no differences exist there",
+    "Examine words such as ‘all’ and ‘always’.",
+    "Individual observations cannot establish claims about every person."
+  ],
+  "fr": [
+    "Un récit de voyage décrit tous les habitants d’un pays comme identiques. Quel est le problème ?",
+    "Il généralise et néglige les différences entre personnes",
+    "Il donne donc des informations très précises sur chacun",
+    "Il remplace sûrement toutes les autres sources",
+    "Il prouve qu’aucune différence n’existe",
+    "Examine les mots comme « tous » et « toujours ».",
+    "Des observations isolées ne permettent pas de parler de chaque personne."
+  ],
+  "it": [
+    "Un racconto di viaggio descrive tutti gli abitanti di un paese come uguali. Qual è il problema?",
+    "Generalizza e trascura le differenze tra persone",
+    "Fornisce quindi informazioni molto precise su ciascuno",
+    "Sostituisce sicuramente tutte le altre fonti",
+    "Dimostra che non esistono differenze",
+    "Esamina parole come «tutti» e «sempre».",
+    "Singole osservazioni non permettono di parlare di ogni persona."
+  ]
+},
+{
+  "key": "5/science/entdeckungen-5/ed5-50",
+  "reason": "Replace transculturality theory with traceable exchange of a food crop.",
+  "de": [
+    "Die Kartoffel stammt aus Südamerika und wird heute auch in Europa angebaut. Was zeigt das?",
+    "Nutzpflanzen können durch menschliche Kontakte neue Regionen erreichen",
+    "Jede Nutzpflanze stammt ursprünglich aus Europa",
+    "Eine Pflanze kann nur auf ihrem Ursprungskontinent wachsen",
+    "Der heutige Anbauort beweist immer den ursprünglichen Herkunftsort",
+    "Unterscheide Herkunft und heutigen Anbau.",
+    "Reisen und Handel können auch Pflanzen verbreiten."
+  ],
+  "en": [
+    "The potato originated in South America and is now also grown in Europe. What does this show?",
+    "Crops can reach new regions through human contact",
+    "Every crop originally came from Europe",
+    "A plant can grow only on its continent of origin",
+    "Where a crop grows today always proves its original origin",
+    "Distinguish origin from present cultivation.",
+    "Travel and trade can spread plants too."
+  ],
+  "fr": [
+    "La pomme de terre vient d’Amérique du Sud et se cultive aussi en Europe. Que montre cela ?",
+    "Les contacts humains peuvent diffuser des plantes cultivées",
+    "Toutes les plantes cultivées viennent d’Europe",
+    "Une plante ne pousse que sur son continent d’origine",
+    "Le lieu de culture actuel prouve toujours l’origine",
+    "Distingue origine et culture actuelle.",
+    "Voyages et commerce peuvent aussi diffuser des plantes."
+  ],
+  "it": [
+    "La patata proviene dal Sudamerica e oggi si coltiva anche in Europa. Cosa mostra?",
+    "I contatti umani possono diffondere colture in nuove regioni",
+    "Tutte le colture provengono dall’Europa",
+    "Una pianta cresce solo sul continente d’origine",
+    "Il luogo attuale di coltivazione dimostra sempre l’origine",
+    "Distingui origine e coltivazione attuale.",
+    "Viaggi e commercio possono diffondere anche piante."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-2",
+  "reason": "Replace template with direct budget purpose and comparable financial actions.",
+  "de": [
+    "Wozu dient ein Budget?",
+    "Einnahmen und Ausgaben im Voraus planen",
+    "Nur vergangene Einkäufe belegen",
+    "Den Preis einer einzelnen Ware auszeichnen",
+    "Eine Zahlung an der Kasse bestätigen",
+    "Überlege, was du vor dem Geldausgeben wissen möchtest.",
+    "Unterscheide Planung von einem Beleg nach dem Kauf."
+  ],
+  "en": [
+    "What is a budget for?",
+    "Planning income and spending in advance",
+    "Only documenting past purchases",
+    "Labelling the price of one item",
+    "Confirming a payment at the checkout",
+    "Think about what you need to know before spending.",
+    "Distinguish a plan from a receipt after a purchase."
+  ],
+  "fr": [
+    "À quoi sert un budget ?",
+    "Prévoir les recettes et les dépenses",
+    "Seulement justifier des achats passés",
+    "Afficher le prix d’un seul article",
+    "Confirmer un paiement à la caisse",
+    "Pense à ce qu’il faut savoir avant de dépenser.",
+    "Distingue un plan d’un reçu après l’achat."
+  ],
+  "it": [
+    "A cosa serve un budget?",
+    "Pianificare entrate e spese in anticipo",
+    "Solo documentare acquisti passati",
+    "Indicare il prezzo di un articolo",
+    "Confermare un pagamento alla cassa",
+    "Pensa a cosa sapere prima di spendere.",
+    "Distingui un piano da una ricevuta dopo l’acquisto."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-4",
+  "reason": "Distinguish trading from production, repair and disposal.",
+  "de": [
+    "Welche Tätigkeit ist ein Beispiel für Handel?",
+    "Ein Laden kauft Hefte ein und verkauft sie an Kunden",
+    "Eine Fabrik stellt Papier her",
+    "Eine Werkstatt repariert einen Drucker",
+    "Ein Betrieb entsorgt Altpapier",
+    "Unterscheide Herstellung und Weiterverkauf.",
+    "Achte darauf, wer Waren einkauft und wieder verkauft."
+  ],
+  "en": [
+    "Which activity is an example of trade?",
+    "A shop buys notebooks and sells them to customers",
+    "A factory makes paper",
+    "A workshop repairs a printer",
+    "A company disposes of waste paper",
+    "Distinguish production from resale.",
+    "Notice who buys goods and sells them on."
+  ],
+  "fr": [
+    "Quelle activité est un exemple de commerce ?",
+    "Un magasin achète des cahiers et les revend aux clients",
+    "Une usine fabrique du papier",
+    "Un atelier répare une imprimante",
+    "Une entreprise élimine du vieux papier",
+    "Distingue fabrication et revente.",
+    "Repère qui achète des marchandises pour les revendre."
+  ],
+  "it": [
+    "Quale attività è un esempio di commercio?",
+    "Un negozio compra quaderni e li rivende ai clienti",
+    "Una fabbrica produce carta",
+    "Un’officina ripara una stampante",
+    "Un’impresa smaltisce carta usata",
+    "Distingui produzione e rivendita.",
+    "Osserva chi compra merci per rivenderle."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-6",
+  "reason": "Explain money as a means of exchange.",
+  "de": [
+    "Wie erleichtert Geld den Kauf eines Hefts?",
+    "Du kannst bezahlen, ohne eine passende Tauschware anzubieten",
+    "Es macht jedes Heft kostenlos",
+    "Es ersetzt die Herstellung des Hefts",
+    "Es legt die Anzahl der Seiten fest",
+    "Beim direkten Tausch müssen beide Seiten die angebotene Ware wollen.",
+    "Überlege, was ein allgemein akzeptiertes Zahlungsmittel verändert."
+  ],
+  "en": [
+    "How does money make buying a notebook easier?",
+    "You can pay without offering suitable goods to barter",
+    "It makes every notebook free",
+    "It replaces notebook production",
+    "It determines the number of pages",
+    "In barter, each side must want the goods offered.",
+    "Consider what a generally accepted means of payment changes."
+  ],
+  "fr": [
+    "Comment l’argent facilite-t-il l’achat d’un cahier ?",
+    "Tu peux payer sans proposer un bien adapté au troc",
+    "Il rend chaque cahier gratuit",
+    "Il remplace la fabrication du cahier",
+    "Il fixe le nombre de pages",
+    "Dans le troc, chacun doit vouloir le bien proposé.",
+    "Pense au rôle d’un moyen de paiement généralement accepté."
+  ],
+  "it": [
+    "Come facilita il denaro l’acquisto di un quaderno?",
+    "Puoi pagare senza offrire un bene adatto al baratto",
+    "Rende ogni quaderno gratuito",
+    "Sostituisce la produzione del quaderno",
+    "Stabilisce il numero di pagine",
+    "Nel baratto ciascuno deve volere il bene offerto.",
+    "Pensa al ruolo di un mezzo di pagamento generalmente accettato."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-8",
+  "reason": "Differentiate price from physical product characteristics.",
+  "de": [
+    "Was bedeutet «CHF 4» auf dem Preisschild eines Hefts?",
+    "Das Heft kostet 4 Franken",
+    "Das Heft hat 4 Seiten",
+    "Das Heft wiegt 4 Gramm",
+    "Das Heft wurde vor 4 Jahren hergestellt",
+    "Beachte die Einheit neben der Zahl.",
+    "Eine Währungsangabe ist keine Gewichts- oder Altersangabe."
+  ],
+  "en": [
+    "What does ‘CHF 4’ on a notebook’s price label mean?",
+    "The notebook costs 4 francs",
+    "The notebook has 4 pages",
+    "The notebook weighs 4 grams",
+    "The notebook was made 4 years ago",
+    "Notice the unit next to the number.",
+    "A currency amount is not a weight or an age."
+  ],
+  "fr": [
+    "Que signifie « CHF 4 » sur l’étiquette de prix d’un cahier ?",
+    "Le cahier coûte 4 francs",
+    "Le cahier a 4 pages",
+    "Le cahier pèse 4 grammes",
+    "Le cahier a été fabriqué il y a 4 ans",
+    "Observe l’unité près du nombre.",
+    "Une monnaie n’indique ni un poids ni un âge."
+  ],
+  "it": [
+    "Cosa significa «CHF 4» sul prezzo di un quaderno?",
+    "Il quaderno costa 4 franchi",
+    "Il quaderno ha 4 pagine",
+    "Il quaderno pesa 4 grammi",
+    "Il quaderno è stato prodotto 4 anni fa",
+    "Osserva l’unità accanto al numero.",
+    "Una valuta non indica peso o età."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-10",
+  "reason": "Explain resource savings from continued use.",
+  "de": [
+    "Warum kann das Reparieren eines Rucksacks Ressourcen sparen?",
+    "Der vorhandene Rucksack kann länger genutzt werden",
+    "Der Rucksack muss danach sofort ersetzt werden",
+    "Die Reparatur macht zusätzliche neue Rucksäcke nötig",
+    "Die Reparatur verbraucht grundsätzlich nie Material",
+    "Vergleiche Weiterbenutzung und Neukauf.",
+    "Auch eine Reparatur braucht manchmal Material, aber nicht unbedingt einen ganzen neuen Gegenstand."
+  ],
+  "en": [
+    "Why can repairing a backpack save resources?",
+    "The existing backpack can be used longer",
+    "The backpack must immediately be replaced afterwards",
+    "The repair requires extra new backpacks",
+    "Repairs never use any material",
+    "Compare continued use with replacement.",
+    "A repair may need materials without needing a whole new object."
+  ],
+  "fr": [
+    "Pourquoi réparer un sac peut-il économiser des ressources ?",
+    "Le sac existant peut servir plus longtemps",
+    "Il faut ensuite remplacer le sac immédiatement",
+    "La réparation exige davantage de sacs neufs",
+    "Une réparation n’utilise jamais de matériau",
+    "Compare prolonger l’usage et remplacer.",
+    "Une réparation peut demander du matériel sans exiger un objet entièrement neuf."
+  ],
+  "it": [
+    "Perché riparare uno zaino può risparmiare risorse?",
+    "Lo zaino esistente può essere usato più a lungo",
+    "Lo zaino va poi sostituito immediatamente",
+    "La riparazione richiede altri zaini nuovi",
+    "Una riparazione non usa mai materiali",
+    "Confronta continuare a usare e sostituire.",
+    "Una riparazione può richiedere materiali senza richiedere un oggetto completamente nuovo."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-12",
+  "reason": "Differentiate planned income from expenses using a child-scale example.",
+  "de": [
+    "Was ist eine Einnahme in deinem Taschengeldbudget?",
+    "Du erhältst 10 Franken Taschengeld",
+    "Du kaufst ein Heft für 3 Franken",
+    "Du bezahlst 2 Franken für eine Karte",
+    "Du gibst 4 Franken für einen Snack aus",
+    "Betrachte, in welche Richtung das Geld fliesst.",
+    "Unterscheide erhaltenes Geld von bezahltem Geld."
+  ],
+  "en": [
+    "Which is income in your pocket-money budget?",
+    "You receive 10 francs in pocket money",
+    "You buy a notebook for 3 francs",
+    "You pay 2 francs for a card",
+    "You spend 4 francs on a snack",
+    "Consider which way the money moves.",
+    "Distinguish money received from money paid out."
+  ],
+  "fr": [
+    "Qu’est-ce qu’une recette dans ton budget d’argent de poche ?",
+    "Tu reçois 10 francs d’argent de poche",
+    "Tu achètes un cahier à 3 francs",
+    "Tu paies 2 francs pour une carte",
+    "Tu dépenses 4 francs pour un goûter",
+    "Observe le sens du mouvement de l’argent.",
+    "Distingue l’argent reçu de l’argent payé."
+  ],
+  "it": [
+    "Qual è un’entrata nel budget della paghetta?",
+    "Ricevi 10 franchi di paghetta",
+    "Compri un quaderno per 3 franchi",
+    "Paghi 2 franchi per un biglietto",
+    "Spendi 4 franchi per una merenda",
+    "Osserva la direzione del denaro.",
+    "Distingui denaro ricevuto e denaro pagato."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-14",
+  "reason": "Replace duplicate trade template with supply-chain order.",
+  "de": [
+    "Welcher Weg passt zu einem Brot aus einer Bäckerei?",
+    "Getreidefeld, Mühle, Bäckerei, Kundschaft",
+    "Mühle, Getreidefeld, Kundschaft, Bäckerei",
+    "Kundschaft, Bäckerei, Mühle, Getreidefeld",
+    "Bäckerei, Getreidefeld, Kundschaft, Mühle",
+    "Beginne beim Rohstoff auf dem Feld.",
+    "Mehl wird benötigt, bevor daraus Brot gebacken wird."
+  ],
+  "en": [
+    "Which sequence fits bread from a bakery?",
+    "Grain field, mill, bakery, customer",
+    "Mill, grain field, customer, bakery",
+    "Customer, bakery, mill, grain field",
+    "Bakery, grain field, customer, mill",
+    "Start with the crop in the field.",
+    "Flour is needed before bread can be baked."
+  ],
+  "fr": [
+    "Quel parcours correspond à un pain de boulangerie ?",
+    "Champ de céréales, moulin, boulangerie, clientèle",
+    "Moulin, champ de céréales, clientèle, boulangerie",
+    "Clientèle, boulangerie, moulin, champ de céréales",
+    "Boulangerie, champ de céréales, clientèle, moulin",
+    "Commence par la matière première au champ.",
+    "Il faut de la farine avant de fabriquer le pain."
+  ],
+  "it": [
+    "Quale percorso corrisponde al pane di un panificio?",
+    "Campo di cereali, mulino, panificio, cliente",
+    "Mulino, campo di cereali, cliente, panificio",
+    "Cliente, panificio, mulino, campo di cereali",
+    "Panificio, campo di cereali, cliente, mulino",
+    "Inizia dalla materia prima nel campo.",
+    "Serve farina prima di preparare il pane."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-16",
+  "reason": "Distinguish barter from payment and gifts.",
+  "de": [
+    "Was ist ein direkter Tausch ohne Geld?",
+    "Du tauschst mit Zustimmung ein Buch gegen einen Ball",
+    "Du kaufst ein Buch für 8 Franken",
+    "Du verschenkst ein Buch ohne Gegenleistung",
+    "Du leihst ein Buch aus und gibst es zurück",
+    "Beide Seiten erhalten etwas von der anderen Seite.",
+    "Achte darauf, ob Geld beteiligt ist oder nur etwas geliehen wird."
+  ],
+  "en": [
+    "Which is direct barter without money?",
+    "You agree to exchange a book for a ball",
+    "You buy a book for 8 francs",
+    "You give a book with nothing in return",
+    "You borrow a book and return it",
+    "Both sides receive something from the other.",
+    "Check whether money is involved or something is only borrowed."
+  ],
+  "fr": [
+    "Quel exemple est un troc direct sans argent ?",
+    "Vous échangez d’un commun accord un livre contre un ballon",
+    "Tu achètes un livre pour 8 francs",
+    "Tu offres un livre sans contrepartie",
+    "Tu empruntes un livre puis le rends",
+    "Chaque côté reçoit quelque chose de l’autre.",
+    "Vérifie s’il y a de l’argent ou seulement un prêt."
+  ],
+  "it": [
+    "Qual è un baratto diretto senza denaro?",
+    "Scambiate di comune accordo un libro con un pallone",
+    "Compri un libro per 8 franchi",
+    "Regali un libro senza ricevere nulla",
+    "Prendi in prestito un libro e lo restituisci",
+    "Entrambe le parti ricevono qualcosa dall’altra.",
+    "Controlla se c’è denaro o soltanto un prestito."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-18",
+  "reason": "Compare unit prices with simple integer quantities.",
+  "de": [
+    "Ein einzelnes Heft kostet 3 Franken, vier gleiche Hefte kosten zusammen 8 Franken. Welcher Kauf hat den tieferen Preis pro Heft?",
+    "Das Viererpack mit 2 Franken pro Heft",
+    "Das einzelne Heft mit 3 Franken pro Heft",
+    "Beide kosten 3 Franken pro Heft",
+    "Das Viererpack mit 8 Franken pro Heft",
+    "Vergleiche dieselbe Menge, nämlich ein Heft.",
+    "Teile den Packungspreis durch die Anzahl Hefte."
+  ],
+  "en": [
+    "One notebook costs 3 francs; four identical notebooks cost 8 francs together. Which has the lower price per notebook?",
+    "The four-pack at 2 francs each",
+    "The single notebook at 3 francs",
+    "Both cost 3 francs each",
+    "The four-pack at 8 francs each",
+    "Compare the same quantity: one notebook.",
+    "Divide the pack price by the number of notebooks."
+  ],
+  "fr": [
+    "Un cahier coûte 3 francs, quatre cahiers identiques coûtent 8 francs ensemble. Quel prix par cahier est le plus bas ?",
+    "Le lot de quatre à 2 francs par cahier",
+    "Le cahier seul à 3 francs",
+    "Les deux à 3 francs par cahier",
+    "Le lot de quatre à 8 francs par cahier",
+    "Compare la même quantité : un cahier.",
+    "Divise le prix du lot par le nombre de cahiers."
+  ],
+  "it": [
+    "Un quaderno costa 3 franchi; quattro uguali costano insieme 8 franchi. Qual è il prezzo più basso per quaderno?",
+    "La confezione da quattro a 2 franchi ciascuno",
+    "Il quaderno singolo a 3 franchi",
+    "Entrambi a 3 franchi ciascuno",
+    "La confezione da quattro a 8 franchi ciascuno",
+    "Confronta la stessa quantità: un quaderno.",
+    "Dividi il prezzo della confezione per il numero di quaderni."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-20",
+  "reason": "Compare a stated repair cost with equivalent replacement.",
+  "de": [
+    "Eine sichere Reparatur kostet 15 Franken, ein gleichwertiger neuer Gegenstand 40 Franken. Wie viel kostet die Reparatur weniger?",
+    "25 Franken",
+    "55 Franken",
+    "15 Franken",
+    "40 Franken",
+    "Vergleiche die zwei angegebenen Kosten.",
+    "Gesucht ist die Differenz, nicht die Summe."
+  ],
+  "en": [
+    "A safe repair costs 15 francs; an equivalent replacement costs 40 francs. How much cheaper is the repair?",
+    "25 francs",
+    "55 francs",
+    "15 francs",
+    "40 francs",
+    "Compare the two stated costs.",
+    "Find the difference, not the sum."
+  ],
+  "fr": [
+    "Une réparation sûre coûte 15 francs et un objet neuf équivalent 40 francs. De combien la réparation est-elle moins chère ?",
+    "25 francs",
+    "55 francs",
+    "15 francs",
+    "40 francs",
+    "Compare les deux coûts indiqués.",
+    "Cherche la différence, pas la somme."
+  ],
+  "it": [
+    "Una riparazione sicura costa 15 franchi, un oggetto nuovo equivalente 40. Quanto costa in meno la riparazione?",
+    "25 franchi",
+    "55 franchi",
+    "15 franchi",
+    "40 franchi",
+    "Confronta i due costi indicati.",
+    "Cerca la differenza, non la somma."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-22",
+  "reason": "Replace duplicate budget definition with a solvable spending limit.",
+  "de": [
+    "Du hast 20 Franken und möchtest 5 Franken behalten. Wie viel kannst du höchstens ausgeben?",
+    "15 Franken",
+    "20 Franken",
+    "25 Franken",
+    "5 Franken",
+    "Ein Teil des Geldes soll übrig bleiben.",
+    "Ziehe den zurückgelegten Betrag vom vorhandenen Geld ab."
+  ],
+  "en": [
+    "You have 20 francs and want to keep 5. What is the most you can spend?",
+    "15 francs",
+    "20 francs",
+    "25 francs",
+    "5 francs",
+    "Some money must remain.",
+    "Subtract the amount kept from the money available."
+  ],
+  "fr": [
+    "Tu as 20 francs et veux en garder 5. Combien peux-tu dépenser au maximum ?",
+    "15 francs",
+    "20 francs",
+    "25 francs",
+    "5 francs",
+    "Une partie doit rester.",
+    "Soustrais la somme gardée de l’argent disponible."
+  ],
+  "it": [
+    "Hai 20 franchi e vuoi conservarne 5. Quanto puoi spendere al massimo?",
+    "15 franchi",
+    "20 franchi",
+    "25 franchi",
+    "5 franchi",
+    "Una parte deve restare.",
+    "Sottrai la somma da conservare dal denaro disponibile."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-24",
+  "reason": "Teach import direction through concrete Swiss example.",
+  "de": [
+    "Ein Schweizer Laden kauft Orangen aus Spanien. Was ist das aus Schweizer Sicht?",
+    "Ein Import",
+    "Ein Export",
+    "Eine Herstellung in der Schweiz",
+    "Eine Reparatur",
+    "Betrachte, wohin die Ware über die Grenze gelangt.",
+    "Die Sicht des empfangenden Landes ist entscheidend."
+  ],
+  "en": [
+    "A Swiss shop buys oranges from Spain. What is this from Switzerland’s perspective?",
+    "An import",
+    "An export",
+    "Production in Switzerland",
+    "A repair",
+    "Consider where the goods cross the border to.",
+    "The receiving country’s perspective matters."
+  ],
+  "fr": [
+    "Un magasin suisse achète des oranges d’Espagne. Qu’est-ce du point de vue suisse ?",
+    "Une importation",
+    "Une exportation",
+    "Une production en Suisse",
+    "Une réparation",
+    "Observe dans quel sens la marchandise franchit la frontière.",
+    "Le point de vue du pays qui reçoit est important."
+  ],
+  "it": [
+    "Un negozio svizzero compra arance dalla Spagna. Cos’è dal punto di vista svizzero?",
+    "Un’importazione",
+    "Un’esportazione",
+    "Una produzione in Svizzera",
+    "Una riparazione",
+    "Osserva in quale direzione la merce attraversa il confine.",
+    "Conta il punto di vista del paese che riceve."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-26",
+  "reason": "Teach cash change within an everyday purchase.",
+  "de": [
+    "Ein Heft kostet 6 Franken. Du bezahlst mit 10 Franken. Wie viel Rückgeld erhältst du?",
+    "4 Franken",
+    "6 Franken",
+    "10 Franken",
+    "16 Franken",
+    "Das Rückgeld ergänzt den Preis zum bezahlten Betrag.",
+    "Berechne die Differenz zwischen Zahlung und Preis."
+  ],
+  "en": [
+    "A notebook costs 6 francs. You pay with 10 francs. How much change do you receive?",
+    "4 francs",
+    "6 francs",
+    "10 francs",
+    "16 francs",
+    "The price plus change equals the amount paid.",
+    "Find the difference between the payment and the price."
+  ],
+  "fr": [
+    "Un cahier coûte 6 francs. Tu paies avec 10 francs. Combien te rend-on ?",
+    "4 francs",
+    "6 francs",
+    "10 francs",
+    "16 francs",
+    "Le prix et la monnaie rendue totalisent le montant payé.",
+    "Calcule la différence entre paiement et prix."
+  ],
+  "it": [
+    "Un quaderno costa 6 franchi. Paghi con 10 franchi. Quanto resto ricevi?",
+    "4 franchi",
+    "6 franchi",
+    "10 franchi",
+    "16 franchi",
+    "Prezzo e resto insieme danno la somma pagata.",
+    "Calcola la differenza tra pagamento e prezzo."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-28",
+  "reason": "Compare delivered total rather than sticker price alone.",
+  "de": [
+    "Ein Buch kostet online 12 Franken plus 5 Franken Versand, im Laden 16 Franken. Wo ist es insgesamt günstiger?",
+    "Im Laden für 16 Franken",
+    "Online für insgesamt 12 Franken",
+    "Online für insgesamt 5 Franken",
+    "Beide kosten insgesamt 16 Franken",
+    "Zum Onlinepreis kommt ein weiterer Betrag dazu.",
+    "Vergleiche die vollständigen Kosten, nicht nur den Buchpreis."
+  ],
+  "en": [
+    "A book costs 12 francs online plus 5 francs shipping, or 16 francs in a shop. Which total is cheaper?",
+    "The shop at 16 francs",
+    "Online at a total of 12 francs",
+    "Online at a total of 5 francs",
+    "Both total 16 francs",
+    "Another amount is added to the online price.",
+    "Compare complete costs, not just the book price."
+  ],
+  "fr": [
+    "Un livre coûte 12 francs en ligne plus 5 francs de livraison, ou 16 francs en magasin. Quel total est moins cher ?",
+    "Le magasin à 16 francs",
+    "En ligne pour 12 francs au total",
+    "En ligne pour 5 francs au total",
+    "Les deux à 16 francs au total",
+    "Une somme s’ajoute au prix en ligne.",
+    "Compare les coûts complets, pas seulement le prix du livre."
+  ],
+  "it": [
+    "Un libro costa online 12 franchi più 5 di spedizione, oppure 16 in negozio. Quale totale è più basso?",
+    "In negozio a 16 franchi",
+    "Online a un totale di 12 franchi",
+    "Online a un totale di 5 franchi",
+    "Entrambi a un totale di 16 franchi",
+    "Al prezzo online si aggiunge un’altra somma.",
+    "Confronta i costi completi, non solo il prezzo del libro."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-30",
+  "reason": "Add safe evaluation before repair.",
+  "de": [
+    "Das Stromkabel eines Geräts ist beschädigt. Was ist sinnvoll?",
+    "Das Gerät nicht benutzen und eine erwachsene Person informieren",
+    "Das Gerät trotz sichtbarer Schäden weiterbenutzen",
+    "Das beschädigte Kabel mit nassen Händen prüfen",
+    "Das Gerät selbst unter Spannung öffnen",
+    "Bei elektrischen Schäden geht Sicherheit vor Kosten.",
+    "Eine fachkundige Person muss beurteilen, wie weiter vorzugehen ist."
+  ],
+  "en": [
+    "An appliance’s power cable is damaged. What is sensible?",
+    "Do not use it and tell an adult",
+    "Keep using it despite visible damage",
+    "Check the damaged cable with wet hands",
+    "Open the appliance yourself while powered",
+    "With electrical damage, safety comes before cost.",
+    "A qualified person must assess what to do next."
+  ],
+  "fr": [
+    "Le câble électrique d’un appareil est abîmé. Que faire ?",
+    "Ne pas l’utiliser et prévenir un adulte",
+    "Continuer malgré les dégâts visibles",
+    "Examiner le câble avec les mains mouillées",
+    "Ouvrir soi-même l’appareil sous tension",
+    "En cas de dommage électrique, la sécurité passe avant le coût.",
+    "Une personne compétente doit évaluer la suite."
+  ],
+  "it": [
+    "Il cavo elettrico di un apparecchio è danneggiato. Cosa fare?",
+    "Non usarlo e informare un adulto",
+    "Continuare a usarlo nonostante i danni",
+    "Controllare il cavo con le mani bagnate",
+    "Aprire da soli l’apparecchio sotto tensione",
+    "Con danni elettrici la sicurezza viene prima del costo.",
+    "Una persona competente deve valutare come procedere."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-32",
+  "reason": "Apply budget adjustment without encouraging debt. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Deine geplanten Ausgaben sind höher als dein verfügbares Geld. Was passt zu einem ausgeglichenen Budget?",
+    "Einen nicht nötigen Kauf verschieben",
+    "Den fehlenden Betrag in der Rechnung weglassen",
+    "Dieselben Ausgaben behalten und die Differenz ignorieren",
+    "Eine Ausgabe zweimal als Einnahme eintragen",
+    "Die Planung muss zum tatsächlich verfügbaren Geld passen.",
+    "Prüfe, welche Ausgaben warten können."
+  ],
+  "en": [
+    "Your planned spending exceeds your available money. What helps balance the budget?",
+    "Postpone a non-essential purchase",
+    "Leave the missing amount out of the calculation",
+    "Keep the same spending and ignore the difference",
+    "Record an expense twice as income",
+    "The plan must fit the money actually available.",
+    "Check which purchases can wait."
+  ],
+  "fr": [
+    "Tes dépenses prévues dépassent ton argent disponible. Que faire pour équilibrer le budget ?",
+    "Reporter un achat non nécessaire",
+    "Omettre la somme manquante du calcul",
+    "Garder les dépenses et ignorer l’écart",
+    "Inscrire une dépense deux fois comme recette",
+    "Le plan doit correspondre à l’argent réellement disponible.",
+    "Cherche quels achats peuvent attendre."
+  ],
+  "it": [
+    "Le spese previste superano il denaro disponibile. Cosa aiuta a equilibrare il budget?",
+    "Rimandare un acquisto non necessario",
+    "Omettere la somma mancante dal calcolo",
+    "Tenere le spese e ignorare la differenza",
+    "Registrare una spesa due volte come entrata",
+    "Il piano deve corrispondere al denaro realmente disponibile.",
+    "Controlla quali acquisti possono aspettare."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-34",
+  "reason": "Teach export direction using distinct example.",
+  "de": [
+    "Eine Schweizer Firma verkauft Uhren nach Italien. Was ist das aus Schweizer Sicht?",
+    "Ein Export",
+    "Ein Import",
+    "Ein Einkauf aus Italien",
+    "Eine Lieferung nur innerhalb der Schweiz",
+    "Betrachte den Ausgangspunkt der Ware.",
+    "Die Ware verlässt das Land, aus dessen Sicht du urteilst."
+  ],
+  "en": [
+    "A Swiss company sells watches to Italy. What is this from Switzerland’s perspective?",
+    "An export",
+    "An import",
+    "A purchase from Italy",
+    "A delivery only within Switzerland",
+    "Consider where the goods start.",
+    "The goods leave the country whose perspective you are taking."
+  ],
+  "fr": [
+    "Une entreprise suisse vend des montres en Italie. Qu’est-ce du point de vue suisse ?",
+    "Une exportation",
+    "Une importation",
+    "Un achat en Italie",
+    "Une livraison uniquement en Suisse",
+    "Observe le point de départ des marchandises.",
+    "Elles quittent le pays dont tu adoptes le point de vue."
+  ],
+  "it": [
+    "Un’impresa svizzera vende orologi in Italia. Cos’è dal punto di vista svizzero?",
+    "Un’esportazione",
+    "Un’importazione",
+    "Un acquisto dall’Italia",
+    "Una consegna solo in Svizzera",
+    "Osserva il punto di partenza delle merci.",
+    "Le merci lasciano il paese di cui adotti il punto di vista."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-36",
+  "reason": "Clarify that card payment still spends money.",
+  "de": [
+    "Du bezahlst mit einer Debitkarte. Was geschieht mit dem Kaufbetrag?",
+    "Er wird dem zugehörigen Konto belastet",
+    "Er wird dem Konto als Geschenk gutgeschrieben",
+    "Er entfällt, weil kein Bargeld übergeben wird",
+    "Er wird nur auf dem Preisschild geändert",
+    "Unterscheide die Zahlungsform vom Bezahlen selbst.",
+    "Auch eine bargeldlose Zahlung muss im Budget berücksichtigt werden."
+  ],
+  "en": [
+    "You pay with a debit card. What happens to the purchase amount?",
+    "It is charged to the linked account",
+    "It is added to the account as a gift",
+    "It disappears because no cash changes hands",
+    "It changes only on the price label",
+    "Distinguish the payment method from payment itself.",
+    "Cashless payments must also be included in a budget."
+  ],
+  "fr": [
+    "Tu paies avec une carte de débit. Que devient le montant de l’achat ?",
+    "Il est débité du compte associé",
+    "Il est offert et ajouté au compte",
+    "Il disparaît car aucun argent liquide n’est remis",
+    "Il change seulement sur l’étiquette",
+    "Distingue le moyen de paiement du paiement lui-même.",
+    "Un paiement sans espèces compte aussi dans le budget."
+  ],
+  "it": [
+    "Paghi con una carta di debito. Cosa succede all’importo?",
+    "Viene addebitato sul conto collegato",
+    "Viene aggiunto al conto come regalo",
+    "Scompare perché non viene consegnato contante",
+    "Cambia solo sul cartellino del prezzo",
+    "Distingui il mezzo di pagamento dal pagamento stesso.",
+    "Anche i pagamenti senza contante contano nel budget."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-38",
+  "reason": "Distinguish price information from guaranteed quality.",
+  "de": [
+    "Zwei ähnliche Rucksäcke kosten unterschiedlich viel. Was weisst du allein aus dem höheren Preis sicher?",
+    "Dass für einen Rucksack mehr Geld verlangt wird",
+    "Dass der teurere Rucksack sicher länger hält",
+    "Dass der teurere Rucksack sicher leichter ist",
+    "Dass der teurere Rucksack sicher fairer hergestellt wurde",
+    "Ein Preis nennt zunächst einen Geldbetrag.",
+    "Für Qualität und Herstellung brauchst du weitere Informationen."
+  ],
+  "en": [
+    "Two similar backpacks have different prices. What does the higher price alone tell you for certain?",
+    "More money is being asked for one backpack",
+    "The pricier backpack certainly lasts longer",
+    "The pricier backpack is certainly lighter",
+    "The pricier backpack was certainly made more fairly",
+    "A price first tells you an amount of money.",
+    "Quality and production require further information."
+  ],
+  "fr": [
+    "Deux sacs semblables ont des prix différents. Que dit avec certitude le prix plus élevé à lui seul ?",
+    "On demande plus d’argent pour l’un des sacs",
+    "Le sac plus cher dure sûrement plus longtemps",
+    "Le sac plus cher est sûrement plus léger",
+    "Le sac plus cher est sûrement fabriqué plus équitablement",
+    "Un prix indique d’abord une somme.",
+    "Qualité et fabrication nécessitent d’autres informations."
+  ],
+  "it": [
+    "Due zaini simili hanno prezzi diversi. Cosa dice con certezza il solo prezzo più alto?",
+    "Viene richiesto più denaro per uno zaino",
+    "Lo zaino più caro dura sicuramente di più",
+    "Lo zaino più caro è sicuramente più leggero",
+    "Lo zaino più caro è sicuramente prodotto più equamente",
+    "Un prezzo indica innanzitutto una somma.",
+    "Qualità e produzione richiedono altre informazioni."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-40",
+  "reason": "Differentiate repair from recycling, replacement and disposal.",
+  "de": [
+    "Welche Handlung ist eine Reparatur?",
+    "Einen abgerissenen Knopf wieder annähen",
+    "Ein neues Hemd kaufen",
+    "Ein altes Hemd zu Putzlappen zerschneiden",
+    "Ein Hemd in den Abfall werfen",
+    "Eine Reparatur behebt einen Schaden am vorhandenen Gegenstand.",
+    "Danach soll er seine bisherige Funktion wieder erfüllen."
+  ],
+  "en": [
+    "Which action is a repair?",
+    "Sewing a torn-off button back on",
+    "Buying a new shirt",
+    "Cutting an old shirt into cleaning cloths",
+    "Throwing a shirt away",
+    "A repair fixes damage to an existing object.",
+    "It should then serve its original purpose again."
+  ],
+  "fr": [
+    "Quelle action est une réparation ?",
+    "Recoudre un bouton arraché",
+    "Acheter une chemise neuve",
+    "Découper une vieille chemise en chiffons",
+    "Jeter une chemise",
+    "Une réparation corrige un dommage sur un objet existant.",
+    "Il doit ensuite retrouver sa fonction initiale."
+  ],
+  "it": [
+    "Quale azione è una riparazione?",
+    "Ricucire un bottone staccato",
+    "Comprare una camicia nuova",
+    "Tagliare una vecchia camicia per farne stracci",
+    "Gettare una camicia",
+    "Una riparazione corregge un danno a un oggetto esistente.",
+    "Dopo dovrebbe svolgere di nuovo la funzione originale."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-42",
+  "reason": "Add reconciliation to repeated budget concept.",
+  "de": [
+    "Warum vergleichst du nach einem Monat geplante und tatsächliche Ausgaben?",
+    "Um die nächste Planung an deine Erfahrungen anzupassen",
+    "Um bereits ausgegebenes Geld automatisch zurückzubekommen",
+    "Um jeden Einkauf nachträglich kostenlos zu machen",
+    "Um alte Kassenbelege in zusätzliches Geld umzuwandeln",
+    "Ein Plan kann von der Wirklichkeit abweichen.",
+    "Überlege, was du aus den Unterschieden lernen kannst."
+  ],
+  "en": [
+    "Why compare planned and actual spending after a month?",
+    "To improve the next plan using your experience",
+    "To automatically recover money already spent",
+    "To make every past purchase free",
+    "To turn old receipts into extra money",
+    "A plan can differ from reality.",
+    "Think about what the differences can teach you."
+  ],
+  "fr": [
+    "Pourquoi comparer dépenses prévues et réelles après un mois ?",
+    "Pour adapter le prochain budget à ton expérience",
+    "Pour récupérer automatiquement l’argent dépensé",
+    "Pour rendre gratuits tous les achats passés",
+    "Pour transformer les reçus en argent supplémentaire",
+    "Un plan peut différer de la réalité.",
+    "Pense à ce que les écarts peuvent t’apprendre."
+  ],
+  "it": [
+    "Perché confrontare spese previste e reali dopo un mese?",
+    "Per adattare il piano successivo all’esperienza",
+    "Per recuperare automaticamente il denaro speso",
+    "Per rendere gratuiti tutti gli acquisti passati",
+    "Per trasformare ricevute in denaro aggiuntivo",
+    "Un piano può differire dalla realtà.",
+    "Pensa a cosa puoi imparare dalle differenze."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-44",
+  "reason": "Identify a service alongside physical goods.",
+  "de": [
+    "Wofür bezahlst du eine Dienstleistung statt einer Ware?",
+    "Für einen Haarschnitt",
+    "Für ein Heft",
+    "Für einen Apfel",
+    "Für einen Ball",
+    "Vergleiche eine ausgeführte Arbeit mit einem gekauften Gegenstand.",
+    "Bei einer Dienstleistung steht die Tätigkeit im Mittelpunkt."
+  ],
+  "en": [
+    "Which purchase pays for a service rather than a good?",
+    "A haircut",
+    "A notebook",
+    "An apple",
+    "A ball",
+    "Compare work performed with a purchased object.",
+    "A service focuses on an activity."
+  ],
+  "fr": [
+    "Quel achat paie un service plutôt qu’un bien ?",
+    "Une coupe de cheveux",
+    "Un cahier",
+    "Une pomme",
+    "Un ballon",
+    "Compare un travail effectué à un objet acheté.",
+    "Un service porte sur une activité."
+  ],
+  "it": [
+    "Quale acquisto paga un servizio anziché un bene?",
+    "Un taglio di capelli",
+    "Un quaderno",
+    "Una mela",
+    "Un pallone",
+    "Confronta un lavoro svolto con un oggetto comprato.",
+    "Un servizio riguarda un’attività."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-46",
+  "reason": "Replace repeated money definition with savings accumulation.",
+  "de": [
+    "Du legst vier Wochen lang jede Woche 3 Franken zurück und gibst davon nichts aus. Wie viel sparst du?",
+    "12 Franken",
+    "7 Franken",
+    "4 Franken",
+    "3 Franken",
+    "Es kommen mehrere gleich grosse Beträge zusammen.",
+    "Zähle den Wochenbetrag für jede der vier Wochen."
+  ],
+  "en": [
+    "You save 3 francs each week for four weeks and spend none of it. How much do you save?",
+    "12 francs",
+    "7 francs",
+    "4 francs",
+    "3 francs",
+    "Several equal amounts are added.",
+    "Count the weekly amount for each of the four weeks."
+  ],
+  "fr": [
+    "Tu mets 3 francs de côté chaque semaine pendant quatre semaines sans les dépenser. Combien économises-tu ?",
+    "12 francs",
+    "7 francs",
+    "4 francs",
+    "3 francs",
+    "Plusieurs sommes égales s’ajoutent.",
+    "Compte la somme hebdomadaire pour chacune des quatre semaines."
+  ],
+  "it": [
+    "Metti da parte 3 franchi a settimana per quattro settimane senza spenderli. Quanto risparmi?",
+    "12 franchi",
+    "7 franchi",
+    "4 franchi",
+    "3 franchi",
+    "Si sommano più importi uguali.",
+    "Conta la somma settimanale per ciascuna delle quattro settimane."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-48",
+  "reason": "Read a discount as a reduction from original price.",
+  "de": [
+    "Ein Spiel kostet zuerst 30 Franken und wird um 8 Franken reduziert. Wie hoch ist der neue Preis?",
+    "22 Franken",
+    "38 Franken",
+    "8 Franken",
+    "30 Franken",
+    "Eine Reduktion senkt den bisherigen Preis.",
+    "Ziehe den Rabatt vom ursprünglichen Betrag ab."
+  ],
+  "en": [
+    "A game originally costs 30 francs and is reduced by 8 francs. What is the new price?",
+    "22 francs",
+    "38 francs",
+    "8 francs",
+    "30 francs",
+    "A reduction lowers the previous price.",
+    "Subtract the discount from the original amount."
+  ],
+  "fr": [
+    "Un jeu coûte d’abord 30 francs puis bénéficie d’une réduction de 8 francs. Quel est le nouveau prix ?",
+    "22 francs",
+    "38 francs",
+    "8 francs",
+    "30 francs",
+    "Une réduction baisse le prix précédent.",
+    "Soustrais la remise du montant initial."
+  ],
+  "it": [
+    "Un gioco costa inizialmente 30 franchi e viene ridotto di 8 franchi. Qual è il nuovo prezzo?",
+    "22 franchi",
+    "38 franchi",
+    "8 franchi",
+    "30 franchi",
+    "Una riduzione abbassa il prezzo precedente.",
+    "Sottrai lo sconto dall’importo iniziale."
+  ]
+},
+{
+  "key": "5/science/wirtschaft-handel-5/wh5-50",
+  "reason": "Teach evaluating repair information rather than universal repair claims. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Was hilft dir zu entscheiden, ob du einen Gegenstand reparieren lässt?",
+    "Kosten, Sicherheit und voraussichtliche weitere Nutzungsdauer vergleichen",
+    "Nur den Neukaufpreis betrachten und den Reparaturpreis weglassen",
+    "Nur den Reparaturpreis beachten und die Sicherheit ignorieren",
+    "Nur das Alter betrachten und den tatsächlichen Zustand ignorieren",
+    "Eine gute Entscheidung braucht Angaben zum Gegenstand und zur Reparatur.",
+    "Der niedrigste Preis allein beantwortet nicht jede wichtige Frage."
+  ],
+  "en": [
+    "What helps you decide whether to have an item repaired?",
+    "Compare cost, safety and likely remaining useful life",
+    "Look only at replacement price and omit repair cost",
+    "Consider only repair cost and ignore safety",
+    "Consider only age and ignore actual condition",
+    "A good decision needs information about the item and the repair.",
+    "The lowest price alone does not answer every important question."
+  ],
+  "fr": [
+    "Qu’est-ce qui aide à décider de faire réparer un objet ?",
+    "Comparer coût, sécurité et durée d’utilisation restante probable",
+    "Regarder seulement le prix du neuf sans celui de la réparation",
+    "Considérer seulement le coût de réparation sans la sécurité",
+    "Considérer seulement l’âge sans l’état réel",
+    "Une bonne décision demande des informations sur l’objet et la réparation.",
+    "Le prix le plus bas ne répond pas à toutes les questions importantes."
+  ],
+  "it": [
+    "Cosa aiuta a decidere se far riparare un oggetto?",
+    "Confrontare costo, sicurezza e probabile durata d’uso restante",
+    "Guardare solo il prezzo del nuovo senza quello della riparazione",
+    "Considerare solo il costo ignorando la sicurezza",
+    "Considerare solo l’età ignorando lo stato reale",
+    "Una buona decisione richiede informazioni sull’oggetto e sulla riparazione.",
+    "Il prezzo più basso non risponde a ogni domanda importante."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-2",
+  "reason": "Apply urbanisation concept without specialised written definition.",
+  "de": [
+    "Früher lebten 40 von 100 Menschen eines Landes in Städten, heute 60 von 100. Was hat zugenommen?",
+    "Der Anteil der Stadtbevölkerung",
+    "Der Anteil der Landbevölkerung",
+    "Die Fläche jedes einzelnen Hauses",
+    "Die Entfernung zwischen allen Städten",
+    "Vergleiche die Anteile bei derselben Gesamtzahl.",
+    "Die Angaben beschreiben Wohnorte, nicht die Grösse von Gebäuden."
+  ],
+  "en": [
+    "Previously 40 in 100 people in a country lived in cities; now 60 in 100 do. What has increased?",
+    "The share of people living in cities",
+    "The share living in rural areas",
+    "The floor area of every house",
+    "The distance between all cities",
+    "Compare shares with the same total.",
+    "The figures describe where people live, not building size."
+  ],
+  "fr": [
+    "Autrefois 40 personnes sur 100 vivaient en ville dans un pays, aujourd’hui 60 sur 100. Qu’est-ce qui augmente ?",
+    "La part de la population urbaine",
+    "La part de la population rurale",
+    "La surface de chaque maison",
+    "La distance entre toutes les villes",
+    "Compare les parts avec le même total.",
+    "Les chiffres décrivent le lieu de vie, pas la taille des bâtiments."
+  ],
+  "it": [
+    "Prima 40 persone su 100 vivevano in città in un paese, oggi 60 su 100. Cosa aumenta?",
+    "La quota di popolazione urbana",
+    "La quota di popolazione rurale",
+    "La superficie di ogni casa",
+    "La distanza tra tutte le città",
+    "Confronta quote con lo stesso totale.",
+    "I dati descrivono dove si vive, non la grandezza degli edifici."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-4",
+  "reason": "Replace growth formula recall with a small-number example.",
+  "de": [
+    "In einem Dorf werden 12 Kinder geboren und 7 Menschen sterben. Niemand zieht um. Wie verändert sich die Einwohnerzahl?",
+    "Sie steigt um 5",
+    "Sie sinkt um 5",
+    "Sie steigt um 19",
+    "Sie bleibt gleich",
+    "Geburten und Sterbefälle wirken in verschiedene Richtungen.",
+    "Berücksichtige beide Zahlen, aber keine Zu- oder Wegzüge."
+  ],
+  "en": [
+    "In a village 12 children are born and 7 people die. Nobody moves in or out. How does the population change?",
+    "It increases by 5",
+    "It decreases by 5",
+    "It increases by 19",
+    "It stays the same",
+    "Births and deaths act in opposite directions.",
+    "Use both numbers, with no arrivals or departures."
+  ],
+  "fr": [
+    "Dans un village, 12 enfants naissent et 7 personnes meurent. Personne ne déménage. Comment évolue la population ?",
+    "Elle augmente de 5",
+    "Elle diminue de 5",
+    "Elle augmente de 19",
+    "Elle reste identique",
+    "Naissances et décès agissent en sens opposés.",
+    "Utilise les deux nombres sans arrivées ni départs."
+  ],
+  "it": [
+    "In un villaggio nascono 12 bambini e muoiono 7 persone. Nessuno si trasferisce. Come cambia la popolazione?",
+    "Aumenta di 5",
+    "Diminuisce di 5",
+    "Aumenta di 19",
+    "Resta uguale",
+    "Nascite e decessi agiscono in direzioni opposte.",
+    "Usa entrambi i numeri senza arrivi o partenze."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-6",
+  "reason": "Teach comparing urban populations instead of specialised megacity threshold.",
+  "de": [
+    "Welche Stadtregion hat die meisten Einwohner?",
+    "Eine mit 12 Millionen",
+    "Eine mit 8 Millionen",
+    "Eine mit 3 Millionen",
+    "Eine mit 1 Million",
+    "Alle Zahlen verwenden dieselbe Einheit.",
+    "Vergleiche die angegebenen Einwohnerzahlen."
+  ],
+  "en": [
+    "Which urban region has the most residents?",
+    "One with 12 million",
+    "One with 8 million",
+    "One with 3 million",
+    "One with 1 million",
+    "All numbers use the same unit.",
+    "Compare the stated populations."
+  ],
+  "fr": [
+    "Quelle région urbaine compte le plus d’habitants ?",
+    "Celle de 12 millions",
+    "Celle de 8 millions",
+    "Celle de 3 millions",
+    "Celle de 1 million",
+    "Tous les nombres utilisent la même unité.",
+    "Compare les populations indiquées."
+  ],
+  "it": [
+    "Quale regione urbana ha più abitanti?",
+    "Quella con 12 milioni",
+    "Quella con 8 milioni",
+    "Quella con 3 milioni",
+    "Quella con 1 milione",
+    "Tutti i numeri usano la stessa unità.",
+    "Confronta le popolazioni indicate."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-8",
+  "reason": "Replace alarmist population-explosion label with planning consequence.",
+  "de": [
+    "In einer Gemeinde leben zunehmend mehr Kinder. Was sollte sie bei der Planung prüfen?",
+    "Ob genügend Schulplätze vorhanden sind",
+    "Ob alle Schulhäuser geschlossen werden können",
+    "Ob jede Familie denselben Beruf hat",
+    "Ob der Ortsname länger werden muss",
+    "Die Zahl der Nutzer beeinflusst den Bedarf an Einrichtungen.",
+    "Denke an eine Einrichtung, die Kinder regelmässig besuchen."
+  ],
+  "en": [
+    "More children are living in a municipality. What should planners check?",
+    "Whether there are enough school places",
+    "Whether all schools can be closed",
+    "Whether every family has the same occupation",
+    "Whether the place name must become longer",
+    "The number of users affects the need for facilities.",
+    "Think of a facility children attend regularly."
+  ],
+  "fr": [
+    "Une commune compte de plus en plus d’enfants. Que doit-elle vérifier ?",
+    "S’il y a assez de places à l’école",
+    "Si toutes les écoles peuvent fermer",
+    "Si chaque famille a le même métier",
+    "Si le nom du village doit être plus long",
+    "Le nombre d’usagers influence les besoins en équipements.",
+    "Pense à un établissement fréquenté régulièrement par les enfants."
+  ],
+  "it": [
+    "In un comune vivono sempre più bambini. Cosa va verificato?",
+    "Se ci sono abbastanza posti a scuola",
+    "Se tutte le scuole possono chiudere",
+    "Se ogni famiglia ha lo stesso mestiere",
+    "Se il nome del paese deve allungarsi",
+    "Il numero di utenti influisce sul bisogno di strutture.",
+    "Pensa a una struttura frequentata regolarmente dai bambini."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-10",
+  "reason": "Focus on living conditions rather than stigmatising residents. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Welche Verbesserung hilft einem Wohngebiet ohne sichere Trinkwasserversorgung?",
+    "Sauberes Trinkwasser zuverlässig zugänglich machen",
+    "Nur zusätzliche Strassen bauen, ohne die Wasserversorgung zu ändern",
+    "Nur einen neuen Parkplatz einrichten",
+    "Nur mehr Werbeflächen an den Häusern anbringen",
+    "Beziehe die Massnahme auf das genannte Versorgungsproblem.",
+    "Gesundheit hängt auch von grundlegender Infrastruktur ab."
+  ],
+  "en": [
+    "What improvement helps a neighbourhood without safe drinking water?",
+    "Provide reliable access to clean drinking water",
+    "Only build more roads without changing water supply",
+    "Only create a new car park",
+    "Only add advertising space to houses",
+    "Match the action to the stated supply problem.",
+    "Health also depends on basic infrastructure."
+  ],
+  "fr": [
+    "Quelle amélioration aide un quartier sans eau potable sûre ?",
+    "Assurer un accès fiable à l’eau potable",
+    "Construire seulement des routes sans changer l’accès à l’eau",
+    "Créer seulement un parking",
+    "Ajouter seulement de la publicité aux maisons",
+    "Relie l’action au problème d’approvisionnement indiqué.",
+    "La santé dépend aussi des infrastructures de base."
+  ],
+  "it": [
+    "Quale miglioramento aiuta un quartiere senza acqua potabile sicura?",
+    "Garantire accesso affidabile ad acqua potabile",
+    "Costruire solo strade senza cambiare l’acqua disponibile",
+    "Creare solo un parcheggio",
+    "Aggiungere solo pubblicità alle case",
+    "Collega l’azione al problema di approvvigionamento indicato.",
+    "La salute dipende anche dalle infrastrutture di base."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-12",
+  "reason": "Replace mortality-rate definition with fair population comparison. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Du vergleichst Todesfälle in zwei unterschiedlich grossen Gemeinden. Was ist wichtig?",
+    "Die Einwohnerzahl und denselben Zeitraum berücksichtigen",
+    "Nur die absolute Zahl ohne Bevölkerungsgrösse vergleichen",
+    "Verschiedene Jahre ohne Kennzeichnung miteinander vergleichen",
+    "Die Zahl der Todesfälle durch die Gemeindefläche statt die Bevölkerung teilen",
+    "Eine grössere Gemeinde kann mehr Fälle haben, ohne einen höheren Anteil zu haben.",
+    "Für einen fairen Vergleich müssen Bezugsgrösse und Zeit passen."
+  ],
+  "en": [
+    "You compare deaths in two municipalities of different sizes. What matters?",
+    "Account for population size and use the same period",
+    "Compare only absolute numbers without population size",
+    "Compare different years without noting the difference",
+    "Divide deaths by land area rather than population",
+    "A larger place can have more cases without a higher proportion.",
+    "A fair comparison needs matching reference sizes and periods."
+  ],
+  "fr": [
+    "Tu compares les décès de deux communes de tailles différentes. Qu’est-ce qui compte ?",
+    "Tenir compte de la population et de la même période",
+    "Comparer seulement les nombres absolus sans population",
+    "Comparer des années différentes sans le signaler",
+    "Diviser les décès par la superficie plutôt que par la population",
+    "Un lieu plus grand peut avoir plus de cas sans proportion plus élevée.",
+    "Il faut des bases de comparaison et des périodes adaptées."
+  ],
+  "it": [
+    "Confronti i decessi di due comuni di grandezza diversa. Cosa conta?",
+    "Considerare la popolazione e lo stesso periodo",
+    "Confrontare solo numeri assoluti senza popolazione",
+    "Confrontare anni diversi senza segnalarlo",
+    "Dividere i decessi per la superficie invece che per la popolazione",
+    "Un luogo più grande può avere più casi senza una quota maggiore.",
+    "Servono basi di confronto e periodi adatti."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-16",
+  "reason": "Replace push-factor terminology with a concrete involuntary migration example.",
+  "de": [
+    "Welche Situation beschreibt eine Flucht vor Gefahr?",
+    "Eine Familie verlässt wegen eines Krieges ihr Zuhause",
+    "Eine Familie macht einen Wochenendausflug",
+    "Eine Person fährt täglich zur Arbeit",
+    "Eine Klasse besucht ein Museum",
+    "Achte auf den Grund und darauf, ob eine Rückkehr gefahrlos möglich ist.",
+    "Eine Reise zur Erholung ist etwas anderes als das Suchen von Schutz."
+  ],
+  "en": [
+    "Which situation describes fleeing danger?",
+    "A family leaves home because of war",
+    "A family takes a weekend trip",
+    "A person commutes to work daily",
+    "A class visits a museum",
+    "Consider the reason and whether returning is safe.",
+    "Travelling for leisure differs from seeking protection."
+  ],
+  "fr": [
+    "Quelle situation décrit une fuite face au danger ?",
+    "Une famille quitte son foyer à cause d’une guerre",
+    "Une famille part en excursion le week-end",
+    "Une personne se rend chaque jour au travail",
+    "Une classe visite un musée",
+    "Considère la raison et la possibilité d’un retour sûr.",
+    "Voyager pour se détendre diffère de chercher une protection."
+  ],
+  "it": [
+    "Quale situazione descrive una fuga dal pericolo?",
+    "Una famiglia lascia casa a causa di una guerra",
+    "Una famiglia fa una gita nel fine settimana",
+    "Una persona va ogni giorno al lavoro",
+    "Una classe visita un museo",
+    "Considera il motivo e se tornare è sicuro.",
+    "Viaggiare per svago è diverso dal cercare protezione."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-18",
+  "reason": "Explain family remittances without specialist English terminology.",
+  "de": [
+    "Eine Person arbeitet im Ausland und schickt Geld an ihre Familie im Herkunftsland. Was beschreibt diese Zahlung?",
+    "Finanzielle Unterstützung der Familie über eine Landesgrenze",
+    "Eine tägliche Fahrt zum Arbeitsplatz",
+    "Eine Änderung der Staatsgrenze",
+    "Eine automatische Einbürgerung der Familie",
+    "Achte darauf, was tatsächlich von einem Land ins andere gelangt.",
+    "Eine Geldüberweisung ändert nicht automatisch Wohnort oder Staatsangehörigkeit."
+  ],
+  "en": [
+    "A person works abroad and sends money to family in their country of origin. What does this describe?",
+    "Financial support for family across a national border",
+    "A daily commute to work",
+    "A change to a national border",
+    "Automatic citizenship for the family",
+    "Notice what actually moves from one country to another.",
+    "A money transfer does not automatically change residence or citizenship."
+  ],
+  "fr": [
+    "Une personne travaille à l’étranger et envoie de l’argent à sa famille dans son pays d’origine. Que décrit ce paiement ?",
+    "Un soutien financier familial au-delà d’une frontière",
+    "Un trajet quotidien au travail",
+    "Un changement de frontière",
+    "Une naturalisation automatique de la famille",
+    "Observe ce qui passe réellement d’un pays à l’autre.",
+    "Un transfert d’argent ne change pas automatiquement domicile ou nationalité."
+  ],
+  "it": [
+    "Una persona lavora all’estero e invia denaro alla famiglia nel paese d’origine. Cosa descrive il pagamento?",
+    "Un sostegno economico familiare oltre un confine",
+    "Un viaggio quotidiano al lavoro",
+    "Un cambiamento del confine",
+    "Una cittadinanza automatica per la famiglia",
+    "Osserva cosa passa davvero da un paese all’altro.",
+    "Un trasferimento di denaro non cambia automaticamente residenza o cittadinanza."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-20",
+  "reason": "Replace reurbanisation jargon with observed residential movement.",
+  "de": [
+    "Viele Menschen ziehen aus Vororten in Wohnungen im Stadtzentrum. Welche Bewegung wird beschrieben?",
+    "Ein Zuzug in das Stadtzentrum",
+    "Ein Wegzug aus dem Stadtzentrum ins Umland",
+    "Ein Umzug zwischen zwei Vororten",
+    "Eine tägliche Fahrt ohne Wohnortwechsel",
+    "Achte auf den neuen Wohnort.",
+    "Ein Umzug verändert den Wohnort, eine Pendelfahrt nicht."
+  ],
+  "en": [
+    "Many people move from suburbs into city-centre flats. What movement is described?",
+    "People moving into the city centre",
+    "People leaving the centre for the outskirts",
+    "People moving between two suburbs",
+    "A daily journey without changing residence",
+    "Notice the new place of residence.",
+    "Moving changes where someone lives; commuting does not."
+  ],
+  "fr": [
+    "Beaucoup de personnes quittent la banlieue pour habiter au centre-ville. Quel mouvement est décrit ?",
+    "Une arrivée d’habitants au centre-ville",
+    "Un départ du centre vers la périphérie",
+    "Un déménagement entre deux banlieues",
+    "Un trajet quotidien sans changement de domicile",
+    "Observe le nouveau domicile.",
+    "Un déménagement change le domicile, pas un trajet pendulaire."
+  ],
+  "it": [
+    "Molte persone si trasferiscono dalla periferia al centro città. Quale movimento è descritto?",
+    "Un arrivo di abitanti nel centro città",
+    "Una partenza dal centro verso la periferia",
+    "Un trasloco tra due periferie",
+    "Un viaggio quotidiano senza cambio di residenza",
+    "Osserva la nuova residenza.",
+    "Un trasloco cambia il domicilio, il pendolarismo no."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-22",
+  "reason": "Explain settlement fragmentation through a concrete land-use pattern.",
+  "de": [
+    "Welche Bebauung beansprucht zusätzliche bisher unbebaute Fläche?",
+    "Neue Häuser entstehen auf Wiesen ausserhalb des Dorfes",
+    "Ein leerstehendes Haus im Dorf wird wieder genutzt",
+    "Eine Wohnung in einem bestehenden Haus wird renoviert",
+    "Ein Laden zieht in ein bereits vorhandenes Gebäude",
+    "Vergleiche Neubau auf freier Fläche und Nutzung bestehender Gebäude.",
+    "Achte auf den bisherigen Zustand des Bodens."
+  ],
+  "en": [
+    "Which development takes up additional previously undeveloped land?",
+    "New houses are built on meadows outside the village",
+    "An empty village house is used again",
+    "A flat in an existing house is renovated",
+    "A shop moves into an existing building",
+    "Compare building on open land with using existing buildings.",
+    "Consider the land’s previous condition."
+  ],
+  "fr": [
+    "Quel aménagement occupe un terrain jusque-là non bâti ?",
+    "Des maisons neuves sont construites sur des prés hors du village",
+    "Une maison vide du village est réutilisée",
+    "Un appartement existant est rénové",
+    "Un magasin s’installe dans un bâtiment existant",
+    "Compare construction sur terrain libre et réutilisation.",
+    "Considère l’état antérieur du sol."
+  ],
+  "it": [
+    "Quale intervento occupa terreno prima non edificato?",
+    "Nuove case sorgono sui prati fuori dal villaggio",
+    "Una casa vuota nel villaggio viene riutilizzata",
+    "Un appartamento esistente viene ristrutturato",
+    "Un negozio entra in un edificio esistente",
+    "Confronta costruzione su terreno libero e riutilizzo.",
+    "Considera lo stato precedente del suolo."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-24",
+  "reason": "Distinguish displacement within a country from crossing borders.",
+  "de": [
+    "Eine Familie flieht vor Gewalt in eine andere Region desselben Landes. Hat sie dabei eine Staatsgrenze überschritten?",
+    "Nein, sie ist innerhalb des Landes geflohen",
+    "Ja, jeder Regionswechsel ist ein Landeswechsel",
+    "Ja, jede Flucht führt über eine Staatsgrenze",
+    "Das hängt nur von der Entfernung ab",
+    "Regionen können zu demselben Staat gehören.",
+    "Unterscheide eine innerstaatliche Grenze von einer Staatsgrenze."
+  ],
+  "en": [
+    "A family flees violence to another region of the same country. Has it crossed an international border?",
+    "No, it fled within the country",
+    "Yes, every regional move changes country",
+    "Yes, all flight crosses an international border",
+    "It depends only on distance",
+    "Regions can belong to the same country.",
+    "Distinguish an internal boundary from an international border."
+  ],
+  "fr": [
+    "Une famille fuit la violence vers une autre région du même pays. A-t-elle franchi une frontière internationale ?",
+    "Non, elle a fui à l’intérieur du pays",
+    "Oui, changer de région signifie changer de pays",
+    "Oui, toute fuite franchit une frontière internationale",
+    "Cela dépend seulement de la distance",
+    "Des régions peuvent appartenir au même pays.",
+    "Distingue limite interne et frontière internationale."
+  ],
+  "it": [
+    "Una famiglia fugge dalla violenza in un’altra regione dello stesso paese. Ha attraversato un confine internazionale?",
+    "No, è fuggita all’interno del paese",
+    "Sì, cambiare regione significa cambiare paese",
+    "Sì, ogni fuga supera un confine internazionale",
+    "Dipende solo dalla distanza",
+    "Regioni diverse possono appartenere allo stesso paese.",
+    "Distingui un limite interno da un confine internazionale."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-28",
+  "reason": "Explain green-space function with qualified benefit.",
+  "de": [
+    "Wozu können zusammenhängende Grünflächen rund um eine Stadt beitragen?",
+    "Erholungsräume und Lebensräume erhalten",
+    "Alle Verkehrswege innerhalb der Stadt ersetzen",
+    "Jedes Gebäude automatisch mit Strom versorgen",
+    "Alle Niederschläge verhindern",
+    "Denke an Menschen und andere Lebewesen.",
+    "Unbebaute Bereiche können mehrere Funktionen zugleich erfüllen."
+  ],
+  "en": [
+    "What can connected green spaces around a city help do?",
+    "Preserve recreation areas and habitats",
+    "Replace every transport route within the city",
+    "Automatically power every building",
+    "Prevent all rainfall",
+    "Think of people and other living things.",
+    "Undeveloped areas can serve several purposes at once."
+  ],
+  "fr": [
+    "À quoi peuvent contribuer des espaces verts reliés autour d’une ville ?",
+    "Préserver des lieux de détente et des habitats",
+    "Remplacer toutes les voies de transport urbaines",
+    "Alimenter automatiquement chaque bâtiment en électricité",
+    "Empêcher toutes les pluies",
+    "Pense aux personnes et aux autres êtres vivants.",
+    "Des espaces non bâtis peuvent remplir plusieurs fonctions."
+  ],
+  "it": [
+    "A cosa possono contribuire spazi verdi collegati attorno a una città?",
+    "Conservare aree ricreative e habitat",
+    "Sostituire tutte le vie di trasporto urbane",
+    "Fornire automaticamente elettricità a ogni edificio",
+    "Impedire tutte le piogge",
+    "Pensa alle persone e agli altri esseri viventi.",
+    "Aree non edificate possono avere più funzioni."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-30",
+  "reason": "Apply population decline to two measured counts.",
+  "de": [
+    "Eine Gemeinde hatte 900 Einwohner und später 850. Was zeigen diese Zahlen?",
+    "Die Einwohnerzahl ist um 50 gesunken",
+    "Die Einwohnerzahl ist um 50 gestiegen",
+    "Genau 50 Menschen sind sicher gestorben",
+    "Genau 50 Menschen sind sicher weggezogen",
+    "Die Zahlen zeigen eine Veränderung, aber nicht deren Ursachen.",
+    "Unterscheide den feststellbaren Unterschied von einer Erklärung dafür."
+  ],
+  "en": [
+    "A municipality had 900 residents and later 850. What do these figures show?",
+    "The population decreased by 50",
+    "The population increased by 50",
+    "Exactly 50 people certainly died",
+    "Exactly 50 people certainly moved away",
+    "The figures show a change, not its causes.",
+    "Distinguish the measured difference from an explanation."
+  ],
+  "fr": [
+    "Une commune avait 900 habitants puis 850. Que montrent ces chiffres ?",
+    "La population a diminué de 50",
+    "La population a augmenté de 50",
+    "Exactement 50 personnes sont certainement mortes",
+    "Exactement 50 personnes sont certainement parties",
+    "Les chiffres montrent un changement, pas ses causes.",
+    "Distingue la différence mesurée de son explication."
+  ],
+  "it": [
+    "Un comune aveva 900 abitanti e poi 850. Cosa mostrano i dati?",
+    "La popolazione è diminuita di 50",
+    "La popolazione è aumentata di 50",
+    "Sono sicuramente morte esattamente 50 persone",
+    "Sono sicuramente partite esattamente 50 persone",
+    "I dati mostrano un cambiamento, non le cause.",
+    "Distingui la differenza misurata dalla spiegazione."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-32",
+  "reason": "Replace smart-city label with a concrete digital public service. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Welche digitale Anzeige hilft beim Planen einer Busfahrt?",
+    "Die erwartete Ankunftszeit des nächsten Busses",
+    "Die Ankunftszeit eines Busses vom vergangenen Monat",
+    "Die Nummer eines Busses auf einer anderen Linie ohne Fahrplan",
+    "Die Anzahl bereits verkaufter Fahrkarten ohne Abfahrtszeit",
+    "Überlege, welche Information deine Wartezeit betrifft.",
+    "Die Anzeige sollte zur aktuellen Fahrt passen."
+  ],
+  "en": [
+    "Which digital display helps plan a bus journey?",
+    "The next bus’s expected arrival time",
+    "A bus arrival time from last month",
+    "A bus number on another route without a timetable",
+    "The number of tickets already sold without a departure time",
+    "Consider what information concerns your waiting time.",
+    "The display should relate to the current journey."
+  ],
+  "fr": [
+    "Quelle information numérique aide à prévoir un trajet en bus ?",
+    "L’heure d’arrivée prévue du prochain bus",
+    "Une arrivée de bus du mois passé",
+    "Le numéro d’un bus d’une autre ligne sans horaire",
+    "Le nombre de billets vendus sans heure de départ",
+    "Pense à l’information liée à ton attente.",
+    "L’affichage doit concerner le trajet actuel."
+  ],
+  "it": [
+    "Quale informazione digitale aiuta a pianificare un viaggio in bus?",
+    "L’arrivo previsto del prossimo bus",
+    "Un arrivo del bus del mese scorso",
+    "Il numero di un bus di un’altra linea senza orario",
+    "Il numero di biglietti venduti senza partenza",
+    "Pensa all’informazione legata all’attesa.",
+    "L’indicazione dovrebbe riguardare il viaggio attuale."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-34",
+  "reason": "Differentiate vacant housing from temporary absence.",
+  "de": [
+    "Welche Wohnung steht leer?",
+    "Eine unbewohnte Wohnung, die zur Vermietung angeboten wird",
+    "Eine Wohnung, deren Bewohner gerade einkaufen",
+    "Eine Wohnung, deren Bewohner in den Ferien sind",
+    "Eine Wohnung, deren Bewohner tagsüber arbeiten",
+    "Leerstand betrifft die Nutzung als Wohnraum, nicht jede kurze Abwesenheit.",
+    "Prüfe, ob dort weiterhin jemand wohnt."
+  ],
+  "en": [
+    "Which flat is vacant?",
+    "An unoccupied flat being offered for rent",
+    "A flat whose residents are shopping",
+    "A flat whose residents are on holiday",
+    "A flat whose residents work during the day",
+    "Vacancy concerns residential use, not every short absence.",
+    "Check whether someone still lives there."
+  ],
+  "fr": [
+    "Quel appartement est vacant ?",
+    "Un appartement inoccupé proposé à la location",
+    "Un appartement dont les habitants font les courses",
+    "Un appartement dont les habitants sont en vacances",
+    "Un appartement dont les habitants travaillent le jour",
+    "La vacance concerne l’occupation du logement, pas toute absence brève.",
+    "Vérifie si quelqu’un y habite toujours."
+  ],
+  "it": [
+    "Quale appartamento è sfitto?",
+    "Un appartamento non abitato offerto in affitto",
+    "Un appartamento i cui abitanti fanno la spesa",
+    "Un appartamento i cui abitanti sono in vacanza",
+    "Un appartamento i cui abitanti lavorano di giorno",
+    "Conta l’uso come abitazione, non ogni breve assenza.",
+    "Controlla se qualcuno vi abita ancora."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-36",
+  "reason": "Replace misplaced conflict template with respectful newcomer inclusion.",
+  "de": [
+    "Ein neues Kind kennt die Wege im Schulhaus noch nicht. Wie kannst du helfen?",
+    "Die wichtigen Räume zeigen und Fragen ermöglichen",
+    "Annehmen, es kenne bereits jeden Raum",
+    "Nur über das Kind statt mit ihm sprechen",
+    "Es wegen seiner Fragen auslachen",
+    "Überlege, welche Information in einer neuen Umgebung nützt.",
+    "Hilfe sollte Orientierung geben und die Person einbeziehen."
+  ],
+  "en": [
+    "A new child does not yet know the school layout. How can you help?",
+    "Show important rooms and welcome questions",
+    "Assume they already know every room",
+    "Talk only about the child rather than to them",
+    "Laugh at their questions",
+    "Consider what information helps in an unfamiliar place.",
+    "Help should offer guidance and include the person."
+  ],
+  "fr": [
+    "Un nouvel enfant ne connaît pas encore l’école. Comment l’aider ?",
+    "Montrer les salles importantes et accueillir ses questions",
+    "Supposer qu’il connaît déjà chaque salle",
+    "Parler seulement de lui et non avec lui",
+    "Se moquer de ses questions",
+    "Pense aux informations utiles dans un lieu nouveau.",
+    "L’aide doit orienter et inclure la personne."
+  ],
+  "it": [
+    "Un nuovo bambino non conosce ancora la scuola. Come puoi aiutare?",
+    "Mostrare le stanze importanti e accogliere domande",
+    "Pensare che conosca già ogni stanza",
+    "Parlare solo di lui e non con lui",
+    "Ridere delle sue domande",
+    "Pensa alle informazioni utili in un luogo nuovo.",
+    "L’aiuto dovrebbe orientare e includere la persona."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-38",
+  "reason": "Replace duplicate sprawl definition with settlement access consequence. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Neue Wohnhäuser liegen weit von Schule, Läden und Haltestellen entfernt. Was sollte die Planung besonders prüfen?",
+    "Wie die Menschen diese Ziele erreichen können",
+    "Nur die Anzahl Häuser ohne Wege und Verbindungen prüfen",
+    "Nur die Grundstückspreise vergleichen und Erreichbarkeit auslassen",
+    "Nur die Autowege prüfen und alle anderen Verkehrsarten weglassen",
+    "Wohnorte sind mit alltäglichen Wegen verbunden.",
+    "Berücksichtige auch Menschen, die kein Auto fahren."
+  ],
+  "en": [
+    "New homes are far from schools, shops and bus stops. What should planners especially check?",
+    "How people can reach these destinations",
+    "Check only house numbers without routes or connections",
+    "Compare only land prices and leave out accessibility",
+    "Check only car routes and omit all other travel modes",
+    "Where people live affects everyday journeys.",
+    "Include people who do not drive."
+  ],
+  "fr": [
+    "Des logements neufs sont loin des écoles, commerces et arrêts. Que faut-il surtout vérifier ?",
+    "Comment les habitants peuvent rejoindre ces lieux",
+    "Examiner seulement le nombre de maisons sans voies ni liaisons",
+    "Comparer seulement les prix fonciers sans accessibilité",
+    "Examiner seulement les trajets automobiles",
+    "Le domicile influence les trajets quotidiens.",
+    "Considère aussi les personnes qui ne conduisent pas."
+  ],
+  "it": [
+    "Nuove case sono lontane da scuole, negozi e fermate. Cosa va soprattutto verificato?",
+    "Come gli abitanti possono raggiungere questi luoghi",
+    "Esaminare solo il numero di case senza percorsi o collegamenti",
+    "Confrontare solo prezzi dei terreni senza accessibilità",
+    "Esaminare solo percorsi automobilistici",
+    "La residenza influisce sui viaggi quotidiani.",
+    "Considera anche chi non guida."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-40",
+  "reason": "Replace epidemiological transition with accessible public-health infrastructure.",
+  "de": [
+    "Warum sind Abwasserleitungen und sauberes Trinkwasser für eine Siedlung wichtig?",
+    "Sie helfen, die Verbreitung bestimmter Krankheiten zu verringern",
+    "Sie ersetzen jede medizinische Behandlung",
+    "Sie verhindern jede mögliche Erkrankung",
+    "Sie machen Händewaschen grundsätzlich unnötig",
+    "Denke an Krankheitserreger, die mit verunreinigtem Wasser übertragen werden.",
+    "Eine Schutzmassnahme senkt Risiken, beseitigt aber nicht alle."
+  ],
+  "en": [
+    "Why are sewage systems and clean drinking water important in a settlement?",
+    "They help reduce the spread of certain diseases",
+    "They replace all medical treatment",
+    "They prevent every possible illness",
+    "They make handwashing unnecessary",
+    "Think of pathogens spread through contaminated water.",
+    "A protective measure reduces risks but does not remove them all."
+  ],
+  "fr": [
+    "Pourquoi les égouts et l’eau potable sont-ils importants dans une localité ?",
+    "Ils aident à réduire certaines maladies",
+    "Ils remplacent tout traitement médical",
+    "Ils empêchent toute maladie possible",
+    "Ils rendent le lavage des mains inutile",
+    "Pense aux microbes transmis par l’eau contaminée.",
+    "Une protection réduit les risques sans tous les supprimer."
+  ],
+  "it": [
+    "Perché fognature e acqua potabile sono importanti in un insediamento?",
+    "Aiutano a ridurre la diffusione di alcune malattie",
+    "Sostituiscono ogni trattamento medico",
+    "Impediscono ogni possibile malattia",
+    "Rendono inutile lavarsi le mani",
+    "Pensa ai microrganismi trasmessi dall’acqua contaminata.",
+    "Una protezione riduce i rischi senza eliminarli tutti."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-42",
+  "reason": "Show unchanged total does not imply no births, deaths or migration.",
+  "de": [
+    "Die Einwohnerzahl einer Gemeinde bleibt ein Jahr lang gleich. Was ist trotzdem möglich?",
+    "Menschen wurden geboren, starben oder zogen um, und die Veränderungen glichen sich aus",
+    "Es wurde sicher niemand geboren",
+    "Es ist sicher niemand gestorben",
+    "Es ist sicher niemand zugezogen",
+    "Eine gleiche Gesamtzahl kann sich aus verschiedenen Veränderungen ergeben.",
+    "Betrachte Zu- und Abnahmen zusammen."
+  ],
+  "en": [
+    "A municipality’s population stays the same over a year. What is still possible?",
+    "Births, deaths and moves occurred, with changes balancing out",
+    "Nobody was certainly born",
+    "Nobody certainly died",
+    "Nobody certainly moved in",
+    "The same total can result from different changes.",
+    "Consider increases and decreases together."
+  ],
+  "fr": [
+    "La population d’une commune reste identique pendant un an. Qu’est-ce qui reste possible ?",
+    "Des naissances, décès et déménagements se sont compensés",
+    "Il n’y a certainement eu aucune naissance",
+    "Il n’y a certainement eu aucun décès",
+    "Personne n’est certainement arrivé",
+    "Le même total peut résulter de changements différents.",
+    "Considère ensemble augmentations et diminutions."
+  ],
+  "it": [
+    "La popolazione di un comune resta uguale per un anno. Cosa è ancora possibile?",
+    "Nascite, decessi e trasferimenti si sono compensati",
+    "Non è sicuramente nato nessuno",
+    "Non è sicuramente morto nessuno",
+    "Non è sicuramente arrivato nessuno",
+    "Lo stesso totale può derivare da cambiamenti diversi.",
+    "Considera insieme aumenti e diminuzioni."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-44",
+  "reason": "Teach register purpose without collecting personal data.",
+  "de": [
+    "Wozu führt eine Gemeinde ein Einwohnerregister?",
+    "Um festzuhalten, wer in der Gemeinde wohnt",
+    "Um die Lieblingsfarbe jedes Besuchers zu bewerten",
+    "Um eine Wettervorhersage für jedes Haus zu erstellen",
+    "Um alle privaten Gespräche aufzuschreiben",
+    "Es geht um eine Verwaltungsaufgabe zum Wohnort.",
+    "Persönliche Daten sind nicht automatisch öffentlich zugänglich."
+  ],
+  "en": [
+    "Why does a municipality keep a residents’ register?",
+    "To record who lives in the municipality",
+    "To rate every visitor’s favourite colour",
+    "To forecast weather for every house",
+    "To write down all private conversations",
+    "This is an administrative task concerning residence.",
+    "Personal data is not automatically public."
+  ],
+  "fr": [
+    "Pourquoi une commune tient-elle un registre des habitants ?",
+    "Pour noter qui réside dans la commune",
+    "Pour évaluer la couleur préférée de chaque visiteur",
+    "Pour prévoir la météo de chaque maison",
+    "Pour écrire toutes les conversations privées",
+    "Il s’agit d’une tâche administrative liée au domicile.",
+    "Les données personnelles ne sont pas automatiquement publiques."
+  ],
+  "it": [
+    "Perché un comune tiene un registro degli abitanti?",
+    "Per registrare chi risiede nel comune",
+    "Per valutare il colore preferito di ogni visitatore",
+    "Per prevedere il tempo di ogni casa",
+    "Per scrivere tutte le conversazioni private",
+    "È un compito amministrativo legato alla residenza.",
+    "I dati personali non sono automaticamente pubblici."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-46",
+  "reason": "Teach planning as balancing land uses.",
+  "de": [
+    "Welche Frage gehört zur Raumplanung einer Gemeinde?",
+    "Wo sollen Wohnungen, Landwirtschaft und Erholungsflächen Platz haben?",
+    "Welche Lieblingsfarbe muss jeder Einwohner haben?",
+    "Welche Hobbys dürfen Familien nur zu Hause ausüben?",
+    "Welches Geburtstagsgeschenk bekommt jedes Kind?",
+    "Es geht um die Nutzung begrenzter Flächen.",
+    "Verschiedene Bedürfnisse können dieselbe Fläche betreffen."
+  ],
+  "en": [
+    "Which question belongs to a municipality’s land-use planning?",
+    "Where should housing, farming and recreation areas go?",
+    "What favourite colour must every resident have?",
+    "Which hobbies may families do only at home?",
+    "What birthday present does every child receive?",
+    "This concerns the use of limited land.",
+    "Different needs can concern the same area."
+  ],
+  "fr": [
+    "Quelle question relève de l’aménagement du territoire communal ?",
+    "Où prévoir logements, agriculture et espaces de détente ?",
+    "Quelle couleur chaque habitant doit-il préférer ?",
+    "Quels loisirs les familles doivent-elles pratiquer uniquement chez elles ?",
+    "Quel cadeau reçoit chaque enfant ?",
+    "Il s’agit d’utiliser des surfaces limitées.",
+    "Plusieurs besoins peuvent concerner le même espace."
+  ],
+  "it": [
+    "Quale domanda riguarda la pianificazione territoriale comunale?",
+    "Dove prevedere abitazioni, agricoltura e aree ricreative?",
+    "Quale colore deve preferire ogni abitante?",
+    "Quali hobby devono fare le famiglie solo a casa?",
+    "Quale regalo riceve ogni bambino?",
+    "Si tratta dell’uso di superfici limitate.",
+    "Bisogni diversi possono riguardare la stessa area."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-48",
+  "reason": "Replace hinterland-development terminology with rural transport connection. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Was kann einem abgelegenen Dorf den Zugang zu einer nahen Stadt erleichtern?",
+    "Eine verlässliche öffentliche Verkehrsverbindung",
+    "Eine Buslinie ohne Haltestelle im Dorf",
+    "Ein Fahrplan ohne tatsächlich angebotene Fahrten",
+    "Eine Strasse, die für alle Bewohner gesperrt bleibt",
+    "Denke an eine tatsächlich nutzbare Verbindung.",
+    "Erreichbarkeit hängt nicht allein davon ab, wie etwas auf einer Karte aussieht."
+  ],
+  "en": [
+    "What can improve a remote village’s access to a nearby town?",
+    "A reliable public transport connection",
+    "A bus route with no stop in the village",
+    "A timetable with no actual services",
+    "A road closed to all residents",
+    "Think of a connection people can actually use.",
+    "Accessibility is not just how something looks on a map."
+  ],
+  "fr": [
+    "Qu’est-ce qui peut améliorer l’accès d’un village isolé à une ville proche ?",
+    "Une liaison fiable en transports publics",
+    "Une ligne sans arrêt au village",
+    "Un horaire sans trajets réellement assurés",
+    "Une route fermée à tous les habitants",
+    "Pense à une liaison réellement utilisable.",
+    "L’accessibilité ne dépend pas seulement de l’apparence sur une carte."
+  ],
+  "it": [
+    "Cosa può migliorare l’accesso di un villaggio isolato a una città vicina?",
+    "Un collegamento affidabile di trasporto pubblico",
+    "Una linea senza fermata nel villaggio",
+    "Un orario senza corse reali",
+    "Una strada chiusa a tutti gli abitanti",
+    "Pensa a un collegamento realmente utilizzabile.",
+    "L’accessibilità non dipende solo dall’aspetto sulla carta."
+  ]
+},
+{
+  "key": "5/science/bevoelkerung-5/bv5-50",
+  "reason": "Replace terroir abstraction with observable settlement-location reasoning.",
+  "de": [
+    "Warum entstanden viele Siedlungen an Flüssen?",
+    "Wasser konnte Versorgung und Transport erleichtern",
+    "Jeder Fluss schützte sicher vor Hochwasser",
+    "An jedem Fluss war der Boden überall gleich",
+    "Flüsse machten alle Wege über Land überflüssig",
+    "Ein Standort kann Vorteile und Risiken zugleich haben.",
+    "Denke daran, wofür Menschen Wasser und Wasserwege nutzen."
+  ],
+  "en": [
+    "Why did many settlements develop beside rivers?",
+    "Water could support supply and transport",
+    "Every river guaranteed protection from floods",
+    "Soil was identical everywhere beside rivers",
+    "Rivers made all land routes unnecessary",
+    "A location can have benefits and risks at the same time.",
+    "Think about how people use water and waterways."
+  ],
+  "fr": [
+    "Pourquoi de nombreuses localités se sont-elles développées près des rivières ?",
+    "L’eau pouvait faciliter l’approvisionnement et le transport",
+    "Chaque rivière protégeait sûrement des inondations",
+    "Le sol était partout identique près des rivières",
+    "Les rivières rendaient toutes les routes inutiles",
+    "Un lieu peut avoir avantages et risques à la fois.",
+    "Pense aux usages de l’eau et des voies navigables."
+  ],
+  "it": [
+    "Perché molti insediamenti sorsero vicino ai fiumi?",
+    "L’acqua poteva facilitare approvvigionamento e trasporto",
+    "Ogni fiume proteggeva sicuramente dalle inondazioni",
+    "Il terreno era ovunque uguale vicino ai fiumi",
+    "I fiumi rendevano inutili tutte le strade",
+    "Un luogo può avere vantaggi e rischi insieme.",
+    "Pensa agli usi dell’acqua e delle vie navigabili."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-2",
+  "reason": "Recognise typical rainforest climate without rigid rainfall threshold.",
+  "de": [
+    "Welches Klima ist typisch für den tropischen Regenwald?",
+    "Ganzjährig warm und sehr feucht",
+    "Ganzjährig kalt und trocken",
+    "Heisse, trockene Sommer und kühle, feuchte Winter",
+    "Lange Frostwinter und kurze kühle Sommer",
+    "Vergleiche Temperatur und Wasserverfügbarkeit über das Jahr.",
+    "Beachte, ob eine lange Trocken- oder Frostzeit zum Lebensraum passt."
+  ],
+  "en": [
+    "What climate is typical of tropical rainforest?",
+    "Warm and very humid all year",
+    "Cold and dry all year",
+    "Hot dry summers and cool wet winters",
+    "Long freezing winters and short cool summers",
+    "Compare temperature and water availability throughout the year.",
+    "Consider whether a long dry or freezing season fits this habitat."
+  ],
+  "fr": [
+    "Quel climat caractérise la forêt tropicale humide ?",
+    "Chaud et très humide toute l’année",
+    "Froid et sec toute l’année",
+    "Étés chauds et secs, hivers frais et humides",
+    "Longs hivers glacials et courts étés frais",
+    "Compare température et eau disponible au fil de l’année.",
+    "Demande si une longue saison sèche ou glaciale convient à ce milieu."
+  ],
+  "it": [
+    "Quale clima è tipico della foresta pluviale tropicale?",
+    "Caldo e molto umido tutto l’anno",
+    "Freddo e secco tutto l’anno",
+    "Estati calde e secche, inverni freschi e umidi",
+    "Lunghi inverni gelidi e brevi estati fresche",
+    "Confronta temperatura e acqua disponibile durante l’anno.",
+    "Chiediti se una lunga stagione secca o gelida sia adatta a questo habitat."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-4",
+  "reason": "Distinguish tundra vegetation from forest and desert.",
+  "de": [
+    "Welche Vegetation ist typisch für die arktische Tundra?",
+    "Moose, Flechten und niedrige Sträucher ohne geschlossenen Wald",
+    "Hohe tropische Bäume mit dichtem Blätterdach",
+    "Ausgedehnte Wälder aus Olivenbäumen",
+    "Ganzjährig hohe Maisfelder",
+    "Die Wachstumszeit ist kurz und kühl.",
+    "Denke an Pflanzen, die bei solchen Bedingungen klein bleiben."
+  ],
+  "en": [
+    "What vegetation is typical of Arctic tundra?",
+    "Mosses, lichens and low shrubs without continuous forest",
+    "Tall tropical trees with a dense canopy",
+    "Extensive olive forests",
+    "Tall maize fields all year",
+    "The growing season is short and cool.",
+    "Think of plants that stay small in these conditions."
+  ],
+  "fr": [
+    "Quelle végétation est typique de la toundra arctique ?",
+    "Mousses, lichens et petits arbustes sans forêt continue",
+    "Grands arbres tropicaux au feuillage dense",
+    "Vastes forêts d’oliviers",
+    "Hauts champs de maïs toute l’année",
+    "La saison de croissance est courte et fraîche.",
+    "Pense aux plantes qui restent petites dans ces conditions."
+  ],
+  "it": [
+    "Quale vegetazione è tipica della tundra artica?",
+    "Muschi, licheni e bassi arbusti senza foresta continua",
+    "Alti alberi tropicali con chioma fitta",
+    "Estesi boschi di ulivi",
+    "Alti campi di mais tutto l’anno",
+    "La stagione di crescita è breve e fresca.",
+    "Pensa a piante che restano piccole in queste condizioni."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-6",
+  "reason": "Distinguish aridity from heat; avoid universal threshold definition.",
+  "de": [
+    "Welche Eigenschaft kennzeichnet eine Wüste besonders?",
+    "Sehr wenig verfügbarer Niederschlag",
+    "Immer tropische Hitze",
+    "Täglich starker Regen",
+    "Überall dichter Wald",
+    "Wüsten können heiss oder kalt sein.",
+    "Vergleiche die Wasserverfügbarkeit statt nur die Temperatur."
+  ],
+  "en": [
+    "Which feature especially characterises a desert?",
+    "Very little precipitation available",
+    "Always tropical heat",
+    "Heavy rain every day",
+    "Dense forest everywhere",
+    "Deserts can be hot or cold.",
+    "Compare water availability rather than temperature alone."
+  ],
+  "fr": [
+    "Quel caractère distingue particulièrement un désert ?",
+    "Très peu de précipitations disponibles",
+    "Toujours une chaleur tropicale",
+    "De fortes pluies quotidiennes",
+    "Une forêt dense partout",
+    "Les déserts peuvent être chauds ou froids.",
+    "Compare l’eau disponible plutôt que la seule température."
+  ],
+  "it": [
+    "Quale caratteristica distingue soprattutto un deserto?",
+    "Precipitazioni disponibili molto scarse",
+    "Sempre caldo tropicale",
+    "Forti piogge quotidiane",
+    "Foresta fitta ovunque",
+    "I deserti possono essere caldi o freddi.",
+    "Confronta l’acqua disponibile, non solo la temperatura."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-8",
+  "reason": "Recognise Mediterranean seasonal rainfall pattern.",
+  "de": [
+    "Welche Jahreszeiten passen zum typischen Mittelmeerklima?",
+    "Trockene, warme Sommer und mildere, feuchtere Winter",
+    "Nasse, kühle Sommer und trockene, frostige Winter",
+    "Ganzjährig gleichmässiger Dauerfrost",
+    "Ganzjährig täglicher tropischer Starkregen",
+    "Vergleiche besonders, in welcher Jahreszeit mehr Regen fällt.",
+    "Viele Pflanzen müssen eine sommerliche Trockenzeit überstehen."
+  ],
+  "en": [
+    "Which seasonal pattern fits a typical Mediterranean climate?",
+    "Dry warm summers and milder wetter winters",
+    "Wet cool summers and dry freezing winters",
+    "Continuous frost throughout the year",
+    "Daily tropical downpours throughout the year",
+    "Compare especially which season receives more rain.",
+    "Many plants must survive a summer dry season."
+  ],
+  "fr": [
+    "Quel rythme saisonnier correspond au climat méditerranéen typique ?",
+    "Étés secs et chauds, hivers plus doux et humides",
+    "Étés frais et humides, hivers secs et glacials",
+    "Gel continu toute l’année",
+    "Averses tropicales quotidiennes toute l’année",
+    "Compare surtout la saison la plus pluvieuse.",
+    "Beaucoup de plantes doivent supporter une sécheresse estivale."
+  ],
+  "it": [
+    "Quale andamento stagionale corrisponde al tipico clima mediterraneo?",
+    "Estati secche e calde, inverni più miti e umidi",
+    "Estati fresche e umide, inverni secchi e gelidi",
+    "Gelo continuo tutto l’anno",
+    "Acquazzoni tropicali quotidiani tutto l’anno",
+    "Confronta soprattutto la stagione più piovosa.",
+    "Molte piante devono superare una siccità estiva."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-10",
+  "reason": "Recognise steppe as grassland with appropriate comparative options.",
+  "de": [
+    "Welche Landschaft passt zu einer Steppe?",
+    "Weites Grasland mit wenigen Bäumen",
+    "Dichter tropischer Regenwald",
+    "Dauerhaft von Gletschereis bedeckte Fläche",
+    "Unterwasserwald aus Algen",
+    "Beachte die vorherrschende Pflanzenform.",
+    "Für einen geschlossenen Wald ist es in vielen Steppen zu trocken."
+  ],
+  "en": [
+    "Which landscape fits a steppe?",
+    "Extensive grassland with few trees",
+    "Dense tropical rainforest",
+    "Land permanently covered by glacier ice",
+    "An underwater kelp forest",
+    "Notice the dominant plant form.",
+    "Many steppes are too dry for continuous forest."
+  ],
+  "fr": [
+    "Quel paysage correspond à une steppe ?",
+    "De vastes étendues herbeuses avec peu d’arbres",
+    "Une forêt tropicale dense",
+    "Un terrain couvert en permanence de glace",
+    "Une forêt sous-marine d’algues",
+    "Observe la forme végétale dominante.",
+    "Beaucoup de steppes sont trop sèches pour une forêt continue."
+  ],
+  "it": [
+    "Quale paesaggio corrisponde a una steppa?",
+    "Ampie praterie con pochi alberi",
+    "Fitta foresta tropicale",
+    "Terreno permanentemente coperto da ghiaccio",
+    "Una foresta sottomarina di alghe",
+    "Osserva la forma vegetale dominante.",
+    "Molte steppe sono troppo secche per una foresta continua."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-12",
+  "reason": "Locate Arctic climate with comparative regions.",
+  "de": [
+    "Wo findest du arktische Klimabedingungen?",
+    "In der Region um den Nordpol",
+    "Im Tiefland am Äquator",
+    "An der tropischen Küste Brasiliens",
+    "In der zentralen Sahara",
+    "Unterscheide polare Regionen von tropischen und heissen Wüstenregionen.",
+    "Die Bezeichnung Arktis betrifft die nördliche Polarregion."
+  ],
+  "en": [
+    "Where do you find Arctic climate conditions?",
+    "Around the North Pole",
+    "In equatorial lowlands",
+    "On Brazil’s tropical coast",
+    "In the central Sahara",
+    "Distinguish polar regions from tropical and hot desert regions.",
+    "The Arctic refers to the northern polar region."
+  ],
+  "fr": [
+    "Où trouve-t-on des conditions climatiques arctiques ?",
+    "Autour du pôle Nord",
+    "Dans les plaines équatoriales",
+    "Sur la côte tropicale du Brésil",
+    "Au centre du Sahara",
+    "Distingue régions polaires, tropicales et déserts chauds.",
+    "L’Arctique désigne la région polaire septentrionale."
+  ],
+  "it": [
+    "Dove trovi condizioni climatiche artiche?",
+    "Attorno al Polo Nord",
+    "Nelle pianure equatoriali",
+    "Sulla costa tropicale del Brasile",
+    "Nel Sahara centrale",
+    "Distingui regioni polari, tropicali e deserti caldi.",
+    "L’Artico indica la regione polare settentrionale."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-14",
+  "reason": "Qualify ocean moderation instead of universal mild wet coastal claim.",
+  "de": [
+    "Wie kann der Atlantik das Klima an Westeuropas Küsten beeinflussen?",
+    "Er kann Temperaturunterschiede zwischen Sommer und Winter mildern",
+    "Er sorgt überall für identische Temperaturen an jedem Tag",
+    "Er verhindert jede Art von Niederschlag",
+    "Er macht die Winter grundsätzlich heisser als die Sommer",
+    "Wasser erwärmt und kühlt sich langsamer als Land.",
+    "Vergleiche die Nähe zum Meer mit weit entfernten Binnenregionen."
+  ],
+  "en": [
+    "How can the Atlantic affect the climate on western Europe’s coasts?",
+    "It can moderate temperature differences between summer and winter",
+    "It makes temperatures identical everywhere every day",
+    "It prevents every kind of precipitation",
+    "It always makes winters hotter than summers",
+    "Water warms and cools more slowly than land.",
+    "Compare proximity to the sea with distant inland regions."
+  ],
+  "fr": [
+    "Comment l’Atlantique peut-il influencer le climat des côtes d’Europe occidentale ?",
+    "Il peut atténuer les écarts de température entre été et hiver",
+    "Il rend toutes les températures identiques chaque jour",
+    "Il empêche toute précipitation",
+    "Il rend toujours les hivers plus chauds que les étés",
+    "L’eau chauffe et refroidit plus lentement que la terre.",
+    "Compare proximité de la mer et régions éloignées à l’intérieur."
+  ],
+  "it": [
+    "Come può l’Atlantico influenzare il clima delle coste dell’Europa occidentale?",
+    "Può attenuare le differenze di temperatura tra estate e inverno",
+    "Rende tutte le temperature identiche ogni giorno",
+    "Impedisce ogni precipitazione",
+    "Rende sempre gli inverni più caldi delle estati",
+    "L’acqua si scalda e raffredda più lentamente della terra.",
+    "Confronta vicinanza al mare e regioni interne lontane."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-16",
+  "reason": "Replace misplaced supply-chain template with climate versus weather.",
+  "de": [
+    "Welche Aussage beschreibt Klima statt einzelnes Wetter?",
+    "In dieser Region sind die Sommer über viele Jahre meist trocken",
+    "Heute regnet es um 14 Uhr",
+    "Gestern gab es ein Gewitter",
+    "Morgen werden 18 Grad erwartet",
+    "Achte auf den betrachteten Zeitraum.",
+    "Langjährige typische Bedingungen sind etwas anderes als ein einzelner Tag."
+  ],
+  "en": [
+    "Which statement describes climate rather than individual weather?",
+    "Over many years, summers in this region are usually dry",
+    "It is raining at 2 p.m. today",
+    "There was a thunderstorm yesterday",
+    "Tomorrow is expected to reach 18 degrees",
+    "Notice the time period considered.",
+    "Typical conditions over many years differ from one day."
+  ],
+  "fr": [
+    "Quelle phrase décrit le climat plutôt qu’un temps ponctuel ?",
+    "Sur de nombreuses années, les étés de cette région sont généralement secs",
+    "Il pleut aujourd’hui à 14 heures",
+    "Il y a eu un orage hier",
+    "On prévoit 18 degrés demain",
+    "Observe la période considérée.",
+    "Les conditions typiques sur de nombreuses années diffèrent d’un seul jour."
+  ],
+  "it": [
+    "Quale frase descrive il clima anziché un singolo evento meteorologico?",
+    "Su molti anni, le estati di questa regione sono di solito secche",
+    "Oggi piove alle 14",
+    "Ieri c’è stato un temporale",
+    "Domani sono previsti 18 gradi",
+    "Osserva il periodo considerato.",
+    "Condizioni tipiche su molti anni sono diverse da un solo giorno."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-18",
+  "reason": "Teach continental seasonality without claiming all interiors are dry.",
+  "de": [
+    "Was ist für viele Gebiete mit kontinentalem Klima typisch?",
+    "Grosse Temperaturunterschiede zwischen Sommer und Winter",
+    "Ganzjährig fast gleiche tropische Temperaturen",
+    "Immer wärmere Winter als Sommer",
+    "Ausschliesslich tägliche Temperaturunterschiede ohne Jahreszeiten",
+    "Vergleiche den Einfluss weit entfernter Meere.",
+    "Betrachte den Jahresverlauf, nicht nur Tag und Nacht."
+  ],
+  "en": [
+    "What is typical of many areas with a continental climate?",
+    "Large temperature differences between summer and winter",
+    "Almost identical tropical temperatures all year",
+    "Winters always warmer than summers",
+    "Only daily temperature differences without seasons",
+    "Consider the weaker influence of distant seas.",
+    "Look at the year, not just day and night."
+  ],
+  "fr": [
+    "Qu’est-ce qui caractérise de nombreuses régions au climat continental ?",
+    "De grands écarts de température entre été et hiver",
+    "Des températures tropicales presque identiques toute l’année",
+    "Des hivers toujours plus chauds que les étés",
+    "Seulement des écarts quotidiens sans saisons",
+    "Considère l’influence plus faible des mers éloignées.",
+    "Observe l’année, pas seulement le jour et la nuit."
+  ],
+  "it": [
+    "Cosa caratterizza molte regioni dal clima continentale?",
+    "Grandi differenze di temperatura tra estate e inverno",
+    "Temperature tropicali quasi uguali tutto l’anno",
+    "Inverni sempre più caldi delle estati",
+    "Solo differenze quotidiane senza stagioni",
+    "Considera l’influenza minore dei mari lontani.",
+    "Osserva l’anno, non solo giorno e notte."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-20",
+  "reason": "Replace ITCZ circulation jargon with cloud formation.",
+  "de": [
+    "Feuchte Luft steigt auf und kühlt ab. Was kann sich bilden?",
+    "Wolken aus kleinen Wassertröpfchen oder Eiskristallen",
+    "Wolken aus trockenem Sand allein",
+    "Neue Sonnenstrahlen",
+    "Flüssiges Gestein",
+    "Betrachte das Wasser in der Luft.",
+    "Beim Abkühlen kann Wasserdampf seinen Zustand ändern."
+  ],
+  "en": [
+    "Moist air rises and cools. What can form?",
+    "Clouds of tiny water droplets or ice crystals",
+    "Clouds made only of dry sand",
+    "New sunrays",
+    "Liquid rock",
+    "Consider the water in the air.",
+    "Cooling can change the state of water vapour."
+  ],
+  "fr": [
+    "De l’air humide monte et refroidit. Que peut-il se former ?",
+    "Des nuages de gouttelettes ou de cristaux de glace",
+    "Des nuages uniquement de sable sec",
+    "De nouveaux rayons solaires",
+    "De la roche liquide",
+    "Considère l’eau dans l’air.",
+    "Le refroidissement peut changer l’état de la vapeur d’eau."
+  ],
+  "it": [
+    "L’aria umida sale e si raffredda. Cosa può formarsi?",
+    "Nuvole di goccioline o cristalli di ghiaccio",
+    "Nuvole fatte solo di sabbia secca",
+    "Nuovi raggi solari",
+    "Roccia liquida",
+    "Considera l’acqua nell’aria.",
+    "Il raffreddamento può cambiare lo stato del vapore acqueo."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-22",
+  "reason": "Distinguish glacier from temporary ice cover.",
+  "de": [
+    "Was kennzeichnet einen Gletscher?",
+    "Eine grosse Eismasse, die sich langsam bewegt",
+    "Eine dünne Eisschicht auf einer Pfütze",
+    "Ein einzelner Hagelstein",
+    "Eine Schneeflocke in der Luft",
+    "Vergleiche Grösse, Dauer und Bewegung.",
+    "Gletschereis entsteht aus über längere Zeit angesammeltem Schnee."
+  ],
+  "en": [
+    "What characterises a glacier?",
+    "A large mass of ice that moves slowly",
+    "A thin ice layer on a puddle",
+    "A single hailstone",
+    "A snowflake in the air",
+    "Compare size, duration and movement.",
+    "Glacier ice develops from snow accumulated over time."
+  ],
+  "fr": [
+    "Qu’est-ce qui caractérise un glacier ?",
+    "Une grande masse de glace qui se déplace lentement",
+    "Une fine couche de glace sur une flaque",
+    "Un seul grêlon",
+    "Un flocon dans l’air",
+    "Compare taille, durée et mouvement.",
+    "La glace d’un glacier se forme à partir de neige accumulée longtemps."
+  ],
+  "it": [
+    "Cosa caratterizza un ghiacciaio?",
+    "Una grande massa di ghiaccio che si muove lentamente",
+    "Un sottile strato di ghiaccio su una pozzanghera",
+    "Un solo chicco di grandine",
+    "Un fiocco di neve nell’aria",
+    "Confronta dimensione, durata e movimento.",
+    "Il ghiaccio del ghiacciaio deriva da neve accumulata nel tempo."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-24",
+  "reason": "Replace trade-wind mechanics with observable wind direction.",
+  "de": [
+    "Ein Wind kommt aus Westen. In welche Richtung bewegt sich die Luft hauptsächlich?",
+    "Nach Osten",
+    "Nach Westen",
+    "Nur nach oben",
+    "Nur nach unten",
+    "Windrichtungen werden nach der Herkunft benannt.",
+    "Unterscheide Herkunft und Ziel der Bewegung."
+  ],
+  "en": [
+    "A wind comes from the west. In which direction does the air mainly move?",
+    "East",
+    "West",
+    "Only upwards",
+    "Only downwards",
+    "Winds are named for where they come from.",
+    "Distinguish origin from destination."
+  ],
+  "fr": [
+    "Un vent vient de l’ouest. Dans quelle direction l’air se déplace-t-il principalement ?",
+    "Vers l’est",
+    "Vers l’ouest",
+    "Seulement vers le haut",
+    "Seulement vers le bas",
+    "Les vents sont nommés selon leur origine.",
+    "Distingue origine et destination."
+  ],
+  "it": [
+    "Un vento viene da ovest. In quale direzione si muove principalmente l’aria?",
+    "Verso est",
+    "Verso ovest",
+    "Solo verso l’alto",
+    "Solo verso il basso",
+    "I venti prendono il nome dalla provenienza.",
+    "Distingui origine e destinazione."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-26",
+  "reason": "Replace speciation mechanisms with island habitat protection.",
+  "de": [
+    "Eine Tierart lebt nur auf einer kleinen Insel. Warum ist der Schutz ihres Lebensraums besonders wichtig?",
+    "Die Zerstörung könnte ihr gesamtes natürliches Vorkommen betreffen",
+    "Sie kann sicher sofort auf jedem Kontinent leben",
+    "Sie braucht deshalb weder Nahrung noch Wasser",
+    "Ihr Lebensraum kann nicht verändert werden",
+    "Achte auf die räumlich begrenzte Verbreitung.",
+    "Es gibt nicht automatisch weitere Bestände an anderen Orten."
+  ],
+  "en": [
+    "An animal species lives only on one small island. Why is protecting its habitat especially important?",
+    "Destruction could affect its entire natural population",
+    "It can certainly live on every continent immediately",
+    "It therefore needs neither food nor water",
+    "Its habitat cannot change",
+    "Notice the restricted distribution.",
+    "There are not automatically other populations elsewhere."
+  ],
+  "fr": [
+    "Une espèce animale ne vit que sur une petite île. Pourquoi protéger son habitat est-il important ?",
+    "Sa destruction pourrait toucher toute sa population naturelle",
+    "Elle peut certainement vivre aussitôt sur chaque continent",
+    "Elle n’a donc besoin ni d’eau ni de nourriture",
+    "Son habitat ne peut pas changer",
+    "Observe la répartition limitée.",
+    "Il n’existe pas automatiquement d’autres populations ailleurs."
+  ],
+  "it": [
+    "Una specie animale vive solo su una piccola isola. Perché è importante proteggerne l’habitat?",
+    "La distruzione potrebbe colpire tutta la popolazione naturale",
+    "Può sicuramente vivere subito su ogni continente",
+    "Quindi non ha bisogno né di acqua né di cibo",
+    "Il suo habitat non può cambiare",
+    "Osserva la distribuzione limitata.",
+    "Non esistono automaticamente altre popolazioni altrove."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-28",
+  "reason": "Replace atmospheric-cell names with interpretation of a simplified model.",
+  "de": [
+    "Was zeigt ein vereinfachtes Modell von Luftströmungen?",
+    "Ausgewählte wichtige Zusammenhänge, nicht jedes Detail",
+    "Das genaue Wetter an jedem Ort für immer",
+    "Jede einzelne Bewegung aller Luftteilchen",
+    "Ein Foto der gesamten Zukunft",
+    "Ein Modell hebt bestimmte Eigenschaften hervor.",
+    "Prüfe, was dargestellt und was weggelassen wurde."
+  ],
+  "en": [
+    "What does a simplified model of air currents show?",
+    "Selected important relationships, not every detail",
+    "Exact weather everywhere forever",
+    "Every movement of every air particle",
+    "A photograph of the entire future",
+    "A model highlights selected properties.",
+    "Check what is shown and what is left out."
+  ],
+  "fr": [
+    "Que montre un modèle simplifié des courants d’air ?",
+    "Certains liens importants, pas tous les détails",
+    "Le temps exact partout pour toujours",
+    "Chaque mouvement de chaque particule d’air",
+    "Une photo de tout l’avenir",
+    "Un modèle met certaines propriétés en évidence.",
+    "Vérifie ce qui est représenté et ce qui est omis."
+  ],
+  "it": [
+    "Cosa mostra un modello semplificato delle correnti d’aria?",
+    "Alcune relazioni importanti, non ogni dettaglio",
+    "Il tempo esatto ovunque per sempre",
+    "Ogni movimento di ogni particella d’aria",
+    "Una foto di tutto il futuro",
+    "Un modello evidenzia alcune proprietà.",
+    "Controlla cosa è rappresentato e cosa è omesso."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-30",
+  "reason": "Replace cyclone thermodynamics with appropriate weather-warning response.",
+  "de": [
+    "Für deine Region gilt eine amtliche Unwetterwarnung. Was ist sinnvoll?",
+    "Mit einer erwachsenen Person die Hinweise prüfen und beachten",
+    "Die Warnung allein wegen Sonnenschein ignorieren",
+    "Zum Beobachten unter einen einzelnen Baum gehen",
+    "Ohne Rücksprache eine Bootsfahrt beginnen",
+    "Eine Warnung betrifft mögliche Gefahren, auch bevor sie direkt sichtbar sind.",
+    "Verlässliche aktuelle Hinweise helfen bei sicheren Entscheidungen."
+  ],
+  "en": [
+    "An official severe-weather warning applies to your region. What is sensible?",
+    "Check and follow the advice with an adult",
+    "Ignore it just because the sun is shining",
+    "Stand under a lone tree to watch",
+    "Start a boat trip without asking",
+    "Warnings concern possible hazards before they are directly visible.",
+    "Reliable current guidance helps with safe decisions."
+  ],
+  "fr": [
+    "Une alerte météo officielle concerne ta région. Que faire ?",
+    "Vérifier et suivre les conseils avec un adulte",
+    "L’ignorer uniquement parce qu’il fait soleil",
+    "Observer sous un arbre isolé",
+    "Partir en bateau sans demander",
+    "Une alerte concerne des dangers possibles avant qu’ils soient visibles.",
+    "Des indications fiables et actuelles aident à décider en sécurité."
+  ],
+  "it": [
+    "Un’allerta meteorologica ufficiale riguarda la tua regione. Cosa fare?",
+    "Controllare e seguire le indicazioni con un adulto",
+    "Ignorarla solo perché c’è il sole",
+    "Osservare sotto un albero isolato",
+    "Partire in barca senza chiedere",
+    "Un’allerta riguarda pericoli possibili prima che siano visibili.",
+    "Indicazioni affidabili e attuali aiutano a decidere in sicurezza."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-32",
+  "reason": "Teach reflection with a simple surface comparison.",
+  "de": [
+    "Welche Oberfläche reflektiert bei gleicher Beleuchtung meist mehr Sonnenlicht?",
+    "Frischer weisser Schnee",
+    "Dunkler Asphalt",
+    "Dunkle feuchte Erde",
+    "Schwarzer Stoff",
+    "Vergleiche helle und dunkle Oberflächen.",
+    "Reflektiertes Licht wird zurückgeworfen statt aufgenommen."
+  ],
+  "en": [
+    "Which surface usually reflects more sunlight under equal illumination?",
+    "Fresh white snow",
+    "Dark asphalt",
+    "Dark wet soil",
+    "Black fabric",
+    "Compare light and dark surfaces.",
+    "Reflected light bounces back rather than being absorbed."
+  ],
+  "fr": [
+    "Quelle surface réfléchit généralement plus de soleil à éclairage égal ?",
+    "La neige blanche fraîche",
+    "L’asphalte sombre",
+    "La terre humide sombre",
+    "Le tissu noir",
+    "Compare surfaces claires et sombres.",
+    "La lumière réfléchie est renvoyée plutôt qu’absorbée."
+  ],
+  "it": [
+    "Quale superficie riflette di solito più luce solare a parità di illuminazione?",
+    "Neve bianca fresca",
+    "Asfalto scuro",
+    "Terra umida scura",
+    "Tessuto nero",
+    "Confronta superfici chiare e scure.",
+    "La luce riflessa viene rimandata invece di essere assorbita."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-34",
+  "reason": "Replace polar-circle latitude recall with polar-day observation.",
+  "de": [
+    "Was bedeutet Mitternachtssonne in einer Polarregion?",
+    "Die Sonne bleibt auch um Mitternacht über dem Horizont",
+    "Der Mond ersetzt tagsüber die Sonne",
+    "Die Sonne geht jede Stunde auf und unter",
+    "Die Sonne erscheint nur als Spiegelung im Schnee",
+    "Betrachte die Position der Sonne während eines ganzen Tages.",
+    "In hohen Breiten unterscheiden sich die Tageslängen stark zwischen den Jahreszeiten."
+  ],
+  "en": [
+    "What does midnight sun mean in a polar region?",
+    "The sun stays above the horizon even at midnight",
+    "The moon replaces the sun during the day",
+    "The sun rises and sets every hour",
+    "The sun appears only as a reflection in snow",
+    "Consider the sun’s position throughout a full day.",
+    "At high latitudes, day length varies greatly with the seasons."
+  ],
+  "fr": [
+    "Que signifie le soleil de minuit dans une région polaire ?",
+    "Le soleil reste au-dessus de l’horizon même à minuit",
+    "La lune remplace le soleil pendant la journée",
+    "Le soleil se lève et se couche chaque heure",
+    "Le soleil apparaît seulement en reflet dans la neige",
+    "Observe la position du soleil sur une journée entière.",
+    "Aux hautes latitudes, la durée du jour varie fortement selon les saisons."
+  ],
+  "it": [
+    "Cosa significa sole di mezzanotte in una regione polare?",
+    "Il sole resta sopra l’orizzonte anche a mezzanotte",
+    "La luna sostituisce il sole di giorno",
+    "Il sole sorge e tramonta ogni ora",
+    "Il sole appare solo come riflesso nella neve",
+    "Osserva la posizione del sole durante un giorno intero.",
+    "Alle alte latitudini la durata del giorno varia molto con le stagioni."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-36",
+  "reason": "Replace misplaced fair-trade template with a habitat adaptation.",
+  "de": [
+    "Wie helfen kleine, ledrige Blätter manchen Pflanzen in trockenen Sommern?",
+    "Sie können den Wasserverlust begrenzen",
+    "Sie ersetzen die Wasseraufnahme durch Wurzeln vollständig",
+    "Sie verwandeln trockenen Boden sofort in einen See",
+    "Sie verhindern jede Erwärmung der Pflanze",
+    "Vergleiche die Blattoberfläche und den Umgang mit knappem Wasser.",
+    "Eine Anpassung hilft unter bestimmten Bedingungen, macht Wasser aber nicht unnötig."
+  ],
+  "en": [
+    "How do small leathery leaves help some plants in dry summers?",
+    "They can limit water loss",
+    "They completely replace water uptake through roots",
+    "They instantly turn dry soil into a lake",
+    "They prevent all warming of the plant",
+    "Consider leaf surfaces and coping with scarce water.",
+    "An adaptation helps under certain conditions but does not remove the need for water."
+  ],
+  "fr": [
+    "Comment de petites feuilles coriaces aident-elles certaines plantes pendant les étés secs ?",
+    "Elles peuvent limiter les pertes d’eau",
+    "Elles remplacent entièrement l’absorption d’eau par les racines",
+    "Elles changent aussitôt le sol sec en lac",
+    "Elles empêchent tout réchauffement de la plante",
+    "Considère la surface des feuilles et la rareté de l’eau.",
+    "Une adaptation aide sans supprimer le besoin d’eau."
+  ],
+  "it": [
+    "Come aiutano alcune piante le foglie piccole e coriacee nelle estati secche?",
+    "Possono limitare la perdita d’acqua",
+    "Sostituiscono completamente l’assorbimento dalle radici",
+    "Trasformano subito il terreno secco in un lago",
+    "Impediscono ogni riscaldamento della pianta",
+    "Considera la superficie delle foglie e la scarsità d’acqua.",
+    "Un adattamento aiuta senza eliminare il bisogno d’acqua."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-38",
+  "reason": "Replace zonal/azonal terminology with local water availability. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Warum können am Bach andere Pflanzen wachsen als auf einem trockenen Hügel daneben?",
+    "Die Wasserverfügbarkeit im Boden unterscheidet sich",
+    "Die Lufttemperatur allein legt überall dieselben Pflanzen fest",
+    "Die Entfernung zum Bach hat grundsätzlich keinen Einfluss auf Bodenfeuchte",
+    "Alle Pflanzen benötigen unabhängig von ihrer Art dieselbe Bodenfeuchte",
+    "Auch innerhalb einer Klimaregion unterscheiden sich Standorte.",
+    "Vergleiche eine örtliche Bedingung, die Wurzeln direkt betrifft."
+  ],
+  "en": [
+    "Why can different plants grow beside a stream and on a nearby dry hill?",
+    "Water availability in the soil differs",
+    "Air temperature alone determines identical plants everywhere",
+    "Distance from the stream can never affect soil moisture",
+    "All plants require identical soil moisture regardless of species",
+    "Sites can differ within one climate region.",
+    "Compare a local condition directly affecting roots."
+  ],
+  "fr": [
+    "Pourquoi des plantes différentes poussent-elles au bord d’un ruisseau et sur une colline sèche voisine ?",
+    "L’eau disponible dans le sol diffère",
+    "La température seule impose partout les mêmes plantes",
+    "La distance au ruisseau n’influence jamais l’humidité du sol",
+    "Toutes les plantes exigent la même humidité quelle que soit l’espèce",
+    "Les sites peuvent différer dans une même région climatique.",
+    "Compare une condition locale qui touche directement les racines."
+  ],
+  "it": [
+    "Perché crescono piante diverse lungo un ruscello e su una vicina collina secca?",
+    "L’acqua disponibile nel suolo è diversa",
+    "La sola temperatura determina ovunque le stesse piante",
+    "La distanza dal ruscello non influisce mai sull’umidità del suolo",
+    "Tutte le piante richiedono uguale umidità indipendentemente dalla specie",
+    "I luoghi possono differire nella stessa regione climatica.",
+    "Confronta una condizione locale che riguarda direttamente le radici."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-40",
+  "reason": "Replace ocean-heat-content metric with heat storage.",
+  "de": [
+    "Welche Rolle können Meere im Wärmehaushalt der Erde spielen?",
+    "Sie nehmen Wärme auf, speichern sie und geben sie wieder ab",
+    "Sie können grundsätzlich keine Wärme aufnehmen",
+    "Sie bestehen nur aus Luft und Wolken",
+    "Sie haben unabhängig von Ort und Tiefe überall dieselbe Temperatur",
+    "Denke daran, dass grosse Wassermengen ihre Temperatur langsam ändern.",
+    "Wärme kann zwischen Wasser und Umgebung ausgetauscht werden."
+  ],
+  "en": [
+    "What role can seas play in Earth’s heat balance?",
+    "They absorb, store and release heat",
+    "They cannot absorb any heat",
+    "They consist only of air and clouds",
+    "They have the same temperature everywhere regardless of place or depth",
+    "Large bodies of water change temperature slowly.",
+    "Heat can pass between water and its surroundings."
+  ],
+  "fr": [
+    "Quel rôle les mers peuvent-elles jouer dans le bilan thermique terrestre ?",
+    "Elles absorbent, stockent et libèrent de la chaleur",
+    "Elles ne peuvent absorber aucune chaleur",
+    "Elles se composent seulement d’air et de nuages",
+    "Leur température est identique partout, quel que soit le lieu ou la profondeur",
+    "De grandes masses d’eau changent lentement de température.",
+    "La chaleur peut passer entre l’eau et son environnement."
+  ],
+  "it": [
+    "Quale ruolo possono avere i mari nel bilancio termico terrestre?",
+    "Assorbono, conservano e rilasciano calore",
+    "Non possono assorbire calore",
+    "Sono fatti solo di aria e nuvole",
+    "Hanno ovunque la stessa temperatura a ogni profondità",
+    "Grandi masse d’acqua cambiano lentamente temperatura.",
+    "Il calore può passare tra acqua e ambiente."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-42",
+  "reason": "Teach ice-reflection change without feedback jargon.",
+  "de": [
+    "Helles Meereis schmilzt und dunkles Wasser wird frei. Was geschieht meist mit dem einfallenden Sonnenlicht?",
+    "Ein grösserer Anteil wird aufgenommen",
+    "Ein grösserer Anteil wird wie von frischem Schnee zurückgeworfen",
+    "Das gesamte Licht verschwindet ohne Wirkung",
+    "Die Sonne sendet an dieser Stelle kein Licht mehr aus",
+    "Vergleiche die Helligkeit der beiden Oberflächen.",
+    "Aufgenommenes Licht kann zur Erwärmung beitragen."
+  ],
+  "en": [
+    "Bright sea ice melts and exposes dark water. What usually happens to incoming sunlight?",
+    "A larger share is absorbed",
+    "A larger share is reflected as by fresh snow",
+    "All light disappears without any effect",
+    "The sun stops sending light to that place",
+    "Compare the brightness of the surfaces.",
+    "Absorbed light can contribute to warming."
+  ],
+  "fr": [
+    "La glace de mer claire fond et expose de l’eau sombre. Que devient généralement la lumière reçue ?",
+    "Une plus grande part est absorbée",
+    "Une plus grande part est réfléchie comme par la neige fraîche",
+    "Toute lumière disparaît sans effet",
+    "Le soleil cesse d’éclairer cet endroit",
+    "Compare la clarté des deux surfaces.",
+    "La lumière absorbée peut contribuer au réchauffement."
+  ],
+  "it": [
+    "Il ghiaccio marino chiaro fonde ed espone acqua scura. Cosa succede di solito alla luce ricevuta?",
+    "Una quota maggiore viene assorbita",
+    "Una quota maggiore viene riflessa come dalla neve fresca",
+    "Tutta la luce scompare senza effetto",
+    "Il sole smette di illuminare quel luogo",
+    "Confronta la luminosità delle due superfici.",
+    "La luce assorbita può contribuire al riscaldamento."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-44",
+  "reason": "Replace hydrological extremes terminology with drought identification.",
+  "de": [
+    "Welche Situation beschreibt eine Dürre?",
+    "Über längere Zeit fällt zu wenig Niederschlag und Wasser wird knapp",
+    "Ein Fluss tritt nach starkem Regen über die Ufer",
+    "An einem Morgen liegt Tau auf dem Gras",
+    "Für eine Stunde ziehen Wolken auf",
+    "Betrachte Dauer und Wassermangel.",
+    "Nicht jedes kurze trockene Wetter ist bereits ein langfristiges Problem."
+  ],
+  "en": [
+    "Which situation describes a drought?",
+    "Too little precipitation falls over a long period and water becomes scarce",
+    "A river overflows after heavy rain",
+    "Dew lies on grass one morning",
+    "Clouds appear for an hour",
+    "Consider duration and water shortage.",
+    "Not every brief dry spell is a long-term problem."
+  ],
+  "fr": [
+    "Quelle situation décrit une sécheresse ?",
+    "Il pleut trop peu longtemps et l’eau devient rare",
+    "Une rivière déborde après de fortes pluies",
+    "De la rosée couvre l’herbe un matin",
+    "Des nuages apparaissent pendant une heure",
+    "Considère la durée et le manque d’eau.",
+    "Une brève période sèche n’est pas toujours un problème durable."
+  ],
+  "it": [
+    "Quale situazione descrive una siccità?",
+    "Piove troppo poco a lungo e l’acqua diventa scarsa",
+    "Un fiume straripa dopo forti piogge",
+    "La rugiada copre l’erba una mattina",
+    "Compaiono nuvole per un’ora",
+    "Considera durata e mancanza d’acqua.",
+    "Un breve periodo asciutto non è sempre un problema duraturo."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-46",
+  "reason": "Replace ENSO mechanism with long-term measurement comparison. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Wie prüfst du, ob ein Meer in einem bestimmten Monat ungewöhnlich warm ist?",
+    "Messwerte mit langjährigen Werten für denselben Monat und Ort vergleichen",
+    "Nur mit einem Winterwert eines anderen Meeres vergleichen",
+    "Nur die Messung eines einzelnen anderen Tages betrachten",
+    "Werte verschiedener Messorte ohne Kennzeichnung vermischen",
+    "Ein passender Vergleich braucht dieselbe Jahreszeit und Region.",
+    "Eine einzelne Zahl benötigt einen Vergleichsmassstab."
+  ],
+  "en": [
+    "How can you check whether a sea is unusually warm in a particular month?",
+    "Compare measurements with long-term values for the same month and place",
+    "Compare only with a winter value from another sea",
+    "Consider only a reading from one other day",
+    "Mix values from different sites without labelling them",
+    "A suitable comparison needs the same season and region.",
+    "A single number needs a reference."
+  ],
+  "fr": [
+    "Comment vérifier si une mer est exceptionnellement chaude un mois donné ?",
+    "Comparer les mesures aux valeurs de longue durée pour le même mois et lieu",
+    "Comparer seulement à une valeur hivernale d’une autre mer",
+    "Considérer seulement la mesure d’un autre jour",
+    "Mélanger des sites différents sans les indiquer",
+    "Une comparaison adaptée demande la même saison et région.",
+    "Un nombre isolé nécessite une référence."
+  ],
+  "it": [
+    "Come verifichi se un mare è insolitamente caldo in un certo mese?",
+    "Confronti le misure con valori di lungo periodo dello stesso mese e luogo",
+    "Confrontare solo con un valore invernale di un altro mare",
+    "Considerare solo la misura di un altro giorno",
+    "Mescolare siti diversi senza indicarli",
+    "Un confronto adatto richiede la stessa stagione e regione.",
+    "Un numero isolato richiede un riferimento."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-48",
+  "reason": "Replace ecological regime shifts with habitat-change consequence.",
+  "de": [
+    "Ein Teich trocknet dauerhaft aus. Welche Folge ist für seine Wasserlebewesen zu erwarten?",
+    "Ihr bisheriger Lebensraum geht verloren",
+    "Alle können unverändert im trockenen Boden weiterleben",
+    "Alle werden automatisch zu Landtieren",
+    "Die fehlende Wassermenge hat keinen Einfluss",
+    "Überlege, welche Bedingungen diese Lebewesen benötigen.",
+    "Eine starke Veränderung kann das Weiterleben am bisherigen Ort verhindern."
+  ],
+  "en": [
+    "A pond dries out permanently. What consequence is expected for its aquatic organisms?",
+    "Their previous habitat is lost",
+    "All can live unchanged in dry soil",
+    "All automatically become land animals",
+    "The missing water has no effect",
+    "Consider the conditions these organisms need.",
+    "A major change can prevent continued life in the same place."
+  ],
+  "fr": [
+    "Un étang s’assèche définitivement. Quelle conséquence attendre pour ses organismes aquatiques ?",
+    "Leur habitat précédent disparaît",
+    "Tous vivent sans changement dans le sol sec",
+    "Tous deviennent automatiquement terrestres",
+    "L’absence d’eau n’a aucun effet",
+    "Considère les conditions nécessaires à ces organismes.",
+    "Un grand changement peut empêcher de rester au même endroit."
+  ],
+  "it": [
+    "Uno stagno si prosciuga definitivamente. Quale conseguenza è prevista per gli organismi acquatici?",
+    "Il loro habitat precedente va perso",
+    "Tutti vivono invariati nel terreno secco",
+    "Tutti diventano automaticamente terrestri",
+    "L’assenza d’acqua non ha effetto",
+    "Considera le condizioni necessarie a questi organismi.",
+    "Un forte cambiamento può impedire di vivere nello stesso luogo."
+  ]
+},
+{
+  "key": "5/science/klima-lebensraeume-5/kl5-50",
+  "reason": "Replace cryosphere terminology with physical water-state identification.",
+  "de": [
+    "Welche Gruppe besteht aus gefrorenem Wasser?",
+    "Schnee und Gletschereis",
+    "Regen und Flusswasser",
+    "Wasserdampf und warme Luft",
+    "Nebeltröpfchen und Tautropfen",
+    "Vergleiche feste, flüssige und gasförmige Formen.",
+    "Nicht alles, was kalt oder sichtbar ist, ist gefroren."
+  ],
+  "en": [
+    "Which group consists of frozen water?",
+    "Snow and glacier ice",
+    "Rain and river water",
+    "Water vapour and warm air",
+    "Fog droplets and dew drops",
+    "Compare solid, liquid and gaseous forms.",
+    "Not everything cold or visible is frozen."
+  ],
+  "fr": [
+    "Quel groupe se compose d’eau gelée ?",
+    "Neige et glace de glacier",
+    "Pluie et eau de rivière",
+    "Vapeur d’eau et air chaud",
+    "Gouttelettes de brouillard et rosée",
+    "Compare formes solide, liquide et gazeuse.",
+    "Tout ce qui est froid ou visible n’est pas gelé."
+  ],
+  "it": [
+    "Quale gruppo è composto da acqua congelata?",
+    "Neve e ghiaccio dei ghiacciai",
+    "Pioggia e acqua fluviale",
+    "Vapore acqueo e aria calda",
+    "Goccioline di nebbia e rugiada",
+    "Confronta forme solide, liquide e gassose.",
+    "Non tutto ciò che è freddo o visibile è congelato."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-2",
+  "reason": "Replace complex indulgence doctrine with historical criticism of payment-linked religion.",
+  "de": [
+    "Was kritisierte Martin Luther am Ablasshandel?",
+    "Dass kirchliche Versprechen mit Geldzahlungen verbunden wurden",
+    "Dass Bücher nur von Hand geschrieben wurden",
+    "Dass Händler keine Schiffe besassen",
+    "Dass Gemeinden verschiedene Marktzeiten hatten",
+    "Die Kritik betraf eine kirchliche Praxis, nicht den Handel allgemein.",
+    "Unterscheide religiöse Versprechen von gewöhnlichen Waren."
+  ],
+  "en": [
+    "What did Martin Luther criticise about the sale of indulgences?",
+    "Church promises being linked to payments",
+    "Books being copied only by hand",
+    "Merchants having no ships",
+    "Towns having different market hours",
+    "The criticism concerned a church practice, not trade generally.",
+    "Distinguish religious promises from ordinary goods."
+  ],
+  "fr": [
+    "Que critiquait Martin Luther dans la vente des indulgences ?",
+    "Le lien entre des promesses de l’Église et des paiements",
+    "La copie des livres uniquement à la main",
+    "L’absence de navires chez les marchands",
+    "Les horaires différents des marchés",
+    "La critique concernait une pratique religieuse, pas tout commerce.",
+    "Distingue promesses religieuses et marchandises ordinaires."
+  ],
+  "it": [
+    "Cosa criticava Martin Lutero nella vendita delle indulgenze?",
+    "Il legame tra promesse della Chiesa e pagamenti",
+    "La copia dei libri solo a mano",
+    "L’assenza di navi dei mercanti",
+    "Gli orari diversi dei mercati",
+    "La critica riguardava una pratica religiosa, non tutto il commercio.",
+    "Distingui promesse religiose e merci comuni."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-6",
+  "reason": "Identify Calvin’s principal Swiss city without advanced doctrine.",
+  "de": [
+    "Mit welcher Schweizer Stadt ist Johannes Calvins Reformation besonders verbunden?",
+    "Genf",
+    "Zürich",
+    "Luzern",
+    "Lugano",
+    "Unterscheide die Wirkungsorte verschiedener Reformatoren.",
+    "Gesucht ist eine französischsprachige Stadt am Genfersee."
+  ],
+  "en": [
+    "Which Swiss city is especially associated with John Calvin’s Reformation?",
+    "Geneva",
+    "Zurich",
+    "Lucerne",
+    "Lugano",
+    "Distinguish where different reformers worked.",
+    "Look for a French-speaking city on Lake Geneva."
+  ],
+  "fr": [
+    "Quelle ville suisse est particulièrement liée à la Réforme de Jean Calvin ?",
+    "Genève",
+    "Zurich",
+    "Lucerne",
+    "Lugano",
+    "Distingue les lieux d’activité des réformateurs.",
+    "Cherche une ville francophone au bord du Léman."
+  ],
+  "it": [
+    "Quale città svizzera è particolarmente legata alla Riforma di Giovanni Calvino?",
+    "Ginevra",
+    "Zurigo",
+    "Lucerna",
+    "Lugano",
+    "Distingui i luoghi di attività dei riformatori.",
+    "Cerca una città francofona sul Lago Lemano."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-8",
+  "reason": "Replace Latin doctrinal list with source importance as a historical belief.",
+  "de": [
+    "Welcher Text war für die Reformatoren als Grundlage des christlichen Glaubens besonders wichtig?",
+    "Die Bibel",
+    "Ein städtisches Zollverzeichnis",
+    "Eine Seekarte",
+    "Ein Handwerksvertrag",
+    "Es geht um einen religiösen Text.",
+    "Unterscheide eine Glaubensschrift von Verwaltungsdokumenten."
+  ],
+  "en": [
+    "Which text was especially important to reformers as a basis of Christian faith?",
+    "The Bible",
+    "A town customs register",
+    "A nautical chart",
+    "A craft contract",
+    "The question concerns a religious text.",
+    "Distinguish a religious scripture from administrative documents."
+  ],
+  "fr": [
+    "Quel texte était particulièrement important pour les réformateurs comme fondement chrétien ?",
+    "La Bible",
+    "Un registre douanier urbain",
+    "Une carte marine",
+    "Un contrat d’artisan",
+    "Il s’agit d’un texte religieux.",
+    "Distingue une écriture religieuse d’un document administratif."
+  ],
+  "it": [
+    "Quale testo era particolarmente importante per i riformatori come fondamento cristiano?",
+    "La Bibbia",
+    "Un registro doganale cittadino",
+    "Una carta nautica",
+    "Un contratto artigianale",
+    "Si tratta di un testo religioso.",
+    "Distingui una scrittura religiosa da un documento amministrativo."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-12",
+  "reason": "Identify Protestant Christianity neutrally among religious traditions.",
+  "de": [
+    "Zu welcher Religion gehören protestantische Kirchen?",
+    "Zum Christentum",
+    "Zum Buddhismus",
+    "Zum Hinduismus",
+    "Zum Islam",
+    "Protestantische Kirchen entstanden im Zusammenhang mit der Reformation.",
+    "Unterscheide eine Richtung innerhalb einer Religion von anderen Religionen."
+  ],
+  "en": [
+    "To which religion do Protestant churches belong?",
+    "Christianity",
+    "Buddhism",
+    "Hinduism",
+    "Islam",
+    "Protestant churches arose in connection with the Reformation.",
+    "Distinguish a branch within a religion from other religions."
+  ],
+  "fr": [
+    "À quelle religion appartiennent les Églises protestantes ?",
+    "Au christianisme",
+    "Au bouddhisme",
+    "À l’hindouisme",
+    "À l’islam",
+    "Les Églises protestantes sont liées à la Réforme.",
+    "Distingue une branche d’une religion des autres religions."
+  ],
+  "it": [
+    "A quale religione appartengono le Chiese protestanti?",
+    "Al cristianesimo",
+    "Al buddismo",
+    "All’induismo",
+    "All’islam",
+    "Le Chiese protestanti sono legate alla Riforma.",
+    "Distingui un ramo di una religione dalle altre religioni."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-14",
+  "reason": "Replace council dates with the fact of Catholic reform.",
+  "de": [
+    "Was zeigt das Konzil von Trient über die katholische Kirche im 16. Jahrhundert?",
+    "Sie beriet über ihre Lehre und eigene Reformen",
+    "Sie hörte überall vollständig auf zu bestehen",
+    "Sie wurde zu einer einzigen protestantischen Kirche",
+    "Sie behandelte ausschliesslich den Bau von Handelsschiffen",
+    "Auch innerhalb der katholischen Kirche gab es Veränderungen.",
+    "Ein Konzil ist eine kirchliche Versammlung."
+  ],
+  "en": [
+    "What does the Council of Trent show about the Catholic Church in the sixteenth century?",
+    "It discussed its teachings and internal reforms",
+    "It completely ceased to exist everywhere",
+    "It became one Protestant church",
+    "It dealt only with building merchant ships",
+    "Change also occurred within the Catholic Church.",
+    "A council is a church assembly."
+  ],
+  "fr": [
+    "Que montre le concile de Trente sur l’Église catholique au XVIe siècle ?",
+    "Elle débattait de sa doctrine et de réformes internes",
+    "Elle cessait entièrement d’exister partout",
+    "Elle devenait une seule Église protestante",
+    "Elle traitait seulement de construction navale",
+    "Des changements existaient aussi dans l’Église catholique.",
+    "Un concile est une assemblée ecclésiastique."
+  ],
+  "it": [
+    "Cosa mostra il Concilio di Trento sulla Chiesa cattolica nel Cinquecento?",
+    "Discuteva dottrina e riforme interne",
+    "Cessava completamente di esistere ovunque",
+    "Diventava un’unica Chiesa protestante",
+    "Trattava solo costruzione navale",
+    "Anche nella Chiesa cattolica avvenivano cambiamenti.",
+    "Un concilio è un’assemblea ecclesiastica."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-16",
+  "reason": "Replace memorising a death with Swiss reform geography.",
+  "de": [
+    "In welcher Stadt wirkte Huldrych Zwingli als Reformator?",
+    "Zürich",
+    "Genf",
+    "Rom",
+    "Paris",
+    "Vergleiche die Wirkungsorte von Zwingli und Calvin.",
+    "Gesucht ist eine deutschsprachige Schweizer Stadt."
+  ],
+  "en": [
+    "In which city did Huldrych Zwingli work as a reformer?",
+    "Zurich",
+    "Geneva",
+    "Rome",
+    "Paris",
+    "Compare where Zwingli and Calvin worked.",
+    "Look for a German-speaking Swiss city."
+  ],
+  "fr": [
+    "Dans quelle ville Huldrych Zwingli fut-il réformateur ?",
+    "Zurich",
+    "Genève",
+    "Rome",
+    "Paris",
+    "Compare les lieux d’activité de Zwingli et Calvin.",
+    "Cherche une ville suisse germanophone."
+  ],
+  "it": [
+    "In quale città operò Huldrych Zwingli come riformatore?",
+    "Zurigo",
+    "Ginevra",
+    "Roma",
+    "Parigi",
+    "Confronta i luoghi di attività di Zwingli e Calvino.",
+    "Cerca una città svizzera germanofona."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-18",
+  "reason": "Replace template with print’s role in spreading reform ideas.",
+  "de": [
+    "Wie half der Buchdruck bei der Verbreitung reformatorischer Ideen?",
+    "Texte konnten in vielen Exemplaren verbreitet werden",
+    "Er machte jede gedruckte Aussage automatisch wahr",
+    "Er sorgte dafür, dass nur noch ein einziges Buch existierte",
+    "Er verhinderte jede Diskussion über Texte",
+    "Unterscheide Reichweite und Wahrheitsgehalt.",
+    "Viele Exemplare können unterschiedliche Leser erreichen."
+  ],
+  "en": [
+    "How did printing help spread Reformation ideas?",
+    "Texts could circulate in many copies",
+    "It automatically made every printed claim true",
+    "It ensured only one book existed",
+    "It prevented all discussion of texts",
+    "Distinguish reach from truth.",
+    "Many copies can reach different readers."
+  ],
+  "fr": [
+    "Comment l’imprimerie aida-t-elle à diffuser les idées de la Réforme ?",
+    "Les textes pouvaient circuler en nombreux exemplaires",
+    "Elle rendait automatiquement vrai tout texte imprimé",
+    "Elle garantissait l’existence d’un seul livre",
+    "Elle empêchait toute discussion des textes",
+    "Distingue diffusion et vérité.",
+    "De nombreux exemplaires peuvent atteindre différents lecteurs."
+  ],
+  "it": [
+    "Come aiutò la stampa a diffondere le idee della Riforma?",
+    "I testi potevano circolare in molte copie",
+    "Rendeva automaticamente vero ogni testo stampato",
+    "Garantiva l’esistenza di un solo libro",
+    "Impediva ogni discussione dei testi",
+    "Distingui diffusione e verità.",
+    "Molte copie possono raggiungere lettori diversi."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-20",
+  "reason": "Replace predestination theology with distinguishing belief statements from historical claims.",
+  "de": [
+    "Welche Formulierung beschreibt eine religiöse Lehre, ohne sie als bewiesene Tatsache auszugeben?",
+    "«Nach Calvins Lehre …»",
+    "«Alle Menschen müssen glauben, dass …»",
+    "«Jede andere Ansicht ist falsch, weil …»",
+    "«Die Geschichte beweist jede Glaubensaussage …»",
+    "Achte darauf, wessen Überzeugung dargestellt wird.",
+    "Sachliches Beschreiben verlangt nicht, eine Überzeugung selbst zu übernehmen."
+  ],
+  "en": [
+    "Which wording describes a religious teaching without presenting it as proven fact?",
+    "‘According to Calvin’s teaching …’",
+    "‘Everyone must believe that …’",
+    "‘Every other view is wrong because …’",
+    "‘History proves every religious claim …’",
+    "Notice whose belief is being described.",
+    "Describing a belief does not require adopting it."
+  ],
+  "fr": [
+    "Quelle formulation décrit une doctrine religieuse sans la présenter comme un fait prouvé ?",
+    "« Selon l’enseignement de Calvin… »",
+    "« Tout le monde doit croire que… »",
+    "« Toute autre opinion est fausse parce que… »",
+    "« L’histoire prouve chaque croyance… »",
+    "Observe de qui l’on décrit la conviction.",
+    "Décrire une croyance n’oblige pas à l’adopter."
+  ],
+  "it": [
+    "Quale formula descrive una dottrina religiosa senza presentarla come fatto dimostrato?",
+    "«Secondo l’insegnamento di Calvino…»",
+    "«Tutti devono credere che…»",
+    "«Ogni altra opinione è falsa perché…»",
+    "«La storia dimostra ogni credenza…»",
+    "Osserva di chi si descrive la convinzione.",
+    "Descrivere una credenza non richiede di adottarla."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-22",
+  "reason": "Describe believer baptism accurately without implying all Anabaptists restricted baptism to legal adults.",
+  "de": [
+    "Was war vielen Täufern bei der Taufe besonders wichtig?",
+    "Eine persönliche, bewusste Glaubensentscheidung",
+    "Ausschliesslich der Beruf der Eltern",
+    "Ausschliesslich die Grösse des Wohnorts",
+    "Ausschliesslich die Jahreszeit der Geburt",
+    "Die Frage betrifft eine religiöse Überzeugung dieser Bewegung.",
+    "Unterscheide die eigene Entscheidung von äusseren Lebensumständen."
+  ],
+  "en": [
+    "What was especially important to many Anabaptists regarding baptism?",
+    "A personal conscious decision of faith",
+    "Only the parents’ occupation",
+    "Only the size of the hometown",
+    "Only the season of birth",
+    "This concerns the movement’s religious belief.",
+    "Distinguish personal choice from external circumstances."
+  ],
+  "fr": [
+    "Qu’est-ce qui comptait particulièrement pour de nombreux anabaptistes concernant le baptême ?",
+    "Une décision personnelle et consciente de foi",
+    "Seulement le métier des parents",
+    "Seulement la taille du lieu de résidence",
+    "Seulement la saison de naissance",
+    "Il s’agit d’une conviction religieuse du mouvement.",
+    "Distingue décision personnelle et circonstances extérieures."
+  ],
+  "it": [
+    "Cosa era particolarmente importante per molti anabattisti riguardo al battesimo?",
+    "Una scelta di fede personale e consapevole",
+    "Solo il mestiere dei genitori",
+    "Solo la grandezza del luogo di residenza",
+    "Solo la stagione di nascita",
+    "Si tratta di una convinzione religiosa del movimento.",
+    "Distingui scelta personale e circostanze esterne."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-24",
+  "reason": "Replace later pietism terminology with distinguishing diversity within Protestantism.",
+  "de": [
+    "Welche Aussage über protestantische Kirchen ist sachlich?",
+    "Es gibt verschiedene protestantische Kirchen und Traditionen",
+    "Alle haben in jedem Detail dieselben Bräuche",
+    "Alle wurden am selben Tag in derselben Stadt gegründet",
+    "Es gibt unter ihren Mitgliedern nie unterschiedliche Ansichten",
+    "Eine gemeinsame Geschichte bedeutet nicht vollständige Gleichheit.",
+    "Beachte Vielfalt innerhalb einer religiösen Richtung."
+  ],
+  "en": [
+    "Which statement about Protestant churches is factual?",
+    "There are different Protestant churches and traditions",
+    "All have identical customs in every detail",
+    "All were founded on the same day in one city",
+    "Their members never hold different views",
+    "A shared history does not mean complete uniformity.",
+    "Notice diversity within a religious branch."
+  ],
+  "fr": [
+    "Quelle affirmation sur les Églises protestantes est factuelle ?",
+    "Il existe différentes Églises et traditions protestantes",
+    "Toutes ont exactement les mêmes coutumes",
+    "Toutes ont été fondées le même jour dans la même ville",
+    "Leurs membres n’ont jamais d’avis différents",
+    "Une histoire commune ne signifie pas uniformité totale.",
+    "Observe la diversité au sein d’une branche religieuse."
+  ],
+  "it": [
+    "Quale affermazione sulle Chiese protestanti è oggettiva?",
+    "Esistono diverse Chiese e tradizioni protestanti",
+    "Tutte hanno usanze identiche in ogni dettaglio",
+    "Tutte nacquero lo stesso giorno nella stessa città",
+    "I membri non hanno mai opinioni diverse",
+    "Una storia comune non significa uniformità totale.",
+    "Osserva la diversità all’interno di un ramo religioso."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-26",
+  "reason": "Recognise religious division without judging beliefs.",
+  "de": [
+    "Welche Folge hatte die Reformation für das Christentum in Westeuropa?",
+    "Neben der katholischen Kirche entstanden verschiedene protestantische Kirchen",
+    "Alle christlichen Kirchen verschwanden",
+    "Alle Religionen wurden zu einer einzigen Gemeinschaft",
+    "Es gab danach keine religiösen Unterschiede mehr",
+    "Unterscheide Veränderung und vollständiges Verschwinden.",
+    "Beachte die Entstehung neuer kirchlicher Gemeinschaften."
+  ],
+  "en": [
+    "What was one effect of the Reformation on Christianity in western Europe?",
+    "Different Protestant churches emerged alongside the Catholic Church",
+    "All Christian churches disappeared",
+    "All religions became a single community",
+    "No religious differences remained",
+    "Distinguish change from complete disappearance.",
+    "Notice the emergence of new church communities."
+  ],
+  "fr": [
+    "Quel effet la Réforme eut-elle sur le christianisme en Europe occidentale ?",
+    "Différentes Églises protestantes apparurent à côté de l’Église catholique",
+    "Toutes les Églises chrétiennes disparurent",
+    "Toutes les religions formèrent une seule communauté",
+    "Aucune différence religieuse ne subsista",
+    "Distingue changement et disparition totale.",
+    "Observe l’apparition de nouvelles communautés ecclésiastiques."
+  ],
+  "it": [
+    "Quale effetto ebbe la Riforma sul cristianesimo nell’Europa occidentale?",
+    "Nacquero diverse Chiese protestanti accanto alla Chiesa cattolica",
+    "Scomparvero tutte le Chiese cristiane",
+    "Tutte le religioni divennero una sola comunità",
+    "Non rimasero differenze religiose",
+    "Distingui cambiamento e scomparsa totale.",
+    "Osserva la nascita di nuove comunità ecclesiali."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-28",
+  "reason": "Replace confessionalisation jargon with religion and political authority.",
+  "de": [
+    "Warum untersuchen Historiker bei der Reformation auch politische Entscheidungen?",
+    "Religiöse und politische Macht waren oft miteinander verbunden",
+    "Religion hatte damals grundsätzlich keinen Bezug zum Alltag",
+    "Alle politischen Entscheidungen wurden erst im 20. Jahrhundert erfunden",
+    "Es gab damals keine Städte oder Herrschaftsgebiete",
+    "Betrachte mehrere Bereiche des damaligen Lebens.",
+    "Entscheidungen von Obrigkeiten konnten auch kirchliche Fragen betreffen."
+  ],
+  "en": [
+    "Why do historians also study political decisions when examining the Reformation?",
+    "Religious and political power were often connected",
+    "Religion never related to everyday life then",
+    "Political decisions were invented only in the twentieth century",
+    "There were no towns or territories then",
+    "Consider several aspects of life at the time.",
+    "Decisions by authorities could also concern church matters."
+  ],
+  "fr": [
+    "Pourquoi les historiens étudient-ils aussi les décisions politiques de la Réforme ?",
+    "Pouvoir religieux et pouvoir politique étaient souvent liés",
+    "La religion n’avait jamais de lien avec le quotidien",
+    "Les décisions politiques furent inventées au XXe siècle",
+    "Il n’existait alors ni villes ni territoires",
+    "Considère plusieurs aspects de la vie de l’époque.",
+    "Les décisions des autorités pouvaient aussi concerner l’Église."
+  ],
+  "it": [
+    "Perché gli storici studiano anche le decisioni politiche della Riforma?",
+    "Potere religioso e politico erano spesso collegati",
+    "La religione non riguardava mai la vita quotidiana",
+    "Le decisioni politiche nacquero solo nel Novecento",
+    "Non esistevano città o territori",
+    "Considera più aspetti della vita dell’epoca.",
+    "Le decisioni delle autorità potevano riguardare anche la Chiesa."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-30",
+  "reason": "Explain confession as branch within Christianity.",
+  "de": [
+    "Was bezeichnet «Konfession» im Zusammenhang mit christlichen Kirchen?",
+    "Eine Glaubensrichtung wie katholisch oder reformiert",
+    "Eine Staatsangehörigkeit wie schweizerisch",
+    "Eine Berufsgruppe wie Bäcker",
+    "Eine Sprache wie Italienisch",
+    "Der Begriff ordnet religiöse Gemeinschaften ein.",
+    "Unterscheide Glaubenszugehörigkeit von Herkunft, Sprache und Beruf."
+  ],
+  "en": [
+    "What does ‘denomination’ mean in relation to Christian churches?",
+    "A religious branch such as Catholic or Reformed",
+    "A nationality such as Swiss",
+    "An occupation such as baker",
+    "A language such as Italian",
+    "The term groups religious communities.",
+    "Distinguish religious affiliation from origin, language and occupation."
+  ],
+  "fr": [
+    "Que désigne « confession » pour les Églises chrétiennes ?",
+    "Une branche religieuse comme catholique ou réformée",
+    "Une nationalité comme suisse",
+    "Un métier comme boulanger",
+    "Une langue comme l’italien",
+    "Le terme classe des communautés religieuses.",
+    "Distingue appartenance religieuse, origine, langue et métier."
+  ],
+  "it": [
+    "Cosa indica «confessione» per le Chiese cristiane?",
+    "Un ramo religioso come cattolico o riformato",
+    "Una nazionalità come svizzera",
+    "Un mestiere come fornaio",
+    "Una lingua come l’italiano",
+    "Il termine distingue comunità religiose.",
+    "Distingui appartenenza religiosa, origine, lingua e mestiere."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-32",
+  "reason": "Replace humanist movement definition with careful source comparison. Historical second pass: explicit plausible misconceptions.",
+  "de": [
+    "Warum verglichen Gelehrte alte Handschriften miteinander?",
+    "Um Unterschiede zu erkennen und Texte genauer zu verstehen",
+    "Um jede abweichende Abschrift ungelesen wegzulassen",
+    "Um nur der jüngsten Abschrift ohne Prüfung zu vertrauen",
+    "Um jede schwierige Stelle ohne Vergleich zu übernehmen",
+    "Abschriften können voneinander abweichen.",
+    "Vergleichen hilft beim Prüfen des überlieferten Wortlauts."
+  ],
+  "en": [
+    "Why did scholars compare old manuscripts?",
+    "To identify differences and understand texts more accurately",
+    "To leave out every differing copy unread",
+    "To trust only the newest copy without examination",
+    "To accept every difficult passage without comparison",
+    "Copies can differ from one another.",
+    "Comparison helps check the wording that has been transmitted."
+  ],
+  "fr": [
+    "Pourquoi les savants comparaient-ils les anciens manuscrits ?",
+    "Pour repérer les différences et mieux comprendre les textes",
+    "Pour écarter toute copie différente sans la lire",
+    "Pour croire seulement la copie la plus récente sans examen",
+    "Pour accepter tout passage difficile sans comparaison",
+    "Les copies peuvent différer.",
+    "Comparer aide à vérifier les formulations transmises."
+  ],
+  "it": [
+    "Perché gli studiosi confrontavano antichi manoscritti?",
+    "Per trovare differenze e capire meglio i testi",
+    "Per escludere ogni copia diversa senza leggerla",
+    "Per fidarsi solo della copia più recente senza esame",
+    "Per accettare ogni passo difficile senza confronto",
+    "Le copie possono differire.",
+    "Confrontare aiuta a verificare le formulazioni tramandate."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-34",
+  "reason": "Describe catechism purpose without treating doctrines as universally established truths.",
+  "de": [
+    "Wozu dient ein christlicher Katechismus?",
+    "Die Lehre einer christlichen Kirche erklären",
+    "Die Preise auf einem Markt auflisten",
+    "Die Fahrtroute eines Handelsschiffs zeigen",
+    "Die Einwohnerzahl jeder Stadt zählen",
+    "Vergleiche verschiedene Arten von Texten.",
+    "Ein Lehrtext stellt Überzeugungen seiner Gemeinschaft dar."
+  ],
+  "en": [
+    "What is a Christian catechism for?",
+    "Explaining a Christian church’s teachings",
+    "Listing market prices",
+    "Showing a merchant ship’s route",
+    "Counting every town’s population",
+    "Compare different kinds of texts.",
+    "A teaching text presents its community’s beliefs."
+  ],
+  "fr": [
+    "À quoi sert un catéchisme chrétien ?",
+    "À expliquer l’enseignement d’une Église chrétienne",
+    "À lister les prix d’un marché",
+    "À montrer la route d’un navire marchand",
+    "À compter les habitants de chaque ville",
+    "Compare différents types de textes.",
+    "Un texte d’enseignement présente les convictions de sa communauté."
+  ],
+  "it": [
+    "A cosa serve un catechismo cristiano?",
+    "A spiegare l’insegnamento di una Chiesa cristiana",
+    "A elencare i prezzi di un mercato",
+    "A mostrare la rotta di una nave mercantile",
+    "A contare gli abitanti di ogni città",
+    "Confronta diversi tipi di testi.",
+    "Un testo didattico presenta le convinzioni della propria comunità."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-36",
+  "reason": "Connect literacy to independent reading without universal historical literacy claim.",
+  "de": [
+    "Warum war Lesenlernen für Reformatoren wichtig, die das eigene Bibellesen förderten?",
+    "Menschen sollten die Texte selbst lesen können",
+    "Gedruckte Bücher konnten ohne Lesekenntnisse vollständig verstanden werden",
+    "Lesen sollte den Zugang zu Texten verhindern",
+    "Jede Person konnte damals bereits alle Sprachen lesen",
+    "Unterscheide den Besitz eines Buches von der Fähigkeit, es zu lesen.",
+    "Bildung beeinflusst den Zugang zu geschriebenen Informationen."
+  ],
+  "en": [
+    "Why did reformers who encouraged personal Bible reading value literacy?",
+    "People should be able to read the texts themselves",
+    "Printed books could be fully understood without reading skills",
+    "Reading should prevent access to texts",
+    "Everyone then could already read all languages",
+    "Distinguish owning a book from being able to read it.",
+    "Education affects access to written information."
+  ],
+  "fr": [
+    "Pourquoi les réformateurs favorables à la lecture personnelle de la Bible valorisaient-ils l’apprentissage de la lecture ?",
+    "Les personnes devaient pouvoir lire les textes elles-mêmes",
+    "Les livres imprimés se comprenaient sans savoir lire",
+    "Lire devait empêcher l’accès aux textes",
+    "Tout le monde lisait déjà toutes les langues",
+    "Distingue posséder un livre et savoir le lire.",
+    "L’instruction influence l’accès aux informations écrites."
+  ],
+  "it": [
+    "Perché i riformatori favorevoli alla lettura personale della Bibbia valorizzavano l’alfabetizzazione?",
+    "Le persone dovevano poter leggere i testi da sole",
+    "I libri stampati si capivano senza saper leggere",
+    "Leggere doveva impedire l’accesso ai testi",
+    "Tutti leggevano già tutte le lingue",
+    "Distingui possedere un libro e saperlo leggere.",
+    "L’istruzione influisce sull’accesso alle informazioni scritte."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-38",
+  "reason": "Explain persecution as harm due to beliefs without doctrinal minutiae.",
+  "de": [
+    "Was bedeutet religiöse Verfolgung, wie sie viele Hugenotten erlebten?",
+    "Menschen werden wegen ihres Glaubens bedroht oder benachteiligt",
+    "Menschen diskutieren freiwillig unterschiedliche Meinungen",
+    "Menschen besuchen freiwillig eine andere Stadt",
+    "Menschen lesen verschiedene Bücher zur Geschichte",
+    "Unterscheide Meinungsverschiedenheit von Zwang und Benachteiligung.",
+    "Achte darauf, ob Menschen wegen ihrer Überzeugung Schaden erfahren."
+  ],
+  "en": [
+    "What does religious persecution, experienced by many Huguenots, mean?",
+    "People are threatened or disadvantaged because of their faith",
+    "People freely discuss different opinions",
+    "People voluntarily visit another city",
+    "People read different history books",
+    "Distinguish disagreement from coercion and discrimination.",
+    "Consider whether people suffer harm because of their beliefs."
+  ],
+  "fr": [
+    "Que signifie la persécution religieuse subie par de nombreux huguenots ?",
+    "Des personnes sont menacées ou désavantagées pour leur foi",
+    "Des personnes discutent librement d’opinions différentes",
+    "Des personnes visitent volontairement une autre ville",
+    "Des personnes lisent différents livres d’histoire",
+    "Distingue désaccord, contrainte et discrimination.",
+    "Observe si des personnes subissent du tort pour leurs convictions."
+  ],
+  "it": [
+    "Cosa significa persecuzione religiosa, subita da molti ugonotti?",
+    "Le persone sono minacciate o svantaggiate per la loro fede",
+    "Le persone discutono liberamente opinioni diverse",
+    "Le persone visitano volontariamente un’altra città",
+    "Le persone leggono libri di storia diversi",
+    "Distingui disaccordo, costrizione e discriminazione.",
+    "Osserva se le persone subiscono danni per le convinzioni."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-40",
+  "reason": "Replace edict dates with religious tolerance without demanding agreement.",
+  "de": [
+    "Was bedeutet religiöse Toleranz im Zusammenleben?",
+    "Andere Überzeugungen respektieren, ohne sie selbst übernehmen zu müssen",
+    "Alle müssen dieselbe Religion wählen",
+    "Jede Meinungsverschiedenheit muss verboten werden",
+    "Nur die grösste Glaubensgruppe darf sprechen",
+    "Respekt und Zustimmung sind nicht dasselbe.",
+    "Menschen können unterschiedliche Überzeugungen friedlich vertreten."
+  ],
+  "en": [
+    "What does religious tolerance mean in living together?",
+    "Respecting other beliefs without having to adopt them",
+    "Everyone must choose the same religion",
+    "Every disagreement must be forbidden",
+    "Only the largest faith group may speak",
+    "Respect and agreement are not the same.",
+    "People can peacefully hold different beliefs."
+  ],
+  "fr": [
+    "Que signifie la tolérance religieuse dans la vie commune ?",
+    "Respecter d’autres convictions sans devoir les adopter",
+    "Tout le monde doit choisir la même religion",
+    "Tout désaccord doit être interdit",
+    "Seul le plus grand groupe religieux peut parler",
+    "Respect et accord ne sont pas identiques.",
+    "On peut défendre paisiblement des convictions différentes."
+  ],
+  "it": [
+    "Cosa significa tolleranza religiosa nella convivenza?",
+    "Rispettare altre convinzioni senza doverle adottare",
+    "Tutti devono scegliere la stessa religione",
+    "Ogni disaccordo deve essere vietato",
+    "Solo il gruppo religioso più grande può parlare",
+    "Rispetto e accordo non sono la stessa cosa.",
+    "Si possono sostenere pacificamente convinzioni diverse."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-42",
+  "reason": "Replace anticlericalism label with distinction between institutional criticism and attacking believers.",
+  "de": [
+    "Welche Aussage kritisiert eine historische Entscheidung statt eine ganze Glaubensgruppe abzuwerten?",
+    "«Diese Entscheidung der Kirchenleitung benachteiligte bestimmte Menschen.»",
+    "«Alle Menschen dieser Religion sind schlecht.»",
+    "«Niemand aus dieser Glaubensgruppe verdient Respekt.»",
+    "«Der Glaube allein macht jeden Menschen unzuverlässig.»",
+    "Prüfe, ob eine konkrete Handlung oder pauschal alle Menschen gemeint sind.",
+    "Sachliche Kritik braucht einen klaren Gegenstand und Belege."
+  ],
+  "en": [
+    "Which statement criticises a historical decision rather than demeaning an entire faith group?",
+    "‘This decision by church leaders disadvantaged certain people.’",
+    "‘Everyone in this religion is bad.’",
+    "‘Nobody in this faith group deserves respect.’",
+    "‘Faith alone makes every person unreliable.’",
+    "Check whether it concerns a specific action or all people indiscriminately.",
+    "Factual criticism needs a clear subject and evidence."
+  ],
+  "fr": [
+    "Quelle phrase critique une décision historique plutôt que de dénigrer tout un groupe religieux ?",
+    "« Cette décision des responsables religieux a désavantagé certaines personnes. »",
+    "« Tous les membres de cette religion sont mauvais. »",
+    "« Personne de ce groupe ne mérite le respect. »",
+    "« La foi rend toute personne peu fiable. »",
+    "Vérifie si l’on vise un acte précis ou toutes les personnes indistinctement.",
+    "Une critique factuelle demande un objet clair et des preuves."
+  ],
+  "it": [
+    "Quale frase critica una decisione storica anziché denigrare un intero gruppo religioso?",
+    "«Questa decisione dei responsabili religiosi svantaggiò alcune persone.»",
+    "«Tutti i membri di questa religione sono cattivi.»",
+    "«Nessuno di questo gruppo merita rispetto.»",
+    "«La fede rende ogni persona inaffidabile.»",
+    "Controlla se si parla di un atto preciso o di tutte le persone indistintamente.",
+    "Una critica oggettiva richiede un oggetto chiaro e prove."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-44",
+  "reason": "Explain interdenominational marriage without personal assumptions.",
+  "de": [
+    "Eine katholische und eine reformierte Person heiraten. Was unterscheidet sich in diesem Beispiel?",
+    "Ihre Konfession",
+    "Sicher ihre Staatsangehörigkeit",
+    "Sicher ihre Muttersprache",
+    "Sicher ihr Wohnkontinent",
+    "Die Angaben nennen nur die religiöse Zugehörigkeit.",
+    "Leite keine weiteren persönlichen Merkmale daraus ab."
+  ],
+  "en": [
+    "A Catholic person and a Reformed person marry. What differs in this example?",
+    "Their denomination",
+    "Certainly their nationality",
+    "Certainly their first language",
+    "Certainly their continent of residence",
+    "The information names only religious affiliation.",
+    "Do not infer other personal characteristics from it."
+  ],
+  "fr": [
+    "Une personne catholique et une personne réformée se marient. Qu’est-ce qui diffère dans cet exemple ?",
+    "Leur confession",
+    "Certainement leur nationalité",
+    "Certainement leur langue maternelle",
+    "Certainement leur continent de résidence",
+    "Les informations ne donnent que l’appartenance religieuse.",
+    "N’en déduis pas d’autres caractéristiques personnelles."
+  ],
+  "it": [
+    "Una persona cattolica e una riformata si sposano. Cosa differisce nell’esempio?",
+    "La loro confessione",
+    "Sicuramente la nazionalità",
+    "Sicuramente la lingua madre",
+    "Sicuramente il continente di residenza",
+    "Le informazioni indicano solo l’appartenenza religiosa.",
+    "Non dedurre altre caratteristiche personali."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-46",
+  "reason": "Replace overbroad fundamentalism definition with interpretive diversity.",
+  "de": [
+    "Zwei Menschen derselben Religion deuten einen Text unterschiedlich. Was folgt daraus?",
+    "Innerhalb einer Religion können verschiedene Auslegungen bestehen",
+    "Einer von beiden gehört sicher keiner Religion an",
+    "Beide müssen aus verschiedenen Ländern stammen",
+    "Der Text kann sicher von niemandem gelesen werden",
+    "Religiöse Zugehörigkeit sagt nicht jede einzelne Ansicht voraus.",
+    "Unterscheide gemeinsame Tradition und persönliche Interpretation."
+  ],
+  "en": [
+    "Two people of the same religion interpret a text differently. What follows?",
+    "Different interpretations can exist within one religion",
+    "One certainly belongs to no religion",
+    "They must come from different countries",
+    "Nobody can possibly read the text",
+    "Religious affiliation does not predict every view.",
+    "Distinguish shared tradition from personal interpretation."
+  ],
+  "fr": [
+    "Deux personnes de même religion interprètent un texte différemment. Que peut-on conclure ?",
+    "Plusieurs interprétations peuvent exister dans une religion",
+    "L’une n’a certainement aucune religion",
+    "Elles viennent forcément de pays différents",
+    "Personne ne peut lire ce texte",
+    "L’appartenance religieuse ne prédit pas chaque opinion.",
+    "Distingue tradition commune et interprétation personnelle."
+  ],
+  "it": [
+    "Due persone della stessa religione interpretano diversamente un testo. Cosa si può concludere?",
+    "Possono esistere diverse interpretazioni in una religione",
+    "Una sicuramente non ha religione",
+    "Devono provenire da paesi diversi",
+    "Nessuno può leggere il testo",
+    "L’appartenenza religiosa non predice ogni opinione.",
+    "Distingui tradizione comune e interpretazione personale."
+  ]
+},
+{
+  "key": "5/science/reformation-5/rf5-50",
+  "reason": "Replace false reform/revolution binary with identifying historical Reformation subject.",
+  "de": [
+    "Worum ging es bei der Reformation im 16. Jahrhundert besonders?",
+    "Um Veränderungen von Kirche und christlicher Glaubenspraxis",
+    "Um die Einführung des Internets",
+    "Um die Entstehung der ersten Landwirtschaft",
+    "Um die Erfindung der Dampflokomotive",
+    "Ordne das Ereignis zeitlich und thematisch ein.",
+    "Vergleiche Religion, Technik und sehr frühe Menschheitsgeschichte."
+  ],
+  "en": [
+    "What was the sixteenth-century Reformation particularly about?",
+    "Changes to the church and Christian religious practice",
+    "Introducing the internet",
+    "The beginning of the first farming",
+    "Inventing the steam locomotive",
+    "Place the event in its time and subject area.",
+    "Compare religion, technology and early human history."
+  ],
+  "fr": [
+    "Sur quoi portait particulièrement la Réforme du XVIe siècle ?",
+    "Des changements de l’Église et des pratiques chrétiennes",
+    "L’introduction d’Internet",
+    "La naissance de la première agriculture",
+    "L’invention de la locomotive à vapeur",
+    "Situe l’événement dans le temps et son domaine.",
+    "Compare religion, technique et débuts de l’humanité."
+  ],
+  "it": [
+    "Di cosa trattava soprattutto la Riforma del Cinquecento?",
+    "Cambiamenti della Chiesa e delle pratiche cristiane",
+    "L’introduzione di Internet",
+    "La nascita della prima agricoltura",
+    "L’invenzione della locomotiva a vapore",
+    "Colloca l’evento nel tempo e nel suo ambito.",
+    "Confronta religione, tecnologia e inizi dell’umanità."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-8",
+  "reason": "Simplify footprint concept while retaining greenhouse gases rather than CO2 alone.",
+  "de": [
+    "Was beschreibt der Klima-Fussabdruck eines Produkts?",
+    "Die ihm zugerechneten Treibhausgasemissionen",
+    "Nur sein Gewicht auf einer Waage",
+    "Nur seine Verpackungsfarbe",
+    "Nur seine Entfernung zum nächsten Laden",
+    "Betrachte Herstellung, Transport, Nutzung und Entsorgung.",
+    "Mehrere Schritte im Leben eines Produkts können zum Ergebnis beitragen."
+  ],
+  "en": [
+    "What does a product’s carbon footprint describe?",
+    "The greenhouse gas emissions attributed to it",
+    "Only its weight on a scale",
+    "Only its packaging colour",
+    "Only its distance from the nearest shop",
+    "Consider production, transport, use and disposal.",
+    "Several stages in a product’s life can contribute."
+  ],
+  "fr": [
+    "Que décrit l’empreinte carbone d’un produit ?",
+    "Les émissions de gaz à effet de serre qui lui sont attribuées",
+    "Seulement son poids sur une balance",
+    "Seulement la couleur de son emballage",
+    "Seulement sa distance au magasin le plus proche",
+    "Considère fabrication, transport, utilisation et élimination.",
+    "Plusieurs étapes de la vie du produit peuvent contribuer au résultat."
+  ],
+  "it": [
+    "Cosa descrive l’impronta climatica di un prodotto?",
+    "Le emissioni di gas serra attribuite al prodotto",
+    "Solo il peso sulla bilancia",
+    "Solo il colore dell’imballaggio",
+    "Solo la distanza dal negozio più vicino",
+    "Considera produzione, trasporto, uso e smaltimento.",
+    "Più fasi della vita del prodotto possono contribuire al risultato."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-10",
+  "reason": "Recognise biodiversity without reducing it to species count alone.",
+  "de": [
+    "Was gehört zur biologischen Vielfalt?",
+    "Vielfalt von Arten, Erbanlagen und Lebensräumen",
+    "Nur die Anzahl Menschen in einer Stadt",
+    "Nur die Fläche eines einzelnen Ackers",
+    "Nur die Grösse des höchsten Baums",
+    "Betrachte Vielfalt auf mehreren Ebenen.",
+    "Nicht nur Unterschiede zwischen Tierarten sind gemeint."
+  ],
+  "en": [
+    "What is included in biodiversity?",
+    "Diversity of species, genes and habitats",
+    "Only the number of people in a city",
+    "Only the area of a single field",
+    "Only the height of the tallest tree",
+    "Consider diversity at several levels.",
+    "It does not mean only differences between animal species."
+  ],
+  "fr": [
+    "Que comprend la biodiversité ?",
+    "La diversité des espèces, des gènes et des habitats",
+    "Seulement le nombre d’habitants d’une ville",
+    "Seulement la surface d’un champ",
+    "Seulement la hauteur du plus grand arbre",
+    "Considère la diversité à plusieurs niveaux.",
+    "Il ne s’agit pas seulement des différences entre espèces animales."
+  ],
+  "it": [
+    "Cosa comprende la biodiversità?",
+    "Diversità di specie, geni e habitat",
+    "Solo il numero di abitanti di una città",
+    "Solo la superficie di un campo",
+    "Solo l’altezza dell’albero più alto",
+    "Considera la diversità a più livelli.",
+    "Non si tratta solo di differenze tra specie animali."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-12",
+  "reason": "Use concrete recycling example without subjective upcycling value judgement.",
+  "de": [
+    "Welche Handlung ist stoffliches Recycling?",
+    "Altpapier wird zu neuem Papier verarbeitet",
+    "Ein Buch wird unverändert weitergegeben",
+    "Eine Flasche wird unverändert erneut benutzt",
+    "Ein kaputter Knopf wird wieder angenäht",
+    "Unterscheide Materialaufbereitung von direkter Weiterverwendung.",
+    "Der ursprüngliche Gegenstand bleibt dabei nicht einfach unverändert erhalten."
+  ],
+  "en": [
+    "Which action is material recycling?",
+    "Waste paper is processed into new paper",
+    "A book is passed on unchanged",
+    "A bottle is reused unchanged",
+    "A broken button is sewn back on",
+    "Distinguish material processing from direct reuse.",
+    "The original object does not simply remain unchanged."
+  ],
+  "fr": [
+    "Quelle action est un recyclage de matière ?",
+    "Du vieux papier est transformé en papier neuf",
+    "Un livre est transmis sans modification",
+    "Une bouteille est réutilisée telle quelle",
+    "Un bouton est recousu",
+    "Distingue transformation de matière et réemploi direct.",
+    "L’objet initial ne reste pas simplement inchangé."
+  ],
+  "it": [
+    "Quale azione è riciclaggio di materiale?",
+    "La carta usata viene trasformata in nuova carta",
+    "Un libro viene passato senza modifiche",
+    "Una bottiglia viene riutilizzata invariata",
+    "Un bottone viene ricucito",
+    "Distingui trasformazione del materiale e riuso diretto.",
+    "L’oggetto originale non resta semplicemente invariato."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-14",
+  "reason": "Identify avoidable food waste without unverified global fraction.",
+  "de": [
+    "Welche Situation ist vermeidbare Lebensmittelverschwendung?",
+    "Noch essbare Äpfel werden weggeworfen, weil zu viele gekauft wurden",
+    "Eine ungeniessbare Bananenschale wird kompostiert",
+    "Passende Portionen werden vollständig gegessen",
+    "Ein Einkauf wird nach dem tatsächlichen Bedarf geplant",
+    "Prüfe, ob essbare Nahrung ungenutzt verloren geht.",
+    "Bedarfsgerechter Einkauf kann solche Verluste verringern."
+  ],
+  "en": [
+    "Which situation is avoidable food waste?",
+    "Edible apples are discarded because too many were bought",
+    "An inedible banana peel is composted",
+    "Suitable portions are eaten completely",
+    "Shopping is planned according to actual needs",
+    "Check whether edible food is lost unused.",
+    "Buying according to need can reduce such losses."
+  ],
+  "fr": [
+    "Quelle situation est un gaspillage alimentaire évitable ?",
+    "Des pommes encore comestibles sont jetées car on en a trop acheté",
+    "Une peau de banane non comestible est compostée",
+    "Des portions adaptées sont entièrement mangées",
+    "Les achats sont prévus selon les besoins réels",
+    "Vérifie si de la nourriture comestible est perdue sans être utilisée.",
+    "Acheter selon ses besoins peut réduire ces pertes."
+  ],
+  "it": [
+    "Quale situazione è spreco alimentare evitabile?",
+    "Mele ancora commestibili vengono buttate perché ne sono state comprate troppe",
+    "Una buccia di banana non commestibile viene compostata",
+    "Porzioni adatte vengono mangiate interamente",
+    "Gli acquisti sono pianificati secondo il bisogno reale",
+    "Controlla se cibo commestibile va perso inutilizzato.",
+    "Comprare secondo il bisogno può ridurre queste perdite."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-16",
+  "reason": "Replace sufficiency abstraction with sharing infrequently used items.",
+  "de": [
+    "Du brauchst ein bestimmtes Spiel nur für einen Nachmittag. Was kann einen unnötigen Neukauf vermeiden?",
+    "Es mit Erlaubnis ausleihen und zurückgeben",
+    "Mehrere neue Exemplare kaufen",
+    "Ein neues Exemplar kaufen und danach wegwerfen",
+    "Die Verpackung eines Neukaufs besonders gross wählen",
+    "Überlege, ob du den Gegenstand dauerhaft besitzen musst.",
+    "Nutzen und Besitzen sind nicht dasselbe."
+  ],
+  "en": [
+    "You need a particular game for only one afternoon. What can avoid an unnecessary new purchase?",
+    "Borrow it with permission and return it",
+    "Buy several new copies",
+    "Buy a new copy and discard it afterwards",
+    "Choose especially large packaging for a new purchase",
+    "Consider whether you need to own it permanently.",
+    "Using and owning are not the same."
+  ],
+  "fr": [
+    "Tu as besoin d’un jeu pour un seul après-midi. Comment éviter un achat neuf inutile ?",
+    "L’emprunter avec permission et le rendre",
+    "Acheter plusieurs exemplaires neufs",
+    "Acheter un exemplaire puis le jeter",
+    "Choisir un emballage particulièrement grand",
+    "Demande si tu dois le posséder durablement.",
+    "Utiliser et posséder ne sont pas identiques."
+  ],
+  "it": [
+    "Ti serve un gioco per un solo pomeriggio. Come eviti un acquisto nuovo inutile?",
+    "Prenderlo in prestito con permesso e restituirlo",
+    "Comprare più copie nuove",
+    "Comprarne una e poi gettarla",
+    "Scegliere un imballaggio particolarmente grande",
+    "Chiediti se devi possederlo stabilmente.",
+    "Usare e possedere non sono la stessa cosa."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-18",
+  "reason": "Replace consistency jargon with compost nutrient cycle.",
+  "de": [
+    "Was geschieht beim fachgerechten Kompostieren geeigneter Pflanzenreste?",
+    "Sie werden zersetzt und können als Kompost wieder dem Boden dienen",
+    "Sie werden zu neuem Glas eingeschmolzen",
+    "Sie werden unverändert zu Metall verarbeitet",
+    "Sie bleiben für immer unverändert frisch",
+    "Betrachte einen biologischen Stoffkreislauf.",
+    "Bodenlebewesen helfen beim Abbau organischer Reste."
+  ],
+  "en": [
+    "What happens when suitable plant waste is composted properly?",
+    "It decomposes and can return to soil as compost",
+    "It is melted into new glass",
+    "It is processed unchanged into metal",
+    "It stays fresh and unchanged forever",
+    "Consider a biological material cycle.",
+    "Soil organisms help break down organic remains."
+  ],
+  "fr": [
+    "Que deviennent des restes végétaux adaptés correctement compostés ?",
+    "Ils se décomposent et peuvent retourner au sol comme compost",
+    "Ils sont fondus en verre neuf",
+    "Ils sont transformés sans changement en métal",
+    "Ils restent frais et inchangés pour toujours",
+    "Considère un cycle biologique de matière.",
+    "Les organismes du sol aident à décomposer les restes organiques."
+  ],
+  "it": [
+    "Cosa succede a resti vegetali adatti compostati correttamente?",
+    "Si decompongono e possono tornare al suolo come compost",
+    "Vengono fusi in vetro nuovo",
+    "Vengono trasformati senza cambiamenti in metallo",
+    "Restano freschi e invariati per sempre",
+    "Considera un ciclo biologico della materia.",
+    "Gli organismi del suolo aiutano a decomporre resti organici."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-20",
+  "reason": "Recognise urban food cultivation through concrete example.",
+  "de": [
+    "Welches Beispiel zeigt Lebensmittelanbau in der Stadt?",
+    "Gemüse wächst in einem städtischen Gemeinschaftsgarten",
+    "Gemüse liegt im Regal eines Supermarkts",
+    "Gemüse wird in einem Lastwagen angeliefert",
+    "Gemüse wird in einer Restaurantküche geschnitten",
+    "Anbau ist nicht dasselbe wie Verkauf oder Zubereitung.",
+    "Achte darauf, wo die Pflanzen wachsen."
+  ],
+  "en": [
+    "Which example shows food being grown in a city?",
+    "Vegetables grow in an urban community garden",
+    "Vegetables sit on a supermarket shelf",
+    "Vegetables arrive in a lorry",
+    "Vegetables are chopped in a restaurant kitchen",
+    "Growing differs from selling or preparing.",
+    "Notice where the plants grow."
+  ],
+  "fr": [
+    "Quel exemple montre une production alimentaire en ville ?",
+    "Des légumes poussent dans un jardin collectif urbain",
+    "Des légumes sont sur un rayon de supermarché",
+    "Des légumes arrivent en camion",
+    "Des légumes sont coupés au restaurant",
+    "Cultiver diffère de vendre ou préparer.",
+    "Observe où les plantes poussent."
+  ],
+  "it": [
+    "Quale esempio mostra coltivazione alimentare in città?",
+    "Ortaggi crescono in un orto urbano condiviso",
+    "Ortaggi sono sullo scaffale del supermercato",
+    "Ortaggi arrivano in camion",
+    "Ortaggi vengono tagliati al ristorante",
+    "Coltivare è diverso da vendere o preparare.",
+    "Osserva dove crescono le piante."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-22",
+  "reason": "Qualify transport comparisons by occupancy and energy source. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Was brauchst du für einen fairen Vergleich der Klimaemissionen pro Person bei Bus und Auto?",
+    "Angaben zu Strecke, Antrieb und Anzahl Mitfahrenden",
+    "Nur die Gesamtemissionen des Fahrzeugs ohne Zahl der Mitfahrenden",
+    "Nur die Zahl der Sitzplätze ohne tatsächliche Belegung",
+    "Nur die Fahrtdauer ohne Strecke und Antrieb",
+    "Die gleiche Fahrt kann je nach Nutzung unterschiedlich ausfallen.",
+    "Die Emissionen eines Fahrzeugs werden auf seine Mitfahrenden bezogen."
+  ],
+  "en": [
+    "What do you need for a fair comparison of climate emissions per person for bus and car?",
+    "Distance, power source and passenger numbers",
+    "Only total vehicle emissions without passenger numbers",
+    "Only the number of seats without actual occupancy",
+    "Only journey time without distance or power source",
+    "The same journey can differ depending on how vehicles are used.",
+    "Vehicle emissions are related to the number of passengers."
+  ],
+  "fr": [
+    "Que faut-il pour comparer équitablement les émissions par personne en bus et en voiture ?",
+    "Distance, motorisation et nombre de passagers",
+    "Seulement les émissions du véhicule sans passagers",
+    "Seulement le nombre de sièges sans occupation réelle",
+    "Seulement la durée sans distance ni motorisation",
+    "Un même trajet peut différer selon l’utilisation.",
+    "Les émissions du véhicule sont rapportées à ses passagers."
+  ],
+  "it": [
+    "Cosa serve per confrontare equamente le emissioni per persona di bus e auto?",
+    "Distanza, propulsione e numero di passeggeri",
+    "Solo le emissioni del veicolo senza passeggeri",
+    "Solo il numero di posti senza occupazione reale",
+    "Solo la durata senza distanza o propulsione",
+    "Lo stesso viaggio può differire secondo l’utilizzo.",
+    "Le emissioni del veicolo sono rapportate ai passeggeri."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-24",
+  "reason": "Replace emissions-market mechanics with measurable reduction.",
+  "de": [
+    "Welche Angabe zeigt, dass ein Betrieb seine jährlichen Treibhausgasemissionen gesenkt hat?",
+    "Vergleichbare Messungen zeigen einen tieferen Jahreswert",
+    "Das Firmenlogo ist jetzt grün",
+    "Der Werbeslogan nennt das Wort Klima",
+    "Die Webseite zeigt mehr Waldfotos",
+    "Unterscheide überprüfbare Ergebnisse von Werbung.",
+    "Die Zahlen müssen dieselben Bereiche und Zeiträume abdecken."
+  ],
+  "en": [
+    "What shows that a company reduced its annual greenhouse gas emissions?",
+    "Comparable measurements show a lower annual figure",
+    "Its logo is now green",
+    "Its slogan includes the word climate",
+    "Its website shows more forest photos",
+    "Distinguish verifiable results from advertising.",
+    "The figures must cover the same activities and periods."
+  ],
+  "fr": [
+    "Qu’est-ce qui montre qu’une entreprise a réduit ses émissions annuelles ?",
+    "Des mesures comparables montrent un total annuel plus bas",
+    "Son logo est désormais vert",
+    "Son slogan contient le mot climat",
+    "Son site montre plus de forêts",
+    "Distingue résultats vérifiables et publicité.",
+    "Les chiffres doivent couvrir les mêmes activités et périodes."
+  ],
+  "it": [
+    "Cosa mostra che un’impresa ha ridotto le emissioni annuali?",
+    "Misure confrontabili mostrano un totale annuale inferiore",
+    "Il logo ora è verde",
+    "Lo slogan contiene la parola clima",
+    "Il sito mostra più foreste",
+    "Distingui risultati verificabili e pubblicità.",
+    "I dati devono coprire le stesse attività e periodi."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-26",
+  "reason": "Replace speculative future list with accessible short-distance travel choice.",
+  "de": [
+    "Ein nahes Ziel ist über einen sicheren Fussweg erreichbar. Welche Möglichkeit braucht keine Antriebsenergie für ein Fahrzeug?",
+    "Zu Fuss gehen",
+    "Allein mit einem Benzinauto fahren",
+    "Mit einem Dieselbus fahren",
+    "Mit einem Elektrotaxi fahren",
+    "Die Frage betrifft Fahrzeugantrieb, nicht die Energie des menschlichen Körpers.",
+    "Vergleiche die Fortbewegungsarten für dieselbe kurze Strecke."
+  ],
+  "en": [
+    "A nearby destination has a safe walking route. Which option needs no energy to power a vehicle?",
+    "Walking",
+    "Driving alone in a petrol car",
+    "Taking a diesel bus",
+    "Taking an electric taxi",
+    "The question concerns vehicle power, not the body’s energy.",
+    "Compare travel methods for the same short route."
+  ],
+  "fr": [
+    "Un lieu proche est accessible par un chemin piéton sûr. Quelle option ne demande pas d’énergie pour propulser un véhicule ?",
+    "Marcher",
+    "Conduire seul une voiture à essence",
+    "Prendre un bus diesel",
+    "Prendre un taxi électrique",
+    "Il s’agit de propulsion d’un véhicule, pas de l’énergie du corps.",
+    "Compare les modes de déplacement sur le même trajet court."
+  ],
+  "it": [
+    "Una meta vicina è raggiungibile per un percorso pedonale sicuro. Quale scelta non richiede energia per muovere un veicolo?",
+    "Camminare",
+    "Guidare da soli un’auto a benzina",
+    "Prendere un bus diesel",
+    "Prendere un taxi elettrico",
+    "Si parla di propulsione del veicolo, non di energia del corpo.",
+    "Confronta i modi di spostarsi sullo stesso breve percorso."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-28",
+  "reason": "Identify biogas feedstock without implying methane is harmless.",
+  "de": [
+    "Woraus kann in einer geeigneten Anlage Biogas entstehen?",
+    "Aus organischen Resten wie Gülle oder Lebensmittelresten",
+    "Aus eingeschmolzenen Glasscherben",
+    "Aus unverändertem Stahlschrott",
+    "Aus reinem trockenem Sand",
+    "Gesucht sind Stoffe, die Mikroorganismen abbauen können.",
+    "Die Herstellung erfolgt unter kontrollierten Bedingungen in einer Anlage."
+  ],
+  "en": [
+    "What can produce biogas in a suitable plant?",
+    "Organic material such as manure or food waste",
+    "Melted glass fragments",
+    "Unchanged scrap steel",
+    "Pure dry sand",
+    "Look for material microorganisms can break down.",
+    "Production takes place under controlled conditions in a plant."
+  ],
+  "fr": [
+    "Avec quoi peut-on produire du biogaz dans une installation adaptée ?",
+    "Des matières organiques comme du lisier ou des restes alimentaires",
+    "Des débris de verre fondus",
+    "De la ferraille inchangée",
+    "Du sable sec pur",
+    "Cherche une matière décomposable par des microorganismes.",
+    "La production se fait dans des conditions contrôlées."
+  ],
+  "it": [
+    "Da cosa si può produrre biogas in un impianto adatto?",
+    "Materiale organico come liquame o resti alimentari",
+    "Frammenti di vetro fusi",
+    "Rottami d’acciaio invariati",
+    "Sabbia asciutta pura",
+    "Cerca materiale decomponibile dai microrganismi.",
+    "La produzione avviene in condizioni controllate."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-30",
+  "reason": "Replace planetary-boundary framework with renewable-resource limits.",
+  "de": [
+    "In einem Wald werden langfristig mehr Bäume gefällt, als nachwachsen. Was ist zu erwarten?",
+    "Der Baumbestand nimmt ab",
+    "Der Baumbestand bleibt dadurch sicher gleich",
+    "Die Bäume wachsen deshalb unbegrenzt schneller",
+    "Es entstehen automatisch zusätzliche Waldflächen",
+    "Vergleiche Entnahme und Nachwachsen.",
+    "Erneuerbar bedeutet nicht unbegrenzt schnell verfügbar."
+  ],
+  "en": [
+    "In a forest, more trees are cut over time than regrow. What is expected?",
+    "The tree stock decreases",
+    "The tree stock certainly stays unchanged",
+    "Trees therefore grow endlessly faster",
+    "Extra forest areas appear automatically",
+    "Compare harvesting with regrowth.",
+    "Renewable does not mean available at unlimited speed."
+  ],
+  "fr": [
+    "Dans une forêt, on coupe durablement plus d’arbres qu’il n’en repousse. Que prévoir ?",
+    "Le nombre d’arbres diminue",
+    "Le nombre d’arbres reste sûrement identique",
+    "Les arbres poussent donc toujours plus vite sans limite",
+    "De nouvelles forêts apparaissent automatiquement",
+    "Compare prélèvement et repousse.",
+    "Renouvelable ne signifie pas disponible à vitesse illimitée."
+  ],
+  "it": [
+    "In un bosco si tagliano nel tempo più alberi di quanti ricrescano. Cosa prevedi?",
+    "Il numero di alberi diminuisce",
+    "Il numero resta sicuramente uguale",
+    "Gli alberi crescono quindi sempre più velocemente senza limite",
+    "Compaiono automaticamente nuovi boschi",
+    "Confronta prelievo e ricrescita.",
+    "Rinnovabile non significa disponibile a velocità illimitata."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-32",
+  "reason": "Apply precaution to unknown substance safely.",
+  "de": [
+    "Du findest eine unbekannte Flüssigkeit neben einem Bach. Was ist sinnvoll?",
+    "Abstand halten und eine erwachsene Person informieren",
+    "Daran kosten, um sie zu bestimmen",
+    "Sie in den Bach schütten",
+    "Sie mit anderen Flüssigkeiten vermischen",
+    "Unbekannt bedeutet nicht ungefährlich.",
+    "Die Abklärung gehört in fachkundige Hände."
+  ],
+  "en": [
+    "You find an unknown liquid beside a stream. What is sensible?",
+    "Keep your distance and tell an adult",
+    "Taste it to identify it",
+    "Pour it into the stream",
+    "Mix it with other liquids",
+    "Unknown does not mean harmless.",
+    "Identification should be left to knowledgeable people."
+  ],
+  "fr": [
+    "Tu trouves un liquide inconnu près d’un ruisseau. Que faire ?",
+    "Garder ses distances et prévenir un adulte",
+    "Le goûter pour l’identifier",
+    "Le verser dans le ruisseau",
+    "Le mélanger à d’autres liquides",
+    "Inconnu ne signifie pas inoffensif.",
+    "L’identification doit être confiée à des personnes compétentes."
+  ],
+  "it": [
+    "Trovi un liquido sconosciuto vicino a un ruscello. Cosa fare?",
+    "Mantenere distanza e informare un adulto",
+    "Assaggiarlo per identificarlo",
+    "Versarlo nel ruscello",
+    "Mescolarlo con altri liquidi",
+    "Sconosciuto non significa innocuo.",
+    "L’identificazione va affidata a persone competenti."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-34",
+  "reason": "Apply environmental fairness through inclusive local planning.",
+  "de": [
+    "Eine Gemeinde plant Lärmschutz. Was gehört zu einer fairen Prüfung?",
+    "Die Belastung und Bedürfnisse aller betroffenen Wohngebiete berücksichtigen",
+    "Nur das Wohngebiet der lautesten Einzelperson betrachten",
+    "Nur besonders teure Häuser berücksichtigen",
+    "Die betroffenen Menschen gar nicht anhören",
+    "Umweltbelastungen können ungleich verteilt sein.",
+    "Prüfe, wer betroffen ist und wessen Sicht noch fehlt."
+  ],
+  "en": [
+    "A municipality plans noise protection. What is part of a fair assessment?",
+    "Consider exposure and needs in all affected neighbourhoods",
+    "Consider only the loudest individual’s neighbourhood",
+    "Consider only expensive houses",
+    "Do not listen to affected people",
+    "Environmental burdens can be unevenly distributed.",
+    "Check who is affected and whose perspective is missing."
+  ],
+  "fr": [
+    "Une commune prévoit une protection contre le bruit. Que demande une étude équitable ?",
+    "Considérer les nuisances et besoins de tous les quartiers concernés",
+    "Considérer seulement le quartier de la personne la plus bruyante",
+    "Considérer seulement les maisons chères",
+    "Ne pas écouter les personnes touchées",
+    "Les nuisances peuvent être réparties inégalement.",
+    "Vérifie qui est touché et quel point de vue manque."
+  ],
+  "it": [
+    "Un comune pianifica protezioni dal rumore. Cosa richiede una valutazione equa?",
+    "Considerare esposizione e bisogni di tutti i quartieri coinvolti",
+    "Considerare solo il quartiere della persona più insistente",
+    "Considerare solo le case costose",
+    "Non ascoltare le persone coinvolte",
+    "I carichi ambientali possono essere distribuiti in modo disuguale.",
+    "Controlla chi è coinvolto e quale punto di vista manca."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-36",
+  "reason": "Replace supply-chain template with traceable clothing production.",
+  "de": [
+    "Welche Reihenfolge passt zur Herstellung eines Baumwollshirts?",
+    "Baumwolle anbauen, Garn herstellen, Stoff herstellen, Shirt nähen",
+    "Shirt nähen, Baumwolle anbauen, Stoff herstellen, Garn herstellen",
+    "Garn herstellen, Shirt nähen, Baumwolle anbauen, Stoff herstellen",
+    "Stoff herstellen, Baumwolle anbauen, Shirt nähen, Garn herstellen",
+    "Beginne beim pflanzlichen Rohstoff.",
+    "Überlege, welches Zwischenprodukt der nächste Schritt braucht."
+  ],
+  "en": [
+    "Which sequence fits making a cotton shirt?",
+    "Grow cotton, make yarn, make fabric, sew shirt",
+    "Sew shirt, grow cotton, make fabric, make yarn",
+    "Make yarn, sew shirt, grow cotton, make fabric",
+    "Make fabric, grow cotton, sew shirt, make yarn",
+    "Start with the plant material.",
+    "Consider which intermediate product the next step needs."
+  ],
+  "fr": [
+    "Quel ordre correspond à la fabrication d’un t-shirt en coton ?",
+    "Cultiver le coton, filer, fabriquer le tissu, coudre",
+    "Coudre, cultiver le coton, fabriquer le tissu, filer",
+    "Filer, coudre, cultiver le coton, fabriquer le tissu",
+    "Fabriquer le tissu, cultiver le coton, coudre, filer",
+    "Commence par la matière végétale.",
+    "Pense au produit intermédiaire nécessaire à l’étape suivante."
+  ],
+  "it": [
+    "Quale ordine corrisponde alla produzione di una maglietta di cotone?",
+    "Coltivare cotone, filare, produrre tessuto, cucire",
+    "Cucire, coltivare cotone, produrre tessuto, filare",
+    "Filare, cucire, coltivare cotone, produrre tessuto",
+    "Produrre tessuto, coltivare cotone, cucire, filare",
+    "Inizia dalla materia vegetale.",
+    "Pensa al prodotto intermedio necessario alla fase successiva."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-38",
+  "reason": "Replace biocapacity abstraction with protecting productive soil.",
+  "de": [
+    "Warum ist fruchtbarer Boden eine wichtige Ressource?",
+    "Auf ihm können viele unserer Nahrungspflanzen wachsen",
+    "Er entsteht nach jeder Zerstörung sofort vollständig neu",
+    "Er braucht für Pflanzen grundsätzlich kein Wasser",
+    "Er kann beliebig durch Asphalt ersetzt werden",
+    "Betrachte seine Rolle für die Lebensmittelproduktion.",
+    "Bodenbildung kann sehr lange dauern."
+  ],
+  "en": [
+    "Why is fertile soil an important resource?",
+    "Many of our food crops can grow in it",
+    "It immediately reforms completely after any destruction",
+    "Plants in it never need water",
+    "Asphalt can replace it without limits",
+    "Consider its role in food production.",
+    "Soil formation can take a very long time."
+  ],
+  "fr": [
+    "Pourquoi un sol fertile est-il une ressource importante ?",
+    "Beaucoup de nos plantes alimentaires peuvent y pousser",
+    "Il se reconstitue entièrement aussitôt après toute destruction",
+    "Les plantes n’y ont jamais besoin d’eau",
+    "L’asphalte peut le remplacer sans limite",
+    "Considère son rôle dans l’alimentation.",
+    "La formation d’un sol peut prendre très longtemps."
+  ],
+  "it": [
+    "Perché un suolo fertile è una risorsa importante?",
+    "Vi possono crescere molte piante alimentari",
+    "Si ricrea completamente subito dopo ogni distruzione",
+    "Le piante non vi hanno mai bisogno d’acqua",
+    "L’asfalto può sostituirlo senza limiti",
+    "Considera il ruolo nella produzione alimentare.",
+    "La formazione del suolo può richiedere molto tempo."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-40",
+  "reason": "Qualify environmental migration as potentially multi-causal.",
+  "de": [
+    "Wiederholte Überschwemmungen beschädigen Häuser und Felder. Wie kann das Wohnentscheidungen beeinflussen?",
+    "Es kann ein Grund sein, einen sichereren Wohnort zu suchen",
+    "Es zwingt jede betroffene Person automatisch in dasselbe Land",
+    "Es bedeutet, dass Arbeit und Familie nie eine Rolle spielen",
+    "Es beweist, dass alle Umzüge nur eine einzige Ursache haben",
+    "Menschen berücksichtigen oft mehrere Gründe.",
+    "Umweltbedingungen können die Sicherheit und den Lebensunterhalt beeinflussen."
+  ],
+  "en": [
+    "Repeated floods damage homes and fields. How can this affect where people live?",
+    "It can be a reason to seek a safer place to live",
+    "It automatically forces everyone into the same country",
+    "It means work and family never matter",
+    "It proves every move has only one cause",
+    "People often consider several reasons.",
+    "Environmental conditions can affect safety and livelihoods."
+  ],
+  "fr": [
+    "Des inondations répétées abîment maisons et champs. Comment cela peut-il influencer le lieu de vie ?",
+    "Cela peut inciter à chercher un domicile plus sûr",
+    "Cela force automatiquement tout le monde à rejoindre le même pays",
+    "Cela signifie que travail et famille ne comptent jamais",
+    "Cela prouve que tout déménagement n’a qu’une cause",
+    "Les personnes considèrent souvent plusieurs raisons.",
+    "L’environnement peut influencer sécurité et moyens de subsistance."
+  ],
+  "it": [
+    "Alluvioni ripetute danneggiano case e campi. Come può influire sul luogo di vita?",
+    "Può essere un motivo per cercare una residenza più sicura",
+    "Costringe automaticamente tutti nello stesso paese",
+    "Significa che lavoro e famiglia non contano mai",
+    "Dimostra che ogni trasloco ha una sola causa",
+    "Le persone considerano spesso più motivi.",
+    "L’ambiente può influire su sicurezza e mezzi di sostentamento."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-42",
+  "reason": "Distinguish adapting to heat from reducing emissions through a concrete case. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Ein Schulhof erhält Schattenplätze für heisse Tage. Was steht dabei im Vordergrund?",
+    "Der Schutz vor den Folgen hoher Temperaturen",
+    "Die direkte Vermeidung sämtlicher Emissionen der Schulheizung",
+    "Die Verringerung aller Emissionen beim Schulweg",
+    "Die dauerhafte Verhinderung hoher Lufttemperaturen in der ganzen Region",
+    "Frage, welches unmittelbare Problem die Massnahme löst.",
+    "Anpassung an Folgen ist nicht dasselbe wie das Beseitigen aller Ursachen."
+  ],
+  "en": [
+    "A schoolyard gains shaded areas for hot days. What is the main aim?",
+    "Protection from the effects of high temperatures",
+    "Direct prevention of all school-heating emissions",
+    "Reduction of all school-travel emissions",
+    "Permanent prevention of high air temperatures throughout the region",
+    "Ask what immediate problem the measure addresses.",
+    "Adapting to effects differs from removing every cause."
+  ],
+  "fr": [
+    "Une cour d’école reçoit des zones ombragées pour les jours chauds. Quel est le but principal ?",
+    "Protéger des effets des fortes températures",
+    "Éviter directement toutes les émissions du chauffage scolaire",
+    "Réduire toutes les émissions des trajets scolaires",
+    "Empêcher durablement les fortes températures dans toute la région",
+    "Demande quel problème immédiat la mesure traite.",
+    "S’adapter aux effets diffère de supprimer toutes les causes."
+  ],
+  "it": [
+    "Un cortile scolastico riceve zone d’ombra per i giorni caldi. Qual è lo scopo principale?",
+    "Proteggere dagli effetti delle alte temperature",
+    "Evitare direttamente tutte le emissioni del riscaldamento scolastico",
+    "Ridurre tutte le emissioni dei tragitti scolastici",
+    "Impedire stabilmente alte temperature in tutta la regione",
+    "Chiediti quale problema immediato affronta la misura.",
+    "Adattarsi agli effetti è diverso dall’eliminare tutte le cause."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-44",
+  "reason": "Replace nature-based-solutions label with rain infiltration example.",
+  "de": [
+    "Wie kann eine begrünte, wasserdurchlässige Fläche bei Regen helfen?",
+    "Ein Teil des Wassers kann versickern statt sofort abzufliessen",
+    "Sie verhindert sicher jede Überschwemmung",
+    "Sie hält jeden Regentropfen für immer fest",
+    "Sie macht alle Gewässer überflüssig",
+    "Vergleiche offenen Boden mit einer geschlossenen Asphaltdecke.",
+    "Die Wirkung hängt auch von Boden, Regenmenge und örtlichen Bedingungen ab."
+  ],
+  "en": [
+    "How can a planted permeable surface help during rain?",
+    "Some water can soak in rather than run off immediately",
+    "It certainly prevents every flood",
+    "It holds every raindrop forever",
+    "It makes all watercourses unnecessary",
+    "Compare open soil with a sealed asphalt surface.",
+    "The effect also depends on soil, rainfall and local conditions."
+  ],
+  "fr": [
+    "Comment une surface végétalisée perméable peut-elle aider sous la pluie ?",
+    "Une partie de l’eau peut s’infiltrer au lieu de ruisseler aussitôt",
+    "Elle empêche sûrement toute inondation",
+    "Elle retient chaque goutte pour toujours",
+    "Elle rend tous les cours d’eau inutiles",
+    "Compare sol ouvert et asphalte imperméable.",
+    "L’effet dépend aussi du sol, de la pluie et des conditions locales."
+  ],
+  "it": [
+    "Come può aiutare una superficie vegetata permeabile durante la pioggia?",
+    "Parte dell’acqua può infiltrarsi invece di scorrere subito via",
+    "Impedisce sicuramente ogni alluvione",
+    "Trattiene ogni goccia per sempre",
+    "Rende inutili tutti i corsi d’acqua",
+    "Confronta suolo aperto e asfalto impermeabile.",
+    "L’effetto dipende anche da suolo, pioggia e condizioni locali."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-46",
+  "reason": "Replace doughnut economics framework with joint social/environmental consideration.",
+  "de": [
+    "Welche Planung berücksichtigt Menschen und Umwelt gemeinsam?",
+    "Bezahlbare Wohnungen mit wenig Energieverbrauch und guter Anbindung planen",
+    "Nur den Energieverbrauch beachten und Wohnkosten ignorieren",
+    "Nur die Fassade betrachten und alle anderen Folgen ignorieren",
+    "Nur die Werbung für das Bauprojekt bewerten",
+    "Eine Entscheidung kann mehrere Ziele betreffen.",
+    "Prüfe soziale Bedürfnisse ebenso wie den Ressourcenverbrauch."
+  ],
+  "en": [
+    "Which plan considers people and the environment together?",
+    "Plan affordable homes with low energy use and good transport links",
+    "Consider only energy use and ignore housing costs",
+    "Consider only the facade and ignore all other effects",
+    "Assess only advertising for the project",
+    "A decision can involve several goals.",
+    "Check social needs as well as resource use."
+  ],
+  "fr": [
+    "Quel projet considère ensemble personnes et environnement ?",
+    "Prévoir des logements abordables, économes en énergie et bien desservis",
+    "Considérer seulement l’énergie et ignorer le coût du logement",
+    "Regarder seulement la façade et ignorer les autres effets",
+    "Évaluer seulement la publicité du projet",
+    "Une décision peut concerner plusieurs objectifs.",
+    "Vérifie les besoins sociaux et la consommation de ressources."
+  ],
+  "it": [
+    "Quale progetto considera insieme persone e ambiente?",
+    "Prevedere alloggi accessibili, a basso consumo energetico e ben collegati",
+    "Considerare solo l’energia ignorando il costo abitativo",
+    "Guardare solo la facciata ignorando gli altri effetti",
+    "Valutare solo la pubblicità del progetto",
+    "Una decisione può riguardare più obiettivi.",
+    "Controlla bisogni sociali e consumo di risorse."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-48",
+  "reason": "Replace finance terminology with accountable funded climate action. Cross-topic second pass: explicit relevant alternatives.",
+  "de": [
+    "Eine Gemeinde bezahlt die Dämmung eines schlecht gedämmten Schulhauses. Welches Ziel kann das haben?",
+    "Weniger Heizenergie bei gleicher gewünschter Innentemperatur benötigen",
+    "Mehr Heizenergie bei gleicher Innentemperatur verbrauchen",
+    "Den Wärmeaustausch durch die Wände absichtlich vergrössern",
+    "Den gesamten Energiebedarf allein durch eine neue Fassadenfarbe beseitigen",
+    "Dämmung beeinflusst den Wärmeaustausch mit der Umgebung.",
+    "Vergleiche den Energiebedarf unter denselben Nutzungsbedingungen."
+  ],
+  "en": [
+    "A municipality pays to insulate a poorly insulated school. What can the aim be?",
+    "Need less heating energy for the same desired indoor temperature",
+    "Use more heating energy at the same indoor temperature",
+    "Deliberately increase heat transfer through the walls",
+    "Eliminate all energy needs with a new facade colour alone",
+    "Insulation affects heat exchange with the surroundings.",
+    "Compare energy needs under the same conditions of use."
+  ],
+  "fr": [
+    "Une commune finance l’isolation d’une école mal isolée. Quel peut être le but ?",
+    "Utiliser moins d’énergie de chauffage pour la même température intérieure souhaitée",
+    "Utiliser plus d’énergie pour la même température",
+    "Augmenter volontairement les échanges thermiques des murs",
+    "Supprimer tout besoin énergétique par la seule couleur de façade",
+    "L’isolation influence les échanges thermiques avec l’extérieur.",
+    "Compare l’énergie nécessaire dans les mêmes conditions d’usage."
+  ],
+  "it": [
+    "Un comune finanzia l’isolamento di una scuola mal isolata. Quale può essere lo scopo?",
+    "Usare meno energia per la stessa temperatura interna desiderata",
+    "Usare più energia per la stessa temperatura",
+    "Aumentare volutamente lo scambio termico dei muri",
+    "Eliminare ogni bisogno energetico con il solo colore della facciata",
+    "L’isolamento influisce sullo scambio termico con l’esterno.",
+    "Confronta il fabbisogno nelle stesse condizioni d’uso."
+  ]
+},
+{
+  "key": "5/science/nachhaltigkeit-5/nh5-50",
+  "reason": "Replace acronym expansion and headquarters recall with international cooperation.",
+  "de": [
+    "Warum arbeiten Länder bei Umweltfragen zusammen?",
+    "Luft, Wasser und Umweltfolgen halten sich nicht an Staatsgrenzen",
+    "Jedes Umweltproblem bleibt sicher in einem einzigen Land",
+    "Nur ein Land hat überhaupt natürliche Lebensräume",
+    "Zusammenarbeit ersetzt jede örtliche Massnahme",
+    "Betrachte Flüsse, Meere und die Atmosphäre.",
+    "Manche Aufgaben brauchen örtliches Handeln und gemeinsame Absprachen."
+  ],
+  "en": [
+    "Why do countries cooperate on environmental issues?",
+    "Air, water and environmental effects do not stop at borders",
+    "Every environmental problem stays within one country",
+    "Only one country has natural habitats",
+    "Cooperation replaces every local action",
+    "Consider rivers, seas and the atmosphere.",
+    "Some tasks need both local action and shared agreements."
+  ],
+  "fr": [
+    "Pourquoi les pays coopèrent-ils pour l’environnement ?",
+    "L’air, l’eau et les effets environnementaux ne s’arrêtent pas aux frontières",
+    "Tout problème reste dans un seul pays",
+    "Un seul pays possède des habitats naturels",
+    "La coopération remplace toute action locale",
+    "Considère rivières, mers et atmosphère.",
+    "Certaines tâches demandent actions locales et accords communs."
+  ],
+  "it": [
+    "Perché i paesi collaborano sull’ambiente?",
+    "Aria, acqua ed effetti ambientali non si fermano ai confini",
+    "Ogni problema resta in un solo paese",
+    "Solo un paese possiede habitat naturali",
+    "La collaborazione sostituisce ogni azione locale",
+    "Considera fiumi, mari e atmosfera.",
+    "Alcuni compiti richiedono azioni locali e accordi comuni."
+  ]
+},
+// END GRADE 5 KNOWLEDGE CHOICE REVIEW
+
+// BEGIN GRADE 6 KNOWLEDGE CHOICE REVIEW
+{
+  "key": "6/science/schweiz-geografie/g6sg2a",
+  "de": [
+    "Woher kamen die Walser, die im Mittelalter neue Alpentäler besiedelten?",
+    "Aus dem Wallis",
+    "Aus dem Tessin",
+    "Aus dem Jura",
+    "Aus dem Thurgau",
+    "Achte auf den Namen der Gruppe.",
+    "Gesucht ist ihre Herkunft, nicht ihr späterer Wohnort."
+  ],
+  "en": [
+    "Where did the Walser who settled new Alpine valleys in the Middle Ages come from?",
+    "Valais",
+    "Ticino",
+    "Jura",
+    "Thurgau",
+    "Look at the group's name.",
+    "Think of their origin, not their later homes."
+  ],
+  "fr": [
+    "D'où venaient les Walser qui ont peuplé de nouvelles vallées alpines au Moyen Âge ?",
+    "Du Valais",
+    "Du Tessin",
+    "Du Jura",
+    "De Thurgovie",
+    "Observe le nom du groupe.",
+    "Cherche leur origine, pas leur lieu de vie ultérieur."
+  ],
+  "it": [
+    "Da dove provenivano i Walser che popolarono nuove valli alpine nel Medioevo?",
+    "Dal Vallese",
+    "Dal Ticino",
+    "Dal Giura",
+    "Dalla Turgovia",
+    "Osserva il nome del gruppo.",
+    "Cerca la loro origine, non la destinazione."
+  ],
+  "reason": "Individually reviewed knowledge objective: Woher kamen die Walser, die im Mittelalter neue Alpentäler besiedelten? Replaces exact-text recall of: Was ist die Walser-Besiedlung?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg2c",
+  "de": [
+    "Wozu diente das Schweizer Réduit im Zweiten Weltkrieg?",
+    "Als Verteidigungsplan mit Rückzug in die Alpen",
+    "Als Plan für neue Wohnviertel",
+    "Als Vertrag über freien Handel",
+    "Als Fahrplan für den Güterverkehr",
+    "Denke an die damalige Bedrohung.",
+    "Welche Aufgabe hatte die Armee?"
+  ],
+  "en": [
+    "What was the purpose of the Swiss National Redoubt in the Second World War?",
+    "A defence plan involving retreat into the Alps",
+    "A plan for new housing districts",
+    "A free trade agreement",
+    "A freight timetable",
+    "Think about the threat at the time.",
+    "What was the army's task?"
+  ],
+  "fr": [
+    "À quoi servait le Réduit suisse pendant la Seconde Guerre mondiale ?",
+    "À organiser la défense avec un repli dans les Alpes",
+    "À planifier de nouveaux quartiers",
+    "À établir un accord de libre-échange",
+    "À fixer les horaires des trains de marchandises",
+    "Pense aux menaces de l'époque.",
+    "Quelle était la mission de l'armée ?"
+  ],
+  "it": [
+    "A cosa serviva il Ridotto svizzero nella Seconda guerra mondiale?",
+    "A organizzare la difesa con un ripiegamento nelle Alpi",
+    "A progettare nuovi quartieri",
+    "A stabilire un accordo di libero scambio",
+    "A fissare gli orari dei treni merci",
+    "Pensa alle minacce di allora.",
+    "Qual era il compito dell'esercito?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu diente das Schweizer Réduit im Zweiten Weltkrieg? Replaces exact-text recall of: Was ist das Réduit?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg2e",
+  "de": [
+    "Welche Hauptaufgabe hat die Gotthardachse?",
+    "Sie verbindet den Norden und Süden durch die Alpen",
+    "Sie verbindet Genf mit dem Jura",
+    "Sie folgt dem Rhein bis zur Nordsee",
+    "Sie verbindet die Schweiz mit einem Seehafen",
+    "Betrachte die Lage des Gotthards.",
+    "Welche Landschaft wird hier überquert?"
+  ],
+  "en": [
+    "What is the main role of the Gotthard route?",
+    "It links north and south through the Alps",
+    "It links Geneva with the Jura",
+    "It follows the Rhine to the North Sea",
+    "It links Switzerland to a seaport",
+    "Think about the Gotthard's location.",
+    "Which landscape does this route cross?"
+  ],
+  "fr": [
+    "Quel est le rôle principal de l'axe du Gothard ?",
+    "Relier le nord et le sud à travers les Alpes",
+    "Relier Genève au Jura",
+    "Suivre le Rhin jusqu'à la mer du Nord",
+    "Relier la Suisse à un port maritime",
+    "Pense à la situation du Gothard.",
+    "Quel relief cet axe traverse-t-il ?"
+  ],
+  "it": [
+    "Qual è il ruolo principale dell'asse del Gottardo?",
+    "Collegare nord e sud attraverso le Alpi",
+    "Collegare Ginevra al Giura",
+    "Seguire il Reno fino al Mare del Nord",
+    "Collegare la Svizzera a un porto marittimo",
+    "Pensa alla posizione del Gottardo.",
+    "Quale rilievo attraversa questo asse?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Hauptaufgabe hat die Gotthardachse? Replaces exact-text recall of: Was ist die Gotthardachse?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg2g",
+  "de": [
+    "Was bedeutet das Milizprinzip der Schweizer Armee?",
+    "Viele Angehörige leisten zeitweise Dienst neben ihrem zivilen Beruf",
+    "Alle Angehörigen sind ständig Berufssoldaten",
+    "Nur ausländische Soldaten leisten Dienst",
+    "Die Armee übernimmt alle Polizeiaufgaben",
+    "Denke an Dienst und Alltag.",
+    "Wie wird die Arbeit ausserhalb der Armee damit verbunden?"
+  ],
+  "en": [
+    "What does the Swiss army's militia principle mean?",
+    "Many members serve for periods alongside civilian jobs",
+    "All members are permanent professional soldiers",
+    "Only foreign soldiers serve",
+    "The army performs all police duties",
+    "Think about service and everyday life.",
+    "How does work outside the army fit in?"
+  ],
+  "fr": [
+    "Que signifie le principe de milice de l'armée suisse ?",
+    "Beaucoup de membres servent par périodes en plus de leur métier civil",
+    "Tous les membres sont militaires de carrière à plein temps",
+    "Seuls des soldats étrangers servent",
+    "L'armée assure toutes les tâches de police",
+    "Pense au service et à la vie quotidienne.",
+    "Quelle place reste-t-il au travail civil ?"
+  ],
+  "it": [
+    "Che cosa significa il principio di milizia dell'esercito svizzero?",
+    "Molti membri prestano servizio per periodi accanto al lavoro civile",
+    "Tutti sono militari professionisti a tempo pieno",
+    "Prestano servizio soltanto soldati stranieri",
+    "L'esercito svolge tutti i compiti di polizia",
+    "Pensa al servizio e alla vita quotidiana.",
+    "Come si concilia il servizio con il lavoro civile?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutet das Milizprinzip der Schweizer Armee? Replaces exact-text recall of: Was ist die Schweizer Armee?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg2i",
+  "de": [
+    "Welcher See liegt in der Zentralschweiz?",
+    "Vierwaldstättersee",
+    "Genfersee",
+    "Luganersee",
+    "Neuenburgersee",
+    "Ordne die Seen auf einer Schweizer Karte ein.",
+    "Denke an die Gegend um Luzern."
+  ],
+  "en": [
+    "Which lake lies in Central Switzerland?",
+    "Lake Lucerne",
+    "Lake Geneva",
+    "Lake Lugano",
+    "Lake Neuchâtel",
+    "Place the lakes on a map of Switzerland.",
+    "Think of the area around Lucerne."
+  ],
+  "fr": [
+    "Quel lac se trouve en Suisse centrale ?",
+    "Le lac des Quatre-Cantons",
+    "Le Léman",
+    "Le lac de Lugano",
+    "Le lac de Neuchâtel",
+    "Situe les lacs sur une carte suisse.",
+    "Pense à la région de Lucerne."
+  ],
+  "it": [
+    "Quale lago si trova nella Svizzera centrale?",
+    "Il Lago dei Quattro Cantoni",
+    "Il Lago di Ginevra",
+    "Il Lago di Lugano",
+    "Il Lago di Neuchâtel",
+    "Colloca i laghi su una carta svizzera.",
+    "Pensa alla regione di Lucerna."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welcher See liegt in der Zentralschweiz? Replaces exact-text recall of: Was ist das Zentralschweiz?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg2k",
+  "de": [
+    "In welchem Kanton liegt der Schweizerische Nationalpark?",
+    "Graubünden",
+    "Bern",
+    "Waadt",
+    "Aargau",
+    "Denke an die Lage im Engadin.",
+    "Suche im Osten der Schweizer Alpen."
+  ],
+  "en": [
+    "In which canton is the Swiss National Park?",
+    "Graubünden",
+    "Bern",
+    "Vaud",
+    "Aargau",
+    "Think of its location in the Engadine.",
+    "Look in the eastern Swiss Alps."
+  ],
+  "fr": [
+    "Dans quel canton se trouve le Parc national suisse ?",
+    "Les Grisons",
+    "Berne",
+    "Vaud",
+    "L'Argovie",
+    "Pense à sa situation en Engadine.",
+    "Cherche dans les Alpes suisses orientales."
+  ],
+  "it": [
+    "In quale cantone si trova il Parco nazionale svizzero?",
+    "Grigioni",
+    "Berna",
+    "Vaud",
+    "Argovia",
+    "Pensa alla sua posizione in Engadina.",
+    "Cerca nelle Alpi svizzere orientali."
+  ],
+  "reason": "Individually reviewed knowledge objective: In welchem Kanton liegt der Schweizerische Nationalpark? Replaces exact-text recall of: Was ist der Nationalpark der Schweiz?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg2m",
+  "de": [
+    "Was soll das Bankgeheimnis grundsätzlich schützen?",
+    "Vertrauliche Angaben über Bankkunden",
+    "Den Wechselkurs des Frankens",
+    "Den Preis von Aktien",
+    "Die Öffnungszeiten von Banken",
+    "Denke an persönliche Informationen.",
+    "Was sollte nicht beliebig weitergegeben werden?"
+  ],
+  "en": [
+    "What is banking secrecy generally intended to protect?",
+    "Confidential information about bank customers",
+    "The franc's exchange rate",
+    "Share prices",
+    "Bank opening hours",
+    "Think about personal information.",
+    "What should not be shared freely?"
+  ],
+  "fr": [
+    "Que vise en principe à protéger le secret bancaire ?",
+    "Les informations confidentielles sur les clients",
+    "Le taux de change du franc",
+    "Le prix des actions",
+    "Les horaires des banques",
+    "Pense aux informations personnelles.",
+    "Que ne devrait-on pas divulguer librement ?"
+  ],
+  "it": [
+    "Che cosa mira a proteggere il segreto bancario in generale?",
+    "Le informazioni riservate sui clienti",
+    "Il tasso di cambio del franco",
+    "Il prezzo delle azioni",
+    "Gli orari delle banche",
+    "Pensa alle informazioni personali.",
+    "Che cosa non dovrebbe essere divulgato liberamente?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was soll das Bankgeheimnis grundsätzlich schützen? Replaces exact-text recall of: Was ist das Schweizer Bankgeheimnis (historisch)?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg2o",
+  "de": [
+    "Was gehört zu einer Agglomeration?",
+    "Eine Stadt und ihr eng verbundenes Umland",
+    "Ein einzelnes abgelegenes Bergdorf",
+    "Alle Orte desselben Kantons",
+    "Nur die historische Altstadt",
+    "Denke an Wege zur Arbeit und gemeinsame Verkehrsnetze.",
+    "Wo reicht der Alltag einer Stadt über ihre Grenze hinaus?"
+  ],
+  "en": [
+    "What makes up an urban agglomeration?",
+    "A city and its closely connected surrounding area",
+    "A single remote mountain village",
+    "All places in one canton",
+    "Only the historic city centre",
+    "Think of commuting and transport networks.",
+    "Where does city life extend beyond the city boundary?"
+  ],
+  "fr": [
+    "Qu'est-ce qui constitue une agglomération ?",
+    "Une ville et les communes voisines étroitement liées",
+    "Un seul village de montagne isolé",
+    "Toutes les localités d'un canton",
+    "Uniquement le centre historique",
+    "Pense aux trajets domicile-travail et aux transports.",
+    "Où la vie urbaine dépasse-t-elle les limites de la ville ?"
+  ],
+  "it": [
+    "Che cosa forma un agglomerato urbano?",
+    "Una città e i comuni circostanti strettamente collegati",
+    "Un solo villaggio di montagna isolato",
+    "Tutte le località di un cantone",
+    "Soltanto il centro storico",
+    "Pensa ai tragitti casa-lavoro e ai trasporti.",
+    "Dove la vita urbana supera i confini della città?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was gehört zu einer Agglomeration? Replaces exact-text recall of: Was ist die Agglomeration?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg2q",
+  "de": [
+    "Eine Schweizer Firma verkauft Uhren nach Italien. Was ist das für die Schweiz?",
+    "Ein Export",
+    "Ein Import",
+    "Ein Kauf im Inland",
+    "Ein Arbeitsweg",
+    "Achte auf die Richtung der Ware.",
+    "Verlässt die Ware das Land oder kommt sie hinein?"
+  ],
+  "en": [
+    "A Swiss company sells watches to Italy. What is this for Switzerland?",
+    "An export",
+    "An import",
+    "A domestic purchase",
+    "A commute",
+    "Notice the direction of the goods.",
+    "Are the goods leaving or entering the country?"
+  ],
+  "fr": [
+    "Une entreprise suisse vend des montres en Italie. De quoi s'agit-il pour la Suisse ?",
+    "D'une exportation",
+    "D'une importation",
+    "D'un achat intérieur",
+    "D'un trajet domicile-travail",
+    "Observe le sens du déplacement des marchandises.",
+    "Les marchandises quittent-elles le pays ou y entrent-elles ?"
+  ],
+  "it": [
+    "Un'azienda svizzera vende orologi in Italia. Che cosa rappresenta per la Svizzera?",
+    "Un'esportazione",
+    "Un'importazione",
+    "Un acquisto interno",
+    "Un tragitto casa-lavoro",
+    "Osserva la direzione delle merci.",
+    "Le merci escono dal Paese oppure entrano?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Eine Schweizer Firma verkauft Uhren nach Italien. Was ist das für die Schweiz? Replaces exact-text recall of: Was ist die Schweizer Exportquote?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg3a",
+  "de": [
+    "Wie war die Helvetische Republik ab 1798 organisiert?",
+    "Als zentral regierter Einheitsstaat",
+    "Als heutiger Bundesstaat mit 26 Kantonen",
+    "Als Königreich mit Erbmonarchie",
+    "Als unabhängige Stadt ohne Umland",
+    "Vergleiche zentrale und kantonale Macht.",
+    "Die heutige Staatsordnung entstand erst später."
+  ],
+  "en": [
+    "How was the Helvetic Republic organised from 1798?",
+    "As a centrally governed unitary state",
+    "As today's federation of 26 cantons",
+    "As a kingdom with hereditary monarchy",
+    "As an independent city without surrounding territory",
+    "Compare central and cantonal power.",
+    "Today's state structure came later."
+  ],
+  "fr": [
+    "Comment la République helvétique était-elle organisée dès 1798 ?",
+    "Comme un État unitaire dirigé de façon centralisée",
+    "Comme la fédération actuelle de 26 cantons",
+    "Comme un royaume à monarchie héréditaire",
+    "Comme une ville indépendante sans territoire environnant",
+    "Compare le pouvoir central et cantonal.",
+    "L'organisation actuelle est apparue plus tard."
+  ],
+  "it": [
+    "Come era organizzata la Repubblica elvetica dal 1798?",
+    "Come uno Stato unitario con governo centrale",
+    "Come l'attuale federazione di 26 cantoni",
+    "Come un regno con monarchia ereditaria",
+    "Come una città indipendente senza territorio circostante",
+    "Confronta il potere centrale e quello cantonale.",
+    "L'organizzazione attuale è nata più tardi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wie war die Helvetische Republik ab 1798 organisiert? Replaces exact-text recall of: Was ist die Helvetische Republik?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg3e",
+  "de": [
+    "Was kann bei stark steigenden Mieten nach einer Quartieraufwertung geschehen?",
+    "Menschen mit wenig Einkommen müssen wegziehen",
+    "Alle bisherigen Mieten sind trotz Sanierung dauerhaft eingefroren",
+    "Höhere Mieten verändern das Wohnbudget nicht",
+    "Der Ausbau teurer Wohnungen senkt automatisch jede andere Miete",
+    "Denke an das Haushaltsbudget.",
+    "Was geschieht, wenn die Wohnkosten nicht mehr bezahlbar sind?"
+  ],
+  "en": [
+    "What can happen when rents rise sharply after a neighbourhood is upgraded?",
+    "People on low incomes may have to move away",
+    "All existing rents remain permanently frozen despite renovation",
+    "Higher rents do not affect housing budgets",
+    "Building expensive flats automatically lowers every other rent",
+    "Think about a household budget.",
+    "What happens when housing becomes unaffordable?"
+  ],
+  "fr": [
+    "Que peut-il arriver si les loyers augmentent fortement après la rénovation d'un quartier ?",
+    "Des personnes à faible revenu doivent déménager",
+    "Tous les loyers restent bloqués à vie malgré les rénovations",
+    "Des loyers plus élevés ne changent pas le budget logement",
+    "Construire des logements chers baisse automatiquement tous les autres loyers",
+    "Pense au budget d'un ménage.",
+    "Que se passe-t-il si le logement devient trop cher ?"
+  ],
+  "it": [
+    "Che cosa può accadere se gli affitti aumentano molto dopo il rinnovo di un quartiere?",
+    "Le persone con redditi bassi devono trasferirsi",
+    "Tutti gli affitti restano congelati per sempre nonostante i rinnovi",
+    "Affitti più alti non cambiano il budget abitativo",
+    "Costruire case costose abbassa automaticamente tutti gli altri affitti",
+    "Pensa al bilancio familiare.",
+    "Che cosa accade se l'alloggio diventa troppo caro?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kann bei stark steigenden Mieten nach einer Quartieraufwertung geschehen? Replaces exact-text recall of: Was ist Gentrifizierung?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg3g",
+  "de": [
+    "In ein Dorf ziehen 80 Personen, 30 ziehen weg. Wie hoch ist der Wanderungssaldo?",
+    "Plus 50 Personen",
+    "Plus 110 Personen",
+    "Minus 50 Personen",
+    "Plus 80 Personen",
+    "Vergleiche Zuzüge und Wegzüge.",
+    "Gesucht ist die Veränderung durch beide Bewegungen zusammen."
+  ],
+  "en": [
+    "Eighty people move into a village and thirty leave. What is its net migration?",
+    "Plus 50 people",
+    "Plus 110 people",
+    "Minus 50 people",
+    "Plus 80 people",
+    "Compare arrivals and departures.",
+    "Find the change caused by both movements together."
+  ],
+  "fr": [
+    "80 personnes arrivent dans un village et 30 le quittent. Quel est le solde migratoire ?",
+    "Plus 50 personnes",
+    "Plus 110 personnes",
+    "Moins 50 personnes",
+    "Plus 80 personnes",
+    "Compare les arrivées et les départs.",
+    "Cherche le changement dû aux deux mouvements réunis."
+  ],
+  "it": [
+    "80 persone arrivano in un villaggio e 30 lo lasciano. Qual è il saldo migratorio?",
+    "Più 50 persone",
+    "Più 110 persone",
+    "Meno 50 persone",
+    "Più 80 persone",
+    "Confronta arrivi e partenze.",
+    "Cerca il cambiamento dovuto ai due movimenti insieme."
+  ],
+  "reason": "Individually reviewed knowledge objective: In ein Dorf ziehen 80 Personen, 30 ziehen weg. Wie hoch ist der Wanderungssaldo? Replaces exact-text recall of: Was ist Nettomigration?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg3i",
+  "de": [
+    "Was beschreibt das Bruttoinlandprodukt eines Jahres?",
+    "Die im Inland geschaffene wirtschaftliche Wertschöpfung",
+    "Die Zahl aller Einwohner",
+    "Die gesamten Ersparnisse aller Familien",
+    "Die Fläche aller Landwirtschaftsbetriebe",
+    "Es geht um wirtschaftliche Leistung in einem Zeitraum.",
+    "Unterscheide neu geschaffenen Wert von angespartem Vermögen."
+  ],
+  "en": [
+    "What does a country's annual gross domestic product describe?",
+    "Economic value added within the country",
+    "The number of inhabitants",
+    "All families' total savings",
+    "The area of all farms",
+    "Think of economic output during a period.",
+    "Distinguish newly created value from accumulated wealth."
+  ],
+  "fr": [
+    "Que décrit le produit intérieur brut d'une année ?",
+    "La valeur ajoutée économique créée dans le pays",
+    "Le nombre total d'habitants",
+    "Toute l'épargne des familles",
+    "La superficie de toutes les exploitations agricoles",
+    "Il s'agit de l'activité économique sur une période.",
+    "Distingue la valeur créée du patrimoine accumulé."
+  ],
+  "it": [
+    "Che cosa descrive il prodotto interno lordo annuale?",
+    "Il valore aggiunto economico creato nel Paese",
+    "Il numero totale di abitanti",
+    "Tutti i risparmi delle famiglie",
+    "La superficie di tutte le aziende agricole",
+    "Pensa all'attività economica durante un periodo.",
+    "Distingui il nuovo valore creato dal patrimonio accumulato."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was beschreibt das Bruttoinlandprodukt eines Jahres? Replaces exact-text recall of: Was ist das BIP (Bruttoinlandsprodukt)?"
+},
+{
+  "key": "6/science/schweiz-geografie/g6sg3k",
+  "de": [
+    "Welches Beispiel zeigt einen Unterschied in der Versorgung zweier Regionen?",
+    "In einer gibt es viele Arztpraxen, in der anderen kaum welche",
+    "Beide haben gleich viele Arztpraxen pro Person",
+    "Beide bieten gleich häufige Busverbindungen an",
+    "In beiden sind Schulen gleich gut erreichbar",
+    "Vergleiche den Zugang zu wichtigen Angeboten.",
+    "Welche Aussage beschreibt ungleiche Lebensbedingungen?"
+  ],
+  "en": [
+    "Which example shows a difference in services between two regions?",
+    "One has many medical practices, the other hardly any",
+    "Both have the same number of practices per person",
+    "Both offer equally frequent bus services",
+    "Schools are equally accessible in both",
+    "Compare access to essential services.",
+    "Which statement describes unequal living conditions?"
+  ],
+  "fr": [
+    "Quel exemple montre une différence de services entre deux régions ?",
+    "L'une a beaucoup de cabinets médicaux, l'autre presque aucun",
+    "Les deux ont autant de cabinets par habitant",
+    "Les deux proposent des bus aussi fréquents",
+    "Les écoles sont aussi accessibles dans les deux",
+    "Compare l'accès aux services essentiels.",
+    "Quelle phrase décrit des conditions de vie inégales ?"
+  ],
+  "it": [
+    "Quale esempio mostra una differenza nei servizi tra due regioni?",
+    "Una ha molti studi medici, l'altra quasi nessuno",
+    "Entrambe hanno lo stesso numero di studi per abitante",
+    "Entrambe offrono autobus ugualmente frequenti",
+    "Le scuole sono ugualmente accessibili in entrambe",
+    "Confronta l'accesso ai servizi essenziali.",
+    "Quale frase descrive condizioni di vita diverse?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Beispiel zeigt einen Unterschied in der Versorgung zweier Regionen? Replaces exact-text recall of: Was ist das Disparitätenproblem?"
+},
+{
+  "key": "6/science/mittelalter/g6ma1a",
+  "de": [
+    "Zwischen welchen Epochen liegt das europäische Mittelalter?",
+    "Zwischen Antike und Neuzeit",
+    "Zwischen Steinzeit und Bronzezeit",
+    "Zwischen Neuzeit und Gegenwart",
+    "Zwischen Bronzezeit und Antike",
+    "Ordne die Epochen zeitlich.",
+    "Denke ungefähr an die Jahre 500 bis 1500."
+  ],
+  "en": [
+    "Between which periods does the European Middle Ages lie?",
+    "Antiquity and the modern era",
+    "The Stone Age and the Bronze Age",
+    "The modern era and the present",
+    "The Bronze Age and antiquity",
+    "Put the periods in order.",
+    "Think roughly of the years 500 to 1500."
+  ],
+  "fr": [
+    "Entre quelles époques se situe le Moyen Âge européen ?",
+    "L'Antiquité et les Temps modernes",
+    "L'âge de pierre et l'âge du bronze",
+    "Les Temps modernes et le présent",
+    "L'âge du bronze et l'Antiquité",
+    "Classe les époques dans l'ordre.",
+    "Pense approximativement aux années 500 à 1500."
+  ],
+  "it": [
+    "Tra quali epoche si colloca il Medioevo europeo?",
+    "Antichità ed età moderna",
+    "Età della pietra ed età del bronzo",
+    "Età moderna e presente",
+    "Età del bronzo e antichità",
+    "Metti le epoche in ordine.",
+    "Pensa all'incirca agli anni dal 500 al 1500."
+  ],
+  "reason": "Individually reviewed knowledge objective: Zwischen welchen Epochen liegt das europäische Mittelalter? Replaces exact-text recall of: Was ist das Mittelalter?"
+},
+{
+  "key": "6/science/mittelalter/g6ma1c",
+  "de": [
+    "Was war ein Vasall im mittelalterlichen Lehnswesen?",
+    "Ein Gefolgsmann, der seinem Lehnsherrn Dienste schuldete",
+    "Ein gewählter Bürgermeister",
+    "Ein Händler ohne Bindung an einen Herrn",
+    "Ein Handwerker, der eine Zunft leitete",
+    "Denke an gegenseitige Pflichten.",
+    "Welche Beziehung bestand zwischen einem Herrn und seinem Gefolgsmann?"
+  ],
+  "en": [
+    "What was a vassal in the medieval feudal system?",
+    "A follower who owed services to a lord",
+    "An elected mayor",
+    "A merchant with no ties to a lord",
+    "A craftsperson leading a guild",
+    "Think of mutual obligations.",
+    "What relationship linked a lord and a follower?"
+  ],
+  "fr": [
+    "Qu'était un vassal dans le système féodal ?",
+    "Un homme lié à un seigneur auquel il devait des services",
+    "Un maire élu",
+    "Un marchand sans lien avec un seigneur",
+    "Un artisan dirigeant une corporation",
+    "Pense aux obligations réciproques.",
+    "Quel lien unissait le seigneur et son vassal ?"
+  ],
+  "it": [
+    "Che cos'era un vassallo nel sistema feudale?",
+    "Un seguace che doveva servizi al proprio signore",
+    "Un sindaco eletto",
+    "Un mercante senza legami con un signore",
+    "Un artigiano a capo di una corporazione",
+    "Pensa agli obblighi reciproci.",
+    "Quale rapporto legava il signore al suo seguace?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was war ein Vasall im mittelalterlichen Lehnswesen? Replaces exact-text recall of: Was ist ein Vasall?"
+},
+{
+  "key": "6/science/mittelalter/g6ma1e",
+  "de": [
+    "Welche Rolle hatte die Kirche als Organisation im mittelalterlichen Westeuropa, nicht nur als Gebäude?",
+    "Sie prägte den Glauben und hatte auch Landbesitz und politischen Einfluss",
+    "Sie verwaltete nur Kirchengebäude, ohne Einfluss auf das übrige Leben",
+    "Sie war eine gewählte Regierung mit heutigen Parteien",
+    "Sie war ein Berufsverband ausschliesslich für Bauhandwerker",
+    "Unterscheide ein Bauwerk von einer Institution.",
+    "Denke an Geistliche, Klöster und ihre Aufgaben in der Gesellschaft."
+  ],
+  "en": [
+    "What role did the Church as an organisation, not just a building, have in medieval Western Europe?",
+    "It shaped religious life and also owned land and held political influence",
+    "It managed only church buildings without affecting other parts of life",
+    "It was an elected government with modern political parties",
+    "It was a professional association only for builders",
+    "Distinguish a building from an institution.",
+    "Think about clergy, monasteries and their roles in society."
+  ],
+  "fr": [
+    "Quel rôle avait l'Église comme organisation, et pas seulement comme bâtiment, dans l'Europe occidentale médiévale ?",
+    "Elle guidait la vie religieuse, possédait des terres et exerçait une influence politique",
+    "Elle gérait seulement des bâtiments sans influencer le reste de la vie",
+    "Elle était un gouvernement élu avec des partis actuels",
+    "Elle était une association professionnelle réservée aux bâtisseurs",
+    "Distingue un bâtiment d'une institution.",
+    "Pense au clergé, aux monastères et à leurs rôles dans la société."
+  ],
+  "it": [
+    "Quale ruolo aveva la Chiesa come organizzazione, non solo come edificio, nell'Europa occidentale medievale?",
+    "Influenzava la vita religiosa, possedeva terre ed esercitava influenza politica",
+    "Gestiva soltanto edifici senza influire sul resto della vita",
+    "Era un governo eletto con partiti moderni",
+    "Era un'associazione professionale riservata ai muratori",
+    "Distingui un edificio da un'istituzione.",
+    "Pensa al clero, ai monasteri e ai loro ruoli nella società."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Rolle hatte die Kirche als Organisation im mittelalterlichen Westeuropa, nicht nur als Gebäude? Replaces exact-text recall of: Was ist die Kirche im Mittelalter?"
+},
+{
+  "key": "6/science/mittelalter/g6ma1g",
+  "de": [
+    "Was war eine mittelalterliche Zunft?",
+    "Ein Zusammenschluss von Handwerkern desselben Berufs",
+    "Ein Bündnis mehrerer Königreiche",
+    "Eine Gemeinschaft von Mönchen",
+    "Eine Gruppe reisender Pilger",
+    "Denke an Arbeit in einer Stadt.",
+    "Wer legte Regeln für ein bestimmtes Handwerk fest?"
+  ],
+  "en": [
+    "What was a medieval guild?",
+    "An association of craftspeople in the same trade",
+    "An alliance of kingdoms",
+    "A community of monks",
+    "A group of travelling pilgrims",
+    "Think about work in a town.",
+    "Who set rules for a particular craft?"
+  ],
+  "fr": [
+    "Qu'était une corporation médiévale ?",
+    "Une association d'artisans du même métier",
+    "Une alliance de royaumes",
+    "Une communauté de moines",
+    "Un groupe de pèlerins",
+    "Pense au travail en ville.",
+    "Qui fixait les règles d'un métier ?"
+  ],
+  "it": [
+    "Che cos'era una corporazione medievale?",
+    "Un'associazione di artigiani dello stesso mestiere",
+    "Un'alleanza di regni",
+    "Una comunità di monaci",
+    "Un gruppo di pellegrini",
+    "Pensa al lavoro in città.",
+    "Chi stabiliva le regole di un mestiere?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was war eine mittelalterliche Zunft? Replaces exact-text recall of: Was ist eine Zunft?"
+},
+{
+  "key": "6/science/mittelalter/g6ma1i",
+  "de": [
+    "Welche Aufgabe hatten die meisten Bauern im Mittelalter?",
+    "Felder bewirtschaften und Tiere halten",
+    "Urkunden für den König verfassen",
+    "Fernhandel zwischen Hafenstädten organisieren",
+    "Gottesdienste in einer Kathedrale leiten",
+    "Denke an die Ernährung der Bevölkerung.",
+    "Welche Arbeit geschah vor allem auf dem Land?"
+  ],
+  "en": [
+    "What did most peasants do in the Middle Ages?",
+    "Farm fields and keep animals",
+    "Write documents for the king",
+    "Organise long-distance trade between ports",
+    "Lead services in a cathedral",
+    "Think about feeding the population.",
+    "Which work mainly took place in the countryside?"
+  ],
+  "fr": [
+    "Que faisaient la plupart des paysans au Moyen Âge ?",
+    "Cultiver les champs et élever des animaux",
+    "Rédiger des actes pour le roi",
+    "Organiser le commerce entre ports lointains",
+    "Diriger les offices d'une cathédrale",
+    "Pense à l'alimentation de la population.",
+    "Quel travail se faisait surtout à la campagne ?"
+  ],
+  "it": [
+    "Che cosa faceva la maggior parte dei contadini nel Medioevo?",
+    "Coltivava i campi e allevava animali",
+    "Scriveva documenti per il re",
+    "Organizzava commerci tra porti lontani",
+    "Celebrava funzioni in una cattedrale",
+    "Pensa al nutrimento della popolazione.",
+    "Quale lavoro si svolgeva soprattutto in campagna?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aufgabe hatten die meisten Bauern im Mittelalter? Replaces exact-text recall of: Was ist ein Bauer im Mittelalter?"
+},
+{
+  "key": "6/science/mittelalter/g6ma1k",
+  "de": [
+    "Was bedeutete Leibeigenschaft für betroffene Bauern?",
+    "Sie waren persönlich von einem Herrn abhängig und nicht frei wegzuziehen",
+    "Sie durften ihren Wohnort und Herrn jederzeit frei wählen",
+    "Sie waren selbst Herrscher über ein Königreich",
+    "Sie hatten dieselben Rechte wie heutige Angestellte",
+    "Vergleiche Abhängigkeit und persönliche Freiheit.",
+    "Welche Entscheidung konnten die Betroffenen nicht selbst treffen?"
+  ],
+  "en": [
+    "What did serfdom mean for the peasants concerned?",
+    "They were personally dependent on a lord and not free to leave",
+    "They could freely choose their home and lord at any time",
+    "They ruled a kingdom themselves",
+    "They had the same rights as employees today",
+    "Compare dependence and personal freedom.",
+    "Which decision could they not make for themselves?"
+  ],
+  "fr": [
+    "Que signifiait le servage pour les paysans concernés ?",
+    "Ils dépendaient personnellement d'un seigneur et ne pouvaient pas partir librement",
+    "Ils choisissaient librement leur domicile et leur seigneur à tout moment",
+    "Ils dirigeaient eux-mêmes un royaume",
+    "Ils avaient les mêmes droits que les salariés actuels",
+    "Compare dépendance et liberté personnelle.",
+    "Quelle décision ne pouvaient-ils pas prendre seuls ?"
+  ],
+  "it": [
+    "Che cosa significava la servitù della gleba per i contadini coinvolti?",
+    "Dipendevano personalmente da un signore e non potevano andarsene liberamente",
+    "Potevano scegliere liberamente domicilio e signore in ogni momento",
+    "Governavano essi stessi un regno",
+    "Avevano gli stessi diritti dei dipendenti di oggi",
+    "Confronta dipendenza e libertà personale.",
+    "Quale decisione non potevano prendere da soli?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutete Leibeigenschaft für betroffene Bauern? Replaces exact-text recall of: Was ist Leibeigenschaft?"
+},
+{
+  "key": "6/science/mittelalter/g6ma2a",
+  "de": [
+    "Welche Aussage über die Magna Carta von 1215 stimmt?",
+    "Sie begrenzte die Macht des englischen Königs",
+    "Sie gab dem König uneingeschränkte Alleinherrschaft",
+    "Sie führte damals das Wahlrecht für alle Erwachsenen ein",
+    "Sie schaffte sämtliche Rechte der englischen Adligen ab",
+    "Denke an Regeln für Herrschende.",
+    "Es geht um politische Macht, nicht um Masse."
+  ],
+  "en": [
+    "Which statement about the Magna Carta of 1215 is correct?",
+    "It limited the English king’s power",
+    "It gave the king unlimited sole rule",
+    "It introduced voting rights for all adults at the time",
+    "It abolished all rights of the English nobles",
+    "Think of rules for rulers.",
+    "This concerns political authority, not measurements."
+  ],
+  "fr": [
+    "Quelle phrase sur la Magna Carta de 1215 est correcte ?",
+    "Elle limita le pouvoir du roi anglais",
+    "Elle donna au roi un pouvoir personnel illimité",
+    "Elle introduisit alors le vote pour tous les adultes",
+    "Elle supprima tous les droits des nobles anglais",
+    "Pense aux règles imposées aux dirigeants.",
+    "Il s'agit d'autorité politique, pas de mesures."
+  ],
+  "it": [
+    "Quale frase sulla Magna Carta del 1215 è corretta?",
+    "Limitò il potere del re inglese",
+    "Diede al re un potere personale illimitato",
+    "Introdusse allora il voto per tutti gli adulti",
+    "Eliminò tutti i diritti dei nobili inglesi",
+    "Pensa alle regole per i governanti.",
+    "Si tratta di potere politico, non di misure."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aussage über die Magna Carta von 1215 stimmt? Replaces exact-text recall of: Was ist die Magna Carta?"
+},
+{
+  "key": "6/science/mittelalter/g6ma2c",
+  "de": [
+    "Wie wurden Bücher in vielen mittelalterlichen Klöstern vervielfältigt?",
+    "Durch Abschreiben von Hand",
+    "Durch ein einziges öffentliches Vorlesen ohne Abschrift",
+    "Durch Weitergabe derselben Seite ohne neue Kopie",
+    "Durch auswendig gelernte Erzählungen statt schriftlicher Kopien",
+    "Denke an die verfügbaren Werkzeuge.",
+    "Die Arbeit erforderte viel Zeit und Schreibmaterial."
+  ],
+  "en": [
+    "How were books copied in many medieval monasteries?",
+    "By writing copies by hand",
+    "By one public reading without a written copy",
+    "By passing on the same page without making another copy",
+    "By memorised stories instead of written copies",
+    "Think of the tools available.",
+    "The work needed much time and writing materials."
+  ],
+  "fr": [
+    "Comment copiait-on les livres dans de nombreux monastères médiévaux ?",
+    "En les recopiant à la main",
+    "Par une seule lecture publique sans copie écrite",
+    "En transmettant la même page sans nouvelle copie",
+    "Par des récits mémorisés plutôt que des copies écrites",
+    "Pense aux outils disponibles.",
+    "Ce travail demandait du temps et du matériel d'écriture."
+  ],
+  "it": [
+    "Come si copiavano i libri in molti monasteri medievali?",
+    "Ricopiandoli a mano",
+    "Con un'unica lettura pubblica senza copia scritta",
+    "Passando la stessa pagina senza crearne un'altra",
+    "Con racconti memorizzati invece di copie scritte",
+    "Pensa agli strumenti disponibili.",
+    "Il lavoro richiedeva tempo e materiali per scrivere."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wie wurden Bücher in vielen mittelalterlichen Klöstern vervielfältigt? Replaces exact-text recall of: Was ist Scholastik?"
+},
+{
+  "key": "6/science/mittelalter/g6ma2e",
+  "de": [
+    "Welche Beziehung gehörte zum mittelalterlichen Lehnswesen?",
+    "Ein Herr vergab ein Lehen und erhielt dafür Treue und Dienste",
+    "Alle Lehen wurden ohne jede Gegenpflicht vergeben",
+    "Ein Vasall erhielt Dienste von seinem Herrn, schuldete aber selbst nichts",
+    "Landbesitz und persönliche Treue hatten dabei keinen Zusammenhang",
+    "Denke an Rechte und Pflichten.",
+    "Was erhielten beide Seiten einer solchen Beziehung?"
+  ],
+  "en": [
+    "Which relationship belonged to medieval feudalism?",
+    "A lord granted a fief in return for loyalty and services",
+    "All fiefs were granted without any obligation in return",
+    "A vassal received services from a lord but owed nothing",
+    "Landholding and personal loyalty had no connection in this system",
+    "Think of rights and duties.",
+    "What did each side receive from the relationship?"
+  ],
+  "fr": [
+    "Quelle relation faisait partie du système féodal ?",
+    "Un seigneur accordait un fief en échange de fidélité et de services",
+    "Tous les fiefs étaient accordés sans obligation en retour",
+    "Un vassal recevait des services sans rien devoir",
+    "Terres et fidélité personnelle n'avaient aucun lien dans ce système",
+    "Pense aux droits et aux obligations.",
+    "Que recevait chaque partie dans cette relation ?"
+  ],
+  "it": [
+    "Quale rapporto faceva parte del sistema feudale?",
+    "Un signore concedeva un feudo in cambio di fedeltà e servizi",
+    "Tutti i feudi venivano concessi senza obblighi in cambio",
+    "Un vassallo riceveva servizi senza dovere nulla",
+    "Terre e fedeltà personale non avevano alcun legame in questo sistema",
+    "Pensa a diritti e doveri.",
+    "Che cosa riceveva ciascuna parte del rapporto?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Beziehung gehörte zum mittelalterlichen Lehnswesen? Replaces exact-text recall of: Was ist Feudalismus?"
+},
+{
+  "key": "6/science/mittelalter/g6ma2g",
+  "de": [
+    "Warum ist der Verkauf wichtiger Ämter gegen Geld problematisch?",
+    "Reichtum kann wichtiger werden als Eignung für die Aufgabe",
+    "Dadurch wird immer die geeignetste Person gewählt",
+    "Dadurch werden alle Bewerber gleich reich",
+    "Damit entfällt jede Verantwortung des Amts",
+    "Denke an eine faire Auswahl.",
+    "Welches Merkmal sollte für eine Aufgabe zählen?"
+  ],
+  "en": [
+    "Why is selling important offices for money a problem?",
+    "Wealth can matter more than suitability for the role",
+    "It always selects the most suitable person",
+    "It makes all candidates equally wealthy",
+    "It removes all responsibility from the office",
+    "Think of fair selection.",
+    "What should matter when filling a role?"
+  ],
+  "fr": [
+    "Pourquoi vendre des fonctions importantes contre de l'argent pose-t-il problème ?",
+    "La richesse peut compter davantage que l'aptitude à la fonction",
+    "Cela choisit toujours la personne la plus compétente",
+    "Cela rend tous les candidats aussi riches",
+    "Cela supprime toute responsabilité liée à la fonction",
+    "Pense à une sélection équitable.",
+    "Quel critère devrait compter pour une fonction ?"
+  ],
+  "it": [
+    "Perché vendere incarichi importanti in cambio di denaro è problematico?",
+    "La ricchezza può contare più dell'idoneità al compito",
+    "Viene sempre scelta la persona più adatta",
+    "Tutti i candidati diventano ugualmente ricchi",
+    "Scompare ogni responsabilità dell'incarico",
+    "Pensa a una selezione equa.",
+    "Quale criterio dovrebbe contare per un incarico?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum ist der Verkauf wichtiger Ämter gegen Geld problematisch? Replaces exact-text recall of: Was ist Simonie?"
+},
+{
+  "key": "6/science/mittelalter/g6ma2i",
+  "de": [
+    "Was veränderte die Reformation im 16. Jahrhundert besonders?",
+    "Die christliche Kirchenlandschaft",
+    "Die Herrschaftsgebiete durch die erste römische Eroberung Europas",
+    "Die Entstehung der ersten Klöster der Welt",
+    "Die Abschaffung aller christlichen Glaubensrichtungen",
+    "Denke an Luther und Zwingli.",
+    "In welchem Bereich stellten sie bestehende Regeln infrage?"
+  ],
+  "en": [
+    "What did the Reformation particularly change in the sixteenth century?",
+    "The organisation of Christian churches",
+    "Territories through Rome's first conquest of Europe",
+    "The creation of the world's first monasteries",
+    "The abolition of every Christian denomination",
+    "Think of Luther and Zwingli.",
+    "In which area did they challenge existing rules?"
+  ],
+  "fr": [
+    "Que transforma particulièrement la Réforme au XVIe siècle ?",
+    "L'organisation des Églises chrétiennes",
+    "Les territoires par la première conquête romaine de l'Europe",
+    "La création des tout premiers monastères du monde",
+    "La suppression de toutes les confessions chrétiennes",
+    "Pense à Luther et à Zwingli.",
+    "Dans quel domaine contestaient-ils les règles existantes ?"
+  ],
+  "it": [
+    "Che cosa cambiò soprattutto la Riforma nel XVI secolo?",
+    "L'organizzazione delle Chiese cristiane",
+    "I territori con la prima conquista romana dell'Europa",
+    "La nascita dei primissimi monasteri del mondo",
+    "L'eliminazione di tutte le confessioni cristiane",
+    "Pensa a Lutero e Zwingli.",
+    "In quale ambito misero in discussione le regole esistenti?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was veränderte die Reformation im 16. Jahrhundert besonders? Replaces exact-text recall of: Was ist die Reformation?"
+},
+{
+  "key": "6/science/mittelalter/g6ma2k",
+  "de": [
+    "Was bezeichnet die sogenannte Völkerwanderung am Ende der Antike?",
+    "Wanderungen und Umsiedlungen verschiedener Bevölkerungsgruppen",
+    "Ausschliesslich kurze Pilgerreisen ohne Umsiedlung",
+    "Nur den täglichen Weg von Bauern auf ihr Feld",
+    "Eine einheitlich geplante Reise aller Europäer an denselben Ort",
+    "Achte auf den historischen Zeitraum.",
+    "Es geht um längerfristige Veränderungen von Siedlungsgebieten."
+  ],
+  "en": [
+    "What does the Migration Period at the end of antiquity describe?",
+    "Movements and resettlement of different population groups",
+    "Only short pilgrimages without resettlement",
+    "Only peasants' daily journeys to their fields",
+    "A single planned journey by all Europeans to the same place",
+    "Notice the historical period.",
+    "Think of lasting changes in where people lived."
+  ],
+  "fr": [
+    "Que désignent les grandes migrations de la fin de l'Antiquité ?",
+    "Les déplacements et installations de différents groupes de population",
+    "Seulement de courts pèlerinages sans installation",
+    "Seulement les trajets quotidiens des paysans vers leurs champs",
+    "Un seul voyage planifié de tous les Européens au même endroit",
+    "Observe la période historique.",
+    "Pense aux changements durables des lieux de peuplement."
+  ],
+  "it": [
+    "Che cosa indicano le grandi migrazioni della fine dell'antichità?",
+    "Spostamenti e insediamenti di diversi gruppi di popolazione",
+    "Solo brevi pellegrinaggi senza insediamento",
+    "Solo i tragitti quotidiani dei contadini ai campi",
+    "Un unico viaggio pianificato di tutti gli europei nello stesso luogo",
+    "Osserva il periodo storico.",
+    "Pensa ai cambiamenti duraturi delle aree abitate."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bezeichnet die sogenannte Völkerwanderung am Ende der Antike? Replaces exact-text recall of: Was ist die Völkerwanderung?"
+},
+{
+  "key": "6/science/mittelalter/g6ma2m",
+  "de": [
+    "Welche Stadt war die Hauptstadt des Byzantinischen Reiches?",
+    "Konstantinopel",
+    "Paris",
+    "London",
+    "Aachen",
+    "Denke an das östliche Römische Reich.",
+    "Die Stadt liegt am Bosporus."
+  ],
+  "en": [
+    "Which city was the capital of the Byzantine Empire?",
+    "Constantinople",
+    "Paris",
+    "London",
+    "Aachen",
+    "Think of the Eastern Roman Empire.",
+    "The city lies on the Bosporus."
+  ],
+  "fr": [
+    "Quelle ville était la capitale de l'Empire byzantin ?",
+    "Constantinople",
+    "Paris",
+    "Londres",
+    "Aix-la-Chapelle",
+    "Pense à l'Empire romain d'Orient.",
+    "Cette ville se trouve sur le Bosphore."
+  ],
+  "it": [
+    "Quale città era la capitale dell'Impero bizantino?",
+    "Costantinopoli",
+    "Parigi",
+    "Londra",
+    "Aquisgrana",
+    "Pensa all'Impero romano d'Oriente.",
+    "La città si trova sul Bosforo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Stadt war die Hauptstadt des Byzantinischen Reiches? Replaces exact-text recall of: Was ist Byzantinisches Reich?"
+},
+{
+  "key": "6/science/mittelalter/g6ma2o",
+  "de": [
+    "Auf welcher Halbinsel fanden die als Reconquista bezeichneten Eroberungen christlicher Reiche statt?",
+    "Auf der Iberischen Halbinsel",
+    "Auf der Skandinavischen Halbinsel",
+    "Auf der Arabischen Halbinsel",
+    "Auf der italienischen Halbinsel",
+    "Denke an die Lage des heutigen Spanien und Portugal.",
+    "Suche im Südwesten Europas."
+  ],
+  "en": [
+    "On which peninsula did Christian kingdoms make the conquests known as the Reconquista?",
+    "The Iberian Peninsula",
+    "The Scandinavian Peninsula",
+    "The Arabian Peninsula",
+    "The Italian Peninsula",
+    "Think of present-day Spain and Portugal.",
+    "Look in southwestern Europe."
+  ],
+  "fr": [
+    "Sur quelle péninsule les royaumes chrétiens menèrent-ils les conquêtes appelées Reconquista ?",
+    "La péninsule Ibérique",
+    "La péninsule Scandinave",
+    "La péninsule Arabique",
+    "La péninsule italienne",
+    "Pense à l'Espagne et au Portugal actuels.",
+    "Cherche au sud-ouest de l'Europe."
+  ],
+  "it": [
+    "Su quale penisola i regni cristiani condussero le conquiste chiamate Reconquista?",
+    "La penisola iberica",
+    "La penisola scandinava",
+    "La penisola arabica",
+    "La penisola italiana",
+    "Pensa alla Spagna e al Portogallo attuali.",
+    "Cerca nell'Europa sudoccidentale."
+  ],
+  "reason": "Individually reviewed knowledge objective: Auf welcher Halbinsel fanden die als Reconquista bezeichneten Eroberungen christlicher Reiche statt? Replaces exact-text recall of: Was ist die Reconquista?"
+},
+{
+  "key": "6/science/mittelalter/g6ma3a",
+  "de": [
+    "Worauf stützen Historiker eine begründete Darstellung des Mittelalters?",
+    "Auf kritisch geprüfte Quellen",
+    "Nur auf den Text, der die eigene Meinung bestätigt",
+    "Auf die älteste Quelle ohne Prüfung ihres Inhalts",
+    "Auf erfundene Einzelheiten, wenn Belege fehlen",
+    "Denke an überprüfbare Belege.",
+    "Was kann Informationen über die Vergangenheit liefern?"
+  ],
+  "en": [
+    "What do historians base a well-supported account of the Middle Ages on?",
+    "Critically examined sources",
+    "Only the text that confirms their own view",
+    "The oldest source without examining its content",
+    "Invented details whenever evidence is missing",
+    "Think of evidence that can be checked.",
+    "What can provide information about the past?"
+  ],
+  "fr": [
+    "Sur quoi les historiens fondent-ils un récit étayé du Moyen Âge ?",
+    "Sur des sources examinées de façon critique",
+    "Seulement le texte qui confirme leur opinion",
+    "La source la plus ancienne sans examiner son contenu",
+    "Des détails inventés quand les preuves manquent",
+    "Pense aux preuves vérifiables.",
+    "Qu'est-ce qui peut renseigner sur le passé ?"
+  ],
+  "it": [
+    "Su cosa basano gli storici una ricostruzione documentata del Medioevo?",
+    "Su fonti esaminate criticamente",
+    "Solo sul testo che conferma la propria opinione",
+    "Sulla fonte più antica senza esaminarne il contenuto",
+    "Su dettagli inventati quando mancano prove",
+    "Pensa a prove verificabili.",
+    "Che cosa può fornire informazioni sul passato?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Worauf stützen Historiker eine begründete Darstellung des Mittelalters? Replaces exact-text recall of: Was ist Historiografie?"
+},
+{
+  "key": "6/science/mittelalter/g6ma3c",
+  "de": [
+    "Welche Frage hilft, einen mittelalterlichen Bericht kritisch zu prüfen?",
+    "Wer schrieb ihn und mit welcher Absicht?",
+    "Bestätigt er meine Lieblingsvorstellung, sodass weitere Prüfung entfällt?",
+    "Ist er alt genug, um automatisch in allem recht zu haben?",
+    "Kann ich den Inhalt ohne Vergleich mit anderen Quellen übernehmen?",
+    "Denke an die Entstehung des Berichts.",
+    "Eine schreibende Person kann bestimmte Interessen haben."
+  ],
+  "en": [
+    "Which question helps evaluate a medieval account critically?",
+    "Who wrote it and for what purpose?",
+    "Does it confirm my favourite idea so no further check is needed?",
+    "Is it old enough to be automatically right about everything?",
+    "Can I accept it without comparing other sources?",
+    "Think about how the account was created.",
+    "A writer may have particular interests."
+  ],
+  "fr": [
+    "Quelle question aide à examiner un récit médiéval de façon critique ?",
+    "Qui l'a écrit et dans quel but ?",
+    "Confirme-t-il mon idée préférée, rendant toute vérification inutile ?",
+    "Est-il assez ancien pour avoir automatiquement raison sur tout ?",
+    "Puis-je l'accepter sans comparer d'autres sources ?",
+    "Pense à l'origine du récit.",
+    "Son auteur peut avoir des intérêts particuliers."
+  ],
+  "it": [
+    "Quale domanda aiuta a valutare criticamente un racconto medievale?",
+    "Chi lo scrisse e con quale scopo?",
+    "Conferma la mia idea preferita così da evitare altre verifiche?",
+    "È abbastanza antico da avere automaticamente ragione su tutto?",
+    "Posso accettarlo senza confrontare altre fonti?",
+    "Pensa all'origine del racconto.",
+    "Chi scrive può avere interessi particolari."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Frage hilft, einen mittelalterlichen Bericht kritisch zu prüfen? Replaces exact-text recall of: Was ist Quellenanalyse?"
+},
+{
+  "key": "6/science/mittelalter/g6ma3e",
+  "de": [
+    "Welche Frage untersucht das Zusammenleben sozialer Gruppen im Mittelalter?",
+    "Wie unterschieden sich die Lebensbedingungen von Bauern und Adel?",
+    "Welche Gesteinsarten wurden beim Bau einer bestimmten Burg verwendet?",
+    "Wie wurde eine einzelne Handschrift technisch gebunden?",
+    "Welche Pigmente enthält eine bestimmte Wandmalerei?",
+    "Denke an Menschen und ihre Stellung in der Gesellschaft.",
+    "Vergleiche Rechte, Arbeit und Besitz verschiedener Gruppen."
+  ],
+  "en": [
+    "Which question investigates relations between social groups in the Middle Ages?",
+    "How did peasants' and nobles' living conditions differ?",
+    "Which rocks were used to build a particular castle?",
+    "How was one manuscript technically bound?",
+    "Which pigments occur in a particular wall painting?",
+    "Think about people and their place in society.",
+    "Compare different groups' rights, work and property."
+  ],
+  "fr": [
+    "Quelle question étudie les groupes sociaux au Moyen Âge ?",
+    "Comment les conditions de vie des paysans et des nobles différaient-elles ?",
+    "Quelles roches ont servi à construire un château précis ?",
+    "Comment un manuscrit particulier a-t-il été relié ?",
+    "Quels pigments contient une peinture murale précise ?",
+    "Pense à la place des personnes dans la société.",
+    "Compare les droits, le travail et les biens des groupes."
+  ],
+  "it": [
+    "Quale domanda studia i gruppi sociali nel Medioevo?",
+    "Come differivano le condizioni di vita di contadini e nobili?",
+    "Quali rocce furono usate per costruire un castello preciso?",
+    "Come fu rilegato tecnicamente un singolo manoscritto?",
+    "Quali pigmenti contiene una determinata pittura murale?",
+    "Pensa alla posizione delle persone nella società.",
+    "Confronta diritti, lavoro e beni dei diversi gruppi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Frage untersucht das Zusammenleben sozialer Gruppen im Mittelalter? Replaces exact-text recall of: Was ist Sozialgeschichte?"
+},
+{
+  "key": "6/science/mittelalter/g6ma3g",
+  "de": [
+    "Was kann eine Untersuchung mittelalterlicher Feste zeigen?",
+    "Welche Bräuche und Vorstellungen Menschen teilten",
+    "Die exakte Einwohnerzahl jeder Stadt",
+    "Die Temperatur jedes Wintertags",
+    "Den vollständigen Stammbaum aller Bauern",
+    "Denke an gemeinsames Feiern.",
+    "Welche Spuren von Kultur werden dabei sichtbar?"
+  ],
+  "en": [
+    "What can studying medieval festivals reveal?",
+    "Customs and ideas that people shared",
+    "The exact population of every town",
+    "The temperature of every winter day",
+    "Every peasant's complete family tree",
+    "Think about shared celebrations.",
+    "Which traces of culture become visible?"
+  ],
+  "fr": [
+    "Que peut montrer l'étude des fêtes médiévales ?",
+    "Les coutumes et les idées partagées par les gens",
+    "La population exacte de chaque ville",
+    "La température de chaque jour d'hiver",
+    "L'arbre généalogique complet de tous les paysans",
+    "Pense aux célébrations collectives.",
+    "Quelles traces de culture y deviennent visibles ?"
+  ],
+  "it": [
+    "Che cosa può mostrare lo studio delle feste medievali?",
+    "Usanze e idee condivise dalle persone",
+    "La popolazione esatta di ogni città",
+    "La temperatura di ogni giorno invernale",
+    "L'albero genealogico completo di tutti i contadini",
+    "Pensa alle celebrazioni collettive.",
+    "Quali tracce culturali diventano visibili?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kann eine Untersuchung mittelalterlicher Feste zeigen? Replaces exact-text recall of: Was ist Kulturgeschichte?"
+},
+{
+  "key": "6/science/mittelalter/g6ma3i",
+  "de": [
+    "Warum sollte man mittelalterliche Entscheidungen im damaligen Umfeld betrachten?",
+    "Wissen, Regeln und Lebensbedingungen waren anders als heute",
+    "Alle Menschen hatten damals dieselben Ansichten",
+    "Heutige Begriffe erklären jede damalige Handlung vollständig",
+    "Über die Vergangenheit lässt sich nichts herausfinden",
+    "Vergleiche die verfügbaren Möglichkeiten damals und heute.",
+    "Beurteile, welche Unterschiede eine Entscheidung beeinflussen konnten."
+  ],
+  "en": [
+    "Why should medieval decisions be considered in their historical setting?",
+    "Knowledge, rules and living conditions differed from today",
+    "Everyone then held the same views",
+    "Modern terms fully explain every past action",
+    "Nothing can be learned about the past",
+    "Compare the choices available then and now.",
+    "Consider which differences could affect a decision."
+  ],
+  "fr": [
+    "Pourquoi replacer les décisions médiévales dans leur contexte ?",
+    "Les connaissances, règles et conditions de vie différaient des nôtres",
+    "Tout le monde partageait alors les mêmes opinions",
+    "Les termes actuels expliquent entièrement chaque acte ancien",
+    "On ne peut rien apprendre sur le passé",
+    "Compare les possibilités d'alors et d'aujourd'hui.",
+    "Quelles différences pouvaient influencer une décision ?"
+  ],
+  "it": [
+    "Perché considerare le decisioni medievali nel loro contesto storico?",
+    "Conoscenze, regole e condizioni di vita erano diverse da oggi",
+    "Tutti allora avevano le stesse opinioni",
+    "I termini moderni spiegano completamente ogni azione passata",
+    "Non si può scoprire nulla sul passato",
+    "Confronta le possibilità di allora e di oggi.",
+    "Quali differenze potevano influire su una decisione?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum sollte man mittelalterliche Entscheidungen im damaligen Umfeld betrachten? Replaces exact-text recall of: Was ist Geschichtsbewusstsein?"
+},
+{
+  "key": "6/science/mittelalter/g6ma3k",
+  "de": [
+    "Ein Hofschreiber lobt seinen König. Was hilft, den Bericht einzuordnen?",
+    "Andere Quellen vergleichen und die Stellung des Schreibers beachten",
+    "Die Sicht des Hofes ohne Vergleich als Sicht aller Menschen übernehmen",
+    "Nur gleichlautende Hofberichte auswählen und Gegenbelege ignorieren",
+    "Die Interessen des Autors ausblenden, weil er gut schreiben konnte",
+    "Denke an mögliche Abhängigkeiten des Autors.",
+    "Welche zusätzliche Prüfung erweitert den Blick?"
+  ],
+  "en": [
+    "A court writer praises his king. What helps assess the account?",
+    "Compare other sources and consider the writer's position",
+    "Treat the court's view as everyone's view without comparison",
+    "Select only matching court accounts and ignore contrary evidence",
+    "Ignore the author's interests because he could write well",
+    "Think about the author's possible dependencies.",
+    "Which extra check broadens the view?"
+  ],
+  "fr": [
+    "Un chroniqueur de cour loue son roi. Comment évaluer son récit ?",
+    "Comparer d'autres sources et tenir compte de sa position",
+    "Prendre sans comparaison le point de vue de la cour pour celui de tous",
+    "Choisir seulement les récits concordants et ignorer les preuves contraires",
+    "Ignorer les intérêts de l'auteur parce qu'il écrivait bien",
+    "Pense aux dépendances possibles de l'auteur.",
+    "Quelle vérification supplémentaire élargit le regard ?"
+  ],
+  "it": [
+    "Uno scrittore di corte elogia il suo re. Come valutare il racconto?",
+    "Confrontare altre fonti e considerare la posizione dello scrittore",
+    "Trattare senza confronti la visione della corte come quella di tutti",
+    "Scegliere solo racconti concordanti e ignorare prove contrarie",
+    "Ignorare gli interessi dell'autore perché scriveva bene",
+    "Pensa alle possibili dipendenze dell'autore.",
+    "Quale verifica aggiuntiva amplia lo sguardo?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Ein Hofschreiber lobt seinen König. Was hilft, den Bericht einzuordnen? Replaces exact-text recall of: Was ist Dekonstruktion in der Geschichtsschreibung?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az1a",
+  "de": [
+    "Welche Reihe nennt drei Aggregatzustände?",
+    "Fest, flüssig, gasförmig",
+    "Warm, heiss, kalt",
+    "Schwer, leicht, dicht",
+    "Rau, glatt, glänzend",
+    "Denke an Eis, Wasser und Wasserdampf.",
+    "Welche Eigenschaft unterscheidet diese drei Formen?"
+  ],
+  "en": [
+    "Which list names three states of matter?",
+    "Solid, liquid, gas",
+    "Warm, hot, cold",
+    "Heavy, light, dense",
+    "Rough, smooth, shiny",
+    "Think of ice, water and water vapour.",
+    "Which property distinguishes these three forms?"
+  ],
+  "fr": [
+    "Quelle liste nomme trois états de la matière ?",
+    "Solide, liquide, gazeux",
+    "Tiède, chaud, froid",
+    "Lourd, léger, dense",
+    "Rugueux, lisse, brillant",
+    "Pense à la glace, à l'eau et à la vapeur d'eau.",
+    "Quelle propriété distingue ces trois formes ?"
+  ],
+  "it": [
+    "Quale elenco indica tre stati della materia?",
+    "Solido, liquido, gassoso",
+    "Tiepido, caldo, freddo",
+    "Pesante, leggero, denso",
+    "Ruvido, liscio, lucido",
+    "Pensa a ghiaccio, acqua e vapore acqueo.",
+    "Quale proprietà distingue queste tre forme?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Reihe nennt drei Aggregatzustände? Replaces exact-text recall of: Was ist ein Aggregatzustand?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az1c",
+  "de": [
+    "Welcher Übergang heisst Schmelzen?",
+    "Fest zu flüssig",
+    "Flüssig zu fest",
+    "Gasförmig zu flüssig",
+    "Flüssig zu gasförmig",
+    "Stelle dir einen Eiswürfel in einem warmen Zimmer vor.",
+    "Vergleiche seinen Anfangs- und Endzustand."
+  ],
+  "en": [
+    "Which change is called melting?",
+    "Solid to liquid",
+    "Liquid to solid",
+    "Gas to liquid",
+    "Liquid to gas",
+    "Picture an ice cube in a warm room.",
+    "Compare its starting and final states."
+  ],
+  "fr": [
+    "Quel changement appelle-t-on fusion ?",
+    "De solide à liquide",
+    "De liquide à solide",
+    "De gazeux à liquide",
+    "De liquide à gazeux",
+    "Imagine un glaçon dans une pièce chaude.",
+    "Compare son état initial et son état final."
+  ],
+  "it": [
+    "Quale passaggio si chiama fusione?",
+    "Da solido a liquido",
+    "Da liquido a solido",
+    "Da gassoso a liquido",
+    "Da liquido a gassoso",
+    "Immagina un cubetto di ghiaccio in una stanza calda.",
+    "Confronta lo stato iniziale e quello finale."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welcher Übergang heisst Schmelzen? Replaces exact-text recall of: Was passiert beim Schmelzen?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az1e",
+  "de": [
+    "Welcher Vorgang ist Kondensation?",
+    "Wasserdampf bildet Tropfen am kalten Fenster",
+    "Ein Eiswürfel wird zu Wasser",
+    "Eine Pfütze trocknet aus",
+    "Wasser gefriert in einer Form",
+    "Achte auf den Zustand vor und nach dem Vorgang.",
+    "Die Abkühlung der Luft an einer Fläche spielt eine Rolle."
+  ],
+  "en": [
+    "Which process is condensation?",
+    "Water vapour forms droplets on a cold window",
+    "An ice cube turns to water",
+    "A puddle dries up",
+    "Water freezes in a tray",
+    "Notice the states before and after.",
+    "Cooling of air at a surface plays a role."
+  ],
+  "fr": [
+    "Quel phénomène est une condensation ?",
+    "La vapeur d'eau forme des gouttes sur une vitre froide",
+    "Un glaçon devient de l'eau",
+    "Une flaque s'assèche",
+    "L'eau gèle dans un moule",
+    "Observe les états avant et après.",
+    "Le refroidissement de l'air contre une surface joue un rôle."
+  ],
+  "it": [
+    "Quale fenomeno è una condensazione?",
+    "Il vapore acqueo forma gocce su un vetro freddo",
+    "Un cubetto di ghiaccio diventa acqua",
+    "Una pozzanghera si asciuga",
+    "L'acqua gela in uno stampo",
+    "Osserva gli stati prima e dopo.",
+    "Il raffreddamento dell'aria vicino a una superficie ha un ruolo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welcher Vorgang ist Kondensation? Replaces exact-text recall of: Was ist Kondensation?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az1i",
+  "de": [
+    "Wasserdampf wird direkt zu Eiskristallen. Welche Zustandsänderung ist das?",
+    "Gasförmig zu fest",
+    "Fest zu gasförmig",
+    "Flüssig zu gasförmig",
+    "Fest zu flüssig",
+    "Achte auf das Wort direkt.",
+    "Welcher Zwischenzustand wird hier übersprungen?"
+  ],
+  "en": [
+    "Water vapour turns directly into ice crystals. Which change is this?",
+    "Gas to solid",
+    "Solid to gas",
+    "Liquid to gas",
+    "Solid to liquid",
+    "Notice the word directly.",
+    "Which intermediate state is skipped?"
+  ],
+  "fr": [
+    "La vapeur d'eau devient directement des cristaux de glace. Quel changement est-ce ?",
+    "De gazeux à solide",
+    "De solide à gazeux",
+    "De liquide à gazeux",
+    "De solide à liquide",
+    "Observe le mot directement.",
+    "Quel état intermédiaire est absent ?"
+  ],
+  "it": [
+    "Il vapore acqueo diventa direttamente cristalli di ghiaccio. Quale passaggio avviene?",
+    "Da gassoso a solido",
+    "Da solido a gassoso",
+    "Da liquido a gassoso",
+    "Da solido a liquido",
+    "Osserva la parola direttamente.",
+    "Quale stato intermedio viene saltato?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Wasserdampf wird direkt zu Eiskristallen. Welche Zustandsänderung ist das? Replaces exact-text recall of: Was ist Resublimation?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az1k",
+  "de": [
+    "Warum trocknet nasse Wäsche auch ohne kochendes Wasser?",
+    "Wasser verdunstet an der Oberfläche",
+    "Wasser verschwindet nur beim Erreichen des Siedepunkts",
+    "Das gesamte Wasser wird ohne Zustandsänderung Teil des Gewebes",
+    "Nur gefrorenes Wasser kann aus der Wäsche entweichen",
+    "Vergleiche Trocknen und Sieden.",
+    "Was kann an einer Wasseroberfläche schon bei Zimmertemperatur geschehen?"
+  ],
+  "en": [
+    "Why can wet laundry dry without boiling water?",
+    "Water evaporates from the surface",
+    "Water disappears only on reaching boiling point",
+    "All the water becomes part of the fabric without changing state",
+    "Only frozen water can escape from laundry",
+    "Compare drying and boiling.",
+    "What can happen at a water surface at room temperature?"
+  ],
+  "fr": [
+    "Pourquoi le linge mouillé sèche-t-il sans faire bouillir l'eau ?",
+    "L'eau s'évapore à la surface",
+    "L'eau ne part qu'au point d'ébullition",
+    "Toute l'eau devient partie du tissu sans changer d'état",
+    "Seule l'eau gelée peut quitter le linge",
+    "Compare le séchage et l'ébullition.",
+    "Que peut-il se passer à la surface de l'eau à température ambiante ?"
+  ],
+  "it": [
+    "Perché il bucato bagnato si asciuga senza far bollire l'acqua?",
+    "L'acqua evapora dalla superficie",
+    "L'acqua esce solo al punto di ebollizione",
+    "Tutta l'acqua diventa parte del tessuto senza cambiare stato",
+    "Solo l'acqua gelata può uscire dal bucato",
+    "Confronta asciugatura ed ebollizione.",
+    "Che cosa può accadere alla superficie dell'acqua a temperatura ambiente?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum trocknet nasse Wäsche auch ohne kochendes Wasser? Replaces exact-text recall of: Was ist Verdunstung?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az2a",
+  "de": [
+    "Was hilft das Teilchenmodell zu erklären?",
+    "Eigenschaften von Stoffen durch kleinste Teilchen",
+    "Stoffeigenschaften ausschliesslich durch die äussere Form des Gefässes",
+    "Alle Stoffe als innen vollständig ruhende Masse",
+    "Temperaturänderungen nur durch das Wachsen einzelner Teilchen",
+    "Ein Modell vereinfacht etwas Unsichtbares.",
+    "Denke an Aufbau und Bewegung im Inneren eines Stoffes."
+  ],
+  "en": [
+    "What does the particle model help explain?",
+    "Properties of matter through tiny particles",
+    "Material properties solely through the container's outer shape",
+    "All substances as internally motionless matter",
+    "Temperature changes only through individual particles growing",
+    "A model simplifies something invisible.",
+    "Think of a substance's internal structure and movement."
+  ],
+  "fr": [
+    "Que permet d'expliquer le modèle particulaire ?",
+    "Les propriétés de la matière grâce à de minuscules particules",
+    "Les propriétés uniquement par la forme extérieure du récipient",
+    "Toutes les substances comme une matière immobile à l'intérieur",
+    "Les changements de température uniquement par la croissance des particules",
+    "Un modèle simplifie quelque chose d'invisible.",
+    "Pense à la structure et au mouvement à l'intérieur d'une substance."
+  ],
+  "it": [
+    "Che cosa aiuta a spiegare il modello particellare?",
+    "Le proprietà della materia attraverso particelle piccolissime",
+    "Le proprietà solo attraverso la forma esterna del recipiente",
+    "Tutte le sostanze come materia internamente immobile",
+    "I cambiamenti di temperatura solo tramite la crescita delle particelle",
+    "Un modello semplifica qualcosa di invisibile.",
+    "Pensa alla struttura e al movimento dentro una sostanza."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was hilft das Teilchenmodell zu erklären? Replaces exact-text recall of: Was ist Teilchenmodell?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az2c",
+  "de": [
+    "Was geschieht im Teilchenmodell beim Abkühlen eines Gases?",
+    "Die Teilchen bewegen sich im Mittel langsamer",
+    "Die Teilchen bewegen sich im Mittel schneller",
+    "Jedes Teilchen wird zu einem anderen Stoff",
+    "Die Teilchen verschwinden nach und nach",
+    "Vergleiche die Bewegungsenergie.",
+    "Es geht um eine durchschnittliche Veränderung, nicht um das Verschwinden von Materie."
+  ],
+  "en": [
+    "In the particle model, what happens when a gas cools?",
+    "Particles move more slowly on average",
+    "Particles move faster on average",
+    "Every particle becomes a different substance",
+    "Particles gradually disappear",
+    "Compare the energy of motion.",
+    "Think of an average change, not matter disappearing."
+  ],
+  "fr": [
+    "Dans le modèle particulaire, que se passe-t-il lorsqu'un gaz refroidit ?",
+    "Les particules se déplacent en moyenne plus lentement",
+    "Les particules se déplacent en moyenne plus vite",
+    "Chaque particule devient une autre substance",
+    "Les particules disparaissent progressivement",
+    "Compare l'énergie du mouvement.",
+    "Il s'agit d'un changement moyen, pas d'une disparition de matière."
+  ],
+  "it": [
+    "Nel modello particellare, che cosa succede quando un gas si raffredda?",
+    "Le particelle si muovono mediamente più lentamente",
+    "Le particelle si muovono mediamente più velocemente",
+    "Ogni particella diventa un'altra sostanza",
+    "Le particelle scompaiono gradualmente",
+    "Confronta l'energia del movimento.",
+    "Si tratta di un cambiamento medio, non della scomparsa della materia."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was geschieht im Teilchenmodell beim Abkühlen eines Gases? Replaces exact-text recall of: Was passiert mit Teilchen beim Abkühlen?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az2e",
+  "de": [
+    "Warum schwimmt Eis auf flüssigem Wasser?",
+    "Eis hat eine geringere Dichte als flüssiges Wasser",
+    "Eis hat eine höhere Dichte als flüssiges Wasser",
+    "Eis hat überhaupt keine Masse",
+    "Jeder feste Stoff schwimmt auf jeder Flüssigkeit",
+    "Vergleiche gleich grosse Stücke Eis und Wasser.",
+    "Entscheidend ist die Masse pro Volumen."
+  ],
+  "en": [
+    "Why does ice float on liquid water?",
+    "Ice is less dense than liquid water",
+    "Ice is denser than liquid water",
+    "Ice has no mass at all",
+    "Every solid floats on every liquid",
+    "Compare equal volumes of ice and water.",
+    "Mass per unit volume matters."
+  ],
+  "fr": [
+    "Pourquoi la glace flotte-t-elle sur l'eau liquide ?",
+    "La glace est moins dense que l'eau liquide",
+    "La glace est plus dense que l'eau liquide",
+    "La glace n'a aucune masse",
+    "Tous les solides flottent sur tous les liquides",
+    "Compare des volumes égaux de glace et d'eau.",
+    "La masse par unité de volume est importante."
+  ],
+  "it": [
+    "Perché il ghiaccio galleggia sull'acqua liquida?",
+    "Il ghiaccio è meno denso dell'acqua liquida",
+    "Il ghiaccio è più denso dell'acqua liquida",
+    "Il ghiaccio non ha massa",
+    "Ogni solido galleggia su ogni liquido",
+    "Confronta volumi uguali di ghiaccio e acqua.",
+    "Conta la massa per unità di volume."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum schwimmt Eis auf flüssigem Wasser? Replaces exact-text recall of: Was ist die Wasseranomalie?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az2g",
+  "de": [
+    "Warum siedet Wasser hoch im Gebirge bei weniger als 100 Grad Celsius?",
+    "Dort ist der Luftdruck geringer",
+    "Dort ist der Luftdruck höher",
+    "Wasser siedet überall unabhängig vom Druck genau bei 100 Grad",
+    "Eine grössere Höhe macht die Wassermenge im Topf immer kleiner",
+    "Auch die Luft drückt auf die Wasseroberfläche.",
+    "Wie verändert sich die Luft mit zunehmender Höhe?"
+  ],
+  "en": [
+    "Why does water boil below 100 degrees Celsius high in the mountains?",
+    "Air pressure is lower there",
+    "Air pressure is higher there",
+    "Water boils at exactly 100 degrees everywhere regardless of pressure",
+    "Greater altitude always reduces the amount of water in the pot",
+    "Air also presses on the water surface.",
+    "How does the air change with altitude?"
+  ],
+  "fr": [
+    "Pourquoi l'eau bout-elle à moins de 100 degrés Celsius en haute montagne ?",
+    "La pression de l'air y est plus faible",
+    "La pression de l'air y est plus élevée",
+    "L'eau bout exactement à 100 degrés partout, quelle que soit la pression",
+    "L'altitude réduit toujours la quantité d'eau dans la casserole",
+    "L'air exerce aussi une pression sur l'eau.",
+    "Comment l'air change-t-il avec l'altitude ?"
+  ],
+  "it": [
+    "Perché in alta montagna l'acqua bolle sotto i 100 gradi Celsius?",
+    "La pressione dell'aria è più bassa",
+    "La pressione dell'aria è più alta",
+    "L'acqua bolle esattamente a 100 gradi ovunque indipendentemente dalla pressione",
+    "L'altitudine riduce sempre la quantità d'acqua nella pentola",
+    "Anche l'aria preme sulla superficie dell'acqua.",
+    "Come cambia l'aria con l'altitudine?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum siedet Wasser hoch im Gebirge bei weniger als 100 Grad Celsius? Replaces exact-text recall of: Warum siedet Wasser auf dem Berg früher?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az2i",
+  "de": [
+    "Warum kann verdunstender Schweiss die Haut kühlen?",
+    "Beim Verdunsten wird der Umgebung Wärme entzogen",
+    "Schweiss muss auf der Haut gefrieren",
+    "Verdunstung erzeugt zusätzliche Körperwärme",
+    "Der Wasseranteil verwandelt sich in Salz",
+    "Denke an den Energiebedarf der Zustandsänderung.",
+    "Woher kann diese Energie kommen?"
+  ],
+  "en": [
+    "Why can evaporating sweat cool the skin?",
+    "Evaporation takes heat from the surroundings",
+    "Sweat must freeze on the skin",
+    "Evaporation creates extra body heat",
+    "The water turns into salt",
+    "Think about the energy needed for the change of state.",
+    "Where can this energy come from?"
+  ],
+  "fr": [
+    "Pourquoi la sueur qui s'évapore peut-elle refroidir la peau ?",
+    "L'évaporation prélève de la chaleur autour d'elle",
+    "La sueur doit geler sur la peau",
+    "L'évaporation produit davantage de chaleur corporelle",
+    "L'eau se transforme en sel",
+    "Pense à l'énergie nécessaire au changement d'état.",
+    "D'où cette énergie peut-elle venir ?"
+  ],
+  "it": [
+    "Perché il sudore che evapora può raffreddare la pelle?",
+    "L'evaporazione assorbe calore dall'ambiente circostante",
+    "Il sudore deve gelare sulla pelle",
+    "L'evaporazione produce altro calore corporeo",
+    "L'acqua si trasforma in sale",
+    "Pensa all'energia necessaria al cambiamento di stato.",
+    "Da dove può arrivare questa energia?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum kann verdunstender Schweiss die Haut kühlen? Replaces exact-text recall of: Was ist Verdampfungswärme?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az2k",
+  "de": [
+    "In welchem Zustand ist Wasser in einem Eiswürfel?",
+    "Fest",
+    "Flüssig",
+    "Gasförmig",
+    "Gleichzeitig vollständig flüssig und gasförmig",
+    "Betrachte Form und Fliessverhalten.",
+    "Behält der Eiswürfel zunächst seine eigene Form?"
+  ],
+  "en": [
+    "What state is the water in an ice cube?",
+    "Solid",
+    "Liquid",
+    "Gas",
+    "Entirely liquid and gas at the same time",
+    "Consider shape and flow.",
+    "Does the ice cube initially keep its own shape?"
+  ],
+  "fr": [
+    "Dans quel état est l'eau d'un glaçon ?",
+    "Solide",
+    "Liquide",
+    "Gazeux",
+    "Entièrement liquide et gazeux en même temps",
+    "Observe la forme et l'écoulement.",
+    "Le glaçon garde-t-il d'abord sa propre forme ?"
+  ],
+  "it": [
+    "In quale stato si trova l'acqua in un cubetto di ghiaccio?",
+    "Solido",
+    "Liquido",
+    "Gassoso",
+    "Completamente liquido e gassoso allo stesso tempo",
+    "Osserva forma e scorrimento.",
+    "Il cubetto mantiene inizialmente la propria forma?"
+  ],
+  "reason": "Individually reviewed knowledge objective: In welchem Zustand ist Wasser in einem Eiswürfel? Replaces exact-text recall of: Was ist Tripelpunkt?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az2m",
+  "de": [
+    "Was wird Lebensmitteln bei der Gefriertrocknung vor allem entzogen?",
+    "Wasser",
+    "Alle Mineralstoffe",
+    "Alle Proteine",
+    "Der gesamte Zucker",
+    "Denke daran, was Trocknen bedeutet.",
+    "Welche Zutat kann später beim Zubereiten wieder hinzugefügt werden?"
+  ],
+  "en": [
+    "What is mainly removed from food during freeze-drying?",
+    "Water",
+    "All minerals",
+    "All proteins",
+    "All sugar",
+    "Think about what drying means.",
+    "What can be added again during preparation?"
+  ],
+  "fr": [
+    "Qu'enlève-t-on surtout aux aliments lors de la lyophilisation ?",
+    "De l'eau",
+    "Tous les minéraux",
+    "Toutes les protéines",
+    "Tout le sucre",
+    "Pense au sens du séchage.",
+    "Que peut-on ajouter à nouveau lors de la préparation ?"
+  ],
+  "it": [
+    "Che cosa viene tolto soprattutto agli alimenti durante la liofilizzazione?",
+    "Acqua",
+    "Tutti i minerali",
+    "Tutte le proteine",
+    "Tutto lo zucchero",
+    "Pensa al significato dell'essiccazione.",
+    "Che cosa si può aggiungere di nuovo durante la preparazione?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was wird Lebensmitteln bei der Gefriertrocknung vor allem entzogen? Replaces exact-text recall of: Was ist Gefriertrocknung?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az2o",
+  "de": [
+    "Welches Beispiel ist ein Gemisch aus verschiedenen Stoffen?",
+    "Salzwasser",
+    "Reines destilliertes Wasser",
+    "Reiner Sauerstoff",
+    "Reines Gold",
+    "Zähle die enthaltenen Stoffe, nicht die sichtbaren Teile.",
+    "Ein Gemisch kann gleichmässig aussehen."
+  ],
+  "en": [
+    "Which example is a mixture of different substances?",
+    "Salt water",
+    "Pure distilled water",
+    "Pure oxygen",
+    "Pure gold",
+    "Count substances, not visible pieces.",
+    "A mixture can look uniform."
+  ],
+  "fr": [
+    "Quel exemple est un mélange de substances ?",
+    "L'eau salée",
+    "L'eau distillée pure",
+    "L'oxygène pur",
+    "L'or pur",
+    "Compte les substances, pas les morceaux visibles.",
+    "Un mélange peut paraître uniforme."
+  ],
+  "it": [
+    "Quale esempio è una miscela di sostanze diverse?",
+    "Acqua salata",
+    "Acqua distillata pura",
+    "Ossigeno puro",
+    "Oro puro",
+    "Conta le sostanze, non i pezzi visibili.",
+    "Una miscela può sembrare uniforme."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Beispiel ist ein Gemisch aus verschiedenen Stoffen? Replaces exact-text recall of: Was ist ein Gemisch?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az3c",
+  "de": [
+    "Welches Beispiel zeigt einen gasförmigen Stoff?",
+    "Unsichtbarer Wasserdampf in der Luft",
+    "Ein Tropfen auf einem Blatt",
+    "Ein Hagelkorn",
+    "Ein Stück Wachs",
+    "Unterscheide sichtbare Tropfen vom unsichtbaren Stoff in der Luft.",
+    "Welche Form hat weder eigene feste Form noch eigenes festes Volumen?"
+  ],
+  "en": [
+    "Which example is a gas?",
+    "Invisible water vapour in the air",
+    "A droplet on a leaf",
+    "A hailstone",
+    "A piece of wax",
+    "Distinguish visible droplets from the invisible substance in air.",
+    "Which form has neither a fixed shape nor a fixed volume?"
+  ],
+  "fr": [
+    "Quel exemple correspond à un gaz ?",
+    "La vapeur d'eau invisible dans l'air",
+    "Une goutte sur une feuille",
+    "Un grêlon",
+    "Un morceau de cire",
+    "Distingue les gouttes visibles de la substance invisible dans l'air.",
+    "Quelle forme n'a ni forme fixe ni volume fixe ?"
+  ],
+  "it": [
+    "Quale esempio è un gas?",
+    "Il vapore acqueo invisibile nell'aria",
+    "Una goccia su una foglia",
+    "Un chicco di grandine",
+    "Un pezzo di cera",
+    "Distingui le gocce visibili dalla sostanza invisibile nell'aria.",
+    "Quale forma non ha né forma fissa né volume fisso?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Beispiel zeigt einen gasförmigen Stoff? Replaces exact-text recall of: Was ist Plasma?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az3e",
+  "de": [
+    "Was bedeutet eine Temperatur von minus 10 Grad Celsius?",
+    "Sie liegt 10 Grad unter null",
+    "Sie liegt 10 Grad über null",
+    "Sie liegt genau beim Siedepunkt von Wasser",
+    "Sie ist die tiefstmögliche Temperatur",
+    "Stelle dir eine Thermometerskala vor.",
+    "Welche Richtung zeigt ein Minuszeichen an?"
+  ],
+  "en": [
+    "What does a temperature of minus 10 degrees Celsius mean?",
+    "It is 10 degrees below zero",
+    "It is 10 degrees above zero",
+    "It is exactly water's boiling point",
+    "It is the lowest possible temperature",
+    "Picture a thermometer scale.",
+    "Which direction does a minus sign indicate?"
+  ],
+  "fr": [
+    "Que signifie une température de moins 10 degrés Celsius ?",
+    "Elle est 10 degrés au-dessous de zéro",
+    "Elle est 10 degrés au-dessus de zéro",
+    "Elle correspond exactement à l'ébullition de l'eau",
+    "C'est la température la plus basse possible",
+    "Imagine la graduation d'un thermomètre.",
+    "Quel sens indique le signe moins ?"
+  ],
+  "it": [
+    "Che cosa significa una temperatura di meno 10 gradi Celsius?",
+    "È 10 gradi sotto zero",
+    "È 10 gradi sopra zero",
+    "È esattamente il punto di ebollizione dell'acqua",
+    "È la temperatura più bassa possibile",
+    "Immagina la scala di un termometro.",
+    "Quale direzione indica il segno meno?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutet eine Temperatur von minus 10 Grad Celsius? Replaces exact-text recall of: Was ist absolute Nullpunkt?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az3g",
+  "de": [
+    "Was braucht Eis bei null Grad, um zu schmelzen?",
+    "Eine Zufuhr von Wärmeenergie",
+    "Einen Entzug von Wärmeenergie",
+    "Nur eine Veränderung der Form ohne Energiezufuhr",
+    "Eine Abkühlung unter seinen Gefrierpunkt",
+    "Denke an den Übergang zum flüssigen Zustand.",
+    "Was liefert eine warme Umgebung?"
+  ],
+  "en": [
+    "What does ice at zero degrees need in order to melt?",
+    "An input of heat energy",
+    "Removal of heat energy",
+    "Only a change of shape without energy input",
+    "Cooling below its freezing point",
+    "Think of the change to liquid.",
+    "What does a warm environment supply?"
+  ],
+  "fr": [
+    "De quoi la glace à zéro degré a-t-elle besoin pour fondre ?",
+    "D'un apport d'énergie thermique",
+    "Un retrait d'énergie thermique",
+    "Seulement un changement de forme sans apport d'énergie",
+    "Un refroidissement sous son point de congélation",
+    "Pense au passage à l'état liquide.",
+    "Que fournit un milieu chaud ?"
+  ],
+  "it": [
+    "Di che cosa ha bisogno il ghiaccio a zero gradi per fondere?",
+    "Di un apporto di energia termica",
+    "Una sottrazione di energia termica",
+    "Solo un cambiamento di forma senza apporto energetico",
+    "Un raffreddamento sotto il punto di congelamento",
+    "Pensa al passaggio allo stato liquido.",
+    "Che cosa fornisce un ambiente caldo?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was braucht Eis bei null Grad, um zu schmelzen? Replaces exact-text recall of: Was ist Schmelzenthalpie?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az3i",
+  "de": [
+    "Warum kann eine randvoll gefüllte Wasserflasche im Gefrierfach platzen?",
+    "Wasser dehnt sich beim Gefrieren aus",
+    "Wasser verliert beim Gefrieren sein gesamtes Volumen",
+    "Die Wassermoleküle werden zu Glas",
+    "Die Masse des Wassers verdoppelt sich",
+    "Denke an den Platz im geschlossenen Behälter.",
+    "Vergleiche das Volumen von Wasser und dem daraus entstehenden Eis."
+  ],
+  "en": [
+    "Why can a water bottle filled to the brim burst in a freezer?",
+    "Water expands when it freezes",
+    "Water loses all its volume when it freezes",
+    "Water molecules turn into glass",
+    "The water's mass doubles",
+    "Think about space in a closed container.",
+    "Compare the volumes of water and the ice it forms."
+  ],
+  "fr": [
+    "Pourquoi une bouteille d'eau remplie à ras bord peut-elle éclater au congélateur ?",
+    "L'eau se dilate en gelant",
+    "L'eau perd tout son volume en gelant",
+    "Les molécules d'eau deviennent du verre",
+    "La masse de l'eau double",
+    "Pense à la place dans un récipient fermé.",
+    "Compare le volume de l'eau et celui de la glace formée."
+  ],
+  "it": [
+    "Perché una bottiglia d'acqua piena fino all'orlo può scoppiare nel congelatore?",
+    "L'acqua si espande quando gela",
+    "L'acqua perde tutto il volume quando gela",
+    "Le molecole d'acqua diventano vetro",
+    "La massa dell'acqua raddoppia",
+    "Pensa allo spazio in un recipiente chiuso.",
+    "Confronta il volume dell'acqua e quello del ghiaccio formato."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum kann eine randvoll gefüllte Wasserflasche im Gefrierfach platzen? Replaces exact-text recall of: Was ist Wasserstoffbrückenbindung?"
+},
+{
+  "key": "6/science/aggregatzustaende/g6az3k",
+  "de": [
+    "Warum kann Streusalz bei leichtem Frost gegen Eis helfen?",
+    "Salzwasser gefriert bei einer tieferen Temperatur als reines Wasser",
+    "Salz erhöht den Gefrierpunkt des Wassers",
+    "Salz verhindert grundsätzlich jede Bildung einer Flüssigkeit",
+    "Salz wirkt bei jeder Temperatur gleich gut",
+    "Vergleiche reines Wasser mit einer Salzlösung.",
+    "Die Wirkung ist bei sehr tiefen Temperaturen begrenzt."
+  ],
+  "en": [
+    "Why can road salt help against ice in mild frost?",
+    "Salt water freezes at a lower temperature than pure water",
+    "Salt raises water's freezing point",
+    "Salt always prevents any liquid forming",
+    "Salt works equally well at every temperature",
+    "Compare pure water and a salt solution.",
+    "The effect is limited at very low temperatures."
+  ],
+  "fr": [
+    "Pourquoi le sel de déneigement peut-il agir contre la glace lors d'un gel léger ?",
+    "L'eau salée gèle à une température plus basse que l'eau pure",
+    "Le sel élève le point de congélation",
+    "Le sel empêche toujours toute formation de liquide",
+    "Le sel agit aussi bien à toute température",
+    "Compare l'eau pure et une solution salée.",
+    "L'effet est limité aux températures très basses."
+  ],
+  "it": [
+    "Perché il sale stradale può aiutare contro il ghiaccio con un gelo leggero?",
+    "L'acqua salata gela a una temperatura più bassa dell'acqua pura",
+    "Il sale alza il punto di congelamento",
+    "Il sale impedisce sempre ogni formazione di liquido",
+    "Il sale agisce ugualmente bene a ogni temperatura",
+    "Confronta acqua pura e soluzione salina.",
+    "L'effetto è limitato a temperature molto basse."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum kann Streusalz bei leichtem Frost gegen Eis helfen? Replaces exact-text recall of: Was ist kolligative Eigenschaft?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_4",
+  "de": [
+    "Warum erscheint ein Strohhalm an der Wasseroberfläche oft geknickt?",
+    "Licht ändert beim Übergang zwischen Wasser und Luft seine Richtung",
+    "Der Strohhalm muss an der Wasseroberfläche tatsächlich gebogen sein",
+    "Licht geht durch Wasser und Luft immer ohne Richtungsänderung",
+    "Es handelt sich nur um den Schatten des Strohhalms",
+    "Denke an den Weg des Lichts zum Auge.",
+    "Es durchquert zwei verschiedene Stoffe."
+  ],
+  "en": [
+    "Why does a straw often look bent at the water surface?",
+    "Light changes direction between water and air",
+    "The straw must actually be bent at the water surface",
+    "Light always crosses water and air without changing direction",
+    "It is only the straw's shadow",
+    "Think of light's path to your eye.",
+    "It passes through two different materials."
+  ],
+  "fr": [
+    "Pourquoi une paille semble-t-elle souvent pliée à la surface de l'eau ?",
+    "La lumière change de direction entre l'eau et l'air",
+    "La paille doit être réellement pliée à la surface",
+    "La lumière traverse toujours eau et air sans déviation",
+    "Il s'agit seulement de l'ombre de la paille",
+    "Pense au trajet de la lumière vers l'œil.",
+    "Elle traverse deux milieux différents."
+  ],
+  "it": [
+    "Perché una cannuccia sembra spesso piegata alla superficie dell'acqua?",
+    "La luce cambia direzione tra acqua e aria",
+    "La cannuccia deve essere davvero piegata alla superficie",
+    "La luce attraversa sempre acqua e aria senza deviazione",
+    "È soltanto l'ombra della cannuccia",
+    "Pensa al percorso della luce verso l'occhio.",
+    "Attraversa due materiali diversi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum erscheint ein Strohhalm an der Wasseroberfläche oft geknickt? Replaces exact-text recall of: Was ist Brechung (Refraktion)?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_6",
+  "de": [
+    "Wodurch entsteht ein Regenbogen?",
+    "Sonnenlicht wird in Wassertropfen gebrochen und innen reflektiert",
+    "Die Tropfen erzeugen Farben ohne einfallendes Licht",
+    "Die Farben stammen ausschliesslich aus farbigen Stoffen im Regenwasser",
+    "Das Sonnenlicht wird nur dunkler, ohne Aufspaltung in Farbanteile",
+    "Denke an die Verbindung von Licht und Regen.",
+    "Was geschieht mit dem Licht auf seinem Weg durch einen Tropfen?"
+  ],
+  "en": [
+    "What produces a rainbow?",
+    "Sunlight is refracted and internally reflected in water droplets",
+    "Droplets generate colours without incoming light",
+    "Colours come only from coloured substances in rainwater",
+    "Sunlight only gets dimmer without separating into colours",
+    "Think of light together with rain.",
+    "What happens to light as it travels through a droplet?"
+  ],
+  "fr": [
+    "Qu'est-ce qui produit un arc-en-ciel ?",
+    "La lumière du Soleil est réfractée et réfléchie à l'intérieur des gouttes",
+    "Les gouttes produisent des couleurs sans lumière incidente",
+    "Les couleurs viennent seulement de substances colorées dans la pluie",
+    "La lumière s'assombrit sans se séparer en couleurs",
+    "Pense à la lumière associée à la pluie.",
+    "Que devient la lumière en traversant une goutte ?"
+  ],
+  "it": [
+    "Che cosa produce un arcobaleno?",
+    "La luce solare viene rifratta e riflessa all'interno delle gocce",
+    "Le gocce producono colori senza luce incidente",
+    "I colori provengono solo da sostanze colorate nella pioggia",
+    "La luce si attenua senza separarsi in colori",
+    "Pensa alla luce insieme alla pioggia.",
+    "Che cosa accade alla luce mentre attraversa una goccia?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Wodurch entsteht ein Regenbogen? Replaces exact-text recall of: Wie entsteht ein Regenbogen?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_8",
+  "de": [
+    "Was macht eine Zerstreuungslinse mit parallel einfallenden Lichtstrahlen?",
+    "Sie lenkt sie auseinander",
+    "Sie bündelt sie in einem Punkt hinter der Linse",
+    "Sie hält alle Strahlen vollständig auf",
+    "Sie reflektiert alle Strahlen wie ein Spiegel",
+    "Achte auf den Namen der Linse.",
+    "Vergleiche Bündeln und Auseinanderlaufen."
+  ],
+  "en": [
+    "What does a diverging lens do to parallel incoming light rays?",
+    "It spreads them apart",
+    "It focuses them at a point behind the lens",
+    "It blocks all rays completely",
+    "It reflects all rays like a mirror",
+    "Think about the lens's name.",
+    "Compare focusing and spreading."
+  ],
+  "fr": [
+    "Que fait une lentille divergente à des rayons lumineux parallèles ?",
+    "Elle les écarte",
+    "Elle les concentre en un point derrière la lentille",
+    "Elle les bloque tous complètement",
+    "Elle les réfléchit tous comme un miroir",
+    "Observe le nom de la lentille.",
+    "Compare concentration et écartement."
+  ],
+  "it": [
+    "Che cosa fa una lente divergente ai raggi luminosi paralleli?",
+    "Li allontana tra loro",
+    "Li concentra in un punto dietro la lente",
+    "Li blocca tutti completamente",
+    "Li riflette tutti come uno specchio",
+    "Osserva il nome della lente.",
+    "Confronta concentrazione e allontanamento."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was macht eine Zerstreuungslinse mit parallel einfallenden Lichtstrahlen? Replaces exact-text recall of: Was macht eine Zerstreuungslinse?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_10",
+  "de": [
+    "Warum erscheint der klare Tageshimmel meist blau?",
+    "Die Luft streut blaues Sonnenlicht stärker als rotes",
+    "Die Luft spiegelt vor allem die Farbe aller Meere",
+    "Die Sonne sendet tagsüber nur blaues Licht aus",
+    "Blaue Wolken bedecken immer den Himmel",
+    "Denke an Sonnenlicht auf seinem Weg durch die Atmosphäre.",
+    "Nicht alle Farben werden gleich stark abgelenkt."
+  ],
+  "en": [
+    "Why does a clear daytime sky usually look blue?",
+    "Air scatters blue sunlight more strongly than red",
+    "Air mainly reflects the colour of all oceans",
+    "The Sun emits only blue light during the day",
+    "Blue clouds always cover the sky",
+    "Think of sunlight passing through the atmosphere.",
+    "Not all colours are scattered equally."
+  ],
+  "fr": [
+    "Pourquoi le ciel dégagé paraît-il généralement bleu le jour ?",
+    "L'air diffuse davantage la lumière solaire bleue que la rouge",
+    "L'air reflète surtout la couleur de tous les océans",
+    "Le Soleil n'émet que du bleu pendant la journée",
+    "Des nuages bleus couvrent toujours le ciel",
+    "Pense au trajet de la lumière dans l'atmosphère.",
+    "Toutes les couleurs ne sont pas diffusées autant."
+  ],
+  "it": [
+    "Perché il cielo sereno di giorno appare solitamente blu?",
+    "L'aria diffonde la luce solare blu più di quella rossa",
+    "L'aria riflette soprattutto il colore di tutti gli oceani",
+    "Il Sole emette soltanto luce blu di giorno",
+    "Nuvole blu coprono sempre il cielo",
+    "Pensa alla luce che attraversa l'atmosfera.",
+    "Non tutti i colori vengono diffusi allo stesso modo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum erscheint der klare Tageshimmel meist blau? Replaces exact-text recall of: Warum erscheint der Himmel blau?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_12",
+  "de": [
+    "Welche Farbe liegt im üblichen Regenbogen aussen?",
+    "Rot",
+    "Violett",
+    "Grün",
+    "Blau",
+    "Erinnere dich an die Reihenfolge der Regenbogenfarben.",
+    "Gesucht ist der äussere Rand des Hauptregenbogens."
+  ],
+  "en": [
+    "Which colour is on the outside of a usual rainbow?",
+    "Red",
+    "Violet",
+    "Green",
+    "Blue",
+    "Recall the order of rainbow colours.",
+    "Look for the outer edge of the primary rainbow."
+  ],
+  "fr": [
+    "Quelle couleur se trouve à l'extérieur d'un arc-en-ciel habituel ?",
+    "Le rouge",
+    "Le violet",
+    "Le vert",
+    "Le bleu",
+    "Rappelle-toi l'ordre des couleurs.",
+    "Cherche le bord extérieur de l'arc principal."
+  ],
+  "it": [
+    "Quale colore si trova all'esterno di un arcobaleno abituale?",
+    "Rosso",
+    "Viola",
+    "Verde",
+    "Blu",
+    "Ricorda l'ordine dei colori.",
+    "Cerca il bordo esterno dell'arcobaleno principale."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Farbe liegt im üblichen Regenbogen aussen? Replaces exact-text recall of: Was sind die 7 Farben des Regenbogens?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_18",
+  "de": [
+    "Was kann ein Glasprisma mit weissem Sonnenlicht machen?",
+    "Es in verschiedene Farben aufspalten",
+    "Es lässt nur einen weissen Lichtfleck ohne jede Farbtrennung entstehen",
+    "Es erzeugt die Farben erst aus Farbstoffen im Glas",
+    "Es reflektiert das gesamte Licht zurück wie ein undurchsichtiger Spiegel",
+    "Weisses Licht enthält mehrere Farbanteile.",
+    "Diese werden beim Durchgang unterschiedlich abgelenkt."
+  ],
+  "en": [
+    "What can a glass prism do to white sunlight?",
+    "Split it into different colours",
+    "It produces only a white spot without any colour separation",
+    "It creates the colours from pigments in the glass",
+    "It reflects all light back like an opaque mirror",
+    "White light contains several colour components.",
+    "They are deflected differently as they pass through."
+  ],
+  "fr": [
+    "Que peut faire un prisme en verre à la lumière blanche du Soleil ?",
+    "La séparer en différentes couleurs",
+    "Il produit seulement une tache blanche sans séparation des couleurs",
+    "Il crée les couleurs à partir de pigments du verre",
+    "Il réfléchit toute la lumière comme un miroir opaque",
+    "La lumière blanche contient plusieurs composantes colorées.",
+    "Elles sont déviées différemment en traversant le prisme."
+  ],
+  "it": [
+    "Che cosa può fare un prisma di vetro alla luce solare bianca?",
+    "Separarla in diversi colori",
+    "Produce solo una macchia bianca senza separare i colori",
+    "Crea i colori da pigmenti nel vetro",
+    "Riflette tutta la luce come uno specchio opaco",
+    "La luce bianca contiene più componenti colorate.",
+    "Queste vengono deviate in modo diverso durante il passaggio."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kann ein Glasprisma mit weissem Sonnenlicht machen? Replaces exact-text recall of: Was ist Dispersion in der Optik?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_20",
+  "de": [
+    "Welches typische Sehproblem bezeichnet Kurzsichtigkeit?",
+    "Ferne Dinge erscheinen unscharf, nahe oft schärfer",
+    "Nur bestimmte Farben lassen sich nicht unterscheiden",
+    "Die Nähe ist unscharf, während die Ferne immer scharf bleibt",
+    "Ein Teil des Gesichtsfelds fehlt unabhängig von der Entfernung",
+    "Es geht um das Sehen in unterschiedlichen Entfernungen.",
+    "Was sagt der Name über die Nähe aus?"
+  ],
+  "en": [
+    "Which typical vision problem is called short-sightedness?",
+    "Distant objects look blurred, nearby ones often clearer",
+    "Only certain colours cannot be distinguished",
+    "Near vision is blurred while distance always stays clear",
+    "Part of the visual field is missing regardless of distance",
+    "Think about vision at different distances.",
+    "What does the condition's name suggest about near vision?"
+  ],
+  "fr": [
+    "Quel trouble visuel typique appelle-t-on myopie ?",
+    "Les objets lointains sont flous, les proches souvent plus nets",
+    "Seules certaines couleurs ne se distinguent pas",
+    "La vision proche est floue alors que la vision lointaine reste toujours nette",
+    "Une partie du champ visuel manque quelle que soit la distance",
+    "Il s'agit de la vision à différentes distances.",
+    "Compare la vision de près et de loin."
+  ],
+  "it": [
+    "Quale tipico problema visivo si chiama miopia?",
+    "Gli oggetti lontani sono sfocati, quelli vicini spesso più nitidi",
+    "Non si distinguono soltanto certi colori",
+    "La vista da vicino è sfocata mentre da lontano resta sempre nitida",
+    "Manca una parte del campo visivo indipendentemente dalla distanza",
+    "Pensa alla vista a distanze diverse.",
+    "Confronta la visione da vicino e da lontano."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches typische Sehproblem bezeichnet Kurzsichtigkeit? Replaces exact-text recall of: Was ist Kurzsichtigkeit (Myopie)?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_22",
+  "de": [
+    "Warum entsteht hinter einem undurchsichtigen Gegenstand ein Schatten?",
+    "Der Gegenstand hält einen Teil des Lichts auf",
+    "Der Gegenstand erzeugt dort schwarze Strahlen",
+    "Licht fliesst immer vollständig um Gegenstände herum",
+    "Die Lichtquelle wird dort automatisch kälter",
+    "Verfolge den Weg von der Lampe zur Wand.",
+    "Wo erreicht weniger Licht die Wand?"
+  ],
+  "en": [
+    "Why does a shadow form behind an opaque object?",
+    "The object blocks some of the light",
+    "The object produces black rays there",
+    "Light always flows completely around objects",
+    "The light source automatically becomes colder there",
+    "Trace the path from the lamp to the wall.",
+    "Where does less light reach the wall?"
+  ],
+  "fr": [
+    "Pourquoi une ombre se forme-t-elle derrière un objet opaque ?",
+    "L'objet bloque une partie de la lumière",
+    "L'objet produit des rayons noirs",
+    "La lumière contourne toujours entièrement les objets",
+    "La source lumineuse y devient automatiquement plus froide",
+    "Suis le trajet de la lampe au mur.",
+    "Où moins de lumière atteint-elle le mur ?"
+  ],
+  "it": [
+    "Perché si forma un'ombra dietro un oggetto opaco?",
+    "L'oggetto blocca parte della luce",
+    "L'oggetto produce raggi neri",
+    "La luce aggira sempre completamente gli oggetti",
+    "La sorgente luminosa diventa automaticamente più fredda",
+    "Segui il percorso dalla lampada al muro.",
+    "Dove arriva meno luce sul muro?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum entsteht hinter einem undurchsichtigen Gegenstand ein Schatten? Replaces exact-text recall of: Was ist Interferenz bei Licht?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_24",
+  "de": [
+    "Warum nutzt man nach aussen gewölbte Spiegel an unübersichtlichen Ausfahrten?",
+    "Sie zeigen einen grösseren Bereich",
+    "Sie vergrössern jeden Gegenstand ohne Verzerrung",
+    "Sie lassen Hindernisse durchsichtig werden",
+    "Sie ersetzen nachts jede Beleuchtung",
+    "Denke an den Überblick beim Ausfahren.",
+    "Vergleiche das Sichtfeld mit einem ebenen Spiegel."
+  ],
+  "en": [
+    "Why are outward-curved mirrors used at exits with poor visibility?",
+    "They show a wider area",
+    "They enlarge every object without distortion",
+    "They make obstacles transparent",
+    "They replace all lighting at night",
+    "Think of seeing traffic before leaving.",
+    "Compare their field of view with a flat mirror."
+  ],
+  "fr": [
+    "Pourquoi utilise-t-on des miroirs bombés aux sorties peu visibles ?",
+    "Ils montrent une zone plus large",
+    "Ils agrandissent chaque objet sans déformation",
+    "Ils rendent les obstacles transparents",
+    "Ils remplacent tout éclairage nocturne",
+    "Pense à la visibilité avant de sortir.",
+    "Compare le champ de vision avec un miroir plat."
+  ],
+  "it": [
+    "Perché si usano specchi convessi nelle uscite con scarsa visibilità?",
+    "Mostrano una zona più ampia",
+    "Ingrandiscono ogni oggetto senza deformazioni",
+    "Rendono trasparenti gli ostacoli",
+    "Sostituiscono ogni illuminazione notturna",
+    "Pensa alla visuale prima di uscire.",
+    "Confronta il campo visivo con uno specchio piano."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum nutzt man nach aussen gewölbte Spiegel an unübersichtlichen Ausfahrten? Replaces exact-text recall of: Was ist ein konvexer Spiegel?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_26",
+  "de": [
+    "Welche drei Lichtfarben nutzt ein üblicher Farbbildschirm zur Mischung?",
+    "Rot, Grün, Blau",
+    "Rot, Gelb, Blau",
+    "Cyan, Magenta, Gelb",
+    "Schwarz, Grau, Weiss",
+    "Unterscheide leuchtende Bildpunkte von Druckfarbe.",
+    "Denke an die Abkürzung RGB."
+  ],
+  "en": [
+    "Which three light colours does a typical colour screen mix?",
+    "Red, green, blue",
+    "Red, yellow, blue",
+    "Cyan, magenta, yellow",
+    "Black, grey, white",
+    "Distinguish glowing pixels from printing ink.",
+    "Think of the abbreviation RGB."
+  ],
+  "fr": [
+    "Quelles trois couleurs lumineuses un écran couleur courant mélange-t-il ?",
+    "Rouge, vert, bleu",
+    "Rouge, jaune, bleu",
+    "Cyan, magenta, jaune",
+    "Noir, gris, blanc",
+    "Distingue les pixels lumineux des encres.",
+    "Pense à l'abréviation RVB."
+  ],
+  "it": [
+    "Quali tre colori di luce mescola uno schermo a colori comune?",
+    "Rosso, verde, blu",
+    "Rosso, giallo, blu",
+    "Ciano, magenta, giallo",
+    "Nero, grigio, bianco",
+    "Distingui i pixel luminosi dagli inchiostri.",
+    "Pensa alla sigla RGB."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche drei Lichtfarben nutzt ein üblicher Farbbildschirm zur Mischung? Replaces exact-text recall of: Was sind Grundfarben des Lichts (additiv)?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_28",
+  "de": [
+    "Welche drei bunten Grundfarben werden beim üblichen Farbdruck neben Schwarz verwendet?",
+    "Cyan, Magenta, Gelb",
+    "Rot, Grün, Blau",
+    "Orange, Grün, Violett",
+    "Weiss, Grau, Silber",
+    "Hier geht es um Farbe auf Papier, nicht um leuchtende Bildpunkte.",
+    "Erinnere dich an die Farbpatronen eines Druckers."
+  ],
+  "en": [
+    "Which three coloured inks are used alongside black in standard colour printing?",
+    "Cyan, magenta, yellow",
+    "Red, green, blue",
+    "Orange, green, violet",
+    "White, grey, silver",
+    "Think of colour on paper, not glowing pixels.",
+    "Recall a printer's colour cartridges."
+  ],
+  "fr": [
+    "Quelles trois encres colorées utilise-t-on avec le noir en impression couleur courante ?",
+    "Cyan, magenta, jaune",
+    "Rouge, vert, bleu",
+    "Orange, vert, violet",
+    "Blanc, gris, argent",
+    "Il s'agit de couleur sur papier, pas de pixels lumineux.",
+    "Pense aux cartouches d'une imprimante."
+  ],
+  "it": [
+    "Quali tre inchiostri colorati si usano insieme al nero nella stampa a colori comune?",
+    "Ciano, magenta, giallo",
+    "Rosso, verde, blu",
+    "Arancione, verde, viola",
+    "Bianco, grigio, argento",
+    "Pensa ai colori sulla carta, non ai pixel luminosi.",
+    "Ricorda le cartucce di una stampante."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche drei bunten Grundfarben werden beim üblichen Farbdruck neben Schwarz verwendet? Replaces exact-text recall of: Was sind die Grundfarben beim Drucken (subtraktiv)?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_30",
+  "de": [
+    "Zwei gleich lange Linien wirken verschieden lang. Wie prüfst du die optische Täuschung?",
+    "Ich messe beide Linien mit einem Lineal",
+    "Ich entscheide nur nach dem ersten Eindruck",
+    "Ich frage nur, welche Linie schöner ist",
+    "Ich ändere die Länge einer Linie vor dem Vergleich",
+    "Unterscheide Wahrnehmung und Messung.",
+    "Welche Methode prüft die tatsächliche Länge?"
+  ],
+  "en": [
+    "Two equally long lines look different in length. How can you check the illusion?",
+    "Measure both lines with a ruler",
+    "Rely only on the first impression",
+    "Ask only which line looks nicer",
+    "Change one line before comparing",
+    "Distinguish perception from measurement.",
+    "Which method checks actual length?"
+  ],
+  "fr": [
+    "Deux lignes de même longueur semblent différentes. Comment vérifier cette illusion ?",
+    "Mesurer les deux lignes avec une règle",
+    "Se fier uniquement à la première impression",
+    "Demander seulement quelle ligne est la plus jolie",
+    "Modifier une ligne avant de comparer",
+    "Distingue perception et mesure.",
+    "Quelle méthode vérifie la longueur réelle ?"
+  ],
+  "it": [
+    "Due linee ugualmente lunghe sembrano diverse. Come verifichi l'illusione?",
+    "Misuro entrambe con un righello",
+    "Mi affido solo alla prima impressione",
+    "Chiedo soltanto quale linea è più bella",
+    "Modifico una linea prima del confronto",
+    "Distingui percezione e misurazione.",
+    "Quale metodo verifica la lunghezza reale?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Zwei gleich lange Linien wirken verschieden lang. Wie prüfst du die optische Täuschung? Replaces exact-text recall of: Was ist optische Täuschung?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_38",
+  "de": [
+    "Wozu kann eine Lupe beim Betrachten eines kleinen Insekts dienen?",
+    "Kleine Einzelheiten grösser erscheinen zu lassen",
+    "Das Insekt selbst körperlich vergrössern",
+    "Sein Bild bei jeder Entfernung unverändert lassen",
+    "Die Lupe ohne einfallendes Licht als eigene Beleuchtung nutzen",
+    "Denke an die Wirkung einer Linse.",
+    "Unterscheide das Bild vom Gegenstand selbst."
+  ],
+  "en": [
+    "What can a magnifying glass do when viewing a small insect?",
+    "Make small details appear larger",
+    "Physically enlarge the insect itself",
+    "Keep its image unchanged at every distance",
+    "Use the magnifier as its own light source without incoming light",
+    "Think of a lens's effect.",
+    "Distinguish the image from the object itself."
+  ],
+  "fr": [
+    "À quoi peut servir une loupe pour observer un petit insecte ?",
+    "Faire paraître les petits détails plus grands",
+    "Agrandir physiquement l'insecte lui-même",
+    "Garder son image identique à toute distance",
+    "Utiliser la loupe comme source lumineuse sans lumière incidente",
+    "Pense à l'effet d'une lentille.",
+    "Distingue l'image de l'objet lui-même."
+  ],
+  "it": [
+    "A cosa può servire una lente d'ingrandimento per osservare un piccolo insetto?",
+    "Far apparire più grandi i piccoli dettagli",
+    "Ingrandire fisicamente l'insetto stesso",
+    "Mantenere la sua immagine identica a ogni distanza",
+    "Usare la lente come sorgente senza luce incidente",
+    "Pensa all'effetto di una lente.",
+    "Distingui l'immagine dall'oggetto stesso."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu kann eine Lupe beim Betrachten eines kleinen Insekts dienen? Replaces exact-text recall of: Was ist ein Hologramm?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_40",
+  "de": [
+    "Warum sehen wir den Mond am Nachthimmel?",
+    "Er reflektiert Sonnenlicht",
+    "Er erzeugt sein Licht wie die Sonne",
+    "Er speichert tagsüber Licht und gibt es nachts vollständig ab",
+    "Er ist nur durch die Beleuchtung von der Erde sichtbar",
+    "Unterscheide Lichtquelle und beleuchteten Körper.",
+    "Welche Lichtquelle erreicht auch den Mond?"
+  ],
+  "en": [
+    "Why can we see the Moon in the night sky?",
+    "It reflects sunlight",
+    "It produces light like the Sun",
+    "It stores light by day and releases it all at night",
+    "It is visible only because of illumination from Earth",
+    "Distinguish a light source from an illuminated object.",
+    "Which light source also reaches the Moon?"
+  ],
+  "fr": [
+    "Pourquoi voyons-nous la Lune dans le ciel nocturne ?",
+    "Elle réfléchit la lumière du Soleil",
+    "Elle produit sa lumière comme le Soleil",
+    "Elle stocke la lumière le jour et la restitue entièrement la nuit",
+    "Elle n'est visible que grâce à l'éclairage venant de la Terre",
+    "Distingue source lumineuse et objet éclairé.",
+    "Quelle source éclaire aussi la Lune ?"
+  ],
+  "it": [
+    "Perché vediamo la Luna nel cielo notturno?",
+    "Riflette la luce solare",
+    "Produce luce come il Sole",
+    "Immagazzina luce di giorno e la rilascia tutta di notte",
+    "È visibile solo grazie all'illuminazione dalla Terra",
+    "Distingui una sorgente luminosa da un corpo illuminato.",
+    "Quale sorgente illumina anche la Luna?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum sehen wir den Mond am Nachthimmel? Replaces exact-text recall of: Was ist Dopplereffekt bei Licht?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_44",
+  "de": [
+    "Welche Aussage vergleicht Licht und Schall richtig?",
+    "Licht breitet sich in Luft viel schneller aus als Schall",
+    "Schall ist in Luft viel schneller als Licht",
+    "Licht und Schall sind in Luft gleich schnell",
+    "Licht kann sich nur in Wasser ausbreiten",
+    "Denke an Blitz und Donner.",
+    "Welches Signal erreicht dich bei einem fernen Gewitter zuerst?"
+  ],
+  "en": [
+    "Which statement correctly compares light and sound?",
+    "Light travels much faster than sound in air",
+    "Sound travels much faster than light in air",
+    "Light and sound travel equally fast in air",
+    "Light can travel only through water",
+    "Think of lightning and thunder.",
+    "Which signal reaches you first from a distant storm?"
+  ],
+  "fr": [
+    "Quelle phrase compare correctement lumière et son ?",
+    "La lumière se propage bien plus vite que le son dans l'air",
+    "Le son se propage bien plus vite que la lumière dans l'air",
+    "La lumière et le son ont la même vitesse dans l'air",
+    "La lumière ne se propage que dans l'eau",
+    "Pense à l'éclair et au tonnerre.",
+    "Quel signal arrive d'abord d'un orage lointain ?"
+  ],
+  "it": [
+    "Quale frase confronta correttamente luce e suono?",
+    "La luce viaggia nell'aria molto più velocemente del suono",
+    "Il suono viaggia nell'aria molto più velocemente della luce",
+    "Luce e suono hanno la stessa velocità nell'aria",
+    "La luce può viaggiare soltanto nell'acqua",
+    "Pensa a fulmini e tuoni.",
+    "Quale segnale arriva prima da un temporale lontano?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aussage vergleicht Licht und Schall richtig? Replaces exact-text recall of: Welche Formel verbindet die Energie E eines Photons mit seiner Frequenz f? Schreibe nur die Formel."
+},
+{
+  "key": "6/science/physik-licht-6/lo6_46",
+  "de": [
+    "Welcher Gegenstand ist selbst eine Lichtquelle?",
+    "Eine eingeschaltete LED",
+    "Ein weisses Blatt Papier",
+    "Ein gewöhnlicher Spiegel",
+    "Ein roter Reflektor ohne Lampe",
+    "Manche Gegenstände erzeugen Licht, andere werfen es zurück.",
+    "Welcher Gegenstand braucht keine andere Lichtquelle, um sichtbar zu leuchten?"
+  ],
+  "en": [
+    "Which object is itself a light source?",
+    "An LED that is switched on",
+    "A white sheet of paper",
+    "An ordinary mirror",
+    "A red reflector without a lamp",
+    "Some objects produce light; others reflect it.",
+    "Which does not need another light source to glow visibly?"
+  ],
+  "fr": [
+    "Quel objet est lui-même une source lumineuse ?",
+    "Une LED allumée",
+    "Une feuille de papier blanc",
+    "Un miroir ordinaire",
+    "Un réflecteur rouge sans lampe",
+    "Certains objets produisent de la lumière, d'autres la réfléchissent.",
+    "Lequel peut briller sans autre source lumineuse ?"
+  ],
+  "it": [
+    "Quale oggetto è esso stesso una sorgente luminosa?",
+    "Un LED acceso",
+    "Un foglio di carta bianco",
+    "Uno specchio comune",
+    "Un riflettore rosso senza lampada",
+    "Alcuni oggetti producono luce, altri la riflettono.",
+    "Quale può brillare senza un'altra sorgente luminosa?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welcher Gegenstand ist selbst eine Lichtquelle? Replaces exact-text recall of: Was ist spontane Emission?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_48",
+  "de": [
+    "Wie verläuft ein Lichtstrahl nach der Reflexion an einem ebenen Spiegel?",
+    "Einfallender und reflektierter Strahl bilden gleiche Winkel zum Lot",
+    "Der Strahl folgt immer der Spiegeloberfläche",
+    "Der Strahl geht immer unverändert durch den Spiegel",
+    "Der Strahl verlässt den Spiegel immer senkrecht",
+    "Das Lot steht senkrecht auf der Spiegelfläche.",
+    "Vergleiche die Winkel auf beiden Seiten dieser Hilfslinie."
+  ],
+  "en": [
+    "How does a ray behave after reflection at a flat mirror?",
+    "Incoming and reflected rays make equal angles with the normal",
+    "The ray always follows the mirror surface",
+    "The ray always passes through unchanged",
+    "The ray always leaves perpendicular to the mirror",
+    "The normal is perpendicular to the mirror.",
+    "Compare angles on either side of this reference line."
+  ],
+  "fr": [
+    "Comment un rayon est-il réfléchi par un miroir plat ?",
+    "Les rayons incident et réfléchi font des angles égaux avec la normale",
+    "Le rayon suit toujours la surface du miroir",
+    "Le rayon traverse toujours le miroir sans changer",
+    "Le rayon repart toujours perpendiculairement au miroir",
+    "La normale est perpendiculaire au miroir.",
+    "Compare les angles de chaque côté de cette ligne."
+  ],
+  "it": [
+    "Come viene riflesso un raggio da uno specchio piano?",
+    "Il raggio incidente e quello riflesso formano angoli uguali con la normale",
+    "Il raggio segue sempre la superficie dello specchio",
+    "Il raggio attraversa sempre lo specchio senza cambiare",
+    "Il raggio riparte sempre perpendicolarmente allo specchio",
+    "La normale è perpendicolare allo specchio.",
+    "Confronta gli angoli sui due lati di questa linea."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wie verläuft ein Lichtstrahl nach der Reflexion an einem ebenen Spiegel? Replaces exact-text recall of: Was ist Brewster-Winkel?"
+},
+{
+  "key": "6/science/physik-licht-6/lo6_50",
+  "de": [
+    "Warum leuchtet ein fluoreszierender Stoff unter passendem Licht besonders auffällig?",
+    "Er nimmt Strahlung auf und gibt rasch Licht ab",
+    "Er gibt ohne jede Anregung unbegrenzt Licht ab",
+    "Er kann nur leuchten, indem er wie glühendes Metall stark erhitzt wird",
+    "Er wirft einfallendes Licht nur unverändert zurück",
+    "Denke an Aufnahme und Abgabe von Energie.",
+    "Die Anregung durch Licht ist dabei wichtig."
+  ],
+  "en": [
+    "Why does a fluorescent material glow brightly under suitable light?",
+    "It absorbs radiation and quickly emits light",
+    "It emits unlimited light without any excitation",
+    "It can glow only by being heated like red-hot metal",
+    "It only reflects incoming light unchanged",
+    "Think of energy being absorbed and released.",
+    "Excitation by light matters here."
+  ],
+  "fr": [
+    "Pourquoi un matériau fluorescent brille-t-il sous un éclairage adapté ?",
+    "Il absorbe un rayonnement puis émet rapidement de la lumière",
+    "Il émet une lumière illimitée sans excitation",
+    "Il ne peut briller qu'en étant chauffé comme un métal incandescent",
+    "Il renvoie seulement la lumière sans la modifier",
+    "Pense à l'absorption et à l'émission d'énergie.",
+    "L'excitation par la lumière est importante."
+  ],
+  "it": [
+    "Perché un materiale fluorescente brilla sotto una luce adatta?",
+    "Assorbe radiazione ed emette rapidamente luce",
+    "Emette luce illimitata senza stimolazione",
+    "Può brillare solo riscaldandosi come metallo incandescente",
+    "Rimanda soltanto la luce senza modificarla",
+    "Pensa all'assorbimento e all'emissione di energia.",
+    "Conta la stimolazione da parte della luce."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum leuchtet ein fluoreszierender Stoff unter passendem Licht besonders auffällig? Replaces exact-text recall of: Was ist Fluoreszenz?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_8",
+  "de": [
+    "Was beschreibt ein Klima-Fussabdruck?",
+    "Die zugeordneten Treibhausgasemissionen",
+    "Die Schuhgrösse einer Person",
+    "Nur das Gewicht ihres Abfalls",
+    "Nur ihre monatlichen Stromkosten",
+    "Denke an die Wirkung verschiedener Tätigkeiten auf das Klima.",
+    "Nicht jede Umweltbelastung ist dieselbe Messgrösse."
+  ],
+  "en": [
+    "What does a carbon footprint describe?",
+    "The associated greenhouse gas emissions",
+    "A person's shoe size",
+    "Only the weight of their rubbish",
+    "Only their monthly electricity bill",
+    "Think of the climate impact of different activities.",
+    "Not every environmental impact uses the same measure."
+  ],
+  "fr": [
+    "Que décrit une empreinte carbone ?",
+    "Les émissions de gaz à effet de serre associées",
+    "La pointure d'une personne",
+    "Uniquement le poids de ses déchets",
+    "Uniquement sa facture d'électricité mensuelle",
+    "Pense à l'effet des activités sur le climat.",
+    "Toutes les nuisances ne se mesurent pas de la même façon."
+  ],
+  "it": [
+    "Che cosa descrive un'impronta climatica?",
+    "Le emissioni di gas serra associate",
+    "Il numero di scarpe di una persona",
+    "Soltanto il peso dei suoi rifiuti",
+    "Soltanto la bolletta elettrica mensile",
+    "Pensa agli effetti delle attività sul clima.",
+    "Non tutti gli impatti ambientali si misurano allo stesso modo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was beschreibt ein Klima-Fussabdruck? Replaces exact-text recall of: Was ist CO₂-Fussabdruck?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_10",
+  "de": [
+    "Welche Energiequelle nutzt Geothermie?",
+    "Wärme aus dem Erdinneren",
+    "Bewegung von Meereswellen",
+    "Sonnenlicht auf Solarzellen",
+    "Wind über einer Bergkuppe",
+    "Zerlege den Begriff und denke an die Erde.",
+    "Gesucht ist die ursprüngliche Wärmequelle."
+  ],
+  "en": [
+    "Which energy source does geothermal energy use?",
+    "Heat from inside Earth",
+    "Movement of sea waves",
+    "Sunlight on solar cells",
+    "Wind over a hilltop",
+    "Think about the word and the Earth.",
+    "Identify the original heat source."
+  ],
+  "fr": [
+    "Quelle source utilise la géothermie ?",
+    "La chaleur de l'intérieur de la Terre",
+    "Le mouvement des vagues",
+    "La lumière sur des cellules solaires",
+    "Le vent au sommet d'une colline",
+    "Pense au mot et à la Terre.",
+    "Cherche l'origine de la chaleur."
+  ],
+  "it": [
+    "Quale fonte usa la geotermia?",
+    "Il calore dell'interno della Terra",
+    "Il movimento delle onde marine",
+    "La luce sulle celle solari",
+    "Il vento sulla cima di una collina",
+    "Pensa al termine e alla Terra.",
+    "Cerca la fonte originaria del calore."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Energiequelle nutzt Geothermie? Replaces exact-text recall of: Was ist Geothermie?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_12",
+  "de": [
+    "Welche Massnahme hilft einer Stadt, den Autoverkehr zu verringern?",
+    "Sichere Velowege und gute Busverbindungen",
+    "Weniger Fussgängerübergänge",
+    "Abschaffen aller Buslinien",
+    "Kostenlose Parkplätze statt jeder Velospur",
+    "Denke an alltagstaugliche Alternativen.",
+    "Was erleichtert Wege ohne eigenes Auto?"
+  ],
+  "en": [
+    "Which measure helps a city reduce car traffic?",
+    "Safe cycle routes and good bus services",
+    "Fewer pedestrian crossings",
+    "Removing all bus routes",
+    "Free parking instead of every cycle lane",
+    "Think of practical alternatives.",
+    "What makes travel without a private car easier?"
+  ],
+  "fr": [
+    "Quelle mesure aide une ville à réduire le trafic automobile ?",
+    "Des pistes cyclables sûres et de bons bus",
+    "Moins de passages piétons",
+    "La suppression de toutes les lignes de bus",
+    "Du stationnement gratuit à la place de chaque piste cyclable",
+    "Pense aux alternatives pratiques.",
+    "Qu'est-ce qui facilite les trajets sans voiture personnelle ?"
+  ],
+  "it": [
+    "Quale misura aiuta una città a ridurre il traffico automobilistico?",
+    "Piste ciclabili sicure e buoni collegamenti in autobus",
+    "Meno attraversamenti pedonali",
+    "Eliminare tutte le linee di autobus",
+    "Parcheggi gratuiti al posto di ogni pista ciclabile",
+    "Pensa alle alternative pratiche.",
+    "Che cosa facilita i tragitti senza auto privata?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Massnahme hilft einer Stadt, den Autoverkehr zu verringern? Replaces exact-text recall of: Welche Stadt gilt als Vorreiter für Nachhaltigkeit in der Schweiz?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_14",
+  "de": [
+    "Welches Beispiel ist Recycling?",
+    "Altglas einschmelzen und neue Glasflaschen herstellen",
+    "Eine Flasche erneut mit Wasser füllen",
+    "Eine Flasche im Schrank aufbewahren",
+    "Eine Flasche im Restmüll verbrennen",
+    "Unterscheide Wiedergebrauch und Verarbeitung des Materials.",
+    "Wann entsteht aus einem Abfallstoff ein neues Produkt?"
+  ],
+  "en": [
+    "Which example is recycling?",
+    "Melting waste glass to make new glass bottles",
+    "Refilling a bottle with water",
+    "Keeping a bottle in a cupboard",
+    "Burning a bottle with general waste",
+    "Distinguish reuse from processing the material.",
+    "When is a new product made from waste material?"
+  ],
+  "fr": [
+    "Quel exemple correspond au recyclage ?",
+    "Fondre du verre usagé pour fabriquer de nouvelles bouteilles",
+    "Remplir à nouveau une bouteille d'eau",
+    "Garder une bouteille dans une armoire",
+    "Brûler une bouteille avec les déchets ordinaires",
+    "Distingue réutilisation et transformation du matériau.",
+    "Quand fabrique-t-on un nouveau produit à partir d'un déchet ?"
+  ],
+  "it": [
+    "Quale esempio è riciclaggio?",
+    "Fondere vetro usato per produrre nuove bottiglie",
+    "Riempire nuovamente una bottiglia d'acqua",
+    "Conservare una bottiglia in un armadio",
+    "Bruciare una bottiglia con i rifiuti comuni",
+    "Distingui riuso e trasformazione del materiale.",
+    "Quando nasce un nuovo prodotto da un materiale di scarto?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Beispiel ist Recycling? Replaces exact-text recall of: Was ist Recycling?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_16",
+  "de": [
+    "Welche Energieumwandlung findet in einer Solarzelle statt?",
+    "Lichtenergie wird zu elektrischer Energie",
+    "Elektrische Energie wird zu Lichtenergie",
+    "Lichtenergie wird ausschliesslich zu Schallenergie",
+    "Bewegungsenergie des Windes wird zu elektrischer Energie",
+    "Denke an das, was auf die Zelle trifft und was sie liefert.",
+    "Unterscheide Solarzellen von Sonnenkollektoren für Warmwasser."
+  ],
+  "en": [
+    "Which energy conversion happens in a solar cell?",
+    "Light energy becomes electrical energy",
+    "Electrical energy becomes light energy",
+    "Light energy becomes only sound energy",
+    "The wind's kinetic energy becomes electrical energy",
+    "Think of what reaches the cell and what it supplies.",
+    "Distinguish solar cells from solar water-heating panels."
+  ],
+  "fr": [
+    "Quelle conversion a lieu dans une cellule solaire ?",
+    "L'énergie lumineuse devient électrique",
+    "L'énergie électrique devient lumineuse",
+    "L'énergie lumineuse devient seulement sonore",
+    "L'énergie du vent devient électrique",
+    "Pense à ce qui arrive sur la cellule et à ce qu'elle fournit.",
+    "Distingue les cellules solaires des capteurs pour l'eau chaude."
+  ],
+  "it": [
+    "Quale conversione avviene in una cella solare?",
+    "L'energia luminosa diventa elettrica",
+    "L'energia elettrica diventa luminosa",
+    "L'energia luminosa diventa soltanto sonora",
+    "L'energia del vento diventa elettrica",
+    "Pensa a ciò che raggiunge la cella e a ciò che fornisce.",
+    "Distingui le celle solari dai collettori per l'acqua calda."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Energieumwandlung findet in einer Solarzelle statt? Replaces exact-text recall of: Was ist der Unterschied zwischen Primär- und Sekundärenergie?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_20",
+  "de": [
+    "Wo liefert Kernfusion von Natur aus grosse Mengen Energie?",
+    "Im Inneren der Sonne",
+    "In einer gewöhnlichen Taschenlampe",
+    "In einem Windrad",
+    "In einem Wasserkraftwerk",
+    "Denke an einen Stern.",
+    "Vergleiche seine Energiequelle mit technischen Geräten auf der Erde."
+  ],
+  "en": [
+    "Where does nuclear fusion naturally supply large amounts of energy?",
+    "Inside the Sun",
+    "In an ordinary torch",
+    "In a wind turbine",
+    "In a hydroelectric plant",
+    "Think of a star.",
+    "Compare its energy source with devices on Earth."
+  ],
+  "fr": [
+    "Où la fusion nucléaire fournit-elle naturellement beaucoup d'énergie ?",
+    "À l'intérieur du Soleil",
+    "Dans une lampe de poche ordinaire",
+    "Dans une éolienne",
+    "Dans une centrale hydraulique",
+    "Pense à une étoile.",
+    "Compare sa source d'énergie aux appareils terrestres."
+  ],
+  "it": [
+    "Dove la fusione nucleare fornisce naturalmente molta energia?",
+    "All'interno del Sole",
+    "In una normale torcia",
+    "In una turbina eolica",
+    "In una centrale idroelettrica",
+    "Pensa a una stella.",
+    "Confronta la sua fonte energetica con gli impianti terrestri."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wo liefert Kernfusion von Natur aus grosse Mengen Energie? Replaces exact-text recall of: Was ist Kernfusion?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_24",
+  "de": [
+    "Was ist das Ziel der Abscheidung und Speicherung von Kohlendioxid aus Abgasen?",
+    "Weniger Kohlendioxid in die Atmosphäre gelangen zu lassen",
+    "Aus jedem Abgas sofort Sauerstoff zu machen",
+    "Den Kohlendioxidgehalt der Atmosphäre absichtlich zu erhöhen",
+    "Den Stromverbrauch jeder Anlage auf null zu senken",
+    "Denke an den Weg vom Schornstein zur Atmosphäre.",
+    "Unterscheide Auffangen von chemischem Umwandeln."
+  ],
+  "en": [
+    "What is the aim of capturing and storing carbon dioxide from exhaust gases?",
+    "To keep more carbon dioxide out of the atmosphere",
+    "To turn every exhaust gas instantly into oxygen",
+    "To deliberately increase atmospheric carbon dioxide",
+    "To reduce every plant's electricity use to zero",
+    "Think of the path from a chimney to the atmosphere.",
+    "Distinguish capture from chemical conversion."
+  ],
+  "fr": [
+    "Quel est le but du captage et du stockage du dioxyde de carbone des fumées ?",
+    "Limiter le dioxyde de carbone rejeté dans l'atmosphère",
+    "Transformer instantanément toutes les fumées en oxygène",
+    "Augmenter volontairement le dioxyde de carbone atmosphérique",
+    "Ramener à zéro la consommation électrique de chaque installation",
+    "Pense au trajet de la cheminée à l'atmosphère.",
+    "Distingue captage et transformation chimique."
+  ],
+  "it": [
+    "Qual è lo scopo di catturare e immagazzinare anidride carbonica dai gas di scarico?",
+    "Limitare l'anidride carbonica immessa nell'atmosfera",
+    "Trasformare subito ogni gas di scarico in ossigeno",
+    "Aumentare volontariamente l'anidride carbonica atmosferica",
+    "Azzerare il consumo elettrico di ogni impianto",
+    "Pensa al percorso dal camino all'atmosfera.",
+    "Distingui cattura e trasformazione chimica."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist das Ziel der Abscheidung und Speicherung von Kohlendioxid aus Abgasen? Replaces exact-text recall of: Was ist Carbon Capture and Storage (CCS)?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_26",
+  "de": [
+    "Wofür kann mit erneuerbarem Strom hergestellter Wasserstoff dienen?",
+    "Als speicherbarer Energieträger",
+    "Als unbegrenzte Energiequelle ohne Herstellung",
+    "Als Ersatz für alle Stromleitungen ohne Verluste",
+    "Als Brennstoff, der überhaupt keine Anlagen benötigt",
+    "Unterscheide Energiequelle und Energiespeicher.",
+    "Auch seine Herstellung benötigt Energie."
+  ],
+  "en": [
+    "What can hydrogen made using renewable electricity be used for?",
+    "As a storable energy carrier",
+    "As an unlimited energy source requiring no production",
+    "As a loss-free replacement for every power line",
+    "As a fuel needing no equipment at all",
+    "Distinguish an energy source from storage.",
+    "Producing it also requires energy."
+  ],
+  "fr": [
+    "À quoi peut servir l'hydrogène produit avec de l'électricité renouvelable ?",
+    "De vecteur énergétique stockable",
+    "De source illimitée sans fabrication",
+    "De remplacement sans pertes de toutes les lignes électriques",
+    "De combustible ne nécessitant aucune installation",
+    "Distingue source et stockage d'énergie.",
+    "Sa production demande aussi de l'énergie."
+  ],
+  "it": [
+    "A cosa può servire l'idrogeno prodotto con elettricità rinnovabile?",
+    "Come vettore energetico immagazzinabile",
+    "Come fonte illimitata senza produzione",
+    "Come sostituto senza perdite di tutte le linee elettriche",
+    "Come combustibile che non richiede impianti",
+    "Distingui fonte e accumulo di energia.",
+    "Anche la sua produzione richiede energia."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wofür kann mit erneuerbarem Strom hergestellter Wasserstoff dienen? Replaces exact-text recall of: Was ist grüner Wasserstoff als Energieträger?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_28",
+  "de": [
+    "Was betrachtet eine Ökobilanz eines Produkts?",
+    "Umweltauswirkungen von Rohstoffen bis zur Entsorgung",
+    "Nur den Kaufpreis",
+    "Nur das Aussehen der Verpackung",
+    "Nur die Werbung des Herstellers",
+    "Denke an den gesamten Lebensweg.",
+    "Belastungen können vor und nach dem Kauf entstehen."
+  ],
+  "en": [
+    "What does a product's life-cycle assessment examine?",
+    "Environmental impacts from raw materials to disposal",
+    "Only the purchase price",
+    "Only the packaging's appearance",
+    "Only the manufacturer's advertising",
+    "Think of the entire life cycle.",
+    "Impacts can occur before and after purchase."
+  ],
+  "fr": [
+    "Qu'étudie l'analyse du cycle de vie d'un produit ?",
+    "Les impacts environnementaux des matières premières à l'élimination",
+    "Uniquement le prix d'achat",
+    "Uniquement l'aspect de l'emballage",
+    "Uniquement la publicité du fabricant",
+    "Pense à toute la vie du produit.",
+    "Des impacts apparaissent avant et après l'achat."
+  ],
+  "it": [
+    "Che cosa esamina l'analisi del ciclo di vita di un prodotto?",
+    "Gli impatti ambientali dalle materie prime allo smaltimento",
+    "Soltanto il prezzo d'acquisto",
+    "Soltanto l'aspetto dell'imballaggio",
+    "Soltanto la pubblicità del produttore",
+    "Pensa all'intera vita del prodotto.",
+    "Gli impatti possono sorgere prima e dopo l'acquisto."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was betrachtet eine Ökobilanz eines Produkts? Replaces exact-text recall of: Was ist Ökobilanz (LCA)?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_30",
+  "de": [
+    "Was passt zur Kreislaufwirtschaft?",
+    "Produkte reparieren und Materialien wieder nutzen",
+    "Produkte möglichst schnell wegwerfen",
+    "Reparaturen grundsätzlich verhindern",
+    "Rohstoffe nach einmaligem Gebrauch unbrauchbar machen",
+    "Denke an einen möglichst langen Nutzen.",
+    "Wie bleiben Materialien im Wirtschaftskreislauf?"
+  ],
+  "en": [
+    "What fits a circular economy?",
+    "Repairing products and using materials again",
+    "Throwing products away as quickly as possible",
+    "Preventing repairs in principle",
+    "Making materials unusable after one use",
+    "Think of keeping things useful for longer.",
+    "How can materials remain in circulation?"
+  ],
+  "fr": [
+    "Qu'est-ce qui correspond à l'économie circulaire ?",
+    "Réparer les produits et réutiliser les matériaux",
+    "Jeter les produits au plus vite",
+    "Empêcher les réparations par principe",
+    "Rendre les matériaux inutilisables après un usage",
+    "Pense à prolonger l'utilité des objets.",
+    "Comment garder les matériaux en circulation ?"
+  ],
+  "it": [
+    "Che cosa corrisponde all'economia circolare?",
+    "Riparare i prodotti e riutilizzare i materiali",
+    "Gettare i prodotti il prima possibile",
+    "Impedire le riparazioni per principio",
+    "Rendere inutilizzabili i materiali dopo un uso",
+    "Pensa a prolungare l'utilità degli oggetti.",
+    "Come mantenere i materiali in circolazione?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was passt zur Kreislaufwirtschaft? Replaces exact-text recall of: Was ist Circular Economy?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_32",
+  "de": [
+    "Was bedeutet Netto-Null bei Treibhausgasen?",
+    "Verbleibende Emissionen und Entnahmen sind im Gleichgewicht",
+    "Es gibt überhaupt keine Treibhausgase mehr auf der Erde",
+    "Alle Emissionen dürfen unbegrenzt steigen",
+    "Nur Emissionen von Autos werden gezählt",
+    "Denke an eine Bilanz mit zwei Seiten.",
+    "Was wird abgegeben und was der Atmosphäre wieder entzogen?"
+  ],
+  "en": [
+    "What does net zero mean for greenhouse gases?",
+    "Remaining emissions and removals are balanced",
+    "There are no greenhouse gases left anywhere on Earth",
+    "All emissions may rise without limit",
+    "Only emissions from cars are counted",
+    "Think of a balance with two sides.",
+    "What is released and what is removed from the atmosphere?"
+  ],
+  "fr": [
+    "Que signifie zéro émission nette pour les gaz à effet de serre ?",
+    "Les émissions restantes et les absorptions s'équilibrent",
+    "Il n'existe plus aucun gaz à effet de serre sur Terre",
+    "Toutes les émissions peuvent augmenter sans limite",
+    "Seules les émissions des voitures sont comptées",
+    "Pense aux deux côtés d'un bilan.",
+    "Que rejette-t-on et que retire-t-on de l'atmosphère ?"
+  ],
+  "it": [
+    "Che cosa significa zero netto per i gas serra?",
+    "Le emissioni residue e le rimozioni si equilibrano",
+    "Sulla Terra non esistono più gas serra",
+    "Tutte le emissioni possono crescere senza limiti",
+    "Si contano soltanto le emissioni delle auto",
+    "Pensa ai due lati di un bilancio.",
+    "Che cosa viene emesso e che cosa viene tolto dall'atmosfera?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutet Netto-Null bei Treibhausgasen? Replaces exact-text recall of: Was ist Netto-Null (Net Zero)?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_34",
+  "de": [
+    "Welche beiden Vorgänge tragen zum Meeresspiegelanstieg bei?",
+    "Erwärmung des Meerwassers und Schmelzen von Landeis",
+    "Abkühlung des Meerwassers und Wachstum von Gletschern",
+    "Mehr Meersalz und weniger Sonnenlicht",
+    "Wachstum von Korallen und kürzere Tage",
+    "Denke an Volumenänderung und zusätzliches Wasser.",
+    "Unterscheide Eis an Land von bereits schwimmendem Eis."
+  ],
+  "en": [
+    "Which two processes contribute to sea-level rise?",
+    "Warming seawater and melting land ice",
+    "Cooling seawater and growing glaciers",
+    "More sea salt and less sunlight",
+    "Growing corals and shorter days",
+    "Think of volume change and added water.",
+    "Distinguish land ice from ice already floating."
+  ],
+  "fr": [
+    "Quels deux phénomènes contribuent à la montée du niveau marin ?",
+    "Le réchauffement de l'eau et la fonte des glaces terrestres",
+    "Le refroidissement de l'eau et la croissance des glaciers",
+    "Plus de sel marin et moins de soleil",
+    "La croissance des coraux et des jours plus courts",
+    "Pense au volume et à l'eau ajoutée.",
+    "Distingue la glace terrestre de celle qui flotte déjà."
+  ],
+  "it": [
+    "Quali due fenomeni contribuiscono all'innalzamento del livello marino?",
+    "Il riscaldamento dell'acqua e lo scioglimento dei ghiacci terrestri",
+    "Il raffreddamento dell'acqua e la crescita dei ghiacciai",
+    "Più sale marino e meno luce solare",
+    "La crescita dei coralli e giorni più corti",
+    "Pensa al volume e all'acqua aggiunta.",
+    "Distingui il ghiaccio terrestre da quello già galleggiante."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche beiden Vorgänge tragen zum Meeresspiegelanstieg bei? Replaces exact-text recall of: Was ist Meeresspiegelanstieg?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_36",
+  "de": [
+    "Was ist eine zentrale Aufgabe des Weltklimarats IPCC?",
+    "Wissenschaftliche Erkenntnisse zum Klimawandel zusammenfassen",
+    "Das Wetter jedes Dorfs täglich vorhersagen",
+    "Weltweit selbst alle Klimagesetze beschliessen",
+    "Alle Kraftwerke der Welt betreiben",
+    "Unterscheide wissenschaftliche Bewertung und politische Entscheidung.",
+    "Forschung wird für Entscheidungsträger verständlich zusammengeführt."
+  ],
+  "en": [
+    "What is a central task of the IPCC?",
+    "Summarising scientific knowledge about climate change",
+    "Forecasting every village's weather daily",
+    "Making all climate laws worldwide itself",
+    "Operating every power station in the world",
+    "Distinguish scientific assessment from political decisions.",
+    "Research is brought together for decision-makers."
+  ],
+  "fr": [
+    "Quelle est une mission centrale du GIEC ?",
+    "Synthétiser les connaissances scientifiques sur le changement climatique",
+    "Prévoir chaque jour la météo de chaque village",
+    "Adopter lui-même toutes les lois climatiques du monde",
+    "Exploiter toutes les centrales électriques mondiales",
+    "Distingue évaluation scientifique et décision politique.",
+    "Les recherches sont réunies pour éclairer les décideurs."
+  ],
+  "it": [
+    "Qual è un compito centrale dell'IPCC?",
+    "Riassumere le conoscenze scientifiche sul cambiamento climatico",
+    "Prevedere ogni giorno il meteo di ogni villaggio",
+    "Approvare da solo tutte le leggi climatiche mondiali",
+    "Gestire tutte le centrali elettriche del mondo",
+    "Distingui valutazione scientifica e decisione politica.",
+    "Le ricerche vengono riunite per informare chi decide."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist eine zentrale Aufgabe des Weltklimarats IPCC? Replaces exact-text recall of: Was ist IPCC?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_38",
+  "de": [
+    "Welche Änderung senkt den Einsatz fossiler Energie?",
+    "Eine Ölheizung durch eine Wärmepumpe mit erneuerbarem Strom ersetzen",
+    "Eine Ölheizung durch eine Kohleheizung ersetzen",
+    "Benzin durch Diesel ersetzen",
+    "Erdgas stärker nutzen statt Gebäude zu dämmen",
+    "Vergleiche die Herkunft der Energie.",
+    "Welche Änderung kommt ohne Verbrennung fossiler Brennstoffe aus?"
+  ],
+  "en": [
+    "Which change reduces fossil energy use?",
+    "Replacing an oil heater with a heat pump using renewable electricity",
+    "Replacing an oil heater with a coal heater",
+    "Replacing petrol with diesel",
+    "Using more natural gas instead of insulating buildings",
+    "Compare the energy sources.",
+    "Which change avoids burning fossil fuels?"
+  ],
+  "fr": [
+    "Quel changement réduit l'usage d'énergie fossile ?",
+    "Remplacer le chauffage au mazout par une pompe à chaleur alimentée en électricité renouvelable",
+    "Remplacer le mazout par le charbon",
+    "Remplacer l'essence par le diesel",
+    "Utiliser plus de gaz au lieu d'isoler les bâtiments",
+    "Compare l'origine des énergies.",
+    "Quel changement évite de brûler des combustibles fossiles ?"
+  ],
+  "it": [
+    "Quale cambiamento riduce l'uso di energia fossile?",
+    "Sostituire il riscaldamento a olio con una pompa di calore alimentata da elettricità rinnovabile",
+    "Sostituire l'olio da riscaldamento con carbone",
+    "Sostituire la benzina con diesel",
+    "Usare più gas invece di isolare gli edifici",
+    "Confronta l'origine delle energie.",
+    "Quale cambiamento evita la combustione di combustibili fossili?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Änderung senkt den Einsatz fossiler Energie? Replaces exact-text recall of: Was ist Dekarbonisierung?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_42",
+  "de": [
+    "Warum braucht es bei neuen Energieanlagen Forschung und Tests?",
+    "Um Nutzen, Sicherheit und Grenzen zu prüfen",
+    "Weil jede neue Idee automatisch ungefährlich ist",
+    "Damit Messungen durch Werbung ersetzt werden",
+    "Weil ein einzelner Erfolg jede weitere Prüfung unnötig macht",
+    "Denke an verlässliche Ergebnisse.",
+    "Eine Anlage muss unter unterschiedlichen Bedingungen beurteilt werden."
+  ],
+  "en": [
+    "Why do new energy technologies need research and testing?",
+    "To assess benefits, safety and limitations",
+    "Because every new idea is automatically harmless",
+    "To replace measurements with advertising",
+    "Because one success makes all further checks unnecessary",
+    "Think of reliable results.",
+    "A system must be assessed under different conditions."
+  ],
+  "fr": [
+    "Pourquoi rechercher et tester les nouvelles installations énergétiques ?",
+    "Pour évaluer leur utilité, leur sécurité et leurs limites",
+    "Parce que toute idée nouvelle est automatiquement sans danger",
+    "Pour remplacer les mesures par la publicité",
+    "Parce qu'un succès rend toute vérification inutile",
+    "Pense à des résultats fiables.",
+    "Il faut évaluer une installation dans différentes conditions."
+  ],
+  "it": [
+    "Perché servono ricerca e prove per nuovi impianti energetici?",
+    "Per valutarne utilità, sicurezza e limiti",
+    "Perché ogni idea nuova è automaticamente innocua",
+    "Per sostituire le misurazioni con pubblicità",
+    "Perché un successo rende inutile ogni altra verifica",
+    "Pensa a risultati affidabili.",
+    "Un impianto va valutato in condizioni diverse."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum braucht es bei neuen Energieanlagen Forschung und Tests? Replaces exact-text recall of: Was ist ITER?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_44",
+  "de": [
+    "Was gehört zur Energiewende?",
+    "Erneuerbare Energien ausbauen und Energie effizienter nutzen",
+    "Erneuerbare Anlagen durch Kohlekraft ersetzen",
+    "Wärmedämmung aus allen Gebäuden entfernen",
+    "Den Energieverbrauch unabhängig vom Nutzen erhöhen",
+    "Denke an Energiequellen und Verbrauch zusammen.",
+    "Beide Seiten können zur Veränderung beitragen."
+  ],
+  "en": [
+    "What is part of the energy transition?",
+    "Expanding renewables and using energy more efficiently",
+    "Replacing renewables with coal power",
+    "Removing insulation from every building",
+    "Increasing energy use regardless of benefit",
+    "Think about energy sources and consumption together.",
+    "Both sides can contribute to change."
+  ],
+  "fr": [
+    "Qu'est-ce qui fait partie de la transition énergétique ?",
+    "Développer les renouvelables et utiliser l'énergie plus efficacement",
+    "Remplacer les renouvelables par le charbon",
+    "Retirer l'isolation de tous les bâtiments",
+    "Augmenter la consommation sans tenir compte de l'utilité",
+    "Pense aux sources et à la consommation ensemble.",
+    "Les deux aspects contribuent au changement."
+  ],
+  "it": [
+    "Che cosa fa parte della transizione energetica?",
+    "Sviluppare le rinnovabili e usare l'energia in modo più efficiente",
+    "Sostituire le rinnovabili con carbone",
+    "Togliere l'isolamento da tutti gli edifici",
+    "Aumentare i consumi senza considerare l'utilità",
+    "Pensa insieme alle fonti e ai consumi.",
+    "Entrambi gli aspetti contribuiscono al cambiamento."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was gehört zur Energiewende? Replaces exact-text recall of: Was ist Energiewende?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_46",
+  "de": [
+    "Warum sind Seegraswiesen auch für den Klimaschutz wertvoll?",
+    "Sie können Kohlenstoff in Pflanzen und im Boden speichern",
+    "Sie machen das ganze Meer sofort kälter",
+    "Sie entfernen jedes Treibhausgas vollständig",
+    "Sie ersetzen alle Massnahmen zur Emissionssenkung",
+    "Denke an Pflanzenwachstum und Meeresboden.",
+    "Ihr Nutzen ergänzt andere Klimaschutzmassnahmen."
+  ],
+  "en": [
+    "Why are seagrass meadows valuable for climate protection too?",
+    "They can store carbon in plants and seabed sediments",
+    "They instantly cool the entire ocean",
+    "They remove every greenhouse gas completely",
+    "They replace all emission reduction measures",
+    "Think about plant growth and the seabed.",
+    "Their benefits complement other climate measures."
+  ],
+  "fr": [
+    "Pourquoi les herbiers marins sont-ils aussi utiles au climat ?",
+    "Ils peuvent stocker du carbone dans les plantes et les sédiments",
+    "Ils refroidissent immédiatement tout l'océan",
+    "Ils éliminent complètement tous les gaz à effet de serre",
+    "Ils remplacent toute réduction des émissions",
+    "Pense à la croissance des plantes et aux fonds marins.",
+    "Leur effet complète d'autres mesures climatiques."
+  ],
+  "it": [
+    "Perché le praterie marine sono utili anche al clima?",
+    "Possono immagazzinare carbonio nelle piante e nei sedimenti",
+    "Raffreddano immediatamente l'intero oceano",
+    "Eliminano completamente tutti i gas serra",
+    "Sostituiscono tutte le riduzioni delle emissioni",
+    "Pensa alla crescita delle piante e al fondale.",
+    "Il loro contributo completa altre misure climatiche."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum sind Seegraswiesen auch für den Klimaschutz wertvoll? Replaces exact-text recall of: Was ist Blue Carbon?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_48",
+  "de": [
+    "Was entnehmen Anlagen zur direkten Kohlendioxid-Abscheidung aus der Luft?",
+    "Kohlendioxid",
+    "Vor allem Sauerstoff als Ziel des Verfahrens",
+    "Nur Staub, ohne ein Gas abzutrennen",
+    "Stickstoff statt des im Namen genannten Klimagases",
+    "Achte auf den Namen des Verfahrens.",
+    "Unterscheide Klimagas-Abscheidung von einem gewöhnlichen Staubfilter."
+  ],
+  "en": [
+    "What do direct air carbon capture plants remove from air?",
+    "Carbon dioxide",
+    "Mainly oxygen as the process's target",
+    "Only dust, without separating a gas",
+    "Nitrogen instead of the greenhouse gas named",
+    "Look at the process's name.",
+    "Distinguish carbon capture from an ordinary dust filter."
+  ],
+  "fr": [
+    "Que retirent de l'air les installations de captage direct du carbone ?",
+    "Du dioxyde de carbone",
+    "Principalement l'oxygène comme cible du procédé",
+    "Seulement la poussière, sans séparer de gaz",
+    "L'azote au lieu du gaz climatique nommé",
+    "Observe le nom du procédé.",
+    "Distingue le captage d'un gaz climatique d'un filtre à poussière."
+  ],
+  "it": [
+    "Che cosa tolgono dall'aria gli impianti di cattura diretta del carbonio?",
+    "Anidride carbonica",
+    "Soprattutto ossigeno come obiettivo del processo",
+    "Solo polvere, senza separare un gas",
+    "Azoto invece del gas climatico nominato",
+    "Osserva il nome del procedimento.",
+    "Distingui la cattura di un gas climatico da un filtro antipolvere."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was entnehmen Anlagen zur direkten Kohlendioxid-Abscheidung aus der Luft? Replaces exact-text recall of: Was ist Direct Air Capture (DAC)?"
+},
+{
+  "key": "6/science/energie-nachh-6/en6_50",
+  "de": [
+    "Warum sollte die Nutzung natürlicher Ressourcen Grenzen beachten?",
+    "Ökosysteme können durch Übernutzung dauerhaft geschädigt werden",
+    "Jeder Rohstoff wächst innerhalb eines Tages nach",
+    "Mehr Verbrauch verbessert immer alle Lebensräume",
+    "Natürliche Kreisläufe sind von menschlichem Handeln unabhängig",
+    "Denke an die Erholung von Lebensräumen.",
+    "Nicht jede Veränderung lässt sich schnell rückgängig machen."
+  ],
+  "en": [
+    "Why should natural resource use respect limits?",
+    "Overuse can cause lasting damage to ecosystems",
+    "Every resource grows back within a day",
+    "More consumption always improves every habitat",
+    "Natural cycles are independent of human actions",
+    "Think about habitats recovering.",
+    "Not every change can be quickly reversed."
+  ],
+  "fr": [
+    "Pourquoi l'utilisation des ressources naturelles doit-elle respecter des limites ?",
+    "La surexploitation peut endommager durablement les écosystèmes",
+    "Chaque ressource se renouvelle en un jour",
+    "Consommer davantage améliore toujours tous les habitats",
+    "Les cycles naturels sont indépendants des activités humaines",
+    "Pense au rétablissement des habitats.",
+    "Tout changement n'est pas rapidement réversible."
+  ],
+  "it": [
+    "Perché l'uso delle risorse naturali deve rispettare dei limiti?",
+    "Lo sfruttamento eccessivo può danneggiare durevolmente gli ecosistemi",
+    "Ogni risorsa si rinnova in un giorno",
+    "Consumare di più migliora sempre tutti gli habitat",
+    "I cicli naturali sono indipendenti dalle attività umane",
+    "Pensa al recupero degli habitat.",
+    "Non ogni cambiamento è rapidamente reversibile."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum sollte die Nutzung natürlicher Ressourcen Grenzen beachten? Replaces exact-text recall of: Was ist Planetary Boundaries?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_2",
+  "de": [
+    "Welche zwei Werte kann ein Bit annehmen?",
+    "0 und 1",
+    "1 und 2",
+    "0 bis 9",
+    "Alle Buchstaben",
+    "Denke an zwei unterscheidbare Zustände.",
+    "Es geht um die kleinste binäre Informationseinheit."
+  ],
+  "en": [
+    "Which two values can a bit have?",
+    "0 and 1",
+    "1 and 2",
+    "0 to 9",
+    "All letters",
+    "Think of two distinguishable states.",
+    "This is the smallest binary unit of information."
+  ],
+  "fr": [
+    "Quelles sont les deux valeurs possibles d'un bit ?",
+    "0 et 1",
+    "1 et 2",
+    "De 0 à 9",
+    "Toutes les lettres",
+    "Pense à deux états distincts.",
+    "Il s'agit de la plus petite unité d'information binaire."
+  ],
+  "it": [
+    "Quali due valori può avere un bit?",
+    "0 e 1",
+    "1 e 2",
+    "Da 0 a 9",
+    "Tutte le lettere",
+    "Pensa a due stati distinguibili.",
+    "È la più piccola unità d'informazione binaria."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche zwei Werte kann ein Bit annehmen? Replaces exact-text recall of: Was bedeutet Bit?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_4",
+  "de": [
+    "Welche Ziffern verwendet das Binärsystem?",
+    "Nur 0 und 1",
+    "Nur 1 und 2",
+    "Alle Ziffern von 0 bis 9",
+    "Nur 2 und 10",
+    "Denke an ein Zahlensystem zur Basis zwei.",
+    "Unterscheide einzelne Ziffern von mehrstelligen Zahlen."
+  ],
+  "en": [
+    "Which digits does the binary system use?",
+    "Only 0 and 1",
+    "Only 1 and 2",
+    "All digits from 0 to 9",
+    "Only 2 and 10",
+    "Think of a base-two number system.",
+    "Distinguish single digits from multi-digit numbers."
+  ],
+  "fr": [
+    "Quels chiffres utilise le système binaire ?",
+    "Seulement 0 et 1",
+    "Seulement 1 et 2",
+    "Tous les chiffres de 0 à 9",
+    "Seulement 2 et 10",
+    "Pense à un système de base deux.",
+    "Distingue les chiffres des nombres à plusieurs chiffres."
+  ],
+  "it": [
+    "Quali cifre usa il sistema binario?",
+    "Soltanto 0 e 1",
+    "Soltanto 1 e 2",
+    "Tutte le cifre da 0 a 9",
+    "Soltanto 2 e 10",
+    "Pensa a un sistema in base due.",
+    "Distingui le cifre dai numeri con più cifre."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Ziffern verwendet das Binärsystem? Replaces exact-text recall of: Was ist Binärsystem?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_6",
+  "de": [
+    "Was ist eine Hauptaufgabe des Prozessors im Computer?",
+    "Programmbefehle ausführen",
+    "Daten ausschliesslich dauerhaft wie eine Festplatte speichern",
+    "Bilder ausschliesslich auf dem Bildschirm anzeigen",
+    "Papier mit Text bedrucken",
+    "Unterscheide Rechnen, Anzeigen und Drucken.",
+    "Welche Aufgabe geschieht im zentralen Rechenbaustein?"
+  ],
+  "en": [
+    "What is a main task of a computer's processor?",
+    "Executing program instructions",
+    "Only store data permanently like a hard drive",
+    "Only display images on the screen",
+    "Print text on paper",
+    "Distinguish computing, displaying and printing.",
+    "What happens in the central processing component?"
+  ],
+  "fr": [
+    "Quelle est une tâche principale du processeur d'un ordinateur ?",
+    "Exécuter les instructions des programmes",
+    "Stocker seulement les données durablement comme un disque dur",
+    "Afficher seulement les images à l'écran",
+    "Imprimer du texte sur papier",
+    "Distingue calcul, affichage et impression.",
+    "Que fait le composant central de calcul ?"
+  ],
+  "it": [
+    "Qual è un compito principale del processore di un computer?",
+    "Eseguire le istruzioni dei programmi",
+    "Conservare solo dati permanentemente come un disco rigido",
+    "Mostrare solo immagini sullo schermo",
+    "Stampare testo su carta",
+    "Distingui calcolo, visualizzazione e stampa.",
+    "Che cosa fa il componente centrale di calcolo?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist eine Hauptaufgabe des Prozessors im Computer? Replaces exact-text recall of: Was ist ein Prozessor (CPU)?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_8",
+  "de": [
+    "Welche Aufgabe hat ein Betriebssystem?",
+    "Geräte verwalten und die Ausführung von Programmen ermöglichen",
+    "Nur Webseiten nach Stichwörtern durchsuchen",
+    "Nur einzelne Bilder bearbeiten",
+    "Ausschliesslich Dokumente auf Papier drucken",
+    "Denke an die Grundlage für verschiedene Programme.",
+    "Es vermittelt zwischen Anwendungen und Hardware."
+  ],
+  "en": [
+    "What does an operating system do?",
+    "Manage hardware and enable programs to run",
+    "Only search web pages by keywords",
+    "Only edit individual pictures",
+    "Only print documents on paper",
+    "Think of the foundation for different programs.",
+    "It connects applications with hardware."
+  ],
+  "fr": [
+    "Que fait un système d'exploitation ?",
+    "Il gère le matériel et permet d'exécuter les programmes",
+    "Rechercher seulement des mots sur le Web",
+    "Retoucher seulement des images",
+    "Imprimer exclusivement des documents sur papier",
+    "Pense à la base commune des programmes.",
+    "Il relie les applications au matériel."
+  ],
+  "it": [
+    "Che cosa fa un sistema operativo?",
+    "Gestisce l'hardware e permette di eseguire i programmi",
+    "Cercare solo parole sul Web",
+    "Modificare solo singole immagini",
+    "Stampare esclusivamente documenti su carta",
+    "Pensa alla base comune dei programmi.",
+    "Collega le applicazioni all'hardware."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aufgabe hat ein Betriebssystem? Replaces exact-text recall of: Was ist ein Betriebssystem?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_10",
+  "de": [
+    "Wozu dient eine IP-Adresse im Netzwerk?",
+    "Um ein Ziel für Datenpakete zu adressieren",
+    "Um die Identität einer Person ohne weitere Prüfung sicher zu beweisen",
+    "Um die Berechtigung wie ein Passwort nachzuweisen",
+    "Um den gesamten Nachrichteninhalt zu speichern",
+    "Denke an das Zustellen von Nachrichten.",
+    "Welche Information hilft bei der Weiterleitung?"
+  ],
+  "en": [
+    "What is an IP address used for in a network?",
+    "Addressing a destination for data packets",
+    "To prove a person's identity conclusively without further checks",
+    "To demonstrate permission like a password",
+    "To store the whole message content",
+    "Think of delivering messages.",
+    "What information helps route them?"
+  ],
+  "fr": [
+    "À quoi sert une adresse IP dans un réseau ?",
+    "À adresser une destination pour des paquets de données",
+    "À prouver définitivement l'identité sans autre vérification",
+    "À prouver une autorisation comme un mot de passe",
+    "À stocker tout le contenu du message",
+    "Pense à l'envoi de messages.",
+    "Quelle information aide à les acheminer ?"
+  ],
+  "it": [
+    "A cosa serve un indirizzo IP in una rete?",
+    "A indicare una destinazione per i pacchetti di dati",
+    "A provare definitivamente l'identità senza altre verifiche",
+    "A dimostrare un'autorizzazione come una password",
+    "A conservare l'intero contenuto del messaggio",
+    "Pensa alla consegna di messaggi.",
+    "Quale informazione aiuta a instradarli?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu dient eine IP-Adresse im Netzwerk? Replaces exact-text recall of: Was ist eine IP-Adresse?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_12",
+  "de": [
+    "Eine unbekannte Nachricht fordert dein Passwort über einen Link. Was ist sicherer?",
+    "Den Link nicht nutzen und die Anfrage über einen bekannten Weg prüfen",
+    "Das Passwort sofort eingeben",
+    "Die Nachricht an alle mit dem Passwort weiterleiten",
+    "Nur prüfen, ob das Logo schön aussieht",
+    "Ein vertraut wirkendes Bild beweist keine Echtheit.",
+    "Nutze eine unabhängig bekannte Kontaktmöglichkeit."
+  ],
+  "en": [
+    "An unknown message asks for your password through a link. What is safer?",
+    "Do not use the link; verify through a known channel",
+    "Enter the password immediately",
+    "Forward the message and password to everyone",
+    "Only check whether the logo looks nice",
+    "A familiar-looking image does not prove authenticity.",
+    "Use contact details you already know independently."
+  ],
+  "fr": [
+    "Un message inconnu demande ton mot de passe via un lien. Que faire de plus sûr ?",
+    "Ne pas utiliser le lien et vérifier par un moyen connu",
+    "Saisir immédiatement le mot de passe",
+    "Transmettre le message et le mot de passe à tout le monde",
+    "Vérifier seulement si le logo est joli",
+    "Une image familière ne prouve pas l'authenticité.",
+    "Utilise un contact connu indépendamment du message."
+  ],
+  "it": [
+    "Un messaggio sconosciuto chiede la password tramite un link. Che cosa è più sicuro?",
+    "Non usare il link e verificare tramite un canale noto",
+    "Inserire subito la password",
+    "Inoltrare messaggio e password a tutti",
+    "Controllare soltanto se il logo è bello",
+    "Un'immagine familiare non prova l'autenticità.",
+    "Usa un contatto già noto indipendentemente dal messaggio."
+  ],
+  "reason": "Individually reviewed knowledge objective: Eine unbekannte Nachricht fordert dein Passwort über einen Link. Was ist sicherer? Replaces exact-text recall of: Was ist Phishing?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_14",
+  "de": [
+    "Wie erstellt man in Scratch typischerweise Programme?",
+    "Durch Zusammenfügen von Befehlsblöcken",
+    "Durch blosses Zeichnen einer Figur ohne Verhaltensanweisungen",
+    "Durch das Umbenennen einer Bilddatei in ein fertiges Spiel",
+    "Durch das Anordnen von Bildern ohne Befehlsfolge",
+    "Denke an eine sichtbare Folge von Anweisungen.",
+    "Die Bausteine stehen für Handlungen und Abläufe."
+  ],
+  "en": [
+    "How are programs typically created in Scratch?",
+    "By joining instruction blocks",
+    "Only by drawing a character without behavioural instructions",
+    "By renaming an image file as a finished game",
+    "By arranging pictures without an instruction sequence",
+    "Think of a visible sequence of instructions.",
+    "The blocks represent actions and processes."
+  ],
+  "fr": [
+    "Comment crée-t-on généralement un programme dans Scratch ?",
+    "En assemblant des blocs d'instructions",
+    "En dessinant seulement un personnage sans instructions de comportement",
+    "En renommant un fichier image comme jeu terminé",
+    "En disposant des images sans suite d'instructions",
+    "Pense à une suite visible d'instructions.",
+    "Les blocs représentent des actions et des étapes."
+  ],
+  "it": [
+    "Come si crea solitamente un programma in Scratch?",
+    "Unendo blocchi di istruzioni",
+    "Disegnando soltanto un personaggio senza istruzioni di comportamento",
+    "Rinominando un file immagine come gioco finito",
+    "Disponendo immagini senza una sequenza di istruzioni",
+    "Pensa a una sequenza visibile di istruzioni.",
+    "I blocchi rappresentano azioni e passaggi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wie erstellt man in Scratch typischerweise Programme? Replaces exact-text recall of: Was ist Scratch?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_18",
+  "de": [
+    "Was ist beim Nutzen einer KI-Antwort wichtig?",
+    "Wichtige Aussagen mit verlässlichen Quellen überprüfen",
+    "Jede Antwort ungeprüft übernehmen",
+    "Eine lange Antwort immer für richtig halten",
+    "Persönliche Passwörter als Prüfhilfe eingeben",
+    "Flüssige Sprache garantiert keine Richtigkeit.",
+    "Denke an Belege ausserhalb der Antwort."
+  ],
+  "en": [
+    "What matters when using an AI answer?",
+    "Checking important claims against reliable sources",
+    "Accepting every answer without checking",
+    "Assuming a long answer is always correct",
+    "Entering private passwords to help verify it",
+    "Fluent language does not guarantee accuracy.",
+    "Think of evidence outside the answer."
+  ],
+  "fr": [
+    "Que faut-il faire en utilisant une réponse d'IA ?",
+    "Vérifier les affirmations importantes avec des sources fiables",
+    "Accepter chaque réponse sans vérification",
+    "Considérer toute réponse longue comme vraie",
+    "Saisir ses mots de passe pour aider à vérifier",
+    "Un texte fluide ne garantit pas l'exactitude.",
+    "Cherche des preuves extérieures à la réponse."
+  ],
+  "it": [
+    "Che cosa conta quando si usa una risposta dell'IA?",
+    "Verificare le affermazioni importanti con fonti affidabili",
+    "Accettare ogni risposta senza controlli",
+    "Ritenere sempre corretta una risposta lunga",
+    "Inserire password private per aiutare la verifica",
+    "Un testo scorrevole non garantisce l'esattezza.",
+    "Cerca prove al di fuori della risposta."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist beim Nutzen einer KI-Antwort wichtig? Replaces exact-text recall of: Was ist künstliche Intelligenz (KI)?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_20",
+  "de": [
+    "Wozu nutzt eine Bibliothek eine Datenbank?",
+    "Um Bücher und Ausleihen geordnet zu verwalten",
+    "Um ausschliesslich die Buchdeckel grafisch zu gestalten",
+    "Um nur den Stromverbrauch der Leselampen zu regeln",
+    "Um Texte ohne Speicherung lediglich laut vorzulesen",
+    "Denke an Informationen, die gesucht und aktualisiert werden.",
+    "Welche Aufgabe betrifft Datensätze?"
+  ],
+  "en": [
+    "Why does a library use a database?",
+    "To organise books and loan records",
+    "Only to design book covers graphically",
+    "Only to regulate reading lamps' power consumption",
+    "Only to read texts aloud without storing them",
+    "Think of information that is searched and updated.",
+    "Which task concerns records?"
+  ],
+  "fr": [
+    "Pourquoi une bibliothèque utilise-t-elle une base de données ?",
+    "Pour organiser les livres et les prêts",
+    "Pour dessiner seulement les couvertures",
+    "Pour régler seulement la consommation des lampes",
+    "Pour lire les textes à voix haute sans les enregistrer",
+    "Pense aux informations recherchées et mises à jour.",
+    "Quelle tâche concerne des enregistrements ?"
+  ],
+  "it": [
+    "Perché una biblioteca usa una banca dati?",
+    "Per organizzare libri e prestiti",
+    "Per disegnare soltanto le copertine",
+    "Per regolare soltanto il consumo delle lampade",
+    "Per leggere i testi ad alta voce senza conservarli",
+    "Pensa alle informazioni cercate e aggiornate.",
+    "Quale compito riguarda i dati registrati?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu nutzt eine Bibliothek eine Datenbank? Replaces exact-text recall of: Was ist eine Datenbank?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_22",
+  "de": [
+    "Warum brauchen Geräte gemeinsame Regeln für die Datenübertragung?",
+    "Damit sie gesendete Daten passend verstehen können",
+    "Damit jedes Gerät Daten in einem beliebigen unvereinbaren Format senden kann",
+    "Damit Sender und Empfänger keine gemeinsame Bedeutung benötigen",
+    "Damit allein die Kabelgeschwindigkeit die Bedeutung jeder Nachricht festlegt",
+    "Vergleiche die Verständigung mit einer gemeinsamen Sprache.",
+    "Format und Ablauf müssen zusammenpassen."
+  ],
+  "en": [
+    "Why do devices need shared rules for data transmission?",
+    "So they can interpret transmitted data correctly",
+    "So each device can send any incompatible format",
+    "So sender and recipient need no shared meaning",
+    "So cable speed alone determines every message's meaning",
+    "Compare communication with a shared language.",
+    "Format and sequence must match."
+  ],
+  "fr": [
+    "Pourquoi les appareils ont-ils besoin de règles communes pour transmettre des données ?",
+    "Pour interpréter correctement les données reçues",
+    "Pour que chaque appareil envoie un format incompatible quelconque",
+    "Pour qu'émetteur et destinataire n'aient aucun sens commun",
+    "Pour que la vitesse du câble détermine seule le sens des messages",
+    "Compare la communication à une langue commune.",
+    "Le format et les étapes doivent correspondre."
+  ],
+  "it": [
+    "Perché i dispositivi hanno bisogno di regole comuni per trasmettere dati?",
+    "Per interpretare correttamente i dati ricevuti",
+    "Perché ogni dispositivo invii un formato incompatibile qualsiasi",
+    "Perché mittente e destinatario non abbiano significati condivisi",
+    "Perché la velocità del cavo determini da sola il senso dei messaggi",
+    "Confronta la comunicazione con una lingua comune.",
+    "Formato e sequenza devono corrispondere."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum brauchen Geräte gemeinsame Regeln für die Datenübertragung? Replaces exact-text recall of: Was ist ein Netzwerkprotokoll?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_24",
+  "de": [
+    "Wozu dient HTML auf einer Webseite?",
+    "Inhalte wie Überschriften und Absätze strukturieren",
+    "Ausschliesslich Farben und Abstände mit Stilregeln festlegen",
+    "Die Netzwerkverbindung eines Geräts herstellen",
+    "Passwörter unabhängig von anderen Verfahren sicher verschlüsseln",
+    "Denke an den Aufbau eines Dokuments.",
+    "Gestaltung, Struktur und Stromversorgung sind unterschiedliche Aufgaben."
+  ],
+  "en": [
+    "What is HTML used for on a web page?",
+    "Structuring content such as headings and paragraphs",
+    "Only specify colours and spacing through style rules",
+    "Establish a device's network connection",
+    "Securely encrypt passwords independently of other methods",
+    "Think of a document's structure.",
+    "Styling, structure and power supply are different tasks."
+  ],
+  "fr": [
+    "À quoi sert HTML sur une page Web ?",
+    "Structurer les titres, paragraphes et autres contenus",
+    "Définir uniquement couleurs et espacements avec des règles de style",
+    "Établir la connexion réseau d'un appareil",
+    "Chiffrer les mots de passe indépendamment d'autres procédés",
+    "Pense à la structure d'un document.",
+    "Présentation, structure et alimentation sont des tâches différentes."
+  ],
+  "it": [
+    "A cosa serve HTML in una pagina Web?",
+    "Strutturare titoli, paragrafi e altri contenuti",
+    "Definire solo colori e spazi con regole di stile",
+    "Stabilire la connessione di rete di un dispositivo",
+    "Cifrare password indipendentemente da altri metodi",
+    "Pensa alla struttura di un documento.",
+    "Aspetto, struttura e alimentazione sono compiti diversi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu dient HTML auf einer Webseite? Replaces exact-text recall of: Was ist HTML?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_26",
+  "de": [
+    "Was bezeichnet WLAN?",
+    "Ein drahtloses lokales Netzwerk",
+    "Eine Verbindung nur über Glasfaserkabel",
+    "Ein Programm zum Zeichnen",
+    "Einen Speicherchip im Computer",
+    "Achte auf die Art der Verbindung.",
+    "Denke an Funk statt an ein Kabel zum Gerät."
+  ],
+  "en": [
+    "What is Wi-Fi?",
+    "A wireless local network",
+    "A connection only through fibre cables",
+    "A drawing program",
+    "A memory chip in a computer",
+    "Notice the type of connection.",
+    "Think of radio rather than a cable to the device."
+  ],
+  "fr": [
+    "Qu'est-ce que le Wi-Fi ?",
+    "Un réseau local sans fil",
+    "Une connexion uniquement par fibre optique",
+    "Un logiciel de dessin",
+    "Une puce mémoire",
+    "Observe le type de connexion.",
+    "Pense aux ondes plutôt qu'à un câble vers l'appareil."
+  ],
+  "it": [
+    "Che cos'è il Wi-Fi?",
+    "Una rete locale senza fili",
+    "Una connessione soltanto in fibra ottica",
+    "Un programma di disegno",
+    "Un chip di memoria",
+    "Osserva il tipo di collegamento.",
+    "Pensa alle onde radio invece di un cavo al dispositivo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bezeichnet WLAN? Replaces exact-text recall of: Was ist WLAN (Wi-Fi)?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_28",
+  "de": [
+    "Welche Aufgabe hat ein Webserver?",
+    "Webseiten für anfragende Geräte bereitstellen",
+    "Die angeforderten Webseiten nur lokal als Browser darstellen",
+    "Ausschliesslich Funkverbindungen wie ein Zugangspunkt vermitteln",
+    "Nur Papierkopien von Internetseiten ausgeben",
+    "Denke an Anfrage und Antwort im Internet.",
+    "Woher erhält ein Browser die angeforderten Inhalte?"
+  ],
+  "en": [
+    "What does a web server do?",
+    "Provide web pages to requesting devices",
+    "Only render requested pages locally as a browser",
+    "Only provide wireless connectivity like an access point",
+    "Only produce paper copies of web pages",
+    "Think of requests and responses online.",
+    "Where does a browser obtain requested content?"
+  ],
+  "fr": [
+    "Que fait un serveur Web ?",
+    "Il fournit des pages aux appareils qui les demandent",
+    "Afficher seulement les pages localement comme un navigateur",
+    "Fournir seulement la connexion radio comme un point d'accès",
+    "Produire seulement des copies papier des pages",
+    "Pense aux demandes et aux réponses sur Internet.",
+    "D'où le navigateur reçoit-il les contenus demandés ?"
+  ],
+  "it": [
+    "Che cosa fa un server Web?",
+    "Fornisce pagine ai dispositivi che le richiedono",
+    "Mostrare soltanto le pagine localmente come un browser",
+    "Fornire soltanto connessioni radio come un punto d'accesso",
+    "Produrre soltanto copie cartacee delle pagine",
+    "Pensa a richieste e risposte su Internet.",
+    "Da dove riceve il browser i contenuti richiesti?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aufgabe hat ein Webserver? Replaces exact-text recall of: Was ist ein Server?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_30",
+  "de": [
+    "Was ist ein Vorteil eines Passwort-Managers?",
+    "Er kann unterschiedliche starke Passwörter sicher verwalten",
+    "Er macht ein einziges kurzes Passwort überall sicher",
+    "Er veröffentlicht Passwörter automatisch für Freunde",
+    "Er verhindert jede Betrugsnachricht ohne weitere Vorsicht",
+    "Denke an viele verschiedene Konten.",
+    "Ein Hilfsmittel ersetzt nicht jede Sicherheitsregel."
+  ],
+  "en": [
+    "What is a benefit of a password manager?",
+    "It can securely manage different strong passwords",
+    "It makes one short password safe everywhere",
+    "It automatically publishes passwords for friends",
+    "It stops every scam message without other precautions",
+    "Think of many different accounts.",
+    "A tool does not replace every safety rule."
+  ],
+  "fr": [
+    "Quel est un avantage d'un gestionnaire de mots de passe ?",
+    "Il peut gérer de façon sûre différents mots de passe forts",
+    "Il rend un seul mot de passe court sûr partout",
+    "Il publie automatiquement les mots de passe pour les amis",
+    "Il bloque toute escroquerie sans autre précaution",
+    "Pense à plusieurs comptes différents.",
+    "Un outil ne remplace pas toutes les règles de sécurité."
+  ],
+  "it": [
+    "Qual è un vantaggio di un gestore di password?",
+    "Può gestire in modo sicuro password diverse e robuste",
+    "Rende sicura ovunque un'unica password corta",
+    "Pubblica automaticamente le password per gli amici",
+    "Blocca ogni truffa senza altre precauzioni",
+    "Pensa a molti account diversi.",
+    "Uno strumento non sostituisce ogni regola di sicurezza."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist ein Vorteil eines Passwort-Managers? Replaces exact-text recall of: Was ist ein Passwort-Manager?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_32",
+  "de": [
+    "Was unterscheidet einen Computervirus von einem gewöhnlichen Programm?",
+    "Er kann andere Dateien infizieren und sich so verbreiten",
+    "Es ist nur ein ungewollter Programmfehler ohne Verbreitung",
+    "Es ist immer eine legitime Sicherheitsaktualisierung",
+    "Es ist ausschliesslich ein physischer Defekt der Festplatte",
+    "Denke an schädliche Software.",
+    "Der Begriff beschreibt eine Art der Verbreitung."
+  ],
+  "en": [
+    "What distinguishes a computer virus from an ordinary program?",
+    "It can infect other files and spread that way",
+    "It is only an unintended software error without spreading",
+    "It is always a legitimate security update",
+    "It is only a physical hard-drive fault",
+    "Think of malicious software.",
+    "The term describes a way of spreading."
+  ],
+  "fr": [
+    "Qu'est-ce qui distingue un virus informatique d'un programme ordinaire ?",
+    "Il peut infecter d'autres fichiers et se propager ainsi",
+    "C'est seulement une erreur involontaire sans propagation",
+    "C'est toujours une mise à jour de sécurité légitime",
+    "C'est uniquement une panne physique du disque dur",
+    "Pense aux logiciels malveillants.",
+    "Le terme décrit un mode de propagation."
+  ],
+  "it": [
+    "Che cosa distingue un virus informatico da un programma normale?",
+    "Può infettare altri file e diffondersi così",
+    "È solo un errore involontario senza diffusione",
+    "È sempre un aggiornamento di sicurezza legittimo",
+    "È soltanto un guasto fisico del disco rigido",
+    "Pensa al software dannoso.",
+    "Il termine descrive un modo di diffusione."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was unterscheidet einen Computervirus von einem gewöhnlichen Programm? Replaces exact-text recall of: Was ist ein Computervirus?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_34",
+  "de": [
+    "Warum braucht eine Bilderkennungs-KI viele passende Lernbeispiele?",
+    "Um Muster zu lernen, die auch bei neuen Bildern helfen",
+    "Damit sie Bilder ohne jede Prüfung immer richtig erkennt",
+    "Damit die Bildschirmfarbe ihre Antwort bestimmt",
+    "Damit Lernen ohne Daten möglich wird",
+    "Denke an Unterschiede zwischen Beispielen.",
+    "Gute Trainingsdaten ersetzen keine Überprüfung der Ergebnisse."
+  ],
+  "en": [
+    "Why does image-recognition AI need many suitable training examples?",
+    "To learn patterns useful for new images too",
+    "To guarantee correct recognition without any checks",
+    "To let screen colour determine its answer",
+    "To make learning without data possible",
+    "Think of differences between examples.",
+    "Good training data does not replace checking results."
+  ],
+  "fr": [
+    "Pourquoi une IA de reconnaissance d'images a-t-elle besoin de nombreux exemples adaptés ?",
+    "Pour apprendre des motifs utiles aussi sur de nouvelles images",
+    "Pour garantir toute reconnaissance sans vérification",
+    "Pour laisser la couleur de l'écran déterminer la réponse",
+    "Pour apprendre sans données",
+    "Pense aux différences entre les exemples.",
+    "De bonnes données ne remplacent pas la vérification des résultats."
+  ],
+  "it": [
+    "Perché un'IA che riconosce immagini richiede molti esempi adatti?",
+    "Per imparare schemi utili anche per nuove immagini",
+    "Per garantire riconoscimenti corretti senza controlli",
+    "Per far decidere la risposta al colore dello schermo",
+    "Per imparare senza dati",
+    "Pensa alle differenze tra gli esempi.",
+    "Buoni dati non sostituiscono la verifica dei risultati."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum braucht eine Bilderkennungs-KI viele passende Lernbeispiele? Replaces exact-text recall of: Was ist Deep Learning?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_36",
+  "de": [
+    "Welche Aussage über ein künstliches neuronales Netz stimmt?",
+    "Es ist ein Rechenmodell mit verknüpften Einheiten",
+    "Es ist ein vollständiges menschliches Gehirn",
+    "Es ist bloss ein Bündel von Stromkabeln",
+    "Es kennt jede richtige Antwort schon vor dem Training",
+    "Unterscheide Vorbild und technisches Modell.",
+    "Ein ähnlicher Name bedeutet nicht dieselben Fähigkeiten wie beim Menschen."
+  ],
+  "en": [
+    "Which statement about an artificial neural network is correct?",
+    "It is a computational model with connected units",
+    "It is a complete human brain",
+    "It is merely a bundle of power cables",
+    "It knows every correct answer before training",
+    "Distinguish an inspiration from a technical model.",
+    "A similar name does not imply the same abilities as a human."
+  ],
+  "fr": [
+    "Quelle phrase sur un réseau de neurones artificiels est correcte ?",
+    "C'est un modèle de calcul composé d'unités reliées",
+    "C'est un cerveau humain complet",
+    "C'est seulement un faisceau de câbles électriques",
+    "Il connaît toutes les bonnes réponses avant l'entraînement",
+    "Distingue source d'inspiration et modèle technique.",
+    "Un nom semblable n'implique pas les mêmes capacités humaines."
+  ],
+  "it": [
+    "Quale frase su una rete neurale artificiale è corretta?",
+    "È un modello di calcolo con unità collegate",
+    "È un cervello umano completo",
+    "È soltanto un fascio di cavi elettrici",
+    "Conosce ogni risposta corretta prima dell'addestramento",
+    "Distingui ispirazione e modello tecnico.",
+    "Un nome simile non implica le stesse capacità umane."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aussage über ein künstliches neuronales Netz stimmt? Replaces exact-text recall of: Was ist ein neuronales Netz?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_38",
+  "de": [
+    "Ein Chatbot schreibt sehr menschlich. Was folgt daraus sicher?",
+    "Sein Text kann menschlich wirken, ohne dass er ein Mensch ist",
+    "Er hat damit sicher menschliche Gefühle bewiesen",
+    "Jede seiner Aussagen ist deshalb wahr",
+    "Er darf deshalb deine Passwörter kennen",
+    "Unterscheide überzeugende Sprache von inneren Fähigkeiten.",
+    "Was lässt sich allein aus einem Text tatsächlich schliessen?"
+  ],
+  "en": [
+    "A chatbot writes in a very human-like way. What can safely be concluded?",
+    "Its text can seem human without it being a person",
+    "It has definitely proved it has human feelings",
+    "Every statement it makes is therefore true",
+    "It should therefore know your passwords",
+    "Distinguish convincing language from inner abilities.",
+    "What can a text alone really show?"
+  ],
+  "fr": [
+    "Un chatbot écrit de façon très humaine. Que peut-on en conclure avec certitude ?",
+    "Son texte peut sembler humain sans qu'il soit une personne",
+    "Il a prouvé qu'il ressent des émotions humaines",
+    "Toutes ses affirmations sont donc vraies",
+    "Il doit donc connaître tes mots de passe",
+    "Distingue langage convaincant et capacités internes.",
+    "Que peut réellement montrer un texte seul ?"
+  ],
+  "it": [
+    "Un chatbot scrive in modo molto umano. Che cosa si può concludere con certezza?",
+    "Il suo testo può sembrare umano senza che sia una persona",
+    "Ha dimostrato di avere emozioni umane",
+    "Tutte le sue affermazioni sono quindi vere",
+    "Deve quindi conoscere le tue password",
+    "Distingui linguaggio convincente e capacità interne.",
+    "Che cosa può mostrare davvero un testo da solo?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Ein Chatbot schreibt sehr menschlich. Was folgt daraus sicher? Replaces exact-text recall of: Was ist Turing-Test?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_40",
+  "de": [
+    "Eine KI lernt Tierbilder mit den Etiketten «Katze» und «Hund». Was liefern diese Etiketten?",
+    "Die bekannten richtigen Kategorien der Lernbeispiele",
+    "Nur den Speicherort der Bilder, ohne ihre Bedeutung",
+    "Die erst später zufällig zu wählende Kategorie",
+    "Eine Garantie, dass jedes neue Bild fehlerfrei erkannt wird",
+    "Denke an Lernen mit vorgegebenen Lösungen.",
+    "Was wird mit jedem Beispiel zusammen gezeigt?"
+  ],
+  "en": [
+    "An AI learns from animal pictures labelled 'cat' and 'dog'. What do the labels provide?",
+    "The known correct categories of the training examples",
+    "Only where images are stored, without their meaning",
+    "The category to be chosen randomly later",
+    "A guarantee that every new image is recognised without error",
+    "Think of learning with supplied answers.",
+    "What is shown alongside each example?"
+  ],
+  "fr": [
+    "Une IA apprend avec des images étiquetées « chat » et « chien ». Que fournissent ces étiquettes ?",
+    "Les catégories correctes connues des exemples",
+    "Seulement l'emplacement des images, sans leur sens",
+    "La catégorie à choisir au hasard plus tard",
+    "La garantie d'une reconnaissance parfaite de toute nouvelle image",
+    "Pense à l'apprentissage avec des réponses données.",
+    "Qu'indique-t-on avec chaque exemple ?"
+  ],
+  "it": [
+    "Un'IA impara da immagini etichettate «gatto» e «cane». Che cosa forniscono le etichette?",
+    "Le categorie corrette note degli esempi",
+    "Solo la posizione delle immagini, senza il loro significato",
+    "La categoria da scegliere casualmente in seguito",
+    "La garanzia di riconoscere ogni nuova immagine senza errori",
+    "Pensa all'apprendimento con risposte fornite.",
+    "Che cosa viene mostrato insieme a ogni esempio?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Eine KI lernt Tierbilder mit den Etiketten «Katze» und «Hund». Was liefern diese Etiketten? Replaces exact-text recall of: Was ist der Unterschied zwischen supervised und unsupervised learning?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_42",
+  "de": [
+    "Wozu dient die Verschlüsselung einer Nachricht?",
+    "Den Inhalt ohne passenden Schlüssel unlesbar machen",
+    "Die Nachricht für alle leichter lesbar machen",
+    "Die Nachricht automatisch wahr machen",
+    "Den Empfänger von jeder Verantwortung befreien",
+    "Denke an den Schutz vertraulicher Inhalte.",
+    "Geheimhaltung ist nicht dasselbe wie die Prüfung der Wahrheit."
+  ],
+  "en": [
+    "What is message encryption for?",
+    "Making content unreadable without the right key",
+    "Making the message easier for everyone to read",
+    "Automatically making the message true",
+    "Freeing the recipient from all responsibility",
+    "Think of protecting confidential content.",
+    "Secrecy is not the same as checking truth."
+  ],
+  "fr": [
+    "À quoi sert le chiffrement d'un message ?",
+    "Rendre le contenu illisible sans la bonne clé",
+    "Rendre le message plus facile à lire pour tous",
+    "Rendre automatiquement le message vrai",
+    "Libérer le destinataire de toute responsabilité",
+    "Pense à protéger un contenu confidentiel.",
+    "La confidentialité ne prouve pas la vérité."
+  ],
+  "it": [
+    "A cosa serve cifrare un messaggio?",
+    "Rendere il contenuto illeggibile senza la chiave adatta",
+    "Rendere il messaggio più leggibile per tutti",
+    "Rendere automaticamente vero il messaggio",
+    "Liberare il destinatario da ogni responsabilità",
+    "Pensa a proteggere contenuti riservati.",
+    "La segretezza non dimostra la verità."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu dient die Verschlüsselung einer Nachricht? Replaces exact-text recall of: Was ist asymmetrische Verschlüsselung?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_44",
+  "de": [
+    "Eine Wetter-App holt Messwerte über eine Programmierschnittstelle. Wozu dient diese?",
+    "Zum geregelten Datenaustausch zwischen Programmen",
+    "Zum ausschliesslichen Gestalten der Schrift auf dem Bildschirm",
+    "Zum Ersetzen tatsächlicher Messwerte durch beliebige Schätzungen",
+    "Zum Verhindern des Datenaustauschs mit dem Wetterdienst",
+    "Denke an eine festgelegte Art von Anfrage und Antwort.",
+    "Zwei Programme müssen sich über Daten verständigen."
+  ],
+  "en": [
+    "A weather app gets readings through a programming interface. What is it for?",
+    "Structured data exchange between programs",
+    "Only to style text on the screen",
+    "To replace actual measurements with arbitrary guesses",
+    "To prevent data exchange with the weather service",
+    "Think of a defined request and response.",
+    "Two programs must communicate about data."
+  ],
+  "fr": [
+    "Une application météo reçoit des mesures via une interface de programmation. À quoi sert-elle ?",
+    "À échanger des données entre programmes selon des règles",
+    "À styliser seulement les caractères à l'écran",
+    "À remplacer les mesures par des suppositions arbitraires",
+    "À empêcher les échanges avec le service météo",
+    "Pense à une demande et une réponse définies.",
+    "Deux programmes doivent communiquer des données."
+  ],
+  "it": [
+    "Un'app meteo riceve misure tramite un'interfaccia di programmazione. A cosa serve?",
+    "A scambiare dati tra programmi secondo regole",
+    "A definire soltanto lo stile dei caratteri sullo schermo",
+    "A sostituire le misure con supposizioni arbitrarie",
+    "A impedire lo scambio di dati con il servizio meteo",
+    "Pensa a una richiesta e una risposta definite.",
+    "Due programmi devono comunicare dati."
+  ],
+  "reason": "Individually reviewed knowledge objective: Eine Wetter-App holt Messwerte über eine Programmierschnittstelle. Wozu dient diese? Replaces exact-text recall of: Was ist API?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_46",
+  "de": [
+    "Warum testet man eine neue Programmversion vor der Veröffentlichung?",
+    "Um Fehler zu finden und bestehende Funktionen zu prüfen",
+    "Um den Namen der Entwickler zu verstecken",
+    "Weil ein Test alle künftigen Fehler sicher ausschliesst",
+    "Damit niemand das Programm später benutzen kann",
+    "Denke an verschiedene Eingaben und Abläufe.",
+    "Tests liefern Hinweise, aber keine unbegrenzte Garantie."
+  ],
+  "en": [
+    "Why test a new program version before release?",
+    "To find faults and check existing functions",
+    "To hide the developers' names",
+    "Because one test guarantees no future faults",
+    "So no one can use the program later",
+    "Think of different inputs and processes.",
+    "Tests provide evidence, not an unlimited guarantee."
+  ],
+  "fr": [
+    "Pourquoi tester une nouvelle version avant sa publication ?",
+    "Pour trouver des erreurs et vérifier les fonctions existantes",
+    "Pour cacher le nom des développeurs",
+    "Parce qu'un test exclut toute erreur future",
+    "Pour que personne ne puisse ensuite l'utiliser",
+    "Pense aux différentes saisies et étapes.",
+    "Les tests donnent des indices, pas une garantie illimitée."
+  ],
+  "it": [
+    "Perché provare una nuova versione prima di pubblicarla?",
+    "Per trovare errori e verificare le funzioni esistenti",
+    "Per nascondere i nomi degli sviluppatori",
+    "Perché una prova esclude ogni errore futuro",
+    "Perché nessuno possa usarla in seguito",
+    "Pensa a inserimenti e procedure diversi.",
+    "Le prove forniscono evidenze, non una garanzia illimitata."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum testet man eine neue Programmversion vor der Veröffentlichung? Replaces exact-text recall of: Was ist DevOps?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_48",
+  "de": [
+    "Was kennzeichnet eine virtuelle Realität mit VR-Brille?",
+    "Eine computergenerierte Umgebung erscheint räumlich um die Person",
+    "Eine gedruckte Karte ersetzt jeden Bildschirm",
+    "Die reale Umgebung wird tatsächlich neu gebaut",
+    "Alle Inhalte sind automatisch wahr und sicher",
+    "Unterscheide digitale Darstellung und reale Umgebung.",
+    "Die Brille beeinflusst das wahrgenommene Bild."
+  ],
+  "en": [
+    "What characterises virtual reality with a VR headset?",
+    "A computer-generated environment appears spatially around the user",
+    "A printed map replaces every screen",
+    "The real surroundings are physically rebuilt",
+    "All content is automatically true and safe",
+    "Distinguish digital representation from physical surroundings.",
+    "The headset affects what the user sees."
+  ],
+  "fr": [
+    "Qu'est-ce qui caractérise la réalité virtuelle avec un casque ?",
+    "Un environnement numérique apparaît en trois dimensions autour de la personne",
+    "Une carte imprimée remplace tous les écrans",
+    "L'environnement réel est physiquement reconstruit",
+    "Tous les contenus sont automatiquement vrais et sûrs",
+    "Distingue représentation numérique et environnement réel.",
+    "Le casque modifie l'image perçue."
+  ],
+  "it": [
+    "Che cosa caratterizza la realtà virtuale con un visore?",
+    "Un ambiente generato dal computer appare nello spazio attorno alla persona",
+    "Una carta stampata sostituisce ogni schermo",
+    "L'ambiente reale viene ricostruito fisicamente",
+    "Tutti i contenuti sono automaticamente veri e sicuri",
+    "Distingui rappresentazione digitale e ambiente reale.",
+    "Il visore modifica l'immagine percepita."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kennzeichnet eine virtuelle Realität mit VR-Brille? Replaces exact-text recall of: Was ist Metaverse?"
+},
+{
+  "key": "6/science/technik-informatik-6/ti6_50",
+  "de": [
+    "Ein Formular erwartet eine Zahl, aber jemand schreibt Text. Wie sollte ein robustes Programm reagieren?",
+    "Die Eingabe erklären und eine Korrektur ermöglichen",
+    "Abstürzen und alle Daten löschen",
+    "Den Text ungeprüft als beliebige Zahl speichern",
+    "Das ganze Gerät dauerhaft sperren",
+    "Denke an unerwartete Eingaben.",
+    "Eine verständliche Rückmeldung hilft beim sicheren Weiterarbeiten."
+  ],
+  "en": [
+    "A form expects a number but someone enters text. How should a robust program respond?",
+    "Explain the input problem and allow correction",
+    "Crash and delete all data",
+    "Store the text as an arbitrary number without checking",
+    "Permanently lock the whole device",
+    "Think of unexpected input.",
+    "Clear feedback helps the user continue safely."
+  ],
+  "fr": [
+    "Un formulaire attend un nombre mais reçoit du texte. Que devrait faire un programme robuste ?",
+    "Expliquer le problème et permettre la correction",
+    "Planter et supprimer toutes les données",
+    "Enregistrer le texte comme un nombre quelconque sans vérification",
+    "Bloquer définitivement tout l'appareil",
+    "Pense aux saisies inattendues.",
+    "Un message clair aide à poursuivre sans risque."
+  ],
+  "it": [
+    "Un modulo attende un numero ma riceve testo. Come dovrebbe reagire un programma robusto?",
+    "Spiegare il problema e consentire la correzione",
+    "Bloccarsi e cancellare tutti i dati",
+    "Salvare il testo come numero qualsiasi senza controlli",
+    "Bloccare definitivamente tutto il dispositivo",
+    "Pensa agli inserimenti inattesi.",
+    "Un messaggio chiaro aiuta a proseguire in sicurezza."
+  ],
+  "reason": "Individually reviewed knowledge objective: Ein Formular erwartet eine Zahl, aber jemand schreibt Text. Wie sollte ein robustes Programm reagieren? Replaces exact-text recall of: Was ist Robustheit in der Softwareentwicklung?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_2",
+  "de": [
+    "Welche Drucktechnik entwickelte Gutenberg um 1450 in Europa weiter?",
+    "Buchdruck mit beweglichen Metalllettern",
+    "Ausschliesslich das handschriftliche Abschreiben auf Pergament",
+    "Drucken mit einer für jede ganze Seite neu geschnitzten Holzplatte",
+    "Vervielfältigen allein durch mündliches Diktieren",
+    "Denke an wiederverwendbare Zeichen.",
+    "Die einzelnen Zeichen konnten neu zusammengesetzt werden."
+  ],
+  "en": [
+    "Which printing technique did Gutenberg develop in Europe around 1450?",
+    "Printing with movable metal type",
+    "Only copying by hand on parchment",
+    "Printing with a newly carved full-page woodblock for every page",
+    "Copying solely through oral dictation",
+    "Think of reusable characters.",
+    "Individual characters could be rearranged."
+  ],
+  "fr": [
+    "Quelle technique Gutenberg développa-t-il en Europe vers 1450 ?",
+    "L'impression avec des caractères métalliques mobiles",
+    "Uniquement la copie manuscrite sur parchemin",
+    "L'impression avec une nouvelle planche de bois gravée par page entière",
+    "La reproduction uniquement par dictée orale",
+    "Pense à des caractères réutilisables.",
+    "On pouvait recomposer les caractères individuels."
+  ],
+  "it": [
+    "Quale tecnica sviluppò Gutenberg in Europa attorno al 1450?",
+    "La stampa con caratteri metallici mobili",
+    "Soltanto la copia a mano su pergamena",
+    "La stampa con una nuova tavola di legno incisa per ogni pagina intera",
+    "La riproduzione soltanto tramite dettatura orale",
+    "Pensa a caratteri riutilizzabili.",
+    "I singoli caratteri potevano essere ricomposti."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Drucktechnik entwickelte Gutenberg um 1450 in Europa weiter? Replaces exact-text recall of: Welche Drucktechnik entwickelte Gutenberg um 1450 in Europa weiter?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_8",
+  "de": [
+    "Welche drei Begriffe wurden zum bekannten Leitbild der Französischen Revolution?",
+    "Freiheit, Gleichheit, Brüderlichkeit",
+    "Glaube, Handel, Seefahrt",
+    "König, Adel, Erbfolge",
+    "Ordnung, Gehorsam, Leibeigenschaft",
+    "Denke an Forderungen gegen alte Vorrechte.",
+    "Die Begriffe beschreiben ein gesellschaftliches Ideal."
+  ],
+  "en": [
+    "Which three ideas became a famous motto of the French Revolution?",
+    "Liberty, equality, fraternity",
+    "Faith, trade, navigation",
+    "King, nobility, succession",
+    "Order, obedience, serfdom",
+    "Think of demands against old privileges.",
+    "The words describe a social ideal."
+  ],
+  "fr": [
+    "Quels trois termes sont devenus une devise célèbre de la Révolution française ?",
+    "Liberté, égalité, fraternité",
+    "Foi, commerce, navigation",
+    "Roi, noblesse, succession",
+    "Ordre, obéissance, servage",
+    "Pense aux revendications contre les anciens privilèges.",
+    "Ces termes décrivent un idéal de société."
+  ],
+  "it": [
+    "Quali tre idee divennero un motto famoso della Rivoluzione francese?",
+    "Libertà, uguaglianza, fraternità",
+    "Fede, commercio, navigazione",
+    "Re, nobiltà, successione",
+    "Ordine, obbedienza, servitù",
+    "Pensa alle richieste contro gli antichi privilegi.",
+    "Le parole descrivono un ideale sociale."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche drei Begriffe wurden zum bekannten Leitbild der Französischen Revolution? Replaces exact-text recall of: Was waren die drei Leitprinzipien der Französischen Revolution?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_12",
+  "de": [
+    "Was wurde durch die englischen Veränderungen von 1688 und 1689 gestärkt?",
+    "Die Stellung des Parlaments gegenüber der Krone",
+    "Die uneingeschränkte Alleinherrschaft des Königs",
+    "Die Abschaffung jeder parlamentarischen Mitsprache",
+    "Die Einführung allgemeiner gleicher Wahlen für alle Erwachsenen damals",
+    "Vergleiche begrenzte und unbegrenzte Königsmacht.",
+    "Wer konnte dem Herrscher Regeln setzen?"
+  ],
+  "en": [
+    "What was strengthened by the English changes of 1688 and 1689?",
+    "Parliament's position in relation to the Crown",
+    "The king's unlimited sole rule",
+    "The abolition of every parliamentary say",
+    "The introduction then of universal equal voting for all adults",
+    "Compare limited and unlimited royal power.",
+    "Who could impose rules on the ruler?"
+  ],
+  "fr": [
+    "Que renforcèrent les changements anglais de 1688 et 1689 ?",
+    "La position du Parlement face à la Couronne",
+    "Le pouvoir royal illimité",
+    "La suppression de toute participation parlementaire",
+    "L'introduction à l'époque du suffrage universel égal pour tous les adultes",
+    "Compare pouvoir royal limité et illimité.",
+    "Qui pouvait imposer des règles au souverain ?"
+  ],
+  "it": [
+    "Che cosa rafforzarono i cambiamenti inglesi del 1688 e 1689?",
+    "La posizione del Parlamento rispetto alla Corona",
+    "Il potere reale illimitato",
+    "L'eliminazione di ogni partecipazione parlamentare",
+    "L'introduzione allora del voto universale uguale per tutti gli adulti",
+    "Confronta potere reale limitato e illimitato.",
+    "Chi poteva imporre regole al sovrano?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was wurde durch die englischen Veränderungen von 1688 und 1689 gestärkt? Replaces exact-text recall of: Was ist die Glorious Revolution (1688)?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_18",
+  "de": [
+    "Wie half der Buchdruck der Verbreitung reformatorischer Ideen?",
+    "Viele Exemplare von Schriften konnten rascher hergestellt werden",
+    "Alle Menschen konnten dadurch sofort lesen",
+    "Kirchliche Streitfragen verschwanden dadurch sofort",
+    "Schriften mussten nun ausschliesslich mündlich weitergegeben werden",
+    "Denke an die Herstellung von Kopien.",
+    "Die Technik verbreitete Texte, nicht automatisch Zustimmung."
+  ],
+  "en": [
+    "How did printing help spread Reformation ideas?",
+    "Many copies of writings could be produced faster",
+    "Everyone immediately became able to read",
+    "All religious disagreements immediately disappeared",
+    "Writings now had to be passed on only orally",
+    "Think of making copies.",
+    "Technology spread texts, not automatic agreement."
+  ],
+  "fr": [
+    "Comment l'imprimerie aida-t-elle à diffuser les idées de la Réforme ?",
+    "Elle permit de produire plus vite de nombreux exemplaires",
+    "Tout le monde sut immédiatement lire",
+    "Tous les désaccords religieux disparurent aussitôt",
+    "Les écrits durent être transmis uniquement oralement",
+    "Pense à la fabrication des copies.",
+    "La technique diffusait des textes, pas une adhésion automatique."
+  ],
+  "it": [
+    "Come aiutò la stampa a diffondere le idee della Riforma?",
+    "Permise di produrre più rapidamente molte copie",
+    "Tutti impararono subito a leggere",
+    "Tutti i disaccordi religiosi scomparvero subito",
+    "Gli scritti dovettero essere trasmessi solo oralmente",
+    "Pensa alla produzione delle copie.",
+    "La tecnica diffondeva testi, non consenso automatico."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wie half der Buchdruck der Verbreitung reformatorischer Ideen? Replaces exact-text recall of: Welche Auswirkung hatte der Buchdruck auf die Reformation?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_20",
+  "de": [
+    "Welches Anliegen stand in der französischen Menschenrechtserklärung von 1789?",
+    "Freiheit und Gleichheit an Rechten",
+    "Erbliche Vorrechte als Recht aller Adligen",
+    "Unbegrenzte Macht jedes Königs",
+    "Abschaffung jeder öffentlichen Diskussion",
+    "Denke an Kritik an der Ständegesellschaft.",
+    "Unterscheide formulierte Rechte von ihrer damaligen unvollständigen Umsetzung."
+  ],
+  "en": [
+    "Which principle appeared in the French Declaration of Rights of 1789?",
+    "Liberty and equality in rights",
+    "Hereditary privileges as a right of all nobles",
+    "Unlimited power for every king",
+    "Abolishing all public discussion",
+    "Think of criticism of the estate system.",
+    "Distinguish declared rights from their incomplete application at the time."
+  ],
+  "fr": [
+    "Quel principe figurait dans la Déclaration française des droits de 1789 ?",
+    "La liberté et l'égalité en droits",
+    "Les privilèges héréditaires comme droit de tous les nobles",
+    "Le pouvoir illimité de chaque roi",
+    "La suppression de toute discussion publique",
+    "Pense aux critiques de la société d'ordres.",
+    "Distingue les droits proclamés de leur application alors incomplète."
+  ],
+  "it": [
+    "Quale principio figurava nella dichiarazione francese dei diritti del 1789?",
+    "Libertà e uguaglianza nei diritti",
+    "Privilegi ereditari come diritto di tutti i nobili",
+    "Potere illimitato di ogni re",
+    "Eliminazione di ogni discussione pubblica",
+    "Pensa alle critiche della società per ordini.",
+    "Distingui i diritti dichiarati dalla loro attuazione allora incompleta."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Anliegen stand in der französischen Menschenrechtserklärung von 1789? Replaces exact-text recall of: Was ist die Erklärung der Menschenrechte (1789)?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_22",
+  "de": [
+    "Was kennzeichnete den europäischen Kolonialismus?",
+    "Fremde Gebiete beherrschen und ihre Bevölkerung und Ressourcen ausbeuten",
+    "Gleichberechtigte Ferienbesuche ohne Herrschaft",
+    "Ausschliesslich freiwilligen Kulturaustausch ohne Machtgefälle",
+    "Nur Handel innerhalb des eigenen Landes",
+    "Denke an ungleiche Machtverhältnisse.",
+    "Wer bestimmte über Land und Menschen?"
+  ],
+  "en": [
+    "What characterised European colonialism?",
+    "Ruling foreign territories and exploiting their people and resources",
+    "Equal holiday visits without domination",
+    "Only voluntary cultural exchange without unequal power",
+    "Only trade within one's own country",
+    "Think of unequal power.",
+    "Who controlled land and people?"
+  ],
+  "fr": [
+    "Qu'est-ce qui caractérisait le colonialisme européen ?",
+    "Dominer des territoires étrangers et exploiter leurs populations et ressources",
+    "Des visites touristiques égalitaires sans domination",
+    "Uniquement des échanges culturels volontaires sans inégalité de pouvoir",
+    "Seulement le commerce intérieur",
+    "Pense aux rapports de pouvoir inégaux.",
+    "Qui décidait du sort des terres et des populations ?"
+  ],
+  "it": [
+    "Che cosa caratterizzava il colonialismo europeo?",
+    "Dominare territori stranieri e sfruttarne popolazioni e risorse",
+    "Visite turistiche paritarie senza dominio",
+    "Soltanto scambi culturali volontari senza squilibri di potere",
+    "Soltanto commercio interno",
+    "Pensa ai rapporti di potere disuguali.",
+    "Chi controllava terre e persone?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kennzeichnete den europäischen Kolonialismus? Replaces exact-text recall of: Was ist Kolonialismus?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_26",
+  "de": [
+    "Was bedeutet Säkularisierung in Staat und Gesellschaft?",
+    "Kirchlicher Einfluss nimmt in bestimmten Bereichen ab",
+    "Jede Person wird gesetzlich zum Kirchenbesuch verpflichtet",
+    "Alle politischen Aufgaben gehen an Geistliche",
+    "Religiöse Ansichten werden überall identisch",
+    "Denke an das Verhältnis zwischen Religion und staatlichen Aufgaben.",
+    "Es geht um einen gesellschaftlichen Wandel, nicht um jede einzelne Überzeugung."
+  ],
+  "en": [
+    "What does secularisation in state and society mean?",
+    "Church influence decreases in certain areas",
+    "Everyone is legally required to attend church",
+    "All political tasks pass to clergy",
+    "Religious views become identical everywhere",
+    "Think of religion's relationship to state responsibilities.",
+    "This is social change, not every individual's belief."
+  ],
+  "fr": [
+    "Que signifie la sécularisation de l'État et de la société ?",
+    "L'influence de l'Église diminue dans certains domaines",
+    "Chacun doit légalement aller à l'église",
+    "Toutes les tâches politiques passent au clergé",
+    "Les opinions religieuses deviennent identiques partout",
+    "Pense aux liens entre religion et missions de l'État.",
+    "Il s'agit d'un changement social, pas de chaque conviction individuelle."
+  ],
+  "it": [
+    "Che cosa significa secolarizzazione dello Stato e della società?",
+    "L'influenza della Chiesa diminuisce in certi ambiti",
+    "Tutti devono andare in chiesa per legge",
+    "Tutti i compiti politici passano al clero",
+    "Le opinioni religiose diventano identiche ovunque",
+    "Pensa ai rapporti tra religione e compiti statali.",
+    "È un cambiamento sociale, non ogni singola convinzione."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutet Säkularisierung in Staat und Gesellschaft? Replaces exact-text recall of: Was ist Säkularisierung?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_28",
+  "de": [
+    "Was war ein Ziel der französischen Encyclopédie der Aufklärung?",
+    "Wissen sammeln, ordnen und zugänglich machen",
+    "Alle Bücher ausser Gebetbüchern verbieten",
+    "Nur geheime Befehle für Könige sammeln",
+    "Handwerkliches Wissen grundsätzlich ausschliessen",
+    "Denke an ein grosses Nachschlagewerk.",
+    "Welche Rolle kann Wissen für selbstständiges Denken spielen?"
+  ],
+  "en": [
+    "What was one aim of the French Enlightenment Encyclopédie?",
+    "Collecting, organising and making knowledge accessible",
+    "Banning all books except prayer books",
+    "Collecting only secret orders for kings",
+    "Excluding practical craft knowledge in principle",
+    "Think of a large reference work.",
+    "How can knowledge support independent thinking?"
+  ],
+  "fr": [
+    "Quel était un objectif de l'Encyclopédie des Lumières ?",
+    "Rassembler, organiser et rendre les savoirs accessibles",
+    "Interdire tous les livres sauf les livres de prières",
+    "Recueillir seulement des ordres secrets pour les rois",
+    "Exclure par principe les savoir-faire artisanaux",
+    "Pense à un grand ouvrage de référence.",
+    "Comment le savoir aide-t-il à penser par soi-même ?"
+  ],
+  "it": [
+    "Qual era uno scopo dell'Encyclopédie illuminista?",
+    "Raccogliere, ordinare e rendere accessibili le conoscenze",
+    "Vietare tutti i libri tranne quelli di preghiere",
+    "Raccogliere soltanto ordini segreti per i re",
+    "Escludere per principio le conoscenze artigianali",
+    "Pensa a una grande opera di consultazione.",
+    "Come aiuta il sapere a pensare autonomamente?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was war ein Ziel der französischen Encyclopédie der Aufklärung? Replaces exact-text recall of: Was ist Encyclopédie (1751–1772)?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_32",
+  "de": [
+    "Was schützt Pressefreiheit?",
+    "Die Möglichkeit, ohne staatliche Vorzensur kritisch zu berichten",
+    "Das Recht, jede erfundene Anschuldigung folgenlos zu verbreiten",
+    "Die Pflicht, nur Regierungslob zu drucken",
+    "Ein Verbot aller unterschiedlichen Meinungen",
+    "Unterscheide freie Berichterstattung und Verantwortung.",
+    "Kritik an Mächtigen muss möglich sein."
+  ],
+  "en": [
+    "What does press freedom protect?",
+    "The ability to report critically without state prior censorship",
+    "The right to spread every invented accusation without consequences",
+    "The duty to print only praise of the government",
+    "A ban on all differing opinions",
+    "Distinguish free reporting from responsibility.",
+    "Criticism of powerful people must be possible."
+  ],
+  "fr": [
+    "Que protège la liberté de la presse ?",
+    "La possibilité d'informer de façon critique sans censure préalable de l'État",
+    "Le droit de diffuser toute accusation inventée sans conséquence",
+    "L'obligation de ne publier que des éloges du gouvernement",
+    "L'interdiction de toutes les opinions différentes",
+    "Distingue information libre et responsabilité.",
+    "La critique des puissants doit être possible."
+  ],
+  "it": [
+    "Che cosa protegge la libertà di stampa?",
+    "La possibilità di informare criticamente senza censura preventiva statale",
+    "Il diritto di diffondere ogni accusa inventata senza conseguenze",
+    "L'obbligo di pubblicare soltanto elogi del governo",
+    "Il divieto di tutte le opinioni diverse",
+    "Distingui informazione libera e responsabilità.",
+    "Deve essere possibile criticare chi ha potere."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was schützt Pressefreiheit? Replaces exact-text recall of: Was ist Pressefreiheit?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_34",
+  "de": [
+    "Wovon erklärten sich die dreizehn Kolonien 1776 unabhängig?",
+    "Von der britischen Herrschaft",
+    "Von der spanischen Herrschaft",
+    "Von der französischen Herrschaft",
+    "Von der niederländischen Herrschaft",
+    "Denke an die Entstehung der USA.",
+    "Welcher Staat hatte diese Kolonien regiert?"
+  ],
+  "en": [
+    "What did the thirteen colonies declare independence from in 1776?",
+    "British rule",
+    "Spanish rule",
+    "French rule",
+    "Dutch rule",
+    "Think of the origins of the USA.",
+    "Which state had ruled these colonies?"
+  ],
+  "fr": [
+    "De quoi les treize colonies se déclarèrent-elles indépendantes en 1776 ?",
+    "De la domination britannique",
+    "De la domination espagnole",
+    "De la domination française",
+    "De la domination néerlandaise",
+    "Pense à la naissance des États-Unis.",
+    "Quel État gouvernait ces colonies ?"
+  ],
+  "it": [
+    "Da che cosa si dichiararono indipendenti le tredici colonie nel 1776?",
+    "Dal dominio britannico",
+    "Dal dominio spagnolo",
+    "Dal dominio francese",
+    "Dal dominio olandese",
+    "Pensa alla nascita degli Stati Uniti.",
+    "Quale Stato governava queste colonie?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Wovon erklärten sich die dreizehn Kolonien 1776 unabhängig? Replaces exact-text recall of: Was ist die Unabhängigkeitserklärung der USA (1776)?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_36",
+  "de": [
+    "Was unterscheidet eine Reform meist von einer Revolution?",
+    "Eine Reform verändert Teile innerhalb einer bestehenden Ordnung",
+    "Eine Reform verändert immer gar nichts",
+    "Eine Revolution besteht nur aus kleinen Verwaltungsänderungen",
+    "Beide Begriffe bedeuten ausschliesslich einen Krieg",
+    "Vergleiche Umfang und Art einer Veränderung.",
+    "Nicht jede grundlegende politische Veränderung ist dasselbe wie eine Gesetzesanpassung."
+  ],
+  "en": [
+    "What usually distinguishes reform from revolution?",
+    "Reform changes parts within an existing system",
+    "Reform never changes anything",
+    "Revolution consists only of minor administrative changes",
+    "Both terms mean only a war",
+    "Compare the scale and type of change.",
+    "A fundamental political transformation is not just a law adjustment."
+  ],
+  "fr": [
+    "Qu'est-ce qui distingue généralement réforme et révolution ?",
+    "Une réforme modifie des éléments dans un ordre existant",
+    "Une réforme ne change jamais rien",
+    "Une révolution ne fait que de petits ajustements administratifs",
+    "Les deux termes désignent uniquement une guerre",
+    "Compare l'ampleur et la nature du changement.",
+    "Une transformation politique fondamentale dépasse un simple ajustement de loi."
+  ],
+  "it": [
+    "Che cosa distingue generalmente riforma e rivoluzione?",
+    "Una riforma modifica parti di un ordinamento esistente",
+    "Una riforma non cambia mai nulla",
+    "Una rivoluzione consiste solo in piccoli cambiamenti amministrativi",
+    "Entrambi i termini significano soltanto guerra",
+    "Confronta ampiezza e tipo di cambiamento.",
+    "Una trasformazione politica fondamentale supera un semplice adeguamento di legge."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was unterscheidet eine Reform meist von einer Revolution? Replaces exact-text recall of: Was ist der Unterschied zwischen Revolution und Reform?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_38",
+  "de": [
+    "Woher soll staatliche Macht nach dem Prinzip der Volkssouveränität kommen?",
+    "Vom Volk",
+    "Ausschliesslich aus königlicher Abstammung",
+    "Ausschliesslich aus militärischer Stärke",
+    "Vom Vermögen einer einzelnen Familie",
+    "Denke an die Begründung politischer Herrschaft.",
+    "Wer soll bestimmen dürfen, wie regiert wird?"
+  ],
+  "en": [
+    "Where should state power come from according to popular sovereignty?",
+    "The people",
+    "Only royal ancestry",
+    "Only military strength",
+    "One family's wealth",
+    "Think of what legitimises political rule.",
+    "Who should have a say in how they are governed?"
+  ],
+  "fr": [
+    "D'où doit venir le pouvoir de l'État selon la souveraineté populaire ?",
+    "Du peuple",
+    "Uniquement de l'ascendance royale",
+    "Uniquement de la force militaire",
+    "De la fortune d'une seule famille",
+    "Pense à ce qui légitime le pouvoir politique.",
+    "Qui doit pouvoir décider comment être gouverné ?"
+  ],
+  "it": [
+    "Da dove deve derivare il potere statale secondo la sovranità popolare?",
+    "Dal popolo",
+    "Soltanto dalla discendenza reale",
+    "Soltanto dalla forza militare",
+    "Dalla ricchezza di una sola famiglia",
+    "Pensa a ciò che legittima il potere politico.",
+    "Chi deve poter decidere come essere governato?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Woher soll staatliche Macht nach dem Prinzip der Volkssouveränität kommen? Replaces exact-text recall of: Was ist das Konzept der Volkssouveränität?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_40",
+  "de": [
+    "Welche Veränderung brachte der Ausbau der Eisenbahn im 19. Jahrhundert?",
+    "Menschen und Waren konnten auf vielen Strecken schneller reisen",
+    "Alle Reisen wurden sofort kostenlos",
+    "Alle Strassen wurden überflüssig",
+    "Jeder Ort erhielt gleichzeitig einen Bahnhof",
+    "Vergleiche Bahn und frühere Landtransporte.",
+    "Unterscheide eine wichtige Verbesserung von einer grenzenlosen Wirkung."
+  ],
+  "en": [
+    "What changed as railways expanded in the nineteenth century?",
+    "People and goods could travel faster on many routes",
+    "All travel immediately became free",
+    "All roads became unnecessary",
+    "Every place got a station at the same time",
+    "Compare railways with earlier land transport.",
+    "Distinguish a major improvement from an unlimited effect."
+  ],
+  "fr": [
+    "Quel changement accompagna l'essor du chemin de fer au XIXe siècle ?",
+    "Personnes et marchandises voyageaient plus vite sur de nombreux trajets",
+    "Tous les voyages devinrent immédiatement gratuits",
+    "Toutes les routes devinrent inutiles",
+    "Chaque localité reçut une gare en même temps",
+    "Compare le rail aux anciens transports terrestres.",
+    "Distingue progrès important et effet illimité."
+  ],
+  "it": [
+    "Quale cambiamento portò lo sviluppo ferroviario nel XIX secolo?",
+    "Persone e merci viaggiavano più velocemente su molti percorsi",
+    "Tutti i viaggi divennero subito gratuiti",
+    "Tutte le strade divennero inutili",
+    "Ogni località ricevette una stazione contemporaneamente",
+    "Confronta la ferrovia con i trasporti terrestri precedenti.",
+    "Distingui un grande progresso da un effetto illimitato."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Veränderung brachte der Ausbau der Eisenbahn im 19. Jahrhundert? Replaces exact-text recall of: Wandel der Zeit: Eisenbahn: Welche Aussage passt? Antwort: ___"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_42",
+  "de": [
+    "Welche Aussage betont besonders ein liberales Grundanliegen?",
+    "Individuelle Freiheit soll vor willkürlichen Eingriffen geschützt werden",
+    "Der Herrscher darf ohne Regeln über alle bestimmen",
+    "Alle Menschen müssen denselben Beruf wählen",
+    "Politische Kritik muss grundsätzlich verboten sein",
+    "Denke an den Spielraum einzelner Menschen.",
+    "Es geht um ein Grundanliegen, nicht um jede Position jeder Partei."
+  ],
+  "en": [
+    "Which statement especially expresses a liberal principle?",
+    "Individual freedom should be protected from arbitrary interference",
+    "A ruler may control everyone without rules",
+    "Everyone must choose the same job",
+    "Political criticism must always be banned",
+    "Think about individuals' freedom to act.",
+    "This is a basic principle, not every position of every party."
+  ],
+  "fr": [
+    "Quelle phrase exprime particulièrement un principe libéral ?",
+    "La liberté individuelle doit être protégée des interventions arbitraires",
+    "Le dirigeant peut contrôler tout le monde sans règles",
+    "Tous doivent choisir le même métier",
+    "Toute critique politique doit être interdite",
+    "Pense à la liberté d'action des individus.",
+    "Il s'agit d'un principe, pas de toutes les positions de chaque parti."
+  ],
+  "it": [
+    "Quale frase esprime soprattutto un principio liberale?",
+    "La libertà individuale va protetta dagli interventi arbitrari",
+    "Il governante può controllare tutti senza regole",
+    "Tutti devono scegliere lo stesso mestiere",
+    "Ogni critica politica deve essere vietata",
+    "Pensa alla libertà d'azione individuale.",
+    "È un principio, non ogni posizione di ciascun partito."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aussage betont besonders ein liberales Grundanliegen? Replaces exact-text recall of: Was ist der Unterschied zwischen Liberalismus und Konservatismus?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_44",
+  "de": [
+    "Was beschreibt Imperialismus?",
+    "Die Ausdehnung von Macht über andere Länder",
+    "Den freiwilligen Verzicht auf Einfluss in anderen Ländern",
+    "Ausschliesslich gleichberechtigten Austausch ohne Herrschaftsanspruch",
+    "Nur die innere Verwaltung einer Gemeinde",
+    "Denke an internationale Herrschaft.",
+    "Wirtschaftliche und militärische Mittel können dabei eine Rolle spielen."
+  ],
+  "en": [
+    "What does imperialism describe?",
+    "Extending power over other countries",
+    "Voluntarily giving up influence in other countries",
+    "Only equal exchange without any claim to domination",
+    "Only a municipality's internal administration",
+    "Think of international domination.",
+    "Economic and military means can play a part."
+  ],
+  "fr": [
+    "Que décrit l'impérialisme ?",
+    "L'extension du pouvoir sur d'autres pays",
+    "L'abandon volontaire de l'influence sur d'autres pays",
+    "Uniquement des échanges égalitaires sans volonté de domination",
+    "Seulement l'administration interne d'une commune",
+    "Pense à la domination internationale.",
+    "Des moyens économiques et militaires peuvent intervenir."
+  ],
+  "it": [
+    "Che cosa descrive l'imperialismo?",
+    "L'estensione del potere su altri Paesi",
+    "La rinuncia volontaria all'influenza su altri Paesi",
+    "Soltanto scambi paritari senza pretese di dominio",
+    "Solo l'amministrazione interna di un comune",
+    "Pensa al dominio internazionale.",
+    "Possono intervenire strumenti economici e militari."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was beschreibt Imperialismus? Replaces exact-text recall of: Was ist Imperialismus?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_46",
+  "de": [
+    "Welche Aufgabe hat eine Verfassung in einem Verfassungsstaat?",
+    "Grundregeln und Grenzen staatlicher Macht festlegen",
+    "Jede Änderung der Regierung ohne Regeln zulassen",
+    "Die Staatsmacht grundsätzlich von allen Bindungen befreien",
+    "Nur unverbindliche Ratschläge ohne rechtliche Bedeutung geben",
+    "Denke an die grundlegende Ordnung.",
+    "Auch Herrschende sind an Regeln gebunden."
+  ],
+  "en": [
+    "What does a constitution do in a constitutional state?",
+    "Set basic rules and limits on state power",
+    "Allowing every change of government without rules",
+    "Freeing state power from every constraint",
+    "Giving only non-binding advice without legal significance",
+    "Think of the basic system of government.",
+    "Rulers are also bound by rules."
+  ],
+  "fr": [
+    "Quel est le rôle d'une constitution dans un État constitutionnel ?",
+    "Fixer les règles fondamentales et les limites du pouvoir public",
+    "Autoriser tout changement de gouvernement sans règles",
+    "Libérer le pouvoir public de toute contrainte",
+    "Donner seulement des conseils sans portée juridique",
+    "Pense à l'organisation fondamentale.",
+    "Les gouvernants sont aussi soumis à des règles."
+  ],
+  "it": [
+    "Qual è il ruolo di una costituzione in uno Stato costituzionale?",
+    "Stabilire regole fondamentali e limiti al potere statale",
+    "Permettere ogni cambiamento di governo senza regole",
+    "Liberare il potere statale da ogni vincolo",
+    "Dare soltanto consigli privi di valore giuridico",
+    "Pensa all'ordinamento fondamentale.",
+    "Anche i governanti sono vincolati alle regole."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aufgabe hat eine Verfassung in einem Verfassungsstaat? Replaces exact-text recall of: Was ist ein Verfassungsstaat?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_48",
+  "de": [
+    "Was ist ein politisches Manifest?",
+    "Eine öffentliche Erklärung von Zielen und Forderungen",
+    "Ein vertraulicher Brief ohne öffentliche Zielsetzung",
+    "Ein Protokoll, das nur den Ablauf einer Sitzung festhält",
+    "Ein neutraler Katalog ohne politische Forderungen",
+    "Denke an eine Gruppe, die ihre Position bekannt macht.",
+    "Welche Textart will öffentlich überzeugen?"
+  ],
+  "en": [
+    "What is a political manifesto?",
+    "A public statement of aims and demands",
+    "A confidential letter with no public aim",
+    "Minutes recording only the course of a meeting",
+    "A neutral catalogue without political demands",
+    "Think of a group announcing its position.",
+    "Which kind of text aims to persuade publicly?"
+  ],
+  "fr": [
+    "Qu'est-ce qu'un manifeste politique ?",
+    "Une déclaration publique d'objectifs et de revendications",
+    "Une lettre confidentielle sans objectif public",
+    "Un procès-verbal relatant seulement une séance",
+    "Un catalogue neutre sans revendications politiques",
+    "Pense à un groupe qui annonce sa position.",
+    "Quel texte cherche à convaincre publiquement ?"
+  ],
+  "it": [
+    "Che cos'è un manifesto politico?",
+    "Una dichiarazione pubblica di obiettivi e richieste",
+    "Una lettera riservata senza obiettivo pubblico",
+    "Un verbale che registra soltanto una riunione",
+    "Un catalogo neutrale senza richieste politiche",
+    "Pensa a un gruppo che annuncia la propria posizione.",
+    "Quale testo cerca di convincere pubblicamente?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist ein politisches Manifest? Replaces exact-text recall of: Was ist ein Manifest?"
+},
+{
+  "key": "6/science/neuzeit-6/nz6_50",
+  "de": [
+    "Warum können zwei Geschichtsbücher dasselbe Ereignis unterschiedlich darstellen?",
+    "Sie können andere Quellen und Fragestellungen gewichten",
+    "Vergangene Ereignisse ändern sich jedes Jahr",
+    "Alle Darstellungen sind deshalb gleich gut belegt",
+    "Quellen spielen beim Schreiben keine Rolle",
+    "Vergleiche Auswahl und Blickwinkel.",
+    "Unterschiede sollten anhand von Belegen geprüft werden."
+  ],
+  "en": [
+    "Why can two history books present the same event differently?",
+    "They may give different weight to sources and questions",
+    "Past events change every year",
+    "Every account is therefore equally well supported",
+    "Sources play no role in writing",
+    "Compare selection and perspective.",
+    "Differences should be checked against evidence."
+  ],
+  "fr": [
+    "Pourquoi deux livres d'histoire peuvent-ils présenter différemment un même événement ?",
+    "Ils peuvent privilégier des sources et des questions différentes",
+    "Les événements passés changent chaque année",
+    "Tous les récits sont donc également bien étayés",
+    "Les sources ne jouent aucun rôle",
+    "Compare la sélection et le point de vue.",
+    "Les différences doivent être examinées à l'aide de preuves."
+  ],
+  "it": [
+    "Perché due libri di storia possono presentare diversamente lo stesso evento?",
+    "Possono dare peso diverso a fonti e domande",
+    "Gli eventi passati cambiano ogni anno",
+    "Ogni ricostruzione è quindi ugualmente documentata",
+    "Le fonti non hanno alcun ruolo",
+    "Confronta selezione e punto di vista.",
+    "Le differenze vanno esaminate sulla base di prove."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum können zwei Geschichtsbücher dasselbe Ereignis unterschiedlich darstellen? Replaces exact-text recall of: Was ist historiografischer Konstruktivismus?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_10",
+  "de": [
+    "Welche Aussage entspricht Artikel 1 der Allgemeinen Erklärung der Menschenrechte?",
+    "Alle Menschen sind frei und gleich an Würde und Rechten geboren",
+    "Nur Erwachsene besitzen Menschenwürde",
+    "Rechte hängen vom Vermögen ab",
+    "Die Herkunft bestimmt den Wert eines Menschen",
+    "Denke an den gleichen Wert jedes Menschen.",
+    "Persönliche Merkmale begründen keine unterschiedliche Würde."
+  ],
+  "en": [
+    "Which statement matches Article 1 of the Universal Declaration of Human Rights?",
+    "All human beings are born free and equal in dignity and rights",
+    "Only adults have human dignity",
+    "Rights depend on wealth",
+    "Origin determines a person's worth",
+    "Think of every person's equal worth.",
+    "Personal characteristics do not create different levels of dignity."
+  ],
+  "fr": [
+    "Quelle phrase correspond à l'article 1 de la Déclaration universelle des droits de l'homme ?",
+    "Tous les êtres humains naissent libres et égaux en dignité et en droits",
+    "Seuls les adultes ont une dignité humaine",
+    "Les droits dépendent de la fortune",
+    "L'origine détermine la valeur d'une personne",
+    "Pense à la valeur égale de chaque personne.",
+    "Les caractéristiques personnelles ne créent pas des dignités différentes."
+  ],
+  "it": [
+    "Quale frase corrisponde all'articolo 1 della Dichiarazione universale dei diritti umani?",
+    "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti",
+    "Solo gli adulti hanno dignità umana",
+    "I diritti dipendono dalla ricchezza",
+    "L'origine determina il valore di una persona",
+    "Pensa al valore uguale di ogni persona.",
+    "Le caratteristiche personali non creano dignità diverse."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aussage entspricht Artikel 1 der Allgemeinen Erklärung der Menschenrechte? Replaces exact-text recall of: Was ist die Allgemeine Erklärung der Menschenrechte Artikel 1?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_12",
+  "de": [
+    "Welches Ziel verfolgen die Vereinten Nationen unter anderem?",
+    "Frieden und Zusammenarbeit zwischen Staaten fördern",
+    "Die Regierung jedes Mitgliedstaats selbst wählen",
+    "Alle nationalen Gesetze ohne Mitwirkung der Staaten ersetzen",
+    "Nur die Interessen eines einzigen Mitgliedstaats vertreten",
+    "Denke an gemeinsame weltweite Probleme.",
+    "Die Organisation verbindet Staaten, ohne alle ihre Aufgaben zu übernehmen."
+  ],
+  "en": [
+    "What is one aim of the United Nations?",
+    "Promoting peace and cooperation between states",
+    "Choose every member state's government itself",
+    "Replace all national laws without states' participation",
+    "Represent only one member state's interests",
+    "Think of shared global problems.",
+    "The organisation brings states together without taking over all their tasks."
+  ],
+  "fr": [
+    "Quel est notamment un objectif des Nations Unies ?",
+    "Favoriser la paix et la coopération entre États",
+    "Choisir elle-même le gouvernement de chaque État membre",
+    "Remplacer toutes les lois nationales sans participation des États",
+    "Représenter les intérêts d'un seul État membre",
+    "Pense aux problèmes mondiaux communs.",
+    "L'organisation réunit les États sans reprendre toutes leurs tâches."
+  ],
+  "it": [
+    "Qual è uno degli obiettivi delle Nazioni Unite?",
+    "Promuovere pace e cooperazione tra Stati",
+    "Scegliere da sola il governo di ogni Stato membro",
+    "Sostituire tutte le leggi nazionali senza partecipazione degli Stati",
+    "Rappresentare gli interessi di un solo Stato membro",
+    "Pensa ai problemi globali comuni.",
+    "L'organizzazione riunisce gli Stati senza assumere tutti i loro compiti."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Ziel verfolgen die Vereinten Nationen unter anderem? Replaces exact-text recall of: Was ist UN (Vereinte Nationen)?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_14",
+  "de": [
+    "Wofür setzt sich Amnesty International ein?",
+    "Für den Schutz der Menschenrechte",
+    "Für die Rolle eines staatlichen Gerichts, das selbst Urteile fällt",
+    "Für die alleinige Vertretung einer Regierungspartei",
+    "Für die Festsetzung verbindlicher Gesetze in allen Ländern",
+    "Denke an Berichte über ungerechte Behandlung.",
+    "Es handelt sich um eine unabhängige Menschenrechtsorganisation."
+  ],
+  "en": [
+    "What does Amnesty International work for?",
+    "The protection of human rights",
+    "Acting as a state court that issues judgments itself",
+    "Solely representing one governing party",
+    "Setting binding laws in every country",
+    "Think of reports about unjust treatment.",
+    "It is an independent human rights organisation."
+  ],
+  "fr": [
+    "Pour quoi Amnesty International agit-elle ?",
+    "La protection des droits humains",
+    "Jouer le rôle d'un tribunal étatique qui rend lui-même des jugements",
+    "Représenter uniquement un parti au pouvoir",
+    "Fixer des lois contraignantes dans tous les pays",
+    "Pense aux rapports sur les traitements injustes.",
+    "C'est une organisation indépendante de défense des droits humains."
+  ],
+  "it": [
+    "Per che cosa si impegna Amnesty International?",
+    "La protezione dei diritti umani",
+    "Agire come tribunale statale che emette sentenze",
+    "Rappresentare soltanto un partito al governo",
+    "Stabilire leggi vincolanti in tutti i Paesi",
+    "Pensa ai rapporti sui trattamenti ingiusti.",
+    "È un'organizzazione indipendente per i diritti umani."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wofür setzt sich Amnesty International ein? Replaces exact-text recall of: Was ist Amnesty International?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_16",
+  "de": [
+    "Was ist ein Beispiel für direkte Demokratie?",
+    "Stimmberechtigte entscheiden über eine Sachvorlage",
+    "Nur gewählte Abgeordnete stimmen über ein Gesetz ab",
+    "Eine Königin erbt ihr Amt",
+    "Ein Gericht entscheidet einen Rechtsstreit",
+    "Unterscheide die Wahl von Vertretern von einer Sachentscheidung.",
+    "Wer gibt die entscheidende Stimme zur Vorlage ab?"
+  ],
+  "en": [
+    "Which is an example of direct democracy?",
+    "Eligible voters decide on a policy proposal",
+    "Only elected representatives vote on a law",
+    "A queen inherits her office",
+    "A court decides a legal dispute",
+    "Distinguish choosing representatives from deciding an issue.",
+    "Who casts the deciding votes on the proposal?"
+  ],
+  "fr": [
+    "Quel est un exemple de démocratie directe ?",
+    "Les citoyens ayant le droit de vote décident d'une proposition",
+    "Seuls les élus votent une loi",
+    "Une reine hérite de sa fonction",
+    "Un tribunal tranche un litige",
+    "Distingue l'élection de représentants d'une décision sur un objet.",
+    "Qui vote directement sur la proposition ?"
+  ],
+  "it": [
+    "Qual è un esempio di democrazia diretta?",
+    "Gli aventi diritto di voto decidono su una proposta",
+    "Solo i rappresentanti eletti votano una legge",
+    "Una regina eredita la carica",
+    "Un tribunale risolve una controversia",
+    "Distingui l'elezione dei rappresentanti da una decisione concreta.",
+    "Chi vota direttamente sulla proposta?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist ein Beispiel für direkte Demokratie? Replaces exact-text recall of: Was ist der Unterschied zwischen direkter und repräsentativer Demokratie?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_18",
+  "de": [
+    "Was kennzeichnet den Schweizer Föderalismus?",
+    "Aufgaben sind zwischen Bund, Kantonen und Gemeinden verteilt",
+    "Alle Aufgaben liegen nur bei einer einzigen Gemeinde",
+    "Kantone dürfen keinerlei eigene Entscheidungen treffen",
+    "Jede Gemeinde ist ein völlig unabhängiger Staat",
+    "Denke an mehrere staatliche Ebenen.",
+    "Unterschiedliche Zuständigkeiten können nebeneinander bestehen."
+  ],
+  "en": [
+    "What characterises Swiss federalism?",
+    "Responsibilities are shared across the federation, cantons and municipalities",
+    "All tasks belong to one municipality alone",
+    "Cantons may make no decisions of their own",
+    "Every municipality is a fully independent state",
+    "Think of several levels of government.",
+    "Different responsibilities can coexist."
+  ],
+  "fr": [
+    "Qu'est-ce qui caractérise le fédéralisme suisse ?",
+    "Les tâches sont réparties entre Confédération, cantons et communes",
+    "Toutes les tâches appartiennent à une seule commune",
+    "Les cantons ne peuvent rien décider eux-mêmes",
+    "Chaque commune est un État totalement indépendant",
+    "Pense aux différents niveaux de l'État.",
+    "Des compétences différentes peuvent coexister."
+  ],
+  "it": [
+    "Che cosa caratterizza il federalismo svizzero?",
+    "I compiti sono ripartiti tra Confederazione, cantoni e comuni",
+    "Tutti i compiti spettano a un solo comune",
+    "I cantoni non possono prendere decisioni proprie",
+    "Ogni comune è uno Stato totalmente indipendente",
+    "Pensa ai diversi livelli statali.",
+    "Competenze diverse possono coesistere."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kennzeichnet den Schweizer Föderalismus? Replaces exact-text recall of: Was ist Föderalismus?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_20",
+  "de": [
+    "Welche Aufgabe hat das UN-Flüchtlingshilfswerk UNHCR?",
+    "Flüchtlinge schützen und unterstützen",
+    "Weltweit alle Grenzen abschaffen",
+    "Alle Reisepässe für Ferien ausstellen",
+    "Für jedes Land die Regierung wählen",
+    "Denke an Menschen, die Schutz brauchen.",
+    "Hilfe ist nicht dasselbe wie das Regieren eines Staates."
+  ],
+  "en": [
+    "What does the UN refugee agency UNHCR do?",
+    "Protect and support refugees",
+    "Abolish all borders worldwide",
+    "Issue every holiday passport",
+    "Choose the government of every country",
+    "Think of people needing protection.",
+    "Providing help is not the same as governing a state."
+  ],
+  "fr": [
+    "Quelle est la mission du HCR, l'agence de l'ONU pour les réfugiés ?",
+    "Protéger et soutenir les réfugiés",
+    "Supprimer toutes les frontières mondiales",
+    "Délivrer tous les passeports de vacances",
+    "Choisir le gouvernement de chaque pays",
+    "Pense aux personnes ayant besoin de protection.",
+    "Aider n'est pas gouverner un État."
+  ],
+  "it": [
+    "Qual è il compito dell'UNHCR, l'agenzia ONU per i rifugiati?",
+    "Proteggere e sostenere i rifugiati",
+    "Eliminare tutti i confini del mondo",
+    "Rilasciare ogni passaporto per vacanze",
+    "Scegliere il governo di ogni Paese",
+    "Pensa alle persone che necessitano di protezione.",
+    "Aiutare non significa governare uno Stato."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aufgabe hat das UN-Flüchtlingshilfswerk UNHCR? Replaces exact-text recall of: Was ist das UNHCR?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_22",
+  "de": [
+    "Bei einer Wahl zählt das relative Mehr. Wer gewinnt einen einzelnen Sitz?",
+    "Die Person mit den meisten Stimmen",
+    "Die Person, die zwingend mehr als die Hälfte aller Stimmen hat",
+    "Die Person, deren Nachname im Alphabet zuerst kommt",
+    "Die Person, die von den übrigen Kandidaten nach der Wahl bestimmt wird",
+    "Vergleiche die Stimmenzahlen.",
+    "Relativ bedeutet hier nicht zwingend mehr als die Hälfte."
+  ],
+  "en": [
+    "In a single-seat election decided by a plurality, who wins?",
+    "The person with the most votes",
+    "The person who must have more than half of all votes",
+    "The person whose surname comes first alphabetically",
+    "The person chosen by the other candidates after voting",
+    "Compare vote totals.",
+    "A plurality does not necessarily mean more than half."
+  ],
+  "fr": [
+    "Lors d'une élection à un siège à la majorité relative, qui gagne ?",
+    "La personne ayant le plus de voix",
+    "La personne devant nécessairement avoir plus de la moitié des voix",
+    "La personne dont le nom vient en premier dans l'alphabet",
+    "La personne choisie par les autres candidats après le vote",
+    "Compare les nombres de voix.",
+    "La majorité relative ne signifie pas forcément plus de la moitié."
+  ],
+  "it": [
+    "In un'elezione a un seggio con maggioranza relativa, chi vince?",
+    "La persona con più voti",
+    "La persona che deve necessariamente avere più della metà dei voti",
+    "La persona il cui cognome viene prima nell'alfabeto",
+    "La persona scelta dagli altri candidati dopo il voto",
+    "Confronta i numeri dei voti.",
+    "La maggioranza relativa non significa necessariamente oltre la metà."
+  ],
+  "reason": "Individually reviewed knowledge objective: Bei einer Wahl zählt das relative Mehr. Wer gewinnt einen einzelnen Sitz? Replaces exact-text recall of: Was ist das Mehrheitswahlrecht (Majorz)?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_26",
+  "de": [
+    "Welches gehört zu den Kinderrechten?",
+    "Das Recht auf Bildung und Schutz vor Gewalt",
+    "Das Recht, jedes Spiel immer zu gewinnen",
+    "Das Recht auf unbegrenzt teure Geschenke",
+    "Das Recht, andere ungestraft auszugrenzen",
+    "Denke an grundlegende Bedürfnisse, nicht an jeden Wunsch.",
+    "Rechte schützen Kinder und ihre Entwicklung."
+  ],
+  "en": [
+    "Which is a children's right?",
+    "The right to education and protection from violence",
+    "The right to win every game",
+    "The right to unlimited expensive gifts",
+    "The right to exclude others without consequences",
+    "Think of basic needs, not every wish.",
+    "Rights protect children and their development."
+  ],
+  "fr": [
+    "Lequel fait partie des droits de l'enfant ?",
+    "Le droit à l'éducation et à la protection contre la violence",
+    "Le droit de gagner à tous les jeux",
+    "Le droit à des cadeaux coûteux sans limite",
+    "Le droit d'exclure les autres sans conséquence",
+    "Pense aux besoins fondamentaux, pas à chaque souhait.",
+    "Les droits protègent les enfants et leur développement."
+  ],
+  "it": [
+    "Quale fa parte dei diritti dei bambini?",
+    "Il diritto all'istruzione e alla protezione dalla violenza",
+    "Il diritto di vincere ogni gioco",
+    "Il diritto a regali costosi senza limiti",
+    "Il diritto di escludere gli altri senza conseguenze",
+    "Pensa ai bisogni fondamentali, non a ogni desiderio.",
+    "I diritti proteggono i bambini e il loro sviluppo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches gehört zu den Kinderrechten? Replaces exact-text recall of: Was sind Kinderrechte (UN-Kinderrechtskonvention)?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_28",
+  "de": [
+    "Welches Beispiel zeigt ungerechtfertigte Diskriminierung?",
+    "Ein Kind wird allein wegen seiner Herkunft ausgeschlossen",
+    "Alle halten bei einem Spiel dieselben Sicherheitsregeln ein",
+    "Eine gefährliche Kletterroute wird für Ungeübte gesperrt",
+    "Eine Lehrperson bietet passende Lernhilfen an",
+    "Denke an den Grund einer unterschiedlichen Behandlung.",
+    "Ist dieser Grund für die Situation sachlich gerechtfertigt?"
+  ],
+  "en": [
+    "Which example shows unjustified discrimination?",
+    "A child is excluded solely because of their origin",
+    "Everyone follows the same safety rules in a game",
+    "A dangerous climbing route is closed to inexperienced climbers",
+    "A teacher provides appropriate learning support",
+    "Consider the reason for different treatment.",
+    "Is that reason justified by the situation?"
+  ],
+  "fr": [
+    "Quel exemple montre une discrimination injustifiée ?",
+    "Un enfant est exclu uniquement à cause de son origine",
+    "Tous respectent les mêmes règles de sécurité d'un jeu",
+    "Une voie dangereuse est interdite aux grimpeurs inexpérimentés",
+    "Une enseignante propose des aides adaptées",
+    "Examine la raison du traitement différent.",
+    "Cette raison est-elle justifiée par la situation ?"
+  ],
+  "it": [
+    "Quale esempio mostra una discriminazione ingiustificata?",
+    "Un bambino viene escluso soltanto per la sua origine",
+    "Tutti rispettano le stesse regole di sicurezza nel gioco",
+    "Una via pericolosa è chiusa agli scalatori inesperti",
+    "Un'insegnante offre aiuti didattici adeguati",
+    "Considera il motivo del trattamento diverso.",
+    "Questo motivo è giustificato dalla situazione?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Beispiel zeigt ungerechtfertigte Diskriminierung? Replaces exact-text recall of: Was ist Diskriminierung?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_30",
+  "de": [
+    "Was ist die Charta der Vereinten Nationen?",
+    "Das Gründungsdokument mit Zielen und Grundregeln der UNO",
+    "Ein unverbindlicher persönlicher Brief eines einzelnen Diplomaten",
+    "Ein Gesetzbuch, das automatisch alle nationalen Gesetze ersetzt",
+    "Ein Reiseausweis, der allen Menschen dieselbe Staatsangehörigkeit gibt",
+    "Denke an die Grundlage einer Organisation.",
+    "Ein solches Dokument legt Aufgaben und Regeln fest."
+  ],
+  "en": [
+    "What is the United Nations Charter?",
+    "The founding document setting out UN aims and basic rules",
+    "A non-binding private letter from one diplomat",
+    "A law book automatically replacing every national law",
+    "A travel document giving everyone the same nationality",
+    "Think of an organisation's foundation.",
+    "Such a document sets out tasks and rules."
+  ],
+  "fr": [
+    "Qu'est-ce que la Charte des Nations Unies ?",
+    "Le document fondateur fixant les objectifs et règles de base de l'ONU",
+    "Une lettre personnelle non contraignante d'un diplomate",
+    "Un code remplaçant automatiquement toutes les lois nationales",
+    "Un document de voyage donnant la même nationalité à tous",
+    "Pense aux fondements d'une organisation.",
+    "Un tel document définit des missions et des règles."
+  ],
+  "it": [
+    "Che cos'è la Carta delle Nazioni Unite?",
+    "Il documento fondativo con obiettivi e regole fondamentali dell'ONU",
+    "Una lettera personale non vincolante di un diplomatico",
+    "Un codice che sostituisce automaticamente tutte le leggi nazionali",
+    "Un documento di viaggio che dà a tutti la stessa cittadinanza",
+    "Pensa alle basi di un'organizzazione.",
+    "Un simile documento definisce compiti e regole."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist die Charta der Vereinten Nationen? Replaces exact-text recall of: Was ist die UN-Charta?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_32",
+  "de": [
+    "Was ermöglicht das Öffentlichkeitsprinzip bei Behörden grundsätzlich?",
+    "Zugang zu amtlichen Dokumenten, mit gesetzlichen Ausnahmen",
+    "Uneingeschränkten Zugriff auf alle privaten Gesundheitsdaten",
+    "Nur Behördenmitgliedern das Lesen von Gesetzen",
+    "Die Veröffentlichung jedes Passworts",
+    "Unterscheide Transparenz und geschützte persönliche Daten.",
+    "Offenheit kann mit begründeten Ausnahmen verbunden sein."
+  ],
+  "en": [
+    "What does the principle of public access in administration generally allow?",
+    "Access to official documents, subject to legal exceptions",
+    "Unrestricted access to all private health records",
+    "Only officials to read laws",
+    "Publication of every password",
+    "Distinguish transparency from protected personal data.",
+    "Openness can have justified exceptions."
+  ],
+  "fr": [
+    "Que permet en principe la transparence administrative ?",
+    "L'accès aux documents officiels, sous réserve d'exceptions légales",
+    "L'accès illimité à toutes les données médicales privées",
+    "Seulement aux fonctionnaires de lire les lois",
+    "La publication de tous les mots de passe",
+    "Distingue transparence et données personnelles protégées.",
+    "L'ouverture peut comporter des exceptions justifiées."
+  ],
+  "it": [
+    "Che cosa consente in generale il principio di trasparenza amministrativa?",
+    "L'accesso ai documenti ufficiali, salvo eccezioni di legge",
+    "L'accesso illimitato a tutti i dati sanitari privati",
+    "Soltanto ai funzionari di leggere le leggi",
+    "La pubblicazione di ogni password",
+    "Distingui trasparenza e dati personali protetti.",
+    "L'apertura può prevedere eccezioni giustificate."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ermöglicht das Öffentlichkeitsprinzip bei Behörden grundsätzlich? Replaces exact-text recall of: Was bedeutet das Öffentlichkeitsprinzip bei Behörden?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_34",
+  "de": [
+    "Was schützt ein Grundrechtekatalog vor allem?",
+    "Grundlegende Rechte von Menschen gegenüber staatlicher Macht",
+    "Nur die Freizeitwünsche einer Regierung",
+    "Die Gewinne jeder Firma ohne Einschränkung",
+    "Das Recht von Behörden, ohne Regeln zu handeln",
+    "Denke an Grenzen für öffentliche Macht.",
+    "Rechte müssen auch gegenüber Mächtigen gelten."
+  ],
+  "en": [
+    "What does a catalogue of fundamental rights primarily protect?",
+    "People's basic rights in relation to state power",
+    "Only a government's leisure wishes",
+    "Every company's profits without restriction",
+    "Authorities' right to act without rules",
+    "Think of limits on public power.",
+    "Rights must also apply against those in power."
+  ],
+  "fr": [
+    "Que protège avant tout un catalogue de droits fondamentaux ?",
+    "Les droits essentiels des personnes face au pouvoir de l'État",
+    "Seulement les souhaits de loisirs du gouvernement",
+    "Les profits de toute entreprise sans limite",
+    "Le droit des autorités d'agir sans règles",
+    "Pense aux limites du pouvoir public.",
+    "Les droits doivent aussi s'imposer aux puissants."
+  ],
+  "it": [
+    "Che cosa protegge soprattutto un catalogo di diritti fondamentali?",
+    "I diritti essenziali delle persone rispetto al potere statale",
+    "Soltanto i desideri di svago del governo",
+    "I profitti di ogni impresa senza limiti",
+    "Il diritto delle autorità di agire senza regole",
+    "Pensa ai limiti del potere pubblico.",
+    "I diritti devono valere anche nei confronti dei potenti."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was schützt ein Grundrechtekatalog vor allem? Replaces exact-text recall of: Was ist die EU-Grundrechtecharta?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_36",
+  "de": [
+    "Ein Kind wird in der Pause absichtlich ausgeschlossen. Was hilft?",
+    "Es einbeziehen und bei Bedarf Unterstützung holen",
+    "Beim Auslachen mitmachen",
+    "Den Ausschluss als Spielregel festschreiben",
+    "Ein Video davon zur Unterhaltung teilen",
+    "Denke an Schutz und Zugehörigkeit.",
+    "Wie kannst du helfen, ohne die Situation zu verschlimmern?"
+  ],
+  "en": [
+    "A child is deliberately excluded at break time. What helps?",
+    "Include them and seek support if needed",
+    "Join in mocking them",
+    "Make exclusion a game rule",
+    "Share a video for entertainment",
+    "Think of protection and belonging.",
+    "How can you help without making things worse?"
+  ],
+  "fr": [
+    "Un enfant est volontairement exclu à la récréation. Qu'est-ce qui aide ?",
+    "L'inclure et demander du soutien si nécessaire",
+    "Participer aux moqueries",
+    "Faire de l'exclusion une règle du jeu",
+    "Partager une vidéo pour divertir les autres",
+    "Pense à la protection et à l'appartenance au groupe.",
+    "Comment aider sans aggraver la situation ?"
+  ],
+  "it": [
+    "Un bambino viene escluso apposta durante la pausa. Che cosa aiuta?",
+    "Coinvolgerlo e cercare sostegno se necessario",
+    "Unirsi alle prese in giro",
+    "Rendere l'esclusione una regola del gioco",
+    "Condividere un video per divertire gli altri",
+    "Pensa a protezione e appartenenza al gruppo.",
+    "Come aiutare senza peggiorare la situazione?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Ein Kind wird in der Pause absichtlich ausgeschlossen. Was hilft? Replaces exact-text recall of: Rechte und Mitbestimmung: Wenn jemand ausgeschlossen wird: Welche Aussage passt? Antwort: ___"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_38",
+  "de": [
+    "Warum braucht eine Demokratie auch Minderheitenschutz?",
+    "Eine Mehrheit darf grundlegende Rechte nicht beliebig aufheben",
+    "Minderheiten sollen jede Wahl automatisch gewinnen",
+    "Eine Mehrheit darf nie Entscheidungen treffen",
+    "Es soll nur noch eine Meinung erlaubt sein",
+    "Denke an Mehrheitsentscheid und Grundrechte zusammen.",
+    "Eine Abstimmung allein rechtfertigt nicht jede Behandlung."
+  ],
+  "en": [
+    "Why does democracy also need minority protection?",
+    "A majority must not arbitrarily remove basic rights",
+    "Minorities should automatically win every election",
+    "A majority must never make decisions",
+    "Only one opinion should be allowed",
+    "Think of majority decisions and basic rights together.",
+    "A vote alone does not justify every kind of treatment."
+  ],
+  "fr": [
+    "Pourquoi une démocratie doit-elle aussi protéger les minorités ?",
+    "Une majorité ne peut pas supprimer arbitrairement les droits fondamentaux",
+    "Les minorités doivent gagner automatiquement chaque élection",
+    "Une majorité ne doit jamais décider",
+    "Une seule opinion doit être autorisée",
+    "Pense aux décisions majoritaires et aux droits fondamentaux ensemble.",
+    "Un vote ne justifie pas tous les traitements."
+  ],
+  "it": [
+    "Perché una democrazia deve anche proteggere le minoranze?",
+    "La maggioranza non può eliminare arbitrariamente i diritti fondamentali",
+    "Le minoranze devono vincere automaticamente ogni elezione",
+    "La maggioranza non deve mai decidere",
+    "Deve essere permessa una sola opinione",
+    "Pensa insieme a decisioni maggioritarie e diritti fondamentali.",
+    "Un voto non giustifica ogni trattamento."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum braucht eine Demokratie auch Minderheitenschutz? Replaces exact-text recall of: Was ist liberale Demokratie?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_40",
+  "de": [
+    "Was verbessert eine gemeinsame politische Diskussion?",
+    "Argumente anhören, begründen und prüfen",
+    "Nur die lauteste Person sprechen lassen",
+    "Andere Meinungen sofort lächerlich machen",
+    "Eine Entscheidung ohne Informationen erzwingen",
+    "Denke an nachvollziehbare Gründe.",
+    "Gute Diskussion bedeutet mehr als blosses Gewinnen."
+  ],
+  "en": [
+    "What improves a shared political discussion?",
+    "Listening to, explaining and examining arguments",
+    "Letting only the loudest person speak",
+    "Immediately mocking other opinions",
+    "Forcing a decision without information",
+    "Think of reasons others can follow.",
+    "Good discussion is more than simply winning."
+  ],
+  "fr": [
+    "Qu'est-ce qui améliore une discussion politique collective ?",
+    "Écouter, justifier et examiner les arguments",
+    "Laisser parler seulement la personne la plus bruyante",
+    "Ridiculiser immédiatement les autres avis",
+    "Imposer une décision sans information",
+    "Pense aux raisons compréhensibles par les autres.",
+    "Une bonne discussion ne consiste pas seulement à gagner."
+  ],
+  "it": [
+    "Che cosa migliora una discussione politica comune?",
+    "Ascoltare, motivare ed esaminare gli argomenti",
+    "Far parlare soltanto chi urla di più",
+    "Ridicolizzare subito le altre opinioni",
+    "Imporre una decisione senza informazioni",
+    "Pensa a ragioni comprensibili agli altri.",
+    "Una buona discussione non serve soltanto a vincere."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was verbessert eine gemeinsame politische Diskussion? Replaces exact-text recall of: Was ist Deliberative Demokratie?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_42",
+  "de": [
+    "Warum muss staatliche Überwachung sorgfältig begrenzt werden?",
+    "Sie kann Sicherheit unterstützen, aber auch Freiheitsrechte einschränken",
+    "Jede Überwachung ist automatisch ohne Nutzen",
+    "Mehr Überwachung garantiert immer vollständige Sicherheit",
+    "Privatsphäre gilt grundsätzlich nur für Behörden",
+    "Denke an Nutzen und mögliche Eingriffe.",
+    "Massnahmen brauchen eine rechtliche Grundlage und Verhältnismässigkeit."
+  ],
+  "en": [
+    "Why must state surveillance be carefully limited?",
+    "It can support security but also restrict freedoms",
+    "All surveillance is automatically useless",
+    "More surveillance always guarantees complete safety",
+    "Privacy applies only to authorities",
+    "Think of benefits and possible intrusions.",
+    "Measures need a legal basis and must be proportionate."
+  ],
+  "fr": [
+    "Pourquoi faut-il encadrer soigneusement la surveillance étatique ?",
+    "Elle peut contribuer à la sécurité mais aussi restreindre les libertés",
+    "Toute surveillance est automatiquement inutile",
+    "Davantage de surveillance garantit toujours une sécurité totale",
+    "La vie privée ne concerne que les autorités",
+    "Pense aux avantages et aux atteintes possibles.",
+    "Les mesures doivent être légales et proportionnées."
+  ],
+  "it": [
+    "Perché la sorveglianza statale va limitata con attenzione?",
+    "Può sostenere la sicurezza ma anche limitare le libertà",
+    "Ogni sorveglianza è automaticamente inutile",
+    "Più sorveglianza garantisce sempre sicurezza totale",
+    "La privacy vale soltanto per le autorità",
+    "Pensa ai vantaggi e alle possibili intrusioni.",
+    "Le misure richiedono una base legale e proporzionalità."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum muss staatliche Überwachung sorgfältig begrenzt werden? Replaces exact-text recall of: Was ist das Verhältnis zwischen Freiheit und Sicherheit?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_44",
+  "de": [
+    "Was kann nach einer Diktatur zur Aufarbeitung von Unrecht beitragen?",
+    "Übergriffe untersuchen und Betroffenen Gehör geben",
+    "Alle Beweise vernichten",
+    "Betroffenen grundsätzlich das Sprechen verbieten",
+    "Jede Verantwortung ohne Untersuchung ausschliessen",
+    "Denke an Wahrheit und faire Verfahren.",
+    "Die Erfahrungen der Betroffenen sind wichtig."
+  ],
+  "en": [
+    "What can help address wrongdoing after a dictatorship?",
+    "Investigating abuses and hearing those affected",
+    "Destroying all evidence",
+    "Forbidding affected people to speak",
+    "Ruling out all responsibility without investigation",
+    "Think of truth and fair procedures.",
+    "The experiences of those affected matter."
+  ],
+  "fr": [
+    "Qu'est-ce qui peut aider à traiter les injustices après une dictature ?",
+    "Enquêter sur les abus et écouter les victimes",
+    "Détruire toutes les preuves",
+    "Interdire aux victimes de parler",
+    "Exclure toute responsabilité sans enquête",
+    "Pense à la vérité et aux procédures équitables.",
+    "L'expérience des personnes touchées est importante."
+  ],
+  "it": [
+    "Che cosa può aiutare ad affrontare le ingiustizie dopo una dittatura?",
+    "Indagare sugli abusi e ascoltare le vittime",
+    "Distruggere tutte le prove",
+    "Vietare alle vittime di parlare",
+    "Escludere ogni responsabilità senza indagine",
+    "Pensa alla verità e a procedure eque.",
+    "Le esperienze delle persone colpite contano."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kann nach einer Diktatur zur Aufarbeitung von Unrecht beitragen? Replaces exact-text recall of: Was ist Transitional Justice?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_46",
+  "de": [
+    "Was macht einen Angriff zu einer möglichen Hassstraftat?",
+    "Die Tat richtet sich wegen Vorurteilen gegen ein Merkmal der betroffenen Person",
+    "Es gibt einen Sachschaden ohne Hinweis auf vorurteilsbezogene Motivation",
+    "Zwei Menschen streiten nur über eine Rechnung ohne Bezug auf persönliche Merkmale",
+    "Ein Gegenstand wird versehentlich beschädigt, ohne gegen jemanden gerichtet zu sein",
+    "Denke an die Motivation hinter der Tat.",
+    "Merkmale wie Religion oder Herkunft können Ziel der Vorurteile sein."
+  ],
+  "en": [
+    "What can make an attack a hate crime?",
+    "It targets someone because of prejudice against a personal characteristic",
+    "There is property damage without evidence of a prejudice-based motive",
+    "Two people argue only over a bill without reference to personal characteristics",
+    "An object is damaged accidentally without targeting anyone",
+    "Think of the motive behind the act.",
+    "Religion or origin can be targets of prejudice."
+  ],
+  "fr": [
+    "Qu'est-ce qui peut faire d'une agression un crime de haine ?",
+    "Elle vise une personne en raison de préjugés liés à une caractéristique personnelle",
+    "Il y a un dommage sans indice de motivation liée à des préjugés",
+    "Deux personnes se disputent seulement une facture sans lien avec des caractéristiques personnelles",
+    "Un objet est endommagé par accident sans viser quelqu'un",
+    "Pense à la motivation de l'acte.",
+    "La religion ou l'origine peuvent être visées par des préjugés."
+  ],
+  "it": [
+    "Che cosa può rendere un'aggressione un crimine d'odio?",
+    "Colpisce una persona per pregiudizi legati a una sua caratteristica",
+    "C'è un danno senza indizi di un motivo legato a pregiudizi",
+    "Due persone discutono solo una fattura senza riferimenti a caratteristiche personali",
+    "Un oggetto viene danneggiato per errore senza colpire qualcuno",
+    "Pensa al motivo dell'atto.",
+    "Religione o origine possono essere bersagli di pregiudizi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was macht einen Angriff zu einer möglichen Hassstraftat? Replaces exact-text recall of: Was ist Hasskriminalität (Hate Crime)?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_48",
+  "de": [
+    "Was berücksichtigt Generationengerechtigkeit?",
+    "Auch die Lebensmöglichkeiten künftiger Menschen",
+    "Nur den kurzfristigen Nutzen der heute Wahlberechtigten",
+    "Nur die Kosten heute, ohne spätere Folgen",
+    "Die Annahme, dass spätere Menschen jedes Problem selbst ausgleichen können",
+    "Denke an langfristige Folgen.",
+    "Entscheidungen wirken oft über das heutige Leben hinaus."
+  ],
+  "en": [
+    "What does fairness between generations consider?",
+    "The life opportunities of future people too",
+    "Only the short-term benefit of today's voters",
+    "Only today's costs, ignoring later consequences",
+    "The assumption that future people can compensate for every problem themselves",
+    "Think of long-term effects.",
+    "Decisions often have effects beyond life today."
+  ],
+  "fr": [
+    "Que prend en compte la justice entre générations ?",
+    "Aussi les possibilités de vie des personnes futures",
+    "Seulement le bénéfice immédiat des électeurs actuels",
+    "Seulement les coûts actuels, sans conséquences futures",
+    "L'idée que les personnes futures pourront compenser tous les problèmes seules",
+    "Pense aux effets à long terme.",
+    "Les décisions dépassent souvent la vie présente."
+  ],
+  "it": [
+    "Che cosa considera la giustizia tra generazioni?",
+    "Anche le possibilità di vita delle persone future",
+    "Solo il vantaggio immediato degli elettori attuali",
+    "Solo i costi attuali, ignorando conseguenze future",
+    "L'idea che le persone future possano compensare da sole ogni problema",
+    "Pensa agli effetti a lungo termine.",
+    "Le decisioni spesso superano la vita presente."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was berücksichtigt Generationengerechtigkeit? Replaces exact-text recall of: Was ist das Konzept der Generationengerechtigkeit?"
+},
+{
+  "key": "6/science/demokratie-menschenrechte-6/dm6_50",
+  "de": [
+    "Für wen gelten Menschenrechte grundsätzlich?",
+    "Für alle Menschen",
+    "Nur für Staatsangehörige reicher Länder",
+    "Nur für Menschen mit Arbeit",
+    "Nur für Personen mit derselben Meinung",
+    "Denke an den Begriff Menschenrechte.",
+    "Sie hängen nicht von Beliebtheit, Beruf oder Herkunft ab."
+  ],
+  "en": [
+    "Who are human rights fundamentally for?",
+    "All human beings",
+    "Only citizens of wealthy countries",
+    "Only people with jobs",
+    "Only people sharing the same opinion",
+    "Think about the term human rights.",
+    "They do not depend on popularity, job or origin."
+  ],
+  "fr": [
+    "À qui les droits humains s'appliquent-ils fondamentalement ?",
+    "À tous les êtres humains",
+    "Seulement aux citoyens des pays riches",
+    "Seulement aux personnes qui travaillent",
+    "Seulement aux personnes du même avis",
+    "Pense au terme droits humains.",
+    "Ils ne dépendent ni de la popularité, ni du métier, ni de l'origine."
+  ],
+  "it": [
+    "A chi spettano fondamentalmente i diritti umani?",
+    "A tutti gli esseri umani",
+    "Solo ai cittadini dei Paesi ricchi",
+    "Solo alle persone che lavorano",
+    "Solo alle persone della stessa opinione",
+    "Pensa al termine diritti umani.",
+    "Non dipendono da popolarità, mestiere o origine."
+  ],
+  "reason": "Individually reviewed knowledge objective: Für wen gelten Menschenrechte grundsätzlich? Replaces exact-text recall of: Was ist das Grundprinzip hinter allen Menschenrechten?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_6",
+  "de": [
+    "In welchem Gebirge liegt der Mount Everest?",
+    "Im Himalaya",
+    "In den Alpen",
+    "In den Anden",
+    "Im Atlas",
+    "Denke an den höchsten Gipfel über dem Meeresspiegel.",
+    "Suche in Asien."
+  ],
+  "en": [
+    "In which mountain range is Mount Everest?",
+    "The Himalayas",
+    "The Alps",
+    "The Andes",
+    "The Atlas",
+    "Think of the highest peak above sea level.",
+    "Look in Asia."
+  ],
+  "fr": [
+    "Dans quelle chaîne se trouve l'Everest ?",
+    "L'Himalaya",
+    "Les Alpes",
+    "Les Andes",
+    "L'Atlas",
+    "Pense au sommet le plus élevé au-dessus de la mer.",
+    "Cherche en Asie."
+  ],
+  "it": [
+    "In quale catena si trova l'Everest?",
+    "Nell'Himalaya",
+    "Nelle Alpi",
+    "Nelle Ande",
+    "Nell'Atlante",
+    "Pensa alla vetta più alta sul livello del mare.",
+    "Cerca in Asia."
+  ],
+  "reason": "Individually reviewed knowledge objective: In welchem Gebirge liegt der Mount Everest? Replaces exact-text recall of: Was ist das höchste Gebirge der Welt?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_10",
+  "de": [
+    "Welcher Kontinent liegt rund um den Südpol?",
+    "Antarktika",
+    "Australien",
+    "Südamerika",
+    "Afrika",
+    "Ordne die Kontinente auf dem Globus ein.",
+    "Gesucht ist nicht die Region am Nordpol."
+  ],
+  "en": [
+    "Which continent surrounds the South Pole?",
+    "Antarctica",
+    "Australia",
+    "South America",
+    "Africa",
+    "Locate the continents on a globe.",
+    "Do not confuse it with the North Polar region."
+  ],
+  "fr": [
+    "Quel continent entoure le pôle Sud ?",
+    "L'Antarctique",
+    "L'Australie",
+    "L'Amérique du Sud",
+    "L'Afrique",
+    "Situe les continents sur un globe.",
+    "Ne confonds pas avec la région du pôle Nord."
+  ],
+  "it": [
+    "Quale continente circonda il Polo Sud?",
+    "Antartide",
+    "Australia",
+    "America del Sud",
+    "Africa",
+    "Colloca i continenti sul globo.",
+    "Non confondere questa zona con quella del Polo Nord."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welcher Kontinent liegt rund um den Südpol? Replaces exact-text recall of: Was ist die Antarktis?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_12",
+  "de": [
+    "Wo liegt die Sahara?",
+    "In Nordafrika",
+    "In Südamerika",
+    "In Zentralasien",
+    "Im Süden Australiens",
+    "Denke an eine grosse heisse Wüste.",
+    "Suche südlich des Mittelmeers."
+  ],
+  "en": [
+    "Where is the Sahara?",
+    "North Africa",
+    "South America",
+    "Central Asia",
+    "Southern Australia",
+    "Think of a large hot desert.",
+    "Look south of the Mediterranean."
+  ],
+  "fr": [
+    "Où se trouve le Sahara ?",
+    "En Afrique du Nord",
+    "En Amérique du Sud",
+    "En Asie centrale",
+    "Dans le sud de l'Australie",
+    "Pense à un grand désert chaud.",
+    "Cherche au sud de la Méditerranée."
+  ],
+  "it": [
+    "Dove si trova il Sahara?",
+    "In Africa settentrionale",
+    "In America del Sud",
+    "In Asia centrale",
+    "Nel sud dell'Australia",
+    "Pensa a un grande deserto caldo.",
+    "Cerca a sud del Mediterraneo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wo liegt die Sahara? Replaces exact-text recall of: Was ist die Sahara?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_14",
+  "de": [
+    "Auf welchem Kontinent fliesst der Amazonas?",
+    "Südamerika",
+    "Afrika",
+    "Asien",
+    "Europa",
+    "Denke an den grossen tropischen Regenwald Brasiliens.",
+    "Ordne Brasilien auf der Weltkarte ein."
+  ],
+  "en": [
+    "On which continent does the Amazon flow?",
+    "South America",
+    "Africa",
+    "Asia",
+    "Europe",
+    "Think of Brazil's vast tropical rainforest.",
+    "Locate Brazil on a world map."
+  ],
+  "fr": [
+    "Sur quel continent coule l'Amazone ?",
+    "L'Amérique du Sud",
+    "L'Afrique",
+    "L'Asie",
+    "L'Europe",
+    "Pense à la grande forêt tropicale du Brésil.",
+    "Situe le Brésil sur une carte du monde."
+  ],
+  "it": [
+    "In quale continente scorre il Rio delle Amazzoni?",
+    "America del Sud",
+    "Africa",
+    "Asia",
+    "Europa",
+    "Pensa alla grande foresta tropicale del Brasile.",
+    "Colloca il Brasile sul planisfero."
+  ],
+  "reason": "Individually reviewed knowledge objective: Auf welchem Kontinent fliesst der Amazonas? Replaces exact-text recall of: Was ist der Amazonas?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_16",
+  "de": [
+    "Welche Lage beschreibt «Afrika südlich der Sahara»?",
+    "Die afrikanischen Regionen südlich dieser Wüste",
+    "Die afrikanischen Regionen nördlich der Sahara",
+    "Nur die Länder direkt am Mittelmeer",
+    "Ausschliesslich das Gebiet innerhalb der Sahara",
+    "Achte auf den geografischen Bezugspunkt.",
+    "Die Bezeichnung umfasst viele unterschiedliche Länder."
+  ],
+  "en": [
+    "What does 'sub-Saharan Africa' describe?",
+    "African regions south of that desert",
+    "African regions north of the Sahara",
+    "Only countries directly on the Mediterranean",
+    "Only the area inside the Sahara",
+    "Notice the geographical reference point.",
+    "The term includes many different countries."
+  ],
+  "fr": [
+    "Que désigne l'Afrique subsaharienne ?",
+    "Les régions africaines au sud de ce désert",
+    "Les régions africaines au nord du Sahara",
+    "Seulement les pays au bord de la Méditerranée",
+    "Uniquement le territoire à l'intérieur du Sahara",
+    "Observe le repère géographique.",
+    "Le terme comprend de nombreux pays différents."
+  ],
+  "it": [
+    "Che cosa indica l'Africa subsahariana?",
+    "Le regioni africane a sud di quel deserto",
+    "Le regioni africane a nord del Sahara",
+    "Solo i Paesi direttamente sul Mediterraneo",
+    "Solo il territorio dentro il Sahara",
+    "Osserva il riferimento geografico.",
+    "Il termine comprende molti Paesi diversi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Lage beschreibt «Afrika südlich der Sahara»? Replaces exact-text recall of: Was ist Sub-Sahara-Afrika?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_18",
+  "de": [
+    "Warum gibt es rund um den Pazifik viele Vulkane und Erdbeben?",
+    "Dort liegen viele Grenzen von Erdplatten",
+    "Dort bewegen sich keine Erdplatten gegeneinander",
+    "Vulkane entstehen dort nur durch starke Meeresströmungen",
+    "Erdbeben werden dort ausschliesslich durch den täglichen Wind ausgelöst",
+    "Denke an Vorgänge unter der Erdoberfläche.",
+    "Was geschieht an den Rändern beweglicher Platten?"
+  ],
+  "en": [
+    "Why are there many volcanoes and earthquakes around the Pacific?",
+    "Many tectonic plate boundaries lie there",
+    "No tectonic plates move against each other there",
+    "Volcanoes there form only from strong ocean currents",
+    "Earthquakes there are caused only by daily winds",
+    "Think of processes below Earth's surface.",
+    "What happens at the edges of moving plates?"
+  ],
+  "fr": [
+    "Pourquoi y a-t-il beaucoup de volcans et de séismes autour du Pacifique ?",
+    "On y trouve de nombreuses limites de plaques tectoniques",
+    "Aucune plaque ne s'y déplace contre une autre",
+    "Les volcans s'y forment uniquement par les courants marins",
+    "Les séismes y sont causés uniquement par les vents quotidiens",
+    "Pense aux phénomènes sous la surface terrestre.",
+    "Que se passe-t-il aux bords des plaques mobiles ?"
+  ],
+  "it": [
+    "Perché attorno al Pacifico ci sono molti vulcani e terremoti?",
+    "Vi si trovano molti confini tra placche tettoniche",
+    "Nessuna placca si muove contro un'altra lì",
+    "I vulcani vi si formano solo per le correnti marine",
+    "I terremoti vi sono causati solo dai venti quotidiani",
+    "Pensa ai fenomeni sotto la superficie terrestre.",
+    "Che cosa succede ai margini delle placche mobili?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum gibt es rund um den Pazifik viele Vulkane und Erdbeben? Replaces exact-text recall of: Was ist der Ring of Fire?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_20",
+  "de": [
+    "Welches Land liegt auf der Arabischen Halbinsel?",
+    "Saudi-Arabien",
+    "Brasilien",
+    "Kenia",
+    "Japan",
+    "Vergleiche die Lage der Länder.",
+    "Suche zwischen Rotem Meer und Persischem Golf."
+  ],
+  "en": [
+    "Which country lies on the Arabian Peninsula?",
+    "Saudi Arabia",
+    "Brazil",
+    "Kenya",
+    "Japan",
+    "Compare the countries' locations.",
+    "Look between the Red Sea and the Persian Gulf."
+  ],
+  "fr": [
+    "Quel pays se trouve sur la péninsule Arabique ?",
+    "L'Arabie saoudite",
+    "Le Brésil",
+    "Le Kenya",
+    "Le Japon",
+    "Compare la situation des pays.",
+    "Cherche entre la mer Rouge et le golfe Persique."
+  ],
+  "it": [
+    "Quale Paese si trova sulla penisola arabica?",
+    "Arabia Saudita",
+    "Brasile",
+    "Kenya",
+    "Giappone",
+    "Confronta la posizione dei Paesi.",
+    "Cerca tra il Mar Rosso e il Golfo Persico."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Land liegt auf der Arabischen Halbinsel? Replaces exact-text recall of: Was ist Naher Osten?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_22",
+  "de": [
+    "Welche Grössen verändern die Einwohnerzahl eines Landes?",
+    "Geburten, Sterbefälle, Zu- und Abwanderung",
+    "Nur Geburten, unabhängig von Sterbefällen und Wanderungen",
+    "Nur Zuwanderung, unabhängig von allen anderen Veränderungen",
+    "Nur die Landesfläche, unabhängig von Menschen",
+    "Denke an Menschen, die hinzukommen oder wegfallen.",
+    "Natürliche Entwicklung und Wanderungen wirken zusammen."
+  ],
+  "en": [
+    "Which factors change a country's population?",
+    "Births, deaths, immigration and emigration",
+    "Only births, regardless of deaths and migration",
+    "Only immigration, regardless of all other changes",
+    "Only land area, regardless of people",
+    "Think of people being added or leaving.",
+    "Natural change and migration work together."
+  ],
+  "fr": [
+    "Quels facteurs changent la population d'un pays ?",
+    "Les naissances, décès, immigrations et émigrations",
+    "Seulement les naissances, sans décès ni migrations",
+    "Seulement l'immigration, sans autres changements",
+    "Seulement la superficie, indépendamment des habitants",
+    "Pense aux personnes qui s'ajoutent ou partent.",
+    "Évolution naturelle et migrations se combinent."
+  ],
+  "it": [
+    "Quali fattori cambiano la popolazione di un Paese?",
+    "Nascite, decessi, immigrazione ed emigrazione",
+    "Solo le nascite, senza decessi e migrazioni",
+    "Solo l'immigrazione, senza altri cambiamenti",
+    "Solo la superficie, indipendentemente dagli abitanti",
+    "Pensa alle persone che si aggiungono o partono.",
+    "Evoluzione naturale e migrazioni agiscono insieme."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Grössen verändern die Einwohnerzahl eines Landes? Replaces exact-text recall of: Was ist das Bevölkerungswachstum in Afrika?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_24",
+  "de": [
+    "Eine Stadt wächst rasch. Welche Aufgabe kann besonders dringend werden?",
+    "Wohnraum, Wasserleitungen und Verkehr mitplanen",
+    "Neue Wohnungen planen, aber die Wasserversorgung unverändert als ausreichend annehmen",
+    "Zusätzliche Verkehrswege ohne Bezug zu Wohnorten planen",
+    "Mehr Einwohner erwarten, aber keinen zusätzlichen Schulbedarf prüfen",
+    "Denke an den Alltag zusätzlicher Einwohner.",
+    "Welche Einrichtungen müssen mit dem Bedarf wachsen?"
+  ],
+  "en": [
+    "A city grows rapidly. Which task can become especially urgent?",
+    "Planning housing, water supply and transport together",
+    "Plan new homes but assume unchanged water supply is sufficient",
+    "Plan extra transport routes without reference to residential areas",
+    "Expect more residents but never assess additional school needs",
+    "Think of additional residents' daily lives.",
+    "Which facilities must grow with demand?"
+  ],
+  "fr": [
+    "Une ville grandit rapidement. Quelle tâche peut devenir urgente ?",
+    "Planifier ensemble logements, eau et transports",
+    "Prévoir des logements mais supposer l'eau existante suffisante",
+    "Prévoir des transports sans lien avec les lieux d'habitation",
+    "Attendre plus d'habitants sans examiner les besoins scolaires",
+    "Pense au quotidien des nouveaux habitants.",
+    "Quels équipements doivent suivre les besoins ?"
+  ],
+  "it": [
+    "Una città cresce rapidamente. Quale compito può diventare urgente?",
+    "Pianificare insieme alloggi, acqua e trasporti",
+    "Pianificare case ma supporre sufficiente l'acqua esistente",
+    "Pianificare trasporti senza relazione con le zone residenziali",
+    "Attendere più abitanti senza valutare i bisogni scolastici",
+    "Pensa alla vita quotidiana dei nuovi abitanti.",
+    "Quali servizi devono crescere con i bisogni?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Eine Stadt wächst rasch. Welche Aufgabe kann besonders dringend werden? Replaces exact-text recall of: Was ist Urbanisierung in Entwicklungsländern?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_26",
+  "de": [
+    "Was bedeutet es, wenn China viele Waren exportiert?",
+    "Viele dort hergestellte Waren werden ins Ausland verkauft",
+    "Alle dortigen Waren bleiben im Inland",
+    "Das Land kauft grundsätzlich keine Waren ein",
+    "Jedes chinesische Unternehmen gehört einem anderen Staat",
+    "Unterscheide Verkauf ins Ausland und Einkauf aus dem Ausland.",
+    "Die Richtung des Warenstroms ist entscheidend."
+  ],
+  "en": [
+    "What does it mean that China exports many goods?",
+    "Many goods made there are sold abroad",
+    "All goods made there stay in the country",
+    "The country never buys goods",
+    "Every Chinese company belongs to another state",
+    "Distinguish selling abroad from buying from abroad.",
+    "The direction of goods matters."
+  ],
+  "fr": [
+    "Que signifie le fait que la Chine exporte beaucoup de marchandises ?",
+    "Beaucoup de produits fabriqués sur place sont vendus à l'étranger",
+    "Tous les produits restent dans le pays",
+    "Le pays n'achète jamais de marchandises",
+    "Chaque entreprise chinoise appartient à un autre État",
+    "Distingue vente à l'étranger et achat à l'étranger.",
+    "Le sens du flux est important."
+  ],
+  "it": [
+    "Che cosa significa che la Cina esporta molte merci?",
+    "Molti prodotti fabbricati lì vengono venduti all'estero",
+    "Tutti i prodotti restano nel Paese",
+    "Il Paese non acquista mai merci",
+    "Ogni azienda cinese appartiene a un altro Stato",
+    "Distingui vendita all'estero e acquisto dall'estero.",
+    "Conta la direzione delle merci."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutet es, wenn China viele Waren exportiert? Replaces exact-text recall of: Was ist Chinas Rolle in der Weltwirtschaft?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_28",
+  "de": [
+    "Welche Wirkung kann eine neue Bahnstrecke zwischen Handelszentren haben?",
+    "Sie kann den Transport von Waren erleichtern",
+    "Sie beseitigt automatisch jede Landesgrenze",
+    "Sie macht alle Waren überall gleich teuer",
+    "Sie verhindert jeden Austausch zwischen Orten",
+    "Denke an Verbindungen und Erreichbarkeit.",
+    "Ein Verkehrsprojekt verändert Wege, nicht automatisch alle Regeln."
+  ],
+  "en": [
+    "What can a new railway between trade centres do?",
+    "Make freight transport easier",
+    "Automatically remove every national border",
+    "Make all goods cost the same everywhere",
+    "Prevent all exchange between places",
+    "Think of connections and accessibility.",
+    "A transport project changes routes, not automatically every rule."
+  ],
+  "fr": [
+    "Quel effet peut avoir une nouvelle voie ferrée entre centres commerciaux ?",
+    "Faciliter le transport de marchandises",
+    "Supprimer automatiquement toutes les frontières",
+    "Rendre tous les produits aussi chers partout",
+    "Empêcher tout échange entre lieux",
+    "Pense aux connexions et à l'accessibilité.",
+    "Un projet de transport change les trajets, pas toutes les règles."
+  ],
+  "it": [
+    "Quale effetto può avere una nuova ferrovia tra centri commerciali?",
+    "Facilitare il trasporto di merci",
+    "Eliminare automaticamente ogni confine nazionale",
+    "Rendere ogni prodotto ugualmente caro ovunque",
+    "Impedire ogni scambio tra località",
+    "Pensa ai collegamenti e all'accessibilità.",
+    "Un progetto di trasporto cambia i percorsi, non tutte le regole."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Wirkung kann eine neue Bahnstrecke zwischen Handelszentren haben? Replaces exact-text recall of: Was ist Belt and Road Initiative (BRI)?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_30",
+  "de": [
+    "Von welchem Land ist Nairobi die Hauptstadt?",
+    "Kenia",
+    "Ägypten",
+    "Nigeria",
+    "Südafrika",
+    "Suche in Ostafrika.",
+    "Verwechsle die Stadt nicht mit Kairo oder Abuja."
+  ],
+  "en": [
+    "Of which country is Nairobi the capital?",
+    "Kenya",
+    "Egypt",
+    "Nigeria",
+    "South Africa",
+    "Look in East Africa.",
+    "Do not confuse it with Cairo or Abuja."
+  ],
+  "fr": [
+    "De quel pays Nairobi est-elle la capitale ?",
+    "Le Kenya",
+    "L'Égypte",
+    "Le Nigeria",
+    "L'Afrique du Sud",
+    "Cherche en Afrique de l'Est.",
+    "Ne confonds pas avec Le Caire ou Abuja."
+  ],
+  "it": [
+    "Di quale Paese è capitale Nairobi?",
+    "Kenya",
+    "Egitto",
+    "Nigeria",
+    "Sudafrica",
+    "Cerca in Africa orientale.",
+    "Non confonderla con Il Cairo o Abuja."
+  ],
+  "reason": "Individually reviewed knowledge objective: Von welchem Land ist Nairobi die Hauptstadt? Replaces exact-text recall of: Was ist Nairobi als afrikanische Metropole?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_32",
+  "de": [
+    "Welches Land hat eine Küste am Schwarzen Meer?",
+    "Türkei",
+    "Portugal",
+    "Schweden",
+    "Irland",
+    "Ordne die Meere an Europas Rändern ein.",
+    "Denke an den Bosporus als Verbindung nach Süden."
+  ],
+  "en": [
+    "Which country has a Black Sea coastline?",
+    "Türkiye",
+    "Portugal",
+    "Sweden",
+    "Ireland",
+    "Locate the seas around Europe.",
+    "Think of the Bosporus as a connection to the south."
+  ],
+  "fr": [
+    "Quel pays possède une côte sur la mer Noire ?",
+    "La Turquie",
+    "Le Portugal",
+    "La Suède",
+    "L'Irlande",
+    "Situe les mers autour de l'Europe.",
+    "Pense au Bosphore comme passage vers le sud."
+  ],
+  "it": [
+    "Quale Paese ha una costa sul Mar Nero?",
+    "Turchia",
+    "Portogallo",
+    "Svezia",
+    "Irlanda",
+    "Colloca i mari attorno all'Europa.",
+    "Pensa al Bosforo come passaggio verso sud."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Land hat eine Küste am Schwarzen Meer? Replaces exact-text recall of: Was ist das Schwarze Meer?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_34",
+  "de": [
+    "Welche Aussage über Ostafrika ist angemessen?",
+    "Die Länder und Lebensbedingungen der Region sind vielfältig",
+    "Alle Menschen dort leben genau gleich",
+    "In der gesamten Region gibt es keine Städte",
+    "Jedes Land hat dieselbe Wirtschaft",
+    "Vermeide pauschale Aussagen über grosse Regionen.",
+    "Vergleiche Länder, Städte und ländliche Gebiete."
+  ],
+  "en": [
+    "Which statement about East Africa is appropriate?",
+    "The region's countries and living conditions are diverse",
+    "Everyone there lives exactly the same way",
+    "There are no cities anywhere in the region",
+    "Every country has the same economy",
+    "Avoid blanket claims about large regions.",
+    "Compare countries, cities and rural areas."
+  ],
+  "fr": [
+    "Quelle phrase sur l'Afrique de l'Est est juste ?",
+    "Les pays et les conditions de vie y sont variés",
+    "Tout le monde y vit exactement pareil",
+    "Il n'y a aucune ville dans toute la région",
+    "Chaque pays a la même économie",
+    "Évite les généralisations sur les grandes régions.",
+    "Compare pays, villes et campagnes."
+  ],
+  "it": [
+    "Quale frase sull'Africa orientale è adeguata?",
+    "I Paesi e le condizioni di vita della regione sono diversi",
+    "Tutti vi vivono esattamente allo stesso modo",
+    "Non esistono città in tutta la regione",
+    "Ogni Paese ha la stessa economia",
+    "Evita generalizzazioni sulle grandi regioni.",
+    "Confronta Paesi, città e campagne."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aussage über Ostafrika ist angemessen? Replaces exact-text recall of: Was ist Ostafrika als aufstrebende Region?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_36",
+  "de": [
+    "Wozu dient die Legende einer Karte?",
+    "Sie erklärt die verwendeten Zeichen und Farben",
+    "Sie gibt ausschliesslich das Verhältnis von Kartenstrecke zu Wirklichkeit an",
+    "Sie zeigt ausschliesslich die Ausrichtung nach Norden",
+    "Sie nennt ausschliesslich das Erscheinungsjahr der Karte",
+    "Denke an unbekannte Symbole.",
+    "Wo findest du deren Bedeutung?"
+  ],
+  "en": [
+    "What is a map legend for?",
+    "Explaining the symbols and colours used",
+    "It gives only the ratio of map distance to real distance",
+    "It shows only orientation towards north",
+    "It gives only the year the map was published",
+    "Think of unfamiliar symbols.",
+    "Where can you find their meanings?"
+  ],
+  "fr": [
+    "À quoi sert la légende d'une carte ?",
+    "À expliquer les signes et couleurs utilisés",
+    "Elle donne seulement le rapport entre distance sur carte et distance réelle",
+    "Elle montre seulement l'orientation vers le nord",
+    "Elle indique seulement l'année de publication",
+    "Pense aux symboles inconnus.",
+    "Où trouver leur signification ?"
+  ],
+  "it": [
+    "A cosa serve la legenda di una carta?",
+    "A spiegare i simboli e i colori usati",
+    "Indica solo il rapporto tra distanza sulla carta e reale",
+    "Mostra solo l'orientamento verso nord",
+    "Indica solo l'anno di pubblicazione",
+    "Pensa ai simboli sconosciuti.",
+    "Dove trovi il loro significato?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu dient die Legende einer Karte? Replaces exact-text recall of: Kontinente: Eine Kartenlegende: Welche Aussage passt? Antwort: ___"
+},
+{
+  "key": "6/science/kontinente-6/ko6_38",
+  "de": [
+    "Viele junge Menschen erreichen das Arbeitsalter. Was hilft, daraus Chancen zu schaffen?",
+    "Gute Bildung und passende Arbeitsplätze",
+    "Der automatische Verzicht auf jede Ausbildung",
+    "Das Schliessen aller Betriebe",
+    "Die Annahme, dass Wachstum ohne weitere Bedingungen garantiert ist",
+    "Denke an Fähigkeiten und Möglichkeiten.",
+    "Eine günstige Altersstruktur allein reicht nicht aus."
+  ],
+  "en": [
+    "Many young people reach working age. What helps turn this into opportunity?",
+    "Good education and suitable jobs",
+    "Automatically abandoning all training",
+    "Closing every business",
+    "Assuming growth is guaranteed without other conditions",
+    "Think of skills and opportunities.",
+    "A favourable age structure alone is not enough."
+  ],
+  "fr": [
+    "Beaucoup de jeunes atteignent l'âge de travailler. Qu'est-ce qui crée des possibilités ?",
+    "Une bonne formation et des emplois adaptés",
+    "Renoncer automatiquement à toute formation",
+    "Fermer toutes les entreprises",
+    "Supposer une croissance garantie sans autre condition",
+    "Pense aux compétences et aux possibilités.",
+    "Une structure d'âge favorable ne suffit pas à elle seule."
+  ],
+  "it": [
+    "Molti giovani raggiungono l'età lavorativa. Che cosa aiuta a creare opportunità?",
+    "Una buona formazione e posti di lavoro adatti",
+    "Rinunciare automaticamente a ogni formazione",
+    "Chiudere tutte le imprese",
+    "Supporre una crescita garantita senza altre condizioni",
+    "Pensa a competenze e opportunità.",
+    "Una struttura d'età favorevole da sola non basta."
+  ],
+  "reason": "Individually reviewed knowledge objective: Viele junge Menschen erreichen das Arbeitsalter. Was hilft, daraus Chancen zu schaffen? Replaces exact-text recall of: Was ist demographische Dividende?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_40",
+  "de": [
+    "Welche Aufgabe gehört zur grundlegenden öffentlichen Versorgung?",
+    "Verlässlichen Zugang zu Trinkwasser ermöglichen",
+    "Ausschliesslich zahlungskräftigen Haushalten jede verfügbare Wasserleitung vorbehalten",
+    "Nur private Luxusangebote ohne Grundversorgung fördern",
+    "Den Zugang zu wichtigen Diensten allein vom Wohnquartier abhängig machen",
+    "Denke an alltägliche Grundbedürfnisse.",
+    "Was brauchen Menschen unabhängig von Einkommen und Geschmack?"
+  ],
+  "en": [
+    "Which task belongs to basic public services?",
+    "Enabling reliable access to drinking water",
+    "Reserve all available water pipes solely for wealthy households",
+    "Promote only private luxury services without basic provision",
+    "Make access to essential services depend solely on neighbourhood",
+    "Think of everyday basic needs.",
+    "What do people need regardless of income or taste?"
+  ],
+  "fr": [
+    "Quelle tâche relève des services publics essentiels ?",
+    "Permettre un accès fiable à l'eau potable",
+    "Réserver toutes les conduites aux seuls ménages aisés",
+    "Promouvoir seulement le luxe privé sans services essentiels",
+    "Faire dépendre l'accès aux services essentiels du seul quartier",
+    "Pense aux besoins fondamentaux quotidiens.",
+    "De quoi a-t-on besoin quel que soit son revenu ou son goût ?"
+  ],
+  "it": [
+    "Quale compito rientra nei servizi pubblici essenziali?",
+    "Consentire un accesso affidabile all'acqua potabile",
+    "Riservare tutte le condotte soltanto alle famiglie ricche",
+    "Promuovere solo lusso privato senza servizi essenziali",
+    "Far dipendere l'accesso ai servizi essenziali solo dal quartiere",
+    "Pensa ai bisogni fondamentali quotidiani.",
+    "Che cosa serve indipendentemente dal reddito o dai gusti?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aufgabe gehört zur grundlegenden öffentlichen Versorgung? Replaces exact-text recall of: Was ist failed state?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_42",
+  "de": [
+    "Wobei hilft ein Kompass?",
+    "Beim Bestimmen von Himmelsrichtungen",
+    "Beim Messen der Lufttemperatur",
+    "Beim Bestimmen der Einwohnerzahl",
+    "Beim Berechnen des Alters eines Berges",
+    "Denke an Orientierung unterwegs.",
+    "Die Nadel richtet sich nach dem Erdmagnetfeld aus."
+  ],
+  "en": [
+    "What does a compass help determine?",
+    "Directions",
+    "Air temperature",
+    "Population size",
+    "A mountain's age",
+    "Think about finding your way.",
+    "The needle aligns with Earth's magnetic field."
+  ],
+  "fr": [
+    "Qu'aide à déterminer une boussole ?",
+    "Les directions cardinales",
+    "La température de l'air",
+    "Le nombre d'habitants",
+    "L'âge d'une montagne",
+    "Pense à l'orientation.",
+    "L'aiguille s'aligne sur le champ magnétique terrestre."
+  ],
+  "it": [
+    "Che cosa aiuta a determinare una bussola?",
+    "I punti cardinali",
+    "La temperatura dell'aria",
+    "Il numero di abitanti",
+    "L'età di una montagna",
+    "Pensa all'orientamento.",
+    "L'ago si allinea al campo magnetico terrestre."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wobei hilft ein Kompass? Replaces exact-text recall of: Kontinente: Ein Kompass: Welche Aussage passt? Antwort: ___"
+},
+{
+  "key": "6/science/kontinente-6/ko6_44",
+  "de": [
+    "Warum garantiert grosser Rohstoffreichtum nicht Wohlstand für alle?",
+    "Einnahmen können ungleich verteilt werden oder durch Korruption verloren gehen",
+    "Rohstoffe besitzen grundsätzlich keinen wirtschaftlichen Wert",
+    "Alle Länder verteilen Einnahmen automatisch gleich",
+    "Jedes Bergwerk schafft ohne Regeln perfekte Arbeitsbedingungen",
+    "Denke an die Verteilung und Verwaltung der Einnahmen.",
+    "Besitz allein sagt noch nichts über den Nutzen für die Bevölkerung."
+  ],
+  "en": [
+    "Why do abundant natural resources not guarantee prosperity for everyone?",
+    "Revenue can be distributed unequally or lost through corruption",
+    "Resources have no economic value at all",
+    "Every country automatically shares revenue equally",
+    "Every mine creates perfect working conditions without rules",
+    "Think of how revenue is managed and shared.",
+    "Ownership alone does not show benefits for the population."
+  ],
+  "fr": [
+    "Pourquoi des ressources abondantes ne garantissent-elles pas la prospérité pour tous ?",
+    "Les revenus peuvent être inégalement répartis ou perdus par corruption",
+    "Les ressources n'ont aucune valeur économique",
+    "Tous les pays partagent automatiquement les revenus également",
+    "Toute mine crée sans règles des conditions de travail parfaites",
+    "Pense à la gestion et au partage des revenus.",
+    "Posséder ne suffit pas à garantir un bénéfice pour la population."
+  ],
+  "it": [
+    "Perché risorse abbondanti non garantiscono benessere per tutti?",
+    "I ricavi possono essere distribuiti male o persi per corruzione",
+    "Le risorse non hanno alcun valore economico",
+    "Tutti i Paesi distribuiscono automaticamente i ricavi in modo uguale",
+    "Ogni miniera crea condizioni di lavoro perfette senza regole",
+    "Pensa alla gestione e alla distribuzione dei ricavi.",
+    "Il possesso da solo non garantisce benefici alla popolazione."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum garantiert grosser Rohstoffreichtum nicht Wohlstand für alle? Replaces exact-text recall of: Was ist Ressourcenfluch?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_46",
+  "de": [
+    "Wozu treffen sich Staatengruppen wie die G7?",
+    "Um gemeinsame politische und wirtschaftliche Fragen zu besprechen",
+    "Um unmittelbar bindende Weltgesetze ohne andere Staaten zu beschliessen",
+    "Um die nationalen Regierungen durch eine gemeinsame Regierung zu ersetzen",
+    "Um nur innerstaatliche Gemeindeaufgaben ohne internationalen Bezug zu erledigen",
+    "Denke an Zusammenarbeit zwischen Regierungen.",
+    "Ein Treffen ist nicht dasselbe wie die Gründung eines neuen Staates."
+  ],
+  "en": [
+    "Why do groups of states such as the G7 meet?",
+    "To discuss shared political and economic issues",
+    "To pass immediately binding world laws without other states",
+    "To replace national governments with one shared government",
+    "To perform only domestic municipal tasks without international relevance",
+    "Think of cooperation between governments.",
+    "A meeting is not the same as founding a new state."
+  ],
+  "fr": [
+    "Pourquoi des groupes d'États comme le G7 se réunissent-ils ?",
+    "Pour discuter de questions politiques et économiques communes",
+    "Pour adopter des lois mondiales immédiatement contraignantes sans les autres États",
+    "Pour remplacer les gouvernements nationaux par un gouvernement commun",
+    "Pour traiter seulement des tâches communales sans portée internationale",
+    "Pense à la coopération entre gouvernements.",
+    "Une réunion ne crée pas un nouvel État."
+  ],
+  "it": [
+    "Perché gruppi di Stati come il G7 si riuniscono?",
+    "Per discutere questioni politiche ed economiche comuni",
+    "Per approvare leggi mondiali subito vincolanti senza gli altri Stati",
+    "Per sostituire i governi nazionali con un governo comune",
+    "Per svolgere solo compiti comunali senza rilievo internazionale",
+    "Pensa alla cooperazione tra governi.",
+    "Una riunione non crea un nuovo Stato."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu treffen sich Staatengruppen wie die G7? Replaces exact-text recall of: Was ist der Unterschied BRICS vs. G7?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_48",
+  "de": [
+    "Welche beiden Erdteile bilden zusammen Eurasien?",
+    "Europa und Asien",
+    "Europa und Afrika",
+    "Asien und Australien",
+    "Nordamerika und Südamerika",
+    "Achte auf den zusammengesetzten Namen.",
+    "Die beiden Erdteile liegen auf einer zusammenhängenden Landmasse."
+  ],
+  "en": [
+    "Which two continents together form Eurasia?",
+    "Europe and Asia",
+    "Europe and Africa",
+    "Asia and Australia",
+    "North America and South America",
+    "Look at the combined name.",
+    "The two continents share a continuous landmass."
+  ],
+  "fr": [
+    "Quels deux continents forment ensemble l'Eurasie ?",
+    "L'Europe et l'Asie",
+    "L'Europe et l'Afrique",
+    "L'Asie et l'Australie",
+    "L'Amérique du Nord et l'Amérique du Sud",
+    "Observe le nom composé.",
+    "Les deux continents partagent une masse terrestre continue."
+  ],
+  "it": [
+    "Quali due continenti formano insieme l'Eurasia?",
+    "Europa e Asia",
+    "Europa e Africa",
+    "Asia e Australia",
+    "America del Nord e America del Sud",
+    "Osserva il nome composto.",
+    "I due continenti condividono una massa terrestre continua."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche beiden Erdteile bilden zusammen Eurasien? Replaces exact-text recall of: Was ist Eurasien als geopolitisches Konzept?"
+},
+{
+  "key": "6/science/kontinente-6/ko6_50",
+  "de": [
+    "Ein Staat beschränkt Handel, um politischen Druck auszuüben. Welches Mittel nutzt er?",
+    "Ein wirtschaftliches Mittel",
+    "Ausschliesslich ein militärisches Mittel",
+    "Nur eine kulturelle Einladung ohne Handelswirkung",
+    "Eine innerstaatliche Gemeinderegel ohne Wirkung auf Aussenhandel",
+    "Denke an Handel als Verbindung zwischen Staaten.",
+    "Nicht jeder Machtversuch erfolgt militärisch."
+  ],
+  "en": [
+    "A state restricts trade to exert political pressure. What means is it using?",
+    "An economic measure",
+    "Only a military measure",
+    "Only a cultural invitation without trade effects",
+    "A domestic municipal rule with no effect on foreign trade",
+    "Think of trade linking states.",
+    "Not every exercise of power is military."
+  ],
+  "fr": [
+    "Un État limite le commerce pour exercer une pression politique. Quel moyen utilise-t-il ?",
+    "Un moyen économique",
+    "Uniquement un moyen militaire",
+    "Seulement une invitation culturelle sans effet commercial",
+    "Une règle communale sans effet sur le commerce extérieur",
+    "Pense au commerce comme lien entre États.",
+    "Toute action de pouvoir n'est pas militaire."
+  ],
+  "it": [
+    "Uno Stato limita il commercio per esercitare pressione politica. Quale mezzo usa?",
+    "Un mezzo economico",
+    "Soltanto un mezzo militare",
+    "Solo un invito culturale senza effetti commerciali",
+    "Una regola comunale senza effetto sul commercio estero",
+    "Pensa al commercio come legame tra Stati.",
+    "Non ogni azione di potere è militare."
+  ],
+  "reason": "Individually reviewed knowledge objective: Ein Staat beschränkt Handel, um politischen Druck auszuüben. Welches Mittel nutzt er? Replaces exact-text recall of: Was ist Geoökonomie?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_2",
+  "de": [
+    "Was kennzeichnet einen Flüchtling nach der Genfer Flüchtlingskonvention?",
+    "Eine Person ausserhalb ihres Landes mit begründeter Furcht vor Verfolgung",
+    "Jede Person, die allein wegen günstigerer Ferienpreise verreist",
+    "Jede Person, die freiwillig für eine besser bezahlte Stelle umzieht",
+    "Nur eine Person, die ihr Zuhause verlässt, aber innerhalb ihres Landes bleibt",
+    "Denke an Schutzbedarf statt an die Art des Reisens.",
+    "Die Konvention betrifft Verfolgung, nicht jeden Wohnortswechsel."
+  ],
+  "en": [
+    "What characterises a refugee under the Refugee Convention?",
+    "A person outside their country with a well-founded fear of persecution",
+    "Anyone travelling solely for cheaper holidays",
+    "Anyone moving voluntarily for a better-paid job",
+    "Only someone leaving home but remaining within their country",
+    "Think of protection needs rather than how someone travels.",
+    "The Convention concerns persecution, not every change of home."
+  ],
+  "fr": [
+    "Qu'est-ce qui caractérise un réfugié selon la Convention de Genève ?",
+    "Une personne hors de son pays craignant avec raison d'être persécutée",
+    "Toute personne voyageant seulement pour des vacances moins chères",
+    "Toute personne déménageant volontairement pour un meilleur salaire",
+    "Seulement une personne quittant son domicile mais restant dans son pays",
+    "Pense au besoin de protection plutôt qu'au mode de voyage.",
+    "La Convention concerne la persécution, pas tout déménagement."
+  ],
+  "it": [
+    "Che cosa caratterizza un rifugiato secondo la Convenzione di Ginevra?",
+    "Una persona fuori dal proprio Paese con fondato timore di persecuzione",
+    "Chiunque viaggi solo per vacanze meno care",
+    "Chiunque si trasferisca volontariamente per uno stipendio migliore",
+    "Solo chi lascia casa ma resta nel proprio Paese",
+    "Pensa al bisogno di protezione, non al modo di viaggiare.",
+    "La Convenzione riguarda la persecuzione, non ogni trasloco."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kennzeichnet einen Flüchtling nach der Genfer Flüchtlingskonvention? Replaces exact-text recall of: Was ist ein Flüchtling im Sinne der Genfer Flüchtlingskonvention?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_4",
+  "de": [
+    "Welche Aussage zu Migration und Flucht stimmt?",
+    "Wohnortswechsel haben verschiedene Gründe; Flüchtlinge benötigen besonderen Schutz",
+    "Jeder Wohnortswechsel ist eine Flucht vor Verfolgung",
+    "Flüchtlinge können grundsätzlich nicht über Grenzen gehen",
+    "Migration bedeutet nur Ferien ohne Wohnortswechsel",
+    "Unterscheide den allgemeinen Begriff vom besonderen Schutzstatus.",
+    "Der Grund des Weggehens ist wichtig."
+  ],
+  "en": [
+    "Which statement about migration and refuge is correct?",
+    "People move for different reasons; refugees need particular protection",
+    "Every change of home is flight from persecution",
+    "Refugees can never cross borders",
+    "Migration means only holidays without moving home",
+    "Distinguish the broad term from a special protection status.",
+    "The reason for leaving matters."
+  ],
+  "fr": [
+    "Quelle phrase sur la migration et l'asile est juste ?",
+    "Les déménagements ont diverses raisons ; les réfugiés ont besoin d'une protection particulière",
+    "Tout déménagement est une fuite face à la persécution",
+    "Les réfugiés ne peuvent jamais franchir de frontière",
+    "La migration désigne seulement des vacances sans déménagement",
+    "Distingue le terme général du statut de protection.",
+    "La raison du départ compte."
+  ],
+  "it": [
+    "Quale frase su migrazione e rifugio è corretta?",
+    "Ci si trasferisce per motivi diversi; i rifugiati necessitano di protezione particolare",
+    "Ogni trasloco è una fuga dalla persecuzione",
+    "I rifugiati non possono mai attraversare confini",
+    "Migrazione significa solo vacanze senza trasloco",
+    "Distingui il termine generale dallo status di protezione.",
+    "Il motivo della partenza conta."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Aussage zu Migration und Flucht stimmt? Replaces exact-text recall of: Was ist der Unterschied zwischen Flüchtling und Migrant?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_6",
+  "de": [
+    "Was regelt die Genfer Flüchtlingskonvention von 1951?",
+    "Wer als Flüchtling gilt und grundlegende Schutzrechte",
+    "Die Rechte aller Touristen unabhängig vom Schutzbedarf",
+    "Nur die Preise für internationale Reisen",
+    "Ausschliesslich die Bedingungen für jeden freiwilligen Arbeitswechsel",
+    "Denke an ein internationales Schutzabkommen.",
+    "Es geht um Menschen in einer besonderen Notlage."
+  ],
+  "en": [
+    "What does the 1951 Refugee Convention set out?",
+    "Who qualifies as a refugee and basic protection rights",
+    "The rights of every tourist regardless of protection needs",
+    "Only international travel prices",
+    "Only conditions for every voluntary job change",
+    "Think of an international protection agreement.",
+    "It concerns people in a particular situation of danger."
+  ],
+  "fr": [
+    "Que définit la Convention de Genève de 1951 sur les réfugiés ?",
+    "Qui est réfugié et les droits fondamentaux de protection",
+    "Les droits de tous les touristes indépendamment du besoin de protection",
+    "Seulement les prix des voyages internationaux",
+    "Seulement les conditions de tout changement volontaire d'emploi",
+    "Pense à un accord international de protection.",
+    "Il concerne des personnes dans une situation de danger particulière."
+  ],
+  "it": [
+    "Che cosa definisce la Convenzione di Ginevra del 1951 sui rifugiati?",
+    "Chi è rifugiato e i diritti fondamentali di protezione",
+    "I diritti di tutti i turisti indipendentemente dal bisogno di protezione",
+    "Solo i prezzi dei viaggi internazionali",
+    "Solo le condizioni di ogni cambiamento volontario di lavoro",
+    "Pensa a un accordo internazionale di protezione.",
+    "Riguarda persone in una particolare situazione di pericolo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was regelt die Genfer Flüchtlingskonvention von 1951? Replaces exact-text recall of: Was ist Genfer Flüchtlingskonvention (1951)?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_8",
+  "de": [
+    "Was ist ein Pull-Faktor für Migration?",
+    "Eine passende Arbeitsmöglichkeit am Zielort",
+    "Verfolgung am bisherigen Wohnort",
+    "Eine Naturkatastrophe am Herkunftsort",
+    "Ein Krieg, der Menschen von zu Hause vertreibt",
+    "Unterscheide anziehende Gründe am Ziel von wegtreibenden Gründen am Herkunftsort.",
+    "Achte darauf, wo der Grund liegt."
+  ],
+  "en": [
+    "What is a pull factor for migration?",
+    "A suitable job opportunity at the destination",
+    "Persecution in the current home",
+    "A natural disaster at the place of origin",
+    "A war driving people from home",
+    "Distinguish attractions at the destination from pressures at the origin.",
+    "Notice where the factor occurs."
+  ],
+  "fr": [
+    "Quel est un facteur d'attraction de la migration ?",
+    "Un emploi adapté au lieu de destination",
+    "La persécution au domicile actuel",
+    "Une catastrophe au lieu d'origine",
+    "Une guerre qui chasse les gens de chez eux",
+    "Distingue ce qui attire à destination de ce qui pousse à partir.",
+    "Observe où se situe le facteur."
+  ],
+  "it": [
+    "Qual è un fattore di attrazione della migrazione?",
+    "Un lavoro adatto nel luogo di destinazione",
+    "La persecuzione nel luogo attuale",
+    "Una catastrofe nel luogo d'origine",
+    "Una guerra che costringe a lasciare casa",
+    "Distingui ciò che attira a destinazione da ciò che spinge a partire.",
+    "Osserva dove si trova il fattore."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist ein Pull-Faktor für Migration? Replaces exact-text recall of: Was sind Pull-Faktoren?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_12",
+  "de": [
+    "Welcher Umzug ist Binnenmigration?",
+    "Von Bern nach Zürich",
+    "Von Bern nach Paris",
+    "Von Rom nach Genf",
+    "Von Berlin nach Wien",
+    "Denke an eine Landesgrenze.",
+    "Gesucht ist ein Wohnortswechsel innerhalb desselben Staates."
+  ],
+  "en": [
+    "Which move is internal migration?",
+    "Bern to Zurich",
+    "Bern to Paris",
+    "Rome to Geneva",
+    "Berlin to Vienna",
+    "Think about national borders.",
+    "Look for moving home within the same state."
+  ],
+  "fr": [
+    "Quel déménagement est une migration interne ?",
+    "De Berne à Zurich",
+    "De Berne à Paris",
+    "De Rome à Genève",
+    "De Berlin à Vienne",
+    "Pense aux frontières nationales.",
+    "Cherche un changement de domicile dans le même État."
+  ],
+  "it": [
+    "Quale trasloco è una migrazione interna?",
+    "Da Berna a Zurigo",
+    "Da Berna a Parigi",
+    "Da Roma a Ginevra",
+    "Da Berlino a Vienna",
+    "Pensa ai confini nazionali.",
+    "Cerca un cambio di domicilio nello stesso Stato."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welcher Umzug ist Binnenmigration? Replaces exact-text recall of: Was ist Binnenmigration?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_14",
+  "de": [
+    "Was ist ein Beispiel für Arbeitsmigration?",
+    "Eine Person zieht wegen einer neuen Stelle in eine andere Region",
+    "Eine Person fährt am Wochenende zum See und kommt zurück",
+    "Eine Person bestellt ein Buch aus dem Ausland",
+    "Eine Person wechselt im selben Haus das Zimmer",
+    "Denke an den Grund und die Dauerhaftigkeit eines Wohnortswechsels.",
+    "Eine Reise allein ist noch kein Umzug."
+  ],
+  "en": [
+    "Which is an example of labour migration?",
+    "Someone moves to another region for a new job",
+    "Someone visits a lake for the weekend and returns",
+    "Someone orders a book from abroad",
+    "Someone changes rooms in the same house",
+    "Think of the reason for a change of home.",
+    "A trip alone is not a move."
+  ],
+  "fr": [
+    "Quel est un exemple de migration de travail ?",
+    "Une personne déménage dans une autre région pour un emploi",
+    "Une personne va au lac le week-end puis rentre",
+    "Une personne commande un livre à l'étranger",
+    "Une personne change de chambre dans la même maison",
+    "Pense à la raison du changement de domicile.",
+    "Un voyage seul n'est pas un déménagement."
+  ],
+  "it": [
+    "Qual è un esempio di migrazione lavorativa?",
+    "Una persona si trasferisce in un'altra regione per un impiego",
+    "Una persona va al lago nel fine settimana e torna",
+    "Una persona ordina un libro dall'estero",
+    "Una persona cambia stanza nella stessa casa",
+    "Pensa al motivo del cambio di domicilio.",
+    "Un viaggio da solo non è un trasloco."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist ein Beispiel für Arbeitsmigration? Replaces exact-text recall of: Was ist Arbeitsmigration?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_16",
+  "de": [
+    "Was hilft bei einem Streit in einer vielfältigen Gruppe?",
+    "Ruhig zuhören und gemeinsam nach einer Lösung suchen",
+    "Eine Herkunft für den Streit verantwortlich machen",
+    "Die andere Person ständig unterbrechen",
+    "Gerüchte statt der Beteiligten anhören",
+    "Denke an faire Gesprächsregeln.",
+    "Beurteile das konkrete Verhalten, nicht eine ganze Gruppe."
+  ],
+  "en": [
+    "What helps during a disagreement in a diverse group?",
+    "Listening calmly and seeking a solution together",
+    "Blaming someone's origin for the dispute",
+    "Constantly interrupting the other person",
+    "Listening to rumours instead of those involved",
+    "Think of fair discussion rules.",
+    "Judge specific behaviour, not an entire group."
+  ],
+  "fr": [
+    "Qu'est-ce qui aide lors d'un conflit dans un groupe diversifié ?",
+    "Écouter calmement et chercher ensemble une solution",
+    "Accuser une origine d'être responsable du conflit",
+    "Interrompre constamment l'autre personne",
+    "Écouter les rumeurs plutôt que les personnes concernées",
+    "Pense aux règles d'un échange équitable.",
+    "Juge les actes concrets, pas tout un groupe."
+  ],
+  "it": [
+    "Che cosa aiuta durante un conflitto in un gruppo eterogeneo?",
+    "Ascoltare con calma e cercare insieme una soluzione",
+    "Attribuire il conflitto all'origine di qualcuno",
+    "Interrompere continuamente l'altra persona",
+    "Ascoltare voci invece delle persone coinvolte",
+    "Pensa alle regole di un dialogo equo.",
+    "Valuta i comportamenti concreti, non un intero gruppo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was hilft bei einem Streit in einer vielfältigen Gruppe? Replaces exact-text recall of: Lernrunde 1: Zusammenleben: Bei einem Streit: Welche Aussage passt? Antwort: ___"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_18",
+  "de": [
+    "Wie kann Zuwanderung bei Fachkräftemangel helfen?",
+    "Menschen mit passenden Fähigkeiten können offene Stellen besetzen",
+    "Jede zugewanderte Person beherrscht automatisch jeden Beruf",
+    "Ausbildung wird dadurch grundsätzlich überflüssig",
+    "Alle Arbeitsbedingungen verbessern sich ohne weitere Massnahmen",
+    "Denke an Fähigkeiten und Anforderungen.",
+    "Zuwanderung ist ein möglicher Beitrag neben Ausbildung und guten Arbeitsbedingungen."
+  ],
+  "en": [
+    "How can immigration help with a shortage of skilled workers?",
+    "People with suitable skills can fill vacancies",
+    "Every immigrant automatically knows every profession",
+    "Training becomes unnecessary in principle",
+    "All working conditions improve without other measures",
+    "Think of skills and job requirements.",
+    "Immigration can contribute alongside training and good conditions."
+  ],
+  "fr": [
+    "Comment l'immigration peut-elle aider face au manque de personnel qualifié ?",
+    "Des personnes aux compétences adaptées peuvent occuper des postes vacants",
+    "Chaque personne immigrée maîtrise automatiquement tous les métiers",
+    "La formation devient inutile",
+    "Toutes les conditions de travail s'améliorent sans autre mesure",
+    "Pense aux compétences et aux exigences.",
+    "L'immigration complète notamment la formation et de bonnes conditions."
+  ],
+  "it": [
+    "Come può l'immigrazione aiutare con la carenza di personale qualificato?",
+    "Persone con competenze adatte possono occupare posti vacanti",
+    "Ogni immigrato conosce automaticamente ogni mestiere",
+    "La formazione diventa inutile",
+    "Tutte le condizioni di lavoro migliorano senza altre misure",
+    "Pensa a competenze e requisiti.",
+    "L'immigrazione può contribuire insieme a formazione e buone condizioni."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wie kann Zuwanderung bei Fachkräftemangel helfen? Replaces exact-text recall of: Was ist Fachkräftemangel und Migration?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_20",
+  "de": [
+    "Was entfällt zwischen Schengen-Staaten grundsätzlich an den Binnengrenzen?",
+    "Die regelmässige Personenkontrolle, mit möglichen zeitweiligen Ausnahmen",
+    "Jede nationale Rechtsordnung",
+    "Jede Zollregel ohne Ausnahme",
+    "Die Pflicht, sich an Gesetze zu halten",
+    "Unterscheide Personen- und Warenkontrollen.",
+    "Zeitweise Kontrollen können dennoch zulässig sein."
+  ],
+  "en": [
+    "What is generally removed at internal borders between Schengen states?",
+    "Routine checks on people, with possible temporary exceptions",
+    "Every national legal system",
+    "Every customs rule without exception",
+    "The duty to obey laws",
+    "Distinguish checks on people from checks on goods.",
+    "Temporary controls can still be permitted."
+  ],
+  "fr": [
+    "Que supprime-t-on en principe aux frontières intérieures de Schengen ?",
+    "Les contrôles réguliers des personnes, avec des exceptions temporaires possibles",
+    "Tout ordre juridique national",
+    "Toute règle douanière sans exception",
+    "L'obligation de respecter les lois",
+    "Distingue contrôles des personnes et des marchandises.",
+    "Des contrôles temporaires peuvent rester autorisés."
+  ],
+  "it": [
+    "Che cosa viene eliminato in linea di principio alle frontiere interne Schengen?",
+    "I controlli regolari sulle persone, salvo possibili eccezioni temporanee",
+    "Ogni ordinamento giuridico nazionale",
+    "Ogni regola doganale senza eccezioni",
+    "L'obbligo di rispettare le leggi",
+    "Distingui controlli sulle persone e sulle merci.",
+    "I controlli temporanei possono comunque essere ammessi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was entfällt zwischen Schengen-Staaten grundsätzlich an den Binnengrenzen? Replaces exact-text recall of: Was ist Schengener Abkommen?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_22",
+  "de": [
+    "Was bedeutet die Bezeichnung Sans-Papiers im Aufenthaltsrecht?",
+    "Menschen ohne geregelten Aufenthaltsstatus",
+    "Menschen ohne Schulhefte",
+    "Alle Personen ohne eigenes Auto",
+    "Nur Menschen ohne Staatsangehörigkeit",
+    "Die Bezeichnung ist nicht wörtlich auf Papier zu beschränken.",
+    "Aufenthaltsstatus und Staatsangehörigkeit sind verschiedene Dinge."
+  ],
+  "en": [
+    "What does the term 'sans-papiers' mean in immigration matters?",
+    "People without regular residence status",
+    "People without school notebooks",
+    "Everyone without a car",
+    "Only people without nationality",
+    "The expression does not simply refer to paper.",
+    "Residence status and nationality are different things."
+  ],
+  "fr": [
+    "Que signifie « sans-papiers » en matière de séjour ?",
+    "Des personnes sans statut de séjour régulier",
+    "Des personnes sans cahiers scolaires",
+    "Toutes les personnes sans voiture",
+    "Seulement les personnes sans nationalité",
+    "L'expression ne désigne pas simplement du papier.",
+    "Statut de séjour et nationalité sont différents."
+  ],
+  "it": [
+    "Che cosa significa «sans-papiers» in materia di soggiorno?",
+    "Persone senza uno status di soggiorno regolare",
+    "Persone senza quaderni scolastici",
+    "Tutte le persone senza automobile",
+    "Solo persone senza cittadinanza",
+    "L'espressione non riguarda semplicemente la carta.",
+    "Status di soggiorno e cittadinanza sono cose diverse."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutet die Bezeichnung Sans-Papiers im Aufenthaltsrecht? Replaces exact-text recall of: Was ist Sans-Papiers?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_24",
+  "de": [
+    "Was unterscheidet eine zwangsweise Verschleppung von einer freiwilligen Reise?",
+    "Die Betroffenen können nicht frei über das Wegbringen entscheiden",
+    "Nur das verwendete Verkehrsmittel entscheidet über Freiwilligkeit",
+    "Die Reise wird freiwillig, sobald ein Ticket bezahlt ist",
+    "Ein längerer Aufenthalt am Ziel beweist automatisch Einwilligung",
+    "Denke an Einwilligung und Zwang.",
+    "Verkehrsmittel und Entfernung sind nicht entscheidend."
+  ],
+  "en": [
+    "What distinguishes forced removal from voluntary travel?",
+    "Those affected cannot freely decide whether to be taken away",
+    "Only the means of transport determines consent",
+    "Travel becomes voluntary as soon as a ticket is paid for",
+    "A longer stay at the destination automatically proves consent",
+    "Think of consent and coercion.",
+    "Transport and distance are not decisive."
+  ],
+  "fr": [
+    "Qu'est-ce qui distingue un déplacement forcé d'un voyage volontaire ?",
+    "Les personnes ne peuvent pas décider librement de leur déplacement",
+    "Seul le moyen de transport détermine le consentement",
+    "Le voyage devient volontaire dès que le billet est payé",
+    "Un séjour plus long prouve automatiquement le consentement",
+    "Pense au consentement et à la contrainte.",
+    "Le transport et la distance ne sont pas décisifs."
+  ],
+  "it": [
+    "Che cosa distingue un trasferimento forzato da un viaggio volontario?",
+    "Le persone non possono decidere liberamente se essere portate via",
+    "Solo il mezzo di trasporto determina il consenso",
+    "Il viaggio diventa volontario appena si paga il biglietto",
+    "Un soggiorno più lungo dimostra automaticamente il consenso",
+    "Pensa al consenso e alla costrizione.",
+    "Trasporto e distanza non sono decisivi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was unterscheidet eine zwangsweise Verschleppung von einer freiwilligen Reise? Replaces exact-text recall of: Was ist Deportation?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_28",
+  "de": [
+    "Was erleichtert das Personenfreizügigkeitsabkommen zwischen der Schweiz und der EU unter bestimmten Voraussetzungen?",
+    "In einem beteiligten Land wohnen und arbeiten",
+    "Ohne jede Regel in jedem Staat der Welt wohnen",
+    "Automatisch die Staatsangehörigkeit aller Länder erhalten",
+    "Jedes Gesetz des Aufenthaltslands ignorieren",
+    "Denke an vereinbarte Rechte mit Bedingungen.",
+    "Aufenthalt ist nicht dasselbe wie Einbürgerung."
+  ],
+  "en": [
+    "What does the Switzerland-EU free movement agreement facilitate under certain conditions?",
+    "Living and working in a participating country",
+    "Living in every country worldwide without any rules",
+    "Automatically receiving every country's nationality",
+    "Ignoring all laws of the country of residence",
+    "Think of agreed rights with conditions.",
+    "Residence is not the same as citizenship."
+  ],
+  "fr": [
+    "Que facilite l'accord de libre circulation Suisse-UE sous certaines conditions ?",
+    "Vivre et travailler dans un pays participant",
+    "Vivre sans aucune règle dans chaque État du monde",
+    "Obtenir automatiquement toutes les nationalités",
+    "Ignorer toutes les lois du pays de séjour",
+    "Pense à des droits convenus avec des conditions.",
+    "Le séjour n'est pas la naturalisation."
+  ],
+  "it": [
+    "Che cosa facilita l'accordo di libera circolazione Svizzera-UE a determinate condizioni?",
+    "Vivere e lavorare in un Paese partecipante",
+    "Vivere senza regole in ogni Stato del mondo",
+    "Ricevere automaticamente tutte le cittadinanze",
+    "Ignorare tutte le leggi del Paese di soggiorno",
+    "Pensa a diritti concordati con condizioni.",
+    "Il soggiorno non è la cittadinanza."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was erleichtert das Personenfreizügigkeitsabkommen zwischen der Schweiz und der EU unter bestimmten Voraussetzungen? Replaces exact-text recall of: Was ist Personenfreizügigkeit in der EU/Schweiz?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_30",
+  "de": [
+    "Wozu dient Rückkehrhilfe?",
+    "Eine freiwillige Rückkehr und den Neustart unterstützen",
+    "Jede Reise gegen den Willen der Person erzwingen",
+    "Allen Rückkehrenden automatisch jede Stelle garantieren",
+    "Menschen ohne Prüfung sämtliche Rechte entziehen",
+    "Denke an Beratung und praktische Unterstützung.",
+    "Hilfe ist nicht dasselbe wie Zwang oder eine Erfolgsgarantie."
+  ],
+  "en": [
+    "What is return assistance for?",
+    "Supporting voluntary return and a fresh start",
+    "Forcing every journey against the person's will",
+    "Automatically guaranteeing every returnee any job",
+    "Removing all rights without examination",
+    "Think of advice and practical support.",
+    "Assistance is not coercion or a guarantee of success."
+  ],
+  "fr": [
+    "À quoi sert l'aide au retour ?",
+    "À soutenir un retour volontaire et un nouveau départ",
+    "À imposer chaque voyage contre la volonté de la personne",
+    "À garantir automatiquement tout emploi aux personnes de retour",
+    "À retirer tous les droits sans examen",
+    "Pense aux conseils et au soutien pratique.",
+    "L'aide n'est ni contrainte ni garantie de réussite."
+  ],
+  "it": [
+    "A cosa serve l'aiuto al ritorno?",
+    "A sostenere un ritorno volontario e un nuovo inizio",
+    "A imporre ogni viaggio contro la volontà della persona",
+    "A garantire automaticamente qualsiasi lavoro a chi torna",
+    "A togliere ogni diritto senza esame",
+    "Pensa a consigli e sostegno pratico.",
+    "L'aiuto non è costrizione né garanzia di successo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu dient Rückkehrhilfe? Replaces exact-text recall of: Was ist Rückkehrhilfe?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_32",
+  "de": [
+    "Was muss bei einer staatlichen Inhaftierung grundsätzlich beachtet werden?",
+    "Eine gesetzliche Grundlage und rechtliche Überprüfungsmöglichkeiten",
+    "Nur die persönliche Abneigung eines Beamten",
+    "Eine Entscheidung ohne jede Begründung",
+    "Der Wunsch, alle Verfahren zu vermeiden",
+    "Denke an Schutz vor Willkür.",
+    "Freiheitsentzug unterliegt rechtlichen Grenzen."
+  ],
+  "en": [
+    "What must generally be respected when the state detains someone?",
+    "A legal basis and opportunities for legal review",
+    "Only an official's personal dislike",
+    "A decision without any explanation",
+    "A wish to avoid every procedure",
+    "Think of protection against arbitrary power.",
+    "Deprivation of liberty has legal limits."
+  ],
+  "fr": [
+    "Que faut-il respecter en principe lors d'une détention par l'État ?",
+    "Une base légale et des possibilités de contrôle juridique",
+    "Seulement l'antipathie personnelle d'un fonctionnaire",
+    "Une décision sans aucune justification",
+    "Le souhait d'éviter toute procédure",
+    "Pense à la protection contre l'arbitraire.",
+    "La privation de liberté a des limites juridiques."
+  ],
+  "it": [
+    "Che cosa va rispettato in generale quando lo Stato detiene qualcuno?",
+    "Una base legale e possibilità di controllo giuridico",
+    "Solo l'antipatia personale di un funzionario",
+    "Una decisione senza alcuna motivazione",
+    "Il desiderio di evitare ogni procedura",
+    "Pensa alla protezione dall'arbitrio.",
+    "La privazione della libertà ha limiti giuridici."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was muss bei einer staatlichen Inhaftierung grundsätzlich beachtet werden? Replaces exact-text recall of: Was ist Abschiebehaft?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_34",
+  "de": [
+    "Wozu diente der Nansen-Pass seit 1922?",
+    "Als international anerkanntes Reisedokument für bestimmte Flüchtlinge",
+    "Als automatische Verleihung der Staatsangehörigkeit des Ziellandes",
+    "Als gewöhnlicher Ferienpass für alle Staatsbürger",
+    "Als uneingeschränktes Recht auf jede Arbeitsstelle weltweit",
+    "Denke an Menschen ohne nutzbaren nationalen Pass.",
+    "Ein Reisedokument ist nicht automatisch eine Staatsangehörigkeit."
+  ],
+  "en": [
+    "What was the Nansen passport used for from 1922?",
+    "As an internationally recognised travel document for certain refugees",
+    "As automatic citizenship of the destination country",
+    "As an ordinary holiday passport for all citizens",
+    "As an unlimited right to every job worldwide",
+    "Think of people without a usable national passport.",
+    "A travel document does not automatically confer nationality."
+  ],
+  "fr": [
+    "À quoi servait le passeport Nansen dès 1922 ?",
+    "De document de voyage reconnu internationalement pour certains réfugiés",
+    "Comme attribution automatique de la nationalité du pays d'arrivée",
+    "Comme passeport de vacances ordinaire pour tous les citoyens",
+    "Comme droit illimité à tout emploi mondial",
+    "Pense aux personnes sans passeport national utilisable.",
+    "Un document de voyage ne donne pas automatiquement une nationalité."
+  ],
+  "it": [
+    "A cosa serviva il passaporto Nansen dal 1922?",
+    "Come documento di viaggio riconosciuto internazionalmente per determinati rifugiati",
+    "Come cittadinanza automatica del Paese di arrivo",
+    "Come normale passaporto di vacanza per tutti i cittadini",
+    "Come diritto illimitato a ogni lavoro nel mondo",
+    "Pensa alle persone senza un passaporto nazionale utilizzabile.",
+    "Un documento di viaggio non conferisce automaticamente cittadinanza."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wozu diente der Nansen-Pass seit 1922? Replaces exact-text recall of: Was ist Nansen-Pass?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_36",
+  "de": [
+    "Welches Rückkehrrecht nennt Artikel 13 der Allgemeinen Erklärung der Menschenrechte?",
+    "In sein eigenes Land zurückzukehren",
+    "In jedem Land automatisch jede Immobilie zu erhalten",
+    "Ohne Bedingungen jede fremde Staatsangehörigkeit zu bekommen",
+    "Jede Grenze unabhängig von allen Gesetzen zu versetzen",
+    "Achte auf den Bezug zum eigenen Land.",
+    "Rückkehr ist nicht dasselbe wie unbegrenzte Ansprüche überall."
+  ],
+  "en": [
+    "Which right of return is named in Article 13 of the Universal Declaration of Human Rights?",
+    "To return to one's own country",
+    "To automatically receive any property in any country",
+    "To obtain every foreign nationality without conditions",
+    "To move any border regardless of laws",
+    "Notice the link to one's own country.",
+    "Return is not the same as unlimited entitlements everywhere."
+  ],
+  "fr": [
+    "Quel droit au retour figure à l'article 13 de la Déclaration universelle des droits de l'homme ?",
+    "Revenir dans son propre pays",
+    "Recevoir automatiquement tout bien dans chaque pays",
+    "Obtenir toute nationalité étrangère sans condition",
+    "Déplacer toute frontière sans tenir compte des lois",
+    "Observe le lien avec son propre pays.",
+    "Le retour ne crée pas des droits illimités partout."
+  ],
+  "it": [
+    "Quale diritto al ritorno figura nell'articolo 13 della Dichiarazione universale dei diritti umani?",
+    "Ritornare nel proprio Paese",
+    "Ricevere automaticamente ogni immobile in ogni Paese",
+    "Ottenere ogni cittadinanza straniera senza condizioni",
+    "Spostare ogni confine ignorando le leggi",
+    "Osserva il legame con il proprio Paese.",
+    "Il ritorno non crea diritti illimitati ovunque."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Rückkehrrecht nennt Artikel 13 der Allgemeinen Erklärung der Menschenrechte? Replaces exact-text recall of: Was besagt das Recht auf Rückkehr nach Artikel 13 der Allgemeinen Erklärung der Menschenrechte?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_38",
+  "de": [
+    "Kann sich eine Person mehreren Ländern oder Kulturen verbunden fühlen?",
+    "Ja, Zugehörigkeiten können sich verbinden",
+    "Nein, eine neue Zugehörigkeit löscht jede frühere automatisch",
+    "Nur wenn sie alle früheren Kontakte abbricht",
+    "Nur wenn sie ihre Familiengeschichte vollständig aufgibt",
+    "Denke an Familie, Erfahrungen und Wohnorte.",
+    "Identität muss nicht aus nur einem Bestandteil bestehen."
+  ],
+  "en": [
+    "Can a person feel connected to several countries or cultures?",
+    "Yes, different attachments can coexist",
+    "No, a new attachment automatically erases every earlier one",
+    "Only if they end all earlier contacts",
+    "Only if they give up their family history completely",
+    "Think of family, experiences and places lived.",
+    "Identity need not have only one component."
+  ],
+  "fr": [
+    "Une personne peut-elle se sentir liée à plusieurs pays ou cultures ?",
+    "Oui, plusieurs appartenances peuvent coexister",
+    "Non, une nouvelle appartenance efface automatiquement toutes les anciennes",
+    "Seulement en rompant tous les anciens contacts",
+    "Seulement en abandonnant complètement son histoire familiale",
+    "Pense à la famille, aux expériences et aux lieux de vie.",
+    "L'identité ne se limite pas forcément à un seul élément."
+  ],
+  "it": [
+    "Una persona può sentirsi legata a più Paesi o culture?",
+    "Sì, appartenenze diverse possono coesistere",
+    "No, una nuova appartenenza cancella automaticamente tutte le precedenti",
+    "Solo interrompendo tutti i contatti precedenti",
+    "Solo abbandonando completamente la storia familiare",
+    "Pensa a famiglia, esperienze e luoghi di vita.",
+    "L'identità non deve avere una sola componente."
+  ],
+  "reason": "Individually reviewed knowledge objective: Kann sich eine Person mehreren Ländern oder Kulturen verbunden fühlen? Replaces exact-text recall of: Was ist kosmopolitische Identität?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_40",
+  "de": [
+    "Was bedeutet staatenlos?",
+    "Kein Staat erkennt die Person als Staatsangehörige an",
+    "Die Person besitzt kein eigenes Haus",
+    "Die Person lebt gerade nicht in ihrer Geburtsstadt",
+    "Die Person hat vorübergehend ihren Pass verlegt",
+    "Unterscheide Wohnort, Dokument und Staatsangehörigkeit.",
+    "Entscheidend ist die rechtliche Zugehörigkeit zu einem Staat."
+  ],
+  "en": [
+    "What does stateless mean?",
+    "No state recognises the person as its national",
+    "The person does not own a house",
+    "The person lives outside their birth city",
+    "The person has temporarily misplaced a passport",
+    "Distinguish residence, documents and nationality.",
+    "Legal membership of a state is decisive."
+  ],
+  "fr": [
+    "Que signifie apatride ?",
+    "Aucun État ne reconnaît la personne comme son ressortissant",
+    "La personne ne possède pas de maison",
+    "La personne vit hors de sa ville natale",
+    "La personne a temporairement égaré son passeport",
+    "Distingue domicile, document et nationalité.",
+    "L'appartenance juridique à un État est décisive."
+  ],
+  "it": [
+    "Che cosa significa apolide?",
+    "Nessuno Stato riconosce la persona come propria cittadina",
+    "La persona non possiede una casa",
+    "La persona vive fuori dalla città natale",
+    "La persona ha smarrito temporaneamente il passaporto",
+    "Distingui domicilio, documento e cittadinanza.",
+    "Conta l'appartenenza giuridica a uno Stato."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutet staatenlos? Replaces exact-text recall of: Was ist eine staatenlose Person?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_44",
+  "de": [
+    "Was beschreibt räumliche Segregation in einer Stadt?",
+    "Bevölkerungsgruppen leben stark getrennt in verschiedenen Quartieren",
+    "Menschen verschiedener Gruppen wohnen gleichmässig gemischt im Stadtgebiet",
+    "Alle Gruppen haben ohne räumliche Unterschiede Zugang zu denselben Angeboten",
+    "Die Stadtgrenze wird unabhängig von der Verteilung ihrer Einwohner neu gezeichnet",
+    "Denke an die Verteilung von Menschen im Stadtgebiet.",
+    "Unterscheide soziale Trennung von baulichen Eigenschaften."
+  ],
+  "en": [
+    "What does residential segregation in a city describe?",
+    "Population groups living largely separated in different neighbourhoods",
+    "Different groups live evenly mixed throughout the city",
+    "All groups access the same services without spatial differences",
+    "The city boundary is redrawn independently of residents' distribution",
+    "Think of how people are distributed across a city.",
+    "Distinguish social separation from construction features."
+  ],
+  "fr": [
+    "Que décrit la ségrégation résidentielle dans une ville ?",
+    "Des groupes de population vivant fortement séparés dans différents quartiers",
+    "Les groupes vivent mélangés uniformément dans toute la ville",
+    "Tous les groupes accèdent aux mêmes services sans différence spatiale",
+    "La limite de la ville est redessinée sans lien avec la répartition des habitants",
+    "Pense à la répartition des habitants dans la ville.",
+    "Distingue séparation sociale et caractéristiques des bâtiments."
+  ],
+  "it": [
+    "Che cosa descrive la segregazione residenziale in una città?",
+    "Gruppi di popolazione che vivono molto separati in quartieri diversi",
+    "I gruppi vivono mescolati uniformemente in tutta la città",
+    "Tutti i gruppi accedono agli stessi servizi senza differenze spaziali",
+    "Il confine urbano viene ridisegnato senza relazione con gli abitanti",
+    "Pensa alla distribuzione degli abitanti.",
+    "Distingui separazione sociale e caratteristiche edilizie."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was beschreibt räumliche Segregation in einer Stadt? Replaces exact-text recall of: Was ist Segregation im städtischen Kontext?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_46",
+  "de": [
+    "Was zeigt grenzüberschreitende Verbundenheit nach einem Umzug?",
+    "Eine Person pflegt Kontakte im Herkunftsland und am neuen Wohnort",
+    "Eine Person vergisst automatisch alle bisherigen Kontakte",
+    "Eine Person darf im neuen Land niemanden kennenlernen",
+    "Eine Person muss täglich ihre Staatsangehörigkeit wechseln",
+    "Denke an Beziehungen über Grenzen hinweg.",
+    "Ein neuer Wohnort löscht frühere Verbindungen nicht automatisch."
+  ],
+  "en": [
+    "What shows cross-border connections after moving?",
+    "Someone maintains contacts in their country of origin and new home",
+    "Someone automatically forgets all previous contacts",
+    "Someone may meet no one in the new country",
+    "Someone must change nationality daily",
+    "Think of relationships across borders.",
+    "A new home does not automatically erase earlier connections."
+  ],
+  "fr": [
+    "Qu'est-ce qui montre des liens transfrontaliers après un déménagement ?",
+    "Une personne garde des contacts au pays d'origine et dans son nouveau lieu de vie",
+    "Une personne oublie automatiquement tous ses anciens contacts",
+    "Une personne ne peut rencontrer personne dans le nouveau pays",
+    "Une personne doit changer de nationalité chaque jour",
+    "Pense aux relations au-delà des frontières.",
+    "Un nouveau domicile n'efface pas automatiquement les anciens liens."
+  ],
+  "it": [
+    "Che cosa mostra legami transfrontalieri dopo un trasloco?",
+    "Una persona mantiene contatti nel Paese d'origine e nella nuova residenza",
+    "Una persona dimentica automaticamente tutti i vecchi contatti",
+    "Una persona non può conoscere nessuno nel nuovo Paese",
+    "Una persona deve cambiare cittadinanza ogni giorno",
+    "Pensa alle relazioni oltre i confini.",
+    "Una nuova residenza non cancella automaticamente i vecchi legami."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was zeigt grenzüberschreitende Verbundenheit nach einem Umzug? Replaces exact-text recall of: Was ist Transnationale Migration?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_48",
+  "de": [
+    "Warum sollte man mehrere mögliche Benachteiligungen zusammen betrachten?",
+    "Sie können sich im Alltag überschneiden und verstärken",
+    "Jede Person erlebt immer genau dieselben Hürden",
+    "Nur ein einziges Merkmal kann jemals eine Rolle spielen",
+    "Mehrere Merkmale heben jedes Problem automatisch auf",
+    "Denke an die konkrete Lebenssituation.",
+    "Verschiedene Hindernisse können gleichzeitig wirken."
+  ],
+  "en": [
+    "Why consider several possible disadvantages together?",
+    "They can overlap and reinforce one another in everyday life",
+    "Everyone always faces exactly the same barriers",
+    "Only one characteristic can ever matter",
+    "Several characteristics automatically cancel every problem",
+    "Think of the person's actual situation.",
+    "Different barriers can operate at the same time."
+  ],
+  "fr": [
+    "Pourquoi considérer plusieurs désavantages possibles ensemble ?",
+    "Ils peuvent se croiser et se renforcer au quotidien",
+    "Tout le monde rencontre toujours les mêmes obstacles",
+    "Une seule caractéristique peut jamais compter",
+    "Plusieurs caractéristiques annulent automatiquement tout problème",
+    "Pense à la situation concrète de la personne.",
+    "Différents obstacles peuvent agir en même temps."
+  ],
+  "it": [
+    "Perché considerare insieme più possibili svantaggi?",
+    "Possono sovrapporsi e rafforzarsi nella vita quotidiana",
+    "Tutti incontrano sempre gli stessi ostacoli",
+    "Può contare sempre e solo una caratteristica",
+    "Più caratteristiche annullano automaticamente ogni problema",
+    "Pensa alla situazione concreta della persona.",
+    "Ostacoli diversi possono agire contemporaneamente."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum sollte man mehrere mögliche Benachteiligungen zusammen betrachten? Replaces exact-text recall of: Was ist Intersektionalität in der Migrationsdebatte?"
+},
+{
+  "key": "6/science/migration-flucht-6/mf6_50",
+  "de": [
+    "Gelten grundlegende Menschenrechte auch für Zugewanderte?",
+    "Ja, sie stehen Menschen unabhängig von ihrer Herkunft zu",
+    "Nein, sie gelten nur am Geburtsort",
+    "Nur wenn die Person reich genug ist",
+    "Nur wenn alle Nachbarn zustimmen",
+    "Unterscheide Menschenrechte von einzelnen staatsbürgerlichen Rechten.",
+    "Die Menschenwürde hängt nicht vom Wohnortswechsel ab."
+  ],
+  "en": [
+    "Do basic human rights also apply to immigrants?",
+    "Yes, people have them regardless of origin",
+    "No, they apply only at one's birthplace",
+    "Only if the person is rich enough",
+    "Only if every neighbour agrees",
+    "Distinguish human rights from particular citizenship rights.",
+    "Human dignity does not depend on moving home."
+  ],
+  "fr": [
+    "Les droits humains fondamentaux s'appliquent-ils aussi aux personnes immigrées ?",
+    "Oui, ils appartiennent aux personnes quelle que soit leur origine",
+    "Non, ils ne valent qu'au lieu de naissance",
+    "Seulement si la personne est assez riche",
+    "Seulement si tous les voisins sont d'accord",
+    "Distingue droits humains et certains droits liés à la citoyenneté.",
+    "La dignité ne dépend pas d'un déménagement."
+  ],
+  "it": [
+    "I diritti umani fondamentali valgono anche per gli immigrati?",
+    "Sì, spettano alle persone indipendentemente dall'origine",
+    "No, valgono solo nel luogo di nascita",
+    "Solo se la persona è abbastanza ricca",
+    "Solo se tutti i vicini sono d'accordo",
+    "Distingui diritti umani e particolari diritti di cittadinanza.",
+    "La dignità non dipende da un trasloco."
+  ],
+  "reason": "Individually reviewed knowledge objective: Gelten grundlegende Menschenrechte auch für Zugewanderte? Replaces exact-text recall of: Was ist das Recht auf Nichtdiskriminierung für Migranten?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_2",
+  "de": [
+    "Was sind die 17 Ziele für nachhaltige Entwicklung der UNO?",
+    "Gemeinsame Ziele für soziale, ökologische und wirtschaftliche Entwicklung",
+    "Nur Ziele zur Steigerung des Einkommens, ohne Umwelt oder Gesundheit",
+    "Ausschliesslich freiwillige Reisepläne einzelner Personen",
+    "Nur Naturschutzziele, die Bildung und Armut nicht behandeln",
+    "Denke an weltweite Herausforderungen.",
+    "Die Ziele verbinden verschiedene Bereiche des Lebens."
+  ],
+  "en": [
+    "What are the UN's 17 Sustainable Development Goals?",
+    "Shared aims for social, environmental and economic development",
+    "Only income-growth goals without environment or health",
+    "Only individual voluntary travel plans",
+    "Only conservation goals that exclude education and poverty",
+    "Think of global challenges.",
+    "The goals connect different areas of life."
+  ],
+  "fr": [
+    "Que sont les 17 objectifs de développement durable de l'ONU ?",
+    "Des objectifs communs de développement social, environnemental et économique",
+    "Seulement des objectifs de revenu sans environnement ni santé",
+    "Uniquement des projets de voyage individuels",
+    "Seulement la protection de la nature sans éducation ni pauvreté",
+    "Pense aux défis mondiaux.",
+    "Ces objectifs relient différents domaines de la vie."
+  ],
+  "it": [
+    "Che cosa sono i 17 obiettivi di sviluppo sostenibile dell'ONU?",
+    "Obiettivi comuni di sviluppo sociale, ambientale ed economico",
+    "Solo obiettivi di reddito senza ambiente né salute",
+    "Soltanto progetti di viaggio individuali",
+    "Solo protezione della natura senza istruzione né povertà",
+    "Pensa alle sfide mondiali.",
+    "Gli obiettivi collegano diversi ambiti della vita."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was sind die 17 Ziele für nachhaltige Entwicklung der UNO? Replaces exact-text recall of: Was sind die SDGs?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_4",
+  "de": [
+    "Was ist ein zentrales Ziel des Pariser Klimaabkommens?",
+    "Die Erderwärmung deutlich unter 2 Grad halten und möglichst auf 1,5 Grad begrenzen",
+    "Den weltweiten Jahresdurchschnitt auf genau 1,5 Grad Celsius festlegen",
+    "Jede Erwärmung automatisch durch das Unterzeichnen beenden",
+    "Nur das Wetter in Paris verändern",
+    "Denke an langfristiges Klima statt an Tageswetter.",
+    "Das Ziel bezieht sich auf die Erwärmung gegenüber vorindustrieller Zeit."
+  ],
+  "en": [
+    "What is a central aim of the Paris Agreement?",
+    "Keep warming well below 2 degrees and pursue limiting it to 1.5 degrees",
+    "Set the actual global annual average temperature to exactly 1.5 degrees Celsius",
+    "Automatically end all warming by signing",
+    "Change only the weather in Paris",
+    "Think of long-term climate, not daily weather.",
+    "The target concerns warming compared with pre-industrial times."
+  ],
+  "fr": [
+    "Quel est un objectif central de l'Accord de Paris ?",
+    "Maintenir le réchauffement bien en dessous de 2 degrés et viser 1,5 degré",
+    "Fixer la température moyenne mondiale elle-même à exactement 1,5 degré Celsius",
+    "Arrêter automatiquement tout réchauffement par la signature",
+    "Changer seulement la météo à Paris",
+    "Pense au climat à long terme, pas à la météo du jour.",
+    "La référence est l'époque préindustrielle."
+  ],
+  "it": [
+    "Qual è un obiettivo centrale dell'Accordo di Parigi?",
+    "Mantenere il riscaldamento ben sotto i 2 gradi e puntare a limitarlo a 1,5 gradi",
+    "Fissare la temperatura media mondiale stessa a esattamente 1,5 gradi Celsius",
+    "Fermare automaticamente ogni riscaldamento con la firma",
+    "Cambiare solo il meteo a Parigi",
+    "Pensa al clima a lungo termine, non al meteo giornaliero.",
+    "Il riferimento è l'epoca preindustriale."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist ein zentrales Ziel des Pariser Klimaabkommens? Replaces exact-text recall of: Was ist Pariser Abkommen (2015)?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_6",
+  "de": [
+    "Welche Massnahme hilft gegen den Verlust von Arten?",
+    "Lebensräume schützen und miteinander verbinden",
+    "Alle Hecken und Feuchtgebiete beseitigen",
+    "Nur eine einzige Art überall anpflanzen",
+    "Natürliche Flächen grundsätzlich versiegeln",
+    "Denke an Nahrung, Fortpflanzung und Wanderwege.",
+    "Arten brauchen passende Lebensbedingungen."
+  ],
+  "en": [
+    "Which action helps reduce biodiversity loss?",
+    "Protecting and connecting habitats",
+    "Removing all hedges and wetlands",
+    "Planting only one species everywhere",
+    "Paving over natural areas in principle",
+    "Think of food, reproduction and movement routes.",
+    "Species need suitable living conditions."
+  ],
+  "fr": [
+    "Quelle mesure aide à lutter contre la disparition d'espèces ?",
+    "Protéger et relier les habitats",
+    "Supprimer toutes les haies et zones humides",
+    "Planter une seule espèce partout",
+    "Imperméabiliser systématiquement les espaces naturels",
+    "Pense à la nourriture, à la reproduction et aux déplacements.",
+    "Les espèces ont besoin de conditions adaptées."
+  ],
+  "it": [
+    "Quale misura aiuta contro la perdita di specie?",
+    "Proteggere e collegare gli habitat",
+    "Eliminare tutte le siepi e zone umide",
+    "Piantare una sola specie ovunque",
+    "Impermeabilizzare sistematicamente gli spazi naturali",
+    "Pensa a cibo, riproduzione e spostamenti.",
+    "Le specie necessitano di condizioni adatte."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Massnahme hilft gegen den Verlust von Arten? Replaces exact-text recall of: Was versteht man unter dem heutigen beschleunigten Artensterben?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_8",
+  "de": [
+    "Welches Beispiel zeigt Digitalisierung von Informationen?",
+    "Ein Papierdokument wird eingescannt und als Datei gespeichert",
+    "Ein Ausdruck wird mit Klebstoff repariert",
+    "Ein Brief wird nur von Hand abgeschrieben",
+    "Ein Buch wird in ein anderes Regal gestellt",
+    "Denke an die Form, in der Informationen vorliegen.",
+    "Wann kann ein Computer die Information als Datei verarbeiten?"
+  ],
+  "en": [
+    "Which example shows digitising information?",
+    "Scanning a paper document and saving it as a file",
+    "Repairing a printout with glue",
+    "Copying a letter only by hand",
+    "Moving a book to another shelf",
+    "Think of the form information takes.",
+    "When can a computer process it as a file?"
+  ],
+  "fr": [
+    "Quel exemple montre la numérisation d'informations ?",
+    "Scanner un document papier et l'enregistrer dans un fichier",
+    "Réparer une feuille avec de la colle",
+    "Recopier une lettre seulement à la main",
+    "Déplacer un livre sur une autre étagère",
+    "Pense à la forme de l'information.",
+    "Quand un ordinateur peut-il la traiter comme un fichier ?"
+  ],
+  "it": [
+    "Quale esempio mostra la digitalizzazione di informazioni?",
+    "Scansionare un documento cartaceo e salvarlo come file",
+    "Riparare un foglio con colla",
+    "Ricopiare una lettera soltanto a mano",
+    "Spostare un libro su un altro scaffale",
+    "Pensa alla forma dell'informazione.",
+    "Quando può un computer elaborarla come file?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Welches Beispiel zeigt Digitalisierung von Informationen? Replaces exact-text recall of: Was ist Digitalisierung?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_10",
+  "de": [
+    "Wann spricht man von Wasserknappheit?",
+    "Wenn nutzbares Wasser für den Bedarf nicht ausreichend verfügbar ist",
+    "Nur wenn die gesamte Wassermenge der Erde auf null sinkt",
+    "Immer wenn viel Meerwasser vorhanden ist, unabhängig von seiner Nutzbarkeit",
+    "Sobald eine Region weniger Regen hat, auch wenn der Bedarf vollständig gedeckt bleibt",
+    "Vergleiche verfügbares Wasser und benötigte Menge.",
+    "Auch Qualität und Zugänglichkeit spielen eine Rolle."
+  ],
+  "en": [
+    "When is there water scarcity?",
+    "When usable water is insufficiently available for needs",
+    "Only when Earth's entire water supply reaches zero",
+    "Whenever much seawater exists, regardless of usability",
+    "Whenever rainfall falls, even if all needs remain fully met",
+    "Compare available water with needs.",
+    "Quality and access matter too."
+  ],
+  "fr": [
+    "Quand parle-t-on de pénurie d'eau ?",
+    "Quand l'eau utilisable disponible ne suffit pas aux besoins",
+    "Seulement quand toute l'eau terrestre disparaît",
+    "Dès qu'il existe beaucoup d'eau de mer, sans égard à son usage possible",
+    "Dès que la pluie diminue, même si tous les besoins restent satisfaits",
+    "Compare l'eau disponible et les besoins.",
+    "La qualité et l'accès comptent aussi."
+  ],
+  "it": [
+    "Quando si parla di scarsità d'acqua?",
+    "Quando l'acqua utilizzabile disponibile non basta ai bisogni",
+    "Solo quando tutta l'acqua terrestre scompare",
+    "Ogni volta che esiste molta acqua marina, senza considerarne l'utilizzabilità",
+    "Appena cala la pioggia, anche se tutti i bisogni restano soddisfatti",
+    "Confronta acqua disponibile e bisogni.",
+    "Contano anche qualità e accessibilità."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wann spricht man von Wasserknappheit? Replaces exact-text recall of: Was ist Wasserknappheit?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_12",
+  "de": [
+    "Was bedeutet Ernährungssicherheit?",
+    "Menschen haben verlässlich Zugang zu genügend sicherer und nahrhafter Nahrung",
+    "Ein Land produziert nur die teuersten Lebensmittel",
+    "Alle Menschen essen jeden Tag dasselbe Gericht",
+    "Lebensmittel werden nur möglichst lange beworben",
+    "Denke an Zugang, Menge und Qualität zusammen.",
+    "Genug Ware irgendwo bedeutet nicht automatisch genug Essen für alle."
+  ],
+  "en": [
+    "What does food security mean?",
+    "People reliably have access to enough safe and nutritious food",
+    "A country produces only the most expensive foods",
+    "Everyone eats the same dish every day",
+    "Food is advertised for as long as possible",
+    "Think of access, quantity and quality together.",
+    "Enough goods somewhere does not automatically mean food for everyone."
+  ],
+  "fr": [
+    "Que signifie la sécurité alimentaire ?",
+    "Les personnes ont un accès fiable à assez d'aliments sûrs et nutritifs",
+    "Un pays produit seulement les aliments les plus chers",
+    "Tout le monde mange le même plat chaque jour",
+    "Les aliments font l'objet de publicité le plus longtemps possible",
+    "Pense à l'accès, à la quantité et à la qualité ensemble.",
+    "Des stocks suffisants quelque part ne nourrissent pas automatiquement tous."
+  ],
+  "it": [
+    "Che cosa significa sicurezza alimentare?",
+    "Le persone hanno accesso affidabile a cibo sufficiente, sicuro e nutriente",
+    "Un Paese produce solo gli alimenti più costosi",
+    "Tutti mangiano lo stesso piatto ogni giorno",
+    "Il cibo viene pubblicizzato il più a lungo possibile",
+    "Pensa insieme ad accesso, quantità e qualità.",
+    "Scorte sufficienti da qualche parte non nutrono automaticamente tutti."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was bedeutet Ernährungssicherheit? Replaces exact-text recall of: Was ist Nahrungssicherheit?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_14",
+  "de": [
+    "Welche Energiequelle ist erneuerbar?",
+    "Wind",
+    "Erdöl",
+    "Kohle",
+    "Erdgas",
+    "Denke an die Neubildung auf menschlichen Zeitskalen.",
+    "Fossile Vorräte entstanden über sehr lange Zeiträume."
+  ],
+  "en": [
+    "Which energy source is renewable?",
+    "Wind",
+    "Oil",
+    "Coal",
+    "Natural gas",
+    "Think of replenishment on human timescales.",
+    "Fossil reserves formed over very long periods."
+  ],
+  "fr": [
+    "Quelle source d'énergie est renouvelable ?",
+    "Le vent",
+    "Le pétrole",
+    "Le charbon",
+    "Le gaz naturel",
+    "Pense au renouvellement à l'échelle humaine.",
+    "Les réserves fossiles se sont formées sur de très longues périodes."
+  ],
+  "it": [
+    "Quale fonte energetica è rinnovabile?",
+    "Vento",
+    "Petrolio",
+    "Carbone",
+    "Gas naturale",
+    "Pensa al rinnovo su scale temporali umane.",
+    "Le riserve fossili si sono formate in tempi lunghissimi."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche Energiequelle ist erneuerbar? Replaces exact-text recall of: Was ist Energiewende?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_16",
+  "de": [
+    "Was zeigt die Lieferkette einer Schokolade?",
+    "Stationen von Rohstoffen über Verarbeitung bis zum Verkauf",
+    "Nur den letzten Weg vom Laden nach Hause",
+    "Nur die Reihenfolge der Werbeanzeigen",
+    "Ausschliesslich die Zutatenmenge, ohne Produktions- und Transportstationen",
+    "Denke an mehrere zusammenhängende Schritte.",
+    "Ein Produkt entsteht nicht erst im Laden."
+  ],
+  "en": [
+    "What does a chocolate bar's supply chain show?",
+    "Stages from raw materials through processing to sale",
+    "Only the final journey from shop to home",
+    "Only the order of advertisements",
+    "Only ingredient quantities, without production and transport stages",
+    "Think of several connected steps.",
+    "A product does not begin in the shop."
+  ],
+  "fr": [
+    "Que montre la chaîne d'approvisionnement d'une tablette de chocolat ?",
+    "Les étapes des matières premières à la transformation puis à la vente",
+    "Seulement le dernier trajet du magasin au domicile",
+    "Seulement l'ordre des publicités",
+    "Uniquement les quantités d'ingrédients, sans étapes de production et transport",
+    "Pense aux étapes reliées entre elles.",
+    "Un produit ne naît pas dans le magasin."
+  ],
+  "it": [
+    "Che cosa mostra la filiera di una tavoletta di cioccolato?",
+    "Le fasi dalle materie prime alla lavorazione e alla vendita",
+    "Solo l'ultimo tragitto dal negozio a casa",
+    "Solo l'ordine delle pubblicità",
+    "Solo le quantità degli ingredienti, senza fasi produttive e trasporti",
+    "Pensa a più fasi collegate.",
+    "Un prodotto non nasce nel negozio."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was zeigt die Lieferkette einer Schokolade? Replaces exact-text recall of: Lernrunde 1: Eine Lieferkette: Welche Aussage passt? Antwort: ___"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_18",
+  "de": [
+    "Eine Bilanz weist 100 Tonnen Emissionen und 100 Tonnen dauerhafte Entnahmen aus. Was ist ihr Netto-Wert?",
+    "Null Tonnen",
+    "200 Tonnen",
+    "100 Tonnen",
+    "Minus 200 Tonnen",
+    "Vergleiche beide Seiten der Bilanz.",
+    "Entnahmen werden von Emissionen abgezogen."
+  ],
+  "en": [
+    "An account shows 100 tonnes of emissions and 100 tonnes of lasting removals. What is the net value?",
+    "Zero tonnes",
+    "200 tonnes",
+    "100 tonnes",
+    "Minus 200 tonnes",
+    "Compare both sides of the account.",
+    "Removals are subtracted from emissions."
+  ],
+  "fr": [
+    "Un bilan indique 100 tonnes d'émissions et 100 tonnes de retraits durables. Quelle est la valeur nette ?",
+    "Zéro tonne",
+    "200 tonnes",
+    "100 tonnes",
+    "Moins 200 tonnes",
+    "Compare les deux côtés du bilan.",
+    "Les retraits sont soustraits des émissions."
+  ],
+  "it": [
+    "Un bilancio indica 100 tonnellate di emissioni e 100 di rimozioni durature. Qual è il valore netto?",
+    "Zero tonnellate",
+    "200 tonnellate",
+    "100 tonnellate",
+    "Meno 200 tonnellate",
+    "Confronta i due lati del bilancio.",
+    "Le rimozioni si sottraggono alle emissioni."
+  ],
+  "reason": "Individually reviewed knowledge objective: Eine Bilanz weist 100 Tonnen Emissionen und 100 Tonnen dauerhafte Entnahmen aus. Was ist ihr Netto-Wert? Replaces exact-text recall of: Was ist Net Zero?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_20",
+  "de": [
+    "Was ist ein Beispiel für einen digitalen Behördendienst?",
+    "Ein amtliches Dokument über ein gesichertes Onlineportal bestellen",
+    "Eine private Wetter-App ohne Behördenkontakt nutzen",
+    "Eine amtliche Broschüre ausschliesslich in Papierform abholen",
+    "Einen privaten Einkauf ohne Verwaltungsaufgabe tätigen",
+    "Denke an Verwaltungsaufgaben für die Bevölkerung.",
+    "Digitaler Zugang muss persönliche Daten schützen."
+  ],
+  "en": [
+    "Which is an example of a digital public service?",
+    "Ordering an official document through a secure online portal",
+    "Use a private weather app without contacting authorities",
+    "Collect an official brochure only on paper",
+    "Make a private purchase without an administrative task",
+    "Think of administrative services for residents.",
+    "Digital access must protect personal data."
+  ],
+  "fr": [
+    "Quel est un exemple de service administratif numérique ?",
+    "Commander un document officiel via un portail sécurisé",
+    "Utiliser une application météo privée sans contact administratif",
+    "Retirer une brochure officielle uniquement sur papier",
+    "Faire un achat privé sans démarche administrative",
+    "Pense aux démarches administratives des habitants.",
+    "L'accès numérique doit protéger les données personnelles."
+  ],
+  "it": [
+    "Qual è un esempio di servizio amministrativo digitale?",
+    "Ordinare un documento ufficiale tramite un portale sicuro",
+    "Usare un'app meteo privata senza contatto amministrativo",
+    "Ritirare un opuscolo ufficiale solo cartaceo",
+    "Fare un acquisto privato senza pratica amministrativa",
+    "Pensa alle pratiche amministrative degli abitanti.",
+    "L'accesso digitale deve proteggere i dati personali."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ist ein Beispiel für einen digitalen Behördendienst? Replaces exact-text recall of: Was ist die digitale Transformation des Staates (e-Government)?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_22",
+  "de": [
+    "Warum kann Weltraumschrott für Satelliten gefährlich sein?",
+    "Schnelle Trümmer können mit ihnen zusammenstossen",
+    "Jedes Trümmerstück zieht alle Satelliten zur Erde",
+    "Weltraumschrott schaltet automatisch jedes Funksignal ab",
+    "Alte Raketen werden immer zu harmlosen Wolken",
+    "Denke an Bewegung und Zusammenstösse.",
+    "Auch kleine Stücke können bei hoher Geschwindigkeit schaden."
+  ],
+  "en": [
+    "Why can space debris endanger satellites?",
+    "Fast-moving fragments can collide with them",
+    "Every fragment pulls all satellites down to Earth",
+    "Debris automatically switches off every radio signal",
+    "Old rockets always become harmless clouds",
+    "Think of motion and collisions.",
+    "Even small pieces can cause damage at high speed."
+  ],
+  "fr": [
+    "Pourquoi les débris spatiaux menacent-ils les satellites ?",
+    "Des fragments rapides peuvent les percuter",
+    "Chaque fragment attire tous les satellites vers la Terre",
+    "Les débris coupent automatiquement tous les signaux radio",
+    "Les vieilles fusées deviennent toujours des nuages inoffensifs",
+    "Pense aux mouvements et aux collisions.",
+    "Même de petits morceaux peuvent faire des dégâts à grande vitesse."
+  ],
+  "it": [
+    "Perché i detriti spaziali possono minacciare i satelliti?",
+    "Frammenti veloci possono urtarli",
+    "Ogni frammento attira tutti i satelliti sulla Terra",
+    "I detriti spengono automaticamente ogni segnale radio",
+    "I vecchi razzi diventano sempre nuvole innocue",
+    "Pensa a movimento e collisioni.",
+    "Anche piccoli pezzi possono danneggiare ad alta velocità."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum kann Weltraumschrott für Satelliten gefährlich sein? Replaces exact-text recall of: Was ist Space Debris?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_24",
+  "de": [
+    "Warum wollen internationale Abkommen die Verbreitung von Atomwaffen begrenzen?",
+    "Um Risiken katastrophaler Zerstörung zu verringern",
+    "Um den Besitz solcher Waffen ohne jede Kontrolle zu fördern",
+    "Um den Unterschied zwischen Waffen und friedlicher Nutzung aufzuheben",
+    "Um alle Konflikte allein durch mehr Atomwaffen garantiert zu lösen",
+    "Unterscheide Waffen von friedlichen Anwendungen.",
+    "Denke an die möglichen Folgen eines Einsatzes."
+  ],
+  "en": [
+    "Why do international agreements seek to limit nuclear weapon proliferation?",
+    "To reduce risks of catastrophic destruction",
+    "To promote possession of such weapons without controls",
+    "To remove the distinction between weapons and peaceful uses",
+    "To guarantee resolution of every conflict solely through more nuclear weapons",
+    "Distinguish weapons from peaceful applications.",
+    "Think of the consequences of their use."
+  ],
+  "fr": [
+    "Pourquoi les accords internationaux cherchent-ils à limiter la prolifération des armes nucléaires ?",
+    "Pour réduire les risques de destruction catastrophique",
+    "Pour encourager leur possession sans contrôle",
+    "Pour supprimer la distinction entre armes et usages pacifiques",
+    "Pour garantir la résolution de tout conflit uniquement par plus d'armes nucléaires",
+    "Distingue armes et applications pacifiques.",
+    "Pense aux conséquences d'une utilisation."
+  ],
+  "it": [
+    "Perché gli accordi internazionali cercano di limitare la diffusione delle armi nucleari?",
+    "Per ridurre i rischi di distruzione catastrofica",
+    "Per favorirne il possesso senza controlli",
+    "Per eliminare la distinzione tra armi e usi pacifici",
+    "Per garantire la soluzione di ogni conflitto solo con più armi nucleari",
+    "Distingui armi e applicazioni pacifiche.",
+    "Pensa alle conseguenze del loro utilizzo."
+  ],
+  "reason": "Individually reviewed knowledge objective: Warum wollen internationale Abkommen die Verbreitung von Atomwaffen begrenzen? Replaces exact-text recall of: Was ist Nuclearproliferation?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_26",
+  "de": [
+    "Wie kann Plastikabfall Meerestieren schaden?",
+    "Sie können ihn verschlucken oder sich darin verfangen",
+    "Er macht jedes Meerestier automatisch grösser",
+    "Er ersetzt für alle Tiere passende Nahrung",
+    "Er verschwindet überall sofort nach dem Wegwerfen",
+    "Denke an kleine Teile und herumtreibende Netze.",
+    "Material im Wasser kann mit Tieren in Kontakt kommen."
+  ],
+  "en": [
+    "How can plastic waste harm marine animals?",
+    "They can swallow it or become entangled",
+    "It automatically makes every animal larger",
+    "It replaces suitable food for every animal",
+    "It disappears everywhere immediately after disposal",
+    "Think of small pieces and drifting nets.",
+    "Material in water can come into contact with animals."
+  ],
+  "fr": [
+    "Comment les déchets plastiques peuvent-ils nuire aux animaux marins ?",
+    "Ils peuvent les avaler ou s'y retrouver piégés",
+    "Ils font automatiquement grandir tous les animaux",
+    "Ils remplacent la nourriture adaptée à tous",
+    "Ils disparaissent partout immédiatement après leur abandon",
+    "Pense aux petits morceaux et aux filets dérivants.",
+    "Les matériaux dans l'eau peuvent rencontrer des animaux."
+  ],
+  "it": [
+    "Come possono i rifiuti plastici danneggiare gli animali marini?",
+    "Possono ingerirli o restarvi impigliati",
+    "Fanno automaticamente crescere tutti gli animali",
+    "Sostituiscono il cibo adatto a tutti",
+    "Scompaiono subito ovunque dopo essere stati gettati",
+    "Pensa ai piccoli pezzi e alle reti alla deriva.",
+    "I materiali nell'acqua possono incontrare gli animali."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wie kann Plastikabfall Meerestieren schaden? Replaces exact-text recall of: Was ist Plastikverschmutzung?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_28",
+  "de": [
+    "Was betont Ernährungssouveränität zusätzlich zum Zugang zu Essen?",
+    "Mitbestimmung darüber, wie Nahrung erzeugt und verteilt wird",
+    "Nur die Kalorienzahl eines einzelnen Snacks",
+    "Nur den Gewinn des grössten Händlers",
+    "Nur die Farbe von Lebensmittelverpackungen",
+    "Denke an Entscheidungen im Ernährungssystem.",
+    "Wer kann dessen Regeln und Ausrichtung mitgestalten?"
+  ],
+  "en": [
+    "What does food sovereignty emphasise beyond access to food?",
+    "Having a say in how food is produced and distributed",
+    "Only the calories in one snack",
+    "Only the largest retailer's profit",
+    "Only food packaging colours",
+    "Think of decisions in the food system.",
+    "Who can help shape its rules and direction?"
+  ],
+  "fr": [
+    "Que souligne la souveraineté alimentaire en plus de l'accès à la nourriture ?",
+    "La participation aux choix de production et de distribution des aliments",
+    "Seulement les calories d'une collation",
+    "Seulement le profit du plus grand commerçant",
+    "Seulement la couleur des emballages",
+    "Pense aux décisions dans le système alimentaire.",
+    "Qui peut contribuer à ses règles et à son orientation ?"
+  ],
+  "it": [
+    "Che cosa sottolinea la sovranità alimentare oltre all'accesso al cibo?",
+    "La partecipazione alle decisioni su produzione e distribuzione del cibo",
+    "Solo le calorie di uno spuntino",
+    "Solo il profitto del più grande commerciante",
+    "Solo il colore degli imballaggi",
+    "Pensa alle decisioni nel sistema alimentare.",
+    "Chi può contribuire a regole e orientamento?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Was betont Ernährungssouveränität zusätzlich zum Zugang zu Essen? Replaces exact-text recall of: Was ist Food Security vs. Food Sovereignty?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_30",
+  "de": [
+    "Wo stehen Offshore-Windanlagen?",
+    "Auf See",
+    "An Land im Binnenland",
+    "Auf Bergkämmen fern vom Meer",
+    "Auf Dächern innerhalb von Städten",
+    "Achte auf den Begriff für den Standort.",
+    "Es geht um Windkraft ausserhalb der Küste."
+  ],
+  "en": [
+    "Where are offshore wind turbines located?",
+    "At sea",
+    "On land inland",
+    "On mountain ridges far from the sea",
+    "On rooftops within cities",
+    "Notice the word describing location.",
+    "This is wind power away from the coast on the water."
+  ],
+  "fr": [
+    "Où se trouvent les éoliennes en mer ?",
+    "Au large des côtes",
+    "Sur terre à l'intérieur des terres",
+    "Sur des crêtes loin de la mer",
+    "Sur les toits en ville",
+    "Observe le terme indiquant le lieu.",
+    "Il s'agit d'un emplacement hors de la terre ferme."
+  ],
+  "it": [
+    "Dove si trovano gli impianti eolici offshore?",
+    "In mare",
+    "Sulla terraferma nell'entroterra",
+    "Sui crinali lontani dal mare",
+    "Sui tetti nelle città",
+    "Osserva il termine che indica il luogo.",
+    "Si tratta di una posizione al largo della costa."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wo stehen Offshore-Windanlagen? Replaces exact-text recall of: Was ist Offshore-Wind?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_34",
+  "de": [
+    "Was kann eine Stadt mit digitalen Verkehrssensoren sinnvoll tun?",
+    "Verkehrsflüsse erfassen und Ampeln bedarfsgerecht steuern",
+    "Jede Fahrt ohne Datenschutz öffentlich einer Person zuordnen",
+    "Alle Verkehrsregeln automatisch abschaffen",
+    "Staus ohne jede Planung garantiert verhindern",
+    "Denke an Daten für eine konkrete Aufgabe.",
+    "Nutzen und Datenschutz müssen gemeinsam betrachtet werden."
+  ],
+  "en": [
+    "What can a city use digital traffic sensors for sensibly?",
+    "Measuring traffic flows and adjusting signals to demand",
+    "Publicly linking every trip to a person without privacy safeguards",
+    "Automatically abolishing all traffic rules",
+    "Guaranteeing no congestion without any planning",
+    "Think of data serving a specific task.",
+    "Benefits and privacy must be considered together."
+  ],
+  "fr": [
+    "Comment une ville peut-elle utiliser utilement des capteurs de circulation ?",
+    "Mesurer les flux et adapter les feux aux besoins",
+    "Associer publiquement chaque trajet à une personne sans protection",
+    "Supprimer automatiquement toutes les règles de circulation",
+    "Garantir aucun embouteillage sans planification",
+    "Pense à des données pour une tâche précise.",
+    "Utilité et protection des données vont ensemble."
+  ],
+  "it": [
+    "Come può una città usare utilmente sensori digitali del traffico?",
+    "Misurare i flussi e adattare i semafori ai bisogni",
+    "Associare pubblicamente ogni viaggio a una persona senza tutele",
+    "Abolire automaticamente tutte le regole stradali",
+    "Garantire zero ingorghi senza pianificazione",
+    "Pensa a dati per un compito preciso.",
+    "Utilità e protezione dei dati vanno considerate insieme."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was kann eine Stadt mit digitalen Verkehrssensoren sinnvoll tun? Replaces exact-text recall of: Was ist Smart City?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_36",
+  "de": [
+    "Was ermöglicht das Internet?",
+    "Datenaustausch zwischen miteinander verbundenen Netzwerken",
+    "Nur den Datenaustausch innerhalb eines einzelnen Geräts ohne Netzwerk",
+    "Die automatische Prüfung aller Inhalte auf Wahrheit",
+    "Die automatische Geheimhaltung jeder Nachricht ohne Schutzverfahren",
+    "Denke an weltweite Verbindungen.",
+    "Technische Vernetzung ist keine Garantie für verlässliche Inhalte."
+  ],
+  "en": [
+    "What does the internet enable?",
+    "Data exchange between interconnected networks",
+    "Only data exchange inside one device without a network",
+    "Automatic checking of all content for truth",
+    "Automatic secrecy of every message without protection methods",
+    "Think of worldwide connections.",
+    "Technical connectivity does not guarantee reliable content."
+  ],
+  "fr": [
+    "Que permet Internet ?",
+    "L'échange de données entre réseaux interconnectés",
+    "Seulement l'échange interne à un appareil sans réseau",
+    "La vérification automatique de la vérité de tous les contenus",
+    "Le secret automatique de chaque message sans protection",
+    "Pense aux connexions mondiales.",
+    "La connexion technique ne garantit pas la fiabilité des contenus."
+  ],
+  "it": [
+    "Che cosa permette Internet?",
+    "Lo scambio di dati tra reti interconnesse",
+    "Solo lo scambio interno a un dispositivo senza rete",
+    "Il controllo automatico della verità di tutti i contenuti",
+    "La segretezza automatica di ogni messaggio senza protezioni",
+    "Pensa ai collegamenti mondiali.",
+    "La connessione tecnica non garantisce contenuti affidabili."
+  ],
+  "reason": "Individually reviewed knowledge objective: Was ermöglicht das Internet? Replaces exact-text recall of: Lernrunde 3: Das Internet: Welche Aussage passt? Antwort: ___"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_38",
+  "de": [
+    "Welche zwei Anliegen verbindet nachhaltiges Wirtschaften?",
+    "Grundbedürfnisse erfüllen und ökologische Grenzen beachten",
+    "Nur kurzfristige Gewinne und unbegrenzten Ressourcenverbrauch",
+    "Nur mehr Werbung und längere Transportwege",
+    "Nur niedrigere Preise ohne Blick auf Arbeitsbedingungen",
+    "Denke an Menschen und Umwelt zusammen.",
+    "Ein einzelner Preis zeigt nicht alle Folgen."
+  ],
+  "en": [
+    "Which two aims does sustainable economic activity combine?",
+    "Meeting basic needs and respecting ecological limits",
+    "Only short-term profits and unlimited resource use",
+    "Only more advertising and longer transport routes",
+    "Only lower prices without considering working conditions",
+    "Think of people and the environment together.",
+    "A price alone does not show every consequence."
+  ],
+  "fr": [
+    "Quels deux objectifs l'économie durable associe-t-elle ?",
+    "Satisfaire les besoins fondamentaux et respecter les limites écologiques",
+    "Seulement les profits immédiats et l'usage illimité des ressources",
+    "Seulement plus de publicité et de transport",
+    "Seulement des prix plus bas sans considérer le travail",
+    "Pense aux personnes et à l'environnement ensemble.",
+    "Un prix seul ne montre pas toutes les conséquences."
+  ],
+  "it": [
+    "Quali due obiettivi unisce un'economia sostenibile?",
+    "Soddisfare i bisogni fondamentali e rispettare i limiti ecologici",
+    "Solo profitti immediati e uso illimitato delle risorse",
+    "Solo più pubblicità e trasporti più lunghi",
+    "Solo prezzi più bassi senza considerare il lavoro",
+    "Pensa insieme a persone e ambiente.",
+    "Un prezzo da solo non mostra tutte le conseguenze."
+  ],
+  "reason": "Individually reviewed knowledge objective: Welche zwei Anliegen verbindet nachhaltiges Wirtschaften? Replaces exact-text recall of: Was ist Donut-Ökonomie (Raworth)?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_44",
+  "de": [
+    "Wie kann Weiterbildung beim technischen Wandel helfen?",
+    "Menschen können Fähigkeiten für veränderte Aufgaben erwerben",
+    "Sie garantiert jedem sofort jeden gewünschten Beruf",
+    "Sie verhindert jede neue Technik",
+    "Sie macht praktische Erfahrung grundsätzlich wertlos",
+    "Denke an Veränderungen von Tätigkeiten.",
+    "Lernen erweitert Möglichkeiten, garantiert aber nicht jeden Erfolg."
+  ],
+  "en": [
+    "How can further training help with technological change?",
+    "People can gain skills for changing tasks",
+    "It guarantees everyone any desired job immediately",
+    "It prevents every new technology",
+    "It makes practical experience worthless in principle",
+    "Think of changing work tasks.",
+    "Learning expands opportunities but does not guarantee every outcome."
+  ],
+  "fr": [
+    "Comment la formation continue aide-t-elle face au changement technique ?",
+    "Elle permet d'acquérir des compétences pour de nouvelles tâches",
+    "Elle garantit immédiatement tout métier souhaité à tous",
+    "Elle empêche toute nouvelle technologie",
+    "Elle rend l'expérience pratique inutile",
+    "Pense à l'évolution des tâches.",
+    "Apprendre élargit les possibilités sans garantir tous les résultats."
+  ],
+  "it": [
+    "Come aiuta la formazione continua nel cambiamento tecnologico?",
+    "Permette di acquisire competenze per compiti diversi",
+    "Garantisce subito a tutti qualsiasi mestiere desiderato",
+    "Impedisce ogni nuova tecnologia",
+    "Rende inutile l'esperienza pratica",
+    "Pensa all'evoluzione dei compiti.",
+    "Imparare amplia le possibilità senza garantire ogni risultato."
+  ],
+  "reason": "Individually reviewed knowledge objective: Wie kann Weiterbildung beim technischen Wandel helfen? Replaces exact-text recall of: Was ist technologische Arbeitslosigkeit?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_46",
+  "de": [
+    "Ein Video zeigt angeblich eine bekannte Person mit einer schockierenden Aussage. Was ist vor dem Teilen sinnvoll?",
+    "Quelle und unabhängige Bestätigungen prüfen, denn Videos können manipuliert sein",
+    "Es sofort teilen, weil jedes Video ein Beweis ist",
+    "Nur die Zahl der Aufrufe beachten",
+    "Annehmen, dass ein bekanntes Gesicht jede Aussage bestätigt",
+    "Denke an künstlich veränderte Bild- und Tonaufnahmen.",
+    "Was lässt sich ausserhalb des Videos überprüfen?"
+  ],
+  "en": [
+    "A video supposedly shows a public figure making a shocking statement. What is sensible before sharing?",
+    "Check its source and independent confirmation, since videos can be manipulated",
+    "Share it immediately because every video is proof",
+    "Only check the view count",
+    "Assume a familiar face confirms every claim",
+    "Think of artificially altered image and sound recordings.",
+    "What can be verified outside the video?"
+  ],
+  "fr": [
+    "Une vidéo montrerait une personnalité tenant des propos choquants. Que faire avant de la partager ?",
+    "Vérifier la source et des confirmations indépendantes, car une vidéo peut être manipulée",
+    "Partager aussitôt car toute vidéo est une preuve",
+    "Regarder seulement le nombre de vues",
+    "Supposer qu'un visage connu confirme chaque propos",
+    "Pense aux images et sons modifiés artificiellement.",
+    "Que peut-on vérifier en dehors de la vidéo ?"
+  ],
+  "it": [
+    "Un video mostrerebbe una persona famosa con una frase scioccante. Che cosa fare prima di condividerlo?",
+    "Verificare fonte e conferme indipendenti, perché i video possono essere manipolati",
+    "Condividerlo subito perché ogni video è una prova",
+    "Guardare solo il numero di visualizzazioni",
+    "Supporre che un volto noto confermi ogni frase",
+    "Pensa a immagini e suoni modificati artificialmente.",
+    "Che cosa si può verificare al di fuori del video?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Ein Video zeigt angeblich eine bekannte Person mit einer schockierenden Aussage. Was ist vor dem Teilen sinnvoll? Replaces exact-text recall of: Was ist Deepfake?"
+},
+{
+  "key": "6/science/zukunft-herausforderungen-6/zh6_50",
+  "de": [
+    "Eine Klasse will weniger Abfall verursachen. Was ist ein planvolles Vorgehen?",
+    "Abfall untersuchen, eine Massnahme ausprobieren und die Wirkung vergleichen",
+    "Ohne Untersuchung jedes Jahr dieselbe Behauptung wiederholen",
+    "Nur ein Plakat erstellen und Ergebnisse grundsätzlich ignorieren",
+    "Allen die Schuld geben, ohne eine Änderung zu versuchen",
+    "Denke an Ziel, Handlung und Kontrolle.",
+    "Wie lässt sich feststellen, ob die Idee wirklich hilft?"
+  ],
+  "en": [
+    "A class wants to produce less waste. What is a planned approach?",
+    "Examine waste, try a measure and compare its effect",
+    "Repeat the same claim yearly without investigation",
+    "Make only a poster and ignore all results",
+    "Blame everyone without trying any change",
+    "Think of a goal, action and checking.",
+    "How can you find out whether the idea really helps?"
+  ],
+  "fr": [
+    "Une classe veut produire moins de déchets. Quelle démarche est planifiée ?",
+    "Étudier les déchets, tester une mesure et comparer les effets",
+    "Répéter chaque année la même affirmation sans enquête",
+    "Créer seulement une affiche et ignorer les résultats",
+    "Accuser tout le monde sans essayer de changer",
+    "Pense à un objectif, une action et une vérification.",
+    "Comment savoir si l'idée aide vraiment ?"
+  ],
+  "it": [
+    "Una classe vuole produrre meno rifiuti. Qual è un approccio pianificato?",
+    "Esaminare i rifiuti, provare una misura e confrontare gli effetti",
+    "Ripetere ogni anno la stessa affermazione senza indagine",
+    "Fare solo un cartellone e ignorare i risultati",
+    "Incolpare tutti senza tentare cambiamenti",
+    "Pensa a obiettivo, azione e verifica.",
+    "Come capire se l'idea aiuta davvero?"
+  ],
+  "reason": "Individually reviewed knowledge objective: Eine Klasse will weniger Abfall verursachen. Was ist ein planvolles Vorgehen? Replaces exact-text recall of: Was ist proaktive Zukunftsgestaltung?"
+},
+// END GRADE 6 KNOWLEDGE CHOICE REVIEW
+
 ];
 
 const reviewsByKey = new Map(KNOWLEDGE_CHOICE_REVIEWS.map((review, index) => [review.key, { review, index }]));

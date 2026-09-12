@@ -45,4 +45,10 @@ const grade3Remaining=[...current].map(([key,e])=>[key,localizeExercise(e,'de')]
 assert.equal(grade3Remaining.length,0,'Grade3 NMG long text candidates must all be reviewed');
 const grade4Remaining=[...current].map(([key,e])=>[key,localizeExercise(e,'de')] as const).filter(([key,e])=>key.startsWith('4/science/')&&e.type==='fill-in-blank'&&(e.answer.match(/\p{L}+(?:[-’']\p{L}+)*/gu)||[]).length>=3);
 assert.equal(grade4Remaining.length,0,'Grade4 NMG long text candidates must all be reviewed');
-console.log(JSON.stringify({status:'pass',reviewed:reviewed.size,localeChecks,unchanged,grade1Remaining:grade1Remaining.length,grade2Remaining:grade2Remaining.length,grade3Remaining:grade3Remaining.length,grade4Remaining:grade4Remaining.length,total:current.size},null,2));
+const grade5Remaining=[...current].map(([key,e])=>[key,localizeExercise(e,'de')] as const).filter(([key,e])=>key.startsWith('5/science/')&&e.type==='fill-in-blank'&&(e.answer.match(/\p{L}+(?:[-’']\p{L}+)*/gu)||[]).length>=3);
+assert.equal(grade5Remaining.length,0,'Grade5 NMG long text candidates must all be reviewed');
+assert.equal([...reviewed.keys()].filter(key=>key.startsWith('5/science/')).length,318,'Grade5 scope must match individually reviewed inventory');
+const grade6Remaining=[...current].map(([key,e])=>[key,localizeExercise(e,'de')] as const).filter(([key,e])=>key.startsWith('6/science/')&&e.type==='fill-in-blank'&&(e.answer.match(/\p{L}+(?:[-’']\p{L}+)*/gu)||[]).length>=3);
+assert.equal(grade6Remaining.length,0,'Grade6 scope exhausted');
+assert.equal([...reviewed.keys()].filter(key=>key.startsWith('6/science/')).length,216,'Grade6 exact inventory');
+console.log(JSON.stringify({status:'pass',reviewed:reviewed.size,localeChecks,unchanged,grade1Remaining:grade1Remaining.length,grade2Remaining:grade2Remaining.length,grade3Remaining:grade3Remaining.length,grade4Remaining:grade4Remaining.length,grade5Remaining:grade5Remaining.length,grade6Remaining:grade6Remaining.length,total:current.size},null,2));
