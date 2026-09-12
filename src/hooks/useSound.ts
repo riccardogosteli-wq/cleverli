@@ -1,5 +1,6 @@
 "use client";
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useEffect } from "react";
+import { readSoundPreferences, SOUND_PREFERENCES_EVENT } from "@/lib/soundPreferences";
 
 /**
  * useSound — Web Audio API sound effects for Cleverli
@@ -12,6 +13,23 @@ type SoundType = "correct" | "wrong" | "streak" | "complete" | "hint" | "levelup
 
 export function useSound() {
   const ctxRef = useRef<AudioContext | null>(null);
+
+  useEffect(() => {
+    const silence = () => {
+      if (!readSoundPreferences().effects && ctxRef.current) {
+        void ctxRef.current.close().catch(() => {});
+        ctxRef.current = null;
+      }
+    };
+    window.addEventListener(SOUND_PREFERENCES_EVENT, silence);
+    window.addEventListener("storage", silence);
+    return () => {
+      window.removeEventListener(SOUND_PREFERENCES_EVENT, silence);
+      window.removeEventListener("storage", silence);
+      if (ctxRef.current) void ctxRef.current.close().catch(() => {});
+      ctxRef.current = null;
+    };
+  }, []);
 
   const getCtx = useCallback((): AudioContext | null => {
     if (typeof window === "undefined") return null;
@@ -54,6 +72,7 @@ export function useSound() {
   }, [getCtx]);
 
   const play = useCallback((sound: SoundType) => {
+    if (!readSoundPreferences().effects) return;
     switch (sound) {
       // ✅ Correct — bright ascending chime (C5-E5-G5)
       case "correct":

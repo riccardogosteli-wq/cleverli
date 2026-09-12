@@ -25,6 +25,10 @@ const pendingAudio = new Map<string, Promise<AudioBuffer>>();
 let sharedAudioContext: AudioContext | null = null;
 let activeSource: AudioBufferSourceNode | null = null;
 let playbackGeneration = 0;
+let automaticPlayback = false;
+export function stopAutomaticVoice() {
+  if (automaticPlayback) cancelActiveVoice();
+}
 
 function getAudioContext() {
   if (!sharedAudioContext || sharedAudioContext.state === "closed") {
@@ -37,6 +41,7 @@ function getAudioContext() {
 
 function cancelActiveVoice() {
   playbackGeneration += 1;
+  automaticPlayback = false;
   try {
     activeSource?.stop();
   } catch {
@@ -632,10 +637,11 @@ export function useVoice() {
     cancelActiveVoice();
   }, []);
 
-  const speak = useCallback(async (text: string, speechLanguage: Lang = lang, verbatim = false) => {
+  const speak = useCallback(async (text: string, speechLanguage: Lang = lang, verbatim = false, automatic = false) => {
     const clean = verbatim ? text.trim() : cleanSpeechForLanguage(text, speechLanguage);
     if (!clean) return;
     const generation = cancelActiveVoice();
+    automaticPlayback = automatic;
 
     const key = `${speechLanguage}:${clean}`;
     try {
@@ -643,6 +649,7 @@ export function useVoice() {
 
       // Resume AudioContext if suspended (mobile requires user gesture first)
       if (ctx.state === "suspended") await ctx.resume();
+      if (generation !== playbackGeneration) return;
       const buffer = await loadElevenLabsAudio(key, clean);
 
       // A newer speak/stop call superseded this request while it was loading.

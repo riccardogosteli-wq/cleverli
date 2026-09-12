@@ -20,7 +20,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { getTierProgress } from "@/lib/tierProgress";
 import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
-import { useVoice, getExerciseSpeechText, getPhrase } from "@/hooks/useVoice";
+import { useVoice, getExerciseSpeechText } from "@/hooks/useVoice";
+import SoundPreferences, { EffectsToggle } from "@/components/SoundPreferences";
+import { useAutomaticReading } from "@/hooks/useAutomaticReading";
 import { useSound } from "@/hooks/useSound";
 import PushPrompt from "./PushPrompt";
 import ExerciseIssueReporter from "./ExerciseIssueReporter";
@@ -204,7 +206,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [showReview, setShowReview] = useState(false); // show "review mistakes?" screen
   const [cardKey, setCardKey] = useState(0);
   const [unlockedReward, setUnlockedReward] = useState<Reward | null>(null);
-  const [voiceOn, setVoiceOn] = useState(false);
   const [hintsUsed, setHintsUsed] = useState(0);
   const [comboCount, setComboCount] = useState(0);
   const [comboVisible, setComboVisible] = useState(false);
@@ -327,7 +328,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   }, [answered]);
   
 
-  // (voice is on-demand only — no auto-read)
+  useAutomaticReading(
+    current && sourceCurrent ? getExerciseSpeechText(sourceCurrent, current, subject, exerciseSpeechLang) : "",
+    sourceCurrent?.listeningText ? (sourceCurrent.listeningLanguage ?? "de") : exerciseSpeechLang,
+    Boolean(current?.verbatimSpeech),
+    !done && !showReview && !isLocked && answered === null,
+    `${current?.id}:${idx}:${cardKey}`,
+  );
 
   useEffect(() => {
     if (done || isLocked || !current) return;
@@ -567,13 +574,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     // Sound first, then voice after a short pause
     if (correct && (newStreak === 3 || newStreak === 5 || newStreak === 8)) {
       play("streak");
-      setTimeout(() => { if (voiceOn) speak(getPhrase("streak"), "de"); }, 400);
     } else if (correct) {
       play("correct");
-      setTimeout(() => { if (voiceOn) speak(getPhrase("correct"), "de"); }, 300);
     } else {
       play("wrong");
-      setTimeout(() => { if (voiceOn) speak(getPhrase("wrong"), "de"); }, 300);
     }
   };
 
@@ -586,7 +590,6 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         setTimeout(() => setShowPerfect(false), 1800);
       } else {
         play("complete");
-        setTimeout(() => { if (voiceOn) speak(getPhrase("complete"), "de"); }, 600);
       }
       setExerciseInProgress(false); // UJ-12: clear in-progress flag on completion
       // UJ-7: if review mode done, check if still wrong answers → repeat, else done
@@ -993,22 +996,11 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             </div>
             <ProgressBar current={idx + 1} total={sessionTotal} streak={streak} isReviewMode={isReviewMode} />
           </div>
-          {isSupported && (
-            <button
-              onClick={() => {
-                const next = !voiceOn;
-                setVoiceOn(next);
-                if (!next) stop();
-              }}
-              title={voiceOn ? tr("cleverliVoiceOff") : tr("cleverliVoiceOn")}
-              className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center border-2 transition-all active:scale-95"
-              style={{ borderColor: voiceOn ? "#16a34a" : "#d1d5db", background: voiceOn ? "#f0fdf4" : "#f9fafb" }}
-            >
-              <span className="text-lg">{voiceOn ? "🔊" : "🔇"}</span>
-            </button>
-          )}
+          <EffectsToggle />
         </div>
       )}
+
+      {answered === null && <SoundPreferences />}
 
       {/* Exercise card — stays visible on wrong answer so child can see what they picked */}
       {(answered === null || answered === false) && (

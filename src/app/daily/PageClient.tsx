@@ -13,6 +13,8 @@ import FillInBlank from "@/components/exercises/FillInBlank";
 import SelfReview from "@/components/exercises/SelfReview";
 import CountingGame from "@/components/exercises/CountingGame";
 import HintSystem from "@/components/HintSystem";
+import SoundPreferences, { EffectsToggle } from "@/components/SoundPreferences";
+import { useAutomaticReading } from "@/hooks/useAutomaticReading";
 import { useSound } from "@/hooks/useSound";
 import StreakMilestone from "@/components/StreakMilestone";
 import { useVoice, getExerciseSpeechText } from "@/hooks/useVoice";
@@ -104,6 +106,11 @@ function DailyChallengePage({ context }: { context: string }) {
       });
     return () => controller.abort();
   }, [grade, lang]);
+
+  const autoExercise = challenge?.exercise;
+  const autoSubject = challenge?.subject ?? "";
+  const autoLanguage = autoExercise?.listeningText ? (autoExercise.listeningLanguage ?? "de") : autoSubject === "german" || autoSubject === "mi" ? "de" : autoSubject === "english" ? "en" : autoSubject === "french" ? "fr" : lang;
+  useAutomaticReading(autoExercise ? getExerciseSpeechText(autoExercise, autoExercise, autoSubject, autoLanguage) : "", autoLanguage, Boolean(autoExercise?.verbatimSpeech), Boolean(challenge) && !alreadyDone && answered === null, `${autoExercise?.id}:${attempt}`);
 
   if (challenge === undefined) return (
     <div className="max-w-md mx-auto px-4 py-12 text-center">
@@ -210,6 +217,8 @@ function DailyChallengePage({ context }: { context: string }) {
       {saveError && <p role="alert">{lang === "de" ? "Speichern nicht möglich. Bitte erlaube den lokalen Speicher und lade die Seite neu." : "Unable to save. Please enable local storage and reload."}</p>}
       {/* Exercise card remains mounted after an incorrect answer. */}
       <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 space-y-4 min-h-[260px] flex flex-col justify-center">
+        <div className="flex justify-end"><EffectsToggle /></div>
+        <SoundPreferences />
         {isSupported && <button type="button" onClick={() => speak(getExerciseSpeechText(exercise, localizedExercise, subject, speechLang), speechLang, localizedExercise.verbatimSpeech)} aria-label={tr("readAloudTitle")} title={tr("readAloudTitle")} className="min-h-12 w-full rounded-xl border border-green-200 bg-green-50 px-3 py-3 font-semibold text-green-700">{tr("readAloud")}</button>}
         {done ? <section aria-label={lang === "de" ? "Aufgabe und Lösung" : "Question and answer"} className="space-y-4">
           <p className="text-lg font-semibold">{exercise.question}</p>

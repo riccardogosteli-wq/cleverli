@@ -15,6 +15,7 @@ import {
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { getLevelForXp } from "@/lib/xp";
 import ParentPinGate, { lockParentSession } from "@/components/ParentPinGate";
+import SoundPreferences from "@/components/SoundPreferences";
 import ChildProfileManager from "@/components/ChildProfileManager";
 import { useSession } from "@/hooks/useSession";
 import { ParentsGuestPreview } from "@/components/GuestPreview";
@@ -169,7 +170,7 @@ export default function ParentsDashboard() {
       <div className="w-8 h-8 border-4 border-green-400 border-t-transparent rounded-full animate-spin" />
     </div>
   );
-  if (!session) return <ParentsGuestPreview />;
+  if (!session) return <><div className="max-w-lg mx-auto px-4 pt-6"><SoundPreferences /></div><ParentsGuestPreview /></>;
 
   const level = getLevelForXp(profile.xp);
   const levelTitle = lang === "fr" ? level.titleFr : lang === "it" ? level.titleIt : lang === "en" ? level.titleEn : level.title;
@@ -265,6 +266,8 @@ export default function ParentsDashboard() {
           🔒 <span>Elternbereich sperren</span>
         </a>
       </div>
+
+      <SoundPreferences />
 
       {/* ── Child Profiles ── */}
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
