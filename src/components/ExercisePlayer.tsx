@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
 import { getTierProgress } from "@/lib/tierProgress";
 import { setExerciseInProgress } from "@/app/learn/[grade]/[subject]/[topic]/TopicBreadcrumb";
 import { useVoice, getExerciseSpeechText } from "@/hooks/useVoice";
-import SoundPreferences, { EffectsToggle } from "@/components/SoundPreferences";
+import { ExerciseSoundSettings } from "@/components/SoundPreferences";
 import { useAutomaticReading } from "@/hooks/useAutomaticReading";
 import { useSound } from "@/hooks/useSound";
 import PushPrompt from "./PushPrompt";
@@ -996,11 +996,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
             </div>
             <ProgressBar current={idx + 1} total={sessionTotal} streak={streak} isReviewMode={isReviewMode} />
           </div>
-          <EffectsToggle />
+          <ExerciseSoundSettings />
         </div>
       )}
-
-      {answered === null && <SoundPreferences />}
 
       {/* Exercise card — stays visible on wrong answer so child can see what they picked */}
       {(answered === null || answered === false) && (
