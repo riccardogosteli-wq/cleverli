@@ -1,5 +1,5 @@
 "use client";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useLang } from "@/lib/LangContext";
 import type { Lang } from "@/lib/i18n";
 import type { Exercise } from "@/types/exercise";
@@ -632,6 +632,19 @@ export function getExerciseSpeechText(source: Exercise, localized: Exercise, sub
 
 export function useVoice() {
   const { lang } = useLang();
+  useEffect(() => {
+    // Restored automatic reading can be waiting for mobile autoplay permission.
+    // Resume the existing context on a real gesture without starting new speech.
+    const unlock = () => {
+      if (sharedAudioContext?.state === "suspended") void sharedAudioContext.resume().catch(() => {});
+    };
+    window.addEventListener("pointerdown", unlock, { passive: true });
+    window.addEventListener("keydown", unlock);
+    return () => {
+      window.removeEventListener("pointerdown", unlock);
+      window.removeEventListener("keydown", unlock);
+    };
+  }, []);
 
   const stop = useCallback(() => {
     cancelActiveVoice();

@@ -27,4 +27,8 @@ check(player.includes('sourceCurrent.listeningLanguage ?? "de"'),true);
 const voice=fs.readFileSync('src/hooks/useVoice.ts','utf8');check(voice.includes('if (automaticPlayback) cancelActiveVoice()'),true);
 check(voice.includes('readSoundPreferences'),false);
 const auto=fs.readFileSync('src/hooks/useAutomaticReading.ts','utf8');check(auto.includes('stopAutomaticVoice()'),true);check(auto.includes('clearTimeout(timer)'),true);
+check(sound.includes('window.addEventListener("pointerdown", unlock'),true);
+check(sound.includes('window.removeEventListener("pointerdown", unlock)'),true);
+check(voice.includes('window.addEventListener("pointerdown", unlock'),true);
+check(voice.includes('window.removeEventListener("pointerdown", unlock)'),true);
 console.log(`${checks} sound preference contracts passed`);

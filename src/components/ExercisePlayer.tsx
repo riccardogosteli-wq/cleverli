@@ -571,7 +571,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
       }, 400); // slight delay so profile state has settled
     }
 
-    // Sound first, then voice after a short pause
+    // Feedback effects are independent of automatic question reading.
     if (correct && (newStreak === 3 || newStreak === 5 || newStreak === 8)) {
       play("streak");
     } else if (correct) {
@@ -980,7 +980,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         </div>
       )}
 
-      {/* Progress bar + voice toggle — hide while reward animation is showing */}
+      {/* Progress bar + effects toggle — hide while reward animation is showing */}
       {answered === null && (
         <div className="flex items-center gap-2">
           {/* ProgressBar shows session progress, matching the visible exercise count */}

@@ -14,32 +14,43 @@ type SoundType = "correct" | "wrong" | "streak" | "complete" | "hint" | "levelup
 export function useSound() {
   const ctxRef = useRef<AudioContext | null>(null);
 
+  const getCtx = useCallback((): AudioContext | null => {
+    if (typeof window === "undefined") return null;
+    const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+    if (!AudioContextClass) return null;
+    if (!ctxRef.current) {
+      ctxRef.current = new AudioContextClass();
+    }
+    // Resume if suspended (browser autoplay policy)
+    if (ctxRef.current.state === "suspended") void ctxRef.current.resume().catch(() => {});
+    return ctxRef.current;
+  }, []);
+
   useEffect(() => {
-    const silence = () => {
+    // Effects are triggered after scoring delays. Unlock inside the original
+    // gesture rather than creating a suspended context in the delayed callback.
+    const unlock = () => { if (readSoundPreferences().effects) getCtx(); };
+    const refresh = () => {
       if (!readSoundPreferences().effects && ctxRef.current) {
         void ctxRef.current.close().catch(() => {});
         ctxRef.current = null;
+      } else {
+        unlock();
       }
     };
-    window.addEventListener(SOUND_PREFERENCES_EVENT, silence);
-    window.addEventListener("storage", silence);
+    window.addEventListener(SOUND_PREFERENCES_EVENT, refresh);
+    window.addEventListener("storage", refresh);
+    window.addEventListener("pointerdown", unlock, { passive: true });
+    window.addEventListener("keydown", unlock);
     return () => {
-      window.removeEventListener(SOUND_PREFERENCES_EVENT, silence);
-      window.removeEventListener("storage", silence);
+      window.removeEventListener(SOUND_PREFERENCES_EVENT, refresh);
+      window.removeEventListener("storage", refresh);
+      window.removeEventListener("pointerdown", unlock);
+      window.removeEventListener("keydown", unlock);
       if (ctxRef.current) void ctxRef.current.close().catch(() => {});
       ctxRef.current = null;
     };
-  }, []);
-
-  const getCtx = useCallback((): AudioContext | null => {
-    if (typeof window === "undefined") return null;
-    if (!ctxRef.current) {
-      ctxRef.current = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
-    }
-    // Resume if suspended (browser autoplay policy)
-    if (ctxRef.current.state === "suspended") ctxRef.current.resume();
-    return ctxRef.current;
-  }, []);
+  }, [getCtx]);
 
   /** Play a sequence of notes: [{freq, duration, delay}] */
   const playNotes = useCallback((
