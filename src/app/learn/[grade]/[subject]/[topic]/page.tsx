@@ -165,7 +165,8 @@ export default async function TopicPage({ params }: Props) {
       />
       </Suspense>
 
-      <div className="sm:hidden">
+      {/* Hidden SSR sections must not add space after the mobile explainer. */}
+      <div className="sm:hidden [&:has(~section[hidden])]:mb-0">
         <TopicExplainerClient
           topic={topic}
           grade={parseInt(grade)}

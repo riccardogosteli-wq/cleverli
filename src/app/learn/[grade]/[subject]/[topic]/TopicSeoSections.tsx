@@ -17,6 +17,7 @@ import {
 import type { Lang } from "@/lib/i18n";
 import { getActiveProfileId } from "@/lib/family";
 import { readTopicProgressForChild } from "@/lib/reportingProgress";
+import { getProfileStorageKey } from "@/lib/accountScopedStorage";
 
 interface SampleExerciseCard {
   exercise: Exercise;
@@ -333,20 +334,52 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
     .slice(0, 4);
 
   useEffect(() => {
-    if (!loaded) return;
+    if (!loaded) {
+      setShowSeoSections(false);
+      return;
+    }
 
-    const topicCompleted = getStoredTopicCompleted(topic, grade, subject);
-    const anonymousCompleted = parseInt(localStorage.getItem("cleverli_anon_exercises") ?? "0", 10) || 0;
-    const totalCompleted = Math.max(profile.totalExercises, anonymousCompleted, topicCompleted);
-
-    setShowSeoSections(totalCompleted < 3);
+    const refresh = (profileCompleted: number) => {
+      try {
+        const topicCompleted = getStoredTopicCompleted(topic, grade, subject);
+        const anonymousCompleted = parseInt(localStorage.getItem("cleverli_anon_exercises") ?? "0", 10) || 0;
+        setShowSeoSections(Math.max(profileCompleted, anonymousCompleted, topicCompleted) < 3);
+      } catch {
+        // Unknown client progress must not briefly reveal returning-user content.
+        setShowSeoSections(false);
+      }
+    };
+    const refreshFromStorage = () => {
+      try {
+        // A different tab/child may have newer data than this hook's snapshot.
+        // Read only the current scope, never another child's cached profile.
+        const raw = localStorage.getItem(getProfileStorageKey(getActiveProfileId()));
+        refresh(raw ? JSON.parse(raw).totalExercises ?? 0 : 0);
+      } catch {
+        setShowSeoSections(false);
+      }
+    };
+    const onStorage = (event: StorageEvent) => {
+      if (event.key === null || event.key.startsWith("cleverli_")) refreshFromStorage();
+    };
+    // The hook signals readiness/changes; storage is the current scoped value.
+    // An older queued hook update must not overwrite a newer restore/tab event.
+    refreshFromStorage();
+    window.addEventListener("storage", onStorage);
+    const events = ["cleverli-exercise-usage-update", "cleverli-progress-update", "cleverli-active-profile-change", "cleverli-family-restored", "pageshow", "focus"];
+    for (const event of events) window.addEventListener(event, refreshFromStorage);
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      for (const event of events) window.removeEventListener(event, refreshFromStorage);
+    };
   }, [grade, loaded, profile.totalExercises, subject, topic]);
 
-  if (!showSeoSections) return null;
-
+  // Keep the same user-facing content in the initial HTML. Visibility still
+  // waits for the existing client profile/progress check: native hidden removes
+  // layout, focus and accessibility exposure without a returning-user flash.
   return (
     <>
-      <section className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
+      <section hidden={!showSeoSections} className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
         <p className="text-xs font-bold uppercase tracking-widest text-green-700">{copy.exercisesForTopic}</p>
         <h2 className="mt-2 text-lg font-black text-gray-900">{copy.practise(topicTitle)}</h2>
         <p className="mt-2 text-sm leading-6 text-gray-600">{topicDescription}</p>
@@ -384,7 +417,7 @@ export default function TopicSeoSections({ topic, grade, subject, sampleExercise
       </section>
 
       {relatedTopics.length > 0 && (
-        <section className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
+        <section hidden={!showSeoSections} className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
           <h2 className="text-sm font-black text-gray-900">{copy.moreTopics(subjectName)}</h2>
           <div className="mt-3 flex flex-wrap gap-2">
             {relatedTopics.map((related) => (

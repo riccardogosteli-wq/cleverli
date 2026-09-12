@@ -519,6 +519,8 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         if (isAnonymous) localStorage.setItem("cleverli_anon_exercises", String(newCount));
       } catch {}
       if (isAnonymous) setAnonExerciseCount(newCount);
+      // Notify read-only visibility consumers; storage events only reach other tabs.
+      window.dispatchEvent(new CustomEvent("cleverli-exercise-usage-update"));
 
       if (isAnonymous && newCount >= FREE_EXERCISE_LIMIT && !localStorage.getItem("cleverli_signup_dismissed")) {
         setTimeout(() => setShowSignupPrompt(true), 1000);
