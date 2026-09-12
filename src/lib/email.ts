@@ -1,3 +1,5 @@
+import { outreachContent, OUTREACH_CAMPAIGN, OUTREACH_FROM, OUTREACH_REPLY_TO, OUTREACH_SUBJECT } from './outreachCampaign';
+import { reserveOutreach, persistOutreachReceipt } from './outreachMail';
 import { Resend } from "resend";
 import { reserveFeedback, persistFeedbackReceipt } from "./customerFeedbackMail";
 import { FEEDBACK_FORM } from "./customerFeedbackCampaign";
@@ -422,4 +424,17 @@ export async function sendAdminPaymentNotificationEmail({
   }, idempotencyKey ? { idempotencyKey } : undefined);
 
   if (error) throw error;
+}
+
+// Fixed approved outreach only. Reservation precedes transport; ambiguous sends stay locked.
+export async function sendApprovedOutreachEmail(value: unknown) {
+ const content=outreachContent(value);
+ const resend=getResend();
+ if(!resend) throw Error('mailer_unavailable');
+ const {db,email}=await reserveOutreach(content.email);
+ const {data,error}=await resend.emails.send({from:OUTREACH_FROM,to:email,replyTo:OUTREACH_REPLY_TO,subject:OUTREACH_SUBJECT,html:content.html},
+ {idempotencyKey:`${OUTREACH_CAMPAIGN}-${email}-${content.hash}`});
+ if(error||!data?.id) throw Error('outreach_receipt_reconciliation_required');
+ await persistOutreachReceipt(db,email,data.id);
+ return {id:data.id,hash:content.hash};
 }
