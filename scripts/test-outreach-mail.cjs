@@ -8,10 +8,10 @@ const mailStatus={outreachStatus:async()=>campaign.OUTREACH_RECIPIENTS.map(r=>({
 const route=load('src/app/internal-log-dashboard/outreach-mail/route.ts',{'next/server':{NextResponse},'@/lib/internalDashboardAuth':{INTERNAL_LOG_COOKIE:'fixture',verifyInternalSession:v=>v==='yes'},'@/lib/outreachCampaign':campaign,'@/lib/outreachMail':mailStatus,'@/lib/email':email});
 function req({method='POST',auth=true,origin='https://www.cleverli.ch',action='preview',to=campaign.OUTREACH_RECIPIENTS[0].email,confirm=false,extra=false}={}){const headers={};if(auth)headers.cookie='fixture=yes';if(origin)headers.origin=origin;const form=new FormData();form.set('email',to);form.set('action',action);if(confirm)form.set('confirmed','yes');if(extra)form.append('html','arbitrary');return new NextRequest('https://www.cleverli.ch/internal-log-dashboard/outreach-mail',{method,headers,...(method==='POST'?{body:form}:{})});}
 (async()=>{
- assert.equal(campaign.OUTREACH_RECIPIENTS.length,8);checks++;
+ assert.equal(campaign.OUTREACH_RECIPIENTS.length,13);checks++;
  for(const opts of [{auth:false},{origin:'https://evil.example'},{origin:''},{to:'riccardogosteli@gmail.com'},{extra:true},{action:'batch'},{action:'send'}]){assert.ok((await route.POST(req(opts))).status>=400);checks++;}assert.equal(sends,0);checks++;
  assert.equal((await route.GET(req({method:'GET',auth:false}))).status,401);checks++;
- const page=await route.GET(req({method:'GET'}));assert.equal(page.status,200);assert.equal((await page.text()).match(/<option /g).length,8);checks+=2;
+ const page=await route.GET(req({method:'GET'}));assert.equal(page.status,200);const pageHtml=await page.text();if(process.env.OUTREACH_QA_HTML)fs.writeFileSync(process.env.OUTREACH_QA_HTML,pageHtml);assert.equal(pageHtml.match(/<option /g).length,13);checks+=2;
  for(const r of campaign.OUTREACH_RECIPIENTS){const preview=await route.POST(req({to:r.email}));const p=await preview.json();assert.equal(p.dryRun,true);assert.equal(p.content.greeting,r.greeting);assert.equal(sends,0);checks+=3;}
  process.env.RESEND_API_KEY='fixture-not-a-secret';
  await assert.rejects(email.sendApprovedOutreachEmail('unexpected@example.com'));assert.equal(sends,0);checks+=2;
@@ -24,8 +24,9 @@ function req({method='POST',auth=true,origin='https://www.cleverli.ch',action='p
  const approved=fs.readFileSync('/Users/riccardogosteli/.openclaw/workspace-cleverli/.qa/outreach-send-20260912/approved-before.html','utf8');for(const r of campaign.OUTREACH_RECIPIENTS){assert.equal(campaign.outreachContent(r.email).html,approved.replace('>Guten Tag</p>',`>${r.greeting}</p>`));checks++;}
  const baseline=cp.execFileSync('git',['show','abaeed7:src/lib/outreachCampaign.ts'],{encoding:'utf8'});
  assert.ok(fs.readFileSync('src/lib/outreachCampaign.ts','utf8').startsWith(baseline.slice(0,baseline.indexOf('const HTML ='))));checks++;
- assert.equal(new Set(original.ALL_OUTREACH_RECIPIENTS.map(r=>r.email)).size,8);checks++;
- for(const r of original.OUTREACH_BATCH2_RECIPIENTS){state='ready';fail=false;saveFail=false;const out=await route.POST(req({action:'send',confirm:true,to:r.email}));assert.equal(out.status,200);assert.equal(requests.at(-1).body.to,r.email);assert.equal(requests.at(-1).body.html,campaign.outreachContent(r.email).html);checks+=3;await assert.rejects(email.sendApprovedOutreachEmail(r.email));checks++;}
+ assert.equal(new Set(original.ALL_OUTREACH_RECIPIENTS.map(r=>r.email)).size,13);checks++;
+ for(const r of [...original.OUTREACH_BATCH2_RECIPIENTS,...original.OUTREACH_SCHOOLS_RECIPIENTS]){state='ready';fail=false;saveFail=false;const out=await route.POST(req({action:'send',confirm:true,to:r.email}));assert.equal(out.status,200);assert.equal(requests.at(-1).body.to,r.email);assert.equal(requests.at(-1).body.html,campaign.outreachContent(r.email).html);checks+=3;await assert.rejects(email.sendApprovedOutreachEmail(r.email));checks++;}
  for(const forbidden of ['schulverwaltung@schulehinwil.ch','info@ipad-schule.ch','sekretariat@primarschule-seuzach.ch']){await assert.rejects(email.sendApprovedOutreachEmail(forbidden));checks++;}
+ const oldSource=cp.execFileSync('git',['show','38f6c85:src/lib/outreachCampaign.ts'],{encoding:'utf8'});const tmp='src/lib/.outreach-baseline-test.ts';fs.writeFileSync(tmp,oldSource);try{const old=load(tmp,{});for(const r of old.ALL_OUTREACH_RECIPIENTS){assert.equal(JSON.stringify(original.outreachContent(r.email)),JSON.stringify(old.outreachContent(r.email)));checks++;}}finally{fs.unlinkSync(tmp);}
  console.log(checks+' checks passed; provider transport fully mocked.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
