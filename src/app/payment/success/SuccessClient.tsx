@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
-import { trackPurchase, trackTrialStarted } from "@/lib/analytics";
+import { trackVerifiedCheckout } from "@/lib/analytics";
+import { getSupabase } from "@/lib/supabase";
 
 const MAX_POLLS = 12;  // 12 × 2.5s = 30s max wait
 const POLL_INTERVAL = 2500;
@@ -24,17 +25,35 @@ export default function SuccessClient() {
     const sessionId = searchParams.get("session_id");
     const plan = searchParams.get("plan");
     setIsSchooltime(plan === "schooltime");
-    const trialDays = searchParams.get("trial") === "7" ? 7 : null;
-    const dedupeKey = `cleverli_${trialDays ? "trial" : "purchase"}_tracked_${sessionId || plan || "unknown"}`;
-
-    if (sessionId && localStorage.getItem(dedupeKey)) return;
-    if (trialDays && (plan === "monthly" || plan === "yearly")) {
-      trackTrialStarted(plan, "stripe_checkout_success", trialDays, sessionId);
-    } else {
-      trackPurchase(plan, sessionId);
-    }
-    if (sessionId) localStorage.setItem(dedupeKey, "true");
-  }, []);
+    // Plan is presentation-only; it never authorizes a conversion.
+    if (!loaded || !session?.userId || !sessionId) return;
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let attempts = 0;
+    const verify = async () => {
+      attempts++;
+      try {
+        const auth = await getSupabase()?.auth.getSession();
+        const token = auth?.data.session?.access_token;
+        if (!token || auth?.data.session?.user.id !== session.userId) return;
+        const response = await fetch("/api/checkout/verify", {
+          method: "POST", cache: "no-store", credentials: "same-origin",
+          signal: AbortSignal.timeout(8000),
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+          body: JSON.stringify({ sessionId }),
+        });
+        if (cancelled) return;
+        if ([400, 401, 403, 404].includes(response.status)) return;
+        if (response.ok) {
+          const { outcome } = await response.json();
+          if (!cancelled && outcome) { trackVerifiedCheckout(outcome); return; }
+        }
+      } catch { /* Transient failure: bounded retry with the same Stripe ID. */ }
+      if (!cancelled && attempts < MAX_POLLS) timer = setTimeout(verify, POLL_INTERVAL);
+    };
+    void verify();
+    return () => { cancelled = true; if (timer) clearTimeout(timer); };
+  }, [loaded, session?.userId]);
 
   // Poll Supabase until premium is set (webhook fires within ~2-5s usually)
   useEffect(() => {

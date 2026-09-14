@@ -5,6 +5,7 @@ import { pushDataLayerEvent } from "@/lib/analytics";
 import { trackUserActivity } from "@/lib/userActivityClient";
 import {
   ADS_LP_EXPERIMENT,
+  isV5ControlEntry,
   ensureAdsExperimentAttribution,
   getAdsLpVariant,
   readForcedAdsLpVariant,
@@ -35,7 +36,7 @@ export function useAdsLpVariant(page: string, pagePath: string): AdsLpVariant {
 export function trackAdsLpVariantAssignment(page: string, pagePath: string, variant: AdsLpVariant) {
   if (typeof window === "undefined") return;
   const attribution = ensureAdsExperimentAttribution(variant, page);
-  const key = `cleverli_ads_lp_ab_seen:${page}:${variant}`;
+  const key = `cleverli_ads_lp_ab_seen:${attribution?.experiment ?? ADS_LP_EXPERIMENT}:${page}:${variant}`;
   try {
     if (window.sessionStorage.getItem(key)) return;
     window.sessionStorage.setItem(key, "true");
@@ -47,11 +48,12 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
   pushDataLayerEvent("ads_lp_ab_assignment", {
     page,
     page_path: pagePath,
-    experiment: ADS_LP_EXPERIMENT,
+    experiment: attribution?.experiment ?? ADS_LP_EXPERIMENT,
+    assignment_method: isV5ControlEntry() ? "deterministic_ad_entry" : "randomized",
     variant,
     experiment_visitor_id: attribution?.visitorId ?? null,
     experiment_page: attribution?.page ?? page,
-    forced_variant: Boolean(readForcedAdsLpVariant()),
+    forced_variant: !isV5ControlEntry() && Boolean(readForcedAdsLpVariant()),
     internal_qa: isInternalQaRequest(),
     anonymous_session_id: funnelAttribution.anonymous_session_id,
   });
@@ -62,11 +64,12 @@ export function trackAdsLpVariantAssignment(page: string, pagePath: string, vari
     metadata: {
       page,
       page_path: pagePath,
-      experiment: ADS_LP_EXPERIMENT,
+      experiment: attribution?.experiment ?? ADS_LP_EXPERIMENT,
+    assignment_method: isV5ControlEntry() ? "deterministic_ad_entry" : "randomized",
       variant,
       experiment_visitor_id: attribution?.visitorId ?? null,
       experiment_page: attribution?.page ?? page,
-      forced_variant: Boolean(readForcedAdsLpVariant()),
+      forced_variant: !isV5ControlEntry() && Boolean(readForcedAdsLpVariant()),
       internal_qa: isInternalQaRequest(),
       ...funnelAttribution,
     },

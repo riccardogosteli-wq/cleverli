@@ -1,3 +1,4 @@
+import type { VerifiedCheckout } from "@/lib/verifiedCheckout";
 import { trackUserActivity } from "@/lib/userActivityClient";
 import {
   checkoutAttributionEventParams,
@@ -6,6 +7,7 @@ import {
 } from "@/lib/attribution";
 import {
   ADS_LP_EXPERIMENT,
+  isV5ControlEntry,
   ensureAdsExperimentAttribution,
   resolveAdsLpTrackingVariant,
   type AdsLpVariant,
@@ -58,7 +60,7 @@ function adsLpRequestContext() {
   if (typeof window === "undefined") return { forced_variant: false, internal_qa: false };
   const params = new URLSearchParams(window.location.search);
   return {
-    forced_variant: params.has("ab"),
+    forced_variant: !isV5ControlEntry() && params.has("ab"),
     internal_qa: params.get("utm_source")?.toLowerCase().startsWith("qa") ?? false,
   };
 }
@@ -189,36 +191,6 @@ export function trackBeginCheckout(plan: CheckoutPlan, source: string) {
   });
 }
 
-export function trackTrialStarted(plan: CheckoutPlan, source: string, trialDays: number, transactionId?: string | null) {
-  const googleTransactionId = transactionId || `cleverli_trial_${plan}_${Date.now()}`;
-
-  pushDataLayerEvent("trial_started", {
-    transaction_id: googleTransactionId,
-    currency: "CHF",
-    value: PLAN_VALUE[plan],
-    plan,
-    source,
-    trial_days: trialDays,
-    ...checkoutAttributionEventParams(),
-    items: [
-      {
-        item_id: `cleverli_premium_${plan}`,
-        item_name: PLAN_NAME[plan],
-        price: PLAN_VALUE[plan],
-        quantity: 1,
-      },
-    ],
-  });
-  trackGoogleAdsTrialStartedConversion(googleTransactionId, PLAN_VALUE[plan]);
-  trackMetaEvent("StartTrial", {
-    currency: "CHF",
-    value: PLAN_VALUE[plan],
-    predicted_ltv: PLAN_VALUE[plan],
-    content_name: PLAN_NAME[plan],
-    trial_days: trialDays,
-  }, transactionId ? `trial_${transactionId}` : null);
-}
-
 export async function trackAdsLpCtaClick(
   type: AdsLpCtaType,
   location: AdsLpCtaLocation,
@@ -252,7 +224,8 @@ export async function trackAdsLpCtaClick(
           value: null,
           plan: null,
         }),
-    experiment: pageContext.experiment ?? ADS_LP_EXPERIMENT,
+    experiment: experimentAttribution?.experiment ?? pageContext.experiment ?? ADS_LP_EXPERIMENT,
+    assignment_method: isV5ControlEntry() ? "deterministic_ad_entry" : "randomized",
     variant,
     experiment_visitor_id: experimentAttribution?.visitorId ?? null,
     experiment_page: experimentAttribution?.page ?? page,
@@ -275,25 +248,27 @@ export async function trackAdsLpCtaClick(
   return true;
 }
 
-export function trackPurchase(planParam: string | null, transactionIdParam: string | null) {
-  const plan = isCheckoutPlan(planParam) ? planParam : "monthly";
-  const transactionId = transactionIdParam || `cleverli_${plan}_${Date.now()}`;
-  const value = PLAN_VALUE[plan];
-
-  pushDataLayerEvent("purchase", {
-    transaction_id: transactionId,
-    currency: "CHF",
-    value,
-    plan,
+// Only suppress duplicates within this loaded document. Reloads/cross-browser retries
+// intentionally replay stable provider IDs: enqueueing is NOT proof of ingestion.
+const checkoutEventsQueued = new Set<string>();
+export function trackVerifiedCheckout(outcome: VerifiedCheckout) {
+  const { kind, plan, transactionId, metaEventId, value, currency } = outcome;
+  if (!isCheckoutPlan(plan) || !/^cs_[a-zA-Z0-9_]+$/.test(transactionId) || currency !== "CHF" ||
+      !Number.isFinite(value) || (kind !== "purchase" && kind !== "trial") ||
+      (kind === "purchase" ? value <= 0 : value !== 0 || !(outcome.trialDays && outcome.trialDays > 0))) return;
+  const key = `${kind}:${transactionId}`;
+  if (checkoutEventsQueued.has(key)) return;
+  pushDataLayerEvent(kind === "purchase" ? "purchase" : "trial_started", {
+    transaction_id: transactionId, currency, value, plan,
     ...checkoutAttributionEventParams(),
-    items: [
-      {
-        item_id: `cleverli_premium_${plan}`,
-        item_name: PLAN_NAME[plan],
-        price: value,
-        quantity: 1,
-      },
-    ],
+    ...(kind === "trial" ? { trial_days: outcome.trialDays, source: "stripe_checkout_success" } : {}),
+    items: [{ item_id: `cleverli_premium_${plan}`, item_name: PLAN_NAME[plan], price: value, quantity: 1 }],
   });
-  trackGoogleAdsPurchaseConversion(transactionId, value);
+  if (kind === "purchase") trackGoogleAdsPurchaseConversion(transactionId, value);
+  else trackGoogleAdsTrialStartedConversion(transactionId, 0);
+  trackMetaEvent(kind === "purchase" ? "Purchase" : "StartTrial", {
+    currency, value, content_name: PLAN_NAME[plan],
+    ...(kind === "trial" ? { trial_days: outcome.trialDays } : {}),
+  }, metaEventId);
+  checkoutEventsQueued.add(key);
 }

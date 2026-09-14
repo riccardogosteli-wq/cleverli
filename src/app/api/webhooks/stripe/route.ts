@@ -70,7 +70,7 @@ function attributionFromMetadata(metadata: Stripe.Metadata | null | undefined) {
 
 function experimentFromMetadata(metadata: Stripe.Metadata | null | undefined) {
   const variant = metadata?.variant;
-  if (metadata?.experiment !== "ads_lp_7_day_trial" || (variant !== "control" && variant !== "trial")) {
+  if (!metadata || !["ads_lp_7_day_trial", "meta_v5_deterministic_control"].includes(metadata.experiment ?? "") || (variant !== "control" && variant !== "trial")) {
     return {};
   }
   return {
