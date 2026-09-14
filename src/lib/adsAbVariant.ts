@@ -17,6 +17,7 @@ const FORCED_VARIANT_STORAGE_KEY = "cleverli_ads_lp_ab_forced";
 export const ADS_LP_EXPERIMENT = "ads_lp_7_day_trial";
 export const V5_CONTROL_COHORT = "meta_v5_deterministic_control";
 const V5_ENTRY_KEY = "cleverli_v5_entry_attribution";
+let v5MemoryVisitorId: string | null = null;
 export function isV5ControlEntry() {
   if (typeof window === "undefined" || window.location.pathname !== "/primarschule-uebungen") return false;
   const params = new URLSearchParams(window.location.search);
@@ -24,15 +25,14 @@ export function isV5ControlEntry() {
 }
 function v5Attribution(): AdsExperimentAttribution | null {
   if (typeof window === "undefined") return null;
+  if (isV5ControlEntry()) {
+    const visitorId = getOrCreateAdsExperimentVisitorId() ?? (v5MemoryVisitorId ??= createVisitorId());
+    const value: AdsExperimentAttribution = { experiment: V5_CONTROL_COHORT, variant: "control", visitorId,
+      page: "primarschule_uebungen", internalQa: false, forcedVariant: false };
+    try { window.sessionStorage.setItem(V5_ENTRY_KEY, JSON.stringify(value)); } catch { /* Attribution remains deterministic without storage. */ }
+    return value;
+  }
   try {
-    if (isV5ControlEntry()) {
-      const visitorId = getOrCreateAdsExperimentVisitorId();
-      if (!visitorId) return null;
-      const value: AdsExperimentAttribution = { experiment: V5_CONTROL_COHORT, variant: "control", visitorId,
-        page: "primarschule_uebungen", internalQa: false, forcedVariant: false };
-      window.sessionStorage.setItem(V5_ENTRY_KEY, JSON.stringify(value));
-      return value;
-    }
     // New campaign entries do not inherit the preceding V5 cohort.
     if (new URLSearchParams(window.location.search).has("utm_campaign")) {
       window.sessionStorage.removeItem(V5_ENTRY_KEY);
