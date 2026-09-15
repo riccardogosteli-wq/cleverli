@@ -9,7 +9,9 @@ import {
   getGradeSubjectSeoLinks,
   getGradeSubjectSeoPage,
 } from "@/lib/gradeSubjectSeo";
-import { getExerciseTypeLabel, getSampleExercises } from "@/lib/seoContent";
+import { getExerciseTypeLabel } from "@/lib/seoContent";
+
+import { getGradeSeoSamples } from "@/lib/gradeSeoSamples";
 
 const BASE = "https://www.cleverli.ch";
 
@@ -53,10 +55,7 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
 
   const topics = getTopicsForSubject(page.grade, page.subject);
   const topicLinks = topics.slice(0, 8);
-  const sampleExercises = topics.flatMap((topic) => getSampleExercises(topic, 2).map((exercise) => ({
-    ...exercise,
-    topicTitle: topic.title,
-  }))).filter((exercise) => Boolean(exercise.question)).slice(0, 5);
+  const sampleExercises = getGradeSeoSamples(page, topics);
   const heroExercise = sampleExercises[0];
   const heroImage = page.subject === "math"
     ? {
@@ -130,7 +129,15 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
           </div>
 
           <div className="min-w-0 overflow-hidden rounded-2xl border border-green-100 bg-white shadow-xl shadow-green-100/70">
-            <Image
+            {page.slug === "einmaleins-uebungen-2-klasse" ? (
+              <div className="flex h-56 flex-col items-center justify-center gap-5 bg-green-100 px-6 sm:h-72" role="img" aria-label="2 Reihen mit je 3 Plättchen zeigen die Malaufgabe 2 mal 3.">
+                <p className="text-3xl font-black text-green-950" aria-hidden="true">2 × 3 = ?</p>
+                <div className="grid grid-cols-3 gap-3" aria-hidden="true">
+                  {Array.from({ length: 6 }, (_, index) => <span key={index} className="h-10 w-10 rounded-full border-2 border-green-800 bg-green-600 shadow-sm sm:h-12 sm:w-12" />)}
+                </div>
+                <p className="text-center text-sm font-bold text-green-950" aria-hidden="true">2 Reihen mit je 3 Plättchen</p>
+              </div>
+            ) : <Image
               src={heroImage.src}
               alt={heroImage.alt}
               width={900}
@@ -138,13 +145,13 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
               priority
               sizes="(min-width: 1024px) 420px, 100vw"
               className="h-56 w-full object-cover sm:h-72"
-            />
+            />}
             {heroExercise && (
               <div className="border-t border-green-100 p-5">
                 <p className="text-xs font-black uppercase tracking-widest text-green-700">Beispielaufgabe · {getExerciseTypeLabel(heroExercise.type)}</p>
                 <p className="mt-1 text-xs font-bold text-gray-500">{heroExercise.topicTitle}</p>
                 <p className="mt-2 text-base font-bold leading-7 text-gray-950">{heroExercise.question}</p>
-                <p className="mt-3 text-sm leading-6 text-gray-600">Mit Vorlesen, Tipps und direkter Rückmeldung.</p>
+                <p className="mt-3 text-sm leading-6 text-gray-600">{heroExercise.explanation ?? "Mit Vorlesen, Tipps und direkter Rückmeldung."}</p>
               </div>
             )}
           </div>
@@ -185,6 +192,7 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
                 <div key={item.title} className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
                   <h3 className="text-base font-black text-gray-950">{item.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-gray-700">{item.body}</p>
+                  {item.link && <Link href={item.link.href} className="mt-4 inline-block text-sm font-bold text-green-800 underline underline-offset-4">{item.link.label}</Link>}
                 </div>
               ))}
             </div>
@@ -231,6 +239,7 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
                     {exercise.topicTitle} · {getExerciseTypeLabel(exercise.type)}
                   </p>
                   <p className="mt-2 text-sm leading-6 text-gray-800">{exercise.question}</p>
+                  {exercise.explanation && <details className="mt-3 text-sm leading-6 text-gray-700"><summary className="cursor-pointer font-bold text-green-800">Lösung und Rechenweg</summary><p className="mt-2">{exercise.explanation}</p></details>}
                 </div>
               ))}
             </div>

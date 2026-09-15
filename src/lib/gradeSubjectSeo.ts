@@ -17,11 +17,13 @@ export type GradeSubjectSeoPage = {
   parentAnswer: string;
   ctaHref: string;
   ctaLabel: string;
+  sampleRefs?: { topicId: string; exerciseId: string; explanation: string }[];
   detailIntro?: string;
   detailHeading?: string;
   detailItems?: {
     title: string;
     body: string;
+    link?: { href: string; label: string };
   }[];
   faqItems?: {
     question: string;
@@ -70,6 +72,30 @@ const germanCtaTopic: Record<number, string> = {
 };
 
 const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
+  "mathe-uebungen-3-klasse": {
+    description: "Mathe Übungen 3. Klasse: Zahlen bis 1000, Plus, Minus, Einmaleins und Sachaufgaben. Mit erklärtem Beispiel und passenden Übungen für die Primarschule.",
+    lead: "In der 3. Klasse erweitert dein Kind den Zahlenraum bis 1000. Hier findet ihr Übungen zu Hundertern, Zehnern und Einern, zu Plus und Minus sowie zu Malaufgaben, Division und Geometrie.",
+    parentAnswer: "Ein guter Einstieg sind vertraute Rechnungen bis 100 und das Zerlegen in Zehner und Einer. Darauf baut das Rechnen bis 1000 auf. Für Division helfen bekannte Malaufgaben. Wählt das Thema, das dein Kind gerade im Unterricht übt, denn die Reihenfolge kann sich unterscheiden.",
+    detailHeading: "Vom Stellenwert zum eigenen Rechenweg",
+    detailIntro: "Die Aufgaben greifen Zahlen und Operationen sowie Formen und Grössen der Schweizer Primarschule auf. Dein Kind muss nicht schon alles können: Wenn eine Grundlage noch unsicher ist, könnt ihr dort beginnen.",
+    detailItems: [
+      { title: "Was vorher hilft", body: "Kann dein Kind 47 als 4 Zehner und 7 Einer darstellen und Plus und Minus bis 100 rechnen? Falls das noch schwerfällt, festigt zuerst diese Schritte, bevor ihr mit Hundertern weiterübt.", link: { href: "/learn/2/math/add-sub-100", label: "Plus und Minus bis 100 wiederholen" } },
+      { title: "Beispiel: 500 + 60 + 3", body: "Die Aufgabe lautet: 500 + 60 + 3 = ___. 5 Hunderter sind 500, 6 Zehner sind 60 und 3 Einer sind 3. Zusammen ergibt das 563. Zur Kontrolle zerlegt dein Kind 563 wieder in 500 + 60 + 3.", link: { href: "/learn/3/math/zahlen-bis-1000", label: "Stellenwerte bis 1000 üben" } },
+      { title: "So geht es weiter", body: "Wenn die Stellenwerte vertraut sind, übt Plus und Minus bis 1000. Bei Sachaufgaben lest ihr zuerst die Frage, sucht die nötigen Zahlen und wählt die Rechenart. Prüft am Schluss, ob die Antwort zur Situation passt.", link: { href: "/learn/3/math/textaufgaben", label: "Sachaufgaben der 3. Klasse lösen" } },
+    ],
+  },
+  "deutsch-uebungen-3-klasse": {
+    description: "Deutsch Übungen 3. Klasse: Texte verstehen, Wortarten, Satzbau und Rechtschreibung üben. Mit erklärtem Beispiel und passenden Aufgaben für die Primarschule.",
+    lead: "In der 3. Klasse liest dein Kind Texte genauer, untersucht Wörter und baut Sätze bewusster auf. Hier findet ihr Übungen zu Leseverständnis, Nomen, Verben, Adjektiven und Rechtschreibung.",
+    parentAnswer: "Hilfreich ist, wenn dein Kind kurze Sätze lesen und ihren Inhalt wiedergeben kann. Vertraute Nomen mit Artikel und einfache Verben erleichtern den Einstieg in die Wortarten. Wählt Lesen, Grammatik oder Rechtschreibung passend zum aktuellen Schulstoff, statt alles auf einmal zu üben.",
+    detailHeading: "Wörter untersuchen und Texte verstehen",
+    detailIntro: "Lesen, Sprache untersuchen und richtig schreiben hängen zusammen. Die Übungen greifen diese Bereiche der Schweizer Primarschule auf. Die Beispiele zeigen einen möglichen Einstieg, keinen festen Stoffplan für jede Klasse.",
+    detailItems: [
+      { title: "Was vorher hilft", body: "Lest einen kurzen Abschnitt und lasst dein Kind in eigenen Worten erzählen, was passiert. Stockt es noch bei einzelnen Wörtern, nehmt zuerst einen kürzeren Text und sucht die Antwort gemeinsam darin.", link: { href: "/learn/2/german/texte-lesen", label: "Mit kurzen Texten beginnen" } },
+      { title: "Beispiel: Welche Wortart ist «Hund»?", body: "Die Antwort ist Nomen. «Hund» bezeichnet ein Tier. Du kannst den Artikel «der» davor setzen: der Hund. Nomen schreibt man gross. Im Satz «Der kleine Hund rennt.» beschreibt «kleine» den Hund, und «rennt» sagt, was er tut.", link: { href: "/learn/3/german/wortarten", label: "Nomen, Verben und Adjektive üben" } },
+      { title: "So geht es weiter", body: "Sucht beim Lesen die Textstelle, die eine Frage beantwortet. Prüft bei eigenen Sätzen den grossen Satzanfang, die Nomen und das passende Satzzeichen. So wendet dein Kind einzelne Regeln im Zusammenhang an.", link: { href: "/learn/3/german/leseverstaendnis", label: "Texte der 3. Klasse genauer lesen" } },
+    ],
+  },
   "mathe-uebungen-1-klasse": {
     title: "Mathe Übungen 1. Klasse - Primarschule Schweiz",
     description:
@@ -397,17 +423,24 @@ const SPECIAL_SEO_PAGES: GradeSubjectSeoPage[] = [
       "Das Einmaleins braucht Wiederholung, aber keine langen Übungsblöcke. Cleverli macht daraus kurze Runden, die dein Kind auch zwischendurch starten kann.",
     ctaHref: "/learn/2/math/einmaleins",
     ctaLabel: "1x1 gratis üben",
+    sampleRefs: [
+      { topicId: "einmaleins", exerciseId: "e1", explanation: "Lege 2 Reihen mit je 3 Plättchen. Das sind 3 + 3 = 6 Plättchen, also 2 × 3 = 6. Drehst du die Anordnung, siehst du 3 Reihen mit je 2: 2 + 2 + 2 ergibt ebenfalls 6." },
+      { topicId: "einmaleins", exerciseId: "e2", explanation: "5 Schälchen mit je 4 Steinen: 4 + 4 + 4 + 4 + 4 = 20. Also ist 5 × 4 = 20." },
+      { topicId: "einmaleins", exerciseId: "e3", explanation: "10 Reihen mit je 7 Plättchen lassen sich zu 7 Reihen mit je 10 drehen. Zähle 10, 20, 30, 40, 50, 60, 70. Also ist 10 × 7 = 70." },
+      { topicId: "einmaleins", exerciseId: "e4", explanation: "2 Schälchen mit je 8 Steinen: 8 + 8 = 16. Also ist 2 × 8 = 16." },
+      { topicId: "einmaleins", exerciseId: "e5", explanation: "5 Reihen mit je 6 Plättchen: 6 + 6 + 6 + 6 + 6 = 30. Also ist 5 × 6 = 30." },
+    ],
     detailHeading: "Einmaleins in der 2. Klasse gezielt festigen",
     detailIntro:
-      "Die Seite passt für Kinder, die mit dem Einmaleins starten oder die ersten Reihen sicherer abrufen sollen.",
+      "Kann dein Kind gleiche Mengen abzählen und kleine Plusaufgaben lösen? Dann könnt ihr Malaufgaben mit Plättchen oder Steinen legen. Startet mit der 2er-, 5er- und 10er-Reihe im Zahlenraum bis 100, passend zum aktuellen Unterricht.",
     detailItems: [
       {
         title: "Reihen verstehen",
-        body: "2er-, 5er- und 10er-Reihen werden mit einfachen Aufgaben aufgebaut, bevor gemischte Aufgaben dazukommen.",
+        body: "Eine Malaufgabe fasst gleich grosse Gruppen zusammen. Bei 2 × 3 legst du zwei Gruppen mit je drei Gegenständen. Zähle zuerst alle Gegenstände und vergleiche danach mit 3 + 3.",
       },
       {
         title: "Sicherer abrufen",
-        body: "Kurze Wiederholungen helfen, Antworten schneller zu finden, ohne dass Üben nach Stress klingt.",
+        body: "Zählt in Zweier-, Fünfer- oder Zehnerschritten. Wenn eine Antwort noch nicht einfällt, legt die Gruppen erneut. Später könnt ihr die drei Reihen mischen.",
       },
       {
         title: "Direkte Rückmeldung",
