@@ -44,5 +44,17 @@ const {PGlite}=require(process.env.PRIVATE_OFFER_TEST_PGLITE_MODULE||'@electric-
  await db.exec("update school_outreach_mail set state='ready',reviewed_at=now(),review_evidence='user5820 fixture' where campaign='school-outreach-20260913'");
  for(const r of added){const a=await Promise.all(Array.from({length:20},()=>claim(r.email)));assert.equal(a.reduce((n,r)=>n+r.rows.length,0),1);assert.equal((await claim(r.email)).rows.length,0);checks+=2;}
  assert.deepEqual((await db.query("select * from school_outreach_mail where campaign!='school-outreach-20260913' order by email")).rows,prior);checks++;
+
+ const old13=(await db.query('select * from school_outreach_mail order by email')).rows;
+ await db.exec(fs.readFileSync('supabase/2026-09-15-school-outreach-lisa.sql','utf8'));
+ const lisa='lisa.noser@hotmail.com';
+ assert.equal((await claim(lisa)).rows.length,0);checks++;
+ assert.deepEqual((await db.query('select * from school_outreach_mail where email<>$1 order by email',[lisa])).rows,old13);checks++;
+ await db.query("update school_outreach_mail set state='ready',reviewed_at=now(),review_evidence='user5870 fixture' where email=$1",[lisa]);
+ const attempts=await Promise.all(Array.from({length:20},()=>claim(lisa)));
+ assert.equal(attempts.reduce((n,r)=>n+r.rows.length,0),1);checks++;
+ assert.equal((await claim(lisa)).rows.length,0);checks++;
+ await assert.rejects(db.query("update school_outreach_mail set state='ready' where email=$1",[lisa]));checks++;
+ assert.deepEqual((await db.query('select * from school_outreach_mail where email<>$1 order by email',[lisa])).rows,old13);checks++;
  console.log(checks+' ephemeral SQL checks passed, including 20 concurrent claims, persistent duplicate and ambiguous locks, eligibility, RLS and fixed batch. No live DB touched.');
 }finally{await db.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
