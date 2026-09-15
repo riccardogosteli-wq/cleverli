@@ -13,9 +13,9 @@ export async function outreachStatus(value?: unknown) {
 export async function reserveOutreach(value: unknown) {
  const {email}=outreachRecipient(value);
  if(process.env.VERCEL_ENV!=='production'||!process.env.RESEND_API_KEY) throw Error('production_send_disabled');
- if(email==='lisa.noser@hotmail.com') {
+ if(['lisa.noser@hotmail.com','info@elternrat-steinacker.ch','schulleitung@schuledietwil.ch','schulleitung@schule-ermensee.ch'].includes(email)) {
   const {verifyLisaProvider}=await import('./outreachLisaVerification');
-  if(!(await verifyLisaProvider()).clear) throw Error('provider_history_or_suppression');
+  if(!(await verifyLisaProvider(email)).clear) throw Error('provider_history_or_suppression');
  }
  const db=outreachDb();
  const {data,error}=await db.rpc('claim_school_outreach_mail',{recipient:email});
