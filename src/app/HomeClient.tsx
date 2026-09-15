@@ -8,6 +8,7 @@ import { startCheckout } from "@/lib/checkoutClient";
 import LifetimeFounderOffer from "@/components/LifetimeFounderOffer";
 import { getCatalogSubjects, getTopicSummaries } from "@/data/topicCatalog";
 import { getLocalizedSubjectName } from "@/lib/seoContent";
+import { getHomepageFaq, serializeHomepageFaq } from "@/lib/homepageFaq";
 
 const TOPIC_INDEX_SUBJECTS = [
   { subject: "math", icon: "/images/ui/Mathematik.png" },
@@ -22,6 +23,7 @@ export default function Home() {
   const { tr, lang } = useLang();
   const { session, loaded, isPremium } = useSession();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const faqItems = getHomepageFaq(tr);
 
   // Logged-in CTA targets
   const primaryHref  = session ? "/dashboard" : "/learn/1/math/zahlen-1-10";
@@ -329,7 +331,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ: server-rendered JSON-LD follows the same translated items as the accordion. */}
+      <script
+        id="homepage-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeHomepageFaq(faqItems) }}
+      />
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-8 justify-center">
@@ -337,20 +344,18 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-gray-800">{tr("faqTitle")}</h2>
           </div>
           <div className="space-y-3">
-            {([
-              ["faqQ1","faqA1"],["faqQ2","faqA2"],["faqQ3","faqA3"],["faqQ4","faqA4"],["faqQ5","faqA5"],
-            ] as const).map(([qKey, aKey], i) => (
+            {faqItems.map(({ question, answer }, i) => (
               <div key={i} className="border-2 border-gray-100 rounded-2xl overflow-hidden">
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   style={{minHeight:"56px"}}
                   aria-expanded={openFaq === i}
                   aria-controls={`faq-answer-${i}`}
                   className="w-full text-left px-4 sm:px-5 py-4 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 active:bg-gray-100 transition-colors text-sm sm:text-base">
-                  <span>{tr(qKey)}</span>
+                  <span>{question}</span>
                   <span className="text-green-700 text-xl ml-3 shrink-0" aria-hidden="true">{openFaq === i ? "−" : "+"}</span>
                 </button>
                 {openFaq === i && (
-                  <div id={`faq-answer-${i}`} className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{tr(aKey)}</div>
+                  <div id={`faq-answer-${i}`} className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{answer}</div>
                 )}
               </div>
             ))}
