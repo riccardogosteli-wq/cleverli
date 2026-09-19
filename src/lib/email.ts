@@ -43,53 +43,35 @@ export async function sendWelcomeEmail(to: string) {
   const { error } = await resend.emails.send({
     from: FROM,
     to,
-    subject: "Willkommen bei Cleverli! 🎒",
+    subject: "Willkommen bei Cleverli 🐿️ Schön, dass du da bist!",
     html: `
 <!DOCTYPE html>
 <html lang="de">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="margin:0;padding:0;background:#f0fdf4;font-family:Arial,Helvetica,sans-serif;">
   <div style="max-width:560px;margin:32px auto;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
-    <!-- Header -->
     <div style="background:linear-gradient(135deg,#16a34a,#22c55e);padding:32px 24px;text-align:center;">
       <img src="https://www.cleverli.ch/cleverli-logo.png" alt="Cleverli" width="160" style="margin:0 auto 8px;display:block;" />
-      <h1 style="color:#fff;margin:0;font-size:22px;font-weight:800;">Willkommen bei Cleverli! 🎉</h1>
+      <h1 style="color:#fff;margin:0;font-size:22px;font-weight:800;line-height:1.4;">Entdecken, üben, weiterkommen.</h1>
     </div>
-    <!-- Body -->
-    <div style="padding:32px 28px;color:#1f2937;">
-      <p style="font-size:16px;margin:0 0 16px;">Dein Konto ist bereit — Lernen kann sofort losgehen!</p>
-      <p style="font-size:14px;color:#6b7280;margin:0 0 24px;">
-        Mit Cleverli lernen Kinder Mathe, Deutsch, NMG, Sprachen und Medien spielerisch —
-        mit Aufgaben nach Lehrplan 21, lustigen Trophäen und täglichen Challenges.
-      </p>
-      <!-- CTA -->
+    <div style="padding:32px 28px;color:#1f2937;font-size:15px;line-height:1.7;">
+      <p style="margin:0 0 20px;">Dein Cleverli-Konto ist bereit! Hier findet dein Kind abwechslungsreiche Übungen für die 1. bis 6. Klasse, passend zum Lehrplan 21 und mit viel Raum für eigene Entdeckungen.</p>
+      <p style="margin:0 0 24px;">Ob Zahlen knacken, Wörter entdecken oder die Natur besser verstehen: Cleverli macht Lernstoff lebendig. Verständliche Hinweise helfen weiter, direktes Feedback macht Fortschritte sichtbar.</p>
+      <div style="background:#f0fdf4;border-radius:12px;padding:20px;margin:0 0 24px;">
+        <h2 style="font-size:17px;line-height:1.4;margin:0 0 10px;color:#15803d;">Kleine Erfolge, persönliche Belohnungen.</h2>
+        <p style="margin:0;">Mit Cleverli kannst du eigene Belohnungen für dein Kind festlegen, zum Beispiel einen gemeinsamen Ausflug oder einen Spielenachmittag. So wird aus dem Lernfortschritt etwas, worauf sich dein Kind freuen kann.</p>
+      </div>
       <div style="text-align:center;margin:28px 0;">
-        <a href="https://www.cleverli.ch/dashboard"
-           style="background:#16a34a;color:#fff;text-decoration:none;padding:14px 32px;border-radius:50px;font-weight:800;font-size:16px;display:inline-block;">
-          Jetzt loslegen 🚀
-        </a>
+        <a href="https://www.cleverli.ch/dashboard" style="background:#15803d;color:#fff;text-decoration:none;padding:14px 28px;border-radius:50px;font-weight:800;font-size:16px;display:inline-block;">Cleverli entdecken</a>
       </div>
-      <!-- Features -->
-      <div style="background:#f0fdf4;border-radius:12px;padding:16px 20px;margin:0 0 24px;">
-        <p style="font-size:13px;margin:0 0 8px;font-weight:700;color:#15803d;">✨ Was dich erwartet:</p>
-        <ul style="font-size:13px;color:#374151;margin:0;padding-left:18px;line-height:1.8;">
-          <li>🔢 Interaktive Mathe-Aufgaben ab Klasse 1</li>
-          <li>📖 Deutsch — Buchstaben, Wörter, Sätze</li>
-          <li>🌍 NMG — Natur, Mensch, Gesellschaft</li>
-          <li>🏆 Trophäen & Level-System</li>
-          <li>⚡ Tagesaufgabe mit Bonus-XP</li>
-        </ul>
-      </div>
-      <p style="font-size:13px;color:#9ca3af;text-align:center;margin:0;">
-        Kostenlos starten, in Ruhe ausprobieren und später entscheiden.
-      </p>
+      <p style="margin:0 0 20px;">Wir freuen uns, euch ein Stück durch die Primarschulzeit zu begleiten.</p>
+      <p style="margin:0 0 24px;">Bei Fragen sind wir gerne für dich da: <a href="mailto:hello@cleverli.ch" style="color:#15803d;">hello@cleverli.ch</a></p>
+      <p style="margin:0;">Herzliche Grüsse<br>Alexandra und das Cleverli-Team</p>
     </div>
-    <!-- Footer -->
     <div style="border-top:1px solid #e5e7eb;padding:16px 28px;text-align:center;">
-      <p style="font-size:11px;color:#9ca3af;margin:0;">
-        Cleverli<br>
-        <a href="https://www.cleverli.ch/datenschutz" style="color:#9ca3af;">Datenschutz</a> · 
-        <a href="https://www.cleverli.ch/impressum" style="color:#9ca3af;">Impressum</a>
+      <p style="font-size:11px;color:#6b7280;margin:0;">Cleverli<br>
+        <a href="https://www.cleverli.ch/datenschutz" style="color:#6b7280;">Datenschutz</a> ·
+        <a href="https://www.cleverli.ch/impressum" style="color:#6b7280;">Impressum</a>
       </p>
     </div>
   </div>
