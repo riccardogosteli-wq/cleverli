@@ -13,6 +13,20 @@ Die Angabe «15’000+» bezeichnet den gesamten Übungsbestand, nicht die Anzah
 
 Die Sprachversionen übersetzen diese Übersicht. Sie bedeuten keine Zuordnung zum Plan d’études romand (PER) oder zum Tessiner Piano di studio. Klassenangaben folgen der Primarschulstruktur des Lehrplans 21. Der Gesamtbestand wird nicht pro Sprache gezählt. Die Website verwendet teilweise eine Sprachwahl im Browser oder den Parameter `?lang=`; aus den Sprachpfaden dieser Textdateien lassen sich keine anderen Seitenpfade ableiten.
 
+**Für wen und wie funktioniert das Üben?** Cleverli ergänzt den Unterricht und das begleitete Üben zu Hause. Kinder wählen Klasse, Fach und Thema und bearbeiten Aufgaben mit Hinweisen und direkter Rückmeldung. Das Angebot läuft im Browser, ohne erforderliche App-Installation. Sprachausgabe kann Aufgaben vorlesen. Lehrpersonen und Eltern begleiten die Nutzung; Cleverli ersetzt keinen Unterricht.
+
+**Welche Inhalte finde ich?** Mathematik umfasst unter anderem Zahlen, Rechnen, Einmaleins und Geometrie. Deutsch umfasst Lesen, Wortschatz, Rechtschreibung und Grammatik. NMG steht für Natur, Mensch, Gesellschaft. Englisch, Französisch sowie Medien und Informatik ergänzen das Angebot je nach Klasse. Die unten verlinkte Themenübersicht zeigt die verfügbaren Themen und ihre bestehenden Lehrplancodes. Die Sprache der Oberfläche ist nicht automatisch die Zielsprache einer Sprachübung.
+
+**Familien und Kinderprofile.** Konten werden von Erwachsenen geführt. Familienangebote umfassen bis zu drei Kinderprofile. Kinderprofile haben keine eigenen Anmeldedaten. Lernfortschritte und persönliche Belohnungen werden pro Profil geführt. Eltern können beispielsweise ein Ziel für gelöste Aufgaben oder Themen festlegen und eine passende Belohnung vereinbaren.
+
+**Kosten und Kündigung.** Die regulären Familienabonnements kosten zum angegebenen Stand CHF 9.90 pro Monat oder CHF 99 pro Jahr. Monats- und Jahresabonnements verlängern sich automatisch, sofern sie nicht gekündigt werden. Eine Kündigung wirkt zum Ende der laufenden Abrechnungsperiode; sie ist über «Mein Konto» oder den Support möglich. Kostenlose Einstiegsaufgaben sind von einem Premium-Testangebot zu unterscheiden. Der Premium-Test im Checkout erfordert eine Zahlungskarte. Aktionsangebote können abweichen; massgebend sind das gewählte Angebot, der Checkout und die AGB, nicht diese Zusammenfassung.
+
+**Für Lehrpersonen.** Das Lehrerkonto kostet zum angegebenen Stand CHF 99 pro Klasse und Jahr und wird nach Anfrage manuell freigeschaltet. Es umfasst unbegrenzt viele Kinderprofile für die vereinbarte Klasse. Mehrere Lehrpersonen derselben Klasse dürfen den gemeinsamen Zugang nutzen. Es gibt keine separaten Schüleranmeldungen, Klassenverwaltung oder automatische Aufgabenverteilung. Es ist keine Lizenz für eine ganze Schule. Erforderliche schulische Datenschutzvereinbarungen müssen vor personenbezogenen Schülerprofilen geklärt werden.
+
+**Datenschutz und Werbung.** Für ein Kinderprofil genügt möglichst ein Spitzname; Gesundheitsdaten gehören nicht ins Profil. Lernbetrieb und Konten verwenden Datenspeicherung und Synchronisierung. Cleverli zeigt keine Werbeanzeigen Dritter in der Lernplattform, setzt aber Nutzungs- und Kampagnenmessung ein. Das bedeutet weder trackingfreie noch anonyme Nutzung. Die Datenschutzerklärung beschreibt Anbieter, Datenverarbeitung und Rechte verbindlich.
+
+**Anbieter und Hilfe.** Betreiberin ist Alexandra Gosteli Digital Solutions in Truttikon, Schweiz. Kontakt für Fragen, Unterstützung und Datenschutzanliegen: hello@cleverli.ch. Impressum, Datenschutz und AGB sind unten verlinkt. Diese Übersicht enthält keine privaten Konto- oder Schülerdaten.
+
 ## Sprachversionen / Language versions
 
 - [Deutsch](https://www.cleverli.ch/de/llms.txt)
@@ -22,24 +36,33 @@ Die Sprachversionen übersetzen diese Übersicht. Sie bedeuten keine Zuordnung z
 
 ## Überblick
 
-- [Startseite](https://www.cleverli.ch/): Produktüberblick und aktuelles Angebot.
-- [Übungen für die Primarschule](https://www.cleverli.ch/primarschule-uebungen): Fächer, Beispiele und Einstieg ins Üben.
-- [Informationen für Lehrpersonen](https://www.cleverli.ch/lehrpersonen): Cleverli im schulischen Kontext.
+- [Startseite](https://www.cleverli.ch/): Produktüberblick, Einstieg, Familienpreise und persönliche Belohnungen.
+- [Übungen für die Primarschule](https://www.cleverli.ch/primarschule-uebungen): Einstieg in das Üben; bei Premium-Testangeboten die Checkout-Bedingungen beachten.
+- [Informationen für Lehrpersonen](https://www.cleverli.ch/lehrpersonen): Preis, Anfrage, manuelle Freischaltung und Grenzen des Lehrerzugangs.
 
 ## Fächer und Beispiele
 
-- [Mathe für Kinder](https://www.cleverli.ch/mathe-uebungen-kinder): Rechnen, Geometrie und weitere mathematische Themen.
+- [Mathe für Kinder](https://www.cleverli.ch/mathe-uebungen-kinder): Rechnen, Zahlen und Geometrie für die Primarschule.
 - [Deutsch für Kinder](https://www.cleverli.ch/deutsch-uebungen-kinder): Lesen, Wortschatz, Rechtschreibung und Grammatik.
-- [Einmaleins üben](https://www.cleverli.ch/einmaleins-ueben): Aufgaben zum kleinen Einmaleins.
-- [NMG, 3. Klasse](https://www.cleverli.ch/learn/3/science): Themen aus Natur, Mensch und Gesellschaft.
-- [Englisch, 3. Klasse](https://www.cleverli.ch/learn/3/english): Themen und Übungen zum Englischlernen.
-- [Französisch, 5. Klasse](https://www.cleverli.ch/learn/5/french): Themen und Übungen zum Französischlernen.
+- [Einmaleins üben](https://www.cleverli.ch/einmaleins-ueben): Gezielt das kleine Einmaleins üben.
+- [NMG, 3. Klasse](https://www.cleverli.ch/learn/3/science): NMG-Themen der 3. Klasse mit Links zu den Aufgaben.
+- [Englisch, 3. Klasse](https://www.cleverli.ch/learn/3/english): Englischthemen der 3. Klasse; die Lernzielsprache bleibt Englisch.
+- [Französisch, 5. Klasse](https://www.cleverli.ch/learn/5/french): Französischthemen der 5. Klasse; die Lernzielsprache bleibt Französisch.
 
-- [Lehrplanbezug](https://www.cleverli.ch/lehrplanbezug?lang=de): Themen und bestehende Zuordnungen zum Lehrplan 21.
+- [Lehrplanbezug](https://www.cleverli.ch/lehrplanbezug?lang=de): Themen aller sechs Klassen, bestehende Codes und Grenzen der Lehrplanzuordnung.
+
+## Themen nach Klasse
+
+- [Klasse 1: Themen und Lehrplanbezug](https://www.cleverli.ch/lehrplanbezug?lang=de#klasse-1): Fächer, Themen, bestehende Lehrplancodes und direkte Übungslinks für diese Klasse.
+- [Klasse 2: Themen und Lehrplanbezug](https://www.cleverli.ch/lehrplanbezug?lang=de#klasse-2): Fächer, Themen, bestehende Lehrplancodes und direkte Übungslinks für diese Klasse.
+- [Klasse 3: Themen und Lehrplanbezug](https://www.cleverli.ch/lehrplanbezug?lang=de#klasse-3): Fächer, Themen, bestehende Lehrplancodes und direkte Übungslinks für diese Klasse.
+- [Klasse 4: Themen und Lehrplanbezug](https://www.cleverli.ch/lehrplanbezug?lang=de#klasse-4): Fächer, Themen, bestehende Lehrplancodes und direkte Übungslinks für diese Klasse.
+- [Klasse 5: Themen und Lehrplanbezug](https://www.cleverli.ch/lehrplanbezug?lang=de#klasse-5): Fächer, Themen, bestehende Lehrplancodes und direkte Übungslinks für diese Klasse.
+- [Klasse 6: Themen und Lehrplanbezug](https://www.cleverli.ch/lehrplanbezug?lang=de#klasse-6): Fächer, Themen, bestehende Lehrplancodes und direkte Übungslinks für diese Klasse.
 
 ## Weitere Quellen
 
-- [Sitemap](https://www.cleverli.ch/sitemap.xml): Verzeichnis der öffentlich auffindbaren Seiten, Klassen und Themen.
-- [Impressum](https://www.cleverli.ch/impressum): Anbieter und Kontakt.
-- [Datenschutz](https://www.cleverli.ch/datenschutz): Informationen zur Datenverarbeitung.
-- [AGB](https://www.cleverli.ch/agb): Nutzungsbedingungen.
+- [Sitemap](https://www.cleverli.ch/sitemap.xml): Breiteres Verzeichnis der öffentlichen Seiten und Themen.
+- [Impressum](https://www.cleverli.ch/impressum): Rechtliche Betreiberin und offizielle Quellenangaben.
+- [Datenschutz](https://www.cleverli.ch/datenschutz): Daten, Dienstleister, Messung, schulische Nutzung und Betroffenenrechte.
+- [AGB](https://www.cleverli.ch/agb): Familien- und Lehrerzugang, Preise, Verlängerung und Kündigung.

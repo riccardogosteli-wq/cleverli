@@ -13,6 +13,20 @@ The total of more than 15,000 exercises refers to the entire catalogue, not each
 
 Links use the site’s actual addresses. The `?lang=en` parameter selects English on pages that support it; some pages are translated in the browser and some sources remain in German. The `/en/` prefix of this file does not mean that all pages exist under that prefix.
 
+**Who is it for and how does practice work?** Cleverli complements classroom teaching and supervised practice at home. Children choose a grade, subject and topic, then complete activities with hints and immediate feedback. It runs in the browser without a required app installation. Text-to-speech can read prompts aloud. Parents and teachers supervise use; Cleverli does not replace teaching.
+
+**What content is available?** Maths includes numbers, arithmetic, multiplication tables and geometry. German includes reading, vocabulary, spelling and grammar. NMG means nature, humans and society. English, French, media and computing complement the offer depending on the grade. The linked overview lists available topics and their existing Lehrplan 21 codes. The interface language is not necessarily the target language of a language exercise.
+
+**Families and child profiles.** Adults manage accounts. Family plans include up to three child profiles. Children have no separate login credentials. Progress and personal rewards are managed per profile. Parents can, for example, set a goal for completed exercises or topics and agree on an appropriate reward.
+
+**Prices and cancellation.** As of the date above, regular family subscriptions cost CHF 9.90 per month or CHF 99 per year. They renew automatically unless cancelled. Cancellation takes effect at the end of the current billing period and is available through the account or support. Free introductory exercises are distinct from a Premium trial offer. The Premium trial in checkout requires a payment card. Promotions may differ; the selected offer, checkout and terms govern, not this summary.
+
+**For teachers.** As of the date above, a teacher account costs CHF 99 per class per year and is activated manually on request. It includes unlimited child profiles for the agreed class. Teachers of the same class may share the account. There are no separate pupil logins, classroom management or automatic assignment distribution. This is not a whole-school licence. Schools must clarify required data protection agreements before creating identifiable pupil profiles.
+
+**Data and advertising.** Use a nickname for a child profile where possible; do not include health information. Accounts and learning activities use data storage and synchronisation. Cleverli does not display third-party ads in the learning platform, but does use usage and campaign measurement. This does not mean anonymous or tracking-free use. The privacy policy describes providers, processing and applicable rights.
+
+**Provider and support.** The operator is Alexandra Gosteli Digital Solutions in Truttikon, Switzerland. Contact for questions, support and privacy requests: hello@cleverli.ch. The legal notice, privacy policy and terms are linked below. This overview contains no private account or pupil data.
+
 ## Language versions
 
 - [Deutsch](https://www.cleverli.ch/de/llms.txt)
@@ -22,24 +36,33 @@ Links use the site’s actual addresses. The `?lang=en` parameter selects Englis
 
 ## Overview
 
-- [Homepage](https://www.cleverli.ch/?lang=en)
-- [Primary school exercises](https://www.cleverli.ch/primarschule-uebungen?lang=en)
-- [Information for teachers](https://www.cleverli.ch/lehrpersonen?lang=en)
+- [Homepage](https://www.cleverli.ch/?lang=en): Product overview, getting started, family pricing and personal rewards.
+- [Primary school exercises](https://www.cleverli.ch/primarschule-uebungen?lang=en): Start practising; check checkout terms for Premium trial offers.
+- [Information for teachers](https://www.cleverli.ch/lehrpersonen?lang=en): Price, requests, manual activation and limitations of teacher access.
 
 ## Subjects and examples
 
-- [Maths for children](https://www.cleverli.ch/mathe-uebungen-kinder?lang=en)
-- [German for children](https://www.cleverli.ch/deutsch-uebungen-kinder?lang=en)
-- [Multiplication practice](https://www.cleverli.ch/einmaleins-ueben?lang=en)
-- [NMG, grade 3](https://www.cleverli.ch/learn/3/science?lang=en)
-- [English, grade 3](https://www.cleverli.ch/learn/3/english?lang=en)
-- [French, grade 5](https://www.cleverli.ch/learn/5/french?lang=en)
-- [Lehrplan 21 curriculum connections](https://www.cleverli.ch/lehrplanbezug?lang=en)
+- [Maths for children](https://www.cleverli.ch/mathe-uebungen-kinder?lang=en): Arithmetic, numbers and geometry for primary school.
+- [German for children](https://www.cleverli.ch/deutsch-uebungen-kinder?lang=en): German reading, vocabulary, spelling and grammar.
+- [Multiplication practice](https://www.cleverli.ch/einmaleins-ueben?lang=en): Targeted practice with multiplication tables.
+- [NMG, grade 3](https://www.cleverli.ch/learn/3/science?lang=en): Grade 3 NMG topics with links to exercises.
+- [English, grade 3](https://www.cleverli.ch/learn/3/english?lang=en): Grade 3 English topics; the learning target language remains English.
+- [French, grade 5](https://www.cleverli.ch/learn/5/french?lang=en): Grade 5 French topics; the learning target language remains French.
+- [Lehrplan 21 curriculum connections](https://www.cleverli.ch/lehrplanbezug?lang=en): Topics across six grades, existing codes and limitations of curriculum mappings.
+
+## Topics by grade
+
+- [Grade 1: topics and Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=en#klasse-1): Subjects, topics, existing curriculum codes and direct exercise links for this grade.
+- [Grade 2: topics and Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=en#klasse-2): Subjects, topics, existing curriculum codes and direct exercise links for this grade.
+- [Grade 3: topics and Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=en#klasse-3): Subjects, topics, existing curriculum codes and direct exercise links for this grade.
+- [Grade 4: topics and Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=en#klasse-4): Subjects, topics, existing curriculum codes and direct exercise links for this grade.
+- [Grade 5: topics and Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=en#klasse-5): Subjects, topics, existing curriculum codes and direct exercise links for this grade.
+- [Grade 6: topics and Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=en#klasse-6): Subjects, topics, existing curriculum codes and direct exercise links for this grade.
 
 ## Further sources
 
-- [Sitemap](https://www.cleverli.ch/sitemap.xml)
-- [Legal notice](https://www.cleverli.ch/impressum)
-- [Privacy policy](https://www.cleverli.ch/datenschutz)
-- [Terms and conditions](https://www.cleverli.ch/agb)
+- [Sitemap](https://www.cleverli.ch/sitemap.xml): Broader directory of public pages and topics.
+- [Legal notice](https://www.cleverli.ch/impressum): Legal operator and official source references.
+- [Privacy policy](https://www.cleverli.ch/datenschutz): Data, providers, measurement, school use and individual rights.
+- [Terms and conditions](https://www.cleverli.ch/agb): Family and teacher access, prices, renewal and cancellation.
 

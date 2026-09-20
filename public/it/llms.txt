@@ -13,6 +13,20 @@ Il totale di oltre 15 000 esercizi si riferisce all’intero catalogo, non a ogn
 
 I collegamenti utilizzano gli indirizzi reali del sito. Il parametro `?lang=it` seleziona l’italiano nelle pagine che lo supportano; alcune pagine vengono tradotte nel browser e alcune fonti restano in tedesco. Il prefisso `/it/` di questo file non significa che tutte le pagine esistano sotto tale prefisso.
 
+**Per chi e come si svolge l’esercizio?** Cleverli integra l’insegnamento e l’esercizio accompagnato a casa. Il bambino sceglie classe, materia e tema, poi svolge attività con suggerimenti e feedback immediati. Il servizio funziona nel browser, senza installazione obbligatoria di un’app. La sintesi vocale può leggere le consegne. Genitori e docenti accompagnano l’uso; Cleverli non sostituisce l’insegnamento.
+
+**Quali contenuti sono disponibili?** La matematica comprende numeri, calcolo, tabelline e geometria. Il tedesco comprende lettura, vocabolario, ortografia e grammatica. NMG significa natura, essere umano e società. Inglese, francese, media e informatica completano l’offerta secondo la classe. La panoramica collegata sotto mostra i temi disponibili e i codici esistenti del Lehrplan 21. La lingua dell’interfaccia non è necessariamente la lingua da imparare in un esercizio linguistico.
+
+**Famiglie e profili bambino.** Gli account sono gestiti da adulti. Le offerte famiglia comprendono fino a tre profili bambino. I bambini non hanno credenziali proprie. Progressi e ricompense personali sono gestiti per profilo. I genitori possono, per esempio, fissare un obiettivo di esercizi o temi completati e concordare una ricompensa adeguata.
+
+**Prezzi e disdetta.** Alla data indicata, gli abbonamenti famiglia ordinari costano CHF 9.90 al mese o CHF 99 all’anno. Si rinnovano automaticamente salvo disdetta. La disdetta ha effetto alla fine del periodo corrente e può essere richiesta dall’account o al supporto. Gli esercizi introduttivi gratuiti sono distinti da un’offerta di prova Premium. La prova Premium nel checkout richiede una carta di pagamento. Le promozioni possono differire; fanno fede l’offerta scelta, il checkout e le condizioni generali, non questo riassunto.
+
+**Per i docenti.** Alla data indicata, l’account docente costa CHF 99 per classe all’anno ed è attivato manualmente su richiesta. Comprende profili bambino illimitati per la classe concordata. Più docenti della stessa classe possono condividere l’accesso. Non sono disponibili credenziali separate per gli alunni, gestione della classe o assegnazione automatica dei compiti. Non è una licenza per un’intera scuola. Gli accordi scolastici necessari sulla protezione dei dati devono essere chiariti prima di creare profili alunno nominativi.
+
+**Dati e pubblicità.** Per un profilo bambino è preferibile usare un soprannome; non vanno inseriti dati sanitari. Account e attività di apprendimento utilizzano archiviazione e sincronizzazione dei dati. Cleverli non mostra pubblicità di terzi nella piattaforma, ma utilizza misurazioni d’uso e delle campagne. Ciò non significa uso anonimo o privo di tracciamento. L’informativa sulla protezione dei dati descrive fornitori, trattamenti e diritti applicabili.
+
+**Fornitore e assistenza.** Il servizio è gestito da Alexandra Gosteli Digital Solutions a Truttikon, in Svizzera. Contatto per domande, assistenza e protezione dei dati: hello@cleverli.ch. Note legali, informativa e condizioni generali sono collegate sotto. Questa panoramica non contiene dati privati di account o alunni.
+
 ## Versioni linguistiche
 
 - [Deutsch](https://www.cleverli.ch/de/llms.txt)
@@ -22,24 +36,33 @@ I collegamenti utilizzano gli indirizzi reali del sito. Il parametro `?lang=it` 
 
 ## Panoramica
 
-- [Pagina iniziale](https://www.cleverli.ch/?lang=it)
-- [Esercizi per la scuola primaria](https://www.cleverli.ch/primarschule-uebungen?lang=it)
-- [Informazioni per i docenti](https://www.cleverli.ch/lehrpersonen?lang=it)
+- [Pagina iniziale](https://www.cleverli.ch/?lang=it): Panoramica, accesso iniziale, prezzi famiglia e ricompense personali.
+- [Esercizi per la scuola primaria](https://www.cleverli.ch/primarschule-uebungen?lang=it): Accesso agli esercizi; verificare le condizioni del checkout per le prove Premium.
+- [Informazioni per i docenti](https://www.cleverli.ch/lehrpersonen?lang=it): Prezzo, richiesta, attivazione manuale e limiti dell’account docente.
 
 ## Materie ed esempi
 
-- [Matematica per bambini](https://www.cleverli.ch/mathe-uebungen-kinder?lang=it)
-- [Tedesco per bambini](https://www.cleverli.ch/deutsch-uebungen-kinder?lang=it)
-- [Esercitarsi con le tabelline](https://www.cleverli.ch/einmaleins-ueben?lang=it)
-- [NMG, 3a classe](https://www.cleverli.ch/learn/3/science?lang=it)
-- [Inglese, 3a classe](https://www.cleverli.ch/learn/3/english?lang=it)
-- [Francese, 5a classe](https://www.cleverli.ch/learn/5/french?lang=it)
-- [Collegamento al Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it)
+- [Matematica per bambini](https://www.cleverli.ch/mathe-uebungen-kinder?lang=it): Calcolo, numeri e geometria per la scuola primaria.
+- [Tedesco per bambini](https://www.cleverli.ch/deutsch-uebungen-kinder?lang=it): Lettura, vocabolario, ortografia e grammatica tedesca.
+- [Esercitarsi con le tabelline](https://www.cleverli.ch/einmaleins-ueben?lang=it): Esercizio mirato sulle tabelline.
+- [NMG, 3a classe](https://www.cleverli.ch/learn/3/science?lang=it): Temi NMG della 3a classe e collegamenti agli esercizi.
+- [Inglese, 3a classe](https://www.cleverli.ch/learn/3/english?lang=it): Temi d’inglese della 3a classe; la lingua da imparare resta l’inglese.
+- [Francese, 5a classe](https://www.cleverli.ch/learn/5/french?lang=it): Temi di francese della 5a classe; la lingua da imparare resta il francese.
+- [Collegamento al Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it): Temi delle sei classi, codici esistenti e limiti del collegamento al programma.
+
+## Temi per classe
+
+- [Classe 1: temi e Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it#klasse-1): Materie, temi, codici esistenti e collegamenti diretti agli esercizi della classe.
+- [Classe 2: temi e Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it#klasse-2): Materie, temi, codici esistenti e collegamenti diretti agli esercizi della classe.
+- [Classe 3: temi e Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it#klasse-3): Materie, temi, codici esistenti e collegamenti diretti agli esercizi della classe.
+- [Classe 4: temi e Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it#klasse-4): Materie, temi, codici esistenti e collegamenti diretti agli esercizi della classe.
+- [Classe 5: temi e Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it#klasse-5): Materie, temi, codici esistenti e collegamenti diretti agli esercizi della classe.
+- [Classe 6: temi e Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it#klasse-6): Materie, temi, codici esistenti e collegamenti diretti agli esercizi della classe.
 
 ## Altre fonti
 
-- [Mappa del sito](https://www.cleverli.ch/sitemap.xml)
-- [Note legali](https://www.cleverli.ch/impressum)
-- [Protezione dei dati](https://www.cleverli.ch/datenschutz)
-- [Condizioni generali](https://www.cleverli.ch/agb)
+- [Mappa del sito](https://www.cleverli.ch/sitemap.xml): Elenco più ampio delle pagine e dei temi pubblici.
+- [Note legali](https://www.cleverli.ch/impressum): Fornitore legale e fonti ufficiali.
+- [Protezione dei dati](https://www.cleverli.ch/datenschutz): Dati, fornitori, misurazione, uso scolastico e diritti delle persone.
+- [Condizioni generali](https://www.cleverli.ch/agb): Accesso famiglia e docente, prezzi, rinnovo e disdetta.
 
