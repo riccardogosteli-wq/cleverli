@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import type { Lang } from '@/lib/i18n';
-import { getLehrplanOverview } from '@/lib/lehrplanOverview';
+import type { getLehrplanOverview } from '@/lib/lehrplanOverview';
 import { LEHRPLAN_LANGS, lehrplanCopy, lehrplanUrl } from '@/lib/lehrplanCopy';
+import generatedRows from '@/data/lehrplanOverview.generated.json';
 import LehrplanOverviewClient from './LehrplanOverviewClient';
 
 type Props = { searchParams: Promise<{ lang?: string }> };
@@ -18,6 +19,6 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 }
 export default async function LehrplanOverviewPage({ searchParams }: Props) {
   const initialLang = resolveLang((await searchParams).lang);
-  const allRows = Object.fromEntries(LEHRPLAN_LANGS.map(lang => [lang, getLehrplanOverview(lang)])) as Record<Lang, ReturnType<typeof getLehrplanOverview>>;
+  const allRows = generatedRows as Record<Lang, ReturnType<typeof getLehrplanOverview>>;
   return <LehrplanOverviewClient allRows={allRows} initialLang={initialLang} />;
 }

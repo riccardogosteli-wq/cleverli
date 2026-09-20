@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run qa:topic-catalog",
+    "prebuild": "npm run qa:topic-catalog && npx tsx scripts/generate-lehrplan-overview.ts --check",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
