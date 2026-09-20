@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { isFirstCollectedInvoice } from "@/lib/activationEmail";
 import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import {
@@ -398,9 +399,9 @@ export async function POST(req: NextRequest) {
           },
         }).catch(() => {});
 
-        // Send payment emails from the paid invoice event so immediate checkouts,
-        // trial conversions and renewals all use the same path. Resend keys make
-        // duplicate Stripe deliveries safe; zero-value trial invoices stay silent.
+        // All collected invoices retain admin notifications and purchase tracking.
+        // Customer activation email is limited to the first collected invoice,
+        // including trial conversion. Zero-value trial invoices stay silent.
         if (event.type === "invoice.paid" && invoice.amount_paid > 0) {
           const stripeCustomerId = subscription.customer as string;
           let customerEmail = invoice.customer_email ?? synced.email ?? "";
@@ -447,7 +448,20 @@ export async function POST(req: NextRequest) {
             }),
           ];
 
+          let sendActivation = false;
           if (customerEmail) {
+            try {
+              sendActivation = await isFirstCollectedInvoice(
+                invoice,
+                stripe.invoices.list({ subscription: subscriptionId, status: "paid", limit: 100 }),
+              );
+            } catch (error) {
+              // Fail closed for customer mail without interrupting access or admin receipts.
+              Sentry.captureException(error);
+              console.error("[stripe-webhook] Activation email history check failed; customer email skipped");
+            }
+          }
+          if (customerEmail && sendActivation) {
             emailTasks.push(sendPaymentConfirmationEmail(
               customerEmail,
               customerName,
