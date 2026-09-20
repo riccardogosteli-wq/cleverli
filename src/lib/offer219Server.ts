@@ -25,7 +25,7 @@ export function services219(dependencies?: { services: ReturnType<typeof private
       ]);
       if (profile.error || auth.error || !profile.data || !auth.data.user || customer.deleted) throw Error('identity_check_failed');
       const same = (s: string | null | undefined) => s?.trim().toLowerCase() === r.email;
-      if (!same(profile.data.email) || !same(auth.data.user.email) || !same(customer.email) || profile.data.premium || profile.data.premium_plan === 'schooltime' || profile.data.stripe_subscription_id || profile.data.stripe_customer_id !== r.customerId) return false;
+      if (!same(profile.data.email) || !same(auth.data.user.email) || !same(customer.email) || profile.data.premium || profile.data.premium_plan === 'schooltime' || profile.data.stripe_subscription_id || (profile.data.stripe_customer_id && profile.data.stripe_customer_id !== r.customerId)) return false;
       // Search all customers for this exact email too: a second customer may hold a purchase.
       const customers = await pages219(after => stripe.customers.list({ email: r.email, limit: 100, starting_after: after }));
       if (!customers.some(c => c.id === r.customerId)) return false;

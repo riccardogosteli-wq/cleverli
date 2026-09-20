@@ -51,7 +51,7 @@ begin
  if o.user_id<>p_user or o.customer_id<>p_customer or o.token_hash<>p_hash or o.revoked or o.redeemed_session is not null or o.amount<>21900 or o.currency<>'chf' then raise exception 'offer_changed'; end if;
  if not exists(select 1 from public.parent_profiles p join auth.users u on u.id=p.id where p.id=p_user
  and lower(p.email)=p_recipient and lower(u.email)=p_recipient and not p.premium
- and p.stripe_customer_id=p_customer and p.stripe_subscription_id is null
+ and (p.stripe_customer_id is null or p.stripe_customer_id=p_customer) and p.stripe_subscription_id is null
  and coalesce(p.premium_plan,'')<>'schooltime') then raise exception 'recipient_changed'; end if;
  d := floor(extract(epoch from n))::bigint + 604800;
  -- Unconditional INSERT is the irreversible reservation. Duplicate claims abort the

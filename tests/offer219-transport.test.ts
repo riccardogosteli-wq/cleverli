@@ -92,7 +92,7 @@ function eligibilityFixture(change: string = '') {
  const empty=async()=>({data:[],has_more:false});
  const later=(record: object)=>async (p:{starting_after?:string;after?:string})=>p.starting_after||p.after?{data:[{id:'later',...record}],has_more:false}:{data:[{id:'first'}],has_more:true};
  const providerPage=(load: ReturnType<typeof later>)=>async(p:{after?:string})=>({data:await load(p),error:null});
- const query={select(){return this;},eq(){return this;},async single(){return {data:{email:r.email,premium:change==='premium',stripe_customer_id:r.customerId,stripe_subscription_id:null},error:null};},async maybeSingle(){return {data:null,error:null};}};
+ const query={select(){return this;},eq(){return this;},async single(){return {data:{email:r.email,premium:change==='premium',stripe_customer_id:change==='null_customer'?null:change==='conflicting_customer'?'cus_other':r.customerId,stripe_subscription_id:null},error:null};},async maybeSingle(){return {data:null,error:null};}};
  const deps={services:{db:{from:()=>query,auth:{admin:{getUserById:async()=>({data:{user:{email:change==='email'?'changed@example.com':r.email}},error:null})}}},store:{byId:async()=>({id:r.offerId,user_id:r.userId,customer_id:r.customerId,token_hash:digest219('a'.repeat(64)),amount:21900,currency:'chf',revoked:false,redeemed_session:null})},stripe:{customers:{retrieve:async()=>({id:r.customerId,email:r.email}),list:async()=>({data:[{id:r.customerId}],has_more:false})},subscriptions:{list:change==='subscription'?later({status:'active'}):empty},charges:{list:change==='charge'?later({paid:true,amount:21900}):empty},invoices:{list:change==='invoice'?later({status:'paid',amount_paid:9900}):empty},paymentIntents:{list:change==='payment'?later({status:'succeeded',amount:21900}):empty}}},provider:{suppressions:{list:change==='suppressed'?providerPage(later({email:r.email})):async()=>({data:await empty(),error:null})},contacts:{list:change==='unsubscribed'?providerPage(later({email:r.email,unsubscribed:true})):change==='provider_error'?async()=>({data:null,error:{message:'failed'}}):async()=>({data:await empty(),error:null})}},pace:async()=>{}};
  return services219(deps as unknown as NonNullable<Parameters<typeof services219>[0]>);
 }
@@ -123,3 +123,6 @@ test('reconciliation paginates subject/recipient and never authorizes retry',asy
  const result=await services219(deps as unknown as NonNullable<Parameters<typeof services219>[0]>).verify(RECIPIENTS[0]);
  assert.equal(pages,2); assert.equal(result.matches.length,1); assert.equal(result.absenceDoesNotAuthorizeRetry,true);
 });
+
+test("missing legacy customer pointer allows verified offer/account/email binding",async()=>{assert.equal(await eligibilityFixture("null_customer").io.eligible(RECIPIENTS[0],digest219("a".repeat(64))),true);});
+test("conflicting stored customer pointer stays rejected",async()=>{assert.equal(await eligibilityFixture("conflicting_customer").io.eligible(RECIPIENTS[0],digest219("a".repeat(64))),false);});
