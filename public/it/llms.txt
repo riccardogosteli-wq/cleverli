@@ -1,0 +1,45 @@
+# Cleverli
+
+> Cleverli è una piattaforma di apprendimento per la scuola primaria svizzera con oltre 15 000 esercizi interattivi dalla 1a alla 6a classe. I contenuti scolastici in lingua tedesca si basano sul Lehrplan 21.
+
+Sito ufficiale: https://www.cleverli.ch/
+Aggiornamento: 20 settembre 2026.
+
+Cleverli offre esercizi di matematica, tedesco, natura, essere umano e società (NMG), inglese, francese, media e informatica. Le materie disponibili dipendono dalla classe. Le attività comprendono domande a scelta, testi da completare, conteggio, rette numeriche, abbinamenti e giochi di memoria. Suggerimenti e feedback immediati accompagnano l’esercizio.
+
+I genitori possono impostare ricompense personali e seguire i progressi. Sono disponibili esercizi introduttivi gratuiti e un accesso Premium a pagamento. Prezzi e condizioni aggiornati sono indicati sul sito. Il riferimento al programma non costituisce un riconoscimento o una raccomandazione ufficiale da parte di un’autorità educativa.
+
+Il totale di oltre 15 000 esercizi si riferisce all’intero catalogo, non a ogni materia, classe o lingua. Questa panoramica non sostituisce una valutazione della correttezza e della qualità pedagogica dei singoli esercizi. La traduzione italiana non implica un allineamento al Piano di studio ticinese o al Plan d’études romand (PER). Le classi indicate seguono la struttura della scuola primaria del Lehrplan 21.
+
+I collegamenti utilizzano gli indirizzi reali del sito. Il parametro `?lang=it` seleziona l’italiano nelle pagine che lo supportano; alcune pagine vengono tradotte nel browser e alcune fonti restano in tedesco. Il prefisso `/it/` di questo file non significa che tutte le pagine esistano sotto tale prefisso.
+
+## Versioni linguistiche
+
+- [Deutsch](https://www.cleverli.ch/de/llms.txt)
+- [Français](https://www.cleverli.ch/fr/llms.txt)
+- [Italiano](https://www.cleverli.ch/it/llms.txt)
+- [English](https://www.cleverli.ch/en/llms.txt)
+
+## Panoramica
+
+- [Pagina iniziale](https://www.cleverli.ch/?lang=it)
+- [Esercizi per la scuola primaria](https://www.cleverli.ch/primarschule-uebungen?lang=it)
+- [Informazioni per i docenti](https://www.cleverli.ch/lehrpersonen?lang=it)
+
+## Materie ed esempi
+
+- [Matematica per bambini](https://www.cleverli.ch/mathe-uebungen-kinder?lang=it)
+- [Tedesco per bambini](https://www.cleverli.ch/deutsch-uebungen-kinder?lang=it)
+- [Esercitarsi con le tabelline](https://www.cleverli.ch/einmaleins-ueben?lang=it)
+- [NMG, 3a classe](https://www.cleverli.ch/learn/3/science?lang=it)
+- [Inglese, 3a classe](https://www.cleverli.ch/learn/3/english?lang=it)
+- [Francese, 5a classe](https://www.cleverli.ch/learn/5/french?lang=it)
+- [Collegamento al Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=it)
+
+## Altre fonti
+
+- [Mappa del sito](https://www.cleverli.ch/sitemap.xml)
+- [Note legali](https://www.cleverli.ch/impressum)
+- [Protezione dei dati](https://www.cleverli.ch/datenschutz)
+- [Condizioni generali](https://www.cleverli.ch/agb)
+

@@ -1,0 +1,45 @@
+# Cleverli
+
+> Cleverli est une plateforme d’apprentissage pour l’école primaire suisse, avec plus de 15 000 exercices interactifs de la 1re à la 6e année du primaire. Les contenus scolaires germanophones s’appuient sur le Lehrplan 21.
+
+Site officiel : https://www.cleverli.ch/
+Mise à jour : 20 septembre 2026.
+
+Cleverli propose des exercices de mathématiques, d’allemand, de nature, être humain et société (NMG), d’anglais, de français, ainsi que de médias et informatique. Les matières disponibles dépendent de l’année scolaire. Les activités comprennent notamment des questions à choix, des textes à compléter, du dénombrement, des droites numériques, des associations et des jeux de mémoire. Des indices et un retour immédiat accompagnent l’entraînement.
+
+Les parents peuvent définir des récompenses personnelles et suivre les progrès. Des exercices de découverte sont gratuits ; l’accès Premium est payant. Les prix et conditions en vigueur sont indiqués sur le site. Le lien avec le programme ne constitue pas une reconnaissance ou une recommandation officielle d’une autorité éducative.
+
+Le total de plus de 15 000 exercices désigne l’ensemble du catalogue, et non chaque matière, année ou langue. Cet aperçu ne remplace pas une évaluation de l’exactitude et de la qualité pédagogique de chaque exercice. La traduction française ne signifie pas un alignement sur le Plan d’études romand (PER) ou le Piano di studio tessinois. Les années suivent la numérotation du primaire du Lehrplan 21, et non la numérotation HarmoS.
+
+Les liens utilisent les adresses réelles du site. Le paramètre `?lang=fr` sélectionne le français sur les pages qui le prennent en charge ; certaines pages sont traduites dans le navigateur et certaines sources restent en allemand. Le préfixe `/fr/` de ce fichier ne signifie pas que toutes les pages existent sous ce préfixe.
+
+## Versions linguistiques
+
+- [Deutsch](https://www.cleverli.ch/de/llms.txt)
+- [Français](https://www.cleverli.ch/fr/llms.txt)
+- [Italiano](https://www.cleverli.ch/it/llms.txt)
+- [English](https://www.cleverli.ch/en/llms.txt)
+
+## Présentation
+
+- [Page d’accueil](https://www.cleverli.ch/?lang=fr)
+- [Exercices pour le primaire](https://www.cleverli.ch/primarschule-uebungen?lang=fr)
+- [Informations pour les enseignants](https://www.cleverli.ch/lehrpersonen?lang=fr)
+
+## Matières et exemples
+
+- [Mathématiques pour enfants](https://www.cleverli.ch/mathe-uebungen-kinder?lang=fr)
+- [Allemand pour enfants](https://www.cleverli.ch/deutsch-uebungen-kinder?lang=fr)
+- [Tables de multiplication](https://www.cleverli.ch/einmaleins-ueben?lang=fr)
+- [NMG, 3e année](https://www.cleverli.ch/learn/3/science?lang=fr)
+- [Anglais, 3e année](https://www.cleverli.ch/learn/3/english?lang=fr)
+- [Français, 5e année](https://www.cleverli.ch/learn/5/french?lang=fr)
+- [Lien avec le Lehrplan 21](https://www.cleverli.ch/lehrplanbezug?lang=fr)
+
+## Autres sources
+
+- [Plan du site](https://www.cleverli.ch/sitemap.xml)
+- [Mentions légales](https://www.cleverli.ch/impressum)
+- [Protection des données](https://www.cleverli.ch/datenschutz)
+- [Conditions générales](https://www.cleverli.ch/agb)
+

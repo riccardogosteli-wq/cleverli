@@ -1,0 +1,45 @@
+# Cleverli
+
+> Cleverli is a learning platform for Swiss primary school pupils, with more than 15,000 interactive exercises for grades 1 to 6. Its German-language school content is based on Lehrplan 21.
+
+Official website: https://www.cleverli.ch/
+Last updated: 20 September 2026.
+
+Cleverli offers exercises in mathematics, German, nature, humans and society (NMG), English, French, and media and computing. Available subjects depend on the grade. Activities include multiple-choice questions, gap filling, counting, number lines, matching and memory games. Hints and immediate feedback support practice.
+
+Parents can set personal rewards and follow learning progress. Introductory exercises are free; Premium access is paid. The website provides current prices and binding terms. Curriculum references do not constitute official recognition or endorsement by an education authority.
+
+The total of more than 15,000 exercises refers to the entire catalogue, not each subject, grade or language. This overview does not replace an assessment of the factual accuracy and pedagogical quality of individual exercises. Translations do not imply alignment with the Plan d’études romand (PER) or Ticino’s Piano di studio. Grade numbers follow the Lehrplan 21 primary school structure.
+
+Links use the site’s actual addresses. The `?lang=en` parameter selects English on pages that support it; some pages are translated in the browser and some sources remain in German. The `/en/` prefix of this file does not mean that all pages exist under that prefix.
+
+## Language versions
+
+- [Deutsch](https://www.cleverli.ch/de/llms.txt)
+- [Français](https://www.cleverli.ch/fr/llms.txt)
+- [Italiano](https://www.cleverli.ch/it/llms.txt)
+- [English](https://www.cleverli.ch/en/llms.txt)
+
+## Overview
+
+- [Homepage](https://www.cleverli.ch/?lang=en)
+- [Primary school exercises](https://www.cleverli.ch/primarschule-uebungen?lang=en)
+- [Information for teachers](https://www.cleverli.ch/lehrpersonen?lang=en)
+
+## Subjects and examples
+
+- [Maths for children](https://www.cleverli.ch/mathe-uebungen-kinder?lang=en)
+- [German for children](https://www.cleverli.ch/deutsch-uebungen-kinder?lang=en)
+- [Multiplication practice](https://www.cleverli.ch/einmaleins-ueben?lang=en)
+- [NMG, grade 3](https://www.cleverli.ch/learn/3/science?lang=en)
+- [English, grade 3](https://www.cleverli.ch/learn/3/english?lang=en)
+- [French, grade 5](https://www.cleverli.ch/learn/5/french?lang=en)
+- [Lehrplan 21 curriculum connections](https://www.cleverli.ch/lehrplanbezug?lang=en)
+
+## Further sources
+
+- [Sitemap](https://www.cleverli.ch/sitemap.xml)
+- [Legal notice](https://www.cleverli.ch/impressum)
+- [Privacy policy](https://www.cleverli.ch/datenschutz)
+- [Terms and conditions](https://www.cleverli.ch/agb)
+
