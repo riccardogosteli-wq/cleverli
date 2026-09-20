@@ -5,7 +5,7 @@ import { getLehrplanOverview, getLehrplanSchema, LEHRPLAN_URL } from '@/lib/lehr
 export const metadata: Metadata = {
   title: 'Lehrplanbezug: Themen und Übungen',
   description: 'Entdecke, wie Cleverli-Themen mit dem Lehrplan 21 verbunden sind. Übersicht nach Klasse, Fach und Themenbereich.',
-  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   alternates: { canonical: LEHRPLAN_URL },
   openGraph: { title: 'Lehrplanbezug bei Cleverli', description: 'Themen, Übungen und Lehrplanzuordnungen für die Primarschule.', url: LEHRPLAN_URL },
 };

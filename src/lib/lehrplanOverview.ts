@@ -2,7 +2,7 @@ import { getSubjects, getTopics } from '@/data/index';
 
 export const LEHRPLAN_URL = 'https://www.cleverli.ch/lehrplanbezug';
 export const SUBJECT_LABELS: Record<string, string> = {
-  math: 'Mathematik', german: 'Deutsch', science: 'NMG', english: 'Englisch', french: 'Französisch', mi: 'Medien und Informatik',
+  math: 'Mathematik', german: 'Deutsch', science: 'Natur, Mensch, Gesellschaft (NMG)', english: 'Englisch', french: 'Französisch', mi: 'Medien und Informatik',
 };
 
 export function getLehrplanOverview() {

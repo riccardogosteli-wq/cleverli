@@ -30,12 +30,14 @@ for (const row of rows) {
 }
 assert.equal(schema.mainEntity.numberOfItems, seen.size);
 assert(total > 15000);
-assert(!sitemap().some(r => r.url.includes('/lehrplanbezug')));
+assert.equal(sitemap().filter(r => r.url === 'https://www.cleverli.ch/lehrplanbezug').length, 1);
+assert(rows.every(r => r.subjects.find(s => s.id === 'science')?.name === 'Natur, Mensch, Gesellschaft (NMG)'));
+assert(schema.mainEntity.itemListElement.filter(e => e.item.url.includes('/science/')).every(e => e.item.about === 'Natur, Mensch, Gesellschaft (NMG)'));
 for (const path of ['public/llms.txt', 'src/components/Navigation.tsx', 'src/components/MobileBottomNav.tsx']) assert(!readFileSync(path, 'utf8').includes('/lehrplanbezug'));
 const page = readFileSync('src/app/lehrplanbezug/page.tsx', 'utf8');
-assert(page.includes('index: false, follow: false, googleBot: { index: false, follow: false }'));
+assert(page.includes('index: true, follow: true, googleBot: { index: true, follow: true }'));
 assert(!/Prüfstatus|vorläufig|noch nicht geprüft|zertifiziert/.test(page));
 assert(page.includes('prefetch={false}'));
-console.log(`PASS: ${seen.size} unique topics, ${total} exercises, exact curriculum/schema parity, six grades, noindex and discovery exclusions`);
+console.log(`PASS: ${seen.size} unique topics, ${total} exercises, exact curriculum/schema parity, six grades, indexable sitemap entry, full NMG label and unchanged navigation`);
 
 assert(!page.includes('id="main-content"'), "global layout owns skip-link target");

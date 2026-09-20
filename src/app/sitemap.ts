@@ -9,6 +9,7 @@ const GRADES = [1, 2, 3, 4, 5, 6];
 export default function sitemap(): MetadataRoute.Sitemap {
   // Omit lastmod: no verified per-page significant modification dates are tracked.
   const routes: MetadataRoute.Sitemap = [
+    { url: `${BASE}/lehrplanbezug`, changeFrequency: "monthly", priority: 0.7 },
     // Marketing & conversion pages
     { url: BASE,               changeFrequency: "weekly",  priority: 1.0 },
     { url: `${BASE}/lehrpersonen`, changeFrequency: "monthly", priority: 0.8 },
