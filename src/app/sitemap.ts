@@ -1,3 +1,4 @@
+import { LEHRPLAN_LANGS, lehrplanUrl } from "@/lib/lehrplanCopy";
 import { MetadataRoute } from "next";
 import { getSubjects, getTopics } from "@/data/index";
 import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
@@ -9,7 +10,7 @@ const GRADES = [1, 2, 3, 4, 5, 6];
 export default function sitemap(): MetadataRoute.Sitemap {
   // Omit lastmod: no verified per-page significant modification dates are tracked.
   const routes: MetadataRoute.Sitemap = [
-    { url: `${BASE}/lehrplanbezug`, changeFrequency: "monthly", priority: 0.7 },
+    ...LEHRPLAN_LANGS.map(lang => ({ url: lehrplanUrl(lang), changeFrequency: "monthly" as const, priority: 0.7, alternates: { languages: Object.fromEntries(LEHRPLAN_LANGS.map(l => [l, lehrplanUrl(l)])) } })),
     // Marketing & conversion pages
     { url: BASE,               changeFrequency: "weekly",  priority: 1.0 },
     { url: `${BASE}/lehrpersonen`, changeFrequency: "monthly", priority: 0.8 },

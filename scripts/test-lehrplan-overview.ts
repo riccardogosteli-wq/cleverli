@@ -37,7 +37,7 @@ for (const path of ['public/llms.txt', 'src/components/Navigation.tsx', 'src/com
 const page = readFileSync('src/app/lehrplanbezug/page.tsx', 'utf8');
 assert(page.includes('index: true, follow: true, googleBot: { index: true, follow: true }'));
 assert(!/Prüfstatus|vorläufig|noch nicht geprüft|zertifiziert/.test(page));
-assert(page.includes('prefetch={false}'));
+assert(readFileSync('src/app/lehrplanbezug/LehrplanOverviewClient.tsx', 'utf8').includes('prefetch={false}'));
 console.log(`PASS: ${seen.size} unique topics, ${total} exercises, exact curriculum/schema parity, six grades, indexable sitemap entry, full NMG label and unchanged navigation`);
 
 assert(!page.includes('id="main-content"'), "global layout owns skip-link target");
