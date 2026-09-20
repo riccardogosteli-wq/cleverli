@@ -1,4 +1,5 @@
 import { withPageSocial } from "@/lib/pageSocialMetadata";
+import CurriculumOverviewLink from "@/components/CurriculumOverviewLink";
 import type { Metadata } from "next";
 import AdsPrimarschuleClient from "../ads/primarschule/AdsPrimarschuleClient";
 
@@ -16,5 +17,5 @@ export const metadata: Metadata = withPageSocial({
 });
 
 export default function PrimarschuleUebungenPage() {
-  return <AdsPrimarschuleClient />;
+  return <><AdsPrimarschuleClient /><div className="mx-auto max-w-5xl px-4 pb-24 sm:px-6"><CurriculumOverviewLink /></div></>;
 }

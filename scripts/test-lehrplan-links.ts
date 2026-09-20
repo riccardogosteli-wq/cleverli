@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+const read = (path: string) => readFileSync(path, 'utf8');
+const homepage = read('src/app/HomeClient.tsx');
+assert(homepage.slice(homepage.indexOf('<footer')).includes('href="/lehrplanbezug"'));
+assert.equal((read('src/lib/i18n.ts').match(/footerCurriculum:/g) ?? []).length, 4);
+for (const path of ['src/app/lehrpersonen/TeacherPage.tsx', 'src/app/primarschule-uebungen/page.tsx']) assert(read(path).includes('<CurriculumOverviewLink />'));
+for (const path of ['src/app/ads/primarschule/AdsPrimarschuleClient.tsx', 'src/components/Navigation.tsx', 'src/components/MobileBottomNav.tsx']) assert(!read(path).includes('CurriculumOverviewLink') && !read(path).includes('/lehrplanbezug'));
+assert(read('src/components/CurriculumOverviewLink.tsx').includes('href="/lehrplanbezug"'));
+console.log('PASS: footer + both approved contexts, four footer locales, main navigation and paid landing component unchanged');

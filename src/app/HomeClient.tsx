@@ -418,6 +418,7 @@ export default function Home() {
             <span>· {tr("footerCountry")}</span>
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
+            <Link href="/lehrplanbezug" className="hover:text-gray-600">{tr("footerCurriculum")}</Link>
             <Link href="/impressum" className="hover:text-gray-600">{tr("footerImpressum")}</Link>
             <Link href="/datenschutz" className="hover:text-gray-600">{tr("footerDatenschutz")}</Link>
             <Link href="/agb" className="hover:text-gray-600">{tr("footerAgb")}</Link>
