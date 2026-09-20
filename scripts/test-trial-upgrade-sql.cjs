@@ -19,6 +19,18 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
  const id='3823f764-03b8-4617-b808-d798fc9e9a10', user='bb7c9111-8560-42a8-939c-2a3a4e70179c';
  await db.exec(`insert into trial_upgrade_offers(id,token_hash,user_id,customer_id,amount,deadline) values('${id}',repeat('b',64),'${user}','cus_VIOr4Apz2BT3cJ',21900,1790535479);`);ok();
  const reserve=`select reserve_trial_upgrade_mail('stephan-michi@gmx.net','${id}','${user}','cus_VIOr4Apz2BT3cJ',repeat('b',64),repeat('c',64))`;
+ const migration=fs.readFileSync('supabase/2026-09-20-stephan-trial-upgrade.sql','utf8');
+ const reservationFunction=migration.match(/create function public.reserve_trial_upgrade_mail[\s\S]*?\$\$;/)[0].replace('create function','create or replace function');
+ // Clock-only variants prove unsafe cron boundaries fail BEFORE reservation.
+ const provisionalDeadline=(await db.query('select deadline from trial_upgrade_offers')).rows[0].deadline;
+ for(const time of ['14:56:40','15:10:00']) {
+  const timestamp=Date.parse('2026-09-20T'+time+'Z')/1000;
+  await db.exec(reservationFunction.replace("date_trunc('second',clock_timestamp())",`to_timestamp(${timestamp})`));
+  await assert.rejects(db.query(reserve),/trial_final_warm_window_requires_review/);ok();
+  assert.equal((await db.query('select count(*) from trial_upgrade_mail')).rows[0].count,0);
+  assert.equal((await db.query('select deadline from trial_upgrade_offers')).rows[0].deadline,provisionalDeadline);ok();
+ }
+ await db.exec(reservationFunction);
  // Real migration executes with current local clock, without any live services.
  const reservation=(await db.query(reserve.replace('select reserve_trial_upgrade_mail(', 'select * from reserve_trial_upgrade_mail('))).rows[0];
  assert.equal(Number(reservation.deadline)-Date.parse(reservation.claimed_at)/1000,259200);ok();
@@ -27,8 +39,6 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
  await assert.rejects(db.query(reserve),/duplicate key/);ok();
  // Clock-only test variant of the SAME reservation function: future dispatch must
  // fail before changing the already stored receipt/deadline. Restore exact SQL after.
- const migration=fs.readFileSync('supabase/2026-09-20-stephan-trial-upgrade.sql','utf8');
- const reservationFunction=migration.match(/create function public.reserve_trial_upgrade_mail[\s\S]*?\$\$;/)[0].replace('create function','create or replace function');
  const beforeFuture=JSON.stringify((await db.query('select * from trial_upgrade_mail')).rows);
  await db.exec(reservationFunction.replace("date_trunc('second',clock_timestamp())",'to_timestamp(1790528279-259200)'));
  await assert.rejects(db.query(reserve),/three_day_trial_window_requires_review/);ok();

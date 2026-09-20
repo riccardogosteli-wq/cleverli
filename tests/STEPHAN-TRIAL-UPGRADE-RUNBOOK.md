@@ -14,6 +14,12 @@ User6092 explicitly approved a shorter offer. Parent selected **exactly three da
 
 The approved trial ends **27 September 2026 at 18:57:59 Europe/Zurich**. Checkout remains capped at **18:47:59** (ten-minute safety margin). The complete three-day offer must fit before this cap. Route, provider adapter and SQL reservation continue to fail closed for a future dispatch with insufficient time; no silent shortening, active-before-Checkout bypass, early cancellation or trial extension. The latest possible send start is **24 September 2026 at 18:47:59 Zurich**; operator should allow processing margin rather than aim for the last second.
 
+### Independent review: daily final-warmup window
+
+Existing cron cadence is 86400seconds, but final-session warming begins at86000seconds. Also Stripe needs at least30minutes to create a Checkout session. Dispatch is therefore allowed only when the resulting unchanged three-day deadline is **3600 through85000seconds after the last scheduled daily15:00UTC run**. This is enforced by pure policy, route, SQL reservation and provider dispatch; the mail transport also checks the persisted deadline. No scheduler changes, no deadline extension or shortening.
+
+Equivalently, the daily allowed UTC send-start window is **16:00:00 through the following14:36:40** (inclusive), additionally constrained by the trial cap. **14:56:40UTC and15:10UTC are rejected before reservation**. The planned evening send around21:xxZurich/19:xxUTC is within the safe window. UTC is explicit, unaffected by local DST. At least one hour permits processing/cron delay margin, but does not guarantee cron availability; parent must monitor final preparation before expiry. Near any boundary, do not aim for the final permitted second: post-reservation checks may fail safely and lock the send.
+
 SQL truncates the send-start reservation timestamp to whole seconds and stores deadline = claimed_at + 259200 exactly. This is the atomic beginning of the send operation, not the later provider acceptance or mailbox-delivery timestamp. Fresh rechecks and dispatch must finish within15seconds; provider acceptance timing cannot be guaranteed. Reservation is irreversible even if a later step fails. Parent verifies timestamps and receipt readback after the one approved browser send.
 
 ## Scope and identity
@@ -100,3 +106,9 @@ Logs: `.qa/trial-upgrade/` in this worktree, not committed. Initial build's out-
 - Final scoped lint, diff check and production build passed. Logs: `.qa/trial-upgrade/*-three-day.log`.
 - Previous validity blocker is resolved by actual approval6092. Remaining release gates belong to parent: independent review, real PostgreSQL/concurrency rehearsal, migration, deployment, browser QA, fresh eligibility/suppressions, exactly one authorized email and provider receipt/readback.
 - No new known policy blocker. Residual financial/notification limitations above remain disclosed. No push, deployment, migration, live private material, email, payment or subscription mutation occurred in this follow-up.
+
+## Independent review warm-window follow-up
+
+The review blocker is addressed by conditional dispatch timing, not by changing the offered three days or the scheduler. Existing original19 campaign remains untouched. No live effects. The parent-reported real PostgreSQL five-check concurrency rehearsal covers the prior financial migration; the added timing guard is separately exercised in offline SQL, and parent should rehearse/read back the latest function before release.
+
+Final review-fix verification: **61 Node tests (28 scoped +33 original),30 core checks,28 offline SQL assertions, scoped lint and production build passed**. SQL confirms both unsafe14:56:40/15:10UTC attempts leave zero mail reservations and the provisional deadline unchanged. Pure-policy tests cover inclusive3600/85000 edges and the planned19:20UTC evening send. Route tests prove rejection before material/provider access. `vercel.json`, original19 implementation/template/migration and original warming function compare unchanged. No new known timing-policy blocker for the planned evening dispatch; parent re-review and live release gates remain required.

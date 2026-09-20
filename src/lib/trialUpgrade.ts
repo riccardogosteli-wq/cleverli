@@ -48,7 +48,17 @@ export async function fulfillTrialUpgrade(sessionId: string, io: TrialFulfillmen
   return first;
 }
 
+// Existing cron is daily at 15:00 UTC. The deadline must be 1h..85000s
+// after its last scheduled run: enough creation margin and inside the 86000s
+// warming horizon. This restricts dispatch time, NEVER the three-day duration.
+export function safeFinalWarmWindow(deadline: number): boolean {
+  if (!Number.isSafeInteger(deadline)) return false;
+  const offset = ((deadline - 15 * 3600) % 86400 + 86400) % 86400;
+  return offset >= 3600 && offset <= 85000;
+}
+
 // V3 promises a full three days. Never send it with a shorter purchasable window.
 export function threeDayTrialWindow(now: number): boolean {
-  return now + TRIAL_OFFER_SECONDS <= TRIAL_UPGRADE.trialEnd - 600;
+  return Number.isSafeInteger(now) && now + TRIAL_OFFER_SECONDS <= TRIAL_UPGRADE.trialEnd - 600
+    && safeFinalWarmWindow(now + TRIAL_OFFER_SECONDS);
 }

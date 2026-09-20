@@ -140,6 +140,10 @@ begin
  and p.premium_plan='monthly' and p.stripe_customer_id=p_customer and p.stripe_subscription_id=o.subscription_id) then raise exception 'recipient_changed'; end if;
  d:=floor(extract(epoch from n))::bigint+259200;
  if d>o.trial_end-600 then raise exception 'three_day_trial_window_requires_review'; end if;
+ -- Daily 15UTC cron, no schedule changes. Require full final-session margin.
+ if mod(mod(d-54000,86400)+86400,86400) not between 3600 and 85000 then
+   raise exception 'trial_final_warm_window_requires_review';
+ end if;
  insert into public.trial_upgrade_mail(recipient,offer_id,body_hash,claimed_at,deadline)
  values(p_recipient,p_offer,p_body,n,d) returning * into result;
  update public.trial_upgrade_offers set deadline=d where id=p_offer;

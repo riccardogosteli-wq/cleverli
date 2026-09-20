@@ -102,7 +102,7 @@ test('webhook subscription update/delete, invoice and late checkout use guard; p
  assert.equal(server.includes('refunds.create'),false);assert.equal(server.includes('invoices.pay'),false);
 });
 
-import { threeDayTrialWindow } from '../src/lib/trialUpgrade';
+import { threeDayTrialWindow, safeFinalWarmWindow } from '../src/lib/trialUpgrade';
 import { trialUpgradeServices, warmTrialUpgrade } from '../src/lib/trialUpgradeServer';
 test('approved three-day window fits now but future insufficient window fails closed',async()=>{
  assert.equal(threeDayTrialWindow(A.trialEnd-259200-600),true);assert.equal(threeDayTrialWindow(A.trialEnd-259200),false);assert.equal(threeDayTrialWindow(A.trialEnd-259200-601),true);assert.equal(threeDayTrialWindow(A.trialEnd-259200-599),false);
@@ -159,4 +159,19 @@ test('dedicated final session is prepared through the full three-day deadline',a
 test('mail blocks stale seven-day SQL duration before provider dispatch',async()=>{
  const f=mail();const reserve=f.io.reserve;f.io.reserve=async(hash,body)=>({...await reserve(hash,body),deadline:Math.floor(Date.now()/1000)+604800});
  await assert.rejects(executeTrialMail(raw,true,true,f.io),/reservation_duration_mismatch/);assert.equal(f.count(),0);assert.ok(await f.io.status());
+});
+
+test('daily final warmup rejects 14:56 and 15:10 UTC; actual evening dispatch and safe edges pass',()=>{
+ const seconds=(time:string)=>Date.parse('2026-09-20T'+time+'Z')/1000;
+ for(const time of ['14:56:40','15:10:00','14:36:41','15:59:59']) assert.equal(threeDayTrialWindow(seconds(time)),false,time);
+ for(const time of ['19:20:00','16:00:00','14:36:40']) assert.equal(threeDayTrialWindow(seconds(time)),true,time);
+ assert.equal(safeFinalWarmWindow(NaN),false);assert.equal(safeFinalWarmWindow(Infinity),false);
+});
+test('unsafe daily cron timing is rejected by route before material/reservation/provider access',async()=>{
+ const originalNow=Date.now;
+ try { for(const time of ['14:56:40','15:10:00']) {
+   Date.now=()=>Date.parse('2026-09-20T'+time+'Z');
+   const f=new FormData();f.set('recipient',A.email);f.set('action','send');f.set('confirmed','yes');
+   const r=await POST(request(f));assert.equal(r.status,409);assert.equal((await r.json()).error,'three_day_trial_window_requires_review');
+ }} finally { Date.now=originalNow; }
 });
