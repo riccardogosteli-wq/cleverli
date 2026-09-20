@@ -71,7 +71,7 @@ test('route rejects unauthenticated and malformed cookies', async () => {
   assert.equal((await GET(request(undefined,undefined,'v1.123.x'))).status,401);
 });
 test('authenticated UI has preview and one-recipient send; no capability',async()=>{
-  const response=await GET(request()); assert.equal(response.status,200); const html=await response.text(); assert.match(html,/Genau eine E-Mail senden/); assert.equal(html.includes('a'.repeat(64)),false);
+  const response=await GET(request()); assert.equal(response.status,200); assert.equal(response.headers.get('Referrer-Policy'),'same-origin'); const html=await response.text(); assert.match(html,/Genau eine E-Mail senden/); assert.equal(html.includes('a'.repeat(64)),false);
 });
 test('route rejects cross-origin, unknown recipients/actions and missing confirmation',async()=>{
   const form=new FormData(); form.set('action','send'); form.set('recipient',email);
