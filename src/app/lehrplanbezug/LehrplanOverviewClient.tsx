@@ -66,7 +66,7 @@ export default function LehrplanOverviewClient({ allRows, initialLang }: { allRo
         <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-6" aria-labelledby="sources">
           <h2 id="sources" className="text-xl font-bold">{c.sources}</h2>
           <p className="mt-3 leading-relaxed">{c.sourceText}</p>
-          <ul className="mt-4 space-y-3 text-green-800"><li><a className="inline-block py-2 font-semibold underline underline-offset-4" href="https://www.lehrplan21.ch/">{c.sourceGeneral}</a></li><li><a className="inline-block py-2 font-semibold underline underline-offset-4" href="https://zh.lehrplan.ch/">{c.sourceZurich}</a></li></ul>
+          <ul className="mt-4 space-y-3 text-green-800"><li><a className="inline-block py-2 font-semibold underline underline-offset-4" href="https://www.lehrplan21.ch/">{c.sourceGeneral}</a></li></ul>
           <p className="mt-4 text-sm leading-relaxed text-slate-500">{c.disclaimer}</p>
         </section>
       </div>
