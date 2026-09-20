@@ -1,0 +1,34 @@
+# Cleverli
+
+> Cleverli ist eine Lernplattform für die Schweizer Primarschule mit mehr als 15’000 interaktiven Übungen für die 1. bis 6. Klasse. Die deutschsprachigen Lerninhalte orientieren sich am Lehrplan 21.
+
+Offizielle Website: https://www.cleverli.ch/
+Stand dieser Übersicht: 20. September 2026.
+
+Cleverli bietet Übungen in Mathematik, Deutsch, NMG (Natur, Mensch, Gesellschaft), Englisch, Französisch sowie Medien und Informatik. Das Fachangebot hängt von der Klasse ab. Die Übungen umfassen unter anderem Auswahlaufgaben, Lückentexte, Zählaufgaben, Zahlenstrahlen, Zuordnungen und Memory. Hinweise und direktes Feedback unterstützen das Üben.
+
+Eltern können persönliche Belohnungen festlegen und Lernfortschritte verfolgen. Es gibt kostenlose Einstiegsaufgaben und kostenpflichtigen Premium-Zugang. Verbindliche aktuelle Preise und Bedingungen stehen auf der Website. Lehrplanbezug bedeutet keine offizielle Anerkennung oder Empfehlung durch eine Bildungsbehörde.
+
+Die Angabe «15’000+» bezeichnet den gesamten Übungsbestand, nicht die Anzahl pro Fach oder Klasse. Die Übersicht ersetzt keine Prüfung einzelner Aufgaben auf fachliche oder pädagogische Qualität.
+
+## Überblick
+
+- [Startseite](https://www.cleverli.ch/): Produktüberblick und aktuelles Angebot.
+- [Übungen für die Primarschule](https://www.cleverli.ch/primarschule-uebungen): Fächer, Beispiele und Einstieg ins Üben.
+- [Informationen für Lehrpersonen](https://www.cleverli.ch/lehrpersonen): Cleverli im schulischen Kontext.
+
+## Fächer und Beispiele
+
+- [Mathe für Kinder](https://www.cleverli.ch/mathe-uebungen-kinder): Rechnen, Geometrie und weitere mathematische Themen.
+- [Deutsch für Kinder](https://www.cleverli.ch/deutsch-uebungen-kinder): Lesen, Wortschatz, Rechtschreibung und Grammatik.
+- [Einmaleins üben](https://www.cleverli.ch/einmaleins-ueben): Aufgaben zum kleinen Einmaleins.
+- [NMG, 3. Klasse](https://www.cleverli.ch/learn/3/science): Themen aus Natur, Mensch und Gesellschaft.
+- [Englisch, 3. Klasse](https://www.cleverli.ch/learn/3/english): Themen und Übungen zum Englischlernen.
+- [Französisch, 5. Klasse](https://www.cleverli.ch/learn/5/french): Themen und Übungen zum Französischlernen.
+
+## Weitere Quellen
+
+- [Sitemap](https://www.cleverli.ch/sitemap.xml): Verzeichnis der öffentlich auffindbaren Seiten, Klassen und Themen.
+- [Impressum](https://www.cleverli.ch/impressum): Anbieter und Kontakt.
+- [Datenschutz](https://www.cleverli.ch/datenschutz): Informationen zur Datenverarbeitung.
+- [AGB](https://www.cleverli.ch/agb): Nutzungsbedingungen.
