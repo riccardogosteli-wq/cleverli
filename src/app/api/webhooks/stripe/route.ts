@@ -436,18 +436,6 @@ export async function POST(req: NextRequest) {
             },
           });
 
-          const emailTasks: Promise<unknown>[] = [
-            sendAdminPaymentNotificationEmail({
-              customerEmail,
-              plan: synced.plan as "monthly" | "yearly",
-              amountTotal: invoice.amount_paid,
-              currency: invoice.currency,
-              stripeCustomerId,
-              stripeSubscriptionId: subscriptionId,
-              idempotencyKey: `cleverli-${invoice.id}-admin`,
-            }),
-          ];
-
           let sendActivation = false;
           if (customerEmail) {
             try {
@@ -461,6 +449,18 @@ export async function POST(req: NextRequest) {
               console.error("[stripe-webhook] Activation email history check failed; customer email skipped");
             }
           }
+          const emailTasks: Promise<unknown>[] = [
+            sendAdminPaymentNotificationEmail({
+              customerEmail,
+              plan: synced.plan as "monthly" | "yearly",
+              amountTotal: invoice.amount_paid,
+              currency: invoice.currency,
+              stripeCustomerId,
+              stripeSubscriptionId: subscriptionId,
+              idempotencyKey: `cleverli-${invoice.id}-admin`,
+            }),
+          ];
+
           if (customerEmail && sendActivation) {
             emailTasks.push(sendPaymentConfirmationEmail(
               customerEmail,
