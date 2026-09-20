@@ -8,6 +8,7 @@ import {
 } from "@/lib/email";
 import { logUserActivity } from "@/lib/userActivityServer";
 import { sendMetaConversion } from "@/lib/metaConversions";
+import { redeemTrialUpgrade, settledTrialSubscription } from "@/lib/trialUpgradeServer";
 import { redeemPrivateOffer } from "@/lib/privateOfferServer";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -112,6 +113,7 @@ function invoiceSubscriptionId(invoice: Stripe.Invoice): string | null {
 }
 
 async function syncSubscription(subscription: Stripe.Subscription) {
+  if (await settledTrialSubscription(subscription.id)) return null;
   const userId = subscription.metadata?.userId;
   const plan = subscription.metadata?.plan ?? "monthly";
   const status = subscription.status;
@@ -185,7 +187,9 @@ export async function POST(req: NextRequest) {
           if (session.payment_status !== "paid" || session.metadata?.private_offer_id !== privateOffer) {
             return NextResponse.json({ error: "private_payment_not_paid" }, { status: 409 });
           }
-          const firstRedemption = await redeemPrivateOffer(session);
+          const firstRedemption = session.metadata?.trial_upgrade_id
+            ? await redeemTrialUpgrade(session.id)
+            : await redeemPrivateOffer(session);
           if (!firstRedemption) return NextResponse.json({ ok: true });
         } catch {
           // Retriable; never leak session URLs, tokens or Stripe response bodies.
@@ -281,6 +285,7 @@ export async function POST(req: NextRequest) {
     const customerEmail = session.customer_details?.email ?? "";
     const stripeCustomerId = session.customer as string;
     const stripeSubscriptionId = session.subscription as string;
+    if (await settledTrialSubscription(stripeSubscriptionId)) return NextResponse.json({ ok: true });
 
     if (!userId) {
       Sentry.captureMessage("[stripe-webhook] no userId in checkout metadata", "error");

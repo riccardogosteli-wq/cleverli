@@ -1,5 +1,6 @@
 import { timingSafeEqual } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
+import { reconcileTrialUpgrade } from "@/lib/trialUpgradeServer";
 import { warmPrivateOffers } from "@/lib/privateOfferServer";
 
 export const runtime = "nodejs";
@@ -12,7 +13,14 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
   try {
-    return NextResponse.json({ prepared: await warmPrivateOffers() }, { headers: { "Cache-Control": "no-store" } });
+    // Never let a pending cancellation prevent warming the original campaign.
+    const [trialUpgrade, prepared] = await Promise.allSettled([reconcileTrialUpgrade(), warmPrivateOffers()]);
+    if (trialUpgrade.status === "rejected" || prepared.status === "rejected") {
+      return NextResponse.json({ error: "private_offer_reconciliation_requires_review",
+        trialUpgradeFailed: trialUpgrade.status === "rejected", preparationFailed: prepared.status === "rejected",
+      }, { status: 503, headers: { "Cache-Control": "no-store" } });
+    }
+    return NextResponse.json({ trialUpgrade: trialUpgrade.value, prepared: prepared.value }, { headers: { "Cache-Control": "no-store" } });
   } catch {
     // Fail visibly to the cron monitor, never serialize Stripe exceptions/capabilities.
     return NextResponse.json({ error: "private_offer_preparation_failed" }, { status: 503 });
