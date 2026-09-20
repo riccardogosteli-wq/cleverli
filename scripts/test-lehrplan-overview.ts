@@ -37,3 +37,5 @@ assert(page.includes('index: false, follow: false, googleBot: { index: false, fo
 assert(!/Prüfstatus|vorläufig|noch nicht geprüft|zertifiziert/.test(page));
 assert(page.includes('prefetch={false}'));
 console.log(`PASS: ${seen.size} unique topics, ${total} exercises, exact curriculum/schema parity, six grades, noindex and discovery exclusions`);
+
+assert(!page.includes('id="main-content"'), "global layout owns skip-link target");

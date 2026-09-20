@@ -15,7 +15,7 @@ export default function LehrplanOverviewPage() {
   const topics = rows.flatMap(row => row.subjects.flatMap(subject => subject.topics));
   const count = topics.reduce((sum, topic) => sum + topic.count, 0);
   return (
-    <main id="main-content" className="min-h-screen bg-[#f7faf6] px-4 pb-28 pt-10 text-slate-800 sm:px-6 sm:pt-16">
+    <main className="min-h-screen bg-[#f7faf6] px-4 pb-28 pt-10 text-slate-800 sm:px-6 sm:pt-16">
       <script id="lehrplan-structured-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getLehrplanSchema(rows)).replace(/</g, '\\u003c') }} />
       <div className="mx-auto max-w-5xl">
         <header className="max-w-3xl">
@@ -24,7 +24,7 @@ export default function LehrplanOverviewPage() {
           <p className="mt-6 text-lg leading-relaxed text-slate-600">Vom ersten Zählen bis zu anspruchsvolleren Texten: Hier findest du unsere Themen, die passenden Übungen und ihren Bezug zum Lehrplan 21. Nach Klasse und Fach geordnet, damit du schnell das Passende findest.</p>
         </header>
         <div className="my-9 grid grid-cols-3 gap-3" aria-label="Übersicht des Übungsangebots">
-          {[['1 bis 6', 'Klassen'], [String(topics.length), 'Themen'], [new Intl.NumberFormat('de-CH').format(count), 'Übungen']].map(([value, label]) => <div key={label} className="rounded-2xl border border-green-100 bg-white p-4 sm:p-6"><p className="text-2xl font-extrabold text-green-800 sm:text-3xl">{value}</p><p className="mt-1 text-sm text-slate-600">{label}</p></div>)}
+          {[['1 bis 6', 'Klassen'], [String(topics.length), 'Themen'], [new Intl.NumberFormat('de-CH').format(count), 'Übungen']].map(([value, label]) => <div key={label} className="rounded-2xl border border-green-100 bg-white p-3 sm:p-6"><p className="text-xl font-extrabold text-green-800 sm:text-3xl">{value}</p><p className="mt-1 text-sm text-slate-600">{label}</p></div>)}
         </div>
         <section className="rounded-2xl border border-green-100 bg-green-50 p-6" aria-labelledby="orientation">
           <h2 id="orientation" className="text-xl font-bold text-green-950">So liest du die Übersicht</h2>
@@ -39,7 +39,7 @@ export default function LehrplanOverviewPage() {
           {rows.map(row => <section key={row.grade} id={`klasse-${row.grade}`} className="scroll-mt-24" aria-labelledby={`titel-${row.grade}`}>
             <div className="mb-4 flex items-baseline gap-3"><h2 id={`titel-${row.grade}`} className="text-2xl font-extrabold">{row.grade}. Klasse</h2><span className="text-sm text-slate-500">Zyklus {row.cycle}</span></div>
             <div className="space-y-3">{row.subjects.map(subject => <details key={subject.id} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white" open={row.grade === 1 && subject.id === 'math'}>
-              <summary className="cursor-pointer px-5 py-5 font-bold text-slate-900 focus-visible:outline-2 focus-visible:outline-green-700"><span className="ml-2">{subject.name}</span><span className="ml-3 text-sm font-normal text-slate-500">{subject.topics.length} Themen</span></summary>
+              <summary className="cursor-pointer px-5 py-5 font-bold text-slate-900 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-green-700"><span className="ml-2">{subject.name}</span><span className="ml-3 text-sm font-normal text-slate-500">{subject.topics.length} Themen</span></summary>
               <ul className="divide-y divide-slate-100 border-t border-slate-100">{subject.topics.map(topic => <li key={topic.id} className="grid gap-3 px-5 py-5 sm:grid-cols-[1fr_auto] sm:items-center">
                 <div><h3 className="font-bold">{topic.title}</h3><p className="mt-1 text-sm text-slate-500">{topic.count} Übungen</p><p className="mt-2 break-words text-sm leading-relaxed text-slate-600"><span className="font-semibold">Lehrplanbezug: </span>{topic.codes.join(' · ')}</p></div>
                 <Link prefetch={false} href={topic.url} className="inline-flex min-h-11 items-center justify-center rounded-xl bg-green-50 px-4 py-3 text-sm font-bold text-green-800 hover:bg-green-100 focus-visible:outline-2 focus-visible:outline-green-700" aria-label={`${topic.title}, ${row.grade}. Klasse: Übungen ansehen`}>Übungen ansehen <span aria-hidden="true" className="ml-2">→</span></Link>
