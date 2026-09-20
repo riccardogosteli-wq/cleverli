@@ -3,6 +3,8 @@ export const LEHRPLAN_LANGS: Lang[] = ['de', 'fr', 'it', 'en'];
 export const LEHRPLAN_URL = 'https://www.cleverli.ch/lehrplanbezug';
 export const lehrplanUrl = (lang: Lang) => lang === 'de' ? LEHRPLAN_URL : `${LEHRPLAN_URL}?lang=${lang}`;
 export const lehrplanGrade = (n: number, lang: Lang) => lang === 'fr' ? `${n === 1 ? '1re' : `${n}e`} année` : lang === 'it' ? `${n}a classe` : lang === 'en' ? `Grade ${n}` : `${n}. Klasse`;
+// Explicit separators keep SSR and browsers consistent across ICU versions.
+export const lehrplanNumber = (value: number, lang: Lang) => String(value).replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'fr' ? '\u202f' : lang === 'en' ? ',' : "'");
 export const lehrplanCopy = {
  de: {
  locale:'de-CH', title:'Lehrplanbezug: Themen und Übungen', description:'Entdecke, wie Cleverli-Themen mit dem Lehrplan 21 verbunden sind. Übersicht nach Klasse, Fach und Themenbereich.', eyebrow:'LERNEN MIT BEZUG ZUM LEHRPLAN 21', heading:'Was dein Kind bei Cleverli übt', intro:'Vom ersten Zählen bis zu anspruchsvolleren Texten: Hier findest du unsere Themen, die passenden Übungen und ihren Bezug zum Lehrplan 21. Nach Klasse und Fach geordnet, damit du schnell das Passende findest.', range:'1 bis 6', grades:'Klassen', topics:'Themen', exercises:'Übungen', overview:'Übersicht des Übungsangebots', orientation:'So liest du die Übersicht',

@@ -6,7 +6,7 @@ import { useLang } from '@/lib/LangContext';
 import type { Lang } from '@/lib/i18n';
 import type { getLehrplanOverview } from '@/lib/lehrplanOverview';
 import { getLehrplanSchema } from '@/lib/lehrplanSchema';
-import { LEHRPLAN_LANGS, lehrplanCopy, lehrplanGrade, lehrplanUrl } from '@/lib/lehrplanCopy';
+import { LEHRPLAN_LANGS, lehrplanCopy, lehrplanGrade, lehrplanNumber, lehrplanUrl } from '@/lib/lehrplanCopy';
 
 export default function LehrplanOverviewClient({ allRows, initialLang }: { allRows: Record<Lang, ReturnType<typeof getLehrplanOverview>>; initialLang: Lang }) {
   const { lang: selectedLang, setLang } = useLang();
@@ -39,7 +39,7 @@ export default function LehrplanOverviewClient({ allRows, initialLang }: { allRo
           <p className="mt-6 text-lg leading-relaxed text-slate-600">{c.intro}</p>
         </header>
         <div className="my-9 grid grid-cols-3 gap-3" aria-label={c.overview}>
-          {[[c.range, c.grades], [String(topics.length), c.topics], [new Intl.NumberFormat(c.locale).format(count), c.exercises]].map(([value, label]) => <div key={label} className="rounded-2xl border border-green-100 bg-white p-3 sm:p-6"><p className="text-base font-extrabold text-green-800 min-[360px]:text-xl sm:text-3xl">{value}</p><p className="mt-1 text-xs text-slate-600 min-[360px]:text-sm">{label}</p></div>)}
+          {[[c.range, c.grades], [String(topics.length), c.topics], [lehrplanNumber(count, lang), c.exercises]].map(([value, label]) => <div key={label} className="rounded-2xl border border-green-100 bg-white p-3 sm:p-6"><p className="text-base font-extrabold text-green-800 min-[360px]:text-xl sm:text-3xl">{value}</p><p className="mt-1 text-xs text-slate-600 min-[360px]:text-sm">{label}</p></div>)}
         </div>
         <section className="rounded-2xl border border-green-100 bg-green-50 p-6" aria-labelledby="orientation">
           <h2 id="orientation" className="text-xl font-bold text-green-950">{c.orientation}</h2>

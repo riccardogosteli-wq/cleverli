@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { getLehrplanOverview, getLehrplanSchema } from '../src/lib/lehrplanOverview';
-import { LEHRPLAN_LANGS, lehrplanCopy, lehrplanUrl } from '../src/lib/lehrplanCopy';
+import { LEHRPLAN_LANGS, lehrplanCopy, lehrplanNumber, lehrplanUrl } from '../src/lib/lehrplanCopy';
 import { getLehrplanTopicTitle } from '../src/lib/lehrplanTopicTitles';
 import sitemap from '../src/app/sitemap';
 const de = getLehrplanOverview();
@@ -27,3 +27,6 @@ for (const l of ['fr','it','en'] as const) {
  }
 }
 for (const l of ['it','en'] as const) assert.notEqual(getLehrplanTopicTitle('bonjour-classe-3',l,'Bonjour et la classe'),'Bonjour et la classe');
+
+assert.equal(lehrplanNumber(15190,"fr"),"15\u202f190");
+assert.equal(lehrplanNumber(15190,"en"),"15,190");
