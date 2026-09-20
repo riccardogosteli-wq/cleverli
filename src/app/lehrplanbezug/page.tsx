@@ -24,7 +24,7 @@ export default function LehrplanOverviewPage() {
           <p className="mt-6 text-lg leading-relaxed text-slate-600">Vom ersten Zählen bis zu anspruchsvolleren Texten: Hier findest du unsere Themen, die passenden Übungen und ihren Bezug zum Lehrplan 21. Nach Klasse und Fach geordnet, damit du schnell das Passende findest.</p>
         </header>
         <div className="my-9 grid grid-cols-3 gap-3" aria-label="Übersicht des Übungsangebots">
-          {[['1 bis 6', 'Klassen'], [String(topics.length), 'Themen'], [new Intl.NumberFormat('de-CH').format(count), 'Übungen']].map(([value, label]) => <div key={label} className="rounded-2xl border border-green-100 bg-white p-3 sm:p-6"><p className="text-xl font-extrabold text-green-800 sm:text-3xl">{value}</p><p className="mt-1 text-sm text-slate-600">{label}</p></div>)}
+          {[['1 bis 6', 'Klassen'], [String(topics.length), 'Themen'], [new Intl.NumberFormat('de-CH').format(count), 'Übungen']].map(([value, label]) => <div key={label} className="rounded-2xl border border-green-100 bg-white p-3 sm:p-6"><p className="text-base font-extrabold text-green-800 min-[360px]:text-xl sm:text-3xl">{value}</p><p className="mt-1 text-sm text-slate-600">{label}</p></div>)}
         </div>
         <section className="rounded-2xl border border-green-100 bg-green-50 p-6" aria-labelledby="orientation">
           <h2 id="orientation" className="text-xl font-bold text-green-950">So liest du die Übersicht</h2>
