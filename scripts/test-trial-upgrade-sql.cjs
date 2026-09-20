@@ -19,16 +19,29 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
  const id='3823f764-03b8-4617-b808-d798fc9e9a10', user='bb7c9111-8560-42a8-939c-2a3a4e70179c';
  await db.exec(`insert into trial_upgrade_offers(id,token_hash,user_id,customer_id,amount,deadline) values('${id}',repeat('b',64),'${user}','cus_VIOr4Apz2BT3cJ',21900,1790535479);`);ok();
  const reserve=`select reserve_trial_upgrade_mail('stephan-michi@gmx.net','${id}','${user}','cus_VIOr4Apz2BT3cJ',repeat('b',64),repeat('c',64))`;
- // Current real case must reject original V3's seven-day promise with zero reservation.
- await assert.rejects(db.query(reserve),/seven_day_trial_window_requires_review|offer_changed/);assert.equal((await db.query('select count(*) from trial_upgrade_mail')).rows[0].count,0);ok();
+ // Real migration executes with current local clock, without any live services.
+ const reservation=(await db.query(reserve.replace('select reserve_trial_upgrade_mail(', 'select * from reserve_trial_upgrade_mail('))).rows[0];
+ assert.equal(Number(reservation.deadline)-Date.parse(reservation.claimed_at)/1000,259200);ok();
+ assert.equal(Number((await db.query('select deadline from trial_upgrade_offers')).rows[0].deadline),Number(reservation.deadline));ok();
+ assert.equal((await db.query('select count(*) from trial_upgrade_mail')).rows[0].count,1);ok();
+ await assert.rejects(db.query(reserve),/duplicate key/);ok();
+ // Clock-only test variant of the SAME reservation function: future dispatch must
+ // fail before changing the already stored receipt/deadline. Restore exact SQL after.
+ const migration=fs.readFileSync('supabase/2026-09-20-stephan-trial-upgrade.sql','utf8');
+ const reservationFunction=migration.match(/create function public.reserve_trial_upgrade_mail[\s\S]*?\$\$;/)[0].replace('create function','create or replace function');
+ const beforeFuture=JSON.stringify((await db.query('select * from trial_upgrade_mail')).rows);
+ await db.exec(reservationFunction.replace("date_trunc('second',clock_timestamp())",'to_timestamp(1790528279-259200)'));
+ await assert.rejects(db.query(reserve),/three_day_trial_window_requires_review/);ok();
+ assert.equal(JSON.stringify((await db.query('select * from trial_upgrade_mail')).rows),beforeFuture);ok();
+ await db.exec(reservationFunction);
+ const expires=Number(reservation.deadline)-60;
  await assert.rejects(db.exec(`set role anon;select * from trial_upgrade_offers;`),/permission denied/);await db.exec('reset role');ok();
  await assert.rejects(db.exec(`set role authenticated;select * from trial_upgrade_mail;`),/permission denied/);await db.exec('reset role');ok();
  // Ledger primary key is a permanent reservation even without provider receipt.
- await db.exec(`insert into trial_upgrade_mail(recipient,offer_id,body_hash,claimed_at,deadline) values('stephan-michi@gmx.net','${id}',repeat('c',64),now(),1790535479)`);
  await assert.rejects(db.exec(`insert into trial_upgrade_mail(recipient,offer_id,body_hash,claimed_at,deadline) values('stephan-michi@gmx.net','${id}',repeat('c',64),now(),1790535479)`),/duplicate key/);ok();
  // Fixed offline session fixture. No Stripe call, no real payment.
- await db.exec(`update trial_upgrade_offers set generation=1,session_id='cs_fixture',session_expires=1790527679 where id='${id}';`);
- const redeem=(paid=true,session='cs_fixture',customer='cus_VIOr4Apz2BT3cJ',amount=21900)=>`select redeem_trial_upgrade('${id}','${session}','${user}','${customer}',${amount},'chf',${paid},1790527679) as first`;
+ await db.exec(`update trial_upgrade_offers set generation=1,session_id='cs_fixture',session_expires=${expires} where id='${id}';`);
+ const redeem=(paid=true,session='cs_fixture',customer='cus_VIOr4Apz2BT3cJ',amount=21900)=>`select redeem_trial_upgrade('${id}','${session}','${user}','${customer}',${amount},'chf',${paid},${expires}) as first`;
  for(const q of [redeem(false),redeem(true,'cs_wrong'),redeem(true,'cs_fixture','cus_wrong'),redeem(true,'cs_fixture','cus_VIOr4Apz2BT3cJ',990)]){await assert.rejects(db.query(q),/payment_mismatch/);ok();}
  assert.equal((await db.query('select premium_plan from parent_profiles')).rows[0].premium_plan,'monthly');ok();
  assert.equal((await db.query(redeem())).rows[0].first,true);assert.equal((await db.query('select cancellation_state from trial_upgrade_offers')).rows[0].cancellation_state,'pending');ok();
@@ -42,4 +55,4 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
  assert.equal(JSON.stringify((await db.query('select * from private_checkout_offers')).rows),before);assert.equal((await db.query('select count(*) from offer219_mail')).rows[0].count,0);ok();
  await db.exec(`insert into parent_profiles values('00000000-0000-0000-0000-000000000001','other@example.test',true,'monthly',now(),false,'cus_other','sub_other');update parent_profiles set premium=false,premium_plan=null where email='other@example.test';`);assert.equal((await db.query("select premium from parent_profiles where email='other@example.test'")).rows[0].premium,false);ok();
  await db.close();console.log(`${checks} offline PostgreSQL assertions passed; original offer/ledger unchanged. No live database used. Multi-connection concurrency not simulated.`);
-})().catch(()=>{console.error('Offline SQL rehearsal failed; inspect locally without credentials.');process.exitCode=1;});
+})().catch(error=>{console.error('Offline SQL rehearsal failed:',error.message);process.exit(1);});

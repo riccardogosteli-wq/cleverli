@@ -1,6 +1,9 @@
 import { FROM, SUBJECT, TEMPLATE } from './offer219Campaign';
 import { digest219, type Receipt } from './offer219Transport';
-import { TRIAL_CAMPAIGN, TRIAL_UPGRADE } from './trialUpgrade';
+import { TRIAL_CAMPAIGN, TRIAL_UPGRADE, TRIAL_OFFER_SECONDS } from './trialUpgrade';
+// Explicit approval6092: only this recipient changes from seven to three days.
+// Preserve the original campaign module and every other byte of approved V3.
+export const TRIAL_TEMPLATE = TEMPLATE.replace('sieben Tage', 'drei Tage');
 export interface TrialMailIO {
   status(): Promise<Receipt | null>;
   eligible(hash: string): Promise<boolean>;
@@ -15,7 +18,7 @@ export function trialMaterial(raw: string) {
   if (!row || Object.keys(row).sort().join(',') !== 'customerId,email,offerId,subscriptionId,token,userId'
     || !Object.entries(TRIAL_UPGRADE).filter(([k]) => k !== 'trialEnd').every(([k,v]) => row[k] === v)
     || typeof row.token !== 'string' || !/^[a-f0-9]{64}$/.test(row.token)) throw Error('invalid_material');
-  const html = TEMPLATE.replace('__CHECKOUT__', 'https://www.cleverli.ch/offer/trial-upgrade#' + row.token);
+  const html = TRIAL_TEMPLATE.replace('__CHECKOUT__', 'https://www.cleverli.ch/offer/trial-upgrade#' + row.token);
   return { hash: digest219(row.token), html, bodyHash: digest219(html) };
 }
 export async function executeTrialMail(raw: string, send: boolean, production: boolean, io: TrialMailIO) {
@@ -26,6 +29,7 @@ export async function executeTrialMail(raw: string, send: boolean, production: b
   if (!await io.eligible(m.hash)) return { skipped: true };
   if (!send) return { dryRun: true, eligible: true, bodyHash: m.bodyHash, from: FROM, subject: SUBJECT, recipient: TRIAL_UPGRADE.email };
   const reserved = await io.reserve(m.hash, m.bodyHash);
+  if (Number(reserved.deadline) !== Date.parse(reserved.claimed_at)/1000 + TRIAL_OFFER_SECONDS) throw Error('reservation_duration_mismatch');
   if (await io.deadline() !== Number(reserved.deadline) || !await io.eligible(m.hash)
     || Date.now() - Date.parse(reserved.claimed_at) > 15000) throw Error('reconciliation_required');
   const id = await io.send({ from: FROM, to: TRIAL_UPGRADE.email, replyTo: 'hello@cleverli.ch', subject: SUBJECT, html: m.html }, `${TRIAL_CAMPAIGN}:${TRIAL_UPGRADE.offerId}`);

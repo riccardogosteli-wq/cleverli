@@ -2,7 +2,7 @@ import { TRIAL_UPGRADE, scopedTrial, trialEligible, fulfillTrialUpgrade, type Tr
 import { pages219 } from './offer219Transport';
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
-import { type Offer, type OfferGateway, type OfferSession, type OfferStore } from "./privateOffer";
+import { checkoutOffer, type Offer, type OfferGateway, type OfferSession, type OfferStore } from "./privateOffer";
 
 function services() {
   return {
@@ -134,4 +134,22 @@ export async function settledTrialSubscription(subscriptionId: string): Promise<
   const { store } = trialUpgradeServices();
   const o = await store.byId(TRIAL_UPGRADE.offerId) as TrialOffer | null;
   return Boolean(o && scopedTrial(o) && o.redeemed_session);
+}
+
+// Same final-window preparation as the original offer engine, but ONLY this table.
+// Without this, first use during Stripe's final 30-minute creation limit could fail.
+export async function warmTrialUpgrade(now = Math.floor(Date.now()/1000), dependencies?: Pick<ReturnType<typeof trialUpgradeServices>, 'store' | 'gateway'>, reservationCheck?: () => Promise<boolean>) {
+  const { store, gateway } = dependencies ?? trialUpgradeServices();
+  const o = await store.byId(TRIAL_UPGRADE.offerId) as TrialOffer | null;
+  if (!o || !scopedTrial(o) || o.revoked || o.redeemed_session || now >= o.deadline || o.deadline > now + 86000) return { prepared: false };
+  // Never prepare a provisional unsent offer: reservation requires generation0.
+  const reserved = reservationCheck ? await reservationCheck() : await (async () => {
+    const { db } = trialUpgradeServices();
+    const r = await db.from('trial_upgrade_mail').select('offer_id').eq('offer_id', o.id).maybeSingle();
+    if (r.error) throw Error('trial_reservation_check_failed');
+    return r.data?.offer_id === o.id;
+  })();
+  if (!reserved) return { prepared: false };
+  await checkoutOffer(o, store, gateway, now, true);
+  return { prepared: true };
 }

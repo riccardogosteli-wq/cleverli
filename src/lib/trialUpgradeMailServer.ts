@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 import { trialUpgradeServices } from './trialUpgradeServer';
-import { TRIAL_UPGRADE, sevenDayTrialWindow } from './trialUpgrade';
+import { TRIAL_UPGRADE, threeDayTrialWindow } from './trialUpgrade';
 import { pages219, type Receipt } from './offer219Transport';
 import { FROM, SUBJECT } from './offer219Campaign';
 import type { TrialMailIO } from './trialUpgradeMail';
@@ -28,7 +28,7 @@ export function trialMailServices() {
       if(r.error||!r.data)throw Error('reconciliation_required');return (Array.isArray(r.data)?r.data[0]:r.data) as Receipt;
     },
     async deadline(){const o=await store.byId(TRIAL_UPGRADE.offerId);if(!o)throw Error('offer_unavailable');return Number(o.deadline);},
-    async send(payload,key){if(!sevenDayTrialWindow(Math.floor(Date.now()/1000)))throw Error('seven_day_trial_window_requires_review');await pace();const r=await provider.emails.send(payload,{idempotencyKey:key});if(r.error||!r.data?.id)throw Error('reconciliation_required');return r.data.id;},
+    async send(payload,key){if(!threeDayTrialWindow(Math.floor(Date.now()/1000)))throw Error('three_day_trial_window_requires_review');await pace();const r=await provider.emails.send(payload,{idempotencyKey:key});if(r.error||!r.data?.id)throw Error('reconciliation_required');return r.data.id;},
     async save(id){const r=await db.from('trial_upgrade_mail').update({provider_id:id,state:'accepted',accepted_at:new Date().toISOString()}).eq('recipient',TRIAL_UPGRADE.email).eq('state','reserved').is('provider_id',null).select('provider_id').single();if(r.error||r.data?.provider_id!==id)throw Error('reconciliation_required');},
   };
   async function verify() {

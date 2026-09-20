@@ -128,7 +128,7 @@ revoke all on public.trial_upgrade_mail from public,anon,authenticated;
 grant select,insert,update on public.trial_upgrade_mail to service_role;
 create function public.reserve_trial_upgrade_mail(p_recipient text,p_offer uuid,p_user uuid,p_customer text,p_hash text,p_body text)
 returns public.trial_upgrade_mail language plpgsql security definer set search_path = '' as $$
-declare o public.trial_upgrade_offers; result public.trial_upgrade_mail; n timestamptz:=clock_timestamp(); d bigint;
+declare o public.trial_upgrade_offers; result public.trial_upgrade_mail; n timestamptz:=date_trunc('second',clock_timestamp()); d bigint;
 begin
  if p_recipient is distinct from 'stephan-michi@gmx.net' or p_offer is distinct from '3823f764-03b8-4617-b808-d798fc9e9a10'::uuid
  or p_user is distinct from 'bb7c9111-8560-42a8-939c-2a3a4e70179c'::uuid or p_customer is distinct from 'cus_VIOr4Apz2BT3cJ' then raise exception 'not_approved'; end if;
@@ -138,8 +138,8 @@ begin
  if not exists(select 1 from public.parent_profiles p join auth.users u on u.id=p.id
  where p.id=p_user and lower(p.email)=p_recipient and lower(u.email)=p_recipient and p.premium
  and p.premium_plan='monthly' and p.stripe_customer_id=p_customer and p.stripe_subscription_id=o.subscription_id) then raise exception 'recipient_changed'; end if;
- d:=floor(extract(epoch from n))::bigint+604800;
- if d>o.trial_end-600 then raise exception 'seven_day_trial_window_requires_review'; end if;
+ d:=floor(extract(epoch from n))::bigint+259200;
+ if d>o.trial_end-600 then raise exception 'three_day_trial_window_requires_review'; end if;
  insert into public.trial_upgrade_mail(recipient,offer_id,body_hash,claimed_at,deadline)
  values(p_recipient,p_offer,p_body,n,d) returning * into result;
  update public.trial_upgrade_offers set deadline=d where id=p_offer;

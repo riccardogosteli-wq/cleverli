@@ -4,6 +4,7 @@ export const TRIAL_UPGRADE = Object.freeze({
   customerId: 'cus_VIOr4Apz2BT3cJ', subscriptionId: 'sub_1UHo3xDGUBi3vyUQhJGLpwRh',
   offerId: '3823f764-03b8-4617-b808-d798fc9e9a10', trialEnd: 1790528279,
 });
+export const TRIAL_OFFER_SECONDS = 259200;
 export const TRIAL_CAMPAIGN = 'stephan-trial-lifetime-20260920';
 export type TrialOffer = Offer & { subscription_id: string; trial_end: number; cancellation_state: 'pending' | 'confirmed' | null };
 export type TrialSubscription = { id: string; customer: string; status: string; trial_end: number | null; cancel_at_period_end: boolean; cancel_at: number | null; items: { amount: number | null; currency: string; interval: string | undefined; quantity: number | undefined }[] };
@@ -47,7 +48,7 @@ export async function fulfillTrialUpgrade(sessionId: string, io: TrialFulfillmen
   return first;
 }
 
-// V3 promises a full seven days. Never send it with a shorter purchasable window.
-export function sevenDayTrialWindow(now: number): boolean {
-  return now + 604800 <= TRIAL_UPGRADE.trialEnd - 600;
+// V3 promises a full three days. Never send it with a shorter purchasable window.
+export function threeDayTrialWindow(now: number): boolean {
+  return now + TRIAL_OFFER_SECONDS <= TRIAL_UPGRADE.trialEnd - 600;
 }

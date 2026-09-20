@@ -1,20 +1,20 @@
 # Stephan trial to CHF 219 lifetime: code-first handoff
 
-## RELEASE STATUS: BLOCKED, do not send
+## CODE STATUS: approved three-day validity implemented, parent release QA pending
 
-Base: origin/main `9030c82aad3ea0b19660e3c6671a0990b022df54`.
+Base: origin/main `9030c82aad3ea0b19660e3c6671a0990b022df54`; initial handoff `feadd53`.
 Worktree: `/Users/riccardogosteli/projects/cleverli-stephan-trial-lifetime`.
 Branch: `feat/stephan-trial-lifetime`.
 
-No live database migration, private material creation, Stripe mutation, payment, email, push or deployment was performed by this implementation task. Original19 offers, material, ledger, functions and templates are unchanged. The old unsent Stephan offer is also unchanged.
+No live database migration, private material creation, Stripe mutation, payment, email, push or deployment was performed. Original19 offers, material, ledger, functions and templates, and the old unsent Stephan offer remain unchanged.
 
-### Concrete commercial blocker
+### Approval6092 resolves the earlier validity blocker
 
-The approved V3 says the offer is valid **seven days from email send**. The approved trial ends **27 September 2026 at 18:57:59 Europe/Zurich**, less than seven days after this task/send. This implementation fails closed before trial end and caps every Checkout expiry at **18:47:59** that day (ten-minute safety margin). A stable URL and database deadline lasting seven days would not make Checkout payable for seven days.
+User6092 explicitly approved a shorter offer. Parent selected **exactly three days (259200 seconds) from send start**, with the sole email-copy change **«sieben Tage» → «drei Tage»**. A dedicated derived template leaves the original19 V3 untouched; sender, reply-to, subject and all other copy remain identical. The new private capability path is unchanged from the isolated initial implementation.
 
-Therefore the authenticated send route, production mail adapter AND SQL reservation independently block V3 dispatch when the complete seven-day purchasable window is unavailable. No irreversible mail reservation is made in that case. Do not bypass these guards or shorten the deadline silently. Preview is not permission to send.
+The approved trial ends **27 September 2026 at 18:57:59 Europe/Zurich**. Checkout remains capped at **18:47:59** (ten-minute safety margin). The complete three-day offer must fit before this cap. Route, provider adapter and SQL reservation continue to fail closed for a future dispatch with insufficient time; no silent shortening, active-before-Checkout bypass, early cancellation or trial extension. The latest possible send start is **24 September 2026 at 18:47:59 Zurich**; operator should allow processing margin rather than aim for the last second.
 
-Parent must obtain/define one reviewed resolution before further implementation/release: approved revised validity copy, or a separately designed policy permitting a fully reviewed trial-to-active conversion with outstanding-invoice/renewal handling. Do not extend/cancel the trial before paid lifetime merely to make the dates fit. Current code deliberately does not implement an active-before-Checkout bypass. Current exact V3 cannot safely be sent under these constraints.
+SQL truncates the send-start reservation timestamp to whole seconds and stores deadline = claimed_at + 259200 exactly. This is the atomic beginning of the send operation, not the later provider acceptance or mailbox-delivery timestamp. Fresh rechecks and dispatch must finish within15seconds; provider acceptance timing cannot be guaranteed. Reservation is irreversible even if a later step fails. Parent verifies timestamps and receipt readback after the one approved browser send.
 
 ## Scope and identity
 
@@ -25,7 +25,7 @@ Parent must obtain/define one reviewed resolution before further implementation/
 - Dedicated new offer ID, no record created: `3823f764-03b8-4617-b808-d798fc9e9a10`.
 - NEVER reuse old `592407b7-8c6f-4a84-b586-b54ed7114ac4` or its customer `cus_VIOXq9aXmNgCJh`.
 - CHF 21900 minor units, CHF, one-time schooltime access, three child profiles.
-- Same existing V3 HTML, subject, sender and reply-to. Only the recipient capability path changes to `/offer/trial-upgrade#<private capability>`.
+- Same V3 subject, sender and reply-to; HTML differs only by the approved three-day wording and recipient capability path, which changes to `/offer/trial-upgrade#<private capability>`.
 
 Evidence read: workspace `.qa/offer219-20260920/stephan-live-review.json` and exact `customer-template.html`. This is earlier parent evidence, not a new live Stripe verification by the child.
 
@@ -43,27 +43,27 @@ Late payment settlement or cancellation retry can cross trial end. **Only after 
 
 Scoped DB BEFORE UPDATE trigger preserves paid lifetime against late subscription deletion/update, subscription Checkout and invoice writes. A webhook guard avoids known-settled trial events generating stale monthly activation mail; the database trigger provides the transactional entitlement backstop when a read races payment. Unrelated accounts are unchanged. Ordinary updates cannot revoke this paid entitlement; a later refund/revocation needs a separately audited operator procedure.
 
-Webhook retries, the existing daily private-offer cron (schedule unchanged), and the restricted admin `reconcile` action retry a persisted paid obligation. Reconcile never sends email or creates a new payment. No pending payment means no cancellation.
+Webhook retries, the existing daily private-offer cron (schedule unchanged), and the restricted admin `reconcile` action retry a persisted paid obligation. Reconcile never sends email or creates a new payment. No pending payment means no cancellation. Review also found that the dedicated offer lacked the original engine’s final-window warmup: the same authenticated daily cron now independently prepares this dedicated offer’s final unpaid Checkout session, so first use in the last30minutes is supported when cron succeeds. Warming may create/expire unpaid sessions only, never charge or cancel a subscription. This work does not change original campaign rows or its warming function. Monitor final preparation before expiry; a failed/missed cron must not silently extend the offer.
 
-## Parent-owned release sequence, only after resolving blocker
+## Parent-owned release sequence after approval6092
 
-1. Review the entire diff and financial semantics. Keep this task open or report the concrete validity blocker; do not call this send-ready.
+1. Review the entire diff and financial semantics. Validity blocker is resolved by approval6092. Keep the task open until independent release checks and actual authorized send/provider verification finish.
 2. Independently rehearse `supabase/2026-09-20-stephan-trial-upgrade.sql` on a real PostgreSQL instance, including concurrent redemption vs late profile updates and role checks. Child's embedded PostgreSQL tests are not multi-connection concurrency proof.
 3. Apply migration before code deployment. The scoped webhook guard and cron need the new tables. Confirm zero rows, RLS and grants, and original19/old Stephan rows unchanged with readback. Do not replace existing tables/functions or seed live material in the migration.
 4. Build, independently review and browser-QA local/preview desktop+mobile public capability page and authenticated admin forms. Child has not certified these rendered routes. Deploy only after authorization. Do not publish the private URL/token in logs or screenshots.
 5. Refresh live Stripe subscription/customer/profile, invoices, charges, pending payments and all same-email customers. Check non-provider opt-outs/replies manually as well as API suppressions. If active or any binding differs, stop. No billing change to make eligibility pass.
-6. Only with an approved policy resolution, prepare a fresh random 32-byte capability through the parent's protected local workflow. Insert its SHA256 digest with the exact new offer ID/user/customer, amount=21900, currency=chf, exact subscription/trial_end and provisional deadline. Leave generation=0 and all session/redemption/cancellation fields null. Do NOT create an initial Stripe session. Do NOT touch old material or the original campaign ledger.
+6. Under approval6092, prepare a fresh random 32-byte capability through the parent's protected local workflow. Insert its SHA256 digest with the exact new offer ID/user/customer, amount=21900, currency=chf, exact subscription/trial_end and provisional deadline. Leave generation=0 and all session/redemption/cancellation fields null. Do NOT create an initial Stripe session. Do NOT touch old material or the original campaign ledger.
 7. New private material JSON is exactly one object with keys `customerId,email,offerId,subscriptionId,token,userId`, matching constants. Keep it private. No actual material or token is in the commit.
-8. Authenticated `/internal-log-dashboard/trial-upgrade`: upload the new file and preview. Strict cookie auth, same-origin, field whitelist, bounded bytes and explicit send confirmation are required. The current release intentionally returns `seven_day_trial_window_requires_review` on send. Do not use `/internal-log-dashboard/offer219` for this recipient.
-9. Once the blocking policy is legitimately resolved in reviewed code, parent performs exactly one browser send. SQL reservation is permanent and sets deadline=reservation+604800 with readback; dispatch must be within15seconds and fresh eligibility/suppressions must still pass. This is pre-dispatch reservation time, not proof of provider delivery time. Never reset/retry an uncertain reservation, even after provider idempotency retention expires.
+8. Authenticated `/internal-log-dashboard/trial-upgrade`: upload the new file and preview. Strict cookie auth, same-origin, field whitelist, bounded bytes and explicit send confirmation are required. If the remaining trial window is insufficient for all three days, send returns `three_day_trial_window_requires_review` before reservation. Do not use `/internal-log-dashboard/offer219` for this recipient.
+9. After parent review and deployment, parent performs exactly one browser send. SQL reservation is permanent and sets deadline=reservation+259200 with readback; dispatch must be within15seconds and fresh eligibility/suppressions must still pass. This is pre-dispatch reservation time, not proof of provider delivery time. Never reset/retry an uncertain reservation, even after provider idempotency retention expires.
 10. Parent reads stored receipt and provider status. `accepted` is not `delivered`. Read-only provider verification paginates; absent history never authorizes resend. Same subject/recipient historical matches without a stored provider ID require manual investigation, not automatic attachment.
 11. After a real customer payment, verify paid session, lifetime profile, pending/confirmed obligation, exact subscription canceled, and invoices. Use authenticated reconcile if needed; monitor promptly rather than relying only on daily cron. Do not replay events that send mail for testing.
 12. Before concluding, deliver verified result or blocker to originating parent/requester. Primary outreach task is not complete from this code handoff.
 
 ## Residual risks and limitations
 
-- **Blocking:** exact V3 seven-day validity versus earlier trial end, enforced by code and SQL.
-- No live migration/deployment, private material, send, payment or cancellation executed. No rendered desktop/mobile browser QA yet. Technical release status: blocked.
+- The former seven-day validity blocker is resolved by explicit approval6092. Future insufficient three-day windows still fail closed; active-before-Checkout remains ineligible.
+- No live migration/deployment, private material, send, payment or cancellation executed. No rendered desktop/mobile browser QA yet. Live release approval remains parent-owned, not certified by this code-only handoff.
 - Embedded PostgreSQL tests exercise real SQL and the lifetime trigger, but not separate database connections, production schema drift or Stripe integration.
 - Stripe settlement/cancellation are not an atomic transaction with Supabase. Retries cannot guarantee no renewal charge during a prolonged outage or delayed settlement. Positive/open invoices require prompt manual review.
 - Daily reconciliation is only a backstop. Existing webhook retry delivery/subscribed event types must be verified by parent; this task does not change provider configuration or cron schedule.
@@ -81,12 +81,22 @@ Webhook retries, the existing daily private-offer cron (schedule unchanged), and
 
 Logs: `.qa/trial-upgrade/` in this worktree, not committed. Initial build's out-of-root dependency symlink was replaced with a worktree-local APFS dependency copy; no product configuration was changed to work around it.
 
-## Verified child results, 20 September 2026
+## Initial handoff verification, superseded by three-day results below
 
 - 57 Node tests passed: 24 scoped trial-upgrade tests plus 33 original campaign transport regressions.
 - 30 existing private-offer core checks passed.
 - 19 offline PostgreSQL assertions passed, including unpaid/mismatched redemption rejection, atomic pending obligation, duplicate redemption, late-event lifetime protection, reserved-ledger uniqueness, browser-role denial and original-offer preservation.
 - Scoped ESLint passed. Final `npm run build` passed with both new routes present.
-- External approved `customer-template.html` is byte-identical to the reused V3 template before capability substitution.
+- External approved `customer-template.html` differs from the scoped template only by `sieben Tage` → `drei Tage`, before capability substitution. Original V3 remains byte-identical.
 - Staged secret/capability pattern scan and `git diff --check` passed. Original campaign source/migration files compare unchanged to base.
-- Browser QA, independent review, live migration and actual Stripe/provider behavior remain unverified and parent-owned. Overall release verdict: **blocked**, not approved for dispatch.
+- Browser QA, independent review, live migration and actual Stripe/provider behavior remain unverified and parent-owned. Overall release verdict: **pending parent review/QA**, no remaining known validity-policy blocker for a timely three-day send.
+
+## Final approval6092 three-day verification
+
+- 59 Node tests passed: 26 scoped tests plus 33 unchanged original-campaign tests.
+- 30 existing private-offer core checks passed; 24 offline PostgreSQL assertions passed. SQL verifies exact259200 seconds from whole-second send-start reservation, offer deadline readback, duplicate reservation rejection, and a clock-controlled future insufficient-window failure without changing the receipt. Clock-only variant is restored after that test; no live database involved.
+- Exact external V3 parity passes with only «sieben Tage» → «drei Tage»; admin preview uses that same derived template. A stale seven-day SQL reservation is rejected before provider dispatch.
+- Missing dedicated final-session warmup corrected and tested: only after a permanent send reservation, never for an unreserved provisional offer, and independent of original campaign warming/cancellation reconciliation. Paid offers are skipped. No scheduler configuration changes.
+- Final scoped lint, diff check and production build passed. Logs: `.qa/trial-upgrade/*-three-day.log`.
+- Previous validity blocker is resolved by actual approval6092. Remaining release gates belong to parent: independent review, real PostgreSQL/concurrency rehearsal, migration, deployment, browser QA, fresh eligibility/suppressions, exactly one authorized email and provider receipt/readback.
+- No new known policy blocker. Residual financial/notification limitations above remain disclosed. No push, deployment, migration, live private material, email, payment or subscription mutation occurred in this follow-up.

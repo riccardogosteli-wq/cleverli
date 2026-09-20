@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { TRIAL_UPGRADE as A, scopedTrial, trialEligible, fulfillTrialUpgrade, type TrialOffer, type TrialSubscription, type TrialFulfillment } from '../src/lib/trialUpgrade';
 import { checkoutOffer, type OfferSession } from '../src/lib/privateOffer';
-import { executeTrialMail, trialMaterial, type TrialMailIO } from '../src/lib/trialUpgradeMail';
+import { executeTrialMail, trialMaterial, TRIAL_TEMPLATE, type TrialMailIO } from '../src/lib/trialUpgradeMail';
 import { FROM, SUBJECT, TEMPLATE, TEMPLATE_HASH } from '../src/lib/offer219Campaign';
 import { digest219, type Receipt } from '../src/lib/offer219Transport';
 import { GET, POST } from '../src/app/internal-log-dashboard/trial-upgrade/route';
@@ -55,9 +55,9 @@ test('expired/active before Checkout does not return previously created payable 
  const o=offer();let retrieved=0;await assert.rejects(checkoutOffer(o,{byId:async()=>o,byHash:async()=>o,advance:async()=>o,attach:async()=>{}},{eligible:async()=>false,retrieve:async()=>{retrieved++;return session();},create:async()=>session(),expire:async()=>session(),recover:async()=>null},A.trialEnd));assert.equal(retrieved,0);
 });
 const raw=JSON.stringify({...Object.fromEntries(Object.entries(A).filter(([k])=>k!=='trialEnd')),token:'b'.repeat(64)});
-function mail(){let r:Receipt|null=null,attempts=0;const io:TrialMailIO={status:async()=>r,eligible:async()=>true,reserve:async(_hash,body)=>{if(r)throw Error('reserved');r={recipient:A.email,state:'reserved',provider_id:null,deadline:Math.floor(Date.now()/1000)+604800,claimed_at:new Date().toISOString(),body_hash:body};return r;},deadline:async()=>r!.deadline,send:async(payload,key)=>{attempts++;assert.equal(payload.from,FROM);assert.equal(payload.subject,SUBJECT);assert.equal(payload.replyTo,'hello@cleverli.ch');assert.equal(payload.to,A.email);assert.equal(payload.html,trialMaterial(raw).html);assert.match(key,/^stephan-trial-lifetime-20260920:/);return 'provider-fixture';},save:async id=>{r={...r!,provider_id:id,state:'accepted'};}};return {io,count:()=>attempts};}
+function mail(){let r:Receipt|null=null,attempts=0;const io:TrialMailIO={status:async()=>r,eligible:async()=>true,reserve:async(_hash,body)=>{if(r)throw Error('reserved');r={recipient:A.email,state:'reserved',provider_id:null,deadline:Math.floor(Date.now()/1000)+259200,claimed_at:new Date(Math.floor(Date.now()/1000)*1000).toISOString(),body_hash:body};return r;},deadline:async()=>r!.deadline,send:async(payload,key)=>{attempts++;assert.equal(payload.from,FROM);assert.equal(payload.subject,SUBJECT);assert.equal(payload.replyTo,'hello@cleverli.ch');assert.equal(payload.to,A.email);assert.equal(payload.html,trialMaterial(raw).html);assert.match(key,/^stephan-trial-lifetime-20260920:/);return 'provider-fixture';},save:async id=>{r={...r!,provider_id:id,state:'accepted'};}};return {io,count:()=>attempts};}
 test('exact V3 template and new private path, no original material reuse',()=>{
- assert.equal(digest219(TEMPLATE),TEMPLATE_HASH);assert.equal(trialMaterial(raw).html,TEMPLATE.replace('__CHECKOUT__','https://www.cleverli.ch/offer/trial-upgrade#'+'b'.repeat(64)));
+ assert.equal(digest219(TEMPLATE),TEMPLATE_HASH);assert.equal(TRIAL_TEMPLATE,TEMPLATE.replace('sieben Tage','drei Tage'));assert.equal((TEMPLATE.match(/sieben Tage/g)||[]).length,1);assert.ok(TRIAL_TEMPLATE.includes('drei Tage'));assert.equal(TRIAL_TEMPLATE.includes('sieben Tage'),false);assert.equal(trialMaterial(raw).html,TRIAL_TEMPLATE.replace('__CHECKOUT__','https://www.cleverli.ch/offer/trial-upgrade#'+'b'.repeat(64)));
  for(const patch of [{customerId:'cus_VIOXq9aXmNgCJh'},{offerId:'592407b7-8c6f-4a84-b586-b54ed7114ac4'},{subscriptionId:'other'},{email:'other@example.com'},{extra:true},{token:'invalid'}])assert.throws(()=>trialMaterial(JSON.stringify({...JSON.parse(raw),...patch})));
 });
 test('mail dry run reveals no token, does not reserve; suppression skips',async()=>{
@@ -83,8 +83,8 @@ test('admin authentication, same origin, recipient and explicit send confirmatio
  form.set('recipient','other@example.com');assert.equal((await POST(request(form))).status,400);
  form.set('recipient',A.email);form.set('action','delete');assert.equal((await POST(request(form))).status,400);
 });
-test('admin preview HTML scope is one recipient, V3 unchanged; reconcile protected',async()=>{
- const r=await GET(request());assert.equal(r.status,200);assert.equal(r.headers.get('Referrer-Policy'),'same-origin');const html=await r.text();assert.match(html,/Stephan/);assert.equal(html.includes('aysekayagaziantep'),false);
+test('admin preview HTML scope is one recipient with approved three-day V3; reconcile protected',async()=>{
+ const r=await GET(request());assert.equal(r.status,200);assert.equal(r.headers.get('Referrer-Policy'),'same-origin');const html=await r.text();assert.match(html,/Stephan/);assert.match(html,/drei Tage/);assert.equal(html.includes('sieben Tage'),false);assert.equal(html.includes('aysekayagaziantep'),false);
  const f=new FormData();f.set('recipient',A.email);f.set('action','reconcile');assert.equal((await POST(request(f))).status,403);
  f.append('recipient',A.email);assert.equal((await POST(request(f))).status,400);
 });
@@ -102,12 +102,12 @@ test('webhook subscription update/delete, invoice and late checkout use guard; p
  assert.equal(server.includes('refunds.create'),false);assert.equal(server.includes('invoices.pay'),false);
 });
 
-import { sevenDayTrialWindow } from '../src/lib/trialUpgrade';
-import { trialUpgradeServices } from '../src/lib/trialUpgradeServer';
-test('V3 seven-day promise is blocked for current trial before any material/provider access',async()=>{
- assert.equal(sevenDayTrialWindow(A.trialEnd-604800-600),true);assert.equal(sevenDayTrialWindow(A.trialEnd-604800),false);
+import { threeDayTrialWindow } from '../src/lib/trialUpgrade';
+import { trialUpgradeServices, warmTrialUpgrade } from '../src/lib/trialUpgradeServer';
+test('approved three-day window fits now but future insufficient window fails closed',async()=>{
+ assert.equal(threeDayTrialWindow(A.trialEnd-259200-600),true);assert.equal(threeDayTrialWindow(A.trialEnd-259200),false);assert.equal(threeDayTrialWindow(A.trialEnd-259200-601),true);assert.equal(threeDayTrialWindow(A.trialEnd-259200-599),false);
  const f=new FormData();f.set('recipient',A.email);f.set('action','send');f.set('confirmed','yes');
- const r=await POST(request(f));assert.equal(r.status,409);assert.equal((await r.json()).error,'seven_day_trial_window_requires_review');
+ const originalNow=Date.now;try { Date.now=()=> (A.trialEnd-259200)*1000;const r=await POST(request(f));assert.equal(r.status,409);assert.equal((await r.json()).error,'three_day_trial_window_requires_review');}finally{Date.now=originalNow;}
 });
 function adapter(change='') {
  const o=offer();o.session_id=null;o.session_expires=null;o.generation=0;
@@ -136,7 +136,7 @@ test('adapter caps expiry before trial end and rechecks live trial before creati
 
 test('cron runs existing offer preparation independently of trial cancellation failure',()=>{
  const source=readFileSync('src/app/api/cron/private-offers/route.ts','utf8');
- assert.match(source,/Promise.allSettled\(\[reconcileTrialUpgrade\(\), warmPrivateOffers\(\)\]\)/);
+ assert.match(source,/Promise.allSettled\(\[reconcileTrialUpgrade\(\), warmPrivateOffers\(\), warmTrialUpgrade\(\)\]\)/);
  assert.match(source,/timingSafeEqual/);
 });
 test('concurrent paid deliveries grant once; cancellation races converge on confirmed without recharging',async()=>{
@@ -145,4 +145,18 @@ test('concurrent paid deliveries grant once; cancellation races converge on conf
  await Promise.allSettled([fulfillTrialUpgrade('cs_fixture',f.io),fulfillTrialUpgrade('cs_fixture',f.io)]);
  await fulfillTrialUpgrade('cs_fixture',f.io);
  assert.equal(f.counts().grants,1);assert.equal(f.o.cancellation_state,'confirmed');assert.equal(f.sub.status,'canceled');
+});
+
+test('dedicated final session is prepared through the full three-day deadline',async()=>{
+ const now=A.trialEnd-259200-3600;const o=offer();o.deadline=now+7200;o.session_expires=now+3600;
+ let prepared=0,expired=0;
+ const io={store:{byId:async()=>o,byHash:async()=>o,advance:async(_id:string,_gen:number,expires:number)=>{o.generation++;o.session_id=null;o.session_expires=expires;return o;},attach:async(_id:string,_gen:number,id:string)=>{o.session_id=id;}},gateway:{eligible:async()=>true,recover:async()=>null,retrieve:async()=>({...session(),status:'open' as const,payment_status:'unpaid',expires_at:o.session_expires!,metadata:{...session().metadata,offer_generation:String(o.generation)},url:'https://checkout.stripe.com/fixture'}),expire:async()=>{expired++;return {...session(),status:'expired' as const};},create:async()=>{prepared++;return {...session(),status:'open' as const,payment_status:'unpaid',expires_at:o.session_expires!,metadata:{...session().metadata,offer_generation:String(o.generation)},url:'https://checkout.stripe.com/fixture'};}}};
+ assert.deepEqual(await warmTrialUpgrade(now,io,async()=>false),{prepared:false});assert.equal(prepared,0);assert.equal(expired,0);
+ assert.deepEqual(await warmTrialUpgrade(now,io,async()=>true),{prepared:true});assert.equal(o.session_expires,o.deadline);assert.equal(expired,1);assert.equal(prepared,1);
+ o.redeemed_session='cs_fixture';assert.deepEqual(await warmTrialUpgrade(now,io,async()=>true),{prepared:false});assert.equal(prepared,1);
+});
+
+test('mail blocks stale seven-day SQL duration before provider dispatch',async()=>{
+ const f=mail();const reserve=f.io.reserve;f.io.reserve=async(hash,body)=>({...await reserve(hash,body),deadline:Math.floor(Date.now()/1000)+604800});
+ await assert.rejects(executeTrialMail(raw,true,true,f.io),/reservation_duration_mismatch/);assert.equal(f.count(),0);assert.ok(await f.io.status());
 });
