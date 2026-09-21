@@ -98,11 +98,12 @@ fs.mkdirSync(output, { recursive: true });
       await expect(page.getByTestId('account-billing-status')).toContainText(label); checks++;
       await context.close();
     }
-    for (const [state, label, accessActive, canCancel] of [['trial','Premium in der Testphase',true,true],['ended','Abonnement beendet',false,false],['lifetime','Lebenslanger Zugang freigeschaltet',true,false]]) {
+    for (const [state, label, accessActive, canCancel] of [['scheduled','Kündigung zu einem späteren Termin',true,true],['trial','Premium in der Testphase',true,true],['ended','Abonnement beendet',false,false],['lifetime','Lebenslanger Zugang freigeschaltet',true,false]]) {
       billing = { state, endAt: state === 'lifetime' ? null : endAt, accessActive, canCancel };
       ({ context, page } = await fixture());
       await expect(page.getByTestId('account-billing-status')).toContainText(label); checks++;
       await expect(page.getByRole('button', { name: 'Abonnement kündigen', exact: true })).toHaveCount(canCancel ? 1 : 0); checks++;
+      if (state === 'scheduled') { await expect(page.getByTestId('account-billing-status')).toContainText('weitere automatische Verlängerungen möglich'); await expect(page.getByTestId('account-billing-status')).not.toContainText('Keine automatische Verlängerung.'); checks++; await page.screenshot({ path: `${output}/scheduled-termination.png`, fullPage: true }); }
       await context.close();
     }
     billing = { state: 'active', endAt, accessActive: true, canCancel: true };

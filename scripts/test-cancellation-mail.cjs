@@ -120,3 +120,6 @@ test('failed entitlement sync barrier prevents transport, preserving outbox for 
  const f=adapter();await assert.rejects(f.server.processCancellationEmailEvent(event(),async()=>{throw Error('sync failed');}));
  assert.equal(f.state.row.state,'pending');assert.ok(!f.calls.some(c=>c[0]==='send'));
 });
+
+test('mail rejects termination after current period even when period-end flag is true',()=>{assert.equal(policy.confirmedMailSubscription(sub({cancel_at:end+86400}),now),null);});
+test('future termination with intervening renewal never enqueues no-renewal mail',async()=>{const f=adapter({sub:sub({cancel_at:end+86400})});assert.equal(await f.server.processCancellationEmailEvent(event()),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});

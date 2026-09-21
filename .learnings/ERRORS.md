@@ -113,3 +113,9 @@
 - Initial offline provider test stub missed a class closing brace; repaired test fixture and reran all cases. A broad `send` substring assertion matched German `Passende`; replaced with exact provider/call patterns.
 - Existing cron source assertion required exactly three Promise.allSettled jobs. Extended it to the new fourth independent cancellation-mail worker and added runtime tests proving original jobs still run during mail failures.
 - Legacy private-offer webhook standalone harness fails even against account-only base 0eb32bc on missing activationEmail import mock. Left that stale unrelated harness unchanged; current signed-webhook failure semantics are covered by the new offline suite.
+
+## 2026-09-21 independent cancellation review corrections
+- Reviewer found cancel_at beyond the current period was falsely treated as no renewal. Introduced a shared current-renewal-boundary policy for account, API and mail; managed schedule mutations fail honestly and readback must prove no intervening renewal.
+- Fallback discarded uniquely owned terminal subscriptions; now resolves one terminal candidate while preserving ambiguity failures and authoritative ended_at.
+- Cancellation/retention POST completion lacked account scoping. Added identity epochs and layout-effect reset; all eight actual-component regressions fail on 6614d2e and pass after the fix.
+- The first deterministic hook harness recursively defaulted missing children back to root and flushed only same-realm microtasks. Fixed traversal's null leaf and used a macrotask flush for cross-realm auth/fetch promises; no production workaround added.

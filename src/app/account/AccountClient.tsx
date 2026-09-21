@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
@@ -32,6 +32,20 @@ export default function AccountPage() {
   const [billingRefresh, setBillingRefresh] = useState(0);
   const billingGeneration = useRef(0);
   const billing = billingResult?.userId === session?.userId ? billingResult?.billing ?? null : null;
+
+  const mutationIdentity = useRef<{ userId: string | undefined; epoch: number }>({ userId: undefined, epoch: 0 });
+  useLayoutEffect(() => {
+    mutationIdentity.current = { userId: session?.userId, epoch: mutationIdentity.current.epoch + 1 };
+    ++billingGeneration.current;
+    setCancelState("idle");
+    setCancelError("");
+    setCancelReason("");
+    setCancelComment("");
+    setBillingResult(null);
+    return () => { mutationIdentity.current = { userId: undefined, epoch: mutationIdentity.current.epoch + 1 }; };
+  }, [session?.userId]);
+  const mutationIsCurrent = (userId: string, epoch: number) =>
+    mutationIdentity.current.userId === userId && mutationIdentity.current.epoch === epoch;
 
   useEffect(() => {
     if (!session?.userId) return;
@@ -135,12 +149,16 @@ export default function AccountPage() {
   const handleCancel = async () => {
     if (cancelState === "idle") { setCancelState("confirm"); return; }
     if (cancelState !== "confirm") return;
+    const userId = session?.userId;
+    const epoch = mutationIdentity.current.epoch;
+    if (!userId || !mutationIsCurrent(userId, epoch)) return;
     setCancelState("loading");
     try {
       const supabase = getSupabase();
       const { data: authData } = supabase ? await supabase.auth.getSession() : { data: { session: null } };
       const token = authData.session?.access_token;
-      if (!token) throw new Error("unauthorized");
+      if (!mutationIsCurrent(userId, epoch)) return;
+      if (!token || authData.session?.user.id !== userId) throw new Error("unauthorized");
 
       const res = await fetch("/api/cancel-subscription", {
         method: "POST",
@@ -149,32 +167,38 @@ export default function AccountPage() {
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          userId: session?.userId,
+          userId,
           cancellationReason: cancelReason || "not_provided",
           cancellationComment: cancelComment,
           retentionOfferShown: cancelReason === "too_expensive",
         }),
       });
       const data = await res.json();
+      if (!mutationIsCurrent(userId, epoch)) return;
       if (!res.ok || data.error || !data.ok || !data.billing || !["cancelled", "ended"].includes(data.billing.state)) throw new Error(data.error ?? "unknown");
       ++billingGeneration.current; // Ignore a status read started before this mutation.
-      setBillingResult({ userId: session!.userId!, billing: data.billing });
+      setBillingResult({ userId, billing: data.billing });
       setBillingLoading(false);
       setCancelState("done");
     } catch (e: unknown) {
+      if (!mutationIsCurrent(userId, epoch)) return;
       setCancelError(e instanceof Error ? e.message : "Fehler");
       setCancelState("error");
     }
   };
 
   const handleRetentionOffer = async () => {
+    const userId = session?.userId;
+    const epoch = mutationIdentity.current.epoch;
+    if (!userId || !mutationIsCurrent(userId, epoch)) return;
     setCancelState("offer-loading");
     setCancelError("");
     try {
       const supabase = getSupabase();
       const { data: authData } = supabase ? await supabase.auth.getSession() : { data: { session: null } };
       const token = authData.session?.access_token;
-      if (!token) throw new Error("unauthorized");
+      if (!mutationIsCurrent(userId, epoch)) return;
+      if (!token || authData.session?.user.id !== userId) throw new Error("unauthorized");
 
       const res = await fetch("/api/retention-offer", {
         method: "POST",
@@ -182,13 +206,15 @@ export default function AccountPage() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ userId: session?.userId }),
+        body: JSON.stringify({ userId }),
       });
       const data = await res.json();
+      if (!mutationIsCurrent(userId, epoch)) return;
       if (!res.ok || data.error) throw new Error(data.error ?? "unknown");
       setCancelState("retained");
       setBillingRefresh(value => value + 1);
     } catch (e: unknown) {
+      if (!mutationIsCurrent(userId, epoch)) return;
       setCancelError(e instanceof Error ? e.message : "Fehler");
       setCancelState("error");
     }

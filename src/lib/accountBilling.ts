@@ -1,7 +1,7 @@
 import type Stripe from "stripe";
 
 export type AccountBilling = {
-  state: "active" | "trial" | "cancelled" | "ended" | "lifetime" | "free" | "attention";
+  state: "active" | "trial" | "scheduled" | "cancelled" | "ended" | "lifetime" | "free" | "attention";
   endAt: string | null;
   accessActive: boolean;
   canCancel: boolean;
@@ -30,7 +30,7 @@ function iso(seconds: number | null | undefined) {
     ? new Date(seconds * 1000).toISOString() : null;
 }
 export function subscriptionEnd(sub: Stripe.Subscription) {
-  if (sub.status === "canceled") return iso(sub.ended_at);
+  if (["canceled", "incomplete_expired"].includes(sub.status)) return iso(sub.ended_at);
   if (sub.cancel_at) return iso(sub.cancel_at);
   if (sub.status === "trialing") return iso(sub.trial_end);
   const legacy = (sub as Stripe.Subscription & { current_period_end?: number }).current_period_end;
@@ -38,14 +38,32 @@ export function subscriptionEnd(sub: Stripe.Subscription) {
   // Mixed item periods have no single authoritative end. Never invent one.
   return iso(legacy ?? (ends.length === 1 ? ends[0] : null));
 }
+// Earliest current renewal boundary, not the eventual scheduled termination date.
+export function renewalBoundary(sub: Stripe.Subscription) {
+  if (sub.status === "trialing") return iso(sub.trial_end);
+  const legacy = (sub as Stripe.Subscription & { current_period_end?: number }).current_period_end;
+  if (legacy) return iso(legacy);
+  const ends = sub.items.data.map(item => item.current_period_end);
+  return ends.length && ends.every(end => typeof end === "number" && end > 0) ? iso(Math.min(...ends)) : null;
+}
+export function noFurtherRenewal(sub: Stripe.Subscription) {
+  if (["canceled", "incomplete_expired"].includes(sub.status)) return true;
+  if (sub.cancel_at) {
+    const boundary = renewalBoundary(sub);
+    return Boolean(boundary && sub.cancel_at * 1000 <= Date.parse(boundary));
+  }
+  return sub.cancel_at_period_end;
+}
 export function subscriptionBilling(sub: Stripe.Subscription, now = Date.now()): AccountBilling {
   const endAt = subscriptionEnd(sub);
   const ended = sub.status === "canceled" || sub.status === "incomplete_expired";
-  const cancelled = ended || sub.cancel_at_period_end || Boolean(sub.cancel_at);
-  const accessActive = ["active", "trialing", "past_due"].includes(sub.status) && (!endAt || Date.parse(endAt) > now);
+  const cancelled = noFurtherRenewal(sub);
+  const scheduled = !cancelled && Boolean(sub.cancel_at);
+  const accessEnd = scheduled ? renewalBoundary(sub) : endAt;
+  const accessActive = ["active", "trialing", "past_due"].includes(sub.status) && (!accessEnd || Date.parse(accessEnd) > now);
   return {
     state: ended || (cancelled && endAt !== null && Date.parse(endAt) <= now) ? "ended"
-      : cancelled ? "cancelled" : sub.status === "trialing" ? "trial"
+      : cancelled ? "cancelled" : scheduled ? "scheduled" : sub.status === "trialing" ? "trial"
       : sub.status === "active" ? "active" : "attention",
     endAt,
     accessActive,
@@ -70,13 +88,16 @@ export async function resolveSubscription(stripe: Stripe, profile: BillingProfil
   }
   if (!profile.stripe_customer_id) return null;
   const candidates: Stripe.Subscription[] = [];
+  const terminal: Stripe.Subscription[] = [];
   // Customer-scoped, paginated and exact metadata ownership. Never scan all customers.
   for await (const sub of stripe.subscriptions.list({ customer: profile.stripe_customer_id, status: "all", limit: 100 })) {
     if (!ownsSubscription(sub, profile, userId)) throw new BillingError("subscription_identity_mismatch");
-    if (!["canceled", "incomplete_expired"].includes(sub.status)) candidates.push(sub);
+    if (["canceled", "incomplete_expired"].includes(sub.status)) terminal.push(sub);
+    else candidates.push(sub);
   }
   if (candidates.length > 1) throw new BillingError("multiple_subscriptions");
-  return candidates[0] ?? null;
+  if (!candidates.length && terminal.length > 1) throw new BillingError("multiple_subscriptions");
+  return candidates[0] ?? terminal[0] ?? null;
 }
 
 export async function confirmCancellation(stripe: Stripe, profile: BillingProfile, userId: string) {
@@ -84,6 +105,7 @@ export async function confirmCancellation(stripe: Stripe, profile: BillingProfil
   if (!sub) throw new BillingError("subscription_not_found", 404);
   const before = subscriptionBilling(sub);
   if (before.canCancel) {
+    if (sub.schedule) throw new BillingError("subscription_schedule_requires_review");
     await stripe.subscriptions.update(sub.id, { cancel_at_period_end: true });
   } else if (!["cancelled", "ended"].includes(before.state)) {
     throw new BillingError("subscription_not_cancellable");

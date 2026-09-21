@@ -1,5 +1,5 @@
 import type Stripe from "stripe";
-import { subscriptionEnd } from "./accountBilling";
+import { noFurtherRenewal, subscriptionEnd } from "./accountBilling";
 
 export const CANCELLATION_FROM = "Cleverli <hello@cleverli.ch>";
 export const CANCELLATION_REPLY_TO = "hello@cleverli.ch";
@@ -28,6 +28,7 @@ export function confirmedMailSubscription(sub: Stripe.Subscription, cancelledAt:
   if (sub.metadata?.site !== "cleverli.ch" || !["monthly", "yearly"].includes(sub.metadata.plan ?? "")) return null;
   if (sub.metadata.trial_upgrade_id || sub.metadata.private_offer_id || sub.canceled_at !== cancelledAt) return null;
   if (!["active", "trialing", "past_due", "unpaid", "paused"].includes(sub.status) || (!sub.cancel_at_period_end && !sub.cancel_at)) return null;
+  if (!noFurtherRenewal(sub)) return null;
   const endAt = subscriptionEnd(sub);
   return endAt && Date.parse(endAt) > now ? endAt : null;
 }
