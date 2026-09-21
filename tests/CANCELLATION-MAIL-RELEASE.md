@@ -56,3 +56,6 @@ Offline previews are in `.qa/cancellation-mail/`: four HTML/text variants, deskt
 ## Remaining limitations
 
 There is no distributed transaction across Stripe, Auth/profile state and the email provider. Fresh eligibility checks reduce races but cannot make a later reactivation/lifetime upgrade atomic with an already accepted email. Strict legacy/missing metadata or unknown dates may result in no automatic confirmation rather than a guessed message. A same-second cancel/reactivate/cancel sequence may conservatively dedupe into one cycle. Long outages intentionally favour no duplicate send over automatic delivery. No real provider acceptance/delivery, real-database concurrency, live customer flow or production release has been claimed verified.
+
+## Production default-grant correction
+Parent live readback found inherited Supabase service-role UPDATE grants despite the original SELECT-only grant. Base migration now explicitly revokes service_role before granting SELECT. Apply `2026-09-21-cancellation-mail-service-grants.sql` after the three migrations for an already-created installation. This changes only privileges on the two new tables, never customer data or the activation fence. Verify direct service-role INSERT/UPDATE/DELETE are denied while SELECT and the service-only RPCs remain permitted.

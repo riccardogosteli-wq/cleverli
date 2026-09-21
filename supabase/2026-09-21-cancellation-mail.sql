@@ -33,7 +33,7 @@ create table public.cancellation_mail_outbox (
 create index cancellation_mail_due on public.cancellation_mail_outbox(next_attempt_at) where state='pending';
 alter table public.cancellation_mail_activation enable row level security;
 alter table public.cancellation_mail_outbox enable row level security;
-revoke all on public.cancellation_mail_activation,public.cancellation_mail_outbox from public,anon,authenticated;
+revoke all on public.cancellation_mail_activation,public.cancellation_mail_outbox from public,anon,authenticated,service_role;
 grant select on public.cancellation_mail_activation,public.cancellation_mail_outbox to service_role;
 
 create function public.enqueue_cancellation_mail(p_event text,p_created bigint,p_user uuid,p_subscription text,p_customer text,p_cancelled bigint,p_end timestamptz,p_access boolean,p_payload jsonb)
