@@ -108,3 +108,8 @@
 - Local auth fixture needs to await existing five-second profile hydration fallback; use a 20-second ready-state assertion rather than changing production auth.
 
 - Removing the completed-flow wrapper exposed an unreachable done-state JSX branch; removed that branch and verified the final production build and browser scenarios.
+
+## 2026-09-21 cancellation mail local validation
+- Initial offline provider test stub missed a class closing brace; repaired test fixture and reran all cases. A broad `send` substring assertion matched German `Passende`; replaced with exact provider/call patterns.
+- Existing cron source assertion required exactly three Promise.allSettled jobs. Extended it to the new fourth independent cancellation-mail worker and added runtime tests proving original jobs still run during mail failures.
+- Legacy private-offer webhook standalone harness fails even against account-only base 0eb32bc on missing activationEmail import mock. Left that stale unrelated harness unchanged; current signed-webhook failure semantics are covered by the new offline suite.

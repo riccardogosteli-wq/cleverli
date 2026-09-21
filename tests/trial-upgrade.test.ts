@@ -136,7 +136,7 @@ test('adapter caps expiry before trial end and rechecks live trial before creati
 
 test('cron runs existing offer preparation independently of trial cancellation failure',()=>{
  const source=readFileSync('src/app/api/cron/private-offers/route.ts','utf8');
- assert.match(source,/Promise.allSettled\(\[reconcileTrialUpgrade\(\), warmPrivateOffers\(\), warmTrialUpgrade\(\)\]\)/);
+ assert.match(source,/Promise.allSettled\(\[reconcileTrialUpgrade\(\), warmPrivateOffers\(\), warmTrialUpgrade\(\), retryCancellationEmails\(\)\]\)/);
  assert.match(source,/timingSafeEqual/);
 });
 test('concurrent paid deliveries grant once; cancellation races converge on confirmed without recharging',async()=>{

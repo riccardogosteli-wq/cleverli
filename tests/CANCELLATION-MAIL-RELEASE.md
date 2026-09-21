@@ -1,0 +1,58 @@
+# Future cancellation email release handoff
+
+## Approval and boundary
+
+Parent relayed user approval 6102: confirmation from `hello@cleverli.ch` or Stripe only. This follow-up selects the existing Resend API transport with exactly `Cleverli <hello@cleverli.ch>`, reply-to `hello@cleverli.ch`. No alternate sender, fallback provider, cc/bcc or admin copy exists. It supersedes the earlier account-only handoff's prohibition on *implementing* email, not its prohibition on live effects during development.
+
+No email, payment, subscription cancellation, event replay, customer lookup, live migration, Stripe setting change, push or deployment was performed. No historical recipient was investigated or contacted. The excluded existing customer remains untouched. Parent owns independent review, real PostgreSQL concurrency rehearsal, additive migration, release, monitoring and final report.
+
+## What runs in production after authorised release
+
+1. The existing signed Stripe webhook is the **only producer**. No account GET, subscription scan, backfill, retry button or administrator send endpoint creates mail.
+2. Only **live-mode** `customer.subscription.updated` events with an actual transition into a scheduled cancellation qualify. Event creation and Stripe `canceled_at` must both be on/after the migration's immutable activation fence. Old cancellation flags, receipt/payment/deletion events and immediate lifetime-conversion cancellations cannot produce mail.
+3. The event must identify `site=cleverli.ch`, a recurring monthly/yearly plan and user ID. The exact subscription is retrieved from Stripe again. It must still be scheduled to cancel in the same cancellation cycle, with a known future exact end timestamp.
+4. The live subscription must contain one approved monthly/yearly price, or the CHF 66/year retention price on the same product as the configured Cleverli yearly price. Unrelated products, mixed-item subscriptions, private-offer/upgrade metadata, lifetime profiles, changed customer/subscription bindings and mismatched profile/auth email are excluded.
+5. The recipient comes from Supabase Auth and must match the bound profile email. Locale uses verified account `lang`/`locale` metadata when it is de/fr/it/en; otherwise German, matching existing checkout defaults. No recipient or sender comes from a cancellation request body.
+6. A service-only outbox RPC freezes recipient, subject, HTML/text and exact Stripe end/access state. The unique subscription + Stripe cancellation timestamp key permanently deduplicates the cancellation cycle, including different webhook event IDs. Duplicate enqueue never updates the frozen content.
+7. An atomic leased claim precedes sending. The worker rechecks current Stripe state, product, exact date, access state and account identity immediately before provider access. Resumed subscriptions, changed access/end dates or lifetime conversions stop further sending.
+8. Resend receives the same frozen payload and `cleverli-cancellation-v1-<outbox UUID>` idempotency key on retries. Successful API acceptance stores its provider ID and `accepted_at`. **Accepted is not delivered.** Account UI makes no email queued/sent/delivered claim.
+
+## Failure semantics and durability
+
+- Cancellation is never undone or reactivated due to mail errors. Existing webhook entitlement synchronisation runs even if mail processing fails. For an enqueued message, a sync barrier completes before provider transport, so a slow provider cannot hold up that sync. A failed sync leaves the queued message unsent for retry.
+- Enqueue failure or pending delivery returns webhook HTTP 503 **after** the usual subscription sync, allowing Stripe's normal retries. No real event replay was used in testing.
+- Failed/ambiguous sends retain the durable row. The next attempt is at least ten minutes later, or later if Resend's `Retry-After` requires it. A five-minute lease prevents overlapping workers and recovers crashes. Stale lease holders cannot save a receipt or release another worker's claim.
+- Resend documents idempotency retention as 24 hours: https://resend.com/docs/dashboard/emails/idempotency-keys (checked 21 September 2026). Automatic sends stop at **23 hours from the first claim** and enter `review`; the worker also checks this bound and the lease immediately before transport. There is no automatic reset/new key after expiry.
+- The existing authenticated 15:00 UTC private-offers cron independently retries up to 20 due outbox rows. Original offer warming, final trial session warming and trial-to-lifetime reconciliation still run with `Promise.allSettled`, even when mail fails. No schedule or global Stripe settings changed. It stops the mail batch on a pending send rather than hammering a failing/rate-limited provider.
+- The daily cron is a backstop, not a guarantee of a retry within the 23-hour ambiguity window. Stripe webhook retries are the primary timely retry path. Rows outside that window require provider reconciliation and do not automatically resend.
+- Review rows trigger cron HTTP 503 and webhook warnings. `suppressed` means further automatic sending stopped, not proof that an earlier ambiguous provider request was never accepted. Provider IDs prove acceptance only; delivery must be checked separately.
+
+## Parent release sequence
+
+1. Independently review the event/product/identity gates and the SQL lease/receipt rules. Rehearse the additive migration in isolated PostgreSQL, including concurrent duplicate enqueue, concurrent claim, crash lease takeover, stale-owner receipt and expiry races. The included WASM SQL checks are not multi-connection proof.
+2. Apply `supabase/2026-09-21-cancellation-mail.sql` **before** deploying webhook/cron changes. It creates two new tables and three narrowly granted RPCs; it does not update any existing profile, offer, subscription or mail ledger. Verify an empty outbox, one activation row, service-only grants/RLS, and unchanged existing profiles/offer ledgers.
+3. Do not lower the activation fence, populate historical rows, replay historical events or contact existing cancelled customers. Do not change account-wide Stripe emails/portal settings on the shared Stripe account.
+4. Make a normal production build with the existing authorised environment, not the credential-free local QA bundle. The transport only uses existing `RESEND_API_KEY`; no key export or sender fallback is needed. Existing subscription.updated webhook coverage and existing CRON_SECRET remain required.
+5. Deploy only after parent review. Future qualifying cancellations will automatically produce the confirmation. No existing customer needs to be cancelled to test the release. Inspect read-only ledger/provider receipts for an independently authorised genuine future cancellation when one naturally occurs.
+6. Monitor pending/review counts and provider IDs without exposing recipient/body data publicly. If a row is `review`, inspect the provider receipt first. Absence from a partial provider list is not permission to resend. Do not reset first_attempt_at, delete ledger rows, alter frozen payloads or create a new key to bypass deduplication.
+7. Rollback, if necessary, means restoring the prior webhook/cron code while keeping the additive tables and receipts. Do not replay the intervening history as part of rollback/release.
+
+## Content
+
+Actual DE/FR/IT/EN customer copy is in `src/lib/cancellationEmail.ts`. It confirms cancellation, gives the exact Europe/Zurich end timestamp, states no automatic renewal, and preserves outstanding-invoice obligations. Unpaid/paused access is not promised as usable. Copy is concise and warm, has real umlauts/Swiss ss, includes account/support/privacy/terms, and contains no postal address, internal test banner, alternate sender or payment-waiver promise.
+
+Offline previews are in `.qa/cancellation-mail/`: four HTML/text variants, desktop/mobile screenshots and render diagnostics. These are synthetic-date render artifacts, **not sent emails**. Browser preview is not an inbox-client deliverability test.
+
+## Validation and local reproduction
+
+- 50 new mail tests + 46 original cancellation tests = **96 passing offline Node tests**: `node --test scripts/test-cancellation-confirmation.cjs scripts/test-cancellation-mail.cjs`.
+- **61 passing existing trial/offer tests**: `npx tsx --test tests/trial-upgrade.test.ts tests/offer219-transport.test.ts`. The cron source assertion now includes the additional parallel worker; all original financial guards remain unchanged. Additional actual cron tests prove all existing jobs run during mail failure.
+- **44 existing payment fixture checks**: `node scripts/test-payment-v5.cjs`.
+- **30 offline PostgreSQL WASM assertions**: `CANCELLATION_SQL_QA_MODULE=<existing isolated PGlite module path> node scripts/test-cancellation-mail-sql.cjs`. Covers empty migration, future fence, sender/identity, lifetime exclusion, duplicate/frozen content, lease takeover, stale receipt, cooldown/Retry-After, 23h review, expiry suppression, RLS/grants, and no profile changes.
+- **8 email browser render scenarios**: `node scripts/qa-cancellation-mail.cjs`, DE/FR/IT/EN at desktop/mobile widths, no overflow, external requests, errors or sends. The unchanged account UI also passed all 22 fixture checks again during this follow-up; its fixture can be rerun with `scripts/qa-cancellation-local.cjs` and the credential-free loopback instructions in the account handoff.
+- Scoped lint and production `npm run build -- --webpack` pass. Default Turbopack still cannot use the worktree's external node_modules symlink. Existing build instrumentation/deprecation warnings remain. Full-repository lint retains 128 unrelated baseline errors and 35 warnings.
+- The legacy standalone `scripts/test-private-offer-webhook.cjs` harness is already stale on the account-only base: it lacks mocks for existing activation/trial-upgrade imports. It is not counted as passed or changed here. New mail tests execute the real current webhook with mocked signature/provider/DB boundaries, covering invalid signature, provider/DB failure without undoing sync, 503 retry and accepted success.
+
+## Remaining limitations
+
+There is no distributed transaction across Stripe, Auth/profile state and the email provider. Fresh eligibility checks reduce races but cannot make a later reactivation/lifetime upgrade atomic with an already accepted email. Strict legacy/missing metadata or unknown dates may result in no automatic confirmation rather than a guessed message. A same-second cancel/reactivate/cancel sequence may conservatively dedupe into one cycle. Long outages intentionally favour no duplicate send over automatic delivery. No real provider acceptance/delivery, real-database concurrency, live customer flow or production release has been claimed verified.

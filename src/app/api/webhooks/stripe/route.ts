@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { processCancellationEmailEvent } from "@/lib/cancellationEmailServer";
 import { isFirstCollectedInvoice } from "@/lib/activationEmail";
 import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
@@ -350,7 +351,22 @@ export async function POST(req: NextRequest) {
   // ── Subscription status changed/cancelled ────────────────────────────────
   if (event.type === "customer.subscription.updated" || event.type === "customer.subscription.deleted") {
     const subscription = event.data.object as Stripe.Subscription;
-    const synced = await syncSubscription(subscription);
+    // Mail failures never reverse cancellation or prevent entitlement synchronisation.
+    // The outbox is created only for a new post-activation scheduled cancellation.
+    let cancellationMailRetry = false;
+    let synced: Awaited<ReturnType<typeof syncSubscription>> | undefined;
+    const syncOnce = async () => {
+      if (synced === undefined) synced = await syncSubscription(subscription);
+    };
+    try {
+      const mail = await processCancellationEmailEvent(event, syncOnce);
+      cancellationMailRetry = mail === "pending";
+      if (mail === "review") Sentry.captureMessage("[cancellation-mail] provider reconciliation required", "warning");
+    } catch (error) {
+      cancellationMailRetry = true;
+      Sentry.captureException(error);
+    }
+    await syncOnce();
 
     if (synced) {
       logUserActivity({
@@ -371,6 +387,8 @@ export async function POST(req: NextRequest) {
       }).catch(() => {});
       console.log(`[stripe-webhook] Subscription ${synced.status} for ${synced.userId}`);
     }
+    // Stripe retries this verified event; the durable key and lease prevent duplicate mail.
+    if (cancellationMailRetry) return NextResponse.json({ error: "cancellation_confirmation_pending" }, { status: 503 });
   }
 
   // ── Subscription renewal paid ─────────────────────────────────────────────

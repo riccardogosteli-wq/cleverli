@@ -1,5 +1,7 @@
 # Cancellation confirmation handoff
 
+> This document records account-only commit `0eb32bc`. User approval 6102 subsequently authorised the future-only confirmation email implementation. See `tests/CANCELLATION-MAIL-RELEASE.md` for the additive migration, sender policy and final release handoff. No email is claimed active or delivered before release.
+
 ## Boundary
 
 Code only, branch `fix/cancellation-confirmation-20260921`, based on `a70382974d2e1a73a05d3a14f820a7260cbaadf4`. No push, deployment, migration, live customer/profile/subscription reads or writes, payments, email, event replay or Stripe configuration change. The explicitly excluded customer was not investigated or acted on. Main worktree and existing trial-to-lifetime guards are untouched. Parent owns independent review, Stripe native email investigation, tracker, deployment and final customer-facing report.
