@@ -99,3 +99,12 @@
 - Command: `npx vercel inspect https://www.cleverli.ch --scope riccardogostelis-projects`.
 - Failure: Vercel CLI reported `The specified scope does not exist`.
 - Fix: omit `--scope`; the repo is linked to `riccardogosteli-3284s-projects` and `npx vercel inspect https://www.cleverli.ch` works.
+
+## Cancellation local validation
+- rg is unavailable; used grep/find instead.
+- Default Turbopack build rejects the shared node_modules symlink outside the worktree root. Use supported webpack build mode for this isolated worktree.
+
+- Node native strip-types cannot resolve extensionless test imports; reran the unchanged trial/offer suites successfully with tsx (61 tests).
+- Local auth fixture needs to await existing five-second profile hydration fallback; use a 20-second ready-state assertion rather than changing production auth.
+
+- Removing the completed-flow wrapper exposed an unreachable done-state JSX branch; removed that branch and verified the final production build and browser scenarios.

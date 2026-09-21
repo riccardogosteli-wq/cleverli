@@ -1,11 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
 import { useSession } from "@/hooks/useSession";
 import { useLang } from "@/lib/LangContext";
 import { clearLocalFamilyStateOnLogout } from "@/lib/accountScopedStorage";
+import type { AccountBilling } from "@/lib/accountBilling";
+import AccountBillingStatus from "@/components/AccountBillingStatus";
 import ParentPinGate from "@/components/ParentPinGate";
 
 export default function AccountPage() {
@@ -25,6 +27,39 @@ export default function AccountPage() {
   const [cancelError, setCancelError] = useState("");
   const [cancelReason, setCancelReason] = useState("");
   const [cancelComment, setCancelComment] = useState("");
+  const [billingResult, setBillingResult] = useState<{ userId: string; billing: AccountBilling } | null>(null);
+  const [billingLoading, setBillingLoading] = useState(true);
+  const [billingRefresh, setBillingRefresh] = useState(0);
+  const billingGeneration = useRef(0);
+  const billing = billingResult?.userId === session?.userId ? billingResult?.billing ?? null : null;
+
+  useEffect(() => {
+    if (!session?.userId) return;
+    const userId = session.userId;
+    let disposed = false;
+    const refresh = async () => {
+      const generation = ++billingGeneration.current;
+      setBillingLoading(true);
+      try {
+        const supabase = getSupabase();
+        const auth = await supabase?.auth.getSession();
+        if (auth?.data.session?.user.id !== userId) throw new Error("unauthorized");
+        const response = await fetch("/api/cancel-subscription", {
+          headers: { Authorization: `Bearer ${auth.data.session.access_token}` }, cache: "no-store",
+        });
+        const data = await response.json();
+        if (!response.ok || !data.billing) throw new Error("billing_unavailable");
+        if (!disposed && generation === billingGeneration.current) setBillingResult({ userId, billing: data.billing });
+      } catch {
+        if (!disposed && generation === billingGeneration.current) setBillingResult(null);
+      } finally {
+        if (!disposed && generation === billingGeneration.current) setBillingLoading(false);
+      }
+    };
+    void refresh();
+    window.addEventListener("focus", refresh);
+    return () => { disposed = true; window.removeEventListener("focus", refresh); };
+  }, [session?.userId, billingRefresh]);
 
   const t = (de: string, fr: string, it: string, en: string) =>
     lang === "fr" ? fr : lang === "it" ? it : lang === "en" ? en : de;
@@ -121,10 +156,11 @@ export default function AccountPage() {
         }),
       });
       const data = await res.json();
-      if (!res.ok || data.error) throw new Error(data.error ?? "unknown");
+      if (!res.ok || data.error || !data.ok || !data.billing || !["cancelled", "ended"].includes(data.billing.state)) throw new Error(data.error ?? "unknown");
+      ++billingGeneration.current; // Ignore a status read started before this mutation.
+      setBillingResult({ userId: session!.userId!, billing: data.billing });
+      setBillingLoading(false);
       setCancelState("done");
-      // Refresh session after a short delay so premium badge updates
-      setTimeout(() => window.location.reload(), 1500);
     } catch (e: unknown) {
       setCancelError(e instanceof Error ? e.message : "Fehler");
       setCancelState("error");
@@ -151,6 +187,7 @@ export default function AccountPage() {
       const data = await res.json();
       if (!res.ok || data.error) throw new Error(data.error ?? "unknown");
       setCancelState("retained");
+      setBillingRefresh(value => value + 1);
     } catch (e: unknown) {
       setCancelError(e instanceof Error ? e.message : "Fehler");
       setCancelState("error");
@@ -207,7 +244,7 @@ export default function AccountPage() {
               ? "bg-amber-50 text-amber-700 border border-amber-200"
               : "bg-gray-50 text-gray-500 border border-gray-100"
           }`}>
-            {isTeacher ? t("Lehrerkonto aktiv", "Compte enseignant actif", "Account docente attivo", "Teacher account active") : session.premium ? t("👑 Premium aktiv", "👑 Premium actif", "👑 Premium attivo", "👑 Premium active") : t("🔓 Gratis-Konto", "🔓 Compte gratuit", "🔓 Account gratuito", "🔓 Free account")}
+            {isTeacher ? t("Lehrerkonto aktiv", "Compte enseignant actif", "Account docente attivo", "Teacher account active") : (billing ? billing.accessActive : isPremium) ? t("👑 Premium aktiv", "👑 Premium actif", "👑 Premium attivo", "👑 Premium active") : t("🔓 Gratis-Konto", "🔓 Compte gratuit", "🔓 Account gratuito", "🔓 Free account")}
             {!isPremium && (
               <Link href="/upgrade" className="ml-auto inline-flex min-h-11 items-center text-xs text-green-700 underline font-normal">
                 {t("Upgrade →", "Passer Premium →", "Upgrade →", "Upgrade →")}
@@ -226,7 +263,11 @@ export default function AccountPage() {
           </section>
         )}
         {/* ── Billing section ── */}
-        {session.premium ? (
+        <AccountBillingStatus billing={billing} lang={lang} loading={billingLoading} />
+        {!billing && !billingLoading && <button onClick={() => setBillingRefresh(value => value + 1)} className="min-h-11 w-full underline text-sm">
+          {t("Erneut prüfen", "Vérifier à nouveau", "Verifica di nuovo", "Check again")}
+        </button>}
+        {cancelState !== "done" && (billing?.canCancel || cancelState !== "idle") ? (
           <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-5 space-y-4">
             <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
               {session.premiumPlan === "schooltime"
@@ -234,40 +275,13 @@ export default function AccountPage() {
                 : t("Abonnement", "Abonnement", "Abbonamento", "Subscription")}
             </div>
 
-            {/* Active plan info */}
-            <div className="flex items-center justify-between">
-              <div>
-                <div className="font-bold text-gray-800 text-sm">👑 {t("Premium aktiv", "Premium actif", "Premium attivo", "Premium active")}</div>
-                <div className="text-xs text-gray-400 mt-0.5">
-                  {session.premiumPlan === "schooltime"
-                    ? t("Einmal bezahlt · Keine Verlängerung", "Payé une fois · Sans renouvellement", "Pagato una volta · Nessun rinnovo", "Paid once · No renewal")
-                    : t("Verwaltet über Stripe · Jederzeit kündbar",
-                     "Géré via Stripe · Résiliable à tout moment",
-                     "Gestito via Stripe · Annullabile in qualsiasi momento",
-                     "Managed via Stripe · Cancel anytime")}
-                </div>
-              </div>
-              <span className="text-xl">✅</span>
-            </div>
-
-            {/* Cancel flow */}
-            {session.premiumPlan === "schooltime" ? (
-              <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-center text-sm text-green-800">
-                <div className="font-black">✅ {t("Lebenslanger Zugang freigeschaltet", "Accès à vie débloqué", "Accesso a vita sbloccato", "Lifetime access unlocked")}</div>
-                <div className="mt-1 text-xs leading-5">
-                  {t("Alle Klassen 1–6, für bis zu 3 Kinderprofile. Es folgen keine weiteren Abbuchungen.", "Toutes les années 1–6, pour jusqu’à 3 profils enfants. Aucun autre prélèvement.", "Tutte le classi 1–6, fino a 3 profili bambino. Nessun altro addebito.", "All grades 1–6, for up to 3 child profiles. No further charges.")}
-                </div>
-              </div>
-            ) : cancelState === "retained" ? (
+            {/* Confirmed status above remains visible across reload and login. */}
+            {cancelState === "retained" ? (
               <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-center text-sm text-green-800">
                 <div className="font-black">✅ {t("CHF 66/Jahr gesichert", "CHF 66/an confirmé", "CHF 66/anno confermato", "CHF 66/year confirmed")}</div>
                 <div className="mt-1 text-xs leading-5">
                   {t("Der neue Jahrespreis gilt ab deiner nächsten Verlängerung.", "Le nouveau prix annuel s'appliquera dès ton prochain renouvellement.", "Il nuovo prezzo annuale si applicherà dal prossimo rinnovo.", "The new yearly price starts at your next renewal.")}
                 </div>
-              </div>
-            ) : cancelState === "done" ? (
-              <div className="bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-600 text-center">
-                ✅ {t("Gekündigt. Zugang bis Ablauf der Laufzeit aktiv.", "Résilié. Accès actif jusqu'à la fin de la période.", "Annullato. Accesso attivo fino alla fine del periodo.", "Cancelled. Access remains active until the period ends.")}
               </div>
             ) : cancelState === "loading" || cancelState === "offer-loading" ? (
               <div className="bg-gray-50 rounded-xl px-4 py-3 text-sm font-semibold text-gray-600 text-center">
@@ -278,9 +292,11 @@ export default function AccountPage() {
             ) : cancelState === "error" ? (
               <div className="space-y-2">
                 <div className="bg-red-50 text-red-600 text-xs rounded-xl px-3 py-2">
-                  ❌ {cancelError || t("Fehler beim Kündigen.", "Erreur d'annulation.", "Errore annullamento.", "Cancellation error.")}
+                  ❌ {cancelError === "cancellation_sync_pending"
+                    ? t("Die Kündigung wurde bei Stripe bestätigt, aber der Kontostatus konnte noch nicht gespeichert werden. Bitte erneut versuchen.", "La résiliation est confirmée chez Stripe, mais le compte n’a pas encore été mis à jour. Réessaie.", "Stripe ha confermato l’annullamento, ma l’account non è ancora aggiornato. Riprova.", "Stripe confirmed cancellation, but the account update is pending. Please retry.")
+                    : t("Die Änderung konnte nicht bestätigt werden. Bitte erneut versuchen oder hello@cleverli.ch kontaktieren.", "La modification n’a pas pu être confirmée. Réessaie ou contacte hello@cleverli.ch.", "La modifica non è stata confermata. Riprova o contatta hello@cleverli.ch.", "The change could not be confirmed. Please retry or contact hello@cleverli.ch.")}
                 </div>
-                <button onClick={() => setCancelState("idle")} className="min-h-11 w-full text-xs text-gray-400 underline">
+                <button onClick={() => { setCancelState("confirm"); }} className="min-h-11 w-full text-xs text-gray-400 underline">
                   {t("Zurück", "Retour", "Indietro", "Back")}
                 </button>
               </div>
@@ -291,10 +307,10 @@ export default function AccountPage() {
                     {t("Kurz bevor du kündigst:", "Juste avant de résilier :", "Prima di annullare:", "Before you cancel:")}
                   </p>
                   <p className="text-xs leading-5 text-gray-600">
-                    {t("Was ist der wichtigste Grund? Dein Zugang läuft bis zum Ende der bezahlten Laufzeit weiter.",
-                       "Quelle est la raison principale ? L'accès reste actif jusqu'à la fin de la période payée.",
-                       "Qual è il motivo principale? L'accesso rimane attivo fino alla fine del periodo pagato.",
-                       "What is the main reason? Your access remains active until the end of the paid period.")}
+                    {t("Was ist der wichtigste Grund? Nach bestätigter Kündigung siehst du hier das Ende deines Zugangs.",
+                       "Quelle est la raison principale ? Après confirmation, la date de fin de ton accès s’affichera ici.",
+                       "Qual è il motivo principale? Dopo la conferma, vedrai qui la data di fine dell’accesso.",
+                       "What is the main reason? Once cancellation is confirmed, your access end date will appear here.")}
                   </p>
                 </div>
 
@@ -372,7 +388,7 @@ export default function AccountPage() {
               </button>
             )}
           </div>
-        ) : (
+        ) : billing && ["free", "ended"].includes(billing.state) ? (
           /* Upsell for free users */
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl border border-green-200 p-5 space-y-3">
             <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
@@ -389,7 +405,7 @@ export default function AccountPage() {
               ⭐ {t("Jetzt auf Premium upgraden →", "Passer à Premium →", "Passa a Premium →", "Upgrade to Premium →")}
             </Link>
           </div>
-        )}
+        ) : null}
 
         {/* Change password */}
         <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-5 space-y-3">
