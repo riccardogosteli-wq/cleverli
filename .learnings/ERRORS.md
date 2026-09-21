@@ -122,3 +122,7 @@
 
 ## 2026-09-21 pending trial-upgrade mail exclusion
 - Metadata and lifetime-profile checks do not cover an unpaid pending trial-upgrade offer. Added an exact-subscription upgrade-ledger exclusion at enqueue, claim and fresh worker identity check. A separate follow-up migration preserves an already-applied activation fence and receipts; both base-plus-follow-up and pending-at-retry cases are covered offline.
+
+## 2026-09-21 durable cancellation sync barrier
+- Review exposed that an invocation-local callback did not protect against an independent cron claim after enqueue. Added persisted readiness, atomic claim gating, cron filtering and a delivery-layer guard; failed and held sync tests now exercise competing workers. Readiness migration must follow the older upgrade guard.
+- `rg` is unavailable in this shell; use `grep` for bounded source inspection.

@@ -34,7 +34,7 @@ for(const lang of ['de','fr','it','en']) test(`warm exact-date copy and fixed se
 });
 test('unpaid email does not promise active Premium',()=>{const p=policy.cancellationEmail('fixture@example.invalid',endAt,'de',false);assert.match(p.text,/Premium ist derzeit nicht aktiv/);assert.ok(!p.text.includes('Premium-Zugang bleibt bis'));});
 test('invalid recipient rejected',()=>assert.throws(()=>policy.cancellationEmail('bad\nrecipient',endAt,'de',true)));
-function row(extra={}) {return {id:'outbox-fixture',user_id:userId,subscription_id:'sub_fixture',customer_id:'cus_fixture',cancelled_at:now,end_at:endAt,access_active:true,payload:policy.cancellationEmail('fixture@example.invalid',endAt,'de',true),state:'pending',lease_id:'lease-fixture',lease_until:new Date(Date.now()+300000).toISOString(),first_attempt_at:new Date().toISOString(),provider_id:null,...extra};}
+function row(extra={}) {return {id:'outbox-fixture',user_id:userId,subscription_id:'sub_fixture',customer_id:'cus_fixture',cancelled_at:now,ready_at:new Date().toISOString(),end_at:endAt,access_active:true,payload:policy.cancellationEmail('fixture@example.invalid',endAt,'de',true),state:'pending',lease_id:'lease-fixture',lease_until:new Date(Date.now()+300000).toISOString(),first_attempt_at:new Date().toISOString(),provider_id:null,...extra};}
 function worker(options={}) { const calls=[]; const r=row(options.row); return {calls,io:{claim:async()=>options.noClaim?null:r,eligible:async()=>options.eligible!==false,send:async(p,key)=>{calls.push(['send',p,key]);if(options.sendError)throw options.sendError;return'provider-fixture';},finish:async(...args)=>{calls.push(['finish',...args]);if(options.saveError && args[1]==='accepted')throw Error('db');}}}; }
 test('accepted is provider acceptance, not delivered',async()=>{const f=worker();assert.equal(await policy.deliverCancellation(f.io,'fixture'),'accepted');assert.equal(f.calls[0][2],'cleverli-cancellation-v1-outbox-fixture');assert.equal(f.calls[1][2],'accepted');});
 test('no claim means no transport',async()=>{const f=worker({noClaim:true});assert.equal(await policy.deliverCancellation(f.io,'fixture'),'not_claimed');assert.equal(f.calls.length,0);});
@@ -49,28 +49,30 @@ test('provider dedupe horizon cannot be crossed',async()=>{const f=worker({row:{
 function adapter(options={}) {
  const calls=[], state={row:null, sub:options.sub||sub()};
  const db={auth:{admin:{getUserById:async()=>({data:{user:{email:'fixture@example.invalid',user_metadata:{lang:'de'}}},error:null})}},from:table=>{
-  const q={select:()=>q,eq:()=>q,limit:()=>q,maybeSingle:async()=>({data:options.upgrade?{id:'upgrade-fixture'}:null,error:options.upgradeError?Error('db'):null}),single:async()=>{
+  let filterState,readyOnly=false,unreadyOnly=false,countOnly=false;
+  const q={select:(_fields,opts)=>{countOnly=Boolean(opts?.head);return q;},eq:(field,value)=>{if(field==='state')filterState=value;return q;},not:()=>{readyOnly=true;return q;},is:()=>{unreadyOnly=true;return q;},lte:()=>q,order:()=>q,limit:()=>q,then:(resolve,reject)=>Promise.resolve({data:countOnly?null:(state.row&&(!filterState||state.row.state===filterState)&&(!readyOnly||state.row.ready_at)?[{id:state.row.id}]:[]),count:countOnly&&state.row?.state===filterState&&(!unreadyOnly||!state.row.ready_at)?1:0,error:null}).then(resolve,reject),maybeSingle:async()=>({data:options.upgrade?{id:'upgrade-fixture'}:null,error:options.upgradeError?Error('db'):null}),single:async()=>{
    if(table==='cancellation_mail_activation')return{data:{not_before:options.fence??now-10},error:null};
    if(table==='parent_profiles')return{data:{email:options.email||'fixture@example.invalid',premium_plan:options.lifetime?'schooltime':'monthly',stripe_subscription_id:'sub_fixture',stripe_customer_id:options.wrongCustomer?'cus_other':'cus_fixture'},error:null};
    return{data:state.row,error:null};
   }};return q;
  },rpc:async(name,p)=>{
   calls.push([name,p]);
-  if(name==='enqueue_cancellation_mail'){if(!state.row)state.row=row({payload:p.p_payload});return{data:state.row,error:null};}
-  if(name==='claim_cancellation_mail')return{data:state.row.state==='pending'?state.row:null,error:null};
-  if(name==='finish_cancellation_mail'){state.row.state=p.p_state;state.row.provider_id=p.p_provider;return{data:true,error:null};}
+  if(name==='enqueue_cancellation_mail'){if(!state.row)state.row=row({payload:p.p_payload,ready_at:null,first_attempt_at:null,lease_id:null,lease_until:null});return{data:state.row,error:null};}
+  if(name==='ready_cancellation_mail'){if(options.readyError)return{data:false,error:Error('db')};state.row.ready_at??=new Date().toISOString();return{data:true,error:null};}
+  if(name==='claim_cancellation_mail'){if(state.row.state!=='pending'||!state.row.ready_at||state.row.lease_id)return{data:null,error:null};state.row.first_attempt_at??=new Date().toISOString();state.row.lease_id='lease-fixture';state.row.lease_until=new Date(Date.now()+300000).toISOString();return{data:{...state.row},error:null};}
+  if(name==='finish_cancellation_mail'){if(state.row.lease_id!==p.p_lease)return{data:false,error:null};state.row.lease_id=null;state.row.lease_until=null;state.row.state=p.p_state;state.row.provider_id=p.p_provider;return{data:true,error:null};}
   throw Error(name);
  }};
  const stripe={subscriptions:{retrieve:async()=>{calls.push(['retrieve']);return state.sub;}},prices:{retrieve:async()=>({product:'prod_fixture'})}};
  class Resend {constructor(){if(options.noProvider)throw Error('provider unavailable');}emails={send:async(payload,params)=>{calls.push(['send',payload,params]);return options.providerError?{data:null,error:{name:'rate_limit_exceeded'},headers:{'retry-after':'3600'}}:{data:{id:'provider-fixture'},error:null,headers:{}};}};}
  const server=load('src/lib/cancellationEmailServer.ts',{'./accountBilling':billing,'./cancellationEmail':policy,'@supabase/supabase-js':{createClient:()=>db},stripe:function(){return stripe;},resend:{Resend}},{RESEND_API_KEY:options.missingKey?undefined:'offline-fixture-only'});
- return {calls,state,server};
+ return {calls,state,server,db};
 }
-test('actual adapter sends once across duplicate future webhook events',async()=>{const f=adapter();assert.equal(await f.server.processCancellationEmailEvent(event()),'accepted');assert.equal(await f.server.processCancellationEmailEvent(event()),'accepted');assert.equal(f.calls.filter(c=>c[0]==='send').length,1);const sent=f.calls.find(c=>c[0]==='send');assert.equal(sent[1].from,'Cleverli <hello@cleverli.ch>');assert.equal(sent[1].replyTo,'hello@cleverli.ch');assert.equal(sent[1].to,'fixture@example.invalid');});
-test('activation fence prevents all account reads/transport for historical event',async()=>{const f=adapter({fence:now+1});assert.equal(await f.server.processCancellationEmailEvent(event()),'skipped');assert.equal(f.calls.length,0);});
-for(const [name,options]of [['lifetime',{lifetime:true}],['wrong customer',{wrongCustomer:true}],['recipient mismatch',{email:'other@example.invalid'}],['unrelated product',{sub:sub({items:{data:[{current_period_end:end,price:{id:'price_other',currency:'chf',recurring:{interval:'month'},product:'prod_other'}}]}})}]])test(`adapter excludes ${name}`,async()=>{const f=adapter(options);assert.equal(await f.server.processCancellationEmailEvent(event()),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
-test('missing provider never selects another sender or transport',async()=>{const f=adapter({missingKey:true});assert.equal(await f.server.processCancellationEmailEvent(event()),'pending');assert.ok(!f.calls.some(c=>c[0]==='send'));assert.equal(f.state.row.state,'pending');});
-test('actual adapter respects Retry-After and does not undo cancellation',async()=>{const f=adapter({providerError:true});assert.equal(await f.server.processCancellationEmailEvent(event()),'pending');assert.equal(f.calls.at(-1)[1].p_retry_seconds,3600);assert.equal(f.state.sub.cancel_at_period_end,true);});
+test('actual adapter sends once across duplicate future webhook events',async()=>{const f=adapter();assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'accepted');assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'accepted');assert.equal(f.calls.filter(c=>c[0]==='send').length,1);const sent=f.calls.find(c=>c[0]==='send');assert.equal(sent[1].from,'Cleverli <hello@cleverli.ch>');assert.equal(sent[1].replyTo,'hello@cleverli.ch');assert.equal(sent[1].to,'fixture@example.invalid');});
+test('activation fence prevents all account reads/transport for historical event',async()=>{const f=adapter({fence:now+1});assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'skipped');assert.equal(f.calls.length,0);});
+for(const [name,options]of [['lifetime',{lifetime:true}],['wrong customer',{wrongCustomer:true}],['recipient mismatch',{email:'other@example.invalid'}],['unrelated product',{sub:sub({items:{data:[{current_period_end:end,price:{id:'price_other',currency:'chf',recurring:{interval:'month'},product:'prod_other'}}]}})}]])test(`adapter excludes ${name}`,async()=>{const f=adapter(options);assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
+test('missing provider never selects another sender or transport',async()=>{const f=adapter({missingKey:true});assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'pending');assert.ok(!f.calls.some(c=>c[0]==='send'));assert.equal(f.state.row.state,'pending');});
+test('actual adapter respects Retry-After and does not undo cancellation',async()=>{const f=adapter({providerError:true});assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'pending');assert.equal(f.calls.at(-1)[1].p_retry_seconds,3600);assert.equal(f.state.sub.cancel_at_period_end,true);});
 test('webhook producer is behind signature verification and no API/UI email claim exists',()=>{const s=fs.readFileSync('src/app/api/webhooks/stripe/route.ts','utf8');assert.ok(s.indexOf('stripe.webhooks.constructEvent')<s.indexOf('await processCancellationEmailEvent'));assert.match(s,/await syncOnce\(\);[\s\S]*if \(cancellationMailRetry\)/);const api=fs.readFileSync('src/app/api/cancel-subscription/route.ts','utf8');assert.ok(!/resend|emails\.send|processCancellationEmailEvent/.test(api));assert.ok(!fs.readFileSync('src/app/account/AccountClient.tsx','utf8').includes('emailDelivered'));});
 
 function webhook(options={}) {
@@ -101,14 +103,14 @@ for(const mailFails of [true,false])test(`cron preserves all existing jobs when 
 
 test('approved retention price on the same Cleverli product can confirm',async()=>{
  const f=adapter({sub:sub({items:{data:[{current_period_end:end,price:{id:'price_retention_fixture',lookup_key:'cleverli_retention_yearly_66',unit_amount:6600,currency:'chf',recurring:{interval:'year'},product:'prod_fixture'}}]}})});
- assert.equal(await f.server.processCancellationEmailEvent(event()),'accepted');
+ assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'accepted');
 });
 test('retention lookup key on a different product cannot confirm',async()=>{
  const f=adapter({sub:sub({items:{data:[{current_period_end:end,price:{id:'price_retention_fixture',lookup_key:'cleverli_retention_yearly_66',unit_amount:6600,currency:'chf',recurring:{interval:'year'},product:'prod_unrelated'}}]}})});
- assert.equal(await f.server.processCancellationEmailEvent(event()),'skipped');assert.ok(!f.calls.some(c=>c[0]==='send'));
+ assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'skipped');assert.ok(!f.calls.some(c=>c[0]==='send'));
 });
 test('future trial cancellation can confirm without calling it paid',async()=>{
- const f=adapter({sub:sub({status:'trialing',trial_end:end})});assert.equal(await f.server.processCancellationEmailEvent(event()),'accepted');
+ const f=adapter({sub:sub({status:'trialing',trial_end:end})});assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'accepted');
  assert.ok(!f.calls.find(c=>c[0]==='send')[1].text.includes('bezahlte'));
 });
 
@@ -122,7 +124,33 @@ test('failed entitlement sync barrier prevents transport, preserving outbox for 
 });
 
 test('mail rejects termination after current period even when period-end flag is true',()=>{assert.equal(policy.confirmedMailSubscription(sub({cancel_at:end+86400}),now),null);});
-test('future termination with intervening renewal never enqueues no-renewal mail',async()=>{const f=adapter({sub:sub({cancel_at:end+86400})});assert.equal(await f.server.processCancellationEmailEvent(event()),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
+test('future termination with intervening renewal never enqueues no-renewal mail',async()=>{const f=adapter({sub:sub({cancel_at:end+86400})});assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
 
-test('pending upgrade without subscription metadata marker is excluded before enqueue',async()=>{const f=adapter({upgrade:true});assert.equal(await f.server.processCancellationEmailEvent(event()),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
-test('failed upgrade-ledger check cannot send or enqueue',async()=>{const f=adapter({upgradeError:true});await assert.rejects(f.server.processCancellationEmailEvent(event()),/upgrade_check_unavailable/);assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
+test('pending upgrade without subscription metadata marker is excluded before enqueue',async()=>{const f=adapter({upgrade:true});assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
+test('failed upgrade-ledger check cannot send or enqueue',async()=>{const f=adapter({upgradeError:true});await assert.rejects(f.server.processCancellationEmailEvent(event(),async()=>{}),/upgrade_check_unavailable/);assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
+
+test('unready claimed row is rejected by the delivery layer too',async()=>{const f=worker({row:{ready_at:null}});assert.equal(await policy.deliverCancellation(f.io,'fixture'),'pending');assert.ok(!f.calls.some(c=>c[0]==='send'));});
+test('producer cannot mark readiness without a sync barrier',async()=>{const f=adapter();await assert.rejects(f.server.processCancellationEmailEvent(event()),/sync_barrier_required/);assert.equal(f.state.row.ready_at,null);assert.ok(!f.calls.some(c=>c[0]==='send'));});
+test('concurrent cron and direct claim cannot send while webhook sync is held',async()=>{
+ const f=adapter();let enter,release;const entered=new Promise(resolve=>{enter=resolve;});const hold=new Promise(resolve=>{release=resolve;});
+ const work=f.server.processCancellationEmailEvent(event(),async()=>{enter();await hold;});await entered;
+ assert.equal(f.state.row.ready_at,null);assert.equal((await f.db.rpc('claim_cancellation_mail',{p_id:f.state.row.id})).data,null);
+ await f.server.retryCancellationEmails();assert.ok(!f.calls.some(c=>c[0]==='send'));assert.equal(f.state.row.first_attempt_at,null);
+ release();assert.equal(await work,'accepted');assert.equal(f.calls.filter(c=>c[0]==='send').length,1);assert.ok(f.state.row.ready_at);
+});
+test('failed sync leaves durable unready row unclaimable to later cron',async()=>{
+ const f=adapter();await assert.rejects(f.server.processCancellationEmailEvent(event(),async()=>{throw Error('sync failure');}));
+ await f.server.retryCancellationEmails();assert.equal((await f.db.rpc('claim_cancellation_mail',{p_id:f.state.row.id})).data,null);
+ assert.equal(f.state.row.ready_at,null);assert.equal(f.state.row.first_attempt_at,null);assert.ok(!f.calls.some(c=>c[0]==='send'));
+});
+test('readiness persistence failure cannot fall through to either delivery path',async()=>{
+ const f=adapter({readyError:true});await assert.rejects(f.server.processCancellationEmailEvent(event(),async()=>{}),/readiness_not_persisted/);
+ await f.server.retryCancellationEmails();assert.equal(f.state.row.ready_at,null);assert.ok(!f.calls.some(c=>c[0]==='send'));
+});
+
+test('successful webhook retry releases the same failed-sync row exactly once',async()=>{
+ const f=adapter();await assert.rejects(f.server.processCancellationEmailEvent(event(),async()=>{throw Error('sync failure');}));
+ const id=f.state.row.id;await f.server.retryCancellationEmails();assert.ok(!f.calls.some(c=>c[0]==='send'));
+ assert.equal(await f.server.processCancellationEmailEvent(event(),async()=>{}),'accepted');assert.equal(f.state.row.id,id);
+ await f.server.retryCancellationEmails();assert.equal(f.calls.filter(c=>c[0]==='send').length,1);
+});

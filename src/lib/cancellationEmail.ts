@@ -7,7 +7,7 @@ export type CancellationLocale = "de" | "fr" | "it" | "en";
 export type CancellationPayload = { from: string; replyTo: string; to: string; subject: string; html: string; text: string };
 export type CancellationMailRow = {
   id: string; subscription_id: string; customer_id: string; user_id: string;
-  cancelled_at: number; end_at: string; access_active: boolean; payload: CancellationPayload;
+  cancelled_at: number; ready_at: string | null; end_at: string; access_active: boolean; payload: CancellationPayload;
   state: "pending" | "accepted" | "suppressed" | "review";
   lease_id: string | null; lease_until: string | null; first_attempt_at: string | null; provider_id: string | null;
 };
@@ -71,6 +71,7 @@ export async function deliverCancellation(io: CancellationMailIO, id: string) {
   const row = await io.claim(id);
   if (!row) return "not_claimed";
   try {
+    if (!row.ready_at) throw Error("cancellation_not_ready");
     if (!await io.eligible(row)) { await io.finish(row, "suppressed"); return "suppressed"; }
     if (row.payload.from !== CANCELLATION_FROM || row.payload.replyTo !== CANCELLATION_REPLY_TO) throw Error("sender_not_allowed");
     if (!row.lease_until || Date.parse(row.lease_until) <= Date.now() || !row.first_attempt_at || Date.parse(row.first_attempt_at) <= Date.now() - 23 * 3600000) throw new CancellationRetry();

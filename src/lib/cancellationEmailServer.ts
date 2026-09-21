@@ -82,7 +82,7 @@ function services() {
 }
 
 // Called ONLY from the existing signature-verified Stripe webhook. No GET/backfill/scan producer.
-export async function processCancellationEmailEvent(event: Stripe.Event, beforeDelivery?: () => Promise<void>) {
+export async function processCancellationEmailEvent(event: Stripe.Event, beforeDelivery: () => Promise<void>) {
   // Fast shape gate before constructing services or reading any account.
   if (!cancellationTransition(event, 0)) return "skipped";
   const s = services();
@@ -108,7 +108,10 @@ export async function processCancellationEmailEvent(event: Stripe.Event, beforeD
   if (r.error || !row?.id) throw Error("cancellation_enqueue_failed");
   if (row.state === "pending") {
     // Webhook entitlement sync completes before any potentially slow provider request.
-    await beforeDelivery?.();
+    if (!beforeDelivery) throw Error("cancellation_sync_barrier_required");
+    await beforeDelivery();
+    const ready = await s.db.rpc("ready_cancellation_mail", { p_id: row.id });
+    if (ready.error || ready.data !== true) throw Error("cancellation_readiness_not_persisted");
     await deliverCancellation(s.io, row.id);
   }
   return s.status(row.id);
@@ -117,7 +120,7 @@ export async function processCancellationEmailEvent(event: Stripe.Event, beforeD
 // Existing authenticated daily cron is a bounded backstop, never an account/history scan.
 export async function retryCancellationEmails() {
   const s = services();
-  const r = await s.db.from("cancellation_mail_outbox").select("id").eq("state", "pending")
+  const r = await s.db.from("cancellation_mail_outbox").select("id").eq("state", "pending").not("ready_at", "is", null)
     .lte("next_attempt_at", new Date().toISOString()).order("next_attempt_at").limit(20);
   if (r.error) throw Error("cancellation_outbox_unavailable");
   const outcomes: Record<string, number> = {};
@@ -128,7 +131,11 @@ export async function retryCancellationEmails() {
     if (state === "pending") break; // Do not fan out through provider throttling/outage.
     await new Promise(resolve => setTimeout(resolve, 600));
   }
-  const review = await s.db.from("cancellation_mail_outbox").select("id", { count: "exact", head: true }).eq("state", "review");
-  if (review.error) throw Error("cancellation_review_status_unavailable");
-  return { outcomes, requiresReview: (review.count ?? 0) > 0 };
+  const [review, unready] = await Promise.all([
+    s.db.from("cancellation_mail_outbox").select("id", { count: "exact", head: true }).eq("state", "review"),
+    s.db.from("cancellation_mail_outbox").select("id", { count: "exact", head: true }).eq("state", "pending")
+      .is("ready_at", null).lte("created_at", new Date(Date.now() - 10 * 60000).toISOString()),
+  ]);
+  if (review.error || unready.error) throw Error("cancellation_review_status_unavailable");
+  return { outcomes, unready: unready.count ?? 0, requiresReview: (review.count ?? 0) > 0 || (unready.count ?? 0) > 0 };
 }
