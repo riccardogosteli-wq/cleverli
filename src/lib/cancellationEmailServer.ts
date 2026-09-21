@@ -21,6 +21,11 @@ function services() {
     return product(price.product) === product(approved.product);
   }
   async function identity(userId: string, customerId: string, subscriptionId: string) {
+    // Pending offers have not changed the profile to lifetime and may have no
+    // marker on the recurring subscription. The upgrade ledger is authoritative.
+    const upgrade = await db.from("trial_upgrade_offers").select("id").eq("subscription_id", subscriptionId).limit(1).maybeSingle();
+    if (upgrade.error) throw Error("cancellation_upgrade_check_unavailable");
+    if (upgrade.data) return null;
     const [{ data: profile, error }, auth] = await Promise.all([
       db.from("parent_profiles").select("email,premium_plan,stripe_subscription_id,stripe_customer_id").eq("id", userId).single(),
       db.auth.admin.getUserById(userId),

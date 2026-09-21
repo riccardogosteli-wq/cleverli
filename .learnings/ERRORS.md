@@ -119,3 +119,6 @@
 - Fallback discarded uniquely owned terminal subscriptions; now resolves one terminal candidate while preserving ambiguity failures and authoritative ended_at.
 - Cancellation/retention POST completion lacked account scoping. Added identity epochs and layout-effect reset; all eight actual-component regressions fail on 6614d2e and pass after the fix.
 - The first deterministic hook harness recursively defaulted missing children back to root and flushed only same-realm microtasks. Fixed traversal's null leaf and used a macrotask flush for cross-realm auth/fetch promises; no production workaround added.
+
+## 2026-09-21 pending trial-upgrade mail exclusion
+- Metadata and lifetime-profile checks do not cover an unpaid pending trial-upgrade offer. Added an exact-subscription upgrade-ledger exclusion at enqueue, claim and fresh worker identity check. A separate follow-up migration preserves an already-applied activation fence and receipts; both base-plus-follow-up and pending-at-retry cases are covered offline.

@@ -8,7 +8,7 @@ A `cancel_at` later than the current billing/trial boundary now produces `schedu
 
 A shared `noFurtherRenewal` policy compares a known explicit cancellation timestamp to the earliest current renewal boundary. Unknown/mixed boundaries fail conservatively. A date beyond that boundary cannot bypass the explicit cancellation request. For an unmanaged subscription the route requests cancellation at period end, then requires authoritative readback proving no intervening renewal. Stripe-managed schedules are rejected before mutation rather than being rewritten. A failed/unchanged readback never persists cancelled success.
 
-The email producer and retry eligibility use the same policy. Future termination with intervening renewals cannot enqueue or send the no-renewal confirmation. No migration change is needed.
+The email producer and retry eligibility use the same policy. Future termination with intervening renewals cannot enqueue or send the no-renewal confirmation. This renewal-boundary fix itself needs no migration. The later mail review criterion adds `2026-09-21-cancellation-mail-upgrade-guard.sql` after the base mail migration to exclude pending upgrade-ledger subscriptions.
 
 ## 2. Unique terminal fallback
 

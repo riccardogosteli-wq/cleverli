@@ -49,7 +49,7 @@ test('provider dedupe horizon cannot be crossed',async()=>{const f=worker({row:{
 function adapter(options={}) {
  const calls=[], state={row:null, sub:options.sub||sub()};
  const db={auth:{admin:{getUserById:async()=>({data:{user:{email:'fixture@example.invalid',user_metadata:{lang:'de'}}},error:null})}},from:table=>{
-  const q={select:()=>q,eq:()=>q,single:async()=>{
+  const q={select:()=>q,eq:()=>q,limit:()=>q,maybeSingle:async()=>({data:options.upgrade?{id:'upgrade-fixture'}:null,error:options.upgradeError?Error('db'):null}),single:async()=>{
    if(table==='cancellation_mail_activation')return{data:{not_before:options.fence??now-10},error:null};
    if(table==='parent_profiles')return{data:{email:options.email||'fixture@example.invalid',premium_plan:options.lifetime?'schooltime':'monthly',stripe_subscription_id:'sub_fixture',stripe_customer_id:options.wrongCustomer?'cus_other':'cus_fixture'},error:null};
    return{data:state.row,error:null};
@@ -123,3 +123,6 @@ test('failed entitlement sync barrier prevents transport, preserving outbox for 
 
 test('mail rejects termination after current period even when period-end flag is true',()=>{assert.equal(policy.confirmedMailSubscription(sub({cancel_at:end+86400}),now),null);});
 test('future termination with intervening renewal never enqueues no-renewal mail',async()=>{const f=adapter({sub:sub({cancel_at:end+86400})});assert.equal(await f.server.processCancellationEmailEvent(event()),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
+
+test('pending upgrade without subscription metadata marker is excluded before enqueue',async()=>{const f=adapter({upgrade:true});assert.equal(await f.server.processCancellationEmailEvent(event()),'skipped');assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
+test('failed upgrade-ledger check cannot send or enqueue',async()=>{const f=adapter({upgradeError:true});await assert.rejects(f.server.processCancellationEmailEvent(event()),/upgrade_check_unavailable/);assert.ok(!f.calls.some(c=>c[0]==='enqueue_cancellation_mail'||c[0]==='send'));});
