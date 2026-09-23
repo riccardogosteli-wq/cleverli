@@ -4,8 +4,8 @@ import IntentLandingPage from "../ads/intent/IntentLandingPage";
 import { matheUebungenKinderConfig } from "../ads/intent/configs";
 
 export const metadata: Metadata = withPageSocial({
-  title: "Mathe-Übungen für Kinder | Primarschule Schweiz",
-  description: "Mathe-Übungen für Kinder in der Schweizer Primarschule: Rechnen, Einmaleins, Geometrie und mehr. Kostenlos online testen.",
+  title: "Mathe Übungen für Kinder der 1. bis 6. Klasse",
+  description: "Mathe für die Schweizer Primarschule: Entdecke Übungen für die 1. bis 6. Klasse und finde passende Aufgaben für dein Kind.",
   robots: {
     index: true,
     follow: true,

@@ -214,7 +214,8 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
   pageKey: "mathe_uebungen_kinder",
   path: "/mathe-uebungen-kinder",
   eyebrow: "Mathe Übungen für Kinder · Primarschule",
-  title: "Mathe Übungen für Kinder in der Primarschule",
+  title: "Mathe üben für die Schweizer Primarschule",
+  trialTitle: "Mathe üben für die Schweizer Primarschule",
   lead: "Kurze Online-Aufgaben für Rechnen, Einmaleins, Geometrie und Textaufgaben. Kinder bekommen direkt Feedback, Eltern sehen den Fortschritt.",
   badges: ["1.–6. Klasse", "Rechnen, Geometrie, Zeit", "Kostenlos testen"],
   freeTrialUrl: "/learn/2/math/addition-bis-20",
@@ -254,6 +255,7 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
   trustTitle: "Mathe daheim braucht klare Übungen und sichtbaren Fortschritt.",
   trustBody: "Cleverli bündelt Mathe-Übungen für die Primarschule in einem ruhigen, kindgerechten Ablauf. Kurze Runden, sichtbarer Fortschritt und Hilfe genau dann, wenn sie gebraucht wird.",
   relatedLinks: [
+    { href: "/mathe-uebungen-5-klasse", title: "Mathe 5. Klasse: Dezimalzahlen, Brüche und Umfang", description: "Drei Aufgaben mit erklärten Lösungen zeigen, wie dein Kind Zahlen und Formen besser versteht." },
     {
       href: "/mathe-uebungen-2-klasse",
       title: "Mathe Übungen 2. Klasse",
@@ -366,6 +368,7 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
     ],
   },
   relatedLinks: [
+    { href: "/deutsch-uebungen-3-klasse", title: "Deutsch 3. Klasse: Wortarten, Lesen und Rechtschreibung", description: "An konkreten Aufgaben mit Lösungen den passenden Einstieg für dein Kind finden." },
     {
       href: "/deutsch-uebungen-2-klasse",
       title: "Deutsch Übungen 2. Klasse",

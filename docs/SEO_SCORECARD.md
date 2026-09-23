@@ -1,7 +1,7 @@
 # Cleverli SEO Scorecard
 
 Last setup: 2026-08-08
-Last reviewed: 2026-08-31
+Last reviewed: 2026-09-23
 
 ## Review Cadence
 
@@ -16,15 +16,21 @@ Last reviewed: 2026-08-31
 - Live page checks: HTTP status, canonical, sitemap inclusion, title/H1, example variety, obvious mobile issues.
 - Manual authority check: relevant Swiss family/education links and mentions.
 
-## Latest Review: 2026-08-31
+## Latest Review: 2026-09-23
 
-- Live checks: all 15 priority URLs returned `200`, had title/H1, self-canonical, sitemap inclusion, and no obvious broken rendering/404 risk.
-- Sitemap: `https://www.cleverli.ch/sitemap.xml` is submitted in GSC, last downloaded `2026-08-26`, with `0` warnings and `0` errors. The sitemap API still reports `319` submitted and `0` indexed, but URL Inspection remains unavailable through the Maton route, so this aggregate indexed value is not treated as reliable page-level evidence.
-- Google Search Console, latest available data `2026-08-24` to `2026-08-28`: all 12 new class pages had impressions, providing likely indexing evidence for `12/12`. Together they reached 90 impressions and 7 clicks (7.8% CTR), up from 60 impressions and 4 clicks in the previous review window.
-- Strongest class-page signals: `/mathe-uebungen-2-klasse` led impressions (28) but had 0 clicks; `/mathe-uebungen-3-klasse` had 7 impressions, 3 clicks, 42.9% CTR, and position 12.0; `/deutsch-uebungen-3-klasse` had 13 impressions, 4 clicks, 30.8% CTR, and position 7.6. Class pages around position 8-20 are `/mathe-uebungen-3-klasse`, `/mathe-uebungen-5-klasse`, `/deutsch-uebungen-1-klasse`, `/deutsch-uebungen-2-klasse`, and `/deutsch-uebungen-5-klasse`.
-- GA4, `2026-08-24` to `2026-08-30`: organic landing sessions were `/deutsch-uebungen-3-klasse` 3, `/mathe-uebungen-3-klasse` 2, and `/mathe-uebungen-5-klasse` 1. These pages recorded no organic CTA, checkout, trial, signup, or purchase event.
-- Supabase telemetry is reachable, but all 67 priority-page CTA rows were tagged as `ads_lp`, not organic SEO traffic. PostHog had no separately available reporting credentials in this run.
-- Decision: rewrite `/mathe-uebungen-2-klasse` snippet/H1 for CTR, enrich position-8-20 pages starting with `/mathe-uebungen-5-klasse` and `/mathe-uebungen-kinder`, and add stronger CTA proof on the three pages receiving organic landings without CTA.
+- Reporting window: `2026-09-13` to `2026-09-19` inclusive for GSC final data and GA4, compared with `2026-09-06` to `2026-09-12` for GSC. These are equal seven-day windows, not a comparison against the older five-day review.
+- Live checks on September 23: all 15 priority URLs returned `200`, contain title/H1, have self-canonicals and sitemap inclusion, and have no HTML robots noindex directive. No HTML-level 404 risk found. Desktop Mathe 2 and mobile Deutsch 6 browser samples rendered correctly, with no page errors. This is a visual sample, not exhaustive interactive QA of all 15 pages. The browser showed French navigation beside German SEO content, with FR selected; clean-profile language behaviour was not tested. Loaded first-party assets returned 200; some external analytics/advertising requests reported ERR_ABORTED despite 200/204 responses, so tracking delivery is not certified by this smoke check.
+- GSC sitemap: last downloaded `2026-09-21`, 366 submitted URLs, 0 warnings/errors. Its aggregate indexed field is 0 and is not used as a page-level indexing verdict. URL Inspection request through Maton returned upstream HTTP 404; current index status and Google-selected canonicals remain unverified.
+- All 12 class pages and all 15 priority URLs received impressions, evidence that they appeared in search during the window, not a current URL Inspection verdict. The 12 class pages total 108 impressions and 6 clicks. All 15 total **149 impressions, 7 clicks, 4.7% CTR**, versus **68 impressions, 5 clicks, 7.4% CTR** in the previous week: impressions +119%, clicks +40%. Small samples make CTR changes directional only.
+- Top priority page by impressions: `/mathe-uebungen-3-klasse`, 27 impressions, 2 clicks, 7.4% CTR, position 7.4. Best priority-page CTR: `/deutsch-uebungen-3-klasse`, 20.0% from 2 clicks / 10 impressions. Eight priority pages have average position 8–20; see table.
+- GA4 Organic Search: **7 landing sessions** across six priority pages: Deutsch 6 (2), Deutsch 2 (1), Deutsch 3 (1), Mathe 3 (1), Mathe 4 (1), Primarschule (1). No CTA/free-test, begin_checkout, sign_up or purchase events were returned for these landing cohorts. Zero recorded events is not proof of zero actual clicks: the organic report contains no CTA/free-test event names anywhere, although checkout/signup/purchase events exist for other organic landings. Audit event wiring before treating this as a conversion failure. Consent/ad blockers can further reduce measurement. PostHog and separate Supabase telemetry were not queried; no independent confirmation is claimed.
+- Evidence: workspace `reports/seo-2026-09-23/` contains raw live, GSC and GA4 JSON. Browser screenshots: desktop `6aaa52a2-5166-40c1-a302-46ac5018a22c---c007435e-c3f0-4d08-a6b4-2dbac433a84b.jpg`, mobile `8871b4db-d1e8-456b-9a5f-aa5b7b70c099---05f72bfa-8d96-4268-b5f8-433f83466761.png` in OpenClaw outbound media.
+
+### Top three actions for the coming week
+
+1. **CTR:** prioritise `/mathe-uebungen-kinder` title/meta/H1 and clear Swiss primary-school intent: 25 impressions, 0 clicks, position 8.2. Secondary candidate: Mathe 4, 13 impressions, 0 clicks, position 8.9. Do not prioritise another Mathe 2 rewrite on just one impression; its current title already says Rechnen bis 100.
+2. **Ranking:** enrich introductions, real examples, FAQs and contextual links for Mathe 5 (position 8.1) and Deutsch 3 (11.6), then the other six position-8–20 pages. No priority page currently needs an indexing request based on absent impressions.
+3. **Conversion:** verify CTA/free-test events reach GA4 with the organic landing attribution, starting with Deutsch 6. Once measurement is sound, improve CTA wording and visual exercise proof on the six pages with organic visits and no recorded conversion. Seven sessions are insufficient for a reliable conversion-rate conclusion.
 
 ## Scorecard Rules
 
@@ -37,23 +43,25 @@ Last reviewed: 2026-08-31
 
 ## Priority Pages
 
-| Page | Intent | Indexed | Impr. | Clicks | CTR | Avg pos. | Top query | Organic CTA | Next action |
-| --- | --- | --- | ---: | ---: | ---: | ---: | --- | ---: | --- |
-| `/mathe-uebungen-1-klasse` | mathe übungen 1 klasse | Likely | 2 | 0 | 0.0% | 5.5 | - | 0 | Monitor CTR until sample is larger |
-| `/mathe-uebungen-2-klasse` | mathe übungen 2 klasse | Likely | 28 | 0 | 0.0% | 40.1 | 2 klasse mathe | 0 | Rewrite title/meta/H1 around class-specific Rechnen intent |
-| `/mathe-uebungen-3-klasse` | mathe übungen 3 klasse | Likely | 7 | 3 | 42.9% | 12.0 | - | 0 | Add stronger CTA wording and visual proof; 2 organic sessions without CTA |
-| `/mathe-uebungen-4-klasse` | mathe übungen 4 klasse | Likely | 7 | 0 | 0.0% | 30.7 | uebungen 4 klasse | 0 | Sharpen title/meta/H1 and class-specific examples |
-| `/mathe-uebungen-5-klasse` | mathe übungen 5 klasse | Likely | 9 | 0 | 0.0% | 19.3 | hauptschule klasse 5 | 0 | Add richer intro, FAQ, internal links, and CTA proof |
-| `/mathe-uebungen-6-klasse` | mathe übungen 6 klasse | Likely | 5 | 0 | 0.0% | 6.2 | - | 0 | Sharpen title/meta/H1; ranking is already promising |
-| `/deutsch-uebungen-1-klasse` | deutsch übungen 1 klasse | Likely | 2 | 0 | 0.0% | 16.0 | - | 0 | Add richer intro, FAQ, examples, and internal links |
-| `/deutsch-uebungen-2-klasse` | deutsch übungen 2 klasse | Likely | 4 | 0 | 0.0% | 10.8 | - | 0 | Indexing signal achieved; add richer intro, FAQ, and internal links |
-| `/deutsch-uebungen-3-klasse` | deutsch übungen 3 klasse | Likely | 13 | 4 | 30.8% | 7.6 | deutsch online lernen 3 klasse | 0 | Add stronger CTA wording and visual proof; 3 organic sessions without CTA |
-| `/deutsch-uebungen-4-klasse` | deutsch übungen 4 klasse | Likely | 10 | 0 | 0.0% | 28.5 | 4 klasse | 0 | Rewrite title/meta/H1 for clear Deutsch intent |
-| `/deutsch-uebungen-5-klasse` | deutsch übungen 5 klasse | Likely | 1 | 0 | 0.0% | 10.0 | - | 0 | Monitor; enrich intro/FAQ if impressions grow |
-| `/deutsch-uebungen-6-klasse` | deutsch übungen 6 klasse | Likely | 2 | 0 | 0.0% | 6.5 | - | 0 | Monitor CTR until sample is larger |
-| `/mathe-uebungen-kinder` | mathe übungen kinder | Likely | 13 | 0 | 0.0% | 17.1 | lernhilfe mathe primar | 0 | Add richer intro, FAQ, and internal links to class pages |
-| `/deutsch-uebungen-kinder` | deutsch übungen kinder | Likely | 3 | 0 | 0.0% | 4.7 | - | 0 | Monitor CTR until sample is larger |
-| `/primarschule-uebungen` | primarschule übungen | Likely | 2 | 0 | 0.0% | 18.5 | aufgabenblaetter primarschule | 0 | Add richer examples, FAQ, and internal links to class pages |
+Metrics: September 13–19. “Search seen” means impressions in this window; current index status is unverified. Top query is the highest-impression disclosed query (alphabetical tie-break); “Not disclosed” reflects GSC privacy omission. GA4 organic sessions are grouped by landing path. CTA 0* means no recorded event, with measurement coverage unverified.
+
+| Page | Intent | Indexed evidence | Impr. | Clicks | CTR | Avg pos. | Top disclosed query | Organic sessions | Recorded CTA | Next action |
+| --- | --- | --- | ---: | ---: | ---: | ---: | --- | ---: | ---: | --- |
+| `/mathe-uebungen-1-klasse` | mathe übungen 1 klasse | Search seen | 8 | 0 | 0.0% | 7.6 | Not disclosed | 0 | 0* | Monitor CTR; only 8 impressions |
+| `/mathe-uebungen-2-klasse` | mathe übungen 2 klasse | Search seen | 1 | 0 | 0.0% | 1.0 | Not disclosed | 0 | 0* | Monitor visibility; only 1 impression, do not infer deindexing |
+| `/mathe-uebungen-3-klasse` | mathe übungen 3 klasse | Search seen | 27 | 2 | 7.4% | 7.4 | Not disclosed | 1 | 0* | Monitor CTR; keep links to topic examples |
+| `/mathe-uebungen-4-klasse` | mathe übungen 4 klasse | Search seen | 13 | 0 | 0.0% | 8.9 | uebungen 4 klasse | 1 | 0* | Sharpen title/meta/H1; enrich intro and internal links |
+| `/mathe-uebungen-5-klasse` | mathe übungen 5 klasse | Search seen | 14 | 2 | 14.3% | 8.1 | Not disclosed | 0 | 0* | Enrich intro/FAQ and links; position 8.1 |
+| `/mathe-uebungen-6-klasse` | mathe übungen 6 klasse | Search seen | 8 | 0 | 0.0% | 10.4 | Not disclosed | 0 | 0* | Enrich intro/FAQ and internal links |
+| `/deutsch-uebungen-1-klasse` | deutsch übungen 1 klasse | Search seen | 4 | 0 | 0.0% | 7.0 | Not disclosed | 0 | 0* | Monitor small sample; 4 impressions |
+| `/deutsch-uebungen-2-klasse` | deutsch übungen 2 klasse | Search seen | 4 | 0 | 0.0% | 9.2 | Not disclosed | 1 | 0* | Enrich intro/FAQ; audit CTA tracking before copy changes |
+| `/deutsch-uebungen-3-klasse` | deutsch übungen 3 klasse | Search seen | 10 | 2 | 20.0% | 11.6 | deutsch online lernen 3 klasse | 1 | 0* | Enrich intro/FAQ and add CTA proof after tracking check |
+| `/deutsch-uebungen-4-klasse` | deutsch übungen 4 klasse | Search seen | 5 | 0 | 0.0% | 9.2 | Not disclosed | 0 | 0* | Enrich intro/FAQ and internal links |
+| `/deutsch-uebungen-5-klasse` | deutsch übungen 5 klasse | Search seen | 8 | 0 | 0.0% | 13.1 | Not disclosed | 0 | 0* | Enrich intro/FAQ and internal links |
+| `/deutsch-uebungen-6-klasse` | deutsch übungen 6 klasse | Search seen | 6 | 0 | 0.0% | 5.5 | Not disclosed | 2 | 0* | Audit CTA/free-test tracking, then improve proof; 2 organic sessions |
+| `/mathe-uebungen-kinder` | mathe übungen kinder | Search seen | 25 | 0 | 0.0% | 8.2 | cleverli | 0 | 0* | Prioritise title/meta/H1 CTR test; 25 impressions, no clicks |
+| `/deutsch-uebungen-kinder` | deutsch übungen kinder | Search seen | 9 | 0 | 0.0% | 2.1 | cleverli | 0 | 0* | Monitor CTR; largely branded disclosed queries |
+| `/primarschule-uebungen` | primarschule übungen | Search seen | 7 | 1 | 14.3% | 27.3 | aufgabenblaetter primarschule | 1 | 0* | Clarify primary-school intent; audit CTA measurement |
 
 ## Weekly Output Format
 
@@ -77,3 +85,7 @@ Actions:
 2. ...
 3. ...
 ```
+
+### Approved implementation, September 23
+
+Ricci approved actions 1 and 2 (message 6122). Mathe Kinder gets a clearer Swiss primary-school title, description and H1. Mathe 5 and Deutsch 3 each gain three source-bound worked examples with explanatory solutions, four parent FAQs and contextual topic links. Both subject guides link to the enriched class pages. Existing Deutsch 3 detail content is preserved. No tracking or exercise data changes. Release verification is recorded in `.qa/seo-content-20260923/`; do not infer an SEO improvement before later search data arrives. Compare equal windows after recrawl, allowing several weeks for this small sample.

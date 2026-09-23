@@ -18,6 +18,7 @@ export type GradeSubjectSeoPage = {
   ctaHref: string;
   ctaLabel: string;
   sampleRefs?: { topicId: string; exerciseId: string; explanation: string }[];
+  workedExamples?: { topicId: string; exerciseId: string; explanation: string; linkLabel: string }[];
   detailIntro?: string;
   detailHeading?: string;
   detailItems?: {
@@ -72,6 +73,116 @@ const germanCtaTopic: Record<number, string> = {
 };
 
 const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
+  "mathe-uebungen-5-klasse": {
+  "lead": "Dezimalzahlen verstehen, mit Brüchen rechnen und den Umfang bestimmen: Hier findet ihr konkrete Matheaufgaben für die 5. Klasse mit Lösungen und kurzen Erklärungen.",
+  "parentAnswer": "In der 5. Klasse verbinden Kinder verschiedene Darstellungen von Zahlen und wenden Rechenwege auf Grössen und Formen an. Beginnt mit dem Thema, das gerade im Unterricht vorkommt. Die Beispiele unten helfen euch einzuschätzen, was schon sicher sitzt und wo eine Wiederholung sinnvoll ist.",
+  "workedExamples": [
+    {
+      "topicId": "dezimalzahlen",
+      "exerciseId": "g5m1",
+      "explanation": "Die erste Stelle nach dem Komma bezeichnet Zehntel. 0,5 sind deshalb fünf Zehntel, also die Hälfte eines Ganzen.",
+      "linkLabel": "Dezimalzahlen und Stellenwerte üben"
+    },
+    {
+      "topicId": "brueche-rechnen",
+      "exerciseId": "g5m21",
+      "explanation": "Beide Brüche haben denselben Nenner. Addiere die Zähler: ein Viertel plus ein Viertel ergibt zwei Viertel. 2/4 lässt sich zu 1/2 kürzen.",
+      "linkLabel": "Mit Brüchen rechnen üben"
+    },
+    {
+      "topicId": "flaechen-umfang",
+      "exerciseId": "g5m11",
+      "explanation": "Zum Umfang gehören alle vier Seiten: 5 + 3 + 5 + 3 = 16 cm. Die Fläche wäre dagegen 15 cm². Umfang und Fläche haben unterschiedliche Einheiten.",
+      "linkLabel": "Flächen und Umfang unterscheiden"
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "Welche Mathethemen kann mein Kind in der 5. Klasse üben?",
+      "answer": "Hier findet ihr unter anderem Dezimalzahlen, Bruchrechnen, Flächen und Umfang sowie Daten und Diagramme. Die Reihenfolge im Unterricht kann variieren. Wählt deshalb das Thema, das dein Kind gerade in der Schule behandelt."
+    },
+    {
+      "question": "Mit welcher Aufgabe sollten wir anfangen?",
+      "answer": "Lasst dein Kind zuerst eines der drei Beispiele lösen und den Rechenweg erklären. Wenn Zehntel noch unsicher sind, beginnt bei Dezimalzahlen. Wenn das gut klappt, könnt ihr mit Brüchen oder dem Umfang weiterüben."
+    },
+    {
+      "question": "Wie helfe ich, ohne die Lösung vorzusagen?",
+      "answer": "Frage: Was ist gegeben, und was suchst du? Zeichnet bei Brüchen ein in gleiche Teile geteiltes Rechteck. Beim Umfang kann dein Kind die vier Seiten mit dem Finger nachfahren und ihre Längen addieren."
+    },
+    {
+      "question": "Wie lange sollte eine Übungsrunde dauern?",
+      "answer": "Beginnt mit fünf bis zehn ruhigen Minuten zu einem Thema. Wichtiger als viele Aufgaben ist, dass dein Kind einen Rechenweg versteht. Bei Frust macht ihr eine Pause und greift später ein einfacheres Beispiel auf."
+    }
+  ],
+  "extraLinks": [
+    {
+      "href": "/mathe-uebungen-kinder",
+      "label": "Mathe für alle Primarschulklassen"
+    }
+  ]
+},
+  "deutsch-uebungen-3-klasse": {
+    description: "Deutsch Übungen 3. Klasse: Texte verstehen, Wortarten, Satzbau und Rechtschreibung üben. Mit erklärtem Beispiel und passenden Aufgaben für die Primarschule.",
+    detailHeading: "Wörter untersuchen und Texte verstehen",
+    detailIntro: "Lesen, Sprache untersuchen und richtig schreiben hängen zusammen. Die Übungen greifen diese Bereiche der Schweizer Primarschule auf. Die Beispiele zeigen einen möglichen Einstieg, keinen festen Stoffplan für jede Klasse.",
+    detailItems: [
+      { title: "Was vorher hilft", body: "Lest einen kurzen Abschnitt und lasst dein Kind in eigenen Worten erzählen, was passiert. Stockt es noch bei einzelnen Wörtern, nehmt zuerst einen kürzeren Text und sucht die Antwort gemeinsam darin.", link: { href: "/learn/2/german/texte-lesen", label: "Mit kurzen Texten beginnen" } },
+      { title: "Wortarten im Satz entdecken", body: "Nomen benennen beispielsweise Tiere oder Dinge, Adjektive beschreiben Eigenschaften und Verben Tätigkeiten. Im Satz «Der kleine Hund rennt.» beschreibt «kleine» den Hund, und «rennt» sagt, was er tut.", link: { href: "/learn/3/german/wortarten", label: "Nomen, Verben und Adjektive üben" } },
+      { title: "So geht es weiter", body: "Sucht beim Lesen die Textstelle, die eine Frage beantwortet. Prüft bei eigenen Sätzen den grossen Satzanfang, die Nomen und das passende Satzzeichen. So wendet dein Kind einzelne Regeln im Zusammenhang an.", link: { href: "/learn/3/german/leseverstaendnis", label: "Texte der 3. Klasse genauer lesen" } },
+    ],
+
+  "lead": "Wortarten erkennen, genau lesen und Wörter richtig schreiben: Entdeckt Deutschaufgaben für die 3. Klasse mit Lösungen und verständlichen Erklärungen.",
+  "parentAnswer": "In der 3. Klasse geht es darum, Sprache bewusst anzuwenden: Was sagt ein Text tatsächlich? Welche Aufgabe hat ein Wort im Satz? Wie wird es geschrieben? Die drei Beispiele zeigen unterschiedliche Bereiche, damit ihr passend zum Schulstoff einen überschaubaren Einstieg findet.",
+  "workedExamples": [
+    {
+      "topicId": "wortarten",
+      "exerciseId": "g3-german-wortarten-w1",
+      "explanation": "Hund bezeichnet ein Tier und ist ein Nomen. Du kannst einen Artikel davor setzen: der Hund. Nomen werden grossgeschrieben.",
+      "linkLabel": "Nomen, Verben und Adjektive üben"
+    },
+    {
+      "topicId": "leseverstaendnis",
+      "exerciseId": "lv5",
+      "explanation": "Die Frage sucht eine Dauer. Im zweiten Satz steht: Er braucht 55 Minuten. Die Ortsnamen sagen, wohin der Zug fährt, nicht wie lange die Fahrt dauert.",
+      "linkLabel": "Kurze Texte lesen und verstehen"
+    },
+    {
+      "topicId": "rechtschreibung",
+      "exerciseId": "rs10",
+      "explanation": "Katze bezeichnet ein Tier und ist ein Nomen. Nomen beginnen mit einem Grossbuchstaben, auch mitten im Satz: Die Katze miaut.",
+      "linkLabel": "Grossschreibung von Nomen üben"
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "Was üben Kinder in Deutsch in der 3. Klasse?",
+      "answer": "Cleverli bietet unter anderem Wortarten, Adjektive, Sätze, Leseverständnis und Rechtschreibung. Wählt einen Bereich, der zum aktuellen Unterricht und zum Lernstand deines Kindes passt."
+    },
+    {
+      "question": "Wo sollten wir mit dem Üben anfangen?",
+      "answer": "Beginnt mit einer Aufgabe aus einem vertrauten Thema. Kann dein Kind die Antwort erklären, probiert einen anderen Bereich. Wenn es bei einer Textfrage unsicher ist, lest den Text gemeinsam und sucht die Stelle mit der Antwort."
+    },
+    {
+      "question": "Wie unterstütze ich mein Kind beim Lesen?",
+      "answer": "Lass dein Kind einen kurzen Abschnitt lesen und in eigenen Worten erzählen, was passiert. Fragt dann: Wo steht die Antwort? Bei schwierigen Wörtern könnt ihr abwechselnd lesen. Es geht um Verstehen, nicht um Tempo."
+    },
+    {
+      "question": "Was hilft bei wiederkehrenden Rechtschreibfehlern?",
+      "answer": "Nehmt jeweils ein Wort und eine passende Strategie. Bei Freund hilft die Verlängerung Freunde, um das d zu hören. Lass dein Kind die Probe erklären und das Wort danach in einem eigenen Satz verwenden."
+    }
+  ],
+  "extraLinks": [
+    {
+      "href": "/deutsch-uebungen-kinder",
+      "label": "Deutsch für alle Primarschulklassen"
+    },
+    {
+      "href": "/lesen-lernen",
+      "label": "Lesen Schritt für Schritt festigen"
+    }
+  ]
+},
+
   "mathe-uebungen-3-klasse": {
     description: "Mathe Übungen 3. Klasse: Zahlen bis 1000, Plus, Minus, Einmaleins und Sachaufgaben. Mit erklärtem Beispiel und passenden Übungen für die Primarschule.",
     lead: "In der 3. Klasse erweitert dein Kind den Zahlenraum bis 1000. Hier findet ihr Übungen zu Hundertern, Zehnern und Einern, zu Plus und Minus sowie zu Malaufgaben, Division und Geometrie.",
@@ -82,18 +193,6 @@ const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
       { title: "Was vorher hilft", body: "Kann dein Kind 47 als 4 Zehner und 7 Einer darstellen und Plus und Minus bis 100 rechnen? Falls das noch schwerfällt, festigt zuerst diese Schritte, bevor ihr mit Hundertern weiterübt.", link: { href: "/learn/2/math/add-sub-100", label: "Plus und Minus bis 100 wiederholen" } },
       { title: "Beispiel: 500 + 60 + 3", body: "Die Aufgabe lautet: 500 + 60 + 3 = ___. 5 Hunderter sind 500, 6 Zehner sind 60 und 3 Einer sind 3. Zusammen ergibt das 563. Zur Kontrolle zerlegt dein Kind 563 wieder in 500 + 60 + 3.", link: { href: "/learn/3/math/zahlen-bis-1000", label: "Stellenwerte bis 1000 üben" } },
       { title: "So geht es weiter", body: "Wenn die Stellenwerte vertraut sind, übt Plus und Minus bis 1000. Bei Sachaufgaben lest ihr zuerst die Frage, sucht die nötigen Zahlen und wählt die Rechenart. Prüft am Schluss, ob die Antwort zur Situation passt.", link: { href: "/learn/3/math/textaufgaben", label: "Sachaufgaben der 3. Klasse lösen" } },
-    ],
-  },
-  "deutsch-uebungen-3-klasse": {
-    description: "Deutsch Übungen 3. Klasse: Texte verstehen, Wortarten, Satzbau und Rechtschreibung üben. Mit erklärtem Beispiel und passenden Aufgaben für die Primarschule.",
-    lead: "In der 3. Klasse liest dein Kind Texte genauer, untersucht Wörter und baut Sätze bewusster auf. Hier findet ihr Übungen zu Leseverständnis, Nomen, Verben, Adjektiven und Rechtschreibung.",
-    parentAnswer: "Hilfreich ist, wenn dein Kind kurze Sätze lesen und ihren Inhalt wiedergeben kann. Vertraute Nomen mit Artikel und einfache Verben erleichtern den Einstieg in die Wortarten. Wählt Lesen, Grammatik oder Rechtschreibung passend zum aktuellen Schulstoff, statt alles auf einmal zu üben.",
-    detailHeading: "Wörter untersuchen und Texte verstehen",
-    detailIntro: "Lesen, Sprache untersuchen und richtig schreiben hängen zusammen. Die Übungen greifen diese Bereiche der Schweizer Primarschule auf. Die Beispiele zeigen einen möglichen Einstieg, keinen festen Stoffplan für jede Klasse.",
-    detailItems: [
-      { title: "Was vorher hilft", body: "Lest einen kurzen Abschnitt und lasst dein Kind in eigenen Worten erzählen, was passiert. Stockt es noch bei einzelnen Wörtern, nehmt zuerst einen kürzeren Text und sucht die Antwort gemeinsam darin.", link: { href: "/learn/2/german/texte-lesen", label: "Mit kurzen Texten beginnen" } },
-      { title: "Beispiel: Welche Wortart ist «Hund»?", body: "Die Antwort ist Nomen. «Hund» bezeichnet ein Tier. Du kannst den Artikel «der» davor setzen: der Hund. Nomen schreibt man gross. Im Satz «Der kleine Hund rennt.» beschreibt «kleine» den Hund, und «rennt» sagt, was er tut.", link: { href: "/learn/3/german/wortarten", label: "Nomen, Verben und Adjektive üben" } },
-      { title: "So geht es weiter", body: "Sucht beim Lesen die Textstelle, die eine Frage beantwortet. Prüft bei eigenen Sätzen den grossen Satzanfang, die Nomen und das passende Satzzeichen. So wendet dein Kind einzelne Regeln im Zusammenhang an.", link: { href: "/learn/3/german/leseverstaendnis", label: "Texte der 3. Klasse genauer lesen" } },
     ],
   },
   "mathe-uebungen-1-klasse": {

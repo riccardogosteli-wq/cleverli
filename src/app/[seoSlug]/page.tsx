@@ -56,6 +56,12 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
   const topics = getTopicsForSubject(page.grade, page.subject);
   const topicLinks = topics.slice(0, 8);
   const sampleExercises = getGradeSeoSamples(page, topics);
+  const workedExamples = (page.workedExamples ?? []).map((item) => {
+    const topic = topics.find((topic) => topic.id === item.topicId);
+    const exercise = topic?.exercises.find((exercise) => exercise.id === item.exerciseId);
+    if (!topic || !exercise) throw new Error(`Missing SEO example: ${page.slug}/${item.exerciseId}`);
+    return { ...item, topic, exercise };
+  });
   const heroExercise = sampleExercises[0];
   const heroImage = page.subject === "math"
     ? {
@@ -227,7 +233,31 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
         </div>
       </section>
 
-      {sampleExercises.length > 0 && (
+      {workedExamples.length > 0 && (
+        <section className="px-4 py-10 sm:px-6 sm:py-14" aria-labelledby="worked-examples-heading">
+          <div className="mx-auto max-w-5xl">
+            <h2 id="worked-examples-heading" className="text-2xl font-black text-gray-950">Drei Aufgaben mit Lösung und Erklärung</h2>
+            <p className="mt-3 text-base leading-7 text-gray-700">Probiert die Aufgabe zuerst selbst. Öffnet danach die Lösung und vergleicht euren Weg.</p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {workedExamples.map(({ exercise, topic, explanation, linkLabel }) => (
+                <article key={exercise.id} className="min-w-0 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                  <h3 className="text-sm font-bold text-green-800">{topic.title}</h3>
+                  <p className="mt-3 text-base font-semibold leading-7">{exercise.question}</p>
+                  {exercise.options && <ul className="mt-3 list-inside list-disc text-sm leading-7 text-gray-700">{exercise.options.map((option) => <li key={option}>{option}</li>)}</ul>}
+                  <details className="mt-4 rounded-xl bg-green-50 p-3">
+                    <summary className="cursor-pointer py-2 text-sm font-bold text-green-900">Lösung und Erklärung anzeigen<span className="sr-only">: {topic.title}</span></summary>
+                    <p className="mt-3 font-bold">Lösung: {exercise.answer}</p>
+                    <p className="mt-2 text-sm leading-6 text-gray-700">{explanation}</p>
+                  </details>
+                  <Link href={`/learn/${page.grade}/${page.subject}/${topic.id}`} className="mt-4 inline-block py-2 text-sm font-bold text-green-800 underline underline-offset-4">{linkLabel}</Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {workedExamples.length === 0 && sampleExercises.length > 0 && (
         <section className="px-4 py-10 sm:px-6 sm:py-14">
           <div className="mx-auto max-w-5xl">
             <p className="text-sm font-bold uppercase tracking-widest text-green-700">Beispiele</p>

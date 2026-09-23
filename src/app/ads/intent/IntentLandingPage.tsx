@@ -19,6 +19,7 @@ export type IntentLandingPageConfig = {
   path: string;
   eyebrow: string;
   title: string;
+  trialTitle?: string;
   lead: string;
   badges: string[];
   freeTrialUrl: string;
@@ -229,7 +230,7 @@ export default function IntentLandingPage({ config }: { config: IntentLandingPag
           freeTrialUrl={config.freeTrialUrl}
           heroImage={config.heroImage}
           imageAlt={config.imageAlt}
-          title={`${config.title.replace(/\.$/, "")} - 7 Tage Premium gratis.`}
+          title={config.trialTitle ?? `${config.title.replace(/\.$/, "")} - 7 Tage Premium gratis.`}
           lead="Erstelle ein Konto, wähle dein Abo und teste alle Übungen und Klassen eine Woche lang."
         />
         {seoDetailSection}
