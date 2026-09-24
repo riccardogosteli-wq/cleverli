@@ -1,5 +1,6 @@
 import { withPageSocial } from "@/lib/pageSocialMetadata";
 import CurriculumOverviewLink from "@/components/CurriculumOverviewLink";
+import Link from "next/link";
 import type { Metadata } from "next";
 import AdsPrimarschuleClient from "../ads/primarschule/AdsPrimarschuleClient";
 
@@ -17,5 +18,5 @@ export const metadata: Metadata = withPageSocial({
 });
 
 export default function PrimarschuleUebungenPage() {
-  return <><AdsPrimarschuleClient /><div className="mx-auto max-w-5xl px-4 pb-24 sm:px-6"><CurriculumOverviewLink /></div></>;
+  return <><AdsPrimarschuleClient /><div className="mx-auto max-w-5xl px-4 pb-24 sm:px-6"><CurriculumOverviewLink /><nav aria-label="Cleverli kennenlernen" className="flex flex-wrap gap-5"><Link href="/" className="py-3 font-semibold text-green-800 underline">Die Lernplattform für Familien kennenlernen</Link><Link href="/lernapp-primarschule" className="py-3 font-semibold text-green-800 underline">Welche Lernapp passt zur Primarschule?</Link></nav></div></>;
 }

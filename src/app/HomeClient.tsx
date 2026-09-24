@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import HomePlatformOverview from "@/components/HomePlatformOverview";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
@@ -136,6 +137,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <HomePlatformOverview />
 
       {/* How it works — with mascot poses */}
       <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">

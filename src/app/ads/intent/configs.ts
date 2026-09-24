@@ -255,6 +255,8 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
   trustTitle: "Mathe daheim braucht klare Übungen und sichtbaren Fortschritt.",
   trustBody: "Cleverli bündelt Mathe-Übungen für die Primarschule in einem ruhigen, kindgerechten Ablauf. Kurze Runden, sichtbarer Fortschritt und Hilfe genau dann, wenn sie gebraucht wird.",
   relatedLinks: [
+    { href: "/", title: "Cleverli als Lernplattform kennenlernen", description: "So unterstützt Cleverli Familien beim Üben in der Schweizer Primarschule." },
+    { href: "/lernapp-primarschule", title: "Lernapp auf euren Geräten nutzen", description: "Browserzugang, passende Aufgaben, Kosten und Elternbegleitung verständlich erklärt." },
     { href: "/mathe-uebungen-5-klasse", title: "Mathe 5. Klasse: Dezimalzahlen, Brüche und Umfang", description: "Drei Aufgaben mit erklärten Lösungen zeigen, wie dein Kind Zahlen und Formen besser versteht." },
     {
       href: "/mathe-uebungen-2-klasse",
@@ -368,6 +370,8 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
     ],
   },
   relatedLinks: [
+    { href: "/", title: "Cleverli als Lernplattform kennenlernen", description: "So unterstützt Cleverli Familien beim Üben in der Schweizer Primarschule." },
+    { href: "/lernapp-primarschule", title: "Lernapp auf euren Geräten nutzen", description: "Browserzugang, passende Aufgaben, Kosten und Elternbegleitung verständlich erklärt." },
     { href: "/deutsch-uebungen-3-klasse", title: "Deutsch 3. Klasse: Wortarten, Lesen und Rechtschreibung", description: "An konkreten Aufgaben mit Lösungen den passenden Einstieg für dein Kind finden." },
     {
       href: "/deutsch-uebungen-2-klasse",

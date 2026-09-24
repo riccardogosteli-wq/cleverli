@@ -115,6 +115,8 @@ const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
     }
   ],
   "extraLinks": [
+    { href: "/", label: "Die Lernplattform für Familien kennenlernen" },
+    { href: "/lernapp-primarschule", label: "Lernapp für die Primarschule: Geräte und Kosten" },
     {
       "href": "/mathe-uebungen-kinder",
       "label": "Mathe für alle Primarschulklassen"
@@ -172,6 +174,8 @@ const pageOverrides: Partial<Record<string, Partial<GradeSubjectSeoPage>>> = {
     }
   ],
   "extraLinks": [
+    { href: "/", label: "Die Lernplattform für Familien kennenlernen" },
+    { href: "/lernapp-primarschule", label: "Lernapp für die Primarschule: Geräte und Kosten" },
     {
       "href": "/deutsch-uebungen-kinder",
       "label": "Deutsch für alle Primarschulklassen"
