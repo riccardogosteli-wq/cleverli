@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...LEHRPLAN_LANGS.map(lang => ({ url: lehrplanUrl(lang), changeFrequency: "monthly" as const, priority: 0.7, alternates: { languages: Object.fromEntries(LEHRPLAN_LANGS.map(l => [l, lehrplanUrl(l)])) } })),
     // Marketing & conversion pages
     { url: BASE,               changeFrequency: "weekly",  priority: 1.0 },
+    { url: `${BASE}/lernapp-primarschule`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/lehrpersonen`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/parents`,      changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/missionen`,    changeFrequency: "weekly",  priority: 0.8 },

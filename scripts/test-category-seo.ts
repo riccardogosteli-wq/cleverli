@@ -11,7 +11,7 @@ for(const config of [matheUebungenKinderConfig,deutschUebungenKinderConfig])for(
 for(const slug of ['mathe-uebungen-5-klasse','deutsch-uebungen-3-klasse']){const p=getGradeSubjectSeoPage(slug)!;assert.equal(p.workedExamples?.length,3);assert.equal(p.faqItems?.length,4);checks+=2;for(const href of ['/','/lernapp-primarschule']){assert.ok(p.extraLinks?.some(l=>l.href===href));checks++;}}
 for(const img of ['mathe-uebung-live.png','eltern-vorschau.png']){assert.ok(existsSync('public/images/seo/'+img));checks++;}
 assert.ok(read('src/components/HomePlatformOverview.tsx').includes('Beispieldaten, keine echten Lernergebnisse'));checks++;
-assert.ok(!read('src/app/sitemap.ts').includes('lernapp-primarschule'));checks++;
+assert.ok(read('src/app/sitemap.ts').includes('lernapp-primarschule'));checks++;
 for(const p of ['src/app/lernapp-primarschule/page.tsx','src/components/HomePlatformOverview.tsx']){assert.ok(!/ohne Kreditkarte|Keine Kreditkarte|ß/.test(read(p)));checks++;}
 
 
@@ -22,4 +22,4 @@ for(const rejected of ["kein unabhängiger Appvergleich","Kosten und Nutzung","i
 
 for (const required of ['id="startbildschirm"', "Als Web-App öffnen", "Safari", "Chrome", "Installieren und Verknüpfung erstellen", "Aktionen bearbeiten", "murmeli-icon-v3-192.png"]) assert.ok(guide.includes(required),required);
 
-console.log("Category SEO assertions passed, including home-screen guide; GSC and sitemap hold preserved");
+console.log("Category SEO assertions passed, including home-screen guide; approved guide sitemap inclusion verified");
