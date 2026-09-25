@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import { imageLabel } from "@/lib/imageAlt";
 import Link from "next/link";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
@@ -97,6 +98,7 @@ function CheckpointDots({ tiers, compact = false }: {
 
 // ─── TOPIC CARD ───────────────────────────────────────────────────────────────
 function TopicCard({ tp, grade, subject }: { tp: TopicProgress; grade: number; subject: string }) {
+  const { lang } = useLang();
   const pct = tp.totalExercises > 0 ? Math.round((tp.completedExercises / tp.totalExercises) * 100) : 0;
 
   const statusColors = {
@@ -127,7 +129,7 @@ function TopicCard({ tp, grade, subject }: { tp: TopicProgress; grade: number; s
             <span className={`text-sm font-bold truncate ${sc.text}`}>{tp.title}</span>
             <span className="shrink-0">
               {tp.status === "completed" && tp.stars >= 1 && ACHIEVEMENT_ICONS[Math.min(tp.stars, 3)] && (
-                <Image src={ACHIEVEMENT_ICONS[Math.min(tp.stars, 3)]} alt={`${tp.stars} Sterne`} width={28} height={28} className="object-contain" />
+                <Image src={ACHIEVEMENT_ICONS[Math.min(tp.stars, 3)]} alt={`${tp.stars} ${imageLabel(tp.stars === 1 ? "star" : "stars", lang)}`} width={28} height={28} className="object-contain" />
               )}
             </span>
           </div>
@@ -190,7 +192,7 @@ function SubjectSection({ subjectId, topics, grade, completedCount, totalCount }
       {/* Subject header */}
       <div className="px-4 py-3 flex items-center gap-3 border-b border-white/50">
         {subjectIcon
-          ? <Image src={subjectIcon} alt={subjectId} width={32} height={32} className="w-8 h-8 object-contain shrink-0" />
+          ? <Image src={subjectIcon} alt="" width={32} height={32} className="w-8 h-8 object-contain shrink-0" />
           : <span className="text-2xl">{fallbackEmoji}</span>}
         <div className="flex-1">
           <div className={`font-black text-base ${sc.text}`}>{subjectLabel}</div>
@@ -460,7 +462,7 @@ export default function MissionenPage() {
                 : "bg-white border-2 border-gray-200 text-gray-600 hover:border-green-300"
             }`}>
             {'icon' in tab
-              ? <Image src={(tab as {icon: string}).icon} alt={tab.label} width={18} height={18} className="w-4.5 h-4.5 object-contain" />
+              ? <Image src={(tab as {icon: string}).icon} alt="" width={18} height={18} className="w-4.5 h-4.5 object-contain" />
               : <span>{tab.emoji}</span>}
             <span>{tab.label}</span>
             {tab.id !== "all" && curriculumData && (

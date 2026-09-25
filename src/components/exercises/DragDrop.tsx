@@ -130,7 +130,7 @@ export default function DragDrop({ question, items, zones, answers, onAnswer, in
     return (
       <>
         {item.image
-          ? <Image src={item.image} alt={item.label} width={imgSize} height={imgSize} className="drop-shadow-sm pointer-events-none" unoptimized={isSvg} />
+          ? <Image src={item.image} alt="" width={imgSize} height={imgSize} className="drop-shadow-sm pointer-events-none" unoptimized={isSvg} />
           : item.emoji
           ? <span style={{ fontSize: size * 0.75 }} className="pointer-events-none select-none">{item.emoji}</span>
           : null}

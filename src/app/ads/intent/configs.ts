@@ -10,7 +10,7 @@ export const einmaleinsUebenConfig: IntentLandingPageConfig = {
   freeTrialUrl: "/learn/2/math/einmaleins",
   checkoutSource: "einmaleins_ueben",
   heroImage: "/images/scenes/cleverli-math-ask.jpg",
-  imageAlt: "Cleverli hilft einem Kind beim Einmaleins üben",
+  imageAlt: "Illustration: Cleverli und Kinder rätseln über eine Rechenaufgabe auf einer Tafel",
   sample: {
     grade: "2. Klasse Mathe",
     question: "5 × 8 = ?",
@@ -113,7 +113,7 @@ export const einsMalEinsSpieleConfig: IntentLandingPageConfig = {
   freeTrialUrl: "/learn/2/math/einmaleins",
   checkoutSource: "eins_mal_eins_spiele",
   heroImage: "/images/scenes/cleverli-chalkboard-quest.jpg",
-  imageAlt: "Cleverli zeigt eine spielerische Mathe-Aufgabe",
+  imageAlt: "Illustration: Cleverli zeigt Kindern eine Rechenaufgabe neben einer Schatztruhe",
   sample: {
     grade: "1x1 Spielrunde",
     question: "Welche Zahl fehlt? 6 × __ = 42",
@@ -221,7 +221,7 @@ export const matheUebungenKinderConfig: IntentLandingPageConfig = {
   freeTrialUrl: "/learn/2/math/addition-bis-20",
   checkoutSource: "mathe_uebungen_kinder",
   heroImage: "/images/scenes/cleverli-solution.jpg",
-  imageAlt: "Cleverli begleitet ein Kind beim Mathe üben",
+  imageAlt: "Illustration: Cleverli und Kinder feiern eine gelöste Rechenaufgabe",
   sample: {
     grade: "2. Klasse Mathe",
     question: "13 + 5 = ?",
@@ -302,7 +302,7 @@ export const deutschUebungenKinderConfig: IntentLandingPageConfig = {
   freeTrialUrl: "/learn/1/german/saetze-lesen",
   checkoutSource: "deutsch_uebungen_kinder",
   heroImage: "/images/scenes/cleverli-reading-abc.jpg",
-  imageAlt: "Cleverli begleitet ein Kind beim Deutsch üben",
+  imageAlt: "Illustration: Cleverli und ein Kind betrachten ein aufgeschlagenes Buch mit den Buchstaben A, B und C",
   sample: {
     grade: "2. Klasse Deutsch",
     question: "Welches Wort passt? Der Hund ___ schnell.",
@@ -413,7 +413,7 @@ export const lesenLernenConfig: IntentLandingPageConfig = {
   freeTrialUrl: "/learn/1/german/saetze-lesen",
   checkoutSource: "lesen_lernen",
   heroImage: "/images/scenes/cleverli-reading-abc.jpg",
-  imageAlt: "Cleverli begleitet ein Kind beim Lesen lernen",
+  imageAlt: "Illustration: Cleverli und ein Kind betrachten ein aufgeschlagenes Buch mit den Buchstaben A, B und C",
   sample: {
     grade: "1. Klasse Deutsch",
     question: "Welcher Satz passt zum Bild?",

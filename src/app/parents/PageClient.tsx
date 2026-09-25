@@ -276,7 +276,7 @@ export default function ParentsDashboard() {
 
       {/* ── Header ── */}
       <div className="flex items-center gap-3">
-        <Image src="/cleverli-sit-read.png" alt="Cleverli" width={64} height={64} className="drop-shadow-md" />
+        <Image src="/cleverli-sit-read.png" alt="" width={64} height={64} className="drop-shadow-md" />
         <div className="flex-1 min-w-0">
           <h1 className="text-xl font-black text-gray-800">
             {t("Eltern-Übersicht", "Vue parents", "Vista genitori", "Parent Overview")}
@@ -581,7 +581,7 @@ export default function ParentsDashboard() {
           🎒 {t("Jetzt üben","Pratiquer","Esercitati","Practice now")}
         </Link>
         <Link href="/family" className="text-xs text-gray-400 underline flex items-center gap-1">
-          <Image src="/images/ui/Familie.svg" alt="Familie" width={16} height={16} />
+          <Image src="/images/ui/Familie.svg" alt="" width={16} height={16} />
           {t("Familien-Rangliste","Classement familial","Classifica famiglia","Family leaderboard")}
         </Link>
         <Link href="/missionen" className="text-xs text-gray-400 underline">

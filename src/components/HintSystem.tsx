@@ -31,7 +31,7 @@ export default function HintSystem({ hints, onHintUsed, speechLang }: Props) {
 
   return (
     <div className="flex items-start gap-3 bg-amber-50 border-2 border-amber-200 rounded-2xl p-3">
-      <Image src="/cleverli-think.png" alt="Cleverli" width={44} height={44} className="shrink-0 drop-shadow-sm" />
+      <Image src="/cleverli-think.png" alt="" width={44} height={44} className="shrink-0 drop-shadow-sm" />
       <div className="flex-1 min-w-0">
         <div className="flex items-start gap-2">
           <p className="text-sm text-amber-900 font-medium leading-snug flex-1">{hints[idx]}</p>

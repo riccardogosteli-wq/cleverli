@@ -57,7 +57,7 @@ export default function LevelUpOverlay({ level, onDone }: Props) {
           {title}
         </div>
         <div className="mt-4">
-          <Image src="/cleverli-jump-star.png" alt="Cleverli" width={100} height={100} className="mx-auto drop-shadow-2xl" />
+          <Image src="/cleverli-jump-star.png" alt="" width={100} height={100} className="mx-auto drop-shadow-2xl" />
         </div>
         <p className="text-white/70 text-sm mt-3">
           {lang === "de" ? "Tippe um weiterzumachen" : lang === "fr" ? "Appuie pour continuer" : lang === "it" ? "Tocca per continuare" : "Tap to continue"}

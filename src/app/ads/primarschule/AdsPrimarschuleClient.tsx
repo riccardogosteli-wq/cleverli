@@ -160,7 +160,7 @@ export default function AdsPrimarschuleClient() {
             <div className="absolute inset-x-0 top-0 h-28 bg-green-700" />
             <Image
               src="/images/scenes/cleverli-teach-kids.jpg"
-              alt="Cleverli Lernszene"
+              alt="Illustration: Cleverli und drei Kinder lernen gemeinsam an einem Tisch"
               fill
               priority
               className="object-cover object-center opacity-95"

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { imageLabel } from "@/lib/imageAlt";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -79,7 +80,7 @@ export default function Navigation() {
           <div className="flex h-[42px] items-center justify-center sm:h-[50px]">
             <Image
               src="/cleverli-logo-tight.png"
-              alt="Cleverli – Lernplattform für Kinder"
+              alt={imageLabel("logo", lang)}
               width={1222}
               height={496}
               className="h-full w-auto object-contain drop-shadow-sm"
@@ -93,10 +94,11 @@ export default function Navigation() {
           <XpBar />
           <Link
             href="/dashboard"
+            aria-label={tr("learnNav")}
 
             className="flex items-center gap-1.5 text-sm text-green-700 hover:text-green-800 font-semibold py-2 px-2.5 rounded-xl bg-green-50 hover:bg-green-100 transition-colors whitespace-nowrap border border-green-200"
           >
-            <Image src="/images/ui/Lernen-Dashboard-icon.svg" alt="Lernen" width={28} height={28} />
+            <Image src="/images/ui/Lernen-Dashboard-icon.svg" alt="" width={28} height={28} />
             <span className="hidden md:inline text-xs">{tr("learnNav")}</span>
           </Link>
           <Link
@@ -106,7 +108,7 @@ export default function Navigation() {
             aria-label={tr("navRewardsShort")}
             title={tr("navRewardsShort")}
           >
-            <Image src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen" width={28} height={28} />
+            <Image src="/images/ui/Belohnungen-icon.svg" alt="" width={28} height={28} />
             <span className="hidden md:inline text-xs">{tr("navRewardsShort")}</span>
           </Link>
           {/* Parent dashboard link — shown when logged in */}

@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import { imageLabel } from "@/lib/imageAlt";
+import { useLang } from "@/lib/LangContext";
 import { Profile } from "@/hooks/useProfile";
 import { SHOP_ITEMS, BG_COLORS } from "@/lib/shop";
 
@@ -11,6 +13,7 @@ interface AvatarProps {
 const SIZES = { sm: 48, md: 80, lg: 120 } as const;
 
 export default function Avatar({ profile, size = "md" }: AvatarProps) {
+  const { lang } = useLang();
   const px = SIZES[size];
   const equipped = profile.equippedItems ?? {};
   const owned = profile.ownedItems ?? [];
@@ -32,7 +35,7 @@ export default function Avatar({ profile, size = "md" }: AvatarProps) {
     >
       <Image
         src="/cleverli-sit-read.png"
-        alt="Dein Avatar"
+        alt={imageLabel("avatar", lang)}
         width={px}
         height={px}
         className="object-contain drop-shadow-sm"

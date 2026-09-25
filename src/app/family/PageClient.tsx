@@ -157,7 +157,7 @@ export default function FamilyPage() {
     <main className="max-w-lg mx-auto px-4 py-6 pb-40 sm:pb-12 space-y-5">
       {/* Header */}
       <div className="flex items-center gap-3">
-        <Image src="/cleverli-jump-star.png" alt="Cleverli" width={60} height={60} className="drop-shadow-md" />
+        <Image src="/cleverli-jump-star.png" alt="" width={60} height={60} className="drop-shadow-md" />
         <div>
           <h1 className="text-xl font-black text-gray-800">
             {t("Familienprofile 👨‍👩‍👧‍👦", "Profils familiaux 👨‍👩‍👧‍👦", "Profili famiglia 👨‍👩‍👧‍👦", "Family Profiles 👨‍👩‍👧‍👦")}

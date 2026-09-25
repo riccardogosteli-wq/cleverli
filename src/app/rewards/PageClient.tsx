@@ -142,9 +142,9 @@ export default function RewardsPage() {
   if (loaded && !isPremium) {
     return (
       <div className="max-w-sm mx-auto px-4 py-16 text-center space-y-5">
-        <Image src="/cleverli-think.png" alt="Cleverli Maskottchen" width={110} height={110} className="mx-auto drop-shadow-md hidden sm:block" />
+        <Image src="/cleverli-think.png" alt="" width={110} height={110} className="mx-auto drop-shadow-md hidden sm:block" />
         <div className="flex items-center gap-2">
-          <Image src="/images/ui/Belohnungen-icon.svg" alt="Belohnungen" width={28} height={28} className="drop-shadow-sm" />
+          <Image src="/images/ui/Belohnungen-icon.svg" alt="" width={28} height={28} className="drop-shadow-sm" />
           <h1 className="text-2xl font-extrabold text-gray-900">
             {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
           </h1>
@@ -160,7 +160,7 @@ export default function RewardsPage() {
         </p>
         <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 text-left space-y-2 text-sm text-amber-900">
           <div className="flex items-center gap-2">
-            <Image src="/images/ui/Trophaeen-icon.svg" alt="Trophy" width={20} height={20} />
+            <Image src="/images/ui/Trophaeen-icon.svg" alt="" width={20} height={20} />
             {lang === "fr" ? "Récompenses pour étoiles, séries et exercices" : lang === "it" ? "Premi per stelle, serie e esercizi" : lang === "en" ? "Rewards for stars, streaks and exercises" : "Belohnungen für Sterne, Streaks und Aufgaben"}
           </div>
           <div>👶 {lang === "fr" ? "Jusqu'à 3 profils enfants avec Premium" : lang === "it" ? "Fino a 3 profili bambino con Premium" : lang === "en" ? "Up to 3 child profiles with Premium" : "Bis zu 3 Kinderprofile mit Premium"}</div>
@@ -193,7 +193,7 @@ export default function RewardsPage() {
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <Link href="/dashboard" aria-label={lang === "fr" ? "Retour au tableau de bord" : lang === "it" ? "Torna alla dashboard" : lang === "en" ? "Back to dashboard" : "Zurück zum Dashboard"} className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm text-gray-400 hover:text-gray-600">←</Link>
-        <Image src="/cleverli-celebrate.png" alt="Cleverli feiert" width={44} height={44} className="drop-shadow-md" />
+        <Image src="/cleverli-celebrate.png" alt="" width={44} height={44} className="drop-shadow-md" />
         <h1 className="text-xl font-bold text-gray-800 flex items-center gap-2">
           <Image src="/images/ui/Belohnungen-icon.svg" alt="" aria-hidden="true" width={24} height={24} />
           {lang === "fr" ? "Récompenses" : lang === "it" ? "Premi" : lang === "en" ? "Rewards" : "Belohnungen"}
@@ -394,7 +394,7 @@ export default function RewardsPage() {
         {active.length === 0 && !adding && (
           <div className="text-center py-10 space-y-3 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
             <div className="flex justify-center">
-              <Image src="/images/ui/Belohnungen-icon.svg" alt="Rewards" width={80} height={80} />
+              <Image src="/images/ui/Belohnungen-icon.svg" alt="" width={80} height={80} />
             </div>
             <div className="font-bold text-gray-700">
               {lang === "fr" ? "Aucune récompense encore" : lang === "it" ? "Nessun premio ancora" : lang === "en" ? "No rewards yet" : "Noch keine Belohnungen"}

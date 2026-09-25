@@ -78,7 +78,7 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
           <>
             <div style={{ animation: "popIn 0.4s cubic-bezier(.34,1.56,.64,1)" }}>
               {/* Scene: Cleverli celebrating at chalkboard with treasure */}
-              <Image src="/cleverli-topic-complete.png" alt="Cleverli feiert!"
+              <Image src="/cleverli-topic-complete.png" alt=""
                 width={200} height={200} className="rounded-2xl drop-shadow-xl mx-auto" />
             </div>
             <h2 className="text-2xl font-extrabold text-green-700">{tr("topicComplete")}</h2>
@@ -88,7 +88,7 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
           <>
             <div style={{ animation: "popIn 0.4s cubic-bezier(.34,1.56,.64,1)" }}>
               {/* Scene: Cleverli with magic lightbulb */}
-              <Image src="/images/scenes/cleverli-celebrate-magic.jpg" alt={tr("correct")}
+              <Image src="/images/scenes/cleverli-celebrate-magic.jpg" alt=""
                 width={160} height={160} className="rounded-2xl drop-shadow-lg mx-auto" />
             </div>
             <p className="text-xl font-bold text-green-700">{tr("correct")}</p>
@@ -98,7 +98,7 @@ export default function RewardAnimation({ correct, onContinue, label, isTopicCom
           <>
             <div style={{ animation: "popIn 0.3s ease" }}>
               {/* Scene: Cleverli thinking / math question */}
-              <Image src="/images/scenes/cleverli-math-ask.jpg" alt="Fast!"
+              <Image src="/images/scenes/cleverli-math-ask.jpg" alt=""
                 width={140} height={140} className="rounded-2xl drop-shadow-md mx-auto" />
             </div>
             <p className="text-xl font-bold text-orange-600">{tr("wrong")}</p>

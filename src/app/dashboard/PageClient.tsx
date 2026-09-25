@@ -220,7 +220,7 @@ function Sidebar({ profile, level, nextLevel, dailyDone, lang }: SidebarProps) {
           </div>
         </div>
         <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"}
-          alt={dailyDone ? "Cleverli feiert" : "Cleverli läuft"}
+          alt=""
           width={44} height={44} className="drop-shadow-sm shrink-0" />
       </Link>
     </aside>
@@ -343,7 +343,7 @@ function DashboardInner() {
   if (!ready) {
     return (
       <div className="max-w-md mx-auto px-4 py-16 pb-24 text-center space-y-4">
-        <Image src="/cleverli-sit-read.png" alt="Cleverli" width={96} height={96} className="mx-auto drop-shadow-md" />
+        <Image src="/cleverli-sit-read.png" alt="" width={96} height={96} className="mx-auto drop-shadow-md" />
         <p className="text-sm font-semibold text-gray-500">
           {lang === "fr" ? "Chargement..." : lang === "it" ? "Caricamento..." : lang === "en" ? "Loading..." : "Lade..."}
         </p>
@@ -354,7 +354,7 @@ function DashboardInner() {
   if (familySize === 0) {
     return (
       <div className="max-w-md mx-auto px-4 py-16 pb-24 text-center space-y-5">
-        <Image src="/cleverli-sit-read.png" alt="Cleverli" width={120} height={120} className="mx-auto drop-shadow-md" />
+        <Image src="/cleverli-sit-read.png" alt="" width={120} height={120} className="mx-auto drop-shadow-md" />
         <div className="space-y-2">
           <h1 className="text-2xl font-black text-gray-900">
             {lang === "fr" ? "Ajoute d'abord un enfant" : lang === "it" ? "Aggiungi prima un bambino" : lang === "en" ? "Add a child first" : "Zuerst ein Kind hinzufügen"}
@@ -456,7 +456,7 @@ function DashboardInner() {
               <button onClick={() => setGrade(null)} className="text-sm text-gray-800 font-semibold hover:text-gray-800 py-2 pr-3 min-w-[44px]">←</button>
               <Image
                 src="/cleverli-thumbsup.png"
-                alt="Cleverli"
+                alt=""
                 width={80} height={80}
                 className="drop-shadow-md shrink-0"
               />
@@ -485,7 +485,7 @@ function DashboardInner() {
                     className={`border-2 rounded-2xl font-bold active:scale-95 flex items-center gap-4 px-5 text-left ${s.color}`}>
                     <div className="w-16 h-16 flex items-center justify-center shrink-0">
                       {SUBJECT_ICONS[s.id]
-                        ? <Image src={SUBJECT_ICONS[s.id]} alt={s.id} width={64} height={64} className="w-full h-full object-contain" />
+                        ? <Image src={SUBJECT_ICONS[s.id]} alt="" width={64} height={64} className="w-full h-full object-contain" />
                         : <span className="text-4xl">{s.emoji}</span>
                       }
                     </div>
@@ -558,7 +558,7 @@ function DashboardInner() {
         <button onClick={handleBack} className="text-sm text-gray-800 font-semibold hover:text-gray-800 py-2 pr-2 min-w-[44px]">←</button>
         <div className="w-10 h-10 flex items-center justify-center shrink-0">
           {SUBJECT_ICONS[subject]
-            ? <Image src={SUBJECT_ICONS[subject]} alt={subject} width={40} height={40} className="w-full h-full object-contain" />
+            ? <Image src={SUBJECT_ICONS[subject]} alt="" width={40} height={40} className="w-full h-full object-contain" />
             : <span className="text-3xl">{visibleSubjects(grade!).find(s => s.id === subject)?.emoji ?? "📚"}</span>
           }
         </div>
@@ -600,7 +600,7 @@ function DashboardInner() {
                 isActive ? activeCls : "bg-white text-gray-800 border-gray-200 hover:border-gray-300"
               }`}>
               {SUBJECT_ICONS[s.id]
-                ? <Image src={SUBJECT_ICONS[s.id]} alt={s.id} width={20} height={20} className="w-5 h-5 object-contain" />
+                ? <Image src={SUBJECT_ICONS[s.id]} alt="" width={20} height={20} className="w-5 h-5 object-contain" />
                 : <span className="text-base">{s.emoji}</span>
               }
               {" "}{subjectL(s.id, "label")}
@@ -768,7 +768,7 @@ export default function Dashboard() {
   if (!loaded) {
     return (
       <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-800 font-semibold">
-        <Image src="/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
+        <Image src="/cleverli-thumbsup.png" alt="" width={64} height={64} className="object-contain animate-bounce" />
         <div className="text-sm">Laden…</div>
       </div>
     );
@@ -779,7 +779,7 @@ export default function Dashboard() {
   return (
     <Suspense fallback={
       <div className="flex flex-col items-center justify-center py-20 gap-3 text-gray-800 font-semibold">
-        <Image src="/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
+        <Image src="/cleverli-thumbsup.png" alt="" width={64} height={64} className="object-contain animate-bounce" />
         <div className="text-sm">Laden… / Chargement…</div>
       </div>
     }>

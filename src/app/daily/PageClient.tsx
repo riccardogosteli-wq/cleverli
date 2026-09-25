@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { exerciseImageAlt } from "@/lib/imageAlt";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
 import { useProfileContext } from "@/lib/ProfileContext";
@@ -204,7 +205,7 @@ function DailyChallengePage({ context }: { context: string }) {
             {subjectLabel} · {topic.emoji} {getTopicTitle(topic.id, lang, topic.title)} · +{DAILY_XP_BONUS} Bonus-XP
           </div>
         </div>
-        <Image src="/cleverli-run.png" alt="Cleverli" width={52} height={52} className="ml-auto drop-shadow-sm" />
+        <Image src="/cleverli-run.png" alt="" width={52} height={52} className="ml-auto drop-shadow-sm" />
       </div>
 
       {(answered !== null || alreadyDone) && (
@@ -221,7 +222,7 @@ function DailyChallengePage({ context }: { context: string }) {
         {isSupported && <button type="button" onClick={() => speak(getExerciseSpeechText(exercise, localizedExercise, subject, speechLang), speechLang, localizedExercise.verbatimSpeech)} aria-label={tr("readAloudTitle")} title={tr("readAloudTitle")} className="min-h-12 w-full rounded-xl border border-green-200 bg-green-50 px-3 py-3 font-semibold text-green-700">{tr("readAloud")}</button>}
         {done ? <section aria-label={lang === "de" ? "Aufgabe und Lösung" : "Question and answer"} className="space-y-4">
           <p className="text-lg font-semibold">{exercise.question}</p>
-          {exercise.image && <Image src={exercise.image} alt="" width={180} height={180} />}
+          {exercise.image && <Image src={exercise.image} alt={exerciseImageAlt(exercise.image, lang)} width={180} height={180} />}
           {exercise.type === "counting" && <p className="text-3xl break-words">{Array.from({ length: Math.min(100, Number(exercise.answer) || 0) }, () => exercise.emoji ?? "⭐").join(" ")}</p>}
           <p className="rounded-xl bg-green-50 p-3 font-bold">{exercise.type === "self-review" ? tr("exampleAnswer") : tr("correctAnswerWas")} {exercise.answer}</p>
           {exercise.reviewCriteria?.map(item => <p key={item}>✓ {item}</p>)}

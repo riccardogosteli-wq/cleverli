@@ -93,7 +93,7 @@ export default function Matching({ question, pairs, onAnswer }: Props) {
     return (
       <>
         {item.image ? (
-          <Image src={item.image} alt={item.label} width={36} height={36} className="drop-shadow-sm" unoptimized={isSvg} />
+          <Image src={item.image} alt="" width={36} height={36} className="drop-shadow-sm" unoptimized={isSvg} />
         ) : item.emoji ? (
           <span className="text-2xl leading-none">{item.emoji}</span>
         ) : null}

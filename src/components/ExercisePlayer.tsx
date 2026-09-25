@@ -785,7 +785,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     if (isAnonymous && isFreeLimitLocked) {
       return (
         <div className="text-center space-y-5 py-8 max-w-sm mx-auto">
-          <Image src="/cleverli-wave.png" alt="Cleverli" width={110} height={110} className="mx-auto drop-shadow-md animate-cleverli-jump" />
+          <Image src="/cleverli-wave.png" alt="" width={110} height={110} className="mx-auto drop-shadow-md animate-cleverli-jump" />
           <h2 className="text-xl font-bold text-gray-800">
             {lang === "fr" ? "Tu as terminé les 20 exercices gratuits 🎉" : lang === "it" ? "Hai completato i 20 esercizi gratuiti 🎉" : lang === "en" ? "You've completed the 20 free exercises 🎉" : "Du hast 20 Aufgaben geschafft 🎉"}
           </h2>
@@ -816,7 +816,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
 
     return (
       <div className="text-center space-y-4 py-8 max-w-sm mx-auto">
-        <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={110} height={110} className="mx-auto drop-shadow-md" />
+        <Image src="/cleverli-think.png" alt="" width={110} height={110} className="mx-auto drop-shadow-md" />
         <h2 className="text-xl font-bold text-gray-800">
           {lang === "fr" ? "Prêt pour Premium ?" : lang === "it" ? "Pronto per Premium?" : lang === "en" ? "Ready for Premium?" : "Bereit für Premium?"}
         </h2>

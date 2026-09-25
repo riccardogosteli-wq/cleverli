@@ -78,7 +78,7 @@ export default function BlogPost() {
       <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 mb-8 text-center">
         <Image
           src="/cleverli-sit-read.png"
-          alt="Cleverli Maskottchen beim Lernen"
+          alt=""
           width={140}
           height={140}
           className="mx-auto drop-shadow-lg"
@@ -145,7 +145,7 @@ export default function BlogPost() {
       </article>
 
       <div className="mt-12 bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-7 text-center space-y-4">
-        <Image src="/cleverli-wave.png" alt="Cleverli" width={80} height={80} className="mx-auto drop-shadow" />
+        <Image src="/cleverli-wave.png" alt="" width={80} height={80} className="mx-auto drop-shadow" />
         <h3 className="text-xl font-bold text-gray-800">Üben mit Cleverli entdecken</h3>
         <p className="text-sm text-gray-600 max-w-sm mx-auto">
           Informiere dich in Ruhe über die Übungen und die Möglichkeiten von Premium.

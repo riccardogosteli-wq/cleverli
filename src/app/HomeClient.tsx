@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { imageLabel } from "@/lib/imageAlt";
 import HomePlatformOverview from "@/components/HomePlatformOverview";
 import Link from "next/link";
 import { useLang } from "@/lib/LangContext";
@@ -53,7 +54,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
           {/* Mascot */}
           <div className="flex-shrink-0 relative">
-            <Image src="/cleverli-wave.png" alt="Cleverli" width={180} height={180}
+            <Image src="/cleverli-wave.png" alt={imageLabel("mascot", lang)} width={180} height={180}
               className="drop-shadow-xl sm:w-[220px] sm:h-[220px] animate-cleverli-jump" priority />
           </div>
           {/* Text */}
@@ -84,7 +85,7 @@ export default function Home() {
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center gap-2 mb-10">
-            <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" width={110} height={110} className="drop-shadow-md" />
+            <Image src="/images/mascot/cleverli-thumbsup.png" alt="" width={110} height={110} className="drop-shadow-md" />
             <h2 className="text-2xl font-bold text-center text-gray-800">{tr("subjectsTitle")}</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -117,7 +118,7 @@ export default function Home() {
               <Link key={s.key} href={s.href}
                 className={`${s.bg} border-2 ${s.border} rounded-2xl p-6 flex flex-col gap-3 transition-all hover:shadow-lg ${s.hover} hover:-translate-y-0.5 cursor-pointer`}>
                 <div className="flex items-center gap-3">
-                  <div className="w-14 h-14 flex items-center justify-center">{s.icon ? <Image src={s.icon} alt={s.key} width={56} height={56} className="w-full h-full object-contain" /> : <span className="text-4xl">{s.emoji}</span>}</div>
+                  <div className="w-14 h-14 flex items-center justify-center">{s.icon ? <Image src={s.icon} alt="" width={56} height={56} className="w-full h-full object-contain" /> : <span className="text-4xl">{s.emoji}</span>}</div>
                   <div>
                     <div className={`font-extrabold text-base ${s.textColor}`}>{tr(s.label as Parameters<typeof tr>[0])}</div>
                     <div className={`text-xs ${s.descColor} font-medium`}>{s.desc}</div>
@@ -146,12 +147,12 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-10">{tr("howTitle")}</h2>
           <div className="grid sm:grid-cols-3 gap-8 text-center">
             {[
-              { step: "1", titleKey: "step1title", descKey: "step1desc", img: "/cleverli-sit-read.png", imgAlt: "Cleverli liest ein Buch", rounded: false },
-              { step: "2", titleKey: "step2title", descKey: "step2desc", img: "/cleverli-celebrate.png", imgAlt: "Cleverli feiert einen Erfolg", rounded: false },
-              { step: "3", titleKey: "step3title", descKey: "step3desc", img: "/cleverli-think.png", imgAlt: "Cleverli denkt nach", rounded: false },
+              { step: "1", titleKey: "step1title", descKey: "step1desc", img: "/cleverli-sit-read.png", rounded: false },
+              { step: "2", titleKey: "step2title", descKey: "step2desc", img: "/cleverli-celebrate.png", rounded: false },
+              { step: "3", titleKey: "step3title", descKey: "step3desc", img: "/cleverli-think.png", rounded: false },
             ].map((item) => (
               <div key={item.step} className="flex flex-col items-center gap-3 bg-white rounded-2xl p-6 shadow-sm">
-                <Image src={item.img} alt={item.imgAlt ?? ""} width={100} height={100} className="drop-shadow-md" loading="lazy" />
+                <Image src={item.img} alt="" width={100} height={100} className="drop-shadow-md" loading="lazy" />
                 <div className="w-8 h-8 rounded-full bg-green-700 text-white flex items-center justify-center text-sm font-bold">{item.step}</div>
                 <h3 className="font-bold text-gray-800">{tr(item.titleKey)}</h3>
                 <p className="text-gray-500 text-sm">{tr(item.descKey)}</p>
@@ -177,7 +178,7 @@ export default function Home() {
             {/* Trial */}
             <div className="bg-white rounded-2xl p-5 sm:p-6 border-2 border-gray-100 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-1">
-                <Image src="/cleverli-run.png" alt="Cleverli läuft" width={56} height={56}  loading="lazy"/>
+                <Image src="/cleverli-run.png" alt="" width={56} height={56}  loading="lazy"/>
                 <div className="text-3xl font-bold text-gray-900">{tr("free")}</div>
               </div>
               <div className="text-gray-400 text-sm mb-6">{tr("forever")}</div>
@@ -195,7 +196,7 @@ export default function Home() {
             {/* Monthly */}
             <div className="bg-white rounded-2xl p-5 sm:p-6 border-2 border-green-100 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-1">
-                <Image src="/cleverli-jump-star.png" alt="Cleverli springt mit Stern" width={56} height={56}  loading="lazy"/>
+                <Image src="/cleverli-jump-star.png" alt="" width={56} height={56}  loading="lazy"/>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-wide text-green-700">{tr("monthlyPlan")}</div>
                   <div className="text-3xl font-bold text-gray-900">CHF 9.90<span className="text-lg font-normal text-gray-500">{tr("perMonth")}</span></div>
@@ -218,7 +219,7 @@ export default function Home() {
             <div className="bg-green-700 rounded-2xl p-5 sm:p-6 border-2 border-green-700 shadow-lg text-white flex flex-col relative overflow-hidden">
               <div className="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">{tr("badgePopular")}</div>
               <div className="flex items-center gap-3 mb-1 pr-20">
-                <Image src="/cleverli-celebrate.png" alt="Cleverli feiert" width={56} height={56} loading="lazy"/>
+                <Image src="/cleverli-celebrate.png" alt="" width={56} height={56} loading="lazy"/>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-wide text-green-100">{tr("yearlyPlan")}</div>
                   <div className="text-3xl font-bold">CHF 99<span className="text-lg font-normal text-green-200">{tr("perYear")}</span></div>
@@ -297,7 +298,7 @@ export default function Home() {
                 </div>
               ))}
               <div className="mt-2 bg-white rounded-2xl p-4 border border-amber-200 shadow-sm flex items-center gap-4">
-                <Image src="/cleverli-think.png" alt="Cleverli denkt nach" width={64} height={64} className="shrink-0"  loading="lazy"/>
+                <Image src="/cleverli-think.png" alt="" width={64} height={64} className="shrink-0"  loading="lazy"/>
                 <div>
                   <div className="text-sm font-bold text-gray-800">🎉 {lang === "fr" ? "Lena a atteint son objectif!" : lang === "it" ? "Lena ha raggiunto il suo obiettivo!" : lang === "en" ? "Lena reached her goal!" : "Lena hat ihr Ziel erreicht!"}</div>
                   <div className="text-xs text-gray-400 mt-0.5">{lang === "fr" ? "Direction le zoo ! 🦁" : lang === "it" ? "È ora dello zoo! 🦁" : lang === "en" ? "Time for the zoo! 🦁" : "Zeit für den Zoo! 🦁"}</div>
@@ -315,7 +316,7 @@ export default function Home() {
       <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-            <Image src="/cleverli-feedback.png" alt="Cleverli Feedback" width={90} height={90} className="drop-shadow-md shrink-0 sm:w-[130px] sm:h-[130px]" />
+            <Image src="/cleverli-feedback.png" alt="" width={90} height={90} className="drop-shadow-md shrink-0 sm:w-[130px] sm:h-[130px]" />
             <h2 className="text-2xl font-bold text-gray-800">{tr("testimonialsTitle")}</h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
@@ -343,7 +344,7 @@ export default function Home() {
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center gap-4 mb-8 justify-center">
-            <Image src="/cleverli-faq.png" alt="Cleverli FAQ" width={70} height={70} className="drop-shadow-md"  loading="lazy"/>
+            <Image src="/cleverli-faq.png" alt="" width={70} height={70} className="drop-shadow-md"  loading="lazy"/>
             <h2 className="text-2xl font-bold text-gray-800">{tr("faqTitle")}</h2>
           </div>
           <div className="space-y-3">
@@ -370,7 +371,7 @@ export default function Home() {
       <section className="bg-green-700 py-10 sm:py-12 px-4 sm:px-6 text-center text-white" style={{paddingBottom:"max(2.5rem, env(safe-area-inset-bottom))"}}>
 
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 justify-center">
-          <Image src="/cleverli-try-now.png" alt="Cleverli ist bereit zum Ausprobieren" width={140} height={140} className="drop-shadow-lg" loading="lazy"/>
+          <Image src="/cleverli-try-now.png" alt="" width={140} height={140} className="drop-shadow-lg" loading="lazy"/>
           <div>
             <h2 className="text-2xl font-bold mb-2">{tr("ctaTitle")}</h2>
             <p className="text-white mb-4">{tr("ctaSubtitle")}</p>
@@ -391,7 +392,7 @@ export default function Home() {
             {topicIndex.map(s => (
               <div key={s.subject}>
                 <div className="font-semibold text-gray-600 text-sm mb-2 flex items-center gap-2">
-                  <Image src={s.icon} alt={s.subject} width={28} height={28} className="w-7 h-7 object-contain" />
+                  <Image src={s.icon} alt="" width={28} height={28} className="w-7 h-7 object-contain" />
                   {getLocalizedSubjectName(s.subject, lang)}
                 </div>
                 <div className="flex flex-wrap gap-x-3 gap-y-1">

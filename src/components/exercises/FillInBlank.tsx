@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect, useMemo } from "react";
 import Image from "next/image";
+import { exerciseImageAlt } from "@/lib/imageAlt";
 import { useLang } from "@/lib/LangContext";
 import { matchOrderedTextAnswer, normaliseTextAnswer } from "@/lib/fillInBlankMatching";
 
@@ -37,7 +38,7 @@ function isNegativeNumericAnswer(answer: string): boolean {
 }
 
 export default function FillInBlank({ question, answer, altAnswers, sequentialAnswer, mathAnswerMode, mathAnswerUnit, caseSensitiveAnswer, onAnswer, questionImage }: Props) {
-  const { tr } = useLang();
+  const { tr, lang } = useLang();
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [shake, setShake] = useState(false);
@@ -138,7 +139,7 @@ export default function FillInBlank({ question, answer, altAnswers, sequentialAn
     <div className="space-y-4">
       {questionImage && (
         <div className="flex justify-center">
-          <Image src={questionImage} alt="Aufgabe" width={140} height={140} className="drop-shadow-md rounded-2xl" />
+          <Image src={questionImage} alt={exerciseImageAlt(questionImage, lang)} width={140} height={140} className="drop-shadow-md rounded-2xl" />
         </div>
       )}
       <p className="text-lg sm:text-xl font-semibold text-gray-800 text-center leading-snug px-1">{question}</p>

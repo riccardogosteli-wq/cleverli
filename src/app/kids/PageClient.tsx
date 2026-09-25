@@ -6,6 +6,7 @@
  */
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import { imageLabel } from "@/lib/imageAlt";
 import Link from "next/link";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
@@ -105,8 +106,9 @@ export default function KidsDashboard() {
     level.title;
 
   if (!loaded) return (
-    <div className="flex items-center justify-center min-h-screen">
-      <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli Maskottchen" width={64} height={64} className="object-contain animate-bounce" />
+    <div role="status" className="flex items-center justify-center min-h-screen">
+      <span className="sr-only">{lang === "fr" ? "Chargement…" : lang === "it" ? "Caricamento…" : lang === "en" ? "Loading…" : "Wird geladen…"}</span>
+      <Image src="/images/mascot/cleverli-thumbsup.png" alt="" width={64} height={64} className="object-contain animate-bounce" />
     </div>
   );
 
@@ -118,7 +120,7 @@ export default function KidsDashboard() {
         <div className="relative shrink-0">
           <Image
             src={COSTUME_IMAGES[profile.costume] ?? "/cleverli-wave.png"}
-            alt="Cleverli"
+            alt={imageLabel("avatar", lang)}
             width={96} height={96}
             className="drop-shadow-lg"
             style={{ animation: "float 3s ease-in-out infinite" }}
@@ -163,7 +165,7 @@ export default function KidsDashboard() {
               : "+30 Bonus-XP"}
           </div>
         </div>
-        <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"} alt="Cleverli Maskottchen" width={44} height={44} className="shrink-0" />
+        <Image src={dailyDone ? "/cleverli-celebrate.png" : "/cleverli-run.png"} alt="" width={44} height={44} className="shrink-0" />
       </Link>
 
       {/* ── Recent achievements ── */}

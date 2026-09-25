@@ -123,7 +123,7 @@ export function DashboardGuestPreview() {
     <div className="max-w-2xl mx-auto px-4 py-10 pb-36 space-y-8">
       {/* Hero */}
       <div className="text-center space-y-3">
-        <Image src="/cleverli-wave.png" alt="Cleverli" width={100} height={100}
+        <Image src="/cleverli-wave.png" alt="" width={100} height={100}
           className="mx-auto drop-shadow-md animate-cleverli-jump" />
         <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
           {tr("heroTitle1") ?? t4(lang, "Lernen macht Spass", "Apprendre, c'est amusant", "Imparare è divertente", "Learning is fun")} 🎒
@@ -303,7 +303,7 @@ export function BelohnungenGuestPreview() {
     <div className="max-w-2xl mx-auto px-4 py-10 pb-36 space-y-8">
       {/* Hero */}
       <div className="text-center space-y-3">
-        <Image src="/images/ui/Belohnungen.svg" alt="Belohnungen" width={120} height={120}
+        <Image src="/images/ui/Belohnungen.svg" alt="" width={120} height={120}
           className="mx-auto" unoptimized />
         <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
           {t4(lang, "Belohnungen", "Récompenses", "Premi", "Rewards")} 🎁

@@ -56,7 +56,7 @@ export default function OnboardingModal() {
         {/* Welcome step */}
         {step === "welcome" && (
           <div className="p-6 text-center space-y-4">
-            <Image src="/cleverli-wave.png" alt="Cleverli" width={120} height={120} className="mx-auto drop-shadow-lg" />
+            <Image src="/cleverli-wave.png" alt="" width={120} height={120} className="mx-auto drop-shadow-lg" />
             <h1 className="text-2xl font-extrabold text-gray-900">
               {t("Willkommen bei Cleverli! 🎉", "Bienvenue sur Cleverli ! 🎉", "Benvenuto su Cleverli! 🎉", "Welcome to Cleverli! 🎉")}
             </h1>

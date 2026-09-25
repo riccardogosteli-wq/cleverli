@@ -34,7 +34,7 @@ export default function CleverliMascot({ size = 150, mood = "happy", animate = t
       )}
       <Image
         src={src}
-        alt="Cleverli"
+        alt=""
         width={size}
         height={size}
         style={bounce ? { animation: "cleverli-bounce 2.5s ease-in-out infinite" } : undefined}

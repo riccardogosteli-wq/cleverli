@@ -66,11 +66,11 @@ export default async function GradeSubjectSeoRoute({ params }: Props) {
   const heroImage = page.subject === "math"
     ? {
       src: "/images/scenes/cleverli-math-ask.jpg",
-      alt: `Cleverli Beispielszene für ${page.h1}`,
+      alt: "Illustration: Cleverli und Kinder rätseln über eine Rechenaufgabe auf einer Tafel",
     }
     : {
       src: "/images/scenes/cleverli-reading-abc.jpg",
-      alt: `Cleverli Beispielszene für ${page.h1}`,
+      alt: "Illustration: Cleverli und ein Kind betrachten ein aufgeschlagenes Buch mit den Buchstaben A, B und C",
     };
   const relatedPages = getGradeSubjectSeoLinks()
     .filter((related) => related.href !== page.href && (related.grade === page.grade || related.subject === page.subject))

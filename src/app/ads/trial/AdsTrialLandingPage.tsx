@@ -46,7 +46,7 @@ export default function AdsTrialLandingPage({
   title = "Alle Übungen und Klassen 7 Tage gratis freischalten.",
   lead = "Erstelle ein Konto, wähle dein Abo und teste Cleverli Premium eine Woche lang mit allen Übungen und Klassen.",
   heroImage = "/images/scenes/cleverli-teach-kids.jpg",
-  imageAlt = "Cleverli Premium Vorschau",
+  imageAlt = "Illustration: Cleverli und drei Kinder lernen gemeinsam an einem Tisch",
   trialCtaLabel = "7 Tage kostenlos testen",
   freeCtaLabel = "Kostenlos mit Übungen starten",
 }: TrialLandingPageProps) {

@@ -10,7 +10,7 @@ export default function NotFound() {
 
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center space-y-5">
-      <Image src="/cleverli-think.png" alt="Cleverli" width={130} height={130} className="drop-shadow-lg" />
+      <Image src="/cleverli-think.png" alt="" width={130} height={130} className="drop-shadow-lg" />
       <h1 className="text-4xl font-extrabold text-gray-800">404</h1>
       <p className="text-gray-500 max-w-sm">
         {t(

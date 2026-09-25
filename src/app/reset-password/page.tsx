@@ -204,7 +204,7 @@ function ResetPasswordContent() {
     <div className="min-h-screen bg-green-50 flex flex-col items-center justify-start pt-8 px-4 pb-16">
       <div className="w-full max-w-sm space-y-6">
         <div className="text-center">
-          <Image src="/images/mascot/cleverli-thumbsup.png" alt="Cleverli" width={80} height={80} className="mx-auto drop-shadow-md" />
+          <Image src="/images/mascot/cleverli-thumbsup.png" alt="" width={80} height={80} className="mx-auto drop-shadow-md" />
         </div>
         {mode === "update" ? <SetNewPassword /> : <RequestReset />}
       </div>
