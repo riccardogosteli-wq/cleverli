@@ -9,8 +9,11 @@ const guide=read('src/app/lernapp-primarschule/page.tsx');
 for(const text of ['https://www.cleverli.ch/lernapp-primarschule','CHF 9.90','CHF 99','Zahlungskarte','kein unabhängiger Appvergleich','Internetverbindung','/lehrplanbezug','/datenschutz','/impressum','/lehrpersonen','/mathe-uebungen-5-klasse','/deutsch-uebungen-3-klasse']){assert.ok(guide.includes(text),text);checks++;}
 for(const config of [matheUebungenKinderConfig,deutschUebungenKinderConfig])for(const href of ['/','/lernapp-primarschule']){assert.ok(config.relatedLinks?.some(l=>l.href===href));checks++;}
 for(const slug of ['mathe-uebungen-5-klasse','deutsch-uebungen-3-klasse']){const p=getGradeSubjectSeoPage(slug)!;assert.equal(p.workedExamples?.length,3);assert.equal(p.faqItems?.length,4);checks+=2;for(const href of ['/','/lernapp-primarschule']){assert.ok(p.extraLinks?.some(l=>l.href===href));checks++;}}
-for(const img of ['mathe-beispiel.png','eltern-vorschau.png']){assert.ok(existsSync('public/images/seo/'+img));checks++;}
+for(const img of ['mathe-uebung-live.png','eltern-vorschau.png']){assert.ok(existsSync('public/images/seo/'+img));checks++;}
 assert.ok(read('src/components/HomePlatformOverview.tsx').includes('Beispieldaten, keine echten Lernergebnisse'));checks++;
 assert.ok(!read('src/app/sitemap.ts').includes('lernapp-primarschule'));checks++;
 for(const p of ['src/app/lernapp-primarschule/page.tsx','src/components/HomePlatformOverview.tsx']){assert.ok(!/ohne Kreditkarte|Keine Kreditkarte|ß/.test(read(p)));checks++;}
 console.log(`${checks} category SEO assertions passed; GSC and sitemap submission hold preserved`);
+
+for(const p of ["src/components/HomePlatformOverview.tsx","src/app/lernapp-primarschule/page.tsx"]){assert.ok(!read(p).includes("mathe-beispiel.png"));assert.ok(read(p).includes("mathe-uebung-live.png"));}
+assert.ok(guide.includes("/learn/5/math/dezimalzahlen"));
