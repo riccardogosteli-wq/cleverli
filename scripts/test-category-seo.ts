@@ -13,9 +13,13 @@ for(const img of ['mathe-uebung-live.png','eltern-vorschau.png']){assert.ok(exis
 assert.ok(read('src/components/HomePlatformOverview.tsx').includes('Beispieldaten, keine echten Lernergebnisse'));checks++;
 assert.ok(!read('src/app/sitemap.ts').includes('lernapp-primarschule'));checks++;
 for(const p of ['src/app/lernapp-primarschule/page.tsx','src/components/HomePlatformOverview.tsx']){assert.ok(!/ohne Kreditkarte|Keine Kreditkarte|ß/.test(read(p)));checks++;}
-console.log(`${checks} category SEO assertions passed; GSC and sitemap submission hold preserved`);
+
 
 for(const p of ["src/components/HomePlatformOverview.tsx","src/app/lernapp-primarschule/page.tsx"]){assert.ok(!read(p).includes("mathe-beispiel.png"));assert.ok(read(p).includes("mathe-uebung-live.png"));}
 assert.ok(guide.includes("/learn/5/math/dezimalzahlen"));
 
-for(const rejected of ["kein unabhängiger Appvergleich","Kosten und Nutzung","Home-Bildschirm","App installieren","id=\"kosten\"","native App"]){assert.ok(!guide.includes(rejected),rejected);}
+for(const rejected of ["kein unabhängiger Appvergleich","Kosten und Nutzung","id=\"kosten\"","native App"]){assert.ok(!guide.includes(rejected),rejected);}
+
+for (const required of ['id="startbildschirm"', "Als Web-App öffnen", "Safari", "Chrome", "Installieren und Verknüpfung erstellen", "Aktionen bearbeiten", "murmeli-icon-v3-192.png"]) assert.ok(guide.includes(required),required);
+
+console.log("Category SEO assertions passed, including home-screen guide; GSC and sitemap hold preserved");
