@@ -48,3 +48,8 @@ assert.ok(memory.includes('isFlipped ? card.label : "verdeckt"'), "Do not expose
 assert.ok(memory.includes('alt=""'), "Card image duplicates visible/accessible card label");
 for (const file of ["src/components/exercises/MultipleChoice.tsx", "src/components/exercises/FillInBlank.tsx", "src/app/daily/PageClient.tsx"]) assert.ok(readFileSync(file,"utf8").includes("exerciseImageAlt("));
 console.log(`PASS: ${placements} image placements, ${illustrations} canonical main illustration(s), four-language descriptions, answer protection and labelled navigation.`);
+
+assert.match(imageLabel("mascot", "de"), /Buch/);
+assert.match(imageLabel("mascot", "fr"), /livre/);
+assert.match(imageLabel("mascot", "it"), /libro/);
+assert.match(imageLabel("mascot", "en"), /book/);
