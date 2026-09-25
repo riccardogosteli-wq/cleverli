@@ -4,38 +4,65 @@ import Image from "next/image";
 import { withPageSocial } from "@/lib/pageSocialMetadata";
 
 export const metadata: Metadata = withPageSocial({
- title: "Lernapp für die Primarschule: Geräte, Übungen und Kosten",
- description: "Cleverli als Lernapp für die Schweizer Primarschule nutzen: im Browser auf Handy, Tablet und Computer. Mit Beispielen, Kosten und Tipps für Eltern.",
- alternates: { canonical: "https://www.cleverli.ch/lernapp-primarschule" },
- robots: { index: true, follow: true },
+  title: "Lernapp für die Primarschule: Mit Cleverli üben",
+  description: "Mathe üben, Texte verstehen und Neues entdecken: Cleverli begleitet Kinder der 1. bis 6. Klasse mit interaktiven Aufgaben für die Schweizer Primarschule.",
+  alternates: { canonical: "https://www.cleverli.ch/lernapp-primarschule" },
+  robots: { index: true, follow: true },
 });
 const faqs = [
- {question:"Muss ich Cleverli aus einem App Store herunterladen?",answer:"Nein. Cleverli ist eine browserbasierte Lernapp. Öffne cleverli.ch in einem aktuellen Browser. Für den Einstieg ist kein Download aus dem Apple App Store oder Google Play Store nötig."},
- {question:"Ist Cleverli kostenlos?",answer:"Ausgewählte Übungen sind kostenlos zugänglich. Premium kostet CHF 9.90 pro Monat oder CHF 99 pro Jahr für bis zu drei Kinderprofile. Für die siebentägige Premium-Testphase braucht es eine Zahlungskarte. Ohne Kündigung beginnt danach das gewählte kostenpflichtige Abo. Verbindlich sind die Angaben im Checkout."},
- {question:"Passt die Lernapp zum Schweizer Lehrplan 21?",answer:"Cleverli bietet eine Übersicht mit Themen, Lehrplancodes und Übungslinks. Sie hilft beim Einordnen nach Klasse und Fach. Sie ist keine offizielle Zertifizierung und ersetzt weder den Unterricht noch die Einschätzung der Lehrperson. Die Reihenfolge des Schulstoffs kann je nach Schule und Kanton variieren."},
- {question:"Kann mein Kind ohne Internet üben?",answer:"Plane für Cleverli eine Internetverbindung ein. Ein Symbol auf dem Home-Bildschirm ist ein schneller Zugang zur Website, aber keine Zusage, dass alle Übungen und Funktionen offline verfügbar sind."},
- {question:"Wie wähle ich passende Aufgaben aus?",answer:"Beginnt mit der Klasse und einem Thema aus dem aktuellen Unterricht. Lass dein Kind ein Beispiel lösen und seinen Weg erklären. Wenn eine Grundlage noch fehlt, wählt zuerst eine einfachere Aufgabe. Kurze, ruhige Runden sind hilfreicher als möglichst viele Klicks."},
+  { question: "Für welche Klassen ist Cleverli geeignet?", answer: "Cleverli bietet Übungen für die 1. bis 6. Klasse. Ihr wählt die Klasse, das Fach und ein Thema, das dein Kind gerade beschäftigt." },
+  { question: "Was kann mein Kind mit Cleverli üben?", answer: "Zur Auswahl stehen Mathematik, Deutsch, Natur, Mensch, Gesellschaft (NMG), Sprachen sowie Medien und Informatik. Die Themenübersicht zeigt euch die Fächer und Aufgaben der jeweiligen Klasse." },
+  { question: "Was hilft, wenn mein Kind bei einer Aufgabe nicht weiterkommt?", answer: "Dein Kind kann sich die Aufgabe vorlesen lassen oder einen Tipp öffnen. Nach dem Überprüfen erhält es eine Rückmeldung zu seiner Antwort. Ihr könnt die Aufgabe auch gemeinsam anschauen." },
+  { question: "Brauchen wir eine App zum Herunterladen?", answer: "Nein. Cleverli läuft direkt auf cleverli.ch im Browser, auf dem Tablet, Computer oder Handy. Zum Üben braucht ihr eine Internetverbindung." },
+  { question: "Wo sehe ich die Fortschritte meines Kindes?", answer: "Im Elternbereich findest du den gespeicherten Lernfortschritt deines Kindes. Unter Belohnungen kannst du persönliche Belohnungen festlegen, auf die dein Kind hinarbeiten kann." },
 ];
-const linkClass="inline-flex min-h-11 items-center py-2 font-semibold text-green-800 underline underline-offset-4";
-export default function LearningAppGuide(){return <main lang="de" className="bg-white text-gray-900">
- <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(f=>({"@type":"Question",name:f.question,acceptedAnswer:{"@type":"Answer",text:f.answer}}))})}}/>
- <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
-  <p className="text-sm font-bold text-green-700">Ratgeber für Eltern · Schweizer Primarschule</p>
-  <h1 className="mt-3 text-3xl font-extrabold leading-tight sm:text-5xl">Eine Lernapp für die Primarschule: So nutzt ihr Cleverli im Alltag</h1>
-  <p className="mt-6 text-lg leading-8 text-gray-700">Du suchst eine Lernapp für dein Kind? Entscheidend sind passende Aufgaben, verständliche Hilfe und ein klarer Überblick über Kosten und Nutzung. Hier zeigen wir, wie Cleverli auf euren Geräten funktioniert und wie ihr einen sinnvollen Einstieg findet.</p>
-  <p className="mt-3 text-sm leading-6 text-gray-500">Von Cleverli, dem Anbieter dieser Lernplattform. Dieser Ratgeber erklärt unser eigenes Angebot und ist kein unabhängiger Appvergleich.</p>
-  <nav aria-label="Inhaltsverzeichnis" className="my-8 flex flex-wrap gap-x-5 gap-y-2 rounded-2xl bg-green-50 p-5">{[["geraete","Geräte"],["beispiele","Beispiele"],["auswahl","Auswahl"],["kosten","Kosten"],["fragen","Fragen"]].map(([id,label])=><a key={id} className={linkClass} href={'#'+id}>{label}</a>)}</nav>
-  <section id="geraete" className="scroll-mt-24"><h2 className="text-2xl font-bold">Lernapp oder Website? Bei Cleverli geht beides im Browser zusammen</h2><p className="mt-4 leading-7">Cleverli läuft als Webanwendung auf Handy, Tablet und Computer. Du brauchst keine separate native App. Ein grösserer Bildschirm kann bei Aufgaben mit mehreren Elementen angenehmer sein. Vorlesen ist verfügbar, wenn Ton und Gerät entsprechend eingestellt sind.</p>
-   <div className="mt-6 grid gap-4 sm:grid-cols-3">{[
-    ["iPhone und iPad","Öffne cleverli.ch in Safari. Für einen schnellen Zugang kannst du im Teilen-Menü nach «Zum Home-Bildschirm» suchen. Je nach Systemversion kann sich die Bezeichnung oder Position unterscheiden."],
-    ["Android","Öffne cleverli.ch in Chrome. Je nach Browser und Gerät findest du im Menü «Zum Startbildschirm hinzufügen» oder «App installieren». Falls diese Option fehlt, kannst du einfach ein Lesezeichen setzen."],
-    ["Computer","Öffne cleverli.ch in einem aktuellen Browser und speichere ein Lesezeichen. Ein Konto hilft, gespeicherte Fortschritte auf mehreren Geräten zu nutzen. Achte darauf, jeweils dasselbe Kinderprofil auszuwählen."],
-   ].map(([title,text])=><div key={title} className="rounded-2xl border border-green-100 bg-green-50 p-5"><h3 className="font-bold">{title}</h3><p className="mt-3 text-sm leading-7">{text}</p></div>)}</div><p className="mt-4 text-sm leading-7 text-gray-600">Die Menübezeichnungen hängen vom Betriebssystem und Browser ab. Ein Startsymbol macht aus der Website keine separate App aus dem App Store. Für die Nutzung solltest du eine Internetverbindung einplanen.</p>
-  </section>
-  <section id="beispiele" className="mt-12 scroll-mt-24"><h2 className="text-2xl font-bold">Welche Aufgaben passen zu deinem Kind?</h2><p className="mt-4 leading-7">Cleverli richtet sich an die 1. bis 6. Klasse. Neben Mathematik und Deutsch gibt es Natur, Mensch, Gesellschaft (NMG), Sprachen sowie Medien und Informatik. Welche Themen passen, hängt vom Lernstand und vom Unterricht ab.</p><figure className="mt-6"><Image src="/images/seo/mathe-uebung-live.png" alt="Screenshot der interaktiven Matheaufgabe «Was bedeutet 0,5?» in Cleverli" width={1000} height={1335} className="mx-auto h-auto w-full max-w-xl rounded-2xl border border-gray-200" sizes="(min-width:640px) 576px, 100vw"/><figcaption className="mt-2 text-sm text-gray-500">So sieht eine Matheaufgabe in Cleverli aus: Dein Kind wählt eine Antwort und überprüft sie. Screenshot aus dem Thema Dezimalzahlen, 5. Klasse.</figcaption></figure><ul className="mt-5 space-y-2"><li><Link className={linkClass} href="/learn/5/math/dezimalzahlen">Diese Matheaufgaben direkt ausprobieren</Link></li><li><Link className={linkClass} href="/mathe-uebungen-5-klasse">Dezimalzahlen, Brüche und Umfang mit Erklärungen ausprobieren</Link></li><li><Link className={linkClass} href="/deutsch-uebungen-3-klasse">Wortarten, Leseverständnis und Grossschreibung ausprobieren</Link></li><li><Link className={linkClass} href="/primarschule-uebungen">Alle Klassen und Fächer entdecken</Link></li></ul></section>
-  <section id="auswahl" className="mt-12 scroll-mt-24"><h2 className="text-2xl font-bold">Worauf Eltern bei einer Lernapp achten können</h2><ul className="mt-4 list-disc space-y-3 pl-5 leading-7"><li><strong>Passender Lernstoff:</strong> Wählt ein konkretes Thema aus dem Unterricht, statt nur nach dem Alter zu gehen. Unsere <Link href="/lehrplanbezug" className="font-semibold text-green-800 underline">Übersicht zum Lehrplanbezug</Link> zeigt Themen und Zuordnungen.</li><li><strong>Verständliche Rückmeldung:</strong> Eine hilfreiche Aufgabe zeigt nicht nur richtig oder falsch. Probiert Hinweise und Erklärungen gemeinsam aus.</li><li><strong>Überschaubare Runden:</strong> Startet beispielsweise mit fünf bis zehn Minuten. Eine Pause ist sinnvoll, wenn Konzentration oder Freude nachlassen.</li><li><strong>Elternbegleitung:</strong> Schaut gelegentlich gemeinsam auf die gespeicherten Fortschritte. Eine App ergänzt das Lernen, ersetzt aber weder Lehrpersonen noch persönliche Unterstützung.</li><li><strong>Datenschutz:</strong> Prüft, welche Daten gespeichert werden und wer verantwortlich ist. In unserer <Link href="/datenschutz" className="font-semibold text-green-800 underline">Datenschutzerklärung</Link> stehen die Details. Verwendet für Kinderprofile keine unnötigen persönlichen Angaben.</li></ul><Link href="/parents" className={linkClass}>Die öffentliche Vorschau des Elternbereichs ansehen</Link></section>
-  <section id="kosten" className="mt-12 scroll-mt-24 rounded-2xl bg-green-50 p-6"><h2 className="text-2xl font-bold">Kostenlos ausprobieren und Premium unterscheiden</h2><p className="mt-4 leading-7">Ausgewählte Übungen könnt ihr ohne Abo ausprobieren. Für Premium gibt es ein Monatsabo für CHF 9.90 oder ein Jahresabo für CHF 99. Beide gelten für bis zu drei Kinderprofile.</p><p className="mt-3 leading-7">Die siebentägige Premium-Testphase ist etwas anderes als das Ausprobieren einzelner Übungen: Sie benötigt eine Zahlungskarte und geht ohne Kündigung in das gewählte Abo über. Prüft Preis, Laufzeit und Kündigungsbedingungen vor dem Abschluss. Aktuelle Sonderangebote und die verbindlichen Bedingungen seht ihr auf der Preisübersicht und im Checkout.</p><Link href="/upgrade" className={linkClass}>Aktuelle Preise und Angebote prüfen</Link></section>
-  <section id="fragen" className="mt-12 scroll-mt-24"><h2 className="text-2xl font-bold">Häufige Fragen zur Lernapp</h2><div className="mt-5 space-y-3">{faqs.map(f=><details key={f.question} className="rounded-2xl border border-gray-200 p-5"><summary className="cursor-pointer py-2 font-bold">{f.question}</summary><p className="mt-3 leading-7 text-gray-700">{f.answer}</p></details>)}</div></section>
-  <aside className="mt-12 border-t border-green-100 pt-6"><h2 className="text-xl font-bold">Der passende nächste Schritt</h2><div className="mt-3 flex flex-col items-start"><Link href="/" className={linkClass}>Cleverli als Lernplattform für Familien kennenlernen</Link><Link href="/lehrpersonen" className={linkClass}>Informationen für Lehrpersonen und Schulklassen</Link><Link href="/impressum" className={linkClass}>Wer hinter Cleverli steht</Link></div></aside>
- </article>
-</main>}
+const linkClass = "inline-flex min-h-11 items-center py-2 font-semibold text-green-800 underline underline-offset-4";
+export default function LearningAppGuide() {
+  return <main lang="de" className="bg-white text-gray-900">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })) }) }} />
+    <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
+      <p className="text-sm font-bold text-green-700">Für Kinder der 1. bis 6. Klasse</p>
+      <h1 className="mt-3 text-3xl font-extrabold leading-tight sm:text-5xl">Die Lernapp für die Schweizer Primarschule</h1>
+      <p className="mt-6 text-lg leading-8 text-gray-700">Eine Matheaufgabe lösen, einen Text verstehen oder etwas Neues über die Natur entdecken: Mit Cleverli kann dein Kind den Schulstoff zu Hause üben. Interaktive Aufgaben, Tipps und direkte Rückmeldungen begleiten es dabei, Schritt für Schritt und im eigenen Tempo.</p>
+      <Link href="/primarschule-uebungen" className="mt-6 inline-flex min-h-12 items-center rounded-xl bg-green-700 px-6 py-3 font-bold text-white hover:bg-green-800">Passende Übungen entdecken</Link>
+      <nav aria-label="Inhaltsverzeichnis" className="my-8 flex flex-wrap gap-x-5 gap-y-2 rounded-2xl bg-green-50 p-5">
+        {[["beispiele", "So übt dein Kind"], ["themen", "Fächer und Themen"], ["eltern", "Für Eltern"], ["fragen", "Häufige Fragen"]].map(([id, label]) => <a key={id} className={linkClass} href={'#' + id}>{label}</a>)}
+      </nav>
+      <section id="beispiele" className="scroll-mt-24">
+        <h2 className="text-2xl font-bold">Eine Aufgabe nach der anderen</h2>
+        <p className="mt-4 leading-7">Dein Kind wählt eine Antwort, ordnet Begriffe zu oder trägt eine Lösung ein. Ein Tipp hilft beim Weiterdenken. Nach dem Überprüfen sieht es, ob die Antwort stimmt.</p>
+        <figure className="mt-6">
+          <Image src="/images/seo/mathe-uebung-live.png" alt="Screenshot der interaktiven Matheaufgabe «Was bedeutet 0,5?» in Cleverli" width={1088} height={1454} className="mx-auto h-auto w-full max-w-xl rounded-2xl border border-gray-200" sizes="(min-width:640px) 576px, 100vw" />
+          <figcaption className="mt-2 text-sm text-gray-500">Ein Blick in Cleverli: eine Aufgabe zu Dezimalzahlen aus der 5. Klasse.</figcaption>
+        </figure>
+        <Link className={linkClass} href="/learn/5/math/dezimalzahlen">Diese Matheaufgaben direkt ausprobieren</Link>
+      </section>
+      <section id="themen" className="mt-12 scroll-mt-24">
+        <h2 className="text-2xl font-bold">Was möchte dein Kind heute üben?</h2>
+        <p className="mt-4 leading-7">Wählt eine Klasse und ein Fach. Danach findet ihr die Themen, die gerade zum Unterricht passen oder die dein Kind nochmals anschauen möchte.</p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          {[
+            ["Mathematik", "Zählen, rechnen, Formen erkunden: Von den ersten Zahlen bis zu Brüchen und Dezimalzahlen gibt es viel zu üben.", "/mathe-uebungen-kinder", "Matheübungen entdecken"],
+            ["Deutsch", "Wörter untersuchen, Texte verstehen und die Rechtschreibung üben. Dein Kind kann gezielt an einem Thema arbeiten.", "/deutsch-uebungen-kinder", "Deutschübungen entdecken"],
+            ["Noch mehr entdecken", "Natur, Mensch, Gesellschaft, Sprachen sowie Medien und Informatik ergänzen die Auswahl. Die Fächer findet ihr bei der jeweiligen Klasse.", "/primarschule-uebungen", "Alle Fächer ansehen"],
+          ].map(([title, text, href, label]) => <div key={title} className="rounded-2xl border border-green-100 bg-green-50 p-5"><h3 className="font-bold">{title}</h3><p className="mt-3 text-sm leading-7">{text}</p><Link href={href} className={linkClass}>{label}</Link></div>)}
+        </div>
+        <p className="mt-5 leading-7">Du möchtest genauer wissen, welche Themen zum Schulstoff gehören? In unserer <Link href="/lehrplanbezug" className="font-semibold text-green-800 underline underline-offset-4">Übersicht zum Lehrplan 21</Link> findest du die Zuordnungen und die passenden Übungen.</p>
+        <div className="mt-3 flex flex-col items-start"><Link href="/mathe-uebungen-5-klasse" className={linkClass}>Mathebeispiele für die 5. Klasse ansehen</Link><Link href="/deutsch-uebungen-3-klasse" className={linkClass}>Deutschbeispiele für die 3. Klasse ansehen</Link></div>
+      </section>
+      <section id="eltern" className="mt-12 scroll-mt-24">
+        <h2 className="text-2xl font-bold">Den Lernweg gemeinsam begleiten</h2>
+        <p className="mt-4 leading-7">Manchmal reicht eine kurze Übungsrunde nach den Hausaufgaben. Manchmal möchtet ihr euch gemeinsam Zeit für ein Thema nehmen. Ihr entscheidet, was heute passt.</p>
+        <p className="mt-3 leading-7">Im Elternbereich siehst du die gespeicherten Fortschritte deines Kindes. Mit persönlichen Belohnungen könnt ihr euch gemeinsam auf kleine Ziele freuen.</p>
+        <Link href="/parents" className={linkClass}>Den Elternbereich kennenlernen</Link>
+      </section>
+      <section className="mt-12 rounded-2xl bg-green-50 p-6">
+        <h2 className="text-2xl font-bold">Einfach losüben</h2>
+        <p className="mt-4 leading-7">Cleverli läuft direkt im Browser auf Tablet, Computer und Handy. Öffnet cleverli.ch, wählt ein Thema und probiert die ersten Aufgaben aus. Zum Üben braucht ihr eine Internetverbindung.</p>
+        <Link href="/primarschule-uebungen" className={linkClass}>Jetzt Übungen auswählen</Link>
+      </section>
+      <section id="fragen" className="mt-12 scroll-mt-24"><h2 className="text-2xl font-bold">Häufige Fragen zur Lernapp</h2><div className="mt-5 space-y-3">{faqs.map(f => <details key={f.question} className="rounded-2xl border border-gray-200 p-5"><summary className="cursor-pointer py-2 font-bold">{f.question}</summary><p className="mt-3 leading-7 text-gray-700">{f.answer}</p></details>)}</div></section>
+      <aside className="mt-12 border-t border-green-100 pt-6"><h2 className="text-xl font-bold">Mehr über Cleverli</h2><div className="mt-3 flex flex-col items-start"><Link href="/" className={linkClass}>Cleverli kennenlernen</Link><Link href="/lehrpersonen" className={linkClass}>Cleverli für Lehrpersonen</Link><Link href="/upgrade" className={linkClass}>Premium und Preise</Link><Link href="/datenschutz" className={linkClass}>Datenschutz</Link><Link href="/impressum" className={linkClass}>Kontakt und Impressum</Link></div></aside>
+    </article>
+  </main>;
+}
