@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import * as Sentry from "@sentry/nextjs";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
-import { BillingError, confirmCancellation, nonSubscriptionBilling, resolveSubscription, subscriptionBilling } from "@/lib/accountBilling";
+import { BillingError, confirmCancellation, isOwnerGrant, nonSubscriptionBilling, resolveSubscription, subscriptionBilling } from "@/lib/accountBilling";
 import { logUserActivity } from "@/lib/userActivityServer";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -128,7 +128,7 @@ export async function GET(req: NextRequest) {
       .select("stripe_subscription_id, stripe_customer_id, premium_plan, premium, premium_until, cancelled, email")
       .eq("id", auth.user.id).single();
     if (error || !profile) throw new BillingError("profile_unavailable", 503);
-    const sub = profile.premium_plan === "schooltime" ? null : await resolveSubscription(getStripe(), profile, auth.user.id);
+    const sub = (profile.premium_plan === "schooltime" || isOwnerGrant(profile)) ? null : await resolveSubscription(getStripe(), profile, auth.user.id);
     const billing = sub ? subscriptionBilling(sub) : nonSubscriptionBilling(profile);
     return NextResponse.json({ billing }, { headers });
   } catch (error) {

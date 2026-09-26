@@ -99,3 +99,43 @@ for(const lang of ['de','fr','it','en'])test(`later termination copy warns of in
 test('POST never persists later termination as confirmed non-renewal',async()=>{const f=routeFixture({sub:sub({cancel_at:4073587200})});const r=await f.route.POST(f.request());assert.equal(r.status,502);assert.equal(f.writes.length,0);assert.equal(f.stripe.updates,1);});
 
 test('expired incomplete subscription does not invent an end from a future item period',()=>{assert.equal(policy.subscriptionEnd(sub({status:'incomplete_expired',ended_at:null})),null);});
+
+// Owner grants are not Stripe subscriptions. Only the explicit, unlinked plan qualifies.
+const owner = extra => ({ ...profile(), premium_plan: 'manual_owner', stripe_customer_id: null, stripe_subscription_id: null, ...extra });
+test('owner grant is active and never cancellable', () => {
+  const b = policy.nonSubscriptionBilling(owner());
+  assert.equal(b.state, 'granted'); assert.equal(b.accessActive, true); assert.equal(b.canCancel, false);
+});
+for (const [name, patch, active] of [
+  ['no expiry', {premium_until:null}, true], ['expired', {premium_until:'2000-01-01T00:00:00Z'}, false],
+  ['revoked', {premium:false}, false], ['exact expiry', {premium_until:'2026-09-26T00:00:00Z'}, false],
+]) test(`owner ${name} honours entitlement`, () => assert.equal(policy.nonSubscriptionBilling(owner(patch), Date.parse('2026-09-26T00:00:00Z')).accessActive, active));
+test('malformed owner expiry fails closed', () => assert.throws(() => policy.nonSubscriptionBilling(owner({premium_until:'invalid'})), /invalid_entitlement_end/));
+for (const patch of [{premium_plan:'monthly'}, {premium_plan:'unknown'}, {cancelled:true}, {stripe_customer_id:'cus_fixture'}, {stripe_subscription_id:'sub_fixture'}])
+  test(`no grant bypass for ${JSON.stringify(patch)}`, () => {
+    assert.equal(policy.isOwnerGrant(owner(patch)), false);
+    assert.throws(() => policy.nonSubscriptionBilling(owner(patch)), /subscription_not_found/);
+  });
+test('owner GET succeeds without Stripe calls or DB changes', async () => {
+  const f=routeFixture({profile:owner()});const r=await f.route.GET(f.request('GET'));
+  assert.equal(r.status,200);assert.equal((await r.json()).billing.state,'granted');
+  assert.equal(f.stripe.reads,0);assert.equal(f.stripe.lists,0);assert.equal(f.stripe.updates,0);assert.equal(f.writes.length,0);
+});
+test('owner GET still requires valid authentication', async () => {
+  const f=routeFixture({profile:owner(),unauthorized:true});assert.equal((await f.route.GET(f.request('GET'))).status,401);
+});
+test('owner POST cannot cancel or mutate anything', async () => {
+  const f=routeFixture({profile:owner()});assert.equal((await f.route.POST(f.request())).status,404);
+  assert.equal(f.stripe.updates,0);assert.equal(f.writes.length,0);
+});
+for(const lang of ['de','fr','it','en']) test(`owner copy is non-renewing and not a subscription in ${lang}`,()=>{
+  const html=renderToStaticMarkup(React.createElement(Status,{lang,billing:policy.nonSubscriptionBilling(owner())}));
+  assert.match(html,/kein Abonnement|Aucun abonnement|Non serve un abbonamento|No subscription/);
+  assert.doesNotMatch(html,/Nächste Verlängerung|Prochain renouvellement|Prossimo rinnovo|Next renewal|could not be confirmed|konnte nicht bestätigt/);
+  const noDate=renderToStaticMarkup(React.createElement(Status,{lang,billing:policy.nonSubscriptionBilling(owner({premium_until:null}))}));
+  assert.doesNotMatch(noDate,/<time|Invalid Date|hello@/);
+});
+test('revoked owner rendering never claims enabled Premium',()=>{
+  const html=renderToStaticMarkup(React.createElement(Status,{lang:'de',billing:policy.nonSubscriptionBilling(owner({premium:false}))}));
+  assert.match(html,/Premium ist derzeit nicht aktiv/);assert.doesNotMatch(html,/wurde direkt freigeschaltet/);
+});

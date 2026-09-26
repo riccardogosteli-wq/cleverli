@@ -1,7 +1,7 @@
 import type Stripe from "stripe";
 
 export type AccountBilling = {
-  state: "active" | "trial" | "scheduled" | "cancelled" | "ended" | "lifetime" | "free" | "attention";
+  state: "active" | "trial" | "scheduled" | "cancelled" | "ended" | "lifetime" | "granted" | "free" | "attention";
   endAt: string | null;
   accessActive: boolean;
   canCancel: boolean;
@@ -70,7 +70,17 @@ export function subscriptionBilling(sub: Stripe.Subscription, now = Date.now()):
     canCancel: !cancelled && ["active", "trialing", "past_due", "unpaid", "paused"].includes(sub.status),
   };
 }
-export function nonSubscriptionBilling(profile: BillingProfile): AccountBilling {
+export function isOwnerGrant(profile: BillingProfile): boolean {
+  return profile.premium_plan === "manual_owner" && !profile.stripe_customer_id &&
+    !profile.stripe_subscription_id && !profile.cancelled;
+}
+export function nonSubscriptionBilling(profile: BillingProfile, now = Date.now()): AccountBilling {
+  if (isOwnerGrant(profile)) {
+    const end = profile.premium_until === null ? null : Date.parse(profile.premium_until);
+    if (end !== null && !Number.isFinite(end)) throw new BillingError("invalid_entitlement_end", 503);
+    return { state: "granted", endAt: profile.premium_until,
+      accessActive: profile.premium && (end === null || end > now), canCancel: false };
+  }
   if (profile.premium_plan === "schooltime" && profile.premium) {
     return { state: "lifetime", endAt: null, accessActive: true, canCancel: false };
   }
