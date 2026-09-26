@@ -337,8 +337,8 @@ export async function POST(req: NextRequest) {
         },
         customData: {
           currency: "CHF",
-          value: plan === "yearly" ? 99 : 9.9,
-          predicted_ltv: plan === "yearly" ? 99 : 9.9,
+          // A free trial collects no money. Keep server/browser event value identical.
+          value: 0,
           content_name: `Cleverli Premium ${plan}`,
           trial_days: trialDays,
         },
