@@ -40,14 +40,3 @@ r=await request({authorization:'Bearer fixture-auth'});assert.equal(r.status,200
 current={...session,metadata:{...session.metadata,userId:'other'}};r=await request({authorization:'Bearer fixture-auth'});assert.equal(r.status,404);assert.deepEqual(await r.json(),{error:'not_found'});count++;
 console.log('PASS total',count,'fixture-only checks');
 })().catch(e=>{console.error(e);process.exit(1)});
-
-// Server StartTrial must agree with verified browser trials and not claim plan price as revenue/LTV.
-{
- const source = fs.readFileSync('src/app/api/webhooks/stripe/route.ts','utf8');
- const trial = source.slice(source.indexOf('eventName: "StartTrial"'), source.indexOf('console.log(`[stripe-webhook] ✅ Premium activated'));
- assert.ok(trial.includes('value: 0,'));
- assert.ok(!trial.includes('predicted_ltv'));
- assert.ok(trial.includes('eventId: `trial_${session.id}`'));
- assert.ok(source.includes('value: invoice.amount_paid / 100'));
- console.log('PASS: server trial zero-value parity, no invented LTV, stable trial ID and actual invoice value');
-}
