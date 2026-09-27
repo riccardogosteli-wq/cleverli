@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { loginDestination } from "@/lib/worksheets/returnTo";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
@@ -13,8 +13,9 @@ import { trackUserActivity } from "@/lib/userActivityClient";
 export default function Login() {
   const { tr } = useLang();
   const router = useRouter();
-  // Freeze the approved return route before any auth callback navigates away.
-  const [destination] = useState(loginDestination);
+  const searchParams = useSearchParams();
+  // Next route params are available before window.location catches up on client navigation.
+  const [destination] = useState(() => loginDestination(searchParams.toString()));
   const { session, loaded, setLoginInProgress } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

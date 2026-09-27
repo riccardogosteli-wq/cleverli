@@ -59,6 +59,6 @@ const req=(query='',token='local-fixture')=>serveWorksheets(new Request('http://
 
 // Multiple auth callbacks may fire after the first navigation changes location.search.
 const loginSource=fs.readFileSync("src/app/login/LoginClient.tsx","utf8");
-assert.match(loginSource,/const \[destination\] = useState\(loginDestination\)/);
+assert.match(loginSource,/const \[destination\] = useState\(\(\) => loginDestination\(searchParams\.toString\(\)\)\)/);
 assert.doesNotMatch(loginSource,/router\.(?:push|replace)\(loginDestination\(\)\)/);
 console.log("PASS login return target remains stable across late auth callbacks");
