@@ -13,6 +13,8 @@ import { trackUserActivity } from "@/lib/userActivityClient";
 export default function Login() {
   const { tr } = useLang();
   const router = useRouter();
+  // Freeze the approved return route before any auth callback navigates away.
+  const [destination] = useState(loginDestination);
   const { session, loaded, setLoginInProgress } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,9 +47,9 @@ export default function Login() {
         return;
       }
       setRedirecting(true);
-      router.replace(loginDestination());
+      router.replace(destination);
     }
-  }, [loaded, intentLoaded, session, pendingCheckout, router]);
+  }, [loaded, intentLoaded, session, pendingCheckout, router, destination]);
 
   const handleLogin = async () => {
     if (!email || !password) { setError(tr("errorEmailPw") ?? "Bitte E-Mail und Passwort eingeben."); return; }
@@ -85,7 +87,7 @@ export default function Login() {
         });
         return;
       }
-      router.replace(loginDestination());
+      router.replace(destination);
     }
     // on success, onAuthStateChange in useSession handles redirect via session update
     // router.push happens after session is set
@@ -101,7 +103,7 @@ export default function Login() {
       });
       return;
     }
-    router.push(loginDestination());
+    router.push(destination);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session, pendingCheckout]);
 

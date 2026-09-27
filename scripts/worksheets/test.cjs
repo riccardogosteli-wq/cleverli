@@ -56,3 +56,9 @@ const req=(query='',token='local-fixture')=>serveWorksheets(new Request('http://
  corrupt=true;assert.equal((await req('?id=CL-3-math-brueche&type=solution')).status,503);count++;
  console.log(JSON.stringify({passed:count,approvedPDFs:606,canonicalTopics:303,runtimeAliases:63,authCalls,dbCalls,downloads,mutationCalls:0,fixture:'local-only mocked Supabase and storage; no production credentials'}));
 })().catch(e=>{console.error(e);process.exit(1)});
+
+// Multiple auth callbacks may fire after the first navigation changes location.search.
+const loginSource=fs.readFileSync("src/app/login/LoginClient.tsx","utf8");
+assert.match(loginSource,/const \[destination\] = useState\(loginDestination\)/);
+assert.doesNotMatch(loginSource,/router\.(?:push|replace)\(loginDestination\(\)\)/);
+console.log("PASS login return target remains stable across late auth callbacks");
