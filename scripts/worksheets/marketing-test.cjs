@@ -1,0 +1,12 @@
+const fs=require('fs'),assert=require('node:assert/strict');
+const read=p=>fs.readFileSync(p,'utf8');let checks=0;const test=(name,fn)=>{fn();checks++;console.log('PASS',name)};
+const page=read('src/app/arbeitsblaetter/page.tsx'),gate=read('src/app/arbeitsblaetter/bibliothek/WorksheetLibrary.tsx'),home=read('src/components/HomePlatformOverview.tsx'),teacher=read('src/app/lehrpersonen/TeacherPage.tsx');
+test('Public copy uses benefits not inventory totals',()=>{assert(!/303|606/.test(page));for(const s of ['300+ Arbeitsblätter','1.–6. Klasse','Mit separaten Lösungen','Nur das Beispiel','gültigen Lehrpersonenzugang'])assert(page.includes(s));});
+test('Grade cards disclose Premium before click',()=>{assert(page.includes('In Premium enthalten'));assert(page.includes('/arbeitsblaetter/bibliothek?klasse=${i+1}'));});
+test('Anonymous gate offers discovery and existing login with same grade return',()=>{assert(gate.includes('Premium kennenlernen'));assert(gate.includes('Anmelden und weiter'));for(const p of ['login','upgrade'])assert(gate.includes(`href={\`/${p}?returnTo=\${encodeURIComponent(returnTo)}\`}`));});
+test('Free gate explains materials and public example',()=>{assert(gate.includes('Mit Premium kannst du online üben und alle Arbeitsblätter mit separaten Lösungen ausdrucken.'));assert(gate.includes('Nur das Beispiel aus der 3. Klasse ist kostenlos verfügbar.'));assert(gate.includes('href="/arbeitsblaetter#beispiel"'));});
+test('Exact counts retained inside catalogue only',()=>assert(gate.includes('{filtered.length} von {topics.length} Themen')));
+test('One localized worksheet link on home',()=>{assert.equal((home.match(/\["\/arbeitsblaetter"/g)||[]).length,1);assert.equal((home.match(/worksheetsText:/g)||[]).length,4);assert.equal((home.match(/worksheetsLink:/g)||[]).length,4);});
+test('Teacher materials precede request, preserve price and localized labels',()=>{assert(teacher.indexOf('{c.worksheetsTitle}')<teacher.indexOf('{c.how}'));assert.equal((teacher.match(/worksheetsLink:/g)||[]).length,4);assert(teacher.includes('CHF 99 pro Klasse und Jahr'));assert(!read('src/app/lehrpersonen/page.tsx').includes('href="/arbeitsblaetter"'));});
+test('Login race fix untouched and all grade returns allowed',()=>{const cp=require('child_process');assert.equal(cp.execSync('git diff 190894f -- src/app/login src/lib/worksheets/returnTo.ts').toString(),'');});
+console.log(`${checks} marketing checks passed`);
