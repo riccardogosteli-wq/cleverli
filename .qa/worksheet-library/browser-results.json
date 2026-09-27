@@ -1,0 +1,29 @@
+{
+  "environment": "http://127.0.0.1:3147",
+  "fixture": "Isolated managed browser context; local Supabase and API network fixtures only. Real approved PDF bytes. No production auth or writes.",
+  "checks": [
+    "public desktop/mobile",
+    "real public PDF download",
+    "login return grade preserved",
+    "premium library filters grade/subject/search",
+    "empty state/reset",
+    "worksheet and solution download hashes",
+    "free access gate",
+    "upgrade and payment return link",
+    "no horizontal overflow"
+  ],
+  "downloads": [
+    "public sample hash matched",
+    "worksheet hash matched",
+    "solution hash matched"
+  ],
+  "apiCalls": 4,
+  "errors": [
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+  ],
+  "expectedDeniedRequests": [
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+  ],
+  "unexpectedErrors": [],
+  "failures": []
+}

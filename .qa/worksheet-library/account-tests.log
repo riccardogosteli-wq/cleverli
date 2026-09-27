@@ -1,0 +1,16 @@
+✔ cancellation ignores stale success from account A after switching to B (50.232958ms)
+✔ cancellation ignores stale error from account A after switching to B (23.887333ms)
+✔ cancellation ignores stale network from account A after switching to B (20.717167ms)
+✔ retention ignores stale success from account A after switching to B (20.610542ms)
+✔ retention ignores stale error from account A after switching to B (19.631083ms)
+✔ retention ignores stale network from account A after switching to B (19.678292ms)
+✔ A to B to A does not revive the original cancellation completion (22.546083ms)
+✔ identity change resets reason, comment and confirmation flow (14.590708ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 194.302458

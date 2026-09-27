@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WorksheetReturnLink from "@/components/WorksheetReturnLink";
 import SuccessClient from "./SuccessClient";
 
 export const metadata: Metadata = {
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function PaymentSuccessPage() {
-  return <SuccessClient />;
+  return <><WorksheetReturnLink/><SuccessClient /></>;
 }

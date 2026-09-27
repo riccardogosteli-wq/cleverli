@@ -1,0 +1,137 @@
+{
+  "topics": 303,
+  "pdfs": 606,
+  "gradeCounts": [
+    36,
+    35,
+    51,
+    61,
+    60,
+    60
+  ],
+  "sample": {
+    "id": "CL-3-math-brueche",
+    "grade": 3,
+    "subject": "math",
+    "topicId": "brueche",
+    "title": "Brüche",
+    "curriculum": {
+      "code": "MA.1.A.1",
+      "scope": "Einfache Bruchteile an gleich grossen Teilflächen und Mengen erkennen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+    },
+    "files": {
+      "worksheet": {
+        "path": "pdfs/3/math/brueche-arbeitsblatt.pdf",
+        "sha256": "e2538dcd2580dcc874741c9ad5f3f6119263a9184d797c08106521c33a8eea1a",
+        "bytes": 854519
+      },
+      "solution": {
+        "path": "pdfs/3/math/brueche-loesungen.pdf",
+        "sha256": "e7bc95aa45c62a19ee5453bbb6e3595c9fe71524792619c448dfe92344a11970",
+        "bytes": 876461
+      }
+    }
+  },
+  "aliases": [
+    {
+      "grade": 4,
+      "subject": "nt",
+      "topics": [
+        "koerper-gesundheit",
+        "lebensraeume-tiere",
+        "wetter-klima",
+        "pflanzen-4",
+        "materie-stoffe-4",
+        "kraefte-energie-4",
+        "technik-4",
+        "oekologie-4",
+        "koerper-sinne-4",
+        "energie-stoffe",
+        "licht-optik"
+      ]
+    },
+    {
+      "grade": 4,
+      "subject": "rzg",
+      "topics": [
+        "kantone-schweiz-4",
+        "orientierung-karte-4",
+        "schweizer-geschichte-4",
+        "europa-4",
+        "gemeinde-kanton-4",
+        "roemisches-reich-4",
+        "lebensweisen-4",
+        "ressourcen-wasser-4",
+        "migration-kulturen-4",
+        "raeume-karte"
+      ]
+    },
+    {
+      "grade": 5,
+      "subject": "nt",
+      "topics": [
+        "oekosysteme",
+        "sonnensystem",
+        "strom-energie",
+        "menschlicher-koerper-5",
+        "chemie-einfuehrung-5",
+        "kraefte-bewegung-5",
+        "erde-klima-5",
+        "pflanzen-tiere-5",
+        "technik-erfinungen-5",
+        "weltall",
+        "strom-elektrizitaet"
+      ]
+    },
+    {
+      "grade": 5,
+      "subject": "rzg",
+      "topics": [
+        "europa-geografie-5",
+        "schweiz-politik-5",
+        "mittelalter-5",
+        "entdeckungen-5",
+        "wirtschaft-handel-5",
+        "bevoelkerung-5",
+        "klima-lebensraeume-5",
+        "reformation-5",
+        "nachhaltigkeit-5",
+        "geschichte-zeit"
+      ]
+    },
+    {
+      "grade": 6,
+      "subject": "nt",
+      "topics": [
+        "schweiz-geografie",
+        "mittelalter",
+        "aggregatzustaende",
+        "chemie-6",
+        "physik-licht-6",
+        "biologie-zelle-6",
+        "energie-nachh-6",
+        "technik-informatik-6",
+        "astronomie-6",
+        "weltall",
+        "strom-elektrizitaet"
+      ]
+    },
+    {
+      "grade": 6,
+      "subject": "rzg",
+      "topics": [
+        "neuzeit-6",
+        "industrialisierung-6",
+        "demokratie-menschenrechte-6",
+        "weltkriege-6",
+        "globalisierung-6",
+        "wirtschaft-grundlagen-6",
+        "kontinente-6",
+        "migration-flucht-6",
+        "zukunft-herausforderungen-6",
+        "geschichte-zeit"
+      ]
+    }
+  ]
+}

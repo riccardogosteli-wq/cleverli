@@ -1,0 +1,15 @@
+{
+  "row": 21,
+  "values": [
+    "HIGH",
+    "Arbeitsblätter: öffentliche Vorschau und geschützte Premiumbibliothek",
+    "FEATURE",
+    "QA IN PROGRESS",
+    "303 kanonische Themen, 606 freigegebene PDFs. Ein öffentliches Beispiel Klasse 3, vollständige Bibliothek serverseitig geschützt.",
+    "Cleverli",
+    "2026-09-27",
+    "",
+    "Implementiert lokal. 303 Themen/606 SHA-256 geprüft; 1262 Sicherheits-/Integritätstests, Payment44, Teacher39 bestanden. Build --webpack bestanden; isolierte Desktop/Mobile-Browserprüfung läuft. Private Storage Migration/Upload für Parent vorbereitet, keine Produktionsänderung."
+  ],
+  "unrelatedRowsUnchanged": true
+}

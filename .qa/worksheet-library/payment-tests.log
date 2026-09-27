@@ -1,0 +1,42 @@
+PASS verified monthly
+PASS verified yearly
+PASS verified schooltime
+PASS actual discounted amount not plan list price
+PASS unpaid
+PASS expired
+PASS open
+PASS asyncpending
+PASS missingID
+PASS badcurrency
+PASS zero
+PASS negative
+PASS missinginvoice
+PASS unknownplan
+PASS wrongsite
+PASS invoicemismatch
+PASS invoicepending
+PASS other user
+PASS actual verified trial zero revenue
+PASS genuine Stripe paid zero trial status
+PASS not actual trial active
+PASS not actual trial canceled
+PASS not actual trial incomplete
+PASS not actual trial past_due
+PASS URL trial hint alone cannot authorize
+PASS V5 entry overrides control without poisoning storage
+PASS V5 entry overrides trial without poisoning storage
+PASS storage denied keeps V5 deterministic cohort
+PASS V5 survives downstream within tab
+PASS other campaign trial choice retained
+PASS marker does not route other landing pages
+PASS existing QA override still works outside V5
+PASS purchase values and Meta invoice dedup
+PASS same-document dedup
+PASS reload crossbrowser replay stable IDs no persistent lost-delivery tombstone
+PASS verified trial never purchase or plan revenue
+PASS no timestamp fallback/missing-ID event
+PASS missing auth
+PASS crosssite
+PASS crosssite fetch
+PASS invalid auth
+PASS total 44 fixture-only checks

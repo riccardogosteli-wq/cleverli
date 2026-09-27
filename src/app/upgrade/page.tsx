@@ -1,5 +1,6 @@
 import { withPageSocial } from "@/lib/pageSocialMetadata";
 import type { Metadata } from "next";
+import WorksheetReturnLink from "@/components/WorksheetReturnLink";
 import UpgradePageClient from "./PageClient";
 
 export const metadata: Metadata = withPageSocial({
@@ -14,5 +15,5 @@ export const metadata: Metadata = withPageSocial({
 });
 
 export default function UpgradePage() {
-  return <UpgradePageClient />;
+  return <><WorksheetReturnLink/><UpgradePageClient /></>;
 }

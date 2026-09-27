@@ -1,0 +1,15 @@
+{
+  "row": 21,
+  "values": [
+    "HIGH",
+    "Arbeitsblätter: öffentliche Vorschau und geschützte Premiumbibliothek",
+    "FEATURE",
+    "READY FOR REVIEW",
+    "303 kanonische Themen, 606 freigegebene PDFs. Ein öffentliches Beispiel Klasse 3, vollständige Bibliothek serverseitig geschützt.",
+    "Cleverli",
+    "2026-09-27",
+    "",
+    "Lokal geprüft: 303 Themen/606 unveränderte PDFs; 1270 Security/Hash-Checks +172 bestehende Regressionstests, Lint/Build bestanden. Desktop/Mobile und PDF-Downloads lokal geprüft. Branch feat/worksheet-library-20260927. Private Storage SQL/Upload vorbereitet, Produktion noch NICHT provisioniert. Parent: unabhängige Review, Upload/Readback, Push/Deploy, Live-QA und Telegram-Handoff. Keine Billing-/Tracking-/Consentänderung."
+  ],
+  "unrelatedRowsUnchanged": true
+}

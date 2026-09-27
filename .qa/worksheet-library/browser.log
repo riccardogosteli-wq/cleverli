@@ -1,0 +1,5 @@
+PASS browser QA [
+  'public sample hash matched',
+  'worksheet hash matched',
+  'solution hash matched'
+]

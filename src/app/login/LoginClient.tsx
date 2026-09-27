@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { loginDestination } from "@/lib/worksheets/returnTo";
 import CleverliMascot from "@/components/CleverliMascot";
 import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
@@ -44,7 +45,7 @@ export default function Login() {
         return;
       }
       setRedirecting(true);
-      router.replace("/dashboard");
+      router.replace(loginDestination());
     }
   }, [loaded, intentLoaded, session, pendingCheckout, router]);
 
@@ -84,7 +85,7 @@ export default function Login() {
         });
         return;
       }
-      router.replace("/dashboard");
+      router.replace(loginDestination());
     }
     // on success, onAuthStateChange in useSession handles redirect via session update
     // router.push happens after session is set
@@ -100,7 +101,7 @@ export default function Login() {
       });
       return;
     }
-    router.push("/dashboard");
+    router.push(loginDestination());
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session, pendingCheckout]);
 

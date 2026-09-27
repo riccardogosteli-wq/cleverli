@@ -1,0 +1,137 @@
+
+> cleverli@0.1.0 prebuild
+> npm run qa:topic-catalog && npx tsx scripts/generate-lehrplan-overview.ts --check
+
+
+> cleverli@0.1.0 qa:topic-catalog
+> npx tsx scripts/generate-topic-catalog.ts --check
+
+Topic catalogue is current (366 topics).
+Four-language Lehrplan catalogue matches current exercise data.
+
+> cleverli@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 116ms
+
+  Creating an optimized production build ...
+(node:15460) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+⚠ Compiled with warnings in 6.4s
+
+../../../projects/cleverli/node_modules/@sentry/nextjs/node_modules/require-in-the-middle/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../projects/cleverli/node_modules/@sentry/nextjs/node_modules/require-in-the-middle/index.js
+../../../projects/cleverli/node_modules/@sentry/nextjs/node_modules/@opentelemetry/instrumentation/build/esm/platform/node/instrumentation.js
+../../../projects/cleverli/node_modules/@sentry/nextjs/node_modules/@opentelemetry/instrumentation/build/esm/platform/node/index.js
+../../../projects/cleverli/node_modules/@sentry/nextjs/node_modules/@opentelemetry/instrumentation/build/esm/platform/index.js
+../../../projects/cleverli/node_modules/@sentry/nextjs/node_modules/@opentelemetry/instrumentation/build/esm/index.js
+../../../projects/cleverli/node_modules/@sentry/nextjs/node_modules/@sentry/node/build/cjs/integrations/tracing/express.js
+../../../projects/cleverli/node_modules/@sentry/nextjs/node_modules/@sentry/node/build/cjs/index.js
+../../../projects/cleverli/node_modules/@sentry/nextjs/build/cjs/index.server.js
+./src/app/api/cancel-subscription/route.ts
+
+(node:15464) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✓ Compiled successfully in 10.3s
+  Running TypeScript ...
+  Finished TypeScript in 5.6s ...
+  Collecting page data using 17 workers ...
+  Generating static pages using 17 workers (0/373) ...
+  Generating static pages using 17 workers (93/373)
+  Generating static pages using 17 workers (186/373)
+  Generating static pages using 17 workers (279/373)
+✓ Generating static pages using 17 workers (373/373) in 16.9s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├   /[seoSlug]
+│ ├ ● /mathe-uebungen-1-klasse
+│ ├ ● /deutsch-uebungen-1-klasse
+│ ├ ● /mathe-uebungen-2-klasse
+│ └ ● [+13 more paths]
+├ ○ /1x1-spiele
+├ ○ /account
+├ ○ /ads/primarschule
+├ ○ /agb
+├ ƒ /api/cancel-subscription
+├ ƒ /api/checkout
+├ ƒ /api/checkout/verify
+├ ƒ /api/cron/private-offers
+├ ƒ /api/cron/streak-reminders
+├ ƒ /api/daily-challenge
+├ ƒ /api/exercise-issue-reports
+├ ƒ /api/feedback/premium-kunden
+├ ƒ /api/internal/customer-feedback-email
+├ ƒ /api/internal/log-dashboard/login
+├ ƒ /api/internal/log-dashboard/logout
+├ ƒ /api/internal/manual-premium-invite
+├ ƒ /api/push/subscribe
+├ ƒ /api/retention-offer
+├ ƒ /api/send-welcome
+├ ƒ /api/telemetry/activity
+├ ƒ /api/telemetry/exercise
+├ ƒ /api/tts
+├ ƒ /api/webhooks/stripe
+├ ƒ /api/worksheets
+├ ○ /arbeitsblaetter
+├ ○ /arbeitsblaetter/bibliothek
+├ ○ /blog
+├ ○ /blog/kinder-motivieren-zum-lernen
+├ ○ /daily
+├ ○ /dashboard
+├ ○ /datenschutz
+├ ○ /deutsch-uebungen-kinder
+├ ○ /einmaleins-ueben
+├ ○ /family
+├ ○ /feedback/premium-kunden
+├ ○ /impressum
+├ ƒ /internal-log-dashboard
+├ ƒ /internal-log-dashboard/feedback-mail
+├ ƒ /internal-log-dashboard/offer149
+├ ƒ /internal-log-dashboard/offer219
+├ ƒ /internal-log-dashboard/outreach-mail
+├ ƒ /internal-log-dashboard/private-offer-mail
+├ ƒ /internal-log-dashboard/teacher-accounts
+├ ƒ /internal-log-dashboard/trial-upgrade
+├ ○ /kids
+├ ƒ /learn/[grade]/[subject]
+├   /learn/[grade]/[subject]/[topic]
+│ ├ ● /learn/1/math/zahlen-1-10
+│ ├ ● /learn/1/math/addition-bis-10
+│ ├ ● /learn/1/math/subtraktion-bis-10
+│ └ ● [+300 more paths]
+├ ○ /lehrpersonen
+├ ƒ /lehrplanbezug
+├ ○ /lernapp-primarschule
+├ ○ /lesen-lernen
+├ ○ /login
+├ ○ /mathe-uebungen-kinder
+├ ○ /missionen
+├ ƒ /offer/click/[tracking]/[label]
+├ ƒ /offer/personal
+├ ƒ /offer/trial-upgrade
+├ ○ /parents
+├ ○ /payment/cancel
+├ ○ /payment/success
+├ ○ /primarschule-uebungen
+├ ○ /reset-password
+├ ○ /rewards
+├ ○ /robots.txt
+├ ○ /shop
+├ ○ /signup
+├ ○ /sitemap.xml
+├ ○ /test/roadmap
+├ ○ /trophies
+└ ○ /upgrade
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand

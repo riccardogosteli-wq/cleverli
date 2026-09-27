@@ -1,0 +1,1 @@
+Local tooling: ripgrep absent, used grep. Initial Turbopack build rejected external node_modules symlink, retry uses documented next build --webpack without changing production configuration. Security fixture syntax repaired before test execution.

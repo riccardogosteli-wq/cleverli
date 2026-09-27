@@ -1,0 +1,7 @@
+{
+  "publicCanonical": true,
+  "privateNoindexGooglebot": true,
+  "privateShellNoCatalogue": true,
+  "publicInSitemap": true,
+  "libraryExcludedFromSitemap": true
+}

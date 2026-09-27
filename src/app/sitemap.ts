@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Omit lastmod: no verified per-page significant modification dates are tracked.
   const routes: MetadataRoute.Sitemap = [
     ...LEHRPLAN_LANGS.map(lang => ({ url: lehrplanUrl(lang), changeFrequency: "monthly" as const, priority: 0.7, alternates: { languages: Object.fromEntries(LEHRPLAN_LANGS.map(l => [l, lehrplanUrl(l)])) } })),
+    { url: `${BASE}/arbeitsblaetter`, changeFrequency: "monthly", priority: 0.8 },
     // Marketing & conversion pages
     { url: BASE,               changeFrequency: "weekly",  priority: 1.0 },
     { url: `${BASE}/lernapp-primarschule`, changeFrequency: "monthly", priority: 0.8 },
