@@ -1,0 +1,105 @@
+{
+  "base": "http://127.0.0.1:3107",
+  "pages": 6,
+  "viewports": 2,
+  "screenshots": 12,
+  "pdfChecks": 12,
+  "results": [
+    {
+      "slug": "buchstaben-1-klasse",
+      "viewport": "desktop",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "einmaleins-2-klasse",
+      "viewport": "desktop",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "brueche-3-klasse",
+      "viewport": "desktop",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "schriftlich-multiplizieren-4-klasse",
+      "viewport": "desktop",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "dezimalzahlen-5-klasse",
+      "viewport": "desktop",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "prozentrechnung-6-klasse",
+      "viewport": "desktop",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "buchstaben-1-klasse",
+      "viewport": "mobile",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "einmaleins-2-klasse",
+      "viewport": "mobile",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "brueche-3-klasse",
+      "viewport": "mobile",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "schriftlich-multiplizieren-4-klasse",
+      "viewport": "mobile",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "dezimalzahlen-5-klasse",
+      "viewport": "mobile",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    },
+    {
+      "slug": "prozentrechnung-6-klasse",
+      "viewport": "mobile",
+      "status": 200,
+      "overflow": false,
+      "pageErrors": 0,
+      "criticalRequestFailures": 0
+    }
+  ]
+}

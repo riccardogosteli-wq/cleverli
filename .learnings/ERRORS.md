@@ -126,3 +126,9 @@
 ## 2026-09-21 durable cancellation sync barrier
 - Review exposed that an invocation-local callback did not protect against an independent cron claim after enqueue. Added persisted readiness, atomic claim gating, cron filtering and a delivery-layer guard; failed and held sync tests now exercise competing workers. Readiness migration must follow the older upgrade guard.
 - `rg` is unavailable in this shell; use `grep` for bounded source inspection.
+
+## 2026-09-30 worksheet topic pages clean worktree
+- Initial `scripts/worksheets/test.cjs` run failed because the new isolated worktree had no `node_modules`, so `typescript` could not be resolved.
+- Recovery: install the exact lockfile state with `npm ci`, then rerun the unchanged worksheet test suite.
+- A targeted ESLint command accidentally included the CommonJS Playwright QA harness. The repository ESLint rule rejects `require()` syntax even though existing worksheet QA scripts also use `.cjs`. Recovery: lint the changed TypeScript and TSX production files only; execute the QA harness directly with Node.
+- The final local browser QA initially treated an aborted Google DoubleClick collection request as a critical product request failure. The request is third party analytics and the page itself remained healthy. Recovery: classify `doubleclick` with the existing Google, Meta, PostHog and Sentry telemetry exclusions, while keeping all first party request failures blocking.

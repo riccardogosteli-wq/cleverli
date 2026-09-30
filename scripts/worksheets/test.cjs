@@ -3,6 +3,7 @@ const load=(file,mocks={})=>{const m={exports:{}};new Function('require','module
 const teacher=load('src/lib/teacherAccount.ts');const access=load('src/lib/worksheets/access.ts',{'@/lib/teacherAccount':teacher});
 const returns=load('src/lib/worksheets/returnTo.ts');
 const catalogue=require('../../src/lib/worksheets/catalogue.json');
+const landings=load('src/lib/worksheetLandingPages.ts').worksheetLandingPages;
 const root=path.resolve(process.argv[2]||'../worksheets/all-grades-2026-09-26');
 let count=0;const check=(name,fn)=>{fn();count++;console.log('PASS',name)};
 check('303 canonical topics, exact grade totals',()=>{assert.equal(catalogue.length,303);assert.equal(new Set(catalogue.map(t=>t.id)).size,303);assert.deepEqual([1,2,3,4,5,6].map(g=>catalogue.filter(t=>t.grade===g).length),[36,35,51,61,60,60])});
@@ -19,7 +20,24 @@ const runtime=load('src/data/topicCatalog.generated.ts').TOPIC_CATALOG;
 const canonical=Object.entries(runtime).filter(([k])=>!/-nt$|-rzg$/.test(k)).flatMap(([k,v])=>v.map(t=>`${k}-${t.id}`));
 check('current runtime 366 = 303 canonical + 63 aliases',()=>{assert.equal(Object.values(runtime).flat().length,366);assert.equal(canonical.length,303);assert.deepEqual(new Set(canonical),new Set(catalogue.map(t=>`${t.grade}-${t.subject}-${t.topicId}`)));for(const [k,v] of Object.entries(runtime).filter(([k])=>/-nt$|-rzg$/.test(k)))for(const t of v)assert(canonical.includes(`${k.split('-')[0]}-science-${t.id}`))});
 for(const topic of catalogue)for(const file of Object.values(topic.files))check('approved hash '+file.path,()=>{const b=fs.readFileSync(path.join(root,file.path));assert.equal(b.length,file.bytes);assert.equal(crypto.createHash('sha256').update(b).digest('hex'),file.sha256)});
-check('only the approved Grade3 worksheet and matching solution are public',()=>{assert.deepEqual(fs.readdirSync('public/worksheets').filter(x=>x.endsWith('.pdf')).sort(),['beispiel-klasse-3-loesungen.pdf','beispiel-klasse-3.pdf']);for(const [type,name] of [['worksheet','beispiel-klasse-3.pdf'],['solution','beispiel-klasse-3-loesungen.pdf']]){const b=fs.readFileSync('public/worksheets/'+name),approved=catalogue.find(t=>t.id==='CL-3-math-brueche').files[type];assert.equal(b.length,approved.bytes);assert.equal(crypto.createHash('sha256').update(b).digest('hex'),approved.sha256);}});
+const publicSamples=[
+ ['CL-1-german-buchstaben','buchstaben-1-klasse-arbeitsblatt.pdf','buchstaben-1-klasse-loesungen.pdf'],
+ ['CL-2-math-einmaleins','einmaleins-2-klasse-arbeitsblatt.pdf','einmaleins-2-klasse-loesungen.pdf'],
+ ['CL-3-math-brueche','beispiel-klasse-3.pdf','beispiel-klasse-3-loesungen.pdf'],
+ ['CL-4-math-schriftl-multiplizieren','schriftlich-multiplizieren-4-klasse-arbeitsblatt.pdf','schriftlich-multiplizieren-4-klasse-loesungen.pdf'],
+ ['CL-5-math-dezimalzahlen','dezimalzahlen-5-klasse-arbeitsblatt.pdf','dezimalzahlen-5-klasse-loesungen.pdf'],
+ ['CL-6-math-prozent','prozentrechnung-6-klasse-arbeitsblatt.pdf','prozentrechnung-6-klasse-loesungen.pdf'],
+];
+check('only six approved worksheet and solution pairs are public',()=>{
+ const expected=publicSamples.flatMap(([,worksheet,solution])=>[worksheet,solution]).sort();
+ assert.deepEqual(fs.readdirSync('public/worksheets').filter(x=>x.endsWith('.pdf')).sort(),expected);
+ for(const [id,worksheet,solution] of publicSamples)for(const [type,name] of [['worksheet',worksheet],['solution',solution]]){const b=fs.readFileSync('public/worksheets/'+name),approved=catalogue.find(t=>t.id===id).files[type];assert.equal(b.length,approved.bytes);assert.equal(crypto.createHash('sha256').update(b).digest('hex'),approved.sha256);}
+});
+check('one curated landing page per grade with safe public assets and real exercise route',()=>{
+ assert.equal(landings.length,6);assert.deepEqual(landings.map(p=>p.grade).sort(),[1,2,3,4,5,6]);assert.equal(new Set(landings.map(p=>p.slug)).size,6);
+ for(const page of landings){assert.match(page.worksheetHref,/^\/worksheets\/[a-z0-9-]+\.pdf$/);assert.match(page.solutionHref,/^\/worksheets\/[a-z0-9-]+\.pdf$/);assert.notEqual(page.worksheetHref,page.solutionHref);assert(fs.existsSync('public'+page.worksheetHref));assert(fs.existsSync('public'+page.solutionHref));assert(fs.existsSync('public'+page.previewHref));assert(canonical.includes(`${page.grade}-${page.subject==='Deutsch'?'german':'math'}-${page.exerciseHref.split('/').pop()}`));}
+});
+check('topic pages expose metadata, schema, free downloads, online practice and Premium boundary',()=>{const topic=fs.readFileSync('src/app/arbeitsblaetter/[slug]/page.tsx','utf8'),sitemap=fs.readFileSync('src/app/sitemap.ts','utf8'),hub=fs.readFileSync('src/app/arbeitsblaetter/page.tsx','utf8');for(const phrase of ['generateStaticParams','generateMetadata','LearningResource','BreadcrumbList','isAccessibleForFree','download={page.worksheetDownload}','download={page.solutionDownload}','href={page.exerciseHref}','Mehr mit Premium'])assert(topic.includes(phrase));assert(sitemap.includes('worksheetLandingPages.map'));assert(hub.includes('worksheetLandingPages.map'));assert(!topic.includes('pdfs/'));assert(!topic.includes('sha256'));});
 check('sample offers direct anonymous solution download without claiming Premium is needed',()=>{const page=fs.readFileSync('src/app/arbeitsblaetter/page.tsx','utf8'),sample=page.split('<section id="beispiel"')[1].split('</section>')[0];assert.match(sample,/href="\/worksheets\/beispiel-klasse-3-loesungen\.pdf" download="Cleverli-Brueche-Klasse-3-Loesungen\.pdf"/);assert.match(sample,/Lösung herunterladen/);assert.match(sample,/Ohne Anmeldung/);assert(!sample.includes('mit Premium'));});
 for(const value of ['/arbeitsblaetter/bibliothek','/arbeitsblaetter/bibliothek?klasse=3'])check('safe return '+value,()=>assert.equal(returns.worksheetReturnTo('?returnTo='+encodeURIComponent(value)),value));
 for(const value of ['https://evil.test','//evil.test','/arbeitsblaetter/bibliothek/../account','/arbeitsblaetter/bibliothek?x=1','/arbeitsblaetter/bibliothek?klasse=7','javascript:alert(1)'])check('reject redirect '+value,()=>assert.equal(returns.worksheetReturnTo('?returnTo='+encodeURIComponent(value)),null));

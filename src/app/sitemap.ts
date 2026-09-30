@@ -3,6 +3,7 @@ import { MetadataRoute } from "next";
 import { getSubjects, getTopics } from "@/data/index";
 import { ORGANIC_LANDING_PAGES } from "@/lib/seoContent";
 import { GRADE_SUBJECT_SEO_PAGES } from "@/lib/gradeSubjectSeo";
+import { worksheetLandingPages } from "@/lib/worksheetLandingPages";
 
 const BASE = "https://www.cleverli.ch";
 const GRADES = [1, 2, 3, 4, 5, 6];
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
     ...LEHRPLAN_LANGS.map(lang => ({ url: lehrplanUrl(lang), changeFrequency: "monthly" as const, priority: 0.7, alternates: { languages: Object.fromEntries(LEHRPLAN_LANGS.map(l => [l, lehrplanUrl(l)])) } })),
     { url: `${BASE}/arbeitsblaetter`, changeFrequency: "monthly", priority: 0.8 },
+    ...worksheetLandingPages.map(page => ({ url: `${BASE}/arbeitsblaetter/${page.slug}`, changeFrequency: "monthly" as const, priority: 0.75 })),
     // Marketing & conversion pages
     { url: BASE,               changeFrequency: "weekly",  priority: 1.0 },
     { url: `${BASE}/lernapp-primarschule`, changeFrequency: "monthly", priority: 0.8 },

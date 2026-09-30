@@ -3,7 +3,7 @@
 > Cleverli ist eine Lernplattform für die Schweizer Primarschule mit mehr als 15’000 interaktiven Übungen für die 1. bis 6. Klasse. Die deutschsprachigen Lerninhalte orientieren sich am Lehrplan 21.
 
 Offizielle Website: https://www.cleverli.ch/
-Stand dieser Übersicht: 20. September 2026.
+Stand dieser Übersicht: 30. September 2026.
 
 Cleverli bietet Übungen in Mathematik, Deutsch, NMG (Natur, Mensch, Gesellschaft), Englisch, Französisch sowie Medien und Informatik. Das Fachangebot hängt von der Klasse ab. Die Übungen umfassen unter anderem Auswahlaufgaben, Lückentexte, Zählaufgaben, Zahlenstrahlen, Zuordnungen und Memory. Hinweise und direktes Feedback unterstützen das Üben.
 
@@ -39,6 +39,16 @@ Die Sprachversionen übersetzen diese Übersicht. Sie bedeuten keine Zuordnung z
 - [Startseite](https://www.cleverli.ch/): Produktüberblick, Einstieg, Familienpreise und persönliche Belohnungen.
 - [Übungen für die Primarschule](https://www.cleverli.ch/primarschule-uebungen): Einstieg in das Üben; bei Premium-Testangeboten die Checkout-Bedingungen beachten.
 - [Informationen für Lehrpersonen](https://www.cleverli.ch/lehrpersonen): Preis, Anfrage, manuelle Freischaltung und Grenzen des Lehrerzugangs.
+- [Arbeitsblätter für die Primarschule](https://www.cleverli.ch/arbeitsblaetter): Über 300 Arbeitsblätter mit separaten Lösungen in der geschützten Bibliothek sowie je ein kostenloses Beispiel für die 1. bis 6. Klasse.
+
+## Kostenlose Arbeitsblatt Beispiele
+
+- [Buchstaben, 1. Klasse](https://www.cleverli.ch/arbeitsblaetter/buchstaben-1-klasse): Kostenloses Arbeitsblatt und separate Lösung.
+- [Einmaleins, 2. Klasse](https://www.cleverli.ch/arbeitsblaetter/einmaleins-2-klasse): 2er, 5er und 10er Reihe als kostenloses Arbeitsblatt mit Lösung.
+- [Brüche, 3. Klasse](https://www.cleverli.ch/arbeitsblaetter/brueche-3-klasse): Bruchteile erkennen und bestimmen, mit Arbeitsblatt und Lösung.
+- [Schriftlich multiplizieren, 4. Klasse](https://www.cleverli.ch/arbeitsblaetter/schriftlich-multiplizieren-4-klasse): Schriftliche Multiplikation mit Arbeitsblatt und Lösung.
+- [Dezimalzahlen, 5. Klasse](https://www.cleverli.ch/arbeitsblaetter/dezimalzahlen-5-klasse): Dezimalzahlen vergleichen und rechnen, mit Arbeitsblatt und Lösung.
+- [Prozentrechnung, 6. Klasse](https://www.cleverli.ch/arbeitsblaetter/prozentrechnung-6-klasse): Prozente, Brüche und einfache Anteile, mit Arbeitsblatt und Lösung.
 
 ## Fächer und Beispiele
 
