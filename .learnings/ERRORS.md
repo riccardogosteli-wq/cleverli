@@ -138,3 +138,14 @@
 - Command: `agent-browser --session pushqa open http://127.0.0.1:3101/daily`
 - Result: `command not found`
 - Recovery: use the repository's installed Playwright runtime for local desktop and mobile QA, then the OpenClaw managed browser for the public production URL.
+## 2026-10-01 — Turbopack rejects an external node_modules symlink
+
+- `npm run build` failed in a Git worktree because `node_modules` was symlinked to the main checkout outside the worktree root.
+- Next.js 16.3.4 Turbopack treats that package symlink as invalid. Use a real `npm ci` installation inside the worktree before build and browser QA.
+
+## 2026-10-01 — Avoid ambiguous exercise button selectors in browser QA
+
+- A first-exercise GA4 browser check stalled when it selected a numeric answer by accessible name alone.
+- Inspect the live exercise card and scope answer selectors to the active exercise container before clicking and submitting.
+
+- macOS on this host does not provide the GNU `timeout` command. Use Playwright's own navigation and locator timeouts instead of wrapping Node QA scripts with `timeout`.

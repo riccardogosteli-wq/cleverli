@@ -8,7 +8,7 @@ import {
   getTelemetryAttribution,
   telemetryAttributionMetadata,
 } from "@/lib/attribution";
-import { pushDataLayerEvent } from "@/lib/analytics";
+import { pushDataLayerEvent, trackFirstExerciseMilestone } from "@/lib/analytics";
 
 export type ExerciseTelemetryEvent =
   | "exercise_started"
@@ -34,6 +34,7 @@ export type ExerciseTelemetryPayload = {
   topicTotal?: number;
   lang?: string;
   path?: string;
+  isFirstExercise?: boolean;
 };
 
 function sanitizePayload(payload: ExerciseTelemetryPayload): ExerciseTelemetryPayload {
@@ -52,6 +53,7 @@ function sanitizePayload(payload: ExerciseTelemetryPayload): ExerciseTelemetryPa
     topicTotal: payload.topicTotal,
     lang: payload.lang?.slice(0, 8),
     path: payload.path?.slice(0, 160),
+    isFirstExercise: payload.isFirstExercise,
   };
 }
 
@@ -77,6 +79,26 @@ export function trackExerciseEvent(eventName: ExerciseTelemetryEvent, payload: E
     anonymous_session_id: safePayload.anonymousSessionId,
     ...checkoutAttributionEventParams(),
   });
+
+  if (safePayload.isFirstExercise && eventName === "exercise_started") {
+    trackFirstExerciseMilestone("first_exercise_started", {
+      grade: safePayload.grade,
+      subject: safePayload.subject,
+      topic_id: safePayload.topicId,
+      exercise_type: safePayload.exerciseType,
+      language: safePayload.lang,
+    });
+  }
+  if (safePayload.isFirstExercise && eventName === "exercise_completed") {
+    trackFirstExerciseMilestone("first_exercise_completed", {
+      grade: safePayload.grade,
+      subject: safePayload.subject,
+      topic_id: safePayload.topicId,
+      exercise_type: safePayload.exerciseType,
+      language: safePayload.lang,
+      duration_ms: safePayload.durationMs,
+    });
+  }
 
   const body = JSON.stringify({
     eventName,

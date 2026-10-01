@@ -165,7 +165,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const { play } = useSound();
   const { tr, lang } = useLang();
   const exerciseSpeechLang = subject === "german" || subject === "mi" ? "de" : subject === "english" ? "en" : subject === "french" ? "fr" : lang;
-  const { recordAnswer, profile, leveledUp, clearLeveledUp } = useProfileContext();
+  const { recordAnswer, profile, loaded: profileLoaded, leveledUp, clearLeveledUp } = useProfileContext();
   const { session } = useSession();
   const level = getLevelForXp(profile.xp);
   const nextLevel = getNextLevel(profile.xp);
@@ -304,6 +304,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     topicIndex: idx + 1,
     topicTotal: sessionTotal,
     lang,
+    isFirstExercise: profileLoaded && profile.totalExercises === 0,
     ...extra,
   });
 
@@ -337,12 +338,12 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   );
 
   useEffect(() => {
-    if (done || isLocked || !current) return;
+    if (!profileLoaded || done || isLocked || !current) return;
 
     exerciseStartRef.current = Date.now();
     trackExerciseEvent("exercise_started", exerciseTelemetryPayload());
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [current?.id, idx, done, isLocked]);
+  }, [current?.id, idx, done, isLocked, profileLoaded]);
 
   useEffect(() => {
     if (!isLocked) return;

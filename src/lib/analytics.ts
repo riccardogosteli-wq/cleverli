@@ -33,12 +33,14 @@ declare global {
 }
 
 const GOOGLE_ADS_ID = "AW-18344865510";
+const GA4_MEASUREMENT_ID = "G-D276Y5VGG1";
 const GOOGLE_ADS_PURCHASE_SEND_TO = `${GOOGLE_ADS_ID}/i_-4CK_QtNUcEObdwatE`;
 const GOOGLE_ADS_TRIAL_STARTED_SEND_TO = `${GOOGLE_ADS_ID}/PVdpCL6_ve0cEObdwatE`;
 const ADS_CTA_DEDUP_WINDOW_MS = 3_000;
 const ADS_CTA_DEDUP_PREFIX = "cleverli_ads_cta_click:";
 const ADS_CTA_SESSION_KEY = "cleverli_ads_cta_session_id";
 const recentAdsCtaClicks = new Map<string, number>();
+const claimedFirstExerciseMilestones = new Set<string>();
 
 const PLAN_VALUE: Record<CheckoutPlan, number> = {
   monthly: 9.9,
@@ -108,6 +110,56 @@ export function pushDataLayerEvent(event: string, data: Record<string, unknown> 
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer ?? [];
   window.dataLayer.push({ event, ...data });
+}
+
+export type Ga4ProductEvent =
+  | "first_exercise_started"
+  | "first_exercise_completed"
+  | "worksheet_download"
+  | "solution_download"
+  | "online_practice_handoff";
+
+function ga4EventParams(data: Record<string, unknown>) {
+  return Object.fromEntries(
+    Object.entries(data).filter(([, value]) => value !== undefined),
+  );
+}
+
+export function trackGa4ProductEvent(event: Ga4ProductEvent, data: Record<string, unknown> = {}) {
+  if (typeof window === "undefined") return;
+
+  window.dataLayer = window.dataLayer ?? [];
+  window.gtag = window.gtag ?? function gtag(...args: unknown[]) {
+    window.dataLayer?.push(args);
+  };
+  window.gtag("event", event, {
+    send_to: GA4_MEASUREMENT_ID,
+    internal_qa: adsLpRequestContext().internal_qa,
+    ...ga4EventParams(data),
+  });
+}
+
+export function trackFirstExerciseMilestone(
+  event: Extract<Ga4ProductEvent, "first_exercise_started" | "first_exercise_completed">,
+  data: Record<string, unknown> = {},
+) {
+  if (typeof window === "undefined") return false;
+
+  const key = `cleverli_ga4_${event}:${getAnonymousSessionId()}`;
+  if (claimedFirstExerciseMilestones.has(key)) return false;
+  try {
+    if (window.localStorage.getItem(key)) return false;
+    window.localStorage.setItem(key, new Date().toISOString());
+  } catch {
+    // GA4 can still receive the event when storage is unavailable.
+  }
+  claimedFirstExerciseMilestones.add(key);
+
+  trackGa4ProductEvent(event, {
+    anonymous_session_id: getAnonymousSessionId(),
+    ...data,
+  });
+  return true;
 }
 
 function ensureGoogleAdsTag() {

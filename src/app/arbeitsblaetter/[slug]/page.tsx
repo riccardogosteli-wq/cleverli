@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { worksheetLandingPage, worksheetLandingPages } from "@/lib/worksheetLandingPages";
+import WorksheetTrackingLink from "@/components/WorksheetTrackingLink";
 
 const BASE = "https://www.cleverli.ch";
 const button = "inline-flex min-h-12 items-center justify-center rounded-2xl px-6 py-3 text-center font-bold transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-700";
@@ -78,8 +79,8 @@ export default async function WorksheetTopicPage({ params }: { params: Promise<{
           <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">{page.title}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">{page.intro}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a href={page.worksheetHref} download={page.worksheetDownload} className={`${button} bg-green-700 text-white hover:bg-green-800`}>Arbeitsblatt kostenlos herunterladen ↓</a>
-            <a href={page.solutionHref} download={page.solutionDownload} className={`${button} border border-green-200 bg-white text-green-800 hover:bg-green-50`}>Lösung herunterladen ↓</a>
+            <WorksheetTrackingLink href={page.worksheetHref} download={page.worksheetDownload} event="worksheet_download" grade={page.grade} subject={page.subject} topic={page.topic} sourcePage={`/arbeitsblaetter/${page.slug}`} className={`${button} bg-green-700 text-white hover:bg-green-800`}>Arbeitsblatt kostenlos herunterladen ↓</WorksheetTrackingLink>
+            <WorksheetTrackingLink href={page.solutionHref} download={page.solutionDownload} event="solution_download" grade={page.grade} subject={page.subject} topic={page.topic} sourcePage={`/arbeitsblaetter/${page.slug}`} className={`${button} border border-green-200 bg-white text-green-800 hover:bg-green-50`}>Lösung herunterladen ↓</WorksheetTrackingLink>
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-600">Je 1 Seite · PDF · A4 · Ohne Anmeldung</p>
         </div>
@@ -106,7 +107,7 @@ export default async function WorksheetTopicPage({ params }: { params: Promise<{
         <p className="text-sm font-bold uppercase tracking-widest text-green-700">Das übt dein Kind</p>
         <h2 className="mt-3 text-2xl font-extrabold">Klarer Fokus auf ein Thema</h2>
         <ul className="mt-5 space-y-3">{page.practises.map(item => <li key={item} className="flex gap-3 leading-7"><span aria-hidden="true" className="font-bold text-green-700">✓</span><span>{item}</span></li>)}</ul>
-        <Link href={page.exerciseHref} className={`${button} mt-7 border border-green-200 text-green-800 hover:bg-green-50`}>{page.exerciseLabel} →</Link>
+        <WorksheetTrackingLink href={page.exerciseHref} event="online_practice_handoff" grade={page.grade} subject={page.subject} topic={page.topic} sourcePage={`/arbeitsblaetter/${page.slug}`} className={`${button} mt-7 border border-green-200 text-green-800 hover:bg-green-50`}>{page.exerciseLabel} →</WorksheetTrackingLink>
       </article>
       <article className="rounded-3xl bg-[#f0f3e9] p-7 sm:p-8">
         <p className="text-sm font-bold uppercase tracking-widest text-green-700">Mehr mit Premium</p>

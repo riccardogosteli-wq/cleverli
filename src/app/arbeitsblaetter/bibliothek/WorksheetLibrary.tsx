@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
 import { worksheetSubjects, type WorksheetTopic } from "@/lib/worksheets/types";
+import { trackGa4ProductEvent } from "@/lib/analytics";
 const control = "min-h-12 rounded-xl border border-stone-300 bg-white px-4 py-3 text-slate-800 focus:outline-2 focus:outline-green-700";
 export default function WorksheetLibrary() {
   const [topics, setTopics] = useState<WorksheetTopic[]>([]);
@@ -49,6 +50,14 @@ export default function WorksheetLibrary() {
       }
       const url = URL.createObjectURL(await response.blob());
       const a = document.createElement("a"); a.href = url; a.download = `${topic.id}-${type === "worksheet" ? "Arbeitsblatt" : "Loesung"}.pdf`; a.click();
+      trackGa4ProductEvent(type === "worksheet" ? "worksheet_download" : "solution_download", {
+        grade: topic.grade,
+        subject: worksheetSubjects[topic.subject],
+        topic: topic.title,
+        source_page: "/arbeitsblaetter/bibliothek",
+        destination: `/api/worksheets?id=${topic.id}&type=${type}`,
+        access_type: "premium_library",
+      });
       setTimeout(() => URL.revokeObjectURL(url), 60_000);
       setMessage(`${topic.title}: Download bereit.`);
     } catch (error) { setMessage(error instanceof Error ? error.message : "Bitte versuche es erneut."); }
