@@ -278,9 +278,9 @@ export default function ParentsDashboard() {
       <div className="flex items-center gap-3">
         <Image src="/cleverli-sit-read.png" alt="" width={64} height={64} className="drop-shadow-md" />
         <div className="flex-1 min-w-0">
-          <h1 className="text-xl font-black text-gray-800">
+          <h2 className="text-xl font-black text-gray-800">
             {t("Eltern-Übersicht", "Vue parents", "Vista genitori", "Parent Overview")}
-          </h1>
+          </h2>
           <p className="text-xs text-gray-400">
             {t("Lernfortschritt auf einen Blick", "Progrès d'apprentissage en un coup d'œil", "Progressi di apprendimento", "Learning progress at a glance")}
           </p>

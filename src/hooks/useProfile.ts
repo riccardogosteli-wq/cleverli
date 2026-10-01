@@ -15,7 +15,6 @@ import {
   getTopicProgressStorageKey,
   hasAuthenticatedStorageScope,
 } from "@/lib/accountScopedStorage";
-import { syncProfileToSupabase, loadProfileFromSupabase, loadTopicProgressFromSupabase } from "@/lib/progressSync";
 import { getEffectiveCompleted, getEffectiveScore } from "@/lib/topicProgress";
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -106,7 +105,11 @@ function saveProfile(p: Profile) {
   localStorage.setItem(key, JSON.stringify(p));
   // Fire-and-forget sync to Supabase (only if a child profile is active)
   const childId = getActiveProfileId();
-  if (childId) syncProfileToSupabase(childId, p);
+  if (childId) {
+    void import("@/lib/progressSync")
+      .then(({ syncProfileToSupabase }) => syncProfileToSupabase(childId, p))
+      .catch(() => {});
+  }
 }
 
 // ── Subject completion check ─────────────────────────────────────────────────
@@ -345,10 +348,10 @@ export function useProfile() {
     // New device/browser: localStorage is empty — try loading from Supabase
     const childId = getActiveProfileId();
     if (childId && p.xp === 0 && p.totalExercises === 0) {
-      Promise.all([
+      import("@/lib/progressSync").then(({ loadProfileFromSupabase, loadTopicProgressFromSupabase }) => Promise.all([
         loadProfileFromSupabase(childId),
         loadTopicProgressFromSupabase(childId),
-      ]).then(([remote, topicData]) => {
+      ])).then(([remote, topicData]) => {
         // Restore profile stats
         if (remote && (remote.xp ?? 0) > 0) {
           const merged = { ...DEFAULT_PROFILE, ...remote };

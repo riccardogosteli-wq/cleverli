@@ -3,11 +3,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { worksheetLandingPages } from "@/lib/worksheetLandingPages";
 import WorksheetTrackingLink from "@/components/WorksheetTrackingLink";
-export const metadata: Metadata = {
+import { withPageSocial } from "@/lib/pageSocialMetadata";
+export const metadata: Metadata = withPageSocial({
   title: "Arbeitsblätter für die Primarschule",
   description: "Arbeitsblätter für die 1. bis 6. Klasse: Sechs Beispiele mit Lösung kostenlos kennenlernen. Über 300 Arbeitsblätter mit separaten Lösungen in Premium.",
   alternates: { canonical: "https://www.cleverli.ch/arbeitsblaetter" },
-};
+});
 const button = "inline-flex min-h-12 items-center justify-center rounded-2xl px-6 py-3 font-bold transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-700";
 export default function WorksheetsPage() {
   return <main className="bg-[#fbfaf5] text-slate-800 pb-20">

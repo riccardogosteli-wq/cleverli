@@ -364,9 +364,9 @@ export default function MissionenPage() {
       <div className="pt-4">
         <div className="flex items-center gap-3 flex-wrap">
           <div>
-            <h1 className="text-2xl font-black text-gray-900">
+            <h2 className="text-2xl font-black text-gray-900">
               🗺️ {lang === "fr" ? "Mes Missions" : lang === "it" ? "Le mie Missioni" : lang === "en" ? "My Missions" : "Meine Missionen"}
-            </h1>
+            </h2>
             <div className="text-sm text-gray-500 mt-0.5">
               {grade}. {tr("gradeLabel")}
               {childName && <span className="ml-2 font-semibold text-green-700">{childName.avatar} {childName.name}</span>}

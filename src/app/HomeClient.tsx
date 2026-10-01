@@ -65,7 +65,7 @@ export default function Home() {
             </h1>
             <p className="mt-3 text-base sm:text-lg text-gray-500 max-w-lg">{tr("subtitle").split("\n")[0]}</p>
             <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center sm:justify-start">
-              <Link href={primaryHref} className="bg-green-700 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-800 active:scale-95 transition-all shadow-md text-center">
+              <Link href={primaryHref} prefetch={false} className="bg-green-700 text-white px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:bg-green-800 active:scale-95 transition-all shadow-md text-center">
                 {loaded ? primaryLabel : `${tr("startFree")} →`}
               </Link>
               {showSignupCta && (
@@ -115,7 +115,7 @@ export default function Home() {
                 href: "/dashboard?subject=science",
               },
             ].map((s) => (
-              <Link key={s.key} href={s.href}
+              <Link key={s.key} href={s.href} prefetch={false}
                 className={`${s.bg} border-2 ${s.border} rounded-2xl p-6 flex flex-col gap-3 transition-all hover:shadow-lg ${s.hover} hover:-translate-y-0.5 cursor-pointer`}>
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-14 flex items-center justify-center">{s.icon ? <Image src={s.icon} alt="" width={56} height={56} className="w-full h-full object-contain" /> : <span className="text-4xl">{s.emoji}</span>}</div>

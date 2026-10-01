@@ -18,14 +18,14 @@ export function ParentsGuestPreview() {
     <div className="max-w-2xl mx-auto px-4 py-10 pb-36 space-y-8">
       <div className="text-center space-y-3">
         <div className="text-5xl">👨‍👩‍👧</div>
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
           {t4(lang,
             "Lernfortschritt deines Kindes auf einen Blick",
             "Les progrès d'apprentissage de votre enfant en un coup d'œil",
             "I progressi di apprendimento di tuo figlio a colpo d'occhio",
             "Your child's learning progress at a glance"
           )}
-        </h1>
+        </h2>
         <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto">
           {t4(lang,
             "Verfolge den Lernfortschritt deines Kindes, verwalte Profile und sieh Schwachstellen auf einen Blick.",
@@ -197,9 +197,9 @@ export function MissionenGuestPreview() {
       {/* Hero */}
       <div className="text-center space-y-3">
         <div className="text-5xl">🗺️</div>
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
           {t4(lang, "Meine Missionen", "Mes Missions", "Le mie Missioni", "My Missions")}
-        </h1>
+        </h2>
         <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto">
           {t4(lang,
             "Verfolge deinen Lernfortschritt auf der Missions-Karte — Bronzemedaille, Silber, Gold!",

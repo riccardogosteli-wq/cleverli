@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import TeacherPage from './TeacherPage';
-export const metadata: Metadata = { title:'Cleverli für Lehrpersonen', description:'Cleverli im Unterricht und in der begleiteten Förderung: Lehrerkonto mit unbegrenzt vielen Kinderprofilen auf Anfrage.', alternates:{canonical:'https://www.cleverli.ch/lehrpersonen'} };
+import { withPageSocial } from '@/lib/pageSocialMetadata';
+export const metadata: Metadata = withPageSocial({ title:'Cleverli für Lehrpersonen', description:'Cleverli im Unterricht und in der begleiteten Förderung: Lehrerkonto mit unbegrenzt vielen Kinderprofilen auf Anfrage.', alternates:{canonical:'https://www.cleverli.ch/lehrpersonen'} });
 const teacherOffer = {
   "@context": "https://schema.org",
   "@type": "Offer",

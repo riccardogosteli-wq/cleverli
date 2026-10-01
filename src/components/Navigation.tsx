@@ -9,7 +9,6 @@ import { LANGUAGES, Lang } from "@/lib/i18n";
 import XpBar from "./XpBar";
 import { useSession } from "@/hooks/useSession";
 import { loadFamily, getActiveProfileId, setActiveProfileId, FamilyMember } from "@/lib/family";
-import { restoreCurrentChildProgressFromSupabase } from "@/lib/progressSync";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -60,7 +59,9 @@ export default function Navigation() {
     setActiveProfileId(id);
     setProfileOpen(false);
     reloadFamily();
-    restoreCurrentChildProgressFromSupabase().catch(() => {});
+    void import("@/lib/progressSync")
+      .then(({ restoreCurrentChildProgressFromSupabase }) => restoreCurrentChildProgressFromSupabase())
+      .catch(() => {});
   };
   const currentLang = LANGUAGES.find(l => l.code === lang);
 
@@ -81,8 +82,9 @@ export default function Navigation() {
             <Image
               src="/cleverli-logo-tight.png"
               alt={imageLabel("logo", lang)}
-              width={1222}
-              height={496}
+              width={123}
+              height={50}
+              sizes="(max-width: 639px) 104px, 123px"
               className="h-full w-auto object-contain drop-shadow-sm"
               priority
             />

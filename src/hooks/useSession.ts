@@ -2,7 +2,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useTeacherAccount } from "@/hooks/useTeacherAccount";
 import { getSupabase } from "@/lib/supabase";
-import { restoreFamilyFromSupabase } from "@/lib/progressSync";
 import { clearLocalFamilyStateOnLogout } from "@/lib/accountScopedStorage";
 
 export interface Session {
@@ -45,6 +44,7 @@ function isSessionPremiumActive(session: Session | null) {
 
 async function refreshLocalFamily() {
   try {
+    const { restoreFamilyFromSupabase } = await import("@/lib/progressSync");
     await restoreFamilyFromSupabase();
   } catch {
     // Progress sync is best-effort; auth must still complete if restore fails.
