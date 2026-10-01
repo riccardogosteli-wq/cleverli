@@ -132,3 +132,9 @@
 - Recovery: install the exact lockfile state with `npm ci`, then rerun the unchanged worksheet test suite.
 - A targeted ESLint command accidentally included the CommonJS Playwright QA harness. The repository ESLint rule rejects `require()` syntax even though existing worksheet QA scripts also use `.cjs`. Recovery: lint the changed TypeScript and TSX production files only; execute the QA harness directly with Node.
 - The final local browser QA initially treated an aborted Google DoubleClick collection request as a critical product request failure. The request is third party analytics and the page itself remained healthy. Recovery: classify `doubleclick` with the existing Google, Meta, PostHog and Sentry telemetry exclusions, while keeping all first party request failures blocking.
+
+## 2026-10-01: Agent Browser CLI unavailable in isolated worktree
+
+- Command: `agent-browser --session pushqa open http://127.0.0.1:3101/daily`
+- Result: `command not found`
+- Recovery: use the repository's installed Playwright runtime for local desktop and mobile QA, then the OpenClaw managed browser for the public production URL.

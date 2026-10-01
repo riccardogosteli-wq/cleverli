@@ -1,7 +1,7 @@
 self.addEventListener("push", function (event) {
   const data = event.data ? event.data.json() : {};
   event.waitUntil(
-    self.registration.showNotification(data.title || "Cleverli", {
+    self.registration.showNotification(data.title || "Deine Tagesaufgabe ⚡", {
       body: data.body || "Vergiss deine tägliche Aufgabe nicht! ⚡",
       icon: "/favicon.ico",
       badge: "/favicon.ico",

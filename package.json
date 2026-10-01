@@ -48,6 +48,7 @@
     "qa:german-editorial": "npx tsx scripts/audit-german-editorial.ts",
     "qa:distractors": "npx tsx scripts/audit-distractor-quality.ts",
     "qa:success-messages": "npx tsx scripts/audit-success-messages.ts",
+    "qa:push-reminder-copy": "npx tsx scripts/audit-push-reminder-copy.ts",
     "qa:wrong-answer-messages": "npx tsx scripts/audit-wrong-answer-messages.ts",
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",
     "lp21:gap": "DRY_RUN=1 npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",

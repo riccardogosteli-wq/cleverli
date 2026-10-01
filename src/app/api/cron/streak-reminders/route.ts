@@ -49,7 +49,7 @@ export async function GET(req: NextRequest) {
         await webpush.sendNotification(
           row.subscription,
           JSON.stringify({
-            title: "Cleverli ⚡",
+            title: "Deine Tagesaufgabe ⚡",
             body: "Vergiss deine tägliche Aufgabe nicht! Dein Streak wartet auf dich 🔥",
             url: "/daily",
           })
