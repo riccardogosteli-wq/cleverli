@@ -180,9 +180,18 @@ function ensureGoogleAdsTag() {
   window.gtag("config", GOOGLE_ADS_ID);
 }
 
-function trackGoogleAdsPurchaseConversion(transactionId: string, value: number) {
+function trackGoogleAdsPurchaseConversion(
+  transactionId: string,
+  value: number,
+  sha256EmailAddress?: string | null,
+) {
   if (typeof window === "undefined") return;
   ensureGoogleAdsTag();
+  if (sha256EmailAddress && /^[a-f0-9]{64}$/.test(sha256EmailAddress)) {
+    window.gtag?.("set", "user_data", {
+      sha256_email_address: sha256EmailAddress,
+    });
+  }
   window.gtag?.("event", "conversion", {
     send_to: GOOGLE_ADS_PURCHASE_SEND_TO,
     value,
@@ -303,7 +312,10 @@ export async function trackAdsLpCtaClick(
 // Only suppress duplicates within this loaded document. Reloads/cross-browser retries
 // intentionally replay stable provider IDs: enqueueing is NOT proof of ingestion.
 const checkoutEventsQueued = new Set<string>();
-export function trackVerifiedCheckout(outcome: VerifiedCheckout) {
+export function trackVerifiedCheckout(
+  outcome: VerifiedCheckout,
+  sha256EmailAddress?: string | null,
+) {
   const { kind, plan, transactionId, metaEventId, value, currency } = outcome;
   if (!isCheckoutPlan(plan) || !/^cs_[a-zA-Z0-9_]+$/.test(transactionId) || currency !== "CHF" ||
       !Number.isFinite(value) || (kind !== "purchase" && kind !== "trial") ||
@@ -316,7 +328,9 @@ export function trackVerifiedCheckout(outcome: VerifiedCheckout) {
     ...(kind === "trial" ? { trial_days: outcome.trialDays, source: "stripe_checkout_success" } : {}),
     items: [{ item_id: `cleverli_premium_${plan}`, item_name: PLAN_NAME[plan], price: value, quantity: 1 }],
   });
-  if (kind === "purchase") trackGoogleAdsPurchaseConversion(transactionId, value);
+  if (kind === "purchase") {
+    trackGoogleAdsPurchaseConversion(transactionId, value, sha256EmailAddress);
+  }
   else trackGoogleAdsTrialStartedConversion(transactionId, 0);
   trackMetaEvent(kind === "purchase" ? "Purchase" : "StartTrial", {
     currency, value, content_name: PLAN_NAME[plan],

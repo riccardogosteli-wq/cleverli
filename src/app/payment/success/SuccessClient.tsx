@@ -45,8 +45,11 @@ export default function SuccessClient() {
         if (cancelled) return;
         if ([400, 401, 403, 404].includes(response.status)) return;
         if (response.ok) {
-          const { outcome } = await response.json();
-          if (!cancelled && outcome) { trackVerifiedCheckout(outcome); return; }
+          const { outcome, enhancedConversion } = await response.json();
+          if (!cancelled && outcome) {
+            trackVerifiedCheckout(outcome, enhancedConversion?.sha256EmailAddress);
+            return;
+          }
         }
       } catch { /* Transient failure: bounded retry with the same Stripe ID. */ }
       if (!cancelled && attempts < MAX_POLLS) timer = setTimeout(verify, POLL_INTERVAL);

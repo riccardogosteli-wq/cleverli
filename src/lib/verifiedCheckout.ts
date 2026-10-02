@@ -1,4 +1,5 @@
 import type Stripe from "stripe";
+import { createHash } from "node:crypto";
 
 export type VerifiedCheckout = {
   kind: "purchase" | "trial";
@@ -9,6 +10,25 @@ export type VerifiedCheckout = {
   currency: string;
   trialDays?: number;
 };
+
+export type GoogleAdsEnhancedConversionData = {
+  sha256EmailAddress: string;
+};
+
+export function googleAdsEnhancedConversionData(
+  email?: string | null,
+): GoogleAdsEnhancedConversionData | null {
+  const [rawLocalPart, rawDomain, ...rest] = email?.trim().toLowerCase().split("@") ?? [];
+  if (!rawLocalPart || !rawDomain || rest.length || !rawDomain.includes(".")) return null;
+
+  const localPart = rawDomain === "gmail.com" || rawDomain === "googlemail.com"
+    ? rawLocalPart.replaceAll(".", "")
+    : rawLocalPart;
+  const normalized = `${localPart}@${rawDomain}`;
+  return {
+    sha256EmailAddress: createHash("sha256").update(normalized).digest("hex"),
+  };
+}
 
 /** Pure allow-list: URL hints, customer data and Stripe objects never reach analytics. */
 export function verifiedCheckoutOutcome(session: Stripe.Checkout.Session, userId: string): VerifiedCheckout | null {

@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
-import { verifiedCheckoutOutcome } from "@/lib/verifiedCheckout";
+import {
+  googleAdsEnhancedConversionData,
+  verifiedCheckoutOutcome,
+} from "@/lib/verifiedCheckout";
 
 export const dynamic = "force-dynamic";
 const headers = { "Cache-Control": "no-store, private", "Vary": "Authorization", "Referrer-Policy": "no-referrer" };
@@ -31,7 +34,10 @@ export async function POST(req: NextRequest) {
     // A missing session and another user's session deliberately share the same response.
     if (session.metadata?.userId !== data.user.id) return reply({ error: "not_found" }, 404);
     const outcome = verifiedCheckoutOutcome(session, data.user.id);
-    return reply({ outcome });
+    const enhancedConversion = outcome?.kind === "purchase"
+      ? googleAdsEnhancedConversionData(data.user.email)
+      : null;
+    return reply({ outcome, enhancedConversion });
   } catch (error) {
     if (error instanceof Stripe.errors.StripeInvalidRequestError) return reply({ error: "not_found" }, 404);
     // No raw provider exceptions, tokens, customer details or session URLs in logs/responses.
