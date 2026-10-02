@@ -38,12 +38,23 @@ import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
 import { getProfileStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
 import { trackExerciseEvent, ExerciseTelemetryPayload } from "@/lib/exerciseTelemetry";
 import { startCheckout } from "@/lib/checkoutClient";
-import { captureAppError } from "@/lib/monitoring";
+import { captureAppError, captureProductEvent } from "@/lib/monitoring";
 import { getEffectiveCompleted, mergeCompletedProgress } from "@/lib/topicProgress";
 import { localizeExercise } from "@/lib/exerciseLocalization";
 import { normaliseCorrectExerciseIds } from "@/lib/exerciseIdProgress";
+import { completeFirstWeekMission } from "@/lib/firstWeekActivation";
+import { trackUserActivity } from "@/lib/userActivityClient";
 
-interface Props { topic: Topic; grade: number; subject: string; isPremium?: boolean; nextTopicId?: string | null; focusExerciseId?: string | null; }
+interface Props {
+  topic: Topic;
+  grade: number;
+  subject: string;
+  isPremium?: boolean;
+  nextTopicId?: string | null;
+  focusExerciseId?: string | null;
+  sessionLimit?: number;
+  activationMode?: boolean;
+}
 
 const FREE_EXERCISE_LIMIT = 20;
 const FREE_TRIAL_CHECKOUT_OPTIONS = { trialDays: 7 };
@@ -129,7 +140,21 @@ function findExerciseById(topic: Topic, exerciseId: string | null | undefined) {
   return topic.exercises.find((exercise, index) => getExerciseId(exercise, index) === exerciseId) ?? null;
 }
 
-export default function ExercisePlayer({ topic, grade, subject, isPremium = false, nextTopicId = null, focusExerciseId = null }: Props) {
+function limitSessionExercises(exercises: Exercise[], sessionLimit?: number) {
+  if (!sessionLimit || sessionLimit < 1) return exercises;
+  return exercises.slice(0, sessionLimit);
+}
+
+export default function ExercisePlayer({
+  topic,
+  grade,
+  subject,
+  isPremium = false,
+  nextTopicId = null,
+  focusExerciseId = null,
+  sessionLimit,
+  activationMode = false,
+}: Props) {
   const router = useRouter();
 
   const getCompletedCoin = (completedCount: number) => {
@@ -192,7 +217,9 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   // Select the current difficulty section, so Grün/Gelb/Rot progress matches the actual session.
   const initialFocusedExercise = findExerciseById(topic, focusExerciseId);
   const [sessionStartCompleted, setSessionStartCompleted] = useState(() => initialFocusedExercise ? 0 : getInitialSessionStart(topic, grade, subject));
-  const [fullSetExercises, setFullSetExercises] = useState(() => initialFocusedExercise ? [initialFocusedExercise] : getInitialSessionExercises(topic, grade, subject));
+  const [fullSetExercises, setFullSetExercises] = useState(() => initialFocusedExercise
+    ? [initialFocusedExercise]
+    : limitSessionExercises(getInitialSessionExercises(topic, grade, subject), sessionLimit));
   const [exercises, setExercises] = useState(fullSetExercises);
   const [isReplayMode, setIsReplayMode] = useState(() => Boolean(initialFocusedExercise) || getStoredCompleted(topic, grade, subject) >= topic.exercises.length);
   const [correctIds, setCorrectIds] = useState<Set<string>>(() => getCorrectIdSet(topic, getStoredProgress(grade, subject, topic.id)));
@@ -215,6 +242,7 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
   const [mascotReaction, setMascotReaction] = useState<'correct'|'wrong'|null>(null);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const topicStartRef = useRef<number>(Date.now());
+  const activationCompletionTrackedRef = useRef(false);
   const answerScrollRef = useRef<{ x: number; y: number } | null>(null);
   const currentCompleted = correctIds.size;
   const tierInfo = getTierProgress(topic, currentCompleted);
@@ -291,6 +319,26 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     setMascotReaction(null);
     setCardKey(k => k + 1);
   }, [topic, focusExerciseId]);
+
+  useEffect(() => {
+    if (!done || !activationMode || activationCompletionTrackedRef.current) return;
+    const childId = getActiveProfileId();
+    if (!childId) return;
+    activationCompletionTrackedRef.current = true;
+    completeFirstWeekMission(childId, grade, subject, topic.id);
+    captureProductEvent("activation_first_mission_completed", {
+      grade,
+      subject,
+      topic_id: topic.id,
+      mission_size: sessionTotal,
+    });
+    void trackUserActivity("activation_first_mission_completed", {
+      grade,
+      subject,
+      topicId: topic.id,
+      metadata: { child_id: childId, mission_size: sessionTotal, score },
+    });
+  }, [activationMode, done, grade, score, sessionTotal, subject, topic.id]);
 
   const exerciseTelemetryPayload = (extra: ExerciseTelemetryPayload = {}): ExerciseTelemetryPayload => ({
     exerciseId: current?.id ?? String(idx),
@@ -411,9 +459,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     const hasRemaining = storedCompleted < topic.exercises.length;
     const replay = mode === "replay" || !hasRemaining;
     const nextStart = replay ? 0 : storedCompleted;
-    const nextExercises = replay
+    const availableExercises = replay
       ? sortByDifficulty(topic.exercises)
       : selectCurrentTierExercises(topic, storedCorrectIds);
+    const nextExercises = limitSessionExercises(availableExercises, sessionLimit);
 
     setSessionStartCompleted(nextStart);
     setCorrectIds(replay ? new Set() : storedCorrectIds);
@@ -714,7 +763,10 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
     const s = calcStars(displayScore, totalEx);
     const perfect = displayScore === totalEx;
     const completedCoin = showTopicCompleteCelebration ? getCompletedCoin(completedCount) : null;
-    const primaryCompleteLabel = hasRemaining
+    const activationMissionDone = activationMode && !isReviewMode;
+    const primaryCompleteLabel = activationMissionDone
+      ? (lang === "fr" ? "Voir le plan" : lang === "it" ? "Vai al piano" : lang === "en" ? "View learning plan" : "Zum Lernplan")
+      : hasRemaining
       ? (lang === "fr" ? "Continuer ce thème" : lang === "it" ? "Continua questo argomento" : lang === "en" ? "Continue this topic" : "Weiter im Thema")
       : nextTopicId
       ? (tr("nextTopic") ?? "Nächstes Thema")
@@ -724,9 +776,13 @@ export default function ExercisePlayer({ topic, grade, subject, isPremium = fals
         <RewardAnimation
           correct={true}
           isTopicComplete={showTopicCompleteCelebration}
-          label={hasRemaining ? (lang === "fr" ? "Continue ce thème" : lang === "it" ? "Continua questo argomento" : lang === "en" ? "Continue this topic" : "Weiter in diesem Thema") : undefined}
+          label={activationMissionDone
+            ? (lang === "fr" ? "Première mission terminée" : lang === "it" ? "Prima missione completata" : lang === "en" ? "First mission completed" : "Erste Mission geschafft")
+            : hasRemaining ? (lang === "fr" ? "Continue ce thème" : lang === "it" ? "Continua questo argomento" : lang === "en" ? "Continue this topic" : "Weiter in diesem Thema") : undefined}
           buttonLabel={primaryCompleteLabel}
-          onContinue={() => hasRemaining ? startTopicSession("next") : nextTopicId ? router.push(`/learn/${grade}/${subject}/${nextTopicId}`) : router.push(`/learn/${grade}/${subject}`)}
+          onContinue={() => activationMissionDone
+            ? router.push("/dashboard?activation=complete")
+            : hasRemaining ? startTopicSession("next") : nextTopicId ? router.push(`/learn/${grade}/${subject}/${nextTopicId}`) : router.push(`/learn/${grade}/${subject}`)}
         />
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center space-y-3">
           {isReviewMode ? (

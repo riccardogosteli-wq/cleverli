@@ -1,5 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
+import { FIRST_WEEK_MISSION_SIZE } from "@/lib/firstWeekActivation";
 import { Topic } from "@/types/exercise";
 import ExercisePlayer from "@/components/ExercisePlayer";
 import ProgressMapClient from "@/components/ProgressMapClient";
@@ -22,6 +23,7 @@ function loadProgress(grade: number, subject: string, topic: Topic): NormalisedT
 export default function TopicClient({ topic, grade, subject, nextTopicId = null }: Props) {
   const searchParams = useSearchParams();
   const focusExerciseId = searchParams.get("exercise");
+  const firstWeekMission = searchParams.get("first-week") === "1";
   const { session, isPremium, loaded, premiumChecked } = useSession();
   const { lang } = useLang();
   const topicTitle = getTopicTitle(topic.id, lang, topic.title);
@@ -108,6 +110,8 @@ export default function TopicClient({ topic, grade, subject, nextTopicId = null 
           isPremium={loaded && premiumChecked ? isPremium : false}
           nextTopicId={nextTopicId}
           focusExerciseId={focusExerciseId}
+          activationMode={firstWeekMission}
+        sessionLimit={firstWeekMission ? FIRST_WEEK_MISSION_SIZE : undefined}
         />
       </div>
     </div>

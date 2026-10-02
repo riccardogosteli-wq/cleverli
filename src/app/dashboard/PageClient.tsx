@@ -2,6 +2,7 @@
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import OnboardingModal from "@/components/OnboardingModal";
+import FirstWeekActivationCard from "@/components/FirstWeekActivationCard";
 import Link from "next/link";
 import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
@@ -241,7 +242,7 @@ function DashboardInner() {
   const [grade, setGrade] = useState<number | null>(null);
   const [subject, setSubject] = useState<string | null>(preselectedSubject);
   const [dailyDone, setDailyDone] = useState(false);
-  const [activeMember, setActiveMember] = useState<{ name: string; avatar: string; curriculum?: CurriculumSelection } | null>(null);
+  const [activeMember, setActiveMember] = useState<{ id: string; name: string; avatar: string; curriculum?: CurriculumSelection } | null>(null);
   const [familySize, setFamilySize] = useState(0);
   // (notify signup widget removed — state retained for safety)
   const persistActiveChildGrade = (g: number, shouldDispatch = false) => {
@@ -253,7 +254,7 @@ function DashboardInner() {
     member.grade = g;
     saveFamily(family);
     setPendingGradeOverride(member.id, g);
-    setActiveMember({ name: member.name, avatar: member.avatar, curriculum: member.curriculum });
+    setActiveMember({ id: member.id, name: member.name, avatar: member.avatar, curriculum: member.curriculum });
     void updateChildInSupabase(member.id, { grade: g });
     if (shouldDispatch) {
       window.dispatchEvent(new CustomEvent("cleverli-active-profile-change", { detail: { childId: member.id } }));
@@ -276,7 +277,7 @@ function DashboardInner() {
         localStorage.setItem(getLastGradeStorageKey(), String(pendingGrade));
         void updateChildInSupabase(member.id, { grade: pendingGrade });
       }
-      setActiveMember(member ? { name: member.name, avatar: member.avatar, curriculum: member.curriculum } : null);
+      setActiveMember(member ? { id: member.id, name: member.name, avatar: member.avatar, curriculum: member.curriculum } : null);
 
       if (!preselectedSubject) {
         if (preselectedGrade) {
@@ -353,6 +354,8 @@ function DashboardInner() {
 
   if (familySize === 0) {
     return (
+      <>
+      <OnboardingModal />
       <div className="max-w-md mx-auto px-4 py-16 pb-24 text-center space-y-5">
         <Image src="/cleverli-sit-read.png" alt="" width={120} height={120} className="mx-auto drop-shadow-md" />
         <div className="space-y-2">
@@ -376,12 +379,15 @@ function DashboardInner() {
           {lang === "fr" ? "Ajouter un enfant" : lang === "it" ? "Aggiungi bambino" : lang === "en" ? "Add child" : "Kind hinzufügen"}
         </Link>
       </div>
+      </>
     );
   }
 
   // ── STEP 1: Choose grade ──────────────────────────────────────────────────
   if (!grade) {
     return (
+      <>
+      <OnboardingModal />
       <div className="max-w-5xl mx-auto px-4 py-6 pb-24 sm:pb-6 flex flex-col md:block" style={{minHeight: "calc(100dvh - 140px)"}}>
         <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
           {/* Sidebar — hidden on mobile (shown inline below) */}
@@ -390,6 +396,7 @@ function DashboardInner() {
           </div>
 
           <div className="space-y-5">
+            <FirstWeekActivationCard childId={activeMember?.id ?? null} childName={activeMember?.name} profile={profile} />
             {/* Mobile-only: compact daily bar (full sidebar is desktop-only) */}
             <div className="md:hidden">
               <MobileDailyBar dailyDone={dailyDone} lang={lang} />
@@ -440,16 +447,20 @@ function DashboardInner() {
           </div>
         </div>
       </div>
+      </>
     );
   }
 
   // ── STEP 2: Choose subject (only if NOT pre-selected from URL) ────────────
   if (!subject) {
     return (
+      <>
+      <OnboardingModal />
       <div className="max-w-5xl mx-auto px-4 py-6 pb-24 sm:pb-6 flex flex-col md:block" style={{minHeight: "calc(100dvh - 140px)"}}>
         <div className="md:grid md:grid-cols-[280px_1fr] md:gap-8">
           <div className="hidden md:block">{profile && level && <Sidebar profile={profile} level={level} nextLevel={nextLevel} dailyDone={dailyDone} lang={lang} />}</div>
           <div className="space-y-5">
+            <FirstWeekActivationCard childId={activeMember?.id ?? null} childName={activeMember?.name} profile={profile} />
             <div className="md:hidden mb-2"><MobileDailyBar dailyDone={dailyDone} lang={lang} /></div>
             {/* PM-20: Nicer subject picker header with mascot */}
             <div className="flex items-center gap-3">
@@ -503,6 +514,7 @@ function DashboardInner() {
           </div>
         </div>
       </div>
+      </>
     );
   }
 
@@ -528,6 +540,10 @@ function DashboardInner() {
     <div className="max-w-5xl mx-auto px-4 py-5 pb-24 sm:pb-5">
       {/* UJ-11: Onboarding modal for first-time users */}
       <OnboardingModal />
+
+      <div className="mb-4">
+        <FirstWeekActivationCard childId={activeMember?.id ?? null} childName={activeMember?.name} profile={profile} />
+      </div>
 
       {/* PM-3/PM-4: Active child profile banner */}
       {activeMember && familySize >= 1 && (

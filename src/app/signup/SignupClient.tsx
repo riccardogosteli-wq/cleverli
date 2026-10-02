@@ -159,7 +159,7 @@ export default function Signup() {
       });
       setSuccess(true);
 
-      // If session is immediately available (email confirm disabled), redirect to first exercise
+      // If session is immediately available (email confirm disabled), start the guided setup.
       if (data?.session) {
         if (pendingCheckout) {
           setTimeout(() => startCheckout(pendingCheckout.plan, pendingCheckout.source, data.session?.user.id, {
@@ -168,7 +168,7 @@ export default function Signup() {
           }), 800);
           return;
         }
-        setTimeout(() => router.push("/learn/1/math/zahlen-1-10"), 800);
+        setTimeout(() => router.push("/dashboard"), 800);
       } else {
         // Email confirmation required — stay on success screen
       }

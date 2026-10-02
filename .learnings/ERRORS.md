@@ -149,3 +149,38 @@
 - Inspect the live exercise card and scope answer selectors to the active exercise container before clicking and submitting.
 
 - macOS on this host does not provide the GNU `timeout` command. Use Playwright's own navigation and locator timeouts instead of wrapping Node QA scripts with `timeout`.
+
+## 2026-10-02 — Quote Next.js dynamic route paths in zsh
+
+- An inspection command failed because zsh expanded `[grade]/[subject]/[topic]` as a glob.
+- Quote dynamic route paths in shell commands before reading them. No project files were changed by the failed command.
+
+## 2026-10-02 — Replace one file in separate apply_patch calls
+
+- A combined delete and add patch for `OnboardingModal.tsx` was rejected because both operations targeted the same path.
+- Recovery: delete and add the file in two explicit `apply_patch` calls.
+
+## 2026-10-02 — Resume long exec sessions with write_stdin
+
+- The first `npm ci` resume used `wait` with an exec session id and was rejected because `wait` expects a yielded cell id.
+- Recovery: resume `exec_command` PTY sessions with `write_stdin`; the unchanged install completed successfully.
+
+## 2026-10-02 — Activation telemetry requires explicit event types
+
+- The first TypeScript pass rejected the three new activation event names because `UserActivityType` is a closed union.
+- Recovery: add the intended internal activation events to the shared client and server allowlists, then rerun TypeScript and telemetry regressions.
+
+## 2026-10-02 — React compiler rejected unnecessary memoization
+
+- Targeted lint rejected `useMemo` in the activation card because the compiler inferred `profile.playDates` more precisely than the optional-chain dependency.
+- Recovery: compute the tiny three-line active-day count directly during render. No memoization is needed for this data size.
+
+## 2026-10-02 — First activation QA used an unscoped next-button selector
+
+- The first local end-to-end run selected the always-rendered disabled `Weiter` control before the exercise answer had been submitted, then timed out.
+- Recovery: scope answer and progression controls to the active exercise state, wait for the enabled control, and keep the failure as test-harness evidence rather than classifying it as a product defect.
+
+## 2026-10-02 — Navigation aborts are not failed first-party responses
+
+- The completed activation QA was initially failed because Playwright reports deliberately cancelled RSC prefetches and fire-and-forget telemetry during route changes as `net::ERR_ABORTED`.
+- Recovery: keep blocking actual first-party request failures and non-success responses, but exclude browser-cancelled requests from the failure list. The completed dashboard and empty console remain required.

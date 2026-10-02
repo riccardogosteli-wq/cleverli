@@ -48,6 +48,7 @@
     "qa:german-editorial": "npx tsx scripts/audit-german-editorial.ts",
     "qa:distractors": "npx tsx scripts/audit-distractor-quality.ts",
     "qa:success-messages": "npx tsx scripts/audit-success-messages.ts",
+    "qa:first-week-activation": "npx tsx scripts/audit-first-week-activation.ts",
     "qa:push-reminder-copy": "npx tsx scripts/audit-push-reminder-copy.ts",
     "qa:wrong-answer-messages": "npx tsx scripts/audit-wrong-answer-messages.ts",
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",
