@@ -73,7 +73,7 @@ export default function FeedbackFormClient() {
         <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-2xl">✓</div>
         <h2 className="mt-4 text-2xl font-black text-gray-950">Danke für deine Rückmeldung.</h2>
         <p className="mt-3 text-gray-600">
-          Das hilft uns sehr, Cleverli für Familien noch passender zu machen. Den Gratis-Monat ordnen wir anhand deines Cleverli-Kontos zu.
+          Deine Rückmeldung hilft uns, Cleverli für Familien weiterzuentwickeln.
         </p>
       </div>
     );

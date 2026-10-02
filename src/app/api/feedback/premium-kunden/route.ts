@@ -33,12 +33,6 @@ function combineImprovementIdea(improvementIdea: string, otherFeedback: string) 
   ].filter(Boolean).join(" | ");
 }
 
-function hasActivePremium(profile: { premium: boolean | null; premium_until: string | null } | null | undefined) {
-  if (!profile?.premium) return false;
-  if (!profile.premium_until) return true;
-  return new Date(profile.premium_until) > new Date();
-}
-
 function clientIp(req: NextRequest) {
   return req.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
     || req.headers.get("x-real-ip")
@@ -109,14 +103,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "too_many_requests" }, { status: 429 });
     }
 
-    const { data: profile, error: profileError } = await supabase
-      .from("parent_profiles")
-      .select("premium, premium_until")
-      .eq("email", email)
-      .maybeSingle();
-    if (profileError) throw profileError;
-    const rewardEligible = hasActivePremium(profile);
-
     const { error } = await supabase.from("customer_feedback").insert({
       email,
       rating,
@@ -126,9 +112,9 @@ export async function POST(req: NextRequest) {
       issues: issues || null,
       child_reaction: childReaction || null,
       improvement_idea: combinedImprovementIdea || null,
-      allow_followup: rewardEligible,
-      giveaway_opt_in: rewardEligible,
-      giveaway_months: 3,
+      allow_followup: false,
+      giveaway_opt_in: false,
+      giveaway_months: 0,
       source: cleanText(body.source, 120) || "premium_customer_feedback",
       user_agent: cleanText(req.headers.get("user-agent"), 300) || null,
       ip_hash: ipHash,
