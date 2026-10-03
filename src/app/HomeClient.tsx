@@ -81,54 +81,20 @@ export default function Home() {
 
 
 
-      {/* Subjects */}
-      <section className="bg-white py-10 sm:py-16 px-4 sm:px-6">
+      {/* Compact subjects: show the available catalogue without delaying pricing. */}
+      <section aria-labelledby="home-subjects-title" className="bg-white py-8 sm:py-10 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col items-center gap-2 mb-10">
-            <Image src="/images/mascot/cleverli-thumbsup.png" alt="" width={110} height={110} className="drop-shadow-md" />
-            <h2 className="text-2xl font-bold text-center text-gray-800">{tr("subjectsTitle")}</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {[
-              {
-                emoji: "🔢", icon: "/images/ui/Mathematik.png", key: "math", label: "math",
-                bg: "bg-blue-50", border: "border-blue-200", hover: "hover:shadow-blue-100",
-                textColor: "text-blue-800", descColor: "text-blue-600",
-                desc: tr("mathDesc") ?? "Zahlen, Rechnen, Geometrie",
-                topics: ["Zahlen 1–10", "Addition", "Brüche", "Geometrie"],
-                href: "/dashboard?subject=math",
-              },
-              {
-                emoji: "📖", icon: "/images/ui/Deutsch.png", key: "german", label: "german",
-                bg: "bg-yellow-50", border: "border-yellow-200", hover: "hover:shadow-yellow-100",
-                textColor: "text-yellow-800", descColor: "text-yellow-700",
-                desc: tr("germanDesc") ?? "Lesen, Schreiben, Grammatik",
-                topics: ["Buchstaben", "Wörter", "Grammatik", "Rechtschreibung"],
-                href: "/dashboard?subject=german",
-              },
-              {
-                emoji: "🌍", icon: "/images/ui/NMG.png", key: "science", label: "scienceFull",
-                bg: "bg-green-50", border: "border-green-200", hover: "hover:shadow-green-100",
-                textColor: "text-green-800", descColor: "text-green-700",
-                desc: tr("scienceDesc") ?? "Natur, Mensch, Gesellschaft",
-                topics: ["Tiere", "Körper", "Jahreszeiten", "Schweiz"],
-                href: "/dashboard?subject=science",
-              },
-            ].map((s) => (
-              <Link key={s.key} href={s.href} prefetch={false}
-                className={`${s.bg} border-2 ${s.border} rounded-2xl p-6 flex flex-col gap-3 transition-all hover:shadow-lg ${s.hover} hover:-translate-y-0.5 cursor-pointer`}>
-                <div className="flex items-center gap-3">
-                  <div className="w-14 h-14 flex items-center justify-center">{s.icon ? <Image src={s.icon} alt="" width={56} height={56} className="w-full h-full object-contain" /> : <span className="text-4xl">{s.emoji}</span>}</div>
-                  <div>
-                    <div className={`font-extrabold text-base ${s.textColor}`}>{tr(s.label as Parameters<typeof tr>[0])}</div>
-                    <div className={`text-xs ${s.descColor} font-medium`}>{s.desc}</div>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-1.5 mt-1">
-                  {s.topics.map(t => (
-                    <span key={t} className={`text-[11px] ${s.bg} ${s.border} border rounded-full px-2 py-0.5 ${s.textColor} font-medium`}>{t}</span>
-                  ))}
-                  <span className={`text-[11px] rounded-full px-2 py-0.5 ${s.textColor} font-medium opacity-50`}>…</span>
+          <h2 id="home-subjects-title" className="text-2xl font-bold text-center text-gray-800 mb-6">{tr("subjectsTitle")}</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {topicIndex.map(s => (
+              <Link key={s.subject} href={`/learn/${s.grades[0]}/${s.subject}`} prefetch={false}
+                className={`${({ math: "bg-blue-50 border-blue-200 text-blue-800", german: "bg-yellow-50 border-yellow-200 text-yellow-800", science: "bg-green-50 border-green-200 text-green-800", english: "bg-purple-50 border-purple-200 text-purple-800", french: "bg-rose-50 border-rose-200 text-rose-800", mi: "bg-cyan-50 border-cyan-200 text-cyan-800" } as Record<string, string>)[s.subject]} border-2 rounded-2xl p-3 sm:p-4 min-h-24 flex items-center gap-2 sm:gap-3 hover:shadow-md transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700`}>
+                <Image src={s.icon} alt="" width={40} height={40} className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 object-contain" />
+                <div className="min-w-0">
+                  <span className="block font-bold text-sm sm:text-base leading-snug">{getLocalizedSubjectName(s.subject, lang)}</span>
+                  <span className="block mt-1 text-xs opacity-80">
+                    {lang === "fr" ? "Années" : lang === "it" ? "Classi" : lang === "en" ? "Grades" : "Klassen"} {s.grades.join("–") === Array.from({ length: s.grades.length }, (_, i) => s.grades[0] + i).join("–") ? `${s.grades[0]}–${s.grades[s.grades.length - 1]}` : s.grades.join(", ")}
+                  </span>
                 </div>
               </Link>
             ))}
