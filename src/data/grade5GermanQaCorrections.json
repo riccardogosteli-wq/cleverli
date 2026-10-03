@@ -531,11 +531,69 @@
       "altAnswers": [
         "Wer, wann, wo",
         "Wer, was, wann und wo",
-        "die W-Fragen"
+        "die W-Fragen",
+        "Wer, was, wann, wo",
+        "Wer, was, wo, wann",
+        "Wer, was, wo und wann",
+        "Wer, wann, was, wo",
+        "Wer, wann, was und wo",
+        "Wer, wann, wo, was",
+        "Wer, wann, wo und was",
+        "Wer, wo, was, wann",
+        "Wer, wo, was und wann",
+        "Wer, wo, wann, was",
+        "Wer, wo, wann und was",
+        "was, Wer, wann, wo",
+        "was, Wer, wann und wo",
+        "was, Wer, wo, wann",
+        "was, Wer, wo und wann",
+        "was, wann, Wer, wo",
+        "was, wann, Wer und wo",
+        "was, wann, wo, Wer",
+        "was, wann, wo und Wer",
+        "was, wo, Wer, wann",
+        "was, wo, Wer und wann",
+        "was, wo, wann, Wer",
+        "was, wo, wann und Wer",
+        "wann, Wer, was, wo",
+        "wann, Wer, was und wo",
+        "wann, Wer, wo, was",
+        "wann, Wer, wo und was",
+        "wann, was, Wer, wo",
+        "wann, was, Wer und wo",
+        "wann, was, wo, Wer",
+        "wann, was, wo und Wer",
+        "wann, wo, Wer, was",
+        "wann, wo, Wer und was",
+        "wann, wo, was, Wer",
+        "wann, wo, was und Wer",
+        "wo, Wer, was, wann",
+        "wo, Wer, was und wann",
+        "wo, Wer, wann, was",
+        "wo, Wer, wann und was",
+        "wo, was, Wer, wann",
+        "wo, was, Wer und wann",
+        "wo, was, wann, Wer",
+        "wo, was, wann und Wer",
+        "wo, wann, Wer, was",
+        "wo, wann, Wer und was",
+        "wo, wann, was, Wer",
+        "wo, wann, was und Wer",
+        "Wer, wann und wo",
+        "Wer, wo, wann",
+        "Wer, wo und wann",
+        "wann, Wer, wo",
+        "wann, Wer und wo",
+        "wann, wo, Wer",
+        "wann, wo und Wer",
+        "wo, Wer, wann",
+        "wo, Wer und wann",
+        "wo, wann, Wer",
+        "wo, wann und Wer"
       ],
       "hints": [
-        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
-        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+        "Am Anfang braucht die lesende Person Orientierung: Figuren, Ort und Zeit werden vorgestellt.",
+        "Überlege, welche Fragewörter nach den Personen, dem Geschehen, der Zeit und dem Ort fragen."
       ]
     },
     "g5au1e": {
@@ -571,8 +629,8 @@
         "darstellen"
       ],
       "hints": [
-        "Vergleiche die Merkmale der Begriffe mit der gestellten Frage.",
-        "Prüfe, ob dein Eintrag inhaltlich und sprachlich zum Satz passt."
+        "Vergleiche «ein Haus» mit «ein altes, windschiefes Haus». Was erfährst du durch die zusätzlichen Wörter?",
+        "Die Wörter «alt» und «windschief» sagen genauer, wie das Haus ist. Gesucht ist ein Verb dafür, was Adjektive mit Eigenschaften tun."
       ],
       "spokenPrompt": "Adjektive machen einen Text anschaulich, indem sie Eigenschaften ….",
       "verbatimSpeech": true
@@ -2593,6 +2651,12 @@
     },
     "g5hoer50": {
       "verbatimSpeech": true
+    },
+    "g5d22": {
+      "hints": [
+        "Ein Aufsatz hat einen Anfang, einen mittleren Abschnitt und ein Ende. In welchem Abschnitt wird das Geschehen ausführlich erzählt?",
+        "Gesucht ist der Name des Abschnitts zwischen Einleitung und Schluss."
+      ]
     }
   }
 }
