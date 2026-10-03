@@ -139,8 +139,6 @@ export default function Home() {
         </div>
       </section>
 
-      <HomePlatformOverview />
-
       {/* How it works — with mascot poses */}
       <section className="bg-green-50 py-10 sm:py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
@@ -334,6 +332,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <HomePlatformOverview />
 
       {/* FAQ: server-rendered JSON-LD follows the same translated items as the accordion. */}
       <script
