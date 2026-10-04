@@ -29,14 +29,21 @@
     "mi4-informationen-pruefen-4-fb6": {
       "altAnswers": [
         "Informationsquelle"
-      ]
+      ],
+      "question": "Quellen widersprechen. Ich prüfe mit einer weiteren ___.",
+      "spokenPrompt": "Quellen widersprechen. Ich prüfe mit einer weiteren …. Ergänze die fehlende Antwort."
     },
     "mi4-informationen-pruefen-4-fb7": {
       "altAnswers": [
-        "behauptet",
-        "schreibt",
-        "veröffentlicht",
-        "mitteilt"
+        "Intention",
+        "Zielsetzung"
+      ],
+      "question": "Ob eine Quelle informieren, werben oder überzeugen möchte, zeigt ihre ___.",
+      "spokenPrompt": "Ob eine Quelle informieren, werben oder überzeugen möchte, zeigt ihre …. Ergänze die fehlende Antwort.",
+      "answer": "Absicht",
+      "hints": [
+        "Frage dich, was die Quelle mit ihrem Beitrag erreichen möchte.",
+        "Denke nicht nur an den Inhalt, sondern auch an den Zweck."
       ]
     },
     "mi4-programme-befehle-4-fb1": {
@@ -73,15 +80,17 @@
       "altAnswers": [
         "Programmfehler",
         "Bug"
-      ]
+      ],
+      "question": "Ein Ablauf stockt. Ich suche den ___.",
+      "spokenPrompt": "Ein Ablauf stockt. Ich suche den …. Ergänze die fehlende Antwort."
     },
     "mi4-informationen-pruefen-4-fb5": {
       "question": "Ergänze das Gegenteil von «richtig»: Eine Meinung ist nicht automatisch ___.",
       "spokenPrompt": "Ergänze das Gegenteil von «richtig»: Eine Meinung ist nicht automatisch …. Ergänze die fehlende Antwort."
     },
     "mi4-programme-befehle-4-mc6": {
-      "question": "Welche Antwort enthält eine Bedingung mit einer zugehörigen Handlung?",
-      "spokenPrompt": "Welche Antwort enthält eine Bedingung mit einer zugehörigen Handlung?"
+      "question": "Welche Regel verbindet eine Bedingung mit einer Handlung?",
+      "spokenPrompt": "Welche Regel verbindet eine Bedingung mit einer Handlung?"
     },
     "mi4-programme-befehle-4-fb4": {
       "question": "In einer Wenn-dann-Regel nennt man die Voraussetzung nach «wenn» die ___.",
@@ -94,7 +103,25 @@
     "mi4-informationen-pruefen-4-me1": {
       "question": "Finde jeweils zwei Karten mit genau demselben Text.",
       "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
-      "verbatimSpeech": true
+      "verbatimSpeech": true,
+      "pairs": [
+        {
+          "id": "mi4-informationen-pruefen-4-me1-p1",
+          "label": "Quelle: Ursprung"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-me1-p2",
+          "label": "Beleg: Nachweis"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-me1-p3",
+          "label": "Meinung: Einschätzung"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-me1-p4",
+          "label": "Tatsache: wirklich so und belegbar"
+        }
+      ]
     },
     "mi4-informationen-pruefen-4-me2": {
       "question": "Finde jeweils zwei Karten mit genau demselben Text.",
@@ -134,6 +161,145 @@
           "label": "Falls es regnet"
         }
       ]
+    },
+    "mi4-informationen-pruefen-4-mc7": {
+      "question": "Ein Bild wirkt sehr überraschend. Was prüfst du zusätzlich?",
+      "spokenPrompt": "Ein Bild wirkt sehr überraschend. Was prüfst du zusätzlich?",
+      "hints": [
+        "Prüfe, ob Bild, Text und Quelle zusammenpassen.",
+        "Bilder können auch in einem anderen Zusammenhang entstanden sein."
+      ]
+    },
+    "mi4-informationen-pruefen-4-mc8": {
+      "question": "Zwei Quellen sagen Unterschiedliches. Was ist ein guter nächster Schritt?",
+      "spokenPrompt": "Zwei Quellen sagen Unterschiedliches. Was ist ein guter nächster Schritt?"
+    },
+    "mi4-informationen-pruefen-4-mc9": {
+      "question": "Eine Seite will etwas verkaufen. Wie liest du die Information?",
+      "spokenPrompt": "Eine Seite will etwas verkaufen. Wie liest du die Information?"
+    },
+    "mi4-informationen-pruefen-4-ws1": {
+      "hints": [
+        "Suche waagrecht von links nach rechts.",
+        "Beginne mit dem längsten Wort."
+      ]
+    },
+    "mi4-programme-befehle-4-mc9": {
+      "question": "Ein Testlauf endet anders als geplant. Was prüfst du zuerst?",
+      "spokenPrompt": "Ein Testlauf endet anders als geplant. Was prüfst du zuerst?"
+    },
+    "mi4-programme-befehle-4-ws1": {
+      "hints": [
+        "Suche waagrecht von links nach rechts.",
+        "Beginne mit dem längsten Wort."
+      ]
+    },
+    "mi4-informationen-pruefen-4-mc6": {
+      "answer": "Etwas, das wirklich so ist und sich belegen lässt.",
+      "options": [
+        "Etwas, das wirklich so ist und sich belegen lässt.",
+        "Ein Wunsch",
+        "Ein Gefühl",
+        "Eine Lieblingsfarbe"
+      ],
+      "hints": [
+        "Suche Belege dafür, dass die Aussage tatsächlich stimmt.",
+        "Eine überprüfbare Behauptung kann sich auch als falsch herausstellen."
+      ]
+    },
+    "mi4-informationen-pruefen-4-ma1": {
+      "pairs": [
+        {
+          "id": "mi4-informationen-pruefen-4-ma1-l1",
+          "label": "Quelle"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-ma1-r1",
+          "label": "Ursprung"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-ma1-l2",
+          "label": "Beleg"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-ma1-r2",
+          "label": "Nachweis"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-ma1-l3",
+          "label": "Meinung"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-ma1-r3",
+          "label": "Einschätzung"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-ma1-l4",
+          "label": "Tatsache"
+        },
+        {
+          "id": "mi4-informationen-pruefen-4-ma1-r4",
+          "label": "wirklich so und belegbar"
+        }
+      ]
+    },
+    "mi4-informationen-pruefen-4-dd3": {
+      "question": "Sortiere: Hinweise zu Herkunft oder Zeitpunkt und Warnzeichen.",
+      "dropZones": [
+        {
+          "id": "reliable",
+          "label": "Herkunft oder Zeitpunkt prüfen"
+        },
+        {
+          "id": "unclear",
+          "label": "Warnzeichen"
+        }
+      ],
+      "hints": [
+        "Ein Name oder Datum hilft beim Prüfen, beweist aber noch nicht, dass der Inhalt stimmt.",
+        "Zeitdruck und fehlende Quellen sind Gründe, genauer hinzuschauen."
+      ],
+      "spokenPrompt": "Sortiere: Hinweise zu Herkunft oder Zeitpunkt und Warnzeichen."
+    },
+    "mi4-informationen-pruefen-4-sr1": {
+      "question": "Nenne mindestens zwei Schritte, um eine überraschende Nachricht zu prüfen. Erkläre auch den Unterschied zwischen Tatsache und Meinung.",
+      "answer": "Ich prüfe, wer die Nachricht geschrieben hat und wann. Ich suche eine zweite unabhängige Quelle. Eine Abfahrtszeit kann ich im aktuellen Fahrplan nachprüfen; «der beste Bus» ist eine Meinung.",
+      "spokenPrompt": "Nenne mindestens zwei Schritte, um eine überraschende Nachricht zu prüfen. Erkläre auch den Unterschied zwischen Tatsache und Meinung."
+    },
+    "mi4-informationen-pruefen-4-sr2": {
+      "question": "Zwei Quellen sagen Unterschiedliches. Schreibe eine Wenn-dann-Regel und erkläre, wie du weiterprüfst, bevor du die Information teilst.",
+      "answer": "Wenn zwei Quellen Unterschiedliches sagen, dann suche ich eine weitere verlässliche Quelle. Ich vergleiche die Belege und teile die Information nicht vorschnell.",
+      "spokenPrompt": "Zwei Quellen sagen Unterschiedliches. Schreibe eine Wenn-dann-Regel und erkläre, wie du weiterprüfst, bevor du die Information teilst."
+    },
+    "mi4-programme-befehle-4-mc7": {
+      "answer": "Wiederhole fünfmal: Zeichne einen Kreis.",
+      "options": [
+        "Wiederhole fünfmal: Zeichne einen Kreis.",
+        "Vergiss den ersten Schritt",
+        "Wähle eine zufällige Farbe",
+        "Schalte das Heft aus"
+      ]
+    },
+    "mi4-programme-befehle-4-mc8": {
+      "question": "Eine Figur soll sich am Rand umdrehen. Welche Wenn-dann-Regel passt?",
+      "spokenPrompt": "Eine Figur soll sich am Rand umdrehen. Welche Wenn-dann-Regel passt?"
+    },
+    "mi4-programme-befehle-4-sr1": {
+      "answer": "Wenn es regnet, dann ziehe ich meine Regenjacke an."
+    },
+    "mi4-programme-befehle-4-sr2": {
+      "question": "Ein Roboter soll bei Rot stehen bleiben. Sein Programm lautet: «Wenn rot, dann weitergehen.» Beschreibe den Fehler und eine passende Verbesserung.",
+      "answer": "Die Bedingung ist das rote Signal. Der Befehl «weitergehen» passt nicht zum Ziel. Die Regel muss lauten: «Wenn rot, dann stehen bleiben.»",
+      "reviewCriteria": [
+        "Ich nenne die Bedingung.",
+        "Ich erkläre, warum die Handlung nicht zum Ziel passt.",
+        "Ich formuliere eine passende Wenn-dann-Regel."
+      ],
+      "hints": [
+        "Vergleiche das gewünschte Verhalten mit dem Programm.",
+        "Prüfe die Bedingung und den Befehl getrennt."
+      ],
+      "spokenPrompt": "Ein Roboter soll bei Rot stehen bleiben. Sein Programm lautet: «Wenn rot, dann weitergehen.» Beschreibe den Fehler und eine passende Verbesserung."
     }
   }
 }
