@@ -1,0 +1,77 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "days-months-3",
+  "goal": "Im Englischen beginnen Wochentage und Monate gross: Monday, January. Jahreszeiten meist klein: spring, summer, autumn, winter. Hier beginnt die Woche mit Monday.",
+  "sections": [
+    {
+      "title": "Setze den nächsten Wochentag ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Monday →",
+          "answer": "Tuesday"
+        },
+        {
+          "prompt": "Wednesday →",
+          "answer": "Thursday"
+        },
+        {
+          "prompt": "Friday →",
+          "answer": "Saturday"
+        },
+        {
+          "prompt": "Sunday →",
+          "answer": "Monday"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die englischen Wörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Januar",
+          "answer": "January"
+        },
+        {
+          "prompt": "Juni",
+          "answer": "June"
+        },
+        {
+          "prompt": "Sommer",
+          "answer": "summer"
+        },
+        {
+          "prompt": "Winter",
+          "answer": "winter"
+        }
+      ]
+    },
+    {
+      "title": "Lies und übersetze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«The party is on Saturday in June.» An welchem Wochentag und in welchem Monat findet das Fest statt?",
+          "answer": "Am Samstag im Juni.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Schreibe richtig gross oder klein: «monday, summer, january».",
+          "answer": "Monday, summer, January",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.E.1",
+    "scope": "Häufige Wochentage, Monate und Jahreszeiten mit passender Grossschreibung verwenden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|5|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

@@ -1,0 +1,65 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "food-drink-3",
+  "goal": "Essen und Trinken: bread = Brot, cheese = Käse, an apple = ein Apfel, water = Wasser. «I like ...» bedeutet «Ich mag ...». Vorlieben dürfen unterschiedlich sein.",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "bread",
+          "answer": "Brot"
+        },
+        {
+          "prompt": "cheese",
+          "answer": "Käse"
+        },
+        {
+          "prompt": "apple",
+          "answer": "Apfel"
+        },
+        {
+          "prompt": "water",
+          "answer": "Wasser"
+        }
+      ]
+    },
+    {
+      "title": "Lies den Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Mia likes apples. Ben likes bread.» Was mag Mia?",
+          "answer": "Äpfel",
+          "wide": true
+        },
+        {
+          "prompt": "Was mag Ben?",
+          "answer": "Brot",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe über Vorlieben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen Satz mit «I like ...» und einen mit «I do not like ...». Nutze bread, cheese, apples oder water. Du darfst Vorlieben erfinden.",
+          "answer": "Beispiel: I like bread. I do not like cheese. Grammatik und passende Wörter zählen, keine Bewertung der Vorlieben.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.B.1",
+    "scope": "Einfache Lebensmittelwörter verstehen und Vorlieben ausdrücken. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

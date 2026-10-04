@@ -1,0 +1,65 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "colours-shapes-3",
+  "goal": "Farben und Formen: red = rot, blue = blau, green = grün, yellow = gelb. A circle ist ein Kreis, a triangle ein Dreieck, a square ein Quadrat. Auch in Schwarzweiss lösbar.",
+  "sections": [
+    {
+      "title": "Schreibe die englischen Wörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "rot",
+          "answer": "red"
+        },
+        {
+          "prompt": "blau",
+          "answer": "blue"
+        },
+        {
+          "prompt": "grün",
+          "answer": "green"
+        },
+        {
+          "prompt": "gelb",
+          "answer": "yellow"
+        }
+      ]
+    },
+    {
+      "title": "Benenne die Form auf Englisch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Form:",
+          "answer": "circle",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 110 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"45\" cy=\"24\" r=\"19\" fill=\"#deebed\" stroke=\"#385a68\" stroke-width=\"1.5\"/></svg>"
+        },
+        {
+          "prompt": "Form:",
+          "answer": "triangle",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 110 48\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"20,43 45,5 70,43\" fill=\"#deebed\" stroke=\"#385a68\" stroke-width=\"1.5\"/></svg>"
+        }
+      ]
+    },
+    {
+      "title": "Lies und zeichne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Draw a square. Write blue inside it.» Zeichne und führe die Anweisung aus. Du brauchst keinen Farbstift.",
+          "answer": "Quadrat mit dem englischen Wort blue im Inneren.",
+          "wide": true,
+          "drawingHeight": 44
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.B.1",
+    "scope": "Grundlegende Farb- und Formwörter sowie eine einfache Zeichenanweisung verstehen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

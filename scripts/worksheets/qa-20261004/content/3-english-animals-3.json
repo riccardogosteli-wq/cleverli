@@ -1,0 +1,70 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "animals-3",
+  "goal": "Tiere auf Englisch: cat = Katze, dog = Hund, bird = Vogel, fish = Fisch. «It can ...» bedeutet «Es kann ...». «A duck can swim.» heisst «Eine Ente kann schwimmen».",
+  "sections": [
+    {
+      "title": "Schreibe die englischen Tierwörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Katze",
+          "answer": "cat"
+        },
+        {
+          "prompt": "Hund",
+          "answer": "dog"
+        },
+        {
+          "prompt": "Vogel",
+          "answer": "bird"
+        },
+        {
+          "prompt": "Fisch",
+          "answer": "fish"
+        }
+      ]
+    },
+    {
+      "title": "Ergänze passend.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "A duck can __. (swim / read)",
+          "answer": "swim",
+          "wide": true
+        },
+        {
+          "prompt": "A dog can __. (bark / write)",
+          "answer": "bark",
+          "wide": true
+        },
+        {
+          "prompt": "A fish can __. (swim / sing)",
+          "answer": "swim",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe zwei Sätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe auf Englisch: «Das ist eine Ente. Sie kann schwimmen.» Wörter: duck, swim.",
+          "answer": "This is a duck. It can swim.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.B.1",
+    "scope": "Tiere und einfache Fähigkeiten mit can benennen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

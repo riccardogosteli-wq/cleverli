@@ -1,0 +1,65 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "greetings-3",
+  "goal": "Hello! bedeutet Hallo! Mit «My name is ...» nennst du einen Namen. «What is your name?» fragt nach dem Namen. Du darfst für diese Aufgaben eine Person erfinden.",
+  "sections": [
+    {
+      "title": "Ordne die Bedeutung zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Hello!",
+          "answer": "Hallo!"
+        },
+        {
+          "prompt": "Good morning!",
+          "answer": "Guten Morgen!"
+        },
+        {
+          "prompt": "Goodbye!",
+          "answer": "Auf Wiedersehen! / Tschüss!"
+        },
+        {
+          "prompt": "Thank you!",
+          "answer": "Danke!"
+        }
+      ]
+    },
+    {
+      "title": "Ergänze den Dialog.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "A: What is your name? B: My __ is Mia.",
+          "answer": "name",
+          "wide": true
+        },
+        {
+          "prompt": "A: Nice to meet you. B: Nice to meet you, __.",
+          "answer": "too",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine kleine Vorstellung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Begrüsse jemanden auf Englisch und nenne einen erfundenen Namen. Schreibe zwei kurze Sätze.",
+          "answer": "Beispiel: Hello! My name is Sam. Begrüssung und passende Vorstellung; erfundener Name erlaubt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.4.A.1",
+    "scope": "Häufige Begrüssungen verstehen und eine kurze Vorstellung schriftlich gestalten. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

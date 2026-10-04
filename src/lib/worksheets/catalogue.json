@@ -2470,20 +2470,20 @@
     "topicId": "greetings-3",
     "title": "Greetings & Introductions",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.4.A.1",
       "scope": "Häufige Begrüssungen verstehen und eine kurze Vorstellung schriftlich gestalten. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/greetings-3-arbeitsblatt.pdf",
-        "sha256": "c5701c78b35b77efe3bcfc734ecbe71c190b673d2463cf8ee9a91a3ba65d8308",
-        "bytes": 858058
+        "path": "revisions/20261004/pdfs/3/english/greetings-3-arbeitsblatt.pdf",
+        "sha256": "74c2ebba20e04fcece03670c87476d0eacb63a98c879f6b78ca9cfa8bd29246e",
+        "bytes": 857983
       },
       "solution": {
-        "path": "pdfs/3/english/greetings-3-loesungen.pdf",
-        "sha256": "2ba5cf0652e388672a30d5ef4ace7ae3a48dacb3e6081e4c04fc1c3e52b69cef",
-        "bytes": 886266
+        "path": "revisions/20261004/pdfs/3/english/greetings-3-loesungen.pdf",
+        "sha256": "8456eea96e196f44e70195d278cabe76a97f9c1d337df930c0b27d184f7d9f90",
+        "bytes": 885706
       }
     }
   },
@@ -2494,20 +2494,20 @@
     "topicId": "numbers-3",
     "title": "Numbers 1–100",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.B.1",
       "scope": "Englische Zahlwörter bis 100 lesen und häufige Formen schreiben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/numbers-3-arbeitsblatt.pdf",
-        "sha256": "76cd02f2eaec36dd20d4fc078fa3bb6bab4436bd4726954b1c0a5185e28a3f33",
-        "bytes": 858895
+        "path": "revisions/20261004/pdfs/3/english/numbers-3-arbeitsblatt.pdf",
+        "sha256": "13e08cba62973e0df625e7cf18b4c613533af834668753d6771e54f3b5cab9f0",
+        "bytes": 858586
       },
       "solution": {
-        "path": "pdfs/3/english/numbers-3-loesungen.pdf",
-        "sha256": "d74bfe838968bfa034f9b2bdc9dfb69205c229e4504cf4bf8fb34507450117e0",
-        "bytes": 883719
+        "path": "revisions/20261004/pdfs/3/english/numbers-3-loesungen.pdf",
+        "sha256": "e3c0141a44d26ac7fa6fb7808042d440e81fe65a708da6259338179e40fb767b",
+        "bytes": 883250
       }
     }
   },
@@ -2518,20 +2518,20 @@
     "topicId": "colours-shapes-3",
     "title": "Colours & Shapes",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.B.1",
       "scope": "Grundlegende Farb- und Formwörter sowie eine einfache Zeichenanweisung verstehen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/colours-shapes-3-arbeitsblatt.pdf",
-        "sha256": "10bc21014cf2bce011af10116044fe2d96746b0fdc4c7ce58820222dd50b1b8b",
-        "bytes": 858523
+        "path": "revisions/20261004/pdfs/3/english/colours-shapes-3-arbeitsblatt.pdf",
+        "sha256": "1ba8f377446611319853f424a677d897349cad704168bf2c63b6f8861795816c",
+        "bytes": 859063
       },
       "solution": {
-        "path": "pdfs/3/english/colours-shapes-3-loesungen.pdf",
-        "sha256": "b79b48e57fcf5455723b726ae2e3fb4a8ac8f95bfea27fbe0614eb845030ddc9",
-        "bytes": 882569
+        "path": "revisions/20261004/pdfs/3/english/colours-shapes-3-loesungen.pdf",
+        "sha256": "0124d44ed88e788f0863d28faec8974c62e1f75b550714b762f89624b6aaed89",
+        "bytes": 882101
       }
     }
   },
@@ -2542,20 +2542,20 @@
     "topicId": "school-objects-3",
     "title": "School & Objects",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.B.1",
       "scope": "Schulgegenstände benennen und das Muster This is a verwenden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/school-objects-3-arbeitsblatt.pdf",
-        "sha256": "723d9b3c713080d92cf8a343065aee30b7efdcac670354f3d34f65ec90cdaa64",
-        "bytes": 854139
+        "path": "revisions/20261004/pdfs/3/english/school-objects-3-arbeitsblatt.pdf",
+        "sha256": "ea832881a4cde8d6a21262e6a1204f73b468b78a2f04b404224b400c2accc004",
+        "bytes": 853836
       },
       "solution": {
-        "path": "pdfs/3/english/school-objects-3-loesungen.pdf",
-        "sha256": "0b1f9055b21b64bdfec115a1ac6d6e75048e9d5598a38c6e2032091d53ba7fff",
-        "bytes": 878261
+        "path": "revisions/20261004/pdfs/3/english/school-objects-3-loesungen.pdf",
+        "sha256": "08e6a6cb3baeca35c1179b9c7912f7c1a1a40f849c24716340472765e318fd50",
+        "bytes": 877787
       }
     }
   },
@@ -2566,20 +2566,20 @@
     "topicId": "family-friends-3",
     "title": "Family & Friends",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Familien- und Freundschaftswörter in einem fiktiven Kurztext verstehen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/family-friends-3-arbeitsblatt.pdf",
-        "sha256": "f2b6756eb672bbee9b021801d3de36b6bc7cf64c346348ad4268ed83679c17ab",
-        "bytes": 858995
+        "path": "revisions/20261004/pdfs/3/english/family-friends-3-arbeitsblatt.pdf",
+        "sha256": "4dbce7be0901d1cd5ac6d5bb20436f1dfe32a9fb0d71b0fd49f0ace62357393b",
+        "bytes": 858691
       },
       "solution": {
-        "path": "pdfs/3/english/family-friends-3-loesungen.pdf",
-        "sha256": "ae3a9db48a4f52c6205a31064ccb0164dadfc151aec7ad32adb3693bda52ac08",
-        "bytes": 886332
+        "path": "revisions/20261004/pdfs/3/english/family-friends-3-loesungen.pdf",
+        "sha256": "31d56ad189ee6f7bec68321cf7cc63c5c5538cc1c9f021031fb3910f5cfc0d2c",
+        "bytes": 885890
       }
     }
   },
@@ -2590,20 +2590,20 @@
     "topicId": "animals-3",
     "title": "Animals",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.B.1",
       "scope": "Tiere und einfache Fähigkeiten mit can benennen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/animals-3-arbeitsblatt.pdf",
-        "sha256": "a9f99da588971dd2c37456f2f11c5c651c3dcd48ff450cb102e7695a410e7aa5",
-        "bytes": 855277
+        "path": "revisions/20261004/pdfs/3/english/animals-3-arbeitsblatt.pdf",
+        "sha256": "470abab75cdca1f5a0c6a36917493c37afb0be67f3e870ccca13791c9728418b",
+        "bytes": 855328
       },
       "solution": {
-        "path": "pdfs/3/english/animals-3-loesungen.pdf",
-        "sha256": "6e63de22880e06fe0ee620b131a2bc8ae7344faf96580788a7961eff3dce743b",
-        "bytes": 879540
+        "path": "revisions/20261004/pdfs/3/english/animals-3-loesungen.pdf",
+        "sha256": "cee46a7f1c9b15420ced3b01aa953216e94f441e21e457419aa1a565aefd88e3",
+        "bytes": 879469
       }
     }
   },
@@ -2614,20 +2614,20 @@
     "topicId": "food-drink-3",
     "title": "Food & Drink",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.B.1",
       "scope": "Einfache Lebensmittelwörter verstehen und Vorlieben ausdrücken. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/food-drink-3-arbeitsblatt.pdf",
-        "sha256": "e41665f08e02b8082a5771b631e23b3db9f62395ba3b40399f1f19fe0c4d732e",
-        "bytes": 856208
+        "path": "revisions/20261004/pdfs/3/english/food-drink-3-arbeitsblatt.pdf",
+        "sha256": "15b4b8734c7c6d6e0462386f10f06c8906096e1eee0583d74a65188586191942",
+        "bytes": 855899
       },
       "solution": {
-        "path": "pdfs/3/english/food-drink-3-loesungen.pdf",
-        "sha256": "f3bcf0fb17e79597dc8f9f38acccb6ec3c5d868c4e01b13887e33dde8a2d9ca5",
-        "bytes": 884593
+        "path": "revisions/20261004/pdfs/3/english/food-drink-3-loesungen.pdf",
+        "sha256": "d9917503a90d1bec63c2ddbb1f6a22897a04f06834e60bb7ea15c151ee9212df",
+        "bytes": 884128
       }
     }
   },
@@ -2638,20 +2638,20 @@
     "topicId": "days-months-3",
     "title": "Days, Months & Seasons",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.E.1",
       "scope": "Häufige Wochentage, Monate und Jahreszeiten mit passender Grossschreibung verwenden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/days-months-3-arbeitsblatt.pdf",
-        "sha256": "5f4ea1a82d54896e5c7c524fa64e3f80ae2fa5ad13093acb93a1853af489f9d9",
-        "bytes": 859014
+        "path": "revisions/20261004/pdfs/3/english/days-months-3-arbeitsblatt.pdf",
+        "sha256": "43d86b89972e3588416e2eb7d8a6f308f3a1ba6949371f6c2b647b00811fc36a",
+        "bytes": 858711
       },
       "solution": {
-        "path": "pdfs/3/english/days-months-3-loesungen.pdf",
-        "sha256": "e47fa1983badcc0da3134cceb02a0bc37962d35759165622fedbaf2377826074",
-        "bytes": 885174
+        "path": "revisions/20261004/pdfs/3/english/days-months-3-loesungen.pdf",
+        "sha256": "b94f81ba82ba8bf28ff63164207089b57760c8c1bd2ae4d7976d4e56063656b3",
+        "bytes": 884711
       }
     }
   },
@@ -2662,20 +2662,20 @@
     "topicId": "simple-sentences-3",
     "title": "Simple Sentences",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.D.1",
       "scope": "Einfache Aussagesätze und häufige Formen von be schriftlich verwenden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/english/simple-sentences-3-arbeitsblatt.pdf",
-        "sha256": "5a214032101d20e04256dce42f148da4d22e3132c3084e61fa7bbfd13520713c",
-        "bytes": 857278
+        "path": "revisions/20261004/pdfs/3/english/simple-sentences-3-arbeitsblatt.pdf",
+        "sha256": "bbafa40e7c08dd33b9043f398321729dfbbb65b7da2a037a21bc8d4061c38e8e",
+        "bytes": 857436
       },
       "solution": {
-        "path": "pdfs/3/english/simple-sentences-3-loesungen.pdf",
-        "sha256": "c20b64cb1c170281af356c1cc57898281ad0cda28a0fd56dbd620ac48a33d83e",
-        "bytes": 884550
+        "path": "revisions/20261004/pdfs/3/english/simple-sentences-3-loesungen.pdf",
+        "sha256": "2aa1d86a466c1f3b38024ff9717a1afd71b8a29c443c35268f52cf78fb2f1f70",
+        "bytes": 884713
       }
     }
   },

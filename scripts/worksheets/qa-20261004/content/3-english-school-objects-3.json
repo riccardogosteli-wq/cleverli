@@ -1,0 +1,65 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "school-objects-3",
+  "goal": "In der Schule: a book = ein Buch, a pencil = ein Bleistift, a ruler = ein Lineal, a bag = eine Tasche. «This is a ...» bedeutet «Das ist ein/e ...».",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "book",
+          "answer": "Buch"
+        },
+        {
+          "prompt": "pencil",
+          "answer": "Bleistift"
+        },
+        {
+          "prompt": "ruler",
+          "answer": "Lineal"
+        },
+        {
+          "prompt": "bag",
+          "answer": "Tasche"
+        }
+      ]
+    },
+    {
+      "title": "Wähle das passende Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "I read a ... . (book / ruler)",
+          "answer": "book",
+          "wide": true
+        },
+        {
+          "prompt": "I draw with a ... . (bag / pencil)",
+          "answer": "pencil",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe zwei Gegenstände.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei englische Sätze mit «This is a ...». Verwende book und ruler.",
+          "answer": "This is a book. This is a ruler.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.B.1",
+    "scope": "Schulgegenstände benennen und das Muster This is a verwenden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

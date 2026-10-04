@@ -1,0 +1,68 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "family-friends-3",
+  "goal": "This is Sam. Sam has a sister. Her name is Mia. Sam and Mia have a friend. His name is Ben. They play together. Diese Personen sind erfunden; du musst nichts über deine eigene Familie erzählen.",
+  "sections": [
+    {
+      "title": "Lies den englischen Text. Antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie heisst Sams Schwester?",
+          "answer": "Mia"
+        },
+        {
+          "prompt": "Wie heisst ihr Freund?",
+          "answer": "Ben"
+        },
+        {
+          "prompt": "Was machen die drei zusammen?",
+          "answer": "Sie spielen zusammen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ordne die Wörter zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "sister",
+          "answer": "Schwester"
+        },
+        {
+          "prompt": "friend",
+          "answer": "Freund oder Freundin"
+        },
+        {
+          "prompt": "mother",
+          "answer": "Mutter"
+        },
+        {
+          "prompt": "father",
+          "answer": "Vater"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe über eine erfundene Person.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe «This is ...» mit einem erfundenen Namen. Ergänze einen zweiten Satz mit «This is my friend.»",
+          "answer": "Beispiel: This is Alex. This is my friend. Andere erfundene Namen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Familien- und Freundschaftswörter in einem fiktiven Kurztext verstehen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

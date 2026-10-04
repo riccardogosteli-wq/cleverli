@@ -1,0 +1,67 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "simple-sentences-3",
+  "goal": "Kurze Sätze: I am happy. You are here. She is nine. Das Verb passt zur Person: I am, you are, he/she/it is, we/they are. Ein englischer Satz beginnt gross und endet mit einem Schlusszeichen.",
+  "sections": [
+    {
+      "title": "Ergänze am, is oder are.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "I __ here.",
+          "answer": "am"
+        },
+        {
+          "prompt": "You __ kind.",
+          "answer": "are"
+        },
+        {
+          "prompt": "She __ happy.",
+          "answer": "is"
+        },
+        {
+          "prompt": "We __ friends.",
+          "answer": "are"
+        }
+      ]
+    },
+    {
+      "title": "Ordne die Wörter zu einem Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "a book / have / I",
+          "answer": "I have a book.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "is / This / a cat",
+          "answer": "This is a cat.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Schreibe mit dem Muster.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei erfundene Sätze: einen mit «I am ...» und einen mit «We are ...». Wörter: happy, friends, here.",
+          "answer": "Beispiel: I am happy. We are friends. Passende am/are-Formen, sinnvolle Sätze.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.D.1",
+    "scope": "Einfache Aussagesätze und häufige Formen von be schriftlich verwenden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

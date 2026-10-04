@@ -1,0 +1,85 @@
+{
+  "grade": 3,
+  "subject": "english",
+  "sourceId": "numbers-3",
+  "goal": "Zahlwörter helfen beim Zählen: one, two, three, four, five. Beachte: thirteen = 13, thirty = 30, forty = 40. Zusammengesetzte Zahlen schreiben wir hier mit Bindestrich, z. B. twenty-one.",
+  "sections": [
+    {
+      "title": "Schreibe die Ziffern.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "twelve",
+          "answer": "12"
+        },
+        {
+          "prompt": "seventeen",
+          "answer": "17"
+        },
+        {
+          "prompt": "thirty",
+          "answer": "30"
+        },
+        {
+          "prompt": "forty",
+          "answer": "40"
+        },
+        {
+          "prompt": "eighty",
+          "answer": "80"
+        },
+        {
+          "prompt": "one hundred",
+          "answer": "100"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die Zahlwörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "15",
+          "answer": "fifteen"
+        },
+        {
+          "prompt": "20",
+          "answer": "twenty"
+        },
+        {
+          "prompt": "21",
+          "answer": "twenty-one"
+        },
+        {
+          "prompt": "99",
+          "answer": "ninety-nine"
+        }
+      ]
+    },
+    {
+      "title": "Setze die Zahlenfolge auf Englisch fort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "ten, twenty, thirty, __, __",
+          "answer": "forty, fifty",
+          "wide": true,
+          "blankWidth": 45
+        },
+        {
+          "prompt": "Schreibe «I have ... pencils.» mit der Zahl 8 als englischem Wort.",
+          "answer": "I have eight pencils.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.B.1",
+    "scope": "Englische Zahlwörter bis 100 lesen und häufige Formen schreiben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}
