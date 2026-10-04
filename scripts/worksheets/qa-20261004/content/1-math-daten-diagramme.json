@@ -1,0 +1,62 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "daten-diagramme",
+  "goal": "Lieblingsobst: Apfel 4 Kinder, Birne 2, Banane 3. Jedes Kind wählt einmal.",
+  "sections": [
+    {
+      "title": "Lies die Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Lieblingsobst: Apfel 4 Kinder, Birne 2 Kinder, Banane 3 Kinder. Wie viele wählen Birne?",
+          "answer": "2",
+          "wide": true
+        },
+        {
+          "prompt": "Welches Obst wird am häufigsten gewählt?",
+          "answer": "Apfel"
+        },
+        {
+          "prompt": "Wie viele Kinder stimmen insgesamt ab?",
+          "answer": "9"
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Kinder mehr wählen Apfel als Birne?",
+          "answer": "2",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele wählen Apfel oder Banane?",
+          "answer": "7",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Stelle die Daten dar.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne für jedes Kind einen Kreis: Apfel 4, Birne 2, Banane 3. Beschrifte die drei Reihen.",
+          "answer": "Drei beschriftete Reihen mit 4, 2 und 3 Kreisen. Jeder Kreis steht für ein Kind.",
+          "wide": true,
+          "drawingHeight": 44
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.1",
+    "scope": "Kleine Datensammlungen lesen und darstellen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

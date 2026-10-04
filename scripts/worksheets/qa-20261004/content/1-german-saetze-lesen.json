@@ -1,0 +1,65 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "saetze-lesen",
+  "goal": "Lies genau: «Mia malt eine Sonne.» Wer malt? Mia. Was malt sie? Eine Sonne.",
+  "sections": [
+    {
+      "title": "Lies und antworte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Tim hat einen roten Ball. Wer hat den Ball?",
+          "answer": "Tim",
+          "wide": true
+        },
+        {
+          "prompt": "Tim hat einen roten Ball. Welche Farbe hat er?",
+          "answer": "Rot",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Was stimmt? Schreibe ja oder nein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Lea liest ein Buch. Liest Lea?",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Lea liest ein Buch. Malt Lea?",
+          "answer": "Nein"
+        },
+        {
+          "prompt": "Der Hund liegt im Gras. Liegt er im Haus?",
+          "answer": "Nein"
+        },
+        {
+          "prompt": "Der Hund liegt im Gras. Ist er im Gras?",
+          "answer": "Ja"
+        }
+      ]
+    },
+    {
+      "title": "Lies und zeichne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Katze sitzt neben einem Haus. Über dem Haus ist die Sonne.",
+          "answer": "Katze neben dem Haus; Sonne darüber. Künstlerische Ausführung wird nicht bewertet.",
+          "wide": true,
+          "drawingHeight": 45
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.A.1",
+    "scope": "Informationen aus kurzen Sätzen entnehmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

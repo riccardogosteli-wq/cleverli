@@ -1,0 +1,71 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "vokale-konsonanten",
+  "goal": "Sprich die Wörter langsam. Höre auf a, e, i, o und u. Eine erwachsene Person darf vorlesen.",
+  "sections": [
+    {
+      "title": "Finde A, E, I, O und U.",
+      "instruction": "Schreibe nur diese Buchstaben aus jeder Reihe auf.",
+      "items": [
+        {
+          "prompt": "A, M, E, S",
+          "answer": "A, E"
+        },
+        {
+          "prompt": "T, I, L, O",
+          "answer": "I, O"
+        },
+        {
+          "prompt": "U, N, A, R",
+          "answer": "U, A"
+        },
+        {
+          "prompt": "B, E, K, I",
+          "answer": "E, I"
+        }
+      ]
+    },
+    {
+      "title": "Welchen Laut hörst du?",
+      "instruction": "Sprich das Wort. Schreibe den passenden Buchstaben: a, e, i, o oder u.",
+      "items": [
+        {
+          "prompt": "Ball",
+          "answer": "a"
+        },
+        {
+          "prompt": "Bett",
+          "answer": "e"
+        },
+        {
+          "prompt": "Fisch",
+          "answer": "i"
+        },
+        {
+          "prompt": "Hut",
+          "answer": "u"
+        }
+      ]
+    },
+    {
+      "title": "Höre und finde.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Sprich: Ball, Bett, Fisch, Hut. Zeichne zwei davon. Schreibe a, e, i oder u zu jedem Bild.",
+          "answer": "Ball: a; Bett: e; Fisch: i; Hut: u. Zwei passende Bilder mit den richtigen Buchstaben genügen.",
+          "wide": true,
+          "drawingHeight": 38
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.A.1",
+    "scope": "Laute a, e, i, o, u in vertrauten Wörtern hören und passende Buchstaben zuordnen; keine Fachbegriffsprüfung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

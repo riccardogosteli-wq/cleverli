@@ -1,0 +1,71 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "einfache-woerter",
+  "goal": "Lies die Wörter langsam. Verbinde die Laute. Beispiel: R + o + s + e ergibt Rose.",
+  "sections": [
+    {
+      "title": "Setze die Buchstaben zusammen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "M + a + u + s",
+          "answer": "Maus"
+        },
+        {
+          "prompt": "H + u + t",
+          "answer": "Hut"
+        },
+        {
+          "prompt": "R + o + s + e",
+          "answer": "Rose"
+        },
+        {
+          "prompt": "L + a + m + a",
+          "answer": "Lama"
+        }
+      ]
+    },
+    {
+      "title": "Welches Wort passt?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Tier: Maus oder Haus?",
+          "answer": "Maus"
+        },
+        {
+          "prompt": "Auf dem Kopf: Hut oder Mut?",
+          "answer": "Hut"
+        },
+        {
+          "prompt": "Eine Blume: Rose oder Hose?",
+          "answer": "Rose"
+        },
+        {
+          "prompt": "Zum Lesen: Buch oder Tuch?",
+          "answer": "Buch"
+        }
+      ]
+    },
+    {
+      "title": "Lies und zeichne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne: eine Sonne und ein Haus. Schreibe die Wörter unter die Bilder.",
+          "answer": "Beide Gegenstände erkennbar; passende Wörter Sonne und Haus.",
+          "wide": true,
+          "drawingHeight": 44
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.A.1",
+    "scope": "Kurze vertraute Wörter lesen und verstehen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

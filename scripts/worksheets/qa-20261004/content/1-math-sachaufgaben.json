@@ -1,0 +1,59 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "sachaufgaben",
+  "goal": "Kommt etwas dazu? Oder geht etwas weg? Du darfst dir die Geschichten vorlesen lassen.",
+  "sections": [
+    {
+      "title": "Was passt: Plus oder Minus?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Es liegen 5 Bücher da. 2 kommen dazu. Zeichen:",
+          "answer": "+"
+        },
+        {
+          "prompt": "Es sind 8 Kekse da. 3 werden gegessen. Zeichen:",
+          "answer": "−"
+        }
+      ]
+    },
+    {
+      "title": "Rechne und antworte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Im Korb liegen 4 Äpfel. Lea legt 3 dazu. Wie viele Äpfel liegen nun im Korb?",
+          "answer": "4 + 3 = 7 Äpfel",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "9 Kinder spielen. 4 gehen nach Hause. Wie viele bleiben?",
+          "answer": "9 − 4 = 5 Kinder",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Erfinde eine Geschichte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Erzähle oder schreibe eine passende Geschichte zu 6 + 2.",
+          "answer": "Beispiel: 6 Vögel sitzen da, 2 kommen dazu. Nun sind es 8. Kriterium: Ausgangsmenge 6, Zuwachs 2, Gesamtmenge 8.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.2",
+    "scope": "Einfache Sachsituationen mathematisch darstellen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

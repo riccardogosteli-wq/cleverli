@@ -1,0 +1,76 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "verdoppeln-halbieren",
+  "goal": "Doppelt: zweimal gleich viel. Hälfte: zwei gleich grosse Teile.",
+  "sections": [
+    {
+      "title": "Verdopple.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Das Doppelte von 2 ist",
+          "answer": "4"
+        },
+        {
+          "prompt": "Das Doppelte von 3 ist",
+          "answer": "6"
+        },
+        {
+          "prompt": "Das Doppelte von 5 ist",
+          "answer": "10"
+        },
+        {
+          "prompt": "Das Doppelte von 8 ist",
+          "answer": "16"
+        }
+      ]
+    },
+    {
+      "title": "Halbiere.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Hälfte von 4 ist",
+          "answer": "2"
+        },
+        {
+          "prompt": "Die Hälfte von 8 ist",
+          "answer": "4"
+        },
+        {
+          "prompt": "Die Hälfte von 12 ist",
+          "answer": "6"
+        },
+        {
+          "prompt": "Die Hälfte von 20 ist",
+          "answer": "10"
+        }
+      ]
+    },
+    {
+      "title": "Teile gerecht.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwei Kinder teilen 10 Bausteine gleichmässig. Wie viele bekommt jedes Kind? Zeichne deine Verteilung.",
+          "answer": "5 Bausteine pro Kind; zwei Gruppen mit je 5.",
+          "wide": true,
+          "drawingHeight": 36
+        },
+        {
+          "prompt": "Lina hat 6 Steine. Noa hat doppelt so viele. Wie viele hat Noa?",
+          "answer": "12",
+          "wide": true
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Verdoppeln und Halbieren bis 20.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

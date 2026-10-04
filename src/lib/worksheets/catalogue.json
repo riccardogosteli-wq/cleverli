@@ -8,18 +8,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/zahlen-1-10-arbeitsblatt.pdf",
-        "sha256": "0fca678c5e442fb85cddc9eabc49314ac56c6aac40589f067903f24731d346b4",
-        "bytes": 857094
+        "path": "revisions/20261004/pdfs/1/math/zahlen-1-10-arbeitsblatt.pdf",
+        "sha256": "64ff9132b1403a1042798741799266055a786b082b591390bae12af21b2a37ec",
+        "bytes": 862449
       },
       "solution": {
-        "path": "pdfs/1/math/zahlen-1-10-loesungen.pdf",
-        "sha256": "a048d997c5757368f515b32039ced15ddf45b5cdd2582d323977d91566758a25",
-        "bytes": 877634
+        "path": "revisions/20261004/pdfs/1/math/zahlen-1-10-loesungen.pdf",
+        "sha256": "f6de18c517a129ffc4b40d6408a64dc62e7f97ed5fd656921df76511e57cf569",
+        "bytes": 877520
       }
     }
   },
@@ -32,18 +32,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Addieren im Zahlenraum bis 10.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/addition-bis-10-arbeitsblatt.pdf",
-        "sha256": "431e7e440eb2b39023ef23c2f943b0884fd786ddb2cbf17b1db626992205f429",
-        "bytes": 856464
+        "path": "revisions/20261004/pdfs/1/math/addition-bis-10-arbeitsblatt.pdf",
+        "sha256": "46de33a714917e88841647c895c21301805e446a1e1fcf88bf81d196c2d2f3f1",
+        "bytes": 861859
       },
       "solution": {
-        "path": "pdfs/1/math/addition-bis-10-loesungen.pdf",
-        "sha256": "d74ed482bcd5dc32bbe3df3aefb64d09bdd199c02feac27437ce1e12053f1563",
-        "bytes": 879102
+        "path": "revisions/20261004/pdfs/1/math/addition-bis-10-loesungen.pdf",
+        "sha256": "b73cfe2fc997c2460ae8a066107f0c4a72d587acda3ad957e8d4a0dc63a25686",
+        "bytes": 878943
       }
     }
   },
@@ -56,18 +56,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Subtrahieren im Zahlenraum bis 10.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/subtraktion-bis-10-arbeitsblatt.pdf",
-        "sha256": "4f3dfa8b9ea04d7cd3a6de657bb040f5805588c1d2c168e1fde40f0f5f71ffa7",
-        "bytes": 861739
+        "path": "revisions/20261004/pdfs/1/math/subtraktion-bis-10-arbeitsblatt.pdf",
+        "sha256": "48a644477616fc0fdfaef3bb9c06d1374c3448618cbd27a3562c19e70d5376ec",
+        "bytes": 867156
       },
       "solution": {
-        "path": "pdfs/1/math/subtraktion-bis-10-loesungen.pdf",
-        "sha256": "bb92546c95608e295f7e14eca7ce1df7642e1579d9c4bdbae4d64e9fed316da5",
-        "bytes": 883832
+        "path": "revisions/20261004/pdfs/1/math/subtraktion-bis-10-loesungen.pdf",
+        "sha256": "1d1c71e0e8b5f56a75f9c9ab8acc1eb643acb2d7641ca43269ec5e37f515a457",
+        "bytes": 883683
       }
     }
   },
@@ -80,18 +80,18 @@
     "curriculum": {
       "code": "MA.2.A.1",
       "scope": "Kreis, Dreieck, Quadrat und Rechteck erkennen und benennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/formen-arbeitsblatt.pdf",
-        "sha256": "ed687b7de11c9a59b8dae13afdf6e2f0bed11b0d3168f5bc09d8471443a66f3f",
-        "bytes": 848598
+        "path": "revisions/20261004/pdfs/1/math/formen-arbeitsblatt.pdf",
+        "sha256": "1b0cd1d725ba27704295d2e3d0194b88b763a361de604f45745764e2f374cf9e",
+        "bytes": 853688
       },
       "solution": {
-        "path": "pdfs/1/math/formen-loesungen.pdf",
-        "sha256": "be8e5b227cce6b81ba858503a5b8ce6b2ca34ff1c70f75da3fb835ce5cf6a104",
-        "bytes": 875468
+        "path": "revisions/20261004/pdfs/1/math/formen-loesungen.pdf",
+        "sha256": "0738278cfb63fc5f9fa2e117be0d9abbc5c9bc8287cdc69c88294714a86029db",
+        "bytes": 874281
       }
     }
   },
@@ -104,18 +104,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/vergleichen-arbeitsblatt.pdf",
-        "sha256": "1b04af2e2fcc7e1b315d01075ae838df0581547e724d7caeefe72b6ef8a76cd6",
-        "bytes": 857743
+        "path": "revisions/20261004/pdfs/1/math/vergleichen-arbeitsblatt.pdf",
+        "sha256": "670094cd4b90b1023155c00215621b8da94c23101abd741bf451cc78c34cca6b",
+        "bytes": 863288
       },
       "solution": {
-        "path": "pdfs/1/math/vergleichen-loesungen.pdf",
-        "sha256": "a4429149bdbed5d3f51214be4ad340bacef8ee70cf0d3e8a4716c79a1ba700c0",
-        "bytes": 880399
+        "path": "revisions/20261004/pdfs/1/math/vergleichen-loesungen.pdf",
+        "sha256": "c77a04af6d51b121adca6c7d2e61cc3789b627a5d3fe58427caf788a42a48a5d",
+        "bytes": 880429
       }
     }
   },
@@ -128,18 +128,18 @@
     "curriculum": {
       "code": "MA.1.B.1",
       "scope": "Zahlenfolgen und regelmässige Muster untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/muster-arbeitsblatt.pdf",
-        "sha256": "2ca96605ca6495383646269239ee17a4e750478f56f785bc2fb039e1463c94f1",
-        "bytes": 857649
+        "path": "revisions/20261004/pdfs/1/math/muster-arbeitsblatt.pdf",
+        "sha256": "2b7fbfaf5d8fbbde3a4f034af46fd567928360d94e4a75d341435ab33c049999",
+        "bytes": 863594
       },
       "solution": {
-        "path": "pdfs/1/math/muster-loesungen.pdf",
-        "sha256": "6c2584e45c847a97fe5561175bc19c7ab94327766c8d30ed16877292749e44be",
-        "bytes": 884450
+        "path": "revisions/20261004/pdfs/1/math/muster-loesungen.pdf",
+        "sha256": "24efbd71c52a3ebd1cc30590486c2f14b075314739a6ede87205535ac527effc",
+        "bytes": 884049
       }
     }
   },
@@ -152,18 +152,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/zahlen-bis-20-arbeitsblatt.pdf",
-        "sha256": "e68eb3b1ae4fffe23c700fbe59a54ea71475c9af375ce08518172ff70538ea4b",
-        "bytes": 850332
+        "path": "revisions/20261004/pdfs/1/math/zahlen-bis-20-arbeitsblatt.pdf",
+        "sha256": "f228def27814bb076bc246e9c6789b9ce380ad1677a51a287abaf6853015991c",
+        "bytes": 855701
       },
       "solution": {
-        "path": "pdfs/1/math/zahlen-bis-20-loesungen.pdf",
-        "sha256": "f34038cbda44d608527c3d951a461e096218a59b9ab80f8400c2a05157f9bb10",
-        "bytes": 871540
+        "path": "revisions/20261004/pdfs/1/math/zahlen-bis-20-loesungen.pdf",
+        "sha256": "9b1eedd2e42882e35a342685e5470b44c2b56d804d8c838cb23209f8af72f43b",
+        "bytes": 871427
       }
     }
   },
@@ -176,18 +176,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/ordinalzahlen-arbeitsblatt.pdf",
-        "sha256": "e37ae8efa0fdc6b42ebcbfd5060b5d9795e6d4161c9504805ee9fdebc6df7446",
-        "bytes": 860426
+        "path": "revisions/20261004/pdfs/1/math/ordinalzahlen-arbeitsblatt.pdf",
+        "sha256": "3120bc2f9ca91acccf2182e424de41cd62c8637cece62dda03fde4dc0490d92b",
+        "bytes": 863256
       },
       "solution": {
-        "path": "pdfs/1/math/ordinalzahlen-loesungen.pdf",
-        "sha256": "7437924bdb650d2f783e531026ff00a27e2fcd165bfa5b3ad1856cfe996dbdcb",
-        "bytes": 885440
+        "path": "revisions/20261004/pdfs/1/math/ordinalzahlen-loesungen.pdf",
+        "sha256": "b66138301fa4fe25f6a802b6ee804b3135638e65845e89fc8ea4a6296fba2620",
+        "bytes": 881887
       }
     }
   },
@@ -200,18 +200,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/mengen-zaehlen-arbeitsblatt.pdf",
-        "sha256": "403d18cb4a9cb9b2cc6754a8c4f15fc02d8481fa6644461867fced4c2ed3438f",
-        "bytes": 877188
+        "path": "revisions/20261004/pdfs/1/math/mengen-zaehlen-arbeitsblatt.pdf",
+        "sha256": "b1c313ebb9698e4e61d7c1d57540d1a2062e423b9cf09d728c19a9aa29654d03",
+        "bytes": 882466
       },
       "solution": {
-        "path": "pdfs/1/math/mengen-zaehlen-loesungen.pdf",
-        "sha256": "bac3d14e826b38b8ac9277d21678b6bebd4d7dcaf6989c4e1fcc6cf1f84642c4",
-        "bytes": 899747
+        "path": "revisions/20261004/pdfs/1/math/mengen-zaehlen-loesungen.pdf",
+        "sha256": "ddf0b9c2f1346d36d43dbd6a8d7d6d6056712ac4f6903587da557163c6f569be",
+        "bytes": 898621
       }
     }
   },
@@ -224,18 +224,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Verdoppeln und Halbieren bis 20.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/verdoppeln-halbieren-arbeitsblatt.pdf",
-        "sha256": "a50652ed449b74a5a3e565df054b9c9779a0c49b3967fbefa3e30a0efccd3924",
-        "bytes": 858219
+        "path": "revisions/20261004/pdfs/1/math/verdoppeln-halbieren-arbeitsblatt.pdf",
+        "sha256": "7a3a533098d432455f88f7b641139a23fb0c025eea7da364a2a0f92f1821b555",
+        "bytes": 861364
       },
       "solution": {
-        "path": "pdfs/1/math/verdoppeln-halbieren-loesungen.pdf",
-        "sha256": "784a92c7a985e0f4e382108b2bde835c25a4f061f91e2349d7e26be49309d2bd",
-        "bytes": 884120
+        "path": "revisions/20261004/pdfs/1/math/verdoppeln-halbieren-loesungen.pdf",
+        "sha256": "22fcd8b78a2a34dbf55d9725d77d9fa70cbd99870d75b1af6674c6f3c26141f5",
+        "bytes": 880873
       }
     }
   },
@@ -248,18 +248,18 @@
     "curriculum": {
       "code": "MA.3.A.2",
       "scope": "Ganze Frankenbeträge bis 10 zusammensetzen und berechnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/geld-muenzen-arbeitsblatt.pdf",
-        "sha256": "c629b085d017aec924689ff779e945b4df725c70a90c1426826e4085320342a6",
-        "bytes": 857861
+        "path": "revisions/20261004/pdfs/1/math/geld-muenzen-arbeitsblatt.pdf",
+        "sha256": "7d939a5064b9bbaedad53a1bda28f5705d8c9f2832bce959fae961f97c332c91",
+        "bytes": 862942
       },
       "solution": {
-        "path": "pdfs/1/math/geld-muenzen-loesungen.pdf",
-        "sha256": "54333abf35b1edda3c326cd5d9ca8840126adf3e01160095a0a4382618e66345",
-        "bytes": 882352
+        "path": "revisions/20261004/pdfs/1/math/geld-muenzen-loesungen.pdf",
+        "sha256": "3ca53e9bed2fdffbcf4f63e0f463f433a1b33d5e8ffbc048c82f6d2884129c62",
+        "bytes": 881904
       }
     }
   },
@@ -272,18 +272,18 @@
     "curriculum": {
       "code": "MA.3.C.2",
       "scope": "Einfache Sachsituationen mathematisch darstellen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/sachaufgaben-arbeitsblatt.pdf",
-        "sha256": "0ae8a654f26338f61e51adea6d08435829de557788be17a42b25e4dd4d36df07",
-        "bytes": 859868
+        "path": "revisions/20261004/pdfs/1/math/sachaufgaben-arbeitsblatt.pdf",
+        "sha256": "98d3d176e5c46d6db3510a677c72490b07f62f3ca22848805fc96ab3bf415143",
+        "bytes": 863751
       },
       "solution": {
-        "path": "pdfs/1/math/sachaufgaben-loesungen.pdf",
-        "sha256": "de83a7aa01ae415eb9fccaf681ffcddd0efcaf12c0f80f4dc442f70fb7049329",
-        "bytes": 888392
+        "path": "revisions/20261004/pdfs/1/math/sachaufgaben-loesungen.pdf",
+        "sha256": "5da88f7031d50e28df9686c9e9fdc0c05a39c6b934da56d81c41a187949fd6bb",
+        "bytes": 886808
       }
     }
   },
@@ -296,18 +296,18 @@
     "curriculum": {
       "code": "MA.3.C.1",
       "scope": "Kleine Datensammlungen lesen und darstellen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/daten-diagramme-arbeitsblatt.pdf",
-        "sha256": "8776b7402914e9b9ea6006b9ed42c85101c9e50d41b48ef9bca9edbf002d6b2e",
-        "bytes": 856367
+        "path": "revisions/20261004/pdfs/1/math/daten-diagramme-arbeitsblatt.pdf",
+        "sha256": "80ae748d951942e773527b113afe8fac99c96226871f67b331b1fb5560f54303",
+        "bytes": 861562
       },
       "solution": {
-        "path": "pdfs/1/math/daten-diagramme-loesungen.pdf",
-        "sha256": "fbad25fcbccbaf5aab9902f1983f478ec1e346831d6e0bf07d8db86e8e0b679f",
-        "bytes": 880998
+        "path": "revisions/20261004/pdfs/1/math/daten-diagramme-loesungen.pdf",
+        "sha256": "834b89ec17f0e4a770fff83db8c9b05a6a603f1caa6bb84d1a724c0491d7ae61",
+        "bytes": 879828
       }
     }
   },
@@ -318,20 +318,20 @@
     "topicId": "buchstaben",
     "title": "Buchstaben",
     "curriculum": {
-      "code": "D.2",
-      "scope": "Gross- und Kleinbuchstaben erkennen; einfache Wörter entschlüsseln.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "code": "D.4.A.1",
+      "scope": "Gross- und Kleinbuchstaben schreiben und Anfangslaute passenden Buchstaben zuordnen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/buchstaben-arbeitsblatt.pdf",
-        "sha256": "1644bddc10ba060324750d3d0726e20f59f19d07159ab5baeeee678565d59fa9",
-        "bytes": 849936
+        "path": "revisions/20261004/pdfs/1/german/buchstaben-arbeitsblatt.pdf",
+        "sha256": "87f512a829d312810619de31ee3e66075c1875381370aa1eafc48f73802d1e63",
+        "bytes": 854567
       },
       "solution": {
-        "path": "pdfs/1/german/buchstaben-loesungen.pdf",
-        "sha256": "e7231296ca6318e91e3b582a510f485c8bb1ace2ee9a8122f58b5c47a6b331f6",
-        "bytes": 872737
+        "path": "revisions/20261004/pdfs/1/german/buchstaben-loesungen.pdf",
+        "sha256": "12eafb652cb0e89f8a7faf4f0c9ee6357bdd0bf35fd42c59d922fed81b11316b",
+        "bytes": 871816
       }
     }
   },
@@ -342,20 +342,20 @@
     "topicId": "einfache-woerter",
     "title": "Einfache Wörter",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.A.1",
       "scope": "Kurze vertraute Wörter lesen und verstehen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/einfache-woerter-arbeitsblatt.pdf",
-        "sha256": "c332e88e2d6a9012c8c74802a42640d00e3e11e6e00370cf7f2f35bedc7cede8",
-        "bytes": 853939
+        "path": "revisions/20261004/pdfs/1/german/einfache-woerter-arbeitsblatt.pdf",
+        "sha256": "dca96239529694fe68e22c959f7f246595025b6a1f4395df8d5a1a55fad7e2bf",
+        "bytes": 859438
       },
       "solution": {
-        "path": "pdfs/1/german/einfache-woerter-loesungen.pdf",
-        "sha256": "554712774e22d8f332d8a06a92a7dc1d4931a04fb3c9c0c17f370659dd244c5a",
-        "bytes": 880545
+        "path": "revisions/20261004/pdfs/1/german/einfache-woerter-loesungen.pdf",
+        "sha256": "568a4aef15dee3ff8b23e010114b16602c2cc7efb95fdb35cfb5361bb0732d8f",
+        "bytes": 880137
       }
     }
   },
@@ -366,20 +366,20 @@
     "topicId": "gross-kleinschreibung",
     "title": "Gross- und Kleinbuchstaben",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.4.A.1",
       "scope": "Buchstaben in verschiedenen Formen erkennen und verschriften.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/gross-kleinschreibung-arbeitsblatt.pdf",
-        "sha256": "b4baf327de266a3d05b2cdf6d502979a8ab4aa7ef47a530884997d89cf6e54ce",
-        "bytes": 852443
+        "path": "revisions/20261004/pdfs/1/german/gross-kleinschreibung-arbeitsblatt.pdf",
+        "sha256": "7d825dda65520d8d02b80ce8c889f4668e57a26d7f5af56a7097d0035ca86368",
+        "bytes": 857076
       },
       "solution": {
-        "path": "pdfs/1/german/gross-kleinschreibung-loesungen.pdf",
-        "sha256": "52b21dd0a934a34ce257a2de000e183df69a0b8fdaac366359423d2d7a368969",
-        "bytes": 875226
+        "path": "revisions/20261004/pdfs/1/german/gross-kleinschreibung-loesungen.pdf",
+        "sha256": "50260486df369b9a37ffd08ec40396a798d3a1c2815265928c38064443fae4bb",
+        "bytes": 874817
       }
     }
   },
@@ -390,20 +390,20 @@
     "topicId": "reime",
     "title": "Reimwörter",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.A.1",
       "scope": "Ähnliche Wortklänge und Reime wahrnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/reime-arbeitsblatt.pdf",
-        "sha256": "1518aa02c6d5ed14b00d0a393d176eb2b0a6789c745ff17e2eff3e25fd1955f9",
-        "bytes": 852545
+        "path": "revisions/20261004/pdfs/1/german/reime-arbeitsblatt.pdf",
+        "sha256": "ee506ccdf2cb7a801d145a9bf1db5d32e292cc5543bf0fcb2060b1b0bbe77705",
+        "bytes": 857196
       },
       "solution": {
-        "path": "pdfs/1/german/reime-loesungen.pdf",
-        "sha256": "a0f62a68e501bae5f008d3f7b4ba9a8907db5a01e1235a8c0d540c1334482d8d",
-        "bytes": 879565
+        "path": "revisions/20261004/pdfs/1/german/reime-loesungen.pdf",
+        "sha256": "432e3a79928ed20c589281767fc818f1c52c8ff0e68a32a268150859ff1e8d05",
+        "bytes": 879165
       }
     }
   },
@@ -414,20 +414,20 @@
     "topicId": "abc-reihenfolge",
     "title": "ABC & Reihenfolge",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.E.1",
       "scope": "Die alphabetische Reihenfolge als Ordnungshilfe nutzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/abc-reihenfolge-arbeitsblatt.pdf",
-        "sha256": "a3cf500c78d412dc79abb9d78ba040ac4042e40b72addc3284573da4511d92c7",
-        "bytes": 858700
+        "path": "revisions/20261004/pdfs/1/german/abc-reihenfolge-arbeitsblatt.pdf",
+        "sha256": "3bb8dee5a16242c0b3e3732a6ef8cb824849c1e94b193f128f7711df26c1e748",
+        "bytes": 866115
       },
       "solution": {
-        "path": "pdfs/1/german/abc-reihenfolge-loesungen.pdf",
-        "sha256": "0bfc2d03416531cc0b911e228c19fa9ec99c020ab498c9faefca118f02368ad8",
-        "bytes": 885505
+        "path": "revisions/20261004/pdfs/1/german/abc-reihenfolge-loesungen.pdf",
+        "sha256": "0fbc014301f3195fcb117f7d7e46ce1a8dcd476c3644a3fef60443d698e623cf",
+        "bytes": 900736
       }
     }
   },
@@ -438,20 +438,20 @@
     "topicId": "saetze-lesen",
     "title": "Sätze lesen",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.A.1",
       "scope": "Informationen aus kurzen Sätzen entnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/saetze-lesen-arbeitsblatt.pdf",
-        "sha256": "8553d93513fa43aa3cd3806f50a877815b69d1d62b9baefb9af787b1dca73e24",
-        "bytes": 851638
+        "path": "revisions/20261004/pdfs/1/german/saetze-lesen-arbeitsblatt.pdf",
+        "sha256": "5d1f5d61046a840f4f38c5ca5d30e7d114fbf6a40051ed91c76fd671277cef7f",
+        "bytes": 857133
       },
       "solution": {
-        "path": "pdfs/1/german/saetze-lesen-loesungen.pdf",
-        "sha256": "4cd4081fd3f5212c1898959ef0cb8b27e685ca18b4f0ed55c14c06ee13194f79",
-        "bytes": 877555
+        "path": "revisions/20261004/pdfs/1/german/saetze-lesen-loesungen.pdf",
+        "sha256": "2c4ca403855ff78dadfa3b88a20d36700e4f0c59135cb39fcb18206e70a2ff3c",
+        "bytes": 877154
       }
     }
   },
@@ -462,20 +462,20 @@
     "topicId": "vokale-konsonanten",
     "title": "Vokale & Konsonanten",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Vokal- und Konsonantenbuchstaben in einfachen Wörtern unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.1.A.1",
+      "scope": "Laute a, e, i, o, u in vertrauten Wörtern hören und passende Buchstaben zuordnen; keine Fachbegriffsprüfung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/vokale-konsonanten-arbeitsblatt.pdf",
-        "sha256": "e6e01936db947b02a652fe1752faa2088ea19bed72ef6d78180eddf6f478ad5a",
-        "bytes": 858233
+        "path": "revisions/20261004/pdfs/1/german/vokale-konsonanten-arbeitsblatt.pdf",
+        "sha256": "cfb46ff02c53139e8f1bf13227e26be18091c8fa0f4f189322c405612e8b5ed0",
+        "bytes": 863217
       },
       "solution": {
-        "path": "pdfs/1/german/vokale-konsonanten-loesungen.pdf",
-        "sha256": "325b32a5e571a6d48df5772592735d65ac669c95fc867bfdd000a30b2776de93",
-        "bytes": 882593
+        "path": "revisions/20261004/pdfs/1/german/vokale-konsonanten-loesungen.pdf",
+        "sha256": "f30f8a871ad8cc3437a3e7010edb483a76e4dc0f0ac50f5065aa7835c3f5f138",
+        "bytes": 897570
       }
     }
   },
@@ -486,20 +486,20 @@
     "topicId": "silben-klatschen",
     "title": "Silben klatschen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.A.1",
       "scope": "Silben wahrnehmen und Wörter rhythmisch gliedern.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/silben-klatschen-arbeitsblatt.pdf",
-        "sha256": "2bb0318ef40a0d9238e9b530d2f3ac42d36a962e072c04d9822084984c59243c",
-        "bytes": 855334
+        "path": "revisions/20261004/pdfs/1/german/silben-klatschen-arbeitsblatt.pdf",
+        "sha256": "711346f6b49294e9af86308dda82ac0f69595a78500a714f8878267efabccb67",
+        "bytes": 860828
       },
       "solution": {
-        "path": "pdfs/1/german/silben-klatschen-loesungen.pdf",
-        "sha256": "1ab7db4fa22e8d8133d3871dd6d28421e0697025e564a00350b4217bb0508a64",
-        "bytes": 882382
+        "path": "revisions/20261004/pdfs/1/german/silben-klatschen-loesungen.pdf",
+        "sha256": "19ccf86d699c63d5ec083a2ac6308ae4c9008a0c0c49af4eb4269f01e7ed067d",
+        "bytes": 881976
       }
     }
   },
@@ -510,20 +510,20 @@
     "topicId": "ie-ei",
     "title": "Laute hören: Anlaute",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.A.1",
       "scope": "Anfangslaute in vertrauten Wörtern wahrnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/ie-ei-arbeitsblatt.pdf",
-        "sha256": "f642f02fd247c33fde58453c9cb9789cc57ee2a77c82a50f1e3ad653db4496fb",
-        "bytes": 853545
+        "path": "revisions/20261004/pdfs/1/german/ie-ei-arbeitsblatt.pdf",
+        "sha256": "ce18c578210d43ed61c8bc07d83af7729bea5cb4e0e83fae33235f6f68402fe2",
+        "bytes": 859060
       },
       "solution": {
-        "path": "pdfs/1/german/ie-ei-loesungen.pdf",
-        "sha256": "d7f7a34c7be1bf35de80c8e7da3fe46c6b10debc0b3662982b551ea450408b0d",
-        "bytes": 878626
+        "path": "revisions/20261004/pdfs/1/german/ie-ei-loesungen.pdf",
+        "sha256": "7b22aaa172dc9501f20485285602b637a1f5697017c43d78b2df531f2ac8c2b6",
+        "bytes": 878220
       }
     }
   },
@@ -534,20 +534,20 @@
     "topicId": "gefuehrtes-schreiben-1",
     "title": "Sätze & kleine Texte",
     "curriculum": {
-      "code": "D.4",
+      "code": "D.4.D.1",
       "scope": "Mit Satzmustern kurze eigene Aussagen formulieren.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/gefuehrtes-schreiben-1-arbeitsblatt.pdf",
-        "sha256": "3d62b3e7b3bd5c25c547b5cfc421a5fc64f468c12c9e78d5df26f44ff467825e",
-        "bytes": 856927
+        "path": "revisions/20261004/pdfs/1/german/gefuehrtes-schreiben-1-arbeitsblatt.pdf",
+        "sha256": "111aecc6fe44280c23b089eaae51d4cb734c8f4dee076b76a3297fd27ffa2bb4",
+        "bytes": 858016
       },
       "solution": {
-        "path": "pdfs/1/german/gefuehrtes-schreiben-1-loesungen.pdf",
-        "sha256": "046e83adebcb3904c264ad6f67428a10bc05c8f12359686de09ed75f5ae00149",
-        "bytes": 886297
+        "path": "revisions/20261004/pdfs/1/german/gefuehrtes-schreiben-1-loesungen.pdf",
+        "sha256": "06e2a01b948c501de7092e2724a1f2accec34bbf63f4451636e8764ce61ab389",
+        "bytes": 881526
       }
     }
   },
@@ -558,20 +558,20 @@
     "topicId": "hoerverstehen-1",
     "title": "Hören & verstehen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.B.1",
       "scope": "Einem kurzen vorgelesenen Text Informationen und Reihenfolge entnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/hoerverstehen-1-arbeitsblatt.pdf",
-        "sha256": "9f63711b359f24031bdb71e0c1ffee3543580bf73e8962cf6c741753f2c200b7",
-        "bytes": 856820
+        "path": "revisions/20261004/pdfs/1/german/hoerverstehen-1-arbeitsblatt.pdf",
+        "sha256": "e617c07a04f6de9529fb4b11654386826546742ed07491a6e24026f8d9eeac58",
+        "bytes": 862334
       },
       "solution": {
-        "path": "pdfs/1/german/hoerverstehen-1-loesungen.pdf",
-        "sha256": "8a5d61b760d12a4feba926e374355ca1a4449c708fbac6b01151f0737e5c0d72",
-        "bytes": 887437
+        "path": "revisions/20261004/pdfs/1/german/hoerverstehen-1-loesungen.pdf",
+        "sha256": "c05a1c07a6b67c869c28ec381ddca3105ef749bd0cf28865b91723f93dc888d5",
+        "bytes": 887038
       }
     }
   },

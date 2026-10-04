@@ -1,0 +1,71 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "silben-klatschen",
+  "goal": "Sprich ein Wort langsam und klatsche seine Silben. Beispiel: Ro-se hat 2 Silben. Lass dir die Wörter bei Bedarf vorlesen.",
+  "sections": [
+    {
+      "title": "Wie viele Silben hörst du?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Maus",
+          "answer": "1"
+        },
+        {
+          "prompt": "Rose",
+          "answer": "2"
+        },
+        {
+          "prompt": "Banane",
+          "answer": "3"
+        },
+        {
+          "prompt": "Tomate",
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die Wörter mit Silbenstrichen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Sonne",
+          "answer": "Son-ne"
+        },
+        {
+          "prompt": "Lama",
+          "answer": "La-ma"
+        },
+        {
+          "prompt": "Melone",
+          "answer": "Me-lo-ne"
+        },
+        {
+          "prompt": "Nase",
+          "answer": "Na-se"
+        }
+      ]
+    },
+    {
+      "title": "Finde und zeichne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne etwas mit einem einsilbigen Namen und etwas mit einem zweisilbigen Namen. Sage beide Wörter laut.",
+          "answer": "Beispiele: Ball (1), Hase (2). Andere korrekt gezählte Wörter gelten.",
+          "wide": true,
+          "drawingHeight": 40
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.A.1",
+    "scope": "Silben wahrnehmen und Wörter rhythmisch gliedern.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

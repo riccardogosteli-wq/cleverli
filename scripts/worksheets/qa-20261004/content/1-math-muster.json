@@ -1,0 +1,65 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "muster",
+  "goal": "Suche zuerst die Regel. Beispiel: 2, 4, 6, 8. Es kommen immer 2 dazu.",
+  "sections": [
+    {
+      "title": "Setze die Zahlenreihe fort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "1, 2, 3, __, __",
+          "answer": "4, 5"
+        },
+        {
+          "prompt": "2, 4, 6, __, __",
+          "answer": "8, 10"
+        },
+        {
+          "prompt": "10, 9, 8, __, __",
+          "answer": "7, 6"
+        },
+        {
+          "prompt": "1, 3, 5, __, __",
+          "answer": "7, 9"
+        }
+      ]
+    },
+    {
+      "title": "Wiederhole das Muster.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Kreis, Quadrat, Kreis, Quadrat, __, __",
+          "answer": "Kreis, Quadrat",
+          "wide": true
+        },
+        {
+          "prompt": "A, A, B, A, A, B, __, __, __",
+          "answer": "A, A, B",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erfinde ein eigenes Muster.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne eine Folge mit Kreis und Dreieck. Wiederhole deinen Musterteil dreimal.",
+          "answer": "Beispiel: Kreis, Dreieck / Kreis, Dreieck / Kreis, Dreieck. Andere regelmässige Folgen sind richtig.",
+          "wide": true,
+          "drawingHeight": 36
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.B.1",
+    "scope": "Zahlenfolgen und regelmässige Muster untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|2|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

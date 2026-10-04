@@ -1,0 +1,78 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "vergleichen",
+  "goal": "Die offene Seite zeigt zur grösseren Zahl. Beispiel: 7 > 3. Gleich grosse Zahlen: 4 = 4.",
+  "sections": [
+    {
+      "title": "Setze <, > oder = ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "3 __ 8",
+          "answer": "<"
+        },
+        {
+          "prompt": "9 __ 5",
+          "answer": ">"
+        },
+        {
+          "prompt": "6 __ 6",
+          "answer": "="
+        },
+        {
+          "prompt": "10 __ 7",
+          "answer": ">"
+        },
+        {
+          "prompt": "2 __ 4",
+          "answer": "<"
+        },
+        {
+          "prompt": "8 __ 8",
+          "answer": "="
+        }
+      ]
+    },
+    {
+      "title": "Ordne von klein nach gross.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "6, 2, 9",
+          "answer": "2, 6, 9",
+          "wide": true
+        },
+        {
+          "prompt": "10, 4, 7",
+          "answer": "4, 7, 10",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke genau nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne eine ganze Zahl, die grösser als 5 und kleiner als 8 ist.",
+          "answer": "6 oder 7",
+          "wide": true
+        },
+        {
+          "prompt": "Mia hat 7 Steine, Ben hat 5. Wer hat mehr? Wie viele mehr?",
+          "answer": "Mia; 2 Steine mehr",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.2",
+    "scope": "Zählen und Zahlen ordnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

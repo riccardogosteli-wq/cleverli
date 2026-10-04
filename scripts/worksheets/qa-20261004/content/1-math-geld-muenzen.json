@@ -1,0 +1,65 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "geld-muenzen",
+  "goal": "Wir rechnen mit ganzen Franken. Beispiel: 2 Franken + 1 Franken = 3 Franken.",
+  "sections": [
+    {
+      "title": "Zähle die Frankenbeträge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "2 Fr. + 2 Fr. + 1 Fr. =",
+          "answer": "5 Fr."
+        },
+        {
+          "prompt": "5 Fr. + 2 Fr. =",
+          "answer": "7 Fr."
+        },
+        {
+          "prompt": "1 Fr. + 1 Fr. + 1 Fr. =",
+          "answer": "3 Fr."
+        },
+        {
+          "prompt": "5 Fr. + 2 Fr. + 2 Fr. =",
+          "answer": "9 Fr."
+        }
+      ]
+    },
+    {
+      "title": "Kaufe ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Heft kostet 3 Fr., ein Stift 2 Fr. Wie viel kosten beide zusammen?",
+          "answer": "5 Fr.",
+          "wide": true
+        },
+        {
+          "prompt": "Ein Ball kostet 7 Fr. Du bezahlst 10 Fr. Wie viel bekommst du zurück?",
+          "answer": "3 Fr.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Lege den Betrag auf zwei Arten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeige 6 Fr. mit 1-Fr., 2-Fr. oder 5-Fr.-Münzen. Schreibe zwei verschiedene Möglichkeiten.",
+          "answer": "Beispiele: 5 + 1 und 2 + 2 + 2. Andere richtige Kombinationen gelten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.A.2",
+    "scope": "Ganze Frankenbeträge bis 10 zusammensetzen und berechnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

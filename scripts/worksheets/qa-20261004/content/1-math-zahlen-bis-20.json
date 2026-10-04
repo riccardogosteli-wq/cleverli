@@ -1,0 +1,80 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "zahlen-bis-20",
+  "goal": "10 und 4 sind 14. Beispiel: 14 = 10 + 4.",
+  "sections": [
+    {
+      "title": "Ergänze die Zerlegung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "12 = 10 +",
+          "answer": "2"
+        },
+        {
+          "prompt": "15 = 10 +",
+          "answer": "5"
+        },
+        {
+          "prompt": "18 = 10 +",
+          "answer": "8"
+        },
+        {
+          "prompt": "20 = 10 +",
+          "answer": "10"
+        }
+      ]
+    },
+    {
+      "title": "Nachbarzahlen finden.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Direkt vor 13 steht",
+          "answer": "12"
+        },
+        {
+          "prompt": "Direkt nach 16 steht",
+          "answer": "17"
+        },
+        {
+          "prompt": "Direkt vor 20 steht",
+          "answer": "19"
+        },
+        {
+          "prompt": "Direkt nach 10 steht",
+          "answer": "11"
+        }
+      ]
+    },
+    {
+      "title": "Ordne und ergänze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Von klein nach gross: 19, 11, 16, 14",
+          "answer": "11, 14, 16, 19",
+          "wide": true
+        },
+        {
+          "prompt": "12, 14, 16, __, __",
+          "answer": "18, 20",
+          "wide": true
+        },
+        {
+          "prompt": "Welche Zahl liegt genau zwischen 17 und 19?",
+          "answer": "18",
+          "wide": true
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.2",
+    "scope": "Zählen und Zahlen ordnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

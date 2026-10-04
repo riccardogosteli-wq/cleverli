@@ -1,0 +1,77 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "abc-reihenfolge",
+  "goal": "Das ABC hat eine feste Reihenfolge. Zum Nachschauen: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z.",
+  "sections": [
+    {
+      "title": "Welcher Buchstabe fehlt?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "A, B, __, D",
+          "answer": "C"
+        },
+        {
+          "prompt": "E, F, __, H",
+          "answer": "G"
+        },
+        {
+          "prompt": "L, M, __, O",
+          "answer": "N"
+        },
+        {
+          "prompt": "W, X, __, Z",
+          "answer": "Y"
+        }
+      ]
+    },
+    {
+      "title": "Ordne nach dem ABC.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "C, A, B",
+          "answer": "A, B, C"
+        },
+        {
+          "prompt": "H, F, G",
+          "answer": "F, G, H"
+        },
+        {
+          "prompt": "S, Q, R",
+          "answer": "Q, R, S"
+        },
+        {
+          "prompt": "Z, X, Y",
+          "answer": "X, Y, Z"
+        }
+      ]
+    },
+    {
+      "title": "Ordne diese Wörter nach dem ersten Buchstaben.",
+      "instruction": "Zusatzaufgabe: Nutze das ABC oben. Achte nur auf den ersten Buchstaben.",
+      "items": [
+        {
+          "prompt": "Ball, Apfel, Dose",
+          "answer": "Apfel, Ball, Dose",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Maus, Igel, Sonne",
+          "answer": "Igel, Maus, Sonne",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.E.1",
+    "scope": "Die alphabetische Reihenfolge als Ordnungshilfe nutzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

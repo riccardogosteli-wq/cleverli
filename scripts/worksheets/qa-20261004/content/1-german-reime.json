@@ -1,0 +1,75 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "reime",
+  "goal": "Reimwörter klingen am Ende gleich. Beispiel: Maus und Haus. Sage die Wörter laut.",
+  "sections": [
+    {
+      "title": "Wähle das Reimwort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Haus: Maus oder Baum?",
+          "answer": "Maus"
+        },
+        {
+          "prompt": "Hut: Mut oder Hand?",
+          "answer": "Mut"
+        },
+        {
+          "prompt": "Bein: Stein oder Ball?",
+          "answer": "Stein"
+        },
+        {
+          "prompt": "Rose: Hose oder Rabe?",
+          "answer": "Hose"
+        }
+      ]
+    },
+    {
+      "title": "Welches Wort reimt sich nicht?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Buch, Tuch, Bach",
+          "answer": "Bach"
+        },
+        {
+          "prompt": "Nacht, acht, neun",
+          "answer": "neun"
+        },
+        {
+          "prompt": "Tisch, Fisch, Tanne",
+          "answer": "Tanne"
+        },
+        {
+          "prompt": "Ball, Fall, Fell",
+          "answer": "Fell"
+        }
+      ]
+    },
+    {
+      "title": "Finde selbst ein Reimwort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Katze",
+          "answer": "Beispiel: Tatze. Andere echte Reimwörter gelten.",
+          "wide": true
+        },
+        {
+          "prompt": "Mund",
+          "answer": "Beispiele: Hund, rund, bunt. Andere echte Reimwörter gelten.",
+          "wide": true
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.A.1",
+    "scope": "Ähnliche Wortklänge und Reime wahrnehmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

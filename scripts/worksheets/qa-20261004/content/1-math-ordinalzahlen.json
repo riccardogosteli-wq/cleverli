@@ -1,0 +1,75 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "ordinalzahlen",
+  "goal": "Der Platz zählt: 1. heisst erste, 2. heisst zweite.",
+  "sections": [
+    {
+      "title": "Lies die Reihe von links nach rechts.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Reihe: A, B, C, D, E. Wer steht am 1. Platz?",
+          "answer": "A",
+          "wide": true,
+          "blankWidth": 24
+        },
+        {
+          "prompt": "Reihe: A, B, C, D, E. Wer steht am 3. Platz?",
+          "answer": "C",
+          "wide": true,
+          "blankWidth": 24
+        },
+        {
+          "prompt": "Reihe: A, B, C, D, E. Auf welchem Platz steht D?",
+          "answer": "4.",
+          "wide": true,
+          "blankWidth": 24
+        }
+      ]
+    },
+    {
+      "title": "Kinder warten in dieser Reihenfolge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Reihe von vorne: Mia, Noa, Lea, Tim. Wer steht an zweiter Stelle?",
+          "answer": "Noa",
+          "wide": true,
+          "blankWidth": 24
+        },
+        {
+          "prompt": "Wer kommt direkt nach Noa?",
+          "answer": "Lea",
+          "wide": true,
+          "blankWidth": 24
+        },
+        {
+          "prompt": "Wer steht ganz hinten?",
+          "answer": "Tim",
+          "wide": true,
+          "blankWidth": 24
+        }
+      ]
+    },
+    {
+      "title": "Zeichne die Plätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne 5 Kreise nebeneinander. Markiere von links den 2. und den 4. Kreis.",
+          "answer": "Fünf Kreise; nur Positionen 2 und 4 markiert.",
+          "wide": true,
+          "drawingHeight": 32
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.2",
+    "scope": "Zählen und Zahlen ordnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}
