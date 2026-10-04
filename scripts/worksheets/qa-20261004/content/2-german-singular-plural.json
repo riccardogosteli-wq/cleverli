@@ -1,0 +1,77 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "singular-plural",
+  "goal": "Einzahl meint eines, Mehrzahl mehrere: ein Baum, viele Bäume. Die Mehrzahl kann anders klingen und aussehen.",
+  "sections": [
+    {
+      "title": "Schreibe die Mehrzahl mit die.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "der Hund",
+          "answer": "die Hunde"
+        },
+        {
+          "prompt": "das Kind",
+          "answer": "die Kinder"
+        },
+        {
+          "prompt": "die Blume",
+          "answer": "die Blumen"
+        },
+        {
+          "prompt": "der Apfel",
+          "answer": "die Äpfel"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die Einzahl mit Artikel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "die Bücher",
+          "answer": "das Buch"
+        },
+        {
+          "prompt": "die Mäuse",
+          "answer": "die Maus"
+        },
+        {
+          "prompt": "die Häuser",
+          "answer": "das Haus"
+        },
+        {
+          "prompt": "die Bäume",
+          "answer": "der Baum"
+        }
+      ]
+    },
+    {
+      "title": "Verändere den Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Setze in die Mehrzahl: «Das Kind spielt.»",
+          "answer": "Die Kinder spielen.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Setze in die Mehrzahl: «Der Hund rennt.»",
+          "answer": "Die Hunde rennen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.A.1",
+    "scope": "Häufige Einzahl- und Mehrzahlformen bilden und Verben im Satz anpassen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

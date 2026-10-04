@@ -1,0 +1,71 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "nomen-artikel",
+  "goal": "Nomen benennen zum Beispiel Menschen, Tiere und Dinge. Wir schreiben sie gross. Der Artikel hilft: der Ball, die Sonne, das Haus.",
+  "sections": [
+    {
+      "title": "Schreibe das Wort mit der, die oder das.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Hund",
+          "answer": "der Hund"
+        },
+        {
+          "prompt": "Blume",
+          "answer": "die Blume"
+        },
+        {
+          "prompt": "Buch",
+          "answer": "das Buch"
+        },
+        {
+          "prompt": "Tisch",
+          "answer": "der Tisch"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die Nomen richtig ab.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "die katze",
+          "answer": "die Katze"
+        },
+        {
+          "prompt": "das fenster",
+          "answer": "das Fenster"
+        },
+        {
+          "prompt": "der baum",
+          "answer": "der Baum"
+        },
+        {
+          "prompt": "die schule",
+          "answer": "die Schule"
+        }
+      ]
+    },
+    {
+      "title": "Finde die Nomen im Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Maus sitzt neben dem Haus. Schreibe die beiden Nomen mit der, die oder das auf.",
+          "answer": "die Maus; das Haus",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.C.1",
+    "scope": "Häufige Nomen erkennen, grossschreiben und mit bestimmtem Artikel verwenden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|3|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

@@ -1,0 +1,71 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "silben",
+  "goal": "Sprich die Wörter langsam. Klatsche für jede Silbe einmal. Beispiel: To-ma-te hat 3 Silben.",
+  "sections": [
+    {
+      "title": "Wie viele Silben hörst du?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ball",
+          "answer": "1"
+        },
+        {
+          "prompt": "Fenster",
+          "answer": "2"
+        },
+        {
+          "prompt": "Banane",
+          "answer": "3"
+        },
+        {
+          "prompt": "Schokolade",
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe mit Silbenstrichen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nase",
+          "answer": "Na-se"
+        },
+        {
+          "prompt": "Melone",
+          "answer": "Me-lo-ne"
+        },
+        {
+          "prompt": "Rakete",
+          "answer": "Ra-ke-te"
+        },
+        {
+          "prompt": "Ananas",
+          "answer": "A-na-nas"
+        }
+      ]
+    },
+    {
+      "title": "Ordne nach der Silbenzahl.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ordne diese Wörter in drei Gruppen: 1, 2 oder 3 Silben. Wörter: Hund, Rose, Tomate, Fisch, Hase, Banane.",
+          "answer": "1: Hund, Fisch. 2: Rose, Hase. 3: Tomate, Banane.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.A.1",
+    "scope": "Gesprochene Wörter in Silben gliedern und Silbenzahlen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

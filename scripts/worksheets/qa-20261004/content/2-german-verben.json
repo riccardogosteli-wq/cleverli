@@ -1,0 +1,71 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "verben",
+  "goal": "Verben sagen zum Beispiel, was jemand tut. Sie verändern ihre Form: ich male, du malst, wir malen.",
+  "sections": [
+    {
+      "title": "Welches Wort ist ein Verb?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "rennen, rot, Tisch",
+          "answer": "rennen"
+        },
+        {
+          "prompt": "Baum, lesen, klein",
+          "answer": "lesen"
+        },
+        {
+          "prompt": "singen, Sonne, gelb",
+          "answer": "singen"
+        },
+        {
+          "prompt": "Haus, rund, spielen",
+          "answer": "spielen"
+        }
+      ]
+    },
+    {
+      "title": "Setze das Verb in der passenden Form ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ich ... ein Bild. (malen)",
+          "answer": "male"
+        },
+        {
+          "prompt": "Du ... ein Buch. (lesen)",
+          "answer": "liest"
+        },
+        {
+          "prompt": "Wir ... im Garten. (spielen)",
+          "answer": "spielen"
+        },
+        {
+          "prompt": "Lea ... ein Lied. (singen)",
+          "answer": "singt"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe zwei Sätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe je einen Satz mit «laufen» und «lachen». Passe die Form an.",
+          "answer": "Beispiele: Wir laufen zur Schule. Mia lacht laut. Je ein verständlicher Satz mit passender Verbform.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Verben erkennen und häufige Personalformen in Sätzen verwenden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

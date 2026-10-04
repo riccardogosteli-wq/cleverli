@@ -1,0 +1,71 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "pronomen",
+  "goal": "Mit er, sie oder es kannst du Wiederholungen vermeiden: Mia malt. Sie malt. Tim lacht. Er lacht. Das Haus steht. Es steht.",
+  "sections": [
+    {
+      "title": "Ersetze den Satzanfang durch Er, Sie oder Es.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Der Hund schläft. ... schläft.",
+          "answer": "Er",
+          "wide": true
+        },
+        {
+          "prompt": "Die Katze rennt. ... rennt.",
+          "answer": "Sie",
+          "wide": true
+        },
+        {
+          "prompt": "Das Buch liegt da. ... liegt da.",
+          "answer": "Es",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Welches Wort passt?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Mia und ich malen. ... malen. (Wir / Ihr)",
+          "answer": "Wir",
+          "wide": true
+        },
+        {
+          "prompt": "Ich spreche dich und Noa an: ... spielt. (Wir / Ihr)",
+          "answer": "Ihr",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Vermeide die Wiederholung.",
+      "instruction": "Schreibe den zweiten Satz neu. Vermeide die Wiederholung.",
+      "items": [
+        {
+          "prompt": "«Lea liest. Lea sitzt am Fenster.»",
+          "answer": "Sie sitzt am Fenster.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "«Die Kinder spielen. Die Kinder lachen.»",
+          "answer": "Sie lachen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.A.1",
+    "scope": "Vertraute Satzmuster mit er, sie, es, wir und ihr verwenden;keine Fachbegriffsprüfung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "worksheetTitle": "Er, sie, es: Sätze verändern"
+}

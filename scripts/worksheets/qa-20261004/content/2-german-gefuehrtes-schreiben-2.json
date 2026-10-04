@@ -1,0 +1,51 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "gefuehrtes-schreiben-2",
+  "goal": "Plane zuerst. Erzähle deine Geschichte, bevor du sie aufschreibst. Du darfst alles erfinden.",
+  "sections": [
+    {
+      "title": "Plane eine Geschichte über einen gefundenen Ball.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wer findet den Ball? Wo? Wem könnte er gehören? Notiere Stichwörter.",
+          "answer": "Individuell: Figur, Ort und möglicher Besitzer erkennbar; keine echten privaten Daten nötig.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe deine Geschichte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe 3 bis 4 Sätze. Erzähle, wie der Ball gefunden wird und was danach passiert.",
+          "answer": "Beispiel: Mia findet einen Ball im Park. Sie fragt die Kinder auf dem Spielplatz. Der Ball gehört Noa. Noa bedankt sich. Kriterien: 3 bis 4 verständliche, zusammenhängende Sätze und ein passender Schluss.",
+          "wide": true,
+          "lines": 6
+        }
+      ]
+    },
+    {
+      "title": "Prüfe und verbessere.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Prüfe grosse Satzanfänge und Schlusszeichen. Gib deiner Geschichte einen Titel.",
+          "answer": "Passender Titel; Satzanfänge und Schlusszeichen überprüft. Inhalt und nachvollziehbare Reihenfolge wichtiger als fehlerfreie Erstfassung.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.D.1",
+    "scope": "Eine kurze Geschichte mit Planungshilfe schreiben und überarbeiten.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

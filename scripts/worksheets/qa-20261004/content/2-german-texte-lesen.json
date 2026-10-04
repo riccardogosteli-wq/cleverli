@@ -1,0 +1,70 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "texte-lesen",
+  "goal": "Mia und Noa gehen am Samstag in die Bibliothek. Mia sucht ein Buch über Füchse. Noa nimmt ein Buch über Züge. Danach setzen sich beide an einen Tisch und lesen. Vor dem Heimweg leihen sie die Bücher aus.",
+  "sections": [
+    {
+      "title": "Antworte zum Text.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "An welchem Tag gehen die Kinder in die Bibliothek?",
+          "answer": "Am Samstag",
+          "wide": true
+        },
+        {
+          "prompt": "Wovon handelt Mias Buch?",
+          "answer": "Von Füchsen",
+          "wide": true
+        },
+        {
+          "prompt": "Wovon handelt Noas Buch?",
+          "answer": "Von Zügen",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Stimmt das? Schreibe ja oder nein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Kinder lesen an einem Tisch.",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Mia sucht ein Buch über Züge.",
+          "answer": "Nein"
+        },
+        {
+          "prompt": "Sie leihen die Bücher aus.",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Die Kinder gehen in ein Schwimmbad.",
+          "answer": "Nein"
+        }
+      ]
+    },
+    {
+      "title": "Gib den Inhalt wieder.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Erzähle in zwei Sätzen, was die Kinder in der Bibliothek machen.",
+          "answer": "Beispiel: Mia und Noa suchen Bücher über Füchse und Züge. Sie lesen am Tisch und leihen die Bücher aus. Wesentliche Angaben müssen zum Text passen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.C.1",
+    "scope": "Informationen und Handlungsfolge aus einem kurzen Erzähltext entnehmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

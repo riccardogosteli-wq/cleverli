@@ -1,0 +1,63 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "wortfamilien",
+  "goal": "Diese Wörter gehören zusammen: spielen, Spiel, Spieler. Achte auf gemeinsame Buchstaben und ihre Bedeutung.",
+  "sections": [
+    {
+      "title": "Welches Wort gehört nicht zur Familie?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "malen, Maler, Malbuch, laufen",
+          "answer": "laufen",
+          "wide": true
+        },
+        {
+          "prompt": "Spiel, spielen, Spieler, Stein",
+          "answer": "Stein",
+          "wide": true
+        },
+        {
+          "prompt": "lernen, Lernheft, Lerngruppe, Lampe",
+          "answer": "Lampe",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Welche Buchstaben sind gemeinsam?",
+      "instruction": "Schreibe den gemeinsamen Teil auf. Gross oder klein ist hier beides richtig.",
+      "items": [
+        {
+          "prompt": "malen, Maler, Malbuch",
+          "answer": "mal"
+        },
+        {
+          "prompt": "spielen, Spieler, Spielplatz",
+          "answer": "spiel"
+        }
+      ]
+    },
+    {
+      "title": "Ordne in zwei Wortfamilien.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wörter: Malbuch, Spieler, malen, Spielplatz, Malerin, spielen. Schreibe zwei Gruppen.",
+          "answer": "mal: Malbuch, malen, Malerin. spiel: Spieler, Spielplatz, spielen. Gross- oder Kleinschreibung des isolierten Stamms nicht bewerten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.A.1",
+    "scope": "Wiederkehrende Teile vertrauter Wörter erkennen und Wörter nach gemeinsamer Bedeutung zusammenordnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "worksheetTitle": "Wortfamilien entdecken"
+}

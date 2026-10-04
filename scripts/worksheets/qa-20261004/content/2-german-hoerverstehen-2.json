@@ -1,0 +1,67 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "hoerverstehen-2",
+  "goal": "Höre den Text zweimal. Lies oder höre zuerst die Fragen. Frage nach, wenn du ein Wort nicht verstehst.",
+  "sections": [
+    {
+      "title": "Höre genau zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wohin geht Noa mit der Klasse?",
+          "answer": "Zum Wald",
+          "wide": true
+        },
+        {
+          "prompt": "Welche zwei Dinge packt Noa ein?",
+          "answer": "Eine Trinkflasche und einen Apfel",
+          "wide": true
+        },
+        {
+          "prompt": "Welchen Vogel beobachten die Kinder?",
+          "answer": "Einen Specht",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ordne die Ereignisse mit 1, 2 und 3.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Kinder essen ihre Znünis.",
+          "answer": "2"
+        },
+        {
+          "prompt": "Sie sammeln ihren Abfall ein.",
+          "answer": "3"
+        },
+        {
+          "prompt": "Sie beobachten einen Vogel.",
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "title": "Erzähle das Ende.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was tun die Kinder vor dem Rückweg? Wohin gehen sie zum Schluss?",
+          "answer": "Sie sammeln ihren Abfall ein. Danach gehen sie gemeinsam zur Schule zurück.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.B.1",
+    "scope": "Wichtige Einzelinformationen und eine zeitliche Abfolge aus einem kurzen Hörtext entnehmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
+  },
+  "teacherScript": "Für Erwachsene: Fragen zuerst vorlesen, dann den Text zweimal langsam vorlesen. Nicht durch Betonung auf Antworten hinweisen. Text: Am Morgen packt Noa eine Trinkflasche und einen Apfel in den Rucksack. Mit der Klasse geht Noa zum Wald. Zuerst beobachten die Kinder einen Specht an einem Baum. Danach essen sie ihre Znünis. Vor dem Rückweg sammeln sie ihren Abfall ein. Zum Schluss gehen sie gemeinsam zur Schule zurück. Antworten dürfen bei Bedarf mündlich gegeben und notiert werden.",
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

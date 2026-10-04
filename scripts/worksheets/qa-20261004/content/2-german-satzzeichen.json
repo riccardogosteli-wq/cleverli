@@ -1,0 +1,67 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "satzzeichen",
+  "goal": "Ein Aussagesatz endet mit einem Punkt. Eine Frage endet mit einem Fragezeichen. Ein Ausruf kann mit einem Ausrufezeichen enden.",
+  "sections": [
+    {
+      "title": "Setze Punkt oder Fragezeichen ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wo ist mein Buch",
+          "answer": "?"
+        },
+        {
+          "prompt": "Mia liest ein Buch",
+          "answer": "."
+        },
+        {
+          "prompt": "Kommst du mit",
+          "answer": "?"
+        },
+        {
+          "prompt": "Der Hund schläft",
+          "answer": "."
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die Sätze richtig.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "wo wohnt der igel",
+          "answer": "Wo wohnt der Igel?",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "die katze sitzt im gras",
+          "answer": "Die Katze sitzt im Gras.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Verwende alle drei Zeichen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe eine Aussage mit Punkt, eine Frage mit Fragezeichen und einen Ausruf mit Ausrufezeichen.",
+          "answer": "Beispiele: Es regnet. Wo ist mein Schirm? Achtung! Drei passende Sätze oder Ausrufe, richtige Schlusszeichen und grosse Anfänge.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.C.1",
+    "scope": "Satzanfänge und Schlusszeichen in einfachen Sätzen setzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|3|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

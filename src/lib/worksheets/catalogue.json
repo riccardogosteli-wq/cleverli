@@ -1186,20 +1186,20 @@
     "topicId": "nomen-artikel",
     "title": "Nomen mit Artikel",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.C.1",
       "scope": "Häufige Nomen erkennen, grossschreiben und mit bestimmtem Artikel verwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/nomen-artikel-arbeitsblatt.pdf",
-        "sha256": "b9d81899d3e066bb0ca9d8c5ccd54a486812285e7c6b701605a06e2906407bfe",
-        "bytes": 853556
+        "path": "revisions/20261004/pdfs/2/german/nomen-artikel-arbeitsblatt.pdf",
+        "sha256": "7ca705151b60321bf0f7699323a56829220475a838530507085d560be73f2366",
+        "bytes": 853629
       },
       "solution": {
-        "path": "pdfs/2/german/nomen-artikel-loesungen.pdf",
-        "sha256": "cae51bb3a90e3362788817c6866b1e19880fae930dbd6259ae0b88bac8790d89",
-        "bytes": 878862
+        "path": "revisions/20261004/pdfs/2/german/nomen-artikel-loesungen.pdf",
+        "sha256": "7528bcd139c2c1fe0a9e12274885e6f4e95044e077f453ed63d8d58bf7f67b20",
+        "bytes": 878853
       }
     }
   },
@@ -1210,20 +1210,20 @@
     "topicId": "verben",
     "title": "Verben",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Verben erkennen und häufige Personalformen in Sätzen verwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/verben-arbeitsblatt.pdf",
-        "sha256": "a0da01b64ebba57f397a7d20376c37f4f157521fe5c7ef2bea09b98388423f7b",
-        "bytes": 853484
+        "path": "revisions/20261004/pdfs/2/german/verben-arbeitsblatt.pdf",
+        "sha256": "fa03a0024bc3291f2b47ddf14ccb6af3c4c87e584585aec4aa5e933cc9a5b9ba",
+        "bytes": 853193
       },
       "solution": {
-        "path": "pdfs/2/german/verben-loesungen.pdf",
-        "sha256": "3615cd0089f3b626014d22d3cb474bf429f1bc713a320a599b14682e0d0d6f94",
-        "bytes": 881283
+        "path": "revisions/20261004/pdfs/2/german/verben-loesungen.pdf",
+        "sha256": "bf61ffb3c3f40f6c157631ff7b34934b45d586271f58882e55132601fbf0051c",
+        "bytes": 880890
       }
     }
   },
@@ -1234,20 +1234,20 @@
     "topicId": "silben",
     "title": "Silben zählen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.A.1",
       "scope": "Gesprochene Wörter in Silben gliedern und Silbenzahlen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/silben-arbeitsblatt.pdf",
-        "sha256": "3af1bfc152dc3344acb99d05a0dc88eeee9f23ada6c9d9c4392c39e13bc542fd",
-        "bytes": 855327
+        "path": "revisions/20261004/pdfs/2/german/silben-arbeitsblatt.pdf",
+        "sha256": "adfb9cbad5316f7457fcfeb1b47a013b088b024dfbca9dc9342925e5aa8ca898",
+        "bytes": 855035
       },
       "solution": {
-        "path": "pdfs/2/german/silben-loesungen.pdf",
-        "sha256": "2d66ee1f12309ff1ce7ab32200d33dd9ae6034fa81076ee979ca5470f98e7df6",
-        "bytes": 881188
+        "path": "revisions/20261004/pdfs/2/german/silben-loesungen.pdf",
+        "sha256": "1c7f1317f283af56458a7f97a3a729995e1576cc0dde239c7eecb0407596c0b2",
+        "bytes": 880779
       }
     }
   },
@@ -1258,20 +1258,20 @@
     "topicId": "adjektive-gr2",
     "title": "Adjektive einsetzen",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Adjektive zur Beschreibung einsetzen und einfache Gegensätze bilden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/adjektive-gr2-arbeitsblatt.pdf",
-        "sha256": "21cce471e17ba27d3225188f3a7180cd8a7a96efd1c4eca69fa40787c0c17e2b",
-        "bytes": 857564
+        "path": "revisions/20261004/pdfs/2/german/adjektive-gr2-arbeitsblatt.pdf",
+        "sha256": "2522b59e1fdc58ea5fb22c049f247185109d360d60a6a6f06d2bd657a523e9c9",
+        "bytes": 857272
       },
       "solution": {
-        "path": "pdfs/2/german/adjektive-gr2-loesungen.pdf",
-        "sha256": "cfcff085a4807c43f9149451d11c3240dffe772e625b9015b5fbbc6789b2233d",
-        "bytes": 882390
+        "path": "revisions/20261004/pdfs/2/german/adjektive-gr2-loesungen.pdf",
+        "sha256": "d399d25ca06e3cae6a707f48483a8a7375a535e19496bda5cb930fd4e1f82502",
+        "bytes": 881990
       }
     }
   },
@@ -1282,20 +1282,20 @@
     "topicId": "satzzeichen",
     "title": "Satzzeichen",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.C.1",
       "scope": "Satzanfänge und Schlusszeichen in einfachen Sätzen setzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/satzzeichen-arbeitsblatt.pdf",
-        "sha256": "b6c6dc69f56613517ed93627e7d32750f44ae58a62a7e367c7c43438674572d9",
-        "bytes": 852089
+        "path": "revisions/20261004/pdfs/2/german/satzzeichen-arbeitsblatt.pdf",
+        "sha256": "f7699adc12425f2b5cbc78d2b22fcda5264cc86779a575d7a47fff25509f845c",
+        "bytes": 851796
       },
       "solution": {
-        "path": "pdfs/2/german/satzzeichen-loesungen.pdf",
-        "sha256": "efba50ed0d5b93d0d6e149729056659c1928727226606fc0ef1dc3a5a6d67f6d",
-        "bytes": 879932
+        "path": "revisions/20261004/pdfs/2/german/satzzeichen-loesungen.pdf",
+        "sha256": "3cd40db0e573d1942c59d4c00f2dada69942f5072a8fa46316af5e388f0a8fe6",
+        "bytes": 879549
       }
     }
   },
@@ -1306,20 +1306,20 @@
     "topicId": "texte-lesen",
     "title": "Texte lesen",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.C.1",
       "scope": "Informationen und Handlungsfolge aus einem kurzen Erzähltext entnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/texte-lesen-arbeitsblatt.pdf",
-        "sha256": "613b85f67a9de686e115fa9e7a0b76d09810a5e17b71f0a82586fe8ed08b90f7",
-        "bytes": 857520
+        "path": "revisions/20261004/pdfs/2/german/texte-lesen-arbeitsblatt.pdf",
+        "sha256": "cd242b4392c8ccd0eee445c9a640e563a91f1dc0cbe460807bab360536752beb",
+        "bytes": 857608
       },
       "solution": {
-        "path": "pdfs/2/german/texte-lesen-loesungen.pdf",
-        "sha256": "e6701cd81f0976d60127153b970e0ef69eedf238482db7127009855cf0e5d365",
-        "bytes": 885229
+        "path": "revisions/20261004/pdfs/2/german/texte-lesen-loesungen.pdf",
+        "sha256": "adf88ae197600d4a0b39b264a16d257e7a8b5d821e40858b27bd785b217a4050",
+        "bytes": 885134
       }
     }
   },
@@ -1330,20 +1330,20 @@
     "topicId": "singular-plural",
     "title": "Einzahl & Mehrzahl",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.4.A.1",
       "scope": "Häufige Einzahl- und Mehrzahlformen bilden und Verben im Satz anpassen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/singular-plural-arbeitsblatt.pdf",
-        "sha256": "58eb72b17b2a2aa5ebcc66ceda55f0c3abaa13be482ca4aad680222b51e3f36d",
-        "bytes": 850976
+        "path": "revisions/20261004/pdfs/2/german/singular-plural-arbeitsblatt.pdf",
+        "sha256": "e3815ab131e7f18af29526236cb508c976d9b2d1e2b96f6d6f3d324641180c89",
+        "bytes": 850695
       },
       "solution": {
-        "path": "pdfs/2/german/singular-plural-loesungen.pdf",
-        "sha256": "9da3e0e3ca7071ed5d8e6edd076a0a2140cb8ab4e9b36a14f08ee87dada6ce8a",
-        "bytes": 877416
+        "path": "revisions/20261004/pdfs/2/german/singular-plural-loesungen.pdf",
+        "sha256": "38acde2a2444e27fce030f9add666b97ca52f77a61f731c76fc870b27d27ccc9",
+        "bytes": 876749
       }
     }
   },
@@ -1352,22 +1352,22 @@
     "grade": 2,
     "subject": "german",
     "topicId": "wortfamilien",
-    "title": "Wortfamilien & Wortstamm",
+    "title": "Wortfamilien entdecken",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Einfache Wortfamilien anhand eines unveränderten Stamms bilden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.2.A.1",
+      "scope": "Wiederkehrende Teile vertrauter Wörter erkennen und Wörter nach gemeinsamer Bedeutung zusammenordnen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/wortfamilien-arbeitsblatt.pdf",
-        "sha256": "4822954934f027d51de42e1c5b613f8cbb8f66df30e91d1b846beee00cbec349",
-        "bytes": 855853
+        "path": "revisions/20261004/pdfs/2/german/wortfamilien-arbeitsblatt.pdf",
+        "sha256": "e8956b08cc43c40d87ef5b26e1a0af08a4e880abf0e419540a6e1036cda46714",
+        "bytes": 856533
       },
       "solution": {
-        "path": "pdfs/2/german/wortfamilien-loesungen.pdf",
-        "sha256": "e68881d9fad5cdfacee042b607b8d8c2f52e3db69f30cbd9142d07c85adfa61c",
-        "bytes": 881665
+        "path": "revisions/20261004/pdfs/2/german/wortfamilien-loesungen.pdf",
+        "sha256": "43d5a681b75f453e4bdd0b2f1c5be033995b9e08e4151989845c818f8b612acc",
+        "bytes": 896840
       }
     }
   },
@@ -1376,22 +1376,22 @@
     "grade": 2,
     "subject": "german",
     "topicId": "pronomen",
-    "title": "Personalpronomen",
+    "title": "Er, sie, es: Sätze verändern",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Einfache Nomen und Personengruppen durch passende Personalpronomen ersetzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.4.A.1",
+      "scope": "Vertraute Satzmuster mit er, sie, es, wir und ihr verwenden;keine Fachbegriffsprüfung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/pronomen-arbeitsblatt.pdf",
-        "sha256": "936b286dc1706c70cf0f5a0488c3f96f82cbd788db1c0c2b721ae5f005e240ca",
-        "bytes": 856465
+        "path": "revisions/20261004/pdfs/2/german/pronomen-arbeitsblatt.pdf",
+        "sha256": "e4da913d372adf61a994dbed48de5df676e6761289a78482659a850ad4ef8b45",
+        "bytes": 857335
       },
       "solution": {
-        "path": "pdfs/2/german/pronomen-loesungen.pdf",
-        "sha256": "962dd0cdaebe6f2123f758fae8444e76161e41ecc71ea096015ea4bd192ec699",
-        "bytes": 879520
+        "path": "revisions/20261004/pdfs/2/german/pronomen-loesungen.pdf",
+        "sha256": "7a697c7afb1a208b665ab194d21b020af34f09db1d3707c8424e3bfc88bbb406",
+        "bytes": 893995
       }
     }
   },
@@ -1402,20 +1402,20 @@
     "topicId": "gefuehrtes-schreiben-2",
     "title": "Texte planen & schreiben",
     "curriculum": {
-      "code": "D.4",
+      "code": "D.4.D.1",
       "scope": "Eine kurze Geschichte mit Planungshilfe schreiben und überarbeiten.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/gefuehrtes-schreiben-2-arbeitsblatt.pdf",
-        "sha256": "8eb784ac48d62f45413fd9841acaa5d714897594da694158d0ae3adad7f503fb",
-        "bytes": 854393
+        "path": "revisions/20261004/pdfs/2/german/gefuehrtes-schreiben-2-arbeitsblatt.pdf",
+        "sha256": "d4fde14e18b31832efd27859525dbba8121164db87e3a3ae9044868bd1e13420",
+        "bytes": 853356
       },
       "solution": {
-        "path": "pdfs/2/german/gefuehrtes-schreiben-2-loesungen.pdf",
-        "sha256": "a31b605d2b0bc505527efc8629a28c767d2a672a074f2c83e99906605ed5408b",
-        "bytes": 883001
+        "path": "revisions/20261004/pdfs/2/german/gefuehrtes-schreiben-2-loesungen.pdf",
+        "sha256": "921ab505e041a87d6479a61639236d293acc8c11f13f0e9054e07b0ac988e5d2",
+        "bytes": 881536
       }
     }
   },
@@ -1426,20 +1426,20 @@
     "topicId": "hoerverstehen-2",
     "title": "Hörtexte verstehen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.B.1",
       "scope": "Wichtige Einzelinformationen und eine zeitliche Abfolge aus einem kurzen Hörtext entnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/german/hoerverstehen-2-arbeitsblatt.pdf",
-        "sha256": "7d1f4717c1abf2afde907d5b9e1e6310420bf59c6e658fcc3c7590cf3d65b2d2",
-        "bytes": 855383
+        "path": "revisions/20261004/pdfs/2/german/hoerverstehen-2-arbeitsblatt.pdf",
+        "sha256": "79488d6e9486a167a61655d44fb6d3d226094e9706e8f5478a4d0e07e5b878af",
+        "bytes": 855090
       },
       "solution": {
-        "path": "pdfs/2/german/hoerverstehen-2-loesungen.pdf",
-        "sha256": "87f8e84997cefd074df92af8bae6aa36ba29695de7c3dbf8c9683ef7102d36ae",
-        "bytes": 887056
+        "path": "revisions/20261004/pdfs/2/german/hoerverstehen-2-loesungen.pdf",
+        "sha256": "733cc3eab2106dc93f9f594fe8a2b7d602b583d718301e52c74dae43c554be01",
+        "bytes": 886647
       }
     }
   },

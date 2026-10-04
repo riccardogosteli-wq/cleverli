@@ -1,0 +1,71 @@
+{
+  "grade": 2,
+  "subject": "german",
+  "sourceId": "adjektive-gr2",
+  "goal": "Adjektive beschreiben, wie etwas ist. Beispiel: Der Ball ist rund. Ein Adjektiv kann einen Satz genauer machen.",
+  "sections": [
+    {
+      "title": "Setze das passende Wort ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Zitrone schmeckt ... (sauer / eckig)",
+          "answer": "sauer"
+        },
+        {
+          "prompt": "Das Eis fühlt sich ... an. (kalt / laut)",
+          "answer": "kalt"
+        },
+        {
+          "prompt": "Die Feder ist ... (leicht / durstig)",
+          "answer": "leicht"
+        },
+        {
+          "prompt": "Der Stein ist ... (hart / müde)",
+          "answer": "hart"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe das Gegenteil.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "gross",
+          "answer": "klein"
+        },
+        {
+          "prompt": "hell",
+          "answer": "dunkel"
+        },
+        {
+          "prompt": "warm",
+          "answer": "kalt"
+        },
+        {
+          "prompt": "lang",
+          "answer": "kurz"
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe genauer.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ergänze mit je einem passenden Adjektiv: «Der Hund ist ...» und «Das Wasser ist ...». Schreibe beide Sätze auf.",
+          "answer": "Beispiele: Der Hund ist freundlich. Das Wasser ist klar. Andere sinnvolle Adjektive gelten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Adjektive zur Beschreibung einsetzen und einfache Gegensätze bilden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}
