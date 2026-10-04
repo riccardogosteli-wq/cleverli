@@ -1,0 +1,61 @@
+{
+  "grade": 3,
+  "subject": "mi",
+  "sourceId": "digitale-spuren-3",
+  "goal": "Digitale Spuren entstehen zum Beispiel durch Beiträge, Fotos oder besuchte Seiten. Auch gelöschte Inhalte können als Kopien weiterbestehen. Teile private Daten nicht öffentlich. Bitte eine vertraute erwachsene Person um Hilfe, wenn etwas unangenehm ist.",
+  "sections": [
+    {
+      "title": "Was sollte privat bleiben?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Deine genaue Wohnadresse öffentlich posten: sicher oder riskant?",
+          "answer": "Riskant",
+          "wide": true
+        },
+        {
+          "prompt": "Dein Passwort in einem Klassenchat teilen: sicher oder riskant?",
+          "answer": "Riskant",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Entscheide respektvoll.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du möchtest ein Foto mit einem anderen Kind veröffentlichen. Was klärst du vorher?",
+          "answer": "Einverständnis des Kindes und nötige Erlaubnis mit einer verantwortlichen erwachsenen Person klären; bei Nein nicht veröffentlichen.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Verschwindet ein Foto sicher überall, wenn du deinen Beitrag löschst? Begründe.",
+          "answer": "Nein. Andere können bereits Kopien oder Bildschirmfotos gespeichert haben.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Hole Hilfe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine fremde Person fragt im Chat nach deiner Adresse und macht dir Druck. Was kannst du tun? Notiere zwei sichere Schritte.",
+          "answer": "Nicht antworten oder Daten senden; Chat beenden und vertraute erwachsene Person informieren. Gemeinsam blockieren/melden. Kind ist nicht schuld, wenn es bereits etwas geteilt hat.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MI.1.3",
+    "scope": "Sicherheitsregeln für persönliche Daten in Medienbeiträgen üben (Zyklus 2, MI.1.3d). Einverständnis und vertraute Hilfe werden anhand fiktiver Situationen besprochen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

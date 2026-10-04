@@ -21,3 +21,5 @@ Grade3NMG:2actualobservation/drawingareas,maparrowanswerplacementclarified,corre
 Grade3English:9topics73prompts,first-EnglishvariantFS1E/cantonalorderqualification;4actualdraw/response-slotimprovements,correctanswersretained.53independentchecks,18actualcolour/grayscalePDFpagesreviewed,layout9PASS. No audio/physicalprint/externalteacherreviewclaim.
 
 Grade3French:9topics72prompts,5targetedtopics:40mm drawingarea,inline responses and accurate written-meaning instruction.51independentchecks,5live FrenchfirstLP21 starter clauses,cantonal qualification retained.18actualpagescolour/grayreviewed;16unchangedV1pages rastercompared,2SuisseRomandepagesreinspectedV2. No wronganswersfound,no physicalprint/teacher/audio claim.
+
+Grade3MI:2topics8prompts,correcttasks/solutions unchanged;preciseMI2.2b/1.3d references.39independentgrid/path/privacychecks,all10shortestpathpermutationsverified.4actualPDFpagescolour/grayscaleinspected/layout2PASS. Consent/adulthelp/no blame preserved. No physicalprint/externalteacherreview.

@@ -2902,20 +2902,20 @@
     "topicId": "digitale-spuren-3",
     "title": "Digitale Spuren",
     "curriculum": {
-      "code": "MI.1",
-      "scope": "Privatsphäre, Einverständnis und sichere Hilfe bei digitalen Kontakten unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C10%7C0%7C1"
+      "code": "MI.1.3",
+      "scope": "Sicherheitsregeln für persönliche Daten in Medienbeiträgen üben (Zyklus 2, MI.1.3d). Einverständnis und vertraute Hilfe werden anhand fiktiver Situationen besprochen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/mi/digitale-spuren-3-arbeitsblatt.pdf",
-        "sha256": "ca2120992371fd91d123035953ca82225de60eb2a366b9d71ccaff43c4efe86b",
-        "bytes": 862562
+        "path": "revisions/20261004/pdfs/3/mi/digitale-spuren-3-arbeitsblatt.pdf",
+        "sha256": "f0ef85bca7ae03fa5c41ffa9d743b02bfb0038d67ddd43b164c7dcefb0d2c37e",
+        "bytes": 862252
       },
       "solution": {
-        "path": "pdfs/3/mi/digitale-spuren-3-loesungen.pdf",
-        "sha256": "bbd0aee5c66428d4200ffb8ed3cf740b403c0170edcbf0a4543eca271ad11a05",
-        "bytes": 888255
+        "path": "revisions/20261004/pdfs/3/mi/digitale-spuren-3-loesungen.pdf",
+        "sha256": "24b718c06ff0fd7c025d5b48c4bdb091e94801b45489bd779a173f934d29b624",
+        "bytes": 888973
       }
     }
   },
@@ -2926,20 +2926,20 @@
     "topicId": "algorithmen-alltag-3",
     "title": "Algorithmen im Alltag",
     "curriculum": {
-      "code": "MI.2",
-      "scope": "Eine eindeutige Schrittfolge ausführen, Fehler finden und alternative Algorithmen prüfen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C10%7C0%7C2"
+      "code": "MI.2.2",
+      "scope": "Eine eindeutige Schrittfolge ausführen, Fehler finden und alternative Lösungswege auf Korrektheit prüfen (Zyklus 2, MI.2.2b).",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|2|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/mi/algorithmen-alltag-3-arbeitsblatt.pdf",
-        "sha256": "e0a86d44ab050b6d61771008d9f10280c6bbb919db1beb1eb0d64717250bedd2",
-        "bytes": 870443
+        "path": "revisions/20261004/pdfs/3/mi/algorithmen-alltag-3-arbeitsblatt.pdf",
+        "sha256": "8465e27321be326bc56ae95ef1888a001a97ec8f7b0cf19ad20c50cad07a9125",
+        "bytes": 870133
       },
       "solution": {
-        "path": "pdfs/3/mi/algorithmen-alltag-3-loesungen.pdf",
-        "sha256": "c187f4444073a320f626aa9e69556829585171d2fbf164c10e4c17a06ea05904",
-        "bytes": 893923
+        "path": "revisions/20261004/pdfs/3/mi/algorithmen-alltag-3-loesungen.pdf",
+        "sha256": "0d448a62d841db8f5415dc5b9ab797a179eb67cb5f70f3bc1fd63e9825114aa0",
+        "bytes": 893875
       }
     }
   },

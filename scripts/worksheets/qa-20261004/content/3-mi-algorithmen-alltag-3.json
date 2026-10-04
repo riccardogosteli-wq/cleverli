@@ -1,0 +1,51 @@
+{
+  "grade": 3,
+  "subject": "mi",
+  "sourceId": "algorithmen-alltag-3",
+  "goal": "Ein Algorithmus ist eine genaue Folge von Schritten. Hier bedeutet rechts/links/oben/unten immer eine Bewegung um genau ein Kästchen auf dem Blatt, keine Drehung. Starte bei S und bleibe im Gitter. Z ist das Ziel.",
+  "sections": [
+    {
+      "title": "Führe die Schritte mit einem Stift aus.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "S: 3-mal rechts, dann 2-mal oben. Bei welchem Buchstaben endest du?",
+          "answer": "Z",
+          "svg": "<svg class=\"illustration algorithm-grid\" style=\"width:100mm;height:50mm\" viewBox=\"0 0 100 50\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"3\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"35\" y=\"3\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"50\" y=\"3\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"65\" y=\"3\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"20\" y=\"18\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"35\" y=\"18\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"50\" y=\"18\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"65\" y=\"18\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"20\" y=\"33\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"35\" y=\"33\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"50\" y=\"33\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect x=\"65\" y=\"33\" width=\"15\" height=\"15\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><text x=\"24\" y=\"44\" font-size=\"5\">S</text><text x=\"69\" y=\"14\" font-size=\"5\">Z</text></svg>",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Finde und verbessere einen Fehler.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Anleitung lautet: «3-mal rechts, dann 1-mal oben.» Erreicht sie von S aus das Ziel Z? Welcher Schritt fehlt?",
+          "answer": "Nein. Noch einmal oben fehlt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine andere Anleitung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Finde einen anderen Weg von S nach Z mit genau 5 Bewegungen. Schreibe die Schritte auf. Prüfe im Gitter.",
+          "answer": "Beispiel: oben, oben, rechts, rechts, rechts. Jede Anordnung von 2-mal oben und 3-mal rechts bleibt im Gitter und erreicht Z.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MI.2.2",
+    "scope": "Eine eindeutige Schrittfolge ausführen, Fehler finden und alternative Lösungswege auf Korrektheit prüfen (Zyklus 2, MI.2.2b).",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|2|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}
