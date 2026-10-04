@@ -1,6 +1,8 @@
 import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
+import { swissOrthography } from "../src/lib/swissOrthography";
+
 import { TOPIC_CATALOG } from "../src/data/topicCatalog.generated";
 
 type Lang = "de" | "en" | "fr" | "it";
@@ -44,7 +46,7 @@ async function main() {
   for (const language of languages) {
     for (const batch of chunks(titles)) {
       const translated = await translateBatch(language, batch);
-      batch.forEach((title, index) => { output[title][language] = translated[index]; });
+      batch.forEach((title, index) => { output[title][language] = language === "de" ? swissOrthography(translated[index]) : translated[index]; });
     }
   }
 

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run qa:topic-catalog && npx tsx scripts/generate-lehrplan-overview.ts --check",
+    "prebuild": "npm run qa:swiss-orthography && npm run qa:topic-catalog && npx tsx scripts/generate-lehrplan-overview.ts --check",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -54,7 +54,8 @@
     "lint:hooks": "npx ts-node --skip-project scripts/check-hooks-order.ts",
     "lp21:gap": "DRY_RUN=1 npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",
     "lp21:gap:live": "npx ts-node --skip-project --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\",\\\"moduleResolution\\\":\\\"node\\\",\\\"esModuleInterop\\\":true}\" scripts/lp21-gap-analysis.ts",
-    "lp21:fetch": "npx tsx scripts/fetch-lp21-live.ts"
+    "lp21:fetch": "npx tsx scripts/fetch-lp21-live.ts",
+    "qa:swiss-orthography": "node scripts/audit-swiss-orthography.cjs"
   },
   "dependencies": {
     "@sentry/nextjs": "^10.73.0",
