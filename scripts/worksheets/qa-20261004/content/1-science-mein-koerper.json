@@ -1,0 +1,71 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "mein-koerper",
+  "goal": "Menschen haben unterschiedliche Körper. Hier übst du Kopf, Arm, Bein, Knie und Ellbogen.",
+  "sections": [
+    {
+      "title": "Welcher Körperteil passt?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwischen Oberarm und Unterarm:",
+          "answer": "Ellbogen"
+        },
+        {
+          "prompt": "Zwischen Oberschenkel und Unterschenkel:",
+          "answer": "Knie"
+        },
+        {
+          "prompt": "An einer Hand sind meistens fünf",
+          "answer": "Finger"
+        },
+        {
+          "prompt": "An einem Fuss sind meistens fünf",
+          "answer": "Zehen"
+        }
+      ]
+    },
+    {
+      "title": "Was tut dem Körper gut?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zum Durstlöschen: Wasser oder immer nur Süssgetränke?",
+          "answer": "Wasser",
+          "wide": true
+        },
+        {
+          "prompt": "Bei Müdigkeit: Pause oder immer weitermachen?",
+          "answer": "Pause",
+          "wide": true
+        },
+        {
+          "prompt": "Vor dem Essen: Hände waschen oder schmutzig lassen?",
+          "answer": "Hände waschen",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Zeichne und beschrifte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne eine Person. Beschrifte Kopf, Arm und Bein.",
+          "answer": "Drei Bezeichnungen zeigen auf passende Körperteile. Unterschiedliche Körperdarstellungen sind willkommen.",
+          "wide": true,
+          "drawingHeight": 48
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.1.4",
+    "scope": "Körperteile benennen und einfache gesundheitsförderliche Handlungen erkennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|4"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

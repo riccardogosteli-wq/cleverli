@@ -1,0 +1,70 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "wetter-klima",
+  "goal": "Ein Quartier ist ein Teil eines Ortes. Hier findest du Plätze und Wege. Du darfst ein Quartier erfinden.",
+  "sections": [
+    {
+      "title": "Welcher Ort passt?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bücher ausleihen: Bibliothek oder Bäckerei?",
+          "answer": "Bibliothek",
+          "wide": true
+        },
+        {
+          "prompt": "Brot kaufen: Bäckerei oder Spielplatz?",
+          "answer": "Bäckerei",
+          "wide": true
+        },
+        {
+          "prompt": "Auf einer Schaukel spielen: Spielplatz oder Strasse?",
+          "answer": "Spielplatz",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Was macht einen Ort angenehm?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Abfall in einen passenden Abfallbehälter werfen: hilfreich oder nicht?",
+          "answer": "Hilfreich",
+          "wide": true
+        },
+        {
+          "prompt": "Auf einem Weg einander Platz lassen: hilfreich oder nicht?",
+          "answer": "Hilfreich",
+          "wide": true
+        },
+        {
+          "prompt": "Pflanzen mutwillig ausreissen: hilfreich oder nicht?",
+          "answer": "Nicht hilfreich",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Zeichne einen kleinen Plan.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Erfinde ein Quartier mit Haus, Spielplatz und einem Weg dazwischen. Beschrifte zwei Orte. Keine private Adresse nötig.",
+          "answer": "Drei Elemente vorhanden; Weg verbindet die Orte nachvollziehbar; zwei passende Beschriftungen. Keine massstabgetreue Karte nötig.",
+          "wide": true,
+          "drawingHeight": 48
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.5",
+    "scope": "Vertraute Orte, Nutzungen und einfache räumliche Verbindungen darstellen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|5"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

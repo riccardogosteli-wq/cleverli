@@ -1,0 +1,72 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "tiere",
+  "goal": "Tiere haben unterschiedliche Merkmale. Schau genau hin. Beobachte Tiere ruhig und mit Abstand.",
+  "sections": [
+    {
+      "title": "Wähle das passende Tier.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Hat Federn: Amsel oder Fuchs?",
+          "answer": "Amsel"
+        },
+        {
+          "prompt": "Hat Fell: Fuchs oder Amsel?",
+          "answer": "Fuchs"
+        },
+        {
+          "prompt": "Hat sechs Beine: Ameise oder Katze?",
+          "answer": "Ameise"
+        },
+        {
+          "prompt": "Hat ein Schneckenhaus: Schnecke oder Regenwurm?",
+          "answer": "Schnecke"
+        }
+      ]
+    },
+    {
+      "title": "Was hilft den Tieren? Schreibe ja oder nein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Tiere ruhig aus Abstand beobachten.",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Ein Vogelnest mit Eiern anfassen.",
+          "answer": "Nein"
+        },
+        {
+          "prompt": "Abfall wieder mitnehmen.",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Einen Frosch mit Steinen bewerfen.",
+          "answer": "Nein"
+        }
+      ]
+    },
+    {
+      "title": "Beobachte oder erinnere dich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne ein Tier, das du kennst. Beschreibe zwei Merkmale.",
+          "answer": "Beispiel: Amsel, Federn und Schnabel. Andere Tiere mit zwei zutreffenden Merkmalen gelten.",
+          "wide": true,
+          "drawingHeight": 44
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.4",
+    "scope": "Äussere Tiermerkmale beschreiben und achtsames Beobachten üben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|4"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

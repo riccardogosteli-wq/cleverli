@@ -1,0 +1,68 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "verkehr-sicherheit",
+  "goal": "Übe sichere Wege immer mit einer erwachsenen Person. Vor dem Überqueren: anhalten, schauen, hören und erst gehen, wenn es sicher ist.",
+  "sections": [
+    {
+      "title": "Was ist sicher? Schreibe ja oder nein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Vor der Strasse am Rand anhalten.",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Zwischen parkierten Autos plötzlich losrennen.",
+          "answer": "Nein"
+        },
+        {
+          "prompt": "Am Fussgängerstreifen warten, bis Fahrzeuge anhalten.",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Beim Überqueren weiter aufmerksam bleiben.",
+          "answer": "Ja"
+        }
+      ]
+    },
+    {
+      "title": "Ampel und Sichtbarkeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Fussgängerampel zeigt Rot. Was tust du?",
+          "answer": "Warten.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Warum helfen helle Kleider und Reflektoren im Dunkeln?",
+          "answer": "Man wird besser gesehen. Sie machen den Weg nicht automatisch sicher.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Besprich deinen Übungsweg.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne mit einer erwachsenen Person einen sicheren Ort zum Überqueren. Besprecht, worauf ihr achten müsst.",
+          "answer": "Individuell: übersichtlicher geeigneter Ort; anhalten, Verkehr von allen relevanten Richtungen prüfen, nur sicher überqueren. Kein selbstständiger Strassentest.",
+          "wide": true,
+          "drawingHeight": 48
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.5",
+    "scope": "Den vertrauten Schulweg betrachten und sicheres Verhalten mit Erwachsenen besprechen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|5"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

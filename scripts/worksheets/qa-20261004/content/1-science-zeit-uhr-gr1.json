@@ -1,0 +1,62 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "zeit-uhr-gr1",
+  "goal": "Morgen, Mittag, Nachmittag, Abend und Nacht gehören zum Tageslauf. Heute ordnest du sie.",
+  "sections": [
+    {
+      "title": "Ordne diese Wörter im Tageslauf.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nacht, Morgen, Abend, Mittag, Nachmittag. Beginne mit Morgen.",
+          "answer": "Morgen, Mittag, Nachmittag, Abend, Nacht",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Was dauert meist länger?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Einmal klatschen oder ein Lied singen?",
+          "answer": "Ein Lied singen",
+          "wide": true
+        },
+        {
+          "prompt": "Einen Namen sagen oder ein Buch vorlesen?",
+          "answer": "Ein Buch vorlesen",
+          "wide": true
+        },
+        {
+          "prompt": "Einmal blinzeln oder eine Pause von zehn Minuten?",
+          "answer": "Eine Pause von zehn Minuten",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Plane eine kleine Reihenfolge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nach dem Malen liegen Stifte auf dem Tisch. Du willst jetzt draussen spielen. Erzähle eine sinnvolle Reihenfolge mit zuerst und danach.",
+          "answer": "Beispiel: Zuerst räume ich die Stifte weg. Danach gehe ich spielen. Andere logische sichere Reihenfolgen gelten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.1",
+    "scope": "Tagesabschnitte, einfache Reihenfolgen und unterschiedliche Dauern beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true,
+  "worksheetTitle": "Tageslauf und Zeit"
+}

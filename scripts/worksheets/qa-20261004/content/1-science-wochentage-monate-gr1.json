@@ -1,0 +1,74 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "wochentage-monate-gr1",
+  "goal": "Die Woche hat 7 Tage: Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag. Ein Jahr hat 12 Monate.",
+  "sections": [
+    {
+      "title": "Was kommt direkt danach?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nach Montag kommt",
+          "answer": "Dienstag"
+        },
+        {
+          "prompt": "Nach Mittwoch kommt",
+          "answer": "Donnerstag"
+        },
+        {
+          "prompt": "Nach Freitag kommt",
+          "answer": "Samstag"
+        },
+        {
+          "prompt": "Nach Sonntag kommt",
+          "answer": "Montag"
+        }
+      ]
+    },
+    {
+      "title": "Lies diese Monate.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Januar, Februar, März: Welcher ist der zweite Monat im Jahr?",
+          "answer": "Februar",
+          "wide": true
+        },
+        {
+          "prompt": "Oktober, November, Dezember: Welcher ist der letzte Monat im Jahr?",
+          "answer": "Dezember",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele Tage hat eine Woche?",
+          "answer": "7"
+        },
+        {
+          "prompt": "Wie viele Monate hat ein Jahr?",
+          "answer": "12"
+        }
+      ]
+    },
+    {
+      "title": "Nutze einen Kalender.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Suche gemeinsam einen Kalender. Schreibe den heutigen Wochentag und den aktuellen Monat auf.",
+          "answer": "Vom tatsächlichen Datum abhängig. Kriterium: Wochentag und Monat korrekt am verwendeten Kalender abgelesen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.1",
+    "scope": "Woche und Jahr mit einem Kalender zeitlich ordnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

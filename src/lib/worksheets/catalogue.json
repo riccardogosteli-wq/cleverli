@@ -582,20 +582,20 @@
     "topicId": "tiere",
     "title": "Tiere in der Natur",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.4",
       "scope": "Äussere Tiermerkmale beschreiben und achtsames Beobachten üben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/tiere-arbeitsblatt.pdf",
-        "sha256": "855a553162dd2763799fd5cb49ea186eca32f7d5620ceb4edd0e1ceef1d9416d",
-        "bytes": 856837
+        "path": "revisions/20261004/pdfs/1/science/tiere-arbeitsblatt.pdf",
+        "sha256": "05735ebfe03d5f37ec61b5ec5be8941d53d988ffb016ac6f40dc0dc59f648567",
+        "bytes": 861686
       },
       "solution": {
-        "path": "pdfs/1/science/tiere-loesungen.pdf",
-        "sha256": "5dedcbcc72f4b686a54c607cb51925b68e6058dc4fab087ea9ac2051a9763d11",
-        "bytes": 882692
+        "path": "revisions/20261004/pdfs/1/science/tiere-loesungen.pdf",
+        "sha256": "6d54bc454c757bec42a323e776edc94dac5f5a381deaf2fa093ffe99ff72f599",
+        "bytes": 881749
       }
     }
   },
@@ -606,20 +606,20 @@
     "topicId": "jahreszeiten",
     "title": "Jahreszeiten & Wetter",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.9.1",
       "scope": "Jahreszeitliche Veränderungen und aktuelles Wetter unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/jahreszeiten-arbeitsblatt.pdf",
-        "sha256": "a1003d8fbafee20d25bf2560774dd475028f8f687b99982be1114077c6f5a3d5",
-        "bytes": 860956
+        "path": "revisions/20261004/pdfs/1/science/jahreszeiten-arbeitsblatt.pdf",
+        "sha256": "c088aa04825e976ea10a3d118a50725ee89e5b1dcaba3d3e571c22f40a76d8a3",
+        "bytes": 864922
       },
       "solution": {
-        "path": "pdfs/1/science/jahreszeiten-loesungen.pdf",
-        "sha256": "ac1dc4f1e55e9585da7b1d0f96252f9d4ee3fdd0a29d4047cc086c7c1e0fb598",
-        "bytes": 887686
+        "path": "revisions/20261004/pdfs/1/science/jahreszeiten-loesungen.pdf",
+        "sha256": "05cab6956c9ea12b651ccb33beffeeed63b21aed87dbba41ddf8da0adb675c1f",
+        "bytes": 885819
       }
     }
   },
@@ -630,20 +630,20 @@
     "topicId": "mein-koerper",
     "title": "Mein Körper",
     "curriculum": {
-      "code": "NMG.1",
+      "code": "NMG.1.4",
       "scope": "Körperteile benennen und einfache gesundheitsförderliche Handlungen erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/mein-koerper-arbeitsblatt.pdf",
-        "sha256": "d41a097e06efb5bdbd91402bc19ac9202e716c4014e51a68c97756a5afb964b3",
-        "bytes": 861626
+        "path": "revisions/20261004/pdfs/1/science/mein-koerper-arbeitsblatt.pdf",
+        "sha256": "ad9831cd1d3b2f5d7f8823ea025ab09e0509fb579c7859ef60b8ab0f0af9f162",
+        "bytes": 865037
       },
       "solution": {
-        "path": "pdfs/1/science/mein-koerper-loesungen.pdf",
-        "sha256": "782a6cd9a62b4b6f6f1ca2ceb18ee3c589e791316f0a79ea21cae4f001636d2b",
-        "bytes": 887586
+        "path": "revisions/20261004/pdfs/1/science/mein-koerper-loesungen.pdf",
+        "sha256": "ceadef9f724163f1eb8d5410981463c06eb333b3d8162d4fb271a56e9e5a60dd",
+        "bytes": 885241
       }
     }
   },
@@ -654,20 +654,20 @@
     "topicId": "pflanzen-gr1",
     "title": "Pflanzen & Blumen",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.4",
       "scope": "Pflanzenteile und ausgewählte Bedürfnisse einer Pflanze kennenlernen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/pflanzen-gr1-arbeitsblatt.pdf",
-        "sha256": "97bcb2769eef76d241c91cd9f92f04c7d2aee6c64339bed06c9b4786d5450ecd",
-        "bytes": 859700
+        "path": "revisions/20261004/pdfs/1/science/pflanzen-gr1-arbeitsblatt.pdf",
+        "sha256": "9b37cb15695bb3c680476dd43254901322299e04cd1611d79e80a40a6f02d82a",
+        "bytes": 863461
       },
       "solution": {
-        "path": "pdfs/1/science/pflanzen-gr1-loesungen.pdf",
-        "sha256": "90249f6c37bffce84a6357cbce66bca54046895a398a30c58def713a48dd511c",
-        "bytes": 886325
+        "path": "revisions/20261004/pdfs/1/science/pflanzen-gr1-loesungen.pdf",
+        "sha256": "4d5b10ea26732182d4efe7d7772de650b052b4666fb2138ab39b66efa7471121",
+        "bytes": 884222
       }
     }
   },
@@ -678,20 +678,20 @@
     "topicId": "fuenf-sinne",
     "title": "Meine 5 Sinne",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.4.1",
       "scope": "Fünf Sinnesbereiche unterscheiden und sichere Tastbeobachtungen beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/fuenf-sinne-arbeitsblatt.pdf",
-        "sha256": "98dd84d66f0aca716022c0c473bf472111bdcd66f76f766be95622683603475c",
-        "bytes": 857561
+        "path": "revisions/20261004/pdfs/1/science/fuenf-sinne-arbeitsblatt.pdf",
+        "sha256": "7ccda6cf43e96ffeafba0bdb97dcdbbe8ba87c8b0083720b1a08e7069c4571ee",
+        "bytes": 860387
       },
       "solution": {
-        "path": "pdfs/1/science/fuenf-sinne-loesungen.pdf",
-        "sha256": "32206a8fe0638e6fce69fee88069f06f5ecc465bfd81f34a7a90a8b1fc3537ba",
-        "bytes": 885769
+        "path": "revisions/20261004/pdfs/1/science/fuenf-sinne-loesungen.pdf",
+        "sha256": "8b843392cff4904d85ec33e945d89b1512a6d9af1e2b7fd8256973b87d00aa6b",
+        "bytes": 884227
       }
     }
   },
@@ -702,20 +702,20 @@
     "topicId": "familie-gemeinschaft",
     "title": "Familie & Gemeinschaft",
     "curriculum": {
-      "code": "NMG.10",
+      "code": "NMG.10.1",
       "scope": "Rücksicht, Hilfsbereitschaft und einfache Regeln des Zusammenlebens reflektieren.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C10"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/familie-gemeinschaft-arbeitsblatt.pdf",
-        "sha256": "c33e5ff6c553ff40ab723cd969927676e14f77428ebb51a3577fa80f4f6feeb5",
-        "bytes": 859744
+        "path": "revisions/20261004/pdfs/1/science/familie-gemeinschaft-arbeitsblatt.pdf",
+        "sha256": "9e95f53a3b45fb1f235bb2ee21ca7e4acfc70bb3f40676c323691873b91a6cc3",
+        "bytes": 865106
       },
       "solution": {
-        "path": "pdfs/1/science/familie-gemeinschaft-loesungen.pdf",
-        "sha256": "c9b4e647a2204429f39eaecba023694eab0bda73265a5d64dbeeaa3c2720ca0f",
-        "bytes": 885851
+        "path": "revisions/20261004/pdfs/1/science/familie-gemeinschaft-loesungen.pdf",
+        "sha256": "83054e2cbbdc8f098c629d70cea9ca8973b97bd1d3e2bf837b859061b776bae5",
+        "bytes": 885323
       }
     }
   },
@@ -726,20 +726,20 @@
     "topicId": "verkehr-sicherheit",
     "title": "Verkehr & Sicherheit",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.5",
       "scope": "Den vertrauten Schulweg betrachten und sicheres Verhalten mit Erwachsenen besprechen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/verkehr-sicherheit-arbeitsblatt.pdf",
-        "sha256": "f9020018b0d7bcc01f148a231a06b70959ad2cc06f8389822c27b0ff2008657f",
-        "bytes": 860270
+        "path": "revisions/20261004/pdfs/1/science/verkehr-sicherheit-arbeitsblatt.pdf",
+        "sha256": "53ee9a1894414fa2ae8415c3dd79275717106878ebdf8c3b226af022113235da",
+        "bytes": 865716
       },
       "solution": {
-        "path": "pdfs/1/science/verkehr-sicherheit-loesungen.pdf",
-        "sha256": "e0fb709b2ae76cae08a70d65263021d1a185e8a03842aad455a4db882d1451f4",
-        "bytes": 889850
+        "path": "revisions/20261004/pdfs/1/science/verkehr-sicherheit-loesungen.pdf",
+        "sha256": "f9b8cbdd3c894fd5a058d7efb1bf59cb82ac1c0ca7d8df0d95d069b663b09d91",
+        "bytes": 889748
       }
     }
   },
@@ -748,22 +748,22 @@
     "grade": 1,
     "subject": "science",
     "topicId": "zeit-uhr-gr1",
-    "title": "Zeit & die Uhr",
+    "title": "Tageslauf und Zeit",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.1",
       "scope": "Tagesabschnitte, einfache Reihenfolgen und unterschiedliche Dauern beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/zeit-uhr-gr1-arbeitsblatt.pdf",
-        "sha256": "18f6948f212df29bc52e350d8689a9c2f2f249b90baf2911075b3db7878f4912",
-        "bytes": 859023
+        "path": "revisions/20261004/pdfs/1/science/zeit-uhr-gr1-arbeitsblatt.pdf",
+        "sha256": "f3c486982ccf64cf3cd80766cbb155d288ccd6b43cbbd3f74efcb69df4bc9bc0",
+        "bytes": 862882
       },
       "solution": {
-        "path": "pdfs/1/science/zeit-uhr-gr1-loesungen.pdf",
-        "sha256": "e6a9bd9f1f94b951d69b87863bafe79286085416ecaf206a99b55e76c4544bf6",
-        "bytes": 886370
+        "path": "revisions/20261004/pdfs/1/science/zeit-uhr-gr1-loesungen.pdf",
+        "sha256": "ca681f4e64f963bee9cade58a6e825fe2978ae6d119c159d117727ec4c227014",
+        "bytes": 884186
       }
     }
   },
@@ -774,20 +774,20 @@
     "topicId": "wochentage-monate-gr1",
     "title": "Wochentage & Monate",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.1",
       "scope": "Woche und Jahr mit einem Kalender zeitlich ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/wochentage-monate-gr1-arbeitsblatt.pdf",
-        "sha256": "42016fef59ce69826f18d41d0b836a1e382e1ac6102fcda42f82fd7443907ac3",
-        "bytes": 860492
+        "path": "revisions/20261004/pdfs/1/science/wochentage-monate-gr1-arbeitsblatt.pdf",
+        "sha256": "8d31fdb71b56c0f5832efac1e45f1b7a32202a422ea12688699425006a78d1a0",
+        "bytes": 865032
       },
       "solution": {
-        "path": "pdfs/1/science/wochentage-monate-gr1-loesungen.pdf",
-        "sha256": "88929a23e3deacaf266a90bc773da09c918683e47da7874504c86395ebd5cea1",
-        "bytes": 886371
+        "path": "revisions/20261004/pdfs/1/science/wochentage-monate-gr1-loesungen.pdf",
+        "sha256": "38d145c6338d606da22cb2f09047ded1616b51ae78d15a8664cbca0ddaf8ad72",
+        "bytes": 886351
       }
     }
   },
@@ -798,20 +798,20 @@
     "topicId": "physik-bewegung",
     "title": "Bewegung und Kraft 🏃",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.1",
       "scope": "Schieben, Ziehen und einfache Bewegungsänderungen sicher erkunden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/physik-bewegung-arbeitsblatt.pdf",
-        "sha256": "d7a57490f9e8258598cf287ddbc8abeb8f521eaa6cd80ed77f06010b7fcbfb92",
-        "bytes": 859976
+        "path": "revisions/20261004/pdfs/1/science/physik-bewegung-arbeitsblatt.pdf",
+        "sha256": "b6d45910c8bfafa6fa5440dfe7e63a1a136cfc6c2dc9cdb45b6fa00104ea4971",
+        "bytes": 862270
       },
       "solution": {
-        "path": "pdfs/1/science/physik-bewegung-loesungen.pdf",
-        "sha256": "bda733fe08a8f3e0e466d53cc0836714ab6355c8d37bf0035f3050d2d7b03310",
-        "bytes": 886158
+        "path": "revisions/20261004/pdfs/1/science/physik-bewegung-loesungen.pdf",
+        "sha256": "d6f0933010a39fc521cf98cc7afe6f9c892160712913f2daf09e1df9a3e2d5d6",
+        "bytes": 883528
       }
     }
   },
@@ -822,20 +822,20 @@
     "topicId": "sinne",
     "title": "Bedürfnisse & Wünsche",
     "curriculum": {
-      "code": "NMG.1",
-      "scope": "Grundbedürfnisse und zusätzliche Wünsche an einfachen Beispielen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C1"
+      "code": "NMG.6.5",
+      "scope": "Dinge für konkrete Alltagssituationen auswählen und einfache eigene oder erfundene Wünsche benennen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/sinne-arbeitsblatt.pdf",
-        "sha256": "889325502b05021303e55fdb3824c027cac168ef590e02a79a64def16858b9b1",
-        "bytes": 858278
+        "path": "revisions/20261004/pdfs/1/science/sinne-arbeitsblatt.pdf",
+        "sha256": "9d20abf2ecb53d1c7331a20a9d8d6fe22f165374f02b973247c22ad4718a6a3b",
+        "bytes": 863749
       },
       "solution": {
-        "path": "pdfs/1/science/sinne-loesungen.pdf",
-        "sha256": "8301fe4c7ec52d0889b1432929234547f97d817df780b7239f620d17c5ef8098",
-        "bytes": 883740
+        "path": "revisions/20261004/pdfs/1/science/sinne-loesungen.pdf",
+        "sha256": "45b62ae4893c0098171d907c66965e0e50de3e4a7e8aecff3a11f95785ae9acc",
+        "bytes": 900889
       }
     }
   },
@@ -846,20 +846,20 @@
     "topicId": "wetter-klima",
     "title": "Unser Quartier",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.5",
       "scope": "Vertraute Orte, Nutzungen und einfache räumliche Verbindungen darstellen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/science/wetter-klima-arbeitsblatt.pdf",
-        "sha256": "b22c6ad8c336e52455483ba04f7d582fa93ecba4918eba9f3c44ceae1845a6f7",
-        "bytes": 861272
+        "path": "revisions/20261004/pdfs/1/science/wetter-klima-arbeitsblatt.pdf",
+        "sha256": "987b369726529528adb8abce9137219cf1e00491de57aa218fcf7596f4aea07c",
+        "bytes": 862642
       },
       "solution": {
-        "path": "pdfs/1/science/wetter-klima-loesungen.pdf",
-        "sha256": "a5d062150203725389f8086d1b6a98b0814028ede633a9238f0f378427f197f8",
-        "bytes": 888336
+        "path": "revisions/20261004/pdfs/1/science/wetter-klima-loesungen.pdf",
+        "sha256": "808d5d4f0ce5bcd6ecbeb2973445f76a0f25c84185622bc298951f871cc29932",
+        "bytes": 884131
       }
     }
   },

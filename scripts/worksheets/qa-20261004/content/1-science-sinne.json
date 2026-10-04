@@ -1,0 +1,72 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "sinne",
+  "goal": "Was hilft uns im Alltag? Was wünschen wir uns? Du darfst Beispiele erfinden.",
+  "sections": [
+    {
+      "title": "Was hilft diesem Kind?",
+      "instruction": "Kreise jeweils die passende Antwort ein.",
+      "items": [
+        {
+          "prompt": "Ein Kind hat Durst: Wasser oder ein Spielzeug?",
+          "answer": "Wasser",
+          "response": "drawing"
+        },
+        {
+          "prompt": "Es regnet: eine Regenjacke oder ein Eis?",
+          "answer": "Eine Regenjacke",
+          "response": "drawing"
+        },
+        {
+          "prompt": "Ein Kind friert: eine warme Jacke oder eine Seifenblase?",
+          "answer": "Eine warme Jacke",
+          "response": "drawing"
+        },
+        {
+          "prompt": "Ein Kind möchte malen: Papier und Stifte oder ein Ball?",
+          "answer": "Papier und Stifte",
+          "response": "drawing"
+        }
+      ]
+    },
+    {
+      "title": "Wünsche benennen.",
+      "instruction": "Du darfst deine Antwort sagen.",
+      "items": [
+        {
+          "prompt": "Ein Kind wünscht sich ein Spiel. Nenne ein Beispiel.",
+          "answer": "Beispiele: Memory, ein Brettspiel oder ein Ballspiel. Andere passende Spielwünsche gelten.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Ein Kind möchte gemeinsam spielen. Was könnte es sagen?",
+          "answer": "Beispiel: Willst du mit mir spielen? Andere freundliche Fragen gelten.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Zeichne einen Wunsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Erfinde einen Wunsch für ein Kind. Zeichne ihn. Erzähle: Was könnte das Kind damit machen?",
+          "answer": "Zeichnung und Erzählung passen zusammen. Beispiele: mit einem Ball spielen oder ein Spiel gemeinsam spielen. Andere sichere Wünsche gelten.",
+          "wide": true,
+          "drawingHeight": 42
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.5",
+    "scope": "Dinge für konkrete Alltagssituationen auswählen und einfache eigene oder erfundene Wünsche benennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|5"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

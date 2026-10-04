@@ -1,0 +1,62 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "physik-bewegung",
+  "goal": "Schieben oder Ziehen kann Dinge bewegen. Probiere nur leichte ungefährliche Dinge auf freier Fläche.",
+  "sections": [
+    {
+      "title": "Schieben oder ziehen?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du bewegst eine Spielzeugkiste mit den Händen von dir weg.",
+          "answer": "Schieben",
+          "wide": true
+        },
+        {
+          "prompt": "Du bewegst einen Spielzeugwagen an seiner Schnur zu dir hin.",
+          "answer": "Ziehen",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beobachte einen kleinen Ball.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Stosse einen Ball auf freier ebener Fläche sanft an. Was passiert?",
+          "answer": "Er beginnt zu rollen, wird meist langsamer und hält an; tatsächliche Beobachtung beschreiben.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Was ändert sich, wenn du denselben Ball etwas kräftiger anstösst?",
+          "answer": "Er startet meist schneller und rollt unter gleichen Bedingungen oft weiter. Ergebnis beobachten, nicht als festes Messresultat vorgeben.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Denke an die Sicherheit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum darfst du nicht in Richtung von Menschen, Tieren oder zerbrechlichen Dingen werfen?",
+          "answer": "Es könnte jemanden verletzen oder etwas beschädigen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.1",
+    "scope": "Schieben, Ziehen und einfache Bewegungsänderungen sicher erkunden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

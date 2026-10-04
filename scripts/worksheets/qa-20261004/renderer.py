@@ -88,10 +88,10 @@ def render_item(item,sol):
   tail=f'<span class="blank" style="min-width:{width}mm"></span>'
  return f'<div class="item {"wide" if item.get("wide") else ""}" data-answer="{answer}">{svg}<span class="prompt">{prompt}</span> {tail}</div>'
 def render(t,meta,sol):
- title=re.sub(r"[^\w\s&:.,()–—!?/'’\-]",'',meta['title']).strip()
+ title=re.sub(r"[^\w\s&:.,()–—!?/'’\-]",'',t.get('worksheetTitle',meta['title'])).strip()
  s=f'<article class="page {"solutions" if sol else ""}"><div class="top"><img alt="Cleverli" src="{LOGO}"><div class="tag">{SUBJECTS[t["subject"]]} · {t["grade"]}. Klasse</div></div><h1>{"Lösungen: " if sol else ""}{esc(title)}</h1>'
  if not sol:s+='<div class="fields">Name: __________________________ Datum: ______________</div>'
- if not sol and t['grade']==1:s+='<div class="grade1-reading">Bei Bedarf liest eine erwachsene Person die Aufgaben vor.</div>'
+ if not sol and t['grade']==1:s+='<div class="grade1-reading">'+('Du darfst mündlich antworten oder zeigen. Erwachsene helfen beim Lesen und Aufschreiben.' if t.get('oralResponses') else 'Bei Bedarf liest eine erwachsene Person die Aufgaben vor.')+'</div>'
  s+=f'<div class="goal">{esc(t.get("teacherScript",t["goal"]) if sol else t["goal"])}</div>'
  for i,section in enumerate(t['sections']):s+=f'<section class="section"><h2><span class="number">{i+1}</span>{esc(section["title"])}</h2><p>{esc(section.get("instruction",""))}</p><div class="grid">'+''.join(render_item(q,sol) for q in section['items'])+'</div></section>'
  m=t['mapping'];cycle=1 if t['grade']<=2 else 2

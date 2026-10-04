@@ -1,0 +1,68 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "pflanzen-gr1",
+  "goal": "Viele Blütenpflanzen haben Wurzeln, Stängel, Blätter und Blüten.",
+  "sections": [
+    {
+      "title": "Welcher Pflanzenteil ist gemeint?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Meist im Boden:",
+          "answer": "Wurzel"
+        },
+        {
+          "prompt": "Trägt Blätter und Blüten:",
+          "answer": "Stängel"
+        },
+        {
+          "prompt": "Ist oft grün und flach:",
+          "answer": "Blatt"
+        },
+        {
+          "prompt": "Bei vielen Pflanzen auffällig bunt:",
+          "answer": "Blüte"
+        }
+      ]
+    },
+    {
+      "title": "Was braucht eine Bohnenpflanze zum Wachsen?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Kreise die passenden Wörter ein: Licht, Wasser, Luft, Plastikspielzeug.",
+          "answer": "Licht, Wasser, Luft",
+          "wide": true,
+          "response": "drawing"
+        },
+        {
+          "prompt": "Ist «möglichst viel Wasser» immer gut?",
+          "answer": "Nein. Zu viel Wasser kann schaden.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Zeichne eine Blütenpflanze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne Wurzeln, Stängel, Blätter und eine Blüte. Beschrifte zwei Teile.",
+          "answer": "Alle vier Teile erkennbar, zwei passende Beschriftungen. Keine bestimmte Farbe nötig.",
+          "wide": true,
+          "drawingHeight": 48
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.4",
+    "scope": "Pflanzenteile und ausgewählte Bedürfnisse einer Pflanze kennenlernen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|4"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

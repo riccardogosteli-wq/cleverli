@@ -1,0 +1,76 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "jahreszeiten",
+  "goal": "Frühling, Sommer, Herbst und Winter wiederholen sich. Das Wetter kann wechseln.",
+  "sections": [
+    {
+      "title": "Welche Jahreszeit passt am besten?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Tage werden länger, viele Bäume bekommen neue Blätter.",
+          "answer": "Frühling",
+          "wide": true
+        },
+        {
+          "prompt": "Bei uns ist es im Jahreslauf meist am wärmsten.",
+          "answer": "Sommer",
+          "wide": true
+        },
+        {
+          "prompt": "Viele Laubbäume verlieren ihre Blätter.",
+          "answer": "Herbst",
+          "wide": true
+        },
+        {
+          "prompt": "Bei uns ist es im Jahreslauf meist am kältesten.",
+          "answer": "Winter",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Was folgt danach?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nach Frühling kommt",
+          "answer": "Sommer"
+        },
+        {
+          "prompt": "Nach Herbst kommt",
+          "answer": "Winter"
+        },
+        {
+          "prompt": "Nach Winter kommt",
+          "answer": "Frühling"
+        },
+        {
+          "prompt": "Nach Sommer kommt",
+          "answer": "Herbst"
+        }
+      ]
+    },
+    {
+      "title": "Beobachte heute.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie ist das Wetter heute? Zeichne und beschreibe zwei Beobachtungen.",
+          "answer": "Mögliche Beobachtungen: Wolken, Regen, Wind, Sonne. Bewertung nach tatsächlichem Wetter, keine feste Musterantwort.",
+          "wide": true,
+          "drawingHeight": 40
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.1",
+    "scope": "Jahreszeitliche Veränderungen und aktuelles Wetter unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

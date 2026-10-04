@@ -1,0 +1,71 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "fuenf-sinne",
+  "goal": "Sehen, hören, riechen, schmecken und fühlen: Mit unseren Sinnen entdecken wir die Welt. Jeder Mensch nimmt die Welt anders wahr.",
+  "sections": [
+    {
+      "title": "Welcher Körperteil passt hauptsächlich?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Hören:",
+          "answer": "Ohren"
+        },
+        {
+          "prompt": "Sehen:",
+          "answer": "Augen"
+        },
+        {
+          "prompt": "Riechen:",
+          "answer": "Nase"
+        },
+        {
+          "prompt": "Schmecken:",
+          "answer": "Zunge"
+        }
+      ]
+    },
+    {
+      "title": "Welchen Sinn nutzt du hauptsächlich?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du fühlst einen weichen Stoff mit der Hand.",
+          "answer": "Fühlen oder Tasten (Tastsinn)",
+          "wide": true
+        },
+        {
+          "prompt": "Du hörst eine Glocke.",
+          "answer": "Hören (Hörsinn)",
+          "wide": true
+        },
+        {
+          "prompt": "Du riechst an einer bekannten Blume.",
+          "answer": "Riechen (Geruchssinn)",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Fühle und beschreibe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Fühle ein Stück Stoff und ein Blatt Papier. Beschreibe je eine Eigenschaft. Keine unbekannten Dinge probieren!",
+          "answer": "Beispiele je nach Material: Stoff weich, Papier glatt. Tatsächliche Beobachtung zählt; mehrere Sinne dürfen genannt werden.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.1",
+    "scope": "Fünf Sinnesbereiche unterscheiden und sichere Tastbeobachtungen beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}

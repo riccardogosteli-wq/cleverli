@@ -1,0 +1,68 @@
+{
+  "grade": 1,
+  "subject": "science",
+  "sourceId": "familie-gemeinschaft",
+  "goal": "Freundliche Worte und Hilfe machen das Zusammenleben leichter. Du darfst Beispiele erfinden. Du musst nichts Privates erzählen.",
+  "sections": [
+    {
+      "title": "Was hilft beim Zusammenleben? Schreibe ja oder nein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Jemanden ausreden lassen.",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Absichtlich jemanden ausschliessen.",
+          "answer": "Nein"
+        },
+        {
+          "prompt": "Nachfragen, ob jemand Hilfe möchte.",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Ohne zu fragen Dinge wegnehmen.",
+          "answer": "Nein"
+        }
+      ]
+    },
+    {
+      "title": "Finde freundliche Worte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du möchtest mitspielen. Was könntest du sagen?",
+          "answer": "Beispiel: Darf ich mitspielen?",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Du hast ein Spielzeug kaputt gemacht. Was könntest du sagen?",
+          "answer": "Beispiel: Es tut mir leid. Ich sage Bescheid und helfe beim Aufräumen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Helfen in einer Gemeinschaft.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne oder beschreibe zwei Aufgaben, bei denen Kinder freiwillig und sicher mithelfen können.",
+          "answer": "Beispiele: Bücher ordnen, Tisch mit ungefährlichen Dingen decken. Zwei altersgerechte sichere Tätigkeiten; keine Bewertung privater Familienformen.",
+          "wide": true,
+          "drawingHeight": 44
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.10.1",
+    "scope": "Rücksicht, Hilfsbereitschaft und einfache Regeln des Zusammenlebens reflektieren.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "oralResponses": true
+}
