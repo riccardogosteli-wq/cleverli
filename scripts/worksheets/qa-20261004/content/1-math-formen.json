@@ -1,0 +1,75 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "formen",
+  "goal": "Erkenne Kreis, Dreieck, Quadrat und Rechteck.",
+  "sections": [
+    {
+      "title": "Benenne die Formen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Name:",
+          "answer": "Kreis",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 110 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"45\" cy=\"24\" r=\"19\" fill=\"#deebed\" stroke=\"#385a68\" stroke-width=\"1.5\"/></svg>"
+        },
+        {
+          "prompt": "Name:",
+          "answer": "Dreieck",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 110 48\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"20,43 45,5 70,43\" fill=\"#deebed\" stroke=\"#385a68\" stroke-width=\"1.5\"/></svg>"
+        },
+        {
+          "prompt": "Name:",
+          "answer": "Quadrat",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 110 48\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"5\" width=\"38\" height=\"38\" fill=\"#deebed\" stroke=\"#385a68\" stroke-width=\"1.5\"/></svg>"
+        },
+        {
+          "prompt": "Name:",
+          "answer": "Rechteck",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 110 48\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"15\" y=\"7\" width=\"76\" height=\"34\" fill=\"#deebed\" stroke=\"#385a68\" stroke-width=\"1.5\"/></svg>"
+        }
+      ]
+    },
+    {
+      "title": "Wie viele Ecken?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Dreieck:",
+          "answer": "3"
+        },
+        {
+          "prompt": "Quadrat:",
+          "answer": "4"
+        },
+        {
+          "prompt": "Kreis:",
+          "answer": "0"
+        },
+        {
+          "prompt": "Rechteck:",
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "title": "Zeichne selbst.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne ein Dreieck und daneben einen Kreis.",
+          "answer": "Dreieck mit 3 geraden Seiten; geschlossener Kreis ohne Ecken.",
+          "wide": true,
+          "drawingHeight": 38
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.2.A.1",
+    "scope": "Kreis, Dreieck, Quadrat und Rechteck erkennen und benennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

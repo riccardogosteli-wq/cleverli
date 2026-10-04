@@ -1,0 +1,91 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "mengen-zaehlen",
+  "goal": "Zähle jeden Punkt einmal. Du darfst gezählte Punkte markieren.",
+  "sections": [
+    {
+      "title": "Wie viele Punkte sind es?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Anzahl:",
+          "answer": "6",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 200 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"count-dot\" cx=\"10\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"48\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"67\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"86\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"105\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/></svg>",
+          "check": {
+            "kind": "count",
+            "n": 6
+          }
+        },
+        {
+          "prompt": "Anzahl:",
+          "answer": "10",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 200 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"count-dot\" cx=\"10\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"48\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"67\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"86\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"105\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"124\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"143\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"162\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"181\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/></svg>",
+          "check": {
+            "kind": "count",
+            "n": 10
+          }
+        },
+        {
+          "prompt": "Anzahl:",
+          "answer": "13",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 200 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"count-dot\" cx=\"10\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"48\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"67\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"86\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"105\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"124\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"143\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"162\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"181\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"10\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"48\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/></svg>",
+          "check": {
+            "kind": "count",
+            "n": 13
+          }
+        },
+        {
+          "prompt": "Anzahl:",
+          "answer": "16",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 200 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"count-dot\" cx=\"10\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"48\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"67\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"86\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"105\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"124\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"143\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"162\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"181\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"10\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"48\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"67\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"86\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"105\" cy=\"36\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/></svg>",
+          "check": {
+            "kind": "count",
+            "n": 16
+          }
+        }
+      ]
+    },
+    {
+      "title": "Ergänze bis 10.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Hier sind 4 Punkte. Wie viele fehlen bis 10?",
+          "answer": "6"
+        },
+        {
+          "prompt": "Hier sind 7 Punkte. Wie viele fehlen bis 10?",
+          "answer": "3"
+        },
+        {
+          "prompt": "Hier sind 9 Punkte. Wie viele fehlen bis 10?",
+          "answer": "1"
+        },
+        {
+          "prompt": "Hier sind 10 Punkte. Wie viele fehlen bis 10?",
+          "answer": "0"
+        }
+      ]
+    },
+    {
+      "title": "Zeichne eine passende Menge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne 8 kleine Kreise. Ordne sie in zwei gleich grosse Gruppen.",
+          "answer": "8 Kreise, je 4 pro Gruppe.",
+          "wide": true,
+          "drawingHeight": 30
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.2",
+    "scope": "Zählen und Zahlen ordnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

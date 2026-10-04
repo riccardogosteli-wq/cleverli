@@ -8,18 +8,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/zahlen-1-10-arbeitsblatt.pdf",
-        "sha256": "0fca678c5e442fb85cddc9eabc49314ac56c6aac40589f067903f24731d346b4",
-        "bytes": 857094
+        "path": "revisions/20261004/pdfs/1/math/zahlen-1-10-arbeitsblatt.pdf",
+        "sha256": "64ff9132b1403a1042798741799266055a786b082b591390bae12af21b2a37ec",
+        "bytes": 862449
       },
       "solution": {
-        "path": "pdfs/1/math/zahlen-1-10-loesungen.pdf",
-        "sha256": "a048d997c5757368f515b32039ced15ddf45b5cdd2582d323977d91566758a25",
-        "bytes": 877634
+        "path": "revisions/20261004/pdfs/1/math/zahlen-1-10-loesungen.pdf",
+        "sha256": "f6de18c517a129ffc4b40d6408a64dc62e7f97ed5fd656921df76511e57cf569",
+        "bytes": 877520
       }
     }
   },
@@ -32,18 +32,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Addieren im Zahlenraum bis 10.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/addition-bis-10-arbeitsblatt.pdf",
-        "sha256": "431e7e440eb2b39023ef23c2f943b0884fd786ddb2cbf17b1db626992205f429",
-        "bytes": 856464
+        "path": "revisions/20261004/pdfs/1/math/addition-bis-10-arbeitsblatt.pdf",
+        "sha256": "46de33a714917e88841647c895c21301805e446a1e1fcf88bf81d196c2d2f3f1",
+        "bytes": 861859
       },
       "solution": {
-        "path": "pdfs/1/math/addition-bis-10-loesungen.pdf",
-        "sha256": "d74ed482bcd5dc32bbe3df3aefb64d09bdd199c02feac27437ce1e12053f1563",
-        "bytes": 879102
+        "path": "revisions/20261004/pdfs/1/math/addition-bis-10-loesungen.pdf",
+        "sha256": "b73cfe2fc997c2460ae8a066107f0c4a72d587acda3ad957e8d4a0dc63a25686",
+        "bytes": 878943
       }
     }
   },
@@ -56,18 +56,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Subtrahieren im Zahlenraum bis 10.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/subtraktion-bis-10-arbeitsblatt.pdf",
-        "sha256": "4f3dfa8b9ea04d7cd3a6de657bb040f5805588c1d2c168e1fde40f0f5f71ffa7",
-        "bytes": 861739
+        "path": "revisions/20261004/pdfs/1/math/subtraktion-bis-10-arbeitsblatt.pdf",
+        "sha256": "48a644477616fc0fdfaef3bb9c06d1374c3448618cbd27a3562c19e70d5376ec",
+        "bytes": 867156
       },
       "solution": {
-        "path": "pdfs/1/math/subtraktion-bis-10-loesungen.pdf",
-        "sha256": "bb92546c95608e295f7e14eca7ce1df7642e1579d9c4bdbae4d64e9fed316da5",
-        "bytes": 883832
+        "path": "revisions/20261004/pdfs/1/math/subtraktion-bis-10-loesungen.pdf",
+        "sha256": "1d1c71e0e8b5f56a75f9c9ab8acc1eb643acb2d7641ca43269ec5e37f515a457",
+        "bytes": 883683
       }
     }
   },
@@ -80,18 +80,18 @@
     "curriculum": {
       "code": "MA.2.A.1",
       "scope": "Kreis, Dreieck, Quadrat und Rechteck erkennen und benennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/formen-arbeitsblatt.pdf",
-        "sha256": "ed687b7de11c9a59b8dae13afdf6e2f0bed11b0d3168f5bc09d8471443a66f3f",
-        "bytes": 848598
+        "path": "revisions/20261004/pdfs/1/math/formen-arbeitsblatt.pdf",
+        "sha256": "1b0cd1d725ba27704295d2e3d0194b88b763a361de604f45745764e2f374cf9e",
+        "bytes": 853688
       },
       "solution": {
-        "path": "pdfs/1/math/formen-loesungen.pdf",
-        "sha256": "be8e5b227cce6b81ba858503a5b8ce6b2ca34ff1c70f75da3fb835ce5cf6a104",
-        "bytes": 875468
+        "path": "revisions/20261004/pdfs/1/math/formen-loesungen.pdf",
+        "sha256": "0738278cfb63fc5f9fa2e117be0d9abbc5c9bc8287cdc69c88294714a86029db",
+        "bytes": 874281
       }
     }
   },
@@ -104,18 +104,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/vergleichen-arbeitsblatt.pdf",
-        "sha256": "1b04af2e2fcc7e1b315d01075ae838df0581547e724d7caeefe72b6ef8a76cd6",
-        "bytes": 857743
+        "path": "revisions/20261004/pdfs/1/math/vergleichen-arbeitsblatt.pdf",
+        "sha256": "670094cd4b90b1023155c00215621b8da94c23101abd741bf451cc78c34cca6b",
+        "bytes": 863288
       },
       "solution": {
-        "path": "pdfs/1/math/vergleichen-loesungen.pdf",
-        "sha256": "a4429149bdbed5d3f51214be4ad340bacef8ee70cf0d3e8a4716c79a1ba700c0",
-        "bytes": 880399
+        "path": "revisions/20261004/pdfs/1/math/vergleichen-loesungen.pdf",
+        "sha256": "c77a04af6d51b121adca6c7d2e61cc3789b627a5d3fe58427caf788a42a48a5d",
+        "bytes": 880429
       }
     }
   },
@@ -128,18 +128,18 @@
     "curriculum": {
       "code": "MA.1.B.1",
       "scope": "Zahlenfolgen und regelmässige Muster untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/muster-arbeitsblatt.pdf",
-        "sha256": "2ca96605ca6495383646269239ee17a4e750478f56f785bc2fb039e1463c94f1",
-        "bytes": 857649
+        "path": "revisions/20261004/pdfs/1/math/muster-arbeitsblatt.pdf",
+        "sha256": "2b7fbfaf5d8fbbde3a4f034af46fd567928360d94e4a75d341435ab33c049999",
+        "bytes": 863594
       },
       "solution": {
-        "path": "pdfs/1/math/muster-loesungen.pdf",
-        "sha256": "6c2584e45c847a97fe5561175bc19c7ab94327766c8d30ed16877292749e44be",
-        "bytes": 884450
+        "path": "revisions/20261004/pdfs/1/math/muster-loesungen.pdf",
+        "sha256": "24efbd71c52a3ebd1cc30590486c2f14b075314739a6ede87205535ac527effc",
+        "bytes": 884049
       }
     }
   },
@@ -152,18 +152,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/zahlen-bis-20-arbeitsblatt.pdf",
-        "sha256": "e68eb3b1ae4fffe23c700fbe59a54ea71475c9af375ce08518172ff70538ea4b",
-        "bytes": 850332
+        "path": "revisions/20261004/pdfs/1/math/zahlen-bis-20-arbeitsblatt.pdf",
+        "sha256": "f228def27814bb076bc246e9c6789b9ce380ad1677a51a287abaf6853015991c",
+        "bytes": 855701
       },
       "solution": {
-        "path": "pdfs/1/math/zahlen-bis-20-loesungen.pdf",
-        "sha256": "f34038cbda44d608527c3d951a461e096218a59b9ab80f8400c2a05157f9bb10",
-        "bytes": 871540
+        "path": "revisions/20261004/pdfs/1/math/zahlen-bis-20-loesungen.pdf",
+        "sha256": "9b1eedd2e42882e35a342685e5470b44c2b56d804d8c838cb23209f8af72f43b",
+        "bytes": 871427
       }
     }
   },
@@ -176,18 +176,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/ordinalzahlen-arbeitsblatt.pdf",
-        "sha256": "e37ae8efa0fdc6b42ebcbfd5060b5d9795e6d4161c9504805ee9fdebc6df7446",
-        "bytes": 860426
+        "path": "revisions/20261004/pdfs/1/math/ordinalzahlen-arbeitsblatt.pdf",
+        "sha256": "3120bc2f9ca91acccf2182e424de41cd62c8637cece62dda03fde4dc0490d92b",
+        "bytes": 863256
       },
       "solution": {
-        "path": "pdfs/1/math/ordinalzahlen-loesungen.pdf",
-        "sha256": "7437924bdb650d2f783e531026ff00a27e2fcd165bfa5b3ad1856cfe996dbdcb",
-        "bytes": 885440
+        "path": "revisions/20261004/pdfs/1/math/ordinalzahlen-loesungen.pdf",
+        "sha256": "b66138301fa4fe25f6a802b6ee804b3135638e65845e89fc8ea4a6296fba2620",
+        "bytes": 881887
       }
     }
   },
@@ -200,18 +200,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Zählen und Zahlen ordnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/mengen-zaehlen-arbeitsblatt.pdf",
-        "sha256": "403d18cb4a9cb9b2cc6754a8c4f15fc02d8481fa6644461867fced4c2ed3438f",
-        "bytes": 877188
+        "path": "revisions/20261004/pdfs/1/math/mengen-zaehlen-arbeitsblatt.pdf",
+        "sha256": "b1c313ebb9698e4e61d7c1d57540d1a2062e423b9cf09d728c19a9aa29654d03",
+        "bytes": 882466
       },
       "solution": {
-        "path": "pdfs/1/math/mengen-zaehlen-loesungen.pdf",
-        "sha256": "bac3d14e826b38b8ac9277d21678b6bebd4d7dcaf6989c4e1fcc6cf1f84642c4",
-        "bytes": 899747
+        "path": "revisions/20261004/pdfs/1/math/mengen-zaehlen-loesungen.pdf",
+        "sha256": "ddf0b9c2f1346d36d43dbd6a8d7d6d6056712ac4f6903587da557163c6f569be",
+        "bytes": 898621
       }
     }
   },
@@ -224,18 +224,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Verdoppeln und Halbieren bis 20.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/verdoppeln-halbieren-arbeitsblatt.pdf",
-        "sha256": "a50652ed449b74a5a3e565df054b9c9779a0c49b3967fbefa3e30a0efccd3924",
-        "bytes": 858219
+        "path": "revisions/20261004/pdfs/1/math/verdoppeln-halbieren-arbeitsblatt.pdf",
+        "sha256": "7a3a533098d432455f88f7b641139a23fb0c025eea7da364a2a0f92f1821b555",
+        "bytes": 861364
       },
       "solution": {
-        "path": "pdfs/1/math/verdoppeln-halbieren-loesungen.pdf",
-        "sha256": "784a92c7a985e0f4e382108b2bde835c25a4f061f91e2349d7e26be49309d2bd",
-        "bytes": 884120
+        "path": "revisions/20261004/pdfs/1/math/verdoppeln-halbieren-loesungen.pdf",
+        "sha256": "22fcd8b78a2a34dbf55d9725d77d9fa70cbd99870d75b1af6674c6f3c26141f5",
+        "bytes": 880873
       }
     }
   },
@@ -248,18 +248,18 @@
     "curriculum": {
       "code": "MA.3.A.2",
       "scope": "Ganze Frankenbeträge bis 10 zusammensetzen und berechnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/geld-muenzen-arbeitsblatt.pdf",
-        "sha256": "c629b085d017aec924689ff779e945b4df725c70a90c1426826e4085320342a6",
-        "bytes": 857861
+        "path": "revisions/20261004/pdfs/1/math/geld-muenzen-arbeitsblatt.pdf",
+        "sha256": "7d939a5064b9bbaedad53a1bda28f5705d8c9f2832bce959fae961f97c332c91",
+        "bytes": 862942
       },
       "solution": {
-        "path": "pdfs/1/math/geld-muenzen-loesungen.pdf",
-        "sha256": "54333abf35b1edda3c326cd5d9ca8840126adf3e01160095a0a4382618e66345",
-        "bytes": 882352
+        "path": "revisions/20261004/pdfs/1/math/geld-muenzen-loesungen.pdf",
+        "sha256": "3ca53e9bed2fdffbcf4f63e0f463f433a1b33d5e8ffbc048c82f6d2884129c62",
+        "bytes": 881904
       }
     }
   },
@@ -272,18 +272,18 @@
     "curriculum": {
       "code": "MA.3.C.2",
       "scope": "Einfache Sachsituationen mathematisch darstellen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/sachaufgaben-arbeitsblatt.pdf",
-        "sha256": "0ae8a654f26338f61e51adea6d08435829de557788be17a42b25e4dd4d36df07",
-        "bytes": 859868
+        "path": "revisions/20261004/pdfs/1/math/sachaufgaben-arbeitsblatt.pdf",
+        "sha256": "98d3d176e5c46d6db3510a677c72490b07f62f3ca22848805fc96ab3bf415143",
+        "bytes": 863751
       },
       "solution": {
-        "path": "pdfs/1/math/sachaufgaben-loesungen.pdf",
-        "sha256": "de83a7aa01ae415eb9fccaf681ffcddd0efcaf12c0f80f4dc442f70fb7049329",
-        "bytes": 888392
+        "path": "revisions/20261004/pdfs/1/math/sachaufgaben-loesungen.pdf",
+        "sha256": "5da88f7031d50e28df9686c9e9fdc0c05a39c6b934da56d81c41a187949fd6bb",
+        "bytes": 886808
       }
     }
   },
@@ -296,18 +296,18 @@
     "curriculum": {
       "code": "MA.3.C.1",
       "scope": "Kleine Datensammlungen lesen und darstellen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/math/daten-diagramme-arbeitsblatt.pdf",
-        "sha256": "8776b7402914e9b9ea6006b9ed42c85101c9e50d41b48ef9bca9edbf002d6b2e",
-        "bytes": 856367
+        "path": "revisions/20261004/pdfs/1/math/daten-diagramme-arbeitsblatt.pdf",
+        "sha256": "80ae748d951942e773527b113afe8fac99c96226871f67b331b1fb5560f54303",
+        "bytes": 861562
       },
       "solution": {
-        "path": "pdfs/1/math/daten-diagramme-loesungen.pdf",
-        "sha256": "fbad25fcbccbaf5aab9902f1983f478ec1e346831d6e0bf07d8db86e8e0b679f",
-        "bytes": 880998
+        "path": "revisions/20261004/pdfs/1/math/daten-diagramme-loesungen.pdf",
+        "sha256": "834b89ec17f0e4a770fff83db8c9b05a6a603f1caa6bb84d1a724c0491d7ae61",
+        "bytes": 879828
       }
     }
   },

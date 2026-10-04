@@ -1,0 +1,109 @@
+{
+  "grade": 1,
+  "subject": "math",
+  "sourceId": "addition-bis-10",
+  "goal": "Plus bedeutet: Es kommt etwas dazu. Beispiel: 3 + 2 = 5.",
+  "sections": [
+    {
+      "title": "Zwei Gruppen zusammen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "2 Punkte und 3 Punkte sind",
+          "answer": "5",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 200 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"count-dot\" cx=\"10\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/></svg><svg class=\"illustration\" viewBox=\"0 0 200 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"count-dot\" cx=\"10\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"48\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/></svg>"
+        },
+        {
+          "prompt": "4 Punkte und 2 Punkte sind",
+          "answer": "6",
+          "svg": "<svg class=\"illustration\" viewBox=\"0 0 200 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"count-dot\" cx=\"10\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"48\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"67\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/></svg><svg class=\"illustration\" viewBox=\"0 0 200 48\" xmlns=\"http://www.w3.org/2000/svg\"><circle class=\"count-dot\" cx=\"10\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/><circle class=\"count-dot\" cx=\"29\" cy=\"12\" r=\"7\" fill=\"#deebed\" stroke=\"#385a68\"/></svg>"
+        }
+      ]
+    },
+    {
+      "title": "Rechne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "1 + 4 =",
+          "answer": "5",
+          "check": {
+            "kind": "arithmetic",
+            "a": 1,
+            "b": 4,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "3 + 3 =",
+          "answer": "6",
+          "check": {
+            "kind": "arithmetic",
+            "a": 3,
+            "b": 3,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "5 + 2 =",
+          "answer": "7",
+          "check": {
+            "kind": "arithmetic",
+            "a": 5,
+            "b": 2,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "6 + 4 =",
+          "answer": "10",
+          "check": {
+            "kind": "arithmetic",
+            "a": 6,
+            "b": 4,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "7 + 1 =",
+          "answer": "8",
+          "check": {
+            "kind": "arithmetic",
+            "a": 7,
+            "b": 1,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "2 + 6 =",
+          "answer": "8",
+          "check": {
+            "kind": "arithmetic",
+            "a": 2,
+            "b": 6,
+            "op": "+"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Löse die kleine Geschichte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Auf einem Ast sitzen 4 Vögel. 3 kommen dazu. Wie viele Vögel sitzen nun dort?",
+          "answer": "4 + 3 = 7 Vögel",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Addieren im Zahlenraum bis 10.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}
