@@ -1,0 +1,58 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "daten-diagramme-zufall-4",
+  "goal": "Das Diagramm zeigt ausgeliehene Bücher. Jedes Kästchen bedeutet 2 Bücher. Bei einem Zufallsexperiment kann das Ergebnis ungewiss sein; «wahrscheinlicher» bedeutet nicht «sicher».",
+  "sections": [
+    {
+      "title": "Lies das Diagramm.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Bücher wurden am Dienstag ausgeliehen?",
+          "answer": "10 Bücher",
+          "svg": "<svg class=\"illustration scaled-chart\" style=\"width:140mm;height:40mm\" viewBox=\"0 0 140 40\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"6\" font-size=\"4\">Montag</text><rect class=\"data-unit\" data-label=\"Montag\" x=\"35\" y=\"1\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Montag\" x=\"44\" y=\"1\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Montag\" x=\"53\" y=\"1\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><text x=\"0\" y=\"20\" font-size=\"4\">Dienstag</text><rect class=\"data-unit\" data-label=\"Dienstag\" x=\"35\" y=\"15\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Dienstag\" x=\"44\" y=\"15\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Dienstag\" x=\"53\" y=\"15\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Dienstag\" x=\"62\" y=\"15\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Dienstag\" x=\"71\" y=\"15\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><text x=\"0\" y=\"34\" font-size=\"4\">Mittwoch</text><rect class=\"data-unit\" data-label=\"Mittwoch\" x=\"35\" y=\"29\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Mittwoch\" x=\"44\" y=\"29\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Mittwoch\" x=\"53\" y=\"29\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-unit\" data-label=\"Mittwoch\" x=\"62\" y=\"29\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "An welchem Tag waren es am wenigsten?",
+          "answer": "Montag"
+        },
+        {
+          "prompt": "Wie viele waren es an allen drei Tagen zusammen?",
+          "answer": "24 Bücher"
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Bücher mehr waren es am Dienstag als am Montag?",
+          "answer": "4 Bücher",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Zusatz: Vergleiche zwei Chancen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein blickdichter Beutel enthält 3 rote und 1 blaue, sonst gleiche Kugel. Er wird gut gemischt. Du ziehst ohne Hinsehen eine Kugel. Welche Farbe ist wahrscheinlicher? Ist diese Farbe sicher?",
+          "answer": "Rot ist wahrscheinlicher (3 von 4). Rot ist nicht sicher, denn eine blaue Kugel liegt ebenfalls im Beutel.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.1",
+    "scope": "Skalierte Diagramme lesen und vergleichen (MA.3.C.1d). Als Zusatz einen einfachen Chancenvergleich üben (MA.3.C.1g); je nach Lernstand, ohne formale Wahrscheinlichkeitsrechnung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

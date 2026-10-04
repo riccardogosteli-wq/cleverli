@@ -1,0 +1,71 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "groessen-messen-4",
+  "goal": "Achte auf die Einheit: 1 km = 1000 m, 1 m = 100 cm, 1 kg = 1000 g, 1 l = 1000 ml. Grössen kannst du nur mit passenden Einheiten vergleichen.",
+  "sections": [
+    {
+      "title": "Wandle um.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "3 m =",
+          "answer": "300 cm"
+        },
+        {
+          "prompt": "2 km =",
+          "answer": "2000 m"
+        },
+        {
+          "prompt": "4 kg =",
+          "answer": "4000 g"
+        },
+        {
+          "prompt": "2 l =",
+          "answer": "2000 ml"
+        }
+      ]
+    },
+    {
+      "title": "Rechne mit gemischten Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "1 m 25 cm =",
+          "answer": "125 cm"
+        },
+        {
+          "prompt": "2 kg 300 g =",
+          "answer": "2300 g"
+        },
+        {
+          "prompt": "1 l 500 ml =",
+          "answer": "1500 ml"
+        },
+        {
+          "prompt": "3 km 80 m =",
+          "answer": "3080 m"
+        }
+      ]
+    },
+    {
+      "title": "Löse die Sachaufgabe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Band ist 2 m lang. Du schneidest 75 cm ab. Wie lang ist der Rest? Rechne zuerst alles in cm.",
+          "answer": "200 cm − 75 cm = 125 cm, also 1 m 25 cm.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.A.2",
+    "scope": "Längen, Massen und Hohlmasse in häufige Einheiten umrechnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

@@ -1,0 +1,95 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "schriftl-addieren",
+  "goal": "Schreibe die Stellen genau untereinander. Beginne bei den Einern. 10 Einer werden zu 1 Zehner, 10 Zehner zu 1 Hunderter. Notiere die Überträge klein bei der nächsten Stelle.",
+  "sections": [
+    {
+      "title": "Addiere schriftlich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "",
+          "answer": "3669",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">4</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">+</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">9</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">+</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 2345,
+            "op": "+",
+            "b": 1324
+          }
+        },
+        {
+          "prompt": "",
+          "answer": "4145",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">+</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">5</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">+</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 1687,
+            "op": "+",
+            "b": 2458
+          }
+        }
+      ]
+    },
+    {
+      "title": "Achte auf die Überträge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "",
+          "answer": "5971",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">9</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">+</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">9</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">9</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">1</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">+</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 3096,
+            "op": "+",
+            "b": 2875
+          }
+        },
+        {
+          "prompt": "",
+          "answer": "8356",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">9</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">+</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">9</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">6</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">+</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 4789,
+            "op": "+",
+            "b": 3567
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prüfe die Grössenordnung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Runde 4789 und 3567 auf Tausender und addiere die gerundeten Zahlen. Passt dein genaues Ergebnis ungefähr dazu?",
+          "answer": "5000 + 4000 = 9000. Das genaue Ergebnis 8356 liegt in einer passenden Grössenordnung; Runden ist nur eine grobe Kontrolle.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Schriftliche Addition bis 10000 und grobe Ergebniskontrolle.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

@@ -1,0 +1,95 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "schriftl-multiplizieren",
+  "goal": "Multipliziere von rechts nach links. Beispiel: 24 × 3. 4 × 3 = 12: 2 Einer notieren, 1 Zehner übertragen. 2 × 3 + 1 = 7 Zehner. Ergebnis: 72.",
+  "sections": [
+    {
+      "title": "Multipliziere schriftlich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "",
+          "answer": "369",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">3</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">×</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">9</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">×</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 123,
+            "op": "×",
+            "b": 3
+          }
+        },
+        {
+          "prompt": "",
+          "answer": "984",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">4</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">×</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">9</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">4</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">×</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 246,
+            "op": "×",
+            "b": 4
+          }
+        }
+      ]
+    },
+    {
+      "title": "Beachte den Übertrag.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "",
+          "answer": "1848",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">6</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">×</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">8</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">×</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 308,
+            "op": "×",
+            "b": 6
+          }
+        },
+        {
+          "prompt": "",
+          "answer": "4109",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">×</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">9</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">×</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 587,
+            "op": "×",
+            "b": 7
+          }
+        }
+      ]
+    },
+    {
+      "title": "Kontrolliere durch Zerlegen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Prüfe 308 × 6 mit (300 × 6) + (8 × 6).",
+          "answer": "1800 + 48 = 1848",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Schriftliche Multiplikation einer dreistelligen Zahl mit einem einstelligen Faktor.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

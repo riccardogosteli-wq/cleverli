@@ -159,7 +159,7 @@ export const worksheetLandingPages: WorksheetLandingPage[] = [
     previewHeight: 1100,
     curriculumCode: "MA.1.A.3",
     curriculumScope: "Eine dreistellige Zahl schriftlich mit einem einstelligen Faktor multiplizieren.",
-    curriculumUrl: "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1",
+    curriculumUrl: "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3",
   },
   {
     slug: "dezimalzahlen-5-klasse",

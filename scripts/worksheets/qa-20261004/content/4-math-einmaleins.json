@@ -1,0 +1,115 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "einmaleins",
+  "goal": "Nutze das Einmaleins auch rückwärts: 7 × 8 = 56, also 56 : 7 = 8. Hilfsaufgaben erleichtern schwierige Produkte.",
+  "sections": [
+    {
+      "title": "Rechne sicher.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "6 × 7 =",
+          "answer": "42",
+          "check": {
+            "kind": "product",
+            "a": 6,
+            "b": 7
+          }
+        },
+        {
+          "prompt": "8 × 9 =",
+          "answer": "72",
+          "check": {
+            "kind": "product",
+            "a": 8,
+            "b": 9
+          }
+        },
+        {
+          "prompt": "7 × 7 =",
+          "answer": "49",
+          "check": {
+            "kind": "product",
+            "a": 7,
+            "b": 7
+          }
+        },
+        {
+          "prompt": "9 × 6 =",
+          "answer": "54",
+          "check": {
+            "kind": "product",
+            "a": 9,
+            "b": 6
+          }
+        },
+        {
+          "prompt": "8 × 4 =",
+          "answer": "32",
+          "check": {
+            "kind": "product",
+            "a": 8,
+            "b": 4
+          }
+        },
+        {
+          "prompt": "9 × 9 =",
+          "answer": "81",
+          "check": {
+            "kind": "product",
+            "a": 9,
+            "b": 9
+          }
+        }
+      ]
+    },
+    {
+      "title": "Rechne rückwärts.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "56 : 8 =",
+          "answer": "7"
+        },
+        {
+          "prompt": "63 : 7 =",
+          "answer": "9"
+        },
+        {
+          "prompt": "48 : 6 =",
+          "answer": "8"
+        },
+        {
+          "prompt": "72 : 9 =",
+          "answer": "8"
+        }
+      ]
+    },
+    {
+      "title": "Nutze eine Hilfsaufgabe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Berechne 9 × 7 mit 10 × 7 − 1 × 7.",
+          "answer": "70 − 7 = 63",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "8 Kisten haben je 6 Flaschen. 5 Flaschen werden entnommen. Wie viele Flaschen bleiben insgesamt?",
+          "answer": "8 × 6 = 48; 48 − 5 = 43 Flaschen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Kleines Einmaleins, Umkehraufgaben und einfache Anwendungen verbinden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

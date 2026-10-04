@@ -1,0 +1,51 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "textaufgaben-4",
+  "goal": "Plane die nötigen Schritte. Schreibe Rechnungen und einen Antwortsatz mit Einheit. Nutze nur Angaben, die du für die Frage brauchst.",
+  "sections": [
+    {
+      "title": "Gruppen und Rest.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "6 Kisten enthalten je 24 Bälle. 38 Bälle werden ausgeliehen. Wie viele bleiben?",
+          "answer": "6 × 24 = 144; 144 − 38 = 106 Bälle.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Budget und fehlender Betrag.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Klasse hat 150 Fr. Material kostet 87 Fr., der Transport 28 Fr. Wie viel Geld bleibt?",
+          "answer": "87 + 28 = 115; 150 − 115 = 35 Fr.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Wähle die nötigen Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Zug fährt um 09.20 Uhr ab und kommt um 10.05 Uhr an. Es fahren 80 Personen mit. Wie lange dauert die Fahrt? Welche Angabe brauchst du dafür nicht?",
+          "answer": "45 Minuten. Die Zahl der Personen ist für die Fahrtdauer nicht nötig.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.2",
+    "scope": "Mehrschrittige Sachsituationen lösen und relevante Angaben auswählen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

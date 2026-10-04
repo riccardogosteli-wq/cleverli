@@ -1,0 +1,93 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "brueche-einfuehrung",
+  "goal": "Ein Bruch beschreibt Teile eines Ganzen, das in gleich grosse Stücke geteilt ist. 2/4 und 1/2 sind gleich viel, wenn das Ganze gleich gross ist.",
+  "sections": [
+    {
+      "title": "Schreibe den grauen Anteil als Bruch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bruch:",
+          "answer": "2/3",
+          "svg": "<svg class=\"illustration fraction-bar\" style=\"width:80mm;height:18mm\" viewBox=\"0 0 80 18\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"4.0\" y=\"2\" width=\"24.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"28.0\" y=\"2\" width=\"24.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"52.0\" y=\"2\" width=\"24.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "check": {
+            "kind": "fraction",
+            "n": 3,
+            "k": 2
+          }
+        },
+        {
+          "prompt": "Bruch:",
+          "answer": "3/6 oder 1/2",
+          "svg": "<svg class=\"illustration fraction-bar\" style=\"width:80mm;height:18mm\" viewBox=\"0 0 80 18\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"4.0\" y=\"2\" width=\"12.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"16.0\" y=\"2\" width=\"12.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"28.0\" y=\"2\" width=\"12.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"40.0\" y=\"2\" width=\"12.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"52.0\" y=\"2\" width=\"12.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"64.0\" y=\"2\" width=\"12.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "check": {
+            "kind": "fraction",
+            "n": 6,
+            "k": 3
+          }
+        },
+        {
+          "prompt": "Bruch:",
+          "answer": "3/8",
+          "svg": "<svg class=\"illustration fraction-bar\" style=\"width:80mm;height:18mm\" viewBox=\"0 0 80 18\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"4.0\" y=\"2\" width=\"9.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"13.0\" y=\"2\" width=\"9.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"22.0\" y=\"2\" width=\"9.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"31.0\" y=\"2\" width=\"9.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"40.0\" y=\"2\" width=\"9.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"49.0\" y=\"2\" width=\"9.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"58.0\" y=\"2\" width=\"9.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"67.0\" y=\"2\" width=\"9.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "check": {
+            "kind": "fraction",
+            "n": 8,
+            "k": 3
+          }
+        },
+        {
+          "prompt": "Bruch:",
+          "answer": "3/4",
+          "svg": "<svg class=\"illustration fraction-bar\" style=\"width:80mm;height:18mm\" viewBox=\"0 0 80 18\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"4.0\" y=\"2\" width=\"18.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"22.0\" y=\"2\" width=\"18.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"true\" x=\"40.0\" y=\"2\" width=\"18.0\" height=\"14\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".5\"/><rect class=\"fraction-piece\" data-shaded=\"false\" x=\"58.0\" y=\"2\" width=\"18.0\" height=\"14\" fill=\"white\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "check": {
+            "kind": "fraction",
+            "n": 4,
+            "k": 3
+          }
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche gleiche Ganze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was ist grösser: 1/4 oder 3/4?",
+          "answer": "3/4"
+        },
+        {
+          "prompt": "Ist 3/6 gleich viel wie 1/2?",
+          "answer": "Ja"
+        }
+      ]
+    },
+    {
+      "title": "Berechne Anteile.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "24 Karten werden in 4 gleich grosse Gruppen geteilt. Wie viele Karten sind 1/4? Wie viele sind 3/4?",
+          "answer": "1/4: 6 Karten; 3/4: 18 Karten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.1",
+    "scope": "Bruchteile darstellen, bei gleichen Ganzen vergleichen und an Mengen bestimmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|1",
+    "additionalReferences": [
+      {
+        "code": "MA.1.A.3",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

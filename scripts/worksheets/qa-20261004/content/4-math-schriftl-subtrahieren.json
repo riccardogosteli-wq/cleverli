@@ -1,0 +1,95 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "schriftl-subtrahieren",
+  "goal": "Schreibe Stellen untereinander und beginne rechts. Reichen die Einer nicht, tausche 1 Zehner in 10 Einer. Entsprechend kannst du Hunderter oder Tausender tauschen. Prüfe mit einer Addition.",
+  "sections": [
+    {
+      "title": "Subtrahiere schriftlich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "",
+          "answer": "4528",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">4</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">−</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">8</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">−</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 6842,
+            "op": "−",
+            "b": 2314
+          }
+        },
+        {
+          "prompt": "",
+          "answer": "2808",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">−</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">8</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">−</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 4536,
+            "op": "−",
+            "b": 1728
+          }
+        }
+      ]
+    },
+    {
+      "title": "Tausche auch über eine Null hinweg.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "",
+          "answer": "438",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">6</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">−</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">8</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">−</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 1024,
+            "op": "−",
+            "b": 586
+          }
+        },
+        {
+          "prompt": "",
+          "answer": "1125",
+          "svg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">−</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-four\" style=\"width:70mm;height:49mm\" viewBox=\"0 0 70 49\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">T</text><text x=\"31\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"53\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"20\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"31\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"42\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"53\" y=\"18\" text-anchor=\"middle\" font-size=\"5\">0</text><text x=\"20\" y=\"30\" text-anchor=\"middle\" font-size=\"5\"> </text><text x=\"31\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"53\" y=\"30\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"20\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"31\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"42\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"53\" y=\"43\" text-anchor=\"middle\" font-size=\"5\">5</text><text class=\"operator\" x=\"8\" y=\"30\" font-size=\"5\">−</text><path d=\"M7 34 H61\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "response": "drawing",
+          "answerInSvg": true,
+          "check": {
+            "kind": "column-four",
+            "a": 2000,
+            "op": "−",
+            "b": 875
+          }
+        }
+      ]
+    },
+    {
+      "title": "Mache die Probe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Prüfe dein Ergebnis von 2000 − 875 mit einer Addition.",
+          "answer": "1125 + 875 = 2000",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Schriftliche Subtraktion bis 10000 einschliesslich Stellenwerttausch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

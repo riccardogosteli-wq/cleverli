@@ -1,0 +1,58 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "geometrie-4",
+  "goal": "Parallele Geraden verlaufen im gleichen Abstand und schneiden sich nicht. Senkrechte Geraden bilden rechte Winkel. Ein rechter Winkel hat 90°. Zeichnungen sind nicht zum Nachmessen gedacht.",
+  "sections": [
+    {
+      "title": "Untersuche die Geraden.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche zwei Geraden sind parallel?",
+          "answer": "a und b",
+          "svg": "<svg class=\"illustration parallel-lines\" style=\"width:135mm;height:30mm\" viewBox=\"0 0 135 30\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 7 H100 M10 23 H100 M55 2 V28\" stroke=\"#213b49\" stroke-width=\".6\"/><text x=\"103\" y=\"9\" font-size=\"4\">a</text><text x=\"103\" y=\"25\" font-size=\"4\">b</text><text x=\"59\" y=\"5\" font-size=\"4\">c</text><path d=\"M55 7 h4 v4 h-4\" stroke=\"#213b49\" fill=\"none\" stroke-width=\".4\"/></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Welche Gerade steht senkrecht auf a und b?",
+          "answer": "c",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke an Figuren.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele rechte Winkel hat ein Rechteck?",
+          "answer": "4"
+        },
+        {
+          "prompt": "Wie viele gleich lange Seiten hat ein Quadrat?",
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "title": "Zeichne genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne mit Lineal ein Rechteck. Markiere ein Paar paralleler Seiten und einen rechten Winkel.",
+          "answer": "Rechteck mit 4 rechten Winkeln; zwei gegenüberliegende Seiten als parallel markiert; ein Winkel gekennzeichnet. Mit Zeichengerät prüfen.",
+          "wide": true,
+          "drawingHeight": 40
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.2.A.1",
+    "scope": "Parallelität und rechte Winkel erkennen und an einem Rechteck darstellen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

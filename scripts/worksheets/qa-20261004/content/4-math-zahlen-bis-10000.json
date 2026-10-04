@@ -1,0 +1,69 @@
+{
+  "grade": 4,
+  "subject": "math",
+  "sourceId": "zahlen-bis-10000",
+  "goal": "T bedeutet Tausender, H Hunderter, Z Zehner, E Einer. Beispiel: 4062 = 4 T + 0 H + 6 Z + 2 E. Die Ziffer 0 hält eine Stelle frei.",
+  "sections": [
+    {
+      "title": "Schreibe als Zahl.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "3 T + 2 H + 5 Z + 8 E =",
+          "answer": "3258"
+        },
+        {
+          "prompt": "7 T + 0 H + 4 Z + 0 E =",
+          "answer": "7040"
+        },
+        {
+          "prompt": "9 T + 9 H + 9 Z + 9 E =",
+          "answer": "9999"
+        },
+        {
+          "prompt": "10 Tausender sind",
+          "answer": "10000"
+        }
+      ]
+    },
+    {
+      "title": "Ordne und vergleiche.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Von klein nach gross: 4090, 4900, 4009",
+          "answer": "4009, 4090, 4900",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Welche Zahl ist grösser: 8009 oder 8090?",
+          "answer": "8090"
+        },
+        {
+          "prompt": "Welche Zahl kommt direkt nach 9999?",
+          "answer": "10000"
+        }
+      ]
+    },
+    {
+      "title": "Erkläre die Stellenwerte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe 6085 als Summe aus Tausendern, Hundertern, Zehnern und Einern. Erkläre, warum eine Null in der Zahl steht.",
+          "answer": "6000 + 0 + 80 + 5. Es gibt 0 Hunderter neben den 6 Tausendern; die Null hält die Hunderterstelle frei.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.2",
+    "scope": "Zahlen bis 10000 mit Stellenwerten darstellen und ordnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}
