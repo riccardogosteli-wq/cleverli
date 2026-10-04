@@ -1,0 +1,85 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "verben-konjugieren",
+  "goal": "Die Verbform passt zur Person: ich spiele, du spielst, er spielt. Bei manchen Verben ändert sich auch der Stamm: ich lese, du liest. Wir üben das Präsens.",
+  "sections": [
+    {
+      "title": "Setze «spielen» passend ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "ich",
+          "answer": "spiele"
+        },
+        {
+          "prompt": "du",
+          "answer": "spielst"
+        },
+        {
+          "prompt": "er",
+          "answer": "spielt"
+        },
+        {
+          "prompt": "wir",
+          "answer": "spielen"
+        },
+        {
+          "prompt": "ihr",
+          "answer": "spielt"
+        },
+        {
+          "prompt": "sie (mehrere Personen)",
+          "answer": "spielen"
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die Verben im Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du ... ein Buch. (lesen)",
+          "answer": "liest"
+        },
+        {
+          "prompt": "Mia ... zum Tor. (laufen)",
+          "answer": "läuft"
+        },
+        {
+          "prompt": "Ich ... einen Stift. (haben)",
+          "answer": "habe"
+        },
+        {
+          "prompt": "Ihr ... heute hier. (sein)",
+          "answer": "seid"
+        }
+      ]
+    },
+    {
+      "title": "Ändere die Person.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Ich lese und schreibe.» Schreibe den Satz mit «Du».",
+          "answer": "Du liest und schreibst.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "«Wir laufen zum See.» Schreibe den Satz mit «Er».",
+          "answer": "Er läuft zum See.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Regelmässige und häufige unregelmässige Verben im Präsens konjugieren.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

@@ -1,0 +1,77 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "synonyme-antonyme",
+  "goal": "Manche Wörter bedeuten das Gleiche oder etwas Ähnliches: beginnen, anfangen. Andere sind Gegensätze: hell, dunkel. Prüfe immer den ganzen Satz.",
+  "sections": [
+    {
+      "title": "Wähle das Wort mit ähnlicher Bedeutung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "beginnen: anfangen oder aufhören?",
+          "answer": "anfangen",
+          "wide": true
+        },
+        {
+          "prompt": "rasch: schnell oder langsam?",
+          "answer": "schnell",
+          "wide": true
+        },
+        {
+          "prompt": "froh: traurig oder fröhlich?",
+          "answer": "fröhlich",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe das Gegenteil.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "heiss",
+          "answer": "kalt"
+        },
+        {
+          "prompt": "laut",
+          "answer": "leise"
+        },
+        {
+          "prompt": "voll",
+          "answer": "leer"
+        },
+        {
+          "prompt": "schwer (Gewicht)",
+          "answer": "leicht"
+        }
+      ]
+    },
+    {
+      "title": "Ersetze passend zum Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Mia beginnt mit dem Bild.» Ersetze «beginnt» durch eine passende Form von «anfangen».",
+          "answer": "Mia fängt mit dem Bild an.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Schreibe einen Satz mit «hell» und einen passenden Gegensatz mit «dunkel».",
+          "answer": "Beispiel: Das Zimmer ist hell. Das Zimmer ist dunkel. Beide verständlich, gleiche Bedeutung ausser dem Gegensatz.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.A.1",
+    "scope": "Bedeutungsähnliche und gegensätzliche Wörter im Satz verwenden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026",
+  "worksheetTitle": "Wortbedeutungen entdecken"
+}

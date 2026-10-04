@@ -1,0 +1,56 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "textsorten",
+  "goal": "Ein persönlicher Brief spricht jemanden an und endet mit einem Gruss. Ein Bericht informiert sachlich über ein Ereignis: Was geschah wann und wo? Hier darfst du Namen erfinden.",
+  "sections": [
+    {
+      "title": "Erkenne die Textsorte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Liebe Mia, danke für deine Karte! Herzliche Grüsse, Noa» Brief oder Bericht?",
+          "answer": "Brief",
+          "wide": true
+        },
+        {
+          "prompt": "«Am Freitag fand im Schulhaus ein Bücherflohmarkt statt.» Brief oder Bericht?",
+          "answer": "Bericht",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen kurzen Brief.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen Dankesbrief für ein ausgeliehenes Buch: Anrede, zwei Sätze, Gruss und Name. Erfinde Namen. Keine private Adresse nötig.",
+          "answer": "Beispiel: Liebe Mia / Danke für das Buch. Die Geschichte hat mir gefallen. / Herzliche Grüsse / Noa. Anrede, zwei passende Sätze, Gruss und Name; keine privaten Daten nötig.",
+          "wide": true,
+          "lines": 6,
+          "writingHeight": 10
+        }
+      ]
+    },
+    {
+      "title": "Berichte sachlich in einem Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Angaben: Montag, Schulhof, Klasse 3, Blumen pflanzen. Schreibe einen Satz, ohne weitere Fakten zu erfinden.",
+          "answer": "Am Montag pflanzte die Klasse 3 auf dem Schulhof Blumen. Sinngemässe sachliche Formulierungen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.B.1",
+    "scope": "Persönlichen Brief und sachlichen Kurzbericht unterscheiden und nach Angaben schreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

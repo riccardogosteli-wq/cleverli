@@ -1,0 +1,71 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "rechtschreibung",
+  "goal": "Verlängern kann bei der Schreibung helfen: Hund → Hunde. Verwandte Wörter helfen ebenfalls: Hände → Hand. Prüfe auch grosse Satzanfänge und Nomen.",
+  "sections": [
+    {
+      "title": "Verlängere und schreibe richtig.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "der Hun(d/t), viele Hunde",
+          "answer": "der Hund"
+        },
+        {
+          "prompt": "der Ber(g/k), viele Berge",
+          "answer": "der Berg"
+        },
+        {
+          "prompt": "das Bil(d/t), viele Bilder",
+          "answer": "das Bild"
+        },
+        {
+          "prompt": "der Kor(b/p), viele Körbe",
+          "answer": "der Korb"
+        }
+      ]
+    },
+    {
+      "title": "Finde das verwandte Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Hände kommt von",
+          "answer": "Hand"
+        },
+        {
+          "prompt": "Bäume kommt von",
+          "answer": "Baum"
+        },
+        {
+          "prompt": "Häuser kommt von",
+          "answer": "Haus"
+        },
+        {
+          "prompt": "Mäuse kommt von",
+          "answer": "Maus"
+        }
+      ]
+    },
+    {
+      "title": "Korrigiere die Grossschreibung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«am abend liest mia ein buch über vögel.» Schreibe den Satz richtig ab.",
+          "answer": "Am Abend liest Mia ein Buch über Vögel.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.E.1",
+    "scope": "Verlängern und Wortverwandtschaft als Rechtschreibstrategien anwenden; Nomen grossschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

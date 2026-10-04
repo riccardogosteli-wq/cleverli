@@ -1,0 +1,69 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "wortarten",
+  "goal": "Nomen benennen zum Beispiel Dinge: der Baum. Verben verändern ihre Form: ich renne, du rennst. Adjektive beschreiben: Der Baum ist hoch. Hier untersuchst du diese drei Wortarten.",
+  "sections": [
+    {
+      "title": "Ordne zu: Nomen, Verb oder Adjektiv.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "die Wolke",
+          "answer": "Nomen"
+        },
+        {
+          "prompt": "springen",
+          "answer": "Verb"
+        },
+        {
+          "prompt": "fröhlich",
+          "answer": "Adjektiv"
+        },
+        {
+          "prompt": "das Fenster",
+          "answer": "Nomen"
+        },
+        {
+          "prompt": "schreiben",
+          "answer": "Verb"
+        },
+        {
+          "prompt": "weich",
+          "answer": "Adjektiv"
+        }
+      ]
+    },
+    {
+      "title": "Untersuche den Satz.",
+      "instruction": "Notiere drei Angaben: Nomen mit Artikel, Verb und Adjektiv. Das Adjektiv darf in der Form aus dem Satz stehen.",
+      "items": [
+        {
+          "prompt": "«Der kleine Hund schläft.» Schreibe das Nomen mit Artikel, das Verb und das Adjektiv auf.",
+          "answer": "Nomen: der Hund; Verb: schläft; Adjektiv: kleine (Grundform klein).",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Nutze alle drei Wortarten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen Satz mit dem Nomen «Katze», einem passenden Adjektiv und einem Verb. Markiere die drei Wörter.",
+          "answer": "Beispiel: Die kleine Katze schläft. Katze=Nomen, kleine=Adjektiv, schläft=Verb. Andere richtige Sätze gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Nomen, Verben und Adjektive in einfachen Sätzen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

@@ -1954,20 +1954,20 @@
     "topicId": "wortarten",
     "title": "Wortarten",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Nomen, Verben und Adjektive in einfachen Sätzen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/wortarten-arbeitsblatt.pdf",
-        "sha256": "a9e20a3d904ce9a340b2a50493aa850b7a8fd5952dddabde8296730837dac4a4",
-        "bytes": 859380
+        "path": "revisions/20261004/pdfs/3/german/wortarten-arbeitsblatt.pdf",
+        "sha256": "e3e618479ba08046e804aca9477ab6bfcf1a0a50ee6646cf42be2b76a546d033",
+        "bytes": 859474
       },
       "solution": {
-        "path": "pdfs/3/german/wortarten-loesungen.pdf",
-        "sha256": "4ef465bc30d6c8306d48c043d13125ff5b28872a2c4949e162daf2d88916fdd5",
-        "bytes": 889492
+        "path": "revisions/20261004/pdfs/3/german/wortarten-loesungen.pdf",
+        "sha256": "06b1782243d784ad3191b89708097ab08cba127a8a639c3e45c14314cbe42671",
+        "bytes": 906749
       }
     }
   },
@@ -1978,20 +1978,20 @@
     "topicId": "adjektive",
     "title": "Adjektive",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Adjektive steigern und in Beschreibungen grammatisch passend verwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/adjektive-arbeitsblatt.pdf",
-        "sha256": "87c37ec6cbd36872a4028594c29ae71ed716ad36dd716205fc0feed765b37ceb",
-        "bytes": 854564
+        "path": "revisions/20261004/pdfs/3/german/adjektive-arbeitsblatt.pdf",
+        "sha256": "ff636252bb54ca77970d73d196cdf6dd7f41324b308e64ca0e5efbf935e2eba8",
+        "bytes": 855722
       },
       "solution": {
-        "path": "pdfs/3/german/adjektive-loesungen.pdf",
-        "sha256": "9d35c973f5abd3641af666a54a6a87897c3b899336598bb3218ab79e3bbab048",
-        "bytes": 882529
+        "path": "revisions/20261004/pdfs/3/german/adjektive-loesungen.pdf",
+        "sha256": "1417ff4ddfc8326b216deedbd877108540cdc193eeaef2f4436c379eca23b082",
+        "bytes": 898043
       }
     }
   },
@@ -2002,20 +2002,20 @@
     "topicId": "saetze",
     "title": "Sätze bauen",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.C.1",
       "scope": "Einfache Aussage- und Fragesätze mit passender Wortstellung und Zeichensetzung bilden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/saetze-arbeitsblatt.pdf",
-        "sha256": "e7d41c3f1250bce51165359cdd72f706b320d5d34fa70148a6fc6b96b2f7401d",
-        "bytes": 855360
+        "path": "revisions/20261004/pdfs/3/german/saetze-arbeitsblatt.pdf",
+        "sha256": "41be2304d8b8ea896c7c6528ceda616f62dfb71157096658e5ee884b2262dc70",
+        "bytes": 855057
       },
       "solution": {
-        "path": "pdfs/3/german/saetze-loesungen.pdf",
-        "sha256": "0de6f7e274de70c1d0a8191fef276db7d8c0ae5c8cd3510da9587ea5f512fb51",
-        "bytes": 882446
+        "path": "revisions/20261004/pdfs/3/german/saetze-loesungen.pdf",
+        "sha256": "134eef15bbc293858bfc5ec911f5bf201a7c457693813bc719afb305c9f458d3",
+        "bytes": 881972
       }
     }
   },
@@ -2026,20 +2026,20 @@
     "topicId": "leseverstaendnis",
     "title": "Leseverständnis",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.C.1",
       "scope": "Explizite Textinformationen und einfache Schlussfolgerungen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/leseverstaendnis-arbeitsblatt.pdf",
-        "sha256": "01577ef891352c90da64bf88891da70bfa31ab1575531b91f0ce04fb77a6baeb",
-        "bytes": 859514
+        "path": "revisions/20261004/pdfs/3/german/leseverstaendnis-arbeitsblatt.pdf",
+        "sha256": "3116cb5f7f74dba7f09cd8438ed1b5830dfdbae81f1e1783add9deae4a37c67e",
+        "bytes": 859208
       },
       "solution": {
-        "path": "pdfs/3/german/leseverstaendnis-loesungen.pdf",
-        "sha256": "89bd23b6925c10cf595f3f91540bac5ae358b26ed258274444f248f4ca09db92",
-        "bytes": 887021
+        "path": "revisions/20261004/pdfs/3/german/leseverstaendnis-loesungen.pdf",
+        "sha256": "bb8b3710082d976283592c0f70a2b28f8c5d74d94cb2f23bb88a0261b2255ca0",
+        "bytes": 886561
       }
     }
   },
@@ -2050,20 +2050,20 @@
     "topicId": "rechtschreibung",
     "title": "Rechtschreibung",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.E.1",
       "scope": "Verlängern und Wortverwandtschaft als Rechtschreibstrategien anwenden; Nomen grossschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/rechtschreibung-arbeitsblatt.pdf",
-        "sha256": "7d8f3cc6c3fb47fb89613d26bc13295607c8c0d618c996a359f09b5afe9306fe",
-        "bytes": 856671
+        "path": "revisions/20261004/pdfs/3/german/rechtschreibung-arbeitsblatt.pdf",
+        "sha256": "52b9e9c89333f62c7480811025d186bfff51d284312bcf2c6fdf447c5fc8b651",
+        "bytes": 856367
       },
       "solution": {
-        "path": "pdfs/3/german/rechtschreibung-loesungen.pdf",
-        "sha256": "82132c2ce2e4f97789881320d294fb39af1ca020ce2e9010a196fd3a58ed8a1d",
-        "bytes": 882466
+        "path": "revisions/20261004/pdfs/3/german/rechtschreibung-loesungen.pdf",
+        "sha256": "0b029af837581a03c583200fd1a405d59a46bec9aa0c25396ec3f8be105aefc5",
+        "bytes": 882000
       }
     }
   },
@@ -2074,20 +2074,20 @@
     "topicId": "verben-konjugieren",
     "title": "Verben konjugieren",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Regelmässige und häufige unregelmässige Verben im Präsens konjugieren.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/verben-konjugieren-arbeitsblatt.pdf",
-        "sha256": "8481e8a550660cebe67e17960e340c9d313aa22735c1503c3fdc9846096ff21f",
-        "bytes": 855263
+        "path": "revisions/20261004/pdfs/3/german/verben-konjugieren-arbeitsblatt.pdf",
+        "sha256": "2e0b345552fd316a3a8b827490a1791180b0e4770b0c3cdf62c44503e8829f76",
+        "bytes": 854959
       },
       "solution": {
-        "path": "pdfs/3/german/verben-konjugieren-loesungen.pdf",
-        "sha256": "325c8fdd9c235e7976d8d444edfbf079e2909c0e2899a171a332a706cf3f6651",
-        "bytes": 880920
+        "path": "revisions/20261004/pdfs/3/german/verben-konjugieren-loesungen.pdf",
+        "sha256": "b00dada951973bf9859cb78e6f7e0aa5923825ed6dc49b2e032e338b742e3ef0",
+        "bytes": 880443
       }
     }
   },
@@ -2096,22 +2096,22 @@
     "grade": 3,
     "subject": "german",
     "topicId": "synonyme-antonyme",
-    "title": "Synonyme & Antonyme",
+    "title": "Wortbedeutungen entdecken",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.4.A.1",
       "scope": "Bedeutungsähnliche und gegensätzliche Wörter im Satz verwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/synonyme-antonyme-arbeitsblatt.pdf",
-        "sha256": "48a0fdeebaf9fe31703e82ea1c47a39cb5648671367f465f8a66756b896a04ac",
-        "bytes": 858968
+        "path": "revisions/20261004/pdfs/3/german/synonyme-antonyme-arbeitsblatt.pdf",
+        "sha256": "bb9dddedc31ffd41521501255932473aceee6acae02e5192948b407a487387ef",
+        "bytes": 858948
       },
       "solution": {
-        "path": "pdfs/3/german/synonyme-antonyme-loesungen.pdf",
-        "sha256": "0b250d5d1703498b6c4cba4c731daaee9b89d69a6dbf1cdb4a05d888c6af5668",
-        "bytes": 887189
+        "path": "revisions/20261004/pdfs/3/german/synonyme-antonyme-loesungen.pdf",
+        "sha256": "1c2e4130280274d9faf8cc920a413ba38d863f2a5b8d9efdad8f046ef84b8d86",
+        "bytes": 886108
       }
     }
   },
@@ -2122,20 +2122,20 @@
     "topicId": "textsorten",
     "title": "Textsorten: Brief & Bericht",
     "curriculum": {
-      "code": "D.4",
+      "code": "D.4.B.1",
       "scope": "Persönlichen Brief und sachlichen Kurzbericht unterscheiden und nach Angaben schreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/textsorten-arbeitsblatt.pdf",
-        "sha256": "022d319c4b86d6b1f1036cc53df6b3302301d52ad49ce7e7a52786a747e4b301",
-        "bytes": 858800
+        "path": "revisions/20261004/pdfs/3/german/textsorten-arbeitsblatt.pdf",
+        "sha256": "040b37f74d061a484c5c1f5a8c9c01de8dd6d04a2ef00719af6791e0ea555bc3",
+        "bytes": 859141
       },
       "solution": {
-        "path": "pdfs/3/german/textsorten-loesungen.pdf",
-        "sha256": "ace030f5c9c34ab174f482e22c1f78b0451cbed33264fe1d8b59d5337c9e5d9b",
-        "bytes": 886725
+        "path": "revisions/20261004/pdfs/3/german/textsorten-loesungen.pdf",
+        "sha256": "143c46671e4c54ba4b694951dfdde1f777f1d93acba86ea65e135bd75d3b6feb",
+        "bytes": 886713
       }
     }
   },
@@ -2146,20 +2146,20 @@
     "topicId": "hoerverstehen-3",
     "title": "Hörgeschichten verstehen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.B.1",
       "scope": "Informationen und Handlungsfolge aus einer zweimal vorgelesenen Geschichte entnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/german/hoerverstehen-3-arbeitsblatt.pdf",
-        "sha256": "ee344a8ffb54feb98e58f16d29035c1b5ff31dea27fba360ddd0598ce528eb47",
-        "bytes": 857146
+        "path": "revisions/20261004/pdfs/3/german/hoerverstehen-3-arbeitsblatt.pdf",
+        "sha256": "9d47be2ebdc24f890d60cffc90ade7c6bbf808750aa9b8950477e60e5a503b3e",
+        "bytes": 856841
       },
       "solution": {
-        "path": "pdfs/3/german/hoerverstehen-3-loesungen.pdf",
-        "sha256": "d951ca6f15bfb3bf482ac2c5f74146eb036439ea559f0cdf4fc6b5e3d89b032c",
-        "bytes": 886084
+        "path": "revisions/20261004/pdfs/3/german/hoerverstehen-3-loesungen.pdf",
+        "sha256": "de36104297c82be48d6ea4f93af6b69f3cc3820e6a663347c0ff05a11e5dd7f5",
+        "bytes": 885627
       }
     }
   },

@@ -1,0 +1,65 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "hoerverstehen-3",
+  "goal": "Eine erwachsene Person liest dir eine Geschichte zweimal vor. Lies zuerst die Fragen. Höre gut zu und notiere danach deine Antworten. Den Vorlesetext findest du nur auf dem Lösungsblatt.",
+  "sections": [
+    {
+      "title": "Erinnere dich an die Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Mit wem geht Noa zur Bibliothek?",
+          "answer": "Mit seiner Tante",
+          "wide": true
+        },
+        {
+          "prompt": "An welchem Tag gehen sie?",
+          "answer": "Am Samstag",
+          "wide": true
+        },
+        {
+          "prompt": "Über welches Thema sucht Noa ein Buch?",
+          "answer": "Über Planeten",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Verstehe den Ablauf.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wer zeigt Noa das richtige Regal?",
+          "answer": "Eine Bibliothekarin",
+          "wide": true
+        },
+        {
+          "prompt": "Über welchen Planeten ist das ausgewählte Buch?",
+          "answer": "Über den Mars",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Fasse den Schluss zusammen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was machen Noa und seine Tante am Tisch? Was macht Noa vor dem Gehen?",
+          "answer": "Sie lesen die erste Seite. Noa leiht das Buch aus.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.B.1",
+    "scope": "Informationen und Handlungsfolge aus einer zweimal vorgelesenen Geschichte entnehmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
+  },
+  "teacherScript": "Vorlesen: zuerst einmal vollständig, dann nach kurzer Pause ein zweites Mal. Fragen vorher gemeinsam lesen; Kinder sehen den Vorlesetext nicht. Text: «Am Samstag geht Noa mit seiner Tante zur Bibliothek. Er möchte ein Buch über Planeten ausleihen. Zuerst findet er nur Bücher über Tiere. Eine Bibliothekarin zeigt ihm das richtige Regal. Noa wählt ein Buch über den Mars. Danach setzen sie sich an einen Tisch und lesen die erste Seite. Bevor sie gehen, leiht Noa das Buch aus.»",
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

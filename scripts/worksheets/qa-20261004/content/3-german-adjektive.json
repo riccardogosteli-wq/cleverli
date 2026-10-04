@@ -1,0 +1,67 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "adjektive",
+  "goal": "Adjektive machen Beschreibungen genauer. Viele lassen sich steigern: klein, kleiner, am kleinsten. Manche Formen ändern sich stärker: gut, besser, am besten.",
+  "sections": [
+    {
+      "title": "Steigere die Adjektive.",
+      "instruction": "Schreibe die mittlere Form und die Form mit «am». Beispiel: klein, kleiner, am kleinsten.",
+      "items": [
+        {
+          "prompt": "schnell, __, __",
+          "answer": "schneller, am schnellsten",
+          "wide": true,
+          "blankWidth": 50
+        },
+        {
+          "prompt": "gross, __, __",
+          "answer": "grösser, am grössten",
+          "wide": true,
+          "blankWidth": 50
+        },
+        {
+          "prompt": "gut, __, __",
+          "answer": "besser, am besten",
+          "wide": true,
+          "blankWidth": 50
+        }
+      ]
+    },
+    {
+      "title": "Setze die passende Form ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Der Faden ist lang. Das ist ein ... Faden.",
+          "answer": "langer",
+          "wide": true
+        },
+        {
+          "prompt": "Die Tasche ist schwer. Das ist eine ... Tasche.",
+          "answer": "schwere",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe einen erfundenen Gegenstand.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze über einen Ball. Verwende zwei verschiedene Adjektive.",
+          "answer": "Beispiel: Der Ball ist rund. Seine Oberfläche ist glatt. Zwei verständliche Sätze mit passenden Adjektiven.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Adjektive steigern und in Beschreibungen grammatisch passend verwenden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

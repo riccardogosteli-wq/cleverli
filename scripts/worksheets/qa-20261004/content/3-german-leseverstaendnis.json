@@ -1,0 +1,64 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "leseverstaendnis",
+  "goal": "Am Mittwoch besucht die Klasse den Schulgarten. Zuerst prüft Mia die Erde im Beet. Sie ist noch feucht, deshalb giesst Mia nicht. Noa entdeckt eine Schnecke unter einem Blatt. Er beobachtet sie, ohne sie anzufassen. Zum Schluss zeichnen die Kinder ihre Beobachtungen ins Heft. Am nächsten Tag wollen sie vergleichen, was sich verändert hat.",
+  "sections": [
+    {
+      "title": "Finde Informationen im Text.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wann besucht die Klasse den Schulgarten?",
+          "answer": "Am Mittwoch",
+          "wide": true
+        },
+        {
+          "prompt": "Wo entdeckt Noa die Schnecke?",
+          "answer": "Unter einem Blatt",
+          "wide": true
+        },
+        {
+          "prompt": "Warum giesst Mia nicht?",
+          "answer": "Die Erde ist noch feucht.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Text und Vermutung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Die Schnecke ist braun.» Steht das im Text?",
+          "answer": "Nein, ihre Farbe wird nicht genannt.",
+          "wide": true
+        },
+        {
+          "prompt": "Was machen die Kinder zum Schluss?",
+          "answer": "Sie zeichnen ihre Beobachtungen ins Heft.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke über die Handlung nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sind die Zeichnungen für den nächsten Besuch nützlich?",
+          "answer": "Sie halten Beobachtungen fest und helfen beim Vergleichen von Veränderungen. Sinngemäss begründete Antwort.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.C.1",
+    "scope": "Explizite Textinformationen und einfache Schlussfolgerungen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

@@ -82,7 +82,7 @@ def render_item(item,sol):
  elif sol: tail=f'<br><span class="answer">Antwort: {answer}</span>'
  elif item.get('drawingHeight'):tail=f'<div class="drawing-area" style="height:{int(item["drawingHeight"])}mm" aria-label="Zeichenfläche"></div>'
  elif item.get('response')=='drawing':tail=''
- elif item.get('lines'):tail='<span class="writing"></span>'*item['lines']
+ elif item.get('lines'):tail=f'<span class="writing" style="height:{int(item.get("writingHeight",12))}mm"></span>'*item['lines']
  else:
   width=18 if re.fullmatch(r'[0-9.+−<> =]+',item['answer']) else min(85,max(38,len(item['answer'])*4))
   tail=f'<span class="blank" style="min-width:{width}mm"></span>'

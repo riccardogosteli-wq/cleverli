@@ -1,0 +1,63 @@
+{
+  "grade": 3,
+  "subject": "german",
+  "sourceId": "saetze",
+  "goal": "Ein Aussagesatz beginnt gross und endet meist mit einem Punkt. Du kannst Satzglieder umstellen: «Mia liest am Abend.» oder «Am Abend liest Mia.» Das Verb bleibt hier an zweiter Satzgliedstelle.",
+  "sections": [
+    {
+      "title": "Baue einen sinnvollen Aussagesatz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "der Hund / im Garten / spielt",
+          "answer": "Der Hund spielt im Garten. Oder: Im Garten spielt der Hund.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "ein Buch / am Abend / liest / Mia",
+          "answer": "Mia liest am Abend ein Buch. Oder: Am Abend liest Mia ein Buch.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Forme eine Frage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du kommst heute mit. → Beginne mit «Kommst».",
+          "answer": "Kommst du heute mit?",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Das Buch liegt auf dem Tisch. → Frage mit «Wo».",
+          "answer": "Wo liegt das Buch?",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Verbessere den Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«am morgen die kinder spielen draussen» Schreibe einen richtigen Aussagesatz.",
+          "answer": "Am Morgen spielen die Kinder draussen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.C.1",
+    "scope": "Einfache Aussage- und Fragesätze mit passender Wortstellung und Zeichensetzung bilden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}
