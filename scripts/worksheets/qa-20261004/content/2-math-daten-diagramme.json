@@ -1,0 +1,63 @@
+{
+  "grade": 2,
+  "subject": "math",
+  "sourceId": "daten-diagramme",
+  "goal": "13 Kinder wählen je ein Lieblingsspiel. Jedes Kästchen im Diagramm steht für genau ein Kind.",
+  "sections": [
+    {
+      "title": "Lies das Diagramm.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Kinder wählen Fangen?",
+          "answer": "4",
+          "svg": "<svg class=\"illustration data-chart\" style=\"width:150mm;height:38mm\" viewBox=\"0 0 150 38\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"7\" font-size=\"4\">Fussball</text><rect class=\"data-square\" data-category=\"Fussball\" x=\"35\" y=\"2\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Fussball\" x=\"43\" y=\"2\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Fussball\" x=\"51\" y=\"2\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Fussball\" x=\"59\" y=\"2\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Fussball\" x=\"67\" y=\"2\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Fussball\" x=\"75\" y=\"2\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><text x=\"0\" y=\"19\" font-size=\"4\">Fangen</text><rect class=\"data-square\" data-category=\"Fangen\" x=\"35\" y=\"14\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Fangen\" x=\"43\" y=\"14\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Fangen\" x=\"51\" y=\"14\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Fangen\" x=\"59\" y=\"14\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><text x=\"0\" y=\"31\" font-size=\"4\">Verstecken</text><rect class=\"data-square\" data-category=\"Verstecken\" x=\"35\" y=\"26\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Verstecken\" x=\"43\" y=\"26\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Verstecken\" x=\"51\" y=\"26\" width=\"6\" height=\"6\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".4\"/></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Welches Spiel hat die meisten Stimmen?",
+          "answer": "Fussball"
+        },
+        {
+          "prompt": "Welches hat die wenigsten?",
+          "answer": "Verstecken"
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche die Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Kinder mehr wählen Fussball als Verstecken?",
+          "answer": "3",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele wählen Fangen oder Verstecken?",
+          "answer": "7",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Überlege weiter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein weiteres Kind stimmt für Verstecken. Wie viele Stimmen hat Verstecken nun? Wie viele Kinder haben insgesamt abgestimmt?",
+          "answer": "Verstecken: 4; insgesamt: 14 Kinder.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.1",
+    "scope": "Ein einfaches Bilddiagramm lesen, vergleichen und um eine Stimme ergänzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

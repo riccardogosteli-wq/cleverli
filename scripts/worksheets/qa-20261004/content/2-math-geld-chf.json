@@ -1,0 +1,65 @@
+{
+  "grade": 2,
+  "subject": "math",
+  "sourceId": "geld-chf",
+  "goal": "1 Franken = 100 Rappen. Beispiel: 50 Rp. + 50 Rp. = 1 Fr. Achte immer auf die Einheit.",
+  "sections": [
+    {
+      "title": "Zähle die Beträge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "20 Rp. + 20 Rp. + 10 Rp. =",
+          "answer": "50 Rp."
+        },
+        {
+          "prompt": "50 Rp. + 20 Rp. + 20 Rp. =",
+          "answer": "90 Rp."
+        },
+        {
+          "prompt": "2 Fr. + 5 Fr. + 1 Fr. =",
+          "answer": "8 Fr."
+        },
+        {
+          "prompt": "Wie viele 20-Rappen-Münzen ergeben 1 Fr.?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "title": "Einkaufen und Rückgeld.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Heft kostet 4 Fr. und ein Stift 3 Fr. Wie viel kosten beide?",
+          "answer": "7 Fr.",
+          "wide": true
+        },
+        {
+          "prompt": "Du bezahlst ein Buch für 13 Fr. mit 20 Fr. Wie viel bekommst du zurück?",
+          "answer": "7 Fr.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Finde zwei Möglichkeiten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Lege 10 Fr. mit 1-Fr., 2-Fr. und 5-Fr.-Münzen. Schreibe zwei verschiedene Zusammenstellungen auf. Du musst nicht alle Münzsorten verwenden.",
+          "answer": "Beispiele: 5 + 5; 5 + 2 + 2 + 1. Andere Kombinationen mit Summe 10 Fr. gelten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.A.2",
+    "scope": "Franken und Rappen zusammensetzen; mit ganzen Franken rechnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

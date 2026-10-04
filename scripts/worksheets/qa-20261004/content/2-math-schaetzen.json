@@ -1,0 +1,66 @@
+{
+  "grade": 2,
+  "subject": "math",
+  "sourceId": "schaetzen",
+  "goal": "Schätzen bedeutet: einen ungefähren Wert finden. Bei den Zehnern hilft Zählen: 20, 30, 40, 50, 60, 70, 80, 90.",
+  "sections": [
+    {
+      "title": "Finde den Zehner davor oder danach.",
+      "instruction": "Wir suchen Zehnerzahlen, nicht die direkte Nachbarzahl.",
+      "items": [
+        {
+          "prompt": "Welcher Zehner liegt vor 23?",
+          "answer": "20"
+        },
+        {
+          "prompt": "Welcher Zehner liegt nach 38?",
+          "answer": "40"
+        },
+        {
+          "prompt": "Welcher Zehner liegt vor 65?",
+          "answer": "60"
+        },
+        {
+          "prompt": "Welcher Zehner liegt nach 82?",
+          "answer": "90"
+        }
+      ]
+    },
+    {
+      "title": "Was ist eine sinnvolle Schätzung?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Länge eines neuen Bleistifts: 2 cm, 18 cm oder 2 m?",
+          "answer": "18 cm",
+          "wide": true
+        },
+        {
+          "prompt": "Länge eines Klassenzimmers: 8 cm oder 8 m?",
+          "answer": "8 m",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schätze zuerst, miss danach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wähle ein Buch. Schätze seine Höhe in cm und notiere sie. Miss dann mit einem Lineal. Um wie viele cm weicht deine Schätzung ab?",
+          "answer": "Individuell: Schätzung vor Messung; tatsächlicher Messwert; nichtnegative Differenz korrekt. Beispiel: geschätzt 25 cm, gemessen 28 cm, Abweichung 3 cm.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.A.2",
+    "scope": "Grössen schätzen und messen; Zahlen zwischen Zehnerzahlen einordnen. Keine formale Rundungsregel vorausgesetzt.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "worksheetTitle": "Schätzen und Zehner finden"
+}

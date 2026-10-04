@@ -1,0 +1,57 @@
+{
+  "grade": 2,
+  "subject": "math",
+  "sourceId": "sachaufgaben",
+  "goal": "Lies genau. Notiere eine passende Rechnung und einen Antwortsatz. Prüfe: Ist das Ergebnis für die Geschichte sinnvoll?",
+  "sections": [
+    {
+      "title": "Zusammen und übrig.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In einer Kiste liegen 24 Bausteine. 13 kommen dazu. Wie viele sind es jetzt?",
+          "answer": "24 + 13 = 37 Bausteine.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Im Regal stehen 46 Bücher. 12 werden ausgeliehen. Wie viele bleiben?",
+          "answer": "46 − 12 = 34 Bücher.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Gleich grosse Gruppen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "5 Beutel enthalten je 4 Murmeln. Wie viele Murmeln sind es zusammen?",
+          "answer": "5 × 4 = 20 Murmeln.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Erfinde eine passende Geschichte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe eine kurze Geschichte zu 18 − 7. Löse sie.",
+          "answer": "Beispiel: Von 18 Äpfeln werden 7 gegessen. 11 bleiben. Kriterien: 18 zu Beginn, 7 weg, Ergebnis 11 mit passender Einheit.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.2",
+    "scope": "Einfache Sachsituationen mit Addition, Subtraktion und Multiplikation lösen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

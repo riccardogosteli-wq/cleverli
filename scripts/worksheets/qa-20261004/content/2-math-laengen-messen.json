@@ -1,0 +1,67 @@
+{
+  "grade": 2,
+  "subject": "math",
+  "sourceId": "laengen-messen",
+  "goal": "1 m = 100 cm. Zum Messen liegt die Null des Lineals am Anfang der Strecke. Dieses Blatt auf A4 in tatsächlicher Grösse (100 %) drucken.",
+  "sections": [
+    {
+      "title": "Miss die Strecken mit dem Lineal.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Strecke A ist",
+          "answer": "3 cm",
+          "svg": "<svg class=\"illustration measured-line\" data-cm=\"3\" style=\"width:80mm;height:16mm\" viewBox=\"0 0 80 16\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"6\" font-size=\"4\">A</text><path d=\"M5 10 H35 M5 8 V12 M35 8 V12\" fill=\"none\" stroke=\"#213b49\" stroke-width=\"0.4\"/></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Strecke B ist",
+          "answer": "5 cm",
+          "svg": "<svg class=\"illustration measured-line\" data-cm=\"5\" style=\"width:80mm;height:16mm\" viewBox=\"0 0 80 16\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"6\" font-size=\"4\">B</text><path d=\"M5 10 H55 M5 8 V12 M55 8 V12\" fill=\"none\" stroke=\"#213b49\" stroke-width=\"0.4\"/></svg>",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Rechne mit Zentimetern.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "7 cm + 5 cm =",
+          "answer": "12 cm"
+        },
+        {
+          "prompt": "18 cm − 6 cm =",
+          "answer": "12 cm"
+        },
+        {
+          "prompt": "1 m entspricht",
+          "answer": "100 cm"
+        },
+        {
+          "prompt": "Welche Länge ist grösser: 80 cm oder 1 m?",
+          "answer": "1 m"
+        }
+      ]
+    },
+    {
+      "title": "Zeichne und kontrolliere.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne eine 4 cm lange Strecke. Miss danach zur Kontrolle nach.",
+          "answer": "Strecke 4 cm, mit Lineal geprüft. Druckmassstab bei Aufgabe 1 beachten.",
+          "wide": true,
+          "drawingHeight": 32
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.A.2",
+    "scope": "Längen in Zentimetern messen und zeichnen; 1 m mit 100 cm verbinden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

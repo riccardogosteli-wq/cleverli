@@ -1,0 +1,55 @@
+{
+  "grade": 2,
+  "subject": "math",
+  "sourceId": "symmetrie",
+  "goal": "Eine Spiegelachse teilt eine Figur in zwei spiegelgleiche Hälften. Beim Falten an dieser Linie passen beide Hälften genau aufeinander.",
+  "sections": [
+    {
+      "title": "Ergänze das Spiegelbild.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Spiegle das kleine Quadrat an der gestrichelten Linie nach rechts.",
+          "answer": "Rechts ein 2 × 2 Kästchen grosses Quadrat direkt an der Achse; gleiche obere und untere Höhe wie links.",
+          "svg": "<svg class=\"illustration mirror-grid\" style=\"width:80mm;height:40mm\" viewBox=\"0 0 80 40\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M10 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M20 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M30 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M40 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M50 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M60 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M70 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M80 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 0 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 10 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 20 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 30 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 40 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M40 0 V40\" stroke=\"#213b49\" stroke-width=\".8\" stroke-dasharray=\"2 1\"/><rect x=\"20\" y=\"10\" width=\"20\" height=\"20\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".6\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration mirror-grid\" style=\"width:80mm;height:40mm\" viewBox=\"0 0 80 40\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M10 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M20 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M30 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M40 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M50 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M60 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M70 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M80 0 V40\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 0 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 10 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 20 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 30 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M0 40 H80\" stroke=\"#80979e\" stroke-width=\".2\"/><path d=\"M40 0 V40\" stroke=\"#213b49\" stroke-width=\".8\" stroke-dasharray=\"2 1\"/><rect x=\"20\" y=\"10\" width=\"20\" height=\"20\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".6\"/><rect x=\"40\" y=\"10\" width=\"20\" height=\"20\" fill=\"#d8e7e8\" stroke=\"#213b49\" stroke-width=\".6\"/></svg>",
+          "wide": true,
+          "response": "drawing"
+        }
+      ]
+    },
+    {
+      "title": "Entdecke durch Falten.",
+      "instruction": "Du darfst mit einem quadratischen und einem rechteckigen Papierstück prüfen.",
+      "items": [
+        {
+          "prompt": "Wie viele Spiegelachsen hat ein Quadrat?",
+          "answer": "4"
+        },
+        {
+          "prompt": "Wie viele Spiegelachsen hat ein Rechteck, das kein Quadrat ist?",
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "title": "Zeichne und prüfe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne ein Quadrat. Zeichne eine seiner Spiegelachsen ein. Prüfe durch gedankliches Falten.",
+          "answer": "Quadrat mit einer waagrechten, senkrechten oder diagonalen Spiegelachse durch die Mitte. Beide Hälften deckungsgleich.",
+          "wide": true,
+          "drawingHeight": 42
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.2.A.2",
+    "scope": "Einfache Figuren an einer Achse spiegeln und Spiegelachsen untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

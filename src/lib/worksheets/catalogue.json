@@ -872,7 +872,8 @@
     "curriculum": {
       "code": "MA.1.A.3.b",
       "scope": "Zahlen bis 100 in Zehner und Einer zerlegen.",
-      "evidence": "originals/sources/zahlen-bis-100"
+      "evidence": "originals/sources/zahlen-bis-100",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
@@ -896,18 +897,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Addieren bis 20 mit Zehnerübergang.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/addition-bis-20-arbeitsblatt.pdf",
-        "sha256": "e4013e46dccea94d83f4ebae001f18c1e48cfab51e0c57cb4aa113580b1f86da",
-        "bytes": 858546
+        "path": "revisions/20261004/pdfs/2/math/addition-bis-20-arbeitsblatt.pdf",
+        "sha256": "e5844ecdb4c3cb5a2379d5d0d357c90cee922610895d8f10f06db0fd1a6d8769",
+        "bytes": 853820
       },
       "solution": {
-        "path": "pdfs/2/math/addition-bis-20-loesungen.pdf",
-        "sha256": "8593b5f1075cb1e7b06399f10355418c28bcd32cd6e154761b233ee5d557996e",
-        "bytes": 896043
+        "path": "revisions/20261004/pdfs/2/math/addition-bis-20-loesungen.pdf",
+        "sha256": "0d6059979308002bd20a1962991c5826909e8eae7ca7d3c4a83d688f16d23391",
+        "bytes": 891205
       }
     }
   },
@@ -920,7 +921,8 @@
     "curriculum": {
       "code": "MA.1.A.3.c",
       "scope": "Produkte mit Faktoren 2, 5 und 10.",
-      "evidence": "originals/sources/einmaleins"
+      "evidence": "originals/sources/einmaleins",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
@@ -944,7 +946,8 @@
     "curriculum": {
       "code": "MA.3.A.2.b",
       "scope": "Volle und halbe Stunden lesen und darstellen.",
-      "evidence": "originals/sources/uhrzeit"
+      "evidence": "originals/sources/uhrzeit",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
     },
     "files": {
       "worksheet": {
@@ -968,18 +971,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Subtrahieren bis 20 mit Zehnerübergang.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/subtraktion-bis-20-arbeitsblatt.pdf",
-        "sha256": "57e4f821c9a2a536563ae879fed4f351c86f862aec5c45a7429574b6c525032d",
-        "bytes": 859868
+        "path": "revisions/20261004/pdfs/2/math/subtraktion-bis-20-arbeitsblatt.pdf",
+        "sha256": "4fc3e403f39223eaef691ceba1dfb21d976c6990f13042ac4adf7b4872b43ca3",
+        "bytes": 858280
       },
       "solution": {
-        "path": "pdfs/2/math/subtraktion-bis-20-loesungen.pdf",
-        "sha256": "6d4fe4ad2767346053b0bfe4023f5f0bf9d4229af74246b52869c1532411ecf9",
-        "bytes": 884580
+        "path": "revisions/20261004/pdfs/2/math/subtraktion-bis-20-loesungen.pdf",
+        "sha256": "2f5db5bbbe8f67bbfda17751ce83abb753987cd060379622a9af9c1f5232c4d2",
+        "bytes": 882852
       }
     }
   },
@@ -992,18 +995,18 @@
     "curriculum": {
       "code": "MA.3.A.2",
       "scope": "Längen in Zentimetern messen und zeichnen; 1 m mit 100 cm verbinden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/laengen-messen-arbeitsblatt.pdf",
-        "sha256": "7b5360a1dd03092f326dbf5480982a7dbccaf69c541574977092eae5fee16733",
-        "bytes": 867596
+        "path": "revisions/20261004/pdfs/2/math/laengen-messen-arbeitsblatt.pdf",
+        "sha256": "e8ed170688a3943d54d3f74cde63a949108ca1518214ec7d39d69ab58a26e945",
+        "bytes": 868165
       },
       "solution": {
-        "path": "pdfs/2/math/laengen-messen-loesungen.pdf",
-        "sha256": "5c44b45c47434e0f90e29d8f7221d5d2d85e0f8cf1ccb467eb6c7007c991413a",
-        "bytes": 891534
+        "path": "revisions/20261004/pdfs/2/math/laengen-messen-loesungen.pdf",
+        "sha256": "54c29797d3458e7ab1be931820c62021779cb7a76a0e33885a940ffdd06fcd8b",
+        "bytes": 891091
       }
     }
   },
@@ -1016,18 +1019,18 @@
     "curriculum": {
       "code": "MA.3.A.2",
       "scope": "Franken und Rappen zusammensetzen; mit ganzen Franken rechnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/geld-chf-arbeitsblatt.pdf",
-        "sha256": "21bba3fdf375fd15cd3cf28aa12680e960318fa596a29d617575db3716fd22f8",
-        "bytes": 858258
+        "path": "revisions/20261004/pdfs/2/math/geld-chf-arbeitsblatt.pdf",
+        "sha256": "ec218d4bb584afe1ad6ac5ea53025eea2e7cf7b7a4d1f6c608729a3c13265a06",
+        "bytes": 857959
       },
       "solution": {
-        "path": "pdfs/2/math/geld-chf-loesungen.pdf",
-        "sha256": "464c928b42d31a05cafa96f53c7ec1e9474cea063b1e0d6ec9a60dfacc4e1eda",
-        "bytes": 885265
+        "path": "revisions/20261004/pdfs/2/math/geld-chf-loesungen.pdf",
+        "sha256": "386362651d014cec643bfccc0b82262cc1530990d05734d08f1859ddd94d1bc4",
+        "bytes": 884820
       }
     }
   },
@@ -1040,7 +1043,8 @@
     "curriculum": {
       "code": "MA.1.A.3.b",
       "scope": "Addition und Subtraktion bis 100 ohne Zehnerübergang.",
-      "evidence": "originals/sources/add-sub-100"
+      "evidence": "originals/sources/add-sub-100",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
@@ -1064,18 +1068,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Produkte der 3er- und 4er-Reihe darstellen und berechnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/einmaleins-3-4-arbeitsblatt.pdf",
-        "sha256": "35d4240f3d1ce8d0fbd8c1c31f5ece472061f053312ec26acdc457bfb515fd4e",
-        "bytes": 856918
+        "path": "revisions/20261004/pdfs/2/math/einmaleins-3-4-arbeitsblatt.pdf",
+        "sha256": "ae0828c0891b8511fac1f82246647d5ad88d12570fc05afa2572d83b9c5d3e7a",
+        "bytes": 857639
       },
       "solution": {
-        "path": "pdfs/2/math/einmaleins-3-4-loesungen.pdf",
-        "sha256": "6839dea17b88f4178bb3b7ec87ec3fcc705a8444c3619a8e81aec88dcefbe5af",
-        "bytes": 880256
+        "path": "revisions/20261004/pdfs/2/math/einmaleins-3-4-loesungen.pdf",
+        "sha256": "0987e87e7e86ae1c3b7eb6e909059c618f183609f56bb626d263d9db0a3da5c3",
+        "bytes": 880559
       }
     }
   },
@@ -1086,20 +1090,20 @@
     "topicId": "symmetrie",
     "title": "Symmetrie & Formen",
     "curriculum": {
-      "code": "MA.2.C.2",
+      "code": "MA.2.A.2",
       "scope": "Einfache Figuren an einer Achse spiegeln und Spiegelachsen untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/symmetrie-arbeitsblatt.pdf",
-        "sha256": "1eb82e05f44d404bcfed5287172f51d8f6487bd481752eb523e3fb442d9d5de5",
-        "bytes": 854304
+        "path": "revisions/20261004/pdfs/2/math/symmetrie-arbeitsblatt.pdf",
+        "sha256": "5cf3d84eab19f94069efd4fed7ff8763762fcaec9b7defc2fe6284e5d26109e6",
+        "bytes": 855489
       },
       "solution": {
-        "path": "pdfs/2/math/symmetrie-loesungen.pdf",
-        "sha256": "9d753d2427c8038bc1a8d05e79a99686bc47d156a360b844debcb9d74fafd21d",
-        "bytes": 882362
+        "path": "revisions/20261004/pdfs/2/math/symmetrie-loesungen.pdf",
+        "sha256": "25531beea8db5d5f29f4aab3477729694bb61c90956d6a256f81a84655258b2b",
+        "bytes": 896735
       }
     }
   },
@@ -1108,22 +1112,22 @@
     "grade": 2,
     "subject": "math",
     "topicId": "schaetzen",
-    "title": "Schätzen & Runden",
+    "title": "Schätzen und Zehner finden",
     "curriculum": {
       "code": "MA.3.A.2",
-      "scope": "Grössen sinnvoll schätzen und messen; ganze Zahlen als Vorübung auf Zehner runden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "scope": "Grössen schätzen und messen; Zahlen zwischen Zehnerzahlen einordnen. Keine formale Rundungsregel vorausgesetzt.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/schaetzen-arbeitsblatt.pdf",
-        "sha256": "bde004c30b25a64a75bec073a644c6cbbd2c0a4a09d8a9e96216939d5c1979d1",
-        "bytes": 863972
+        "path": "revisions/20261004/pdfs/2/math/schaetzen-arbeitsblatt.pdf",
+        "sha256": "30e2bcef190d0e33a7137cc9aaf8e52276f27ca80cd4ec8f4d304f9ffbb946f1",
+        "bytes": 861908
       },
       "solution": {
-        "path": "pdfs/2/math/schaetzen-loesungen.pdf",
-        "sha256": "ebc68b9e19728421d0a4fff37b0a4d1564a1403a5de51ad90893c911f3e76897",
-        "bytes": 892278
+        "path": "revisions/20261004/pdfs/2/math/schaetzen-loesungen.pdf",
+        "sha256": "e1f71635933338670d7b4283f08dd6dca0ef2547132297adb730c5be69e5721c",
+        "bytes": 904602
       }
     }
   },
@@ -1136,18 +1140,18 @@
     "curriculum": {
       "code": "MA.3.C.2",
       "scope": "Einfache Sachsituationen mit Addition, Subtraktion und Multiplikation lösen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/sachaufgaben-arbeitsblatt.pdf",
-        "sha256": "16447d52b896fcf0473822ed47bd1676216bcea30496f4fad9840a5e60d57122",
-        "bytes": 859258
+        "path": "revisions/20261004/pdfs/2/math/sachaufgaben-arbeitsblatt.pdf",
+        "sha256": "e0e3bb1f1c897abeff5241d1b08d632c64b9a06f274aacdd5126ea8666a81cb1",
+        "bytes": 858967
       },
       "solution": {
-        "path": "pdfs/2/math/sachaufgaben-loesungen.pdf",
-        "sha256": "3c2afcd2982257eb8772a1fb1118205bcc12057e9942a254d58371e5eb8c4e51",
-        "bytes": 887487
+        "path": "revisions/20261004/pdfs/2/math/sachaufgaben-loesungen.pdf",
+        "sha256": "44376f661a025b221fe811c2df2e0685877c9572e291d0d87ce522671588ec67",
+        "bytes": 887054
       }
     }
   },
@@ -1160,18 +1164,18 @@
     "curriculum": {
       "code": "MA.3.C.1",
       "scope": "Ein einfaches Bilddiagramm lesen, vergleichen und um eine Stimme ergänzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/math/daten-diagramme-arbeitsblatt.pdf",
-        "sha256": "871ddf6f917f1a6ac70ccab52528c2e2db19de2bf7da68db309de64e1811fb8c",
-        "bytes": 868561
+        "path": "revisions/20261004/pdfs/2/math/daten-diagramme-arbeitsblatt.pdf",
+        "sha256": "56242f0f3e3da3175b5b45b79251dc2bf926c0aef76e03309e833109b7844fa7",
+        "bytes": 868273
       },
       "solution": {
-        "path": "pdfs/2/math/daten-diagramme-loesungen.pdf",
-        "sha256": "9f86725c2c2a0abfacfce70ae35d1435357701d442c18a9d9a6536627a72e25d",
-        "bytes": 892767
+        "path": "revisions/20261004/pdfs/2/math/daten-diagramme-loesungen.pdf",
+        "sha256": "9de0407b9e305db674d0b1300050957dc73b7d8dcf99e006502336dede39e56c",
+        "bytes": 892334
       }
     }
   },
