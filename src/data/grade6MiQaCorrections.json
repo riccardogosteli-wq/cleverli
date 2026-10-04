@@ -86,7 +86,8 @@
         "Der Begriff wird auch in deutschsprachigen Computerprogrammen verwendet.",
         "Das gesuchte englische Wort hat sechs Buchstaben."
       ],
-      "spokenPrompt": "Wie lautet das englische Fachwort für eine Sicherungskopie?"
+      "spokenPrompt": "Wie lautet das englische Fachwort für eine Sicherungskopie? … Ergänze die fehlende Antwort.",
+      "verbatimSpeech": true
     },
     "mi6-netzwerke-sicherheit-6-fb6": {
       "question": "Ich prüfe, von wem eine Datei kommt und warum sie geschickt wurde, also Absender und ___.",
@@ -282,6 +283,155 @@
         "Du möchtest verhindern, dass jemand in deiner Abwesenheit deine Apps benutzt.",
         "Überlege, welche Massnahme vor dem Weiterbenutzen eine Entsperrung verlangt."
       ]
+    },
+    "mi6-feeds-algorithmen-6-mc9": {
+      "question": "Was ist eine gute erste Prüfung bei einem Beitrag mit einer überraschenden Behauptung?",
+      "hints": [
+        "Prüfe, woher die Behauptung stammt und ob sie noch aktuell ist.",
+        "Quelle und Datum sind ein Anfang. Danach braucht es passende Belege."
+      ],
+      "spokenPrompt": "Was ist eine gute erste Prüfung bei einem Beitrag mit einer überraschenden Behauptung?",
+      "verbatimSpeech": true
+    },
+    "mi6-feeds-algorithmen-6-me2": {
+      "pairs": [
+        {
+          "id": "mi6-feeds-algorithmen-6-me2-p1",
+          "label": "Nur einem Feed folgen: weniger unterschiedliche Quellen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-me2-p2",
+          "label": "Unabhängige Quellen vergleichen: Belege abgleichen"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-me2-p3",
+          "label": "Artikel zur Überschrift lesen: Zusammenhang erfahren"
+        },
+        {
+          "id": "mi6-feeds-algorithmen-6-me2-p4",
+          "label": "Werbung erkennen: Verkaufsabsicht bemerken"
+        }
+      ],
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi6-feeds-algorithmen-6-dd1": {
+      "dragItems": [
+        {
+          "id": "autor",
+          "label": "Autor und Datum prüfen"
+        },
+        {
+          "id": "titel",
+          "label": "nur Titel lesen"
+        },
+        {
+          "id": "vergleich",
+          "label": "Behauptung mit unabhängiger Quelle abgleichen"
+        },
+        {
+          "id": "likes",
+          "label": "nur Likes zählen"
+        }
+      ]
+    },
+    "mi6-feeds-algorithmen-6-dd2": {
+      "question": "Ein erfundenes Empfehlungssystem nutzt nur Klicks und Sehzeit. Sortiere passende und unpassende Signale.",
+      "hints": [
+        "Für dieses Beispiel ist genau festgelegt, welche Nutzungsdaten das System auswertet.",
+        "Klicks und Dauer gehören dazu. Andere Merkmale werden hier nicht genutzt."
+      ],
+      "spokenPrompt": "Ein erfundenes Empfehlungssystem nutzt nur Klicks und Sehzeit. Sortiere passende und unpassende Signale.",
+      "verbatimSpeech": true
+    },
+    "mi6-feeds-algorithmen-6-ws1": {
+      "hints": [
+        "Suche waagrecht von links nach rechts.",
+        "Beginne mit dem längsten Wort."
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-ws1": {
+      "hints": [
+        "Suche waagrecht von links nach rechts.",
+        "Beginne mit dem längsten Wort."
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-mc1": {
+      "question": "Was ist ein Computernetzwerk?",
+      "options": [
+        "Mehrere Geräte sind verbunden und können Daten austauschen",
+        "Ein einzelner Stift",
+        "Ein leeres Heft",
+        "Ein ausgeschalteter Bildschirm"
+      ],
+      "answer": "Mehrere Geräte sind verbunden und können Daten austauschen",
+      "hints": [
+        "Denke an verbundene technische Geräte.",
+        "Über die Verbindung können Informationen übertragen werden."
+      ],
+      "spokenPrompt": "Was ist ein Computernetzwerk?",
+      "verbatimSpeech": true
+    },
+    "mi6-netzwerke-sicherheit-6-mc6": {
+      "question": "Was klärst du, bevor du eine unerwartete Datei von einer unbekannten Person öffnest?",
+      "hints": [
+        "Öffne sie nicht einfach. Kläre mit einer vertrauten erwachsenen Person, ob sie erwartet und sicher ist.",
+        "Ein bekannter Name allein ist kein Beweis: Absender können gefälscht sein."
+      ],
+      "spokenPrompt": "Was klärst du, bevor du eine unerwartete Datei von einer unbekannten Person öffnest?",
+      "verbatimSpeech": true
+    },
+    "mi6-netzwerke-sicherheit-6-mc9": {
+      "options": [
+        "Man kennt den Betreiber und die Sicherheit des Netzes nicht sicher",
+        "Es ist immer schneller",
+        "Es löscht automatisch alle Fehler",
+        "Es macht jedes Login unnötig"
+      ],
+      "answer": "Man kennt den Betreiber und die Sicherheit des Netzes nicht sicher",
+      "hints": [
+        "Auch ein Netzwerkname kann nachgeahmt werden. Frage bei Unsicherheit eine vertraute erwachsene Person.",
+        "Eine verschlüsselte Verbindung schützt Inhalte, macht aber eine gefälschte Login-Seite nicht vertrauenswürdig."
+      ]
+    },
+    "mi6-netzwerke-sicherheit-6-dd3": {
+      "question": "Sortiere eher bekannte Zugänge und Zugänge, die du erst klären musst.",
+      "dragItems": [
+        {
+          "id": "schule",
+          "label": "Schul-WLAN, von der Lehrperson bestätigt"
+        },
+        {
+          "id": "daheim",
+          "label": "Eigenes Familien-WLAN, von den Eltern eingerichtet"
+        },
+        {
+          "id": "offen",
+          "label": "Unbekanntes öffentliches WLAN"
+        },
+        {
+          "id": "fremd",
+          "label": "Zugesandter Link zu einer unbekannten Login-Seite"
+        }
+      ],
+      "hints": [
+        "Bekannte Herkunft hilft beim Einordnen, garantiert aber keine vollständige Sicherheit.",
+        "Eine Login-Seite und ein WLAN sind verschiedene Zugänge. Unbekannte erst mit einer erwachsenen Person klären."
+      ],
+      "spokenPrompt": "Sortiere eher bekannte Zugänge und Zugänge, die du erst klären musst.",
+      "verbatimSpeech": true
+    },
+    "mi6-feeds-algorithmen-6-me1": {
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi6-netzwerke-sicherheit-6-me1": {
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
+    },
+    "mi6-netzwerke-sicherheit-6-me2": {
+      "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
+      "verbatimSpeech": true
     }
   }
 }
