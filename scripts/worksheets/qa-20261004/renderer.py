@@ -95,7 +95,8 @@ def render(t,meta,sol):
  s+=f'<div class="goal">{esc(t.get("teacherScript",t["goal"]) if sol else t["goal"])}</div>'
  for i,section in enumerate(t['sections']):s+=f'<section class="section"><h2><span class="number">{i+1}</span>{esc(section["title"])}</h2><p>{esc(section.get("instruction",""))}</p><div class="grid">'+''.join(render_item(q,sol) for q in section['items'])+'</div></section>'
  m=t['mapping'];cycle=1 if t['grade']<=2 else 2
- if sol:s+=f'<div class="note"><b>Lehrplan 21:</b> {m["code"]}. Geübter Ausschnitt: {esc(m["scope"])}<br>Zyklus {cycle}. Klassenempfehlung nach Lernstand. Keine vollständige Kompetenzabdeckung. Offene Antworten sind Beispiele; sinngemässe richtige Antworten gelten.<br><a href="{m["url"]}">Offizieller Lehrplan 21: {m["code"]}</a>, live geprüft am {t.get("reviewDate", "26.09.2026")}. Eigene Cleverli-Aufgaben, keine amtliche Prüfung oder Zertifizierung.</div>'
+ extra=''.join(f'<br><a href="{r["url"]}">Weiterer Lehrplanbezug: {esc(r["code"])}</a>' for r in m.get('additionalReferences',[]))
+ if sol:s+=f'<div class="note"><b>Lehrplan 21:</b> {m["code"]}. Geübter Ausschnitt: {esc(m["scope"])}<br>Zyklus {cycle}. Klassenempfehlung nach Lernstand. Keine vollständige Kompetenzabdeckung. Offene Antworten sind Beispiele; sinngemässe richtige Antworten gelten.<br><a href="{m["url"]}">Offizieller Lehrplan 21: {m["code"]}</a>, live geprüft am {t.get("reviewDate", "26.09.2026")}. Eigene Cleverli-Aufgaben, keine amtliche Prüfung oder Zertifizierung.{extra}</div>'
  s+=f'<footer class="footer"><span>cleverli.ch · {esc(meta["worksheetId"])}<br>Version {t.get("version", "1.0")} · {SUBJECTS[t["subject"]]} · {t["grade"]}. Klasse</span><span>{"Lösungsblatt · 2 / 2" if sol else "Arbeitsblatt · 1 / 2"}</span></footer></article>'
  return s
 if __name__=='__main__':

@@ -2170,20 +2170,20 @@
     "topicId": "unsere-erde",
     "title": "Unsere Erde & Kontinente",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.4",
       "scope": "Kontinente und Ozeane unterscheiden und sich am Globus orientieren.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/unsere-erde-arbeitsblatt.pdf",
-        "sha256": "eeca2fa61dee9cd25aa32efa042612088a39c634aa7351bf718d7f001abf7331",
-        "bytes": 861696
+        "path": "revisions/20261004/pdfs/3/science/unsere-erde-arbeitsblatt.pdf",
+        "sha256": "4d6fad704aefcab002f224bdf8cc3cb8d086566f038e58cd86f0be77a619c7e4",
+        "bytes": 861391
       },
       "solution": {
-        "path": "pdfs/3/science/unsere-erde-loesungen.pdf",
-        "sha256": "a02e09f9caa86d7549597e50efc81b78e0c9a71b160eec8464bf857df16a46c9",
-        "bytes": 887535
+        "path": "revisions/20261004/pdfs/3/science/unsere-erde-loesungen.pdf",
+        "sha256": "e282d9d270182b854d37b99cf5f7757cdceaf6bd1fd742d695e0a4f3d2911f81",
+        "bytes": 887050
       }
     }
   },
@@ -2194,20 +2194,20 @@
     "topicId": "materialien",
     "title": "Materialien & ihre Eigenschaften",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.3",
       "scope": "Materialien anhand beobachtbarer Eigenschaften vergleichen und für Zwecke auswählen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/materialien-arbeitsblatt.pdf",
-        "sha256": "7e28d1e974d96d0b8207e73acab7a9e6a334429e7eb6b5360769df8eb6069fbe",
-        "bytes": 862639
+        "path": "revisions/20261004/pdfs/3/science/materialien-arbeitsblatt.pdf",
+        "sha256": "8ae186b8e85a92b100054d0d70b070f32f6c7c259690e4085aa26cecd7995de9",
+        "bytes": 863815
       },
       "solution": {
-        "path": "pdfs/3/science/materialien-loesungen.pdf",
-        "sha256": "70e6e0dca0bbfe0095e2d854242cf9bfa8ee0f8d62fa7a97094aaa51f66aa79f",
-        "bytes": 889384
+        "path": "revisions/20261004/pdfs/3/science/materialien-loesungen.pdf",
+        "sha256": "b9e8c71b176d4ac38c2122442c48036a707c32e1e7994aa4a3347c05767421b4",
+        "bytes": 889559
       }
     }
   },
@@ -2218,20 +2218,26 @@
     "topicId": "licht-schatten",
     "title": "Licht, Schatten & Magnete",
     "curriculum": {
-      "code": "NMG.4 und NMG.3",
-      "scope": "Lichtdurchlässigkeit, Schatten und einfache magnetische Wirkungen unterscheiden. Licht/Schatten: NMG.4; Magnetkräfte: NMG.3.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "code": "NMG.4.3",
+      "scope": "Lichtdurchlässigkeit und Schatten untersuchen; einfache magnetische Wirkungen sicher beobachten.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.5.2",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|2"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/licht-schatten-arbeitsblatt.pdf",
-        "sha256": "0cac5398faf5bab7e98367dd8507de13b468b4e1bf489cb9d43518793e0deb4f",
-        "bytes": 861764
+        "path": "revisions/20261004/pdfs/3/science/licht-schatten-arbeitsblatt.pdf",
+        "sha256": "70ec43c00608045652a8eea73eed5950c47f03edac6b3dcdb31dc465f051590f",
+        "bytes": 863277
       },
       "solution": {
-        "path": "pdfs/3/science/licht-schatten-loesungen.pdf",
-        "sha256": "64116a25ef0a21f3d692e3a9c8c30f1960c3014c45f4fc95868201d36de2708a",
-        "bytes": 890071
+        "path": "revisions/20261004/pdfs/3/science/licht-schatten-loesungen.pdf",
+        "sha256": "d077a4af269412af8c76ef6e96c9ca1d9924d047beeadde449469ae844d45ac7",
+        "bytes": 891115
       }
     }
   },
@@ -2242,20 +2248,20 @@
     "topicId": "umwelt-nachhaltigkeit",
     "title": "Umwelt & Nachhaltigkeit",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.6",
       "scope": "Ressourcenverbrauch und umweltschonende Handlungen im Alltag begründen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|6"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/umwelt-nachhaltigkeit-arbeitsblatt.pdf",
-        "sha256": "382855f4c2294539313a1b87421889ac49bcd13807dc3474b9b6d63c9953534a",
-        "bytes": 863921
+        "path": "revisions/20261004/pdfs/3/science/umwelt-nachhaltigkeit-arbeitsblatt.pdf",
+        "sha256": "dbccf92f07992003f0a1b9d8cc42a46c899aa86fd7af4e63de90c2bf97421e33",
+        "bytes": 863617
       },
       "solution": {
-        "path": "pdfs/3/science/umwelt-nachhaltigkeit-loesungen.pdf",
-        "sha256": "2af58f8b47ea0a20a9a41b095018b22a0dbecec6fc0a9db54a1afb9963f73c5a",
-        "bytes": 891994
+        "path": "revisions/20261004/pdfs/3/science/umwelt-nachhaltigkeit-loesungen.pdf",
+        "sha256": "b2fdaddfee3186e51365f2abf73abffd1550d3a93d98e19d46334c308ed6218c",
+        "bytes": 891547
       }
     }
   },
@@ -2266,20 +2272,20 @@
     "topicId": "schweizer-geschichte",
     "title": "Schweizer Geschichte",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.3",
       "scope": "Zeitliche Entwicklung der Schweiz und den Unterschied zwischen Quelle und Sage erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/schweizer-geschichte-arbeitsblatt.pdf",
-        "sha256": "70fe0c8b743f2dce09adaf16530a2c692fb6a847d7f9f2a23ea82c1c0ab37e34",
-        "bytes": 865711
+        "path": "revisions/20261004/pdfs/3/science/schweizer-geschichte-arbeitsblatt.pdf",
+        "sha256": "5892c968033ecb0de3d59500cb667da3850b14783169e609dcd5639458f3c220",
+        "bytes": 865420
       },
       "solution": {
-        "path": "pdfs/3/science/schweizer-geschichte-loesungen.pdf",
-        "sha256": "ee8619b7ca61bf65fe7b4431a7bd5220ef9d31172d20b8de9af73d9e17d65b67",
-        "bytes": 894647
+        "path": "revisions/20261004/pdfs/3/science/schweizer-geschichte-loesungen.pdf",
+        "sha256": "25d16f132fdaa7b42823950038336610519d2b3ef51ef79a522727d34a93b91b",
+        "bytes": 894598
       }
     }
   },
@@ -2290,20 +2296,20 @@
     "topicId": "demokratie",
     "title": "Demokratie & Gesellschaft",
     "curriculum": {
-      "code": "NMG.10",
+      "code": "NMG.10.4",
       "scope": "Gemeinsame Entscheidungen, Mehrheitsprinzip und faire Beteiligung an einem Klassenbeispiel untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C10"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/demokratie-arbeitsblatt.pdf",
-        "sha256": "1ba599f6414707b55533376d8a5a6ce0e93c65846e0f6d7e0f99b385ccd3b2da",
-        "bytes": 864408
+        "path": "revisions/20261004/pdfs/3/science/demokratie-arbeitsblatt.pdf",
+        "sha256": "07a8a7fcbd5f57b9b361034be35c756e9bb550c9d0e300c276d1d11bbb8c82b0",
+        "bytes": 864109
       },
       "solution": {
-        "path": "pdfs/3/science/demokratie-loesungen.pdf",
-        "sha256": "8a662f1eaf88d08514e9cf65a4d7fd81c61178376914d905a82fb7c193fc2b5d",
-        "bytes": 891267
+        "path": "revisions/20261004/pdfs/3/science/demokratie-loesungen.pdf",
+        "sha256": "3c9e62174307f586c345828489491e01bcb947f193b549aaf8a6e81a0632355c",
+        "bytes": 890804
       }
     }
   },
@@ -2314,20 +2320,26 @@
     "topicId": "energie",
     "title": "Energie & Strom",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.2",
       "scope": "Energieumwandlungen elektrischer Alltagsgeräte und sicheres Verhalten beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|2",
+      "additionalReferences": [
+        {
+          "code": "NMG.5.2",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|2"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/energie-arbeitsblatt.pdf",
-        "sha256": "7013630b690f32e22ef829a2af23976f60c4f0b27619c641959faa478bf865eb",
-        "bytes": 861711
+        "path": "revisions/20261004/pdfs/3/science/energie-arbeitsblatt.pdf",
+        "sha256": "71de23e4e8d9a0992c20f495d987ee919eb08bef4c46a8995ea3df1d1340f7cc",
+        "bytes": 861399
       },
       "solution": {
-        "path": "pdfs/3/science/energie-loesungen.pdf",
-        "sha256": "be5ce35eb25dca63abed2ffee78ed5917dce6b8990336778be0abe639f9d9758",
-        "bytes": 888418
+        "path": "revisions/20261004/pdfs/3/science/energie-loesungen.pdf",
+        "sha256": "94a7cf6abea6214acd6ca78b1ff2bbc9573a3a8335d26624f625d86114648447",
+        "bytes": 889307
       }
     }
   },
@@ -2338,20 +2350,20 @@
     "topicId": "uhr-24h-gr3",
     "title": "Uhrzeit: 24-Stunden & Zeitrechnung",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.1",
       "scope": "24-Stunden-Zeiten lesen und Zeitspannen auch über Mitternacht bestimmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/uhr-24h-gr3-arbeitsblatt.pdf",
-        "sha256": "fb462913b49ff264c771a54cf691e160d685bafa09e65357fdacd135cf0452f2",
-        "bytes": 867980
+        "path": "revisions/20261004/pdfs/3/science/uhr-24h-gr3-arbeitsblatt.pdf",
+        "sha256": "a0bbad16dfd7b54ea9209f2d97ef13f37469f9ee34d460772d81a6a2523472af",
+        "bytes": 867713
       },
       "solution": {
-        "path": "pdfs/3/science/uhr-24h-gr3-loesungen.pdf",
-        "sha256": "8dd92137a02cc3229f900be1c2ec5e8220fa20bd0a23224211eacb2b61d92bc4",
-        "bytes": 891163
+        "path": "revisions/20261004/pdfs/3/science/uhr-24h-gr3-loesungen.pdf",
+        "sha256": "fe9384f10233f983640e75272e041e210b4b9a382d23698feff3bd75389fe7e6",
+        "bytes": 890897
       }
     }
   },
@@ -2362,20 +2374,20 @@
     "topicId": "kalender-gr3",
     "title": "Kalender, Daten & Zeitspannen",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.1",
       "scope": "Monatskalender, Wochenabstände und Datumswechsel korrekt verwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/kalender-gr3-arbeitsblatt.pdf",
-        "sha256": "71ac0e5df0ac6b7d82b01fff063adc52d940ecb5478e195a91076f642df8202e",
-        "bytes": 889880
+        "path": "revisions/20261004/pdfs/3/science/kalender-gr3-arbeitsblatt.pdf",
+        "sha256": "282a37bfea73b8c62d3246e80231c718e92c76ecd72cc7c676edefe702d14e13",
+        "bytes": 889572
       },
       "solution": {
-        "path": "pdfs/3/science/kalender-gr3-loesungen.pdf",
-        "sha256": "8ec8ab72711366440243586eb79f37510b3c560800bd7ee5fe223025cd6a3811",
-        "bytes": 914891
+        "path": "revisions/20261004/pdfs/3/science/kalender-gr3-loesungen.pdf",
+        "sha256": "aec2453cc19c5de32ce205a16eccd32fdc46dfa1ddc72c45e2468ef69284e023",
+        "bytes": 914837
       }
     }
   },
@@ -2386,20 +2398,20 @@
     "topicId": "energie-stoffe",
     "title": "Arbeit & Berufe",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.2",
       "scope": "Bezahlte und unbezahlte Arbeit sowie Beiträge verschiedener Berufe beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/energie-stoffe-arbeitsblatt.pdf",
-        "sha256": "345e929b3d4190f9528ab8591749d2192d91327105dfc4619263b19affa8330b",
-        "bytes": 861974
+        "path": "revisions/20261004/pdfs/3/science/energie-stoffe-arbeitsblatt.pdf",
+        "sha256": "215ad576e7ddf5fc1ba91945c2a780e9395fbe4654c43951c8f989eb6240fcdd",
+        "bytes": 861661
       },
       "solution": {
-        "path": "pdfs/3/science/energie-stoffe-loesungen.pdf",
-        "sha256": "8c9bb9916b3758cf65430735919b1e8e9765246b151b3bc49937984491e9ed20",
-        "bytes": 889610
+        "path": "revisions/20261004/pdfs/3/science/energie-stoffe-loesungen.pdf",
+        "sha256": "8bcf0867b58c8dcb78d7a7de627ffbd01cdd5f3bd6773c4e88251e078afc8461",
+        "bytes": 889163
       }
     }
   },
@@ -2410,20 +2422,20 @@
     "topicId": "licht-optik",
     "title": "Konsum & Geld",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.5",
       "scope": "Budget, Werbeaussagen und begründete Konsumentscheidungen untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/licht-optik-arbeitsblatt.pdf",
-        "sha256": "60709d1c48d5c3e4cabc14e54b53ffe0806f850ea3eef1feeeb55a97c8c45100",
-        "bytes": 864045
+        "path": "revisions/20261004/pdfs/3/science/licht-optik-arbeitsblatt.pdf",
+        "sha256": "1b53136ba1037fa5b96510bfb29b2bfe773e7e69af851b73219c24b89180908d",
+        "bytes": 863720
       },
       "solution": {
-        "path": "pdfs/3/science/licht-optik-loesungen.pdf",
-        "sha256": "b323f52373d1d2696d9abc29c8a7b7449ebc93f30d8e0eecf555d0536b94720d",
-        "bytes": 891639
+        "path": "revisions/20261004/pdfs/3/science/licht-optik-loesungen.pdf",
+        "sha256": "5273f50d22354268c3f3f430d84af98e37a8f4b74c9bb469882d6df96ac14685",
+        "bytes": 891477
       }
     }
   },
@@ -2434,20 +2446,20 @@
     "topicId": "raeume-karte",
     "title": "Räume und Karten 🗺️",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.4",
       "scope": "Einen einfachen Plan mit Nordpfeil lesen und Wege mit Himmelsrichtungen beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/science/raeume-karte-arbeitsblatt.pdf",
-        "sha256": "60e801928e143995b4c8e41aa7a0e5431fcba662057d23d71e18b320741f4a3d",
-        "bytes": 873035
+        "path": "revisions/20261004/pdfs/3/science/raeume-karte-arbeitsblatt.pdf",
+        "sha256": "a0e44c9f57ff282d6378039acb7deab7acda87f77acadab69c153c3133f615e1",
+        "bytes": 873574
       },
       "solution": {
-        "path": "pdfs/3/science/raeume-karte-loesungen.pdf",
-        "sha256": "df67aa64ea40b61dde4e6de03e34cd1868d2c95cafb497cc7009d60eb2c4dbb4",
-        "bytes": 897707
+        "path": "revisions/20261004/pdfs/3/science/raeume-karte-loesungen.pdf",
+        "sha256": "a292d372f85c2c2f63b20c8bd81d54866169515189bd71442cb716c442c84e6f",
+        "bytes": 898129
       }
     }
   },

@@ -1,0 +1,65 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "licht-schatten",
+  "goal": "Ein undurchsichtiger Gegenstand hält Licht auf; hinter ihm entsteht ein Schatten. Magnete ziehen zum Beispiel Eisen an, aber nicht jedes Metall. Nutze nur grosse Schulmagnete mit Erwachsenen, nie kleine lose Magnete.",
+  "sections": [
+    {
+      "title": "Licht und Schatten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was brauchst du ausser einer Wand und einem undurchsichtigen Gegenstand, um einen Schatten zu erzeugen?",
+          "answer": "Eine Lichtquelle",
+          "wide": true
+        },
+        {
+          "prompt": "Durch welches Material geht sichtbares Licht gut: klares Glas oder dicker Karton?",
+          "answer": "Klares Glas",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Magnetisch oder nicht?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Büroklammer aus gewöhnlichem Eisen/Stahl wird angezogen. Ja oder nein?",
+          "answer": "Ja",
+          "wide": true
+        },
+        {
+          "prompt": "Ein Holzstück wird von einem Magneten angezogen. Ja oder nein?",
+          "answer": "Nein",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Plane eine sichere Untersuchung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Vergleiche mit Erwachsenen Schatten einer Kartonfigur an der Wand. Verändere ihren Abstand oder ihre Stellung zur Taschenlampe. Zeichne zwei Beobachtungen. Nie in Augen leuchten oder in die Sonne schauen.",
+          "answer": "Mit Erwachsenen jeweils nur Abstand oder Stellung ändern und Schatten vergleichen. Zwei Zeichnungen passen zu den tatsächlichen Beobachtungen. Lampe ruhig halten, nicht in Augen leuchten und nicht in die Sonne schauen.",
+          "wide": true,
+          "drawingHeight": 40
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.3",
+    "scope": "Lichtdurchlässigkeit und Schatten untersuchen; einfache magnetische Wirkungen sicher beobachten.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|3",
+    "additionalReferences": [
+      {
+        "code": "NMG.5.2",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|2"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

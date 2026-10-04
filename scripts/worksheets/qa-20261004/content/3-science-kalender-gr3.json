@@ -1,0 +1,63 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "kalender-gr3",
+  "goal": "Hier siehst du Oktober 2026. Die Woche beginnt mit Montag. Eine Zeitspanne zählt die vergangene Zeit: Von Montag bis Dienstag vergeht ein Tag.",
+  "sections": [
+    {
+      "title": "Lies den Kalender: Oktober 2026.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Auf welchen Wochentag fällt der 1. Oktober?",
+          "answer": "Donnerstag",
+          "svg": "<svg class=\"illustration calendar\" style=\"width:135mm;height:46mm\" viewBox=\"0 0 135 46\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"5\" y=\"5\" font-size=\"3.5\">Mo</text><text x=\"23\" y=\"5\" font-size=\"3.5\">Di</text><text x=\"41\" y=\"5\" font-size=\"3.5\">Mi</text><text x=\"59\" y=\"5\" font-size=\"3.5\">Do</text><text x=\"77\" y=\"5\" font-size=\"3.5\">Fr</text><text x=\"95\" y=\"5\" font-size=\"3.5\">Sa</text><text x=\"113\" y=\"5\" font-size=\"3.5\">So</text><text class=\"calendar-day\" data-col=\"3\" data-row=\"0\" x=\"59\" y=\"13\" font-size=\"3.5\">1</text><text class=\"calendar-day\" data-col=\"4\" data-row=\"0\" x=\"77\" y=\"13\" font-size=\"3.5\">2</text><text class=\"calendar-day\" data-col=\"5\" data-row=\"0\" x=\"95\" y=\"13\" font-size=\"3.5\">3</text><text class=\"calendar-day\" data-col=\"6\" data-row=\"0\" x=\"113\" y=\"13\" font-size=\"3.5\">4</text><text class=\"calendar-day\" data-col=\"0\" data-row=\"1\" x=\"5\" y=\"20\" font-size=\"3.5\">5</text><text class=\"calendar-day\" data-col=\"1\" data-row=\"1\" x=\"23\" y=\"20\" font-size=\"3.5\">6</text><text class=\"calendar-day\" data-col=\"2\" data-row=\"1\" x=\"41\" y=\"20\" font-size=\"3.5\">7</text><text class=\"calendar-day\" data-col=\"3\" data-row=\"1\" x=\"59\" y=\"20\" font-size=\"3.5\">8</text><text class=\"calendar-day\" data-col=\"4\" data-row=\"1\" x=\"77\" y=\"20\" font-size=\"3.5\">9</text><text class=\"calendar-day\" data-col=\"5\" data-row=\"1\" x=\"95\" y=\"20\" font-size=\"3.5\">10</text><text class=\"calendar-day\" data-col=\"6\" data-row=\"1\" x=\"113\" y=\"20\" font-size=\"3.5\">11</text><text class=\"calendar-day\" data-col=\"0\" data-row=\"2\" x=\"5\" y=\"27\" font-size=\"3.5\">12</text><text class=\"calendar-day\" data-col=\"1\" data-row=\"2\" x=\"23\" y=\"27\" font-size=\"3.5\">13</text><text class=\"calendar-day\" data-col=\"2\" data-row=\"2\" x=\"41\" y=\"27\" font-size=\"3.5\">14</text><text class=\"calendar-day\" data-col=\"3\" data-row=\"2\" x=\"59\" y=\"27\" font-size=\"3.5\">15</text><text class=\"calendar-day\" data-col=\"4\" data-row=\"2\" x=\"77\" y=\"27\" font-size=\"3.5\">16</text><text class=\"calendar-day\" data-col=\"5\" data-row=\"2\" x=\"95\" y=\"27\" font-size=\"3.5\">17</text><text class=\"calendar-day\" data-col=\"6\" data-row=\"2\" x=\"113\" y=\"27\" font-size=\"3.5\">18</text><text class=\"calendar-day\" data-col=\"0\" data-row=\"3\" x=\"5\" y=\"34\" font-size=\"3.5\">19</text><text class=\"calendar-day\" data-col=\"1\" data-row=\"3\" x=\"23\" y=\"34\" font-size=\"3.5\">20</text><text class=\"calendar-day\" data-col=\"2\" data-row=\"3\" x=\"41\" y=\"34\" font-size=\"3.5\">21</text><text class=\"calendar-day\" data-col=\"3\" data-row=\"3\" x=\"59\" y=\"34\" font-size=\"3.5\">22</text><text class=\"calendar-day\" data-col=\"4\" data-row=\"3\" x=\"77\" y=\"34\" font-size=\"3.5\">23</text><text class=\"calendar-day\" data-col=\"5\" data-row=\"3\" x=\"95\" y=\"34\" font-size=\"3.5\">24</text><text class=\"calendar-day\" data-col=\"6\" data-row=\"3\" x=\"113\" y=\"34\" font-size=\"3.5\">25</text><text class=\"calendar-day\" data-col=\"0\" data-row=\"4\" x=\"5\" y=\"41\" font-size=\"3.5\">26</text><text class=\"calendar-day\" data-col=\"1\" data-row=\"4\" x=\"23\" y=\"41\" font-size=\"3.5\">27</text><text class=\"calendar-day\" data-col=\"2\" data-row=\"4\" x=\"41\" y=\"41\" font-size=\"3.5\">28</text><text class=\"calendar-day\" data-col=\"3\" data-row=\"4\" x=\"59\" y=\"41\" font-size=\"3.5\">29</text><text class=\"calendar-day\" data-col=\"4\" data-row=\"4\" x=\"77\" y=\"41\" font-size=\"3.5\">30</text><text class=\"calendar-day\" data-col=\"5\" data-row=\"4\" x=\"95\" y=\"41\" font-size=\"3.5\">31</text></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele Tage hat dieser Monat?",
+          "answer": "31"
+        },
+        {
+          "prompt": "Welcher Wochentag ist der 17. Oktober?",
+          "answer": "Samstag"
+        }
+      ]
+    },
+    {
+      "title": "Berechne die Zeitspanne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Tage vergehen vom 5. bis zum 12. Oktober?",
+          "answer": "7 Tage",
+          "wide": true
+        },
+        {
+          "prompt": "Ein Kurs beginnt am 20. Oktober. Die nächste Stunde ist genau eine Woche später. Welches Datum ist das?",
+          "answer": "27. Oktober 2026",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Über den Monatswechsel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welches Datum ist zwei Tage nach dem 30. Oktober 2026? Erkläre die beiden Schritte.",
+          "answer": "1. November 2026. Ein Tag danach: 31. Oktober; zwei Tage danach: 1. November.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.1",
+    "scope": "Monatskalender, Wochenabstände und Datumswechsel korrekt verwenden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

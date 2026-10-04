@@ -1,0 +1,61 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "raeume-karte",
+  "goal": "Eine Karte zeigt Orte vereinfacht von oben. Der Nordpfeil zeigt Norden; bei diesem Plan liegt Osten rechts, Süden unten und Westen links. Der Plan ist erfunden und nicht massstabsgetreu.",
+  "sections": [
+    {
+      "title": "Lies den Plan.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welcher Ort liegt nördlich vom See?",
+          "answer": "Park",
+          "svg": "<svg class=\"illustration simple-map\" style=\"width:120mm;height:58mm\" viewBox=\"0 0 120 58\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15 10 H95 V46 H15 Z M15 28 H95 M55 10 V46\" stroke=\"#83989d\" fill=\"none\"/><text x=\"22\" y=\"21\" font-size=\"4\">Park</text><text x=\"63\" y=\"21\" font-size=\"4\">Schule</text><text x=\"22\" y=\"39\" font-size=\"4\">See</text><text x=\"63\" y=\"39\" font-size=\"4\">Bahnhof</text><path d=\"M108 24 V7 L105 12 M108 7 L111 12\" fill=\"none\" stroke=\"#213b49\"/><text x=\"105\" y=\"5\" font-size=\"4\">N</text></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Welcher Ort liegt östlich vom See?",
+          "answer": "Bahnhof"
+        },
+        {
+          "prompt": "Welcher Ort liegt südlich von der Schule?",
+          "answer": "Bahnhof"
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe Richtungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Vom Park zur Schule gehst du im Plan nach",
+          "answer": "Osten"
+        },
+        {
+          "prompt": "Vom Bahnhof zur Schule nach",
+          "answer": "Norden"
+        }
+      ]
+    },
+    {
+      "title": "Zeichne den Weg im Plan oben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Vom See nach Norden zum Park, dann nach Osten. Zeichne beide Pfeile in den Plan oben. Schreibe hier nur den Zielort.",
+          "answer": "Schule; Pfeil See→Park nach oben, Park→Schule nach rechts.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.4",
+    "scope": "Einen einfachen Plan mit Nordpfeil lesen und Wege mit Himmelsrichtungen beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

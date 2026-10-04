@@ -1,0 +1,66 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "energie-stoffe",
+  "goal": "Menschen arbeiten in vielen Berufen. Auch unbezahlte Tätigkeiten wie Helfen oder Betreuen sind Arbeit. Berufe stehen Menschen unabhängig vom Geschlecht offen. Wir betrachten Tätigkeiten und Zusammenarbeit.",
+  "sections": [
+    {
+      "title": "Ordne die Tätigkeit einem Beruf zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Behandelt kranke Tiere",
+          "answer": "Tierärztin oder Tierarzt"
+        },
+        {
+          "prompt": "Plant und baut Möbel aus Holz",
+          "answer": "Schreinerin oder Schreiner"
+        },
+        {
+          "prompt": "Unterrichtet eine Klasse",
+          "answer": "Lehrperson"
+        },
+        {
+          "prompt": "Fährt einen Linienbus",
+          "answer": "Busfahrerin oder Busfahrer"
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Arbeitssituationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Jemand betreut freiwillig einen Nachbarhund. Ist das unbedingt bezahlte Arbeit?",
+          "answer": "Nein. Die Tätigkeit kann unbezahlt sein.",
+          "wide": true
+        },
+        {
+          "prompt": "Nenne zwei Berufe, die bei der Herstellung und dem Verkauf von Brot zusammenarbeiten.",
+          "answer": "Zum Beispiel Bäckerin/Bäcker und Verkäuferin/Verkäufer; auch Landwirtin/Landwirt oder Müllerin/Müller passend.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Erkläre den Beitrag.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wähle einen der genannten Berufe. Was wäre ohne diese Tätigkeit schwieriger?",
+          "answer": "Beispiel: Ohne Busfahrende könnten weniger Menschen mit dem Bus zur Schule oder Arbeit gelangen. Sinnvoller Zusammenhang zählt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.2",
+    "scope": "Bezahlte und unbezahlte Arbeit sowie Beiträge verschiedener Berufe beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

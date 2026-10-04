@@ -1,0 +1,68 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "uhr-24h-gr3",
+  "goal": "Ein Tag hat 24 Stunden, eine Stunde 60 Minuten. 3 Uhr nachmittags ist 15.00 Uhr. Bei Zeitspannen rechnest du bis zur nächsten vollen Stunde und dann weiter.",
+  "sections": [
+    {
+      "title": "Schreibe im 24-Stunden-System.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "4.30 Uhr am Nachmittag",
+          "answer": "16.30 Uhr"
+        },
+        {
+          "prompt": "8.15 Uhr am Abend",
+          "answer": "20.15 Uhr"
+        },
+        {
+          "prompt": "7.00 Uhr am Morgen",
+          "answer": "07.00 Uhr"
+        },
+        {
+          "prompt": "12.00 Uhr mittags",
+          "answer": "12.00 Uhr"
+        }
+      ]
+    },
+    {
+      "title": "Berechne die Zeitspanne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Von 09.40 Uhr bis 10.15 Uhr",
+          "answer": "35 Minuten"
+        },
+        {
+          "prompt": "Von 14.20 Uhr bis 16.00 Uhr",
+          "answer": "1 Stunde 40 Minuten"
+        },
+        {
+          "prompt": "Von 23.30 Uhr bis 00.15 Uhr am nächsten Tag",
+          "answer": "45 Minuten",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Plane eine Fahrt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Bus fährt um 13.45 Uhr ab. Die Fahrt dauert 50 Minuten. Wann kommt er an? Zeige deinen Rechenweg.",
+          "answer": "14.35 Uhr. Bis 14.00 Uhr: 15 Minuten; noch 35 Minuten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.1",
+    "scope": "24-Stunden-Zeiten lesen und Zeitspannen auch über Mitternacht bestimmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

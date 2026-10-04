@@ -1,0 +1,61 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "umwelt-nachhaltigkeit",
+  "goal": "Ressourcen sind zum Beispiel Wasser, Rohstoffe und Energie. Weniger verbrauchen, länger nutzen und reparieren kann Ressourcen schonen. Abfälle richtig zu trennen hilft beim Wiederverwerten.",
+  "sections": [
+    {
+      "title": "Wähle eine ressourcenschonende Möglichkeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine noch brauchbare Tasche: weiter nutzen oder sofort ersetzen?",
+          "answer": "Weiter nutzen",
+          "wide": true
+        },
+        {
+          "prompt": "Ein Buch nur einmal lesen: ausleihen oder jedes Mal neu kaufen?",
+          "answer": "Ausleihen",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Begründe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist Reparieren oft besser, als einen ganzen Gegenstand zu ersetzen?",
+          "answer": "Es kann Material und Energie für die Herstellung eines neuen Gegenstands sparen. Reparatur muss sicher und sinnvoll sein.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Warum sollen Abfälle nicht im Bach landen?",
+          "answer": "Sie können Wasser verschmutzen und Tiere sowie Lebensräume schädigen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Plane eine kleine Veränderung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne eine sichere Möglichkeit, in der Schule Ressourcen zu sparen. Erkläre, was dadurch weniger verbraucht wird.",
+          "answer": "Beispiel: Beide Seiten eines Blatts nutzen, dadurch weniger Papier. Andere begründete Ideen gelten; keine Bewertung privater Lebensverhältnisse.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.6",
+    "scope": "Ressourcenverbrauch und umweltschonende Handlungen im Alltag begründen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|6"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

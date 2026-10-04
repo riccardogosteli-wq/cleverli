@@ -1,0 +1,73 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "energie",
+  "goal": "Energie ermöglicht zum Beispiel Bewegung, Licht und Wärme. Elektrische Energie kann in andere Formen umgewandelt werden. Strom ist kein Spielzeug: keine Steckdosenversuche, keine Kabel oder Geräte öffnen.",
+  "sections": [
+    {
+      "title": "Welche Wirkung steht im Vordergrund?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine eingeschaltete Lampe gibt vor allem",
+          "answer": "Licht (auch Wärme)"
+        },
+        {
+          "prompt": "Ein eingeschalteter Ventilator erzeugt",
+          "answer": "Bewegung (Luftstrom)"
+        },
+        {
+          "prompt": "Ein Wasserkocher erwärmt Wasser. Wirkung?",
+          "answer": "Wärme"
+        },
+        {
+          "prompt": "Eine Türklingel erzeugt",
+          "answer": "Schall"
+        }
+      ]
+    },
+    {
+      "title": "Denke an einen Stromkreis.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine passende Batterie, Kabel und ein Lämpchen sind richtig verbunden. Warum muss der Stromkreis geschlossen sein?",
+          "answer": "Damit elektrischer Strom durch das Lämpchen fliessen kann.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Handle sicher und sparsam.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was tust du, wenn du ein beschädigtes Stromkabel bemerkst?",
+          "answer": "Nicht anfassen oder selbst reparieren. Abstand halten und eine erwachsene Person informieren.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Nenne eine sichere Möglichkeit, elektrische Energie zu sparen.",
+          "answer": "Beispiel: Unnötiges Licht am normalen Schalter ausschalten. Keine sicherheitswichtigen Geräte abschalten.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.2",
+    "scope": "Energieumwandlungen elektrischer Alltagsgeräte und sicheres Verhalten beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|2",
+    "additionalReferences": [
+      {
+        "code": "NMG.5.2",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|2"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

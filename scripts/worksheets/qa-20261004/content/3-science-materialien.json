@@ -1,0 +1,61 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "materialien",
+  "goal": "Gegenstände können aus verschiedenen Materialien bestehen. Eigenschaften helfen bei der Auswahl: zum Beispiel biegsam, steif, durchsichtig oder wasserfest. Materialproben nur mit einer erwachsenen Person, ohne Hitze oder scharfe Kanten untersuchen.",
+  "sections": [
+    {
+      "title": "Erkenne das Material.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Zeitung besteht hauptsächlich aus",
+          "answer": "Papier"
+        },
+        {
+          "prompt": "Ein Fenster ist häufig aus durchsichtigem",
+          "answer": "Glas"
+        },
+        {
+          "prompt": "Ein Wollpullover besteht aus",
+          "answer": "Wolle"
+        },
+        {
+          "prompt": "Eine gewöhnliche Getränkedose besteht aus",
+          "answer": "Metall (oft Aluminium)"
+        }
+      ]
+    },
+    {
+      "title": "Wähle nach Eigenschaften.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum eignet sich normales dünnes Zeitungspapier nicht gut für einen Regenschirm?",
+          "answer": "Es saugt Wasser auf und reisst im nassen Zustand leicht; es ist nicht dauerhaft wasserfest.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche sicher.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Vergleiche mit Erwachsenen ein Blatt Papier und einen Stoffrest: Biegsamkeit und Oberfläche. Zeichne oder notiere eine Gemeinsamkeit und einen Unterschied. Keine Hitze oder scharfen Kanten.",
+          "answer": "Tatsächliche Proben zählen. Beispiel: Beide biegsam; Papier glatter, Stoff rauer. Nicht pauschal jede Materialprobe gleich bewerten.",
+          "wide": true,
+          "drawingHeight": 40
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.3",
+    "scope": "Materialien anhand beobachtbarer Eigenschaften vergleichen und für Zwecke auswählen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

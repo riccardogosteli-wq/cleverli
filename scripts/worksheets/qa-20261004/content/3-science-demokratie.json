@@ -1,0 +1,61 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "demokratie",
+  "goal": "In einer Demokratie können Menschen mitbestimmen. Für Abstimmungen gibt es Regeln. Eine Mehrheit darf nicht einfach die Rechte anderer aufheben. Auch in einer Klasse helfen Zuhören, faire Regeln und gemeinsame Entscheidungen.",
+  "sections": [
+    {
+      "title": "Werte eine Klassenabstimmung aus.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "20 Kinder stimmen je einmal ab: 12 für Ballspiel, 8 für Fangen. Welche Wahl hat mehr Stimmen?",
+          "answer": "Ballspiel",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele Stimmen mehr bekommt diese Wahl?",
+          "answer": "4",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe, ob es fair ist.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Kind gibt heimlich zwei Stimmen ab, alle anderen eine. Ist das fair? Begründe.",
+          "answer": "Nein. Bei der vereinbarten Regel hat jedes Kind genau eine Stimme.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Darf die Mehrheit beschliessen, ein Kind zu beleidigen? Begründe.",
+          "answer": "Nein. Auch die Mehrheit muss Würde und Rechte anderer respektieren.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Finde eine Gesprächsregel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe eine Regel auf, damit auch Kinder mit einer anderen Meinung gehört werden.",
+          "answer": "Beispiele: ausreden lassen; niemanden auslachen; Redezeit fair verteilen. Regel schützt respektvolle Beteiligung.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.10.4",
+    "scope": "Gemeinsame Entscheidungen, Mehrheitsprinzip und faire Beteiligung an einem Klassenbeispiel untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

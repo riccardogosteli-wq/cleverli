@@ -1,0 +1,59 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "licht-optik",
+  "goal": "Beim Kaufen helfen Fragen: Brauche ich das? Was kostet es? Gibt es eine passende Alternative wie Ausleihen oder Reparieren? Werbung will zum Kauf anregen; eine Behauptung ist noch kein Beweis.",
+  "sections": [
+    {
+      "title": "Rechne mit dem Budget.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du hast 20 Fr. Ein Heft kostet 4 Fr., Stifte kosten 7 Fr. Was kosten beide zusammen?",
+          "answer": "11 Fr.",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viel bleibt von den 20 Fr. übrig?",
+          "answer": "9 Fr.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe Werbung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Dieses Heft macht dich sofort zum Rechenprofi!» Ist das ein überprüfter Beweis oder ein Werbeversprechen?",
+          "answer": "Ein Werbeversprechen, kein Beweis.",
+          "wide": true
+        },
+        {
+          "prompt": "Welche sachliche Angabe hilft beim Vergleich zweier Hefte?",
+          "answer": "Zum Beispiel Preis, Seitenzahl, Grösse oder Papierart.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Entscheide begründet.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du brauchst für ein einziges Projekt ein Buch. Vergleiche Kaufen und Ausleihen. Nenne einen Vorteil des Ausleihens und etwas, das du dabei beachten musst.",
+          "answer": "Kein Kauf nötig, oft geringere Kosten/Ressourcenbedarf. Rückgabefrist, sorgfältiger Umgang und Verfügbarkeit beachten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.5",
+    "scope": "Budget, Werbeaussagen und begründete Konsumentscheidungen untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|5"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

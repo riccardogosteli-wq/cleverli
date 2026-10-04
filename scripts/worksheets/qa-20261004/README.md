@@ -1,6 +1,6 @@
 # Reviewed worksheet sources, 4 October 2026
 
-Grade 1 Mathematics: 13 topics,111 prompts. Grade 1 German: 11 topics,reviewed separately. Grade 1 NMG:12 topics,88 prompts,reviewed separately. Grade 2 Mathematics:13 topics,including4 preserved illustrated templates. Grade2German:11 topics,84 prompts,reviewed separately. Grade2NMG:11 topics,68 prompts,reviewed separately. Grade3Math:10topics,78prompts,reviewed separately. Grade3German:9topics,65prompts,reviewedseparately. Othergrade/subjectunitsremainunreviewed in this revision.
+Grade 1 Mathematics: 13 topics,111 prompts. Grade 1 German: 11 topics,reviewed separately. Grade 1 NMG:12 topics,88 prompts,reviewed separately. Grade 2 Mathematics:13 topics,including4 preserved illustrated templates. Grade2German:11 topics,84 prompts,reviewed separately. Grade2NMG:11 topics,68 prompts,reviewed separately. Grade3Math:10topics,78prompts,reviewed separately. Grade3German:9topics,65prompts,reviewedseparately. Grade3NMG:12topics,72prompts,reviewedseparately. Othergrade/subjectunitsremainunreviewed in this revision.
 
 Source JSON, exact logo and renderer are versioned here. Run `python3 scripts/worksheets/qa-20261004/render-reviewed.py /new/output/path` from the app repository to create HTML pairs and jobs.json without replacing originals. Render these jobs using established Playwright/Chrome A4,pageRanges1/2,printBackground,tagged PDF settings. Always perform fresh PDF/layout/content QA after regeneration.
 
@@ -15,3 +15,5 @@ Grade2NMG:four actual observation/drawing areas,concrete Znüni choices instead 
 Grade3Math:simplevisualbruchteile,20checkedfraction/column/grid/scaledchartdiagrams,42independentrenderedrecomputations,actualgeometrydrawingarea,preservedbothcarryrules. Correctanswersretained. PublicfractionexampleandLP21referencealigned.20actualPDFpagescolour/grayscaleinspected.
 
 Grade3German:comparisonresponseformat,wordartformguidance,plainwordmeanings,6letterrowsat10mmfictivenames/noprivateaddress.65answersretained.34independentchecks,18actualPDFcolour/grayscalepagesreviewed,9layoutpass. Candidateoverflowcaught/resolvedbeforepublication.
+
+Grade3NMG:2actualobservation/drawingareas,maparrowanswerplacementclarified,correctmagnet/circuitNMG5.2secondaryreferences.24actualcolour/grayscalePDFpagesreviewed,89date/time/mapchecks. Allsafety/privacyconstraints retained;no physicalexperimentperformed.

@@ -1,0 +1,61 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "schweizer-geschichte",
+  "goal": "Die Schweiz entstand über viele Jahrhunderte. 1848 wurde der moderne Bundesstaat gegründet. Alte Briefe, Gebäude und Gegenstände können Quellen sein. Eine Sage ist eine überlieferte Erzählung, nicht automatisch ein Beweis für ein Ereignis.",
+  "sections": [
+    {
+      "title": "Lies die Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In welchem Jahr entstand der moderne Bundesstaat?",
+          "answer": "1848",
+          "wide": true
+        },
+        {
+          "prompt": "Entstand die heutige Schweiz vollständig an einem einzigen Tag?",
+          "answer": "Nein, sie entwickelte sich über viele Jahrhunderte.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Quelle und Behauptung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein alter Brief oder ein heute erfundener Satz: Was kann eine Quelle für das Leben damals sein?",
+          "answer": "Der alte Brief. Seine Herkunft und Aussage müssen trotzdem geprüft werden.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Beweist eine Sage allein, dass alles genau so geschehen ist? Begründe.",
+          "answer": "Nein. Überlieferte Erzählungen können sich verändern; man muss sie mit weiteren Quellen prüfen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Ordne auf einer Zeitlinie.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe diese Jahre vom frühesten zum spätesten: 2026, 1848, 1900.",
+          "answer": "1848, 1900, 2026",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.3",
+    "scope": "Zeitliche Entwicklung der Schweiz und den Unterschied zwischen Quelle und Sage erkennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

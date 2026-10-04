@@ -1,0 +1,65 @@
+{
+  "grade": 3,
+  "subject": "science",
+  "sourceId": "unsere-erde",
+  "goal": "Die Erde hat grosse Landflächen und Ozeane. Hier nutzen wir das Modell mit sieben Kontinenten: Europa, Asien, Afrika, Nordamerika, Südamerika, Australien und Antarktika. Andere Modelle gruppieren sie anders.",
+  "sections": [
+    {
+      "title": "Ordne die Begriffe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Europa: Kontinent oder Ozean?",
+          "answer": "Kontinent"
+        },
+        {
+          "prompt": "Atlantik: Kontinent oder Ozean?",
+          "answer": "Ozean"
+        },
+        {
+          "prompt": "Afrika: Kontinent oder Ozean?",
+          "answer": "Kontinent"
+        },
+        {
+          "prompt": "Pazifik: Kontinent oder Ozean?",
+          "answer": "Ozean"
+        }
+      ]
+    },
+    {
+      "title": "Orientiere dich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Auf welchem Kontinent liegt die Schweiz?",
+          "answer": "Europa",
+          "wide": true
+        },
+        {
+          "prompt": "Welcher genannte Kontinent liegt rund um den Südpol?",
+          "answer": "Antarktika",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Arbeite mit einem Globus oder Atlas.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Suche Europa und Afrika. Welches Meer liegt zwischen ihnen? Notiere es und erkläre, warum man einen Globus drehen muss, um die ganze Erde zu sehen.",
+          "answer": "Mittelmeer. Die Erde ist annähernd kugelförmig; man sieht jeweils nur eine Seite des Globus.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.4",
+    "scope": "Kontinente und Ozeane unterscheiden und sich am Globus orientieren.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}
