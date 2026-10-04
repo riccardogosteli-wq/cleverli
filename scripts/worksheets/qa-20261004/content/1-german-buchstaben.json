@@ -1,0 +1,81 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "buchstaben",
+  "goal": "Buchstaben können gross oder klein sein. Beispiel: M gehört zu m. Sprich die Laute gemeinsam mit einer erwachsenen Person.",
+  "sections": [
+    {
+      "title": "Schreibe den kleinen Buchstaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "A",
+          "answer": "a"
+        },
+        {
+          "prompt": "M",
+          "answer": "m"
+        },
+        {
+          "prompt": "S",
+          "answer": "s"
+        },
+        {
+          "prompt": "L",
+          "answer": "l"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe den grossen Buchstaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "t",
+          "answer": "T"
+        },
+        {
+          "prompt": "o",
+          "answer": "O"
+        },
+        {
+          "prompt": "n",
+          "answer": "N"
+        },
+        {
+          "prompt": "r",
+          "answer": "R"
+        }
+      ]
+    },
+    {
+      "title": "Finde den ersten Buchstaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Maus beginnt mit",
+          "answer": "M"
+        },
+        {
+          "prompt": "Sonne beginnt mit",
+          "answer": "S"
+        },
+        {
+          "prompt": "Lama beginnt mit",
+          "answer": "L"
+        },
+        {
+          "prompt": "Rose beginnt mit",
+          "answer": "R"
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.A.1",
+    "scope": "Gross- und Kleinbuchstaben schreiben und Anfangslaute passenden Buchstaben zuordnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

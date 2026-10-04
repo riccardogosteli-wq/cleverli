@@ -318,20 +318,20 @@
     "topicId": "buchstaben",
     "title": "Buchstaben",
     "curriculum": {
-      "code": "D.2",
-      "scope": "Gross- und Kleinbuchstaben erkennen; einfache Wörter entschlüsseln.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "code": "D.4.A.1",
+      "scope": "Gross- und Kleinbuchstaben schreiben und Anfangslaute passenden Buchstaben zuordnen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/buchstaben-arbeitsblatt.pdf",
-        "sha256": "1644bddc10ba060324750d3d0726e20f59f19d07159ab5baeeee678565d59fa9",
-        "bytes": 849936
+        "path": "revisions/20261004/pdfs/1/german/buchstaben-arbeitsblatt.pdf",
+        "sha256": "87f512a829d312810619de31ee3e66075c1875381370aa1eafc48f73802d1e63",
+        "bytes": 854567
       },
       "solution": {
-        "path": "pdfs/1/german/buchstaben-loesungen.pdf",
-        "sha256": "e7231296ca6318e91e3b582a510f485c8bb1ace2ee9a8122f58b5c47a6b331f6",
-        "bytes": 872737
+        "path": "revisions/20261004/pdfs/1/german/buchstaben-loesungen.pdf",
+        "sha256": "12eafb652cb0e89f8a7faf4f0c9ee6357bdd0bf35fd42c59d922fed81b11316b",
+        "bytes": 871816
       }
     }
   },
@@ -342,20 +342,20 @@
     "topicId": "einfache-woerter",
     "title": "Einfache Wörter",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.A.1",
       "scope": "Kurze vertraute Wörter lesen und verstehen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/einfache-woerter-arbeitsblatt.pdf",
-        "sha256": "c332e88e2d6a9012c8c74802a42640d00e3e11e6e00370cf7f2f35bedc7cede8",
-        "bytes": 853939
+        "path": "revisions/20261004/pdfs/1/german/einfache-woerter-arbeitsblatt.pdf",
+        "sha256": "dca96239529694fe68e22c959f7f246595025b6a1f4395df8d5a1a55fad7e2bf",
+        "bytes": 859438
       },
       "solution": {
-        "path": "pdfs/1/german/einfache-woerter-loesungen.pdf",
-        "sha256": "554712774e22d8f332d8a06a92a7dc1d4931a04fb3c9c0c17f370659dd244c5a",
-        "bytes": 880545
+        "path": "revisions/20261004/pdfs/1/german/einfache-woerter-loesungen.pdf",
+        "sha256": "568a4aef15dee3ff8b23e010114b16602c2cc7efb95fdb35cfb5361bb0732d8f",
+        "bytes": 880137
       }
     }
   },
@@ -366,20 +366,20 @@
     "topicId": "gross-kleinschreibung",
     "title": "Gross- und Kleinbuchstaben",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.4.A.1",
       "scope": "Buchstaben in verschiedenen Formen erkennen und verschriften.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/gross-kleinschreibung-arbeitsblatt.pdf",
-        "sha256": "b4baf327de266a3d05b2cdf6d502979a8ab4aa7ef47a530884997d89cf6e54ce",
-        "bytes": 852443
+        "path": "revisions/20261004/pdfs/1/german/gross-kleinschreibung-arbeitsblatt.pdf",
+        "sha256": "7d825dda65520d8d02b80ce8c889f4668e57a26d7f5af56a7097d0035ca86368",
+        "bytes": 857076
       },
       "solution": {
-        "path": "pdfs/1/german/gross-kleinschreibung-loesungen.pdf",
-        "sha256": "52b21dd0a934a34ce257a2de000e183df69a0b8fdaac366359423d2d7a368969",
-        "bytes": 875226
+        "path": "revisions/20261004/pdfs/1/german/gross-kleinschreibung-loesungen.pdf",
+        "sha256": "50260486df369b9a37ffd08ec40396a798d3a1c2815265928c38064443fae4bb",
+        "bytes": 874817
       }
     }
   },
@@ -390,20 +390,20 @@
     "topicId": "reime",
     "title": "Reimwörter",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.A.1",
       "scope": "Ähnliche Wortklänge und Reime wahrnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/reime-arbeitsblatt.pdf",
-        "sha256": "1518aa02c6d5ed14b00d0a393d176eb2b0a6789c745ff17e2eff3e25fd1955f9",
-        "bytes": 852545
+        "path": "revisions/20261004/pdfs/1/german/reime-arbeitsblatt.pdf",
+        "sha256": "ee506ccdf2cb7a801d145a9bf1db5d32e292cc5543bf0fcb2060b1b0bbe77705",
+        "bytes": 857196
       },
       "solution": {
-        "path": "pdfs/1/german/reime-loesungen.pdf",
-        "sha256": "a0f62a68e501bae5f008d3f7b4ba9a8907db5a01e1235a8c0d540c1334482d8d",
-        "bytes": 879565
+        "path": "revisions/20261004/pdfs/1/german/reime-loesungen.pdf",
+        "sha256": "432e3a79928ed20c589281767fc818f1c52c8ff0e68a32a268150859ff1e8d05",
+        "bytes": 879165
       }
     }
   },
@@ -414,20 +414,20 @@
     "topicId": "abc-reihenfolge",
     "title": "ABC & Reihenfolge",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.E.1",
       "scope": "Die alphabetische Reihenfolge als Ordnungshilfe nutzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/abc-reihenfolge-arbeitsblatt.pdf",
-        "sha256": "a3cf500c78d412dc79abb9d78ba040ac4042e40b72addc3284573da4511d92c7",
-        "bytes": 858700
+        "path": "revisions/20261004/pdfs/1/german/abc-reihenfolge-arbeitsblatt.pdf",
+        "sha256": "3bb8dee5a16242c0b3e3732a6ef8cb824849c1e94b193f128f7711df26c1e748",
+        "bytes": 866115
       },
       "solution": {
-        "path": "pdfs/1/german/abc-reihenfolge-loesungen.pdf",
-        "sha256": "0bfc2d03416531cc0b911e228c19fa9ec99c020ab498c9faefca118f02368ad8",
-        "bytes": 885505
+        "path": "revisions/20261004/pdfs/1/german/abc-reihenfolge-loesungen.pdf",
+        "sha256": "0fbc014301f3195fcb117f7d7e46ce1a8dcd476c3644a3fef60443d698e623cf",
+        "bytes": 900736
       }
     }
   },
@@ -438,20 +438,20 @@
     "topicId": "saetze-lesen",
     "title": "Sätze lesen",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.A.1",
       "scope": "Informationen aus kurzen Sätzen entnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/saetze-lesen-arbeitsblatt.pdf",
-        "sha256": "8553d93513fa43aa3cd3806f50a877815b69d1d62b9baefb9af787b1dca73e24",
-        "bytes": 851638
+        "path": "revisions/20261004/pdfs/1/german/saetze-lesen-arbeitsblatt.pdf",
+        "sha256": "5d1f5d61046a840f4f38c5ca5d30e7d114fbf6a40051ed91c76fd671277cef7f",
+        "bytes": 857133
       },
       "solution": {
-        "path": "pdfs/1/german/saetze-lesen-loesungen.pdf",
-        "sha256": "4cd4081fd3f5212c1898959ef0cb8b27e685ca18b4f0ed55c14c06ee13194f79",
-        "bytes": 877555
+        "path": "revisions/20261004/pdfs/1/german/saetze-lesen-loesungen.pdf",
+        "sha256": "2c4ca403855ff78dadfa3b88a20d36700e4f0c59135cb39fcb18206e70a2ff3c",
+        "bytes": 877154
       }
     }
   },
@@ -462,20 +462,20 @@
     "topicId": "vokale-konsonanten",
     "title": "Vokale & Konsonanten",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Vokal- und Konsonantenbuchstaben in einfachen Wörtern unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.1.A.1",
+      "scope": "Laute a, e, i, o, u in vertrauten Wörtern hören und passende Buchstaben zuordnen; keine Fachbegriffsprüfung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/vokale-konsonanten-arbeitsblatt.pdf",
-        "sha256": "e6e01936db947b02a652fe1752faa2088ea19bed72ef6d78180eddf6f478ad5a",
-        "bytes": 858233
+        "path": "revisions/20261004/pdfs/1/german/vokale-konsonanten-arbeitsblatt.pdf",
+        "sha256": "cfb46ff02c53139e8f1bf13227e26be18091c8fa0f4f189322c405612e8b5ed0",
+        "bytes": 863217
       },
       "solution": {
-        "path": "pdfs/1/german/vokale-konsonanten-loesungen.pdf",
-        "sha256": "325b32a5e571a6d48df5772592735d65ac669c95fc867bfdd000a30b2776de93",
-        "bytes": 882593
+        "path": "revisions/20261004/pdfs/1/german/vokale-konsonanten-loesungen.pdf",
+        "sha256": "f30f8a871ad8cc3437a3e7010edb483a76e4dc0f0ac50f5065aa7835c3f5f138",
+        "bytes": 897570
       }
     }
   },
@@ -486,20 +486,20 @@
     "topicId": "silben-klatschen",
     "title": "Silben klatschen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.A.1",
       "scope": "Silben wahrnehmen und Wörter rhythmisch gliedern.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/silben-klatschen-arbeitsblatt.pdf",
-        "sha256": "2bb0318ef40a0d9238e9b530d2f3ac42d36a962e072c04d9822084984c59243c",
-        "bytes": 855334
+        "path": "revisions/20261004/pdfs/1/german/silben-klatschen-arbeitsblatt.pdf",
+        "sha256": "711346f6b49294e9af86308dda82ac0f69595a78500a714f8878267efabccb67",
+        "bytes": 860828
       },
       "solution": {
-        "path": "pdfs/1/german/silben-klatschen-loesungen.pdf",
-        "sha256": "1ab7db4fa22e8d8133d3871dd6d28421e0697025e564a00350b4217bb0508a64",
-        "bytes": 882382
+        "path": "revisions/20261004/pdfs/1/german/silben-klatschen-loesungen.pdf",
+        "sha256": "19ccf86d699c63d5ec083a2ac6308ae4c9008a0c0c49af4eb4269f01e7ed067d",
+        "bytes": 881976
       }
     }
   },
@@ -510,20 +510,20 @@
     "topicId": "ie-ei",
     "title": "Laute hören: Anlaute",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.A.1",
       "scope": "Anfangslaute in vertrauten Wörtern wahrnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/ie-ei-arbeitsblatt.pdf",
-        "sha256": "f642f02fd247c33fde58453c9cb9789cc57ee2a77c82a50f1e3ad653db4496fb",
-        "bytes": 853545
+        "path": "revisions/20261004/pdfs/1/german/ie-ei-arbeitsblatt.pdf",
+        "sha256": "ce18c578210d43ed61c8bc07d83af7729bea5cb4e0e83fae33235f6f68402fe2",
+        "bytes": 859060
       },
       "solution": {
-        "path": "pdfs/1/german/ie-ei-loesungen.pdf",
-        "sha256": "d7f7a34c7be1bf35de80c8e7da3fe46c6b10debc0b3662982b551ea450408b0d",
-        "bytes": 878626
+        "path": "revisions/20261004/pdfs/1/german/ie-ei-loesungen.pdf",
+        "sha256": "7b22aaa172dc9501f20485285602b637a1f5697017c43d78b2df531f2ac8c2b6",
+        "bytes": 878220
       }
     }
   },
@@ -534,20 +534,20 @@
     "topicId": "gefuehrtes-schreiben-1",
     "title": "Sätze & kleine Texte",
     "curriculum": {
-      "code": "D.4",
+      "code": "D.4.D.1",
       "scope": "Mit Satzmustern kurze eigene Aussagen formulieren.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/gefuehrtes-schreiben-1-arbeitsblatt.pdf",
-        "sha256": "3d62b3e7b3bd5c25c547b5cfc421a5fc64f468c12c9e78d5df26f44ff467825e",
-        "bytes": 856927
+        "path": "revisions/20261004/pdfs/1/german/gefuehrtes-schreiben-1-arbeitsblatt.pdf",
+        "sha256": "111aecc6fe44280c23b089eaae51d4cb734c8f4dee076b76a3297fd27ffa2bb4",
+        "bytes": 858016
       },
       "solution": {
-        "path": "pdfs/1/german/gefuehrtes-schreiben-1-loesungen.pdf",
-        "sha256": "046e83adebcb3904c264ad6f67428a10bc05c8f12359686de09ed75f5ae00149",
-        "bytes": 886297
+        "path": "revisions/20261004/pdfs/1/german/gefuehrtes-schreiben-1-loesungen.pdf",
+        "sha256": "06e2a01b948c501de7092e2724a1f2accec34bbf63f4451636e8764ce61ab389",
+        "bytes": 881526
       }
     }
   },
@@ -558,20 +558,20 @@
     "topicId": "hoerverstehen-1",
     "title": "Hören & verstehen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.B.1",
       "scope": "Einem kurzen vorgelesenen Text Informationen und Reihenfolge entnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/1/german/hoerverstehen-1-arbeitsblatt.pdf",
-        "sha256": "9f63711b359f24031bdb71e0c1ffee3543580bf73e8962cf6c741753f2c200b7",
-        "bytes": 856820
+        "path": "revisions/20261004/pdfs/1/german/hoerverstehen-1-arbeitsblatt.pdf",
+        "sha256": "e617c07a04f6de9529fb4b11654386826546742ed07491a6e24026f8d9eeac58",
+        "bytes": 862334
       },
       "solution": {
-        "path": "pdfs/1/german/hoerverstehen-1-loesungen.pdf",
-        "sha256": "8a5d61b760d12a4feba926e374355ca1a4449c708fbac6b01151f0737e5c0d72",
-        "bytes": 887437
+        "path": "revisions/20261004/pdfs/1/german/hoerverstehen-1-loesungen.pdf",
+        "sha256": "c05a1c07a6b67c869c28ec381ddca3105ef749bd0cf28865b91723f93dc888d5",
+        "bytes": 887038
       }
     }
   },

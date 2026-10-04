@@ -1,0 +1,63 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "gefuehrtes-schreiben-1",
+  "goal": "Sprich zuerst deinen Satz. Schreibe ihn danach. Du darfst Hilfe bekommen.",
+  "sections": [
+    {
+      "title": "Ordne die Wörter zu einem Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "malt / Mia / eine Sonne",
+          "answer": "Mia malt eine Sonne.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "rennt / Der Hund",
+          "answer": "Der Hund rennt.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Ergänze sinnvoll.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ich mag ...",
+          "answer": "Beispiel: Ich mag Äpfel. Eine passende eigene Ergänzung gilt.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Auf dem Spielplatz ...",
+          "answer": "Beispiel: Auf dem Spielplatz rutsche ich. Andere sinnvolle Sätze gelten.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Erzähle und schreibe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was spielst du gern? Sage einen Satz mit «Ich spiele ...». Schreibe ihn. Wenn du magst, schreibe einen zweiten Satz.",
+          "answer": "Beispiel: Ich spiele Ball. Ein verständlicher Satz genügt; ein zweiter Satz ist freiwillig. Erwachsene dürfen beim Schreiben helfen. Rechtschreibfehler werden hier nicht als Ideenfehler bewertet.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.D.1",
+    "scope": "Mit Satzmustern kurze eigene Aussagen formulieren.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

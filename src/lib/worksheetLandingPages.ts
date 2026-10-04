@@ -58,9 +58,9 @@ export const worksheetLandingPages: WorksheetLandingPage[] = [
     previewAlt: "Vorschau des Cleverli Buchstaben Arbeitsblatts für die 1. Klasse",
     previewWidth: 778,
     previewHeight: 1100,
-    curriculumCode: "D.2",
-    curriculumScope: "Grossbuchstaben und Kleinbuchstaben erkennen und einfache Wörter entschlüsseln.",
-    curriculumUrl: "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2",
+    curriculumCode: "D.4.A.1",
+    curriculumScope: "Gross- und Kleinbuchstaben schreiben und Anfangslaute passenden Buchstaben zuordnen.",
+    curriculumUrl: "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1",
   },
   {
     slug: "einmaleins-2-klasse",

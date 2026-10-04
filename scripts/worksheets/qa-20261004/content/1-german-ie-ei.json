@@ -1,0 +1,71 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "ie-ei",
+  "goal": "Hör auf den Anfang: Maus beginnt mit dem Laut m. Eine erwachsene Person liest die Wörter deutlich vor.",
+  "sections": [
+    {
+      "title": "Welcher Anfang passt?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Maus: M oder S?",
+          "answer": "M"
+        },
+        {
+          "prompt": "Sonne: L oder S?",
+          "answer": "S"
+        },
+        {
+          "prompt": "Rose: R oder T?",
+          "answer": "R"
+        },
+        {
+          "prompt": "Lama: M oder L?",
+          "answer": "L"
+        }
+      ]
+    },
+    {
+      "title": "Welches Wort beginnt gleich?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Maus: Mond oder Hut?",
+          "answer": "Mond"
+        },
+        {
+          "prompt": "Sonne: Suppe oder Rose?",
+          "answer": "Suppe"
+        },
+        {
+          "prompt": "Lama: Lampe oder Nase?",
+          "answer": "Lampe"
+        },
+        {
+          "prompt": "Rose: Rad oder Ball?",
+          "answer": "Rad"
+        }
+      ]
+    },
+    {
+      "title": "Finde ein weiteres Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Sage ein Wort, das mit dem Laut m beginnt. Zeichne dazu ein Bild.",
+          "answer": "Beispiele: Mond, Maus, Mund. Der Anfangslaut m muss hörbar sein.",
+          "wide": true,
+          "drawingHeight": 38
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.A.1",
+    "scope": "Anfangslaute in vertrauten Wörtern wahrnehmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

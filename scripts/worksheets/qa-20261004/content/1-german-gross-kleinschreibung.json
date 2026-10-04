@@ -1,0 +1,81 @@
+{
+  "grade": 1,
+  "subject": "german",
+  "sourceId": "gross-kleinschreibung",
+  "goal": "Hier übst du grosse und kleine Buchstaben. Beispiel: Das grosse B und das kleine b gehören zusammen.",
+  "sections": [
+    {
+      "title": "Schreibe den passenden kleinen Buchstaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "B",
+          "answer": "b"
+        },
+        {
+          "prompt": "D",
+          "answer": "d"
+        },
+        {
+          "prompt": "F",
+          "answer": "f"
+        },
+        {
+          "prompt": "G",
+          "answer": "g"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe den passenden grossen Buchstaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "h",
+          "answer": "H"
+        },
+        {
+          "prompt": "k",
+          "answer": "K"
+        },
+        {
+          "prompt": "p",
+          "answer": "P"
+        },
+        {
+          "prompt": "w",
+          "answer": "W"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe das Wort mit grossem Anfang.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "BALL wird zu",
+          "answer": "Ball"
+        },
+        {
+          "prompt": "HUND wird zu",
+          "answer": "Hund"
+        },
+        {
+          "prompt": "FISCH wird zu",
+          "answer": "Fisch"
+        },
+        {
+          "prompt": "WALD wird zu",
+          "answer": "Wald"
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.A.1",
+    "scope": "Buchstaben in verschiedenen Formen erkennen und verschriften.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|1|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}
