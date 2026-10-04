@@ -1,6 +1,6 @@
 # Reviewed worksheet sources, 4 October 2026
 
-Grade 1 Mathematics: 13 topics,111 prompts. Grade 1 German: 11 topics,reviewed separately. Grade 1 NMG:12 topics,88 prompts,reviewed separately. Grade 2 Mathematics:13 topics,including4 preserved illustrated templates. Grade2German:11 topics,84 prompts,reviewed separately. Other grade/subject units remain unreviewed in this revision.
+Grade 1 Mathematics: 13 topics,111 prompts. Grade 1 German: 11 topics,reviewed separately. Grade 1 NMG:12 topics,88 prompts,reviewed separately. Grade 2 Mathematics:13 topics,including4 preserved illustrated templates. Grade2German:11 topics,84 prompts,reviewed separately. Grade2NMG:11 topics,68 prompts,reviewed separately. Other grades remain unreviewed in this revision.
 
 Source JSON, exact logo and renderer are versioned here. Run `python3 scripts/worksheets/qa-20261004/render-reviewed.py /new/output/path` from the app repository to create HTML pairs and jobs.json without replacing originals. Render these jobs using established Playwright/Chrome A4,pageRanges1/2,printBackground,tagged PDF settings. Always perform fresh PDF/layout/content QA after regeneration.
 
@@ -9,3 +9,5 @@ Version1.1 adds differentiated first-year writing tasks and cycle1 sound practic
 Grade2Math:6 targeted clarity/layout improvements among9 structured sheets;four approved illustrated PDF pairs preserved unchanged. Formal rounding is not required on the estimation sheet;3/4 products can be discovered by adding. Ruler diagrams digitally measured as30/50mm,clock endpoints/half-hour interpolation/1–12 labels checked,rod groups10cells andunits checked. ActualPDFs colour/grayscale inspected;preserved clocks/arithmetic inspected directly where regeneration raster differed. Physical print not tested;print ruler sheetA4/100%. Regenerate illustrations from legacy-html,then perform fresh QA.
 
 Grade2German:clear whole-word article responses,shared sentence-replacement instructions,common familiar word parts without mandatory technical terminology,six storywriting rows,and natural Wovon/Von reading question forms. Two question/response forms changed,story facts retained.84mainprompts,22PDFpagescolour/grayreviewed,39 independent word/orderingchecks. Printed adult hearing script checked;no generated audio/playback verification claimed.
+
+Grade2NMG:four actual observation/drawing areas,concrete Znüni choices instead of nutrient explanation,natural sense verbs accepted,optional invisible-vapour term,simpler water/livingthingtitles. Quarter-hour hand geometry and everySeptember2026calendarweekday verified from renderedSVG;warnings/adultsupervision/privacy preserved.22 actualPDFpagescolour/grayscaleinspected. No physical print/experiments or externalteacherreview claimed.

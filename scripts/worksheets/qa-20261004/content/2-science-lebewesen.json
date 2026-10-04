@@ -1,0 +1,62 @@
+{
+  "grade": 2,
+  "subject": "science",
+  "sourceId": "lebewesen",
+  "goal": "Tiere und Pflanzen sind Lebewesen. Lebewesen brauchen bestimmte Bedingungen zum Leben und entwickeln sich. Nicht alles, was sich bewegt, lebt.",
+  "sections": [
+    {
+      "title": "Lebewesen oder kein Lebewesen?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine lebende Katze",
+          "answer": "Lebewesen"
+        },
+        {
+          "prompt": "Ein Stein",
+          "answer": "Kein Lebewesen"
+        },
+        {
+          "prompt": "Eine wachsende Sonnenblume",
+          "answer": "Lebewesen"
+        },
+        {
+          "prompt": "Ein fahrendes Spielzeugauto",
+          "answer": "Kein Lebewesen"
+        }
+      ]
+    },
+    {
+      "title": "Denke genauer nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Baum bewegt sich nicht von seinem Platz. Ist er trotzdem ein Lebewesen? Begründe.",
+          "answer": "Ja. Er wächst und braucht unter anderem Wasser und Licht.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Beobachte sorgfältig.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beobachte eine Pflanze, ohne sie zu beschädigen. Zeichne sie und beschreibe zwei Merkmale.",
+          "answer": "Individuell: zwei tatsächliche sichtbare Merkmale, zum Beispiel Blätterform und Stängel. Die Pflanze bleibt unbeschädigt.",
+          "wide": true,
+          "drawingHeight": 44
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.4",
+    "scope": "Lebewesen von unbelebten Gegenständen unterscheiden und Pflanzenmerkmale beobachten.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|4"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1",
+  "worksheetTitle": "Lebewesen erkennen"
+}

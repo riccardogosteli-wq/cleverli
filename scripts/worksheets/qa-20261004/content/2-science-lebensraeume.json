@@ -1,0 +1,60 @@
+{
+  "grade": 2,
+  "subject": "science",
+  "sourceId": "lebensraeume",
+  "goal": "Ein Lebensraum bietet Tieren unter anderem Nahrung und Schutz. Tiere können verschiedene Bereiche nutzen. Beispiel: Ein Frosch nutzt je nach Lebensphase Wasser und Land.",
+  "sections": [
+    {
+      "title": "Welcher Ort passt besonders gut?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Forelle: Bach oder trockenes Feld?",
+          "answer": "Bach",
+          "wide": true
+        },
+        {
+          "prompt": "Ein Specht: Wald mit Bäumen oder offenes Meer?",
+          "answer": "Wald mit Bäumen",
+          "wide": true
+        },
+        {
+          "prompt": "Ein Regenwurm: feuchter Boden oder trockener Asphalt?",
+          "answer": "Feuchter Boden",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Was brauchen Tiere dort?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei Dinge, die ein Lebensraum einem Tier bieten sollte.",
+          "answer": "Beispiele: Nahrung, Wasser, Schutz, geeignete Plätze zur Fortpflanzung. Zwei passende Angaben gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schütze Lebensräume.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei Möglichkeiten, wie wir Tiere und ihre Lebensräume schonen können.",
+          "answer": "Beispiele: Abstand halten, keinen Abfall liegen lassen, Nester und Verstecke nicht stören. Zwei sichere passende Handlungen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.1",
+    "scope": "Lebensräume ausgewählter Tiere vergleichen und schonendes Verhalten beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

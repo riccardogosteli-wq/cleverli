@@ -1448,22 +1448,22 @@
     "grade": 2,
     "subject": "science",
     "topicId": "lebewesen",
-    "title": "Was lebt — was nicht?",
+    "title": "Lebewesen erkennen",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.4",
       "scope": "Lebewesen von unbelebten Gegenständen unterscheiden und Pflanzenmerkmale beobachten.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/lebewesen-arbeitsblatt.pdf",
-        "sha256": "53127b2be6c08ec2d83e2a2503a5c31c701b816610634fbe684d69bc7fdc6e4d",
-        "bytes": 858758
+        "path": "revisions/20261004/pdfs/2/science/lebewesen-arbeitsblatt.pdf",
+        "sha256": "7a793c2f759cb748efe88d7de31b81cd3140ec748ea17fa0d9e7ef400c54dc39",
+        "bytes": 857420
       },
       "solution": {
-        "path": "pdfs/2/science/lebewesen-loesungen.pdf",
-        "sha256": "7ab15b872ea331a07e8d06112a826044e4de9761ee0fbdf61dccb00088aef174",
-        "bytes": 884815
+        "path": "revisions/20261004/pdfs/2/science/lebewesen-loesungen.pdf",
+        "sha256": "6775e64f1eca80189c5251f4e8f2ba6721f74c41d051e6fb6d5015c3f70bc1c7",
+        "bytes": 882502
       }
     }
   },
@@ -1472,22 +1472,22 @@
     "grade": 2,
     "subject": "science",
     "topicId": "wasser",
-    "title": "Wasser & Aggregatzustände",
+    "title": "Wasser und Eis entdecken",
     "curriculum": {
-      "code": "NMG.3",
-      "scope": "Drei Aggregatzustände des Wassers unterscheiden und Schmelzen beobachten.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "code": "NMG.3.3",
+      "scope": "Wasser und Eis beschreiben und Schmelzen beobachten;unsichtbaren Wasserdampf als Zusatz kennenlernen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/wasser-arbeitsblatt.pdf",
-        "sha256": "6993021f3a40e8015fc72d8997c17eff747a03ef3daee4e371e31024383bfc15",
-        "bytes": 862010
+        "path": "revisions/20261004/pdfs/2/science/wasser-arbeitsblatt.pdf",
+        "sha256": "7c13c1a477ec6dfe8fd7b8e79a7cf8d659a4918378fd5c239c40b750f8203160",
+        "bytes": 862612
       },
       "solution": {
-        "path": "pdfs/2/science/wasser-loesungen.pdf",
-        "sha256": "ebd7d822502b306f7de9e372525a9681b7b8c128c3f2cd1677a5869b35db4bea",
-        "bytes": 888075
+        "path": "revisions/20261004/pdfs/2/science/wasser-loesungen.pdf",
+        "sha256": "ca02a041b2944c94fa041151115bd44ed97d9a92961ae5bbffd7c8545bfd65e0",
+        "bytes": 888098
       }
     }
   },
@@ -1498,20 +1498,20 @@
     "topicId": "gesunde-ernaehrung",
     "title": "Gesunde Ernährung",
     "curriculum": {
-      "code": "NMG.1",
+      "code": "NMG.1.3",
       "scope": "Lebensmittel unterscheiden und einfache gesundheitsfördernde Entscheidungen begründen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/gesunde-ernaehrung-arbeitsblatt.pdf",
-        "sha256": "63dffeb3153d3e167456b87663e5c5c99aad183c344da6d19db0ea0af859ed10",
-        "bytes": 864244
+        "path": "revisions/20261004/pdfs/2/science/gesunde-ernaehrung-arbeitsblatt.pdf",
+        "sha256": "75a656c4f0389d36f1ed08a89fef561b678cf6af01954366229018f2db812b02",
+        "bytes": 864930
       },
       "solution": {
-        "path": "pdfs/2/science/gesunde-ernaehrung-loesungen.pdf",
-        "sha256": "5ee1e50cee4560681e68fb22ddb1cea9f6360a1a1577d7972e659a80ea65f140",
-        "bytes": 889710
+        "path": "revisions/20261004/pdfs/2/science/gesunde-ernaehrung-loesungen.pdf",
+        "sha256": "0e424c99e2753a47e790d2273cec47be7921632cce6391610d9d26dec9b56171",
+        "bytes": 889699
       }
     }
   },
@@ -1522,20 +1522,20 @@
     "topicId": "lebensraeume",
     "title": "Lebensräume der Tiere",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.1",
       "scope": "Lebensräume ausgewählter Tiere vergleichen und schonendes Verhalten beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/lebensraeume-arbeitsblatt.pdf",
-        "sha256": "931f3debc86b0f4c864298cb35b2c2d9d7981ccc420b538b31c54b5c4a9a2b65",
-        "bytes": 860685
+        "path": "revisions/20261004/pdfs/2/science/lebensraeume-arbeitsblatt.pdf",
+        "sha256": "d3a1dd8b997a7f42dc8a5e42428c165e1d66eafc0bae63e1028348a5dac86e1d",
+        "bytes": 860394
       },
       "solution": {
-        "path": "pdfs/2/science/lebensraeume-loesungen.pdf",
-        "sha256": "e06426e819692c33af9142860a1f3eb872eba702b0150f1ec647b6fb785bd658",
-        "bytes": 886307
+        "path": "revisions/20261004/pdfs/2/science/lebensraeume-loesungen.pdf",
+        "sha256": "9de2d30a6a4545faf9890a306e39bb73000ccdc4d673479ffac99eee44ad7a7b",
+        "bytes": 885919
       }
     }
   },
@@ -1546,20 +1546,20 @@
     "topicId": "schweiz-symbole",
     "title": "Die Schweiz",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.7.1",
       "scope": "Einige Merkmale der Schweiz und ihre sprachliche Vielfalt kennenlernen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/schweiz-symbole-arbeitsblatt.pdf",
-        "sha256": "53f833f97a7dd1a102e26da7c4a00a8ffef7d88aa575468da6688bb294087177",
-        "bytes": 860525
+        "path": "revisions/20261004/pdfs/2/science/schweiz-symbole-arbeitsblatt.pdf",
+        "sha256": "effaed57c71ee377964d6fd7fc47dd78fc21f77cd7a6754becae82eb7305ff68",
+        "bytes": 860236
       },
       "solution": {
-        "path": "pdfs/2/science/schweiz-symbole-loesungen.pdf",
-        "sha256": "dfc6a45d5a62793fac4457d495b4c0e61c9592d2ab68430efe4f6550081a1dfa",
-        "bytes": 889813
+        "path": "revisions/20261004/pdfs/2/science/schweiz-symbole-loesungen.pdf",
+        "sha256": "ce51d270f944c01b61f1d761ee6acd0cb333a54cd38ad3c9c50d9e6b45731ed9",
+        "bytes": 889161
       }
     }
   },
@@ -1570,20 +1570,20 @@
     "topicId": "berufe",
     "title": "Berufe & Arbeit",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.2",
       "scope": "Berufliche und unbezahlte Arbeit an Beispielen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/berufe-arbeitsblatt.pdf",
-        "sha256": "41cafc80059e33df977fc31b3113a9a697baf9efa13668764084b66acee7d99d",
-        "bytes": 857131
+        "path": "revisions/20261004/pdfs/2/science/berufe-arbeitsblatt.pdf",
+        "sha256": "f213a36390ec7e3f42dbc104cc4d904b12d474ff6c4a38b6ff9874299e9bc00e",
+        "bytes": 856836
       },
       "solution": {
-        "path": "pdfs/2/science/berufe-loesungen.pdf",
-        "sha256": "afd3164b79391953662e20c7a7c590a6e98e6ee253ba22cfe74f698acb661704",
-        "bytes": 884981
+        "path": "revisions/20261004/pdfs/2/science/berufe-loesungen.pdf",
+        "sha256": "17984f60ab40dfdf60e4746a0b24bc12769f2701a2a843f4bd24cad6d7b6db82",
+        "bytes": 884583
       }
     }
   },
@@ -1594,20 +1594,20 @@
     "topicId": "uhr-viertel-gr2",
     "title": "Uhrzeit: Viertel & Halb",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.1",
       "scope": "Volle, halbe und Viertelstunden lesen und einfache Zeitspannen nutzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/uhr-viertel-gr2-arbeitsblatt.pdf",
-        "sha256": "8bf880291e67ee5df7fa75d5c5aa7cbdf6944c07bebf0d3f0bcca0a74d4ab211",
-        "bytes": 876502
+        "path": "revisions/20261004/pdfs/2/science/uhr-viertel-gr2-arbeitsblatt.pdf",
+        "sha256": "b31734db6b876bf6de7af28894e893e3123e1f14dba24b816ce2dfc0468a6d09",
+        "bytes": 876206
       },
       "solution": {
-        "path": "pdfs/2/science/uhr-viertel-gr2-loesungen.pdf",
-        "sha256": "b2b8d397839ffd162bb33e860d6fa3c07e9d2c17e277c72be83223f8a28d8930",
-        "bytes": 898480
+        "path": "revisions/20261004/pdfs/2/science/uhr-viertel-gr2-loesungen.pdf",
+        "sha256": "aea7793a1b2b9d56504c327d4979bfe584426601d373f6ec4a9fcf62e1157b09",
+        "bytes": 898467
       }
     }
   },
@@ -1618,20 +1618,20 @@
     "topicId": "kalender-gr2",
     "title": "Kalender & Datum",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.1",
       "scope": "Einen Monatskalender lesen und Daten sowie kurze Zeitabstände bestimmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/kalender-gr2-arbeitsblatt.pdf",
-        "sha256": "ed1b9ed76e84d7034fa5f3d07fa1b27948bb674a405b0813dbfe6aa9a9fa5264",
-        "bytes": 885054
+        "path": "revisions/20261004/pdfs/2/science/kalender-gr2-arbeitsblatt.pdf",
+        "sha256": "4c5649c7a11e3d4e6aa129c36fddae1fde84d1deb7bcfb7ab87004731c2425ad",
+        "bytes": 884745
       },
       "solution": {
-        "path": "pdfs/2/science/kalender-gr2-loesungen.pdf",
-        "sha256": "a45a1619baace80a98baf3d09e240c472fb082bd86c6f7363f5d91322131347f",
-        "bytes": 908762
+        "path": "revisions/20261004/pdfs/2/science/kalender-gr2-loesungen.pdf",
+        "sha256": "e32b37ed440b752631ea479fdad6e21ed042951e04b8f3399f7f92f1c62f1dc8",
+        "bytes": 908705
       }
     }
   },
@@ -1642,20 +1642,20 @@
     "topicId": "physik-bewegung",
     "title": "Bewegung und Kraft 🏃",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.1",
       "scope": "Bewegungen durch Kräfte verändern und einen einfachen Vergleich fair gestalten.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/physik-bewegung-arbeitsblatt.pdf",
-        "sha256": "b17c6f5177972fb09e91c2c82f48b00884b374cbf029769c27821dc537c89f3b",
-        "bytes": 863150
+        "path": "revisions/20261004/pdfs/2/science/physik-bewegung-arbeitsblatt.pdf",
+        "sha256": "e65710b8c453259054db60fbfae1cf8ec90585997507c8be99bf875dfa54e3e9",
+        "bytes": 862867
       },
       "solution": {
-        "path": "pdfs/2/science/physik-bewegung-loesungen.pdf",
-        "sha256": "738b31c4264d22b69424b95767bd7a3a30e82867c43f9d5e3d499f0effbccea7",
-        "bytes": 889174
+        "path": "revisions/20261004/pdfs/2/science/physik-bewegung-loesungen.pdf",
+        "sha256": "cf1d350aed3db652e2e99fb5a2f4ce1fa153e38920b7f6a3de81873b571e7eae",
+        "bytes": 888756
       }
     }
   },
@@ -1666,20 +1666,20 @@
     "topicId": "sinne",
     "title": "Unsere Sinne 👁️",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.4.1",
       "scope": "Sinneswahrnehmungen unterscheiden und sichere Beobachtungen beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/sinne-arbeitsblatt.pdf",
-        "sha256": "d130ad564ca80277450075789665ea5d523add1fb2bd94d8da9cf25b5dcd8e4b",
-        "bytes": 858324
+        "path": "revisions/20261004/pdfs/2/science/sinne-arbeitsblatt.pdf",
+        "sha256": "86d9b5a34a143b3e6fe78e66e56b702ab030e09f034c3c310e46a1583c741b9a",
+        "bytes": 858007
       },
       "solution": {
-        "path": "pdfs/2/science/sinne-loesungen.pdf",
-        "sha256": "d4eb076f1a1975b44c3884f193a595a6886809c9f73b2d1caaad7e11fe19ac1f",
-        "bytes": 885449
+        "path": "revisions/20261004/pdfs/2/science/sinne-loesungen.pdf",
+        "sha256": "9c6e074a79da0aec6bf905a4687da9d5aa1bc1f9397d4f9a2b2f3ab725d02c8f",
+        "bytes": 885560
       }
     }
   },
@@ -1690,20 +1690,20 @@
     "topicId": "wetter-klima",
     "title": "Wetter und Jahreszeiten ⛅",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.4.4",
       "scope": "Aktuelles Wetter beschreiben und passende Alltagsentscheidungen begründen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/2/science/wetter-klima-arbeitsblatt.pdf",
-        "sha256": "b0db1cd8b65c497778e5d1901e147fcae93276eb644b22cb72d382544b31997f",
-        "bytes": 864103
+        "path": "revisions/20261004/pdfs/2/science/wetter-klima-arbeitsblatt.pdf",
+        "sha256": "63b0a431bdd37b6b3de93c17130f5603abcb6e42f68a68bc57da1cf5c7bc5b9a",
+        "bytes": 865322
       },
       "solution": {
-        "path": "pdfs/2/science/wetter-klima-loesungen.pdf",
-        "sha256": "929e87600242cfab02983b92c9b628d3935d806aafb33fcf1c183ae3b4503c3e",
-        "bytes": 890393
+        "path": "revisions/20261004/pdfs/2/science/wetter-klima-loesungen.pdf",
+        "sha256": "fb3b30572b225d932133f3fa3126257bf601ce1b2cb86af3d11cc8a5137b3c5a",
+        "bytes": 890466
       }
     }
   },

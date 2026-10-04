@@ -1,0 +1,62 @@
+{
+  "grade": 2,
+  "subject": "science",
+  "sourceId": "wetter-klima",
+  "goal": "Wetter beschreibt zum Beispiel Temperatur, Wolken, Niederschlag und Wind an einem Ort zu einer bestimmten Zeit. In jeder Jahreszeit kann das Wetter wechseln.",
+  "sections": [
+    {
+      "title": "Was wird beobachtet?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Das Thermometer zeigt 12 °C: Temperatur oder Windrichtung?",
+          "answer": "Temperatur",
+          "wide": true
+        },
+        {
+          "prompt": "Es fallen Regentropfen: Niederschlag oder Sonnenschein?",
+          "answer": "Niederschlag",
+          "wide": true
+        },
+        {
+          "prompt": "Blätter bewegen sich im Wind: Wind oder Schneefall?",
+          "answer": "Wind",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ordne die Jahreszeiten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Jahreszeit kommt nach dem Sommer?",
+          "answer": "Herbst"
+        },
+        {
+          "prompt": "Welche kommt nach dem Winter?",
+          "answer": "Frühling"
+        }
+      ]
+    },
+    {
+      "title": "Führe eine kleine Wetterbeobachtung durch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beobachte sicher: Datum, Ort ohne private Adresse, Wolken, Niederschlag und Wind. Zeichne oder notiere deine Beobachtungen. Welche Kleidung passt? Bei Gewitter bleibst du drinnen.",
+          "answer": "Individuell nach tatsächlichem Wetter; alle drei Merkmale beschrieben, Kleidung sinnvoll begründet. Beobachtung nur sicher, bei Gewitter drinnen bleiben.",
+          "wide": true,
+          "drawingHeight": 44
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.4",
+    "scope": "Aktuelles Wetter beschreiben und passende Alltagsentscheidungen begründen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

@@ -1,0 +1,69 @@
+{
+  "grade": 2,
+  "subject": "science",
+  "sourceId": "uhr-viertel-gr2",
+  "goal": "Eine Stunde hat 60 Minuten. Viertel nach 3 = 3.15 Uhr. Halb 4 = 3.30 Uhr. Viertel vor 4 = 3.45 Uhr. Hier verwenden wir Uhrzeiten von 1 bis 12.",
+  "sections": [
+    {
+      "title": "Lies die Uhren.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Uhrzeit:",
+          "answer": "2.15 Uhr; Viertel nach 2",
+          "svg": "<svg class=\"illustration nmg-clock\" style=\"width:38mm;height:38mm\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"47\" fill=\"white\" stroke=\"#213b49\"/><text x=\"69.000\" y=\"19.591\" text-anchor=\"middle\" font-size=\"7\">1</text><text x=\"82.909\" y=\"33.500\" text-anchor=\"middle\" font-size=\"7\">2</text><text x=\"88.000\" y=\"52.500\" text-anchor=\"middle\" font-size=\"7\">3</text><text x=\"82.909\" y=\"71.500\" text-anchor=\"middle\" font-size=\"7\">4</text><text x=\"69.000\" y=\"85.409\" text-anchor=\"middle\" font-size=\"7\">5</text><text x=\"50.000\" y=\"90.500\" text-anchor=\"middle\" font-size=\"7\">6</text><text x=\"31.000\" y=\"85.409\" text-anchor=\"middle\" font-size=\"7\">7</text><text x=\"17.091\" y=\"71.500\" text-anchor=\"middle\" font-size=\"7\">8</text><text x=\"12.000\" y=\"52.500\" text-anchor=\"middle\" font-size=\"7\">9</text><text x=\"17.091\" y=\"33.500\" text-anchor=\"middle\" font-size=\"7\">10</text><text x=\"31.000\" y=\"19.591\" text-anchor=\"middle\" font-size=\"7\">11</text><text x=\"50.000\" y=\"14.500\" text-anchor=\"middle\" font-size=\"7\">12</text><line data-hand=\"hour\" x1=\"50\" y1=\"50\" x2=\"73.0970\" y2=\"40.4329\" stroke=\"#213b49\" stroke-width=\"3\"/><line data-hand=\"minute\" x1=\"50\" y1=\"50\" x2=\"84.0000\" y2=\"50.0000\" stroke=\"#213b49\" stroke-width=\"1.7\"/><circle cx=\"50\" cy=\"50\" r=\"2\" fill=\"#213b49\"/></svg>"
+        },
+        {
+          "prompt": "Uhrzeit:",
+          "answer": "5.30 Uhr; halb 6",
+          "svg": "<svg class=\"illustration nmg-clock\" style=\"width:38mm;height:38mm\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"47\" fill=\"white\" stroke=\"#213b49\"/><text x=\"69.000\" y=\"19.591\" text-anchor=\"middle\" font-size=\"7\">1</text><text x=\"82.909\" y=\"33.500\" text-anchor=\"middle\" font-size=\"7\">2</text><text x=\"88.000\" y=\"52.500\" text-anchor=\"middle\" font-size=\"7\">3</text><text x=\"82.909\" y=\"71.500\" text-anchor=\"middle\" font-size=\"7\">4</text><text x=\"69.000\" y=\"85.409\" text-anchor=\"middle\" font-size=\"7\">5</text><text x=\"50.000\" y=\"90.500\" text-anchor=\"middle\" font-size=\"7\">6</text><text x=\"31.000\" y=\"85.409\" text-anchor=\"middle\" font-size=\"7\">7</text><text x=\"17.091\" y=\"71.500\" text-anchor=\"middle\" font-size=\"7\">8</text><text x=\"12.000\" y=\"52.500\" text-anchor=\"middle\" font-size=\"7\">9</text><text x=\"17.091\" y=\"33.500\" text-anchor=\"middle\" font-size=\"7\">10</text><text x=\"31.000\" y=\"19.591\" text-anchor=\"middle\" font-size=\"7\">11</text><text x=\"50.000\" y=\"14.500\" text-anchor=\"middle\" font-size=\"7\">12</text><line data-hand=\"hour\" x1=\"50\" y1=\"50\" x2=\"56.4705\" y2=\"74.1481\" stroke=\"#213b49\" stroke-width=\"3\"/><line data-hand=\"minute\" x1=\"50\" y1=\"50\" x2=\"50.0000\" y2=\"84.0000\" stroke=\"#213b49\" stroke-width=\"1.7\"/><circle cx=\"50\" cy=\"50\" r=\"2\" fill=\"#213b49\"/></svg>"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe mit Zahlen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Viertel nach 8",
+          "answer": "8.15 Uhr"
+        },
+        {
+          "prompt": "Halb 10",
+          "answer": "9.30 Uhr"
+        },
+        {
+          "prompt": "Viertel vor 7",
+          "answer": "6.45 Uhr"
+        },
+        {
+          "prompt": "Viertel nach 11",
+          "answer": "11.15 Uhr"
+        }
+      ]
+    },
+    {
+      "title": "Rechne mit Zeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Pause beginnt um 10.00 Uhr und dauert eine Viertelstunde. Wann endet sie?",
+          "answer": "10.15 Uhr",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele Minuten sind eine halbe Stunde?",
+          "answer": "30",
+          "wide": true
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.1",
+    "scope": "Volle, halbe und Viertelstunden lesen und einfache Zeitspannen nutzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

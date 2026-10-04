@@ -1,0 +1,61 @@
+{
+  "grade": 2,
+  "subject": "science",
+  "sourceId": "schweiz-symbole",
+  "goal": "Die Schweiz hat vier Landessprachen: Deutsch, Französisch, Italienisch und Rätoromanisch. Ihre Flagge zeigt ein weisses Kreuz auf rotem Grund.",
+  "sections": [
+    {
+      "title": "Lies genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Landessprachen hat die Schweiz?",
+          "answer": "4"
+        },
+        {
+          "prompt": "Welche Farbe hat das Kreuz auf der Schweizer Flagge?",
+          "answer": "Weiss"
+        },
+        {
+          "prompt": "Welche Farbe hat der Hintergrund?",
+          "answer": "Rot"
+        },
+        {
+          "prompt": "Welche genannte Landessprache beginnt mit I?",
+          "answer": "Italienisch"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die vier Landessprachen auf.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du darfst im Text oben nachschauen.",
+          "answer": "Deutsch, Französisch, Italienisch, Rätoromanisch.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Vielfalt entdecken.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Menschen in der Schweiz sprechen auch weitere Sprachen. Nenne eine weitere Sprache, die du kennst. Was kann helfen, wenn zwei Menschen nicht dieselbe Sprache sprechen?",
+          "answer": "Beispiele: Portugiesisch; mit Bildern, Gesten oder Übersetzung helfen. Andere tatsächliche Sprachen und respektvolle Hilfen gelten. Niemand muss eine private Herkunft nennen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.7.1",
+    "scope": "Einige Merkmale der Schweiz und ihre sprachliche Vielfalt kennenlernen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

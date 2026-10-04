@@ -1,0 +1,65 @@
+{
+  "grade": 2,
+  "subject": "science",
+  "sourceId": "berufe",
+  "goal": "Menschen leisten unterschiedliche Arbeit. Manche Arbeit wird bezahlt, andere nicht. Berufe sind nicht auf ein Geschlecht festgelegt.",
+  "sections": [
+    {
+      "title": "Welcher Beruf passt?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Brot backen: Bäckerin oder Busfahrer?",
+          "answer": "Bäckerin",
+          "wide": true
+        },
+        {
+          "prompt": "Einen Bus fahren: Busfahrer oder Gärtnerin?",
+          "answer": "Busfahrer",
+          "wide": true
+        },
+        {
+          "prompt": "Pflanzen pflegen: Gärtnerin oder Zahnarzt?",
+          "answer": "Gärtnerin",
+          "wide": true
+        },
+        {
+          "prompt": "Zähne untersuchen: Zahnarzt oder Bäckerin?",
+          "answer": "Zahnarzt",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke an Zusammenarbeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sind verschiedene Berufe wichtig? Nenne zwei Tätigkeiten, die Menschen brauchen.",
+          "answer": "Beispiel: Menschen brauchen Nahrung und medizinische Versorgung. Unterschiedliche Tätigkeiten ergänzen sich; andere begründete Beispiele gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Arbeit im Alltag.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne eine Arbeit, für die Menschen bezahlt werden, und eine hilfreiche unbezahlte Tätigkeit. Du darfst Beispiele erfinden.",
+          "answer": "Beispiele: Bus fahren als Beruf; freiwillig jemandem vorlesen. Beispiele müssen zur jeweiligen beschriebenen Situation passen, nicht zwingend zum eigenen Haushalt.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.2",
+    "scope": "Berufliche und unbezahlte Arbeit an Beispielen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|2"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

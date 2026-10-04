@@ -1,0 +1,60 @@
+{
+  "grade": 2,
+  "subject": "science",
+  "sourceId": "physik-bewegung",
+  "goal": "Eine Kraft kann eine Bewegung verändern. Beim Schieben oder Ziehen wirken Kräfte. Vergleiche nur leichte Dinge auf freier Fläche; nie in Richtung von Menschen oder Tieren.",
+  "sections": [
+    {
+      "title": "Schieben oder ziehen?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du bewegst einen Wagen mit den Händen von dir weg.",
+          "answer": "Schieben",
+          "wide": true
+        },
+        {
+          "prompt": "Du bewegst einen Wagen an einer Schnur zu dir hin.",
+          "answer": "Ziehen",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche zwei Unterlagen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Lass mit einer erwachsenen Person dasselbe Spielzeugauto auf einem glatten Boden und einem Teppich rollen. Stosse es möglichst gleich an. Wo rollt es weiter?",
+          "answer": "Tatsächliche Beobachtung zählt. Oft weiter auf glattem Boden; Bedingungen und Anstoss beeinflussen das Ergebnis.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Denke über den Vergleich nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum solltest du dasselbe Auto verwenden und möglichst gleich stark anstossen?",
+          "answer": "Damit möglichst nur die Unterlage verändert wird und der Vergleich fairer ist.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Was verändert sich an der Bewegung, wenn du ein rollendes Spielzeugauto sanft mit der Hand stoppst?",
+          "answer": "Es wird langsamer und kommt zum Stillstand.",
+          "wide": true
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.1",
+    "scope": "Bewegungen durch Kräfte verändern und einen einfachen Vergleich fair gestalten.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}

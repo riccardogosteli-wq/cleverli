@@ -1,0 +1,65 @@
+{
+  "grade": 2,
+  "subject": "science",
+  "sourceId": "sinne",
+  "goal": "Mit Sinnen nehmen wir unsere Umgebung wahr. Mehrere Sinne können zusammenarbeiten. Menschen nehmen unterschiedlich wahr und nutzen manchmal Hilfsmittel.",
+  "sections": [
+    {
+      "title": "Welcher Sinn passt hauptsächlich?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du hörst einen Vogel.",
+          "answer": "Hören (Hörsinn)"
+        },
+        {
+          "prompt": "Du siehst eine blaue Tasse.",
+          "answer": "Sehen (Sehsinn)"
+        },
+        {
+          "prompt": "Du riechst eine bekannte Blume.",
+          "answer": "Riechen (Geruchssinn)"
+        },
+        {
+          "prompt": "Du fühlst einen weichen Stoff.",
+          "answer": "Fühlen oder Tasten (Tastsinn)"
+        }
+      ]
+    },
+    {
+      "title": "Sicher beobachten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sollst du unbekannte Pflanzen nicht probieren?",
+          "answer": "Sie könnten giftig sein oder dir schaden.",
+          "wide": true
+        },
+        {
+          "prompt": "Mit welchem Körperteil schmecken wir hauptsächlich?",
+          "answer": "Mit der Zunge",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe einen Gegenstand.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Betrachte und ertaste ein Blatt Papier. Notiere je eine Beobachtung zum Sehen und zum Fühlen. Nicht probieren.",
+          "answer": "Beispiele: weiss und glatt. Tatsächliche Eigenschaften des gewählten Papiers zählen; andere Wahrnehmungen und angepasste Durchführung möglich.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.1",
+    "scope": "Sinneswahrnehmungen unterscheiden und sichere Beobachtungen beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|1"
+  },
+  "reviewDate": "04.10.2026",
+  "version": "1.1"
+}
