@@ -47,7 +47,9 @@
       "altAnswers": [
         "Zustimmung",
         "Einverständnis"
-      ]
+      ],
+      "question": "Ein Foto zeigt eine Freundin. Vor dem Teilen brauche ich ihre ___.",
+      "spokenPrompt": "Ein Foto zeigt eine Freundin. Vor dem Teilen brauche ich ihre …. Ergänze die fehlende Antwort."
     },
     "mi3-digitale-spuren-3-fb7": {
       "altAnswers": [
@@ -78,7 +80,8 @@
         "suchen",
         "finden",
         "beheben",
-        "korrigieren"
+        "korrigieren",
+        "kontrollieren"
       ]
     },
     "mi3-algorithmen-alltag-3-fb5": {
@@ -175,7 +178,88 @@
     },
     "mi3-digitale-spuren-3-sr1": {
       "question": "Schreibe zwei Regeln für sicheres Chatten: eine zu privaten Angaben und eine zu freundlicher Sprache.",
-      "spokenPrompt": "Schreibe zwei Regeln für sicheres Chatten: eine zu privaten Angaben und eine zu freundlicher Sprache."
+      "spokenPrompt": "Schreibe zwei Regeln für sicheres Chatten: eine zu privaten Angaben und eine zu freundlicher Sprache.",
+      "answer": "Ich schreibe meine Adresse und Telefonnummer nicht in einen öffentlichen Chat. Ich schreibe freundlich und beleidige niemanden."
+    },
+    "mi3-digitale-spuren-3-mc7": {
+      "question": "Ein Foto zeigt ein Strassenschild. Was prüfst du vor dem Teilen?",
+      "spokenPrompt": "Ein Foto zeigt ein Strassenschild. Was prüfst du vor dem Teilen?",
+      "hints": [
+        "Prüfe, ob man deinen Wohnort erkennen kann.",
+        "Achte nicht nur auf die Person, sondern auch auf den Hintergrund."
+      ]
+    },
+    "mi3-digitale-spuren-3-mc9": {
+      "question": "Du möchtest ein Foto einer Freundin teilen. Welche Regel passt?",
+      "spokenPrompt": "Du möchtest ein Foto einer Freundin teilen. Welche Regel passt?",
+      "answer": "Vor dem Teilen ihre Erlaubnis einholen",
+      "options": [
+        "Vor dem Teilen ihre Erlaubnis einholen",
+        "Immer sofort senden",
+        "Nur auf die Uhr schauen",
+        "Den Namen lauter schreiben"
+      ],
+      "hints": [
+        "Andere dürfen selbst entscheiden, ob ihr Foto geteilt wird.",
+        "Überlege, wer auf dem Foto zu sehen ist."
+      ]
+    },
+    "mi3-digitale-spuren-3-ws1": {
+      "hints": [
+        "Suche waagrecht von links nach rechts.",
+        "Beginne mit dem längsten Wort."
+      ]
+    },
+    "mi3-algorithmen-alltag-3-mc8": {
+      "question": "Ein Ablauf sagt zweimal klatschen und dann springen. Was kommt zuerst?",
+      "spokenPrompt": "Ein Ablauf sagt zweimal klatschen und dann springen. Was kommt zuerst?"
+    },
+    "mi3-algorithmen-alltag-3-mc9": {
+      "question": "Ein Roboter sieht ein Hindernis. Welche Regel passt?",
+      "spokenPrompt": "Ein Roboter sieht ein Hindernis. Welche Regel passt?"
+    },
+    "mi3-algorithmen-alltag-3-ws1": {
+      "hints": [
+        "Suche waagrecht von links nach rechts.",
+        "Beginne mit dem längsten Wort."
+      ]
+    },
+    "mi3-digitale-spuren-3-dd2": {
+      "dragItems": [
+        {
+          "id": "danke",
+          "label": "Danke für deine Hilfe"
+        },
+        {
+          "id": "witz",
+          "label": "Du bist peinlich"
+        },
+        {
+          "id": "bitte",
+          "label": "Kannst du mir das erklären?"
+        },
+        {
+          "id": "geheim",
+          "label": "Ich verrate dein Geheimnis"
+        }
+      ]
+    },
+    "mi3-algorithmen-alltag-3-mc3": {
+      "hints": [
+        "Beim Anziehen kommen die Socken vor den Schuhen.",
+        "Überlege, welcher Schritt zuerst nötig ist."
+      ]
+    },
+    "mi3-digitale-spuren-3-sr2": {
+      "question": "Du willst ein Foto teilen. Beschreibe mit einer Wenn-dann-Regel, wann du zuerst fragst, und erkläre warum.",
+      "spokenPrompt": "Du willst ein Foto teilen. Beschreibe mit einer Wenn-dann-Regel, wann du zuerst fragst, und erkläre warum.",
+      "answer": "Wenn eine Freundin auf dem Foto zu sehen ist, dann frage ich sie vor dem Teilen um Erlaubnis. Sie darf selbst entscheiden, ob andere ihr Foto sehen."
+    },
+    "mi3-algorithmen-alltag-3-sr1": {
+      "answer": "1. Nimm ein Blatt Papier. 2. Falte es in der Mitte. 3. Drücke die Faltkante fest."
+    },
+    "mi3-algorithmen-alltag-3-sr2": {
+      "answer": "1. Würfle einmal. 2. Wenn du eine Sechs würfelst, dann ziehe deine Figur sechs Felder vor. 3. Gib den Würfel der nächsten Person."
     }
   }
 }

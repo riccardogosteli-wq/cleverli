@@ -1,0 +1,6 @@
+.qa/
+node_modules/
+.next/
+.env*
+scripts/mi-sheet-*.py
+scripts/__pycache__/
