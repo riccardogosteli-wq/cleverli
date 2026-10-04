@@ -1,0 +1,59 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "je-me-presente-3",
+  "goal": "Je m’appelle ... bedeutet Ich heisse ... . J’ai neuf ans. heisst Ich bin neun Jahre alt. Im Französischen sagt man beim Alter wörtlich «Ich habe ... Jahre». Verwende hier erfundene Angaben.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Je m’appelle Léa.» Wie heisst das Kind?",
+          "answer": "Léa",
+          "wide": true
+        },
+        {
+          "prompt": "«J’ai neuf ans.» Wie alt ist es?",
+          "answer": "Neun Jahre",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die Sätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Je __ Léa. (m’appelle / suis)",
+          "answer": "m’appelle",
+          "wide": true
+        },
+        {
+          "prompt": "J’__ huit ans. (ai / est)",
+          "answer": "ai",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Stelle eine erfundene Person vor.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe aus ihrer Sicht zwei Sätze: «Je m’appelle ...» und «J’ai ... ans.» Wörter für das Alter: huit, neuf, dix.",
+          "answer": "Beispiel: Je m’appelle Sami. J’ai huit ans. Erfundenen Namen und eines der Alterswörter korrekt einsetzen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.4.A.1",
+    "scope": "Namen und Alter mit einfachen französischen Satzmustern ausdrücken. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

@@ -1,0 +1,84 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "nombres-dates-3",
+  "goal": "Zahlen: un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix. In der Westschweiz sind septante (70) und nonante (90) üblich. Für 80 hörst du regional huitante oder quatre-vingts.",
+  "sections": [
+    {
+      "title": "Schreibe die Ziffern.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "sept",
+          "answer": "7"
+        },
+        {
+          "prompt": "dix",
+          "answer": "10"
+        },
+        {
+          "prompt": "vingt",
+          "answer": "20"
+        },
+        {
+          "prompt": "trente",
+          "answer": "30"
+        },
+        {
+          "prompt": "septante",
+          "answer": "70"
+        },
+        {
+          "prompt": "nonante",
+          "answer": "90"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die französischen Zahlen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "2",
+          "answer": "deux"
+        },
+        {
+          "prompt": "5",
+          "answer": "cinq"
+        },
+        {
+          "prompt": "9",
+          "answer": "neuf"
+        },
+        {
+          "prompt": "80",
+          "answer": "huitante oder quatre-vingts"
+        }
+      ]
+    },
+    {
+      "title": "Lies ein Datum.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«le 3 mai» bedeutet welches Datum auf Deutsch?",
+          "answer": "3. Mai",
+          "wide": true
+        },
+        {
+          "prompt": "Schreibe «der 5. Juni» auf Französisch. Hilfe: juin = Juni.",
+          "answer": "le 5 juin",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.B.1",
+    "scope": "Häufige Zahlwörter, regionale Schweizer Formen und einfache Datumsangaben erkennen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

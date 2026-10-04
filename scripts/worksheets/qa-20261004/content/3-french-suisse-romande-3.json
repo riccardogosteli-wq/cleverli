@@ -1,0 +1,62 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "suisse-romande-3",
+  "goal": "La Suisse romande est la région francophone de la Suisse. Genève et Lausanne sont deux villes de Suisse romande. Le français est une des quatre langues nationales de la Suisse. In der Westschweiz leben Menschen mit unterschiedlichen Sprachen; nicht alle sprechen ausschliesslich Französisch.",
+  "sections": [
+    {
+      "title": "Lies den Text. Antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In welchem Land liegt die Suisse romande?",
+          "answer": "In der Schweiz",
+          "wide": true
+        },
+        {
+          "prompt": "Welche Sprache ist mit «francophone» gemeint?",
+          "answer": "Französisch",
+          "wide": true
+        },
+        {
+          "prompt": "Nenne die beiden Städte aus dem Text.",
+          "answer": "Genève und Lausanne",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "La Suisse bedeutet",
+          "answer": "die Schweiz"
+        },
+        {
+          "prompt": "le français bedeutet",
+          "answer": "Französisch"
+        }
+      ]
+    },
+    {
+      "title": "Begrüsse ein Kind.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du triffst ein Kind in Lausanne. Schreibe eine französische Begrüssung und frage nach seinem Namen. Hilfe: Comment tu t’appelles?",
+          "answer": "Beispiel: Salut! Comment tu t’appelles? Auch Bonjour! passt. Keine Behauptung, dass alle Menschen vor Ort nur Französisch sprechen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Die französischsprachige Schweiz anhand eines einfachen Texts kennenlernen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

@@ -2686,20 +2686,20 @@
     "topicId": "bonjour-classe-3",
     "title": "Bonjour et la classe",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.4.A.1",
       "scope": "Grundlegende Begrüssungen und häufige Unterrichtsanweisungen verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/bonjour-classe-3-arbeitsblatt.pdf",
-        "sha256": "03f662aa0b24670dbb6689294fe6f6da79a52c668ebf86ecb05d4762fd1bf95d",
-        "bytes": 860693
+        "path": "revisions/20261004/pdfs/3/french/bonjour-classe-3-arbeitsblatt.pdf",
+        "sha256": "c86c984b916ece2a67314d2e43e8ee6c2cfa3d4952e65574e8972157b9d26c33",
+        "bytes": 860381
       },
       "solution": {
-        "path": "pdfs/3/french/bonjour-classe-3-loesungen.pdf",
-        "sha256": "7cf40fed0f12bd4773945f69011bf6ac8366b951739d3925557e2d296158a4a0",
-        "bytes": 887289
+        "path": "revisions/20261004/pdfs/3/french/bonjour-classe-3-loesungen.pdf",
+        "sha256": "d6f82b9df6c5530f6607967c0ca6e297a7ba7e0146dc55ceaa0ad3515fcb3f77",
+        "bytes": 886546
       }
     }
   },
@@ -2710,20 +2710,20 @@
     "topicId": "je-me-presente-3",
     "title": "Je me présente",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.4.A.1",
       "scope": "Namen und Alter mit einfachen französischen Satzmustern ausdrücken. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/je-me-presente-3-arbeitsblatt.pdf",
-        "sha256": "f5a6c2ec6bd6083cbfbcb52b11edffe911bd2159e928df699403fe7dd84f53bc",
-        "bytes": 857459
+        "path": "revisions/20261004/pdfs/3/french/je-me-presente-3-arbeitsblatt.pdf",
+        "sha256": "cc66435c0ad90e59fec272451a1c0806e7124c2c135546fe9978545d5b1f0ec9",
+        "bytes": 857387
       },
       "solution": {
-        "path": "pdfs/3/french/je-me-presente-3-loesungen.pdf",
-        "sha256": "12e97bbacb3d848010ff761da2a990853202d32654a51997f78c84b5cb3b2847",
-        "bytes": 882945
+        "path": "revisions/20261004/pdfs/3/french/je-me-presente-3-loesungen.pdf",
+        "sha256": "35f97d4437028ee640cd6b1656644fa88bf164f203cfc4b874ae04e1830107d7",
+        "bytes": 882389
       }
     }
   },
@@ -2734,20 +2734,20 @@
     "topicId": "nombres-dates-3",
     "title": "Les nombres et les dates",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.B.1",
       "scope": "Häufige Zahlwörter, regionale Schweizer Formen und einfache Datumsangaben erkennen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/nombres-dates-3-arbeitsblatt.pdf",
-        "sha256": "0161d9408471699331f1fea6cc2d9e66624fd7040f3406a5f39375fd4145cd03",
-        "bytes": 862639
+        "path": "revisions/20261004/pdfs/3/french/nombres-dates-3-arbeitsblatt.pdf",
+        "sha256": "85d07bf39cbd1be8642c4b575038e37c527a68e1a4af70f3a11adc1453111500",
+        "bytes": 862330
       },
       "solution": {
-        "path": "pdfs/3/french/nombres-dates-3-loesungen.pdf",
-        "sha256": "6f729e5eb7a5f35e7cea2775e57cb485d8f137ba5968d19270a1bf1f6593a68f",
-        "bytes": 887873
+        "path": "revisions/20261004/pdfs/3/french/nombres-dates-3-loesungen.pdf",
+        "sha256": "5a6d2929b9be6c25437f95dd3687bb570f8852305957eda4d95a3384f63bba91",
+        "bytes": 887410
       }
     }
   },
@@ -2758,20 +2758,20 @@
     "topicId": "ecole-objets-3",
     "title": "L'école et les objets",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.D.1",
       "scope": "Schulsachen mit passendem un/une und einem einfachen Satzmuster benennen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/ecole-objets-3-arbeitsblatt.pdf",
-        "sha256": "c6c639795dea78b7a93cf32e7745cf95014c68e593b99f959ca382d77713e70c",
-        "bytes": 855966
+        "path": "revisions/20261004/pdfs/3/french/ecole-objets-3-arbeitsblatt.pdf",
+        "sha256": "87b591d63c3ac677f43d6b44b9165db89485325fec3806d5be137ace1c18e4a0",
+        "bytes": 855655
       },
       "solution": {
-        "path": "pdfs/3/french/ecole-objets-3-loesungen.pdf",
-        "sha256": "d2b8f14a887fbfb0f3bbdd6ff565990dc4048c13c4594052f1f67628f4ff7203",
-        "bytes": 879504
+        "path": "revisions/20261004/pdfs/3/french/ecole-objets-3-loesungen.pdf",
+        "sha256": "dcda260bc0bf4c2fa4703113d03769e67f47c56c392b84b790ca74fdfa5d60ee",
+        "bytes": 879159
       }
     }
   },
@@ -2782,20 +2782,20 @@
     "topicId": "famille-amis-3",
     "title": "La famille et les amis",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Familien- und Freundschaftswörter in einem kurzen fiktiven Text verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/famille-amis-3-arbeitsblatt.pdf",
-        "sha256": "b30a88389b18459d4f90c7530ca08dda8e5790f4372915467844b58d7665f272",
-        "bytes": 857850
+        "path": "revisions/20261004/pdfs/3/french/famille-amis-3-arbeitsblatt.pdf",
+        "sha256": "e76faef6c75e576628440038b8e7bcd9beb6721d18dacae0a1c175c0e2623368",
+        "bytes": 857542
       },
       "solution": {
-        "path": "pdfs/3/french/famille-amis-3-loesungen.pdf",
-        "sha256": "655eedb24fc48ceaaa77113611215a8af16d05e1f83eac2d0560576814472003",
-        "bytes": 883866
+        "path": "revisions/20261004/pdfs/3/french/famille-amis-3-loesungen.pdf",
+        "sha256": "08c0486cb98e0219c4258af8fa5261521b3140e120151aeaa04f88bffac89d55",
+        "bytes": 883424
       }
     }
   },
@@ -2806,20 +2806,20 @@
     "topicId": "couleurs-vetements-3",
     "title": "Les couleurs et les vêtements",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.D.1",
       "scope": "Kleider und einfache Farbangaben mit ausgewählten passenden Formen benennen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/couleurs-vetements-3-arbeitsblatt.pdf",
-        "sha256": "5132827636b20057d18d697a71570104d8b7b9d5e72a0396ee1af21fc47f16b5",
-        "bytes": 856922
+        "path": "revisions/20261004/pdfs/3/french/couleurs-vetements-3-arbeitsblatt.pdf",
+        "sha256": "00fc3413be9b07a407734d7b1c9ab5d089e15a88469cd6800d9227697441bff5",
+        "bytes": 857473
       },
       "solution": {
-        "path": "pdfs/3/french/couleurs-vetements-3-loesungen.pdf",
-        "sha256": "6fdc38296033155221a21f769f858a5fb423168fdb0f94e2f84a33e6792dd2c2",
-        "bytes": 880718
+        "path": "revisions/20261004/pdfs/3/french/couleurs-vetements-3-loesungen.pdf",
+        "sha256": "dec716b1805b58ff5d3d764acb097526d53ccc997853ade1b4a6a92eb77c29d1",
+        "bytes": 880366
       }
     }
   },
@@ -2830,20 +2830,20 @@
     "topicId": "manger-boire-3",
     "title": "Manger et boire",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.D.1",
       "scope": "Lebensmittelwörter und einfache positive und negative Vorlieben ausdrücken. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/manger-boire-3-arbeitsblatt.pdf",
-        "sha256": "cf60e4037e58d1daef245b84ece7cd55eeba8df323fea50a687babc874484a21",
-        "bytes": 857409
+        "path": "revisions/20261004/pdfs/3/french/manger-boire-3-arbeitsblatt.pdf",
+        "sha256": "79a73137c2b1f1709007b4a8e864acea75152b6ed9f771a796ed17d1fac72010",
+        "bytes": 857111
       },
       "solution": {
-        "path": "pdfs/3/french/manger-boire-3-loesungen.pdf",
-        "sha256": "f371842e83ffc7cb2fafb260ccea48a663561eaf6068c44eae56a4f5e74eba3a",
-        "bytes": 884392
+        "path": "revisions/20261004/pdfs/3/french/manger-boire-3-loesungen.pdf",
+        "sha256": "9a24342e491403f8b2b9da44f74e9d77fa5dc0e09772d96a35a2e937cfb443c8",
+        "bytes": 884123
       }
     }
   },
@@ -2854,20 +2854,20 @@
     "topicId": "animaux-3",
     "title": "Les animaux",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.B.1",
       "scope": "Häufige Tiernamen und ausgewählte einfache Tätigkeiten verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/animaux-3-arbeitsblatt.pdf",
-        "sha256": "ba8fb1ed46c848b57a9dc38dc1c1f991a81e41b8809014faba758d9841522c6c",
-        "bytes": 857092
+        "path": "revisions/20261004/pdfs/3/french/animaux-3-arbeitsblatt.pdf",
+        "sha256": "2017dbb3956501fff69531bce3134e1d170805a2feb8fbfa314cb8503e067161",
+        "bytes": 857130
       },
       "solution": {
-        "path": "pdfs/3/french/animaux-3-loesungen.pdf",
-        "sha256": "9b3ec0d41ad7f26e7d2821c8ed5b4abcce45a4b0233a38aa1ea42957a17998fd",
-        "bytes": 880976
+        "path": "revisions/20261004/pdfs/3/french/animaux-3-loesungen.pdf",
+        "sha256": "e45c51617566475a2e4148e2e57c71c92f8feeba60f18635610bf95b1f407a3b",
+        "bytes": 880894
       }
     }
   },
@@ -2878,20 +2878,20 @@
     "topicId": "suisse-romande-3",
     "title": "La Suisse romande",
     "curriculum": {
-      "code": "FS1F.6",
+      "code": "FS1F.2.A.1",
       "scope": "Die französischsprachige Schweiz anhand eines einfachen Texts kennenlernen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/french/suisse-romande-3-arbeitsblatt.pdf",
-        "sha256": "75b0a2c1f207835177f127bb64c5bde81d727440edbffb24807c505e80812781",
-        "bytes": 864349
+        "path": "revisions/20261004/pdfs/3/french/suisse-romande-3-arbeitsblatt.pdf",
+        "sha256": "8d6c32f72bc5badb66454dfaad4d311c79d098f84db92b9c1c6b1d19cb6c6a7c",
+        "bytes": 863284
       },
       "solution": {
-        "path": "pdfs/3/french/suisse-romande-3-loesungen.pdf",
-        "sha256": "80608690882cd9676e300e15344686c41d01efaf0cbd58be3dfb721306f87041",
-        "bytes": 891697
+        "path": "revisions/20261004/pdfs/3/french/suisse-romande-3-loesungen.pdf",
+        "sha256": "c959dadc9b4c7c3ba1f8b28a0cf24d9f7f8f34c5603ca34f8995daf4c454c6d9",
+        "bytes": 890480
       }
     }
   },

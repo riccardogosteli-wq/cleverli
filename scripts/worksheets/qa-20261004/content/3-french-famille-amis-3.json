@@ -1,0 +1,74 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "famille-amis-3",
+  "goal": "Voici Léa. Elle a un frère. Il s’appelle Noé. Léa a une amie. Son amie s’appelle Zoé. Les enfants jouent ensemble. Diese Personen sind erfunden; du musst nichts über deine eigene Familie erzählen.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie heisst Léas Bruder?",
+          "answer": "Noé"
+        },
+        {
+          "prompt": "Wie heisst ihre Freundin?",
+          "answer": "Zoé"
+        },
+        {
+          "prompt": "Was machen die Kinder zusammen?",
+          "answer": "Sie spielen zusammen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die deutschen Wörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "un frère",
+          "answer": "ein Bruder"
+        },
+        {
+          "prompt": "une sœur",
+          "answer": "eine Schwester"
+        },
+        {
+          "prompt": "un ami",
+          "answer": "ein Freund"
+        },
+        {
+          "prompt": "une amie",
+          "answer": "eine Freundin"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe auf Französisch «Das ist eine Freundin.» Hilfe: C’est ... .",
+          "answer": "C’est une amie.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Schreibe «Hier ist Noé.» Hilfe: Voici ... .",
+          "answer": "Voici Noé.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Familien- und Freundschaftswörter in einem kurzen fiktiven Text verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

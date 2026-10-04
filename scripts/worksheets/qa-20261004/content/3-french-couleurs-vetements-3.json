@@ -1,0 +1,73 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "couleurs-vetements-3",
+  "goal": "Kleider: un pantalon = eine Hose, une robe = ein Kleid, un pull = ein Pullover. Farben können ihre Form ändern: un pull bleu, une robe bleue. Rouge bleibt hier gleich: un pull rouge, une robe rouge.",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "un pantalon",
+          "answer": "eine Hose"
+        },
+        {
+          "prompt": "une robe",
+          "answer": "ein Kleid"
+        },
+        {
+          "prompt": "un pull",
+          "answer": "ein Pullover"
+        },
+        {
+          "prompt": "rouge",
+          "answer": "rot"
+        }
+      ]
+    },
+    {
+      "title": "Setze bleu oder bleue ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "un pantalon __",
+          "answer": "bleu"
+        },
+        {
+          "prompt": "une robe __",
+          "answer": "bleue"
+        },
+        {
+          "prompt": "un pull __",
+          "answer": "bleu"
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe auf Französisch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe «Das ist ein roter Pullover.» Hilfe: C’est ... .",
+          "answer": "C’est un pull rouge.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Zeichne ein Kleid. Schreibe die französischen Wörter für «ein blaues Kleid» dazu. Du brauchst keinen Farbstift.",
+          "answer": "Zeichnung eines Kleids, Beschriftung: une robe bleue.",
+          "wide": true,
+          "drawingHeight": 40
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.D.1",
+    "scope": "Kleider und einfache Farbangaben mit ausgewählten passenden Formen benennen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

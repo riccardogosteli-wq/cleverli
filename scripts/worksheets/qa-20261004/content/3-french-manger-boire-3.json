@@ -1,0 +1,65 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "manger-boire-3",
+  "goal": "Essen und Trinken: le pain = das Brot, le fromage = der Käse, une pomme = ein Apfel, l’eau = das Wasser. «J’aime ...» bedeutet «Ich mag ...». Vorlieben dürfen unterschiedlich sein.",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Wörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "le pain",
+          "answer": "das Brot"
+        },
+        {
+          "prompt": "le fromage",
+          "answer": "der Käse"
+        },
+        {
+          "prompt": "une pomme",
+          "answer": "ein Apfel"
+        },
+        {
+          "prompt": "l’eau",
+          "answer": "das Wasser"
+        }
+      ]
+    },
+    {
+      "title": "Lies die Sätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Léa aime les pommes. Noé aime le pain.» Was mag Léa?",
+          "answer": "Äpfel",
+          "wide": true
+        },
+        {
+          "prompt": "Was mag Noé?",
+          "answer": "Brot",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe über Vorlieben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen Satz mit «J’aime ...» und einen mit «Je n’aime pas ...». Verwende le pain, le fromage oder les pommes. Vorlieben dürfen erfunden sein.",
+          "answer": "Beispiel: J’aime les pommes. Je n’aime pas le fromage. Richtige Satzmuster und passende Wörter; keine Bewertung der Vorlieben.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.D.1",
+    "scope": "Lebensmittelwörter und einfache positive und negative Vorlieben ausdrücken. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

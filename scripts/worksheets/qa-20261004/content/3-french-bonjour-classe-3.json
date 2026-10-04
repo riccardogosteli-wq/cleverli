@@ -1,0 +1,63 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "bonjour-classe-3",
+  "goal": "Bonjour! bedeutet Guten Tag! Salut! ist eine lockere Begrüssung unter Bekannten. Au revoir! heisst Auf Wiedersehen! Merci! bedeutet Danke! Im Unterricht hörst du auch «Écoute!» und «Regarde!».",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bonjour!",
+          "answer": "Guten Tag! / Hallo!"
+        },
+        {
+          "prompt": "Au revoir!",
+          "answer": "Auf Wiedersehen!"
+        },
+        {
+          "prompt": "Merci!",
+          "answer": "Danke!"
+        },
+        {
+          "prompt": "Salut!",
+          "answer": "Hallo! / Tschüss! (unter Bekannten)"
+        }
+      ]
+    },
+    {
+      "title": "Was sollst du tun?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Écoute!",
+          "answer": "Hör zu!"
+        },
+        {
+          "prompt": "Regarde!",
+          "answer": "Schau hin!"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Mini-Dialog.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwei erfundene Kinder begrüssen sich auf Französisch und verabschieden sich dann. Schreibe eine Begrüssung und eine Verabschiedung.",
+          "answer": "Beispiel: Salut! Au revoir! Andere passende Begrüssungen und Verabschiedungen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.4.A.1",
+    "scope": "Grundlegende Begrüssungen und häufige Unterrichtsanweisungen verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

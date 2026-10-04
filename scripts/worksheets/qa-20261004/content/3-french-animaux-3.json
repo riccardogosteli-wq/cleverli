@@ -1,0 +1,70 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "animaux-3",
+  "goal": "Tiere: un chat = eine Katze, un chien = ein Hund, un oiseau = ein Vogel, un poisson = ein Fisch. «Le canard nage.» heisst «Die Ente schwimmt».",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "un chat",
+          "answer": "eine Katze"
+        },
+        {
+          "prompt": "un chien",
+          "answer": "ein Hund"
+        },
+        {
+          "prompt": "un oiseau",
+          "answer": "ein Vogel"
+        },
+        {
+          "prompt": "un poisson",
+          "answer": "ein Fisch"
+        }
+      ]
+    },
+    {
+      "title": "Wähle das passende Verb.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Le canard __ . (nage / écrit)",
+          "answer": "nage",
+          "wide": true
+        },
+        {
+          "prompt": "Le chien __ . (aboie / écrit)",
+          "answer": "aboie",
+          "wide": true
+        },
+        {
+          "prompt": "Le poisson __ . (nage / lit)",
+          "answer": "nage",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe zwei Sätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe auf Französisch: «Das ist eine Ente. Die Ente schwimmt.» Hilfe: C’est un canard.",
+          "answer": "C’est un canard. Le canard nage.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.B.1",
+    "scope": "Häufige Tiernamen und ausgewählte einfache Tätigkeiten verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

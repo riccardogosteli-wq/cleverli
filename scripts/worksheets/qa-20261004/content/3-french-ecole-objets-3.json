@@ -1,0 +1,71 @@
+{
+  "grade": 3,
+  "subject": "french",
+  "sourceId": "ecole-objets-3",
+  "goal": "Schulsachen: un livre = ein Buch, un cahier = ein Heft, une règle = ein Lineal, un crayon = ein Bleistift. Lerne das Nomen mit un oder une. «C’est ...» bedeutet «Das ist ...».",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "un livre",
+          "answer": "ein Buch"
+        },
+        {
+          "prompt": "un cahier",
+          "answer": "ein Heft"
+        },
+        {
+          "prompt": "une règle",
+          "answer": "ein Lineal"
+        },
+        {
+          "prompt": "un crayon",
+          "answer": "ein Bleistift"
+        }
+      ]
+    },
+    {
+      "title": "Ergänze un oder une.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "__ livre",
+          "answer": "un"
+        },
+        {
+          "prompt": "__ règle",
+          "answer": "une"
+        },
+        {
+          "prompt": "__ crayon",
+          "answer": "un"
+        },
+        {
+          "prompt": "__ cahier",
+          "answer": "un"
+        }
+      ]
+    },
+    {
+      "title": "Bilde zwei Sätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe auf Französisch: «Das ist ein Buch.» und «Das ist ein Lineal.» Nutze «C’est ...».",
+          "answer": "C’est un livre. C’est une règle.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.D.1",
+    "scope": "Schulsachen mit passendem un/une und einem einfachen Satzmuster benennen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}
