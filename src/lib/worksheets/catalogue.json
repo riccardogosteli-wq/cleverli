@@ -372,14 +372,14 @@
     },
     "files": {
       "worksheet": {
-        "path": "revisions/20261004/pdfs/1/german/gross-kleinschreibung-arbeitsblatt.pdf",
-        "sha256": "7d825dda65520d8d02b80ce8c889f4668e57a26d7f5af56a7097d0035ca86368",
-        "bytes": 857076
+        "path": "revisions/20261004-v2/pdfs/1/german/gross-kleinschreibung-arbeitsblatt.pdf",
+        "sha256": "46723d767aca3941aa2b6c9a4262ecf637939ba0a7350b1e8e1101f83ba6482b",
+        "bytes": 857039
       },
       "solution": {
-        "path": "revisions/20261004/pdfs/1/german/gross-kleinschreibung-loesungen.pdf",
-        "sha256": "50260486df369b9a37ffd08ec40396a798d3a1c2815265928c38064443fae4bb",
-        "bytes": 874817
+        "path": "revisions/20261004-v2/pdfs/1/german/gross-kleinschreibung-loesungen.pdf",
+        "sha256": "38a666ef948811a5a2d632bda53fb946651bc62067981147c29f077cbd3c37f1",
+        "bytes": 874787
       }
     }
   },
