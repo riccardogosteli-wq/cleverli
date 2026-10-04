@@ -1716,18 +1716,18 @@
     "curriculum": {
       "code": "MA.1.A.2",
       "scope": "Stellenwerte und Zahlenordnung im Zahlenraum bis 1000.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/zahlen-bis-1000-arbeitsblatt.pdf",
-        "sha256": "165b98f6db1382e0c36c843c5be2f96a708eaeddeaf8dcead320b91b79c9476d",
+        "path": "revisions/20261004/pdfs/3/math/zahlen-bis-1000-arbeitsblatt.pdf",
+        "sha256": "db5f9c9bbc3ff166d6ab57ec3c4d45e8900b2fd6c496bfe12e7e323bc5ce4b07",
         "bytes": 857248
       },
       "solution": {
-        "path": "pdfs/3/math/zahlen-bis-1000-loesungen.pdf",
-        "sha256": "e04718bdf6e299ca746943d8de19fb0218b6829f9ac13ef369d0f6da04aeea1d",
-        "bytes": 883619
+        "path": "revisions/20261004/pdfs/3/math/zahlen-bis-1000-loesungen.pdf",
+        "sha256": "26be0e81989ef1596629a5b2ef679f1e3eb3bdd2f795fa37f0b638f89d3e6def",
+        "bytes": 883470
       }
     }
   },
@@ -1740,18 +1740,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Addition und Subtraktion bis 1000 mit Stellenwertzerlegung.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/rechnen-bis-1000-arbeitsblatt.pdf",
-        "sha256": "5e74ae81a1148898e9450b24e9571d889c8f658be3485ac5fc5a7e620d9975c9",
+        "path": "revisions/20261004/pdfs/3/math/rechnen-bis-1000-arbeitsblatt.pdf",
+        "sha256": "6600cf17f709171cde4e0fe90cb768473227cc0a0eda5342fcf3f1afbca9c1de",
         "bytes": 858459
       },
       "solution": {
-        "path": "pdfs/3/math/rechnen-bis-1000-loesungen.pdf",
-        "sha256": "ff8b8edd4d12a7c2e8983f629d035c9f71513fe04705530f05a1b44e0d4709ef",
-        "bytes": 882200
+        "path": "revisions/20261004/pdfs/3/math/rechnen-bis-1000-loesungen.pdf",
+        "sha256": "593d6c7a18efda3f14b9ad8273f2553cc5337ef5759c2f70d930d120905d8401",
+        "bytes": 882054
       }
     }
   },
@@ -1764,18 +1764,18 @@
     "curriculum": {
       "code": "MA.2.A.1",
       "scope": "Ebene Figuren und Körper unterscheiden und mit Eigenschaften beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/geometrie-arbeitsblatt.pdf",
-        "sha256": "445fd556bac56061d07bccd3535b41f30ab99d56e4591377883ba6ad9d844415",
-        "bytes": 856414
+        "path": "revisions/20261004/pdfs/3/math/geometrie-arbeitsblatt.pdf",
+        "sha256": "7b9938abf420286a82b38debd519a84f1a818425051cea47011b6f65e72318c5",
+        "bytes": 856989
       },
       "solution": {
-        "path": "pdfs/3/math/geometrie-loesungen.pdf",
-        "sha256": "9591150e9445715ecc5a8b7b9accfe9436f1c11bcf945fff751280a2582ab402",
-        "bytes": 884832
+        "path": "revisions/20261004/pdfs/3/math/geometrie-loesungen.pdf",
+        "sha256": "51efed7d2ec62f4913dc3b79dfc237dc89d6d2906acd0de979b63baeffdaf86e",
+        "bytes": 884395
       }
     }
   },
@@ -1788,18 +1788,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Produkte im kleinen Einmaleins und hilfreiche Zerlegungen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/einmaleins-komplett-arbeitsblatt.pdf",
-        "sha256": "eaed6739f90344b25801b1d860ac59ea7ac0fe7fbfd85335fc4d114e2c5c7064",
-        "bytes": 860745
+        "path": "revisions/20261004/pdfs/3/math/einmaleins-komplett-arbeitsblatt.pdf",
+        "sha256": "3deb3cd16767feb7f4899899718e7738150a10e3f7a8f23fc7f82d2d305a388c",
+        "bytes": 860447
       },
       "solution": {
-        "path": "pdfs/3/math/einmaleins-komplett-loesungen.pdf",
-        "sha256": "99484080ed83e185a1e1b713506b4b4d0640d195c28d60c1acaae0e3bd0508f8",
-        "bytes": 883804
+        "path": "revisions/20261004/pdfs/3/math/einmaleins-komplett-loesungen.pdf",
+        "sha256": "392f4d675a439611cc554f3fd4c6a7321715cf5944a9bd223af05e2d110196ca",
+        "bytes": 883347
       }
     }
   },
@@ -1812,18 +1812,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Ganzzahlige Division ohne Rest und Umkehroperation im Einmaleins.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/division-arbeitsblatt.pdf",
-        "sha256": "b93b338383c6f4d95143cc8d1c6d7edfba647b7d14df22e5a34be96306bbb22f",
-        "bytes": 856160
+        "path": "revisions/20261004/pdfs/3/math/division-arbeitsblatt.pdf",
+        "sha256": "98ef60b13d9323906cce7365c321b53db5218a4bcbcbf93649fdc3dfc1e0bbf8",
+        "bytes": 855861
       },
       "solution": {
-        "path": "pdfs/3/math/division-loesungen.pdf",
-        "sha256": "3857c52132d87363ae05e9ab90dbf721952b21fcea27892183ad68267daf9ce0",
-        "bytes": 881750
+        "path": "revisions/20261004/pdfs/3/math/division-loesungen.pdf",
+        "sha256": "bf48bd12361a10d2e00fd2924045e7547ea185eeaa1245fefd340c4fbf40c784",
+        "bytes": 881300
       }
     }
   },
@@ -1832,22 +1832,22 @@
     "grade": 3,
     "subject": "math",
     "topicId": "brueche",
-    "title": "Brüche",
+    "title": "Bruchteile entdecken",
     "curriculum": {
       "code": "MA.1.A.1",
       "scope": "Einfache Bruchteile an gleich grossen Teilflächen und Mengen erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/brueche-arbeitsblatt.pdf",
-        "sha256": "e2538dcd2580dcc874741c9ad5f3f6119263a9184d797c08106521c33a8eea1a",
-        "bytes": 854519
+        "path": "revisions/20261004/pdfs/3/math/brueche-arbeitsblatt.pdf",
+        "sha256": "3220e83bec2958b8599c52d4dce04c1e1993e7157a2756b71fe2ae8c2aa8d3c0",
+        "bytes": 855263
       },
       "solution": {
-        "path": "pdfs/3/math/brueche-loesungen.pdf",
-        "sha256": "e7bc95aa45c62a19ee5453bbb6e3595c9fe71524792619c448dfe92344a11970",
-        "bytes": 876461
+        "path": "revisions/20261004/pdfs/3/math/brueche-loesungen.pdf",
+        "sha256": "1c1e1ca1a7eaaaa92f54646a1f196b94975afcbdafe1e49f8531748024f5c9de",
+        "bytes": 877009
       }
     }
   },
@@ -1860,18 +1860,18 @@
     "curriculum": {
       "code": "MA.3.C.2",
       "scope": "Ein- und zweischrittige Sachsituationen lösen; fehlende Angaben erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/textaufgaben-arbeitsblatt.pdf",
-        "sha256": "a19255c936bb5be45c8b4938d170be8cbd7730420aac16c5cc31506c273e0f4f",
-        "bytes": 861824
+        "path": "revisions/20261004/pdfs/3/math/textaufgaben-arbeitsblatt.pdf",
+        "sha256": "0f8e82f0ef02953352c80ce098bbbdb71b58aeee3e341d84643e3c10a975929b",
+        "bytes": 861535
       },
       "solution": {
-        "path": "pdfs/3/math/textaufgaben-loesungen.pdf",
-        "sha256": "bc44e3591437d2c44e2eed2a88aaa28d1c35ec6d5d2c36664cb65a51fae6a694",
-        "bytes": 887414
+        "path": "revisions/20261004/pdfs/3/math/textaufgaben-loesungen.pdf",
+        "sha256": "3c2b624a99b494ea9412cfa111c53d1f50c338a7cf575f4a6a33cfdd15d230ba",
+        "bytes": 886954
       }
     }
   },
@@ -1884,18 +1884,18 @@
     "curriculum": {
       "code": "MA.2.A.3",
       "scope": "Rechteckflächen mit Einheitsquadraten und Umfang als Randlänge bestimmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/flaeche-umfang-arbeitsblatt.pdf",
-        "sha256": "64c1344f5ca044ca16dc4902ddf0da7249962d53074eaefb4f0b083ad093bd01",
-        "bytes": 872489
+        "path": "revisions/20261004/pdfs/3/math/flaeche-umfang-arbeitsblatt.pdf",
+        "sha256": "8bfea7bf107b17ab699e032bc6447dafe6b21454a97a34c72b402f1c46e19ab5",
+        "bytes": 873316
       },
       "solution": {
-        "path": "pdfs/3/math/flaeche-umfang-loesungen.pdf",
-        "sha256": "89f0792f9e221d3ea8c8d6fdfa22e3378cecde6d3808bbc78dd6a342a6c75140",
-        "bytes": 900471
+        "path": "revisions/20261004/pdfs/3/math/flaeche-umfang-loesungen.pdf",
+        "sha256": "673f831c5925077aebca9a533c4ca0cab0deb2ac223e4a07de5528128f95ee03",
+        "bytes": 917296
       }
     }
   },
@@ -1908,18 +1908,18 @@
     "curriculum": {
       "code": "MA.3.C.1",
       "scope": "Bilddiagramme mit einer Skalierung von zwei Kindern je Symbol lesen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/diagramme-daten-arbeitsblatt.pdf",
-        "sha256": "10366ea94ec45434f71eb281207a96b3aff6b521101249c96ab033be6900757c",
-        "bytes": 865644
+        "path": "revisions/20261004/pdfs/3/math/diagramme-daten-arbeitsblatt.pdf",
+        "sha256": "5117342c951f2a31b107032ec912113239ca4acb6c23074c40b7bcdc57e910f7",
+        "bytes": 865346
       },
       "solution": {
-        "path": "pdfs/3/math/diagramme-daten-loesungen.pdf",
-        "sha256": "1e8d7f8c355f2f13785ec84ee894a0b108d3399dbb6456d379021e08db3db48c",
-        "bytes": 890371
+        "path": "revisions/20261004/pdfs/3/math/diagramme-daten-loesungen.pdf",
+        "sha256": "6f18b9d39aefe413bae1d4546983b0af5fe4ba869bec5670508c71b32f9e33eb",
+        "bytes": 889919
       }
     }
   },
@@ -1932,18 +1932,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Schriftliche Addition und Subtraktion dreistelliger Zahlen mit Stellenwerten.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/3/math/schriftlich-rechnen-arbeitsblatt.pdf",
-        "sha256": "1e995278d8b6affad3c616a91274fe056df1404cdc80caa119a50259aefc3ef4",
-        "bytes": 877823
+        "path": "revisions/20261004/pdfs/3/math/schriftlich-rechnen-arbeitsblatt.pdf",
+        "sha256": "5b96af971f4444dcc33fdc63e8c160a634b21b85a829bd04f0e6508263f50421",
+        "bytes": 878200
       },
       "solution": {
-        "path": "pdfs/3/math/schriftlich-rechnen-loesungen.pdf",
-        "sha256": "b90b55bd654e3326c790fced6ff990754c504c2ad687c1482e8c77fc923f1712",
-        "bytes": 901342
+        "path": "revisions/20261004/pdfs/3/math/schriftlich-rechnen-loesungen.pdf",
+        "sha256": "35d5c63a5d336b3125e45d72a6df3f3ba8c60e8bb28c7bdae35cff8fb56942d3",
+        "bytes": 901586
       }
     }
   },

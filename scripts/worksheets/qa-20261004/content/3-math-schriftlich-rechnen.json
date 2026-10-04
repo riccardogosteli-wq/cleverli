@@ -1,0 +1,87 @@
+{
+  "grade": 3,
+  "subject": "math",
+  "sourceId": "schriftlich-rechnen",
+  "goal": "H, Z und E stehen für Hunderter, Zehner und Einer. Schreibe gleiche Stellen untereinander. Beginne rechts. Tausche bei Bedarf: 10 E = 1 Z; 10 Z = 1 H.",
+  "sections": [
+    {
+      "title": "Addiere schriftlich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ergebnis:",
+          "answer": "385",
+          "svg": "<svg class=\"illustration column-sum\" style=\"width:60mm;height:42mm\" viewBox=\"0 0 60 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"22\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"32\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"22\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"22\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"32\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"10\" y=\"26\" font-size=\"5\">+</text><path d=\"M10 29 H48\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-sum\" style=\"width:60mm;height:42mm\" viewBox=\"0 0 60 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"22\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"32\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"22\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"22\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"32\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"42\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"22\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"32\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"42\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"10\" y=\"26\" font-size=\"5\">+</text><path d=\"M10 29 H48\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "check": {
+            "kind": "arithmetic",
+            "a": 247,
+            "b": 138,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "Ergebnis:",
+          "answer": "622",
+          "svg": "<svg class=\"illustration column-sum\" style=\"width:60mm;height:42mm\" viewBox=\"0 0 60 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"22\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"32\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"22\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"42\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"22\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"32\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"10\" y=\"26\" font-size=\"5\">+</text><path d=\"M10 29 H48\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-sum\" style=\"width:60mm;height:42mm\" viewBox=\"0 0 60 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"22\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"32\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"22\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"42\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"22\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"32\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"42\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"22\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"32\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"42\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"10\" y=\"26\" font-size=\"5\">+</text><path d=\"M10 29 H48\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "check": {
+            "kind": "arithmetic",
+            "a": 368,
+            "b": 254,
+            "op": "+"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Subtrahiere schriftlich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ergebnis:",
+          "answer": "322",
+          "svg": "<svg class=\"illustration column-sum\" style=\"width:60mm;height:42mm\" viewBox=\"0 0 60 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"22\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"32\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"22\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"42\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"22\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"32\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"10\" y=\"26\" font-size=\"5\">−</text><path d=\"M10 29 H48\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-sum\" style=\"width:60mm;height:42mm\" viewBox=\"0 0 60 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"22\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"32\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"22\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">5</text><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">6</text><text x=\"42\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"22\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"32\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"22\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"32\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"42\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"10\" y=\"26\" font-size=\"5\">−</text><path d=\"M10 29 H48\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "check": {
+            "kind": "arithmetic",
+            "a": 563,
+            "b": 241,
+            "op": "−"
+          }
+        },
+        {
+          "prompt": "Ergebnis:",
+          "answer": "424",
+          "svg": "<svg class=\"illustration column-sum\" style=\"width:60mm;height:42mm\" viewBox=\"0 0 60 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"22\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"32\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"22\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"22\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"32\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"42\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"10\" y=\"26\" font-size=\"5\">−</text><path d=\"M10 29 H48\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "solutionSvg": "<svg class=\"illustration column-sum\" style=\"width:60mm;height:42mm\" viewBox=\"0 0 60 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"22\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">H</text><text x=\"32\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">Z</text><text x=\"42\" y=\"5\" text-anchor=\"middle\" font-size=\"3.5\">E</text><text x=\"22\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">7</text><text x=\"32\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"42\" y=\"17\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"22\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">3</text><text x=\"32\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">1</text><text x=\"42\" y=\"26\" text-anchor=\"middle\" font-size=\"5\">8</text><text x=\"22\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"32\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">2</text><text x=\"42\" y=\"37\" text-anchor=\"middle\" font-size=\"5\">4</text><text x=\"10\" y=\"26\" font-size=\"5\">−</text><path d=\"M10 29 H48\" stroke=\"#213b49\" stroke-width=\".5\"/></svg>",
+          "check": {
+            "kind": "arithmetic",
+            "a": 742,
+            "b": 318,
+            "op": "−"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Kontrolliere mit der Umkehroperation.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Prüfe dein Ergebnis von 742 − 318 mit einer Addition.",
+          "answer": "424 + 318 = 742",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Schriftliche Addition und Subtraktion dreistelliger Zahlen mit Stellenwerten.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

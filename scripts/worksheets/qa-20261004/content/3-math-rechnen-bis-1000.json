@@ -1,0 +1,111 @@
+{
+  "grade": 3,
+  "subject": "math",
+  "sourceId": "rechnen-bis-1000",
+  "goal": "Zerlege Zahlen für das Kopfrechnen: 360 + 170 = 360 + 100 + 70 = 530. Bei Minus kannst du ebenfalls in Schritten rechnen.",
+  "sections": [
+    {
+      "title": "Rechne im Kopf.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "340 + 200 =",
+          "answer": "540",
+          "check": {
+            "kind": "arithmetic",
+            "a": 340,
+            "b": 200,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "670 − 300 =",
+          "answer": "370",
+          "check": {
+            "kind": "arithmetic",
+            "a": 670,
+            "b": 300,
+            "op": "−"
+          }
+        },
+        {
+          "prompt": "480 + 70 =",
+          "answer": "550",
+          "check": {
+            "kind": "arithmetic",
+            "a": 480,
+            "b": 70,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "620 − 50 =",
+          "answer": "570",
+          "check": {
+            "kind": "arithmetic",
+            "a": 620,
+            "b": 50,
+            "op": "−"
+          }
+        },
+        {
+          "prompt": "395 + 5 =",
+          "answer": "400",
+          "check": {
+            "kind": "arithmetic",
+            "a": 395,
+            "b": 5,
+            "op": "+"
+          }
+        },
+        {
+          "prompt": "800 − 1 =",
+          "answer": "799",
+          "check": {
+            "kind": "arithmetic",
+            "a": 800,
+            "b": 1,
+            "op": "−"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Rechne in Schritten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "460 + 280 =",
+          "answer": "740; z. B. 460 + 200 + 80",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "730 − 260 =",
+          "answer": "470; z. B. 730 − 200 − 60",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Behauptung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Noa sagt: «580 + 250 = 730.» Stimmt das? Zeige eine Rechnung, die deine Antwort begründet.",
+          "answer": "Nein: 580 + 200 + 50 = 830.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Addition und Subtraktion bis 1000 mit Stellenwertzerlegung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

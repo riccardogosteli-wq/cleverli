@@ -1,0 +1,63 @@
+{
+  "grade": 3,
+  "subject": "math",
+  "sourceId": "diagramme-daten",
+  "goal": "24 Kinder geben je einen Schulweg an. Ein Kästchen steht hier für 2 Kinder. Lies deshalb immer zuerst die Legende.",
+  "sections": [
+    {
+      "title": "Lies das Diagramm.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Kinder kommen zu Fuss?",
+          "answer": "10 Kinder",
+          "svg": "<svg class=\"illustration data-chart\" style=\"width:150mm;height:42mm\" viewBox=\"0 0 150 42\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"7\" font-size=\"4\">Zu Fuss</text><rect class=\"data-square\" data-category=\"Zu Fuss\" x=\"40\" y=\"2\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Zu Fuss\" x=\"49\" y=\"2\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Zu Fuss\" x=\"58\" y=\"2\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Zu Fuss\" x=\"67\" y=\"2\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Zu Fuss\" x=\"76\" y=\"2\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><text x=\"0\" y=\"21\" font-size=\"4\">Velo</text><rect class=\"data-square\" data-category=\"Velo\" x=\"40\" y=\"16\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Velo\" x=\"49\" y=\"16\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Velo\" x=\"58\" y=\"16\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><text x=\"0\" y=\"35\" font-size=\"4\">Bus</text><rect class=\"data-square\" data-category=\"Bus\" x=\"40\" y=\"30\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Bus\" x=\"49\" y=\"30\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Bus\" x=\"58\" y=\"30\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/><rect class=\"data-square\" data-category=\"Bus\" x=\"67\" y=\"30\" width=\"7\" height=\"7\" fill=\"#bdcfd3\" stroke=\"#213b49\" stroke-width=\".4\"/></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele kommen mit dem Velo?",
+          "answer": "6 Kinder"
+        },
+        {
+          "prompt": "Wie viele kommen mit dem Bus?",
+          "answer": "8 Kinder"
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche die Daten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele mehr kommen zu Fuss als mit dem Velo?",
+          "answer": "4 Kinder",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele kommen mit Velo oder Bus?",
+          "answer": "14 Kinder",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe die Darstellung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Kinder sind insgesamt dargestellt? Wie viele Kästchen bräuchte man für 4 zusätzliche Kinder mit dem Bus?",
+          "answer": "24 Kinder; 2 zusätzliche Kästchen für die 4 Kinder.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.1",
+    "scope": "Bilddiagramme mit einer Skalierung von zwei Kindern je Symbol lesen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

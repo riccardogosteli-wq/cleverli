@@ -1,0 +1,74 @@
+{
+  "grade": 3,
+  "subject": "math",
+  "sourceId": "zahlen-bis-1000",
+  "goal": "H bedeutet Hunderter, Z Zehner und E Einer. Beispiel: 407 = 4 H + 0 Z + 7 E. Die Null hält den Platz für die fehlenden Zehner.",
+  "sections": [
+    {
+      "title": "Schreibe als Zahl.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "3 H + 5 Z + 2 E =",
+          "answer": "352"
+        },
+        {
+          "prompt": "8 H + 0 Z + 6 E =",
+          "answer": "806"
+        },
+        {
+          "prompt": "6 H + 4 Z + 0 E =",
+          "answer": "640"
+        },
+        {
+          "prompt": "9 H + 9 Z + 9 E =",
+          "answer": "999"
+        }
+      ]
+    },
+    {
+      "title": "Ordne und ergänze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Von klein nach gross: 608, 680, 608, 806",
+          "answer": "608, 608, 680, 806",
+          "wide": true
+        },
+        {
+          "prompt": "498, 499, __, __",
+          "answer": "500, 501"
+        },
+        {
+          "prompt": "790, 800, __, __",
+          "answer": "810, 820"
+        }
+      ]
+    },
+    {
+      "title": "Erkläre den Unterschied.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Zahl ist grösser: 506 oder 560? Erkläre mit Hundertern, Zehnern und Einern.",
+          "answer": "560. Beide haben 5 H. 560 hat 6 Z, 506 hat 0 Z; die Einer ändern den Vergleich nicht.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Schreibe 735 als Summe aus Hundertern, Zehnern und Einern.",
+          "answer": "700 + 30 + 5",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.2",
+    "scope": "Stellenwerte und Zahlenordnung im Zahlenraum bis 1000.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

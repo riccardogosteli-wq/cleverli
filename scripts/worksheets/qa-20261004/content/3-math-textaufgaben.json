@@ -1,0 +1,57 @@
+{
+  "grade": 3,
+  "subject": "math",
+  "sourceId": "textaufgaben",
+  "goal": "Notiere Rechnung und Antwortsatz. Bei zwei Schritten zeigst du beide Rechnungen. Prüfe, ob deine Einheit zur Frage passt.",
+  "sections": [
+    {
+      "title": "Rechne in einem Schritt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Schulbibliothek hat 248 Bücher. Sie bekommt 125 dazu. Wie viele sind es danach?",
+          "answer": "248 + 125 = 373 Bücher",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "8 Gruppen haben je 6 Kinder. Wie viele Kinder sind es insgesamt?",
+          "answer": "8 × 6 = 48 Kinder",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Löse die Aufgabe in zwei Schritten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Für ein Fest gibt es 5 Packungen mit je 8 Bechern. 27 Becher werden gebraucht. Wie viele bleiben übrig?",
+          "answer": "5 × 8 = 40; 40 − 27 = 13 Becher",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Welche Angabe fehlt?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Heft kostet 3 Fr. Lea kauft mehrere Hefte. Welche Angabe brauchst du, um den Gesamtpreis zu berechnen?",
+          "answer": "Die Anzahl Hefte.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.2",
+    "scope": "Ein- und zweischrittige Sachsituationen lösen; fehlende Angaben erkennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

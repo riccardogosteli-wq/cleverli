@@ -1,0 +1,111 @@
+{
+  "grade": 3,
+  "subject": "math",
+  "sourceId": "division",
+  "goal": "Division kann gleichmässiges Verteilen bedeuten: 24 : 6 = 4. Die Probe lautet 4 × 6 = 24. Hier gehen alle Divisionen ohne Rest auf.",
+  "sections": [
+    {
+      "title": "Teile.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "18 : 3 =",
+          "answer": "6",
+          "check": {
+            "kind": "quotient",
+            "a": 18,
+            "b": 3
+          }
+        },
+        {
+          "prompt": "28 : 4 =",
+          "answer": "7",
+          "check": {
+            "kind": "quotient",
+            "a": 28,
+            "b": 4
+          }
+        },
+        {
+          "prompt": "45 : 5 =",
+          "answer": "9",
+          "check": {
+            "kind": "quotient",
+            "a": 45,
+            "b": 5
+          }
+        },
+        {
+          "prompt": "42 : 6 =",
+          "answer": "7",
+          "check": {
+            "kind": "quotient",
+            "a": 42,
+            "b": 6
+          }
+        },
+        {
+          "prompt": "56 : 7 =",
+          "answer": "8",
+          "check": {
+            "kind": "quotient",
+            "a": 56,
+            "b": 7
+          }
+        },
+        {
+          "prompt": "72 : 8 =",
+          "answer": "9",
+          "check": {
+            "kind": "quotient",
+            "a": 72,
+            "b": 8
+          }
+        }
+      ]
+    },
+    {
+      "title": "Rechne und mache die Malprobe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "63 : 9 =",
+          "answer": "7; Probe: 7 × 9 = 63",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "36 : 4 =",
+          "answer": "9; Probe: 9 × 4 = 36",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Verteilen und Gruppen bilden.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "32 Karten werden gleichmässig an 4 Kinder verteilt. Wie viele bekommt jedes?",
+          "answer": "32 : 4 = 8 Karten pro Kind",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "32 Karten werden in Gruppen mit je 8 Karten gelegt. Wie viele Gruppen entstehen?",
+          "answer": "32 : 8 = 4 Gruppen",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Ganzzahlige Division ohne Rest und Umkehroperation im Einmaleins.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

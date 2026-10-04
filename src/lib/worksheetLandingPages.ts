@@ -113,7 +113,7 @@ export const worksheetLandingPages: WorksheetLandingPage[] = [
       { label: "Ein Halb", text: "1 von 2 gleich grossen Teilen ist 1/2." },
       { label: "Drei Viertel", text: "3 von 4 gleich grossen Teilen sind 3/4." },
     ],
-    practises: ["Bruchteile in Bildern erkennen", "Zähler und Nenner zuordnen", "Einfache Bruchteile von Mengen bestimmen"],
+    practises: ["Bruchteile in Bildern erkennen", "Ausgewählte und gesamte Teile unterscheiden", "Einfache Bruchteile von Mengen bestimmen"],
     premiumTopics: ["Zahlen bis 1000", "Schriftlich rechnen", "Fläche und Umfang"],
     exerciseHref: "/learn/3/math/brueche",
     exerciseLabel: "Brüche online üben",
@@ -125,7 +125,7 @@ export const worksheetLandingPages: WorksheetLandingPage[] = [
     previewAlt: "Vorschau des Cleverli Brüche Arbeitsblatts für die 3. Klasse",
     curriculumCode: "MA.1.A.1",
     curriculumScope: "Einfache Bruchteile an gleich grossen Teilflächen und Mengen erkennen.",
-    curriculumUrl: "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1",
+    curriculumUrl: "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|1",
   },
   {
     slug: "schriftlich-multiplizieren-4-klasse",

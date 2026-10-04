@@ -1,0 +1,69 @@
+{
+  "grade": 3,
+  "subject": "math",
+  "sourceId": "geometrie",
+  "goal": "Eine ebene Figur liegt flach, ein Körper hat drei Dimensionen. Ein Würfel hat 6 quadratische Flächen, 12 Kanten und 8 Ecken.",
+  "sections": [
+    {
+      "title": "Erkenne ebene Figuren.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Benenne die linke und die rechte Figur.",
+          "answer": "Links Dreieck; rechts Rechteck.",
+          "svg": "<svg class=\"illustration\" style=\"width:100mm;height:25mm\" viewBox=\"0 0 100 25\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"3,22 18,2 33,22\" fill=\"#deebed\" stroke=\"#213b49\"/><rect x=\"45\" y=\"3\" width=\"45\" height=\"19\" fill=\"#deebed\" stroke=\"#213b49\"/></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele Ecken hat das Dreieck?",
+          "answer": "3"
+        },
+        {
+          "prompt": "Wie viele rechte Winkel hat das Rechteck?",
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Körper.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Ball ist ungefähr welcher geometrische Körper?",
+          "answer": "Kugel"
+        },
+        {
+          "prompt": "Ein gewöhnlicher Spielwürfel ist welcher Körper?",
+          "answer": "Würfel"
+        },
+        {
+          "prompt": "Ein Schuhkarton ist ungefähr welcher Körper?",
+          "answer": "Quader"
+        },
+        {
+          "prompt": "Wie viele Ecken hat eine Kugel?",
+          "answer": "0"
+        }
+      ]
+    },
+    {
+      "title": "Zeichne und beschreibe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne ein Quadrat und ein Rechteck, das kein Quadrat ist. Was ist bei den Seitenlängen anders?",
+          "answer": "Quadrat: alle 4 Seiten gleich lang. Beim gezeichneten anderen Rechteck: gegenüberliegende Seiten gleich lang, benachbarte verschieden lang. Beide haben 4 rechte Winkel.",
+          "wide": true,
+          "drawingHeight": 44
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.2.A.1",
+    "scope": "Ebene Figuren und Körper unterscheiden und mit Eigenschaften beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "04.10.2026"
+}

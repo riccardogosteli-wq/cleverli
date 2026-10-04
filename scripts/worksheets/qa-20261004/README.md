@@ -1,6 +1,6 @@
 # Reviewed worksheet sources, 4 October 2026
 
-Grade 1 Mathematics: 13 topics,111 prompts. Grade 1 German: 11 topics,reviewed separately. Grade 1 NMG:12 topics,88 prompts,reviewed separately. Grade 2 Mathematics:13 topics,including4 preserved illustrated templates. Grade2German:11 topics,84 prompts,reviewed separately. Grade2NMG:11 topics,68 prompts,reviewed separately. Other grades remain unreviewed in this revision.
+Grade 1 Mathematics: 13 topics,111 prompts. Grade 1 German: 11 topics,reviewed separately. Grade 1 NMG:12 topics,88 prompts,reviewed separately. Grade 2 Mathematics:13 topics,including4 preserved illustrated templates. Grade2German:11 topics,84 prompts,reviewed separately. Grade2NMG:11 topics,68 prompts,reviewed separately. Grade3Math:10topics,78prompts,reviewed separately. Other grade/subjectunitsremainunreviewed in this revision.
 
 Source JSON, exact logo and renderer are versioned here. Run `python3 scripts/worksheets/qa-20261004/render-reviewed.py /new/output/path` from the app repository to create HTML pairs and jobs.json without replacing originals. Render these jobs using established Playwright/Chrome A4,pageRanges1/2,printBackground,tagged PDF settings. Always perform fresh PDF/layout/content QA after regeneration.
 
@@ -11,3 +11,5 @@ Grade2Math:6 targeted clarity/layout improvements among9 structured sheets;four 
 Grade2German:clear whole-word article responses,shared sentence-replacement instructions,common familiar word parts without mandatory technical terminology,six storywriting rows,and natural Wovon/Von reading question forms. Two question/response forms changed,story facts retained.84mainprompts,22PDFpagescolour/grayreviewed,39 independent word/orderingchecks. Printed adult hearing script checked;no generated audio/playback verification claimed.
 
 Grade2NMG:four actual observation/drawing areas,concrete Znüni choices instead of nutrient explanation,natural sense verbs accepted,optional invisible-vapour term,simpler water/livingthingtitles. Quarter-hour hand geometry and everySeptember2026calendarweekday verified from renderedSVG;warnings/adultsupervision/privacy preserved.22 actualPDFpagescolour/grayscaleinspected. No physical print/experiments or externalteacherreview claimed.
+
+Grade3Math:simplevisualbruchteile,20checkedfraction/column/grid/scaledchartdiagrams,42independentrenderedrecomputations,actualgeometrydrawingarea,preservedbothcarryrules. Correctanswersretained. PublicfractionexampleandLP21referencealigned.20actualPDFpagescolour/grayscaleinspected.
