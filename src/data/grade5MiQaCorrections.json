@@ -77,7 +77,13 @@
       "altAnswers": [
         "Anonymität",
         "persönlichen Daten"
-      ]
+      ],
+      "question": "Nur nötige Daten und keine Namen zu sammeln hilft, die ___ zu schützen.",
+      "hints": [
+        "Auch andere Angaben können eine Person erkennbar machen.",
+        "Datensparsamkeit bedeutet: nicht mehr Angaben sammeln als nötig."
+      ],
+      "spokenPrompt": "Nur nötige Daten und keine Namen zu sammeln hilft, die … zu schützen. Ergänze die fehlende Antwort."
     },
     "mi5-daten-diagramme-5-fb7": {
       "altAnswers": [
@@ -104,7 +110,25 @@
     "mi5-sicher-online-5-me2": {
       "question": "Finde jeweils zwei Karten mit genau demselben Text.",
       "spokenPrompt": "Finde jeweils zwei Karten mit genau demselben Text.",
-      "verbatimSpeech": true
+      "verbatimSpeech": true,
+      "pairs": [
+        {
+          "id": "mi5-sicher-online-5-me2-p1",
+          "label": "Unbekannter Link: prüfen"
+        },
+        {
+          "id": "mi5-sicher-online-5-me2-p2",
+          "label": "Passwortforderung im Chat: nicht senden"
+        },
+        {
+          "id": "mi5-sicher-online-5-me2-p3",
+          "label": "Gerät meldet Update: Erwachsene fragen"
+        },
+        {
+          "id": "mi5-sicher-online-5-me2-p4",
+          "label": "Daten verloren: Backup nutzen"
+        }
+      ]
     },
     "mi5-daten-diagramme-5-me1": {
       "question": "Finde jeweils zwei Karten mit genau demselben Text.",
@@ -118,19 +142,19 @@
       "pairs": [
         {
           "id": "mi5-daten-diagramme-5-me2-p1",
-          "label": "Anzahl Velos: Zahl"
+          "label": "Velos: gezählte Anzahl"
         },
         {
           "id": "mi5-daten-diagramme-5-me2-p2",
-          "label": "Lieblingsfach: Kategorie"
+          "label": "Lieblingsfach: gewählte Kategorie"
         },
         {
           "id": "mi5-daten-diagramme-5-me2-p3",
-          "label": "Geburtsdatum: persönlich"
+          "label": "Geburtsdatum: persönliches Datum"
         },
         {
           "id": "mi5-daten-diagramme-5-me2-p4",
-          "label": "Gemessene Lufttemperatur: Messung"
+          "label": "Lufttemperatur: Messwert"
         }
       ]
     },
@@ -138,40 +162,257 @@
       "pairs": [
         {
           "id": "mi5-daten-diagramme-5-ma2-l1",
-          "label": "Anzahl Velos"
+          "label": "Anzahl Velos: 12"
         },
         {
           "id": "mi5-daten-diagramme-5-ma2-r1",
-          "label": "Zahl"
+          "label": "gezählte Anzahl"
         },
         {
           "id": "mi5-daten-diagramme-5-ma2-l2",
-          "label": "Lieblingsfach"
+          "label": "Lieblingsfach: Mathematik"
         },
         {
           "id": "mi5-daten-diagramme-5-ma2-r2",
-          "label": "Kategorie"
+          "label": "gewählte Kategorie"
         },
         {
           "id": "mi5-daten-diagramme-5-ma2-l3",
-          "label": "Geburtsdatum"
+          "label": "Geburtsdatum eines Kindes"
         },
         {
           "id": "mi5-daten-diagramme-5-ma2-r3",
-          "label": "persönlich"
+          "label": "persönliches Datum"
         },
         {
           "id": "mi5-daten-diagramme-5-ma2-l4",
-          "label": "Gemessene Lufttemperatur"
+          "label": "Lufttemperatur: 20 °C"
         },
         {
           "id": "mi5-daten-diagramme-5-ma2-r4",
-          "label": "Messung"
+          "label": "Messwert eines Thermometers"
         }
       ],
-      "question": "Ordne jedem Beispiel die hier passende Beschreibung zu.",
-      "spokenPrompt": "Ordne jedem Beispiel die hier passende Beschreibung zu.",
-      "verbatimSpeech": true
+      "question": "Ordne jedem Beispiel die genau passende Beschreibung zu.",
+      "spokenPrompt": "Ordne jedem Beispiel die genau passende Beschreibung zu.",
+      "verbatimSpeech": true,
+      "hints": [
+        "Eine Angabe kann mehrere Merkmale haben. Suche hier die genaueste Beschreibung.",
+        "Unterscheide Zählen, Kategorien, persönliche Angaben und Messgeräte."
+      ]
+    },
+    "mi5-sicher-online-5-ws1": {
+      "hints": [
+        "Suche waagrecht von links nach rechts.",
+        "Beginne mit dem längsten Wort."
+      ]
+    },
+    "mi5-daten-diagramme-5-ws1": {
+      "hints": [
+        "Suche waagrecht von links nach rechts.",
+        "Beginne mit dem längsten Wort."
+      ]
+    },
+    "mi5-sicher-online-5-mc2": {
+      "answer": "Mit einem gestohlenen Passwort könnten Fremde sonst mehrere Konten öffnen.",
+      "options": [
+        "Mit einem gestohlenen Passwort könnten Fremde sonst mehrere Konten öffnen.",
+        "Weil Geräte sonst zu hell werden",
+        "Weil Websites Farben verwechseln",
+        "Weil man dann keine Dateien sieht"
+      ],
+      "hints": [
+        "Denke an das Risiko, wenn ein Passwort bekannt wird.",
+        "Ein eigenes Passwort pro Konto begrenzt dieses Risiko."
+      ]
+    },
+    "mi5-sicher-online-5-dd1": {
+      "question": "Sortiere die Beispielpasswörter nach stärker und schwach. Verwende diese Beispiele niemals für dein eigenes Konto.",
+      "dragItems": [
+        {
+          "id": "lang",
+          "label": "Wolke!Birne7Zug"
+        },
+        {
+          "id": "name",
+          "label": "Lena2015"
+        },
+        {
+          "id": "kurz",
+          "label": "123456"
+        },
+        {
+          "id": "satz",
+          "label": "Tulpe!Wolke9KieselZebra"
+        }
+      ],
+      "hints": [
+        "Lang und unvorhersehbar ist besser als ein Name oder eine einfache Zahlenfolge.",
+        "Ein veröffentlichtes Beispiel ist kein eigenes sicheres Passwort."
+      ],
+      "spokenPrompt": "Sortiere die Beispielpasswörter nach stärker und schwach. Verwende diese Beispiele niemals für dein eigenes Konto."
+    },
+    "mi5-sicher-online-5-ma2": {
+      "pairs": [
+        {
+          "id": "mi5-sicher-online-5-ma2-l1",
+          "label": "Unbekannter Link"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma2-r1",
+          "label": "prüfen"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma2-l2",
+          "label": "Nachricht fordert Passwort"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma2-r2",
+          "label": "nicht senden"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma2-l3",
+          "label": "Gerät meldet Update"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma2-r3",
+          "label": "Erwachsene fragen"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma2-l4",
+          "label": "Daten verloren"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma2-r4",
+          "label": "Backup nutzen"
+        }
+      ]
+    },
+    "mi5-sicher-online-5-ma3": {
+      "pairs": [
+        {
+          "id": "mi5-sicher-online-5-ma3-l1",
+          "label": "Zeitdruck"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma3-r1",
+          "label": "ruhig prüfen"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma3-l2",
+          "label": "Nachricht fordert Passwort"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma3-r2",
+          "label": "nicht senden"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma3-l3",
+          "label": "unbekannte App"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma3-r3",
+          "label": "Quelle prüfen"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma3-l4",
+          "label": "komischer Link"
+        },
+        {
+          "id": "mi5-sicher-online-5-ma3-r4",
+          "label": "Adresse anschauen"
+        }
+      ]
+    },
+    "mi5-sicher-online-5-sr1": {
+      "question": "Formuliere drei Regeln für ein starkes Passwort. Schreibe kein echtes Passwort auf.",
+      "answer": "Ich nutze ein langes Passwort aus zufälligen Wörtern. Ich verwende keinen Namen oder Geburtstag. Ich halte es geheim und nutze für jedes Konto ein eigenes Passwort.",
+      "spokenPrompt": "Formuliere drei Regeln für ein starkes Passwort. Schreibe kein echtes Passwort auf."
+    },
+    "mi5-sicher-online-5-sr2": {
+      "answer": "Ich lasse mich nicht hetzen. Ich prüfe Absender und Linkziel über einen bekannten, sicheren Weg. Ich gebe keine privaten Daten ein und frage bei Unsicherheit eine erwachsene Vertrauensperson."
+    },
+    "mi5-daten-diagramme-5-mc7": {
+      "question": "Welche Angabe passt zu einer datensparsamen Klassenumfrage zum Schulweg?",
+      "hints": [
+        "Sammle nur Angaben, die du für die Frage brauchst.",
+        "Gruppenzahlen brauchen keine Namen, Adressen oder Passwörter."
+      ],
+      "spokenPrompt": "Welche Angabe passt zu einer datensparsamen Klassenumfrage zum Schulweg?"
+    },
+    "mi5-daten-diagramme-5-dd2": {
+      "question": "Sortiere sorgfältige und nachlässige Tabellenarbeit.",
+      "dragItems": [
+        {
+          "id": "titel",
+          "label": "klare Überschrift"
+        },
+        {
+          "id": "mix",
+          "label": "Kategorien mischen"
+        },
+        {
+          "id": "check",
+          "label": "Werte prüfen"
+        },
+        {
+          "id": "leer",
+          "label": "fehlende Werte einfach erfinden"
+        }
+      ],
+      "dropZones": [
+        {
+          "id": "good",
+          "label": "Sorgfältig"
+        },
+        {
+          "id": "bad",
+          "label": "Nachlässig"
+        }
+      ],
+      "hints": [
+        "Prüfe die Werte und kennzeichne fehlende Angaben, statt sie zu erfinden.",
+        "Klare Kategorien und Überschriften helfen beim Auswerten."
+      ],
+      "spokenPrompt": "Sortiere sorgfältige und nachlässige Tabellenarbeit."
+    },
+    "mi5-daten-diagramme-5-dd3": {
+      "question": "Welche Fragen passen zu einer Klassenumfrage über Schulweg und Lieblingsfach, welche nicht?",
+      "dropZones": [
+        {
+          "id": "good",
+          "label": "Passt zur Umfrage"
+        },
+        {
+          "id": "sensitive",
+          "label": "Nicht dafür sammeln"
+        }
+      ],
+      "hints": [
+        "Sammle nur Angaben, die für das Thema nötig sind.",
+        "Adressen und Passwörter braucht diese Umfrage nicht."
+      ],
+      "spokenPrompt": "Welche Fragen passen zu einer Klassenumfrage über Schulweg und Lieblingsfach, welche nicht?"
+    },
+    "mi5-daten-diagramme-5-sr1": {
+      "question": "Plane mit deiner Lehrperson eine datensparsame Klassenumfrage. Nenne zwei geeignete Angaben und erkläre, warum keine Namen nötig sind.",
+      "answer": "Wir könnten zählen, wie viele Kinder mit dem Velo kommen und wie viele Mathematik als Lieblingsfach nennen. Für diese Gruppenzahlen brauchen wir keine Namen. Wir sammeln nur nötige Angaben und prüfen mit der Lehrperson, dass niemand durch zusätzliche Angaben erkennbar wird.",
+      "reviewCriteria": [
+        "Ich nenne zwei geeignete Angaben.",
+        "Ich erkläre, warum für Gruppenzahlen keine Namen nötig sind.",
+        "Ich plane datensparsam mit der Lehrperson."
+      ],
+      "spokenPrompt": "Plane mit deiner Lehrperson eine datensparsame Klassenumfrage. Nenne zwei geeignete Angaben und erkläre, warum keine Namen nötig sind."
+    },
+    "mi5-daten-diagramme-5-sr2": {
+      "question": "Ein Diagramm trägt den Titel «Fast alle kommen mit dem Velo». Die Tabelle nennt 4 von 20 Kindern. Warum weckt der Titel Zweifel, und was prüfst du zusätzlich?",
+      "answer": "4 von 20 ist ein Fünftel, nicht fast alle. Ich vergleiche den Titel mit den Zahlen und prüfe die Skala und Datenquelle. Bevor ich den Schluss übernehme, prüfe ich auch, wie die Daten gesammelt wurden.",
+      "reviewCriteria": [
+        "Ich vergleiche die Aussage mit 4 von 20.",
+        "Ich prüfe Titel, Skala und Datenquelle.",
+        "Ich begründe, warum «fast alle» nicht zu den Zahlen passt."
+      ],
+      "spokenPrompt": "Ein Diagramm trägt den Titel «Fast alle kommen mit dem Velo». Die Tabelle nennt 4 von 20 Kindern. Warum weckt der Titel Zweifel, und was prüfst du zusätzlich?"
     }
   }
 }
