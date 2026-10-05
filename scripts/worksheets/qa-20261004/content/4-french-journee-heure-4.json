@@ -1,0 +1,72 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "journee-heure-4",
+  "goal": "Léa se lève à sept heures. Elle prend son petit-déjeuner à sept heures et demie. À huit heures, elle va à l’école. Dieser Tagesablauf ist erfunden. «Et demie» bedeutet eine halbe Stunde nach der genannten Stunde.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wann steht Léa auf?",
+          "answer": "Um sieben Uhr."
+        },
+        {
+          "prompt": "Wann frühstückt sie?",
+          "answer": "Um halb acht / 7.30 Uhr."
+        },
+        {
+          "prompt": "Wann geht sie zur Schule?",
+          "answer": "Um acht Uhr.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe als digitale Uhrzeit am Vormittag.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "neuf heures",
+          "answer": "09.00"
+        },
+        {
+          "prompt": "dix heures et demie",
+          "answer": "10.30"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine Uhrzeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe auf Französisch: «Es ist acht Uhr.» Nutze «Il est ...».",
+          "answer": "Il est huit heures.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Schreibe den ganzen Satz «Je vais à l’école à ...». Setze die französischen Wörter für «neun Uhr» ein.",
+          "answer": "Je vais à l’école à neuf heures.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Zeitangaben und einen kurzen Tagesablauf verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

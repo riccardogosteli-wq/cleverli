@@ -4174,20 +4174,26 @@
     "topicId": "journee-heure-4",
     "title": "Ma journée et l'heure",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Zeitangaben und einen kurzen Tagesablauf verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/journee-heure-4-arbeitsblatt.pdf",
-        "sha256": "46288188892217a8a5b3a2bf769fd058c14d4f9646c7c88067b032a34af91c11",
-        "bytes": 858544
+        "path": "revisions/20261004/pdfs/4/french/journee-heure-4-arbeitsblatt.pdf",
+        "sha256": "775d238bf09f9ba256aa591f7437816873c28809b4bd929e264834ddec553813",
+        "bytes": 858192
       },
       "solution": {
-        "path": "pdfs/4/french/journee-heure-4-loesungen.pdf",
-        "sha256": "3ceeee592c013422031f5014f13ae4aa2aa9a37d38bf44d0ec8e7d1c664030e9",
-        "bytes": 882815
+        "path": "revisions/20261004/pdfs/4/french/journee-heure-4-loesungen.pdf",
+        "sha256": "bdff0ac37c03bb5f05d2a6a633d0c4151f10d1fb4d4d9713eab5ce6cfd060821",
+        "bytes": 883497
       }
     }
   },
@@ -4198,20 +4204,20 @@
     "topicId": "maison-position-4",
     "title": "La maison et les positions",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.B.1",
       "scope": "Raum- und Positionswörter in einfachen Sätzen verwenden. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/maison-position-4-arbeitsblatt.pdf",
-        "sha256": "3d62df324b042e3c0e68960f22dcf54012ddbbeb2f4a04fbf9b60b79a0397905",
-        "bytes": 856732
+        "path": "revisions/20261004/pdfs/4/french/maison-position-4-arbeitsblatt.pdf",
+        "sha256": "6616692149f6b1ba8bc9ccce6ae3e42b97eb5428cc67f35c116eeffb3f210bb3",
+        "bytes": 856460
       },
       "solution": {
-        "path": "pdfs/4/french/maison-position-4-loesungen.pdf",
-        "sha256": "32db881a4ff823bd3e869bbcf295814eeecc0e58fc6f867a019d6331a7f18256",
-        "bytes": 881833
+        "path": "revisions/20261004/pdfs/4/french/maison-position-4-loesungen.pdf",
+        "sha256": "fa2a907f3c1b3e45b22df4d153075034430ed61f9e2ea1b59f4a557a28c51918",
+        "bytes": 881196
       }
     }
   },
@@ -4222,20 +4228,20 @@
     "topicId": "ecole-horaire-4",
     "title": "L'école et l'horaire",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Einem einfachen Stundenplan Informationen entnehmen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/ecole-horaire-4-arbeitsblatt.pdf",
-        "sha256": "bb7c3b97ebfa889b9ad76017d650098f44e4e7509c7c793c0a8a7b7023b35fc9",
-        "bytes": 862245
+        "path": "revisions/20261004/pdfs/4/french/ecole-horaire-4-arbeitsblatt.pdf",
+        "sha256": "16ea77b36378987d87d3a5e4a5455372830d7a9a0ef2508e95546521dc52fe9c",
+        "bytes": 861947
       },
       "solution": {
-        "path": "pdfs/4/french/ecole-horaire-4-loesungen.pdf",
-        "sha256": "e4d32792739eb12d6c4fe0a5964f3e327c7d4692fd63d2b6ba9606e65d77cc6f",
-        "bytes": 890355
+        "path": "revisions/20261004/pdfs/4/french/ecole-horaire-4-loesungen.pdf",
+        "sha256": "ca27a8871fbb32224937af2aceb2da786a2a3210566cb639eba46bd9b8418c2e",
+        "bytes": 889984
       }
     }
   },
@@ -4246,20 +4252,20 @@
     "topicId": "loisirs-capacites-4",
     "title": "Les loisirs et les capacités",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.D.1",
       "scope": "Einfache Vorlieben und Fähigkeiten mit Verbmustern ausdrücken. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/loisirs-capacites-4-arbeitsblatt.pdf",
-        "sha256": "147968448ff69ea3b6fd4e924ffd1573acf0c0619af519fdc029eec34167b53c",
-        "bytes": 859690
+        "path": "revisions/20261004/pdfs/4/french/loisirs-capacites-4-arbeitsblatt.pdf",
+        "sha256": "8717d7bbc6d9c49b81ade2512757d1e1475c4e783198fe29f0aae4ead64f80e0",
+        "bytes": 859400
       },
       "solution": {
-        "path": "pdfs/4/french/loisirs-capacites-4-loesungen.pdf",
-        "sha256": "ce964d6edb0a3abbb1cf8fb448de32d4bd6663a61ec7cb3a14a94e46c4c3162d",
-        "bytes": 886457
+        "path": "revisions/20261004/pdfs/4/french/loisirs-capacites-4-loesungen.pdf",
+        "sha256": "218bb3b74c9ff9b4a4bb2bf100b26dbb190ed560dd26741f861dbe4000e23964",
+        "bytes": 886017
       }
     }
   },
@@ -4270,20 +4276,20 @@
     "topicId": "achats-prix-4",
     "title": "Les achats et les prix",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.4.A.1",
       "scope": "Preise verstehen und eine einfache höfliche Bestellung schreiben. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/achats-prix-4-arbeitsblatt.pdf",
-        "sha256": "d5cfda44ba0348312570f8ed4838928864c9e38293d48f57afd38ff8f06d1844",
-        "bytes": 861285
+        "path": "revisions/20261004/pdfs/4/french/achats-prix-4-arbeitsblatt.pdf",
+        "sha256": "50e30976739313d2429b353cc10043b97e6dd9c94ec3277e1eb93dc3ac9a429a",
+        "bytes": 861002
       },
       "solution": {
-        "path": "pdfs/4/french/achats-prix-4-loesungen.pdf",
-        "sha256": "e754d640fd16dc941c27c355593a1f983890e5b1a75f6c51df425edb1814aa3d",
-        "bytes": 886637
+        "path": "revisions/20261004/pdfs/4/french/achats-prix-4-loesungen.pdf",
+        "sha256": "5d194b2748fd4989e0536e5558df9992b6096bbf15ef08e93553f0210d1fabe1",
+        "bytes": 885994
       }
     }
   },
@@ -4294,20 +4300,20 @@
     "topicId": "meteo-saisons-4",
     "title": "La météo et les saisons",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Wetter- und Jahreszeitenangaben aus kurzen Texten verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/meteo-saisons-4-arbeitsblatt.pdf",
-        "sha256": "bcfd9c57c64febe347bf028a3822ab108343d22c973f0e680935efe7fffe17d3",
-        "bytes": 858305
+        "path": "revisions/20261004/pdfs/4/french/meteo-saisons-4-arbeitsblatt.pdf",
+        "sha256": "2e2c0e71eec8e70677a7ecce6868c15556c1f80e17ad52fe0836dc80022bec01",
+        "bytes": 858547
       },
       "solution": {
-        "path": "pdfs/4/french/meteo-saisons-4-loesungen.pdf",
-        "sha256": "f92131d3f4f7ab25a61dd54d6ed8e03b48e719058510268c3307cf5777906162",
-        "bytes": 885818
+        "path": "revisions/20261004/pdfs/4/french/meteo-saisons-4-loesungen.pdf",
+        "sha256": "850fbf1016e80663b6cbc0605b11e1dc95b8586fb7e0cc5178e6c1fb25a5b786",
+        "bytes": 902611
       }
     }
   },
@@ -4318,20 +4324,20 @@
     "topicId": "ville-directions-4",
     "title": "En ville et les directions",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Einfache schriftliche Weganweisungen verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/ville-directions-4-arbeitsblatt.pdf",
-        "sha256": "566dc9fdf6508c543a143411150d366de5cd21e3f1fd80d53cd0605f378d718e",
-        "bytes": 858206
+        "path": "revisions/20261004/pdfs/4/french/ville-directions-4-arbeitsblatt.pdf",
+        "sha256": "50fa7ec961d32feeb8371ff17c80cd870838d2118657a64170e6d4a0d061feeb",
+        "bytes": 857903
       },
       "solution": {
-        "path": "pdfs/4/french/ville-directions-4-loesungen.pdf",
-        "sha256": "c0d117d58fe489c47190a16ace3c0590709e8af1f9bb8eef85aa5fddf63ba35f",
-        "bytes": 882292
+        "path": "revisions/20261004/pdfs/4/french/ville-directions-4-loesungen.pdf",
+        "sha256": "b8d0ea3a01f42979ffbbac6883bb51ea0742f1a181db440f3f23102ffac38844",
+        "bytes": 881920
       }
     }
   },
@@ -4342,20 +4348,20 @@
     "topicId": "messages-invitations-4",
     "title": "Les messages et les invitations",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.4.A.1",
       "scope": "Einer kurzen Einladung Angaben entnehmen und mit Hilfen antworten. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/messages-invitations-4-arbeitsblatt.pdf",
-        "sha256": "f016f0b6fae3512845c92b4a7379e1a94398a4c19acc6edef591530409523257",
-        "bytes": 861647
+        "path": "revisions/20261004/pdfs/4/french/messages-invitations-4-arbeitsblatt.pdf",
+        "sha256": "536e25e49e6ede585a6416b6f7a854471bdd75b1c881a99535649f708f6ac7f8",
+        "bytes": 861347
       },
       "solution": {
-        "path": "pdfs/4/french/messages-invitations-4-loesungen.pdf",
-        "sha256": "27ce8c7a8db3ca632bd0ad742ffeabab598318fcf2c40e6bc48fd7987ca7e848",
-        "bytes": 887509
+        "path": "revisions/20261004/pdfs/4/french/messages-invitations-4-loesungen.pdf",
+        "sha256": "f4d0189cc8d781bb1127d7feedb9cbc6dc6706cc33926b5ec40832bb25cc5706",
+        "bytes": 887139
       }
     }
   },
@@ -4366,20 +4372,20 @@
     "topicId": "histoires-cultures-4",
     "title": "Histoires et cultures francophones",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Eine kurze frankophone Alltagserzählung verstehen, ohne daraus Stereotype abzuleiten. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/french/histoires-cultures-4-arbeitsblatt.pdf",
-        "sha256": "21d0262f53653ead3b00360b21b74f6b9db4fbd00d555180edd328f7e274d53c",
-        "bytes": 862390
+        "path": "revisions/20261004/pdfs/4/french/histoires-cultures-4-arbeitsblatt.pdf",
+        "sha256": "bdf07c2e1de98452279c76523352675ef86ef60bc28962448f30cd5307ac598c",
+        "bytes": 862095
       },
       "solution": {
-        "path": "pdfs/4/french/histoires-cultures-4-loesungen.pdf",
-        "sha256": "be09153ea55d65572a331249c1a29190ae7ad10efb3c1d9378f31bb27e31af31",
-        "bytes": 888246
+        "path": "revisions/20261004/pdfs/4/french/histoires-cultures-4-loesungen.pdf",
+        "sha256": "4376a0da97e9835ca39292724a3d41e176d3f417ce8576f8a3dd159129b10508",
+        "bytes": 887882
       }
     }
   },

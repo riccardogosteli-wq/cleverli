@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "ville-directions-4",
+  "goal": "Tourne à gauche = Biege links ab. Tourne à droite = Biege rechts ab. Va tout droit = Gehe geradeaus. La gare ist der Bahnhof, la bibliothèque die Bibliothek. Übe auf Papier, nicht allein im Strassenverkehr.",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "à gauche",
+          "answer": "links"
+        },
+        {
+          "prompt": "à droite",
+          "answer": "rechts"
+        },
+        {
+          "prompt": "la gare",
+          "answer": "der Bahnhof"
+        },
+        {
+          "prompt": "la bibliothèque",
+          "answer": "die Bibliothek"
+        }
+      ]
+    },
+    {
+      "title": "Lies den Weg.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Va tout droit. Tourne à gauche. La gare est à droite.» Auf welcher Seite ist am Ende der Bahnhof?",
+          "answer": "Rechts.",
+          "wide": true
+        },
+        {
+          "prompt": "Welche Richtungsänderung wird vorher genannt?",
+          "answer": "Links abbiegen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine Weganweisung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe auf Französisch: «Gehe geradeaus. Biege rechts ab.»",
+          "answer": "Va tout droit. Tourne à droite.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Einfache schriftliche Weganweisungen verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

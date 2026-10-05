@@ -1,0 +1,60 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "messages-invitations-4",
+  "goal": "Salut Camille! Tu viens à ma fête samedi à quinze heures? Nous jouons dans le jardin. À bientôt! Léa. Die Einladung ist erfunden; du musst keine privaten Kontaktdaten angeben.",
+  "sections": [
+    {
+      "title": "Lies die Einladung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wer lädt ein?",
+          "answer": "Léa."
+        },
+        {
+          "prompt": "Wer wird eingeladen?",
+          "answer": "Camille."
+        },
+        {
+          "prompt": "An welchem Wochentag?",
+          "answer": "Samstag / samedi."
+        },
+        {
+          "prompt": "Um welche Uhrzeit?",
+          "answer": "15 Uhr / quinze heures."
+        }
+      ]
+    },
+    {
+      "title": "Verstehe die Pläne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was machen die Kinder laut Einladung und wo?",
+          "answer": "Sie spielen im Garten.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Antworte freundlich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe eine kurze Zusage auf Französisch. Nutze «Salut Léa!», «Oui, je viens.» und «Merci!».",
+          "answer": "Salut Léa! Oui, je viens. Merci! Gleichwertige passende Zusagen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.4.A.1",
+    "scope": "Einer kurzen Einladung Angaben entnehmen und mit Hilfen antworten. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

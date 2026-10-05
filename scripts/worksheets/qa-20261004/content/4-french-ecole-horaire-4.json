@@ -1,0 +1,62 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "ecole-horaire-4",
+  "goal": "Emploi du temps de mardi: 8 h français, 9 h mathématiques, 10 h musique. Am Dienstag finden in diesem erfundenen Stundenplan Französisch, Mathematik und Musik statt. «J’aime ...» bedeutet «Ich mag ...».",
+  "sections": [
+    {
+      "title": "Lies den Stundenplan.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Quel jour? An welchem Tag?",
+          "answer": "Mardi / Dienstag.",
+          "wide": true
+        },
+        {
+          "prompt": "Was findet um 9 Uhr statt?",
+          "answer": "Mathématiques / Mathematik.",
+          "wide": true
+        },
+        {
+          "prompt": "Wann findet Musik statt?",
+          "answer": "À dix heures / um zehn Uhr.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die französischen Wörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Französisch",
+          "answer": "français"
+        },
+        {
+          "prompt": "Musik",
+          "answer": "musique"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine erfundene Vorliebe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nutze «J’aime ...» mit les mathématiques oder la musique. Ergänze einen Satz: «Le mardi, j’ai ...» mit français.",
+          "answer": "Beispiel: J’aime la musique. Le mardi, j’ai français. Auch die andere vorgegebene Vorliebe gilt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Einem einfachen Stundenplan Informationen entnehmen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

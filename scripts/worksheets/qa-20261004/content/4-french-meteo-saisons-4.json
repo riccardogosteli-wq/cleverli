@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "meteo-saisons-4",
+  "goal": "Il fait beau = Es ist schönes Wetter. Il pleut = Es regnet. Il neige = Es schneit. Jahreszeiten: le printemps, l’été, l’automne, l’hiver. Das Wetter kann innerhalb einer Jahreszeit wechseln.",
+  "sections": [
+    {
+      "title": "Übersetze auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Il pleut.",
+          "answer": "Es regnet."
+        },
+        {
+          "prompt": "Il neige.",
+          "answer": "Es schneit."
+        },
+        {
+          "prompt": "le printemps",
+          "answer": "der Frühling"
+        },
+        {
+          "prompt": "l’hiver",
+          "answer": "der Winter"
+        }
+      ]
+    },
+    {
+      "title": "Lies die Wetterbeschreibung.",
+      "instruction": "Wörterhilfe: aujourd’hui = heute, demain = morgen. Il fera beau = Es wird schönes Wetter.",
+      "items": [
+        {
+          "prompt": "«Aujourd’hui, il pleut. Demain, il fera beau.» Wie ist das Wetter heute?",
+          "answer": "Es regnet.",
+          "wide": true
+        },
+        {
+          "prompt": "Welches Wetter wird für morgen beschrieben?",
+          "answer": "Schönes Wetter.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe einen erfundenen Tag.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen Satz mit «C’est ...» und l’été oder l’hiver. Ergänze «Il pleut.» oder «Il neige.» passend zur erfundenen Situation.",
+          "answer": "Beispiel: C’est l’hiver. Il neige. Sinnvolle Situationen gelten; Regen ist nicht auf eine Jahreszeit beschränkt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Wetter- und Jahreszeitenangaben aus kurzen Texten verstehen. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,59 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "achats-prix-4",
+  "goal": "Au magasin: une pomme coûte un franc, un sandwich coûte quatre francs, une bouteille d’eau coûte deux francs. «Je voudrais ..., s’il vous plaît.» bedeutet «Ich möchte ..., bitte.» Die Preise sind erfunden.",
+  "sections": [
+    {
+      "title": "Lies die Preise.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Combien coûte une pomme? Antworte auf Französisch.",
+          "answer": "Un franc.",
+          "wide": true
+        },
+        {
+          "prompt": "Combien coûte un sandwich? Antworte auf Französisch.",
+          "answer": "Quatre francs.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Rechne den Einkauf.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Une pomme und une bouteille d’eau: Wie viel kosten sie zusammen?",
+          "answer": "CHF 3",
+          "wide": true
+        },
+        {
+          "prompt": "Du zahlst das Sandwich mit CHF 10. Wie viel Wechselgeld bekommst du?",
+          "answer": "CHF 6",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine höfliche Bestellung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bitte auf Französisch um einen Apfel. Nutze «Je voudrais ...» und «s’il vous plaît». Bedanke dich danach.",
+          "answer": "Je voudrais une pomme, s’il vous plaît. Merci.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.4.A.1",
+    "scope": "Preise verstehen und eine einfache höfliche Bestellung schreiben. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

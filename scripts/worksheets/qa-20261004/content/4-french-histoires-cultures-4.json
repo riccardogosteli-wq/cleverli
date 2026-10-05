@@ -1,0 +1,63 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "histoires-cultures-4",
+  "goal": "Mila habite à Genève, en Suisse. Elle parle français avec son ami. Le samedi, ils lisent une histoire à la bibliothèque. Cette histoire est inventée. Genève heisst auf Deutsch Genf. Französisch wird in mehreren Ländern gesprochen.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In welcher Stadt lebt Mila?",
+          "answer": "Genf / Genève."
+        },
+        {
+          "prompt": "In welchem Land liegt diese Stadt?",
+          "answer": "Schweiz / Suisse."
+        },
+        {
+          "prompt": "Welche Sprache spricht sie mit ihrem Freund?",
+          "answer": "Französisch.",
+          "wide": true
+        },
+        {
+          "prompt": "Was machen die beiden am Samstag und wo?",
+          "answer": "Sie lesen eine Geschichte in der Bibliothek.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Text und Verallgemeinerung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beweist die Geschichte, dass alle Kinder in Genf am Samstag in die Bibliothek gehen? Begründe.",
+          "answer": "Nein. Sie beschreibt zwei erfundene Personen, nicht alle Kinder.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Satz aus den Wörtern.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "à Genève / habite / Mila",
+          "answer": "Mila habite à Genève.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Eine kurze frankophone Alltagserzählung verstehen, ohne daraus Stereotype abzuleiten. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

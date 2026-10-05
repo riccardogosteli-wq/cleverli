@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "loisirs-capacites-4",
+  "goal": "Lire = lesen, dessiner = zeichnen, nager = schwimmen. «J’aime lire.» bedeutet «Ich lese gern.» «Je peux ...» heisst «Ich kann ...». Nach diesen beiden Mustern steht hier die Grundform des Verbs.",
+  "sections": [
+    {
+      "title": "Übersetze auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "lire",
+          "answer": "lesen"
+        },
+        {
+          "prompt": "dessiner",
+          "answer": "zeichnen"
+        },
+        {
+          "prompt": "nager",
+          "answer": "schwimmen"
+        },
+        {
+          "prompt": "jouer",
+          "answer": "spielen"
+        }
+      ]
+    },
+    {
+      "title": "Lies und unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Noé aime dessiner. Il peut nager.» Was macht Noé gern?",
+          "answer": "Zeichnen.",
+          "wide": true
+        },
+        {
+          "prompt": "Was kann Noé laut Text?",
+          "answer": "Schwimmen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe über eine erfundene Person in der Ich-Form.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe je einen Satz mit «J’aime ...» und «Je peux ...». Verwende lire, dessiner oder nager.",
+          "answer": "Beispiel: J’aime lire. Je peux dessiner. Sinnvolle Sätze mit der Grundform gelten, keine Bewertung persönlicher Fähigkeiten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.D.1",
+    "scope": "Einfache Vorlieben und Fähigkeiten mit Verbmustern ausdrücken. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

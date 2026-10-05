@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "french",
+  "sourceId": "maison-position-4",
+  "goal": "La cuisine ist die Küche, la chambre das Schlafzimmer. Positionswörter: sur = auf, sous = unter, devant = vor, derrière = hinter. «Le livre est sur la table.» bedeutet «Das Buch liegt auf dem Tisch.»",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "la cuisine",
+          "answer": "die Küche"
+        },
+        {
+          "prompt": "la chambre",
+          "answer": "das Schlafzimmer"
+        },
+        {
+          "prompt": "sous",
+          "answer": "unter"
+        },
+        {
+          "prompt": "derrière",
+          "answer": "hinter"
+        }
+      ]
+    },
+    {
+      "title": "Lies genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Le sac est sous la table.» Wo ist die Tasche?",
+          "answer": "Unter dem Tisch.",
+          "wide": true
+        },
+        {
+          "prompt": "«Le chat est devant la porte.» Wo ist die Katze?",
+          "answer": "Vor der Tür.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe zwei Positionssätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Setze einmal sur und einmal sous ein: «Le livre est ... la table.» Schreibe beide vollständigen Sätze.",
+          "answer": "Le livre est sur la table. Le livre est sous la table.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.B.1",
+    "scope": "Raum- und Positionswörter in einfachen Sätzen verwenden. Französisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
