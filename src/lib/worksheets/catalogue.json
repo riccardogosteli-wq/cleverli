@@ -3491,7 +3491,7 @@
     "title": "Wetter und Klima",
     "curriculum": {
       "code": "NMG.4.4",
-      "scope": "Wetterangaben und Temperaturmessungen verstehen (NMG.4.4.1d/e). Wetter und Klima als vereinfachte Begriffsorientierung unterscheiden, ohne formale Klimatologie.",
+      "scope": "Wetterangaben und Temperaturmessungen verstehen. Wetter und Klima anhand einfacher Beispiele unterscheiden.",
       "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
     },
     "files": {
@@ -3501,9 +3501,9 @@
         "bytes": 865278
       },
       "solution": {
-        "path": "revisions/20261004/pdfs/4/science/wetter-klima-loesungen.pdf",
-        "sha256": "7cefdf6622fd582a848f579cf93b46f6f2be1e35894476630615a111fb5ebf4a",
-        "bytes": 893369
+        "path": "revisions/20261005/pdfs/4/science/wetter-klima-loesungen.pdf",
+        "sha256": "58d3abeb5aed5273642c40ca29fd461cdf5ccfcc33c5faf2a3454e5e3a362503",
+        "bytes": 892886
       }
     }
   },
