@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "environment-debate-6",
+  "goal": "Topic: Should our class use less paper? Useful phrases: «I think ... because ...» «I understand, but ...» «We could ...» Different opinions are allowed. Bewertet werden verständliche Gründe und respektvolle Sprache, nicht die gewählte Meinung.",
+  "sections": [
+    {
+      "title": "Verstehe ein Argument.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«We could use both sides of the paper because this reduces waste.» Welche Massnahme und welcher Grund werden genannt? Antworte auf Deutsch.",
+          "answer": "Beide Papierseiten nutzen; dadurch entsteht weniger Abfall.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Erkenne eine Einschränkung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Sometimes we need a fresh sheet for a clear drawing.» Welcher Grund wird für ein neues Blatt genannt?",
+          "answer": "Eine klare/übersichtliche Zeichnung.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Vorschlag.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei kurze englische Sätze: einen Vorschlag mit We could und einen passenden Grund.",
+          "answer": "Beispiel: We could use both sides of the paper. This saves paper. Verständlicher Vorschlag mit sachlich passendem Grund gilt.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.4.A.1",
+    "scope": "Kurze begründete Vorschläge zu einem Umweltthema formulieren. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

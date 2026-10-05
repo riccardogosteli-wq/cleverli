@@ -1,0 +1,59 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "conditionals-6",
+  "goal": "I am going to visit the library on Saturday because I need a book. If it rains, I will take the bus. Going to nennt hier einen Plan; because nennt einen Grund; if beschreibt eine Bedingung. Die Pläne sind erfunden.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wohin möchte die Person am Samstag gehen?",
+          "answer": "In die Bibliothek.",
+          "wide": true
+        },
+        {
+          "prompt": "Warum möchte sie dorthin?",
+          "answer": "Weil sie ein Buch braucht.",
+          "wide": true
+        },
+        {
+          "prompt": "Unter welcher Bedingung nimmt sie den Bus?",
+          "answer": "Wenn es regnet.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze because oder if, sodass ein Grund genannt wird.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "I am happy __ I have a new book.",
+          "answer": "because",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen erfundenen Plan mit Grund.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nutze «I am going to ... because ...». Ein einfacher Satz genügt.",
+          "answer": "Beispiel: I am going to read because I like stories. Sinnvoller Plan und passender Grund; gleichwertige Sätze gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.D.1",
+    "scope": "Einen einfachen Plan, Grund und eine Bedingung verstehen; Formen mit passenden Vorkenntnissen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "writing-skills-6",
+  "goal": "Write a short invitation to a fictional friend. Useful phrases: «Would you like to ...?» «We can meet at ...» «Please let me know.» Eine Einladung braucht Anlass, Ort und Zeit. Erfinde alle Namen und Angaben.",
+  "sections": [
+    {
+      "title": "Prüfe ein Beispiel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Hi Alex, would you like to play chess on Friday at four? We can meet at the library.» Nenne Anlass, Tag, Uhrzeit und Ort auf Deutsch.",
+          "answer": "Schach spielen; Freitag; vier Uhr; Bibliothek.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe deine Einladung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe drei kurze englische Sätze: Einladung mit Anlass, Treffpunkt und Zeit, Bitte um Antwort.",
+          "answer": "Beispiel: Would you like to draw with me? We can meet at the library on Saturday at two. Please let me know. Angaben müssen verständlich und vollständig sein.",
+          "wide": true,
+          "lines": 6
+        }
+      ]
+    },
+    {
+      "title": "Prüfe deinen Text.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Notiere zwei Dinge, die du beim Überarbeiten kontrollierst.",
+          "answer": "Zum Beispiel Anlass/Ort/Zeit vorhanden, verständliche Sätze, Grossschreibung am Satzanfang, passende Satzzeichen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.4.A.1",
+    "scope": "Eine kurze Einladung mit notwendigen Angaben planen, schreiben und überprüfen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

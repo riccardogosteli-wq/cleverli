@@ -1,0 +1,60 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "culture-media-6",
+  "goal": "A fictional post says: «Everyone in London drinks tea every day!» It gives no source. Another text says: «In our small group of ten people, six drank tea yesterday.» Neither text describes every person in London.",
+  "sections": [
+    {
+      "title": "Lies die Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "How many people are in the small group?",
+          "answer": "10",
+          "wide": true
+        },
+        {
+          "prompt": "How many drank tea yesterday?",
+          "answer": "6",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Behauptung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beweist die kleine Gruppe, dass alle Menschen in London jeden Tag Tee trinken? Begründe auf Deutsch.",
+          "answer": "Nein. Zehn Personen sind nicht alle Einwohner; zudem tranken in der Gruppe nur sechs gestern Tee. Gestern belegt nicht jeden Tag.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Formuliere genau.",
+      "instruction": "Beginne den englischen Satz mit einem grossen Buchstaben.",
+      "items": [
+        {
+          "prompt": "Ergänze mit six oder everyone: «__ people in the group drank tea yesterday.»",
+          "answer": "Six",
+          "wide": true
+        },
+        {
+          "prompt": "Nenne auf Deutsch eine Frage zur Herkunft oder Qualität der Information.",
+          "answer": "Zum Beispiel: Wer hat die Gruppe befragt? Wie wurde sie ausgewählt? Gibt es eine überprüfbare Quelle?",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Medienaussagen über Gruppen kritisch lesen und kulturelle Verallgemeinerungen vermeiden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

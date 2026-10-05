@@ -1,0 +1,69 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "reported-speech-6",
+  "goal": "Mia: «Can we meet at three?» Sam: «Sorry, I have a lesson at three. How about four?» Mia: «Four is fine. Let’s meet at the park gate.» Dieser erfundene Dialog übt Absprachen, nicht indirekte Rede.",
+  "sections": [
+    {
+      "title": "Lies die Absprache.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Uhrzeit schlägt Mia zuerst vor?",
+          "answer": "Drei Uhr.",
+          "wide": true
+        },
+        {
+          "prompt": "Warum passt diese Zeit Sam nicht?",
+          "answer": "Sam hat um drei eine Unterrichtsstunde.",
+          "wide": true
+        },
+        {
+          "prompt": "Welche Uhrzeit vereinbaren sie schliesslich?",
+          "answer": "Vier Uhr.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Finde den Treffpunkt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wo treffen sie sich?",
+          "answer": "Am Parktor / Eingang zum Park.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Frage bei Unklarheit nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe eine höfliche englische Bitte um Wiederholung. Du kannst «Could you ... please?» verwenden.",
+          "answer": "Could you repeat that, please? / Could you say that again, please? Gleichwertige Bitte gilt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Einen kurzen Dialog über eine Verabredung verstehen und um Klärung bitten. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1E.3.A.1",
+        "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|3|1|1"
+      },
+      {
+        "code": "FS1E.3.C.1",
+        "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|3|3|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

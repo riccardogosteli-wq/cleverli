@@ -7248,20 +7248,20 @@
     "topicId": "passive-voice-6",
     "title": "Everyday English",
     "curriculum": {
-      "code": "FS1E.3",
-      "scope": "Alltägliche Fragen nach Hilfe, Preis und Ort verwenden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "code": "FS1E.3.A.1",
+      "scope": "Alltägliche Fragen nach Hilfe, Preis und Ort mit Vorlage schriftlich vorbereiten; keine mündliche Durchführung oder Passivformen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|3|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/passive-voice-6-arbeitsblatt.pdf",
-        "sha256": "2ea4f45aa9a76239d7f34ed1dc4b43a418d8de5ddf596d66fca660d198177e8d",
-        "bytes": 858204
+        "path": "revisions/20261004/pdfs/6/english/passive-voice-6-arbeitsblatt.pdf",
+        "sha256": "ef78a282b348eb22dd48eab50abc96f48054b9d21889c3b65eb16142f29e7dfe",
+        "bytes": 857922
       },
       "solution": {
-        "path": "pdfs/6/english/passive-voice-6-loesungen.pdf",
-        "sha256": "9359978eba0290f28e30b0340b178c881724c4bf624d735e5d09a7eb4da539d7",
-        "bytes": 885131
+        "path": "revisions/20261004/pdfs/6/english/passive-voice-6-loesungen.pdf",
+        "sha256": "cb6baed7e1c37d464858e02e5d9d6920d78b60b68bc66bf1433953263ebc68ed",
+        "bytes": 885382
       }
     }
   },
@@ -7272,20 +7272,20 @@
     "topicId": "conditionals-6",
     "title": "Plans & Reasons",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.D.1",
       "scope": "Einen einfachen Plan, Grund und eine Bedingung verstehen; Formen mit passenden Vorkenntnissen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/conditionals-6-arbeitsblatt.pdf",
-        "sha256": "7b3f90c2001256506f665a2b06f01c2dad83b54025201e1af7e9bdb40aff9d83",
-        "bytes": 857882
+        "path": "revisions/20261004/pdfs/6/english/conditionals-6-arbeitsblatt.pdf",
+        "sha256": "ca56aeba6c89113042af25dc4dd13360fb26ee4096897d3f95b332b653735435",
+        "bytes": 857700
       },
       "solution": {
-        "path": "pdfs/6/english/conditionals-6-loesungen.pdf",
-        "sha256": "fe258c8db61d89d97fc33268a1111004122c60152cb6501397ab7e1d36e7687b",
-        "bytes": 884536
+        "path": "revisions/20261004/pdfs/6/english/conditionals-6-loesungen.pdf",
+        "sha256": "581322fbf1d2ebf780af0d50f87353b4caf175718162017b9f81ad3bdae3ad3a",
+        "bytes": 884209
       }
     }
   },
@@ -7296,20 +7296,30 @@
     "topicId": "reported-speech-6",
     "title": "Conversations",
     "curriculum": {
-      "code": "FS1E.3",
+      "code": "FS1E.2.A.1",
       "scope": "Einen kurzen Dialog über eine Verabredung verstehen und um Klärung bitten. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1E.3.A.1",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|3|1|1"
+        },
+        {
+          "code": "FS1E.3.C.1",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|3|3|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/reported-speech-6-arbeitsblatt.pdf",
-        "sha256": "3928f02fd30496abf487bdc09871b2b161cd992124d86eb8d85eece41f9324fa",
-        "bytes": 859066
+        "path": "revisions/20261004/pdfs/6/english/reported-speech-6-arbeitsblatt.pdf",
+        "sha256": "9d67b37851babe91873bd00d9acaea8daa1d29685d751b943043e4c72ac37b8c",
+        "bytes": 858782
       },
       "solution": {
-        "path": "pdfs/6/english/reported-speech-6-loesungen.pdf",
-        "sha256": "01d03d92639396c36c67a9f3fa199cc86f7aa922c43cf8b955f96085ca514f71",
-        "bytes": 886438
+        "path": "revisions/20261004/pdfs/6/english/reported-speech-6-loesungen.pdf",
+        "sha256": "53f265a303f5425aed02df4cb443e617afb0d9e0b2b1151dc6cf5e2d855d946a",
+        "bytes": 887745
       }
     }
   },
@@ -7320,20 +7330,20 @@
     "topicId": "reading-skills-6",
     "title": "Reading Skills",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Explizite Angaben und unbelegte Annahmen in einem kurzen englischen Text unterscheiden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/reading-skills-6-arbeitsblatt.pdf",
-        "sha256": "0c5b0f5534576ac6c2ad89780eb83c2a98f22bb643f72e6824461fc73c057f70",
-        "bytes": 855451
+        "path": "revisions/20261004/pdfs/6/english/reading-skills-6-arbeitsblatt.pdf",
+        "sha256": "00f9ee2cec0e2e706cc0a37cae2c19de02f5370e7435ea3cb505cf217bf2f36a",
+        "bytes": 855150
       },
       "solution": {
-        "path": "pdfs/6/english/reading-skills-6-loesungen.pdf",
-        "sha256": "823c6619e1b0f09da2363314b5b569c034a6cf9e3798dbb21dc0edaea49674a4",
-        "bytes": 881034
+        "path": "revisions/20261004/pdfs/6/english/reading-skills-6-loesungen.pdf",
+        "sha256": "a66ec0b1628a41b978f3a1facf0df6a1cbdd248345cc7da6e26266711a167a28",
+        "bytes": 880691
       }
     }
   },
@@ -7344,20 +7354,20 @@
     "topicId": "writing-skills-6",
     "title": "Writing Skills",
     "curriculum": {
-      "code": "FS1E.4",
+      "code": "FS1E.4.A.1",
       "scope": "Eine kurze Einladung mit notwendigen Angaben planen, schreiben und überprüfen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/writing-skills-6-arbeitsblatt.pdf",
-        "sha256": "dda8c970e06aed1ad229def062775e62a5df86d2d2f1cb5fc724208bbe188d6a",
-        "bytes": 859831
+        "path": "revisions/20261004/pdfs/6/english/writing-skills-6-arbeitsblatt.pdf",
+        "sha256": "8d9081008b463eb2749153c14d4f0176333b5da0520a934ccb1226490693fa33",
+        "bytes": 859615
       },
       "solution": {
-        "path": "pdfs/6/english/writing-skills-6-loesungen.pdf",
-        "sha256": "e6e82514f21d922449d59326ebe1f67933f88c2e5a0092bef994ae8435c3b141",
-        "bytes": 888778
+        "path": "revisions/20261004/pdfs/6/english/writing-skills-6-loesungen.pdf",
+        "sha256": "bb29169201fc91e95306707efa674459bb5c28b2b5f6e14619cf428dbc5e67d0",
+        "bytes": 888434
       }
     }
   },
@@ -7368,20 +7378,26 @@
     "topicId": "vocabulary-6",
     "title": "Vocabulary Building",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.B.1",
       "scope": "Wortfelder nutzen und die Bedeutung eines Wortes aus dem Satzkontext bestimmen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1",
+      "additionalReferences": [
+        {
+          "code": "FS1E.5.B.2",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|2"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/vocabulary-6-arbeitsblatt.pdf",
-        "sha256": "a9ffb693f23100656700848e2dc433c7e73eba6b51271931935391dac655b360",
-        "bytes": 855743
+        "path": "revisions/20261004/pdfs/6/english/vocabulary-6-arbeitsblatt.pdf",
+        "sha256": "f38e7aa178654ad8f709dee9f74d1375615c1956bf1ae08329a05dfb21d57038",
+        "bytes": 855452
       },
       "solution": {
-        "path": "pdfs/6/english/vocabulary-6-loesungen.pdf",
-        "sha256": "057b2e03862a9081bb7b15b8f28ecf5dc1cb8168bba688397ce4e6234bc1f652",
-        "bytes": 881326
+        "path": "revisions/20261004/pdfs/6/english/vocabulary-6-loesungen.pdf",
+        "sha256": "a561cf3ba0f8bfb9946e7b8e18fc9e4e6d27872fdbaa6395757981db7098c2b8",
+        "bytes": 881315
       }
     }
   },
@@ -7392,20 +7408,20 @@
     "topicId": "environment-debate-6",
     "title": "Environment & Debate",
     "curriculum": {
-      "code": "FS1E.4",
+      "code": "FS1E.4.A.1",
       "scope": "Kurze begründete Vorschläge zu einem Umweltthema formulieren. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/environment-debate-6-arbeitsblatt.pdf",
-        "sha256": "868ecda14ae0a61cdb1daff63f658c8abf04d8176b3c5c2375e68344102c81a4",
-        "bytes": 858505
+        "path": "revisions/20261004/pdfs/6/english/environment-debate-6-arbeitsblatt.pdf",
+        "sha256": "ee58b01339507cdcfdbb1ea8d2eb7747765e27bddfdcf982ab502fc2ec4fe40c",
+        "bytes": 858207
       },
       "solution": {
-        "path": "pdfs/6/english/environment-debate-6-loesungen.pdf",
-        "sha256": "0d3390e0595847ae02631651f6d8fb87e16047a91c8dece36c3a961f53bd1b11",
-        "bytes": 886944
+        "path": "revisions/20261004/pdfs/6/english/environment-debate-6-loesungen.pdf",
+        "sha256": "27bdaefacd6fd20f572979101808b0b5fc93ff8c0ef045a16507e9d491efe368",
+        "bytes": 886582
       }
     }
   },
@@ -7416,20 +7432,20 @@
     "topicId": "culture-media-6",
     "title": "Culture & Media",
     "curriculum": {
-      "code": "FS1E.6",
+      "code": "FS1E.2.A.1",
       "scope": "Medienaussagen über Gruppen kritisch lesen und kulturelle Verallgemeinerungen vermeiden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/culture-media-6-arbeitsblatt.pdf",
-        "sha256": "95b98916703a834e11204f539722507db414f721f536f487a5911b8c7ecbbe7e",
-        "bytes": 857554
+        "path": "revisions/20261004/pdfs/6/english/culture-media-6-arbeitsblatt.pdf",
+        "sha256": "d744377028f54595ec232372af943c265bd5870b5edea99d391f8864ac68f6c7",
+        "bytes": 858480
       },
       "solution": {
-        "path": "pdfs/6/english/culture-media-6-loesungen.pdf",
-        "sha256": "641f71f30f6a5ac741cbcbd22b8bceab7991bced49753457f1a591efa31207aa",
-        "bytes": 888130
+        "path": "revisions/20261004/pdfs/6/english/culture-media-6-loesungen.pdf",
+        "sha256": "8279876257db0a6786ff6eeee0486513c2795ceacc7a0563cac37b30d6c75fa6",
+        "bytes": 903004
       }
     }
   },
@@ -7440,20 +7456,20 @@
     "topicId": "exam-skills-6",
     "title": "Exam Strategies",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Auftragswörter und geforderte Anzahl von Angaben beachten und Antworten am Text prüfen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=***"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/english/exam-skills-6-arbeitsblatt.pdf",
-        "sha256": "692ca193073f6a37c5a9608252642cb3f3837971a216b52382c470e09557e4cc",
-        "bytes": 857978
+        "path": "revisions/20261004/pdfs/6/english/exam-skills-6-arbeitsblatt.pdf",
+        "sha256": "e375190d19d139f1c3aef5d67de402277de498669ddf2f2c713bba09223cb8b5",
+        "bytes": 857683
       },
       "solution": {
-        "path": "pdfs/6/english/exam-skills-6-loesungen.pdf",
-        "sha256": "cee8c71c586325c5ae487f924b074e5792a1a23b27dd51824174dc622fb15af3",
-        "bytes": 883891
+        "path": "revisions/20261004/pdfs/6/english/exam-skills-6-loesungen.pdf",
+        "sha256": "12442e5b27dd810fa02e03c2ba94b284d543666133efd12da096850815e849d7",
+        "bytes": 883544
       }
     }
   },

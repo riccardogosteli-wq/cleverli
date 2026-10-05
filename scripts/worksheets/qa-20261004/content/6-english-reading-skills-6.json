@@ -1,0 +1,60 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "reading-skills-6",
+  "goal": "Ravi finds a small bag on a bench. There is no name on it. He does not open it. He takes it to the information desk. Later, a woman describes the bag and collects it. Ravi never learns her name. The story is fictional.",
+  "sections": [
+    {
+      "title": "Entnimm Informationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Where does Ravi find the bag?",
+          "answer": "On a bench.",
+          "wide": true
+        },
+        {
+          "prompt": "Does he open it?",
+          "answer": "No, he does not. / No.",
+          "wide": true
+        },
+        {
+          "prompt": "Where does he take it?",
+          "answer": "To the information desk.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Belege eine Deutung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Handlung schützt die Privatsphäre der Besitzerin? Antworte auf Deutsch.",
+          "answer": "Ravi öffnet die Tasche nicht.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Prüfe die Textgrundlage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«The woman’s name is Anna.» Ist das im Text belegt? Begründe auf Deutsch.",
+          "answer": "Nein. Ravi erfährt ihren Namen nie; Anna wird nicht genannt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Explizite Angaben und unbelegte Annahmen in einem kurzen englischen Text unterscheiden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,62 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "passive-voice-6",
+  "goal": "Useful everyday phrases: «Could you help me, please?» asks for help. «How much is this book?» asks for a price. «Where is the station?» asks for a place. Dieses Blatt übt Alltagssprache, nicht Passivformen.",
+  "sections": [
+    {
+      "title": "Wähle eine passende Frage aus der Einführung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du möchtest den Preis eines Buches wissen.",
+          "answer": "How much is this book?",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Du suchst den Bahnhof.",
+          "answer": "Where is the station?",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Du bittest höflich um Hilfe.",
+          "answer": "Could you help me, please?",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Verstehe die Antwort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«The book is five pounds.» Wie viel kostet das Buch?",
+          "answer": "Fünf Pfund.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Reagiere höflich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe eine kurze englische Dankesantwort.",
+          "answer": "Thank you. / Thanks. Gleichwertige höfliche Dankesformel gilt.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.3.A.1",
+    "scope": "Alltägliche Fragen nach Hilfe, Preis und Ort mit Vorlage schriftlich vorbereiten; keine mündliche Durchführung oder Passivformen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|3|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

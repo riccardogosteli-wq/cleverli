@@ -1,0 +1,56 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "exam-skills-6",
+  "goal": "Read the task before answering. Look for how many details it asks for. Use the text, not a guess. Practice text: «Lina takes a notebook and a bottle of water to the park. She meets Jo at ten.» All details are fictional.",
+  "sections": [
+    {
+      "title": "Beachte die genaue Aufgabe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Name TWO things Lina takes. Answer in English.",
+          "answer": "A notebook and a bottle of water.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "At what time does Lina meet Jo?",
+          "answer": "At ten.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Finde einen Fehler.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Antwort auf die erste Frage lautet nur «a notebook». Was fehlt? Antworte auf Deutsch.",
+          "answer": "Die zweite Sache: eine Wasserflasche. Die Aufgabe verlangt zwei Dinge.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Vermeide Raten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Lina is twelve years old.» Kannst du das aus dem Text wissen? Begründe auf Deutsch.",
+          "answer": "Nein. Ihr Alter wird nicht genannt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Auftragswörter und geforderte Anzahl von Angaben beachten und Antworten am Text prüfen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

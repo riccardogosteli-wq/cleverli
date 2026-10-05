@@ -1,0 +1,71 @@
+{
+  "grade": 6,
+  "subject": "english",
+  "sourceId": "vocabulary-6",
+  "goal": "Wörter lassen sich nach Bedeutung ordnen. Ein Wort kann je nach Satz Verschiedenes bedeuten: «I read a book» und «We book a room». Nutze den Kontext und bei Unsicherheit ein Wörterbuch.",
+  "sections": [
+    {
+      "title": "Ordne ein Wortfeld zu: food, transport oder school.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "apple",
+          "answer": "food"
+        },
+        {
+          "prompt": "train",
+          "answer": "transport"
+        },
+        {
+          "prompt": "classroom",
+          "answer": "school"
+        },
+        {
+          "prompt": "bread",
+          "answer": "food"
+        }
+      ]
+    },
+    {
+      "title": "Verstehe aus dem Kontext.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«I read a book.» Was bedeutet book hier?",
+          "answer": "Ein Buch.",
+          "wide": true
+        },
+        {
+          "prompt": "«We book a room.» Was bedeutet book hier?",
+          "answer": "Buchen / reservieren.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Plane Lernen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen eigenen englischen Beispielsatz mit train oder apple.",
+          "answer": "Beispiel: I eat an apple. / We take the train. Wort muss sinnvoll verwendet sein.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.B.1",
+    "scope": "Wortfelder nutzen und die Bedeutung eines Wortes aus dem Satzkontext bestimmen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Englisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1",
+    "additionalReferences": [
+      {
+        "code": "FS1E.5.B.2",
+        "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|2"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
