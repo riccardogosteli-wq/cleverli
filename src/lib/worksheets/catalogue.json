@@ -4396,20 +4396,20 @@
     "topicId": "informationen-pruefen-4",
     "title": "Informationen prüfen",
     "curriculum": {
-      "code": "MI.1",
+      "code": "MI.1.2",
       "scope": "Aktualität, Herkunft, Belege und Unabhängigkeit von Informationen prüfen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C10%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/mi/informationen-pruefen-4-arbeitsblatt.pdf",
-        "sha256": "dda2ce903e8f91b676f3ff857b6da55fc3e1db5451480cf111b07c57f9a3bce3",
-        "bytes": 864287
+        "path": "revisions/20261004/pdfs/4/mi/informationen-pruefen-4-arbeitsblatt.pdf",
+        "sha256": "3c132ab31d56c7b98072d378b28476c18cb7db9b7a0326697fdca05b15f3ddb0",
+        "bytes": 863994
       },
       "solution": {
-        "path": "pdfs/4/mi/informationen-pruefen-4-loesungen.pdf",
-        "sha256": "308e6a350bf9d753c491ab7f059408b05d6d458b13d1ca22f4fdcba99bc9bb08",
-        "bytes": 892115
+        "path": "revisions/20261004/pdfs/4/mi/informationen-pruefen-4-loesungen.pdf",
+        "sha256": "f50989507351a3e4468e060f46201faf5f01beaa1841f0b4e7294dbafcd426dc",
+        "bytes": 891761
       }
     }
   },
@@ -4420,20 +4420,20 @@
     "topicId": "programme-befehle-4",
     "title": "Programme & Befehle",
     "curriculum": {
-      "code": "MI.2",
+      "code": "MI.2.2",
       "scope": "Eine einfache Wiederholung ausführen, ausschreiben und einen Programmfehler erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C10%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|2|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/mi/programme-befehle-4-arbeitsblatt.pdf",
-        "sha256": "3eb06e6b4745e054fd6b2d5e6dcb7fc2a3a5fa0c09b7f8573b0e5b0b98a7098d",
-        "bytes": 870244
+        "path": "revisions/20261004/pdfs/4/mi/programme-befehle-4-arbeitsblatt.pdf",
+        "sha256": "a68cae3bb53b9824ea44b2bab90c7097000c6dd88b9ad4cb17ff74657fc2d640",
+        "bytes": 869959
       },
       "solution": {
-        "path": "pdfs/4/mi/programme-befehle-4-loesungen.pdf",
-        "sha256": "0c4ef2c7adb331dfdb9e26170c842951bbc3aa21bda517c255cb4c2a18da8ff7",
-        "bytes": 894688
+        "path": "revisions/20261004/pdfs/4/mi/programme-befehle-4-loesungen.pdf",
+        "sha256": "8f0b0f796e68998a8ad076883a28ab21046c215880cbdb91fa35f4072dc73eda",
+        "bytes": 894334
       }
     }
   },

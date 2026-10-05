@@ -1,0 +1,57 @@
+{
+  "grade": 4,
+  "subject": "mi",
+  "sourceId": "informationen-pruefen-4",
+  "goal": "Prüfe Informationen: Wer veröffentlicht sie, wann und mit welchen Belegen? Bestätigen unabhängige Quellen die Aussage? Likes sind kein Beweis. Auch bekannte Quellen können irren. Die Beispiele sind erfunden.",
+  "sections": [
+    {
+      "title": "Vergleiche zwei Quellen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "A: aktueller Fahrplan des Verkehrsbetriebs. B: anonymer Beitrag von vor drei Jahren. Welche Quelle ist für die heutige Abfahrtszeit besser geeignet? Begründe.",
+          "answer": "A, weil der zuständige Verkehrsbetrieb einen aktuellen Fahrplan bereitstellt. Zusätzlich aktuelle Störungen und Datum prüfen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe statt sofort zu teilen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Beitrag sagt: «Morgen fällt überall die Schule aus!» Es gibt keine Quelle. Was tust du vor dem Weiterleiten?",
+          "answer": "Nicht ungeprüft teilen. Offizielle Schulmitteilung prüfen und bei einer vertrauten erwachsenen Person nachfragen.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Beweisen 1000 Likes, dass eine Behauptung wahr ist? Warum?",
+          "answer": "Nein. Likes zeigen Reaktionen, nicht die Richtigkeit oder Qualität der Belege.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Beurteile eine zweite Quelle.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwei Seiten haben denselben Text ohne eigene Belege kopiert. Sind das zwei unabhängige Bestätigungen? Erkläre.",
+          "answer": "Nein. Beide können dieselbe unbelegte Ausgangsbehauptung wiederholen. Ursprung und unabhängige Belege prüfen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MI.1.2",
+    "scope": "Aktualität, Herkunft, Belege und Unabhängigkeit von Informationen prüfen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
