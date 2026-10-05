@@ -1,0 +1,60 @@
+{
+  "grade": 5,
+  "subject": "math",
+  "sourceId": "statistik-5",
+  "goal": "Das Diagramm zeigt ausgeliehene Bücher in einer kleinen Bibliothek an vier Tagen. Die Zahlen sind erfunden. Der Mittelwert ist die Summe der Werte geteilt durch die Anzahl der Werte.",
+  "sections": [
+    {
+      "title": "Lies das Diagramm.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "An welchem Tag wurden die meisten Bücher ausgeliehen?",
+          "answer": "Donnerstag",
+          "svg": "<svg class=\"illustration statistics-five\" style=\"width:120mm;height:44mm\" viewBox=\"0 0 120 44\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"1\" y=\"9\" font-size=\"4\">Mo</text><rect x=\"23\" y=\"3\" width=\"28\" height=\"7\" fill=\"#c4cdd0\" stroke=\"#213b49\"/><text x=\"54\" y=\"9\" font-size=\"4\">4</text><text x=\"1\" y=\"19\" font-size=\"4\">Di</text><rect x=\"23\" y=\"13\" width=\"42\" height=\"7\" fill=\"#c4cdd0\" stroke=\"#213b49\"/><text x=\"68\" y=\"19\" font-size=\"4\">6</text><text x=\"1\" y=\"29\" font-size=\"4\">Mi</text><rect x=\"23\" y=\"23\" width=\"14\" height=\"7\" fill=\"#c4cdd0\" stroke=\"#213b49\"/><text x=\"40\" y=\"29\" font-size=\"4\">2</text><text x=\"1\" y=\"39\" font-size=\"4\">Do</text><rect x=\"23\" y=\"33\" width=\"56\" height=\"7\" fill=\"#c4cdd0\" stroke=\"#213b49\"/><text x=\"82\" y=\"39\" font-size=\"4\">8</text></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele Bücher waren es am Mittwoch?",
+          "answer": "2",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Berechne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Bücher wurden insgesamt ausgeliehen?",
+          "answer": "20",
+          "wide": true
+        },
+        {
+          "prompt": "Wie gross ist der Mittelwert pro Tag?",
+          "answer": "5",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Begründe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum bedeutet der Mittelwert 5 nicht, dass jeden Tag genau 5 Bücher ausgeliehen wurden?",
+          "answer": "Er verteilt die Gesamtsumme rechnerisch gleich auf vier Tage. Die tatsächlichen Tageswerte sind 4, 6, 2 und 8.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.1",
+    "scope": "Ein Balkendiagramm lesen und einen einfachen Mittelwert berechnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,63 @@
+{
+  "grade": 5,
+  "subject": "math",
+  "sourceId": "prozent-5",
+  "goal": "Prozent bedeutet «von hundert»: 50 % = 50/100 = 1/2. 25 % sind ein Viertel, 10 % ein Zehntel. Dieses Blatt übt einfache Anteile mit passenden Vorkenntnissen, keine allgemeine Klassenanforderung.",
+  "sections": [
+    {
+      "title": "Berechne die Anteile.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "50 % von 80 =",
+          "answer": "40"
+        },
+        {
+          "prompt": "25 % von 40 =",
+          "answer": "10"
+        },
+        {
+          "prompt": "10 % von 90 =",
+          "answer": "9"
+        },
+        {
+          "prompt": "100 % von 25 =",
+          "answer": "25"
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die Prozentangabe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "1/2 =",
+          "answer": "50 %"
+        },
+        {
+          "prompt": "1/4 =",
+          "answer": "25 %"
+        }
+      ]
+    },
+    {
+      "title": "Wende an.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein erfundener Preis von CHF 40 wird um 25 % gesenkt. Wie gross ist der Rabatt und wie hoch der neue Preis? Zeige den Rechenweg.",
+          "answer": "Rabatt: 40 : 4 = CHF 10. Neuer Preis: 40 − 10 = CHF 30.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.1",
+    "scope": "Einfache Prozentangaben als Anteile deuten; Zusatz je nach Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

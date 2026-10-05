@@ -1,0 +1,54 @@
+{
+  "grade": 5,
+  "subject": "math",
+  "sourceId": "flaechen-umfang",
+  "goal": "Beim Rechteck gilt: Fläche = Länge × Breite, Umfang = 2 × Länge + 2 × Breite. Die Fläche wird hier in cm² angegeben, der Umfang in cm. Nutze die beschrifteten Längen, miss nicht am Druck.",
+  "sections": [
+    {
+      "title": "Berechne zum Rechteck.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Fläche und Umfang:",
+          "answer": "24 cm²; 22 cm",
+          "svg": "<svg class=\"illustration\" style=\"width:95mm;height:44mm\" viewBox=\"0 0 95 44\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"15\" y=\"7\" width=\"60\" height=\"28\" fill=\"white\" stroke=\"#213b49\"/><text x=\"40\" y=\"42\" font-size=\"4\">8 cm</text><text x=\"77\" y=\"23\" font-size=\"4\">3 cm</text></svg>",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Berechne zum Quadrat mit Seitenlänge 5 cm.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Fläche =",
+          "answer": "25 cm²"
+        },
+        {
+          "prompt": "Umfang =",
+          "answer": "20 cm"
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche zwei Rechtecke.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "A: 6 cm × 2 cm. B: 4 cm × 3 cm. Berechne beide Flächen und Umfänge. Haben sie dieselbe Fläche und denselben Umfang?",
+          "answer": "A: 12 cm², 16 cm. B: 12 cm², 14 cm. Gleiche Fläche, unterschiedlicher Umfang.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.2.A.3",
+    "scope": "Flächen und Umfänge von Rechtecken und Quadraten berechnen und unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

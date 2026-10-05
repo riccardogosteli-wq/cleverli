@@ -1,0 +1,60 @@
+{
+  "grade": 5,
+  "subject": "math",
+  "sourceId": "wahrscheinlichkeit-5",
+  "goal": "In einem undurchsichtigen Beutel liegen 3 rote und 2 blaue Kugeln gleicher Grösse und Form. Es wird gut gemischt und eine Kugel blind gezogen. Jede einzelne Kugel hat dieselbe Chance. Es gibt keine anderen Farben.",
+  "sections": [
+    {
+      "title": "Bestimme mögliche Ereignisse.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine grüne Kugel ziehen: sicher, möglich oder unmöglich?",
+          "answer": "Unmöglich",
+          "wide": true
+        },
+        {
+          "prompt": "Eine rote oder blaue Kugel ziehen: sicher, möglich oder unmöglich?",
+          "answer": "Sicher",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche Chancen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Farbe ist wahrscheinlicher? Begründe mit den Anzahlen.",
+          "answer": "Rot, weil 3 von 5 Kugeln rot und nur 2 von 5 blau sind.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Zusatz: Wie gross ist die Chance auf Blau als Bruch?",
+          "answer": "2/5",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke genau nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Muss man bei fünf Ziehungen mit Zurücklegen genau dreimal Rot ziehen? Begründe.",
+          "answer": "Nein. Zufallsergebnisse schwanken; 3/5 beschreibt die Chance pro Ziehung, keine vorgeschriebene Folge.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.1",
+    "scope": "Mögliche und sichere Ereignisse unterscheiden und einfache Chancen vergleichen. Die Bruchangabe ist ein Zusatz nach Lernstand.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

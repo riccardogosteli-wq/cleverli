@@ -1,0 +1,63 @@
+{
+  "grade": 5,
+  "subject": "math",
+  "sourceId": "groessen-5",
+  "goal": "1 km = 1000 m, 1 m = 100 cm, 1 kg = 1000 g, 1 l = 1000 ml. Rechne zuerst in dieselbe Einheit um, bevor du Grössen addierst oder vergleichst.",
+  "sections": [
+    {
+      "title": "Wandle um.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "2,5 km = __ m",
+          "answer": "2500"
+        },
+        {
+          "prompt": "0,75 kg = __ g",
+          "answer": "750"
+        },
+        {
+          "prompt": "1,2 l = __ ml",
+          "answer": "1200"
+        },
+        {
+          "prompt": "350 cm = __ m",
+          "answer": "3,5"
+        }
+      ]
+    },
+    {
+      "title": "Rechne mit derselben Einheit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "1 kg + 250 g = __ g",
+          "answer": "1250"
+        },
+        {
+          "prompt": "2 l − 500 ml = __ ml",
+          "answer": "1500"
+        }
+      ]
+    },
+    {
+      "title": "Wende an.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Route ist 1,8 km lang, die zweite 650 m. Wie lang sind beide zusammen in Metern und Kilometern?",
+          "answer": "1800 m + 650 m = 2450 m = 2,45 km.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.A.2",
+    "scope": "Längen, Massen und Hohlmasse umrechnen und addieren.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

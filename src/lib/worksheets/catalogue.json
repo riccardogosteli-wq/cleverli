@@ -4446,18 +4446,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Dezimalzahlen bis Hundertstel addieren, subtrahieren und vergleichen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/dezimalzahlen-arbeitsblatt.pdf",
-        "sha256": "87248fcedc9f0e61e1a6691e1366f45a9cdccc57ab1c2f91299bb00034d7b767",
-        "bytes": 856143
+        "path": "revisions/20261004/pdfs/5/math/dezimalzahlen-arbeitsblatt.pdf",
+        "sha256": "bb89f8c9d0e8df1a82dbbae7356f2abf9f93cc2bdb35b0fa2b944dc16b104b33",
+        "bytes": 855849
       },
       "solution": {
-        "path": "pdfs/5/math/dezimalzahlen-loesungen.pdf",
-        "sha256": "27812a047dc5292a53a6bf5d8932c59800de954a6e1cfe7402a0ce1a1049320a",
-        "bytes": 883384
+        "path": "revisions/20261004/pdfs/5/math/dezimalzahlen-loesungen.pdf",
+        "sha256": "af999c1cc88f98a90f7d8d2e7b36e568a0ba1393c3f16abf3104755f88f817bf",
+        "bytes": 882716
       }
     }
   },
@@ -4470,18 +4470,18 @@
     "curriculum": {
       "code": "MA.2.A.3",
       "scope": "Flächen und Umfänge von Rechtecken und Quadraten berechnen und unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/flaechen-umfang-arbeitsblatt.pdf",
-        "sha256": "8bfdb35be88a0fb774b85bf9726f592639e5cfd16d8ef0a7f898a12264d59401",
-        "bytes": 867258
+        "path": "revisions/20261004/pdfs/5/math/flaechen-umfang-arbeitsblatt.pdf",
+        "sha256": "353470fdf3d93ec550a4afc51cb7a168cbc0bf54d34e416fdc178ae644d26385",
+        "bytes": 866948
       },
       "solution": {
-        "path": "pdfs/5/math/flaechen-umfang-loesungen.pdf",
-        "sha256": "e5e57884826d4ff4173807b2925ea0bcdd88b1413cfddbb97d1903894588f279",
-        "bytes": 893186
+        "path": "revisions/20261004/pdfs/5/math/flaechen-umfang-loesungen.pdf",
+        "sha256": "88ac34e11e59bf8177e5228223f6a94037408679fca5d3a3f0b57876c109c75d",
+        "bytes": 892526
       }
     }
   },
@@ -4494,18 +4494,18 @@
     "curriculum": {
       "code": "MA.1.A.3",
       "scope": "Gleichnamige Brüche addieren, ergänzen und einfache Ergebnisse kürzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/brueche-rechnen-arbeitsblatt.pdf",
-        "sha256": "e5d1ac4733c5d857f113ea7b844f4cdd897ffe938afae8eaeac5618f409f1fe8",
-        "bytes": 859524
+        "path": "revisions/20261004/pdfs/5/math/brueche-rechnen-arbeitsblatt.pdf",
+        "sha256": "f79eaf817caf588d0e692ed9a97077bcb46b03865c35bcab7e02de6ea8beff75",
+        "bytes": 859477
       },
       "solution": {
-        "path": "pdfs/5/math/brueche-rechnen-loesungen.pdf",
-        "sha256": "0d018c483ebf53d336c9838fa504b7d06e8b6015f1a9f0caa16e27f2760c33c2",
-        "bytes": 885064
+        "path": "revisions/20261004/pdfs/5/math/brueche-rechnen-loesungen.pdf",
+        "sha256": "a68464b9d571c87d14f21c138352573ebd38480cf21def8e522c63eb46822e6a",
+        "bytes": 884701
       }
     }
   },
@@ -4518,18 +4518,18 @@
     "curriculum": {
       "code": "MA.1.A.1",
       "scope": "Einfache Prozentangaben als Anteile deuten; Zusatz je nach Lernstand.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/prozent-5-arbeitsblatt.pdf",
-        "sha256": "da37e91d8ae6e10cf15bef5cc73d027cdd32cfdf77f065a912330e315f7fc199",
-        "bytes": 858476
+        "path": "revisions/20261004/pdfs/5/math/prozent-5-arbeitsblatt.pdf",
+        "sha256": "ce745b76613cb97e9ce069fe2d1e36c20e339b783411bb3bf9d018d273e4826b",
+        "bytes": 858627
       },
       "solution": {
-        "path": "pdfs/5/math/prozent-5-loesungen.pdf",
-        "sha256": "4a9143e9374b919706bc379121a8bb73e5809a346135c0a7cc922b4d0197e8ae",
-        "bytes": 883667
+        "path": "revisions/20261004/pdfs/5/math/prozent-5-loesungen.pdf",
+        "sha256": "f5f6fc8d269baae55dab49f6dd7683a08a0e02c1f87c69d7da1a264392079779",
+        "bytes": 883437
       }
     }
   },
@@ -4542,18 +4542,18 @@
     "curriculum": {
       "code": "MA.2.C.4",
       "scope": "Punkte im ersten Quadranten ablesen, eintragen und verschieben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|3|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/koordinatensystem-5-arbeitsblatt.pdf",
-        "sha256": "9d3f8bcbf10a37d7d005b43c23b4fa57a350a6863afd3c98b49129fc32d2cda6",
-        "bytes": 884226
+        "path": "revisions/20261004/pdfs/5/math/koordinatensystem-5-arbeitsblatt.pdf",
+        "sha256": "64c170d0f7fbe7fbff9cac07e9afb8d2733fda9dda55cc12c2549cf73e547f61",
+        "bytes": 883936
       },
       "solution": {
-        "path": "pdfs/5/math/koordinatensystem-5-loesungen.pdf",
-        "sha256": "7f5f2ea6da87a511a17803da63ad5510c5f76dea46e95642eb85fb7ef762325f",
-        "bytes": 912224
+        "path": "revisions/20261004/pdfs/5/math/koordinatensystem-5-loesungen.pdf",
+        "sha256": "d56bdc120ea25d4b81e2db7825c401ddf1edfb8226b8ce80c9b9f24a47c67772",
+        "bytes": 911552
       }
     }
   },
@@ -4566,18 +4566,18 @@
     "curriculum": {
       "code": "MA.3.A.2",
       "scope": "Längen, Massen und Hohlmasse umrechnen und addieren.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/groessen-5-arbeitsblatt.pdf",
-        "sha256": "8c6320bd207d73ed5f7e08cbb8e83cb93ad74ebae7e47a9fa2d3eeb0aa9e40b9",
-        "bytes": 856092
+        "path": "revisions/20261004/pdfs/5/math/groessen-5-arbeitsblatt.pdf",
+        "sha256": "95de5142b9bd51af3505b6325cfedfd4e8a5982f316a5a6b2157a154de386c2b",
+        "bytes": 856484
       },
       "solution": {
-        "path": "pdfs/5/math/groessen-5-loesungen.pdf",
-        "sha256": "45806e6be53baa41320083049b625391dcb9279e590541a673abf970778b3950",
-        "bytes": 876770
+        "path": "revisions/20261004/pdfs/5/math/groessen-5-loesungen.pdf",
+        "sha256": "e88563b2bd414b44b7cc7793b09e0fffddf6611e5bcb7c346d8bb0ae9b3c1bd1",
+        "bytes": 876916
       }
     }
   },
@@ -4590,18 +4590,18 @@
     "curriculum": {
       "code": "MA.2.A.3",
       "scope": "Quader mit Einheitswürfeln beschreiben und einfache Volumina berechnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/volumen-5-arbeitsblatt.pdf",
-        "sha256": "05406c96622b07bf3fea1d3eb612f19f4dad353c4f8dedabd48f62b69f76ed17",
-        "bytes": 857849
+        "path": "revisions/20261004/pdfs/5/math/volumen-5-arbeitsblatt.pdf",
+        "sha256": "5c1a1d8943a190c9e44ebdeb49a3c2227afb8c06e4824d84fa55771b6de03dc3",
+        "bytes": 857783
       },
       "solution": {
-        "path": "pdfs/5/math/volumen-5-loesungen.pdf",
-        "sha256": "e6a54fd2b7163254812e013682572e7031958fed2647b02972b35c7dcd2358ed",
-        "bytes": 882265
+        "path": "revisions/20261004/pdfs/5/math/volumen-5-loesungen.pdf",
+        "sha256": "aba7f1ebe87701b9c8eac68ada07189552677aaeac905acf0f0b4699a21d4d4e",
+        "bytes": 881820
       }
     }
   },
@@ -4612,20 +4612,20 @@
     "topicId": "wahrscheinlichkeit-5",
     "title": "Wahrscheinlichkeit",
     "curriculum": {
-      "code": "MA.3.B.2",
-      "scope": "Einfache Zufallsereignisse und Chancen ohne Garantie einzelner Ergebnisse beurteilen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "code": "MA.3.C.1",
+      "scope": "Mögliche und sichere Ereignisse unterscheiden und einfache Chancen vergleichen. Die Bruchangabe ist ein Zusatz nach Lernstand.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/wahrscheinlichkeit-5-arbeitsblatt.pdf",
-        "sha256": "e6be28f7725585266d9ba70b120b336d5b3611b606ed45553cc76060cd4b6092",
-        "bytes": 857987
+        "path": "revisions/20261004/pdfs/5/math/wahrscheinlichkeit-5-arbeitsblatt.pdf",
+        "sha256": "ffdfe75f8a8c6f52c5c620b6ac9e24fb6f73e5d711cde6162dc0fdba12965c68",
+        "bytes": 857706
       },
       "solution": {
-        "path": "pdfs/5/math/wahrscheinlichkeit-5-loesungen.pdf",
-        "sha256": "d119409f5bad9047729a2b1f8c4cfeda33d766b7e9e3bd84124d2f18247100c0",
-        "bytes": 885902
+        "path": "revisions/20261004/pdfs/5/math/wahrscheinlichkeit-5-loesungen.pdf",
+        "sha256": "f682b6feffccc6380323a3e5d34a1fb4f07a8eb3309042636d5a1697a9fc7be2",
+        "bytes": 885520
       }
     }
   },
@@ -4638,18 +4638,18 @@
     "curriculum": {
       "code": "MA.3.C.1",
       "scope": "Ein Balkendiagramm lesen und einen einfachen Mittelwert berechnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/math/statistik-5-arbeitsblatt.pdf",
-        "sha256": "c7e54a3abfca34ab24d6dfcbe7bfd45e71f64650e78c3c2c99aa220a26bd6d64",
-        "bytes": 868627
+        "path": "revisions/20261004/pdfs/5/math/statistik-5-arbeitsblatt.pdf",
+        "sha256": "6ef145023f7c087c9e51c9dda5564ee21f31638981f78f2f7afa9390c8554ee2",
+        "bytes": 868335
       },
       "solution": {
-        "path": "pdfs/5/math/statistik-5-loesungen.pdf",
-        "sha256": "31c5178ce257ba65104ce8e220c0e9477ae34f801faf7b232908749817e7dde4",
-        "bytes": 894326
+        "path": "revisions/20261004/pdfs/5/math/statistik-5-loesungen.pdf",
+        "sha256": "eae1bdc3fd1c585ecb4858f13785b9b7e33f1f3ca8fbda2629e39f0592b8e4e3",
+        "bytes": 893675
       }
     }
   },

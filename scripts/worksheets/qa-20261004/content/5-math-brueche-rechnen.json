@@ -1,0 +1,63 @@
+{
+  "grade": 5,
+  "subject": "math",
+  "sourceId": "brueche-rechnen",
+  "goal": "Gleichnamige Brüche haben denselben Nenner. Addiere dann die Zähler; der Nenner bleibt gleich: 2/7 + 3/7 = 5/7. Gemeint sind gleich grosse Ganze. Kürze das Ergebnis, wenn möglich.",
+  "sections": [
+    {
+      "title": "Addiere und kürze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "1/5 + 2/5 =",
+          "answer": "3/5"
+        },
+        {
+          "prompt": "3/8 + 1/8 =",
+          "answer": "1/2"
+        },
+        {
+          "prompt": "2/9 + 4/9 =",
+          "answer": "2/3"
+        },
+        {
+          "prompt": "5/12 + 1/12 =",
+          "answer": "1/2"
+        }
+      ]
+    },
+    {
+      "title": "Ergänze den fehlenden Bruch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "2/7 + __ = 6/7",
+          "answer": "4/7"
+        },
+        {
+          "prompt": "1/4 + __ = 1",
+          "answer": "3/4"
+        }
+      ]
+    },
+    {
+      "title": "Wende an.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Mia trinkt 1/4 Liter Wasser, später 2/4 Liter. Wie viel ist das zusammen? Erkläre, warum der Nenner beim Addieren gleich bleibt.",
+          "answer": "3/4 Liter. Man zählt Viertel zusammen; die Grösse jedes Viertels ändert sich nicht.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.3",
+    "scope": "Gleichnamige Brüche addieren, ergänzen und einfache Ergebnisse kürzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

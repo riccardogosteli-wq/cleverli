@@ -1,0 +1,57 @@
+{
+  "grade": 5,
+  "subject": "math",
+  "sourceId": "koordinatensystem-5",
+  "goal": "Koordinaten werden als (x|y) geschrieben. Vom Ursprung (0|0) gehst du zuerst x Schritte nach rechts und dann y Schritte nach oben. Jeder Gitterabstand bedeutet 1 Einheit.",
+  "sections": [
+    {
+      "title": "Lies die Punkte ab und zeichne C(1|4) ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Koordinaten von A und B:",
+          "answer": "A(2|3), B(4|1); C bei (1|4).",
+          "svg": "<svg class=\"illustration coordinate-five\" style=\"width:90mm;height:68mm\" viewBox=\"0 0 90 68\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15 55 H60 M15 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"14\" y=\"61\" font-size=\"3\">0</text><path d=\"M15 46 H60 M24 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"23\" y=\"61\" font-size=\"3\">1</text><text x=\"9\" y=\"47\" font-size=\"3\">1</text><path d=\"M15 37 H60 M33 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"32\" y=\"61\" font-size=\"3\">2</text><text x=\"9\" y=\"38\" font-size=\"3\">2</text><path d=\"M15 28 H60 M42 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"41\" y=\"61\" font-size=\"3\">3</text><text x=\"9\" y=\"29\" font-size=\"3\">3</text><path d=\"M15 19 H60 M51 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"50\" y=\"61\" font-size=\"3\">4</text><text x=\"9\" y=\"20\" font-size=\"3\">4</text><path d=\"M15 10 H60 M60 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"59\" y=\"61\" font-size=\"3\">5</text><text x=\"9\" y=\"11\" font-size=\"3\">5</text><path d=\"M15 7 V55 H65\" fill=\"none\" stroke=\"#213b49\"/><text x=\"67\" y=\"56\" font-size=\"4\">x</text><text x=\"14\" y=\"6\" font-size=\"4\">y</text><circle cx=\"33\" cy=\"28\" r=\"1\" fill=\"#213b49\"/><text x=\"35\" y=\"27\" font-size=\"4\">A</text><circle cx=\"51\" cy=\"46\" r=\"1\" fill=\"#213b49\"/><text x=\"53\" y=\"45\" font-size=\"4\">B</text></svg>",
+          "solutionSvg": "<svg class=\"illustration coordinate-five\" style=\"width:90mm;height:68mm\" viewBox=\"0 0 90 68\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15 55 H60 M15 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"14\" y=\"61\" font-size=\"3\">0</text><path d=\"M15 46 H60 M24 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"23\" y=\"61\" font-size=\"3\">1</text><text x=\"9\" y=\"47\" font-size=\"3\">1</text><path d=\"M15 37 H60 M33 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"32\" y=\"61\" font-size=\"3\">2</text><text x=\"9\" y=\"38\" font-size=\"3\">2</text><path d=\"M15 28 H60 M42 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"41\" y=\"61\" font-size=\"3\">3</text><text x=\"9\" y=\"29\" font-size=\"3\">3</text><path d=\"M15 19 H60 M51 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"50\" y=\"61\" font-size=\"3\">4</text><text x=\"9\" y=\"20\" font-size=\"3\">4</text><path d=\"M15 10 H60 M60 10 V55\" stroke=\"#a4adb1\" stroke-width=\".3\"/><text x=\"59\" y=\"61\" font-size=\"3\">5</text><text x=\"9\" y=\"11\" font-size=\"3\">5</text><path d=\"M15 7 V55 H65\" fill=\"none\" stroke=\"#213b49\"/><text x=\"67\" y=\"56\" font-size=\"4\">x</text><text x=\"14\" y=\"6\" font-size=\"4\">y</text><circle cx=\"33\" cy=\"28\" r=\"1\" fill=\"#213b49\"/><text x=\"35\" y=\"27\" font-size=\"4\">A</text><circle cx=\"51\" cy=\"46\" r=\"1\" fill=\"#213b49\"/><text x=\"53\" y=\"45\" font-size=\"4\">B</text><circle cx=\"24\" cy=\"19\" r=\"1\" fill=\"#213b49\"/><text x=\"26\" y=\"18\" font-size=\"4\">C</text></svg>",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Bewege einen Punkt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "P(2|2) wird 3 Einheiten nach rechts verschoben. Neuer Punkt?",
+          "answer": "(5|2)",
+          "wide": true
+        },
+        {
+          "prompt": "Q(4|1) wird 2 Einheiten nach oben verschoben. Neuer Punkt?",
+          "answer": "(4|3)",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Sind (2|4) und (4|2) derselbe Punkt? Begründe mit der Reihenfolge der Koordinaten.",
+          "answer": "Nein. Beim ersten Punkt x=2 und y=4, beim zweiten x=4 und y=2. Die Reihenfolge ist wichtig.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.2.C.4",
+    "scope": "Punkte im ersten Quadranten ablesen, eintragen und verschieben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|3|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
