@@ -1,0 +1,56 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "sprache-wandel-6",
+  "goal": "Sprache verändert sich. Wörter wie online oder chatten wurden aus dem Englischen übernommen. Ein Dialekt und die Standardsprache passen zu unterschiedlichen Situationen. Keine Sprachform macht Menschen mehr oder weniger wertvoll.",
+  "sections": [
+    {
+      "title": "Untersuche Wörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Aus welcher Sprache stammen online und chatten laut Einführung?",
+          "answer": "Aus dem Englischen.",
+          "wide": true
+        },
+        {
+          "prompt": "Bilde mit chatten einen deutschen Satz in der wir-Form.",
+          "answer": "Beispiel: Wir chatten miteinander.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Wähle passend zur Situation.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Für einen formellen Brief auf Deutsch: Welche Sprachform wird in der Schule meist erwartet?",
+          "answer": "Die Standardsprache / Schweizer Standarddeutsch.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Begründe respektvoll.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist «Dialekt ist falsches Deutsch» keine faire Beschreibung?",
+          "answer": "Dialekte sind eigene regelhafte Sprachformen. Welche Form passend ist, hängt von der Situation ab; Dialekt ist nicht einfach fehlerhafte Standardsprache.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.B.1",
+    "scope": "Sprachwandel und situationsbezogene Sprachwahl ohne Abwertung beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

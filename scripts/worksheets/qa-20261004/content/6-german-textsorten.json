@@ -1,0 +1,60 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "textsorten",
+  "goal": "A: «Am Montag eröffnete die Schule einen Leseraum.» B: «Kommt unbedingt in unseren fantastischen Leseraum!» C: «Lege das Buch zurück ins passende Fach.» Alle Beispiele sind erfunden. Untersuche die Absicht, nicht nur einzelne Signalwörter.",
+  "sections": [
+    {
+      "title": "Ordne die Hauptabsicht zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "A: sachlich informieren, werben oder anleiten?",
+          "answer": "Sachlich informieren.",
+          "wide": true
+        },
+        {
+          "prompt": "B: sachlich informieren, werben oder anleiten?",
+          "answer": "Werben / zum Besuch einladen.",
+          "wide": true
+        },
+        {
+          "prompt": "C: sachlich informieren, werben oder anleiten?",
+          "answer": "Anleiten.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Belege deine Einordnung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche zwei Wörter oder Formulierungen in B wirken besonders werbend?",
+          "answer": "unbedingt; fantastischen; auch die auffordernde Anrede Kommt gilt als Merkmal.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Überarbeite.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Formuliere B als sachliche Information ohne Wertung. Erfinde keine neuen Fakten.",
+          "answer": "Die Schule hat einen Leseraum. Auch: Im Leseraum kann man lesen. Sachlicher Satz ohne unbelegte Angaben.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.B.1",
+    "scope": "Funktionen kurzer Texte erkennen und wertende Sprache von sachlicher Information unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

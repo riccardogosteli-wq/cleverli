@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "argumentation-6",
+  "goal": "Eine begründete Meinung nennt einen Standpunkt und einen passenden Grund. Ein Gegenargument nimmt eine andere Sicht ernst. Thema: Soll eine Klasse täglich zehn Minuten stille Lesezeit haben? Die Situation ist erfunden.",
+  "sections": [
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Ich bin dafür, weil regelmässiges Lesen beim Üben helfen kann.» Nenne Standpunkt und Grund.",
+          "answer": "Standpunkt: dafür. Grund: Regelmässiges Lesen kann beim Üben helfen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Betrachte die andere Seite.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne ein sachliches Gegenargument zur täglichen Lesezeit.",
+          "answer": "Beispiel: Die Zeit fehlt möglicherweise für andere wichtige Übungen. Andere nachvollziehbare sachliche Gründe gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schlage eine Lösung vor.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze: deinen Standpunkt mit Grund und einen Vorschlag, der eine andere Sicht berücksichtigt.",
+          "answer": "Beispiel: Ich bin dafür, weil wir so regelmässig lesen. Wir könnten an manchen Tagen andere Sprachübungen anbieten. Bewertet werden Zusammenhang und faire Abwägung, nicht die Meinung.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.D.1",
+    "scope": "Einen Standpunkt begründen, ein Gegenargument berücksichtigen und einen Vorschlag formulieren.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,64 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "kasus",
+  "goal": "Üben mit Vorlage: Nominativ: Wer oder was? Akkusativ: Wen oder was? Dativ: Wem? Bestimme den Fall immer im Satz. Beispiel: Der Vater gibt dem Kind einen Ball. Der Vater: Nominativ; dem Kind: Dativ; einen Ball: Akkusativ.",
+  "sections": [
+    {
+      "title": "Bestimme den Fall der genannten Wortgruppe.",
+      "instruction": "Nutze die Fragen aus der Einführung: Wer oder was? Wen oder was? Wem?",
+      "items": [
+        {
+          "prompt": "Die Lehrerin hilft dem Schüler. → dem Schüler",
+          "answer": "Dativ",
+          "wide": true
+        },
+        {
+          "prompt": "Der Hund sieht den Ball. → den Ball",
+          "answer": "Akkusativ",
+          "wide": true
+        },
+        {
+          "prompt": "Das Kind liest ein Buch. → Das Kind",
+          "answer": "Nominativ",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze den passenden Artikel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ich helfe __ Mann. (der / den / dem)",
+          "answer": "dem",
+          "wide": true
+        },
+        {
+          "prompt": "Wir sehen __ Mann. (der / den / dem)",
+          "answer": "den",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Frage nach dem Dativ.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Mia schenkt ihrem Bruder ein Heft.» Schreibe die Frage nach ihrem Bruder und die Antwort.",
+          "answer": "Wem schenkt Mia ein Heft? Ihrem Bruder.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Mit vorliegenden Frageproben erste Erfahrungen mit Nominativ, Akkusativ und Dativ in einfachen Sätzen sammeln; keine selbstständige vollständige Fallbestimmung vorausgesetzt.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

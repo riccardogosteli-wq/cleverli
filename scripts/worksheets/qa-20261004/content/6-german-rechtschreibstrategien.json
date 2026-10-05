@@ -1,0 +1,60 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "rechtschreibstrategien",
+  "goal": "Verlängern macht manche Endlaute hörbar: Hund → Hunde. Ableiten hilft bei ä/äu: kräftig → Kraft. Beim Nachschlagen hilft die Grundform. Freiwilliger Zusatz mit Vorlage nach Lernstand: Substantivierte Verben schreibt man gross: beim Lesen.",
+  "sections": [
+    {
+      "title": "Schreibe das vollständige Wort und das Hilfswort.",
+      "instruction": "Beispiel: Hund → Hunde. Du brauchst keinen Artikel zu schreiben.",
+      "items": [
+        {
+          "prompt": "der Ber... (g oder k)",
+          "answer": "Berg → Berge",
+          "wide": true
+        },
+        {
+          "prompt": "kr...ftig (e oder ä)",
+          "answer": "kräftig → Kraft",
+          "wide": true
+        },
+        {
+          "prompt": "die H...ser (eu oder äu)",
+          "answer": "Häuser → Haus",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Zusatz mit Vorlage: Korrigiere die Schreibung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«nach dem schwimmen liest lea ein buch.»",
+          "answer": "Nach dem Schwimmen liest Lea ein Buch.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Wähle eine Strategie.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du bist unsicher, wie «Rhythmus» geschrieben wird. Hilft Verlängern zuverlässig? Was tust du stattdessen?",
+          "answer": "Nein, Verlängern erklärt diese Schreibung nicht zuverlässig. Im Wörterbuch nachschlagen und die richtige Schreibung einprägen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.E.1",
+    "scope": "Passende Rechtschreibstrategien wählen und ihre Grenzen erkennen. Grossschreibung substantivierter Verben als freiwillige gestützte Zyklus3Vorbereitung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

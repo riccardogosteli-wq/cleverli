@@ -1,0 +1,55 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "leseverstaendnis-6",
+  "goal": "Vor dem Schulhaus stand eine Bank mit einem lockeren Brett. Lio wollte sie sofort reparieren. Samira schlug vor, zuerst den Hausdienst zu informieren. Gemeinsam sperrten sie die Bank nicht selbst ab, sondern meldeten den Schaden im Sekretariat. Am nächsten Tag war die Bank fachgerecht gesichert. Wer dies getan hatte, erfuhren die Kinder nicht.",
+  "sections": [
+    {
+      "title": "Entnimm Informationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was war an der Bank beschädigt?",
+          "answer": "Ein Brett war locker.",
+          "wide": true
+        },
+        {
+          "prompt": "Was schlug Samira zuerst vor?",
+          "answer": "Den Hausdienst zu informieren.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Belege mit einer Handlung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was taten die beiden tatsächlich, statt selbst zu reparieren?",
+          "answer": "Sie meldeten den Schaden im Sekretariat.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Text und Vermutung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Der Hausdienst hat die Bank gesichert.» Ist diese Aussage sicher belegt? Begründe.",
+          "answer": "Nein. Der Text sagt ausdrücklich, dass die Kinder nicht erfuhren, wer die Bank gesichert hatte.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.C.1",
+    "scope": "Explizite Textangaben und plausible, aber unbelegte Schlussfolgerungen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,61 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "grammatik-6",
+  "goal": "Ein Nebensatz mit weil nennt einen Grund; die Personalform des Verbs steht am Ende. Beispiel: Mia bleibt zu Hause, weil sie krank ist. Zwischen Haupt- und Nebensatz steht ein Komma. Das Verb passt sich an das Subjekt an.",
+  "sections": [
+    {
+      "title": "Verbinde mit weil.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Noé nimmt eine Jacke mit. Es ist kalt.",
+          "answer": "Noé nimmt eine Jacke mit, weil es kalt ist.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die passende Verbform.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Kinder __ im Hof. (spielt / spielen)",
+          "answer": "spielen",
+          "wide": true
+        },
+        {
+          "prompt": "Das Kind __ ein Buch. (liest / lesen)",
+          "answer": "liest",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Verbessere.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Mia wartet weil der Bus hat Verspätung.» Schreibe mit richtigem Komma und richtiger Wortstellung.",
+          "answer": "Mia wartet, weil der Bus Verspätung hat.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.C.1",
+    "scope": "Subjekt-Verb-Kongruenz und die Stellung des finiten Verbs im weil-Nebensatz anwenden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|3|1",
+    "additionalReferences": [
+      {
+        "code": "D.5.E.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

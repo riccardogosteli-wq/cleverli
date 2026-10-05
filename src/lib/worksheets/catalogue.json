@@ -6232,20 +6232,20 @@
     "topicId": "kasus",
     "title": "Kasus: Nominativ, Akkusativ, Dativ",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Nominativ, Akkusativ und Dativ in eindeutigen einfachen Sätzen bestimmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.5.D.1",
+      "scope": "Mit vorliegenden Frageproben erste Erfahrungen mit Nominativ, Akkusativ und Dativ in einfachen Sätzen sammeln; keine selbstständige vollständige Fallbestimmung vorausgesetzt.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/kasus-arbeitsblatt.pdf",
-        "sha256": "9af484facc7a30adcc337b43311e2a157436a3fed8e24c3542ea3dceb24e6e2d",
-        "bytes": 860746
+        "path": "revisions/20261004/pdfs/6/german/kasus-arbeitsblatt.pdf",
+        "sha256": "847d5355db54303cadc9718c1f1717bf9f7148e4139d53b7b8576277814ffc66",
+        "bytes": 862699
       },
       "solution": {
-        "path": "pdfs/6/german/kasus-loesungen.pdf",
-        "sha256": "3f4a2518be6e311ef3f7f2c59876be5c241234d46688c0795b51c56ffa6f5795",
-        "bytes": 886224
+        "path": "revisions/20261004/pdfs/6/german/kasus-loesungen.pdf",
+        "sha256": "ec4eb8e4f7524766ec4e019fca4b9e357a41fadd891ca127e048c0883a491219",
+        "bytes": 903530
       }
     }
   },
@@ -6256,20 +6256,20 @@
     "topicId": "textsorten",
     "title": "Textsorten",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.B.1",
       "scope": "Funktionen kurzer Texte erkennen und wertende Sprache von sachlicher Information unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/textsorten-arbeitsblatt.pdf",
-        "sha256": "6808ccfa080a00b8be9ce8239a44fa4bff5713ccca49b0e1ae9adc977c4045d6",
-        "bytes": 855854
+        "path": "revisions/20261004/pdfs/6/german/textsorten-arbeitsblatt.pdf",
+        "sha256": "f310d059113f7e1fd2164ab45bf158cfe0aee56ea6839de9db2878533e0db9c0",
+        "bytes": 855563
       },
       "solution": {
-        "path": "pdfs/6/german/textsorten-loesungen.pdf",
-        "sha256": "f74c0407e53449d661ce279fa0ab8af03e8cdc389dac4ff3d6d4ee24c5cedaba",
-        "bytes": 882989
+        "path": "revisions/20261004/pdfs/6/german/textsorten-loesungen.pdf",
+        "sha256": "1c4d84e064e518124c45a41afd2a8df9725110797b41d3a158cf24c8a3f2dddb",
+        "bytes": 882633
       }
     }
   },
@@ -6280,20 +6280,20 @@
     "topicId": "rechtschreibstrategien",
     "title": "Rechtschreibstrategien",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Passende Rechtschreibstrategien wählen und ihre Grenzen erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.5.E.1",
+      "scope": "Passende Rechtschreibstrategien wählen und ihre Grenzen erkennen. Grossschreibung substantivierter Verben als freiwillige gestützte Zyklus3Vorbereitung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/rechtschreibstrategien-arbeitsblatt.pdf",
-        "sha256": "74d7cc6d7754078688ce8648780bb1ce82fb5bee7ffe4c91691f22a6f50a25cd",
-        "bytes": 858113
+        "path": "revisions/20261004/pdfs/6/german/rechtschreibstrategien-arbeitsblatt.pdf",
+        "sha256": "66a53e472ad9de0a248834d3628870a7d118cb55b5899b09fc264cb8034a29ba",
+        "bytes": 862043
       },
       "solution": {
-        "path": "pdfs/6/german/rechtschreibstrategien-loesungen.pdf",
-        "sha256": "75cb6cbc26ec4ca5c02cf6d95bc74a2f6a2239f8f00d3f0cc212bfdcd22fb4a5",
-        "bytes": 885385
+        "path": "revisions/20261004/pdfs/6/german/rechtschreibstrategien-loesungen.pdf",
+        "sha256": "db860393462e06e988135332aa61270f86be7f7a44363981bc75c3d74472f1b2",
+        "bytes": 904061
       }
     }
   },
@@ -6304,20 +6304,20 @@
     "topicId": "wortarten-6",
     "title": "Wortarten — Überblick",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Wortarten in einem ausdrücklich benannten Fünf-Gruppen-Modell untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.5.D.1",
+      "scope": "Nomen, Verben und Adjektive untersuchen. Pronomen/Partikeln und substantivierte Verben mit Vorlage als freiwillige Zyklus3Vorbereitung; keine vollständige Fünf-Gruppen-Bestimmung vorausgesetzt.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/wortarten-6-arbeitsblatt.pdf",
-        "sha256": "73f63333142f9739b8410c351f265015bf637d8706e7245ee4699232e128cdae",
-        "bytes": 861082
+        "path": "revisions/20261004/pdfs/6/german/wortarten-6-arbeitsblatt.pdf",
+        "sha256": "40d8da165008e033630a13753e61ec0e5d69e46084442cbfbf6353b8b9afa8c0",
+        "bytes": 865820
       },
       "solution": {
-        "path": "pdfs/6/german/wortarten-6-loesungen.pdf",
-        "sha256": "3414c465084cb048379897b75c0284acd3c85beed585d0e626a4ca72a5f5a9c2",
-        "bytes": 888546
+        "path": "revisions/20261004/pdfs/6/german/wortarten-6-loesungen.pdf",
+        "sha256": "729db4b26587c460e8cbe488f5882fa3476e5862fc6030232be388f07f8fe14a",
+        "bytes": 908957
       }
     }
   },
@@ -6328,20 +6328,26 @@
     "topicId": "grammatik-6",
     "title": "Grammatik vertieft",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.C.1",
       "scope": "Subjekt-Verb-Kongruenz und die Stellung des finiten Verbs im weil-Nebensatz anwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|3|1",
+      "additionalReferences": [
+        {
+          "code": "D.5.E.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/grammatik-6-arbeitsblatt.pdf",
-        "sha256": "ef8cb9f9c8094093254bf4753034cfdf24cc92e82526b91ac661fcf20c6ec7d8",
-        "bytes": 857914
+        "path": "revisions/20261004/pdfs/6/german/grammatik-6-arbeitsblatt.pdf",
+        "sha256": "450630cb67ea1e6a0fac956395525aad0ddc512cea3d9284c6f9d499385ca692",
+        "bytes": 858039
       },
       "solution": {
-        "path": "pdfs/6/german/grammatik-6-loesungen.pdf",
-        "sha256": "946b3441e10c8d1c85ff9b0923c308a1d72b49141478acbcae3498333153626e",
-        "bytes": 884863
+        "path": "revisions/20261004/pdfs/6/german/grammatik-6-loesungen.pdf",
+        "sha256": "7cdd60b1bb3fbfa61a61651f374729f8c9968a543161db4d698d1edee141a1dc",
+        "bytes": 885721
       }
     }
   },
@@ -6352,20 +6358,20 @@
     "topicId": "argumentation-6",
     "title": "Argumentation & Erörterung",
     "curriculum": {
-      "code": "D.4",
+      "code": "D.4.D.1",
       "scope": "Einen Standpunkt begründen, ein Gegenargument berücksichtigen und einen Vorschlag formulieren.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/argumentation-6-arbeitsblatt.pdf",
-        "sha256": "1571556852f5e34c4638f4ff8acec5b5ab1f86f366aa4309a1a8f9122d2acf47",
-        "bytes": 855481
+        "path": "revisions/20261004/pdfs/6/german/argumentation-6-arbeitsblatt.pdf",
+        "sha256": "ec87e4da0fb635a545ca93480e14b1a80e8b3cb7aea2ce2f104766ec0be749e9",
+        "bytes": 855187
       },
       "solution": {
-        "path": "pdfs/6/german/argumentation-6-loesungen.pdf",
-        "sha256": "0f61c440f6b3024bc1a91223920d89813c39d3f3266d0abf6b38818e71e04b47",
-        "bytes": 884189
+        "path": "revisions/20261004/pdfs/6/german/argumentation-6-loesungen.pdf",
+        "sha256": "8120d9f1e73bb5eeca7ed1af8f9ceeff565df3d0bd2dbd9bf7fa8d4f6b9ab10c",
+        "bytes": 883813
       }
     }
   },
@@ -6376,20 +6382,20 @@
     "topicId": "leseverstaendnis-6",
     "title": "Leseverständnis",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.C.1",
       "scope": "Explizite Textangaben und plausible, aber unbelegte Schlussfolgerungen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/leseverstaendnis-6-arbeitsblatt.pdf",
-        "sha256": "ab84413c563cba7f6299ca3ad014a57b95dac2a7f839f845f2bfca53a09e52cc",
-        "bytes": 858083
+        "path": "revisions/20261004/pdfs/6/german/leseverstaendnis-6-arbeitsblatt.pdf",
+        "sha256": "2f8e8b270781239555758e32d42dc8ddc1ae517ca4c8d8e8a27ede5c6f09ca4d",
+        "bytes": 857784
       },
       "solution": {
-        "path": "pdfs/6/german/leseverstaendnis-6-loesungen.pdf",
-        "sha256": "1aa6086fbb52774f91493206f7e6f29268e01e828669d3e9781816cd3b1e7b27",
-        "bytes": 884400
+        "path": "revisions/20261004/pdfs/6/german/leseverstaendnis-6-loesungen.pdf",
+        "sha256": "c2f2a95c184a19f7b8c3c352c8ac18b802397b88d8cfa551ecfb1fbf727bea03",
+        "bytes": 884051
       }
     }
   },
@@ -6400,20 +6406,20 @@
     "topicId": "sprache-wandel-6",
     "title": "Sprache im Wandel",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.B.1",
       "scope": "Sprachwandel und situationsbezogene Sprachwahl ohne Abwertung beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/sprache-wandel-6-arbeitsblatt.pdf",
-        "sha256": "decfcc934e8ae44a7a728a6ab4c15d75f82b6a1df0ee511b560a2425323a0f1c",
-        "bytes": 859291
+        "path": "revisions/20261004/pdfs/6/german/sprache-wandel-6-arbeitsblatt.pdf",
+        "sha256": "41a1a7f654485d6e30dfb3a6fd135eee8d28b857fbc692e85d28281acfc18724",
+        "bytes": 858998
       },
       "solution": {
-        "path": "pdfs/6/german/sprache-wandel-6-loesungen.pdf",
-        "sha256": "eef7fef86f081e5141da5399b8b4fa17035a974fa7db9f3ba0229c345abeb9f4",
-        "bytes": 886756
+        "path": "revisions/20261004/pdfs/6/german/sprache-wandel-6-loesungen.pdf",
+        "sha256": "0ea5b285fc19c6c82b4486ac5ee2b3edfc20a2f21cb19d6b3932eccf44444962",
+        "bytes": 886112
       }
     }
   },
@@ -6424,20 +6430,20 @@
     "topicId": "literatur-6",
     "title": "Literatur & Stilmittel",
     "curriculum": {
-      "code": "D.6",
+      "code": "D.6.C.1",
       "scope": "Vergleich und Personifikation erkennen, deuten und in einem eigenen Satz verwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|6|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/literatur-6-arbeitsblatt.pdf",
-        "sha256": "cc8496070d33121f25d7b38604b01c751c6be321cef802711b41fe1f255cb5e8",
-        "bytes": 855943
+        "path": "revisions/20261004/pdfs/6/german/literatur-6-arbeitsblatt.pdf",
+        "sha256": "836548b4f3ff86d87ac790ce91332775677fd4678690414994912f70927986e3",
+        "bytes": 855650
       },
       "solution": {
-        "path": "pdfs/6/german/literatur-6-loesungen.pdf",
-        "sha256": "de0a10d715286c574cdaadccecad6e93356fabb3a5ada9b7f5a5c2396c00e5c0",
-        "bytes": 883396
+        "path": "revisions/20261004/pdfs/6/german/literatur-6-loesungen.pdf",
+        "sha256": "00559b6df4633b126b31587f44422441304eaf0253dd44b129e09d0f77729c9e",
+        "bytes": 883052
       }
     }
   },
@@ -6448,20 +6454,20 @@
     "topicId": "hoerverstehen-6",
     "title": "Hörtexte analysieren",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.B.1",
       "scope": "Terminangaben, Gründe und eingeschränkte Geltung in einer vorgelesenen Mitteilung verstehen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/german/hoerverstehen-6-arbeitsblatt.pdf",
-        "sha256": "6a72ae16aa793ab1efc73f9ebfe74025787587449e6bf7a8f3e30a9c29b3c2fb",
-        "bytes": 857312
+        "path": "revisions/20261004/pdfs/6/german/hoerverstehen-6-arbeitsblatt.pdf",
+        "sha256": "6da8a31e4a34187b0a2617a7d1c60b8700efdbca31262adae4926a33f0795f5a",
+        "bytes": 857019
       },
       "solution": {
-        "path": "pdfs/6/german/hoerverstehen-6-loesungen.pdf",
-        "sha256": "3e40b84973c727f0dd4a39efba130f5d190d4b2262006e192313942afe4496d5",
-        "bytes": 883041
+        "path": "revisions/20261004/pdfs/6/german/hoerverstehen-6-loesungen.pdf",
+        "sha256": "b43efe474721a9625535d1c335721548c61f56ca9f323fac1e460fd766fbb10a",
+        "bytes": 882683
       }
     }
   },

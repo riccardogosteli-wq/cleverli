@@ -1,0 +1,70 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "wortarten-6",
+  "goal": "Bestimme zuerst Nomen, Verben und Adjektive. Für dieses Blatt gibt es zwei weitere Gruppen als freiwilligen Zusatz mit Vorlage: Pronomen (einschliesslich Artikel) und Partikeln. Er ist hier ein Pronomen. Und ist eine Partikel. Partikeln sind unveränderliche Wörter wie und oder unter. Die vollständige Fünf-Gruppen-Bestimmung ist eine Vorbereitung auf Zyklus 3, keine allgemeine Klassenanforderung.",
+  "sections": [
+    {
+      "title": "Ordne das genannte Wort einer Gruppe zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Der kleine Hund schläft. → Hund",
+          "answer": "Nomen",
+          "wide": true
+        },
+        {
+          "prompt": "Der kleine Hund schläft. → kleine",
+          "answer": "Adjektiv",
+          "wide": true
+        },
+        {
+          "prompt": "Der kleine Hund schläft. → schläft",
+          "answer": "Verb",
+          "wide": true
+        },
+        {
+          "prompt": "Zusatz mit Vorlage: Er schläft. → Er",
+          "answer": "Pronomen",
+          "wide": true
+        },
+        {
+          "prompt": "Zusatz mit Vorlage: Mia und Leo lesen. → und",
+          "answer": "Partikel",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Zusatz mit Vorlage: Beachte den Gebrauch.",
+      "instruction": "Wenn ein Verb als Nomen verwendet wird, schreibt man es gross: Das Lesen.",
+      "items": [
+        {
+          "prompt": "«Wir lesen gern.» und «Das Lesen macht Freude.» Welche Wortart hat lesen/Lesen jeweils?",
+          "answer": "Im ersten Satz Verb, im zweiten Nomen (substantiviertes Verb).",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Zusatz: Erkläre.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum wird Lesen im zweiten Satz grossgeschrieben?",
+          "answer": "Es wird als Nomen verwendet; der Artikel Das gehört dazu.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Nomen, Verben und Adjektive untersuchen. Pronomen/Partikeln und substantivierte Verben mit Vorlage als freiwillige Zyklus3Vorbereitung; keine vollständige Fünf-Gruppen-Bestimmung vorausgesetzt.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,61 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "hoerverstehen-6",
+  "goal": "Eine erwachsene Person liest den Text auf der Lösungsseite zweimal vor. Lies zuerst die Fragen. Notiere beim zweiten Hören Stichwörter. Dieses Blatt nutzt einen Vorlesetext, keine Audiodatei.",
+  "sections": [
+    {
+      "title": "Entnimm Informationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "An welchem Tag wird die Bibliothek geschlossen?",
+          "answer": "Mittwoch",
+          "wide": true
+        },
+        {
+          "prompt": "Warum bleibt sie geschlossen?",
+          "answer": "Weil neue Regale aufgebaut werden.",
+          "wide": true
+        },
+        {
+          "prompt": "Wann öffnet sie wieder?",
+          "answer": "Donnerstag um neun Uhr.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkenne Bedingungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Für welche Bücher verlängert sich die Rückgabefrist automatisch?",
+          "answer": "Für Bücher, die am Mittwoch zurückgegeben werden müssten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Aussage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Alle ausgeliehenen Bücher dürfen einen Monat länger bleiben.» Wird das gesagt? Begründe.",
+          "answer": "Nein. Nur am Mittwoch fällige Bücher dürfen bis Freitag bleiben; ein Monat wird nicht genannt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.B.1",
+    "scope": "Terminangaben, Gründe und eingeschränkte Geltung in einer vorgelesenen Mitteilung verstehen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
+  },
+  "teacherScript": "Am Mittwoch bleibt unsere Bibliothek geschlossen, weil neue Regale aufgebaut werden. Am Donnerstag öffnen wir wieder um neun Uhr. Bücher, die ihr am Mittwoch zurückgeben müsstet, dürft ihr ohne Verlängerungsantrag bis Freitag behalten. Für andere Rückgabetermine ändert sich nichts.",
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

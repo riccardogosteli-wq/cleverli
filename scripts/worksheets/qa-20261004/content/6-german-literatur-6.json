@@ -1,0 +1,55 @@
+{
+  "grade": 6,
+  "subject": "german",
+  "sourceId": "literatur-6",
+  "goal": "«Der Wind flüstert durch die Bäume. Der See liegt da wie ein Spiegel. Auf dem Weg wartet Mila auf einen Brief.» Dieser kurze Text ist für das Blatt erfunden. Personifikation: etwas Nichtmenschliches handelt menschlich. Vergleich: zwei Dinge werden etwa mit wie verbunden.",
+  "sections": [
+    {
+      "title": "Finde die Stilmittel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Formulierung ist eine Personifikation?",
+          "answer": "Der Wind flüstert durch die Bäume.",
+          "wide": true
+        },
+        {
+          "prompt": "Welche Formulierung ist ein Vergleich?",
+          "answer": "Der See liegt da wie ein Spiegel.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe die Wirkung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welchen Eindruck kann der Vergleich mit einem Spiegel vom See vermitteln?",
+          "answer": "Zum Beispiel: eine ruhige, glatte oder spiegelnde Oberfläche. Textnahe begründete Deutungen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe selbst.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Erfinde einen Satz mit einer Personifikation. Unterstreiche darin die menschliche Handlung.",
+          "answer": "Beispiel: Die Sonne lächelt. Lächelt unterstreichen. Andere passende menschliche Handlungen bei nichtmenschlichen Dingen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.6.C.1",
+    "scope": "Vergleich und Personifikation erkennen, deuten und in einem eigenen Satz verwenden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|6|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
