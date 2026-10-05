@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "english",
+  "sourceId": "my-home-4",
+  "goal": "A kitchen ist eine Küche, a bedroom ein Schlafzimmer und a bathroom ein Badezimmer. In a town gibt es zum Beispiel a school, a park und a library (Bibliothek). Erfinde Orte, statt deine Adresse zu nennen.",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "kitchen",
+          "answer": "Küche"
+        },
+        {
+          "prompt": "bedroom",
+          "answer": "Schlafzimmer"
+        },
+        {
+          "prompt": "bathroom",
+          "answer": "Badezimmer"
+        },
+        {
+          "prompt": "library",
+          "answer": "Bibliothek"
+        }
+      ]
+    },
+    {
+      "title": "Lies den Text.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«The library is next to the park. The school is opposite the library.» Was liegt neben dem Park?",
+          "answer": "Die Bibliothek.",
+          "wide": true
+        },
+        {
+          "prompt": "Was liegt gegenüber der Bibliothek?",
+          "answer": "Die Schule.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe einen erfundenen Ort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze: «There is a ...» und «The ... is next to the ...». Nutze school, park oder library.",
+          "answer": "Beispiel: There is a park. The library is next to the park. Sinnvolle Sätze mit passenden Wörtern gelten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.B.1",
+    "scope": "Raum- und Ortswörter sowie einfache Lageangaben verwenden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

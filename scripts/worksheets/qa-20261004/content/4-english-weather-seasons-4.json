@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "english",
+  "sourceId": "weather-seasons-4",
+  "goal": "Weather words: sunny = sonnig, rainy = regnerisch, windy = windig, snowy = verschneit. Seasons: spring, summer, autumn, winter. Wetter kann innerhalb jeder Jahreszeit wechseln.",
+  "sections": [
+    {
+      "title": "Schreibe die englischen Wörter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "sonnig",
+          "answer": "sunny"
+        },
+        {
+          "prompt": "windig",
+          "answer": "windy"
+        },
+        {
+          "prompt": "Frühling",
+          "answer": "spring"
+        },
+        {
+          "prompt": "Herbst",
+          "answer": "autumn / fall"
+        }
+      ]
+    },
+    {
+      "title": "Lies die Wetterbeschreibung.",
+      "instruction": "Wörterhilfe: today = heute, tomorrow = morgen.",
+      "items": [
+        {
+          "prompt": "«Today it is rainy and windy. Tomorrow it will be sunny.» Wie ist das Wetter heute?",
+          "answer": "Regnerisch und windig.",
+          "wide": true
+        },
+        {
+          "prompt": "Welches Wetter wird für morgen beschrieben?",
+          "answer": "Sonniges Wetter.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe ein erfundenes Wetter.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze mit «It is ...». Nenne eine Jahreszeit und ein dazu mögliches Wetter.",
+          "answer": "Beispiel: It is spring. It is rainy. Sinnvolle Kombinationen gelten; keine starre Zuordnung von Wetter zu Jahreszeiten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Wetter- und Jahreszeitenwörter in kurzen Texten verstehen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

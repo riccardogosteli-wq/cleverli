@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "english",
+  "sourceId": "describing-people-4",
+  "goal": "Alex has short brown hair. Alex wears a green jacket and likes reading. Alex is helpful. Diese Person ist erfunden. Beschreibungen bleiben respektvoll; Aussehen sagt nichts über den Wert eines Menschen.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Haarfarbe hat Alex?",
+          "answer": "Braun."
+        },
+        {
+          "prompt": "Welche Farbe hat die Jacke?",
+          "answer": "Grün."
+        },
+        {
+          "prompt": "Was macht Alex gern?",
+          "answer": "Lesen."
+        },
+        {
+          "prompt": "Welche Eigenschaft wird genannt?",
+          "answer": "Hilfsbereit."
+        }
+      ]
+    },
+    {
+      "title": "Wähle die passende Form.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Alex __ short hair. (has / have)",
+          "answer": "has",
+          "wide": true
+        },
+        {
+          "prompt": "Alex __ helpful. (is / are)",
+          "answer": "is",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe eine erfundene Person.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze mit «... has ...» und «... likes ...». Wörter: short hair, long hair, reading, drawing.",
+          "answer": "Beispiel: Kim has long hair. Kim likes drawing. Passende Formen und respektvolle Beschreibung; andere Namen gelten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Informationen aus einer respektvollen Personenbeschreibung entnehmen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

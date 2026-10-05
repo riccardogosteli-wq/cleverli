@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "english",
+  "sourceId": "my-daily-routine-4",
+  "goal": "Sam gets up at seven. Sam has breakfast at half past seven. School starts at eight. In the afternoon, Sam plays with friends. Dieser Tagesablauf ist erfunden.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wann steht Sam auf?",
+          "answer": "Um sieben Uhr."
+        },
+        {
+          "prompt": "Wann frühstückt Sam?",
+          "answer": "Um halb acht / 7.30 Uhr."
+        },
+        {
+          "prompt": "Wann beginnt die Schule?",
+          "answer": "Um acht Uhr."
+        },
+        {
+          "prompt": "Was macht Sam am Nachmittag?",
+          "answer": "Mit Freunden spielen."
+        }
+      ]
+    },
+    {
+      "title": "Ergänze das passende Verb.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "I __ up at seven. (get / gets)",
+          "answer": "get",
+          "wide": true
+        },
+        {
+          "prompt": "Sam __ breakfast. (have / has)",
+          "answer": "has",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen erfundenen Ablauf.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze mit «I get up at ...» und «I have breakfast at ...». Verwende volle Stunden als Zahlwörter.",
+          "answer": "Beispiel: I get up at seven. I have breakfast at eight. Andere sinnvolle erfundene Zeiten gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Informationen aus einem kurzen Tagesablauf entnehmen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

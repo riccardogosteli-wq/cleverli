@@ -1,0 +1,59 @@
+{
+  "grade": 4,
+  "subject": "english",
+  "sourceId": "food-shopping-4",
+  "goal": "Im erfundenen Laden kosten: one apple CHF 1, one sandwich CHF 4, one bottle of water CHF 2. «Can I have ..., please?» ist eine höfliche Bitte. «How much is it?» fragt nach dem Preis.",
+  "sections": [
+    {
+      "title": "Lies die Preisliste. Antworte auf Englisch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "How much is one apple?",
+          "answer": "One franc.",
+          "wide": true
+        },
+        {
+          "prompt": "How much is one sandwich?",
+          "answer": "Four francs.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Rechne den Einkauf.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "One apple and one bottle of water kosten zusammen wie viel?",
+          "answer": "CHF 3",
+          "wide": true
+        },
+        {
+          "prompt": "Du bezahlst für ein Sandwich mit CHF 10. Wie viel Wechselgeld erhältst du?",
+          "answer": "CHF 6",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine höfliche Bitte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bitte auf Englisch um ein Sandwich. Verwende «Can I have ...» und «please». Ergänze einen Satz zum Bedanken.",
+          "answer": "Can I have a sandwich, please? Thank you. Gleichwertige höfliche Formulierungen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.4.A.1",
+    "scope": "Einfache Preise verstehen und einen kurzen Einkauf sprachlich gestalten. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

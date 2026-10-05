@@ -1,0 +1,64 @@
+{
+  "grade": 4,
+  "subject": "english",
+  "sourceId": "past-simple-4",
+  "goal": "Zusatz für Kinder mit passenden Vorkenntnissen: Das Past Simple erzählt von Vergangenem. Regelmässig: play → played, visit → visited. Häufig unregelmässig: go → went, have → had. Nach did not steht die Grundform: I did not play.",
+  "sections": [
+    {
+      "title": "Wähle die Vergangenheitsform.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Yesterday I __ a friend. (visit / visited)",
+          "answer": "visited",
+          "wide": true
+        },
+        {
+          "prompt": "Yesterday we __ to the park. (go / went)",
+          "answer": "went",
+          "wide": true
+        },
+        {
+          "prompt": "Yesterday Sam __ a sandwich. (has / had)",
+          "answer": "had",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze nach did not.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "I did not __ football. (play / played)",
+          "answer": "play",
+          "wide": true
+        },
+        {
+          "prompt": "We did not __ to the park. (go / went)",
+          "answer": "go",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe mit den Hilfen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe über einen erfundenen gestrigen Tag: «Yesterday I ...». Verwende visited a friend oder played a game.",
+          "answer": "Beispiel: Yesterday I visited a friend. / Yesterday I played a game. Passender vollständiger Satz im Past Simple.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.D.1",
+    "scope": "Ausgewählte Vergangenheitsformen mit Hilfen verwenden; Zusatz, keine allgemeine Klassenanforderung. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

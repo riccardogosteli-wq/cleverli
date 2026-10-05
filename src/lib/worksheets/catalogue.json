@@ -3958,20 +3958,20 @@
     "topicId": "my-daily-routine-4",
     "title": "My Daily Routine",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Informationen aus einem kurzen Tagesablauf entnehmen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/my-daily-routine-4-arbeitsblatt.pdf",
-        "sha256": "d20e4dc42ccc81932921157aff95668dfafc5546af3966f7f71b11ff2ab017a1",
-        "bytes": 858188
+        "path": "revisions/20261004/pdfs/4/english/my-daily-routine-4-arbeitsblatt.pdf",
+        "sha256": "a2557cf369c8dd8b6af9761cd9c7459b1eb13fe62f5d8eeeae43e2ca05a38ddd",
+        "bytes": 858118
       },
       "solution": {
-        "path": "pdfs/4/english/my-daily-routine-4-loesungen.pdf",
-        "sha256": "69014cb8e753aee92fb24c50893b0fdfe7a8f7c1b2ac582550a2a2e4a266acb9",
-        "bytes": 885004
+        "path": "revisions/20261004/pdfs/4/english/my-daily-routine-4-loesungen.pdf",
+        "sha256": "e246c00556bf0927127b67147825fd5deb584f57aada419e70f875e3d7f248ba",
+        "bytes": 884802
       }
     }
   },
@@ -3982,20 +3982,20 @@
     "topicId": "my-home-4",
     "title": "My Home & Town",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.B.1",
       "scope": "Raum- und Ortswörter sowie einfache Lageangaben verwenden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/my-home-4-arbeitsblatt.pdf",
-        "sha256": "2710ee0cb4cf35d86c8e1f3ebdedcf0607575f918c7eefd8285721ffed98c9b3",
-        "bytes": 857254
+        "path": "revisions/20261004/pdfs/4/english/my-home-4-arbeitsblatt.pdf",
+        "sha256": "870edf1d25b2b2e2946c14d43051ad8d2f6c312c84ded14010cb7ed6e3724896",
+        "bytes": 856950
       },
       "solution": {
-        "path": "pdfs/4/english/my-home-4-loesungen.pdf",
-        "sha256": "bca0bb60f5575ca8f85e48d0d05c7f0252abd325640468bb3d36db0daca5e46f",
-        "bytes": 886393
+        "path": "revisions/20261004/pdfs/4/english/my-home-4-loesungen.pdf",
+        "sha256": "fbb9076ce3e06d634e7fb208b3f085ebf5318bad93a9cc59b445f5203c9c768d",
+        "bytes": 885742
       }
     }
   },
@@ -4006,20 +4006,20 @@
     "topicId": "sports-hobbies-4",
     "title": "Sports & Hobbies",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.D.1",
       "scope": "Hobbys mit like und einfache Fähigkeiten mit can ausdrücken. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/sports-hobbies-4-arbeitsblatt.pdf",
-        "sha256": "66e265d5b776f9accf4bada86044cd209e2f765d7c05c05be74e49279aa1254e",
-        "bytes": 857490
+        "path": "revisions/20261004/pdfs/4/english/sports-hobbies-4-arbeitsblatt.pdf",
+        "sha256": "f62cf44f47ad379637edeb9f1f798f9bbf17ba0c68768b563b532129bfbeddbf",
+        "bytes": 857436
       },
       "solution": {
-        "path": "pdfs/4/english/sports-hobbies-4-loesungen.pdf",
-        "sha256": "90aba7e30dda205f4805d17dad6ec73bad919cc997a0bf149e6e5789ac24624f",
-        "bytes": 885155
+        "path": "revisions/20261004/pdfs/4/english/sports-hobbies-4-loesungen.pdf",
+        "sha256": "676c47ce69b71d2e80ba8af86a61a7a86f849204521358ed343c08e6e6cb99cb",
+        "bytes": 884902
       }
     }
   },
@@ -4030,20 +4030,20 @@
     "topicId": "food-shopping-4",
     "title": "Food & Shopping",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.4.A.1",
       "scope": "Einfache Preise verstehen und einen kurzen Einkauf sprachlich gestalten. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/food-shopping-4-arbeitsblatt.pdf",
-        "sha256": "f81e9c198c3500808502ab3e1cc15aba43c9bd7d02c6eea411652a92aa18844e",
-        "bytes": 859293
+        "path": "revisions/20261004/pdfs/4/english/food-shopping-4-arbeitsblatt.pdf",
+        "sha256": "fa1c509ec72612352053a4a6a276bf2bb245c79581025f590cb1dbb56d9d5b05",
+        "bytes": 859002
       },
       "solution": {
-        "path": "pdfs/4/english/food-shopping-4-loesungen.pdf",
-        "sha256": "03a61fc9a5636890a39063bf3d8687cd6416dbfdffd4b6ce3a71538e2e2e880c",
-        "bytes": 886702
+        "path": "revisions/20261004/pdfs/4/english/food-shopping-4-loesungen.pdf",
+        "sha256": "3aefe906858373ed9083a4de8f23ae465bc711b3d0620fbcbea5741a95c31dee",
+        "bytes": 886059
       }
     }
   },
@@ -4054,20 +4054,20 @@
     "topicId": "weather-seasons-4",
     "title": "Weather & Seasons",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Wetter- und Jahreszeitenwörter in kurzen Texten verstehen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/weather-seasons-4-arbeitsblatt.pdf",
-        "sha256": "50242bf53a288d0f8cef55b045aacf6f72e2f71b0a42ad2b4f50619ed801e3bb",
-        "bytes": 856207
+        "path": "revisions/20261004/pdfs/4/english/weather-seasons-4-arbeitsblatt.pdf",
+        "sha256": "ef92ee99c80bf7aa3932054ef502488b9f9bbde47067d33ec045e48c2cb3d4d2",
+        "bytes": 856511
       },
       "solution": {
-        "path": "pdfs/4/english/weather-seasons-4-loesungen.pdf",
-        "sha256": "5b1da9e59ef5218d4ad91a8434f4f554d7c0c75c7880ed2e8215e7b3ada9b227",
-        "bytes": 884860
+        "path": "revisions/20261004/pdfs/4/english/weather-seasons-4-loesungen.pdf",
+        "sha256": "f35d153b3e9e98e41bde563e9868da3abba0c2052e30e34c81fddea215b0b9b6",
+        "bytes": 899874
       }
     }
   },
@@ -4078,20 +4078,20 @@
     "topicId": "past-simple-4",
     "title": "Past Simple",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.D.1",
       "scope": "Ausgewählte Vergangenheitsformen mit Hilfen verwenden; Zusatz, keine allgemeine Klassenanforderung. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/past-simple-4-arbeitsblatt.pdf",
-        "sha256": "272f5ee7cc41a8032c8975036b1f3eed934d0c822eef62d3c73038077e3b335e",
-        "bytes": 859507
+        "path": "revisions/20261004/pdfs/4/english/past-simple-4-arbeitsblatt.pdf",
+        "sha256": "764d1186f3c0651fdeee9647049bab7010de212e80814231f1a2b3e7e2a08ac7",
+        "bytes": 859804
       },
       "solution": {
-        "path": "pdfs/4/english/past-simple-4-loesungen.pdf",
-        "sha256": "d6432cd1c94d294fce48703b31e3a5cdcac5ad499644261464afe79407a889f0",
-        "bytes": 886144
+        "path": "revisions/20261004/pdfs/4/english/past-simple-4-loesungen.pdf",
+        "sha256": "712078c800b8259d8482b0d5f6c48820d4d33b5799b07fce50df1582cce7c9e0",
+        "bytes": 886350
       }
     }
   },
@@ -4102,20 +4102,20 @@
     "topicId": "health-body-4",
     "title": "Health & Body",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.B.1",
       "scope": "Körperwörter und einfache Bitten um Unterstützung verstehen und schreiben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/health-body-4-arbeitsblatt.pdf",
-        "sha256": "e0a667b59baab98cbf5dd304aa9570cd23c94e4683bc3abb1babe513dd2dad40",
-        "bytes": 859566
+        "path": "revisions/20261004/pdfs/4/english/health-body-4-arbeitsblatt.pdf",
+        "sha256": "22d4c81b2c0cad60eb51f44892115019d3661d6ddaf624f0328b5e2486b57033",
+        "bytes": 859257
       },
       "solution": {
-        "path": "pdfs/4/english/health-body-4-loesungen.pdf",
-        "sha256": "07a38c988309e8a25edae70a341cfdee29fa0e7dd0a11b2df78e9075768b5654",
-        "bytes": 889231
+        "path": "revisions/20261004/pdfs/4/english/health-body-4-loesungen.pdf",
+        "sha256": "e56d9b8a85817d3a3aae7e9bd75fdfc3180f3ada8ee05a065216ce7e85f6fa63",
+        "bytes": 888574
       }
     }
   },
@@ -4126,20 +4126,20 @@
     "topicId": "travel-directions-4",
     "title": "Travel & Directions",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Einfache schriftliche Weganweisungen verstehen und wiedergeben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/travel-directions-4-arbeitsblatt.pdf",
-        "sha256": "c3cab693581ba745b7201627c9f924819ccffabdd1a3e90b4367327a8c2417ae",
-        "bytes": 859280
+        "path": "revisions/20261004/pdfs/4/english/travel-directions-4-arbeitsblatt.pdf",
+        "sha256": "564feb9b667a2463242cc7d4e6f7d61b40884bb4e4dbc159a2e21a43fb8437c7",
+        "bytes": 858979
       },
       "solution": {
-        "path": "pdfs/4/english/travel-directions-4-loesungen.pdf",
-        "sha256": "e3924724d3948350682d823e82e16fa5e0e4fbf382b27e28bb9f9dec297eb3be",
-        "bytes": 883388
+        "path": "revisions/20261004/pdfs/4/english/travel-directions-4-loesungen.pdf",
+        "sha256": "cffd5cafbbda1f5f10f2d2ca1eeaefd06a048ce26b331811cce2c944961e62a2",
+        "bytes": 883027
       }
     }
   },
@@ -4150,20 +4150,20 @@
     "topicId": "describing-people-4",
     "title": "Describing People",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Informationen aus einer respektvollen Personenbeschreibung entnehmen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/english/describing-people-4-arbeitsblatt.pdf",
-        "sha256": "3e24fedd06b09e7150b0312e4c884f58d9773436b42b3994ad57752606b6aaf0",
-        "bytes": 858767
+        "path": "revisions/20261004/pdfs/4/english/describing-people-4-arbeitsblatt.pdf",
+        "sha256": "1e51c28f7414233a5f7e075621ddd0b5afd28cd0c87e693a2095e79cbda8fee4",
+        "bytes": 858710
       },
       "solution": {
-        "path": "pdfs/4/english/describing-people-4-loesungen.pdf",
-        "sha256": "1e35d2c68e210cb239df8b5e1d8fef3096d7524a3a7c1f42c924df92f1010fba",
-        "bytes": 885013
+        "path": "revisions/20261004/pdfs/4/english/describing-people-4-loesungen.pdf",
+        "sha256": "710d31af5bc9cf0bbbab6177376c7f0dbd2503b6f0c9b9682b19a60a294ff16e",
+        "bytes": 884826
       }
     }
   },

@@ -1,0 +1,64 @@
+{
+  "grade": 4,
+  "subject": "english",
+  "sourceId": "travel-directions-4",
+  "goal": "Wegwörter: turn left = links abbiegen, turn right = rechts abbiegen, go straight on = geradeaus gehen. Verkehrsmittel: bus, train, bicycle. Übe nur auf dem Papier, nicht ohne Begleitung im Strassenverkehr.",
+  "sections": [
+    {
+      "title": "Übersetze auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "turn left",
+          "answer": "Links abbiegen",
+          "wide": true
+        },
+        {
+          "prompt": "turn right",
+          "answer": "Rechts abbiegen",
+          "wide": true
+        },
+        {
+          "prompt": "go straight on",
+          "answer": "Geradeaus gehen",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Verstehe den Weg.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Go straight on. Then turn left. The museum is on your right.» Auf welcher Seite liegt am Ende das Museum?",
+          "answer": "Rechts.",
+          "wide": true
+        },
+        {
+          "prompt": "Welche Richtungsänderung wird vorher genannt?",
+          "answer": "Links abbiegen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine kurze Anweisung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe auf Englisch: «Gehe geradeaus. Biege dann rechts ab.»",
+          "answer": "Go straight on. Then turn right.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Einfache schriftliche Weganweisungen verstehen und wiedergeben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
