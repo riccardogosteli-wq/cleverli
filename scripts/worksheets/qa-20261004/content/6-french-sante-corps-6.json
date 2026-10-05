@@ -1,0 +1,66 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "sante-corps-6",
+  "goal": "La tête = der Kopf; le bras = der Arm; la main = die Hand; le pied = der Fuss. «J’ai mal à la tête» bedeutet «Ich habe Kopfschmerzen». Dieses Blatt übt Sprache, keine Diagnose. Beschreibe nur erfundene Personen.",
+  "sections": [
+    {
+      "title": "Schreibe die deutsche Bedeutung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "la main",
+          "answer": "die Hand"
+        },
+        {
+          "prompt": "le pied",
+          "answer": "der Fuss"
+        },
+        {
+          "prompt": "le bras",
+          "answer": "der Arm"
+        },
+        {
+          "prompt": "la tête",
+          "answer": "der Kopf"
+        }
+      ]
+    },
+    {
+      "title": "Verstehe eine Aussage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«J’ai mal à la tête.» Was sagt die Person?",
+          "answer": "Sie hat Kopfschmerzen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Bitte um Hilfe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ordne zur höflichen Bitte: m’aider / Pouvez-vous / s’il vous plaît?",
+          "answer": "Pouvez-vous m’aider, s’il vous plaît?",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.B.1",
+    "scope": "Körperwortschatz und eine höfliche Bitte um Hilfe verwenden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.3.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|3|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

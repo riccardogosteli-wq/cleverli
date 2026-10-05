@@ -1,0 +1,59 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "metiers-avenir-6",
+  "goal": "Nora est médecin. Elle travaille dans un hôpital. Sami est boulanger. Il fait du pain. Alex travaille dans une bibliothèque. Alle Personen sind erfunden. Beruf und Interessen hängen nicht vom Geschlecht ab.",
+  "sections": [
+    {
+      "title": "Lies die Berufe und Tätigkeiten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was ist Noras Beruf?",
+          "answer": "Ärztin.",
+          "wide": true
+        },
+        {
+          "prompt": "Was stellt Sami her?",
+          "answer": "Brot.",
+          "wide": true
+        },
+        {
+          "prompt": "Wo arbeitet Alex?",
+          "answer": "In einer Bibliothek.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Verstehe ein Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was bedeutet un hôpital?",
+          "answer": "Ein Spital / ein Krankenhaus.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe eine erfundene Person.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ordne: dans une bibliothèque / Alex / travaille.",
+          "answer": "Alex travaille dans une bibliothèque.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Einfache Angaben zu Berufen und Arbeitsorten verstehen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

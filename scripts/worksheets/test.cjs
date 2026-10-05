@@ -7,6 +7,7 @@ const landings=load('src/lib/worksheetLandingPages.ts').worksheetLandingPages;
 const root=path.resolve(process.argv[2]||'../worksheets/all-grades-2026-09-26');
 let count=0;const check=(name,fn)=>{fn();count++;console.log('PASS',name)};
 check('303 canonical topics, exact grade totals',()=>{assert.equal(catalogue.length,303);assert.equal(new Set(catalogue.map(t=>t.id)).size,303);assert.deepEqual([1,2,3,4,5,6].map(g=>catalogue.filter(t=>t.grade===g).length),[36,35,51,61,60,60])});
+const validateCurriculumReference=(reference,id)=>{const u=new URL(reference.url);assert.equal(u.protocol,'https:',id);assert(u.hostname==='lehrplan.ch'||u.hostname.endsWith('.lehrplan.ch'),id);const code=u.searchParams.get('code');assert(code&&!code.includes('*'),id)};check('official curriculum references have concrete codes and no placeholders',()=>{for(const topic of catalogue)for(const reference of [topic.curriculum,...(topic.curriculum.additionalReferences||[])])validateCurriculumReference(reference,topic.id)});check('curriculum reference guard rejects placeholders, missing codes and unsafe hosts',()=>{for(const url of ['https://v-fe.lehrplan.ch/index.php?code=***','https://v-fe.lehrplan.ch/index.php','http://v-fe.lehrplan.ch/index.php?code=a|5','https://example.invalid/index.php?code=a|5'])assert.throws(()=>validateCurriculumReference({url},'local fixture'))});
 const instant=Date.parse('2026-09-27T12:00:00Z');
 for(const [name,profile,expected] of [
  ['missing',null,false],['revoked',{premium:false,premium_until:null},false],

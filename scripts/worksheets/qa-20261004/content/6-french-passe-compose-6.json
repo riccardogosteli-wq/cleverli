@@ -1,0 +1,66 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "passe-compose-6",
+  "goal": "Je m’appelle Zoé. Le matin, je mange du pain. À huit heures, je vais à l’école. Après l’école, je joue avec mon amie. Le soir, je lis un livre. Diese Tagesbeschreibung ist erfunden und steht im Präsens.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was isst Zoé am Morgen?",
+          "answer": "Brot.",
+          "wide": true
+        },
+        {
+          "prompt": "Wann geht sie zur Schule?",
+          "answer": "Um acht Uhr.",
+          "wide": true
+        },
+        {
+          "prompt": "Was macht sie am Abend?",
+          "answer": "Sie liest ein Buch.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ordne zeitlich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe in der Reihenfolge des Tages: le soir; le matin; après l’école.",
+          "answer": "le matin; après l’école; le soir",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Schreibe zwei erfundene Sätze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nutze «Le matin, je ...» und «Le soir, je ...». Wähle mange, joue oder lis mit einem passenden Zusatz aus dem Text.",
+          "answer": "Beispiel: Le matin, je mange du pain. Le soir, je lis un livre. Verständliche passende Sätze gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Einen einfachen Tagesablauf lesen und mit Satzmustern beschreiben. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

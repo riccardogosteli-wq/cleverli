@@ -7032,20 +7032,26 @@
     "topicId": "passe-compose-6",
     "title": "Ma journée",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Einen einfachen Tagesablauf lesen und mit Satzmustern beschreiben. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/passe-compose-6-arbeitsblatt.pdf",
-        "sha256": "0a439394b103b59498d01ce719fbaa164e05e13b931e09a9ffb5215b6bc573b8",
-        "bytes": 857479
+        "path": "revisions/20261004/pdfs/6/french/passe-compose-6-arbeitsblatt.pdf",
+        "sha256": "0c3a66d27a8444ac589742133111e683aabbce9f083c66a0cef6dfd428bf1bee",
+        "bytes": 857208
       },
       "solution": {
-        "path": "pdfs/6/french/passe-compose-6-loesungen.pdf",
-        "sha256": "efc1a3eb74d1656302e1647b40c714c209c365f41a675e04c8289554265a8f9d",
-        "bytes": 883261
+        "path": "revisions/20261004/pdfs/6/french/passe-compose-6-loesungen.pdf",
+        "sha256": "c66253f5b96f6b6c872db87ef29dffa6f2a9a736f8b5e08a53421c94afeecf2f",
+        "bytes": 884258
       }
     }
   },
@@ -7056,20 +7062,26 @@
     "topicId": "imparfait-6",
     "title": "À l’école",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Informationen über eine Klasse aus einem kurzen Text entnehmen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/imparfait-6-arbeitsblatt.pdf",
-        "sha256": "b50edc5a4b17e9527be7c2f66dd7f1ac5888951fd4088e97a1afc23dd676e46d",
-        "bytes": 856534
+        "path": "revisions/20261004/pdfs/6/french/imparfait-6-arbeitsblatt.pdf",
+        "sha256": "9f7851fff704745ec96f6d548f36183899465fe87b9b49b1950fc734ed4f7261",
+        "bytes": 856263
       },
       "solution": {
-        "path": "pdfs/6/french/imparfait-6-loesungen.pdf",
-        "sha256": "dd693ab6e8baec47c887a6ae9a68e1083829a9957b96bebf3dd5ef7511e9e8cb",
-        "bytes": 881976
+        "path": "revisions/20261004/pdfs/6/french/imparfait-6-loesungen.pdf",
+        "sha256": "729d26554a6bf03130619007549b0e47d6bc17881186f2e6df8d751c135d2766",
+        "bytes": 882991
       }
     }
   },
@@ -7080,20 +7092,20 @@
     "topicId": "futur-simple-6",
     "title": "Projets & loisirs",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.D.1",
       "scope": "Einfache Freizeitpläne mit aller plus Grundform verstehen und bilden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/futur-simple-6-arbeitsblatt.pdf",
-        "sha256": "324998081253cc2f9d809a99cec18db87688339249cad97eb6d2e29b806876f2",
-        "bytes": 855514
+        "path": "revisions/20261004/pdfs/6/french/futur-simple-6-arbeitsblatt.pdf",
+        "sha256": "62d204559e91bbadbdb745a7232efcd2be362cb3a706edec860c7bf1737e2778",
+        "bytes": 855465
       },
       "solution": {
-        "path": "pdfs/6/french/futur-simple-6-loesungen.pdf",
-        "sha256": "dee493653a7073b2884d9f2f43bc07f8db61c2f2949f38173699914350ba5276",
-        "bytes": 879712
+        "path": "revisions/20261004/pdfs/6/french/futur-simple-6-loesungen.pdf",
+        "sha256": "1b084ddba88beea4399aa0992be1dd88dd1a9e2edad3a4a938662f3c5f402812",
+        "bytes": 879497
       }
     }
   },
@@ -7104,20 +7116,26 @@
     "topicId": "ville-directions-6",
     "title": "La ville & les directions",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Eine kurze Wegbeschreibung und eine höfliche Frage nach einem Ort verstehen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.3.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|3|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/ville-directions-6-arbeitsblatt.pdf",
-        "sha256": "134d69bc1c615bf2e09d93b4c87a1cfe80dfefc593dbaa4076757f34fc98f2a9",
-        "bytes": 858839
+        "path": "revisions/20261004/pdfs/6/french/ville-directions-6-arbeitsblatt.pdf",
+        "sha256": "ba30dcaac0e8ac35c900a6702dae211466437f877703a01b4fd4ed7095863d58",
+        "bytes": 858539
       },
       "solution": {
-        "path": "pdfs/6/french/ville-directions-6-loesungen.pdf",
-        "sha256": "2a1c031582561c00e4468e83272853a78e79e0ff2f960b7906692de07405fb6a",
-        "bytes": 884047
+        "path": "revisions/20261004/pdfs/6/french/ville-directions-6-loesungen.pdf",
+        "sha256": "411e2500eb5f5be21d526538a10c449c699592afe1cc724f7a64c0e89ea2d9ff",
+        "bytes": 884659
       }
     }
   },
@@ -7128,20 +7146,26 @@
     "topicId": "sante-corps-6",
     "title": "La santé & le corps",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.B.1",
       "scope": "Körperwortschatz und eine höfliche Bitte um Hilfe verwenden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.3.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|3|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/sante-corps-6-arbeitsblatt.pdf",
-        "sha256": "bb7dbbab2ad3db0e8a4fcb9b2abdad910f2f35553318bfec0f49fcaa25724bd4",
-        "bytes": 858616
+        "path": "revisions/20261004/pdfs/6/french/sante-corps-6-arbeitsblatt.pdf",
+        "sha256": "da5446b6a28c6a417a2004d07aaf4b3f8ef99191cae29d4afa1e4b4aa1f7e24c",
+        "bytes": 858332
       },
       "solution": {
-        "path": "pdfs/6/french/sante-corps-6-loesungen.pdf",
-        "sha256": "b901a62c7e2a4e0d66f5e254d1bf2fb02170fb0b73ea67e3bd24cc44513bcfb9",
-        "bytes": 883345
+        "path": "revisions/20261004/pdfs/6/french/sante-corps-6-loesungen.pdf",
+        "sha256": "ca49ff0b9e9576a7bf8bf6a890aaa68884765892a7e138d845c88fc4af405cdc",
+        "bytes": 884161
       }
     }
   },
@@ -7152,20 +7176,26 @@
     "topicId": "pronoms-cod-coi-6",
     "title": "Phrases utiles",
     "curriculum": {
-      "code": "FS1F.3",
+      "code": "FS1F.3.A.1",
       "scope": "Klärungsfragen und hilfreiche Wendungen beim Sprachenlernen verwenden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|3|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.3.C.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|3|3|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/pronoms-cod-coi-6-arbeitsblatt.pdf",
-        "sha256": "23a3b1f10f7b30f47e8a6d038149d843e411f082d5ff69426fc131772630c8d2",
-        "bytes": 861503
+        "path": "revisions/20261004/pdfs/6/french/pronoms-cod-coi-6-arbeitsblatt.pdf",
+        "sha256": "6fa3186d099bb7342d065db79aded2e1d8654b8c1d27a9be5180334c58b897dd",
+        "bytes": 861339
       },
       "solution": {
-        "path": "pdfs/6/french/pronoms-cod-coi-6-loesungen.pdf",
-        "sha256": "2ef0ae3e029e6a5c21ace1723ad8eeb25da57b1fa03682e286c0437d6273a15a",
-        "bytes": 886069
+        "path": "revisions/20261004/pdfs/6/french/pronoms-cod-coi-6-loesungen.pdf",
+        "sha256": "871980532944b4f1ca53f52148bad04c3c2cedd3cb67b7ba91069cc0d1aa3b33",
+        "bytes": 886512
       }
     }
   },
@@ -7176,20 +7206,26 @@
     "topicId": "france-pays-francophones-6",
     "title": "La France & pays francophones",
     "curriculum": {
-      "code": "FS1F.6",
+      "code": "FS1F.6.A.1",
       "scope": "Französisch als Sprache mehrerer Länder erkennen, ohne alle Einwohner gleichzusetzen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|6|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.2.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/france-pays-francophones-6-arbeitsblatt.pdf",
-        "sha256": "f02b21e609695e60ed0d7f84bf8c5659d248c3fca006773cd028e3fc11908f90",
-        "bytes": 859932
+        "path": "revisions/20261004/pdfs/6/french/france-pays-francophones-6-arbeitsblatt.pdf",
+        "sha256": "7ae127d006be3291fd0ca208d1a772015ff570db5ebcf36d6eafcedc5657ddd5",
+        "bytes": 859645
       },
       "solution": {
-        "path": "pdfs/6/french/france-pays-francophones-6-loesungen.pdf",
-        "sha256": "c765e2c8c7fd9431bb8ccbfaf62286241d2e1fd6ffe05686074d8bb85126c7ad",
-        "bytes": 886375
+        "path": "revisions/20261004/pdfs/6/french/france-pays-francophones-6-loesungen.pdf",
+        "sha256": "8e23c2367b8d22a7a6a974362d610e7e56ffb4e163b74680905d1978b548d32b",
+        "bytes": 887108
       }
     }
   },
@@ -7200,20 +7236,20 @@
     "topicId": "metiers-avenir-6",
     "title": "Les métiers & l'avenir",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Einfache Angaben zu Berufen und Arbeitsorten verstehen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/metiers-avenir-6-arbeitsblatt.pdf",
-        "sha256": "43417357418cc02480d4c611d6abe321b43e1fe91ab4d66f798e9426b06812e5",
-        "bytes": 857238
+        "path": "revisions/20261004/pdfs/6/french/metiers-avenir-6-arbeitsblatt.pdf",
+        "sha256": "99e4aa362718878ecc602aa4fe8489320e6510dd2cac64a7ebe0552e4e14c5cb",
+        "bytes": 856948
       },
       "solution": {
-        "path": "pdfs/6/french/metiers-avenir-6-loesungen.pdf",
-        "sha256": "0491cfabafd00d684fc3c05d330bacc037bf7ba19fe19a9f165ce66cba2c0c39",
-        "bytes": 881607
+        "path": "revisions/20261004/pdfs/6/french/metiers-avenir-6-loesungen.pdf",
+        "sha256": "e64da71542879fb648cee4a647bb8b445bbe5fb68b4f0de8849d8d82ced6536d",
+        "bytes": 881275
       }
     }
   },
@@ -7224,20 +7260,26 @@
     "topicId": "culture-francophone-6",
     "title": "Culture francophone",
     "curriculum": {
-      "code": "FS1F.6",
+      "code": "FS1F.6.A.1",
       "scope": "Mehrsprachige persönliche Interessen in einem Text verstehen, ohne kulturelle Stereotype abzuleiten. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=***"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|6|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.2.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/french/culture-francophone-6-arbeitsblatt.pdf",
-        "sha256": "6714a105351698b5d0d0b365655734af0ce5cfcbcbbcf54287e0d223b7f91cc0",
-        "bytes": 856723
+        "path": "revisions/20261004/pdfs/6/french/culture-francophone-6-arbeitsblatt.pdf",
+        "sha256": "64f914a17eb954f51d824042527b0e3e082d7d072e39e848c71db4ac8f4c5b39",
+        "bytes": 856441
       },
       "solution": {
-        "path": "pdfs/6/french/culture-francophone-6-loesungen.pdf",
-        "sha256": "2cc3c54f6a7153fbd20ce0732e35e524a73027effb4d95bacd5d7803fcb90a8e",
-        "bytes": 884264
+        "path": "revisions/20261004/pdfs/6/french/culture-francophone-6-loesungen.pdf",
+        "sha256": "05ea3a108b119307218cae31bfb1b807ef356c2c7536b706a95e301bf32250bc",
+        "bytes": 885002
       }
     }
   },

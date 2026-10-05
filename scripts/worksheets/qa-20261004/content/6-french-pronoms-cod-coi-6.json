@@ -1,0 +1,61 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "pronoms-cod-coi-6",
+  "goal": "Nützliche Sätze: «Je ne comprends pas.» = Ich verstehe nicht. «Pouvez-vous répéter, s’il vous plaît?» = Können Sie bitte wiederholen? «Comment dit-on ... en français?» = Wie sagt man ... auf Französisch?",
+  "sections": [
+    {
+      "title": "Wähle einen passenden Satz aus der Einführung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du hast eine Erklärung nicht verstanden. Was sagst du?",
+          "answer": "Je ne comprends pas.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Du bittest höflich um Wiederholung. Was sagst du?",
+          "answer": "Pouvez-vous répéter, s’il vous plaît?",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Frage nach einem Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ergänze: Comment dit-on «Buch» __ ?",
+          "answer": "en français",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Verstehe die Antwort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«On dit livre.» Welches französische Wort wurde genannt?",
+          "answer": "livre",
+          "wide": true
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.3.A.1",
+    "scope": "Klärungsfragen und hilfreiche Wendungen beim Sprachenlernen verwenden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|3|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.3.C.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|3|3|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

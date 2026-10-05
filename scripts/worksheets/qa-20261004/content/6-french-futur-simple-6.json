@@ -1,0 +1,59 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "futur-simple-6",
+  "goal": "Samedi, je vais jouer au parc. Dimanche, je vais lire à la maison. Aller + Grundform kann einen Plan ausdrücken: je vais jouer, nous allons jouer. Ein Plan ist keine Garantie. Du darfst alle Pläne erfinden.",
+  "sections": [
+    {
+      "title": "Lies die Pläne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was ist für Samstag geplant?",
+          "answer": "Im Park spielen.",
+          "wide": true
+        },
+        {
+          "prompt": "Was ist für Sonntag geplant?",
+          "answer": "Zu Hause lesen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die passende Form.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Je __ lire. (vais / allons)",
+          "answer": "vais",
+          "wide": true
+        },
+        {
+          "prompt": "Nous allons __. (jouer / jouons)",
+          "answer": "jouer",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Plan.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen erfundenen Plan mit «Demain, je vais ...». Nutze jouer, lire oder dessiner.",
+          "answer": "Beispiel: Demain, je vais dessiner. Aller-Form und Grundform müssen passen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.D.1",
+    "scope": "Einfache Freizeitpläne mit aller plus Grundform verstehen und bilden. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

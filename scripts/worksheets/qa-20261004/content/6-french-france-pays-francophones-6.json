@@ -1,0 +1,62 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "france-pays-francophones-6",
+  "goal": "Le français est parlé en France, en Suisse, en Belgique, au Canada et dans beaucoup d’autres pays. Tout le monde ne parle pas français dans ces pays. Francophone bedeutet französischsprachig. Sprache und Staatsangehörigkeit sind nicht dasselbe.",
+  "sections": [
+    {
+      "title": "Lies und finde Beispiele.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei Länder aus dem Text, in denen Französisch gesprochen wird.",
+          "answer": "Zwei aus: Frankreich, Schweiz, Belgien, Kanada.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Was bedeutet francophone?",
+          "answer": "Französischsprachig.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Sagt der Text, dass alle Menschen in Kanada Französisch sprechen? Begründe.",
+          "answer": "Nein. Der zweite Satz sagt ausdrücklich, dass nicht alle Menschen in diesen Ländern Französisch sprechen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ergänze «On parle français ...» mit «en Suisse» und schreibe den ganzen Satz.",
+          "answer": "On parle français en Suisse.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.6.A.1",
+    "scope": "Französisch als Sprache mehrerer Länder erkennen, ohne alle Einwohner gleichzusetzen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|6|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.2.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

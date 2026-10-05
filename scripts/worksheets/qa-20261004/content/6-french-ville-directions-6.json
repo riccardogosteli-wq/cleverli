@@ -1,0 +1,65 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "ville-directions-6",
+  "goal": "Excusez-moi, où est la bibliothèque? Allez tout droit, puis tournez à gauche. La bibliothèque est à côté du parc. Die Wegbeschreibung ist erfunden. Tout droit = geradeaus; à gauche = nach links; à droite = nach rechts.",
+  "sections": [
+    {
+      "title": "Verstehe den Weg.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was bedeutet tout droit?",
+          "answer": "Geradeaus.",
+          "wide": true
+        },
+        {
+          "prompt": "In welche Richtung soll man danach abbiegen?",
+          "answer": "Nach links.",
+          "wide": true
+        },
+        {
+          "prompt": "Neben welchem Ort liegt die Bibliothek?",
+          "answer": "Neben dem Park.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ist à droite links oder rechts?",
+          "answer": "Rechts.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Frage höflich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe auf Französisch: «Entschuldigung, wo ist die Bibliothek?» Nutze das Muster.",
+          "answer": "Excusez-moi, où est la bibliothèque?",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Eine kurze Wegbeschreibung und eine höfliche Frage nach einem Ort verstehen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.3.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|3|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

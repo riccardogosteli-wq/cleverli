@@ -1,0 +1,65 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "culture-francophone-6",
+  "goal": "Léa habite à Lausanne. Elle aime les histoires en français et les chansons en italien. Son ami Malik aime dessiner. Le samedi, ils vont à la bibliothèque. Diese Geschichte ist erfunden und beschreibt nur diese Personen, nicht alle Menschen einer Region.",
+  "sections": [
+    {
+      "title": "Entnimm Informationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wo wohnt Léa?",
+          "answer": "In Lausanne.",
+          "wide": true
+        },
+        {
+          "prompt": "In welcher Sprache mag sie Geschichten?",
+          "answer": "Auf Französisch.",
+          "wide": true
+        },
+        {
+          "prompt": "Was macht Malik gern?",
+          "answer": "Zeichnen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Lies genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "An welchem Tag gehen die beiden in die Bibliothek?",
+          "answer": "Am Samstag.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Vermeide eine Verallgemeinerung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beweist der Text, dass alle Menschen in Lausanne italienische Lieder mögen? Begründe.",
+          "answer": "Nein. Er erzählt nur von Léas Vorliebe. Andere Menschen können andere Vorlieben haben.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.6.A.1",
+    "scope": "Mehrsprachige persönliche Interessen in einem Text verstehen, ohne kulturelle Stereotype abzuleiten. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|6|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.2.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

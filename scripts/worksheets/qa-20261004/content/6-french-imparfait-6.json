@@ -1,0 +1,64 @@
+{
+  "grade": 6,
+  "subject": "french",
+  "sourceId": "imparfait-6",
+  "goal": "Dans notre classe, il y a vingt élèves. Nous avons des livres et des cahiers. Le lundi, nous lisons une histoire. Le mardi, nous dessinons. Les cours commencent à huit heures. Der Text ist erfunden und steht im Präsens.",
+  "sections": [
+    {
+      "title": "Entnimm Informationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Kinder sind in der Klasse?",
+          "answer": "20"
+        },
+        {
+          "prompt": "An welchem Tag lesen sie eine Geschichte?",
+          "answer": "Am Montag.",
+          "wide": true
+        },
+        {
+          "prompt": "Wann beginnt der Unterricht?",
+          "answer": "Um acht Uhr.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Verstehe die Tätigkeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was bedeutet «nous dessinons»?",
+          "answer": "Wir zeichnen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe mit einem Muster.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe «Wir haben Bücher und Hefte» auf Französisch. Nutze den Text.",
+          "answer": "Nous avons des livres et des cahiers.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Informationen über eine Klasse aus einem kurzen Text entnehmen. Nach kantonaler Sprachenfolge und Lernstand; Bezug auf erste Fremdsprache Französisch, keine vollständige Klassenkompetenz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
