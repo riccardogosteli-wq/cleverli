@@ -1,0 +1,62 @@
+{
+  "grade": 6,
+  "subject": "mi",
+  "sourceId": "netzwerke-sicherheit-6",
+  "goal": "In einem Netzwerk können Geräte Daten austauschen. Ein Router vermittelt Daten zwischen Netzwerken. Eine unerwartete Nachricht fordert: «Melde dich sofort über meinen Link an!» Das Beispiel ist erfunden. Passwörter und Anmeldecodes niemals weitergeben.",
+  "sections": [
+    {
+      "title": "Beschreibe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was können verbundene Geräte in einem Netzwerk austauschen?",
+          "answer": "Daten.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Handle sicher.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie gehst du mit der unerwarteten Anmeldeaufforderung um?",
+          "answer": "Nicht ungeprüft auf den Link klicken oder Daten eingeben. Die bekannte echte App/Website selbst öffnen und bei Unsicherheit eine vertraute erwachsene Person fragen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Behauptung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Ein Schlosszeichen und HTTPS beweisen, dass eine Website ehrlich ist.» Stimmt das? Begründe.",
+          "answer": "Nein. HTTPS schützt die Verbindung, garantiert aber nicht, dass Betreiber oder Inhalte vertrauenswürdig sind. Auch betrügerische Seiten können HTTPS verwenden.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Warum sollte jedes wichtige Konto ein eigenes starkes Passwort haben?",
+          "answer": "Wird ein Passwort bekannt, sind andere Konten nicht automatisch mit demselben Passwort zugänglich. Sichere Verwaltung mit einer vertrauten erwachsenen Person klären.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MI.1.3",
+    "scope": "Grundidee von Netzwerken und sichere Anmeldung von unbegründeten Vertrauenssignalen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|3",
+    "additionalReferences": [
+      {
+        "code": "MI.2.3",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|2|0|3"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

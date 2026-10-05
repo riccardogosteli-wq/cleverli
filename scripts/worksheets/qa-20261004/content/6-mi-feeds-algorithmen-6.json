@@ -1,0 +1,66 @@
+{
+  "grade": 6,
+  "subject": "mi",
+  "sourceId": "feeds-algorithmen-6",
+  "goal": "Ein Feed zeigt ausgewählte Beiträge. Das vereinfachte Modell hier sortiert nur nach Punkten: pro Like 1 Punkt, pro Kommentar 2 Punkte. Höhere Punktzahl steht weiter oben. Echte Plattformen verwenden viele weitere Signale; eine hohe Platzierung beweist nicht, dass ein Beitrag wahr ist.",
+  "sections": [
+    {
+      "title": "Rechne im Modell.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beitrag A: 4 Likes, 2 Kommentare. Punkte?",
+          "answer": "8",
+          "wide": true
+        },
+        {
+          "prompt": "Beitrag B: 7 Likes, 0 Kommentare. Punkte?",
+          "answer": "7",
+          "wide": true
+        },
+        {
+          "prompt": "Beitrag C: 2 Likes, 4 Kommentare. Punkte?",
+          "answer": "10",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Sortiere.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe A, B und C in der Reihenfolge von oben nach unten.",
+          "answer": "C, A, B",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Prüfe die Bedeutung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beweist die höchste Punktzahl, dass Beitrag C wahr ist? Begründe.",
+          "answer": "Nein. Das Modell misst Reaktionen, nicht Wahrheit. Herkunft, Belege, Aktualität und unabhängige Quellen müssen zusätzlich geprüft werden.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MI.2.2",
+    "scope": "Eine vereinfachte Sortierregel ausführen und ihre Aussagekraft begrenzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|2|0|2",
+    "additionalReferences": [
+      {
+        "code": "MI.1.2",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|2"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
