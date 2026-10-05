@@ -1,0 +1,51 @@
+{
+  "grade": 5,
+  "subject": "mi",
+  "sourceId": "sicher-online-5",
+  "goal": "Eine unbekannte Person schreibt im Spielchat: «Ich schenke dir Punkte. Schick mir dein Passwort!» Das Beispiel ist erfunden. Passwörter und Anmeldecodes bleiben geheim. Hol bei Druck oder Unsicherheit Hilfe von einer vertrauten erwachsenen Person.",
+  "sections": [
+    {
+      "title": "Entscheide sicher.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was antwortest du auf die Passwortforderung, und was tust du danach?",
+          "answer": "Kein Passwort senden. Nicht weiter auf die Forderung eingehen; mit einer vertrauten erwachsenen Person besprechen und den Account bei Bedarf melden/blockieren.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schütze andere.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du möchtest ein Foto eines anderen Kindes posten. Was musst du vorher klären?",
+          "answer": "Die Zustimmung der abgebildeten Person und je nach Situation der Erziehungsberechtigten. Bei Nein nicht veröffentlichen. Persönliche Angaben und Plattformregeln beachten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Handle bei einem Fehler.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein erfundenes Kind hat sein Passwort bereits weitergegeben. Nenne zwei nächste Schritte.",
+          "answer": "Hilfe holen; das Passwort über die echte Plattform ändern, nicht über einen zugesandten Link. Weitere Schritte mit der erwachsenen Person prüfen, etwa aktive Sitzungen abmelden. Dem Kind keine Schuld zuweisen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MI.1.3",
+    "scope": "Privatsphäre, sichere Zugangsdaten und Hilfswege in fiktiven Online-Situationen erkennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

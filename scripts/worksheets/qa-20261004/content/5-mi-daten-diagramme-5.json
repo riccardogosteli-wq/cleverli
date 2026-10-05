@@ -1,0 +1,56 @@
+{
+  "grade": 5,
+  "subject": "mi",
+  "sourceId": "daten-diagramme-5",
+  "goal": "In einer erfundenen Gruppe nennen 20 Kinder je genau ein Lieblingsobst. Die Balken beginnen bei null; gleiche Längen stehen für gleiche Anzahlen. Die Zahl rechts nennt die Stimmen. Die Daten enthalten keine Namen.",
+  "sections": [
+    {
+      "title": "Lies das Balkendiagramm.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Stimmen hat die Birne?",
+          "answer": "6",
+          "svg": "<svg class=\"illustration\" style=\"width:150mm;height:54mm\" viewBox=\"0 0 150 54\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"3\" y=\"7\" font-size=\"4\">Lieblingsobst: Stimmen von 20 Kindern</text><text x=\"3\" y=\"18\" font-size=\"4\">Apfel</text><rect x=\"35\" y=\"12\" width=\"81\" height=\"8\" fill=\"#cbdde1\" stroke=\"#213b49\"/><text x=\"119\" y=\"18\" font-size=\"4\">9</text><text x=\"3\" y=\"29\" font-size=\"4\">Birne</text><rect x=\"35\" y=\"23\" width=\"54\" height=\"8\" fill=\"#cbdde1\" stroke=\"#213b49\"/><text x=\"92\" y=\"29\" font-size=\"4\">6</text><text x=\"3\" y=\"40\" font-size=\"4\">Banane</text><rect x=\"35\" y=\"34\" width=\"45\" height=\"8\" fill=\"#cbdde1\" stroke=\"#213b49\"/><text x=\"83\" y=\"40\" font-size=\"4\">5</text></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viele Stimmen mehr hat Apfel als Banane?",
+          "answer": "4",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe die Daten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Rechne nach, ob die Stimmen zusammen 20 ergeben.",
+          "answer": "9 + 6 + 5 = 20.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Ziehe einen begründeten Schluss.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Alle Kinder in der Schweiz mögen Äpfel am liebsten.» Beweist dieses Diagramm das? Begründe.",
+          "answer": "Nein. Es zeigt nur die Angaben dieser erfundenen Gruppe. Sie steht nicht automatisch für alle Kinder in der Schweiz; zudem wählten hier 11 Kinder anderes Obst.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MI.2.1",
+    "scope": "Anonymisierte kategorielle Daten lesen, ihre Summe prüfen und die Reichweite einer Aussage begrenzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|2|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

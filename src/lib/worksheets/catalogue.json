@@ -5968,20 +5968,20 @@
     "topicId": "sicher-online-5",
     "title": "Sicher online",
     "curriculum": {
-      "code": "MI.1",
+      "code": "MI.1.3",
       "scope": "Privatsphäre, sichere Zugangsdaten und Hilfswege in fiktiven Online-Situationen erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C10%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/mi/sicher-online-5-arbeitsblatt.pdf",
-        "sha256": "59f69c3f3346e666a9ebade0111d2abe444f5d00475ad738647dedf3290e743e",
-        "bytes": 858191
+        "path": "revisions/20261004/pdfs/5/mi/sicher-online-5-arbeitsblatt.pdf",
+        "sha256": "cfa92732a95812b62af2b931339b9e3682b97d0b0ff8083631467b532f2314b3",
+        "bytes": 857864
       },
       "solution": {
-        "path": "pdfs/5/mi/sicher-online-5-loesungen.pdf",
-        "sha256": "28ad1c23efbdc94a4aca83524e70d26bbb69128920d338c09b9288f29f13a23a",
-        "bytes": 886426
+        "path": "revisions/20261004/pdfs/5/mi/sicher-online-5-loesungen.pdf",
+        "sha256": "3cadf42f49d5198522f870327ba269f7d0630b6628ff8b25b7f08e66c901bdbd",
+        "bytes": 886134
       }
     }
   },
@@ -5992,20 +5992,20 @@
     "topicId": "daten-diagramme-5",
     "title": "Daten verstehen",
     "curriculum": {
-      "code": "MI.2",
+      "code": "MI.2.1",
       "scope": "Anonymisierte kategorielle Daten lesen, ihre Summe prüfen und die Reichweite einer Aussage begrenzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C10%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|2|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/mi/daten-diagramme-5-arbeitsblatt.pdf",
-        "sha256": "0205e8a70f5f9de549de7ddb9ee17477da4f1d5124182f88f795accdfeae6e00",
-        "bytes": 881948
+        "path": "revisions/20261004/pdfs/5/mi/daten-diagramme-5-arbeitsblatt.pdf",
+        "sha256": "d74c04db65ead7db21eb2b1a77efc8c6f77c64cd42506d97013b524018d0395f",
+        "bytes": 881644
       },
       "solution": {
-        "path": "pdfs/5/mi/daten-diagramme-5-loesungen.pdf",
-        "sha256": "2d1d38517173a374178feaa3d658e0ebc725c51832519f1a0173b1eeed8a09ae",
-        "bytes": 908460
+        "path": "revisions/20261004/pdfs/5/mi/daten-diagramme-5-loesungen.pdf",
+        "sha256": "bd8904d499599b35f16bc50a491512e3b84025bd4880246b08efab37ece30072",
+        "bytes": 907804
       }
     }
   },
