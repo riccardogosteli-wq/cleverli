@@ -1,0 +1,59 @@
+{
+  "grade": 6,
+  "subject": "math",
+  "sourceId": "wahrscheinlichkeit-6",
+  "goal": "Freiwilliger Zusatz mit Vorlage nach Lernstand: Ein fairer sechsseitiger Würfel hat die Zahlen 1 bis 6. Jede Zahl ist gleich wahrscheinlich. Zähle zuerst die Ergebnisse, die zur Bedingung passen. Ihre Anzahl steht oben im Bruch, die 6 unten. Formale Wahrscheinlichkeitsrechnung ist keine allgemeine Klassenanforderung.",
+  "sections": [
+    {
+      "title": "Bestimme die Chance als Bruch und kürze.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine gerade Zahl würfeln.",
+          "answer": "3/6 = 1/2",
+          "wide": true
+        },
+        {
+          "prompt": "Eine Zahl grösser als 4 würfeln.",
+          "answer": "2/6 = 1/3",
+          "wide": true
+        },
+        {
+          "prompt": "Eine 6 würfeln.",
+          "answer": "1/6",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke über mehrere Würfe nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nach dreimal 6: Wie gross ist die Chance auf 6 beim nächsten unabhängigen Wurf?",
+          "answer": "Weiterhin 1/6.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Begründe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ist bei sechs Würfen garantiert jede Zahl genau einmal dabei? Erkläre.",
+          "answer": "Nein. Ergebnisse können sich wiederholen. Gleiche Chancen bedeuten keine vorgeschriebene Reihenfolge oder Verteilung bei sechs Würfen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.1",
+    "scope": "Einfache Chancen beim fairen Würfel vergleichen. Numerische Bruchangaben und unabhängige Würfe als freiwilliger vorbereitender Zusatz mit Vorlage, keine allgemeine Klassenanforderung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

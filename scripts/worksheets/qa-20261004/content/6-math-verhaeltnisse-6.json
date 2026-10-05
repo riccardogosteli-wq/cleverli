@@ -1,0 +1,62 @@
+{
+  "grade": 6,
+  "subject": "math",
+  "sourceId": "verhaeltnisse-6",
+  "goal": "Für eine Saftmischung gilt Saft : Wasser = 1 : 3. Das sind insgesamt 4 gleich grosse Teile. Bei einer proportionalen Zuordnung werden beide Mengen mit demselben Faktor vervielfacht.",
+  "sections": [
+    {
+      "title": "Ergänze zur Mischung 1 : 3.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "2 dl Saft brauchen __ dl Wasser.",
+          "answer": "6"
+        },
+        {
+          "prompt": "5 dl Saft brauchen __ dl Wasser.",
+          "answer": "15"
+        },
+        {
+          "prompt": "12 dl Wasser brauchen __ dl Saft.",
+          "answer": "4"
+        },
+        {
+          "prompt": "Wie viele dl Mischung ergeben 3 dl Saft und die passende Wassermenge?",
+          "answer": "12",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Teile die Gesamtmenge auf.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du brauchst 20 dl Mischung. Wie viel Saft und wie viel Wasser nimmst du?",
+          "answer": "5 dl Saft und 15 dl Wasser; 20 : 4 = 5 dl pro Teil.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Passt 2 dl Saft mit 5 dl Wasser zum Verhältnis 1 : 3? Begründe.",
+          "answer": "Nein. Zu 2 dl Saft gehören 6 dl Wasser; beide Mengen müssen mit demselben Faktor multipliziert werden.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.2",
+    "scope": "Einfache proportionale Mengen und Verhältnisse in einer Mischung darstellen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

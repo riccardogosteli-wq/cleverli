@@ -1,0 +1,61 @@
+{
+  "grade": 6,
+  "subject": "math",
+  "sourceId": "statistik-6",
+  "goal": "Fünf erfundene Messwerte für eine Wartezeit in Minuten: 2, 3, 3, 5, 12. Der Mittelwert ist Summe : Anzahl. Freiwilliger Zusatz mit Vorlage: Der Median ist bei fünf geordneten Werten der mittlere, also dritte Wert. Median ist hier eine Vertiefung, keine allgemeine Klassenanforderung.",
+  "sections": [
+    {
+      "title": "Berechne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Summe aller fünf Werte =",
+          "answer": "25"
+        },
+        {
+          "prompt": "Mittelwert =",
+          "answer": "5 Minuten"
+        },
+        {
+          "prompt": "Zusatz mit Vorlage: Median =",
+          "answer": "3 Minuten"
+        },
+        {
+          "prompt": "Spannweite (grösster minus kleinster Wert) =",
+          "answer": "10 Minuten"
+        }
+      ]
+    },
+    {
+      "title": "Zusatz: Ändere einen Wert.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Statt 12 Minuten beträgt die letzte Wartezeit 22 Minuten. Berechne den neuen Mittelwert und den neuen Median.",
+          "answer": "Summe 35; Mittelwert 7 Minuten; Median weiterhin 3 Minuten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Zusatz: Vergleiche.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum bleibt der Median hier gleich, während der Mittelwert steigt?",
+          "answer": "Der dritte Wert in der sortierten Liste bleibt 3. Der höhere letzte Wert vergrössert aber die Summe und damit den Mittelwert.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.1",
+    "scope": "Mittelwert, Maximum und Minimum an einem kleinen Datensatz nutzen. Median als freiwillige gestützte Vertiefung, keine allgemeine Klassenanforderung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

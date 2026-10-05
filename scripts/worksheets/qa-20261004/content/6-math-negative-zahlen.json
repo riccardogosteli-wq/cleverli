@@ -1,0 +1,67 @@
+{
+  "grade": 6,
+  "subject": "math",
+  "sourceId": "negative-zahlen",
+  "goal": "Freiwilliger Zusatz nach Lernstand: Zahlen unter null heissen negativ. Auf einer Zahlengeraden liegen kleinere Zahlen weiter links. Bei Temperaturen bedeutet ein Anstieg um 3 Grad: 3 addieren. Nutze bei Bedarf eine Zahlengerade. Negative Zahlen gehören im Lehrplan zum Zyklus 3, nicht zur allgemeinen Anforderung dieser Klasse.",
+  "sections": [
+    {
+      "title": "Vergleiche mit <, > oder =.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "−3 __ 2",
+          "answer": "<",
+          "svg": "<svg class=\"illustration number-line-support\" style=\"width:120mm;height:24mm\" viewBox=\"0 0 120 24\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"10\" y1=\"10\" x2=\"109\" y2=\"10\" stroke=\"#213b49\"/><line x1=\"10\" y1=\"7\" x2=\"10\" y2=\"13\" stroke=\"#213b49\"/><text x=\"10\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">−7</text><line x1=\"19\" y1=\"7\" x2=\"19\" y2=\"13\" stroke=\"#213b49\"/><text x=\"19\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">−6</text><line x1=\"28\" y1=\"7\" x2=\"28\" y2=\"13\" stroke=\"#213b49\"/><text x=\"28\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">−5</text><line x1=\"37\" y1=\"7\" x2=\"37\" y2=\"13\" stroke=\"#213b49\"/><text x=\"37\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">−4</text><line x1=\"46\" y1=\"7\" x2=\"46\" y2=\"13\" stroke=\"#213b49\"/><text x=\"46\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">−3</text><line x1=\"55\" y1=\"7\" x2=\"55\" y2=\"13\" stroke=\"#213b49\"/><text x=\"55\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">−2</text><line x1=\"64\" y1=\"7\" x2=\"64\" y2=\"13\" stroke=\"#213b49\"/><text x=\"64\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">−1</text><line x1=\"73\" y1=\"7\" x2=\"73\" y2=\"13\" stroke=\"#213b49\"/><text x=\"73\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">0</text><line x1=\"82\" y1=\"7\" x2=\"82\" y2=\"13\" stroke=\"#213b49\"/><text x=\"82\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">1</text><line x1=\"91\" y1=\"7\" x2=\"91\" y2=\"13\" stroke=\"#213b49\"/><text x=\"91\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">2</text><line x1=\"100\" y1=\"7\" x2=\"100\" y2=\"13\" stroke=\"#213b49\"/><text x=\"100\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">3</text><line x1=\"109\" y1=\"7\" x2=\"109\" y2=\"13\" stroke=\"#213b49\"/><text x=\"109\" y=\"20\" text-anchor=\"middle\" font-size=\"4\">4</text></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "−7 __ −2",
+          "answer": "<"
+        },
+        {
+          "prompt": "0 __ −1",
+          "answer": ">"
+        },
+        {
+          "prompt": "−4 __ −4",
+          "answer": "="
+        }
+      ]
+    },
+    {
+      "title": "Rechne mit Temperaturen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Am Morgen −2 °C, später 5 Grad wärmer. Neue Temperatur?",
+          "answer": "3 °C",
+          "wide": true
+        },
+        {
+          "prompt": "Am Abend 4 °C, nachts 7 Grad kälter. Neue Temperatur?",
+          "answer": "−3 °C",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ordne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ordne aufsteigend: −1; 4; −5; 0; 2.",
+          "answer": "−5; −1; 0; 2; 4",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.2",
+    "scope": "Freiwilliger vorbereitender Zusatz nach Lernstand: negative ganze Zahlen vergleichen und Temperaturänderungen betrachten. Bezug auf Zyklus 3, keine allgemeine Klassenanforderung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

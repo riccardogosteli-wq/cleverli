@@ -6017,19 +6017,19 @@
     "title": "Negative Zahlen",
     "curriculum": {
       "code": "MA.1.A.2",
-      "scope": "Negative ganze Zahlen als Erweiterung vergleichen und in Temperaturkontexten verwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "scope": "Freiwilliger vorbereitender Zusatz nach Lernstand: negative ganze Zahlen vergleichen und Temperaturänderungen betrachten. Bezug auf Zyklus 3, keine allgemeine Klassenanforderung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/negative-zahlen-arbeitsblatt.pdf",
-        "sha256": "994abf36501fca84c3e45366783f1ae90c7ccf70cf42119f49be3cec3f5501a0",
-        "bytes": 858773
+        "path": "revisions/20261004/pdfs/6/math/negative-zahlen-arbeitsblatt.pdf",
+        "sha256": "a26fc8a0f5a101111528de4753ebd349d9895fdbe5d97b2acbe92739e596dea9",
+        "bytes": 874146
       },
       "solution": {
-        "path": "pdfs/6/math/negative-zahlen-loesungen.pdf",
-        "sha256": "b4a7a84cfa11312ed6603f3433e454fa69889e9bc21047aaf95461ba2ca474bd",
-        "bytes": 879595
+        "path": "revisions/20261004/pdfs/6/math/negative-zahlen-loesungen.pdf",
+        "sha256": "a745d86b77f1ffc8278d9a4995985ad50dc0961fd7cd56023b247125e5aaa286",
+        "bytes": 894699
       }
     }
   },
@@ -6042,18 +6042,18 @@
     "curriculum": {
       "code": "MA.1.A.1",
       "scope": "Vertraute Brüche mit Prozentangaben verbinden und einfache Anteile berechnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/prozent-arbeitsblatt.pdf",
-        "sha256": "321afd91632c10510f26299f62b17fe788993c4bb7e7e93133a5549524e2a6cf",
-        "bytes": 860921
+        "path": "revisions/20261004/pdfs/6/math/prozent-arbeitsblatt.pdf",
+        "sha256": "6748a24dabfbfd1da1f31bf0bc95e0627f9fafaa70ca1de14ccc39c8707745b5",
+        "bytes": 860642
       },
       "solution": {
-        "path": "pdfs/6/math/prozent-loesungen.pdf",
-        "sha256": "d2af1cb69fac7e33a13168b52e0501922e9ed63b83eaff678b3b510c69372753",
-        "bytes": 885435
+        "path": "revisions/20261004/pdfs/6/math/prozent-loesungen.pdf",
+        "sha256": "e30abba54b4b06944207e35fde2d6ac0cd36fabd32d9a7d67b3f02c40b4ee75c",
+        "bytes": 885073
       }
     }
   },
@@ -6064,20 +6064,20 @@
     "topicId": "gleichungen",
     "title": "Einfache Gleichungen",
     "curriculum": {
-      "code": "MA.1.B.2",
-      "scope": "Einfache Zahlbeziehungen mit einem Platzhalter lösen und durch Einsetzen überprüfen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1"
+      "code": "MA.3.C.2",
+      "scope": "Einfache Zahlbeziehungen mit einem Platzhalter und Umkehroperationen lösen und überprüfen; keine formalen Äquivalenzumformungen vorausgesetzt.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/gleichungen-arbeitsblatt.pdf",
-        "sha256": "dd7f457f9cb5d0244630b81009c1ff1a53f834648e4525a8a7bbf82bb13a8c13",
-        "bytes": 860277
+        "path": "revisions/20261004/pdfs/6/math/gleichungen-arbeitsblatt.pdf",
+        "sha256": "61c9a4feaec723ea691dbf2b47fe7d090e79bbaa3e5663ea9009bc336a946c23",
+        "bytes": 863755
       },
       "solution": {
-        "path": "pdfs/6/math/gleichungen-loesungen.pdf",
-        "sha256": "ae813f2a76ee1eb98c3f75cd179283b73371e37345297cfb658d905bc1177b71",
-        "bytes": 881735
+        "path": "revisions/20261004/pdfs/6/math/gleichungen-loesungen.pdf",
+        "sha256": "98e3ab0c258cf75c7477a705a2d611bcfecf5b40858be94d97accbae0bae0b80",
+        "bytes": 901474
       }
     }
   },
@@ -6090,18 +6090,18 @@
     "curriculum": {
       "code": "MA.3.C.2",
       "scope": "Einfache proportionale Mengen und Verhältnisse in einer Mischung darstellen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/verhaeltnisse-6-arbeitsblatt.pdf",
-        "sha256": "10757f2ef86e4e1b5bc2217f4f7c9f60e42e24c5d01b9dbdb8462f736a830969",
-        "bytes": 862015
+        "path": "revisions/20261004/pdfs/6/math/verhaeltnisse-6-arbeitsblatt.pdf",
+        "sha256": "5740df8e4fbb481e5b2d998c12085ddd81fbbd4af9de2e3e8c7f83a0b9d1aff9",
+        "bytes": 862062
       },
       "solution": {
-        "path": "pdfs/6/math/verhaeltnisse-6-loesungen.pdf",
-        "sha256": "8c3aa20ebbd2f46293980ed4ce01f4a523335621f8826dc85017bb2a74ac6282",
-        "bytes": 889696
+        "path": "revisions/20261004/pdfs/6/math/verhaeltnisse-6-loesungen.pdf",
+        "sha256": "b9084054d405bea15749650e497b203ffb1d7c88af4dd998419ce879ea4d7284",
+        "bytes": 889610
       }
     }
   },
@@ -6113,19 +6113,19 @@
     "title": "Geometrie",
     "curriculum": {
       "code": "MA.2.A.3",
-      "scope": "Winkel in Dreiecken mithilfe der Winkelsumme berechnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "scope": "Freiwilliger vorbereitender Zusatz mit gegebener Winkelsumme: fehlende Dreieckswinkel berechnen. Bezug auf Zyklus 3, keine allgemeine Klassenanforderung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/geometrie-6-arbeitsblatt.pdf",
-        "sha256": "8a301bd32c034e80bd3caea63f2e056c54a05fb9de8628a6e53370b2c10aae6f",
-        "bytes": 869035
+        "path": "revisions/20261004/pdfs/6/math/geometrie-6-arbeitsblatt.pdf",
+        "sha256": "ad686b9f47ce73f204a2676e5c6ea7dde53f68ad10eaa253e018201146165d97",
+        "bytes": 871750
       },
       "solution": {
-        "path": "pdfs/6/math/geometrie-6-loesungen.pdf",
-        "sha256": "3241f99003144679d353c9efe197a2bb676ac5328bcc11d0932e0a88353d64d9",
-        "bytes": 895803
+        "path": "revisions/20261004/pdfs/6/math/geometrie-6-loesungen.pdf",
+        "sha256": "d2ad3ca7f279456bb8becf3e2ede861f53a37b8601f56337fde93a5b527e8b33",
+        "bytes": 898606
       }
     }
   },
@@ -6137,19 +6137,19 @@
     "title": "Statistik",
     "curriculum": {
       "code": "MA.3.C.1",
-      "scope": "Mittelwert, Median und Spannweite an kleinen Datensätzen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "scope": "Mittelwert, Maximum und Minimum an einem kleinen Datensatz nutzen. Median als freiwillige gestützte Vertiefung, keine allgemeine Klassenanforderung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/statistik-6-arbeitsblatt.pdf",
-        "sha256": "a5ae37290d1ee6075b9f623f239a91b773bd8d9cb4dc292569648f8b10f81701",
-        "bytes": 854603
+        "path": "revisions/20261004/pdfs/6/math/statistik-6-arbeitsblatt.pdf",
+        "sha256": "070aaa1597c6e2e6d5ad9d3c0c0a56e3b345a73dac99404750cfdab11aeed997",
+        "bytes": 858940
       },
       "solution": {
-        "path": "pdfs/6/math/statistik-6-loesungen.pdf",
-        "sha256": "88c41bd6481508a4a22d32b17ac4d75e7a0f65ed8509a1172cc6ba5f8469fc93",
-        "bytes": 882333
+        "path": "revisions/20261004/pdfs/6/math/statistik-6-loesungen.pdf",
+        "sha256": "8aced142850bd3cb0dcb57904a5696139725507ed9a736b437710d8fc5414e67",
+        "bytes": 886816
       }
     }
   },
@@ -6160,20 +6160,20 @@
     "topicId": "wahrscheinlichkeit-6",
     "title": "Wahrscheinlichkeit",
     "curriculum": {
-      "code": "MA.3.B.2",
-      "scope": "Einfache Wahrscheinlichkeiten bei einem fairen Würfel bestimmen und Zufallsschwankungen erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "code": "MA.3.C.1",
+      "scope": "Einfache Chancen beim fairen Würfel vergleichen. Numerische Bruchangaben und unabhängige Würfe als freiwilliger vorbereitender Zusatz mit Vorlage, keine allgemeine Klassenanforderung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/wahrscheinlichkeit-6-arbeitsblatt.pdf",
-        "sha256": "99ca3123b5f4bfccfe91ecfecf44dc300a618aae6695a5673ae692c8d7bb73ce",
-        "bytes": 857065
+        "path": "revisions/20261004/pdfs/6/math/wahrscheinlichkeit-6-arbeitsblatt.pdf",
+        "sha256": "9f9fe463a3cf4d94e102044c324950deaa85a55cd85f39b9dbd543b1e42e73b3",
+        "bytes": 859467
       },
       "solution": {
-        "path": "pdfs/6/math/wahrscheinlichkeit-6-loesungen.pdf",
-        "sha256": "8422d72181608d6f4a409ccf7dd3e5d8dfee8f8168dae22356e2ccbeca1eb6ae",
-        "bytes": 883912
+        "path": "revisions/20261004/pdfs/6/math/wahrscheinlichkeit-6-loesungen.pdf",
+        "sha256": "5ecea923e52b2cdb2a1226a63102e56d29e264bf7c0e82fa4c5d0353be7b5163",
+        "bytes": 886733
       }
     }
   },
@@ -6186,18 +6186,18 @@
     "curriculum": {
       "code": "MA.2.A.3",
       "scope": "Volumen und Oberfläche von Quadern und Würfeln berechnen und unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|2|1|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/flaechen-koerper-6-arbeitsblatt.pdf",
-        "sha256": "ad77ab3c39b7098c2c608c8945b8d58e38ccafd20f4054f64298f758bbec3d35",
-        "bytes": 858466
+        "path": "revisions/20261004/pdfs/6/math/flaechen-koerper-6-arbeitsblatt.pdf",
+        "sha256": "53cf0f9c86f09cc82fc5b2a469ee78fe1cb0cf9f1d39637ba216c0fe3eab2e60",
+        "bytes": 863867
       },
       "solution": {
-        "path": "pdfs/6/math/flaechen-koerper-6-loesungen.pdf",
-        "sha256": "4e78b4bc3adca8a8beaaea5033c7ee8a5093323abbe6b217448e53bec35f3b5f",
-        "bytes": 885465
+        "path": "revisions/20261004/pdfs/6/math/flaechen-koerper-6-loesungen.pdf",
+        "sha256": "ab2829686c21092e176a0b889561ee299988e96b7caf44db4acd610d0225ab9d",
+        "bytes": 906044
       }
     }
   },
@@ -6210,18 +6210,18 @@
     "curriculum": {
       "code": "MA.3.C.2",
       "scope": "Mehrschrittige Sachsituationen mit Anzahlen, Geld und Zeit lösen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/math/textaufgaben-6-arbeitsblatt.pdf",
-        "sha256": "8c3d922df04b9202d2bf224584dd7ffb3157108a44fbfdbabb737bad8933bb8d",
-        "bytes": 858998
+        "path": "revisions/20261004/pdfs/6/math/textaufgaben-6-arbeitsblatt.pdf",
+        "sha256": "b59e024436dcb75c784a23705afdf460c36d4126dcf2b6ec643e46907cec0f34",
+        "bytes": 858705
       },
       "solution": {
-        "path": "pdfs/6/math/textaufgaben-6-loesungen.pdf",
-        "sha256": "8378e7344d00ecc82d0cdafdf168fe1f9ac897faa64d4b403913862dc576b730",
-        "bytes": 886318
+        "path": "revisions/20261004/pdfs/6/math/textaufgaben-6-loesungen.pdf",
+        "sha256": "c47d1798821761f4efee79bdcec04f6c8017cec0a3e7bbc907fdd4455c6324b5",
+        "bytes": 885953
       }
     }
   },

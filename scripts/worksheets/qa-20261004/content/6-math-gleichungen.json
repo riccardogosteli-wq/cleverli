@@ -1,0 +1,61 @@
+{
+  "grade": 6,
+  "subject": "math",
+  "sourceId": "gleichungen",
+  "goal": "Eine Gleichung beschreibt zwei gleich grosse Werte. Das Zeichen x steht hier für eine gesuchte Zahl. Prüfe deine Lösung durch Einsetzen. Beispiel: x + 4 = 9 ergibt x = 5, denn 5 + 4 = 9. Löse durch Überlegen und Umkehroperationen. Du kannst x zuerst durch ein leeres Kästchen ersetzen.",
+  "sections": [
+    {
+      "title": "Finde x.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "x + 8 = 21",
+          "answer": "x = 13"
+        },
+        {
+          "prompt": "x − 7 = 15",
+          "answer": "x = 22"
+        },
+        {
+          "prompt": "4 × x = 28",
+          "answer": "x = 7"
+        },
+        {
+          "prompt": "x : 5 = 6",
+          "answer": "x = 30"
+        }
+      ]
+    },
+    {
+      "title": "Löse und prüfe.",
+      "instruction": "Hilfe nach Bedarf: Ziehe zuerst 2 vom Ergebnis ab. Teile die verbleibende Zahl dann durch 3.",
+      "items": [
+        {
+          "prompt": "3 × x + 2 = 20. Schreibe x und die Einsetzprobe.",
+          "answer": "x = 6; 3 × 6 + 2 = 20.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe mit einer Gleichung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zu einer Zahl werden 9 addiert. Das Ergebnis ist 24. Schreibe eine Gleichung und löse sie.",
+          "answer": "x + 9 = 24; x = 15. Probe: 15 + 9 = 24.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.2",
+    "scope": "Einfache Zahlbeziehungen mit einem Platzhalter und Umkehroperationen lösen und überprüfen; keine formalen Äquivalenzumformungen vorausgesetzt.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

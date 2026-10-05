@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "math",
+  "sourceId": "textaufgaben-6",
+  "goal": "Notiere die Rechnung und die Einheit. Prüfe, ob dein Ergebnis zur Frage passt. Alle Angaben sind erfunden. Busplätze sind hier nur für die genannten Kinder und Begleitpersonen zu berechnen.",
+  "sections": [
+    {
+      "title": "Plane eine Fahrt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "48 Kinder und 4 Erwachsene fahren mit. Ein Bus hat 30 verfügbare Plätze. Wie viele solche Busse braucht die Gruppe mindestens? Begründe.",
+          "answer": "52 Personen; 2 Busse, denn 1 Bus hat nur 30 Plätze, 2 haben 60.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Berechne die Kosten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Jedes Kind zahlt CHF 8, jede erwachsene Person CHF 12. Wie viel zahlt die gesamte Gruppe mit 48 Kindern und 4 Erwachsenen?",
+          "answer": "48 × 8 + 4 × 12 = 384 + 48 = CHF 432.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Berechne eine Zeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Abfahrt 08:45, reine Fahrzeit 1 Stunde 35 Minuten. Wann kommt der Bus ohne Pause an? Zeige einen Zwischenschritt.",
+          "answer": "10:20. 08:45 + 1 Stunde = 09:45; + 35 Minuten = 10:20.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.3.C.2",
+    "scope": "Mehrschrittige Sachsituationen mit Anzahlen, Geld und Zeit lösen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|3|3|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

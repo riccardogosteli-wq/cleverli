@@ -1,0 +1,63 @@
+{
+  "grade": 6,
+  "subject": "math",
+  "sourceId": "prozent",
+  "goal": "Prozent bedeutet von hundert: 20 % = 20/100 = 1/5. Berechne den Anteil immer vom angegebenen Ganzen. Ein Rabatt von 20 % lässt 80 % des ursprünglichen Preises übrig.",
+  "sections": [
+    {
+      "title": "Wandle in Prozent um.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "1/2 =",
+          "answer": "50 %"
+        },
+        {
+          "prompt": "3/4 =",
+          "answer": "75 %"
+        },
+        {
+          "prompt": "1/5 =",
+          "answer": "20 %"
+        },
+        {
+          "prompt": "1/10 =",
+          "answer": "10 %"
+        }
+      ]
+    },
+    {
+      "title": "Berechne den Anteil.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "20 % von 150 =",
+          "answer": "30"
+        },
+        {
+          "prompt": "75 % von 80 =",
+          "answer": "60"
+        }
+      ]
+    },
+    {
+      "title": "Berechne Rabatt und Preis.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Rucksack kostet CHF 60. Er wird um 25 % reduziert. Wie gross ist der Rabatt? Wie hoch ist der neue Preis? Zeige deinen Weg.",
+          "answer": "Rabatt: 60 : 4 = CHF 15. Neuer Preis: 60 − 15 = CHF 45.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MA.1.A.1",
+    "scope": "Vertraute Brüche mit Prozentangaben verbinden und einfache Anteile berechnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -227,7 +227,7 @@ export const worksheetLandingPages: WorksheetLandingPage[] = [
     previewHeight: 1100,
     curriculumCode: "MA.1.A.1",
     curriculumScope: "Vertraute Brüche mit Prozentangaben verbinden und einfache Anteile berechnen.",
-    curriculumUrl: "https://v-fe.lehrplan.ch/index.php?code=b%7C5%7C0%7C1",
+    curriculumUrl: "https://v-fe.lehrplan.ch/index.php?code=a|5|0|1|1|1",
   },
 ];
 
