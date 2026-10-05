@@ -1,0 +1,55 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "mittelalter-5",
+  "goal": "Das europäische Mittelalter wird häufig ungefähr von 500 bis 1500 eingeordnet. Menschen lebten auf dem Land und in Städten sehr unterschiedlich. Burgen, Werkzeuge, Texte und Gebäude können Hinweise auf damaliges Leben geben.",
+  "sections": [
+    {
+      "title": "Ordne die Zeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Liegt das Jahr 1200 innerhalb der genannten Zeitspanne?",
+          "answer": "Ja",
+          "wide": true
+        },
+        {
+          "prompt": "Liegt das Jahr 1800 innerhalb dieser Zeitspanne?",
+          "answer": "Nein",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Verallgemeinerung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Im Mittelalter wohnten alle Menschen in Burgen.» Warum ist das falsch?",
+          "answer": "Viele Menschen lebten zum Beispiel in Dörfern oder Städten; Burgen waren nicht die Wohnform aller.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Untersuche eine Quelle.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du findest ein altes Werkzeug. Welche zwei Fragen helfen, seine frühere Nutzung zu untersuchen?",
+          "answer": "Zum Beispiel: Aus welcher Zeit stammt es? Wo wurde es gefunden? Welches Material und welche Gebrauchsspuren hat es? Welche Vergleichsfunde gibt es?",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.3",
+    "scope": "Das Mittelalter grob zeitlich einordnen und unterschiedliche Lebensweisen anhand von Quellen untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

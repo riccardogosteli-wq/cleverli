@@ -1,0 +1,60 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "oekosysteme",
+  "goal": "Ein Ökosystem umfasst einen Lebensraum, seine Lebewesen und ihre Beziehungen. Pflanzen bilden mit Licht energiereiche Stoffe. Tiere nutzen Nahrung. Zersetzer wie viele Pilze und Bakterien bauen abgestorbenes Material ab.",
+  "sections": [
+    {
+      "title": "Ordne eine Rolle zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Gras bildet mit Licht Zucker.",
+          "answer": "Produzent / Pflanze",
+          "wide": true
+        },
+        {
+          "prompt": "Eine Raupe frisst Blätter.",
+          "answer": "Konsument / Pflanzenfresser",
+          "wide": true
+        },
+        {
+          "prompt": "Ein Pilz baut abgestorbenes Holz ab.",
+          "answer": "Zersetzer",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre einen Zusammenhang.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sind Zersetzer für den Stoffkreislauf wichtig?",
+          "answer": "Sie bauen totes Material ab und machen darin enthaltene Nährstoffe wieder verfügbar.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Denke an Veränderungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Hecke wird entfernt. Nenne zwei mögliche Folgen für Tiere, die dort leben.",
+          "answer": "Zum Beispiel Verlust von Nistplätzen, Schutz, Nahrung oder einer Verbindung zu anderen Lebensräumen. Begründete Möglichkeiten gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.1",
+    "scope": "Rollen und Beziehungen in einem einfachen Ökosystem beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

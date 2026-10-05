@@ -1,0 +1,60 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "strom-energie",
+  "goal": "Ein einfacher Stromkreis braucht eine geeignete Spannungsquelle, Leitungen und einen Verbraucher. Strom kann fliessen, wenn der Kreis geschlossen ist. Dieses Blatt wird auf Papier bearbeitet. Niemals an Steckdosen oder Netzgeräten experimentieren.",
+  "sections": [
+    {
+      "title": "Erkenne die Funktion.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Batterie dient im einfachen Modell als",
+          "answer": "Spannungsquelle",
+          "wide": true
+        },
+        {
+          "prompt": "Ein Lämpchen ist ein",
+          "answer": "Verbraucher",
+          "wide": true
+        },
+        {
+          "prompt": "Ein offener Schalter unterbricht den",
+          "answer": "Stromkreis",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum leuchtet ein passendes Lämpchen nicht, wenn eine Leitung im einfachen Stromkreis unterbrochen ist?",
+          "answer": "Es fehlt ein geschlossener Weg; durch das Lämpchen fliesst kein Strom.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Handle sicher.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Kabel an einem Netzgerät ist beschädigt. Was ist eine sichere Reaktion?",
+          "answer": "Nicht anfassen oder benutzen; Abstand halten und eine verantwortliche erwachsene Person informieren. Nicht selbst reparieren.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.5.2",
+    "scope": "Bauteile eines einfachen Stromkreises und grundlegende elektrische Sicherheit beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

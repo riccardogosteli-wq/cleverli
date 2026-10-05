@@ -1,0 +1,60 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "kraefte-bewegung-5",
+  "goal": "Kräfte können Tempo, Richtung oder Form verändern. Schwerkraft zieht Gegenstände zur Erde. Reibung kann Bewegungen bremsen. Beobachte nur sichere Alltagsbeispiele, ohne Gegenstände aus der Höhe fallen zu lassen.",
+  "sections": [
+    {
+      "title": "Welche Wirkung wird beschrieben?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Ball wird durch einen sanften Stoss schneller. Was ändert sich?",
+          "answer": "Das Tempo / die Geschwindigkeit.",
+          "wide": true
+        },
+        {
+          "prompt": "Ein rollender Ball wird seitlich abgelenkt. Was ändert sich?",
+          "answer": "Die Bewegungsrichtung.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Benenne eine Kraftwirkung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum wird ein rollendes Spielzeugauto auf dem Boden langsamer?",
+          "answer": "Unter anderem wegen Reibung; auch Luftwiderstand wirkt entgegen.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Welche Kraft hält uns auf der Erde?",
+          "answer": "Schwerkraft / Erdanziehungskraft",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beurteile einen Vergleich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwei verschiedene Autos werden auf verschiedenen Unterlagen verschieden stark angestossen. Kann man daraus eindeutig die Wirkung der Unterlage ableiten? Begründe.",
+          "answer": "Nein. Mehrere Bedingungen ändern sich gleichzeitig. Dasselbe Auto mit möglichst gleichem Anstoss verwenden und nur die Unterlage verändern.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.1",
+    "scope": "Kraftwirkungen unterscheiden und einen fairen Bewegungsvergleich planen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

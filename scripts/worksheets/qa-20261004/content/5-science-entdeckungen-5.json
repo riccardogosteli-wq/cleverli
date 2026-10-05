@@ -1,0 +1,61 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "entdeckungen-5",
+  "goal": "1492 erreichte Christoph Kolumbus mit einer europäischen Expedition Inseln der Karibik. Dort lebten bereits Menschen. Der Ausdruck «Entdeckung» beschreibt deshalb eine bestimmte europäische Sicht. Die folgende Kolonisierung brachte vielen indigenen Gemeinschaften Gewalt, Ausbeutung und Krankheiten.",
+  "sections": [
+    {
+      "title": "Lies genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In welchem Jahr erreichte die genannte Expedition die Karibik?",
+          "answer": "1492",
+          "wide": true
+        },
+        {
+          "prompt": "Waren diese Inseln zuvor unbewohnt?",
+          "answer": "Nein",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche Sichtweisen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist «Kolumbus entdeckte ein unbewohntes Land» falsch?",
+          "answer": "Dort lebten bereits indigene Menschen mit eigenen Gesellschaften und Kenntnissen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Ordne Folgen ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei im Text genannte belastende Folgen der Kolonisierung. Warum sollte man bei Geschichte verschiedene Perspektiven betrachten?",
+          "answer": "Gewalt, Ausbeutung, Krankheiten; zwei nennen. Verschiedene Perspektiven machen Erfahrungen und Interessen unterschiedlicher Menschen sichtbar.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.3",
+    "scope": "Eine europäische Entdeckungsdarstellung kritisch lesen und Folgen der Kolonisierung benennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3",
+    "additionalReferences": [
+      {
+        "code": "NMG.9.4",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|4"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

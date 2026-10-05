@@ -4906,20 +4906,20 @@
     "topicId": "oekosysteme",
     "title": "Ökosysteme",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.1",
       "scope": "Rollen und Beziehungen in einem einfachen Ökosystem beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/oekosysteme-arbeitsblatt.pdf",
-        "sha256": "2b4f123ca08f7b6b89f0deda58f1ff0b278e8bf7efe90357d2598706209ad866",
-        "bytes": 862144
+        "path": "revisions/20261004/pdfs/5/science/oekosysteme-arbeitsblatt.pdf",
+        "sha256": "a1523a81a629057cc1721482ff0259dc6fbe4a73a2bcab51dd46a185792c0af1",
+        "bytes": 861852
       },
       "solution": {
-        "path": "pdfs/5/science/oekosysteme-loesungen.pdf",
-        "sha256": "64d1f4aa2b745164c2c424b456ed43de054d3df4403b89b7bdd6aa2f84ba058e",
-        "bytes": 889203
+        "path": "revisions/20261004/pdfs/5/science/oekosysteme-loesungen.pdf",
+        "sha256": "b905edbde215303a77c4e8c8cb7a9cc9cc5013ee915a727cbe45c61ef2d87acd",
+        "bytes": 888583
       }
     }
   },
@@ -4930,20 +4930,20 @@
     "topicId": "sonnensystem",
     "title": "Sonnensystem entdecken",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.4.5",
       "scope": "Planetenreihenfolge und Sonne, Planet, Mond sowie Zwergplanet unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/sonnensystem-arbeitsblatt.pdf",
-        "sha256": "9d67c31c378d775c87d5d9f26074a69e31192ac44ab04b9fe4a76f05b00d7e9b",
-        "bytes": 863451
+        "path": "revisions/20261004/pdfs/5/science/sonnensystem-arbeitsblatt.pdf",
+        "sha256": "169474b10fe45bd488ea9e193d40d71867fe19a374802f6f627ba5e47f5cbce4",
+        "bytes": 864315
       },
       "solution": {
-        "path": "pdfs/5/science/sonnensystem-loesungen.pdf",
-        "sha256": "dad3f722c58d96edf92ece5d5b6325fd2f7dd91565cc63ba58fec2a08ccf12db",
-        "bytes": 890091
+        "path": "revisions/20261004/pdfs/5/science/sonnensystem-loesungen.pdf",
+        "sha256": "e9162f5f88d61b1437fe3bade7ff1878e467c05955f06dd45456615d14770335",
+        "bytes": 889730
       }
     }
   },
@@ -4954,20 +4954,20 @@
     "topicId": "strom-energie",
     "title": "Strom und Energie",
     "curriculum": {
-      "code": "NMG.5",
+      "code": "NMG.5.2",
       "scope": "Bauteile eines einfachen Stromkreises und grundlegende elektrische Sicherheit beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/strom-energie-arbeitsblatt.pdf",
-        "sha256": "ae37332ba52b8139766be44e46063f1c6aa476b073c8849ded9d60dbedd0e3bc",
-        "bytes": 859382
+        "path": "revisions/20261004/pdfs/5/science/strom-energie-arbeitsblatt.pdf",
+        "sha256": "1545fc87b6a79a9e4edfa92bd1bfea2047f6293b7d9bcb8a257c415fb008b12d",
+        "bytes": 859073
       },
       "solution": {
-        "path": "pdfs/5/science/strom-energie-loesungen.pdf",
-        "sha256": "38e2e6d48d96d6c44a0f13bf33a10cbe51fc5238b3b5c070955a8007fe36bd3a",
-        "bytes": 885140
+        "path": "revisions/20261004/pdfs/5/science/strom-energie-loesungen.pdf",
+        "sha256": "8b7aad8ad08751efe2715893648bb08af9ebfd955e625af1b979686c6c5aa806",
+        "bytes": 884489
       }
     }
   },
@@ -4978,20 +4978,20 @@
     "topicId": "menschlicher-koerper-5",
     "title": "Menschlicher Körper",
     "curriculum": {
-      "code": "NMG.1",
+      "code": "NMG.1.4",
       "scope": "Atmung und Blutkreislauf als zusammenwirkende Körpersysteme beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/menschlicher-koerper-5-arbeitsblatt.pdf",
-        "sha256": "eee0296fa7db7bb0f3791579a14c672dfecf5c483505c8ab0d0d27e2fbc812fb",
-        "bytes": 863980
+        "path": "revisions/20261004/pdfs/5/science/menschlicher-koerper-5-arbeitsblatt.pdf",
+        "sha256": "9f70d2351422dd3c5ddeb1c6c7c622c15dff7cd30bbe28cb5f4c1051ea5f290c",
+        "bytes": 863711
       },
       "solution": {
-        "path": "pdfs/5/science/menschlicher-koerper-5-loesungen.pdf",
-        "sha256": "8b074292954cf0d775ab681a85a91505fc6f1cf3150c52d73b53cf690a9c73b6",
-        "bytes": 890278
+        "path": "revisions/20261004/pdfs/5/science/menschlicher-koerper-5-loesungen.pdf",
+        "sha256": "d243e9225534cfa255f1f90445a38eedde282f31a1a1dcb6cad390b67a115c2e",
+        "bytes": 889915
       }
     }
   },
@@ -5002,20 +5002,26 @@
     "topicId": "chemie-einfuehrung-5",
     "title": "Stoffe im Alltag erforschen",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.3",
       "scope": "Stoffeigenschaften und Grenzen einfacher Trennverfahren untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.3.4",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|4"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/chemie-einfuehrung-5-arbeitsblatt.pdf",
-        "sha256": "a167d5f32cf7620e9058d077be7dad9afd9ff56be8d771aa7a4ede106f7fbdd8",
-        "bytes": 863489
+        "path": "revisions/20261004/pdfs/5/science/chemie-einfuehrung-5-arbeitsblatt.pdf",
+        "sha256": "e35858580261c342f7e462c09359311961b2baefede9bff10a2ee25c761fb632",
+        "bytes": 863180
       },
       "solution": {
-        "path": "pdfs/5/science/chemie-einfuehrung-5-loesungen.pdf",
-        "sha256": "9edf4369a0c3dd7ef17e86bec5e2eb875aa2fcfb2203c4943159fd5c55d6347e",
-        "bytes": 889842
+        "path": "revisions/20261004/pdfs/5/science/chemie-einfuehrung-5-loesungen.pdf",
+        "sha256": "6d2c784279af16d01363aaf81fcd8c60c5a340b4651a1e91bc81fa66c20a3c17",
+        "bytes": 890425
       }
     }
   },
@@ -5026,20 +5032,20 @@
     "topicId": "kraefte-bewegung-5",
     "title": "Kräfte & Bewegung",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.1",
       "scope": "Kraftwirkungen unterscheiden und einen fairen Bewegungsvergleich planen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/kraefte-bewegung-5-arbeitsblatt.pdf",
-        "sha256": "2fc36da691e6c4b5091e68c142cd5257146b5ecd227ec2cffcf8f08587494e5e",
-        "bytes": 863589
+        "path": "revisions/20261004/pdfs/5/science/kraefte-bewegung-5-arbeitsblatt.pdf",
+        "sha256": "0e790b8b398a954d224f4da9018410560b7b59fa782582a5439d6b8a42600e72",
+        "bytes": 863285
       },
       "solution": {
-        "path": "pdfs/5/science/kraefte-bewegung-5-loesungen.pdf",
-        "sha256": "bd48d11c0625bbb84ed851a0350532c4e2df9b1320222ffea33db68040ead70e",
-        "bytes": 890549
+        "path": "revisions/20261004/pdfs/5/science/kraefte-bewegung-5-loesungen.pdf",
+        "sha256": "4dde3fb0a1099ea2057d621921765212f8cf8f89e7d069ac4e8c3b43e3009735",
+        "bytes": 889891
       }
     }
   },
@@ -5050,20 +5056,26 @@
     "topicId": "erde-klima-5",
     "title": "Erde & Klima",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.4.5",
       "scope": "Erdbewegungen sowie Wetter und langfristiges Klima unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|5",
+      "additionalReferences": [
+        {
+          "code": "NMG.4.4",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/erde-klima-5-arbeitsblatt.pdf",
-        "sha256": "71a6e9a7f9cec465f43587cfb98aca1eaeed4c9a26396806e2f7b2cfc9017d73",
-        "bytes": 861065
+        "path": "revisions/20261004/pdfs/5/science/erde-klima-5-arbeitsblatt.pdf",
+        "sha256": "b3a8d22abbd2ef8f84803b6d52a40d17a0782c095c3aaeddae8ca14a33d22c62",
+        "bytes": 860775
       },
       "solution": {
-        "path": "pdfs/5/science/erde-klima-5-loesungen.pdf",
-        "sha256": "387126f471fcf1d7b9c37b294e4213343752bfd52d8e5e2030d11011cc56873b",
-        "bytes": 888181
+        "path": "revisions/20261004/pdfs/5/science/erde-klima-5-loesungen.pdf",
+        "sha256": "4d00f4abf36a61ea83735ea46eb16345628afbc5b4d9d98d1b06a3067b36b8f4",
+        "bytes": 888140
       }
     }
   },
@@ -5074,20 +5086,20 @@
     "topicId": "pflanzen-tiere-5",
     "title": "Pflanzen & Tiere",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.3",
       "scope": "Bestäubung und wechselseitige Beziehungen zwischen Pflanzen und Tieren beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/pflanzen-tiere-5-arbeitsblatt.pdf",
-        "sha256": "d817d5290f20aa449ccd177d9c99dbd6de96f16418e4c015dbe09e1eea17ca1d",
-        "bytes": 858946
+        "path": "revisions/20261004/pdfs/5/science/pflanzen-tiere-5-arbeitsblatt.pdf",
+        "sha256": "5c3c8be3033fb75a827a7bef95839e90d65ea2233278ae16264a8b1c02aeab98",
+        "bytes": 858641
       },
       "solution": {
-        "path": "pdfs/5/science/pflanzen-tiere-5-loesungen.pdf",
-        "sha256": "b9fe8105d3f0907eda2b1dce36e09e46a7fe18b745c2ea3d24f42c64df5ca4b3",
-        "bytes": 885708
+        "path": "revisions/20261004/pdfs/5/science/pflanzen-tiere-5-loesungen.pdf",
+        "sha256": "f7657310e588993587bb192c5d1584e7f4e2644d29ac75830467f8c660a1cd5a",
+        "bytes": 885452
       }
     }
   },
@@ -5098,20 +5110,20 @@
     "topicId": "technik-erfinungen-5",
     "title": "Technik & Erfindungen",
     "curriculum": {
-      "code": "NMG.5",
+      "code": "NMG.5.1",
       "scope": "Technische Anforderungen, sichere Modelltests und begründete Verbesserungen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/technik-erfinungen-5-arbeitsblatt.pdf",
-        "sha256": "6c554a59b9d9dd92d402837c47e8b5ca5d7df156b62427000eccf096332c80be",
-        "bytes": 859068
+        "path": "revisions/20261004/pdfs/5/science/technik-erfinungen-5-arbeitsblatt.pdf",
+        "sha256": "ee0a4035388b4eac930617803af6a1ec38b5259fe872e3e100c0db676e9d7db8",
+        "bytes": 858772
       },
       "solution": {
-        "path": "pdfs/5/science/technik-erfinungen-5-loesungen.pdf",
-        "sha256": "8f5c589fa70dfe1e864271b33621282dc929e8cf24bf9281ac260b841f62bbb3",
-        "bytes": 886829
+        "path": "revisions/20261004/pdfs/5/science/technik-erfinungen-5-loesungen.pdf",
+        "sha256": "edcba367f10ee69d589be48d4e7727960733ff7cebf5973568d494a766072680",
+        "bytes": 886180
       }
     }
   },
@@ -5122,20 +5134,20 @@
     "topicId": "weltall",
     "title": "Medien & Information",
     "curriculum": {
-      "code": "MI.1",
+      "code": "MI.1.2",
       "scope": "Medienabsichten und den Einfluss von Kontext auf Informationen erkennen. Fachübergreifender Bezug Medien und Informatik innerhalb des Cleverli-NMG-Katalogs.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C10%7C0%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/weltall-arbeitsblatt.pdf",
-        "sha256": "265960b406a494b98b4b076950ee16d746877562e9589dde4269f3a9b17981e6",
-        "bytes": 864301
+        "path": "revisions/20261004/pdfs/5/science/weltall-arbeitsblatt.pdf",
+        "sha256": "e6f2f03539e0c75b6addcd78be3d1c08329377026f318069c6918aeb606fca9a",
+        "bytes": 864006
       },
       "solution": {
-        "path": "pdfs/5/science/weltall-loesungen.pdf",
-        "sha256": "03cefe7b166c5e575a1758121118a2f46b04afe346232cff22656dd5ce900f32",
-        "bytes": 891573
+        "path": "revisions/20261004/pdfs/5/science/weltall-loesungen.pdf",
+        "sha256": "1f0f79840f59a1d5ebe7fed1e31e2acebf8b83d515bbc9dac5ff6e410deb7687",
+        "bytes": 890938
       }
     }
   },
@@ -5146,20 +5158,20 @@
     "topicId": "strom-elektrizitaet",
     "title": "Arbeit, Handel & Transport",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.3",
       "scope": "Arbeitsteilung, Handel und Transport in einer einfachen Produktionskette beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/strom-elektrizitaet-arbeitsblatt.pdf",
-        "sha256": "dca615080b5252a01eabe2118a05b2e02e2da97dee4b7678cec7f2fe2b15a79d",
-        "bytes": 864149
+        "path": "revisions/20261004/pdfs/5/science/strom-elektrizitaet-arbeitsblatt.pdf",
+        "sha256": "ec22834bad43574f24e08e8a8796ccc34d48b9b59c7f8f80cb68032bb6bae06f",
+        "bytes": 863859
       },
       "solution": {
-        "path": "pdfs/5/science/strom-elektrizitaet-loesungen.pdf",
-        "sha256": "ecfc9e7038bd88d9610d908080592f4372865c80dd4d2d8cab1c6edbac24c5b0",
-        "bytes": 891818
+        "path": "revisions/20261004/pdfs/5/science/strom-elektrizitaet-loesungen.pdf",
+        "sha256": "a595cde44b5c6867b5037ebe225e86c529435b5982ae27cdc4937eaf8e525c51",
+        "bytes": 891545
       }
     }
   },
@@ -5170,20 +5182,20 @@
     "topicId": "europa-geografie-5",
     "title": "Europa — Geografie",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.4",
       "scope": "Landschaftsformen, Nachbarstaaten und geeignete Karteninformationen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/europa-geografie-5-arbeitsblatt.pdf",
-        "sha256": "8a2367b935603c509fc3685458082169b541d534616b73cbf7aec4cb818c5e62",
-        "bytes": 862836
+        "path": "revisions/20261004/pdfs/5/science/europa-geografie-5-arbeitsblatt.pdf",
+        "sha256": "352eb188a4c2f4e99d9158124245c0050c43e6faf2b4acb19a2c27459c3a48a9",
+        "bytes": 863131
       },
       "solution": {
-        "path": "pdfs/5/science/europa-geografie-5-loesungen.pdf",
-        "sha256": "5dbe85444e393f2911bc73cfd1e5c24663449e8c9e7075ac97393c3833634da4",
-        "bytes": 887277
+        "path": "revisions/20261004/pdfs/5/science/europa-geografie-5-loesungen.pdf",
+        "sha256": "6a91200f7a2dd5e3dbd50ed4d288d5074da34d806fecb4c66f7953a6c2a1d1ab",
+        "bytes": 887474
       }
     }
   },
@@ -5194,20 +5206,26 @@
     "topicId": "schweiz-politik-5",
     "title": "Schweiz — Politik & Demokratie",
     "curriculum": {
-      "code": "NMG.10",
+      "code": "NMG.10.3",
       "scope": "Wahl, Abstimmung und Grenzen von Mehrheitsentscheidungen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C10"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.10.5",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|5"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/schweiz-politik-5-arbeitsblatt.pdf",
-        "sha256": "f9e1f9bd5eb9bab8747d9970f5469d9fb7381f6905ad4470a5269c251aeaeee6",
-        "bytes": 864734
+        "path": "revisions/20261004/pdfs/5/science/schweiz-politik-5-arbeitsblatt.pdf",
+        "sha256": "907630fa2d2a8fe7baabbbbb8e63ff7cf27593e3b98c3d75489e648ffe41bd0f",
+        "bytes": 864455
       },
       "solution": {
-        "path": "pdfs/5/science/schweiz-politik-5-loesungen.pdf",
-        "sha256": "1a0a8bca2bc73f66e082ce65bc85c6df7f3592008ffe4270838c9aeec57839be",
-        "bytes": 891963
+        "path": "revisions/20261004/pdfs/5/science/schweiz-politik-5-loesungen.pdf",
+        "sha256": "456ee73611b72593ebdf8e64493ffeb0acfff5b9657585999a1ef09b8f2ba9f2",
+        "bytes": 892295
       }
     }
   },
@@ -5218,20 +5236,20 @@
     "topicId": "mittelalter-5",
     "title": "Mittelalter",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.3",
       "scope": "Das Mittelalter grob zeitlich einordnen und unterschiedliche Lebensweisen anhand von Quellen untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/mittelalter-5-arbeitsblatt.pdf",
-        "sha256": "82cdba20dd14cd2ec9a858dab1e32c5bb02be835b46912bfa004378b0db1c224",
-        "bytes": 861728
+        "path": "revisions/20261004/pdfs/5/science/mittelalter-5-arbeitsblatt.pdf",
+        "sha256": "d306008bef5bc618039e5a842895833a6b412c67a1d442af4de5be2ff3247066",
+        "bytes": 861431
       },
       "solution": {
-        "path": "pdfs/5/science/mittelalter-5-loesungen.pdf",
-        "sha256": "e2359c1c001f98796f39f5e0bfb87d0c3ddecd5f646115978472ac7227652a81",
-        "bytes": 890074
+        "path": "revisions/20261004/pdfs/5/science/mittelalter-5-loesungen.pdf",
+        "sha256": "d92a8c9c5456c4f5543340ef985cfaf09f0e930d9f76c2d4261bebc1efe3a205",
+        "bytes": 890136
       }
     }
   },
@@ -5242,20 +5260,26 @@
     "topicId": "entdeckungen-5",
     "title": "Zeitalter der Entdeckungen",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.3",
       "scope": "Eine europäische Entdeckungsdarstellung kritisch lesen und Folgen der Kolonisierung benennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.9.4",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|4"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/entdeckungen-5-arbeitsblatt.pdf",
-        "sha256": "56a6a6fe914fec6e819f3f405bf74ad61f742cb091fe5368ec99af5a5c39a8ae",
-        "bytes": 863625
+        "path": "revisions/20261004/pdfs/5/science/entdeckungen-5-arbeitsblatt.pdf",
+        "sha256": "9f6a76b5a2fc012ecd19dec212362ad5640f594001e19a9d1cd4ab44bc0375f5",
+        "bytes": 863320
       },
       "solution": {
-        "path": "pdfs/5/science/entdeckungen-5-loesungen.pdf",
-        "sha256": "0c8d8e69aa8dad3df4fb6a276da10f4e43d9914bcdaa3222122622919a3ae83f",
-        "bytes": 889519
+        "path": "revisions/20261004/pdfs/5/science/entdeckungen-5-loesungen.pdf",
+        "sha256": "d78d664182bda4c2f0b38db90d2ae6285c74cb4d3aa26723f35f446fbf67896d",
+        "bytes": 890878
       }
     }
   },
@@ -5266,20 +5290,20 @@
     "topicId": "wirtschaft-handel-5",
     "title": "Wirtschaft im Alltag",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.5",
       "scope": "Güter, Dienstleistungen und einfache begrenzte Budgets unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/wirtschaft-handel-5-arbeitsblatt.pdf",
-        "sha256": "20e0db14a35dd72ee896a942af1a75e65a26b7ddd816239bf8d60ab28189a8a6",
-        "bytes": 864365
+        "path": "revisions/20261004/pdfs/5/science/wirtschaft-handel-5-arbeitsblatt.pdf",
+        "sha256": "20390a61d4184b95098464dedbf97d4a3662c84b97e8dd5d67b1e08727f2b064",
+        "bytes": 864065
       },
       "solution": {
-        "path": "pdfs/5/science/wirtschaft-handel-5-loesungen.pdf",
-        "sha256": "1951925dc660667b11b5abf7dfe2eb0f29b36d35af19a3ae3c93bdb87b21c499",
-        "bytes": 891383
+        "path": "revisions/20261004/pdfs/5/science/wirtschaft-handel-5-loesungen.pdf",
+        "sha256": "1495098989f04c9873da2db318b21600a344e804117d636fde0f57fa7a313d42",
+        "bytes": 890745
       }
     }
   },
@@ -5290,20 +5314,20 @@
     "topicId": "bevoelkerung-5",
     "title": "Bevölkerung & Siedlung",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.3",
       "scope": "Siedlungsentwicklung mit Standortfaktoren und unterschiedlichen Interessen verbinden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/bevoelkerung-5-arbeitsblatt.pdf",
-        "sha256": "630350d0d6214ff327e4be49c768b365bb858048b41e65095a0bff78420738e6",
-        "bytes": 862422
+        "path": "revisions/20261004/pdfs/5/science/bevoelkerung-5-arbeitsblatt.pdf",
+        "sha256": "cc27b5d62dddf24a8a892555c8f5b960f4faf84b4c72a69905cb113c6de8f730",
+        "bytes": 862126
       },
       "solution": {
-        "path": "pdfs/5/science/bevoelkerung-5-loesungen.pdf",
-        "sha256": "3355a438e5f105e3ce2b871a8d264b8244f03c4daa3dcb96470973283a284789",
-        "bytes": 889283
+        "path": "revisions/20261004/pdfs/5/science/bevoelkerung-5-loesungen.pdf",
+        "sha256": "31a6b89c20cba803ed1ffd5eeb3a5156ab3b361b2746d4b5cc4529eb1f43da44",
+        "bytes": 888939
       }
     }
   },
@@ -5314,20 +5338,20 @@
     "topicId": "klima-lebensraeume-5",
     "title": "Klimazonen & Lebensräume",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.2",
       "scope": "Klimaeinflüsse auf Lebensräume und eine einfache Anpassung erklären.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/klima-lebensraeume-5-arbeitsblatt.pdf",
-        "sha256": "b2f4a2ae856edab56b3653737578581764e0ee131d55fa74f0a43fd8e543df18",
-        "bytes": 863617
+        "path": "revisions/20261004/pdfs/5/science/klima-lebensraeume-5-arbeitsblatt.pdf",
+        "sha256": "055a37daf7ac05dc4af45e35521e53043b81c15b9d7810daed4084ebe4d854d4",
+        "bytes": 863323
       },
       "solution": {
-        "path": "pdfs/5/science/klima-lebensraeume-5-loesungen.pdf",
-        "sha256": "63bdd461213defce123d4915db239c29a9a8782fdff9c0bf710e154c42184942",
-        "bytes": 888874
+        "path": "revisions/20261004/pdfs/5/science/klima-lebensraeume-5-loesungen.pdf",
+        "sha256": "0a7ef7144d5fea52bf18cf2a95735bc1a9bea07d0117ab29ad8957e2e41b2d84",
+        "bytes": 888248
       }
     }
   },
@@ -5338,20 +5362,26 @@
     "topicId": "reformation-5",
     "title": "Reformation",
     "curriculum": {
-      "code": "NMG.12",
+      "code": "NMG.9.3",
       "scope": "Die Reformation zeitlich einordnen und religiöse Vielfalt respektvoll betrachten.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C12"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.12.5",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|12|0|5"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/reformation-5-arbeitsblatt.pdf",
-        "sha256": "b705f7cda86923d90a255c1ade37c9177f8c97b772bf719da8f03f7926037c3e",
-        "bytes": 864032
+        "path": "revisions/20261004/pdfs/5/science/reformation-5-arbeitsblatt.pdf",
+        "sha256": "c1e45528dbbdc754bb29327041884f48c0897e59e7f7c7530998a13c83a49249",
+        "bytes": 863737
       },
       "solution": {
-        "path": "pdfs/5/science/reformation-5-loesungen.pdf",
-        "sha256": "0b5a28db31e41f6c42d7d0c972e26a59bf78c9dcfaa70f0dae6c26b9385f93f2",
-        "bytes": 892082
+        "path": "revisions/20261004/pdfs/5/science/reformation-5-loesungen.pdf",
+        "sha256": "502c8bc6cbfdf6821ab068341acd6af40ed93d46df0aa7cfe2f8a91f35f39d57",
+        "bytes": 893184
       }
     }
   },
@@ -5362,20 +5392,26 @@
     "topicId": "nachhaltigkeit-5",
     "title": "Nachhaltigkeit & Zukunft",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.5",
       "scope": "Ressourcenschonende Handlungen und soziale Zugänglichkeit gemeinsam berücksichtigen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|5",
+      "additionalReferences": [
+        {
+          "code": "NMG.2.6",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|6"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/nachhaltigkeit-5-arbeitsblatt.pdf",
-        "sha256": "bf8394652a67eabc5b3e8441fe423bd61d1375d745535606ef2a06ddfc7e6d1c",
-        "bytes": 863187
+        "path": "revisions/20261004/pdfs/5/science/nachhaltigkeit-5-arbeitsblatt.pdf",
+        "sha256": "b231dadedc9c0223d8cdaaeedb994ec70633b9fb366e4120e77fa2cf3989ddb0",
+        "bytes": 862892
       },
       "solution": {
-        "path": "pdfs/5/science/nachhaltigkeit-5-loesungen.pdf",
-        "sha256": "fe7ec18f0f23007574cbf6c763875e81b68f8a573367f2934e39ff7180332e78",
-        "bytes": 890543
+        "path": "revisions/20261004/pdfs/5/science/nachhaltigkeit-5-loesungen.pdf",
+        "sha256": "17aeaceef2b2de974a944998346b9c93ee41735c81274fbd609acfb7b2d23cf7",
+        "bytes": 890978
       }
     }
   },
@@ -5386,20 +5422,20 @@
     "topicId": "geschichte-zeit",
     "title": "Werte, Regeln & Konflikte",
     "curriculum": {
-      "code": "NMG.11",
+      "code": "NMG.11.3",
       "scope": "Bedürfnisse, respektvolle Konfliktlösung und überprüfbare Vereinbarungen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C11"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|11|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/science/geschichte-zeit-arbeitsblatt.pdf",
-        "sha256": "6252bce522800e569b9ba2a7f3eea774bc6e376811309939c577d28469de6cd5",
-        "bytes": 865275
+        "path": "revisions/20261004/pdfs/5/science/geschichte-zeit-arbeitsblatt.pdf",
+        "sha256": "fb7a6245aceb6598bfb1b918df77865eb01612820129495f41e222880ff3796e",
+        "bytes": 864973
       },
       "solution": {
-        "path": "pdfs/5/science/geschichte-zeit-loesungen.pdf",
-        "sha256": "b5a78dd36c101c4476f707fa474146059ab953514fe9fd234e1e9dbedb3a2ad5",
-        "bytes": 891282
+        "path": "revisions/20261004/pdfs/5/science/geschichte-zeit-loesungen.pdf",
+        "sha256": "5acfd6b943013ae0ac5eb0f61c7c828365a715eb4a3f4a0838d0cf8734a29185",
+        "bytes": 890972
       }
     }
   },

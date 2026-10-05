@@ -1,0 +1,56 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "strom-elektrizitaet",
+  "goal": "Arbeit, Handel und Transport verbinden Orte. Ein Brot braucht zum Beispiel Getreideanbau, Mühle, Bäckerei und Verkauf. Transport bringt Rohstoffe und Waren weiter. Menschen arbeiten unter unterschiedlichen Bedingungen.",
+  "sections": [
+    {
+      "title": "Ordne die Kette.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bringe in Reihenfolge: Bäckerei, Getreideanbau, Verkauf des Brots, Mühle.",
+          "answer": "Getreideanbau → Mühle → Bäckerei → Verkauf des Brots.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Erkenne Aufgaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Aufgabe erfüllt die Mühle?",
+          "answer": "Getreide zu Mehl mahlen.",
+          "wide": true
+        },
+        {
+          "prompt": "Warum kann zwischen den Schritten Transport nötig sein?",
+          "answer": "Weil Anbau, Verarbeitung und Verkauf an unterschiedlichen Orten stattfinden können.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Denke über Bedingungen nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne neben dem Verkaufspreis zwei Aspekte, die für eine verantwortungsvolle Herstellung wichtig sind.",
+          "answer": "Zum Beispiel sichere Arbeit, faire Entlohnung, Ressourcenverbrauch, Umweltschutz, Qualität. Zwei passende Aspekte begründen oder nennen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.3",
+    "scope": "Arbeitsteilung, Handel und Transport in einer einfachen Produktionskette beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

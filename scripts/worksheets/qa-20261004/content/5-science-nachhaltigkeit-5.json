@@ -1,0 +1,61 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "nachhaltigkeit-5",
+  "goal": "Nachhaltiges Handeln berücksichtigt Umwelt, Menschen und langfristige Folgen. Weniger verbrauchen, länger nutzen, reparieren und teilen können Ressourcen sparen. Welche Lösung passt, hängt von der Situation ab; nicht jede Familie hat dieselben Möglichkeiten.",
+  "sections": [
+    {
+      "title": "Wähle eine passende Möglichkeit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Rucksack hat nur einen kaputten Reissverschluss. Was könnte man vor einem Neukauf prüfen?",
+          "answer": "Ob eine sichere, sinnvolle Reparatur möglich ist.",
+          "wide": true
+        },
+        {
+          "prompt": "Ein selten benötigtes Spiel liegt ungenutzt herum. Welche Alternative zum Wegwerfen gibt es?",
+          "answer": "Weitergeben, tauschen oder teilen, wenn vollständig und sicher.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre eine Wirkung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum kann längere Nutzung Material und Energie sparen?",
+          "answer": "Es müssen weniger neue Produkte hergestellt und transportiert werden; vorhandene Ressourcen werden länger genutzt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Plane realistisch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne eine gemeinsame Schulaktion zum Ressourcensparen. Welche Voraussetzung müsste erfüllt sein, damit alle mitmachen können?",
+          "answer": "Zum Beispiel Tauschregal oder Materialpool. Zugänglichkeit, Freiwilligkeit, sichere brauchbare Materialien und keine finanziellen Hürden beachten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.5",
+    "scope": "Ressourcenschonende Handlungen und soziale Zugänglichkeit gemeinsam berücksichtigen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|5",
+    "additionalReferences": [
+      {
+        "code": "NMG.2.6",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|6"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

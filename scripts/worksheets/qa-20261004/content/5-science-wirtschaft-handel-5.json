@@ -1,0 +1,61 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "wirtschaft-handel-5",
+  "goal": "Ein Bedürfnis ist etwas, das Menschen brauchen oder wünschen. Güter und Dienstleistungen helfen, Bedürfnisse zu erfüllen. Geld ist begrenzt; bei einem Einkauf muss man auswählen. Preis, Qualität, Nutzen und Folgen können dabei eine Rolle spielen.",
+  "sections": [
+    {
+      "title": "Gut oder Dienstleistung?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein gekauftes Heft",
+          "answer": "Gut"
+        },
+        {
+          "prompt": "Eine Veloreparatur in der Werkstatt",
+          "answer": "Dienstleistung"
+        },
+        {
+          "prompt": "Ein Brot",
+          "answer": "Gut"
+        },
+        {
+          "prompt": "Ein Haarschnitt",
+          "answer": "Dienstleistung"
+        }
+      ]
+    },
+    {
+      "title": "Plane ein erfundenes Budget.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du hast CHF 12. Ein Heft kostet CHF 4, ein Stift CHF 3. Wie viel bleibt nach dem Kauf beider Dinge?",
+          "answer": "CHF 5; 12 − 4 − 3 = 5.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Begründe eine Entscheidung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sollte man bei zwei Produkten nicht nur den tiefsten Kaufpreis vergleichen? Nenne zwei weitere Aspekte.",
+          "answer": "Zum Beispiel Haltbarkeit, Reparierbarkeit, Nutzen, Qualität, Umweltfolgen, Arbeitsbedingungen. Zwei passende Aspekte.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.5",
+    "scope": "Güter, Dienstleistungen und einfache begrenzte Budgets unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|5"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

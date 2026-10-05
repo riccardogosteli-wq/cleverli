@@ -1,0 +1,63 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "sonnensystem",
+  "goal": "Unser Sonnensystem hat acht Planeten: Merkur, Venus, Erde, Mars, Jupiter, Saturn, Uranus, Neptun, von der Sonne aus geordnet. Die Sonne ist ein Stern. Der Mond ist ein natürlicher Begleiter der Erde. Pluto zählt als Zwergplanet.",
+  "sections": [
+    {
+      "title": "Nutze die Reihenfolge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welcher Planet ist der Sonne am nächsten?",
+          "answer": "Merkur"
+        },
+        {
+          "prompt": "Welcher Planet steht an dritter Stelle?",
+          "answer": "Erde"
+        },
+        {
+          "prompt": "Welcher Planet liegt zwischen Mars und Saturn?",
+          "answer": "Jupiter"
+        },
+        {
+          "prompt": "Welcher Planet steht an achter Stelle?",
+          "answer": "Neptun"
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Himmelskörper.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Sonne: Stern oder Planet?",
+          "answer": "Stern"
+        },
+        {
+          "prompt": "Pluto: Planet der Achterliste oder Zwergplanet?",
+          "answer": "Zwergplanet"
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe die Bewegungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welchen Himmelskörper umkreist die Erde? Welchen umkreist der Mond? Beschreibe es oder zeichne ein einfaches Modell.",
+          "answer": "Die Erde umkreist die Sonne; der Mond umkreist die Erde. Vereinfachtes Modell genügt, Grössen und Abstände nicht massstäblich.",
+          "wide": true,
+          "drawingHeight": 42
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.5",
+    "scope": "Planetenreihenfolge und Sonne, Planet, Mond sowie Zwergplanet unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|5"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

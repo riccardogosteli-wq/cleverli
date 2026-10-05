@@ -1,0 +1,51 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "bevoelkerung-5",
+  "goal": "Siedlungen sind Orte, an denen Menschen wohnen und arbeiten. Wasser, Verkehrswege, Arbeitsplätze und geeignete Flächen können ihre Entwicklung beeinflussen. Wachstum braucht Planung, etwa für Wohnungen, Schulen, Natur und Verkehr.",
+  "sections": [
+    {
+      "title": "Erkenne Standortfaktoren.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei Gründe, weshalb Menschen sich an einem Ort ansiedeln könnten.",
+          "answer": "Zum Beispiel Wasser, Arbeit, gute Verkehrsverbindungen, Familie, geeignete Flächen. Zwei passende Gründe.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Denke über Wachstum nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Gemeinde bekommt viele neue Familien. Welche zusätzliche Einrichtung könnte benötigt werden? Begründe.",
+          "answer": "Zum Beispiel Schule, Betreuung, Spielplätze oder Gesundheitsangebote; Begründung mit veränderten Bedürfnissen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Wäge Interessen ab.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Auf einer Wiese sollen Wohnungen gebaut werden. Nenne ein mögliches Interesse für den Bau und eines am Erhalt der Wiese.",
+          "answer": "Wohnraum schaffen einerseits; Lebensraum, Erholung oder Landwirtschaft erhalten andererseits. Beide Interessen sachlich darstellen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.3",
+    "scope": "Siedlungsentwicklung mit Standortfaktoren und unterschiedlichen Interessen verbinden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

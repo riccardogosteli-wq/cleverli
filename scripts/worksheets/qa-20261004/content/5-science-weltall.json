@@ -1,0 +1,55 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "weltall",
+  "goal": "Medien vermitteln Informationen und Sichtweisen. Ein Bericht soll informieren, Werbung oft überzeugen. Bilder können beschnitten, bearbeitet oder ohne passenden Zusammenhang gezeigt werden. Prüfe Herkunft, Datum und Belege vor dem Teilen.",
+  "sections": [
+    {
+      "title": "Unterscheide Absichten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Kaufe jetzt unser neues Spiel!» Was ist die naheliegende Absicht?",
+          "answer": "Zum Kauf bewegen / werben.",
+          "wide": true
+        },
+        {
+          "prompt": "«Die Bibliothek öffnet am Montag um 9 Uhr.» Welche Information wird genannt?",
+          "answer": "Öffnungstag und Öffnungszeit.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe ein Bild.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein altes Foto wird als Aufnahme von heute geteilt. Warum kann das täuschen, obwohl das Foto selbst nicht verändert wurde?",
+          "answer": "Der zeitliche Zusammenhang ist falsch; das Bild belegt nicht das heutige Ereignis.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Handle sorgfältig.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei Schritte, um eine überraschende Nachricht zu prüfen, bevor du sie weiterleitest.",
+          "answer": "Quelle und Datum prüfen, Originalbericht/Belege suchen, unabhängige verlässliche Quellen vergleichen, bei Erwachsenen nachfragen. Zwei passende Schritte.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "MI.1.2",
+    "scope": "Medienabsichten und den Einfluss von Kontext auf Informationen erkennen. Fachübergreifender Bezug Medien und Informatik innerhalb des Cleverli-NMG-Katalogs.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|10|0|1|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

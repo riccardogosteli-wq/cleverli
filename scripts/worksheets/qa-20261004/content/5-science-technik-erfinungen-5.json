@@ -1,0 +1,56 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "technik-erfinungen-5",
+  "goal": "Technische Lösungen entstehen oft durch viele kleine Verbesserungen und die Arbeit verschiedener Menschen. Eine Lösung muss Anforderungen erfüllen, etwa sicher, haltbar und gut bedienbar sein. Ein Modell hilft, Ideen zu prüfen.",
+  "sections": [
+    {
+      "title": "Erkenne eine Anforderung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Trinkflasche soll in der Schultasche nichts auslaufen lassen. Welche Eigenschaft ist wichtig?",
+          "answer": "Ein dicht schliessender Verschluss / Dichtheit.",
+          "wide": true
+        },
+        {
+          "prompt": "Eine Taschenlampe soll draussen lange genutzt werden. Nenne eine passende Anforderung.",
+          "answer": "Zum Beispiel lange Betriebsdauer, Robustheit oder geeigneter Wetterschutz.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Plane eine Prüfung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie könnte man die Dichtheit einer Flasche sicher prüfen, ohne Bücher oder Elektronik zu gefährden?",
+          "answer": "Mit wenig Wasser über einem Waschbecken/einer Wanne vorsichtig kippen und beobachten; Erwachsene begleiten bei Bedarf.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Verbessere begründet.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist «sieht schön aus» allein kein ausreichender Nachweis für eine gute technische Lösung?",
+          "answer": "Aussehen zeigt nicht, ob Funktion, Sicherheit, Haltbarkeit und Bedienbarkeit erfüllt sind. Passende Prüfungen sind nötig.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.5.1",
+    "scope": "Technische Anforderungen, sichere Modelltests und begründete Verbesserungen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

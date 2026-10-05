@@ -1,0 +1,66 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "chemie-einfuehrung-5",
+  "goal": "Stoffeigenschaften helfen beim Unterscheiden: etwa Löslichkeit und Magnetisierbarkeit. Zucker kann sich in Wasser lösen; Sand löst sich darin nicht in gleicher Weise. Unbekannte Stoffe werden nicht probiert, gerochen oder gemischt. Hier wird nur geplant.",
+  "sections": [
+    {
+      "title": "Nutze Stoffeigenschaften.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zucker in Wasser: löslich oder nicht löslich?",
+          "answer": "Löslich",
+          "wide": true
+        },
+        {
+          "prompt": "Sand in Wasser: bildet er wie Zucker eine klare Lösung?",
+          "answer": "Nein",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Wähle ein Trennverfahren.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie könnte man Sand aus Wasser trennen: mit einem passenden Filter oder mit einem Magneten?",
+          "answer": "Mit einem passenden Filter.",
+          "wide": true
+        },
+        {
+          "prompt": "Entfernt ein gewöhnlicher Papierfilter gelösten Zucker vollständig aus Zuckerwasser? Begründe.",
+          "answer": "Nein. Gelöster Zucker geht mit dem Wasser durch einen gewöhnlichen Papierfilter.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Plane fair.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du vergleichst, wie schnell Zucker sich in kaltem und warmem Wasser löst. Welche zwei anderen Bedingungen sollen gleich bleiben? Kein Heisswasserversuch ohne Fachbegleitung.",
+          "answer": "Zum Beispiel Zuckermenge, Wassermenge, Korngrösse, Gefäss und Rührweise. Zwei passende Bedingungen nennen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.3",
+    "scope": "Stoffeigenschaften und Grenzen einfacher Trennverfahren untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3",
+    "additionalReferences": [
+      {
+        "code": "NMG.3.4",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|4"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

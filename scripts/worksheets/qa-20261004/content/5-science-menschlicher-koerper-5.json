@@ -1,0 +1,59 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "menschlicher-koerper-5",
+  "goal": "Das Herz pumpt Blut. In der Lunge gelangt Sauerstoff aus der eingeatmeten Luft ins Blut. Das Blut transportiert unter anderem Sauerstoff und Nährstoffe. Bei Bewegung arbeiten diese Systeme zusammen. Körper sind verschieden.",
+  "sections": [
+    {
+      "title": "Ordne die Aufgabe zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Pumpt Blut.",
+          "answer": "Herz"
+        },
+        {
+          "prompt": "Ermöglicht den Austausch von Sauerstoff und Kohlendioxid mit der Luft.",
+          "answer": "Lunge",
+          "wide": true
+        },
+        {
+          "prompt": "Transportiert Sauerstoff durch den Körper.",
+          "answer": "Blut",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre das Zusammenspiel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum werden Atmung und Herzschlag bei körperlicher Anstrengung häufig schneller?",
+          "answer": "Die arbeitenden Muskeln benötigen mehr Sauerstoff und Energie; Atmung und Kreislauf passen den Transport an.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Wähle ein unterstützendes Verhalten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Kind fühlt sich beim Sport unwohl. Nenne zwei sichere Schritte, ohne eine Diagnose zu stellen.",
+          "answer": "Anstrengung beenden/Pause machen und Lehrperson oder andere verantwortliche Erwachsene informieren. Bei ernsten Beschwerden sofort Hilfe holen; nicht zum Weitermachen drängen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.1.4",
+    "scope": "Atmung und Blutkreislauf als zusammenwirkende Körpersysteme beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

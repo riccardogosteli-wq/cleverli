@@ -1,0 +1,55 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "geschichte-zeit",
+  "goal": "Konflikte entstehen, wenn Wünsche oder Interessen aufeinandertreffen. Fair lösen heisst: zuhören, Bedürfnisse benennen, ohne Abwertung sprechen und Vereinbarungen prüfen. Drohungen und Gewalt sind keine faire Lösung. Bei Gefahr hilft eine verantwortliche erwachsene Person.",
+  "sections": [
+    {
+      "title": "Unterscheide Bedürfnis und Angriff.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Ich brauche beim Lesen Ruhe.» Bedürfnis oder persönliche Abwertung?",
+          "answer": "Bedürfnis",
+          "wide": true
+        },
+        {
+          "prompt": "«Du bist immer dumm!» Bedürfnis oder persönliche Abwertung?",
+          "answer": "Persönliche Abwertung",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Formuliere respektvoll.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwei Kinder wollen zur selben Zeit den einzigen Ball. Schlage eine faire Vereinbarung vor.",
+          "answer": "Zum Beispiel gemeinsam spielen, sich zeitlich abwechseln oder eine andere passende faire Regel vereinbaren.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe die Vereinbarung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Woran könnt ihr nach einem Tag erkennen, ob eure Vereinbarung funktioniert? Nenne zwei Prüffragen.",
+          "answer": "Zum Beispiel: Kamen beide zum Zug? Wurde die Regel eingehalten? Fühlen sich beide fair behandelt? Muss etwas angepasst werden?",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.11.3",
+    "scope": "Bedürfnisse, respektvolle Konfliktlösung und überprüfbare Vereinbarungen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|11|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,64 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "erde-klima-5",
+  "goal": "Tag und Nacht entstehen durch die Drehung der Erde. Jahreszeiten hängen mit der Neigung der Erdachse und dem Umlauf um die Sonne zusammen. Auf Nord- und Südhalbkugel sind die Jahreszeiten entgegengesetzt. Klima beschreibt langfristige Wetterverhältnisse.",
+  "sections": [
+    {
+      "title": "Ordne die Ursache zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Tag und Nacht entstehen vor allem durch die",
+          "answer": "Drehung der Erde.",
+          "wide": true
+        },
+        {
+          "prompt": "Sind die Jahreszeiten auf Nord- und Südhalbkugel gleichzeitig gleich?",
+          "answer": "Nein, sie sind entgegengesetzt.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Wetter und Klima.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Heute regnet es.» Wetter oder Klima?",
+          "answer": "Wetter"
+        },
+        {
+          "prompt": "«Im langjährigen Mittel sind die Winter hier mild.» Wetter oder Klima?",
+          "answer": "Klima",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum zeigt ein einzelner kalter Tag nicht, dass es keine langfristige Erwärmung gibt?",
+          "answer": "Ein einzelner Tag ist Wetter; für Klima betrachtet man viele Beobachtungen über lange Zeiträume und grössere Zusammenhänge.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.5",
+    "scope": "Erdbewegungen sowie Wetter und langfristiges Klima unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|5",
+    "additionalReferences": [
+      {
+        "code": "NMG.4.4",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

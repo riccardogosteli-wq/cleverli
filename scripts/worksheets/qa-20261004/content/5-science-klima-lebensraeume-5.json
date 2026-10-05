@@ -1,0 +1,60 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "klima-lebensraeume-5",
+  "goal": "Temperatur und Niederschlag prägen Lebensräume. Tropische Regenwälder sind meist ganzjährig warm und niederschlagsreich. Wüsten erhalten wenig Niederschlag; nicht alle sind heiss. Polargebiete sind kalt. Höhenlage und weitere Faktoren verändern lokale Bedingungen.",
+  "sections": [
+    {
+      "title": "Ordne die Beschreibung zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ganzjährig warm und meist sehr niederschlagsreich.",
+          "answer": "Tropischer Regenwald",
+          "wide": true
+        },
+        {
+          "prompt": "Sehr wenig Niederschlag.",
+          "answer": "Wüste",
+          "wide": true
+        },
+        {
+          "prompt": "Kalte Gebiete nahe den Polen.",
+          "answer": "Polargebiete",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Aussage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Alle Wüsten sind immer heiss.» Stimmt das laut Text?",
+          "answer": "Nein. Wüste bedeutet vor allem wenig Niederschlag; es gibt auch kalte Wüsten.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Erkläre eine Anpassung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum kann eine wasserspeichernde Pflanze in einem trockenen Lebensraum einen Vorteil haben?",
+          "answer": "Sie kann gespeichertes Wasser in Zeiten mit wenig Niederschlag nutzen. Andere Anpassungen können zusätzlich helfen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.2",
+    "scope": "Klimaeinflüsse auf Lebensräume und eine einfache Anpassung erklären.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

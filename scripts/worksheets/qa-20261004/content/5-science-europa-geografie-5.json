@@ -1,0 +1,59 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "europa-geografie-5",
+  "goal": "Europa umfasst unterschiedliche Landschaften: zum Beispiel Alpen, Ebenen und Küsten. Die Schweiz hat keinen Meereszugang. Frankreich, Deutschland, Italien, Österreich und Liechtenstein sind ihre direkten Nachbarn. Nutze für die Kartenaufgabe einen Atlas.",
+  "sections": [
+    {
+      "title": "Ordne geografisch zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welches im Text genannte Gebirge liegt teilweise in der Schweiz?",
+          "answer": "Alpen",
+          "wide": true
+        },
+        {
+          "prompt": "Hat die Schweiz eine Meeresküste?",
+          "answer": "Nein",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Lies eine Europakarte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welcher Staat liegt nördlich der Schweiz: Deutschland oder Italien?",
+          "answer": "Deutschland",
+          "wide": true
+        },
+        {
+          "prompt": "Welcher der fünf genannten Nachbarn ist flächenmässig am kleinsten?",
+          "answer": "Liechtenstein",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre eine Kartenwahl.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du suchst Gebirge und Höhen, nicht politische Grenzen. Welche Art Karte ist dafür geeigneter und welche Hilfe gibt die Legende?",
+          "answer": "Physische/topografische Karte. Die Legende erklärt Höhenfarben, Höhenlinien und andere Zeichen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.4",
+    "scope": "Landschaftsformen, Nachbarstaaten und geeignete Karteninformationen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

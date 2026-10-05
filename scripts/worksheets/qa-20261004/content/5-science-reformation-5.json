@@ -1,0 +1,61 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "reformation-5",
+  "goal": "Im 16. Jahrhundert entstanden in Europa Reformbewegungen im Christentum. Die Reformation führte zur Ausbildung verschiedener christlicher Konfessionen. Auch Gebiete der heutigen Schweiz waren betroffen. Religiöse und politische Konflikte veränderten das Zusammenleben.",
+  "sections": [
+    {
+      "title": "Ordne die Zeit ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welches Jahr gehört ins 16. Jahrhundert: 1450, 1550 oder 1650?",
+          "answer": "1550",
+          "wide": true
+        },
+        {
+          "prompt": "Betraf die Reformation nur ein einzelnes Dorf oder mehrere Gebiete Europas?",
+          "answer": "Mehrere Gebiete Europas.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe eine Veränderung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Veränderung im Christentum nennt der Text?",
+          "answer": "Die Ausbildung verschiedener christlicher Konfessionen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide früher und heute.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist es für friedliches Zusammenleben wichtig, unterschiedliche religiöse Überzeugungen und Menschen ohne Religion zu respektieren?",
+          "answer": "Menschen haben unterschiedliche Überzeugungen und gleiche Würde/Rechte. Respekt und Religionsfreiheit helfen, Diskriminierung und Konflikte zu vermeiden.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.3",
+    "scope": "Die Reformation zeitlich einordnen und religiöse Vielfalt respektvoll betrachten.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3",
+    "additionalReferences": [
+      {
+        "code": "NMG.12.5",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|12|0|5"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

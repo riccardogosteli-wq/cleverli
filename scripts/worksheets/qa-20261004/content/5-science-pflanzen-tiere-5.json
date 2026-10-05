@@ -1,0 +1,55 @@
+{
+  "grade": 5,
+  "subject": "science",
+  "sourceId": "pflanzen-tiere-5",
+  "goal": "Viele Blütenpflanzen werden durch Tiere bestäubt. Dabei gelangt Pollen auf die Narbe einer Blüte. Nach Befruchtung können Samen entstehen. Nicht alle Pflanzen werden durch Tiere bestäubt; manche nutzen den Wind.",
+  "sections": [
+    {
+      "title": "Benenne den Vorgang.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Pollen gelangt auf die Narbe einer Blüte.",
+          "answer": "Bestäubung",
+          "wide": true
+        },
+        {
+          "prompt": "Wer kann neben Tieren Pollen übertragen?",
+          "answer": "Der Wind",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre eine Beziehung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Biene sammelt Nektar und überträgt dabei Pollen. Was hat die Biene davon und was kann die Pflanze davon haben?",
+          "answer": "Die Biene erhält Nahrung; die Pflanze kann bestäubt werden und nach Befruchtung Samen bilden.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Aussage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Jede Pflanze braucht Bienen.» Warum ist die Aussage zu allgemein? Nenne einen anderen Weg der Bestäubung.",
+          "answer": "Nicht jede Pflanze wird von Bienen bestäubt; zum Beispiel Windbestäubung. Auch andere Tiere können bestäuben.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.3",
+    "scope": "Bestäubung und wechselseitige Beziehungen zwischen Pflanzen und Tieren beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
