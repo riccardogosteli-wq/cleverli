@@ -6281,19 +6281,19 @@
     "title": "Rechtschreibstrategien",
     "curriculum": {
       "code": "D.5.E.1",
-      "scope": "Passende Rechtschreibstrategien wählen und ihre Grenzen erkennen. Grossschreibung substantivierter Verben als freiwillige gestützte Zyklus3Vorbereitung.",
+      "scope": "Passende Rechtschreibstrategien wählen und ihre Grenzen erkennen. Grossschreibung substantivierter Verben als freiwillige Vorbereitung auf Zyklus 3 mit Vorlage.",
       "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "revisions/20261004/pdfs/6/german/rechtschreibstrategien-arbeitsblatt.pdf",
-        "sha256": "66a53e472ad9de0a248834d3628870a7d118cb55b5899b09fc264cb8034a29ba",
+        "path": "revisions/20261004/v3/pdfs/6/german/rechtschreibstrategien-arbeitsblatt.pdf",
+        "sha256": "bba66e5f7c113cca31394044b5667fa317e14df5842895e357ca5b8e40356111",
         "bytes": 862043
       },
       "solution": {
-        "path": "revisions/20261004/pdfs/6/german/rechtschreibstrategien-loesungen.pdf",
-        "sha256": "db860393462e06e988135332aa61270f86be7f7a44363981bc75c3d74472f1b2",
-        "bytes": 904061
+        "path": "revisions/20261004/v3/pdfs/6/german/rechtschreibstrategien-loesungen.pdf",
+        "sha256": "e9f335df6804638f5957f0240e39e14331bebf9caa96f77f6660c81a460559c5",
+        "bytes": 904074
       }
     }
   },
@@ -6305,19 +6305,19 @@
     "title": "Wortarten — Überblick",
     "curriculum": {
       "code": "D.5.D.1",
-      "scope": "Nomen, Verben und Adjektive untersuchen. Pronomen/Partikeln und substantivierte Verben mit Vorlage als freiwillige Zyklus3Vorbereitung; keine vollständige Fünf-Gruppen-Bestimmung vorausgesetzt.",
+      "scope": "Nomen, Verben und Adjektive untersuchen. Pronomen/Partikeln und substantivierte Verben mit Vorlage als freiwillige Vorbereitung auf Zyklus 3; keine vollständige Fünf-Gruppen-Bestimmung vorausgesetzt.",
       "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "revisions/20261004/pdfs/6/german/wortarten-6-arbeitsblatt.pdf",
-        "sha256": "40d8da165008e033630a13753e61ec0e5d69e46084442cbfbf6353b8b9afa8c0",
+        "path": "revisions/20261004/v3/pdfs/6/german/wortarten-6-arbeitsblatt.pdf",
+        "sha256": "cffddf79d1707448012633fd45a2d0ec02799cff6c49263bdd810e087ebdbca0",
         "bytes": 865820
       },
       "solution": {
-        "path": "revisions/20261004/pdfs/6/german/wortarten-6-loesungen.pdf",
-        "sha256": "729db4b26587c460e8cbe488f5882fa3476e5862fc6030232be388f07f8fe14a",
-        "bytes": 908957
+        "path": "revisions/20261004/v3/pdfs/6/german/wortarten-6-loesungen.pdf",
+        "sha256": "0f6c0097cc2f082805eebb34eba7e8e030bccedc04b42b716640c2efda553c1e",
+        "bytes": 908961
       }
     }
   },
