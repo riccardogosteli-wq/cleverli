@@ -1,0 +1,73 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "zeitformen-4",
+  "goal": "Präsens: Ich spiele. Präteritum: Ich spielte. Perfekt: Ich habe gespielt. Alle drei Formen können in Texten vorkommen. Das Perfekt wird häufig mit haben oder sein und einem Partizip gebildet.",
+  "sections": [
+    {
+      "title": "Benenne die Zeitform.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Mia liest.",
+          "answer": "Präsens"
+        },
+        {
+          "prompt": "Mia las.",
+          "answer": "Präteritum"
+        },
+        {
+          "prompt": "Mia hat gelesen.",
+          "answer": "Perfekt"
+        },
+        {
+          "prompt": "Noa ist gegangen.",
+          "answer": "Perfekt"
+        }
+      ]
+    },
+    {
+      "title": "Setze ins Perfekt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ich spiele.",
+          "answer": "Ich habe gespielt.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Wir gehen.",
+          "answer": "Wir sind gegangen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Setze ins Präteritum.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Er macht ein Bild.",
+          "answer": "Er machte ein Bild.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Sie geht nach Hause.",
+          "answer": "Sie ging nach Hause.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Präsens, Präteritum und Perfekt an häufigen Verben erkennen und bilden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,75 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "wortarten-4",
+  "goal": "Wir untersuchen Nomen, Verben und Adjektive. Ein Nomen kann mit Artikel stehen, ein Verb seine Personalform ändern. Ein Adjektiv kann beschreiben und oft gesteigert werden. Entscheidend ist auch die Verwendung im Satz.",
+  "sections": [
+    {
+      "title": "Bestimme die Wortart.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "der Garten",
+          "answer": "Nomen"
+        },
+        {
+          "prompt": "springen",
+          "answer": "Verb"
+        },
+        {
+          "prompt": "ruhig",
+          "answer": "Adjektiv"
+        },
+        {
+          "prompt": "das Glück",
+          "answer": "Nomen"
+        },
+        {
+          "prompt": "denken",
+          "answer": "Verb"
+        },
+        {
+          "prompt": "hell",
+          "answer": "Adjektiv"
+        }
+      ]
+    },
+    {
+      "title": "Untersuche den Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Der freundliche Hund rennt.» Notiere Nomen mit Artikel, Adjektiv und Verb.",
+          "answer": "der Hund; freundliche (Grundform freundlich); rennt",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Begründe mit einer Probe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeige mit zwei Personalformen, dass «spielen» ein Verb ist.",
+          "answer": "Zum Beispiel: ich spiele, du spielst.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Steigere «klein». Welche Wortart ist es?",
+          "answer": "klein, kleiner, am kleinsten; Adjektiv.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Nomen, Verben und Adjektive mit einfachen Proben unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

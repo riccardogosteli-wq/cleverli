@@ -1,0 +1,64 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "leseverstaendnis-4",
+  "goal": "Die Klasse plant einen Büchertausch am Freitag. Jedes Kind darf ein gut erhaltenes Buch mitbringen, muss aber nicht. Auch wer keines mitbringt, darf im Lesebereich schmökern. Mia beschriftet die Tische nach Themen. Noa gestaltet ein Plakat mit Ort und Zeit. Als am Donnerstag Regen angekündigt wird, verlegt die Klasse den Anlass vom Schulhof in die Bibliothek. Noa ändert deshalb den Ort auf dem Plakat. Die Uhrzeit bleibt gleich.",
+  "sections": [
+    {
+      "title": "Entnimm genaue Informationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "An welchem Tag findet der Büchertausch statt?",
+          "answer": "Am Freitag",
+          "wide": true
+        },
+        {
+          "prompt": "Wer gestaltet das Plakat?",
+          "answer": "Noa",
+          "wide": true
+        },
+        {
+          "prompt": "Warum wird der Ort geändert?",
+          "answer": "Weil Regen angekündigt wird.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe Aussagen am Text.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Darf ein Kind ohne mitgebrachtes Buch im Lesebereich lesen?",
+          "answer": "Ja",
+          "wide": true
+        },
+        {
+          "prompt": "Ändert sich auch die Uhrzeit?",
+          "answer": "Nein",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ziehe eine begründete Schlussfolgerung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist es wichtig, den neuen Ort auf dem Plakat einzutragen?",
+          "answer": "Damit Besucherinnen und Besucher den richtigen Ort finden und nicht zum Schulhof gehen. Sinngemässe Begründung.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.C.1",
+    "scope": "Informationen, Ursache und Folge in einem Sachzusammenhang aus einem Erzähltext entnehmen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

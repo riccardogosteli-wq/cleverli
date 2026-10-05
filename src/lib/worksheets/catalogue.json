@@ -3196,20 +3196,20 @@
     "topicId": "satzglieder",
     "title": "Satzglieder",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.A.1",
       "scope": "Satzglieder mit Fragen und Umstellprobe untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/satzglieder-arbeitsblatt.pdf",
-        "sha256": "c4a2288d3b3ab86e80efbc54698699e18fc84c3c2b4a40f82a7dc4ea74a1aa28",
-        "bytes": 858722
+        "path": "revisions/20261004/pdfs/4/german/satzglieder-arbeitsblatt.pdf",
+        "sha256": "65d9b2ecf2d43996c771468a7883440f304b08c1dfe9d6d605591c6b7c2692a7",
+        "bytes": 858427
       },
       "solution": {
-        "path": "pdfs/4/german/satzglieder-loesungen.pdf",
-        "sha256": "9eb2988e663981323f45506c2cb7a7cf55b9d403f4f8f19ebe605d1b1b98637a",
-        "bytes": 887358
+        "path": "revisions/20261004/pdfs/4/german/satzglieder-loesungen.pdf",
+        "sha256": "2bcb19f655b0547f513ee3b70fd5070dd66e898b1ae09611552bfbcb4b6da5a8",
+        "bytes": 886692
       }
     }
   },
@@ -3220,20 +3220,20 @@
     "topicId": "zeitformen-4",
     "title": "Zeitformen",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Präsens, Präteritum und Perfekt an häufigen Verben erkennen und bilden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/zeitformen-4-arbeitsblatt.pdf",
-        "sha256": "c97a5f92c8fe36da6cdb7ba8a374aeebb3519597f1d3381a04c7ded06fce0ef5",
-        "bytes": 852327
+        "path": "revisions/20261004/pdfs/4/german/zeitformen-4-arbeitsblatt.pdf",
+        "sha256": "ee5d083501d18b6cc90924d05a2d0108797c00393d48e361a50bb0bb384515d4",
+        "bytes": 852030
       },
       "solution": {
-        "path": "pdfs/4/german/zeitformen-4-loesungen.pdf",
-        "sha256": "3c554ff2613f611b4e107ce5e60d78dbee95e2097e3c31844507eef32074e58b",
-        "bytes": 878920
+        "path": "revisions/20261004/pdfs/4/german/zeitformen-4-loesungen.pdf",
+        "sha256": "6aa811e3bce55d2a173258096b67ee3b9b18dfc28bd9533d5f68a7a28981b5d9",
+        "bytes": 878251
       }
     }
   },
@@ -3244,20 +3244,20 @@
     "topicId": "rechtschreibung-4",
     "title": "Rechtschreibung",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.E.1",
       "scope": "Rechtschreibstrategien und Grossschreibung in einem kurzen Satz anwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/rechtschreibung-4-arbeitsblatt.pdf",
-        "sha256": "7ecead7389a39a660ea3c436e7e941ab0f80ec5161691ec5143cc052d202b5cf",
-        "bytes": 860032
+        "path": "revisions/20261004/pdfs/4/german/rechtschreibung-4-arbeitsblatt.pdf",
+        "sha256": "db7c395760fb3cc58fa7da9903fce9c48ee6c7c5b616dc91473e9c8738424610",
+        "bytes": 861183
       },
       "solution": {
-        "path": "pdfs/4/german/rechtschreibung-4-loesungen.pdf",
-        "sha256": "cb9831ea096c4d9160c3a8491f3d42bc818583af588a1f868f52c0793d73e532",
-        "bytes": 885865
+        "path": "revisions/20261004/pdfs/4/german/rechtschreibung-4-loesungen.pdf",
+        "sha256": "66b652ae9e3bebfcd1927da2dd2f67cd61c0df93f856ca8941f0d555eae422c5",
+        "bytes": 903209
       }
     }
   },
@@ -3268,20 +3268,20 @@
     "topicId": "wortarten-4",
     "title": "Wortarten",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Nomen, Verben und Adjektive mit einfachen Proben unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/wortarten-4-arbeitsblatt.pdf",
-        "sha256": "805d30bc4c485c4aaef3b382211cf2c2b37cfef3b697ccfd7339c53f345765ce",
-        "bytes": 858811
+        "path": "revisions/20261004/pdfs/4/german/wortarten-4-arbeitsblatt.pdf",
+        "sha256": "442b17cdd68279dcef0563f8f1993d222fac53d5f9009442a8c03c0a976fa54b",
+        "bytes": 858515
       },
       "solution": {
-        "path": "pdfs/4/german/wortarten-4-loesungen.pdf",
-        "sha256": "36bce347f8a3205c7e7d96653f5fd0f01ae23eb47c69bda817ef148052f888b3",
-        "bytes": 886569
+        "path": "revisions/20261004/pdfs/4/german/wortarten-4-loesungen.pdf",
+        "sha256": "008572d51171b07cc7a187bd6198a6a793aa7675aa698ccf50c71d661e0cfeb9",
+        "bytes": 885896
       }
     }
   },
@@ -3292,20 +3292,20 @@
     "topicId": "pronomen-4",
     "title": "Pronomen",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Personalpronomen passend einsetzen und mehrdeutige Bezüge erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/pronomen-4-arbeitsblatt.pdf",
-        "sha256": "094d4d8800e6b298cff4206f9bbdc9de57a30385eb6b6ee461189fe831f03a29",
-        "bytes": 855403
+        "path": "revisions/20261004/pdfs/4/german/pronomen-4-arbeitsblatt.pdf",
+        "sha256": "1346a3044219165d1ad18b6491ec8b1e5a646ee483aa1f121c508532c6214c0f",
+        "bytes": 855400
       },
       "solution": {
-        "path": "pdfs/4/german/pronomen-4-loesungen.pdf",
-        "sha256": "a477f78ad44ba89fb231327046e61fab1aed90607eb5046e2de514669ef41668",
-        "bytes": 881633
+        "path": "revisions/20261004/pdfs/4/german/pronomen-4-loesungen.pdf",
+        "sha256": "0e32e03472b4ddcc746698b2bc40cc790136c4aa340d7fdbf1685b5205635ba7",
+        "bytes": 881267
       }
     }
   },
@@ -3316,20 +3316,20 @@
     "topicId": "leseverstaendnis-4",
     "title": "Leseverständnis",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.C.1",
       "scope": "Informationen, Ursache und Folge in einem Sachzusammenhang aus einem Erzähltext entnehmen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/leseverstaendnis-4-arbeitsblatt.pdf",
-        "sha256": "51c9324c5c01a31ccb93a8ecbd4ccbfe3df6988e09445b7340454428e5f36577",
-        "bytes": 861006
+        "path": "revisions/20261004/pdfs/4/german/leseverstaendnis-4-arbeitsblatt.pdf",
+        "sha256": "3ddfd5da4ed6cd09f59acfd9ad02c4a982d81fbd97d5b4f5dc4f4a2c89ed7c11",
+        "bytes": 860705
       },
       "solution": {
-        "path": "pdfs/4/german/leseverstaendnis-4-loesungen.pdf",
-        "sha256": "639c7e7bab645e02cc4400cbac04451213b5b75c1eee9a8c0d129806af95f992",
-        "bytes": 888547
+        "path": "revisions/20261004/pdfs/4/german/leseverstaendnis-4-loesungen.pdf",
+        "sha256": "c8d7fa25ffc35ec3df8114bf094a226a3da1a0ec8e8ef418f69b191a800e0776",
+        "bytes": 888181
       }
     }
   },
@@ -3340,20 +3340,20 @@
     "topicId": "interpunktion-4",
     "title": "Interpunktion",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.E.1",
       "scope": "Schlusszeichen und Kommas in einfachen Aufzählungen setzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/interpunktion-4-arbeitsblatt.pdf",
-        "sha256": "6bf2e22e4e5726f034ff61cbe363880bcccbc1314c4a110e48be5068c5c09482",
-        "bytes": 857613
+        "path": "revisions/20261004/pdfs/4/german/interpunktion-4-arbeitsblatt.pdf",
+        "sha256": "7733988241b1a0b5c239ad7932fc3c5c6bf6fcb5a6d110eb6378fe69ea9d877f",
+        "bytes": 857331
       },
       "solution": {
-        "path": "pdfs/4/german/interpunktion-4-loesungen.pdf",
-        "sha256": "fdb42c9c3592f6f63ccb8a785c844d18dd0aa067f4993854af0369e70e4ca073",
-        "bytes": 886218
+        "path": "revisions/20261004/pdfs/4/german/interpunktion-4-loesungen.pdf",
+        "sha256": "f158f4bf32bda03f85e1bf4f8817f2c2fe4362390f020a86a2a7e84c865c6349",
+        "bytes": 885576
       }
     }
   },
@@ -3362,22 +3362,22 @@
     "grade": 4,
     "subject": "german",
     "topicId": "praepositionen-4",
-    "title": "Präpositionen",
+    "title": "Orte beschreiben",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Ortspräpositionen und passende häufige Artikelverbindungen in Beschreibungen verwenden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.5.A.1",
+      "scope": "Mit vorgegebenen Ortswörtern und Ersatzformen einfache Beschreibungen untersuchen (D.5.A.1b). Keine formale Bestimmung von Präpositionen oder vier Fällen erforderlich.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/praepositionen-4-arbeitsblatt.pdf",
-        "sha256": "0b9726d2652dc23d86f31415497d25937b37e18ecace205070ce7dd82359b0d1",
-        "bytes": 856168
+        "path": "revisions/20261004/pdfs/4/german/praepositionen-4-arbeitsblatt.pdf",
+        "sha256": "988ae88fb3a2b75bd58b718e8dcea57bbfade529e02cd401f748c49a361835a9",
+        "bytes": 857416
       },
       "solution": {
-        "path": "pdfs/4/german/praepositionen-4-loesungen.pdf",
-        "sha256": "4c248601d24bcc25b30360d7c33e5e107b33fe2f74cf4a8bfa7d239fad1efa40",
-        "bytes": 881385
+        "path": "revisions/20261004/pdfs/4/german/praepositionen-4-loesungen.pdf",
+        "sha256": "1b039281c1f0770e3aed71c6057eff36142cdf131a3f8bbcf22ff00aa8771cba",
+        "bytes": 882777
       }
     }
   },
@@ -3388,20 +3388,20 @@
     "topicId": "wortstamm-4",
     "title": "Wortstamm & Wortfamilien",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Wortfamilien bilden und einfache Stammveränderungen begründen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/wortstamm-4-arbeitsblatt.pdf",
-        "sha256": "121c40dea20e346d11821fca16fa7a42d4e387c58d6257b78331e018d917da45",
-        "bytes": 860415
+        "path": "revisions/20261004/pdfs/4/german/wortstamm-4-arbeitsblatt.pdf",
+        "sha256": "d25fc6aac660b36b2870150c64cf9a8b1bc882940a1b7b7109fae46ed39ee6fa",
+        "bytes": 860119
       },
       "solution": {
-        "path": "pdfs/4/german/wortstamm-4-loesungen.pdf",
-        "sha256": "a7f56afa0eaca5b4de9b89fe5cd47db692be67ae6198310b492e9e7b805f0e23",
-        "bytes": 888584
+        "path": "revisions/20261004/pdfs/4/german/wortstamm-4-loesungen.pdf",
+        "sha256": "654c050fa237d9b792b040e8b029a934f57100486b5bcb885e07d232e2fa2b71",
+        "bytes": 887922
       }
     }
   },
@@ -3412,20 +3412,20 @@
     "topicId": "hoerverstehen-4",
     "title": "Hörtexte erschliessen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.B.1",
       "scope": "Wichtige Angaben und begründete Handlungen aus einem zweimal vorgelesenen Text erschliessen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/german/hoerverstehen-4-arbeitsblatt.pdf",
-        "sha256": "6814932ce322e4702a205a1847e76d8a3ca042e46942c843779aa98c196e8d5a",
-        "bytes": 854260
+        "path": "revisions/20261004/pdfs/4/german/hoerverstehen-4-arbeitsblatt.pdf",
+        "sha256": "8438aa38c4674c388551b9f41e83f5eed91e5b0e0b867631cd91e1ee54ba551f",
+        "bytes": 853953
       },
       "solution": {
-        "path": "pdfs/4/german/hoerverstehen-4-loesungen.pdf",
-        "sha256": "1653e19a9edf139a55850420af936e699ef3303e2362efd1bf1542956141f23e",
-        "bytes": 887368
+        "path": "revisions/20261004/pdfs/4/german/hoerverstehen-4-loesungen.pdf",
+        "sha256": "6c7cb0ce2322ecc8a564b085d90670a971f9f70203a587c9ce9d510f4b247240",
+        "bytes": 886992
       }
     }
   },

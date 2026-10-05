@@ -1,0 +1,67 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "interpunktion-4",
+  "goal": "Sätze enden mit Punkt, Fragezeichen oder Ausrufezeichen. In einer einfachen Aufzählung stehen Kommas; vor dem letzten «und» normalerweise keines. Beispiel: Wir kaufen Äpfel, Birnen und Brot.",
+  "sections": [
+    {
+      "title": "Setze das passende Schlusszeichen ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wo liegt mein Heft",
+          "answer": "?"
+        },
+        {
+          "prompt": "Mia liest ein Buch",
+          "answer": "."
+        },
+        {
+          "prompt": "Achtung, eine Stufe",
+          "answer": "!"
+        },
+        {
+          "prompt": "Kommst du heute mit",
+          "answer": "?"
+        }
+      ]
+    },
+    {
+      "title": "Setze die Kommas.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In der Tasche sind Stifte Hefte Bücher und ein Lineal.",
+          "answer": "In der Tasche sind Stifte, Hefte, Bücher und ein Lineal.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Wir spielen malen und singen.",
+          "answer": "Wir spielen, malen und singen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine eigene Aufzählung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen Satz mit drei Gegenständen. Verbinde die letzten beiden mit «und».",
+          "answer": "Beispiel: Auf dem Tisch liegen ein Buch, ein Heft und ein Stift. Drei Gegenstände, passendes Komma, und vor dem letzten Gegenstand.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.E.1",
+    "scope": "Schlusszeichen und Kommas in einfachen Aufzählungen setzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

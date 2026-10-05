@@ -1,0 +1,66 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "satzglieder",
+  "goal": "Satzglieder sind Wortgruppen, die du oft gemeinsam verschieben kannst: «Am Morgen / liest / Mia / ein Buch.» Mit Fragen findest du zum Beispiel: Wer liest? Mia. Was liest sie? Ein Buch.",
+  "sections": [
+    {
+      "title": "Frage nach den Wortgruppen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Der kleine Hund schläft im Garten.» Wer schläft?",
+          "answer": "Der kleine Hund",
+          "wide": true
+        },
+        {
+          "prompt": "Wo schläft der kleine Hund?",
+          "answer": "Im Garten",
+          "wide": true
+        },
+        {
+          "prompt": "«Am Abend liest Noa ein Buch.» Wann liest Noa?",
+          "answer": "Am Abend",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Stelle um.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Die Kinder spielen nach der Pause im Hof.» Beginne mit «Nach der Pause».",
+          "answer": "Nach der Pause spielen die Kinder im Hof.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "«Mia malt am Sonntag ein Bild.» Beginne mit «Ein Bild».",
+          "answer": "Ein Bild malt Mia am Sonntag.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Umstellung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Nach der Pause die Kinder spielen im Hof.» Verbessere den Aussagesatz. Welche Wortgruppe steht danach vor dem Verb?",
+          "answer": "Nach der Pause spielen die Kinder im Hof. Vor dem Verb: Nach der Pause.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.A.1",
+    "scope": "Satzglieder mit Fragen und Umstellprobe untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

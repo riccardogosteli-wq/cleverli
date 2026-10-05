@@ -1,0 +1,70 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "pronomen-4",
+  "goal": "Personalpronomen ersetzen Personen oder Nomen: der Hund → er, das Kind → es, die Kinder → sie. Im Satz kann sich die Form ändern: «Ich sehe den Hund.» → «Ich sehe ihn.»",
+  "sections": [
+    {
+      "title": "Schreibe den ganzen Satz mit einem Pronomen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Mia liest.» Ersetze Mia.",
+          "answer": "Sie liest.",
+          "wide": true
+        },
+        {
+          "prompt": "«Das Kind lacht.» Ersetze das Kind.",
+          "answer": "Es lacht.",
+          "wide": true
+        },
+        {
+          "prompt": "«Die Kinder spielen.» Ersetze die Kinder.",
+          "answer": "Sie spielen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Wähle die passende Form.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ich sehe den Hund. Ich sehe __ . (er / ihn)",
+          "answer": "ihn",
+          "wide": true
+        },
+        {
+          "prompt": "Ich helfe der Frau. Ich helfe __ . (sie / ihr)",
+          "answer": "ihr",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Mache die Aussage eindeutig.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Mia trifft Lea. Sie trägt einen roten Hut.» Warum ist der zweite Satz ohne weiteren Zusammenhang nicht eindeutig?",
+          "answer": "Sie kann Mia oder Lea meinen. Aus den zwei Sätzen allein ist nicht klar, wer den Hut trägt.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Schreibe den zweiten Satz so, dass sicher Lea gemeint ist.",
+          "answer": "Lea trägt einen roten Hut.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Personalpronomen passend einsetzen und mehrdeutige Bezüge erkennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

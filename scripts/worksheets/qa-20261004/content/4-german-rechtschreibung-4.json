@@ -1,0 +1,71 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "rechtschreibung-4",
+  "goal": "Nutze Strategien statt Raten: verlängern (Berg → Berge), verwandte Wörter suchen (Häuser → Haus) und im Wörterbuch nachschlagen. Nach einem kurzen betonten Vokal steht in vielen Wörtern ein doppelter Konsonant, etwa in «Sonne».",
+  "sections": [
+    {
+      "title": "Schreibe das Nomen richtig.",
+      "instruction": "Schreibe das gesuchte Nomen mit Artikel. Das verwandte Wort hilft dir.",
+      "items": [
+        {
+          "prompt": "der Wal(d/t). Hilfe: die Wälder",
+          "answer": "der Wald"
+        },
+        {
+          "prompt": "der Ta(g/k). Hilfe: die Tage",
+          "answer": "der Tag"
+        },
+        {
+          "prompt": "die Hä(n/nn)de. Hilfe: die Hand",
+          "answer": "die Hände"
+        },
+        {
+          "prompt": "die So(n/nn)e",
+          "answer": "die Sonne"
+        }
+      ]
+    },
+    {
+      "title": "Nenne ein hilfreiches verwandtes Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bäume",
+          "answer": "Baum"
+        },
+        {
+          "prompt": "kräftig",
+          "answer": "Kraft"
+        },
+        {
+          "prompt": "Häuser",
+          "answer": "Haus"
+        },
+        {
+          "prompt": "Länder",
+          "answer": "Land"
+        }
+      ]
+    },
+    {
+      "title": "Verbessere den Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«am sonntag gehen die kinder in den walt.» Schreibe richtig ab. Erkläre die Schreibung des letzten Wortes mit einer Verlängerung.",
+          "answer": "Am Sonntag gehen die Kinder in den Wald. Wald → Wälder, daher d.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.E.1",
+    "scope": "Rechtschreibstrategien und Grossschreibung in einem kurzen Satz anwenden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

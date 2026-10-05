@@ -1,0 +1,60 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "praepositionen-4",
+  "goal": "Wörter wie auf, unter, vor, hinter und neben beschreiben einen Ort. Lies die ganze Situation. Bei «Wo?» heisst es zum Beispiel «auf dem Tisch».",
+  "sections": [
+    {
+      "title": "Wähle passend zur Beschreibung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Der Ball liegt direkt unter der Tischplatte auf dem Boden: Er liegt __ dem Tisch. (unter / auf)",
+          "answer": "unter",
+          "wide": true
+        },
+        {
+          "prompt": "Die Tasse steht auf der Tischplatte: Sie steht __ dem Tisch. (auf / hinter)",
+          "answer": "auf",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die Form bei «Wo?».",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Der Ball liegt unter __ Stuhl. (dem / den)",
+          "answer": "dem",
+          "wide": true
+        },
+        {
+          "prompt": "Das Bild hängt an __ Wand. (der / die)",
+          "answer": "der",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichne ein Buch auf einem Tisch und einen Ball unter dem Tisch. Schreibe zwei passende Sätze.",
+          "answer": "Zeichnung passend zu: Das Buch liegt auf dem Tisch. Der Ball liegt unter dem Tisch. Sinngemässe klare Beschreibungen gelten.",
+          "wide": true,
+          "drawingHeight": 40
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.A.1",
+    "scope": "Mit vorgegebenen Ortswörtern und Ersatzformen einfache Beschreibungen untersuchen (D.5.A.1b). Keine formale Bestimmung von Präpositionen oder vier Fällen erforderlich.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026",
+  "worksheetTitle": "Orte beschreiben"
+}

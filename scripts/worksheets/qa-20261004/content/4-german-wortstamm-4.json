@@ -1,0 +1,72 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "wortstamm-4",
+  "goal": "Wörter einer Wortfamilie haben verwandte Bedeutungen und einen gemeinsamen Stamm. Beispiel: spielen, Spieler, Spielplatz. Der Stamm kann sich verändern: fahren, fährt. Nicht jedes ähnlich geschriebene Wort gehört zur selben Familie.",
+  "sections": [
+    {
+      "title": "Finde das fremde Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Spiel, spielen, Spieler, Spiegel",
+          "answer": "Spiegel",
+          "wide": true
+        },
+        {
+          "prompt": "lernen, Lernheft, Lerngruppe, Laterne",
+          "answer": "Laterne",
+          "wide": true
+        },
+        {
+          "prompt": "malen, Maler, Malbuch, Mahlzeit",
+          "answer": "Mahlzeit",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Notiere den Stamm.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "spielen, Spieler, Spielplatz",
+          "answer": "spiel"
+        },
+        {
+          "prompt": "lernen, Lernheft, Lerngruppe",
+          "answer": "lern"
+        },
+        {
+          "prompt": "fliegen, Flieger, fliegt",
+          "answer": "flieg"
+        }
+      ]
+    },
+    {
+      "title": "Begründe die Verwandtschaft.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum gehören «fahren» und «fährt» trotz verändertem Vokal zusammen?",
+          "answer": "Fährt ist eine Personalform von fahren. Die Bedeutung gehört zur gleichen Tätigkeit; a wird zu ä.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Schreibe ein weiteres Wort aus der Familie «spielen».",
+          "answer": "Zum Beispiel Spielzeug, Mitspieler, spielerisch. Passende verwandte Bildung gilt.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Wortfamilien bilden und einfache Stammveränderungen begründen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

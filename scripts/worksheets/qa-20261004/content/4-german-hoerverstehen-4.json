@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "german",
+  "sourceId": "hoerverstehen-4",
+  "goal": "Eine erwachsene Person liest dir einen Text zweimal vor. Lies zuerst die Fragen. Höre auf wichtige Angaben und Zusammenhänge. Notiere danach deine Antworten. Der Vorlesetext steht nur auf dem Lösungsblatt.",
+  "sections": [
+    {
+      "title": "Erinnere dich an Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was untersucht die Klasse?",
+          "answer": "Einen Bach auf dem Schulgelände.",
+          "wide": true
+        },
+        {
+          "prompt": "Was zeichnet Noa?",
+          "answer": "Die Pflanzen am Rand.",
+          "wide": true
+        },
+        {
+          "prompt": "Was entdeckt er im Wasser?",
+          "answer": "Eine leere Verpackung.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre das Verhalten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum holt Noa die Verpackung nicht selbst aus dem Wasser?",
+          "answer": "Er soll am sicheren Ufer bleiben; die Situation im Wasser ist nicht sicher. Er informiert deshalb die Lehrperson.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Verstehe den Schluss.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was macht die Klasse zurück im Schulzimmer zuerst?",
+          "answer": "Sie vergleicht die Beobachtungen der Gruppen.",
+          "wide": true
+        },
+        {
+          "prompt": "Welches gemeinsame Vorhaben beschliesst die Klasse?",
+          "answer": "Ein Plakat zum Schutz des Bachs gestalten.",
+          "wide": true
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.1.B.1",
+    "scope": "Wichtige Angaben und begründete Handlungen aus einem zweimal vorgelesenen Text erschliessen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
+  },
+  "teacherScript": "Vorlesen: Fragen zuerst gemeinsam lesen, dann den Text zweimal mit kurzer Pause vorlesen. Der Text bleibt für das Kind verdeckt. «Am Montag untersucht die Klasse einen Bach auf dem Schulgelände. Die Lehrperson erklärt zuerst die Regeln: Alle bleiben am sicheren Ufer und werfen nichts ins Wasser. Mia notiert, wie das Wasser aussieht. Noa zeichnet die Pflanzen am Rand. Er entdeckt eine leere Verpackung. Weil sie im Wasser liegt, holt er sie nicht selbst heraus, sondern informiert die Lehrperson. Zurück im Schulzimmer vergleichen die Gruppen ihre Beobachtungen. Sie beschliessen, ein Plakat zum Schutz des Bachs zu gestalten.»",
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
