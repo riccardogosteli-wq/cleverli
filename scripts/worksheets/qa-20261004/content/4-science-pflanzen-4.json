@@ -1,0 +1,61 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "pflanzen-4",
+  "goal": "Viele Samen brauchen zum Keimen Wasser, Sauerstoff und passende Wärme. Ob Licht zur Keimung nötig ist, hängt von der Pflanzenart ab. Für das weitere Wachstum brauchen grüne Pflanzen Licht sowie Wasser und Nährstoffe.",
+  "sections": [
+    {
+      "title": "Benenne die Pflanzenteile.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nimmt meist Wasser aus dem Boden auf.",
+          "answer": "Wurzel"
+        },
+        {
+          "prompt": "Trägt Blätter und verbindet Pflanzenteile.",
+          "answer": "Stängel / Stamm"
+        },
+        {
+          "prompt": "Hier kann die grüne Pflanze mit Licht Zucker bilden.",
+          "answer": "Blatt"
+        },
+        {
+          "prompt": "Daraus kann eine neue Pflanze keimen.",
+          "answer": "Samen"
+        }
+      ]
+    },
+    {
+      "title": "Plane einen fairen Vergleich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du vergleichst gleiche Samen mit und ohne Wasser. Nenne zwei andere Bedingungen, die gleich bleiben sollen.",
+          "answer": "Zum Beispiel Samenart/Anzahl, Temperatur, Gefäss, Unterlage und Beobachtungsdauer. Zwei passende kontrollierte Bedingungen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Beobachte statt zu raten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sollte man Beobachtungen mit Datum notieren und nicht nur nach einem Tag ein Urteil fällen?",
+          "answer": "Keimung und Wachstum brauchen Zeit und können unterschiedlich schnell sein. Datierte Beobachtungen machen Veränderungen und Bedingungen nachvollziehbar.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.3",
+    "scope": "Pflanzenteile, Keimbedingungen und faire Beobachtungsvergleiche beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

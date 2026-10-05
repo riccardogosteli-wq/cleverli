@@ -1,0 +1,60 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "oekologie-4",
+  "goal": "Lebewesen stehen in Beziehungen. Eine einfache Nahrungskette ist: Gras → Heuschrecke → Frosch. Der Pfeil bedeutet hier «wird gefressen von». Veränderungen können mehrere Arten betreffen.",
+  "sections": [
+    {
+      "title": "Lies die Nahrungskette.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was frisst in dieser Kette das Gras?",
+          "answer": "Die Heuschrecke",
+          "wide": true
+        },
+        {
+          "prompt": "Was frisst in dieser Kette die Heuschrecke?",
+          "answer": "Der Frosch",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke in Zusammenhängen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wenn viel Gras verschwindet, welche Art verliert in dieser Kette zuerst Nahrung?",
+          "answer": "Die Heuschrecke",
+          "wide": true
+        },
+        {
+          "prompt": "Warum könnte später auch der Frosch betroffen sein?",
+          "answer": "Es könnten weniger Heuschrecken als Nahrung vorhanden sein. In der Natur gibt es weitere Beziehungen und Nahrungsquellen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schlage Schutz vor.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum kann eine vielfältige Wiese mit verschiedenen Pflanzen für mehrere Tierarten nützlich sein?",
+          "answer": "Sie kann unterschiedliche Nahrung und Schutzplätze bieten; verschiedene Arten haben verschiedene Bedürfnisse.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.2",
+    "scope": "Einfache Nahrungsbeziehungen und mögliche Folgen von Veränderungen erklären.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

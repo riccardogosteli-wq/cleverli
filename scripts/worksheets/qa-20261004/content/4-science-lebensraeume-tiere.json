@@ -1,0 +1,61 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "lebensraeume-tiere",
+  "goal": "Ein Lebensraum bietet Tieren Nahrung, Schutz und passende Bedingungen. Verschiedene Arten brauchen Unterschiedliches. Ein Frosch nutzt im Lebenslauf Wasser und Land; deshalb können verbundene Lebensräume wichtig sein.",
+  "sections": [
+    {
+      "title": "Ordne passend zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Forelle: Bach oder trockene Wiese?",
+          "answer": "Bach"
+        },
+        {
+          "prompt": "Specht: Baumreicher Wald oder offenes Meer?",
+          "answer": "Baumreicher Wald"
+        },
+        {
+          "prompt": "Regenwurm: feuchter Boden oder trockener Asphalt?",
+          "answer": "Feuchter Boden"
+        },
+        {
+          "prompt": "Kaulquappe: Wasser oder Baumkrone?",
+          "answer": "Wasser"
+        }
+      ]
+    },
+    {
+      "title": "Erkläre eine Beziehung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum kann eine stark befahrene Strasse zwischen Wald und Teich für Frösche gefährlich sein?",
+          "answer": "Frösche können auf ihrer Wanderung überfahren werden; die Strasse trennt wichtige Lebensräume.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schütze ohne zu stören.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei Möglichkeiten, Tiere bei einem Besuch am Waldrand nicht zu stören.",
+          "answer": "Zum Beispiel Abstand halten, keinen Abfall liegen lassen, Nester nicht anfassen, ausgeschilderte Regeln beachten. Keine Tiere eigenmächtig umsiedeln.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.2.1",
+    "scope": "Ansprüche von Tieren an Lebensräume und Gefahren durch Unterbrechungen erkennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,62 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "migration-kulturen-4",
+  "goal": "Migration bedeutet, den Wohnort über grössere Entfernungen oder Grenzen zu verlegen. Menschen ziehen aus unterschiedlichen Gründen um: Familie, Arbeit, Ausbildung oder Schutz vor Gefahr. Niemand muss private Gründe erzählen, um respektvoll behandelt zu werden.",
+  "sections": [
+    {
+      "title": "Erkenne verschiedene Gründe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei Gründe für einen Umzug aus dem Text.",
+          "answer": "Zum Beispiel Familie, Arbeit, Ausbildung, Schutz vor Gefahr. Zwei verschiedene nennen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Behauptung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Alle Menschen ziehen aus demselben Grund in ein anderes Land.» Stimmt das? Begründe.",
+          "answer": "Nein. Die Gründe sind unterschiedlich und können zusammenkommen.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Muss ein neues Kind seine Familiengeschichte vor der Klasse erzählen?",
+          "answer": "Nein. Private Informationen und Grenzen werden respektiert.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Gestalte einen freundlichen Empfang.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei konkrete Hilfen für ein neues Kind, das die Unterrichtssprache erst lernt.",
+          "answer": "Zum Beispiel Dinge zeigen und benennen, Bilder nutzen, geduldig erklären, gemeinsam spielen, Unterstützung durch Lehrperson. Nicht wegen Sprache ausgrenzen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.7.3",
+    "scope": "Unterschiedliche Migrationsgründe und respektvolle Unterstützung neuer Mitschülerinnen und Mitschüler beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|3",
+    "additionalReferences": [
+      {
+        "code": "NMG.7.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

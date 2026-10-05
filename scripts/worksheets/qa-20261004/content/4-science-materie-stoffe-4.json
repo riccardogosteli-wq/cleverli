@@ -1,0 +1,65 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "materie-stoffe-4",
+  "goal": "Stoffe können fest, flüssig oder gasförmig sein. Wasser kann alle drei Zustände annehmen: Eis, flüssiges Wasser und unsichtbarer Wasserdampf. Beim Schmelzen bleibt es derselbe Stoff. Keine Versuche mit Hitze oder unbekannten Stoffen durchführen.",
+  "sections": [
+    {
+      "title": "Bestimme den Zustand.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Eiswürfel",
+          "answer": "Fest"
+        },
+        {
+          "prompt": "Wasser im Glas bei Raumtemperatur",
+          "answer": "Flüssig"
+        },
+        {
+          "prompt": "Unsichtbarer Wasserdampf in Luft",
+          "answer": "Gasförmig"
+        },
+        {
+          "prompt": "Ein Holzklotz",
+          "answer": "Fest"
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe Veränderungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was passiert beim Gefrieren von Wasser?",
+          "answer": "Flüssiges Wasser wird festes Eis.",
+          "wide": true
+        },
+        {
+          "prompt": "Was passiert beim Schmelzen von Eis?",
+          "answer": "Festes Eis wird flüssiges Wasser.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke genau nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beim Verdunsten ist das Wasser nicht mehr als Flüssigkeit zu sehen. Ist es einfach verschwunden? Begründe.",
+          "answer": "Nein. Es ist als gasförmiges Wasser in der Luft vorhanden; unsichtbar bedeutet nicht nicht vorhanden.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.3",
+    "scope": "Zustände von Stoffen und Zustandsänderungen am Beispiel Wasser unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

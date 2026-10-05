@@ -3436,20 +3436,26 @@
     "topicId": "koerper-gesundheit",
     "title": "Körper und Gesundheit",
     "curriculum": {
-      "code": "NMG.1",
+      "code": "NMG.1.4",
       "scope": "Aufgaben ausgewählter Organe und gesundheitsfördernde Alltagsgewohnheiten beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|4",
+      "additionalReferences": [
+        {
+          "code": "NMG.1.2",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|2"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/koerper-gesundheit-arbeitsblatt.pdf",
-        "sha256": "3be48dcad3ba15226f9d6d65e9177cf0e2af56fc0709579000c2bfb3672d5ee9",
-        "bytes": 865681
+        "path": "revisions/20261004/pdfs/4/science/koerper-gesundheit-arbeitsblatt.pdf",
+        "sha256": "31df9e4f414fc8a3cd0e6a194e1e51bd96e900e08ca1fd2658afc50b3c7f79c0",
+        "bytes": 865578
       },
       "solution": {
-        "path": "pdfs/4/science/koerper-gesundheit-loesungen.pdf",
-        "sha256": "26f2efdc7254f9d1dd8a3a2e80aaa0435c9bcaf9beefe1144aafb49923cb2c17",
-        "bytes": 892371
+        "path": "revisions/20261004/pdfs/4/science/koerper-gesundheit-loesungen.pdf",
+        "sha256": "f6409c05aea23024f66e6538374162ef2430cb1b9723929c124a8b738d407803",
+        "bytes": 893287
       }
     }
   },
@@ -3460,20 +3466,20 @@
     "topicId": "lebensraeume-tiere",
     "title": "Lebensräume der Tiere",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.1",
       "scope": "Ansprüche von Tieren an Lebensräume und Gefahren durch Unterbrechungen erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/lebensraeume-tiere-arbeitsblatt.pdf",
-        "sha256": "9eff0a793609b84ec2308e03d80d625b8b2b3ef46b59fa3f87b433dd053e484e",
-        "bytes": 862990
+        "path": "revisions/20261004/pdfs/4/science/lebensraeume-tiere-arbeitsblatt.pdf",
+        "sha256": "d4f00108b983296c0174f87d38d0afe0e9da026a53994dd8fd0512241e756092",
+        "bytes": 862682
       },
       "solution": {
-        "path": "pdfs/4/science/lebensraeume-tiere-loesungen.pdf",
-        "sha256": "fc6073a7cb537186ccefb3547f741b78eb4fca60509a125e2b91bb60f876e0e4",
-        "bytes": 889394
+        "path": "revisions/20261004/pdfs/4/science/lebensraeume-tiere-loesungen.pdf",
+        "sha256": "b878a2b77c75309169991102a38489cf140ad0513d080270bc69f92a717c13de",
+        "bytes": 889000
       }
     }
   },
@@ -3484,20 +3490,20 @@
     "topicId": "wetter-klima",
     "title": "Wetter und Klima",
     "curriculum": {
-      "code": "NMG.4",
-      "scope": "Aktuelles Wetter von langfristigem Klima unterscheiden und Messbedingungen vergleichen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "code": "NMG.4.4",
+      "scope": "Wetterangaben und Temperaturmessungen verstehen (NMG.4.4.1d/e). Wetter und Klima als vereinfachte Begriffsorientierung unterscheiden, ohne formale Klimatologie.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/wetter-klima-arbeitsblatt.pdf",
-        "sha256": "bf880fb0d62971ad000e56a09b244cd75fe3e58fe3614ef4298cfc0e1f630cb2",
-        "bytes": 865178
+        "path": "revisions/20261004/pdfs/4/science/wetter-klima-arbeitsblatt.pdf",
+        "sha256": "75ab29cf41874a1542493daf0c27978f6d157470eccf6915ec309842d8406c60",
+        "bytes": 865278
       },
       "solution": {
-        "path": "pdfs/4/science/wetter-klima-loesungen.pdf",
-        "sha256": "8aa9b9172d39e7fab970625a0c036cd6345538186c89e6de1f2833809108397b",
-        "bytes": 892728
+        "path": "revisions/20261004/pdfs/4/science/wetter-klima-loesungen.pdf",
+        "sha256": "7cefdf6622fd582a848f579cf93b46f6f2be1e35894476630615a111fb5ebf4a",
+        "bytes": 893369
       }
     }
   },
@@ -3508,20 +3514,20 @@
     "topicId": "pflanzen-4",
     "title": "Pflanzen & Wachstum",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.3",
       "scope": "Pflanzenteile, Keimbedingungen und faire Beobachtungsvergleiche beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/pflanzen-4-arbeitsblatt.pdf",
-        "sha256": "2a9d402fc718b9f09cfae4e772aad061821e11855a59b41407702b7f0042e0b1",
-        "bytes": 861575
+        "path": "revisions/20261004/pdfs/4/science/pflanzen-4-arbeitsblatt.pdf",
+        "sha256": "d7ec4646ea8e42f1627761baa0c2007733753ec97e4429e6426dd7ae6bb1b779",
+        "bytes": 861257
       },
       "solution": {
-        "path": "pdfs/4/science/pflanzen-4-loesungen.pdf",
-        "sha256": "05c1a29c1b6282b9a9952a61e597fb2d8316f497e42f75ca7b878471f58af02f",
-        "bytes": 888558
+        "path": "revisions/20261004/pdfs/4/science/pflanzen-4-loesungen.pdf",
+        "sha256": "be95196da8590df593a16c0601baa4b7c81a8407201046c4da4225c2c613beff",
+        "bytes": 888493
       }
     }
   },
@@ -3532,20 +3538,20 @@
     "topicId": "materie-stoffe-4",
     "title": "Materie & Stoffe",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.3",
       "scope": "Zustände von Stoffen und Zustandsänderungen am Beispiel Wasser unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/materie-stoffe-4-arbeitsblatt.pdf",
-        "sha256": "3808fc005b3c49f26f351b160770a4e004908e9fd454b57360dc9545a68b332c",
-        "bytes": 860103
+        "path": "revisions/20261004/pdfs/4/science/materie-stoffe-4-arbeitsblatt.pdf",
+        "sha256": "a005b36e7d4563ca30f4d350269654dff9ca62ab564cef17780c584df44e86c0",
+        "bytes": 859795
       },
       "solution": {
-        "path": "pdfs/4/science/materie-stoffe-4-loesungen.pdf",
-        "sha256": "0543ffaf0f42120f27540020ebba9dcea356e6d8f1c59398143fb9bed2810874",
-        "bytes": 886285
+        "path": "revisions/20261004/pdfs/4/science/materie-stoffe-4-loesungen.pdf",
+        "sha256": "fc5efe2cd4c0c667f36f1c920368ec32dd5d2375eebc6d39ebee85ae242fb83f",
+        "bytes": 885858
       }
     }
   },
@@ -3556,20 +3562,26 @@
     "topicId": "kraefte-energie-4",
     "title": "Kräfte & Energie",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.1",
       "scope": "Kraftwirkungen, Reibung und faire Vergleiche an Spielzeugbewegungen erklären.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|1",
+      "additionalReferences": [
+        {
+          "code": "NMG.3.2",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|2"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/kraefte-energie-4-arbeitsblatt.pdf",
-        "sha256": "df761931ee3044db77306b3f99f373b02c229687783c7cb724cccc7fa61d100e",
-        "bytes": 861693
+        "path": "revisions/20261004/pdfs/4/science/kraefte-energie-4-arbeitsblatt.pdf",
+        "sha256": "42bc11ce18f6a7f0dced23e9dfb3ad5e770bf4cf4fd374c901f7d9f101fe2da4",
+        "bytes": 861377
       },
       "solution": {
-        "path": "pdfs/4/science/kraefte-energie-4-loesungen.pdf",
-        "sha256": "eb65bd40e1c1d113fb3024dc95da811072f6dd63ace1421c651af01a3c63b54f",
-        "bytes": 888591
+        "path": "revisions/20261004/pdfs/4/science/kraefte-energie-4-loesungen.pdf",
+        "sha256": "65a42d53a28f6e36c80b81dc084e25c214220c2131952c1be27b1754e5f89cd3",
+        "bytes": 889202
       }
     }
   },
@@ -3580,20 +3592,20 @@
     "topicId": "technik-4",
     "title": "Technik im Alltag",
     "curriculum": {
-      "code": "NMG.5",
+      "code": "NMG.5.1",
       "scope": "Technische Funktionen und eine einfache Anforderung an eine Lösung beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/technik-4-arbeitsblatt.pdf",
-        "sha256": "e9d658ba083a688cf55d953732a35286c13101f27113cc161844a25e79af6f1d",
-        "bytes": 863396
+        "path": "revisions/20261004/pdfs/4/science/technik-4-arbeitsblatt.pdf",
+        "sha256": "bfa6e71956796d43822d0d46120a8148b2306306b30664c8f471a133269bda02",
+        "bytes": 863059
       },
       "solution": {
-        "path": "pdfs/4/science/technik-4-loesungen.pdf",
-        "sha256": "286336bb71d391724b254e160b7ea79d54ee3b60585707f30e36eb3d98e0eefb",
-        "bytes": 891514
+        "path": "revisions/20261004/pdfs/4/science/technik-4-loesungen.pdf",
+        "sha256": "b1a92c5571df7e0e5765699de63ef861622ee754dabffbc3d16bd2f4da735b0b",
+        "bytes": 890837
       }
     }
   },
@@ -3604,20 +3616,20 @@
     "topicId": "oekologie-4",
     "title": "Ökologie & Umwelt",
     "curriculum": {
-      "code": "NMG.2",
+      "code": "NMG.2.2",
       "scope": "Einfache Nahrungsbeziehungen und mögliche Folgen von Veränderungen erklären.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|2|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/oekologie-4-arbeitsblatt.pdf",
-        "sha256": "f650cc6747b6963a2fe9f4a39fdfd1d2d6f4916095302389a70dda55e22837ad",
-        "bytes": 862561
+        "path": "revisions/20261004/pdfs/4/science/oekologie-4-arbeitsblatt.pdf",
+        "sha256": "a03043186a517b82cd304e0dbba09594f51e72415f10fa7936e35c86a1f06862",
+        "bytes": 862245
       },
       "solution": {
-        "path": "pdfs/4/science/oekologie-4-loesungen.pdf",
-        "sha256": "cae95172e752371da6b5b7480db8dffb84c1eabb8adbfef64e44cbd865561f97",
-        "bytes": 888272
+        "path": "revisions/20261004/pdfs/4/science/oekologie-4-loesungen.pdf",
+        "sha256": "fab8f6d0b37706a27da19bde699693ecd25b90bb3ca6949294b637ecbb745753",
+        "bytes": 887889
       }
     }
   },
@@ -3628,20 +3640,20 @@
     "topicId": "koerper-sinne-4",
     "title": "Werte & Zusammenleben",
     "curriculum": {
-      "code": "NMG.11",
+      "code": "NMG.11.3",
       "scope": "Werte, faire Regeln und respektvolle Hilfe an erfundenen Alltagssituationen begründen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C11"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|11|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/koerper-sinne-4-arbeitsblatt.pdf",
-        "sha256": "bde60fa4d870642f2241f3a4bcab4ba30614368b484604086e6604ce2cc1e82c",
-        "bytes": 863599
+        "path": "revisions/20261004/pdfs/4/science/koerper-sinne-4-arbeitsblatt.pdf",
+        "sha256": "f84910cdf5e3319995075c2fc2a4778e0048f7713a9b8a358a39266b165610c9",
+        "bytes": 863292
       },
       "solution": {
-        "path": "pdfs/4/science/koerper-sinne-4-loesungen.pdf",
-        "sha256": "e9684d324876ce3374244be80c0e5415cc6b0ff0ba586981f74f595707c0b006",
-        "bytes": 891128
+        "path": "revisions/20261004/pdfs/4/science/koerper-sinne-4-loesungen.pdf",
+        "sha256": "7e7b9ff37f0eb9bab79b64c973681089d9a293c43abfbfd5e4fdd958e7dfb650",
+        "bytes": 891065
       }
     }
   },
@@ -3652,20 +3664,20 @@
     "topicId": "energie-stoffe",
     "title": "Produktion & Konsum",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.3",
       "scope": "Produktionsketten und Ressourcenverbrauch bei Konsumentscheidungen untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/energie-stoffe-arbeitsblatt.pdf",
-        "sha256": "c722bda5634985b1413a8d3aa06463fd63f3a53ae0d75fd271c9e3c0918ec498",
-        "bytes": 861660
+        "path": "revisions/20261004/pdfs/4/science/energie-stoffe-arbeitsblatt.pdf",
+        "sha256": "d1fd26ebbcb1d8f054076666f906633cf8eabf70f4156d89dbe23f9b579915cd",
+        "bytes": 860943
       },
       "solution": {
-        "path": "pdfs/4/science/energie-stoffe-loesungen.pdf",
-        "sha256": "844ae7a1de92661f97559c6a66b2481c48a48bd145560161dd513dab7523d6cf",
-        "bytes": 889880
+        "path": "revisions/20261004/pdfs/4/science/energie-stoffe-loesungen.pdf",
+        "sha256": "6da662760d8d543dc6f526b2a15a8c2251d1037154f720c4b40d1071d1a20996",
+        "bytes": 889375
       }
     }
   },
@@ -3676,20 +3688,20 @@
     "topicId": "licht-optik",
     "title": "Licht und Schatten 🔦",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.4.3",
       "scope": "Schattenbildung und Veränderungen bei einer einfachen Lichtanordnung erklären.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/licht-optik-arbeitsblatt.pdf",
-        "sha256": "db2f57d480f552e336876f66106eef82c69f75c44608c1ebbb0d18e39c40485a",
-        "bytes": 860816
+        "path": "revisions/20261004/pdfs/4/science/licht-optik-arbeitsblatt.pdf",
+        "sha256": "3849933263ee0f51944467741c89ca76122e5c261c31b467a279fbdc8afa090e",
+        "bytes": 860647
       },
       "solution": {
-        "path": "pdfs/4/science/licht-optik-loesungen.pdf",
-        "sha256": "3e13200c2a0dc697cf87cf6621145a25b0b74103eb187b3e274732ba7b9b3341",
-        "bytes": 888790
+        "path": "revisions/20261004/pdfs/4/science/licht-optik-loesungen.pdf",
+        "sha256": "a189b77f225da29d5a3a6d20b158e202d29aa79975ebe26efaa847b7024b5ee8",
+        "bytes": 888903
       }
     }
   },
@@ -3700,20 +3712,20 @@
     "topicId": "kantone-schweiz-4",
     "title": "Schweizer Kantone",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.4",
       "scope": "Kantone und Kürzel erkennen und ihre Lage anhand einer Karte vergleichen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/kantone-schweiz-4-arbeitsblatt.pdf",
-        "sha256": "261b5d90e132f4a05663a0f6e200f2ccd1a8b70f98411fdc634306118108716c",
-        "bytes": 867484
+        "path": "revisions/20261004/pdfs/4/science/kantone-schweiz-4-arbeitsblatt.pdf",
+        "sha256": "da6d5b788695d0ba7f13b7006c8a3e298b1f63c7807f6f3aebca88a3967c8998",
+        "bytes": 867172
       },
       "solution": {
-        "path": "pdfs/4/science/kantone-schweiz-4-loesungen.pdf",
-        "sha256": "fc34b7c8b2d8fec470cd0b06569eb672470c09ceefbff5cce8a52920746b0a89",
-        "bytes": 894424
+        "path": "revisions/20261004/pdfs/4/science/kantone-schweiz-4-loesungen.pdf",
+        "sha256": "479f9050a9728d09a2adcaa73fbda0a6c63c5c73333689e875e5d73226bdc314",
+        "bytes": 894036
       }
     }
   },
@@ -3724,20 +3736,20 @@
     "topicId": "orientierung-karte-4",
     "title": "Orientierung & Karte",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.4",
       "scope": "Himmelsrichtungen, Legende und einen einfachen angegebenen Massstab nutzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/orientierung-karte-4-arbeitsblatt.pdf",
-        "sha256": "4f58e48f44a8b1ff31222dfa90e0d6c1e5727f0c1b5328867072b6cab3658e82",
-        "bytes": 877003
+        "path": "revisions/20261004/pdfs/4/science/orientierung-karte-4-arbeitsblatt.pdf",
+        "sha256": "d541f2449fc24d9f01d90840a7bde1bfceeb1753e049c8e00f5a6372ddf49b67",
+        "bytes": 876687
       },
       "solution": {
-        "path": "pdfs/4/science/orientierung-karte-4-loesungen.pdf",
-        "sha256": "bf96918e70a6a211134503c5dbde9ce131e6f174c5c0698a41c3abeb40d961fb",
-        "bytes": 901866
+        "path": "revisions/20261004/pdfs/4/science/orientierung-karte-4-loesungen.pdf",
+        "sha256": "2764e656e03370ea39fe481d963845b422f5f00641a04d121ac981be6028f962",
+        "bytes": 901485
       }
     }
   },
@@ -3748,20 +3760,20 @@
     "topicId": "schweizer-geschichte-4",
     "title": "Schweizer Geschichte",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.3",
       "scope": "Entwicklung des Bundesstaats und Grenzen historischer Quellen an Beispielen betrachten.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/schweizer-geschichte-4-arbeitsblatt.pdf",
-        "sha256": "80a42f74f419f207ebb8370ee433b3352a23797d277754cfb3726369d1738f3f",
-        "bytes": 865373
+        "path": "revisions/20261004/pdfs/4/science/schweizer-geschichte-4-arbeitsblatt.pdf",
+        "sha256": "e454cbe8d355e6e4afd1b66525202d1175eeb7170e5cc17a5c0cf20fd960fd2e",
+        "bytes": 865087
       },
       "solution": {
-        "path": "pdfs/4/science/schweizer-geschichte-4-loesungen.pdf",
-        "sha256": "78de5a554a3ecd7e86b7f548a8695f8dc576ab07ef43b1cd20b10a1f7342b67a",
-        "bytes": 894938
+        "path": "revisions/20261004/pdfs/4/science/schweizer-geschichte-4-loesungen.pdf",
+        "sha256": "08a722814334186cfbe213f1ee27f0fde9e96f22319b50d56e248c59cde9009d",
+        "bytes": 895227
       }
     }
   },
@@ -3772,20 +3784,20 @@
     "topicId": "europa-4",
     "title": "Europa — Nachbarn der Schweiz",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.4",
       "scope": "Nachbarstaaten der Schweiz erkennen und geografische von politischen Begriffen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/europa-4-arbeitsblatt.pdf",
-        "sha256": "27b244cb01dabea6e8cbda3aa5078b68160c41cec74085cc48f9711338cab498",
-        "bytes": 863895
+        "path": "revisions/20261004/pdfs/4/science/europa-4-arbeitsblatt.pdf",
+        "sha256": "3dd74014dabc360435c95501cd322602c75f78feee8019aed56e3b0192b997aa",
+        "bytes": 863605
       },
       "solution": {
-        "path": "pdfs/4/science/europa-4-loesungen.pdf",
-        "sha256": "c08a7621a612690a69399073e65964dedb7c5802d9c3001de8d3ca22aa238dc8",
-        "bytes": 891163
+        "path": "revisions/20261004/pdfs/4/science/europa-4-loesungen.pdf",
+        "sha256": "a26528e83a131e7658b6ba8c5b8b19ab287719d4c79f466e2ee9c776387494da",
+        "bytes": 890798
       }
     }
   },
@@ -3796,20 +3808,20 @@
     "topicId": "gemeinde-kanton-4",
     "title": "Gemeinde & Kanton",
     "curriculum": {
-      "code": "NMG.10",
+      "code": "NMG.10.3",
       "scope": "Politische Ebenen und sachliche Informationswege zu örtlichen Aufgaben unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C10"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/gemeinde-kanton-4-arbeitsblatt.pdf",
-        "sha256": "7f97cf17659d48d0b2330f8d569e70cb60ca38abc29ce7cf4b98438aab393b97",
-        "bytes": 863422
+        "path": "revisions/20261004/pdfs/4/science/gemeinde-kanton-4-arbeitsblatt.pdf",
+        "sha256": "4e3c2cffbf084568bd245a318a1a5e7e6c3d62108577b1f1e6f656da9e6bdbb8",
+        "bytes": 862340
       },
       "solution": {
-        "path": "pdfs/4/science/gemeinde-kanton-4-loesungen.pdf",
-        "sha256": "4d82fc6edeac1caeb707dcb8fcee5be5ae35ff270955dcfd21cd727f3d929618",
-        "bytes": 890865
+        "path": "revisions/20261004/pdfs/4/science/gemeinde-kanton-4-loesungen.pdf",
+        "sha256": "a4518e8ba0a39802906714c502261a0adbcca5190dd810688bfedae780379862",
+        "bytes": 890078
       }
     }
   },
@@ -3820,20 +3832,20 @@
     "topicId": "roemisches-reich-4",
     "title": "Römer in der Schweiz",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.3",
       "scope": "Römische Spuren und unterschiedliche Lebensbedingungen im Gebiet der heutigen Schweiz erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/roemisches-reich-4-arbeitsblatt.pdf",
-        "sha256": "b14002819da228ff85baf7da53212914e2665fcb535a4150bd555bb1e1f44fa2",
-        "bytes": 865320
+        "path": "revisions/20261004/pdfs/4/science/roemisches-reich-4-arbeitsblatt.pdf",
+        "sha256": "45e1e5f3f3ab5757b02f8b13002d9459d21e627e6d24d66103f6174ac07e5fce",
+        "bytes": 865010
       },
       "solution": {
-        "path": "pdfs/4/science/roemisches-reich-4-loesungen.pdf",
-        "sha256": "ba47d5387a4abc48d87e78ad6524bbe479bd8edfd90e466c4fdaa65f72dd97c0",
-        "bytes": 893027
+        "path": "revisions/20261004/pdfs/4/science/roemisches-reich-4-loesungen.pdf",
+        "sha256": "f2abe536b034cc3c066de6a2958eb9d84c40905aecb27eebbed9ce4fe33843e9",
+        "bytes": 893290
       }
     }
   },
@@ -3844,20 +3856,20 @@
     "topicId": "lebensweisen-4",
     "title": "Lebensweisen früher & heute",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.2",
       "scope": "Wandel von Lebensweisen anhand konkreter Vergleichsfragen untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/lebensweisen-4-arbeitsblatt.pdf",
-        "sha256": "cb97e472db8622c7c7d2362da5cfd99c492d22bcd5b9a2f102d38a3c2a95ed06",
-        "bytes": 863693
+        "path": "revisions/20261004/pdfs/4/science/lebensweisen-4-arbeitsblatt.pdf",
+        "sha256": "a73f671090e4c7a07b268827beb475d6e81196f3817be20b493f8fb17b90e60e",
+        "bytes": 863380
       },
       "solution": {
-        "path": "pdfs/4/science/lebensweisen-4-loesungen.pdf",
-        "sha256": "6cd42780eb4167ee859daad17dd84e437fbb27fb1f5bf45b7197c90c70cf191f",
-        "bytes": 892361
+        "path": "revisions/20261004/pdfs/4/science/lebensweisen-4-loesungen.pdf",
+        "sha256": "084528792a283dd864e32a97464391cd4c9cab85d7029f32ef20202c34172fae",
+        "bytes": 892371
       }
     }
   },
@@ -3868,20 +3880,20 @@
     "topicId": "ressourcen-wasser-4",
     "title": "Wasser & Ressourcen",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.3",
       "scope": "Einfache Vorgänge im Wasserkreislauf und sicheren Umgang mit Wasser beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/ressourcen-wasser-4-arbeitsblatt.pdf",
-        "sha256": "b7a5ee8b3c0ab47b3d68d8eb8e58a5d1849de90009839b1043594d6a68b82886",
-        "bytes": 859835
+        "path": "revisions/20261004/pdfs/4/science/ressourcen-wasser-4-arbeitsblatt.pdf",
+        "sha256": "6d9075a7788a4fdeb2dd7ed1fea309e71ccab1db45a316c23766f0313c7e4476",
+        "bytes": 859522
       },
       "solution": {
-        "path": "pdfs/4/science/ressourcen-wasser-4-loesungen.pdf",
-        "sha256": "d3355fb44a659973e664da656380486d4f9baf579877c4404fa5ec48ca2f8cfa",
-        "bytes": 887178
+        "path": "revisions/20261004/pdfs/4/science/ressourcen-wasser-4-loesungen.pdf",
+        "sha256": "7b4c8e12d62506ca246e713189838d11f22e076b99b4d617ef15971f898e649a",
+        "bytes": 886776
       }
     }
   },
@@ -3892,20 +3904,26 @@
     "topicId": "migration-kulturen-4",
     "title": "Migration & Kulturen",
     "curriculum": {
-      "code": "NMG.7",
+      "code": "NMG.7.3",
       "scope": "Unterschiedliche Migrationsgründe und respektvolle Unterstützung neuer Mitschülerinnen und Mitschüler beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C7"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.7.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/migration-kulturen-4-arbeitsblatt.pdf",
-        "sha256": "abc84134bce4acefc711d7abadb396d7bd065ef4cb7cec83554668d2c5fa8318",
-        "bytes": 863834
+        "path": "revisions/20261004/pdfs/4/science/migration-kulturen-4-arbeitsblatt.pdf",
+        "sha256": "af839326aa02ec8507c18054c63f2ec27c663007f7ec4a358f9ab7c355be6136",
+        "bytes": 863532
       },
       "solution": {
-        "path": "pdfs/4/science/migration-kulturen-4-loesungen.pdf",
-        "sha256": "b8711c8d2eddb537b44790b07a4c53c1fe107248efc4ca60e16ed37279caacac",
-        "bytes": 890625
+        "path": "revisions/20261004/pdfs/4/science/migration-kulturen-4-loesungen.pdf",
+        "sha256": "837b172f7d9e29cdf3ef46c552049ccb79a8cf615ccba5c5c8acc69874483bea",
+        "bytes": 891595
       }
     }
   },
@@ -3916,20 +3934,20 @@
     "topicId": "raeume-karte",
     "title": "Religionen & Feste",
     "curriculum": {
-      "code": "NMG.12",
+      "code": "NMG.12.4",
       "scope": "Bedeutungen ausgewählter religiöser Feste unterscheiden und persönliche Überzeugungen respektieren.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C12"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|12|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/4/science/raeume-karte-arbeitsblatt.pdf",
-        "sha256": "a66d6e79a963939ea3a9f6f9c2f672bbd3ac4fc6bc461c10c947affcfc42eda9",
-        "bytes": 859829
+        "path": "revisions/20261004/pdfs/4/science/raeume-karte-arbeitsblatt.pdf",
+        "sha256": "6a5a639930a2f346263107ccbbf90b40882c12d16e016537bcfd4fd2f26dae0a",
+        "bytes": 859518
       },
       "solution": {
-        "path": "pdfs/4/science/raeume-karte-loesungen.pdf",
-        "sha256": "d20d23365fd88b1dbd101ce3b565f8d95df6f2ade2a3a231e5587a5d36a3934c",
-        "bytes": 886407
+        "path": "revisions/20261004/pdfs/4/science/raeume-karte-loesungen.pdf",
+        "sha256": "19699bf77997fecc12017dfd370e2cfdc8a557b8afe138034b5e34bc977334b3",
+        "bytes": 886034
       }
     }
   },

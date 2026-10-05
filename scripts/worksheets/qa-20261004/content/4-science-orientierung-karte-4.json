@@ -1,0 +1,55 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "orientierung-karte-4",
+  "goal": "Karten zeigen Räume vereinfacht von oben. Eine Legende erklärt Zeichen. Ein Massstab verbindet Kartenlänge und Wirklichkeit. Im erfundenen Plan liegt Norden oben. Längenangaben in Aufgabe 2 sind vorgegeben, nicht am Druck messen.",
+  "sections": [
+    {
+      "title": "Lies den Plan.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In welcher Richtung liegt das Museum von der Schule aus?",
+          "answer": "Osten",
+          "svg": "<svg class=\"illustration map-four\" style=\"width:135mm;height:42mm\" viewBox=\"0 0 135 42\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 10 H100 V32 H10 Z M40 10 V32 M70 10 V32\" stroke=\"#213b49\" fill=\"none\"/><text x=\"15\" y=\"23\" font-size=\"4\">Schule</text><text x=\"46\" y=\"23\" font-size=\"4\">Park</text><text x=\"74\" y=\"23\" font-size=\"4\">Museum</text><path d=\"M119 29 V10 L116 15 M119 10 L122 15\" stroke=\"#213b49\" fill=\"none\"/><text x=\"116\" y=\"7\" font-size=\"4\">N</text></svg>",
+          "wide": true
+        },
+        {
+          "prompt": "Welcher Ort liegt zwischen Schule und Museum?",
+          "answer": "Park",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Rechne mit einem Massstab.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Auf einer Karte bedeutet 1 cm genau 100 m. Ein Weg ist dort 3 cm lang. Wie lang ist er in Wirklichkeit?",
+          "answer": "300 m",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Nutze Karteninformationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum musst du die Legende lesen, bevor du ein unbekanntes Kartenzeichen deutest?",
+          "answer": "Weil Zeichen vereinbarte Bedeutungen haben; die Legende erklärt sie. Nicht nur nach Aussehen raten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.4",
+    "scope": "Himmelsrichtungen, Legende und einen einfachen angegebenen Massstab nutzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

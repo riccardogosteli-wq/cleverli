@@ -1,0 +1,60 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "licht-optik",
+  "goal": "Bei deinem Versuch in klarer Raumluft verläuft das Licht der Taschenlampe geradlinig. Ein undurchsichtiger Gegenstand wirft einen Schatten. Arbeite mit Erwachsenen. Nie in Augen leuchten oder direkt in die Sonne schauen.",
+  "sections": [
+    {
+      "title": "Ordne die Bestandteile.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was erzeugt das Licht beim Versuch: Taschenlampe oder Kartonfigur?",
+          "answer": "Taschenlampe",
+          "wide": true
+        },
+        {
+          "prompt": "Was hält das Licht auf: klare Luft oder Kartonfigur?",
+          "answer": "Kartonfigur",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche Schatten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Lampe und Wand bleiben am selben Ort. Die Kartonfigur wird näher zur kleinen Lichtquelle bewegt. Wird ihr Schatten an der Wand meist grösser oder kleiner?",
+          "answer": "Grösser",
+          "wide": true
+        },
+        {
+          "prompt": "Was solltest du ausser dem Abstand gleich halten, damit du fair vergleichst?",
+          "answer": "Zum Beispiel dieselbe Figur, Ausrichtung, Lampe und Wand. Immer nur eine untersuchte Bedingung ändern.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Erkläre den Unterschied.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum wirft ein dicker Karton einen deutlich dunkleren Schatten als eine saubere klare Glasscheibe?",
+          "answer": "Karton hält viel Licht auf; die klare Scheibe lässt den grössten Teil durch. Glas kann trotzdem etwas Licht reflektieren oder umlenken.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.3",
+    "scope": "Schattenbildung und Veränderungen bei einer einfachen Lichtanordnung erklären.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

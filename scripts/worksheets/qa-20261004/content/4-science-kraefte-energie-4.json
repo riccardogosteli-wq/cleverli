@@ -1,0 +1,67 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "kraefte-energie-4",
+  "goal": "Kräfte können Bewegungen oder Formen verändern. Reibung kann Bewegungen bremsen. Energie ermöglicht Veränderungen wie Bewegung oder Erwärmung. Untersuche nur leichte Spielzeuggegenstände auf einer freien Fläche mit Erwachsenen.",
+  "sections": [
+    {
+      "title": "Welche Wirkung hat die Kraft?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein weicher Schwamm wird zusammengedrückt. Was ändert sich?",
+          "answer": "Die Form",
+          "wide": true
+        },
+        {
+          "prompt": "Ein rollendes Spielzeugauto wird sanft angehalten. Was ändert sich?",
+          "answer": "Die Bewegung; es wird langsamer und stoppt.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche zwei Unterlagen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Dasselbe Spielzeugauto wird ähnlich stark auf Teppich und glattem Boden angestossen. Worauf rollt es oft weiter?",
+          "answer": "Auf glattem Boden; die tatsächliche Beobachtung zählt, Unterlagen und Anstoss beeinflussen das Ergebnis.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Warum soll beim Vergleich dasselbe Auto verwendet werden?",
+          "answer": "Damit die Unterlage als veränderte Bedingung untersucht wird und nicht zugleich ein anderes Auto.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Erkläre eine Beobachtung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum rollt das Auto auf einer waagrechten Fläche nicht für immer weiter?",
+          "answer": "Unter anderem Reibung und Luftwiderstand bremsen es; Bewegungsenergie wird zum Beispiel in Wärme umgewandelt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.1",
+    "scope": "Kraftwirkungen, Reibung und faire Vergleiche an Spielzeugbewegungen erklären.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|1",
+    "additionalReferences": [
+      {
+        "code": "NMG.3.2",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|2"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

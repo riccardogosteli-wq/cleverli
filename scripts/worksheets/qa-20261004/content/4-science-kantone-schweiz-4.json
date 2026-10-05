@@ -1,0 +1,63 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "kantone-schweiz-4",
+  "goal": "Die Schweiz besteht aus 26 Kantonen. Jeder Kanton hat eigene Behörden. Beispiele für Namen und Kürzel: Zürich ZH, Bern BE, Tessin TI, Waadt VD. Die Kantone unterscheiden sich in Grösse, Bevölkerung und Sprachen.",
+  "sections": [
+    {
+      "title": "Schreibe den Kantonsnamen zum Kürzel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "ZH",
+          "answer": "Zürich"
+        },
+        {
+          "prompt": "BE",
+          "answer": "Bern"
+        },
+        {
+          "prompt": "TI",
+          "answer": "Tessin"
+        },
+        {
+          "prompt": "VD",
+          "answer": "Waadt"
+        }
+      ]
+    },
+    {
+      "title": "Lies die Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Kantone hat die Schweiz?",
+          "answer": "26"
+        },
+        {
+          "prompt": "Sind alle Kantone gleich gross?",
+          "answer": "Nein"
+        }
+      ]
+    },
+    {
+      "title": "Nutze eine Schweizer Karte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Suche Tessin und Waadt auf einer Kantonskarte. Welcher dieser beiden Kantone liegt weiter östlich? Nenne das Hilfsmittel, mit dem du geprüft hast.",
+          "answer": "Tessin liegt weiter östlich. Passende Schweizer Kantonskarte als Hilfsmittel nennen; Karte mit Nordrichtung prüfen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.4",
+    "scope": "Kantone und Kürzel erkennen und ihre Lage anhand einer Karte vergleichen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

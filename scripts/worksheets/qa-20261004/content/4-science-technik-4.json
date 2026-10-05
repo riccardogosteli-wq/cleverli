@@ -1,0 +1,61 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "technik-4",
+  "goal": "Technische Gegenstände helfen beim Lösen von Aufgaben. Ein Fahrrad nutzt unter anderem Räder, Kette und Bremsen. Untersuche technische Teile nur im Stillstand mit einer erwachsenen Person; nicht an bewegte Ketten oder Zahnräder greifen.",
+  "sections": [
+    {
+      "title": "Ordne Aufgabe und Teil zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bremst ein Fahrrad.",
+          "answer": "Bremse"
+        },
+        {
+          "prompt": "Überträgt beim üblichen Kettenfahrrad Bewegung vom vorderen zum hinteren Zahnrad.",
+          "answer": "Kette"
+        },
+        {
+          "prompt": "Ermöglicht das Rollen.",
+          "answer": "Rad"
+        },
+        {
+          "prompt": "Hilft beim Lenken.",
+          "answer": "Lenker"
+        }
+      ]
+    },
+    {
+      "title": "Erkenne eine Sicherheitsfunktion.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sind funktionierende Bremsen wichtig?",
+          "answer": "Damit man die Geschwindigkeit verringern und sicher anhalten kann.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe eine Verbesserung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Tasche soll im Regen den Inhalt schützen. Welche Materialeigenschaft wäre hilfreich? Wie könnte man prüfen, ob die Tasche geeignet ist, ohne Elektronik hineinzulegen?",
+          "answer": "Wasserabweisend/wasserfest. Mit Erwachsenen und Papier als Testinhalt vorsichtig wenig Wasser von aussen aufgeben; prüfen, ob Papier trocken bleibt. Sicheren Vergleich planen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.5.1",
+    "scope": "Technische Funktionen und eine einfache Anforderung an eine Lösung beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

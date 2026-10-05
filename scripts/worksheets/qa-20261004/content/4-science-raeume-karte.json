@@ -1,0 +1,59 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "raeume-karte",
+  "goal": "Feste haben unterschiedliche Bedeutungen. Viele Christinnen und Christen erinnern an Weihnachten an die Geburt Jesu. Das muslimische Fest des Fastenbrechens folgt auf den Fastenmonat Ramadan. Menschen feiern verschieden oder gehören keiner Religion an.",
+  "sections": [
+    {
+      "title": "Lies die Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Woran erinnert Weihnachten in der christlichen Tradition?",
+          "answer": "An die Geburt Jesu.",
+          "wide": true
+        },
+        {
+          "prompt": "Wie heisst der Fastenmonat vor dem muslimischen Fest des Fastenbrechens?",
+          "answer": "Ramadan",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ist Ramadan selbst der Name des Fests oder eines Monats?",
+          "answer": "Eines Monats",
+          "wide": true
+        },
+        {
+          "prompt": "Feiern alle Menschen dieselben Feste auf dieselbe Weise?",
+          "answer": "Nein",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Zeige Respekt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Kind möchte nicht von seinem Glauben erzählen. Wie reagierst du respektvoll? Nenne zusätzlich ein Fest, das nicht zwingend religiös ist.",
+          "answer": "Die Grenze akzeptieren, nicht drängen oder auslachen. Zum Beispiel Geburtstag, Schul- oder Dorffest als nicht zwingend religiöses Fest.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.12.4",
+    "scope": "Bedeutungen ausgewählter religiöser Feste unterscheiden und persönliche Überzeugungen respektieren.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|12|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

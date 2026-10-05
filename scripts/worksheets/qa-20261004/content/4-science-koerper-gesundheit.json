@@ -1,0 +1,67 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "koerper-gesundheit",
+  "goal": "Der Körper braucht unter anderem Nahrung, Wasser, Bewegung und Erholung. Das Herz pumpt Blut. Mit der Lunge nehmen wir beim Atmen Sauerstoff auf. Menschen haben unterschiedliche Bedürfnisse; bei Beschwerden helfen vertraute Erwachsene und Fachpersonen.",
+  "sections": [
+    {
+      "title": "Welches Organ ist gemeint?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Pumpt Blut durch den Körper.",
+          "answer": "Herz"
+        },
+        {
+          "prompt": "Nimmt beim Atmen Sauerstoff auf.",
+          "answer": "Lunge"
+        },
+        {
+          "prompt": "Verarbeitet viele Informationen und steuert Vorgänge.",
+          "answer": "Gehirn"
+        },
+        {
+          "prompt": "Schützt den Körper nach aussen.",
+          "answer": "Haut"
+        }
+      ]
+    },
+    {
+      "title": "Begründe eine gesunde Gewohnheit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum braucht man nach Anstrengung auch Erholung?",
+          "answer": "Damit sich der Körper erholen kann. Schlaf und Pausen unterstützen Erholung und Aufmerksamkeit.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Plane unterstützend.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei unterschiedliche Möglichkeiten, im Schulalltag gut für den Körper zu sorgen. Passe sie an die eigenen Möglichkeiten an, ohne private Gesundheitsdaten zu nennen.",
+          "answer": "Zum Beispiel Wasser trinken, angemessene Bewegung, Ruhepause, Hände waschen. Sinnvolle und zugängliche Möglichkeiten gelten, keine Bewertung von Körperform oder Leistungsfähigkeit.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.1.4",
+    "scope": "Aufgaben ausgewählter Organe und gesundheitsfördernde Alltagsgewohnheiten beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|4",
+    "additionalReferences": [
+      {
+        "code": "NMG.1.2",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|2"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,61 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "koerper-sinne-4",
+  "goal": "Werte wie Respekt und Fairness helfen beim Zusammenleben. Menschen können verschieden denken und trotzdem gleich viel wert sein. Eine gute Regel schützt Beteiligung und Sicherheit, statt einzelne Menschen auszugrenzen.",
+  "sections": [
+    {
+      "title": "Erkenne faires Verhalten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Kind wird wegen seiner Aussprache ausgelacht. Ist das respektvoll?",
+          "answer": "Nein",
+          "wide": true
+        },
+        {
+          "prompt": "In einer Diskussion darf jede Person ausreden. Ist das eine faire Regel?",
+          "answer": "Ja",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Begründe und löse.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwei Kinder wollen dasselbe Spielgerät. Nenne eine faire Vereinbarung.",
+          "answer": "Zum Beispiel abwechseln, eine passende Zeit vereinbaren oder gemeinsam nutzen, wenn sicher möglich.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Warum ist «Die Stärkeren dürfen immer zuerst» keine faire Regel?",
+          "answer": "Sie benachteiligt andere und gibt Stärke statt gleichen Bedürfnissen und Beteiligung Vorrang.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Hilf ohne selbst auszugrenzen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was kannst du tun, wenn ein Kind wiederholt ausgeschlossen wird?",
+          "answer": "Unterstützung anbieten, respektvoll widersprechen und eine vertraute erwachsene Person hinzuziehen. Nicht selbst beleidigen oder körperlich eingreifen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.11.3",
+    "scope": "Werte, faire Regeln und respektvolle Hilfe an erfundenen Alltagssituationen begründen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|11|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

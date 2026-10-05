@@ -1,0 +1,56 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "gemeinde-kanton-4",
+  "goal": "In der Schweiz gibt es drei politische Ebenen: Gemeinde, Kanton und Bund. Sie teilen Aufgaben. Eine Gemeinde liegt in einem Kanton; alle 26 Kantone bilden zusammen den Schweizer Bundesstaat.",
+  "sections": [
+    {
+      "title": "Ordne vom kleinräumigen zum umfassenden Bereich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bund, Gemeinde, Kanton",
+          "answer": "Gemeinde → Kanton → Bund",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Die Regierung des Kantons Bern gehört zu welcher politischen Ebene: Gemeinde, Kanton oder Bund?",
+          "answer": "Kanton",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke über Aufgaben nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum werden nicht alle örtlichen Fragen für die ganze Schweiz gleich entschieden?",
+          "answer": "Orte haben unterschiedliche Bedürfnisse; Entscheidungen sollen möglichst passend und nahe an den Betroffenen getroffen werden. Gesetze und Zuständigkeiten bleiben wichtig.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Finde eine sachliche Information.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du willst wissen, wann ein öffentliches Schwimmbad in einer Gemeinde geöffnet ist. Welche offizielle Informationsquelle wäre sinnvoll? Was solltest du am Datum prüfen?",
+          "answer": "Offizielle Website der Gemeinde oder des Schwimmbads. Prüfen, ob Angaben aktuell und für den gewünschten Tag/die Saison gültig sind.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.10.3",
+    "scope": "Politische Ebenen und sachliche Informationswege zu örtlichen Aufgaben unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

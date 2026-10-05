@@ -1,0 +1,61 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "europa-4",
+  "goal": "Die Schweiz liegt in Europa und grenzt an fünf Staaten: Deutschland, Frankreich, Italien, Österreich und Liechtenstein. Europa ist ein Kontinent; die Europäische Union ist ein Zusammenschluss von Staaten. Das ist nicht dasselbe.",
+  "sections": [
+    {
+      "title": "Nachbar der Schweiz oder nicht?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Italien",
+          "answer": "Nachbar"
+        },
+        {
+          "prompt": "Frankreich",
+          "answer": "Nachbar"
+        },
+        {
+          "prompt": "Spanien",
+          "answer": "Kein direkter Nachbar"
+        },
+        {
+          "prompt": "Liechtenstein",
+          "answer": "Nachbar"
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die Liste.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Neben Frankreich, Italien und Liechtenstein fehlen noch welche zwei Nachbarstaaten?",
+          "answer": "Deutschland und Österreich",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Nutze eine Europakarte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Suche die Schweiz und Italien. In welcher groben Richtung liegt Italien von der Schweiz aus? Erkläre, warum «Europa» und «EU» nicht einfach austauschbare Wörter sind.",
+          "answer": "Italien liegt südlich der Schweiz. Europa ist der Kontinent, die EU ein politischer Zusammenschluss; nicht alle europäischen Staaten gehören dazu.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.4",
+    "scope": "Nachbarstaaten der Schweiz erkennen und geografische von politischen Begriffen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

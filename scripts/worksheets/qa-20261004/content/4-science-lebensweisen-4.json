@@ -1,0 +1,55 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "lebensweisen-4",
+  "goal": "Lebensweisen verändern sich, aber nicht überall gleich schnell. Neue Verkehrsmittel und Kommunikation verändern den Alltag. Früher gab es ebenso Unterschiede zwischen Stadt und Land sowie zwischen Menschen mit verschiedenen Möglichkeiten.",
+  "sections": [
+    {
+      "title": "Vergleiche Funktionen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Brief und Nachricht auf dem Handy: Welche gemeinsame Aufgabe erfüllen sie?",
+          "answer": "Informationen übermitteln / miteinander kommunizieren",
+          "wide": true
+        },
+        {
+          "prompt": "Kutsche und Zug: Welche gemeinsame Aufgabe erfüllen sie?",
+          "answer": "Menschen oder Güter transportieren",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke differenziert.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ist «Früher war alles schlechter» eine sachlich genaue Aussage? Begründe.",
+          "answer": "Nein. Sie verallgemeinert; man muss Zeitraum, Ort, Menschen und einzelne Lebensbereiche vergleichen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Plane eine Untersuchung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du vergleichst einen Schulweg vor 100 Jahren mit heute. Nenne eine passende Quelle und zwei Fragen dazu. Du musst keine privaten Familiengeschichten erzählen.",
+          "answer": "Zum Beispiel datiertes Foto, Karte, Schulchronik oder Bericht. Fragen: Wie wurde der Weg zurückgelegt? Wie weit war er? Quelle, Zeitraum und Ort passend wählen.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.2",
+    "scope": "Wandel von Lebensweisen anhand konkreter Vergleichsfragen untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

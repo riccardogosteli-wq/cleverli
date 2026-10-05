@@ -1,0 +1,62 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "schweizer-geschichte-4",
+  "goal": "1848 erhielt die Schweiz eine Bundesverfassung und wurde zum modernen Bundesstaat. Geschichte wird mit Quellen untersucht: etwa Briefen, Bauwerken und Gegenständen. Eine einzelne Quelle zeigt oft nur einen Ausschnitt und eine bestimmte Sicht.",
+  "sections": [
+    {
+      "title": "Ordne zeitlich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe vom frühesten zum spätesten: 2026, 1848, 1900.",
+          "answer": "1848, 1900, 2026",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Wie viele Jahre liegen zwischen 1848 und 1900?",
+          "answer": "52",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Quelle.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein alter Brief beschreibt einen Markttag. Kann er zeigen, was eine Person damals erlebt hat?",
+          "answer": "Ja, wenn Herkunft und Zeitpunkt geprüft sind; er gibt die Sicht der schreibenden Person wieder.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Beweist dieser Brief, dass alle Menschen den Markttag gleich erlebt haben?",
+          "answer": "Nein. Andere Menschen können andere Erfahrungen oder Sichtweisen haben.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Suche weitere Hinweise.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei weitere Quellenarten, mit denen man das Leben früher untersuchen könnte.",
+          "answer": "Zum Beispiel Gegenstände, Gebäude, Fotos, Karten, amtliche Dokumente. Art und Entstehungszeit müssen zur Frage passen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.3",
+    "scope": "Entwicklung des Bundesstaats und Grenzen historischer Quellen an Beispielen betrachten.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

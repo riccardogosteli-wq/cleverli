@@ -1,0 +1,57 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "wetter-klima",
+  "goal": "Wetter ist zum Beispiel Regen, Wind und Temperatur an einem Ort zu einer bestimmten Zeit. Klima beschreibt typische Wetterverhältnisse über viele Jahre, oft 30. Ein einzelner kalter Tag widerspricht einer langfristigen Erwärmung nicht.",
+  "sections": [
+    {
+      "title": "Wetter oder Klima?",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Heute regnet es in Bern.",
+          "answer": "Wetter",
+          "wide": true
+        },
+        {
+          "prompt": "Über viele Jahrzehnte sind die Sommer einer Region meist warm.",
+          "answer": "Klima",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Lies Wetterangaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Montag 12 °C, Dienstag 15 °C. Um wie viele Grad ist es am Dienstag wärmer?",
+          "answer": "3 °C"
+        },
+        {
+          "prompt": "Welches Messgerät misst die Lufttemperatur?",
+          "answer": "Thermometer"
+        }
+      ]
+    },
+    {
+      "title": "Beobachte sinnvoll.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du möchtest die Temperatur an zwei Tagen vergleichen. Was sollte bei Ort, Uhrzeit und Messweise gleich bleiben?",
+          "answer": "Möglichst derselbe geeignete Messort, dieselbe Uhrzeit und dasselbe Messverfahren/Gerät; nicht einmal pralle Sonne und einmal Schatten. Sicher vom Schulgelände oder mit Erwachsenen beobachten.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.4",
+    "scope": "Wetterangaben und Temperaturmessungen verstehen (NMG.4.4.1d/e). Wetter und Klima als vereinfachte Begriffsorientierung unterscheiden, ohne formale Klimatologie.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

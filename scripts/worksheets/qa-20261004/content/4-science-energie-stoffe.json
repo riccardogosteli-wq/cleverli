@@ -1,0 +1,59 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "energie-stoffe",
+  "goal": "Produkte haben einen Weg: Rohstoffe gewinnen, herstellen, transportieren, verkaufen und nutzen. Später können sie repariert, weitergegeben oder entsorgt werden. Diese Schritte brauchen häufig Material und Energie.",
+  "sections": [
+    {
+      "title": "Ordne die Schritte der Brotherstellung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe in sinnvoller Reihenfolge: Brot verkaufen, Getreide anbauen, Teig backen, Getreide zu Mehl mahlen.",
+          "answer": "Getreide anbauen → zu Mehl mahlen → Teig backen → Brot verkaufen. Weitere Zwischenschritte sind möglich.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Nenne die Berufe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wer mahlt Getreide zu Mehl?",
+          "answer": "Müllerin oder Müller"
+        },
+        {
+          "prompt": "Wer backt Brot?",
+          "answer": "Bäckerin oder Bäcker"
+        }
+      ]
+    },
+    {
+      "title": "Betrachte den ganzen Weg.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum kann es Ressourcen sparen, Lebensmittel passend zu planen und Reste sicher weiterzuverwenden?",
+          "answer": "Dann werden weniger Lebensmittel weggeworfen; Material, Arbeit und Energie ihrer Herstellung werden nicht unnötig verschwendet. Lebensmittelsicherheit beachten.",
+          "wide": true,
+          "lines": 2
+        },
+        {
+          "prompt": "Warum zeigt ein günstiger Preis allein nicht, wie umweltfreundlich ein Produkt ist?",
+          "answer": "Der Preis beschreibt nicht alle Rohstoffe, Produktionsbedingungen, Transporte oder Nutzungsdauer.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.3",
+    "scope": "Produktionsketten und Ressourcenverbrauch bei Konsumentscheidungen untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

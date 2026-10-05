@@ -1,0 +1,57 @@
+{
+  "grade": 4,
+  "subject": "science",
+  "sourceId": "roemisches-reich-4",
+  "goal": "Vor rund 2000 Jahren gehörten Gebiete der heutigen Schweiz zum Römischen Reich. In Städten gab es zum Beispiel Strassen, öffentliche Bäder und Theater. Menschen lebten je nach Ort, Tätigkeit und sozialer Stellung sehr unterschiedlich.",
+  "sections": [
+    {
+      "title": "Ordne eine Funktion zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Öffentliche Bäder dienten unter anderem zum",
+          "answer": "Baden und Treffen"
+        },
+        {
+          "prompt": "Strassen halfen beim",
+          "answer": "Reisen und Transport"
+        },
+        {
+          "prompt": "In einem Theater gab es",
+          "answer": "Aufführungen"
+        }
+      ]
+    },
+    {
+      "title": "Untersuche Spuren.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In Augusta Raurica ist ein römisches Theater erhalten. Was kann ein solches Bauwerk über das damalige Leben zeigen?",
+          "answer": "Dass es dort einen Ort für Aufführungen und gemeinsames Publikum gab; Bauweise und Nutzung lassen sich erforschen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Vermeide eine zu einfache Aussage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Alle Menschen lebten damals gleich.» Warum passt diese Aussage nicht zum Text? Nenne zwei Einflussfaktoren.",
+          "answer": "Lebensweisen unterschieden sich, zum Beispiel nach Ort, Tätigkeit und sozialer Stellung. Zwei Faktoren nennen; keine einheitliche Lebensweise aller behaupten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.3",
+    "scope": "Römische Spuren und unterschiedliche Lebensbedingungen im Gebiet der heutigen Schweiz erkennen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
