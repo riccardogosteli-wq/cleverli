@@ -1,0 +1,59 @@
+{
+  "grade": 5,
+  "subject": "english",
+  "sourceId": "reading-comp-5",
+  "goal": "On Tuesday, Ben wanted to play outside, but it rained. He went to the library with his sister. He borrowed a book about birds. At home, he drew a robin from a picture in the book. A robin ist ein Rotkehlchen.",
+  "sections": [
+    {
+      "title": "Entnimm Informationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum spielte Ben nicht draussen?",
+          "answer": "Es regnete.",
+          "wide": true
+        },
+        {
+          "prompt": "Mit wem ging er in die Bibliothek?",
+          "answer": "Mit seiner Schwester.",
+          "wide": true
+        },
+        {
+          "prompt": "Wovon handelte das ausgeliehene Buch?",
+          "answer": "Von Vögeln.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Lies genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zeichnete Ben einen echten Vogel vor seinem Fenster oder nach einem Bild?",
+          "answer": "Nach einem Bild im Buch.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Behauptung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Ben has a pet robin.» Belegt der Text das? Antworte auf Deutsch mit Begründung.",
+          "answer": "Nein. Er zeichnet einen Vogel nach einem Bild; ein eigenes Haustier wird nicht erwähnt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Explizite Textangaben von unbelegten Ergänzungen unterscheiden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

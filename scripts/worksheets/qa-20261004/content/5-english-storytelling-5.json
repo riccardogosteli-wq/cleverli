@@ -1,0 +1,53 @@
+{
+  "grade": 5,
+  "subject": "english",
+  "sourceId": "storytelling-5",
+  "goal": "A short story has a beginning, events and an ending. Verbindungswörter helfen: first = zuerst, then = dann, finally = schliesslich. Wörter für diese Geschichte: found = fand, gave = gab, thanked = dankte.",
+  "sections": [
+    {
+      "title": "Ordne die erfundene Geschichte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "A: Finally, the owner thanked her. B: First, Mia found a bag. C: Then, she gave it to a teacher. Schreibe die Buchstaben in sinnvoller Reihenfolge.",
+          "answer": "B, C, A",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Verstehe den Inhalt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was findet Mia?",
+          "answer": "Eine Tasche."
+        },
+        {
+          "prompt": "Wem gibt sie die Tasche?",
+          "answer": "Einer Lehrperson."
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die Geschichte auf Englisch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe die drei Sätze aus Aufgabe 1 in der richtigen Reihenfolge ab. Prüfe Satzanfänge und Schlusszeichen.",
+          "answer": "First, Mia found a bag. Then, she gave it to a teacher. Finally, the owner thanked her.",
+          "wide": true,
+          "lines": 4
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.4.A.1",
+    "scope": "Eine kurze Geschichte mit zeitlichen Verbindungswörtern ordnen und schreiben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

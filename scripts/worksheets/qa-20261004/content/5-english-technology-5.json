@@ -1,0 +1,70 @@
+{
+  "grade": 5,
+  "subject": "english",
+  "sourceId": "technology-5",
+  "goal": "Ella uses a tablet to read and draw. She does not share her password. Before she posts a photo of a friend, she asks for permission and checks with a responsible adult. Die Geschichte ist erfunden; schreibe keine echten Zugangsdaten auf.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wofür nutzt Ella das Tablet? Nenne beide Tätigkeiten.",
+          "answer": "Lesen und Zeichnen.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Was teilt sie nicht?",
+          "answer": "Ihr Passwort.",
+          "wide": true
+        },
+        {
+          "prompt": "Was klärt sie vor dem Veröffentlichen des Fotos?",
+          "answer": "Einverständnis der abgebildeten Person und nötige Erlaubnis mit verantwortlichen Erwachsenen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Ordne die Wörter zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "password",
+          "answer": "Passwort"
+        },
+        {
+          "prompt": "permission",
+          "answer": "Erlaubnis / Einverständnis"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine Regel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ordne: share / Do not / your password",
+          "answer": "Do not share your password.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Digitale Alltagssprache und eine sichere Regel verstehen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1E.4.A.1",
+        "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

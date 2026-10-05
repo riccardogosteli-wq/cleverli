@@ -1,0 +1,64 @@
+{
+  "grade": 5,
+  "subject": "english",
+  "sourceId": "countries-cultures-5",
+  "goal": "Noah lives in Switzerland. His friend Amira lives in Canada. They both speak English with each other and enjoy different books. These people are invented. A country does not tell us everything about a person.",
+  "sections": [
+    {
+      "title": "Lies den Text.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "In welchem Land lebt Noah?",
+          "answer": "In der Schweiz."
+        },
+        {
+          "prompt": "In welchem Land lebt Amira?",
+          "answer": "In Kanada."
+        },
+        {
+          "prompt": "Welche Sprache sprechen sie miteinander?",
+          "answer": "Englisch.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Aussage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Belegt der Text, dass alle Menschen in Kanada dieselben Bücher mögen? Begründe.",
+          "answer": "Nein. Der Text beschreibt erfundene Einzelpersonen; Vorlieben lassen sich nicht auf ein ganzes Land übertragen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe über eine erfundene Person.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze mit «... lives in ...» und «... likes ...». Nutze Switzerland/Canada und reading/drawing.",
+          "answer": "Beispiel: Alex lives in Canada. Alex likes drawing. Andere erfundene Namen und passende Kombinationen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Angaben über erfundene Personen verstehen, ohne kulturelle Stereotype abzuleiten. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1E.4.A.1",
+        "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

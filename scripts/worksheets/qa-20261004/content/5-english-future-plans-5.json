@@ -1,0 +1,71 @@
+{
+  "grade": 5,
+  "subject": "english",
+  "sourceId": "future-plans-5",
+  "goal": "Mit be going to + Grundform beschreibst du hier eine Absicht: I am going to read. She is going to play. We are going to visit a friend. Going to ist nicht immer eine Garantie, dass der Plan umgesetzt wird.",
+  "sections": [
+    {
+      "title": "Ergänze die passende Form von be.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "I __ going to draw.",
+          "answer": "am"
+        },
+        {
+          "prompt": "Sam __ going to read.",
+          "answer": "is"
+        },
+        {
+          "prompt": "We __ going to play.",
+          "answer": "are"
+        },
+        {
+          "prompt": "They __ going to swim.",
+          "answer": "are"
+        }
+      ]
+    },
+    {
+      "title": "Lies den Plan.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«On Saturday, Mia is going to visit her friend. On Sunday, she is going to read.» Was plant Mia für Samstag?",
+          "answer": "Ihre Freundin oder ihren Freund besuchen.",
+          "wide": true
+        },
+        {
+          "prompt": "Was plant sie für Sonntag?",
+          "answer": "Lesen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen erfundenen Plan.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze mit «I am going to ...». Nutze read a book und play a game.",
+          "answer": "I am going to read a book. I am going to play a game.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.D.1",
+    "scope": "Einfache Absichten mit going to verstehen und schreiben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1",
+    "additionalReferences": [
+      {
+        "code": "FS1E.4.A.1",
+        "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

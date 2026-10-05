@@ -1,0 +1,62 @@
+{
+  "grade": 5,
+  "subject": "english",
+  "sourceId": "modal-verbs-5",
+  "goal": "Zusatz mit Vorlage: Can beschreibt hier eine Fähigkeit, must eine Pflicht, must not ein Verbot und should einen Rat. Nach diesen Wörtern steht die Grundform: She can swim. You should rest. Must not bedeutet nicht «nicht müssen», sondern «nicht dürfen».",
+  "sections": [
+    {
+      "title": "Ordne die Bedeutung zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "You must not touch this.",
+          "answer": "Du darfst das nicht berühren.",
+          "wide": true
+        },
+        {
+          "prompt": "You should take a break.",
+          "answer": "Du solltest eine Pause machen.",
+          "wide": true
+        },
+        {
+          "prompt": "I can swim.",
+          "answer": "Ich kann schwimmen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze die Grundform.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "She can __. (swim / swims)",
+          "answer": "swim"
+        },
+        {
+          "prompt": "He should __. (rest / rests)",
+          "answer": "rest"
+        }
+      ]
+    },
+    {
+      "title": "Formuliere einen Rat.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe mit should: «Du solltest eine Pause machen.» Verwende take a break.",
+          "answer": "You should take a break.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.D.1",
+    "scope": "Ausgewählte Modalverben als gestützte Satzmuster verstehen und nutzen. Zusatz nach Lernstand, keine allgemeine Klassenanforderung. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -5662,20 +5662,26 @@
     "topicId": "present-continuous-5",
     "title": "Present Continuous",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.D.1",
       "scope": "Gegenwärtige Handlungen mit am/is/are und -ing ausdrücken. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1",
+      "additionalReferences": [
+        {
+          "code": "FS1E.4.A.1",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/present-continuous-5-arbeitsblatt.pdf",
-        "sha256": "464e69241d0cf1b79c3bc1807071befb42433ab6c198fa56411e3eaa7d23658e",
-        "bytes": 853199
+        "path": "revisions/20261004/pdfs/5/english/present-continuous-5-arbeitsblatt.pdf",
+        "sha256": "77d55e802d048d2e0843c402e3a8a60e7e80884bdbc1f675222de5cb239e355a",
+        "bytes": 853385
       },
       "solution": {
-        "path": "pdfs/5/english/present-continuous-5-loesungen.pdf",
-        "sha256": "ad631066e2bcaa1267abc0fb8e16ea06d33af02d673db543c066a4e06a2e34a0",
-        "bytes": 876242
+        "path": "revisions/20261004/pdfs/5/english/present-continuous-5-loesungen.pdf",
+        "sha256": "90fcf4f60064dd5afb62f4dacbd5558a69779bc3e691489c8b713d927aa5112e",
+        "bytes": 877618
       }
     }
   },
@@ -5686,20 +5692,26 @@
     "topicId": "future-plans-5",
     "title": "Future Plans",
     "curriculum": {
-      "code": "FS1E.5",
+      "code": "FS1E.5.D.1",
       "scope": "Einfache Absichten mit going to verstehen und schreiben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1",
+      "additionalReferences": [
+        {
+          "code": "FS1E.4.A.1",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/future-plans-5-arbeitsblatt.pdf",
-        "sha256": "fd2f13aa7ea75619c993c4c526996af5b2986b3fa50c55ff16960fa61bc48530",
-        "bytes": 858805
+        "path": "revisions/20261004/pdfs/5/english/future-plans-5-arbeitsblatt.pdf",
+        "sha256": "0942d1175f444302c8f46287db0808d09838a93e3cfd0c9b389c1550664e6bdd",
+        "bytes": 858988
       },
       "solution": {
-        "path": "pdfs/5/english/future-plans-5-loesungen.pdf",
-        "sha256": "2491a093f0566da5b4b38033940f8f410fbc8bc83cf013c334581b1b7ed6f0d6",
-        "bytes": 882583
+        "path": "revisions/20261004/pdfs/5/english/future-plans-5-loesungen.pdf",
+        "sha256": "260cbf59fbdf92090e9accf7139898730d7b555398c492c4d96d7192001d9427",
+        "bytes": 884001
       }
     }
   },
@@ -5710,20 +5722,26 @@
     "topicId": "past-experiences-5",
     "title": "Past Experiences",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Einem kurzen Erlebnisbericht Informationen entnehmen und häufige Vergangenheitsformen nutzen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1E.4.A.1",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/past-experiences-5-arbeitsblatt.pdf",
-        "sha256": "3e5b6b539eb369660baa70d4814e7682b6c2fdf00e9bbfa1bb263dc7597f05d1",
-        "bytes": 859034
+        "path": "revisions/20261004/pdfs/5/english/past-experiences-5-arbeitsblatt.pdf",
+        "sha256": "4c7394352ceb328446924f9944fbe3e7e027fc932945286d6950345b9e7965ed",
+        "bytes": 858998
       },
       "solution": {
-        "path": "pdfs/5/english/past-experiences-5-loesungen.pdf",
-        "sha256": "8f1a782bdf10675ec83bb19768893a1949a94777e0426b67896dd128cd5446c5",
-        "bytes": 886564
+        "path": "revisions/20261004/pdfs/5/english/past-experiences-5-loesungen.pdf",
+        "sha256": "fc59931fbb5b99cab99cd11fd878a14a17c95e9e8c2cce71467090ec731b00fa",
+        "bytes": 887445
       }
     }
   },
@@ -5734,20 +5752,26 @@
     "topicId": "environment-5",
     "title": "Environment & Nature",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Einen kurzen Umwelttext verstehen und eine einfache Regel formulieren. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1E.4.A.1",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/environment-5-arbeitsblatt.pdf",
-        "sha256": "9c402a3797c07d15b2b6b9c6d9db0557a8d4c634e635904165ffa2b4fc6b970c",
-        "bytes": 858799
+        "path": "revisions/20261004/pdfs/5/english/environment-5-arbeitsblatt.pdf",
+        "sha256": "4a5440ba3144d3cc8b54364166f4b4fbe4dec72b951fc44490a0d0c13fc7c400",
+        "bytes": 858853
       },
       "solution": {
-        "path": "pdfs/5/english/environment-5-loesungen.pdf",
-        "sha256": "95209a7db85fd12325235e575f4b7b5546d623dfad17e0ebaffd04f67b451b05",
-        "bytes": 885917
+        "path": "revisions/20261004/pdfs/5/english/environment-5-loesungen.pdf",
+        "sha256": "8140e0a962645637c1b83801cf9dd7765e99b7fa8678c7bc64c833b4dd2a8f3e",
+        "bytes": 886917
       }
     }
   },
@@ -5758,20 +5782,26 @@
     "topicId": "technology-5",
     "title": "Technology & Media",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Digitale Alltagssprache und eine sichere Regel verstehen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1E.4.A.1",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/technology-5-arbeitsblatt.pdf",
-        "sha256": "cdede89d6d554cbddb55401c2337eb4a3f6ffebb09e026bb1795f4a7d6b6c411",
-        "bytes": 857669
+        "path": "revisions/20261004/pdfs/5/english/technology-5-arbeitsblatt.pdf",
+        "sha256": "283301d11f2edb3c55e18232f2fcc17a0e1cef5a576980bac9d36c095dc5c359",
+        "bytes": 857381
       },
       "solution": {
-        "path": "pdfs/5/english/technology-5-loesungen.pdf",
-        "sha256": "cf09f84e8cbf1365ee62cf4bd1d2a15361e8c54707d756ff827ef7314f794234",
-        "bytes": 884049
+        "path": "revisions/20261004/pdfs/5/english/technology-5-loesungen.pdf",
+        "sha256": "d66acc0d05b4542a199dd47c873d3a8088c55ab097a64a64282c4b0795448eca",
+        "bytes": 884772
       }
     }
   },
@@ -5782,20 +5812,26 @@
     "topicId": "countries-cultures-5",
     "title": "Countries & Cultures",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Angaben über erfundene Personen verstehen, ohne kulturelle Stereotype abzuleiten. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1E.4.A.1",
+          "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/countries-cultures-5-arbeitsblatt.pdf",
-        "sha256": "33890e97818683e0dcc54c9d152fc2dbbfb83dc385cb375589c790b7c56eb8fc",
-        "bytes": 858146
+        "path": "revisions/20261004/pdfs/5/english/countries-cultures-5-arbeitsblatt.pdf",
+        "sha256": "9c22f87bcf8d40b19957afc5864bd981d435aba0b2846139660cf7a2b158a891",
+        "bytes": 857857
       },
       "solution": {
-        "path": "pdfs/5/english/countries-cultures-5-loesungen.pdf",
-        "sha256": "1b6821ee99339704e3c7d9f0898349a8d4f453be7bb663219110c5efa662692f",
-        "bytes": 885888
+        "path": "revisions/20261004/pdfs/5/english/countries-cultures-5-loesungen.pdf",
+        "sha256": "1290ce342de9989577e360a2e835a458a82c3ca7e8e6261fddd7e2b67d1f633f",
+        "bytes": 886600
       }
     }
   },
@@ -5806,20 +5842,20 @@
     "topicId": "modal-verbs-5",
     "title": "Modal Verbs",
     "curriculum": {
-      "code": "FS1E.5",
-      "scope": "Fähigkeit, Verbot und Rat mit ausgewählten Modalverben unterscheiden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "code": "FS1E.5.D.1",
+      "scope": "Ausgewählte Modalverben als gestützte Satzmuster verstehen und nutzen. Zusatz nach Lernstand, keine allgemeine Klassenanforderung. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/modal-verbs-5-arbeitsblatt.pdf",
-        "sha256": "e667befa5dfdbbf1602227027b213843d06520a17df39a8c852954e707f5c003",
-        "bytes": 855391
+        "path": "revisions/20261004/pdfs/5/english/modal-verbs-5-arbeitsblatt.pdf",
+        "sha256": "e958ebe88468f9ae2fb35efcd352187fb09b2841e11611b481a906e0756de01c",
+        "bytes": 856086
       },
       "solution": {
-        "path": "pdfs/5/english/modal-verbs-5-loesungen.pdf",
-        "sha256": "52147b57ec73f73c3f63d0e0fc10f4ef01fef08374f3d09fc3ee5f65b63cc895",
-        "bytes": 880820
+        "path": "revisions/20261004/pdfs/5/english/modal-verbs-5-loesungen.pdf",
+        "sha256": "92550d737bcc4ad3338093e5440c4f0eceef07d9df00ffec53e300b98a086983",
+        "bytes": 880649
       }
     }
   },
@@ -5830,20 +5866,20 @@
     "topicId": "storytelling-5",
     "title": "Storytelling",
     "curriculum": {
-      "code": "FS1E.4",
+      "code": "FS1E.4.A.1",
       "scope": "Eine kurze Geschichte mit zeitlichen Verbindungswörtern ordnen und schreiben. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/storytelling-5-arbeitsblatt.pdf",
-        "sha256": "a39924b7adadca29eb6ace6e90856d9827e8a6b42c46aa0dcb1519c838208f86",
-        "bytes": 856394
+        "path": "revisions/20261004/pdfs/5/english/storytelling-5-arbeitsblatt.pdf",
+        "sha256": "c8257fa69dcdfec1775cd24dba7dad357855c49f1592f5c75edb2152d5e2e32e",
+        "bytes": 856106
       },
       "solution": {
-        "path": "pdfs/5/english/storytelling-5-loesungen.pdf",
-        "sha256": "fc1fac57e87815d414079f2ad4f2d3eba2f871568f6d04b052d5da0112f88d1e",
-        "bytes": 882818
+        "path": "revisions/20261004/pdfs/5/english/storytelling-5-loesungen.pdf",
+        "sha256": "414c7b78a17c941bc101ee0a23c25cd741bcb7a220d097f71973424181d02c94",
+        "bytes": 882182
       }
     }
   },
@@ -5854,20 +5890,20 @@
     "topicId": "reading-comp-5",
     "title": "Reading Comprehension",
     "curriculum": {
-      "code": "FS1E.2",
+      "code": "FS1E.2.A.1",
       "scope": "Explizite Textangaben von unbelegten Ergänzungen unterscheiden. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
-      "url": "https://v-ef.lehrplan.ch/index.php?code=b%7C1%7C21"
+      "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/english/reading-comp-5-arbeitsblatt.pdf",
-        "sha256": "2ba653dd9f7c66e94c219211f484e2f0c792e532d79e7a1b2edb46b0ba5f65dc",
-        "bytes": 856414
+        "path": "revisions/20261004/pdfs/5/english/reading-comp-5-arbeitsblatt.pdf",
+        "sha256": "a0bb51c04acd19bef0cbc2e731b6fb96f03f352dbcf05fd9e6b537de52017122",
+        "bytes": 856138
       },
       "solution": {
-        "path": "pdfs/5/english/reading-comp-5-loesungen.pdf",
-        "sha256": "dce68b41d31e1b7857ab29c8836c5e75269a3c79f316c45b1944f959d7d35a5a",
-        "bytes": 882493
+        "path": "revisions/20261004/pdfs/5/english/reading-comp-5-loesungen.pdf",
+        "sha256": "8d391683778f751928e688ac991a02680e287a01cd71dc9fae5ae2ac1a7bd9cc",
+        "bytes": 881891
       }
     }
   },

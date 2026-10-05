@@ -1,0 +1,71 @@
+{
+  "grade": 5,
+  "subject": "english",
+  "sourceId": "past-experiences-5",
+  "goal": "Yesterday Mia visited a museum. She went there by bus. She saw an old bicycle. After the visit, she wrote a short story. Die Geschichte ist erfunden. Vergangenheitsformen: go → went, see → saw, write → wrote.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wohin ging Mia?",
+          "answer": "In ein Museum."
+        },
+        {
+          "prompt": "Wie kam sie dorthin?",
+          "answer": "Mit dem Bus."
+        },
+        {
+          "prompt": "Was sah sie?",
+          "answer": "Ein altes Fahrrad."
+        },
+        {
+          "prompt": "Was schrieb sie danach?",
+          "answer": "Eine kurze Geschichte."
+        }
+      ]
+    },
+    {
+      "title": "Wähle die Vergangenheitsform.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Yesterday I __ a friend. (see / saw)",
+          "answer": "saw",
+          "wide": true
+        },
+        {
+          "prompt": "Yesterday we __ by bus. (go / went)",
+          "answer": "went",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe mit den Hilfen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen erfundenen Satz mit «Yesterday I ...». Nutze visited a museum oder wrote a story.",
+          "answer": "Beispiel: Yesterday I wrote a story. Passender vollständiger Vergangenheitsatz gilt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.2.A.1",
+    "scope": "Einem kurzen Erlebnisbericht Informationen entnehmen und häufige Vergangenheitsformen nutzen. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1E.4.A.1",
+        "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

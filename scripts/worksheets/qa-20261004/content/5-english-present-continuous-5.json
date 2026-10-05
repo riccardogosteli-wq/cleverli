@@ -1,0 +1,73 @@
+{
+  "grade": 5,
+  "subject": "english",
+  "sourceId": "present-continuous-5",
+  "goal": "Das Present Continuous beschreibt hier, was gerade passiert: am/is/are + Verb mit -ing. I am reading. She is playing. They are swimming. Beachte die Schreibweise: write → writing, swim → swimming.",
+  "sections": [
+    {
+      "title": "Ergänze am, is oder are.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "I __ reading.",
+          "answer": "am"
+        },
+        {
+          "prompt": "She __ drawing.",
+          "answer": "is"
+        },
+        {
+          "prompt": "We __ playing.",
+          "answer": "are"
+        },
+        {
+          "prompt": "They __ swimming.",
+          "answer": "are"
+        }
+      ]
+    },
+    {
+      "title": "Bilde den ganzen Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "He / write / now",
+          "answer": "He is writing now.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "We / swim / now",
+          "answer": "We are swimming now.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Verneine.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe «She is reading.» verneint. Verwende is not.",
+          "answer": "She is not reading.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1E.5.D.1",
+    "scope": "Gegenwärtige Handlungen mit am/is/are und -ing ausdrücken. Englisch als erste Fremdsprache; Einsatz je nach kantonaler Sprachenfolge und Lernstand.",
+    "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|5|4|1",
+    "additionalReferences": [
+      {
+        "code": "FS1E.4.A.1",
+        "url": "https://v-ef.lehrplan.ch/index.php?code=a|1|21|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
