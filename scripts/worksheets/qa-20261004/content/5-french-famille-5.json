@@ -1,0 +1,74 @@
+{
+  "grade": 5,
+  "subject": "french",
+  "sourceId": "famille-5",
+  "goal": "Camille a un frère. Son frère s’appelle Noé. Ils ont une cousine, Léa. Le samedi, les trois enfants jouent ensemble. Diese Familie ist erfunden. Familien sind verschieden; du musst nichts Privates erzählen.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie heisst Camilles Bruder?",
+          "answer": "Noé."
+        },
+        {
+          "prompt": "Wie heisst die Cousine?",
+          "answer": "Léa."
+        },
+        {
+          "prompt": "Was machen die drei am Samstag?",
+          "answer": "Sie spielen zusammen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "un frère",
+          "answer": "ein Bruder"
+        },
+        {
+          "prompt": "une sœur",
+          "answer": "eine Schwester"
+        },
+        {
+          "prompt": "une cousine",
+          "answer": "eine Cousine"
+        },
+        {
+          "prompt": "un cousin",
+          "answer": "ein Cousin"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe über die erfundene Familie.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ordne die Wörter: un frère / Camille / a. Ergänze danach «Il s’appelle ...» mit dem Namen aus dem Text.",
+          "answer": "Camille a un frère. Il s’appelle Noé.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Familienwörter in einem fiktiven kurzen Text verstehen. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,85 @@
+{
+  "grade": 5,
+  "subject": "french",
+  "sourceId": "chiffres-5",
+  "goal": "Zahlen helfen im Alltag. In der Westschweiz ist septante für 70 üblich, nonante für 90. Für 80 hört man je nach Region huitante oder quatre-vingts. Dieses Blatt akzeptiert beide genannten Formen.",
+  "sections": [
+    {
+      "title": "Schreibe als Ziffern.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "quinze",
+          "answer": "15"
+        },
+        {
+          "prompt": "vingt-deux",
+          "answer": "22"
+        },
+        {
+          "prompt": "trente",
+          "answer": "30"
+        },
+        {
+          "prompt": "septante",
+          "answer": "70"
+        },
+        {
+          "prompt": "nonante",
+          "answer": "90"
+        },
+        {
+          "prompt": "cent",
+          "answer": "100"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe als französisches Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "16",
+          "answer": "seize"
+        },
+        {
+          "prompt": "40",
+          "answer": "quarante"
+        },
+        {
+          "prompt": "80",
+          "answer": "huitante / quatre-vingts"
+        },
+        {
+          "prompt": "50",
+          "answer": "cinquante"
+        }
+      ]
+    },
+    {
+      "title": "Lies eine Menge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Il y a douze livres et huit cahiers.» Wie viele Gegenstände sind es zusammen? Schreibe das Ergebnis als französisches Wort.",
+          "answer": "Vingt (20). 12 + 8 = 20.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.B.1",
+    "scope": "Häufige Zahlwörter und Schweizer Varianten bis hundert erkennen. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

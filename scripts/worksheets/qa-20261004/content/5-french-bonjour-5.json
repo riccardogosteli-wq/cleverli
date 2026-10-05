@@ -1,0 +1,71 @@
+{
+  "grade": 5,
+  "subject": "french",
+  "sourceId": "bonjour-5",
+  "goal": "Bonjour! ist eine höfliche Begrüssung. Salut! passt unter Bekannten. «Comment tu t’appelles?» fragt nach dem Namen. «Je m’appelle ...» nennt den Namen. Verwende erfundene Personen.",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bonjour!",
+          "answer": "Guten Tag! / Hallo!"
+        },
+        {
+          "prompt": "Au revoir!",
+          "answer": "Auf Wiedersehen!"
+        },
+        {
+          "prompt": "Merci!",
+          "answer": "Danke!"
+        },
+        {
+          "prompt": "À bientôt!",
+          "answer": "Bis bald!"
+        }
+      ]
+    },
+    {
+      "title": "Ergänze den Dialog.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Comment tu t’__? (appelles / appelle)",
+          "answer": "appelles",
+          "wide": true
+        },
+        {
+          "prompt": "Je m’__ Léa. (appelles / appelle)",
+          "answer": "appelle",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Mini-Dialog.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Begrüsse jemanden auf Französisch und stelle dich mit einem erfundenen Namen vor. Schreibe zwei Sätze.",
+          "answer": "Beispiel: Bonjour! Je m’appelle Noé. Andere erfundene Namen und passende Begrüssungen gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.B.1",
+    "scope": "Begrüssungen und eine einfache Vorstellung verstehen und schreiben. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

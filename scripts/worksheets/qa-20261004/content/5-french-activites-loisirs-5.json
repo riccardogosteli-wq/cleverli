@@ -1,0 +1,68 @@
+{
+  "grade": 5,
+  "subject": "french",
+  "sourceId": "activites-loisirs-5",
+  "goal": "Mia aime dessiner. Noé aime lire. Le samedi, ils jouent ensemble. Aimer + Grundform beschreibt hier eine Vorliebe. «Je n’aime pas ...» drückt aus, dass man etwas nicht gern macht. Du darfst Vorlieben erfinden.",
+  "sections": [
+    {
+      "title": "Lies die Vorlieben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was macht Mia gern?",
+          "answer": "Zeichnen."
+        },
+        {
+          "prompt": "Was macht Noé gern?",
+          "answer": "Lesen."
+        },
+        {
+          "prompt": "Was machen sie am Samstag zusammen?",
+          "answer": "Spielen.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze das passende Verb.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "J’__ lire. (aime / aiment)",
+          "answer": "aime",
+          "wide": true
+        },
+        {
+          "prompt": "Mia __ dessiner. (aime / aiment)",
+          "answer": "aime",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe zwei erfundene Vorlieben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen Satz mit «J’aime ...» und einen mit «Je n’aime pas ...». Nutze lire, dessiner oder nager.",
+          "answer": "Beispiel: J’aime lire. Je n’aime pas nager. Passende Grundformen und Verneinung; keine Bewertung der Vorlieben.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.D.1",
+    "scope": "Vorlieben mit aimer und eine einfache Verneinung formulieren. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

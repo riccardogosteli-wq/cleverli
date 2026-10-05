@@ -1,0 +1,74 @@
+{
+  "grade": 5,
+  "subject": "french",
+  "sourceId": "ecole-5",
+  "goal": "Dans mon sac, il y a un livre, un cahier, une règle et deux crayons. Un livre ist ein Buch, un cahier ein Heft, une règle ein Lineal und un crayon ein Bleistift.",
+  "sections": [
+    {
+      "title": "Lies genau.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Bleistifte sind in der Tasche?",
+          "answer": "2"
+        },
+        {
+          "prompt": "Ist laut Text ein Lineal in der Tasche?",
+          "answer": "Ja"
+        },
+        {
+          "prompt": "Was bedeutet un cahier?",
+          "answer": "Ein Heft.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Ergänze un oder une.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "__ livre",
+          "answer": "un"
+        },
+        {
+          "prompt": "__ règle",
+          "answer": "une"
+        },
+        {
+          "prompt": "__ cahier",
+          "answer": "un"
+        },
+        {
+          "prompt": "__ crayon",
+          "answer": "un"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe mit dem Muster.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei Sätze mit «Il y a ...». Nutze un livre und une règle.",
+          "answer": "Il y a un livre. Il y a une règle.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.B.1",
+    "scope": "Schulwortschatz mit passenden un/une-Formen verwenden. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

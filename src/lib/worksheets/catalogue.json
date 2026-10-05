@@ -5446,20 +5446,26 @@
     "topicId": "bonjour-5",
     "title": "Bonjour! — Salutations",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.B.1",
       "scope": "Begrüssungen und eine einfache Vorstellung verstehen und schreiben. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/bonjour-5-arbeitsblatt.pdf",
-        "sha256": "bc64a9e146c18c03cf03f18403be486ec6cc691a328aea8cf5122abf1f42df2f",
-        "bytes": 861535
+        "path": "revisions/20261004/pdfs/5/french/bonjour-5-arbeitsblatt.pdf",
+        "sha256": "466d8a24d5141ead6c201009b7bedf037c4cf75a98ff113b5773ee7ab472c0ce",
+        "bytes": 861470
       },
       "solution": {
-        "path": "pdfs/5/french/bonjour-5-loesungen.pdf",
-        "sha256": "40576208a6c1b87feacde0d8e73719153d4bbcbe27c85d4404ba7d80377bf708",
-        "bytes": 887820
+        "path": "revisions/20261004/pdfs/5/french/bonjour-5-loesungen.pdf",
+        "sha256": "09ac7d69b1fb3c4b80e4c40a089c4d0712760de24893c299c483ba4036d889da",
+        "bytes": 888669
       }
     }
   },
@@ -5470,20 +5476,26 @@
     "topicId": "chiffres-5",
     "title": "Les chiffres",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.B.1",
       "scope": "Häufige Zahlwörter und Schweizer Varianten bis hundert erkennen. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/chiffres-5-arbeitsblatt.pdf",
-        "sha256": "c71010d78e39ded9edc3e48cd30476daec17cbb7073679720ee94b234ad1c4ee",
-        "bytes": 862135
+        "path": "revisions/20261004/pdfs/5/french/chiffres-5-arbeitsblatt.pdf",
+        "sha256": "14e2cf37c89b79d2e40c398ecabca96ce56eff3337e8ffa897762670593ae73f",
+        "bytes": 861836
       },
       "solution": {
-        "path": "pdfs/5/french/chiffres-5-loesungen.pdf",
-        "sha256": "e2470773d0666bf3127c1eb27edb3f92432bea8624202a962a1e8922093112b4",
-        "bytes": 887591
+        "path": "revisions/20261004/pdfs/5/french/chiffres-5-loesungen.pdf",
+        "sha256": "8d7b00a34685162598a0897f0ab9330c81e8d6ce5374b452a8be5afa2a31caf3",
+        "bytes": 888285
       }
     }
   },
@@ -5494,20 +5506,26 @@
     "topicId": "famille-5",
     "title": "La famille",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Familienwörter in einem fiktiven kurzen Text verstehen. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/famille-5-arbeitsblatt.pdf",
-        "sha256": "c517248e425d5bb886683c8169a86d8597166ad3ec8ac76f70e859c6e5e35ff1",
-        "bytes": 857521
+        "path": "revisions/20261004/pdfs/5/french/famille-5-arbeitsblatt.pdf",
+        "sha256": "cef8a83ce7e3cd11e89a33da8bbbfb5064e0e2b9cb764b71e3771f23b64c7e98",
+        "bytes": 856726
       },
       "solution": {
-        "path": "pdfs/5/french/famille-5-loesungen.pdf",
-        "sha256": "e5e7286652bfece3fd97a7a1149faf7c7726eca97f3fcd6f4926184f8c164a2b",
-        "bytes": 884063
+        "path": "revisions/20261004/pdfs/5/french/famille-5-loesungen.pdf",
+        "sha256": "53524c1c1e21f869aa3c6db8257047ed6653fbcfbb278f5d71afd998138de74a",
+        "bytes": 884243
       }
     }
   },
@@ -5518,20 +5536,26 @@
     "topicId": "ecole-5",
     "title": "L'école",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.B.1",
       "scope": "Schulwortschatz mit passenden un/une-Formen verwenden. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/ecole-5-arbeitsblatt.pdf",
-        "sha256": "850ba38188d3c44e7b19bb1e01308bfceced23d3a241ff0925385d2fde998228",
-        "bytes": 853908
+        "path": "revisions/20261004/pdfs/5/french/ecole-5-arbeitsblatt.pdf",
+        "sha256": "4697eadbc67a87c35915a81b4b3f6017dcb25d8c7f43e86c3929256cd417312b",
+        "bytes": 853582
       },
       "solution": {
-        "path": "pdfs/5/french/ecole-5-loesungen.pdf",
-        "sha256": "dc31efacb1d87ce78632460646023269b470f3bde8f0e42544d205ad2d46bc0a",
-        "bytes": 876518
+        "path": "revisions/20261004/pdfs/5/french/ecole-5-loesungen.pdf",
+        "sha256": "08988cc6d2cbc673952d72fe6c33ed99a7a40bceb17f18b27add640049327736",
+        "bytes": 877131
       }
     }
   },
@@ -5542,20 +5566,26 @@
     "topicId": "nourriture-5",
     "title": "Nourriture & boissons",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.B.1",
       "scope": "Lebensmittelwörter und eine höfliche Bitte verwenden. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/nourriture-5-arbeitsblatt.pdf",
-        "sha256": "64e923de3ec827c6969c33d519e780062f08329fbcce69d999b17e08e6c24f94",
-        "bytes": 857255
+        "path": "revisions/20261004/pdfs/5/french/nourriture-5-arbeitsblatt.pdf",
+        "sha256": "ac4327633b74694ac7bb7e0a4f4f82cf6270043f953ba44443b1528144bf51c3",
+        "bytes": 856970
       },
       "solution": {
-        "path": "pdfs/5/french/nourriture-5-loesungen.pdf",
-        "sha256": "91cd9b064559765bf61438b166fc75378375aa535c82d6bdc8a909aef438d7fb",
-        "bytes": 880704
+        "path": "revisions/20261004/pdfs/5/french/nourriture-5-loesungen.pdf",
+        "sha256": "aba590ff68558119afba22fbc7b1d26a95a35d5f64b7468090d7e693ac97f991",
+        "bytes": 881408
       }
     }
   },
@@ -5566,20 +5596,26 @@
     "topicId": "couleurs-description-5",
     "title": "Couleurs & Description",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.D.1",
       "scope": "Einfache Farbadjektive an ausgewählte Nomen anpassen. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/couleurs-description-5-arbeitsblatt.pdf",
-        "sha256": "4963f8779283c515e2f71969f3a035ed34347175cfd349394a4cd81ad27490c0",
-        "bytes": 859185
+        "path": "revisions/20261004/pdfs/5/french/couleurs-description-5-arbeitsblatt.pdf",
+        "sha256": "2627f2541cb06a25319e9ee2bf91078aa63195fffc768522296118bc0081d763",
+        "bytes": 859377
       },
       "solution": {
-        "path": "pdfs/5/french/couleurs-description-5-loesungen.pdf",
-        "sha256": "25c947e729c8d519e255441113fbda1a911f4575f5bd67f16e43f1a134b69a44",
-        "bytes": 881487
+        "path": "revisions/20261004/pdfs/5/french/couleurs-description-5-loesungen.pdf",
+        "sha256": "2a0ad1a4bb363b348fd3898f3b3f560e51ee340271e1749045b6e21ddeb81bd6",
+        "bytes": 882864
       }
     }
   },
@@ -5590,20 +5626,26 @@
     "topicId": "verbes-etre-avoir-5",
     "title": "Être & Avoir",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.D.1",
       "scope": "Häufige Formen von être und avoir unterscheiden und im Satz verwenden. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/verbes-etre-avoir-5-arbeitsblatt.pdf",
-        "sha256": "a82eadd909fd8c4f08b1875d64e31eaa0587f344c6c07652c527e42f95cc78a2",
-        "bytes": 855824
+        "path": "revisions/20261004/pdfs/5/french/verbes-etre-avoir-5-arbeitsblatt.pdf",
+        "sha256": "ad4ddb0bdc739c8eb80952094f73173572760d051b37e919de42aa1abc966e03",
+        "bytes": 856007
       },
       "solution": {
-        "path": "pdfs/5/french/verbes-etre-avoir-5-loesungen.pdf",
-        "sha256": "eeccd3aad971954d4cf0fcb2ea22e6aa75c00bfc75539920c277c8454d558f8b",
-        "bytes": 879541
+        "path": "revisions/20261004/pdfs/5/french/verbes-etre-avoir-5-loesungen.pdf",
+        "sha256": "c4d6ac65e234d0a44e0dea70f82ed8d3c9099c1931b94fb64b7ec443b5ad1915",
+        "bytes": 881011
       }
     }
   },
@@ -5614,20 +5656,26 @@
     "topicId": "animaux-5",
     "title": "Les animaux",
     "curriculum": {
-      "code": "FS1F.2",
+      "code": "FS1F.2.A.1",
       "scope": "Tierwörter und einfache Tätigkeiten aus einem Text verstehen. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/animaux-5-arbeitsblatt.pdf",
-        "sha256": "7b7d999d1d39f68b494e72b03509f6a78c67b92f33d03e1813138b4adb50dbdb",
-        "bytes": 855907
+        "path": "revisions/20261004/pdfs/5/french/animaux-5-arbeitsblatt.pdf",
+        "sha256": "9ad2007a60697120ec8b3b7bffe2936aa8f97f0e43c37fbc28d96e3c2c068bdd",
+        "bytes": 855620
       },
       "solution": {
-        "path": "pdfs/5/french/animaux-5-loesungen.pdf",
-        "sha256": "141cada89c1883e903eb15c60a7f00734b14e3604b87cf7cf10f9685e358b302",
-        "bytes": 879896
+        "path": "revisions/20261004/pdfs/5/french/animaux-5-loesungen.pdf",
+        "sha256": "67f7935b843a6147da5198a87066c38febb2d12572cbb185c3beb56d827c79fa",
+        "bytes": 880595
       }
     }
   },
@@ -5638,20 +5686,26 @@
     "topicId": "activites-loisirs-5",
     "title": "Activités & loisirs",
     "curriculum": {
-      "code": "FS1F.5",
+      "code": "FS1F.5.D.1",
       "scope": "Vorlieben mit aimer und eine einfache Verneinung formulieren. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C23"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1",
+      "additionalReferences": [
+        {
+          "code": "FS1F.4.A.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/french/activites-loisirs-5-arbeitsblatt.pdf",
-        "sha256": "59f75fb32be74507a6b4258b609ac1f599b71073ae63da3e043b25124a745748",
-        "bytes": 857903
+        "path": "revisions/20261004/pdfs/5/french/activites-loisirs-5-arbeitsblatt.pdf",
+        "sha256": "8b3b70596e07522f595799a70f5a4fd2256749d3ea861e646c879d1b655ce5be",
+        "bytes": 857841
       },
       "solution": {
-        "path": "pdfs/5/french/activites-loisirs-5-loesungen.pdf",
-        "sha256": "5e5c90f408acc56b83defedb7f720ff502a59008ce9af25edf247a3db69dc1d6",
-        "bytes": 883816
+        "path": "revisions/20261004/pdfs/5/french/activites-loisirs-5-loesungen.pdf",
+        "sha256": "4fa1e2761f9ba16ae96a6b7055ea94b74f30ae7e30d6775e4592c9105bad34a1",
+        "bytes": 884896
       }
     }
   },

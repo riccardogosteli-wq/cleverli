@@ -1,0 +1,71 @@
+{
+  "grade": 5,
+  "subject": "french",
+  "sourceId": "nourriture-5",
+  "goal": "Le pain = das Brot, le fromage = der Käse, une pomme = ein Apfel, l’eau = das Wasser. «J’aime ...» beschreibt eine Vorliebe. «Je voudrais ..., s’il vous plaît.» ist eine höfliche Bitte.",
+  "sections": [
+    {
+      "title": "Schreibe die deutschen Bedeutungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "le pain",
+          "answer": "das Brot"
+        },
+        {
+          "prompt": "le fromage",
+          "answer": "der Käse"
+        },
+        {
+          "prompt": "une pomme",
+          "answer": "ein Apfel"
+        },
+        {
+          "prompt": "l’eau",
+          "answer": "das Wasser"
+        }
+      ]
+    },
+    {
+      "title": "Lies die Vorlieben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Léa aime les pommes. Noé aime le fromage.» Was mag Léa?",
+          "answer": "Äpfel.",
+          "wide": true
+        },
+        {
+          "prompt": "Was mag Noé?",
+          "answer": "Käse.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Bestelle höflich.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Bitte auf Französisch um einen Apfel. Verwende «Je voudrais ...» und «s’il vous plaît».",
+          "answer": "Je voudrais une pomme, s’il vous plaît.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.B.1",
+    "scope": "Lebensmittelwörter und eine höfliche Bitte verwenden. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|2|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

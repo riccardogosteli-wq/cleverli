@@ -1,0 +1,71 @@
+{
+  "grade": 5,
+  "subject": "french",
+  "sourceId": "couleurs-description-5",
+  "goal": "Adjektive passen sich oft an: un sac vert, une règle verte. Bei rouge bleibt die Form hier gleich. Für den Plural steht meist ein s: des sacs verts. Die Aufgaben funktionieren auch ohne Farbstifte.",
+  "sections": [
+    {
+      "title": "Wähle die passende Form.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "un sac __ (vert / verte)",
+          "answer": "vert"
+        },
+        {
+          "prompt": "une règle __ (vert / verte)",
+          "answer": "verte"
+        },
+        {
+          "prompt": "des sacs __ (vert / verts)",
+          "answer": "verts"
+        },
+        {
+          "prompt": "une pomme __ (rouge / rouges)",
+          "answer": "rouge"
+        }
+      ]
+    },
+    {
+      "title": "Verstehe die Beschreibung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Le livre est bleu. La règle est verte.» Welche Farbe hat das Buch?",
+          "answer": "Blau.",
+          "wide": true
+        },
+        {
+          "prompt": "Welche Farbe hat das Lineal?",
+          "answer": "Grün.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe eine Beschreibung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe «Der Bleistift ist grün» auf Französisch. Verwende Le crayon, est und vert.",
+          "answer": "Le crayon est vert.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.5.D.1",
+    "scope": "Einfache Farbadjektive an ausgewählte Nomen anpassen. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|5|4|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,74 @@
+{
+  "grade": 5,
+  "subject": "french",
+  "sourceId": "animaux-5",
+  "goal": "Le chat dort sur le canapé. Le chien joue dans le jardin. Le poisson nage dans l’eau. Diese Tiere und Situationen sind erfunden. Dort = schläft, joue = spielt, nage = schwimmt.",
+  "sections": [
+    {
+      "title": "Lies und antworte auf Deutsch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welches Tier schläft?",
+          "answer": "Die Katze."
+        },
+        {
+          "prompt": "Wo spielt der Hund?",
+          "answer": "Im Garten."
+        },
+        {
+          "prompt": "Was macht der Fisch?",
+          "answer": "Er schwimmt.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Schreibe die französischen Tierwörter mit Artikel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "die Katze",
+          "answer": "le chat"
+        },
+        {
+          "prompt": "der Hund",
+          "answer": "le chien"
+        },
+        {
+          "prompt": "der Fisch",
+          "answer": "le poisson"
+        },
+        {
+          "prompt": "der Vogel",
+          "answer": "l’oiseau"
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ordne: dans l’eau / nage / Le poisson",
+          "answer": "Le poisson nage dans l’eau.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "FS1F.2.A.1",
+    "scope": "Tierwörter und einfache Tätigkeiten aus einem Text verstehen. Französisch je nach kantonaler Sprachenfolge und Lernstand; Grundlagentraining, kein Beleg vollständiger Klassenkompetenz. Bezug auf erste Fremdsprache Französisch.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|2|1|1",
+    "additionalReferences": [
+      {
+        "code": "FS1F.4.A.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|23|4|1|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
