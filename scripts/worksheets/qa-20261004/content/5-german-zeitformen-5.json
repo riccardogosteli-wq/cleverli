@@ -1,0 +1,66 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "zeitformen-5",
+  "goal": "Präsens: ich spiele. Präteritum: ich spielte. Perfekt: ich habe gespielt. Manche Verben sind unregelmässig: gehen → ging → ist gegangen. Mit Zeitformen kannst du Ereignisse zeitlich einordnen.",
+  "sections": [
+    {
+      "title": "Benenne die Zeitform.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Mia liest ein Buch.",
+          "answer": "Präsens",
+          "wide": true
+        },
+        {
+          "prompt": "Mia las ein Buch.",
+          "answer": "Präteritum",
+          "wide": true
+        },
+        {
+          "prompt": "Mia hat ein Buch gelesen.",
+          "answer": "Perfekt",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Setze um.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Wir spielen im Park.» Schreibe im Präteritum.",
+          "answer": "Wir spielten im Park.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "«Ben geht nach Hause.» Schreibe im Perfekt.",
+          "answer": "Ben ist nach Hause gegangen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen Vergangenheitsbericht.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe zwei zusammenhängende erfundene Sätze im Präteritum. Nutze fand und brachte.",
+          "answer": "Beispiel: Mia fand einen Ball. Sie brachte ihn zur Lehrerin. Beide Verben im Präteritum und sinnvoller Zusammenhang.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Präsens, Präteritum und Perfekt bei häufigen Verben unterscheiden und bilden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

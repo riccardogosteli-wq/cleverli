@@ -4660,20 +4660,20 @@
     "topicId": "direkte-rede",
     "title": "Direkte Rede",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.E.1",
       "scope": "Direkte Rede mit vor- und nachgestelltem Begleitsatz kennzeichnen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/direkte-rede-arbeitsblatt.pdf",
-        "sha256": "53019ea885af17fbd3d18e5dccad9236ae01efa0ecb815ba843e25cd6c00adbf",
-        "bytes": 857807
+        "path": "revisions/20261004/pdfs/5/german/direkte-rede-arbeitsblatt.pdf",
+        "sha256": "d4444c51e3dc08ea4b904c89354b20d8706d080239cf673a169cc28c26f82e02",
+        "bytes": 857514
       },
       "solution": {
-        "path": "pdfs/5/german/direkte-rede-loesungen.pdf",
-        "sha256": "4f16c68bd43900159cd3b93d35bfb7dfc63e7855c6fc8488a25cf73fc58f9e86",
-        "bytes": 886328
+        "path": "revisions/20261004/pdfs/5/german/direkte-rede-loesungen.pdf",
+        "sha256": "917c840a95f13adf1cd326bc44c10bebd9d25c12446cb5044f7e4903b965adc6",
+        "bytes": 885671
       }
     }
   },
@@ -4684,20 +4684,20 @@
     "topicId": "synonyme-antonyme",
     "title": "Synonyme und Antonyme",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.A.1",
       "scope": "Bedeutungsähnliche Wörter und Gegensätze im Satzkontext unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/synonyme-antonyme-arbeitsblatt.pdf",
-        "sha256": "e59bf4efc5860405974a43a9653f5a4d006052d3e6f11b026cb4ed5c02990a03",
-        "bytes": 857532
+        "path": "revisions/20261004/pdfs/5/german/synonyme-antonyme-arbeitsblatt.pdf",
+        "sha256": "109ab18ba6f13b5ec6f23f3cc0d9dbb922c25a49fa6a96b700051b140c91652b",
+        "bytes": 857243
       },
       "solution": {
-        "path": "pdfs/5/german/synonyme-antonyme-loesungen.pdf",
-        "sha256": "a5cec93cce7f63630a46af63cf4f1605f513cf5f8b792917848b58073378bce1",
-        "bytes": 884803
+        "path": "revisions/20261004/pdfs/5/german/synonyme-antonyme-loesungen.pdf",
+        "sha256": "17843e3849c918009f9b847c26794e6adc38723ed3bbf03e8bae74a0f54f8ea6",
+        "bytes": 884160
       }
     }
   },
@@ -4708,20 +4708,26 @@
     "topicId": "aufsatz-aufbau",
     "title": "Aufsatz schreiben",
     "curriculum": {
-      "code": "D.4",
+      "code": "D.4.B.1",
       "scope": "Eine kurze Erzählung planen, entwickeln und mit einfachen Kriterien prüfen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|2|1",
+      "additionalReferences": [
+        {
+          "code": "D.4.D.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/aufsatz-aufbau-arbeitsblatt.pdf",
-        "sha256": "ff47d4f5d1a7ed78dc666d63ef93c3956d4daf9328e9b9da40464664f4d3ec47",
-        "bytes": 857556
+        "path": "revisions/20261004/pdfs/5/german/aufsatz-aufbau-arbeitsblatt.pdf",
+        "sha256": "9c26eaad3f765a30415931fec6f9cde4ae5f51e3dcdb5ad83da611b74430dbae",
+        "bytes": 857342
       },
       "solution": {
-        "path": "pdfs/5/german/aufsatz-aufbau-loesungen.pdf",
-        "sha256": "77dd32770f948cf677eb5e3ca4ddc75950896a97d9772bb0820c04d97458187d",
-        "bytes": 885481
+        "path": "revisions/20261004/pdfs/5/german/aufsatz-aufbau-loesungen.pdf",
+        "sha256": "c88e0ab66ff773415b183f7ee5611785123e5b8d8ddca0a502610e0f3d813b8d",
+        "bytes": 885902
       }
     }
   },
@@ -4732,20 +4738,20 @@
     "topicId": "wortarten-5",
     "title": "Wortarten vertiefen",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Wortarten im Kontext und ein einfaches substantiviertes Verb erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.5.D.1",
+      "scope": "Nomen, Verben, Adjektive und Pronomen an Beispielen erkennen. Die Bezeichnung Präposition ist ein unterstützter Zusatz.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/wortarten-5-arbeitsblatt.pdf",
-        "sha256": "4ab5b66c1431665c11d2221bac2bb49981d52e93c4113a83e3026e2df0da0d02",
-        "bytes": 860308
+        "path": "revisions/20261004/pdfs/5/german/wortarten-5-arbeitsblatt.pdf",
+        "sha256": "468f8cb1a36a4018d819e72ec78dd9c877648fe0000022ec36e9cb393c2a84d9",
+        "bytes": 861984
       },
       "solution": {
-        "path": "pdfs/5/german/wortarten-5-loesungen.pdf",
-        "sha256": "db62c1796bbde5421db7dd49694aaaf120879395c77fc3f45ae38f1d51f041df",
-        "bytes": 888656
+        "path": "revisions/20261004/pdfs/5/german/wortarten-5-loesungen.pdf",
+        "sha256": "9150df609213eb99156388d013d822357015be545ec39020133711be16801457",
+        "bytes": 889751
       }
     }
   },
@@ -4756,20 +4762,20 @@
     "topicId": "zeitformen-5",
     "title": "Zeitformen",
     "curriculum": {
-      "code": "D.5",
+      "code": "D.5.D.1",
       "scope": "Präsens, Präteritum und Perfekt bei häufigen Verben unterscheiden und bilden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/zeitformen-5-arbeitsblatt.pdf",
-        "sha256": "f52ef00b7668a3d04d6e8a1015600c93fdf2c3a3f1d9c8ba34901e60275dd33b",
-        "bytes": 854181
+        "path": "revisions/20261004/pdfs/5/german/zeitformen-5-arbeitsblatt.pdf",
+        "sha256": "9174c3477e93d634eaf73a8a1cf2ae6daccc4374095f43d2cbbf8a6d745c119b",
+        "bytes": 853890
       },
       "solution": {
-        "path": "pdfs/5/german/zeitformen-5-loesungen.pdf",
-        "sha256": "c3969406c9c682af022a20d9c48156f8cd1a008d4b85424c1ba51014e83172f4",
-        "bytes": 882043
+        "path": "revisions/20261004/pdfs/5/german/zeitformen-5-loesungen.pdf",
+        "sha256": "8c45ca5358d7dbc5c7112d04ae9f873714dd243fce33195f3ef68fb846d4bdb9",
+        "bytes": 881390
       }
     }
   },
@@ -4780,20 +4786,20 @@
     "topicId": "satzarten-5",
     "title": "Satzarten & Satzglieder",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Satzarten, Subjekt und eine einfache Verschiebeprobe untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.5.A.1",
+      "scope": "Satzarten erkennen und Wortgruppen mit vorgegebenen Fragen und Umstellungen untersuchen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|1|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/satzarten-5-arbeitsblatt.pdf",
-        "sha256": "2165b439d52a3a1efa09e27116fc20c5933a44e77bed8ab8e28a42858982289f",
-        "bytes": 859972
+        "path": "revisions/20261004/pdfs/5/german/satzarten-5-arbeitsblatt.pdf",
+        "sha256": "00af9b98fbd9d32800985a56cea852ca3357ff90a737177d2b50eefc128f1ec8",
+        "bytes": 858897
       },
       "solution": {
-        "path": "pdfs/5/german/satzarten-5-loesungen.pdf",
-        "sha256": "20ad76c06bcd632773c328cc828c03c1079897430f8cf68ceee9a2e5f2a26761",
-        "bytes": 887960
+        "path": "revisions/20261004/pdfs/5/german/satzarten-5-loesungen.pdf",
+        "sha256": "c176abaaee3b21d33bc74887fffa699b4ba445888658b2eb20f653d3d0e28e33",
+        "bytes": 887272
       }
     }
   },
@@ -4804,20 +4810,20 @@
     "topicId": "rechtschreibung-5",
     "title": "Rechtschreibung",
     "curriculum": {
-      "code": "D.5",
-      "scope": "Verlängerung, Wortfamilien und Grossschreibung als Rechtschreibstrategien nutzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C5"
+      "code": "D.5.E.1",
+      "scope": "Wortfamilien, Verlängerungen und häufige Nomen üben. Die Schreibung beim Lesen ist ein unterstützter Zusatz, keine allgemeine Klassenanforderung.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/rechtschreibung-5-arbeitsblatt.pdf",
-        "sha256": "3fff6755a4935de115e29e8958f7bed4d8d9af8db74fe303041e5a531a0aac93",
-        "bytes": 858097
+        "path": "revisions/20261004/pdfs/5/german/rechtschreibung-5-arbeitsblatt.pdf",
+        "sha256": "1afd3f34576e0fa1765459d9c00f2dfd91e646f001ca1f00dfe3b1057ab2d5ae",
+        "bytes": 860654
       },
       "solution": {
-        "path": "pdfs/5/german/rechtschreibung-5-loesungen.pdf",
-        "sha256": "f1646ee7996fdf0e4cf42c5dcbfe2576182205699b5e0b995fe2c2a865ae4890",
-        "bytes": 884064
+        "path": "revisions/20261004/pdfs/5/german/rechtschreibung-5-loesungen.pdf",
+        "sha256": "cfb38af6b371f75962e61e443ad588f4860d27f805ee87c1b096e3da048517e6",
+        "bytes": 904464
       }
     }
   },
@@ -4828,20 +4834,20 @@
     "topicId": "leseverstaendnis-5",
     "title": "Leseverständnis",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.2.C.1",
       "scope": "Explizite Angaben, begründete Deutungen und unbelegte Vermutungen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/leseverstaendnis-5-arbeitsblatt.pdf",
-        "sha256": "fc73f1a67ccace1021791e21c0d8a73488b20242a0613bb3c0d67eb5ddf5c08f",
-        "bytes": 855796
+        "path": "revisions/20261004/pdfs/5/german/leseverstaendnis-5-arbeitsblatt.pdf",
+        "sha256": "21f43d488585e957dd1c7d41b08c4c2e9123c3147c7eaf6a963a05af37ff557a",
+        "bytes": 855502
       },
       "solution": {
-        "path": "pdfs/5/german/leseverstaendnis-5-loesungen.pdf",
-        "sha256": "a0fb91db33c10da93697da3455e890da33021e0a118672c88370f19571c407ec",
-        "bytes": 882631
+        "path": "revisions/20261004/pdfs/5/german/leseverstaendnis-5-loesungen.pdf",
+        "sha256": "18e01b302a1cde50056ced2b730376f996c962267b360c0ddaf618bab03ffbd3",
+        "bytes": 881993
       }
     }
   },
@@ -4852,20 +4858,20 @@
     "topicId": "textsorten-5",
     "title": "Textsorten",
     "curriculum": {
-      "code": "D.2",
+      "code": "D.4.B.1",
       "scope": "Textsorten anhand von Funktion und typischen Formulierungen unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C2"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/textsorten-5-arbeitsblatt.pdf",
-        "sha256": "322910e1438db76568a1f9ef9291d0ee3fea13779741e30b0d748faf01e10817",
-        "bytes": 858017
+        "path": "revisions/20261004/pdfs/5/german/textsorten-5-arbeitsblatt.pdf",
+        "sha256": "930e103deb857cc7708758e6283a2104674747f968c4bf2819fbd8d34152f3c2",
+        "bytes": 857731
       },
       "solution": {
-        "path": "pdfs/5/german/textsorten-5-loesungen.pdf",
-        "sha256": "3a3dd5c15ce7d9c25dc9a94a35edea5c25b05fb944fb79b71a130bb27578fe3a",
-        "bytes": 885863
+        "path": "revisions/20261004/pdfs/5/german/textsorten-5-loesungen.pdf",
+        "sha256": "e5831f6ae3465d039e20729b41fc9bd2da8948db771735569aa1f67e75e7f6d9",
+        "bytes": 885486
       }
     }
   },
@@ -4876,20 +4882,20 @@
     "topicId": "hoerverstehen-5",
     "title": "Zuhören & einordnen",
     "curriculum": {
-      "code": "D.1",
+      "code": "D.1.B.1",
       "scope": "Einen vorgelesenen Planungstext verstehen und unbelegte Ergänzungen erkennen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C1%7C11%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|1|2|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/5/german/hoerverstehen-5-arbeitsblatt.pdf",
-        "sha256": "f69e947403064a20e8cc27d4fe4f5debb0f9b947f1dc33271f495b4978e18750",
-        "bytes": 857645
+        "path": "revisions/20261004/pdfs/5/german/hoerverstehen-5-arbeitsblatt.pdf",
+        "sha256": "4690f5ed13507954a261adf7f032ecd3209fefa77b9c185532803eba5deb0f9d",
+        "bytes": 857350
       },
       "solution": {
-        "path": "pdfs/5/german/hoerverstehen-5-loesungen.pdf",
-        "sha256": "791dac4d97128a6df6247d8027902e9fb03f51810f962c9c19faa0776c3e75e6",
-        "bytes": 886605
+        "path": "revisions/20261004/pdfs/5/german/hoerverstehen-5-loesungen.pdf",
+        "sha256": "dd8a3fe5f79aa69b2762244df8a2d22568a984bd6c25d1cdacd1915d53233183",
+        "bytes": 885964
       }
     }
   },

@@ -1,0 +1,65 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "wortarten-5",
+  "goal": "Hier unterscheiden wir Nomen, Verben, Adjektive und Pronomen. Betrachte das Wort im Satz. In «Das Kind spielt draussen» ist Kind ein Nomen und spielt ein Verb. Die Zusatzfrage führt mit Hilfe den Begriff Präposition ein.",
+  "sections": [
+    {
+      "title": "Bestimme die Wortart des genannten Worts.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Mia liest.» Wort: liest",
+          "answer": "Verb",
+          "wide": true
+        },
+        {
+          "prompt": "«Der hohe Baum steht dort.» Wort: hohe",
+          "answer": "Adjektiv",
+          "wide": true
+        },
+        {
+          "prompt": "«Wir kommen.» Wort: Wir",
+          "answer": "Pronomen",
+          "wide": true
+        },
+        {
+          "prompt": "Zusatz mit Hilfe: «Das Buch liegt unter dem Tisch.» Wort: unter. Ortswörter wie unter werden Präpositionen genannt. Welche Bezeichnung passt hier?",
+          "answer": "Präposition",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Finde Nomen und Verb.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Die Katze schläft.» Nenne das Nomen und das Verb.",
+          "answer": "Nomen: Katze. Verb: schläft.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Untersuche den Wechsel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Wir spielen.» und «Das Spielen macht Spass.» Welche Wortart hat spielen/Spielen jeweils? Achte auf den Zusammenhang.",
+          "answer": "Im ersten Satz Verb; im zweiten substantiviertes Verb, als Nomen verwendet. Deshalb wird Spielen dort grossgeschrieben.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.D.1",
+    "scope": "Nomen, Verben, Adjektive und Pronomen an Beispielen erkennen. Die Bezeichnung Präposition ist ein unterstützter Zusatz.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|4|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

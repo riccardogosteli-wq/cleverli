@@ -1,0 +1,60 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "leseverstaendnis-5",
+  "goal": "Nach dem Unterricht entdeckt Noor auf dem Pausenplatz ein Heft ohne Namen. Sie blättert nicht darin, sondern bringt es ins Schulsekretariat. Am nächsten Tag hängt dort eine Notiz: «Heft gefunden. Bitte beschreiben.» Noor freut sich, als die Besitzerin ihr Heft abholt.",
+  "sections": [
+    {
+      "title": "Entnimm Informationen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wo findet Noor das Heft?",
+          "answer": "Auf dem Pausenplatz.",
+          "wide": true
+        },
+        {
+          "prompt": "Wohin bringt sie es?",
+          "answer": "Ins Schulsekretariat.",
+          "wide": true
+        },
+        {
+          "prompt": "Wann hängt dort die Notiz?",
+          "answer": "Am nächsten Tag.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Begründe mit dem Text.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Handlung zeigt, dass Noor die Privatsphäre der Besitzerin respektiert?",
+          "answer": "Sie blättert nicht im Heft, sondern gibt es im Sekretariat ab.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide sichere Information und Vermutung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Die Besitzerin heisst Lina.» Ist das durch den Text belegt? Begründe.",
+          "answer": "Nein. Der Name der Besitzerin wird nicht genannt. Es wäre eine Vermutung.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.2.C.1",
+    "scope": "Explizite Angaben, begründete Deutungen und unbelegte Vermutungen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|2|3|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

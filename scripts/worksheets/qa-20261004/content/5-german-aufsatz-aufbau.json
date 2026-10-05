@@ -1,0 +1,58 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "aufsatz-aufbau",
+  "goal": "Eine Erzählung hat einen verständlichen Anfang, einen ausgeführten Hauptteil und einen passenden Schluss. Plane zuerst: Wer handelt? Wo? Welches Problem entsteht? Wie wird es gelöst? Die Geschichte darf vollständig erfunden sein.",
+  "sections": [
+    {
+      "title": "Plane.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Kind findet auf dem Schulweg eine ungewöhnliche Schachtel. Erfinde Person, Ort und Inhalt, ohne gefährliche Gegenstände anfassen zu lassen.",
+          "answer": "Individuelle Planung mit Person, Ort und unbedenklichem Inhalt. Bei unbekannten/gefährlichen Gegenständen Abstand und erwachsene Hilfe vorsehen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen kurzen Hauptteil.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was passiert nach dem Fund? Schreibe drei bis vier zusammenhängende Sätze. Beschreibe ein kleines Problem und eine sichere Lösung.",
+          "answer": "Kriterien: verständliche Reihenfolge, konkretes Problem, passende sichere Lösung, drei bis vier zusammenhängende Sätze. Unterschiedliche Geschichten gelten.",
+          "wide": true,
+          "lines": 6,
+          "writingHeight": 10
+        }
+      ]
+    },
+    {
+      "title": "Schliesse ab.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe einen passenden Schlusssatz. Prüfe danach Grossschreibung und Satzzeichen.",
+          "answer": "Individueller Schluss, der zur Geschichte passt; Satzanfang gross, Schlusszeichen vorhanden.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.B.1",
+    "scope": "Eine kurze Erzählung planen, entwickeln und mit einfachen Kriterien prüfen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|2|1",
+    "additionalReferences": [
+      {
+        "code": "D.4.D.1",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|4|1"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

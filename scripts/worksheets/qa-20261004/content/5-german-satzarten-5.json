@@ -1,0 +1,65 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "satzarten-5",
+  "goal": "Aussage: «Der Hund schläft.» Frage: «Schläft der Hund?» Aufforderung: «Komm bitte her!» Ganze Wortgruppen kann man oft verschieben. Mit «Wer spielt?» findest du in unserem Beispiel die handelnde Wortgruppe.",
+  "sections": [
+    {
+      "title": "Benenne die Satzart.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wo ist dein Buch?",
+          "answer": "Fragesatz",
+          "wide": true
+        },
+        {
+          "prompt": "Die Kinder lesen.",
+          "answer": "Aussagesatz",
+          "wide": true
+        },
+        {
+          "prompt": "Öffne bitte das Fenster!",
+          "answer": "Aufforderungssatz",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Untersuche einen Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Die Kinder spielen am Nachmittag im Garten.» Wer spielt? Nenne die Wortgruppe.",
+          "answer": "Die Kinder",
+          "wide": true
+        },
+        {
+          "prompt": "Stelle «Am Nachmittag» an den Anfang. Schreibe den ganzen Satz.",
+          "answer": "Am Nachmittag spielen die Kinder im Garten.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Erkläre die Umstellung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum bleiben die Wörter «die Kinder» bei dieser Umstellung zusammen?",
+          "answer": "Die Wörter bilden eine Wortgruppe, die zusammen verschoben wird. Diese Wortgruppe ist hier das Subjekt; der Fachbegriff muss nicht genannt werden.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.A.1",
+    "scope": "Satzarten erkennen und Wortgruppen mit vorgegebenen Fragen und Umstellungen untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

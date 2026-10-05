@@ -1,0 +1,69 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "rechtschreibung-5",
+  "goal": "Nutze Wortfamilien und Verlängerungen: Wald → Wälder zeigt das d; Haus → Häuser zeigt den Zusammenhang au/äu. Nomen und substantivierte Verben werden grossgeschrieben. In der Schweizer Standardsprache schreiben wir zum Beispiel Strasse mit ss.",
+  "sections": [
+    {
+      "title": "Schreibe das Nomen richtig.",
+      "instruction": "Schreibe das ganze Nomen ohne Artikel. Das verwandte Wort hilft dir.",
+      "items": [
+        {
+          "prompt": "Wal(d/t). Hilfe: Wälder",
+          "answer": "Wald"
+        },
+        {
+          "prompt": "Bro(d/t). Hilfe: Brote",
+          "answer": "Brot"
+        },
+        {
+          "prompt": "Bil(d/t). Hilfe: Bilder",
+          "answer": "Bild"
+        },
+        {
+          "prompt": "Kin(d/t). Hilfe: Kinder",
+          "answer": "Kind"
+        }
+      ]
+    },
+    {
+      "title": "Bilde den Plural.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "das Haus",
+          "answer": "die Häuser"
+        },
+        {
+          "prompt": "die Hand",
+          "answer": "die Hände"
+        }
+      ]
+    },
+    {
+      "title": "Zusatz mit Hilfe: Schreibe richtig.",
+      "instruction": "Hilfe: beim bedeutet bei dem. In «beim Lesen» wird Lesen als Nomen verwendet und deshalb grossgeschrieben.",
+      "items": [
+        {
+          "prompt": "«beim lesen finde ich neue wörter.» Schreibe den Satz mit richtiger Gross- und Kleinschreibung.",
+          "answer": "Beim Lesen finde ich neue Wörter.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Erkläre, warum Lesen in diesem Satz grossgeschrieben wird.",
+          "answer": "Es wird als Nomen gebraucht; beim bedeutet bei dem.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.E.1",
+    "scope": "Wortfamilien, Verlängerungen und häufige Nomen üben. Die Schreibung beim Lesen ist ein unterstützter Zusatz, keine allgemeine Klassenanforderung.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

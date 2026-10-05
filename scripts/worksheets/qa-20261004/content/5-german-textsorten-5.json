@@ -1,0 +1,65 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "textsorten-5",
+  "goal": "Textsorten erfüllen unterschiedliche Aufgaben. Eine Anleitung erklärt Schritte. Ein Bericht informiert sachlich über ein Geschehen. Eine Erzählung gestaltet eine Geschichte. Werbung will oft zum Kauf oder zu einer Handlung bewegen.",
+  "sections": [
+    {
+      "title": "Ordne eine Textsorte zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Falte zuerst das Papier. Klebe danach die Kanten zusammen.»",
+          "answer": "Anleitung",
+          "wide": true
+        },
+        {
+          "prompt": "«Am Dienstag eröffnete die Schule ihre neue Bibliothek.»",
+          "answer": "Bericht / sachliche Nachricht",
+          "wide": true
+        },
+        {
+          "prompt": "«Nur heute! Hol dir unseren neuen Superstift!»",
+          "answer": "Werbung",
+          "wide": true
+        },
+        {
+          "prompt": "«Plötzlich hörte Lio hinter der alten Tür ein leises Klopfen.»",
+          "answer": "Erzählung",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche Absichten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Worin unterscheidet sich die Absicht einer Anleitung von der Absicht einer Werbung?",
+          "answer": "Die Anleitung soll beim Ausführen helfen; Werbung soll überzeugen oder zu einer Handlung wie einem Kauf bewegen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe einen sachlichen Satz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine erfundene Klasse pflanzt am Freitag drei Bäume auf dem Schulgelände. Formuliere dazu einen kurzen sachlichen Berichtssatz.",
+          "answer": "Am Freitag pflanzte eine Klasse drei Bäume auf dem Schulgelände. Gleichwertiger sachlicher Satz mit den Angaben gilt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.4.B.1",
+    "scope": "Textsorten anhand von Funktion und typischen Formulierungen unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|4|2|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

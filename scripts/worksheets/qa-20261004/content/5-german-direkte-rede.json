@@ -1,0 +1,57 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "direkte-rede",
+  "goal": "Direkte Rede gibt gesprochene Worte wieder. Vorangestellter Begleitsatz: Mia sagt: «Ich komme.» Nachgestellter Begleitsatz: «Ich komme», sagt Mia. Fragezeichen bleiben innen: «Kommst du?», fragt Mia.",
+  "sections": [
+    {
+      "title": "Setze alle fehlenden Satzzeichen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ben sagt Ich lese ein Buch",
+          "answer": "Ben sagt: «Ich lese ein Buch.»",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Wann beginnt das Spiel fragt Mia",
+          "answer": "«Wann beginnt das Spiel?», fragt Mia.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Ändere die Reihenfolge.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Lina sagt: «Ich helfe dir.» Stelle den Begleitsatz nach hinten.",
+          "answer": "«Ich helfe dir», sagt Lina.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Schreibe selbst.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Erfinde einen Satz mit direkter Rede und vorangestelltem Begleitsatz. Verwende einen Doppelpunkt und passende Anführungszeichen.",
+          "answer": "Beispiel: Sam ruft: «Wir sind da!» Sinnvoller Satz mit korrekter Zeichensetzung.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.E.1",
+    "scope": "Direkte Rede mit vor- und nachgestelltem Begleitsatz kennzeichnen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|5|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

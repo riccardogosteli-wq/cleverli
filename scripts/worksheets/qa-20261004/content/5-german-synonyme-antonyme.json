@@ -1,0 +1,71 @@
+{
+  "grade": 5,
+  "subject": "german",
+  "sourceId": "synonyme-antonyme",
+  "goal": "Synonyme sind bedeutungsähnliche Wörter, etwa rasch und schnell. Antonyme sind Gegensätze, etwa hell und dunkel. Ob ein Wort passt, hängt vom Zusammenhang ab.",
+  "sections": [
+    {
+      "title": "Finde ein bedeutungsähnliches Wort.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "rasch",
+          "answer": "schnell"
+        },
+        {
+          "prompt": "beginnen",
+          "answer": "anfangen"
+        },
+        {
+          "prompt": "fröhlich",
+          "answer": "froh / heiter"
+        },
+        {
+          "prompt": "sprechen",
+          "answer": "reden"
+        }
+      ]
+    },
+    {
+      "title": "Finde den Gegensatz.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "breit",
+          "answer": "schmal"
+        },
+        {
+          "prompt": "laut",
+          "answer": "leise"
+        },
+        {
+          "prompt": "trocken",
+          "answer": "nass / feucht"
+        },
+        {
+          "prompt": "öffnen",
+          "answer": "schliessen"
+        }
+      ]
+    },
+    {
+      "title": "Prüfe den Zusammenhang.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Der Weg ist leicht.» Ersetze leicht durch ein passendes Synonym. Warum passt dasselbe Wort nicht unbedingt in «Die Tasche ist leicht»?",
+          "answer": "Der Weg ist einfach. Bei der Tasche meint leicht wenig Gewicht, nicht unbedingt einfach. Bedeutungen hängen vom Zusammenhang ab.",
+          "wide": true,
+          "lines": 3
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "D.5.A.1",
+    "scope": "Bedeutungsähnliche Wörter und Gegensätze im Satzkontext unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|1|11|5|1|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
