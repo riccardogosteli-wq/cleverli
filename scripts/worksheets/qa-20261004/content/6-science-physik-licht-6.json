@@ -1,0 +1,55 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "physik-licht-6",
+  "goal": "Eine Lichtquelle sendet Licht aus. Viele Gegenstände sehen wir, weil sie Licht reflektieren. Ein undurchsichtiger Gegenstand kann einen Schatten erzeugen, wenn er Licht abhält. Nie in die Sonne oder in starke Lichtquellen schauen.",
+  "sections": [
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Leuchtende Taschenlampe: eigene Lichtquelle oder nur beleuchtet?",
+          "answer": "Eigene Lichtquelle.",
+          "wide": true
+        },
+        {
+          "prompt": "Mond im Sonnenlicht: eigene sichtbare Lichtquelle oder reflektiertes Sonnenlicht?",
+          "answer": "Reflektiertes Sonnenlicht.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre einen Schatten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum entsteht hinter einem undurchsichtigen Buch ein Schatten, wenn eine Lampe darauf leuchtet?",
+          "answer": "Das Buch hält einen Teil des Lichts ab. In den Bereich dahinter gelangt weniger direktes Licht der Lampe.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Plane fair.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Du möchtest den Einfluss des Abstands Lampe–Buch auf die Schattengrösse untersuchen. Was hältst du gleich? Nenne zwei Bedingungen.",
+          "answer": "Zum Beispiel dasselbe Buch, dieselbe Lampe, gleiche Ausrichtung und unveränderter Abstand Buch–Schirm. Nur den untersuchten Abstand verändern.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.3",
+    "scope": "Lichtquellen, Reflexion, Schatten und einen kontrollierten Vergleich beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|3"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

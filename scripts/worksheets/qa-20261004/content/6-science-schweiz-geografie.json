@@ -1,0 +1,57 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "schweiz-geografie",
+  "goal": "Die Schweiz lässt sich grob in Jura, Mittelland und Alpen gliedern. Diese Landschaftsräume sind keine Kantone. Die Schweiz grenzt an Frankreich, Deutschland, Österreich, Liechtenstein und Italien.",
+  "sections": [
+    {
+      "title": "Entnimm geografische Angaben.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne die drei genannten Landschaftsräume.",
+          "answer": "Jura, Mittelland, Alpen.",
+          "wide": true,
+          "lines": 1
+        },
+        {
+          "prompt": "Nenne zwei Nachbarländer der Schweiz.",
+          "answer": "Zwei aus: Frankreich, Deutschland, Österreich, Liechtenstein, Italien.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ist «Alpen» der Name eines Schweizer Kantons? Begründe mit der Einführung.",
+          "answer": "Nein. Hier ist damit ein Landschaftsraum gemeint, kein Kanton.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Nutze eine Karte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Karteninformation hilft dir, Höhenunterschiede zu erkennen? Nenne eine und erkläre.",
+          "answer": "Zum Beispiel Höhenlinien, Höhenzahlen oder Höhenfarben mit Legende. Sie zeigen Höhen beziehungsweise gleich hohe Punkte.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.4",
+    "scope": "Landschaftsräume, Nachbarländer und Hilfen zur Kartenorientierung unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

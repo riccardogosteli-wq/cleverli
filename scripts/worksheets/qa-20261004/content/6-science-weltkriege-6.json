@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "weltkriege-6",
+  "goal": "Frieden bedeutet mehr als die Abwesenheit eines aktuellen Streits. Faire Regeln, Schutz vor Gewalt und Möglichkeiten zum Gespräch helfen beim Zusammenleben. Kinder müssen gefährliche Konflikte nicht allein lösen. Die folgende Situation ist erfunden.",
+  "sections": [
+    {
+      "title": "Erkenne Bedürfnisse.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwei Gruppen wollen denselben Pausenplatz nutzen. Nenne zwei mögliche Bedürfnisse beider Gruppen.",
+          "answer": "Zum Beispiel Platz zum Spielen, Sicherheit, Fairness, Ruhe oder Zugehörigkeit. Bedürfnisse nicht automatisch als unvereinbar darstellen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Plane eine faire Lösung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schlage eine konkrete Regel vor, die beiden Gruppen helfen könnte.",
+          "answer": "Zum Beispiel gemeinsam vereinbarte Nutzungszeiten oder getrennte Bereiche, sofern sicher und praktikabel. Beide Seiten anhören.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Achte auf Sicherheit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was tust du, wenn jemand bedroht oder verletzt wird, statt selbst dazwischenzugehen?",
+          "answer": "Abstand halten und sofort Hilfe bei einer zuständigen erwachsenen Person holen; bei unmittelbarer Gefahr Notfallhilfe veranlassen. Eigene Sicherheit geht vor.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.10.1",
+    "scope": "Bedürfnisse, faire Konfliktregeln und sichere Hilfswege unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,57 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "industrialisierung-6",
+  "goal": "Bei der Industrialisierung wurden viele Waren zunehmend mit Maschinen in Fabriken hergestellt. Nicht alle Tätigkeiten veränderten sich gleichzeitig. Neue Erwerbsmöglichkeiten entstanden, zugleich gab es oft lange Arbeitstage, gefährliche Bedingungen und Kinderarbeit.",
+  "sections": [
+    {
+      "title": "Beschreibe Veränderung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne einen Unterschied zwischen einer kleinen Handwerkstatt und einer grossen Fabrik mit Maschinen.",
+          "answer": "Zum Beispiel Umfang der Produktion, Arbeitsteilung, Maschineneinsatz oder Zahl der Beschäftigten. Keine pauschale Aussage über jede Werkstatt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Betrachte verschiedene Folgen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne eine mögliche Chance und eine Belastung der damaligen Fabrikarbeit.",
+          "answer": "Chance: zum Beispiel Erwerbsarbeit oder neue Fähigkeiten. Belastung: lange Arbeitszeiten, Unfallgefahr oder Kinderarbeit. Historischen Kontext beachten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Denke über Quellen nach.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist es sinnvoll, sowohl Berichte von Beschäftigten als auch von Fabrikbesitzern zu untersuchen?",
+          "answer": "Sie können unterschiedliche Interessen und Erfahrungen zeigen. Durch Vergleich entsteht ein vielseitigeres Bild; beide Quellen müssen kritisch geprüft werden.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.2",
+    "scope": "Historischen Wandel der Arbeit aus mehreren Perspektiven untersuchen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|2",
+    "additionalReferences": [
+      {
+        "code": "NMG.9.3",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

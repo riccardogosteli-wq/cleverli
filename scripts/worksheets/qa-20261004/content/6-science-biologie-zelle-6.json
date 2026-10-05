@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "biologie-zelle-6",
+  "goal": "Gesundheit wird von vielen Faktoren beeinflusst, etwa Schlaf, Bewegung, Ernährung, Beziehungen und Umwelt. Bedürfnisse sind nicht bei allen Menschen gleich. Dieses Blatt stellt keine Diagnosen. Bei Beschwerden hilft eine vertraute erwachsene oder medizinische Fachperson.",
+  "sections": [
+    {
+      "title": "Betrachte eine erfundene Situation.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Kind ist nach einer kurzen Nacht müde. Beweist das eine Krankheit? Begründe.",
+          "answer": "Nein. Müdigkeit kann verschiedene Ursachen haben; aus einer einzelnen Beobachtung lässt sich keine Diagnose ableiten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Plane Unterstützung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne zwei alltagstaugliche Möglichkeiten, Erholung zu unterstützen.",
+          "answer": "Zum Beispiel ausreichende Schlafgelegenheiten, ruhige Pausen, Bewegung im passenden Mass oder Hilfe bei Belastungen. Individuelle Bedürfnisse respektieren.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Beziehe die Umwelt ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie kann ein schattiger, ruhiger Pausenplatz zum Wohlbefinden beitragen?",
+          "answer": "Schatten kann vor starker Sonneneinstrahlung schützen; ein ruhiger Bereich kann Erholung ermöglichen. Kein Gesundheitsversprechen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.1.2",
+    "scope": "Wohlbefinden, individuelle Bedürfnisse und Umgebung ohne medizinische Diagnose verknüpfen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

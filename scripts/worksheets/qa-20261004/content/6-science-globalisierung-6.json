@@ -1,0 +1,61 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "globalisierung-6",
+  "goal": "Ein erfundenes T-Shirt: Baumwolle wird in Land A angebaut, Stoff in Land B hergestellt, das Kleidungsstück in Land C genäht und in der Schweiz verkauft. Das ist eine mögliche Lieferkette, keine Aussage über jedes T-Shirt.",
+  "sections": [
+    {
+      "title": "Ordne die Schritte.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe die vier genannten Schritte in der richtigen Reihenfolge.",
+          "answer": "Baumwolle anbauen → Stoff herstellen → Kleidungsstück nähen → verkaufen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Erkenne Verbindungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum zeigt das Beispiel eine weltweite wirtschaftliche Verbindung?",
+          "answer": "Mehrere Länder und Betriebe sind an unterschiedlichen Schritten eines Produkts beteiligt; Waren werden zwischen ihnen transportiert.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Stelle eine faire Frage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne eine überprüfbare Frage zu Arbeitsbedingungen oder Umweltwirkung dieser Lieferkette.",
+          "answer": "Zum Beispiel: Wie werden Beschäftigte entlohnt? Welche Nachweise gibt es zum Wasserverbrauch? Herkunft allein beweist weder gute noch schlechte Bedingungen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.3",
+    "scope": "Eine vereinfachte Lieferkette und Fragen zu ihren Auswirkungen beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|3",
+    "additionalReferences": [
+      {
+        "code": "NMG.7.3",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|3"
+      },
+      {
+        "code": "NMG.7.4",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|4"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

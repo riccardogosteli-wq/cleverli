@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "demokratie-menschenrechte-6",
+  "goal": "Menschenrechte gelten für alle Menschen. Eine demokratische Mehrheitsentscheidung darf grundlegende Rechte nicht beliebig ausser Kraft setzen. In der Schweiz bestehen neben Wahlen auch Volksabstimmungen; politische Rechte hängen von den geltenden Voraussetzungen ab.",
+  "sections": [
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Darf eine Klassenmehrheit beschliessen, ein Kind wegen seiner Herkunft auszuschliessen? Begründe.",
+          "answer": "Nein. Eine Mehrheit rechtfertigt keine Diskriminierung oder Verletzung grundlegender Rechte.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe Beteiligung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne eine Möglichkeit, wie Kinder an einer Schulentscheidung mitwirken können.",
+          "answer": "Zum Beispiel Klassenrat, Schülerparlament oder begründete Vorschläge an die Schule. Kein allgemeines Stimmrecht bei staatlichen Abstimmungen behaupten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Menschenrechte gelten nur für Menschen mit Schweizer Pass.» Stimmt das? Begründe.",
+          "answer": "Nein. Menschenrechte gelten für alle Menschen, unabhängig von der Staatsangehörigkeit. Sie sind nicht dasselbe wie bestimmte politische Stimmrechte.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.10.5",
+    "scope": "Menschenrechte, demokratische Mehrheiten und altersgerechte Beteiligung unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|5"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

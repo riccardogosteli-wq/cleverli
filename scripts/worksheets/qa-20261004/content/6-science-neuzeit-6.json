@@ -1,0 +1,60 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "neuzeit-6",
+  "goal": "Die Frühe Neuzeit wird in der europäischen Geschichte oft ungefähr von 1500 bis 1800 eingeordnet. Buchdruck mit beweglichen Metalllettern verbreitete sich in Europa seit dem 15. Jahrhundert. Druckverfahren gab es in Ostasien schon früher. Wandel verlief regional unterschiedlich.",
+  "sections": [
+    {
+      "title": "Ordne zeitlich ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Liegt das Jahr 1600 in der genannten Spanne der Frühen Neuzeit?",
+          "answer": "Ja."
+        },
+        {
+          "prompt": "Welchem Jahrhundert gehört 1450 an?",
+          "answer": "Dem 15. Jahrhundert.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Beschreibe eine Wirkung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie konnte der Druck die Verbreitung von Texten verändern?",
+          "answer": "Viele Exemplare konnten schneller und oft günstiger hergestellt werden als durch Abschreiben; mehr Texte konnten weitergegeben werden.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe eine Verallgemeinerung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Beweist die Verbreitung des Drucks, dass sofort alle Menschen lesen konnten? Begründe.",
+          "answer": "Nein. Lesefähigkeit, Zugang zu Bildung und Zugang zu Büchern waren weiterhin ungleich verteilt.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.1",
+    "scope": "Zeitliche Einordnung und begrenzte Folgen einer historischen technischen Veränderung beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1",
+    "additionalReferences": [
+      {
+        "code": "NMG.9.3",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

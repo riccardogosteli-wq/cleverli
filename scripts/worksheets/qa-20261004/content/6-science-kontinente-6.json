@@ -1,0 +1,54 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "kontinente-6",
+  "goal": "Hier verwenden wir das Modell mit sieben Kontinenten: Europa, Asien, Afrika, Nordamerika, Südamerika, Australien und Antarktika. Andere Modelle fassen Kontinente anders zusammen. Kontinente sind keine einheitlichen Kultur- oder Klimaräume.",
+  "sections": [
+    {
+      "title": "Nutze das benannte Modell.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie viele Kontinente nennt dieses Blatt?",
+          "answer": "7"
+        },
+        {
+          "prompt": "Welcher genannte Kontinent liegt rund um den Südpol?",
+          "answer": "Antarktika",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide Land und Kontinent.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ist die Schweiz ein Kontinent? Welchem Kontinent wird sie in diesem Modell zugeordnet?",
+          "answer": "Nein, sie ist ein Staat in Europa.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe ein Vorurteil.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist «In ganz Afrika ist das Klima gleich» falsch?",
+          "answer": "Afrika umfasst unterschiedliche Klimazonen, Höhenlagen und Landschaften. Ein Kontinent hat nicht überall dasselbe Klima.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.4",
+    "scope": "Ein benanntes Kontinentmodell nutzen und grosse Räume differenziert betrachten.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

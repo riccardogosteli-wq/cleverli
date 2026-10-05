@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "geschichte-zeit",
+  "goal": "Menschen haben verschiedene religiöse und nichtreligiöse Weltanschauungen. Auch innerhalb einer Religion unterscheiden sich Lebensweisen und Deutungen. Niemand muss auf diesem Blatt eigene Überzeugungen offenlegen. Respekt bedeutet nicht, dass alle derselben Meinung sein müssen.",
+  "sections": [
+    {
+      "title": "Prüfe eine Verallgemeinerung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Alle Menschen einer Religion feiern genau gleich.» Warum ist diese Aussage zu pauschal?",
+          "answer": "Traditionen, persönliche Überzeugungen und Lebensweisen unterscheiden sich auch innerhalb einer Religion.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Formuliere respektvoll.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Schreibe eine offene Frage zu einem Fest, ohne vorauszusetzen, dass die andere Person es selbst feiert.",
+          "answer": "Zum Beispiel: Was kann man über dieses Fest erfahren? Oder: Möchtest du etwas über dieses Fest erzählen? Freiwilligkeit beachten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Kann man eine andere Überzeugung respektieren, ohne sie selbst zu teilen? Begründe.",
+          "answer": "Ja. Man kann die Würde und Freiheit einer Person achten und sachlich über Unterschiede sprechen, ohne dieselbe Überzeugung zu haben.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.12.5",
+    "scope": "Religiöse und nichtreligiöse Vielfalt ohne persönliche Offenlegung respektvoll besprechen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|12|0|5"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

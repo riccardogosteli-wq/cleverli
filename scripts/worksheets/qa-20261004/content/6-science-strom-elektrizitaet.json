@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "strom-elektrizitaet",
+  "goal": "Ein einfacher Stromkreis verbindet beide Pole einer Batterie über Leitungen und eine Lampe. Die Lampe leuchtet nur bei passender Versorgung und geschlossenem Stromkreis. Hier wird ausschliesslich auf Papier gearbeitet: keine Steckdosen, keine Geräte öffnen, Batteriepole nie direkt verbinden.",
+  "sections": [
+    {
+      "title": "Untersuche das Modell.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Schalter öffnet den einfachen Stromkreis. Leuchtet die Lampe im Modell weiter? Begründe.",
+          "answer": "Nein. Der Stromkreis ist offen; es gibt keinen geschlossenen leitenden Weg über die Lampe.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche Materialien.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was leitet Strom im Allgemeinen besser: ein blanker Kupferdraht oder trockener Kunststoff?",
+          "answer": "Ein blanker Kupferdraht.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Erkläre eine Gefahr.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum darf man die beiden Batteriepole nicht ohne Verbraucher direkt mit einem Draht verbinden?",
+          "answer": "Das ist ein Kurzschluss. Es kann ein sehr grosser Strom fliessen; Batterie und Draht können heiss werden und Schäden verursachen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.5.2",
+    "scope": "Geschlossene Stromkreise, Leiter und Kurzschlussgefahren am Papiermodell beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,60 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "aggregatzustaende",
+  "goal": "Wasser kann fest, flüssig oder gasförmig sein. Schmelzen: fest → flüssig. Erstarren: flüssig → fest. Verdampfen: flüssig → gasförmig. Kondensieren: gasförmig → flüssig. Verdunsten geschieht an der Oberfläche, auch ohne dass das Wasser kocht. Wasserdampf selbst ist unsichtbar; sichtbarer Nebel besteht aus kleinen Tröpfchen.",
+  "sections": [
+    {
+      "title": "Benenne den Zustandswechsel.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein Eiswürfel wird zu flüssigem Wasser.",
+          "answer": "Schmelzen",
+          "wide": true
+        },
+        {
+          "prompt": "Wasser gefriert im Gefrierfach.",
+          "answer": "Erstarren / Gefrieren",
+          "wide": true
+        },
+        {
+          "prompt": "Wasserdampf bildet Tropfen an einer kalten Scheibe.",
+          "answer": "Kondensieren",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Pfütze trocknet ohne zu kochen. Wohin gelangt ein Teil des Wassers?",
+          "answer": "Es verdunstet und gelangt gasförmig als Wasserdampf in die Luft.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Besteht sichtbarer Nebel aus unsichtbarem Wasserdampf oder aus kleinen Wassertröpfchen?",
+          "answer": "Aus kleinen Wassertröpfchen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.4",
+    "scope": "Zustandswechsel von Wasser und sichtbare Tröpfchen von Wasserdampf unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

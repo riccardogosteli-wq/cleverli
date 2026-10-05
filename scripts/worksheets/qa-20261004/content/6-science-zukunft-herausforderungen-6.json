@@ -1,0 +1,61 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "zukunft-herausforderungen-6",
+  "goal": "Eine erfundene Schule möchte ihren Pausenplatz im Sommer angenehmer machen. Vorschläge sind Bäume, Sonnensegel und mehr Trinkwasserstellen. Zukunftspläne müssen Bedürfnisse, Kosten, Pflege, Sicherheit und Wirkung berücksichtigen.",
+  "sections": [
+    {
+      "title": "Vergleiche Möglichkeiten.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Nenne einen möglichen Nutzen von Bäumen und einen Punkt, der bei ihrer Planung beachtet werden muss.",
+          "answer": "Nutzen: Schatten, Lebensraum oder kühlende Wirkung. Planung: geeignete Art, Platz, Wasserbedarf, Pflege oder Zeit bis zur ausreichenden Grösse.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Beziehe Menschen ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche zwei Gruppen sollte die Schule bei der Planung anhören?",
+          "answer": "Zum Beispiel Kinder, Lehrpersonen, Hausdienst, Schulleitung, Eltern oder zuständige Fachpersonen. Zwei passende Gruppen.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Prüfe die Wirkung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie könnte die Schule später prüfen, ob ein neuer Schattenplatz hilft? Nenne einen sinnvollen Vergleich.",
+          "answer": "Zum Beispiel Temperatur und Nutzung an vergleichbaren warmen Tagen vor und nach der Änderung beobachten. Wetter, Messort und Uhrzeit berücksichtigen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.8.3",
+    "scope": "Vorschläge zur Gestaltung eines Schulareals begründet vergleichen und eine Überprüfung ihrer Wirkung planen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|3",
+    "additionalReferences": [
+      {
+        "code": "NMG.1.2",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|2"
+      },
+      {
+        "code": "NMG.4.4",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -6478,20 +6478,20 @@
     "topicId": "schweiz-geografie",
     "title": "Schweiz: Geografie",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.4",
       "scope": "Landschaftsräume, Nachbarländer und Hilfen zur Kartenorientierung unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/schweiz-geografie-arbeitsblatt.pdf",
-        "sha256": "c7d0c753d066cdedcc9b3fd17b877efb325515c3b5d9626b31fd104f99ea4483",
-        "bytes": 863035
+        "path": "revisions/20261004/pdfs/6/science/schweiz-geografie-arbeitsblatt.pdf",
+        "sha256": "67a9a876a86c0e4784358dc06b56c0ddb775bc2f157ea68847bf2171702b5697",
+        "bytes": 862750
       },
       "solution": {
-        "path": "pdfs/6/science/schweiz-geografie-loesungen.pdf",
-        "sha256": "87e2a670d321a4270afb9830149984fc68313ff09d51c7e294ede4d7c4c4a5ae",
-        "bytes": 890238
+        "path": "revisions/20261004/pdfs/6/science/schweiz-geografie-loesungen.pdf",
+        "sha256": "5ce1bb7abbb744da2df438259538b5573e6bcf1c2e608f2a6c387acafd3d5ddf",
+        "bytes": 890140
       }
     }
   },
@@ -6502,20 +6502,26 @@
     "topicId": "mittelalter",
     "title": "Das Mittelalter",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.1",
       "scope": "Grobe Zeiträume einordnen und die Aussagekraft einer historischen Sachquelle begrenzen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1",
+      "additionalReferences": [
+        {
+          "code": "NMG.9.3",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/mittelalter-arbeitsblatt.pdf",
-        "sha256": "74b62d35ea78e86e49efe90632b3081aab381d4e5a0f8153f3cfa05ac9782d79",
-        "bytes": 861644
+        "path": "revisions/20261004/pdfs/6/science/mittelalter-arbeitsblatt.pdf",
+        "sha256": "d55f8f15e5a5e73bb02d5de9d75f0d87624e48c47725d9a54cf001579111d68c",
+        "bytes": 861349
       },
       "solution": {
-        "path": "pdfs/6/science/mittelalter-loesungen.pdf",
-        "sha256": "5a3de9d893239286be32f69d6afc80c8866ec32fc000e0a7942c12b048a839fa",
-        "bytes": 888407
+        "path": "revisions/20261004/pdfs/6/science/mittelalter-loesungen.pdf",
+        "sha256": "15517299a8fc8edf8e763ee5599fce0b5db573a689d1fd244c3bc7c285497c14",
+        "bytes": 889794
       }
     }
   },
@@ -6526,20 +6532,20 @@
     "topicId": "aggregatzustaende",
     "title": "Aggregatzustände",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.4",
       "scope": "Zustandswechsel von Wasser und sichtbare Tröpfchen von Wasserdampf unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/aggregatzustaende-arbeitsblatt.pdf",
-        "sha256": "ef8db28ebdf5f5da92b0f73cd914980ab628573ca7008adc337e2554b531f3c3",
-        "bytes": 859506
+        "path": "revisions/20261004/pdfs/6/science/aggregatzustaende-arbeitsblatt.pdf",
+        "sha256": "a3c32c34ed21c12a048651de7cdccf5d08e51ba80c310b473f9a8db5b53413e7",
+        "bytes": 859808
       },
       "solution": {
-        "path": "pdfs/6/science/aggregatzustaende-loesungen.pdf",
-        "sha256": "57a4a04952be67da9604d4b573273e64c216c6b54bac7663bb99444ada8c1a0b",
-        "bytes": 884017
+        "path": "revisions/20261004/pdfs/6/science/aggregatzustaende-loesungen.pdf",
+        "sha256": "e191c438ddbdbec2a6621c47dda2a7dcb475f050a2b039eddd22b9c3cc8d383b",
+        "bytes": 884361
       }
     }
   },
@@ -6550,20 +6556,26 @@
     "topicId": "chemie-6",
     "title": "Stoffe und ihre Eigenschaften",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.3",
       "scope": "Stoffeigenschaften und eine sichere gedankliche Trennung eines Gemischs erklären.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.3.4",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|4"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/chemie-6-arbeitsblatt.pdf",
-        "sha256": "ad798e2955cc28d8e865153095b0499427e953d8f85345f07f8a78345e2b8a6d",
-        "bytes": 859830
+        "path": "revisions/20261004/pdfs/6/science/chemie-6-arbeitsblatt.pdf",
+        "sha256": "f68b78df6b10cf4149a8bf4a9bacc5aa680e9161cf792ce019892d68f24ab448",
+        "bytes": 859536
       },
       "solution": {
-        "path": "pdfs/6/science/chemie-6-loesungen.pdf",
-        "sha256": "e1f7d78797bc3a1089cfc96eaaaab519977821d555cd85884a8da723f9c0d1df",
-        "bytes": 885933
+        "path": "revisions/20261004/pdfs/6/science/chemie-6-loesungen.pdf",
+        "sha256": "bdd288b6150e59b3f7ca7c762fe7feebbb662213c024dd95319474f43ce58c00",
+        "bytes": 886823
       }
     }
   },
@@ -6574,20 +6586,20 @@
     "topicId": "physik-licht-6",
     "title": "Licht & Optik",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.4.3",
       "scope": "Lichtquellen, Reflexion, Schatten und einen kontrollierten Vergleich beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|3"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/physik-licht-6-arbeitsblatt.pdf",
-        "sha256": "3d2544b63ae2bfa48755ff308ac0a84f132e40234b71bd9302a858b075c58e9e",
-        "bytes": 857673
+        "path": "revisions/20261004/pdfs/6/science/physik-licht-6-arbeitsblatt.pdf",
+        "sha256": "147d756cef99c701b1012285976229f348e7802a209a05437e2c45c23a042b4c",
+        "bytes": 857382
       },
       "solution": {
-        "path": "pdfs/6/science/physik-licht-6-loesungen.pdf",
-        "sha256": "bc93569f7efb5b2f38b8ed620e2205965f35738f7eff748223735f9ccf54e1d8",
-        "bytes": 887010
+        "path": "revisions/20261004/pdfs/6/science/physik-licht-6-loesungen.pdf",
+        "sha256": "9fd30c5494b04e49aaa5e1a5022a6df6f816d95d7ced19c38020b127345f292e",
+        "bytes": 886934
       }
     }
   },
@@ -6598,20 +6610,20 @@
     "topicId": "biologie-zelle-6",
     "title": "Körper, Gesundheit & Lebensräume",
     "curriculum": {
-      "code": "NMG.1",
+      "code": "NMG.1.2",
       "scope": "Wohlbefinden, individuelle Bedürfnisse und Umgebung ohne medizinische Diagnose verknüpfen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C1"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/biologie-zelle-6-arbeitsblatt.pdf",
-        "sha256": "bfc81a66640dc530ee079afaeda140edc7ff1bbc2ffb184b3b1103dd488f5e2e",
-        "bytes": 863155
+        "path": "revisions/20261004/pdfs/6/science/biologie-zelle-6-arbeitsblatt.pdf",
+        "sha256": "95b7131b805481acb0c1c19799ed6c4775db077e890e533f09c1999aff24b42e",
+        "bytes": 862847
       },
       "solution": {
-        "path": "pdfs/6/science/biologie-zelle-6-loesungen.pdf",
-        "sha256": "acc6819cdc17145d916a7bd15607404172cb82dffa86372998da320746981bba",
-        "bytes": 890190
+        "path": "revisions/20261004/pdfs/6/science/biologie-zelle-6-loesungen.pdf",
+        "sha256": "74465a85e1d55048d090adc37bccff34d7bb4f9bad969140b9a7b33601dae028",
+        "bytes": 889812
       }
     }
   },
@@ -6622,20 +6634,20 @@
     "topicId": "energie-nachh-6",
     "title": "Energie & Nachhaltigkeit",
     "curriculum": {
-      "code": "NMG.3",
+      "code": "NMG.3.2",
       "scope": "Energieumwandlung und Umweltwirkungen differenziert beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C3"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/energie-nachh-6-arbeitsblatt.pdf",
-        "sha256": "927411481925df6a1494a9b4867fcd9315dd1f5308b93f4519c86d28e0f2d107",
-        "bytes": 858701
+        "path": "revisions/20261004/pdfs/6/science/energie-nachh-6-arbeitsblatt.pdf",
+        "sha256": "89b55ca54921bdecb3ef5611e3dde3172a2caacaac59ec97af0e027d95b982d4",
+        "bytes": 858405
       },
       "solution": {
-        "path": "pdfs/6/science/energie-nachh-6-loesungen.pdf",
-        "sha256": "8447d1aa5677fd3cb2f49cdf31a1801faf89a21e2e0a057cfdd0a21981ab9395",
-        "bytes": 885581
+        "path": "revisions/20261004/pdfs/6/science/energie-nachh-6-loesungen.pdf",
+        "sha256": "aeed99737fe2008457db8c8ec8e98931769bb04ee3519825f422a6882f973ce0",
+        "bytes": 885230
       }
     }
   },
@@ -6646,20 +6658,20 @@
     "topicId": "technik-informatik-6",
     "title": "Technik & Informatik",
     "curriculum": {
-      "code": "NMG.5",
+      "code": "NMG.5.1",
       "scope": "Sensor, Steuerung und Antrieb in einem technischen Modell unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/technik-informatik-6-arbeitsblatt.pdf",
-        "sha256": "ad41c6d0965969495c3ab7820f59fe4b7e324792f4f3baea5253ef922e9ecb4b",
-        "bytes": 860943
+        "path": "revisions/20261004/pdfs/6/science/technik-informatik-6-arbeitsblatt.pdf",
+        "sha256": "0bcd2680a0bc93d50ad0b76547ddd8eb5cd583c7ad503b5d3bb5ce19effe8476",
+        "bytes": 860639
       },
       "solution": {
-        "path": "pdfs/6/science/technik-informatik-6-loesungen.pdf",
-        "sha256": "0b5d300597dedd65814df1c2758ef4ef45c2f2d34fd8492464f2f5594ee0e36b",
-        "bytes": 887998
+        "path": "revisions/20261004/pdfs/6/science/technik-informatik-6-loesungen.pdf",
+        "sha256": "f1968a9d37df97d1122a074ee8d14b5fcc20563c85bcb98266419f6be5170ea9",
+        "bytes": 887370
       }
     }
   },
@@ -6670,20 +6682,20 @@
     "topicId": "astronomie-6",
     "title": "Erde, Mond & Sonne",
     "curriculum": {
-      "code": "NMG.4",
+      "code": "NMG.4.5",
       "scope": "Erde-Mond-Sonne-Beziehungen und normale Mondphasen vom Erdschatten unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C4"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/astronomie-6-arbeitsblatt.pdf",
-        "sha256": "67731c94203ef823b50f9f4c23cc235972cc171e692141029f19fbf67059440a",
-        "bytes": 859435
+        "path": "revisions/20261004/pdfs/6/science/astronomie-6-arbeitsblatt.pdf",
+        "sha256": "d819f6dd7a3e16aa8a26b0f8ee6e91e032026c817da975648413c7a90ed31ca0",
+        "bytes": 858753
       },
       "solution": {
-        "path": "pdfs/6/science/astronomie-6-loesungen.pdf",
-        "sha256": "74f21a1e5133569deab8de51e52fa4a4093e7c27b8195271de708d6842733f7b",
-        "bytes": 886032
+        "path": "revisions/20261004/pdfs/6/science/astronomie-6-loesungen.pdf",
+        "sha256": "7af1543b54fbc4ca14dd492dec983a4e07c94c7cb60976770e7f8039c0712af8",
+        "bytes": 885283
       }
     }
   },
@@ -6694,20 +6706,20 @@
     "topicId": "weltall",
     "title": "Berufswelt & Zukunft",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.2",
       "scope": "Berufliche Tätigkeiten, Fähigkeiten und Interessen ohne Geschlechterstereotype erkunden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/weltall-arbeitsblatt.pdf",
-        "sha256": "45f70c4ad9fe38eac91ea320f3f898c2050f7f777e20768c708e959b37113b48",
-        "bytes": 860063
+        "path": "revisions/20261004/pdfs/6/science/weltall-arbeitsblatt.pdf",
+        "sha256": "5673a3b04ce6de10d84df01af2214c4fa06cc9ac592aa3cffa3b73e00ec48542",
+        "bytes": 859760
       },
       "solution": {
-        "path": "pdfs/6/science/weltall-loesungen.pdf",
-        "sha256": "0463a0101fd8911c3a4a2f27f9a6b4528419d4d5242d4ba7cd39acede65479ab",
-        "bytes": 887027
+        "path": "revisions/20261004/pdfs/6/science/weltall-loesungen.pdf",
+        "sha256": "399495186c04c4944af00a5a59f1a435004cf347d889ea7bb061b41b64b8c31c",
+        "bytes": 886674
       }
     }
   },
@@ -6718,20 +6730,20 @@
     "topicId": "strom-elektrizitaet",
     "title": "Elektrizität und Schaltkreise ⚡",
     "curriculum": {
-      "code": "NMG.5",
+      "code": "NMG.5.2",
       "scope": "Geschlossene Stromkreise, Leiter und Kurzschlussgefahren am Papiermodell beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C5"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|2"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/strom-elektrizitaet-arbeitsblatt.pdf",
-        "sha256": "13a9ec95fe6908713c7965ce27d30d0c58b7a4e294edda3d65c2d338279c13dc",
-        "bytes": 863015
+        "path": "revisions/20261004/pdfs/6/science/strom-elektrizitaet-arbeitsblatt.pdf",
+        "sha256": "0e13b4d87bad0ead1793b1a33f9a7d15e3837263a38969a44bb8c109ff7e1c4e",
+        "bytes": 862418
       },
       "solution": {
-        "path": "pdfs/6/science/strom-elektrizitaet-loesungen.pdf",
-        "sha256": "a54d98d72ca7323ae9d2fca6f0c9fab21c839f547f3a7dcb0dbabf0649936d73",
-        "bytes": 889220
+        "path": "revisions/20261004/pdfs/6/science/strom-elektrizitaet-loesungen.pdf",
+        "sha256": "bc53cf1a9b30a6e4af75039c4bee50b5f0405c13e39e1f7625d202527519cd0a",
+        "bytes": 888292
       }
     }
   },
@@ -6742,20 +6754,26 @@
     "topicId": "neuzeit-6",
     "title": "Neuzeit & Frühe Neuzeit",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.1",
       "scope": "Zeitliche Einordnung und begrenzte Folgen einer historischen technischen Veränderung beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1",
+      "additionalReferences": [
+        {
+          "code": "NMG.9.3",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/neuzeit-6-arbeitsblatt.pdf",
-        "sha256": "0a930a31f3016b4869edc3eb45ecf72c24590e934ec1dbf7d8339ed22c89e618",
-        "bytes": 865246
+        "path": "revisions/20261004/pdfs/6/science/neuzeit-6-arbeitsblatt.pdf",
+        "sha256": "797c61318b4b280216467e283c667ebf126938ccdeba998df862ebd1ff58c38b",
+        "bytes": 864942
       },
       "solution": {
-        "path": "pdfs/6/science/neuzeit-6-loesungen.pdf",
-        "sha256": "ed2505bc723f8ae938fb452f16a4bf53b6d91a547e31b83837b5956466efdb89",
-        "bytes": 892163
+        "path": "revisions/20261004/pdfs/6/science/neuzeit-6-loesungen.pdf",
+        "sha256": "019f14e4b68e350bc3920a6ef57be66ddd1efdd8aab838ac906e3ab078d135fb",
+        "bytes": 893558
       }
     }
   },
@@ -6766,20 +6784,26 @@
     "topicId": "industrialisierung-6",
     "title": "Arbeit & Technik im Wandel",
     "curriculum": {
-      "code": "NMG.9",
+      "code": "NMG.9.2",
       "scope": "Historischen Wandel der Arbeit aus mehreren Perspektiven untersuchen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C9"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|2",
+      "additionalReferences": [
+        {
+          "code": "NMG.9.3",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/industrialisierung-6-arbeitsblatt.pdf",
-        "sha256": "33290fe8bd883bee0314f9282571901d34bfe004ed9fdbf37a8c15934891a490",
-        "bytes": 861908
+        "path": "revisions/20261004/pdfs/6/science/industrialisierung-6-arbeitsblatt.pdf",
+        "sha256": "1a2cc89d74b853b802b5d2943156c191847fb560876f390f003ff25cfbd9b3ff",
+        "bytes": 861587
       },
       "solution": {
-        "path": "pdfs/6/science/industrialisierung-6-loesungen.pdf",
-        "sha256": "6a4288f93e3d2c1cb61d3704db53e3fde3ea91e312708f4a9150a318e444933c",
-        "bytes": 891532
+        "path": "revisions/20261004/pdfs/6/science/industrialisierung-6-loesungen.pdf",
+        "sha256": "1f2c951800a74e3173454ff0ddddacc2494f777cdce46a7dd6d7a2f35d5542c8",
+        "bytes": 892452
       }
     }
   },
@@ -6790,20 +6814,20 @@
     "topicId": "demokratie-menschenrechte-6",
     "title": "Demokratie & Menschenrechte",
     "curriculum": {
-      "code": "NMG.10",
+      "code": "NMG.10.5",
       "scope": "Menschenrechte, demokratische Mehrheiten und altersgerechte Beteiligung unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C10"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/demokratie-menschenrechte-6-arbeitsblatt.pdf",
-        "sha256": "483c62dcc9fad2d1f593897cb57fa0acd03e3c0fb6f5ddba7955735f657d0413",
-        "bytes": 861053
+        "path": "revisions/20261004/pdfs/6/science/demokratie-menschenrechte-6-arbeitsblatt.pdf",
+        "sha256": "cdd4033d07939d2257950432c0f8cf45bc95cff80db7a91a5aacea57087f8428",
+        "bytes": 860758
       },
       "solution": {
-        "path": "pdfs/6/science/demokratie-menschenrechte-6-loesungen.pdf",
-        "sha256": "60a0be98a5c2958e01d10d065f489de5d922c70cf08e780f5e17d4db6f5b2120",
-        "bytes": 887749
+        "path": "revisions/20261004/pdfs/6/science/demokratie-menschenrechte-6-loesungen.pdf",
+        "sha256": "b29b8d4712dc342b0bd9acf906b806c3196c18289873cdcdfa139f194184bf18",
+        "bytes": 887373
       }
     }
   },
@@ -6814,20 +6838,20 @@
     "topicId": "weltkriege-6",
     "title": "Frieden & Zusammenleben",
     "curriculum": {
-      "code": "NMG.10",
+      "code": "NMG.10.1",
       "scope": "Bedürfnisse, faire Konfliktregeln und sichere Hilfswege unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C10"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|10|0|1"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/weltkriege-6-arbeitsblatt.pdf",
-        "sha256": "b484eaf44f81aaeecc183c4b54bb95b632066225131d0111a73ecd38167c17f7",
-        "bytes": 863695
+        "path": "revisions/20261004/pdfs/6/science/weltkriege-6-arbeitsblatt.pdf",
+        "sha256": "5a631292cf07f0d07683e44a82bb3ff62c3c006fe2d7620bba0f324fd3583633",
+        "bytes": 863397
       },
       "solution": {
-        "path": "pdfs/6/science/weltkriege-6-loesungen.pdf",
-        "sha256": "50369800f43e262f24955a96646a393965299aecbd03c21a6d529beb3dcdb46a",
-        "bytes": 889720
+        "path": "revisions/20261004/pdfs/6/science/weltkriege-6-loesungen.pdf",
+        "sha256": "afb9f15bab6af2db2cf1e41c3e5e1f4bc4753ec7d9acb1bb14a76369c957b2ea",
+        "bytes": 889356
       }
     }
   },
@@ -6838,20 +6862,30 @@
     "topicId": "globalisierung-6",
     "title": "Weltweit verbunden",
     "curriculum": {
-      "code": "NMG.7",
+      "code": "NMG.6.3",
       "scope": "Eine vereinfachte Lieferkette und Fragen zu ihren Auswirkungen beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C7"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.7.3",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|3"
+        },
+        {
+          "code": "NMG.7.4",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|4"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/globalisierung-6-arbeitsblatt.pdf",
-        "sha256": "01f379552a7a0d47fd8dd17d36c1bdf418aec039c9c81bd0047eef2a5080c4a5",
-        "bytes": 858896
+        "path": "revisions/20261004/pdfs/6/science/globalisierung-6-arbeitsblatt.pdf",
+        "sha256": "9ce8885f7465c740d32f252f51125a07229eea4513986bc0a7c4f263a0b1c9c6",
+        "bytes": 858600
       },
       "solution": {
-        "path": "pdfs/6/science/globalisierung-6-loesungen.pdf",
-        "sha256": "bc5ba117a16b277cf1804d570d185601ec0c170fd9bf8b1e0b11744494b88052",
-        "bytes": 886510
+        "path": "revisions/20261004/pdfs/6/science/globalisierung-6-loesungen.pdf",
+        "sha256": "eadfc02c8977d2cf505734a32794e48c1c08ee5c0866afd3fa31c2af7c3fad19",
+        "bytes": 888315
       }
     }
   },
@@ -6862,20 +6896,20 @@
     "topicId": "wirtschaft-grundlagen-6",
     "title": "Wirtschaft im Alltag",
     "curriculum": {
-      "code": "NMG.6",
+      "code": "NMG.6.4",
       "scope": "Einnahmen, Ausgaben und vereinfachten Überschuss unterscheiden.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C6"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/wirtschaft-grundlagen-6-arbeitsblatt.pdf",
-        "sha256": "9680b18571373a8ddb5407e0472dde0560dd3bae0b362b8159e2c9521ebf7750",
-        "bytes": 861961
+        "path": "revisions/20261004/pdfs/6/science/wirtschaft-grundlagen-6-arbeitsblatt.pdf",
+        "sha256": "3b9c9581c96cd0da4a0ff8ece4dd06409175f5ad555698d161b3426ef654b13f",
+        "bytes": 861672
       },
       "solution": {
-        "path": "pdfs/6/science/wirtschaft-grundlagen-6-loesungen.pdf",
-        "sha256": "84bd531d35e825b7f507da0b715cbc463afc5990cf6da2f923907b58bfb23321",
-        "bytes": 888045
+        "path": "revisions/20261004/pdfs/6/science/wirtschaft-grundlagen-6-loesungen.pdf",
+        "sha256": "e527024c06bd843d534b36802140a8263100756fc504562f9df767fea204315a",
+        "bytes": 887957
       }
     }
   },
@@ -6886,20 +6920,20 @@
     "topicId": "kontinente-6",
     "title": "Kontinente & Weltregionen",
     "curriculum": {
-      "code": "NMG.8",
+      "code": "NMG.8.4",
       "scope": "Ein benanntes Kontinentmodell nutzen und grosse Räume differenziert betrachten.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C8"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|4"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/kontinente-6-arbeitsblatt.pdf",
-        "sha256": "7a0a206d98afc36a9910bd86b5a5f07bfaf2d77f5c86a54f1860fcc5ec469c33",
-        "bytes": 860489
+        "path": "revisions/20261004/pdfs/6/science/kontinente-6-arbeitsblatt.pdf",
+        "sha256": "6c8ccf4a2bb4574dc6b39d0e013eb86e8f2c06f9c55bb3d638d8a160155ae458",
+        "bytes": 860170
       },
       "solution": {
-        "path": "pdfs/6/science/kontinente-6-loesungen.pdf",
-        "sha256": "870739a32530f1c8161d5726c209c9370f3c43cb602498396f428a0c86b61ecc",
-        "bytes": 885857
+        "path": "revisions/20261004/pdfs/6/science/kontinente-6-loesungen.pdf",
+        "sha256": "f89d19eb4a79684874d962df27042febba32052fe578e6332be64d881dae231d",
+        "bytes": 885738
       }
     }
   },
@@ -6910,20 +6944,26 @@
     "topicId": "migration-flucht-6",
     "title": "Migration & Flucht",
     "curriculum": {
-      "code": "NMG.7",
+      "code": "NMG.7.3",
       "scope": "Verschiedene Migrationsgründe und einen respektvollen Umgang ohne Statuszuschreibungen beschreiben.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C7"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.7.1",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|7|0|1"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/migration-flucht-6-arbeitsblatt.pdf",
-        "sha256": "00b21ff9ad1fab8c9df02e1655ffd137192b6eaaa053a396676e9204a6470516",
-        "bytes": 863225
+        "path": "revisions/20261004/pdfs/6/science/migration-flucht-6-arbeitsblatt.pdf",
+        "sha256": "fe74dc42ee58906d612d40bae453ff90cf0420f497cc6e5ce136b0d4037956a3",
+        "bytes": 862911
       },
       "solution": {
-        "path": "pdfs/6/science/migration-flucht-6-loesungen.pdf",
-        "sha256": "01d1c7e311c27608ed3cb671fc01332749e063d4cc7a5bde9d286df88a468171",
-        "bytes": 890838
+        "path": "revisions/20261004/pdfs/6/science/migration-flucht-6-loesungen.pdf",
+        "sha256": "24131eefb8dc888afd33ba1a253d657b22764aff5706e1637273ef35a5ef1540",
+        "bytes": 891798
       }
     }
   },
@@ -6934,20 +6974,30 @@
     "topicId": "zukunft-herausforderungen-6",
     "title": "Zukunft & Herausforderungen",
     "curriculum": {
-      "code": "NMG.11",
-      "scope": "Zukunftsvorschläge begründet vergleichen und eine Überprüfung ihrer Wirkung planen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C11"
+      "code": "NMG.8.3",
+      "scope": "Vorschläge zur Gestaltung eines Schulareals begründet vergleichen und eine Überprüfung ihrer Wirkung planen.",
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|8|0|3",
+      "additionalReferences": [
+        {
+          "code": "NMG.1.2",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|1|0|2"
+        },
+        {
+          "code": "NMG.4.4",
+          "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|4"
+        }
+      ]
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/zukunft-herausforderungen-6-arbeitsblatt.pdf",
-        "sha256": "3a541c7d1f329fc100209dda85f787f93744506a87fe2ce3c9a2986283420e30",
-        "bytes": 862526
+        "path": "revisions/20261004/pdfs/6/science/zukunft-herausforderungen-6-arbeitsblatt.pdf",
+        "sha256": "51116dbb929eedaebb13b0fa8755207a1ef5ae692ec98209a829e65b5cc9e96d",
+        "bytes": 862232
       },
       "solution": {
-        "path": "pdfs/6/science/zukunft-herausforderungen-6-loesungen.pdf",
-        "sha256": "cad2d9f6cc8d4cebee39e8d80f6dc0b9894494411b510ee367383f8e8b6b5c24",
-        "bytes": 889989
+        "path": "revisions/20261004/pdfs/6/science/zukunft-herausforderungen-6-loesungen.pdf",
+        "sha256": "39462f8943474cadc4f651d2bc2922533823148e6e1e94b07c6ad5d8e9701f87",
+        "bytes": 892566
       }
     }
   },
@@ -6958,20 +7008,20 @@
     "topicId": "geschichte-zeit",
     "title": "Religionen & Weltanschauungen",
     "curriculum": {
-      "code": "NMG.12",
+      "code": "NMG.12.5",
       "scope": "Religiöse und nichtreligiöse Vielfalt ohne persönliche Offenlegung respektvoll besprechen.",
-      "url": "https://v-fe.lehrplan.ch/index.php?code=b%7C6%7C1%7C12"
+      "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|12|0|5"
     },
     "files": {
       "worksheet": {
-        "path": "pdfs/6/science/geschichte-zeit-arbeitsblatt.pdf",
-        "sha256": "48971931fef9b5528f38b511000e174de73152b16998b8a58a2a484b3a850672",
-        "bytes": 863359
+        "path": "revisions/20261004/pdfs/6/science/geschichte-zeit-arbeitsblatt.pdf",
+        "sha256": "57250aec13e63f134abc565d0fc40ea1e865a106af8d541a2bf9b44ac08d1f79",
+        "bytes": 863051
       },
       "solution": {
-        "path": "pdfs/6/science/geschichte-zeit-loesungen.pdf",
-        "sha256": "a31975da545d30551464962bbdbc933b73a30f4440e8c55968ca110cb1e06da0",
-        "bytes": 889622
+        "path": "revisions/20261004/pdfs/6/science/geschichte-zeit-loesungen.pdf",
+        "sha256": "49f6c696c318be2bfd26b88e6d8c2642f39f46348e8f22d03e93004b8d3a8961",
+        "bytes": 889240
       }
     }
   },

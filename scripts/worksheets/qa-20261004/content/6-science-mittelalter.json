@@ -1,0 +1,59 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "mittelalter",
+  "goal": "Das europäische Mittelalter wird oft ungefähr zwischen 500 und 1500 eingeordnet. Solche Grenzen sind Vereinfachungen. Menschen lebten unter sehr unterschiedlichen Bedingungen, etwa auf dem Land oder in Städten. Eine einzelne Burg erzählt nicht die Geschichte aller Menschen.",
+  "sections": [
+    {
+      "title": "Ordne zeitlich ein.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Liegt das Jahr 1200 innerhalb der genannten Zeitspanne?",
+          "answer": "Ja."
+        },
+        {
+          "prompt": "Liegt das Jahr 1800 innerhalb dieser Zeitspanne?",
+          "answer": "Nein."
+        }
+      ]
+    },
+    {
+      "title": "Untersuche Quellen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine erhaltene Stadtmauer zeigt einen Teil einer mittelalterlichen Stadt. Was kann sie eher belegen: den Verlauf der Befestigung oder die Gedanken aller Bewohner? Begründe.",
+          "answer": "Eher den Verlauf der Befestigung. Gedanken aller Bewohner lassen sich aus einer Mauer nicht direkt ablesen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Vermeide Verallgemeinerungen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum ist «Alle Menschen lebten damals auf Burgen» falsch?",
+          "answer": "Viele lebten auf dem Land oder in Städten, nicht auf Burgen. Lebensbedingungen unterschieden sich nach Ort und sozialer Stellung.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.9.1",
+    "scope": "Grobe Zeiträume einordnen und die Aussagekraft einer historischen Sachquelle begrenzen.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|1",
+    "additionalReferences": [
+      {
+        "code": "NMG.9.3",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|9|0|3"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

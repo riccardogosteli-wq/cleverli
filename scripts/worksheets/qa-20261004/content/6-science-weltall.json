@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "weltall",
+  "goal": "Menschen lernen für Berufe unterschiedliche Fähigkeiten. Interessen und Berufswünsche können sich ändern. Ein Beruf ist nicht an ein Geschlecht gebunden. Für diese Aufgaben erfindest du Personen und musst keine privaten Zukunftspläne erzählen.",
+  "sections": [
+    {
+      "title": "Ordne Fähigkeit und Tätigkeit zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Person repariert Velos. Nenne zwei hilfreiche Fähigkeiten.",
+          "answer": "Zum Beispiel genau beobachten, technische Zusammenhänge verstehen, sorgfältig arbeiten und verständlich erklären. Andere passende Fähigkeiten gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe ein Vorurteil.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Technische Berufe sind nur für Jungen.» Warum ist das falsch?",
+          "answer": "Menschen verschiedener Geschlechter können technische Interessen und Fähigkeiten entwickeln. Das Geschlecht bestimmt die Eignung nicht.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Formuliere eine Frage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche offene Frage könntest du einer Person über ihren Berufsalltag stellen?",
+          "answer": "Zum Beispiel: Welche Aufgaben erledigen Sie an einem typischen Arbeitstag? Sachliche offene Fragen ohne private Pflichtangaben gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.2",
+    "scope": "Berufliche Tätigkeiten, Fähigkeiten und Interessen ohne Geschlechterstereotype erkunden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

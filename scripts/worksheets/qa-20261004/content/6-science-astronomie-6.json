@@ -1,0 +1,55 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "astronomie-6",
+  "goal": "Die Erde dreht sich um ihre Achse und umläuft die Sonne. Der Mond umläuft die Erde. Die sichtbaren Mondphasen entstehen, weil wir verschieden grosse Anteile seiner von der Sonne beleuchteten Hälfte sehen. Die normalen Mondphasen entstehen nicht durch den Erdschatten. Bei einer Mondfinsternis fällt der Erdschatten auf den Mond.",
+  "sections": [
+    {
+      "title": "Ordne Bewegungen zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welche Bewegung erklärt den Wechsel von Tag und Nacht?",
+          "answer": "Die Drehung der Erde um ihre Achse.",
+          "wide": true
+        },
+        {
+          "prompt": "Welchen Himmelskörper umläuft der Mond?",
+          "answer": "Die Erde.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Erkläre Mondphasen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sehen wir manchmal nur einen schmalen beleuchteten Teil des Mondes?",
+          "answer": "Von der Erde aus sehen wir dann nur einen kleinen Anteil seiner beleuchteten Hälfte. Sonne, Erde und Mond stehen unterschiedlich zueinander.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ist jeder Halbmond eine Mondfinsternis? Begründe.",
+          "answer": "Nein. Die normale Phase entsteht durch die Blickrichtung auf die beleuchtete Hälfte. Bei einer Mondfinsternis fällt der Erdschatten auf den Mond.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.4.5",
+    "scope": "Erde-Mond-Sonne-Beziehungen und normale Mondphasen vom Erdschatten unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|4|0|5"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

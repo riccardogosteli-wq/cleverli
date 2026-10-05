@@ -1,0 +1,55 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "wirtschaft-grundlagen-6",
+  "goal": "Ein erfundener Klassenstand nimmt CHF 120 ein. Für Zutaten werden CHF 45 und für Material CHF 15 ausgegeben. Einnahmen sind nicht dasselbe wie Überschuss. Weitere Kosten werden in diesem vereinfachten Beispiel nicht berücksichtigt.",
+  "sections": [
+    {
+      "title": "Rechne.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Wie hoch sind die genannten Ausgaben insgesamt?",
+          "answer": "CHF 60",
+          "wide": true
+        },
+        {
+          "prompt": "Wie viel bleibt nach diesen Ausgaben übrig?",
+          "answer": "CHF 60",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Unterscheide.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum sind CHF 120 nicht der Überschuss?",
+          "answer": "Das sind die Einnahmen. Die Ausgaben von CHF 60 müssen noch abgezogen werden.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Denke an Grenzen.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Ein echter Betrieb hätte vielleicht weitere Kosten. Nenne eine mögliche Kostenart.",
+          "answer": "Zum Beispiel Miete, Löhne, Energie, Transport oder Versicherungen. Passende weitere betriebliche Kosten gelten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.6.4",
+    "scope": "Einnahmen, Ausgaben und vereinfachten Überschuss unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|6|0|4"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,62 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "chemie-6",
+  "goal": "Stoffeigenschaften helfen beim Unterscheiden. In einer gedachten Probe liegen Sand und Kochsalz vor. Kochsalz löst sich in Wasser, Sand kaum. Die Aufgaben sind nur Planung auf Papier: nichts kosten, erhitzen oder mit unbekannten Stoffen mischen.",
+  "sections": [
+    {
+      "title": "Unterscheide Stoff und Gegenstand.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Glasbecher: Ist Glas der Stoff oder die Form des Gegenstands?",
+          "answer": "Der Stoff.",
+          "wide": true
+        },
+        {
+          "prompt": "Nenne eine untersuchbare Stoffeigenschaft ausser der Farbe.",
+          "answer": "Zum Beispiel Löslichkeit, Härte, Dichte oder elektrische Leitfähigkeit. Sichere fachlich passende Eigenschaften gelten.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Plane die Trennung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Sand und Salz liegen gemischt vor. Was bewirkt die Zugabe von Wasser im Gedankenversuch?",
+          "answer": "Das Salz löst sich, der Sand bleibt weitgehend ungelöst.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe einen Trennschritt.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Was bleibt beim Filtrieren in einem geeigneten Filter: Sand oder gelöstes Salz? Was geht hindurch?",
+          "answer": "Sand bleibt im Filter. Wasser mit gelöstem Salz geht hindurch. Gelöstes Salz wird nicht wie Sand herausgefiltert.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.3",
+    "scope": "Stoffeigenschaften und eine sichere gedankliche Trennung eines Gemischs erklären.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|3",
+    "additionalReferences": [
+      {
+        "code": "NMG.3.4",
+        "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|4"
+      }
+    ]
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

@@ -1,0 +1,51 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "energie-nachh-6",
+  "goal": "Energie wird umgewandelt, nicht aus dem Nichts erzeugt. Eine Solaranlage wandelt Strahlungsenergie um. Erneuerbar bedeutet nicht ohne Umweltwirkung: Herstellung, Flächenbedarf und Entsorgung sind ebenfalls wichtig.",
+  "sections": [
+    {
+      "title": "Benenne eine Umwandlung.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Eine Solarzelle versorgt eine Lampe. Welche Energieform wird durch die Solarzelle in elektrische Energie umgewandelt?",
+          "answer": "Strahlungsenergie / Lichtenergie.",
+          "wide": true,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "title": "Prüfe die Aussage.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "«Erneuerbare Energie hat nie Umweltwirkungen.» Stimmt das? Begründe mit einem Beispiel.",
+          "answer": "Nein. Zum Beispiel brauchen Anlagen Rohstoffe und Flächen; ihre Herstellung und Entsorgung können die Umwelt belasten.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Vergleiche fair.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Zwei Lampen sollen verglichen werden. Warum sollten sie für den Vergleich ähnlich hell leuchten und gleich lange genutzt werden?",
+          "answer": "Sonst vergleicht man unterschiedliche Leistungen für die Nutzer. Bei ähnlicher Helligkeit und gleicher Dauer lässt sich der Energiebedarf sinnvoller vergleichen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.3.2",
+    "scope": "Energieumwandlung und Umweltwirkungen differenziert beschreiben.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|3|0|2"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}

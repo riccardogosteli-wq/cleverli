@@ -1,0 +1,60 @@
+{
+  "grade": 6,
+  "subject": "science",
+  "sourceId": "technik-informatik-6",
+  "goal": "Ein Modell einer automatischen Tür arbeitet so: Sensor erkennt eine Person → Steuerung prüft das Signal → Motor öffnet die Tür. Das ist ein vereinfachtes Modell, keine Bauanleitung. Die Aufgaben bleiben auf Papier.",
+  "sections": [
+    {
+      "title": "Ordne zu.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Welcher Teil nimmt die Information auf?",
+          "answer": "Der Sensor.",
+          "wide": true
+        },
+        {
+          "prompt": "Welcher Teil verarbeitet das Signal?",
+          "answer": "Die Steuerung.",
+          "wide": true
+        },
+        {
+          "prompt": "Welcher Teil setzt die Öffnungsbewegung um?",
+          "answer": "Der Motor.",
+          "wide": true
+        }
+      ]
+    },
+    {
+      "title": "Denke an Sicherheit.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Warum braucht eine echte automatische Tür zusätzliche Sicherheitsfunktionen?",
+          "answer": "Damit zum Beispiel niemand eingeklemmt wird und Hindernisse erkannt werden. Das einfache Modell beschreibt nicht alle nötigen Schutzfunktionen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "title": "Prüfe systematisch.",
+      "instruction": "",
+      "items": [
+        {
+          "prompt": "Die Tür öffnet im Modell nicht. Nenne zwei mögliche Fehlerstellen, ohne sofort nur den Motor zu beschuldigen.",
+          "answer": "Zum Beispiel Sensor erkennt nichts, Signalübertragung gestört, Steuerung fehlerhaft oder Energieversorgung unterbrochen. Mehrere Ursachen prüfen.",
+          "wide": true,
+          "lines": 2
+        }
+      ]
+    }
+  ],
+  "mapping": {
+    "code": "NMG.5.1",
+    "scope": "Sensor, Steuerung und Antrieb in einem technischen Modell unterscheiden.",
+    "url": "https://v-fe.lehrplan.ch/index.php?code=a|6|1|5|0|1"
+  },
+  "version": "1.1",
+  "reviewDate": "05.10.2026"
+}
