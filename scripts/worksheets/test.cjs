@@ -63,7 +63,8 @@ const mock = {
  }}
 };
 process.env.NEXT_PUBLIC_SUPABASE_URL='http://localhost:9999';process.env.SUPABASE_SERVICE_ROLE_KEY='local-fixture-not-a-credential';
-const {serveWorksheets}=load('src/lib/worksheets/server.ts',{'server-only':{},'@supabase/supabase-js':{createClient:()=>mock},'./catalogue.json':catalogue,'./access':access});
+const ledgerRecords=[];
+const {serveWorksheets}=load('src/lib/worksheets/server.ts',{'server-only':{},'@supabase/supabase-js':{createClient:()=>mock},'./catalogue.json':catalogue,'./access':access,'@/lib/teacherAccount':teacher,'./downloadLedger':{recordWorksheetDownload:async(request,resource,access,user)=>{ledgerRecords.push({resource,access,user});}}});
 const req=(query='',token='local-fixture')=>serveWorksheets(new Request('http://localhost/api/worksheets'+query,{headers:token?{authorization:'Bearer '+token}:{}}));
 (async()=>{
  for(const [name,token,expected] of [['anonymous','',401],['invalid','invalid',401],['free','local-fixture',403],['lapsed','local-fixture',403],['invalid-date','local-fixture',403],['teacher-lapsed','local-fixture',403],['teacher-revoked','local-fixture',403],['db-error','local-fixture',503]]) {
@@ -74,6 +75,7 @@ const req=(query='',token='local-fixture')=>serveWorksheets(new Request('http://
  for(const query of ['?id=../../secret&type=worksheet','?id=%2e%2e%2fsecret&type=solution','?id=CL-3-math-brueche&type=preview','?id=CL-3-math-brueche&type=worksheet&path=pdfs/secret','?id=CL-3-math-brueche&id=other&type=worksheet','?userId=other','?id=CL-3-math-brueche','?type=solution']){const before=downloads;const r=await req(query);assert([400,404].includes(r.status),query);assert.equal(downloads,before);count++;}
  for(const topic of catalogue)for(const [type,file] of Object.entries(topic.files)){const r=await req(`?id=${topic.id}&type=${type}`);assert.equal(r.status,200);assert.equal(lastPath,file.path);assert.equal(crypto.createHash('sha256').update(Buffer.from(await r.arrayBuffer())).digest('hex'),file.sha256);count++;}
  corrupt=true;assert.equal((await req('?id=CL-3-math-brueche&type=solution')).status,503);count++;
+ assert.equal(ledgerRecords.length,613);assert(ledgerRecords.every(r=>r.user.id==='verified-user'));assert.equal(ledgerRecords.filter(r=>r.access==='teacher').length,1);assert.equal(ledgerRecords.filter(r=>r.access==='premium').length,612);assert(ledgerRecords.every(r=>r.resource.file_sha256.length===64&&r.resource.file_bytes>0));count+=5;
  console.log(JSON.stringify({passed:count,approvedPDFs:606,canonicalTopics:303,runtimeAliases:63,authCalls,dbCalls,downloads,mutationCalls:0,fixture:'local-only mocked Supabase and storage; no production credentials'}));
 })().catch(e=>{console.error(e);process.exit(1)});
 

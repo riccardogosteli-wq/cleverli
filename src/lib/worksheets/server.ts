@@ -3,6 +3,8 @@ import { createClient } from "@supabase/supabase-js";
 import { createHash } from "node:crypto";
 import catalogue from "./catalogue.json";
 import { PRIVATE_HEADERS, worksheetAccess } from "./access";
+import { teacherAccountActive } from "@/lib/teacherAccount";
+import { recordWorksheetDownload } from "./downloadLedger";
 export const WORKSHEET_BUCKET = "cleverli-worksheets-20260927";
 export function worksheetError(status: number) {
   return Response.json({ error: status === 401 ? "Anmeldung erforderlich" : status === 403 ? "Premium erforderlich" : "Arbeitsblätter momentan nicht verfügbar" }, { status, headers: PRIVATE_HEADERS });
@@ -21,7 +23,7 @@ async function authorize(request: Request) {
   ]);
   if (profile.error || teacher.error) return { response: worksheetError(503) };
   if (!worksheetAccess(profile.data, teacher.data)) return { response: worksheetError(403) };
-  return { db };
+  return { db, user: data.user, access: teacherAccountActive(teacher.data) ? "teacher" as const : "premium" as const };
 }
 export async function serveWorksheets(request: Request) {
   try {
@@ -39,6 +41,7 @@ export async function serveWorksheets(request: Request) {
     if (error || !data) return worksheetError(503);
     const bytes = Buffer.from(await data.arrayBuffer());
     if (bytes.length !== file.bytes || createHash("sha256").update(bytes).digest("hex") !== file.sha256) return worksheetError(503);
+    await recordWorksheetDownload(request, { topic_id: topic.id, title: topic.title, grade: topic.grade, subject: topic.subject, file_type: type, file_sha256: file.sha256, file_bytes: bytes.length }, auth.access!, auth.user);
     return new Response(bytes, { headers: { ...PRIVATE_HEADERS, "Content-Type": "application/pdf", "Content-Disposition": `attachment; filename="${topic.id}-${type === "worksheet" ? "Arbeitsblatt" : "Loesung"}.pdf"`, "Content-Length": String(bytes.length) } });
   } catch { return worksheetError(503); }
 }

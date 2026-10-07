@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import freeResources from "./src/lib/worksheets/free-manifest.json";
 import { withSentryConfig } from "@sentry/nextjs";
 
 const securityHeaders = [
@@ -52,6 +53,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Keep existing public URLs and GA4 event semantics; route PDF responses through
+  // a server-only, anonymous ledger. beforeFiles prevents static-cache bypass.
+  async rewrites() {
+    return { beforeFiles: freeResources.map(({ file }) => ({ source: `/worksheets/${file}.pdf`, destination: `/api/worksheets/free?file=${file}` })) };
+  },
+  outputFileTracingIncludes: { "/api/worksheets/free": ["./public/worksheets/*.pdf"] },
   async headers() {
     return [
       {

@@ -1,0 +1,122 @@
+[
+  {
+    "file": "buchstaben-1-klasse-arbeitsblatt",
+    "topic_id": "free-buchstaben-1-klasse",
+    "title": "Buchstaben",
+    "grade": 1,
+    "subject": "german",
+    "file_type": "worksheet",
+    "file_sha256": "87f512a829d312810619de31ee3e66075c1875381370aa1eafc48f73802d1e63",
+    "file_bytes": 854567
+  },
+  {
+    "file": "buchstaben-1-klasse-loesungen",
+    "topic_id": "free-buchstaben-1-klasse",
+    "title": "Buchstaben",
+    "grade": 1,
+    "subject": "german",
+    "file_type": "solution",
+    "file_sha256": "12eafb652cb0e89f8a7faf4f0c9ee6357bdd0bf35fd42c59d922fed81b11316b",
+    "file_bytes": 871816
+  },
+  {
+    "file": "einmaleins-2-klasse-arbeitsblatt",
+    "topic_id": "free-einmaleins-2-klasse",
+    "title": "Einmaleins",
+    "grade": 2,
+    "subject": "math",
+    "file_type": "worksheet",
+    "file_sha256": "0611c10b7a1e08916269a3c03e88989c7a1ddd8316164472e9a37a1559ef35eb",
+    "file_bytes": 995128
+  },
+  {
+    "file": "einmaleins-2-klasse-loesungen",
+    "topic_id": "free-einmaleins-2-klasse",
+    "title": "Einmaleins",
+    "grade": 2,
+    "subject": "math",
+    "file_type": "solution",
+    "file_sha256": "1ebc70b2593199007bb1f8b75450bd4466da512d7cf20b76529191373fa5ab47",
+    "file_bytes": 994673
+  },
+  {
+    "file": "beispiel-klasse-3",
+    "topic_id": "free-brueche-3-klasse",
+    "title": "Brüche",
+    "grade": 3,
+    "subject": "math",
+    "file_type": "worksheet",
+    "file_sha256": "3220e83bec2958b8599c52d4dce04c1e1993e7157a2756b71fe2ae8c2aa8d3c0",
+    "file_bytes": 855263
+  },
+  {
+    "file": "beispiel-klasse-3-loesungen",
+    "topic_id": "free-brueche-3-klasse",
+    "title": "Brüche",
+    "grade": 3,
+    "subject": "math",
+    "file_type": "solution",
+    "file_sha256": "1c1e1ca1a7eaaaa92f54646a1f196b94975afcbdafe1e49f8531748024f5c9de",
+    "file_bytes": 877009
+  },
+  {
+    "file": "schriftlich-multiplizieren-4-klasse-arbeitsblatt",
+    "topic_id": "free-schriftlich-multiplizieren-4-klasse",
+    "title": "Schriftlich multiplizieren",
+    "grade": 4,
+    "subject": "math",
+    "file_type": "worksheet",
+    "file_sha256": "23bcc04c3f34ea61c9c12f17e4d54060f35757d9faa5cc53001950627601fb7a",
+    "file_bytes": 879182
+  },
+  {
+    "file": "schriftlich-multiplizieren-4-klasse-loesungen",
+    "topic_id": "free-schriftlich-multiplizieren-4-klasse",
+    "title": "Schriftlich multiplizieren",
+    "grade": 4,
+    "subject": "math",
+    "file_type": "solution",
+    "file_sha256": "c88de9cd673356823ddd4480605673a263e1de53edb7c42577cdb792eff12650",
+    "file_bytes": 902226
+  },
+  {
+    "file": "dezimalzahlen-5-klasse-arbeitsblatt",
+    "topic_id": "free-dezimalzahlen-5-klasse",
+    "title": "Dezimalzahlen",
+    "grade": 5,
+    "subject": "math",
+    "file_type": "worksheet",
+    "file_sha256": "bb89f8c9d0e8df1a82dbbae7356f2abf9f93cc2bdb35b0fa2b944dc16b104b33",
+    "file_bytes": 855849
+  },
+  {
+    "file": "dezimalzahlen-5-klasse-loesungen",
+    "topic_id": "free-dezimalzahlen-5-klasse",
+    "title": "Dezimalzahlen",
+    "grade": 5,
+    "subject": "math",
+    "file_type": "solution",
+    "file_sha256": "af999c1cc88f98a90f7d8d2e7b36e568a0ba1393c3f16abf3104755f88f817bf",
+    "file_bytes": 882716
+  },
+  {
+    "file": "prozentrechnung-6-klasse-arbeitsblatt",
+    "topic_id": "free-prozentrechnung-6-klasse",
+    "title": "Prozentrechnung",
+    "grade": 6,
+    "subject": "math",
+    "file_type": "worksheet",
+    "file_sha256": "6748a24dabfbfd1da1f31bf0bc95e0627f9fafaa70ca1de14ccc39c8707745b5",
+    "file_bytes": 860642
+  },
+  {
+    "file": "prozentrechnung-6-klasse-loesungen",
+    "topic_id": "free-prozentrechnung-6-klasse",
+    "title": "Prozentrechnung",
+    "grade": 6,
+    "subject": "math",
+    "file_type": "solution",
+    "file_sha256": "e30abba54b4b06944207e35fde2d6ac0cd36fabd32d9a7d67b3f02c40b4ee75c",
+    "file_bytes": 885073
+  }
+]
