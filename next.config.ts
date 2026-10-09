@@ -58,7 +58,7 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return { beforeFiles: freeResources.map(({ file }) => ({ source: `/worksheets/${file}.pdf`, destination: `/api/worksheets/free?file=${file}` })) };
   },
-  outputFileTracingIncludes: { "/api/worksheets/free": ["./public/worksheets/*.pdf"] },
+  outputFileTracingIncludes: { "/api/worksheets/free": ["./public/worksheets/*.pdf"], "/labs/number-flight/[[...asset]]": ["./spikes/number-flight/*"] },
   async headers() {
     return [
       {
