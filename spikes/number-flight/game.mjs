@@ -7,22 +7,22 @@ const starRandom=rng(83),sky=Array.from({length:65},()=>({x:starRandom(),y:starR
 function key(){return 'cleverli_number_flight_prototype_v1:'+grade+':'+(slow?'slow':'normal');}
 function best(){try{return Math.max(0,Number(localStorage.getItem(key()))||0);}catch{return 0;}}
 function reset(){s={phase:'ready',grade,energy:0,stars:0,boosts:0,combo:0,lane:1,y:Y[1],elapsed:0,travel:0,cooldown:0,mission:createMission(grade,random)};cols=[];clouds=[];sparks=[];spawn=.25;flash=0;toast=0;hud();lanes();}
-function hud(){const target=s.mission.target;$('energy').textContent=display(s.energy,grade)+' / '+display(target,grade);$('remaining').textContent='Noch '+display(target-s.energy,grade);$('fill').style.width=(s.energy/target*100)+'%';$('stars').textContent=s.stars+' ★';$('combo').textContent=s.boosts+' Boost'+(s.boosts===1?'':'s');const left=Math.max(0,Math.ceil(90-s.elapsed));$('time').textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');$('distance').textContent=Math.floor(s.travel)+' m';$('mode').textContent=GRADE_LABELS[grade];$('grade').disabled=['playing','paused'].includes(s.phase);$('slow').disabled=['playing','paused'].includes(s.phase);$('pause').disabled=s.phase!=='playing';}
+function hud(){const target=s.mission.target;$('energy').textContent=display(s.energy,grade)+' / '+display(target,grade);$('remaining').textContent='Noch '+display(target-s.energy,grade);$('need').textContent='Sammle noch '+display(target-s.energy,grade);$('fill').style.width=(s.energy/target*100)+'%';$('stars').textContent=s.stars+' ★';$('combo').textContent='Ziele: '+s.boosts;const left=Math.max(0,Math.ceil(90-s.elapsed));$('time').textContent=Math.floor(left/60)+':'+String(left%60).padStart(2,'0');$('distance').textContent=Math.floor(s.travel)+' m';$('mode').textContent=GRADE_LABELS[grade];$('grade').disabled=['playing','paused'].includes(s.phase);$('slow').disabled=['playing','paused'].includes(s.phase);$('pause').disabled=s.phase!=='playing';}
 function say(text){$('status').textContent=text;toast=3.5;}
 function lanes(){for(const b of document.querySelectorAll('[data-lane]'))b.setAttribute('aria-pressed',String(Number(b.dataset.lane)===s.lane));}
 function steer(lane){s.lane=Math.max(0,Math.min(2,lane));lanes();}
 function particles(x,y,color,n=15){if(reduced)return;for(let i=0;i<n;i++)sparks.push({x,y,vx:(random()-.5)*.3,vy:(random()-.5)*.5,t:1+random(),color});}
 function pickup(units){if(s.phase!=='playing')return;const before=s.energy,result=applyEnergy(s.energy,units,s.mission.target);s.energy=result.energy;
- if(result.outcome==='boost'){s.boosts++;s.combo++;s.stars+=10+Math.min(s.combo,5);s.travel+=200;s.cooldown=1.15;flash=1;particles(.18,s.y,'#ffe18b',32);say('Tank voll! Turbo gezündet. +'+(10+Math.min(s.combo,5))+' Sterne');s.mission=createMission(grade,random);cols=[];clouds=[];spawn=1.1;}
+ if(result.outcome==='boost'){s.boosts++;s.combo++;s.stars+=10+Math.min(s.combo,5);s.travel+=200;s.cooldown=1.15;flash=1;particles(.18,s.y,'#ffe18b',32);say(display(before,grade)+' + '+display(units,grade)+' = '+display(s.mission.target,grade)+'! Ziel geschafft. Turbo +'+(10+Math.min(s.combo,5))+' Sterne');s.mission=createMission(grade,random);cols=[];clouds=[];spawn=1.1;}
  else if(result.outcome==='overshoot'){s.combo=0;flash=-.6;particles(.18,s.y,'#f5a6ac',10);say(display(before,grade)+' + '+display(units,grade)+' ist zu viel. Neuer Versuch mit leerem Tank.');cols=[];spawn=.5;}
  else{particles(.18,s.y,'#8fffd3',10);say('Energie gesammelt! Noch '+display(s.mission.target-s.energy,grade)+' bis zum Turbo.');}
  hud();
 }
 function column(){const choices=makeWave(s.mission,s.energy,random);cols.push({x:1.13,choices,crossed:false});if(s.boosts>0&&random()<.5)clouds.push({x:1.53,lane:Math.floor(random()*3),hit:false});}
 function update(dt){if(s.phase!=='playing')return;s.elapsed=Math.min(90,s.elapsed+dt);if(s.elapsed>=90){finish();return;}s.y+=(Y[s.lane]-s.y)*Math.min(1,dt*13);s.cooldown=Math.max(0,s.cooldown-dt);const speed=(slow?.15:.23)*(s.cooldown>0?1.55:1);s.travel+=dt*(slow?17:25);spawn-=dt;
- if(spawn<=0&&s.cooldown===0){column();spawn=slow?3.5:2.9;}
+ if(spawn<=0&&s.cooldown===0&&cols.length===0){column();spawn=slow?3.5:2.9;}
  for(const c of [...cols]){c.x-=speed*dt;if(!c.crossed&&c.x<=.19){c.crossed=true;const lane=Y.findIndex(y=>Math.abs(s.y-y)<.085);if(lane>=0)pickup(c.choices[lane].units);}}
- cols=cols.filter(c=>c.x>-.13);
+ const consumed=cols.some(c=>c.crossed);cols=cols.filter(c=>!c.crossed&&c.x>-.13);if(consumed)spawn=Math.max(spawn,.35);
  for(const c of clouds){c.x-=speed*dt;if(!c.hit&&c.x<=.2&&c.x>.08&&Math.abs(s.y-Y[c.lane])<.08){c.hit=true;s.combo=0;particles(.18,s.y,'#b4cadd',8);say('Eine kleine Wolke! Deine Energie bleibt im Tank.');}}clouds=clouds.filter(c=>c.x>-.1);
  for(const p of sparks){p.x+=p.vx*dt;p.y+=p.vy*dt;p.t-=dt;}sparks=sparks.filter(p=>p.t>0);flash=Math.sign(flash)*Math.max(0,Math.abs(flash)-dt);toast=Math.max(0,toast-dt);if(toast===0)$('status').textContent='Wähle deine Flugbahn. Fülle den Tank genau bis zum Ziel.';hud();
 }
