@@ -2,7 +2,7 @@
 const scenery=new Image();scenery.src=new URL('./world.webp',import.meta.url).href;
 const cache=new WeakMap();
 export function drawAlpine(ctx,w,h){
- const d=ctx.getTransform().a||1,ready=scenery.complete&&scenery.naturalWidth>0;let c=cache.get(ctx);
+ const d=ctx.getTransform().a||1;if(!Number.isFinite(w)||!Number.isFinite(h)||Math.round(w*d)<1||Math.round(h*d)<1)return;const ready=scenery.complete&&scenery.naturalWidth>0;let c=cache.get(ctx);
  if(!c||c.w!==w||c.h!==h||c.d!==d||c.ready!==ready){
  const layer=document.createElement('canvas');layer.width=Math.round(w*d);layer.height=Math.round(h*d);const p=layer.getContext('2d');p.scale(d,d);p.imageSmoothingEnabled=true;p.imageSmoothingQuality='high';
  const sky=p.createLinearGradient(0,0,0,h);sky.addColorStop(0,'#cceeff');sky.addColorStop(1,'#e9f4cc');p.fillStyle=sky;p.fillRect(0,0,w,h);

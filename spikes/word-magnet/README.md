@@ -1,3 +1,6 @@
+## Active calibration, Ricci6677, 2026-10-09
+Current profiles supersede earlier timed/difficulty descriptions below. All six grades use stationary choices and finite untimed goal rounds. See ../GAME-LP21-CALIBRATION-20261009.md for live official-source references, scope and the class table. Math class1 matches1–5 with one pickup;class6 uses bounded half/quarter/decimal work, no percentage-of/chains. Germanclass1 has picture/visibleletter/outline, class6 commonstem/rule-guided words. New flightWeiter→/ArrowRight/Space preserves lane. Existing approvedworlds/passwordgate/rewardisolation remain unchanged.
+
 # Word Magnet private prototype
 
 Ricci6659 second game: GermanWordMagnet on password-gated www.cleverli.ch/labs/word-magnet,notpublicmedal/XP integration. DedicatedWordcookie/path/HMACpurposeusingexistingprivate-testpassword/hashandserversecret,no newcredential. MathsessiondoesnotauthenticateGermanandsamepasswordcanbeusedforboth. AnonymousHTMLloginonly,JSdenied,private/no-store/noindex/noarchive. No publiclinks/sitemap,existingmath unchangedexceptadditivefiletracing.

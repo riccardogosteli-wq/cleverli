@@ -1,3 +1,6 @@
+## Active calibration, Ricci6677, 2026-10-09
+Current profiles supersede earlier timed/difficulty descriptions below. All six grades use stationary choices and finite untimed goal rounds. See ../GAME-LP21-CALIBRATION-20261009.md for live official-source references, scope and the class table. Math class1 matches1–5 with one pickup;class6 uses bounded half/quarter/decimal work, no percentage-of/chains. Germanclass1 has picture/visibleletter/outline, class6 commonstem/rule-guided words. New flightWeiter→/ArrowRight/Space preserves lane. Existing approvedworlds/passwordgate/rewardisolation remain unchanged.
+
 # Number Flight, password protected private test
 
 Ricci6653 authorises hosting the experiment on www.cleverli.ch/labs/number-flight, not public game/reward integration. The route is unlinked, omitted from sitemap, noindex/nofollow/noarchive, and protected by a dedicated test password in every environment. Game HTML and JS require a purpose-bound signed cookie. Password stored only as salted scrypt hash on the server, separate32byte signing key, cookie HttpOnly/Secure/SameSiteLax/path scoped/12hours, Origin checked POST, bounded body and failed-login throttling. Missing config fails closed. Password kept in protected Keychain and sent only to Ricci private chat; never in URLs/logs/source/customer records. Existing dashboard/admin credentials unchanged.
