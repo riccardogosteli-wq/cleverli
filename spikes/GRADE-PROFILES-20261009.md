@@ -1,0 +1,13 @@
+# Private games: explicit grade progression
+
+|Grade|Math content and support|German content and support|
+|1|Targets3–10,two stationarychoices,dot quantities,gentlewrong-answerpreservation,3goalswithouttimer|Short3letterpicturewords,onlynextletter+onedistractor,fixedlargecards,wholeword+nextlettervisible,3wordswithouttimer|
+|2|Additionupto100,threewaitingchoices,4goalswithouttimer|Two-syllablewords,stationarywholeboard+onedistractor,visibleword+nextsyllable,4wordswithouttimer|
+|3|Multiplication/division,threechoices,120active seconds|Orthographicgroups/umlauts,visibleword+nextpart,2distractors,120seconds|
+|4|Largerpositiveadd/subtractexpressions,nearvalues,110seconds|Compound-buildingfromexplicitroots,noanswer/nextpartrevealed,3distractors,110seconds|
+|5|Equivalentfractionsanddecimals,scaledintegerexactness,100seconds|Wordfamily/oppositesfrommeaningclues,hiddensolution/nextpart,4distractors,100seconds|
+|6|Whole-numberpercent/fractionOfcalculationsandtwo-stepchains,multiplecontributionsandclosevalues,90seconds|Orthographicdecisionsincontext,trickynear-misspieces,hiddensolution/nextpart,noautomaticanswerfeedback,90seconds|
+
+Slowspeedoptionremainsavailableforaccessibilitywithoutturningoffcognitivedifficulty. Explicitoptionalwordhintonuppergrades;neverlostrequiredpieces. Technicalreachabilitydoesnotproveactualchildcomprehension/agefit/pace. Founder/childtrialneeded;notcompleteLP21coverage. No publicreward/XP integration.
+
+Sharedvisualreference: liveCleverlihomepagewhite/green/cream,originalcleverli-wave.png,daylightsky/clouds/meadow/mountainbackground. No newpaidassets orruntime services. SameprivateURLsandcredentials,cookies/purpose remainseparate.
