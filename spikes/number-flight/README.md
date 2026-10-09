@@ -1,0 +1,7 @@
+# Number Flight private prototype
+
+Standalone browser game on /labs/number-flight in protected Vercel Preview only. Production guards return404 for HTML andJS regardless of query. No mainpush/publicintegration, no links/nav/sitemap additions, no auth/customer/reward/medal/XP/storage scope changes. Only namespace cleverli_number_flight_prototype_v1 stores a per-class/tempo personal test record on the current browser. No third-party assets,API calls,server game state,paidAI/audio/image services. Existing Cleverli mascot/logo reused. Quiet first prototype, visual feedback only.
+
+One3-lane flight engine,6grade content configurations.90seconds active play,manual andblur/visibilitypause freeze clock;finitefinish/restart;touch andkeyboard;gentleovershoot recovery;clouds preserve energy. Scaledinteger arithmetic for fractions/percentages. Grade1plus20,Grade2plus100,Grade3multiply/divide expressions,Grade4larger equivalent subtract expressions,Grade5fractions/decimals,Grade6percentage/fraction/decimal representations. Not an independent LP21 certification or classroom study.
+
+Run node spikes/number-flight/test.mjs for6022 deterministic checks. QA-only test hooks are exposed only with internal_qa=1 on this alreadyprivateprototype;theyneverwriteplatformprogress. Treatgamefeel/playabilityasfounderreview:realchildrenfeedbackstillneeded. Prototypecode mustnotmergeorpublishwithoutnormalintegration/securityreview.
