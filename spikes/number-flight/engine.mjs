@@ -23,5 +23,5 @@ export function makeWave(m,energy,r=Math.random){const remaining=m.target-energy
  const values=[good];for(const candidate of[good-step,good+step,good+step*2,step,step*2,step*3])if(candidate>0&&candidate<=PROFILES[m.grade].max&&!values.includes(candidate)&&values.length<3)values.push(candidate);
  if(values.length!==3)throw Error('Invalid choice range');const shift=int(r,0,2);return values.map((_,i)=>{const units=values[(i+shift)%3];return{units,...labelFor(units,m.grade,r)}});
 }
-export function applyEnergy(energy,units,target){if(![energy,units,target].every(Number.isSafeInteger)||units<=0||energy<0||target<=0)throw Error('Invalid energy');const next=energy+units;return next===target?{energy:0,outcome:'boost'}:next>target?{energy:0,outcome:'overshoot'}:{energy:next,outcome:'collect'};}
+export function applyEnergy(energy,units,target){if(![energy,units,target].every(Number.isSafeInteger)||units<=0||energy<0||target<=0)throw Error('Invalid energy');const next=energy+units;return next===target?{energy:0,outcome:'boost'}:next>target?{energy,outcome:'overshoot'}:{energy:next,outcome:'collect'};}
 export function evaluateChoice(c,scale=1){if(c.kind==='multiply')return c.a*c.b;if(c.kind==='divide')return c.a/c.b;if(c.kind==='add')return c.a+c.b;if(c.kind==='subtract')return c.a-c.b;if(c.kind==='decimalAdd')return c.a+c.b;return c.a/c.b*scale;}

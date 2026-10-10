@@ -43,3 +43,5 @@ export function add(m,placed,id){
  try{solution(m,remaining,m.maxBlocks-placed.length-1);}catch{return{placed:[...placed],outcome:'no-room'};}
  const next=[...placed,{...c}];return{placed:next,outcome:remaining===0?'bridge':'build'};
 }
+
+export function alternativeSolution(m,original,placed=[]){let found=null;const sum=placed.reduce((n,p)=>n+p.value,0),remaining=m.target-sum,budget=m.maxBlocks-placed.length;const search=(i,left,slots,plan)=>{if(found)return;if(left===0){const values=[...placed.map(p=>p.value),...plan.map(id=>m.choices.find(c=>c.id===id).value)].sort((a,b)=>a-b).join(',');if(values!==original)found=plan;return;}if(i>=m.choices.length||slots<=0)return;const c=m.choices[i];for(let count=0;count<=slots&&count*c.value<=left;count++)search(i+1,left-count*c.value,slots-count,[...plan,...Array(count).fill(c.id)]);};if(remaining>=0)search(0,remaining,budget,[]);return found;}

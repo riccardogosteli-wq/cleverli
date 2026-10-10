@@ -58,7 +58,7 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return { beforeFiles: freeResources.map(({ file }) => ({ source: `/worksheets/${file}.pdf`, destination: `/api/worksheets/free?file=${file}` })) };
   },
-  outputFileTracingIncludes: { "/api/worksheets/free": ["./public/worksheets/*.pdf"], "/labs/number-flight/[[...asset]]": ["./spikes/number-flight/*"], "/labs/word-magnet/[[...asset]]": ["./spikes/word-magnet/*"], "/labs/bridge-builder/[[...asset]]": ["./spikes/bridge-builder/*","./spikes/adventure-shared/*"], "/labs/sentence-detective/[[...asset]]": ["./spikes/sentence-detective/*","./spikes/adventure-shared/*"] },
+  outputFileTracingIncludes: { "/api/worksheets/free": ["./public/worksheets/*.pdf"], "/labs/number-flight/[[...asset]]": ["./spikes/number-flight/*","./spikes/adventure-shared/*","./spikes/adventure-shared/voice/*"], "/labs/word-magnet/[[...asset]]": ["./spikes/word-magnet/*","./spikes/adventure-shared/*","./spikes/adventure-shared/voice/*"], "/labs/bridge-builder/[[...asset]]": ["./spikes/bridge-builder/*","./spikes/adventure-shared/*","./spikes/adventure-shared/voice/*"], "/labs/sentence-detective/[[...asset]]": ["./spikes/sentence-detective/*","./spikes/adventure-shared/*","./spikes/adventure-shared/voice/*"] },
   async headers() {
     return [
       {
