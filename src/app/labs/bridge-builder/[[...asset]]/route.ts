@@ -1,1 +1,1 @@
-import{privateAdventure}from'@/lib/privateAdventureRoute';export const dynamic='force-dynamic';export const runtime='nodejs';const handlers=privateAdventure('bridge-builder','Brückenbauer','🌉');export const GET=handlers.GET;export const POST=handlers.POST;
+import{privateAdventure}from'@/lib/privateAdventureRoute';export const dynamic='force-dynamic';export const runtime='nodejs';const handlers=privateAdventure('bridge-builder','Brückenbauer');export const GET=handlers.GET;export const POST=handlers.POST;
