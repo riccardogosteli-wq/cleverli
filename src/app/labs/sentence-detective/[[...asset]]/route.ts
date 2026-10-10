@@ -1,0 +1,1 @@
+import{privateAdventure}from'@/lib/privateAdventureRoute';export const dynamic='force-dynamic';export const runtime='nodejs';const handlers=privateAdventure('sentence-detective','Satzdetektiv','🕵️');export const GET=handlers.GET;export const POST=handlers.POST;

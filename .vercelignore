@@ -4,3 +4,10 @@ node_modules/
 .env*
 scripts/mi-sheet-*.py
 scripts/__pycache__/
+
+.qa
+.env*
+node_modules
+.next
+.git
+reports
