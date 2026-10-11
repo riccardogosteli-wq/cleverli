@@ -1,0 +1,35 @@
+// A single local snapshot: unique finds, ownership and spending commit together.
+export const SAVE_KEY='cleverli_woodland_campaign_v1';
+export const CATALOG=Object.freeze([{id:'blanket',name:'Picknickdecke',cost:8},{id:'lamp',name:'Gemütliche Lampe',cost:12},{id:'vase',name:'Blumenvase',cost:16},{id:'rug',name:'Waldteppich',cost:20},{id:'hat',name:'Blaues Rucksackband',cost:24},{id:'map',name:'Wandkarte',cost:20}].map(Object.freeze));
+const blank=()=>({version:1,revision:0,generation:0,found:{},completed:[],discoveries:[],owned:[],equipped:[],records:{}});
+export function validate(raw,levels){
+ if(!raw||raw.version!==1||!Number.isSafeInteger(raw.revision)||raw.revision<0)throw Error('Ungültiger Spielstand');
+ const out=blank();out.revision=raw.revision;out.generation=raw.generation??0;if(!Number.isSafeInteger(out.generation)||out.generation<0)throw Error('Ungültiger Neustart');
+ for(const l of levels){const key=l.id+':'+l.version,ids=raw.found?.[key]||[];if(!Array.isArray(ids)||ids.some(id=>!Number.isInteger(id)||!l.berries.some(b=>b.id===id)))throw Error('Ungültige Fundstücke');out.found[key]=[...new Set(ids)];}
+ for(const field of ['completed','discoveries']){if(!Array.isArray(raw[field]))throw Error('Ungültiger Weg');out[field]=[...new Set(raw[field].filter(id=>levels.some(l=>l.id===id)))];}
+ const furthest=levels.findIndex(l=>!out.completed.includes(l.id));if(furthest>=0&&levels.slice(furthest+1).some(l=>out.completed.includes(l.id)))throw Error('Ungültige Freischaltung');
+ for(const field of ['owned','equipped']){if(!Array.isArray(raw[field])||raw[field].some(id=>!CATALOG.some(o=>o.id===id)))throw Error('Ungültige Einrichtung');out[field]=[...new Set(raw[field])];}out.equipped=out.equipped.filter(id=>out.owned.includes(id));
+ if(balance(out)<0)throw Error('Ungültiger Beerenbeutel');
+ for(const l of levels){const key=l.id+':'+l.version+':trial',v=raw.records?.[key];if(v!==undefined){if(!out.completed.includes(l.id)||!Number.isFinite(v)||v<1||v>86400)throw Error('Ungültiger Rekord');out.records[key]=v;}}
+ return out;
+}
+export function balance(s){return Object.values(s.found).reduce((n,a)=>n+a.length,0)-s.owned.reduce((n,id)=>n+(CATALOG.find(x=>x.id===id)?.cost||0),0);}
+export function unlocked(s,levels,index){return index===0||s.completed.includes(levels[index-1]?.id);}
+export function createProgress(levels,storage,locks=null){let state=blank(),durable=true,message='',rawLast=null,dirty=false;
+ const parse=raw=>raw?validate(JSON.parse(raw),levels):blank();
+ try{rawLast=storage.getItem(SAVE_KEY);state=parse(rawLast);}catch{try{state=parse(storage.getItem(SAVE_KEY+':backup'));message='Dein letzter sicherer Spielstand wurde wiederhergestellt.';}catch{state=blank();message='Der Spielstand war beschädigt. Du kannst sicher neu anfangen.';}durable=false;}
+ function reconcile(latest){if(latest.generation>state.generation){dirty=false;message='Der Abenteuerstand wurde in einem anderen Fenster zurückgesetzt.';return latest;}if(latest.generation<state.generation&&dirty)return structuredClone(state);if(!dirty)return latest;const combined=structuredClone(latest);for(const[key,ids]of Object.entries(state.found))combined.found[key]=[...new Set([...(combined.found[key]||[]),...ids])];combined.completed=[...new Set([...latest.completed,...state.completed])];combined.discoveries=[...new Set([...latest.discoveries,...state.discoveries])];for(const id of state.owned)if(!combined.owned.includes(id)){const cost=CATALOG.find(x=>x.id===id).cost;if(balance(combined)>=cost)combined.owned.push(id);else message='Deine Fundstücke bleiben erhalten. Eine Einrichtung aus der ungespeicherten Runde passt nicht mehr in den Beerenbeutel.';}combined.equipped=[...new Set([...latest.equipped,...state.equipped])].filter(id=>combined.owned.includes(id));for(const[key,value]of Object.entries(state.records))combined.records[key]=Math.min(combined.records[key]??Infinity,value);combined.revision=Math.max(latest.revision,state.revision);return validate(combined,levels);}
+ function commit(change){
+  try{const latestRaw=storage.getItem(SAVE_KEY);if(latestRaw!==rawLast){state=reconcile(parse(latestRaw));rawLast=latestRaw;}}catch{durable=false;}
+  const next=structuredClone(state),result=change(next);if(result===false)return false;next.revision=state.revision+1;validate(next,levels);
+  try{const json=JSON.stringify(next);storage.setItem(SAVE_KEY+':backup',JSON.stringify(result==='reset'?next:state));storage.setItem(SAVE_KEY,json);rawLast=json;durable=true;dirty=false;if(message.startsWith('Dein Browser speichert gerade nicht.'))message='Dein Fortschritt ist wieder auf diesem Gerät gespeichert.';}catch{durable=false;dirty=true;message='Dein Browser speichert gerade nicht. Du kannst weiter spielen; dieser Fortschritt bleibt nur hier geöffnet.';}state=next;return result??true;
+ }
+ let pending=Promise.resolve();function change(fn){if(!locks?.request)return commit(fn);const next=pending.then(()=>locks.request(SAVE_KEY,()=>commit(fn)));pending=next.catch(()=>{});return next;}
+ return {ready:()=>pending,snapshot:()=>structuredClone(state),status:()=>({durable,message}),balance:()=>balance(state),sync:()=>{try{const latest=storage.getItem(SAVE_KEY);if(latest!==rawLast){state=reconcile(parse(latest));rawLast=latest;}}catch{durable=false;}return structuredClone(state);},
+  find:(l,id)=>change(s=>{const key=l.id+':'+l.version;if(!l.berries.some(b=>b.id===id))return false;s.found[key]??=[];if(s.found[key].includes(id))return false;s.found[key].push(id);}),
+  finish:(l,secret,seconds,mode)=>change(s=>{const index=levels.findIndex(x=>x.id===l.id);if(index<0||!unlocked(s,levels,index))return false;if(!s.completed.includes(l.id))s.completed.push(l.id);if(secret&&!s.discoveries.includes(l.id))s.discoveries.push(l.id);if(mode==='trial'&&Number.isFinite(seconds)&&seconds>=1&&seconds<=86400){const key=l.id+':'+l.version+':trial';s.records[key]=Math.min(s.records[key]??Infinity,seconds);}}),
+  buy:id=>change(s=>{const item=CATALOG.find(x=>x.id===id);if(!item||s.owned.includes(id)||balance(s)<item.cost)return false;s.owned.push(id);s.equipped.push(id);}),
+  equip:id=>change(s=>{if(!s.owned.includes(id))return false;if(s.equipped.includes(id))s.equipped=s.equipped.filter(x=>x!==id);else s.equipped.push(id);}),
+  reset:()=>change(s=>{const generation=s.generation+1;Object.assign(s,blank());s.generation=generation;dirty=false;return 'reset';})};
+}
+export function activeClock(){let seconds=0,last=null;return{reset:()=>{seconds=0;last=null;},tick:(now,running)=>{if(Number.isFinite(now)&&last!==null&&running)seconds+=Math.max(0,(now-last)/1000);last=now;},break:()=>{last=null;},advance:dt=>{if(Number.isFinite(dt)&&dt>0)seconds+=dt;},seconds:()=>seconds};}

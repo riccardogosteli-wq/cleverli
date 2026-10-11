@@ -19,7 +19,7 @@ export function alternativePlans(m){
  search(0,m.target,m.maxBlocks);return found>=2;
 }
 const catalogue=new Map();
-export function mission(grade,r=Math.random,previous=[]){
+export function mission(grade,r=Math.random,previous=[],chapter=null){
  if(!Number.isInteger(grade)||!PROFILES[grade])throw Error('Invalid grade');
  const options=catalogue.get(grade)||[];
  if(!catalogue.has(grade)){
@@ -32,7 +32,7 @@ export function mission(grade,r=Math.random,previous=[]){
  }
  catalogue.set(grade,options);
  }
- const fresh=options.filter(m=>!previous.includes(m.signature));const pool=fresh.length?fresh:options;return structuredClone(pool[Math.floor(r()*pool.length)]);
+ const routed=options.filter(m=>chapter===null||Number(m.signature.split(':')[1])%3===chapter);const candidates=routed.length?routed:options;const fresh=candidates.filter(m=>!previous.includes(m.signature));const pool=fresh.length?fresh:candidates;return structuredClone(pool[Math.floor(r()*pool.length)]);
 }
 export function add(m,placed,id){
  const c=m.choices.find(c=>c.id===id);if(!c)throw Error('Unknown block');

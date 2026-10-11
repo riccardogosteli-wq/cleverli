@@ -1,5 +1,6 @@
+import {mountJourney,themedOrder,paintJourney} from './journeys.js';
 import { drawAlpine, drawToken, drawCelebration, sceneReady, drawCompanion } from '/labs/word-magnet/theme.js';
-import { GRADE_LABELS, rng, mission, tilesFor, collect, PROFILES, wordOrder } from '/labs/word-magnet/engine.js';
+import { GRADE_LABELS, rng, mission, tilesFor, collect, PROFILES, wordOrder, BANK } from '/labs/word-magnet/engine.js';
 import { experience } from './experience.js';
 import { CUES } from './cues.js';
 import { floatingReady } from './motion.js';
@@ -8,6 +9,7 @@ import { drawMeaning, meaningReady, meaningName } from './meaning.js';
 const play = experience({game:'word-magnet'});
 const $ = id => document.getElementById(id), canvas = $('game'), ctx = canvas.getContext('2d'), touch = matchMedia('(pointer: coarse)').matches, reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let w = 900, h = 390, last = 0, raf = 0, grade = 1, slow = true, s, tiles = [], sparks = [], random = rng(Date.now()), toast = 0, wrongUntil = 0;
+const journey=mountJourney('word-magnet',()=>grade,()=>{reset();show(journey.info().title,journey.info().summary,'Losspielen!');});
 let boardVersion = 0, mouseArmed = false, gesture = null;
 const held = new Set(), pressedKeys = new Set(), blockedKeys = new Set(), avatar = new Image();
 avatar.src = '/cleverli-wave.png';
@@ -22,7 +24,7 @@ catch {
 function freshInput() { held.clear(); for (const key of pressedKeys)
     blockedKeys.add(key); mouseArmed = false; gesture = null; s.userMoved = false; s.tx = s.x; s.ty = s.y; }
 function newWord() { play.stop('auto'); boardVersion++; s.previousParts = [...s.completedParts]; s.previousDistractors = s.previousDistractors || []; s.mission = mission(grade, s.order[s.round % s.order.length]); s.index = 0; s.x = .1; s.y = .88; s.tx = s.x; s.ty = s.y; freshInput(); tiles = tilesFor(s.mission, random, 0, [...s.previousParts, ...s.previousDistractors]); wrongUntil = 0; slots(); }
-function reset() {play.stop();play.pauseEffects?.(true); held.clear(); pressedKeys.clear(); blockedKeys.clear(); s = { phase: 'ready', grade, round: 0, order: wordOrder(grade, random), completedParts: [], words: 0, stars: 0, index: 0, elapsed: 0, mistakes: 0, hints: 0, cooldown: 0, x: .1, y: .88, tx: .1, ty: .88 }; newWord(); hud(); guide(); }
+function reset() {play.stop();play.pauseEffects?.(true); held.clear(); pressedKeys.clear(); blockedKeys.clear(); s = { phase: 'ready', grade, round: 0, order: themedOrder(BANK,grade,journey.index(),random), completedParts: [], words: 0, stars: 0, index: 0, elapsed: 0, mistakes: 0, hints: 0, cooldown: 0, x: .1, y: .88, tx: .1, ty: .88 }; newWord(); hud(); guide(); }
 function guided() { return play.mode() === 'discover'; }
 function slots() { const host = $('slots'); host.replaceChildren(); s.mission.parts.forEach((text, i) => { const span = document.createElement('span'); span.className = 'slot' + (i < s.index ? ' done' : i === s.index ? ' current' : ''); span.textContent = ((PROFILES[grade].visible && guided()) || i < s.index) ? text : '?'; host.append(span); }); $('target').textContent = PROFILES[grade].visible ? s.mission.word : s.mission.clue; $('picture').replaceChildren(); const im = document.createElement('img'); im.src = new URL('./' + meaningName(s.mission.word) + '.webp', import.meta.url).href; im.alt = ''; im.width = 46; im.height = 46; im.style.objectFit = 'contain'; $('picture').append(im); }
 function hud() { document.body?.setAttribute('data-phase', s.phase); document.body?.setAttribute('data-grade', String(grade)); $('energy').textContent = s.words + ' ' + (s.words === 1 ? 'Wort' : 'Wörter'); $('remaining').textContent = s.mission.parts.length - s.index + (s.mission.parts.length-s.index===1?' Teil fehlt':' Teile fehlen'); $('fill').style.width = s.index / s.mission.parts.length * 100 + '%'; $('stars').textContent = s.stars + ' ★'; $('combo').textContent = 'Wörter: ' + s.words; $('mode').textContent = GRADE_LABELS[grade]; $('word-label').textContent = PROFILES[grade].visible ? 'Dein Zielwort' : 'Deine Wortaufgabe'; $('profile-note').textContent = PROFILES[grade].visible ? 'Klasse ' + grade + ': ' + GRADE_LABELS[grade] + '. ' + (PROFILES[grade].seconds ? '' : 'Ohne Zeitdruck, ' + PROFILES[grade].goals + ' Wörter.') : 'Klasse ' + grade + ': ' + GRADE_LABELS[grade] + '. Lies die Wortaufgabe und den Regeltipp. Ohne Zeitdruck, ' + PROFILES[grade].goals + ' Wörter. 💡 hilft.'; $('need').textContent = s.cooldown > 0 ? 'Wort geschafft!' : (PROFILES[grade].nextHint && guided() ? 'Fange ' + (s.mission.parts[s.index] || '') : 'Baue dein Wort'); const left = Math.max(0, Math.ceil(PROFILES[grade].seconds - s.elapsed)); $('time').textContent = PROFILES[grade].seconds ? Math.floor(left / 60) + ':' + String(left % 60).padStart(2, '0') : s.words + '/' + PROFILES[grade].goals; $('distance').textContent = ''; $('grade').disabled = false; $('slow').disabled = ['playing', 'paused'].includes(s.phase); $('pause').disabled = s.phase !== 'playing'; $('hint').hidden = false; $('hint').disabled = s.phase !== 'playing' || s.cooldown > 0; }
@@ -134,7 +136,7 @@ function tileHeight() { if (grade === 1)
     return Math.min(56, h * .2); return Math.min(w < 600 ? 38 : 44, h * .14); }
 function boxHint(x, y, bw, bh) { ctx.beginPath(); ctx.roundRect(x - bw / 2 - 3, y - bh / 2 - 3, bw + 6, bh + 6, 14); }
 function draw() {
-    drawAlpine(ctx, w, h, 0);
+    drawAlpine(ctx, w, h, 0);paintJourney(ctx,w,h,'word-magnet',journey.index(),s.elapsed);
     for (const t of tiles) {
         if (t.collected)
             continue;
@@ -183,11 +185,11 @@ function start() { random = rng(crypto.getRandomValues(new Uint32Array(1))[0]); 
 function pause() { if (s.phase !== 'playing')
     return; play.stop?.('auto');play.pauseEffects?.(true); held.clear(); s.phase = 'paused'; show('Kurze Sammelpause', 'Dein Wort und die Spielzeit bleiben genau so stehen.', 'Weitersammeln'); $('again').hidden = false; hud(); }
 function resume() { s.phase = 'playing';play.pauseEffects?.(false); $('overlay').hidden = true; document.body?.setAttribute('data-guide', 'false'); $('again').hidden = true; hud(); canvas.focus({ preventScroll: true }); frameArea(); }
-function finish() { held.clear(); s.phase = 'ended'; const record = best(); if (s.stars > record)
+function finish() { journey.finish();held.clear(); s.phase = 'ended'; const record = best(); if (s.stars > record)
     try {
         localStorage.setItem(bestKey(), String(s.stars));
     }
-    catch { } show('Deine Wortbilder sind lebendig!', 'Du hast ' + s.words + ' Wortbilder zum Leben gebracht. ' + s.stars + ' private Sterne. Noch eine Runde oder für heute fertig.', 'Noch einmal sammeln'); $('again').hidden = false; hud(); }
+    catch { } show('Deine Wortbilder sind lebendig!', 'Du hast ' + s.words + ' Wortbilder zum Leben gebracht. ' + s.stars + ' private Sterne. ' + journey.info().arrival + '', 'Noch einmal sammeln'); $('again').hidden = false; hud(); }
 $('hint').onclick = () => { if (s.phase !== 'playing' || s.cooldown > 0)
     return; s.hints++; say('Tipp: Als Nächstes passt ' + s.mission.parts[s.index] + '.'); };
 $('start').onclick = () => s.phase === 'paused' ? resume() : start();
@@ -195,7 +197,7 @@ $('pause').onclick = pause;
 $('help').onclick = () => { if (s.phase === 'playing')
     pause(); show('So sammelst du', '', s.phase === 'paused' ? 'Weitersammeln' : 'Losspielen!', true); };
 $('again').onclick = () => { reset(); show('So sammelst du', '', 'Losspielen!'); $('again').hidden = true; };
-$('grade').onchange = () => { grade = Number($('grade').value); reset(); show('So sammelst du', '', 'Losspielen!'); };
+$('grade').onchange = () => { grade = Number($('grade').value);journey.refresh(); reset(); show('So sammelst du', '', 'Losspielen!'); };
 $('slow').onclick = () => { slow = !slow; $('slow').setAttribute('aria-pressed', String(slow)); $('slow').textContent = slow ? 'Gemütlich ✓' : 'Normal ⚡'; };
 function point(e) { if (s.phase !== 'playing' || s.cooldown > 0)
     return; s.userMoved = true; const b = canvas.getBoundingClientRect(); s.tx = clamp((e.clientX - b.left) / b.width, .08, .92); s.ty = clamp((e.clientY - b.top) / b.height, .23, .88); }

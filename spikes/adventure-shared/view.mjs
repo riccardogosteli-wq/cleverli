@@ -1,3 +1,4 @@
+import {mountJourney,paintJourney} from './journeys.js';
 import { drawAlpine, sceneReady } from './theme.js';
 import { artReady, drawArt } from './art.js';
 import { experience } from './experience.js';
@@ -12,6 +13,7 @@ export function mountAdventure(kind, engine) {
     const play = experience({game:kind});
     const animationDuration = motion ? SCENE_SECONDS : .35;
     play.configure(() => bridge ? s.mission ? 'Baue genau ' + engine.format(s.mission.target, s.grade) : CUES['bridge-intro'] : s.mission ? engine.text(s.mission) : CUES['detective-intro']);
+    const journey=mountJourney(kind,()=>Number($('grade').value),()=>reset());
     const chapter = document.createElement('select');
     chapter.id = 'chapter';
     chapter.setAttribute('aria-label', 'Nachrichtenroute');
@@ -50,9 +52,9 @@ export function mountAdventure(kind, engine) {
         return null;
     } }, goalCount = () => engine.PROFILES[s.grade].goals;
     function clearDrag() { drag = null; }
-    function newMission() { play.stop('auto');play.pauseEffects?.(false); $('help-panel').hidden = true; epoch++; clearDrag(); s.selected = null; s.prefix = []; s.placed = []; s.previewTime = 0; s.animation = 0; s.blockAge = 1; s.footstep = -1; s.crossedCue = false; s.phase = 'playing'; s.mission = bridge ? engine.mission(s.grade, random, s.history) : chapter.value === 'story' ? engine.storyMission(s.grade, s.round) : engine.mission(s.grade, s.order[s.round]); s.choices = bridge ? engine.shuffle(s.mission.choices, random) : s.mission.type === 'order' ? engine.shuffle(s.mission.words.map((text, i) => ({ id: i, label: text })), random) : engine.shuffle(s.mission.choices.map((text, i) => ({ id: i, label: text })), random); if (bridge)
+    function newMission() { play.stop('auto');play.pauseEffects?.(false); $('help-panel').hidden = true; epoch++; clearDrag(); s.selected = null; s.prefix = []; s.placed = []; s.previewTime = 0; s.animation = 0; s.blockAge = 1; s.footstep = -1; s.crossedCue = false; s.phase = 'playing'; s.mission = bridge ? engine.mission(s.grade, random, s.history,journey.index()) : chapter.value === 'story' ? engine.chapterMission(s.grade,s.round,journey.index()) : engine.mission(s.grade, s.order[s.round]); s.choices = bridge ? engine.shuffle(s.mission.choices, random) : s.mission.type === 'order' ? engine.shuffle(s.mission.words.map((text, i) => ({ id: i, label: text })), random) : engine.shuffle(s.mission.choices.map((text, i) => ({ id: i, label: text })), random); if (bridge)
         s.history.push(s.mission.signature); s.used = []; say(bridge ? 'Tippe einen Baustein. Er rastet auf der Brücke ein.' : 'Tippe das passende Teil. Es rastet in die gelbe Lücke ein.'); render(); }
-    function reset() {play.stop();play.pauseEffects?.(true); epoch++; clearDrag(); const grade = Number($('grade').value); if (!engine.PROFILES[grade])
+    function reset() {play.stop();play.pauseEffects?.(true); epoch++; clearDrag(); const grade = Number($('grade').value);journey.refresh(); if (!engine.PROFILES[grade])
         throw Error('Invalid grade'); s = { grade, phase: 'ready', round: 0, completed: 0, stars: 0, active: 0, animation: 0, selected: null, placed: [], prefix: [], used: [], order: bridge ? [] : engine.shuffle(engine.BANK[grade].map((_, i) => i), random), mission: null, history: [], errors: 0, hints: 0 }; $('help-panel').hidden = false; $('work').hidden = true; render(); }
     function start() { if (s.phase === 'ready') {
         const seed = crypto.getRandomValues(new Uint32Array(1))[0];
@@ -142,11 +144,11 @@ export function mountAdventure(kind, engine) {
         s.stars += 10;
     } s.rebuilding = false; play.sound('complete');
         play.sound(bridge?'place':s.mission?.scene===2?'door':'page');
-        play.cue?.(bridge ? 'bridge-ready' : ['detective-gate','detective-rabbit','detective-treasure'][s.mission?.scene ?? Math.min(2,s.round)]);
+        if(bridge)play.cue?.('bridge-ready');else if(journey.index()===0)play.cue?.(['detective-gate','detective-rabbit','detective-treasure'][s.mission?.scene??Math.min(2,s.round)]);else play.speak?.(engine.text(s.mission)+' '+s.mission.context);
         s.footstep = -1; s.crossedCue = false; s.phase = 'celebrate'; s.animation = 0; epoch++; s.selected = null; clearDrag(); say(bridge ? 'Deine Brücke passt genau. Cleverli kann hinüber!' : 'Nachricht repariert! Du öffnest einen neuen Weg.'); safe(() => localStorage.setItem('cleverli_' + kind + '_private_v1:' + s.grade, String(Math.max(s.stars, Number(localStorage.getItem('cleverli_' + kind + '_private_v1:' + s.grade) || 0))))); }
     function next() { if (s.phase !== 'celebrate' || s.animation < animationDuration)
         return; if (s.completed >= goalCount()) {
-        s.phase = 'ended';
+        s.phase = 'ended';if(bridge||chapter.value==='story')journey.finish();
         epoch++;
         clearDrag();
         say('Abenteuer geschafft. Du hast ' + s.completed + ' Wege geöffnet.');
@@ -178,7 +180,7 @@ export function mountAdventure(kind, engine) {
             return;
         const m = s.mission, stamp = epoch;
         if (!bridge) {
-            context.textContent = m.context ? (m.scene === 0 ? 'Tor: Eine Nachricht fehlt.' : m.scene === 1 ? 'Der Hase braucht deine Nachricht.' : 'Eine Nachricht führt zum Schatz.') : 'Übungsbrief: Prüfe die markierte Stelle.';
+            context.textContent=m.context||'Übungsbrief: Prüfe die markierte Stelle.';
         }
         $('work').setAttribute('data-message', bridge ? 'bridge' : 'letter');
         testButton.hidden = !bridge || s.phase !== 'playing';
@@ -294,7 +296,7 @@ export function mountAdventure(kind, engine) {
     function render() { arrangeScene(); document.body.dataset.phase = s.phase; $('grade').disabled = false; $('profile').textContent = 'Klasse ' + s.grade + ' · ' + engine.LABELS[s.grade] + ' · ohne Zeitdruck'; $('count').textContent = s.completed + ' / ' + goalCount(); $('journey').replaceChildren(); for (let i = 0; i < goalCount(); i++) {
         const mark = document.createElement('span');
         mark.className = i < s.completed ? 'done' : i === s.completed ? 'current' : '';
-        mark.textContent = bridge ? 'Brücke ' + (i + 1) : i === goalCount() - 1 ? 'Schatz' : i === 0 ? 'Tor' : 'Hase';
+        mark.textContent = bridge ? 'Brücke ' + (i + 1) : i === goalCount() - 1 ? ['Schatz','Picknick','Waldfest'][journey.index()] : i === 0 ? 'Tor' : 'Hase';
         if (i < s.completed)
             mark.textContent += ' ✓';
         $('journey').append(mark);
@@ -304,7 +306,7 @@ export function mountAdventure(kind, engine) {
         if (!w || !h)
             return;
         ctx.clearRect(0, 0, w, h);
-        drawAlpine(ctx, w, h);
+        drawAlpine(ctx, w, h);paintJourney(ctx,w,h,kind,journey.index(),s.animation);
         const base = h * .69;
         let progress = (['celebrate', 'ended'].includes(s.phase) || (s.phase === 'paused' && previousPhase === 'celebrate')) ? crossingPose(s.animation,1,1,!motion).progress : 0;
         if (bridge && s.previewTime > 0 && motion)
@@ -367,6 +369,8 @@ export function mountAdventure(kind, engine) {
                 drawArt(ctx, 'gate-open', x, y, objectWidth, objectHeight);
                 const bunnyH=Math.min(67,h*.34),bunnyX=w*(.7+progress*.14),hop=motion&&progress>0&&progress<1?Math.abs(Math.sin(progress*Math.PI*5))*h*.025:0;drawArt(ctx,'rabbit',bunnyX,base-bunnyH*.48-hop,Math.min(80,w*.16),bunnyH);
             }
+            else if(journey.index()===1){ctx.fillStyle='#d6a783';ctx.fillRect(x-objectWidth*.4,base,objectWidth*.8*(.15+.85*opened),9);drawArt(ctx,'flower',x+objectWidth*.25,base-h*.15,objectWidth*.3,h*.3);drawArt(ctx,'rabbit',x+objectWidth*.4,base-h*.15,objectWidth*.3,h*.3);}
+            else if(journey.index()===2){drawArt(ctx,'house',x,base-objectHeight*.35,objectWidth,objectHeight);drawArt(ctx,'flower',x+objectWidth*.4,base-h*.1,objectWidth*.25,h*.25);}
             else {
                 ctx.save();
                 ctx.globalAlpha = 1 - opened;

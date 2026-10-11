@@ -1,3 +1,4 @@
+import {mountJourney,paintJourney} from './journeys.js';
 import { drawAlpine, drawToken, drawCelebration, sceneReady, drawCompanion } from '/labs/number-flight/theme.js';
 import { rng, createMission, makeWave, applyEnergy, display, GRADE_LABELS, PROFILES } from '/labs/number-flight/engine.js';
 import { experience } from './experience.js';
@@ -10,6 +11,7 @@ const mascot = new Image();
 mascot.src = '/cleverli-wave.png';
 let w = 960, h = 530, last = 0, random = rng(Date.now()), s, cols = [], clouds = [], sparks = [], spawn = 0, flash = 0, toast = 0, raf = 0;
 let slow = true, grade = 1;
+const journey=mountJourney('number-flight',()=>grade,()=>{reset();show(journey.info().title,journey.info().summary,'Losfliegen!','🍃');});
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const touchDevice = matchMedia('(pointer: coarse)').matches;
 function key() { return 'cleverli_number_flight_prototype_v3:' + grade + ':' + (slow ? 'slow' : 'normal'); }
@@ -19,7 +21,8 @@ function best() { try {
 catch {
     return 0;
 } }
-function reset() {play.stop();play.pauseEffects?.(true); s = { phase: 'ready', grade, energy: 0, stars: 0, boosts: 0, combo: 0, lane: grade === 1 ? 0 : 1, y: Y[grade === 1 ? 0 : 1], elapsed: 0, travel: 0, cooldown: 0, mission: createMission(grade, random) }; cols = []; clouds = []; sparks = []; spawn = .25; flash = 0; toast = 0; hud(); updateGuide(); lanes(); }
+function routeMission(){const index=journey.index();const r=index===0?()=>random()*.4:index===1?()=>.3+random()*.4:()=>.6+random()*.4;return createMission(grade,r);}
+function reset() {play.stop();play.pauseEffects?.(true); s = { phase: 'ready', grade, energy: 0, stars: 0, boosts: 0, combo: 0, lane: grade === 1 ? 0 : 1, y: Y[grade === 1 ? 0 : 1], elapsed: 0, travel: 0, cooldown: 0, mission: routeMission() }; cols = []; clouds = []; sparks = []; spawn = .25; flash = 0; toast = 0; hud(); updateGuide(); lanes(); }
 function hud() { const target = s.mission.target, achieved = s.cooldown > 0 || s.phase === 'ended'; $('energy').textContent = grade === 1 ? target + ' ' + ('●'.repeat(target)) : display(achieved ? target : s.energy, grade) + ' / ' + display(target, grade); $('remaining').textContent = achieved ? 'Ziel erreicht' : 'Noch ' + display(target - s.energy, grade); $('need').textContent = achieved ? 'Etappe geschafft!' : grade === 1 ? 'Suche ' + target + '  ' + ('●'.repeat(target)) : 'Sammle noch ' + display(target - s.energy, grade); $('goal-label').textContent = grade === 1 ? 'Dein Zahlziel' : 'Dein Energietank'; $('fill').parentElement?.style.setProperty('background-image', grade >= 5 ? 'repeating-linear-gradient(90deg,#d8e6c9 0,#d8e6c9 calc(' + 100 * 25 / target + '% - 2px),#fff ' + 100 * 25 / target + '%)' : 'none'); $('fill').style.width = ((grade === 1 ? s.boosts / PROFILES[grade].goals : (achieved ? 1 : s.energy / target)) * 100) + '%'; $('stars').textContent = s.stars + ' ★'; $('combo').textContent = 'Ziele: ' + s.boosts; const left = Math.max(0, Math.ceil(PROFILES[grade].seconds - s.elapsed)); $('time').textContent = PROFILES[grade].seconds ? Math.floor(left / 60) + ':' + String(left % 60).padStart(2, '0') : s.boosts + '/' + PROFILES[grade].goals; $('distance').textContent = 'Etappe ' + Math.min(s.boosts + 1, PROFILES[grade].goals) + ' / ' + PROFILES[grade].goals; $('mode').textContent = GRADE_LABELS[grade]; $('profile-note').textContent = PROFILES[grade].seconds ? 'Klasse ' + grade + ': ' + GRADE_LABELS[grade] + '. Rechne die Blasen aus und triff dein Ziel.' : 'Klasse ' + grade + ': ' + GRADE_LABELS[grade] + '. ' + PROFILES[grade].goals + ' Ziele, ohne Zeitdruck. Die Blasen warten.'; document.body?.setAttribute('data-phase', s.phase); document.body?.setAttribute('data-grade', String(grade)); $('grade').disabled = false; $('slow').disabled = ['playing', 'paused'].includes(s.phase); $('pause').disabled = s.phase !== 'playing'; $('advance').disabled = s.phase !== 'playing' || !cols.some(c => !c.crossed && !c.launched); }
 function say(text) { $('status').textContent = text; toast = 3.5; }
 function lanes() { for (const b of document.querySelectorAll('[data-lane]')) {
@@ -58,7 +61,7 @@ function pickup(units) {
         flash = 1;
         particles(.18, s.y, '#ffe18b', 32);
         say(grade === 1 ? s.mission.target + ' Punkte, genau richtig! Ziel geschafft.' : display(before, grade) + ' + ' + display(units, grade) + ' = ' + display(s.mission.target, grade) + '! Ziel geschafft. Turbo +' + (10 + Math.min(s.combo, 5)) + ' Sterne');
-        s.nextMission = s.boosts < PROFILES[grade].goals ? createMission(grade, random) : null;
+        s.nextMission = s.boosts < PROFILES[grade].goals ? routeMission() : null;
         cols = [];
         clouds = [];
         spawn = 1.1;
@@ -166,7 +169,7 @@ function draw() {
     ctx.save();
     if (!reduced)
         ctx.translate(-w * .12 * route, 0);
-    drawAlpine(ctx, w * (!reduced ? 1.12 : 1), h);
+    drawAlpine(ctx, w * (!reduced ? 1.12 : 1), h);paintJourney(ctx,w,h,'number-flight',journey.index(),s.travel);
     ctx.restore();
     const places = ['Blumenwiese', 'Seeufer', 'Bergstation'];
     ctx.save();
@@ -273,18 +276,18 @@ function pause() { if (s.phase !== 'playing')
     return; play.stop?.('auto');play.pauseEffects?.(true); s.phase = 'paused'; show('Kurze Flugpause', 'Der Tank und die Flugzeit bleiben genau so stehen.', 'Weiterfliegen', '☁️'); $('again').hidden = false; hud(); }
 function resume() { if (s.phase !== 'paused')
     return; s.phase = 'playing';play.pauseEffects?.(false); $('overlay').hidden = true; hideGuide(); $('again').hidden = true; hud(); canvas.focus({ preventScroll: true }); frameGameArea(); }
-function finish() { s.phase = 'ended'; const old = best(); if (s.stars > old)
+function finish() { journey.finish();s.phase = 'ended'; const old = best(); if (s.stars > old)
     try {
         localStorage.setItem(key(), String(s.stars));
     }
-    catch { } show('Dein Testflug ist geschafft!', 'Alle ' + s.boosts + ' Etappen erreicht. Cleverli ist an der Bergstation angekommen! ' + s.stars + ' private Sterne. Du kannst eine neue Route wählen oder für heute fertig sein.', 'Noch einen Testflug starten', '🌟'); $('again').hidden = false; hud(); }
+    catch { } show('Dein Testflug ist geschafft!', 'Alle ' + s.boosts + ' Etappen erreicht. ' + journey.info().arrival + ' ' + s.stars + ' private Sterne. Du kannst eine neue Route wählen oder für heute fertig sein.', 'Noch einen Testflug starten', '🌟'); $('again').hidden = false; hud(); }
 $('help').onclick = () => { if (s.phase === 'playing')
     pause(); show('So fliegst du', '', s.phase === 'paused' ? 'Weiterfliegen' : 'Losfliegen!', '🚀', true); };
 $('advance').onclick = advance;
 $('start').onclick = () => s.phase === 'paused' ? resume() : start();
 $('pause').onclick = pause;
 $('again').onclick = () => { reset(); show('So fliegst du', '', 'Losfliegen!', '🚀'); $('again').hidden = true; };
-$('grade').onchange = () => { grade = Number($('grade').value); reset(); show('So fliegst du', '', 'Losfliegen!', '🚀'); };
+$('grade').onchange = () => { grade = Number($('grade').value);journey.refresh(); reset(); show('So fliegst du', '', 'Losfliegen!', '🚀'); };
 $('slow').hidden = true;
 $('slow').onclick = () => { slow = !slow; $('slow').setAttribute('aria-pressed', String(slow)); $('slow').textContent = slow ? 'Gemütlich ✓' : 'Normal ⚡'; $('best').textContent = 'Persönlicher Testrekord: ' + best() + ' Sterne · Nur auf diesem Gerät'; };
 for (const b of document.querySelectorAll('[data-lane]'))
