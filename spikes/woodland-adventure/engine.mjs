@@ -12,7 +12,7 @@ export function selectLevel(id){const next=LEVELS.find(l=>l.id===id);if(!next)th
 export const PHYSICS=Object.freeze({speed:320,acceleration:1900,friction:2300,gravity:1650,jump:610,coyote:.12,buffer:.14});
 const approach=(v,target,by)=>v<target?Math.min(v+by,target):Math.max(v-by,target);
 export function surfaces(t=0){return [...LEVEL.grounds,...LEVEL.stones,...LEVEL.ledges.map(p=>({...p,x:p.x+(p.move?Math.sin(t*.85)*p.move:0),y:p.y+(p.moveY?Math.sin(t*.7)*p.moveY:0)}))];}
-export function createState(){return {phase:'ready',levelId:LEVEL.id,levelVersion:LEVEL.version,time:0,x:120,y:366,w:38,h:64,vx:0,vy:0,face:1,grounded:true,standing:'g0',coyote:.12,buffer:0,prevJump:false,jumps:0,falls:0,checkpoint:0,berries:[],secret:false,rescued:false,followerX:0,events:[],landPulse:0,resetFade:0,winTime:0,springLock:0,toast:'Finde Hasi und begleite ihn zum Baumhaus.'};}
+export function createState(){return {phase:'ready',levelId:LEVEL.id,levelVersion:LEVEL.version,time:0,x:120,y:366,w:38,h:64,vx:0,vy:0,face:1,grounded:true,standing:'g0',coyote:.12,buffer:0,prevJump:false,jumps:0,falls:0,checkpoint:0,berries:[],secret:false,rescued:false,followerX:0,events:[],landPulse:0,resetFade:0,winTime:0,springLock:0,toast:LEVEL.description};}
 export function start(s){if(s.phase==='ready'){s.phase='playing';s.events=['start'];}}
 export function pause(s){if(s.phase==='playing'){s.phase='paused';s.prevJump=false;s.buffer=0;s.vx=0;}}
 export function resume(s){if(s.phase==='paused'){s.phase='playing';s.prevJump=false;s.buffer=0;}}
@@ -35,9 +35,9 @@ function update(s,input,dt){
  for(const b of LEVEL.berries){if(!s.berries.includes(b.id)&&Math.hypot(s.x+s.w/2-b.x,s.y+s.h*.45-b.y)<44){s.berries.push(b.id);s.events.push('berry');}}
  for(let i=s.checkpoint+1;i<LEVEL.checkpoints.length;i++){const p=LEVEL.checkpoints[i];if(Math.abs(s.x-p.x)<70&&s.grounded){s.checkpoint=i;s.events.push('checkpoint');s.toast='Rastplatz gefunden. Dein Weg bleibt erhalten.';}}
  if(!s.secret&&Math.hypot(s.x+s.w/2-LEVEL.secret.x,s.y+s.h/2-LEVEL.secret.y)<72){s.secret=true;s.events.push('secret');s.toast='Psst … du hast die Glühwürmchenhöhle entdeckt!';}
- if(!s.rescued&&Math.abs(s.x-LEVEL.rabbit)<72&&s.y>300){s.rescued=true;s.followerX=s.x-60;s.events.push('friend');s.toast='Hasi ist dabei! Gemeinsam zum Baumhaus.';}
+ if(!s.rescued&&Math.abs(s.x-LEVEL.rabbit)<72&&s.y>300){s.rescued=true;s.followerX=s.x-60;s.events.push('friend');s.toast=['home','festival'].includes(LEVEL.finish)?'Hasi ist dabei! Gemeinsam zum Baumhaus.':'Hasi ist dabei! Gemeinsam zum nächsten Rastplatz.';}
  if(s.rescued)s.followerX=approach(s.followerX,s.x-70,220*dt);
- if(s.x>LEVEL.home&&s.grounded){if(s.rescued){s.phase='won';s.winTime=s.time;s.vx=0;s.events.push('win');s.toast='Zu Hause! Hasi und Cleverli sind angekommen.';}else s.toast='Hasi wartet noch auf der Waldlichtung links.';}
+ if(s.x>LEVEL.home&&s.grounded){if(s.rescued){s.phase='won';s.winTime=s.time;s.vx=0;s.events.push('win');s.toast=['home','festival'].includes(LEVEL.finish)?'Zu Hause! Hasi und Cleverli sind angekommen.':'Ihr habt den Weg geschafft. Zeit für eine gemütliche Ankunft.';}else s.toast='Hasi wartet noch auf der Waldlichtung links.';}
  if(s.y>LEVEL.height+40)respawn(s);
 }
 export function step(s,input,delta){if(s.phase!=='playing'||!Number.isFinite(delta)||delta<=0)return s;s.events=[];let left=Math.min(delta,.1);while(left>1e-8&&s.phase==='playing'){const dt=Math.min(left,1/120);update(s,input,dt);left-=dt;if(s.events.includes('return'))break;}return s;}
