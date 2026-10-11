@@ -1,3 +1,4 @@
+import { drawFloatingHero } from './motion.js';
 // Original generated scenery is served through the same private gate as the game.
 const scenery=new Image();scenery.src=new URL('./world.webp',import.meta.url).href;
 const cache=new WeakMap();
@@ -18,7 +19,7 @@ export function drawToken(ctx,x,y,bw,bh,kind='number'){
 }
 export function drawCelebration(ctx,w,h,text){const font=Math.min(w<600?21:31,w/(text.length*.59));ctx.save();ctx.font='850 '+font+'px system-ui';const bw=ctx.measureText(text).width+32,x=w/2,y=h*.44;drawToken(ctx,x,y,bw,42,'word');ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#22502e';ctx.fillText(text,x,y);ctx.restore();}
 
-export function drawCompanion(ctx,image,x,y,size,type){ctx.save();
+export function drawCompanion(ctx,image,x,y,size,type,options={}){if(drawFloatingHero(ctx,x,y,size,type,options))return;ctx.save();
  ctx.shadowColor='#173d2930';ctx.shadowBlur=8;ctx.shadowOffsetY=5;
  const base=ctx.createLinearGradient(0,y,0,y+size*.45);base.addColorStop(0,'#ffffff');base.addColorStop(1,type==='flight'?'#e8f4f9':'#dbecb7');ctx.fillStyle=base;ctx.beginPath();ctx.ellipse(x,y+size*.26,size*.57,size*.15,0,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.shadowOffsetY=0;
  if(type==='flight'){ctx.fillStyle='#fff';for(const[dx,dy,r]of[[-.3,.19,.15],[.03,.13,.18],[.29,.21,.13]]){ctx.beginPath();ctx.arc(x+size*dx,y+size*dy,size*r,0,Math.PI*2);ctx.fill();}}

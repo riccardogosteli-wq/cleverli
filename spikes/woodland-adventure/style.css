@@ -10,3 +10,7 @@
 #pause{min-height:44px}
 @media(max-width:360px){.welcome-content{padding-top:5px}h1{font-size:32px}.welcome-content p{max-width:100%;font-size:14px;margin:12px 0 15px}.welcome-small{font-size:11px;margin-top:15px;max-width:68%}.hero{height:30%;bottom:3%}}
 @media(max-height:540px) and (min-width:600px){.settings button{min-height:44px}.stage{height:calc(100svh - 156px);min-height:219px}}
+
+.settings{flex-wrap:wrap;justify-content:flex-end}header{align-items:flex-start}.settings button{white-space:nowrap}@media(max-width:760px){header{flex-wrap:wrap}.settings{flex:1;min-width:250px;gap:4px}.settings button{padding:0 8px}.stage{height:calc(100svh - 218px)}}@media(max-height:540px) and (min-width:600px){.settings{min-width:0}.stage{height:calc(100svh - 168px);min-height:205px}}
+
+@media(max-width:760px){body[data-phase=playing] .brand,body[data-phase=won] .brand{display:none}body[data-phase=playing] .settings,body[data-phase=won] .settings{margin-left:0;min-width:0;width:100%}}
