@@ -17,4 +17,4 @@ Only a fixed allowlist of same-site destinations is permitted. UTMs are generate
 7. Record actual send/delivery receipts and link mappings privately. Report campaign counters separately from provider delivery, conversions and test traffic. No automatic sender or background cron is introduced.
 
 ## Report
-Aggregate email_campaign_clicks.requests by campaign and label, joining email_campaigns for mode/source/slug. Report test separately; include observed time cutoff and scanner/repeat caveat. Historical counts remain when paused. Retention cleanup requires a separately reviewed explicit operation; do not delete active campaign/link records or break sent links.
+The admin report uses a fixed exclusive cutoff at the start of the current minute (current incomplete bucket omitted). Aggregate email_campaign_clicks.requests by campaign and label, joining email_campaigns for mode/source/slug. Report test separately; include observed time cutoff and scanner/repeat caveat. Historical counts remain when paused. Retention cleanup requires a separately reviewed explicit operation; do not delete active campaign/link records or break sent links.
