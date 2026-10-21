@@ -10,6 +10,7 @@ import {
 import { logUserActivity } from "@/lib/userActivityServer";
 import { sendMetaConversion } from "@/lib/metaConversions";
 import { redeemTrialUpgrade, settledTrialSubscription } from "@/lib/trialUpgradeServer";
+import { processRevenueEvent } from '@/lib/revenueLedgerServer';
 import { redeemPrivateOffer } from "@/lib/privateOfferServer";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -169,6 +170,11 @@ export async function POST(req: NextRequest) {
     console.error("[stripe-webhook] signature verification failed:", err);
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
+
+  // Accounting capture is additive: never interrupts entitlements or conversion events.
+  // Daily full Stripe reconciliation repairs transient ledger/webhook failures.
+  try { await processRevenueEvent(getStripe(),event); }
+  catch(error) { Sentry.captureException(error); }
 
   // ── Subscription activated ──────────────────────────────────────────────
   if (event.type === "checkout.session.completed" || (

@@ -3,7 +3,7 @@ const code=ts.transpileModule(fs.readFileSync('src/lib/privateOfferServer.ts','u
 let payload,options;
 class Stripe{constructor(){this.checkout={sessions:{create:async(p,o)=>{payload=p;options=o;return {...p,id:'fake-session',status:'open',url:'https://checkout.stripe.com/fake-test-only',amount_total:19900,currency:'chf',payment_status:'unpaid'};}}};}}
 const moduleShim={exports:{}};
-vm.runInNewContext(code,{module:moduleShim,exports:moduleShim.exports,process:{env:{}},require:n=>n==='stripe'?{default:Stripe}:n==='@supabase/supabase-js'?{createClient:()=>({})}:n==='./privateOffer'?{}:(()=>{throw Error(n);})()});
+vm.runInNewContext(code,{module:moduleShim,exports:moduleShim.exports,process:{env:{}},require:n=>n==='stripe'?{default:Stripe}:n==='@supabase/supabase-js'?{createClient:()=>({})}:n==='./privateOffer'?{}:n==='./revenueAttributionServer'?{resolveCheckoutRevenue:async()=>({cohort:'outside_experiment'}),freezeCheckoutRevenue:async(k,u,s)=>s}:n==='./revenueAttribution'?{revenueMetadata:s=>({revenue_cohort:s.cohort})}:(()=>{throw Error(n);})()});
 (async()=>{const offer={id:'fake-offer',user_id:'fake-user',customer_id:'cus_fake',amount:19900,currency:'chf',generation:3,session_expires:2000000000};
 await moduleShim.exports.privateOfferServices().gateway.create(offer);
 assert.equal(payload.mode,'payment');assert.equal(payload.customer,offer.customer_id);assert.deepEqual(Array.from(payload.payment_method_types),['card','twint']);

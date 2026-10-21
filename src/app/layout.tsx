@@ -9,6 +9,7 @@ import StructuredData from "@/components/StructuredData";
 import GameOverlays from "@/components/GameOverlays";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import ClientInit from "@/components/ClientInit";
+import RevenueAttributionCapture from "@/components/RevenueAttributionCapture";
 import SkipToContentLink from "@/components/SkipToContentLink";
 
 const GTM_ID = "GTM-K48335JC";
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SkipToContentLink />
           <ProfileProvider>
             <ClientInit />
+          <RevenueAttributionCapture />
             <StructuredData />
             <Navigation />
             <GameOverlays />

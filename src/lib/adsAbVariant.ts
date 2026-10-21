@@ -18,6 +18,11 @@ export const ADS_LP_EXPERIMENT = "ads_lp_7_day_trial";
 export const V5_CONTROL_COHORT = "meta_v5_deterministic_control";
 const V5_ENTRY_KEY = "cleverli_v5_entry_attribution";
 let v5MemoryVisitorId: string | null = null;
+let observedMemory: AdsExperimentAttribution | null = null;
+function rememberExposure(value: AdsExperimentAttribution | null) {
+  if(value){observedMemory=value;window.dispatchEvent(new Event('cleverli:experiment'));}
+  return value;
+}
 export function isV5ControlEntry() {
   if (typeof window === "undefined" || window.location.pathname !== "/primarschule-uebungen") return false;
   const params = new URLSearchParams(window.location.search);
@@ -28,7 +33,7 @@ function v5Attribution(): AdsExperimentAttribution | null {
   if (isV5ControlEntry()) {
     const visitorId = getOrCreateAdsExperimentVisitorId() ?? (v5MemoryVisitorId ??= createVisitorId());
     const value: AdsExperimentAttribution = { experiment: V5_CONTROL_COHORT, variant: "control", visitorId,
-      page: "primarschule_uebungen", internalQa: false, forcedVariant: false };
+      page: "primarschule_uebungen", internalQa: new URLSearchParams(window.location.search).get('utm_source')?.toLowerCase().startsWith('qa')??false, forcedVariant: new URLSearchParams(window.location.search).has('ab') };
     try { window.sessionStorage.setItem(V5_ENTRY_KEY, JSON.stringify(value)); } catch { /* Attribution remains deterministic without storage. */ }
     return value;
   }
@@ -107,17 +112,17 @@ export function readAdsExperimentAttribution(): AdsExperimentAttribution | null 
     const page = cleanPage(window.localStorage.getItem(PAGE_STORAGE_KEY));
     const internalQa = window.localStorage.getItem(INTERNAL_QA_STORAGE_KEY) === "true";
     const forcedVariant = window.localStorage.getItem(FORCED_VARIANT_STORAGE_KEY) === "true";
-    if (!variant || !visitorId || !page) return null;
+    if (!variant || !visitorId || !page) return observedMemory;
     return { experiment: ADS_LP_EXPERIMENT, variant, visitorId, page, internalQa, forcedVariant };
   } catch {
-    return null;
+    return observedMemory;
   }
 }
 
 export function ensureAdsExperimentAttribution(variant: AdsLpVariant, page: string) {
   if (typeof window === "undefined") return null;
-  if (isV5ControlEntry()) return v5Attribution();
-  const visitorId = getOrCreateAdsExperimentVisitorId();
+  if (isV5ControlEntry()) return rememberExposure(v5Attribution());
+  const visitorId = getOrCreateAdsExperimentVisitorId() ?? observedMemory?.visitorId ?? createVisitorId();
   const cleanExperimentPage = cleanPage(page);
   if (!visitorId || !cleanExperimentPage) return null;
   try {
@@ -129,16 +134,17 @@ export function ensureAdsExperimentAttribution(variant: AdsLpVariant, page: stri
     window.localStorage.setItem(PAGE_STORAGE_KEY, existingPage ?? cleanExperimentPage);
     if (internalQa) window.localStorage.setItem(INTERNAL_QA_STORAGE_KEY, "true");
     if (forcedVariant) window.localStorage.setItem(FORCED_VARIANT_STORAGE_KEY, "true");
-    return {
+    return rememberExposure({
       experiment: ADS_LP_EXPERIMENT,
       variant,
       visitorId,
       page: existingPage ?? cleanExperimentPage,
       internalQa: internalQa || window.localStorage.getItem(INTERNAL_QA_STORAGE_KEY) === "true",
       forcedVariant: forcedVariant || window.localStorage.getItem(FORCED_VARIANT_STORAGE_KEY) === "true",
-    } satisfies AdsExperimentAttribution;
+    } satisfies AdsExperimentAttribution);
   } catch {
-    return null;
+    const params=new URLSearchParams(window.location.search);
+    return rememberExposure({experiment:ADS_LP_EXPERIMENT,variant,visitorId,page:cleanExperimentPage,internalQa:params.get('utm_source')?.toLowerCase().startsWith('qa')??false,forcedVariant:params.has('ab')});
   }
 }
 

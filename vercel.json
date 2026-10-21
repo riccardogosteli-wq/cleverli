@@ -1,5 +1,6 @@
 {
   "crons": [
+    {"path":"/api/cron/revenue-reconciliation","schedule":"20 4 * * *"},
     {
       "path": "/api/cron/private-offers",
       "schedule": "0 15 * * *"

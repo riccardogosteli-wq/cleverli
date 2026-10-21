@@ -10,6 +10,10 @@ async function run({status='paid',privateOffer=false,eventType='checkout.session
   const next={NextResponse:{json:(body,init={})=>({body,status:init.status||200})}};
   const module={exports:{}};
   const requireStub=(name)=>{
+    if(name==='@/lib/revenueLedgerServer')return {processRevenueEvent:async()=>{}};
+    if(name==='@/lib/cancellationEmailServer')return {processCancellationEmailEvent:async()=>null};
+    if(name==='@/lib/activationEmail')return {isFirstCollectedInvoice:async()=>false};
+    if(name==='@/lib/trialUpgradeServer')return {settledTrialSubscription:async()=>false};
     if(name==='stripe')return {default:Stripe};
     if(name==='next/server')return next;
     if(name==='@sentry/nextjs')return {captureException(){},captureMessage(){}};

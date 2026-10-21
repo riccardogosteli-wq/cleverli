@@ -7,6 +7,8 @@ import { parseAdsExperimentAttribution, parseAdsExperimentMetadata } from "@/lib
 import { sendMetaConversion } from "@/lib/metaConversions";
 import { isSchooltimeOfferActive, SCHOOLTIME_OFFER_PRICE_CHF } from "@/lib/schooltimeOffer";
 
+import {resolveCheckoutRevenue, freezeCheckoutRevenue} from '@/lib/revenueAttributionServer';
+import {revenueMetadata} from '@/lib/revenueAttribution';
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.cleverli.ch";
 
 const PRICE_IDS: Record<string, string> = {
@@ -195,6 +197,7 @@ export async function GET(req: NextRequest) {
     const attributionMetadata = stripeAttributionMetadata(attribution);
     const experimentMetadata = stripeExperimentMetadata(experimentAttribution);
     const checkoutIdempotencyKey = getCheckoutIdempotencyKey(userId, plan, checkoutSource, trialDays);
+    const revenue = revenueMetadata(await freezeCheckoutRevenue(checkoutIdempotencyKey,userId,await resolveCheckoutRevenue(userId,checkoutSource,req,experimentAttribution)));
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: isSchooltime ? "payment" : "subscription",
       line_items: isSchooltime
@@ -227,10 +230,12 @@ export async function GET(req: NextRequest) {
         checkout_source: checkoutSource,
         ...attributionMetadata,
         ...experimentMetadata,
+        ...revenue,
         ...(trialDays ? { trial_days: String(trialDays) } : {}),
         ...(metaFbp ? { meta_fbp: metaFbp } : {}),
         ...(metaFbc ? { meta_fbc: metaFbc } : {}),
       },
+      ...(isSchooltime ? {payment_intent_data:{metadata:{userId,plan,site:'cleverli.ch',...revenue}}} : {}),
       ...(!isSchooltime ? { subscription_data: {
         ...(trialDays ? { trial_period_days: trialDays } : {}),
         metadata: {
@@ -240,6 +245,7 @@ export async function GET(req: NextRequest) {
           checkout_source: checkoutSource,
           ...attributionMetadata,
           ...experimentMetadata,
+        ...revenue,
           ...(trialDays ? { trial_days: String(trialDays) } : {}),
           ...(metaFbp ? { meta_fbp: metaFbp } : {}),
           ...(metaFbc ? { meta_fbc: metaFbc } : {}),
