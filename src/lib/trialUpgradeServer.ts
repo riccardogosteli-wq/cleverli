@@ -1,8 +1,7 @@
 import { TRIAL_UPGRADE, scopedTrial, trialEligible, fulfillTrialUpgrade, type TrialOffer, type TrialSubscription } from './trialUpgrade';
 import { pages219 } from './offer219Transport';
 import Stripe from "stripe";
-import {resolveCheckoutRevenue,freezeCheckoutRevenue} from './revenueAttributionServer';
-import {revenueMetadata} from './revenueAttribution';
+import {checkoutRevenue,createRevenueCheckout} from './revenueCheckoutServer';
 import { createClient } from "@supabase/supabase-js";
 import { checkoutOffer, type Offer, type OfferGateway, type OfferSession, type OfferStore } from "./privateOffer";
 
@@ -77,8 +76,8 @@ export function trialUpgradeServices(dependencies?: ReturnType<typeof services>,
     async expire(id) { return sessionView(await stripe.checkout.sessions.expire(id)); },
     async create(o) {
       if (!await gateway.eligible(o)) throw Error('trial_changed');
-      const revenue=revenueMetadata(await freezeCheckoutRevenue('trial-upgrade:'+o.id+':'+o.generation,o.user_id,await resolveCheckoutRevenue(o.user_id,'approved_trial_upgrade')));
-      return sessionView(await stripe.checkout.sessions.create({
+      const revenue=await checkoutRevenue('trial-upgrade:'+o.id+':'+o.generation,o.user_id,'approved_trial_upgrade');
+      return sessionView(await createRevenueCheckout(stripe,{
         mode: "payment", customer: o.customer_id, client_reference_id: o.user_id,
         payment_method_types: ["card", "twint"], locale: "de", expires_at: o.session_expires!,
         line_items: [{ quantity: 1, price_data: { currency: o.currency, unit_amount: o.amount,
@@ -88,7 +87,7 @@ export function trialUpgradeServices(dependencies?: ReturnType<typeof services>,
         metadata: { ...revenue, userId: o.user_id, plan: "schooltime", site: "cleverli.ch", trial_upgrade_id: o.id, trial_subscription_id: TRIAL_UPGRADE.subscriptionId, private_offer_id: o.id,
           offer_generation: String(o.generation), checkout_source: "approved_trial_upgrade" },
         payment_intent_data: { metadata: { ...revenue, userId: o.user_id, plan: "schooltime", site: "cleverli.ch", trial_upgrade_id: o.id, trial_subscription_id: TRIAL_UPGRADE.subscriptionId, private_offer_id: o.id } },
-      }, { idempotencyKey: `trial-upgrade:${o.id}:${o.generation}` }));
+      }, `trial-upgrade:${o.id}:${o.generation}`));
     },
   };
   return { db, stripe, store, gateway };

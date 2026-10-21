@@ -53,7 +53,7 @@ export async function processRevenueEvent(stripe:Stripe,event:Stripe.Event){
 }
 export async function reconcileRevenue(stripe=new Stripe(process.env.STRIPE_SECRET_KEY!)){
  const db=revenueDb();const run=await db.from('revenue_reconciliation_runs').insert({}).select('id').single();if(run.error)throw Error('reconciliation_run_unavailable');
- const result={scanned:0,payments:0,other:0,unresolved:0,gross:0,refunded:0,byCurrency:{} as Record<string,{gross:number;refunded:number}>,cutoff:Math.floor(Date.now()/1000)};
+ const result={scanned:0,payments:0,other:0,unresolved:0,gross:0,refunded:0,cohorts:{} as Record<string,number>,byCurrency:{} as Record<string,{gross:number;refunded:number}>,cutoff:Math.floor(Date.now()/1000)};
  try{
   for await(const c of stripe.charges.list({limit:100,created:{lt:result.cutoff}})){
    if(++result.scanned>2000)throw Error('reconciliation_scan_limit_incomplete');
@@ -64,6 +64,7 @@ export async function reconcileRevenue(stripe=new Stripe(process.env.STRIPE_SECR
   // Read back the exact pre-cutoff ledger: mismatches must not be reported as success.
   const rows:LedgerRow[]=[];for(let start=0;;start+=500){const q=await db.from('revenue_payment_ledger').select('*').lt('paid_at',new Date(result.cutoff*1000).toISOString()).order('charge_id').range(start,start+499);if(q.error)throw Error('ledger_readback_failed');rows.push(...q.data);if(q.data.length<500)break;}
   if(rows.length!==result.payments||rows.reduce((s,x)=>s+x.amount,0)!==result.gross||rows.reduce((s,x)=>s+x.refunded,0)!==result.refunded)throw Error('stripe_ledger_mismatch');
+  for(const row of rows)result.cohorts[row.snapshot.cohort]=(result.cohorts[row.snapshot.cohort]||0)+1;
   if(result.unresolved)throw Error('unresolved_payment_ownership');
   const saved=await db.from('revenue_reconciliation_runs').update({completed_at:new Date().toISOString(),result}).eq('id',run.data.id);if(saved.error)throw Error('reconciliation_receipt_failed');return result;
  }catch(e){await db.from('revenue_reconciliation_runs').update({completed_at:new Date().toISOString(),result,error:e instanceof Error?e.message:'reconciliation_failed'}).eq('id',run.data.id);throw e;}

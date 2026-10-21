@@ -7,8 +7,7 @@ import { parseAdsExperimentAttribution, parseAdsExperimentMetadata } from "@/lib
 import { sendMetaConversion } from "@/lib/metaConversions";
 import { isSchooltimeOfferActive, SCHOOLTIME_OFFER_PRICE_CHF } from "@/lib/schooltimeOffer";
 
-import {resolveCheckoutRevenue, freezeCheckoutRevenue} from '@/lib/revenueAttributionServer';
-import {revenueMetadata} from '@/lib/revenueAttribution';
+import {checkoutRevenue,createRevenueCheckout} from '@/lib/revenueCheckoutServer';
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.cleverli.ch";
 
 const PRICE_IDS: Record<string, string> = {
@@ -197,7 +196,7 @@ export async function GET(req: NextRequest) {
     const attributionMetadata = stripeAttributionMetadata(attribution);
     const experimentMetadata = stripeExperimentMetadata(experimentAttribution);
     const checkoutIdempotencyKey = getCheckoutIdempotencyKey(userId, plan, checkoutSource, trialDays);
-    const revenue = revenueMetadata(await freezeCheckoutRevenue(checkoutIdempotencyKey,userId,await resolveCheckoutRevenue(userId,checkoutSource,req,experimentAttribution)));
+    const revenue = await checkoutRevenue(checkoutIdempotencyKey,userId,checkoutSource,req,experimentAttribution);
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: isSchooltime ? "payment" : "subscription",
       line_items: isSchooltime
@@ -252,9 +251,7 @@ export async function GET(req: NextRequest) {
         },
       } } : {}),
     };
-    const session = await stripe.checkout.sessions.create(sessionParams, {
-      idempotencyKey: checkoutIdempotencyKey,
-    });
+    const session = await createRevenueCheckout(stripe,sessionParams,checkoutIdempotencyKey);
 
     if (!session.url) {
       Sentry.captureMessage("[checkout] Stripe session missing URL", "error");

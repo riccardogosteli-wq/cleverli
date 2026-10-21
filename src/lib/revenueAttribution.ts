@@ -1,6 +1,6 @@
 import type { AdsExperimentAttribution } from './adsAbVariant';
 export const REVENUE_COOKIE = 'cleverli_revenue_attribution_v1';
-export type RevenueCohort = 'randomized_control'|'randomized_trial'|'fixed_meta_control'|'outside_experiment'|'legacy_unattributed'|'qa'|'conflicting_exposures';
+export type RevenueCohort = 'randomized_control'|'randomized_trial'|'fixed_meta_control'|'outside_experiment'|'legacy_unattributed'|'capture_unavailable'|'qa'|'conflicting_exposures';
 export type RevenueSnapshot = { version: '1'; cohort: RevenueCohort; experiment?: string; variant?: 'control'|'trial'; visitor_id?: string; page?: string; evidence: string; captured_at: string; checkout_context?: string; checkout_cohort?: RevenueCohort };
 export function exposureSnapshot(a: AdsExperimentAttribution | null, evidence: string, now=new Date().toISOString()): RevenueSnapshot | null {
  if(!a) return null;
@@ -20,7 +20,7 @@ export function revenueMetadata(s: RevenueSnapshot): Record<string,string> {
 export function snapshotFromMetadata(m: Record<string,string>|null|undefined): RevenueSnapshot {
  const legacy:RevenueSnapshot={version:'1',cohort:'legacy_unattributed',evidence:'no_versioned_checkout_snapshot',captured_at:''};
  if(m?.revenue_attribution_v!=='1')return legacy;
- const allowed:RevenueCohort[]=['randomized_control','randomized_trial','fixed_meta_control','outside_experiment','legacy_unattributed','qa','conflicting_exposures'];
+ const allowed:RevenueCohort[]=['randomized_control','randomized_trial','fixed_meta_control','outside_experiment','legacy_unattributed','capture_unavailable','qa','conflicting_exposures'];
  if(!allowed.includes(m.revenue_cohort as RevenueCohort))return legacy;
  const s:RevenueSnapshot={version:'1',cohort:m.revenue_cohort as RevenueCohort,evidence:m.revenue_evidence||'checkout_snapshot',captured_at:m.revenue_captured_at||'',checkout_context:m.revenue_checkout_context,checkout_cohort:allowed.includes(m.revenue_checkout_cohort as RevenueCohort)?m.revenue_checkout_cohort as RevenueCohort:undefined};
  if(m.revenue_experiment)s.experiment=m.revenue_experiment;

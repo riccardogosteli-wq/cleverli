@@ -12,11 +12,13 @@ export async function POST(req:NextRequest){
   const observed=exposureSnapshot(parseAdsExperimentAttribution(p),'browser_observed');
   if(a&&!observed)return NextResponse.json({error:'invalid_exposure'},{status:400});
   const prior=readRevenueCookie(req.cookies.get(REVENUE_COOKIE)?.value);let current=observed||prior;
+  // Account restoration is never minted as anonymous browser exposure evidence.
+  const browserEvidence=prior&&prior.cohort!=='qa'?prior:observed||prior;
   await persistRevenueExposure(current);
   const token=req.headers.get('authorization')?.replace(/^Bearer\s+/i,'');let persisted=false;
   if(token){const {data,error}=await revenueDb().auth.getUser(token);if(error||!data.user)return NextResponse.json({error:'unauthorized'},{status:401});if(prior&&prior.cohort!=='qa')await bindRevenueAccount(data.user.id,prior);const r=await bindRevenueAccount(data.user.id,current);current=current||r.first_exposure;persisted=true;}
   const res=NextResponse.json({ok:true,persisted,attribution:snapshotToAds(current)},{headers:{'Cache-Control':'no-store'}});
-  if(current)res.cookies.set(REVENUE_COOKIE,signRevenueCookie(prior?.cohort!=='qa'&&prior?prior:current),{secure:req.nextUrl.protocol==='https:',httpOnly:true,sameSite:'lax',path:'/',maxAge:180*86400});
+  if(browserEvidence)res.cookies.set(REVENUE_COOKIE,signRevenueCookie(browserEvidence),{secure:req.nextUrl.protocol==='https:',httpOnly:true,sameSite:'lax',path:'/',maxAge:180*86400});
   return res;
  }catch{return NextResponse.json({error:'attribution_unavailable'},{status:503,headers:{'Cache-Control':'no-store'}});}
 }

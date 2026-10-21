@@ -1,6 +1,5 @@
 import Stripe from "stripe";
-import {resolveCheckoutRevenue,freezeCheckoutRevenue} from './revenueAttributionServer';
-import {revenueMetadata} from './revenueAttribution';
+import {checkoutRevenue,createRevenueCheckout} from './revenueCheckoutServer';
 import { createClient } from "@supabase/supabase-js";
 import { checkoutOffer, matchingSession, paidSchooltime, type Offer, type OfferGateway, type OfferSession, type OfferStore } from "./privateOffer";
 
@@ -60,8 +59,8 @@ export function privateOfferServices() {
     async retrieve(id) { return sessionView(await stripe.checkout.sessions.retrieve(id)); },
     async expire(id) { return sessionView(await stripe.checkout.sessions.expire(id)); },
     async create(o) {
-      const revenue=revenueMetadata(await freezeCheckoutRevenue('private-offer:'+o.id+':'+o.generation,o.user_id,await resolveCheckoutRevenue(o.user_id,'private_offer')));
-      return sessionView(await stripe.checkout.sessions.create({
+      const revenue=await checkoutRevenue('private-offer:'+o.id+':'+o.generation,o.user_id,'private_offer');
+      return sessionView(await createRevenueCheckout(stripe,{
         mode: "payment", customer: o.customer_id, client_reference_id: o.user_id,
         payment_method_types: ["card", "twint"], locale: "de", expires_at: o.session_expires!,
         line_items: [{ quantity: 1, price_data: { currency: o.currency, unit_amount: o.amount,
@@ -71,7 +70,7 @@ export function privateOfferServices() {
         metadata: { ...revenue, userId: o.user_id, plan: "schooltime", site: "cleverli.ch", private_offer_id: o.id,
           offer_generation: String(o.generation), checkout_source: "private_offer" },
         payment_intent_data: { metadata: { ...revenue, userId: o.user_id, plan: "schooltime", site: "cleverli.ch", private_offer_id: o.id } },
-      }, { idempotencyKey: `private-offer:${o.id}:${o.generation}` }));
+      }, `private-offer:${o.id}:${o.generation}`));
     },
   };
   return { db, stripe, store, gateway };

@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { after, NextRequest, NextResponse } from "next/server";
 import { processCancellationEmailEvent } from "@/lib/cancellationEmailServer";
 import { isFirstCollectedInvoice } from "@/lib/activationEmail";
 import * as Sentry from "@sentry/nextjs";
@@ -171,10 +171,18 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
 
-  // Accounting capture is additive: never interrupts entitlements or conversion events.
-  // Daily full Stripe reconciliation repairs transient ledger/webhook failures.
-  try { await processRevenueEvent(getStripe(),event); }
-  catch(error) { Sentry.captureException(error); }
+  // Fulfilment and its response take priority. Accounting runs only afterwards.
+  // Its bounded wait is best effort; daily reconciliation repairs missed entries.
+  after(async () => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    try {
+      await Promise.race([
+        processRevenueEvent(new Stripe(process.env.STRIPE_SECRET_KEY!, { timeout: 3000, maxNetworkRetries: 0 }), event),
+        new Promise<never>((_, reject) => { timer = setTimeout(() => reject(new Error('revenue_capture_deadline')), 5000); }),
+      ]);
+    } catch(error) { Sentry.captureException(error); }
+    finally { if(timer)clearTimeout(timer); }
+  });
 
   // ── Subscription activated ──────────────────────────────────────────────
   if (event.type === "checkout.session.completed" || (

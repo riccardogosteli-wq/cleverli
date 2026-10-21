@@ -3,14 +3,15 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const ts = require('typescript');
 const code = ts.transpileModule(fs.readFileSync('src/app/api/webhooks/stripe/route.ts','utf8'), {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
-async function run({status='paid',privateOffer=false,eventType='checkout.session.completed',duplicate=false,retrievedStatus=status,fail=false,mode='payment',trial=false}={}) {
+async function run({status='paid',privateOffer=false,eventType='checkout.session.completed',duplicate=false,retrievedStatus=status,fail=false,mode='payment',trial=false,accountingStalled=false}={}) {
+  const afterTasks=[];let accountingCalls=0;
   const calls={patch:0,redeem:0,email:0,activity:0,meta:0};
   const session={id:'fake-session',mode,payment_status:status,metadata:{userId:'fake-user',plan:mode==='subscription'?'yearly':'schooltime',...(privateOffer?{private_offer_id:'fake-offer'}:{}),...(trial?{trial_days:'7'}:{})},customer:'cus_fake',customer_details:{email:'fixture@example.invalid'},amount_total:19900,currency:'chf',subscription:'fake-sub'};
   class Stripe { constructor(){this.webhooks={constructEvent:()=>({type:eventType,data:{object:session}})};this.checkout={sessions:{retrieve:async()=>({...session,payment_status:retrievedStatus})}};this.subscriptions={retrieve:async()=>({id:'fake-sub',items:{data:[{current_period_end:2000000000}]}})};} }
-  const next={NextResponse:{json:(body,init={})=>({body,status:init.status||200})}};
+  const next={after:fn=>afterTasks.push(fn),NextResponse:{json:(body,init={})=>({body,status:init.status||200})}};
   const module={exports:{}};
   const requireStub=(name)=>{
-    if(name==='@/lib/revenueLedgerServer')return {processRevenueEvent:async()=>{}};
+    if(name==='@/lib/revenueLedgerServer')return {processRevenueEvent:async()=>{accountingCalls++;if(accountingStalled)await new Promise(()=>{});}};
     if(name==='@/lib/cancellationEmailServer')return {processCancellationEmailEvent:async()=>null};
     if(name==='@/lib/activationEmail')return {isFirstCollectedInvoice:async()=>false};
     if(name==='@/lib/trialUpgradeServer')return {settledTrialSubscription:async()=>false};
@@ -23,8 +24,10 @@ async function run({status='paid',privateOffer=false,eventType='checkout.session
     if(name==='@/lib/metaConversions')return {sendMetaConversion:async()=>{calls.meta++;}};
     throw Error('Unexpected import '+name);
   };
-  vm.runInNewContext(code,{module,exports:module.exports,require:requireStub,process:{env:{STRIPE_WEBHOOK_SECRET:'fake-test-only'}},console:{log(){},error(){}},fetch:async()=>{calls.patch++;return {ok:true};}});
+  vm.runInNewContext(code,{setTimeout:(fn,ms)=>setTimeout(fn,ms===5000?5:ms),clearTimeout,module,exports:module.exports,require:requireStub,process:{env:{STRIPE_WEBHOOK_SECRET:'fake-test-only'}},console:{log(){},error(){}},fetch:async()=>{calls.patch++;return {ok:true};}});
   const result=await module.exports.POST({text:async()=>'',headers:{get:()=> 'fake-signature-test-stub'}});
+  assert.equal(accountingCalls,0,'Accounting must not run before fulfilment returns');
+  if(accountingStalled){assert.equal(calls.patch,1);assert.equal(calls.meta,1);await Promise.all(afterTasks.map(fn=>fn()));assert.equal(accountingCalls,1);}
   return {result,calls};
 }
 (async()=>{let checks=0;
@@ -40,5 +43,6 @@ async function run({status='paid',privateOffer=false,eventType='checkout.session
   const asyncPaid=await run({privateOffer:true,eventType:'checkout.session.async_payment_succeeded'});assert.equal(asyncPaid.calls.redeem,1);checks++;
   const asyncUnpaid=await run({privateOffer:true,eventType:'checkout.session.async_payment_succeeded',status:'unpaid'});assert.equal(asyncUnpaid.calls.redeem,0);checks++;
   const trial=await run({mode:'subscription',status:'unpaid',trial:true});assert.equal(trial.calls.patch,1);assert.equal(trial.calls.email,0);checks++;
+  const stalled=await run({accountingStalled:true});assert.equal(stalled.result.status,200);assert.equal(stalled.calls.email,2);checks++;
   console.log(`Actual webhook handler: ${checks} scenarios passed with mocked services/signature boundary; zero real events or production writes.`);
 })().catch(e=>{console.error('Webhook test failed:',e.message);process.exitCode=1;});
