@@ -12,7 +12,7 @@ export function mountAdventure(kind, engine) {
     const motion = !matchMedia('(prefers-reduced-motion: reduce)').matches;
     const play = experience({game:kind});
     const animationDuration = motion ? SCENE_SECONDS : .35;
-    play.configure(() => bridge ? s.mission ? 'Baue genau ' + engine.format(s.mission.target, s.grade) : CUES['bridge-intro'] : s.mission ? (s.phase==='playing'&&play.mode()!=='discover'?s.mission.prompt+' '+(s.mission.before||'')+' Lücke '+(s.mission.after||''):engine.text(s.mission)) : CUES['detective-intro']);
+    play.configure(() => bridge ? s.mission ? 'Baue genau ' + engine.format(s.mission.target, s.grade) : CUES['bridge-intro'] : s.mission ? ((s.phase==='playing'||(s.phase==='paused'&&previousPhase==='playing'))&&play.mode()!=='discover'?s.mission.prompt+' '+(s.mission.before||'')+' Lücke '+(s.mission.after||''):engine.text(s.mission)) : CUES['detective-intro']);
     const journey=mountJourney(kind,()=>Number($('grade').value),()=>reset());
     const chapter = document.createElement('select');
     chapter.id = 'chapter';
@@ -112,12 +112,13 @@ export function mountAdventure(kind, engine) {
     else {
         const out = engine.select(s.mission, s.prefix, c.label);
         if (out.outcome === 'try-again') {
-            s.errors++;
+            s.errors++;play.sound('try');
             s.selected = null;
             render();
             say('Das passt noch nicht in diese Lücke. Deine richtigen Teile bleiben.');
             return;
         }
+        play.sound('page');
         s.prefix = out.prefix;
         s.used.push(c.id);
         s.selected = null;

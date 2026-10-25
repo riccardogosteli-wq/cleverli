@@ -116,7 +116,6 @@ function update(dt) {
         wrongUntil = s.elapsed + 1.2;
         freshInput();
         s.mistakes++;play.sound('try');
-        play.sound('try');
         say(PROFILES[grade].nextHint && guided() ? 'Dieses Teil ist noch nicht dran. Suche ' + s.mission.parts[s.index] + '.' : 'Dieses Teil passt noch nicht. Dein bisheriges Wort bleibt.');
     }
     for (const p of sparks) {
