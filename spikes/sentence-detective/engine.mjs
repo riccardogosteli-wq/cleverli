@@ -83,3 +83,22 @@ const FESTIVAL={
 };
 export const CHAPTERS=[STORY,PICNIC,FESTIVAL];
 export function chapterMission(grade,round,chapter=0){if(chapter===0)return storyMission(grade,round);if(!CHAPTERS[chapter]?.[grade]?.[round])throw Error('Invalid chapter');const scene=grade===1&&round===1?2:round;return{...structuredClone(CHAPTERS[chapter][grade][round]),grade,id:'chapter:'+chapter+':'+grade+':'+round,scene,context:chapter===1?['Eine Wegnachricht öffnet das Tor zum Picknickplatz.','Hasi bringt etwas fürs Picknick.','Die letzte Nachricht führt zur ausgerollten Decke.'][scene]:['Die Einladung öffnet das Festtor.','Hasi bringt eine Blume zum Baumhaus.','Die letzte Nachricht eröffnet das Waldfest.'][scene]};}
+
+// Optional revision tasks keep the connected scene, but require the learner to repair text.
+const CHALLENGE_LISTS=[
+ [['Schlüssel','Karte','Blume'],['Wasser','Karotten','Gras'],['Buch','Karte','Brief']],
+ [['Brot','Käse','Wasser'],['Äpfel','Birnen','Karotten'],['Teller','Becher','Servietten']],
+ [['Blumen','Blätter','Beeren'],['Äpfel','Nüsse','Brot'],['Musik','Spiele','Geschichten']]
+];
+const CHALLENGE_VERBS=[
+ [['Vorhin ',' Cleverli das Tor.','öffnete','öffneten','geöffnet'],['Dann ',' Cleverli dem Hasen.','half','halfen','geholfen'],['Am Ende ',' wir den Schatz.','fanden','fand','gefunden']],
+ [['Vorhin ',' wir die Tasche.','packten','packte','gepackt'],['Dann ',' der Hase eine Karotte.','brachte','brachten','gebracht'],['Am Ende ',' wir auf der Decke.','sassen','sass','gesessen']],
+ [['Vorhin ',' Cleverli die Einladung.','las','lasen','gelesen'],['Dann ',' der Hase eine Blume.','brachte','brachten','gebracht'],['Am Abend ',' wir das Waldfest.','feierten','feierte','gefeiert']]
+];
+export function challengeMission(grade,round,chapter=0){
+ const original=chapterMission(grade,round,chapter);if(grade<4)return original;let m;
+ if(grade===4){const [a,b,c]=CHALLENGE_LISTS[chapter][round];m=choice('Die Liste lautet: ','',a+', '+b+' und '+c+'.',[a+', '+b+' und '+c+'.',a+' '+b+', und '+c+'.',a+', '+b+' und, '+c+'.'],'','Repariere die Zeichensetzung. Behalte die Reihenfolge bei.','Zwischen den ersten beiden Dingen steht ein Komma. Vor und steht hier keines.');}
+ if(grade===5){const [before,after,answer,wrongPerson,participle]=CHALLENGE_VERBS[chapter][round];m=choice(before,after,answer,[answer,wrongPerson,participle],'','Repariere das Verb. Es soll im Präteritum zur Person passen.','Lies die Person im Satz. Eine einzelne Präteritumform steht hier ohne Hilfsverb.');}
+ if(grade===6){if(round===1){m=choice('Hasi hilft','.',', obwohl er müde ist',[', obwohl er müde ist',', obwohl er ist müde',' obwohl er müde ist'],'','Repariere Komma und Wortstellung im obwohl-Teilsatz.','Der Teilsatz beginnt nach einem Komma. Das gebeugte Verb steht hier am Schluss.');}else{const speech=round===0?['Ist das Tor offen?','Ist die Decke bereit?','Beginnt das Fest?'][chapter]:['Wir haben den Schatz!','Das Picknick beginnt!','Willkommen beim Waldfest!'][chapter];const before=round===0?'Cleverli fragt':'Mila ruft';m=choice(before,'',': «'+speech+'»',[': «'+speech+'»',', «'+speech+'»',': «'+speech.slice(0,-1)+'»'+speech.slice(-1)],'','Repariere die direkte Rede. Der Begleitsatz steht zuerst.','Nach dem Begleitsatz folgt ein Doppelpunkt. Frage- oder Ausrufezeichen stehen innerhalb der Redezeichen.');}}
+ return {...m,grade,id:'challenge:'+chapter+':'+grade+':'+round,scene:original.scene,context:original.context};
+}

@@ -1,6 +1,6 @@
 import {mountJourney,themedOrder,paintJourney} from './journeys.js';
 import { drawAlpine, drawToken, drawCelebration, sceneReady, drawCompanion } from '/labs/word-magnet/theme.js';
-import { GRADE_LABELS, rng, mission, tilesFor, collect, PROFILES, wordOrder, BANK } from '/labs/word-magnet/engine.js';
+import { GRADE_LABELS, rng, mission, challengeMission, tilesFor, collect, PROFILES, BANK } from '/labs/word-magnet/engine.js';
 import { experience } from './experience.js';
 import { CUES } from './cues.js';
 import { floatingReady } from './motion.js';
@@ -23,7 +23,7 @@ catch {
 } }
 function freshInput() { held.clear(); for (const key of pressedKeys)
     blockedKeys.add(key); mouseArmed = false; gesture = null; s.userMoved = false; s.tx = s.x; s.ty = s.y; }
-function newWord() { play.stop('auto'); boardVersion++; s.previousParts = [...s.completedParts]; s.previousDistractors = s.previousDistractors || []; s.mission = mission(grade, s.order[s.round % s.order.length]); s.index = 0; s.x = .1; s.y = .88; s.tx = s.x; s.ty = s.y; freshInput(); tiles = tilesFor(s.mission, random, 0, [...s.previousParts, ...s.previousDistractors]); wrongUntil = 0; slots(); }
+function newWord() { play.stop('auto'); boardVersion++; s.previousParts = [...s.completedParts]; s.previousDistractors = s.previousDistractors || []; s.mission = (play.mode()==='challenge'?challengeMission:mission)(grade, s.order[s.round % s.order.length]); s.index = 0; s.x = .1; s.y = .88; s.tx = s.x; s.ty = s.y; freshInput(); tiles = tilesFor(s.mission, random, 0, [...s.previousParts, ...s.previousDistractors]); wrongUntil = 0; slots(); }
 function reset() {play.stop();play.pauseEffects?.(true); held.clear(); pressedKeys.clear(); blockedKeys.clear(); s = { phase: 'ready', grade, round: 0, order: themedOrder(BANK,grade,journey.index(),random), completedParts: [], words: 0, stars: 0, index: 0, elapsed: 0, mistakes: 0, hints: 0, cooldown: 0, x: .1, y: .88, tx: .1, ty: .88 }; newWord(); hud(); guide(); }
 function guided() { return play.mode() === 'discover'; }
 function slots() { const host = $('slots'); host.replaceChildren(); s.mission.parts.forEach((text, i) => { const span = document.createElement('span'); span.className = 'slot' + (i < s.index ? ' done' : i === s.index ? ' current' : ''); span.textContent = ((PROFILES[grade].visible && guided()) || i < s.index) ? text : '?'; host.append(span); }); $('target').textContent = PROFILES[grade].visible ? s.mission.word : s.mission.clue; $('picture').replaceChildren(); const im = document.createElement('img'); im.src = new URL('./' + meaningName(s.mission.word) + '.webp', import.meta.url).href; im.alt = ''; im.width = 46; im.height = 46; im.style.objectFit = 'contain'; $('picture').append(im); }
@@ -115,7 +115,7 @@ function update(dt) {
     else if (near.length && s.elapsed >= wrongUntil && (held.size || Math.hypot((s.tx - s.x) * w, (s.ty - s.y) * h) < 8)) {
         wrongUntil = s.elapsed + 1.2;
         freshInput();
-        s.mistakes++;
+        s.mistakes++;play.sound('try');
         play.sound('try');
         say(PROFILES[grade].nextHint && guided() ? 'Dieses Teil ist noch nicht dran. Suche ' + s.mission.parts[s.index] + '.' : 'Dieses Teil passt noch nicht. Dein bisheriges Wort bleibt.');
     }
@@ -276,5 +276,5 @@ if (new URLSearchParams(location.search).get('internal_qa') === '1')
     window.wordMagnetTest = { state: () => structuredClone(s), tiles: () => structuredClone(tiles), sceneReady: () => sceneReady(ctx) && artReady() && floatingReady() && meaningReady(), preferences: () => play.preferences(), audio: () => play.audio(), step: seconds => { for (let t = 0; t < seconds; t += .02)
             update(Math.min(.02, seconds - t)); } };
 $('slow').hidden = true;
-play.configure(() => s.phase==='ready'?CUES['word-intro']:s.mission.word);
-window.addEventListener('cleverli-play-mode', () => { slots(); hud(); guide(); });
+play.configure(() => s.phase==='ready'?CUES['word-intro']:s.cooldown>0||s.phase==='ended'||grade<=3||guided()?s.mission.word:s.mission.clue);
+window.addEventListener('cleverli-play-mode', () => { reset(); });

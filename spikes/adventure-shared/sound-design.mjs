@@ -38,3 +38,22 @@ export function playCue(context, bus, kind, {strength = 1, offset = 0, track = (
  else if(kind==='complete'||kind==='win'){[392,523.25,659.25,783.99,659.25,1046.5].forEach((f,i)=>tone(f,.6,.048,i*.16));}
  else tone(523.25,.22,.04);
 }
+
+// Four original, low-volume scores. No samples, runtime service or paid calls.
+export const SCORES = Object.freeze({
+ 'number-flight': {step:.62, tone:'sine', notes:[72,76,79,null,76,74,72,null,69,72,76,null,74,null,71,null], roots:[48,45,53,43]},
+ 'word-magnet': {step:.72, tone:'sine', notes:[64,null,67,72,null,67,64,null,65,69,null,72,69,null,67,null], roots:[48,53,45,43]},
+ 'bridge-builder': {step:.8, tone:'triangle', notes:[60,null,64,67,null,64,62,null,57,null,60,64,null,62,59,null], roots:[48,45,53,43]},
+ 'sentence-detective': {step:.86, tone:'sine', notes:[69,null,72,null,76,72,null,69,67,null,71,74,null,71,67,null], roots:[45,53,48,43]}
+});
+export class LearningScore {
+ constructor(game){this.score=SCORES[game]||SCORES['word-magnet'];this.context=null;this.master=null;this.enabled=false;this.paused=true;this.ducked=false;this.nodes=new Set();this.timer=null;this.next=0;this.beat=0;}
+ unlock(){try{if(!this.context){this.context=new(window.AudioContext||window.webkitAudioContext)();this.master=this.context.createGain();this.master.connect(this.context.destination);}this.context.resume().catch(()=>{});this.apply();}catch{}}
+ stopNodes(){for(const n of this.nodes){try{n.stop();}catch{}}this.nodes.clear();this.next=0;}
+ set(value){this.enabled=value===true;this.apply();}
+ pause(value){this.paused=value===true;this.apply();}
+ duck(value){this.ducked=value===true;this.apply();}
+ apply(){if(!this.context)return;const active=this.enabled&&!this.paused,t=this.context.currentTime;this.master.gain.cancelScheduledValues(t);this.master.gain.setTargetAtTime(active?(this.ducked?.2:1):0,t,.04);if(!active){clearInterval(this.timer);this.timer=null;this.stopNodes();}else if(!this.timer){this.timer=setInterval(()=>this.tick(),80);this.tick();}}
+ note(midi,t,duration,volume,type){const c=this.context,o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=440*2**((midi-69)/12);g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(volume,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+duration);o.connect(g);g.connect(this.master);this.nodes.add(o);o.onended=()=>{this.nodes.delete(o);o.disconnect();g.disconnect();};o.start(t);o.stop(t+duration+.03);}
+ tick(){const c=this.context;if(!c||c.state!=='running'||this.paused||!this.enabled)return;const t=c.currentTime;if(!this.next||this.next<t-.3)this.next=t+.02;while(this.next<t+.14){const i=this.beat%32,n=this.score.notes[i%16],root=this.score.roots[Math.floor(i/8)];if(n!==null){this.note(n+(i>=16?-12:0),this.next,.95,.012,this.score.tone);this.note(n+12,this.next,.3,.0018,'sine');}if(i%4===0)this.note(root,this.next,2.4,.008,'sine');this.next+=this.score.step;this.beat++;}}
+}

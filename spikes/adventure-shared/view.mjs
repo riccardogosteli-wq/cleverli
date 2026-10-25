@@ -12,7 +12,7 @@ export function mountAdventure(kind, engine) {
     const motion = !matchMedia('(prefers-reduced-motion: reduce)').matches;
     const play = experience({game:kind});
     const animationDuration = motion ? SCENE_SECONDS : .35;
-    play.configure(() => bridge ? s.mission ? 'Baue genau ' + engine.format(s.mission.target, s.grade) : CUES['bridge-intro'] : s.mission ? engine.text(s.mission) : CUES['detective-intro']);
+    play.configure(() => bridge ? s.mission ? 'Baue genau ' + engine.format(s.mission.target, s.grade) : CUES['bridge-intro'] : s.mission ? (s.phase==='playing'&&play.mode()!=='discover'?s.mission.prompt+' '+(s.mission.before||'')+' Lücke '+(s.mission.after||''):engine.text(s.mission)) : CUES['detective-intro']);
     const journey=mountJourney(kind,()=>Number($('grade').value),()=>reset());
     const chapter = document.createElement('select');
     chapter.id = 'chapter';
@@ -35,7 +35,7 @@ export function mountAdventure(kind, engine) {
     const alternate = document.createElement('button');
     alternate.id = 'alternate-bridge';
     alternate.type = 'button';
-    alternate.textContent = 'Dieselbe Brücke anders bauen';
+    alternate.textContent = 'Eine zweite Lösung bauen';
     alternate.onclick = () => { if (!bridge || s.phase !== 'celebrate' || s.animation < animationDuration)
         return; s.originalPlan = s.placed.map(p => p.value).sort((a, b) => a - b).join(','); s.rebuilding = true; s.placed = []; s.phase = 'playing'; s.animation = 0; epoch++; say('Baue eine andere Kombination für dasselbe Ziel.'); render(); };
     if (bridge) {
@@ -52,7 +52,7 @@ export function mountAdventure(kind, engine) {
         return null;
     } }, goalCount = () => engine.PROFILES[s.grade].goals;
     function clearDrag() { drag = null; }
-    function newMission() { play.stop('auto');play.pauseEffects?.(false); $('help-panel').hidden = true; epoch++; clearDrag(); s.selected = null; s.prefix = []; s.placed = []; s.previewTime = 0; s.animation = 0; s.blockAge = 1; s.footstep = -1; s.crossedCue = false; s.phase = 'playing'; s.mission = bridge ? engine.mission(s.grade, random, s.history,journey.index()) : chapter.value === 'story' ? engine.chapterMission(s.grade,s.round,journey.index()) : engine.mission(s.grade, s.order[s.round]); s.choices = bridge ? engine.shuffle(s.mission.choices, random) : s.mission.type === 'order' ? engine.shuffle(s.mission.words.map((text, i) => ({ id: i, label: text })), random) : engine.shuffle(s.mission.choices.map((text, i) => ({ id: i, label: text })), random); if (bridge)
+    function newMission() { play.stop('auto');play.pauseEffects?.(false); $('help-panel').hidden = true; epoch++; clearDrag(); s.selected = null; s.prefix = []; s.placed = []; s.alternateRequired=false;s.rebuilding=false; s.previewTime = 0; s.animation = 0; s.blockAge = 1; s.footstep = -1; s.crossedCue = false; s.phase = 'playing'; s.mission = bridge ? engine.mission(s.grade, random, s.history,journey.index()) : chapter.value === 'story' ? (play.mode()==='challenge'?engine.challengeMission:engine.chapterMission)(s.grade,s.round,journey.index()) : engine.mission(s.grade, s.order[s.round]); s.choices = bridge ? engine.shuffle(s.mission.choices, random) : s.mission.type === 'order' ? engine.shuffle(s.mission.words.map((text, i) => ({ id: i, label: text })), random) : engine.shuffle(s.mission.choices.map((text, i) => ({ id: i, label: text })), random); if (bridge)
         s.history.push(s.mission.signature); s.used = []; say(bridge ? 'Tippe einen Baustein. Er rastet auf der Brücke ein.' : 'Tippe das passende Teil. Es rastet in die gelbe Lücke ein.'); render(); }
     function reset() {play.stop();play.pauseEffects?.(true); epoch++; clearDrag(); const grade = Number($('grade').value);journey.refresh(); if (!engine.PROFILES[grade])
         throw Error('Invalid grade'); s = { grade, phase: 'ready', round: 0, completed: 0, stars: 0, active: 0, animation: 0, selected: null, placed: [], prefix: [], used: [], order: bridge ? [] : engine.shuffle(engine.BANK[grade].map((_, i) => i), random), mission: null, history: [], errors: 0, hints: 0 }; $('help-panel').hidden = false; $('work').hidden = true; render(); }
@@ -93,7 +93,7 @@ export function mountAdventure(kind, engine) {
         return; clearDrag(); if (bridge) {
         const out = engine.add(s.mission, s.placed, c.id);
         if (!['build', 'bridge'].includes(out.outcome)) {
-            s.errors++;
+            s.errors++;play.sound('try');
             s.selected = null;
             say(out.outcome === 'too-long' ? 'Dieser Block ist zu lang. Deine Brücke bleibt. Wähle einen kürzeren.' : 'Mit diesem Block reicht der Platz nicht für eine genaue Brücke. Wähle einen anderen oder nimm den letzten zurück.');
             render();
@@ -139,14 +139,11 @@ export function mountAdventure(kind, engine) {
         return;
     } win(); render(); }
     function total() { return s.placed.reduce((n, p) => n + p.value, 0); }
-    function win() { s.previewTime = 0; if (!s.rebuilding) {
-        s.completed++;
-        s.stars += 10;
-    } s.rebuilding = false; play.sound('complete');
+    function win() { s.previewTime = 0; if (!s.rebuilding && bridge && play.mode()==='challenge' && s.grade>=3) {s.alternateRequired=true;} else if(!s.rebuilding || s.alternateRequired){s.completed++;s.stars+=10;s.alternateRequired=false;} s.rebuilding = false; play.sound('complete');
         play.sound(bridge?'place':s.mission?.scene===2?'door':'page');
         if(bridge)play.cue?.('bridge-ready');else if(journey.index()===0)play.cue?.(['detective-gate','detective-rabbit','detective-treasure'][s.mission?.scene??Math.min(2,s.round)]);else play.speak?.(engine.text(s.mission)+' '+s.mission.context);
-        s.footstep = -1; s.crossedCue = false; s.phase = 'celebrate'; s.animation = 0; epoch++; s.selected = null; clearDrag(); say(bridge ? 'Deine Brücke passt genau. Cleverli kann hinüber!' : 'Nachricht repariert! Du öffnest einen neuen Weg.'); safe(() => localStorage.setItem('cleverli_' + kind + '_private_v1:' + s.grade, String(Math.max(s.stars, Number(localStorage.getItem('cleverli_' + kind + '_private_v1:' + s.grade) || 0))))); }
-    function next() { if (s.phase !== 'celebrate' || s.animation < animationDuration)
+        s.footstep = -1; s.crossedCue = false; s.phase = 'celebrate'; s.animation = 0; epoch++; s.selected = null; clearDrag(); say(bridge && s.alternateRequired ? 'Erste Lösung geschafft! Baue jetzt eine zweite Kombination für denselben Weg.' : bridge ? 'Deine Brücke passt genau. Cleverli kann hinüber!' : 'Nachricht repariert! Du öffnest einen neuen Weg.'); safe(() => localStorage.setItem('cleverli_' + kind + '_private_v1:' + s.grade, String(Math.max(s.stars, Number(localStorage.getItem('cleverli_' + kind + '_private_v1:' + s.grade) || 0))))); }
+    function next() { if (s.phase !== 'celebrate' || s.animation < animationDuration || s.alternateRequired)
         return; if (s.completed >= goalCount()) {
         s.phase = 'ended';if(bridge||chapter.value==='story')journey.finish();
         epoch++;
@@ -187,7 +184,7 @@ export function mountAdventure(kind, engine) {
         testButton.disabled = !bridge || !s.placed.length || s.phase !== 'playing';
         alternate.hidden = !bridge || s.grade < 3 || s.phase !== 'celebrate' || s.animation < animationDuration;
         $('work').hidden = s.phase === 'ready';
-        $('question').textContent = bridge ? 'Baue genau ' + engine.format(m.target, s.grade) + '.' + (s.grade > 1 ? ' Nutze höchstens ' + m.maxBlocks + ' Bausteine.' : '') : m.id?.startsWith('story:') && m.type === 'order' ? (s.grade === 4 ? 'Reihenfolge: Schlüssel, Karte, Blume.' : m.prompt.split('. ')[0] + (m.prompt.includes('. ') ? '.' : '')) : m.prompt;
+        $('question').textContent = bridge ? 'Baue genau ' + engine.format(m.target, s.grade) + '.' + (s.grade > 1 ? ' Nutze höchstens ' + m.maxBlocks + ' Bausteine.' : '') + (play.mode()==='challenge'&&s.grade>=3?' Finde zwei verschiedene Kombinationen.':'') : m.id?.startsWith('story:') && m.type === 'order' ? (s.grade === 4 ? 'Reihenfolge: Schlüssel, Karte, Blume.' : m.prompt.split('. ')[0] + (m.prompt.includes('. ') ? '.' : '')) : m.prompt;
         $('picture').replaceChildren();
         const art = document.createElement('img');
         art.src = bridge ? new URL('./plank.webp', import.meta.url).href : '/cleverli-sit-read.png';
@@ -197,7 +194,7 @@ export function mountAdventure(kind, engine) {
         $('picture').append(art);
         $('model').hidden = bridge ? s.grade !== 1 : !engine.PROFILES[s.grade].model || play.mode() !== 'discover';
         $('model').textContent = bridge ? 'Zähle die Punkte: ' + ('●'.repeat(m.target)) : engine.text?.(m) || '';
-        $('rule').hidden = bridge || s.grade !== 6;
+        $('rule').hidden = bridge || s.grade !== 6 || play.mode()!=='discover';
         $('rule').textContent = bridge ? '' : 'Regelhilfe: ' + (m.before?.includes('«') || m.after?.includes('«') || m.words?.some(t => t.includes('«')) ? 'Schema: Name: «Rede.»' : 'Zwei leicht erkennbare Teilsätze trennt hier ein Komma.');
         $('choices').replaceChildren();
         for (const c of s.choices) {
@@ -300,7 +297,7 @@ export function mountAdventure(kind, engine) {
         if (i < s.completed)
             mark.textContent += ' ✓';
         $('journey').append(mark);
-    } $('stars').textContent = String(s.stars); $('pause').disabled = !['playing', 'celebrate'].includes(s.phase); $('start').hidden = s.phase !== 'ready'; $('start').textContent = s.phase === 'paused' ? 'Weiter spielen' : bridge ? 'Brücke bauen!' : 'Abenteuer starten!'; $('resume').hidden = s.phase !== 'paused'; $('help-title').textContent = s.phase === 'paused' ? 'Kurze Pause' : 'So spielst du'; const examples = bridge ? ['', 'Beispiel: Für 3 passen 1 + 2. Zähle die Punkte.', 'Beispiel: Für 12 passen 5 + 5 + 2.', 'Beispiel: 2 × 3 ergibt 6. Zwei solche Blöcke ergeben 12.', 'Beispiel: 1 dm = 10 cm. Für 40 cm passen 1 dm + 30 cm.', 'Beispiel: 1/4 + 3/4 ergibt 1.', 'Beispiel: 0,25 + 1/2 + 0,25 ergibt 1.'] : ['', 'Beispiel: Der Hase hüpft. Der Beispielsatz hilft dir.', 'Beispiel: Der Hase frisst eine Karotte. Beginne mit Der.', 'Beispiel: Wo ist der Ball? Die Frage endet mit ?.', 'Beispiel: Äpfel, Birnen und Brot. Achte auf die verlangte Reihenfolge.', 'Beispiel: Gestern las ich ein Buch. las ist das Präteritum von lesen.', 'Beispiel: Mila sagt: «Hallo!» Das Schema hilft dir mit den Zeichen.']; document.querySelector('.example').textContent = examples[s.grade]; $('next').hidden = s.phase !== 'celebrate'; $('next').disabled = s.animation < animationDuration; $('next').textContent = s.completed >= goalCount() ? 'Abenteuer abschliessen' : bridge ? 'Nächste Brücke' : 'Nächste Nachricht'; $('again').hidden = s.phase !== 'ended'; $('work').hidden = s.phase === 'ready'; if (s.mission)
+    } $('stars').textContent = String(s.stars); $('pause').disabled = !['playing', 'celebrate'].includes(s.phase); $('start').hidden = s.phase !== 'ready'; $('start').textContent = s.phase === 'paused' ? 'Weiter spielen' : bridge ? 'Brücke bauen!' : 'Abenteuer starten!'; $('resume').hidden = s.phase !== 'paused'; $('help-title').textContent = s.phase === 'paused' ? 'Kurze Pause' : 'So spielst du'; const examples = bridge ? ['', 'Beispiel: Für 3 passen 1 + 2. Zähle die Punkte.', 'Beispiel: Für 12 passen 5 + 5 + 2.', 'Beispiel: 2 × 3 ergibt 6. Zwei solche Blöcke ergeben 12.', 'Beispiel: 1 dm = 10 cm. Für 40 cm passen 1 dm + 30 cm.', 'Beispiel: 1/4 + 3/4 ergibt 1.', 'Beispiel: 0,25 + 1/2 + 0,25 ergibt 1.'] : ['', 'Beispiel: Der Hase hüpft. Der Beispielsatz hilft dir.', 'Beispiel: Der Hase frisst eine Karotte. Beginne mit Der.', 'Beispiel: Wo ist der Ball? Die Frage endet mit ?.', 'Beispiel: Äpfel, Birnen und Brot. Achte auf die verlangte Reihenfolge.', 'Beispiel: Gestern las ich ein Buch. las ist das Präteritum von lesen.', 'Beispiel: Mila sagt: «Hallo!» Das Schema hilft dir mit den Zeichen.']; document.querySelector('.example').textContent = examples[s.grade]; $('next').hidden = s.phase !== 'celebrate'; $('next').disabled = s.animation < animationDuration || s.alternateRequired; $('next').textContent = s.alternateRequired ? 'Zweite Lösung fehlt' : s.completed >= goalCount() ? 'Abenteuer abschliessen' : bridge ? 'Nächste Brücke' : 'Nächste Nachricht'; $('again').hidden = s.phase !== 'ended'; $('work').hidden = s.phase === 'ready'; if (s.mission)
         renderWork(); $('finish').hidden = s.phase !== 'ended'; $('finish').textContent = 'Geschafft: ' + s.completed + ' Wege geöffnet und ' + s.stars + ' Sterne gesammelt. ' + (s.hints ? 'Du hast ' + s.hints + ' Mal Hilfe genutzt. Gut, dass du weitergebaut hast.' : 'Du hast deinen eigenen Weg gefunden.') + ' Deine Sterne bleiben nur in diesem Spieltest.'; }
     function draw() {
         if (!w || !h)
@@ -401,7 +398,7 @@ export function mountAdventure(kind, engine) {
         s.active += dt; if (s.phase === 'celebrate') {
         s.animation = Math.min(animationDuration, s.animation + dt);
         if (s.animation === animationDuration) {
-            $('next').disabled = false;
+            $('next').disabled = !!s.alternateRequired;
             if(bridge&&!s.crossedCue){s.crossedCue=true;play.cue?.('bridge-crossed');}
 
             alternate.hidden = !bridge || s.grade < 3;
