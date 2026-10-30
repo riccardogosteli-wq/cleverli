@@ -27,17 +27,15 @@ export function route(base,id,title,description,finish,terrain,options={}){
  const grounds=terrain.map(([x,w,y=430],i)=>freeze({id:'g'+i,x,y,w,h:720-y,solid:true}));
  const ledges=(options.ledges||[]).map(p=>freeze({h:22,...p}));
  const stones=(options.stones||[]).map(p=>freeze({h:26,...p}));
- const positions=ledges.filter(p=>!p.move&&!p.moveY).map(p=>[p.x+p.w*.55,p.y-35]);
  // Stable IDs retain already-earned berry credit. Every new route has 24 distinct finds.
  const checkpoints=grounds.map(g=>({x:g.x+90,y:g.y})).filter(p=>p.x<rabbit);
- const safeFruit=([x,y])=>x>=280&&!(play.blocks||[]).some(p=>x>=p.x-25&&x<=p.x+p.w+25&&y>p.y-45)&&!checkpoints.some(p=>Math.hypot(x-(p.x+19),y-(p.y-35))<100);
- const candidates=grounds.flatMap(g=>{const last=Math.min(g.x+g.w-70,home-80);return Array.from({length:24},(_,i)=>[Math.round(g.x+80+(last-g.x-80)*i/23),g.y-41]).filter(([x])=>x>=g.x+60&&x<=last).filter(safeFruit);});
- for(let n=0;positions.length<24&&n<candidates.length;n++){const p=candidates[n];if(!positions.some(q=>Math.hypot(q[0]-p[0],q[1]-p[1])<24))positions.push(p);}
- // Distribute ground fruit across the whole route, not just its opening bank.
- const elevated=ledges.filter(p=>!p.move&&!p.moveY).map(p=>[p.x+p.w*.55,p.y-35]).filter(safeFruit),ground=candidates.filter((p,i)=>i%2===0);const picks=[...elevated];
- for(let i=0;picks.length<24&&i<ground.length;i++){const p=ground[Math.floor(i*(ground.length-1)/Math.max(1,23-elevated.length))];if(p&&!picks.some(q=>Math.hypot(q[0]-p[0],q[1]-p[1])<22))picks.push(p);}
- for(const p of candidates)if(picks.length<24&&!picks.some(q=>Math.hypot(q[0]-p[0],q[1]-p[1])<22))picks.push(p);
-
+ const safeFruit=([x,y])=>x>=280&&!(play.blocks||[]).some(p=>x>=p.x-25&&x<=p.x+p.w+25&&y>p.y-30)&&!checkpoints.some(p=>Math.hypot(x-(p.x+19),y-(p.y-35))<70);
+ const candidates=grounds.flatMap(g=>{const last=Math.min(g.x+g.w-70,home-80);return Array.from({length:80},(_,i)=>[Math.round(g.x+80+(last-g.x-80)*i/79),g.y-41]).filter(([x])=>x>=g.x+60&&x<=last).filter(safeFruit);});
+ // Place fruit by route distance, not by bank candidate index. Never backfill an opening cluster.
+ const elevated=[...ledges.filter(p=>!p.move&&!p.moveY).map(p=>[p.x+p.w*.55,p.y-35]),...(play.blocks||[]).map(p=>[p.x+p.w*.5,p.y-38])].filter(safeFruit),picks=[...elevated],need=24-picks.length;
+ for(let i=0;i<need;i++){const target=280+(home-370)*(i+.5)/need;const p=candidates.filter(p=>!picks.some(q=>Math.hypot(q[0]-p[0],q[1]-p[1])<42)).sort((a,b)=>Math.abs(a[0]-target)-Math.abs(b[0]-target))[0];if(p)picks.push(p);}
+ while(picks.length<24){const ranked=candidates.map(p=>({p,d:Math.min(...picks.map(q=>Math.hypot(q[0]-p[0],q[1]-p[1])))})).sort((a,b)=>b.d-a.d);if(!ranked[0]||ranked[0].d<42)break;picks.push(ranked[0].p);}
+ if(picks.length!==24)throw Error("Route needs24well-spacedberries: "+id+" picks="+picks.length+" candidates="+candidates.length+" max="+Math.max(...candidates.map(p=>p[0])));
  return freeze({...base,id,version:3,berryVersion:1,title,description,finish,width,home,rabbit,grounds:freeze(grounds),ledges:freeze(ledges),stones:freeze(stones),berries:freeze(picks.slice(0,24).map(([x,y],i)=>freeze({id:i,x,y}))),checkpoints:freeze(checkpoints.map(freeze)),spring:-1000,secret:freeze(options.secret),palette:finish,wind:options.wind||null,glider:options.glider||null,blocks:freeze((play.blocks||[]).map(freeze)),springs:freeze((play.springs||[]).map(freeze)),hazards:freeze((play.hazards||[]).map(freeze)),challenge:play.challenge,hint:play.hint,difficulty:options.difficulty,focus:play.challenge,discoveryText:options.discoveryText});
 }
 const steps=(prefix,x)=>[{id:prefix+'0',x,y:355,w:180},{id:prefix+'1',x:x+145,y:285,w:170},{id:prefix+'2',x:x+280,y:225,w:150}];

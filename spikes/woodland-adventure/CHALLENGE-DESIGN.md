@@ -23,3 +23,5 @@ Movement speed/acceleration/gravity remain unchanged. No lives, enemies, forced 
 
 ## Evidence boundaries
 Test-controller predicts ordinary inputs from physics and read-only state. Browser acceptance dispatches actual keyboard/pointer handlers and earns contacts/landings/finish; it does not inject wins. Deterministic traversal is not human pacing, child playtesting or proof of fun. Keep fixture-based recovery/migration checks separate from earned journeys. Final screenshots and receipts must bind to the released source, after corrections.
+
+Fruit is allocated by route distance with minimum42pxcentre spacing, never sequentially backfilled onto the opening bank. Hurdle tops receive deliberate jump rewards; checkpoint fruit clearance70px exceeds the44pxpickup radius. All24IDs retained per route.
