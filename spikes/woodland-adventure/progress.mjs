@@ -2,20 +2,29 @@ import {durableProgress} from './idb-progress.mjs';
 // A single local snapshot: unique finds, ownership and spending commit together.
 export const SAVE_KEY='cleverli_woodland_campaign_v1';
 export const CATALOG=Object.freeze([{id:'blanket',name:'Picknickdecke',cost:8},{id:'lamp',name:'Gemütliche Lampe',cost:12},{id:'vase',name:'Blumenvase',cost:16},{id:'rug',name:'Waldteppich',cost:20},{id:'hat',name:'Blaues Rucksackband',cost:24},{id:'map',name:'Wandkarte',cost:20}].map(Object.freeze));
-const blank=()=>({version:1,revision:0,generation:0,found:{},completed:[],discoveries:[],owned:[],equipped:[],records:{}});
+export const berryKey=l=>l.id+':'+(l.berryVersion||l.version);
+const LEGACY=['home-trail','brook-meadow','mill-path','firefly-gorge','treetop-flight','forest-festival'];
+const blank=()=>({version:1,campaign:2,legacyCompleted:[],archivedRecords:{},revision:0,generation:0,found:{},completed:[],discoveries:[],owned:[],equipped:[],records:{}});
 export function validate(raw,levels){
  if(!raw||raw.version!==1||!Number.isSafeInteger(raw.revision)||raw.revision<0)throw Error('Ungültiger Spielstand');
  const out=blank();out.revision=raw.revision;out.generation=raw.generation??0;if(!Number.isSafeInteger(out.generation)||out.generation<0)throw Error('Ungültiger Neustart');
- for(const l of levels){const key=l.id+':'+l.version,ids=raw.found?.[key]||[];if(!Array.isArray(ids)||ids.some(id=>!Number.isInteger(id)||!l.berries.some(b=>b.id===id)))throw Error('Ungültige Fundstücke');out.found[key]=[...new Set(ids)];}
+ for(const l of levels){const key=berryKey(l),ids=raw.found?.[key]||[];if(!Array.isArray(ids)||ids.some(id=>!Number.isInteger(id)||!l.berries.some(b=>b.id===id)))throw Error('Ungültige Fundstücke');out.found[key]=[...new Set(ids)];}
  for(const field of ['completed','discoveries']){if(!Array.isArray(raw[field]))throw Error('Ungültiger Weg');out[field]=[...new Set(raw[field].filter(id=>levels.some(l=>l.id===id)))];}
- const furthest=levels.findIndex(l=>!out.completed.includes(l.id));if(furthest>=0&&levels.slice(furthest+1).some(l=>out.completed.includes(l.id)))throw Error('Ungültige Freischaltung');
+ if(raw.campaign!==2){
+  const first=LEGACY.findIndex(id=>!out.completed.includes(id));
+  if(out.completed.some(id=>!LEGACY.includes(id))||(first>=0&&LEGACY.slice(first+1).some(id=>out.completed.includes(id))))throw Error('Ungültige alte Freischaltung');
+  out.legacyCompleted=[...out.completed];
+ }else{if(!Array.isArray(raw.legacyCompleted)||raw.legacyCompleted.some(id=>!LEGACY.includes(id)||!out.completed.includes(id)))throw Error('Ungültiger übernommener Weg');out.legacyCompleted=[...new Set(raw.legacyCompleted)];}
+ for(let i=1;i<levels.length;i++)if(out.completed.includes(levels[i].id)&&!out.legacyCompleted.includes(levels[i].id)&&!out.completed.includes(levels[i-1].id))throw Error('Ungültige Freischaltung');
+ const archived={...(raw.archivedRecords||{})};if(raw.campaign!==2)for(const [key,value]of Object.entries(raw.records||{}))if(LEGACY.some(id=>key===id+':1:trial'))archived[key]=value;
+ for(const [key,value]of Object.entries(archived)){if(!LEGACY.some(id=>key===id+':1:trial')||!Number.isFinite(value)||value<1||value>86400)throw Error('Ungültiger alter Rekord');out.archivedRecords[key]=value;}
  for(const field of ['owned','equipped']){if(!Array.isArray(raw[field])||raw[field].some(id=>!CATALOG.some(o=>o.id===id)))throw Error('Ungültige Einrichtung');out[field]=[...new Set(raw[field])];}out.equipped=out.equipped.filter(id=>out.owned.includes(id));
  if(balance(out)<0)throw Error('Ungültiger Beerenbeutel');
  for(const l of levels){const key=l.id+':'+l.version+':trial',v=raw.records?.[key];if(v!==undefined){if(!out.completed.includes(l.id)||!Number.isFinite(v)||v<1||v>86400)throw Error('Ungültiger Rekord');out.records[key]=v;}}
  return out;
 }
 export function balance(s){return Object.values(s.found).reduce((n,a)=>n+a.length,0)-s.owned.reduce((n,id)=>n+(CATALOG.find(x=>x.id===id)?.cost||0),0);}
-export function unlocked(s,levels,index){return index===0||s.completed.includes(levels[index-1]?.id);}
+export function unlocked(s,levels,index){return index===0||s.completed.includes(levels[index]?.id)||s.completed.includes(levels[index-1]?.id);}
 export function createLocalProgress(levels,storage,locks=null){let state=blank(),durable=true,message='',rawLast=null,dirty=false,equipmentIntent=new Map();
  const parse=raw=>{if(raw===null||raw===undefined||raw==='')return blank();if(typeof raw!=='string'||raw.length>65536)throw Error('Ungültiger Spielstand');return validate(JSON.parse(raw),levels);};
  try{rawLast=storage.getItem(SAVE_KEY);state=parse(rawLast);}catch{try{state=parse(storage.getItem(SAVE_KEY+':backup'));message='Dein letzter sicherer Spielstand wurde wiederhergestellt.';}catch{state=blank();message='Der Spielstand war beschädigt. Du kannst sicher neu anfangen.';}durable=false;}
@@ -27,7 +36,7 @@ export function createLocalProgress(levels,storage,locks=null){let state=blank()
  }
  let pending=Promise.resolve();function change(fn){if(!locks?.request)return commit(fn);const next=pending.then(()=>locks.request(SAVE_KEY,()=>commit(fn)));pending=next.catch(()=>{});return next;}
  return {unstored:()=>{dirty=true;durable=false;message='Dein Browser speichert gerade nicht. Dein Fortschritt bleibt in diesem Fenster.';},stored:()=>{dirty=false;durable=true;equipmentIntent.clear();if(message.startsWith('Dein Browser speichert gerade nicht.'))message='Dein Fortschritt ist wieder auf diesem Gerät gespeichert.';},ready:()=>pending,snapshot:()=>structuredClone(state),status:()=>({durable,message}),balance:()=>balance(state),sync:()=>{try{const latest=storage.getItem(SAVE_KEY);if(latest!==rawLast){state=reconcile(parse(latest));rawLast=latest;}}catch{durable=false;}return structuredClone(state);},
-  find:(l,id)=>change(s=>{const key=l.id+':'+l.version;if(!l.berries.some(b=>b.id===id))return false;s.found[key]??=[];if(s.found[key].includes(id))return false;s.found[key].push(id);}),
+  find:(l,id)=>change(s=>{const key=berryKey(l);if(!l.berries.some(b=>b.id===id))return false;s.found[key]??=[];if(s.found[key].includes(id))return false;s.found[key].push(id);}),
   finish:(l,secret,seconds,mode)=>change(s=>{const index=levels.findIndex(x=>x.id===l.id);if(index<0||!unlocked(s,levels,index))return false;if(!s.completed.includes(l.id))s.completed.push(l.id);if(secret&&!s.discoveries.includes(l.id))s.discoveries.push(l.id);if(mode==='trial'&&Number.isFinite(seconds)&&seconds>=1&&seconds<=86400){const key=l.id+':'+l.version+':trial';s.records[key]=Math.min(s.records[key]??Infinity,seconds);}}),
   buy:id=>change(s=>{const item=CATALOG.find(x=>x.id===id);if(!item||s.owned.includes(id)||balance(s)<item.cost)return false;s.owned.push(id);s.equipped.push(id);}),
   equip:id=>change(s=>{if(!s.owned.includes(id))return false;equipmentIntent.set(id,!s.equipped.includes(id));if(s.equipped.includes(id))s.equipped=s.equipped.filter(x=>x!==id);else s.equipped.push(id);}),

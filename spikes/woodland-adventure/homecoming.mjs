@@ -12,3 +12,10 @@ export function homePose(time,fromX=5500,fromY=430,delay=0,rabbit=false){
  return {footX,footY,height,opacity,inside:enter>=1,moving:t>0&&t<3.8,distance:Math.max(0,t*80),stage:t<.55?'approach':t<2.1?'stairs':t<2.75?'door':t<3.8?'enter':'inside'};
 }
 export function homeDoor(time){return ease((time-2.05)/.65)*(1-ease((time-5.5)/.65));}
+
+// The new painted destinations are complete illustrations, not doors to paint over.
+// Friends stop together in front of each destination; no floating stairs or flat covers.
+export function arrivalPose(time,fromX,fromY,targetX,delay=0,rabbit=false){
+ const t=Math.max(0,time-delay),walk=ease(t/2.6);
+ return {footX:fromX+(targetX-fromX)*walk,footY:fromY+(430-fromY)*walk,height:rabbit?45:72,opacity:1,inside:false,moving:t>0&&t<2.6,distance:t*65,stage:'arrive'};
+}

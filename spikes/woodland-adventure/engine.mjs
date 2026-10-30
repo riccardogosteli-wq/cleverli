@@ -34,11 +34,11 @@ function update(s,input,dt){
  if(s.grounded&&Math.abs(s.x+s.w/2-LEVEL.spring)<38&&s.springLock<=0){s.vy=-820;s.grounded=false;s.standing=null;s.springLock=.5;s.events.push('spring');}
  for(const b of LEVEL.berries){if(!s.berries.includes(b.id)&&Math.hypot(s.x+s.w/2-b.x,s.y+s.h*.45-b.y)<44){s.berries.push(b.id);s.events.push('berry');}}
  for(let i=s.checkpoint+1;i<LEVEL.checkpoints.length;i++){const p=LEVEL.checkpoints[i];if(Math.abs(s.x-p.x)<70&&s.grounded){s.checkpoint=i;s.events.push('checkpoint');s.toast='Rastplatz gefunden. Dein Weg bleibt erhalten.';}}
- if(!s.secret&&Math.hypot(s.x+s.w/2-LEVEL.secret.x,s.y+s.h/2-LEVEL.secret.y)<72){s.secret=true;s.events.push('secret');s.toast='Psst … du hast die Glühwürmchenhöhle entdeckt!';}
+ if(!s.secret&&Math.hypot(s.x+s.w/2-LEVEL.secret.x,s.y+s.h/2-LEVEL.secret.y)<72){s.secret=true;s.events.push('secret');s.toast=LEVEL.discoveryText;}
  if(!s.rescued&&Math.abs(s.x-LEVEL.rabbit)<72&&s.y>300){s.rescued=true;s.followerX=s.x-60;s.events.push('friend');s.toast=['home','festival'].includes(LEVEL.finish)?'Hasi ist dabei! Gemeinsam zum Baumhaus.':'Hasi ist dabei! Gemeinsam zum nächsten Rastplatz.';}
  if(s.rescued)s.followerX=approach(s.followerX,s.x-70,220*dt);
  if(s.x>LEVEL.home&&s.grounded){if(s.rescued){s.phase='won';s.winTime=s.time;s.vx=0;s.events.push('win');s.toast=['home','festival'].includes(LEVEL.finish)?'Zu Hause! Hasi und Cleverli sind angekommen.':'Ihr habt den Weg geschafft. Zeit für eine gemütliche Ankunft.';}else s.toast='Hasi wartet noch auf der Waldlichtung links.';}
  if(s.y>LEVEL.height+40)respawn(s);
 }
 export function step(s,input,delta){if(s.phase!=='playing'||!Number.isFinite(delta)||delta<=0)return s;s.events=[];let left=Math.min(delta,.1);while(left>1e-8&&s.phase==='playing'){const dt=Math.min(left,1/120);update(s,input,dt);left-=dt;if(s.events.includes('return'))break;}return s;}
-export function section(x){if(LEVEL.id!=='home-trail')return LEVEL.title;return x<1760?'Am Waldrand':x<3300?'Über den Bach':x<4500?'Bei den Glühwürmchen':'Die Waldlichtung';}
+export function section(x){const n=Math.min(2,Math.floor(Math.max(0,x)/LEVEL.width*3));return [LEVEL.title,LEVEL.focus,'Hasi und euer '+({home:'Baumhaus',picnic:'Picknick',garden:'Pilzgarten',mill:'Mühlenplatz',lantern:'Laternenplatz',spring:'Quellplatz',vista:'Aussichtspunkt',festival:'Waldfest'}[LEVEL.finish])][n];}
