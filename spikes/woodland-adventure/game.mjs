@@ -33,7 +33,7 @@ function hud() { $('run-time').hidden=runMode!=='trial';$('run-time').textConten
 function hideOverlays() { for (const id of ['welcome', 'pause-screen', 'guide', 'finish'])
     $(id).hidden = true; }
 function begin() { if (!art.ready)
-    return;runEpoch++;credited=new Set(); backgrounded = false; clearInput(); narrator.stop(); pauseFrom=null; selectLevel(LEVELS[selected].id);state = createState();state.decorations=ledger.snapshot().equipped;runMode=runMode==='trial'&&ledger.snapshot().completed.includes(LEVEL.id)?'trial':'explore';firstFinds=0;clock.reset();leaveAsked=false;$('world').textContent='Weltkarte';state.startFound=[...(ledger.snapshot().found[berryKey(LEVEL)]||[])]; start(state);if(LEVEL.id==='home-trail')narrator.play('woodland-intro');else narrator.playText(LEVEL.description); sound.beat=0; sound.nextBeat=0; art.camera = 0; art.yCamera = 0; art.particles = []; hideOverlays();$('world-panel').hidden=true;$('stage').hidden=false; $('hud').hidden = false; $('controls').hidden = false; $('tutorial').hidden = false; $('tutorial').textContent=LEVEL.glider?'Im Blattabschnitt: Springen halten, um zu gleiten.':LEVEL.ledges.some(p=>p.moveY)?'Fahrende Plattformen tragen dich mit. Warte ruhig auf die passende Höhe.':matchMedia('(pointer:coarse)').matches?'Die Richtung halten. Zum Springen tippen.':'← → laufen · Leertaste springen'; $('note').classList.remove('visible'); noteTime = 0; endDelay = 0; restartAsked = false; $('restart').textContent = 'Von vorne spielen'; sound.pause(false); sound.unlock(); canvas.focus({ preventScroll: true }); hud(); }
+    return;runEpoch++;credited=new Set(); backgrounded = false; clearInput(); narrator.stop(); pauseFrom=null; selectLevel(LEVELS[selected].id);state = createState();state.decorations=ledger.snapshot().equipped;runMode=runMode==='trial'&&ledger.snapshot().completed.includes(LEVEL.id)?'trial':'explore';firstFinds=0;clock.reset();leaveAsked=false;$('world').textContent='Weltkarte';state.startFound=[...(ledger.snapshot().found[berryKey(LEVEL)]||[])]; start(state);if(LEVEL.id==='home-trail')narrator.play('woodland-intro');else narrator.playText(LEVEL.description); sound.beat=0; sound.nextBeat=0; art.camera = 0; art.yCamera = 0; art.particles = []; hideOverlays();$('world-panel').hidden=true;$('stage').hidden=false; $('hud').hidden = false; $('controls').hidden = false; $('tutorial').hidden = false; $('tutorial').textContent=LEVEL.hint|| (LEVEL.glider?'Im Blattabschnitt: Springen halten, um zu gleiten.':LEVEL.ledges.some(p=>p.moveY)?'Fahrende Plattformen tragen dich mit. Warte ruhig auf die passende Höhe.':matchMedia('(pointer:coarse)').matches?'Die Richtung halten. Zum Springen tippen.':'← → laufen · Leertaste springen'); $('note').classList.remove('visible'); noteTime = 0; endDelay = 0; restartAsked = false; $('restart').textContent = 'Von vorne spielen'; sound.pause(false); sound.unlock(); canvas.focus({ preventScroll: true }); hud(); }
 $('start').onclick = begin;
 $('again').onclick = begin;
 function pauseScene(){clock.break();if(state.phase==='playing'){pauseFrom='playing';pause(state);}else if(state.phase==='won'&&endDelay>0){pauseFrom='won';state.phase='paused';}else return false;clearInput();sound.pause(true);narrator.stop('auto');return true;}
@@ -140,7 +140,7 @@ function advance(dt) {
             if (noteTime <= 0)
                 $('note').classList.remove('visible');
         }
-        if (state.x > 450)
+        if (state.x > 700)
             $('tutorial').hidden = true;
         hud();
         sound.tick();

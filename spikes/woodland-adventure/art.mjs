@@ -1,4 +1,4 @@
-import { LEVEL, surfaces } from './engine.js';
+import { LEVEL, surfaces, hazards } from './engine.js';
 import { arrivalPose } from './homecoming.js';
 const names = ['forest', 'idle', 'run-a', 'run-b', 'run-c', 'run-d', 'jump', 'treehouse', 'platform', 'tree', 'spring', 'berry', 'lantern', 'cave', 'fern', 'rabbit', 'bank', 'stream', 'home-door','leaf-glider', ...['home','picnic','garden','mill','lantern','spring','vista','festival'].map(n=>'destination-'+n)];
 export class WoodlandArt {
@@ -137,11 +137,13 @@ export class WoodlandArt {
                 this.image('platform', x, p.y - 12, 230, 82);
             c.restore();
         }
-        for (const p of surfaces(s.time).filter(p => !p.solid)) {
+        for (const p of surfaces(s.time,s).filter(p => !p.solid)) {
             if (p.x + p.w < this.camera - 100 || p.x > this.camera + this.worldWidth + 100)
                 continue;
+            c.save();if(p.crumble){const q=s.crumble[p.id];c.globalAlpha=q?(.65+.35*Math.sin(s.time*28)):1;c.shadowColor='#ffda79';c.shadowBlur=8;}
             this.image(p.id.includes('leaf')?'leaf-glider':'platform', p.x, p.y - 4, p.w, p.id.startsWith('s') ? 30 : 42);
-            if(!p.id.startsWith('s')&&!p.move&&!p.moveY){c.strokeStyle='#564a32';c.lineWidth=6;c.beginPath();c.moveTo(p.x+18,p.y+20);c.lineTo(p.x+18,430);c.moveTo(p.x+p.w-18,p.y+20);c.lineTo(p.x+p.w-18,430);c.stroke();}
+            if(p.crumble){c.strokeStyle='#fcdfa3';c.lineWidth=3;for(let k=1;k<4;k++){c.beginPath();c.moveTo(p.x+p.w*k/4,p.y+2);c.lineTo(p.x+p.w*k/4-5,p.y+13);c.lineTo(p.x+p.w*k/4+4,p.y+24);c.stroke();}}c.restore();
+            if(!p.crumble&&!p.id.startsWith('s')&&!p.move&&!p.moveY){c.strokeStyle='#564a32';c.lineWidth=6;c.beginPath();c.moveTo(p.x+18,p.y+20);c.lineTo(p.x+18,430);c.moveTo(p.x+p.w-18,p.y+20);c.lineTo(p.x+p.w-18,430);c.stroke();}
             if (p.move||p.moveY) {
                 c.strokeStyle = '#e4d09b70';
                 c.lineWidth = 2;
@@ -153,6 +155,11 @@ export class WoodlandArt {
                 c.stroke();
             }
         }
+        // Grounded wooden stumps: visible silhouette matches the collision body.
+        for(const p of LEVEL.blocks){if(p.x>this.camera+this.worldWidth+100||p.x+p.w<this.camera-100)continue;c.save();c.beginPath();c.roundRect(p.x,p.y,p.w,p.h,8);c.clip();const bark=c.createLinearGradient(p.x,p.y,p.x+p.w,p.y);bark.addColorStop(0,'#65472d');bark.addColorStop(.25,'#b58850');bark.addColorStop(.6,'#916135');bark.addColorStop(1,'#503d2a');c.fillStyle=bark;c.fillRect(p.x,p.y,p.w,p.h);for(let k=0;k<13;k++){const x=p.x+k*p.w/12;c.strokeStyle=k%2?'#402f2280':'#d8b07860';c.lineWidth=k%3+1;c.beginPath();c.moveTo(x,p.y+13);c.bezierCurveTo(x+5,p.y+p.h*.35,x-5,p.y+p.h*.7,x+2,p.y+p.h);c.stroke();}c.fillStyle='#d9b779';c.beginPath();c.ellipse(p.x+p.w/2,p.y+9,p.w*.49,10,0,0,7);c.fill();c.strokeStyle='#9e7444';c.lineWidth=1.6;for(let k=1;k<4;k++){c.beginPath();c.ellipse(p.x+p.w/2-2,p.y+9,p.w*.12*k,2.2*k,0,0,7);c.stroke();}c.fillStyle='#62843c';for(let k=0;k<7;k++){c.beginPath();c.ellipse(p.x+5+k*p.w/7,p.y+p.h-4,8,5,k*.5,0,7);c.fill();}c.restore();}
+        // Warm pinecone silhouettes with shaded scales, never invisible collision circles.
+        for(const p of hazards(s.time)){if(p.x<this.camera-50||p.x>this.camera+this.worldWidth+50)continue;c.save();c.translate(p.x,p.y);c.rotate(this.reduced?0:s.time*p.speed*2);const g=c.createRadialGradient(-6,-7,2,0,0,p.r);g.addColorStop(0,'#d2a167');g.addColorStop(.65,'#8d603c');g.addColorStop(1,'#513a2a');c.fillStyle=g;c.beginPath();c.ellipse(0,0,p.r,p.r,0,0,7);c.fill();for(let row=-2;row<=2;row++)for(let col=-1;col<=1;col++){c.fillStyle=(row+col)%2?'#be8c55':'#795033';c.beginPath();c.ellipse(col*9+(row%2)*3,row*7,7,4,.4,0,7);c.fill();}c.restore();}
+        for(const p of LEVEL.springs){this.image('spring',p.x-38,p.y-45,76,57);}
         // Secret opening is tucked above the main trail, with light rather than text.
         if (!this.reduced) {
             for (let i = 0; i < 10; i++) {
@@ -190,7 +197,7 @@ export class WoodlandArt {
         if(LEVEL.wind){c.save();c.strokeStyle='#f0ebce55';c.lineWidth=2;for(let i=0;i<7;i++){const x=LEVEL.wind.from+i*(LEVEL.wind.to-LEVEL.wind.from)/7,y=345+(this.reduced?0:Math.sin(s.time+i)*8);c.beginPath();c.moveTo(x,y+35);c.quadraticCurveTo(x+10,y+10,x,y);c.stroke();}c.restore();}
         if(LEVEL.glider&&s.x>=LEVEL.glider.from-100&&s.x<=LEVEL.glider.to+100){c.fillStyle='#f7ebbd';c.font='bold 15px system-ui';c.fillText('Springen halten: Blattgleiter',LEVEL.glider.from-100,325);}
         if(s.gliding)this.image('leaf-glider',s.x-32,s.y+s.h-6,110,36);
-        const support = !arriving && s.grounded ? surfaces(s.time).find(p => p.id === s.standing) : null;
+        const support = !arriving && s.grounded ? surfaces(s.time,s).find(p => p.id === s.standing) : null;
         if (support) {
             c.save();
             c.beginPath();

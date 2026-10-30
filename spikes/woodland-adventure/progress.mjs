@@ -16,8 +16,9 @@ export function validate(raw,levels){
   out.legacyCompleted=[...out.completed];
  }else{if(!Array.isArray(raw.legacyCompleted)||raw.legacyCompleted.some(id=>!LEGACY.includes(id)||!out.completed.includes(id)))throw Error('Ungültiger übernommener Weg');out.legacyCompleted=[...new Set(raw.legacyCompleted)];}
  for(let i=1;i<levels.length;i++)if(out.completed.includes(levels[i].id)&&!out.legacyCompleted.includes(levels[i].id)&&!out.completed.includes(levels[i-1].id))throw Error('Ungültige Freischaltung');
- const archived={...(raw.archivedRecords||{})};if(raw.campaign!==2)for(const [key,value]of Object.entries(raw.records||{}))if(LEGACY.some(id=>key===id+':1:trial'))archived[key]=value;
- for(const [key,value]of Object.entries(archived)){if(!LEGACY.some(id=>key===id+':1:trial')||!Number.isFinite(value)||value<1||value>86400)throw Error('Ungültiger alter Rekord');out.archivedRecords[key]=value;}
+ const archived={...(raw.archivedRecords||{})};const oldRecord=k=>levels.some(l=>[1,2].some(v=>v!==l.version&&k===l.id+':'+v+':trial'));
+ for(const[key,value]of Object.entries(raw.records||{}))if(oldRecord(key))archived[key]=value;
+ for(const[key,value]of Object.entries(archived)){if(!oldRecord(key)||!Number.isFinite(value)||value<1||value>86400)throw Error('Ungültiger alter Rekord');out.archivedRecords[key]=value;}
  for(const field of ['owned','equipped']){if(!Array.isArray(raw[field])||raw[field].some(id=>!CATALOG.some(o=>o.id===id)))throw Error('Ungültige Einrichtung');out[field]=[...new Set(raw[field])];}out.equipped=out.equipped.filter(id=>out.owned.includes(id));
  if(balance(out)<0)throw Error('Ungültiger Beerenbeutel');
  for(const l of levels){const key=l.id+':'+l.version+':trial',v=raw.records?.[key];if(v!==undefined){if(!out.completed.includes(l.id)||!Number.isFinite(v)||v<1||v>86400)throw Error('Ungültiger Rekord');out.records[key]=v;}}
