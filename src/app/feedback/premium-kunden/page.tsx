@@ -37,7 +37,7 @@ export default function PremiumCustomerFeedbackPage() {
           <div className="mt-6 grid gap-3 text-sm text-gray-700">
             <div className="rounded-lg border border-green-100 bg-white p-4">
               <p className="font-bold text-gray-950">Dauert etwa 3 Minuten</p>
-              <p className="mt-1">Kurze, ehrliche Antworten reichen völlig.</p>
+              <p className="mt-1">Unter allen Teilnehmenden verlosen wir dreimal eine kostenlose Verlängerung des Cleverli Abos um drei Monate.</p>
             </div>
           </div>
         </section>
