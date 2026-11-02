@@ -151,8 +151,9 @@ export default function FillInBlank({ question, answer, altAnswers, sequentialAn
           // Negative numbers need a normal keyboard because several mobile/Swiss
           // numeric keypads hide the minus key.
           inputMode={numeric ? (negativeNumeric ? "text" : decimal ? "decimal" : "numeric") : "text"}
-          // German text needs autocapitalize for nouns; numbers don't
-          autoCapitalize={numeric ? "off" : "sentences"}
+          // A blank can be mid-sentence: let the learner choose capitals,
+          // rather than treating every answer as the start of a sentence.
+          autoCapitalize="off"
           autoCorrect={numeric ? "off" : "on"}
           autoComplete="off"
           spellCheck={false}
