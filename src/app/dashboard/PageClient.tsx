@@ -5,9 +5,7 @@ import OnboardingModal from "@/components/OnboardingModal";
 import FirstWeekActivationCard from "@/components/FirstWeekActivationCard";
 import Link from "next/link";
 import Image from "next/image";
-import Avatar from "@/components/Avatar";
-import { useProfileContext } from "@/lib/ProfileContext";
-import { getEquippedShopItem } from "@/lib/shop";
+import DashboardAvatar from "@/components/DashboardAvatar";
 import { useLang } from "@/lib/LangContext";
 import {
   getCatalogSubjects,
@@ -466,12 +464,7 @@ function DashboardInner() {
             {/* PM-20: Nicer subject picker header with mascot */}
             <div className="flex items-center gap-3">
               <button onClick={() => setGrade(null)} className="text-sm text-gray-800 font-semibold hover:text-gray-800 py-2 pr-3 min-w-[44px]">←</button>
-              <Image
-                src="/cleverli-thumbsup.png"
-                alt=""
-                width={80} height={80}
-                className="drop-shadow-md shrink-0"
-              />
+              <DashboardAvatar />
               <div className="flex-1 min-w-0">
                 {/* Show active child chip here too */}
                 {activeMember && (
@@ -779,21 +772,6 @@ function DashboardInner() {
   );
 }
 
-function DashboardLook() {
-  const { profile, loaded } = useProfileContext();
-  const { lang } = useLang();
-  if (!loaded || !getActiveProfileId()) return null;
-  const item = getEquippedShopItem(profile);
-  const title = { de: "Dein Cleverli", fr: "Ton Cleverli", it: "Il tuo Cleverli", en: "Your Cleverli" }[lang];
-  const action = { de: "Im Shop ändern", fr: "Changer dans la boutique", it: "Cambia nel negozio", en: "Change in the shop" }[lang];
-  const base = { de: "Grundfigur", fr: "Personnage de base", it: "Personaggio base", en: "Base character" }[lang];
-  return <div className="mx-auto mt-4 max-w-5xl px-4"><Link href="/shop" className="flex min-h-20 items-center gap-3 rounded-2xl border border-green-200 bg-white p-3 text-green-900 shadow-sm hover:bg-green-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-green-600">
-    <Avatar profile={profile} size="sm" />
-    <div className="min-w-0 flex-1"><p className="font-bold">{title}</p><p className="text-sm">{item?.name[lang] ?? base}</p></div>
-    <span className="max-w-28 text-right text-sm font-bold">{action} <span aria-hidden="true">→</span></span>
-  </Link></div>;
-}
-
 export default function Dashboard() {
   const { session, loaded } = useSession();
 
@@ -815,7 +793,6 @@ export default function Dashboard() {
         <div className="text-sm">Laden… / Chargement…</div>
       </div>
     }>
-      <DashboardLook />
       <DashboardInner />
     </Suspense>
   );
