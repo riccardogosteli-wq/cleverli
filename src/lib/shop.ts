@@ -21,3 +21,34 @@ export const BG_COLORS: Record<string, string> = {
   "bg-space":   "from-indigo-100 to-purple-100",
   "bg-rainbow": "from-pink-100 to-yellow-100",
 };
+
+export const BASE_AVATAR_IMAGE = "/images/shop/base.webp";
+export const shopItemImage = (id: string) => "/images/shop/" + id + ".webp";
+export type ShopAppearance = { ownedItems?: string[]; equippedItems?: { hat?: string; accessory?: string; background?: string } };
+
+/** Legacy combinations resolve consistently, without changing any purchases or coins. */
+export function getEquippedShopItem(profile: ShopAppearance): ShopItem | undefined {
+  for (const category of ["hat", "accessory", "background"] as const) {
+    const id = profile.equippedItems?.[category];
+    const item = SHOP_ITEMS.find(item => item.id === id && item.category === category);
+    if (item && profile.ownedItems?.includes(item.id)) return item;
+  }
+}
+
+export function singleShopAppearance(profile: ShopAppearance): NonNullable<ShopAppearance["equippedItems"]> {
+  const item = getEquippedShopItem(profile);
+  return item ? { [item.category]: item.id } : {};
+}
+
+export function buyShopItem<T extends ShopAppearance & { coins: number }>(profile: T, id: string): T {
+  const item = SHOP_ITEMS.find(item => item.id === id);
+  if (!item || !Number.isFinite(profile.coins) || profile.coins < item.cost || profile.ownedItems?.includes(id)) return profile;
+  return { ...profile, coins: profile.coins - item.cost, ownedItems: [...(profile.ownedItems ?? []), id] };
+}
+
+export function wearShopItem<T extends ShopAppearance>(profile: T, id?: string): T {
+  if (!id) return { ...profile, equippedItems: {} };
+  const item = SHOP_ITEMS.find(item => item.id === id);
+  if (!item || !profile.ownedItems?.includes(id)) return profile;
+  return { ...profile, equippedItems: { [item.category]: id } };
+}

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
+import { singleShopAppearance } from "@/lib/shop";
 import { getLevelForXp, getNextLevel, calcXpGain } from "@/lib/xp";
 import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
 import {
@@ -91,7 +92,7 @@ function loadProfile(): Profile {
     // Falling back would bleed the previous child's XP into the new one.
     if (!raw) return DEFAULT_PROFILE;
     const parsed = { ...DEFAULT_PROFILE, ...JSON.parse(raw) };
-    const sanitized = sanitizeAchievementsForProgress(parsed);
+    const sanitized = { ...sanitizeAchievementsForProgress(parsed), equippedItems: singleShopAppearance(parsed) };
     if (sanitized.achievements.length !== parsed.achievements.length) {
       localStorage.setItem(key, JSON.stringify(sanitized));
     }
@@ -551,9 +552,11 @@ export function useProfile() {
   const clearXpGained        = useCallback(() => setXpGained(0), []);
   const clearLeveledUp       = useCallback(() => setLeveledUp(false), []);
 
-  const updateProfile = useCallback((updates: Partial<Profile>) => {
+  const updateProfile = useCallback((updates: Partial<Profile> | ((previous: Profile) => Partial<Profile>)) => {
     setProfile(prev => {
-      const updated = { ...prev, ...updates };
+      const patch = typeof updates === "function" ? updates(prev) : updates;
+      const next = { ...prev, ...patch };
+      const updated = { ...next, equippedItems: singleShopAppearance(next) };
       saveProfile(updated);
       return updated;
     });
