@@ -1,0 +1,48 @@
+import fs from "node:fs";
+import vm from "node:vm";
+import ts from "typescript";
+import assert from "node:assert/strict";
+import { randomUUID } from "node:crypto";
+import * as shop from "../src/lib/shop";
+import type { Profile } from "../src/hooks/useProfile";
+import type { CloudShop } from "../src/lib/shopSync";
+let checks=0;
+const same=(a:unknown,b:unknown)=>{assert.deepEqual(JSON.parse(JSON.stringify(a)),JSON.parse(JSON.stringify(b)));checks++;};
+const profile={coins:80,ownedItems:["hat-wizard"],equippedItems:{hat:"hat-wizard"}} as Profile;
+const js=ts.transpileModule(fs.readFileSync("src/lib/shopSync.ts","utf8"),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+type Args={p_child:string;p_legacy:{coins:number;ownedItems:string[]}|null;p_credits:{id:string;amount:number}[];p_action:string|null;p_item:string|null};
+function harness(shared?:Map<string,string>){const db=shared??new Map<string,string>(),locks=new Map<string,Promise<unknown>>();let scope="A",authenticated=true;const exports={} as typeof import("../src/lib/shopSync");let rpcCalls=0;
+ const server={coins:80,ownedItems:["hat-wizard"],equippedItem:"hat-wizard",revision:1,result:"synced"};const seen=new Set<string>();
+ let rpc:(args:Args)=>Promise<{data:CloudShop|null;error:unknown}>=async args=>{for(const credit of args.p_credits)if(!seen.has(credit.id)){server.coins+=credit.amount;server.revision++;seen.add(credit.id)}return {data:{...server,ownedItems:[...server.ownedItems]},error:null};};
+ let session=async()=>({data:{session:{user:{id:"QA"}}}});
+ const supabase={auth:{getSession:()=>session()},rpc:async(_name:string,args:Args)=>{rpcCalls++;return rpc(args);}};
+ vm.runInNewContext(js,{exports,crypto:{randomUUID},console,Map,Set,navigator:{locks:{request:(key:string,fn:()=>unknown)=>{const promise=(locks.get(key)??Promise.resolve()).then(fn);locks.set(key,promise.catch(()=>{}));return promise;}}},localStorage:{getItem:(k:string)=>db.get(k)??null,setItem:(k:string,v:string)=>db.set(k,v)},require:(p:string)=>p.endsWith("/shop")?shop:p.endsWith("/supabase")?{getSupabase:()=>supabase}:p.endsWith("/accountScopedStorage")?{getProfileStorageKey:()=>scope,hasAuthenticatedStorageScope:()=>authenticated}: {}});
+ return {api:exports,db,server,scope:(s:string)=>scope=s,auth:(a:boolean)=>authenticated=a,rpc:(fn:typeof rpc)=>rpc=fn,session:(fn:typeof session)=>session=fn,calls:()=>rpcCalls};}
+async function main(){
+ const migration=fs.readFileSync("supabase/2026-11-11-child-shop-sync.sql","utf8");
+ for(const item of shop.SHOP_ITEMS) same(migration.includes("when '"+item.id+"' then "+item.cost),true);
+ const a=harness();a.api.enqueueShopCredit("child",profile,1);same(a.api.readShopOutbox("A",profile).legacy?.coins,80);same(a.api.pendingShopCoins("A",profile),1);const r=await a.api.synchronizeCloudShop("child","A",profile);same(r.coins,81);same(a.api.pendingShopCoins("A",profile),0);same(a.api.readShopOutbox("A",profile).legacy,null);
+ const b=harness();b.api.enqueueShopCredit("child",profile,6);let attempts=0;const accepted=new Set<string>();b.rpc(async args=>{for(const c of args.p_credits)if(!accepted.has(c.id)){b.server.coins+=c.amount;accepted.add(c.id)}attempts++;return attempts===1?{data:null,error:"response lost after commit"}:{data:{...b.server},error:null};});await assert.rejects(b.api.synchronizeCloudShop("child","A",profile));checks++;same(b.api.pendingShopCoins("A",profile),6);same((await b.api.synchronizeCloudShop("child","A",profile)).coins,86);same(b.api.pendingShopCoins("A",profile),0);
+ const c=harness();let release!:()=>void;const gate=new Promise<void>(r=>release=r);c.session(async()=>{await gate;return {data:{session:{user:{id:"QA"}}}}});const old=c.api.synchronizeCloudShop("child","A",profile);await Promise.resolve();c.scope("B");release();await assert.rejects(old);checks++;same(c.calls(),0);
+ const d=harness();let deliver!:(r:{data:CloudShop;error:null})=>void;let posted!:()=>void;const sent=new Promise<void>(r=>posted=r);d.rpc(async()=>{posted();return new Promise(r=>deliver=r)});d.api.enqueueShopCredit("child",profile,1);const inFlight=d.api.synchronizeCloudShop("child","A",profile);await sent;d.api.enqueueShopCredit("child",profile,6);deliver({data:{...d.server,coins:81},error:null});await inFlight;same(d.api.pendingShopCoins("A",profile),6);same(d.api.readShopOutbox("A",profile).credits.length,1);
+ const e=harness();e.api.enqueueShopCredit("child",profile,1);e.rpc(async()=>({data:{...e.server,coins:-1},error:null}));await assert.rejects(e.api.synchronizeCloudShop("child","A",profile));checks++;same(e.api.pendingShopCoins("A",profile),1);
+ const f=harness();f.auth(false);f.api.enqueueShopCredit("child",profile,1);same(f.db.size,0);
+ const g=harness();g.api.readShopOutbox("A",{...profile,shopCloudRevision:1});same(g.api.readShopOutbox("A",profile).legacy,null);
+ const big=harness();for(let i=0;i<501;i++)big.api.enqueueShopCredit("child",profile,1);await assert.rejects(big.api.synchronizeCloudShop("child","A",profile,"buy","hat-star"));checks++;same(big.calls(),0);await big.api.synchronizeCloudShop("child","A",profile);same(big.api.pendingShopCoins("A",profile),1);await big.api.synchronizeCloudShop("child","A",profile);same(big.api.pendingShopCoins("A",profile),0);same(big.server.coins,581);
+ const shared=new Map<string,string>(),tabA=harness(shared),tabB=harness(shared);
+ tabA.api.enqueueShopCredit("child",profile,1);
+ let releaseA!:(r:{data:CloudShop;error:null})=>void,releaseB!:(r:{data:CloudShop;error:null})=>void;
+ let startA!:()=>void,startB!:()=>void;const postedA=new Promise<void>(r=>startA=r),postedB=new Promise<void>(r=>startB=r);
+ tabA.rpc(async()=>{startA();return new Promise(r=>releaseA=r)});
+ tabB.rpc(async()=>{startB();return new Promise(r=>releaseB=r)});
+ const requestA=tabA.api.synchronizeCloudShop("child","A",profile,"wear","hat-wizard");await postedA;
+ tabB.api.enqueueShopCredit("child",profile,1);
+ const requestB=tabB.api.synchronizeCloudShop("child","A",profile);await postedB;
+ releaseA({data:{...tabA.server,coins:2,revision:3},error:null});const newer=await requestA;
+ same(newer.coins+tabA.api.pendingShopCoins("A",profile),3);
+ releaseB({data:{...tabB.server,coins:2,revision:2},error:null});const olderAck=await requestB;
+ same(olderAck.revision,3);same(tabB.api.pendingShopCoins("A",profile),0);
+ same(tabB.api.latestCloudShop("A",profile,olderAck)!.coins+tabB.api.pendingShopCoins("A",profile),2);
+ console.log(JSON.stringify({checks,result:"passed",cases:["legacy captured before new credit","ack/retry idempotency after committed response loss","account change before RPC","new credits preserved during in-flight ack","invalid remote wallet leaves durable queue","anonymous credits stay local","cloud wallet never reimported as legacy","bounded500event batches, no purchase against unsent balance","reversed two-tab ack ordering uses newest authoritative snapshot without phantom coins"],scope:"isolated client module with mock RPC, SQL suite tests actual PostgreSQL"}));
+}
+main().catch(e=>{console.error(e);process.exitCode=1});

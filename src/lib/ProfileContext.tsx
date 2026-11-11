@@ -15,6 +15,10 @@ interface ProfileContextValue {
   leveledUp: boolean;
   recordAnswer: ReturnType<typeof useProfile>["recordAnswer"];
   updateProfile: ReturnType<typeof useProfile>["updateProfile"];
+  shopSync: ReturnType<typeof useProfile>["shopSync"];
+  purchaseShopItem: ReturnType<typeof useProfile>["purchaseShopItem"];
+  selectShopItem: ReturnType<typeof useProfile>["selectShopItem"];
+  retryShopSync: ReturnType<typeof useProfile>["retryShopSync"];
   clearNewAchievements: () => void;
   clearXpGained: () => void;
   clearLeveledUp: () => void;

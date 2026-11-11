@@ -1,0 +1,13 @@
+# Cross-device shop
+
+Authenticated child profiles use sync_child_shop (2026-11-11-child-shop-sync.sql). It verifies auth.uid owns the child and locks a child_shop_state row. Direct authenticated table writes are revoked. Server catalog prices, ownership and balance are atomic. Buying an owned item never charges twice. Reset/equip are commands, not snapshot overwrites.
+
+Anonymous/no-child profiles remain local, explicitly labelled. Authenticated purchases and changes require a connection. Correct answers append UUID events (1 or6 coins) to a durable account+child outbox before incrementing the local wallet. Each event is recorded once by the server. Batches cap at500; excess events remain pending and cannot fund purchases until sent. Ack filters only submitted IDs under the same Web Lock used for answers, preserving new events appended during the request. Offline earned coins remain until reconnect. Outbox errors are visible, not discarded.
+
+Replies apply wallet fields only to the latest local profile under that lock and a revision guard. Pending credits are added for display. XP/achievements are not overwritten by wallet restoration. Account/child scope guards reject late UI writes. Auth changes, child/family changes, focus, reconnect and visible15s polling refresh. Supabase auth callbacks defer work before invoking auth/RPC again.
+
+## Existing devices
+Capture the original local wallet/wardrobe once before the first new credit. Legacy capital=coins+known owned item costs. Server retains maximum historic capital and union ownership, debiting each newly imported old purchase once. Empty/repeated fresh-device imports cannot reset/mint. Only the first meaningful import may carry its old selection. Cloud-applied profiles carry shopCloudRevision and never reimport server currency as legacy. Conflicting historical offline earnings cannot be reconstructed exactly: use conservative max capital, not sum of device snapshots. No XP-to-coin backfill. Old devices must connect once to upload previously local-only data; unavailable/unuploaded data is not recoverable.
+
+## Verification
+Run test-shop-appearance.ts, test-shop-profile.ts, test-shop-sync.ts with tsx, scoped lint and production build. Owner also tests migration+real PostgreSQL ownership/RLS/idempotence inside a rolled-back transaction before applying additive DDL. Browser acceptance requires two isolated profiles and actual dedicated QA sign-ins, not invented auth or real customer mutations. Retain migration/deployment/tracker receipts and verify candidate plus freshly loaded canonical. Never publish credentials, sessions or QA passwords.

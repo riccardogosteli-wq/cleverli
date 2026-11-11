@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback, useRef } from "react";
-import { singleShopAppearance, getOwnedShopItems } from "@/lib/shop";
+import { singleShopAppearance, getOwnedShopItems, buyShopItem, wearShopItem } from "@/lib/shop";
 import { getLevelForXp, getNextLevel, calcXpGain } from "@/lib/xp";
 import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
 import {
@@ -9,6 +9,7 @@ import {
   getProgressSubjectsFromCatalog,
   getTopicSummaries,
 } from "@/data/topicCatalog";
+import { getSupabase } from "@/lib/supabase";
 import { getActiveProfileId } from "@/lib/family";
 import {
   getActiveProfileStorageKey,
@@ -16,6 +17,7 @@ import {
   getTopicProgressStorageKey,
   hasAuthenticatedStorageScope,
 } from "@/lib/accountScopedStorage";
+import { enqueueShopCredit, pendingShopCoins, latestCloudShop, type CloudShop, synchronizeCloudShop, type ShopAction } from "@/lib/shopSync";
 import { getEffectiveCompleted, getEffectiveScore } from "@/lib/topicProgress";
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -34,6 +36,7 @@ export interface Profile {
   streakGraceUsed: boolean;    // UJ-10: one-time 1-day grace period per streak run
   weekendDays: string[];       // track weekend warrior (e.g., ["2026-W10-SAT", "2026-W10-SUN"])
   playDates: string[];         // ISO dates "YYYY-MM-DD" when at least one correct answer was given (max 60)
+  shopCloudRevision?: number; // server wallet version, never used as earned currency
   coins: number;               // earned currency for avatar shop
   ownedItems: string[];        // shop item IDs owned
   equippedItems: { hat?: string; accessory?: string; background?: string };
@@ -100,13 +103,13 @@ function loadProfile(): Profile {
   } catch { return DEFAULT_PROFILE; }
 }
 
-function saveProfile(p: Profile) {
+function saveProfile(p: Profile, syncStats = true) {
   if (typeof window === "undefined") return;
   const key = getActiveProfileKey();
   localStorage.setItem(key, JSON.stringify(p));
   // Fire-and-forget sync to Supabase (only if a child profile is active)
   const childId = getActiveProfileId();
-  if (childId) {
+  if (childId && syncStats) {
     void import("@/lib/progressSync")
       .then(({ syncProfileToSupabase }) => syncProfileToSupabase(childId, p))
       .catch(() => {});
@@ -117,12 +120,14 @@ function saveProfile(p: Profile) {
 function withProfileWriteLock(key: string, write: () => void) {
   const guarded = () => { if (getActiveProfileKey() === key) write(); };
   if (typeof navigator !== "undefined" && navigator.locks) {
-    void navigator.locks.request("cleverli-profile:" + key, guarded).catch(error => console.warn("Profile save failed", error));
-  } else guarded();
+    return navigator.locks.request("cleverli-profile:" + key, guarded).catch(error => console.warn("Profile save failed", error));
+  }
+  guarded();
+  return Promise.resolve();
 }
-function latestStoredProfile(fallback: Profile): Profile {
+function latestStoredProfile(fallback: Profile, fallbackKey: string): Profile {
   try { if (localStorage.getItem(getActiveProfileKey())) return loadProfile(); } catch {}
-  return fallback;
+  return fallbackKey === getActiveProfileKey() ? fallback : DEFAULT_PROFILE;
 }
 
 // ── Subject completion check ─────────────────────────────────────────────────
@@ -314,23 +319,24 @@ export function useProfile() {
   const [profile, setProfile] = useState<Profile>(DEFAULT_PROFILE);
   const [loaded, setLoaded] = useState<boolean>(false);
   const profileRef = useRef(profile);
-  useEffect(() => { profileRef.current = profile; }, [profile]);
+  const profileScopeRef = useRef(getActiveProfileKey());
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
   const [xpGained, setXpGained] = useState(0);
   const [leveledUp, setLeveledUp] = useState(false);
 
   // Reload profile when active child changes (after switchProfile triggers reload)
-  const reloadProfile = () => {
+  const reloadProfile = useCallback(() => {
     const p = loadProfile();
+    profileScopeRef.current = getActiveProfileKey();
     profileRef.current = { ...DEFAULT_PROFILE, ...p };
     setProfile(profileRef.current);
     setLoaded(true);
-  };
+  }, []);
 
   useEffect(() => {
     // Listen for active profile key change from another tab or after reload
     const onStorage = (e: StorageEvent) => {
-      if (e.key === getActiveProfileKey() || e.key === getActiveProfileStorageKey() || e.key === "cleverli_active_profile") reloadProfile();
+      if (e.key === getActiveProfileKey() || e.key === getActiveProfileStorageKey() || e.key === "cleverli_active_profile" || e.key === "cleverli_session" || e.key === "cleverli_supabase_session") reloadProfile();
     };
     const onFamilyRestored = () => reloadProfile();
     const onActiveProfileChange = () => reloadProfile();
@@ -342,7 +348,7 @@ export function useProfile() {
       window.removeEventListener("cleverli-family-restored", onFamilyRestored);
       window.removeEventListener("cleverli-active-profile-change", onActiveProfileChange);
     };
-  }, []);
+  }, [reloadProfile]);
 
   useEffect(() => {
     const p = loadProfile();
@@ -375,14 +381,16 @@ export function useProfile() {
         if (remote && (remote.xp ?? 0) > 0) {
           withProfileWriteLock(restoringKey, () => {
             // Another tab may have bought something while remote stats were loading.
-            const local = latestStoredProfile(updated);
-            const merged = { ...DEFAULT_PROFILE, ...remote, coins: local.coins, ownedItems: getOwnedShopItems(local), equippedItems: singleShopAppearance(local) };
+            const local = latestStoredProfile(updated, restoringKey);
+            const merged = { ...DEFAULT_PROFILE, ...remote, coins: local.coins, ownedItems: getOwnedShopItems(local), equippedItems: singleShopAppearance(local), shopCloudRevision: local.shopCloudRevision };
             saveProfile(merged as Profile);
+            profileScopeRef.current = restoringKey;
             profileRef.current = merged as Profile;
             setProfile(merged as Profile);
           });
         } else {
-          profileRef.current = latestStoredProfile(updated);
+          profileScopeRef.current = restoringKey;
+          profileRef.current = latestStoredProfile(updated, restoringKey);
           setProfile(profileRef.current);
         }
         // Restore topic progress into localStorage
@@ -402,11 +410,14 @@ export function useProfile() {
       }).catch(() => {
         if (getActiveProfileKey() !== restoringKey) return;
         // Supabase unavailable or auth expired — fall back to current local profile.
-        profileRef.current = latestStoredProfile(updated);
+        profileScopeRef.current = restoringKey;
+        profileRef.current = latestStoredProfile(updated, restoringKey);
         setProfile(profileRef.current);
         setLoaded(true);
       });
     } else {
+      profileScopeRef.current = restoringKey;
+      profileRef.current = updated;
       setProfile(updated);
       setLoaded(true);
     }
@@ -432,7 +443,7 @@ export function useProfile() {
   }) => {
     const key = getActiveProfileKey();
     withProfileWriteLock(key, () => {
-      const prev = latestStoredProfile(profileRef.current);
+      const prev = latestStoredProfile(profileRef.current, profileScopeRef.current);
       const today = todayStr();
       const diff = diffDays(prev.lastPlayedDate, today);
 
@@ -562,7 +573,9 @@ export function useProfile() {
         achievements: [...prev.achievements, ...earned],
       };
 
+      enqueueShopCredit(getActiveProfileId(), prev, newCoins - (prev.coins ?? 0));
       saveProfile(finalProfile);
+      window.dispatchEvent(new CustomEvent("cleverli-shop-pending"));
 
       // Side effects (state updates via setTimeout to avoid batching issues)
       if (xpEarned + bonusXp + achXp > 0) setXpGained(xpEarned + bonusXp + achXp);
@@ -572,6 +585,7 @@ export function useProfile() {
       const newLevel  = getLevelForXp(finalXp).id;
       if (newLevel > prevLevel) setLeveledUp(true);
 
+      profileScopeRef.current = key;
       profileRef.current = finalProfile;
       setProfile(finalProfile);
     });
@@ -584,15 +598,100 @@ export function useProfile() {
   const updateProfile = useCallback((updates: Partial<Profile> | ((previous: Profile) => Partial<Profile>)) => {
     const key = getActiveProfileKey();
     withProfileWriteLock(key, () => {
-      const previous = latestStoredProfile(profileRef.current);
+      const previous = latestStoredProfile(profileRef.current, profileScopeRef.current);
       const patch = typeof updates === "function" ? updates(previous) : updates;
       const next = { ...previous, ...patch };
       const updated = { ...next, ownedItems: getOwnedShopItems(next), equippedItems: singleShopAppearance(next) };
       saveProfile(updated);
+      profileScopeRef.current = key;
       profileRef.current = updated;
       setProfile(updated);
     });
   }, []);
+
+  const [shopSync, setShopSync] = useState<{ state: "local" | "syncing" | "pending" | "saved" | "offline" | "error"; notice?: string }>({ state: "local" });
+  const projectShopSnapshot = useCallback(async (key: string, incoming?: CloudShop) => {
+    await withProfileWriteLock(key, () => {
+      const latest = latestStoredProfile(profileRef.current, profileScopeRef.current);
+      const remote = latestCloudShop(key, latest, incoming);
+      if (!remote || (latest.shopCloudRevision ?? -1) > remote.revision) return;
+      const item = remote.equippedItem;
+      const equippedItems = item ? singleShopAppearance({ ownedItems: remote.ownedItems, equippedItems: {
+        hat: item, accessory: item, background: item,
+      } }) : {};
+      const updated = { ...latest, coins: remote.coins + pendingShopCoins(key, latest), ownedItems: remote.ownedItems, equippedItems, shopCloudRevision: remote.revision };
+      saveProfile(updated, false);
+      profileScopeRef.current = key;
+      profileRef.current = updated;
+      setProfile(updated);
+    });
+  }, []);
+  const synchronizeShop = useCallback(async (action?: ShopAction, item?: string) => {
+    const childId = getActiveProfileId();
+    const key = getActiveProfileKey();
+    if (!childId || !hasAuthenticatedStorageScope()) {
+      setShopSync({ state: "local" });
+      return;
+    }
+    if (profileScopeRef.current !== key) { reloadProfile(); return; }
+    if (!navigator.onLine) { setShopSync({ state: "offline" }); return; }
+    setShopSync({ state: "syncing" });
+    try {
+      const remote = await synchronizeCloudShop(childId, key, latestStoredProfile(profileRef.current, profileScopeRef.current), action, item);
+      if (getActiveProfileKey() !== key) return;
+      await projectShopSnapshot(key, remote);
+      if (getActiveProfileKey() === key) setShopSync({ state: pendingShopCoins(key, latestStoredProfile(profileRef.current, profileScopeRef.current)) > 0 ? "pending" : "saved", notice: remote.result });
+    } catch {
+      if (getActiveProfileKey() === key) setShopSync({ state: navigator.onLine ? "error" : "offline" });
+    }
+  }, [reloadProfile, projectShopSnapshot]);
+
+  useEffect(() => {
+    if (!loaded) return;
+    const refresh = () => { void synchronizeShop(); };
+    const visibleRefresh = () => { if (document.visibilityState === "visible") refresh(); };
+    refresh();
+    window.addEventListener("online", refresh);
+    window.addEventListener("focus", refresh);
+    window.addEventListener("cleverli-shop-pending", refresh);
+    window.addEventListener("cleverli-active-profile-change", refresh);
+    window.addEventListener("cleverli-family-restored", refresh);
+    document.addEventListener("visibilitychange", visibleRefresh);
+    const onOutboxChange = (event: StorageEvent) => {
+      const key = getActiveProfileKey();
+      if (event.key === key + ":shop-outbox-v1" && hasAuthenticatedStorageScope()) void projectShopSnapshot(key);
+    };
+    window.addEventListener("storage", onOutboxChange);
+    const timer = window.setInterval(visibleRefresh, 15000);
+    let authTimer: ReturnType<typeof setTimeout> | undefined;
+    const authSubscription = getSupabase()?.auth.onAuthStateChange((event) => {
+      if (event !== "SIGNED_IN" && event !== "SIGNED_OUT" && event !== "INITIAL_SESSION") return;
+      // Leave the Supabase auth callback before invoking any other auth/RPC method.
+      clearTimeout(authTimer);
+      authTimer = setTimeout(() => { reloadProfile(); refresh(); }, 0);
+    });
+    return () => {
+      window.clearInterval(timer);
+      window.removeEventListener("storage", onOutboxChange);
+      clearTimeout(authTimer);
+      authSubscription?.data.subscription.unsubscribe();
+      window.removeEventListener("online", refresh);
+      window.removeEventListener("focus", refresh);
+      window.removeEventListener("cleverli-shop-pending", refresh);
+      window.removeEventListener("cleverli-active-profile-change", refresh);
+      window.removeEventListener("cleverli-family-restored", refresh);
+      document.removeEventListener("visibilitychange", visibleRefresh);
+    };
+  }, [loaded, synchronizeShop, reloadProfile, projectShopSnapshot]);
+
+  const purchaseShopItem = useCallback((id: string) => {
+    if (getActiveProfileId() && hasAuthenticatedStorageScope()) void synchronizeShop("buy", id);
+    else updateProfile(prev => buyShopItem(prev, id));
+  }, [synchronizeShop, updateProfile]);
+  const selectShopItem = useCallback((id?: string) => {
+    if (getActiveProfileId() && hasAuthenticatedStorageScope()) void synchronizeShop(id ? "wear" : "reset", id);
+    else updateProfile(prev => wearShopItem(prev, id));
+  }, [synchronizeShop, updateProfile]);
 
   const level    = getLevelForXp(profile.xp);
   const nextLevel = getNextLevel(profile.xp);
@@ -607,6 +706,10 @@ export function useProfile() {
     leveledUp,
     recordAnswer,
     updateProfile,
+    shopSync,
+    purchaseShopItem,
+    selectShopItem,
+    retryShopSync: synchronizeShop,
     clearNewAchievements,
     clearXpGained,
     clearLeveledUp,
