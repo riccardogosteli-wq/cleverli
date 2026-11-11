@@ -7,7 +7,7 @@ import { loadFamily, getActiveProfileId } from "@/lib/family";
 import { getLastGradeStorageKey } from "@/lib/accountScopedStorage";
 import { getTopicSummaries } from "@/data/topicCatalog";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
-import { LEVELS, getLevelProgress } from "@/lib/xp";
+import { getLevelForXp, getLevelTitle } from "@/lib/xp";
 import AuthGuard from "@/components/AuthGuard";
 import { countCompletedExercisesForChild, getReportingSubjects, readTopicProgressForChild } from "@/lib/reportingProgress";
 
@@ -292,9 +292,8 @@ export default function MissionenPage() {
   const overallPct = Math.round((overallCompleted / overallTotal) * 100);
   const completedExercises = Math.max(profile.totalExercises, countCompletedExercisesForChild(getActiveProfileId(), activeMember?.curriculum));
 
-  const levelProgress = getLevelProgress(profile.xp);
-  const currentLevelData = LEVELS.slice().reverse().find(l => profile.xp >= l.minXp) ?? LEVELS[0];
-  const levelLabel = currentLevelData.title;
+  const currentLevelData = getLevelForXp(profile.xp);
+  const levelLabel = getLevelTitle(currentLevelData, lang);
 
   if (!loaded) return <div className="animate-pulse space-y-4 p-4">{[...Array(3)].map((_, i) => <div key={i} className="h-40 bg-green-50 rounded-2xl"/>)}</div>;
 

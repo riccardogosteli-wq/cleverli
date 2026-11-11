@@ -11,7 +11,7 @@ import {
   getTopicSummaries,
 } from "@/data/topicCatalog";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
-import { LEVELS, getLevelProgress, getLevelForXp, getNextLevel } from "@/lib/xp";
+import RankProgress from "@/components/RankProgress";
 import { useSession } from "@/hooks/useSession";
 import { MissionenGuestPreview } from "@/components/GuestPreview";
 import { countCompletedExercisesForChild, getReportingSubjects, readTopicProgressForChild } from "@/lib/reportingProgress";
@@ -314,12 +314,7 @@ export default function MissionenPage() {
   const overallPct = Math.round((overallCompleted / overallTotal) * 100);
   const completedExercises = Math.max(profile.totalExercises, countCompletedExercisesForChild(getActiveProfileId(), activeMember?.curriculum));
 
-  const levelProgress = getLevelProgress(profile.xp);
-  const currentLevelData = getLevelForXp(profile.xp);
-  const rankTitle = (rank: typeof currentLevelData) => lang === "fr" ? rank.titleFr : lang === "it" ? rank.titleIt : lang === "en" ? rank.titleEn : rank.title;
-  const levelLabel = rankTitle(currentLevelData);
-  const nextLevel = getNextLevel(profile.xp);
-  const labels = lang === "fr" ? ["Tes rangs", "Actuel", "Acquis", "Verrouillé", "Progression des exercices"] : lang === "it" ? ["I tuoi ranghi", "Attuale", "Ottenuto", "Bloccato", "Progresso degli esercizi"] : lang === "en" ? ["Your ranks", "Current", "Earned", "Locked", "Exercise progress"] : ["Deine Ränge", "Aktuell", "Erreicht", "Gesperrt", "Aufgabenfortschritt"];
+  const exerciseProgressLabel = lang === "fr" ? "Progression des exercices" : lang === "it" ? "Progresso degli esercizi" : lang === "en" ? "Exercise progress" : "Aufgabenfortschritt";
 
   const tabs = [
     { id: "all", label: lang === "fr" ? "Tous" : lang === "it" ? "Tutti" : lang === "en" ? "All" : "Alle", emoji: "🗺️" },
@@ -407,23 +402,7 @@ export default function MissionenPage() {
           </div>
         </div>
 
-        <section className="mt-4 rounded-2xl border-2 border-purple-200 bg-purple-50 p-4 space-y-3" aria-label={labels[0]}>
-          <h2 className="font-black text-purple-900">🏆 {labels[0]}</h2>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {LEVELS.map(rank => {
-              const earned = profile.xp >= rank.minXp;
-              const current = rank.id === currentLevelData.id;
-              return <li key={rank.id} aria-current={current ? "step" : undefined} className={`rounded-xl border-2 p-3 ${current ? "border-purple-500 bg-white" : earned ? "border-green-200 bg-white" : "border-gray-200 bg-gray-50 text-gray-500"}`}>
-                <span className="text-2xl" aria-hidden="true">{earned ? rank.emoji : "🔒"}</span>
-                <p className="text-sm font-bold break-words">{rankTitle(rank)}</p>
-                <p className="text-xs">{current ? labels[1] : earned ? labels[2] : labels[3]} · {rank.minXp} XP</p>
-              </li>;
-            })}
-          </ul>
-          <p className="text-sm font-bold">{profile.xp} XP · {levelLabel}</p>
-          <progress aria-label="XP" value={levelProgress} max={100} className="w-full h-3" />
-          <p className="text-sm">{nextLevel ? `${nextLevel.minXp - profile.xp} XP → ${rankTitle(nextLevel)}` : (lang === "de" ? "Höchster Rang erreicht!" : lang === "fr" ? "Rang maximal atteint !" : lang === "it" ? "Rango massimo raggiunto!" : "Highest rank reached!")}</p>
-        </section>
+        <RankProgress xp={profile.xp} lang={lang} />
 
         {/* Exercise completion is independent of the XP rank. */}
         <div className="mt-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200 p-4">
@@ -435,7 +414,7 @@ export default function MissionenPage() {
             </div>
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
-                <span className="text-sm font-bold text-gray-700">{labels[4]}</span>
+                <span className="text-sm font-bold text-gray-700">{exerciseProgressLabel}</span>
                 <span className="text-xs font-semibold text-gray-500">{overallCompleted}/{overallTotal} · {overallPct}%</span>
               </div>
               <div className="w-full bg-white rounded-full h-3 overflow-hidden border border-green-200">

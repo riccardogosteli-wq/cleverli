@@ -32,7 +32,7 @@ import { useSession } from "@/hooks/useSession";
 import Confetti from "./Confetti";
 import { checkAndUnlockRewards, loadRewards, countCompletedExercises, countCompletedTopics, countTotalStars, Reward } from "@/lib/rewards";
 import RewardUnlockedModal from "./RewardUnlockedModal";
-import { getLevelForXp, getNextLevel } from "@/lib/xp";
+import { getLevelForXp, getNextLevel, getLevelProgress } from "@/lib/xp";
 import SignupPromptModal from "./SignupPromptModal";
 import { getProgressSubjectsFromCatalog } from "@/data/topicCatalog";
 import { getProfileStorageKey, getTopicProgressStorageKey, hasAuthenticatedStorageScope } from "@/lib/accountScopedStorage";
@@ -932,7 +932,7 @@ export default function ExercisePlayer({
                 <div
                   className="h-full transition-all"
                   style={{
-                    width: `${Math.round(((profile.xp - level.minXp) / (nextLevel.minXp - level.minXp)) * 100)}%`,
+                    width: `${getLevelProgress(profile.xp)}%`,
                     backgroundColor: level.color,
                   }}
                 />

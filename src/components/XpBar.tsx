@@ -1,20 +1,23 @@
 "use client";
-import { getLevelProgress } from "@/lib/xp";
+import Link from "next/link";
+import { getLevelProgress, getLevelTitle } from "@/lib/xp";
 import { useProfileContext } from "@/lib/ProfileContext";
+import { useLang } from "@/lib/LangContext";
 import { useSession } from "@/hooks/useSession";
 
 export default function XpBar() {
   const { profile, level, loaded } = useProfileContext();
   const { session } = useSession();
+  const { lang } = useLang();
   // Don't show XP bar if not logged in — avoids stale data from localStorage appearing after logout
   if (!loaded || !session || profile.xp === 0) return null;
 
   const pct = getLevelProgress(profile.xp);
 
   return (
-    <a href="/missionen" className="flex items-center gap-2 group cursor-pointer" aria-label="Meine Missionen">
+    <Link href="/missionen" className="flex items-center gap-2 group cursor-pointer" aria-label="Meine Missionen">
       {/* Emoji + level */}
-      <span className="text-base shrink-0" title={level.title}>{level.emoji}</span>
+      <span className="text-base shrink-0" title={getLevelTitle(level, lang)}>{level.emoji}</span>
       {/* XP bar */}
       <div className="relative w-16 sm:w-20 h-2 bg-gray-200 rounded-full overflow-hidden shrink-0">
         <div
@@ -34,6 +37,6 @@ export default function XpBar() {
       {profile.dailyStreak >= 2 && (
         <span className="text-xs font-bold text-orange-500 shrink-0">🔥{profile.dailyStreak}</span>
       )}
-    </a>
+    </Link>
   );
 }

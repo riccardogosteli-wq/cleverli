@@ -20,7 +20,7 @@ import { useProfile, Profile } from "@/hooks/useProfile";
 import { useSession } from "@/hooks/useSession";
 import { loadFamily, saveFamily, getActiveProfileId } from "@/lib/family";
 import { getAvailableCurriculumSubjectIds, type CurriculumSelection } from "@/lib/curriculumProfiles";
-import { getLevelForXp, getNextLevel, Level } from "@/lib/xp";
+import { getLevelForXp, getNextLevel, getLevelProgress, Level } from "@/lib/xp";
 import { getTierProgressFromCounts } from "@/lib/tierProgress";
 import RewardWidget from "@/components/RewardWidget";
 import { DashboardGuestPreview } from "@/components/GuestPreview";
@@ -168,9 +168,7 @@ function MobileDailyBar({ dailyDone, lang }: { dailyDone: boolean; lang: string 
 
 function Sidebar({ profile, level, nextLevel, dailyDone, lang }: SidebarProps) {
   const xpToNext = nextLevel ? nextLevel.minXp - profile.xp : 0;
-  const xpPct = nextLevel
-    ? Math.round((profile.xp - level.minXp) / (nextLevel.minXp - level.minXp) * 100)
-    : 100;
+  const xpPct = getLevelProgress(profile.xp);
   const levelTitle = (lv: Level) => {
     if (lang === "fr") return lv.titleFr;
     if (lang === "it") return lv.titleIt;

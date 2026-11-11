@@ -1,0 +1,7 @@
+# Rank progression
+
+Derived from XP only, no profile migration or writes. The original five rank IDs, thresholds and titles remain stable, and achievement level_5 still starts at1300. Five additional ranks start at2500/4500/7500/11500/16500. From16500 each2500XP unlocks a further numbered legend stage, with no final saturated rank. Existing XP immediately grants all corresponding ranks. No reward or coin payout is added by opening this UI.
+
+getLevelForXp/getNextLevel are shared by the profile hook, answer level-up feedback, navigation, family, kids, dashboard and exercise player. The legacy trophies view uses the same current-rank lookup. getLevelProgress is bounded below100 until a threshold is reached, then resets for the next goal. getRankTrack renders ten named ranks plus only current/next recurring stages, independent of lifetime XP. Missionen shows the next goal before an expandable list, which retains all named earned ranks. All new UI and rank names are in DE/FR/IT/EN.
+
+Run scripts/test-rank-progression.ts, shop regression suites, TypeScript, scoped ESLint and a production build. Browser QA needs genuine dedicated QA sign-in for Missionen; never fabricate production auth. Validate5780XP, old1300 rank, each new boundary, recurring stages, reload and two-child isolation, language switching, expand/collapse and keyboard controls on desktop/mobile. No real customer changes.
