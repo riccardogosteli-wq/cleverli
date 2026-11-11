@@ -2,11 +2,11 @@
 import Image from "next/image";
 import { useProfileContext } from "@/lib/ProfileContext";
 import { useLang } from "@/lib/LangContext";
-import { SHOP_ITEMS, buyShopItem, getEquippedShopItem, shopItemImage, wearShopItem } from "@/lib/shop";
+import { SHOP_ITEMS, buyShopItem, getEquippedShopItem, getOwnedShopItems, shopItemImage, wearShopItem } from "@/lib/shop";
 import Avatar from "@/components/Avatar";
 
 const COPY = {
-  de: { title: "Cleverli einkleiden", intro: "Mit deinen Münzen kannst du neue Sachen für Cleverli kaufen. Was du kaufst, gehört dir und du kannst jederzeit wechseln.", rule: "Du kannst immer nur eine Sache gleichzeitig anziehen oder einen Hintergrund auswählen.", current: "So sieht dein Cleverli aus", base: "Grundfigur", reset: "Zur Grundfigur wechseln", selected: "Ausgewählt", owned: "Schon deins", wear: "Anziehen", choose: "Auswählen", remove: "Ausziehen", buy: "Kaufen", coins: "Münzen", coin: "Münze", missing: "Dir fehlen noch", earn: "+1 Münze pro richtiger Antwort · +5 Münzen pro abgeschlossenem Thema", hat: "Hüte", accessory: "Accessoires", background: "Hintergründe", loading: "Laden…" },
+  de: { title: "Cleverli einkleiden", intro: "Mit deinen Münzen kannst du neue Sachen für Cleverli kaufen. Was du kaufst, gehört dir und du kannst jederzeit wechseln.", rule: "Du kannst immer nur eine Sache gleichzeitig auswählen: einen Hut, ein Accessoire oder einen Hintergrund.", current: "So sieht dein Cleverli aus", base: "Grundfigur", reset: "Zur Grundfigur wechseln", selected: "Ausgewählt", owned: "Schon deins", wear: "Anziehen", choose: "Auswählen", remove: "Ausziehen", buy: "Kaufen", coins: "Münzen", coin: "Münze", missing: "Dir fehlen noch", earn: "+1 Münze pro richtiger Antwort · +5 Münzen pro abgeschlossenem Thema", hat: "Hüte", accessory: "Accessoires", background: "Hintergründe", loading: "Laden…" },
   fr: { title: "Habille Cleverli", intro: "Avec tes pièces, achète de nouvelles choses pour Cleverli. Tes achats restent à toi et tu peux changer quand tu veux.", rule: "Tu peux porter un seul objet ou choisir un seul arrière-plan à la fois.", current: "Voici ton Cleverli", base: "Personnage de base", reset: "Revenir au personnage de base", selected: "Sélectionné", owned: "Déjà à toi", wear: "Équiper", choose: "Choisir", remove: "Retirer", buy: "Acheter", coins: "pièces", coin: "pièce", missing: "Il te manque encore", earn: "+1 pièce par bonne réponse · +5 pièces par thème terminé", hat: "Chapeaux", accessory: "Accessoires", background: "Arrière-plans", loading: "Chargement…" },
   it: { title: "Vesti Cleverli", intro: "Con le tue monete puoi comprare nuove cose per Cleverli. I tuoi acquisti restano tuoi e puoi cambiare quando vuoi.", rule: "Puoi indossare un solo oggetto o scegliere un solo sfondo alla volta.", current: "Ecco il tuo Cleverli", base: "Personaggio base", reset: "Torna al personaggio base", selected: "Selezionato", owned: "Già tuo", wear: "Indossa", choose: "Scegli", remove: "Togli", buy: "Compra", coins: "monete", coin: "moneta", missing: "Ti mancano ancora", earn: "+1 moneta per risposta corretta · +5 monete per tema completato", hat: "Cappelli", accessory: "Accessori", background: "Sfondi", loading: "Caricamento…" },
   en: { title: "Dress up Cleverli", intro: "Use your coins to buy new things for Cleverli. Everything you buy stays yours, and you can switch whenever you like.", rule: "You can wear just one item or choose one background at a time.", current: "Your Cleverli’s current look", base: "Base character", reset: "Use the base character", selected: "Selected", owned: "Already yours", wear: "Wear", choose: "Choose", remove: "Take off", buy: "Buy", coins: "coins", coin: "coin", missing: "You still need", earn: "+1 coin per correct answer · +5 coins per completed topic", hat: "Hats", accessory: "Accessories", background: "Backgrounds", loading: "Loading…" },
@@ -18,7 +18,7 @@ export default function ShopClient() {
   const t = COPY[lang];
   if (!loaded) return <div className="py-20 text-center text-gray-600">{t.loading}</div>;
   const coins = profile.coins ?? 0;
-  const owned = profile.ownedItems ?? [];
+  const owned = getOwnedShopItems(profile);
   const selected = getEquippedShopItem(profile);
   const coinLabel = (n: number) => n === 1 ? t.coin : t.coins;
   const wear = (id?: string) => updateProfile(prev => wearShopItem(prev, id));
@@ -45,7 +45,7 @@ export default function ShopClient() {
         {SHOP_ITEMS.filter(item => item.category === category).map(item => {
           const isOwned = owned.includes(item.id), active = selected?.id === item.id, missing = Math.max(0, item.cost - coins);
           const name = item.name[lang];
-          const action = active ? t.remove : isOwned ? (category === "background" ? t.choose : t.wear) : t.buy;
+          const action = active ? (category === "background" ? t.reset : t.remove) : isOwned ? (category === "background" ? t.choose : t.wear) : t.buy;
           return <article key={item.id} data-shop-item={item.id} className={"flex min-w-0 flex-col items-center gap-2 rounded-2xl border-2 bg-white p-3 shadow-sm " + (active ? "border-green-600" : "border-gray-200")}>
             <Image src={shopItemImage(item.id)} alt={name} width={192} height={208} sizes="(max-width: 640px) 42vw, 220px" className="h-40 w-full object-contain sm:h-48" />
             <h3 className="text-center text-base font-bold text-gray-900">{name}</h3>
@@ -53,7 +53,7 @@ export default function ShopClient() {
             <button aria-label={name + ": " + action} aria-pressed={isOwned ? active : undefined} disabled={!isOwned && missing > 0} onClick={() => isOwned ? wear(active ? undefined : item.id) : buy(item.id)} className={"mt-auto min-h-11 w-full rounded-full border-2 px-2 py-2 text-sm font-bold transition-colors " + focus + " " + (!isOwned && missing > 0 ? "cursor-not-allowed border-gray-200 bg-gray-100 text-gray-600" : active ? "border-green-800 bg-green-800 text-white hover:bg-green-900" : isOwned ? "border-green-700 text-green-800 hover:bg-green-50" : "border-yellow-400 bg-yellow-300 text-yellow-950 hover:bg-yellow-400")}>
               {!isOwned && missing > 0 ? "🔒 " + item.cost + " " + coinLabel(item.cost) : action}
             </button>
-            {!isOwned && missing > 0 && <p className="text-center text-xs leading-relaxed text-gray-600">{t.missing} {missing} {coinLabel(missing)}.</p>}
+            {!isOwned && missing > 0 && <p className="text-center text-xs leading-relaxed text-gray-600">{missing === 1 && lang === "de" ? "Dir fehlt noch" : missing === 1 && lang === "it" ? "Ti manca ancora" : t.missing} {missing} {coinLabel(missing)}.</p>}
           </article>;
         })}
       </div>

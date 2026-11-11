@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
-import { singleShopAppearance } from "@/lib/shop";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { singleShopAppearance, getOwnedShopItems } from "@/lib/shop";
 import { getLevelForXp, getNextLevel, calcXpGain } from "@/lib/xp";
 import { ACHIEVEMENTS, AchievementId } from "@/lib/achievements";
 import {
@@ -92,7 +92,7 @@ function loadProfile(): Profile {
     // Falling back would bleed the previous child's XP into the new one.
     if (!raw) return DEFAULT_PROFILE;
     const parsed = { ...DEFAULT_PROFILE, ...JSON.parse(raw) };
-    const sanitized = { ...sanitizeAchievementsForProgress(parsed), equippedItems: singleShopAppearance(parsed) };
+    const sanitized = { ...sanitizeAchievementsForProgress(parsed), ownedItems: getOwnedShopItems(parsed), equippedItems: singleShopAppearance(parsed) };
     if (sanitized.achievements.length !== parsed.achievements.length) {
       localStorage.setItem(key, JSON.stringify(sanitized));
     }
@@ -111,6 +111,18 @@ function saveProfile(p: Profile) {
       .then(({ syncProfileToSupabase }) => syncProfileToSupabase(childId, p))
       .catch(() => {});
   }
+}
+
+/** Web Locks serialize read/modify/save across tabs for this exact account and child. */
+function withProfileWriteLock(key: string, write: () => void) {
+  const guarded = () => { if (getActiveProfileKey() === key) write(); };
+  if (typeof navigator !== "undefined" && navigator.locks) {
+    void navigator.locks.request("cleverli-profile:" + key, guarded).catch(error => console.warn("Profile save failed", error));
+  } else guarded();
+}
+function latestStoredProfile(fallback: Profile): Profile {
+  try { if (localStorage.getItem(getActiveProfileKey())) return loadProfile(); } catch {}
+  return fallback;
 }
 
 // ── Subject completion check ─────────────────────────────────────────────────
@@ -301,6 +313,8 @@ export function useProfile() {
   // state is loaded after mount to avoid React hydration mismatches.
   const [profile, setProfile] = useState<Profile>(DEFAULT_PROFILE);
   const [loaded, setLoaded] = useState<boolean>(false);
+  const profileRef = useRef(profile);
+  useEffect(() => { profileRef.current = profile; }, [profile]);
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
   const [xpGained, setXpGained] = useState(0);
   const [leveledUp, setLeveledUp] = useState(false);
@@ -308,13 +322,15 @@ export function useProfile() {
   // Reload profile when active child changes (after switchProfile triggers reload)
   const reloadProfile = () => {
     const p = loadProfile();
-    setProfile({ ...DEFAULT_PROFILE, ...p });
+    profileRef.current = { ...DEFAULT_PROFILE, ...p };
+    setProfile(profileRef.current);
+    setLoaded(true);
   };
 
   useEffect(() => {
     // Listen for active profile key change from another tab or after reload
     const onStorage = (e: StorageEvent) => {
-      if (e.key === getActiveProfileStorageKey() || e.key === "cleverli_active_profile") reloadProfile();
+      if (e.key === getActiveProfileKey() || e.key === getActiveProfileStorageKey() || e.key === "cleverli_active_profile") reloadProfile();
     };
     const onFamilyRestored = () => reloadProfile();
     const onActiveProfileChange = () => reloadProfile();
@@ -348,18 +364,26 @@ export function useProfile() {
 
     // New device/browser: localStorage is empty — try loading from Supabase
     const childId = getActiveProfileId();
+    const restoringKey = getActiveProfileKey();
     if (childId && p.xp === 0 && p.totalExercises === 0) {
       import("@/lib/progressSync").then(({ loadProfileFromSupabase, loadTopicProgressFromSupabase }) => Promise.all([
         loadProfileFromSupabase(childId),
         loadTopicProgressFromSupabase(childId),
       ])).then(([remote, topicData]) => {
+        if (getActiveProfileKey() !== restoringKey) return;
         // Restore profile stats
         if (remote && (remote.xp ?? 0) > 0) {
-          const merged = { ...DEFAULT_PROFILE, ...remote };
-          saveProfile(merged as Profile);
-          setProfile(merged as Profile);
+          withProfileWriteLock(restoringKey, () => {
+            // Another tab may have bought something while remote stats were loading.
+            const local = latestStoredProfile(updated);
+            const merged = { ...DEFAULT_PROFILE, ...remote, coins: local.coins, ownedItems: getOwnedShopItems(local), equippedItems: singleShopAppearance(local) };
+            saveProfile(merged as Profile);
+            profileRef.current = merged as Profile;
+            setProfile(merged as Profile);
+          });
         } else {
-          setProfile(updated);
+          profileRef.current = latestStoredProfile(updated);
+          setProfile(profileRef.current);
         }
         // Restore topic progress into localStorage
         if (topicData) {
@@ -376,8 +400,10 @@ export function useProfile() {
         }
         setLoaded(true);
       }).catch(() => {
-        // Supabase unavailable or auth expired — fall back to local profile gracefully
-        setProfile(updated);
+        if (getActiveProfileKey() !== restoringKey) return;
+        // Supabase unavailable or auth expired — fall back to current local profile.
+        profileRef.current = latestStoredProfile(updated);
+        setProfile(profileRef.current);
         setLoaded(true);
       });
     } else {
@@ -404,7 +430,9 @@ export function useProfile() {
     tierCompleted?: "easy" | "medium" | "hard";
     bonusXp?: number;
   }) => {
-    setProfile(prev => {
+    const key = getActiveProfileKey();
+    withProfileWriteLock(key, () => {
+      const prev = latestStoredProfile(profileRef.current);
       const today = todayStr();
       const diff = diffDays(prev.lastPlayedDate, today);
 
@@ -544,7 +572,8 @@ export function useProfile() {
       const newLevel  = getLevelForXp(finalXp).id;
       if (newLevel > prevLevel) setLeveledUp(true);
 
-      return finalProfile;
+      profileRef.current = finalProfile;
+      setProfile(finalProfile);
     });
   }, []);
 
@@ -553,12 +582,15 @@ export function useProfile() {
   const clearLeveledUp       = useCallback(() => setLeveledUp(false), []);
 
   const updateProfile = useCallback((updates: Partial<Profile> | ((previous: Profile) => Partial<Profile>)) => {
-    setProfile(prev => {
-      const patch = typeof updates === "function" ? updates(prev) : updates;
-      const next = { ...prev, ...patch };
-      const updated = { ...next, equippedItems: singleShopAppearance(next) };
+    const key = getActiveProfileKey();
+    withProfileWriteLock(key, () => {
+      const previous = latestStoredProfile(profileRef.current);
+      const patch = typeof updates === "function" ? updates(previous) : updates;
+      const next = { ...previous, ...patch };
+      const updated = { ...next, ownedItems: getOwnedShopItems(next), equippedItems: singleShopAppearance(next) };
       saveProfile(updated);
-      return updated;
+      profileRef.current = updated;
+      setProfile(updated);
     });
   }, []);
 

@@ -26,12 +26,17 @@ export const BASE_AVATAR_IMAGE = "/images/shop/base.webp";
 export const shopItemImage = (id: string) => "/images/shop/" + id + ".webp";
 export type ShopAppearance = { ownedItems?: string[]; equippedItems?: { hat?: string; accessory?: string; background?: string } };
 
+/** Keep valid and future purchase IDs; never interpret a string/object as ownership. */
+export function getOwnedShopItems(profile: ShopAppearance): string[] {
+  return Array.isArray(profile.ownedItems) ? profile.ownedItems.filter((id): id is string => typeof id === "string") : [];
+}
+
 /** Legacy combinations resolve consistently, without changing any purchases or coins. */
 export function getEquippedShopItem(profile: ShopAppearance): ShopItem | undefined {
   for (const category of ["hat", "accessory", "background"] as const) {
     const id = profile.equippedItems?.[category];
     const item = SHOP_ITEMS.find(item => item.id === id && item.category === category);
-    if (item && profile.ownedItems?.includes(item.id)) return item;
+    if (item && getOwnedShopItems(profile).includes(item.id)) return item;
   }
 }
 
@@ -42,13 +47,13 @@ export function singleShopAppearance(profile: ShopAppearance): NonNullable<ShopA
 
 export function buyShopItem<T extends ShopAppearance & { coins: number }>(profile: T, id: string): T {
   const item = SHOP_ITEMS.find(item => item.id === id);
-  if (!item || !Number.isFinite(profile.coins) || profile.coins < item.cost || profile.ownedItems?.includes(id)) return profile;
-  return { ...profile, coins: profile.coins - item.cost, ownedItems: [...(profile.ownedItems ?? []), id] };
+  if (!item || !Number.isFinite(profile.coins) || profile.coins < item.cost || getOwnedShopItems(profile).includes(id)) return profile;
+  return { ...profile, coins: profile.coins - item.cost, ownedItems: [...getOwnedShopItems(profile), id] };
 }
 
 export function wearShopItem<T extends ShopAppearance>(profile: T, id?: string): T {
   if (!id) return { ...profile, equippedItems: {} };
   const item = SHOP_ITEMS.find(item => item.id === id);
-  if (!item || !profile.ownedItems?.includes(id)) return profile;
+  if (!item || !getOwnedShopItems(profile).includes(id)) return profile;
   return { ...profile, equippedItems: { [item.category]: id } };
 }
