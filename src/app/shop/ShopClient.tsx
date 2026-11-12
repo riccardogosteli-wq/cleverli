@@ -61,7 +61,9 @@ export default function ShopClient() {
           const name = item.name[lang];
           const action = active ? (category === "background" ? t.reset : t.remove) : isOwned ? (category === "background" ? t.choose : t.wear) : t.buy;
           return <article key={item.id} data-shop-item={item.id} className={"flex min-w-0 flex-col items-center gap-2 rounded-2xl border-2 bg-white p-3 shadow-sm " + (active ? "border-green-600" : "border-gray-200")}>
-            <Image src={shopItemImage(item.id)} alt={name} width={192} height={208} sizes="(max-width: 640px) 42vw, 220px" className="h-40 w-full object-contain sm:h-48" />
+            <div data-shop-preview={isOwned ? "revealed" : "blurred"} className="w-full overflow-hidden rounded-xl">
+              <Image src={shopItemImage(item.id)} alt={name} width={192} height={208} sizes="(max-width: 640px) 42vw, 220px" className={"h-40 w-full object-contain sm:h-48" + (isOwned ? "" : " select-none blur-[6px]")} />
+            </div>
             <h3 className="text-center text-base font-bold text-gray-900">{name}</h3>
             <p className={"text-center text-sm font-bold " + (isOwned ? "text-green-800" : "text-yellow-900")}>{active ? "✓ " + t.selected : isOwned ? t.owned : item.cost + " " + coinLabel(item.cost)}</p>
             <button aria-label={name + ": " + action} aria-pressed={isOwned ? active : undefined} disabled={busy || (!isOwned && missing > 0)} onClick={() => isOwned ? wear(active ? undefined : item.id) : buy(item.id)} className={"mt-auto min-h-11 w-full rounded-full border-2 px-2 py-2 text-sm font-bold transition-colors " + focus + " " + (!isOwned && missing > 0 ? "cursor-not-allowed border-gray-200 bg-gray-100 text-gray-600" : active ? "border-green-800 bg-green-800 text-white hover:bg-green-900" : isOwned ? "border-green-700 text-green-800 hover:bg-green-50" : "border-yellow-400 bg-yellow-300 text-yellow-950 hover:bg-yellow-400")}>
